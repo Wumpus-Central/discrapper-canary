@@ -15,7 +15,7 @@ n.r(t),
         encodeProperties: () => g.Z,
         extendSuperProperties: () => j,
         getCampaignParams: () => R,
-        getDevice: () => w,
+        getDevice: () => P,
         getOS: () => x,
         getSuperProperties: () => Y,
         getSuperPropertiesBase64: () => W,
@@ -147,7 +147,7 @@ function x() {
     else if (/Linux/i.test(e)) return 'Linux';
     else return '';
 }
-function w() {
+function P() {
     let { userAgent: e } = window.navigator;
     if (/(BlackBerry|PlayBook|BB10)/i.test(e)) return 'BlackBerry';
     if (/Windows Phone/i.test(e)) return 'Windows Phone';
@@ -156,14 +156,14 @@ function w() {
     if (/iPad/.test(e)) return 'iPad';
     else return '';
 }
-function P() {
+function w() {
     let e = document.referrer.split('/');
     return e.length >= 3 ? e[2] : '';
 }
 function M() {
     let e = {},
         t = x();
-    return (e.os = t), (e.browser = L()), (e.device = w()), (e.system_locale = (0, _.qf)()), (e.has_client_mods = (0, f.e)()), e;
+    return (e.os = t), (e.browser = L()), (e.device = P()), (e.system_locale = (0, _.qf)()), (e.has_client_mods = (0, f.e)()), e;
 }
 function k() {
     var e, t;
@@ -177,7 +177,7 @@ function U() {
     let e = {};
     return (
         (e.referrer = document.referrer),
-        (e.referring_domain = P()),
+        (e.referring_domain = w()),
         (e = {
             ...e,
             ...R(window.location.href),
@@ -216,7 +216,7 @@ function F() {
     let i = {},
         r = window.GLOBAL_ENV.RELEASE_CHANNEL;
     r && (null == i.release_channel || '' === i.release_channel) && (i.release_channel = r.split('-')[0]);
-    let a = parseInt(((n = '367043'), '367043'), 10);
+    let a = parseInt(((n = '367095'), '367095'), 10);
     isNaN(a) || (i.client_build_number = a);
     let s = null == A ? void 0 : null === (e = (t = A.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(t);
     return isNaN(s) || (i.native_build_number = s), (i.client_event_source = Z()), (i.has_client_mods = (0, f.e)()), i;

@@ -67,7 +67,7 @@ function g() {
     });
 }
 function E(e) {
-    let { look: t = _.FILLED, color: n = p.BRAND, size: a = h.MEDIUM, fullWidth: o = !1, grow: E = !0, disabled: v = !1, submitting: y = !1, type: I = 'button', style: T, wrapperClassName: b, className: S, innerClassName: A, onClick: N, onDoubleClick: C, onMouseDown: R, onMouseUp: O, onMouseEnter: D, onMouseLeave: L, onKeyDown: x, children: w, rel: P, buttonRef: M, focusProps: k, 'aria-label': U, submittingStartedLabel: G, submittingFinishedLabel: B, ...Z } = e,
+    let { look: t = _.FILLED, color: n = p.BRAND, size: a = h.MEDIUM, fullWidth: o = !1, grow: E = !0, disabled: v = !1, submitting: y = !1, type: I = 'button', style: T, wrapperClassName: b, className: S, innerClassName: A, onClick: N, onDoubleClick: C, onMouseDown: R, onMouseUp: O, onMouseEnter: D, onMouseLeave: L, onKeyDown: x, children: P, rel: w, buttonRef: M, focusProps: k, 'aria-label': U, submittingStartedLabel: G, submittingFinishedLabel: B, ...Z } = e,
         F = v || y,
         V = F && (null != D || null != L),
         j = V ? null : b,
@@ -94,7 +94,7 @@ function E(e) {
             type: I,
             disabled: v,
             style: T,
-            rel: P,
+            rel: w,
             className: s()(
                 S,
                 g({
@@ -118,7 +118,7 @@ function E(e) {
                     : null,
                 (0, i.jsx)('div', {
                     className: s()(f.contents, A),
-                    children: w
+                    children: P
                 })
             ]
         })

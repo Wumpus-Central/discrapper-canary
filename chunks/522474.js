@@ -68,7 +68,7 @@ function x(e) {
     let n = b[e];
     a()(null != n, 'Window root was null while unmounting'), n.unmount(), delete T[e], delete I[e], delete S[e], delete b[e];
 }
-function w(e, t, i) {
+function P(e, t, i) {
     let r = e.document,
         s = new URL(t).origin,
         o = new URL(''.concat(window.location.protocol, '//').concat(window.location.host)).origin,
@@ -80,8 +80,8 @@ function w(e, t, i) {
     let u = r.createElement('link');
     (u.href = t), (u.rel = 'stylesheet'), (u.integrity = i), a()(null != r.head, 'Document head was null'), r.head.appendChild(u);
 }
-function P(e, t) {
-    for (let e of document.querySelectorAll('link[rel="stylesheet"]')) w(t, e.href, e.integrity);
+function w(e, t) {
+    for (let e of document.querySelectorAll('link[rel="stylesheet"]')) P(t, e.href, e.integrity);
 }
 function M(e) {
     let t = T[e],
@@ -91,7 +91,7 @@ function M(e) {
         return;
     }
     let i = t.document;
-    (0, h.uF)(i, C), t.addEventListener('focus', C), t.addEventListener('blur', C), t.addEventListener('resize', R), O ? D(e, t) : P(e, t);
+    (0, h.uF)(i, C), t.addEventListener('focus', C), t.addEventListener('blur', C), t.addEventListener('resize', R), O ? D(e, t) : w(e, t);
     let r = (0, l.createRoot)(i.getElementById(N));
     a()(null != r, 'No render target for popout!'), (b[e] = r), r.render(n(e));
 }
@@ -171,7 +171,7 @@ function j(e) {
 }
 function H(e) {
     let { url: t, integrity: n } = e;
-    for (let e of Object.values(T)) null == e || e.closed || w(e, t, n);
+    for (let e of Object.values(T)) null == e || e.closed || P(e, t, n);
 }
 class Y extends (i = u.ZP.PersistedStore) {
     initialize(e) {

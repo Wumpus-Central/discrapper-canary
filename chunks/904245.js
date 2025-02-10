@@ -29,8 +29,8 @@ var i = n(278074),
     D = n(459618),
     L = n(541288),
     x = n(3148),
-    w = n(48854),
-    P = n(785359),
+    P = n(48854),
+    w = n(785359),
     M = n(646504),
     k = n(64078),
     U = n(351780),
@@ -361,7 +361,7 @@ let eC = {
                         message: eg.intl.string(eg.t.bNMQVF),
                         messageName: 'BOT_GUILD_EXPLICIT_CONTENT'
                     })),
-                l = (0, w.r)();
+                l = (0, P.r)();
             eR.sendBotMessage(e, a, o, l),
                 (0, v.aP)({
                     action: v.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLYDE_MESSAGE_SENT,
@@ -689,7 +689,7 @@ let eC = {
             if (null != a) return eR.sendMessage(a, t, i, r);
             let s = () => eR._sendMessage(e, t, r),
                 o = R.ZP.backgroundify(s, void 0),
-                l = null !== (n = r.nonce) && void 0 !== n ? n : (0, w.r)();
+                l = null !== (n = r.nonce) && void 0 !== n ? n : (0, P.r)();
             return ((r = {
                 ...r,
                 nonce: l
@@ -884,7 +884,7 @@ let eC = {
             let R = (null === (i = n.messageReference) || void 0 === i ? void 0 : i.type) === eh.Uvt.FORWARD;
             if ('' === u && null == _ && null == m && null == y && null == I && !R) return Promise.resolve();
             let O = null != E ? eh.uaV.REPLY : eh.uaV.DEFAULT,
-                M = null !== (a = n.nonce) && void 0 !== a ? a : (0, w.r)(),
+                M = null !== (a = n.nonce) && void 0 !== a ? a : (0, P.r)(),
                 Z = M;
             if (!1 !== n.eagerDispatch) {
                 let t = (0, x.ZP)({
@@ -1051,7 +1051,7 @@ let eC = {
                                               channelId: e,
                                               shouldNotify: !n.doNotNotifyOnError
                                           }),
-                                          (0, P.x)({
+                                          (0, w.x)({
                                               failureCode: o.hasErr ? void 0 : o.status,
                                               errorMessage: o.hasErr ? o.err.message : void 0
                                           }),

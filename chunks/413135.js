@@ -243,7 +243,7 @@ function x(e, t, n) {
             }
         null === c ? ((c = 65533), (d = 1)) : c > 65535 && ((c -= 65536), i.push(((c >>> 10) & 1023) | 55296), (c = 56320 | (1023 & c))), i.push(c), (r += d);
     }
-    return P(i);
+    return w(i);
 }
 (t.kMaxLength = s),
     (u.TYPED_ARRAY_SUPPORT = o()),
@@ -422,11 +422,11 @@ function x(e, t, n) {
             data: Array.prototype.slice.call(this._arr || this, 0)
         };
     });
-var w = 4096;
-function P(e) {
+var P = 4096;
+function w(e) {
     var t = e.length;
-    if (t <= w) return String.fromCharCode.apply(String, e);
-    for (var n = '', i = 0; i < t; ) n += String.fromCharCode.apply(String, e.slice(i, (i += w)));
+    if (t <= P) return String.fromCharCode.apply(String, e);
+    for (var n = '', i = 0; i < t; ) n += String.fromCharCode.apply(String, e.slice(i, (i += P)));
     return n;
 }
 function M(e, t, n) {

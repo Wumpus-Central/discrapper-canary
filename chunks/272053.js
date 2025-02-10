@@ -188,9 +188,9 @@ class x {
         m(this, '_nextCheck', void 0), m(this, '_started', void 0), (this._started = !1);
     }
 }
-let w = new x();
-function P() {
-    p.Z.enabled ? w.start() : w.stop();
+let P = new x();
+function w() {
+    p.Z.enabled ? P.start() : P.stop();
 }
 function M(e) {
     var t;
@@ -199,7 +199,7 @@ function M(e) {
 }
 class k extends (i = s.ZP.Store) {
     initialize() {
-        P(), this.waitFor(_.Z), this.syncWith([p.Z], P);
+        w(), this.waitFor(_.Z), this.syncWith([p.Z], w);
     }
     getStream() {
         return S;
@@ -208,5 +208,5 @@ class k extends (i = s.ZP.Store) {
 m(k, 'displayName', 'ExternalStreamingStore');
 let U = new k(l.Z, {
     STREAMING_UPDATE: M,
-    USER_CONNECTIONS_UPDATE: () => w._check()
+    USER_CONNECTIONS_UPDATE: () => P._check()
 });

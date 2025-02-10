@@ -48,8 +48,8 @@ let S = new f.Z('GuildMemberStore'),
     D = !1,
     L = 0,
     x = 0,
-    w = {},
     P = {},
+    w = {},
     M = {
         added: [],
         removed: []
@@ -70,7 +70,7 @@ function U(e, t) {
         }
 }
 function G(e) {
-    (L += 1), (w[e] = L);
+    (L += 1), (P[e] = L);
 }
 function B(e) {
     F(e) === v.default.getId() && (0, p.l)(V(e)), delete O[e];
@@ -455,8 +455,8 @@ function eE(e) {
     if (null == f) return !1;
     let _ = I.Z.getGuild(r);
     if (null == _) return !1;
-    let p = null !== (t = P[r]) && void 0 !== t ? t : {};
-    (P[r] = {
+    let p = null !== (t = w[r]) && void 0 !== t ? t : {};
+    (w[r] = {
         added: a().difference(a().union(null !== (n = p.added) && void 0 !== n ? n : [], o), null != l ? l : []),
         removed: a().difference(a().union(null !== (i = p.removed) && void 0 !== i ? i : [], l), null != o ? o : [])
     }),
@@ -478,7 +478,7 @@ function eE(e) {
 function ev(e) {
     let { guildId: t } = e;
     if (null == t) return !1;
-    delete P[t];
+    delete w[t];
 }
 function ey(e) {
     let { guildId: t } = e,
@@ -661,12 +661,12 @@ class eN extends (i = o.ZP.Store) {
     }
     getPendingRoleUpdates(e) {
         var t;
-        return null !== (t = P[e]) && void 0 !== t ? t : M;
+        return null !== (t = w[e]) && void 0 !== t ? t : M;
     }
     getMemberRoleWithPendingUpdates(e, t) {
         var n, i;
         let r = null !== (i = null === (n = this.getMember(e, t)) || void 0 === n ? void 0 : n.roles) && void 0 !== i ? i : [],
-            s = P[e];
+            s = w[e];
         return null == s ? r : a().difference(a().union(r, s.added), s.removed);
     }
     getMemberVersion() {

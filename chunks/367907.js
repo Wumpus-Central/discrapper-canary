@@ -1,7 +1,7 @@
 n.d(t, {
     $H: () => B,
     AB: () => k,
-    JS: () => P,
+    JS: () => w,
     ZP: () => V,
     hH: () => x,
     kO: () => Z,
@@ -68,13 +68,13 @@ function x(e) {
         num_voice_channels_active: L(c)
     };
 }
-function w(e, t) {
+function P(e, t) {
     return {
         channel_static_route: t,
         channel_hidden: !1
     };
 }
-function P(e) {
+function w(e) {
     if (null == e) return null;
     let t = c.Z.getChannel(e);
     return null == t ? null : M(t);
@@ -131,7 +131,7 @@ function G(e) {
         l = {
             ...t,
             ...x(o),
-            ...(null != r && null != a && (0, D.AB)(a) ? w(r, a) : M(s))
+            ...(null != r && null != a && (0, D.AB)(a) ? P(r, a) : M(s))
         };
     A.default.track(e, l, { flush: n });
 }

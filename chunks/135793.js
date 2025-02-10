@@ -34,8 +34,8 @@ var i = n(200651),
     D = n(238494),
     L = n(99713);
 let x = 190,
-    w = 178,
-    P = 'MESSAGE_CONFETTI_POTION_MODAL_KEY',
+    P = 178,
+    w = 'MESSAGE_CONFETTI_POTION_MODAL_KEY',
     M = (e) => {
         let { channelId: t, message: r, onRedeem: a, onClose: s, buttonUseState: u = 'activate', source: c } = e,
             d = h.Z.getChannel(t);
@@ -55,7 +55,7 @@ let x = 190,
                             buttonUseState: u
                         });
                 },
-                { modalKey: P }
+                { modalKey: w }
             ));
     };
 function k(e) {
@@ -96,20 +96,20 @@ function U(e) {
         },
         [O, f]
     );
-    let w = (0, r.useCallback)(() => {
+    let P = (0, r.useCallback)(() => {
             null != h && ((0, l.pTH)(), a(h));
         }, [h, a]),
-        P = (0, r.useCallback)(() => {
+        w = (0, r.useCallback)(() => {
             (0, p.Z)({
                 skuId: I.D1,
                 analyticsLocations: D,
                 onComplete: () => {
-                    w(), (0, E.gA)(I.D1);
+                    P(), (0, E.gA)(I.D1);
                 },
                 variantsReturnStyle: s.v.INDIVIDUAL_PRODUCTS
             });
-        }, [w, D]),
-        M = (0, r.useCallback)(() => (L ? w() : P()), [w, P, L]),
+        }, [P, D]),
+        M = (0, r.useCallback)(() => (L ? P() : w()), [P, w, L]),
         k = (0, r.useMemo)(() => {
             if (null != b) {
                 if ('apply' === o) return 3;
@@ -313,7 +313,7 @@ let G = (e) => {
             children: [
                 (0, i.jsx)(l.zxk, {
                     onClick: () => {
-                        (0, l.Mr3)(P);
+                        (0, l.Mr3)(w);
                     },
                     color: l.zxk.Colors.PRIMARY,
                     children: O.intl.string(O.t.w2Qbd3)
@@ -404,7 +404,7 @@ let G = (e) => {
                 children: [
                     (0, i.jsx)(l.Eep, {
                         src: L,
-                        width: w,
+                        width: P,
                         height: x
                     }),
                     (0, i.jsx)(l.Text, {

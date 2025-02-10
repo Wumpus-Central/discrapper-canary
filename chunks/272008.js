@@ -1,9 +1,9 @@
 n.d(t, {
     AH: () => S,
-    Ag: () => P,
+    Ag: () => w,
     CS: () => y,
     EW: () => x,
-    OR: () => w,
+    OR: () => P,
     QB: () => A,
     T0: () => L,
     Wf: () => O,
@@ -359,14 +359,14 @@ function x(e) {
         questId: e
     });
 }
-function w(e, t) {
+function P(e, t) {
     a.Z.dispatch({
         type: 'QUESTS_SELECT_TASK_PLATFORM',
         questId: e,
         platform: t
     });
 }
-async function P() {
+async function w() {
     if (!d.Z.isFetchingClaimedQuests) {
         a.Z.dispatch({ type: 'QUESTS_FETCH_CLAIMED_QUESTS_BEGIN' });
         try {

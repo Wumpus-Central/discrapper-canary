@@ -278,17 +278,17 @@
             (this.partialLengths = c),
             (this.curves = d);
     }
-    function w(e, t, n, i) {
+    function P(e, t, n, i) {
         (this.x0 = e), (this.x1 = t), (this.y0 = n), (this.y1 = i);
     }
-    function P(e, t) {
+    function w(e, t) {
         return Math.sqrt((e[0] - t[0]) * (e[0] - t[0]) + (e[1] - t[1]) * (e[1] - t[1]));
     }
     function M(e, t, n) {
         return [e[0] + (t[0] - e[0]) * n, e[1] + (t[1] - e[1]) * n];
     }
     function k(e, t) {
-        return 1e-9 > P(e, t);
+        return 1e-9 > w(e, t);
     }
     function U(e, t, n) {
         var i = e.map(function (e, n) {
@@ -395,13 +395,13 @@
         for (var n = e.length + t, i = e2(e) / t, r = 0, a = 0, s = i / 2; e.length < n; ) {
             var o = e[r],
                 l = e[(r + 1) % e.length],
-                u = P(o, l);
+                u = w(o, l);
             s <= a + u ? (e.splice(r + 1, 0, u ? M(o, l, (s - a) / u) : o.slice(0)), (s += i)) : ((a += u), r++);
         }
     }
     function X(e, t) {
         void 0 === t && (t = 1 / 0);
-        for (var n = 0; n < e.length; n++) for (var i = e[n], r = n === e.length - 1 ? e[0] : e[n + 1]; P(i, r) > t; ) (r = M(i, r, 0.5)), e.splice(n + 1, 0, r);
+        for (var n = 0; n < e.length; n++) for (var i = e[n], r = n === e.length - 1 ? e[0] : e[n + 1]; w(i, r) > t; ) (r = M(i, r, 0.5)), e.splice(n + 1, 0, r);
     }
     function J(e, t) {
         var n, i;
@@ -751,7 +751,7 @@
         for (var t, n = -1, i = e.length, r = e[i - 1], a = 0; ++n < i; ) (t = r), (r = e[n]), (a += t[0] * r[1] - t[1] * r[0]);
         return Math.abs(a);
     }
-    function ew(e, t) {
+    function eP(e, t) {
         function n(e) {
             switch (e.type) {
                 case 'GeometryCollection':
@@ -824,7 +824,7 @@
             }
         );
     }
-    function eP(e) {
+    function ew(e) {
         return function (t, n) {
             return tL(e(t), n);
         };
@@ -882,7 +882,7 @@
                 var t = n[0],
                     r = tD(n)[0][0],
                     a = n[r],
-                    s = ew(e, [t, a]);
+                    s = eP(e, [t, a]);
                 (s.area = t.area + a.area), (s.type = 'Polygon'), (s.arcs = s.arcs[0]), n.splice(r, 1), n.shift(), n.splice(i(n, s.area), 0, s);
             })();
         if (t > n.length) throw RangeError("Can't collapse topology into " + t + ' pieces.');
@@ -926,7 +926,7 @@
         return i(a), a;
     }
     function eB(e, t) {
-        var n = P(Z(e), Z(t));
+        var n = w(Z(e), Z(t));
         return n * n;
     }
     function eZ(e, t, n) {
@@ -940,7 +940,7 @@
         var s = J(e, i);
         s.length < t.length + 2 && Q(s, t.length + 2 - s.length);
         var o,
-            l = tw(s, t.length),
+            l = tP(s, t.length),
             u = t.map(function (e) {
                 return J(e, i);
             }),
@@ -1024,7 +1024,7 @@
             s = n.t1,
             o = n.match,
             l = o
-                ? tP(e, t)
+                ? tw(e, t)
                 : e.map(function (e, t) {
                       return t;
                   }),
@@ -1123,7 +1123,7 @@
                 o = 0;
             return i.map(function (r, l) {
                 var u;
-                return l && (o += P(r, i[l - 1])), [Math.cos((u = s + 2 * Math.PI * (a ? o / a : l / i.length))) * n + e, Math.sin(u) * n + t];
+                return l && (o += w(r, i[l - 1])), [Math.cos((u = s + 2 * Math.PI * (a ? o / a : l / i.length))) * n + e, Math.sin(u) * n + t];
             });
         };
     }
@@ -1136,7 +1136,7 @@
             o < 0 && (o = 2 * Math.PI + o);
             var u = o / (2 * Math.PI);
             return r.map(function (a, o) {
-                o && (l += P(a, r[o - 1]));
+                o && (l += w(a, r[o - 1]));
                 var c = eX((u + (s ? l / s : o / r.length)) % 1);
                 return [e + c[0] * n, t + c[1] * i];
             });
@@ -1757,12 +1757,12 @@
         }
     };
     var tg = function (e, t, n, i) {
-        return new w(e, t, n, i);
+        return new P(e, t, n, i);
     };
-    (w.prototype.getTotalLength = function () {
+    (P.prototype.getTotalLength = function () {
         return Math.sqrt(Math.pow(this.x0 - this.x1, 2) + Math.pow(this.y0 - this.y1, 2));
     }),
-        (w.prototype.getPointAtLength = function (e) {
+        (P.prototype.getPointAtLength = function (e) {
             var t = e / Math.sqrt(Math.pow(this.x0 - this.x1, 2) + Math.pow(this.y0 - this.y1, 2)),
                 n = (this.x1 - this.x0) * t,
                 i = (this.y1 - this.y0) * t;
@@ -1771,14 +1771,14 @@
                 y: this.y0 + i
             };
         }),
-        (w.prototype.getTangentAtLength = function () {
+        (P.prototype.getTangentAtLength = function () {
             var e = Math.sqrt((this.x1 - this.x0) * (this.x1 - this.x0) + (this.y1 - this.y0) * (this.y1 - this.y0));
             return {
                 x: (this.x1 - this.x0) / e,
                 y: (this.y1 - this.y0) / e
             };
         }),
-        (w.prototype.getPropertiesAtLength = function (e) {
+        (P.prototype.getPropertiesAtLength = function (e) {
             var t = this.getPointAtLength(e),
                 n = this.getTangentAtLength();
             return {
@@ -1829,7 +1829,7 @@
                 !(function (r) {
                     (i = 0),
                         t.forEach(function (t, n) {
-                            var s = P(e[(r + n) % a], t);
+                            var s = w(e[(r + n) % a], t);
                             i += s * s;
                         }),
                         i < s && ((s = i), (n = r));
@@ -2042,7 +2042,7 @@
         },
         tx = function (e) {
             return (
-                1 === e.length && (e = eP(e)),
+                1 === e.length && (e = ew(e)),
                 {
                     left: function (t, n, i, r) {
                         for (null == i && (i = 0), null == r && (r = t.length); i < r; ) {
@@ -2061,12 +2061,12 @@
                 }
             );
         },
-        tw =
+        tP =
             (tx(tL).right,
             function (e, t) {
                 return ek(eM(eU(e), e), t);
             }),
-        tP = function (e, t) {
+        tw = function (e, t) {
             if (e.length > 8)
                 return e.map(function (e, t) {
                     return t;

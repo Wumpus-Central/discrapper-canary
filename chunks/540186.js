@@ -4,15 +4,15 @@ t(192379);
 var i = t(442837),
     a = t(481060),
     r = t(594174),
-    s = t(311888),
-    o = t(63063),
+    o = t(311888),
+    s = t(63063),
     c = t(5192),
     d = t(431328),
     u = t(501655),
     m = t(659972),
     _ = t(981631),
-    x = t(765305),
-    h = t(388032),
+    h = t(765305),
+    x = t(388032),
     g = t(761137);
 function v(e) {
     let { icon: n } = e;
@@ -44,28 +44,28 @@ function b(e) {
 }
 function j(e) {
     var n;
-    let { guild: t, channel: a, stageData: s } = e,
-        o = (0, i.e7)([r.default], () => r.default.getCurrentUser(), []),
+    let { guild: t, channel: a, stageData: o } = e,
+        s = (0, i.e7)([r.default], () => r.default.getCurrentUser(), []),
         _ = {
             id: '1337',
             guild_id: t.id,
             channel_id: a.id,
-            topic: s.topic,
-            description: s.description,
-            privacy_level: null !== (n = s.privacyLevel) && void 0 !== n ? n : x.j8.PUBLIC
+            topic: o.topic,
+            description: o.description,
+            privacy_level: null !== (n = o.privacyLevel) && void 0 !== n ? n : h.j8.PUBLIC
         },
-        h = (0, d.w8)(a.id, u.pV.SPEAKER),
+        x = (0, d.w8)(a.id, u.pV.SPEAKER),
         v = (0, d.Rk)(a.id, u.pV.AUDIENCE),
-        b = h.slice(0, 5);
+        b = x.slice(0, 5);
     return (
         null ==
             b.find((e) => {
                 var n;
-                return (null === (n = e.user) || void 0 === n ? void 0 : n.id) === (null == o ? void 0 : o.id);
+                return (null === (n = e.user) || void 0 === n ? void 0 : n.id) === (null == s ? void 0 : s.id);
             }) &&
             b.push({
-                user: o,
-                userNick: c.ZP.getName(t.id, a.id, o)
+                user: s,
+                userNick: c.ZP.getName(t.id, a.id, s)
             }),
         (0, l.jsx)('div', {
             className: g.previewCardContainer,
@@ -78,7 +78,7 @@ function j(e) {
                     setShowGuildPopout: () => {},
                     source: m.k.UNSPECIFIED,
                     speakers: b,
-                    speakerCount: h.length,
+                    speakerCount: x.length,
                     audienceCount: Math.max(1337, v),
                     channelName: a.name
                 })
@@ -107,13 +107,13 @@ function N(e) {
                                       id: r,
                                       className: g.__invalid_title,
                                       variant: 'heading-xl/semibold',
-                                      children: h.intl.string(h.t.GXpXTE)
+                                      children: x.intl.string(x.t.GXpXTE)
                                   }),
                                   (0, l.jsx)(a.Text, {
                                       className: g.subtitle,
                                       color: 'header-secondary',
                                       variant: 'text-sm/normal',
-                                      children: h.intl.string(h.t.JaYMvL)
+                                      children: x.intl.string(x.t.JaYMvL)
                                   })
                               ]
                           }),
@@ -122,24 +122,24 @@ function N(e) {
                               children: [
                                   (0, l.jsx)(b, {
                                       icon: (0, l.jsx)(v, { icon: a.Jmo }),
-                                      text: h.intl.string(h.t.u6oOcn)
+                                      text: x.intl.string(x.t.u6oOcn)
                                   }),
                                   (0, l.jsx)(b, {
                                       icon: (0, l.jsx)(v, { icon: a.iFz }),
-                                      text: h.intl.string(h.t.QC8ymZ)
+                                      text: x.intl.string(x.t.QC8ymZ)
                                   }),
                                   (0, l.jsx)(b, {
                                       icon: (0, l.jsx)(v, { icon: a.vdY }),
-                                      text: h.intl.string(h.t.mgGOT0)
+                                      text: x.intl.string(x.t.mgGOT0)
                                   }),
                                   (0, l.jsx)(b, {
-                                      icon: (0, l.jsx)(s.Z, {
+                                      icon: (0, l.jsx)(o.Z, {
                                           className: g.badgeIconBackground,
                                           foreground: g.badgeIconForeground,
                                           width: 40,
                                           height: 40
                                       }),
-                                      text: h.intl.format(h.t.qLmNLC, { articleURL: o.Z.getArticleURL(_.BhN.STAGE_CHANNEL_GUIDELINES) })
+                                      text: x.intl.format(x.t.qLmNLC, { articleURL: s.Z.getArticleURL(_.BhN.STAGE_CHANNEL_GUIDELINES) })
                                   })
                               ]
                           })
@@ -151,13 +151,13 @@ function N(e) {
                               color: a.zxk.Colors.GREEN,
                               onClick: d,
                               submitting: c,
-                              children: h.intl.string(h.t.s8mM8P)
+                              children: x.intl.string(x.t.s8mM8P)
                           }),
                           (0, l.jsx)(a.zxk, {
                               color: a.zxk.Colors.PRIMARY,
                               className: g.cancelButton,
                               onClick: u,
-                              children: h.intl.string(h.t['ETE/oK'])
+                              children: x.intl.string(x.t['ETE/oK'])
                           }),
                           (0, l.jsx)(a.zxk, {
                               look: a.zxk.Looks.LINK,
@@ -165,7 +165,7 @@ function N(e) {
                               className: g.backButton,
                               onClick: m,
                               size: a.zxk.Sizes.MIN,
-                              children: h.intl.string(h.t['13/7kZ'])
+                              children: x.intl.string(x.t['13/7kZ'])
                           })
                       ]
                   })

@@ -46,7 +46,7 @@ let C = { offset: 2 },
     };
 function N(e) {
     var t, l;
-    let { channel: r, user: p, nick: N, mute: T, deaf: S, serverMute: A, serverDeaf: Z } = e,
+    let { channel: r, user: p, nick: N, mute: T, deaf: S, serverMute: Z, serverDeaf: A } = e,
         x = (0, s.e7)([g.Z], () => g.Z.isLocalMute(p.id)),
         b = (0, d.Z)({
             userId: p.id,
@@ -68,9 +68,9 @@ function N(e) {
                 if (r) return v.localMute;
                 if (l) return v.mute;
             })({
-                serverDeaf: Z,
+                serverDeaf: A,
                 deaf: S,
-                serverMute: A,
+                serverMute: Z,
                 mute: T,
                 localMute: x
             })) && void 0 !== l

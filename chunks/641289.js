@@ -91,11 +91,11 @@ function S(e) {
             }
         ],
         x = '([0-9]_*)+',
-        w = '([0-9a-fA-F]_*)+',
-        P = {
+        P = '([0-9a-fA-F]_*)+',
+        w = {
             className: 'number',
             relevance: 0,
-            variants: [{ match: `\\b(${x})(\\.(${x}))?([eE][+-]?(${x}))?\\b` }, { match: `\\b0x(${w})(\\.(${w}))?([pP][+-]?(${x}))?\\b` }, { match: /\b0o([0-7]_*)+\b/ }, { match: /\b0b([01]_*)+\b/ }]
+            variants: [{ match: `\\b(${x})(\\.(${x}))?([eE][+-]?(${x}))?\\b` }, { match: `\\b0x(${P})(\\.(${P}))?([pP][+-]?(${x}))?\\b` }, { match: /\b0o([0-7]_*)+\b/ }, { match: /\b0b([01]_*)+\b/ }]
         },
         M = (e = '') => ({
             className: 'subst',
@@ -181,7 +181,7 @@ function S(e) {
                             begin: /\(/,
                             end: /\)/,
                             keywords: b,
-                            contains: [...L, P, Z]
+                            contains: [...L, w, Z]
                         }
                     ]
                 }
@@ -246,7 +246,7 @@ function S(e) {
                 ...R,
                 ...O,
                 ...L,
-                P,
+                w,
                 Z,
                 ...W,
                 ...K,
@@ -282,7 +282,7 @@ function S(e) {
                 ...h,
                 ...R,
                 ...L,
-                P,
+                w,
                 Z,
                 ...K,
                 z,
@@ -366,7 +366,7 @@ function S(e) {
     for (let e of Z.variants) {
         let t = e.contains.find((e) => 'interpol' === e.label);
         t.keywords = C;
-        let n = [...R, ...O, ...L, P, Z, ...W];
+        let n = [...R, ...O, ...L, w, Z, ...W];
         t.contains = [
             ...n,
             {
@@ -398,7 +398,7 @@ function S(e) {
             ...R,
             ...O,
             ...L,
-            P,
+            w,
             Z,
             ...W,
             ...K,

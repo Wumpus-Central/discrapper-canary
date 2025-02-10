@@ -95,7 +95,7 @@ function A(e, t, n, g) {
         T = (0, p.j)(),
         A = null !== (O = null !== (D = null == g ? void 0 : g.locale) && void 0 !== D ? D : T.locale) && void 0 !== O ? O : i.Z;
     if (!A.match) throw RangeError('locale must contain match property');
-    var C = (0, c.Z)(null !== (L = null !== (x = null !== (w = null !== (P = null == g ? void 0 : g.firstWeekContainsDate) && void 0 !== P ? P : null == g ? void 0 : null === (M = g.locale) || void 0 === M ? void 0 : null === (k = M.options) || void 0 === k ? void 0 : k.firstWeekContainsDate) && void 0 !== w ? w : T.firstWeekContainsDate) && void 0 !== x ? x : null === (U = T.locale) || void 0 === U ? void 0 : null === (G = U.options) || void 0 === G ? void 0 : G.firstWeekContainsDate) && void 0 !== L ? L : 1);
+    var C = (0, c.Z)(null !== (L = null !== (x = null !== (P = null !== (w = null == g ? void 0 : g.firstWeekContainsDate) && void 0 !== w ? w : null == g ? void 0 : null === (M = g.locale) || void 0 === M ? void 0 : null === (k = M.options) || void 0 === k ? void 0 : k.firstWeekContainsDate) && void 0 !== P ? P : T.firstWeekContainsDate) && void 0 !== x ? x : null === (U = T.locale) || void 0 === U ? void 0 : null === (G = U.options) || void 0 === G ? void 0 : G.firstWeekContainsDate) && void 0 !== L ? L : 1);
     if (!(C >= 1 && C <= 7)) throw RangeError('firstWeekContainsDate must be between 1 and 7 inclusively');
     var R = (0, c.Z)(null !== (B = null !== (Z = null !== (F = null !== (V = null == g ? void 0 : g.weekStartsOn) && void 0 !== V ? V : null == g ? void 0 : null === (j = g.locale) || void 0 === j ? void 0 : null === (H = j.options) || void 0 === H ? void 0 : H.weekStartsOn) && void 0 !== F ? F : T.weekStartsOn) && void 0 !== Z ? Z : null === (Y = T.locale) || void 0 === Y ? void 0 : null === (W = Y.options) || void 0 === W ? void 0 : W.weekStartsOn) && void 0 !== B ? B : 0);
     if (!(R >= 0 && R <= 6)) throw RangeError('weekStartsOn must be between 0 and 6 inclusively');
@@ -104,8 +104,8 @@ function A(e, t, n, g) {
         D,
         L,
         x,
-        w,
         P,
+        w,
         M,
         k,
         U,

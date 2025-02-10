@@ -21,8 +21,8 @@ var i = n(200651),
     N = n(108427),
     T = n(210887),
     S = n(974042),
-    A = n(849862),
-    Z = n(666286),
+    Z = n(849862),
+    A = n(666286),
     x = n(596957),
     b = n(981631),
     L = n(723359),
@@ -53,7 +53,7 @@ let R = function (e) {
             h.Y(b.Z5c.FRIENDS), (0, N.e)('friends');
         }, []);
     let j = (0, c.e7)([T.Z], () => T.Z.theme),
-        D = (0, A.If)(),
+        D = (0, Z.If)(),
         { section: w, rows: M } = (0, c.cj)([S.ZP], () => S.ZP.getState()),
         k = (0, c.e7)([f.Z], () => f.Z.getSuggestionCount()),
         U = l.useMemo(() => M.getRelationshipCounts(), [M]);
@@ -176,7 +176,7 @@ let R = function (e) {
                         id: w,
                         className: P.peopleColumn,
                         'aria-labelledby': V,
-                        children: w === b.pJs.ADD_FRIEND ? (0, i.jsx)(Z.Z, {}) : (0, i.jsx)(x.Z, { titleId: V })
+                        children: w === b.pJs.ADD_FRIEND ? (0, i.jsx)(A.Z, {}) : (0, i.jsx)(x.Z, { titleId: V })
                     }),
                     (0, i.jsx)('div', {
                         className: P.nowPlayingColumn,

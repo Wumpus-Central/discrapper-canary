@@ -44,8 +44,8 @@ var i = n(990547),
     D = n(594174),
     L = n(979651),
     x = n(585483),
-    w = n(630388),
-    P = n(823379),
+    P = n(630388),
+    w = n(823379),
     M = n(573261),
     k = n(595519),
     U = n(774226),
@@ -168,7 +168,7 @@ async function J(e) {
 function $(e, t) {
     let n = (null == t ? void 0 : t.type) === K.d4z.GUILD_VOICE,
         i = E.Z.getApplication(e),
-        r = null != i && (0, w.yE)(i.flags, K.udG.EMBEDDED),
+        r = null != i && (0, P.yE)(i.flags, K.udG.EMBEDDED),
         a = (0, k.l5)(t);
     return (n && r) || a;
 }
@@ -455,7 +455,7 @@ async function es(e) {
     var t, n, r, s;
     let { guildId: o, force: l = !1 } = e,
         u = G.ZP.getShelfActivities(o),
-        c = u.map((e) => E.Z.getApplication(e.application_id)).filter(P.lm);
+        c = u.map((e) => E.Z.getApplication(e.application_id)).filter(w.lm);
     if (!l && !G.ZP.shouldFetchShelf(o)) {
         if (null === (t = G.ZP.getShelfFetchStatus(o)) || void 0 === t ? void 0 : t.isFetching) {
             let e, t;

@@ -190,7 +190,7 @@ class x {
         S(this, 'guildId', void 0), S(this, 'listId', void 0), S(this, 'ownerId', void 0), S(this, 'rows', []), S(this, 'groups', []), S(this, 'members', {}), S(this, 'version', 0), (this.guildId = e), (this.listId = t), this.updateOwnerId();
     }
 }
-class w {
+class P {
     get(e, t) {
         let n = this._guildLists[e];
         null == n && (n = this._guildLists[e] = {});
@@ -227,9 +227,9 @@ class w {
         S(this, '_guildLists', {});
     }
 }
-let P = new w();
+let w = new P();
 function M(e) {
-    let t = P.get(e.guildId, e.id);
+    let t = w.get(e.guildId, e.id);
     e.ops.forEach((e) => {
         switch (e.op) {
             case 'SYNC':
@@ -251,25 +251,25 @@ function M(e) {
         t.setGroups(e.groups);
 }
 function k() {
-    P.reset();
+    w.reset();
 }
 function U(e) {
     let { guild: t } = e;
-    P.forEach(t.id, (e) => {
+    w.forEach(t.id, (e) => {
         e.updateOwnerId() && e.rebuildMembers();
     });
 }
 function G(e) {
     let { guild: t } = e;
-    P.delete(t.id);
+    w.delete(t.id);
 }
 function B(e) {
     let { guildId: t } = e;
-    P.forEach(t, (e) => e.rebuildMembers());
+    w.forEach(t, (e) => e.rebuildMembers());
 }
 function Z(e) {
     let { guildId: t, user: n } = e;
-    P.forEach(t, (e) => e.rebuildMember(n.id));
+    w.forEach(t, (e) => e.rebuildMember(n.id));
 }
 let F = [];
 function V() {
@@ -277,12 +277,12 @@ function V() {
         t = F.concat(e);
     (F = e),
         t.forEach((e) => {
-            P.forEach(null, (t) => t.rebuildMember(e.ownerId));
+            w.forEach(null, (t) => t.rebuildMember(e.ownerId));
         });
 }
 function j() {
     let e = p.default.getId();
-    P.forEach(null, (t) => t.rebuildMember(e));
+    w.forEach(null, (t) => t.rebuildMember(e));
 }
 function H() {
     return !0;
@@ -292,7 +292,7 @@ class Y extends (i = u.ZP.Store) {
         this.waitFor(I.default, E.Z, h.Z, g.ZP, v.Z, y.Z, p.default, m.Z, _.Z, d.Z), this.syncWith([y.Z], j), this.syncWith([_.Z], V);
     }
     getProps(e, t) {
-        let n = P.get(e, D(t));
+        let n = w.get(e, D(t));
         return {
             listId: ''.concat(n.guildId, ':').concat(n.listId),
             groups: n.groups,
@@ -301,7 +301,7 @@ class Y extends (i = u.ZP.Store) {
         };
     }
     getRows(e, t) {
-        return P.get(e, D(t)).rows;
+        return w.get(e, D(t)).rows;
     }
 }
 S(Y, 'displayName', 'ChannelMemberStore');

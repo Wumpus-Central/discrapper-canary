@@ -26,8 +26,8 @@ var i = n(200651),
     j = n(905423),
     y = n(802718),
     P = n(751648),
-    A = n(822857),
-    T = n(34222),
+    T = n(822857),
+    A = n(34222),
     w = n(431286),
     R = n(796974),
     L = n(271383),
@@ -233,11 +233,11 @@ function es(e) {
     );
     let { analyticsLocations: ey } = (0, Z.ZP)(x.Z.GUILDS_LIST),
         { pathname: eP } = (0, c.TH)(),
-        eA = eP.startsWith(en.Z5c.GUILD_DISCOVERY) || eP.startsWith(en.Z5c.GLOBAL_DISCOVERY),
-        eT = eP.startsWith(en.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(''));
+        eT = eP.startsWith(en.Z5c.GUILD_DISCOVERY) || eP.startsWith(en.Z5c.GLOBAL_DISCOVERY),
+        eA = eP.startsWith(en.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(''));
     (0, v.Ng)(() => {
         if (!eg.current && 0 !== p.size) {
-            if (eA) ej.scrollToGuild(null, !1);
+            if (eT) ej.scrollToGuild(null, !1);
             else {
                 let { scrollTop: e } = R.Z.getGuildListDimensions();
                 ej.scrollTo({
@@ -301,10 +301,10 @@ function es(e) {
     let eL = p.getRoots(),
         eM = (0, S.Z)(),
         eD = (0, y.U)(),
-        { enabled: eG } = (0, A.W)({ location: 'useShopViewTransition' });
+        { enabled: eG } = (0, T.W)({ location: 'useShopViewTransition' });
     (0, w.i)();
     let ek = l.useRef(null),
-        { shouldShowOnboardingCoachmark: eB } = (0, T.QM)({ discoveryButtonRef: ek }),
+        { shouldShowOnboardingCoachmark: eB } = (0, A.QM)({ discoveryButtonRef: ek }),
         eO = ed.map((e) =>
             (0, i.jsx)(
                 z.Z,
@@ -321,7 +321,7 @@ function es(e) {
         children: [
             eG &&
                 eB &&
-                (0, i.jsx)(T.ds, {
+                (0, i.jsx)(A.ds, {
                     backgroundElementRef: ek,
                     onClose: P.l,
                     renderTail: !0
@@ -361,7 +361,7 @@ function es(e) {
                                             children: [
                                                 (0, i.jsx)(Y.u, {}),
                                                 eM ? (0, i.jsx)(N.Z, {}) : null,
-                                                (0, i.jsx)(Q.Z, { isOnHubVerificationRoute: eT }),
+                                                (0, i.jsx)(Q.Z, { isOnHubVerificationRoute: eA }),
                                                 (0, i.jsx)(V.Z, {}),
                                                 eD,
                                                 es.map((e) => (0, i.jsx)(et.Z, { guildId: e }, e)),
@@ -388,7 +388,7 @@ function es(e) {
                                                 !n && s
                                                     ? (0, i.jsx)(W.Z, {
                                                           ref: ek,
-                                                          selected: eA,
+                                                          selected: eT,
                                                           className: el.discoveryIcon
                                                       })
                                                     : null,
@@ -401,7 +401,7 @@ function es(e) {
                                                   hideGradient: eS,
                                                   children: (0, i.jsx)(W.Z, {
                                                       ref: ek,
-                                                      selected: eA,
+                                                      selected: eT,
                                                       className: el.discoveryIcon
                                                   })
                                               })

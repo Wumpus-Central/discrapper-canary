@@ -26,7 +26,7 @@ var i = n(200651),
     j = n(467678),
     y = n(703545),
     P = n(193873);
-function A(e) {
+function T(e) {
     let { style: t, withGuildIcon: n, inverted: l } = e,
         r = {
             className: a()(P.spine, { [P.spineWithGuildIcon]: n }, { [P.invertedSpine]: l }),
@@ -71,7 +71,7 @@ function A(e) {
               ]
           });
 }
-function T(e) {
+function A(e) {
     let { style: t, withGuildIcon: n } = e;
     return (0, i.jsx)('svg', {
         className: a()(P.spine, { [P.spineWithGuildIcon]: n }),
@@ -137,7 +137,7 @@ let w = l.memo(function (e) {
                 : D
                   ? E.intl.formatToPlainString(E.t.YlVvmZ, { channelName: t.name })
                   : E.intl.formatToPlainString(E.t['0nZpiI'], { channelName: t.name }),
-        Y = (0, p.Q3)('GuildSidebarThreadListEntry') ? A : T;
+        Y = (0, p.Q3)('GuildSidebarThreadListEntry') ? T : A;
     return (0, i.jsxs)('li', {
         role: H,
         className: a()(j.containerDefault, { [j.selected]: r }),

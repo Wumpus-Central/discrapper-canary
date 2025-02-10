@@ -27,13 +27,13 @@ function v(e) {
         D = null != y.upsellLongMessages && (null != O ? O : 0) > h.J6R && A,
         L = null != y.upsellLongMessages && !A,
         x = (null === (n = (0, d.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === m.Si.TIER_2,
-        w = C - O,
-        P = w > R,
-        M = w < 0 && x,
-        k = 0 === w ? g.intl.string(g.t.tU6YQ0) : w > 0 ? g.intl.formatToPlainString(g.t.qH8uFR, { count: w }) : g.intl.string(g.t.YSRIqa),
+        P = C - O,
+        w = P > R,
+        M = P < 0 && x,
+        k = 0 === P ? g.intl.string(g.t.tU6YQ0) : P > 0 ? g.intl.formatToPlainString(g.t.qH8uFR, { count: P }) : g.intl.string(g.t.YSRIqa),
         { analyticsLocations: U } = (0, u.ZP)(l.Z.CHARACTER_COUNT);
-    if (!((D && w >= 0) || !P || (L && !P))) return null;
-    let G = w >= 0;
+    if (!((D && P >= 0) || !w || (L && !w))) return null;
+    let G = P >= 0;
     return (0, i.jsx)(u.Gt, {
         value: U,
         children: (0, i.jsxs)('div', {
@@ -55,7 +55,7 @@ function v(e) {
                                       })
                               })
                             : null,
-                        P || M
+                        w || M
                             ? null
                             : (0, i.jsx)(o.ua7, {
                                   text: k,
@@ -67,17 +67,17 @@ function v(e) {
                                           'aria-hidden': !0,
                                           ...e,
                                           color: G ? 'text-normal' : 'text-danger',
-                                          children: w
+                                          children: P
                                       })
                               })
                     ]
                 }),
-                (0, i.jsx)(o.nn4, { children: g.intl.format(g.t.qH8uFR, { count: w }) }),
-                L && !P
+                (0, i.jsx)(o.nn4, { children: g.intl.format(g.t.qH8uFR, { count: P }) }),
+                L && !w
                     ? (0, i.jsx)(p.Z, {
                           className: E.upsell,
                           iconOnly: (null === (r = y.upsellLongMessages) || void 0 === r ? void 0 : r.iconOnly) || !1,
-                          remaining: w
+                          remaining: P
                       })
                     : null
             ]

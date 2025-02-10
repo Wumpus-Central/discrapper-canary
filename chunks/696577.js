@@ -90,7 +90,7 @@ function S(e) {
         shouldHighlight: a
     });
 }
-function A(e) {
+function Z(e) {
     let { isGameRelationship: t, applicationId: n } = e,
         l = t ? v.intl.string(v.t.ujfP6e) : v.intl.string(v.t.yltuhY),
         a = (0, r.e7)([c.Z], () => (null != n ? c.Z.getApplication(n) : null));
@@ -123,14 +123,14 @@ function A(e) {
         ]
     });
 }
-function Z(e) {
+function A(e) {
     let { user: t, hovered: n, status: r, disambiguateGameFriends: a, isGameRelationship: s, applicationId: o } = e,
         c = g.ZP.useUserTag(t),
         d = !!a && !s,
         u = l.useMemo(
             () =>
                 a
-                    ? (0, i.jsx)(A, {
+                    ? (0, i.jsx)(Z, {
                           isGameRelationship: s,
                           applicationId: o
                       })
@@ -167,7 +167,7 @@ function x(e) {
             (0, i.jsxs)('div', {
                 className: N.listItemContents,
                 children: [
-                    (0, i.jsx)(Z, {
+                    (0, i.jsx)(A, {
                         user: t,
                         hovered: e,
                         status: g,

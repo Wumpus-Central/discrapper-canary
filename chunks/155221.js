@@ -46,12 +46,12 @@ let D = (0, h.Un)({
         webpackId: 484097,
         name: 'InviteProxy'
     }),
-    w = (0, h.Un)({
+    P = (0, h.Un)({
         createPromise: () => n.e('30556').then(n.bind(n, 675207)),
         webpackId: 675207,
         name: 'VerifyConnectedAccount'
     }),
-    P = (0, h.Un)({
+    w = (0, h.Un)({
         createPromise: () => n.e('3809').then(n.bind(n, 301001)),
         webpackId: 301001,
         name: 'VerifyConnectedAccountSuccess'
@@ -265,7 +265,7 @@ class $ extends r.Component {
                                     }),
                                     (0, i.jsx)(p.Z, {
                                         path: C.Z5c.CONNECTIONS_SUCCESS(':type'),
-                                        component: P
+                                        component: w
                                     }),
                                     (0, i.jsx)(p.Z, {
                                         path: C.Z5c.CONNECTIONS_ERROR(':type'),
@@ -273,7 +273,7 @@ class $ extends r.Component {
                                     }),
                                     (0, i.jsx)(p.Z, {
                                         path: C.Z5c.CONNECTIONS(':type'),
-                                        component: w
+                                        component: P
                                     }),
                                     (0, i.jsx)(p.Z, {
                                         path: C.Z5c.DOWNLOAD_QR_CODE_REDIRECT,

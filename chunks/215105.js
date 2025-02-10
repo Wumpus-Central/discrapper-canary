@@ -57,9 +57,9 @@ let S = (0, f.kt)({
 function C(e) {
     let { user: t, guildId: n, channelId: a, profileType: o, sourceType: f, sourceDetails: _, setPopoutRef: E, modalKey: C, onAction: R, onClose: O, entry: D } = e,
         { resetInteraction: L, setInteractionToast: x } = (0, g.Xo)(),
-        { primaryColor: w } = (0, v.z)(),
-        [P, M] = r.useState(''),
-        [k, U] = r.useState((0, c.JM)(P)),
+        { primaryColor: P } = (0, v.z)(),
+        [w, M] = r.useState(''),
+        [k, U] = r.useState((0, c.JM)(w)),
         G = r.useRef(!1),
         B = r.useRef(null),
         Z = r.useCallback(
@@ -107,7 +107,7 @@ function C(e) {
         ref: B,
         onKeyDown: Z,
         children: (0, i.jsx)('div', {
-            className: s()(b.container, V, j, { [b.customProfileTheme]: null != w }),
+            className: s()(b.container, V, j, { [b.customProfileTheme]: null != P }),
             children: (0, i.jsx)(d.Z, {
                 parentModalKey: C,
                 emojiPickerCloseOnModalOuterClick: !0,
@@ -117,10 +117,10 @@ function C(e) {
                 type: u.Ie.USER_PROFILE_REPLY,
                 placeholder: T.intl.formatToPlainString(N(f), { username: p.ZP.getName(n, a, t) }),
                 channel: S,
-                textValue: P,
+                textValue: w,
                 richValue: k,
                 onChange: (e, t, n) => {
-                    t !== P && (M(t), U(n));
+                    t !== w && (M(t), U(n));
                 },
                 focused: G.current,
                 onFocus: () => {

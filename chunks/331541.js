@@ -21,8 +21,8 @@ var i = n(200651),
     N = n(483424),
     T = n(681837),
     S = n(502762),
-    A = n(530),
-    Z = n(309494),
+    Z = n(530),
+    A = n(309494),
     x = n(4517),
     b = n(171368),
     L = n(420654),
@@ -115,7 +115,7 @@ function W(e) {
                         (0, i.jsxs)(o.Ttm, {
                             className: F.body,
                             children: [
-                                (0, i.jsx)(A.Z, {
+                                (0, i.jsx)(Z.Z, {
                                     user: t,
                                     className: F.username,
                                     profileType: V.y0.BITE_SIZE,
@@ -130,7 +130,7 @@ function W(e) {
                                     nicknameIcons: (0, i.jsxs)(i.Fragment, {
                                         children: [
                                             (0, i.jsx)(T.Z, { userId: t.id }),
-                                            (0, i.jsx)(Z.Z, {
+                                            (0, i.jsx)(A.Z, {
                                                 user: t,
                                                 isHovering: J
                                             })

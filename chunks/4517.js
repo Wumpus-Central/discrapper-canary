@@ -29,8 +29,8 @@ let R = 1.25,
     D = 144,
     L = 150,
     x = 150,
-    w = 300;
-function P(e) {
+    P = 300;
+function w(e) {
     let { profileType: t, onCloseProfile: r } = e,
         { analyticsLocations: a } = (0, p.ZP)(),
         { trackUserProfileAction: o } = (0, E.KZ)(),
@@ -87,12 +87,12 @@ function M(e) {
             [C.panel]: p === A.y0.PANEL
         },
         S = null != a ? R : 0,
-        P = O + S,
+        w = O + S,
         M = D + S,
         k = r.useRef(null),
         U = r.useRef(null),
         G = r.useRef(null),
-        B = r.useRef(P),
+        B = r.useRef(w),
         Z = r.useRef(M),
         F = null != a && null == _,
         [V, j] = r.useState(!1),
@@ -120,17 +120,17 @@ function M(e) {
                 (e
                     ? J({
                           maxHeight: ''.concat(Math.min(Z.current, M), 'px'),
-                          delay: q ? 0 : w,
+                          delay: q ? 0 : P,
                           config: {
                               clamp: !0,
                               duration: q ? 0 : L
                           }
                       })
                     : J({
-                          maxHeight: ''.concat(Math.min(B.current, P), 'px'),
+                          maxHeight: ''.concat(Math.min(B.current, w), 'px'),
                           delay: 0
                       }),
-                q ? Y(!e) : Q.start(e ? w : x, () => Y(!e)));
+                q ? Y(!e) : Q.start(e ? P : x, () => Y(!e)));
         },
         ee =
             null != a
@@ -354,7 +354,7 @@ function G(e) {
         ? null == T && null == S
             ? (0, i.jsx)(p.Gt, {
                   value: E,
-                  children: (0, i.jsx)(P, {
+                  children: (0, i.jsx)(w, {
                       onCloseProfile: s,
                       ...d
                   })

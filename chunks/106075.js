@@ -23,9 +23,9 @@ var i = n(200651),
 function S() {
     let e = l.useRef((0, m.PM)()),
         { onScroll: t, scrollPosition: n, resetScrollPosition: S } = (0, a.M)(),
-        { tabs: A, selectedTab: Z, setSelectedTab: x } = (0, f.Y)(),
-        b = (0, m.lg)(Z),
-        L = !C.MU.has(Z),
+        { tabs: Z, selectedTab: A, setSelectedTab: x } = (0, f.Y)(),
+        b = (0, m.lg)(A),
+        L = !C.MU.has(A),
         { searchQuery: y, onSearchTextChange: P, onClearSearch: O, onSearchSubmit: R, isSearchVisible: j } = (0, _.H)({ loadId: e.current }),
         D = p.Z.useField('searchBarState'),
         {
@@ -49,12 +49,12 @@ function S() {
         V = l.useMemo(
             () =>
                 j
-                    ? A.filter((e) => {
+                    ? Z.filter((e) => {
                           let { id: t } = e;
                           return !C.MU.has(t);
                       })
-                    : A,
-            [A, j]
+                    : Z,
+            [Z, j]
         ),
         H = l.useRef(new h.Z(b)),
         { onGuildCardSeen: F, onGuildCardClick: z } = (0, g.H)({
@@ -67,7 +67,7 @@ function S() {
         }, [b]),
         l.useEffect(() => {
             S();
-        }, [Z, S]),
+        }, [A, S]),
         l.useEffect(() => {
             j || u.Z.setState({ scrollPosition: null });
         }, [j]),
@@ -88,7 +88,7 @@ function S() {
                             (0, i.jsx)(c.Z, {
                                 className: U,
                                 tabs: V,
-                                selectedTab: j ? null : Z,
+                                selectedTab: j ? null : A,
                                 onTabSelect: B,
                                 onAvailableWidthChange: w
                             }),
@@ -119,7 +119,7 @@ function S() {
                           onGuildCardSeen: F
                       })
                     : (0, i.jsx)(E.Z, {
-                          selectedTab: Z,
+                          selectedTab: A,
                           onScroll: t,
                           onGuildCardClick: z,
                           onGuildCardSeen: F

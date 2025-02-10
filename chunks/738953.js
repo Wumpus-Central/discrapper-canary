@@ -29,16 +29,16 @@ var i = n(200651),
     D = n(978395),
     L = n(161572),
     x = n(228168),
-    w = n(981631),
-    P = n(388032),
+    P = n(981631),
+    w = n(388032),
     M = n(112650);
 function k(e) {
-    let { user: t, currentUser: n, guildId: k, channelId: U, messageId: G, roleId: B, closePopout: Z, setPopoutRef: F, disableUserProfileLink: V = __OVERLAY__, newAnalyticsLocations: j = [], appContext: H = w.IlC.APP } = e,
+    let { user: t, currentUser: n, guildId: k, channelId: U, messageId: G, roleId: B, closePopout: Z, setPopoutRef: F, disableUserProfileLink: V = __OVERLAY__, newAnalyticsLocations: j = [], appContext: H = P.IlC.APP } = e,
         { analyticsLocations: Y } = (0, d.ZP)([...j, c.Z.BITE_SIZE_PROFILE_POPOUT]),
         W = (0, E.Z)({
             user: t,
             currentUser: n,
-            location: w.Sbl.BITE_SIZE_POPOUT
+            location: P.Sbl.BITE_SIZE_POPOUT
         }),
         K = (0, h.ZB)({
             layout: W ? 'BITE_SIZE_POPOUT' : 'BITE_SIZE_POPOUT_RESTRICTED_BLOCKER_PROFILE',
@@ -77,7 +77,7 @@ function k(e) {
                 ? null
                 : (0, i.jsx)(o.sNh, {
                       id: 'view-profile',
-                      label: P.intl.string(P.t['+Xp3ho']),
+                      label: w.intl.string(w.t['+Xp3ho']),
                       action: () => {
                           en(),
                               (0, m.pQ)({

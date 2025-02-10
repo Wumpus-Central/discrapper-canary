@@ -41,12 +41,12 @@ let T = (0, g.Un)({
         webpackId: 869779,
         name: 'ChannelSettings'
     }),
-    A = (0, g.Un)({
+    Z = (0, g.Un)({
         createPromise: () => n.e('45620').then(n.bind(n, 838819)),
         webpackId: 838819,
         name: 'CollectiblesShop'
     }),
-    Z = (0, g.Un)({
+    A = (0, g.Un)({
         createPromise: () => Promise.all([n.e('33053'), n.e('17298'), n.e('7654'), n.e('44156'), n.e('20364'), n.e('6850'), n.e('58227'), n.e('16114'), n.e('54408'), n.e('35217'), n.e('95140')]).then(n.bind(n, 994763)),
         webpackId: 994763,
         name: 'GuildSettings'
@@ -54,8 +54,8 @@ let T = (0, g.Un)({
     x = {
         [C.S9g.USER_SETTINGS]: () => (0, l.jsx)(T, {}),
         [C.S9g.CHANNEL_SETTINGS]: () => (0, l.jsx)(S, {}),
-        [C.S9g.GUILD_SETTINGS]: () => (0, l.jsx)(Z, {}),
-        [C.S9g.COLLECTIBLES_SHOP]: () => (0, l.jsx)(A, {})
+        [C.S9g.GUILD_SETTINGS]: () => (0, l.jsx)(A, {}),
+        [C.S9g.COLLECTIBLES_SHOP]: () => (0, l.jsx)(Z, {})
     },
     b = 'SHOWN',
     L = 'HIDDEN',

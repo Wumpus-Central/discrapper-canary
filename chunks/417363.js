@@ -41,8 +41,8 @@ let I = 200,
     D = 0,
     L = [],
     x = [],
-    w = [],
-    P = !1;
+    P = [],
+    w = !1;
 function M() {
     C = !1;
 }
@@ -177,12 +177,12 @@ function V(e) {
         });
 }
 function j(e) {
-    w = (w = [
+    P = (P = [
         {
             bytes: e,
             timestamp: Date.now()
         },
-        ...w
+        ...P
     ]).slice(0, T);
 }
 let H = a().throttle(F, I),
@@ -222,7 +222,7 @@ function z(e) {
                         }
                 }
             }
-            if (!P) {
+            if (!w) {
                 let i = l.Z.fileManager.dirname(n[s].installPath);
                 E.Z.getInstallationPath(e, t) !== i &&
                     o.Z.wait(() => {
@@ -247,7 +247,7 @@ function z(e) {
                         });
             }
         }
-    a || 'dispatch_application_progress' !== u.Z.taskID || u.Z.clearProgress('dispatch_application_progress'), (S = n), (P = !0);
+    a || 'dispatch_application_progress' !== u.Z.taskID || u.Z.clearProgress('dispatch_application_progress'), (S = n), (w = !0);
 }
 class q extends (i = s.ZP.Store) {
     initialize() {
@@ -295,7 +295,7 @@ class q extends (i = s.ZP.Store) {
         return x;
     }
     getHistoricalTotalBytesWritten() {
-        return w;
+        return P;
     }
     whenInitialized(e) {
         this.addConditionalChangeListener(() => {

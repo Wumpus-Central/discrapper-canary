@@ -376,7 +376,7 @@ class E extends a.Z {
                 duration_decoder_unknown: p(e.decoderBuckets[f.gr.UNKNOWN]),
                 ...h
             },
-            { bytes: g, framesDropped: E, framesCodecError: v, framesCodec: y, framesNetwork: I, packets: T, packetsLost: b, nackCount: S, pliCount: A, qpSum: N, pauseCount: C, freezeCount: R, totalPausesDuration: O, totalFreezesDuration: D, totalFramesDuration: L, keyframes: x, passthroughCount: w, cryptorSuccessCount: P, cryptorFailureCount: M, cryptorDuration: k, cryptorAttempts: U, cryptorMissingKeyCount: G, cryptorInvalidNonceCount: B, qualityDecodeErrors: Z, qualityDecoderReboots: F, qualityScoreErrors: V, qualityFrameDrops: j, qualitySizeMismatches: H } = e.aggregatedProperties;
+            { bytes: g, framesDropped: E, framesCodecError: v, framesCodec: y, framesNetwork: I, packets: T, packetsLost: b, nackCount: S, pliCount: A, qpSum: N, pauseCount: C, freezeCount: R, totalPausesDuration: O, totalFreezesDuration: D, totalFramesDuration: L, keyframes: x, passthroughCount: P, cryptorSuccessCount: w, cryptorFailureCount: M, cryptorDuration: k, cryptorAttempts: U, cryptorMissingKeyCount: G, cryptorInvalidNonceCount: B, qualityDecodeErrors: Z, qualityDecoderReboots: F, qualityScoreErrors: V, qualityFrameDrops: j, qualitySizeMismatches: H } = e.aggregatedProperties;
         return (
             e instanceof f.nt ? ((m.sender_freeze_count = R), (m.sender_total_freezes_duration = D), (m.sender_total_frames_duration = L)) : ((m.receiver_freeze_count = R), (m.receiver_total_freezes_duration = D), (m.receiver_total_frames_duration = L), (m.receiver_pause_count = C), (m.receiver_total_pauses_duration = O)),
             {
@@ -394,8 +394,8 @@ class E extends a.Z {
                 num_plis: A,
                 qp_sum: N,
                 num_keyframes: x,
-                cryptor_passthrough_count: w,
-                cryptor_success_count: P,
+                cryptor_passthrough_count: P,
+                cryptor_success_count: w,
                 cryptor_failure_count: M,
                 cryptor_duration: k,
                 cryptor_attempts: U,

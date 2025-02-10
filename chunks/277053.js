@@ -20,8 +20,8 @@ let E = new Set(),
     N = null,
     T = null,
     S = null,
-    A = null,
     Z = null,
+    A = null,
     x = u.K.get(f.kf) || !1;
 function b(e) {
     let t = e.getGuildId(),
@@ -31,7 +31,7 @@ function b(e) {
 function L() {
     if (((T = p.Z.getChannel()), (S = p.Z.getCategory()), null == T)) return !1;
     let e = T.getGuildId();
-    (N = v = b(T)), null == v[A] && (A = e), (l = null != S), (i = m.o4(T, S)), (Z = null), (C = !1), (I = _.QZA.CLOSED), E.clear();
+    (N = v = b(T)), null == v[Z] && (Z = e), (l = null != S), (i = m.o4(T, S)), (A = null), (C = !1), (I = _.QZA.CLOSED), E.clear();
 }
 class y extends (r = d.ZP.Store) {
     initialize() {
@@ -53,7 +53,7 @@ class y extends (r = d.ZP.Store) {
         return v;
     }
     get selectedOverwriteId() {
-        return A;
+        return Z;
     }
     get formState() {
         return I;
@@ -110,14 +110,14 @@ let P = new y(h.Z, {
     },
     CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION: function (e) {
         let { id: t } = e;
-        if (null != v && null != v[t]) A = t;
+        if (null != v && null != v[t]) Z = t;
         else {
             if (null == T) return !1;
-            Z = t;
+            A = t;
         }
     },
     CHANNEL_SETTINGS_CLOSE: function () {
-        (I = _.QZA.CLOSED), (v = null), (N = null), (T = null), (S = null), (C = !1), E.clear(), (A = null), (Z = null);
+        (I = _.QZA.CLOSED), (v = null), (N = null), (T = null), (S = null), (C = !1), E.clear(), (Z = null), (A = null);
     },
     CHANNEL_UPDATES: function (e) {
         let { channels: t } = e;
@@ -141,9 +141,9 @@ let P = new y(h.Z, {
                         (v = {
                             ...T.permissionOverwrites,
                             ...n
-                        })[A]
-                            ? (A = t)
-                            : null != Z && null != v[Z] && ((A = Z), (Z = null)),
+                        })[Z]
+                            ? (Z = t)
+                            : null != A && null != v[A] && ((Z = A), (A = null)),
                         (i = m.o4(T, S)),
                         !0
                     );

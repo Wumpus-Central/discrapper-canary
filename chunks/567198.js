@@ -361,16 +361,16 @@
                 D = i.constructor,
                 L = i.s == r.s ? 1 : -1,
                 x = i.d,
-                w = r.d;
+                P = r.d;
             if (!i.s) return new D(i);
             if (!r.s) throw Error(s + 'Division by zero');
-            for (c = 0, u = i.e - r.e, R = w.length, A = x.length, g = (m = new D(L)).d = []; w[c] == (x[c] || 0); ) ++c;
-            if ((w[c] > (x[c] || 0) && --u, (I = null == a ? (a = D.precision) : o ? a + (T(i) - T(r)) + 1 : a) < 0)) return new D(0);
-            if (((I = (I / _ + 2) | 0), (c = 0), 1 == R)) for (d = 0, w = w[0], I++; (c < A || d) && I--; c++) (b = d * f + (x[c] || 0)), (g[c] = (b / w) | 0), (d = b % w | 0);
+            for (c = 0, u = i.e - r.e, R = P.length, A = x.length, g = (m = new D(L)).d = []; P[c] == (x[c] || 0); ) ++c;
+            if ((P[c] > (x[c] || 0) && --u, (I = null == a ? (a = D.precision) : o ? a + (T(i) - T(r)) + 1 : a) < 0)) return new D(0);
+            if (((I = (I / _ + 2) | 0), (c = 0), 1 == R)) for (d = 0, P = P[0], I++; (c < A || d) && I--; c++) (b = d * f + (x[c] || 0)), (g[c] = (b / P) | 0), (d = b % P | 0);
             else {
-                for ((d = (f / (w[0] + 1)) | 0) > 1 && ((w = e(w, d)), (x = e(x, d)), (R = w.length), (A = x.length)), S = R, v = (E = x.slice(0, R)).length; v < R; ) E[v++] = 0;
-                (O = w.slice()).unshift(0), (N = w[0]), w[1] >= f / 2 && ++N;
-                do (d = 0), (l = t(w, E, R, v)) < 0 ? ((y = E[0]), R != v && (y = y * f + (E[1] || 0)), (d = (y / N) | 0) > 1 ? (d >= f && (d = f - 1), (h = (p = e(w, d)).length), (v = E.length), 1 == (l = t(p, E, h, v)) && (d--, n(p, R < h ? O : w, h))) : (0 == d && (l = d = 1), (p = w.slice())), (h = p.length) < v && p.unshift(0), n(E, p, v), -1 == l && ((v = E.length), (l = t(w, E, R, v)) < 1 && (d++, n(E, R < v ? O : w, v))), (v = E.length)) : 0 === l && (d++, (E = [0])), (g[c++] = d), l && E[0] ? (E[v++] = x[S] || 0) : ((E = [x[S]]), (v = 1));
+                for ((d = (f / (P[0] + 1)) | 0) > 1 && ((P = e(P, d)), (x = e(x, d)), (R = P.length), (A = x.length)), S = R, v = (E = x.slice(0, R)).length; v < R; ) E[v++] = 0;
+                (O = P.slice()).unshift(0), (N = P[0]), P[1] >= f / 2 && ++N;
+                do (d = 0), (l = t(P, E, R, v)) < 0 ? ((y = E[0]), R != v && (y = y * f + (E[1] || 0)), (d = (y / N) | 0) > 1 ? (d >= f && (d = f - 1), (h = (p = e(P, d)).length), (v = E.length), 1 == (l = t(p, E, h, v)) && (d--, n(p, R < h ? O : P, h))) : (0 == d && (l = d = 1), (p = P.slice())), (h = p.length) < v && p.unshift(0), n(E, p, v), -1 == l && ((v = E.length), (l = t(P, E, R, v)) < 1 && (d++, n(E, R < v ? O : P, v))), (v = E.length)) : 0 === l && (d++, (E = [0])), (g[c++] = d), l && E[0] ? (E[v++] = x[S] || 0) : ((E = [x[S]]), (v = 1));
                 while ((S++ < A || void 0 !== E[0]) && I--);
             }
             return g[0] || g.shift(), (m.e = u), C(m, o ? a + T(m) + 1 : a);

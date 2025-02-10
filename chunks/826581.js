@@ -73,15 +73,15 @@ function D(e) {
 }
 let L = new o.h(D, (e) => ''.concat(e.joinRequestId)),
     x = new o.h(D, (e) => ''.concat(e.joinRequestId)),
-    w = new o.h(D, (e) => ''.concat(e.actionedAt));
-function P(e) {
+    P = new o.h(D, (e) => ''.concat(e.actionedAt));
+function w(e) {
     return L.get(e);
 }
 function M(e) {
-    delete W[e], L.delete(e), x.delete(e), w.delete(e);
+    delete W[e], L.delete(e), x.delete(e), P.delete(e);
 }
 function k(e) {
-    (W[e.joinRequestId] = e), L.set(e.joinRequestId, e), (0, f.Nd)(e.applicationStatus) && (w.delete(e.joinRequestId), x.set(e.joinRequestId, e)), (0, f.bk)(e.applicationStatus) && (x.delete(e.joinRequestId), w.set(e.joinRequestId, e));
+    (W[e.joinRequestId] = e), L.set(e.joinRequestId, e), (0, f.Nd)(e.applicationStatus) && (P.delete(e.joinRequestId), x.set(e.joinRequestId, e)), (0, f.bk)(e.applicationStatus) && (x.delete(e.joinRequestId), P.set(e.joinRequestId, e));
 }
 function U(e) {
     var t;
@@ -89,12 +89,12 @@ function U(e) {
         r = (0, p.j)(i),
         a = c.default.getCurrentUser();
     if (null == a || r.userId === a.id) return !1;
-    let s = null === (t = P(r.joinRequestId)) || void 0 === t ? void 0 : t.applicationStatus;
+    let s = null === (t = w(r.joinRequestId)) || void 0 === t ? void 0 : t.applicationStatus;
     return T(n, r.applicationStatus, s), k(r), !0;
 }
 function G(e) {
     let { id: t, guildId: n } = e,
-        i = P(t);
+        i = w(t);
     null != i && (T(n, g, i.applicationStatus), M(t));
 }
 function B(e) {
@@ -119,7 +119,7 @@ function j(e) {
     if (i === V[n]) return;
     V[n] = i;
     let r = null !== (t = Z[n]) && void 0 !== t ? t : _.wB.SUBMITTED;
-    'REVIEW_APPLICATION' !== r && ((0, f.bk)(r) && w.clear(), (0, f.Nd)(r) && x.clear());
+    'REVIEW_APPLICATION' !== r && ((0, f.bk)(r) && P.clear(), (0, f.Nd)(r) && x.clear());
 }
 let H = {};
 function Y(e) {
@@ -134,7 +134,7 @@ class z extends (i = s.ZP.Store) {
     }
     getRequests(e, t) {
         let n = O(e, t);
-        return (0, f.bk)(t) ? w.values(n) : (0, f.Nd)(t) ? x.values(n) : L.values(n);
+        return (0, f.bk)(t) ? P.values(n) : (0, f.Nd)(t) ? x.values(n) : L.values(n);
     }
     getSubmittedGuildJoinRequestTotal(e) {
         return v[e];
@@ -160,7 +160,7 @@ class z extends (i = s.ZP.Store) {
     }
     getSelectedGuildJoinRequest(e) {
         let t = H[e];
-        return null != t ? P(t.joinRequestId) : null;
+        return null != t ? w(t.joinRequestId) : null;
     }
 }
 m(z, 'displayName', 'GuildJoinRequestStoreV2');

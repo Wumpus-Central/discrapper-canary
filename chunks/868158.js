@@ -2,7 +2,7 @@ n.d(t, {
     Eb: () => A,
     Fx: () => R,
     IM: () => N,
-    J2: () => w,
+    J2: () => P,
     r$: () => S
 }),
     n(653041),
@@ -110,7 +110,7 @@ function C(e, t, n) {
 function R(e, t) {
     var n, i, r;
     let a = g.Z.getGuild(e.id),
-        s = w(
+        s = P(
             e,
             null == a
                 ? void 0
@@ -184,7 +184,7 @@ function x(e) {
             stage_instances: e.stage_instances,
             stickers: e.stickers,
             threads: null !== (r = null === (i = e.threads) || void 0 === i ? void 0 : i.map((t) => (0, m.q_)(t, e.id))) && void 0 !== r ? r : [],
-            threadMessages: P(e.threads),
+            threadMessages: w(e.threads),
             channels: e.channels.map((t) => ((t.guild_id = e.id), (0, m.q_)(t, e.id))),
             version: e.version,
             hasThreadsSubscription: e.has_threads_subscription
@@ -220,12 +220,12 @@ function x(e) {
         },
         unableToSyncDeletes: e.unable_to_sync_deletes,
         threads: null !== (f = null === (n = e.threads) || void 0 === n ? void 0 : n.map((t) => (0, m.q_)(t, e.id))) && void 0 !== f ? f : [],
-        threadMessages: P(e.threads),
+        threadMessages: w(e.threads),
         version: e.version,
         hasThreadsSubscription: e.has_threads_subscription
     };
 }
-function w(e, t) {
+function P(e, t) {
     var n, i, r, a, s, o, l, u, c, d, f, _;
     if ((null == t && (t = D(e.id)), 'partial' !== e.data_mode))
         return {
@@ -242,7 +242,7 @@ function w(e, t) {
             stage_instances: e.stage_instances,
             stickers: e.stickers,
             threads: null !== (a = null === (r = e.threads) || void 0 === r ? void 0 : r.map((t) => (0, m.q_)(t, e.id))) && void 0 !== a ? a : [],
-            threadMessages: P(e.threads),
+            threadMessages: w(e.threads),
             channels: e.channels.map((t) => ((t.guild_id = e.id), (0, m.q_)(t, e.id))),
             presences: e.presences,
             activity_instances: e.activity_instances,
@@ -282,13 +282,13 @@ function w(e, t) {
         },
         unableToSyncDeletes: e.unable_to_sync_deletes,
         threads: null !== (_ = null === (i = e.threads) || void 0 === i ? void 0 : i.map((t) => (0, m.q_)(t, e.id))) && void 0 !== _ ? _ : [],
-        threadMessages: P(e.threads),
+        threadMessages: w(e.threads),
         voice_states: e.voice_states,
         version: e.version,
         hasThreadsSubscription: e.has_threads_subscription
     };
 }
-function P(e) {
+function w(e) {
     let t = [];
     if (null != e) for (let n of e) null != n.most_recent_message && t.push(n.most_recent_message);
     return t;

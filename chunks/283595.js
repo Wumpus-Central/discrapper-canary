@@ -80,12 +80,12 @@ function x(e) {
     let { applicationId: t, branchId: n, launchOptionId: i } = e;
     (T[(0, d.Tu)(t, n)] = i), S();
 }
-function w(e) {
+function P(e) {
     let { applicationId: t, branchId: n } = e;
     if (I[t] === n) return !1;
     (I[t] = n), A();
 }
-function P(e) {
+function w(e) {
     let { libraryApplications: t } = e;
     for (let e of t) v[(0, d.Tu)(e.id, e.branchId)] = e;
 }
@@ -187,7 +187,7 @@ let Z = new B(l.Z, {
     LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: L,
     LIBRARY_APPLICATION_UPDATE: L,
     LIBRARY_APPLICATION_ACTIVE_LAUNCH_OPTION_UPDATE: x,
-    LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE: w,
-    LIBRARY_APPLICATIONS_TEST_MODE_ENABLED: P,
+    LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE: P,
+    LIBRARY_APPLICATIONS_TEST_MODE_ENABLED: w,
     DEVELOPER_TEST_MODE_RESET: M
 });

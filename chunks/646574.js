@@ -76,18 +76,18 @@ function T(e) {
         let e = A === u.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
         e && (N(h.L.DISMISS), setTimeout(() => R(e), 200));
     }, [A, N]);
-    let w = C ? m.intl.string(m.t['Osi/u7']) : I(t),
-        P = C ? m.intl.string(m.t.ORK94u) : void 0;
+    let P = C ? m.intl.string(m.t['Osi/u7']) : I(t),
+        w = C ? m.intl.string(m.t.ORK94u) : void 0;
     return (0, i.jsxs)(c.DY3, {
         position: 'top',
         text: (0, i.jsx)(y, {
             textColor: 'always-white',
-            tooltipText: w,
-            headingText: P
+            tooltipText: P,
+            headingText: w
         }),
         color: c.ua7.Colors.BRAND,
         forceOpen: C,
-        'aria-label': w,
+        'aria-label': P,
         tooltipClassName: g.tooltip,
         children: [
             (0, i.jsx)('input', {

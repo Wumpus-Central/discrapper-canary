@@ -59,13 +59,13 @@ let d = {
                 x < N.length;
                 x++
             ) {
-                var w = N[x],
-                    P = (0, r.Z)(w),
-                    M = (0, u.Z)(w) === l.BL,
-                    k = [l.we, l.I].indexOf(P) >= 0,
+                var P = N[x],
+                    w = (0, r.Z)(P),
+                    M = (0, u.Z)(P) === l.BL,
+                    k = [l.we, l.I].indexOf(w) >= 0,
                     U = k ? 'width' : 'height',
                     G = (0, s.Z)(t, {
-                        placement: w,
+                        placement: P,
                         boundary: g,
                         rootBoundary: E,
                         altBoundary: v,
@@ -76,16 +76,16 @@ let d = {
                 var Z = (0, i.Z)(B),
                     F = [];
                 if (
-                    (f && F.push(G[P] <= 0),
+                    (f && F.push(G[w] <= 0),
                     p && F.push(G[B] <= 0, G[Z] <= 0),
                     F.every(function (e) {
                         return e;
                     }))
                 ) {
-                    (L = w), (D = !1);
+                    (L = P), (D = !1);
                     break;
                 }
-                O.set(w, F);
+                O.set(P, F);
             }
             if (D)
                 for (

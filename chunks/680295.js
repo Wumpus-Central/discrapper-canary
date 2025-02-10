@@ -30,8 +30,8 @@ let v = (e) => {
             [D, L] = r.useState(-I),
             {
                 stop: x,
-                reset: w,
-                ticking: P
+                reset: P,
+                ticking: w
             } = (0, f.Z)((e) => {
                 L((t) => t + e);
             }),
@@ -55,15 +55,15 @@ let v = (e) => {
         let [k, U] = r.useState(!1);
         return (
             r.useEffect(() => {
-                !0 === u || o || (x(), L(0)), !o && k && P.current && (x(), L(0)), a && o && !P.current && (w(), v.animationType === d.Q.PERSISTENT ? L(h === d.j.FromStart ? 0 : A) : L(0));
-            }, [o, k, A, a, x, w, P, v.animationType, u, h]),
+                !0 === u || o || (x(), L(0)), !o && k && w.current && (x(), L(0)), a && o && !w.current && (P(), v.animationType === d.Q.PERSISTENT ? L(h === d.j.FromStart ? 0 : A) : L(0));
+            }, [o, k, A, a, x, P, w, v.animationType, u, h]),
             (0, i.jsx)('div', {
                 ref: T,
                 className: s()(E.profileEffects, { [E.hovered]: o && l }),
                 children: (0, i.jsx)('div', {
                     className: y ? E.innerNoRadius : E.inner,
                     children: b.map((e, r) => {
-                        if (!P.current && v.animationType === d.Q.PERSISTENT && null != v.staticFrameSrc && 0 === r && !0 === u) {
+                        if (!w.current && v.animationType === d.Q.PERSISTENT && null != v.staticFrameSrc && 0 === r && !0 === u) {
                             var a, s, o, l;
                             let { staticFrameSrc: n } = v;
                             return (0, i.jsx)(
@@ -85,7 +85,7 @@ let v = (e) => {
                             {
                                 layerConfig: e,
                                 animationType: v.animationType,
-                                ticking: P.current,
+                                ticking: w.current,
                                 time: D,
                                 accessibilityLabel: O,
                                 hasPlayedThrough: k,

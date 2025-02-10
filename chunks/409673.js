@@ -34,8 +34,8 @@ var i = n(200651),
 let D = '1',
     L = 0.01,
     x = 0.1,
-    w = 0.01,
-    P = 1000;
+    P = 0.01,
+    w = 1000;
 function M(e) {
     let { disabled: t = !1, onClick: n, text: r, children: a, tooltipPosition: o = 'top', refreshEnabled: l = !1 } = e;
     return (0, i.jsx)(d.ua7, {
@@ -134,9 +134,9 @@ let B = r.forwardRef(function (e, t) {
         eD = (0, o.JA)(eO),
         eL = null != ep || null != eh,
         ex = !(0, S.Nq)(em, j, H) && !eo,
-        ew = z || (Q && !ex),
-        eP = r.useRef(null),
-        eM = (null !== (B = null === (a = eP.current) || void 0 === a ? void 0 : a.scrollHeight) && void 0 !== B ? B : 0) > (null !== (Z = null === (c = eP.current) || void 0 === c ? void 0 : c.offsetHeight) && void 0 !== Z ? Z : 0),
+        eP = z || (Q && !ex),
+        ew = r.useRef(null),
+        eM = (null !== (B = null === (a = ew.current) || void 0 === a ? void 0 : a.scrollHeight) && void 0 !== B ? B : 0) > (null !== (Z = null === (c = ew.current) || void 0 === c ? void 0 : c.offsetHeight) && void 0 !== Z ? Z : 0),
         ek = null !== (F = h.Wq.useStore().bottomPosition) && void 0 !== F ? F : 0,
         eU = (null !== (V = null === (I = eb.current) || void 0 === I ? void 0 : I.getBoundingClientRect().bottom) && void 0 !== V ? V : 0) + 50 > ek ? 'top' : 'bottom',
         [eG, eB] = r.useState(!1),
@@ -146,7 +146,7 @@ let B = r.forwardRef(function (e, t) {
         X || eE(ee);
     }
     function ej(e) {
-        if ((eR && !eA && ((eN.current = Math.min(eN.current + w, x)), Math.random() < eN.current && eT(eS.x, eS.y, void 0, void 0, { sprite: C.vv })), null != $)) {
+        if ((eR && !eA && ((eN.current = Math.min(eN.current + P, x)), Math.random() < eN.current && eT(eS.x, eS.y, void 0, void 0, { sprite: C.vv })), null != $)) {
             $(e);
             return;
         }
@@ -187,7 +187,7 @@ let B = r.forwardRef(function (e, t) {
                               className: O.buttonOverlay,
                               children: (0, i.jsxs)('div', {
                                   className: er ? O.buttonOverlayActionsRefresh : O.buttonOverlayActions,
-                                  children: [ew && eH, ew && eW]
+                                  children: [eP && eH, eP && eW]
                               })
                           })
                       ]
@@ -206,7 +206,7 @@ let B = r.forwardRef(function (e, t) {
                                             setTooltipShowing: eB
                                         })
                                       : (0, i.jsxs)(i.Fragment, {
-                                            children: [ew && eH, eY(), ew && eW]
+                                            children: [eP && eH, eY(), eP && eW]
                                         })
                           })
                       ]
@@ -246,7 +246,7 @@ let B = r.forwardRef(function (e, t) {
                                               })
                                           ]
                                       }),
-                                ew && eW
+                                eP && eW
                             ]
                         })
                     ]
@@ -263,8 +263,8 @@ let B = r.forwardRef(function (e, t) {
         let e = eC.current;
         return (
             eR &&
-                e.start(P, () => {
-                    eN.current = Math.max(eN.current - w, L);
+                e.start(w, () => {
+                    eN.current = Math.max(eN.current - P, L);
                 }),
             () => e.stop()
         );
@@ -347,7 +347,7 @@ let B = r.forwardRef(function (e, t) {
                                         variant: 'text-xs/medium',
                                         color: q ? void 0 : 'text-muted',
                                         className: s()(er ? O.soundNameRefresh : O.soundName, { [O.hasEmoji]: eL }),
-                                        ref: eP,
+                                        ref: ew,
                                         children: e_
                                     })
                                 ]

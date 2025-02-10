@@ -50,11 +50,11 @@ function b(e) {
         [R, O] = r.useState(''),
         [D] = r.useState(!0),
         [L, x] = r.useState(null),
-        w = r.useId(),
-        P = r.useRef(null);
+        P = r.useId(),
+        w = r.useRef(null);
     r.useLayoutEffect(() => {
         let e = document.querySelector('['.concat(g, '="').concat(L, '"]')),
-            t = P.current;
+            t = w.current;
         null != t &&
             null != e &&
             t.scrollIntoViewNode({
@@ -68,7 +68,7 @@ function b(e) {
         G = r.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = P.current;
+                    let t = w.current;
                     if (null == t) return e();
                     t.scrollToTop({ callback: () => requestAnimationFrame(() => e()) });
                 }),
@@ -77,7 +77,7 @@ function b(e) {
         B = r.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = P.current;
+                    let t = w.current;
                     if (null == t) return e();
                     t.scrollToTop({ callback: () => requestAnimationFrame(() => e()) });
                 }),
@@ -86,7 +86,7 @@ function b(e) {
         Z = r.useCallback((e, t) => {
             x(t);
             let n = document.querySelector(e),
-                i = P.current;
+                i = w.current;
             null != i && null != n && i.scrollIntoViewNode({ node: n });
         }, []),
         F = (0, o.ZP)({
@@ -108,8 +108,8 @@ function b(e) {
                     role: 'combobox',
                     'aria-label': y,
                     'aria-expanded': D,
-                    'aria-controls': D ? w : void 0,
-                    'aria-owns': w,
+                    'aria-controls': D ? P : void 0,
+                    'aria-owns': P,
                     'aria-haspopup': 'listbox',
                     className: s()(m.combobox, c),
                     children: [
@@ -157,8 +157,8 @@ function b(e) {
                                               ...o,
                                               style: { maxHeight: A * (E + 6) },
                                               'aria-multiselectable': b,
-                                              id: w,
-                                              ref: P,
+                                              id: P,
+                                              ref: w,
                                               className: s()(m.list, v, { [m.scroller]: C }),
                                               sections: [M.length],
                                               sectionHeight: 0,

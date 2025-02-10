@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(47120);
+n.d(t, { Z: () => Z }), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(990547),
@@ -21,25 +21,25 @@ var i = n(200651),
     N = n(981631),
     T = n(815660),
     S = n(388032);
-function A() {
+function Z() {
     let { action: e, theme: t } = (0, a.cj)([E.Z, f.Z], () => ({
             action: E.Z.getAction(),
             theme: f.Z.theme
         })),
-        A = I.Z.getVerificationTypes(e),
-        [Z, x] = l.useState(0),
-        b = (0, h.Z)(A);
+        Z = I.Z.getVerificationTypes(e),
+        [A, x] = l.useState(0),
+        b = (0, h.Z)(Z);
     (0, p.Z)(
         {
             type: r.ImpressionTypes.MODAL,
             name: r.ImpressionNames.USER_ACTION_REQUIRED,
             properties: {
-                verification_type: A[0],
-                verification_types: A
+                verification_type: Z[0],
+                verification_types: Z
             }
         },
         {},
-        [A.toString()]
+        [Z.toString()]
     );
     let L = () => {
             (0, u.FD)(),
@@ -82,7 +82,7 @@ function A() {
         ),
         l.useEffect(() => {
             (null == b ? void 0 : b[0]) === N.PUi.PHONE &&
-                (null == A ? void 0 : A[0]) === N.PUi.EMAIL &&
+                (null == Z ? void 0 : Z[0]) === N.PUi.EMAIL &&
                 (0, o.ZDy)(
                     async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 468026));
@@ -100,10 +100,10 @@ function A() {
                         onCloseCallback: L
                     }
                 );
-        }, [A, b]),
+        }, [Z, b]),
         (0, i.jsx)(C.Z, {
-            types: A,
-            captchaKey: Z,
+            types: Z,
+            captchaKey: A,
             onCaptchaVerify: (e) => {
                 s.tn
                     .post({

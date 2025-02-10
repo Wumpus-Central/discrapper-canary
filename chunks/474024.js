@@ -12,9 +12,9 @@ function m(e) {
     let { guild: t } = e,
         n = t.id,
         m = (0, l.e7)([c.Z], () => c.Z.getGuildProfile()),
-        h = (null == m ? void 0 : m.visibility) === a.k.PUBLIC,
+        h = (null == m ? void 0 : m.visibility) === a.k3.PUBLIC,
         g = r.useCallback(() => {
-            h ? o.Z.updateGuildProfile(n, { visibility: a.k.RESTRICTED }) : o.Z.updateGuildProfile(n, { visibility: a.k.PUBLIC });
+            h ? o.Z.updateGuildProfile(n, { visibility: a.k3.RESTRICTED }) : o.Z.updateGuildProfile(n, { visibility: a.k3.PUBLIC });
         }, [n, h]);
     return (0, i.jsx)(s.hjN, {
         className: u.container,

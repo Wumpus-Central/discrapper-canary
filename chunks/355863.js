@@ -363,7 +363,7 @@ function b(e) {
     return I(t, (e, t) => S(t, e.id));
 }
 function S(e, t) {
-    let n = P(e);
+    let n = w(e);
     n.sort((e, t) => e.zIndex - t.zIndex);
     let i = n.findIndex((e) => e.id === t);
     if (i === n.length - 1) return !1;
@@ -392,7 +392,7 @@ function N(e, t) {
 function C(e) {
     let { widgetId: t } = e;
     return I(t, (e, t) => {
-        w(e);
+        P(e);
     });
 }
 function R(e, t, n, i) {
@@ -458,13 +458,13 @@ function x(e, t) {
         [e.id]: e.set('zIndex', t)
     };
 }
-function w(e) {
+function P(e) {
     r = {
         ...r,
         [e.id]: e.set('pinned', !e.pinned)
     };
 }
-function P(e) {
+function w(e) {
     let t = [];
     return (
         e.widgets.forEach((e) => {

@@ -30,22 +30,22 @@ function O(e) {
 }
 let D = r.memo(function (e) {
     var t, n;
-    let { clan: D, isLoading: L, onClose: x, profileViewedAnalytics: w, userId: P } = e,
+    let { clan: D, isLoading: L, onClose: x, profileViewedAnalytics: P, userId: w } = e,
         M = null == D ? void 0 : D.identityGuildId,
         k = (0, v.Cc)(null != M ? M : null),
         U = null == D ? void 0 : D.tag,
         { enabled: G } = T.w.useExperiment({ location: 'ClanGuildProfile' }, { autoTrackExposure: !1 }),
         [B, Z] = r.useState(!1),
         [F, V] = r.useState(''),
-        j = (0, s.e7)([m.default], () => m.default.getUser(P)),
+        j = (0, s.e7)([m.default], () => m.default.getUser(w)),
         { newestAnalyticsLocation: H } = (0, l.ZP)(),
         Y = r.useMemo(
             () => ({
-                tagUserId: P,
+                tagUserId: w,
                 source: H,
-                ...w
+                ...P
             }),
-            [P, H, w]
+            [w, H, P]
         ),
         W = (0, s.e7)([p.default], () => p.default.getId()),
         K = (0, s.e7)([h.ZP], () => (null != M ? h.ZP.getMember(M, W) : null), [M, W]),

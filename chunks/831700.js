@@ -27,8 +27,8 @@ var l = n(120356),
     j = n(896835),
     y = n(359110),
     P = n(155409),
-    A = n(695346),
-    T = n(447564),
+    T = n(695346),
+    A = n(447564),
     w = n(592125),
     R = n(430824),
     L = n(607744),
@@ -123,7 +123,7 @@ class X extends U.ZP {
                       return (0, i.jsx)(s.P3F, {
                           className: r()(J.iconItem, J.alwaysShown),
                           onClick: () => {
-                              (0, j.X)('VoiceChannel') ? (0, T.k)(e, 'VoiceChannel') : window.open(O.Z.getArticleURL(q.BhN.HD_STREAMING_POTION), '_blank');
+                              (0, j.X)('VoiceChannel') ? (0, A.k)(e, 'VoiceChannel') : window.open(O.Z.getArticleURL(q.BhN.HD_STREAMING_POTION), '_blank');
                           },
                           'aria-label': Q.intl.string(Q.t.gpF6QU),
                           onMouseEnter: n,
@@ -142,8 +142,8 @@ class X extends U.ZP {
     render() {
         let { channel: e, selected: t, connected: n, unread: l, resolvedUnreadSetting: a, mentionCount: o, locked: c, sorting: d, isUserOver: u, connectChannelDropTarget: h, connectChannelDragSource: p, connectUserDropTarget: m, connectDragPreview: _, canReorderChannel: v, canMoveMembers: C, showTutorial: x, hasActiveEvent: Z, embeddedApps: I, isSubscriptionGated: b, isFavoriteSuggestion: S, withGuildIcon: N } = this.props,
             { shouldShowActivities: j, shouldShowGuildVerificationPopout: y } = this.state,
-            A = this.getVoiceStatesCount(),
-            T = (0, i.jsxs)('li', {
+            T = this.getVoiceStatesCount(),
+            A = (0, i.jsxs)('li', {
                 className: r()(this.getModeClass(), { [J.disabled]: this.isDisabled() }),
                 'data-dnd-name': e.name,
                 children: [
@@ -187,7 +187,7 @@ class X extends U.ZP {
                                                     channel: e,
                                                     unread: l,
                                                     mentionCount: o,
-                                                    userCount: A,
+                                                    userCount: T,
                                                     embeddedActivitiesCount: I.length,
                                                     isSubscriptionGated: b
                                                 }),
@@ -208,16 +208,16 @@ class X extends U.ZP {
                 ]
             });
         return (
-            C && (T = m(T)),
-            v && (T = h(p(T))),
+            C && (A = m(A)),
+            v && (A = h(p(A))),
             x &&
-                (T = (0, i.jsx)(P.Z, {
+                (A = (0, i.jsx)(P.Z, {
                     tutorialId: 'voice-conversations',
                     position: 'right',
                     offsetX: -20,
-                    children: T
+                    children: A
                 })),
-            T
+            A
         );
     }
     constructor(...e) {
@@ -298,7 +298,7 @@ class X extends U.ZP {
                 let { channel: e, voiceStates: t, sorting: n, isUserOver: l, selected: r, guild: a } = this.props,
                     { shouldShowActivities: o, shouldShowGuildVerificationPopout: s } = this.state;
                 if (o && !n && !l && !s) {
-                    let n = A.SE.getSetting().includes(a.id);
+                    let n = T.SE.getSetting().includes(a.id);
                     return (0, i.jsx)(H.Z, {
                         onAction: this.closePopout,
                         guild: a,

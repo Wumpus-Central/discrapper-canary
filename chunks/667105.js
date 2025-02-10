@@ -1,7 +1,7 @@
 n.d(t, {
     DH: () => L,
     Ks: () => D,
-    Ws: () => w,
+    Ws: () => P,
     g2: () => R,
     hf: () => N,
     k3: () => O,
@@ -246,7 +246,7 @@ function x(e) {
         f = !u && null != i.userStatus && (0, E.zE)(i.userStatus, g.jn.QUEST_BAR);
     return r && !f && !c && !a;
 }
-function w(e) {
+function P(e) {
     let { location: t } = e,
         n = x({
             location: t,

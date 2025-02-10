@@ -21,13 +21,13 @@ var i = n(200651),
     N = n(203028),
     T = n(358924),
     S = n(292140),
-    A = n(525296),
-    Z = n(981631),
+    Z = n(525296),
+    A = n(981631),
     x = n(674563),
     b = n(388032),
     L = n(735315);
 let y = 15 * I.Z.Millis.MINUTE,
-    P = (0, A.Z)(function (e) {
+    P = (0, Z.Z)(function (e) {
         let { party: t, onUserContextMenu: n, onChannelContextMenu: r, quest: a } = e,
             s = (0, i.jsx)(N.Z, {
                 party: t,
@@ -50,7 +50,7 @@ let y = 15 * I.Z.Millis.MINUTE,
                         return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === x.wW.GAME;
                     })
                     .map((e) => e.game.name);
-                E.default.track(Z.rMx.NOW_PLAYING_CARD_HOVERED, {
+                E.default.track(A.rMx.NOW_PLAYING_CARD_HOVERED, {
                     num_users: g,
                     num_streams: _,
                     num_activities: f,
@@ -58,7 +58,7 @@ let y = 15 * I.Z.Millis.MINUTE,
                     games_detected: e
                 });
             }, [g, _, f, I, m]),
-            A = o()(C, y);
+            Z = o()(C, y);
         return null != s || null != c
             ? (0, i.jsx)(d.yRy, {
                   position: 'left',
@@ -74,7 +74,7 @@ let y = 15 * I.Z.Millis.MINUTE,
                       let { isShown: n } = t;
                       return (0, i.jsx)(T.Z, {
                           ...e,
-                          onMouseEnter: A,
+                          onMouseEnter: Z,
                           'aria-haspopup': 'menu',
                           className: L.itemCard,
                           active: n,

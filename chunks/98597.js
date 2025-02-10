@@ -1,7 +1,7 @@
 n.d(t, {
     CN: () => j,
     ZP: () => R,
-    eP: () => A,
+    eP: () => T,
     hR: () => P,
     jo: () => y
 });
@@ -63,7 +63,7 @@ function P(e) {
         }
     });
 }
-function A(e) {
+function T(e) {
     let { channel: t, isDefaultChannel: i = !1, locked: l, tabIndex: r, forceShowButtons: o, hasChannelInfo: s = !1 } = e,
         h = (0, d.e7)([x.Z], () => x.Z.getGuild(t.getGuildId())),
         g = (0, d.e7)([f.Z], () => f.Z.getStageInstanceByChannel(t.id), [t.id]),
@@ -115,7 +115,7 @@ function A(e) {
         })
     );
 }
-function T(e) {
+function A(e) {
     let { channel: t } = e,
         n = () => {
             (0, g._U)(t.guild_id, t.id);
@@ -162,10 +162,10 @@ class R extends (r = o.PureComponent) {
         return (0, a.jsx)(P, { ...this.props });
     }
     renderInviteButton() {
-        return (0, a.jsx)(A, { ...this.props });
+        return (0, a.jsx)(T, { ...this.props });
     }
     renderRemoveSuggestionButton() {
-        return (0, a.jsx)(T, { ...this.props });
+        return (0, a.jsx)(A, { ...this.props });
     }
     renderAcceptSuggestionButton() {
         return (0, a.jsx)(w, { ...this.props });

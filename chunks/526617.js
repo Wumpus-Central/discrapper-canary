@@ -33,8 +33,8 @@ var i = n(200651),
     D = n(259580),
     L = n(626135),
     x = n(74538),
-    w = n(135869),
-    P = n(763296),
+    P = n(135869),
+    w = n(763296),
     M = n(697426),
     k = n(242291),
     U = n(22382),
@@ -205,7 +205,7 @@ function ed(e) {
 }
 function ef(e) {
     let { guildId: t, channel: a, containerWidth: d, onClose: g, onSelect: b, shouldValidateSelectedSound: D = !1, suppressPlaySound: F = !1, shouldShowUpsell: V = !0, gridNotice: X, soundButtonOverlay: ef, listPadding: e_, renderHeader: ep, defaultSoundsOnly: eh = !1, inExpressionPicker: em, refreshEnabled: eg, analyticsSource: eE } = e,
-        { currentPreviewRef: ev } = r.useContext(w.Z),
+        { currentPreviewRef: ev } = r.useContext(P.Z),
         { analyticsLocations: ey } = (0, p.ZP)(),
         { analyticsLocations: eI } = (0, p.ZP)(_.Z.PREMIUM_UPSELL),
         { location: eT } = (0, f.O)(),
@@ -227,10 +227,10 @@ function ef(e) {
         eD = (0, v.Iu)((e) => e.searchQuery),
         eL = null != eD && '' !== eD,
         ex = (0, m.Dt)(),
-        { categories: ew, soundCounts: eP } = (0, Z.ZP)(a, void 0, eh),
+        { categories: eP, soundCounts: ew } = (0, Z.ZP)(a, void 0, eh),
         [eM, ek] = r.useState([]),
         [eU, eG] = r.useState(!1),
-        eB = (0, Z.FS)(ew, eM, eD).filter((e) => e.items.length > 0),
+        eB = (0, Z.FS)(eP, eM, eD).filter((e) => e.items.length > 0),
         eZ = eB.some((e) => !!(0, x._O)(e.categoryInfo) && e.categoryInfo.isNitroLocked),
         eF = !eC && V && eZ,
         { enableInlineUpsell: eV, enableRoadblock: ej, enableRoadblockWithSocialProof: eH } = S.Qs.useExperiment({ location: 'Soundboard Picker' }, { autoTrackExposure: eF }),
@@ -358,7 +358,7 @@ function ef(e) {
             },
             [eB, eY]
         ),
-        e6 = r.useCallback((e) => ek((0, B.YM)(e, ew, eN, a, ey)), [a, eN, ew, ey]),
+        e6 = r.useCallback((e) => ek((0, B.YM)(e, eP, eN, a, ey)), [a, eN, eP, ey]),
         e5 = r.useCallback((e) => {
             (0, c.jW)(e, async () => {
                 let { default: e } = await n.e('56049').then(n.bind(n, 338991));
@@ -396,16 +396,16 @@ function ef(e) {
             (e) =>
                 (0, i.jsx)(j.Z, {
                     soundboardListRef: e,
-                    categories: ew,
+                    categories: eP,
                     shouldUpsellLockedCategories: eY,
                     listPadding: e_,
                     guildId: t,
                     inExpressionPicker: em
                 }),
-            [ew, eY, e_, t, em]
+            [eP, eY, e_, t, em]
         ),
         e9 = () => {
-            let e = P.Z.getSoundById(eo);
+            let e = w.Z.getSoundById(eo);
             null != e && eA(e);
         },
         te = r.useCallback(() => {
@@ -443,7 +443,7 @@ function ef(e) {
         ti = 'https://cdn.discordapp.com/assets/premium/roadblocks/soundboard_dark.png',
         tr = r.useCallback(() => {
             var e;
-            let t = P.Z.getSoundById(eo),
+            let t = w.Z.getSoundById(eo),
                 n = new Audio((0, U.Z)(eo));
             null != ev.current && ev.current.pause(), (ev.current = n), (n.currentTime = 0), (n.volume = (0, G.Z)(null !== (e = null == t ? void 0 : t.volume) && void 0 !== e ? e : 1)), n.play();
         }, [ev]),
@@ -456,9 +456,9 @@ function ef(e) {
                 source: eE,
                 guild_id: t,
                 media_session_id: ta,
-                available_custom_sounds_count: eP.unlockedCustomSoundCount,
-                unavailable_custom_sounds_count: eP.lockedCustomSoundCount,
-                favorite_sounds_count: eP.favoriteSoundCount
+                available_custom_sounds_count: ew.unlockedCustomSoundCount,
+                unavailable_custom_sounds_count: ew.lockedCustomSoundCount,
+                favorite_sounds_count: ew.favoriteSoundCount
             }
         }),
         (0, i.jsxs)(i.Fragment, {

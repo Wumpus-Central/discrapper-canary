@@ -3,9 +3,9 @@ var l = t(200651);
 t(192379);
 var i = t(325767);
 function a(e) {
-    let { width: n = 32, height: t = 32, color: a = 'currentColor', foreground: r, ...s } = e;
+    let { width: n = 32, height: t = 32, color: a = 'currentColor', foreground: r, ...o } = e;
     return (0, l.jsxs)('svg', {
-        ...(0, i.Z)(s),
+        ...(0, i.Z)(o),
         width: n,
         height: t,
         viewBox: '0 0 32 32',

@@ -28,12 +28,12 @@ var i = n(200651),
     O = n(981631),
     D = n(136790);
 let L = r.forwardRef(function (e, t) {
-    let { value: n, type: a, channel: L, className: x, id: w, disabled: P, submitting: M, placeholder: k, required: U, textAreaPaddingClassName: G, onChange: B, onPaste: Z, onResize: F, onFocus: V, onBlur: j, onKeyDown: H, onKeyUp: Y, onTab: W, onEnter: K, onSubmit: z, maybeShowAutocomplete: q, hideAutocomplete: Q, moveSelection: X, spellcheckEnabled: J, canUseCommands: $, canOnlyUseTextCommands: ee, disableAutoFocus: et, disableEnterToSubmit: en, allowNewLines: ei, 'aria-owns': er, 'aria-expanded': ea, 'aria-haspopup': es, 'aria-activedescendant': eo, 'aria-controls': el, 'aria-invalid': eu, 'aria-describedby': ec, 'aria-labelledby': ed, 'aria-autocomplete': ef } = e,
+    let { value: n, type: a, channel: L, className: x, id: P, disabled: w, submitting: M, placeholder: k, required: U, textAreaPaddingClassName: G, onChange: B, onPaste: Z, onResize: F, onFocus: V, onBlur: j, onKeyDown: H, onKeyUp: Y, onTab: W, onEnter: K, onSubmit: z, maybeShowAutocomplete: q, hideAutocomplete: Q, moveSelection: X, spellcheckEnabled: J, canUseCommands: $, canOnlyUseTextCommands: ee, disableAutoFocus: et, disableEnterToSubmit: en, allowNewLines: ei, 'aria-owns': er, 'aria-expanded': ea, 'aria-haspopup': es, 'aria-activedescendant': eo, 'aria-controls': el, 'aria-invalid': eu, 'aria-describedby': ec, 'aria-labelledby': ed, 'aria-autocomplete': ef } = e,
         e_ = r.useRef(null),
         ep = r.useRef(null),
         eh = r.useRef(!0),
         em = r.useRef(!0),
-        eg = P || M,
+        eg = w || M,
         eE = r.useCallback(
             (e, t, n) => {
                 var i;
@@ -201,7 +201,7 @@ let L = r.forwardRef(function (e, t) {
                 ref: e_,
                 className: s()(x, D.slateContainer),
                 children: (0, i.jsx)(h.Z, {
-                    id: w,
+                    id: P,
                     editor: eI,
                     channelId: L.id,
                     guildId: L.guild_id,
@@ -210,7 +210,7 @@ let L = r.forwardRef(function (e, t) {
                     readOnly: eg,
                     spellCheck: J,
                     autoFocus: !et,
-                    canFocus: !P,
+                    canFocus: !w,
                     onChange: eO,
                     onFocus: V,
                     onBlur: j,

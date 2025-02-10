@@ -58,14 +58,14 @@ function N(e) {
         D = r.useRef(null),
         L = null != N['aria-label'],
         x = null != N['aria-labelledby'],
-        w = r.useId(),
-        P = null !== (t = N['aria-labelledby']) && void 0 !== t ? t : w,
+        P = r.useId(),
+        w = null !== (t = N['aria-labelledby']) && void 0 !== t ? t : P,
         M = r.useMemo(
             () => ({
-                headerId: P,
+                headerId: w,
                 headerIdIsManaged: x
             }),
-            [P, x]
+            [w, x]
         );
     return (0, i.jsx)(y.zM.Provider, {
         value: M,

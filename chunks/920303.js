@@ -64,16 +64,16 @@ function L(e) {
             filterTagIds: Array.from(e.tagFilter),
             sortOrder: e.sortOrder
         }),
-        w(),
+        P(),
         (T = e.hasMore),
         (C = e.offset + v),
         (y = !1),
         (I = !1);
 }
 function x(e) {
-    return (null == S || null == e.channelId || S === e.channelId) && w();
+    return (null == S || null == e.channelId || S === e.channelId) && P();
 }
-function w() {
+function P() {
     if (null == S) return !1;
     let e = !T,
         t = _.Z.getChannel(N[N.length - 1]),
@@ -94,7 +94,7 @@ function w() {
         .reverse()
         .value();
 }
-function P(e) {
+function w(e) {
     if (e.channelId !== S || e.sortOrder !== A || !(0, h.OL)(e.tagFilter, i)) return !1;
     (y = !1), (b = !0), (I = !1);
 }
@@ -143,6 +143,6 @@ let F = new Z(u.Z, {
     CHANNEL_DELETE: M,
     LOAD_ARCHIVED_THREADS: D,
     LOAD_ARCHIVED_THREADS_SUCCESS: L,
-    LOAD_ARCHIVED_THREADS_FAIL: P,
+    LOAD_ARCHIVED_THREADS_FAIL: w,
     RESORT_THREADS: x
 });

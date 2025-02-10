@@ -1,7 +1,7 @@
 n.d(t, {
     B0: () => O,
-    Hc: () => w,
-    J8: () => P,
+    Hc: () => P,
+    J8: () => w,
     Q6: () => C,
     V9: () => U,
     WD: () => x,
@@ -122,7 +122,7 @@ let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: 
         previewSticker: b(e)
     }),
     x = (e, t) => (e === f.yr.ANIMATE_ON_INTERACTION ? t : e !== f.yr.NEVER_ANIMATE),
-    w = (e, t, n, r) => {
+    P = (e, t, n, r) => {
         if (o.Z.getUploadCount(n, r) > 0) return !0;
         let a = c.Z.getStickerPreview(n, r);
         if (null != a && a.length > 0) return !0;
@@ -137,7 +137,7 @@ let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: 
                 return !1;
         }
     },
-    P = (e) => e.type === d.n0.GUILD,
+    w = (e) => e.type === d.n0.GUILD,
     M = (e) => e.type === d.n0.STANDARD,
     k = (e) => (e.stickerItems.length > 0 ? e.stickerItems : e.stickers.length > 0 ? e.stickers : []),
     U = (e) => {

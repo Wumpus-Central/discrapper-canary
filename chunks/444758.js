@@ -200,7 +200,7 @@ function x(e, t, n, i) {
                   content: [a]
               };
 }
-function w(e, t, n, i) {
+function P(e, t, n, i) {
     if (!e.canViewChannel) return S(e, t);
     if (!e.isMentionable) return R('#'.concat(e.name));
     let r = {
@@ -227,7 +227,7 @@ function w(e, t, n, i) {
         ...x(a, e, s, o)
     };
 }
-let P = {
+let w = {
         order: E.ZP.order,
         requiredFirstCharacters: ['<'],
         match: (e) => /^<#(\d+)>/.exec(e),
@@ -239,11 +239,11 @@ let P = {
                     id: i
                 };
             let r = N(i, n.mentionChannels);
-            return null == r ? L(null, i, null, I(n.channelId)) : w(r, null, I(n.channelId));
+            return null == r ? L(null, i, null, I(n.channelId)) : P(r, null, I(n.channelId));
         }
     },
     M = {
-        channelMention: P,
+        channelMention: w,
         channelOrMessageUrl: {
             order: r().defaultRules.url.order - 0.5,
             requiredFirstCharacters: ['h'],
@@ -258,7 +258,7 @@ let P = {
                     s = e[3];
                 if (null == a) return C(i);
                 let o = N(a, null);
-                return null == o ? L(r, a, s, I(n.channelId), i) : w(o, s, I(n.channelId), i);
+                return null == o ? L(r, a, s, I(n.channelId), i) : P(o, s, I(n.channelId), i);
             }
         },
         mediaPostLink: {
@@ -273,9 +273,9 @@ let P = {
                     o = e[4];
                 if (null == a || null == s) return C(i);
                 let l = N(s, null);
-                if (null != l) return w(l, o, I(n.channelId), i);
+                if (null != l) return P(l, o, I(n.channelId), i);
                 let u = N(a, null);
-                return null != u ? w(u, o, I(n.channelId), i) : L(r, a, o, I(n.channelId), i);
+                return null != u ? P(u, o, I(n.channelId), i) : L(r, a, o, I(n.channelId), i);
             }
         }
     };

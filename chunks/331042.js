@@ -34,8 +34,8 @@ var i = n(200651),
     D = n(328456),
     L = n(624377),
     x = n(530618),
-    w = n(141011),
-    P = n(372654),
+    P = n(141011),
+    w = n(372654),
     M = n(616066),
     k = n(216541),
     U = n(58201),
@@ -189,9 +189,9 @@ let V = 880,
                             children: [
                                 E
                                     ? (0, i.jsx)('div', { className: F.promotionalBanner })
-                                    : (0, i.jsx)(w.Z, {
+                                    : (0, i.jsx)(P.Z, {
                                           asset: R,
-                                          size: (0, P.ML)(V),
+                                          size: (0, w.ML)(V),
                                           className: F.decorationBanner,
                                           categoryBannerOverride: (0, B.ZS)(v.categorySkuId)
                                       }),
@@ -222,7 +222,7 @@ let V = 880,
                     (0, i.jsx)(x.Z, {
                         confettiTarget: null != s ? s : T.current,
                         confettiCanvas: o,
-                        sprites: (0, P.vK)(v.categorySkuId),
+                        sprites: (0, w.vK)(v.categorySkuId),
                         colors: null == y ? void 0 : y.map((e) => e.toHexString())
                     })
             ]

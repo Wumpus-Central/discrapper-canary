@@ -41,7 +41,7 @@ let x = (0, v.B)({
         }
     ]
 });
-function w(e) {
+function P(e) {
     let { member: t, guildId: r, channelId: a, role: s } = e,
         o = (0, c.e7)(
             [N.Z],
@@ -108,7 +108,7 @@ function w(e) {
               t.userId
           );
 }
-function P(e) {
+function w(e) {
     let { popoutProps: t, roleId: n, guildId: a, channelId: s } = e,
         o = r.useRef(null);
     (0, p.ZP)(() => {
@@ -158,7 +158,7 @@ function P(e) {
                 null != _
                     ? f.map((e) =>
                           (0, i.jsx)(
-                              w,
+                              P,
                               {
                                   member: e,
                                   guildId: a,
@@ -237,7 +237,7 @@ function M(e) {
                       null != n && (await (0, y.H)(o, n));
                   },
                   renderPopout: (e) =>
-                      (0, i.jsx)(P, {
+                      (0, i.jsx)(w, {
                           guildId: o,
                           channelId: r,
                           roleId: n,

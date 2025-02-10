@@ -45,8 +45,8 @@ let A = 'recentMentionFilterSettings',
         roleFilter: !0
     }),
     x = !1,
-    w = 0,
-    P = !1;
+    P = 0,
+    w = !1;
 function M(e) {
     (C = {}),
         e.forEach((e) => {
@@ -83,7 +83,7 @@ function B(e) {
         }),
         (O = !1),
         (D = t),
-        (w = (0, l.zO)()),
+        (P = (0, l.zO)()),
         (x = !0);
 }
 function Z() {
@@ -106,7 +106,7 @@ function F(e) {
         suppressEveryone: r,
         suppressRoles: a
     })
-        ? (P &&
+        ? (w &&
               E.ZP.ackMessageId(n.id) !== e.id &&
               (0, d.ZP)({
                   message: e,
@@ -114,7 +114,7 @@ function F(e) {
                   suppressEveryone: I.ZP.isSuppressEveryoneEnabled(n.getGuildId()),
                   suppressRoles: I.ZP.isSuppressRolesEnabled(n.getGuildId())
               }) &&
-              (P = !1),
+              (w = !1),
           e)
         : null;
 }
@@ -187,7 +187,7 @@ function z() {
     x = !1;
 }
 function q() {
-    (N = []), (R = {}), (x = !1), (P = !1), (C = {});
+    (N = []), (R = {}), (x = !1), (w = !1), (C = {});
 }
 function Q(e) {
     let { guild: t } = e,
@@ -216,7 +216,7 @@ function ee(e) {
     N.length > (N = N.slice(0, t)).length && (D = !0);
 }
 function et(e) {
-    P = !0;
+    w = !0;
 }
 class en extends (i = s.ZP.Store) {
     initialize() {
@@ -226,7 +226,7 @@ class en extends (i = s.ZP.Store) {
         return x;
     }
     get lastLoaded() {
-        return w;
+        return P;
     }
     getMentions() {
         return x || N.length > 0 ? N : null;
@@ -250,7 +250,7 @@ class en extends (i = s.ZP.Store) {
         return L.roleFilter;
     }
     get mentionsAreStale() {
-        return P;
+        return w;
     }
     get mentionCountByChannel() {
         return C;

@@ -45,17 +45,17 @@ let y = [],
     D = s().chain(y),
     L = new Set(),
     x = new Set();
-function w(e) {
+function P(e) {
     var t;
     return null !== (t = p.ZP.lastMessageId(e)) && void 0 !== t ? t : e;
 }
-function P(e) {
+function w(e) {
     let t = d.Z.getCount(e);
     return null === t || 0 === t;
 }
 function M(e) {
     return function (t, n) {
-        return (0, E.yv)(t) ? -1 : (0, E.yv)(n) ? 1 : e === o.z.LATEST_ACTIVITY ? g.default.compare(w(n), w(t)) : g.default.compare(n, t);
+        return (0, E.yv)(t) ? -1 : (0, E.yv)(n) ? 1 : e === o.z.LATEST_ACTIVITY ? g.default.compare(P(n), P(t)) : g.default.compare(n, t);
     };
 }
 function k(e) {
@@ -99,7 +99,7 @@ function Z(e) {
         0 !== x.size && ((R = Array.from(new Set([...R, ...x]))), x.clear()),
         ((null == e ? void 0 : e.refreshThreadIds) || (null == e ? void 0 : e.sortThreadIds)) && ((D = s().chain(R).sort(M(o.z.LATEST_ACTIVITY))), (O = s().chain(R).sort(M(o.z.CREATION_DATE))));
     let n = (S === o.z.LATEST_ACTIVITY ? D : O).value(),
-        r = (N = 0 === b.size ? n : n.filter(k(b))).find((e) => P(e));
+        r = (N = 0 === b.size ? n : n.filter(k(b))).find((e) => w(e));
     i = null == r ? null : r;
 }
 function F(e) {

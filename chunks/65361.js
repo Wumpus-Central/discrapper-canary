@@ -1,9 +1,9 @@
-t.d(n, { u: () => s });
+t.d(n, { u: () => o });
 var l = t(192379),
     i = t(442837),
     a = t(699553),
     r = t(314852);
-function s(e) {
+function o(e) {
     let n = (0, i.e7)([r.Z], () => r.Z.getProfile(e)),
         t = (0, i.e7)([r.Z], () => r.Z.getIsFetching(e));
     return {

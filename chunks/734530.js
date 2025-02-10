@@ -255,7 +255,7 @@
             if (null === e || C(e)) return e;
             throw Error(t);
         },
-        w = function (e) {
+        P = function (e) {
             var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : L;
             if (N(e))
                 return {
@@ -272,7 +272,7 @@
                       stripe: n
                   };
         },
-        P = function (e) {
+        w = function (e) {
             e &&
                 e._registerWrapper &&
                 e.registerAppInfo &&
@@ -298,7 +298,7 @@
                 r = e.children,
                 a = t.useMemo(
                     function () {
-                        return w(n);
+                        return P(n);
                     },
                     [n]
                 ),
@@ -359,7 +359,7 @@
                 ),
                 t.useEffect(
                     function () {
-                        P(o.stripe);
+                        w(o.stripe);
                     },
                     [o.stripe]
                 ),
@@ -402,7 +402,7 @@
                 r = e.children,
                 a = t.useMemo(
                     function () {
-                        return w(n, W);
+                        return P(n, W);
                     },
                     [n]
                 ),
@@ -482,7 +482,7 @@
             ),
                 t.useEffect(
                     function () {
-                        P(d.stripe);
+                        w(d.stripe);
                     },
                     [d.stripe]
                 );
@@ -547,7 +547,7 @@
                         O = R[0],
                         L = R[1],
                         x = t.useRef(null),
-                        w = t.useRef(null);
+                        P = t.useRef(null);
                     b(O, 'blur', c),
                         b(O, 'focus', d),
                         b(O, 'escape', p),
@@ -570,23 +570,23 @@
                         b(O, 'ready', r),
                         t.useLayoutEffect(
                             function () {
-                                if (null === x.current && null !== w.current && (N || C)) {
+                                if (null === x.current && null !== P.current && (N || C)) {
                                     var t = null;
-                                    C ? (t = C.createElement(e, u)) : N && (t = N.create(e, u)), (x.current = t), L(t), t && t.mount(w.current);
+                                    C ? (t = C.createElement(e, u)) : N && (t = N.create(e, u)), (x.current = t), L(t), t && t.mount(P.current);
                                 }
                             },
                             [N, C, u]
                         );
-                    var P = S(u);
+                    var w = S(u);
                     return (
                         t.useEffect(
                             function () {
                                 if (x.current) {
-                                    var e = D(u, P, ['paymentRequest']);
+                                    var e = D(u, w, ['paymentRequest']);
                                     e && x.current.update(e);
                                 }
                             },
-                            [u, P]
+                            [u, w]
                         ),
                         t.useLayoutEffect(function () {
                             return function () {
@@ -599,7 +599,7 @@
                         t.createElement('div', {
                             id: a,
                             className: s,
-                            ref: w
+                            ref: P
                         })
                     );
                 },
@@ -652,7 +652,7 @@
                 r = e.children,
                 a = t.useMemo(
                     function () {
-                        return w(n, en);
+                        return P(n, en);
                     },
                     [n]
                 ),
@@ -696,7 +696,7 @@
                 ),
                 t.useEffect(
                     function () {
-                        P(o);
+                        w(o);
                     },
                     [o]
                 );

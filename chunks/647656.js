@@ -71,7 +71,7 @@ let E = ['349134787773988865'],
                     {
                         socket: N,
                         args: { pid: T, activity: S },
-                        isSocketConnected: A
+                        isSocketConnected: Z
                     } = e;
                 if (![_.He.IPC, _.He.WEBSOCKET, _.He.POST_MESSAGE].includes(N.transport)) throw new m.Z({ errorCode: f.lTL.INVALID_COMMAND }, 'command not available from "'.concat(N.transport, '" transport'));
                 if (null == T && _.He.IPC === N.transport) throw new m.Z({ errorCode: f.lTL.INVALID_COMMAND }, 'nonzero pid required');
@@ -86,13 +86,13 @@ let E = ['349134787773988865'],
                         Promise.resolve(S)
                     );
                 S.name = N.application.name;
-                let Z = N.application.id;
-                S.application_id = Z;
+                let A = N.application.id;
+                S.application_id = A;
                 let x = N.transport === _.He.POST_MESSAGE,
                     b = (0, p.S5)(S, x);
-                if ((b > 0 && (S.flags = b), null != Z && (0, s.Kb)(Z) && x)) {
+                if ((b > 0 && (S.flags = b), null != A && (0, s.Kb)(A) && x)) {
                     let e = o.ZP.getCurrentEmbeddedActivity();
-                    if ((null == e ? void 0 : e.applicationId) === Z) {
+                    if ((null == e ? void 0 : e.applicationId) === A) {
                         let t = e.compositeInstanceId;
                         null != t &&
                             (S.secrets = {
@@ -125,7 +125,7 @@ let E = ['349134787773988865'],
                 return v.then((e) => {
                     var t, n;
                     let [i, l] = e;
-                    if ((null != L && (null != i ? (L.large_image = i) : delete L.large_image, null != l ? (L.small_image = l) : delete L.small_image), !A())) return;
+                    if ((null != L && (null != i ? (L.large_image = i) : delete L.large_image, null != l ? (L.small_image = l) : delete L.small_image), !Z())) return;
                     a.Z.dispatch({
                         type: 'LOCAL_ACTIVITY_UPDATE',
                         socketId: N.id,

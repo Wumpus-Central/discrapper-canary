@@ -21,8 +21,8 @@ var i = n(200651),
     N = n(65443),
     T = n(611855),
     S = n(670638),
-    A = n(667105),
-    Z = n(860151),
+    Z = n(667105),
+    A = n(860151),
     x = n(341907),
     b = n(46140),
     L = n(981631),
@@ -96,7 +96,7 @@ function R(e) {
             }),
                 (0, x.navigateToQuestHome)(b.dr.ACTIVITY_PANEL, g.jn.ACTIVITY_PANEL, I.id);
         }, [I.id, C]),
-        G = (0, A.hf)({
+        G = (0, Z.hf)({
             quest: I,
             location: g.jn.ACTIVITY_PANEL
         }),
@@ -173,7 +173,7 @@ function R(e) {
                       }),
                   V &&
                       !H &&
-                      (0, i.jsx)(Z.Z, {
+                      (0, i.jsx)(A.Z, {
                           autoplay: L,
                           className: P.rewardTileWithInstructions,
                           quest: I,

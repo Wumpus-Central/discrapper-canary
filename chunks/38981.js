@@ -1,21 +1,21 @@
-t.d(n, { Z: () => o });
+t.d(n, { Z: () => s });
 var l = t(200651);
 t(192379);
 var i = t(120356),
     a = t.n(i),
     r = t(481060),
-    s = t(926726);
-let o = function (e) {
+    o = t(926726);
+let s = function (e) {
     let { count: n, className: t } = e;
     return (0, l.jsxs)('div', {
-        className: a()(s.container, t),
+        className: a()(o.container, t),
         children: [
             (0, l.jsx)(r.VWR, {
                 size: 'custom',
                 color: 'currentColor',
                 width: 12,
                 height: 12,
-                className: s.icon
+                className: o.icon
             }),
             (0, l.jsx)(r.Text, {
                 color: 'header-secondary',

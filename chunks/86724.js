@@ -121,7 +121,7 @@ function C(e, t, n, i) {
 function R(e) {
     var t, n;
     let { editor: r, storeCommandState: s, channel: o, canUseCommands: l, canOnlyUseTextCommands: c, commandChanged: d, previousOptionValues: f } = e,
-        { command: _, commandText: p } = P(r),
+        { command: _, commandText: p } = w(r),
         h = s.activeCommand;
     if ((!l && (null == h ? void 0 : null === (t = h.integration_types) || void 0 === t ? void 0 : t.includes(i.Y.GUILD_INSTALL))) || (c && (null == h ? void 0 : h.inputType) !== u.iw.BUILT_IN_TEXT && (null == h ? void 0 : h.inputType) !== u.iw.BUILT_IN_INTEGRATION)) return null != _ && D(r, o.id, h, !0), null;
     if (null != _) {
@@ -133,7 +133,7 @@ function R(e) {
             let e = O(r, o, s),
                 t = m.tM(r, h, o.id);
             return (
-                w({
+                P({
                     guildId: o.guild_id,
                     channelId: o.id,
                     command: h,
@@ -182,7 +182,7 @@ function R(e) {
             }),
             i = null !== (n = null == t ? void 0 : t[0].optionName) && void 0 !== n ? n : null;
         return (
-            w({
+            P({
                 guildId: o.guild_id,
                 channelId: o.id,
                 command: h,
@@ -364,7 +364,7 @@ function x(e, t) {
         !0)
     );
 }
-function w(e) {
+function P(e) {
     let { guildId: t, channelId: n, command: i, activeOption: r, currentOptionValues: s, previousOptionValues: o, validateAll: u, allowEmpty: c } = e;
     if (null == i.options) return !1;
     let f = u ? null : l.Z.getActiveOptionName(n),
@@ -394,7 +394,7 @@ function w(e) {
     }
     h && a.g7(n, _);
 }
-function P(e) {
+function w(e) {
     let t = m.cr(e);
     if (null == t)
         return {
@@ -418,7 +418,7 @@ function M(e, t) {
     t();
     let i = y.M8.toPoint(e.selection);
     if (null == i || n === m.cu(e)[0]) return;
-    let { command: r, commandText: a } = P(e);
+    let { command: r, commandText: a } = w(e);
     !(null == r || null == a || a.endsWith(' ')) &&
         y.Jz.equals(i, {
             path: I.u9,

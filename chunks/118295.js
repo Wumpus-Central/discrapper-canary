@@ -73,14 +73,14 @@ function p() {
     function D() {}
     function L() {}
     function x() {}
-    var w = {};
-    T(w, v, function () {
+    var P = {};
+    T(P, v, function () {
         return this;
     });
-    var P = o,
-        M = P && P(P(H([])));
-    M && M !== h && m.call(M, v) && (w = M);
-    var k = (x.prototype = D.prototype = s(w));
+    var w = o,
+        M = w && w(w(H([])));
+    M && M !== h && m.call(M, v) && (P = M);
+    var k = (x.prototype = D.prototype = s(P));
     function U(e) {
         var t;
         l((t = ['next', 'throw', 'return'])).call(t, function (t) {

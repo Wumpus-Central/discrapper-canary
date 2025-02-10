@@ -111,10 +111,10 @@ function x(e) {
             });
     }
 }
-function w() {
+function P() {
     S = { lastPickerAction: 2 };
 }
-function P(e) {
+function w(e) {
     let { error: t } = e;
     S = {
         lastPickerAction: 3,
@@ -134,8 +134,8 @@ function k() {
 E(L, 'displayName', 'NativeScreenSharePickerStore');
 let U = new L(s.Z, {
     NATIVE_SCREEN_SHARE_PICKER_UPDATE: x,
-    NATIVE_SCREEN_SHARE_PICKER_CANCEL: w,
-    NATIVE_SCREEN_SHARE_PICKER_ERROR: P,
+    NATIVE_SCREEN_SHARE_PICKER_CANCEL: P,
+    NATIVE_SCREEN_SHARE_PICKER_ERROR: w,
     NATIVE_SCREEN_SHARE_PICKER_PRESENT: M,
     NATIVE_SCREEN_SHARE_PICKER_RELEASE: k
 });

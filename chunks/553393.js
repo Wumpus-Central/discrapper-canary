@@ -29,8 +29,8 @@ var i = n(200651),
     D = n(46140),
     L = n(981631),
     x = n(231338),
-    w = n(388032),
-    P = n(443339);
+    P = n(388032),
+    w = n(443339);
 let M = '4px',
     k = '11px',
     U = 222;
@@ -148,28 +148,28 @@ function B(e) {
         ef =
             z && !W
                 ? {
-                      headerText: w.intl.string(w.t.gHerLS),
-                      ctaText: w.intl.string(w.t.cfY4PD),
+                      headerText: P.intl.string(P.t.gHerLS),
+                      ctaText: P.intl.string(P.t.cfY4PD),
                       handleClickCta: H,
                       tileAssetType: 'reward'
                   }
                 : K && !W
                   ? {
-                        headerText: w.intl.string(w.t.uH2sf3),
-                        ctaText: w.intl.string(w.t.VN1Ajo),
+                        headerText: P.intl.string(P.t.uH2sf3),
+                        ctaText: P.intl.string(P.t.VN1Ajo),
                         handleClickCta: eu,
                         tileAssetType: 'reward'
                     }
                   : G(N, j)
                     ? {
-                          headerText: w.intl.string(w.t.Bz6SkJ),
-                          ctaText: w.intl.string(w.t.BXFP39),
+                          headerText: P.intl.string(P.t.Bz6SkJ),
+                          ctaText: P.intl.string(P.t.BXFP39),
                           handleClickCta: ed,
                           tileAssetType: 'game'
                       }
                     : {
-                          headerText: w.intl.string(w.t.Bz6SkJ),
-                          ctaText: w.intl.string(w.t.BSXPZ2),
+                          headerText: P.intl.string(P.t.Bz6SkJ),
+                          ctaText: P.intl.string(P.t.BSXPZ2),
                           handleClickCta: eu,
                           tileAssetType: 'game'
                       };
@@ -178,7 +178,7 @@ function B(e) {
             V.current = e;
         },
         'aria-expanded': ee,
-        className: P.wrapper,
+        className: w.wrapper,
         style: {
             width: null !== (v = null === (m = I.current) || void 0 === m ? void 0 : m.clientWidth) && void 0 !== v ? v : U,
             height: er.height,
@@ -189,21 +189,21 @@ function B(e) {
             ref: (e) => {
                 J.current = e;
             },
-            className: P.container,
+            className: w.container,
             style: { borderRadius: eo },
             children: [
                 (0, i.jsxs)('div', {
-                    className: P.top,
+                    className: w.top,
                     children: [
                         (0, i.jsxs)('div', {
-                            className: P.left,
+                            className: w.left,
                             children: [
                                 (0, i.jsx)(u.X6q, {
                                     variant: 'heading-sm/semibold',
                                     children: ef.headerText
                                 }),
                                 (0, i.jsxs)(u.P3F, {
-                                    className: P.help,
+                                    className: w.help,
                                     onClick: (e) => {
                                         es(), ec(e);
                                     },
@@ -211,12 +211,12 @@ function B(e) {
                                         (0, i.jsx)(u.Text, {
                                             variant: 'text-xs/medium',
                                             color: 'text-muted',
-                                            className: P.helpText,
-                                            children: w.intl.format(w.t['Lm8/mJ'], { gamePublisher: y.config.messages.gamePublisher })
+                                            className: w.helpText,
+                                            children: P.intl.format(P.t['Lm8/mJ'], { gamePublisher: y.config.messages.gamePublisher })
                                         }),
                                         (0, i.jsx)(u.idN, {
                                             size: 'custom',
-                                            className: P.helpIcon,
+                                            className: w.helpIcon,
                                             width: k,
                                             height: k,
                                             color: u.TVs.colors.INTERACTIVE_NORMAL
@@ -226,30 +226,30 @@ function B(e) {
                             ]
                         }),
                         (0, i.jsx)('div', {
-                            className: P.right,
+                            className: w.right,
                             children: (0, i.jsxs)('div', {
-                                className: P.imgWrapper,
+                                className: w.imgWrapper,
                                 children: [
                                     ea(
                                         (e, t) =>
                                             t &&
                                             (0, i.jsx)(a.animated.div, {
                                                 style: e,
-                                                className: P.imgUnderlay
+                                                className: w.imgUnderlay
                                             })
                                     ),
                                     'game' === ef.tileAssetType &&
                                         (0, i.jsx)('img', {
-                                            alt: w.intl.formatToPlainString(w.t.IskzPj, {
+                                            alt: P.intl.formatToPlainString(P.t.IskzPj, {
                                                 gameTitle: y.config.messages.gameTitle,
                                                 gamePublisher: y.config.messages.gamePublisher
                                             }),
-                                            className: P.assetTile,
+                                            className: w.assetTile,
                                             src: (0, A.fh)(y, A.eC.GAME_TILE, Q).url
                                         }),
                                     'reward' === ef.tileAssetType &&
                                         (0, i.jsx)(C.Z, {
-                                            className: P.assetTile,
+                                            className: w.assetTile,
                                             quest: y,
                                             questContent: S.jn.MEMBERS_LIST,
                                             learnMoreStyle: 'icon',
@@ -266,7 +266,7 @@ function B(e) {
                         es(), ef.handleClickCta();
                     },
                     color: u.zxk.Colors.CUSTOM,
-                    className: P.ctaButton,
+                    className: w.ctaButton,
                     children: ef.ctaText
                 })
             ]

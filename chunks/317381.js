@@ -52,8 +52,8 @@ let N = {
     D = new Map(),
     L = new Map(),
     x = new Map(),
-    w = new Map();
-function P(e, t) {
+    P = new Map();
+function w(e, t) {
     return ''.concat(e, ':').concat(t);
 }
 let M = new Map(),
@@ -79,7 +79,7 @@ function z(e) {
     let m = (0, v.p)(l),
         y = null != m && null !== (n = x.get(m)) && void 0 !== n ? n : C,
         I = null != y && 0 === y.length,
-        T = null !== (i = w.get(l.id)) && void 0 !== i ? i : C,
+        T = null !== (i = P.get(l.id)) && void 0 !== i ? i : C,
         b = T.find((e) => e.applicationId === c),
         A = p.map((e) => e.userId),
         N = u.default.getId(),
@@ -87,7 +87,7 @@ function z(e) {
         O = null === (t = p.find((e) => e.userId === N)) || void 0 === t ? void 0 : t.sessionId,
         k = p.some((e) => (0, E.J)(e)),
         U = D.get(c),
-        G = M.get(P(null != m ? m : null, c)),
+        G = M.get(w(null != m ? m : null, c)),
         B = null == G ? void 0 : G.launchParams,
         Z = {
             applicationId: c,
@@ -125,7 +125,7 @@ function z(e) {
               inviterUserId: null == G ? void 0 : G.inviterUserId
           });
     let V = T.filter((e) => e.applicationId !== c);
-    if ((A.length > 0 && V.push(Z), w.set(l.id, V), null != m)) {
+    if ((A.length > 0 && V.push(Z), P.set(l.id, V), null != m)) {
         let e = (null !== (s = x.get(m)) && void 0 !== s ? s : []).filter((e) => e.applicationId !== c),
             t = K((0, v.j)(l)),
             n = (null !== (o = L.get(t)) && void 0 !== o ? o : []).filter((e) => !(e.applicationId === c && e.location.id === l.id));
@@ -152,7 +152,7 @@ function q(e) {
 }
 function Q(e) {
     let { guilds: t } = e;
-    x.clear(), L.clear(), w.clear(), t.forEach((e) => q(e));
+    x.clear(), L.clear(), P.clear(), t.forEach((e) => q(e));
 }
 function X(e) {
     let { guild: t } = e;
@@ -167,7 +167,7 @@ function J(e) {
         s = (null !== (n = L.get(a)) && void 0 !== n ? n : []).filter((e) => (0, v.p)(e.location) !== i.id);
     L.set(a, s),
         r.forEach((e) => {
-            w.delete(e.location.id);
+            P.delete(e.location.id);
         });
 }
 function $(e) {
@@ -195,7 +195,7 @@ function ee(e) {
         x = null == L ? void 0 : L.getGuildId();
     if (null == f.default.getCurrentUser() || (!(0, m.sq)() && null == x && !(null !== (n = null == L ? void 0 : L.isPrivate()) && void 0 !== n && n))) return !1;
     i = l;
-    let w = {
+    let P = {
         applicationId: r,
         url: C,
         userIds: new Set(p.map((e) => e.userId)),
@@ -207,14 +207,14 @@ function ee(e) {
         referrerId: T,
         customId: A
     };
-    D.set(r, w),
+    D.set(r, P),
         _.S.dispatch(S.CkL.OPEN_EMBEDDED_ACTIVITY, {
             location: l,
             applicationId: r,
             isFirstActivityInChannel: E,
             isStart: y,
             participants: p,
-            embeddedActivity: w,
+            embeddedActivity: P,
             inviterUserId: N
         }),
         (0, h.R)()
@@ -306,7 +306,7 @@ let eu = () => {
 };
 function ec(e) {
     let { applicationId: t, componentId: n, commandOrigin: i, launchParams: r, channelId: a, inviterUserId: s } = e;
-    M.set(P(a, t), {
+    M.set(w(a, t), {
         isLaunching: !0,
         componentId: n,
         inviterUserId: s,
@@ -331,7 +331,7 @@ function ef(e) {
 }
 function e_(e) {
     let { applicationId: t, channelId: n } = e;
-    M.delete(P(n, t));
+    M.delete(w(n, t));
 }
 function ep(e) {
     let { applicationId: t, lockState: n, pictureInPictureLockState: i, gridLockState: r } = e;
@@ -396,7 +396,7 @@ class eI extends (r = a.ZP.PersistedStore) {
     }
     getEmbeddedActivitiesForLocation(e) {
         var t;
-        return null !== (t = w.get(e.id)) && void 0 !== t ? t : C;
+        return null !== (t = P.get(e.id)) && void 0 !== t ? t : C;
     }
     getEmbeddedActivitiesByChannel() {
         return x;
@@ -458,7 +458,7 @@ class eI extends (r = a.ZP.PersistedStore) {
     getEmbeddedActivityForUserId(e, t) {
         let n;
         if (void 0 !== t) {
-            l: for (let [i, r] of w)
+            l: for (let [i, r] of P)
                 for (let i of r)
                     if (i.applicationId === t && i.userIds.has(e)) {
                         n = i;
@@ -471,7 +471,7 @@ class eI extends (r = a.ZP.PersistedStore) {
         return N.everLaunchedActivities.has(e);
     }
     getLaunchState(e, t) {
-        if (null != e && null != t) return M.get(P(t, e));
+        if (null != e && null != t) return M.get(w(t, e));
     }
     getLaunchStates() {
         return M;

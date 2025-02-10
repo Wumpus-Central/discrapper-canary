@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(47120), n(733860);
+n.d(t, { Z: () => P }), n(47120), n(733860);
 var i = n(200651),
     r = n(192379),
     a = n(120356),
@@ -116,7 +116,7 @@ let L = (e) => {
             })
         );
     },
-    w = (e) => {
+    P = (e) => {
         let { searchBarRef: t, selectedSurrogate: n, className: a, hasTabWrapper: s } = e,
             o = v.ZP.getURL(C + n),
             [l, u] = r.useState(!1),

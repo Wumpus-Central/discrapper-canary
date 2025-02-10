@@ -31,8 +31,8 @@ var i,
     j = n(220444),
     y = n(31022),
     P = n(10401),
-    A = n(131704),
-    T = n(592125),
+    T = n(131704),
+    A = n(592125),
     w = n(796974),
     R = n(984933),
     L = n(914010),
@@ -148,7 +148,7 @@ class eh extends (i = r.PureComponent) {
                 let r = e.getChannelFromSectionRow(i, l);
                 if (null == r) return !1;
                 let { channel: a, category: o } = r;
-                return !!(0, A.vc)(a.record.type) && (!o.isCollapsed || !o.isMuted) && !a.isMuted && !!t.isItemVisible(i, l, !0) && (0, j.d)(a.record);
+                return !!(0, T.vc)(a.record.type) && (!o.isCollapsed || !o.isMuted) && !a.isMuted && !!t.isItemVisible(i, l, !0) && (0, j.d)(a.record);
             })
         );
     }
@@ -738,8 +738,8 @@ let ep = (e) => {
     let { guildId: t, selectedChannelId: n, selectedVoiceChannelId: i } = e,
         a = (0, d.e7)([g.Z], () => g.Z.keyboardModeEnabled),
         { analyticsLocations: o } = (0, _.ZP)(f.Z.GUILD_CHANNEL_LIST),
-        u = (0, d.e7)([T.Z], () => T.Z.getChannel(n)),
-        h = (0, d.e7)([T.Z], () => T.Z.getChannel(i)),
+        u = (0, d.e7)([A.Z], () => A.Z.getChannel(n)),
+        h = (0, d.e7)([A.Z], () => A.Z.getChannel(i)),
         p = (0, d.e7)([L.Z], () => L.Z.getGuildId()),
         v = (0, N.DM)(t),
         x = r.useRef(null),

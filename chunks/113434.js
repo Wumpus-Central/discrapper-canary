@@ -67,8 +67,8 @@ var i = n(192379),
     D = n(475595),
     L = n(566078),
     x = n(46140),
-    w = n(981631),
-    P = n(474936),
+    P = n(981631),
+    w = n(474936),
     M = n(388032);
 let k = -1,
     U = 1;
@@ -373,8 +373,8 @@ function el() {
             xboxAndPlaystationAccounts: a
         } = i.useMemo(() => {
             let e = t.filter((e) => !1 === e.revoked),
-                n = e.filter((e) => e.type === w.ABu.XBOX),
-                i = e.filter((e) => e.type === w.ABu.PLAYSTATION),
+                n = e.filter((e) => e.type === P.ABu.XBOX),
+                i = e.filter((e) => e.type === P.ABu.PLAYSTATION),
                 r = n.concat(i);
             return {
                 xboxAccounts: n,
@@ -427,8 +427,8 @@ let eu = (e) => {
             n = e.length > 0,
             i = t.length > 0,
             r = (n && !i) || (!n && i),
-            a = g.Z.getArticleURL(w.BhN.QUEST_HOW_TO_PLAYSTATION),
-            s = g.Z.getArticleURL(w.BhN.QUEST_HOW_TO_XBOX),
+            a = g.Z.getArticleURL(P.BhN.QUEST_HOW_TO_PLAYSTATION),
+            s = g.Z.getArticleURL(P.BhN.QUEST_HOW_TO_XBOX),
             o = M.intl.format(M.t.beN4DA, {
                 psHelpdeskArticle: a,
                 xboxHelpdeskArticle: s
@@ -663,7 +663,7 @@ function eS(e, t) {
             (null == n ? void 0 : n.config.cosponsorMetadata) == null
                 ? null
                 : (0, D.Rt)(e, n.config.cosponsorMetadata.logotype, {
-                      theme: null != t ? t : (0, l.wj)(r) ? w.BRd.DARK : w.BRd.LIGHT,
+                      theme: null != t ? t : (0, l.wj)(r) ? P.BRd.DARK : P.BRd.LIGHT,
                       newCdn: a
                   }),
         [r, t, e, null == n ? void 0 : n.config.cosponsorMetadata, a]
@@ -674,7 +674,7 @@ function eA(e) {
         n = (0, N.Kr)(e),
         i = (0, N.f$)(e),
         r = (0, u.e7)([p.default], () => p.default.getCurrentUser()),
-        a = null != r && y.ZP.isPremium(r, P.p9.TIER_2);
+        a = null != r && y.ZP.isPremium(r, w.p9.TIER_2);
     if (null == n) return M.intl.formatToPlainString(M.t.l9uXLy, { decorationName: t });
     let s = M.intl.formatToPlainString(M.t.gWlmFR, {
             duration: n,

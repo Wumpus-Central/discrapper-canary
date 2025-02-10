@@ -21,7 +21,7 @@ function y(e) {
     var t, n;
     let { src: a, alt: o, className: u, emojiId: f, emojiName: p, channelId: g, messageId: y, animated: I, size: T = 'default', isInteracting: b = !1, shouldAnimate: S, onMouseEnter: A, onMouseLeave: N, canSelect: C = !0, autoplay: R, registerAnimatedElementRef: O, ...D } = e,
         [L, x] = r.useState(!1),
-        [w, P] = r.useState(void 0),
+        [P, w] = r.useState(void 0),
         M = r.useRef(),
         { triggerAnimation: k, untriggerAnimation: U } = r.useContext(c.Rm),
         G = _.Yk.useSetting(),
@@ -45,7 +45,7 @@ function y(e) {
         H = r.useCallback(() => {
             null != j &&
                 (M.current = (0, d.po)(j, (e) => {
-                    e || P(Date.now());
+                    e || w(Date.now());
                 }));
         }, [j]),
         Y = r.useCallback(
@@ -113,7 +113,7 @@ function y(e) {
                                 alt: null !== (t = null != o ? o : p) && void 0 !== t ? t : void 0,
                                 draggable: !1
                             },
-                            w
+                            P
                         )
                       : (0, i.jsx)(
                             'div',
@@ -129,7 +129,7 @@ function y(e) {
                                     backgroundPosition: 'center center'
                                 }
                             },
-                            w
+                            P
                         )
               ]
           });

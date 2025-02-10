@@ -38,11 +38,11 @@ let v = (0, c.B)(function (e) {
             [N]
         );
     if (null == N) return null;
-    let A = (0, p.jo)(c, Z),
-        T = (0, p.CN)(N, C, x),
+    let T = (0, p.jo)(c, Z),
+        A = (0, p.CN)(N, C, x),
         w = (0, i.jsx)('div', {
-            className: a()(A, {
-                [_.disabled]: T,
+            className: a()(T, {
+                [_.disabled]: A,
                 [_.selected]: j
             }),
             'data-dnd-name': N.name,

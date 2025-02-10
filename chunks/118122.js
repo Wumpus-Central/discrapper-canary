@@ -45,7 +45,7 @@ function S(e) {
         j = (0, a.s9z)((e) => (0, a.DEQ)(e, C.PU)),
         { analyticsLocations: y } = (0, s.ZP)(),
         P = (0, d.Q3)('CreateJoinGuildButton'),
-        A = (0, i.jsx)(_.Z, {
+        T = (0, i.jsx)(_.Z, {
             showPill: !1,
             id: 'create-join-button',
             onClick: () => {
@@ -66,7 +66,7 @@ function S(e) {
             icon: P ? a.oFk : a.BRu
         });
     return t
-        ? A
+        ? T
         : (0, i.jsx)('div', {
               className: Z.tutorialContainer,
               children: (0, i.jsxs)(p.Z, {
@@ -74,7 +74,7 @@ function S(e) {
                   inlineSpecs: I,
                   position: 'right',
                   children: [
-                      A,
+                      T,
                       null != n &&
                           (0, i.jsx)(f.ZP, {
                               name: x.intl.string(x.t['45xjMz']),

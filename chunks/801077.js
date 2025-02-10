@@ -26,8 +26,8 @@ var i,
     j = n(250889),
     y = n(199902),
     P = n(592125),
-    A = n(480294),
-    T = n(831506),
+    T = n(480294),
+    A = n(831506),
     w = n(731290),
     R = n(430824),
     L = n(496675),
@@ -48,7 +48,7 @@ let V = !1,
     Q = new Set();
 function J() {
     let e = D.Z.getFriendIDs();
-    return new Set(A.Z.hasConsented(U.pjP.PERSONALIZATION) ? [...S.Z.getUserAffinitiesUserIds(), ...e] : e);
+    return new Set(T.Z.hasConsented(U.pjP.PERSONALIZATION) ? [...S.Z.getUserAffinitiesUserIds(), ...e] : e);
 }
 function K(e) {
     return M.Z.findActivity(e, (e) => e.type !== U.IIU.CUSTOM_STATUS);
@@ -99,7 +99,7 @@ function el(e, t, n) {
         C = [],
         Z = new Set(),
         S = !1,
-        A = [];
+        T = [];
     for (let e of t) {
         let n = y.Z.getAnyStreamForUser(e.id),
             i = P.Z.getChannel(null == n ? void 0 : n.channelId);
@@ -107,7 +107,7 @@ function el(e, t, n) {
         let s = K(e.id);
         if (
             (null != n &&
-                A.push({
+                T.push({
                     stream: n,
                     streamUser: e,
                     activity: s
@@ -147,7 +147,7 @@ function el(e, t, n) {
         let D = [];
         (D =
             null != s && null != s.party && null != s.party.id
-                ? Array.from(null !== (a = T.Z.getParty(s.party.id)) && void 0 !== a ? a : []).reduce((e, t) => {
+                ? Array.from(null !== (a = A.Z.getParty(s.party.id)) && void 0 !== a ? a : []).reduce((e, t) => {
                       let n = G.default.getUser(t);
                       return null != n && e.push(n), e;
                   }, [])
@@ -214,7 +214,7 @@ function el(e, t, n) {
             return null !== (t = e.startedPlayingTime) && void 0 !== t ? t : 0;
         }),
         o()(C).orderBy([s, (e) => e.game.name], ['desc', 'asc'])).value(),
-        applicationStreams: A
+        applicationStreams: T
     };
 }
 function er(e) {
@@ -337,7 +337,7 @@ function ed() {
 }
 class eu extends (i = c.ZP.Store) {
     initialize() {
-        this.syncWith([G.default, v.Z, M.Z, T.Z, k.Z, y.Z, D.Z, A.Z, S.Z], ed), this.waitFor(Z.Z, R.Z, v.Z, G.default, S.Z);
+        this.syncWith([G.default, v.Z, M.Z, A.Z, k.Z, y.Z, D.Z, T.Z, S.Z], ed), this.waitFor(Z.Z, R.Z, v.Z, G.default, S.Z);
     }
     get currentActivityParties() {
         return H;

@@ -34,8 +34,8 @@ var i = n(200651),
     D = n(699516),
     L = n(9156),
     x = n(594174),
-    w = n(938475),
-    P = n(981631),
+    P = n(938475),
+    w = n(981631),
     M = n(388032),
     k = n(222594),
     U = n(577187);
@@ -47,7 +47,7 @@ function G(e) {
                 ...O.ZP.getChannels(t)
                     [O.Zb].filter((e) => {
                         let { channel: t } = e;
-                        return t.type === P.d4z.GUILD_VOICE;
+                        return t.type === w.d4z.GUILD_VOICE;
                     })
                     .map((e) => {
                         let { channel: t } = e;
@@ -59,7 +59,7 @@ function G(e) {
         ),
         i = (0, N.ZP)(t),
         a = r.useMemo(() => i.map((e) => e.id), [i]),
-        s = (0, u.e7)([w.ZP], () => w.ZP.getVoiceStates(t), [t]),
+        s = (0, u.e7)([P.ZP], () => P.ZP.getVoiceStates(t), [t]),
         o = (0, u.Wu)([D.Z], () => D.Z.getBlockedOrIgnoredIDs()),
         { enabled: c } = (0, p.bA)('guild-tooltip'),
         f = l().flatMap(n, (t) => {

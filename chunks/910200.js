@@ -3,39 +3,39 @@ var l = t(200651),
     i = t(442837),
     a = t(692547),
     r = t(481060),
-    s = t(410030),
-    o = t(220082),
+    o = t(410030),
+    s = t(220082),
     c = t(114487),
     d = t(686546),
     u = t(706454),
     m = t(768581),
     _ = t(709054),
-    x = t(997431),
-    h = t(723776),
+    h = t(997431),
+    x = t(723776),
     g = t(686369),
     v = t(388032),
     b = t(893772);
 function j(e) {
     let { profile: n } = e,
-        t = (0, s.ZP)(),
+        t = (0, o.ZP)(),
         j = (function (e, n) {
             let t = m.ZP.getGuildIconURL({
                     id: e.id,
                     icon: e.icon,
                     size: 64
                 }),
-                l = (0, o.ZP)(t, n);
+                l = (0, s.ZP)(t, n);
             return null != e.brandColorPrimary ? e.brandColorPrimary : l;
         })(n, (0, r.dQu)(a.Z.colors.BG_BASE_TERTIARY).hex()),
         N = (0, i.e7)([u.default], () => u.default.locale),
-        f = (0, g.d)(t, j),
-        I = (0, x.M)(_.default.extractTimestamp(n.id), N);
+        I = (0, g.d)(t, j),
+        f = (0, h.M)(_.default.extractTimestamp(n.id), N);
     return (0, l.jsxs)('div', {
         className: b.container,
         children: [
             (0, l.jsx)('div', {
                 className: b.banner,
-                style: { background: f }
+                style: { background: I }
             }),
             (0, l.jsx)('div', {
                 className: b.avatarContainer,
@@ -94,7 +94,7 @@ function j(e) {
                         children: (0, l.jsx)(r.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-secondary',
-                            children: v.intl.format(v.t['zb2Q5+'], { createdAtDate: I })
+                            children: v.intl.format(v.t['zb2Q5+'], { createdAtDate: f })
                         })
                     })
                 ]
@@ -107,7 +107,7 @@ function j(e) {
                         color: 'text-secondary',
                         children: n.description
                     }),
-                    (0, l.jsx)(h.F, { profile: n })
+                    (0, l.jsx)(x.F, { profile: n })
                 ]
             })
         ]

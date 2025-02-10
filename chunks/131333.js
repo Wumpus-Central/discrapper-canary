@@ -1,4 +1,4 @@
-n.d(t, { t: () => w }), n(47120);
+n.d(t, { t: () => P }), n(47120);
 var i = n(200651),
     r = n(192379),
     a = n(119617),
@@ -124,7 +124,7 @@ let x = r.forwardRef(function (e, t) {
         })
     );
 });
-function w(e) {
+function P(e) {
     let { children: t } = e,
         n = r.useRef({}),
         [a, l] = r.useState(null),

@@ -2,10 +2,10 @@ n.d(t, {
     Af: () => x,
     An: () => F,
     E6: () => Z,
-    EE: () => P,
+    EE: () => w,
     Gk: () => W,
     Gt: () => C,
-    OV: () => w,
+    OV: () => P,
     PZ: () => z,
     Rg: () => Y,
     U9: () => j,
@@ -44,10 +44,10 @@ var i = n(200651),
     A = n(233855);
 let N = {
     [u.s.TOP_ARTIST]: [F],
-    [u.s.PLAYED_GAME]: [w, P, x, j, k, B, V, G, U],
+    [u.s.PLAYED_GAME]: [P, w, x, j, k, B, V, G, U],
     [u.s.TOP_GAME]: [Z],
     [u.s.WATCHED_MEDIA]: [H, Y],
-    [u.s.LAUNCHED_ACTIVITY]: [w, P, x, j, V, U]
+    [u.s.LAUNCHED_ACTIVITY]: [P, w, x, j, V, U]
 };
 var C = (function (e) {
     return (e[(e.CARD = 0)] = 'CARD'), (e[(e.POPOUT = 1)] = 'POPOUT'), (e[(e.STREAMING_POPOUT = 2)] = 'STREAMING_POPOUT'), (e[(e.GAME_PROFILE = 3)] = 'GAME_PROFILE'), (e[(e.USER_PROFILE = 4)] = 'USER_PROFILE'), (e[(e.EMBED = 5)] = 'EMBED'), (e[(e.LEADERBOARD_POPOUT = 6)] = 'LEADERBOARD_POPOUT'), (e[(e.OVERLAY = 7)] = 'OVERLAY'), e;
@@ -100,7 +100,7 @@ function x(e) {
               text: n.name
           });
 }
-function w(e) {
+function P(e) {
     let { entry: t, hovered: n } = e,
         { defaultTextColor: r, defaultIconColor: a, location: s } = O(),
         o = (0, y.Jg)(t) && (0, h.Hi)(s, [0, 4, 7]),
@@ -124,7 +124,7 @@ function w(e) {
         ]
     });
 }
-function P(e) {
+function w(e) {
     let { entry: t } = e,
         { defaultTextColor: n, defaultIconColor: r } = O(),
         { state: a, party: s } = (0, I.n)(t),

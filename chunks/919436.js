@@ -38,20 +38,20 @@ function P(e, t, n) {
         e
     );
 }
-let A = {
+let T = {
     friction: 28,
     tension: 600
 };
-function T(e) {
+function A(e) {
     switch (e) {
         case 'height':
         case 'opacity':
             return {
                 duration: 150,
-                ...A
+                ...T
             };
         case 'scale':
-            return { ...A };
+            return { ...T };
         default:
             throw Error('DirectMessage: getSpringConfigs() - Invalid spring '.concat(String(e)));
     }
@@ -66,7 +66,7 @@ class w extends (i = r.PureComponent) {
                     height: 1,
                     opacity: 1,
                     scale: 1,
-                    config: T
+                    config: A
                 })
                 .start()
                 .then(() => this.setState({ animating: !1 }));
@@ -78,7 +78,7 @@ class w extends (i = r.PureComponent) {
             scale: 1,
             opacity: 1,
             height: 1,
-            config: T
+            config: A
         })
             .start()
             .then(e);
@@ -92,7 +92,7 @@ class w extends (i = r.PureComponent) {
                     height: 0,
                     opacity: 0,
                     scale: 0,
-                    config: T
+                    config: A
                 })
                 .start()
                 .then(e)
@@ -182,7 +182,7 @@ class w extends (i = r.PureComponent) {
                     scale: 0,
                     height: 0,
                     opacity: 0,
-                    config: T
+                    config: A
                 })
             }),
             P(this, 'handleContextMenu', (e) => {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(653041), n(47120);
+n.d(t, { Z: () => A }), n(653041), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(442837),
@@ -21,11 +21,11 @@ var i = n(200651),
     N = n(346329),
     T = n(981631),
     S = n(388032);
-let A = d.Z.get(T.ABu.XBOX).name;
-function Z(e) {
+let Z = d.Z.get(T.ABu.XBOX).name;
+function A(e) {
     let { currentActivities: t } = e,
         n = t.length > 1,
-        Z = (function (e) {
+        A = (function (e) {
             let { currentActivities: t } = e,
                 n = (0, r.e7)([_.Z], () => _.Z.getAccounts().some((e) => e.type === d.Z.get(T.ABu.XBOX).type)),
                 l = t.some((e) => {
@@ -37,7 +37,7 @@ function Z(e) {
                 : (0, i.jsx)(a.sNh, {
                       id: 'xbox-connect',
                       action: () => c.Z.open(T.oAB.CONNECTIONS),
-                      label: S.intl.formatToPlainString(S.t.XWSHTU, { platform: A })
+                      label: S.intl.formatToPlainString(S.t.XWSHTU, { platform: Z })
                   });
         })(e),
         x = (function (e) {
@@ -118,5 +118,5 @@ function Z(e) {
                 })(e, n)
             );
     }
-    return [Z, ...b];
+    return [A, ...b];
 }

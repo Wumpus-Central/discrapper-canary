@@ -3,8 +3,8 @@ n.d(t, {
     BQ: () => v,
     Cb: () => R,
     Hu: () => O,
-    L1: () => P,
-    Ow: () => w,
+    L1: () => w,
+    Ow: () => P,
     Wx: () => E,
     X: () => M,
     XZ: () => L,
@@ -141,7 +141,7 @@ function x(e) {
     }
     return t;
 }
-function w(e) {
+function P(e) {
     return {
         applicationId: e.id,
         customInstallUrl: e.customInstallUrl,
@@ -149,7 +149,7 @@ function w(e) {
         integrationTypesConfig: e.integrationTypesConfig
     };
 }
-function P(e) {
+function w(e) {
     return e instanceof u.ZP
         ? {
               applicationId: e.id,

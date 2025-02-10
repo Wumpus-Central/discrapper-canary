@@ -84,7 +84,7 @@ function A(e) {
                     delay: 400
                 }).start();
         }, [v, x, O, N]);
-    let w = r.useCallback(() => {
+    let P = r.useCallback(() => {
         null != A && (0, h.gp)(f, A.channelId);
     }, [f, A]);
     return null == E || (C && !O)
@@ -102,7 +102,7 @@ function A(e) {
                             },
                             children: (0, i.jsxs)(u.P3F, {
                                 className: s()(I.banner, I.clickable),
-                                onClick: w,
+                                onClick: P,
                                 children: [
                                     (0, i.jsx)(S, {
                                         channelId: A.channelId,

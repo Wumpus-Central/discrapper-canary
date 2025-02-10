@@ -3,14 +3,14 @@ var l = t(200651),
     i = t(192379),
     a = t(442837),
     r = t(481060),
-    s = t(596454),
-    o = t(727637),
+    o = t(596454),
+    s = t(727637),
     c = t(607070),
     d = t(514445);
 function u(e) {
     let { trait: n } = e,
         t = i.useRef(null),
-        u = (0, o.Z)(t),
+        u = (0, s.Z)(t),
         m = (0, a.e7)([c.Z], () => c.Z.useReducedMotion);
     return (null == n ? void 0 : n.label) == null || n.label.length <= 0
         ? null
@@ -19,7 +19,7 @@ function u(e) {
               className: d.trait,
               children: [
                   null != n.emoji
-                      ? (0, l.jsx)(s.Z, {
+                      ? (0, l.jsx)(o.Z, {
                             className: d.traitEmoji,
                             emojiId: n.emoji.id,
                             emojiName: n.emoji.name,

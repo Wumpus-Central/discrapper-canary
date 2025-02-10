@@ -8,12 +8,12 @@ var i = n(200651),
     u = n(388032);
 class c extends r.Component {
     render() {
-        let { src: e, fileSize: t, className: n, mediaPlayerClassName: r, poster: c, fileName: d, naturalWidth: f, naturalHeight: _, playable: p, downloadable: h = !0, volume: m, autoPlay: g, autoMute: E, responsive: v, mediaLayoutType: y, mimeType: I, renderOverlayContent: T, renderLinkComponent: b, onClick: S, onPlay: A, onPause: N, onEnded: C, onControlsShow: R, onControlsHide: O, onVolumeChange: D, onMute: L, alt: x = u.intl.string(u.t.FlNoSU), ...w } = this.props;
+        let { src: e, fileSize: t, className: n, mediaPlayerClassName: r, poster: c, fileName: d, naturalWidth: f, naturalHeight: _, playable: p, downloadable: h = !0, volume: m, autoPlay: g, autoMute: E, responsive: v, mediaLayoutType: y, mimeType: I, renderOverlayContent: T, renderLinkComponent: b, onClick: S, onPlay: A, onPause: N, onEnded: C, onControlsShow: R, onControlsHide: O, onVolumeChange: D, onMute: L, alt: x = u.intl.string(u.t.FlNoSU), ...P } = this.props;
         return (0, i.jsx)(s.ZP, {
             alt: x,
             className: n,
             src: c,
-            ...w,
+            ...P,
             minWidth: o.ZP.minWidth,
             minHeight: o.ZP.minHeight,
             shouldLink: !1,

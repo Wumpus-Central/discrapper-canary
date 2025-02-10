@@ -50,7 +50,7 @@ function x(e, t) {
         state: t
     });
 }
-function w(e) {
+function P(e) {
     if (C.has(e) || (e === v.YN.GAME_PROFILE_FEED && (!(0, o._J)('ContentInventoryManager') || void 0 !== E.Z.getFeed(e)))) return !1;
     if (e === S) {
         if (!(0, h.sA)('ContentInventoryManager') || (g.Z.hidden && null != E.Z.getFeed(e)) || !_.Z.isFocused() || !l.Z.isConnected()) return !1;
@@ -59,7 +59,7 @@ function w(e) {
     }
     return !0;
 }
-function P(e) {
+function w(e) {
     x(e, { loading: !1 });
     let t = N.get(e);
     void 0 !== t && (clearTimeout(t), N.delete(e));
@@ -67,7 +67,7 @@ function P(e) {
 function M() {
     var e;
     let t = null !== (e = R.get(S)) && void 0 !== e ? e : 0;
-    if ((t > 0 && t <= T) || (P(S), !w(S))) return;
+    if ((t > 0 && t <= T) || (w(S), !P(S))) return;
     let n = E.Z.getFeed(S);
     if ((null == n ? void 0 : n.refresh_stale_inbox_after_ms) != null && null == O) return;
     let i = (null == n ? void 0 : n.expired_at) == null ? 0 : new Date(n.expired_at).getTime() - Date.now(),
@@ -90,7 +90,7 @@ function M() {
 }
 async function k(e) {
     let { feedId: t, feature: n, force: i = !1 } = e;
-    if (w(t) || i)
+    if (P(t) || i)
         try {
             let e = E.Z.getFeed(t);
             C.add(t), x(t, { loading: !0 });
@@ -150,11 +150,11 @@ function G() {
         });
 }
 function B() {
-    P(S);
+    w(S);
 }
 function Z(e) {
     let { feedId: t, feature: n } = e;
-    P(t),
+    w(t),
         k({
             feedId: t,
             feature: n,

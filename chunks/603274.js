@@ -104,7 +104,7 @@ function j() {
             c.gj8,
             r.filter((e) => !b.includes(e.id) && !N.includes(e.id))
         ),
-        A =
+        T =
             0 === a.length
                 ? null
                 : (0, i.jsxs)('div', {
@@ -137,13 +137,13 @@ function j() {
                           })
                       ]
                   }),
-        T = E(
+        A = E(
             c.hGI,
             y.filter((e) => null != e && !N.includes(e.id))
         ),
         w = E(c.nG3, j);
     return (0, i.jsxs)(i.Fragment, {
-        children: [A, P, T, w]
+        children: [T, P, A, w]
     });
 }
 function y() {

@@ -137,7 +137,7 @@ function x(e, t, n) {
     var i;
     return e.type === t && (null === (i = e.other_user) || void 0 === i ? void 0 : i.id) === n;
 }
-function w(e) {
+function P(e) {
     let { relationship: t } = e,
         { id: n, type: i, isSpamRequest: r, userIgnored: a, user: s, since: o } = t;
     if (i === p.OGo.PENDING_INCOMING && !r && !((0, l.JX)({ location: 'notification-center' }) && a)) {
@@ -163,7 +163,7 @@ function w(e) {
         )),
         (i === p.OGo.BLOCKED || a) && (m.notifCenterLocalItems = m.notifCenterLocalItems.filter((e) => !x(e, f.O7.INCOMING_FRIEND_REQUESTS, n) && !x(e, f.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED, n)));
 }
-function P(e) {
+function w(e) {
     m.notifCenterLocalItems = m.notifCenterLocalItems.filter((t) => !x(t, f.O7.INCOMING_FRIEND_REQUESTS, e.relationship.id) && !x(t, f.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED, e.relationship.id));
 }
 function M(e) {
@@ -275,9 +275,9 @@ let Z = new B(a.Z, {
     RESET_NOTIFICATION_CENTER: () => v(),
     NOTIFICATION_CENTER_SET_ACTIVE: D,
     NOTIFICATION_CENTER_TAB_FOCUSED: L,
-    RELATIONSHIP_ADD: w,
-    RELATIONSHIP_UPDATE: w,
-    RELATIONSHIP_REMOVE: P,
+    RELATIONSHIP_ADD: P,
+    RELATIONSHIP_UPDATE: P,
+    RELATIONSHIP_REMOVE: w,
     NOTIFICATION_CENTER_ITEM_COMPLETED: M,
     SET_RECENT_MENTIONS_FILTER: () => v(),
     MOBILE_NATIVE_UPDATE_CHECK_FINISHED: G

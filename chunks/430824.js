@@ -52,7 +52,7 @@ function I(e) {
         var t;
         let e = g[n.id];
         if (null == e || 'unavailable' === n.data_mode) return;
-        (g[n.id] = u.sp(n, e)), (m[n.id] = 'partial' === n.data_mode ? u.EO(n.id, null !== (t = m[n.id]) && void 0 !== t ? t : P, n.partial_updates.roles, n.partial_updates.deleted_role_ids) : c.C5(n.id, n.roles));
+        (g[n.id] = u.sp(n, e)), (m[n.id] = 'partial' === n.data_mode ? u.EO(n.id, null !== (t = m[n.id]) && void 0 !== t ? t : w, n.partial_updates.roles, n.partial_updates.deleted_role_ids) : c.C5(n.id, n.roles));
     }
     i = Object.keys(g).length;
 }
@@ -149,10 +149,10 @@ function x(e) {
         [t]: a.updateJoinedAt(s)
     };
 }
-function w() {
+function P() {
     return !0;
 }
-let P = Object.freeze({});
+let w = Object.freeze({});
 class M extends (r = a.ZP.Store) {
     getGuild(e) {
         return null == e ? void 0 : e === _.I_8 ? p.g : g[e];
@@ -177,7 +177,7 @@ class M extends (r = a.ZP.Store) {
     }
     getRoles(e) {
         var t;
-        return null !== (t = m[e]) && void 0 !== t ? t : P;
+        return null !== (t = m[e]) && void 0 !== t ? t : w;
     }
     getRole(e, t) {
         var n;
@@ -198,6 +198,6 @@ let k = new M(o.Z, {
     GUILD_ROLE_UPDATE: D,
     GUILD_ROLE_DELETE: L,
     GUILD_MEMBER_ADD: x,
-    GUILD_SETTINGS_SUBMIT_SUCCESS: w,
+    GUILD_SETTINGS_SUBMIT_SUCCESS: P,
     GUILD_GEO_RESTRICTED: R
 });

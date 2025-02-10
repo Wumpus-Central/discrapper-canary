@@ -32,8 +32,8 @@ function R(e) {
             activity: a,
             user: t
         }),
-        w = (0, g.Z)(a),
-        { largeImage: P } = (0, d.FO)(a),
+        P = (0, g.Z)(a),
+        { largeImage: w } = (0, d.FO)(a),
         { analyticsLocations: M } = (0, c.ZP)(u.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
         k = (0, h.Z)({
             display: 'live',
@@ -110,7 +110,7 @@ function R(e) {
             onClose: O,
             children: [
                 (0, i.jsx)(I.Z, {
-                    ...w,
+                    ...P,
                     contextMenu: (0, i.jsx)(A.Z, {
                         display: 'live',
                         user: t,
@@ -125,7 +125,7 @@ function R(e) {
                         className: s()(C.content, L),
                         children: [
                             (0, i.jsx)(f.E, {
-                                image: P,
+                                image: w,
                                 size: f.J.SIZE_60,
                                 className: C.clickableImage,
                                 onClick: (e) => {

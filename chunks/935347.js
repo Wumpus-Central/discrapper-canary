@@ -21,8 +21,8 @@ var i = n(200651),
     N = n(998502),
     T = n(905656),
     S = n(981631),
-    A = n(388032),
-    Z = n(372296);
+    Z = n(388032),
+    A = n(372296);
 function x(e, t, n) {
     return (
         t in e
@@ -74,7 +74,7 @@ class b extends l.PureComponent {
                 null != this._eventLoadingText && (l = this._eventLoadingText),
                 null != t && ((l = t.name), (r = t.incident_updates[0].body)),
                 (0, i.jsxs)('div', {
-                    className: Z.container,
+                    className: A.container,
                     'data-fade': n,
                     style: {
                         '--connecting-container-fade-duration': ''.concat(200, 'ms'),
@@ -82,30 +82,30 @@ class b extends l.PureComponent {
                     },
                     children: [
                         (0, i.jsxs)('div', {
-                            className: Z.content,
+                            className: A.content,
                             children: [
                                 (0, i.jsx)(T.Z, {
                                     autoPlay: !0,
                                     loop: !e,
                                     setRef: this.setVideoRef,
                                     onReady: this.handleReady,
-                                    className: a()(Z.spinner, this.state.ready ? Z.ready : '')
+                                    className: a()(A.spinner, this.state.ready ? A.ready : '')
                                 }),
                                 (0, i.jsxs)('div', {
-                                    className: Z.text,
+                                    className: A.text,
                                     children: [
                                         null != t
                                             ? null
                                             : (0, i.jsx)('div', {
-                                                  className: Z.tipTitle,
-                                                  children: A.intl.string(A.t.v0R1Li)
+                                                  className: A.tipTitle,
+                                                  children: Z.intl.string(Z.t.v0R1Li)
                                               }),
                                         (0, i.jsx)('div', {
-                                            className: null != t ? Z.title : Z.tip,
+                                            className: null != t ? A.title : A.tip,
                                             children: l
                                         }),
                                         (0, i.jsx)('div', {
-                                            className: Z.body,
+                                            className: A.body,
                                             children: r
                                         })
                                     ]
@@ -113,32 +113,32 @@ class b extends l.PureComponent {
                             ]
                         }),
                         (0, i.jsxs)('div', {
-                            className: a()(Z.problems, { [Z.slideIn]: this.state.problems }),
+                            className: a()(A.problems, { [A.slideIn]: this.state.problems }),
                             children: [
                                 (0, i.jsx)('div', {
-                                    className: Z.problemsText,
-                                    children: A.intl.string(A.t.AG2zPD)
+                                    className: A.problemsText,
+                                    children: Z.intl.string(Z.t.AG2zPD)
                                 }),
                                 (0, i.jsxs)('div', {
                                     children: [
                                         (0, i.jsxs)(u.eee, {
-                                            className: Z.twitterLink,
+                                            className: A.twitterLink,
                                             href: S.yXt.TWITTER_SUPPORT,
                                             target: '_blank',
                                             children: [
                                                 (0, i.jsx)(u.TAi, {
                                                     size: 'xs',
                                                     color: 'currentColor',
-                                                    className: Z.icon
+                                                    className: A.icon
                                                 }),
-                                                A.intl.string(A.t.KlyTbm)
+                                                Z.intl.string(Z.t.KlyTbm)
                                             ]
                                         }),
                                         (0, i.jsxs)(u.eee, {
-                                            className: Z.statusLink,
+                                            className: A.statusLink,
                                             href: S.yXt.STATUS,
                                             target: '_blank',
-                                            children: [(0, i.jsx)(C.Z, { className: Z.icon }), A.intl.string(A.t.AgXXy8)]
+                                            children: [(0, i.jsx)(C.Z, { className: A.icon }), Z.intl.string(Z.t.AgXXy8)]
                                         })
                                     ]
                                 })
@@ -160,32 +160,32 @@ class b extends l.PureComponent {
                 '_loadingText',
                 (function () {
                     let e = [
-                        A.intl.string(A.t.Ex79Ky),
-                        A.intl.string(A.t['+v5zsb']),
-                        A.intl.string(A.t['RLx6+f']),
-                        A.intl.string(A.t.Q1PZkJ),
-                        A.intl.string(A.t.x7sfVl),
-                        A.intl.format(A.t.PHuQsb, {
+                        Z.intl.string(Z.t.Ex79Ky),
+                        Z.intl.string(Z.t['+v5zsb']),
+                        Z.intl.string(Z.t['RLx6+f']),
+                        Z.intl.string(Z.t.Q1PZkJ),
+                        Z.intl.string(Z.t.x7sfVl),
+                        Z.intl.format(Z.t.PHuQsb, {
                             tabHook: (e, t) =>
                                 (0, i.jsx)(
                                     u.M2$,
                                     {
                                         shortcut: 'tab',
-                                        className: Z.keybind
+                                        className: A.keybind
                                     },
                                     t
                                 )
                         }),
-                        A.intl.string(A.t.UorX4e),
-                        A.intl.string(A.t['il/GZm']),
-                        A.intl.string(A.t.HKBJv7),
-                        A.intl.format(A.t['FVVp7+'], {
+                        Z.intl.string(Z.t.UorX4e),
+                        Z.intl.string(Z.t['il/GZm']),
+                        Z.intl.string(Z.t.HKBJv7),
+                        Z.intl.format(Z.t['FVVp7+'], {
                             F6Hook: (e, t) =>
                                 (0, i.jsx)(
                                     u.M2$,
                                     {
                                         shortcut: 'f6',
-                                        className: Z.keybind
+                                        className: A.keybind
                                     },
                                     t
                                 ),
@@ -194,92 +194,92 @@ class b extends l.PureComponent {
                                     u.M2$,
                                     {
                                         shortcut: 'tab',
-                                        className: Z.keybind
+                                        className: A.keybind
                                     },
                                     t
                                 )
                         }),
-                        A.intl.string(A.t['7Y1hFB']),
-                        A.intl.string(A.t['UcCW7+']),
-                        A.intl.string(A.t.E5GhfX),
-                        A.intl.string(A.t.bANqo6),
-                        A.intl.string(A.t.yOEVDg),
-                        A.intl.string(A.t['u0Ra/P']),
-                        A.intl.string(A.t.un4cQ0),
-                        A.intl.string(A.t['2cyYx8']),
-                        A.intl.string(A.t.KCmze3),
-                        A.intl.string(A.t['C+hUc3']),
-                        A.intl.string(A.t.I98MEB),
-                        A.intl.format(A.t.c0YCIy, {}),
-                        A.intl.string(A.t.z8AvIC),
-                        A.intl.string(A.t.IjX3Pz),
-                        A.intl.string(A.t.lg3CkZ),
-                        A.intl.string(A.t['4GaLhY']),
-                        A.intl.string(A.t.qHKbU1),
-                        A.intl.string(A.t.mJxKDw),
-                        A.intl.string(A.t.iiQBXF),
-                        A.intl.string(A.t.YPD46e),
-                        A.intl.string(A.t.O8BpgY),
-                        A.intl.string(A.t.xzFwfn),
-                        A.intl.string(A.t['4G3fsb']),
-                        A.intl.string(A.t['/jPyKC']),
-                        A.intl.string(A.t['8x7D5e']),
-                        A.intl.string(A.t.G6Q8Hx),
-                        A.intl.string(A.t['9Cx+xM']),
-                        A.intl.string(A.t.WsZ8dX),
-                        A.intl.string(A.t.btoe7O),
-                        A.intl.string(A.t.E6Y0j4),
-                        A.intl.string(A.t['7KZ819']),
-                        A.intl.string(A.t.hm7OKi),
-                        A.intl.string(A.t.H535i4),
-                        A.intl.string(A.t['08WJUV']),
-                        A.intl.string(A.t.hhtfys),
-                        A.intl.string(A.t.on980d),
-                        A.intl.string(A.t.AL6c09),
-                        A.intl.string(A.t.iLTeFx),
-                        A.intl.string(A.t.b3vSu7),
-                        A.intl.string(A.t['f8ao5+']),
-                        A.intl.format(A.t['1v1h8v'], { asterisks: '**' }),
-                        A.intl.format(A.t.MUlAVV, {
+                        Z.intl.string(Z.t['7Y1hFB']),
+                        Z.intl.string(Z.t['UcCW7+']),
+                        Z.intl.string(Z.t.E5GhfX),
+                        Z.intl.string(Z.t.bANqo6),
+                        Z.intl.string(Z.t.yOEVDg),
+                        Z.intl.string(Z.t['u0Ra/P']),
+                        Z.intl.string(Z.t.un4cQ0),
+                        Z.intl.string(Z.t['2cyYx8']),
+                        Z.intl.string(Z.t.KCmze3),
+                        Z.intl.string(Z.t['C+hUc3']),
+                        Z.intl.string(Z.t.I98MEB),
+                        Z.intl.format(Z.t.c0YCIy, {}),
+                        Z.intl.string(Z.t.z8AvIC),
+                        Z.intl.string(Z.t.IjX3Pz),
+                        Z.intl.string(Z.t.lg3CkZ),
+                        Z.intl.string(Z.t['4GaLhY']),
+                        Z.intl.string(Z.t.qHKbU1),
+                        Z.intl.string(Z.t.mJxKDw),
+                        Z.intl.string(Z.t.iiQBXF),
+                        Z.intl.string(Z.t.YPD46e),
+                        Z.intl.string(Z.t.O8BpgY),
+                        Z.intl.string(Z.t.xzFwfn),
+                        Z.intl.string(Z.t['4G3fsb']),
+                        Z.intl.string(Z.t['/jPyKC']),
+                        Z.intl.string(Z.t['8x7D5e']),
+                        Z.intl.string(Z.t.G6Q8Hx),
+                        Z.intl.string(Z.t['9Cx+xM']),
+                        Z.intl.string(Z.t.WsZ8dX),
+                        Z.intl.string(Z.t.btoe7O),
+                        Z.intl.string(Z.t.E6Y0j4),
+                        Z.intl.string(Z.t['7KZ819']),
+                        Z.intl.string(Z.t.hm7OKi),
+                        Z.intl.string(Z.t.H535i4),
+                        Z.intl.string(Z.t['08WJUV']),
+                        Z.intl.string(Z.t.hhtfys),
+                        Z.intl.string(Z.t.on980d),
+                        Z.intl.string(Z.t.AL6c09),
+                        Z.intl.string(Z.t.iLTeFx),
+                        Z.intl.string(Z.t.b3vSu7),
+                        Z.intl.string(Z.t['f8ao5+']),
+                        Z.intl.format(Z.t['1v1h8v'], { asterisks: '**' }),
+                        Z.intl.format(Z.t.MUlAVV, {
                             quickSwitcherHook: (e, t) =>
                                 (0, i.jsx)(
                                     u.M2$,
                                     {
                                         shortcut: 'mod+k',
-                                        className: Z.keybind
+                                        className: A.keybind
                                     },
                                     t
                                 )
                         }),
-                        A.intl.format(A.t.aes5VF, {
+                        Z.intl.format(Z.t.aes5VF, {
                             markUnreadHook: (e, t) =>
                                 (0, i.jsx)(
                                     u.M2$,
                                     {
                                         shortcut: 'alt+click',
-                                        className: Z.keybind
+                                        className: A.keybind
                                     },
                                     t
                                 )
                         }),
-                        A.intl.format(A.t.md9Svr, {
+                        Z.intl.format(Z.t.md9Svr, {
                             markServerUnreadHook: (e, t) =>
                                 (0, i.jsx)(
                                     u.M2$,
                                     {
                                         shortcut: 'shift+esc',
-                                        className: Z.keybind
+                                        className: A.keybind
                                     },
                                     t
                                 )
                         }),
-                        A.intl.format(A.t['X0Tu+v'], {
+                        Z.intl.format(Z.t['X0Tu+v'], {
                             navigateUnreadHook: (e, t) =>
                                 (0, i.jsx)(
                                     u.M2$,
                                     {
                                         shortcut: 'shift+alt+up',
-                                        className: Z.keybind
+                                        className: A.keybind
                                     },
                                     t
                                 ),
@@ -288,57 +288,57 @@ class b extends l.PureComponent {
                                     u.M2$,
                                     {
                                         shortcut: 'down',
-                                        className: Z.keybind
+                                        className: A.keybind
                                     },
                                     t
                                 )
                         }),
-                        A.intl.format(A.t.AkoeIS, {
+                        Z.intl.format(Z.t.AkoeIS, {
                             keyboardShortcutsHook: (e, t) =>
                                 (0, i.jsx)(
                                     u.M2$,
                                     {
                                         shortcut: 'mod+/',
-                                        className: Z.keybind
+                                        className: A.keybind
                                     },
                                     t
                                 )
                         }),
-                        A.intl.format(A.t.P9sfAA, {
+                        Z.intl.format(Z.t.P9sfAA, {
                             messageNewlineHook: (e, t) =>
                                 (0, i.jsx)(
                                     u.M2$,
                                     {
                                         shortcut: 'shift+return',
-                                        className: Z.keybind
+                                        className: A.keybind
                                     },
                                     t
                                 )
                         }),
-                        A.intl.format(A.t['3Ox33d'], {
+                        Z.intl.format(Z.t['3Ox33d'], {
                             shiftHook: (e, t) =>
                                 (0, i.jsx)(
                                     u.M2$,
                                     {
                                         shortcut: 'shift',
-                                        className: Z.keybind
+                                        className: A.keybind
                                     },
                                     t
                                 )
                         }),
-                        A.intl.format(A.t.enCV6e, {
+                        Z.intl.format(Z.t.enCV6e, {
                             upHook: (e, t) =>
                                 (0, i.jsx)(
                                     u.M2$,
                                     {
                                         shortcut: 'up',
-                                        className: Z.keybind
+                                        className: A.keybind
                                     },
                                     t
                                 )
                         })
                     ];
-                    return E.default.locale.startsWith('en-') && e.push(A.intl.string(A.t.dQ9Wqq)), e[o().random(e.length - 1)];
+                    return E.default.locale.startsWith('en-') && e.push(Z.intl.string(Z.t.dQ9Wqq)), e[o().random(e.length - 1)];
                 })()
             ),
             x(

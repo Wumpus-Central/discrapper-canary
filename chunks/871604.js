@@ -58,10 +58,10 @@ function S(e) {
                     });
             }
         }, [D, A, L, R, n]),
-        w = D ? b.intl.string(b.t['Cia+Aw']) : b.intl.string(b.t.NgXl3N);
+        P = D ? b.intl.string(b.t['Cia+Aw']) : b.intl.string(b.t.NgXl3N);
     if (null == A || !(0, E.Eb)(A)) return null;
-    let { customInstallUrl: P } = A,
-        M = null == P || g.Z.isDiscordUrl(P) ? s.qJs : s.Gr1,
+    let { customInstallUrl: w } = A,
+        M = null == w || g.Z.isDiscordUrl(w) ? s.qJs : s.Gr1,
         k = D ? void 0 : M;
     return m.wS
         ? (0, i.jsx)(s.yRy, {
@@ -85,7 +85,7 @@ function S(e) {
                   let { onClick: t, ...n } = e;
                   return (0, i.jsx)(I.tG, {
                       action: 'PRESS_ADD_APP',
-                      text: w,
+                      text: P,
                       icon: k,
                       onContextMenu: t,
                       onClick: x,
@@ -96,7 +96,7 @@ function S(e) {
           })
         : (0, i.jsx)(I.tG, {
               action: 'PRESS_ADD_APP',
-              text: w,
+              text: P,
               icon: k,
               onClick: x,
               ...S

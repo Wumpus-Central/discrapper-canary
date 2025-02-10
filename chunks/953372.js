@@ -31,8 +31,8 @@ function E(e) {
         }),
         x = (0, s.e7)([c.Z], () => c.Z.isBlocked(null == t ? void 0 : t.id));
     if ((C && x) || (null == O && null == L)) return null;
-    let w = (null == L ? void 0 : L.text) != null && !S,
-        P = S ? 'sm' : 'xs',
+    let P = (null == L ? void 0 : L.text) != null && !S,
+        w = S ? 'sm' : 'xs',
         M = () =>
             null == O || ((null == t ? void 0 : t.bot) && (null == L ? void 0 : L.text) != null)
                 ? null
@@ -42,12 +42,12 @@ function E(e) {
                               (0, i.jsx)(h.Z, {
                                   activity: R,
                                   stream: r,
-                                  tooltip: w && !b ? D : void 0,
+                                  tooltip: P && !b ? D : void 0,
                                   className: S ? g.fullWidth : void 0
                               }),
-                          !w &&
+                          !P &&
                               (0, i.jsx)(p.Z, {
-                                  variant: 'text-'.concat(P, '/medium'),
+                                  variant: 'text-'.concat(w, '/medium'),
                                   className: v,
                                   children: O
                               })
@@ -68,7 +68,7 @@ function E(e) {
                               }),
                           null != L.text &&
                               (0, i.jsx)(p.Z, {
-                                  variant: 'text-'.concat(P, '/medium'),
+                                  variant: 'text-'.concat(w, '/medium'),
                                   className: v,
                                   children: L.text
                               })
@@ -79,7 +79,7 @@ function E(e) {
         children: [
             M(),
             (0, i.jsx)(o.Text, {
-                variant: 'text-'.concat(P, '/normal'),
+                variant: 'text-'.concat(w, '/normal'),
                 className: a()(g.text, g.dot, v),
                 children: m.l
             }),

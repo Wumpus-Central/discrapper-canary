@@ -44,7 +44,7 @@ let f = l.memo(function (e) {
         P = l.useCallback(() => {
             o.Z.toggleGuildFolderExpand(_);
         }, [_]),
-        A = l.useCallback(
+        T = l.useCallback(
             (e) => {
                 (0, a.jW)(e, async () => {
                     let { default: e } = await n.e('52590').then(n.bind(n, 205784));
@@ -71,6 +71,6 @@ let f = l.memo(function (e) {
         mediaState: N,
         defaultFolderName: S,
         onExpandCollapse: P,
-        onContextMenu: A
+        onContextMenu: T
     });
 });

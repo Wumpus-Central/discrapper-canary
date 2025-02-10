@@ -35,8 +35,8 @@ var i = n(200651),
     D = n(474936),
     L = n(874893),
     x = n(526761),
-    w = n(231338),
-    P = n(388032),
+    P = n(231338),
+    w = n(388032),
     M = n(458376),
     k = (function (e) {
         return (e.EDITOR = 'EDITOR'), (e.SETTINGS = 'SETTINGS'), e;
@@ -78,18 +78,18 @@ let U = Object.freeze({
                         isCoachmark: !0,
                         isPreview: !0
                     },
-                    () => P.intl.string(P.t.D29k19)
+                    () => w.intl.string(w.t.D29k19)
                 )
                 .with(
                     {
                         type: 'EDITOR',
                         isCoachmark: !0
                     },
-                    () => P.intl.string(P.t['8+vbqa'])
+                    () => w.intl.string(w.t['8+vbqa'])
                 )
-                .with({ appearanceUpsellExperimentEnabled: !0 }, () => P.intl.string(P.t.Ksh3io))
-                .with({ isVisualRefreshEnabled: !0 }, () => P.intl.string(P.t.hjV0fX))
-                .otherwise(() => P.intl.string(P.t.OCOOiI));
+                .with({ appearanceUpsellExperimentEnabled: !0 }, () => w.intl.string(w.t.Ksh3io))
+                .with({ isVisualRefreshEnabled: !0 }, () => w.intl.string(w.t.hjV0fX))
+                .otherwise(() => w.intl.string(w.t.OCOOiI));
         return (0, i.jsxs)('div', {
             className: M.title,
             children: [
@@ -125,24 +125,24 @@ let U = Object.freeze({
                     type: 'EDITOR',
                     isPreview: !0
                 },
-                () => P.intl.format(P.t.G8yQXl, { onPremiumClick: () => g.z })
+                () => w.intl.format(w.t.G8yQXl, { onPremiumClick: () => g.z })
             )
             .with(
                 {
                     type: 'EDITOR',
                     isCoachmark: !0
                 },
-                () => P.intl.string(P.t.jmZiNj)
+                () => w.intl.string(w.t.jmZiNj)
             )
             .with(
                 {
                     type: 'EDITOR',
                     isPreview: !1
                 },
-                () => P.intl.string(P.t.dqDFwc)
+                () => w.intl.string(w.t.dqDFwc)
             )
-            .with({ isPreview: !0 }, () => P.intl.format(P.t.DWIjJy, { onPremiumClick: () => g.z }))
-            .otherwise(() => P.intl.string(P.t['np0X/v']));
+            .with({ isPreview: !0 }, () => w.intl.format(w.t.DWIjJy, { onPremiumClick: () => g.z }))
+            .otherwise(() => w.intl.string(w.t['np0X/v']));
         return u
             ? (0, i.jsxs)('div', {
                   className: M.description,
@@ -154,7 +154,7 @@ let U = Object.freeze({
                       }),
                       (0, i.jsx)(c.X6q, {
                           variant: 'text-sm/normal',
-                          children: P.intl.format(P.t.x2dQxM, {
+                          children: w.intl.format(w.t.x2dQxM, {
                               onClick: () => {
                                   (0, g.$)();
                               }
@@ -180,7 +180,7 @@ let U = Object.freeze({
                     ? (0, i.jsx)(y.ZP, {
                           type: D.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                           subscriptionTier: D.Si.TIER_2,
-                          children: P.intl.format(P.t.G8yQXl, { onPremiumClick: () => g.z })
+                          children: w.intl.format(w.t.G8yQXl, { onPremiumClick: () => g.z })
                       })
                     : (0, i.jsxs)('div', {
                           className: M.header,
@@ -355,27 +355,27 @@ let U = Object.freeze({
                         onSelect: () => f('system')
                     }),
                 (0, i.jsx)(C.bD, {
-                    theme: w.BR.LIGHT,
-                    isSelected: u && !c && o === w.BR.LIGHT,
-                    onSelect: () => f(w.BR.LIGHT)
+                    theme: P.BR.LIGHT,
+                    isSelected: u && !c && o === P.BR.LIGHT,
+                    onSelect: () => f(P.BR.LIGHT)
                 }),
                 (0, i.jsx)(C.bD, {
-                    theme: w.BR.DARK,
-                    isSelected: u && !c && o === w.BR.DARK,
-                    onSelect: () => f(w.BR.DARK)
+                    theme: P.BR.DARK,
+                    isSelected: u && !c && o === P.BR.DARK,
+                    onSelect: () => f(P.BR.DARK)
                 }),
                 h &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsx)(C.bD, {
-                                theme: w.BR.DARKER,
-                                isSelected: u && !c && o === w.BR.DARKER,
-                                onSelect: () => f(w.BR.DARKER)
+                                theme: P.BR.DARKER,
+                                isSelected: u && !c && o === P.BR.DARKER,
+                                onSelect: () => f(P.BR.DARKER)
                             }),
                             (0, i.jsx)(C.bD, {
-                                theme: w.BR.MIDNIGHT,
-                                isSelected: u && !c && o === w.BR.MIDNIGHT,
-                                onSelect: () => f(w.BR.MIDNIGHT)
+                                theme: P.BR.MIDNIGHT,
+                                isSelected: u && !c && o === P.BR.MIDNIGHT,
+                                onSelect: () => f(P.BR.MIDNIGHT)
                             })
                         ]
                     }),
@@ -411,7 +411,7 @@ let U = Object.freeze({
                     (0, i.jsx)(c.X6q, {
                         className: M.upsellText,
                         variant: 'heading-sm/semibold',
-                        children: P.intl.string(P.t.POSLGR)
+                        children: w.intl.string(w.t.POSLGR)
                     }),
                 (0, i.jsxs)('div', {
                     className: s()(M.presets, { [M.presetsJustify]: t }),

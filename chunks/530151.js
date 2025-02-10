@@ -21,8 +21,8 @@ var i = n(200651),
     N = n(167533),
     T = n(925329),
     S = n(707409),
-    A = n(210887),
-    Z = n(283595),
+    Z = n(210887),
+    A = n(283595),
     x = n(417363),
     b = n(941128),
     L = n(451478),
@@ -598,7 +598,7 @@ function J(e, t, n, i) {
                     branchId: s,
                     state: c,
                     application: o,
-                    libraryApplication: Z.Z.getLibraryApplication(a, s),
+                    libraryApplication: A.Z.getLibraryApplication(a, s),
                     finished: t,
                     index: r
                 }),
@@ -607,10 +607,10 @@ function J(e, t, n, i) {
     }, []);
 }
 let $ = (0, E.Z)(
-    c.ZP.connectStores([I.Z, x.Z, b.Z, A.Z, L.Z], () => ({
+    c.ZP.connectStores([I.Z, x.Z, b.Z, Z.Z, L.Z], () => ({
         applications: [...J(b.Z.activeItems, !1, I.Z, x.Z), ...J(b.Z.finishedItems, !0, I.Z, x.Z)],
         paused: b.Z.paused,
         isFocused: L.Z.isFocused(),
-        theme: A.Z.theme
+        theme: Z.Z.theme
     }))((0, f.Z)(Q))
 );

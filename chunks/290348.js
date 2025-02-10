@@ -1,6 +1,6 @@
 n.d(t, {
     B7: () => et,
-    Ek: () => U,
+    Ek: () => x,
     F2: () => W,
     GM: () => Q,
     GP: () => G,
@@ -9,14 +9,14 @@ n.d(t, {
     PK: () => D,
     R7: () => B,
     TT: () => Y,
-    UE: () => F,
+    UE: () => j,
     XZ: () => z,
     Xo: () => ee,
     _T: () => R,
     d9: () => w,
     mR: () => Z,
     p9: () => M,
-    qs: () => x,
+    qs: () => U,
     rU: () => K
 }),
     n(47120);
@@ -110,7 +110,7 @@ function M(e, t) {
         }, [n])
     );
 }
-function x(e, t) {
+function U(e, t) {
     let n = (0, S.Z)(t, e),
         l = (0, y.n)((t) => {
             var n;
@@ -129,7 +129,7 @@ function x(e, t) {
         return void 0 !== l && ((e.color = l), (e.colorString = (0, o.Rf)(l))), e;
     }, [n, r, l]);
 }
-function U(e, t) {
+function x(e, t) {
     let n = (0, S.Z)(t, e);
     return P(
         e,
@@ -148,9 +148,9 @@ function G(e, t) {
         i.useMemo(() => (null == n ? y.I.SOME_CHANNELS_ACCESS : (0, _.MT)(n) ? y.I.ALL_CHANNELS_ACCESS : y.I.SOME_CHANNELS_ACCESS), [n])
     );
 }
-let j = [];
-function F(e) {
-    let t = L(e, (e) => (null == e ? j : e.role_benefits.benefits.filter(C.rC)));
+let F = [];
+function j(e) {
+    let t = L(e, (e) => (null == e ? F : e.role_benefits.benefits.filter(C.rC)));
     return P(e, 'channelBenefits', t);
 }
 let H = [];

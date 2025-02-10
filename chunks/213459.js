@@ -6,7 +6,7 @@ n.d(t, {
     PL: () => ep,
     ZP: () => ed,
     em: () => ef,
-    un: () => eP,
+    un: () => ew,
     v1: () => ey
 }),
     n(47120),
@@ -55,8 +55,8 @@ function x(e, t, n) {
         e
     );
 }
-let w = new o.Yd('ApplicationCommandIndexStore'),
-    P = Symbol('currentUser'),
+let P = new o.Yd('ApplicationCommandIndexStore'),
+    w = Symbol('currentUser'),
     M = Symbol('stale'),
     k = Symbol('current'),
     U = Object.freeze({
@@ -92,7 +92,7 @@ function H(e) {
         case 'channel':
             return e.channelId;
         case 'user':
-            return P;
+            return w;
         case 'application':
             return e.applicationId;
     }
@@ -193,7 +193,7 @@ function $(e) {
     ))) {
         let t = s[e.applicationId];
         if (null == t) {
-            w.error('Command has no matching application');
+            P.error('Command has no matching application');
             continue;
         }
         t.commands[e.id] = e;
@@ -356,11 +356,11 @@ class eu extends (i = l.ZP.Store) {
     }
     getUserState() {
         var e;
-        return null !== (e = this.indices[P]) && void 0 !== e ? e : B;
+        return null !== (e = this.indices[w]) && void 0 !== e ? e : B;
     }
     hasUserStateApplication(e) {
         var t, n;
-        let i = this.indices[P];
+        let i = this.indices[w];
         return e in (null !== (n = null == i ? void 0 : null === (t = i.result) || void 0 === t ? void 0 : t.sections) && void 0 !== n ? n : {});
     }
     getApplicationState(e) {
@@ -654,8 +654,8 @@ function eI(e) {
         O = null == R ? void 0 : R.split(' '),
         L = m === A.D.ONLY_TEXT,
         x = m !== A.D.DENY ? (0, I.Kh)(C, !0, L) : [],
-        w = [],
-        P = {
+        P = [],
+        w = {
             permissionContext: u,
             query: R,
             splitQuery: O,
@@ -702,12 +702,12 @@ function eI(e) {
                 }
         } else null != i ? ((t = i.descriptor), (n = Object.values(i.commands))) : null != r ? ((t = r.descriptor), (n = Object.values(r.commands))) : null != a && ((t = a.descriptor), (n = Object.values(a.commands)));
         s()(null != t, 'Failed to select application descriptor'), s()(null != n, 'Failed to select list of application commands');
-        let u = eT(t, n, o, l, P);
-        null != u && w.push(u);
+        let u = eT(t, n, o, l, w);
+        null != u && P.push(u);
     }
     if (
         (S.applications.useFrecency && h.DZ.loadIfNecessary(),
-        w.sort((e, t) => {
+        P.sort((e, t) => {
             if (S.applications.useScore && T === A.p.APPLICATION_ONLY) {
                 var n, i, r, a;
                 let s = null !== (r = null === (n = e.data[0]) || void 0 === n ? void 0 : n.score) && void 0 !== r ? r : Number.MAX_VALUE,
@@ -719,14 +719,14 @@ function eI(e) {
                     i = f.Z.getScoreWithoutLoadingLatest(t.section.id);
                 if (n !== i) return i - n;
             }
-            return ew(e.section.name, t.section.name);
+            return eP(e.section.name, t.section.name);
         }),
         x.length > 0 || !0 === y)
     ) {
-        let e = eT(I.Tm[D.bi.BUILT_IN], x, !0, !0, P);
-        null != e && w.push(e);
+        let e = eT(I.Tm[D.bi.BUILT_IN], x, !0, !0, w);
+        null != e && P.push(e);
     }
-    let B = w.flatMap((e) =>
+    let B = P.flatMap((e) =>
         e.data.map((t) => ({
             ...t,
             section: e.section
@@ -755,13 +755,13 @@ function eI(e) {
                     r = b.ZP.getScoreWithoutLoadingLatest(n, t);
                 if (i !== r) return r - i;
             }
-            return ew(e.displayName, t.displayName);
+            return eP(e.displayName, t.displayName);
         });
     }
     return {
         commands: B,
-        descriptors: w.map((e) => e.section),
-        sectionedCommands: w,
+        descriptors: P.map((e) => e.section),
+        sectionedCommands: P,
         loading: (null == c ? void 0 : c.fetchState.fetching) === !0 || (null == d ? void 0 : d.fetchState.fetching) === !0 || (null != v && (null === (i = _.get(v)) || void 0 === i ? void 0 : i.fetchState.fetching) === !0)
     };
 }
@@ -781,7 +781,7 @@ function eT(e, t, n, i, r) {
             isUserInstalled: i || d
         }) === O.mF.ALLOWED && E.push(r);
     return 0 !== (a = u !== A.p.NONE && null != s && null != o ? eL(s, o, E, e, u) : E).length || l
-        ? ((u === A.p.NONE || u === A.p.APPLICATION_ONLY) && a.sort((e, t) => ew(e.displayName, t.displayName)),
+        ? ((u === A.p.NONE || u === A.p.APPLICATION_ONLY) && a.sort((e, t) => eP(e.displayName, t.displayName)),
           {
               section: e,
               data: a
@@ -910,11 +910,11 @@ function ex(e, t, n, i) {
         u = e.displayDescription.toLocaleLowerCase();
     if (l.includes(t) || u.includes(t)) return 7;
 }
-function ew(e, t) {
+function eP(e, t) {
     return ec.collator.compare(e, t);
 }
-function eP(e, t) {
-    return ew(e, t);
+function ew(e, t) {
+    return eP(e, t);
 }
 function eM(e, t) {
     var n, i, r, a, s, o;

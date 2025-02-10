@@ -34,10 +34,10 @@ function S(e) {
             [D]
         ),
         { analyticsLocations: x } = (0, f.ZP)(d.Z.PREMIUM_UPSELL),
-        { previewSound: w } = (0, g.Z)(A, null !== (t = null == N ? void 0 : N.id) && void 0 !== t ? t : null),
-        P = (0, E.K_)({
+        { previewSound: P } = (0, g.Z)(A, null !== (t = null == N ? void 0 : N.id) && void 0 !== t ? t : null),
+        w = (0, E.K_)({
             sound: A,
-            previewSound: w,
+            previewSound: P,
             tooltipPosition: 'left'
         }),
         M = (0, o.ap)(C) ? n(537381) : n(341048);
@@ -87,7 +87,7 @@ function S(e) {
                 children: [
                     (0, i.jsx)('div', {
                         className: T.previewButtonContainer,
-                        children: P
+                        children: w
                     }),
                     (0, i.jsx)(p.Z, {
                         subscriptionTier: y.Si.TIER_2,

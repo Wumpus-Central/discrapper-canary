@@ -25,8 +25,8 @@ var i = n(200651),
     N = n(812236),
     T = n(82295),
     S = n(984370),
-    A = n(740492),
-    Z = n(973616),
+    Z = n(740492),
+    A = n(973616),
     x = n(592125),
     b = n(626135),
     L = n(823379),
@@ -42,7 +42,7 @@ async function w(e, t, n) {
     if (null == i)
         try {
             var l, r, a;
-            i = null !== (a = null === (l = P.Z.getApplication(e.id)) || void 0 === l ? void 0 : l.bot) && void 0 !== a ? a : null === (r = Z.ZP.createFromServer(await (0, y.UM)(e.id))) || void 0 === r ? void 0 : r.bot;
+            i = null !== (a = null === (l = P.Z.getApplication(e.id)) || void 0 === l ? void 0 : l.bot) && void 0 !== a ? a : null === (r = A.ZP.createFromServer(await (0, y.UM)(e.id))) || void 0 === r ? void 0 : r.bot;
         } catch (e) {
             t(void 0);
             return;
@@ -173,7 +173,7 @@ let G = (e) => {
     });
 };
 function B() {
-    let e = (0, s.e7)([A.ZP], () => A.ZP.showPlayAgain),
+    let e = (0, s.e7)([Z.ZP], () => Z.ZP.showPlayAgain),
         { frecentApps: t } = (0, I.f)({
             context: { type: 'contextless' },
             onlyActivityApps: !0,

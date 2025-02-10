@@ -50,11 +50,11 @@ var i = n(512722),
     D = n(709054),
     w = n(968358),
     M = n(203818),
-    x = n(443063),
-    U = n(981631),
+    U = n(443063),
+    x = n(981631),
     G = n(176505),
-    j = n(231338);
-function F(e, t, n) {
+    F = n(231338);
+function j(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -75,7 +75,7 @@ let H = 'placeholder-channel-id',
     Y = 3,
     W = 4,
     K = 5,
-    q = new Set([String(x.z.GUILD_DIRECTORY)]);
+    q = new Set([String(U.z.GUILD_DIRECTORY)]);
 class X {
     _areGuildActionRowsUpdated(e, t) {
         var n;
@@ -124,7 +124,7 @@ class X {
         (null == e ? Object.values(this.guilds) : e in this.guilds ? [this.guilds[e]] : []).forEach((e) => e.updateSubtitles(t));
     }
     constructor() {
-        F(this, 'guilds', {});
+        j(this, 'guilds', {});
     }
 }
 class Q {
@@ -214,7 +214,7 @@ class Q {
             if (null == e) return null;
             if (eE.has(e)) return e;
             let t = T.Z.getChannel(e);
-            return (null == t ? void 0 : t.isDirectory()) ? x.z.GUILD_DIRECTORY : null;
+            return (null == t ? void 0 : t.isDirectory()) ? U.z.GUILD_DIRECTORY : null;
         })(e);
         if (null != t)
             return [
@@ -241,7 +241,7 @@ class Q {
                     section: this.recentsSectionNumber,
                     row: a
                 }),
-            i.type === U.d4z.GUILD_CATEGORY)
+            i.type === x.d4z.GUILD_CATEGORY)
         )
             return [{ section: s().findIndex(this.getSortedNamedCategories(), (e) => e.id === (null == i ? void 0 : i.id)) + K }];
         let o = this.getCategory(i),
@@ -342,7 +342,7 @@ class Q {
     }
     constructor(e, t, n) {
         var i, r;
-        F(this, 'id', void 0), F(this, 'hideMutedChannels', void 0), F(this, 'favoritesSectionNumber', void 0), F(this, 'recentsSectionNumber', void 0), F(this, 'voiceChannelsSectionNumber', void 0), F(this, 'mutedChannelIds', void 0), F(this, 'optedInChannels', void 0), F(this, 'optInEnabled', void 0), F(this, 'hideResourceChannels', void 0), F(this, 'favoriteChannelIds', void 0), F(this, 'suggestedFavoriteChannelId', void 0), F(this, 'collapsedCategoryIds', void 0), F(this, 'categories', void 0), F(this, 'noParentCategory', void 0), F(this, 'favoritesCategory', void 0), F(this, 'recentsCategory', void 0), F(this, 'voiceChannelsCategory', void 0), F(this, 'guildActionSection', void 0), F(this, 'channelNoticeSection', void 0), F(this, 'sortedNamedCategories', void 0), F(this, 'sections', void 0), F(this, 'rows', void 0), F(this, 'firstVoiceChannel', void 0), F(this, 'allChannelsById', void 0), F(this, 'version', void 0), (this.id = e), (this.sortedNamedCategories = null), (this.sections = null), (this.rows = null), (this.firstVoiceChannel = void 0), (this.allChannelsById = null), (this.version = 0), (this.hideMutedChannels = P.ZP.isGuildCollapsed(this.id)), (this.mutedChannelIds = P.ZP.getMutedChannels(this.id)), (this.optedInChannels = null !== (i = P.ZP.getOptedInChannelsWithPendingUpdates(this.id)) && void 0 !== i ? i : P.ZP.getOptedInChannels(this.id)), (this.optInEnabled = (0, v.r1)(this.id)), (this.hideResourceChannels = (0, c.s)(this.id)), (this.favoriteChannelIds = new Set(null !== (r = P.ZP.getGuildFavorites(this.id)) && void 0 !== r ? r : [])), (this.suggestedFavoriteChannelId = p.Z.getSuggestedChannelId(this.id)), (this.collapsedCategoryIds = S.Z.getCollapsedCategories());
+        j(this, 'id', void 0), j(this, 'hideMutedChannels', void 0), j(this, 'favoritesSectionNumber', void 0), j(this, 'recentsSectionNumber', void 0), j(this, 'voiceChannelsSectionNumber', void 0), j(this, 'mutedChannelIds', void 0), j(this, 'optedInChannels', void 0), j(this, 'optInEnabled', void 0), j(this, 'hideResourceChannels', void 0), j(this, 'favoriteChannelIds', void 0), j(this, 'suggestedFavoriteChannelId', void 0), j(this, 'collapsedCategoryIds', void 0), j(this, 'categories', void 0), j(this, 'noParentCategory', void 0), j(this, 'favoritesCategory', void 0), j(this, 'recentsCategory', void 0), j(this, 'voiceChannelsCategory', void 0), j(this, 'guildActionSection', void 0), j(this, 'channelNoticeSection', void 0), j(this, 'sortedNamedCategories', void 0), j(this, 'sections', void 0), j(this, 'rows', void 0), j(this, 'firstVoiceChannel', void 0), j(this, 'allChannelsById', void 0), j(this, 'version', void 0), (this.id = e), (this.sortedNamedCategories = null), (this.sections = null), (this.rows = null), (this.firstVoiceChannel = void 0), (this.allChannelsById = null), (this.version = 0), (this.hideMutedChannels = P.ZP.isGuildCollapsed(this.id)), (this.mutedChannelIds = P.ZP.getMutedChannels(this.id)), (this.optedInChannels = null !== (i = P.ZP.getOptedInChannelsWithPendingUpdates(this.id)) && void 0 !== i ? i : P.ZP.getOptedInChannels(this.id)), (this.optInEnabled = (0, v.r1)(this.id)), (this.hideResourceChannels = (0, c.s)(this.id)), (this.favoriteChannelIds = new Set(null !== (r = P.ZP.getGuildFavorites(this.id)) && void 0 !== r ? r : [])), (this.suggestedFavoriteChannelId = p.Z.getSuggestedChannelId(this.id)), (this.collapsedCategoryIds = S.Z.getCollapsedCategories());
         let a = T.Z.getMutableGuildChannelsForGuild(this.id),
             o = y.Z.getGuild(this.id),
             d = {},
@@ -350,7 +350,7 @@ class Q {
             h = {};
         for (let e in a) {
             let t = a[e];
-            t.type === U.d4z.GUILD_CATEGORY && ((d[t.id] = t), (h[t.id] = []));
+            t.type === x.d4z.GUILD_CATEGORY && ((d[t.id] = t), (h[t.id] = []));
         }
         let g = [],
             C = [],
@@ -358,12 +358,12 @@ class Q {
             m = this.initializationData;
         for (let e in a) {
             let t = a[e];
-            if (t.type !== U.d4z.GUILD_CATEGORY) {
-                if (t.type === U.d4z.GUILD_DIRECTORY) {
-                    null == o || o.hasFeature(U.oNc.HUB) || E.push(t);
+            if (t.type !== x.d4z.GUILD_CATEGORY) {
+                if (t.type === x.d4z.GUILD_DIRECTORY) {
+                    null == o || o.hasFeature(x.oNc.HUB) || E.push(t);
                     continue;
                 }
-                ev(this, t, m) ? g.push(t) : (t.type === U.d4z.GUILD_VOICE || t.type === U.d4z.GUILD_STAGE_VOICE) && (null != t.parent_id && null != d[t.parent_id] && C.push(d[t.parent_id]), C.push(t)), null != t.parent_id && t.parent_id in h ? h[t.parent_id].push(t) : u.push(t);
+                ev(this, t, m) ? g.push(t) : (t.type === x.d4z.GUILD_VOICE || t.type === x.d4z.GUILD_STAGE_VOICE) && (null != t.parent_id && null != d[t.parent_id] && C.push(d[t.parent_id]), C.push(t)), null != t.parent_id && t.parent_id in h ? h[t.parent_id].push(t) : u.push(t);
             }
         }
         for (let e in ((this.categories = {}), h)) this.categories[e] = new ee(this, d[e], h[e], m);
@@ -421,7 +421,7 @@ class J {
         return null;
     }
     constructor(e) {
-        F(this, 'guild', void 0), F(this, 'isMuted', void 0), F(this, 'isCollapsed', void 0), F(this, 'position', void 0), F(this, 'channels', void 0), F(this, 'shownChannelIds', void 0), (this.guild = e), (this.isMuted = !1), (this.isCollapsed = !1), (this.position = -1), (this.channels = {}), (this.shownChannelIds = null);
+        j(this, 'guild', void 0), j(this, 'isMuted', void 0), j(this, 'isCollapsed', void 0), j(this, 'position', void 0), j(this, 'channels', void 0), j(this, 'shownChannelIds', void 0), (this.guild = e), (this.isMuted = !1), (this.isCollapsed = !1), (this.position = -1), (this.channels = {}), (this.shownChannelIds = null);
     }
 }
 class $ extends J {
@@ -435,10 +435,10 @@ class $ extends J {
 }
 class ee extends J {
     shouldShowEmptyCategory() {
-        return !!(super.shouldShowEmptyCategory() || (O.Z.can(j.Pl.MANAGE_CHANNELS, this.record) && O.Z.can(j.Pl.VIEW_CHANNEL, this.record) && s().isEmpty(this.channels) && (!this.guild.optInEnabled || this.guild.optedInChannels.has(this.id))));
+        return !!(super.shouldShowEmptyCategory() || (O.Z.can(F.Pl.MANAGE_CHANNELS, this.record) && O.Z.can(F.Pl.VIEW_CHANNEL, this.record) && s().isEmpty(this.channels) && (!this.guild.optInEnabled || this.guild.optedInChannels.has(this.id))));
     }
     constructor(e, t, n, i) {
-        for (let l of (super(e), F(this, 'id', void 0), F(this, 'record', void 0), (this.record = t), (this.id = t.id), (this.isCollapsed = !0 === e.collapsedCategoryIds[t.id]), (this.isMuted = e.mutedChannelIds.has(t.id)), (this.channels = {}), n)) this.channels[l.id] = new eo(this, l, i);
+        for (let l of (super(e), j(this, 'id', void 0), j(this, 'record', void 0), (this.record = t), (this.id = t.id), (this.isCollapsed = !0 === e.collapsedCategoryIds[t.id]), (this.isMuted = e.mutedChannelIds.has(t.id)), (this.channels = {}), n)) this.channels[l.id] = new eo(this, l, i);
     }
 }
 class et extends J {
@@ -540,10 +540,10 @@ class en extends J {
         return !1;
     }
     constructor(e, t, n) {
-        if ((super(e), F(this, 'enabled', !1), (this.isCollapsed = C.Z.isCollapsed(e.id)), (this.enabled = !1), this.enabled)) for (let e of Object.values(t)) (0, I.vc)(e.type) && !(0, I.Q5)(e.type) && (this.channels[e.id] = new ec(this, e, n));
+        if ((super(e), j(this, 'enabled', !1), (this.isCollapsed = C.Z.isCollapsed(e.id)), (this.enabled = !1), this.enabled)) for (let e of Object.values(t)) (0, I.vc)(e.type) && !(0, I.Q5)(e.type) && (this.channels[e.id] = new ec(this, e, n));
     }
 }
-F(en, 'MIN_READABLE_CHANNELS', 7), F(en, 'MAX_RECENT_CHANNELS', 10), F(en, 'MAX_TIMESTAMP_DELTA', 604800000);
+j(en, 'MIN_READABLE_CHANNELS', 7), j(en, 'MAX_RECENT_CHANNELS', 10), j(en, 'MAX_TIMESTAMP_DELTA', 604800000);
 class ei extends J {
     updateAllChannels(e) {
         let t = !1;
@@ -630,14 +630,14 @@ class el extends J {
                     [
                         (e) =>
                             (function (e, t) {
-                                if (e.record.type === U.d4z.GUILD_CATEGORY) return e.record.position;
+                                if (e.record.type === x.d4z.GUILD_CATEGORY) return e.record.position;
                                 if (null != e.record.parent_id) {
                                     var n, i;
                                     return null !== (i = null === (n = t[e.record.parent_id]) || void 0 === n ? void 0 : n.position) && void 0 !== i ? i : -1;
                                 }
                                 return -1;
                             })(e, this.categoriesById),
-                        (e) => (e.record.type === U.d4z.GUILD_CATEGORY ? -1 : e.record.position)
+                        (e) => (e.record.type === x.d4z.GUILD_CATEGORY ? -1 : e.record.position)
                     ],
                     ['asc', 'asc']
                 )
@@ -646,7 +646,7 @@ class el extends J {
             for (let n = 0; n < t.length; n++) {
                 var e;
                 let i = t[n];
-                (!(n < t.length - 1) || i.record.type !== U.d4z.GUILD_CATEGORY || (null === (e = t[n + 1]) || void 0 === e ? void 0 : e.record.type) !== U.d4z.GUILD_CATEGORY) && (n !== t.length - 1 || i.record.type !== U.d4z.GUILD_CATEGORY) && this.shownChannelIds.push(i.id);
+                (!(n < t.length - 1) || i.record.type !== x.d4z.GUILD_CATEGORY || (null === (e = t[n + 1]) || void 0 === e ? void 0 : e.record.type) !== x.d4z.GUILD_CATEGORY) && (n !== t.length - 1 || i.record.type !== x.d4z.GUILD_CATEGORY) && this.shownChannelIds.push(i.id);
             }
         }
         return this.shownChannelIds;
@@ -655,7 +655,7 @@ class el extends J {
         return null;
     }
     constructor(e, t, n, i) {
-        if ((super(e), F(this, 'categoriesById', void 0), F(this, 'hiddenChannelIds', void 0), (this.categoriesById = n), (this.hiddenChannelIds = null), !e.optInEnabled)) return;
+        if ((super(e), j(this, 'categoriesById', void 0), j(this, 'hiddenChannelIds', void 0), (this.categoriesById = n), (this.hiddenChannelIds = null), !e.optInEnabled)) return;
         (this.isCollapsed = M.Z.isVoiceCategoryCollapsed(e.id)),
             (this.isMuted = !1),
             (this.categoriesById = n),
@@ -676,7 +676,7 @@ class er {
         return this.rows[e];
     }
     constructor(e) {
-        F(this, 'rows', void 0), (this.rows = e);
+        j(this, 'rows', void 0), (this.rows = e);
     }
 }
 class es {
@@ -690,7 +690,7 @@ class es {
         return this.guildActionRows[e];
     }
     constructor(e, t) {
-        F(this, 'guildActionRows', void 0), (this.guildActionRows = e.map(String)), t && this.guildActionRows.push(String(x.z.GUILD_DIRECTORY));
+        j(this, 'guildActionRows', void 0), (this.guildActionRows = e.map(String)), t && this.guildActionRows.push(String(U.z.GUILD_DIRECTORY));
     }
 }
 class ea {
@@ -720,7 +720,7 @@ class ea {
         return eg(this.record, this.isCollapsed || this.category.isCollapsed, this.category.guild.optInEnabled);
     }
     constructor(e, t, n) {
-        F(this, 'category', void 0), F(this, 'record', void 0), F(this, 'id', void 0), F(this, 'position', void 0), F(this, 'threadIds', void 0), F(this, 'threadCount', void 0), F(this, 'subtitle', void 0), F(this, 'renderLevel', void 0), (this.category = e), (this.record = t), (this.position = -1), (this.threadIds = []), (this.threadCount = 0), (this.subtitle = null), (this.renderLevel = 1), (this.id = t.id);
+        j(this, 'category', void 0), j(this, 'record', void 0), j(this, 'id', void 0), j(this, 'position', void 0), j(this, 'threadIds', void 0), j(this, 'threadCount', void 0), j(this, 'subtitle', void 0), j(this, 'renderLevel', void 0), (this.category = e), (this.record = t), (this.position = -1), (this.threadIds = []), (this.threadCount = 0), (this.subtitle = null), (this.renderLevel = 1), (this.id = t.id);
         let { renderLevel: i, threadIds: l } = this.computeState(n);
         (this.renderLevel = i), (this.threadCount = s().size(l)), (this.threadIds = l), 4 === i && (this.subtitle = this.computeSubtitle());
     }
@@ -729,7 +729,7 @@ class eo extends ea {
     computeState(e) {
         var t;
         let { selectedChannel: n, selectedVoiceChannelId: i, activeJoinedRelevantThreads: l, activeJoinedUnreadThreads: r } = e;
-        if (!O.Z.can(j.Pl.VIEW_CHANNEL, this.record)) {
+        if (!O.Z.can(F.Pl.VIEW_CHANNEL, this.record)) {
             if (this.id === i)
                 return {
                     renderLevel: 4,
@@ -768,7 +768,7 @@ class eo extends ea {
                           renderLevel: 2,
                           threadIds: g
                       }
-                    : this.category.isCollapsed && (o.mutedChannelIds.has(this.id) || (null != a && o.mutedChannelIds.has(a)) || this.record.isGuildVocal() || this.record.type === U.d4z.GUILD_STORE || ((0, I.vc)(this.record.type) && !A.ZP.hasUnread(this.record.id)))
+                    : this.category.isCollapsed && (o.mutedChannelIds.has(this.id) || (null != a && o.mutedChannelIds.has(a)) || this.record.isGuildVocal() || this.record.type === x.d4z.GUILD_STORE || ((0, I.vc)(this.record.type) && !A.ZP.hasUnread(this.record.id)))
                       ? {
                             renderLevel: 3,
                             threadIds: g
@@ -787,7 +787,7 @@ class ed extends ea {
     computeState(e) {
         var t;
         let { selectedChannel: n, selectedVoiceChannelId: i, activeJoinedRelevantThreads: l } = e;
-        return O.Z.can(j.Pl.VIEW_CHANNEL, this.record)
+        return O.Z.can(F.Pl.VIEW_CHANNEL, this.record)
             ? {
                   renderLevel: 4,
                   threadIds: ef(this.record, null !== (t = l[this.id]) && void 0 !== t ? t : {}, n, i, !1)
@@ -802,7 +802,7 @@ class eu extends ea {
     computeState(e) {
         var t;
         let { selectedChannel: n, selectedVoiceChannelId: i, activeJoinedRelevantThreads: l } = e;
-        return O.Z.can(j.Pl.VIEW_CHANNEL, this.record)
+        return O.Z.can(F.Pl.VIEW_CHANNEL, this.record)
             ? {
                   renderLevel: eC(this, e) ? 4 : 3,
                   threadIds: ef(this.record, null !== (t = l[this.id]) && void 0 !== t ? t : {}, n, i, !1)
@@ -830,7 +830,7 @@ class ec extends eo {
 class eh extends eo {
     getRenderLevel(e) {
         let t = this.category.guild;
-        return !O.Z.can(j.Pl.VIEW_CHANNEL, this.record) || 4 === e || 3 === e || ep(t, this.record) ? 1 : this.category.isCollapsed ? (s().some(L.Z.getVoiceStatesForChannel(this.record.id)) ? 4 : 3) : 4;
+        return !O.Z.can(F.Pl.VIEW_CHANNEL, this.record) || 4 === e || 3 === e || ep(t, this.record) ? 1 : this.category.isCollapsed ? (s().some(L.Z.getVoiceStatesForChannel(this.record.id)) ? 4 : 3) : 4;
     }
     computeState(e) {
         let t = super.computeState(e),
@@ -846,7 +846,7 @@ class eh extends eo {
 }
 function eg(e, t, n) {
     switch (e.type) {
-        case U.d4z.GUILD_VOICE: {
+        case x.d4z.GUILD_VOICE: {
             let i = h.ZP.getActiveEventByChannel(e.id);
             if (null != i)
                 return {
@@ -875,7 +875,7 @@ function eg(e, t, n) {
                 };
             return null;
         }
-        case U.d4z.GUILD_STAGE_VOICE: {
+        case x.d4z.GUILD_STAGE_VOICE: {
             let t = h.ZP.getActiveEventByChannel(e.id);
             if (null != t)
                 return {
@@ -914,7 +914,7 @@ function eC(e, t) {
 }
 function ev(e, t, n) {
     let { selectedChannel: i, activeJoinedRelevantThreads: l } = n;
-    if (t.type === U.d4z.GUILD_DIRECTORY || !e.optInEnabled || t.isGuildVocal() || e.optedInChannels.has(t.id) || t.isThread() || (null != t.parent_id && e.optedInChannels.has(t.parent_id)) || (e.hideResourceChannels && t.hasFlag(G.zZ.IS_GUILD_RESOURCE_CHANNEL))) return !1;
+    if (t.type === x.d4z.GUILD_DIRECTORY || !e.optInEnabled || t.isGuildVocal() || e.optedInChannels.has(t.id) || t.isThread() || (null != t.parent_id && e.optedInChannels.has(t.parent_id)) || (e.hideResourceChannels && t.hasFlag(G.zZ.IS_GUILD_RESOURCE_CHANNEL))) return !1;
     if ((null != i && (i.id === t.id || (i.isThread() && i.parent_id === t.id))) || A.ZP.getMentionCount(t.id) > 0) return !0;
     let r = E.Z.getNewChannelIds(e.id),
         s = Array.from(r).sort((e, t) => D.default.compare(t, e));
@@ -922,4 +922,4 @@ function ev(e, t, n) {
     for (let e in l[t.id]) if (A.ZP.getMentionCount(e) > 0 || A.ZP.hasUnread(e) || A.ZP.hasRecentlyVisitedAndRead(e)) return !0;
     return !(e.mutedChannelIds.has(t.id) || (null != t.parent_id && e.mutedChannelIds.has(t.parent_id))) && !!A.ZP.hasRecentlyVisitedAndRead(t.id);
 }
-let eE = new Set(Object.values(x.z));
+let eE = new Set(Object.values(U.z));

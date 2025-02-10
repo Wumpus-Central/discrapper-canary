@@ -124,19 +124,19 @@ function x(e) {
     if (((p = null != t ? t : null), null == t || null != h[t])) return !1;
     y(t);
 }
-function w() {
+function P() {
     y(f.I_8);
 }
-function P(e) {
+function w(e) {
     let t = h[e];
     return null != t ? t : y(e);
 }
 class M extends (i = r.ZP.Store) {
     initialize() {
-        this.waitFor(c.ZP, d.Z, l.default, u.Z, o.Z), this.syncWith([o.Z], w);
+        this.waitFor(c.ZP, d.Z, l.default, u.Z, o.Z), this.syncWith([o.Z], P);
     }
     getCategories(e) {
-        return null != e ? P(e) : E;
+        return null != e ? w(e) : E;
     }
 }
 _(M, 'displayName', 'GuildCategoryStore');

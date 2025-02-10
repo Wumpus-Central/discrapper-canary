@@ -11,7 +11,7 @@ var i = n(200651),
     h = n(388032),
     p = n(238006);
 let m = l.forwardRef(function (e, t) {
-    let { body: n, header: r, artClassName: m, headerClassName: g, contentClassName: f, tryItText: _, dismissText: v, onTryFeature: C, onClose: x, className: Z, inlineArt: I = !1, isPremiumFeature: b = !1, shouldUseHorizontalButtons: S = !1, showGIFTag: N = !1, dismissibleContent: E, position: j = 'top', align: y = 'center', art: P, isPremiumEarlyAccess: A = !1, maxWidth: T = 280, hideDismissButton: w = !1, pointerClassName: R, dismissIconClassName: L, dismissIcon: M, onDismissIconClick: D } = e,
+    let { body: n, header: r, artClassName: m, headerClassName: g, contentClassName: f, tryItText: _, dismissText: v, onTryFeature: C, onClose: x, className: Z, inlineArt: I = !1, isPremiumFeature: b = !1, shouldUseHorizontalButtons: S = !1, showGIFTag: N = !1, dismissibleContent: E, position: j = 'top', align: y = 'center', art: P, isPremiumEarlyAccess: T = !1, maxWidth: A = 280, hideDismissButton: w = !1, pointerClassName: R, dismissIconClassName: L, dismissIcon: M, onDismissIconClick: D } = e,
         G = S ? o.zxk.Sizes.LARGE : o.zxk.Sizes.MAX,
         [k, B] = l.useState(!1),
         { ref: O, width: U } = (0, s.Z)();
@@ -22,8 +22,8 @@ let m = l.forwardRef(function (e, t) {
         l.useEffect(() => {
             var e, t;
             let n = (null !== (t = null === (e = O.current) || void 0 === e ? void 0 : e.scrollWidth) && void 0 !== t ? t : 0) + 64;
-            !k && n > T && B(!0);
-        }, [k, U, O, T]),
+            !k && n > A && B(!0);
+        }, [k, U, O, A]),
         l.useEffect(() => {
             (0, c.kk)(E);
         }, [E]),
@@ -33,7 +33,7 @@ let m = l.forwardRef(function (e, t) {
             children: (0, i.jsxs)('div', {
                 className: a()(p.content, f, {
                     [p.contentNoArt]: null == m || I,
-                    [p.contentPremium]: b || A
+                    [p.contentPremium]: b || T
                 }),
                 children: [
                     null != M &&
@@ -54,14 +54,14 @@ let m = l.forwardRef(function (e, t) {
                                 variant: 'heading-md/bold',
                                 color: 'always-white',
                                 children: [
-                                    b && !A
+                                    b && !T
                                         ? (0, i.jsx)(o.SrA, {
                                               size: 'md',
                                               color: 'currentColor',
                                               className: p.premiumIcon
                                           })
                                         : null,
-                                    A
+                                    T
                                         ? (0, i.jsxs)(o.Text, {
                                               color: 'always-white',
                                               variant: 'eyebrow',
@@ -106,7 +106,7 @@ let m = l.forwardRef(function (e, t) {
                                               onClick: (e) => {
                                                   null == x || x(e), C(e), V(u.L.PRIMARY);
                                               },
-                                              color: b || A ? o.zxk.Colors.BRAND_INVERTED : o.zxk.Colors.WHITE,
+                                              color: b || T ? o.zxk.Colors.BRAND_INVERTED : o.zxk.Colors.WHITE,
                                               children: null != _ ? _ : h.intl.string(h.t.IHf1RE)
                                           }),
                                           !w &&
@@ -116,8 +116,8 @@ let m = l.forwardRef(function (e, t) {
                                                   onClick: (e) => {
                                                       null == x || x(e), V(u.L.DISMISS);
                                                   },
-                                                  color: b || A ? o.zxk.Colors.WHITE : o.zxk.Colors.BRAND,
-                                                  look: b || A ? o.zxk.Looks.LINK : o.zxk.Looks.FILLED,
+                                                  color: b || T ? o.zxk.Colors.WHITE : o.zxk.Colors.BRAND,
+                                                  look: b || T ? o.zxk.Looks.LINK : o.zxk.Looks.FILLED,
                                                   children: null != v ? v : h.intl.string(h.t.om7Ovr)
                                               })
                                       ]

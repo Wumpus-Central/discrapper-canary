@@ -28,15 +28,15 @@ let A = 490,
     O = 175,
     D = r.forwardRef(function (e, t) {
         var n, a, D, L, x;
-        let { channel: w, type: P, editorHeight: M, onVisibilityChange: k } = e,
+        let { channel: P, type: w, editorHeight: M, onVisibilityChange: k } = e,
             U = (0, h.Dt)(),
             G = (0, l.e7)(
                 [E.Z],
                 () => {
                     var e;
-                    return null !== (e = E.Z.getGuild(w.guild_id)) && void 0 !== e ? e : null;
+                    return null !== (e = E.Z.getGuild(P.guild_id)) && void 0 !== e ? e : null;
                 },
-                [w.guild_id]
+                [P.guild_id]
             ),
             B = r.useRef(),
             [Z, F, V] = (0, T.Z)(
@@ -47,24 +47,24 @@ let A = 490,
                 t,
                 B
             ),
-            j = (null === (n = P.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? g.ZP : m.ZP,
+            j = (null === (n = w.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? g.ZP : m.ZP,
             H = (0, _.DJ)(Z.selectedIndex);
         (0, p.KR)(U, Z.isVisible, H), v.Z.trackExposure({ location: '6e9811_1' });
         let { usePopoutAutocomplete: Y } = v.Z.useExperiment({ location: '6e9811_2' }, { autoTrackExposure: !1 }),
             W = (0, I.Z)({
                 editorHeight: M,
-                type: P,
+                type: w,
                 state: Z,
                 isInPopoutExperiment: Y
             }),
             K = (0, l.e7)(
                 [d.ZP],
                 () => {
-                    let e = d.ZP.getSelfEmbeddedActivityForChannel(w.id),
+                    let e = d.ZP.getSelfEmbeddedActivityForChannel(P.id),
                         t = d.ZP.getActivityPanelMode();
-                    return (0, c.l5)(w) && null != e && (0, f.p)(e.location) === w.id && t === b.Ez.PANEL;
+                    return (0, c.l5)(P) && null != e && (0, f.p)(e.location) === P.id && t === b.Ez.PANEL;
                 },
-                [w]
+                [P]
             ),
             z = r.useMemo(() => ((null == W ? void 0 : W.top) == null && (null == W ? void 0 : W.left) == null && (null == W ? void 0 : W.bottom) == null && (null == W ? void 0 : W.right) == null ? '' : String(Date.now())), [null == W ? void 0 : W.top, null == W ? void 0 : W.left, null == W ? void 0 : W.bottom, null == W ? void 0 : W.right]);
         if (
@@ -79,7 +79,7 @@ let A = 490,
                 (a = Z.query.typeInfo.renderResults({
                     results: Z.query.results,
                     selectedIndex: Z.selectedIndex,
-                    channel: w,
+                    channel: P,
                     guild: G,
                     query: Z.query.queryText,
                     options: Z.query.options,
@@ -96,7 +96,7 @@ let A = 490,
                 [S.autocompleteTop]: K
             },
             X = A;
-        null != W && (X = (null === (D = P.autocomplete) || void 0 === D ? void 0 : D.small) ? R : (null === (L = Z.query) || void 0 === L ? void 0 : L.type) === y.eq.EMOJIS_AND_STICKERS ? N : C), (X = Math.min(window.innerHeight - O, X));
+        null != W && (X = (null === (D = w.autocomplete) || void 0 === D ? void 0 : D.small) ? R : (null === (L = Z.query) || void 0 === L ? void 0 : L.type) === y.eq.EMOJIS_AND_STICKERS ? N : C), (X = Math.min(window.innerHeight - O, X));
         let J = (0, i.jsx)(_.ZP, {
             id: U,
             className: s()(S.autocomplete, Q),

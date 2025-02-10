@@ -82,7 +82,7 @@ function m(e, t, n, a) {
             });
         });
     return r.forwardRef(function (a, g) {
-        let { className: E, onScroll: v, onResize: y = null, onContentResize: I = null, dir: T = 'ltr', sections: b, sectionHeight: S, rowHeight: A, footerHeight: N = 0, sidebarHeight: C, listHeaderHeight: R = 0, renderSection: O, renderRow: D, renderFooter: L, renderSidebar: x, renderListHeader: w, stickyListHeader: P, wrapSection: M, getAnchorId: k, paddingTop: U, paddingBottom: G, fade: B = !1, customTheme: Z = !1, chunkSize: F, style: V, innerId: j, innerRole: H, innerAriaLabel: Y, innerAriaMultiselectable: W, innerAriaOrientation: K, innerClassName: z, innerTag: q = 'div', ...Q } = a,
+        let { className: E, onScroll: v, onResize: y = null, onContentResize: I = null, dir: T = 'ltr', sections: b, sectionHeight: S, rowHeight: A, footerHeight: N = 0, sidebarHeight: C, listHeaderHeight: R = 0, renderSection: O, renderRow: D, renderFooter: L, renderSidebar: x, renderListHeader: P, stickyListHeader: w, wrapSection: M, getAnchorId: k, paddingTop: U, paddingBottom: G, fade: B = !1, customTheme: Z = !1, chunkSize: F, style: V, innerId: j, innerRole: H, innerAriaLabel: Y, innerAriaMultiselectable: W, innerAriaOrientation: K, innerClassName: z, innerTag: q = 'div', ...Q } = a,
             X = r.useRef(null),
             J = r.useRef(null),
             [$, ee] = r.useState(!1),
@@ -213,8 +213,8 @@ function m(e, t, n, a) {
                                     containerRef: J,
                                     children: p({
                                         items: es,
-                                        renderListHeader: w,
-                                        stickyListHeader: P,
+                                        renderListHeader: P,
+                                        stickyListHeader: w,
                                         renderSection: O,
                                         renderRow: D,
                                         renderFooter: L,
@@ -223,7 +223,7 @@ function m(e, t, n, a) {
                                     })
                                 })
                             }),
-                        [q, j, H, Y, W, K, ea, z, es, w, P, O, D, L, M, er]
+                        [q, j, H, Y, W, K, ea, z, es, P, w, O, D, L, M, er]
                     ),
                     r.useMemo(
                         () =>

@@ -88,7 +88,7 @@ function x(e) {
         })
     };
 }
-function w(e) {
+function P(e) {
     return {
         match: s().anyScopeRegex(e),
         parse: (e) => ({
@@ -97,7 +97,7 @@ function w(e) {
         })
     };
 }
-let P = c.Z.RULES,
+let w = c.Z.RULES,
     M = d.ZP,
     k = /^<@!?(\d+)>/,
     U = /^<@&(\d+)>/,
@@ -108,12 +108,12 @@ let P = c.Z.RULES,
         link: x(s().defaultRules.link),
         autolink: x(s().defaultRules.autolink),
         url: x(s().defaultRules.url),
-        inlineCode: x(P.inlineCode),
-        codeBlock: x(P.codeBlock),
-        rawUserMention: w(k),
-        rawRoleMention: w(U),
-        rawChannelMention: w(G),
-        rawEmoji: w(B),
+        inlineCode: x(w.inlineCode),
+        codeBlock: x(w.codeBlock),
+        rawUserMention: P(k),
+        rawRoleMention: P(U),
+        rawChannelMention: P(G),
+        rawEmoji: P(B),
         mention: {
             match(e, t, n) {
                 let i = n.split(' ').pop() + e;
@@ -172,7 +172,7 @@ let P = c.Z.RULES,
             })
         },
         emoji: {
-            order: P.emoji.order,
+            order: w.emoji.order,
             match: (e) => u.ZP.EMOJI_NAME_RE.exec(e),
             parse(e, t, n) {
                 let [i, r] = e,
@@ -225,8 +225,8 @@ let P = c.Z.RULES,
         }
     },
     V = {
-        inlineCode: x(P.inlineCode),
-        codeBlock: x(P.codeBlock),
+        inlineCode: x(w.inlineCode),
+        codeBlock: x(w.codeBlock),
         mention: {
             match: s().anyScopeRegex(k),
             parse(e, t, n) {
@@ -285,10 +285,10 @@ let P = c.Z.RULES,
             parse: (e) => ({ content: '<id:'.concat(e[1], '>') })
         },
         timestamp: {
-            ...P.timestamp,
+            ...w.timestamp,
             parse() {
                 for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                let i = P.timestamp.parse(...t);
+                let i = w.timestamp.parse(...t);
                 return 'text' === i.type ? { content: i.content } : { content: i.formatted };
             }
         },

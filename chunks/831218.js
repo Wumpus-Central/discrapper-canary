@@ -26,8 +26,8 @@ var i,
     j = n(210887),
     y = n(592125),
     P = n(158776),
-    A = n(55589),
-    T = n(515753),
+    T = n(55589),
+    A = n(515753),
     w = n(981631),
     R = n(388032),
     L = n(220704);
@@ -325,7 +325,7 @@ class G extends (i = r.Component) {
                 return null == s
                     ? null
                     : (0, l.jsx)(
-                          T.ZP,
+                          A.ZP,
                           {
                               channel: s,
                               selected: s.id === r,
@@ -406,9 +406,9 @@ let k = (e) => {
         g = y.Z.getMutablePrivateChannels(),
         f = (0, N.k1)(g),
         _ = (0, d.Wu)(
-            [A.Z, S.Z, E.Z],
+            [T.Z, S.Z, E.Z],
             () => {
-                let e = A.Z.getPrivateChannelIds();
+                let e = T.Z.getPrivateChannelIds();
                 return (0, N.tU)(e, [S.Z, E.Z]);
             },
             []
@@ -435,7 +435,7 @@ let k = (e) => {
                     }
                 });
         }, []),
-        T = r.useCallback(
+        A = r.useCallback(
             () =>
                 new Promise((e) => {
                     let t = b.current;
@@ -461,7 +461,7 @@ let k = (e) => {
         M = (0, c.ZP)({
             id: 'private-channels-'.concat(L),
             isEnabled: v.keyboardModeEnabled,
-            scrollToStart: T,
+            scrollToStart: A,
             scrollToEnd: R,
             defaultFocused: (p + (u ? 1 : 0)).toString(),
             setFocus: P

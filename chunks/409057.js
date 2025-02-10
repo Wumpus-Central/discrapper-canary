@@ -30,8 +30,8 @@ var r = n(120356),
     D = n(336383),
     L = n(194811),
     x = n(373826),
-    w = n(315324),
-    P = n(262210),
+    P = n(315324),
+    w = n(262210),
     M = n(103479),
     k = n(670451),
     U = n(553375),
@@ -213,7 +213,7 @@ function j(e) {
         ef = () => {
             if (!(0, N.Z)(r)) return null;
             let { start: e, end: t } = r.timestamps;
-            return (0, i.jsx)(P.Z, {
+            return (0, i.jsx)(w.Z, {
                 start: e,
                 end: t
             });
@@ -233,7 +233,7 @@ function j(e) {
         ep = () =>
             null == H || null == Y
                 ? null
-                : (0, i.jsx)(w.Z, {
+                : (0, i.jsx)(P.Z, {
                       user: t,
                       guild: H,
                       channel: Y,
