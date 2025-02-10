@@ -1,6 +1,6 @@
 l.d(n, {
-    Z: () => j,
-    c: () => C
+    Z: () => C,
+    c: () => j
 });
 var t = l(200651),
     i = l(192379),
@@ -13,8 +13,8 @@ var t = l(200651),
     d = l(639119),
     m = l(197115),
     x = l(74538),
-    g = l(981631),
-    h = l(474936),
+    h = l(981631),
+    g = l(474936),
     Z = l(388032),
     v = l(570772);
 function S(e) {
@@ -30,14 +30,14 @@ function S(e) {
     return (0, t.jsx)(m.Z, {
         className: a()(v.enhancedCTA, v.ctaGradientBackground),
         iconClassName: v.premiumIcon,
-        subscriptionTier: h.Si.TIER_2,
+        subscriptionTier: g.Si.TIER_2,
         buttonText: r(),
         size: o.zxk.Sizes.TINY,
         premiumModalAnalyticsLocation: n,
         ...l
     });
 }
-function C() {
+function j() {
     let e = (0, r.e7)([u.Z], () => u.Z.useReducedMotion);
     return (0, t.jsxs)('div', {
         className: a()(v.reverseTrialEducationBannerContainer, { [v.reducedMotion]: e }),
@@ -57,12 +57,12 @@ function C() {
         ]
     });
 }
-function j(e) {
+function C(e) {
     let { message: n, onClose: l, openStreamUpsellModal: i, glow: s = !1 } = e,
         r = {
-            section: g.jXE.STREAM_SETTINGS,
-            object: g.qAy.PREMIUM_UPSELL_BANNER,
-            objectType: g.Qqv.BUY
+            section: h.jXE.STREAM_SETTINGS,
+            object: h.qAy.PREMIUM_UPSELL_BANNER,
+            objectType: h.Qqv.BUY
         };
     return (0, t.jsxs)('div', {
         className: a()(v.upsellBanner, v.enhancedBanner, { [v.gradientGlow]: s }),

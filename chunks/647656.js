@@ -67,32 +67,32 @@ let E = ['349134787773988865'],
                     }),
             handler(e) {
                 var t, n, i, r, g, I, C;
-                let v,
+                let N,
                     {
-                        socket: N,
+                        socket: v,
                         args: { pid: T, activity: S },
-                        isSocketConnected: Z
+                        isSocketConnected: A
                     } = e;
-                if (![_.He.IPC, _.He.WEBSOCKET, _.He.POST_MESSAGE].includes(N.transport)) throw new m.Z({ errorCode: f.lTL.INVALID_COMMAND }, 'command not available from "'.concat(N.transport, '" transport'));
-                if (null == T && _.He.IPC === N.transport) throw new m.Z({ errorCode: f.lTL.INVALID_COMMAND }, 'nonzero pid required');
+                if (![_.He.IPC, _.He.WEBSOCKET, _.He.POST_MESSAGE].includes(v.transport)) throw new m.Z({ errorCode: f.lTL.INVALID_COMMAND }, 'command not available from "'.concat(v.transport, '" transport'));
+                if (null == T && _.He.IPC === v.transport) throw new m.Z({ errorCode: f.lTL.INVALID_COMMAND }, 'nonzero pid required');
                 if (null == S)
                     return (
                         a.Z.dispatch({
                             type: 'LOCAL_ACTIVITY_UPDATE',
-                            socketId: N.id,
+                            socketId: v.id,
                             pid: T,
                             activity: S
                         }),
                         Promise.resolve(S)
                     );
-                S.name = N.application.name;
-                let A = N.application.id;
-                S.application_id = A;
-                let x = N.transport === _.He.POST_MESSAGE,
-                    b = (0, p.S5)(S, x);
-                if ((b > 0 && (S.flags = b), null != A && (0, s.Kb)(A) && x)) {
+                S.name = v.application.name;
+                let Z = v.application.id;
+                S.application_id = Z;
+                let b = v.transport === _.He.POST_MESSAGE,
+                    x = (0, p.S5)(S, b);
+                if ((x > 0 && (S.flags = x), null != Z && (0, s.Kb)(Z) && b)) {
                     let e = o.ZP.getCurrentEmbeddedActivity();
-                    if ((null == e ? void 0 : e.applicationId) === A) {
+                    if ((null == e ? void 0 : e.applicationId) === Z) {
                         let t = e.compositeInstanceId;
                         null != t &&
                             (S.secrets = {
@@ -112,29 +112,29 @@ let E = ['349134787773988865'],
                     let e = l()
                         .values(P)
                         .filter((e) => !!e);
-                    if (null != y && l().intersection(e, [y.id]).length > 0 && !E.includes(N.application.id)) throw new m.Z({ errorCode: f.lTL.INVALID_ACTIVITY_SECRET }, 'secrets cannot match the party id');
+                    if (null != y && l().intersection(e, [y.id]).length > 0 && !E.includes(v.application.id)) throw new m.Z({ errorCode: f.lTL.INVALID_ACTIVITY_SECRET }, 'secrets cannot match the party id');
                     if (l().uniq(e).length < e.length) throw new m.Z({ errorCode: f.lTL.INVALID_ACTIVITY_SECRET }, 'secrets must be unique');
                     if (null != R) throw new m.Z({ errorCode: f.lTL.INVALID_ACTIVITY_SECRET }, 'secrets cannot currently be sent with buttons');
                 }
                 if ((null != R && ((S.metadata = { button_urls: R.map((e) => e.url) }), (S.buttons = R.map((e) => e.label))), null != O)) for (let e of Object.keys(O)) Date.now().toString().length - O[e].toString().length > 2 && (O[e] = Math.floor(O[e] * h.Z.Millis.SECOND));
-                if (null == L) v = Promise.resolve([]);
+                if (null == L) N = Promise.resolve([]);
                 else {
-                    if (null == N.application || null == N.application.id) throw Error();
-                    v = (0, u.fetchAssetIds)(N.application.id, [L.large_image, L.small_image]);
+                    if (null == v.application || null == v.application.id) throw Error();
+                    N = (0, u.fetchAssetIds)(v.application.id, [L.large_image, L.small_image]);
                 }
-                return v.then((e) => {
+                return N.then((e) => {
                     var t, n;
                     let [i, l] = e;
-                    if ((null != L && (null != i ? (L.large_image = i) : delete L.large_image, null != l ? (L.small_image = l) : delete L.small_image), !Z())) return;
+                    if ((null != L && (null != i ? (L.large_image = i) : delete L.large_image, null != l ? (L.small_image = l) : delete L.small_image), !A())) return;
                     a.Z.dispatch({
                         type: 'LOCAL_ACTIVITY_UPDATE',
-                        socketId: N.id,
+                        socketId: v.id,
                         pid: T,
                         activity: S
                     });
                     let { secrets: r, party: s } = S,
                         o = {
-                            application_id: N.application.id,
+                            application_id: v.application.id,
                             type: S.type,
                             name: S.name,
                             details: null !== (t = S.details) && void 0 !== t ? t : '',

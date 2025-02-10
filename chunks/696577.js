@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => b });
 var i = n(200651),
     l = n(192379),
     r = n(442837),
@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(417183),
     I = n(170245),
     C = n(981631),
-    v = n(388032),
-    N = n(165392);
+    N = n(388032),
+    v = n(165392);
 function T(e) {
     var t;
     let { user: n, applicationId: r, isGameRelationship: o, active: c } = e,
@@ -45,23 +45,23 @@ function T(e) {
         children: [
             d &&
                 (0, i.jsx)('div', {
-                    className: N.staffIndicator,
+                    className: v.staffIndicator,
                     children: (0, i.jsx)(s.IGR, {
                         color: a.Z.unsafe_rawColors.BRAND_500.css,
-                        text: v.intl.string(v.t.oMx98P)
+                        text: N.intl.string(N.t.oMx98P)
                     })
                 }),
             (0, i.jsx)(f.Z, {
                 icon: s.dz2,
                 actionType: f.Z.ActionTypes.ACCEPT,
-                tooltip: v.intl.string(v.t.ZcibdX),
+                tooltip: N.intl.string(N.t.ZcibdX),
                 onClick: p,
                 shouldHighlight: c
             }),
             (0, i.jsx)(f.Z, {
                 icon: s.Dio,
                 actionType: f.Z.ActionTypes.DENY,
-                tooltip: v.intl.string(v.t.xuio0N),
+                tooltip: N.intl.string(N.t.xuio0N),
                 onClick: g,
                 shouldHighlight: c
             })
@@ -85,17 +85,17 @@ function S(e) {
     return (0, i.jsx)(f.Z, {
         icon: s.Dio,
         actionType: f.Z.ActionTypes.DENY,
-        tooltip: v.intl.string(v.t.eaq81d),
+        tooltip: N.intl.string(N.t.eaq81d),
         onClick: c,
         shouldHighlight: a
     });
 }
-function Z(e) {
+function A(e) {
     let { isGameRelationship: t, applicationId: n } = e,
-        l = t ? v.intl.string(v.t.ujfP6e) : v.intl.string(v.t.yltuhY),
+        l = t ? N.intl.string(N.t.ujfP6e) : N.intl.string(N.t.yltuhY),
         a = (0, r.e7)([c.Z], () => (null != n ? c.Z.getApplication(n) : null));
     return (0, i.jsxs)('div', {
-        className: N.applicationSublabel,
+        className: v.applicationSublabel,
         children: [
             (0, i.jsx)(s.Text, {
                 variant: 'text-xxs/medium',
@@ -123,14 +123,14 @@ function Z(e) {
         ]
     });
 }
-function A(e) {
+function Z(e) {
     let { user: t, hovered: n, status: r, disambiguateGameFriends: a, isGameRelationship: s, applicationId: o } = e,
         c = g.ZP.useUserTag(t),
         d = !!a && !s,
         u = l.useMemo(
             () =>
                 a
-                    ? (0, i.jsx)(Z, {
+                    ? (0, i.jsx)(A, {
                           isGameRelationship: s,
                           applicationId: o
                       })
@@ -145,7 +145,7 @@ function A(e) {
         subText: u
     });
 }
-function x(e) {
+function b(e) {
     let { user: t, type: n, status: r, isFocused: a, applicationId: s, disambiguateGameFriends: c, isGameRelationship: d } = e,
         u = l.useContext(p.AnalyticsContext),
         { analyticsLocations: m } = (0, o.ZP)(),
@@ -165,9 +165,9 @@ function x(e) {
         onClick: _,
         children: (e) =>
             (0, i.jsxs)('div', {
-                className: N.listItemContents,
+                className: v.listItemContents,
                 children: [
-                    (0, i.jsx)(A, {
+                    (0, i.jsx)(Z, {
                         user: t,
                         hovered: e,
                         status: g,
@@ -176,7 +176,7 @@ function x(e) {
                         applicationId: s
                     }),
                     (0, i.jsx)('div', {
-                        className: N.actions,
+                        className: v.actions,
                         children:
                             n === C.OGo.PENDING_INCOMING
                                 ? (0, i.jsx)(T, {

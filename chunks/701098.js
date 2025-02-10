@@ -5,19 +5,19 @@ var l = t(200651),
     a = t(481060),
     o = t(569545),
     s = t(352954),
-    c = t(277642),
-    u = t(441894),
+    u = t(277642),
+    c = t(441894),
     d = t(199902),
     g = t(388032);
 function h(e) {
     let { stream: n, channelId: t, location: h } = e,
-        f = (0, u.J)({
+        f = (0, c.J)({
             channelId: t,
             location: h
         }),
         Z = (0, r.e7)([d.Z], () => null != d.Z.getActiveStreamForApplicationStream(n)),
         I = (0, o.V9)(n),
-        m = (0, c.t)(I),
+        m = (0, u.t)(I),
         S = i.useCallback(() => {
             s.Z.openSecureFramesStreamVerification(I, t);
         }, [t, I]);

@@ -18,14 +18,14 @@ function E(e) {
     let { percent: t, animate: n, interactionEnabled: i, backgroundColor: E, preloadedBuffers: p, duration: C, maxSeekableTime: f, onClick: S, onScrubBack: g, onScrubForward: x } = e,
         [_, h] = l.useState(null),
         [T, D] = l.useState(null),
-        [N, I] = l.useState(null),
-        [j, A] = l.useState(!1),
+        [N, j] = l.useState(null),
+        [I, A] = l.useState(!1),
         b = l.useRef(null),
         L = (e) => {
             (b.current = e), h(e);
         };
     l.useEffect(() => {
-        null != _ && (null == f ? I(null) : I(v(f, C, _)));
+        null != _ && (null == f ? j(null) : j(v(f, C, _)));
     }, [_, f, C]);
     let O = (0, a.y)(() => {
         null != O.current && L(O.current.getBoundingClientRect());
@@ -51,8 +51,8 @@ function E(e) {
         ),
         M = null != T && null != _ ? m(T, _, C) : 0,
         P = (0, u.yv)(M),
-        q = null != _ ? _.right - v((t / 100) * C, C, _) : null,
-        y = null != T && null != _ ? _.right - T : null,
+        y = null != _ ? _.right - v((t / 100) * C, C, _) : null,
+        q = null != T && null != _ ? _.right - T : null,
         w = null != N && null != _ ? _.right - N : null;
     return (0, r.jsxs)('div', {
         className: d.cont,
@@ -71,7 +71,7 @@ function E(e) {
                     i && (A(!1), D(null));
                 },
                 onMouseMove: (e) => {
-                    i && j && R(e);
+                    i && I && R(e);
                 },
                 onKeyDown: k,
                 tabIndex: i ? void 0 : -1,
@@ -88,7 +88,7 @@ function E(e) {
                               (0, r.jsx)(
                                   'div',
                                   {
-                                      className: s()(d.buffer, { [d.bufferHovered]: j }),
+                                      className: s()(d.buffer, { [d.bufferHovered]: I }),
                                       style: {
                                           width: ''.concat(100 * e.size, '%'),
                                           left: ''.concat(100 * e.start, '%')
@@ -112,26 +112,26 @@ function E(e) {
                         percent: t,
                         foregroundColor: '#FFFFFF',
                         backgroundColor: null != E ? E : void 0,
-                        size: j ? o.Exd.Sizes.XSMALL : o.Exd.Sizes.XXSMALL,
+                        size: I ? o.Exd.Sizes.XSMALL : o.Exd.Sizes.XXSMALL,
                         animate: n
                     }),
-                    j &&
+                    I &&
                         null != P &&
                         (0, r.jsx)(o.Text, {
                             className: d.timeDisplay,
                             variant: 'text-xs/normal',
                             style: {
-                                right: null != y ? ''.concat(y - 10, 'px') : 'auto',
+                                right: null != q ? ''.concat(q - 10, 'px') : 'auto',
                                 color: '#FFFFFF'
                             },
                             children: P
                         }),
-                    j &&
+                    I &&
                         i &&
-                        null != q &&
+                        null != y &&
                         (0, r.jsx)('div', {
                             className: d.grabber,
-                            style: { right: ''.concat(q - 6, 'px') }
+                            style: { right: ''.concat(y - 6, 'px') }
                         })
                 ]
             }),

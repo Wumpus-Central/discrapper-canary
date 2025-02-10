@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N });
+n.d(t, { Z: () => v });
 var i = n(200651),
     l = n(192379),
     r = n(512722),
@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(145604),
     I = n(718813),
     C = n(981631),
-    v = n(961200);
-let N = l.memo(function () {
+    N = n(961200);
+let v = l.memo(function () {
     let e = l.useRef(null),
         t = l.useCallback((t) => {
             let { duration: n, intensity: i } = t;
@@ -40,10 +40,10 @@ let N = l.memo(function () {
         (0, m.Z)(),
         (0, i.jsxs)(s.F0h, {
             ref: e,
-            className: v.app,
+            className: N.app,
             children: [
                 (0, i.jsx)(I.Z, {
-                    className: v.layers,
+                    className: N.layers,
                     children: (0, i.jsx)(o.Z, {})
                 }),
                 (0, i.jsx)(p.Z, {}),

@@ -57,25 +57,25 @@ let E = {
         var t, n, i, s, g;
         let { isLoading: x, handleTransition: B, category: T, heroBlock: I, tab: y } = e,
             Z = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
-            N = (0, o.e7)([h.Z], () => h.Z.isFocused()),
-            F = (0, o.e7)([C.default], () => C.default.getCurrentUser()),
-            P = (0, v.u)(),
-            w = l.useMemo(() => (null != I ? I : S(T)), [I, T]),
-            A = l.useMemo(() => P(w.rankedSkuIds), [x, P, w.rankedSkuIds]),
+            F = (0, o.e7)([h.Z], () => h.Z.isFocused()),
+            N = (0, o.e7)([C.default], () => C.default.getCurrentUser()),
+            w = (0, v.u)(),
+            P = l.useMemo(() => (null != I ? I : S(T)), [I, T]),
+            A = l.useMemo(() => w(P.rankedSkuIds), [x, w, P.rankedSkuIds]),
             O = (0, f.l)(A).slice(0, 4),
-            R = y === k.AW.ORBS ? j.intl.string(j.t.qQq91t) : j.intl.formatToPlainString(j.t.wvKYCg, { category_name: w.name });
-        if (null == F || (!x && w === E)) return null;
-        let H = null != w.categorySkuId ? (0, k.ZS)(w.categorySkuId) : void 0,
+            R = y === k.AW.ORBS ? j.intl.string(j.t.qQq91t) : j.intl.formatToPlainString(j.t.wvKYCg, { category_name: P.name });
+        if (null == N || (!x && P === E)) return null;
+        let H = null != P.categorySkuId ? (0, k.ZS)(P.categorySkuId) : void 0,
             M = null !== (i = null == H ? void 0 : H.heroBanner) && void 0 !== i ? i : void 0,
-            V = null !== (s = null == M ? void 0 : M.animationSource) && void 0 !== s ? s : null === (t = w.bannerAsset) || void 0 === t ? void 0 : t.animated,
-            D = null !== (g = null === (n = w.bannerAsset) || void 0 === n ? void 0 : n.static) && void 0 !== g ? g : w.fallbackBannerUrl;
+            V = null !== (s = null == M ? void 0 : M.animationSource) && void 0 !== s ? s : null === (t = P.bannerAsset) || void 0 === t ? void 0 : t.animated,
+            D = null !== (g = null === (n = P.bannerAsset) || void 0 === n ? void 0 : n.static) && void 0 !== g ? g : P.fallbackBannerUrl;
         return (0, r.jsxs)('div', {
             className: L.heroBlock,
             children: [
                 (0, r.jsxs)('div', {
                     className: L.banner,
                     children: [
-                        null != V && !Z && N
+                        null != V && !Z && F
                             ? (0, r.jsx)(u.Z, {
                                   className: L.bannerVideoBackground,
                                   src: V,
@@ -107,7 +107,7 @@ let E = {
                                     : (0, r.jsxs)('div', {
                                           className: a()(L.heroHeaderBadgeLogoSummaryContainer),
                                           children: [
-                                              null != w.unpublishedAt &&
+                                              null != P.unpublishedAt &&
                                                   (0, r.jsx)(d.IGR, {
                                                       disableColor: !0,
                                                       text: j.intl.string(j.t['h/uBCQ']),
@@ -116,23 +116,23 @@ let E = {
                                               (0, r.jsxs)('div', {
                                                   className: a()(L.heroLogoNameContainer),
                                                   children: [
-                                                      null != w.logoUrl &&
+                                                      null != P.logoUrl &&
                                                           (0, r.jsx)('img', {
                                                               className: L.heroHeaderLogo,
-                                                              src: w.logoUrl,
-                                                              alt: w.name
+                                                              src: P.logoUrl,
+                                                              alt: P.name
                                                           }),
-                                                      null != w.title &&
+                                                      null != P.title &&
                                                           (0, r.jsx)(d.X6q, {
                                                               variant: 'heading-xxl/bold',
                                                               color: 'header-primary',
                                                               className: L.title,
-                                                              children: w.title
+                                                              children: P.title
                                                           }),
                                                       (0, r.jsx)(d.Text, {
                                                           variant: y === k.AW.ORBS ? 'text-lg/medium' : 'text-md/normal',
                                                           className: y === k.AW.ORBS ? L.orbsSubHeaderText : null != H && H.showDarkBannerText ? L.subHeaderTextDark : L.subHeaderText,
-                                                          children: w.summary
+                                                          children: P.summary
                                                       })
                                                   ]
                                               })
@@ -144,7 +144,7 @@ let E = {
                                         children: (0, r.jsx)(d.zxk, {
                                             className: L.heroHeaderButton,
                                             color: d.Ttl.WHITE,
-                                            onClick: () => B('shop latest category hero', w.categorySkuId),
+                                            onClick: () => B('shop latest category hero', P.categorySkuId),
                                             children: R
                                         })
                                     })
@@ -174,7 +174,7 @@ let E = {
                                                             {
                                                                 product: e,
                                                                 category: n,
-                                                                user: F,
+                                                                user: N,
                                                                 isInFeedView: !0
                                                             },
                                                             e.skuId

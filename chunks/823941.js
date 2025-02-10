@@ -79,11 +79,11 @@ function Z(e) {
     let { category: p, className: f, hideLimitedTimeBadge: E = !1 } = e,
         { backgroundColors: S } = (0, _.Z)(p.styles),
         Z = (0, L.ZS)(p.skuId),
-        N = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
-        F = (0, o.e7)([m.Z], () => m.Z.isFocused());
+        F = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
+        N = (0, o.e7)([m.Z], () => m.Z.isFocused());
     if (p.skuId === s.T.CHANCE) return (0, r.jsx)(k.O, { category: p });
-    let P = !!(null == Z ? void 0 : Z.showDarkBannerText),
-        w = null !== (C = null == Z ? void 0 : Z.animatedBanner) && void 0 !== C ? C : null === (t = p.bannerAsset) || void 0 === t ? void 0 : t.animated;
+    let w = !!(null == Z ? void 0 : Z.showDarkBannerText),
+        P = null !== (C = null == Z ? void 0 : Z.animatedBanner) && void 0 !== C ? C : null === (t = p.bannerAsset) || void 0 === t ? void 0 : t.animated;
     return (0, r.jsxs)(b.Z, {
         asset: null !== (h = null === (n = p.bannerAsset) || void 0 === n ? void 0 : n.static) && void 0 !== h ? h : p.banner,
         className: a()(B.shopBanner, f),
@@ -95,7 +95,7 @@ function Z(e) {
                   }
                 : void 0,
         children: [
-            !N && void 0 !== w && F && (0, r.jsx)(y, { src: w }),
+            !F && void 0 !== P && N && (0, r.jsx)(y, { src: P }),
             (null === (l = L.Ve[p.skuId]) || void 0 === l ? void 0 : l.addAttributionLogo)
                 ? (0, r.jsxs)('div', {
                       className: B.discordLogo,
@@ -120,7 +120,7 @@ function Z(e) {
                   })
                 : (0, r.jsx)(d.LZC, { size: 90 }),
             (0, r.jsx)(d.Text, {
-                className: a()(B.summary, { [B.blackSummary]: P }),
+                className: a()(B.summary, { [B.blackSummary]: w }),
                 variant: 'text-md/normal',
                 children: p.skuId === s.T.DISXCORE ? (0, r.jsx)(I, { category: p }) : p.summary
             }),

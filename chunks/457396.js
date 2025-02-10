@@ -22,14 +22,14 @@ var l = n(91192),
     E = n(74538),
     I = n(502087),
     C = n(650032),
-    v = n(767870),
-    N = n(104494),
+    N = n(767870),
+    v = n(104494),
     T = n(639119),
     S = n(655525),
-    Z = n(314684),
-    A = n(52188),
-    x = n(346497),
-    b = n(924540),
+    A = n(314684),
+    Z = n(52188),
+    b = n(346497),
+    x = n(924540),
     L = n(474486),
     y = n(119850),
     P = n(701910),
@@ -38,19 +38,19 @@ var l = n(91192),
     j = n(474936),
     D = n(981631),
     w = n(921944),
-    M = n(388032),
-    k = n(892894);
+    k = n(388032),
+    M = n(892894);
 let U = 'NitroTabButton',
     G = (e) => {
         let { selected: t } = e,
             n = (0, r.e7)([p.default], () => p.default.getCurrentUser()),
             i = (0, r.e7)([_.ZP], () => _.ZP.getPremiumTypeSubscription()),
             l = (0, T.N)(),
-            a = (0, N.Ng)(),
-            s = (0, x.Vi)(),
+            a = (0, v.Ng)(),
+            s = (0, b.Vi)(),
             o = (0, O.vx)(U),
             c = (0, O.wG)(U),
-            d = (0, Z.$_)(),
+            d = (0, A.$_)(),
             u = (0, y.V)(),
             h = (0, E.Qo)(n, i),
             m = (0, r.e7)([I.Z], () => I.Z.getCreatedAtOverride()),
@@ -69,11 +69,11 @@ let U = 'NitroTabButton',
             K = (0, E.Qo)(W, Y),
             q = (0, l.JA)('nitro'),
             X = (0, T.N)(),
-            Q = (0, N.Ng)(),
+            Q = (0, v.Ng)(),
             J = (0, r.e7)([_.ZP], () => _.ZP.inReverseTrial()),
             $ = (0, r.e7)([g.Z], () => g.Z.isLocalizedPromoEnabled) && null == X,
-            ee = (0, x.Vi)(),
-            et = (0, Z.$_)(),
+            ee = (0, b.Vi)(),
+            et = (0, A.$_)(),
             en = (0, y.V)(),
             ei = (0, O.Kn)(U),
             el = (0, O.vx)(U),
@@ -90,7 +90,7 @@ let U = 'NitroTabButton',
         if (!G({ selected: V })) return null;
         es !== j.a$.NONE &&
             ((B = 9),
-            (I = (0, i.jsx)(v.Z, {
+            (I = (0, i.jsx)(N.Z, {
                 className: '',
                 startsAt: eo,
                 endsAt: ec,
@@ -98,14 +98,14 @@ let U = 'NitroTabButton',
                 upperCase: !0
             }))),
             el
-                ? ((t = k.referralIncentive), (B = 7))
+                ? ((t = M.referralIncentive), (B = 7))
                 : er
-                  ? ((I = (0, i.jsx)(P.Z, { copy: M.intl.string(M.t.jyYgZ2) })), (B = 8))
+                  ? ((I = (0, i.jsx)(P.Z, { copy: k.intl.string(k.t.jyYgZ2) })), (B = 8))
                   : ee
                     ? ((I = (0, i.jsx)(S.Z, {})), (B = 0))
                     : null != ep && ep === a.z.REVERSE_TRIAL_NITRO_TAB_BADGE
                       ? ((I = (0, i.jsx)(R.Z, {
-                            copy: M.intl.string(M.t.HwUCnp),
+                            copy: k.intl.string(k.t.HwUCnp),
                             showStars: !1
                         })),
                         (B = 4))
@@ -122,7 +122,7 @@ let U = 'NitroTabButton',
                             })),
                             (B = 1))
                           : null != Q
-                            ? ((I = (0, i.jsx)(b.GN, {
+                            ? ((I = (0, i.jsx)(x.GN, {
                                   userDiscount: Q,
                                   isTabSelected: V,
                                   includesAmountOff: !1
@@ -135,8 +135,8 @@ let U = 'NitroTabButton',
                                         onSelect: () => (0, u.EW)(a.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, { dismissAction: w.L.TAKE_ACTION })
                                     })),
                                     (B = 6))
-                                  : $ && ((I = (0, i.jsx)(A.k, { entryPoint: A.U.PrivateMessages })), V || (t = k.localizeBadge), (B = 5))
-                              : ((I = (0, i.jsx)(b.$H, {
+                                  : $ && ((I = (0, i.jsx)(Z.k, { entryPoint: Z.U.PrivateMessages })), V || (t = M.localizeBadge), (B = 5))
+                              : ((I = (0, i.jsx)(x.$H, {
                                     trialOffer: X,
                                     isTabSelected: V
                                 })),
@@ -145,7 +145,7 @@ let U = 'NitroTabButton',
             selected: V,
             route: H,
             icon: s.SrA,
-            text: M.intl.string(M.t.Ipxkoq),
+            text: k.intl.string(k.t.Ipxkoq),
             locationState: F,
             onClick: () => {
                 ed === a.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL && eu(w.L.TAKE_ACTION),

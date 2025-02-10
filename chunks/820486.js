@@ -1,6 +1,6 @@
 n.d(t, {
     X: () => S,
-    Z: () => x
+    Z: () => b
 });
 var i,
     l = n(392711),
@@ -32,11 +32,11 @@ let g = {},
     E = {},
     I = {},
     C = {},
-    v = {
+    N = {
         id: null,
         justChanged: !1
     },
-    N = {
+    v = {
         id: null,
         justChanged: !1
     },
@@ -48,7 +48,7 @@ function S(e) {
     }
     return e.name;
 }
-function Z(e, t, n) {
+function A(e, t, n) {
     return null == e || e.displayName !== t
         ? {
               displayName: t,
@@ -61,7 +61,7 @@ function Z(e, t, n) {
             }
           : e;
 }
-class A extends (i = a.ZP.DeviceSettingsStore) {
+class Z extends (i = a.ZP.DeviceSettingsStore) {
     initialize(e) {
         this.waitFor(u.Z, c.Z), (_ = null != e ? e : g);
     }
@@ -78,36 +78,36 @@ class A extends (i = a.ZP.DeviceSettingsStore) {
         return E;
     }
     get lastInputSystemDevice() {
-        return v;
+        return N;
     }
     get outputDevices() {
         return I;
     }
     get lastOutputSystemDevice() {
-        return N;
+        return v;
     }
 }
-p(A, 'displayName', 'ConnectedDeviceStore'), p(A, 'persistKey', 'ConnectedDeviceStore');
-let x = new A(s.Z, {
+p(Z, 'displayName', 'ConnectedDeviceStore'), p(Z, 'persistKey', 'ConnectedDeviceStore');
+let b = new Z(s.Z, {
     MEDIA_ENGINE_DEVICES: function (e) {
         let { inputDevices: t, outputDevices: n } = e,
             i = {};
-        (v.justChanged = !1),
+        (N.justChanged = !1),
             t.forEach((e) => {
                 if (((i[S(e)] = e.id), e.id === m.w5)) {
                     var t;
                     let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
-                    n !== v.id && (v.justChanged = !0), (v.id = n);
+                    n !== N.id && (N.justChanged = !0), (N.id = n);
                 }
             });
         let l = {};
         if (
-            ((N.justChanged = !1),
+            ((v.justChanged = !1),
             n.forEach((e) => {
                 if (((l[S(e)] = e.id), e.id === m.w5)) {
                     var t;
                     let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
-                    n !== N.id && (N.justChanged = !0), (N.id = n);
+                    n !== v.id && (v.justChanged = !0), (v.id = n);
                 }
             }),
             !f)
@@ -127,12 +127,12 @@ let x = new A(s.Z, {
                 : (r()
                       .difference(s, a)
                       .forEach((e) => {
-                          C[e] = Z(C[e], e, h.QyF.INPUT);
+                          C[e] = A(C[e], e, h.QyF.INPUT);
                       }),
                   r()
                       .difference(c, o)
                       .forEach((e) => {
-                          C[e] = Z(C[e], e, h.QyF.OUTPUT);
+                          C[e] = A(C[e], e, h.QyF.OUTPUT);
                       })),
             !(r().isEqual(a, s) && r().isEqual(o, c)) && ((E = i), (I = l), !0)
         );

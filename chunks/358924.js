@@ -17,14 +17,14 @@ var i,
     E = n(833664),
     I = n(503438),
     C = n(420660),
-    v = n(74433),
-    N = n(906732),
+    N = n(74433),
+    v = n(906732),
     T = n(812206),
     S = n(933557),
-    Z = n(194082),
-    A = n(264165),
-    x = n(548816),
-    b = n(925329),
+    A = n(194082),
+    Z = n(264165),
+    b = n(548816),
+    x = n(925329),
     L = n(102172),
     y = n(871118),
     P = n(707409),
@@ -33,8 +33,8 @@ var i,
     j = n(849171),
     D = n(314897),
     w = n(592125),
-    M = n(594174),
-    k = n(395361),
+    k = n(594174),
+    M = n(395361),
     U = n(639351),
     G = n(81063),
     B = n(823379),
@@ -152,7 +152,7 @@ let et = (e) => {
             });
             break;
         case 'SPOTIFY':
-            t = (0, l.jsx)(k.Z, {
+            t = (0, l.jsx)(M.Z, {
                 className: W.headerIcon,
                 color: c.Z.unsafe_rawColors.SPOTIFY.css
             });
@@ -234,7 +234,7 @@ en.Icon = et;
 let ei = (e) => {
     let { children: t, className: n, ...i } = e;
     return (0, l.jsx)(d.tEY, {
-        children: (0, l.jsx)(x.Z, {
+        children: (0, l.jsx)(b.Z, {
             className: s()(n, W.wrapper),
             padded: !0,
             ...i,
@@ -245,7 +245,7 @@ let ei = (e) => {
 (ei.Header = en),
     (ei.Body = (e) => {
         let { children: t } = e;
-        return (0, l.jsx)(x.Z, {
+        return (0, l.jsx)(b.Z, {
             inset: !0,
             padded: !1,
             className: W.body,
@@ -382,7 +382,7 @@ let ei = (e) => {
                                   }),
                                   u
                                       ? null
-                                      : (0, l.jsx)(k.Z, {
+                                      : (0, l.jsx)(M.Z, {
                                             className: W.smallImage,
                                             color: c.Z.unsafe_rawColors.SPOTIFY.css
                                         })
@@ -407,7 +407,7 @@ let ei = (e) => {
             { name: c, details: u, assets: h, application_id: m } = i;
         if (null != h && (0, C.Z)(i)) {
             var g;
-            t = (0, l.jsx)(A.Z, {
+            t = (0, l.jsx)(Z.Z, {
                 className: W.twitchSectionPreviewWrapper,
                 aspectRatio: 16 / 9,
                 children: (0, l.jsxs)(d.P3F, {
@@ -480,7 +480,7 @@ let ei = (e) => {
                     })
                 ]
             }),
-            g = null !== (n = null === (t = (0, v.Z)(i, a)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : z.intl.string(z.t.eXan7O);
+            g = null !== (n = null === (t = (0, N.Z)(i, a)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : z.intl.string(z.t.eXan7O);
         return (0, l.jsxs)(J, {
             children: [
                 (0, l.jsxs)('div', {
@@ -495,7 +495,7 @@ let ei = (e) => {
                         (0, l.jsxs)('div', {
                             children: [q(V.ZP.getName(r)), X(g)]
                         }),
-                        (0, l.jsx)(Z.ZP, { size: Z.ZP.Sizes.SMALL })
+                        (0, l.jsx)(A.ZP, { size: A.ZP.Sizes.SMALL })
                     ]
                 }),
                 p
@@ -513,13 +513,13 @@ let ei = (e) => {
                     return c(t);
                 });
         }, [u]);
-        let h = (0, o.Wu)([M.default, D.default], () =>
+        let h = (0, o.Wu)([k.default, D.default], () =>
                 Array.from(a)
-                    .map((e) => (D.default.getId() === e ? null : M.default.getUser(e)))
+                    .map((e) => (D.default.getId() === e ? null : k.default.getUser(e)))
                     .filter(B.lm)
             ),
             p = (0, m.O)(),
-            { analyticsLocations: _ } = (0, N.ZP)();
+            { analyticsLocations: _ } = (0, v.ZP)();
         if (null == u) return null;
         let f = T.Z.getApplication(u);
         if (null == f) return null;
@@ -530,9 +530,9 @@ let ei = (e) => {
                 (0, l.jsxs)('div', {
                     className: W.embeddedActivityTopRow,
                     children: [
-                        (0, l.jsx)(b.Z, {
+                        (0, l.jsx)(x.Z, {
                             game: f,
-                            size: b.Z.Sizes.XSMALL,
+                            size: x.Z.Sizes.XSMALL,
                             className: W.embeddedActivityIcon
                         }),
                         (0, l.jsx)('div', {

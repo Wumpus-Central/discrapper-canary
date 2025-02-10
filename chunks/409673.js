@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: () => G,
-    hU: () => P
+    hU: () => w
 }),
     n(47120);
 var i = n(200651),
@@ -33,8 +33,8 @@ let O = '1',
     D = 0.01,
     L = 0.1,
     x = 0.01,
-    w = 1000;
-function P(e) {
+    P = 1000;
+function w(e) {
     let { disabled: t = !1, onClick: n, text: r, children: a, tooltipPosition: o = 'top', refreshEnabled: l = !1 } = e;
     return (0, i.jsx)(d.ua7, {
         text: r,
@@ -54,7 +54,7 @@ function M(e) {
     function o(e) {
         e.stopPropagation(), e.currentTarget.blur(), n();
     }
-    return (0, i.jsx)(P, {
+    return (0, i.jsx)(w, {
         tooltipPosition: a,
         disabled: r,
         onClick: o,
@@ -79,7 +79,7 @@ function k(e) {
             },
             [o, t.soundId]
         );
-    return (0, i.jsx)(P, {
+    return (0, i.jsx)(w, {
         disabled: a,
         onClick: u,
         text: C.intl.formatToPlainString(o ? C.t.lQLsjY : C.t.Y5DOs7, {
@@ -115,12 +115,12 @@ function U(e, t) {
     }, [t, e]);
 }
 let G = r.forwardRef(function (e, t) {
-    var n, a, c, y, I, P, G, B, Z, F;
+    var n, a, c, y, I, w, G, B, Z, F;
     let { sound: V, channel: j, containerClassName: H, className: Y, focused: W, forceSecondaryActions: K = !1, interactive: z = !0, enableSecondaryActions: q = !1, suppressPlaySound: Q, onMouseEnter: X, onSelectItem: J, analyticsLocations: $, buttonOverlay: ee = T.Pb.PLAY, showLockForDisabledSound: et = !0, inNitroLockedSection: en = !1, refreshEnabled: ei = !1, isAnimated: er = !0, isPlayingSoundOverride: ea, isSoundmoji: es, soundmojiVisualEffectRef: eo, tooltipOverride: el, tooltipClassName: eu, tooltipContentClassName: ec, ...ed } = e,
         { name: ef, emojiId: e_, emojiName: ep } = V,
         eh = (0, l.e7)([v.default], () => v.default.getCurrentUser()),
         em = (0, A.z)(V, null == j ? void 0 : j.guild_id),
-        { playSoundboardSound: eg, previewSound: eE, isPlayingSound: ev, isPreviewingSound: ey } = (0, S.Z)(V, null !== (I = null == j ? void 0 : j.id) && void 0 !== I ? I : null, null !== (P = es ? E.AY.getSetting() : null === (n = E.kU.getSetting()) || void 0 === n ? void 0 : n.volume) && void 0 !== P ? P : 100),
+        { playSoundboardSound: eg, previewSound: eE, isPlayingSound: ev, isPreviewingSound: ey } = (0, S.Z)(V, null !== (I = null == j ? void 0 : j.id) && void 0 !== I ? I : null, null !== (w = es ? E.AY.getSetting() : null === (n = E.kU.getSetting()) || void 0 === n ? void 0 : n.volume) && void 0 !== w ? w : 100),
         { createMultipleConfettiAt: eI } = r.useContext(p.h),
         eT = r.useRef(null),
         eb = U(V.soundId, eT.current),
@@ -133,8 +133,8 @@ let G = r.forwardRef(function (e, t) {
         eD = null != e_ || null != ep,
         eL = !(0, b.Nq)(eh, V, j) && !es,
         ex = K || (q && !eL),
-        ew = r.useRef(null),
-        eP = (null !== (G = null === (a = ew.current) || void 0 === a ? void 0 : a.scrollHeight) && void 0 !== G ? G : 0) > (null !== (B = null === (c = ew.current) || void 0 === c ? void 0 : c.offsetHeight) && void 0 !== B ? B : 0),
+        eP = r.useRef(null),
+        ew = (null !== (G = null === (a = eP.current) || void 0 === a ? void 0 : a.scrollHeight) && void 0 !== G ? G : 0) > (null !== (B = null === (c = eP.current) || void 0 === c ? void 0 : c.offsetHeight) && void 0 !== B ? B : 0),
         eM = null !== (Z = h.Wq.useStore().bottomPosition) && void 0 !== Z ? Z : 0,
         ek = (null !== (F = null === (y = eT.current) || void 0 === y ? void 0 : y.getBoundingClientRect().bottom) && void 0 !== F ? F : 0) + 50 > eM ? 'top' : 'bottom',
         [eU, eG] = r.useState(!1),
@@ -260,7 +260,7 @@ let G = r.forwardRef(function (e, t) {
         let e = eN.current;
         return (
             eC &&
-                e.start(w, () => {
+                e.start(P, () => {
                     eA.current = Math.max(eA.current - x, D);
                 }),
             () => e.stop()
@@ -317,7 +317,7 @@ let G = r.forwardRef(function (e, t) {
                         onContextMenu: q && !eL ? em : void 0,
                         onMouseOver: () => {
                             var t;
-                            return null != el || (eP && ei && !0 !== es) ? (null === (t = e.onMouseEnter) || void 0 === t ? void 0 : t.call(e)) : null;
+                            return null != el || (ew && ei && !0 !== es) ? (null === (t = e.onMouseEnter) || void 0 === t ? void 0 : t.call(e)) : null;
                         },
                         children: [
                             (0, i.jsxs)('div', {
@@ -344,7 +344,7 @@ let G = r.forwardRef(function (e, t) {
                                         variant: 'text-xs/medium',
                                         color: z ? void 0 : 'text-muted',
                                         className: s()(ei ? R.soundNameRefresh : R.soundName, { [R.hasEmoji]: eD }),
-                                        ref: ew,
+                                        ref: eP,
                                         children: ef
                                     })
                                 ]

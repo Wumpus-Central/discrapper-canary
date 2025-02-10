@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(49898),
     I = n(46140),
     C = n(388032),
-    v = n(965839);
-function N(e) {
+    N = n(965839);
+function v(e) {
     let { tab: t } = e,
         n = g.Z.useField('selectedTab'),
         r = l.useMemo(
@@ -36,12 +36,12 @@ function N(e) {
             [t]
         ),
         C = l.useMemo(() => (0, _.s)(t), [t]),
-        N = n === t,
+        v = n === t,
         T = l.useCallback(() => {
             switch (t) {
                 case E.GlobalDiscoveryTab.QUESTS:
                     return (
-                        N && p.Z.resetState(),
+                        v && p.Z.resetState(),
                         (0, f.transitionToGlobalDiscovery)({
                             tab: E.GlobalDiscoveryTab.QUESTS,
                             location: I.dr.DISCOVERY_SIDEBAR,
@@ -49,7 +49,7 @@ function N(e) {
                         })
                     );
                 case E.GlobalDiscoveryTab.APPS:
-                    if (!N)
+                    if (!v)
                         return (0, d.dx)({
                             restorePreviousView: !0,
                             entrypoint: { name: c.n3.GLOBAL_DISCOVERY_SIDEBAR }
@@ -57,19 +57,19 @@ function N(e) {
                     u.Z.resetState(), (0, f.transitionToGlobalDiscovery)({ tab: t });
                     return;
                 case E.GlobalDiscoveryTab.SERVERS:
-                    if (!N) return (0, f.transitionToGlobalDiscovery)({ tab: t });
+                    if (!v) return (0, f.transitionToGlobalDiscovery)({ tab: t });
                     h.Z.resetState(), m.Z.resetState();
                     return;
                 default:
                     return (0, f.transitionToGlobalDiscovery)({ tab: t });
             }
-        }, [t, N]);
+        }, [t, v]);
     return (0, i.jsxs)(o.P3F, {
         onClick: T,
-        className: a()(v.navItem, { [v.selected]: N }),
+        className: a()(N.navItem, { [N.selected]: v }),
         children: [
             (0, i.jsx)('div', {
-                className: v.navItemIcon,
+                className: N.navItemIcon,
                 children: r
             }),
             (0, i.jsx)(o.Text, {
@@ -82,18 +82,18 @@ function N(e) {
 }
 let T = function () {
     return (0, i.jsxs)('div', {
-        className: v.container,
+        className: N.container,
         children: [
             (0, i.jsx)('div', {
-                className: v.header,
+                className: N.header,
                 children: (0, i.jsx)(o.X6q, {
                     variant: 'text-lg/semibold',
                     children: C.intl.string(C.t['1KqYnp'])
                 })
             }),
             (0, i.jsx)('nav', {
-                className: v.nav,
-                children: E.GLOBAL_DISCOVERY_TABS.map((e) => (0, i.jsx)(N, { tab: e }, e))
+                className: N.nav,
+                children: E.GLOBAL_DISCOVERY_TABS.map((e) => (0, i.jsx)(v, { tab: e }, e))
             })
         ]
     });

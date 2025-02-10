@@ -17,16 +17,16 @@ var o = n(497505),
 function C(e) {
     let { quest: t, location: n, initiallyExpanded: C, contentPosition: p } = e,
         [j, T] = i.useState(!1),
-        E = i.useCallback(() => T(!0), []),
-        v = i.useCallback(() => T(!1), []),
+        v = i.useCallback(() => T(!0), []),
+        E = i.useCallback(() => T(!1), []),
         f = (0, r.tP)(t),
         { containerRef: N, size: S, height: q } = (0, x.h)(),
         A = (0, a.q)({ location: h.dr.QUESTS_CARD }),
         {
-            expansionSpring: _,
-            isAnimating: R,
+            expansionSpring: R,
+            isAnimating: _,
             isExpanded: b,
-            toggleExpanded: L
+            toggleExpanded: Z
         } = (0, x.O)({
             initiallyExpanded:
                 !A ||
@@ -36,7 +36,7 @@ function C(e) {
                     quest: t
                 })
         }),
-        Z = null != q ? q : u.U0;
+        I = null != q ? q : u.U0;
     return (0, s.jsx)(d.A, {
         questOrQuests: t,
         questContent: n,
@@ -49,16 +49,16 @@ function C(e) {
                         maxHeight:
                             n === o.jn.QUESTS_EMBED
                                 ? void 0
-                                : _.to({
+                                : R.to({
                                       range: [0, 1],
-                                      output: [u.DJ, Z]
+                                      output: [u.DJ, I]
                                   })
                     },
                     className: g.questsCard,
-                    onFocus: E,
-                    onMouseEnter: E,
-                    onBlur: v,
-                    onMouseLeave: v,
+                    onFocus: v,
+                    onMouseEnter: v,
+                    onBlur: E,
+                    onMouseLeave: E,
                     children: (0, s.jsxs)('div', {
                         ref: (t) => {
                             (e.current = t), (N.current = t);
@@ -70,12 +70,12 @@ function C(e) {
                                 location: n,
                                 quest: t,
                                 size: S,
-                                expansionSpring: _,
-                                isAnimating: R,
+                                expansionSpring: R,
+                                isAnimating: _,
                                 isExpanded: b,
                                 isInConcurrentQuestExperiment: A,
                                 contentPosition: p,
-                                toggleExpanded: L
+                                toggleExpanded: Z
                             }),
                             (0, s.jsx)(c.Z, {
                                 quest: t,
@@ -84,7 +84,7 @@ function C(e) {
                                 size: S,
                                 isFocused: j,
                                 isExpanded: b,
-                                isAnimating: R,
+                                isAnimating: _,
                                 contentPosition: p
                             })
                         ]

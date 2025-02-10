@@ -11,20 +11,20 @@ var i = l(442837),
     d = l(102172),
     m = l(499596),
     x = l(148381),
-    g = l(388032),
-    h = l(117139);
+    h = l(388032),
+    g = l(117139);
 function Z(e) {
     let { selectedChannelId: n, guildId: l, onChangeSelectedChannelId: Z } = e,
         v = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
         S = (0, i.e7)([r.Z, a.ZP, o.Z], () => (0, d.h_)(a.ZP.getChannels(l), r.Z, o.Z)),
-        C = (0, i.e7)([c.ZP], () => c.ZP.getVoiceStates(l)),
-        j = S.map((e) => {
+        j = (0, i.e7)([c.ZP], () => c.ZP.getVoiceStates(l)),
+        C = S.map((e) => {
             var l;
             return {
                 name: (0, t.jsx)(m.Z, {
                     channel: e,
                     users:
-                        null === (l = C[e.id]) || void 0 === l
+                        null === (l = j[e.id]) || void 0 === l
                             ? void 0
                             : l
                                   .filter((e) => {
@@ -41,13 +41,13 @@ function Z(e) {
             };
         });
     return (0, t.jsx)(x.Z, {
-        title: g.intl.string(g.t['eg7R/v']),
-        scrollerInnerClassName: h.channelSelectScrollerInner,
+        title: h.intl.string(h.t['eg7R/v']),
+        scrollerInnerClassName: g.channelSelectScrollerInner,
         children: (0, t.jsx)(s.FXm, {
-            options: j,
+            options: C,
             value: n,
-            itemInfoClassName: h.channelInfoWrapper,
-            itemTitleClassName: h.channelTitleWrapper,
+            itemInfoClassName: g.channelInfoWrapper,
+            itemTitleClassName: g.channelTitleWrapper,
             onChange: (e) => {
                 let { value: n } = e;
                 return Z(n);

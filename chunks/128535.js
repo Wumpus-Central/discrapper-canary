@@ -17,8 +17,8 @@ var i = n(120356),
     p = n(667105),
     j = n(388032),
     T = n(994731);
-let E = (e) => (0 === e.length ? T.warning : T.danger),
-    v = (e, t) => (0 === e.length ? j.intl.formatToPlainString(j.t.gX0Qc3, { gameTitle: t }) : j.intl.formatToPlainString(j.t['28Ql29'], { gameTitle: t })),
+let v = (e) => (0 === e.length ? T.warning : T.danger),
+    E = (e, t) => (0 === e.length ? j.intl.formatToPlainString(j.t.gX0Qc3, { gameTitle: t }) : j.intl.formatToPlainString(j.t['28Ql29'], { gameTitle: t })),
     f = (e) => {
         let { quest: t, location: n, errors: i, gameTitle: l, consoleHelpArticle: r, expiredCredentialsInteractable: d, impressionId: x } = e;
         if (0 === i.length)
@@ -98,7 +98,7 @@ let E = (e) => (0 === e.length ? T.warning : T.danger),
                             className: T.header,
                             children: [
                                 (0, s.jsx)(o.P4T, {
-                                    className: l()(T.headerIcon, E(N)),
+                                    className: l()(T.headerIcon, v(N)),
                                     size: 'custom',
                                     color: 'currentColor',
                                     width: 16,
@@ -106,7 +106,7 @@ let E = (e) => (0 === e.length ? T.warning : T.danger),
                                 }),
                                 (0, s.jsx)(o.Text, {
                                     variant: 'text-sm/semibold',
-                                    children: v(N, t)
+                                    children: E(N, t)
                                 })
                             ]
                         }),

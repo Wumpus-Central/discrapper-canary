@@ -33,8 +33,8 @@ var i = n(200651),
     D = n(626135),
     L = n(74538),
     x = n(135869),
-    w = n(763296),
-    P = n(697426),
+    P = n(763296),
+    w = n(697426),
     M = n(242291),
     k = n(22382),
     U = n(747071),
@@ -61,19 +61,19 @@ let q = 16,
     er = 60,
     ea = '3';
 function es(e, t, n) {
-    return (null == n && e.type === P.bg.GUILD && !t) || (e.type === P.bg.GUILD && e.guild.id !== n && !t);
+    return (null == n && e.type === w.bg.GUILD && !t) || (e.type === w.bg.GUILD && e.guild.id !== n && !t);
 }
 function eo(e) {
     let { categoryInfo: t, collapsed: n, toggleCollapsed: r, index: a, isSectionNitroLocked: o, showNitroDivider: l } = e;
     function c() {
         switch (t.type) {
-            case P.bg.FAVORITES:
+            case w.bg.FAVORITES:
                 return (0, i.jsx)(u.r7p, {
                     size: 'xs',
                     color: 'currentColor',
                     className: z.headerIcon
                 });
-            case P.bg.RECENTLY_HEARD:
+            case w.bg.RECENTLY_HEARD:
                 return (0, i.jsx)(u.T39, {
                     size: 'custom',
                     width: 20,
@@ -81,15 +81,15 @@ function eo(e) {
                     color: 'currentColor',
                     className: z.headerIcon
                 });
-            case P.bg.FREQUENTLY_USED:
+            case w.bg.FREQUENTLY_USED:
                 return (0, i.jsx)(u.IeX, { className: z.headerIcon });
-            case P.bg.GUILD:
+            case w.bg.GUILD:
                 return (0, i.jsx)(g.Z, {
                     guild: t.guild,
                     height: q,
                     width: q
                 });
-            case P.bg.DEFAULTS:
+            case w.bg.DEFAULTS:
                 return (0, i.jsx)(u.gw7, {
                     size: 'custom',
                     width: 28,
@@ -97,7 +97,7 @@ function eo(e) {
                     color: 'currentColor',
                     className: z.headerIcon
                 });
-            case P.bg.SEARCH:
+            case w.bg.SEARCH:
                 return (0, i.jsx)(u._Ve, {
                     size: 'md',
                     color: 'currentColor',
@@ -107,17 +107,17 @@ function eo(e) {
     }
     function d() {
         switch (t.type) {
-            case P.bg.FAVORITES:
+            case w.bg.FAVORITES:
                 return K.intl.string(K.t.k8fFjo);
-            case P.bg.RECENTLY_HEARD:
+            case w.bg.RECENTLY_HEARD:
                 return K.intl.string(K.t['8i/+SE']);
-            case P.bg.FREQUENTLY_USED:
+            case w.bg.FREQUENTLY_USED:
                 return K.intl.string(K.t['+cGVV1']);
-            case P.bg.GUILD:
+            case w.bg.GUILD:
                 return t.guild.name;
-            case P.bg.DEFAULTS:
+            case w.bg.DEFAULTS:
                 return K.intl.string(K.t.Rtvk9f);
-            case P.bg.SEARCH:
+            case w.bg.SEARCH:
                 return K.intl.string(K.t.zkoeq6);
         }
     }
@@ -171,7 +171,7 @@ function eu(e) {
             let i = 'item-'.concat(t),
                 s = l && y.rowIndex === a && y.columnIndex === t;
             switch (e.item.type) {
-                case P.vB.SOUND:
+                case w.vB.SOUND:
                     return (0, r.createElement)(Z.ZP, {
                         ...d(t),
                         ...n,
@@ -188,7 +188,7 @@ function eu(e) {
                         refreshEnabled: g,
                         isSoundmoji: !0 === v
                     });
-                case P.vB.ADD_SOUND:
+                case w.vB.ADD_SOUND:
                     return (0, r.createElement)(F.Z, {
                         ...d(t),
                         key: i,
@@ -226,9 +226,9 @@ function ec(e) {
         eO = null != eR && '' !== eR,
         eD = (0, m.Dt)(),
         { categories: eL, soundCounts: ex } = (0, B.ZP)(a, void 0, e_),
-        [ew, eP] = r.useState([]),
+        [eP, ew] = r.useState([]),
         [eM, ek] = r.useState(!1),
-        eU = (0, B.FS)(eL, ew, eR).filter((e) => e.items.length > 0),
+        eU = (0, B.FS)(eL, eP, eR).filter((e) => e.items.length > 0),
         eG = eU.some((e) => !!(0, L._O)(e.categoryInfo) && e.categoryInfo.isNitroLocked),
         eB = !eA && F && eG,
         eZ = A.T4.useSetting(),
@@ -266,9 +266,9 @@ function ec(e) {
         eW = r.useCallback(
             (e, t) => {
                 switch (e.item.type) {
-                    case P.vB.SOUND:
+                    case w.vB.SOUND:
                         return eY(e.item.sound, eE, (null == t ? void 0 : t.shiftKey) !== !0);
-                    case P.vB.ADD_SOUND:
+                    case w.vB.ADD_SOUND:
                         return g(), (0, H.Z)(e.item.guild.id);
                 }
             },
@@ -354,7 +354,7 @@ function ec(e) {
             },
             [eU, eB]
         ),
-        e$ = r.useCallback((e) => eP((0, G.YM)(e, eL, eS, a, eE)), [a, eS, eL, eE]),
+        e$ = r.useCallback((e) => ew((0, G.YM)(e, eL, eS, a, eE)), [a, eS, eL, eE]),
         e0 = r.useCallback((e) => {
             (0, c.jW)(e, async () => {
                 let { default: e } = await n.e('56049').then(n.bind(n, 338991));
@@ -401,7 +401,7 @@ function ec(e) {
             [eL, eB, ed, t, ep]
         ),
         e3 = () => {
-            let e = w.Z.getSoundById(ea);
+            let e = P.Z.getSoundById(ea);
             null != e && eb(e);
         },
         e4 = r.useCallback(() => {
@@ -425,7 +425,7 @@ function ec(e) {
         ),
         e5 = r.useCallback(
             (e) => {
-                if ((null == e ? void 0 : e.item.type) === P.vB.SOUND) {
+                if ((null == e ? void 0 : e.item.type) === w.vB.SOUND) {
                     var t;
                     return (0, i.jsx)(j.Z, {
                         closePicker: g,
@@ -439,7 +439,7 @@ function ec(e) {
         e7 = 'https://cdn.discordapp.com/assets/premium/roadblocks/soundboard_dark.png',
         e8 = r.useCallback(() => {
             var e;
-            let t = w.Z.getSoundById(ea),
+            let t = P.Z.getSoundById(ea),
                 n = new Audio((0, k.Z)(ea));
             null != eg.current && eg.current.pause(), (eg.current = n), (n.currentTime = 0), (n.volume = (0, U.Z)(null !== (e = null == t ? void 0 : t.volume) && void 0 !== e ? e : 1)), n.play();
         }, [eg]),
@@ -492,7 +492,7 @@ function ec(e) {
                     store: E.Wq,
                     onSelectItem: eW,
                     onSearchExpressions: e$,
-                    hasSearchResults: ew.length > 0,
+                    hasSearchResults: eP.length > 0,
                     defaultSearchPlaceholder: K.intl.string(K.t.sKt3xc),
                     renderRow: eK,
                     renderSectionHeader: eX,

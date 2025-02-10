@@ -17,23 +17,23 @@ var i = n(200651),
     E = n(626135),
     I = n(70956),
     C = n(225559),
-    v = n(910436),
-    N = n(203028),
+    N = n(910436),
+    v = n(203028),
     T = n(358924),
     S = n(292140),
-    Z = n(525296),
-    A = n(981631),
-    x = n(674563),
-    b = n(388032),
+    A = n(525296),
+    Z = n(981631),
+    b = n(674563),
+    x = n(388032),
     L = n(735315);
 let y = 15 * I.Z.Millis.MINUTE,
-    P = (0, Z.Z)(function (e) {
+    P = (0, A.Z)(function (e) {
         let { party: t, onUserContextMenu: n, onChannelContextMenu: r, quest: a } = e,
-            s = (0, i.jsx)(N.Z, {
+            s = (0, i.jsx)(v.Z, {
                 party: t,
                 onUserContextMenu: n
             }),
-            c = (0, i.jsx)(v.Z, {
+            c = (0, i.jsx)(N.Z, {
                 party: t,
                 onChannelContextMenu: r,
                 quest: a
@@ -47,10 +47,10 @@ let y = 15 * I.Z.Millis.MINUTE,
                 let e = m
                     .filter((e) => {
                         var t, n;
-                        return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === x.wW.GAME;
+                        return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === b.wW.GAME;
                     })
                     .map((e) => e.game.name);
-                E.default.track(A.rMx.NOW_PLAYING_CARD_HOVERED, {
+                E.default.track(Z.rMx.NOW_PLAYING_CARD_HOVERED, {
                     num_users: g,
                     num_streams: _,
                     num_activities: f,
@@ -58,7 +58,7 @@ let y = 15 * I.Z.Millis.MINUTE,
                     games_detected: e
                 });
             }, [g, _, f, I, m]),
-            Z = o()(C, y);
+            A = o()(C, y);
         return null != s || null != c
             ? (0, i.jsx)(d.yRy, {
                   position: 'left',
@@ -74,7 +74,7 @@ let y = 15 * I.Z.Millis.MINUTE,
                       let { isShown: n } = t;
                       return (0, i.jsx)(T.Z, {
                           ...e,
-                          onMouseEnter: Z,
+                          onMouseEnter: A,
                           'aria-haspopup': 'menu',
                           className: L.itemCard,
                           active: n,
@@ -140,13 +140,13 @@ function R() {
                             (0, i.jsx)(d.X6q, {
                                 variant: 'heading-md/semibold',
                                 className: L.emptyHeader,
-                                children: b.intl.string(b.t['ngJ/5u'])
+                                children: x.intl.string(x.t['ngJ/5u'])
                             }),
                             (0, i.jsx)(d.Text, {
                                 color: 'none',
                                 className: L.emptyText,
                                 variant: 'text-sm/normal',
-                                children: b.intl.string(b.t['99ZWxc'])
+                                children: x.intl.string(x.t['99ZWxc'])
                             })
                         ]
                     })),

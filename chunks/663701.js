@@ -17,14 +17,14 @@ var i = n(200651),
     E = n(213609),
     I = n(143757),
     C = n(463119),
-    v = n(377171),
-    N = n(540059),
+    N = n(377171),
+    v = n(540059),
     T = n(243778),
     S = n(922409),
-    Z = n(899740),
-    A = n(28476),
-    x = n(880257),
-    b = n(631885),
+    A = n(899740),
+    Z = n(28476),
+    b = n(880257),
+    x = n(631885),
     L = n(849862),
     y = n(522558),
     P = n(795448),
@@ -33,8 +33,8 @@ var i = n(200651),
     j = n(108989),
     D = n(51596),
     w = n(905423),
-    M = n(155409),
-    k = n(210887),
+    k = n(155409),
+    M = n(210887),
     U = n(695346),
     G = n(283595),
     B = n(923834),
@@ -128,14 +128,14 @@ let ee = (e) => {
         });
     },
     en = () => {
-        let e = (0, Z.q)();
+        let e = (0, A.q)();
         return e > 0 ? (0, i.jsx)(p.mAB, { count: e }) : null;
     },
     ei = (e) => {
         let { selected: t } = e,
             n = (0, c.JA)('messageRequests'),
             { channelId: l } = (0, S._)();
-        if (!(0, A.a)()) return null;
+        if (!(0, Z.a)()) return null;
         let r = null == l ? void 0 : () => g.Z.preload(q.ME, l);
         return (0, i.jsx)(W.Qj, {
             selected: t,
@@ -170,7 +170,7 @@ let ee = (e) => {
     },
     er = (e) => {
         let { isParentHovered: t } = e,
-            l = (0, b.gU)();
+            l = (0, x.gU)();
         return t
             ? (0, i.jsx)(W.PZ, {
                   onClick: () => {
@@ -193,7 +193,7 @@ let ee = (e) => {
                         return t === h.z.FAMILY_CENTER_NEW_BADGE
                             ? (0, i.jsx)(p.IGR, {
                                   text: J.intl.string(J.t.y2b7CA),
-                                  color: v.Z.BG_BRAND
+                                  color: N.Z.BG_BRAND
                               })
                             : null;
                     }
@@ -217,7 +217,7 @@ let eo = l.memo(function (e) {
         className: $.privateChannels,
         'aria-label': J.intl.string(J.t.ZH9aPz),
         children: [
-            (0, i.jsx)(M.Z, {
+            (0, i.jsx)(k.Z, {
                 tutorialId: 'direct-messages',
                 position: 'right',
                 offsetX: -52,
@@ -316,19 +316,19 @@ function ed() {
             [e]
         ),
         n = !U.bm.useSetting(),
-        { theme: l } = (0, u.cj)([k.Z], () => ({ theme: k.Z.theme })),
+        { theme: l } = (0, u.cj)([M.Z], () => ({ theme: M.Z.theme })),
         r = (0, u.e7)([G.Z], () => G.Z.hasLibraryApplication()),
         a = (0, u.e7)([B.Z], () => B.Z.getCurrentPath()),
-        o = (0, N.Q3)('PrivateChannels'),
+        o = (0, v.Q3)('PrivateChannels'),
         [c, d] = (0, w.Z)((e) => {
             let { channelId: t, path: n } = e;
             return [t, n];
         }, s.X),
         h = (0, R.i)({ selected: null == d ? t : d.startsWith(q.Z5c.APPLICATION_STORE) }),
-        m = (0, A.a)(),
+        m = (0, Z.a)(),
         p = (function () {
             let e = U.Ex.useSetting(),
-                t = (0, x.Z)();
+                t = (0, b.Z)();
             return !0 === e && !0 === t;
         })(),
         g = (0, I.n)();

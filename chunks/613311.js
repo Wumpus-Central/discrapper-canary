@@ -17,14 +17,14 @@ var i = n(200651),
     E = n(666743),
     I = n(115130),
     C = n(812206),
-    v = n(770146),
-    N = n(600164),
+    N = n(770146),
+    v = n(600164),
     T = n(606081),
     S = n(252618),
-    Z = n(100159),
-    A = n(646288),
-    x = n(984370),
-    b = n(706454),
+    A = n(100159),
+    Z = n(646288),
+    b = n(984370),
+    x = n(706454),
     L = n(210887),
     y = n(430824),
     P = n(496675),
@@ -33,8 +33,8 @@ var i = n(200651),
     j = n(580130),
     D = n(55563),
     w = n(551428),
-    M = n(695103),
-    k = n(451478),
+    k = n(695103),
+    M = n(451478),
     U = n(626135),
     G = n(572004),
     B = n(630388),
@@ -128,30 +128,30 @@ class ec extends l.PureComponent {
             carousel_video_count: l.videos,
             location: i.location.page,
             source: this._analyticsSource,
-            ...(0, Z.Z)(e, !0)
+            ...(0, A.Z)(e, !0)
         }),
             (this._trackedViewed = !0);
     }
     renderHeader(e, t) {
         let { channel: n, isAuthenticated: r } = this.props;
-        return (0, i.jsx)(x.Z, {
+        return (0, i.jsx)(b.Z, {
             isAuthenticated: r,
             toolbar: this.renderHeaderToolbar(e, t),
             children:
                 null != n
                     ? (0, i.jsxs)(l.Fragment, {
                           children: [
-                              (0, i.jsx)(x.Z.Icon, {
+                              (0, i.jsx)(b.Z.Icon, {
                                   icon: d.lO_,
                                   'aria-label': ea.intl.string(ea.t['P1/Erq'])
                               }),
-                              (0, i.jsx)(x.Z.Title, { children: n.name })
+                              (0, i.jsx)(b.Z.Title, { children: n.name })
                           ]
                       })
                     : null != t && t.premium
                       ? (0, i.jsxs)(l.Fragment, {
                             children: [
-                                (0, i.jsx)(x.Z.Icon, {
+                                (0, i.jsx)(b.Z.Icon, {
                                     icon: d.SrA,
                                     'aria-label': ea.intl.string(ea.t.Ipxkoq)
                                 }),
@@ -161,11 +161,11 @@ class ec extends l.PureComponent {
                       : null != t
                         ? (0, i.jsxs)(l.Fragment, {
                               children: [
-                                  (0, i.jsx)(x.Z.Icon, {
+                                  (0, i.jsx)(b.Z.Icon, {
                                       icon: d.lO_,
                                       'aria-label': ea.intl.string(ea.t['P1/Erq'])
                                   }),
-                                  (0, i.jsx)(x.Z.Title, { children: t.name })
+                                  (0, i.jsx)(b.Z.Title, { children: t.name })
                               ]
                           })
                         : null
@@ -257,7 +257,7 @@ class ec extends l.PureComponent {
         if (null == r) throw Error('Rendering ApplicationStoreListing without description');
         return (0, i.jsxs)(l.Fragment, {
             children: [
-                (0, i.jsx)(v.Z, {
+                (0, i.jsx)(N.Z, {
                     tag: 'h1',
                     children: ea.intl.format(ea.t.tluX4O, { name: n.name })
                 }),
@@ -344,9 +344,9 @@ class ec extends l.PureComponent {
             return (0, i.jsxs)(l.Fragment, {
                 children: [
                     this.renderHeader(e, t),
-                    (0, i.jsx)(N.Z, {
-                        align: N.Z.Align.CENTER,
-                        justify: N.Z.Justify.CENTER,
+                    (0, i.jsx)(v.Z, {
+                        align: v.Z.Align.CENTER,
+                        justify: v.Z.Justify.CENTER,
                         children: (0, i.jsx)(d.$jN, { className: es.spinner })
                     })
                 ]
@@ -396,7 +396,7 @@ class ec extends l.PureComponent {
                 let { sku: i } = this.props;
                 null != i &&
                     U.default.track(el.rMx.STORE_LISTING_MEDIA_SCROLLED, {
-                        ...(0, Z.Z)(i),
+                        ...(0, A.Z)(i),
                         card_index: n,
                         card_type: e.type === el.s9s.IMG ? 'image' : 'video'
                     });
@@ -513,7 +513,7 @@ class ec extends l.PureComponent {
                             children: (0, i.jsxs)('div', {
                                 className: a()(es.headerPurchase, { [es.active]: o }),
                                 children: [
-                                    null != t ? (0, A.Z)(t) : null,
+                                    null != t ? (0, Z.Z)(t) : null,
                                     null != e && null != t ? (0, i.jsx)('div', { children: 'deprecated!' }) : null,
                                     (0, i.jsx)(Q.Z, {
                                         messageStyle: Q.G.SHORT,
@@ -543,9 +543,9 @@ class ec extends l.PureComponent {
             eo(this, 'renderListing', () => {
                 let { application: e, storeListing: t, sku: n, pageSize: l } = this.props;
                 return null == e || null == n || null == t || t.isSlimDirectoryVersion()
-                    ? (0, i.jsx)(N.Z, {
-                          align: N.Z.Align.CENTER,
-                          justify: N.Z.Justify.CENTER,
+                    ? (0, i.jsx)(v.Z, {
+                          align: v.Z.Align.CENTER,
+                          justify: v.Z.Justify.CENTER,
                           children: (0, i.jsx)(d.$jN, {})
                       })
                     : l === ei.b.SMALL
@@ -556,7 +556,7 @@ class ec extends l.PureComponent {
 }
 let ed = (0, f.Z)(
     (0, E.Z)(
-        s.ZP.connectStores([R.Z, L.Z, b.default, k.Z, w.Z, D.Z, M.Z, I.Z, C.Z, O.Z, y.Z, j.Z], (e) => {
+        s.ZP.connectStores([R.Z, L.Z, x.default, M.Z, w.Z, D.Z, k.Z, I.Z, C.Z, O.Z, y.Z, j.Z], (e) => {
             let t,
                 n,
                 i,
@@ -569,7 +569,7 @@ let ed = (0, f.Z)(
                 null != (i = C.Z.getApplication(r)) && (t = i.destinationSkuId), (n = null != t ? D.Z.get(t) : null);
             }
             (null == n ? void 0 : n.flags) != null && (0, B.yE)(n.flags, el.l4R.STICKER_PACK) && (n = null);
-            let c = null != r && (M.Z.inTestModeForApplication(r) || I.Z.inDevModeForApplication(r));
+            let c = null != r && (k.Z.inTestModeForApplication(r) || I.Z.inDevModeForApplication(r));
             return {
                 skuId: t,
                 application: null != r ? C.Z.getApplication(r) : null,
@@ -577,7 +577,7 @@ let ed = (0, f.Z)(
                 didFetchEntitlements: null != r && j.Z.applicationIdsFetched.has(r),
                 shouldFetchStatistics: s && null != r && O.Z.shouldFetchStatisticsForApplication(r),
                 sku: n,
-                isFocused: k.Z.isFocused(),
+                isFocused: M.Z.isFocused(),
                 storeListing: w.Z.getStoreListing({
                     storeListingId: a,
                     skuId: t,
@@ -587,7 +587,7 @@ let ed = (0, f.Z)(
                 isInTestMode: null != r && c,
                 matureAgree: R.Z.didMatureAgree,
                 theme: L.Z.theme,
-                locale: b.default.locale,
+                locale: x.default.locale,
                 guild: null != o ? y.Z.getGuild(o.getGuildId()) : null
             };
         })(ec)

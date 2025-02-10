@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(653041), n(47120);
+n.d(t, { Z: () => Z }), n(653041), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(442837),
@@ -17,15 +17,15 @@ var i = n(200651),
     E = n(283595),
     I = n(417363),
     C = n(626135),
-    v = n(804739),
-    N = n(346329),
+    N = n(804739),
+    v = n(346329),
     T = n(981631),
     S = n(388032);
-let Z = d.Z.get(T.ABu.XBOX).name;
-function A(e) {
+let A = d.Z.get(T.ABu.XBOX).name;
+function Z(e) {
     let { currentActivities: t } = e,
         n = t.length > 1,
-        A = (function (e) {
+        Z = (function (e) {
             let { currentActivities: t } = e,
                 n = (0, r.e7)([_.Z], () => _.Z.getAccounts().some((e) => e.type === d.Z.get(T.ABu.XBOX).type)),
                 l = t.some((e) => {
@@ -37,10 +37,10 @@ function A(e) {
                 : (0, i.jsx)(a.sNh, {
                       id: 'xbox-connect',
                       action: () => c.Z.open(T.oAB.CONNECTIONS),
-                      label: S.intl.formatToPlainString(S.t.XWSHTU, { platform: Z })
+                      label: S.intl.formatToPlainString(S.t.XWSHTU, { platform: A })
                   });
         })(e),
-        x = (function (e) {
+        b = (function (e) {
             let { currentActivities: t } = e,
                 n = l.useContext(C.AnalyticsContext);
             return (0, r.Wu)(
@@ -55,7 +55,7 @@ function A(e) {
                                 ...e,
                                 libraryApplication: l,
                                 canJoin: null != t && (0, u.Z)(t, T.xjy.JOIN) && t.type === T.IIU.PLAYING,
-                                canPlay: (0, v.t)({
+                                canPlay: (0, N.t)({
                                     LibraryApplicationStore: E.Z,
                                     LaunchableGameStore: g.Z,
                                     DispatchApplicationStore: I.Z,
@@ -71,12 +71,12 @@ function A(e) {
                 [n.location, t]
             );
         })(e),
-        b = [];
-    for (let e of x) {
+        x = [];
+    for (let e of b) {
         let { activity: t } = e;
         null != t &&
             null != t.type &&
-            b.push(
+            x.push(
                 (function (e, t) {
                     let { canJoin: n, activity: l, activityUser: r } = e;
                     if (!n || null == l) return null;
@@ -103,7 +103,7 @@ function A(e) {
                     return (0, i.jsx)(a.sNh, {
                         id: 'play-'.concat(n.session_id),
                         action: function () {
-                            (0, N.playApplication)(l.id, r, {
+                            (0, v.playApplication)(l.id, r, {
                                 analyticsParams: {
                                     location: {
                                         ...s,
@@ -118,5 +118,5 @@ function A(e) {
                 })(e, n)
             );
     }
-    return [A, ...b];
+    return [Z, ...x];
 }

@@ -19,8 +19,8 @@ function _(e) {
         E = (0, h.Z)(t),
         I = (0, u.Z)(t),
         C = (0, d.Z)(t),
-        v = (0, s.Z)(t),
-        N = (0, o.Z)(t);
+        N = (0, s.Z)(t),
+        v = (0, o.Z)(t);
     return (
         (0, r.ZP)(() => {
             let e = t.currentActivities
@@ -45,8 +45,8 @@ function _(e) {
                     children: [E, I]
                 }),
                 (0, i.jsx)(l.kSQ, { children: C }),
-                (0, i.jsx)(l.kSQ, { children: v }),
-                N
+                (0, i.jsx)(l.kSQ, { children: N }),
+                v
             ]
         })
     );

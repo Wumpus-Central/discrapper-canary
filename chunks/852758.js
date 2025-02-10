@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(47120);
+n.d(t, { Z: () => A }), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(990547),
@@ -17,29 +17,29 @@ var i = n(200651),
     E = n(23434),
     I = n(1964),
     C = n(762756),
-    v = n(308569),
-    N = n(981631),
+    N = n(308569),
+    v = n(981631),
     T = n(815660),
     S = n(388032);
-function Z() {
+function A() {
     let { action: e, theme: t } = (0, a.cj)([E.Z, f.Z], () => ({
             action: E.Z.getAction(),
             theme: f.Z.theme
         })),
-        Z = I.Z.getVerificationTypes(e),
-        [A, x] = l.useState(0),
-        b = (0, h.Z)(Z);
+        A = I.Z.getVerificationTypes(e),
+        [Z, b] = l.useState(0),
+        x = (0, h.Z)(A);
     (0, p.Z)(
         {
             type: r.ImpressionTypes.MODAL,
             name: r.ImpressionNames.USER_ACTION_REQUIRED,
             properties: {
-                verification_type: Z[0],
-                verification_types: Z
+                verification_type: A[0],
+                verification_types: A
             }
         },
         {},
-        [Z.toString()]
+        [A.toString()]
     );
     let L = () => {
             (0, u.FD)(),
@@ -49,7 +49,7 @@ function Z() {
                         return (t) => (0, i.jsx)(e, { ...t });
                     },
                     {
-                        modalKey: v.F0,
+                        modalKey: N.F0,
                         Layer: g.ZP
                     }
                 );
@@ -81,8 +81,8 @@ function Z() {
             []
         ),
         l.useEffect(() => {
-            (null == b ? void 0 : b[0]) === N.PUi.PHONE &&
-                (null == Z ? void 0 : Z[0]) === N.PUi.EMAIL &&
+            (null == x ? void 0 : x[0]) === v.PUi.PHONE &&
+                (null == A ? void 0 : A[0]) === v.PUi.EMAIL &&
                 (0, o.ZDy)(
                     async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 468026));
@@ -95,30 +95,30 @@ function Z() {
                             });
                     },
                     {
-                        modalKey: v.HR,
+                        modalKey: N.HR,
                         Layer: g.ZP,
                         onCloseCallback: L
                     }
                 );
-        }, [Z, b]),
+        }, [A, x]),
         (0, i.jsx)(C.Z, {
-            types: Z,
-            captchaKey: A,
+            types: A,
+            captchaKey: Z,
             onCaptchaVerify: (e) => {
                 s.tn
                     .post({
-                        url: N.ANM.CAPTCHA,
+                        url: v.ANM.CAPTCHA,
                         body: { captcha_key: e },
                         oldFormErrors: !0,
                         rejectWithError: !0
                     })
                     .then(d.xf, () => {
-                        x((e) => e + 1);
+                        b((e) => e + 1);
                     });
             },
             theme: t,
             onClick: (e) => {
-                e === N.PUi.EMAIL_OR_PHONE || e === N.PUi.EMAIL || e === N.PUi.REVERIFY_EMAIL ? L() : y();
+                e === v.PUi.EMAIL_OR_PHONE || e === v.PUi.EMAIL || e === v.PUi.REVERIFY_EMAIL ? L() : y();
             },
             onLogout: () => {
                 (0, o.ZDy)(

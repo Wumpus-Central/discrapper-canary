@@ -10,8 +10,8 @@ var t = l(200651),
     d = l(687058),
     m = l(537135),
     x = l(176940),
-    g = l(388032),
-    h = l(724716),
+    h = l(388032),
+    g = l(724716),
     Z = l(760416),
     v = l(814632);
 function S(e) {
@@ -19,7 +19,7 @@ function S(e) {
     a()(null != n, 'Camera capture device cannot be null');
     let r = (0, x.Z)(),
         S = (0, d.Z)(),
-        [C, j] = i.useState(
+        [j, C] = i.useState(
             (function (e, n, l) {
                 if (null != n && null != l) {
                     let t = n.find((n) => n.id === e);
@@ -30,7 +30,7 @@ function S(e) {
             })(n.id, r, S)
         );
     return (
-        null != C && s(C),
+        null != j && s(j),
         (0, t.jsx)(i.Fragment, {
             children: (0, t.jsxs)(c.xJW, {
                 title: 'Capture Device',
@@ -41,27 +41,27 @@ function S(e) {
                         children: (0, t.jsxs)(m.Z, {
                             children: [
                                 (0, t.jsx)('span', {
-                                    className: h.ellipsisText,
+                                    className: g.ellipsisText,
                                     children: n.name
                                 }),
                                 (0, t.jsx)(c.zxk, {
-                                    className: h.changeButton,
+                                    className: g.changeButton,
                                     color: c.zxk.Colors.PRIMARY,
                                     size: c.zxk.Sizes.SMALL,
                                     onClick: l,
-                                    children: g.intl.string(g.t.GEgsAw)
+                                    children: h.intl.string(h.t.GEgsAw)
                                 })
                             ]
                         })
                     }),
                     (0, t.jsx)(c.xJW, {
                         className: v.marginTop8,
-                        title: g.intl.string(g.t.y4ooen),
+                        title: h.intl.string(h.t.y4ooen),
                         children: (0, t.jsx)(c.q4e, {
-                            value: C,
+                            value: j,
                             className: v.__invalid_marginaTop8,
                             onChange: (e) => {
-                                j(e), s(e);
+                                C(e), s(e);
                             },
                             options: o().map(S, (e) => {
                                 let { id: n, name: l } = e;

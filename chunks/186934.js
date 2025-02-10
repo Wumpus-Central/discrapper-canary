@@ -23,7 +23,7 @@ function g(e) {
                     className: t ? null : l()(m.marginTop8, m.marginBottom20),
                     value: n,
                     onChange: (e) => o.Z.setSidechainCompression(e),
-                    note: h.intl.string(h.t.IwZbbG),
+                    note: h.intl.string(h.t.zlA23N),
                     hideBorder: t,
                     children: h.intl.string(h.t['/jwMtr'])
                 }),

@@ -19,24 +19,24 @@ var l = n(287734),
 function I(e) {
     let { party: t, onChannelContextMenu: n, quest: I } = e,
         C = (0, _.L)(),
-        { voiceChannels: v, currentActivities: N, partiedMembers: T, applicationStreams: S, guildContext: Z } = t,
-        A = [],
-        x = (e) => {
+        { voiceChannels: N, currentActivities: v, partiedMembers: T, applicationStreams: S, guildContext: A } = t,
+        Z = [],
+        b = (e) => {
             var t, n;
-            let { length: l } = A;
+            let { length: l } = Z;
             if (0 === l) {
-                A.push(e);
+                Z.push(e);
                 return;
             }
-            let r = A[l - 1],
+            let r = Z[l - 1],
                 a = ''.concat(null !== (t = null == e ? void 0 : e.key) && void 0 !== t ? t : ''),
                 s = ''.concat(null !== (n = null == r ? void 0 : r.key) && void 0 !== n ? n : '').startsWith('game') && a.startsWith('rich-presence');
-            A.push((0, i.jsx)(g.Z.Separator, { inset: s }, 'sep-'.concat(a))), A.push(e);
+            Z.push((0, i.jsx)(g.Z.Separator, { inset: s }, 'sep-'.concat(a))), Z.push(e);
         };
-    for (let { activity: e } of (v.length > 0 &&
-        v.forEach((e) => {
+    for (let { activity: e } of (N.length > 0 &&
+        N.forEach((e) => {
             let { members: t, channel: l, guild: r } = e;
-            x(
+            b(
                 (0, i.jsx)(
                     g.Z.VoiceSection,
                     {
@@ -65,7 +65,7 @@ function I(e) {
         if (null != e) {
             let t = p.ct(e);
             if (null != t) {
-                x(t);
+                b(t);
                 break;
             }
         }
@@ -74,11 +74,11 @@ function I(e) {
             C &&
             S.forEach((e) => {
                 let { stream: t, streamUser: n, activity: a } = e;
-                x(
+                b(
                     (0, i.jsx)(
                         g.Z.ApplicationStreamingSection,
                         {
-                            guildId: null == Z ? void 0 : Z.id,
+                            guildId: null == A ? void 0 : A.id,
                             user: n,
                             activity: a,
                             applicationStream: t,
@@ -90,12 +90,12 @@ function I(e) {
                     )
                 );
             }),
-        N.forEach((e, t) => {
-            var n, l, r, p, _, C, S, A, b;
+        v.forEach((e, t) => {
+            var n, l, r, p, _, C, S, Z, x;
             let { activity: L, game: y, playingMembers: P, activityUser: O } = e;
             if (null == L || null == L.type) return null;
-            if (N.length > 1 && L.type === E.IIU.PLAYING && !(0, a.Z)(L) && null != y)
-                x(
+            if (v.length > 1 && L.type === E.IIU.PLAYING && !(0, a.Z)(L) && null != y)
+                b(
                     (0, i.jsx)(
                         g.Z.GameSection,
                         {
@@ -113,9 +113,9 @@ function I(e) {
                 );
             else if ((0, s.Z)(L)) {
                 let e = new Set(P.map((e) => e.id)),
-                    t = null === (r = v.find((e) => null != e)) || void 0 === r ? void 0 : r.channel;
+                    t = null === (r = N.find((e) => null != e)) || void 0 === r ? void 0 : r.channel;
                 null != t &&
-                    x(
+                    b(
                         (0, i.jsx)(
                             g.Z.EmbeddedActivitySection,
                             {
@@ -128,7 +128,7 @@ function I(e) {
                         )
                     );
             } else if ((null != L.assets || (0, a.Z)(L)) && L.type === E.IIU.PLAYING)
-                x(
+                b(
                     (0, i.jsx)(
                         g.Z.RichPresenceSection,
                         {
@@ -139,13 +139,13 @@ function I(e) {
                     )
                 );
             else if ((0, d.Z)(L)) {
-                let e = v.length > 0 && v[0].members.length > 1,
+                let e = N.length > 0 && N[0].members.length > 1,
                     n = P.length > 1;
-                x(
+                b(
                     (0, i.jsx)(
                         g.Z.TwitchSection,
                         {
-                            guildId: null == Z ? void 0 : Z.id,
+                            guildId: null == A ? void 0 : A.id,
                             activity: L,
                             user: e || n ? O : null,
                             getAssetImage: m.getAssetImage
@@ -155,7 +155,7 @@ function I(e) {
                 );
             } else
                 (0, o.Z)(L)
-                    ? x(
+                    ? b(
                           (0, i.jsx)(
                               g.Z.SpotifySection,
                               {
@@ -173,7 +173,7 @@ function I(e) {
                           )
                       )
                     : (null != L.assets || (0, a.Z)(L)) && L.type === E.IIU.LISTENING
-                      ? x(
+                      ? b(
                             (0, i.jsx)(
                                 g.Z.RichPresenceSection,
                                 {
@@ -183,9 +183,9 @@ function I(e) {
                                 'rich-presence-'.concat(null !== (S = L.session_id) && void 0 !== S ? S : t, '-').concat(O.id)
                             )
                         )
-                      : (0, c.Z)(L) && x((0, i.jsx)(g.Z.XboxSection, { title: y.name }, 'xbox-'.concat(null !== (A = L.session_id) && void 0 !== A ? A : t)));
-            null != I && null != y && (0, u._D)(L, I) && x((0, i.jsx)(h.Z, { quest: I }, 'quest-'.concat(I.id, '-').concat(null !== (b = L.session_id) && void 0 !== b ? b : t)));
+                      : (0, c.Z)(L) && b((0, i.jsx)(g.Z.XboxSection, { title: y.name }, 'xbox-'.concat(null !== (Z = L.session_id) && void 0 !== Z ? Z : t)));
+            null != I && null != y && (0, u._D)(L, I) && b((0, i.jsx)(h.Z, { quest: I }, 'quest-'.concat(I.id, '-').concat(null !== (x = L.session_id) && void 0 !== x ? x : t)));
         }),
-        A.length > 0 ? (0, i.jsx)(g.Z.Body, { children: A }) : null
+        Z.length > 0 ? (0, i.jsx)(g.Z.Body, { children: Z }) : null
     );
 }

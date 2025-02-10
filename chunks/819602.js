@@ -19,8 +19,8 @@ var l = n(200651),
     _ = n(122021),
     p = n(275759),
     m = n(888496),
-    v = n(753194),
-    I = n(598077),
+    I = n(753194),
+    v = n(598077),
     O = n(671533),
     N = n(49012),
     h = n(981631),
@@ -32,37 +32,37 @@ function P(e) {
     let a,
         c,
         u,
-        { connectedAccount: E, theme: A, locale: I, userId: P, className: L, showMetadata: R, showInvisibleIcon: b } = e;
+        { connectedAccount: E, theme: A, locale: v, userId: P, className: L, showMetadata: R, showInvisibleIcon: f } = e;
     null == R && (R = !0);
-    let f = null !== (n = E.metadata) && void 0 !== n ? n : {},
-        y = R ? (0, p.FI)(f[x.PC.CREATED_AT], I) : null,
+    let b = null !== (n = E.metadata) && void 0 !== n ? n : {},
+        y = R ? (0, p.FI)(b[x.PC.CREATED_AT], v) : null,
         g = (0, s.dQu)(i.Z.unsafe_rawColors.TWITTER).hex(),
         D = C.intl.string(C.t['6H6h1t']);
     if (R)
         switch (E.type) {
             case h.ABu.REDDIT:
-                a = (0, m.oP)(f);
+                a = (0, m.oP)(b);
                 break;
             case h.ABu.STEAM:
-                a = (0, m.Dq)(f);
+                a = (0, m.Dq)(b);
                 break;
             case h.ABu.BLUESKY:
             case h.ABu.MASTODON:
             case h.ABu.TWITTER:
-                (a = (0, m.rJ)(f)), '1' === f[x.PC.TWITTER_VERIFIED] && ((c = g), (D = C.intl.string(C.t.Jebrw8)));
+                (a = (0, m.rJ)(b)), '1' === b[x.PC.TWITTER_VERIFIED] && ((c = g), (D = C.intl.string(C.t.Jebrw8)));
                 break;
             case h.ABu.PAYPAL:
-                a = (0, m.li)(f);
+                a = (0, m.li)(b);
                 break;
             case h.ABu.EBAY:
-                a = (0, m.ul)(f);
+                a = (0, m.ul)(b);
                 break;
             case h.ABu.TIKTOK:
-                a = (0, m.hf)(f);
+                a = (0, m.hf)(b);
         }
     let j = d.Z.get((0, _.rR)(E.type)),
         U = null == j ? void 0 : null === (t = j.getPlatformUserUrl) || void 0 === t ? void 0 : t.call(j, E);
-    null != b && b
+    null != f && f
         ? (u = (0, l.jsx)(s.kZF, {
               size: 'md',
               color: 'currentColor',
@@ -94,7 +94,7 @@ function P(e) {
     let G = (0, s.dQu)(i.Z.colors.INTERACTIVE_MUTED).hex(),
         M = (0, s.dQu)(i.Z.colors.INTERACTIVE_ACTIVE).hex(),
         B = E.verified
-            ? (0, l.jsx)(v.Z, {
+            ? (0, l.jsx)(I.Z, {
                   className: S.connectedAccountVerifiedIcon,
                   color: null != c ? c : G,
                   forcedIconColor: M,
@@ -230,7 +230,7 @@ function L(e) {
                                     children: [
                                         null != t.application.bot
                                             ? (0, l.jsx)(u.Z, {
-                                                  user: new I.Z(t.application.bot),
+                                                  user: new v.Z(t.application.bot),
                                                   size: s.EFr.SIZE_16
                                               })
                                             : null,

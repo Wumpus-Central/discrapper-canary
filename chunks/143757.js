@@ -21,14 +21,14 @@ var i = n(200651),
     E = n(906732),
     I = n(87005),
     C = n(753972),
-    v = n(895924),
-    N = n(812236),
+    N = n(895924),
+    v = n(812236),
     T = n(82295),
     S = n(984370),
-    Z = n(740492),
-    A = n(973616),
-    x = n(592125),
-    b = n(626135),
+    A = n(740492),
+    Z = n(973616),
+    b = n(592125),
+    x = n(626135),
     L = n(823379),
     y = n(728345),
     P = n(812206),
@@ -42,21 +42,21 @@ async function w(e, t, n) {
     if (null == i)
         try {
             var l, r, a;
-            i = null !== (a = null === (l = P.Z.getApplication(e.id)) || void 0 === l ? void 0 : l.bot) && void 0 !== a ? a : null === (r = A.ZP.createFromServer(await (0, y.UM)(e.id))) || void 0 === r ? void 0 : r.bot;
+            i = null !== (a = null === (l = P.Z.getApplication(e.id)) || void 0 === l ? void 0 : l.bot) && void 0 !== a ? a : null === (r = Z.ZP.createFromServer(await (0, y.UM)(e.id))) || void 0 === r ? void 0 : r.bot;
         } catch (e) {
             t(void 0);
             return;
         }
     if (null != i) {
         let l;
-        let r = null == x.Z.getDMFromUserId(i.id);
+        let r = null == b.Z.getDMFromUserId(i.id);
         try {
             l = await c.Z.openPrivateChannel([i.id], !1, !1, f.Z.APP_DMS_QUICK_LAUNCHER);
         } catch (e) {
             t(void 0);
         }
         if (
-            (b.default.track(O.rMx.APP_DMS_QUICK_LAUNCHER_CLICKED, {
+            (x.default.track(O.rMx.APP_DMS_QUICK_LAUNCHER_CLICKED, {
                 application_id: e.id,
                 is_new_dm: r,
                 channel_id: l
@@ -67,9 +67,9 @@ async function w(e, t, n) {
             return;
         }
         try {
-            await (0, N.ZP)(l, e.id);
+            await (0, v.ZP)(l, e.id);
         } catch (e) {
-            if (e.message === N.sV) {
+            if (e.message === v.sV) {
                 t(void 0);
                 return;
             }
@@ -78,14 +78,14 @@ async function w(e, t, n) {
             targetApplicationId: e.id,
             channelId: l,
             analyticsLocations: n,
-            commandOrigin: v.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON,
+            commandOrigin: N.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON,
             onExecutedCallback() {
                 t(void 0);
             }
         });
     } else t(void 0);
 }
-function M(e) {
+function k(e) {
     let { analyticsLocations: t, analyticsContext: n } = e;
     return (0, i.jsx)(S.Z.Icon, {
         onClick: () => {
@@ -103,9 +103,9 @@ function M(e) {
         tooltipPosition: 'top'
     });
 }
-function k(e) {
+function M(e) {
     let { application: t, loadingAppId: n, setLoadingAppId: l, botUserId: r, analyticsLocations: c } = e,
-        d = (0, s.e7)([x.Z], () => x.Z.getDMFromUserId(r)),
+        d = (0, s.e7)([b.Z], () => b.Z.getDMFromUserId(r)),
         u = (0, s.e7)([m.ZP], () => m.ZP.getCurrentEmbeddedActivity()),
         p = (0, h.GK)(),
         _ = null != u && u.applicationId === t.id && (p || (0, g.p)(u.location) === d),
@@ -153,7 +153,7 @@ function U(e) {
         children: t.map((e) => {
             var t;
             return (0, i.jsx)(
-                k,
+                M,
                 {
                     application: e,
                     loadingAppId: n,
@@ -173,7 +173,7 @@ let G = (e) => {
     });
 };
 function B() {
-    let e = (0, s.e7)([Z.ZP], () => Z.ZP.showPlayAgain),
+    let e = (0, s.e7)([A.ZP], () => A.ZP.showPlayAgain),
         { frecentApps: t } = (0, I.f)({
             context: { type: 'contextless' },
             onlyActivityApps: !0,
@@ -205,7 +205,7 @@ function V(e) {
     return (
         l.useLayoutEffect(() => {
             var e;
-            !c.current && ((c.current = !0), b.default.track(O.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION, { apps_dm_quick_launcher_application_ids: null !== (e = h.map((e) => Number(e.id))) && void 0 !== e ? e : [] }));
+            !c.current && ((c.current = !0), x.default.track(O.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION, { apps_dm_quick_launcher_application_ids: null !== (e = h.map((e) => Number(e.id))) && void 0 !== e ? e : [] }));
         }, [h]),
         (0, i.jsxs)(i.Fragment, {
             children: [
@@ -220,7 +220,7 @@ function V(e) {
                                     className: D.headerText,
                                     children: R.intl.string(R.t.vayAzs)
                                 }),
-                                (0, i.jsx)(M, {
+                                (0, i.jsx)(k, {
                                     analyticsLocations: o,
                                     analyticsContext: d
                                 })

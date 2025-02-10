@@ -1,45 +1,45 @@
 e.d(t, {
     q: () => c,
-    z: () => a
+    z: () => s
 });
 var i = e(200651);
 e(192379);
 var r = e(120356),
     o = e.n(r),
     l = e(481060),
-    s = e(564515);
-function a(n) {
+    a = e(564515);
+function s(n) {
     let { children: t } = n;
     return (0, i.jsx)('div', {
-        className: s.cellGroup,
+        className: a.cellGroup,
         children: (0, i.jsx)('div', {
-            className: s.content,
+            className: a.content,
             children: t
         })
     });
 }
 function c(n) {
-    let { icon: t, title: e, description: r, iconClassName: a, color: c, listType: d = 'icon', index: x } = n;
+    let { icon: t, title: e, description: r, iconClassName: s, color: c, listType: d = 'icon', index: x } = n;
     return (0, i.jsxs)('div', {
-        className: s.cell,
+        className: a.cell,
         children: [
             'numbered' === d && null != x
                 ? (0, i.jsx)(l.X6q, {
                       variant: 'heading-md/semibold',
                       color: 'text-brand',
-                      className: s.number,
+                      className: a.number,
                       children: x + 1
                   })
                 : null != t &&
                   (0, i.jsx)('div', {
-                      className: s.iconContainer,
+                      className: a.iconContainer,
                       children: (0, i.jsx)(t, {
                           color: null != c ? c : 'currentColor',
-                          className: o()(s.icon, a)
+                          className: o()(a.icon, s)
                       })
                   }),
             (0, i.jsxs)('div', {
-                className: s.textContainer,
+                className: a.textContainer,
                 children: [
                     (0, i.jsx)(l.Text, {
                         variant: 'text-md/semibold',

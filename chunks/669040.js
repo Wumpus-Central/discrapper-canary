@@ -269,7 +269,7 @@ let z = 0,
             ed = (0, N.Ng)(),
             ef = er && !$ && !u.tq,
             e_ = null != ec || null != ed,
-            { enabled: ep } = D.Gi.useExperiment(
+            { enabled: ep } = D.G.useExperiment(
                 { location: 'Premium Emoji Roadblock' },
                 {
                     autoTrackExposure: ef && !e_,

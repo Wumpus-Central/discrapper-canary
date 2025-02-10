@@ -17,28 +17,28 @@ var i = n(200651),
     E = n(746728),
     I = n(140700),
     C = n(665807),
-    v = n(188493),
-    N = n(294330),
+    N = n(188493),
+    v = n(294330),
     T = n(981631),
     S = n(130552);
-let Z = Object.freeze({
+let A = Object.freeze({
         top: 0,
         bottom: 0,
         left: 32,
         right: 202
     }),
-    A = Object.freeze({
+    Z = Object.freeze({
         top: 0,
         bottom: 0,
         left: 32,
         right: 32
     }),
-    x = {
+    b = {
         page: T.ZY5.GUILD_DISCOVERY,
         object: T.qAy.CARD,
         section: T.jXE.DISCOVER_SEARCH
     },
-    b = o().throttle(m.c6, 1000, {
+    x = o().throttle(m.c6, 1000, {
         leading: !1,
         trailing: !0
     });
@@ -49,21 +49,21 @@ function L(e) {
         O = l.useContext(u.AnalyticsContext),
         [R, j] = l.useState((0, _.PM)()),
         [D, w] = l.useState(!0),
-        M = l.useRef(D),
-        [k, U] = l.useState(3),
-        G = l.useRef(k),
+        k = l.useRef(D),
+        [M, U] = l.useState(3),
+        G = l.useRef(M),
         B = l.useRef(null),
         V = l.useCallback(
             (e) => {
-                if (null != e && !P && !m) 336 * (o.length / k) <= e.height && L();
+                if (null != e && !P && !m) 336 * (o.length / M) <= e.height && L();
             },
-            [P, m, o.length, k, L]
+            [P, m, o.length, M, L]
         ),
         H = (0, d.y)((e) => {
             let t = null == e ? void 0 : e.getBoundingClientRect();
             if (null == t) return;
             let n = t.width;
-            n < 1024 && M.current ? ((M.current = !1), w(!1)) : n > 1024 && !M.current && ((M.current = !0), w(!0));
+            n < 1024 && k.current ? ((k.current = !1), w(!1)) : n > 1024 && !k.current && ((k.current = !0), w(!0));
             let i = 1;
             for (n -= D ? 450 : 0, n -= 280; n > 0; ) (n -= 264), (i += 1);
             i !== G.current && ((G.current = i), U(i)), V(t);
@@ -76,7 +76,7 @@ function L(e) {
             j((0, _.PM)());
         }, [T]),
         l.useEffect(() => {
-            b({
+            x({
                 loadId: t,
                 searchId: R,
                 query: T,
@@ -103,7 +103,7 @@ function L(e) {
                                     !D &&
                                         (0, i.jsxs)('div', {
                                             className: S.headingFilters,
-                                            children: [(0, i.jsx)(I.Z, { loadId: t }), (0, i.jsx)(v.Z, { loadId: t })]
+                                            children: [(0, i.jsx)(I.Z, { loadId: t }), (0, i.jsx)(N.Z, { loadId: t })]
                                         }),
                                     P && (0, i.jsx)(C.Z, { loadId: t })
                                 ]
@@ -170,9 +170,9 @@ function L(e) {
                         'div',
                         {
                             style: n,
-                            children: (0, i.jsx)(N.ZP, {
+                            children: (0, i.jsx)(v.ZP, {
                                 guildId: e,
-                                onClick: async (e) => await X(e, t, y, x),
+                                onClick: async (e) => await X(e, t, y, b),
                                 onView: (e) => F(e)
                             })
                         },
@@ -222,7 +222,7 @@ function L(e) {
                 ),
             [L]
         ),
-        $ = D ? Z : A;
+        $ = D ? A : Z;
     return (0, i.jsx)('div', {
         className: S.container,
         ref: H,
@@ -230,7 +230,7 @@ function L(e) {
             ref: B,
             className: S.masonryList,
             sections: z,
-            columns: k,
+            columns: M,
             itemGutter: 16,
             padding: $,
             renderItem: Q,
@@ -250,7 +250,7 @@ function L(e) {
                               children: [
                                   (0, i.jsx)('div', {
                                       className: S.sidebarLanguageSelect,
-                                      children: (0, i.jsx)(v.Z, { loadId: t })
+                                      children: (0, i.jsx)(N.Z, { loadId: t })
                                   }),
                                   (0, i.jsx)(E.Z, { loadId: t })
                               ]

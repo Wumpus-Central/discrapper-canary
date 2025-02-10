@@ -17,14 +17,14 @@ var i = n(200651),
     E = n(984370),
     I = n(518311),
     C = n(199104),
-    v = n(922611),
-    N = n(108427),
+    N = n(922611),
+    v = n(108427),
     T = n(210887),
     S = n(974042),
-    Z = n(849862),
-    A = n(666286),
-    x = n(596957),
-    b = n(981631),
+    A = n(849862),
+    Z = n(666286),
+    b = n(596957),
+    x = n(981631),
     L = n(723359),
     y = n(388032),
     P = n(945133);
@@ -36,7 +36,7 @@ function O() {
 }
 let R = function (e) {
     let { initialSection: t } = e,
-        n = (0, v.Do)({ location: 'PeoplePage' }),
+        n = (0, N.Do)({ location: 'PeoplePage' }),
         r = (0, s.TH)(),
         I = (0, s.k6)(),
         R = (0, _.Q3)('PeoplePage');
@@ -46,19 +46,19 @@ let R = function (e) {
                 type: 'AGE_GATE_MODAL_OPEN',
                 source: L.L0.DEEP_LINK_PROMPT
             }).then(() => {
-                I.replace(b.Z5c.ME);
+                I.replace(x.Z5c.ME);
             });
     }, [I, r]),
         l.useEffect(() => {
-            h.Y(b.Z5c.FRIENDS), (0, N.e)('friends');
+            h.Y(x.Z5c.FRIENDS), (0, v.e)('friends');
         }, []);
     let j = (0, c.e7)([T.Z], () => T.Z.theme),
-        D = (0, Z.If)(),
-        { section: w, rows: M } = (0, c.cj)([S.ZP], () => S.ZP.getState()),
-        k = (0, c.e7)([f.Z], () => f.Z.getSuggestionCount()),
-        U = l.useMemo(() => M.getRelationshipCounts(), [M]);
+        D = (0, A.If)(),
+        { section: w, rows: k } = (0, c.cj)([S.ZP], () => S.ZP.getState()),
+        M = (0, c.e7)([f.Z], () => f.Z.getSuggestionCount()),
+        U = l.useMemo(() => k.getRelationshipCounts(), [k]);
     l.useEffect(() => {
-        null != t && m.Z.setInitialSection(t), 0 === U[b.OGo.FRIEND] && 0 === U[b.OGo.PENDING_INCOMING] && 0 === U[b.OGo.PENDING_OUTGOING] && 0 === U[b.OGo.BLOCKED] && m.Z.setSection(b.pJs.ADD_FRIEND);
+        null != t && m.Z.setInitialSection(t), 0 === U[x.OGo.FRIEND] && 0 === U[x.OGo.PENDING_INCOMING] && 0 === U[x.OGo.PENDING_OUTGOING] && 0 === U[x.OGo.BLOCKED] && m.Z.setSection(x.pJs.ADD_FRIEND);
     }, [t, U]);
     let G = (e) => {
             m.Z.setSection(e);
@@ -67,20 +67,20 @@ let R = function (e) {
         V = (0, g.Dt)(),
         H = [
             {
-                id: b.pJs.ONLINE,
-                show: !R || M.filter(b.pJs.ONLINE).length > 0,
+                id: x.pJs.ONLINE,
+                show: !R || k.filter(x.pJs.ONLINE).length > 0,
                 content: y.intl.string(y.t.b9w3bG),
                 className: P.item
             },
             {
-                id: b.pJs.ALL,
-                show: !R || U[b.OGo.FRIEND] > 0,
+                id: x.pJs.ALL,
+                show: !R || U[x.OGo.FRIEND] > 0,
                 content: y.intl.string(y.t.PfjFjY),
                 className: P.item
             },
             {
-                id: b.pJs.PENDING,
-                show: !R || M.filter(b.pJs.PENDING).length > 0,
+                id: x.pJs.PENDING,
+                show: !R || k.filter(x.pJs.PENDING).length > 0,
                 content: (0, i.jsxs)(i.Fragment, {
                     children: [
                         y.intl.string(y.t.p6IHGB),
@@ -95,28 +95,28 @@ let R = function (e) {
                 className: P.item
             },
             {
-                id: b.pJs.SUGGESTIONS,
-                show: k > 0,
+                id: x.pJs.SUGGESTIONS,
+                show: M > 0,
                 content: (0, i.jsxs)(i.Fragment, {
                     children: [
                         y.intl.string(y.t['8rSi19']),
                         (0, i.jsx)(d.mAB, {
-                            count: k,
+                            count: M,
                             className: P.badge
                         })
                     ]
                 }),
-                ariaLabel: y.intl.formatToPlainString(y.t.AbMQp6, { count: k.toString() }),
+                ariaLabel: y.intl.formatToPlainString(y.t.AbMQp6, { count: M.toString() }),
                 className: P.item
             },
             {
-                id: b.pJs.BLOCKED,
-                show: R ? U[b.OGo.BLOCKED] > 0 && !n : !n,
+                id: x.pJs.BLOCKED,
+                show: R ? U[x.OGo.BLOCKED] > 0 && !n : !n,
                 content: y.intl.string(y.t['4bDptL']),
                 className: P.item
             },
             {
-                id: b.pJs.ADD_FRIEND,
+                id: x.pJs.ADD_FRIEND,
                 show: !0,
                 content: (0, i.jsx)('span', { children: y.intl.string(y.t.j0wbEx) }),
                 ariaLabel: y.intl.string(y.t.j0wbEx),
@@ -176,7 +176,7 @@ let R = function (e) {
                         id: w,
                         className: P.peopleColumn,
                         'aria-labelledby': V,
-                        children: w === b.pJs.ADD_FRIEND ? (0, i.jsx)(A.Z, {}) : (0, i.jsx)(x.Z, { titleId: V })
+                        children: w === x.pJs.ADD_FRIEND ? (0, i.jsx)(Z.Z, {}) : (0, i.jsx)(b.Z, { titleId: V })
                     }),
                     (0, i.jsx)('div', {
                         className: P.nowPlayingColumn,

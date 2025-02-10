@@ -21,10 +21,10 @@ var i = n(200651),
     v = n(65443),
     T = n(611855),
     S = n(670638),
-    Z = n(667105),
-    A = n(860151),
-    x = n(341907),
-    b = n(46140),
+    A = n(667105),
+    Z = n(860151),
+    b = n(341907),
+    x = n(46140),
     L = n(981631),
     y = n(388032),
     P = n(152706);
@@ -86,7 +86,7 @@ function R(e) {
                     questContent: g.jn.ACTIVITY_PANEL,
                     questContentCTA: u.jZ.TRACK_PROGRESS
                 }),
-                (0, x.navigateToQuestHome)({
+                (0, b.navigateToQuestHome)({
                     fromContent: g.jn.ACTIVITY_PANEL,
                     questId: I.id
                 }));
@@ -97,12 +97,12 @@ function R(e) {
                 questContent: g.jn.ACTIVITY_PANEL,
                 questContentCTA: u.jZ.LEARN_MORE
             }),
-                (0, x.navigateToQuestHome)({
+                (0, b.navigateToQuestHome)({
                     fromContent: g.jn.ACTIVITY_PANEL,
                     questId: I.id
                 });
         }, [I.id, C]),
-        G = (0, Z.hf)({
+        G = (0, A.hf)({
             quest: I,
             location: g.jn.ACTIVITY_PANEL
         }),
@@ -115,10 +115,10 @@ function R(e) {
         Y = (0, E.DD)({
             quest: I,
             taskDetails: W,
-            location: b.dr.ACTIVITY_PANEL,
+            location: x.dr.ACTIVITY_PANEL,
             questContent: g.jn.ACTIVITY_PANEL
         }),
-        K = (0, f.j)({ location: b.dr.QUESTS_BAR_MOBILE });
+        K = (0, f.j)({ location: x.dr.QUESTS_BAR_MOBILE });
     return z || B || F
         ? null
         : (0, i.jsxs)('div', {
@@ -179,12 +179,12 @@ function R(e) {
                       }),
                   V &&
                       !H &&
-                      (0, i.jsx)(A.Z, {
+                      (0, i.jsx)(Z.Z, {
                           autoplay: L,
                           className: P.rewardTileWithInstructions,
                           quest: I,
                           questContent: g.jn.ACTIVITY_PANEL,
-                          location: b.dr.ACTIVITY_PANEL,
+                          location: x.dr.ACTIVITY_PANEL,
                           taskDetails: W
                       }),
                   (0, i.jsxs)('div', {

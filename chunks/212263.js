@@ -43,7 +43,7 @@ let x = (e) => {
         W = null != H || null != Y,
         K = (0, f.Iu)((e) => e.searchQuery),
         { analyticsLocations: z } = (0, d.ZP)(c.Z.EMOJI_PICKER),
-        q = v.Gi.useExperiment(
+        q = v.G.useExperiment(
             { location: 'Premium Emoji Roadblock' },
             {
                 autoTrackExposure: !W,
