@@ -1,4 +1,4 @@
-l.d(n, { default: () => ei }), l(47120), l(653041);
+l.d(n, { default: () => er }), l(47120), l(653041);
 var t = l(200651),
     i = l(192379),
     s = l(512722),
@@ -10,84 +10,86 @@ var t = l(200651),
     d = l(704215),
     m = l(481060),
     x = l(668781),
-    g = l(872810),
-    h = l(410575),
+    h = l(872810),
+    g = l(410575),
     Z = l(579806),
     v = l(636449),
     S = l(317381),
-    C = l(89425),
-    j = l(812206),
-    N = l(835473),
-    f = l(600164),
+    j = l(89425),
+    C = l(812206),
+    f = l(835473),
+    N = l(600164),
     p = l(313201),
     T = l(243778),
-    I = l(594190),
-    E = l(998594),
+    E = l(594190),
+    I = l(998594),
     P = l(751571),
     R = l(970731),
     k = l(695346),
-    A = l(361291),
-    b = l(592125),
+    b = l(361291),
+    A = l(592125),
     M = l(430824),
-    D = l(131951),
-    _ = l(944486),
-    L = l(594174),
+    _ = l(131951),
+    L = l(944486),
+    D = l(594174),
     z = l(449224),
     w = l(626135),
-    U = l(63063),
-    y = l(358085),
+    y = l(63063),
+    U = l(358085),
     G = l(998502),
-    O = l(451467),
-    W = l(537413),
+    O = l(668519),
+    W = l(451467),
+    V = l(537413),
     F = l(299570),
     J = l(960861),
     B = l(989941),
-    V = l(399299),
-    X = l(351152),
-    Y = l(567126),
-    H = l(143135),
-    K = l(70722),
-    q = l(37113),
-    Q = l(981631),
-    $ = l(921944),
-    ee = l(761274),
-    en = l(388032),
-    el = l(760416);
-let et = (e) => {
+    X = l(399299),
+    Y = l(351152),
+    H = l(567126),
+    K = l(143135),
+    q = l(717298),
+    Q = l(70722),
+    $ = l(37113),
+    ee = l(981631),
+    en = l(921944),
+    el = l(761274),
+    et = l(388032),
+    ei = l(760416);
+let es = (e) => {
     let { visibleContent: n, markAsDismissed: l } = e;
     return n === d.z.GO_LIVE_SYSTEM_PICKER_COACHMARK
         ? (0, t.jsx)(R.ZP, {
-              content: en.intl.string(en.t.sFyFJy),
-              buttonCTA: en.intl.string(en.t['NX+WJC']),
+              content: et.intl.string(et.t.sFyFJy),
+              buttonCTA: et.intl.string(et.t['NX+WJC']),
               onClick: () => {},
               onSecondaryClick: () => {
-                  open(U.Z.getArticleURL(Q.BhN.SCREEN_SHARING_MACOS));
+                  open(y.Z.getArticleURL(ee.BhN.SCREEN_SHARING_MACOS));
               },
-              secondaryButtonCTA: en.intl.string(en.t.hvVgAQ),
+              secondaryButtonCTA: et.intl.string(et.t.hvVgAQ),
               caretPosition: R.DF.LEFT_CENTER,
               markAsDismissed: l
           })
         : null;
 };
-function ei(e) {
-    var n, s, o, R, U, ei;
-    let { selectGuild: es = !1, selectSource: ea = !0, guildId: er, analyticsLocation: eo, onClose: eu, transitionState: ec } = e,
-        { preset: ed, resolution: em, fps: ex, soundshareEnabled: eg } = (0, c.cj)([A.Z], () => A.Z.getState()),
-        eh = i.useRef(Date.now()),
-        eZ = (0, c.e7)([_.Z, b.Z], () => b.Z.getChannel(_.Z.getVoiceChannelId())),
-        ev = (0, c.e7)([I.ZP, z.Z], () => ((0, y.isWindows)() ? (0, B.Z)(I.ZP, z.Z) : null)),
+function ea(e) {
+    var n, s, o, R, y, O;
+    let { selectGuild: q = !1, selectSource: ea = !0, guildId: er, analyticsLocation: eo, onClose: eu, transitionState: ec } = e,
+        { preset: ed, resolution: em, fps: ex, soundshareEnabled: eh } = (0, c.cj)([b.Z], () => b.Z.getState()),
+        eg = i.useRef(Date.now()),
+        eZ = (0, c.e7)([L.Z, A.Z], () => A.Z.getChannel(L.Z.getVoiceChannelId())),
+        ev = (0, c.e7)([E.ZP, z.Z], () => ((0, U.isWindows)() ? (0, B.Z)(E.ZP, z.Z) : null)),
         eS = (0, c.e7)([S.ZP], () => S.ZP.getCurrentEmbeddedActivity()),
-        eC = (0, N.q)(null == eS ? void 0 : eS.applicationId),
-        [ej, eN] = i.useState(null);
+        ej = (0, f.q)(null == eS ? void 0 : eS.applicationId),
+        [eC, ef] = i.useState(null);
     i.useEffect(() => {
         (0, v.R)() &&
             (async () => {
                 var e;
-                eN(await (null === Z.Z || void 0 === Z.Z ? void 0 : null === (e = Z.Z.window) || void 0 === e ? void 0 : e.getMediaSourceId('DISCORD_ACTIVITY_POPOUT')));
+                ef(await (null === Z.Z || void 0 === Z.Z ? void 0 : null === (e = Z.Z.window) || void 0 === e ? void 0 : e.getMediaSourceId('DISCORD_ACTIVITY_POPOUT')));
             })();
     }, []);
-    let ef = (0, c.e7)([L.default], () => {
-            let e = L.default.getCurrentUser();
+    let eN = (0, c.e7)([D.default], () => {
+            let e = D.default.getCurrentUser();
             return a()(null != e, 'GoLiveModal: user cannot be undefined'), e;
         }),
         ep = null !== (n = null == eZ ? void 0 : eZ.getGuildId()) && void 0 !== n ? n : er,
@@ -95,61 +97,61 @@ function ei(e) {
             var e;
             return null != ep ? (null === (e = M.Z.getGuild(ep)) || void 0 === e ? void 0 : e.premiumTier) : null;
         }),
-        [eI, eE] = null !== (s = (0, W.Z)(ed, ef, eT)) && void 0 !== s ? s : [q.LY.RESOLUTION_720, q.ws.FPS_30],
+        [eE, eI] = null !== (s = (0, V.Z)(ed, eN, eT)) && void 0 !== s ? s : [$.LY.RESOLUTION_720, $.ws.FPS_30],
         { lastPickerAction: eP } = (0, c.e7)([J.ZP], () => J.ZP.getPickerState()),
-        eR = D.Z.getUseSystemScreensharePicker();
+        eR = _.Z.getUseSystemScreensharePicker();
     (0, J.UB)();
-    let ek = eR && (0, y.isMac)() && u().satisfies(null === Z.Z || void 0 === Z.Z ? void 0 : Z.Z.os.release, K.jR),
-        eA = [];
-    ec === m.Dvm.ENTERED && eR && (0, y.isMac)() && eA.push(d.z.GO_LIVE_SYSTEM_PICKER_COACHMARK);
-    let [eb, eM] = (0, T.US)(eA, void 0, !0);
-    ed !== q.tI.PRESET_CUSTOM && ((em = eI), (ex = eE)), (0, O.Z)(ed, em, ex, ef, eT) || ((em = eI), (ex = eE));
-    let eD = (0, p.Dt)(),
-        [e_, eL] = i.useState(((ei = ea && !ek), es ? 0 : ei ? 2 : 3)),
+    let ek = eR && (0, U.isMac)() && u().satisfies(null === Z.Z || void 0 === Z.Z ? void 0 : Z.Z.os.release, Q.jR),
+        eb = [];
+    ec === m.Dvm.ENTERED && eR && (0, U.isMac)() && eb.push(d.z.GO_LIVE_SYSTEM_PICKER_COACHMARK);
+    let [eA, eM] = (0, T.US)(eb, void 0, !0);
+    ed !== $.tI.PRESET_CUSTOM && ((em = eE), (ex = eI)), (0, W.Z)(ed, em, ex, eN, eT) || ((em = eE), (ex = eI));
+    let e_ = (0, p.Dt)(),
+        [eL, eD] = i.useState(((O = ea && !ek), q ? 0 : O ? 2 : 3)),
         [ez, ew] = i.useState(ek),
-        [eU, ey] = i.useState(null),
+        [ey, eU] = i.useState(null),
         [eG, eO] = i.useState(
             ek
                 ? {
                       id: 'prepicked:',
-                      name: en.intl.string(en.t['KKcy9/']),
+                      name: et.intl.string(et.t['KKcy9/']),
                       url: ''
                   }
                 : null
         ),
-        [eW, eF] = i.useState(null),
-        [eJ, eB] = i.useState(ed),
-        [eV, eX] = i.useState(em),
+        [eW, eV] = i.useState(null),
+        [eF, eJ] = i.useState(ed),
+        [eB, eX] = i.useState(em),
         [eY, eH] = i.useState(ex),
-        [eK, eq] = i.useState(eg),
+        [eK, eq] = i.useState(eh),
         [eQ, e$] = i.useState(null !== (o = k.I0.getSetting()) && void 0 !== o && o),
         [e0, e1] = i.useState(null != er ? er : null),
-        e3 = null !== (R = null == eZ ? void 0 : eZ.id) && void 0 !== R ? R : eU,
-        [e2, e4] = i.useState(ek ? '' : void 0);
-    async function e7() {
+        e3 = null !== (R = null == eZ ? void 0 : eZ.id) && void 0 !== R ? R : ey,
+        [e2, e7] = i.useState(ek ? '' : void 0);
+    async function e4() {
         var e, n;
-        a()(null != ev || null != eG || (null != eS && null != ej), 'got nothing to stream');
-        let l = null !== (e = null == eZ ? void 0 : eZ.id) && void 0 !== e ? e : eU;
+        a()(null != ev || null != eG || (null != eS && null != eC), 'got nothing to stream');
+        let l = null !== (e = null == eZ ? void 0 : eZ.id) && void 0 !== e ? e : ey;
         a()(null != l, 'Received null target channel ID');
-        let t = b.Z.getChannel(l),
+        let t = A.Z.getChannel(l),
             i = null !== (n = null == t ? void 0 : t.getGuildId()) && void 0 !== n ? n : er;
-        if (null == eZ && !(await (0, C.Z)({ channelId: l }))) return;
-        let s = eJ,
-            r = eV,
+        if (null == eZ && !(await (0, j.Z)({ channelId: l }))) return;
+        let s = eF,
+            r = eB,
             o = eY;
-        (0, O.Z)(s, r, o, ef, eT, t) || ((s = q.tI.PRESET_VIDEO), (r = q.LY.RESOLUTION_720), (o = q.ws.FPS_30)),
-            (0, g.Rc)({
+        (0, W.Z)(s, r, o, eN, eT, t) || ((s = $.tI.PRESET_VIDEO), (r = $.LY.RESOLUTION_720), (o = $.ws.FPS_30)),
+            (0, h.Rc)({
                 preset: s,
                 resolution: r,
                 frameRate: o,
                 soundshareEnabled: eK
             });
-        let u = (0, H.Z)(ev, eG, I.ZP.getRunningGames()),
-            c = !(0, y.isWindows)() || null == u || (null == eG ? void 0 : eG.id.startsWith('camera:')) || null == u ? null : u.pid,
+        let u = (0, K.Z)(ev, eG, E.ZP.getRunningGames()),
+            c = !(0, U.isWindows)() || null == u || (null == eG ? void 0 : eG.id.startsWith('camera:')) || null == u ? null : u.pid,
             d = null,
             m = null;
-        null == c && (null != eG ? ((d = eG.id), (m = eG.name)) : null != ej && ((d = ej), (m = null == eC ? void 0 : eC.name))),
-            (0, g.WH)(i, l, {
+        null == c && (null != eG ? ((d = eG.id), (m = eG.name)) : null != eC && ((d = eC), (m = null == ej ? void 0 : ej.name))),
+            (0, h.WH)(i, l, {
                 pid: c,
                 sourceId: d,
                 sourceName: m,
@@ -157,62 +159,62 @@ function ei(e) {
                 sound: eK,
                 previewDisabled: eQ,
                 nativePickerStyleUsed: e2,
-                goLiveModalDurationMs: Date.now() - eh.current
+                goLiveModalDurationMs: Date.now() - eg.current
             }),
-            null != eb && eM($.L.AUTO_DISMISS),
+            null != eA && eM(en.L.AUTO_DISMISS),
             eR ||
                 (async () => {
-                    (await P.Z.hasPermission(ee.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 })) ||
+                    (await P.Z.hasPermission(el.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 })) ||
                         x.Z.show({
-                            title: en.intl.string(en.t['X+mXen']),
-                            body: en.intl.string(en.t.MIJCzs)
+                            title: et.intl.string(et.t['X+mXen']),
+                            body: et.intl.string(et.t.MIJCzs)
                         });
                 })();
     }
     function e5() {
-        e7(), eu();
+        e4(), eu();
     }
     i.useEffect(() => {
-        let e = (0, y.isWindows)() ? (0, B.Z)(I.ZP, z.Z) : null,
-            n = (null == e ? void 0 : e.id) != null ? j.Z.getApplication(e.id) : null;
-        w.default.track(Q.rMx.OPEN_MODAL, {
+        let e = (0, U.isWindows)() ? (0, B.Z)(E.ZP, z.Z) : null,
+            n = (null == e ? void 0 : e.id) != null ? C.Z.getApplication(e.id) : null;
+        w.default.track(ee.rMx.OPEN_MODAL, {
             type: 'Go Live Modal',
             application_id: null == n ? void 0 : n.id,
             application_name: null == e ? void 0 : e.name,
             game_id: null == n ? void 0 : n.id,
             location_section: eo
         }),
-            E.Z.trackExposure({ location: 'GoLiveModal' });
+            I.Z.trackExposure({ location: 'GoLiveModal' });
     }, [eo]);
-    let e6 = i.useCallback(
+    let e9 = i.useCallback(
             (e, n, l) => {
                 var t;
-                let i = (0, W.Z)(e, ef, eT),
+                let i = (0, V.Z)(e, eN, eT),
                     [s, r] = null != i ? i : [n, l];
-                e !== eJ && ((n = s), (l = r));
-                let o = null !== (t = null == eZ ? void 0 : eZ.id) && void 0 !== t ? t : eU;
+                e !== eF && ((n = s), (l = r));
+                let o = null !== (t = null == eZ ? void 0 : eZ.id) && void 0 !== t ? t : ey;
                 a()(null != o, 'Received null target channel ID');
-                let u = b.Z.getChannel(o);
-                if (!(0, O.Z)(e, n, l, ef, eT, u)) {
-                    let [e, t] = (0, W.Z)(q.tI.PRESET_VIDEO, ef, eT);
+                let u = A.Z.getChannel(o);
+                if (!(0, W.Z)(e, n, l, eN, eT, u)) {
+                    let [e, t] = (0, V.Z)($.tI.PRESET_VIDEO, eN, eT);
                     (n = e), (l = t);
                 }
-                l !== eY && eH(l), n !== eV && eX(n), s !== n || r !== l ? eB(q.tI.PRESET_CUSTOM) : e !== eJ && eB(e);
+                l !== eY && eH(l), n !== eB && eX(n), s !== n || r !== l ? eJ($.tI.PRESET_CUSTOM) : e !== eF && eJ(e);
             },
-            [eZ, eU, ef, eT, eY, eV, eJ]
+            [eZ, ey, eN, eT, eY, eB, eF]
         ),
-        e9 = i.useCallback(
+        e6 = i.useCallback(
             (e) => {
                 (0, F.t)(), (0, F.T)(null != e ? e : e2);
             },
             [e2]
         );
     function e8(e) {
-        if ((e.preventDefault(), 1 === e_)) return e9();
-        if (2 === e_) return eL(3);
-        if (null != e2) return eL(1);
-        let n = (0, H.Z)(ev, eG, I.ZP.getRunningGames());
-        G.ZP.supportsFeature(Q.eRX.ELEVATED_HOOK) && (null == n ? void 0 : n.elevated)
+        if ((e.preventDefault(), 1 === eL)) return e6();
+        if (2 === eL) return eD(3);
+        if (null != e2) return eD(1);
+        let n = (0, K.Z)(ev, eG, E.ZP.getRunningGames());
+        G.ZP.supportsFeature(ee.eRX.ELEVATED_HOOK) && (null == n ? void 0 : n.elevated)
             ? (function () {
                   var e;
                   let n = null !== (e = null == ev ? void 0 : ev.pid) && void 0 !== e ? e : null;
@@ -230,7 +232,7 @@ function ei(e) {
     }
     let ne = i.useCallback(
             (e) => {
-                eO(e), null != e && (eR && (null == e ? void 0 : e.id.startsWith('camera:')) !== !0 ? e4(e.id.split(':')[1]) : e4(void 0), eL(3), ew(!0));
+                eO(e), null != e && (eR && (null == e ? void 0 : e.id.startsWith('camera:')) !== !0 ? e7(e.id.split(':')[1]) : e7(void 0), eD(3), ew(!0));
             },
             [eR]
         ),
@@ -238,40 +240,40 @@ function ei(e) {
             (e) => {
                 e1(e);
                 var n = 3;
-                eL(ea ? 2 : 3);
+                eD(ea ? 2 : 3);
             },
             [ea]
         ),
-        nl = !(1 === e_ && eR && eP === J.Uc.Error),
+        nl = !(1 === eL && eR && eP === J.Uc.Error),
         nt = (function (e) {
             switch (e) {
                 case 2:
-                    return en.intl.string(en.t['aC4/Zm']);
+                    return et.intl.string(et.t['aC4/Zm']);
                 case 1:
-                    return en.intl.formatToPlainString(en.t.sbbPhY, { buttonName: en.intl.string(en.t.FiBjwc) });
+                    return et.intl.formatToPlainString(et.t.sbbPhY, { buttonName: et.intl.string(et.t.FiBjwc) });
                 case 3:
                     return null;
                 default:
-                    return en.intl.string(en.t['1hKIam']);
+                    return et.intl.string(et.t['1hKIam']);
             }
-        })(e_),
+        })(eL),
         ni = (0, t.jsx)(m.xBx, {
-            className: el.modalHeader,
+            className: ei.modalHeader,
             separator: !1,
-            children: (0, t.jsxs)(f.Z, {
-                direction: f.Z.Direction.VERTICAL,
-                align: f.Z.Align.CENTER,
-                className: el.header,
+            children: (0, t.jsxs)(N.Z, {
+                direction: N.Z.Direction.VERTICAL,
+                align: N.Z.Align.CENTER,
+                className: ei.header,
                 children: [
                     (0, t.jsx)(m.X6q, {
                         variant: 'heading-xl/semibold',
-                        id: eD,
-                        className: el.headerText,
-                        children: en.intl.string(en.t.RDkJQ0)
+                        id: e_,
+                        className: ei.headerText,
+                        children: et.intl.string(et.t.RDkJQ0)
                     }),
                     nl && null != nt
                         ? (0, t.jsx)(m.Text, {
-                              className: el.headerDescription,
+                              className: ei.headerDescription,
                               variant: 'text-md/normal',
                               color: 'text-normal',
                               children: nt
@@ -281,7 +283,7 @@ function ei(e) {
             })
         }),
         ns = i.useCallback(() => {
-            eR && (0, F.t)(), eL(2);
+            eR && (0, F.t)(), eD(2);
         }, [eR]),
         na = (function (e, n, l, t) {
             switch (e) {
@@ -296,10 +298,10 @@ function ei(e) {
                 default:
                     return null;
             }
-        })(e_, es, ea, ez),
-        nr = 1 !== e_ && (3 !== e_ || (null == eG && null == ev && null == ej) || null == e3),
+        })(eL, q, ea, ez),
+        nr = 1 !== eL && (3 !== eL || (null == eG && null == ev && null == eC) || null == e3),
         no = i.useCallback(() => {
-            null != na && eL(na);
+            null != na && eD(na);
         }, [na]),
         nu = (0, t.jsx)(t.Fragment, {
             children: (0, t.jsxs)(m.MyZ, {
@@ -307,23 +309,23 @@ function ei(e) {
                     ...r.config.stiff,
                     clamp: !0
                 },
-                activeSlide: e_,
+                activeSlide: eL,
                 width: 480,
                 children: [
                     (0, t.jsx)(m.Mi4, {
                         id: 0,
                         children: (0, t.jsx)('div', {
-                            className: el.modalSize,
-                            children: (0, t.jsx)(X.Z, { onSelectGuild: nn })
+                            className: ei.modalSize,
+                            children: (0, t.jsx)(Y.Z, { onSelectGuild: nn })
                         })
                     }),
                     (0, t.jsx)(m.Mi4, {
                         id: 2,
                         children: (0, t.jsx)('div', {
-                            className: el.modalSize,
+                            className: ei.modalSize,
                             children: eR
-                                ? (0, t.jsx)(Y.se, { onSourceSelect: ne })
-                                : (0, t.jsx)(Y.oA, {
+                                ? (0, t.jsx)(H.se, { onSourceSelect: ne })
+                                : (0, t.jsx)(H.oA, {
                                       selectedSource: eG,
                                       onChangeSelectedSource: ne
                                   })
@@ -332,39 +334,39 @@ function ei(e) {
                     (0, t.jsx)(m.Mi4, {
                         id: 3,
                         children: (0, t.jsx)('div', {
-                            className: el.modalSize,
-                            children: (0, t.jsx)(V.Z, {
-                                selectedChannelId: null !== (U = null == eZ ? void 0 : eZ.id) && void 0 !== U ? U : eU,
-                                selectedPreset: eJ,
-                                selectedResolution: eV,
+                            className: ei.modalSize,
+                            children: (0, t.jsx)(X.Z, {
+                                selectedChannelId: null !== (y = null == eZ ? void 0 : eZ.id) && void 0 !== y ? y : ey,
+                                selectedPreset: eF,
+                                selectedResolution: eB,
                                 selectedSource: eG,
                                 selectedFPS: eY,
                                 sound: eK,
                                 previewDisabled: eQ,
                                 sourceChanged: ez,
                                 selectSource: ea,
-                                onChangeSelectedFPS: (e) => e6(eJ, eV, e),
-                                onChangeSelectedResolution: (e) => e6(eJ, e, eY),
-                                onChangeSelectedPreset: (e) => e6(e, eV, eY),
-                                onChangeSelectedChannelId: ey,
+                                onChangeSelectedFPS: (e) => e9(eF, eB, e),
+                                onChangeSelectedResolution: (e) => e9(eF, e, eY),
+                                onChangeSelectedPreset: (e) => e9(e, eB, eY),
+                                onChangeSelectedChannelId: eU,
                                 onChangeSelectedSource: ne,
                                 onChangeSource: () => ns(),
-                                onChangeAudioDevice: (e) => eF(e),
-                                onChangeGuild: () => eL(0),
+                                onChangeAudioDevice: (e) => eV(e),
+                                onChangeGuild: () => eD(0),
                                 onChangeSound: (e) => eq(e),
                                 onChangePreviewDisabled: (e) => e$(e),
                                 onClose: eu,
                                 selectedGuildId: e0,
                                 targetGuildPremiumTier: eT,
-                                selectGuild: es
+                                selectGuild: q
                             })
                         })
                     }),
                     (0, t.jsx)(m.Mi4, {
                         id: 1,
                         children: (0, t.jsx)('div', {
-                            className: el.modalSize,
-                            children: (0, t.jsx)(Y.Hu, {
+                            className: ei.modalSize,
+                            children: (0, t.jsx)(H.Hu, {
                                 onSourceSelect: e5,
                                 onCancel: no,
                                 pickerType: e2
@@ -374,9 +376,9 @@ function ei(e) {
                 ]
             })
         }),
-        nc = 1 === e_ || (ek && 3 === e_) ? en.intl.string(en.t.FiBjwc) : eR && (3 !== e_ || null != e2) ? en.intl.string(en.t.PDTjLC) : en.intl.string(en.t['UE/rPz']),
+        nc = 1 === eL || (ek && 3 === eL) ? et.intl.string(et.t.FiBjwc) : eR && (3 !== eL || null != e2) ? et.intl.string(et.t.PDTjLC) : et.intl.string(et.t['UE/rPz']),
         nd = (0, t.jsxs)(m.mzw, {
-            justify: null == na ? f.Z.Justify.START : f.Z.Justify.BETWEEN,
+            justify: null == na ? N.Z.Justify.START : N.Z.Justify.BETWEEN,
             children: [
                 (0, t.jsx)(m.zxk, {
                     type: 'submit',
@@ -387,42 +389,42 @@ function ei(e) {
                 }),
                 null == na
                     ? (0, t.jsx)(m.zxk, {
-                          className: el.cancelButton,
+                          className: ei.cancelButton,
                           look: m.zxk.Looks.LINK,
                           size: m.zxk.Sizes.SMALL,
                           color: m.Ttl.PRIMARY,
                           onClick: eu,
-                          children: en.intl.string(en.t['ETE/oK'])
+                          children: et.intl.string(et.t['ETE/oK'])
                       })
                     : (0, t.jsx)(m.zxk, {
                           size: m.zxk.Sizes.SMALL,
                           color: m.Ttl.PRIMARY,
                           onClick: no,
-                          children: en.intl.string(en.t['13/7kZ'])
+                          children: et.intl.string(et.t['13/7kZ'])
                       })
             ]
         });
-    return (0, t.jsx)(h.Z, {
-        page: Q.ZY5.GO_LIVE_MODAL,
+    return (0, t.jsx)(g.Z, {
+        page: ee.ZY5.GO_LIVE_MODAL,
         children: (0, t.jsxs)(m.Y0X, {
-            'aria-labelledby': eD,
+            'aria-labelledby': e_,
             transitionState: ec,
             size: m.CgR.DYNAMIC,
-            className: el.modalSize,
+            className: ei.modalSize,
             children: [
                 (0, t.jsx)(m.olH, {
                     onClick: eu,
-                    className: el.modalCloseButton
+                    className: ei.modalCloseButton
                 }),
-                (0, t.jsx)('div', { className: el.art }),
+                (0, t.jsx)('div', { className: ei.art }),
                 (0, t.jsx)(m.yRy, {
                     position: 'right',
                     align: 'center',
-                    shouldShow: null != eb,
+                    shouldShow: null != eA,
                     spacing: 18,
                     renderPopout: () =>
-                        (0, t.jsx)(et, {
-                            visibleContent: eb,
+                        (0, t.jsx)(es, {
+                            visibleContent: eA,
                             markAsDismissed: eM
                         }),
                     children: () =>
@@ -434,4 +436,8 @@ function ei(e) {
             ]
         })
     });
+}
+function er(e) {
+    let { showRefreshedGoLiveModal: n } = (0, O.a)({ location: e.analyticsLocation });
+    return n ? (0, t.jsx)(q.Z, { ...e }) : (0, t.jsx)(ea, { ...e });
 }
