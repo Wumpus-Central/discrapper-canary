@@ -13963,6 +13963,28 @@ div.modalHeader_c28af8 {
     animation-timing-function: ease-in-out
 }
 
+.orbIconContainer__85200 {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    background-image: url(/assets/cd3441c17ece9bd5.svg);
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+.orbIconContainer__85200>img {
+    position: absolute;
+    top: 5px;
+    left: 4px
+}
+
+.orbClaimCopy__8da0b {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 3px
+}
+
 .nitroUpsellContainer_d0caf4 {
     display: flex;
     flex-direction: row;
