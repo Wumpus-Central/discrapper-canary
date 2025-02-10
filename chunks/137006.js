@@ -49,7 +49,7 @@ let r = {
                         participants: e
                             .array()
                             .items(
-                                a(e)
+                                s(e)
                                     .keys({ nickname: e.string().description('Server nickname. Not unique.') })
                                     .required()
                             )
@@ -69,7 +69,7 @@ let r = {
                             url: e.string().required(),
                             width: e.number().required()
                         }),
-                        components: e.array().items(s(e))
+                        components: e.array().items(o(e))
                     })
                 ),
             response: (e) => e.object({ success: e.boolean().required() })
@@ -84,9 +84,82 @@ let r = {
                     })
                 ),
             response: (e) => e.object({ success: e.boolean().required() })
+        },
+        [l.Q5.GET_RELATIONSHIPS]: {
+            request: void 0,
+            response: (e) =>
+                e.object({
+                    relationships: e
+                        .array()
+                        .required()
+                        .items(
+                            e.object({
+                                type: e.number().required(),
+                                user: s(e).allow(null),
+                                presence: e.object({
+                                    status: e.string().required(),
+                                    activity: a(e).allow(null)
+                                })
+                            })
+                        )
+                })
         }
     },
     a = (e) =>
+        e.object({
+            session_id: e.string().optional(),
+            type: e.number().optional(),
+            name: e.string().required(),
+            url: e.string().allow(null).optional(),
+            application_id: e.string().optional(),
+            state: e.string().optional(),
+            details: e.string().optional(),
+            emoji: e
+                .object({
+                    name: e.string().required(),
+                    id: e.string().allow(null).optional(),
+                    animated: e.bool().optional().allow(null)
+                })
+                .allow(null)
+                .optional(),
+            assets: e
+                .object({
+                    large_image: e.string().optional(),
+                    large_text: e.string().optional(),
+                    small_image: e.string().optional(),
+                    small_text: e.string().optional()
+                })
+                .optional(),
+            timestamps: e
+                .object({
+                    start: e.number().optional(),
+                    end: e.number().optional()
+                })
+                .optional(),
+            party: e
+                .object({
+                    id: e.string().optional(),
+                    size: e.array().items(e.number()).length(2).optional(),
+                    privacy: e.number().optional()
+                })
+                .optional(),
+            secrets: e
+                .object({
+                    match: e.string().optional(),
+                    join: e.string().optional()
+                })
+                .optional(),
+            sync_id: e.string().optional(),
+            created_at: e.number().optional(),
+            instance: e.bool().optional(),
+            flags: e.number().optional(),
+            metadata: e.object().optional(),
+            platform: e.string().optional(),
+            supported_platforms: e.array().items(e.string()).optional(),
+            buttons: e.array().items(e.string()).optional(),
+            hangStatus: e.string().optional()
+        }),
+    s = (e) =>
         e
             .object({
                 id: e.string().required().description('User ID'),
@@ -107,12 +180,12 @@ let r = {
                 premium_type: e.number().allow(null).description('Nitro premium type')
             })
             .description('Discord User'),
-    s = (e) =>
+    o = (e) =>
         e.object({
             type: e.number().valid(1).required(),
-            components: e.array().max(5).items(o(e))
+            components: e.array().max(5).items(c(e))
         }),
-    o = (e) =>
+    c = (e) =>
         e.object({
             type: e.number().valid(2).required(),
             style: e.number().min(1).max(5).required(),

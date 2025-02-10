@@ -31323,7 +31323,7 @@ html:not(.visual-refresh-chat-input) .inner_a99829 {
     border-top-right-radius: var(--radius-md)
 }
 
-.modalOverrideBody__34eac {
+div.modalOverrideBody__34eac {
     padding: 0;
     overflow: visible;
     border-radius: 8px;
