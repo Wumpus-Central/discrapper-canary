@@ -35,6 +35,7 @@ e.exports = {
     contentFooter: 'contentFooter_de2fa0',
     contentFooterButtonCont: 'contentFooterButtonCont_de2fa0',
     claimBtn: 'claimBtn_de2fa0',
+    orbClaimCopy: 'orbClaimCopy_de2fa0',
     progressCont: 'progressCont_de2fa0',
     questProgressRewardTile: 'questProgressRewardTile_de2fa0',
     transcriptOverlay: 'transcriptOverlay_de2fa0',
