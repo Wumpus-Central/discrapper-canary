@@ -388,6 +388,8 @@ var i = (function (e) {
         (e.USER_SETTINGS_SESSIONS = 'user settings sessions'),
         (e.SHARING_CONTROLS_COACHMARK = 'sharing controls coachmark'),
         (e.NOT_SHARING_LINK = 'not sharing link'),
+        (e.YOU_ACCOUNT_ACTION_SHEET = 'you account action sheet'),
+        (e.USER_PROFILE_CUSTOM_STATUS_BUBBLE = 'user profile custom status bubble'),
         e
     );
 })(i || {});
