@@ -1,25 +1,24 @@
-n.d(t, { i: () => C }), n(47120);
+n.d(t, { i: () => _ }), n(47120);
 var l = n(200651),
     i = n(192379),
     a = n(704215),
     r = n(952265),
     s = n(243778),
-    o = n(497505),
-    u = n(341907),
-    d = n(751648),
-    c = n(822857),
-    E = n(921944),
-    _ = n(46140);
-function C() {
+    o = n(341907),
+    u = n(751648),
+    d = n(822857),
+    c = n(921944),
+    E = n(642145);
+function _() {
     let e = [a.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL],
-        [t, C] = (0, s.US)(e, void 0, !0),
-        [h, I] = i.useState(!1),
-        { enabled: T } = (0, c.W)({ location: 'vc-announcement-modal' });
+        [t, _] = (0, s.US)(e, void 0, !0),
+        [C, h] = i.useState(!1),
+        { enabled: I } = (0, d.W)({ location: 'vc-announcement-modal' });
     i.useEffect(() => {
-        T &&
+        I &&
             t === a.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL &&
-            !h &&
-            (I(!0),
+            !C &&
+            (h(!0),
             (0, r.ZD)(
                 async () => {
                     let { AnnouncementModal: e } = await n.e('3073').then(n.bind(n, 520156));
@@ -29,16 +28,16 @@ function C() {
                             transitionState: i,
                             onClose: n,
                             ctaOnClick: () => {
-                                (0, d.jM)(), (0, u.navigateToQuestHome)(_.dr.ORBS_ANNOUNCEMENT_MODAL, o.jn.QUEST_BAR), n();
+                                (0, u.jM)(), (0, o.navigateToQuestHome)({ questId: E.V }), n();
                             }
                         });
                     };
                 },
                 {
                     onCloseCallback: () => {
-                        C(E.L.UNKNOWN), (0, d.U9)();
+                        _(c.L.UNKNOWN), (0, u.U9)();
                     }
                 }
             ));
-    }, [t, T, h, C]);
+    }, [t, I, C, _]);
 }

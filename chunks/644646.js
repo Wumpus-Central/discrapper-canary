@@ -33,7 +33,10 @@ let I = function (e) {
                         questContentPosition: e.questContentPosition,
                         questContentCTA: f.jZ.REWARD_LEARN_MORE
                     }),
-                    (0, E.navigateToQuestHome)(e.location, e.questContent, a.id),
+                    (0, E.navigateToQuestHome)({
+                        fromContent: e.questContent,
+                        questId: a.id
+                    }),
                     null === (n = e.onClick) || void 0 === n || n.call(e, t);
             },
             [b, a.id, e]

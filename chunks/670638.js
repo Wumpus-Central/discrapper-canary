@@ -16,18 +16,18 @@ var s = n(200651),
     p = n(341907),
     j = n(46140),
     T = n(231338),
-    E = n(388032);
-function v(e) {
+    v = n(388032);
+function E(e) {
     var t;
     let n = (0, l.e7)([h.Z], () => h.Z.questDeliveryOverride, []),
         d = (0, C.GN)(e.questContent),
-        v = !(0, C.q8)(e.quest) && !(0, C.pO)(e.quest),
+        E = !(0, C.q8)(e.quest) && !(0, C.pO)(e.quest),
         f = [g.jn.QUEST_BAR_V2, g.jn.QUEST_BAR].includes(e.questContent),
         N = (0, C.zK)(e.quest, j.S7.DISMISSAL_SURVEY),
         S = (0, u.O5)(),
         q = (0, c.aM)(),
-        { handleComplete: A, handleProgress: _, handleResetDismissibilityClick: R, handleResetStatusClick: b, handleOverrideDeliveryClick: L } = (0, x.kJ)(e.quest.id),
-        Z = i.useCallback(() => {
+        { handleComplete: A, handleProgress: R, handleResetDismissibilityClick: _, handleResetStatusClick: b, handleOverrideDeliveryClick: Z } = (0, x.kJ)(e.quest.id),
+        I = i.useCallback(() => {
             (0, C.FE)(e.quest, {
                 content: e.questContent,
                 ctaContent: u.jZ.CONTEXT_MENU_OPEN_GAME_LINK,
@@ -41,20 +41,20 @@ function v(e) {
                 ctaContent: u.jZ.CONTEXT_MENU_COPY_LINK,
                 impressionId: q
             }),
-                (0, a.showToast)((0, a.createToast)(E.intl.string(E.t['+5kSoa']), a.ToastType.SUCCESS));
+                (0, a.showToast)((0, a.createToast)(v.intl.string(v.t['+5kSoa']), a.ToastType.SUCCESS));
         }, [q, e.quest.id, e.questContent, e.questContentPosition]),
         y = (e) => (0, a.showToast)((0, a.createToast)(new o.Z(e, e.status).message, a.ToastType.FAILURE)),
-        I = () => (0, m.is)(e.quest.id).catch(y),
-        P = i.useMemo(() => (v ? E.t.lwQdjI : E.t.hvVgAQ), [v]),
+        L = () => (0, m.is)(e.quest.id).catch(y),
+        P = i.useMemo(() => (E ? v.t.lwQdjI : v.t.hvVgAQ), [E]),
         w = i.useMemo(
             () =>
                 (0, s.jsx)(a.S89, {
                     id: 'delivery',
                     label: 'Show in Quest Bar',
                     checked: (null == n ? void 0 : n.id) === e.quest.id,
-                    action: L
+                    action: Z
                 }),
-            [L, e.quest.id, null == n ? void 0 : n.id]
+            [Z, e.quest.id, null == n ? void 0 : n.id]
         );
     return (0, s.jsxs)(a.v2r, {
         variant: 'fixed',
@@ -62,7 +62,7 @@ function v(e) {
             null != e.onSelect ? e.onSelect() : (0, r.Zy)();
         },
         navId: 'quests-entry',
-        'aria-label': E.intl.string(E.t.ogxXGh),
+        'aria-label': v.intl.string(v.t.ogxXGh),
         onClose: null !== (t = null == e ? void 0 : e.onClose) && void 0 !== t ? t : T.dG,
         children: [
             (0, s.jsxs)(
@@ -71,14 +71,14 @@ function v(e) {
                     children: [
                         (0, s.jsx)(a.sNh, {
                             id: 'play-game',
-                            label: E.intl.string(P),
-                            action: Z,
+                            label: v.intl.string(P),
+                            action: I,
                             icon: a.zFc
                         }),
                         !0 === e.showShareLink &&
                             (0, s.jsx)(a.sNh, {
                                 id: 'share-link',
-                                label: E.intl.string(E.t.RDE0SU),
+                                label: v.intl.string(v.t.RDE0SU),
                                 action: M,
                                 icon: a.TIy
                             }),
@@ -94,7 +94,7 @@ function v(e) {
                         !e.hideLearnMore &&
                             (0, s.jsx)(a.sNh, {
                                 id: 'learn-more',
-                                label: E.intl.string(E.t.Ws2Bl5),
+                                label: v.intl.string(v.t.Ws2Bl5),
                                 action: () => {
                                     S({
                                         questId: e.quest.id,
@@ -102,14 +102,17 @@ function v(e) {
                                         questContentPosition: e.questContentPosition,
                                         questContentCTA: u.jZ.CONTEXT_MENU_LEARN_MORE
                                     }),
-                                        (0, p.navigateToQuestHome)(j.dr.QUEST_CONTEXT_MENU, e.questContent, e.quest.id);
+                                        (0, p.navigateToQuestHome)({
+                                            fromContent: e.questContent,
+                                            questId: e.quest.id
+                                        });
                                 },
                                 icon: a.qDn
                             }),
                         e.shouldShowDisclosure &&
                             (0, s.jsx)(a.sNh, {
                                 id: 'display-disclosure',
-                                label: E.intl.string(E.t.GcsZKC),
+                                label: v.intl.string(v.t.GcsZKC),
                                 action: () => {
                                     (0, p.openDisclosureModal)(e.quest, {
                                         content: e.questContent,
@@ -122,7 +125,7 @@ function v(e) {
                         d &&
                             (0, s.jsx)(a.sNh, {
                                 id: 'hide-entrypoint',
-                                label: E.intl.string(E.t.NN79Ex),
+                                label: v.intl.string(v.t.NN79Ex),
                                 action: () => {
                                     S({
                                         questId: e.quest.id,
@@ -132,7 +135,7 @@ function v(e) {
                                     }),
                                         (0, C.GN)(e.questContent) && ((0, m.gl)(e.quest.id, e.questContent), N && f && (0, p.maybeShowSurveyForQuest)(e.quest));
                                 },
-                                subtext: E.intl.string(E.t['1u3YPD'])
+                                subtext: v.intl.string(v.t['1u3YPD'])
                             })
                     ]
                 },
@@ -148,20 +151,20 @@ function v(e) {
                             (0, s.jsx)(a.sNh, {
                                 id: 'dismiss',
                                 label: 'Reset Dismissibility',
-                                action: R
+                                action: _
                             }),
                             (0, s.jsx)(a.sNh, {
                                 id: 'enrollment',
                                 label: 'Reset Quest',
                                 action: () => {
-                                    b(), I();
+                                    b(), L();
                                 }
                             }),
                             (0, s.jsx)(a.sNh, {
                                 id: 'progress',
                                 label: 'Set Random Quest Progress',
                                 action: () => {
-                                    _(0.9 * Math.random() + 0.03);
+                                    R(0.9 * Math.random() + 0.03);
                                 }
                             }),
                             (0, s.jsx)(a.sNh, {
@@ -187,7 +190,7 @@ function v(e) {
                                         (0, s.jsx)(a.sNh, {
                                             id: 'stop',
                                             label: 'Stop heartbeat',
-                                            action: I
+                                            action: L
                                         })
                                     ]
                                 })
@@ -217,7 +220,7 @@ function f(e) {
             let { closePopout: t } = e;
             return r
                 ? (0, s.jsx)(d.Z, {
-                      children: (0, s.jsx)(v, {
+                      children: (0, s.jsx)(E, {
                           ...x,
                           quest: o,
                           questContent: c,
@@ -225,7 +228,7 @@ function f(e) {
                           onClose: t
                       })
                   })
-                : (0, s.jsx)(v, {
+                : (0, s.jsx)(E, {
                       ...x,
                       quest: o,
                       questContent: c,

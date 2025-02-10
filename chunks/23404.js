@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(373370),
     I = n(475595),
     C = n(566078),
-    v = n(602667),
-    N = n(65443),
+    N = n(602667),
+    v = n(65443),
     T = n(611855),
     S = n(670638),
     Z = n(667105),
@@ -66,27 +66,30 @@ function R(e) {
     var t, n, r, o;
     let { nodeRef: d, quest: I } = e,
         C = (0, u.O5)(),
-        v = (0, s.e7)([p.Z], () => p.Z.isEnrolling(I.id), [I]),
+        N = (0, s.e7)([p.Z], () => p.Z.isEnrolling(I.id), [I]),
         [L, R] = l.useState(!1),
         j = l.useCallback(() => R(!0), []),
         D = l.useCallback(() => R(!1), []),
         w = l.useCallback((e) => {
             e.stopPropagation();
         }, []),
-        M = l.useCallback(() => {
+        k = l.useCallback(() => {
             (0, h.AH)(I.id, {
                 questContent: g.jn.ACTIVITY_PANEL,
                 questContentCTA: u.jZ.ACCEPT_QUEST
             });
         }, [I]),
-        k = l.useCallback(() => {
+        M = l.useCallback(() => {
             null != I &&
                 (C({
                     questId: I.id,
                     questContent: g.jn.ACTIVITY_PANEL,
                     questContentCTA: u.jZ.TRACK_PROGRESS
                 }),
-                (0, x.navigateToQuestHome)(b.dr.ACTIVITY_PANEL, g.jn.ACTIVITY_PANEL, I.id));
+                (0, x.navigateToQuestHome)({
+                    fromContent: g.jn.ACTIVITY_PANEL,
+                    questId: I.id
+                }));
         }, [I, C]),
         U = l.useCallback(() => {
             C({
@@ -94,7 +97,10 @@ function R(e) {
                 questContent: g.jn.ACTIVITY_PANEL,
                 questContentCTA: u.jZ.LEARN_MORE
             }),
-                (0, x.navigateToQuestHome)(b.dr.ACTIVITY_PANEL, g.jn.ACTIVITY_PANEL, I.id);
+                (0, x.navigateToQuestHome)({
+                    fromContent: g.jn.ACTIVITY_PANEL,
+                    questId: I.id
+                });
         }, [I.id, C]),
         G = (0, Z.hf)({
             quest: I,
@@ -162,7 +168,7 @@ function R(e) {
                                           children: Y
                                       }),
                                       K &&
-                                          (0, i.jsx)(N.Z, {
+                                          (0, i.jsx)(v.Z, {
                                               quest: I,
                                               textColor: 'text-muted',
                                               withRewardName: !0
@@ -199,9 +205,9 @@ function R(e) {
                                           className: P.cta,
                                           color: c.zxk.Colors.BRAND,
                                           fullWidth: !0,
-                                          onClick: M,
+                                          onClick: k,
                                           size: c.zxk.Sizes.SMALL,
-                                          submitting: v,
+                                          submitting: N,
                                           children: y.intl.string(y.t.l7E81t)
                                       })
                                   ]
@@ -212,7 +218,7 @@ function R(e) {
                                   className: P.cta,
                                   color: c.zxk.Colors.BRAND,
                                   fullWidth: !0,
-                                  onClick: k,
+                                  onClick: M,
                                   size: c.zxk.Sizes.SMALL,
                                   children: y.intl.string(y.t.VN1Ajo)
                               }),
@@ -231,7 +237,7 @@ function R(e) {
           });
 }
 let j = function (e) {
-    return (0, i.jsx)(v.A, {
+    return (0, i.jsx)(N.A, {
         questOrQuests: e.quest,
         questContent: g.jn.ACTIVITY_PANEL,
         children: (t) =>

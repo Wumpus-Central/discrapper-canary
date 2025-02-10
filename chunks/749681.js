@@ -6,11 +6,11 @@ n.r(t),
                 let m = t.tab;
                 switch ((u.Z.setState({ selectedTab: m }), m)) {
                     case d.GlobalDiscoveryTab.SERVERS:
-                        let v = t.selectedServersTab;
+                        let I = t.selectedServersTab;
                         return (
-                            null != v
+                            null != I
                                 ? c.Z.setState({
-                                      selectedTab: v,
+                                      selectedTab: I,
                                       entrypoint: null !== (n = t.entrypoint) && void 0 !== n ? n : A.Qq.UNKNOWN
                                   })
                                 : c.Z.setState({ entrypoint: null !== (_ = t.entrypoint) && void 0 !== _ ? _ : A.Qq.UNKNOWN }),
@@ -78,7 +78,10 @@ n.r(t),
                         if (null != t.categoryId) return (0, i.uL)(T.Z5c.GLOBAL_DISCOVERY_APPS_CATEGORY(t.categoryId.toString()));
                         else return (0, i.uL)(T.Z5c.GLOBAL_DISCOVERY_APPS);
                     case d.GlobalDiscoveryTab.QUESTS:
-                        return (0, o.navigateToQuestHome)(t.location, t.questContent, t.questId);
+                        return (0, o.navigateToQuestHome)({
+                            fromContent: t.questContent,
+                            questId: t.questId
+                        });
                     default:
                         throw Error('[transitionToGlobalDiscovery] Unhandled tab type: '.concat(m));
                 }
