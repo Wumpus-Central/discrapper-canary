@@ -33,17 +33,20 @@ let p = (e) => {
             (0, i.jsxs)('div', {
                 className: h.iconTreatmentsWrapper,
                 children: [
-                    (0, i.jsx)('div', {
-                        className: r()(h.thumbnailWrapper, {
+                    (0, i.jsxs)('div', {
+                        className: r()(h.profile, {
                             [h.unlocked]: !g,
                             [h.underDevelopment]: t.underDevelopment
                         }),
-                        children: (0, i.jsx)('img', {
-                            className: r()(h.thumbnail),
-                            alt: '',
-                            src: null == m ? void 0 : m.iconURL,
-                            draggable: !1
-                        })
+                        children: [
+                            (0, i.jsx)('img', {
+                                className: r()(h.thumbnail),
+                                alt: '',
+                                src: null == m ? void 0 : m.iconURL,
+                                draggable: !1
+                            }),
+                            (0, i.jsx)('div', { className: r()(h.insetBorder) })
+                        ]
                     }),
                     f &&
                         (0, i.jsx)('div', {
