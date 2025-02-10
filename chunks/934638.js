@@ -10,17 +10,18 @@ var i = n(200651),
     u = n(388032),
     m = n(489007);
 function h(e) {
-    var t;
-    let { guild: n } = e,
-        h = n.id,
-        g = (0, l.e7)([a.Z], () => a.Z.can(d.Plq.MANAGE_GUILD, n)),
-        x = r.useCallback(
+    var t, n;
+    let { guild: h } = e,
+        g = h.id,
+        x = (0, l.e7)([a.Z], () => a.Z.can(d.Plq.MANAGE_GUILD, h)),
+        p = r.useCallback(
             (e) => {
-                o.Z.updateGuild({ description: e }), o.Z.updateGuildProfile(h, { description: e });
+                o.Z.updateGuild({ description: e }), o.Z.updateGuildProfile(g, { description: e });
             },
-            [h]
+            [g]
         ),
-        p = (0, l.e7)([c.Z], () => c.Z.getError('description'));
+        _ = (0, l.e7)([c.Z], () => c.Z.getError('description')),
+        C = (0, l.e7)([c.Z], () => c.Z.getGuildProfile());
     return (0, i.jsxs)(s.hjN, {
         className: m.section,
         children: [
@@ -35,12 +36,12 @@ function h(e) {
                 ]
             }),
             (0, i.jsx)(s.Kx8, {
-                value: null !== (t = n.description) && void 0 !== t ? t : '',
+                value: null !== (n = null !== (t = null == C ? void 0 : C.description) && void 0 !== t ? t : h.description) && void 0 !== n ? n : '',
                 placeholder: u.intl.string(u.t.Nvfows),
-                onChange: x,
+                onChange: p,
                 maxLength: 120,
-                disabled: !g,
-                error: p
+                disabled: !x,
+                error: _
             })
         ]
     });

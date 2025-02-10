@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(47120);
+n.d(t, { Z: () => m }), n(47120);
 var i,
     r = n(442837),
     a = n(570140);
@@ -20,6 +20,7 @@ let o = new Map(),
         profile: null,
         lastSyncTimestamp: null,
         isFetching: !1,
+        isUpdating: !1,
         error: null
     };
 function u(e) {
@@ -65,7 +66,48 @@ function d(e) {
               isFetching: !1
           });
 }
-class f extends (i = r.ZP.Store) {
+function f(e) {
+    let { guildId: t } = e,
+        n = o.get(t);
+    null == n
+        ? o.set(t, {
+              ...l,
+              isUpdating: !0
+          })
+        : o.set(t, {
+              ...n,
+              isUpdating: !0
+          });
+}
+function _(e) {
+    let { guildId: t, profile: n } = e,
+        i = o.get(t);
+    null == i
+        ? o.set(t, {
+              ...l,
+              profile: n
+          })
+        : o.set(t, {
+              ...i,
+              profile: n,
+              isUpdating: !1
+          });
+}
+function p(e) {
+    let { guildId: t, error: n } = e,
+        i = o.get(t);
+    null == i
+        ? o.set(t, {
+              ...l,
+              error: n
+          })
+        : o.set(t, {
+              ...i,
+              error: n,
+              isUpdating: !1
+          });
+}
+class h extends (i = r.ZP.Store) {
     getProfile(e) {
         var t, n;
         return null == e ? null : null !== (n = null === (t = o.get(e)) || void 0 === t ? void 0 : t.profile) && void 0 !== n ? n : null;
@@ -78,10 +120,17 @@ class f extends (i = r.ZP.Store) {
         var t, n;
         return null == e ? null : null !== (n = null === (t = o.get(e)) || void 0 === t ? void 0 : t.lastSyncTimestamp) && void 0 !== n ? n : null;
     }
+    getIsUpdating(e) {
+        var t, n;
+        return null != e && null !== (n = null === (t = o.get(e)) || void 0 === t ? void 0 : t.isUpdating) && void 0 !== n && n;
+    }
 }
-s(f, 'displayName', 'GuildProfileStore');
-let _ = new f(a.Z, {
+s(h, 'displayName', 'GuildProfileStore');
+let m = new h(a.Z, {
     GUILD_PROFILE_FETCH: u,
     GUILD_PROFILE_FETCH_SUCCESS: c,
-    GUILD_PROFILE_FETCH_FAILURE: d
+    GUILD_PROFILE_FETCH_FAILURE: d,
+    GUILD_PROFILE_UPDATE: f,
+    GUILD_PROFILE_UPDATE_SUCCESS: _,
+    GUILD_PROFILE_UPDATE_FAILURE: p
 });
