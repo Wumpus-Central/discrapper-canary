@@ -1,5 +1,5 @@
 let i;
-n.d(t, { Z: () => V });
+n.d(t, { Z: () => V }), n(653041);
 var r,
     a,
     s = n(442837),
@@ -71,10 +71,10 @@ function L() {
 function x() {
     return (0, u.ap)(O());
 }
-function w(e) {
+function P(e) {
     return !e.isSwitchingAccount && S !== I.BRd.DARK && ((S = I.BRd.DARK), Z(), B());
 }
-function P(e) {
+function w(e) {
     let { systemTheme: t } = e;
     return (N = t), B();
 }
@@ -98,16 +98,28 @@ function G() {
 }
 function B() {
     let e = O();
-    return e !== S && ((S = e), !0);
+    return e !== S && (Z((S = e)), !0);
 }
-function Z() {
-    !__OVERLAY__ && m.isPlatformEmbedded && h.Z.setApplicationBackgroundColor((0, u.wj)(O()) ? (0, l.x3)('PRIMARY_700', { saturation: d.Z.saturation }) : (0, l.x3)('WHITE_500', { saturation: d.Z.saturation }));
+function Z(e) {
+    if (!__OVERLAY__ && m.isPlatformEmbedded) {
+        let t = [],
+            n = (0, _.O_)('ThemeStore');
+        n && t.push('visual-refresh');
+        try {
+            let i = (0, l.uJ)(n ? 'BACKGROUND_TERTIARY' : 'BACKGROUND_SECONDARY', {
+                theme: null != e ? e : O(),
+                saturation: d.Z.saturation,
+                enabledExperiments: t
+            });
+            h.Z.setApplicationBackgroundColor(i);
+        } catch {}
+    }
 }
 class F extends (a = s.ZP.PersistedStore) {
     initialize(e) {
         if ((null == e ? void 0 : e.theme) != null) {
             var t;
-            (S = e.theme), (A = null !== (t = e.selectedDarkTheme) && void 0 !== t ? t : null);
+            Z((S = e.theme)), (A = null !== (t = e.selectedDarkTheme) && void 0 !== t ? t : null);
         }
         this.waitFor(E.ZP, g.Z, v.Z, d.Z);
     }
@@ -153,14 +165,14 @@ b(F, 'displayName', 'ThemeStore'),
 let V = new F(c.Z, {
     CACHE_LOADED: D,
     CONNECTION_OPEN: D,
-    LOGOUT: w,
+    LOGOUT: P,
     OVERLAY_INITIALIZE: D,
     SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: L,
     UNSYNCED_USER_SETTINGS_UPDATE: L,
     USER_SETTINGS_PROTO_UPDATE: D,
     UPDATE_BACKGROUND_GRADIENT_PRESET: k,
     RESET_PREVIEW_CLIENT_THEME: D,
-    SYSTEM_THEME_CHANGE: P,
+    SYSTEM_THEME_CHANGE: w,
     ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED: M,
     ACCESSIBILITY_DARK_SIDEBAR_TOGGLE: x,
     SET_DARK_MODE_THEME: U
