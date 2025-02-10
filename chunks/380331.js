@@ -29,15 +29,15 @@ var i = n(200651),
 let D = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_SIZE),
     L = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_MARGIN_VERICAL),
     x = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_SIZE),
-    P = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_MARGIN_VERTICAL),
-    w = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_PADDING),
+    w = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_MARGIN_VERTICAL),
+    P = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_PADDING),
     M = (0, y.Mg)(O.__invalid_unicodeCategoryShortcutHeight),
     k = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
     U = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
-    G = x + L + 2 * w,
+    G = x + L + 2 * P,
     B = D + L,
     Z = B + (k + 2 * U),
-    F = x + P + 2 * w,
+    F = x + w + 2 * P,
     V = 7;
 function j(e) {
     let { activeIndex: t, categoryIndex: n, analyticsContext: a, categories: o, category: l, handleCategorySelect: c, isWindowFocused: d, useReducedMotion: _ } = e,
@@ -132,7 +132,7 @@ let H = (e) => {
                 }),
             [g, y, T, v, N, C]
         ),
-        w = r.useMemo(() => [8, 8, 0, 8], []),
+        P = r.useMemo(() => [8, 8, 0, 8], []),
         H = r.useCallback(
             (e, t) => {
                 let n = T[t];
@@ -190,7 +190,7 @@ let H = (e) => {
                 let n = T[e];
                 if (null == n) return 0;
                 let i = q ? M : 0;
-                if (n.type === A.En.RECENT) return t ? 0 : P;
+                if (n.type === A.En.RECENT) return t ? 0 : w;
                 if (n.type === A.En.GUILD) {
                     let n = T[e + 1];
                     return null != n && n.type !== A.En.GUILD ? (t ? k + -2 * U + L + i : L) : t ? i : L;
@@ -213,7 +213,7 @@ let H = (e) => {
         className: t,
         store: h.kJ,
         categories: T,
-        listPadding: w,
+        listPadding: P,
         onScroll: X,
         renderCategoryListItem: D,
         renderSection: ee,

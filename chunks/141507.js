@@ -37,14 +37,14 @@ let D = (e) => {
         let t,
             L,
             x,
-            { className: P, emojiGrid: w, guildId: M, pickerIntention: k, channel: U } = e,
+            { className: w, emojiGrid: P, guildId: M, pickerIntention: k, channel: U } = e,
             { enabled: G } = y.Z.useExperiment({ location: 'EmojiPicker' }, { autoTrackExposure: !1 }),
             B = _.kJ.useStore((e) => e.inspectedExpressionPosition),
             Z = r.useMemo(() => {
                 var e;
                 let { rowIndex: t, columnIndex: n } = B;
-                return null === (e = w[t]) || void 0 === e ? void 0 : e[n];
-            }, [w, B]);
+                return null === (e = P[t]) || void 0 === e ? void 0 : e[n];
+            }, [P, B]);
         switch (null == Z ? void 0 : Z.type) {
             case S.ld.EMOJI:
                 t = null == Z ? void 0 : Z.emoji;
@@ -162,7 +162,7 @@ let D = (e) => {
                       guild: F
                   });
         return (0, i.jsx)(p.Z, {
-            className: P,
+            className: w,
             graphicPrimary: L,
             graphicSecondary: X,
             titlePrimary: x,

@@ -1,8 +1,8 @@
-n.d(t, { Z: () => A }), n(47120), n(653041);
+n.d(t, { Z: () => N }), n(47120), n(653041);
 var i,
     r = n(442837),
     a = n(570140),
-    s = n(162461);
+    s = n(70956);
 function o(e, t, n) {
     return (
         t in e
@@ -17,86 +17,86 @@ function o(e, t, n) {
     );
 }
 let l = 2592000000,
-    u = 2048,
-    c = () => ({
+    u = 3 * s.Z.Millis.DAY,
+    c = 2048,
+    d = () => ({
         itemImpressions: [],
         hidden: !1
     }),
-    d = c(),
-    f = new Set(),
+    f = d(),
     _ = new Set(),
-    p = 0,
-    h = !1,
+    p = new Set(),
+    h = 0,
     m = !1,
-    g = 1000;
-function E() {
+    g = !1,
+    E = 1000;
+function v() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    if (!e && Date.now() < p) return;
+    if (!e && Date.now() < h) return;
     let t = 0,
         n = Date.now() - l;
-    for (let e = 0; e < d.itemImpressions.length; e++) {
-        let [i, r] = d.itemImpressions[e];
+    for (let e = 0; e < f.itemImpressions.length; e++) {
+        let [i, r] = f.itemImpressions[e];
         if (r < n) t = e + 1;
         else break;
     }
-    t > 0 && (d.itemImpressions = d.itemImpressions.slice(t)), d.itemImpressions.length > u && (d.itemImpressions = d.itemImpressions.slice(-u));
-    let { impressionAge: i } = (0, s.m6)('ContentInventoryPersistedStore.updateImpressionCaches'),
-        r = m ? g : i,
+    t > 0 && (f.itemImpressions = f.itemImpressions.slice(t)), f.itemImpressions.length > c && (f.itemImpressions = f.itemImpressions.slice(-c));
+    let i = g ? E : u,
+        r = new Set(),
         a = new Set(),
-        o = new Set(),
-        c = Date.now() - r,
-        E = null;
-    for (let [e, t] of d.itemImpressions) t < c ? a.add(e) : null == E && (E = t + r), o.add(e);
-    (f = a), (_ = o), (p = null != E ? E : 1 / 0), (h = !0);
+        s = Date.now() - i,
+        o = null;
+    for (let [e, t] of f.itemImpressions) t < s ? r.add(e) : null == o && (o = t + i), a.add(e);
+    (_ = r), (p = a), (h = null != o ? o : 1 / 0), (m = !0);
 }
-function v(e) {
+function y(e) {
     let { itemIds: t } = e;
-    h || E();
+    m || v();
     let n = Date.now(),
         i = !1;
-    for (let e of t) _.has(e) || (d.itemImpressions.push([e, n]), (i = !0));
-    return E(i), i;
-}
-function y() {
-    (d.itemImpressions = []), E(!0);
+    for (let e of t) p.has(e) || (f.itemImpressions.push([e, n]), (i = !0));
+    return v(i), i;
 }
 function I() {
-    return console.log('Item impressions:', d.itemImpressions), !1;
+    (f.itemImpressions = []), v(!0);
 }
 function T() {
-    m = !m;
+    return console.log('Item impressions:', f.itemImpressions), !1;
 }
 function b() {
-    d.hidden = !d.hidden;
+    g = !g;
 }
-class S extends (i = r.ZP.PersistedStore) {
+function S() {
+    f.hidden = !f.hidden;
+}
+class A extends (i = r.ZP.PersistedStore) {
     initialize(e) {
-        d = {
-            ...d,
+        f = {
+            ...f,
             ...(null != e ? e : {})
         };
     }
     getState() {
-        return d;
+        return f;
     }
     getImpressionCappedItemIds() {
-        return E(), f;
+        return v(), _;
     }
     getDebugFastImpressionCappingEnabled() {
-        return m;
+        return g;
     }
     get hidden() {
-        return d.hidden;
+        return f.hidden;
     }
     reset() {
-        d = c();
+        f = d();
     }
 }
-o(S, 'displayName', 'ContentInventoryPersistedStore'), o(S, 'persistKey', 'ContentInventoryPersistedStore');
-let A = new S(a.Z, {
-    CONTENT_INVENTORY_TRACK_ITEM_IMPRESSIONS: v,
-    CONTENT_INVENTORY_DEBUG_CLEAR_IMPRESSIONS: y,
-    CONTENT_INVENTORY_DEBUG_LOG_IMPRESSIONS: I,
-    CONTENT_INVENTORY_DEBUG_TOGGLE_FAST_IMPRESSION_CAPPING: T,
-    CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: b
+o(A, 'displayName', 'ContentInventoryPersistedStore'), o(A, 'persistKey', 'ContentInventoryPersistedStore');
+let N = new A(a.Z, {
+    CONTENT_INVENTORY_TRACK_ITEM_IMPRESSIONS: y,
+    CONTENT_INVENTORY_DEBUG_CLEAR_IMPRESSIONS: I,
+    CONTENT_INVENTORY_DEBUG_LOG_IMPRESSIONS: T,
+    CONTENT_INVENTORY_DEBUG_TOGGLE_FAST_IMPRESSION_CAPPING: b,
+    CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: S
 });

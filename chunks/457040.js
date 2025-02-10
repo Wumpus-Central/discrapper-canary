@@ -29,8 +29,8 @@ var i = n(200651),
     D = n(422195),
     L = n(657795),
     x = n(489762),
-    P = n(31543),
-    w = n(814042),
+    w = n(31543),
+    P = n(814042),
     M = n(15350),
     k = n(611480),
     U = n(981631),
@@ -172,7 +172,7 @@ let B = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 var e;
                 null === (e = et.current) || void 0 === e || e.focus();
             }, []);
-        let eP = r.useCallback(() => {
+        let ew = r.useCallback(() => {
             H(), I.default.track(U.rMx.PREMIUM_PROMOTION_OPENED, { location_section: U.jXE.STICKER_PICKER_UPSELL }), (0, g.z)();
         }, [H]);
         return (0, i.jsxs)(_.Gt, {
@@ -181,7 +181,7 @@ let B = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 !(Q && eo) &&
                     (0, i.jsx)('div', {
                         className: G.header,
-                        children: (0, i.jsx)(P.Z, {
+                        children: (0, i.jsx)(w.Z, {
                             ref: et,
                             onKeyDown: eD,
                             stickersListRef: ee,
@@ -226,7 +226,7 @@ let B = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                               })
                           ]
                       }),
-                en && (0, i.jsx)(w.C, { onLearnMore: eP })
+                en && (0, i.jsx)(P.C, { onLearnMore: ew })
             ]
         });
     }),

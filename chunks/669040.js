@@ -29,8 +29,8 @@ var i = n(200651),
     D = n(631771),
     L = n(695346),
     x = n(594174),
-    P = n(626135),
-    w = n(111361),
+    w = n(626135),
+    P = n(111361),
     M = n(74538),
     k = n(624138),
     U = n(543241),
@@ -58,7 +58,7 @@ let z = 0,
     ea = 33,
     es = (e) => e + 2 * ei,
     eo = (e) => {
-        let { collapsedSections: t, diversitySurrogate: n, emojiGrid: a, emojiSize: o, onEmojiSelect: u, onSelectSoundmoji: f, searchQuery: p, sectionDescriptors: m, setCollapsedSections: g, getEmojiItemProps: I, getEmojiRowProps: A, isScrolling: N, isUsingKeyboardNavigation: C, allowAnimatedEmoji: R, channelGuildId: D, channelId: L, messageId: x, isBurstReaction: w, listHeaderClassName: M, activeSectionIndex: k, upsellGlowOpacity: Y, emojiListRef: z } = e,
+        let { collapsedSections: t, diversitySurrogate: n, emojiGrid: a, emojiSize: o, onEmojiSelect: u, onSelectSoundmoji: f, searchQuery: p, sectionDescriptors: m, setCollapsedSections: g, getEmojiItemProps: I, getEmojiRowProps: A, isScrolling: N, isUsingKeyboardNavigation: C, allowAnimatedEmoji: R, channelGuildId: D, channelId: L, messageId: x, isBurstReaction: P, listHeaderClassName: M, activeSectionIndex: k, upsellGlowOpacity: Y, emojiListRef: z } = e,
             ei = (0, h.O)(),
             es = r.useRef(j.xAR),
             eo = r.useMemo(() => ('' !== n ? d.Z.convert.toCodePoint(n) : ''), [n]),
@@ -86,13 +86,13 @@ let z = 0,
                         r = t.has(e);
                     r ? i.delete(e) : i.add(e),
                         null != n &&
-                            P.default.track(j.rMx.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
+                            w.default.track(j.rMx.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
                                 location: ei.location,
                                 tab: H.X1.EMOJI,
                                 collapsed: !r,
                                 guild_id: n.id
                             }),
-                        e === V.UX.SOUNDMOJI && P.default.track(j.rMx.SOUNDMOJI_EMOJI_PICKER_SECTION_TOGGLED, { collapsed: !r }),
+                        e === V.UX.SOUNDMOJI && w.default.track(j.rMx.SOUNDMOJI_EMOJI_PICKER_SECTION_TOGGLED, { collapsed: !r }),
                         g(i);
                 },
                 [ei, t, g]
@@ -136,14 +136,14 @@ let z = 0,
                                 selectedItemClassName: K.__invalid_selectedItem,
                                 channelId: L,
                                 messageId: x,
-                                isBurstReaction: w,
+                                isBurstReaction: P,
                                 inNitroLockedSection: r.isNitroLocked,
                                 handleScrollUpOnSectionCollapse: s
                             },
                             e
                         );
                     }),
-                [a, m, o, eo, ed, u, f, I, A, N, C, R, ef, D, L, x, w, z]
+                [a, m, o, eo, ed, u, f, I, A, N, C, R, ef, D, L, x, P, z]
             );
         r.useEffect(
             () => () => {
@@ -187,7 +187,7 @@ let z = 0,
                                     ? (0, i.jsx)(_.P3F, {
                                           className: K.soundmojiViewMore,
                                           onClick: () => {
-                                              (0, v.hr)(H.X1.SOUNDBOARD), P.default.track(j.rMx.SOUNDMOJI_EMOJI_PICKER_VIEW_ALL_CLICK);
+                                              (0, v.hr)(H.X1.SOUNDBOARD), w.default.track(j.rMx.SOUNDMOJI_EMOJI_PICKER_VIEW_ALL_CLICK);
                                           },
                                           children: W.intl.string(W.t.rUEjBQ)
                                       })
@@ -259,7 +259,7 @@ let z = 0,
             Q = (0, v.Iu)((e) => e.searchQuery),
             X = L.Yk.useSetting(),
             J = (0, c.e7)([x.default], () => x.default.getCurrentUser()),
-            $ = (0, w.I5)(J),
+            $ = (0, P.I5)(J),
             { location: ee } = (0, h.O)(),
             { analyticsLocations: et } = (0, m.ZP)(),
             [en, ei] = r.useState(0),
@@ -367,7 +367,7 @@ let z = 0,
         return (
             r.useEffect(() => {
                 er &&
-                    P.default.track(j.rMx.PREMIUM_UPSELL_VIEWED, {
+                    w.default.track(j.rMx.PREMIUM_UPSELL_VIEWED, {
                         type: Y.cd.EMOJI_PICKER_FLOATING_UPSELL,
                         location: ee,
                         location_stack: et

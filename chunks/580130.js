@@ -65,10 +65,10 @@ function L(e) {
     (g = {}), t.forEach(C);
 }
 function x() {}
-function P() {
+function w() {
     y = !0;
 }
-function w(e) {
+function P(e) {
     let { entitlements: t } = e;
     for (let e of ((I = !0), (y = !1), t)) N(e);
 }
@@ -204,7 +204,7 @@ let F = new Z(l.Z, {
     ENTITLEMENT_UPDATE: G,
     ENTITLEMENT_DELETE: B,
     LOGOUT: A,
-    ENTITLEMENTS_FETCH_FOR_USER_START: P,
-    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: w,
+    ENTITLEMENTS_FETCH_FOR_USER_START: w,
+    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: P,
     ENTITLEMENTS_FETCH_FOR_USER_FAIL: M
 });

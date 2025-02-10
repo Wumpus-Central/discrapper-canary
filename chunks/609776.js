@@ -1,4 +1,4 @@
-t.d(n, { Z: () => A }), t(47120);
+t.d(n, { Z: () => P }), t(47120);
 var l = t(200651),
     i = t(192379),
     a = t(913527),
@@ -55,28 +55,28 @@ function y(e) {
               })
           });
 }
-function A(e) {
-    var n, t, a, v, b, A;
-    let { channel: P, guild: R, header: D, error: L, loading: G, onSave: w, onEventSave: O, onClose: B, onSelectChannel: z, isEvent: U = !1, defaultOptions: M, isSlideReady: F = !0 } = e,
-        W = i.useMemo(() => I.Z.getStageInstanceByChannel(P.id), [P.id]),
-        [V, H] = i.useState(null !== (t = null !== (n = null == M ? void 0 : M.topic) && void 0 !== n ? n : null == W ? void 0 : W.topic) && void 0 !== t ? t : ''),
-        [q, J] = i.useState(null !== (a = null == M ? void 0 : M.description) && void 0 !== a ? a : ''),
+function P(e) {
+    var n, t, a, v, b, P;
+    let { channel: A, guild: R, header: D, error: L, loading: G, onSave: w, onEventSave: O, onClose: B, onSelectChannel: z, isEvent: U = !1, defaultOptions: F, isSlideReady: M = !0 } = e,
+        W = i.useMemo(() => I.Z.getStageInstanceByChannel(A.id), [A.id]),
+        [V, H] = i.useState(null !== (t = null !== (n = null == F ? void 0 : F.topic) && void 0 !== n ? n : null == W ? void 0 : W.topic) && void 0 !== t ? t : ''),
+        [q, J] = i.useState(null !== (a = null == F ? void 0 : F.description) && void 0 !== a ? a : ''),
         [K] = i.useState(U),
-        [Q, Y] = i.useState(null !== (v = null == M ? void 0 : M.schedule) && void 0 !== v ? v : { startDate: (0, _.ib)() }),
-        [X, $] = i.useState(K && (null == M ? void 0 : M.schedule) != null),
-        ee = (0, N.J)(P),
-        en = (0, N.U)(P),
+        [Q, Y] = i.useState(null !== (v = null == F ? void 0 : F.schedule) && void 0 !== v ? v : { startDate: (0, _.ib)() }),
+        [X, $] = i.useState(K && (null == F ? void 0 : F.schedule) != null),
+        ee = (0, N.J)(A),
+        en = (0, N.U)(A),
         et = null == W && ee && !K,
         [el, ei] = i.useState(et && en),
         ea = (0, o.e7)([g.Z], () => g.Z.hasHotspot(S.v.LIVE_STAGE_NOTIFICATION_BADGE)),
         er = T.j8.GUILD_ONLY,
-        [eo] = i.useState(null !== (A = null !== (b = null == M ? void 0 : M.privacyLevel) && void 0 !== b ? b : null == W ? void 0 : W.privacy_level) && void 0 !== A ? A : er),
-        [es, ec] = i.useState(null == M ? void 0 : M.recurrenceRule),
-        ed = (0, f._d)(P.id),
-        eu = (0, f.K3)(P.id),
+        [eo] = i.useState(null !== (P = null !== (b = null == F ? void 0 : F.privacyLevel) && void 0 !== b ? b : null == W ? void 0 : W.privacy_level) && void 0 !== P ? P : er),
+        [es, ec] = i.useState(null == F ? void 0 : F.recurrenceRule),
+        ed = (0, f._d)(A.id),
+        eu = (0, f.K3)(A.id),
         [em, e_] = i.useState(!1),
         eh = (0, u.Q3)('StageChannelSettings'),
-        ex = (0, d.ZP)(P),
+        ex = (0, d.ZP)(A),
         eg = (0, m.q)(R),
         ev = null != z,
         eb = eg.length > 1;
@@ -84,7 +84,7 @@ function A(e) {
         j.default.track(E.rMx.START_STAGE_OPENED, {
             stage_instance_id: null == W ? void 0 : W.id,
             can_start_public_stage: !1,
-            guild_id: P.guild_id
+            guild_id: A.guild_id
         });
     });
     let ej = (e) => {
@@ -132,8 +132,8 @@ function A(e) {
         ef = i.useRef(null);
     i.useEffect(() => {
         var e;
-        F && (null === (e = ef.current) || void 0 === e || e.focus());
-    }, [F]);
+        M && (null === (e = ef.current) || void 0 === e || e.focus());
+    }, [M]);
     let ep = X && null != Q.startDate && Q.startDate >= r()();
     return (0, l.jsxs)(l.Fragment, {
         children: [
@@ -143,7 +143,7 @@ function A(e) {
                     D,
                     (0, l.jsx)('div', {
                         className: Z.blockedUsersContainer,
-                        children: null == W && (ed > 0 || eu > 0) && (0, l.jsx)(p.mv, { channelId: P.id })
+                        children: null == W && (ed > 0 || eu > 0) && (0, l.jsx)(p.mv, { channelId: A.id })
                     }),
                     (0, l.jsxs)('form', {
                         onSubmit: ej,
@@ -183,7 +183,7 @@ function A(e) {
                             ev && eb
                                 ? (0, l.jsx)(y, {
                                       stageChannelsInGuild: eg,
-                                      channel: P,
+                                      channel: A,
                                       onSelectChannel: z
                                   })
                                 : null,
@@ -242,7 +242,7 @@ function A(e) {
                                                   'span',
                                                   {
                                                       className: Z.channelName,
-                                                      children: P.name
+                                                      children: A.name
                                                   },
                                                   n
                                               )

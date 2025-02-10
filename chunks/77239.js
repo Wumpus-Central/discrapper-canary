@@ -24,8 +24,8 @@ e.exports = function (e, t, n, p, h, m, g, E) {
         D = 0,
         L = 0,
         x = 0,
-        P = 0,
         w = 0,
+        P = 0,
         M = 0,
         k = 0,
         U = 0,
@@ -38,16 +38,16 @@ e.exports = function (e, t, n, p, h, m, g, E) {
         H = 0;
     for (O = 0; O <= r; O++) F[O] = 0;
     for (D = 0; D < p; D++) F[t[n + D]]++;
-    for (P = R, x = r; x >= 1 && 0 === F[x]; x--);
-    if ((P > x && (P = x), 0 === x)) return (h[m++] = 20971520), (h[m++] = 20971520), (E.bits = 1), 0;
+    for (w = R, x = r; x >= 1 && 0 === F[x]; x--);
+    if ((w > x && (w = x), 0 === x)) return (h[m++] = 20971520), (h[m++] = 20971520), (E.bits = 1), 0;
     for (L = 1; L < x && 0 === F[L]; L++);
-    for (P < L && (P = L), k = 1, O = 1; O <= r; O++) if (((k <<= 1), (k -= F[O]) < 0)) return -1;
+    for (w < L && (w = L), k = 1, O = 1; O <= r; O++) if (((k <<= 1), (k -= F[O]) < 0)) return -1;
     if (k > 0 && (e === o || 1 !== x)) return -1;
     for (O = 1, V[1] = 0; O < r; O++) V[O + 1] = V[O] + F[O];
     for (D = 0; D < p; D++) 0 !== t[n + D] && (g[V[t[n + D]]++] = D);
-    if ((e === o ? ((B = j = g), (S = 19)) : e === l ? ((B = c), (Z -= 257), (j = d), (H -= 257), (S = 256)) : ((B = f), (j = _), (S = -1)), (G = 0), (D = 0), (O = L), (b = m), (w = P), (M = 0), (I = -1), (T = (U = 1 << P) - 1), (e === l && U > a) || (e === u && U > s))) return 1;
+    if ((e === o ? ((B = j = g), (S = 19)) : e === l ? ((B = c), (Z -= 257), (j = d), (H -= 257), (S = 256)) : ((B = f), (j = _), (S = -1)), (G = 0), (D = 0), (O = L), (b = m), (P = w), (M = 0), (I = -1), (T = (U = 1 << w) - 1), (e === l && U > a) || (e === u && U > s))) return 1;
     for (;;) {
-        (A = O - M), g[D] < S ? ((N = 0), (C = g[D])) : g[D] > S ? ((N = j[H + g[D]]), (C = B[Z + g[D]])) : ((N = 96), (C = 0)), (v = 1 << (O - M)), (L = y = 1 << w);
+        (A = O - M), g[D] < S ? ((N = 0), (C = g[D])) : g[D] > S ? ((N = j[H + g[D]]), (C = B[Z + g[D]])) : ((N = 96), (C = 0)), (v = 1 << (O - M)), (L = y = 1 << P);
         do h[b + (G >> M) + (y -= v)] = (A << 24) | (N << 16) | C | 0;
         while (0 !== y);
         for (v = 1 << (O - 1); G & v; ) v >>= 1;
@@ -55,11 +55,11 @@ e.exports = function (e, t, n, p, h, m, g, E) {
             if (O === x) break;
             O = t[n + g[D]];
         }
-        if (O > P && (G & T) !== I) {
-            for (0 === M && (M = P), b += L, k = 1 << (w = O - M); w + M < x && !((k -= F[w + M]) <= 0); ) w++, (k <<= 1);
-            if (((U += 1 << w), (e === l && U > a) || (e === u && U > s))) return 1;
-            h[(I = G & T)] = (P << 24) | (w << 16) | (b - m) | 0;
+        if (O > w && (G & T) !== I) {
+            for (0 === M && (M = w), b += L, k = 1 << (P = O - M); P + M < x && !((k -= F[P + M]) <= 0); ) P++, (k <<= 1);
+            if (((U += 1 << P), (e === l && U > a) || (e === u && U > s))) return 1;
+            h[(I = G & T)] = (w << 24) | (P << 16) | (b - m) | 0;
         }
     }
-    return 0 !== G && (h[b + G] = ((O - M) << 24) | 4194304), (E.bits = P), 0;
+    return 0 !== G && (h[b + G] = ((O - M) << 24) | 4194304), (E.bits = w), 0;
 };

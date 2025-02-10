@@ -48,14 +48,14 @@ let O = 3000,
 function x(e) {
     return ''.concat(e.channel_id, ':').concat(e.id);
 }
-function P() {
+function w() {
     Object.values(L).forEach((e) => {
         let { timeout: t } = e;
         clearTimeout(t);
     }),
         (L = {});
 }
-function w(e, t) {
+function P(e, t) {
     if (null == e.id || null == e.channel_id) return !1;
     let n = x(e);
     if (null != L[n]) {
@@ -100,7 +100,7 @@ function M(e, t) {
     (0, T.OP)(n, t);
 }
 function k(e) {
-    if (w(e, T.Pq.TIMEOUT)) {
+    if (P(e, T.Pq.TIMEOUT)) {
         let t = m.Z.getMessage(e.channel_id, e.id),
             { attachmentIds: n, embedIds: i } = (0, y.ZW)(t);
         (0, T.Hc)({
@@ -251,7 +251,7 @@ function H(e) {
     if (null == o.channel_id || null == o.id || (null === (t = o.author) || void 0 === t ? void 0 : t.id) === _.default.getId() || (null == o.embeds && null == o.attachments) || ((null === (n = o.embeds) || void 0 === n ? void 0 : n.length) === 0 && (null === (i = o.attachments) || void 0 === i ? void 0 : i.length) === 0)) return !1;
     if (!(0, y.N7)(o)) {
         let e = null !== (s = null !== (a = m.Z.getMessage(o.channel_id, o.id)) && void 0 !== a ? a : b.Z.getMessage(o.id, o.channel_id)) && void 0 !== s ? s : null === (r = f.Z.getMessage(o.channel_id, o.id)) || void 0 === r ? void 0 : r.message;
-        null == e || (0, y.N7)((0, c.wi)(e, o)) || w(e, T.Pq.UPDATE);
+        null == e || (0, y.N7)((0, c.wi)(e, o)) || P(e, T.Pq.UPDATE);
     }
     let l = g.Z.getChannelId(),
         u = p.ZP.getCurrentSidebarChannelId(l);
@@ -322,7 +322,7 @@ class ee extends u.Z {
                 LOAD_ARCHIVED_THREADS_SUCCESS: q,
                 MESSAGE_CREATE: Y,
                 MESSAGE_UPDATE: H,
-                LOGOUT: P,
+                LOGOUT: w,
                 SEARCH_FINISH: K,
                 MOD_VIEW_SEARCH_FINISH: K,
                 CHANNEL_SELECT: Q,

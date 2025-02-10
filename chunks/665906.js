@@ -14,7 +14,7 @@ n.d(t, {
     kn: () => D,
     tM: () => g,
     tc: () => O,
-    xl: () => P
+    xl: () => w
 });
 var i = n(392711),
     r = n.n(i),
@@ -130,18 +130,18 @@ function x(e) {
     var t;
     return null != e && (!e.isThread() || e.isActiveThread() || (e.isArchivedThread() && (null === (t = e.threadMetadata) || void 0 === t ? void 0 : t.locked) !== !0 && _.Z.can(m.Plq.SEND_MESSAGES_IN_THREADS, e)));
 }
-function P(e) {
+function w(e) {
     let t = _.Z.can(m.Plq.MANAGE_THREADS, e);
     return e.isArchivedLockedThread() && !t;
 }
-function w(e, t) {
+function P(e, t) {
     return null != e && t.can(m.Plq.MANAGE_THREADS, e);
 }
 function M(e) {
-    return (0, s.e7)([_.Z], () => w(e, _.Z));
+    return (0, s.e7)([_.Z], () => P(e, _.Z));
 }
 function k(e) {
-    return w(e, _.Z);
+    return P(e, _.Z);
 }
 function U(e) {
     let t = (0, l.Z)(),

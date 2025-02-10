@@ -2,7 +2,7 @@ n.d(t, {
     C1: () => Z,
     Gh: () => F,
     N0: () => x,
-    T1: () => P,
+    T1: () => w,
     Tm: () => V,
     UW: () => z,
     _Q: () => L,
@@ -13,7 +13,7 @@ n.d(t, {
     rO: () => K,
     sS: () => W,
     yg: () => O,
-    yi: () => w,
+    yi: () => P,
     yl: () => k,
     zq: () => H
 }),
@@ -87,13 +87,13 @@ function x(e) {
     }),
         v.default.track(R.rMx.CLIPS_SETTINGS_UPDATED, { reminders_enabled: e });
 }
-function P(e) {
+function w(e) {
     a.Z.dispatch({
         type: 'CLIPS_SETTINGS_UPDATE',
         settings: { storageLocation: e }
     });
 }
-function w(e) {
+function P(e) {
     a.Z.dispatch({
         type: 'CLIPS_SETTINGS_UPDATE',
         settings: { clipsQuality: e }

@@ -441,7 +441,7 @@ function x(e) {
     }
     return t;
 }
-function P(e, t) {
+function w(e, t) {
     for (var n = t; ; ) {
         if (d.call(e, n) > -1) return n;
         var i = n.lastIndexOf('-');
@@ -449,11 +449,11 @@ function P(e, t) {
         i >= 2 && '-' === n.charAt(i - 2) && (i -= 2), (n = n.substring(0, i));
     }
 }
-function w(e, t) {
+function P(e, t) {
     for (var n, i = 0, r = t.length; i < r && !n; ) {
         var a = t[i],
             s = String(a).replace(A, ''),
-            n = P(e, s);
+            n = w(e, s);
         i++;
     }
     var o = new ef();
@@ -467,11 +467,11 @@ function w(e, t) {
     return o;
 }
 function M(e, t) {
-    return w(e, t);
+    return P(e, t);
 }
 function k(e, t, n, i, r) {
     if (0 === e.length) throw ReferenceError('No locale data has been provided for this object yet.');
-    if ('lookup' === n['[[localeMatcher]]']) var a = w(e, t);
+    if ('lookup' === n['[[localeMatcher]]']) var a = P(e, t);
     else var a = M(e, t);
     var s = a['[[locale]]'];
     if (u.call(a, '[[extension]]'))
@@ -515,7 +515,7 @@ function k(e, t, n, i, r) {
 function U(e, t) {
     for (var n = t.length, i = new e_(), r = 0; r < n; ) {
         var a = t[r];
-        void 0 !== P(e, String(a).replace(A, '')) && h.call(i, a), r++;
+        void 0 !== w(e, String(a).replace(A, '')) && h.call(i, a), r++;
     }
     return _.call(i);
 }

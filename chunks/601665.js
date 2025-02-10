@@ -24,8 +24,8 @@ var i = n(200651),
     A = n(388032),
     N = n(112650);
 function C(e) {
-    let { user: t, currentUser: n, guildId: C, channelId: R, messageId: O, roleId: D, closePopout: L, setPopoutRef: x, disableUserProfileLink: P = __OVERLAY__, newAnalyticsLocations: w = [] } = e,
-        { analyticsLocations: M } = (0, u.ZP)([...w, l.Z.BITE_SIZE_PROFILE_POPOUT]),
+    let { user: t, currentUser: n, guildId: C, channelId: R, messageId: O, roleId: D, closePopout: L, setPopoutRef: x, disableUserProfileLink: w = __OVERLAY__, newAnalyticsLocations: P = [] } = e,
+        { analyticsLocations: M } = (0, u.ZP)([...P, l.Z.BITE_SIZE_PROFILE_POPOUT]),
         k = (0, f.ZB)({
             layout: 'BITE_SIZE_POPOUT',
             userId: t.id,
@@ -51,7 +51,7 @@ function C(e) {
                 });
         },
         j = () =>
-            P
+            w
                 ? null
                 : (0, i.jsx)(s.sNh, {
                       id: 'view-profile',
@@ -101,7 +101,7 @@ function C(e) {
                                     guildId: C,
                                     channelId: R,
                                     profileType: S.y0.BITE_SIZE,
-                                    onOpenProfile: P ? void 0 : V
+                                    onOpenProfile: w ? void 0 : V
                                 }),
                                 (0, i.jsx)(y.Z, {
                                     location: 'BotUserProfilePopout',
@@ -117,7 +117,7 @@ function C(e) {
                             displayProfile: U,
                             guild: G,
                             isHovering: F,
-                            onOpenProfile: P ? void 0 : V,
+                            onOpenProfile: w ? void 0 : V,
                             channelId: R,
                             onClose: L
                         }),

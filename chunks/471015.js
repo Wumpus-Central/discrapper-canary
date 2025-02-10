@@ -1,4 +1,4 @@
-e.exports = {
+o.exports = {
     modalHeader: 'modalHeader_edf440',
     modalTitle: 'modalTitle_edf440',
     modalContent: 'modalContent_edf440',

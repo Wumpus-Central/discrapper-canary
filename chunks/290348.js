@@ -45,8 +45,8 @@ var i = n(192379),
     y = n(944537),
     O = n(293810),
     A = n(981631),
-    b = n(474936);
-function P(e, t, n) {
+    P = n(474936);
+function b(e, t, n) {
     let l = (0, y.n)((e) => e.setListing),
         r = i.useCallback(
             (i) => {
@@ -74,31 +74,31 @@ function R(e) {
         var t;
         return null !== (t = null == e ? void 0 : e.name) && void 0 !== t ? t : '';
     });
-    return P(e, 'name', t);
+    return b(e, 'name', t);
 }
 function Z(e) {
     let t = L(e, (e) => {
         var t;
         return null == e ? void 0 : null === (t = e.subscription_plans[0]) || void 0 === t ? void 0 : t.price;
     });
-    return P(e, 'priceTier', t);
+    return b(e, 'priceTier', t);
 }
 function D(e) {
     let t = L(e, (e) => {
         var t;
         return null !== (t = null == e ? void 0 : e.description) && void 0 !== t ? t : '';
     });
-    return P(e, 'description', t);
+    return b(e, 'description', t);
 }
 function w(e, t) {
     let n = L(e, (e) => {
         if ((null == e ? void 0 : e.image_asset) != null) return (0, p._W)(e.application_id, e.image_asset, t);
     });
-    return P(e, 'image', n);
+    return b(e, 'image', n);
 }
 function M(e, t) {
     let n = (0, S.Z)(t, e);
-    return P(
+    return b(
         e,
         'roleIcon',
         i.useMemo(() => {
@@ -131,7 +131,7 @@ function U(e, t) {
 }
 function x(e, t) {
     let n = (0, S.Z)(t, e);
-    return P(
+    return b(
         e,
         'roleColor',
         i.useMemo(() => {
@@ -142,7 +142,7 @@ function x(e, t) {
 }
 function G(e, t) {
     let n = (0, S.Z)(t, e);
-    return P(
+    return b(
         e,
         'channelAccessFormat',
         i.useMemo(() => (null == n ? y.I.SOME_CHANNELS_ACCESS : (0, _.MT)(n) ? y.I.ALL_CHANNELS_ACCESS : y.I.SOME_CHANNELS_ACCESS), [n])
@@ -151,12 +151,12 @@ function G(e, t) {
 let F = [];
 function j(e) {
     let t = L(e, (e) => (null == e ? F : e.role_benefits.benefits.filter(C.rC)));
-    return P(e, 'channelBenefits', t);
+    return b(e, 'channelBenefits', t);
 }
 let H = [];
 function B(e) {
     let t = L(e, (e) => (null == e ? H : e.role_benefits.benefits.filter(C.lL)));
-    return P(e, 'intangibleBenefits', t);
+    return b(e, 'intangibleBenefits', t);
 }
 let k = new Set();
 function V(e, t) {
@@ -174,7 +174,7 @@ function V(e, t) {
 function z(e, t) {
     let n = (0, S.Z)(t, e),
         l = (0, u.Wu)([f.ZP], () => f.ZP.getGuildEmoji(t), [t]);
-    return P(
+    return b(
         e,
         'tierEmojiIds',
         i.useMemo(() => (null == n ? k : V(l, n.id)), [l, n])
@@ -184,12 +184,12 @@ function Y(e) {
     var t;
     let n = (0, E.oC)(e),
         { selectedOption: i } = (0, T.Z)(null !== (t = null == n ? void 0 : n.active_trial) && void 0 !== t ? t : null);
-    return P(e, 'trialInterval', null != i ? i : null);
+    return b(e, 'trialInterval', null != i ? i : null);
 }
 function W(e) {
     var t;
     let n = (0, E.oC)(e);
-    return P(e, 'trialLimit', null !== (t = null == n ? void 0 : n.max_num_active_trial_users) && void 0 !== t ? t : null);
+    return b(e, 'trialLimit', null !== (t = null == n ? void 0 : n.max_num_active_trial_users) && void 0 !== t ? t : null);
 }
 function K(e) {
     return (0, y.n)((t) => void 0 !== t.listings[e]);
@@ -202,14 +202,14 @@ function q(e) {
 }
 function X(e) {
     let t = L(e, (e) => (null == e ? void 0 : e.subscription_plans[0])),
-        [n] = P(e, 'priceTier', void 0);
+        [n] = b(e, 'priceTier', void 0);
     return [
         i.useMemo(() => {
             var e, i, l, r, s;
             return {
                 price: null !== (e = null != n ? n : null == t ? void 0 : t.price) && void 0 !== e ? e : 0,
                 currency: null !== (i = null == t ? void 0 : t.currency) && void 0 !== i ? i : A.pKx.USD,
-                interval: null !== (l = null == t ? void 0 : t.interval) && void 0 !== l ? l : b.rV.MONTH,
+                interval: null !== (l = null == t ? void 0 : t.interval) && void 0 !== l ? l : P.rV.MONTH,
                 interval_count: null !== (r = null == t ? void 0 : t.interval_count) && void 0 !== r ? r : 1,
                 id: null !== (s = null == t ? void 0 : t.id) && void 0 !== s ? s : ''
             };

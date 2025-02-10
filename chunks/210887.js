@@ -71,10 +71,10 @@ function L() {
 function x() {
     return (0, u.ap)(O());
 }
-function P(e) {
+function w(e) {
     return !e.isSwitchingAccount && S !== I.BRd.DARK && ((S = I.BRd.DARK), Z(), B());
 }
-function w(e) {
+function P(e) {
     let { systemTheme: t } = e;
     return (N = t), B();
 }
@@ -165,14 +165,14 @@ b(F, 'displayName', 'ThemeStore'),
 let V = new F(c.Z, {
     CACHE_LOADED: D,
     CONNECTION_OPEN: D,
-    LOGOUT: P,
+    LOGOUT: w,
     OVERLAY_INITIALIZE: D,
     SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: L,
     UNSYNCED_USER_SETTINGS_UPDATE: L,
     USER_SETTINGS_PROTO_UPDATE: D,
     UPDATE_BACKGROUND_GRADIENT_PRESET: k,
     RESET_PREVIEW_CLIENT_THEME: D,
-    SYSTEM_THEME_CHANGE: w,
+    SYSTEM_THEME_CHANGE: P,
     ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED: M,
     ACCESSIBILITY_DARK_SIDEBAR_TOGGLE: x,
     SET_DARK_MODE_THEME: U

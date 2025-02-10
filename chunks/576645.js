@@ -1,9 +1,9 @@
 n.d(t, {
-    J: () => P,
+    J: () => w,
     Ou: () => U,
     R2: () => L,
     T$: () => O,
-    Uu: () => w,
+    Uu: () => P,
     ZC: () => Z,
     Zm: () => D,
     bK: () => M,
@@ -107,7 +107,7 @@ function x(e) {
         }
     );
 }
-function P(e, t) {
+function w(e, t) {
     let n = (0, i.useRef)(!0),
         r = null == e ? void 0 : e.hdStreamingUntil,
         a = (0, i.useRef)(t);
@@ -122,8 +122,8 @@ function P(e, t) {
             if (null != r && new Date(r) > new Date()) return a.current();
         }, [r]);
 }
-function w(e) {
-    P(e, () => {
+function P(e) {
+    w(e, () => {
         let t = f.Z.getCurrentUserActiveStream();
         if (null != t && t.channelId === e.id) {
             let e = p.Z.getState().goLiveSource;

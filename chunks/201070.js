@@ -126,14 +126,14 @@ function L(e) {
 function x(e) {
     C(I(e));
 }
-function P(e) {
+function w(e) {
     return null != e && e.length > 1;
 }
-function w(e) {
+function P(e) {
     let t = {},
         n = {},
         { query: i } = e;
-    if (P(i)) {
+    if (w(i)) {
         let [e, n] = (0, p.C)(i);
         e.length > 0 && (t.usernames = { or_query: e }), n.length > 0 && (t.user_id = { or_query: n });
     }
@@ -265,7 +265,7 @@ async function F(e) {
         o = I(e),
         l = N(o),
         [u, c] = B(e, l, s),
-        d = M(w(r), c),
+        d = M(P(r), c),
         f = null !== (t = r.selectedSort) && void 0 !== t ? t : h.d$.ORDER_BY_GUILD_JOINED_AT_DESC;
     if (Z(o, d) && (0, a.isEqual)(u, l.cursor)) return;
     let _ = R(o, d, u, s, f);

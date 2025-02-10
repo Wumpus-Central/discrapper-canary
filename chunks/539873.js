@@ -35,11 +35,11 @@ function N(e) {
         L = r.useRef(null);
     (0, m.Z)(L, T.h1.CUSTOM_APP_ICONS);
     let x = (0, d.Dt)(),
-        P = (0, l.arW)({
+        w = (0, l.arW)({
             orientation: 'horizontal',
             labelledBy: x
         }),
-        w = (0, f.Q3)('AppIconSelectionGroup'),
+        P = (0, f.Q3)('AppIconSelectionGroup'),
         M = (e) => {
             if (D && !N && e !== E.aH.DEFAULT) {
                 (0, l.ZDy)(async () => {
@@ -64,7 +64,7 @@ function N(e) {
     return (0, i.jsx)('div', {
         ref: L,
         children: (0, i.jsx)('div', {
-            ...P,
+            ...w,
             className: S.__invalid_container,
             children: (0, i.jsxs)('div', {
                 className: t,
@@ -81,7 +81,7 @@ function N(e) {
                                             children: [
                                                 (0, i.jsx)(l.X6q, {
                                                     className: S.titleText,
-                                                    variant: w ? 'text-lg/medium' : 'text-md/medium',
+                                                    variant: P ? 'text-lg/medium' : 'text-md/medium',
                                                     children: b.intl.string(b.t.NThqT0)
                                                 }),
                                                 !D && (0, i.jsx)(h.Z, { className: S.premiumIcon })
@@ -110,7 +110,7 @@ function N(e) {
                                               })
                                         : (0, i.jsx)(l.X6q, {
                                               variant: 'text-sm/normal',
-                                              className: s()({ [A.subtext]: w }),
+                                              className: s()({ [A.subtext]: P }),
                                               children: b.intl.string(b.t.IgENJi)
                                           })
                                 ]

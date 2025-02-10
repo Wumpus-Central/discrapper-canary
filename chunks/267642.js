@@ -9,7 +9,7 @@ n.d(t, {
     Vx: () => k,
     _k: () => U,
     _p: () => R,
-    aq: () => w,
+    aq: () => P,
     cP: () => A,
     e9: () => C,
     f2: () => x,
@@ -21,7 +21,7 @@ n.d(t, {
     tb: () => L,
     tl: () => H,
     vn: () => G,
-    vx: () => P,
+    vx: () => w,
     yw: () => V
 }),
     n(411104),
@@ -284,16 +284,16 @@ function L(e, t) {
 function x(e, t) {
     return L(e.premiumTier, t);
 }
-function P(e) {
+function w(e) {
     return r()
         .values(e)
         .filter((e) => e.isAvailable());
 }
-function w(e) {
+function P(e) {
     let { fractionalState: t } = e,
         n = u.ZP.getPremiumTypeSubscription();
     l.Z.hasFetched || (0, o.X8)();
-    let i = P(l.Z.boostSlots),
+    let i = w(l.Z.boostSlots),
         r = null == n ? void 0 : n.isPausedOrPausePending,
         s = i.length > 0,
         c = m.intl.format(m.t.kJ1AZG, { helpCenterLink: f.Z.getArticleURL(p.BhN.FRACTIONAL_PREMIUM_ABOUT) }),

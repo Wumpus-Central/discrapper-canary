@@ -87,7 +87,7 @@ let D = {
             });
         }
     }),
-    P = (e) => ({
+    w = (e) => ({
         name: 'line1',
         id: b,
         title: () => _.intl.string(_.t.x0beVV),
@@ -96,7 +96,7 @@ let D = {
         getClassNameForLayout: (e) => (['modalUS', 'modalInternational', 'modalUSWithName', 'modalInternationalWithName', 'settingsUSMobile', 'settingsInternationalMobile', 'settingsInternationalWithoutNameMobile'].includes(e) ? p.width100 : p.width60),
         renderInput: (e) => (0, r.jsx)(u.oil, { ...e })
     }),
-    w = (e) => ({
+    P = (e) => ({
         name: 'line2',
         id: S,
         title: () => _.intl.string(_.t.i2Z0gI),
@@ -227,16 +227,16 @@ let D = {
         };
     },
     G = {
-        modalUS: [[x], [P], [w], [M], [U, k]],
-        modalInternational: [[x], [P], [w], [M], [U], [k]],
-        modalUSWithName: [[x], [L], [P], [w], [M], [U, k]],
-        modalInternationalWithName: [[x], [L], [P], [w], [M], [U], [k]],
-        settingsUS: [[L], [P, w], [M, U, k], [x]],
-        settingsUSMobile: [[L], [P], [w], [M], [U], [k], [x]],
-        settingsInternational: [[L], [P, w], [M], [U, k], [x]],
-        settingsInternationalMobile: [[L], [P], [w], [M], [U], [k], [x]],
-        settingsInternationalWithoutName: [[P, w], [M], [U, k], [x]],
-        settingsInternationalWithoutNameMobile: [[P], [w], [M], [U], [k], [x]]
+        modalUS: [[x], [w], [P], [M], [U, k]],
+        modalInternational: [[x], [w], [P], [M], [U], [k]],
+        modalUSWithName: [[x], [L], [w], [P], [M], [U, k]],
+        modalInternationalWithName: [[x], [L], [w], [P], [M], [U], [k]],
+        settingsUS: [[L], [w, P], [M, U, k], [x]],
+        settingsUSMobile: [[L], [w], [P], [M], [U], [k], [x]],
+        settingsInternational: [[L], [w, P], [M], [U, k], [x]],
+        settingsInternationalMobile: [[L], [w], [P], [M], [U], [k], [x]],
+        settingsInternationalWithoutName: [[w, P], [M], [U, k], [x]],
+        settingsInternationalWithoutNameMobile: [[w], [P], [M], [U], [k], [x]]
     };
 class B extends (i = a.PureComponent) {
     componentDidMount() {

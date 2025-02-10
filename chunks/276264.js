@@ -33,8 +33,8 @@ var i = n(200651),
     D = n(981631),
     L = n(674563),
     x = n(524484),
-    P = n(388032),
-    w = n(307042);
+    w = n(388032),
+    P = n(307042);
 let M = (0, R.Mg)(o.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
     k = 3,
     U = function (e) {
@@ -92,41 +92,41 @@ let M = (0, R.Mg)(o.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                         animate: eh,
                         hideEmoji: e,
                         hasQuest: null != eC,
-                        textClassName: w.activityText
+                        textClassName: P.activityText
                     });
                 }
                 return null != ev
                     ? (0, i.jsx)(f.Z, {
-                          textClassName: w.activityText,
+                          textClassName: P.activityText,
                           entry: ev
                       })
                     : null;
             },
-            eP = () =>
+            ew = () =>
                 null != R && R && null == U
                     ? (0, i.jsx)(l.ua7, {
-                          text: null != M ? M : P.intl.string(P.t.pclUFB),
+                          text: null != M ? M : w.intl.string(w.t.pclUFB),
                           children: (e) =>
                               (0, i.jsx)(l.CEn, {
                                   size: 'md',
                                   color: 'currentColor',
                                   ...e,
-                                  className: w.ownerIcon
+                                  className: P.ownerIcon
                               })
                       })
                     : null,
-            ew = () =>
+            eP = () =>
                 null == K
                     ? null
                     : (0, i.jsx)(l.ua7, {
-                          text: P.intl.formatToPlainString(P.t.IWkAq6, { date: K }),
+                          text: w.intl.formatToPlainString(w.t.IWkAq6, { date: K }),
                           children: (e) =>
                               (0, i.jsx)(l.P3F, {
                                   onClick: en,
                                   tabIndex: -1,
                                   children: (0, i.jsx)(C.Z, {
                                       ...e,
-                                      className: w.premiumIcon
+                                      className: P.premiumIcon
                                   })
                               })
                       }),
@@ -134,7 +134,7 @@ let M = (0, R.Mg)(o.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                 let e = (null == Z ? void 0 : Z.isClyde()) ? L.Hb.AI : L.Hb.BOT;
                 return null != Z && Z.bot
                     ? (0, i.jsx)(_.Z, {
-                          className: w.botTag,
+                          className: P.botTag,
                           type: e,
                           verified: Z.isVerifiedBot()
                       })
@@ -142,7 +142,7 @@ let M = (0, R.Mg)(o.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
             },
             ek = () =>
                 (0, i.jsxs)(i.Fragment, {
-                    children: [eM(), eP(), ew()]
+                    children: [eM(), ew(), eP()]
                 }),
             eU = (e, t) => {
                 let n = Y ? l.Xo$ : l.qEK,
@@ -180,14 +180,14 @@ let M = (0, R.Mg)(o.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                             roleName: o,
                             color: null != a ? a : void 0,
                             name: null != B ? B : ef,
-                            className: w.name
+                            className: P.name
                         }),
                         (0, i.jsx)(h.ZP, {
                             primaryGuild: null == Z ? void 0 : Z.primaryGuild,
                             userId: null == Z ? void 0 : Z.id,
                             contextGuildId: q,
                             disableGuildProfile: !0,
-                            className: w.clanTag,
+                            className: P.clanTag,
                             profileViewedAnalytics: eG
                         })
                     ]
@@ -204,7 +204,7 @@ let M = (0, R.Mg)(o.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
         return null == Z
             ? (0, i.jsx)(p.Z, {
                   avatarSize: l.EFr.SIZE_32,
-                  className: w.placeholder
+                  className: P.placeholder
               })
             : (0, i.jsx)(l.yRy, {
                   renderPopout: eZ,
@@ -224,8 +224,8 @@ let M = (0, R.Mg)(o.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                               ref: ep,
                               selected: n && !eS,
                               highlighted: n && eS,
-                              className: s()(w.member, Q, { [w.offline]: eF && !n }),
-                              innerClassName: w.memberInner,
+                              className: s()(P.member, Q, { [P.offline]: eF && !n }),
+                              innerClassName: P.memberInner,
                               onClick: ee,
                               onKeyDown: $,
                               onMouseDown: J,
@@ -235,7 +235,7 @@ let M = (0, R.Mg)(o.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                               name:
                                   null == U
                                       ? (0, i.jsx)('span', {
-                                            className: w.username,
+                                            className: P.username,
                                             children: eB()
                                         })
                                       : (0, i.jsx)(l.ua7, {
@@ -243,7 +243,7 @@ let M = (0, R.Mg)(o.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                                             children: (e) =>
                                                 (0, i.jsx)('span', {
                                                     ...e,
-                                                    className: s()(w.username, w.lostPermission),
+                                                    className: s()(P.username, P.lostPermission),
                                                     children: eB()
                                                 })
                                         }),

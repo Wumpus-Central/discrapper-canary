@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => eP,
+    ZP: () => ew,
     zS: () => A
 }),
     n(47120),
@@ -72,8 +72,8 @@ let C = new u.Z('OverlayStoreV3'),
     D = {},
     L = new N(),
     x = null,
-    P = !1,
-    w = null,
+    w = !1,
+    P = null,
     M = null,
     k = null,
     U = {},
@@ -81,7 +81,7 @@ let C = new u.Z('OverlayStoreV3'),
     B = !1;
 class Z {
     setClickZones(e) {
-        if (P) {
+        if (w) {
             this.clickZones = e;
             try {
                 let t = e.map((e) => ({
@@ -188,7 +188,7 @@ function X() {
     return (0, E.NW)('overlay_store_v3', !1);
 }
 function J() {
-    if (!P) {
+    if (!w) {
         Q();
         return;
     }
@@ -301,22 +301,22 @@ function ea(e, t, n, i) {
     l.dispatchEvent(o);
 }
 function es() {
-    if (null != w)
+    if (null != P)
         try {
             'function' == typeof (null == x ? void 0 : x.setLimitedInteraction) || C.info('No setLimitedInteraction function found, skipping');
         } catch (e) {
             C.error('Error setting limited interaction mode:', e);
         }
-    s.Z.setFocusedPID(w);
+    s.Z.setFocusedPID(P);
 }
 function eo(e) {
-    (w = e), es();
+    (P = e), es();
 }
 function el(e) {
     eu();
 }
 function eu() {
-    (w = null), es();
+    (P = null), es();
 }
 function ec(e) {
     s.Z.successfullyShown(e), s.Z.updateOverlayState(e, o.mM.OVERLAY_RENDERING);
@@ -344,7 +344,7 @@ function ef(e) {
     null == x || x.setInteractionEnabled(e);
 }
 function e_(e) {
-    if (I.iP && ((P = e), null == x && X())) {
+    if (I.iP && ((w = e), null == x && X())) {
         ed();
         return;
     }
@@ -369,7 +369,7 @@ function ey(e) {
     L.toggleGPUBoost(e.reason, e.enabled);
 }
 function eI() {
-    C.verbose('Maybe Enable Overlay'), X() ? (e_(g.v.oopEnabled), (0, m.vR)(!0), ed()) : P && e_(!1);
+    C.verbose('Maybe Enable Overlay'), X() ? (e_(g.v.oopEnabled), (0, m.vR)(!0), ed()) : w && e_(!1);
 }
 function eT(e) {
     let { oopEnabled: t } = e;
@@ -428,20 +428,20 @@ class eL extends (i = r.ZP.Store) {
         return R.has(e);
     }
     get enabled() {
-        return P;
+        return w;
     }
     hasRenderDebugMode(e) {
         return V.has(e);
     }
     getFocusedPID() {
-        return w;
+        return P;
     }
     isFocused(e) {
-        return null != w && e !== m.R2 && w === e;
+        return null != P && e !== m.R2 && P === e;
     }
     getFocusedRunningGame() {
         var e;
-        return null == w ? null : null !== (e = d.ZP.getRunningGames().find((e) => e.pid === w)) && void 0 !== e ? e : null;
+        return null == P ? null : null !== (e = d.ZP.getRunningGames().find((e) => e.pid === P)) && void 0 !== e ? e : null;
     }
     isReady(e) {
         return R.has(e);
@@ -466,4 +466,4 @@ let ex = new eL(a.Z, {
         OVERLAY_SET_GPU_BOOST_REQUESTED: ey,
         OVERLAY_CRASHED: ev
     }),
-    eP = ex;
+    ew = ex;

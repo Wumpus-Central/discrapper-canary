@@ -62,8 +62,8 @@ let O = new m.Z('KeybindsStore'),
         params: {}
     },
     x = {},
-    P = {},
-    w = 0,
+    w = {},
+    P = 0,
     M = !0,
     k = {},
     U = !1,
@@ -75,7 +75,7 @@ function B(e) {
         case L.id:
             return L;
         default:
-            return P[e];
+            return w[e];
     }
 }
 function Z(e, t) {
@@ -84,7 +84,7 @@ function Z(e, t) {
 }
 function F() {
     let { showKeybindIndicators: e } = g.Z.getCurrentConfig({ location: 'KeybindsStore' });
-    null == f().find(P, (e) => D.action === e.action && e.enabled && e.shortcut.length > 0) && !__OVERLAY__ && !U && M && e && (W(D), (U = !0));
+    null == f().find(w, (e) => D.action === e.action && e.enabled && e.shortcut.length > 0) && !__OVERLAY__ && !U && M && e && (W(D), (U = !0));
 }
 function V() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
@@ -105,7 +105,7 @@ function H(e, t, n, i) {
 function Y(e) {
     if (y.isPlatformEmbedded) I.ZP.inputEventUnregister(parseInt(e, 10));
     else if (x[e]) {
-        let t = P[e],
+        let t = w[e],
             n = k[t.action];
         (null == n ? void 0 : n.isPressed) === !0 && C.nextTick(() => n.onTrigger(!1, t)), x[e].reset(), (x[e] = null);
     }
@@ -132,7 +132,7 @@ function W(e) {
 }
 function K(e) {
     let t = {
-        id: w.toString(),
+        id: P.toString(),
         enabled: !0,
         action: S.kg4.UNASSIGNED,
         shortcut: [],
@@ -141,16 +141,16 @@ function K(e) {
         ...e
     };
     return (
-        (P = {
-            ...P,
+        (w = {
+            ...w,
             [t.id]: t
         }),
-        (w += 1),
+        (P += 1),
         t
     );
 }
 function z(e) {
-    Y(e.id), (P = { ...P }), delete P[e.id], e.action === S.kg4.TOGGLE_MUTE && F();
+    Y(e.id), (w = { ...w }), delete w[e.id], e.action === S.kg4.TOGGLE_MUTE && F();
 }
 function q(e) {
     let { keybind: t } = e;
@@ -158,7 +158,7 @@ function q(e) {
 }
 function Q(e) {
     let { id: t } = e,
-        n = P[t];
+        n = w[t];
     __OVERLAY__ ||
         v.default.track(S.rMx.USER_SETTINGS_KEYBIND_UPDATED, {
             keybind_action: n.action,
@@ -169,8 +169,8 @@ function Q(e) {
 }
 function X(e) {
     let { keybind: t } = e;
-    (P = {
-        ...P,
+    (w = {
+        ...w,
         [t.id]: t
     }),
         __OVERLAY__ ||
@@ -184,16 +184,16 @@ function X(e) {
 }
 function J(e) {
     let { enable: t } = e;
-    (M = t), t ? (h.Z.enable(), f().forEach(P, W), F()) : (h.Z.disable(), f().forEach(P, (e) => Y(e.id)), V());
+    (M = t), t ? (h.Z.enable(), f().forEach(w, W), F()) : (h.Z.disable(), f().forEach(w, (e) => Y(e.id)), V());
 }
 function $(e) {
     let { keybinds: t } = e;
     (k = t),
         (x = {}),
-        (w = 0),
-        Object.values(P).filter((e) => G.includes(e.action) && e.managed).length !== G.length && en(),
-        f().forEach(P, (e) => {
-            w = Math.max(parseInt(e.id, 10), w) + 1;
+        (P = 0),
+        Object.values(w).filter((e) => G.includes(e.action) && e.managed).length !== G.length && en(),
+        f().forEach(w, (e) => {
+            P = Math.max(parseInt(e.id, 10), P) + 1;
             try {
                 W(e);
             } catch (t) {
@@ -206,7 +206,7 @@ function $(e) {
 function ee(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
     return (
-        null == f().find(P, (t) => t.action === e && (!n || t.managed === n)) &&
+        null == f().find(w, (t) => t.action === e && (!n || t.managed === n)) &&
         (W(
             K({
                 action: e,
@@ -223,13 +223,13 @@ let et = [
     function () {
         let e = E.Z.getShortcuts();
         return (
-            f().each(P, (t) => {
+            f().each(w, (t) => {
                 t.action === S.kg4.PUSH_TO_TALK && !0 === t.managed && (null == t.context || null == e[t.context]) && z(t);
             }),
             f().reduce(
                 E.Z.getShortcuts(),
                 (e, t, n) => {
-                    let i = f().find(P, (e) => e.action === S.kg4.PUSH_TO_TALK && !0 === e.managed && e.context === n);
+                    let i = f().find(w, (e) => e.action === S.kg4.PUSH_TO_TALK && !0 === e.managed && e.context === n);
                     if (null == i)
                         W(
                             K({
@@ -275,24 +275,24 @@ function en() {
 }
 h.Z.setGetKeybindList(() => {
     let e = [];
-    for (let t in P) P.hasOwnProperty(t) && e.push((0, T.BB)(P[t].shortcut));
+    for (let t in w) w.hasOwnProperty(t) && e.push((0, T.BB)(w[t].shortcut));
     let { showKeybindIndicators: t } = g.Z.getCurrentConfig({ location: 'KeybindsStore' });
     return t && e.push((0, T.BB)(D.shortcut)), e;
 });
 class ei extends (r = _.ZP.DeviceSettingsStore) {
     initialize(e) {
-        __OVERLAY__ || this.waitFor(E.Z, b.Z), (P = null != e ? e : {});
+        __OVERLAY__ || this.waitFor(E.Z, b.Z), (w = null != e ? e : {});
     }
     getUserAgnosticState() {
-        return P;
+        return w;
     }
     hasKeybind(e, t, n) {
-        for (let i in P) for (let r of P[i].shortcut) if (r[0] === e && r[1] === t && (void 0 === n || n === r[2])) return !0;
+        for (let i in w) for (let r of w[i].shortcut) if (r[0] === e && r[1] === t && (void 0 === n || n === r[2])) return !0;
         return !1;
     }
     hasExactKeybind(e) {
-        for (let t in P) {
-            let n = P[t];
+        for (let t in w) {
+            let n = w[t];
             if (f().isEqual(n.shortcut, e)) return !0;
         }
         return !1;
@@ -301,7 +301,7 @@ class ei extends (r = _.ZP.DeviceSettingsStore) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             { showKeybindIndicators: i } = g.Z.getCurrentConfig({ location: 'KeybindsStore' }),
-            r = f().find(P, (i) => i.action === e && (!t || i.managed) && (!n || (i.shortcut.length > 0 && i.enabled)));
+            r = f().find(w, (i) => i.action === e && (!t || i.managed) && (!n || (i.shortcut.length > 0 && i.enabled)));
         return null != r ? r : i && e === S.kg4.TOGGLE_MUTE ? D : null;
     }
     getOverlayKeybind() {

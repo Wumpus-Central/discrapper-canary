@@ -26,8 +26,8 @@ var i,
     b = n(616952),
     R = n(792766),
     Z = n(692483),
-    j = n(100159),
-    O = n(473855),
+    O = n(100159),
+    j = n(473855),
     L = n(726745),
     y = n(929809),
     P = n(541692),
@@ -37,8 +37,8 @@ var i,
     B = n(794099),
     U = n(807369),
     M = n(180529),
-    G = n(108427),
-    F = n(314897),
+    F = n(108427),
+    G = n(314897),
     z = n(480294),
     V = n(896797),
     H = n(626135),
@@ -103,12 +103,12 @@ class ec extends (i = l.PureComponent) {
             {
                 location: null != t ? 'Invite Register Page' : 'Non-Invite Register Page',
                 registration_source: this.registrationSource,
-                ...(null != e ? (0, j.Z)(e, !1, !1) : {})
+                ...(null != e ? (0, O.Z)(e, !1, !1) : {})
             },
             { flush: !0 }
         ),
             null == this.props.consentRequired && m.Z.getLocationMetadata(),
-            (0, G.e)('register');
+            (0, F.e)('register');
     }
     componentWillUnmount() {
         this._retryTimer.stop();
@@ -429,8 +429,8 @@ class ec extends (i = l.PureComponent) {
                 isMobileWebInviteRegistration: A,
                 uniqueUsernameRegistrationConfig: { suggestions: R },
                 authBoxClassName: Z,
-                hasLoggedInAccounts: j,
-                registrationCopyExperimentConfig: { hasCopyAboveButton: O }
+                hasLoggedInAccounts: O,
+                registrationCopyExperimentConfig: { hasCopyAboveButton: j }
             } = this.props,
             { subText: L, consentText: y } = this.renderConsentComponents(),
             P = this.renderErrorMessage(),
@@ -452,7 +452,7 @@ class ec extends (i = l.PureComponent) {
                 this.setState({ usernameFocused: !0 }), R && a.length > 0 && !k.Z.wasRegistrationSuggestionFetched(a) && (await D.Z.fetchSuggestionsRegistration(a));
             },
             U = null != e ? (0, r.jsx)(l.Fragment, { children: e() }, 'custom-header') : (0, r.jsx)(S.Dx, { children: ei.intl.string(ei.t.wC4TlZ) }, 'title'),
-            G = (0, r.jsxs)(S.gO, {
+            F = (0, r.jsxs)(S.gO, {
                 className: el.marginTop20,
                 children: [
                     (0, r.jsx)(S.II, {
@@ -548,12 +548,12 @@ class ec extends (i = l.PureComponent) {
                         value: d,
                         required: !0
                     }),
-                    O && L,
+                    j && L,
                     (0, r.jsx)(b.Z, {}),
                     w,
                     P,
                     y,
-                    !O && L,
+                    !j && L,
                     ee.a
                         ? null
                         : (0, r.jsx)(S.zx, {
@@ -581,7 +581,7 @@ class ec extends (i = l.PureComponent) {
                                       className: er.createAccountTemplateHeader,
                                       children: ei.intl.string(ei.t.wC4TlZ)
                                   }),
-                                  G
+                                  F
                               ]
                           },
                           'register-title'
@@ -593,7 +593,7 @@ class ec extends (i = l.PureComponent) {
                   tag: 'form',
                   className: Z,
                   children: [
-                      j && !A
+                      O && !A
                           ? (0, r.jsx)(S.zx, {
                                 onClick: this.handleGotoLogin,
                                 look: S.zx.Looks.LINK,
@@ -616,7 +616,7 @@ class ec extends (i = l.PureComponent) {
                             })
                           : null,
                       U,
-                      G
+                      F
                   ]
               });
     }
@@ -627,7 +627,7 @@ class ec extends (i = l.PureComponent) {
             a = null != n && null == n.guild && null == n.channel && null != n.inviter;
         return null == n || a || t
             ? null != l
-                ? this.renderFull(() => (0, r.jsx)(O.Z, { guildTemplate: l }), !0)
+                ? this.renderFull(() => (0, r.jsx)(j.Z, { guildTemplate: l }), !0)
                 : null != i
                   ? this.renderFull(() => (0, r.jsx)(q.Z, { giftCode: i }))
                   : null != n && a && n.state === Q.r2o.RESOLVED && !t
@@ -716,9 +716,9 @@ class ec extends (i = l.PureComponent) {
     }
 }
 function ed(e) {
-    let t = (0, u.cj)([z.Z, F.default, p.Z, P.Z, L.Z], () => ({
+    let t = (0, u.cj)([z.Z, G.default, p.Z, P.Z, L.Z], () => ({
             consentRequired: z.Z.getAuthenticationConsentRequired(),
-            authenticated: F.default.isAuthenticated(),
+            authenticated: G.default.isAuthenticated(),
             isUnderage: p.Z.isUnderageAnonymous(),
             country: P.Z.getCountryCode(),
             hasLoggedInAccounts: L.Z.getHasLoggedInAccounts()

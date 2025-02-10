@@ -2,7 +2,7 @@ n.d(t, {
     Ji: () => x,
     O_: () => D,
     qA: () => u,
-    uR: () => P
+    uR: () => w
 });
 var i = n(192379),
     r = n(772848);
@@ -922,7 +922,7 @@ var D = i.forwardRef(function (e, t) {
             })
         );
     });
-function P(e, t) {
+function w(e, t) {
     var n,
         r = i.useState(null !== (n = null == t ? void 0 : t.isReady) && void 0 !== n && n),
         a = r[0],

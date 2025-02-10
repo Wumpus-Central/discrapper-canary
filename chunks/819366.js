@@ -53,9 +53,9 @@ function C(e) {
         { analyticsLocations: D } = (0, f.ZP)(d.Z.USER_MENTION),
         L = (0, l.e7)([T.default], () => T.default.getUser(r)),
         x = (0, l.e7)([E.Z], () => E.Z.getChannel(a)),
-        P = null != x ? x.getGuildId() : null,
-        w =
-            R || null == L || null == P || null == a
+        w = null != x ? x.getGuildId() : null,
+        P =
+            R || null == L || null == w || null == a
                 ? void 0
                 : (e) => {
                       null != x &&
@@ -67,13 +67,13 @@ function C(e) {
                                       viewingChannelId: O,
                                       user: L,
                                       channel: x,
-                                      guildId: P
+                                      guildId: w
                                   });
                           });
                   },
         M = S.ZP.useName(L),
-        k = (0, l.e7)([E.Z, v.ZP, I.Z], () => b.ZP.getNickname(P, a, L)),
-        U = y.Z.getGuild(P),
+        k = (0, l.e7)([E.Z, v.ZP, I.Z], () => b.ZP.getNickname(w, a, L)),
+        U = y.Z.getGuild(w),
         G = (0, _.Ib)(U, x) && r === A.fL ? A.jM : null;
     if (null == L)
         return (0, i.jsx)(N, {
@@ -84,7 +84,7 @@ function C(e) {
     let B = (e) =>
         (0, i.jsx)(h.Z, {
             className: t,
-            onContextMenu: w,
+            onContextMenu: P,
             color: G,
             ...e,
             children: '@'.concat(null != k ? k : M)
@@ -101,15 +101,15 @@ function C(e) {
                       null == L
                           ? void 0
                           : () =>
-                                (0, m.Z)(L.id, L.getAvatarURL(P, 80), {
-                                    guildId: null != P ? P : void 0,
+                                (0, m.Z)(L.id, L.getAvatarURL(w, 80), {
+                                    guildId: null != w ? w : void 0,
                                     channelId: null != a ? a : void 0
                                 }),
                   renderPopout: (e) => (
                       s()(null != L, 'Unexpected missing user'),
                       (0, i.jsx)(g.Z, {
                           userId: L.id,
-                          guildId: null != P ? P : void 0,
+                          guildId: null != w ? w : void 0,
                           channelId: a,
                           ...e
                       })

@@ -12,14 +12,14 @@ n.d(t, {
     ap: () => R,
     bT: () => O,
     dw: () => N,
-    ig: () => w,
+    ig: () => P,
     kr: () => E,
     n2: () => I,
     q_: () => x,
     vU: () => L,
     yA: () => b,
     yh: () => m,
-    zo: () => P
+    zo: () => w
 });
 var i = n(164369),
     r = n(913527),
@@ -185,7 +185,7 @@ function x(e) {
     let n = u.default.extractTimestamp(e.id);
     return !(Date.now() - n > 48 * l.Z.Millis.HOUR);
 }
-function P(e) {
+function w(e) {
     let t = b(e);
     if (null == t)
         return {
@@ -203,7 +203,7 @@ function P(e) {
               tooltipText: c.intl.formatToPlainString(c.t['S5F48/'], { hours: n })
           };
 }
-function w(e) {
+function P(e) {
     var t;
     return null === (t = g(e, s.N.TRENDING_CONTENT)) || void 0 === t ? void 0 : t.trending;
 }

@@ -4,7 +4,7 @@ n.d(t, {
     _r: () => Z,
     cX: () => V,
     lv: () => G,
-    v: () => w
+    v: () => P
 });
 var i = n(392711),
     r = n.n(i),
@@ -36,8 +36,8 @@ var i = n(392711),
     D = n(768581),
     L = n(176354),
     x = n(353368),
-    P = n(388032);
-let w = {
+    w = n(388032);
+let P = {
         start: 10,
         end: 15
     },
@@ -105,17 +105,17 @@ function V(e) {
     return o.length < 1
         ? ''
         : 1 === o.length
-          ? P.intl.formatToPlainString(P.t.yZYxzM, {
+          ? w.intl.formatToPlainString(w.t.yZYxzM, {
                 firstUsername: null === (n = O.default.getUser(o[0])) || void 0 === n ? void 0 : n.username,
                 emojiNames: u
             })
           : 2 === o.length
-            ? P.intl.formatToPlainString(P.t['8rmtbW'], {
+            ? w.intl.formatToPlainString(w.t['8rmtbW'], {
                   firstUsername: null === (i = O.default.getUser(o[0])) || void 0 === i ? void 0 : i.username,
                   secondUsername: null === (r = O.default.getUser(o[1])) || void 0 === r ? void 0 : r.username,
                   emojiNames: u
               })
-            : P.intl.formatToPlainString(P.t['/okjv7'], {
+            : w.intl.formatToPlainString(w.t['/okjv7'], {
                   firstUsername: null === (a = O.default.getUser(o[0])) || void 0 === a ? void 0 : a.username,
                   secondUsername: null === (s = O.default.getUser(o[1])) || void 0 === s ? void 0 : s.username,
                   count: o.length - 2,

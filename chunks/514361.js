@@ -60,14 +60,14 @@ let A = !1,
     x = (e) => {
         i = void 0;
     },
-    P = (e) => {
+    w = (e) => {
         let { channelId: t, guildId: n } = e,
             i = E.default.getCurrentUser();
         if (null == t || null == n || (0, u.un)(o.z.CLIENT_THEMES_COACHMARK) || !(0, y.Fc)(i)) return;
         let r = g.Z.getChannel(t);
         null != r && (0, m.zi)(r.type) && (C = !0);
     };
-function w() {
+function P() {
     k();
 }
 function M() {
@@ -146,6 +146,6 @@ let F = new Z(l.Z, {
     CLIENT_THEMES_EDITOR_OPEN: D,
     CLIENT_THEMES_EDITOR_CLOSE: L,
     RESET_PREVIEW_CLIENT_THEME: x,
-    CHANNEL_SELECT: P,
-    LOGOUT: w
+    CHANNEL_SELECT: w,
+    LOGOUT: P
 });

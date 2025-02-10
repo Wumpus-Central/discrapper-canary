@@ -29,8 +29,8 @@ var i,
     D = o.parseInt,
     L = Math.floor,
     x = Math.pow,
-    P = u(''.charAt),
-    w = u(/./.exec),
+    w = u(''.charAt),
+    P = u(/./.exec),
     M = u([].join),
     k = u((1).toString),
     U = u([].pop),
@@ -69,9 +69,9 @@ var i,
         if ((l.length && '' === l[l.length - 1] && l.length--, (t = l.length) > 4)) return e;
         for (i = 0, n = []; i < t; i++) {
             if ('' === (r = l[i])) return e;
-            if (((a = 10), r.length > 1 && '0' === P(r, 0) && ((a = w(J, r) ? 16 : 8), (r = V(r, 8 === a ? 1 : 2))), '' === r)) s = 0;
+            if (((a = 10), r.length > 1 && '0' === w(r, 0) && ((a = P(J, r) ? 16 : 8), (r = V(r, 8 === a ? 1 : 2))), '' === r)) s = 0;
             else {
-                if (!w(10 === a ? ee : 8 === a ? $ : et, r)) return e;
+                if (!P(10 === a ? ee : 8 === a ? $ : et, r)) return e;
                 s = D(r, a);
             }
             G(n, s);
@@ -96,10 +96,10 @@ var i,
             c = null,
             d = 0,
             f = function () {
-                return P(e, d);
+                return w(e, d);
             };
         if (':' === f()) {
-            if (':' !== P(e, 1)) return;
+            if (':' !== w(e, 1)) return;
             (d += 2), (c = ++u);
         }
         for (; f(); ) {
@@ -109,7 +109,7 @@ var i,
                 d++, (c = ++u);
                 continue;
             }
-            for (t = n = 0; n < 4 && w(et, f()); ) (t = 16 * t + D(f(), 16)), d++, n++;
+            for (t = n = 0; n < 4 && P(et, f()); ) (t = 16 * t + D(f(), 16)), d++, n++;
             if ('.' === f()) {
                 if (0 === n || ((d -= n), u > 6)) return;
                 for (i = 0; f(); ) {
@@ -117,8 +117,8 @@ var i,
                         if ('.' !== f() || !(i < 4)) return;
                         d++;
                     }
-                    if (!w(X, f())) return;
-                    for (; w(X, f()); ) {
+                    if (!P(X, f())) return;
+                    for (; P(X, f()); ) {
                         if (((a = D(f(), 10)), null === r)) r = a;
                         else {
                             if (0 === r) return;
@@ -197,11 +197,11 @@ var i,
     },
     eg = function (e, t) {
         var n;
-        return 2 === e.length && w(q, P(e, 0)) && (':' === (n = P(e, 1)) || (!t && '|' === n));
+        return 2 === e.length && P(q, w(e, 0)) && (':' === (n = w(e, 1)) || (!t && '|' === n));
     },
     eE = function (e) {
         var t;
-        return e.length > 1 && eg(V(e, 0, 2)) && (2 === e.length || '/' === (t = P(e, 2)) || '\\' === t || '?' === t || '#' === t);
+        return e.length > 1 && eg(V(e, 0, 2)) && (2 === e.length || '/' === (t = w(e, 2)) || '\\' === t || '?' === t || '#' === t);
     },
     ev = function (e) {
         return '.' === e || '%2e' === j(e);
@@ -221,8 +221,8 @@ var i,
     eD = {},
     eL = {},
     ex = {},
-    eP = {},
     ew = {},
+    eP = {},
     eM = {},
     ek = {},
     eU = {},
@@ -260,7 +260,7 @@ eV.prototype = {
         for (e = v(e), t || ((l.scheme = ''), (l.username = ''), (l.password = ''), (l.host = null), (l.port = null), (l.path = []), (l.query = null), (l.fragment = null), (l.cannotBeABaseURL = !1), (e = B(e, er, '')), (e = B(e, ea, '$1'))), r = h((e = B(e, es, ''))); c <= r.length; ) {
             switch (((a = r[c]), u)) {
                 case eI:
-                    if (a && w(q, a)) (d += j(a)), (u = eT);
+                    if (a && P(q, a)) (d += j(a)), (u = eT);
                     else {
                         if (t) return W;
                         u = eb;
@@ -268,14 +268,14 @@ eV.prototype = {
                     }
                     break;
                 case eT:
-                    if (a && (w(Q, a) || '+' === a || '-' === a || '.' === a)) d += j(a);
+                    if (a && (P(Q, a) || '+' === a || '-' === a || '.' === a)) d += j(a);
                     else if (':' === a) {
                         if (t && (l.isSpecial() !== _(em, d) || ('file' === d && (l.includesCredentials() || null !== l.port)) || ('file' === l.scheme && !l.host))) return;
                         if (((l.scheme = d), t)) {
                             l.isSpecial() && em[l.scheme] === l.port && (l.port = null);
                             return;
                         }
-                        (d = ''), 'file' === l.scheme ? (u = ew) : l.isSpecial() && n && n.scheme === l.scheme ? (u = eS) : l.isSpecial() ? (u = eR) : '/' === r[c + 1] ? ((u = eA), c++) : ((l.cannotBeABaseURL = !0), G(l.path, ''), (u = eB));
+                        (d = ''), 'file' === l.scheme ? (u = eP) : l.isSpecial() && n && n.scheme === l.scheme ? (u = eS) : l.isSpecial() ? (u = eR) : '/' === r[c + 1] ? ((u = eA), c++) : ((l.cannotBeABaseURL = !0), G(l.path, ''), (u = eB));
                     } else {
                         if (t) return W;
                         (d = ''), (u = eb), (c = 0);
@@ -288,7 +288,7 @@ eV.prototype = {
                         (l.scheme = n.scheme), (l.path = m(n.path)), (l.query = n.query), (l.fragment = ''), (l.cannotBeABaseURL = !0), (u = eF);
                         break;
                     }
-                    u = 'file' === n.scheme ? ew : eN;
+                    u = 'file' === n.scheme ? eP : eN;
                     continue;
                 case eS:
                     if ('/' === a && '/' === r[c + 1]) (u = eO), c++;
@@ -323,7 +323,7 @@ eV.prototype = {
                     }
                     break;
                 case eR:
-                    if (((u = eO), '/' !== a || '/' !== P(d, c + 1))) continue;
+                    if (((u = eO), '/' !== a || '/' !== w(d, c + 1))) continue;
                     c++;
                     break;
                 case eO:
@@ -368,11 +368,11 @@ eV.prototype = {
                     } else {
                         if ('' === d) return K;
                         if ((o = l.parseHost(d))) return o;
-                        if (((d = ''), (u = eP), t === ex)) return;
+                        if (((d = ''), (u = ew), t === ex)) return;
                     }
                     break;
-                case eP:
-                    if (w(X, a)) d += a;
+                case ew:
+                    if (P(X, a)) d += a;
                     else {
                         if (!(a === i || '/' === a || '?' === a || '#' === a || ('\\' === a && l.isSpecial())) && !t) return z;
                         if ('' !== d) {
@@ -385,7 +385,7 @@ eV.prototype = {
                         continue;
                     }
                     break;
-                case ew:
+                case eP:
                     if (((l.scheme = 'file'), '/' === a || '\\' === a)) u = eM;
                     else if (n && 'file' === n.scheme)
                         switch (a) {
@@ -440,7 +440,7 @@ eV.prototype = {
                     break;
                 case eG:
                     if (a === i || '/' === a || ('\\' === a && l.isSpecial()) || (!t && ('?' === a || '#' === a))) {
-                        if ((ey(d) ? (l.shortenPath(), '/' === a || ('\\' === a && l.isSpecial()) || G(l.path, '')) : ev(d) ? '/' === a || ('\\' === a && l.isSpecial()) || G(l.path, '') : ('file' === l.scheme && !l.path.length && eg(d) && (l.host && (l.host = ''), (d = P(d, 0) + ':')), G(l.path, d)), (d = ''), 'file' === l.scheme && (a === i || '?' === a || '#' === a))) for (; l.path.length > 1 && '' === l.path[0]; ) Z(l.path);
+                        if ((ey(d) ? (l.shortenPath(), '/' === a || ('\\' === a && l.isSpecial()) || G(l.path, '')) : ev(d) ? '/' === a || ('\\' === a && l.isSpecial()) || G(l.path, '') : ('file' === l.scheme && !l.path.length && eg(d) && (l.host && (l.host = ''), (d = w(d, 0) + ':')), G(l.path, d)), (d = ''), 'file' === l.scheme && (a === i || '?' === a || '#' === a))) for (; l.path.length > 1 && '' === l.path[0]; ) Z(l.path);
                         '?' === a ? ((l.query = ''), (u = eZ)) : '#' === a && ((l.fragment = ''), (u = eF));
                     } else d += eh(a, e_);
                     break;
@@ -458,14 +458,14 @@ eV.prototype = {
     },
     parseHost: function (e) {
         var t, n, i;
-        if ('[' === P(e, 0)) {
-            if (']' !== P(e, e.length - 1) || !(t = el(V(e, 1, -1)))) return K;
+        if ('[' === w(e, 0)) {
+            if (']' !== w(e, e.length - 1) || !(t = el(V(e, 1, -1)))) return K;
             this.host = t;
         } else if (this.isSpecial()) {
-            if (w(en, (e = E(e))) || null === (t = eo(e))) return K;
+            if (P(en, (e = E(e))) || null === (t = eo(e))) return K;
             this.host = t;
         } else {
-            if (w(ei, e)) return K;
+            if (P(ei, e)) return K;
             for (i = 0, t = '', n = h(e); i < n.length; i++) t += eh(n[i], ed);
             this.host = t;
         }
@@ -559,7 +559,7 @@ eV.prototype = {
         return null === e ? '' : v(e);
     },
     setPort: function (e) {
-        this.cannotHaveUsernamePasswordPort() || ('' === (e = v(e)) ? (this.port = null) : this.parse(e, eP));
+        this.cannotHaveUsernamePasswordPort() || ('' === (e = v(e)) ? (this.port = null) : this.parse(e, ew));
     },
     getPathname: function () {
         var e = this.path;
@@ -573,7 +573,7 @@ eV.prototype = {
         return e ? '?' + e : '';
     },
     setSearch: function (e) {
-        '' === (e = v(e)) ? (this.query = null) : ('?' === P(e, 0) && (e = V(e, 1)), (this.query = ''), this.parse(e, eZ)), this.searchParams.update();
+        '' === (e = v(e)) ? (this.query = null) : ('?' === w(e, 0) && (e = V(e, 1)), (this.query = ''), this.parse(e, eZ)), this.searchParams.update();
     },
     getSearchParams: function () {
         return this.searchParams.facade;
@@ -587,7 +587,7 @@ eV.prototype = {
             this.fragment = null;
             return;
         }
-        '#' === P(e, 0) && (e = V(e, 1)), (this.fragment = ''), this.parse(e, eF);
+        '#' === w(e, 0) && (e = V(e, 1)), (this.fragment = ''), this.parse(e, eF);
     },
     update: function () {
         this.query = this.searchParams.serialize() || null;

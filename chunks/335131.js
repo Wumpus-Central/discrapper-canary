@@ -3,7 +3,7 @@ n.d(t, {
     DR: () => T,
     F$: () => N,
     K$: () => L,
-    Ov: () => P,
+    Ov: () => w,
     R2: () => x,
     Sm: () => y,
     fK: () => O,
@@ -202,7 +202,7 @@ let y = (e) => {
             (0, E.G)(new u.Hx(e)), o.Z.dispatch({ type: 'COLLECTIBLES_MARKETING_FETCH_FAILURE' });
         }
     },
-    P = async (e, t) => {
+    w = async (e, t) => {
         o.Z.dispatch({
             type: 'COLLECTIBLES_SHOP_HOME_FETCH',
             tab: e,

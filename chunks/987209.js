@@ -29,9 +29,9 @@ function T(e) {
         D = (0, _.pO)(S),
         L = (0, l.TX)(),
         { enabled: x } = u.O.useExperiment({ location: 'gift card' }),
-        P = E;
-    D && ((P = L ? h.Cj.SEASONAL_STANDARD_BOX : null != y ? y : g), x && (P = h.Cj.NITROWEEN_STANDARD));
-    let [w, M] = r.useState(P),
+        w = E;
+    D && ((w = L ? h.Cj.SEASONAL_STANDARD_BOX : null != y ? y : g), x && (w = h.Cj.NITROWEEN_STANDARD));
+    let [P, M] = r.useState(w),
         k = (0, d.iE)(),
         [U, G] = r.useState(),
         [B, Z] = r.useState(t && (0, _.MY)(S) === _.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null == f ? m.intl.string(m.t.ZkOo1d) : f),
@@ -76,7 +76,7 @@ function T(e) {
             setEmojiConfetti: H,
             customGiftMessage: B,
             setCustomGiftMessage: Z,
-            selectedGiftStyle: w,
+            selectedGiftStyle: P,
             setSelectedGiftStyle: M,
             sendGiftMessage: J,
             hasSentMessage: W,

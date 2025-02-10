@@ -27,8 +27,8 @@ function y(e) {
     let f,
         { media: h, obscured: y = !1, padding: I, onContextMenu: b } = e,
         { width: S, height: A, url: N, proxyUrl: C, alt: R, type: O, maxWidth: D, maxHeight: L, ...x } = h,
-        { zoomed: P, setZoomed: w } = (0, g.Y)(),
-        M = T(P, N, C),
+        { zoomed: w, setZoomed: P } = (0, g.Y)(),
+        M = T(w, N, C),
         k = {
             vertical: (null !== (t = null == I ? void 0 : I.top) && void 0 !== t ? t : 0) + (null !== (n = null == I ? void 0 : I.bottom) && void 0 !== n ? n : 0),
             horizontal: (null !== (r = null == I ? void 0 : I.left) && void 0 !== r ? r : 0) + (null !== (a = null == I ? void 0 : I.right) && void 0 !== a ? a : 0)
@@ -89,11 +89,11 @@ function y(e) {
                   height: A,
                   maxWidth: U,
                   maxHeight: G,
-                  active: P,
-                  className: s()(E.wrapper, { [E.zoomed]: P }),
+                  active: w,
+                  className: s()(E.wrapper, { [E.zoomed]: w }),
                   panPadding: I,
                   onClick: () => {
-                      w(!P), (0, m.yg)(P ? m.uG.ZOOM_OUT_IMAGE_PRESSED : m.uG.ZOOM_IN_IMAGE_PRESSED);
+                      P(!w), (0, m.yg)(w ? m.uG.ZOOM_OUT_IMAGE_PRESSED : m.uG.ZOOM_IN_IMAGE_PRESSED);
                   },
                   children: f
               })

@@ -28,14 +28,14 @@ var i = 'function' == typeof Map && Map.prototype,
     D = 'function' == typeof Symbol && 'object' == typeof Symbol.iterator,
     L = 'function' == typeof Symbol && Symbol.toStringTag && (typeof Symbol.toStringTag === D ? 'object' : 'symbol') ? Symbol.toStringTag : null,
     x = Object.prototype.propertyIsEnumerable,
-    P =
+    w =
         ('function' == typeof Reflect ? Reflect.getPrototypeOf : Object.getPrototypeOf) ||
         ([].__proto__ === Array.prototype
             ? function (e) {
                   return e.__proto__;
               }
             : null);
-function w(e, t) {
+function P(e, t) {
     if (e === 1 / 0 || e === -1 / 0 || e != e || (e && e > -1000 && e < 1000) || T.call(/e/, t)) return t;
     var n = /[0-9](?=(?:[0-9]{3})+(?![0-9]))/g;
     if ('number' == typeof e) {
@@ -111,11 +111,11 @@ e.exports = function e(t, i, r, o) {
     if ('number' == typeof t) {
         if (0 === t) return 1 / 0 / t > 0 ? '0' : '-0';
         var _ = String(t);
-        return f ? w(t, _) : _;
+        return f ? P(t, _) : _;
     }
     if ('bigint' == typeof t) {
         var h = String(t) + 'n';
-        return f ? w(t, h) : h;
+        return f ? P(t, h) : h;
     }
     var m = void 0 === l.depth ? 5 : l.depth;
     if ((void 0 === r && (r = 0), r >= m && m > 0 && 'object' == typeof t)) return Z(t) ? '[Array]' : '[Object]';
@@ -186,7 +186,7 @@ e.exports = function e(t, i, r, o) {
     if (t === n.g) return '{ [object globalThis] }';
     if (!F(t) && !V(t)) {
         var ev = ep(t, y),
-            ey = P ? P(t) === Object.prototype : t instanceof Object || t.constructor === Object,
+            ey = w ? w(t) === Object.prototype : t instanceof Object || t.constructor === Object,
             eI = t instanceof Object ? '' : 'null prototype',
             eT = !ey && L && Object(t) === t && L in t ? E.call(X(t), 8, -1) : eI ? 'Object' : '',
             eb = (ey || 'function' != typeof t.constructor ? '' : t.constructor.name ? t.constructor.name + ' ' : '') + (eT || eI ? '[' + S.call(b.call([], eT || [], eI || []), ': ') + '] ' : '');

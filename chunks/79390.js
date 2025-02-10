@@ -1,6 +1,6 @@
 n.d(t, {
     D$: () => R,
-    N4: () => w,
+    N4: () => P,
     UI: () => N,
     Uu: () => T,
     _N: () => C,
@@ -111,14 +111,14 @@ function x(e) {
         answers: n
     };
 }
-function P(e, t) {
+function w(e, t) {
     var n, i, r, a;
     let s = null !== (a = null === (r = e.embeds[0]) || void 0 === r ? void 0 : null === (i = r.fields) || void 0 === i ? void 0 : null === (n = i.find((e) => 'poll_question_text' === e.rawName)) || void 0 === n ? void 0 : n.rawValue) && void 0 !== a ? a : '';
     return null != t ? (0, o.aF)(s, t) : s;
 }
-function w(e) {
+function P(e) {
     let t = (0, d.ZH)(e),
-        n = P(e, v.Dv);
+        n = w(e, v.Dv);
     return I.intl.format(I.t.Vn97KS, {
         username: t.nick,
         title: n

@@ -60,7 +60,7 @@ function C(e) {
                 ? e
                 : [];
         }, [D, L]),
-        [P, w] = r.useState([]);
+        [w, P] = r.useState([]);
     r.useEffect(() => {
         let e = () => {
             d.Z.clearAll(t, n.drafts.type);
@@ -76,7 +76,7 @@ function C(e) {
     });
     let k = {
             isApplicationCommand: O,
-            previousUploadOptions: P,
+            previousUploadOptions: w,
             uploadOptions: x
         },
         U = r.useRef(k);
@@ -93,7 +93,7 @@ function C(e) {
                     e.forEach((e) => {
                         d.Z.remove(t, e.name, n.drafts.type);
                     }),
-                    w(r);
+                    P(r);
             }
         }, [t, x.length, n]);
     let G = (0, m.Q3)('ChannelAttachmentArea');

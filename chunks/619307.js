@@ -87,7 +87,7 @@ function N(e) {
     return e.map((e) => A(e)).join(', ');
 }
 function C(e) {
-    let { options: t, placeholder: n = E.intl.string(E.t.XqMe3N), className: a, isDisabled: o = !1, maxVisibleItems: l = 7, autoFocus: c = !1, popoutWidth: f, clearable: m = !1, look: y = g.q.FILLED, onClose: I, onOpen: T, renderOptionLabel: b = A, renderOptionValue: S = N, popoutClassName: C, popoutPosition: O = 'bottom', popoutLayerContext: D, optionClassName: L, closeOnSelect: x, select: P, isSelected: w, serialize: M, clear: k, hideIcon: U = !1, 'aria-label': G, 'aria-labelledby': B } = e,
+    let { options: t, placeholder: n = E.intl.string(E.t.XqMe3N), className: a, isDisabled: o = !1, maxVisibleItems: l = 7, autoFocus: c = !1, popoutWidth: f, clearable: m = !1, look: y = g.q.FILLED, onClose: I, onOpen: T, renderOptionLabel: b = A, renderOptionValue: S = N, popoutClassName: C, popoutPosition: O = 'bottom', popoutLayerContext: D, optionClassName: L, closeOnSelect: x, select: w, isSelected: P, serialize: M, clear: k, hideIcon: U = !1, 'aria-label': G, 'aria-labelledby': B } = e,
         [Z, F] = r.useState(!1),
         { ref: V, width: j, height: H } = (0, p.Z)();
     r.useLayoutEffect(() => {
@@ -108,12 +108,12 @@ function C(e) {
         K = (0, h.O)(W),
         z = r.useCallback(
             (e) => {
-                if ((P(e), x)) {
+                if ((w(e), x)) {
                     var t;
                     null === (t = V.current) || void 0 === t || t.focus();
                 }
             },
-            [P, x, V]
+            [w, x, V]
         ),
         q = r.useCallback(
             (e) => {
@@ -121,7 +121,7 @@ function C(e) {
             },
             [k]
         ),
-        Q = t.filter((e) => w(e.value));
+        Q = t.filter((e) => P(e.value));
     r.useLayoutEffect(() => {
         if (c) {
             var e;
@@ -146,7 +146,7 @@ function C(e) {
                 closeOnSelect: x,
                 maxVisibleItems: l,
                 width: null != f ? f : j,
-                isSelected: w,
+                isSelected: P,
                 closePopout: n,
                 buttonHeight: null != H ? H : 0,
                 onSelect: z,
@@ -284,7 +284,7 @@ function R(e) {
                 null !== (n = e.key) && void 0 !== n ? n : t
             );
         }),
-        P = _.length <= h ? f.xV : f.h2;
+        w = _.length <= h ? f.xV : f.h2;
     return (0, i.jsx)(l.bG, {
         navigator: R,
         children: (0, i.jsx)(l.SJ, {
@@ -292,7 +292,7 @@ function R(e) {
                 let { ref: n, ...r } = e;
                 return (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsx)(P, {
+                        (0, i.jsx)(w, {
                             className: s()(v.popout, t, { [v.popoutPositionTop]: 'top' === b }),
                             style: {
                                 width: p,

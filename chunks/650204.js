@@ -30,8 +30,8 @@ var d = n(616254),
     D = n(473159),
     L = n(846519),
     x = n(579806),
-    P = n(896361),
-    w = n(892254);
+    w = n(896361),
+    P = n(892254);
 n(192974);
 var M = n(857192),
     k = n(518079),
@@ -49,7 +49,7 @@ function H(e, t, n) {
     let r = null != n ? new URLSearchParams(n) : null;
     (null === (i = j[t]) || void 0 === i || !i.call(j, r)) && (0, R.uL)(t);
 }
-let Y = (e) => V.render((0, c.jsx)(w.Z, { children: (0, c.jsx)(P.Z, { children: (0, c.jsx)(e, {}) }) }));
+let Y = (e) => V.render((0, c.jsx)(P.Z, { children: (0, c.jsx)(w.Z, { children: (0, c.jsx)(e, {}) }) }));
 if (null != x.Z) {
     null === (i = x.Z.setUncaughtExceptionHandler) ||
         void 0 === i ||

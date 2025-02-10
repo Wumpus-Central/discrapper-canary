@@ -29,8 +29,8 @@ var i = n(512722),
     D = n(508569),
     L = n(183139),
     x = n(645436),
-    P = n(833508),
-    w = n(981631);
+    w = n(833508),
+    P = n(981631);
 function M(e, t, n) {
     return (
         t in e
@@ -79,7 +79,7 @@ function G(e) {
                 (f = l.state.clientState);
         }
     }
-    null == t && ((t = (0, P.Z)(n)).binaryType = 'arraybuffer'), i(t), u && r(c, f), null != d && d.forEach(a), (t.onopen = () => r(c, f)), (t.onmessage = a), (t.onclose = o), (t.onerror = s);
+    null == t && ((t = (0, w.Z)(n)).binaryType = 'arraybuffer'), i(t), u && r(c, f), null != d && d.forEach(a), (t.onopen = () => r(c, f)), (t.onmessage = a), (t.onclose = o), (t.onerror = s);
 }
 function B() {}
 let Z = 4,
@@ -293,18 +293,18 @@ class Q extends L.Z {
             3 === this.iosGoingAwayEventCount &&
                 c.tn
                     .get({
-                        url: w.ANM.ME,
+                        url: P.ANM.ME,
                         headers: { authorization: this.token },
                         rejectWithError: !1
                     })
                     .then(
                         (e) => {
                             let { status: t } = e;
-                            y.default.track(w.rMx.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
+                            y.default.track(P.rMx.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
                         },
                         (e) => {
                             let { status: t } = e;
-                            401 === t && ((this.connectionState = A.Z.CLOSED), k.warn('[WS CLOSED] because of manual authentication failure, marking as closed.'), this._reset(n, j, 'invalid token manually detected')), y.default.track(w.rMx.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
+                            401 === t && ((this.connectionState = A.Z.CLOSED), k.warn('[WS CLOSED] because of manual authentication failure, marking as closed.'), this._reset(n, j, 'invalid token manually detected')), y.default.track(P.rMx.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
                         }
                     ));
     }
@@ -453,7 +453,7 @@ class Q extends L.Z {
                 !0
             ),
             !1 !== e.sentry && S.Z.captureException(n, { tags: { socketCrashedAction: t } }),
-            y.default.track(w.rMx.GATEWAY_SOCKET_RESET, {
+            y.default.track(P.rMx.GATEWAY_SOCKET_RESET, {
                 error_message: n.message,
                 error_stack: n.stack,
                 action: t

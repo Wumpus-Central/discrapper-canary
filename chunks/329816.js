@@ -29,8 +29,8 @@ var i = n(200651),
     D = n(559407),
     L = n(556766),
     x = n(514361),
-    P = n(724145),
-    w = n(195302),
+    w = n(724145),
+    P = n(195302),
     M = n(260035),
     k = n(482215),
     U = n(540059),
@@ -185,7 +185,7 @@ let ed = (0, et.Un)({
                                                                         children: (0, i.jsx)(j.OR, {
                                                                             children: (0, i.jsx)(S.Z.Provider, {
                                                                                 value: A.Z,
-                                                                                children: (0, i.jsxs)(w.p, {
+                                                                                children: (0, i.jsxs)(P.p, {
                                                                                     children: [
                                                                                         (0, i.jsx)('div', {
                                                                                             className: s()(y ? ec.mobileApp : ec.app),
@@ -213,7 +213,7 @@ let ed = (0, et.Un)({
                                                                 (0, i.jsx)(m.Z, {}),
                                                                 eC &&
                                                                     !eD &&
-                                                                    (0, i.jsx)(P.Z, {
+                                                                    (0, i.jsx)(w.Z, {
                                                                         markAsDismissed: eA
                                                                             ? eb
                                                                             : () => {

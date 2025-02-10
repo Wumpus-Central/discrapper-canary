@@ -72,8 +72,8 @@ let O = '([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})',
     D = '\\d{4}',
     L = '([0-9]{4})-([0-9]{1,2})',
     x = '([^\\d\\s]+)',
-    P = RegExp('(?:\\s*('.concat(O, '|').concat(L, '|').concat(D, '|').concat(x, '))'), 'i'),
-    w = RegExp('\\s*(true|false)', 'i');
+    w = RegExp('(?:\\s*('.concat(O, '|').concat(L, '|').concat(D, '|').concat(x, '))'), 'i'),
+    P = RegExp('\\s*(true|false)', 'i');
 function M(e) {
     return ''.concat(e, ':');
 }
@@ -307,21 +307,21 @@ function Q() {
             getAutocompletions: (e, t, n) => j(e, n, y.dCx.FILTER_AFTER)
         },
         [y.dCx.ANSWER_BEFORE]: {
-            regex: P,
+            regex: w,
             follows: [y.dCx.FILTER_BEFORE],
             componentType: 'ANSWER',
             mutable: !0,
             validator: (e) => G(e, 'before')
         },
         [y.dCx.ANSWER_ON]: {
-            regex: P,
+            regex: w,
             follows: [y.dCx.FILTER_ON],
             componentType: 'ANSWER',
             mutable: !0,
             validator: (e) => G(e, 'on')
         },
         [y.dCx.ANSWER_AFTER]: {
-            regex: P,
+            regex: w,
             follows: [y.dCx.FILTER_AFTER],
             componentType: 'ANSWER',
             mutable: !0,
@@ -388,7 +388,7 @@ function Q() {
             getAutocompletions: () => [{ text: 'true' }, { text: 'false' }]
         },
         [y.dCx.ANSWER_PINNED]: {
-            regex: w,
+            regex: P,
             componentType: 'ANSWER',
             follows: [y.dCx.FILTER_PINNED],
             queryKey: 'pinned',

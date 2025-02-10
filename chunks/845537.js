@@ -1,10 +1,10 @@
 n.d(t, {
-    EK: () => w,
+    EK: () => P,
     Io: () => L,
     NY: () => x,
     Ox: () => R,
     Vq: () => D,
-    Wf: () => P,
+    Wf: () => w,
     cB: () => O,
     dy: () => N,
     wP: () => C
@@ -166,13 +166,13 @@ function x(e) {
         children: [a, null != s && (0, i.jsx)(p.Z, {}), s]
     });
 }
-function P(e) {
+function w(e) {
     let { text: t, id: n } = e;
     return (0, i.jsxs)(_.Z, {
         children: [t, '(', n, ')']
     });
 }
-function w(e) {
+function P(e) {
     let { timestamp: t } = e;
     return (0, i.jsx)('span', {
         className: A.timestamp,

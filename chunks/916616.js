@@ -33,7 +33,7 @@ function I(e, t, n) {
 class T extends (i = a.PureComponent) {
     render() {
         let e;
-        let { className: t, imageClassName: n, readyState: i, src: a, placeholder: s, placeholderVersion: l, alt: c, width: _, height: m, maxWidth: v = _, maxHeight: y = m, minWidth: I, minHeight: T, mediaLayoutType: N, limitResponsiveWidth: C = !0, accessory: R, zoomable: O, original: D, children: L, renderAccessory: x, onClick: P, tabIndex: w, dataSafeSrc: M, useFullWidth: k = !1, ...U } = this.props;
+        let { className: t, imageClassName: n, readyState: i, src: a, placeholder: s, placeholderVersion: l, alt: c, width: _, height: m, maxWidth: v = _, maxHeight: y = m, minWidth: I, minHeight: T, mediaLayoutType: N, limitResponsiveWidth: C = !0, accessory: R, zoomable: O, original: D, children: L, renderAccessory: x, onClick: w, tabIndex: P, dataSafeSrc: M, useFullWidth: k = !1, ...U } = this.props;
         if (1 === _ && 1 === m) return null;
         let G = (0, f.Tj)({
                 width: _,
@@ -78,7 +78,7 @@ class T extends (i = a.PureComponent) {
                         {
                             [E.imageZoom]: O,
                             [E.imageWrapperBackground]: i !== h.zo9.READY,
-                            [E.clickable]: null != P
+                            [E.clickable]: null != w
                         },
                         t
                     ),
@@ -88,7 +88,7 @@ class T extends (i = a.PureComponent) {
                         null != D &&
                             (0, r.jsx)('a', {
                                 tabIndex: -1,
-                                onClick: P,
+                                onClick: w,
                                 'aria-hidden': !0,
                                 className: E.originalLink,
                                 href: D,
@@ -96,11 +96,11 @@ class T extends (i = a.PureComponent) {
                                 'data-role': 'img',
                                 'data-safe-src': null != M ? M : a
                             }),
-                        null != P
+                        null != w
                             ? (0, r.jsx)(u.P3F, {
                                   className: E.clickableWrapper,
-                                  tabIndex: null != w ? w : 0,
-                                  onClick: P,
+                                  tabIndex: null != P ? P : 0,
+                                  onClick: w,
                                   'aria-label': null != c ? c : g.intl.string(g.t.X4IxWF),
                                   'aria-describedby': d.r5,
                                   innerRef: this._clickableRef,

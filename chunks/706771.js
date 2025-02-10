@@ -28,8 +28,8 @@ var i = n(67867),
     D = n(964653),
     L = n(511364),
     x = n(348343),
-    P = n(360518),
-    w = n(862602),
+    w = n(360518),
+    P = n(862602),
     M = n(187203),
     k = n(29657),
     U = n(414847),
@@ -180,8 +180,8 @@ u ||
     (b.f = e_),
     (y.f = I.f = ep),
     (T.f = eh),
-    (w.f = function (e) {
-        return el(P(e), e);
+    (P.f = function (e) {
+        return el(w(e), e);
     }),
     l &&
         (R(K, 'description', {

@@ -25,7 +25,7 @@ var i = n(200651),
     N = n(769860);
 function C(e) {
     var t, n, a;
-    let { title: C, type: R, guildBoostProps: O, analyticsSource: D, analyticsLocation: L, body: x, context: P, glowUp: w, modalClassName: M, modalContentClassName: k, artContainerClassName: U, headerClassName: G, bodyClassName: B, transitionState: Z, onClose: F, onSubscribeClick: V, onSubscribeFinish: j, onSecondaryClick: H, secondaryCTA: Y, subscribeButtonText: W, showNewBadge: K = !1, enableArtBoxShadow: z = !0, subscriptionTier: q = T.Si.TIER_2, isLoading: Q = !1, hideBackButton: X, backButtonText: J, showEnhancedUpsell: $, useSubscribeButtonGradient: ee, subscribeButtonClassname: et, hidePremiumOfferUpsell: en, children: ei, LeadingComponent: er, ...ea } = e,
+    let { title: C, type: R, guildBoostProps: O, analyticsSource: D, analyticsLocation: L, body: x, context: w, glowUp: P, modalClassName: M, modalContentClassName: k, artContainerClassName: U, headerClassName: G, bodyClassName: B, transitionState: Z, onClose: F, onSubscribeClick: V, onSubscribeFinish: j, onSecondaryClick: H, secondaryCTA: Y, subscribeButtonText: W, showNewBadge: K = !1, enableArtBoxShadow: z = !0, subscriptionTier: q = T.Si.TIER_2, isLoading: Q = !1, hideBackButton: X, backButtonText: J, showEnhancedUpsell: $, useSubscribeButtonGradient: ee, subscribeButtonClassname: et, hidePremiumOfferUpsell: en, children: ei, LeadingComponent: er, ...ea } = e,
         es = null != O,
         eo = (0, g.N)(),
         el = (0, m.Ng)(),
@@ -140,11 +140,11 @@ function C(e) {
                                             type: R,
                                             subscriptionTier: null !== (a = null == eo ? void 0 : null === (n = eo.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : T.Si.TIER_2,
                                             headingText: C,
-                                            context: P,
+                                            context: w,
                                             analyticsLocationObject: L,
                                             discountOffer: el,
                                             trialOffer: eo,
-                                            children: w
+                                            children: P
                                         })
                                     })
                                   : (0, i.jsxs)('div', {

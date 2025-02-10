@@ -63,7 +63,7 @@ let S = r.memo(function (e) {
         { src: n, volume: a = 1, onVolumeChange: d, onMute: _, waveform: g, durationSecs: S, onVolumeShow: A, onVolumeHide: N, onPlay: C, onPause: R, onError: O } = e,
         D = r.useRef(null),
         [L, x] = r.useState(0),
-        [P, w] = r.useState(S),
+        [w, P] = r.useState(S),
         [M, k] = r.useState(!1),
         [U, G] = r.useState(!1),
         [B, Z] = r.useState(!1),
@@ -79,7 +79,7 @@ let S = r.memo(function (e) {
         }, []),
         Q = r.useCallback((e) => {
             let t = e.currentTarget.duration;
-            !isNaN(t) && w(t);
+            !isNaN(t) && P(t);
         }, []),
         X = r.useCallback(() => {
             G(!1),
@@ -111,16 +111,16 @@ let S = r.memo(function (e) {
             Z(!0);
         }, []),
         ei = r.useCallback(() => {
-            Z(!1), L === P && X();
-        }, [L, P, X]),
+            Z(!1), L === w && X();
+        }, [L, w, X]),
         er = r.useCallback(
             (e) => {
                 let t = D.current;
-                if (null == P || null == t) return;
-                let n = e * P;
+                if (null == w || null == t) return;
+                let n = e * w;
                 x(n), (t.currentTime = n), V(!0), clearTimeout(K.current), (K.current = void 0);
             },
-            [P]
+            [w]
         );
     r.useEffect(() => {
         !F && U && V(!0);
@@ -208,7 +208,7 @@ let S = r.memo(function (e) {
                 className: v.waveform,
                 waveform: g,
                 currentTime: L,
-                duration: null != P ? P : 1,
+                duration: null != w ? w : 1,
                 playing: U,
                 played: F,
                 onDrag: er,
@@ -218,7 +218,7 @@ let S = r.memo(function (e) {
             (0, i.jsx)(I, {
                 played: F,
                 currentTime: L,
-                duration: P
+                duration: w
             }),
             (0, i.jsx)(f.Z, {
                 className: v.volumeButton,

@@ -99,7 +99,7 @@ class T extends (i = a.PureComponent) {
     render() {
         var e;
         let { value: t, active: n, focused: i, sortedMarkers: a, markerPositions: s, closestMarkerIndex: l, newClosestIndex: u, min: d, max: f } = this.state,
-            { disabled: m, stickToMarkers: E, className: v, children: y, barStyles: I, fillStyles: T, mini: S, hideBubble: A, defaultValue: N, orientation: C, onValueRender: R, renderMarker: O, getAriaValueText: D, barClassName: L, grabberClassName: x, grabberStyles: P = {}, markerPosition: w = 0, 'aria-hidden': M, 'aria-label': k, 'aria-labelledby': U, 'aria-describedby': G } = this.props,
+            { disabled: m, stickToMarkers: E, className: v, children: y, barStyles: I, fillStyles: T, mini: S, hideBubble: A, defaultValue: N, orientation: C, onValueRender: R, renderMarker: O, getAriaValueText: D, barClassName: L, grabberClassName: x, grabberStyles: w = {}, markerPosition: P = 0, 'aria-hidden': M, 'aria-label': k, 'aria-labelledby': U, 'aria-describedby': G } = this.props,
             B = 0;
         E ? null != s && (null != u ? (B = s[u]) : null != l && (B = s[l])) : (B = this.scaleValue(t));
         let Z = ''.concat(B, '%'),
@@ -114,8 +114,8 @@ class T extends (i = a.PureComponent) {
                               {
                                   className: o()(g.mark, {
                                       [g.defaultValue]: i,
-                                      [g.markAbove]: 0 === w,
-                                      [g.markBelow]: 1 === w
+                                      [g.markAbove]: 0 === P,
+                                      [g.markBelow]: 1 === P
                                   }),
                                   style: { left: ''.concat(e, '%') },
                                   children:
@@ -204,7 +204,7 @@ class T extends (i = a.PureComponent) {
                                             ...e,
                                             className: o()(g.grabber, x),
                                             style: {
-                                                ...P,
+                                                ...w,
                                                 left: Z
                                             },
                                             onMouseDown: this.handleMouseDown,

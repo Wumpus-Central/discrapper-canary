@@ -26,8 +26,8 @@ var i = n(200651),
     b = n(82142),
     R = n(701190),
     Z = n(626135),
-    j = n(81063),
-    O = n(449934),
+    O = n(81063),
+    j = n(449934),
     L = n(768581),
     y = n(625054),
     P = n(645499),
@@ -37,8 +37,8 @@ var i = n(200651),
     B = n(223543),
     U = n(73906),
     M = n(299852),
-    G = n(39514),
-    F = n(236446),
+    F = n(39514),
+    G = n(236446),
     z = n(9325),
     V = n(344295),
     H = n(781428),
@@ -56,8 +56,8 @@ n(179645), s.ZP.initialize();
 let en = (0, D.Z)(H.Z),
     ei = (0, D.Z)(W.Z),
     er = (0, D.Z)(V.Z),
-    el = (0, D.Z)(F.Z),
-    ea = (0, D.Z)(G.Z),
+    el = (0, D.Z)(G.Z),
+    ea = (0, D.Z)(F.Z),
     eo = (0, D.Z)(S.Z),
     es = (0, D.Z)(Y.Z),
     ec = (0, D.Z)(w.Z),
@@ -81,11 +81,11 @@ class ev extends r.PureComponent {
             o = null !== (n = (0, l.parse)(r.search).redirect_to) && void 0 !== n ? n : null;
         (null == o || '' === o || !(0, P.B)(o) || o.startsWith($.Z5c.ME)) && (o = null);
         let s = null;
-        if (null == i) s = (0, O.gK)(o);
+        if (null == i) s = (0, j.gK)(o);
         else if ((null == i ? void 0 : i.state) === $.r2o.RESOLVED) {
             let { guild: e, target_application: t } = i;
             null != t
-                ? null != a && (s = (0, j.getAssetImage)(t.id, a, 1024))
+                ? null != a && (s = (0, O.getAssetImage)(t.id, a, 1024))
                 : null != e &&
                   'string' == typeof e.splash &&
                   (s = L.ZP.getGuildSplashURL({
@@ -127,7 +127,7 @@ class ev extends r.PureComponent {
         if ((null == e ? void 0 : e.state) === $.r2o.RESOLVED) {
             let { target_application: t } = e;
             null != t &&
-                (0, j.fetchAssetIds)(t.id, ['embedded_splash']).then((e) => {
+                (0, O.fetchAssetIds)(t.id, ['embedded_splash']).then((e) => {
                     let [t] = e;
                     return this.setState({ backgroundId: t });
                 });

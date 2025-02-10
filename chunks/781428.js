@@ -29,8 +29,8 @@ var i,
     b = n(913583),
     R = n(144114),
     Z = n(541692),
-    j = n(952802),
-    O = n(108427),
+    O = n(952802),
+    j = n(108427),
     L = n(365007),
     y = n(314897),
     P = n(117240),
@@ -40,8 +40,8 @@ var i,
     B = n(358085),
     U = n(481153),
     M = n(588705),
-    G = n(494526),
-    F = n(163671),
+    F = n(494526),
+    G = n(163671),
     z = n(981631),
     V = n(58346),
     H = n(388032),
@@ -115,7 +115,7 @@ class J extends (i = l.PureComponent) {
                             .catch(() => {});
                 }),
             m.Z.getLocationMetadata(),
-            (0, O.e)('login');
+            (0, j.e)('login');
     }
     componentDidUpdate(e, t) {
         let { authenticated: n, location: i } = this.props,
@@ -262,7 +262,7 @@ class J extends (i = l.PureComponent) {
                 (0, r.jsxs)(x.gO, {
                     className: K.marginTop20,
                     children: [
-                        (0, r.jsx)(j.Z, {
+                        (0, r.jsx)(O.Z, {
                             className: K.marginBottom20,
                             alpha2: t.alpha2,
                             countryCode: t.code.split(' ')[0],
@@ -383,7 +383,7 @@ class J extends (i = l.PureComponent) {
                                     children: (0, r.jsxs)(x.gO, {
                                         className: K.marginTop20,
                                         children: [
-                                            (0, r.jsx)(j.Z, {
+                                            (0, r.jsx)(O.Z, {
                                                 alpha2: o.alpha2,
                                                 countryCode: o.code.split(' ')[0],
                                                 className: K.marginBottom20,
@@ -453,7 +453,7 @@ class J extends (i = l.PureComponent) {
                         }),
                         (0, r.jsx)(h.y5t, {
                             children: e
-                                ? (0, r.jsx)(G.Z, {
+                                ? (0, r.jsx)(F.Z, {
                                       authTokenCallback: this.handleAuthToken,
                                       conditionalMediationAbortController: this.state.conditionalMediationAbortController
                                   })
@@ -482,7 +482,7 @@ class J extends (i = l.PureComponent) {
         });
     }
     renderGuildTemplate(e) {
-        return (0, r.jsx)(F.Z, {
+        return (0, r.jsx)(G.Z, {
             onSubmit: this.handleLogin,
             tag: 'form',
             className: s()(this.props.authBoxClassName, W.horizontalAuthBox),

@@ -33,8 +33,8 @@ var r = n(772848),
     D = n(115130),
     L = n(566620),
     x = n(317381),
-    P = n(969345),
-    w = n(148720),
+    w = n(969345),
+    P = n(148720),
     M = n(122613),
     k = n(782769),
     U = n(16609),
@@ -111,7 +111,7 @@ async function $(e) {
     if (null == u || null == c || null == d) return;
     let f = c.getGuildId(),
         _ = x.ZP.getShelfActivities(f),
-        h = (0, P.Z)({
+        h = (0, w.Z)({
             applicationId: i,
             activityConfigs: _
         }),
@@ -159,12 +159,12 @@ function ee(e) {
     if (null == N || C) return;
     let D = (0, r.Z)(),
         L = 'location' in c ? 2 : 1,
-        w = null == v ? void 0 : v.getGuildId(),
+        P = null == v ? void 0 : v.getGuildId(),
         M = S.default.getCurrentUser();
     if (null == v || null == M) return;
-    let k = x.ZP.getShelfActivities(w),
+    let k = x.ZP.getShelfActivities(P),
         G = O.Z.getState().shelfOrder,
-        B = (0, P.Z)({
+        B = (0, w.Z)({
             applicationId: a,
             activityConfigs: k
         }),
@@ -397,7 +397,7 @@ class en extends u.Z {
                     { activityConfigs: p, applications: h } = await (0, L.w1)({ guildId: _ });
                 if (
                     null ==
-                    (0, P.Z)({
+                    (0, w.Z)({
                         applicationId: a,
                         activityConfigs: p,
                         applications: h
@@ -407,7 +407,7 @@ class en extends u.Z {
                         guildId: _,
                         force: !0
                     });
-                    (0, P.Z)({
+                    (0, w.Z)({
                         applicationId: a,
                         activityConfigs: e.activityConfigs,
                         applications: e.applications
@@ -415,7 +415,7 @@ class en extends u.Z {
                 }
                 let m = x.ZP.getEmbeddedActivitiesForChannel(r).find((e) => e.applicationId === a);
                 (null !== (i = null == m ? void 0 : m.userIds.size) && void 0 !== i ? i : 0) > 0
-                    ? await (0, w.k)({
+                    ? await (0, P.k)({
                           channelId: r,
                           applicationId: a,
                           launchId: null == m ? void 0 : m.launchId,

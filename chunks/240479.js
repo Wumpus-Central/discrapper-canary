@@ -69,8 +69,8 @@ function N(e) {
                     x(!1), g();
                 }));
     }, [g, D, t.guildId, t.soundId]);
-    let { buttonType: P, description: w } = (0, v.Z)(t, n, N, C),
-        M = P === v.y.JOIN_GUILD,
+    let { buttonType: w, description: P } = (0, v.Z)(t, n, N, C),
+        M = w === v.y.JOIN_GUILD,
         k = !y && L,
         U = r.useMemo(() => (N ? c.JO.createFromGuildRecord(I) : null != C ? c.JO.createFromDiscoverableGuild(C) : void 0), [I, N, C]);
     return k
@@ -93,7 +93,7 @@ function N(e) {
                                   }),
                                   (0, i.jsx)(s.xv, {
                                       variant: 'text-sm/normal',
-                                      children: w
+                                      children: P
                                   })
                               ]
                           }),
@@ -116,7 +116,7 @@ function N(e) {
                                           })
                                       }),
                                       (0, i.jsx)(A, {
-                                          buttonType: P,
+                                          buttonType: w,
                                           discoverableGuildId: null == C ? void 0 : C.id,
                                           closePopout: u
                                       })

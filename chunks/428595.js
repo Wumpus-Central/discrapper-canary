@@ -29,8 +29,8 @@ var i = n(392711),
     D = n(388032);
 let L = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/,
     x = /^$|\n *$/,
-    P = /^ *>>> ?/,
-    w = /^ *> ?/gm,
+    w = /^ *>>> ?/,
+    P = /^ *> ?/gm,
     M = /^((?:https?|steam):\/\/[^\s<]+[^<.,:;"'\]\s])/;
 function k(e) {
     let t = (0, E.yw)(e[1]);
@@ -76,8 +76,8 @@ let U = (e) => {
             },
             parse(e, t, n) {
                 let i = e[0],
-                    r = !!P.exec(i),
-                    a = r ? P : w,
+                    r = !!w.exec(i),
+                    a = r ? w : P,
                     s = i.replace(a, ''),
                     o = n.inQuote || !1,
                     l = n.inline || !1;

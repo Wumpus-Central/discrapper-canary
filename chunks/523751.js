@@ -189,17 +189,17 @@ function L(e) {
     let t,
         n,
         { guild: a, tooltipColor: l = c.ua7.Colors.BRAND, tooltipPosition: _, className: v, flowerStarClassName: y, iconClassName: I, badgeStrokeColor: A, badgeColor: C, size: O = 16, disableBoostClick: L, 'aria-label': x = !1 } = e,
-        P = (0, o.e7)([E.default, g.ZP], () => {
+        w = (0, o.e7)([E.default, g.ZP], () => {
             let e = E.default.getCurrentUser();
             return g.ZP.isMember(null == a ? void 0 : a.id, null == e ? void 0 : e.id);
         }),
-        w = (0, o.e7)([m.Z], () => m.Z.theme),
+        P = (0, o.e7)([m.Z], () => m.Z.theme),
         M = (0, b.XX)(a),
         k = (0, T.i)(M),
         U = r.useCallback(
             (e) => {
                 M.premium &&
-                    P &&
+                    w &&
                     !L &&
                     (e.stopPropagation(),
                     e.preventDefault(),
@@ -211,7 +211,7 @@ function L(e) {
                         }
                     }));
             },
-            [M.premium, P, L, a.id]
+            [M.premium, w, L, a.id]
         );
     if (k === T.Q.NONE) return null;
     if (k === T.Q.CLAN) {
@@ -243,8 +243,8 @@ function L(e) {
     let { IconComponent: B, backgroundDarkColor: Z, backgroundLightColor: F, foregroundDarkColor: V, foregroundLightColor: j, premiumBackgroundColor: H, premiumForegroundColor: Y, sizeAdjustment: W } = R[k];
     if (null == B) return null;
     M.premium && ((t = Y), (n = H));
-    let K = (0, u.wj)(w) ? V : j,
-        z = (0, u.wj)(w) ? Z : F;
+    let K = (0, u.wj)(P) ? V : j,
+        z = (0, u.wj)(P) ? Z : F;
     (t = null != t ? t : K), (n = null != n ? n : z);
     let q = Math.floor(0.75 * O) - (null != W ? W : 0);
     return (0, i.jsx)(c.ua7, {

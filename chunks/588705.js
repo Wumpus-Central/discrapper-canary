@@ -74,16 +74,16 @@ let S = () =>
             s,
             { invite: c, disableUser: S = !1, error: A, flatActivityCount: b = !1, isRegister: R = !1 } = e,
             Z = (0, u.WR)({ location: 'invite' }),
-            { currentUser: j } = (0, l.cj)([f.default], () => ({ currentUser: f.default.getCurrentUser() }));
+            { currentUser: O } = (0, l.cj)([f.default], () => ({ currentUser: f.default.getCurrentUser() }));
         if (null == c) return null;
-        let O = null != c.guild ? new g.ZP(c.guild) : null,
+        let j = null != c.guild ? new g.ZP(c.guild) : null,
             L = null != c.channel ? (0, m.jD)(c.channel) : null,
             y = null != c.target_application ? new _.ZP(c.target_application) : null,
             P = S || null == c.inviter ? null : new p.Z(c.inviter),
-            D = !((null != c.approximate_member_count && c.approximate_member_count > 100) || (null != O && O.hasFeature(x.oNc.COMMUNITY))) && null != P,
+            D = !((null != c.approximate_member_count && c.approximate_member_count > 100) || (null != j && j.hasFeature(x.oNc.COMMUNITY))) && null != P,
             k = null,
             w = !1;
-        if (null != O)
+        if (null != j)
             (k = null == P ? v.intl.string(v.t['3rE1Pz']) : v.intl.formatToPlainString(v.t['5u47vb'], { username: E.ZP.getFormattedName(P) })),
                 c.target_type === C.Iq.STREAM && null != c.target_user && (k = v.intl.formatToPlainString(v.t.x2L32d, { username: E.ZP.getFormattedName(c.target_user) })),
                 c.target_type === C.Iq.EMBEDDED_APPLICATION && null != c.target_application && (k = null != P ? v.intl.formatToPlainString(v.t.UW1Cam, { username: E.ZP.getFormattedName(P) }) : v.intl.string(v.t.ENSuNz)),
@@ -91,10 +91,10 @@ let S = () =>
                     null == y &&
                     (n = (0, i.jsx)(o.Vj, {
                         className: N.icon,
-                        guild: O,
+                        guild: j,
                         size: o.Vj.Sizes.SMALL
                     })),
-                (r = O.name),
+                (r = j.name),
                 null != y &&
                     ((r = y.name),
                     (s = (0, i.jsxs)('div', {
@@ -107,7 +107,7 @@ let S = () =>
                                 className: N.guildContainer,
                                 children: [
                                     (0, i.jsx)(o.Vj, {
-                                        guild: O,
+                                        guild: j,
                                         size: o.Vj.Sizes.SMALL
                                     }),
                                     (0, i.jsx)(a.Text, {
@@ -115,7 +115,7 @@ let S = () =>
                                         variant: 'text-lg/normal',
                                         color: 'header-primary',
                                         className: N.appGuildName,
-                                        children: O.name
+                                        children: j.name
                                     })
                                 ]
                             })
@@ -150,7 +150,7 @@ let S = () =>
             children: [
                 (0, i.jsx)(T, {
                     application: y,
-                    guild: O,
+                    guild: j,
                     user: D ? P : null,
                     compact: w
                 }),
@@ -164,9 +164,9 @@ let S = () =>
                               (0, i.jsxs)(o.Dx, {
                                   className: N.title,
                                   children: [
-                                      null != O
+                                      null != j
                                           ? (0, i.jsx)(d.Z, {
-                                                guild: O,
+                                                guild: j,
                                                 className: N.guildBadge,
                                                 tooltipPosition: 'left'
                                             })
@@ -186,7 +186,7 @@ let S = () =>
                           total: c.approximate_member_count,
                           flat: b
                       }),
-                Z ? (0, i.jsx)(h.R, {}) : (0, i.jsx)(o.jQ, { user: j })
+                Z ? (0, i.jsx)(h.R, {}) : (0, i.jsx)(o.jQ, { user: O })
             ]
         });
     };

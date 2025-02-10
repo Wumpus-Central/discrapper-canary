@@ -56,15 +56,15 @@ let w = function () {
                 }
             });
         }, [t]);
-    let V = l.useCallback(() => {
-        window.open(N.Z.getArticleURL(O.BhN.QUESTS_LEARN_MORE));
-    }, []);
+    let { enabled: V } = (0, I.W)({ location: y.dr.QUEST_HOME_DESKTOP }),
+        H = null !== (e = (0, a.e7)([T.Z], () => T.Z.getQuest(P.V), [])) && void 0 !== e ? e : null,
+        F = null !== H && !(0, A.zi)(H),
+        z = l.useCallback(() => {
+            !F && window.open(N.Z.getArticleURL(O.BhN.QUESTS_LEARN_MORE));
+        }, [F]);
     (0, u.Tt)({ location: j.intl.string(j.t.JALI2N) });
-    let { enabled: H } = (0, I.W)({ location: y.dr.QUEST_HOME_DESKTOP }),
-        F = null !== (e = (0, a.e7)([T.Z], () => T.Z.getQuest(P.V), [])) && void 0 !== e ? e : null,
-        z = null !== F && !(0, A.zi)(F),
-        W = z ? j.intl.format(j.t.BCBIlp, {}) : j.intl.format(j.t.lmMBf3, {}),
-        Y = z ? j.intl.format(j.t.U9FY0N, {}) : j.intl.string(j.t.oWCrBg);
+    let W = F ? j.intl.format(j.t.BCBIlp, {}) : j.intl.format(j.t.lmMBf3, {}),
+        Y = F ? j.intl.format(j.t.U9FY0N, {}) : j.intl.string(j.t.oWCrBg);
     return (0, i.jsxs)('div', {
         className: D.container,
         children: [
@@ -80,7 +80,7 @@ let w = function () {
                         description: Y,
                         button: (0, i.jsx)(m.u, {
                             text: j.intl.string(j.t.hvVgAQ),
-                            onClick: V
+                            onClick: z
                         }),
                         className: D.bannerContainer,
                         children: (0, i.jsx)('div', {
@@ -98,7 +98,7 @@ let w = function () {
                                         selectedTab: t,
                                         onTabSelect: n
                                     }),
-                                    H &&
+                                    V &&
                                         (0, i.jsx)(C.V9, {
                                             cardAlignment: C.ek.END,
                                             ctaText: j.intl.string(j.t.iEw2Nz),

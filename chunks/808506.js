@@ -49,8 +49,8 @@ var r,
     D = n(626135),
     L = n(866119),
     x = n(671999),
-    P = n(998502),
-    w = n(145597),
+    w = n(998502),
+    P = n(145597),
     M = n(372679),
     k = n(981631),
     U = n(987650);
@@ -206,18 +206,18 @@ function es(e, t) {
 }
 async function eo(e) {
     try {
-        if (P.ZP.supportsFeature(k.eRX.CREATE_HOST_ON_ATTACH)) {
+        if (w.ZP.supportsFeature(k.eRX.CREATE_HOST_ON_ATTACH)) {
             if (F.size > 0) {
                 en = 'reconcile.getOverlayURL';
                 let t = await e_();
                 (en = 'reconcile.createHostProcess'), e.createHostProcess(t, em, eh);
-            } else (en = 'reconcile.destroyHostProcess'), e.destroyHostProcess(), ef((0, w.QF)());
+            } else (en = 'reconcile.destroyHostProcess'), e.destroyHostProcess(), ef((0, P.QF)());
         } else if (j) {
             let t = await e_();
             e.createHostProcess(t, em, eh);
-        } else e.destroyHostProcess(), ef((0, w.QF)());
+        } else e.destroyHostProcess(), ef((0, P.QF)());
     } catch (t) {
-        et.error('reconcileHostProcess', t), ef((0, w.QF)());
+        et.error('reconcileHostProcess', t), ef((0, P.QF)());
         try {
             e.destroyHostProcess();
         } catch (e) {
@@ -255,7 +255,7 @@ async function eu(e) {
             et.error('Trying to detach from pid='.concat(e, ', but overlay module failed loaded'));
             return;
         }
-        e !== w.Js && ((en = 'detach.cancelAttachToProcess'), await m.pn(e), await (0, o._v)(16), (en = 'detach.disconnectProcess'), await t.disconnectProcess(e)), (en = 'detach.transitionOverlayPIDStatus'), es(e, null), (en = 'detach.reconcileHostProcess'), await eo(t);
+        e !== P.Js && ((en = 'detach.cancelAttachToProcess'), await m.pn(e), await (0, o._v)(16), (en = 'detach.disconnectProcess'), await t.disconnectProcess(e)), (en = 'detach.transitionOverlayPIDStatus'), es(e, null), (en = 'detach.reconcileHostProcess'), await eo(t);
     } catch (t) {
         et.error('Error during overlay detachment for pid '.concat(e, ':'), t), es(e, null);
     }
@@ -329,8 +329,8 @@ async function ec(e) {
 }
 let ed = er('updateIntendedOverlayPIDs', (e) => (et.info('updateIntendedOverlayPIDs', e), ec(e))),
     ef = er('clearPID', (e) => {
-        if (null == e) return (0, w.tB)(w.R2);
-        !A.ZP.isOverlayV3EnabledForPID(e) && (0, w.tB)(w.R2);
+        if (null == e) return (0, P.tB)(P.R2);
+        !A.ZP.isOverlayV3EnabledForPID(e) && (0, P.tB)(P.R2);
     });
 function e_() {
     return new Promise((e) => {
@@ -367,7 +367,7 @@ function em(e, t, n) {
             overlay_method: p.gl[p.gl.Hook],
             ...n
         };
-    (0, d.te)(w.qU, O.Z.getDefaultLayout(w.qU), 0, {
+    (0, d.te)(P.qU, O.Z.getDefaultLayout(P.qU), 0, {
         width: n.graphics_width,
         height: n.graphics_height
     }),
@@ -401,7 +401,7 @@ function ev(e) {
         case k.BmY.CONNECT:
             let t = C.default.getToken();
             if (null == t) break;
-            (0, d.te)(w.qU, O.Z.getDefaultLayout(w.qU), 0),
+            (0, d.te)(P.qU, O.Z.getDefaultLayout(P.qU), 0),
                 Promise.all([(0, T.Z)(t, e.pid), s.ZP.PersistedStore.getAllStates()]).then((t) => {
                     let [n, i] = t,
                         { pid: r, token: a } = e;
@@ -418,7 +418,7 @@ function ev(e) {
                             payloads: [n]
                         }),
                         es(r, 'READY'),
-                        (0, w.tB)(r),
+                        (0, P.tB)(r),
                         f.Z.overlayReady(r);
                 });
             break;
@@ -442,7 +442,7 @@ async function ey(e, t) {
     }
     try {
         null != i &&
-            i !== w.Js &&
+            i !== P.Js &&
             n.sendCommand(i, {
                 message: 'intercept_input',
                 intercept: !e
@@ -479,7 +479,7 @@ function eN(e) {
     let { port: t } = e;
     z = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
     let n = new URLSearchParams();
-    n.append('build_id', 'f81156fa5f618157b841ab701e9b286c04e370ae'), n.append('rpc', String(t)), n.append('rpc_auth_token', z), (i = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString()));
+    n.append('build_id', 'dba26a4c1f24b65155ffd07ddab0e4a6bdb76300'), n.append('rpc', String(t)), n.append('rpc_auth_token', z), (i = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString()));
 }
 function eC(e) {
     let { channelId: t, ring: n } = e;
@@ -504,11 +504,11 @@ function eL() {
 function ex() {
     return !0;
 }
-function eP(e) {
+function ew(e) {
     let { legacyEnabled: t } = e;
     return ep(t), !1;
 }
-function ew(e) {
+function eP(e) {
     let { userId: t, sessionId: n, applicationId: i, channelId: r, messageId: a } = e;
     setImmediate(() => {
         c.Z.join({
@@ -629,14 +629,14 @@ let ej = new eV(
                   EXPERIMENT_OVERRIDE_BUCKET: ex,
                   RUNNING_GAME_TOGGLE_OVERLAY: eU,
                   RUNNING_GAMES_CHANGE: ek,
-                  OVERLAY_SET_ENABLED: eP,
+                  OVERLAY_SET_ENABLED: ew,
                   OVERLAY_FOCUSED: eR,
                   OVERLAY_SET_INPUT_LOCKED: eb,
                   OVERLAY_ACTIVATE_REGION: eS,
                   OVERLAY_DEACTIVATE_ALL_REGIONS: eA,
                   RPC_SERVER_READY: eN,
                   OVERLAY_CALL_PRIVATE_CHANNEL: eC,
-                  OVERLAY_JOIN_GAME: ew,
+                  OVERLAY_JOIN_GAME: eP,
                   OVERLAY_CRASHED: eO,
                   OVERLAY_UPDATE_OVERLAY_METHOD: eG
               }

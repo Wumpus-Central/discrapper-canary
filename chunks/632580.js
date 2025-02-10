@@ -13,7 +13,7 @@ var i = n(512722),
     p = n(981631),
     h = n(474936);
 async function m(e) {
-    let { setPurchaseState: t, setHasAcceptedTerms: n, setIsSubmitting: i, setPurchaseError: m, hasRedirectURL: g, setHasRedirectURL: E, isGift: v, baseAnalyticsData: y, analyticsLocation: I, analyticsLocations: T, flowStartTime: b, subscriptionPlan: S, planGroup: A, trialId: N, priceOptions: C, paymentSource: R, isPrepaidPaymentPastDue: O, openInvoiceId: D, premiumSubscription: L, onNext: x, metadata: P, sku: w, skuPricePreview: M, purchaseType: k, referralCode: U, loadId: G, giftInfoOptions: B, invoicePreview: Z } = e;
+    let { setPurchaseState: t, setHasAcceptedTerms: n, setIsSubmitting: i, setPurchaseError: m, hasRedirectURL: g, setHasRedirectURL: E, isGift: v, baseAnalyticsData: y, analyticsLocation: I, analyticsLocations: T, flowStartTime: b, subscriptionPlan: S, planGroup: A, trialId: N, priceOptions: C, paymentSource: R, isPrepaidPaymentPastDue: O, openInvoiceId: D, premiumSubscription: L, onNext: x, metadata: w, sku: P, skuPricePreview: M, purchaseType: k, referralCode: U, loadId: G, giftInfoOptions: B, invoicePreview: Z } = e;
     t(_.A.PURCHASING), n(!0), i(!0), a.Z.wait(o.fw), m(null);
     try {
         let e, n, i;
@@ -30,9 +30,9 @@ async function m(e) {
         )
             return;
         if (k === p.GZQ.ONE_TIME)
-            r()(null != w, 'SKU must exist and be fetched.'),
+            r()(null != P, 'SKU must exist and be fetched.'),
                 r()(null != M, 'SKUPricePreview must exist.'),
-                (e = await (0, u.ZZ)(w.applicationId, w.id, {
+                (e = await (0, u.ZZ)(P.applicationId, P.id, {
                     expectedAmount: M.amount,
                     expectedCurrency: M.currency,
                     isGift: v,
@@ -79,7 +79,7 @@ async function m(e) {
                 currency: C.currency,
                 paymentSource: R,
                 trialId: N,
-                metadata: P,
+                metadata: w,
                 referralCode: U,
                 loadId: G
             });

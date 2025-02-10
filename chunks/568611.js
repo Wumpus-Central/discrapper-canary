@@ -127,7 +127,7 @@ void 0 === v && (v = E),
                 D = !!(m ? m(O, n) : O),
                 L = D ? y(p, c) : p,
                 x = D ? (0, o.Z)({}, S, {}, _) : S,
-                P = (0, o.Z)(
+                w = (0, o.Z)(
                     {
                         'aria-current': (D && r) || null,
                         className: L,
@@ -136,6 +136,6 @@ void 0 === v && (v = E),
                     },
                     C
                 );
-            return E !== v ? (P.ref = t || N) : (P.innerRef = N), a.createElement(g, P);
+            return E !== v ? (w.ref = t || N) : (w.innerRef = N), a.createElement(g, w);
         });
     });

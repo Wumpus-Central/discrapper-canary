@@ -208,7 +208,7 @@ let D = (e) => {
                   })
               });
     },
-    P = (e) => {
+    w = (e) => {
         let { disableAnimation: t, enlargeScaleFactor: n, enlargeWithName: a, isInteracting: s, positionRef: o, size: l, sticker: d } = e,
             p = (0, c.e7)([_.Z], () => _.Z.useReducedMotion),
             m = r.useRef(null),
@@ -254,7 +254,7 @@ let D = (e) => {
                                     (0, i.jsx)(u.animated.div, {
                                         className: I.overlayStickerWrapper,
                                         style: e,
-                                        children: (0, i.jsx)(w, {
+                                        children: (0, i.jsx)(P, {
                                             className: I.__invalid_overlaySticker,
                                             disableAnimation: t,
                                             enlargeOnInteraction: !1,
@@ -281,7 +281,7 @@ let D = (e) => {
             )
         );
     },
-    w = (e) => {
+    P = (e) => {
         let { isInteracting: t = !1, disableAnimation: n = !1, enlargeOnInteraction: a = !1, enlargeWithName: s = !0, enlargeScaleFactor: o = A, maskAsset: l = !1, size: u, sticker: c, className: d, withLoadingIndicator: f, assetData: _, fileUri: p, onError: h } = e,
             v = (0, m.n)(),
             y = (0, g.t$)(t) && !n,
@@ -306,7 +306,7 @@ let D = (e) => {
                         onError: h
                     }),
                     a &&
-                        (0, i.jsx)(P, {
+                        (0, i.jsx)(w, {
                             disableAnimation: n,
                             enlargeScaleFactor: o,
                             enlargeWithName: s,
@@ -320,4 +320,4 @@ let D = (e) => {
             ''.concat(c.id, ',').concat(u)
         );
     },
-    M = w;
+    M = P;

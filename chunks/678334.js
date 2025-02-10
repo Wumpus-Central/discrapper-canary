@@ -22,7 +22,7 @@ var i = n(200651),
     b = n(981631),
     S = n(87877);
 function A(e) {
-    let { premiumSubscription: t, setPurchaseState: n, onBack: a, onNext: A, legalTermsNodeRef: N, flashLegalTerms: C, invoiceError: R, planError: O, onPurchaseError: D, baseAnalyticsData: L, flowStartTime: x, trialId: P, planGroup: w, analyticsLocation: M, purchaseTokenAuthState: k, openInvoiceId: U, metadata: G, backButtonEligible: B, disablePurchase: Z, isTrial: F = !1 } = e,
+    let { premiumSubscription: t, setPurchaseState: n, onBack: a, onNext: A, legalTermsNodeRef: N, flashLegalTerms: C, invoiceError: R, planError: O, onPurchaseError: D, baseAnalyticsData: L, flowStartTime: x, trialId: w, planGroup: P, analyticsLocation: M, purchaseTokenAuthState: k, openInvoiceId: U, metadata: G, backButtonEligible: B, disablePurchase: Z, isTrial: F = !1 } = e,
         { selectedPlan: V, priceOptions: j, setHasAcceptedTerms: H, setPurchaseError: Y, purchaseType: W, paymentSourceId: K, paymentSources: z, selectedSkuId: q, skusById: Q, skuPricePreviewsById: X, referralCode: J, contextMetadata: $, invoicePreview: ee, inReverseTrial: et } = (0, v.JL)(),
         { isGift: en, selectedGiftStyle: ei, customGiftMessage: er, emojiConfetti: ea, soundEffect: es, giftRecipient: eo, selectedGiftingPromotionReward: el } = (0, E.wD)(),
         eu = (0, c.a5)(V),
@@ -30,7 +30,7 @@ function A(e) {
         ed = {};
     (ed.gift_style = ei), (ed.reward_sku_ids = eu && (null == el ? void 0 : el.skuId) != null ? [null == el ? void 0 : el.skuId] : []), ec === m.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && (s()(null != eo, 'Gift recipient must be set at purchase review step for these gift options.'), (ed.recipient_id = eo.id), (ed.custom_message = er), (ed.emoji_id = null == ea ? void 0 : ea.id), (ed.emoji_name = (null == ea ? void 0 : ea.id) == null ? (null == ea ? void 0 : ea.surrogates) : void 0), (ed.sound_id = null == es ? void 0 : es.soundId));
     let ef = null == V ? void 0 : V.id,
-        e_ = (0, I.sE)(P, j.paymentSourceId, ef),
+        e_ = (0, I.sE)(w, j.paymentSourceId, ef),
         { analyticsLocations: ep } = (0, l.ZP)(),
         eh = null != K ? z[K] : null,
         [em, eg] = r.useState(e_),
@@ -62,8 +62,8 @@ function A(e) {
                 analyticsLocations: ep,
                 flowStartTime: x,
                 subscriptionPlan: V,
-                planGroup: w,
-                trialId: P,
+                planGroup: P,
+                trialId: w,
                 priceOptions: j,
                 paymentSource: eh,
                 isPrepaidPaymentPastDue: eb,
@@ -114,7 +114,7 @@ function A(e) {
                       isSubmitting: em,
                       premiumSubscription: t,
                       isGift: en,
-                      planGroup: w,
+                      planGroup: P,
                       isPrepaid: eI,
                       isTrial: F,
                       makePurchase: eC,

@@ -32,9 +32,9 @@ function N(e) {
         { fontScale: S, fontScaleClass: N, saturation: C, desaturateUserColors: R, useForcedColors: O, systemForcedColors: D } = _,
         L = (0, c.e7)([m.Z], () => m.Z.confettiMode),
         x = (0, l.TH)(),
-        P = r.useMemo(() => A.has(x.pathname), [x.pathname]);
-    (0, T.Z)(window, P);
-    let w = (0, b.Z)(window, __OVERLAY__ || n),
+        w = r.useMemo(() => A.has(x.pathname), [x.pathname]);
+    (0, T.Z)(window, w);
+    let P = (0, b.Z)(window, __OVERLAY__ || n),
         M = (0, c.e7)([h.Z], () => h.Z.sidebarWidth),
         k = (0, f.bWb)().enabled,
         U = (0, p.Q3)('AppHelmet'),
@@ -47,7 +47,7 @@ function N(e) {
             y,
             {
                 overlay: __OVERLAY__,
-                'mouse-mode': w,
+                'mouse-mode': P,
                 'reduce-motion': d.enabled,
                 'full-motion': !d.enabled,
                 'is-mobile': u.tq,

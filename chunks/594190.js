@@ -40,7 +40,7 @@ var r,
     D = n(145597),
     L = n(370862),
     x = n(981631);
-function P(e, t, n) {
+function w(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -53,7 +53,7 @@ function P(e, t, n) {
         e
     );
 }
-let w = new m.Z('RunningGameStore'),
+let P = new m.Z('RunningGameStore'),
     M = 'RunningGameStore',
     k = !1,
     U = [],
@@ -216,7 +216,7 @@ function ec() {
     for (let t of H) t.pid in et || ((et[t.pid] = t), e.push(t));
     let t = [];
     for (let e of Object.values(et)) H.some((t) => t.pid === e.pid) || (t.push(e), delete et[e.pid]);
-    w.info('Running Games Changed', {
+    P.info('Running Games Changed', {
         runningGames: H,
         added: e,
         removed: t,
@@ -450,10 +450,10 @@ function eL(e) {
 function ex() {
     ey();
 }
-function eP(e) {
+function ew(e) {
     (er = e.level), (ea = e.intervalSeconds);
 }
-function ew() {
+function eP() {
     (er = null), (ea = null), en.clear();
 }
 function eM(e) {
@@ -722,12 +722,12 @@ class eV extends (r = u.ZP.Store) {
         return q.gameOverrides[ed(e)];
     }
     getOverlayEnabledForGame(e) {
-        if (e.isLauncher || e.elevated || e.sandboxed) return w.verbose('getOverlayEnabledForGame: Overlay not supported.', e), !1;
+        if (e.isLauncher || e.elevated || e.sandboxed) return P.verbose('getOverlayEnabledForGame: Overlay not supported.', e), !1;
         let t = ef(e);
         return t.enabledLegacy || t.enabledOOP;
     }
     getGameOverlayStatus(e) {
-        if (e.isLauncher || e.elevated || e.sandboxed) return w.verbose('getGameOverlayStatus: Overlay not supported.', e), null;
+        if (e.isLauncher || e.elevated || e.sandboxed) return P.verbose('getGameOverlayStatus: Overlay not supported.', e), null;
         let t = ef(e);
         return t.enabledLegacy || t.enabledOOP ? t : null;
     }
@@ -746,7 +746,7 @@ class eV extends (r = u.ZP.Store) {
         ei.add(null !== (t = (0, h.F)(e)) && void 0 !== t ? t : e);
     }
 }
-P(eV, 'displayName', 'RunningGameStore');
+w(eV, 'displayName', 'RunningGameStore');
 let ej = new eV(d.Z, {
         RUNNING_GAMES_CHANGE: eA,
         CANDIDATE_GAMES_CHANGE: eN,
@@ -762,8 +762,8 @@ let ej = new eV(d.Z, {
         GAMES_DATABASE_UPDATE: Q,
         GAME_LAUNCH_SUCCESS: eZ,
         GAME_DETECTION_WATCH_CANDIDATE_GAMES_START: ex,
-        GAME_DETECTION_DEBUGGING_START: eP,
-        GAME_DETECTION_DEBUGGING_STOP: ew,
+        GAME_DETECTION_DEBUGGING_START: ew,
+        GAME_DETECTION_DEBUGGING_STOP: eP,
         GAME_DETECTION_DEBUGGING_TICK: eM
     }),
     eH = ej;

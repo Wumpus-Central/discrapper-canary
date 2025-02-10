@@ -29,8 +29,8 @@ var i = n(200651),
     D = n(922745),
     L = n(197016),
     x = n(800965),
-    P = n(445062),
-    w = n(7188),
+    w = n(445062),
+    P = n(7188),
     M = n(199902),
     k = n(314897),
     U = n(131951),
@@ -244,7 +244,7 @@ class ea extends r.PureComponent {
             er(this, 'renderDisconnectButton', () => (0, i.jsx)(L.Z, { className: en.rightTrayIcon })),
             er(this, 'renderStopStreamButton', () => {
                 let { isSelf: e } = this.viewProperties;
-                return (0, i.jsx)(P.Z, {
+                return (0, i.jsx)(w.Z, {
                     isSelfStream: e,
                     className: en.rightTrayIcon,
                     onClick: this.handleStopStream
@@ -279,7 +279,7 @@ class ea extends r.PureComponent {
                 let n = t.find((t) => (0, I.V9)(t) === e.id);
                 return null == n || n.state === ee.jm8.ENDED
                     ? null
-                    : (0, i.jsx)(w.Z, {
+                    : (0, i.jsx)(P.Z, {
                           stream: n,
                           className: en.rightTrayIcon,
                           appContext: ee.IlC.APP

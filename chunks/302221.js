@@ -1,6 +1,6 @@
 n.d(t, {
     AZ: () => N,
-    BM: () => P,
+    BM: () => w,
     Cj: () => l,
     WY: () => b,
     YD: () => D,
@@ -240,7 +240,7 @@ function x(e) {
     let r = N(n.red, n.green, n.blue);
     return null == r ? (null == n ? void 0 : n.toHexString()) : null === (t = C(r.hue, r.saturation * i, r.lightness)) || void 0 === t ? void 0 : t.toHexString();
 }
-function P(e, t, n) {
+function w(e, t, n) {
     let i = parseInt(e.substring(1, 3), 16),
         r = parseInt(e.substring(3, 5), 16),
         a = parseInt(e.substring(5, 7), 16),

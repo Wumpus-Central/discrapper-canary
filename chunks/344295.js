@@ -26,8 +26,8 @@ var i = n(200651),
     b = n(626135),
     R = n(630388),
     Z = n(63063),
-    j = n(782605),
-    O = n(954824),
+    O = n(782605),
+    j = n(954824),
     L = n(588705),
     y = n(781428),
     P = n(423527),
@@ -37,7 +37,7 @@ var i = n(200651),
     B = n(436620),
     U = n(388032),
     M = n(814632);
-function G(e, t, n) {
+function F(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -51,13 +51,13 @@ function G(e, t, n) {
     );
 }
 c.ZP.initialize();
-let F = 'Accept Invite Page',
+let G = 'Accept Invite Page',
     z = {
         REGISTER: 'register',
         LOGIN: 'login'
     };
 async function V(e) {
-    let { invite: t } = await u.Z.resolveInvite(e, F);
+    let { invite: t } = await u.Z.resolveInvite(e, G);
     null != t && (0, m.A)(t);
 }
 class H extends r.PureComponent {
@@ -65,7 +65,7 @@ class H extends r.PureComponent {
         let { isUnderage: e, login: t, inviteKey: n } = this.props;
         if ((b.default.track(D.rMx.INVITE_VIEWED, { invite_code: n }, { flush: !0 }), (0, N.e)('invite'), !B.KO)) {
             let e = this.getInviteKey();
-            O.Z.launch('discord://' + D.Z5c.INVITE(e), () => void 0);
+            j.Z.launch('discord://' + D.Z5c.INVITE(e), () => void 0);
         }
         if (!t && e) {
             let e = this.getInviteKey(),
@@ -86,7 +86,7 @@ class H extends r.PureComponent {
             }
             u.Z.acceptInvite({
                 inviteKey: l,
-                context: this.getAcceptInviteContext(F),
+                context: this.getAcceptInviteContext(G),
                 skipOnboarding: !0,
                 callback: this.handleContinue
             });
@@ -271,28 +271,28 @@ class H extends r.PureComponent {
         var t;
         super(...e),
             (t = this),
-            G(this, 'state', { error: null }),
-            G(this, 'getAcceptInviteContext', (e) => u.Z.getInviteContext(e, this.props.invite)),
-            G(this, 'handleContinue', (e) => {
+            F(this, 'state', { error: null }),
+            F(this, 'getAcceptInviteContext', (e) => u.Z.getInviteContext(e, this.props.invite)),
+            F(this, 'handleContinue', (e) => {
                 let { invite: t, transitionTo: n } = this.props;
                 if (null != t.channel || (null == e ? void 0 : e.channel) != null) {
                     var i;
                     (null === (i = t.guild) || void 0 === i ? void 0 : i.id) != null ? n(D.Z5c.APP_WITH_INVITE_AND_GUILD_ONBOARDING(t.code)) : u.Z.transitionToInvite(null != e ? e : t, n);
                 }
             }),
-            G(this, 'handleAccept', () => {
+            F(this, 'handleAccept', () => {
                 this.setState({ error: null });
                 let e = this.getInviteKey();
                 u.Z.acceptInvite({
                     inviteKey: e,
-                    context: this.getAcceptInviteContext(F),
+                    context: this.getAcceptInviteContext(G),
                     skipOnboarding: !0,
                     callback: (t) => {
                         (0, m.A)(t), null != t.channel && u.Z.openApp(e, t.channel.id);
                     }
                 }).catch((e) => {
                     if (e instanceof h.yZ || e instanceof h.Hx) {
-                        let t = (0, j.O)(e.code);
+                        let t = (0, O.O)(e.code);
                         this.setState({
                             error: {
                                 code: e.code,
@@ -308,11 +308,11 @@ class H extends r.PureComponent {
                         });
                 });
             }),
-            G(this, 'handleDefaultTransition', () => {
+            F(this, 'handleDefaultTransition', () => {
                 let { defaultRoute: e, transitionTo: t } = this.props;
                 t(e);
             }),
-            G(this, 'renderButton', function (e) {
+            F(this, 'renderButton', function (e) {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : t.handleDefaultTransition,
                     { invite: r } = t.props,
                     l = null != r.stage_instance || null != r.guild_scheduled_event;

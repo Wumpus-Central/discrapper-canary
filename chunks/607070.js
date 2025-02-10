@@ -120,14 +120,14 @@ function x(e) {
         systemPrefersCrossfades: e.systemPrefersCrossfades
     };
 }
-function P(e) {
+function w(e) {
     if (h.prefersReducedMotion === e.prefersReducedMotion) return !1;
     h = {
         ...h,
         prefersReducedMotion: e.prefersReducedMotion
     };
 }
-function w(e) {
+function P(e) {
     if (h.systemPrefersContrast === e.systemPrefersContrast) return !1;
     h = {
         ...h,
@@ -390,10 +390,10 @@ let j = new V(o.Z, {
     ACCESSIBILITY_SET_SATURATION: N,
     ACCESSIBILITY_DESATURATE_ROLES_TOGGLE: C,
     ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED: k,
-    ACCESSIBILITY_SYSTEM_PREFERS_CONTRAST_CHANGED: w,
+    ACCESSIBILITY_SYSTEM_PREFERS_CONTRAST_CHANGED: P,
     ACCESSIBILITY_SYSTEM_PREFERS_REDUCED_MOTION_CHANGED: L,
     ACCESSIBILITY_SYSTEM_PREFERS_CROSSFADES_CHANGED: x,
-    ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION: P,
+    ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION: w,
     ACCESSIBILITY_SET_SYNC_FORCED_COLORS: A,
     ACCESSIBILITY_SET_ALWAYS_SHOW_LINK_DECORATIONS: M,
     ACCESSIBILITY_SET_ROLE_STYLE: R,

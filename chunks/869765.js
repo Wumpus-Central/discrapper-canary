@@ -195,14 +195,14 @@ function x(e) {
     let { ids: t, channelId: n } = e;
     return I(t, (e) => D(n, e));
 }
-function P(e) {
+function w(e) {
     let { message: t } = e;
     v.set(t.channel_id, t.id, {
         state: 0,
         message: t
     });
 }
-function w() {
+function P() {
     v.clear();
 }
 function M(e) {
@@ -249,10 +249,10 @@ let G = new U(o.Z, {
     MESSAGE_UPDATE: C,
     MESSAGE_DELETE: L,
     MESSAGE_DELETE_BULK: x,
-    CREATE_PENDING_REPLY: P,
+    CREATE_PENDING_REPLY: w,
     CHANNEL_DELETE: R,
     THREAD_DELETE: R,
     GUILD_DELETE: O,
-    CONNECTION_OPEN: w,
-    LOGOUT: w
+    CONNECTION_OPEN: P,
+    LOGOUT: P
 });

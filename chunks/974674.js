@@ -358,7 +358,7 @@ function x(e) {
         C = (0, h.UC)(r),
         O = null != S ? Math.ceil((C.status * h.D6 - C.status) / 2) : 0,
         x = C.size + O,
-        P = (0, c.vj)(S, a);
+        w = (0, c.vj)(S, a);
     return (0, i.jsx)(D, {
         ...e,
         ariaLabel: T,
@@ -399,7 +399,7 @@ function x(e) {
                                       (0, i.jsx)('rect', {
                                           ...e,
                                           ...N(C, S, o, l),
-                                          fill: P,
+                                          fill: w,
                                           mask: 'url(#'.concat((0, c.rs)(S, o, l), ')'),
                                           className: v.pointerEvents
                                       }),
@@ -419,12 +419,12 @@ function x(e) {
         })
     });
 }
-function P(e, t, n) {
+function w(e, t, n) {
     let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
     return 5 - (n && !i ? 0 : 0.5 * e) + 1.5 * t;
 }
-function w(e) {
-    let { fromIsMobile: t = !0, fromStatus: n, fromColor: a, isMobile: l = !1, isTyping: _ = !1, typingIndicatorRef: m, isSpeaking: g = !1, size: E, src: b, status: S, statusColor: A, statusTooltip: N = !1, statusTooltipDelay: C, statusBackdropColor: x, 'aria-hidden': w = !1, 'aria-label': M, imageClassName: k } = e,
+function P(e) {
+    let { fromIsMobile: t = !0, fromStatus: n, fromColor: a, isMobile: l = !1, isTyping: _ = !1, typingIndicatorRef: m, isSpeaking: g = !1, size: E, src: b, status: S, statusColor: A, statusTooltip: N = !1, statusTooltipDelay: C, statusBackdropColor: x, 'aria-hidden': P = !1, 'aria-label': M, imageClassName: k } = e,
         U = (0, c.vj)(S, A),
         G = r.useId(),
         B = r.useId(),
@@ -476,7 +476,7 @@ function w(e) {
     return (0, i.jsx)(D, {
         ...e,
         ariaLabel: M,
-        ariaHidden: w,
+        ariaHidden: P,
         typingOffset: $,
         specs: Q,
         children: (0, i.jsxs)('svg', {
@@ -526,7 +526,7 @@ function w(e) {
                     text: N ? (0, p.u5)(S) : null,
                     'aria-label': !1,
                     position: 'top',
-                    spacing: P(Q.status, Q.stroke, l, _),
+                    spacing: w(Q.status, Q.stroke, l, _),
                     delay: C,
                     children: (e) =>
                         (0, i.jsxs)(i.Fragment, {
@@ -586,7 +586,7 @@ let k = r.memo(function (e) {
             (_.current = p), (l.current = n), (u.current = s), (f.current = d);
         }, [n, s, d, p]),
         null != n && null != l.current && p
-            ? (0, i.jsx)(w, {
+            ? (0, i.jsx)(P, {
                   ...a,
                   status: n,
                   statusColor: d,

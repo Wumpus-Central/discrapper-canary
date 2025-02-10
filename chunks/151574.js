@@ -29,9 +29,9 @@ var i = n(200651),
     D = n(388032),
     L = n(218221);
 let x = 4,
-    P = (0, c.Mg)(d.Z.EXPRESSION_SUGGESTIONS_CONTAINER_PADDING),
-    w = (0, c.Mg)(d.Z.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_SIZE),
-    M = 2 * w + (0, c.Mg)(d.Z.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_MARGIN) + 2 * P,
+    w = (0, c.Mg)(d.Z.EXPRESSION_SUGGESTIONS_CONTAINER_PADDING),
+    P = (0, c.Mg)(d.Z.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_SIZE),
+    M = 2 * P + (0, c.Mg)(d.Z.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_MARGIN) + 2 * w,
     k = () => Promise.resolve();
 function U(e) {
     let { isFocused: t, isHidden: n, sendability: r, listIndex: a, sticker: l, onMouseOver: u, onSelectSticker: c } = e,
@@ -46,14 +46,14 @@ function U(e) {
         children: [
             (0, i.jsx)(m.ZP, {
                 mask: m.ZP.Masks.STICKER_ROUNDED_RECT,
-                width: w + x,
-                height: w + x,
+                width: P + x,
+                height: P + x,
                 className: L.mask,
                 children: (0, i.jsx)('div', { className: L.maskBackground })
             }),
             (0, i.jsx)(T.ZP, {
                 maskAsset: !0,
-                size: w,
+                size: P,
                 sticker: l,
                 className: L.__invalid_sticker
             }),
@@ -106,8 +106,8 @@ let B = r.memo(function (e) {
     let { editorRef: n, channel: a, isEditorFocused: l, onSelectSticker: u, stickerIconVisible: c = !1, submitButtonVisible: d = !1 } = e,
         m = r.useContext(h.ZP),
         [T, b] = r.useState(null),
-        [x, P] = r.useState(!1),
-        [w, k] = r.useState(null),
+        [x, w] = r.useState(!1),
+        [P, k] = r.useState(null),
         B = (0, g.Iu)((e) => null != e.activeView),
         Z = r.useRef(null),
         [F, V] = r.useState(''),
@@ -118,7 +118,7 @@ let B = r.memo(function (e) {
         { analyticsLocations: Q } = (0, p.ZP)(_.Z.EXPRESSION_SUGGESTIONS),
         { handleTextChange: X, debouncedSetTextInputValue: J } = (0, N.m)({
             setTextInputValue: V,
-            setHasDismissed: P,
+            setHasDismissed: w,
             setHasSelection: z,
             setFocusedSuggestionType: b
         });
@@ -160,7 +160,7 @@ let B = r.memo(function (e) {
             shouldRenderSuggestions: en,
             focusedSuggestionType: T,
             setFocusedSuggestionType: b,
-            setHasDismissed: P,
+            setHasDismissed: w,
             setFocusedStickerListItem: k,
             setTextInputValue: V
         }),
@@ -173,7 +173,7 @@ let B = r.memo(function (e) {
                     }),
                     t === E.eb.SENDABLE)
                 )
-                    P(!0), u(e, y.V0.EXPRESSION_SUGGESTIONS), J.cancel(), V('');
+                    w(!0), u(e, y.V0.EXPRESSION_SUGGESTIONS), J.cancel(), V('');
                 else if ((0, I.jl)(e)) {
                     let t = v.Z.getStickerPack(e.pack_id);
                     null != t &&
@@ -231,7 +231,7 @@ let B = r.memo(function (e) {
                                             return (0, i.jsx)(
                                                 U,
                                                 {
-                                                    isFocused: w === ''.concat(t),
+                                                    isFocused: P === ''.concat(t),
                                                     isHidden: eo,
                                                     sendability: r,
                                                     listIndex: t,
@@ -260,8 +260,8 @@ let B = r.memo(function (e) {
                                             style: { maxWidth: M },
                                             variant: 'text-sm/normal',
                                             children:
-                                                null != w
-                                                    ? D.intl.format(D.t['5gglIi'], { stickerName: null === (t = q[+w]) || void 0 === t ? void 0 : t.sticker.name })
+                                                null != P
+                                                    ? D.intl.format(D.t['5gglIi'], { stickerName: null === (t = q[+P]) || void 0 === t ? void 0 : t.sticker.name })
                                                     : D.intl.format(D.t['8DjNnJ'], {
                                                           upHook: (e, t) =>
                                                               (0, i.jsx)(

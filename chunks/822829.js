@@ -1,4 +1,4 @@
-e.exports = {
+i.exports = {
     availabilityIndicator: 'availabilityIndicator__40463',
     icon: 'icon__40463',
     unlockedIcon: 'unlockedIcon__40463 icon__40463',

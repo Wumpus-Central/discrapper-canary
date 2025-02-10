@@ -33,7 +33,7 @@ function h(e) {
         a(),
             (0, r.ZDy)(
                 async () => {
-                    let { default: e } = await Promise.all([n.e('48017'), n.e('51784')]).then(n.bind(n, 850085));
+                    let { default: e } = await Promise.all([n.e('59732'), n.e('25005')]).then(n.bind(n, 73620));
                     return (i) =>
                         (0, o.jsx)(e, {
                             imgURI: t,

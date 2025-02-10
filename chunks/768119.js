@@ -161,11 +161,11 @@ function x(e) {
     if (e === S) return !1;
     null != e && null == m[e] && g(e), (S = e);
 }
-function P(e) {
+function w(e) {
     let { guildId: t, channelId: n } = e;
     x(null != t ? t : n);
 }
-function w(e) {
+function P(e) {
     let { searchId: t } = e;
     x(t);
 }
@@ -298,8 +298,8 @@ let j = new V(l.Z, {
     SEARCH_ENSURE_SEARCH_STATE: N,
     SEARCH_EDITOR_STATE_CHANGE: A,
     SEARCH_SET_SHOW_BLOCKED_RESULTS: G,
-    SEARCH_SCREEN_OPEN: w,
-    CHANNEL_SELECT: P,
+    SEARCH_SCREEN_OPEN: P,
+    CHANNEL_SELECT: w,
     CHANNEL_TOGGLE_MEMBERS_SECTION: F,
     SEARCH_CLEAR_HISTORY: M,
     SEARCH_REMOVE_HISTORY: k,

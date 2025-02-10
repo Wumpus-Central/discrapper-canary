@@ -29,8 +29,8 @@ var i = n(200651),
     D = n(748492),
     L = n(701488),
     x = n(918559),
-    P = n(981631),
-    w = n(354459),
+    w = n(981631),
+    P = n(354459),
     M = n(705442),
     k = n(154681),
     U = n(60412);
@@ -62,7 +62,7 @@ function G(e) {
         })),
         X = H || null != K,
         J = (0, R.Z)(A.id),
-        $ = J && (null == q ? void 0 : q.type) !== w.fO.ACTIVITY,
+        $ = J && (null == q ? void 0 : q.type) !== P.fO.ACTIVITY,
         ee = !J && F === x.Ez.PIP,
         et = X && ($ || ee) && null == Y,
         en = (!X || et) && !W,
@@ -70,7 +70,7 @@ function G(e) {
     function er() {
         var e;
         null != Z && c.Z.selectParticipant(A.id, (0, p.oW)(Z.applicationId));
-        let t = null !== (e = A.getGuildId()) && void 0 !== e ? e : P.ME;
+        let t = null !== (e = A.getGuildId()) && void 0 !== e ? e : w.ME;
         d.Z.channelListScrollTo(t, A.id), (0, m.XU)(t, A.id), null == K && (0, f.Ou)();
     }
     function ea() {
@@ -78,7 +78,7 @@ function G(e) {
     }
     function es(e, t, n, r, a) {
         var s;
-        return en && null != Z && ((null == z ? void 0 : z.type) === w.fO.ACTIVITY || r)
+        return en && null != Z && ((null == z ? void 0 : z.type) === P.fO.ACTIVITY || r)
             ? (null === (s = Z.config) || void 0 === s ? void 0 : s.useInteractivePIP)
                 ? (0, i.jsx)(D.of, {
                       onJumpToChannel: er,

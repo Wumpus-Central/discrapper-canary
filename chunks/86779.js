@@ -52,26 +52,26 @@ let I = 'mweb_handoff_nonce',
                 },
                 [R, A]
             ),
-            j = c.K.get(I);
+            O = c.K.get(I);
         if (
             ('null' === n && null === b && Z('deep_link_failed'),
-            null != n && 'null' !== n && null == j && null === b && Z('nonce_missing'),
+            null != n && 'null' !== n && null == O && null === b && Z('nonce_missing'),
             r.useEffect(() => {
-                if (null != j) {
+                if (null != O) {
                     let e = c.K.get(C);
                     (null == e || Date.now() >= e) && (Z('nonce_expired'), T());
                 }
-            }, [j, Z]),
+            }, [O, Z]),
             r.useEffect(() => {
                 null != n &&
                     'null' !== n &&
-                    null != j &&
+                    null != O &&
                     null == b &&
                     s.tn
                         .post({
                             url: f.ANM.HANDOFF_EXCHANGE,
                             body: {
-                                key: j,
+                                key: O,
                                 handoff_token: n
                             },
                             rejectWithError: !0
@@ -93,11 +93,11 @@ let I = 'mweb_handoff_nonce',
                         .finally(() => {
                             T();
                         });
-            }, [n, j, b, A, Z]),
+            }, [n, O, b, A, Z]),
             null == A)
         )
             return null;
-        let O =
+        let j =
             null == b
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [E.intl.string(E.t.uJ1Jsb), (0, i.jsx)('br', {}), E.intl.string(E.t.GHVWAg)]
@@ -113,7 +113,7 @@ let I = 'mweb_handoff_nonce',
                   children: (0, i.jsx)(d.Text, {
                       color: 'interactive-normal',
                       variant: 'text-sm/semibold',
-                      children: O
+                      children: j
                   })
               })
             : (0, i.jsxs)('div', {
@@ -121,7 +121,7 @@ let I = 'mweb_handoff_nonce',
                   children: [
                       (0, i.jsx)(d.Text, {
                           variant: 'text-sm/semibold',
-                          children: O
+                          children: j
                       }),
                       (0, i.jsx)(d.zxk, {
                           color: d.zxk.Colors.BRAND_INVERTED,

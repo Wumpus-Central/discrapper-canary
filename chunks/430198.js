@@ -118,11 +118,11 @@ function x(e) {
     for (let e of t) null != e.guild_id && C(e.guild_id, e.id) && (n = !0);
     return n;
 }
-function P(e) {
+function w(e) {
     let { guildId: t, restrictions: n } = e;
     (0, l.uq)(n) ? T.add(t) : T.delete(t);
 }
-function w(e) {
+function P(e) {
     let { guildId: t } = e;
     T.add(t);
 }
@@ -161,6 +161,6 @@ let k = new M(s.Z, {
     CHANNEL_CREATE: L,
     CHANNEL_DELETE: L,
     CHANNEL_UPDATES: x,
-    GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS: P,
-    GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_FAILURE: w
+    GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS: w,
+    GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_FAILURE: P
 });

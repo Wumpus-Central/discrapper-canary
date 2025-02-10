@@ -5,55 +5,55 @@ var i = n(200651),
     r = n(846027),
     l = n(410575),
     c = n(2052),
-    _ = n(100527),
-    s = n(906732),
+    s = n(100527),
+    _ = n(906732),
     d = n(600164),
     u = n(313201),
     f = n(695346),
     p = n(932724),
-    b = n(716161),
-    g = n(672339),
-    m = n(898531),
-    h = n(131951),
-    E = n(594174),
-    C = n(626135),
+    g = n(716161),
+    b = n(672339),
+    h = n(898531),
+    m = n(131951),
+    C = n(594174),
+    E = n(626135),
     I = n(747545),
     T = n(981631),
     R = n(388032),
     S = n(45573);
 function O(e) {
     let { transitionState: t, videoEnabled: n, onEnable: O, onClose: A } = e,
-        v = h.Z.getCameraComponent(),
+        v = m.Z.getCameraComponent(),
         N = (0, u.Dt)(),
-        L = (0, m.Z)(),
+        L = (0, h.Z)(),
         k = f.qF.useSetting(),
-        [B, y] = a.useState((0, p.P)(E.default.getCurrentUser())),
+        [B, y] = a.useState((0, p.P)(C.default.getCurrentUser())),
         U = (0, c.O)(),
-        { analyticsLocations: D } = (0, s.ZP)(_.Z.CAMERA_PREVIEW),
-        w = a.useRef(null);
+        { analyticsLocations: w } = (0, _.ZP)(s.Z.CAMERA_PREVIEW),
+        D = a.useRef(null);
     a.useEffect(() => {
-        C.default.track(T.rMx.OPEN_MODAL, { type: 'Camera Preview Modal' });
+        E.default.track(T.rMx.OPEN_MODAL, { type: 'Camera Preview Modal' });
     }, []),
         a.useEffect(() => {
             var e;
-            null === (e = w.current) || void 0 === e || e.scrollToTop();
+            null === (e = D.current) || void 0 === e || e.scrollToTop();
         }, []);
     let P = async () => {
             await x(), r.Z.setVideoEnabled(!0), null == O || O();
         },
         x = async () => {
             try {
-                await (0, g.wG)(B, {
+                await (0, b.wG)(B, {
                     location: {
                         page: T.ZY5.PREVIEW_CAMERA_MODAL,
                         ...U.location
                     }
                 });
             } catch (e) {}
-            await A(), (0, b.Up)(B);
+            await A(), (0, g.Up)(B);
         };
-    return (0, i.jsx)(s.Gt, {
-        value: D,
+    return (0, i.jsx)(_.Gt, {
+        value: w,
         children: (0, i.jsx)(l.Z, {
             page: T.ZY5.PREVIEW_CAMERA_MODAL,
             children: (0, i.jsxs)(o.Y0X, {
@@ -64,7 +64,7 @@ function O(e) {
                 children: [
                     (0, i.jsxs)(o.hzk, {
                         className: L ? S.contentWithVideoBackgrounds : S.content,
-                        scrollerRef: w,
+                        scrollerRef: D,
                         children: [
                             (0, i.jsx)(o.X6q, {
                                 id: N,
@@ -117,7 +117,7 @@ function O(e) {
                                 type: o.XZJ.Types.INVERTED,
                                 value: k,
                                 onChange: () => {
-                                    f.qF.updateSetting(!k), C.default.track(T.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: !k });
+                                    f.qF.updateSetting(!k), E.default.track(T.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: !k });
                                 },
                                 children: (0, i.jsx)(o.Text, {
                                     variant: 'text-sm/normal',

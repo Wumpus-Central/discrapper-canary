@@ -39,7 +39,7 @@ function r() {
     }
     function _(e, t, n, i) {
         var r = Object.create((t && t.prototype instanceof y ? t : y).prototype);
-        return o(r, '_invoke', { value: O(e, n, new P(i || [])) }), r;
+        return o(r, '_invoke', { value: O(e, n, new w(i || [])) }), r;
     }
     function p(e, t, n) {
         try {
@@ -68,7 +68,7 @@ function r() {
         return this;
     });
     var S = Object.getPrototypeOf,
-        A = S && S(S(w([])));
+        A = S && S(S(P([])));
     A && A !== a && s.call(A, u) && (b = A);
     var N = (T.prototype = y.prototype = Object.create(b));
     function C(e) {
@@ -171,10 +171,10 @@ function r() {
         var t = e.completion || {};
         (t.type = 'normal'), delete t.arg, (e.completion = t);
     }
-    function P(e) {
+    function w(e) {
         (this.tryEntries = [{ tryLoc: 'root' }]), e.forEach(L, this), this.reset(!0);
     }
-    function w(e) {
+    function P(e) {
         if (e || '' === e) {
             var n = e[u];
             if (n) return n.call(e);
@@ -248,9 +248,9 @@ function r() {
                 }
             );
         }),
-        (n.values = w),
-        (P.prototype = {
-            constructor: P,
+        (n.values = P),
+        (w.prototype = {
+            constructor: w,
             reset: function (e) {
                 if (((this.prev = 0), (this.next = 0), (this.sent = this._sent = t), (this.done = !1), (this.delegate = null), (this.method = 'next'), (this.arg = t), this.tryEntries.forEach(x), !e)) for (var n in this) 't' === n.charAt(0) && s.call(this, n) && !isNaN(+n.slice(1)) && (this[n] = t);
             },
@@ -324,7 +324,7 @@ function r() {
             delegateYield: function (e, n, i) {
                 return (
                     (this.delegate = {
-                        iterator: w(e),
+                        iterator: P(e),
                         resultName: n,
                         nextLoc: i
                     }),

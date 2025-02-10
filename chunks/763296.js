@@ -65,13 +65,13 @@ function x(e) {
     let { guildId: t, soundboardSounds: n } = e;
     E.set(t, n);
 }
-function P(e) {
+function w(e) {
     let { soundId: t, guildId: n } = e,
         i = E.get(n),
         r = null == i ? void 0 : i.findIndex((e) => e.soundId === t);
     null == i || null == r || r < 0 || (i.splice(r, 1), E.set(n, [...i]));
 }
-function w() {
+function P() {
     I = 1;
 }
 function M(e) {
@@ -191,13 +191,13 @@ let Y = new H(o.Z, {
     GUILD_SOUNDBOARD_FETCH: R,
     GUILD_SOUNDBOARD_SOUND_CREATE: L,
     GUILD_SOUNDBOARD_SOUND_UPDATE: L,
-    GUILD_SOUNDBOARD_SOUND_DELETE: P,
+    GUILD_SOUNDBOARD_SOUND_DELETE: w,
     GUILD_SOUNDBOARD_SOUND_PLAY_START: k,
     GUILD_SOUNDBOARD_SOUND_PLAY_END: U,
     USER_SOUNDBOARD_SET_VOLUME: B,
     VOICE_CHANNEL_SELECT: C,
     USER_SETTINGS_PROTO_UPDATE: F,
-    SOUNDBOARD_FETCH_DEFAULT_SOUNDS: w,
+    SOUNDBOARD_FETCH_DEFAULT_SOUNDS: P,
     SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS: M,
     SOUNDBOARD_SOUNDS_RECEIVED: O,
     GUILD_DELETE: D,

@@ -196,7 +196,7 @@ var L = (function () {
         }),
         (e.prototype.parseTagName = function () {
             var e = this.offset();
-            for (this.bump(); !this.isEOF() && w(this.char()); ) this.bump();
+            for (this.bump(); !this.isEOF() && P(this.char()); ) this.bump();
             return this.message.slice(e, this.offset());
         }),
         (e.prototype.parseLiteral = function (e, t) {
@@ -229,7 +229,7 @@ var L = (function () {
             };
         }),
         (e.prototype.tryParseLeftAngleBracket = function () {
-            return this.isEOF() || 60 !== this.char() || (!this.ignoreTag && P(this.peek() || 0)) ? null : (this.bump(), '<');
+            return this.isEOF() || 60 !== this.char() || (!this.ignoreTag && w(this.peek() || 0)) ? null : (this.bump(), '<');
         }),
         (e.prototype.tryParseQuote = function (e) {
             if (this.isEOF() || 39 !== this.char()) return null;
@@ -608,10 +608,10 @@ var L = (function () {
 function x(e) {
     return (e >= 97 && e <= 122) || (e >= 65 && e <= 90);
 }
-function P(e) {
+function w(e) {
     return x(e) || 47 === e;
 }
-function w(e) {
+function P(e) {
     return 45 === e || 46 === e || (e >= 48 && e <= 57) || 95 === e || (e >= 97 && e <= 122) || (e >= 65 && e <= 90) || 183 == e || (e >= 192 && e <= 214) || (e >= 216 && e <= 246) || (e >= 248 && e <= 893) || (e >= 895 && e <= 8191) || (e >= 8204 && e <= 8205) || (e >= 8255 && e <= 8256) || (e >= 8304 && e <= 8591) || (e >= 11264 && e <= 12271) || (e >= 12289 && e <= 55295) || (e >= 63744 && e <= 64975) || (e >= 65008 && e <= 65533) || (e >= 65536 && e <= 983039);
 }
 function M(e) {

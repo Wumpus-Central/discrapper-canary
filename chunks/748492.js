@@ -1,8 +1,8 @@
 n.d(t, {
     Ds: () => M,
-    YB: () => P,
+    YB: () => w,
     of: () => k,
-    q5: () => w
+    q5: () => P
 });
 var i = n(200651);
 n(192379);
@@ -43,10 +43,10 @@ function x(e) {
         label: n ? O.intl.string(O.t['2TiKgY']) : O.intl.string(O.t.oN8bqa)
     });
 }
-function P(e) {
+function w(e) {
     var t, n;
-    let { channel: r, applicationId: a, onMouseDown: o, onMouseMove: E, onMouseLeave: I, onJumpToChannel: A, idle: O, selectedParticipant: x, embeddedActivity: P } = e,
-        w = (0, u.bp)() === C.IlC.POPOUT,
+    let { channel: r, applicationId: a, onMouseDown: o, onMouseMove: E, onMouseLeave: I, onJumpToChannel: A, idle: O, selectedParticipant: x, embeddedActivity: w } = e,
+        P = (0, u.bp)() === C.IlC.POPOUT,
         M = (0, s.e7)([b.Z], () => b.Z.isVideoEnabled()),
         k = (0, s.e7)([b.Z], () => Object.values(b.Z.getVideoDevices())[0]),
         U = !1 === (null === (t = null == k ? void 0 : k.disabled) || void 0 === t || t),
@@ -111,7 +111,7 @@ function P(e) {
                         basis: '50%',
                         align: f.Z.Align.CENTER,
                         children: [
-                            w || (0, S.R)()
+                            P || (0, S.R)()
                                 ? null
                                 : (0, i.jsx)(y.Z, {
                                       className: D.rightPipIcon,
@@ -121,7 +121,7 @@ function P(e) {
                                   }),
                             (0, i.jsx)(v.Z, {
                                 applicationId: a,
-                                location: P.location,
+                                location: w.location,
                                 className: D.rightPipIcon
                             })
                         ]
@@ -131,7 +131,7 @@ function P(e) {
         ]
     });
 }
-function w(e) {
+function P(e) {
     var t;
     let { channel: n, applicationId: r, onMouseDown: s, onMouseMove: l, onMouseLeave: u, onJumpToChannel: d, idle: f, users: _, embeddedActivity: p } = e,
         h = (0, c.Z)([r])[0];

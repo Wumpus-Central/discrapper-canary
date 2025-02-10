@@ -36,8 +36,8 @@ var i = n(200651),
     D = n(197115),
     L = n(703656),
     x = n(944486),
-    P = n(914010),
-    w = n(594174),
+    w = n(914010),
+    P = n(594174),
     M = n(626135),
     k = n(768581),
     U = n(900849),
@@ -52,14 +52,14 @@ var i = n(200651),
 let W = 32,
     K = 12,
     z = () => ({
-        page: null != (0, l.e7)([P.Z], () => P.Z.getGuildId()) ? F.ZY5.GUILD_CHANNEL : F.ZY5.DM_CHANNEL,
+        page: null != (0, l.e7)([w.Z], () => w.Z.getGuildId()) ? F.ZY5.GUILD_CHANNEL : F.ZY5.DM_CHANNEL,
         section: F.jXE.EMOJI_UPSELL_POPOUT
     }),
     q = (e) => {
         let { node: t } = e;
         (0, T.u)({
             emojiId: t.emojiId,
-            currentGuildId: P.Z.getGuildId()
+            currentGuildId: w.Z.getGuildId()
         });
         let n = (0, R.Z)(t.name);
         return (0, i.jsx)(u.V, {
@@ -247,8 +247,8 @@ let W = 32,
     J = (e) => {
         var t, n, a;
         let { node: u, sourceType: g, expressionSourceApplication: y, expressionSourceGuild: b, joinedEmojiSourceGuildRecord: S, closePopout: R, onToggleShowMoreEmojis: L, guildEmoji: x, demoMode: k = !1, nonce: U } = e,
-            W = (0, l.e7)([w.default], () => w.default.getCurrentUser()),
-            K = (0, l.e7)([P.Z], () => P.Z.getGuildId()),
+            W = (0, l.e7)([P.default], () => P.default.getCurrentUser()),
+            K = (0, l.e7)([w.Z], () => w.Z.getGuildId()),
             q = G.ZP.isPremium(W),
             X = null != K && (K === (null == b ? void 0 : b.id) || K === (null == S ? void 0 : S.id)),
             J = null != S,
@@ -288,7 +288,7 @@ let W = 32,
             },
             { disableTrack: !en }
         );
-        let eo = P.Z.getGuildId(),
+        let eo = w.Z.getGuildId(),
             el = (0, B.a)({
                 sourceType: g,
                 expressionSourceApplication: y,

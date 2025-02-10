@@ -51,7 +51,7 @@ function x(e) {
         t.start(Math.min(b, n), () => x(e));
     }
 }
-function P(e, t) {
+function w(e, t) {
     let n = A.get(e);
     if (null == n) return;
     let i = n.get(t);
@@ -70,10 +70,10 @@ function P(e, t) {
         if (null == r) return;
         let n = r.get(t);
         if (null == n) return;
-        n.start(Math.min(b, a), () => P(e, t));
+        n.start(Math.min(b, a), () => w(e, t));
     }
 }
-function w() {
+function P() {
     v.clear(), y.clear(), S.clear(), A.clear(), R.clear(), O.clear(), D.clear(), (L = !1);
 }
 function M(e) {
@@ -101,8 +101,8 @@ function G(e) {
     y.delete(e.userId), R.set(e.userId, U(e.mutualFriends)), O.set(e.userId, e.mutualFriends.length);
 }
 function B(e) {
-    var t, n, i, r, o, l, u, d, f, h, g, y, b, L, w, M, k, G, B, Z, F, V, j, H, Y, W, K;
-    let z = null !== (w = null === (t = e.guild_member_profile) || void 0 === t ? void 0 : t.guild_id) && void 0 !== w ? w : E;
+    var t, n, i, r, o, l, u, d, f, h, g, y, b, L, P, M, k, G, B, Z, F, V, j, H, Y, W, K;
+    let z = null !== (P = null === (t = e.guild_member_profile) || void 0 === t ? void 0 : t.guild_id) && void 0 !== P ? P : E;
     if ((null === (n = v.get(e.user.id)) || void 0 === n || n.delete(z), null != e.mutual_guilds)) {
         let t = {};
         e.mutual_guilds.forEach((e) => {
@@ -220,7 +220,7 @@ function B(e) {
                 let n = new Map();
                 n.set(e.guild_member_profile.guild_id, t), C.set(e.user.id, n);
             }
-            P(e.user.id, e.guild_member_profile.guild_id);
+            w(e.user.id, e.guild_member_profile.guild_id);
         }
     }
 }
@@ -308,7 +308,7 @@ function j(e) {
             let i = new Map();
             i.set(n, e), C.set(t, i);
         }
-        P(t, n);
+        w(t, n);
     }
 }
 function H(e) {
@@ -418,7 +418,7 @@ class $ extends f.Z {
             RELATIONSHIP_ADD: Q,
             RELATIONSHIP_REMOVE: Q,
             RELATIONSHIP_UPDATE: Q,
-            LOGOUT: w
+            LOGOUT: P
         }),
             g(this, 'loadCache', () => {
                 let e = this.readSnapshot($.LATEST_SNAPSHOT_VERSION);

@@ -230,8 +230,8 @@ function L(e, t, n) {
             type: 'paragraph',
             content: a(l, !0, r)
         };
-    w(i, l, u, 0, []);
-    let c = P(i);
+    P(i, l, u, 0, []);
+    let c = w(i);
     return s.set(e, c), c;
 }
 function x(e, t) {
@@ -266,7 +266,7 @@ function x(e, t) {
     }
     return o;
 }
-function P(e) {
+function w(e) {
     if (0 === (e = e.filter((e) => e.text.length > 0)).length) return e;
     let t = [e[0]];
     for (let n = 1; n < e.length; n++) {
@@ -277,7 +277,7 @@ function P(e) {
     }
     return t;
 }
-function w(e, t, n, i, a) {
+function P(e, t, n, i, a) {
     let { content: s, type: o, originalMatch: l } = n;
     switch ((r()(null != l, 'Slate: originalMatch must be set ' + JSON.stringify(n, void 0, 2)), o)) {
         case 'newline':
@@ -418,7 +418,7 @@ function k(e, t, n, i, r) {
               }))
             : (n instanceof Array || (n = [n]),
               n.forEach((n) => {
-                  i = w(e, t, n, i, r);
+                  i = P(e, t, n, i, r);
               })),
         B(t, i)
     );

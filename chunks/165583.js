@@ -33,8 +33,8 @@ var i = n(200651),
     D = n(981631),
     L = n(388032),
     x = n(535507),
-    P = n(867250);
-function w(e) {
+    w = n(867250);
+function P(e) {
     if (null == e) return null;
     let t = c()(e),
         n = t.diff(c()(), 'h');
@@ -84,7 +84,7 @@ function M(e) {
             (0, i.jsx)(p.Text, {
                 variant: 'eyebrow',
                 className: x.countdownText,
-                children: w(d)
+                children: P(d)
             })
         ]
     });
@@ -182,7 +182,7 @@ function B(e) {
             (0, i.jsx)(p.Text, {
                 variant: 'eyebrow',
                 className: x.countdownTextInSetting,
-                children: w(null == r ? void 0 : r.expires_at)
+                children: P(null == r ? void 0 : r.expires_at)
             })
         ]
     });
@@ -232,7 +232,7 @@ function F(e) {
                         children: [
                             (0, i.jsx)('img', {
                                 className: x.upsellImage,
-                                src: P,
+                                src: w,
                                 alt: L.intl.string(L.t.do7AoK)
                             }),
                             (0, i.jsx)(p.X6q, {
@@ -272,7 +272,7 @@ function F(e) {
                             children: [
                                 (0, i.jsx)('img', {
                                     className: x.upsellImage,
-                                    src: P,
+                                    src: w,
                                     alt: L.intl.string(L.t.do7AoK)
                                 }),
                                 (0, i.jsx)(p.X6q, {
@@ -305,7 +305,7 @@ function F(e) {
             );
         case O.cd.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI:
             l()(null != a, 'You must specify children for this upsell type');
-            let w = (0, _.ap)(C) ? n(537381) : n(341048);
+            let P = (0, _.ap)(C) ? n(537381) : n(341048);
             return (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsxs)('div', {
@@ -314,7 +314,7 @@ function F(e) {
                             (0, i.jsx)('img', {
                                 alt: '',
                                 className: x.upsellImage,
-                                src: w
+                                src: P
                             }),
                             (0, i.jsx)(p.X6q, {
                                 variant: 'heading-xl/bold',

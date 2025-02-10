@@ -69,11 +69,11 @@ function L(e) {
 function x() {
     E = !0;
 }
-function P(e) {
+function w(e) {
     let { entitlements: t, giftCode: n } = e;
     (E = !1), (g = t), (f = n);
 }
-function w(e) {
+function P(e) {
     let { giftCode: t } = e;
     if (0 !== t.uses || t.sku_id !== d) return !1;
     f = t.code;
@@ -146,11 +146,11 @@ let F = new Z(o.Z, {
     SKU_PURCHASE_PREVIEW_FETCH_SUCCESS: D,
     SKU_PURCHASE_PREVIEW_FETCH_FAILURE: L,
     SKU_PURCHASE_START: x,
-    SKU_PURCHASE_SUCCESS: P,
+    SKU_PURCHASE_SUCCESS: w,
     SKU_PURCHASE_FAIL: M,
     SKU_PURCHASE_SHOW_CONFIRMATION_STEP: k,
     SKU_PURCHASE_CLEAR_ERROR: U,
     SKU_PURCHASE_UPDATE_IS_GIFT: G,
     OVERLAY_SET_INPUT_LOCKED: B,
-    GIFT_CODE_CREATE: w
+    GIFT_CODE_CREATE: P
 });

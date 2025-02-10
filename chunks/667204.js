@@ -38,18 +38,18 @@ var i = n(512722),
     D = n(160062),
     L = n(456007),
     x = n(10718),
-    P = n(998698),
-    w = n(895924),
+    w = n(998698),
+    P = n(895924),
     M = n(581364),
     k = n(981631),
     U = n(959517),
     G = n(388032);
 async function B(e) {
     var t, n, i, s, l, c, d, p, h, m, g, E, v, y, b, A, N;
-    let { command: C, optionValues: R, context: x, commandTargetId: U, maxSizeCallback: G, commandOrigin: B = w.bB.CHAT, sectionName: F, interactionLifecycleOptionsFactory: j = H, source: W, clientSupportsContextlessActivityLaunch: K } = e;
+    let { command: C, optionValues: R, context: x, commandTargetId: U, maxSizeCallback: G, commandOrigin: B = P.bB.CHAT, sectionName: F, interactionLifecycleOptionsFactory: j = H, source: W, clientSupportsContextlessActivityLaunch: K } = e;
     if (null == x.channel) return;
-    let z = null !== (i = P.Z.getSource(x.channel.id)) && void 0 !== i ? i : W,
-        q = null !== (s = P.Z.getCommandOrigin(x.channel.id)) && void 0 !== s ? s : B;
+    let z = null !== (i = w.Z.getSource(x.channel.id)) && void 0 !== i ? i : W,
+        q = null !== (s = w.Z.getCommandOrigin(x.channel.id)) && void 0 !== s ? s : B;
     null == x.autocomplete &&
         a.Z.dispatch({
             type: 'APPLICATION_COMMAND_USED',
@@ -194,7 +194,7 @@ async function B(e) {
             }),
             C.execute(Q, x)
         );
-    if (C.inputType === w.iw.BUILT_IN || C.inputType === w.iw.BUILT_IN_TEXT || C.inputType === w.iw.BUILT_IN_INTEGRATION) return;
+    if (C.inputType === P.iw.BUILT_IN || C.inputType === P.iw.BUILT_IN_TEXT || C.inputType === P.iw.BUILT_IN_INTEGRATION) return;
     let $ = {
             version: C.version,
             id: null !== (A = null === (t = C.rootCommand) || void 0 === t ? void 0 : t.id) && void 0 !== A ? A : C.id,
@@ -385,26 +385,26 @@ async function H(e, t, n) {
 }
 function Y(e) {
     switch (e) {
-        case w.bB.APPLICATION_LAUNCHER:
-            return w.Vh.APP_LAUNCHER;
-        case w.bB.APP_LAUNCHER_APPLICATION_VIEW:
-            return w.Vh.APP_LAUNCHER_APPLICATION_VIEW;
-        case w.bB.IMAGE_RECS_MENU:
-            return w.Vh.IMAGE_RECS_MENU;
-        case w.bB.IMAGE_RECS_SUBMENU:
-            return w.Vh.IMAGE_RECS_SUBMENU;
-        case w.bB.ACTIVITY_INSTANCE_EMBED:
-            return w.Vh.ACTIVITY_INSTANCE_EMBED;
-        case w.bB.ACTIVITY_BOOKMARK_EMBED:
-            return w.Vh.ACTIVITY_BOOKMARK_EMBED;
-        case w.bB.MINI_SHELF:
-            return w.Vh.ACTIVITIES_MINI_SHELF;
-        case w.bB.VOICE_TILE_ACTIVITY_SUGGESTIONS:
-            return w.Vh.VC_TILE_ACTIVITY_SUGGESTION;
-        case w.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON:
-            return w.Vh.APP_DMS_ENTRY_POINT_COMMAND_BUTTON;
+        case P.bB.APPLICATION_LAUNCHER:
+            return P.Vh.APP_LAUNCHER;
+        case P.bB.APP_LAUNCHER_APPLICATION_VIEW:
+            return P.Vh.APP_LAUNCHER_APPLICATION_VIEW;
+        case P.bB.IMAGE_RECS_MENU:
+            return P.Vh.IMAGE_RECS_MENU;
+        case P.bB.IMAGE_RECS_SUBMENU:
+            return P.Vh.IMAGE_RECS_SUBMENU;
+        case P.bB.ACTIVITY_INSTANCE_EMBED:
+            return P.Vh.ACTIVITY_INSTANCE_EMBED;
+        case P.bB.ACTIVITY_BOOKMARK_EMBED:
+            return P.Vh.ACTIVITY_BOOKMARK_EMBED;
+        case P.bB.MINI_SHELF:
+            return P.Vh.ACTIVITIES_MINI_SHELF;
+        case P.bB.VOICE_TILE_ACTIVITY_SUGGESTIONS:
+            return P.Vh.VC_TILE_ACTIVITY_SUGGESTION;
+        case P.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON:
+            return P.Vh.APP_DMS_ENTRY_POINT_COMMAND_BUTTON;
         default:
-            return w.Vh.SLASH_UI;
+            return P.Vh.SLASH_UI;
     }
 }
 async function W(e, t) {

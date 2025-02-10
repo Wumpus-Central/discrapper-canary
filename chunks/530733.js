@@ -163,7 +163,7 @@ function x(e, t, n, i, r) {
             if (('string' == typeof i && (e.style.cssText = i = ''), i)) for (t in i) (n && t in n) || L(e.style, t, '');
             if (n) for (t in n) (i && n[t] === i[t]) || L(e.style, t, n[t]);
         }
-    } else if ('o' === t[0] && 'n' === t[1]) (a = t !== (t = t.replace(/Capture$/, ''))), (t = t.toLowerCase() in e ? t.toLowerCase().slice(2) : t.slice(2)), e.l || (e.l = {}), (e.l[t + a] = n), n ? i || e.addEventListener(t, a ? w : P, a) : e.removeEventListener(t, a ? w : P, a);
+    } else if ('o' === t[0] && 'n' === t[1]) (a = t !== (t = t.replace(/Capture$/, ''))), (t = t.toLowerCase() in e ? t.toLowerCase().slice(2) : t.slice(2)), e.l || (e.l = {}), (e.l[t + a] = n), n ? i || e.addEventListener(t, a ? P : w, a) : e.removeEventListener(t, a ? P : w, a);
     else if ('dangerouslySetInnerHTML' !== t) {
         if (r) t = t.replace(/xlink(H|:h)/, 'h').replace(/sName$/, 's');
         else if ('width' !== t && 'height' !== t && 'href' !== t && 'list' !== t && 'form' !== t && 'tabIndex' !== t && 'download' !== t && t in e)
@@ -174,10 +174,10 @@ function x(e, t, n, i, r) {
         'function' == typeof n || (null == n || (!1 === n && '-' !== t[4]) ? e.removeAttribute(t) : e.setAttribute(t, n));
     }
 }
-function P(e) {
+function w(e) {
     return this.l[e.type + !1](r.event ? r.event(e) : e);
 }
-function w(e) {
+function P(e) {
     return this.l[e.type + !0](r.event ? r.event(e) : e);
 }
 function M(e, t, n, i, a, s, o, l, u) {

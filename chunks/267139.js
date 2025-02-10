@@ -141,7 +141,7 @@ function x(e, t, r, a, s) {
     else if ('object' === o) throw Error('Objects are not valid as a React child (found: ' + ('[object Object]' === (t = String(e)) ? 'object with keys {' + Object.keys(e).join(', ') + '}' : t) + '). If you meant to render a collection of children, use an array instead.');
     return l;
 }
-function P(e, t, n) {
+function w(e, t, n) {
     if (null == e) return e;
     var i = [],
         r = 0;
@@ -152,7 +152,7 @@ function P(e, t, n) {
         i
     );
 }
-function w(e) {
+function P(e) {
     if (-1 === e._status) {
         var t = e._result;
         (t = t()).then(
@@ -179,9 +179,9 @@ function G() {
     throw Error('act(...) is not supported in production builds of React.');
 }
 (t.Children = {
-    map: P,
+    map: w,
     forEach: function (e, t, n) {
-        P(
+        w(
             e,
             function () {
                 t.apply(this, arguments);
@@ -192,7 +192,7 @@ function G() {
     count: function (e) {
         var t = 0;
         return (
-            P(e, function () {
+            w(e, function () {
                 t++;
             }),
             t
@@ -200,7 +200,7 @@ function G() {
     },
     toArray: function (e) {
         return (
-            P(e, function (e) {
+            w(e, function (e) {
                 return e;
             }) || []
         );
@@ -284,7 +284,7 @@ function G() {
                 _status: -1,
                 _result: e
             },
-            _init: w
+            _init: P
         };
     }),
     (t.memo = function (e, t) {

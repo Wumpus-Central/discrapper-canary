@@ -47,8 +47,8 @@ function x(e, t, n) {
         e
     );
 }
-let P = 3000,
-    w = 1000,
+let w = 3000,
+    P = 1000,
     M = '-:--',
     k = {
         friction: 14,
@@ -612,7 +612,7 @@ class K extends (r = s.PureComponent) {
     }
     updateControlsVisibility() {
         let { dragging: e, fullscreen: t } = this.state,
-            n = t ? w : P,
+            n = t ? P : w,
             i = Math.max(0, Date.now() - this._lastMove) > n;
         i !== this.state.hideControls && null == e && this.setState({ hideControls: i });
     }

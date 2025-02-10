@@ -26,20 +26,20 @@ var i = n(200651),
     b = n(58346),
     R = n(701476),
     Z = n(630724),
-    j = n(436620),
-    O = n(388032),
+    O = n(436620),
+    j = n(388032),
     L = n(471158),
     y = n(814632);
 c.ZP.initialize();
 class P extends r.PureComponent {
     componentDidMount() {
-        (0, E.e)('guildTemplate'), j.KO || v.Z.launch('discord://' + A.Z5c.GUILD_TEMPLATE(this.props.code), () => void 0);
+        (0, E.e)('guildTemplate'), O.KO || v.Z.launch('discord://' + A.Z5c.GUILD_TEMPLATE(this.props.code), () => void 0);
     }
     componentDidUpdate(e) {
         this.props.code !== e.code && m.Z.resolveGuildTemplate(this.props.code);
     }
     renderButton(e, t) {
-        return j.KO
+        return O.KO
             ? (0, i.jsx)(d.zx, {
                   className: y.marginTop40,
                   onClick: t,
@@ -61,10 +61,10 @@ class P extends r.PureComponent {
                 }),
                 (0, i.jsx)(d.Dx, {
                     className: a()(y.marginTop8, y.marginBottom8),
-                    children: O.intl.string(O.t.C7ZRNz)
+                    children: j.intl.string(j.t.C7ZRNz)
                 }),
-                (0, i.jsx)(d.DK, { children: O.intl.string(O.t.A6MwXF) }),
-                this.renderButton(O.intl.string(O.t.fIv16O), this.handleContinue)
+                (0, i.jsx)(d.DK, { children: j.intl.string(j.t.A6MwXF) }),
+                this.renderButton(j.intl.string(j.t.fIv16O), this.handleContinue)
             ]
         });
     }
@@ -73,10 +73,10 @@ class P extends r.PureComponent {
             children: [
                 (0, i.jsx)(d.Dx, {
                     className: y.marginBottom8,
-                    children: O.intl.string(O.t.csrAMD)
+                    children: j.intl.string(j.t.csrAMD)
                 }),
-                (0, i.jsx)(d.DK, { children: O.intl.string(O.t['m1+IBg']) }),
-                this.renderButton(O.intl.string(O.t.fIv16O), this.handleContinue)
+                (0, i.jsx)(d.DK, { children: j.intl.string(j.t['m1+IBg']) }),
+                this.renderButton(j.intl.string(j.t.fIv16O), this.handleContinue)
             ]
         });
     }
@@ -91,19 +91,19 @@ class P extends r.PureComponent {
     }
     renderContinue() {
         return (0, i.jsxs)(d.ZP, {
-            children: [(0, i.jsx)(d.Dx, { children: O.intl.string(O.t.fOc4go) }), this.renderButton(O.intl.string(O.t.fIv16O), this.handleContinue)]
+            children: [(0, i.jsx)(d.Dx, { children: j.intl.string(j.t.fOc4go) }), this.renderButton(j.intl.string(j.t.fIv16O), this.handleContinue)]
         });
     }
     render() {
         let { guildTemplate: e, nativeAppState: t, authenticated: n, transitionTo: r, location: l } = this.props;
-        if (null == e) return this.renderSpinner(O.intl.string(O.t.ZTNur6));
+        if (null == e) return this.renderSpinner(j.intl.string(j.t.ZTNur6));
         if (t === A.kEZ.OPEN) return this.renderAppOpened();
-        if (t === A.kEZ.OPENING) return this.renderSpinner(O.intl.string(O.t['Z+hCVV']));
+        if (t === A.kEZ.OPENING) return this.renderSpinner(j.intl.string(j.t['Z+hCVV']));
         switch (e.state) {
             case b.Rj.RESOLVING:
-                return this.renderSpinner(O.intl.string(O.t['Z+hCVV']));
+                return this.renderSpinner(j.intl.string(j.t['Z+hCVV']));
             case b.Rj.RESOLVED:
-                if (n || !j.KO) return this.renderAuthenticatedOrDownload();
+                if (n || !O.KO) return this.renderAuthenticatedOrDownload();
                 if (this.props.login)
                     return (0, i.jsx)(N.Z, {
                         guildTemplate: e,
@@ -162,13 +162,13 @@ function k(e) {
         children: [
             (0, i.jsx)(d.Dx, {
                 className: L.header,
-                children: O.intl.string(O.t.UNFvtL)
+                children: j.intl.string(j.t.UNFvtL)
             }),
             n,
             (0, i.jsx)(d.zx, {
                 className: L.createButton,
                 onClick: r,
-                children: O.intl.string(O.t.xr59t7)
+                children: j.intl.string(j.t.xr59t7)
             })
         ]
     });

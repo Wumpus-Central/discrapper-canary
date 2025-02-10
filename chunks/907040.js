@@ -34,8 +34,8 @@ var i = n(200651),
     D = n(609218),
     L = n(695346),
     x = n(984933),
-    P = n(594174),
-    w = n(626135),
+    w = n(594174),
+    P = n(626135),
     M = n(111361),
     k = n(624138),
     U = n(543241),
@@ -188,8 +188,8 @@ let ea = (e, t) => {
             { pickerIntention: l, channel: u, guildId: f, closePopout: p, emojiSize: A = q.Su.MEDIUM, hasTabWrapper: R = !1, containerContext: k = 0, includeCreateEmojiButton: er, onSelectEmoji: ea, onSelectSoundmoji: eu, containerWidth: e_, onNavigateAway: ep, persistSearch: eh, className: em, headerClassName: eg, analyticsOverride: eE = ef, searchProps: ev = {}, wrapper: ey, shouldHidePickerActions: eI = !1, messageId: eT, renderHeader: eb, listHeaderClassName: eS, categoryListClassName: eA, shouldShowSoundmojiInEmojiPicker: eN = !1 } = e,
             { onFocus: eC, onKeyDown: eR, autoFocus: eO = !0, accessory: eD } = ev,
             eL = (0, c.e7)([x.ZP], () => (null != f ? x.ZP.getDefaultChannel(f) : null), [f]),
-            [ex, eP] = r.useState(null),
-            ew = r.useRef(''),
+            [ex, ew] = r.useState(null),
+            eP = r.useRef(''),
             eM = (0, S.Iu)((e) => e.searchQuery),
             ek = r.useRef(null),
             eU = r.useRef(null),
@@ -197,7 +197,7 @@ let ea = (e, t) => {
         null == u && null != eL && (u = eL);
         let eB = null !== (a = null !== (n = null == u ? void 0 : u.getGuildId()) && void 0 !== n ? n : f) && void 0 !== a ? a : null,
             [eZ, eF] = r.useState(!1),
-            eV = P.default.getCurrentUser(),
+            eV = w.default.getCurrentUser(),
             ej = (0, M.I5)(eV);
         r.useImperativeHandle(t, () => ({ onPickerOpen: e9 }));
         let { location: eH } = (0, m.O)(),
@@ -260,7 +260,7 @@ let ea = (e, t) => {
                 selectedChannel: u,
                 closePopout: p,
                 onSelectEmoji: ea,
-                setUpsellConfigs: eP,
+                setUpsellConfigs: ew,
                 emojiSelectAnalytics: (e) => {
                     '' !== eM
                         ? (0, U.y$)({
@@ -323,7 +323,7 @@ let ea = (e, t) => {
             }, [eh]),
             r.useEffect(
                 () => (
-                    w.default.track(Q.rMx.OPEN_POPOUT, {
+                    P.default.track(Q.rMx.OPEN_POPOUT, {
                         type: null != ez ? ez : 'Emoji Picker',
                         guild_id: eB
                     }),
@@ -338,12 +338,12 @@ let ea = (e, t) => {
                 (null === (e = e5[n]) || void 0 === e ? void 0 : e[t]) == null && 0 !== t && b.kJ.setInspectedExpressionPosition(0, 0);
             }, [e5]),
             r.useEffect(() => {
-                if (('' === ew.current && '' !== eM && (0, U.PC)(eq, l), 0 === e$ && '' !== eM)) ec(eq, eM);
-                else if ('' !== eM && ew.current !== eM) {
+                if (('' === eP.current && '' !== eM && (0, U.PC)(eq, l), 0 === e$ && '' !== eM)) ec(eq, eM);
+                else if ('' !== eM && eP.current !== eM) {
                     var e;
                     ed(e$, null !== (e = null == eJ ? void 0 : eJ.locked.length) && void 0 !== e ? e : 0, eq, eM, l);
                 }
-                ew.current = eM;
+                eP.current = eM;
             }, [eM, eq, e$, eJ, l]);
         let to = null != ey ? ey : R ? 'div' : _.VqE,
             tl = null != e3;
@@ -355,14 +355,14 @@ let ea = (e, t) => {
                     emojiDescriptor: ex.emojiDescriptor,
                     pickerIntention: l,
                     analyticsLocation: eq,
-                    onClose: () => eP(null),
+                    onClose: () => ew(null),
                     channel: u,
                     containerContext: e
                 }));
         } else
             (null == ex ? void 0 : ex.type) === H.Bg.ROLE_SUBSCRIPTION
                 ? (o = (0, i.jsx)(C.Z, {
-                      onClose: () => eP(null),
+                      onClose: () => ew(null),
                       guildId: ex.guildId,
                       emojiId: ex.emojiId
                   }))
@@ -447,7 +447,7 @@ let ea = (e, t) => {
                                                         isUsingKeyboardNavigation: ts,
                                                         onEmojiSelect: tu,
                                                         onSelectSoundmoji: eu,
-                                                        setUpsellConfigs: eP,
+                                                        setUpsellConfigs: ew,
                                                         rowCount: e5.length,
                                                         rowCountBySection: e4,
                                                         sectionDescriptors: e6,

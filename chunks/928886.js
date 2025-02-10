@@ -26,8 +26,8 @@ function S(e) {
     var t;
     let { renderHeader: n, referralTrialOfferId: a, handleClose: S } = e,
         { selectedSkuId: A, step: N, selectedPlan: C, purchaseState: R, purchaseType: O, selectedSku: D } = (0, g.JL)(),
-        { isGift: L, selectedGiftStyle: x, giftRecipient: P } = (0, m.wD)(),
-        w = L && (0, h.pO)(P) && N === E.h8.CONFIRM && null != x && (null == D ? void 0 : D.productLine) !== v.POd.COLLECTIBLES,
+        { isGift: L, selectedGiftStyle: x, giftRecipient: w } = (0, m.wD)(),
+        P = L && (0, h.pO)(w) && N === E.h8.CONFIRM && null != x && (null == D ? void 0 : D.productLine) !== v.POd.COLLECTIBLES,
         M = null != n && null != N,
         k = [E.h8.SKU_SELECT, E.h8.SELECT_FREE_SKU],
         U = null != N && !k.includes(N) && null != A,
@@ -43,7 +43,7 @@ function S(e) {
         if (null == N) return;
         let e = null;
         return (
-            w
+            P
                 ? (e = (0, i.jsxs)('div', {
                       className: T.container,
                       children: [
@@ -75,10 +75,10 @@ function S(e) {
                           showTrialBadge: B,
                           showDiscountBadge: V,
                           isGift: L,
-                          giftRecipient: P,
+                          giftRecipient: w,
                           useWinterTheme: Y
                       }))),
             e
         );
-    }, [x, S, R, n, C, A, N, B, V, w, U, M, O, L, P, Y]);
+    }, [x, S, R, n, C, A, N, B, V, P, U, M, O, L, w, Y]);
 }

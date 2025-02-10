@@ -66,10 +66,10 @@ function I(e) {
 }
 function T(e) {
     if (((g = !1), I(e), !m)) {
-        if (null !== i(c)) (m = !0), P(b);
+        if (null !== i(c)) (m = !0), w(b);
         else {
             var t = i(d);
-            null !== t && w(T, t.startTime - e);
+            null !== t && P(T, t.startTime - e);
         }
     }
 }
@@ -89,7 +89,7 @@ function b(e, n) {
         if (null !== _) var l = !0;
         else {
             var u = i(d);
-            null !== u && w(T, u.startTime - n), (l = !1);
+            null !== u && P(T, u.startTime - n), (l = !1);
         }
         return l;
     } finally {
@@ -132,10 +132,10 @@ else if ('undefined' != typeof MessageChannel) {
     s = function () {
         E(D, 0);
     };
-function P(e) {
+function w(e) {
     (A = e), S || ((S = !0), s());
 }
-function w(e, n) {
+function P(e, n) {
     N = E(function () {
         e(t.unstable_now());
     }, n);
@@ -150,7 +150,7 @@ function w(e, n) {
         e.callback = null;
     }),
     (t.unstable_continueExecution = function () {
-        m || h || ((m = !0), P(b));
+        m || h || ((m = !0), w(b));
     }),
     (t.unstable_forceFrameRate = function (e) {
         0 > e || 125 < e ? console.error('forceFrameRate takes a positive int between 0 and 125, forcing frame rates higher than 125 fps is not supported') : (C = 0 < e ? Math.floor(1000 / e) : 5);
@@ -228,7 +228,7 @@ function w(e, n) {
                 expirationTime: o,
                 sortIndex: -1
             }),
-            a > s ? ((e.sortIndex = a), n(d, e), null === i(c) && e === i(d) && (g ? (v(N), (N = -1)) : (g = !0), w(T, a - s))) : ((e.sortIndex = o), n(c, e), m || h || ((m = !0), P(b))),
+            a > s ? ((e.sortIndex = a), n(d, e), null === i(c) && e === i(d) && (g ? (v(N), (N = -1)) : (g = !0), P(T, a - s))) : ((e.sortIndex = o), n(c, e), m || h || ((m = !0), w(b))),
             e
         );
     }),

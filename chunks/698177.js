@@ -30,7 +30,7 @@ let E = () => {
                 A(e.body.message);
             }
         },
-        j = async () => {
+        O = async () => {
             I(!0);
             try {
                 let { token: t } = await c.Z.verifyPhone(R + e, l);
@@ -41,7 +41,7 @@ let E = () => {
                 I(!1);
             }
         },
-        O = (0, i.jsxs)(_.ZP, {
+        j = (0, i.jsxs)(_.ZP, {
             children: [
                 (0, i.jsx)(_.Ee, { src: n(292824) }),
                 (0, i.jsxs)(_.Dx, {
@@ -58,7 +58,7 @@ let E = () => {
             ]
         });
     return C
-        ? O
+        ? j
         : (0, i.jsxs)(_.ZP, {
               children: [
                   (0, i.jsx)(_.Dx, { children: g.intl.string(g.t.o4JNrK) }),
@@ -96,7 +96,7 @@ let E = () => {
                           }),
                           (0, i.jsx)(_.zx, {
                               className: f.marginTop20,
-                              onClick: j,
+                              onClick: O,
                               submitting: x,
                               children: g.intl.string(g.t.i4jeWV)
                           })

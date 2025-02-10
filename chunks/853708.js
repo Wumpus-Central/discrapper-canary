@@ -29,10 +29,10 @@ var i = n(67867),
     D = n(409851),
     L = O('iterator'),
     x = 'URLSearchParams',
-    P = x + 'Iterator',
-    w = p.set,
+    w = x + 'Iterator',
+    P = p.set,
     M = p.getterFor(x),
-    k = p.getterFor(P),
+    k = p.getterFor(w),
     U = Object.getOwnPropertyDescriptor,
     G = function (e) {
         if (!o) return r[e];
@@ -95,8 +95,8 @@ var i = n(67867),
     },
     ed = _(
         function (e, t) {
-            w(this, {
-                type: P,
+            P(this, {
+                type: w,
                 target: M(e).entries,
                 index: 0,
                 kind: t
@@ -176,7 +176,7 @@ ef.prototype = {
 var e_ = function () {
         h(this, ep);
         var e = arguments.length > 0 ? arguments[0] : void 0,
-            t = w(this, new ef(e));
+            t = P(this, new ef(e));
         o || (this.size = t.entries.length);
     },
     ep = e_.prototype;

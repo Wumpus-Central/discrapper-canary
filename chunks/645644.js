@@ -459,7 +459,7 @@ class x {
         S(this, 'game', void 0), S(this, 'uuid', void 0), S(this, 'overlayStatus', void 0), S(this, 'overlayMethod', void 0), S(this, 'overlayMethodStats', void 0), S(this, 'notificationAnalytics', void 0), S(this, 'widgetAnalytics', void 0), S(this, 'screenAnalytics', void 0), S(this, 'uiUnlockedCount', void 0), S(this, 'uiLockedCount', void 0), S(this, 'gameFocusChangedCount', void 0), S(this, 'gameConcurrentGameCount', void 0), S(this, 'overlayMessageAckCount', void 0), S(this, 'overlayMessageCreateCount', void 0), S(this, 'gameTimer', void 0), S(this, 'gameFocusedTimer', void 0), S(this, 'unlockedTimer', void 0), S(this, 'rtcConnectionTimer', void 0), S(this, 'desktopFocusedTimer', void 0), S(this, 'desktopFocusChangedCount', void 0), S(this, 'desktopMessageAckCount', void 0), S(this, 'desktopMessageCreateCount', void 0), S(this, 'soundboardShownTimer', void 0), S(this, 'soundboardShownCount', void 0), S(this, 'soundboardKeepOpenCount', void 0), S(this, 'muteToggledCount', void 0), S(this, '_successfullyShown', void 0), (this.game = e), (this.uuid = crypto.randomUUID()), (this.overlayMethod = null), (this.overlayMethodStats = null), (this.notificationAnalytics = new O()), (this.widgetAnalytics = new D()), (this.uiUnlockedCount = 0), (this.uiLockedCount = 0), (this.gameFocusChangedCount = 0), (this.gameConcurrentGameCount = 0), (this.overlayMessageAckCount = 0), (this.overlayMessageCreateCount = 0), (this.gameTimer = r.G9.startNew()), (this.gameFocusedTimer = new r.G9()), (this.unlockedTimer = new r.G9()), (this.rtcConnectionTimer = new r.G9()), (this.desktopFocusedTimer = new r.G9()), (this.desktopFocusChangedCount = 0), (this.desktopMessageAckCount = 0), (this.desktopMessageCreateCount = 0), (this.soundboardShownTimer = new r.G9()), (this.soundboardShownCount = 0), (this.soundboardKeepOpenCount = 0), (this.muteToggledCount = 0), (this._successfullyShown = !1), (this.screenAnalytics = new L(e)), (this.overlayStatus = (0, d.b6)(e)), (this.overlayMethod = null !== (n = null === (t = this.overlayStatus) || void 0 === t ? void 0 : t.overlayMethod) && void 0 !== n ? n : null), (this.overlayMethodStats = this.buildOverlayMethodStats(this.overlayMethod, e)), x.desktopMainWindowHasFocus && this.desktopFocusedTimer.start(), W.hasConnection() && this.rtcConnectionTimer.start();
     }
 }
-function P(e) {
+function w(e) {
     for (let t of (C.verbose('handleRunningGamesChange', e), e.added)) {
         x.incrementConcurrentGameCount();
         let e = x.create(t);
@@ -467,7 +467,7 @@ function P(e) {
     }
     for (let t of e.removed) x.destroy(t), C.verbose('handleRunningGamesChange removed', t);
 }
-function w(e) {
+function P(e) {
     if (e.pid === E.Js) return;
     let t = x.getByPid(e.pid);
     if ((C.verbose('OVERLAY_SET_INPUT_LOCKED', t), null == t)) {
@@ -641,10 +641,10 @@ class z extends l.Z {
                     : {
                           OVERLAY_FOCUSED: U,
                           OVERLAY_NOTIFICATION_EVENT: M,
-                          OVERLAY_SET_INPUT_LOCKED: w,
+                          OVERLAY_SET_INPUT_LOCKED: P,
                           OVERLAY_WIDGET_CHANGED: k,
                           OVERLAY_MESSAGE_EVENT_ACTION: B,
-                          RUNNING_GAMES_CHANGE: P,
+                          RUNNING_GAMES_CHANGE: w,
                           SOUNDBOARD_SET_OVERLAY_ENABLED: G,
                           MESSAGE_ACKED: Z,
                           MESSAGE_CREATE: F,

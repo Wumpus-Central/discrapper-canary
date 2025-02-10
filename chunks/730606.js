@@ -32,7 +32,7 @@ var i = n(200651),
 let R = 300;
 function O(e) {
     let { src: t, width: n, height: i, options: r, hasMultiple: a = !1 } = e,
-        s = (0, p.Kc)('preloadMediaViewerLazyImage') ? P + w + (a ? M : 0) : 0,
+        s = (0, p.Kc)('preloadMediaViewerLazyImage') ? w + P + (a ? M : 0) : 0,
         { width: o, height: l } = (0, v.zp)(n, i, {
             vertical: s,
             horizontal: 0
@@ -85,8 +85,8 @@ function x(e) {
           })
         : (0, i.jsx)(i.Fragment, { children: t(!1) });
 }
-let P = 112,
-    w = 144,
+let w = 112,
+    P = 144,
     M = 64;
 function k(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
@@ -193,8 +193,8 @@ function U(e) {
                                                 obscured: e,
                                                 onContextMenu: U,
                                                 padding: {
-                                                    top: P,
-                                                    bottom: w + (G ? M : 0)
+                                                    top: w,
+                                                    bottom: P + (G ? M : 0)
                                                 }
                                             })
                                         })

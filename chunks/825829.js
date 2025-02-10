@@ -1,12 +1,12 @@
 n.d(t, {
     FL: () => k,
-    Mq: () => P,
+    Mq: () => w,
     NK: () => B,
     OP: () => y,
     Sw: () => F,
     ZP: () => G,
     ge: () => Z,
-    hU: () => w,
+    hU: () => P,
     nY: () => v,
     nj: () => V
 }),
@@ -152,7 +152,7 @@ function x(e, t, n) {
         channelHook: n
     });
 }
-function P(e, t) {
+function w(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : g.VqG,
         i = arguments.length > 3 ? arguments[3] : void 0,
         r = arguments.length > 4 ? arguments[4] : void 0,
@@ -209,7 +209,7 @@ function P(e, t) {
                   channelHook: y
               });
 }
-function w(e) {
+function P(e) {
     switch (e) {
         case d.i.NICKNAME:
             return E.intl.string(E.t.fkBQa2);

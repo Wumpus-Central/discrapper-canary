@@ -22,9 +22,9 @@ async function _(e, t) {
         L = c.Z.getMutualFriendsCount(e);
     m = m || null != T;
     let x = null == D && E,
-        P = null == L && g,
-        w = null != T && null == R;
-    if (!(null == O && m) && !x && !P && !w && !C) return;
+        w = null == L && g,
+        P = null != T && null == R;
+    if (!(null == O && m) && !x && !w && !P && !C) return;
     (0, o.z)(), null != t && (0, a.vM)(t);
     let M = {
             withMutualGuilds: m,

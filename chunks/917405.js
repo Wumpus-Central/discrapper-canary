@@ -1,38 +1,38 @@
 n.d(t, { Z: () => I }), n(47120);
-var l = n(200651),
-    i = n(192379),
-    s = n(120356),
-    o = n.n(s),
+var i = n(200651),
+    l = n(192379),
+    o = n(120356),
+    s = n.n(o),
     a = n(481060),
     r = n(72416),
     c = n(476221),
     u = n(873596),
     d = n(423516),
     h = n(981631),
-    N = n(38009);
-let f = {
+    f = n(38009);
+let N = {
         [h.IE4.UNKNOWN]: a.ua7.Colors.BLACK,
         [h.IE4.BAD]: a.ua7.Colors.RED,
         [h.IE4.AVERAGE]: a.ua7.Colors.YELLOW,
         [h.IE4.FINE]: a.ua7.Colors.GREEN
     },
     g = {
-        [h.QKv.CONNECTED]: N.rtcConnectionStatusConnected,
-        [h.QKv.CONNECTING]: N.rtcConnectionStatusConnecting,
-        [h.QKv.ERROR]: N.rtcConnectionStatusError
+        [h.QKv.CONNECTED]: f.rtcConnectionStatusConnected,
+        [h.QKv.CONNECTING]: f.rtcConnectionStatusConnecting,
+        [h.QKv.ERROR]: f.rtcConnectionStatusError
     },
     x = {
-        [h.IE4.FINE]: N.rtcConnectionQualityFine,
-        [h.IE4.AVERAGE]: N.rtcConnectionQualityAverage,
-        [h.IE4.BAD]: N.rtcConnectionQualityBad,
+        [h.IE4.FINE]: f.rtcConnectionQualityFine,
+        [h.IE4.AVERAGE]: f.rtcConnectionQualityAverage,
+        [h.IE4.BAD]: f.rtcConnectionQualityBad,
         [h.IE4.UNKNOWN]: null
     };
-class C extends i.PureComponent {
+class p extends l.PureComponent {
     renderPopoutTarget(e) {
         let t = this.props.channelId;
         return null == t
             ? e({})
-            : (0, l.jsx)(a.yRy, {
+            : (0, i.jsx)(a.yRy, {
                   renderPopout: this.renderPopout(t),
                   position: 'top',
                   children: e
@@ -40,18 +40,18 @@ class C extends i.PureComponent {
     }
     renderStatus() {
         let { hasVideo: e, state: t, channelId: n } = this.props,
-            { connectionStatus: i, connectionStatusText: s } = c.Z.getStatus(t, e);
+            { connectionStatus: l, connectionStatusText: o } = c.Z.getStatus(t, e);
         return this.renderPopoutTarget((e) => {
             let { onClick: t } = e;
-            return (0, l.jsx)(a.zxk, {
+            return (0, i.jsx)(a.zxk, {
                 look: a.zxk.Looks.BLANK,
                 size: a.zxk.Sizes.NONE,
                 onClick: t,
-                children: (0, l.jsx)(d.Z, {
-                    text: s,
+                children: (0, i.jsx)(d.Z, {
+                    text: o,
                     textVariant: this.props.connectionStatusTextVariant,
                     hasVideo: this.props.hasVideo,
-                    className: g[i],
+                    className: g[l],
                     hasConnectedChannel: null != n
                 })
             });
@@ -59,28 +59,28 @@ class C extends i.PureComponent {
     }
     render() {
         let e;
-        let { quality: t, smallPing: n, lastPing: i, state: s, className: r, children: c } = this.props;
+        let { quality: t, smallPing: n, lastPing: l, state: o, className: r, children: c } = this.props;
         return (
-            s === h.hes.RTC_CONNECTED &&
-                (e = (0, l.jsx)(a.ua7, {
-                    text: t !== h.IE4.UNKNOWN && null != i ? ''.concat(i.toFixed(0), ' ms') : null,
-                    color: f[t],
+            o === h.hes.RTC_CONNECTED &&
+                (e = (0, i.jsx)(a.ua7, {
+                    text: t !== h.IE4.UNKNOWN && null != l ? ''.concat(l.toFixed(0), ' ms') : null,
+                    color: N[t],
                     children: (e) =>
-                        (0, l.jsx)(p, {
+                        (0, i.jsx)(C, {
                             quality: t,
                             smallPing: n,
                             ...e
                         })
                 })),
-            (0, l.jsxs)('div', {
-                className: N.rtcConnectionStatusWrapper,
+            (0, i.jsxs)('div', {
+                className: f.rtcConnectionStatusWrapper,
                 children: [
-                    (0, l.jsxs)('div', {
-                        className: o()(N.rtcConnectionStatus, x[t], r),
+                    (0, i.jsxs)('div', {
+                        className: s()(f.rtcConnectionStatus, x[t], r),
                         children: [
                             e,
-                            (0, l.jsx)('div', {
-                                className: N.labelWrapper,
+                            (0, i.jsx)('div', {
+                                className: f.labelWrapper,
                                 children: this.renderStatus()
                             })
                         ]
@@ -95,7 +95,7 @@ class C extends i.PureComponent {
         super(...e),
             (t = 'renderPopout'),
             (n = (e) => (t) =>
-                (0, l.jsx)(u.Z, {
+                (0, i.jsx)(u.Z, {
                     ...t,
                     channelId: e
                 })),
@@ -109,12 +109,12 @@ class C extends i.PureComponent {
                 : (this[t] = n);
     }
 }
-function p(e) {
-    let { quality: t, smallPing: n, ...i } = e;
+function C(e) {
+    let { quality: t, smallPing: n, ...l } = e;
     if (!(0, a.bWb)().enabled)
-        return (0, l.jsx)(r.Z, {
-            className: o()(N.ping, { [N.smallPing]: n }),
-            foreground: N.pingForeground
+        return (0, i.jsx)(r.Z, {
+            className: s()(f.ping, { [f.smallPing]: n }),
+            foreground: f.pingForeground
         });
     {
         let e = {
@@ -123,10 +123,10 @@ function p(e) {
             [h.IE4.BAD]: a.mbS,
             [h.IE4.UNKNOWN]: a._3e
         }[t];
-        return (0, l.jsx)(e, {
-            className: o()(N.ping, { [N.smallPing]: n }),
-            ...i
+        return (0, i.jsx)(e, {
+            className: s()(f.ping, { [f.smallPing]: n }),
+            ...l
         });
     }
 }
-let I = C;
+let I = p;

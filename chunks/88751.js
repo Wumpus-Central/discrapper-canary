@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => w }), n(47120), n(724458);
+n.d(t, { ZP: () => P }), n(47120), n(724458);
 var i,
     r = n(392711),
     a = n.n(r),
@@ -114,7 +114,7 @@ function x(e) {
         (null == n || n.guild_id === t.id) && delete g[e];
     }
 }
-class P extends (i = s.ZP.Store) {
+class w extends (i = s.ZP.Store) {
     initialize() {
         this.waitFor(u.ZP, l.Z, c.Z, d.default, f.Z);
     }
@@ -137,8 +137,8 @@ class P extends (i = s.ZP.Store) {
         return null != r ? (i && null == r.moderator ? T(e, t, !0) : r) : T(e, t, i);
     }
 }
-m(P, 'displayName', 'StageChannelRoleStore');
-let w = new P(o.Z, {
+m(w, 'displayName', 'StageChannelRoleStore');
+let P = new w(o.Z, {
     CHANNEL_UPDATES: N,
     CONNECTION_OPEN: L,
     GUILD_MEMBER_REMOVE: R,

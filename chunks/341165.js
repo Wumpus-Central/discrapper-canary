@@ -73,10 +73,10 @@ function L() {
 function x() {
     T = !0;
 }
-function P() {
+function w() {
     y = !0;
 }
-function w(e) {
+function P(e) {
     var t;
     (v = {}),
         e.invites.forEach((e) => {
@@ -116,7 +116,7 @@ let U = new k(f.Z, {
     INSTANT_INVITE_REVOKE_SUCCESS: C,
     FRIEND_INVITE_REVOKE_REQUEST: L,
     FRIEND_INVITE_CREATE_REQUEST: x,
-    FRIEND_INVITES_FETCH_REQUEST: P,
-    FRIEND_INVITES_FETCH_RESPONSE: w,
+    FRIEND_INVITES_FETCH_REQUEST: w,
+    FRIEND_INVITES_FETCH_RESPONSE: P,
     INSTANT_INVITE_CLEAR: M
 });

@@ -30,13 +30,13 @@ var f = 0,
     D = [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 0],
     L = [0, 0, 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13],
     x = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 7],
-    P = [16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15],
-    w = 512,
+    w = [16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15],
+    P = 512,
     M = Array(576);
 d(M);
 var k = Array(2 * y);
 d(k);
-var U = Array(w);
+var U = Array(P);
 d(U);
 var G = Array(m - h + 1);
 d(G);
@@ -203,12 +203,12 @@ function es(e, t, n) {
 }
 function eo(e) {
     var t;
-    for (ea(e, e.dyn_ltree, e.l_desc.max_code), ea(e, e.dyn_dtree, e.d_desc.max_code), er(e, e.bl_desc), t = I - 1; t >= 3 && 0 === e.bl_tree[2 * P[t] + 1]; t--);
+    for (ea(e, e.dyn_ltree, e.l_desc.max_code), ea(e, e.dyn_dtree, e.d_desc.max_code), er(e, e.bl_desc), t = I - 1; t >= 3 && 0 === e.bl_tree[2 * w[t] + 1]; t--);
     return (e.opt_len += 3 * (t + 1) + 5 + 5 + 4), t;
 }
 function el(e, t, n, i) {
     var r;
-    for (Y(e, t - 257, 5), Y(e, n - 1, 5), Y(e, i - 4, 4), r = 0; r < i; r++) Y(e, e.bl_tree[2 * P[r] + 1], 3);
+    for (Y(e, t - 257, 5), Y(e, n - 1, 5), Y(e, i - 4, 4), r = 0; r < i; r++) Y(e, e.bl_tree[2 * w[r] + 1], 3);
     es(e, e.dyn_ltree, t - 1), es(e, e.dyn_dtree, n - 1);
 }
 function eu(e) {

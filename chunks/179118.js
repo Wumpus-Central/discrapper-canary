@@ -29,8 +29,8 @@ var i = n(200651),
     D = n(981631),
     L = n(474936),
     x = n(388032),
-    P = n(109726);
-let w = 1500;
+    w = n(109726);
+let P = 1500;
 function M(e) {
     let { giftCode: t, application: n, sku: a, subscriptionPlan: o, selectedGiftStyle: l, onClose: d, hasSentMessage: f, giftRecipient: h, giftMessageError: v, isSendingMessage: y } = e,
         [T, S] = r.useState(c.kO8.Modes.DEFAULT),
@@ -72,7 +72,7 @@ function M(e) {
             }
             setTimeout(() => {
                 S(c.kO8.Modes.DEFAULT);
-            }, w);
+            }, P);
         },
         z = () => {
             let e;
@@ -88,7 +88,7 @@ function M(e) {
                     e = x.intl.string(x.t.OpuAlJ);
             }
             return (0, i.jsxs)('div', {
-                className: P.giftCodeSection,
+                className: w.giftCodeSection,
                 children: [
                     (0, i.jsx)(c.vwX, { children: x.intl.string(x.t['/dG4ND']) }),
                     null != t &&
@@ -99,12 +99,12 @@ function M(e) {
                             text: e,
                             onCopy: (e) => K(e, t),
                             supportsCopy: A.wS,
-                            className: P.__invalid_copyInput,
+                            className: w.__invalid_copyInput,
                             buttonColor: c.Ttl.LINK,
                             buttonLook: c.iLD.LINK
                         }),
                     (0, i.jsx)('div', {
-                        className: P.subtext,
+                        className: w.subtext,
                         children: x.intl.string(x.t.QWKUpq)
                     })
                 ]
@@ -123,7 +123,7 @@ function M(e) {
             return (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)('div', {
-                        className: P.blurb,
+                        className: w.blurb,
                         children: Y()
                     }),
                     r &&
@@ -131,7 +131,7 @@ function M(e) {
                             giftCode: t,
                             onClose: d
                         }),
-                    (0, i.jsx)('div', { className: P.divider }),
+                    (0, i.jsx)('div', { className: w.divider }),
                     z()
                 ]
             });
@@ -141,32 +141,32 @@ function M(e) {
                 children: [
                     (0, i.jsx)(_.Z, {
                         user: h,
-                        className: P.giftRecipient,
+                        className: w.giftRecipient,
                         size: c.EFr.SIZE_80
                     }),
                     (0, i.jsx)(c.X6q, {
-                        className: P.giftRecipientName,
+                        className: w.giftRecipientName,
                         variant: 'heading-md/semibold',
                         children: R.ZP.getName(h)
                     }),
                     (0, i.jsxs)('div', {
-                        className: P.giftRecipientTag,
+                        className: w.giftRecipientTag,
                         children: [' ', R.ZP.getUserTag(h)]
                     }),
                     (0, i.jsx)('div', {
-                        className: P.giftSentMessage,
+                        className: w.giftSentMessage,
                         children: Y()
                     })
                 ]
             });
     return y
         ? (0, i.jsxs)('div', {
-              className: P.confirmation,
+              className: w.confirmation,
               children: [
                   null != n
                       ? (0, i.jsx)(p.Z, {
                             game: n,
-                            className: P.__invalid_icon,
+                            className: w.__invalid_icon,
                             size: p.Z.Sizes.LARGE,
                             skuId: H()
                         })
@@ -175,12 +175,12 @@ function M(e) {
               ]
           })
         : (0, i.jsxs)('div', {
-              className: s()(P.confirmation, { [P.seasonalConfirmationPadding]: j }),
+              className: s()(w.confirmation, { [w.seasonalConfirmationPadding]: j }),
               children: [
                   null != n
                       ? (0, i.jsx)(p.Z, {
                             game: n,
-                            className: P.__invalid_icon,
+                            className: w.__invalid_icon,
                             size: p.Z.Sizes.LARGE,
                             skuId: H()
                         })
@@ -188,8 +188,8 @@ function M(e) {
                   (0, i.jsx)(c.X6q, {
                       variant: 'heading-lg/semibold',
                       className: s()({
-                          [P.header]: null == l && !G,
-                          [P.headerCustomGifting]: null != l && !G
+                          [w.header]: null == l && !G,
+                          [w.headerCustomGifting]: null != l && !G
                       }),
                       children: W()
                   }),
@@ -217,16 +217,16 @@ let k = (e) => {
     if (null == O || 0 === O.length) return null;
     let D = l().sortBy(O, (e) => C.indexOf(e.id));
     return (0, i.jsxs)('div', {
-        className: P.giftRecipientSection,
+        className: w.giftRecipientSection,
         children: [
             (0, i.jsx)(c.vwX, { children: x.intl.string(x.t.MJw05e) }),
             (0, i.jsxs)('div', {
-                className: P.giftRecipient,
+                className: w.giftRecipient,
                 children: [
                     (0, i.jsx)(c.VcW, {
                         placeholder: x.intl.string(x.t.J019jY),
-                        wrapperClassName: P.giftRecipientInputWrapper,
-                        className: o ? P.giftRecipientInputError : void 0,
+                        wrapperClassName: w.giftRecipientInputWrapper,
+                        className: o ? w.giftRecipientInputError : void 0,
                         renderOptionPrefix: (e) =>
                             (null == e ? void 0 : e.value) == null
                                 ? null
@@ -247,7 +247,7 @@ let k = (e) => {
                     (0, i.jsx)(c.zxk, {
                         disabled: null == a,
                         submitting: m,
-                        className: P.sendToRecipientButton,
+                        className: w.sendToRecipientButton,
                         onClick: () => {
                             g(!0),
                                 (0, h.YD)(a, t)
@@ -263,7 +263,7 @@ let k = (e) => {
                 ]
             }),
             (0, i.jsx)('div', {
-                className: o ? P.subtextError : P.subtext,
+                className: o ? w.subtextError : w.subtext,
                 children: o ? x.intl.string(x.t.jo5Vbm) : x.intl.string(x.t['8/N3v7'])
             })
         ]

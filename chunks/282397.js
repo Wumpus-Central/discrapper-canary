@@ -60,7 +60,7 @@ function b(e) {
 }
 function S(e) {
     let { nonce: t } = e;
-    P(t);
+    w(t);
 }
 function A(e) {
     let { message: t } = e;
@@ -69,7 +69,7 @@ function A(e) {
         var n;
         let e = g[t.nonce];
         if (null == e) return !1;
-        null === (n = e.onSuccess) || void 0 === n || n.call(e), w(t.nonce);
+        null === (n = e.onSuccess) || void 0 === n || n.call(e), P(t.nonce);
     }
 }
 function N(e) {
@@ -80,7 +80,7 @@ function N(e) {
     if (null == o) return !1;
     null === (t = o.onFailure) || void 0 === t || t.call(o, i, r, a, s),
         o.data.interactionType === u.B8.APPLICATION_COMMAND
-            ? w(n)
+            ? P(n)
             : (g[n] = {
                   ...o,
                   state: _.F.FAILED,
@@ -91,15 +91,15 @@ function N(e) {
 function C(e) {
     let { channelId: t } = e;
     if (null == d.Z.getChannel(t)) return !1;
-    for (let [e, t] of Object.entries(g)) t.state === _.F.FAILED && w(e);
+    for (let [e, t] of Object.entries(g)) t.state === _.F.FAILED && P(e);
 }
 function R(e) {
     let { nonce: t } = e;
-    P(t);
+    w(t);
 }
 function O(e) {
     let { application: t, nonce: n } = e;
-    (r = t.id), P(n);
+    (r = t.id), w(n);
 }
 function D() {
     (i = void 0), (r = void 0);
@@ -117,16 +117,16 @@ function x(e) {
         s = i.find((e) => e.user_id === a && e.session_id === r);
     if (null == s || null == s.nonce) return;
     let o = y[s.nonce];
-    null == o ? ((t = v[s.nonce]), (n = g[s.nonce])) : ((t = o.messageId), (n = o.interaction)), null != n && null != t && (w(s.nonce), null != t && 'channelId' in n.data && l.Z.deleteMessage(n.data.channelId, t, !0));
+    null == o ? ((t = v[s.nonce]), (n = g[s.nonce])) : ((t = o.messageId), (n = o.interaction)), null != n && null != t && (P(s.nonce), null != t && 'channelId' in n.data && l.Z.deleteMessage(n.data.channelId, t, !0));
 }
-function P(e) {
+function w(e) {
     var t;
     if (null == e) return !1;
     let n = g[e];
     if (null == n) return !1;
-    null === (t = n.onSuccess) || void 0 === t || t.call(n), w(e);
+    null === (t = n.onSuccess) || void 0 === t || t.call(n), P(e);
 }
-function w(e) {
+function P(e) {
     if (null != y[e]) {
         delete y[e];
         return;

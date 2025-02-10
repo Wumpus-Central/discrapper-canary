@@ -1,11 +1,11 @@
 n.d(t, {
     GB: () => R,
     JI: () => A,
-    UM: () => O,
+    UM: () => j,
     V6: () => Z,
     WT: () => v,
     X7: () => N,
-    jq: () => j,
+    jq: () => O,
     mx: () => x
 }),
     n(411104);
@@ -88,7 +88,7 @@ function Z(e) {
               flat: !0
           });
 }
-function j(e) {
+function O(e) {
     let { invite: t, showBigUserIcon: n } = e,
         l = r.useMemo(() => (n ? null : C(t) && null != t.target_user ? h.ZP.getUserAvatarURL(t.target_user) : b(t) && null != t.inviter ? h.ZP.getUserAvatarURL(t.inviter) : null), [t, n]),
         a = f.intl.string(f.t['3rE1Pz']);
@@ -114,7 +114,7 @@ function j(e) {
         ]
     });
 }
-function O(e) {
+function j(e) {
     let t,
         n,
         r,

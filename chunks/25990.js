@@ -50,11 +50,11 @@ function x(e) {
     let { avatarDecoration: t } = e;
     a = t;
 }
-function P(e) {
+function w(e) {
     let { profileEffectId: t } = e;
     s = t;
 }
-function w(e) {
+function P(e) {
     let { item: t } = e;
     (null == t ? void 0 : t.type) === E.Z.PROFILE_EFFECT ? ((p = null), (h = null == t ? void 0 : t.id)) : ((h = null), (p = t));
 }
@@ -219,8 +219,8 @@ let et = new ee(y.Z, {
     USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR: D,
     USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME: L,
     USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION: x,
-    USER_SETTINGS_ACCOUNT_SET_SINGLE_TRY_IT_OUT_COLLECTIBLES_ITEM: w,
-    USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID: P,
+    USER_SETTINGS_ACCOUNT_SET_SINGLE_TRY_IT_OUT_COLLECTIBLES_ITEM: P,
+    USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID: w,
     USER_SETTINGS_ACCOUNT_SET_PENDING_BANNER: M,
     USER_SETTINGS_ACCOUNT_SET_PENDING_BIO: k,
     USER_SETTINGS_ACCOUNT_SET_PENDING_PRONOUNS: U,

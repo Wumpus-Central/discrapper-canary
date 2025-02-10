@@ -91,10 +91,10 @@ function x(e) {
         ...t
     };
 }
-function P() {
+function w() {
     d = u.QZA.SUBMITTING;
 }
-function w() {
+function P() {
     let e = l.default.getCurrentUser();
     M(),
         null != e &&
@@ -172,12 +172,12 @@ let G = new U(o.Z, {
     USER_SETTINGS_MODAL_INIT: C,
     USER_SETTINGS_MODAL_CLOSE: R,
     LOGOUT: R,
-    USER_SETTINGS_MODAL_SUBMIT: P,
+    USER_SETTINGS_MODAL_SUBMIT: w,
     USER_SETTINGS_MODAL_SUBMIT_FAILURE: k,
     USER_SETTINGS_MODAL_SET_SECTION: O,
     USER_SETTINGS_MODAL_CLEAR_SUBSECTION: D,
     USER_SETTINGS_MODAL_CLEAR_SCROLL_POSITION: L,
     USER_SETTINGS_MODAL_UPDATE_ACCOUNT: x,
     USER_SETTINGS_MODAL_SUBMIT_COMPLETE: M,
-    USER_SETTINGS_MODAL_RESET: w
+    USER_SETTINGS_MODAL_RESET: P
 });

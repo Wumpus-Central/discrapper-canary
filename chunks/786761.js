@@ -1,8 +1,8 @@
 n.d(t, {
-    Pv: () => w,
+    Pv: () => P,
     e5: () => A,
     gx: () => N,
-    lp: () => P,
+    lp: () => w,
     wi: () => C
 }),
     n(789020),
@@ -62,8 +62,8 @@ function A(e) {
         C = e.message_reference,
         R = T(e),
         D = null,
-        P = null == e ? void 0 : e.gift_info,
-        w = e.gifting_prompt,
+        w = null == e ? void 0 : e.gift_info,
+        P = e.gifting_prompt,
         M = null != e.interaction ? u.Z.createFromServer(e.interaction) : null,
         k = e.type === y.uaV.THREAD_STARTER_MESSAGE ? (null === (i = e.referenced_message) || void 0 === i ? void 0 : null === (n = i.author) || void 0 === n ? void 0 : n.id) : void 0,
         U = e.content;
@@ -111,8 +111,8 @@ function A(e) {
                   purchaseNotification: e.purchase_notification,
                   poll: null == e.poll ? void 0 : (0, o.Z)(e.poll),
                   potions: e.potions,
-                  giftInfo: null == P ? void 0 : P,
-                  giftingPrompt: w
+                  giftInfo: null == w ? void 0 : w,
+                  giftingPrompt: P
               }
     );
 }
@@ -225,7 +225,7 @@ function x(e) {
               return new c.Hx({ message: S(t) });
           });
 }
-let P = (e) => 0 === (0, l.cv)(e).length || '' !== e.content;
-function w(e) {
+let w = (e) => 0 === (0, l.cv)(e).length || '' !== e.content;
+function P(e) {
     return e.hasFlag(y.iLy.EPHEMERAL) && e.type !== y.uaV.IN_GAME_MESSAGE_NUX;
 }

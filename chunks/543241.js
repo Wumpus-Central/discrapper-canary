@@ -15,9 +15,9 @@ n.d(t, {
     kI: () => O,
     nV: () => K,
     q5: () => V,
-    to: () => w,
+    to: () => P,
     wC: () => F,
-    y$: () => P
+    y$: () => w
 }),
     n(733860),
     n(653041),
@@ -79,8 +79,8 @@ let O = function (e, t) {
                 return null === (e = p.Z.getGuild(n)) || void 0 === e ? void 0 : e.name;
             }),
             x = (0, s.e7)([m.default], () => m.default.getCurrentUser()),
-            P = (0, y.I5)(x),
-            w = (0, f.g2)({ location: 'useEmojiCategories' });
+            w = (0, y.I5)(x),
+            P = (0, f.g2)({ location: 'useEmojiCategories' });
         return i.useMemo(() => {
             let i = D.getGroupedCustomEmoji(),
                 s = h.ZP.getFlattenedGuildIds(),
@@ -113,7 +113,7 @@ let O = function (e, t) {
                             (_ = {
                                 type: b.En.GUILD,
                                 guild: e,
-                                isNitroLocked: !P && f && c === s.length,
+                                isNitroLocked: !w && f && c === s.length,
                                 emojis: s,
                                 emojisDisabled: o
                             }),
@@ -167,10 +167,10 @@ let O = function (e, t) {
                             });
                         return t;
                     },
-                    w && r ? [c] : []
+                    P && r ? [c] : []
                 )
             );
-        }, [D, t, n, e, P, O, L, g, E, _, o, S, a, w, r]);
+        }, [D, t, n, e, w, O, L, g, E, _, o, S, a, P, r]);
     },
     D = (e) => {
         let t = (null == e ? void 0 : e.getGuildId()) != null;
@@ -194,7 +194,7 @@ let O = function (e, t) {
             location: n
         });
     },
-    P = (e) => {
+    w = (e) => {
         var t, n, i;
         let { emoji: r, emojiSuggestions: s, searchQuery: l, isLocked: u, location: c, intention: d, index: f } = e,
             _ = null !== (i = r.uniqueName) && void 0 !== i ? i : r.name,
@@ -228,7 +228,7 @@ let O = function (e, t) {
                             .filter((e) => null != e)
         });
     },
-    w = (e, t) => {
+    P = (e, t) => {
         o.ZP.trackWithMetadata(S.rMx.SEARCH_RESULT_EMPTY, {
             search_type: S.aib.EMOJI,
             query: t,

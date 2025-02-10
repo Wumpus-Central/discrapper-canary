@@ -30,7 +30,7 @@ let D = 500;
 function L(e) {
     var t, n;
     let a,
-        { handleStepChange: L, trialId: x, trialFooterMessageOverride: P, reviewWarningMessage: w, planGroup: M, openInvoiceId: k, analyticsData: U, analyticsLocation: G, referralTrialOfferId: B, initialPlanId: Z, subscriptionTier: F, handleClose: V } = e,
+        { handleStepChange: L, trialId: x, trialFooterMessageOverride: w, reviewWarningMessage: P, planGroup: M, openInvoiceId: k, analyticsData: U, analyticsLocation: G, referralTrialOfferId: B, initialPlanId: Z, subscriptionTier: F, handleClose: V } = e,
         { activeSubscription: j, setUpdatedSubscription: H, contextMetadata: Y, currencies: W, paymentSourceId: K, paymentSources: z, priceOptions: q, purchaseError: Q, purchasePreviewError: X, purchaseTokenAuthState: J, selectedPlan: $, selectedSkuId: ee, setCurrency: et, setPaymentSourceId: en, setPurchaseState: ei, setPurchaseError: er, step: ea, purchaseState: es, isPremium: eo, setHasAcceptedTerms: el, purchaseType: eu, setEntitlementsGranted: ec, startedPaymentFlowWithPaymentSourcesRef: ed, invoicePreview: ef, inReverseTrial: e_ } = (0, g.JL)(),
         { isGift: ep, giftMessage: eh, giftRecipient: em, claimableRewards: eg } = (0, m.wD)();
     s()(null != ea, 'Step should be set');
@@ -63,8 +63,8 @@ function L(e) {
         eO = r.useRef(null),
         [eD, eL] = r.useState(null),
         ex = !ep && null != eb && null != ee && C.nG[eb.trial_id].skus.includes(ee),
-        eP = null == eS ? void 0 : null === (t = eS.discount) || void 0 === t ? void 0 : t.plan_ids,
-        ew = !ep && null != eS && null != eP && null != $ && eP.includes($.id),
+        ew = null == eS ? void 0 : null === (t = eS.discount) || void 0 === t ? void 0 : t.plan_ids,
+        eP = !ep && null != eS && null != ew && null != $ && ew.includes($.id),
         eM = ep && (0, h.pO)(em),
         ek = null == Z && null == F && eu === R.GZ.SUBSCRIPTION,
         eU = (0, T.Kp)({
@@ -112,12 +112,12 @@ function L(e) {
                         legalTermsNodeRef: eO,
                         hasLegalTermsFlash: ev,
                         trialId: eT,
-                        trialFooterMessageOverride: P,
-                        reviewWarningMessage: w,
+                        trialFooterMessageOverride: w,
+                        reviewWarningMessage: P,
                         purchaseState: es,
                         referralTrialOfferId: B,
-                        isTrial: ex || (null != x && null != P),
-                        isDiscount: ew,
+                        isTrial: ex || (null != x && null != w),
+                        isDiscount: eP,
                         handleClose: V
                     })))
                   : (s()(null != $, 'Expected plan to be selected'),

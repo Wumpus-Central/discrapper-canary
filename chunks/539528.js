@@ -4,7 +4,7 @@ n.d(t, {
     PP: () => M,
     lX: () => N,
     ob: () => p,
-    q_: () => P
+    q_: () => w
 });
 var i = n(910974),
     r = n(634450),
@@ -160,12 +160,12 @@ function N(e) {
     function x(e) {
         T(e) || M(R(e.state));
     }
-    function P() {
+    function w() {
         M(R(A()));
     }
-    var w = !1;
+    var P = !1;
     function M(e) {
-        if (w) (w = !1), L();
+        if (P) (P = !1), L();
         else {
             var t = 'POP';
             D.confirmTransitionTo(e, t, h, function (n) {
@@ -185,7 +185,7 @@ function N(e) {
         var i = G.indexOf(e.key);
         -1 === i && (i = 0);
         var r = n - i;
-        r && ((w = !0), V(r));
+        r && ((P = !0), V(r));
     }
     var U = R(A()),
         G = [U.key];
@@ -271,7 +271,7 @@ function N(e) {
     }
     var Y = 0;
     function W(e) {
-        1 === (Y += e) && 1 === e ? (window.addEventListener(b, x), r && window.addEventListener(S, P)) : 0 === Y && (window.removeEventListener(b, x), r && window.removeEventListener(S, P));
+        1 === (Y += e) && 1 === e ? (window.addEventListener(b, x), r && window.addEventListener(S, w)) : 0 === Y && (window.removeEventListener(b, x), r && window.removeEventListener(S, w));
     }
     var K = !1;
     function z(e) {
@@ -342,7 +342,7 @@ function L(e) {
 function x(e) {
     window.location.replace(O(window.location.href) + '#' + e);
 }
-function P(e) {
+function w(e) {
     void 0 === e && (e = {}), g || (0, s.Z)(!1);
     var t = window.history;
     I();
@@ -365,17 +365,17 @@ function P(e) {
     }
     var A = !1,
         N = null;
-    function P(e, t) {
+    function w(e, t) {
         return e.pathname === t.pathname && e.search === t.search && e.hash === t.hash;
     }
-    function w() {
+    function P() {
         var e = D(),
             t = v(e);
         if (e !== t) x(t);
         else {
             var n = T(),
                 i = J.location;
-            if ((!A && P(i, n)) || N === _(n)) return;
+            if ((!A && w(i, n)) || N === _(n)) return;
             (N = null), M(n);
         }
     }
@@ -463,7 +463,7 @@ function P(e) {
     }
     var K = 0;
     function z(e) {
-        1 === (K += e) && 1 === e ? window.addEventListener(C, w) : 0 === K && window.removeEventListener(C, w);
+        1 === (K += e) && 1 === e ? window.addEventListener(C, P) : 0 === K && window.removeEventListener(C, P);
     }
     var q = !1;
     function Q(e) {
@@ -500,7 +500,7 @@ function P(e) {
     };
     return J;
 }
-function w(e, t, n) {
+function P(e, t, n) {
     return Math.min(Math.max(e, t), n);
 }
 function M(e) {
@@ -520,7 +520,7 @@ function M(e) {
     function f() {
         return Math.random().toString(36).substr(2, u);
     }
-    var h = w(o, 0, a.length - 1),
+    var h = P(o, 0, a.length - 1),
         g = a.map(function (e) {
             return 'string' == typeof e ? p(e, void 0, f()) : p(e, void 0, e.key || f());
         }),
@@ -556,7 +556,7 @@ function M(e) {
         });
     }
     function I(e) {
-        var t = w(C.index + e, 0, C.entries.length - 1),
+        var t = P(C.index + e, 0, C.entries.length - 1),
             i = 'POP',
             r = C.entries[t];
         c.confirmTransitionTo(r, i, n, function (e) {

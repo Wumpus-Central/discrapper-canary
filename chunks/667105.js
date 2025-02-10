@@ -1,10 +1,10 @@
 n.d(t, {
     DH: () => M,
-    Ks: () => w,
+    Ks: () => P,
     Ws: () => U,
     g2: () => x,
     hf: () => D,
-    k3: () => P,
+    k3: () => w,
     qN: () => k,
     tP: () => L
 }),
@@ -105,7 +105,7 @@ let x = (e) => {
             }
         };
     },
-    P = (e, t) => {
+    w = (e, t) => {
         let { message: n, xboxURL: r } = (0, g.KX)(),
             a = (0, p.O5)(),
             s = (n) => {
@@ -123,7 +123,7 @@ let x = (e) => {
             children: n
         });
     };
-function w(e) {
+function P(e) {
     var t;
     let { quest: n, progressState: a, isCollectibleQuest: s, location: o, questContentPosition: c, questContentRowIndex: f, inGiftInventory: _, isVideoQuest: E } = e,
         v = D({
@@ -139,7 +139,7 @@ function w(e) {
         x = r.useCallback(() => {
             (0, d.$)();
         }, []),
-        P = r.useCallback(() => {
+        w = r.useCallback(() => {
             (0, u.mK)({
                 openInLayer: !1,
                 tab: R.AW.ORBS,
@@ -147,7 +147,7 @@ function w(e) {
                 analyticsSource: l.Z.QUEST_HOME_PAGE
             });
         }, []),
-        w = null === (t = (0, h.WD)()) || void 0 === t ? void 0 : t.getId(),
+        P = null === (t = (0, h.WD)()) || void 0 === t ? void 0 : t.getId(),
         M = n.id === C.V;
     return r.useMemo(() => {
         if (null != L)
@@ -188,7 +188,7 @@ function w(e) {
                                     ctaContent: p.jZ.CONNECT_CONSOLE,
                                     position: c,
                                     rowIndex: f,
-                                    impressionId: w
+                                    impressionId: P
                                 }
                             )
                     };
@@ -242,14 +242,14 @@ function w(e) {
                     return {
                         tooltipText: null,
                         text: O.intl.string(O.t.iEw2Nz),
-                        onClick: P
+                        onClick: w
                     };
                 return {
                     ...r,
                     text: O.intl.string(O.t.bAGFz8)
                 };
         }
-    }, [L, a, E, I, _, v, s, n, o, c, f, w, b, x, M, P]);
+    }, [L, a, E, I, _, v, s, n, o, c, f, P, b, x, M, w]);
 }
 function M() {
     return (0, s.e7)([E.Z], () => {

@@ -328,21 +328,21 @@ var O = function (e, t, n, i) {
 let D = !1,
     L,
     x = {};
-function P() {
+function w() {
     if (!D) return;
     let e = null == i ? void 0 : i.getStyle();
-    null == e || O(e, x) ? null != L && cancelAnimationFrame(L) : ((x = e), null == i || i.invalidate()), (L = requestAnimationFrame(P));
+    null == e || O(e, x) ? null != L && cancelAnimationFrame(L) : ((x = e), null == i || i.invalidate()), (L = requestAnimationFrame(w));
 }
-let w = !1,
+let P = !1,
     M = {
         get ringsEnabled() {
-            return w;
+            return P;
         },
         setRingsEnabled(e) {
-            (w = e), null == i || i.invalidate();
+            (P = e), null == i || i.invalidate();
         },
         enableAnimationTracking() {
-            (D = !0), (L = requestAnimationFrame(P));
+            (D = !0), (L = requestAnimationFrame(w));
         },
         disableAnimationTracking() {
             (D = !1), null != L && cancelAnimationFrame(L);

@@ -4,7 +4,7 @@ n.d(t, {
     Pq: () => T,
     RJ: () => D,
     Sd: () => M,
-    XW: () => w,
+    XW: () => P,
     el: () => S,
     fP: () => N,
     fQ: () => A,
@@ -201,7 +201,7 @@ function x() {
     let e = L();
     return (0, r.Wu)([g.Z], () => e.map((e) => g.Z.getStickerById(e)).filter((e) => void 0 !== e), [e]);
 }
-let P = (e) => {
+let w = (e) => {
         let t = D(),
             { packs: n, frequentlyUsedStickers: a } = (0, r.cj)(
                 [g.Z, m.Z],
@@ -247,7 +247,7 @@ let P = (e) => {
             ];
         }, [n, t, a, o, s, e]);
     },
-    w = function (e) {
+    P = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = (0, r.e7)([g.Z], () => g.Z.getStickerById(e.id)),
             [a, s] = i.useState(!0),
@@ -281,6 +281,6 @@ let P = (e) => {
             : [null != n ? n : null, o];
     },
     M = (e) => {
-        let t = P(e);
+        let t = w(e);
         return i.useMemo(() => t.filter((e) => e.type === E.Ih.EMPTY_GUILD_UPSELL || e.stickers.length > 0, []), [t]);
     };

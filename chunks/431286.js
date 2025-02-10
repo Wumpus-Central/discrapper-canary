@@ -10,15 +10,15 @@ var l = n(200651),
     c = n(921944),
     E = n(642145);
 function _() {
-    let e = [a.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL],
-        [t, _] = (0, s.US)(e, void 0, !0),
-        [C, h] = i.useState(!1),
-        { enabled: I } = (0, d.W)({ location: 'vc-announcement-modal' });
+    let { enabled: e } = (0, d.W)({ location: 'vc-announcement-modal' }),
+        t = e ? [a.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL] : [],
+        [_, C] = (0, s.US)(t, void 0, !0),
+        [h, I] = i.useState(!1);
     i.useEffect(() => {
-        I &&
-            t === a.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL &&
-            !C &&
-            (h(!0),
+        e &&
+            _ === a.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL &&
+            !h &&
+            (I(!0),
             (0, r.ZD)(
                 async () => {
                     let { AnnouncementModal: e } = await n.e('3073').then(n.bind(n, 520156));
@@ -35,9 +35,9 @@ function _() {
                 },
                 {
                     onCloseCallback: () => {
-                        _(c.L.UNKNOWN), (0, u.U9)();
+                        C(c.L.UNKNOWN), (0, u.U9)();
                     }
                 }
             ));
-    }, [t, I, C, _]);
+    }, [_, e, h, C]);
 }

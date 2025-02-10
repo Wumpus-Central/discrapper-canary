@@ -219,12 +219,12 @@ function L(e, t, n) {
 function x(e, t, n) {
     return O(t, e, n);
 }
-function P(e, n) {
+function w(e, n) {
     return e.sort(function (e, i) {
         return t.compareBuild(e, i, n);
     });
 }
-function w(e, n) {
+function P(e, n) {
     return e.sort(function (e, i) {
         return t.compareBuild(i, e, n);
     });
@@ -286,7 +286,7 @@ function V(e, t) {
     if (!(this instanceof V)) return new V(e, t);
     i('comparator', e, t), (this.options = t), (this.loose = !!t.loose), this.parse(e), this.semver === j ? (this.value = '') : (this.value = this.operator + this.semver.version), i('comp', this);
 }
-(t.rcompareIdentifiers = A), (t.major = N), (t.minor = C), (t.patch = R), (t.compare = O), (t.compareLoose = D), (t.compareBuild = L), (t.rcompare = x), (t.sort = P), (t.rsort = w), (t.gt = M), (t.lt = k), (t.eq = U), (t.neq = G), (t.gte = B), (t.lte = Z), (t.cmp = F), (t.Comparator = V);
+(t.rcompareIdentifiers = A), (t.major = N), (t.minor = C), (t.patch = R), (t.compare = O), (t.compareLoose = D), (t.compareBuild = L), (t.rcompare = x), (t.sort = w), (t.rsort = P), (t.gt = M), (t.lt = k), (t.eq = U), (t.neq = G), (t.gte = B), (t.lte = Z), (t.cmp = F), (t.Comparator = V);
 var j = {};
 function H(e, t) {
     if (

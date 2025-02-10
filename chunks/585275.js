@@ -30,8 +30,8 @@ let A = 300000,
     L = 512,
     x = 288;
 (D.width = L), (D.height = x);
-let P = D.getContext('2d');
-function w() {
+let w = D.getContext('2d');
+function P() {
     R.stop(), null != i && (c.Z.removeSink(i, C), (i = null));
 }
 let M = o().debounce((e, t, n, i) => {
@@ -57,7 +57,7 @@ function k(e) {
     return (
         null == a || a.putImageData(s, 0, 0),
         new Promise((t) => {
-            null == P || P.drawImage(r, 0, 0, e.width, e.height, 0, 0, n, i), t();
+            null == w || w.drawImage(r, 0, 0, e.width, e.height, 0, 0, n, i), t();
         })
     );
 }
@@ -155,12 +155,12 @@ function Z(e, t) {
 }
 let F = {
     init() {
-        _.Z.subscribe('CONNECTION_OPEN', w),
-            _.Z.subscribe('LOGOUT', w),
-            _.Z.subscribe('STREAM_DELETE', w),
+        _.Z.subscribe('CONNECTION_OPEN', P),
+            _.Z.subscribe('LOGOUT', P),
+            _.Z.subscribe('STREAM_DELETE', P),
             _.Z.subscribe('RTC_CONNECTION_VIDEO', (e) => {
                 let { guildId: t, channelId: n, userId: r, streamId: a, context: s } = e;
-                null == a || s !== S.Yn.STREAM || r !== E.default.getId() || __OVERLAY__ || (w(), (i = a), M(a, t, n, r));
+                null == a || s !== S.Yn.STREAM || r !== E.default.getId() || __OVERLAY__ || (P(), (i = a), M(a, t, n, r));
             }),
             _.Z.subscribe('MEDIA_ENGINE_VIDEO_STATE_CHANGED', (e) => {
                 let { videoState: t } = e;

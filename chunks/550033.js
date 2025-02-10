@@ -152,10 +152,10 @@ function x(e, t) {
     for (var n = 0, i = Array(t); n < t; n++) i[n] = e[n];
     return i;
 }
-var P = function (e, t) {
+var w = function (e, t) {
     return p.useMemoOne(e, t || [{}]);
 };
-function w(e) {
+function P(e) {
     for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) n[i - 1] = arguments[i];
     return a.is.fun(e) ? e.apply(void 0, n) : e;
 }
@@ -291,7 +291,7 @@ function W(e, t) {
                 l(e);
             }
         }
-        f ? h() : ((u = w(i.delay || 0, n)), (d = M(i.pause, n)) ? (r.resumeQueue.add(p), o.pause()) : (o.resume(), p()));
+        f ? h() : ((u = P(i.delay || 0, n)), (d = M(i.pause, n)) ? (r.resumeQueue.add(p), o.pause()) : (o.resume(), p()));
     });
 }
 var K = function (e, t) {
@@ -927,14 +927,14 @@ var ei = (function (e) {
                     A = r.config,
                     C = A.decay,
                     R = A.velocity;
-                t.config && !S && N(A, w(t.config, i), t.config !== s.config ? w(s.config, i) : void 0);
+                t.config && !S && N(A, P(t.config, i), t.config !== s.config ? P(s.config, i) : void 0);
                 var O = f.getAnimated(this);
                 if (!O || a.is.und(m)) return n(q(this, !0));
                 var D = a.is.und(t.reset) ? l && !t.default : !a.is.und(E) && M(t.reset, i),
                     L = D ? E : this.get(),
                     x = Y(m),
-                    P = a.is.num(x) || a.is.arr(x) || a.isAnimatedString(x),
-                    k = !S && (!P || M(s.immediate || t.immediate, i));
+                    w = a.is.num(x) || a.is.arr(x) || a.isAnimatedString(x),
+                    k = !S && (!w || M(s.immediate || t.immediate, i));
                 if (I) {
                     if (k) O = this._updateNode(x);
                     else {
@@ -1071,7 +1071,7 @@ var eh = function (e, t) {
 };
 function em(e, t, n) {
     void 0 === t && (t = e.loop), void 0 === n && (n = e.to);
-    var i = w(t);
+    var i = P(t);
     if (i) {
         var r = !0 !== i && H(i),
             o = (r || e).reverse,
@@ -1366,7 +1366,7 @@ var eD = o.createContext({}),
         var t = e.children,
             n = g(e, ['children']),
             i = o.useContext(eD);
-        n = P(
+        n = w(
             function () {
                 return s(s({}, i), n);
             },
@@ -1379,7 +1379,7 @@ var eD = o.createContext({}),
 var ex = function () {
         return o.useContext(eD);
     },
-    eP = {
+    ew = {
         create: function (e) {
             return {
                 get controllers() {
@@ -1448,7 +1448,7 @@ var ex = function () {
             };
         }
     };
-function ew(e, t, n) {
+function eP(e, t, n) {
     var i = a.is.fun(t) && t;
     i && !n && (n = []);
     var l = o.useRef(0),
@@ -1487,17 +1487,17 @@ function ew(e, t, n) {
             s && ((s = _[r] = eE(s)), 0 == r && ((d.current = s.ref), (s.ref = void 0)));
         }
     }
-    P(
+    w(
         function () {
             (f.length = e), m(p, e);
         },
         [e]
     ),
-        P(function () {
+        w(function () {
             m(0, Math.min(p, e));
         }, n);
     var g = o.useMemo(function () {
-            return eP.create(function () {
+            return ew.create(function () {
                 return c.ctrls;
             });
         }, []),
@@ -1536,7 +1536,7 @@ function ew(e, t, n) {
 }
 function eM(e, t) {
     var n = a.is.fun(e),
-        i = ew(1, n ? e : [e], n ? t || [] : t),
+        i = eP(1, n ? e : [e], n ? t || [] : t),
         r = i[0][0],
         s = i[1],
         o = i[2];
@@ -1546,7 +1546,7 @@ function ek(e, t, n) {
     var i = a.is.fun(t) && t;
     i && !n && (n = []);
     var s = [],
-        o = ew(
+        o = eP(
             e,
             function (e, n) {
                 return (s[e] = n), k(t, e, n);
@@ -1654,9 +1654,9 @@ function eF(e, t, n) {
                 (i = t.enter), (r = eG);
             }
         }
-        if (((i = w(i, e.item, n)), !(i = a.is.obj(i) ? H(i) : { to: i }).config)) {
+        if (((i = P(i, e.item, n)), !(i = a.is.obj(i) ? H(i) : { to: i }).config)) {
             var c = t.config || b.config;
-            i.config = w(c, e.item, n);
+            i.config = P(c, e.item, n);
         }
         var f = s(
             s({}, b),
@@ -1669,7 +1669,7 @@ function eF(e, t, n) {
         );
         if (r == eG && a.is.und(f.from)) {
             var p = a.is.und(t.initial) || E ? t.from : t.initial;
-            f.from = w(p, e.item, n);
+            f.from = P(p, e.item, n);
         }
         var h = f.onRest;
         f.onRest = f.onNoopRest = function (e) {
@@ -1687,7 +1687,7 @@ function eF(e, t, n) {
                         return e.ctrl.idle;
                     });
                     if (n.phase == eZ) {
-                        var r = w(_, n.item);
+                        var r = P(_, n.item);
                         if (!1 !== r) {
                             var s = !0 === r ? 0 : r;
                             if (((n.expired = !0), !i && s > 0)) {
@@ -1721,7 +1721,7 @@ function eF(e, t, n) {
         [A]
     );
     var N = o.useMemo(function () {
-        return eP.create(function () {
+        return ew.create(function () {
             return g.current.map(function (e) {
                 return e.ctrl;
             });
@@ -1910,7 +1910,7 @@ Object.keys(y).forEach(function (e) {
     (t.Interpolation = eW),
     (t.Spring = ej),
     (t.SpringContext = eL),
-    (t.SpringHandle = eP),
+    (t.SpringHandle = ew),
     (t.SpringValue = ef),
     (t.Trail = eH),
     (t.Transition = eY),
@@ -1921,6 +1921,6 @@ Object.keys(y).forEach(function (e) {
     (t.update = eq),
     (t.useChain = I),
     (t.useSpring = eM),
-    (t.useSprings = ew),
+    (t.useSprings = eP),
     (t.useTrail = ek),
     (t.useTransition = eF);

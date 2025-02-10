@@ -4,7 +4,7 @@ n.d(t, {
     Fp: () => B,
     JT: () => X,
     L2: () => W,
-    MY: () => w,
+    MY: () => P,
     Nz: () => F,
     Q_: () => Z,
     TO: () => H,
@@ -15,7 +15,7 @@ n.d(t, {
     e$: () => q,
     iM: () => z,
     pO: () => M,
-    xr: () => P,
+    xr: () => w,
     z2: () => Q
 }),
     n(47120),
@@ -55,11 +55,11 @@ let E = ['discordapp.com/gifts', 'discord.com/gifts'],
     D = [N, C, R, '[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}'].join('|'),
     L = new RegExp('^('.concat(O, ')?(').concat(D, ')$')),
     x = '-';
-var P = (function (e) {
+var w = (function (e) {
     return (e[(e.DEFAULT = 0)] = 'DEFAULT'), (e[(e.CUSTOM_STYLE = 1)] = 'CUSTOM_STYLE'), (e[(e.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD = 2)] = 'CUSTOM_MESSAGE_EMOJI_SOUNDBOARD'), e;
 })({});
-let w = (e, t) => (r.tq || r.Em ? 0 : null != e || t ? 2 : 1),
-    M = (e) => 0 !== w(e);
+let P = (e, t) => (r.tq || r.Em ? 0 : null != e || t ? 2 : 1),
+    M = (e) => 0 !== P(e);
 function k(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         n = arguments.length > 2 ? arguments[2] : void 0;

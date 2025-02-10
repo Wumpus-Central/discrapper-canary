@@ -122,12 +122,12 @@ function C(e) {
             messageId: N,
             roleId: C
         }),
-        P = r.useRef(null),
-        w = (0, m.ZP)(t.id, n),
+        w = r.useRef(null),
+        P = (0, m.ZP)(t.id, n),
         M = (0, o.e7)([d.ZP], () => (null != n ? d.ZP.getMember(n, t.id) : null));
     r.useEffect(() => {
-        null == a || a(null == P ? void 0 : P.current);
-    }, [P, a]);
+        null == a || a(null == w ? void 0 : w.current);
+    }, [w, a]);
     let k = D ? 'VIEW_BLOCKED_PROFILE' : 'VIEW_IGNORED_PROFILE';
     return (0, i.jsx)(c.Gt, {
         value: L,
@@ -135,11 +135,11 @@ function C(e) {
             value: x,
             shouldTrackViewOnMount: null == M || null != M.fullProfileLoadedTimestamp,
             children: (0, i.jsx)(l.VqE, {
-                ref: P,
+                ref: w,
                 'aria-label': t.username,
                 children: (0, i.jsx)(E.Z, {
                     user: t,
-                    displayProfile: w,
+                    displayProfile: P,
                     profileType: T.y0.BITE_SIZE,
                     children: (0, i.jsxs)('div', {
                         className: S.container,

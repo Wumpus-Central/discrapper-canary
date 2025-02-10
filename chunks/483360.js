@@ -37,8 +37,8 @@ var r = n(658722),
     D = n(984933),
     L = n(271383),
     x = n(430824),
-    P = n(375954),
-    w = n(496675),
+    w = n(375954),
+    P = n(496675),
     M = n(158776),
     k = n(699516),
     U = n(944486),
@@ -240,7 +240,7 @@ function eD(e, t) {
     let n = O.Z.getChannel(e);
     return null == e || null == n
         ? []
-        : o()(P.Z.getMessages(e).toArray())
+        : o()(w.Z.getMessages(e).toArray())
               .reverse()
               .uniqBy((e) => e.author.id)
               .map((e) => B.default.getUser(e.author.id))
@@ -376,7 +376,7 @@ let eL = {
         let m = {},
             g = [];
         for (let e of t) {
-            if (!eS(l, e.type, null != i) || ((0, C.Km)(e.type) && !w.Z.can(f ? e.accessPermissions : z.Plq.VIEW_CHANNEL, e)) || !s(e)) continue;
+            if (!eS(l, e.type, null != i) || ((0, C.Km)(e.type) && !P.Z.can(f ? e.accessPermissions : z.Plq.VIEW_CHANNEL, e)) || !s(e)) continue;
             let t = [...h],
                 r = e.name.toLocaleLowerCase(),
                 o = p && n === e.id,

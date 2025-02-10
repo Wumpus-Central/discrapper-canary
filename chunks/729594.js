@@ -81,13 +81,13 @@ function I(e, t) {
         var D = '[' === this.hostname[0] && ']' === this.hostname[this.hostname.length - 1];
         if (!D)
             for (var L = this.hostname.split(/\./), R = 0, x = L.length; R < x; R++) {
-                var P = L[R];
-                if (P && !P.match(f)) {
-                    for (var w = '', M = 0, k = P.length; M < k; M++) P.charCodeAt(M) > 127 ? (w += 'x') : (w += P[M]);
-                    if (!w.match(f)) {
+                var w = L[R];
+                if (w && !w.match(f)) {
+                    for (var P = '', M = 0, k = w.length; M < k; M++) w.charCodeAt(M) > 127 ? (P += 'x') : (P += w[M]);
+                    if (!P.match(f)) {
                         var U = L.slice(0, R),
                             G = L.slice(R + 1),
-                            B = P.match(_);
+                            B = w.match(_);
                         B && (U.push(B[1]), G.unshift(B[2])), G.length && (y = '/' + G.join('.') + y), (this.hostname = U.join('.'));
                         break;
                     }

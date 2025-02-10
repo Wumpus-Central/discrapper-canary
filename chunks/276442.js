@@ -15,8 +15,8 @@ var i = n(512722),
 function m(e) {
     let { analyticsData: t, initialPlanId: n, breadcrumbSteps: i, handleStepChange: m, referralTrialOfferId: g, onReturn: E, continueSessionToInitialStep: v } = e,
         { contextMetadata: y, step: I, paymentSources: T, paymentSourceId: b, setPaymentSourceId: S, purchaseError: A, setPurchaseError: N, purchaseErrorBlockRef: C, paymentAuthenticationState: R, selectedSkuId: O, activeSubscription: D, previousStepRef: L, setPurchaseState: x } = (0, c.JL)(),
-        { isGift: P } = (0, u.wD)(),
-        w = {
+        { isGift: w } = (0, u.wD)(),
+        P = {
             ...(0, o.fL)(),
             paymentSources: T,
             paymentSourceId: b,
@@ -26,10 +26,10 @@ function m(e) {
             purchaseErrorBlockRef: C,
             paymentAuthenticationState: R,
             selectedSkuId: O,
-            isGift: P
+            isGift: w
         },
         M = (0, s.N)(g),
-        k = !P && null != M && null != O && h.nG[M.trial_id].skus.includes(O),
+        k = !w && null != M && null != O && h.nG[M.trial_id].skus.includes(O),
         U = () => {
             m(Object.values(T).length < 1 && null == n ? d.h8.PLAN_SELECT : d.h8.REVIEW, { trackedFromStep: d.h8.PAYMENT_TYPE });
         },
@@ -38,7 +38,7 @@ function m(e) {
     let B = (0, a.Z)(() => Date.now(), [I]),
         Z = null != v && null == L.current ? v : d.h8.PAYMENT_TYPE;
     return (0, o.vP)({
-        paymentModalArgs: w,
+        paymentModalArgs: P,
         initialStep: Z,
         prependSteps: [d.h8.PROMOTION_INFO],
         appendSteps: [d.h8.REVIEW, d.h8.CONFIRM],
@@ -61,6 +61,6 @@ function m(e) {
             });
         },
         isEligibleForTrial: k,
-        allowDesktopRedirectPurchase: (0, _.tr)(O, P, D)
+        allowDesktopRedirectPurchase: (0, _.tr)(O, w, D)
     });
 }

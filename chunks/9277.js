@@ -42,7 +42,7 @@ function y(e, t) {
         { Component: O, events: D, play: L } = (0, u.V)(),
         x = (0, d.Q3)('ChannelGIFPickerButton');
     if (n) return null;
-    let P = b === g.X1.GIF && S === a;
+    let w = b === g.X1.GIF && S === a;
     return (0, i.jsx)(c.ua7, {
         text: T ? E.intl.string(E.t.mE2e8P) : null,
         forceOpen: !0,
@@ -58,10 +58,10 @@ function y(e, t) {
                     onClick: () => {
                         R(), L();
                     },
-                    isActive: P,
+                    isActive: w,
                     pulse: y,
                     'aria-label': E.intl.string(E.t.PtVpk5),
-                    'aria-expanded': P,
+                    'aria-expanded': w,
                     'aria-haspopup': 'dialog',
                     'aria-controls': A,
                     children: (0, i.jsx)(O, {

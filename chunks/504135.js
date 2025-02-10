@@ -12,15 +12,15 @@ var i = n(200651),
     _ = n(939350),
     p = n(335765);
 function h(e) {
-    let { color: t = 'default', label: n, icon: a, iconLeft: h, iconLeftSize: m = 'md', hint: g, subtext: E, subtextLineClamp: v, hasSubmenu: y, disabled: I, isFocused: T, menuItemProps: b, action: S, onClose: A, onFocus: N, className: C, focusedClassName: R, subMenuIconClassName: O, dontCloseOnActionIfHoldingShiftKey: D, dontCloseOnAction: L, iconProps: x, sparkle: P } = e,
-        w = r.useContext(u.r),
+    let { color: t = 'default', label: n, icon: a, iconLeft: h, iconLeftSize: m = 'md', hint: g, subtext: E, subtextLineClamp: v, hasSubmenu: y, disabled: I, isFocused: T, menuItemProps: b, action: S, onClose: A, onFocus: N, className: C, focusedClassName: R, subMenuIconClassName: O, dontCloseOnActionIfHoldingShiftKey: D, dontCloseOnAction: L, iconProps: x, sparkle: w } = e,
+        P = r.useContext(u.r),
         M = r.useRef(null),
         k = r.useCallback(
             (e) => {
                 if (null == S) return !1;
-                (e.shiftKey && D) || L || A(), e.persist(), null == w || w(), requestAnimationFrame(() => S(e));
+                (e.shiftKey && D) || L || A(), e.persist(), null == P || P(), requestAnimationFrame(() => S(e));
             },
-            [S, A, w, D, L]
+            [S, A, P, D, L]
         );
     return (
         r.useEffect(() => {
@@ -87,7 +87,7 @@ function h(e) {
                                 color: 'currentColor',
                                 className: s()(p.caret, O)
                             }),
-                            P && (0, i.jsx)(f.K1N, { className: p.sparkles })
+                            w && (0, i.jsx)(f.K1N, { className: p.sparkles })
                         ]
                     })
             ]

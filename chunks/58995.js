@@ -63,10 +63,10 @@ function L(e) {
         y = (0, o.e7)([E.Z], () => !(null === E.Z || void 0 === E.Z ? void 0 : E.Z.hasLayers())),
         L = (0, o.e7)([v.default], () => v.default.getCurrentUser()),
         x = null != L ? I.default.age(L.id) : 0,
-        P = !t && y && x >= O,
-        { enabled: w } = m.O.useExperiment({ location: 'gift-button' }),
+        w = !t && y && x >= O,
+        { enabled: P } = m.O.useExperiment({ location: 'gift-button' }),
         M = [];
-    w && P && M.push(l.z.NITROWEEN_COACHMARKS);
+    P && w && M.push(l.z.NITROWEEN_COACHMARKS);
     let [k, U] = (0, p.US)(M),
         G = null != k,
         B = (0, T.Ft)(n),

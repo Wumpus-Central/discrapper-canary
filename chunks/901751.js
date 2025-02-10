@@ -96,7 +96,7 @@ function x(e, t) {
     if (null != n && (0, h.pO)(n)) return n;
     for (let [t, n] of e) if (!(0, h.zi)(n) && (0, h.KM)(n)) return n;
 }
-function P(e) {
+function w(e) {
     let t = x(p.Z.quests, e);
     if (null == t)
         return {
@@ -109,7 +109,7 @@ function P(e) {
         activity: null != n ? n : null
     };
 }
-class w extends r.Z {
+class P extends r.Z {
     constructor(...e) {
         super(...e),
             y(this, 'streamKeyToHeartbeatState', new Map()),
@@ -324,7 +324,7 @@ class w extends r.Z {
                       }));
             }),
             y(this, 'handleEmbeddedActivityUpdate', (e) => {
-                let { quest: t, activity: n } = P(e);
+                let { quest: t, activity: n } = w(e);
                 if (null == t || !(0, h.pO)(t)) return;
                 let i = A(t.id),
                     r = null == n && this.streamKeyToHeartbeatState.has(i),
@@ -420,4 +420,4 @@ class w extends r.Z {
             });
     }
 }
-let M = new w();
+let M = new P();

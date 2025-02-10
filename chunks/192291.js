@@ -28,8 +28,8 @@ var i,
     D = N && E(N),
     L = Object.prototype,
     x = l.TypeError,
-    P = y('toStringTag'),
-    w = I('TYPED_ARRAY_TAG'),
+    w = y('toStringTag'),
+    P = I('TYPED_ARRAY_TAG'),
     M = 'TypedArrayConstructor',
     k = s && !!v && 'Opera' !== f(l.opera),
     U = !1,
@@ -120,19 +120,19 @@ if (
 )
     for (i in G) l[i] && v(l[i], O);
 if ((!k || !D || D === L) && ((D = O.prototype), k)) for (i in G) l[i] && v(l[i].prototype, D);
-if ((k && E(R) !== D && v(R, D), o && !d(D, P)))
+if ((k && E(R) !== D && v(R, D), o && !d(D, w)))
     for (i in ((U = !0),
-    m(D, P, {
+    m(D, w, {
         configurable: !0,
         get: function () {
-            return c(this) ? this[w] : void 0;
+            return c(this) ? this[P] : void 0;
         }
     }),
     G))
-        l[i] && p(l[i], w, i);
+        l[i] && p(l[i], P, i);
 e.exports = {
     NATIVE_ARRAY_BUFFER_VIEWS: k,
-    TYPED_ARRAY_TAG: U && w,
+    TYPED_ARRAY_TAG: U && P,
     aTypedArray: j,
     aTypedArrayConstructor: H,
     exportTypedArrayMethod: Y,

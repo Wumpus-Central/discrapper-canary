@@ -87,7 +87,7 @@ function x(e, t) {
     }
     for (let n in I[e][t]) t === A ? d.ZP.isNewForumThread(n, t, i) && S[e][t]++ : _.default.compare(n, r) > 0 && !d.ZP.hasOpenedThread(n) && S[e][t]++;
 }
-function P(e, t, n) {
+function w(e, t, n) {
     if (null == t) return !1;
     let i = u.Z.getChannel(n),
         r = h.Z.joinTimestamp(n);
@@ -106,8 +106,8 @@ function P(e, t, n) {
         x(e, t);
     } else X(v, e, t, n), X(b, e, t, n), X(y, e, t, n), X(I, e, t, n), X(T, e, t, n), q(n), x(e, t);
 }
-function w(e) {
-    return P(e.channel.guild_id, e.channel.parent_id, e.channel.id);
+function P(e) {
+    return w(e.channel.guild_id, e.channel.parent_id, e.channel.id);
 }
 function M(e) {
     let { channels: t } = e;
@@ -139,7 +139,7 @@ function U(e) {
 }
 function G(e) {
     let t = u.Z.getChannel(e.id);
-    return !!(null != t && p.Z.isActive(e.guildId, t.parent_id, e.id)) && P(t.guild_id, t.parent_id, t.id);
+    return !!(null != t && p.Z.isActive(e.guildId, t.parent_id, e.id)) && w(t.guild_id, t.parent_id, t.id);
 }
 function B(e) {
     let t = u.Z.getChannel(e.channelId);
@@ -349,9 +349,9 @@ let es = new ea(o.Z, {
     GUILD_CREATE: V,
     GUILD_DELETE: C,
     CURRENT_USER_UPDATE: C,
-    THREAD_CREATE: w,
-    THREAD_UPDATE: w,
-    THREAD_DELETE: w,
+    THREAD_CREATE: P,
+    THREAD_UPDATE: P,
+    THREAD_DELETE: P,
     CHANNEL_UPDATES: M,
     CHANNEL_DELETE: U,
     THREAD_MEMBER_UPDATE: G,

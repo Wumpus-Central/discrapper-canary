@@ -209,18 +209,18 @@ class L {
         let L = [],
             x = g.default.getUser(e);
         if (null == x) return L;
-        let P = v.Z.getVoiceStateForChannel(this.channelId, e),
-            w = v.Z.getVoicePlatformForChannel(this.channelId, e),
+        let w = v.Z.getVoiceStateForChannel(this.channelId, e),
+            P = v.Z.getVoicePlatformForChannel(this.channelId, e),
             M = _.Z.getChannel(this.channelId),
             k = null !== (i = (null === (n = this.call) || void 0 === n ? void 0 : null === (t = n.ringing) || void 0 === t ? void 0 : t.includes(e)) || this.guildRingingUsers.has(e)) && void 0 !== i && i;
-        (null != P || k) &&
+        (null != w || k) &&
             ((C = {
                 type: b.fO.USER,
                 ...E.Z.getUserStreamData(e, null == M ? void 0 : M.getGuildId()),
                 user: x,
                 id: x.id,
-                voiceState: P,
-                voicePlatform: w,
+                voiceState: w,
+                voicePlatform: P,
                 speaking: (0, a.O)({
                     userId: e,
                     checkIsMuted: !0
@@ -249,7 +249,7 @@ class L {
                 ...r,
                 type: i ? b.fO.HIDDEN_STREAM : b.fO.STREAM,
                 id: t,
-                userVideo: null !== (f = null == P ? void 0 : P.selfVideo) && void 0 !== f && f,
+                userVideo: null !== (f = null == w ? void 0 : w.selfVideo) && void 0 !== f && f,
                 user: x,
                 userNick: I.ZP.getName(null == M ? void 0 : M.getGuildId(), this.channelId, x),
                 stream: U
@@ -257,9 +257,9 @@ class L {
                 L.push(O);
         }
         let G = h.Z.findActivity(x.id, (e) => [S.IIU.PLAYING, S.IIU.WATCHING].includes(e.type));
-        if ((0, o.sq)() && null != P && P.channelId === this.channelId && null != G && (0, y.yE)(null !== (T = G.flags) && void 0 !== T ? T : 0, S.xjy.EMBEDDED)) {
+        if ((0, o.sq)() && null != w && w.channelId === this.channelId && null != G && (0, y.yE)(null !== (T = G.flags) && void 0 !== T ? T : 0, S.xjy.EMBEDDED)) {
             let t = l.ZP.getCurrentEmbeddedActivity();
-            (null == t ? void 0 : null === (N = t.participants) || void 0 === N ? void 0 : N.some((t) => t.userId === e && t.sessionId === P.sessionId)) !== !0 &&
+            (null == t ? void 0 : null === (N = t.participants) || void 0 === N ? void 0 : N.some((t) => t.userId === e && t.sessionId === w.sessionId)) !== !0 &&
                 null != G.application_id &&
                 ((D = {
                     type: b.fO.PRESENCE_EMBEDDED_ACTIVITY,

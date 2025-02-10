@@ -86,7 +86,7 @@ function D(e) {
         D = (0, a.e7)([m.Z], () => !(null === m.Z || void 0 === m.Z ? void 0 : m.Z.hasLayers())),
         L = (0, a.e7)([g.default], () => g.default.getCurrentUser()),
         x = null != L ? v.default.age(L.id) : 0,
-        { giftBoxAnimation: P, trinketsAnimation: w } = null !== (t = null == n ? void 0 : n.chatGiftIcon) && void 0 !== t ? t : {},
+        { giftBoxAnimation: w, trinketsAnimation: P } = null !== (t = null == n ? void 0 : n.chatGiftIcon) && void 0 !== t ? t : {},
         M = (0, p.u)(),
         k = void 0 !== M && !o && D && x >= O,
         [U, G] = (0, f.XR)(k ? s.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null, (0, d.t)(s.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK)),
@@ -112,15 +112,15 @@ function D(e) {
             N(!1), G(b.L.TAKE_ACTION), V();
         },
         H =
-            void 0 !== P
+            void 0 !== w
                 ? (0, i.jsx)(C, {
-                      config: P,
+                      config: w,
                       hovered: Z,
                       onClick: j
                   })
-                : void 0 !== w
+                : void 0 !== P
                   ? (0, i.jsx)(R, {
-                        config: w,
+                        config: P,
                         hovered: Z,
                         onClick: j
                     })

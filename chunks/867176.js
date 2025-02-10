@@ -29,14 +29,14 @@ function T(e) {
     var t;
     let { user: n, displayProfile: a, guildId: v, pendingBanner: T, children: b, className: S, avatarSize: A, avatarOffsetX: N, avatarOffsetY: C, bannerWidth: R, bannerHeight: O, themePadding: D, animateOnHover: L = !1 } = e,
         x = (0, _.Dt)(),
-        [P, w] = r.useState(!1),
+        [w, P] = r.useState(!1),
         M = (0, l.e7)([m.Z], () => m.Z.isFocused()),
         k = h.QK.getSetting(),
         { bannerSrc: U, status: G } = (0, E.Z)({
             displayProfile: a,
             pendingBanner: T,
             size: R,
-            canAnimate: L || !k ? P : M
+            canAnimate: L || !k ? w : M
         }),
         B = (0, c.dQu)(u.Z.unsafe_rawColors.PRIMARY_800).hex(),
         Z = n.getAvatarURL(v, (0, c.pxk)(A)),
@@ -82,8 +82,8 @@ function T(e) {
                     b,
                     (0, i.jsxs)('div', {
                         className: s()(y.banner, S),
-                        onMouseMove: () => w(!0),
-                        onMouseLeave: () => w(!1),
+                        onMouseMove: () => P(!0),
+                        onMouseLeave: () => P(!1),
                         style: {
                             height: O,
                             minHeight: O,

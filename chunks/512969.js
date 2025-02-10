@@ -6,7 +6,7 @@ n.d(t, {
     LX: () => R,
     TH: () => M,
     UO: () => k,
-    k6: () => w,
+    k6: () => P,
     l_: () => b,
     rs: () => L,
     s6: () => h
@@ -267,19 +267,19 @@ function x(e) {
         };
     return (n.displayName = t), (n.WrappedComponent = e), _()(n, e);
 }
-var P = r.useContext;
-function w() {
-    return P(p);
+var w = r.useContext;
+function P() {
+    return w(p);
 }
 function M() {
-    return P(h).location;
+    return w(h).location;
 }
 function k() {
-    var e = P(h).match;
+    var e = w(h).match;
     return e ? e.params : {};
 }
 function U(e) {
     var t = M(),
-        n = P(h).match;
+        n = w(h).match;
     return e ? R(t.pathname, e) : n;
 }

@@ -47,10 +47,10 @@ function x(e, t) {
     let i = null != t ? t : S.kod;
     return (null === (n = r[e]) || void 0 === n ? void 0 : n[i]) != null && (delete r[e][i], !0);
 }
-function P(e) {
+function w(e) {
     i.delete(e);
 }
-function w() {
+function P() {
     let e = [];
     for (let t in r) {
         let n = r[t];
@@ -136,13 +136,13 @@ function Z(e) {
 }
 function F(e) {
     let { streamKey: t } = e;
-    P(t);
+    w(t);
 }
 function V(e) {
     let { id: t, channelId: n } = e;
     (C = t),
         Array.from(i.values()).forEach((e) => {
-            (0, f.V9)(e) !== C && e.state === S.jm8.ENDED && P((0, f.V9)(e));
+            (0, f.V9)(e) !== C && e.state === S.jm8.ENDED && w((0, f.V9)(e));
         }),
         null != t && (0, f.DB)(t) && t.includes(m.default.getId()) && (R[n] = !1);
 }
@@ -169,7 +169,7 @@ function j(e) {
         ...o,
         state: l
     }),
-        l === S.jm8.ENDED && C !== t && P(t);
+        l === S.jm8.ENDED && C !== t && w(t);
 }
 function H(e) {
     let { streamKey: t } = e,
@@ -298,10 +298,10 @@ class Q extends (o = l.ZP.PersistedStore) {
         return (0, p.Z)(v.Z) && null !== (t = a[e]) && void 0 !== t ? t : null;
     }
     getAllApplicationStreams() {
-        return (0, p.Z)(v.Z) ? w().filter((e) => null != e && z(e.streamType, e.channelId)) : [];
+        return (0, p.Z)(v.Z) ? P().filter((e) => null != e && z(e.streamType, e.channelId)) : [];
     }
     getAllApplicationStreamsForChannel(e) {
-        return (0, p.Z)(v.Z) ? w().filter((t) => null != t && t.channelId === e && z(t.streamType, t.channelId)) : [];
+        return (0, p.Z)(v.Z) ? P().filter((t) => null != t && t.channelId === e && z(t.streamType, t.channelId)) : [];
     }
     getViewerIds(e) {
         if (!(0, p.Z)(v.Z)) return [];

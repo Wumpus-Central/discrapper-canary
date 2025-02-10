@@ -2,8 +2,8 @@ n.d(t, {
     JA: () => x,
     Jw: () => C,
     Od: () => L,
-    Wj: () => w,
-    gK: () => P,
+    Wj: () => P,
+    gK: () => w,
     oD: () => O,
     vH: () => R
 }),
@@ -109,7 +109,7 @@ function x(e) {
         [t, n, a, c, s, l, d, f]
     );
 }
-function P(e, t, n, i, a) {
+function w(e, t, n, i, a) {
     return k(e, () =>
         r.tn.post({
             url: A.ANM.CHANNEL_THREADS(e.id),
@@ -123,7 +123,7 @@ function P(e, t, n, i, a) {
         })
     );
 }
-function w(e) {
+function P(e) {
     let { parentChannel: t, name: n, appliedTags: a, onThreadCreated: s, upload: l } = e;
     return i.useCallback(
         async (e, i, c) => {

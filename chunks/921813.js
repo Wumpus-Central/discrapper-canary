@@ -19,7 +19,7 @@ var r = n(120356),
     v = n(228168),
     y = n(514627);
 function I(e) {
-    let { user: t, guild: n, canUsePremiumCustomization: r, onUpsellClick: I, pendingBanner: T, pendingBio: b, pendingPronouns: S, pendingAvatar: A, pendingAvatarDecoration: N, pendingNickname: C, pendingGlobalName: R, pendingThemeColors: O, pendingProfileEffectId: D, avatarClassName: L, containerClassName: x, isTryItOutFlow: P = !1, disabledInputs: w = !1, hideCustomStatus: M = !1, hideBioSection: k = !1, hideMessageInput: U = !0, hideExampleButton: G = !1 } = e,
+    let { user: t, guild: n, canUsePremiumCustomization: r, onUpsellClick: I, pendingBanner: T, pendingBio: b, pendingPronouns: S, pendingAvatar: A, pendingAvatarDecoration: N, pendingNickname: C, pendingGlobalName: R, pendingThemeColors: O, pendingProfileEffectId: D, avatarClassName: L, containerClassName: x, isTryItOutFlow: w = !1, disabledInputs: P = !1, hideCustomStatus: M = !1, hideBioSection: k = !1, hideMessageInput: U = !0, hideExampleButton: G = !1 } = e,
         B = (0, l.ZP)(t.id, null == n ? void 0 : n.id),
         { avatarSrc: Z, avatarDecorationSrc: F } = (0, c.Z)({
             user: t,
@@ -56,8 +56,8 @@ function I(e) {
                         guildId: null == n ? void 0 : n.id,
                         canUsePremiumCustomization: r,
                         pendingBanner: T,
-                        isTryItOutFlow: P,
-                        disabledInputs: w,
+                        isTryItOutFlow: w,
+                        disabledInputs: P,
                         onUpsellClick: () => (null == I ? void 0 : I({ object: E.qAy.EDIT_PROFILE_BANNER }))
                     }),
                     (0, i.jsx)(p.Z, {
@@ -70,8 +70,8 @@ function I(e) {
                         previewTheme: j,
                         previewPrimaryColor: H,
                         className: L,
-                        disabledInputs: w,
-                        isTryItOutFlow: P,
+                        disabledInputs: P,
+                        isTryItOutFlow: w,
                         onUpsellClick: () => (null == I ? void 0 : I({ object: E.qAy.AVATAR }))
                     }),
                     !M &&
@@ -91,7 +91,7 @@ function I(e) {
                 pendingGlobalName: R,
                 pendingBio: b,
                 pendingPronouns: S,
-                isTryItOutFlow: P,
+                isTryItOutFlow: w,
                 hideBioSection: k
             }),
             (0, i.jsx)(g.Z, {

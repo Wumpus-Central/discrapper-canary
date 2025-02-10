@@ -24,7 +24,7 @@ var i = n(200651),
     A = n(388032),
     N = n(856501);
 let C = (e) => {
-    let { emojiDescriptors: t, emojiSize: a, onSelect: C, onSelectSoundmoji: R, onInspect: O, surrogateCodePoint: D, getEmojiItemProps: L, getEmojiRowProps: x, isScrolling: P, isUsingKeyboardNavigation: w, rowIndex: M, allowAnimatedEmoji: k, showEmojiFavoriteTooltip: U, channelGuildId: G, category: B, selectedItemClassName: Z, channelId: F, messageId: V, isBurstReaction: j, inNitroLockedSection: H, handleScrollUpOnSectionCollapse: Y } = e,
+    let { emojiDescriptors: t, emojiSize: a, onSelect: C, onSelectSoundmoji: R, onInspect: O, surrogateCodePoint: D, getEmojiItemProps: L, getEmojiRowProps: x, isScrolling: w, isUsingKeyboardNavigation: P, rowIndex: M, allowAnimatedEmoji: k, showEmojiFavoriteTooltip: U, channelGuildId: G, category: B, selectedItemClassName: Z, channelId: F, messageId: V, isBurstReaction: j, inNitroLockedSection: H, handleScrollUpOnSectionCollapse: Y } = e,
         { enabled: W } = y.Z.useExperiment({ location: 'EmojiPicker' }, { autoTrackExposure: !1 }),
         K = n(187119),
         z = n(39874),
@@ -61,7 +61,7 @@ let C = (e) => {
                         { ref: h, tabIndex: m, onFocus: g, ...E } = null !== (n = L(p, M)) && void 0 !== n ? n : {},
                         v = ei.rowIndex === _ && ei.columnIndex === p,
                         y = () => {
-                            P.current || w.current || O(e);
+                            w.current || P.current || O(e);
                         };
                     return (0, r.createElement)(
                         'li',
@@ -97,8 +97,8 @@ let C = (e) => {
                         a = ei.rowIndex === t && ei.columnIndex === r,
                         s = (t) => {
                             t.stopPropagation(),
-                                P.current ||
-                                    w.current ||
+                                w.current ||
+                                    P.current ||
                                     (C(e, {
                                         isFinalSelection: !0,
                                         toggleFavorite: !1
@@ -126,8 +126,8 @@ let C = (e) => {
                 case I.ld.CREATE_EMOJI: {
                     let t = (t) => {
                         t.stopPropagation(),
-                            P.current ||
-                                w.current ||
+                            w.current ||
+                                P.current ||
                                 (C(e, {
                                     isFinalSelection: !0,
                                     toggleFavorite: !1
@@ -157,8 +157,8 @@ let C = (e) => {
                             descriptor: e,
                             emojiItemKey: t,
                             isInspected: s,
-                            isScrolling: P,
-                            isUsingKeyboardNavigation: w,
+                            isScrolling: w,
+                            isUsingKeyboardNavigation: P,
                             surrogateCodePoint: D,
                             allowAnimatedEmoji: k,
                             selectedItemClassName: Z,

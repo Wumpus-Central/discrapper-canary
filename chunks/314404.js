@@ -33,8 +33,8 @@ var i = n(200651),
     D = n(55610),
     L = n(653798),
     x = n(553797),
-    P = n(927699),
-    w = n(987716),
+    w = n(927699),
+    P = n(987716),
     M = n(311821),
     k = n(459965),
     U = n(811616),
@@ -136,9 +136,9 @@ function W(e) {
         }, [ef, e_, em]);
     let eL = !eh && (es || (!eC && !eR)) && eD && X,
         ex = (0, c.arW)(),
-        eP = (null == eS ? void 0 : eS.id) != null ? (0, I.aS)(eS.id, !1, es, eN) : void 0,
-        { ipCountryCode: ew } = (0, C.Z)(),
-        eM = 'HR' === ew && null != eP && eP.currency === F.pK.EUR,
+        ew = (null == eS ? void 0 : eS.id) != null ? (0, I.aS)(eS.id, !1, es, eN) : void 0,
+        { ipCountryCode: eP } = (0, C.Z)(),
+        eM = 'HR' === eP && null != ew && ew.currency === F.pK.EUR,
         ek = (0, I.Ap)(eN.paymentSourceId),
         eU = r.useMemo(() => ((null == eI ? void 0 : eI.interval) === B.rV.DAY ? ((null == eI ? void 0 : eI.interval_count) > 7 ? V.intl.string(V.t.Z1V2cn) : V.intl.string(V.t.MI1rHh)) : V.intl.string(V.t['+S5lra'])), [eI]),
         eG = !es && (eR || (null != eI && eC && null != Q)),
@@ -190,7 +190,7 @@ function W(e) {
         },
         eF = () => {
             if (ep === v.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null != ec)
-                return (0, i.jsx)(P.Z, {
+                return (0, i.jsx)(w.Z, {
                     sectionTitle: V.intl.string(V.t.B3miEx),
                     className: s()(H.customGiftMessageWrapper, { [H.compactCustomGiftMessageWrapper]: $ }),
                     innerClassName: H.customGiftMessage,
@@ -205,11 +205,11 @@ function W(e) {
         eY = () =>
             eh && null != el
                 ? ej
-                    ? (0, i.jsx)(w.q, {
+                    ? (0, i.jsx)(P.q, {
                           className: j.adjustedGiftMainAnimation,
                           optionsContainerClassName: j.adjustedGiftBoxOptionContainer
                       })
-                    : (0, i.jsx)(w.q, {})
+                    : (0, i.jsx)(P.q, {})
                 : null,
         eW = () =>
             (0, i.jsx)('div', {
@@ -233,7 +233,7 @@ function W(e) {
                 )
             }),
         eK = () => eZ(ey, eC, eR),
-        ez = () => (eM ? (0, i.jsx)(d.Z, { message: V.intl.formatToPlainString(V.t['9hnZoK'], { kunaPriceWithCurrency: (0, T.T4)(7.5345 * eP.amount, F.pK.HRK) }) }) : null);
+        ez = () => (eM ? (0, i.jsx)(d.Z, { message: V.intl.formatToPlainString(V.t['9hnZoK'], { kunaPriceWithCurrency: (0, T.T4)(7.5345 * ew.amount, F.pK.HRK) }) }) : null);
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsxs)('div', {
             className: s()(eh ? H.stepBodyCustomGift : H.stepBody, { [H.paddingForHalloweenBanner]: eg }),
@@ -269,15 +269,15 @@ function W(e) {
                         !ej && eW(),
                         (0, i.jsx)('div', {
                             children:
-                                eL && null != eS && null != eP
+                                eL && null != eS && null != ew
                                     ? (0, i.jsxs)('div', {
                                           children: [
                                               (0, i.jsx)('div', { className: H.selectPlanDivider }),
                                               (0, i.jsx)(L.Ji, {
                                                   label: V.intl.string(V.t.txajQE),
                                                   value: (0, i.jsx)(x.Z, {
-                                                      price: eP.amount,
-                                                      currency: eP.currency,
+                                                      price: ew.amount,
+                                                      currency: ew.currency,
                                                       intervalType: es ? null : eS.interval,
                                                       intervalCount: eS.intervalCount,
                                                       isPrepaidPaymentSource: ek

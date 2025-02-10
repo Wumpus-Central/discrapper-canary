@@ -25,9 +25,9 @@ var i = n(200651),
     N = n(388032),
     C = n(112650);
 function R(e) {
-    let { user: t, guildId: n, channelId: R, messageId: O, roleId: D, setPopoutRef: L, closePopout: x, disableUserProfileLink: P = __OVERLAY__, newAnalyticsLocations: w = [] } = e,
+    let { user: t, guildId: n, channelId: R, messageId: O, roleId: D, setPopoutRef: L, closePopout: x, disableUserProfileLink: w = __OVERLAY__, newAnalyticsLocations: P = [] } = e,
         M = (0, h.ZP)(t.id, n),
-        { analyticsLocations: k } = (0, l.ZP)([...w, o.Z.BITE_SIZE_PROFILE_POPOUT]),
+        { analyticsLocations: k } = (0, l.ZP)([...P, o.Z.BITE_SIZE_PROFILE_POPOUT]),
         U = (0, _.ZB)({
             layout: 'BITE_SIZE_POPOUT',
             userId: t.id,
@@ -48,7 +48,7 @@ function R(e) {
                     ...U
                 });
         },
-        F = !P && (0, u.Z)(t.id),
+        F = !w && (0, u.Z)(t.id),
         V = () =>
             F
                 ? (0, i.jsx)(a.sNh, {

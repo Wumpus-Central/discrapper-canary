@@ -1,8 +1,8 @@
 n.d(e, {
     OR: () => o,
-    _c: () => r,
+    _c: () => u,
     bb: () => d,
-    iD: () => u
+    iD: () => r
 });
 var i = n(442837),
     l = n(581883),
@@ -17,11 +17,11 @@ function o(t) {
         })
     );
 }
-function u(t) {
+function r(t) {
     var e, n;
     return s(t, void 0, null !== (n = null === (e = l.Z.settings.guilds) || void 0 === e ? void 0 : e.guilds) && void 0 !== n ? n : {});
 }
-function r(t, e) {
+function u(t, e) {
     let n = (0, i.e7)([l.Z], () => {
         var t;
         return null === (t = l.Z.settings.guilds) || void 0 === t ? void 0 : t.guilds;
@@ -36,7 +36,7 @@ function d(t, e) {
 function s(t, e, n) {
     var i, l, o;
     if (null == n) return;
-    let u = null != e ? (null === (i = n[t]) || void 0 === i ? void 0 : i.channels[e]) : n[t],
-        r = null == u ? void 0 : u.customNotificationSoundConfig;
-    return null != r && null != (o = null == r ? void 0 : null === (l = r.notificationSoundPackId) || void 0 === l ? void 0 : l.value) ? Object.values(a.YC).find((t) => t === o) : void 0;
+    let r = null != e ? (null === (i = n[t]) || void 0 === i ? void 0 : i.channels[e]) : n[t],
+        u = null == r ? void 0 : r.customNotificationSoundConfig;
+    return null != u && null != (o = null == u ? void 0 : null === (l = u.notificationSoundPackId) || void 0 === l ? void 0 : l.value) ? Object.values(a.YC).find((t) => t === o) : void 0;
 }

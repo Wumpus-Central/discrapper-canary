@@ -76,11 +76,11 @@ var i = n(728804),
             var L = Object.keys(A);
             S = m ? L.sort(m) : L;
         }
-        for (var x = s && l(A) && 1 === A.length ? n + '[]' : n, P = 0; P < S.length; ++P) {
-            var w = S[P],
-                M = 'object' == typeof w && void 0 !== w.value ? w.value : A[w];
+        for (var x = s && l(A) && 1 === A.length ? n + '[]' : n, w = 0; w < S.length; ++w) {
+            var P = S[w],
+                M = 'object' == typeof P && void 0 !== P.value ? P.value : A[P];
             if (!u || null !== M) {
-                var k = l(A) ? ('function' == typeof a ? a(x, w) : x) : x + (g ? '.' + w : '[' + w + ']');
+                var k = l(A) ? ('function' == typeof a ? a(x, P) : x) : x + (g ? '.' + P : '[' + P + ']');
                 b.set(t, C);
                 var U = i();
                 U.set(h, b), c(D, e(M, k, a, s, o, u, 'comma' === a && I && l(A) ? null : d, f, m, g, E, v, y, I, T, U));

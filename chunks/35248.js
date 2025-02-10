@@ -61,7 +61,7 @@ let N = (e) => {
             { step: a, onPurchaseComplete: s, onHandoffFailure: c } = e,
             { selectedPlan: d, setSelectedPlanId: f, setSelectedSkuId: N, browserCheckoutState: C, browserCheckoutStateLoadId: R, browserCheckoutStateSkuId: O, browserCheckoutStatePlanId: D, contextMetadata: L } = (0, p.JL)(),
             { isGift: x } = (0, _.wD)(),
-            [P, w] = r.useState(!1);
+            [w, P] = r.useState(!1);
         switch (a) {
             case h.h8.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY:
                 (t = y.i$l.GOOGLE_PAY), (n = (0, E.a)());
@@ -77,12 +77,12 @@ let N = (e) => {
                 let e = setTimeout(
                     () => {
                         var e;
-                        !P && (w(!0), (0, l.r5)(L.loadId), A(null !== (e = null == d ? void 0 : d.id) && void 0 !== e ? e : I.Xh.PREMIUM_MONTH_TIER_2, x, L.loadId, c, t));
+                        !w && (P(!0), (0, l.r5)(L.loadId), A(null !== (e = null == d ? void 0 : d.id) && void 0 !== e ? e : I.Xh.PREMIUM_MONTH_TIER_2, x, L.loadId, c, t));
                     },
                     n.delay ? S : 0
                 );
                 return () => clearTimeout(e);
-            }, [d, x, L, c, w, P, t, n.delay]),
+            }, [d, x, L, c, P, w, t, n.delay]),
             r.useEffect(() => {
                 null !== O && (I.YQ.includes(O) && ((0, u.GZ)(O), (0, l.jg)()), N(O)), null !== D && f(D), R === L.loadId && C === v.Y.DONE && s();
             }, [N, f, C, R, O, D, L, s]),

@@ -30,7 +30,7 @@ var a = n(442837),
     D = n(483012),
     L = n(955132);
 let x = new d.Z('ConnectionStore'),
-    P = new D.Z(
+    w = new D.Z(
         L.Wb,
         (e, t) => {
             var n;
@@ -55,7 +55,7 @@ let x = new d.Z('ConnectionStore'),
         },
         (e) => 'CHANNEL_UPDATE' !== e
     ),
-    w = new D.Z(
+    P = new D.Z(
         L.Wb,
         (e, t) => (
             (e =
@@ -541,7 +541,7 @@ B(
         ['CHANNEL_UPDATE'],
         (e) => I.o.loadGuildIds([e.guild_id]),
         (e) => {
-            P.add(e);
+            w.add(e);
         }
     ),
     B(
@@ -619,7 +619,7 @@ B(
             });
     }),
     G(['SOUNDBOARD_SOUNDS'], (e) => {
-        w.add(e);
+        P.add(e);
     }),
     G(['CHANNEL_RECIPIENT_ADD', 'CHANNEL_RECIPIENT_REMOVE'], (e, t) => {
         let n = I.Z.getBasicChannel(e.channel_id);
@@ -1635,7 +1635,7 @@ B(
         (e) => I.o.loadGuildIds([e.guild_id]),
         (e) => {
             e.channels.forEach((e) => {
-                P.add(e);
+                w.add(e);
             }),
                 F({
                     type: 'CHANNEL_SYNC',

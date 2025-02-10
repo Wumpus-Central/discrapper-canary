@@ -28,8 +28,8 @@ var i,
     D = 'Promise',
     L = R.CONSTRUCTOR,
     x = R.REJECTION_EVENT,
-    P = R.SUBCLASSING,
-    w = N.getterFor(D),
+    w = R.SUBCLASSING,
+    P = N.getterFor(D),
     M = N.set,
     k = C && C.prototype,
     U = C,
@@ -143,7 +143,7 @@ if (
     L &&
     ((G = (U = function (e) {
         v(this, G), m(e), d(i, this);
-        var t = w(this);
+        var t = P(this);
         try {
             e(ea(eo, t), ea(es, t));
         } catch (e) {
@@ -162,7 +162,7 @@ if (
             value: void 0
         });
     }).prototype = f(G, 'then', function (e, t) {
-        var n = w(this),
+        var n = P(this),
             i = V(y(this, U));
         return (
             (n.parent = !0),
@@ -179,7 +179,7 @@ if (
     })),
     (r = function () {
         var e = new i(),
-            t = w(e);
+            t = P(e);
         (this.promise = e), (this.resolve = ea(eo, t)), (this.reject = ea(es, t));
     }),
     (O.f = V =
@@ -189,7 +189,7 @@ if (
     !l && g(C) && k !== Object.prototype)
 ) {
     (s = k.then),
-        P ||
+        w ||
             f(
                 k,
                 'then',

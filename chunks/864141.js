@@ -31,12 +31,12 @@ var r = n(120356),
 function L(e) {
     let { user: t, voiceChannel: n, className: r, onClose: L } = e,
         { profileType: x } = (0, y.z)(),
-        P = { [D.fullSize]: x === R.y0.FULL_SIZE },
-        { analyticsLocations: w } = (0, d.ZP)(c.Z.USER_PROFILE_VOICE_ACTIVITY_CARD),
+        w = { [D.fullSize]: x === R.y0.FULL_SIZE },
+        { analyticsLocations: P } = (0, d.ZP)(c.Z.USER_PROFILE_VOICE_ACTIVITY_CARD),
         M = (0, E.Z)({
             display: 'voice',
             user: t,
-            analyticsLocations: w
+            analyticsLocations: P
         }),
         k = (0, v.Z)({
             userId: t.id,
@@ -86,7 +86,7 @@ function L(e) {
         },
         F = () =>
             (0, i.jsx)('div', {
-                className: a()(D.actions, P),
+                className: a()(D.actions, w),
                 children: (0, i.jsx)(N.Z, {
                     channel: n,
                     onAction: M,
@@ -94,7 +94,7 @@ function L(e) {
                 })
             });
     return (0, i.jsx)(d.Gt, {
-        value: w,
+        value: P,
         children: (0, i.jsxs)(I.Z, {
             ref: k,
             className: a()(D.card, r),
@@ -112,7 +112,7 @@ function L(e) {
                 (0, i.jsx)('div', {
                     className: D.body,
                     children: (0, i.jsxs)('div', {
-                        className: a()(D.content, P),
+                        className: a()(D.content, w),
                         children: [
                             (0, i.jsx)(S.Z, {
                                 users: G,

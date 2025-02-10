@@ -59,7 +59,7 @@
             for (e = n ? b(e / p) : e >> 1, e += b(e / t); e > (T * f) >> 1; i += c) e = b(e / T);
             return b(i + ((T + 1) * e) / (e + _));
         }
-        function P(e) {
+        function w(e) {
             var t,
                 n,
                 i,
@@ -82,7 +82,7 @@
             }
             return O(E);
         }
-        function w(e) {
+        function P(e) {
             var t,
                 n,
                 i,
@@ -113,12 +113,12 @@
         }
         function M(e) {
             return C(e, function (e) {
-                return E.test(e) ? P(e.slice(4).toLowerCase()) : e;
+                return E.test(e) ? w(e.slice(4).toLowerCase()) : e;
             });
         }
         function k(e) {
             return C(e, function (e) {
-                return v.test(e) ? 'xn--' + w(e) : e;
+                return v.test(e) ? 'xn--' + P(e) : e;
             });
         }
         if (
@@ -128,8 +128,8 @@
                     decode: R,
                     encode: O
                 },
-                decode: P,
-                encode: w,
+                decode: w,
+                encode: P,
                 toASCII: k,
                 toUnicode: M
             }),

@@ -7,7 +7,7 @@ let o = r.forwardRef(function (e, t) {
     let o = r.useRef(null);
     function l(t, r) {
         (0, a.ZD)(async () => {
-            let { default: a } = await Promise.all([n.e('70687'), n.e('48017'), n.e('72931')]).then(n.bind(n, 850085));
+            let { default: a } = await Promise.all([n.e('70687'), n.e('59732'), n.e('62657')]).then(n.bind(n, 73620));
             return (n) =>
                 (0, i.jsx)(a, {
                     imgURI: t,

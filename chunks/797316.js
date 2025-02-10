@@ -88,11 +88,11 @@ function L(e) {
 function x() {
     A.reset();
 }
-function P(e) {
+function w(e) {
     let { guild: t } = e;
     t.id === T.Z.getGuildId() && j();
 }
-function w(e) {
+function P(e) {
     let { guild: t } = e;
     A.clearWithoutFlushing(t.id, !0);
 }
@@ -201,8 +201,8 @@ let q = new z(l.Z, {
     LOGOUT: x,
     VOICE_CHANNEL_SELECT: V,
     CHANNEL_SELECT: V,
-    GUILD_CREATE: P,
-    GUILD_DELETE: w,
+    GUILD_CREATE: w,
+    GUILD_DELETE: P,
     GUILD_SUBSCRIPTIONS_MEMBERS_ADD: M,
     GUILD_SUBSCRIPTIONS_MEMBERS_REMOVE: k,
     GUILD_SUBSCRIPTIONS_ADD_MEMBER_UPDATES: U,

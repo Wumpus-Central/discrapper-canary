@@ -26,7 +26,7 @@ var i = n(200651),
     C = n(135259);
 function R(e) {
     var t;
-    let { onClose: n, onComplete: a, onStepChange: R, transitionState: O, loadId: D, skuId: L, isGift: x = !1, giftRecipient: P, giftMessage: w, giftingOrigin: M, analyticsLocations: k, returnRef: U } = e,
+    let { onClose: n, onComplete: a, onStepChange: R, transitionState: O, loadId: D, skuId: L, isGift: x = !1, giftRecipient: w, giftMessage: P, giftingOrigin: M, analyticsLocations: k, returnRef: U } = e,
         { analyticsLocations: G } = (0, d.ZP)([...k, c.Z.COLLECTIBLES_PAYMENT_MODAL]),
         B = r.useRef(new o.qA()),
         [Z, F] = r.useState(null),
@@ -111,8 +111,8 @@ function R(e) {
                 purchaseType: N.GZ.ONE_TIME,
                 children: (0, i.jsx)(p.KB, {
                     isGift: x,
-                    giftRecipient: P,
-                    giftMessage: w,
+                    giftRecipient: w,
+                    giftMessage: P,
                     giftingOrigin: M,
                     children: (0, i.jsx)(g.PaymentModal, {
                         onClose: Q,

@@ -1,5 +1,5 @@
 let i;
-n.d(t, { Z: () => w }), n(47120);
+n.d(t, { Z: () => P }), n(47120);
 var r,
     a = n(442837),
     s = n(433517),
@@ -111,7 +111,7 @@ function L(e) {
 function x() {
     S = _.Z.getStatus() === h.Skl.DND || l.QZ.getSetting();
 }
-class P extends (r = a.ZP.Store) {
+class w extends (r = a.ZP.Store) {
     initialize() {
         this.waitFor(f.Z, _.Z), this.syncWith([_.Z], x), this.syncWith([u.Z], x);
     }
@@ -128,8 +128,8 @@ class P extends (r = a.ZP.Store) {
         return !S && b.size > 0;
     }
 }
-m(P, 'displayName', 'IncomingCallStore');
-let w = new P(o.Z, {
+m(w, 'displayName', 'IncomingCallStore');
+let P = new w(o.Z, {
     CALL_CREATE: C,
     CALL_UPDATE: C,
     CALL_DELETE: R,

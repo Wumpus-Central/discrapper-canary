@@ -215,7 +215,7 @@ e.exports = function (e) {
                     }
                     (y.dir = 'ltr'), (y.style.cssText = _), (y.className = l), (I.className = l), (I.style.cssText = h), (T.style.cssText = m), (b.style.cssText = E), (S.style.cssText = g), (A.style.cssText = v), T.appendChild(b), S.appendChild(A), I.appendChild(T), I.appendChild(S), y.appendChild(I), a.appendChild(y), p(T, 'scroll', N), p(S, 'scroll', C), (r(o).onExpandScroll = N), (r(o).onShrinkScroll = C);
                 }
-                function P() {
+                function w() {
                     function s(t, n, i) {
                         var r = b(t),
                             a = N(n),
@@ -316,7 +316,7 @@ e.exports = function (e) {
                     var p = r(o).style;
                     s(o, p.width, p.height);
                 }
-                function w() {
+                function P() {
                     if ((d('finalizeDomMutation invoked.'), !r(o))) {
                         d('Aborting because element has been uninstalled');
                         return;
@@ -328,7 +328,7 @@ e.exports = function (e) {
                     u(o);
                 }
                 function k() {
-                    d('Installing...'), y(), v(), n.add(0, I), n.add(1, x), n.add(2, P), n.add(3, w), n.add(4, M);
+                    d('Installing...'), y(), v(), n.add(0, I), n.add(1, x), n.add(2, w), n.add(3, P), n.add(4, M);
                 }
                 u || ((u = o), (o = e), (e = null)),
                     (e = e || {}),

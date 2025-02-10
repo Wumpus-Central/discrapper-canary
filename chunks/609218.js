@@ -36,8 +36,8 @@ function S(e) {
             _.default.track(y.rMx.PREMIUM_UPSELL_VIEWED, N), null == R || R();
         }, [R, N]);
     let x = D.length > 1 && S,
-        P = () => (2 === t ? T.hasTabParentContainer : 1 === t ? T.hasParentContainer : T.noParentContainer),
-        w = () => {
+        w = () => (2 === t ? T.hasTabParentContainer : 1 === t ? T.hasParentContainer : T.noParentContainer),
+        P = () => {
             _.default.track(y.rMx.PREMIUM_PROMOTION_OPENED, {
                 location_section: A,
                 location_object: y.qAy.NAVIGATION_LINK
@@ -62,7 +62,7 @@ function S(e) {
                 isVisible: !0
             }),
             (0, i.jsxs)('div', {
-                className: s()(T.container, P()),
+                className: s()(T.container, w()),
                 children: [
                     (0, i.jsx)(l.olH, {
                         onClick: C,
@@ -99,7 +99,7 @@ function S(e) {
                                 size: l.zxk.Sizes.SMALL,
                                 color: l.zxk.Colors.CUSTOM,
                                 look: l.zxk.Looks.LINK,
-                                onClick: w,
+                                onClick: P,
                                 children: I.intl.string(I.t.ZnqyZ2)
                             }),
                             (0, i.jsx)(g.Z, {

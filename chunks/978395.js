@@ -26,8 +26,8 @@ var i = n(200651),
     C = n(981631),
     R = n(112650);
 function O(e) {
-    let { user: t, currentUser: n, displayProfile: O, guild: D, isHovering: L, onOpenProfile: x, channelId: P, onClose: w } = e,
-        M = d.ZP.useName(null == D ? void 0 : D.id, P, t),
+    let { user: t, currentUser: n, displayProfile: O, guild: D, isHovering: L, onOpenProfile: x, channelId: w, onClose: P } = e,
+        M = d.ZP.useName(null == D ? void 0 : D.id, w, t),
         { relationshipType: k, originApplicationId: U } = (0, r.cj)([u.Z], () => ({
             relationshipType: u.Z.getRelationshipType(t.id),
             originApplicationId: u.Z.getOriginApplicationId(t.id)
@@ -56,7 +56,7 @@ function O(e) {
                 tags: (0, i.jsx)(_.Z, {
                     displayProfile: O,
                     profileType: N.y0.BITE_SIZE,
-                    onClose: w
+                    onClose: P
                 }),
                 nicknameIcons: (0, i.jsxs)(i.Fragment, {
                     children: [
@@ -75,7 +75,7 @@ function O(e) {
                     children: (0, i.jsx)(g.Z, {
                         user: t,
                         guildId: null == D ? void 0 : D.id,
-                        channelId: P,
+                        channelId: w,
                         applicationId: B ? U : void 0
                     })
                 }),
@@ -88,7 +88,7 @@ function O(e) {
                                 user: t,
                                 isGameRelationship: !0,
                                 applicationId: e.applicationId,
-                                channelId: P
+                                channelId: w
                             })
                         },
                         e.applicationId
@@ -112,12 +112,12 @@ function O(e) {
                       user: t,
                       bio: null == O ? void 0 : O.bio,
                       hidePersonalInformation: Z,
-                      onClose: w
+                      onClose: P
                   }),
             F &&
                 (0, i.jsx)(p.Z, {
                     isPremiumUser: V,
-                    onInteraction: w,
+                    onInteraction: P,
                     className: R.upsell
                 }),
             (0, i.jsx)(h.Z, {
@@ -125,7 +125,7 @@ function O(e) {
                 currentUser: n,
                 displayProfile: O,
                 guildId: null == D ? void 0 : D.id,
-                onClose: w,
+                onClose: P,
                 className: R.activity
             }),
             null != D &&

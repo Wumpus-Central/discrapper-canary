@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(653041), n(47120);
+n.d(t, { Z: () => w }), n(653041), n(47120);
 var i,
     r = n(392711),
     a = n.n(r),
@@ -122,7 +122,7 @@ class x extends (i = l.ZP.PersistedStore) {
     }
 }
 E(x, 'displayName', 'SoundboardEventStore'), E(x, 'persistKey', 'SoundboardEventStore');
-let P = new x(u.Z, {
+let w = new x(u.Z, {
     GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY: T,
     GUILD_SOUNDBOARD_SOUND_PLAY_START: b,
     USER_SETTINGS_PROTO_UPDATE: O

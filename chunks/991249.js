@@ -1,13 +1,13 @@
 n.d(e, { Z: () => c });
-var i = n(200651);
+var a = n(200651);
 n(192379);
-var a = n(481060),
+var i = n(481060),
     o = n(239091),
     r = n(765250),
     l = n(388032);
 function c(t, e) {
-    return (0, i.jsx)(
-        a.S89,
+    return (0, a.jsx)(
+        i.S89,
         {
             label: l.intl.string(l.t.XQQQFB),
             checked: e,

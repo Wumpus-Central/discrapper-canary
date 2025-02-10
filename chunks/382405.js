@@ -30,8 +30,8 @@ var r = n(120356),
     D = n(944486),
     L = n(960870),
     x = n(139793),
-    P = n(502762),
-    w = n(652853),
+    w = n(502762),
+    P = n(652853),
     M = n(336383),
     k = n(373826),
     U = n(228168),
@@ -40,7 +40,7 @@ var r = n(120356),
     Z = n(309584);
 function F(e) {
     let { user: t, entry: n, header: r, className: s, onClose: l } = e,
-        { profileType: c } = (0, w.z)(),
+        { profileType: c } = (0, P.z)(),
         f = { [Z.fullSize]: c === U.y0.FULL_SIZE },
         { largeImage: _ } = (0, m.rv)({
             entry: n,
@@ -67,7 +67,7 @@ function F(e) {
         }),
         T = () => (n.content_type === o.s.TOP_GAME ? b.Hs.map((e, t) => (0, i.jsx)(e, { entry: n }, 'entry-'.concat(t))) : I.W.map((e, t) => (0, i.jsx)(e, { entry: n }, 'entry-'.concat(t))));
     return null == h
-        ? (0, i.jsxs)(P.Z.Overlay, {
+        ? (0, i.jsxs)(w.Z.Overlay, {
               className: a()(Z.card, s),
               ref: y,
               children: [
@@ -151,7 +151,7 @@ function F(e) {
 }
 function V(e) {
     let { user: t, entry: n, header: r, className: s, onClose: o } = e,
-        { profileType: l } = (0, w.z)(),
+        { profileType: l } = (0, P.z)(),
         c = { [Z.fullSize]: l === U.y0.FULL_SIZE },
         { largeImage: f } = (0, m.rv)({ entry: n }),
         { url: _ } = n.extra,
@@ -246,7 +246,7 @@ function V(e) {
 function j(e) {
     var t, n;
     let { user: r, entry: s, header: o, className: l, onClose: u } = e,
-        { profileType: c } = (0, w.z)(),
+        { profileType: c } = (0, P.z)(),
         f = { [Z.fullSize]: c === U.y0.FULL_SIZE },
         { largeImage: _ } = (0, m.rv)({ entry: s }),
         { analyticsLocations: p } = (0, d.ZP)(),
@@ -321,7 +321,7 @@ function j(e) {
 }
 function H(e) {
     let { user: t, entry: n, header: r, className: s, onClose: o } = e,
-        { profileType: u } = (0, w.z)(),
+        { profileType: u } = (0, P.z)(),
         g = { [Z.fullSize]: u === U.y0.FULL_SIZE },
         { largeImage: v } = (0, m.rv)({
             entry: n,

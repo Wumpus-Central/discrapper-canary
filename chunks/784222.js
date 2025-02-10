@@ -1,8 +1,8 @@
 n.d(t, {
     Bg: () => M,
     Ni: () => U,
-    YH: () => w,
-    ld: () => P,
+    YH: () => P,
+    ld: () => w,
     rf: () => k
 }),
     n(47120),
@@ -37,11 +37,11 @@ var i = n(192379),
     D = n(149203),
     L = n(185923),
     x = n(388032),
-    P = (function (e) {
+    w = (function (e) {
         return (e[(e.EMOJI = 0)] = 'EMOJI'), (e[(e.CREATE_EMOJI = 1)] = 'CREATE_EMOJI'), (e[(e.EXPAND_OR_COLLAPSE_EMOJIS = 2)] = 'EXPAND_OR_COLLAPSE_EMOJIS'), (e[(e.SOUNDMOJI = 3)] = 'SOUNDMOJI'), e;
     })({});
-let w = (e) => {
-    let { channel: t, collapsedSections: n, includeCreateEmojiButton: r = !0, pickerIntention: l, emojiSearchResults: p, gridWidth: h, emojiPaddingHorizontal: P, emojiSpriteSize: w, shouldShowSoundmojiInEmojiPicker: M } = e,
+let P = (e) => {
+    let { channel: t, collapsedSections: n, includeCreateEmojiButton: r = !0, pickerIntention: l, emojiSearchResults: p, gridWidth: h, emojiPaddingHorizontal: w, emojiSpriteSize: P, shouldShowSoundmojiInEmojiPicker: M } = e,
         k = (0, o.e7)([u.ZP], () => u.ZP.categories),
         U = (0, o.e7)([y.Z], () => y.Z.getGuild(null == t ? void 0 : t.getGuildId()), [t]),
         G = null == t ? null : t.getGuildId(),
@@ -86,7 +86,7 @@ let w = (e) => {
             c = 0,
             d = 0;
         if (null != B && null != h) {
-            let f = Math.floor(h / (w + 2 * P)),
+            let f = Math.floor(h / (P + 2 * w)),
                 m = 3 * f,
                 g = (s, _) => {
                     let p = new Map(),
@@ -108,11 +108,11 @@ let w = (e) => {
                         O = null != y && b && en && ei === N.B.WITH_TOP_LIST && et[y.id].length < y.getMaxEmojiSlots(),
                         L = r && q && null != y && (A || R || O);
                     L && O && v.length === f && v.shift();
-                    let P = v.length > m && null != y && _.isNitroLocked,
-                        M = P && !z.has(y.id);
+                    let w = v.length > m && null != y && _.isNitroLocked,
+                        M = w && !z.has(y.id);
                     M && v.splice(m - 1);
                     let k = en && L && !h,
-                        U = Math.ceil((L || P ? v.length + 1 : v.length) / f),
+                        U = Math.ceil((L || w ? v.length + 1 : v.length) / f),
                         G = [];
                     for (let e = 0; e < U; e++) {
                         let t = 0 === e,
@@ -123,7 +123,7 @@ let w = (e) => {
                                 return {
                                     type: 0,
                                     emoji: e,
-                                    size: w,
+                                    size: P,
                                     isDisabled: p.get(e),
                                     rowIndex: d,
                                     columnIndex: k && t ? n + 1 : n,
@@ -141,7 +141,7 @@ let w = (e) => {
                                         type: 1,
                                         guildId: y.id,
                                         name: x.intl.string(x.t['Z/r7IS']),
-                                        size: w,
+                                        size: P,
                                         rowIndex: d,
                                         columnIndex: 0,
                                         visibleRowIndex: c
@@ -157,19 +157,19 @@ let w = (e) => {
                                     type: 1,
                                     guildId: y.id,
                                     name: x.intl.string(x.t['Z/r7IS']),
-                                    size: w,
+                                    size: P,
                                     rowIndex: e,
                                     columnIndex: t.length,
                                     visibleRowIndex: c
                                 });
                             }
-                            if (P && e === U - 1) {
+                            if (w && e === U - 1) {
                                 let t = G[e];
                                 t.push({
                                     type: 2,
                                     guildId: y.id,
                                     name: x.intl.string(x.t.NZI2Zm),
-                                    size: w,
+                                    size: P,
                                     rowIndex: e,
                                     columnIndex: t.length,
                                     visibleRowIndex: c,
@@ -324,7 +324,7 @@ let w = (e) => {
             rowCountBySection: e,
             sectionDescriptors: i
         };
-    }, [B, h, w, P, p, n, en, ei, et, r, q, z, t, l, Y, W, X, k, U, K, j, H, V, F, Z, J, er, M]);
+    }, [B, h, P, w, p, n, en, ei, et, r, q, z, t, l, Y, W, X, k, U, K, j, H, V, F, Z, J, er, M]);
 };
 var M = (function (e) {
     return (e[(e.PREMIUM = 0)] = 'PREMIUM'), (e[(e.ROLE_SUBSCRIPTION = 1)] = 'ROLE_SUBSCRIPTION'), e;

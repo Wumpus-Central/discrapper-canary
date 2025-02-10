@@ -42,12 +42,12 @@ let C = {},
         lastRequest: null,
         lastResponse: null
     },
-    P = [],
     w = [],
+    P = [],
     M = 75,
     k = 25;
 function U() {
-    P = h.Z.getProps()
+    w = h.Z.getProps()
         .results.filter((e) => e.type === _.h8.TEXT_CHANNEL && 0 === e.record.type)
         .map((e) => e.record.id);
 }
@@ -70,7 +70,7 @@ class G extends (o = c.ZP.PersistedStore) {
     }
     summaries(e) {
         var t;
-        return null !== (t = C[e]) && void 0 !== t ? t : w;
+        return null !== (t = C[e]) && void 0 !== t ? t : P;
     }
     shouldShowTopicsBar() {
         return i;
@@ -121,7 +121,7 @@ class G extends (o = c.ZP.PersistedStore) {
         let { withQuickSwitcher: t, withChannelAffinities: n, withUnreads: i, numChannels: r = k } = e,
             a = [];
         return (
-            t && (a = a.concat(P)),
+            t && (a = a.concat(w)),
             n && (a = a.concat(D.map((e) => e.channel_id))),
             i &&
                 (a = a.filter((e) => {

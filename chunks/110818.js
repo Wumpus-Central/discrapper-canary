@@ -2,7 +2,7 @@ n.d(t, {
     Db: () => C,
     HC: () => I,
     NQ: () => E,
-    fe: () => w
+    fe: () => P
 }),
     n(47120);
 var i,
@@ -482,7 +482,7 @@ let O = {
         EASING_MIDDLE: f.Z.Easing.bezier(0.3, 0.01, 0, 0.99),
         EASING_END: f.Z.Easing.bezier(0, -0.01, 0.99, 0)
     });
-function P(e) {
+function w(e) {
     let { animate: t } = e,
         [n, i] = l.useState(0),
         r = (0, _.bYB)(
@@ -552,7 +552,7 @@ function P(e) {
         })
     });
 }
-class w extends (s = l.PureComponent) {
+class P extends (s = l.PureComponent) {
     static getNextScene(e) {
         switch (e) {
             case 'entry':
@@ -587,9 +587,9 @@ class w extends (s = l.PureComponent) {
                     pauseWhileUnfocused: a,
                     pause: n
                 }),
-                (0, o.jsx)(P, { animate: !n && 'stars' === t })
+                (0, o.jsx)(w, { animate: !n && 'stars' === t })
             ]
         });
     }
 }
-h(w, 'Scenes', R);
+h(P, 'Scenes', R);

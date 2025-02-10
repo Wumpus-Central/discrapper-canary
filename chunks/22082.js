@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(47120);
+n.d(t, { Z: () => P }), n(47120);
 var i,
     l,
     r,
@@ -74,7 +74,7 @@ class A extends (i = s.ZP.Store) {
               writable: !0
           })
         : (A[l] = r);
-let b = new A(a.Z, {
+let P = new A(a.Z, {
     BULK_CLEAR_RECENTS: function (e) {
         let { guildId: t, channelIds: n } = e;
         if (null == S[t]) return !1;

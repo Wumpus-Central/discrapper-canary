@@ -55,8 +55,8 @@ let b = (e) => {
             L = N === v.p9.TIER_2;
         n = N === v.p9.TIER_0 ? d.Z : N === v.p9.TIER_1 ? f.Z : c.Z;
         let x = (0, s.e7)([l.Z], () => l.Z.useReducedMotion),
-            P = (0, m.Ng)(),
-            w = null == P ? void 0 : null === (t = P.discount) || void 0 === t ? void 0 : t.amount;
+            w = (0, m.Ng)(),
+            P = null == w ? void 0 : null === (t = w.discount) || void 0 === t ? void 0 : t.amount;
         return (0, i.jsxs)('div', {
             'aria-hidden': !0,
             className: a()(
@@ -86,7 +86,7 @@ let b = (e) => {
                                 (O || D) &&
                                     (0, i.jsx)(b, {
                                         isTier0: N === v.p9.TIER_0,
-                                        discountAmount: D ? w : void 0
+                                        discountAmount: D ? P : void 0
                                     })
                             ]
                         }),

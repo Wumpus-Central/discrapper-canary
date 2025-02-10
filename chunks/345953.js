@@ -113,10 +113,10 @@ function L(e, t, n) {
 function x(e, t, n) {
     (0, h.RF)(e, t, { muted: n }), D.cancel(), M();
 }
-function P(e, t, n) {
+function w(e, t, n) {
     (0, h.RF)(e, t, { soundboardMuted: n }), D.cancel(), M();
 }
-let w = r().debounce(u.On, 500, { maxWait: 500 });
+let P = r().debounce(u.On, 500, { maxWait: 500 });
 function M() {
     g.hW.updateAsync(
         'audioContextSettings',
@@ -140,7 +140,7 @@ function k(e) {
     if (n === f.default.getId()) return;
     let r = c.Z.getRemoteSessionId();
     null != r &&
-        w(r, n, t, {
+        P(r, n, t, {
             muted: _.Z.isLocalMute(n, t),
             volume: i
         }),
@@ -152,7 +152,7 @@ function U(e) {
 }
 function G(e) {
     let { context: t, userId: n } = e;
-    n !== f.default.getId() && P(t, n, d.Z.isLocalSoundboardMuted(n));
+    n !== f.default.getId() && w(t, n, d.Z.isLocalSoundboardMuted(n));
 }
 class B extends l.Z {
     constructor(...e) {

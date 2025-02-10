@@ -28,10 +28,10 @@ async function E(e) {
     let D = _.Z.getUserProfile(v),
         L = u.Z.getPrimaryActivity(v),
         x = u.Z.getStatus(v),
-        P = u.Z.isMobileOnline(v),
-        { party: w, assets: M, application_id: k } = null != L ? L : {},
+        w = u.Z.isMobileOnline(v),
+        { party: P, assets: M, application_id: k } = null != L ? L : {},
         U = null != k ? l.Z.getApplication(k) : null,
-        G = P ? p.j28.ONLINE_MOBILE : p.j28.ONLINE_DESKTOP,
+        G = w ? p.j28.ONLINE_MOBILE : p.j28.ONLINE_DESKTOP,
         B = x === p.Skl.ONLINE ? G : x;
     (m = await (0, r.ZDy)(
         async () => {
@@ -64,9 +64,9 @@ async function E(e) {
             sku_id: null !== (s = null == U ? void 0 : U.primarySkuId) && void 0 !== s ? s : null,
             is_friend: c.Z.isFriend(v),
             has_images: !!(null !== (E = null == M ? void 0 : M.large_image) && void 0 !== E ? E : null == M ? void 0 : M.small_image),
-            party_max: null == w ? void 0 : null === (t = w.size) || void 0 === t ? void 0 : t[1],
-            party_id: null == w ? void 0 : w.id,
-            party_platform: (0, h.Ps)(null == w ? void 0 : w.id) ? p.ABu.SPOTIFY : null,
+            party_max: null == P ? void 0 : null === (t = P.size) || void 0 === t ? void 0 : t[1],
+            party_id: null == P ? void 0 : P.id,
+            party_platform: (0, h.Ps)(null == P ? void 0 : P.id) ? p.ABu.SPOTIFY : null,
             game_platform: (0, o.Z)(L),
             profile_user_status: B,
             profile_has_nitro_customization: (null == D ? void 0 : D.banner) != null,

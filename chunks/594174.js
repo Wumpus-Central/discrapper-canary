@@ -188,11 +188,11 @@ function L(e) {
 function x(e) {
     if (null != e.users) for (let t of e.users) !(t.id in g && L(t)) && (g[t.id] = new l.Z(t));
 }
-function P(e) {
+function w(e) {
     let { user: t } = e;
     t.id !== d.default.getId() && A(t);
 }
-function w(e) {
+function P(e) {
     let { user: t } = e;
     A(t);
 }
@@ -514,8 +514,8 @@ class eA extends f.Z {
             UPDATE_CLIENT_PREMIUM_TYPE: M,
             OVERLAY_INITIALIZE: x,
             CACHE_LOADED: (e) => this.handleLoadCache(e),
-            USER_UPDATE: P,
-            CURRENT_USER_UPDATE: w,
+            USER_UPDATE: w,
+            CURRENT_USER_UPDATE: P,
             PRESENCE_UPDATES: q,
             SEARCH_FINISH: G,
             MOD_VIEW_SEARCH_FINISH: G,

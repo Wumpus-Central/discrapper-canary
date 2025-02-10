@@ -28,8 +28,8 @@ var i = n(687249),
     D = '[object Date]',
     L = '[object Error]',
     x = '[object Function]',
-    P = '[object GeneratorFunction]',
-    w = '[object Map]',
+    w = '[object GeneratorFunction]',
+    P = '[object Map]',
     M = '[object Number]',
     k = '[object Object]',
     U = '[object RegExp]',
@@ -51,23 +51,23 @@ var i = n(687249),
     $ = {};
 function ee(e, t, n, R, O, D) {
     var L,
-        w = t & S,
+        P = t & S,
         M = t & A,
         U = t & N;
     if ((n && (L = O ? n(e, R, O, D) : n(e)), void 0 !== L)) return L;
     if (!I(e)) return e;
     var G = E(e);
     if (G) {
-        if (((L = h(e)), !w)) return u(e, L);
+        if (((L = h(e)), !P)) return u(e, L);
     } else {
         var B = p(e),
-            Z = B == x || B == P;
-        if (v(e)) return l(e, w);
+            Z = B == x || B == w;
+        if (v(e)) return l(e, P);
         if (B == k || B == C || (Z && !O)) {
-            if (((L = M || Z ? {} : g(e)), !w)) return M ? d(e, o(L, e)) : c(e, s(L, e));
+            if (((L = M || Z ? {} : g(e)), !P)) return M ? d(e, o(L, e)) : c(e, s(L, e));
         } else {
             if (!$[B]) return O ? e : {};
-            L = m(e, B, w);
+            L = m(e, B, P);
         }
     }
     D || (D = new i());
@@ -91,4 +91,4 @@ function ee(e, t, n, R, O, D) {
         L
     );
 }
-($[C] = $[R] = $[V] = $[j] = $[O] = $[D] = $[H] = $[Y] = $[W] = $[K] = $[z] = $[w] = $[M] = $[k] = $[U] = $[G] = $[B] = $[Z] = $[q] = $[Q] = $[X] = $[J] = !0), ($[L] = $[x] = $[F] = !1), (e.exports = ee);
+($[C] = $[R] = $[V] = $[j] = $[O] = $[D] = $[H] = $[Y] = $[W] = $[K] = $[z] = $[P] = $[M] = $[k] = $[U] = $[G] = $[B] = $[Z] = $[q] = $[Q] = $[X] = $[J] = !0), ($[L] = $[x] = $[F] = !1), (e.exports = ee);

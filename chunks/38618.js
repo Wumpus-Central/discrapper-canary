@@ -42,8 +42,8 @@ b.Wb.dispatcher.getDispatchHandler = A.Z;
 let D = new u.Z('ConnectionStore'),
     L = 100,
     x = 0,
-    P = null,
-    w = !0,
+    w = null,
+    P = !0,
     M = null;
 function k() {
     return b.Wb.isClosed() ? (D.verbose('Socket is reconnecting because of starting new session'), b.Wb.connect()) : (D.verbose('Socket is not reconnecting during a new session because it is not closed'), !1);
@@ -55,12 +55,12 @@ function G() {
     return D.verbose('session refresh dispatched', { isEstablished: b.Wb.isSessionEstablished() }), !!b.Wb.isSessionEstablished() && (b.Wb.close(), b.Wb.connect());
 }
 async function B(e) {
-    (x = Date.now()), (P = e.sessionId), b.RR.handleConnectionOpen();
+    (x = Date.now()), (w = e.sessionId), b.RR.handleConnectionOpen();
     let t = {},
         n = E.Z.getVoiceChannelId();
     if (null != n) {
         var i, r, a, s, o, u, c, d;
-        if ((null === (o = window) || void 0 === o ? void 0 : null === (s = o.performance) || void 0 === s ? void 0 : null === (a = s.getEntriesByType) || void 0 === a ? void 0 : null === (r = a.call(s, 'navigation')) || void 0 === r ? void 0 : null === (i = r[0]) || void 0 === i ? void 0 : i.type) !== 'reload' && (null === (u = await (null == O ? void 0 : null === (d = O.processUtils) || void 0 === d ? void 0 : null === (c = d.getLastCrash) || void 0 === c ? void 0 : c.call(d))) || void 0 === u ? void 0 : u.rendererCrashReason) == null && w) m.Z.setLastSessionVoiceChannelId(null != n ? n : null), l.default.selectVoiceChannel(null);
+        if ((null === (o = window) || void 0 === o ? void 0 : null === (s = o.performance) || void 0 === s ? void 0 : null === (a = s.getEntriesByType) || void 0 === a ? void 0 : null === (r = a.call(s, 'navigation')) || void 0 === r ? void 0 : null === (i = r[0]) || void 0 === i ? void 0 : i.type) !== 'reload' && (null === (u = await (null == O ? void 0 : null === (d = O.processUtils) || void 0 === d ? void 0 : null === (c = d.getLastCrash) || void 0 === c ? void 0 : c.call(d))) || void 0 === u ? void 0 : u.rendererCrashReason) == null && P) m.Z.setLastSessionVoiceChannelId(null != n ? n : null), l.default.selectVoiceChannel(null);
         else {
             let e = p.Z.getChannel(n);
             null != e &&
@@ -70,7 +70,7 @@ async function B(e) {
                 });
         }
     }
-    b.GC.update(t, !0), (w = !1);
+    b.GC.update(t, !0), (P = !1);
 }
 function Z() {
     D.verbose('connection closed dispatched'), (x = Date.now());
@@ -99,7 +99,7 @@ function Y(e) {
     let { voiceStates: t } = e;
     return t.reduce((e, t) => {
         if (f.default.getId() !== t.userId) return e;
-        if (t.sessionId === P)
+        if (t.sessionId === w)
             b.GC.setState({
                 guildId: t.guildId,
                 channelId: t.channelId

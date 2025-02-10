@@ -50,7 +50,7 @@ function L() {
 function x(e, t) {
     return (null != A && A.applicationId === e && A.branchId === t) || (null != N && N.applicationId === e && N.branchId === t);
 }
-function P() {
+function w() {
     let e = T[0];
     if (null != e) {
         let { comboId: t, action: n } = e,
@@ -63,7 +63,7 @@ function P() {
         }
     }
 }
-function w(e, t) {
+function P(e, t) {
     let n = (0, _.Tu)(e, t);
     return T.findIndex((e) => e.comboId === n);
 }
@@ -75,15 +75,15 @@ function M(e, t, n, i) {
         },
         s = b.indexOf(r);
     -1 !== s && b.splice(s, 1);
-    let o = w(e, t);
-    0 !== o && (n ? -1 === o && (T.push(a), P()) : (o > 0 && T.splice(o, 1), T.unshift(a), P())), !n && S && p.Z.resume(), L();
+    let o = P(e, t);
+    0 !== o && (n ? -1 === o && (T.push(a), w()) : (o > 0 && T.splice(o, 1), T.unshift(a), w())), !n && S && p.Z.resume(), L();
 }
 function k(e, t) {
     let n = (0, _.Tu)(e, t),
         i = b.indexOf(n);
     -1 !== i && b.splice(i, 1);
-    let r = w(e, t);
-    -1 !== r && (T.splice(r, 1), L()), P();
+    let r = P(e, t);
+    -1 !== r && (T.splice(r, 1), L()), w();
 }
 function U(e) {
     let { applicationId: t, branchId: n } = e;
@@ -106,9 +106,9 @@ function F(e) {
 }
 function V(e) {
     let { applicationId: t, branchId: n } = e,
-        i = w(t, n);
+        i = P(t, n);
     if (i < 1) return !1;
-    T.splice(0, 0, T.splice(i, 1)[0]), P(), S && p.Z.resume(), L();
+    T.splice(0, 0, T.splice(i, 1)[0]), w(), S && p.Z.resume(), L();
 }
 function j(e) {
     let { applicationId: t, branchId: n } = e,
@@ -118,7 +118,7 @@ function j(e) {
 }
 function H(e) {
     let { state: t } = e;
-    C || ((C = !0), P(), S || p.Z.resume());
+    C || ((C = !0), w(), S || p.Z.resume());
     let n = S;
     (S = t.paused), (A = t.currentTask), (N = t.nextTask);
     let i = !1;
@@ -143,7 +143,7 @@ function H(e) {
         }
         return !0;
     })),
-        P(),
+        w(),
         (i || n !== S) && L();
 }
 function Y() {
@@ -212,7 +212,7 @@ class X extends (i = s.ZP.Store) {
         return S;
     }
     getQueuePosition(e, t) {
-        return w(e, t);
+        return P(e, t);
     }
     isCorruptInstallation() {
         return O;

@@ -5,7 +5,7 @@ n.d(t, {
     ZP: () => C,
     _Z: () => D,
     c7: () => R,
-    j3: () => P
+    j3: () => w
 }),
     n(177593);
 var i = n(200651),
@@ -180,7 +180,7 @@ function x() {
         })
     });
 }
-function P(e) {
+function w(e) {
     var t, n;
     let { location: a } = e;
     r.useEffect(() => {

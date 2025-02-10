@@ -73,7 +73,7 @@ function f(e) {
             },
             [t, h, L]
         ),
-        P = i.useCallback(
+        w = i.useCallback(
             function () {
                 let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
                     [n, i] = null != m ? m(f, _) : [f, _];
@@ -94,9 +94,9 @@ function f(e) {
             },
             [g, f, _, m, t, L]
         ),
-        [w, M] = i.useState(!1);
+        [P, M] = i.useState(!1);
     i.useEffect(() => {
-        if (!w || !S) return;
+        if (!P || !S) return;
         M(!1);
         let e = c(u(t, f, _));
         if (null != e) {
@@ -106,7 +106,7 @@ function f(e) {
         A(!1);
         let n = c(u(t));
         null != n && L(n);
-    }, [t, w, S, L, f, _]);
+    }, [t, P, S, L, f, _]);
     let k = i.useCallback((e) => {
         T.current && null == e && M(!0);
     }, []);
@@ -120,7 +120,7 @@ function f(e) {
             (e) => {
                 if (!T.current) return;
                 if (!I && o.includes(e.key) && !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) && e.currentTarget === e.target) {
-                    e.preventDefault(), e.stopPropagation(), P();
+                    e.preventDefault(), e.stopPropagation(), w();
                     return;
                 }
                 let t = l(e);
@@ -140,9 +140,9 @@ function f(e) {
                         e.preventDefault(), e.stopPropagation(), g({ type: t }), null != p ? p(f, _, e) : null != b && b.click();
                 }
             },
-            [P, g, y, b, p, f, _]
+            [w, g, y, b, p, f, _]
         ),
-        G = i.useCallback((e) => (e.currentTarget !== e.target ? (S || (A(!0), O(!0)), !1) : S ? (P(!1), !1) : void (E && null != b ? x(f, _) : P(!0))), [S, E, b, P, x, f, _]),
+        G = i.useCallback((e) => (e.currentTarget !== e.target ? (S || (A(!0), O(!0)), !1) : S ? (w(!1), !1) : void (E && null != b ? x(f, _) : w(!0))), [S, E, b, w, x, f, _]),
         B = i.useCallback((e) => {
             if (e.target !== e.currentTarget) {
                 if (e.currentTarget.contains(e.relatedTarget)) return !1;

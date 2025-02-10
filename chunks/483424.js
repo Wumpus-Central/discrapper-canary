@@ -30,11 +30,11 @@ function v(e) {
             return e === E.Sk.OFFLINE || e === E.Sk.INVISIBLE;
         }),
         { recentActivityEnabled: x } = (0, u.i)({ location: 'UserProfileFeaturedActivity' }),
-        { voiceActivityCardEnabled: P } = (0, c.o)({ location: 'UserProfileFeaturedActivity' }),
-        w = (0, f.Z)(t.id, 'UserProfileFeaturedActivity'),
-        M = r.useMemo(() => (D ? S.find(s.Ae) : w), [D, S, w]);
+        { voiceActivityCardEnabled: w } = (0, c.o)({ location: 'UserProfileFeaturedActivity' }),
+        P = (0, f.Z)(t.id, 'UserProfileFeaturedActivity'),
+        M = r.useMemo(() => (D ? S.find(s.Ae) : P), [D, S, P]);
     return L || null == A
-        ? L || !P || null == C || O
+        ? L || !w || null == C || O
             ? L || null == N
                 ? x && null != M
                     ? (0, i.jsx)(h.Z, {

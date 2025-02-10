@@ -198,8 +198,8 @@ var m = {
         var n;
         return f({}, e, (((n = {})[t] = void 0), n));
     },
-    P = [m.NOSCRIPT, m.SCRIPT, m.STYLE],
-    w = function (e, t) {
+    w = [m.NOSCRIPT, m.SCRIPT, m.STYLE],
+    P = function (e, t) {
         return void 0 === t && (t = !0), !1 === t ? String(e) : String(e).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#x27;');
     },
     M = function (e) {
@@ -241,7 +241,7 @@ var m = {
                         return (function (e, t, n, i) {
                             var r = M(n),
                                 a = D(t);
-                            return r ? '<' + e + ' data-rh="true" ' + r + '>' + w(a, i) + '</' + e + '>' : '<' + e + ' data-rh="true">' + w(a, i) + '</' + e + '>';
+                            return r ? '<' + e + ' data-rh="true" ' + r + '>' + P(a, i) + '</' + e + '>' : '<' + e + ' data-rh="true">' + P(a, i) + '</' + e + '>';
                         })(e, t.title, t.titleAttributes, n);
                     }
                 };
@@ -268,11 +268,11 @@ var m = {
                                             return !('innerHTML' === e || 'cssText' === e);
                                         })
                                         .reduce(function (e, t) {
-                                            var r = void 0 === i[t] ? t : t + '="' + w(i[t], n) + '"';
+                                            var r = void 0 === i[t] ? t : t + '="' + P(i[t], n) + '"';
                                             return e ? e + ' ' + r : r;
                                         }, ''),
                                     a = i.innerHTML || i.cssText || '',
-                                    s = -1 === P.indexOf(e);
+                                    s = -1 === w.indexOf(e);
                                 return t + '<' + e + ' data-rh="true" ' + r + (s ? '/>' : '>' + a + '</' + e + '>');
                             }, '');
                         })(e, t, n);

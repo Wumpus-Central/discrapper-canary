@@ -19,11 +19,11 @@ var h = n(122289),
     v = n(713011);
 let y = new Set([p.h8.SKU_SELECT, p.h8.AWAITING_AUTHENTICATION, p.h8.AWAITING_PURCHASE_TOKEN_AUTH, p.h8.CONFIRM]);
 function I(e) {
-    let { steps: t, currentStep: n, body: s, paymentError: I, header: T, footer: b, isGift: S = !1, giftMessage: A = E.intl.string(E.t.DrgnS0), hideBreadcrumbs: N = !1, isLoading: C = !1, purchaseError: R, purchaseErrorBlockRef: O, planError: D, onScroll: L, scrollerClassName: x, hasCurrencies: P = !1 } = e,
-        w = null;
-    null != I && null == (0, p.ly)(I) ? (w = I) : null != R ? (w = R) : null != D && (w = D);
-    let M = null != w ? w.message : '';
-    null != w && w instanceof d.HF && (w.code === f.SM.CARD_DECLINED && P && (M += ' '.concat(E.intl.string(E.t.iWvwQU))), w.code === f.SM.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (M = E.intl.string(E.t.ypuSd3)), w.code === g.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (M = E.intl.string(E.t.mXMmWF)));
+    let { steps: t, currentStep: n, body: s, paymentError: I, header: T, footer: b, isGift: S = !1, giftMessage: A = E.intl.string(E.t.DrgnS0), hideBreadcrumbs: N = !1, isLoading: C = !1, purchaseError: R, purchaseErrorBlockRef: O, planError: D, onScroll: L, scrollerClassName: x, hasCurrencies: w = !1 } = e,
+        P = null;
+    null != I && null == (0, p.ly)(I) ? (P = I) : null != R ? (P = R) : null != D && (P = D);
+    let M = null != P ? P.message : '';
+    null != P && P instanceof d.HF && (P.code === f.SM.CARD_DECLINED && w && (M += ' '.concat(E.intl.string(E.t.iWvwQU))), P.code === f.SM.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (M = E.intl.string(E.t.ypuSd3)), P.code === g.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (M = E.intl.string(E.t.mXMmWF)));
     let { stripe: k } = (0, _.JL)();
     C = C || null == k;
     let U = r.useRef(new l.V7());
@@ -76,7 +76,7 @@ function I(e) {
                     (0, i.jsxs)('div', {
                         className: v.bodyWrapper,
                         children: [
-                            null == w
+                            null == P
                                 ? null
                                 : (0, i.jsx)('div', {
                                       className: v.errorBlockWrapper,

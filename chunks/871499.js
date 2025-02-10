@@ -100,11 +100,11 @@ function b(e) {
     let { color: t, ignoreColorForCaret: n = !1, isActive: a = !1, className: o, iconClassName: b, onPopoutClick: S, popoutOpen: A = !1, popoutDisabled: N = !1, premiumGlow: C = !1, fullRegionButton: R = !1, forceGroupedButtons: O = !1, ...D } = e,
         L = (0, m.Z)(t, a),
         x = (0, m.Z)(n ? void 0 : t, !1),
-        P = (0, u.Z)('(max-width: 456px)'),
-        w = r.useRef(null),
+        w = (0, u.Z)('(max-width: 456px)'),
+        P = r.useRef(null),
         M = r.useContext(p.h9);
     r.useEffect(() => {
-        null != w.current && (M ? w.current.pause() : w.current.play());
+        null != P.current && (M ? P.current.pause() : P.current.play());
     }, [M]);
     let { groupedButtons: k } = (0, f.ZP)({ location: 'CenterControlButton' }),
         U = O || k,
@@ -114,9 +114,9 @@ function b(e) {
             grow: !1,
             onContextMenu: S,
             iconClassName: s()(b, E.centerIcon, U && E.experimentControlIcon, U && R && null == S && E.fullRegionIcon),
-            className: s()(P ? o : null, E.staticButton, E.centerButton, a && E.active, ...G)
+            className: s()(w ? o : null, E.staticButton, E.centerButton, a && E.active, ...G)
         });
-    return P
+    return w
         ? B
         : U
           ? (0, i.jsxs)('div', {
@@ -155,7 +155,7 @@ function b(e) {
                                 (0, i.jsx)('div', {
                                     className: E.glow,
                                     children: (0, i.jsx)(d.Z, {
-                                        ref: w,
+                                        ref: P,
                                         loop: !0,
                                         autoPlay: !0,
                                         className: E.glowVideo,

@@ -85,16 +85,16 @@ let y = 10800000,
                 throw Error('Unsupported BlobMask circle size: '.concat(e));
         }
     },
-    P = (null === (i = window.SVGPathElement) || void 0 === i ? void 0 : i.prototype.getTotalLength) != null,
-    w = new Map();
+    w = (null === (i = window.SVGPathElement) || void 0 === i ? void 0 : i.prototype.getTotalLength) != null,
+    P = new Map();
 function M(e, t) {
     let n = ''.concat(e, '-').concat(t);
-    if (w.has(n)) return w.get(n);
+    if (P.has(n)) return P.get(n);
     let i = k(e, t);
-    return w.set(n, i), i;
+    return P.set(n, i), i;
 }
 function k(e, t) {
-    return P ? (0, l.interpolate)(x(e), L(t), { maxSegmentLength: 1.5 }) : U;
+    return w ? (0, l.interpolate)(x(e), L(t), { maxSegmentLength: 1.5 }) : U;
 }
 function U(e) {
     return e.toString();
@@ -347,8 +347,8 @@ class F extends a.Component {
             D = ''.concat(y, '-blob_mask'),
             L = ''.concat(y, '-stroke_mask'),
             x = ''.concat(y, '-highlight_mask'),
-            P = (null == s ? void 0 : s.width) != null ? s.width : T,
-            w = (null == s ? void 0 : s.height) != null ? s.height : T,
+            w = (null == s ? void 0 : s.width) != null ? s.width : T,
+            P = (null == s ? void 0 : s.height) != null ? s.height : T,
             M = {
                 width: g ? f + 8 : f,
                 height: g ? f + 8 : f,
@@ -399,13 +399,13 @@ class F extends a.Component {
                                         N
                                             ? (0, r.jsx)(d.animated.rect, {
                                                   id: O,
-                                                  x: f - (P + 2 * m) + m,
-                                                  y: f - (w + 2 * m) + m,
-                                                  width: P + 2 * m,
-                                                  height: w + 2 * m,
+                                                  x: f - (w + 2 * m) + m,
+                                                  y: f - (P + 2 * m) + m,
+                                                  width: w + 2 * m,
+                                                  height: P + 2 * m,
                                                   rx: p / 2,
                                                   ry: p / 2,
-                                                  transform: this.getBadgePositionInterpolation(I, 1, P + m)
+                                                  transform: this.getBadgePositionInterpolation(I, 1, w + m)
                                               })
                                             : null
                                     ]

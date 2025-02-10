@@ -75,30 +75,30 @@ function x(e) {
         n = C[e];
     return null != n ? n : (C[e] = L(e, t));
 }
-function P(e) {
+function w(e) {
     if (null != e) {
         var t;
         R[e] = (null !== (t = R[e]) && void 0 !== t ? t : 0) + 1;
     }
 }
-function w() {
+function P() {
     for (let e in ((N = {}), (C = {}), R)) R[e] += 1;
     O += 1;
 }
 function M() {
-    w();
+    P();
 }
 function k() {
     J();
 }
 function U() {
-    w();
+    P();
 }
 function G(e) {
     var t;
     let { user: n } = e;
     if (n.id !== (null === (t = T.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) return !1;
-    w();
+    P();
 }
 function B(e) {
     let {
@@ -112,7 +112,7 @@ function B(e) {
             context: n
         });
     if (C[n.id] === r) return !1;
-    (C[n.id] = r), (O += 1), P(n.getGuildId());
+    (C[n.id] = r), (O += 1), w(n.getGuildId());
 }
 function Z(e) {
     let { channels: t } = e,
@@ -125,7 +125,7 @@ function Z(e) {
                 user: i,
                 context: t
             });
-        C[t.id] !== r && ((C[t.id] = r), P(t.getGuildId()), (n = !0));
+        C[t.id] !== r && ((C[t.id] = r), w(t.getGuildId()), (n = !0));
     }
     return !!n && ((O += 1), n);
 }
@@ -134,10 +134,10 @@ function F() {
 }
 function V(e) {
     var t;
-    return (null === (t = T.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === e.userId && (P(e.guildId), !0);
+    return (null === (t = T.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === e.userId && (w(e.guildId), !0);
 }
 function j(e) {
-    return !!(0, _.s)(e) && (P(e.guildId), !0);
+    return !!(0, _.s)(e) && (w(e.guildId), !0);
 }
 function H(e) {
     let { messages: t } = e;
@@ -149,7 +149,7 @@ function Y(e) {
 }
 function W(e) {
     let { channel: t } = e;
-    return delete C[t.id], (O += 1), P(t.guild_id), !1;
+    return delete C[t.id], (O += 1), w(t.guild_id), !1;
 }
 function K(e) {
     let { guildId: t } = e;
@@ -159,7 +159,7 @@ function K(e) {
         delete C[e.id];
     }),
         (O += 1),
-        P(t);
+        w(t);
 }
 function z(e) {
     let { instance: t } = e,
@@ -181,7 +181,7 @@ function q(e) {
         delete C[e.id];
     }),
         (O += 1),
-        P(t);
+        w(t);
 }
 function Q(e, t, n, i) {
     let r = E.Hn;

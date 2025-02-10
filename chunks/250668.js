@@ -28,11 +28,11 @@ var i = n(147018),
     D = n(4340),
     L = n(97131),
     x = n(347722),
-    P = n(644659),
-    w = n(95948),
-    M = P.get,
-    k = P.set,
-    U = P.enforce,
+    w = n(644659),
+    P = n(95948),
+    M = w.get,
+    k = w.set,
+    U = w.enforce,
     G = L.f,
     B = x.f,
     Z = r.RangeError,
@@ -119,7 +119,7 @@ s
                 ((E = t(function (e, t, n, i) {
                     return (
                         c(e, v),
-                        w(
+                        P(
                             (function () {
                                 return I(t) ? (ee(t) ? (void 0 !== i ? new _(t, m(n, s), i) : void 0 !== n ? new _(t, m(n, s)) : new _(t)) : q(t) ? J(E, t) : a(C, E, t)) : new _(h(t));
                             })(),

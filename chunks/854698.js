@@ -119,10 +119,10 @@ function x(e, t, n) {
         diffMinutes: i.diff(n, 'minutes')
     };
 }
-function P(e) {
+function w(e) {
     return new s.OG(N[e]);
 }
-function w(e, t) {
+function P(e, t) {
     let n;
     return (
         null != e &&
@@ -153,10 +153,10 @@ function k(e, t) {
     };
 }
 function U(e) {
-    return w(e.scheduledStartTime, e.scheduledEndTime);
+    return P(e.scheduledStartTime, e.scheduledEndTime);
 }
 function G(e) {
-    return w(e.scheduled_start_time, e.scheduled_end_time);
+    return P(e.scheduled_start_time, e.scheduled_end_time);
 }
 function B(e, t) {
     return null == e || null == t ? null == e && null == t : e.isSame(t);
@@ -215,19 +215,19 @@ function Y(e, t) {
     }
 }
 function W(e) {
-    let t = P(e.toDate().getDay()),
-        n = P(e.toDate().getUTCDay());
+    let t = w(e.toDate().getDay()),
+        n = w(e.toDate().getUTCDay());
     return n.weekday - t.weekday > 0 ? T : n.weekday - t.weekday < 0 ? I : y;
 }
 function K(e) {
-    let t = P(e.toDate().getDay()),
-        n = P(e.toDate().getUTCDay());
+    let t = w(e.toDate().getDay()),
+        n = w(e.toDate().getUTCDay());
     return n.weekday - t.weekday > 0 ? A : n.weekday - t.weekday < 0 ? S : b;
 }
 function z(e, t) {
     let n = W(t),
         i = K(t),
-        r = P(t.toDate().getUTCDay()),
+        r = w(t.toDate().getUTCDay()),
         a = Math.ceil(t.toDate().getUTCDate() / 7),
         o = t.toDate();
     switch ((o.setMilliseconds(0), e)) {

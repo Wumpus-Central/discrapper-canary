@@ -45,8 +45,8 @@ function A(e) {
     var t, n, c;
     let { channel: h, currentUser: g, activeStreams: E, hideSelfOptions: A = !1, showReportOption: N = !1, handleGoLive: C, onClose: R, onSelect: O, appContext: D = I.IlC.APP, disableChangeWindows: L = !1 } = e,
         x = (0, a.e7)([m.Z], () => m.Z.getGoLiveSource()),
-        P = (0, a.e7)([p.Z], () => p.Z.getState().soundshareEnabled),
-        w = m.Z.supports(T.AN.DESKTOP_CAPTURE_APPLICATIONS),
+        w = (0, a.e7)([p.Z], () => p.Z.getState().soundshareEnabled),
+        P = m.Z.supports(T.AN.DESKTOP_CAPTURE_APPLICATIONS),
         M = null !== (c = E.find((e) => e.ownerId === (null == g ? void 0 : g.id))) && void 0 !== c ? c : null,
         k = S(h, g, E),
         U = (0, f.Z)(M, D),
@@ -85,17 +85,17 @@ function A(e) {
                 var r;
                 i.desktopSettings = {
                     sourceId: null == x ? void 0 : null === (r = x.desktopSource) || void 0 === r ? void 0 : r.id,
-                    sound: !P
+                    sound: !w
                 };
             }
             (0, l.Rc)({
                 preset: e,
                 resolution: t,
                 frameRate: n,
-                soundshareEnabled: !P
+                soundshareEnabled: !w
             }),
                 o.Z.setGoLiveSource(i);
-        }, [x, P]),
+        }, [x, w]),
         K =
             null == M
                 ? (0, i.jsx)(s.sNh, {
@@ -118,11 +118,11 @@ function A(e) {
                               ? (0, i.jsx)(s.S89, {
                                     id: 'stream-settings-audio-enable',
                                     label: b.intl.string(b.t.ZJEHt7),
-                                    checked: P,
+                                    checked: w,
                                     action: W
                                 })
                               : null,
-                          w && !L
+                          P && !L
                               ? (0, i.jsx)(s.sNh, {
                                     id: 'change-windows',
                                     label: b.intl.string(b.t.qntSam),

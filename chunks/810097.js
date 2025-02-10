@@ -81,13 +81,13 @@ function N(e) {
         O = (0, h.Z)(t.id),
         { profileType: D } = (0, v.z)(),
         { onInteraction: L } = (0, E.Xo)(),
-        { live: x, stream: P } = (0, m.Z)(t.id),
-        w = (0, g.Z)(n === y.n_.STATUS ? t.id : null, 'UserProfileInteractionToolbar'),
+        { live: x, stream: w } = (0, m.Z)(t.id),
+        P = (0, g.Z)(n === y.n_.STATUS ? t.id : null, 'UserProfileInteractionToolbar'),
         M =
             !a &&
             D !== y.y0.FULL_SIZE &&
             (0, l.EQ)(n)
-                .with(y.n_.STATUS, () => 0 === x.length && null == P && null == w)
+                .with(y.n_.STATUS, () => 0 === x.length && null == w && null == P)
                 .with(y.n_.ACTIVITY, () => !0)
                 .with(y.n_.AVATAR, () => !1)
                 .exhaustive(),

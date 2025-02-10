@@ -8,8 +8,8 @@ n.d(t, {
     Je: () => T,
     Js: () => h,
     KR: () => N,
-    MO: () => w,
-    N3: () => P,
+    MO: () => P,
+    N3: () => w,
     Oq: () => I,
     P_: () => E,
     Vn: () => y,
@@ -209,11 +209,11 @@ function x(e) {
     let { readGuideCta: t } = e;
     i.ZP.trackWithMetadata(_.rMx.FORUM_CHANNEL_HELPER_CARD_CLICKED, { read_guide_cta: t });
 }
-function P(e) {
+function w(e) {
     let { isMobile: t } = e;
     i.ZP.trackWithMetadata(_.rMx.FORUM_CHANNEL_MEDIA_UPLOADER_CLICKED, { is_mobile: t });
 }
-function w() {
+function P() {
     i.ZP.trackWithMetadata(_.rMx.FORUM_CHANNEL_ENABLE_AUTOMOD_CLICKED);
 }
 function M() {

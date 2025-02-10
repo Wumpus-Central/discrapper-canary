@@ -100,11 +100,11 @@ function x(e) {
     let { guild: t } = e;
     I(t.id);
 }
-function P(e) {
+function w(e) {
     let { channel: t } = e;
     C(t);
 }
-function w(e) {
+function P(e) {
     let { threads: t, mostRecentMessages: n } = e;
     t.forEach(C),
         null == n ||
@@ -235,9 +235,9 @@ let K = new W(o.Z, {
     OVERLAY_INITIALIZE: D,
     GUILD_CREATE: L,
     GUILD_DELETE: x,
-    THREAD_CREATE: P,
-    THREAD_UPDATE: P,
-    THREAD_LIST_SYNC: w,
+    THREAD_CREATE: w,
+    THREAD_UPDATE: w,
+    THREAD_LIST_SYNC: P,
     LOAD_THREADS_SUCCESS: M,
     LOAD_ARCHIVED_THREADS_SUCCESS: M,
     RELATIONSHIP_ADD: Y,

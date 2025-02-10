@@ -97,7 +97,7 @@
             if (i === h) throw Error('Generator is already running');
             if (i === m) {
                 if ('throw' === r) throw a;
-                return P();
+                return w();
             }
             for (n.method = r, n.arg = a; ; ) {
                 var s = n.delegate;
@@ -165,9 +165,9 @@
                 return (a.next = a);
             }
         }
-        return { next: P };
+        return { next: w };
     }
-    function P() {
+    function w() {
         return {
             value: n,
             done: !0

@@ -35,8 +35,8 @@ var i = n(200651),
     D = n(737143),
     L = n(926841),
     x = n(35248),
-    P = n(439021),
-    w = n(698708),
+    w = n(439021),
+    P = n(698708),
     M = n(351402),
     k = n(975060),
     U = n(505649),
@@ -218,7 +218,7 @@ function ev(e) {
     }
     let [eO, eD] = r.useState(h),
         [eL, ex] = r.useState(null),
-        [eP, ew] = r.useState(eR(h)),
+        [ew, eP] = r.useState(eR(h)),
         { stripe: eM, contextMetadata: ek, activitySessionId: eU } = (0, S.JL)(),
         eG = (0, l.e7)([k.Z], () => k.Z.redirectedPaymentSourceId),
         eB = (0, l.e7)([Y.Z], () => Y.Z.cashAppPayComponent),
@@ -273,28 +273,28 @@ function ev(e) {
             let tf = (e, t) => {
                     switch (e) {
                         case K.He.CARD:
-                            ti ? eV(A.h8.AWAITING_BROWSER_CHECKOUT) : (ew(ev), eV(A.h8.CREDIT_CARD_INFORMATION));
+                            ti ? eV(A.h8.AWAITING_BROWSER_CHECKOUT) : (eP(ev), eV(A.h8.CREDIT_CARD_INFORMATION));
                             break;
                         case K.He.PAYPAL:
-                            ew(eI), eV(A.h8.PAYPAL_INFORMATION);
+                            eP(eI), eV(A.h8.PAYPAL_INFORMATION);
                             break;
                         case K.He.VENMO:
-                            ew(eT), eV(A.h8.VENMO_INFORMATION);
+                            eP(eT), eV(A.h8.VENMO_INFORMATION);
                             break;
                         case K.He.PAYMENT_REQUEST:
-                            tr && 'googlePay' === t ? eV(A.h8.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY) : ts && 'applePay' === t ? eV(A.h8.AWAITING_BROWSER_CHECKOUT_APPLE_PAY) : (ew(ey), eV(A.h8.PAYMENT_REQUEST_INFORMATION));
+                            tr && 'googlePay' === t ? eV(A.h8.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY) : ts && 'applePay' === t ? eV(A.h8.AWAITING_BROWSER_CHECKOUT_APPLE_PAY) : (eP(ey), eV(A.h8.PAYMENT_REQUEST_INFORMATION));
                             break;
                         case K.He.PRZELEWY24:
-                            ew(eS), eV(A.h8.PRZELEWY24_INFORMATION);
+                            eP(eS), eV(A.h8.PRZELEWY24_INFORMATION);
                             break;
                         case K.He.EPS:
-                            ew(eA), eV(A.h8.EPS_INFORMATION);
+                            eP(eA), eV(A.h8.EPS_INFORMATION);
                             break;
                         case K.He.IDEAL:
-                            ew(eN), eV(A.h8.IDEAL_INFORMATION);
+                            eP(eN), eV(A.h8.IDEAL_INFORMATION);
                             break;
                         case K.He.CASH_APP:
-                            ew(eC), eV(A.h8.CASH_APP_INFORMATION);
+                            eP(eC), eV(A.h8.CASH_APP_INFORMATION);
                             break;
                         case K.He.GIROPAY:
                         case K.He.PAYSAFE_CARD:
@@ -304,7 +304,7 @@ function ev(e) {
                         case K.He.KAKAOPAY:
                         case K.He.GOPAY_WALLET:
                         case K.He.BANCONTACT:
-                            ew({
+                            eP({
                                 steps: [...m, ...es, ...g],
                                 methodType: e
                             }),
@@ -317,11 +317,11 @@ function ev(e) {
                         ...e,
                         info: t
                     })),
-                        ew(ey),
+                        eP(ey),
                         tn(e);
                 },
                 tp = () => {
-                    ew(eb), eV(A.h8.PAYMENT_TYPE);
+                    eP(eb), eV(A.h8.PAYMENT_TYPE);
                 },
                 th = async (e) => {
                     if (((0, _.Xt)(e), null == e)) {
@@ -337,7 +337,7 @@ function ev(e) {
             if (eO === A.h8.ATTEMPT_GOOGLE_PAY || eO === A.h8.ATTEMPT_APPLE_PAY) {
                 let e = z.intl.string(eO === A.h8.ATTEMPT_APPLE_PAY ? z.t.czhXDg : z.t.Zj2xQ0),
                     r = z.intl.string(eO === A.h8.ATTEMPT_APPLE_PAY ? z.t.WoXvJC : z.t.wnVVr6);
-                (t = (0, i.jsx)(P.t, {
+                (t = (0, i.jsx)(w.t, {
                     onChooseType: tf,
                     paymentRequestWallet: eO === A.h8.ATTEMPT_APPLE_PAY ? 'applePay' : 'googlePay',
                     onStripePaymentMethodReceived: th,
@@ -421,16 +421,16 @@ function ev(e) {
                     step: eO,
                     onPurchaseComplete: () => v(eO),
                     onHandoffFailure: () => {
-                        ew(ev), eV(A.h8.CREDIT_CARD_INFORMATION);
+                        eP(ev), eV(A.h8.CREDIT_CARD_INFORMATION);
                     }
                 })
             })),
                 (n = (0, i.jsx)(x.a, {
                     onPrimaryClick: () => {
-                        ew(ev), eV(A.h8.CREDIT_CARD_INFORMATION);
+                        eP(ev), eV(A.h8.CREDIT_CARD_INFORMATION);
                     },
                     onBackClick: () => {
-                        ew(eb), eV(A.h8.PAYMENT_TYPE);
+                        eP(eb), eV(A.h8.PAYMENT_TYPE);
                     }
                 }));
             break;
@@ -551,7 +551,7 @@ function ev(e) {
         case A.h8.ADDRESS:
             let tI = async () => {
                 eJ(!0);
-                let e = eP.methodType;
+                let e = ew.methodType;
                 switch (e) {
                     case K.He.CARD:
                         try {
@@ -625,7 +625,7 @@ function ev(e) {
                 }
                 e$ || eJ(!1);
             };
-            switch (eP.methodType) {
+            switch (ew.methodType) {
                 case K.He.CARD:
                     (c = A.h8.CREDIT_CARD_INFORMATION), (s = K.He.CARD);
                     break;
@@ -645,7 +645,7 @@ function ev(e) {
                 case K.He.KAKAOPAY:
                 case K.He.GOPAY_WALLET:
                 case K.He.BANCONTACT:
-                    (c = A.h8.PAYMENT_TYPE), (s = eP.methodType);
+                    (c = A.h8.PAYMENT_TYPE), (s = ew.methodType);
                     break;
                 case K.He.EPS:
                     (c = A.h8.EPS_INFORMATION), (s = K.He.EPS);
@@ -696,7 +696,7 @@ function ev(e) {
             animatedNodeClassName: Q.sequencerAnimatedNode,
             fillParent: !0,
             step: eO,
-            steps: eP.steps,
+            steps: ew.steps,
             sideMargin: 20,
             children: t
         }),
@@ -710,13 +710,13 @@ function ev(e) {
                           isEligibleForTrial: W
                       }),
                   (0, i.jsxs)(R.C3, {
-                      children: [(0, i.jsx)(w.Z, { className: q.paymentModalError }), tT]
+                      children: [(0, i.jsx)(P.Z, { className: q.paymentModalError }), tT]
                   }),
                   (0, i.jsx)(R.O3, { children: tb })
               ]
           })
         : (0, i.jsx)(j.Z, {
-              steps: null != I ? I : eP.steps,
+              steps: null != I ? I : ew.steps,
               currentStep: null != b ? b : eO,
               paymentError: p.paymentError,
               header: M,
@@ -769,8 +769,8 @@ function ey(e) {
             }
         );
     }, []);
-    let [x, P] = r.useState(!1),
-        [w, M] = r.useState(!1),
+    let [x, w] = r.useState(!1),
+        [P, M] = r.useState(!1),
         [Z, F] = r.useState(null),
         j = r.useRef(null),
         W = (0, l.e7)([U.Z], () => U.Z.isAwaitingAuthentication),
@@ -791,8 +791,8 @@ function ey(e) {
             billingAddressState: p,
             setBillingAddressState: h,
             isSubmittingCurrentStep: x,
-            setIsSubmittingCurrentStep: P,
-            hasRedirectURL: w,
+            setIsSubmittingCurrentStep: w,
+            hasRedirectURL: P,
             setHasRedirectURL: M,
             braintreeEmail: A,
             braintreeNonce: N,

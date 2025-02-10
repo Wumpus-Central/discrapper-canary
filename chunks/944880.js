@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(47120);
+n.d(t, { Z: () => P }), n(47120);
 var i = n(913527),
     r = n.n(i),
     a = n(570140),
@@ -105,7 +105,7 @@ function L() {
 function x() {
     S();
 }
-class P extends s.Z {
+class w extends s.Z {
     forceRefreshIfOutdated() {
         let e = h.Z.getState();
         null != e.lastFetchTimeMs && Date.now() - e.lastFetchTimeMs > T && S({ forceRefresh: !0 });
@@ -123,4 +123,4 @@ class P extends s.Z {
             });
     }
 }
-let w = new P();
+let P = new w();

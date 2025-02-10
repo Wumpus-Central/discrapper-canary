@@ -36,19 +36,19 @@ function O(e) {
             isTryItOut: y,
             guildId: null == A ? void 0 : A.id
         }),
-        [x, P] = r.useState(() => {
+        [x, w] = r.useState(() => {
             var e, t;
             if (null != _) return _;
             let i = (0, d.iC)(a, n);
             return null != v ? (null !== (e = i.find((e) => e.id === v)) && void 0 !== e ? e : null) : void 0 !== O ? O : null == L ? null : null !== (t = i.find((e) => (0, T.sr)(e, L))) && void 0 !== t ? t : null;
         }),
-        { product: w, purchase: M } = (0, f.Z)(null == x ? void 0 : x.skuId),
+        { product: P, purchase: M } = (0, f.Z)(null == x ? void 0 : x.skuId),
         k = I.ZP.canUseCollectibles(t),
         U = r.useRef(null),
         G = (0, p.Z)(s),
         B = (0, T.sr)(x, void 0 === O ? L : O),
         Z = (e) => {
-            P(e), null != e && G(e);
+            w(e), null != e && G(e);
         },
         F = () => {
             D(x), u();
@@ -72,10 +72,10 @@ function O(e) {
                       disabled: B,
                       children: C.intl.string(C.t.d6sv6u)
                   })
-                : null == M && (k || !(0, d.G1)(w))
+                : null == M && (k || !(0, d.G1)(P))
                   ? (0, i.jsx)(o.zxk, {
                         className: R.modalFooterShopButton,
-                        onClick: () => V(null == w ? void 0 : w.skuId),
+                        onClick: () => V(null == P ? void 0 : P.skuId),
                         children: C.intl.string(C.t.fYfGgI)
                     })
                   : (0, i.jsx)(g.Z, {
@@ -131,9 +131,9 @@ function O(e) {
                             children: C.intl.string(C.t['ETE/oK'])
                         }),
                     j &&
-                        (0, d.G1)(w) &&
+                        (0, d.G1)(P) &&
                         (0, i.jsx)(m.Z, {
-                            product: w,
+                            product: P,
                             onSecondaryClick: u
                         })
                 ]

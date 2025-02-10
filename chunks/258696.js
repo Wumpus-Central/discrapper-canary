@@ -1,5 +1,5 @@
 n.d(t, {
-    G: () => w,
+    G: () => P,
     Z: () => M
 }),
     n(47120),
@@ -53,11 +53,11 @@ function x(e) {
                 channel: n
             });
 }
-function P(e) {
+function w(e) {
     var t, n, r, p, m, g, E, b, A;
-    let { type: N, disabled: P, channel: M, handleSubmit: k, isEmpty: U, showAllButtons: G, children: B } = e,
+    let { type: N, disabled: w, channel: M, handleSubmit: k, isEmpty: U, showAllButtons: G, children: B } = e,
         Z = (0, s.e7)([l.Z], () => l.Z.isSubmitButtonEnabled),
-        F = w(M.id, N, U),
+        F = P(M.id, N, U),
         { activeCommand: V, activeCommandOption: j } = (0, s.cj)([u.Z], () => ({
             activeCommand: u.Z.getActiveCommand(M.id),
             activeCommandOption: u.Z.getActiveOption(M.id)
@@ -92,7 +92,7 @@ function P(e) {
                     (0, i.jsx)(
                         C.Z,
                         {
-                            disabled: P,
+                            disabled: w,
                             referralsRemaining: z,
                             channel: M,
                             isResending: q
@@ -108,7 +108,7 @@ function P(e) {
                 (0, i.jsx)(
                     x,
                     {
-                        disabled: P,
+                        disabled: w,
                         channel: M
                     },
                     'gift'
@@ -121,7 +121,7 @@ function P(e) {
                 (0, i.jsx)(
                     T.Z,
                     {
-                        disabled: P,
+                        disabled: w,
                         type: N
                     },
                     'gif'
@@ -133,7 +133,7 @@ function P(e) {
                 (0, i.jsx)(
                     S.Z,
                     {
-                        disabled: P,
+                        disabled: w,
                         channel: M
                     },
                     'confetti'
@@ -147,7 +147,7 @@ function P(e) {
                 (0, i.jsx)(
                     O.Z,
                     {
-                        disabled: P,
+                        disabled: w,
                         type: N
                     },
                     'sticker'
@@ -159,7 +159,7 @@ function P(e) {
             (0, i.jsx)(
                 I.Z,
                 {
-                    disabled: P,
+                    disabled: w,
                     type: N
                 },
                 'emoji'
@@ -174,7 +174,7 @@ function P(e) {
                 R.Z,
                 {
                     onClick: k,
-                    disabled: P || F
+                    disabled: w || F
                 },
                 'submit'
             )
@@ -187,11 +187,11 @@ function P(e) {
               children: Y
           });
 }
-function w(e, t, n) {
+function P(e, t, n) {
     return (0, s.e7)([g.Z, E.Z], () => {
         let i = g.Z.getStickerPreview(e, t.drafts.type),
             r = null != i && i.length > 0;
         return 0 === E.Z.getUploads(e, t.drafts.type).length && n && !r;
     });
 }
-let M = r.memo(P);
+let M = r.memo(w);

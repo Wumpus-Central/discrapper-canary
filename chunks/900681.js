@@ -163,9 +163,9 @@ function b(e) {
 }
 function S(e) {
     var t;
-    let { clan: n, bannerComponent: a, expanded: d, isMember: h = !1, traitsToHighlight: S, prioritizedGameIds: A, className: N, position: C, showBrandingFooter: R = !1, bannerUrl: O, onlyAnimateIconOnHover: D = !1, hasPendingJoinRequest: L = !1, atMaxMemberCapacity: x = !1, footer: P = null } = e,
+    let { clan: n, bannerComponent: a, expanded: d, isMember: h = !1, traitsToHighlight: S, prioritizedGameIds: A, className: N, position: C, showBrandingFooter: R = !1, bannerUrl: O, onlyAnimateIconOnHover: D = !1, hasPendingJoinRequest: L = !1, atMaxMemberCapacity: x = !1, footer: w = null } = e,
         {
-            tag: w,
+            tag: P,
             badge: M,
             branding: { primaryColor: k, secondaryColor: U },
             bannerHash: G,
@@ -266,7 +266,7 @@ function S(e) {
                                                 (0, i.jsx)(o.Text, {
                                                     variant: 'text-xs/medium',
                                                     color: 'text-primary',
-                                                    children: w
+                                                    children: P
                                                 })
                                             ]
                                         })
@@ -357,7 +357,7 @@ function S(e) {
                     className: v.cardBrandingFooter,
                     style: { background: 'linear-gradient(90deg, '.concat(k, ', ').concat(U, ')') }
                 }),
-            P
+            w
         ]
     });
 }
