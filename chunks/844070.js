@@ -19,7 +19,8 @@ function c(e, t, n) {
             omitViewTracking: !0,
             omitClickTracking: !0,
             tag: e.id,
-            onClick: n
+            onClick: n,
+            isUserAvatar: !0
         }
     );
 }

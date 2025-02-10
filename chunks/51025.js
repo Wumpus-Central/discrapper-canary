@@ -184,7 +184,8 @@ function L(e, t) {
                         { notif_type: 'Game Library Game Installed' },
                         {
                             onClick: () => (0, o.uL)(h.Z5c.APPLICATION_LIBRARY),
-                            omitViewTracking: !0
+                            omitViewTracking: !0,
+                            isUserAvatar: !1
                         }
                     );
                 }));

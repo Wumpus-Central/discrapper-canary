@@ -47,8 +47,7 @@ let r = {
             source: t
         });
     },
-    showNotification(e, t, n, r) {
-        let a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+    showNotification(e, t, n, r, a) {
         i.Z.dispatch({
             type: 'NOTIFICATION_CREATE',
             icon: e,
