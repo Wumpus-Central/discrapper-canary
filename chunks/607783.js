@@ -10,14 +10,14 @@ var i = e(200651),
     c = e(314897),
     g = e(388032);
 function Z(t) {
-    let { userId: n, channelId: e, guildId: Z, location: f } = t,
-        v = (0, u.J)({
+    let { userId: n, channelId: e, guildId: Z, location: f, simplified: v = !1 } = t,
+        b = (0, u.J)({
             channelId: e,
             location: f
         }),
-        b = (0, a.e7)([c.default], () => c.default.getId() === n),
-        h = (0, d.bp)(),
-        m = l.useCallback(() => {
+        h = (0, a.e7)([c.default], () => c.default.getId() === n),
+        m = (0, d.bp)(),
+        x = l.useCallback(() => {
             r.Z.openSecureFramesUserVerificationModal(
                 n,
                 e,
@@ -27,14 +27,15 @@ function Z(t) {
                         channelId: e,
                         guildId: Z
                     }),
-                h
+                m
             );
-        }, [h, e, Z, n]);
-    return !v || b
+        }, [m, e, Z, n]);
+    return !b || h
         ? null
         : (0, i.jsx)(o.sNh, {
               id: 'secure-frames-user-verification',
               label: g.intl.string(g.t['8ErYvb']),
-              action: m
+              action: x,
+              icon: v ? o._uN : null
           });
 }

@@ -402,7 +402,8 @@ class ez extends l.PureComponent {
                                             ...n,
                                             stream: e.stream,
                                             exitFullscreen: this.maybeLeaveFullScreen,
-                                            appContext: c
+                                            appContext: c,
+                                            simplified: l
                                         });
                                 },
                                 u
