@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(922611),
     I = n(699516),
     C = n(974042),
-    N = n(451478),
-    v = n(434184),
+    v = n(451478),
+    N = n(434184),
     T = n(701861),
     S = n(437314),
     Z = n(696577),
@@ -59,7 +59,7 @@ let M = function (e) {
     let { titleId: t } = e,
         { analyticsLocations: n } = (0, m.ZP)(h.Z.FRIENDS_LIST),
         { rows: r, section: c } = (0, s.cj)([C.ZP], () => C.ZP.getState()),
-        D = (0, s.e7)([N.Z], () => N.Z.isFocused()),
+        D = (0, s.e7)([v.Z], () => v.Z.isFocused()),
         { relationshipCount: M, hasBlockedOrIgnored: U } = (0, s.cj)([I.Z], () => ({
             relationshipCount: I.Z.getRelationshipCount(),
             hasBlockedOrIgnored: I.Z.getBlockedOrIgnoredIDs().length > 0
@@ -77,7 +77,7 @@ let M = function (e) {
             (e) => {
                 switch (c) {
                     case P.pJs.BLOCKED:
-                        return (0, i.jsx)(v.Z, {
+                        return (0, i.jsx)(N.Z, {
                             ...e,
                             isFocused: D
                         });

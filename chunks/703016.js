@@ -17,8 +17,8 @@ var i = n(913527),
     E = n(131951),
     I = n(292959),
     C = n(699516),
-    N = n(944486),
-    v = n(9156),
+    v = n(944486),
+    N = n(9156),
     T = n(594174),
     S = n(51144),
     Z = n(196051),
@@ -109,7 +109,7 @@ function V(e) {
     if (c || E.Z.isSelfDeaf()) return !1;
     let d = g.Z.getChannel(s);
     if (null == d) return !1;
-    let u = N.Z.getChannelId(),
+    let u = v.Z.getChannelId(),
         f = p.ZP.getCurrentSidebarChannelId(u),
         T = s === u || s === f,
         Z = h.OW.getSetting() && o.tts && T,
@@ -119,7 +119,7 @@ function V(e) {
         if (y.indexOf(o.id) >= 0) return !1;
         y.unshift(o.id) > 10 && y.pop();
         let e = d.getGuildId();
-        if (null != e && v.ZP.getMutedChannels(e).has(s)) return !1;
+        if (null != e && N.ZP.getMutedChannels(e).has(s)) return !1;
         let t = null !== (r = null !== (l = _.ZP.getNick(e, null === (n = o.author) || void 0 === n ? void 0 : n.id)) && void 0 !== l ? l : S.ZP.getName(o.author)) && void 0 !== r ? r : '',
             c = o.type === x.uaV.REPLY ? (null === (i = o.referenced_message) || void 0 === i ? void 0 : i.author) : null,
             u = null != c ? (null !== (a = _.ZP.getNick(e, null == c ? void 0 : c.id)) && void 0 !== a ? a : S.ZP.getName(c)) : null;

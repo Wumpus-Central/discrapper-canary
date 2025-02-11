@@ -13,8 +13,8 @@ var l = t(442837),
     f = t(91433),
     p = t(944043),
     x = t(502762),
-    _ = t(530),
-    m = t(740628),
+    m = t(530),
+    _ = t(740628),
     h = t(643518),
     Z = t(228168),
     v = t(981631),
@@ -30,8 +30,8 @@ function j(e) {
         O = (0, o.wn)({ location: 'UserProfileModalBody' }),
         R = t.id === j.id,
         M = (0, d.I5)(j),
-        B = a.ZP.useName(null == N ? void 0 : N.guildId, y, t),
-        U = (0, h.Z)({
+        U = a.ZP.useName(null == N ? void 0 : N.guildId, y, t),
+        B = (0, h.Z)({
             user: t,
             currentUser: j,
             guildId: E,
@@ -40,10 +40,10 @@ function j(e) {
     return (0, i.jsxs)('div', {
         className: g.body,
         children: [
-            (0, i.jsx)(_.Z, {
+            (0, i.jsx)(m.Z, {
                 user: t,
                 profileType: Z.y0.FULL_SIZE,
-                nickname: B,
+                nickname: U,
                 pronouns: null == N ? void 0 : N.pronouns,
                 nicknameVariant: 'heading-xl/bold',
                 nicknameIcons: (0, i.jsx)(I.Z, { userId: t.id }),
@@ -93,12 +93,12 @@ function j(e) {
                 }),
             (0, i.jsx)(x.Z.Overlay, {
                 className: g.overlay,
-                children: (0, i.jsx)(m.Z, {
+                children: (0, i.jsx)(_.Z, {
                     user: t,
                     currentUser: j,
                     displayProfile: N,
                     guildId: E,
-                    items: U,
+                    items: B,
                     initialSection: T,
                     initialSubsection: b,
                     onClose: S

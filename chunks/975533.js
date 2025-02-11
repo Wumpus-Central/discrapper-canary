@@ -17,8 +17,8 @@ var i = n(570140),
     E = n(131951),
     I = n(246946),
     C = n(808506),
-    N = n(237997),
-    v = n(626135),
+    v = n(237997),
+    N = n(626135),
     T = n(554174),
     S = n(981631),
     Z = n(65154);
@@ -106,7 +106,7 @@ let A = {
     [S.kg4.TOGGLE_OVERLAY_INPUT_LOCK]: {
         onTrigger() {
             let e = (0, T.Z)();
-            null != e && r.Z.setInputLocked(!N.Z.isLocked(e), e);
+            null != e && r.Z.setInputLocked(!v.Z.isLocked(e), e);
         },
         keyEvents: {
             keyup: !0,
@@ -117,7 +117,7 @@ let A = {
         onTrigger() {
             let e = C.Z.getFocusedPID(),
                 t = null != e;
-            null != e && t && N.Z.isPinned(S.Odu.TEXT) && N.Z.isLocked(e) && C.Z.isReady(e) && r.Z.activateRegion(S.O0n.TEXT_WIDGET);
+            null != e && t && v.Z.isPinned(S.Odu.TEXT) && v.Z.isLocked(e) && C.Z.isReady(e) && r.Z.activateRegion(S.O0n.TEXT_WIDGET);
         },
         keyEvents: {
             keyup: !0,
@@ -166,7 +166,7 @@ let A = {
         onTrigger: () => {
             if (!(0, g.D)()) return;
             let e = (0, T.Z)();
-            null != e && (N.Z.isLocked(e) ? (0, _.IN)(!0, e) : (0, _.oZ)(e));
+            null != e && (v.Z.isLocked(e) ? (0, _.IN)(!0, e) : (0, _.oZ)(e));
         },
         keyEvents: {
             keyup: !0,
@@ -189,7 +189,7 @@ let A = {
     },
     [S.kg4.SAVE_CLIP]: {
         onTrigger: () => {
-            (0, d.ln)() && (v.default.track(S.rMx.CLIP_SAVE_KEYBIND_PRESSED), (0, u.C1)());
+            (0, d.ln)() && (N.default.track(S.rMx.CLIP_SAVE_KEYBIND_PRESSED), (0, u.C1)());
         },
         keyEvents: {
             keyup: !1,

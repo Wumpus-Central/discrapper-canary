@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(283293),
     I = n(822857),
     C = n(775451),
-    N = n(63063),
-    v = n(113434),
+    v = n(63063),
+    N = n(113434),
     T = n(569984),
     S = n(833435),
     Z = n(918701),
@@ -60,7 +60,7 @@ let w = function () {
         H = null !== (e = (0, a.e7)([T.Z], () => T.Z.getQuest(P.V), [])) && void 0 !== e ? e : null,
         F = null !== H && !(0, Z.zi)(H),
         z = l.useCallback(() => {
-            !F && window.open(N.Z.getArticleURL(O.BhN.QUESTS_LEARN_MORE));
+            !F && window.open(v.Z.getArticleURL(O.BhN.QUESTS_LEARN_MORE));
         }, [F]);
     (0, u.Tt)({ location: j.intl.string(j.t.JALI2N) });
     let W = F ? j.intl.format(j.t.BCBIlp, {}) : j.intl.format(j.t.lmMBf3, {}),
@@ -113,7 +113,7 @@ let w = function () {
                                         })
                                 ]
                             }),
-                            t === v.e5.CLAIMED ? (0, i.jsx)(G, { onSelectTab: n }) : (0, i.jsx)(b.Z, {})
+                            t === N.e5.CLAIMED ? (0, i.jsx)(G, { onSelectTab: n }) : (0, i.jsx)(b.Z, {})
                         ]
                     })
                 ]

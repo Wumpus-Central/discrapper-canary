@@ -14,8 +14,8 @@ var l = n(200651),
     d = n(890588),
     c = n(479766),
     E = n(741808),
-    _ = n(388032),
-    C = n(61822),
+    C = n(388032),
+    _ = n(61822),
     h = n(668096);
 let I = () =>
         (0, l.jsx)('div', {
@@ -26,10 +26,10 @@ let I = () =>
                 alt: 'Quests Icon'
             })
         }),
-    T = (e) =>
+    g = (e) =>
         (0, l.jsx)(o.zxk, {
             ...e,
-            'aria-label': _.intl.string(_.t.cpT0Cg),
+            'aria-label': C.intl.string(C.t.cpT0Cg),
             look: o.zxk.Looks.BLANK,
             size: o.zxk.Sizes.NONE,
             wrapperClassName: h.closeButton,
@@ -40,7 +40,7 @@ let I = () =>
                 className: h.closeButtonIcon
             })
         }),
-    g = (e) => {
+    T = (e) => {
         let { invertTail: t } = e;
         return (0, l.jsxs)('div', {
             className: r()(h.tail, t ? h.tailPositionInverted : h.tailPositionNormal),
@@ -68,11 +68,11 @@ let I = () =>
     S = (e) => {
         let { onClose: t, backgroundElementRef: n, renderTail: a = !1 } = e,
             [r, o] = i.useState(Date.now()),
-            [c, _] = i.useState(!1),
-            C = i.useCallback(
+            [c, C] = i.useState(!1),
+            _ = i.useCallback(
                 (e) => {
                     let t = e.top < window.innerHeight / 2;
-                    t !== c && _(t);
+                    t !== c && C(t);
                 },
                 [c]
             );
@@ -104,7 +104,7 @@ let I = () =>
                         top: 0,
                         left: 0
                     },
-                    onGetBoundingRect: C,
+                    onGetBoundingRect: _,
                     children: (0, l.jsx)(A, {
                         onClose: t,
                         renderTail: a,
@@ -135,24 +135,24 @@ let I = () =>
     A = (e) => {
         let { onClose: t, renderTail: n, invertTail: i = !1 } = e;
         return (0, l.jsxs)('div', {
-            className: r()(C.baseCardOutline, h.container),
+            className: r()(_.baseCardOutline, h.container),
             children: [
-                (0, l.jsx)(T, { onClick: t }),
+                (0, l.jsx)(g, { onClick: t }),
                 (0, l.jsx)(I, {}),
                 (0, l.jsxs)('div', {
                     className: h.content,
                     children: [
                         (0, l.jsx)('div', {
-                            className: C.coachmarkTitle,
-                            children: _.intl.string(_.t['3B4+wM'])
+                            className: _.coachmarkTitle,
+                            children: C.intl.string(C.t['3B4+wM'])
                         }),
                         (0, l.jsx)('div', {
-                            className: C.coachmarkDescription,
-                            children: _.intl.format(_.t.V6DQX1, { quantity: 200 })
+                            className: _.coachmarkDescription,
+                            children: C.intl.format(C.t.V6DQX1, { quantity: 200 })
                         })
                     ]
                 }),
-                n && (0, l.jsx)(g, { invertTail: i })
+                n && (0, l.jsx)(T, { invertTail: i })
             ]
         });
     };

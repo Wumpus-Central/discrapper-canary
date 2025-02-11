@@ -16,8 +16,8 @@ var i = t(200651),
     f = t(5192),
     p = t(785717),
     x = t(221292),
-    _ = t(687158),
-    m = t(471879),
+    m = t(687158),
+    _ = t(471879),
     h = t(502762),
     Z = t(848780),
     v = t(907179),
@@ -50,7 +50,7 @@ function b(e) {
                 description: y.intl.string(y.t.QxrDY2)
             }
         ],
-        C = (0, _.ZP)(n.id, Z ? b : void 0),
+        C = (0, m.ZP)(n.id, Z ? b : void 0),
         A = l.createRef();
     return (0, i.jsx)(c.Gt, {
         value: P,
@@ -78,7 +78,7 @@ function b(e) {
                             (0, i.jsxs)('div', {
                                 className: N.body,
                                 children: [
-                                    (0, i.jsx)(m.Z, {
+                                    (0, i.jsx)(_.Z, {
                                         user: n,
                                         guildId: b
                                     }),
@@ -148,7 +148,7 @@ function P(e) {
             roleId: b,
             showGuildProfile: L
         }),
-        B = [
+        U = [
             {
                 icon: a.owK,
                 description: y.intl.string(y.t.kcuWvb)
@@ -158,7 +158,7 @@ function P(e) {
                 description: y.intl.string(O ? y.t.QxrDY2 : y.t.W6fjkZ)
             }
         ],
-        U = (0, _.ZP)(n.id, L ? A : void 0),
+        B = (0, m.ZP)(n.id, L ? A : void 0),
         F = l.createRef();
     return (0, i.jsx)(c.Gt, {
         value: R,
@@ -171,7 +171,7 @@ function P(e) {
                 'aria-label': y.intl.string(y.t['3N/J2t']),
                 children: (0, i.jsx)(h.Z, {
                     user: n,
-                    displayProfile: U,
+                    displayProfile: B,
                     profileType: j.y0.FULL_SIZE,
                     ref: F,
                     children: (0, i.jsxs)('div', {
@@ -186,7 +186,7 @@ function P(e) {
                             (0, i.jsxs)('div', {
                                 className: s()(N.body, N.bodySpacing),
                                 children: [
-                                    (0, i.jsx)(m.i, {
+                                    (0, i.jsx)(_.i, {
                                         user: n,
                                         guildId: A
                                     }),
@@ -207,7 +207,7 @@ function P(e) {
                                     }),
                                     (0, i.jsx)('div', {
                                         className: N.restrictedSafetyTable,
-                                        children: B.map((e, n) => {
+                                        children: U.map((e, n) => {
                                             let { icon: t, description: l } = e;
                                             return (0, i.jsx)(
                                                 u.ZP,

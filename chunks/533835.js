@@ -12,8 +12,8 @@ var i = t(200651),
     f = t(971393),
     p = t(787018),
     x = t(752342),
-    _ = t(886794),
-    m = t(910364);
+    m = t(886794),
+    _ = t(910364);
 let h = [a.Z.BITE_SIZE_PROFILE_POPOUT, a.Z.PROFILE_PANEL];
 function Z(e) {
     let { user: n, ...t } = e,
@@ -49,7 +49,7 @@ function Z(e) {
                 ...t
             })
           : n.isNonUserBot()
-            ? (0, i.jsx)(_.Z, {
+            ? (0, i.jsx)(m.Z, {
                   ...t,
                   user: n,
                   currentUser: o
@@ -60,7 +60,7 @@ function Z(e) {
                     user: n,
                     currentUser: o
                 })
-              : (0, i.jsx)(m.Z, {
+              : (0, i.jsx)(_.Z, {
                     ...t,
                     user: n,
                     currentUser: o

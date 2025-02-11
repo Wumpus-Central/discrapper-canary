@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(706454),
     I = n(215427),
     C = n(820254),
-    N = n(358085),
-    v = n(998502),
+    v = n(358085),
+    N = n(998502),
     T = n(905656),
     S = n(981631),
     Z = n(388032),
@@ -350,7 +350,7 @@ class x extends l.PureComponent {
                 })()
             ),
             b(this, 'handleReady', () => {
-                this.setState({ ready: !0 }), (0, N.isDesktop)() && (v.ZP.send('UPDATED_QUOTES', ['Hold Tight \u2014 Loading Discord']), v.ZP.send('UPDATE_OPEN_ON_STARTUP'));
+                this.setState({ ready: !0 }), (0, v.isDesktop)() && (N.ZP.send('UPDATED_QUOTES', ['Hold Tight \u2014 Loading Discord']), N.ZP.send('UPDATE_OPEN_ON_STARTUP'));
             }),
             b(this, 'setVideoRef', (e) => {
                 this.videoRef = e;

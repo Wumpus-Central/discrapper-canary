@@ -13,8 +13,8 @@ var l = t(481060),
     f = t(681837),
     p = t(502762),
     x = t(530),
-    _ = t(871604),
-    m = t(952124),
+    m = t(871604),
+    _ = t(952124),
     h = t(53558),
     Z = t(544989),
     v = t(934861),
@@ -26,10 +26,10 @@ var l = t(481060),
     T = t(388032),
     b = t(757672);
 function P(e) {
-    let { user: n, currentUser: t, guildId: P, channelId: S, messageId: L, roleId: C, sessionId: A, initialSection: O, initialSubsection: R, transitionState: M, onClose: B, sourceAnalyticsLocations: U = [] } = e,
+    let { user: n, currentUser: t, guildId: P, channelId: S, messageId: L, roleId: C, sessionId: A, initialSection: O, initialSubsection: R, transitionState: M, onClose: U, sourceAnalyticsLocations: B = [] } = e,
         F = P === N.ME ? void 0 : P,
         D = (0, d.ZP)(n.id, F),
-        { analyticsLocations: w } = (0, s.ZP)([...U, o.Z.SIMPLIFIED_PROFILE_MODAL]),
+        { analyticsLocations: w } = (0, s.ZP)([...B, o.Z.SIMPLIFIED_PROFILE_MODAL]),
         G = (0, a.ZB)({
             layout: 'SIMPLIFIED_MODAL',
             userId: n.id,
@@ -56,7 +56,7 @@ function P(e) {
                     children: [
                         (0, i.jsx)(Z.Z, {
                             profileType: y.y0.FULL_SIZE,
-                            children: (0, i.jsx)(m.Z, {
+                            children: (0, i.jsx)(_.Z, {
                                 user: n,
                                 guildId: F
                             })
@@ -83,26 +83,26 @@ function P(e) {
                                             user: n,
                                             profileType: y.y0.FULL_SIZE,
                                             hasEntered: M === l.Dvm.ENTERED,
-                                            onCloseProfile: B
+                                            onCloseProfile: U
                                         }),
                                         (0, i.jsxs)('div', {
                                             className: b.headerButtons,
                                             children: [
                                                 (0, i.jsx)(v.c, {
                                                     userId: n.id,
-                                                    onClose: B,
+                                                    onClose: U,
                                                     className: b.messageTextButton
                                                 }),
                                                 (0, i.jsx)(v.v, {
                                                     userId: n.id,
-                                                    onClose: B,
+                                                    onClose: U,
                                                     tooltipContainerClassName: b.messageIconButton
                                                 }),
                                                 (0, i.jsx)(h.Z, {
                                                     user: n,
                                                     guildId: F
                                                 }),
-                                                (0, i.jsx)(_.Z, { user: n })
+                                                (0, i.jsx)(m.Z, { user: n })
                                             ]
                                         })
                                     ]
@@ -122,7 +122,7 @@ function P(e) {
                                     tags: (0, i.jsx)(u.Z, {
                                         displayProfile: D,
                                         profileType: y.y0.FULL_SIZE,
-                                        onClose: B
+                                        onClose: U
                                     })
                                 }),
                                 (0, i.jsx)(p.Z.Overlay, {
@@ -135,7 +135,7 @@ function P(e) {
                                         items: k,
                                         initialSection: null != O ? O : y.oh.BOT_INFO,
                                         initialSubsection: R,
-                                        onClose: B
+                                        onClose: U
                                     })
                                 })
                             ]

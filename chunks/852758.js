@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(23434),
     I = n(1964),
     C = n(762756),
-    N = n(308569),
-    v = n(981631),
+    v = n(308569),
+    N = n(981631),
     T = n(815660),
     S = n(388032);
 function Z() {
@@ -49,7 +49,7 @@ function Z() {
                         return (t) => (0, i.jsx)(e, { ...t });
                     },
                     {
-                        modalKey: N.F0,
+                        modalKey: v.F0,
                         Layer: g.ZP
                     }
                 );
@@ -81,8 +81,8 @@ function Z() {
             []
         ),
         l.useEffect(() => {
-            (null == x ? void 0 : x[0]) === v.PUi.PHONE &&
-                (null == Z ? void 0 : Z[0]) === v.PUi.EMAIL &&
+            (null == x ? void 0 : x[0]) === N.PUi.PHONE &&
+                (null == Z ? void 0 : Z[0]) === N.PUi.EMAIL &&
                 (0, o.ZDy)(
                     async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 468026));
@@ -95,7 +95,7 @@ function Z() {
                             });
                     },
                     {
-                        modalKey: N.HR,
+                        modalKey: v.HR,
                         Layer: g.ZP,
                         onCloseCallback: L
                     }
@@ -107,7 +107,7 @@ function Z() {
             onCaptchaVerify: (e) => {
                 s.tn
                     .post({
-                        url: v.ANM.CAPTCHA,
+                        url: N.ANM.CAPTCHA,
                         body: { captcha_key: e },
                         oldFormErrors: !0,
                         rejectWithError: !0
@@ -118,7 +118,7 @@ function Z() {
             },
             theme: t,
             onClick: (e) => {
-                e === v.PUi.EMAIL_OR_PHONE || e === v.PUi.EMAIL || e === v.PUi.REVERIFY_EMAIL ? L() : y();
+                e === N.PUi.EMAIL_OR_PHONE || e === N.PUi.EMAIL || e === N.PUi.REVERIFY_EMAIL ? L() : y();
             },
             onLogout: () => {
                 (0, o.ZDy)(

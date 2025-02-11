@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N });
+n.d(t, { Z: () => v });
 var i = n(200651),
     l = n(192379),
     r = n(120356),
@@ -83,7 +83,7 @@ class C extends l.Component {
         });
     }
 }
-let N = s.ZP.connectStores([m.Z, u.default, p.Z, c.Z, h.Z, d.Z], (e) => {
+let v = s.ZP.connectStores([m.Z, u.default, p.Z, c.Z, h.Z, d.Z], (e) => {
     let { sku: t } = e;
     return {
         socialReasons: (0, g.Gg)(t.id, m.Z, u.default, c.Z, h.Z),

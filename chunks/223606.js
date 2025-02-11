@@ -27,7 +27,7 @@ let p = {},
     C = 0,
     v = {},
     E = {},
-    m = (e, t) => {
+    _ = (e, t) => {
         let n = (0, s.hc)(e),
             i = {
                 id: n,
@@ -37,13 +37,13 @@ let p = {},
             };
         (p[n] = i), C++;
     },
-    _ = (e) => p[e],
+    m = (e) => p[e],
     I = (e) => {
         null != p[e] && delete p[e], C++;
     };
 function S(e) {
     let { messageData: t, errorResponseBody: n } = e;
-    return m(t, n), !0;
+    return _(t, n), !0;
 }
 function T(e) {
     var t;
@@ -80,7 +80,7 @@ class N extends (i = l.ZP.PersistedStore) {
     }
     getMessage(e) {
         var t;
-        return null == e ? null : null !== (t = _(e)) && void 0 !== t ? t : null;
+        return null == e ? null : null !== (t = m(e)) && void 0 !== t ? t : null;
     }
     getMessagesVersion() {
         return C;

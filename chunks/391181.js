@@ -81,7 +81,7 @@ function p(e) {
     });
 }
 function C(e) {
-    let { product: t, guildId: n, showEditProduct: l, showUnpublishProduct: r, showTestDownload: a, showCopyLink: o, showDeleteProduct: d, showReportProduct: u, onEditProduct: c, onUnpublishProduct: h, onDeleteProduct: C, onCopyProductLink: v, onTestDownload: E, onReportProduct: m } = e;
+    let { product: t, guildId: n, showEditProduct: l, showUnpublishProduct: r, showTestDownload: a, showCopyLink: o, showDeleteProduct: d, showReportProduct: u, onEditProduct: c, onUnpublishProduct: h, onDeleteProduct: C, onCopyProductLink: v, onTestDownload: E, onReportProduct: _ } = e;
     return (0, i.jsx)('div', {
         onClick: (e) => {
             e.stopPropagation();
@@ -107,7 +107,7 @@ function C(e) {
                     onDeleteProduct: C,
                     onCopyLink: v,
                     onTestDownload: E,
-                    onReportProduct: m
+                    onReportProduct: _
                 }),
             children: (e, n) => {
                 let { isShown: l } = n;
@@ -129,7 +129,7 @@ function C(e) {
     });
 }
 function v(e) {
-    let { product: t, guildId: n, onEditProduct: l, onUnpublishProduct: v, onDeleteProduct: E, onCopyProductLink: m, onTestDownload: _, disabled: I = !1 } = e,
+    let { product: t, guildId: n, onEditProduct: l, onUnpublishProduct: v, onDeleteProduct: E, onCopyProductLink: _, onTestDownload: m, disabled: I = !1 } = e,
         S = (0, o.U)(t, 600),
         T = null !== t.price_tier ? (0, d.T4)(t.price_tier, h.pK.USD) : void 0,
         N = (0, u.C)(t);
@@ -154,8 +154,8 @@ function v(e) {
                         onEditProduct: l,
                         onUnpublishProduct: v,
                         onDeleteProduct: E,
-                        onCopyLink: m,
-                        onTestDownload: _,
+                        onCopyLink: _,
+                        onTestDownload: m,
                         onReportProduct: () => {}
                     })
                 )
@@ -220,8 +220,8 @@ function v(e) {
                             onEditProduct: l,
                             onUnpublishProduct: v,
                             onDeleteProduct: E,
-                            onCopyProductLink: m,
-                            onTestDownload: _,
+                            onCopyProductLink: _,
+                            onTestDownload: m,
                             onReportProduct: () => {}
                         })
                 ]

@@ -22,8 +22,8 @@ var i = n(200651),
     E = n(371260),
     I = n(372769),
     C = n(134432),
-    N = n(695346),
-    v = n(768581),
+    v = n(695346),
+    N = n(768581),
     T = n(356164),
     S = n(890064),
     Z = n(981631),
@@ -75,7 +75,7 @@ function P(e) {
         M = (0, m.ZP)(),
         U = t.features.has(Z.oNc.HUB),
         G = l.useMemo(() => {
-            let e = v.ZP.getGuildDiscoverySplashURL({
+            let e = N.ZP.getGuildDiscoverySplashURL({
                 id: t.id,
                 splash: t.discoverySplash,
                 size: 300 * (0, C.x_)()
@@ -92,14 +92,14 @@ function P(e) {
         B = f ? 48 : 40,
         V = l.useMemo(
             () =>
-                v.ZP.getGuildIconURL({
+                N.ZP.getGuildIconURL({
                     id: t.id,
                     icon: t.icon,
                     size: B
                 }),
             [t.icon, t.id, B]
         ),
-        H = N.Sb.useSetting();
+        H = v.Sb.useSetting();
     return (0, i.jsxs)('div', {
         className: b.container,
         children: [

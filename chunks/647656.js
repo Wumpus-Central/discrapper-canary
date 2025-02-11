@@ -67,8 +67,8 @@ let I = ['349134787773988865'],
                             .allow(null)
                     }),
             handler(e) {
-                var t, n, i, r, _, C, N;
-                let v,
+                var t, n, i, r, _, C, v;
+                let N,
                     {
                         socket: T,
                         args: { pid: S, activity: Z },
@@ -104,7 +104,7 @@ let I = ['349134787773988865'],
                             }),
                             (Z.party = {
                                 size: null !== (C = null === (n = Z.party) || void 0 === n ? void 0 : n.size) && void 0 !== C ? C : c.M$,
-                                ...(null !== (N = Z.party) && void 0 !== N ? N : {})
+                                ...(null !== (v = Z.party) && void 0 !== v ? v : {})
                             }),
                             (Z.flags = Z.flags | c.Cj);
                     }
@@ -120,12 +120,12 @@ let I = ['349134787773988865'],
                     if (null != D) throw new p.Z({ errorCode: E.lTL.INVALID_ACTIVITY_SECRET }, 'secrets cannot currently be sent with buttons');
                 }
                 if ((null != D && ((Z.metadata = { button_urls: D.map((e) => e.url) }), (Z.buttons = D.map((e) => e.label))), null != j)) for (let e of Object.keys(j)) Date.now().toString().length - j[e].toString().length > 2 && (j[e] = Math.floor(j[e] * m.Z.Millis.SECOND));
-                if (null == P) v = Promise.resolve([]);
+                if (null == P) N = Promise.resolve([]);
                 else {
                     if (null == T.application || null == T.application.id) throw Error();
-                    v = (0, h.fetchAssetIds)(T.application.id, [P.large_image, P.small_image]);
+                    N = (0, h.fetchAssetIds)(T.application.id, [P.large_image, P.small_image]);
                 }
-                return v.then((e) => {
+                return N.then((e) => {
                     var t, n;
                     let [i, l] = e;
                     if ((null != P && (null != i ? (P.large_image = i) : delete P.large_image, null != l ? (P.small_image = l) : delete P.small_image), !A())) return;

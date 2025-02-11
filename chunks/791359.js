@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(626135),
     I = n(70956),
     C = n(225559),
-    N = n(910436),
-    v = n(203028),
+    v = n(910436),
+    N = n(203028),
     T = n(358924),
     S = n(292140),
     Z = n(525296),
@@ -29,11 +29,11 @@ var i = n(200651),
 let y = 15 * I.Z.Millis.MINUTE,
     P = (0, Z.Z)(function (e) {
         let { party: t, onUserContextMenu: n, onChannelContextMenu: r, quest: a } = e,
-            s = (0, i.jsx)(v.Z, {
+            s = (0, i.jsx)(N.Z, {
                 party: t,
                 onUserContextMenu: n
             }),
-            c = (0, i.jsx)(N.Z, {
+            c = (0, i.jsx)(v.Z, {
                 party: t,
                 onChannelContextMenu: r,
                 quest: a

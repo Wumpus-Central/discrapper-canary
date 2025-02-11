@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(283595),
     I = n(417363),
     C = n(626135),
-    N = n(804739),
-    v = n(346329),
+    v = n(804739),
+    N = n(346329),
     T = n(981631),
     S = n(388032);
 let Z = d.Z.get(T.ABu.XBOX).name;
@@ -55,7 +55,7 @@ function A(e) {
                                 ...e,
                                 libraryApplication: l,
                                 canJoin: null != t && (0, u.Z)(t, T.xjy.JOIN) && t.type === T.IIU.PLAYING,
-                                canPlay: (0, N.t)({
+                                canPlay: (0, v.t)({
                                     LibraryApplicationStore: E.Z,
                                     LaunchableGameStore: g.Z,
                                     DispatchApplicationStore: I.Z,
@@ -103,7 +103,7 @@ function A(e) {
                     return (0, i.jsx)(a.sNh, {
                         id: 'play-'.concat(n.session_id),
                         action: function () {
-                            (0, v.playApplication)(l.id, r, {
+                            (0, N.playApplication)(l.id, r, {
                                 analyticsParams: {
                                     location: {
                                         ...s,

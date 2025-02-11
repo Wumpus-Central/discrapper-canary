@@ -13,8 +13,8 @@ var l = t(442837),
     f = t(250822),
     p = t(771362),
     x = t(280885),
-    _ = t(819602),
-    m = t(78806),
+    m = t(819602),
+    _ = t(78806),
     h = t(900927),
     Z = t(678738),
     v = t(652853),
@@ -35,7 +35,7 @@ function N(e) {
         }),
         R = (0, l.e7)([d.default], () => d.default.locale),
         M = (0, p.Z)(n.id),
-        B = (0, f.Z)(n.id);
+        U = (0, f.Z)(n.id);
     return (0, i.jsxs)(o.zJl, {
         fade: !0,
         className: y.scroller,
@@ -61,7 +61,7 @@ function N(e) {
             O.length > 0 &&
                 (0, i.jsx)(Z.Z, {
                     heading: E.intl.string(E.t['Uv/eT0']),
-                    children: (0, i.jsx)(m.Z, { applicationIds: O })
+                    children: (0, i.jsx)(_.Z, { applicationIds: O })
                 }),
             (0, i.jsx)(Z.Z, {
                 heading: E.intl.string(E.t.a6XYDw),
@@ -75,7 +75,7 @@ function N(e) {
                 (0, i.jsx)(Z.Z, {
                     heading: E.intl.string(E.t['3fe7U1']),
                     scrollIntoView: T === j.Tb.CONNECTIONS,
-                    children: (0, i.jsx)(_.OA, {
+                    children: (0, i.jsx)(m.OA, {
                         connectedAccounts: M,
                         className: y.connections,
                         userId: n.id,
@@ -83,12 +83,12 @@ function N(e) {
                         locale: R
                     })
                 }),
-            B.length > 0 &&
+            U.length > 0 &&
                 (0, i.jsx)(Z.Z, {
                     heading: E.intl.string(E.t.PHjkRE),
-                    children: B.map((e) =>
+                    children: U.map((e) =>
                         (0, i.jsx)(
-                            _.tH,
+                            m.tH,
                             {
                                 className: y.appsConnections,
                                 applicationRoleConnection: e,

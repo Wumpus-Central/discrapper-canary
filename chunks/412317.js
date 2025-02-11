@@ -13,7 +13,7 @@ var l = t(481060),
     f = t(981631),
     p = t(388032),
     x = t(101197);
-function _(e) {
+function m(e) {
     let { user: n, analyticsLocation: t, ...l } = e,
         o = (0, c.Y)({
             user: n,
@@ -33,7 +33,7 @@ function _(e) {
                   })
           });
 }
-function m(e) {
+function _(e) {
     let { gameFriends: n, hasIncomingPendingGameFriends: t, hasOutgoingPendingGameFriends: o, user: s, analyticsLocation: r } = e,
         {
             onMouseEnter: a,
@@ -44,7 +44,7 @@ function m(e) {
             hasIncomingPendingGameFriends: t,
             hasOutgoingPendingGameFriends: o
         });
-    return (0, i.jsx)(_, {
+    return (0, i.jsx)(m, {
         tooltipText: c,
         ariaLabel: d,
         icon: l.KED,
@@ -73,7 +73,7 @@ function h(e) {
             ? (0, i.jsxs)('div', {
                   className: x.multipleButtons,
                   children: [
-                      (0, i.jsx)(m, {
+                      (0, i.jsx)(_, {
                           user: t,
                           analyticsLocation: Z,
                           gameFriends: g,
@@ -90,7 +90,7 @@ function h(e) {
               ? (0, i.jsxs)('div', {
                     className: x.multipleButtons,
                     children: [
-                        (0, i.jsx)(_, {
+                        (0, i.jsx)(m, {
                             icon: l.iHX,
                             tooltipText: p.intl.string(p.t.zz2i8v),
                             user: t,
@@ -106,7 +106,7 @@ function h(e) {
                 ? (0, i.jsxs)('div', {
                       className: x.multipleButtons,
                       children: [
-                          (0, i.jsx)(_, {
+                          (0, i.jsx)(m, {
                               icon: l.iHX,
                               tooltipText: p.intl.string(p.t.ZOFd1N),
                               user: t,

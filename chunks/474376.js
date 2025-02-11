@@ -1,4 +1,4 @@
-n.d(t, { g: () => v }), n(653041);
+n.d(t, { g: () => N }), n(653041);
 var i = n(200651);
 n(192379);
 var l = n(442837),
@@ -18,11 +18,11 @@ var l = n(442837),
     E = n(383832),
     I = n(981631),
     C = n(388032),
-    N = n(357001);
-function v(e) {
+    v = n(357001);
+function N(e) {
     let t = (0, l.e7)([h.default], () => h.default.getCurrentUser()),
         n = (0, l.e7)([u.Z], () => u.Z.hidePersonalInformation),
-        v = (0, l.e7)([c.Z], () => (0, r.wj)(c.Z.theme)),
+        N = (0, l.e7)([c.Z], () => (0, r.wj)(c.Z.theme)),
         T = (0, o.R6)('useMultiAccountMenuItems'),
         { multiAccountUsers: S } = (0, f.L)(),
         Z = (e) => {
@@ -37,11 +37,11 @@ function v(e) {
                 a.sNh,
                 {
                     id: r.id,
-                    focusedClassName: N.focused,
+                    focusedClassName: v.focused,
                     label: (e) => {
                         let { isFocused: t } = e;
                         return (0, i.jsxs)('div', {
-                            className: N.userMenuItem,
+                            className: v.userMenuItem,
                             children: [
                                 (0, i.jsx)(a.qEK, {
                                     src: r.getAvatarURL(void 0, 40),
@@ -49,10 +49,10 @@ function v(e) {
                                     'aria-label': l.username
                                 }),
                                 (0, i.jsxs)('div', {
-                                    className: N.userMenuUsername,
+                                    className: v.userMenuUsername,
                                     children: [
                                         (0, i.jsx)(a.Text, {
-                                            className: N.userMenuText,
+                                            className: v.userMenuText,
                                             variant: 'text-sm/normal',
                                             children: p.ZP.getUserTag(r, {
                                                 mode: 'username',
@@ -61,7 +61,7 @@ function v(e) {
                                         }),
                                         !r.isPomelo() &&
                                             (0, i.jsx)(a.Text, {
-                                                className: N.userMenuDiscriminator,
+                                                className: v.userMenuDiscriminator,
                                                 variant: 'text-sm/normal',
                                                 children: u
                                             })
@@ -71,15 +71,15 @@ function v(e) {
                                     (0, i.jsx)(a.owK, {
                                         size: 'sm',
                                         color: (0, s.Lq)(t ? I.Ilk.WHITE_500 : I.Ilk.BRAND_500),
-                                        secondaryColor: (0, s.Lq)((t && v) || (t && !T && !v) ? I.Ilk.BRAND_500 : I.Ilk.WHITE_500),
-                                        className: N.activeIcon
+                                        secondaryColor: (0, s.Lq)((t && N) || (t && !T && !N) ? I.Ilk.BRAND_500 : I.Ilk.WHITE_500),
+                                        className: v.activeIcon
                                     }),
                                 c &&
                                     (0, i.jsx)(a.P4T, {
                                         color: (0, s.Lq)(I.Ilk.RED_400),
-                                        secondaryColor: (0, s.Lq)((t && v) || (t && !T && !v) ? I.Ilk.BRAND_500 : I.Ilk.WHITE_500),
+                                        secondaryColor: (0, s.Lq)((t && N) || (t && !T && !N) ? I.Ilk.BRAND_500 : I.Ilk.WHITE_500),
                                         size: 'xs',
-                                        className: N.activeIcon
+                                        className: v.activeIcon
                                     })
                             ]
                         });

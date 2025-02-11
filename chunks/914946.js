@@ -41,8 +41,8 @@ var i,
     E = n(598077),
     I = n(592125),
     C = n(430824),
-    N = n(131951),
-    v = n(375954),
+    v = n(131951),
+    N = n(375954),
     T = n(158776),
     S = n(594174),
     Z = n(979651),
@@ -88,7 +88,7 @@ function V(e, t) {
         [R.d4z.GUILD_CATEGORY, ...f.tx].includes(e.type) ||
             n.push(
                 new Promise((t) => {
-                    v.Z.whenReady(e.id, () => t()),
+                    N.Z.whenReady(e.id, () => t()),
                         d.Z.fetchMessages({
                             channelId: e.id,
                             limit: R.AQB
@@ -97,7 +97,7 @@ function V(e, t) {
             ),
         Promise.all(n).then(() => {
             var n;
-            let l = (!e.isNSFW() || (null === (n = S.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? v.Z.getMessages(e.id).toArray().map(H) : [],
+            let l = (!e.isNSFW() || (null === (n = S.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? N.Z.getMessages(e.id).toArray().map(H) : [],
                 r = Object.values(Z.Z.getVoiceStatesForChannel(e.id)).map((t) => F(i, e.id, t));
             return {
                 id: e.id,
@@ -146,9 +146,9 @@ function F(e, t, n) {
     if (null == c) throw Error('Invalid user id: '.concat(o));
     return {
         nick: b.ZP.getName(e, t, c),
-        mute: N.Z.isLocalMute(c.id),
-        volume: N.Z.getLocalVolume(c.id),
-        pan: N.Z.getLocalPan(c.id),
+        mute: v.Z.isLocalMute(c.id),
+        volume: v.Z.getLocalVolume(c.id),
+        pan: v.Z.getLocalPan(c.id),
         voice_state: {
             mute: i,
             deaf: l,
@@ -259,7 +259,7 @@ function ee(e, t) {
     null == t && (e.authorization.scopes = [O.lH]);
 }
 function et(e) {
-    let t = N.Z.getSettings(),
+    let t = v.Z.getSettings(),
         n = (e) =>
             Object.values(e)
                 .sort((e, t) => e.index - t.index)
@@ -270,12 +270,12 @@ function et(e) {
         i = e(t);
     return {
         input: {
-            available_devices: n(N.Z.getInputDevices()),
+            available_devices: n(v.Z.getInputDevices()),
             device_id: t.inputDeviceId,
             volume: t.inputVolume
         },
         output: {
-            available_devices: n(N.Z.getOutputDevices()),
+            available_devices: n(v.Z.getOutputDevices()),
             device_id: t.outputDeviceId,
             volume: t.outputVolume
         },
@@ -296,7 +296,7 @@ function et(e) {
     };
 }
 function en(e, t) {
-    let n = N.Z.getSettings(e),
+    let n = v.Z.getSettings(e),
         i = t(n);
     return {
         input_mode: {

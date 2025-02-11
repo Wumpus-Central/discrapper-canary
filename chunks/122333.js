@@ -18,8 +18,8 @@ var r = n(481060),
     E = n(914010),
     I = n(594174),
     C = n(823379),
-    N = n(358085),
-    v = n(929809),
+    v = n(358085),
+    N = n(929809),
     T = n(179645),
     S = n(701476),
     Z = n(785997),
@@ -57,7 +57,7 @@ class y extends s.Z {
             let e = f.Z.getGuild(L);
             null != e && (0, u.Dc)(e) && ((s = !0), (0, p.RM)(e.id));
         }
-        let y = () => 0 === _.Z.totalGuilds && !N.isPlatformEmbedded,
+        let y = () => 0 === _.Z.totalGuilds && !v.isPlatformEmbedded,
             P = o.b();
         (e = [
             {
@@ -117,7 +117,7 @@ class y extends s.Z {
             },
             {
                 key: 'Claim Account Modal',
-                open: (e) => c.j(N.isPlatformEmbedded, e),
+                open: (e) => c.j(v.isPlatformEmbedded, e),
                 predicate: () => {
                     var e;
                     return !s && null != I.default.getCurrentUser() && !(null === (e = I.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !b.a && !(0, h.g)('new_user_manager');
@@ -149,7 +149,7 @@ class y extends s.Z {
             }
         ]),
             (t = () => {
-                v.H(), m.Z.flowStep(x.MK.ANY, x.EW.NUF_COMPLETE, !0);
+                N.H(), m.Z.flowStep(x.MK.ANY, x.EW.NUF_COMPLETE, !0);
             }),
             [...e].reverse().forEach((e) => {
                 let n = t;

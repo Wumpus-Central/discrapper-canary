@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(47120);
+n.d(t, { Z: () => b }), n(47120);
 var i,
     l,
     r,
@@ -15,8 +15,8 @@ var i,
     C = n(306680),
     v = n(9156),
     E = n(70956),
-    m = n(709054),
-    _ = n(981631);
+    _ = n(709054),
+    m = n(981631);
 let I = new Set(),
     S = {},
     T = {};
@@ -24,7 +24,7 @@ function N(e, t) {
     let n = S[e];
     if (null != n && null != t && n.has(t)) {
         var i;
-        !v.ZP.isOptInEnabled(e) || (null === (i = h.Z.getChannel(t)) || void 0 === i ? void 0 : i.isThread()) || null != C.ZP.ackMessageId(t) || a.Z.wait(() => (0, o.In)(t, !0, !0, m.default.atPreviousMillisecond(t)));
+        !v.ZP.isOptInEnabled(e) || (null === (i = h.Z.getChannel(t)) || void 0 === i ? void 0 : i.isThread()) || null != C.ZP.ackMessageId(t) || a.Z.wait(() => (0, o.In)(t, !0, !0, _.default.atPreviousMillisecond(t)));
     }
 }
 function y(e) {
@@ -38,14 +38,14 @@ function y(e) {
     0 !== n.length &&
         ((S[e] = new Set(
             n.filter((t) => {
-                let n = m.default.extractTimestamp(t);
+                let n = _.default.extractTimestamp(t);
                 return null == C.ZP.getTrackedAckMessageId(t) && n > Date.now() - E.Z.Millis.WEEK && n > u.Z.getGuildRecentsDismissedAt(e) && n > l && !v.ZP.isChannelOrParentOptedIn(e, t);
             })
         )),
         (T[e] = Date.now()));
 }
 function O() {
-    m.default.keys(S).forEach((e) => {
+    _.default.keys(S).forEach((e) => {
         let t = S[e];
         S[e] = new Set([...t].filter((t) => !v.ZP.isChannelOrParentOptedIn(e, t)));
     });
@@ -62,7 +62,7 @@ class A extends (i = s.ZP.Store) {
         var n;
         if (null == e) return !1;
         let i = p.Z.getGuild(e);
-        return !!(null != i && i.hasFeature(_.oNc.COMMUNITY)) && (null != e && null == S[e] && y(e), (null === (n = S[e]) || void 0 === n ? void 0 : n.has(t)) && null == C.ZP.getTrackedAckMessageId(t));
+        return !!(null != i && i.hasFeature(m.oNc.COMMUNITY)) && (null != e && null == S[e] && y(e), (null === (n = S[e]) || void 0 === n ? void 0 : n.has(t)) && null == C.ZP.getTrackedAckMessageId(t));
     }
 }
 (r = 'NewChannelsStore'),
@@ -74,7 +74,7 @@ class A extends (i = s.ZP.Store) {
               writable: !0
           })
         : (A[l] = r);
-let P = new A(a.Z, {
+let b = new A(a.Z, {
     BULK_CLEAR_RECENTS: function (e) {
         let { guildId: t, channelIds: n } = e;
         if (null == S[t]) return !1;

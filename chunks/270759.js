@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(984370),
     I = n(518311),
     C = n(199104),
-    N = n(922611),
-    v = n(108427),
+    v = n(922611),
+    N = n(108427),
     T = n(210887),
     S = n(974042),
     Z = n(849862),
@@ -36,7 +36,7 @@ function O() {
 }
 let R = function (e) {
     let { initialSection: t } = e,
-        n = (0, N.Do)({ location: 'PeoplePage' }),
+        n = (0, v.Do)({ location: 'PeoplePage' }),
         r = (0, s.TH)(),
         I = (0, s.k6)(),
         R = (0, _.Q3)('PeoplePage');
@@ -50,7 +50,7 @@ let R = function (e) {
             });
     }, [I, r]),
         l.useEffect(() => {
-            h.Y(x.Z5c.FRIENDS), (0, v.e)('friends');
+            h.Y(x.Z5c.FRIENDS), (0, N.e)('friends');
         }, []);
     let j = (0, c.e7)([T.Z], () => T.Z.theme),
         D = (0, Z.If)(),

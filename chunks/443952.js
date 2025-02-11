@@ -18,8 +18,8 @@ var l = n(243814),
     E = n(928518),
     I = n(23750),
     C = n(592125),
-    N = n(293273),
-    v = n(885110),
+    v = n(293273),
+    N = n(885110),
     T = n(451478),
     S = n(630388),
     Z = n(823379),
@@ -37,9 +37,9 @@ var l = n(243814),
     k = n(701488);
 async function M(e, t, n, i) {
     let l = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : '',
-        r = N.Z.getApplicationActivity(t);
+        r = v.Z.getApplicationActivity(t);
     if (null == r || null == r.secrets || !(0, y.t9)(i, r.party, r.secrets)) throw new L.Z({ errorCode: w.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure an activity includes a party and appropriate secret.');
-    let a = (0, g.Z)(r, v.Z);
+    let a = (0, g.Z)(r, N.Z);
     if (a) {
         let { lock: t } = (0, j.jU)(e);
         return (0, o.h7)(r, a).then(() => {

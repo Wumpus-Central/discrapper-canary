@@ -18,8 +18,8 @@ var l = n(481060),
 let E = (0, g.Z)(
     (e) => {
         var t;
-        let { clientId: n, authorizations: d, scopes: u, parsedPermissions: h, responseType: g, redirectUri: E, codeChallenge: I, codeChallengeMethod: C, state: N, guildId: v, channelId: T, prompt: S, disableGuildSelect: Z, disclosures: A, integrationType: b, pid: x } = e,
-            L = 'OAuth2Authorize_'.concat(n, '_').concat(v, '_').concat(T),
+        let { clientId: n, authorizations: d, scopes: u, parsedPermissions: h, responseType: g, redirectUri: E, codeChallenge: I, codeChallengeMethod: C, state: v, guildId: N, channelId: T, prompt: S, disableGuildSelect: Z, disclosures: A, integrationType: b, pid: x } = e,
+            L = 'OAuth2Authorize_'.concat(n, '_').concat(N, '_').concat(T),
             y = null != b ? (null == d ? void 0 : d.get(b)) : void 0,
             P = null !== (t = null == y ? void 0 : y.application) && void 0 !== t ? t : s.Z.getApplication(n);
         return new Promise((e, t) => {
@@ -43,9 +43,9 @@ let E = (0, g.Z)(
                             redirectUri: E,
                             codeChallenge: I,
                             codeChallengeMethod: C,
-                            state: N,
+                            state: v,
                             permissions: h.toString(),
-                            guildId: v,
+                            guildId: N,
                             channelId: T,
                             prompt: S,
                             disableGuildSelect: 'boolean' == typeof Z ? Z : 'true' === Z,
@@ -76,9 +76,9 @@ let E = (0, g.Z)(
                             redirectUri: E,
                             codeChallenge: I,
                             codeChallengeMethod: C,
-                            state: N,
+                            state: v,
                             permissions: h,
-                            guildId: v,
+                            guildId: N,
                             channelId: T,
                             prompt: S,
                             disableGuildSelect: 'boolean' == typeof Z ? Z : 'true' === Z,

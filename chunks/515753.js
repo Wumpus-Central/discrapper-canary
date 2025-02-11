@@ -25,8 +25,8 @@ var l = n(200651),
     A = n(771173),
     f = n(372276),
     p = n(385499),
-    v = n(570908),
-    L = n(702321),
+    L = n(570908),
+    v = n(702321),
     Z = n(201895),
     m = n(43267),
     P = n(933557),
@@ -123,7 +123,7 @@ function ea(e) {
                 className: J.link,
                 ...N,
                 children: [
-                    (0, l.jsx)(v.Z, {
+                    (0, l.jsx)(L.Z, {
                         selected: n,
                         muted: !1,
                         avatar: (0, l.jsx)(i, {
@@ -211,7 +211,7 @@ function er(e) {
                           });
                   });
         },
-        ev = (e) => {
+        eL = (e) => {
             e.preventDefault(), e.stopPropagation();
             let t = X.intl.formatToPlainString(X.t.hJ5Ap6, { name: eh }),
                 i = X.intl.format(X.t.SSIVOj, { name: eh });
@@ -227,11 +227,11 @@ function er(e) {
                         });
                 });
         },
-        eL = () =>
+        ev = () =>
             a.isSystemDM()
                 ? (0, l.jsx)('div', {
                       className: J.subtext,
-                      children: (0, L.Z)(a.id) ? X.intl.string(X.t.FL5T09) : X.intl.string(X.t.NnY5lZ)
+                      children: (0, v.Z)(a.id) ? X.intl.string(X.t.FL5T09) : X.intl.string(X.t.NnY5lZ)
                   })
                 : a.isMultiUserDM() && null == b
                   ? (0, l.jsx)('div', {
@@ -357,12 +357,12 @@ function er(e) {
                                     unread: e_
                                 }),
                                 ...n,
-                                children: (0, l.jsx)(v.Z, {
+                                children: (0, l.jsx)(L.Z, {
                                     avatar: eZ(),
                                     selected: c,
                                     highlighted: e_,
                                     muted: eM,
-                                    subText: eL(),
+                                    subText: ev(),
                                     name: (0, l.jsx)(x.Z, {
                                         tooltipClassName: J.overflowTooltip,
                                         children: eG
@@ -381,7 +381,7 @@ function er(e) {
                             ex ? (0, l.jsx)(ei, {}) : null,
                             (0, l.jsx)(et, {
                                 'aria-label': em ? X.intl.string(X.t['26C4oq']) : X.intl.string(X.t.jsvgc3),
-                                onClick: em ? ev : eS,
+                                onClick: em ? eL : eS,
                                 onMouseDown: eA
                             })
                         ]

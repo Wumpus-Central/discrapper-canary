@@ -18,21 +18,21 @@ var l = n(120356),
     E = n(984370),
     I = n(278605),
     C = n(299657),
-    N = n(594174),
-    v = n(74538),
+    v = n(594174),
+    N = n(74538),
     T = n(981631),
     S = n(474936),
     Z = n(388032),
     A = n(925138);
-let b = o.ZP.connectStores([N.default], () => ({ user: N.default.getCurrentUser() }))(
+let b = o.ZP.connectStores([v.default], () => ({ user: v.default.getCurrentUser() }))(
     (0, m.Z)(
         (0, h.Z)((e) => {
             let { isAuthenticated: t, user: n } = e,
                 { analyticsLocations: l } = (0, _.ZP)(g.Z.HOME_PAGE_PREMIUM_TAB),
                 o = (0, I.xP)('ApplicationStoreHome'),
-                h = (0, v.I5)(n),
+                h = (0, N.I5)(n),
                 m = o && !h,
-                N = (0, p.ZP)();
+                v = (0, p.ZP)();
             return t
                 ? (0, i.jsxs)('div', {
                       className: A.homeWrapperNormal,
@@ -40,13 +40,13 @@ let b = o.ZP.connectStores([N.default], () => ({ user: N.default.getCurrentUser(
                           (0, i.jsx)(u.Z, {
                               section: T.jXE.NAVIGATION,
                               children: (0, i.jsx)(d.f6W, {
-                                  theme: N,
+                                  theme: v,
                                   children: (e) =>
                                       (0, i.jsxs)(E.Z, {
                                           isAuthenticated: t,
                                           className: r()(A.headerBar, e, {
-                                              [A.headerBarV2LightBackground]: m && !(0, c.wj)(N),
-                                              [A.headerBarV2DarkBackground]: m && (0, c.wj)(N)
+                                              [A.headerBarV2LightBackground]: m && !(0, c.wj)(v),
+                                              [A.headerBarV2DarkBackground]: m && (0, c.wj)(v)
                                           }),
                                           role: 'navigation',
                                           children: [

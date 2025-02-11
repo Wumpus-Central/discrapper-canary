@@ -1,4 +1,4 @@
-n.d(t, { i: () => _ }), n(47120);
+n.d(t, { i: () => C }), n(47120);
 var l = n(200651),
     i = n(192379),
     a = n(704215),
@@ -9,14 +9,14 @@ var l = n(200651),
     d = n(822857),
     c = n(921944),
     E = n(642145);
-function _() {
+function C() {
     let { enabled: e } = (0, d.W)({ location: 'vc-announcement-modal' }),
         t = e ? [a.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL] : [],
-        [_, C] = (0, s.US)(t, void 0, !0),
+        [C, _] = (0, s.US)(t, void 0, !0),
         [h, I] = i.useState(!1);
     i.useEffect(() => {
         e &&
-            _ === a.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL &&
+            C === a.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL &&
             !h &&
             (I(!0),
             (0, r.ZD)(
@@ -35,9 +35,9 @@ function _() {
                 },
                 {
                     onCloseCallback: () => {
-                        C(c.L.UNKNOWN), (0, u.U9)();
+                        _(c.L.UNKNOWN), (0, u.U9)();
                     }
                 }
             ));
-    }, [_, e, h, C]);
+    }, [C, e, h, _]);
 }

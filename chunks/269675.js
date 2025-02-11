@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(730647),
     I = n(772021),
     C = n(396828),
-    N = n(293423),
-    v = n(20967),
+    v = n(293423),
+    N = n(20967),
     T = n(504762),
     S = n(807152),
     Z = n(176505),
@@ -49,8 +49,8 @@ function x(e) {
         }, [t, w]),
         r.tq && w)
     ) {
-        let e = null == n ? v.J.NOT_GUILD_MEMBER : v.J.GUILD_NOT_ELIGIBLE;
-        return (0, i.jsx)(v.z, { errorType: e });
+        let e = null == n ? N.J.NOT_GUILD_MEMBER : N.J.GUILD_NOT_ELIGIBLE;
+        return (0, i.jsx)(N.z, { errorType: e });
     }
     return (0, i.jsxs)('div', {
         className: b.container,
@@ -74,7 +74,7 @@ function x(e) {
                           className: b.scroller,
                           children: (0, i.jsx)('div', {
                               className: b.scrollerContent,
-                              children: D ? (0, i.jsx)(s.$jN, {}) : (0, i.jsx)(N.Z, { guild: n })
+                              children: D ? (0, i.jsx)(s.$jN, {}) : (0, i.jsx)(v.Z, { guild: n })
                           })
                       })
                     : (0, i.jsx)(T.Z, {})

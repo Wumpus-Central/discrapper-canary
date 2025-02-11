@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(47120);
+n.d(t, { Z: () => v }), n(47120);
 var i = n(192379),
     l = n(442837),
     r = n(846027),
@@ -67,4 +67,4 @@ g.isPlatformEmbedded &&
             unread: !i && !!(t || e + n > 0)
         };
     })(I)));
-let N = C;
+let v = C;

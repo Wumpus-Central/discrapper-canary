@@ -20,11 +20,11 @@ let _ = (e) => {
         null != n && a.Z.resolveInvite(n, 'Hub').finally(() => I(!1));
     }, [n]);
     let C = (0, r.e7)([d.Z], () => (null != n ? d.Z.getInvite(n) : null)),
-        N = (0, r.e7)([c.Z], () => c.Z.getGuild(t));
+        v = (0, r.e7)([c.Z], () => c.Z.getGuild(t));
     l.useEffect(() => {
-        null != N && (0, o.uL)(m.Z5c.CHANNEL(t));
-    }, [N, t]);
-    let v = l.useCallback((e) => {
+        null != v && (0, o.uL)(m.Z5c.CHANNEL(t));
+    }, [v, t]);
+    let N = l.useCallback((e) => {
             f((t) => Math.max(t, e));
         }, []),
         T = (0, u.gK)();
@@ -35,7 +35,7 @@ let _ = (e) => {
             splash: T,
             waveState: _,
             showLogo: !1,
-            updateWaveState: v,
+            updateWaveState: N,
             children: [
                 (0, i.jsx)('div', { className: g.dragRegion }),
                 (0, i.jsx)('div', {

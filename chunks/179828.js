@@ -12,15 +12,15 @@ var i = t(200651),
     f = t(496675),
     p = t(700785),
     x = t(785717),
-    _ = t(256226),
-    m = t(678738),
+    m = t(256226),
+    _ = t(678738),
     h = t(314172),
     Z = t(981631),
     v = t(388032),
     g = t(263457);
 function j(e) {
     let { user: n, currentUser: t, guild: a, guildMember: d, roles: c, highestRole: u, canManageRoles: I, onAddRole: f, onRemoveRole: x } = e,
-        m = I && null != d,
+        _ = I && null != d,
         j = l.useMemo(() => 'roles-'.concat((0, o.Z)()), []),
         E = (0, s.ZP)({
             id: j,
@@ -34,7 +34,7 @@ function j(e) {
         T = c.map((e) => {
             var l;
             return (0, i.jsx)(
-                _.Z,
+                m.Z,
                 {
                     role: e,
                     guildId: a.id,
@@ -57,7 +57,7 @@ function j(e) {
                     ...t,
                     children: [
                         T,
-                        m &&
+                        _ &&
                             (0, i.jsx)(h.Z, {
                                 guild: a,
                                 guildMember: d,
@@ -74,9 +74,9 @@ function j(e) {
 function E(e) {
     let { user: n, currentUser: t, guild: o, scrollIntoView: s } = e,
         { trackUserProfileAction: r } = (0, x.KZ)(),
-        _ = (0, a.e7)([u.ZP], () => u.ZP.getMember(o.id, n.id)),
+        m = (0, a.e7)([u.ZP], () => u.ZP.getMember(o.id, n.id)),
         h = (0, a.e7)([I.Z], () => I.Z.getRoles(o.id)),
-        g = null == _ ? void 0 : _.roles,
+        g = null == m ? void 0 : m.roles,
         E = l.useMemo(
             () =>
                 null == g || 0 === g.length
@@ -110,16 +110,16 @@ function E(e) {
             },
             [g, o.id, n.id, r]
         ),
-        P = N && null != _;
+        P = N && null != m;
     return 0 !== E.length || P
-        ? (0, i.jsx)(m.Z, {
+        ? (0, i.jsx)(_.Z, {
               heading: v.intl.string(v.t.LPJmLy),
               scrollIntoView: s,
               children: (0, i.jsx)(j, {
                   user: n,
                   currentUser: t,
                   guild: o,
-                  guildMember: _,
+                  guildMember: m,
                   roles: E,
                   highestRole: y,
                   canManageRoles: N,

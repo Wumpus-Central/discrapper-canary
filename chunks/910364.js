@@ -1,4 +1,4 @@
-t.d(n, { Z: () => U }), t(47120);
+t.d(n, { Z: () => B }), t(47120);
 var i = t(200651),
     l = t(192379),
     o = t(642128),
@@ -12,8 +12,8 @@ var i = t(200651),
     f = t(699516),
     p = t(5192),
     x = t(785717),
-    _ = t(221292),
-    m = t(687158),
+    m = t(221292),
+    _ = t(687158),
     h = t(326094),
     Z = t(510659),
     v = t(113557),
@@ -32,9 +32,9 @@ var i = t(200651),
     O = t(228168),
     R = t(981631),
     M = t(388032),
-    B = t(757672);
-function U(e) {
-    let { user: n, currentUser: t, guildId: U, channelId: F, messageId: D, roleId: w, sessionId: G, friendToken: k, initialSection: V, initialSubsection: W, transitionState: Y, onClose: K, showGuildProfile: J = !0, sourceAnalyticsLocations: X = [] } = e,
+    U = t(757672);
+function B(e) {
+    let { user: n, currentUser: t, guildId: B, channelId: F, messageId: D, roleId: w, sessionId: G, friendToken: k, initialSection: V, initialSubsection: W, transitionState: Y, onClose: K, showGuildProfile: J = !0, sourceAnalyticsLocations: X = [] } = e,
         { analyticsLocations: q } = (0, u.ZP)([...X, c.Z.SIMPLIFIED_PROFILE_MODAL]),
         z = (0, h.Z)({
             user: n,
@@ -45,7 +45,7 @@ function U(e) {
             layout: z ? 'SIMPLIFIED_MODAL' : 'SIMPLIFIED_MODAL_RESTRICTED_BLOCKER_PROFILE',
             userId: n.id,
             sourceSessionId: G,
-            guildId: U,
+            guildId: B,
             channelId: F,
             messageId: D,
             roleId: w,
@@ -56,11 +56,11 @@ function U(e) {
             opacity: null != Q.interactionType ? 1 : 0,
             config: { duration: 150 }
         }),
-        ee = (0, m.ZP)(n.id, J ? U : void 0),
-        en = (0, m.ZP)(n.id, U),
+        ee = (0, _.ZP)(n.id, J ? B : void 0),
+        en = (0, _.ZP)(n.id, B),
         et = (0, s.e7)([f.Z], () => f.Z.getRelationshipType(n.id)),
         ei = n.id === t.id,
-        el = l.useMemo(() => (null != U ? { [U]: [n.id] } : {}), [U, n.id]);
+        el = l.useMemo(() => (null != B ? { [B]: [n.id] } : {}), [B, n.id]);
     (0, d.$)(el);
     let eo = l.createRef(),
         es = (0, a.Z)(eo);
@@ -72,7 +72,7 @@ function U(e) {
                 value: Q,
                 children: (0, i.jsxs)(r.Y0X, {
                     transitionState: Y,
-                    className: B.root,
+                    className: U.root,
                     hideShadow: !0,
                     'aria-label': M.intl.string(M.t['3N/J2t']),
                     children: [
@@ -88,7 +88,7 @@ function U(e) {
                                         (0, i.jsx)(b.Z, {
                                             shouldShowTooltip: null === Q.interactionType,
                                             user: n,
-                                            guildId: U,
+                                            guildId: B,
                                             channelId: F,
                                             onClose: K
                                         }),
@@ -100,7 +100,7 @@ function U(e) {
                                         }),
                                         (0, i.jsx)(P.Z, {
                                             user: n,
-                                            guildId: U,
+                                            guildId: B,
                                             viewProfileItem:
                                                 (null == en ? void 0 : en.guildId) == null
                                                     ? null
@@ -117,7 +117,7 @@ function U(e) {
                                                                         friendToken: k,
                                                                         sourceAnalyticsLocations: X
                                                                     }),
-                                                                    (0, _.pQ)({
+                                                                    (0, m.pQ)({
                                                                         action: 'PRESS_VIEW_MAIN_PROFILE',
                                                                         analyticsLocations: q,
                                                                         ...H
@@ -127,7 +127,7 @@ function U(e) {
                                                       : (0, i.jsx)(r.sNh, {
                                                             id: 'view-server-profile',
                                                             label: M.intl.string(M.t.DisZzM),
-                                                            subtext: M.intl.formatToPlainString(M.t['mn/nW1'], { displayName: p.ZP.getName(U, F, n) }),
+                                                            subtext: M.intl.formatToPlainString(M.t['mn/nW1'], { displayName: p.ZP.getName(B, F, n) }),
                                                             action: () => {
                                                                 K(),
                                                                     (0, L.openUserProfileModal)({
@@ -136,7 +136,7 @@ function U(e) {
                                                                         friendToken: k,
                                                                         sourceAnalyticsLocations: X
                                                                     }),
-                                                                    (0, _.pQ)({
+                                                                    (0, m.pQ)({
                                                                         action: 'PRESS_VIEW_SERVER_PROFILE',
                                                                         analyticsLocations: q,
                                                                         ...H
@@ -156,35 +156,35 @@ function U(e) {
                                         (0, i.jsx)(j.Z, {
                                             userId: n.id,
                                             onClose: K,
-                                            className: B.toast
+                                            className: U.toast
                                         }),
                                         null != Q.interactionType &&
                                             (0, i.jsx)(o.animated.div, {
                                                 style: $,
-                                                className: B.backdrop
+                                                className: U.backdrop
                                             }),
                                         (0, i.jsxs)('div', {
-                                            className: B.headerInner,
+                                            className: U.headerInner,
                                             children: [
                                                 (0, i.jsx)(v.Z, {
                                                     location: 'UserProfileModal',
                                                     user: n,
                                                     displayProfile: ee,
-                                                    guildId: U,
+                                                    guildId: B,
                                                     channelId: F,
                                                     profileType: O.y0.FULL_SIZE
                                                 }),
                                                 (0, i.jsx)(S.Z, {
                                                     location: 'UserProfileModal',
                                                     user: n,
-                                                    guildId: U,
+                                                    guildId: B,
                                                     channelId: F,
                                                     profileType: O.y0.FULL_SIZE,
                                                     hasEntered: Y === r.Dvm.ENTERED,
                                                     onCloseProfile: K
                                                 }),
                                                 (0, i.jsxs)('div', {
-                                                    className: B.headerButtons,
+                                                    className: U.headerButtons,
                                                     children: [
                                                         (0, i.jsx)(A.Z, {
                                                             isCurrentUser: ei,
@@ -195,7 +195,7 @@ function U(e) {
                                                         }),
                                                         (0, i.jsx)(N.Z, {
                                                             user: n,
-                                                            guildId: U,
+                                                            guildId: B,
                                                             onClose: K
                                                         })
                                                     ]
@@ -207,7 +207,7 @@ function U(e) {
                                 (0, i.jsx)(C.Z, {
                                     user: n,
                                     currentUser: t,
-                                    guildId: U,
+                                    guildId: B,
                                     channelId: F,
                                     displayProfile: ee,
                                     initialSection: V,

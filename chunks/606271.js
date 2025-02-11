@@ -17,8 +17,8 @@ var i = n(392711),
     E = n(594174),
     I = n(979651),
     C = n(626135),
-    N = n(823379),
-    v = n(358085),
+    v = n(823379),
+    N = n(358085),
     T = n(914946),
     S = n(238679),
     Z = n(863141),
@@ -40,7 +40,7 @@ function L(e, t, n) {
 }
 class y {
     loadServer() {
-        for (let e of (v.isPlatformEmbedded && this.registerTransportsForEmbeddedPlatform(), this.transports)) this.rpcServer.registerTransport(e);
+        for (let e of (N.isPlatformEmbedded && this.registerTransportsForEmbeddedPlatform(), this.transports)) this.rpcServer.registerTransport(e);
         for (let [e, t] of Object.entries(this.rpcCommandHandlers)) this.rpcServer.setCommandHandler(e, t);
         for (let [e, t] of Object.entries(this.rpcEventHandlers)) this.rpcServer.setEventHandler(e, t);
     }
@@ -101,7 +101,7 @@ class y {
                         (t = A.zMe.MESSAGE_DELETE), (n = e.channelId), (i = { id: e.id }), (l = ''.concat(t).concat(e.id));
                         break;
                     default:
-                        return (0, N.vE)(e);
+                        return (0, v.vE)(e);
                 }
                 null != n &&
                     this.rpcServer.dispatchToSubscriptions(

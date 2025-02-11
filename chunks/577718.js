@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(970731),
     I = n(626135),
     C = n(267642),
-    N = n(337721),
-    v = n(981631),
+    v = n(337721),
+    N = n(981631),
     T = n(921944),
     S = n(30513),
     Z = n(474936),
@@ -30,15 +30,15 @@ var i = n(200651),
     P = n(31932),
     O = n(642301);
 function R(e) {
-    null != e && m.Z.open(e.id, (0, p.r)(e.id), { section: v.jXE.PREMIUM_GUILD_PROGRESS_BAR }, v.KsC.DISPLAY);
+    null != e && m.Z.open(e.id, (0, p.r)(e.id), { section: N.jXE.PREMIUM_GUILD_PROGRESS_BAR }, N.KsC.DISPLAY);
 }
 function j(e, t) {
     null != t &&
-        ((0, C.f2)(t, v.Eu4.TIER_1)
-            ? m.Z.open(t.id, (0, p.r)(t.id), { section: v.jXE.PREMIUM_GUILD_INVITE_SPLASH }, v.KsC.INVITE)
+        ((0, C.f2)(t, N.Eu4.TIER_1)
+            ? m.Z.open(t.id, (0, p.r)(t.id), { section: N.jXE.PREMIUM_GUILD_INVITE_SPLASH }, N.KsC.INVITE)
             : (0, d.Z)({
                   analyticsLocations: e,
-                  analyticsSourceLocation: v.jXE.PREMIUM_GUILD_INVITE_SPLASH,
+                  analyticsSourceLocation: N.jXE.PREMIUM_GUILD_INVITE_SPLASH,
                   guild: t,
                   perks: (0, S.o9)()
               }));
@@ -62,15 +62,15 @@ let w = l.memo(function (e) {
     let { contentTypes: t, theme: n, guild: l, renderGuildHeaderDropdownButton: s } = e,
         { analyticsLocations: d } = (0, o.ZP)(),
         p = () => {
-            I.default.track(v.rMx.TOOLTIP_VIEWED, {
+            I.default.track(N.rMx.TOOLTIP_VIEWED, {
                 type: Z.cd.PREMIUM_PROGRESS_BAR,
-                location: { page: v.ZY5.GUILD_CHANNEL }
+                location: { page: N.ZY5.GUILD_CHANNEL }
             });
         },
         S = () => {
-            I.default.track(v.rMx.PREMIUM_UPSELL_VIEWED, {
+            I.default.track(N.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: Z.cd.INVITE_SPLASH_UPSELL,
-                location: { page: v.ZY5.GUILD_CHANNEL },
+                location: { page: N.ZY5.GUILD_CHANNEL },
                 location_stack: d
             });
         },
@@ -135,15 +135,15 @@ let w = l.memo(function (e) {
                     });
                 case r.z.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL:
                     return (0, i.jsx)(D, {
-                        renderPopout: (0, i.jsx)(N.Z, {
+                        renderPopout: (0, i.jsx)(v.Z, {
                             guild: l,
                             markAsDismissed: M
                         }),
                         renderGuildHeaderDropdownButton: s
                     });
                 case r.z.GUILD_HEADER_INVITE_SPLASH:
-                    let e = (0, C.f2)(l, v.Eu4.TIER_1) ? A.intl.format(A.t.DDzEVl, {}) : A.intl.formatToPlainString(A.t.pMftkJ, { boostCount: (0, C.KK)(l, v.Eu4.TIER_1) }),
-                        t = (0, C.f2)(l, v.Eu4.TIER_1) ? A.intl.string(A.t.rOFcBg) : A.intl.string(A.t.hvVgAQ);
+                    let e = (0, C.f2)(l, N.Eu4.TIER_1) ? A.intl.format(A.t.DDzEVl, {}) : A.intl.formatToPlainString(A.t.pMftkJ, { boostCount: (0, C.KK)(l, N.Eu4.TIER_1) }),
+                        t = (0, C.f2)(l, N.Eu4.TIER_1) ? A.intl.string(A.t.rOFcBg) : A.intl.string(A.t.hvVgAQ);
                     return (0, i.jsx)(D, {
                         renderPopout: (0, i.jsx)(E.ZP, {
                             onComponentMount: S,
@@ -192,7 +192,7 @@ let w = l.memo(function (e) {
                                 className: x.fullWidthImage
                             }),
                             onClick: () => {
-                                m.Z.open(l.id, v.pNK.ROLES), m.Z.selectRole(l.getEveryoneRoleId(), A.intl.string(A.t.Bco7ND));
+                                m.Z.open(l.id, N.pNK.ROLES), m.Z.selectRole(l.getEveryoneRoleId(), A.intl.string(A.t.Bco7ND));
                             },
                             markAsDismissed: M
                         }),

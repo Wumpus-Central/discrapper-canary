@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(115530),
     I = n(981631),
     C = n(388032),
-    N = n(571771);
-function v(e, t, n) {
+    v = n(571771);
+function N(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -68,12 +68,12 @@ class S extends l.PureComponent {
     }
     render() {
         return (0, i.jsxs)('div', {
-            className: N.listeningAlong,
+            className: v.listeningAlong,
             children: [
                 this.renderTitle(),
                 (0, i.jsx)(u.Z, {
                     justify: u.Z.Justify.END,
-                    className: N.party,
+                    className: v.party,
                     children: (0, i.jsx)(p.Z, {
                         users: this.props.party,
                         max: this.isHost() ? T.HOST : T.LISTENER,
@@ -82,7 +82,7 @@ class S extends l.PureComponent {
                     })
                 }),
                 (0, i.jsxs)('div', {
-                    className: N.icons,
+                    className: v.icons,
                     children: [this.renderHelpIcon(), this.renderStopListeningButton()]
                 })
             ]
@@ -90,7 +90,7 @@ class S extends l.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            v(this, 'renderPartyMember', (e, t) => {
+            N(this, 'renderPartyMember', (e, t) => {
                 let n;
                 if (null == e) return null;
                 let { host: r, onUserContextMenu: s } = this.props;
@@ -120,7 +120,7 @@ class S extends l.PureComponent {
                                             key: e.id,
                                             src: e.getAvatarURL(void 0, 24),
                                             size: c.EFr.SIZE_24,
-                                            className: a()(N.avatar, t),
+                                            className: a()(v.avatar, t),
                                             'aria-label': e.username,
                                             onMouseEnter: i,
                                             onMouseLeave: o,
@@ -133,7 +133,7 @@ class S extends l.PureComponent {
                     )
                 );
             }),
-            v(this, 'renderPartyMemberOverflow', (e, t, n) => {
+            N(this, 'renderPartyMemberOverflow', (e, t, n) => {
                 let { renderOverflowPopout: l } = this.props;
                 return (0, i.jsx)(
                     c.yRy,
@@ -144,7 +144,7 @@ class S extends l.PureComponent {
                                 text: C.intl.string(C.t.Zf4NPT),
                                 children: (l) =>
                                     (0, i.jsx)('div', {
-                                        className: a()(N.overflow, t),
+                                        className: a()(v.overflow, t),
                                         ...l,
                                         ...n,
                                         children: e

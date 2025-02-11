@@ -22,9 +22,9 @@ let I = n(349181),
         success: null,
         error: null
     },
-    N = (0, u.hQ)(),
-    v = ''.concat(N, '-decription'),
-    T = ''.concat(N, '-error');
+    v = (0, u.hQ)(),
+    N = ''.concat(v, '-decription'),
+    T = ''.concat(v, '-error');
 function S(e, t) {
     switch (t.type) {
         case 'RESET':
@@ -95,7 +95,7 @@ function Z() {
                     className: f.addFriendWumpusWrapper,
                     children: [
                         (0, i.jsx)(c.R94, {
-                            id: v,
+                            id: N,
                             type: c.R94.Types.DESCRIPTION,
                             children: (0, i.jsx)(c.Text, {
                                 tag: 'div',
@@ -123,7 +123,7 @@ function Z() {
                         }),
                         children: [
                             (0, i.jsx)(c.oil, {
-                                id: N,
+                                id: v,
                                 inputRef: e,
                                 className: f.addFriendInput,
                                 inputClassName: f.input,
@@ -161,7 +161,7 @@ function Z() {
                                 placeholder: _.intl.string(_.t['Rn/sLi']),
                                 'aria-label': _.intl.string(_.t['Rn/sLi']),
                                 'aria-invalid': null != A || void 0,
-                                'aria-describedby': null != A ? T : v
+                                'aria-describedby': null != A ? T : N
                             }),
                             null != u &&
                                 (0, i.jsx)('div', {

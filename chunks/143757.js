@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(82295),
     I = n(984370),
     C = n(592125),
-    N = n(626135),
-    v = n(823379),
+    v = n(626135),
+    N = n(823379),
     T = n(415439),
     S = n(981631),
     Z = n(388032),
@@ -118,11 +118,11 @@ function O(e) {
         { analyticsLocations: o } = (0, _.ZP)(g.Z.APP_DMS_QUICK_LAUNCHER),
         c = l.useRef(!1),
         u = (0, d.O)(),
-        h = l.useMemo(() => n.filter(v.lm).slice(0, 8), [n]);
+        h = l.useMemo(() => n.filter(N.lm).slice(0, 8), [n]);
     return (
         l.useLayoutEffect(() => {
             var e;
-            !c.current && ((c.current = !0), N.default.track(S.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION, { apps_dm_quick_launcher_application_ids: null !== (e = h.map((e) => Number(e.id))) && void 0 !== e ? e : [] }));
+            !c.current && ((c.current = !0), v.default.track(S.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION, { apps_dm_quick_launcher_application_ids: null !== (e = h.map((e) => Number(e.id))) && void 0 !== e ? e : [] }));
         }, [h]),
         (0, i.jsxs)(i.Fragment, {
             children: [

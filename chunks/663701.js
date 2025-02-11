@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(213609),
     I = n(415439),
     C = n(143757),
-    N = n(463119),
-    v = n(377171),
+    v = n(463119),
+    N = n(377171),
     T = n(540059),
     S = n(243778),
     Z = n(922409),
@@ -194,7 +194,7 @@ let et = (e) => {
                         return t === h.z.FAMILY_CENTER_NEW_BADGE
                             ? (0, i.jsx)(p.IGR, {
                                   text: $.intl.string($.t.y2b7CA),
-                                  color: v.Z.BG_BRAND
+                                  color: N.Z.BG_BRAND
                               })
                             : null;
                     }
@@ -277,7 +277,7 @@ let ec = l.memo(function (e) {
                           )
                         : null,
                     (0, i.jsx)(
-                        N.i,
+                        v.i,
                         {
                             selected: g === X.Z5c.COLLECTIBLES_SHOP || (null == l ? void 0 : l.startsWith(X.Z5c.COLLECTIBLES_SHOP)),
                             locationState: {

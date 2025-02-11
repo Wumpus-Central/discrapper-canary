@@ -15,10 +15,10 @@ var i = n(200651),
     g = n(594174),
     _ = n(111361),
     C = n(74538),
-    x = n(743498),
-    v = n(709706),
-    E = n(378441),
-    I = n(799143),
+    x = n(709706),
+    v = n(378441),
+    E = n(799143),
+    I = n(358820),
     b = n(448697),
     Z = n(365831),
     N = n(639539),
@@ -41,9 +41,9 @@ function P(e) {
             orientation: d.y.VERTICAL_TOP
         }),
         D = (0, o.e7)([g.default], () => (0, _.I5)(g.default.getCurrentUser())),
-        w = (0, o.e7)([v.Z], () => v.Z.getCatalogUpdateTime()),
+        w = (0, o.e7)([x.Z], () => x.Z.getCatalogUpdateTime()),
         [U, B] = l.useState(!1),
-        { activeVoice: F } = (0, E.o)(),
+        { activeVoice: F } = (0, v.o)(),
         H = (0, c.q_F)({
             transform: U ? 'translateY(-'.concat(6, 'px) scale(').concat(0.96, ')') : 'translateY(0px) scale(1)',
             config: { duration: 200 }
@@ -55,7 +55,7 @@ function P(e) {
         V = l.useRef(null);
     return (
         l.useEffect(() => {
-            (0, x.J_)();
+            (0, I.r5)();
         }, []),
         (0, i.jsx)(h.Gt, {
             value: L,
@@ -126,8 +126,8 @@ function P(e) {
                     (0, i.jsxs)('div', {
                         className: r()(A.voiceFiltersFooter, { [A.hasActiveVoice]: null != F }),
                         children: [
-                            (0, i.jsx)(I.Y, {}),
-                            P && (0, i.jsx)(I.a, {}),
+                            (0, i.jsx)(E.Y, {}),
+                            P && (0, i.jsx)(E.a, {}),
                             null != t &&
                                 (0, i.jsx)(c.yRy, {
                                     position: 'top',

@@ -127,7 +127,7 @@ function I(e) {
         h = o.e.useExperiment({ location: 'AccountProfilePopout' }).allowQuietMode || u,
         I = c.fv.useSetting(),
         C = e === m.Skl.DND,
-        N = (t) => {
+        v = (t) => {
             let n =
                 null != d && '0' !== d
                     ? p.intl.formatToPlainString(p.t.BWD8fn, {
@@ -149,7 +149,7 @@ function I(e) {
                     return;
             }
         },
-        v = (0, i.jsx)(i.Fragment, {
+        N = (0, i.jsx)(i.Fragment, {
             children: _.map((t) => {
                 let { duration: n, label: l } = t;
                 return (0, i.jsx)(
@@ -174,26 +174,26 @@ function I(e) {
                 ? f({
                       status: m.Skl.IDLE,
                       currentStatus: e,
-                      description: N(m.Skl.IDLE),
+                      description: v(m.Skl.IDLE),
                       defaultClickExpire: n
                   })
-                : E(m.Skl.IDLE, e, N(m.Skl.IDLE)),
+                : E(m.Skl.IDLE, e, v(m.Skl.IDLE)),
             t
                 ? f({
                       status: m.Skl.DND,
                       currentStatus: e,
-                      description: N(m.Skl.DND),
+                      description: v(m.Skl.DND),
                       defaultClickExpire: n
                   })
-                : E(m.Skl.DND, e, N(m.Skl.DND)),
+                : E(m.Skl.DND, e, v(m.Skl.DND)),
             t
                 ? f({
                       status: m.Skl.INVISIBLE,
                       currentStatus: e,
-                      description: N(m.Skl.INVISIBLE),
+                      description: v(m.Skl.INVISIBLE),
                       defaultClickExpire: n
                   })
-                : E(m.Skl.INVISIBLE, e, N(m.Skl.INVISIBLE)),
+                : E(m.Skl.INVISIBLE, e, v(m.Skl.INVISIBLE)),
             h || u
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
@@ -244,7 +244,7 @@ function I(e) {
                                       (0, s.oW)(!u);
                                   },
                                   dontCloseOnAction: !0,
-                                  children: v
+                                  children: N
                               },
                               'quiet-mode'
                           )

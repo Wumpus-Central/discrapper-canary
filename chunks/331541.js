@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(899007),
     I = n(648052),
     C = n(867176),
-    N = n(537006),
-    v = n(483424),
+    v = n(537006),
+    N = n(483424),
     T = n(681837),
     S = n(502762),
     Z = n(530),
@@ -143,11 +143,11 @@ function W(e) {
                                     hidePersonalInformation: ee,
                                     onClose: n
                                 }),
-                                (0, i.jsx)(N.Z, {
+                                (0, i.jsx)(v.Z, {
                                     isPremiumUser: ea,
                                     onInteraction: n
                                 }),
-                                (0, i.jsx)(v.Z, {
+                                (0, i.jsx)(N.Z, {
                                     user: t,
                                     currentUser: t,
                                     displayProfile: K,

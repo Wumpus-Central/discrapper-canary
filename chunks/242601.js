@@ -1,4 +1,4 @@
-n.d(t, { Z: () => ev }), n(47120), n(653041);
+n.d(t, { Z: () => eN }), n(47120), n(653041);
 var i = n(200651),
     l = n(192379),
     r = n(392711),
@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(100527),
     I = n(906732),
     C = n(211242),
-    N = n(785203),
-    v = n(745837),
+    v = n(785203),
+    N = n(745837),
     T = n(13228),
     S = n(540059),
     Z = n(211644),
@@ -94,7 +94,7 @@ let ef = 88 + ec.pm,
             y: 0
         }
     };
-class eN extends l.PureComponent {
+class ev extends l.PureComponent {
     static getDerivedStateFromProps(e) {
         let { guild: t, hasChannelNotice: n } = e;
         return null == t || null == t.banner || n
@@ -245,7 +245,7 @@ class eN extends l.PureComponent {
             contentTypes: [],
             children: (t) => {
                 let { visibleContent: n } = t;
-                return e ? (0, i.jsx)(v.Z, {}) : (0, i.jsx)(i.Fragment, {});
+                return e ? (0, i.jsx)(N.Z, {}) : (0, i.jsx)(i.Fragment, {});
             }
         });
     }
@@ -397,7 +397,7 @@ class eN extends l.PureComponent {
             });
     }
 }
-function ev(e) {
+function eN(e) {
     var t;
     let { guildId: n, hideSelectedChannel: r, selectedChannelId: s } = e,
         u = (0, c.e7)([X.Z], () => X.Z.getGuild(n));
@@ -405,7 +405,7 @@ function ev(e) {
     let m = (0, x.Z)(n),
         p = (0, c.e7)([W.Z], () => W.Z.getGuildDimensions(n).scrollTo),
         g = (0, c.e7)([ee.Z], () => ee.Z.getChannelId()),
-        [v, b, R] = (0, c.Wu)([J.Z], () => [J.Z.can(ed.Plq.MANAGE_GUILD, u), J.Z.can(ed.Plq.MANAGE_ROLES, u), J.Z.can(ed.Plq.MANAGE_THREADS, u)]),
+        [N, b, R] = (0, c.Wu)([J.Z], () => [J.Z.can(ed.Plq.MANAGE_GUILD, u), J.Z.can(ed.Plq.MANAGE_ROLES, u), J.Z.can(ed.Plq.MANAGE_THREADS, u)]),
         w = (0, c.e7)([Y.Z], () => Y.Z.isUnavailable(n)),
         U = (0, c.e7)([et.default], () => et.default.getCurrentUser()),
         B = (0, c.e7)([F.Z], () => (F.Z.darkSidebar ? ed.BRd.DARK : F.Z.theme)),
@@ -419,20 +419,20 @@ function ev(e) {
         n !== ea && er(!K);
     }, [n, ea, K]);
     let [ec, em] = (0, Z.ZP)((e) => [eu.XN.some((t) => e.currentlyShown.has(t.dismissibleContentType)), e.currentlyShownGroup.has(eh.R.GUILD_HEADER_TOOLTIPS)], o.X),
-        ep = (0, N.Z)(u),
+        ep = (0, v.Z)(u),
         eg = (0, h.s9z)(h.JQI),
         e_ = (0, c.e7)([Q.Z], () => Q.Z.hasLayers()),
         ef = (0, c.e7)([V.Z], () => V.Z.shouldShow(eI)),
-        eE = v && (null == u ? void 0 : u.premiumProgressBarEnabled) === !1 && !ei.s.isDisallowPopupsSet(),
+        eE = N && (null == u ? void 0 : u.premiumProgressBarEnabled) === !1 && !ei.s.isDisallowPopupsSet(),
         eC = (0, c.e7)([q.Z], () => q.Z.getMemberCount(n)),
-        ev = v && null != eC && eC >= 30 && (null == u ? void 0 : u.premiumProgressBarEnabled) === !1 && !ei.s.isDisallowPopupsSet(),
+        eN = N && null != eC && eC >= 30 && (null == u ? void 0 : u.premiumProgressBarEnabled) === !1 && !ei.s.isDisallowPopupsSet(),
         eT = b && null != u && (u.hasFeature(ed.oNc.COMMUNITY) || (null != eC && eC > 50)),
         eS = (0, O.Z)(n),
         eZ = (null == u ? void 0 : u.hasFeature(ed.oNc.HUB)) === !0,
-        eA = v && (null == u ? void 0 : u.hasFeature(ed.oNc.DISCOVERABLE)) === !0,
+        eA = N && (null == u ? void 0 : u.hasFeature(ed.oNc.DISCOVERABLE)) === !0,
         eb = (0, C.Q)(),
-        ex = (v || (null == u ? void 0 : u.premiumTier) === ed.Eu4.NONE) && !ei.s.isDisallowPopupsSet() && !eb,
-        eL = (0, c.e7)([j.Z, Q.Z], () => null != u && null != U && v && !Q.Z.hasLayers() && j.Z.shouldShowGuildTemplateDirtyTooltip(n)),
+        ex = (N || (null == u ? void 0 : u.premiumTier) === ed.Eu4.NONE) && !ei.s.isDisallowPopupsSet() && !eb,
+        eL = (0, c.e7)([j.Z, Q.Z], () => null != u && null != U && N && !Q.Z.hasLayers() && j.Z.shouldShowGuildTemplateDirtyTooltip(n)),
         ey = (0, c.e7)([z.Z], () => z.Z.getChannel(s)),
         { isPopoutOpen: eP } = (0, L.y)(),
         eO = null !== (t = null == u ? void 0 : u.hasFeature(ed.oNc.COMMUNITY)) && void 0 !== t && t,
@@ -448,7 +448,7 @@ function ev(e) {
         eB = (0, c.e7)([$.Z], () => $.Z.desyncedVoiceStatesCount),
         eV = M.Y.useExperiment({ location: 'GuildSidebar' }, { autoTrackExposure: !0 }).enabled,
         eH = (0, S.Q3)('GuildSidebar');
-    return (0, i.jsx)(eN, {
+    return (0, i.jsx)(ev, {
         guildId: n,
         hideSelectedChannel: r,
         guild: u,
@@ -465,7 +465,7 @@ function ev(e) {
         hasChannelNotice: null != ep || ec,
         anyLayerOpen: eg || e_,
         showGuildBoostingProgressBarUpsell: eE,
-        showGuildBoostingProgressBarSizeUpsell: ev,
+        showGuildBoostingProgressBarSizeUpsell: eN,
         showInviteSplashUpsell: ex,
         showDiscoveryLandingPageSettingsUpsell: eA,
         showGuildHeaderTutorial: ef,
