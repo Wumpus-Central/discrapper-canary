@@ -576,7 +576,12 @@ class G extends (a = u.ZP.PersistedStore) {
             n = [];
         return (
             t.forEach((e) => {
-                'REQUIRED' === this.getWidgetConfig(e.type).layoutPolicy || e.pinned || n.push(e.type);
+                let t = this.getWidgetConfig(e.type);
+                if (null == t) {
+                    e.pinned || n.push(e.type);
+                    return;
+                }
+                'REQUIRED' === t.layoutPolicy || e.pinned || n.push(e.type);
             }),
             n
         );

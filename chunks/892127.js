@@ -54,7 +54,7 @@ let Z = o.memo(function (e) {
         { id: k, pinned: R, zIndex: A, size: L, anchor: P } = t,
         D = (0, _.w_)(L, N),
         M = (0, _.KR)(P, N),
-        { minSize: z, resizeX: V, resizeY: W, dragAnywhere: F } = y,
+        { minSize: z, resizeX: V, resizeY: W, dragAnywhere: F } = null != y ? y : {},
         U = R || !w,
         H = o.useMemo(
             () => ({
@@ -107,13 +107,19 @@ let Z = o.memo(function (e) {
         size: D,
         anchor: M,
         container: H,
-        minSize: z,
+        minSize:
+            null != z
+                ? z
+                : {
+                      width: 0,
+                      height: 0
+                  },
         hidden: !U,
         locked: w,
-        resizeX: V,
-        resizeY: W,
+        resizeX: null != V && V,
+        resizeY: null != W && W,
         style: { zIndex: A },
-        dragAnywhere: F,
+        dragAnywhere: null != F && F,
         active: !w,
         onUpdate: T,
         onClick: j,
