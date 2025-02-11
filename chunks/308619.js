@@ -22,7 +22,9 @@ function m() {
                 name: e.name,
                 description: null !== (t = e.description) && void 0 !== t ? t : void 0,
                 icon: null !== (n = e.icon) && void 0 !== n ? n : void 0,
-                brandColorPrimary: m.brandColorPrimary
+                brandColorPrimary: m.brandColorPrimary,
+                traits: m.traits,
+                visibility: m.visibility
             };
             (0, a.p)(e.id, i);
         }, [e, m]),
