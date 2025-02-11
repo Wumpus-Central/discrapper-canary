@@ -1,4 +1,4 @@
-n.d(t, { m: () => w });
+n.d(t, { m: () => w }), n(789020);
 var i = n(200651),
     l = n(192379),
     a = n(120356),
@@ -70,6 +70,7 @@ function D(e) {
         }, [null == c ? void 0 : c.application_directory_collection_items]),
         { trackItemImpressionRef: x } = (0, C.Z)({
             applicationId: null !== (t = null == f ? void 0 : f.application.id) && void 0 !== t ? t : '',
+            applicationFlags: null == f ? void 0 : f.application.flags,
             sectionName: 'app_launcher_in_voice_banner',
             sectionPosition: null == f ? void 0 : f.position,
             sectionOverallPosition: 0

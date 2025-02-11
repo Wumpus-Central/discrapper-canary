@@ -4,6 +4,7 @@ n.d(t, {
     kA: () => K,
     qR: () => $
 }),
+    n(789020),
     n(47120),
     n(411104);
 var i,
@@ -95,6 +96,7 @@ function B(e) {
         { name: f, description: N } = a.useMemo(() => (0, T.sl)(t, { fakeAppIconURL: H }), [t]),
         { trackItemImpressionRef: C } = (0, b.Z)({
             applicationId: t.id,
+            applicationFlags: (0, T.BQ)(t) ? t.flags : void 0,
             sectionName: o,
             sectionPosition: r,
             sectionOverallPosition: u
