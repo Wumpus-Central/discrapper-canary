@@ -75,27 +75,39 @@ let M = function (e) {
         }),
         W = l.useCallback(
             (e) => {
+                let { key: t, ...n } = e;
                 switch (c) {
                     case P.pJs.BLOCKED:
-                        return (0, i.jsx)(N.Z, {
-                            ...e,
-                            isFocused: D
-                        });
+                        return (0, i.jsx)(
+                            N.Z,
+                            {
+                                ...n,
+                                isFocused: D
+                            },
+                            t
+                        );
                     case P.pJs.PENDING:
-                        return (0, i.jsx)(Z.Z, {
-                            ...e,
-                            isFocused: D,
-                            disambiguateGameFriends: H
-                        });
+                        return (0, i.jsx)(
+                            Z.Z,
+                            {
+                                ...n,
+                                isFocused: D,
+                                disambiguateGameFriends: H
+                            },
+                            t
+                        );
                     case P.pJs.SUGGESTIONS:
-                        return (0, i.jsx)(L.Z, {
-                            ...e,
-                            isFocused: D
-                        });
+                        return (0, i.jsx)(
+                            L.Z,
+                            {
+                                ...n,
+                                isFocused: D
+                            },
+                            t
+                        );
                     case P.pJs.ONLINE:
                     case P.pJs.ALL:
                     default:
-                        let { key: t, ...n } = e;
                         return (0, i.jsx)(
                             T.Z,
                             {
@@ -178,32 +190,40 @@ let M = function (e) {
                     }
                 })(c, $[e].length, e);
                 return c === P.pJs.PENDING && 0 === e
-                    ? (0, i.jsxs)('div', {
-                          className: R.sectionTitle,
-                          children: [
-                              (0, i.jsx)(x.Z, {
+                    ? (0, i.jsxs)(
+                          'div',
+                          {
+                              className: R.sectionTitle,
+                              children: [
+                                  (0, i.jsx)(x.Z, {
+                                      id: t,
+                                      title: n
+                                  }),
+                                  et &&
+                                      (0, i.jsx)(o.zxk, {
+                                          look: o.iLD.LINK,
+                                          color: o.Ttl.LINK,
+                                          className: R.clearButton,
+                                          size: o.zxk.Sizes.TINY,
+                                          onClick: en,
+                                          'aria-label': O.intl.string(O.t.O8k7Oz),
+                                          children: O.intl.string(O.t.O8k7Oz)
+                                      })
+                              ]
+                          },
+                          n
+                      )
+                    : (0, i.jsx)(
+                          'div',
+                          {
+                              className: R.sectionTitle,
+                              children: (0, i.jsx)(x.Z, {
                                   id: t,
                                   title: n
-                              }),
-                              et &&
-                                  (0, i.jsx)(o.zxk, {
-                                      look: o.iLD.LINK,
-                                      color: o.Ttl.LINK,
-                                      className: R.clearButton,
-                                      size: o.zxk.Sizes.TINY,
-                                      onClick: en,
-                                      'aria-label': O.intl.string(O.t.O8k7Oz),
-                                      children: O.intl.string(O.t.O8k7Oz)
-                                  })
-                          ]
-                      })
-                    : (0, i.jsx)('div', {
-                          className: R.sectionTitle,
-                          children: (0, i.jsx)(x.Z, {
-                              id: t,
-                              title: n
-                          })
-                      });
+                              })
+                          },
+                          n
+                      );
             },
             [$, c, t, et, en]
         );
