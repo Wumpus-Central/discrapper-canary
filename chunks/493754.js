@@ -42,46 +42,47 @@ function _(e) {
         );
 }
 function C(e) {
-    let { stream: t, applicationId: n, channel: l, exitFullScreen: r, appContext: C, analyticsLocation: x, className: v, ...E } = e,
-        I = null == l ? void 0 : l.getGuildId(),
-        b = null == l ? void 0 : l.id,
-        Z = (0, o.e7)([h.Z], () => (null != I ? h.Z.getGuild(I) : null), [I]),
-        N = (0, o.e7)([d.ZP], () => d.ZP.getActiveEventByChannel(b), [b]);
-    if (!(null != Z && null != l && p.Z.can(m.Plq.CREATE_INSTANT_INVITE, l))) return null;
-    let T = f.intl.string(f.t.VINpSE);
+    var t;
+    let { stream: n, applicationId: l, channel: r, exitFullScreen: C, appContext: x, analyticsLocation: v, className: E, ...I } = e,
+        b = null == r ? void 0 : r.getGuildId(),
+        Z = null == r ? void 0 : r.id,
+        N = (0, o.e7)([h.Z], () => (null != b ? h.Z.getGuild(b) : null), [b]),
+        T = (0, o.e7)([d.ZP], () => d.ZP.getActiveEventByChannel(Z), [Z]);
+    if (!(null != N && null != r && p.Z.can(m.Plq.CREATE_INSTANT_INVITE, r))) return null;
+    let S = f.intl.string(f.t.VINpSE);
     return (
-        null != t ? (T = f.intl.string(f.t['6VQaqa'])) : null != n && (T = f.intl.string(f.t['OzOM/v'])),
+        null != n ? (S = f.intl.string(f.t['6VQaqa'])) : null != l && (S = f.intl.string(f.t['OzOM/v'])),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(c.zxk, {
-                    size: c.zxk.Sizes.SMALL,
+                    size: null !== (t = I.size) && void 0 !== t ? t : c.zxk.Sizes.SMALL,
                     color: g.buttonColor,
                     onClick: () => {
-                        s()(null != Z, 'guild cannot be null'),
-                            s()(null != l, 'channel cannot be null'),
+                        s()(null != N, 'guild cannot be null'),
+                            s()(null != r, 'channel cannot be null'),
                             _({
-                                guild: Z,
-                                channel: l,
-                                streamUserId: null == t ? void 0 : t.ownerId,
-                                applicationId: n,
-                                appContext: C,
-                                exitFullScreen: r,
-                                analyticsLocation: x,
-                                guildScheduledEvent: N
+                                guild: N,
+                                channel: r,
+                                streamUserId: null == n ? void 0 : n.ownerId,
+                                applicationId: l,
+                                appContext: x,
+                                exitFullScreen: C,
+                                analyticsLocation: v,
+                                guildScheduledEvent: T
                             });
                     },
-                    className: a()(v, g.textButton),
-                    ...E,
-                    children: T
+                    className: a()(E, g.textButton),
+                    ...I,
+                    children: S
                 }),
                 (0, i.jsx)(u.Z, {
-                    channel: l,
-                    stream: t,
-                    appContext: C,
-                    className: a()(v, g.iconButton),
-                    exitFullScreen: r,
-                    analyticsLocation: x,
-                    guildScheduledEvent: N
+                    channel: r,
+                    stream: n,
+                    appContext: x,
+                    className: a()(E, g.iconButton),
+                    exitFullScreen: C,
+                    analyticsLocation: v,
+                    guildScheduledEvent: T
                 })
             ]
         })
