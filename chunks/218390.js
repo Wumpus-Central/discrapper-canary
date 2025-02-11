@@ -57,45 +57,43 @@ var i = n(200651),
 let ee = 'gifting_button',
     et = 'payment modal';
 function en(e) {
-    let { premiumSubscription: t, isDiscountApplied: n, isInReverseTrial: r, activeDiscountInfo: a, theme: s } = e,
-        l = null != t.trialId,
-        c = t.planIdFromItems === q.Xh.PREMIUM_YEAR_TIER_2,
-        d = n || l,
-        g = null != t.trialEndsAt ? o()(t.trialEndsAt).diff(o()(), 'd') : 0,
-        _ = q.GP[t.planIdFromItems],
-        p = y.ZP.formatPriceString(y.ZP.getDefaultPrice(_.id), _.interval);
-    if (d || r) {
-        var f, h, x;
+    let { premiumSubscription: t, isDiscountApplied: n, activeDiscountInfo: r, theme: a } = e,
+        s = null != t.trialId,
+        l = t.planIdFromItems === q.Xh.PREMIUM_YEAR_TIER_2,
+        c = n || s,
+        d = null != t.trialEndsAt ? o()(t.trialEndsAt).diff(o()(), 'd') : 0,
+        g = q.GP[t.planIdFromItems],
+        _ = y.ZP.formatPriceString(y.ZP.getDefaultPrice(g.id), g.interval);
+    if (c) {
+        var p, f, h;
         return (0, i.jsxs)(i.Fragment, {
             children: [
-                (l || !c) &&
+                (s || !l) &&
                     (0, i.jsx)(H.Cy, {
-                        text: l || r ? K.intl.string(K.t.qYKftb) : K.intl.string(K.t.EyjDRE),
+                        text: s ? K.intl.string(K.t.qYKftb) : K.intl.string(K.t.EyjDRE),
                         className: X.topRimPillWithSparkles,
-                        colorOptions: (0, u.wj)(s) ? H.VE.PREMIUM_TIER_2_WHITE_FILL : H.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL
+                        colorOptions: (0, u.wj)(a) ? H.VE.PREMIUM_TIER_2_WHITE_FILL : H.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL
                     }),
-                (l || !c) && (0, i.jsx)('div', { className: X.rimGlowTier2 }),
+                (s || !l) && (0, i.jsx)('div', { className: X.rimGlowTier2 }),
                 (0, i.jsx)(m.X6q, {
                     variant: 'heading-md/normal',
                     color: 'always-white',
                     className: X.trialHeader,
-                    children: r
-                        ? K.intl.format(K.t.jLglur, { weeks: 1 })
+                    children: s
+                        ? K.intl.format(K.t['2CGBrq'], {
+                              remainingTime: d,
+                              price: _
+                          })
                         : l
-                          ? K.intl.format(K.t['2CGBrq'], {
-                                remainingTime: g,
-                                price: p
+                          ? K.intl.format(K.t['+qqh6u'], {
+                                percent: null !== (p = null == r ? void 0 : r.percentage) && void 0 !== p ? p : q.Bo,
+                                regularPrice: _
                             })
-                          : c
-                            ? K.intl.format(K.t['+qqh6u'], {
-                                  percent: null !== (f = null == a ? void 0 : a.percentage) && void 0 !== f ? f : q.Bo,
-                                  regularPrice: p
-                              })
-                            : K.intl.formatToPlainString(K.t['3Ziutb'], {
-                                  percent: null !== (h = null == a ? void 0 : a.percentage) && void 0 !== h ? h : q.M_,
-                                  regularPrice: p,
-                                  numMonths: null !== (x = null == a ? void 0 : a.duration) && void 0 !== x ? x : q.rt
-                              })
+                          : K.intl.formatToPlainString(K.t['3Ziutb'], {
+                                percent: null !== (f = null == r ? void 0 : r.percentage) && void 0 !== f ? f : q.M_,
+                                regularPrice: _,
+                                numMonths: null !== (h = null == r ? void 0 : r.duration) && void 0 !== h ? h : q.rt
+                            })
                 })
             ]
         });
@@ -103,29 +101,28 @@ function en(e) {
     return (0, i.jsx)(F.Z, {
         variant: void 0,
         subscriptionTier: q.Si.TIER_2,
-        interval: _.interval
+        interval: g.interval
     });
 }
 function ei() {
     let e = (0, k.t7)(),
         t = (0, k.lr)(),
-        n = (0, O.W)(),
-        r = (0, C.ZP)(),
-        a = (0, c.e7)([Z.ZP], () => Z.ZP.getPremiumTypeSubscription()),
-        { fractionalState: l } = (0, I.Z)(),
-        o = null !== a && null !== a.planIdFromItems;
-    if (!o && l === q.a$.NONE) return null;
-    let d = l !== q.a$.NONE && !n,
-        u = null !== a && null != a.trialId,
-        g = e || u;
+        n = (0, C.ZP)(),
+        r = (0, c.e7)([Z.ZP], () => Z.ZP.getPremiumTypeSubscription()),
+        { fractionalState: a } = (0, I.Z)(),
+        l = (0, O.W)(),
+        o = null !== r && null !== r.planIdFromItems;
+    if (!o && a === q.a$.NONE) return null;
+    let d = a !== q.a$.NONE && !l,
+        u = null !== r && null != r.trialId;
     return (0, i.jsxs)('div', {
-        className: s()(X.tierCard, { [X.withTier2Rim]: g }),
+        className: s()(X.tierCard, { [X.withTier2Rim]: e || u }),
         children: [
             (0, i.jsxs)('div', {
                 className: X.tierInfo,
                 children: [
                     (0, i.jsx)(w.Z, { className: X.tierTitle }),
-                    d
+                    d && !l
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
                                   (0, i.jsx)(H.mn, {
@@ -143,13 +140,19 @@ function ei() {
                           })
                         : o
                           ? (0, i.jsx)(en, {
-                                premiumSubscription: a,
+                                premiumSubscription: r,
                                 isDiscountApplied: e,
-                                isInReverseTrial: n,
                                 activeDiscountInfo: t,
-                                theme: r
+                                theme: n
                             })
-                          : null,
+                          : l
+                            ? (0, i.jsx)(m.X6q, {
+                                  variant: 'heading-md/normal',
+                                  color: 'always-white',
+                                  className: X.trialHeader,
+                                  children: K.intl.format(K.t['/SfHws'], { weeks: 1 })
+                              })
+                            : null,
                     (0, i.jsx)(H.nT, { featureSet: d ? H.uZ.FRACTIONAL_PREMIUM : H.uZ.DEFAULT }),
                     (0, i.jsx)(m.zxk, {
                         className: X.tierCardButton,
@@ -168,7 +171,7 @@ function ei() {
                             children: K.intl.string(K.t.VR2iVF)
                         })
                     }),
-                    !n &&
+                    !l &&
                         (0, i.jsx)(m.zxk, {
                             className: X.managePlanButton,
                             look: m.zxk.Looks.OUTLINED,
