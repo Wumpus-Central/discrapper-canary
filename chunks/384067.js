@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p }), n(47120);
 var r = n(200651),
     l = n(192379),
-    i = n(120356),
-    a = n.n(i),
+    a = n(120356),
+    i = n.n(a),
     s = n(622535),
     o = n(481060),
     d = n(597688),
@@ -12,7 +12,7 @@ var r = n(200651),
     h = n(957726);
 let p = (e) => {
     var t;
-    let { wideBannerBlock: n, handleTransition: i, tab: p } = e,
+    let { wideBannerBlock: n, handleTransition: a, tab: p } = e,
         m = null === (t = d.Z.getCategoryByStoreListingId(n.categoryStoreListingId)) || void 0 === t ? void 0 : t.skuId,
         g = l.useRef(null),
         [f, x] = l.useState();
@@ -29,16 +29,16 @@ let p = (e) => {
             }
         );
     }, []);
-    let _ = null != m ? m : '',
-        { handleCardVisibilityChange: b } = (0, c.E)(_, 'home', 'marketing wide banner'),
+    let b = null != m ? m : '',
+        { handleCardVisibilityChange: _ } = (0, c.E)(b, 'home', 'marketing wide banner'),
         v = n.bannerUrl;
     return null == v
         ? null
         : (0, r.jsx)(s.$, {
-              onChange: b,
+              onChange: _,
               threshold: 0,
               children: (0, r.jsxs)('div', {
-                  className: a()(h.row, h.between, h.section, h.bannerBlockContainer),
+                  className: i()(h.row, h.between, h.section, h.bannerBlockContainer),
                   children: [
                       (0, r.jsx)('div', {
                           className: h.wideBannerBackgroundImg,
@@ -79,7 +79,7 @@ let p = (e) => {
                           (0, r.jsx)(o.zxk, {
                               className: h.wideBannerBlockButton,
                               color: o.Ttl.WHITE,
-                              onClick: () => i('shop wide banner', _),
+                              onClick: () => a('shop wide banner', b),
                               children: C.intl.string(C.t.jVcuVV)
                           })
                   ]

@@ -2,12 +2,12 @@ n.d(t, { O: () => o });
 var r = n(200651);
 n(192379);
 var l = n(442837),
-    i = n(481060),
-    a = n(607070),
+    a = n(481060),
+    i = n(607070),
     s = n(496051);
 function o(e) {
     let { category: t } = e,
-        n = (0, l.e7)([a.Z], () => a.Z.useReducedMotion);
+        n = (0, l.e7)([i.Z], () => i.Z.useReducedMotion);
     return (0, r.jsx)('div', {
         className: s.banner,
         'aria-label': t.name,
@@ -22,7 +22,7 @@ function o(e) {
                         alt: '',
                         'aria-hidden': !0
                     }),
-                (0, r.jsx)(i.Text, {
+                (0, r.jsx)(a.Text, {
                     className: s.summary,
                     variant: 'text-md/normal',
                     children: t.summary

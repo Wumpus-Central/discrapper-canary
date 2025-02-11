@@ -1,8 +1,8 @@
 n.d(t, { E: () => h }), n(47120);
 var r = n(192379),
     l = n(442837),
-    i = n(626135),
-    a = n(74538),
+    a = n(626135),
+    i = n(74538),
     s = n(381585),
     o = n(597688),
     d = n(884697),
@@ -14,10 +14,10 @@ function h(e, t) {
         h = (0, s.sp)(),
         p = (0, l.e7)([o.Z], () => o.Z.getProduct(e)),
         m = (0, u.x)(),
-        g = a.ZP.canUseCollectibles(m),
+        g = i.ZP.canUseCollectibles(m),
         f = r.useRef(null),
-        [x, _] = r.useState(!1),
-        [b, v] = r.useState(!1),
+        [x, b] = r.useState(!1),
+        [_, v] = r.useState(!1),
         k = (0, c.B)('shop_product_card');
     return (
         r.useEffect(
@@ -34,10 +34,10 @@ function h(e, t) {
             [x]
         ),
         r.useEffect(() => {
-            if (b && k) {
+            if (_ && k) {
                 let r = null != p ? (0, d.Vw)(p, g, !1) : null,
                     l = null != p ? (0, d.eu)(p, g, !1) : void 0;
-                i.default.track(C.rMx.COLLECTIBLES_TILE_IMPRESSION, {
+                a.default.track(C.rMx.COLLECTIBLES_TILE_IMPRESSION, {
                     collectibles_shop_session_id: null == h ? void 0 : h.sessionId,
                     sku_id: e,
                     display_price: null == r ? void 0 : r.amount,
@@ -51,10 +51,10 @@ function h(e, t) {
                     category_position: null == h ? void 0 : h.categoryPosition
                 });
             }
-        }, [null == h ? void 0 : h.sessionId, null == h ? void 0 : h.categoryPosition, null == h ? void 0 : h.pageCategory, null == h ? void 0 : h.pageSection, null == h ? void 0 : h.tilePosition, b, g, k, t, p, e, n]),
+        }, [null == h ? void 0 : h.sessionId, null == h ? void 0 : h.categoryPosition, null == h ? void 0 : h.pageCategory, null == h ? void 0 : h.pageSection, null == h ? void 0 : h.tilePosition, _, g, k, t, p, e, n]),
         {
             handleCardVisibilityChange: (e) => {
-                _(e);
+                b(e);
             }
         }
     );

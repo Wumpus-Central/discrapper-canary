@@ -19,8 +19,8 @@ let E = () => {
     let [t, n] = r.useState(!1),
         l = c.G6.useSetting(),
         { nickname: E, dmsAllowed: x, showActivity: I, mutedServer: C, setNickname: v, setDmsAllowed: N, setShowActivity: S, setMutedServer: T } = (0, m.XW)(),
-        A = null === (e = s.Z.getProps().invite) || void 0 === e ? void 0 : e.is_nickname_changeable,
-        b = (0, _.m4)({ location: 'InviteSettingsControls' });
+        b = null === (e = s.Z.getProps().invite) || void 0 === e ? void 0 : e.is_nickname_changeable,
+        A = (0, _.m4)({ location: 'InviteSettingsControls' });
     return (0, i.jsxs)('div', {
         className: a()(f.editProfileContainer, { [f.opened]: t }),
         children: [
@@ -60,9 +60,9 @@ let E = () => {
                 ]
             }),
             (0, i.jsxs)('div', {
-                className: a()(f.customizationSection, { [f.opened]: t }, A ? null : f.condensed),
+                className: a()(f.customizationSection, { [f.opened]: t }, b ? null : f.condensed),
                 children: [
-                    A &&
+                    b &&
                         (0, i.jsxs)('div', {
                             className: f.serverNickname,
                             children: [
@@ -90,7 +90,7 @@ let E = () => {
                             value: I,
                             onChange: S
                         }),
-                    b &&
+                    A &&
                         (0, i.jsx)(d.Z, {
                             title: p.intl.string(p.t['0nZCqK']),
                             value: C,

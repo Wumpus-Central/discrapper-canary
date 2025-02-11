@@ -41,7 +41,7 @@ let h = {
             },
             'symbol'
         );
-class T extends l.PureComponent {
+class C extends l.PureComponent {
     componentDidMount() {
         this.setState({ animating: !0 }),
             (this._renderSecondaryTimeout = setTimeout(() => {
@@ -186,7 +186,7 @@ class T extends l.PureComponent {
             });
     }
 }
-class C extends l.PureComponent {
+class T extends l.PureComponent {
     componentDidMount() {
         this.setTimeout(() => {
             this.setState({ visible: !0 }), u.S.dispatch(d.CkL.SHAKE_APP, { duration: 2400 });
@@ -217,7 +217,7 @@ class C extends l.PureComponent {
             _(this, 'removeExplosion', (e) => {
                 let t = this.children,
                     n = t.findIndex((t) => {
-                        if (t.type !== T) return !1;
+                        if (t.type !== C) return !1;
                         let n = t.props;
                         return null != n.componentId && n.componentId === e;
                     });
@@ -231,7 +231,7 @@ class C extends l.PureComponent {
                     let l = 'expl-'.concat(this.state.explosions);
                     e.push(
                         (0, i.jsx)(
-                            T,
+                            C,
                             {
                                 componentId: l,
                                 top: o().random(n - 100, n + 100, !1),
@@ -253,4 +253,4 @@ class C extends l.PureComponent {
             });
     }
 }
-let N = C;
+let N = T;

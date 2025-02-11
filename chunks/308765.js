@@ -265,12 +265,12 @@ let r = {
         inlineRequire: () => n(538215).Z
     },
     VoiceFilterLoopbackManager: {
-        actions: ['RTC_CONNECTION_STATE', 'VOICE_FILTER_LOOPBACK_TOGGLE', 'VOICE_FILTER_REQUEST_SWITCH'],
+        actions: ['RTC_CONNECTION_STATE', 'VOICE_FILTER_LOOPBACK_TOGGLE', 'VOICE_FILTER_APPLIED'],
         inlineRequire: () => n(986057).Z,
         hasStoreChangeListeners: !0
     },
     VoiceFilterManager: {
-        actions: ['VOICE_FILTER_DOWNLOAD_CANCELED', 'VOICE_FILTER_DOWNLOAD_READY', 'VOICE_FILTER_LOAD_MODULE', 'VOICE_FILTER_REQUEST_SWITCH'],
+        actions: ['VOICE_FILTER_REQUEST_SWITCH', 'VOICE_FILTER_DOWNLOAD_READY', 'VOICE_FILTER_DOWNLOAD_FAILED', 'VOICE_FILTER_DOWNLOAD_CANCELED', 'VOICE_FILTER_LOAD_MODULE', 'VOICE_FILTER_APPLIED', 'VOICE_FILTER_APPLY_FAILED'],
         inlineRequire: () => n(230385).Z
     },
     VoiceFilterFeedbackManager: {

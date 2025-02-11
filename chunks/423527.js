@@ -22,8 +22,8 @@ var i,
     N = n(481230),
     S = n(388905),
     T = n(853268),
-    A = n(639946),
-    b = n(616952),
+    b = n(639946),
+    A = n(616952),
     R = n(792766),
     Z = n(692483),
     O = n(100159),
@@ -42,8 +42,8 @@ var i,
     z = n(480294),
     V = n(896797),
     H = n(626135),
-    W = n(585483),
-    K = n(70956),
+    K = n(585483),
+    W = n(70956),
     Y = n(624138),
     q = n(481153),
     J = n(588705),
@@ -140,7 +140,7 @@ class ec extends (i = l.PureComponent) {
                         : this.hasError('retry_after') &&
                           'number' == typeof a.retry_after &&
                           (this.setState({ isRateLimited: !0 }),
-                          this._retryTimer.start(a.retry_after * K.Z.Millis.SECOND, () => {
+                          this._retryTimer.start(a.retry_after * W.Z.Millis.SECOND, () => {
                               this.setState({ isRateLimited: !1 });
                           }))),
             n && !e.authenticated && ((0, y.c)(et.M5.ORGANIC_REGISTERED), this.redirectIfAuthenticated());
@@ -160,7 +160,7 @@ class ec extends (i = l.PureComponent) {
             p = (0, Y.Ew)(d) ? null : t === d,
             f = ee.a ? await (0, Z.K)(t) : t,
             E = ee.a ? await (0, Z.K)(n) : n;
-        W.S.dispatch(Q.CkL.WAVE_EMPHASIZE),
+        K.S.dispatch(Q.CkL.WAVE_EMPHASIZE),
             this.setState({
                 registering: !0,
                 apiErrors: {}
@@ -302,7 +302,7 @@ class ec extends (i = l.PureComponent) {
                   guild: e.guild
               })
             : (null == e ? void 0 : e.guild_scheduled_event) != null
-              ? (0, r.jsx)(A.r, {
+              ? (0, r.jsx)(b.r, {
                     channel: e.channel,
                     guildScheduledEvent: e.guild_scheduled_event
                 })
@@ -426,7 +426,7 @@ class ec extends (i = l.PureComponent) {
         let { email: n, username: i, globalName: a, password: s, consent: c, parsedDateOfBirth: d, globalNameFocused: u, emailClientError: h, usernameClientError: m, passwordClientError: g, dateOfBirthClientError: p, registering: f, apiErrors: { email: x, username: I, global_name: C, password: v, date_of_birth: N } = {} } = this.state,
             {
                 consentRequired: T,
-                isMobileWebInviteRegistration: A,
+                isMobileWebInviteRegistration: b,
                 uniqueUsernameRegistrationConfig: { suggestions: R },
                 authBoxClassName: Z,
                 hasLoggedInAccounts: O,
@@ -549,7 +549,7 @@ class ec extends (i = l.PureComponent) {
                         required: !0
                     }),
                     j && L,
-                    (0, r.jsx)(b.Z, {}),
+                    (0, r.jsx)(A.Z, {}),
                     w,
                     P,
                     y,
@@ -557,8 +557,8 @@ class ec extends (i = l.PureComponent) {
                     ee.a
                         ? null
                         : (0, r.jsx)(S.zx, {
-                              look: A ? S.zx.Looks.FILLED : S.zx.Looks.LINK,
-                              color: A ? S.zx.Colors.PRIMARY : S.zx.Colors.LINK,
+                              look: b ? S.zx.Looks.FILLED : S.zx.Looks.LINK,
+                              color: b ? S.zx.Colors.PRIMARY : S.zx.Colors.LINK,
                               onClick: this.handleGotoLogin,
                               className: el.marginTop20,
                               children: ei.intl.string(ei.t['r/jzu7'])
@@ -593,7 +593,7 @@ class ec extends (i = l.PureComponent) {
                   tag: 'form',
                   className: Z,
                   children: [
-                      O && !A
+                      O && !b
                           ? (0, r.jsx)(S.zx, {
                                 onClick: this.handleGotoLogin,
                                 look: S.zx.Looks.LINK,
@@ -660,7 +660,7 @@ class ec extends (i = l.PureComponent) {
                     return;
                 }
                 let h = null != a ? (0, s.parse)(a.search) : {};
-                null != l ? (t = Q.Z5c.INVITE_LOGIN(l.code)) : null != i ? (t = Q.Z5c.GIFT_CODE_LOGIN(i.code)) : null != r ? (t = Q.Z5c.GUILD_TEMPLATE_LOGIN(r.code)) : null != c ? ((t = Q.Z5c.LOGIN), (h.redirect_to = c)) : ((t = Q.Z5c.LOGIN), '' !== n && (h = { email: n })), m.Z.loginReset(), d(t, { search: (0, s.stringify)(h) }), null == o || o(e), W.S.dispatch(Q.CkL.WAVE_EMPHASIZE);
+                null != l ? (t = Q.Z5c.INVITE_LOGIN(l.code)) : null != i ? (t = Q.Z5c.GIFT_CODE_LOGIN(i.code)) : null != r ? (t = Q.Z5c.GUILD_TEMPLATE_LOGIN(r.code)) : null != c ? ((t = Q.Z5c.LOGIN), (h.redirect_to = c)) : ((t = Q.Z5c.LOGIN), '' !== n && (h = { email: n })), m.Z.loginReset(), d(t, { search: (0, s.stringify)(h) }), null == o || o(e), K.S.dispatch(Q.CkL.WAVE_EMPHASIZE);
             }),
             ea(this, 'handleSubmit', (e) => {
                 null == e || e.preventDefault();

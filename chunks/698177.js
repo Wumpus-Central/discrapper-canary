@@ -20,23 +20,23 @@ let E = () => {
         [x, I] = r.useState(!1),
         [C, v] = r.useState(!1),
         [N, S] = r.useState(null),
-        [T, A] = r.useState(null),
-        b = (0, o.e7)([u.Z], () => u.Z.getCountryCode()),
-        R = b.code.split(' ')[0],
+        [T, b] = r.useState(null),
+        A = (0, o.e7)([u.Z], () => u.Z.getCountryCode()),
+        R = A.code.split(' ')[0],
         Z = async () => {
             try {
                 await c.Z.resendCode(e);
             } catch (e) {
-                A(e.body.message);
+                b(e.body.message);
             }
         },
         O = async () => {
             I(!0);
             try {
                 let { token: t } = await c.Z.verifyPhone(R + e, l);
-                S(null), A(null), v(!0), c.Z.validatePhoneForSupport(t);
+                S(null), b(null), v(!0), c.Z.validatePhoneForSupport(t);
             } catch (e) {
-                e.body.message ? (S(null), A(e.body.message)) : (S(e.body.phone), A(e.body.code));
+                e.body.message ? (S(null), b(e.body.message)) : (S(e.body.phone), b(e.body.code));
             } finally {
                 I(!1);
             }
@@ -71,7 +71,7 @@ let E = () => {
                       children: [
                           (0, i.jsx)(h.Z, {
                               label: g.intl.string(g.t.eJnn09),
-                              alpha2: b.alpha2,
+                              alpha2: A.alpha2,
                               countryCode: R,
                               value: e,
                               autoComplete: 'off',

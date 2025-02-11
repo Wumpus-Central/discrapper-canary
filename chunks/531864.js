@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m }), n(47120);
 var r = n(200651),
     l = n(192379),
-    i = n(120356),
-    a = n.n(i),
+    a = n(120356),
+    i = n.n(a),
     s = n(979554),
     o = n(876917),
     d = n(597688),
@@ -100,7 +100,7 @@ let h = {
         }
     ],
     m = (e) => {
-        let { peaking: t, transitioning: n, style: i } = e,
+        let { peaking: t, transitioning: n, style: a } = e,
             h = window.innerHeight,
             [m, g] = l.useState(!1),
             f = p.map((e) => {
@@ -115,23 +115,23 @@ let h = {
                     }, u.lb);
             }, [n]),
             (0, r.jsx)('div', {
-                style: i,
-                className: a()(C.jumbleWrapper, {
+                style: a,
+                className: i()(C.jumbleWrapper, {
                     [C.peaking]: t,
                     [C.transitioned]: m
                 }),
                 children: p.map((e, t) => {
-                    var l, i;
-                    let { top: a, left: d, rotation: p, size: m, skuId: g } = e,
+                    var l, a;
+                    let { top: i, left: d, rotation: p, size: m, skuId: g } = e,
                         x = null === (l = f[t]) || void 0 === l ? void 0 : l.items[0],
-                        _ = null === (i = f[t]) || void 0 === i ? void 0 : i.type,
-                        b = _ === s.Z.AVATAR_DECORATION ? 384 : 512;
+                        b = null === (a = f[t]) || void 0 === a ? void 0 : a.type,
+                        _ = b === s.Z.AVATAR_DECORATION ? 384 : 512;
                     return (0, r.jsxs)(
                         'div',
                         {
                             className: C.asset,
                             style: {
-                                top: n ? -h - b : a,
+                                top: n ? -h - _ : i,
                                 left: n ? ''.concat(d - 75 - 350 * Math.random()) : d,
                                 transform: 'rotate('.concat(p, 'deg)'),
                                 height: m.y,
@@ -140,9 +140,9 @@ let h = {
                                 transitionDuration: ''.concat(u.lb - 200 * Math.random(), 'ms')
                             },
                             children: [
-                                null != x && _ === s.Z.AVATAR_DECORATION && (0, r.jsx)(c.R, { item: x }),
+                                null != x && b === s.Z.AVATAR_DECORATION && (0, r.jsx)(c.R, { item: x }),
                                 null != x &&
-                                    _ === s.Z.PROFILE_EFFECT &&
+                                    b === s.Z.PROFILE_EFFECT &&
                                     (0, r.jsx)(o.Z, {
                                         profileEffectId: x.id,
                                         isPurchased: !1,

@@ -1,8 +1,8 @@
 n.d(t, { I: () => k });
 var r = n(200651),
     l = n(192379),
-    i = n(120356),
-    a = n.n(i),
+    a = n(120356),
+    i = n.n(a),
     s = n(442837),
     o = n(780384),
     d = n(481060),
@@ -15,11 +15,11 @@ var r = n(200651),
     g = n(594174),
     f = n(471731),
     x = n(335131),
-    _ = n(215023),
-    b = n(388032),
+    b = n(215023),
+    _ = n(388032),
     v = n(666530);
 function k(e) {
-    let { isFullScreen: t, isLayer: n, onClose: i, selectedTab: k, handleTransition: j, transparent: L } = e,
+    let { isFullScreen: t, isLayer: n, onClose: a, selectedTab: k, handleTransition: j, transparent: L } = e,
         E = (0, u.ZP)(),
         S = (0, s.e7)([g.default], () => g.default.getCurrentUser()),
         B = (null == S ? void 0 : S.isStaff()) || (null == S ? void 0 : S.isStaffPersonal()) || !1,
@@ -28,7 +28,7 @@ function k(e) {
         theme: E,
         children: (e) =>
             (0, r.jsxs)(C.Z, {
-                className: a()(e, v.headerBar, {
+                className: i()(e, v.headerBar, {
                     [v.fullscreenHeaderBar]: t,
                     [v.headerBarRegularBackground]: !L,
                     [v.headerBarTransparentLightBackground]: L && !(0, o.wj)(E),
@@ -40,11 +40,11 @@ function k(e) {
                 children: [
                     (0, r.jsxs)(r.Fragment, {
                         children: [
-                            k === _.AW.CATALOG &&
+                            k === b.AW.CATALOG &&
                                 (0, r.jsx)(d.P3F, {
-                                    onClick: () => j(_.AW.HOME),
+                                    onClick: () => j(b.AW.HOME),
                                     className: v.back,
-                                    'aria-label': b.intl.string(b.t['13/7kZ']),
+                                    'aria-label': _.intl.string(_.t['13/7kZ']),
                                     children: (0, r.jsx)(d.j9r, {})
                                 }),
                             (0, r.jsx)(f.Z, {
@@ -53,11 +53,11 @@ function k(e) {
                             })
                         ]
                     }),
-                    (0, r.jsx)(C.Z.Title, { children: b.intl.string(b.t.pWG4zc) }),
-                    k === _.AW.CATALOG &&
+                    (0, r.jsx)(C.Z.Title, { children: _.intl.string(_.t.pWG4zc) }),
+                    k === b.AW.CATALOG &&
                         (0, r.jsx)(C.Z.Title, {
                             className: v.shopAllHeader,
-                            children: b.intl.string(b.t.xFcotb)
+                            children: _.intl.string(_.t.xFcotb)
                         }),
                     (T || t) &&
                         (0, r.jsxs)('div', {
@@ -66,14 +66,14 @@ function k(e) {
                                 T &&
                                     (0, r.jsx)(m.V9, {
                                         cardAlignment: m.V9.CardAlignment.END,
-                                        className: a()(v.balanceWidgetMenu, { [v.fullScreenAlignedRightContent]: t }),
-                                        ctaText: b.intl.string(b.t['H57f4+']),
+                                        className: i()(v.balanceWidgetMenu, { [v.fullScreenAlignedRightContent]: t }),
+                                        ctaText: _.intl.string(_.t['H57f4+']),
                                         ctaOnClick: () => (0, h.navigateToQuestHome)()
                                     }),
                                 t &&
                                     (0, r.jsx)(c.Z, {
                                         className: v.fullScreenAlignedRightContent,
-                                        closeAction: n ? x.DR : i,
+                                        closeAction: n ? x.DR : a,
                                         keybind: 'ESC'
                                     })
                             ]

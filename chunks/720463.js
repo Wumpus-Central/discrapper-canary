@@ -65,9 +65,9 @@ let g = (n) => {
     });
 };
 function x(n) {
-    let { earnedOrbsQuantity: t, balance: a, backgroundElementRef: i, onClose: c, onClickPill: s, ctaOnClick: o, linkOnClick: r, ...u } = n,
-        C = async () => {
-            await (0, l.j2)(), await c();
+    let { earnedOrbsQuantity: t, balance: a, backgroundElementRef: i, onClickPill: c, ctaOnClick: s, linkOnClick: o, onClose: r, onCloseCallback: u, ...C } = n,
+        x = async () => {
+            await (0, l.j2)(), await r(), u();
         };
     return (0, e.jsxs)(h.X, {
         className: k.coachmarkModalContainer,
@@ -85,7 +85,7 @@ function x(n) {
         children: [
             (0, e.jsx)(m.A4, {
                 onClick: async () => {
-                    await C(), s();
+                    await x(), c();
                 },
                 balance: a,
                 placeholderBalance: null != a ? a : 0,
@@ -94,10 +94,10 @@ function x(n) {
             (0, e.jsx)(g, {
                 earnedOrbsQuantity: t,
                 ctaOnClick: async () => {
-                    await C(), o();
+                    await x(), s();
                 },
                 linkOnClick: async () => {
-                    await C(), r();
+                    await x(), o();
                 }
             })
         ]

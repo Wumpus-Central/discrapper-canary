@@ -27,7 +27,7 @@ function T() {
         children: (0, i.jsx)(o.$jN, {})
     });
 }
-let A = (e) => {
+let b = (e) => {
     let t = (null == e ? void 0 : e.state) == null && (null == e ? void 0 : e.channel) == null;
     if (null == e || null == e.state || t) return 0;
     let n = e.state;
@@ -49,7 +49,7 @@ let A = (e) => {
             (0, f.vE)(n);
     }
 };
-function b(e) {
+function A(e) {
     let { invite: t, onAcceptInvite: n } = e;
     return (null == t ? void 0 : t.state) === v.r2o.BANNED
         ? (0, i.jsx)(c.u, {
@@ -66,7 +66,7 @@ function b(e) {
 function R(e) {
     let { children: t, cardChildren: n, startAnimHeightPx: a, innerStyle: s, ...c } = e,
         { invite: u } = c,
-        [h, _] = r.useState(A(u)),
+        [h, _] = r.useState(b(u)),
         { ref: m, height: g } = (0, d.Z)(),
         p = (0, o.q_F)({
             height: null != g && 0 !== g ? ''.concat(g, 'px') : ''.concat(a, 'px'),
@@ -74,7 +74,7 @@ function R(e) {
         });
     return (
         r.useEffect(() => {
-            let e = A(u);
+            let e = b(u);
             e !== h && _(e);
         }, [u, h]),
         (0, i.jsxs)(l.animated.div, {
@@ -117,7 +117,7 @@ function O(e) {
                         invite: t
                     });
                 case 2:
-                    return (0, i.jsx)(b, {
+                    return (0, i.jsx)(A, {
                         ...e,
                         invite: t
                     });

@@ -22,8 +22,8 @@ var i = n(200651),
     N = n(981631),
     S = n(231338),
     T = n(388032),
-    A = n(652565),
-    b = n(814632);
+    b = n(652565),
+    A = n(814632);
 let R = n(515695),
     Z = new p.Z('LoginQRSocket');
 function O(e) {
@@ -38,18 +38,18 @@ function O(e) {
             n && c.uvj.announce(T.intl.string(T.t.j2p129));
         }, [n]),
         (0, i.jsx)('div', {
-            className: A.qrCodeContainer,
+            className: b.qrCodeContainer,
             children:
                 '' !== t && n
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [
                               (0, i.jsx)(g.ZP, {
-                                  className: A.qrCode,
+                                  className: b.qrCode,
                                   size: 160,
                                   text: t
                               }),
                               (0, i.jsx)('div', {
-                                  className: A.qrCodeOverlay,
+                                  className: b.qrCodeOverlay,
                                   children: (0, i.jsx)('img', {
                                       src: R,
                                       alt: ''
@@ -58,11 +58,11 @@ function O(e) {
                           ]
                       })
                     : (0, i.jsx)('div', {
-                          className: A.qrCodeOverlay,
+                          className: b.qrCodeOverlay,
                           'aria-label': T.intl.string(T.t.BUGkVF),
                           'aria-busy': !0,
                           children: (0, i.jsx)(c.$jN, {
-                              className: A.qrCode,
+                              className: b.qrCode,
                               type: c.$jN.Type.WANDERING_CUBES,
                               'aria-hidden': !0
                           })
@@ -88,7 +88,7 @@ function L(e) {
                 children: [
                     (0, i.jsx)(O, { text: 1 === t.step ? 'https://discord.com/ra/'.concat(t.fingerprint) : '' }),
                     (0, i.jsx)(m.Dx, {
-                        className: b.marginBottom8,
+                        className: A.marginBottom8,
                         children: T.intl.string(T.t.UPiHaG)
                     }),
                     null != r ? (0, i.jsx)(j, { children: r }) : (0, i.jsx)(m.DK, { children: T.intl.format(T.t['Qq+A6u'], {}) }),
@@ -121,14 +121,14 @@ function L(e) {
             return (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)(u.Z, {
-                        className: A.qrAvatar,
+                        className: b.qrAvatar,
                         user: e,
                         size: c.EFr.SIZE_120,
                         isMobile: !0,
                         status: S.Sk.ONLINE
                     }),
                     (0, i.jsx)(m.Dx, {
-                        className: b.marginBottom8,
+                        className: A.marginBottom8,
                         children: T.intl.string(T.t.apGCUV)
                     }),
                     (0, i.jsx)(m.DK, { children: T.intl.format(T.t.Cbl5JC, { username: ''.concat(C.ZP.getUserTag(e)) }) }),
@@ -137,7 +137,7 @@ function L(e) {
                         color: c.zxk.Colors.LINK,
                         size: c.zxk.Sizes.MIN,
                         onClick: n,
-                        className: A.startOverButton,
+                        className: b.startOverButton,
                         children: T.intl.string(T.t.nOOhws)
                     })
                 ]
@@ -341,14 +341,14 @@ function y(e) {
         }, [d, t, u, g]),
         (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)('div', { className: A.verticalSeparator }),
+                (0, i.jsx)('div', { className: b.verticalSeparator }),
                 (0, i.jsx)(c.qBt, {
                     fillParent: !0,
-                    className: A.qrLogin,
+                    className: b.qrLogin,
                     step: p,
                     steps: [0, 1],
                     children: (0, i.jsx)('div', {
-                        className: A.qrLoginInner,
+                        className: b.qrLoginInner,
                         children: (0, i.jsx)(L, {
                             state: d,
                             cancel: m,

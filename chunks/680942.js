@@ -1,8 +1,8 @@
 n.d(t, { Z: () => x });
 var r = n(200651),
     l = n(192379),
-    i = n(481060),
-    a = n(727637),
+    a = n(481060),
+    i = n(727637),
     s = n(906732),
     o = n(333867),
     d = n(677232),
@@ -76,25 +76,25 @@ let f = {
         ]
     },
     x = (e) => {
-        let { product: t, selectedVariantIndex: n, returnRef: x, onSuccess: _, tooltipDelay: b, isGiftEasterEggEnabled: v, disableCustomColor: k = !1 } = e,
+        let { product: t, selectedVariantIndex: n, returnRef: x, onSuccess: b, tooltipDelay: _, isGiftEasterEggEnabled: v, disableCustomColor: k = !1 } = e,
             { analyticsLocations: j } = (0, s.ZP)(),
             L = l.useRef(null),
-            E = (0, a.Z)(L),
+            E = (0, i.Z)(L),
             S = k ? p.BR.DARK : p.BR.LIGHT,
             B = (0, u.hv)('CollectiblesShopGiftButton');
         return (0, c.x6)(t)
             ? null
-            : (0, r.jsx)(i.ua7, {
+            : (0, r.jsx)(a.ua7, {
                   text: m.intl.string(m.t['JCFN//']),
-                  delay: b,
+                  delay: _,
                   children: (e) =>
-                      (0, r.jsx)(i.zxk, {
+                      (0, r.jsx)(a.zxk, {
                           ...e,
                           buttonRef: L,
                           className: g.giftButton,
-                          color: k ? i.Ttl.BRAND : i.Ttl.CUSTOM,
-                          look: i.zxk.Looks.FILLED,
-                          size: i.PhG.ICON,
+                          color: k ? a.Ttl.BRAND : a.Ttl.CUSTOM,
+                          look: a.zxk.Looks.FILLED,
+                          size: a.PhG.ICON,
                           innerClassName: g.giftButtonInner,
                           'aria-label': m.intl.string(m.t.PEjaCw),
                           onClick: (e) => {
@@ -110,9 +110,9 @@ let f = {
                                       returnRef: x,
                                       variantsReturnStyle: B,
                                       onClose:
-                                          null != _
+                                          null != b
                                               ? (e) => {
-                                                    e && _();
+                                                    e && b();
                                                 }
                                               : void 0
                                   });
@@ -124,7 +124,7 @@ let f = {
                                     themeOverride: S,
                                     boxColors: f
                                 })
-                              : (0, r.jsx)(i.OgN, {
+                              : (0, r.jsx)(a.OgN, {
                                     size: 'md',
                                     color: 'currentColor'
                                 })

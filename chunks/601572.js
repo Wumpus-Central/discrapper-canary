@@ -25,8 +25,8 @@ function O(e) {
     let { transitionState: t, videoEnabled: n, onEnable: O, onClose: A } = e,
         v = m.Z.getCameraComponent(),
         N = (0, u.Dt)(),
-        L = (0, h.Z)(),
-        k = f.qF.useSetting(),
+        k = (0, h.Z)(),
+        L = f.qF.useSetting(),
         [B, y] = a.useState((0, p.P)(C.default.getCurrentUser())),
         U = (0, c.O)(),
         { analyticsLocations: w } = (0, _.ZP)(s.Z.CAMERA_PREVIEW),
@@ -63,7 +63,7 @@ function O(e) {
                 transitionState: t,
                 children: [
                     (0, i.jsxs)(o.hzk, {
-                        className: L ? S.contentWithVideoBackgrounds : S.content,
+                        className: k ? S.contentWithVideoBackgrounds : S.content,
                         scrollerRef: D,
                         children: [
                             (0, i.jsx)(o.X6q, {
@@ -115,9 +115,9 @@ function O(e) {
                             (0, i.jsx)(o.XZJ, {
                                 size: 18,
                                 type: o.XZJ.Types.INVERTED,
-                                value: k,
+                                value: L,
                                 onChange: () => {
-                                    f.qF.updateSetting(!k), E.default.track(T.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: !k });
+                                    f.qF.updateSetting(!L), E.default.track(T.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: !L });
                                 },
                                 children: (0, i.jsx)(o.Text, {
                                     variant: 'text-sm/normal',

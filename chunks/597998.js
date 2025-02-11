@@ -137,33 +137,33 @@ function P(e) {
                       'playstation'
                   )
               ),
-        f
-            ? U.push(
-                  (0, l.jsx)(
-                      'div',
-                      {
-                          className: a()(A.iconSpacing, A.liveIconSpacing),
-                          children: (0, l.jsx)(h.ZP, { size: h.ZP.Sizes.SMALL })
-                      },
-                      'stream'
-                  )
-              )
-            : v &&
-              U.push(
-                  (0, l.jsx)(
-                      s.DY3,
-                      {
-                          className: A.iconSpacing,
-                          text: C.intl.string(C.t.JH1SJy),
-                          children: (0, l.jsx)(s.tEF, {
-                              size: 'xs',
-                              color: 'currentColor',
-                              className: a()(A.icon, S)
-                          })
-                      },
-                      'watch'
-                  )
-              );
+        v &&
+            U.push(
+                (0, l.jsx)(
+                    s.DY3,
+                    {
+                        className: A.iconSpacing,
+                        text: C.intl.string(C.t.JH1SJy),
+                        children: (0, l.jsx)(s.tEF, {
+                            size: 'xs',
+                            color: 'currentColor',
+                            className: a()(A.icon, S)
+                        })
+                    },
+                    'watch'
+                )
+            ),
+        f &&
+            U.push(
+                (0, l.jsx)(
+                    'div',
+                    {
+                        className: a()(A.iconSpacing, A.liveIconSpacing),
+                        children: (0, l.jsx)(h.ZP, { size: h.ZP.Sizes.SMALL })
+                    },
+                    'stream'
+                )
+            );
     let k = null != b && !(0, T.yE)(b.flags, y.udG.EMBEDDED);
     return 0 !== U.length || null != D || k
         ? (0, l.jsxs)('div', {

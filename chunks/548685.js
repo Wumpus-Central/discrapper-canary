@@ -1,8 +1,8 @@
 n.d(t, { Z: () => x }), n(47120);
 var r = n(200651),
     l = n(192379),
-    i = n(120356),
-    a = n.n(i),
+    a = n(120356),
+    i = n.n(a),
     s = n(442837),
     o = n(481060),
     d = n(594174),
@@ -15,16 +15,16 @@ var r = n(200651),
     g = n(388032),
     f = n(957726);
 let x = (e) => {
-    let { isLoading: t, rankedSkuIds: n, handleTransition: i, numVisibleItems: x } = e,
-        _ = (0, s.e7)([d.default], () => d.default.getCurrentUser()),
-        b = l.createRef(),
+    let { isLoading: t, rankedSkuIds: n, handleTransition: a, numVisibleItems: x } = e,
+        b = (0, s.e7)([d.default], () => d.default.getCurrentUser()),
+        _ = l.createRef(),
         v = (0, m.u)(),
         k = l.useMemo(() => v(n), [t, v, n]),
         j = (0, C.l)(k);
-    return null == _
+    return null == b
         ? null
         : (0, r.jsxs)('div', {
-              className: a()(f.row, f.between, f.section, f.popularPicksSection),
+              className: i()(f.row, f.between, f.section, f.popularPicksSection),
               children: [
                   (0, r.jsxs)('div', {
                       className: f.popularPicksHeader,
@@ -35,7 +35,7 @@ let x = (e) => {
                           }),
                           (0, r.jsxs)(o.P3F, {
                               className: f.shopAll,
-                              onClick: () => i('shop all top'),
+                              onClick: () => a('shop all top'),
                               children: [
                                   (0, r.jsx)(o.dRF, {}),
                                   (0, r.jsx)(o.Text, {
@@ -48,7 +48,7 @@ let x = (e) => {
                   }),
                   (0, r.jsx)('div', {
                       className: f.feed,
-                      ref: b,
+                      ref: _,
                       children: t
                           ? (0, r.jsx)(r.Fragment, { children: [...Array(12)].map((e, t) => (0, r.jsx)(h.K, {}, t + 1)) })
                           : (0, r.jsx)(r.Fragment, {
@@ -69,7 +69,7 @@ let x = (e) => {
                                                       {
                                                           product: e,
                                                           category: n,
-                                                          user: _,
+                                                          user: b,
                                                           isInFeedView: !0
                                                       },
                                                       e.skuId

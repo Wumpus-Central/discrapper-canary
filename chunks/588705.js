@@ -1,6 +1,6 @@
 n.d(t, {
     R: () => S,
-    Z: () => A
+    Z: () => b
 }),
     n(411104);
 var i = n(200651),
@@ -67,12 +67,12 @@ let S = () =>
                   })
                 : null;
     },
-    A = (e) => {
+    b = (e) => {
         var t;
         let n,
             r,
             s,
-            { invite: c, disableUser: S = !1, error: A, flatActivityCount: b = !1, isRegister: R = !1 } = e,
+            { invite: c, disableUser: S = !1, error: b, flatActivityCount: A = !1, isRegister: R = !1 } = e,
             Z = (0, u.WR)({ location: 'invite' }),
             { currentUser: O } = (0, l.cj)([f.default], () => ({ currentUser: f.default.getCurrentUser() }));
         if (null == c) return null;
@@ -138,7 +138,7 @@ let S = () =>
             (r = v.intl.formatToPlainString(v.t['4aF92d'], { username: e })),
                 (w = !0),
                 (s =
-                    null != A
+                    null != b
                         ? null
                         : (0, i.jsx)(o.DK, {
                               className: N.directInviteSubTitle,
@@ -154,9 +154,9 @@ let S = () =>
                     user: D ? P : null,
                     compact: w
                 }),
-                null != A
+                null != b
                     ? (0, i.jsxs)(i.Fragment, {
-                          children: [(0, i.jsx)(o.DK, { children: v.intl.string(v.t.mDFGFh) }), (0, i.jsx)(o.Dx, { children: A })]
+                          children: [(0, i.jsx)(o.DK, { children: v.intl.string(v.t.mDFGFh) }), (0, i.jsx)(o.Dx, { children: b })]
                       })
                     : (0, i.jsxs)(i.Fragment, {
                           children: [
@@ -184,7 +184,7 @@ let S = () =>
                           className: N.activityCount,
                           online: c.approximate_presence_count,
                           total: c.approximate_member_count,
-                          flat: b
+                          flat: A
                       }),
                 Z ? (0, i.jsx)(h.R, {}) : (0, i.jsx)(o.jQ, { user: O })
             ]

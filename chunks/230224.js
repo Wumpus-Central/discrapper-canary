@@ -1,6 +1,6 @@
 n.d(t, {
     GB: () => R,
-    JI: () => A,
+    JI: () => b,
     UM: () => j,
     V6: () => Z,
     WT: () => v,
@@ -46,11 +46,11 @@ let x = 100,
         return (null !== (t = null == n ? void 0 : n.memberCount) && void 0 !== t ? t : 0) > x;
     },
     T = (e) => e.state === g.r2o.ACCEPTED,
-    A = (e) => {
+    b = (e) => {
         let { guild_scheduled_event: t } = e;
         return null != t;
     },
-    b = (e) => !A(e) && (!!N(e) || (null != e.inviter && !T(e) && !S(e))),
+    A = (e) => !b(e) && (!!N(e) || (null != e.inviter && !T(e) && !S(e))),
     R = (e) => {
         let { guild: t, user: n, application: r } = e;
         return null != r
@@ -78,7 +78,7 @@ function Z(e) {
     var t;
     let { invite: n, textClassName: r, className: l } = e,
         o = I(n);
-    return null == o || b(n) || (null == n ? void 0 : null === (t = n.guild) || void 0 === t ? void 0 : t.id) === p.fQ
+    return null == o || A(n) || (null == n ? void 0 : null === (t = n.guild) || void 0 === t ? void 0 : t.id) === p.fQ
         ? null
         : (0, i.jsx)(s.EJ, {
               className: a()(E.activityCount, l),
@@ -90,12 +90,12 @@ function Z(e) {
 }
 function O(e) {
     let { invite: t, showBigUserIcon: n } = e,
-        l = r.useMemo(() => (n ? null : C(t) && null != t.target_user ? h.ZP.getUserAvatarURL(t.target_user) : b(t) && null != t.inviter ? h.ZP.getUserAvatarURL(t.inviter) : null), [t, n]),
+        l = r.useMemo(() => (n ? null : C(t) && null != t.target_user ? h.ZP.getUserAvatarURL(t.target_user) : A(t) && null != t.inviter ? h.ZP.getUserAvatarURL(t.inviter) : null), [t, n]),
         a = f.intl.string(f.t['3rE1Pz']);
     if (v(t)) {
         var c, d;
         a = (null === (c = t.channel) || void 0 === c ? void 0 : c.name) != null && (null === (d = t.inviter) || void 0 === d ? void 0 : d.username) != null ? f.intl.format(f.t.Lu4h19, { username: t.inviter.username }) : f.intl.string(f.t.OsdY8P);
-    } else C(t) && null != t.target_user ? (a = f.intl.formatToPlainString(f.t.x2L32d, { username: t.target_user.username })) : T(t) ? (a = f.intl.string(f.t['FDsl+P'])) : b(t) && null != t.inviter && (a = f.intl.format(f.t.spU2mJ, { username: _.ZP.getFormattedName(t.inviter) }));
+    } else C(t) && null != t.target_user ? (a = f.intl.formatToPlainString(f.t.x2L32d, { username: t.target_user.username })) : T(t) ? (a = f.intl.string(f.t['FDsl+P'])) : A(t) && null != t.inviter && (a = f.intl.format(f.t.spU2mJ, { username: _.ZP.getFormattedName(t.inviter) }));
     return (0, i.jsxs)('div', {
         className: E.inviteJoinContainer,
         children: [

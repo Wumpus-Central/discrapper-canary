@@ -19,7 +19,7 @@ function E(e) {
         [I, C] = r.useState(!1),
         [v, N] = r.useState(null),
         [S, T] = r.useState(null),
-        [A, b] = r.useState(''),
+        [b, A] = r.useState(''),
         R = r.useRef(null);
     return (
         r.useEffect(() => {
@@ -51,8 +51,8 @@ function E(e) {
                             label: g.intl.string(g.t['8dM4FB']),
                             setRef: R,
                             className: f.marginBottom20,
-                            value: A,
-                            onChange: b,
+                            value: b,
+                            onChange: A,
                             error: v,
                             autoComplete: 'new-password',
                             maxLength: 72,
@@ -62,7 +62,7 @@ function E(e) {
                             className: f.marginTop8,
                             onClick: () => {
                                 if (!I) {
-                                    if (0 === A.length) {
+                                    if (0 === b.length) {
                                         N(g.intl.string(g.t.R98xDw)), u.S.dispatch(m.CkL.WAVE_EMPHASIZE);
                                         return;
                                     }
@@ -75,7 +75,7 @@ function E(e) {
                                             url: m.ANM.ACCOUNT_REVERT,
                                             body: {
                                                 token: x,
-                                                password: A
+                                                password: b
                                             },
                                             trackedActionData: { event: o.NetworkActionNames.ACCOUNT_REVERT },
                                             rejectWithError: !1
@@ -84,7 +84,7 @@ function E(e) {
                                                 let {
                                                     body: { email: n }
                                                 } = e;
-                                                b(''), t(n), l(_.n.SUCCESS);
+                                                A(''), t(n), l(_.n.SUCCESS);
                                             })
                                             .catch((e) => {
                                                 if (e instanceof Error) T(g.intl.formatToPlainString(g.t.aTVNen, { statusPageURL: m.yXt.STATUS }));
@@ -126,7 +126,7 @@ function E(e) {
                     children: (0, i.jsx)(d.zx, {
                         color: d.zx.Colors.PRIMARY,
                         onClick: () => {
-                            b(''), l(_.n.START);
+                            A(''), l(_.n.START);
                         },
                         children: g.intl.string(g.t.rzxnQ0)
                     })

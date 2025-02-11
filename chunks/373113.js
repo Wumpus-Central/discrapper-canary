@@ -1,8 +1,8 @@
-n.d(t, { Z: () => i });
+n.d(t, { Z: () => a });
 var r = n(200651);
 n(192379);
 var l = n(375615);
-function i() {
+function a() {
     return (0, r.jsxs)('div', {
         className: l.__invalid_snowflakes,
         children: [

@@ -12,8 +12,8 @@ var i = n(200651),
     _ = n(215569),
     h = n(481060),
     I = n(612226),
-    T = n(951483),
-    C = n(714338),
+    C = n(951483),
+    T = n(714338),
     N = n(607070),
     m = n(460181),
     p = n(585483),
@@ -306,7 +306,7 @@ function U(e) {
     let { transitionState: t, onClose: n } = e,
         [r, a] = l.useState(!1),
         [o, c] = l.useState(!1),
-        u = l.useMemo(() => (__OVERLAY__ ? (0, T.Zg)() : (0, I.Rv)()), []),
+        u = l.useMemo(() => (__OVERLAY__ ? (0, C.Zg)() : (0, I.Rv)()), []),
         { keyboardModeEnabled: d, useReducedMotion: m } = (0, E.cj)([N.Z], () => ({
             keyboardModeEnabled: N.Z.keyboardModeEnabled,
             useReducedMotion: N.Z.useReducedMotion
@@ -337,7 +337,7 @@ function U(e) {
                                   content: u,
                                   keyboardModeEnabled: d,
                                   activateRagingDemon: function () {
-                                      m || (C.Z.disable(), a(!0), c(!0));
+                                      m || (T.Z.disable(), a(!0), c(!0));
                                   }
                               },
                               'modal'

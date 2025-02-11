@@ -25,8 +25,8 @@ var i,
     N = n(473855),
     S = n(124860),
     T = n(86779),
-    A = n(726745),
-    b = n(913583),
+    b = n(726745),
+    A = n(913583),
     R = n(144114),
     Z = n(541692),
     O = n(952802),
@@ -45,8 +45,8 @@ var i,
     z = n(981631),
     V = n(58346),
     H = n(388032),
-    W = n(462137),
-    K = n(814632);
+    K = n(462137),
+    W = n(814632);
 function Y(e, t, n) {
     return (
         t in e
@@ -172,7 +172,7 @@ class J extends (i = l.PureComponent) {
             children: [
                 (0, r.jsx)(x.Hh, {}),
                 (0, r.jsx)(x.Dx, {
-                    className: K.marginBottom8,
+                    className: W.marginBottom8,
                     children: H.intl.string(H.t.S6RMND)
                 }),
                 (0, r.jsx)(x.DK, { children: H.intl.string(H.t.YZiJbm) })
@@ -189,21 +189,21 @@ class J extends (i = l.PureComponent) {
                       (0, r.jsx)(x.qE, {
                           src: e.getAvatarURL(void 0, 100),
                           size: h.EFr.DEPRECATED_SIZE_100,
-                          className: K.marginBottom20
+                          className: W.marginBottom20
                       }),
                       (0, r.jsx)(x.Dx, {
-                          className: K.marginBottom8,
+                          className: W.marginBottom8,
                           children: H.intl.format(H.t.ot19ho, { name: e.toString() })
                       }),
                       (0, r.jsx)(x.DK, {
-                          className: K.marginBottom40,
+                          className: W.marginBottom40,
                           children: H.intl.string(H.t['2xkqzc'])
                       }),
                       (0, r.jsxs)(x.gO, {
                           children: [
                               (0, r.jsx)(x.zx, {
                                   onClick: () => t(z.Z5c.APP),
-                                  className: K.marginBottom8,
+                                  className: W.marginBottom8,
                                   children: H.intl.format(H.t.fohtv7, { name: e.toString() })
                               }),
                               (0, r.jsx)(x.zx, {
@@ -228,12 +228,12 @@ class J extends (i = l.PureComponent) {
             className: e,
             children: (0, r.jsxs)(h.y5t, {
                 component: (0, r.jsx)(x.Dx, {
-                    className: K.marginBottom8,
+                    className: W.marginBottom8,
                     children: n
                 }),
                 children: [
                     (0, r.jsx)(x.DK, {
-                        className: K.marginBottom20,
+                        className: W.marginBottom20,
                         children: i
                     }),
                     (0, r.jsxs)(x.gO, {
@@ -244,7 +244,7 @@ class J extends (i = l.PureComponent) {
                                 children: H.intl.string(H.t.JhDw5u)
                             }),
                             (0, r.jsx)('div', {
-                                className: s()(K.marginTop8, W.needAccount),
+                                className: s()(W.marginTop8, K.needAccount),
                                 children: H.intl.format(H.t.js2rr6, { onClick: this.handleCancelAccountDeletion })
                             })
                         ]
@@ -260,10 +260,10 @@ class J extends (i = l.PureComponent) {
             children: [
                 (0, r.jsx)(M.R, {}),
                 (0, r.jsxs)(x.gO, {
-                    className: K.marginTop20,
+                    className: W.marginTop20,
                     children: [
                         (0, r.jsx)(O.Z, {
-                            className: K.marginBottom20,
+                            className: W.marginBottom20,
                             alpha2: t.alpha2,
                             countryCode: t.code.split(' ')[0],
                             label: H.intl.string(H.t.tUjnxs),
@@ -282,7 +282,7 @@ class J extends (i = l.PureComponent) {
                             required: !0
                         }),
                         (0, r.jsx)(x.II, {
-                            className: K.marginBottom20,
+                            className: W.marginBottom20,
                             label: H.intl.string(H.t['CIGa+/']),
                             onChange: (e) => this.setState({ password: e }),
                             type: 'password',
@@ -293,7 +293,7 @@ class J extends (i = l.PureComponent) {
                             required: !0
                         }),
                         (0, r.jsx)(x.zx, {
-                            className: K.marginBottom8,
+                            className: W.marginBottom8,
                             type: 'submit',
                             disabled: !0,
                             children: H.intl.string(H.t.dKhVQE)
@@ -306,7 +306,7 @@ class J extends (i = l.PureComponent) {
                         }),
                         (0, r.jsx)(x.zx, {
                             disabled: !0,
-                            className: K.marginTop4,
+                            className: W.marginTop4,
                             look: x.zx.Looks.LINK,
                             color: x.zx.Colors.LINK,
                             children: H.intl.string(H.t.tmE73t)
@@ -328,12 +328,12 @@ class J extends (i = l.PureComponent) {
                     ? null != l
                         ? (0, r.jsx)(U.Z, { giftCode: l })
                         : (0, r.jsxs)('div', {
-                              className: W.header,
+                              className: K.header,
                               children: [
                                   (0, r.jsx)(
                                       x.Dx,
                                       {
-                                          className: K.marginBottom8,
+                                          className: W.marginBottom8,
                                           children: H.intl.string(H.t['7fNJgI'])
                                       },
                                       'title'
@@ -349,7 +349,7 @@ class J extends (i = l.PureComponent) {
                     align: C.Z.Align.CENTER,
                     children: [
                         (0, r.jsxs)('div', {
-                            className: W.mainLoginContainer,
+                            className: K.mainLoginContainer,
                             children: [
                                 this.canShowChooseAccount &&
                                     this.state.dismissedChooseAccount &&
@@ -362,14 +362,14 @@ class J extends (i = l.PureComponent) {
                                         },
                                         look: x.zx.Looks.LINK,
                                         color: x.zx.Colors.PRIMARY,
-                                        className: W.goBackButton,
+                                        className: K.goBackButton,
                                         children: (0, r.jsxs)('div', {
-                                            className: W.content,
+                                            className: K.content,
                                             children: [
                                                 (0, r.jsx)(h.V7D, {
                                                     size: 'xs',
                                                     color: 'currentColor',
-                                                    className: W.caret
+                                                    className: K.caret
                                                 }),
                                                 (0, r.jsx)(h.Text, {
                                                     variant: 'text-md/normal',
@@ -381,12 +381,12 @@ class J extends (i = l.PureComponent) {
                                 n,
                                 (0, r.jsx)(h.y5t, {
                                     children: (0, r.jsxs)(x.gO, {
-                                        className: K.marginTop20,
+                                        className: W.marginTop20,
                                         children: [
                                             (0, r.jsx)(O.Z, {
                                                 alpha2: o.alpha2,
                                                 countryCode: o.code.split(' ')[0],
-                                                className: K.marginBottom20,
+                                                className: W.marginBottom20,
                                                 label: H.intl.string(H.t.tUjnxs),
                                                 error: null !== (t = this.renderError('login')) && void 0 !== t ? t : this.renderError('email'),
                                                 onChange: (e, t) =>
@@ -420,28 +420,28 @@ class J extends (i = l.PureComponent) {
                                                 onClick: this.handleForgotPassword,
                                                 look: x.zx.Looks.LINK,
                                                 color: x.zx.Colors.LINK,
-                                                className: s()(K.marginBottom20, K.marginTop4),
+                                                className: s()(W.marginBottom20, W.marginTop4),
                                                 children: H.intl.string(H.t.wWIufn)
                                             }),
                                             (0, r.jsx)(x.zx, {
                                                 type: 'submit',
                                                 submitting: a === z.u34.LOGGING_IN,
                                                 color: _ ? x.zx.Colors.GREEN : x.zx.Colors.BRAND,
-                                                className: K.marginBottom8,
+                                                className: W.marginBottom8,
                                                 children: _ ? H.intl.string(H.t.wvVThI) : H.intl.string(H.t.dKhVQE)
                                             }),
                                             (0, r.jsxs)('div', {
-                                                className: K.marginTop4,
+                                                className: W.marginTop4,
                                                 children: [
                                                     (0, r.jsx)('span', {
-                                                        className: W.needAccount,
+                                                        className: K.needAccount,
                                                         children: H.intl.string(H.t.tmE73t)
                                                     }),
                                                     (0, r.jsx)(x.zx, {
                                                         onClick: this.handleGotoRegister,
                                                         look: x.zx.Looks.LINK,
                                                         color: x.zx.Colors.LINK,
-                                                        className: W.smallRegisterLink,
+                                                        className: K.smallRegisterLink,
                                                         children: H.intl.string(H.t.pV8xeX)
                                                     })
                                                 ]
@@ -468,7 +468,7 @@ class J extends (i = l.PureComponent) {
     renderDefault() {
         let { authBoxClassName: e, showMobileWebHandoff: t } = this.props;
         return (0, r.jsxs)('div', {
-            className: W.__invalid_pageContainer,
+            className: K.__invalid_pageContainer,
             children: [
                 (0, r.jsx)(x.ZP, {
                     onSubmit: this.handleLogin,
@@ -485,7 +485,7 @@ class J extends (i = l.PureComponent) {
         return (0, r.jsx)(G.Z, {
             onSubmit: this.handleLogin,
             tag: 'form',
-            className: s()(this.props.authBoxClassName, W.horizontalAuthBox),
+            className: s()(this.props.authBoxClassName, K.horizontalAuthBox),
             children: () => [(0, r.jsx)(N.Z, { guildTemplate: e }, 'template'), this.renderDefaultForm(!1)]
         });
     }
@@ -537,7 +537,7 @@ class J extends (i = l.PureComponent) {
         });
     }
     renderChooseAccount() {
-        return (0, r.jsx)(b.Z, {
+        return (0, r.jsx)(A.Z, {
             onDismiss: () => {
                 this.setState((e) => ({
                     ...e,
@@ -683,7 +683,7 @@ class J extends (i = l.PureComponent) {
                             header: H.intl.string(H.t.f5Pi7O),
                             confirmText: H.intl.string(H.t.BddRzc),
                             confirmButtonColor: x.zx.Colors.BRAND,
-                            className: d.tq ? W.mobile : '',
+                            className: d.tq ? K.mobile : '',
                             ...e,
                             children: (0, r.jsx)(h.Text, {
                                 variant: 'text-md/normal',
@@ -743,7 +743,7 @@ class J extends (i = l.PureComponent) {
 }
 Y(J, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) });
 let X = function (e) {
-    let t = (0, u.cj)([P.Z, D.Z, y.default, A.Z, Z.Z], () => ({
+    let t = (0, u.cj)([P.Z, D.Z, y.default, b.Z, Z.Z], () => ({
         authenticated: y.default.isAuthenticated(),
         handoffAvailable: P.Z.isHandoffAvailable(),
         user: P.Z.user,
@@ -752,7 +752,7 @@ let X = function (e) {
         mfaMethods: y.default.getMFAMethods(),
         defaultRoute: D.Z.defaultRoute,
         country: Z.Z.getCountryCode(),
-        hasLoggedInAccounts: A.Z.getHasLoggedInAccounts()
+        hasLoggedInAccounts: b.Z.getHasLoggedInAccounts()
     }));
     return (0, r.jsx)(J, {
         ...e,

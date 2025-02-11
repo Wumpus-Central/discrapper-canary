@@ -23,8 +23,8 @@ let x = (e) => {
         I = (0, _.oK)('RSL - Landing Page'),
         [C, v] = r.useState(!1),
         [N, S] = r.useState(f.intl.string(f.t['9exy+f'])),
-        [T, A] = r.useState(!0),
-        b = (e) => {
+        [T, b] = r.useState(!0),
+        A = (e) => {
             switch (e) {
                 case p.evJ.INVALID_FORM_BODY:
                 case p.evJ.DSA_RSL_REPORT_NOT_FOUND:
@@ -46,12 +46,12 @@ let x = (e) => {
     return (
         r.useEffect(() => {
             n
-                ? (A(!0),
+                ? (b(!0),
                   s
                       .k({ withAnalyticsToken: !0 })
-                      .then(() => A(!1))
-                      .catch(() => A(!1)))
-                : A(!1);
+                      .then(() => b(!1))
+                      .catch(() => b(!1)))
+                : b(!1);
         }, [n]),
         r.useEffect(() => {
             x || I || o.Z.getExperiments();
@@ -61,9 +61,9 @@ let x = (e) => {
                 var t, n;
                 try {
                     let n = null != e ? await (0, h.hs)(e) : void 0;
-                    null != n ? S(f.intl.string(f.t.e6mZMj)) : b(null === (t = n.body) || void 0 === t ? void 0 : t.code);
+                    null != n ? S(f.intl.string(f.t.e6mZMj)) : A(null === (t = n.body) || void 0 === t ? void 0 : t.code);
                 } catch (e) {
-                    b(null === (n = e.body) || void 0 === n ? void 0 : n.code);
+                    A(null === (n = e.body) || void 0 === n ? void 0 : n.code);
                 } finally {
                     v(!1);
                 }

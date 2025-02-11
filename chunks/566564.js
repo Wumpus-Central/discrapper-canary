@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E }), n(653041);
 var r = n(200651),
     l = n(192379),
-    i = n(120356),
-    a = n.n(i),
+    a = n(120356),
+    i = n.n(a),
     s = n(685816),
     o = n(442837),
     d = n(481060),
@@ -15,20 +15,20 @@ var r = n(200651),
     g = n(81136),
     f = n(953655),
     x = n(548685),
-    _ = n(580914),
-    b = n(384067),
+    b = n(580914),
+    _ = n(384067),
     v = n(215023),
     k = n(388032),
     j = n(957726);
 let L = (e) => {
-        let { handleTransition: t, numVisibleItems: n, isFetchingCategories: i, tab: a } = e,
+        let { handleTransition: t, numVisibleItems: n, isFetchingCategories: a, tab: i } = e,
             { noCache: o, includeUnpublished: d } = (0, g.Z)(),
             {
                 isFetchingShopHome: c,
                 fetchShopHomeError: u,
                 shopBlocks: C,
                 refreshShopHome: h
-            } = (0, p.E)(a, {
+            } = (0, p.E)(i, {
                 noCache: o,
                 includeUnpublished: d,
                 includeBundles: !0
@@ -45,10 +45,10 @@ let L = (e) => {
             : c || 0 === C.length
               ? (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsx)(_.Z, {
+                        (0, r.jsx)(b.Z, {
                             isLoading: c,
                             handleTransition: t,
-                            tab: a
+                            tab: i
                         }),
                         (0, r.jsx)(f.Z, {
                             isLoading: c,
@@ -70,12 +70,12 @@ let L = (e) => {
                             switch (e.type) {
                                 case s.z.HERO:
                                     return (0, r.jsx)(
-                                        _.Z,
+                                        b.Z,
                                         {
                                             isLoading: c,
                                             handleTransition: t,
                                             heroBlock: e,
-                                            tab: a
+                                            tab: i
                                         },
                                         l
                                     );
@@ -93,7 +93,7 @@ let L = (e) => {
                                     return (0, r.jsx)(
                                         x.Z,
                                         {
-                                            isLoading: c || i,
+                                            isLoading: c || a,
                                             handleTransition: t,
                                             numVisibleItems: n,
                                             rankedSkuIds: e.rankedSkuIds
@@ -102,11 +102,11 @@ let L = (e) => {
                                     );
                                 case s.z.WIDE_BANNER:
                                     return (0, r.jsx)(
-                                        b.Z,
+                                        _.Z,
                                         {
                                             handleTransition: t,
                                             wideBannerBlock: e,
-                                            tab: a
+                                            tab: i
                                         },
                                         l
                                     );
@@ -116,7 +116,7 @@ let L = (e) => {
                         }),
                         !C.some((e) => (null == e ? void 0 : e.type) === s.z.FEED) &&
                             (0, r.jsx)(x.Z, {
-                                isLoading: i,
+                                isLoading: a,
                                 numVisibleItems: n,
                                 handleTransition: () => t('shop all top'),
                                 rankedSkuIds: v.yo
@@ -126,9 +126,9 @@ let L = (e) => {
     },
     E = (e) => {
         var t;
-        let { isFullScreen: n, handleTransition: i, numVisibleItems: s, tab: p } = e,
-            { isFetchingCategories: f, fetchCategoriesError: x, fetchPurchasesError: _, claimError: b, refreshCategories: E } = (0, h.ZP)({ location: 'CollectiblesFeedShop' }),
-            S = null !== (t = null != x ? x : _) && void 0 !== t ? t : b,
+        let { isFullScreen: n, handleTransition: a, numVisibleItems: s, tab: p } = e,
+            { isFetchingCategories: f, fetchCategoriesError: x, fetchPurchasesError: b, claimError: _, refreshCategories: E } = (0, h.ZP)({ location: 'CollectiblesFeedShop' }),
+            S = null !== (t = null != x ? x : b) && void 0 !== t ? t : _,
             B = (0, o.e7)([c.default], () => c.default.getCurrentUser()),
             T = (0, C.b)('Collectibles Shop Button'),
             { noCache: I, includeUnpublished: y } = (0, g.Z)(),
@@ -138,7 +138,7 @@ let L = (e) => {
         if (null == B) return null;
         if (null != S) {
             let e = [];
-            null != x ? e.push('shop load fetch categories error: '.concat(S.message)) : null != _ ? e.push('shop load fetch purchase error: '.concat(S.message)) : e.push('shop load claim error: '.concat(S.message)),
+            null != x ? e.push('shop load fetch categories error: '.concat(S.message)) : null != b ? e.push('shop load fetch purchase error: '.concat(S.message)) : e.push('shop load claim error: '.concat(S.message)),
                 u.Z.captureMessage(e.join('\n'), {
                     tags: {
                         isStaff: B.isStaff().toString(),
@@ -156,12 +156,12 @@ let L = (e) => {
               })
             : (0, r.jsx)(r.Fragment, {
                   children: (0, r.jsx)('div', {
-                      className: a()(j.shop, { [j.shopFullscreen]: n }),
+                      className: i()(j.shop, { [j.shopFullscreen]: n }),
                       children: (0, r.jsxs)('div', {
-                          className: a()(j.content, j.mainContent),
+                          className: i()(j.content, j.mainContent),
                           children: [
                               (0, r.jsx)(L, {
-                                  handleTransition: i,
+                                  handleTransition: a,
                                   numVisibleItems: s,
                                   isFetchingCategories: f,
                                   tab: p
@@ -177,7 +177,7 @@ let L = (e) => {
                                           (0, r.jsx)(d.zxk, {
                                               className: j.endOfFeedButton,
                                               onClick: () => {
-                                                  i('shop all bottom', void 0, !0);
+                                                  a('shop all bottom', void 0, !0);
                                               },
                                               children: (0, r.jsx)(d.Text, {
                                                   variant: 'text-md/medium',

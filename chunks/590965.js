@@ -12,8 +12,8 @@ var l,
     _ = n(592125),
     h = n(430824),
     I = n(701190),
-    T = n(496675),
-    C = n(594174),
+    C = n(496675),
+    T = n(594174),
     N = n(998502),
     m = n(981631),
     p = n(176505);
@@ -26,7 +26,7 @@ function O() {
 }
 class f extends (l = a.ZP.Store) {
     initialize() {
-        this.waitFor(h.Z, I.Z, C.default);
+        this.waitFor(h.Z, I.Z, T.default);
     }
     isOpen() {
         let e = __OVERLAY__ ? m.IlC.OVERLAY : m.IlC.APP;
@@ -71,7 +71,7 @@ let P = new f(o.Z, {
                         let { channel: t } = e;
                         if (null != t) {
                             let e = _.Z.getChannel(t.id);
-                            if (T.Z.can(m.Plq.VIEW_CHANNEL, e)) return t.id;
+                            if (C.Z.can(m.Plq.VIEW_CHANNEL, e)) return t.id;
                         }
                         return null;
                     })(t);
