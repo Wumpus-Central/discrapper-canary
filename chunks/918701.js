@@ -374,9 +374,8 @@ function eh(e) {
     return null !== (t = e.rewardsConfig.rewards.find((e) => e.type === u.w.IN_GAME)) && void 0 !== t ? t : null;
 }
 function em(e) {
-    var t;
-    let n = e.rewardsConfig.rewards.find((e) => e.type === u.w.VIRTUAL_CURRENCY);
-    return null !== (t = null == n ? void 0 : n.orbQuantity) && void 0 !== t ? t : null;
+    let t = e.rewardsConfig.rewards.find((e) => e.type === u.w.VIRTUAL_CURRENCY);
+    return null == t ? void 0 : t.orbQuantity;
 }
 function eg(e, t) {
     return e.targetedContent.includes(t);

@@ -29,10 +29,10 @@ function N(e) {
         k = q.defaultReward.messages.name,
         P = q.defaultReward.messages.nameWithArticle,
         I = w ? k : P,
-        O = (null === (t = N.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-        { ref: M, scrollHeight: W } = (0, d.Z)(),
-        D = 104 !== W,
-        { expansionSpring: L } = (0, c.q_F)({
+        M = (null === (t = N.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
+        { ref: O, scrollHeight: W } = (0, d.Z)(),
+        L = 104 !== W,
+        { expansionSpring: D } = (0, c.q_F)({
             expansionSpring: y ? 1 : 0,
             config: {
                 ...j.Y,
@@ -76,7 +76,7 @@ function N(e) {
         children: [
             (0, r.jsxs)(i.animated.div, {
                 style: {
-                    maxHeight: L.to([0, 1], [104, (null != W ? W : 0) + 12])
+                    maxHeight: D.to([0, 1], [104, (null != W ? W : 0) + 12])
                 },
                 className: a()(T.rewardDescriptionContainer),
                 children: [
@@ -84,7 +84,7 @@ function N(e) {
                         className: T.assetWrapper,
                         children: [
                             !Z && Q && (0, r.jsx)('div', { className: T.completionAnimation }),
-                            O && !Z
+                            M && !Z
                                 ? (0, r.jsxs)('div', {
                                       className: T.progressWrapper,
                                       children: [
@@ -118,6 +118,7 @@ function N(e) {
                                       className: T.questRewardTileContainer,
                                       children: [
                                           z &&
+                                              null != F &&
                                               (0, r.jsxs)(c.Text, {
                                                   color: 'always-white',
                                                   variant: 'text-xs/bold',
@@ -136,8 +137,8 @@ function N(e) {
                         ]
                     }),
                     (0, r.jsxs)('div', {
-                        ref: M,
-                        className: a()(T.textContainer, { [T.justifyCenter]: !D }),
+                        ref: O,
+                        className: a()(T.textContainer, { [T.justifyCenter]: !L }),
                         children: [
                             (0, r.jsx)(c.X6q, {
                                 variant: 'eyebrow',
@@ -159,10 +160,10 @@ function N(e) {
                             Y
                         ]
                     }),
-                    D &&
+                    L &&
                         (0, r.jsx)(i.animated.div, {
                             style: {
-                                opacity: L.to([0, 1], [1, 0])
+                                opacity: D.to([0, 1], [1, 0])
                             },
                             className: T.textOverflowBlur
                         })
