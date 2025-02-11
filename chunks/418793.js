@@ -25,6 +25,7 @@ let s = (e) => {
                         nameWithArticle: e.messages.name_with_article
                     },
                     approximateCount: e.approximate_count,
+                    redemptionLink: e.redemption_link,
                     ...t
                 };
             case i.w.COLLECTIBLE:
