@@ -32124,8 +32124,6 @@ div.modalOverrideBody__34eac {
 .visual-refresh .inlineContainer__74017 {
     box-shadow: none;
     --custom-channel-textarea-text-area-height: var(--form-input-height);
-    height: var(--form-input-height);
-    height: var(--custom-channel-textarea-text-area-height);
     box-sizing: border-box;
     background: var(--input-background);
     border-color: var(--input-border)
