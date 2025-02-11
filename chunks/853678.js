@@ -17,11 +17,11 @@ var i = n(45792),
     E = n(452426),
     I = n(561205),
     C = n(186901),
-    v = n(981631),
-    N = n(701488);
-let T = new Set([N.Fu, N.JT]),
+    N = n(981631),
+    v = n(701488);
+let T = new Set([v.Fu, v.JT]),
     S = {
-        [v.Etm.OPEN_EXTERNAL_LINK]: {
+        [N.Etm.OPEN_EXTERNAL_LINK]: {
             scope: {
                 [C.Gp.ANY]: [C.wE, C.b_]
             },
@@ -35,7 +35,7 @@ let T = new Set([N.Fu, N.JT]),
                 try {
                     let e = new URL(n).toString();
                     if (g.isPlatformEmbedded) {
-                        let e = (0, a.R)() ? v.KJ3.ACTIVITY_POPOUT : null;
+                        let e = (0, a.R)() ? N.KJ3.ACTIVITY_POPOUT : null;
                         h.Z.focus(e, !0);
                     }
                     let t = s.ZP.getCurrentEmbeddedActivity(),
@@ -62,22 +62,22 @@ let T = new Set([N.Fu, N.JT]),
                         )
                     );
                 } catch (e) {
-                    throw new _.Z({ errorCode: v.lTL.INVALID_COMMAND }, 'Invalid URL: '.concat(n));
+                    throw new _.Z({ errorCode: N.lTL.INVALID_COMMAND }, 'Invalid URL: '.concat(n));
                 }
             }
         },
-        [v.Etm.NAVIGATE_TO_CONNECTIONS]: {
+        [N.Etm.NAVIGATE_TO_CONNECTIONS]: {
             validation: (e) => (0, E.Z)(e),
             scope: { [C.Gp.ANY]: [C.wE] },
             handler(e) {
                 let { socket: t } = e;
                 (0, f.bu)(t.transport);
                 let n = (0, f._f)(t.application);
-                if (!T.has(n)) throw new _.Z({ errorCode: v.lTL.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
-                l.Z.open(v.oAB.CONNECTIONS);
+                if (!T.has(n)) throw new _.Z({ errorCode: N.lTL.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
+                l.Z.open(N.oAB.CONNECTIONS);
             }
         },
-        [v.Etm.SHARE_LINK]: (0, i.S)(v.Etm.SHARE_LINK, {
+        [N.Etm.SHARE_LINK]: (0, i.S)(N.Etm.SHARE_LINK, {
             scope: { [C.Gp.ANY]: [C.wE] },
             handler(e) {
                 var t;
@@ -87,10 +87,10 @@ let T = new Set([N.Fu, N.JT]),
                 } = e;
                 (0, f.bu)(n.transport);
                 let a = (0, f._f)(n.application);
-                if (null == a) throw new _.Z({ errorCode: v.lTL.INVALID_COMMAND }, 'No application.');
+                if (null == a) throw new _.Z({ errorCode: N.lTL.INVALID_COMMAND }, 'No application.');
                 let s = (0, I.Z)();
-                if (null == s) throw new _.Z({ errorCode: v.lTL.INVALID_COMMAND }, 'No channel found');
-                if (!(0, m.yE)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, v.udG.EMBEDDED)) throw new _.Z({ errorCode: v.lTL.INVALID_COMMAND }, 'This application cannot access this API');
+                if (null == s) throw new _.Z({ errorCode: N.lTL.INVALID_COMMAND }, 'No channel found');
+                if (!(0, m.yE)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, N.udG.EMBEDDED)) throw new _.Z({ errorCode: N.lTL.INVALID_COMMAND }, 'This application cannot access this API');
                 return new Promise((e) => {
                     (0, c._)({
                         applicationId: a,

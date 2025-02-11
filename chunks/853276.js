@@ -120,7 +120,7 @@ function g(e) {
             },
             [n]
         ),
-        O = r.useCallback(
+        k = r.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                 if ((t.trim().length <= 0 && x(), null != v.current && null != E.current && null != N.current)) {
@@ -131,12 +131,12 @@ function g(e) {
             },
             [t, E, l, x]
         ),
-        k = r.useCallback(
+        O = r.useCallback(
             (e) => {
                 let n = t.trim().length <= 0;
-                u.ye.has(e.key) ? (e.preventDefault(), e.stopPropagation(), O(!0)) : 'Backspace' === e.key && n && (e.preventDefault(), e.stopPropagation(), O(!0));
+                u.ye.has(e.key) ? (e.preventDefault(), e.stopPropagation(), k(!0)) : 'Backspace' === e.key && n && (e.preventDefault(), e.stopPropagation(), k(!0));
             },
-            [O, t]
+            [k, t]
         ),
         P = r.useCallback(
             (e) => {
@@ -165,7 +165,7 @@ function g(e) {
             children: [
                 (0, i.jsxs)(o.P3F, {
                     tag: 'div',
-                    onBlur: () => O(!1),
+                    onBlur: () => k(!1),
                     onClick: P,
                     ignoreKeyPress: !0,
                     onMouseEnter: () => y(!0),
@@ -183,7 +183,7 @@ function g(e) {
                             }),
                             ref: v,
                             onChange: D,
-                            onKeyDownCapture: k,
+                            onKeyDownCapture: O,
                             value: t,
                             style: { width: L > 0 ? L : 'calc('.concat(t.length, 'ch + 10px)') }
                         }),

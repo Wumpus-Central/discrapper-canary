@@ -104,9 +104,9 @@ function O(e) {
                     onOpenProfile: (e) => (null == x ? void 0 : x({ section: e }))
                 }),
             t.isProvisional
-                ? (0, i.jsx)(l.Z, {
-                      look: 'profile',
-                      userId: t.id
+                ? (0, i.jsx)(l.wQ, {
+                      userId: t.id,
+                      headingColor: 'header-primary'
                   })
                 : (0, i.jsx)(T.Z, {
                       user: t,

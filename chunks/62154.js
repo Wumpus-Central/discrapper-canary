@@ -13,9 +13,9 @@ var l = t(442837),
     f = t(91433),
     p = t(944043),
     x = t(502762),
-    m = t(530),
-    _ = t(740628),
-    h = t(643518),
+    h = t(530),
+    m = t(740628),
+    _ = t(643518),
     Z = t(228168),
     v = t(981631),
     g = t(757672);
@@ -31,7 +31,7 @@ function j(e) {
         R = t.id === j.id,
         M = (0, d.I5)(j),
         U = a.ZP.useName(null == N ? void 0 : N.guildId, y, t),
-        B = (0, h.Z)({
+        B = (0, _.Z)({
             user: t,
             currentUser: j,
             guildId: E,
@@ -40,7 +40,7 @@ function j(e) {
     return (0, i.jsxs)('div', {
         className: g.body,
         children: [
-            (0, i.jsx)(m.Z, {
+            (0, i.jsx)(h.Z, {
                 user: t,
                 profileType: Z.y0.FULL_SIZE,
                 nickname: U,
@@ -93,7 +93,7 @@ function j(e) {
                 }),
             (0, i.jsx)(x.Z.Overlay, {
                 className: g.overlay,
-                children: (0, i.jsx)(_.Z, {
+                children: (0, i.jsx)(m.Z, {
                     user: t,
                     currentUser: j,
                     displayProfile: N,

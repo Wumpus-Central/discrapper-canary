@@ -1,4 +1,4 @@
-t.d(n, { Z: () => h });
+t.d(n, { Z: () => _ });
 var i = t(200651);
 t(192379);
 var l = t(481060),
@@ -13,7 +13,7 @@ var l = t(481060),
     f = t(981631),
     p = t(388032),
     x = t(101197);
-function m(e) {
+function h(e) {
     let { user: n, analyticsLocation: t, ...l } = e,
         o = (0, c.Y)({
             user: n,
@@ -33,7 +33,7 @@ function m(e) {
                   })
           });
 }
-function _(e) {
+function m(e) {
     let { gameFriends: n, hasIncomingPendingGameFriends: t, hasOutgoingPendingGameFriends: o, user: s, analyticsLocation: r } = e,
         {
             onMouseEnter: a,
@@ -44,7 +44,7 @@ function _(e) {
             hasIncomingPendingGameFriends: t,
             hasOutgoingPendingGameFriends: o
         });
-    return (0, i.jsx)(m, {
+    return (0, i.jsx)(h, {
         tooltipText: c,
         ariaLabel: d,
         icon: l.KED,
@@ -53,8 +53,8 @@ function _(e) {
         analyticsLocation: r
     });
 }
-function h(e) {
-    let { isCurrentUser: n, user: t, relationshipType: c, friendToken: u, onClose: h } = e,
+function _(e) {
+    let { isCurrentUser: n, user: t, relationshipType: c, friendToken: u, onClose: _ } = e,
         { newestAnalyticsLocation: Z } = (0, s.ZP)(),
         v = (0, r.wn)({ location: 'UserProfileModalHeaderActionButtons' }),
         { gameFriends: g, hasOutgoingPendingGameFriends: j, hasIncomingPendingGameFriends: E } = (0, I.H)({ userId: t.id }),
@@ -66,14 +66,14 @@ function h(e) {
                 className: x.multipleButtons,
                 children: (0, i.jsx)(d.c, {
                     userId: t.id,
-                    onClose: h
+                    onClose: _
                 })
             })
           : c === f.OGo.NONE && v && y
             ? (0, i.jsxs)('div', {
                   className: x.multipleButtons,
                   children: [
-                      (0, i.jsx)(_, {
+                      (0, i.jsx)(m, {
                           user: t,
                           analyticsLocation: Z,
                           gameFriends: g,
@@ -82,7 +82,7 @@ function h(e) {
                       }),
                       (0, i.jsx)(d.c, {
                           userId: t.id,
-                          onClose: h
+                          onClose: _
                       })
                   ]
               })
@@ -90,7 +90,7 @@ function h(e) {
               ? (0, i.jsxs)('div', {
                     className: x.multipleButtons,
                     children: [
-                        (0, i.jsx)(m, {
+                        (0, i.jsx)(h, {
                             icon: l.iHX,
                             tooltipText: p.intl.string(p.t.zz2i8v),
                             user: t,
@@ -98,7 +98,7 @@ function h(e) {
                         }),
                         (0, i.jsx)(d.c, {
                             userId: t.id,
-                            onClose: h
+                            onClose: _
                         })
                     ]
                 })
@@ -106,7 +106,7 @@ function h(e) {
                 ? (0, i.jsxs)('div', {
                       className: x.multipleButtons,
                       children: [
-                          (0, i.jsx)(m, {
+                          (0, i.jsx)(h, {
                               icon: l.iHX,
                               tooltipText: p.intl.string(p.t.ZOFd1N),
                               user: t,
@@ -114,7 +114,7 @@ function h(e) {
                           }),
                           (0, i.jsx)(d.c, {
                               userId: t.id,
-                              onClose: h
+                              onClose: _
                           })
                       ]
                   })
@@ -123,7 +123,7 @@ function h(e) {
                       children: [
                           (0, i.jsx)(d.v, {
                               userId: t.id,
-                              onClose: h
+                              onClose: _
                           }),
                           (0, i.jsx)(a.tG, {
                               action: 'SEND_FRIEND_REQUEST',

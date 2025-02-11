@@ -12,9 +12,9 @@ var i = t(200651),
     f = t(699516),
     p = t(5192),
     x = t(785717),
-    m = t(221292),
-    _ = t(687158),
-    h = t(326094),
+    h = t(221292),
+    m = t(687158),
+    _ = t(326094),
     Z = t(510659),
     v = t(113557),
     g = t(867176),
@@ -36,7 +36,7 @@ var i = t(200651),
 function B(e) {
     let { user: n, currentUser: t, guildId: B, channelId: F, messageId: D, roleId: w, sessionId: G, friendToken: k, initialSection: V, initialSubsection: W, transitionState: Y, onClose: K, showGuildProfile: J = !0, sourceAnalyticsLocations: X = [] } = e,
         { analyticsLocations: q } = (0, u.ZP)([...X, c.Z.SIMPLIFIED_PROFILE_MODAL]),
-        z = (0, h.Z)({
+        z = (0, _.Z)({
             user: n,
             currentUser: t,
             location: R.Sbl.SIMPLIFIED_USER_PROFILE
@@ -56,8 +56,8 @@ function B(e) {
             opacity: null != Q.interactionType ? 1 : 0,
             config: { duration: 150 }
         }),
-        ee = (0, _.ZP)(n.id, J ? B : void 0),
-        en = (0, _.ZP)(n.id, B),
+        ee = (0, m.ZP)(n.id, J ? B : void 0),
+        en = (0, m.ZP)(n.id, B),
         et = (0, s.e7)([f.Z], () => f.Z.getRelationshipType(n.id)),
         ei = n.id === t.id,
         el = l.useMemo(() => (null != B ? { [B]: [n.id] } : {}), [B, n.id]);
@@ -117,7 +117,7 @@ function B(e) {
                                                                         friendToken: k,
                                                                         sourceAnalyticsLocations: X
                                                                     }),
-                                                                    (0, m.pQ)({
+                                                                    (0, h.pQ)({
                                                                         action: 'PRESS_VIEW_MAIN_PROFILE',
                                                                         analyticsLocations: q,
                                                                         ...H
@@ -136,7 +136,7 @@ function B(e) {
                                                                         friendToken: k,
                                                                         sourceAnalyticsLocations: X
                                                                     }),
-                                                                    (0, m.pQ)({
+                                                                    (0, h.pQ)({
                                                                         action: 'PRESS_VIEW_SERVER_PROFILE',
                                                                         analyticsLocations: q,
                                                                         ...H

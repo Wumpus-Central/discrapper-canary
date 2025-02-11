@@ -12,13 +12,13 @@ var i = t(200651),
     f = t(384816),
     p = t(389190),
     x = t(428927),
-    m = t(228168),
-    _ = t(388032),
-    h = t(782276),
+    h = t(228168),
+    m = t(388032),
+    _ = t(782276),
     Z = t(480234);
 function v(e) {
     let { section: n, subsection: t, user: l, currentUser: o, displayProfile: s, guildId: r, onClose: a } = e;
-    return n === m.oh.ACTIVITY
+    return n === h.oh.ACTIVITY
         ? (0, i.jsx)(I.Z, {
               user: l,
               currentUser: o,
@@ -26,19 +26,19 @@ function v(e) {
               guildId: r,
               onClose: a
           })
-        : n === m.oh.MUTUAL_FRIENDS
+        : n === h.oh.MUTUAL_FRIENDS
           ? (0, i.jsx)(p.Z, {
                 user: l,
                 onClose: a
             })
-          : n === m.oh.MUTUAL_GUILDS
+          : n === h.oh.MUTUAL_GUILDS
             ? (0, i.jsx)(x.Z, {
                   user: l,
                   onClose: a
               })
-            : n === m.oh.BOT_DATA_ACCESS
+            : n === h.oh.BOT_DATA_ACCESS
               ? (0, i.jsx)(c.Z, { user: l })
-              : n === m.oh.BOT_INFO
+              : n === h.oh.BOT_INFO
                 ? (0, i.jsx)(u.Z, {
                       user: l,
                       currentUser: o,
@@ -56,7 +56,7 @@ function v(e) {
 }
 function g(e) {
     var n, t, c;
-    let { user: u, currentUser: I, displayProfile: f, guildId: p, items: x, initialSection: g = m.oh.USER_INFO, initialSubsection: j, onClose: E } = e,
+    let { user: u, currentUser: I, displayProfile: f, guildId: p, items: x, initialSection: g = h.oh.USER_INFO, initialSubsection: j, onClose: E } = e,
         { trackUserProfileAction: y } = (0, d.KZ)(),
         N = (0, o.e7)([a.Z], () => a.Z.hidePersonalInformation),
         [{ section: T, subsection: b }, P] = l.useState({
@@ -100,12 +100,12 @@ function g(e) {
         ? (0, i.jsx)('div', {
               className: Z.container,
               children: (0, i.jsxs)('div', {
-                  className: h.empty,
+                  className: _.empty,
                   children: [
-                      (0, i.jsx)('div', { className: h.emptyIconStreamerMode }),
+                      (0, i.jsx)('div', { className: _.emptyIconStreamerMode }),
                       (0, i.jsx)('div', {
-                          className: h.emptyText,
-                          children: _.intl.string(_.t.Br1ls7)
+                          className: _.emptyText,
+                          children: m.intl.string(m.t.Br1ls7)
                       })
                   ]
               })

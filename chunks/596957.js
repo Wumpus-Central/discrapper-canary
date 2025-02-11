@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M }), n(411104), n(47120), n(653041);
+n.d(t, { Z: () => k }), n(411104), n(47120), n(653041);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
@@ -17,12 +17,12 @@ var i = n(200651),
     E = n(922611),
     I = n(699516),
     C = n(974042),
-    v = n(451478),
-    N = n(434184),
+    N = n(451478),
+    v = n(434184),
     T = n(701861),
     S = n(437314),
-    Z = n(696577),
-    A = n(163417),
+    A = n(696577),
+    Z = n(163417),
     b = n(830880),
     x = n(492347),
     L = n(42575),
@@ -40,7 +40,7 @@ function w() {
         return (t) => (0, i.jsx)(e, { ...t });
     });
 }
-function k(e) {
+function M(e) {
     let { section: t, showSpamCta: n } = e,
         r = l.useMemo(() => (n ? w : t !== P.pJs.PENDING ? D : void 0), [n, t]);
     return (0, i.jsx)('div', {
@@ -55,12 +55,12 @@ function k(e) {
         )
     });
 }
-let M = function (e) {
+let k = function (e) {
     let { titleId: t } = e,
         { analyticsLocations: n } = (0, m.ZP)(h.Z.FRIENDS_LIST),
         { rows: r, section: c } = (0, s.cj)([C.ZP], () => C.ZP.getState()),
-        D = (0, s.e7)([v.Z], () => v.Z.isFocused()),
-        { relationshipCount: M, hasBlockedOrIgnored: U } = (0, s.cj)([I.Z], () => ({
+        D = (0, s.e7)([N.Z], () => N.Z.isFocused()),
+        { relationshipCount: k, hasBlockedOrIgnored: U } = (0, s.cj)([I.Z], () => ({
             relationshipCount: I.Z.getRelationshipCount(),
             hasBlockedOrIgnored: I.Z.getBlockedOrIgnoredIDs().length > 0
         })),
@@ -79,7 +79,7 @@ let M = function (e) {
                 switch (c) {
                     case P.pJs.BLOCKED:
                         return (0, i.jsx)(
-                            N.Z,
+                            v.Z,
                             {
                                 ...n,
                                 isFocused: D
@@ -88,7 +88,7 @@ let M = function (e) {
                         );
                     case P.pJs.PENDING:
                         return (0, i.jsx)(
-                            Z.Z,
+                            A.Z,
                             {
                                 ...n,
                                 isFocused: D,
@@ -233,7 +233,7 @@ let M = function (e) {
         }, [c]),
         0 === X.length && '' === F[c])
     )
-        return (0, i.jsx)(k, {
+        return (0, i.jsx)(M, {
             section: c,
             showSpamCta: q
         });
@@ -252,12 +252,12 @@ let M = function (e) {
                     onClear: K,
                     size: o.E1j.Sizes.MEDIUM
                 }),
-                (0, i.jsx)(A.Z, {
+                (0, i.jsx)(Z.Z, {
                     rows: $,
                     renderRow: W,
                     renderSection: ei,
                     sectionFilter: c,
-                    isVirtualizedList: M >= y.nG,
+                    isVirtualizedList: k >= y.nG,
                     hasSearchQuery: el,
                     footer:
                         q && !er

@@ -21,7 +21,7 @@ function f(e) {
         Z = (0, i.e7)([d.Z], () => d.Z.get(n.id)),
         I = r.useRef(null),
         E = r.useRef(null),
-        D = r.useCallback(async () => {
+        T = r.useCallback(async () => {
             if (null != Z && null != N) {
                 try {
                     await a.ZP.submitVerificationForm(n.id, {
@@ -37,12 +37,12 @@ function f(e) {
                 g();
             }
         }, [n.id, Z, N, b, g]);
-    function T(e) {
+    function D(e) {
         let [t] = e;
         t.isIntersecting && k(!0);
     }
     return (r.useEffect(() => {
-        let e = new IntersectionObserver(T, {
+        let e = new IntersectionObserver(D, {
                 root: I.current,
                 rootMargin: '0px',
                 threshold: 0
@@ -156,7 +156,7 @@ function f(e) {
                                       }),
                                       (0, l.jsxs)(o.zxk, {
                                           innerClassName: p.buttonInner,
-                                          onClick: D,
+                                          onClick: T,
                                           disabled: !b,
                                           size: o.zxk.Sizes.MEDIUM,
                                           look: o.zxk.Looks.FILLED,

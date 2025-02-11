@@ -142,11 +142,11 @@ let I = (e, t, n) => ((0, a.wj)(e) ? t : n),
         return null != n.tenureBadge && o({ card: n.tenureBadge }), null != n.tenureRewardCollectible && !0 === r && o({ card: n.tenureRewardCollectible }), null != n.freeBoost && !0 === r && o({ card: n.freeBoost }), null != n.shyProject && o({ card: n.shyProject }), i && h ? (0 === t.length && c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })) : i && !h && (f || null != n.shyProject ? f && o({ card: n.referralProgram }) : c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })), o({ card: n.earlyAccess }), c(), o({ card: n.unlimitedSuperReactions }), t;
     },
     S = (e) => {
-        let { perksCards: t, variant: n, shopMarketingVariation: r, isFullScreen: a, showTenureCard: s, isPremiumSubscriber: l, fractionalState: o } = e,
-            c = [];
+        let { perksCards: t, variant: n, shopMarketingVariation: r, isFullScreen: a, showTenureCard: s, isPremiumSubscriber: l, fractionalState: o, isInReverseTrial: c } = e,
+            d = [];
         switch (n) {
             case g.R0.PERKS_DISCOVERABILITY:
-                c = (0, i.EQ)({
+                d = (0, i.EQ)({
                     isPremiumSubscriber: l,
                     fractionalState: o
                 })
@@ -155,8 +155,8 @@ let I = (e, t, n) => ((0, a.wj)(e) ? t : n),
                     .otherwise(() => [t.profiles, t.clientThemes, t.serverBoosts]);
                 break;
             case g.R0.WHATS_NEW:
-                c = j({
-                    cards: c,
+                d = j({
+                    cards: d,
                     perksCards: t,
                     isFullScreen: a,
                     showTenureCard: s,
@@ -164,25 +164,25 @@ let I = (e, t, n) => ((0, a.wj)(e) ? t : n),
                 });
                 break;
             case g.R0.CARD_CAROUSEL_FIRST_ROW:
-                c = (0, i.EQ)({ isPremiumSubscriber: l })
+                d = (0, i.EQ)({ isPremiumSubscriber: l })
                     .with({ isPremiumSubscriber: !1 }, () => [t.serverBoosts, t.superReactions, t.earlyAccessSeeAllVariant, t.specialShopPerks])
                     .otherwise(() => [t.customAppIcons, t.moreEmojiPower, t.customSoundsEverywhere, t.specialStickerAccess]);
                 break;
             case g.R0.CARD_CAROUSEL_SECOND_ROW:
-                c = (0, i.EQ)({
+                d = (0, i.EQ)({
                     isPremiumSubscriber: l,
                     fractionalState: o
                 })
                     .with({ isPremiumSubscriber: !1 }, () => [t.customSoundsEverywhere, t.specialStickerAccess])
-                    .with({ fractionalState: _.a$.FP_ONLY }, () => [t.greyServerBoosts, t.earlyAccessSeeAllVariant, t.specialMemberPricingSeeAllVariant, t.largeUploads, t.hdVideo, t.superReactions])
+                    .with({ fractionalState: _.a$.FP_ONLY }, () => (c ? [t.earlyAccessSeeAllVariant, t.specialMemberPricingSeeAllVariant, t.largeUploads, t.hdVideo, t.superReactions] : [t.greyServerBoosts, t.earlyAccessSeeAllVariant, t.specialMemberPricingSeeAllVariant, t.largeUploads, t.hdVideo, t.superReactions]))
                     .otherwise(() => [t.earlyAccessSeeAllVariant, t.specialMemberPricingSeeAllVariant, t.largeUploads, t.hdVideo, t.superReactions]);
                 break;
             case g.R0.CARD_CAROUSEL_THIRD_ROW:
-                c = (0, i.EQ)({ fractionalState: o })
-                    .with({ fractionalState: _.a$.FP_ONLY }, () => [t.entranceSoundsSeeAllVariation, t.greyBadge])
+                d = (0, i.EQ)({ fractionalState: o })
+                    .with({ fractionalState: _.a$.FP_ONLY }, () => (c ? [t.entranceSoundsSeeAllVariation] : [t.entranceSoundsSeeAllVariation, t.greyBadge]))
                     .otherwise(() => [t.entranceSoundsSeeAllVariation, t.badge]);
         }
-        return a || (c = c.filter((e) => !e.hideOnNarrowScreen)), c;
+        return a || (d = d.filter((e) => !e.hideOnNarrowScreen)), d;
     },
     A = (e) => {
         let t = (0, r.e7)([o.ZP], () => o.ZP.getPremiumTypeSubscription()),

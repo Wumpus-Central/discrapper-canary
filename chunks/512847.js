@@ -17,12 +17,12 @@ var i = n(200651),
     E = n(292959),
     I = n(19780),
     C = n(944486),
-    v = n(606304),
-    N = n(979651),
+    N = n(606304),
+    v = n(979651),
     T = n(938475),
     S = n(823379),
-    Z = n(981631);
-function A(e, t, n, i) {
+    A = n(981631);
+function Z(e, t, n, i) {
     l.useEffect(() => {
         let l = t(),
             a = new r.Fh(e, () => {
@@ -35,7 +35,7 @@ function A(e, t, n, i) {
 }
 function b() {
     return (
-        A(
+        Z(
             [f.Z, C.Z],
             () => ({
                 inVoiceChannel: null != C.Z.getVoiceChannelId(),
@@ -61,7 +61,7 @@ function b() {
 }
 function x() {
     return (
-        A(
+        Z(
             [g.Z, I.Z, C.Z, o.Z],
             () => {
                 let e = g.Z.getChannel(C.Z.getVoiceChannelId()),
@@ -72,8 +72,8 @@ function x() {
                 return {
                     channelType: t,
                     guildId: n,
-                    connected: l === Z.hes.RTC_CONNECTED,
-                    connectHasStarted: (!i && l !== Z.hes.DISCONNECTED) || l === Z.hes.RTC_CONNECTED,
+                    connected: l === A.hes.RTC_CONNECTED,
+                    connectHasStarted: (!i && l !== A.hes.DISCONNECTED) || l === A.hes.RTC_CONNECTED,
                     awaitingRemote: null != o.Z.getAwaitingRemoteSessionInfo(),
                     connectedRemote: null != o.Z.getRemoteSessionId()
                 };
@@ -98,13 +98,13 @@ function x() {
 }
 function L() {
     return (
-        A(
-            [v.Z],
-            () => v.Z.isCurrentUserSpeaking(),
+        Z(
+            [N.Z],
+            () => N.Z.isCurrentUserSpeaking(),
             (e, t) => {
                 if (e !== t) {
                     let e = f.Z.isSelfMute();
-                    if (f.Z.getMode() === Z.pM4.PUSH_TO_TALK && !e) return t ? 'ptt_start' : 'ptt_stop';
+                    if (f.Z.getMode() === A.pM4.PUSH_TO_TALK && !e) return t ? 'ptt_start' : 'ptt_stop';
                 }
             }
         ),
@@ -113,7 +113,7 @@ function L() {
 }
 function y() {
     return (
-        A(
+        Z(
             [f.Z],
             () => f.Z.getActiveVoiceFilter(),
             (e, t) => {
@@ -125,13 +125,13 @@ function y() {
 }
 function P() {
     return (
-        A(
+        Z(
             [f.Z],
             () => f.Z.isSelfMutedTemporarily(),
             (e, t) => {
                 if (e !== t) {
                     let e = f.Z.isSelfMute();
-                    if (f.Z.getMode() === Z.pM4.VOICE_ACTIVITY && !e) return t ? 'ptt_stop' : 'ptt_start';
+                    if (f.Z.getMode() === A.pM4.VOICE_ACTIVITY && !e) return t ? 'ptt_stop' : 'ptt_start';
                 }
             }
         ),
@@ -140,9 +140,9 @@ function P() {
 }
 function O() {
     return (
-        A(
-            [N.Z],
-            () => N.Z.userHasBeenMovedVersion,
+        Z(
+            [v.Z],
+            () => v.Z.userHasBeenMovedVersion,
             (e, t) => {
                 if (e !== t) return 'user_moved';
             }
@@ -152,12 +152,12 @@ function O() {
 }
 function R() {
     return (
-        A(
-            [C.Z, N.Z],
+        Z(
+            [C.Z, v.Z],
             () => {
                 let e = C.Z.getVoiceChannelId();
                 if (null == e) return u.xO.NONE;
-                let t = N.Z.getVoiceStateForChannel(e);
+                let t = v.Z.getVoiceStateForChannel(e);
                 return (0, u.gf)(t);
             },
             (e, t) => {
@@ -169,8 +169,8 @@ function R() {
 }
 function j() {
     return (
-        A(
-            [C.Z, m.Z, p.default, N.Z, g.Z],
+        Z(
+            [C.Z, m.Z, p.default, v.Z, g.Z],
             () => {
                 let e, t;
                 let n = C.Z.getVoiceChannelId(),
@@ -181,11 +181,11 @@ function j() {
                     s = m.Z.getAllActiveStreams();
                 if (null != n) {
                     let i = g.Z.getChannel(n);
-                    null != i && ((e = i.type), (t = T.ZP.countVoiceStatesForChannel(i.id) - (N.Z.isInChannel(i.id) ? 1 : 0)), (l = m.Z.getAllApplicationStreamsForChannel(i.id).map((e) => e.ownerId)));
+                    null != i && ((e = i.type), (t = T.ZP.countVoiceStatesForChannel(i.id) - (v.Z.isInChannel(i.id) ? 1 : 0)), (l = m.Z.getAllApplicationStreamsForChannel(i.id).map((e) => e.ownerId)));
                 }
                 let o = null;
                 return (
-                    (null == (o = 1 === s.length ? s[0] : m.Z.getCurrentUserActiveStream()) ? void 0 : o.state) === Z.jm8.CONNECTING && (o = null),
+                    (null == (o = 1 === s.length ? s[0] : m.Z.getCurrentUserActiveStream()) ? void 0 : o.state) === A.jm8.CONNECTING && (o = null),
                     null != o && ((r = (0, c.V9)(o)), (a = m.Z.getViewerIds(r).filter((e) => e !== i).length)),
                     {
                         channelType: e,
@@ -232,7 +232,7 @@ function j() {
 }
 function D() {
     return (
-        A(
+        Z(
             [C.Z, a.ZP, p.default],
             () => {
                 let e = C.Z.getVoiceChannelId(),

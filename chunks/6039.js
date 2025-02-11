@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(47120);
+n.d(t, { Z: () => Z }), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(442837),
@@ -17,11 +17,11 @@ var i = n(200651),
     E = n(381416),
     I = n(523924),
     C = n(390500),
-    v = n(981631),
-    N = n(898625),
+    N = n(981631),
+    v = n(898625),
     T = n(388032),
     S = n(351594);
-function Z(e) {
+function A(e) {
     let { guild: t, width: n, height: r } = e,
         a = l.useMemo(
             () =>
@@ -56,24 +56,24 @@ function Z(e) {
               ]
           });
 }
-let A = (e) => {
+let Z = (e) => {
     let { guildId: t } = e,
         { ref: n, width: o, height: c } = (0, s.Z)(),
-        [h, m] = l.useState(N.hO.INITIAL),
-        A = (0, r.e7)([f.Z], () => f.Z.getRequest(t)),
+        [h, m] = l.useState(v.hO.INITIAL),
+        Z = (0, r.e7)([f.Z], () => f.Z.getRequest(t)),
         b = (0, r.e7)([u.Z], () => u.Z.getGuild(t)),
         { hasFetchedRequestToJoinGuilds: x, guildPreviewDisabled: L } = (0, r.cj)([f.Z], () => ({
             hasFetchedRequestToJoinGuilds: f.Z.hasFetchedRequestToJoinGuilds,
             guildPreviewDisabled: f.Z.getJoinRequestGuild(t)
         }));
     l.useEffect(() => {
-        null != b && (0, d.uL)(v.Z5c.CHANNEL(t));
+        null != b && (0, d.uL)(N.Z5c.CHANNEL(t));
     }, [b, t]),
         l.useEffect(() => {
             x || p.Z.fetchRequestToJoinGuilds();
         }, [x]);
     let y = l.useCallback(() => {
-            m(Math.max(h, N.hO.FILLING)), p.Z.removeGuildJoinRequest(t), (0, d.uL)(v.Z5c.ME);
+            m(Math.max(h, v.hO.FILLING)), p.Z.removeGuildJoinRequest(t), (0, d.uL)(N.Z5c.ME);
         }, [t, h]),
         P = (e, t) => () => {
             (0, a.h7j)((n) =>
@@ -101,7 +101,7 @@ let A = (e) => {
         className: S.page,
         ref: n,
         children: [
-            (0, i.jsx)(Z, {
+            (0, i.jsx)(A, {
                 guild: L,
                 height: c,
                 width: o
@@ -109,8 +109,8 @@ let A = (e) => {
             (0, i.jsx)('div', {
                 className: S.contentWrapper,
                 children: (() => {
-                    if (null == A) return null;
-                    switch (A.applicationStatus) {
+                    if (null == Z) return null;
+                    switch (Z.applicationStatus) {
                         case _.wB.SUBMITTED:
                             return (0, i.jsx)(C.Z, {
                                 onWithdrawApplication: R,
@@ -122,7 +122,7 @@ let A = (e) => {
                                 onReapply: O,
                                 confirmText: T.intl.string(T.t.g9tK0t),
                                 onWithdrawApplication: R,
-                                rejectionReason: A.rejectionReason,
+                                rejectionReason: Z.rejectionReason,
                                 guild: L
                             });
                         default:

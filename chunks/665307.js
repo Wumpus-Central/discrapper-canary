@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M }), n(411104), n(47120);
+n.d(t, { Z: () => k }), n(411104), n(47120);
 var i,
     l = n(200651),
     r = n(192379),
@@ -17,12 +17,12 @@ var i,
     E = n(167533),
     I = n(925329),
     C = n(707409),
-    v = n(490983),
-    N = n(799777),
+    N = n(490983),
+    v = n(799777),
     T = n(626135),
     S = n(780570),
-    Z = n(624138),
-    A = n(645818),
+    A = n(624138),
+    Z = n(645818),
     b = n(981631),
     x = n(388032),
     L = n(757087);
@@ -39,8 +39,8 @@ function y(e, t, n) {
         e
     );
 }
-let P = (0, Z.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
-    O = (0, Z.Mg)(u.Z.GAME_LIST_LINKED_TO_GLOW_DURATION),
+let P = (0, A.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
+    O = (0, A.Mg)(u.Z.GAME_LIST_LINKED_TO_GLOW_DURATION),
     R = Object.freeze({
         [b.iEv.PLATFORM]: 'Platform',
         [b.iEv.LAST_PLAYED]: 'Last Played',
@@ -164,7 +164,7 @@ let P = (0, Z.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
                                     icon: h.o8v,
                                     tooltip: x.intl.string(x.t.Az9eqq)
                                 }),
-                                (0, l.jsx)(A.Z, {
+                                (0, l.jsx)(Z.Z, {
                                     className: s()(L.settingIcon, { [L.hidden]: !e.supportsCloudSync }),
                                     libraryApplication: e.libraryApplication
                                 })
@@ -207,7 +207,7 @@ let P = (0, Z.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
             children: (0, l.jsx)('div', { ...d })
         });
     };
-class k extends (i = r.PureComponent) {
+class M extends (i = r.PureComponent) {
     componentDidMount() {
         let { fetched: e } = this.props;
         e && (this.handleHighlightedApplicationKey(), this.trackViewed());
@@ -399,30 +399,30 @@ class k extends (i = r.PureComponent) {
             });
     }
 }
-function M(e) {
+function k(e) {
     let t = r.useContext(T.AnalyticsContext),
         n = (0, o.TH)(),
         {
             applicationViewItems: i,
             filterQuery: a,
             fetched: s
-        } = (0, c.cj)([v.Z], () => ({
-            applicationViewItems: v.Z.sortedFilteredLibraryApplicationViewItems,
-            filterQuery: v.Z.applicationFilterQuery,
-            fetched: v.Z.hasFetchedApplications
+        } = (0, c.cj)([N.Z], () => ({
+            applicationViewItems: N.Z.sortedFilteredLibraryApplicationViewItems,
+            filterQuery: N.Z.applicationFilterQuery,
+            fetched: N.Z.hasFetchedApplications
         })),
         {
             sortKey: d,
             sortDirection: u,
             activeRowKey: h,
             isNavigatingByKeyboard: m
-        } = (0, c.cj)([N.Z], () => ({
-            sortKey: N.Z.sortKey,
-            sortDirection: N.Z.sortDirection,
-            activeRowKey: N.Z.activeRowKey,
-            isNavigatingByKeyboard: N.Z.isNavigatingByKeyboard
+        } = (0, c.cj)([v.Z], () => ({
+            sortKey: v.Z.sortKey,
+            sortDirection: v.Z.sortDirection,
+            activeRowKey: v.Z.activeRowKey,
+            isNavigatingByKeyboard: v.Z.isNavigatingByKeyboard
         }));
-    return (0, l.jsx)(k, {
+    return (0, l.jsx)(M, {
         ...e,
         analyticsContext: t,
         location: n,
@@ -435,4 +435,4 @@ function M(e) {
         isNavigatingByKeyboard: m
     });
 }
-y(k, 'defaultProps', { stickyHeader: !1 });
+y(M, 'defaultProps', { stickyHeader: !1 });

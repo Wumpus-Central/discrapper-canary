@@ -21,13 +21,13 @@ let f = function (e) {
         y = (0, a.e7)([g.Z], () => g.Z.getChannel(I.channelId)),
         A = (0, a.e7)([x.Z], () => x.Z.getGuild(j)),
         { customEmoji: L, unicodeEmoji: D } = (0, u.Z)(null === (t = I.emoji) || void 0 === t ? void 0 : t.id, null === (l = I.emoji) || void 0 === l ? void 0 : l.name),
-        O = null == I.emoji || null != L || null != D,
-        k = p.ZP.getNewMemberActionIconURL({
+        k = null == I.emoji || null != L || null != D,
+        O = p.ZP.getNewMemberActionIconURL({
             channelId: I.channelId,
             icon: I.icon
         }),
         P = null;
-    null != y && (0, m.kb)(y) ? O || (P = _.intl.string(_.t.wAkIZW)) : (P = _.intl.string(_.t.CbTEKC));
+    null != y && (0, m.kb)(y) ? k || (P = _.intl.string(_.t.wAkIZW)) : (P = _.intl.string(_.t.CbTEKC));
     let {
             drag: w,
             dragSourcePosition: M,
@@ -78,11 +78,11 @@ let f = function (e) {
                             className: C.dragIcon
                         })
                     }),
-                    null != k
+                    null != O
                         ? (0, i.jsx)('div', {
                               className: C.iconWrapper,
                               children: (0, i.jsx)('img', {
-                                  src: k,
+                                  src: O,
                                   className: C.icon,
                                   width: 48,
                                   height: 48,

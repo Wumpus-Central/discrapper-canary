@@ -13,9 +13,9 @@ var l = t(442837),
     f = t(250822),
     p = t(771362),
     x = t(280885),
-    m = t(819602),
-    _ = t(78806),
-    h = t(900927),
+    h = t(819602),
+    m = t(78806),
+    _ = t(900927),
     Z = t(678738),
     v = t(652853),
     g = t(179828),
@@ -54,18 +54,18 @@ function N(e) {
                     scrollIntoView: T === j.Tb.ROLES
                 }),
             n.isProvisional &&
-                (0, i.jsx)(a.Z, {
-                    look: 'profile_modal',
-                    userId: n.id
+                (0, i.jsx)(a.WR, {
+                    userId: n.id,
+                    headingColor: 'header-secondary'
                 }),
             O.length > 0 &&
                 (0, i.jsx)(Z.Z, {
                     heading: E.intl.string(E.t['Uv/eT0']),
-                    children: (0, i.jsx)(_.Z, { applicationIds: O })
+                    children: (0, i.jsx)(m.Z, { applicationIds: O })
                 }),
             (0, i.jsx)(Z.Z, {
                 heading: E.intl.string(E.t.a6XYDw),
-                children: (0, i.jsx)(h.Z, {
+                children: (0, i.jsx)(_.Z, {
                     userId: n.id,
                     guildId: null == N ? void 0 : N.guildId,
                     tooltipDelay: j.vB
@@ -75,7 +75,7 @@ function N(e) {
                 (0, i.jsx)(Z.Z, {
                     heading: E.intl.string(E.t['3fe7U1']),
                     scrollIntoView: T === j.Tb.CONNECTIONS,
-                    children: (0, i.jsx)(m.OA, {
+                    children: (0, i.jsx)(h.OA, {
                         connectedAccounts: M,
                         className: y.connections,
                         userId: n.id,
@@ -88,7 +88,7 @@ function N(e) {
                     heading: E.intl.string(E.t.PHjkRE),
                     children: U.map((e) =>
                         (0, i.jsx)(
-                            m.tH,
+                            h.tH,
                             {
                                 className: y.appsConnections,
                                 applicationRoleConnection: e,

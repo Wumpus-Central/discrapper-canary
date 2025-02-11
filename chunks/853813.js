@@ -41,8 +41,8 @@ function S(e) {
     }, [y, l]);
     let L = (0, a.e7)([m.Z], () => m.Z.getHighestRole(Z), [Z]),
         D = (0, a.e7)([m.Z], () => !m.Z.isRoleHigher(Z, L, y)),
-        O = r.useRef(null),
-        k = (0, a.e7)([_.Z], () => _.Z.getProps().integrations),
+        k = r.useRef(null),
+        O = (0, a.e7)([_.Z], () => _.Z.getProps().integrations),
         P = {
             role: y,
             editRoleId: n
@@ -99,7 +99,7 @@ function S(e) {
                 role: y,
                 locked: D,
                 setSelectedSection: R,
-                integrations: null != k ? k : void 0
+                integrations: null != O ? O : void 0
             });
             break;
         case E.ZI.MEMBERS:
@@ -124,9 +124,9 @@ function S(e) {
             }),
             (0, i.jsx)('div', {
                 className: T.contentContainer,
-                ref: O,
+                ref: k,
                 children: (0, i.jsx)(o.JcV, {
-                    containerRef: O,
+                    containerRef: k,
                     children: t
                 })
             })

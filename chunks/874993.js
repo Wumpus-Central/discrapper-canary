@@ -29,11 +29,11 @@ function E(e) {
         A = null != T,
         [L] = (0, h.RD)(y),
         { rulesByTriggerType: D } = (0, h.pH)(y),
-        O = {
+        k = {
             [g.vh.MEMBERS]: j.intl.string(j.t.sx4E5u),
             [g.vh.CONTENT]: j.intl.string(j.t.fphZb2)
         },
-        k = r.useMemo(
+        O = r.useMemo(
             () =>
                 Object.values(null != D ? D : {})
                     .flat()
@@ -59,7 +59,7 @@ function E(e) {
                     return null !==
                         (i =
                             null ===
-                                (n = k.find((t) => {
+                                (n = O.find((t) => {
                                     let { id: n } = t;
                                     return n === e;
                                 })) || void 0 === n
@@ -70,7 +70,7 @@ function E(e) {
                 }
                 return null != t ? g.I6[t].getDefaultRuleName() : null;
             },
-            [k]
+            [O]
         ),
         U = r.useMemo(() => {
             var e, t;
@@ -157,14 +157,14 @@ function E(e) {
                       let [t, n] = e;
                       if (0 === n.length) return (0, i.jsx)(r.Fragment, {}, t);
                       let l =
-                          null != O[t]
+                          null != k[t]
                               ? (0, i.jsx)(a.hjN, {
                                     tag: 'h3',
                                     className: I.categoryHeader,
                                     children: (0, i.jsx)(a.Text, {
                                         variant: 'text-lg/normal',
                                         color: 'header-primary',
-                                        children: O[t]
+                                        children: k[t]
                                     })
                                 })
                               : null;
@@ -185,7 +185,7 @@ function E(e) {
                 }),
             (0, i.jsx)(_.Z, {
                 guildId: y,
-                existingRules: k
+                existingRules: O
             }),
             A && (0, i.jsx)('div', { className: I.endSpacer })
         ]

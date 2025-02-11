@@ -17,12 +17,12 @@ var i = n(200651),
     E = n(899007),
     I = n(648052),
     C = n(867176),
-    v = n(537006),
-    N = n(483424),
+    N = n(537006),
+    v = n(483424),
     T = n(681837),
     S = n(502762),
-    Z = n(530),
-    A = n(309494),
+    A = n(530),
+    Z = n(309494),
     b = n(4517),
     x = n(171368),
     L = n(420654),
@@ -33,8 +33,8 @@ var i = n(200651),
     j = n(5192),
     D = n(74538),
     w = n(474376),
-    k = n(435478),
-    M = n(591974),
+    M = n(435478),
+    k = n(591974),
     U = n(764443),
     G = n(383832),
     B = n(981631),
@@ -115,7 +115,7 @@ function W(e) {
                         (0, i.jsxs)(o.Ttm, {
                             className: F.body,
                             children: [
-                                (0, i.jsx)(Z.Z, {
+                                (0, i.jsx)(A.Z, {
                                     user: t,
                                     className: F.username,
                                     profileType: V.y0.BITE_SIZE,
@@ -130,7 +130,7 @@ function W(e) {
                                     nicknameIcons: (0, i.jsxs)(i.Fragment, {
                                         children: [
                                             (0, i.jsx)(T.Z, { userId: t.id }),
-                                            (0, i.jsx)(A.Z, {
+                                            (0, i.jsx)(Z.Z, {
                                                 user: t,
                                                 isHovering: J
                                             })
@@ -143,11 +143,11 @@ function W(e) {
                                     hidePersonalInformation: ee,
                                     onClose: n
                                 }),
-                                (0, i.jsx)(v.Z, {
+                                (0, i.jsx)(N.Z, {
                                     isPremiumUser: ea,
                                     onInteraction: n
                                 }),
-                                (0, i.jsx)(N.Z, {
+                                (0, i.jsx)(v.Z, {
                                     user: t,
                                     currentUser: t,
                                     displayProfile: K,
@@ -158,10 +158,10 @@ function W(e) {
                                     children: [
                                         (0, i.jsx)(S.Z.Overlay, {
                                             className: F.menuOverlay,
-                                            children: (0, i.jsxs)(k.PB, {
+                                            children: (0, i.jsxs)(M.PB, {
                                                 id: 'profile-'.concat(t.id),
                                                 children: [
-                                                    (0, i.jsx)(k.Mv, {
+                                                    (0, i.jsx)(M.Mv, {
                                                         id: 'edit-profile',
                                                         action: 'EDIT_PROFILE',
                                                         label: H.intl.string(H.t.s5vZlZ),
@@ -171,10 +171,10 @@ function W(e) {
                                                         }
                                                     }),
                                                     (0, i.jsx)('div', { className: F.menuDivider }),
-                                                    (0, i.jsx)(k.Mv, {
+                                                    (0, i.jsx)(M.Mv, {
                                                         id: 'set-status',
                                                         action: 'PRESS_SET_STATUS',
-                                                        label: (0, i.jsx)(M.Z, { user: t }),
+                                                        label: (0, i.jsx)(k.Z, { user: t }),
                                                         icon: () =>
                                                             (0, i.jsx)(o.qbd, {
                                                                 status: $,
@@ -185,7 +185,7 @@ function W(e) {
                                                             ? void 0
                                                             : (e) => {
                                                                   let { closePopout: t } = e;
-                                                                  return (0, i.jsx)(k.eq, {
+                                                                  return (0, i.jsx)(M.eq, {
                                                                       navId: 'set-status-submenu',
                                                                       className: F.statusPickerModalMenu,
                                                                       'aria-label': H.intl.string(H.t.E13trK),
@@ -228,10 +228,10 @@ function W(e) {
                                         }),
                                         (0, i.jsx)(S.Z.Overlay, {
                                             className: F.menuOverlay,
-                                            children: (0, i.jsxs)(k.PB, {
+                                            children: (0, i.jsxs)(M.PB, {
                                                 id: 'account-'.concat(t.id),
                                                 children: [
-                                                    (0, i.jsx)(k.Mv, {
+                                                    (0, i.jsx)(M.Mv, {
                                                         id: 'switch-accounts',
                                                         action: 'PRESS_SWITCH_ACCOUNTS',
                                                         icon: o.lMe,
@@ -241,7 +241,7 @@ function W(e) {
                                                         },
                                                         renderSubmenu: (e) => {
                                                             let { closePopout: t } = e;
-                                                            return (0, i.jsx)(k.eq, {
+                                                            return (0, i.jsx)(M.eq, {
                                                                 navId: 'switch-accounts-submenu',
                                                                 'aria-label': H.intl.string(H.t.wFhVqK),
                                                                 onClose: t,
@@ -255,7 +255,7 @@ function W(e) {
                                                         (0, i.jsxs)(i.Fragment, {
                                                             children: [
                                                                 (0, i.jsx)('div', { className: F.menuDivider }),
-                                                                (0, i.jsx)(k.Mv, {
+                                                                (0, i.jsx)(M.Mv, {
                                                                     id: 'copy-user-id',
                                                                     action: 'COPY_USER_ID',
                                                                     icon: o.VuL,

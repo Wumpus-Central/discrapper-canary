@@ -35,8 +35,8 @@ var i = n(200651),
     A = n(388032),
     L = n(692392);
 let D = (0, C.hQ)(),
-    O = (0, C.hQ)(),
-    k = (0, b.Mg)(u.Z.IMPORT_BENEFITS_MODAL_ROLE_ICON_SIZE);
+    k = (0, C.hQ)(),
+    O = (0, b.Mg)(u.Z.IMPORT_BENEFITS_MODAL_ROLE_ICON_SIZE);
 function P(e) {
     var t;
     let { emojiId: n, emojiName: r, className: l } = e,
@@ -244,7 +244,7 @@ function G(e) {
         a = (0, v.p9)({
             guildId: n,
             roleId: r.id,
-            size: k
+            size: O
         });
     return (0, i.jsxs)(m.P3F, {
         className: L.roleRow,
@@ -407,7 +407,7 @@ function z(e) {
             (0, i.jsxs)(m.xBx, {
                 children: [
                     (0, i.jsx)(m.X6q, {
-                        id: O,
+                        id: k,
                         variant: 'heading-md/semibold',
                         children: A.intl.format(A.t.iuPodH, { roleName: c.name })
                     }),
@@ -493,7 +493,7 @@ function H(e) {
         [a, o] = r.useState();
     return (0, i.jsx)(m.Y0X, {
         transitionState: t,
-        'aria-labelledby': null == a ? D : O,
+        'aria-labelledby': null == a ? D : k,
         children: (0, i.jsxs)(m.MyZ, {
             contentDisplay: 'flex',
             activeSlide: null == a ? 0 : 1,

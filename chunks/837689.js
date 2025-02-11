@@ -18,8 +18,8 @@ var l = n(873546),
     E = n(104494),
     I = n(29920),
     C = n(346497),
-    v = n(727310),
-    N = n(318199),
+    N = n(727310),
+    v = n(318199),
     T = n(474936);
 function S(e, t, n) {
     return (
@@ -34,8 +34,8 @@ function S(e, t, n) {
         e
     );
 }
-let Z = 'PremiumServerDriveAnnouncementModal';
-class A extends o.Z {
+let A = 'PremiumServerDriveAnnouncementModal';
+class Z extends o.Z {
     _initialize() {
         s.Z.subscribe('PREMIUM_MARKETING_DATA_READY', this.mayShowAnnouncementModal), s.Z.subscribe('PREMIUM_MARKETING_PREVIEW', this.handlePreview);
     }
@@ -45,14 +45,14 @@ class A extends o.Z {
     constructor(...e) {
         super(...e),
             S(this, 'maybeOpenServerDriveAnnouncementModal', async (e, t) => {
-                let l = (0, N.r)({
+                let l = (0, v.r)({
                     content: e,
                     isPreview: t
                 });
                 return (
                     null != l &&
                     !!(!1 !== t || (null == l ? void 0 : l.contentIdentifier) !== 'summer_bogo_content' || (await (0, C.k)())) &&
-                    ((0, a.Mr3)(Z),
+                    ((0, a.Mr3)(A),
                     (0, a.ZDy)(
                         async () => {
                             let { default: e } = await Promise.resolve().then(n.bind(n, 318199));
@@ -62,7 +62,7 @@ class A extends o.Z {
                                     properties: l
                                 });
                         },
-                        { modalKey: Z }
+                        { modalKey: A }
                     ),
                     !0)
                 );
@@ -90,7 +90,7 @@ class A extends o.Z {
                     i = d.default.getCurrentUser();
                 if (t && !n && !(0, a.$sL)() && !(0, h.I5)(i)) {
                     let t = await (0, g.r)(e.userTrialOffer);
-                    null != t && (0, v.Z)({ upsellType: t });
+                    null != t && (0, N.Z)({ upsellType: t });
                 }
                 if ((null == i || i.verified) && !(0, a.$sL)() && _.Z.getCurrentConfig({ location: 'OfferAnnouncementManager' }).enabled && !l.tq) {
                     for (let t of await (0, I.He)(e)) if (await this.maybeOpenServerDriveAnnouncementModal(t, !1)) break;
@@ -98,4 +98,4 @@ class A extends o.Z {
             });
     }
 }
-let b = new A();
+let b = new Z();

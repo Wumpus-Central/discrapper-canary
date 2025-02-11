@@ -17,12 +17,12 @@ var i = n(913527),
     E = n(131951),
     I = n(292959),
     C = n(699516),
-    v = n(944486),
-    N = n(9156),
+    N = n(944486),
+    v = n(9156),
     T = n(594174),
     S = n(51144),
-    Z = n(196051),
-    A = n(441729),
+    A = n(196051),
+    Z = n(441729),
     b = n(653477),
     x = n(981631),
     L = n(388032);
@@ -77,21 +77,21 @@ function w() {
     let n = R.filter((t) => t.lang === e || t.lang.slice(0, e.length) === e);
     O = n.length > 0 ? n[0] : null;
 }
-async function k(e, t, n, i, l) {
+async function M(e, t, n, i, l) {
     let r = s.e6(e, n);
-    null !== r && (null == O && w(), t ? await (0, Z.NB)() : null == P || P.removeEventListener('end', Z.NB), r.addEventListener('end', Z.NB), null != i && r.addEventListener('start', i), null != l && r.addEventListener('end', l), (P = r), s.iq(r, O));
+    null !== r && (null == O && w(), t ? await (0, A.NB)() : null == P || P.removeEventListener('end', A.NB), r.addEventListener('end', A.NB), null != i && r.addEventListener('start', i), null != l && r.addEventListener('end', l), (P = r), s.iq(r, O));
 }
-function M(e, t, n, i, l) {
-    k(e, t, l, () => {
-        (0, Z.Bo)(n, i);
+function k(e, t, n, i, l) {
+    M(e, t, l, () => {
+        (0, A.Bo)(n, i);
     });
 }
 function U(e) {
     let { text: t, interrupt: n, maxLength: i, onStart: l, onEnd: r } = e;
-    k(t, n, i, l, r);
+    M(t, n, i, l, r);
 }
 function G() {
-    return null !== P && P.removeEventListener('end', Z.NB), s.M9(), (P = null), !0;
+    return null !== P && P.removeEventListener('end', A.NB), s.M9(), (P = null), !0;
 }
 function B(e) {
     var t, n, i;
@@ -101,7 +101,7 @@ function B(e) {
         o = null != s ? (null !== (n = _.ZP.getNick(r.guild_id, null == s ? void 0 : s.id)) && void 0 !== n ? n : S.ZP.getName(s)) : null,
         c = r.getGuildId(),
         u = null !== (i = _.ZP.getNick(c, l.author.id)) && void 0 !== i ? i : S.ZP.getName(l.author);
-    return M(D(l.content, u, c, o), !0, r.id, l.id), !0;
+    return k(D(l.content, u, c, o), !0, r.id, l.id), !0;
 }
 function V(e) {
     var t, n, i, l, r, a;
@@ -109,28 +109,28 @@ function V(e) {
     if (c || E.Z.isSelfDeaf()) return !1;
     let d = g.Z.getChannel(s);
     if (null == d) return !1;
-    let u = v.Z.getChannelId(),
+    let u = N.Z.getChannelId(),
         f = p.ZP.getCurrentSidebarChannelId(u),
         T = s === u || s === f,
-        Z = h.OW.getSetting() && o.tts && T,
-        A = I.Z.getTTSType(),
-        L = (null === (t = o.author) || void 0 === t ? void 0 : t.id) !== m.default.getId() && (A === x.PrB.ALL_CHANNELS || (A === x.PrB.SELECTED_CHANNEL && T));
-    if ((Z || L) && !C.Z.isBlockedOrIgnoredForMessage(o)) {
+        A = h.OW.getSetting() && o.tts && T,
+        Z = I.Z.getTTSType(),
+        L = (null === (t = o.author) || void 0 === t ? void 0 : t.id) !== m.default.getId() && (Z === x.PrB.ALL_CHANNELS || (Z === x.PrB.SELECTED_CHANNEL && T));
+    if ((A || L) && !C.Z.isBlockedOrIgnoredForMessage(o)) {
         if (y.indexOf(o.id) >= 0) return !1;
         y.unshift(o.id) > 10 && y.pop();
         let e = d.getGuildId();
-        if (null != e && N.ZP.getMutedChannels(e).has(s)) return !1;
+        if (null != e && v.ZP.getMutedChannels(e).has(s)) return !1;
         let t = null !== (r = null !== (l = _.ZP.getNick(e, null === (n = o.author) || void 0 === n ? void 0 : n.id)) && void 0 !== l ? l : S.ZP.getName(o.author)) && void 0 !== r ? r : '',
             c = o.type === x.uaV.REPLY ? (null === (i = o.referenced_message) || void 0 === i ? void 0 : i.author) : null,
             u = null != c ? (null !== (a = _.ZP.getNick(e, null == c ? void 0 : c.id)) && void 0 !== a ? a : S.ZP.getName(c)) : null;
-        M(D(o.content, t, e, u), !1, d.id, o.id, b.f);
+        k(D(o.content, t, e, u), !1, d.id, o.id, b.f);
     }
     return !1;
 }
 function H(e) {
     let { id: t, channelId: n } = e,
-        i = A.Z.currentMessage;
-    return null != i && t === i.messageId && n === i.channelId && ((0, Z.NB)(), !0);
+        i = Z.Z.currentMessage;
+    return null != i && t === i.messageId && n === i.channelId && ((0, A.NB)(), !0);
 }
 function F() {
     E.Z.isSelfDeaf() && s.M9();

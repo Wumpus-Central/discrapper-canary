@@ -53,7 +53,7 @@ function y(e) {
                 I(n.roleId);
             }
         }),
-        [{ dragSourcePosition: D }, O] = (0, o.L)({
+        [{ dragSourcePosition: D }, k] = (0, o.L)({
             accept: Z,
             canDrop: () => y,
             collect: (e) => {
@@ -62,7 +62,7 @@ function y(e) {
             },
             drop: () => ({ roleId: h.id })
         }),
-        k = null !== (r = h.colorString) && void 0 !== r ? r : (0, c.Rf)(T.p6O);
+        O = null !== (r = h.colorString) && void 0 !== r ? r : (0, c.Rf)(T.p6O);
     return (
         (l = A
             ? (0, i.jsx)(_.Z, {
@@ -72,11 +72,11 @@ function y(e) {
               })
             : 'dot' === E
               ? (0, i.jsx)(u.FhE, {
-                    color: k,
+                    color: O,
                     background: !1,
                     tooltip: !1
                 })
-              : (0, i.jsx)(u.xko, { color: k })),
+              : (0, i.jsx)(u.xko, { color: O })),
         (0, i.jsxs)(u.njP.Item, {
             className: s()(R.row, {
                 [R.dragBefore]: null !== D && f < D,
@@ -100,7 +100,7 @@ function y(e) {
             'aria-label': h.name,
             clickableRef: (e) => {
                 var t;
-                return L(O(null !== (t = null == e ? void 0 : e.ref) && void 0 !== t ? t : null));
+                return L(k(null !== (t = null == e ? void 0 : e.ref) && void 0 !== t ? t : null));
             },
             children: [
                 l,
@@ -129,7 +129,7 @@ function A(e) {
         { scrolledToTop: j, handleScroll: T } = (0, E.V)(),
         { handleDragStart: Z, handleDragReset: A, handleDragComplete: L } = (0, I.Z)(o),
         D = r.useRef(null),
-        O = r.useCallback(
+        k = r.useCallback(
             (e) => {
                 var t, n;
                 let i = o.findIndex((t) => t.id === e);
@@ -138,12 +138,12 @@ function A(e) {
             [o]
         );
     (0, g.ZP)(() => {
-        O(n);
+        k(n);
     }),
         r.useEffect(() => {
-            o.length > p && O(n), o.length !== p && _(o.length);
-        }, [o.length, p, _, O, n]);
-    let k = () => {
+            o.length > p && k(n), o.length !== p && _(o.length);
+        }, [o.length, p, _, k, n]);
+    let O = () => {
         h.Z.createRole(t.id), a(b.ZI.DISPLAY);
     };
     return (0, i.jsx)(C.ZP.Sidebar, {
@@ -179,7 +179,7 @@ function A(e) {
                                 (0, i.jsx)(u.P3F, {
                                     className: R.addRole,
                                     ...e,
-                                    onClick: k,
+                                    onClick: O,
                                     children: (0, i.jsx)(u.qJs, {
                                         size: 'custom',
                                         color: 'currentColor',

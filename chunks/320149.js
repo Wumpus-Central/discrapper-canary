@@ -17,19 +17,19 @@ var i = n(200651),
     E = n(933557),
     I = n(287746),
     C = n(388032),
-    v = n(922681),
-    N = n(954024);
+    N = n(922681),
+    v = n(954024);
 function T(e) {
     let { channel: t, baseChannelId: n } = e,
         T = (0, E.ZP)(t),
         S = (0, h.K)(),
-        Z = (0, h.V)(),
-        A = (0, r.e7)([d.Z], () => d.Z.isMessageRequest(t.id)),
+        A = (0, h.V)(),
+        Z = (0, r.e7)([d.Z], () => d.Z.isMessageRequest(t.id)),
         b = (0, r.e7)([u.Z], () => u.Z.isSpam(t.id)),
         x = (0, p.V)(t.id, t.getRecipientId()),
         L = l.useCallback(() => {
-            _.Z.closeChannelSidebar(f.uZ), A && S && (0, g.Kh)(t.id), b && Z && (0, g.Kh)(t.id);
-        }, [t.id, b, Z, A, S]),
+            _.Z.closeChannelSidebar(f.uZ), Z && S && (0, g.Kh)(t.id), b && A && (0, g.Kh)(t.id);
+        }, [t.id, b, A, Z, S]),
         y = l.useCallback(() => {
             (0, a.showToast)((0, a.createToast)(C.intl.string(C.t.pIQ3h4), a.ToastType.FAILURE));
         }, []),
@@ -62,15 +62,15 @@ function T(e) {
             }),
             b &&
                 (0, i.jsxs)('div', {
-                    className: N.hamBanner,
+                    className: v.hamBanner,
                     children: [
                         (0, i.jsx)(a.Text, {
-                            className: N.__invalid_hamBannerText,
+                            className: v.__invalid_hamBannerText,
                             variant: 'text-sm/normal',
                             children: C.intl.string(C.t.XVOKgo)
                         }),
                         (0, i.jsx)(a.zxk, {
-                            className: N.hamBannerButton,
+                            className: v.hamBannerButton,
                             size: a.PhG.SMALL,
                             onClick: () => P(t, x),
                             children: C.intl.string(C.t.koqL3d)
@@ -78,7 +78,7 @@ function T(e) {
                     ]
                 }),
             (0, i.jsx)('div', {
-                className: v.chat,
+                className: N.chat,
                 children: (0, i.jsx)(
                     I.Z,
                     {

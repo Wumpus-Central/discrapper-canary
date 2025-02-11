@@ -12,9 +12,9 @@ var i = t(200651),
     f = t(899007),
     p = t(648052),
     x = t(867176),
-    m = t(280885),
-    _ = t(900927),
-    h = t(678738),
+    h = t(280885),
+    m = t(900927),
+    _ = t(678738),
     Z = t(502762),
     v = t(530),
     g = t(679332),
@@ -123,14 +123,14 @@ function S(e) {
                                                     fade: !0,
                                                     className: b.scroller,
                                                     children: [
-                                                        (0, i.jsx)(m.Z, {
+                                                        (0, i.jsx)(h.Z, {
                                                             userId: n.id,
                                                             userBio: null == B ? void 0 : B.bio,
                                                             setLineClamp: !1
                                                         }),
-                                                        (0, i.jsx)(h.Z, {
+                                                        (0, i.jsx)(_.Z, {
                                                             heading: N.intl.string(N.t['A//N4u']),
-                                                            children: (0, i.jsx)(_.Z, {
+                                                            children: (0, i.jsx)(m.Z, {
                                                                 userId: n.id,
                                                                 guildId: U,
                                                                 tooltipDelay: E.vB

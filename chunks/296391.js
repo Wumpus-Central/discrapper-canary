@@ -13,9 +13,9 @@ var l = t(442837),
     f = t(29899),
     p = t(678738),
     x = t(151545),
-    m = t(744802),
-    _ = t(493043),
-    h = t(864141),
+    h = t(744802),
+    m = t(493043),
+    _ = t(864141),
     Z = t(228168),
     v = t(981631),
     g = t(388032),
@@ -48,7 +48,7 @@ function y(e) {
                       ? (0, i.jsxs)(p.Z, {
                             children: [
                                 null != A &&
-                                    (0, i.jsx)(_.Z, {
+                                    (0, i.jsx)(m.Z, {
                                         location: 'UserProfileModalActivity',
                                         user: n,
                                         currentUser: t,
@@ -57,7 +57,7 @@ function y(e) {
                                         profileGuildId: null == y ? void 0 : y.guildId
                                     }),
                                 D &&
-                                    (0, i.jsx)(h.Z, {
+                                    (0, i.jsx)(_.Z, {
                                         user: n,
                                         voiceChannel: O,
                                         onClose: b
@@ -97,7 +97,7 @@ function y(e) {
                             scrollIntoView: T === Z.Tb.RECENT_ACTIVITY,
                             children: C.map((e) =>
                                 (0, i.jsx)(
-                                    m.Z,
+                                    h.Z,
                                     {
                                         location: 'UserProfileModalActivity',
                                         user: n,

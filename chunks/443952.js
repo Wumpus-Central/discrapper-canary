@@ -18,12 +18,12 @@ var l = n(243814),
     E = n(928518),
     I = n(23750),
     C = n(592125),
-    v = n(293273),
-    N = n(885110),
+    N = n(293273),
+    v = n(885110),
     T = n(451478),
     S = n(630388),
-    Z = n(823379),
-    A = n(709054),
+    A = n(823379),
+    Z = n(709054),
     b = n(591759),
     x = n(228488),
     L = n(996106),
@@ -34,12 +34,12 @@ var l = n(243814),
     j = n(852926),
     D = n(186901),
     w = n(981631),
-    k = n(701488);
-async function M(e, t, n, i) {
+    M = n(701488);
+async function k(e, t, n, i) {
     let l = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : '',
-        r = v.Z.getApplicationActivity(t);
+        r = N.Z.getApplicationActivity(t);
     if (null == r || null == r.secrets || !(0, y.t9)(i, r.party, r.secrets)) throw new L.Z({ errorCode: w.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure an activity includes a party and appropriate secret.');
-    let a = (0, g.Z)(r, N.Z);
+    let a = (0, g.Z)(r, v.Z);
     if (a) {
         let { lock: t } = (0, j.jU)(e);
         return (0, o.h7)(r, a).then(() => {
@@ -66,7 +66,7 @@ let U = {
                 } = e,
                 l = t.application.id;
             if (null == l) throw new L.Z({ errorCode: w.lTL.INVALID_COMMAND }, 'No application.');
-            return M(i, l, n, w.mFx.JOIN);
+            return k(i, l, n, w.mFx.JOIN);
         }
     },
     [w.Etm.CLOSE_ACTIVITY_JOIN_REQUEST]: {
@@ -101,7 +101,7 @@ let U = {
                 } = e,
                 a = t.application.id;
             if (null == a) throw new L.Z({ errorCode: w.lTL.INVALID_COMMAND }, 'No application.');
-            return M(r, a, i, n, l);
+            return k(r, a, i, n, l);
         }
     },
     [w.Etm.ACCEPT_ACTIVITY_INVITE]: {
@@ -200,7 +200,7 @@ let U = {
                             }, 1000);
                     };
                     r.addEventListener('change', () => {
-                        (0, Z.lm)(r.files) && e(r.files[0]), a();
+                        (0, A.lm)(r.files) && e(r.files[0]), a();
                     }),
                         r.addEventListener('cancel', () => {
                             a();
@@ -211,7 +211,7 @@ let U = {
                 })(
                     async (n) => {
                         let r = await (0, m.kv)(i, l, n);
-                        (0, Z.lm)(r) && (0, Z.lm)(r.url) && !(r instanceof u.Z) ? e({ image_url: r.url }) : t(r);
+                        (0, A.lm)(r) && (0, A.lm)(r.url) && !(r instanceof u.Z) ? e({ image_url: r.url }) : t(r);
                     },
                     () => t(Error('Upload canceled'))
                 );
@@ -255,7 +255,7 @@ let U = {
             (0, y.bu)(i.transport);
             let c = i.application.id;
             if (null == c) throw new L.Z({ errorCode: w.lTL.INVALID_COMMAND }, 'No application.');
-            if (!k.Cr.includes(c)) throw new L.Z({ errorCode: w.lTL.INVALID_COMMAND }, 'Unsupported application.');
+            if (!M.Cr.includes(c)) throw new L.Z({ errorCode: w.lTL.INVALID_COMMAND }, 'Unsupported application.');
             if (!(0, S.yE)(null !== (t = i.application.flags) && void 0 !== t ? t : 0, w.udG.EMBEDDED)) throw new L.Z({ errorCode: w.lTL.INVALID_COMMAND }, 'This application cannot access this API');
             let d = (0, O.Z)();
             if (null == d) throw new L.Z({ errorCode: w.lTL.INVALID_COMMAND }, 'No channel found');
@@ -264,7 +264,7 @@ let U = {
                 void 0 !== r &&
                     (e = [
                         {
-                            id: A.default.cast(A.default.fromTimestamp(Date.now())),
+                            id: Z.default.cast(Z.default.fromTimestamp(Date.now())),
                             size: 0,
                             proxy_url: r.url,
                             filename: 'preview',
@@ -274,7 +274,7 @@ let U = {
                         }
                     ]),
                     (n = new I.ZP({
-                        id: A.default.cast(A.default.fromTimestamp(Date.now())),
+                        id: Z.default.cast(Z.default.fromTimestamp(Date.now())),
                         applicationId: c,
                         content: o,
                         components: a,

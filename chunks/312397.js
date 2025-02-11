@@ -35,8 +35,8 @@ var i = n(200651),
     A = n(35125),
     L = n(536442),
     D = n(142497),
-    O = n(884858),
-    k = n(516129),
+    k = n(884858),
+    O = n(516129),
     P = n(813197),
     w = n(208567),
     M = n(592125),
@@ -551,7 +551,7 @@ class eC extends r.PureComponent {
         let { guild: e, canManageGuild: t } = this.props,
             n = e.hasFeature(J.oNc.INVITE_SPLASH),
             r = t && n,
-            l = (0, i.jsx)(k.Z, {
+            l = (0, i.jsx)(O.Z, {
                 image: e.splash,
                 makeURL: (t) =>
                     null != t
@@ -565,7 +565,7 @@ class eC extends r.PureComponent {
                 hint: en.intl.string(en.t.uPvxqK),
                 enabled: r,
                 maxFileSizeBytes: et.B,
-                onFileSizeError: () => (0, O.Z)(et.B)
+                onFileSizeError: () => (0, k.Z)(et.B)
             });
         return (0, i.jsx)('div', {
             ref: this._inviteSectionRef,
@@ -612,7 +612,7 @@ class eC extends r.PureComponent {
                                                   disabled: !r,
                                                   onChange: this.handleSplashChange,
                                                   maxFileSizeBytes: et.B,
-                                                  onFileSizeError: () => (0, O.Z)(et.B)
+                                                  onFileSizeError: () => (0, k.Z)(et.B)
                                               })
                                           ]
                                       })
@@ -642,7 +642,7 @@ class eC extends r.PureComponent {
             r = e.hasFeature(J.oNc.BANNER),
             l = e.hasFeature(J.oNc.ANIMATED_BANNER),
             s = r && t,
-            a = (0, i.jsx)(k.Z, {
+            a = (0, i.jsx)(O.Z, {
                 image: e.banner,
                 makeURL: (t) =>
                     null != t

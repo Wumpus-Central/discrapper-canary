@@ -17,21 +17,21 @@ var i = n(200651),
     E = n(590771),
     I = n(273596),
     C = n(128449),
-    v = n(49898),
-    N = n(388032),
+    N = n(49898),
+    v = n(388032),
     T = n(335276);
 function S() {
     let e = l.useRef((0, m.PM)()),
         { onScroll: t, scrollPosition: n, resetScrollPosition: S } = (0, a.M)(),
-        { tabs: Z, selectedTab: A, setSelectedTab: b } = (0, f.Y)(),
-        x = (0, m.lg)(A),
-        L = !C.MU.has(A),
+        { tabs: A, selectedTab: Z, setSelectedTab: b } = (0, f.Y)(),
+        x = (0, m.lg)(Z),
+        L = !C.MU.has(Z),
         { searchQuery: y, onSearchTextChange: P, onClearSearch: O, onSearchSubmit: R, isSearchVisible: j } = (0, _.H)({ loadId: e.current }),
         D = p.Z.useField('searchBarState'),
         {
             onTabsAvailableWidthChange: w,
-            onCollapsedSearchBarClick: k,
-            onSearchBarBlur: M,
+            onCollapsedSearchBarClick: M,
+            onSearchBarBlur: k,
             tabsClassName: U
         } = (0, s.U)({
             isSearchBarVisible: L,
@@ -49,12 +49,12 @@ function S() {
         V = l.useMemo(
             () =>
                 j
-                    ? Z.filter((e) => {
+                    ? A.filter((e) => {
                           let { id: t } = e;
                           return !C.MU.has(t);
                       })
-                    : Z,
-            [Z, j]
+                    : A,
+            [A, j]
         ),
         H = l.useRef(new h.Z(x)),
         { onGuildCardSeen: F, onGuildCardClick: z } = (0, g.H)({
@@ -67,7 +67,7 @@ function S() {
         }, [x]),
         l.useEffect(() => {
             S();
-        }, [A, S]),
+        }, [Z, S]),
         l.useEffect(() => {
             j || u.Z.setState({ scrollPosition: null });
         }, [j]),
@@ -88,7 +88,7 @@ function S() {
                             (0, i.jsx)(c.Z, {
                                 className: U,
                                 tabs: V,
-                                selectedTab: j ? null : A,
+                                selectedTab: j ? null : Z,
                                 onTabSelect: B,
                                 onAvailableWidthChange: w
                             }),
@@ -97,18 +97,18 @@ function S() {
                                 variant: 'heading-lg/semibold',
                                 color: 'header-primary',
                                 className: T.searchResultsHeader,
-                                children: N.intl.format(N.t.zHdzqa, { query: G })
+                                children: v.intl.format(v.t.zHdzqa, { query: G })
                             }),
                         L &&
                             (0, i.jsx)(d.Z, {
                                 query: y,
-                                placeholder: N.intl.string(N.t['5h0QOD']),
+                                placeholder: v.intl.string(v.t['5h0QOD']),
                                 onTextChange: P,
                                 onClear: O,
                                 onSubmit: R,
-                                onCollapsedClick: k,
-                                state: j ? v.GlobalDiscoverySearchBarState.DEFAULT : D,
-                                onBlur: M
+                                onCollapsedClick: M,
+                                state: j ? N.GlobalDiscoverySearchBarState.DEFAULT : D,
+                                onBlur: k
                             })
                     ]
                 }),
@@ -119,7 +119,7 @@ function S() {
                           onGuildCardSeen: F
                       })
                     : (0, i.jsx)(E.Z, {
-                          selectedTab: A,
+                          selectedTab: Z,
                           onScroll: t,
                           onGuildCardClick: z,
                           onGuildCardSeen: F

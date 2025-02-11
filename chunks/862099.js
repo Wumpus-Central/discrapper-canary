@@ -23,12 +23,12 @@ var i,
     E = n(501655),
     I = n(192079),
     C = n(427679),
-    v = n(448206),
-    N = n(496675),
+    N = n(448206),
+    v = n(496675),
     T = n(938475),
     S = n(626135),
-    Z = n(823379),
-    A = n(15274),
+    A = n(823379),
+    Z = n(15274),
     b = n(924301),
     x = n(504160),
     L = n(151864),
@@ -39,8 +39,8 @@ var i,
     j = n(554747),
     D = n(230900),
     w = n(854698),
-    k = n(139712),
-    M = n(765305),
+    M = n(139712),
+    k = n(765305),
     U = n(981631),
     G = n(388032),
     B = n(333522);
@@ -157,7 +157,7 @@ function F(e) {
             className: B.joinButton,
             innerClassName: B.rsvpButton,
             onClick: function () {
-                (0, k.Z)(t.id, null, t.guild_id, () => setTimeout(() => (0, x.L_)(t.id), 1000)),
+                (0, M.Z)(t.id, null, t.guild_id, () => setTimeout(() => (0, x.L_)(t.id), 1000)),
                     S.default.track(U.rMx.CHANNEL_NOTICE_CTA_CLICKED, {
                         guild_id: t.guild_id,
                         notice_type: n
@@ -212,7 +212,7 @@ function z(e) {
                     className: B.textBlock,
                     children: [
                         (0, l.jsx)(c.P3F, {
-                            onClick: () => (0, A.bO)({ eventId: n.id }),
+                            onClick: () => (0, Z.bO)({ eventId: n.id }),
                             className: B.eventNameClickable,
                             children: (0, l.jsx)(c.Text, {
                                 color: 'header-primary',
@@ -311,7 +311,7 @@ function W(e) {
 function Y(e) {
     let { guildEvent: t } = e,
         n = r.useCallback(() => {
-            (0, A.bO)({ eventId: t.id });
+            (0, Z.bO)({ eventId: t.id });
         }, [t]);
     return (0, l.jsx)(c.zxk, {
         fullWidth: !0,
@@ -372,8 +372,8 @@ function Q(e) {
     let { channel: t, speakers: n, voiceType: i } = e,
         a = t.getGuildId(),
         u = r.useMemo(() => n.slice(0, 3), [n]),
-        h = (0, o.e7)([N.Z], () => N.Z.can(U.Plq.CONNECT, t)),
-        m = (0, v.Z)(t.id),
+        h = (0, o.e7)([v.Z], () => v.Z.can(U.Plq.CONNECT, t)),
+        m = (0, N.Z)(t.id),
         p = G.intl.string(G.t.VJlc0d);
     switch (i) {
         case 1:
@@ -386,7 +386,7 @@ function Q(e) {
             p = G.intl.string(G.t.wBoE6O);
             break;
         default:
-            (0, Z.vE)(i);
+            (0, A.vE)(i);
     }
     return null == a
         ? null
@@ -444,14 +444,14 @@ let J = r.memo(function (e) {
               stageInstance: s,
               channel: i
           }))
-        : r.entity_type === M.WX.STAGE_INSTANCE && p
+        : r.entity_type === k.WX.STAGE_INSTANCE && p
           ? (u = (0, l.jsx)(q, {
                 stageInstance: s,
                 channel: i
             }))
-          : r.entity_type === M.WX.EXTERNAL
+          : r.entity_type === k.WX.EXTERNAL
             ? (u = (0, l.jsx)(W, { guildEvent: r }))
-            : r.entity_type === M.WX.VOICE &&
+            : r.entity_type === k.WX.VOICE &&
               null != i &&
               (u = (0, l.jsx)(H, {
                   guildEvent: r,

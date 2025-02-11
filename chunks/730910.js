@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(47120);
+n.d(t, { Z: () => O }), n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(120356),
@@ -30,8 +30,8 @@ var i = n(200651),
     A = n(976269),
     L = n(981631),
     D = n(388032),
-    O = n(299602);
-function k() {
+    k = n(299602);
+function O() {
     let e = (0, o.e7)([C.Z], () => C.Z.getGuild());
     return null == e ? null : (0, i.jsx)(P, { guild: e });
 }
@@ -39,7 +39,7 @@ function P(e) {
     let { guild: t } = e,
         l = t.id,
         C = (0, o.e7)([b.Z], () => b.Z.getCurrentPage()),
-        k = (0, S.Z)(l),
+        O = (0, S.Z)(l),
         {
             hasChanges: P,
             hasConfiguredAnythingForCurrentStep: w,
@@ -86,7 +86,7 @@ function P(e) {
             range: [0, 1],
             output: [W, (0, m.dQu)(c.Z.colors.STATUS_DANGER).hex()]
         });
-    if (k) {
+    if (O) {
         if (C === T.PG.DEFAULT_CHANNELS) return (0, i.jsx)(Z.j, {});
         if (C === T.PG.CUSTOMIZATION_QUESTIONS) return (0, i.jsx)(y.Zm, {});
         if (C === T.PG.HOME_SETTINGS) return (0, i.jsx)(A.Z, {});
@@ -129,17 +129,17 @@ function P(e) {
         $ = null;
     U && (C === T.PG.SAFETY_CHECK ? ($ = (0, i.jsx)(R.j7, {})) : C === T.PG.DEFAULT_CHANNELS ? ($ = (0, i.jsx)(R.Io, {})) : C === T.PG.CUSTOMIZATION_QUESTIONS ? ($ = (0, i.jsx)(R.cZ, {})) : C === T.PG.HOME_SETTINGS && ($ = (0, i.jsx)(R.g6, {})));
     let ee = (0, i.jsx)(m.zxk, {
-            className: s()(O.button, { [O.hidden]: U }),
+            className: s()(k.button, { [k.hidden]: U }),
             color: m.zxk.Colors.PRIMARY,
             look: m.zxk.Looks.OUTLINED,
             size: m.zxk.Sizes.SMALL,
             onClick: J,
             disabled: U || M,
             children: (0, i.jsxs)('span', {
-                className: O.button,
+                className: k.button,
                 children: [
                     (0, i.jsx)(x.Z, {
-                        className: O.arrow,
+                        className: k.arrow,
                         direction: x.Z.Directions.LEFT
                     }),
                     D.intl.string(D.t['13/7kZ'])
@@ -147,19 +147,19 @@ function P(e) {
             })
         }),
         et = (0, i.jsx)(m.zxk, {
-            className: O.button,
+            className: k.button,
             color: w ? m.zxk.Colors.BRAND : m.zxk.Colors.PRIMARY,
             look: m.zxk.Looks.FILLED,
             size: m.zxk.Sizes.SMALL,
             onClick: Q,
             disabled: U || M,
             children: (0, i.jsxs)(a.animated.span, {
-                className: O.button,
+                className: k.button,
                 style: { color: Y },
                 children: [
                     w ? D.intl.string(D.t.PDTjLC) : D.intl.string(D.t['5WxrcX']),
                     (0, i.jsx)(x.Z, {
-                        className: O.arrow,
+                        className: k.arrow,
                         direction: x.Z.Directions.RIGHT
                     })
                 ]
@@ -168,26 +168,26 @@ function P(e) {
     return (0, i.jsx)(d.W, {
         component: 'div',
         children: (0, i.jsx)(m.oXn, {
-            className: s()(O.noticeRegion),
+            className: s()(k.noticeRegion),
             children: (0, i.jsx)(a.animated.div, {
-                className: O.container,
+                className: k.container,
                 style: { backgroundColor: K },
                 children: (0, i.jsxs)('div', {
-                    className: O.flexContainer,
+                    className: k.flexContainer,
                     ref: B,
                     children: [
                         U
                             ? (0, i.jsxs)('div', {
-                                  className: O.educationUpsellRoot,
+                                  className: k.educationUpsellRoot,
                                   children: [
                                       (0, i.jsx)('img', {
-                                          className: s()(O.wumpus),
+                                          className: s()(k.wumpus),
                                           src: n(33631),
                                           alt: 'wumpus'
                                       }),
                                       (0, i.jsxs)('div', {
-                                          className: O.educationUpsell,
-                                          children: [$, (0, i.jsx)('div', { className: O.educationUpsellArrow })]
+                                          className: k.educationUpsell,
+                                          children: [$, (0, i.jsx)('div', { className: k.educationUpsellArrow })]
                                       })
                                   ]
                               })
@@ -195,11 +195,11 @@ function P(e) {
                         (0, i.jsx)(m.JcV, {
                             containerRef: B,
                             children: (0, i.jsxs)('div', {
-                                className: O.actions,
+                                className: k.actions,
                                 children: [
                                     ee,
                                     (0, i.jsxs)('div', {
-                                        className: O.next,
+                                        className: k.next,
                                         children: [
                                             M
                                                 ? (0, i.jsx)(m.Text, {

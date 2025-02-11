@@ -41,12 +41,12 @@ var i,
     E = n(598077),
     I = n(592125),
     C = n(430824),
-    v = n(131951),
-    N = n(375954),
+    N = n(131951),
+    v = n(375954),
     T = n(158776),
     S = n(594174),
-    Z = n(979651),
-    A = n(70956),
+    A = n(979651),
+    Z = n(70956),
     b = n(5192),
     x = n(226951),
     L = n(591759),
@@ -63,8 +63,8 @@ let j = null !== (l = null === (i = L.Z.toURLSafe(window.GLOBAL_ENV.API_ENDPOINT
         return /^\d+$/.test(n) ? e : t.slice(-2).join('.');
     })(),
     w = new RegExp('^'.concat(x.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(x.Z.escape(D), '|discordapp.com|discord.com)$')),
-    k = 1 * A.Z.Millis.MINUTE,
-    M = {};
+    M = 1 * Z.Z.Millis.MINUTE,
+    k = {};
 function U(e) {
     return 'customEmoji' === e.type && (e.type = 'emoji'), 'emoji' === e.type && e.src && (e.src = G(e.src)), Array.isArray(e.content) && (e.content = e.content.map(U)), e;
 }
@@ -88,7 +88,7 @@ function V(e, t) {
         [R.d4z.GUILD_CATEGORY, ...f.tx].includes(e.type) ||
             n.push(
                 new Promise((t) => {
-                    N.Z.whenReady(e.id, () => t()),
+                    v.Z.whenReady(e.id, () => t()),
                         d.Z.fetchMessages({
                             channelId: e.id,
                             limit: R.AQB
@@ -97,8 +97,8 @@ function V(e, t) {
             ),
         Promise.all(n).then(() => {
             var n;
-            let l = (!e.isNSFW() || (null === (n = S.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? N.Z.getMessages(e.id).toArray().map(H) : [],
-                r = Object.values(Z.Z.getVoiceStatesForChannel(e.id)).map((t) => F(i, e.id, t));
+            let l = (!e.isNSFW() || (null === (n = S.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? v.Z.getMessages(e.id).toArray().map(H) : [],
+                r = Object.values(A.Z.getVoiceStatesForChannel(e.id)).map((t) => F(i, e.id, t));
             return {
                 id: e.id,
                 name: e.name,
@@ -146,9 +146,9 @@ function F(e, t, n) {
     if (null == c) throw Error('Invalid user id: '.concat(o));
     return {
         nick: b.ZP.getName(e, t, c),
-        mute: v.Z.isLocalMute(c.id),
-        volume: v.Z.getLocalVolume(c.id),
-        pan: v.Z.getLocalPan(c.id),
+        mute: N.Z.isLocalMute(c.id),
+        volume: N.Z.getLocalVolume(c.id),
+        pan: N.Z.getLocalPan(c.id),
         voice_state: {
             mute: i,
             deaf: l,
@@ -252,14 +252,14 @@ async function J(e, t, n) {
     };
 }
 async function $(e, t) {
-    let n = M[e];
-    null == n && ((n = new o.Z(t ? 2 : 60, k)), (M[e] = n)), await n.process();
+    let n = k[e];
+    null == n && ((n = new o.Z(t ? 2 : 60, M)), (k[e] = n)), await n.process();
 }
 function ee(e, t) {
     null == t && (e.authorization.scopes = [O.lH]);
 }
 function et(e) {
-    let t = v.Z.getSettings(),
+    let t = N.Z.getSettings(),
         n = (e) =>
             Object.values(e)
                 .sort((e, t) => e.index - t.index)
@@ -270,12 +270,12 @@ function et(e) {
         i = e(t);
     return {
         input: {
-            available_devices: n(v.Z.getInputDevices()),
+            available_devices: n(N.Z.getInputDevices()),
             device_id: t.inputDeviceId,
             volume: t.inputVolume
         },
         output: {
-            available_devices: n(v.Z.getOutputDevices()),
+            available_devices: n(N.Z.getOutputDevices()),
             device_id: t.outputDeviceId,
             volume: t.outputVolume
         },
@@ -296,7 +296,7 @@ function et(e) {
     };
 }
 function en(e, t) {
-    let n = v.Z.getSettings(e),
+    let n = N.Z.getSettings(e),
         i = t(n);
     return {
         input_mode: {

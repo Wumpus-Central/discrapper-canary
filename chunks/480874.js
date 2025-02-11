@@ -17,12 +17,12 @@ var i = n(200651),
     E = n(922409),
     I = n(727813),
     C = n(355350),
-    v = n(307947),
-    N = n(125855),
+    N = n(307947),
+    v = n(125855),
     T = n(687683),
     S = n(981631),
-    Z = n(388032),
-    A = n(356439);
+    A = n(388032),
+    Z = n(356439);
 function b() {
     let e = l.useRef(null),
         t = (0, I.Z)(),
@@ -32,7 +32,7 @@ function b() {
         x = (0, h.Z)('message-requests-spam-list'),
         { channelId: L } = (0, E._)(),
         y = l.useCallback(() => {
-            (0, c.showToast)((0, c.createToast)(Z.intl.string(Z.t.EDYbS0), c.ToastType.FAILURE));
+            (0, c.showToast)((0, c.createToast)(A.intl.string(A.t.EDYbS0), c.ToastType.FAILURE));
         }, []),
         { rejectAll: P } = (0, f.m)({ onError: y }),
         O = l.useCallback(() => {
@@ -49,12 +49,12 @@ function b() {
                     c = null === (l = t[s + 1]) || void 0 === l ? void 0 : null === (n = l.channel) || void 0 === n ? void 0 : n.id,
                     d = o.channel.id;
                 return (0, i.jsx)(
-                    N.Z,
+                    v.Z,
                     {
                         index: s,
                         className: a()({
-                            [A.selected]: null != L && L === d,
-                            [A.siblingSelected]: null != L && L === c
+                            [Z.selected]: null != L && L === d,
+                            [Z.siblingSelected]: null != L && L === c
                         }),
                         channel: o.channel,
                         user: o.user,
@@ -70,14 +70,14 @@ function b() {
                 (0, i.jsxs)(
                     m.Z,
                     {
-                        className: A.sectionTitle,
+                        className: Z.sectionTitle,
                         children: [
-                            Z.intl.format(Z.t.C79Edn, { count: n }),
+                            A.intl.format(A.t.C79Edn, { count: n }),
                             b && n > 0
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           (0, i.jsx)(c.Text, {
-                                              className: A.titleDivider,
+                                              className: Z.titleDivider,
                                               variant: 'eyebrow',
                                               color: 'header-secondary',
                                               tag: 'span',
@@ -88,9 +88,9 @@ function b() {
                                               look: c.iLD.LINK,
                                               color: c.Ttl.LINK,
                                               size: c.PhG.SMALL,
-                                              className: A.clearAllButton,
-                                              'aria-label': Z.intl.string(Z.t.p6t7RE),
-                                              children: Z.intl.string(Z.t.p6t7RE)
+                                              className: Z.clearAllButton,
+                                              'aria-label': A.intl.string(A.t.p6t7RE),
+                                              children: A.intl.string(A.t.p6t7RE)
                                           })
                                       ]
                                   })
@@ -102,7 +102,7 @@ function b() {
             [n, O, b]
         );
     return 0 === t.length
-        ? (0, i.jsx)(v.Z, { section: T.pS.SPAM })
+        ? (0, i.jsx)(N.Z, { section: T.pS.SPAM })
         : (0, i.jsx)(s.bG, {
               navigator: x,
               children: (0, i.jsx)(s.SJ, {
@@ -111,9 +111,9 @@ function b() {
                       return (0, i.jsx)(
                           c.aVo,
                           {
-                              className: A.list,
+                              className: Z.list,
                               innerRole: r,
-                              innerAriaLabel: Z.intl.string(Z.t.e7GWjY),
+                              innerAriaLabel: A.intl.string(A.t.e7GWjY),
                               ref: (t) => {
                                   var n;
                                   (e.current = t), (l.current = null !== (n = null == t ? void 0 : t.getScrollerNode()) && void 0 !== n ? n : null);

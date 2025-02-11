@@ -10,7 +10,7 @@ var i,
     c = n(539573),
     h = n(825829),
     g = n(981631);
-function f(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,11 +23,11 @@ function f(e, t, n) {
         e
     );
 }
-let p = {},
+let f = {},
     C = 0,
     v = {},
     E = {},
-    _ = (e, t) => {
+    m = (e, t) => {
         let n = (0, s.hc)(e),
             i = {
                 id: n,
@@ -35,15 +35,15 @@ let p = {},
                 messageData: e,
                 errorMessage: (0, c.uF)(e, t)
             };
-        (p[n] = i), C++;
+        (f[n] = i), C++;
     },
-    m = (e) => p[e],
+    _ = (e) => f[e],
     I = (e) => {
-        null != p[e] && delete p[e], C++;
+        null != f[e] && delete f[e], C++;
     };
 function S(e) {
     let { messageData: t, errorResponseBody: n } = e;
-    return _(t, n), !0;
+    return m(t, n), !0;
 }
 function T(e) {
     var t;
@@ -69,18 +69,18 @@ function T(e) {
 }
 class N extends (i = l.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(d.Z), null != e && ((p = e.automodFailedMessages), (v = e.mentionRaidDetectionByGuild));
+        this.waitFor(d.Z), null != e && ((f = e.automodFailedMessages), (v = e.mentionRaidDetectionByGuild));
     }
     getState() {
         return {
-            automodFailedMessages: p,
+            automodFailedMessages: f,
             mentionRaidDetectionByGuild: v,
             lastIncidentAlertMessage: E
         };
     }
     getMessage(e) {
         var t;
-        return null == e ? null : null !== (t = m(e)) && void 0 !== t ? t : null;
+        return null == e ? null : null !== (t = _(e)) && void 0 !== t ? t : null;
     }
     getMessagesVersion() {
         return C;
@@ -94,10 +94,10 @@ class N extends (i = l.ZP.PersistedStore) {
         return null !== (t = E[e]) && void 0 !== t ? t : null;
     }
 }
-f(N, 'displayName', 'GuildAutomodMessageStore'), f(N, 'persistKey', 'GuildAutomodMessages');
+p(N, 'displayName', 'GuildAutomodMessageStore'), p(N, 'persistKey', 'GuildAutomodMessages');
 let y = new N(r.Z, {
     CONNECTION_OPEN: function (e) {
-        return (p = {}), C++, !0;
+        return (f = {}), C++, !0;
     },
     LOAD_MESSAGES_SUCCESS: T,
     LOCAL_MESSAGES_LOADED: T,

@@ -21,12 +21,12 @@ var i = n(200651),
     E = n(522474),
     I = n(141321),
     C = n(210887),
-    v = n(592125),
-    N = n(430824),
+    N = n(592125),
+    v = n(430824),
     T = n(944486),
     S = n(914010),
-    Z = n(451478),
-    A = n(998502),
+    A = n(451478),
+    Z = n(998502),
     b = n(228488),
     x = n(950796),
     L = n(981631),
@@ -39,8 +39,8 @@ function j() {
     let t = (0, r.TH)(),
         n = (0, s.e7)([T.Z], () => T.Z.getChannelId()),
         l = (0, s.e7)([S.Z], () => S.Z.getGuildId()),
-        a = (0, s.e7)([v.Z], () => v.Z.getChannel(n), [n]),
-        c = N.Z.getGuild(l),
+        a = (0, s.e7)([N.Z], () => N.Z.getChannel(n), [n]),
+        c = v.Z.getGuild(l),
         d = (0, m.Z)(),
         u = null;
     return (
@@ -82,16 +82,16 @@ function j() {
 }
 function D() {
     l.useLayoutEffect(() => {
-        A.ZP.setMinimumSize(y.J, y.N);
+        Z.ZP.setMinimumSize(y.J, y.N);
     }, []);
     let e = (0, h.TH)('AppTitleBar'),
         t = !R((e) => e.isOpen) && e,
         { hasBugReporterAccess: n } = d.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 });
     l.useLayoutEffect(() => {
-        A.ZP.setMinimumSize(y.J, y.N);
+        Z.ZP.setMinimumSize(y.J, y.N);
     }, []);
     let r = (0, s.e7)([C.Z], () => (C.Z.darkSidebar ? L.BRd.DARK : void 0));
-    return (0, s.e7)([Z.Z, E.Z], () => (0, b.rB)())
+    return (0, s.e7)([A.Z, E.Z], () => (0, b.rB)())
         ? null
         : (0, i.jsx)(o.f6W, {
               theme: r,

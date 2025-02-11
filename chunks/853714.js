@@ -30,8 +30,8 @@ var i = n(200651),
     A = n(388032),
     L = n(688658),
     D = n(299954),
-    O = n(60412);
-function k(e, t, n) {
+    k = n(60412);
+function O(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -61,11 +61,11 @@ class P extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            k(this, 'handleHeaderClick', () => {
+            O(this, 'handleHeaderClick', () => {
                 let { onHeaderClick: e, log: t } = this.props;
                 null == e || e(t);
             }),
-            k(this, 'handleUserContextMenu', (e) => {
+            O(this, 'handleUserContextMenu', (e) => {
                 let { log: t, guildId: r } = this.props,
                     { user: l } = t;
                 null != l &&
@@ -80,7 +80,7 @@ class P extends r.PureComponent {
                             });
                     });
             }),
-            k(this, 'handleChannelContextMenu', (e) => {
+            O(this, 'handleChannelContextMenu', (e) => {
                 let { log: t, guildId: r } = this.props,
                     l = v.Z.getGuild(r);
                 null != t.options.channel &&
@@ -97,7 +97,7 @@ class P extends r.PureComponent {
                                 : null;
                     });
             }),
-            k(this, 'handleTargetContextMenu', (e) => {
+            O(this, 'handleTargetContextMenu', (e) => {
                 let { log: t, guildId: r } = this.props;
                 switch (t.targetType) {
                     case y.KFR.CHANNEL:
@@ -309,18 +309,18 @@ class M extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            k(this, '_clickedInside', !1),
-            k(this, '_scrollerRef', null),
-            k(this, '_expandedRef', void 0),
-            k(this, '_lastExpandedRef', void 0),
-            k(this, '_prevRects', this.getRects()),
-            k(this, '_contentRef', r.createRef()),
-            k(this, 'state', {
+            O(this, '_clickedInside', !1),
+            O(this, '_scrollerRef', null),
+            O(this, '_expandedRef', void 0),
+            O(this, '_lastExpandedRef', void 0),
+            O(this, '_prevRects', this.getRects()),
+            O(this, '_contentRef', r.createRef()),
+            O(this, 'state', {
                 expandedId: null,
                 lastExpandedId: null,
                 actionFilterQuery: ''
             }),
-            k(this, 'renderActionQuickSelectItem', (e, t) => {
+            O(this, 'renderActionQuickSelectItem', (e, t) => {
                 var n;
                 let { actionFilter: r } = this.props,
                     l = (0, _.Pw)(e.value),
@@ -347,7 +347,7 @@ class M extends r.PureComponent {
                     null !== (n = e.key) && void 0 !== n ? n : t
                 );
             }),
-            k(this, 'renderUserQuickSelectItem', (e, t) => {
+            O(this, 'renderUserQuickSelectItem', (e, t) => {
                 var n;
                 if (e.user instanceof C.Z) {
                     let t = e.user;
@@ -406,7 +406,7 @@ class M extends r.PureComponent {
                     null !== (n = e.key) && void 0 !== n ? n : t
                 );
             }),
-            k(this, 'renderHeaderDropdowns', () => {
+            O(this, 'renderHeaderDropdowns', () => {
                 var e, t;
                 let { actionFilter: n, hide: r, userIdFilter: l, moderators: a } = this.props;
                 if (r) return null;
@@ -445,7 +445,7 @@ class M extends r.PureComponent {
                     className: L.quickSelect,
                     children: [
                         (0, i.jsx)(u.EFH, {
-                            popoutClassName: s()(L.selectFilterPopout, O.elevationBorderHigh),
+                            popoutClassName: s()(L.selectFilterPopout, k.elevationBorderHigh),
                             items: m,
                             renderItem: this.renderUserQuickSelectItem,
                             renderValue: this.renderUserQuickSelectValue,
@@ -461,7 +461,7 @@ class M extends r.PureComponent {
                         (0, i.jsx)(u.EFH, {
                             placeholder: A.intl.string(A.t.I288Z2),
                             label: A.intl.string(A.t.rautdn),
-                            popoutClassName: s()(L.selectFilterPopout, O.elevationBorderLow),
+                            popoutClassName: s()(L.selectFilterPopout, k.elevationBorderLow),
                             items: o,
                             renderItem: this.renderActionQuickSelectItem,
                             renderValue: this.renderActionQuickSelectValue,
@@ -475,7 +475,7 @@ class M extends r.PureComponent {
                     ]
                 });
             }),
-            k(this, 'renderLoadMore', () => {
+            O(this, 'renderLoadMore', () => {
                 let { showLoadMore: e, hasOlderLogs: t, hide: n } = this.props;
                 if (e && t && !n)
                     return (0, i.jsx)(u.zxk, {
@@ -485,13 +485,13 @@ class M extends r.PureComponent {
                         children: A.intl.string(A.t['Q/LSXl'])
                     });
             }),
-            k(this, 'handleFilterActionChange', (e) => {
+            O(this, 'handleFilterActionChange', (e) => {
                 (0, m.ZX)(e, this.props.guildId);
             }),
-            k(this, 'handleFilterUserChange', (e) => {
+            O(this, 'handleFilterUserChange', (e) => {
                 (0, m.uo)(e, this.props.guildId);
             }),
-            k(this, 'handleHeaderClick', (e) => {
+            O(this, 'handleHeaderClick', (e) => {
                 let { expandedId: t } = this.state;
                 t !== e.id
                     ? ((this._clickedInside = !0),
@@ -508,7 +508,7 @@ class M extends r.PureComponent {
                           lastExpandedId: null
                       }));
             }),
-            k(this, 'handleOutsideClick', () => {
+            O(this, 'handleOutsideClick', () => {
                 null == this.state.expandedId || this._clickedInside
                     ? null != this.state.expandedId && (this._clickedInside = !1)
                     : ((this._expandedRef = null),
@@ -519,28 +519,28 @@ class M extends r.PureComponent {
                       }),
                       (this._prevRects = this.getRects()));
             }),
-            k(this, 'handleContentClick', (e) => {
+            O(this, 'handleContentClick', (e) => {
                 (this._clickedInside = !0), e.stopPropagation();
             }),
-            k(this, 'handleSetScrollerRef', (e) => {
+            O(this, 'handleSetScrollerRef', (e) => {
                 this._scrollerRef = e;
             }),
-            k(this, 'handleOnScroll', () => {
+            O(this, 'handleOnScroll', () => {
                 this.isScrollerAtBottom() && this.handleFetchNextPage();
             }),
-            k(this, 'handleFetchNextPage', () => {
+            O(this, 'handleFetchNextPage', () => {
                 (0, m.OY)(this.props.guildId);
             }),
-            k(this, 'handleActionFilterQueryChange', (e) => {
+            O(this, 'handleActionFilterQueryChange', (e) => {
                 this.setState({ actionFilterQuery: e });
             }),
-            k(this, 'handleActionFilterQueryClear', () => {
+            O(this, 'handleActionFilterQueryClear', () => {
                 this.setState({ actionFilterQuery: '' });
             }),
-            k(this, 'handleSetExpandedRef', (e) => {
+            O(this, 'handleSetExpandedRef', (e) => {
                 this._expandedRef = e;
             }),
-            k(this, 'handleSetLastExpandedRef', (e) => {
+            O(this, 'handleSetLastExpandedRef', (e) => {
                 this._lastExpandedRef = e;
             });
     }

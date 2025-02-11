@@ -55,16 +55,16 @@ let h = function (e) {
                     callback: () => (null == t ? void 0 : t.focus())
                 });
         }, []),
-        v = (0, r.ZP)({
+        N = (0, r.ZP)({
             id: 'people-list',
             isEnabled: _,
             scrollToStart: E,
             scrollToEnd: I,
             setFocus: C
         }),
-        N = l.useMemo(() => t.map((e) => e.length), [t]);
+        v = l.useMemo(() => t.map((e) => e.length), [t]);
     return (0, i.jsx)(a.bG, {
-        navigator: v,
+        navigator: N,
         children: (0, i.jsx)(a.SJ, {
             children: (e) => {
                 let { ref: t, ...n } = e;
@@ -79,7 +79,7 @@ let h = function (e) {
                             rowHeight: d.NV,
                             renderSection: g,
                             sectionHeight: d.aS,
-                            sections: N,
+                            sections: v,
                             className: u.peopleList,
                             ...n
                         }),

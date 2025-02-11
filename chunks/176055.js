@@ -17,11 +17,11 @@ var i = n(200651),
     E = n(769654),
     I = n(601964),
     C = n(430824),
-    v = n(843445),
-    N = n(981631),
+    N = n(843445),
+    v = n(981631),
     T = n(388032),
     S = n(121274);
-function Z(e, t, n) {
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,7 +34,7 @@ function Z(e, t, n) {
         e
     );
 }
-class A extends l.PureComponent {
+class Z extends l.PureComponent {
     renderMemberInfo() {
         let { approximateMemberCount: e, approximatePresenceCount: t } = this.props.guild;
         return null == e || null == t
@@ -83,7 +83,7 @@ class A extends l.PureComponent {
                     : l && t && (u = T.intl.string(T.t.XpeFYm))
                 : ((u = T.intl.string(T.t.dKhVQE)), (h = this.handleLogin)),
             (0, i.jsxs)('div', {
-                className: a()(s, o === v.b.SMALL ? S.inviteSmall : S.inviteLarge),
+                className: a()(s, o === N.b.SMALL ? S.inviteSmall : S.inviteLarge),
                 children: [
                     (0, i.jsx)(m.Z, { children: T.intl.string(T.t.s1KcLi) }),
                     (0, i.jsxs)('div', {
@@ -127,7 +127,7 @@ class A extends l.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            Z(this, 'handleJoinOrView', async () => {
+            A(this, 'handleJoinOrView', async () => {
                 let { guild: e, skuId: t, isInGuild: n, isLurking: i } = this.props,
                     l = () => (0, E.X)(e.id);
                 if (i) (0, u.Oj)(t).then(l);
@@ -136,14 +136,14 @@ class A extends l.PureComponent {
                     try {
                         await d.Z.joinGuild(e.id, {
                             lurker: !0,
-                            source: N.vtS.APPLICATION_STORE
+                            source: v.vtS.APPLICATION_STORE
                         }),
                             l();
                     } catch {}
             }),
-            Z(this, 'handleLogin', () => {
-                let e = { redirect_to: N.Z5c.APPLICATION_STORE_LISTING_SKU(this.props.skuId) };
-                (0, f.uL)(N.Z5c.LOGIN, { search: (0, s.stringify)(e) });
+            A(this, 'handleLogin', () => {
+                let e = { redirect_to: v.Z5c.APPLICATION_STORE_LISTING_SKU(this.props.skuId) };
+                (0, f.uL)(v.Z5c.LOGIN, { search: (0, s.stringify)(e) });
             });
     }
 }
@@ -155,5 +155,5 @@ let b = (0, h.Z)(
             isInGuild: null != C.Z.getGuild(t.id) && !n,
             isLurking: n
         };
-    })(A)
+    })(Z)
 );

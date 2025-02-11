@@ -20,13 +20,13 @@ let m = function (e) {
             async scrollToEnd() {}
         }),
         C = g !== u.pJs.ONLINE && g !== u.pJs.ALL,
-        v = E || p || C,
-        N = l.useMemo(
+        N = E || p || C,
+        v = l.useMemo(
             () =>
                 t.map((e, t) =>
                     0 === e.length
                         ? null
-                        : v
+                        : N
                           ? (0, i.jsxs)(
                                 'div',
                                 {
@@ -44,7 +44,7 @@ let m = function (e) {
                                 t
                             )
                 ),
-            [n, m, t, v]
+            [n, m, t, N]
         );
     return (0, i.jsx)(a.bG, {
         navigator: I,
@@ -55,7 +55,7 @@ let m = function (e) {
                     ref: t,
                     className: h.peopleList,
                     ...n,
-                    children: [N, _]
+                    children: [v, _]
                 });
             }
         })

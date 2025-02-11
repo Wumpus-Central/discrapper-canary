@@ -97,9 +97,9 @@ function A(e) {
                 source: E.t.PANEL
             }),
             t.isProvisional &&
-                (0, i.jsx)(o.Z, {
-                    look: 'profile',
-                    userId: t.id
+                (0, i.jsx)(o.wQ, {
+                    userId: t.id,
+                    headingColor: 'header-primary'
                 }),
             (0, i.jsx)(g.Z, {
                 user: t,

@@ -22,12 +22,12 @@ var i = n(200651),
     E = n(371260),
     I = n(372769),
     C = n(134432),
-    v = n(695346),
-    N = n(768581),
+    N = n(695346),
+    v = n(768581),
     T = n(356164),
     S = n(890064),
-    Z = n(981631),
-    A = n(388032),
+    A = n(981631),
+    Z = n(388032),
     b = n(992676),
     x = n(129512),
     L = n(330065),
@@ -46,8 +46,8 @@ function P(e) {
                 var e;
                 let t = new h.Hx(n);
                 d.Z.show({
-                    title: A.intl.string(A.t.R0RpRU),
-                    body: null !== (e = t.getAnyErrorMessage()) && void 0 !== e ? e : A.intl.string(A.t.eAn6z8)
+                    title: Z.intl.string(Z.t.R0RpRU),
+                    body: null !== (e = t.getAnyErrorMessage()) && void 0 !== e ? e : Z.intl.string(Z.t.eAn6z8)
                 });
             } finally {
                 O(!1);
@@ -59,7 +59,7 @@ function P(e) {
             },
             [t.id, E, s]
         ),
-        k = l.useCallback(
+        M = l.useCallback(
             (e) => {
                 (0, u.jW)(e, async () => {
                     let { default: e } = await Promise.resolve().then(n.bind(n, 858523));
@@ -72,34 +72,34 @@ function P(e) {
             },
             [t]
         ),
-        M = (0, m.ZP)(),
-        U = t.features.has(Z.oNc.HUB),
+        k = (0, m.ZP)(),
+        U = t.features.has(A.oNc.HUB),
         G = l.useMemo(() => {
-            let e = N.ZP.getGuildDiscoverySplashURL({
+            let e = v.ZP.getGuildDiscoverySplashURL({
                 id: t.id,
                 splash: t.discoverySplash,
                 size: 300 * (0, C.x_)()
             });
             if (null != e) return e;
             if (U) return y;
-            switch (M) {
-                case Z.BRd.DARK:
+            switch (k) {
+                case A.BRd.DARK:
                     return x;
-                case Z.BRd.LIGHT:
+                case A.BRd.LIGHT:
                     return L;
             }
-        }, [t.discoverySplash, t.id, U, M]),
+        }, [t.discoverySplash, t.id, U, k]),
         B = f ? 48 : 40,
         V = l.useMemo(
             () =>
-                N.ZP.getGuildIconURL({
+                v.ZP.getGuildIconURL({
                     id: t.id,
                     icon: t.icon,
                     size: B
                 }),
             [t.icon, t.id, B]
         ),
-        H = v.Sb.useSetting();
+        H = N.Sb.useSetting();
     return (0, i.jsxs)('div', {
         className: b.container,
         children: [
@@ -119,7 +119,7 @@ function P(e) {
                     className: b.card,
                     onClick: D,
                     disabled: P,
-                    onContextMenu: k,
+                    onContextMenu: M,
                     children: [
                         (0, i.jsxs)('div', {
                             className: b.header,
@@ -197,7 +197,7 @@ function P(e) {
                                                         className: b.memberDetailsText,
                                                         variant: 'text-xs/normal',
                                                         color: 'header-secondary',
-                                                        children: A.intl.format(A.t['LC+S+v'], { membersOnline: t.presenceCount })
+                                                        children: Z.intl.format(Z.t['LC+S+v'], { membersOnline: t.presenceCount })
                                                     })
                                                 ]
                                             }),
@@ -210,7 +210,7 @@ function P(e) {
                                                         className: b.memberDetailsText,
                                                         variant: 'text-xs/normal',
                                                         color: 'header-secondary',
-                                                        children: A.intl.format(A.t.zRl6XV, { count: t.memberCount })
+                                                        children: Z.intl.format(Z.t.zRl6XV, { count: t.memberCount })
                                                     })
                                                 ]
                                             })

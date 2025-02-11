@@ -28,14 +28,14 @@ function j(e) {
             return null != e.brandColorPrimary ? e.brandColorPrimary : l;
         })(n, (0, r.dQu)(a.Z.colors.BG_BASE_TERTIARY).hex()),
         N = (0, i.e7)([u.default], () => u.default.locale),
-        I = (0, g.d)(t, j),
+        p = (0, g.d)(t, j),
         f = (0, h.M)(_.default.extractTimestamp(n.id), N);
     return (0, l.jsxs)('div', {
         className: b.container,
         children: [
             (0, l.jsx)('div', {
                 className: b.banner,
-                style: { background: I }
+                style: { background: p }
             }),
             (0, l.jsx)('div', {
                 className: b.avatarContainer,

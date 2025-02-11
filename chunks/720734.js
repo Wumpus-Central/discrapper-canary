@@ -17,12 +17,12 @@ var i = n(200651),
     E = n(239091),
     I = n(230711),
     C = n(410575),
-    v = n(941129),
-    N = n(634894),
+    N = n(941129),
+    v = n(634894),
     T = n(586902),
     S = n(907305),
-    Z = n(468363),
-    A = n(297369),
+    A = n(468363),
+    Z = n(297369),
     b = n(953372),
     x = n(570928),
     L = n(100527),
@@ -33,8 +33,8 @@ var i = n(200651),
     j = n(865427),
     D = n(682901),
     w = n(571250),
-    k = n(628581),
-    M = n(55311),
+    M = n(628581),
+    k = n(55311),
     U = n(575175),
     G = n(64220),
     B = n(600164),
@@ -71,12 +71,12 @@ var i = n(200651),
     eE = n(885110),
     eI = n(246946),
     eC = n(594174),
-    ev = n(78839),
-    eN = n(626135),
+    eN = n(78839),
+    ev = n(626135),
     eT = n(768581),
     eS = n(572004),
-    eZ = n(70956),
-    eA = n(74538),
+    eA = n(70956),
+    eZ = n(74538),
     eb = n(374023),
     ex = n(51144),
     eL = n(998502),
@@ -87,7 +87,7 @@ var i = n(200651),
     ej = n(215023),
     eD = n(388032),
     ew = n(274692);
-function ek(e, t, n) {
+function eM(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -100,9 +100,9 @@ function ek(e, t, n) {
         e
     );
 }
-let eM = eL.ZP.getEnableHardwareAcceleration() ? _.Xo$ : _.qEK,
-    eU = 2 * eZ.Z.Millis.MINUTE,
-    eG = 30 * eZ.Z.Millis.DAY;
+let ek = eL.ZP.getEnableHardwareAcceleration() ? _.Xo$ : _.qEK,
+    eU = 2 * eA.Z.Millis.MINUTE,
+    eG = 30 * eA.Z.Millis.DAY;
 function eB(e) {
     let { speaking: t, streaming: n, currentUser: l, status: r, handleMouseLeave: s, renderNameTag: o } = e,
         c = (0, H.Q3)('RTC Avatar'),
@@ -147,7 +147,7 @@ function eB(e) {
                           'aria-label': eD.intl.string(eD.t['3Uj+2t']),
                           className: ew.avatarWrapper,
                           children: [
-                              (0, i.jsx)(eM, {
+                              (0, i.jsx)(ek, {
                                   size: c ? _.EFr['SIZE_'.concat(h)] : _.EFr.SIZE_32,
                                   src: l.getAvatarURL(void 0, c ? h - 4 : 32, !1),
                                   avatarDecoration: u,
@@ -193,7 +193,7 @@ class eV extends l.PureComponent {
         if (null == r) return null;
         if (
             (n || o) &&
-            (0, A.Z)({
+            (0, Z.Z)({
                 activities: t,
                 status: a,
                 applicationStream: l,
@@ -377,11 +377,11 @@ class eV extends l.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            ek(this, 'copiedTimeout', new d.V7()),
-            ek(this, 'copiedDecayTimeout', new d.V7()),
-            ek(this, 'speakingWhileMutedTooltipTimeout', new d.V7()),
-            ek(this, 'lastSpeakingWhileMutedNotificationTime', void 0),
-            ek(this, 'state', {
+            eM(this, 'copiedTimeout', new d.V7()),
+            eM(this, 'copiedDecayTimeout', new d.V7()),
+            eM(this, 'speakingWhileMutedTooltipTimeout', new d.V7()),
+            eM(this, 'lastSpeakingWhileMutedNotificationTime', void 0),
+            eM(this, 'state', {
                 hovered: !1,
                 copiedStreak: 0,
                 shouldShowNametagTooltip: !1,
@@ -389,24 +389,24 @@ class eV extends l.PureComponent {
                 shouldShowSpeakingWhileMutedTooltip: !1,
                 hoveringOnMute: !1
             }),
-            ek(this, 'handleToggleSelfMute', () => {
+            eM(this, 'handleToggleSelfMute', () => {
                 let { serverMute: e, suppress: t } = this.props;
                 (0, U.Z)(e, t, eR.jXE.ACCOUNT_PANEL);
             }),
-            ek(this, 'handleToggleSelfDeaf', () => {
+            eM(this, 'handleToggleSelfDeaf', () => {
                 let { serverDeaf: e } = this.props;
-                (0, M.Z)(e, eR.jXE.ACCOUNT_PANEL);
+                (0, k.Z)(e, eR.jXE.ACCOUNT_PANEL);
             }),
-            ek(this, 'handleOpenAccountSettings', () => {
+            eM(this, 'handleOpenAccountSettings', () => {
                 this.handleOpenSettings();
             }),
-            ek(this, 'handleOpenSettings', function () {
+            eM(this, 'handleOpenSettings', function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : eR.oAB.ACCOUNT,
                     t = arguments.length > 1 ? arguments[1] : void 0,
                     n = arguments.length > 2 ? arguments[2] : void 0;
                 I.Z.open(e, t, n);
             }),
-            ek(this, 'handleOpenSettingsContextMenu', (e) => {
+            eM(this, 'handleOpenSettingsContextMenu', (e) => {
                 let { currentUser: t } = this.props;
                 null != t &&
                     (0, E.jW)(e, async () => {
@@ -420,7 +420,7 @@ class eV extends l.PureComponent {
                             });
                     });
             }),
-            ek(this, 'handleInputAudioContextMenu', (e, t) => {
+            eM(this, 'handleInputAudioContextMenu', (e, t) => {
                 (0, E.jW)(e, async () => {
                     let { default: e } = await Promise.resolve().then(n.bind(n, 659580));
                     return () =>
@@ -442,7 +442,7 @@ class eV extends l.PureComponent {
                         });
                 });
             }),
-            ek(this, 'handleOutputAudioContextMenu', (e, t) => {
+            eM(this, 'handleOutputAudioContextMenu', (e, t) => {
                 (0, E.jW)(e, async () => {
                     let { default: e } = await Promise.resolve().then(n.bind(n, 659580));
                     return () =>
@@ -463,23 +463,23 @@ class eV extends l.PureComponent {
                         });
                 });
             }),
-            ek(this, 'handleMouseEnter', () => {
+            eM(this, 'handleMouseEnter', () => {
                 this.setState({ hovered: !0 });
             }),
-            ek(this, 'handleMouseLeave', () => {
+            eM(this, 'handleMouseLeave', () => {
                 this.setState({ hovered: !1 });
             }),
-            ek(this, 'handleMouseEnterMute', () => {
+            eM(this, 'handleMouseEnterMute', () => {
                 this.setState({
                     hoveringOnMute: !0,
                     shouldShowSpeakingWhileMutedTooltip: !1
                 }),
                     this.speakingWhileMutedTooltipTimeout.stop();
             }),
-            ek(this, 'handleMouseLeaveMute', () => {
+            eM(this, 'handleMouseLeaveMute', () => {
                 this.setState({ hoveringOnMute: !1 });
             }),
-            ek(this, 'handleCopyTag', () => {
+            eM(this, 'handleCopyTag', () => {
                 let { currentUser: e } = this.props,
                     { shouldShowNametagTooltip: t, copiedStreak: n } = this.state;
                 if (null == e) return;
@@ -489,7 +489,7 @@ class eV extends l.PureComponent {
                         identifiable: 'always'
                     })
                 ),
-                    eN.default.track(eR.rMx.TEXT_COPIED, { type: 'User Tag' });
+                    ev.default.track(eR.rMx.TEXT_COPIED, { type: 'User Tag' });
                 let i = {
                     shouldShowCopiedFeedback: !0,
                     shouldShowNametagTooltip: !0
@@ -499,7 +499,7 @@ class eV extends l.PureComponent {
                         this.copiedTimeout.start(1000, () => this.setState({ shouldShowNametagTooltip: !1 })), this.copiedDecayTimeout.start(2000, () => this.setState({ copiedStreak: 0 }));
                     });
             }),
-            ek(this, 'handleOccludedChanged', () => {
+            eM(this, 'handleOccludedChanged', () => {
                 let { occluded: e } = this.props;
                 e &&
                     this.setState({
@@ -507,7 +507,7 @@ class eV extends l.PureComponent {
                         shouldShowSpeakingWhileMutedTooltip: !1
                     });
             }),
-            ek(this, 'handleSpeakingWhileMutedChanged', () => {
+            eM(this, 'handleSpeakingWhileMutedChanged', () => {
                 let { selfMute: e, serverMute: t, suppress: n, speakingWhileMuted: i, occluded: l } = this.props,
                     { hoveringOnMute: r } = this.state,
                     a = void 0 === this.lastSpeakingWhileMutedNotificationTime || Date.now() - this.lastSpeakingWhileMutedNotificationTime > eU;
@@ -523,7 +523,7 @@ class eV extends l.PureComponent {
                       })
                     : (this.setState({ shouldShowSpeakingWhileMutedTooltip: !1 }), this.speakingWhileMutedTooltipTimeout.stop());
             }),
-            ek(this, 'renderSettingsGear', () =>
+            eM(this, 'renderSettingsGear', () =>
                 (0, i.jsx)(eF, {
                     isEligibleForPomelo: this.props.isEligibleForPomelo,
                     webBuildOverride: this.props.webBuildOverride,
@@ -563,30 +563,30 @@ function eH() {
             return null != e ? ep.Z.getChannel(e) : null;
         }),
         { mute: g, selfMute: E, suppress: I } = (0, eo.Z)(p),
-        { selfDeaf: C, deaf: A } = (0, es.Z)(p),
+        { selfDeaf: C, deaf: Z } = (0, es.Z)(p),
         b = (0, o.e7)([R.C], () => {
             var e;
             return (0, j.fD)() ? (null === (e = R.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web) : null;
         }),
-        x = (0, o.e7)([ev.ZP], () => ev.ZP.getPremiumTypeSubscription()),
+        x = (0, o.e7)([eN.ZP], () => eN.ZP.getPremiumTypeSubscription()),
         P = (0, o.e7)([e_.Z], () => e_.Z.getSpeakingWhileMuted()),
         O = (0, o.e7)([eg.Z], () => eg.Z.hasLayers()),
         w = (0, _.s9z)(_.JQI) || O || eb.s.isDisallowPopupsSet(),
-        k = (0, q.b)(),
-        M = (0, o.e7)([W.Z], () => null != W.Z.getAwaitingRemoteSessionInfo()),
+        M = (0, q.b)(),
+        k = (0, o.e7)([W.Z], () => null != W.Z.getAwaitingRemoteSessionInfo()),
         U = (0, $.D)(),
-        G = (0, v.u)(),
-        B = eA.ZP.canUsePremiumGuildMemberProfile(t),
+        G = (0, N.u)(),
+        B = eZ.ZP.canUsePremiumGuildMemberProfile(t),
         V = (null == t ? void 0 : null === (e = t.avatarDecoration) || void 0 === e ? void 0 : e.skuId) === ej.rL,
         { activityStatusCleanupEnabled: H } = (0, S.w)({ location: 'Account' }),
-        { voiceActivityStatusEnabled: z } = (0, Z.U)({ location: 'Account' }),
+        { voiceActivityStatusEnabled: z } = (0, A.U)({ location: 'Account' }),
         { enabled: Y } = (0, D.Z)({ location: 'Account' }),
         K = 'account';
-    (0, N.j)({
+    (0, v.j)({
         location: K + ' auto on',
         autoTrackExposure: !0
     }),
-        (0, N.j)({
+        (0, v.j)({
             location: K + ' auto off',
             autoTrackExposure: !1
         });
@@ -594,7 +594,7 @@ function eH() {
         ee = (function () {
             let e = (0, F.wE)(c.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2),
                 [t, n] = (0, o.Wu)([X.Z], () => [X.Z.hasFetchedRelevance, X.Z.profileThemesRelevanceExceeded]),
-                [i, r] = (0, o.Wu)([ev.ZP], () => [ev.ZP.hasFetchedMostRecentPremiumTypeSubscription(), ev.ZP.getMostRecentPremiumTypeSubscription()]),
+                [i, r] = (0, o.Wu)([eN.ZP], () => [eN.ZP.hasFetchedMostRecentPremiumTypeSubscription(), eN.ZP.getMostRecentPremiumTypeSubscription()]),
                 { enabled: a } = Q.Z.useExperiment({ location: '08bd40_1' }, { autoTrackExposure: !0 }),
                 s = l.useMemo(() => {
                     let e = new Date().getTime();
@@ -636,7 +636,7 @@ function eH() {
                 premiumSubscription: x,
                 selfDeaf: C,
                 selfMute: E,
-                serverDeaf: A,
+                serverDeaf: Z,
                 serverMute: g,
                 speaking: u,
                 speakingWhileMuted: P,
@@ -644,8 +644,8 @@ function eH() {
                 streaming: a,
                 suppress: I,
                 webBuildOverride: b,
-                awaitingRemote: M,
-                isEligibleForPomelo: k,
+                awaitingRemote: k,
+                isEligibleForPomelo: M,
                 simplifiedCallSettingsEnabled: Y,
                 activityStatusCleanupEnabled: H,
                 voiceActivityStatusEnabled: z
@@ -671,14 +671,14 @@ function eF(e) {
 function ez(e) {
     let { selfMute: t, serverMute: n, suppress: r, awaitingRemote: a, tooltipText: o, tooltipColor: c, tooltipForceOpen: d, onMouseEnter: u, onMouseLeave: p, onClick: f, onContextMenu: E } = e,
         C = t || r || n,
-        v = l.useRef(null),
-        N = (0, h.O)(C ? 'unmute' : 'mute'),
+        N = l.useRef(null),
+        v = (0, h.O)(C ? 'unmute' : 'mute'),
         T = (0, m.P)(C ? 'unmute' : 'mute'),
         { activeVoice: S } = (0, ed.o)(),
-        { Component: Z, events: A, play: b } = null != S ? T : N,
-        x = n || r ? _.v0G : Z,
+        { Component: A, events: Z, play: b } = null != S ? T : v,
+        x = n || r ? _.v0G : A,
         { mode: P } = (0, ea.ZP)({ location: 'RTC Microphone Button' }),
-        O = null != o ? o : (0, k.Z)(t, n, r, a, P === ea.BK.GroupedButtonsRedMic),
+        O = null != o ? o : (0, M.Z)(t, n, r, a, P === ea.BK.GroupedButtonsRedMic),
         { analyticsLocations: R } = (0, y.ZP)(L.Z.AUDIO_INPUT_BUTTON),
         j = (0, ec.H)(L.Z.AUDIO_INPUT_BUTTON);
     l.useEffect(() => () => b(), [C, b]);
@@ -690,12 +690,12 @@ function ez(e) {
         ),
         w = l.useCallback((e) => {
             var t;
-            if ((0, s.k)(null == e ? void 0 : e.target, Node) && (null === (t = v.current) || void 0 === t ? void 0 : t.contains(e.target))) return g.F;
+            if ((0, s.k)(null == e ? void 0 : e.target, Node) && (null === (t = N.current) || void 0 === t ? void 0 : t.contains(e.target))) return g.F;
         }, []);
     return (0, i.jsx)(y.Gt, {
         value: R,
         children: (0, i.jsxs)('div', {
-            ref: v,
+            ref: N,
             className: ew.micButtonParent,
             children: [
                 (0, i.jsx)(ey.Z, {
@@ -703,10 +703,10 @@ function ez(e) {
                     tooltipColor: c,
                     tooltipForceOpen: d,
                     onMouseEnter: () => {
-                        u(), A.onMouseEnter();
+                        u(), Z.onMouseEnter();
                     },
                     onMouseLeave: () => {
-                        p(), A.onMouseLeave();
+                        p(), Z.onMouseLeave();
                     },
                     icon: (0, i.jsx)(x, {
                         size: 'custom',

@@ -26,8 +26,8 @@ function I(e) {
         L = (0, a.e7)([x.Z], () => x.Z.editedDefaultChannelIds),
         D = A ? f.qm : f.M$,
         {
-            drag: O,
-            dragSourcePosition: k,
+            drag: k,
+            dragSourcePosition: O,
             drop: P,
             setIsDraggable: w
         } = (0, c.Z)({
@@ -69,11 +69,11 @@ function I(e) {
                   onBlur: () => F(!1),
                   onMouseLeave: () => F(!1),
                   className: s()(N.container, {
-                      [N.dropIndicatorBefore]: null != k && C < k,
-                      [N.dropIndicatorAfter]: null != k && C > k,
+                      [N.dropIndicatorBefore]: null != O && C < O,
+                      [N.dropIndicatorAfter]: null != O && C > O,
                       [N.containerFocused]: B
                   }),
-                  ref: (e) => O(P(e)),
+                  ref: (e) => k(P(e)),
                   children: [
                       (0, i.jsx)('div', {
                           className: N.dragContainer,
@@ -126,11 +126,11 @@ function I(e) {
                   onFocus: () => F(!0),
                   onBlur: () => F(!1),
                   className: s()(N.container, {
-                      [N.dropIndicatorBefore]: null != k && C < k,
-                      [N.dropIndicatorAfter]: null != k && C > k,
+                      [N.dropIndicatorBefore]: null != O && C < O,
+                      [N.dropIndicatorAfter]: null != O && C > O,
                       [N.containerFocused]: B
                   }),
-                  ref: (e) => O(P(e)),
+                  ref: (e) => k(P(e)),
                   children: [
                       (0, i.jsx)('div', {
                           className: N.dragContainer,

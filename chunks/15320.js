@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D });
+n.d(t, { Z: () => T });
 var l = n(200651),
     r = n(192379),
     i = n(399606),
@@ -40,8 +40,8 @@ function I(e) {
         Z = null == d ? void 0 : d.options.filter((e) => j.includes(e.id)),
         I = (0, f.L6)(Z),
         E = (0, f.dX)(Z),
-        D = 0 === j.length,
-        { helpText: T, helpTextAdditional: w } = (0, g.Z)({
+        T = 0 === j.length,
+        { helpText: D, helpTextAdditional: w } = (0, g.Z)({
             guild: n,
             prompt: d,
             selectedRoleIds: I,
@@ -53,7 +53,7 @@ function I(e) {
             value: e.id,
             ...e
         })),
-        O = d.options.filter((e) => j.includes(e.id)).map((e) => e.id);
+        M = d.options.filter((e) => j.includes(e.id)).map((e) => e.id);
     return (0, l.jsx)('div', {
         className: b.prompt,
         children: (0, l.jsxs)('div', {
@@ -100,7 +100,7 @@ function I(e) {
                         }),
                         (0, l.jsx)(_.Z, {
                             options: P,
-                            value: O,
+                            value: M,
                             onChange: (e) => {
                                 let t = e.find((e) => !j.includes(e.id)),
                                     n = e.map((e) => e.id);
@@ -149,7 +149,7 @@ function I(e) {
                                     className: b.helpText,
                                     variant: 'text-xs/normal',
                                     color: 'text-muted',
-                                    children: [T, ' ', w]
+                                    children: [D, ' ', w]
                                 }),
                                 (0, l.jsx)(o.ua7, {
                                     text: C ? N.intl.string(N.t.dA1dSU) : null,
@@ -165,7 +165,7 @@ function I(e) {
                                             size: o.zxk.Sizes.MEDIUM,
                                             look: o.zxk.Looks.FILLED,
                                             grow: !1,
-                                            color: D ? o.zxk.Colors.PRIMARY : o.zxk.Colors.BRAND,
+                                            color: T ? o.zxk.Colors.PRIMARY : o.zxk.Colors.BRAND,
                                             children: s
                                                 ? (0, l.jsxs)(l.Fragment, {
                                                       children: [
@@ -180,7 +180,7 @@ function I(e) {
                                                   })
                                                 : (0, l.jsxs)(l.Fragment, {
                                                       children: [
-                                                          D ? N.intl.string(N.t['5WxrcX']) : N.intl.string(N.t.PDTjLC),
+                                                          T ? N.intl.string(N.t['5WxrcX']) : N.intl.string(N.t.PDTjLC),
                                                           (0, l.jsx)(u.Z, {
                                                               className: b.arrow,
                                                               direction: u.Z.Directions.RIGHT
@@ -206,7 +206,7 @@ function E(e) {
         Z = (0, f.L6)(C),
         I = (0, f.dX)(C),
         E = 0 === _.length,
-        { helpText: D, helpTextAdditional: T } = (0, g.Z)({
+        { helpText: T, helpTextAdditional: D } = (0, g.Z)({
             guild: n,
             prompt: d,
             selectedRoleIds: Z,
@@ -305,7 +305,7 @@ function E(e) {
                                     className: b.helpText,
                                     variant: 'text-xs/normal',
                                     color: 'text-muted',
-                                    children: [D, ' ', T]
+                                    children: [T, ' ', D]
                                 }),
                                 (0, l.jsx)(o.ua7, {
                                     text: j ? N.intl.string(N.t.dA1dSU) : null,
@@ -354,12 +354,12 @@ function E(e) {
         })
     });
 }
-function D(e) {
+function T(e) {
     let { guild: t, prompts: n, step: o, selectOption: c, completeOnboarding: u, setCurrentStep: h, headerId: p, disableTracking: f } = e,
         g = (0, i.e7)([d.Z], () => d.Z.getRulesPrompt(t.id));
     r.useEffect(() => {
-        a.ZP.fetchVerificationForm(t.id);
-    }, [t.id]);
+        t.hasFeature(C.oNc.MEMBER_VERIFICATION_GATE_ENABLED) && a.ZP.fetchVerificationForm(t.id);
+    }, [t]);
     let v = n[o],
         _ = o + 1 >= n.length && !Z(g),
         N = n[0].required;

@@ -12,9 +12,9 @@ var i = t(200651),
     f = t(971393),
     p = t(787018),
     x = t(752342),
-    m = t(886794),
-    _ = t(910364);
-let h = [a.Z.BITE_SIZE_PROFILE_POPOUT, a.Z.PROFILE_PANEL];
+    h = t(886794),
+    m = t(910364);
+let _ = [a.Z.BITE_SIZE_PROFILE_POPOUT, a.Z.PROFILE_PANEL];
 function Z(e) {
     let { user: n, ...t } = e,
         o = (0, r.e7)([I.default], () => I.default.getCurrentUser());
@@ -29,7 +29,7 @@ function Z(e) {
     l.useEffect(() => {
         j(Z || a);
     }, [Z, a]);
-    let y = !h.some((e) => {
+    let y = !_.some((e) => {
             var n;
             return (null !== (n = t.sourceAnalyticsLocations) && void 0 !== n ? n : []).includes(e);
         }),
@@ -49,7 +49,7 @@ function Z(e) {
                 ...t
             })
           : n.isNonUserBot()
-            ? (0, i.jsx)(m.Z, {
+            ? (0, i.jsx)(h.Z, {
                   ...t,
                   user: n,
                   currentUser: o
@@ -60,7 +60,7 @@ function Z(e) {
                     user: n,
                     currentUser: o
                 })
-              : (0, i.jsx)(_.Z, {
+              : (0, i.jsx)(m.Z, {
                     ...t,
                     user: n,
                     currentUser: o

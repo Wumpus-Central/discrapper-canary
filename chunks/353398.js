@@ -164,7 +164,7 @@ function y() {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(D, {}),
-            (0, r.jsx)(O, {
+            (0, r.jsx)(k, {
                 guild: e,
                 guildTemplate: a
             }),
@@ -323,10 +323,10 @@ function D() {
         ]
     });
 }
-function O(e) {
+function k(e) {
     let { guild: t, guildTemplate: n } = e;
     return null == n
-        ? (0, r.jsx)(k, { guild: t })
+        ? (0, r.jsx)(O, { guild: t })
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(m.xJW, {
@@ -372,7 +372,7 @@ function O(e) {
               ]
           });
 }
-function k(e) {
+function O(e) {
     let { guild: t } = e,
         n = (0, d.e7)([S], () => S.name),
         [i, s] = l.useState(!1),

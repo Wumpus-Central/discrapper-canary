@@ -25,18 +25,18 @@ function p(e) {
         {
             acceptMessageRequest: I,
             rejectMessageRequest: C,
-            isAcceptLoading: v,
-            isRejectLoading: N,
+            isAcceptLoading: N,
+            isRejectLoading: v,
             isUserProfileLoading: T,
             isOptimisticAccepted: S,
-            isOptimisticRejected: Z
+            isOptimisticRejected: A
         } = (0, d.m)({
             user: n,
             onAcceptSuccess: E,
             onRejectSuccess: f,
             onError: _
         }),
-        A = v || N || T || S || Z;
+        Z = N || v || T || S || A;
     return (0, i.jsxs)('div', {
         className: m.container,
         children: [
@@ -55,8 +55,8 @@ function p(e) {
                         onClick: (e) => {
                             e.stopPropagation(), C(p.id);
                         },
-                        disabled: A,
-                        submitting: N || Z,
+                        disabled: Z,
+                        submitting: v || A,
                         children: h.intl.string(h.t.B2nygY)
                     }),
                     (0, i.jsx)(r.zxk, {
@@ -66,8 +66,8 @@ function p(e) {
                         onClick: (e) => {
                             e.stopPropagation(), I(p.id);
                         },
-                        disabled: A,
-                        submitting: v || T || S,
+                        disabled: Z,
+                        submitting: N || T || S,
                         children: h.intl.string(h.t.Kz8Pws)
                     })
                 ]

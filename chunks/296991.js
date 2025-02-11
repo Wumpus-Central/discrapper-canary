@@ -69,11 +69,11 @@ function b(e) {
         null == n)
     )
         return null;
-    let O = '' !== t.value ? t.value : t.id;
+    let k = '' !== t.value ? t.value : t.id;
     return (0, i.jsx)('div', {
         ref: T,
         className: s()(I.draggableInputContainer, { [I.dragging]: _ }),
-        'data-dnd-name': O,
+        'data-dnd-name': k,
         children: (0, i.jsxs)('div', {
             className: I.inputWrapper,
             children: [
@@ -122,7 +122,7 @@ function b(e) {
                 (0, i.jsx)('div', {
                     ref: S,
                     className: I.dragContainer,
-                    'data-dnd-name': O,
+                    'data-dnd-name': k,
                     children:
                         b &&
                         (0, i.jsx)(m.Vni, {

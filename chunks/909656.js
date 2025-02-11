@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(47120);
+n.d(t, { Z: () => k }), n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(120356),
@@ -83,7 +83,7 @@ function D(e) {
         })
     });
 }
-function O(e) {
+function k(e) {
     var t;
     let { guild: n, isGuildProducts: l = !1 } = e,
         { format: s } = (0, b.Z)(n.id),
@@ -94,8 +94,8 @@ function O(e) {
         }, [a]),
         [m, x] = r.useState(s),
         [p, N] = r.useState(null !== (t = null == a ? void 0 : a.description) && void 0 !== t ? t : ''),
-        [L, O] = r.useState(c),
-        [k, P] = r.useState(null == a ? void 0 : a.store_page_guild_products_default_sort),
+        [L, k] = r.useState(c),
+        [O, P] = r.useState(null == a ? void 0 : a.store_page_guild_products_default_sort),
         [w, M] = r.useState(null == a ? void 0 : a.server_shop_tab_order),
         { loading: U, error: G, updateSubscriptionsSettings: B } = (0, j.QV)(),
         { imageCTA: F, imageAriaLabel: z, setFilename: H } = (0, E.Z)(null == a ? void 0 : a.cover_image_asset),
@@ -103,16 +103,16 @@ function O(e) {
         W = (0, _.Dt)(),
         Y = (0, _.Dt)();
     function K(e, t) {
-        o()(null != e, 'Null value not allowed'), null != t && H(t.name), O(e);
+        o()(null != e, 'Null value not allowed'), null != t && H(t.name), k(e);
     }
     let q = r.useMemo(() => {
             var e;
-            return (null != p && p !== (null !== (e = null == a ? void 0 : a.description) && void 0 !== e ? e : '')) || (null == L ? void 0 : L.startsWith('data:')) === !0 || m !== s || (null == a ? void 0 : a.store_page_guild_products_default_sort) !== k || (null == a ? void 0 : a.server_shop_tab_order) !== w;
-        }, [L, s, p, a, m, k, w]),
+            return (null != p && p !== (null !== (e = null == a ? void 0 : a.description) && void 0 !== e ? e : '')) || (null == L ? void 0 : L.startsWith('data:')) === !0 || m !== s || (null == a ? void 0 : a.store_page_guild_products_default_sort) !== O || (null == a ? void 0 : a.server_shop_tab_order) !== w;
+        }, [L, s, p, a, m, O, w]),
         X = null != p && '' !== p && null != L;
     r.useEffect(() => {
         var e;
-        (null == a ? void 0 : null === (e = a.cover_image_asset) || void 0 === e ? void 0 : e.application_id) != null && O((0, v._W)(a.cover_image_asset.application_id, a.cover_image_asset, A));
+        (null == a ? void 0 : null === (e = a.cover_image_asset) || void 0 === e ? void 0 : e.application_id) != null && k((0, v._W)(a.cover_image_asset.application_id, a.cover_image_asset, A));
     }, [null == a ? void 0 : a.cover_image_asset]);
     let Q = (0, I.mY)(),
         J = r.useMemo(
@@ -252,7 +252,7 @@ function O(e) {
                                       children: Z.intl.string(Z.t.TILN8v)
                                   }),
                                   (0, i.jsx)(h.q4e, {
-                                      value: k,
+                                      value: O,
                                       placeholder: Z.intl.string(Z.t.XqMe3N),
                                       options: J,
                                       onChange: (e) => P(e)
@@ -298,12 +298,12 @@ function O(e) {
                             disabled: !X,
                             onReset: () => {
                                 var e;
-                                x(s), N(null !== (e = null == a ? void 0 : a.description) && void 0 !== e ? e : ''), O(c), P(null == a ? void 0 : a.store_page_guild_products_default_sort), M(null == a ? void 0 : a.server_shop_tab_order);
+                                x(s), N(null !== (e = null == a ? void 0 : a.description) && void 0 !== e ? e : ''), k(c), P(null == a ? void 0 : a.store_page_guild_products_default_sort), M(null == a ? void 0 : a.server_shop_tab_order);
                             },
                             onSave: () => {
                                 o()(null != a, 'Settings must be defined');
                                 let e = {};
-                                p !== a.description && (e.description = p), null != L && L.startsWith('data:') && (e.cover_image = L), m !== s && (e.full_server_gate = m === S.e3.ALL_CHANNELS), k !== a.store_page_guild_products_default_sort && (e.store_page_guild_products_default_sort = k), w !== a.server_shop_tab_order && (e.server_shop_tab_order = w), d().isEmpty(e) || B(n.id, e);
+                                p !== a.description && (e.description = p), null != L && L.startsWith('data:') && (e.cover_image = L), m !== s && (e.full_server_gate = m === S.e3.ALL_CHANNELS), O !== a.store_page_guild_products_default_sort && (e.store_page_guild_products_default_sort = O), w !== a.server_shop_tab_order && (e.server_shop_tab_order = w), d().isEmpty(e) || B(n.id, e);
                             },
                             saveButtonTooltip: X ? void 0 : Z.intl.string(Z.t['6HRvio'])
                         })

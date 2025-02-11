@@ -22,12 +22,12 @@ var i = n(200651),
     E = n(703656),
     I = n(108427),
     C = n(911314),
-    v = n(429899),
-    N = n(843445),
+    N = n(429899),
+    v = n(843445),
     T = n(981631),
     S = n(388032),
-    Z = n(912960);
-function A(e, t, n) {
+    A = n(912960);
+function Z(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,7 +45,7 @@ let b = (0, _.Un)({
     webpackId: 496691
 });
 function x(e) {
-    return e < N.x ? N.b.SMALL : N.b.LARGE;
+    return e < v.x ? v.b.SMALL : v.b.LARGE;
 }
 s.ZP.initialize();
 class L extends l.PureComponent {
@@ -72,11 +72,11 @@ class L extends l.PureComponent {
         let { isAuthenticated: e, location: t } = this.props,
             n = e
                 ? (0, i.jsx)('div', {
-                      className: Z.applicationStore,
+                      className: A.applicationStore,
                       children: this.renderContent()
                   })
                 : (0, i.jsx)(b, {
-                      className: Z.applicationStore,
+                      className: A.applicationStore,
                       location: t,
                       render: this.renderContent
                   });
@@ -87,8 +87,8 @@ class L extends l.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            A(this, 'stopListeningToHistory', void 0),
-            A(this, 'renderStoreListing', (e) => {
+            Z(this, 'stopListeningToHistory', void 0),
+            Z(this, 'renderStoreListing', (e) => {
                 let {
                         match: {
                             params: { skuId: t, applicationId: n, slug: l }
@@ -100,7 +100,7 @@ class L extends l.PureComponent {
                 return (0, i.jsx)(d.Z, {
                     page: T.ZY5.STORE_LISTING,
                     root: !0,
-                    children: (0, i.jsx)(v.Z, {
+                    children: (0, i.jsx)(N.Z, {
                         skuId: t,
                         applicationId: n,
                         slug: l,
@@ -110,7 +110,7 @@ class L extends l.PureComponent {
                     })
                 });
             }),
-            A(this, 'renderContent', () =>
+            Z(this, 'renderContent', () =>
                 (0, i.jsxs)(a.rs, {
                     children: [
                         (0, i.jsx)(a.AW, {
