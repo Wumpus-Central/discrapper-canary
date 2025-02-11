@@ -11,12 +11,12 @@ var i = n(200651),
     h = n(237997),
     p = n(998502),
     g = n(13140),
-    m = n(809357),
-    f = n(981631),
+    f = n(809357),
+    m = n(981631),
     _ = n(388032),
     v = n(883681),
     x = n(814632);
-function Z(e, t, n) {
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,46 +29,46 @@ function Z(e, t, n) {
         e
     );
 }
-let S = () => [
+let Z = () => [
         {
-            value: f.ipw.LARGE,
+            value: m.ipw.LARGE,
             name: _.intl.string(_.t.YcOxtr)
         },
         {
-            value: f.ipw.SMALL,
+            value: m.ipw.SMALL,
             name: _.intl.string(_.t.BKIKq6)
         }
     ],
     E = () => [
         {
-            value: f.wC$.ALWAYS,
+            value: m.wC$.ALWAYS,
             name: _.intl.string(_.t.nBmDra)
         },
         {
-            value: f.wC$.ONLY_WHILE_SPEAKING,
+            value: m.wC$.ONLY_WHILE_SPEAKING,
             name: _.intl.string(_.t['2OvIZW'])
         },
         {
-            value: f.wC$.NEVER,
+            value: m.wC$.NEVER,
             name: _.intl.string(_.t.ekjlPD)
         }
     ],
     C = () => [
         {
-            value: f.OYC.ALWAYS,
+            value: m.OYC.ALWAYS,
             name: _.intl.string(_.t.nBmDra)
         },
         {
-            value: f.OYC.ONLY_WHILE_SPEAKING,
+            value: m.OYC.ONLY_WHILE_SPEAKING,
             name: _.intl.string(_.t['2OvIZW'])
         }
     ];
 function I() {
     let e = h.Z.getNotificationPositionMode(),
-        t = e !== f._vf.DISABLED,
+        t = e !== m._vf.DISABLED,
         n = u.ZP.getOverlayKeybind(),
         i = u.ZP.getOverlayChatKeybind();
-    r.Z.track(f.rMx.OVERLAY_SETTINGS_UPDATED, {
+    r.Z.track(m.rMx.OVERLAY_SETTINGS_UPDATED, {
         enabled: !0,
         notifications_enabled: t,
         notifications_position: t ? e : null,
@@ -80,7 +80,7 @@ function I() {
 }
 class y extends s.PureComponent {
     componentDidMount() {
-        r.Z.track(f.rMx.SETTINGS_PANE_VIEWED, {
+        r.Z.track(m.rMx.SETTINGS_PANE_VIEWED, {
             settings_type: 'overlay',
             destination_pane: 'OVERLAY SETTINGS',
             origin_pane: null
@@ -178,7 +178,7 @@ class y extends s.PureComponent {
     }
     renderGeneralSettings() {
         let { textChatNotificationMode: e, notificationPositionMode: t, shouldShowKeybindIndicators: n, showKeybindIndicators: l, shouldShowInviteNotification: o } = this.props,
-            c = t !== f._vf.DISABLED;
+            c = t !== m._vf.DISABLED;
         return (0, i.jsxs)(s.Fragment, {
             children: [
                 (0, i.jsx)(a.xJW, {
@@ -190,7 +190,7 @@ class y extends s.PureComponent {
                     })
                 }),
                 (0, i.jsx)(a.j7V, {
-                    value: c && e === f.Ypu.ENABLED,
+                    value: c && e === m.Ypu.ENABLED,
                     onChange: this.handleToggleTextChatNotifications,
                     disabled: !c,
                     hideBorder: !0,
@@ -222,7 +222,7 @@ class y extends s.PureComponent {
                     className: x.marginBottom20,
                     children: (0, i.jsx)(a.FXm, {
                         onChange: this.handleChangeAvatarSizeMode,
-                        options: S(),
+                        options: Z(),
                         value: e,
                         size: a.FXm.Sizes.SMALL
                     })
@@ -297,16 +297,16 @@ class y extends s.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            Z(this, 'state', { selectedSection: 'GENERAL' }),
-            Z(this, 'handleSelectSection', (e) => {
+            S(this, 'state', { selectedSection: 'GENERAL' }),
+            S(this, 'handleSelectSection', (e) => {
                 this.setState({ selectedSection: e });
             }),
-            Z(this, 'handleToggleTextChatNotifications', () => {
-                let { ENABLED: e, DISABLED: t } = f.Ypu,
+            S(this, 'handleToggleTextChatNotifications', () => {
+                let { ENABLED: e, DISABLED: t } = m.Ypu,
                     n = this.props.textChatNotificationMode === e ? t : e;
                 r.Z.setTextChatNotificationMode(n), I();
             }),
-            Z(this, 'handleToggleInviteNotification', () => {
+            S(this, 'handleToggleInviteNotification', () => {
                 let e = this.props.shouldShowInviteNotification;
                 r.Z.setShowGameInviteNotification(!e);
             });
@@ -331,7 +331,7 @@ function N(e) {
             shouldShowKeybindIndicators: h.Z.showKeybindIndicators,
             shouldShowInviteNotification: h.Z.showInviteNotification
         })),
-        u = (0, m.Z)({ location: 'Overlay Settings' });
+        u = (0, f.Z)({ location: 'Overlay Settings' });
     return (0, i.jsx)(y, {
         onClose: t,
         avatarSizeMode: n,

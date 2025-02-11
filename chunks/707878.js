@@ -11,8 +11,8 @@ var i = n(200651),
     h = n(981631),
     p = n(388032),
     g = n(330697);
-let m = Object.values(u.wF).map((e) => 100 * e),
-    f = (0, o.hQ)();
+let f = Object.values(u.wF).map((e) => 100 * e),
+    m = (0, o.hQ)();
 class _ extends s.PureComponent {
     handleUpdateBackgroundOpacity(e) {
         r.Z.setTextWidgetOpacity((0, c.Z)(e / 100)), r.Z.track(h.rMx.OVERLAY_SETTINGS_UPDATED, { text_opacity_slider: e });
@@ -25,7 +25,7 @@ class _ extends s.PureComponent {
             className: g.container,
             children: [
                 (0, i.jsx)(a.vwX, {
-                    id: f,
+                    id: m,
                     tag: a.RB0.H5,
                     className: g.title,
                     children: p.intl.string(p.t.OVovCQ)
@@ -36,16 +36,16 @@ class _ extends s.PureComponent {
                         mini: !0,
                         initialValue: this.initialValue,
                         defaultValue: this.initialValue,
-                        minValue: m[0],
-                        maxValue: m[m.length - 1],
+                        minValue: f[0],
+                        maxValue: f[f.length - 1],
                         handleSize: 10,
                         onValueChange: this.handleUpdateBackgroundOpacity,
                         asValueChanges: this.handlePreviewBackgroundOpacity,
-                        markers: m,
+                        markers: f,
                         onMarkerRender: h.dG4,
                         equidistant: !0,
                         stickToMarkers: !0,
-                        'aria-labelledby': f
+                        'aria-labelledby': m
                     })
                 })
             ]

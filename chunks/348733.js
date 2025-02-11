@@ -17,17 +17,17 @@ function g(e) {
         u = (0, r.e7)([d.Z], () => d.Z.getNotificationPositionMode());
     if (u === h._vf.DISABLED) return null;
     let g = s.filter((e) => !t || e.status !== h._1z.TIMED_OUT),
-        f = (0, a.groupBy)(g, (e) => e.type);
+        m = (0, a.groupBy)(g, (e) => e.type);
     return (0, i.jsx)(c.Z, {
         observeInterval: 200,
         children: (0, i.jsx)('div', {
             className: l()(p.container, p[u]),
-            children: Object.entries(f).map((e) => {
+            children: Object.entries(m).map((e) => {
                 let [s, l] = e;
                 return 0 === l.length
                     ? null
                     : (0, i.jsx)(
-                          m,
+                          f,
                           {
                               locked: t,
                               keybind: n,
@@ -40,7 +40,7 @@ function g(e) {
         })
     });
 }
-function m(e) {
+function f(e) {
     let { notification: t, position: n, keybind: s, locked: l } = e;
     return (0, i.jsx)('div', {
         className: p.notificationGroup,

@@ -23,8 +23,8 @@ var i = n(200651),
     S = n(131951),
     b = n(594174),
     y = n(5192),
-    O = n(1226),
-    w = n(981631),
+    w = n(1226),
+    O = n(981631),
     N = n(388032),
     T = n(359501);
 function j(e) {
@@ -185,15 +185,15 @@ function R(e) {
         ]
     });
 }
-let A = new Set([w.jm8.ENDED, w.jm8.FAILED, w.jm8.PAUSED]),
+let A = new Set([O.jm8.ENDED, O.jm8.FAILED, O.jm8.PAUSED]),
     L = o.memo(function (e) {
         let { participant: t, width: n, locked: o, widgetId: r, pinned: s } = e,
             c = (0, a.e7)([Z.Z], () => Z.Z.getActiveStreamForUser(t.user.id, t.stream.guildId), [t.user.id, t.stream.guildId]),
             u = (0, p.bp)(),
             _ = null != c && A.has(c.state),
             f = null != c,
-            m = (0, O.yA)(t.stream),
-            C = (0, O.xN)(t.stream);
+            m = (0, w.yA)(t.stream),
+            C = (0, w.xN)(t.stream);
         return (!f && o) || _
             ? null
             : (0, i.jsxs)('div', {

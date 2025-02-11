@@ -84,7 +84,7 @@ class q extends l.PureComponent {
             (0, d.yw)(K.rMx.CHANNEL_OPENED, { ...(0, d.$H)(r) }), (0, h.a)(K.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: r });
             let l = null,
                 a = F.Z.getFocusedPID();
-            null == a || Z.Z.getOverlayMethod(a) === s.gl.Disabled || (F.Z.isInstanceLocked() ? (l = K.ADE.OVERLAY_LOCKED_ACTIVATED) : F.Z.isInstanceLocked() || (l = F.Z.isPinned(K.Odu.TEXT) ? K.ADE.OVERLAY_UNLOCKED_PINNED : K.ADE.OVERLAY_UNLOCKED)),
+            null == a || Z.default.getOverlayMethod(a) === s.gl.Disabled || (F.Z.isInstanceLocked() ? (l = K.ADE.OVERLAY_LOCKED_ACTIVATED) : F.Z.isInstanceLocked() || (l = F.Z.isPinned(K.Odu.TEXT) ? K.ADE.OVERLAY_UNLOCKED_PINNED : K.ADE.OVERLAY_UNLOCKED)),
                 z.default.track(K.rMx.JOIN_VOICE_CHANNEL, {
                     location: l,
                     channel_id: r,
@@ -109,7 +109,7 @@ class q extends l.PureComponent {
                 u = null;
             u = null != n ? 'custom_override' : null != e ? 'verified_game' : 'launcher';
             let h = (0, E.b6)(j),
-                m = null !== (t = Z.Z.getOverlayMethod(j.pid)) && void 0 !== t ? t : h.overlayMethod;
+                m = null !== (t = Z.default.getOverlayMethod(j.pid)) && void 0 !== t ? t : h.overlayMethod;
             if (
                 (setTimeout(async () => {
                     var t;

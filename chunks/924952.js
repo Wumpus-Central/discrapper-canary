@@ -3,21 +3,21 @@ var e = i(200651);
 i(192379);
 var l = i(442837),
     a = i(481060),
-    r = i(357156),
-    d = i(471253),
+    d = i(357156),
+    r = i(471253),
     s = i(924301),
     c = i(482241),
     o = i(765305),
     u = i(388032);
 function Z(n, t, i) {
-    let { canManageGuildEvent: Z } = (0, r.XJ)(null != i ? i : t),
+    let { canManageGuildEvent: Z } = (0, d.XJ)(null != i ? i : t),
         h = (0, l.e7)([s.ZP], () => s.ZP.isActive(n)),
         x = (0, l.e7)([s.ZP], () => s.ZP.getGuildScheduledEvent(n), [n]),
         g = Z(x);
     if (null == n || !g || !h || (null == x ? void 0 : x.entity_type) === o.WX.EXTERNAL) return null;
     let v = () => {
         if (null == i ? void 0 : i.isGuildStageVoice()) {
-            (0, d.NZ)(i);
+            (0, r.NZ)(i);
             return;
         }
         null != n && c.Z.endEvent(n, t.id), (0, a.pTH)();

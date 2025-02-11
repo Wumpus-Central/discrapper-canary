@@ -23,8 +23,8 @@ var i = n(200651),
     S = n(449224),
     b = n(358085),
     y = n(981631),
-    O = n(37113),
-    w = n(761274);
+    w = n(37113),
+    O = n(761274);
 function N(e) {
     let t = (0, a.e7)([Z.Z], () => Z.Z.getVoiceChannelId()),
         r = (0, a.e7)([x.Z], () => x.Z.getChannel(t), [t]),
@@ -46,13 +46,13 @@ function N(e) {
         if (null == o && null == i) return !1;
         let l = null != T ? (null === (e = E.Z.getGuild(T)) || void 0 === e ? void 0 : e.premiumTier) : null,
             { preset: a, resolution: s, fps: u, soundshareEnabled: f } = v.Z.getState(),
-            [x, Z] = null !== (n = (0, _.Z)(a, N, l)) && void 0 !== n ? n : [O.LY.RESOLUTION_720, O.ws.FPS_30],
+            [x, Z] = null !== (n = (0, _.Z)(a, N, l)) && void 0 !== n ? n : [w.LY.RESOLUTION_720, w.ws.FPS_30],
             I = a,
             y = s,
             j = u;
-        I !== O.tI.PRESET_CUSTOM && ((y = x), (j = Z)),
+        I !== w.tI.PRESET_CUSTOM && ((y = x), (j = Z)),
             (0, h.Z)(I, y, j, N, l) || ((y = x), (j = Z)),
-            (0, h.Z)(I, y, j, N, l, r) || ((I = O.tI.PRESET_VIDEO), (y = O.LY.RESOLUTION_720), (j = O.ws.FPS_30)),
+            (0, h.Z)(I, y, j, N, l, r) || ((I = w.tI.PRESET_VIDEO), (y = w.LY.RESOLUTION_720), (j = w.ws.FPS_30)),
             (0, d.Rc)({
                 preset: I,
                 resolution: y,
@@ -65,7 +65,7 @@ function N(e) {
             P = null;
         return (
             null == A && null != i && ((L = i.id), (P = i.name)),
-            !!(C.Z.getUseSystemScreensharePicker() || (await m.Z.hasPermission(w.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }))) &&
+            !!(C.Z.getUseSystemScreensharePicker() || (await m.Z.hasPermission(O.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }))) &&
                 ((0, d.WH)(T, t, {
                     pid: A,
                     sourceId: L,

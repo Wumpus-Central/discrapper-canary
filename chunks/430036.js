@@ -11,13 +11,13 @@ var i = n(200651),
     h = n(430742),
     p = n(904245),
     g = n(13245),
-    m = n(144144),
-    f = n(738619),
+    f = n(144144),
+    m = n(738619),
     _ = n(744061),
     v = n(36311),
     x = n(655687),
-    Z = n(823748),
-    S = n(25007),
+    S = n(823748),
+    Z = n(25007),
     E = n(199649),
     C = n(1397),
     I = n(541716),
@@ -150,7 +150,7 @@ class ei extends s.Component {
                     channel: { id: i }
                 } = this.props;
                 h.Z.changeDraft(i, this.state.textValue, R.d.ChannelMessage),
-                    '' !== t ? m.Z.startTyping(i) : m.Z.stopTyping(i),
+                    '' !== t ? f.Z.startTyping(i) : f.Z.stopTyping(i),
                     this.setState({
                         textValue: t,
                         richValue: n
@@ -247,9 +247,9 @@ class es extends s.PureComponent {
         let e;
         let { channel: t, placeholder: n, nsfwAgree: l, guild: r, locked: o, activated: d, chatKeybind: c, pinned: u, isPreviewingInGame: h, dragging: p, pendingReply: g } = this.props;
         if (null == t) return null;
-        let m = o || h,
+        let f = o || h,
             _ = !l && null != t && t.isNSFW(),
-            x = !m || d;
+            x = !f || d;
         return (
             (e =
                 _ && null != r
@@ -260,7 +260,7 @@ class es extends s.PureComponent {
                               channel: t,
                               className: ee.messages,
                               forceCompact: u,
-                              showNewMessagesBar: !m,
+                              showNewMessagesBar: !f,
                               scrollerClassName: u ? ee.scroller : void 0,
                               showingQuarantineBanner: !1
                           },
@@ -269,13 +269,13 @@ class es extends s.PureComponent {
             (0, i.jsx)(b.G.Provider, {
                 value: {
                     disableInteractions: u && o && !d,
-                    disableAnimations: u && m && !d
+                    disableAnimations: u && f && !d
                 },
                 children: (0, i.jsxs)(s.Fragment, {
                     children: [
                         !o &&
                             !h &&
-                            (0, i.jsx)(S.Z, {
+                            (0, i.jsx)(Z.Z, {
                                 channel: t,
                                 guild: r
                             }),
@@ -306,7 +306,7 @@ class es extends s.PureComponent {
                                                     }),
                                                     (0, i.jsx)('div', {
                                                         className: ee.typingWrapper,
-                                                        children: (0, i.jsx)(f.Z, {
+                                                        children: (0, i.jsx)(m.Z, {
                                                             channel: t,
                                                             className: ee.typing
                                                         })
@@ -451,12 +451,12 @@ function el(e) {
         [c, u, h] = (0, d.Wu)([F.Z], () => [F.Z.getTextWidgetOpacity(), F.Z.getActiveRegions(), !t && F.Z.isPreviewingInGame()]),
         p = (0, d.e7)([A.Z], () => A.Z.getGuild(s)),
         g = (0, d.e7)([D.Z], () => null != s && D.Z.didAgree(s)),
-        m = null != a && a.isPrivate() ? a.getRecipientId() : null,
-        f = (0, d.e7)([w.Z], () => (null != l ? w.Z.getPendingReply(l) : void 0)),
-        _ = (0, d.e7)([V.default], () => (null != m ? V.default.getUser(m) : null)),
+        f = null != a && a.isPrivate() ? a.getRecipientId() : null,
+        m = (0, d.e7)([w.Z], () => (null != l ? w.Z.getPendingReply(l) : void 0)),
+        _ = (0, d.e7)([V.default], () => (null != f ? V.default.getUser(f) : null)),
         { placeholder: v } = (0, x.Z)({ channel: a });
     return null != a && null != p && q.TPd.GUILD_THREADS_ONLY.has(a.type)
-        ? (0, i.jsx)(Z.Z, {})
+        ? (0, i.jsx)(S.Z, {})
         : (0, i.jsx)(es, {
               guild: p,
               channel: a,
@@ -466,7 +466,7 @@ function el(e) {
               chatKeybind: o,
               activated: u.has(q.O0n.TEXT_WIDGET),
               isPreviewingInGame: h,
-              pendingReply: f,
+              pendingReply: m,
               contained: t,
               placeholder: v,
               widget: q.Odu.TEXT,

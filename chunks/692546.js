@@ -11,8 +11,8 @@ var i,
     h = n(808506),
     p = n(372679),
     g = n(671999),
-    m = n(358085);
-function f(e, t, n) {
+    f = n(358085);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,17 +34,17 @@ function x(e) {
     let { clientX: t, clientY: n } = e;
     (v = !0), (_.x = t), (_.y = n);
 }
-let Z = new Map();
-function S(e, t) {
-    if (null == t) Z.delete(e), 0 === Z.size && (window.removeEventListener('mousemove', x), (v = !1));
+let S = new Map();
+function Z(e, t) {
+    if (null == t) S.delete(e), 0 === S.size && (window.removeEventListener('mousemove', x), (v = !1));
     else {
-        let n = Z.get(e);
+        let n = S.get(e);
         if (null != n && (0, d.Z)(n.zone, t.zone)) return;
-        0 === Z.size && window.addEventListener('mousemove', x), Z.set(e, t);
+        0 === S.size && window.addEventListener('mousemove', x), S.set(e, t);
     }
-    if (m.isPlatformEmbedded) {
+    if (f.isPlatformEmbedded) {
         if (h.Z.isFocusedPidOutOfProcess()) {
-            let e = Array.from(Z.values()).map((e) => {
+            let e = Array.from(S.values()).map((e) => {
                 let { zone: t } = e;
                 return {
                     name: t.name,
@@ -61,7 +61,7 @@ function S(e, t) {
             if (null == e) return;
             e.broadcastCommand({
                 message: 'set_click_zones',
-                zones: Array.from(Z.values()).map((e) => {
+                zones: Array.from(S.values()).map((e) => {
                     let { zone: t } = e;
                     return t;
                 })
@@ -69,7 +69,7 @@ function S(e, t) {
                 (n = e),
                 E ||
                     (n.setClickZoneCallback((e, t, n) => {
-                        let i = Z.get(e);
+                        let i = S.get(e);
                         null != i && (v || ((_.x = t), (_.y = n)), i.instance.click());
                     }),
                     (E = !0));
@@ -82,7 +82,7 @@ class C extends (i = s.PureComponent) {
         this.props.observe ? this.observeZone() : this.updateZone();
     }
     componentWillUnmount() {
-        this.interval.stop(), S(this.zone, null);
+        this.interval.stop(), Z(this.zone, null);
     }
     componentDidUpdate(e) {
         let { observe: t } = this.props;
@@ -100,13 +100,13 @@ class C extends (i = s.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            f(this, 'zone', a().uniqueId('ClickArea')),
-            f(this, 'interval', new c.Xp()),
-            f(this, 'updateZone', () => {
+            m(this, 'zone', a().uniqueId('ClickArea')),
+            m(this, 'interval', new c.Xp()),
+            m(this, 'updateZone', () => {
                 let e = (0, r.findDOMNode)(this);
                 if ((0, o.k)(e)) {
                     let { left: t, top: n, right: i, bottom: s } = e.getBoundingClientRect();
-                    S(this.zone, {
+                    Z(this.zone, {
                         instance: this,
                         zone: {
                             name: this.zone,
@@ -120,7 +120,7 @@ class C extends (i = s.PureComponent) {
             });
     }
 }
-f(C, 'defaultProps', {
+m(C, 'defaultProps', {
     observe: !0,
     observeInterval: 1000
 });

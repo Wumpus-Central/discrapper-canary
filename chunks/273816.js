@@ -18,9 +18,9 @@ function g(e) {
     (0, c.nU)();
     let m = (0, a.e7)([h.Z], () => h.Z.getWindow(p.$J)),
         [v, x] = (0, c.m8)(g),
-        { currentFPS: E, averageFrameTime: C, timeSinceLastDrop: Z, onResetFrameData: I, droppedFramesRef: S, renderedFrameCount: b, bufferFramecountRef: y, frameCheckerEffect: O } = (0, c.d6)(!0, v, !0),
-        [w, N, T] = (0, c.ZF)(g),
-        [j, k] = (0, c.Y5)(w, O, m),
+        { currentFPS: E, averageFrameTime: C, timeSinceLastDrop: Z, onResetFrameData: I, droppedFramesRef: S, renderedFrameCount: b, bufferFramecountRef: y, frameCheckerEffect: w } = (0, c.d6)(!0, v, !0),
+        [O, N, T] = (0, c.ZF)(g),
+        [j, k] = (0, c.Y5)(O, w, m),
         R = performance.now() - x.current < c.MC,
         A = N(C, y.current);
     (0, d.ZP)(

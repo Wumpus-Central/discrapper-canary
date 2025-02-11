@@ -20,7 +20,7 @@ function m(e) {
             lock: u.VqG,
             context: u.IlC.APP
         };
-    let t = l.Z.isOverlayOOPEnabledForPid(e);
+    let t = l.default.isOverlayOOPEnabledForPid(e);
     return r.Z.isReady(e)
         ? (i.Z.setInputLocked(!1, e),
           {

@@ -11,8 +11,8 @@ var i,
     h = n(518084),
     p = n(178528),
     g = n(669083),
-    m = n(483962),
-    f = n(711553),
+    f = n(483962),
+    m = n(711553),
     _ = n(388032),
     v = n(931352);
 function x(e, t, n) {
@@ -28,11 +28,11 @@ function x(e, t, n) {
         e
     );
 }
-function Z(e) {
+function S(e) {
     let { closePopout: t } = e;
     return (0, s.jsx)(g.Z, { onClose: t });
 }
-class S extends (i = l.PureComponent) {
+class Z extends (i = l.PureComponent) {
     render() {
         let { selectedGuildId: e, locked: t, contained: n, className: i } = this.props,
             l =
@@ -45,11 +45,11 @@ class S extends (i = l.PureComponent) {
                           },
                           e
                       )
-                    : (0, s.jsx)(f.Z, {
+                    : (0, s.jsx)(m.Z, {
                           title: _.intl.string(_.t.YUU0RE),
-                          renderSettings: Z,
+                          renderSettings: S,
                           onDragStart: this.onDragStart,
-                          children: (0, s.jsx)(m.Z, {})
+                          children: (0, s.jsx)(f.Z, {})
                       }),
             a = n ? 'div' : h.ZP;
         return (0, s.jsxs)(a, {
@@ -72,5 +72,5 @@ class S extends (i = l.PureComponent) {
             });
     }
 }
-x(S, 'defaultProps', { contained: !1 });
-let E = o.ZP.connectStores([u.Z], () => ({ selectedGuildId: u.Z.getGuildId() }))(S);
+x(Z, 'defaultProps', { contained: !1 });
+let E = o.ZP.connectStores([u.Z], () => ({ selectedGuildId: u.Z.getGuildId() }))(Z);

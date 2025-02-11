@@ -11,13 +11,13 @@ var i = n(200651),
     h = n(984370),
     p = n(910611),
     g = n(131704),
-    m = n(523746),
-    f = n(592125),
+    f = n(523746),
+    m = n(592125),
     _ = n(430824),
     v = n(699516),
     x = n(944486),
-    Z = n(707878),
-    S = n(518084),
+    S = n(707878),
+    Z = n(518084),
     E = n(388032),
     C = n(437834);
 function I(e, t, n) {
@@ -56,12 +56,12 @@ class y extends s.Component {
     }
     render() {
         let { className: e, draggableClassName: t, locked: n, channel: s, channelName: l, guild: r, onMouseDown: d, onContextMenu: c, isPreviewingInGame: u, disableDragIndicator: g } = this.props,
-            { showOpacitySlider: m } = this.state;
-        return m && !n
-            ? (0, i.jsxs)(S.ZP.Bar, {
+            { showOpacitySlider: f } = this.state;
+        return f && !n
+            ? (0, i.jsxs)(Z.ZP.Bar, {
                   className: C.opacityHeader,
                   children: [
-                      (0, i.jsx)(Z.Z, {}),
+                      (0, i.jsx)(S.Z, {}),
                       (0, i.jsx)(h.Z.Icon, {
                           icon: o.Dio,
                           onClick: this.handleCloseOpacitySettings,
@@ -69,7 +69,7 @@ class y extends s.Component {
                       })
                   ]
               })
-            : (0, i.jsx)(S.ZP.Background, {
+            : (0, i.jsx)(Z.ZP.Background, {
                   opacityOverride: n || u ? null : 1,
                   children: (0, i.jsx)('div', {
                       className: a()(e, t, C.headerContainer),
@@ -151,12 +151,12 @@ class y extends s.Component {
 }
 function N(e) {
     let { channel: t, ...n } = e,
-        s = (0, r.e7)([x.Z, f.Z], () => {
+        s = (0, r.e7)([x.Z, m.Z], () => {
             let e = x.Z.getVoiceChannelId();
-            return f.Z.getChannel(e);
+            return m.Z.getChannel(e);
         }),
         l = (0, r.e7)([_.Z], () => _.Z.getGuild(t.guild_id)),
-        a = (0, r.e7)([m.Z], () => m.Z.isCallActive(t.id)),
+        a = (0, r.e7)([f.Z], () => f.Z.isCallActive(t.id)),
         o = (0, u.ZP)(t),
         d = (0, r.e7)([v.Z], () => !!t.isDM() && null != t.getRecipientId() && v.Z.isBlocked(t.getRecipientId()));
     return (0, i.jsx)(y, {

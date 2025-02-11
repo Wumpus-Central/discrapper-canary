@@ -26,8 +26,8 @@ function b(e, t, n, i) {
     return e === C.C5.HORIZONTAL ? Math.min(Math.max((t - o) / i, 256), Math.max((16 * n) / 9, 256)) : Math.min(Math.max(t, 256), Math.max((((n - o) / i) * 16) / 9, 256));
 }
 function y(e) {
-    let { id: t, size: n, locked: y, padding: O, borderWidth: w, opacity: N, horizontal: T, pinned: j, anchorTop: k, anchorLeft: R } = e,
-        A = 2 * O + 2 * w,
+    let { id: t, size: n, locked: y, padding: w, borderWidth: O, opacity: N, horizontal: T, pinned: j, anchorTop: k, anchorLeft: R } = e,
+        A = 2 * w + 2 * O,
         { width: L, height: P } = {
             width: 'number' == typeof n.width ? n.width : 256,
             height: 'number' == typeof n.height ? n.height : 144
@@ -114,7 +114,7 @@ function y(e) {
             height: P,
             sizeOffset: A,
             layout: $,
-            padding: O,
+            padding: w,
             participants: K.length
         };
     return (!(function (e) {

@@ -28,8 +28,8 @@ var i = n(200651),
     S = n(592125),
     b = n(293273),
     y = n(158776),
-    O = n(594174),
-    w = n(630388),
+    w = n(594174),
+    O = n(630388),
     N = n(5192),
     T = n(358085),
     j = n(998502),
@@ -39,7 +39,7 @@ var i = n(200651),
     L = n(147812);
 function P(e) {
     let { entry: t, currentUserActivity: n, idx: r } = e,
-        c = (0, a.e7)([O.default], () => O.default.getUser(t.author_id)),
+        c = (0, a.e7)([w.default], () => w.default.getUser(t.author_id)),
         [_, g] = o.useState('unsent'),
         [m, v] = o.useState(!1);
     o.useEffect(() => {
@@ -135,7 +135,7 @@ function P(e) {
 function D(e) {
     var t;
     let { entry: n, currentUserActivity: r } = e,
-        l = (0, a.e7)([O.default], () => O.default.getUser(n.author_id)),
+        l = (0, a.e7)([w.default], () => w.default.getUser(n.author_id)),
         c = null !== (t = null == r ? void 0 : r.application_id) && void 0 !== t ? t : n.extra.application_id,
         u = (0, a.e7)([y.Z], () => (null != l ? y.Z.getApplicationActivity(l.id, c) : null), [c, l]),
         [h, _] = o.useState('unsent');
@@ -188,7 +188,7 @@ function D(e) {
 }
 function M(e) {
     let { entry: t, currentUserActivity: n, idx: o } = e,
-        r = (0, a.e7)([O.default], () => O.default.getUser(t.author_id)),
+        r = (0, a.e7)([w.default], () => w.default.getUser(t.author_id)),
         l = (0, a.e7)([I.Z], () => (null != r ? I.Z.getAnyStreamForUser(r.id) : null), [r]),
         { isMobileOnline: d, status: c } = (0, a.cj)(
             [y.Z],
@@ -272,11 +272,11 @@ function V() {
         t = null == e ? void 0 : e.id,
         n = null == e ? void 0 : e.altId,
         o = (0, E.Ns)(t),
-        r = (0, a.e7)([O.default], () => O.default.getCurrentUser()),
+        r = (0, a.e7)([w.default], () => w.default.getCurrentUser()),
         l = (0, a.e7)([b.Z], () => (null != n ? b.Z.getApplicationActivity(n) : null != t ? b.Z.getApplicationActivity(t) : null)),
         d = null != l && (0, f.Z)(l, R.xjy.JOIN),
         u = (0, g.q)(null == l ? void 0 : l.application_id),
-        h = null != u && (0, w.yE)(u.flags, R.udG.EMBEDDED);
+        h = null != u && (0, O.yE)(u.flags, R.udG.EMBEDDED);
     return 0 === o.length && null == l
         ? null
         : (0, i.jsxs)('div', {

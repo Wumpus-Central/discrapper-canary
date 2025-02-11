@@ -9,7 +9,7 @@ var s = n(442837),
     c = n(794704);
 function d(e) {
     let t = (0, r.XE)('user_settings'),
-        n = (0, s.e7)([a.Z], () => a.Z.getForcedRenderMode()),
+        n = (0, s.e7)([a.default], () => a.default.getForcedRenderMode()),
         d = n === l.R5.OUT_OF_PROCESS_V2 || n === l.R5.OUT_OF_PROCESS_V3;
     return t || d ? (0, i.jsx)(c.Z, { ...e }) : (0, i.jsx)(o.Z, { ...e });
 }

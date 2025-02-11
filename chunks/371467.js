@@ -23,8 +23,8 @@ var i,
     S = n(974180),
     b = n(237997),
     y = n(70956),
-    O = n(150097),
-    w = n(129724),
+    w = n(150097),
+    O = n(129724),
     N = n(145597),
     T = n(371651),
     j = n(610394),
@@ -193,7 +193,7 @@ let eo = new ei(c.Z, {
         let { nudges: n } = e;
         J(0);
         let i = null !== (t = j.ZP.getFocusedPID()) && void 0 !== t ? t : N.R2;
-        if (T.Z.hasChangedRenderMode(i)) return;
+        if (T.default.hasChangedRenderMode(i)) return;
         let o = (0, z.Z)((0, k.pL)(), n);
         null != o &&
             et(o, {
@@ -221,7 +221,7 @@ let eo = new ei(c.Z, {
             d = I.default.getUser(null === (t = l.author) || void 0 === t ? void 0 : t.id);
         if (null == s || null == d) return !1;
         if ((null === (n = l.activity) || void 0 === n ? void 0 : n.type) === V.mFx.JOIN || (null === (i = l.activity) || void 0 === i ? void 0 : i.type) === V.mFx.JOIN_REQUEST) {
-            if (!(0, O.eF)(l, r, !0, !0)) return !1;
+            if (!(0, w.eF)(l, r, !0, !0)) return !1;
             let e = (function (e, t, n) {
                 var i;
                 let o, r;
@@ -251,7 +251,7 @@ let eo = new ei(c.Z, {
             })(s, l, d);
             if (!1 !== e) return e;
         }
-        if (b.Z.getTextChatNotificationMode() === V.Ypu.DISABLED || Z.Z.disableNotifications || !(0, O.eF)(l, r)) return !1;
+        if (b.Z.getTextChatNotificationMode() === V.Ypu.DISABLED || Z.Z.disableNotifications || !(0, w.eF)(l, r)) return !1;
         let c = !x.Z.isSoundDisabled(S.Ay),
             u = null !== (o = v.Z.getMessage(r, l.id)) && void 0 !== o ? o : (0, _.e5)(l);
         et((0, M.Z)(s, u, d, c), {
@@ -308,7 +308,7 @@ let eo = new ei(c.Z, {
         et((0, L.f)(W.intl.string(W.t.NBMK9v)));
     },
     CLIPS_SAVE_CLIP: function () {
-        et((0, L.f)(W.intl.format(W.t.KLhk6u, { duration: (0, w.A)(h.Z.getSettings().clipsLength / 1000, !0) })));
+        et((0, L.f)(W.intl.format(W.t.KLhk6u, { duration: (0, O.A)(h.Z.getSettings().clipsLength / 1000, !0) })));
     },
     CLIPS_SAVE_CLIP_ERROR: function () {
         et((0, L.f)(W.intl.string(W.t['1ZbZur'])));

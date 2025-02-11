@@ -60,8 +60,8 @@ function f(e) {
     let y = () => {
             a(Date.now()), C((e) => e + 1);
         },
-        O = r > 0 && f - r < 1000,
-        w = (0, c.Yzy)(m > 0 && m < f && f - m < Z, {
+        w = r > 0 && f - r < 1000,
+        O = (0, c.Yzy)(m > 0 && m < f && f - m < Z, {
             from: { opacity: 0 },
             enter: { opacity: 1 },
             leave: { opacity: 0 },
@@ -78,14 +78,14 @@ function f(e) {
     return t && !n
         ? null
         : (0, i.jsx)(i.Fragment, {
-              children: w(
+              children: O(
                   (e, t) =>
                       t &&
                       (0, i.jsx)(d.animated.div, {
                           style: e,
                           className: _.clickZoneDebugContainer,
                           children: (0, i.jsx)(h.Z, {
-                              className: l()(_.clickZone, O && _.clickBackground),
+                              className: l()(_.clickZone, w && _.clickBackground),
                               children: (0, i.jsx)(c.P3F, {
                                   onClick: y,
                                   className: _.clickable,

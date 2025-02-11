@@ -17,8 +17,8 @@ var i = n(200651),
     b = n(254761),
     x = n(70956),
     g = n(960048),
-    E = n(145597),
-    y = n(692546),
+    y = n(145597),
+    E = n(692546),
     Z = n(518084),
     k = n(987650),
     I = n(981631),
@@ -39,8 +39,8 @@ function w(e, t, n) {
 }
 let A = 10 * x.Z.Millis.SECOND;
 function S() {
-    let e = (0, E.QF)(),
-        t = (0, E.Ht)();
+    let e = (0, y.QF)(),
+        t = (0, y.Ht)();
     (0, p.lW)({
         type: I.BmY.DISPATCH,
         pid: e,
@@ -68,7 +68,7 @@ class T extends o.PureComponent {
             { notificationTimer: o } = this;
         return null == o
             ? null
-            : (0, i.jsx)(y.Z, {
+            : (0, i.jsx)(E.Z, {
                   observe: !1,
                   children: (0, i.jsx)(_.f6W, {
                       theme: I.BRd.DARK,
@@ -163,11 +163,11 @@ class P extends o.PureComponent {
             error: e,
             info: t
         });
-        let i = (0, E.QF)(),
-            o = (0, E.Ht)();
+        let i = (0, y.QF)(),
+            o = (0, y.Ht)();
         (0, p.lW)({
             type: I.BmY.DISPATCH,
-            pid: (0, E.QF)(),
+            pid: (0, y.QF)(),
             token: o,
             payloads: [
                 {

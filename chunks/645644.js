@@ -274,7 +274,7 @@ class x {
     }
     buildOverlayMethodStats(e, t) {
         let n = this.overlayMethodStats,
-            { oopEnabled: i, legacyEnabled: r } = f.Z.getPerGameEnabledStatus(t),
+            { oopEnabled: i, legacyEnabled: r } = f.default.getPerGameEnabledStatus(t),
             a = {
                 legacy_override: !0 === r,
                 enabled: i || r,
@@ -285,7 +285,7 @@ class x {
             a.quns_mode = this.getQunsName(e);
         }
         if (null == e) {
-            let e = null != t ? f.Z.getRenderMethod(t.pid) : null;
+            let e = null != t ? f.default.getRenderMethod(t.pid) : null;
             return {
                 original_method: null != e ? e : s.gl.Disabled,
                 ...a

@@ -11,13 +11,13 @@ var i,
     h = n(239091),
     p = n(765250),
     g = n(13245),
-    m = n(872810),
-    f = n(586902),
+    f = n(872810),
+    m = n(586902),
     _ = n(835473),
     v = n(933557),
     x = n(600164),
-    Z = n(118012),
-    S = n(594190),
+    S = n(118012),
+    Z = n(594190),
     E = n(925329),
     C = n(569545),
     I = n(914923),
@@ -66,29 +66,29 @@ function en(e, t, n) {
     );
 }
 function ei(e) {
-    let { flipped: t = !1, locked: n = !1, user: i, nick: a, displayNameMode: d, displayUserMode: c, size: u = q.ipw.LARGE, onClick: h, onContextMenu: p, context: g, guildId: m, voiceState: _ } = e,
+    let { flipped: t = !1, locked: n = !1, user: i, nick: a, displayNameMode: d, displayUserMode: c, size: u = q.ipw.LARGE, onClick: h, onContextMenu: p, context: g, guildId: f, voiceState: _ } = e,
         v = (0, J.Z)({ location: 'overlay_voice_widget' }),
         x = (0, o.e7)([F.Z], () => F.Z.showKeybindIndicators),
-        Z = (0, o.e7)([R.default], () => R.default.getId()),
-        S = (0, o.e7)([L.Z], () => L.Z.isLocalMute(i.id)),
+        S = (0, o.e7)([R.default], () => R.default.getId()),
+        Z = (0, o.e7)([L.Z], () => L.Z.isLocalMute(i.id)),
         E = (0, o.e7)([P.Z], () => P.Z.getCurrentUserActiveStream()),
         C = (0, o.Wu)([P.Z], () => (null != E ? P.Z.getViewerIds(E) : [])),
-        I = (0, f.Z)({
+        I = (0, m.Z)({
             userId: i.id,
             context: g
         }),
         y = (0, o.e7)([B.Z], () => B.Z.isPrioritySpeaker(i.id, g)),
-        N = (0, o.e7)([P.Z], () => null != P.Z.getStreamForUser(i.id, m)),
+        N = (0, o.e7)([P.Z], () => null != P.Z.getStreamForUser(i.id, f)),
         T = l.useMemo(() => null != E && E.ownerId !== i.id && C.includes(i.id), [E, i.id, C]);
     if (c === q.OYC.ONLY_WHILE_SPEAKING && n && !I) return null;
-    let b = i.id === Z,
+    let b = i.id === S,
         { mute: O, selfMute: j, suppress: k, deaf: M, selfDeaf: D } = _,
         A = v && x,
         z = j && (!b || !A);
     return (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsx)(w.ZP, {
-                guildId: m,
+                guildId: f,
                 onClick: n ? void 0 : (e) => (null == h ? void 0 : h(e, i)),
                 onContextMenu: n ? void 0 : (e) => (null == p ? void 0 : p(e, i)),
                 className: r()(et.voiceUserWrapper, {
@@ -105,8 +105,8 @@ function ei(e) {
                 isOverlay: !0,
                 size: u,
                 priority: y,
-                mute: O || z || S,
-                localMute: S,
+                mute: O || z || Z,
+                localMute: Z,
                 serverMute: O || k,
                 deaf: M || D,
                 serverDeaf: M,
@@ -187,7 +187,7 @@ class es extends (i = l.PureComponent) {
                             height: 20,
                             className: r()(et.icon, et.faded, et.speakerIcon)
                         }),
-                        (0, s.jsx)(Z.Z, {
+                        (0, s.jsx)(S.Z, {
                             color: d.Z.unsafe_rawColors.PRIMARY_200.css,
                             className: et.title,
                             children: t
@@ -376,7 +376,7 @@ class es extends (i = l.PureComponent) {
             }),
             en(this, 'handleStopStream', () => {
                 let { stream: e } = this.props;
-                null != e && m.g((0, C.V9)(e));
+                null != e && f.g((0, C.V9)(e));
             });
     }
 }
@@ -399,14 +399,14 @@ function el(e) {
             return l.useMemo(() => (n ? [...e].sort((e, n) => (e.user.id === t ? -1 : n.user.id === t ? 1 : 0)) : e), [e, t, n]);
         })(),
         r = (0, o.e7)([P.Z], () => P.Z.getStreamerActiveStreamMetadata()),
-        d = (0, o.e7)([S.ZP, V.Z, A.Z], () => {
+        d = (0, o.e7)([Z.ZP, V.Z, A.Z], () => {
             var e;
-            let t = (0, N.Z)(S.ZP, V.Z);
+            let t = (0, N.Z)(Z.ZP, V.Z);
             return null != t ? (null === (e = A.Z.getGameByGameData(t)) || void 0 === e ? void 0 : e.id) : null;
         }),
         c = (0, _.q)(d),
-        u = (0, o.cj)([S.ZP, V.Z, P.Z, F.Z], () => {
-            let e = (0, N.Z)(S.ZP, V.Z),
+        u = (0, o.cj)([Z.ZP, V.Z, P.Z, F.Z], () => {
+            let e = (0, N.Z)(Z.ZP, V.Z),
                 t = P.Z.getCurrentUserActiveStream();
             return {
                 displayUserMode: F.Z.getDisplayUserMode(),

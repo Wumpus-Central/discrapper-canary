@@ -31,8 +31,8 @@ var i = n(200651),
     S = n(471445),
     b = n(44315),
     y = n(74299),
-    O = n(803647),
-    w = n(565138),
+    w = n(803647),
+    O = n(565138),
     N = n(917405),
     T = n(763296),
     j = n(603074),
@@ -261,7 +261,7 @@ function eo(e) {
         t = s ? (null != e ? J.intl.format(J.t.AB5gT0, { game: e.name }) : J.intl.string(J.t.FeUKeH)) : J.intl.string(J.t.uQn9Bw);
     }
     let f = () => {
-            if (p) return (0, O.Z)(u, !1);
+            if (p) return (0, w.Z)(u, !1);
             h();
         },
         {
@@ -428,9 +428,9 @@ function ea(e) {
                     (0, i.jsxs)('div', {
                         className: q.guildIconContainer,
                         children: [
-                            (0, i.jsx)(w.Z, {
+                            (0, i.jsx)(O.Z, {
                                 guild: n,
-                                size: w.Z.Sizes.SMOL,
+                                size: O.Z.Sizes.SMOL,
                                 className: q.guildIcon
                             }),
                             (0, i.jsx)(_.Text, {

@@ -11,7 +11,7 @@ function c(e, t, n, c, u) {
     let h = t.activity.type,
         p = u.session_id;
     if (null == p) return null;
-    let { icon: g, title: m, body: f } = (0, a.Xi)(e, t, n),
+    let { icon: g, title: f, body: m } = (0, a.Xi)(e, t, n),
         { trackView: _, trackClick: v } = (0, r.R)(o.n0.ActivityInvite, {
             notif_type: o.n0.ActivityInvite,
             notif_user_id: n.id,
@@ -25,8 +25,8 @@ function c(e, t, n, c, u) {
         });
     return {
         icon: g,
-        title: m,
-        body: f,
+        title: f,
+        body: m,
         hint: (e) => (0, l.QR)(e, (0, r.P)(), d.t.aB5xLy),
         onNotificationShow: () => {
             _();

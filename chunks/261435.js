@@ -11,13 +11,13 @@ var i,
     h = n(836932),
     p = n(175553),
     g = n(158979),
-    m = n(181912),
-    f = n(791288),
+    f = n(181912),
+    m = n(791288),
     _ = n(194295),
     v = n(998033),
     x = n(181364),
-    Z = n(435064),
-    S = n(668761),
+    S = n(435064),
+    Z = n(668761),
     E = n(86071),
     C = n(358446),
     I = n(371651),
@@ -119,7 +119,7 @@ function es(e) {
                 : [];
     }
     0 !== s.length &&
-        ei((0, f.Z)(n, s), {
+        ei((0, m.Z)(n, s), {
             priority: 2,
             type: 'content-inventory',
             expirationExternallyManaged: !0,
@@ -146,7 +146,7 @@ function el(e) {
         return !1;
     let l = J.find((e) => 1 === e.type && e.channelId === t && e.messageType === U.uaV.CALL);
     null != l && ee(l.id),
-        ei((0, m.Z)(s), {
+        ei((0, f.Z)(s), {
             priority: 1,
             expirationExternallyManaged: !0,
             type: 2,
@@ -178,7 +178,7 @@ let er = new ea(c.Z, {
     OVERLAY_MOUNTED: function (e) {
         var t;
         let { nudges: n } = e;
-        if (I.Z.hasChangedRenderMode(null !== (t = A.Z.getFocusedPID()) && void 0 !== t ? t : (0, W.QF)())) return;
+        if (I.default.hasChangedRenderMode(null !== (t = A.Z.getFocusedPID()) && void 0 !== t ? t : (0, W.QF)())) return;
         let i = (function (e) {
             switch (e.type) {
                 case G.nc.GO_LIVE_VOICE:
@@ -292,22 +292,22 @@ let er = new ea(c.Z, {
         );
     },
     CLIPS_SAVE_CLIP_START: function () {
-        ei((0, S.f)(H.intl.string(H.t.NBMK9v)));
+        ei((0, Z.f)(H.intl.string(H.t.NBMK9v)));
     },
     CLIPS_SAVE_CLIP: function () {
-        ei((0, S.f)(H.intl.formatToPlainString(H.t.KLhk6u, { duration: (0, V.A)(Z.Z.getSettings().clipsLength / 1000, !0) })));
+        ei((0, Z.f)(H.intl.formatToPlainString(H.t.KLhk6u, { duration: (0, V.A)(S.Z.getSettings().clipsLength / 1000, !0) })));
     },
     CLIPS_SAVE_CLIP_ERROR: function () {
-        ei((0, S.f)(H.intl.string(H.t['1ZbZur'])));
+        ei((0, Z.f)(H.intl.string(H.t['1ZbZur'])));
     },
     STREAM_START: function (e) {
-        let t = (0, S.y)();
+        let t = (0, Z.y)();
         null != t && ei(t);
     },
     OVERLAY_CONTENT_INVENTORY_READY: function (e) {
         var t;
         let { contentInventoryEntries: n } = e;
-        if (0 === n.length || ((q = n), I.Z.hasChangedRenderMode(null !== (t = A.Z.getFocusedPID()) && void 0 !== t ? t : (0, W.QF)()) || null == F.Z.getGame())) return;
+        if (0 === n.length || ((q = n), I.default.hasChangedRenderMode(null !== (t = A.Z.getFocusedPID()) && void 0 !== t ? t : (0, W.QF)()) || null == F.Z.getGame())) return;
         let { enabled: i, affinityThreshold: s } = E.Z.getCurrentConfig({ location: 'OverlayNotificationsStore' });
         i && (0 !== y.Z.getUserAffinities().length || null == s) && es({ contentInventoryEntries: n });
     },

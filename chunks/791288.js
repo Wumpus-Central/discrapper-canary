@@ -11,13 +11,13 @@ var i = n(200651),
     h = n(835473),
     p = n(194082),
     g = n(442550),
-    m = n(297781),
-    f = n(371991),
+    f = n(297781),
+    m = n(371991),
     _ = n(656709),
     v = n(561308),
     x = n(593481),
-    Z = n(371651),
-    S = n(703656),
+    S = n(371651),
+    Z = n(703656),
     E = n(199902),
     C = n(592125),
     I = n(158776),
@@ -102,7 +102,7 @@ function D(e) {
         l = (0, r.e7)([y.default], () => y.default.getUser(t.author_id)),
         h = (0, v.kr)(t),
         g = h ? o.TVs.colors.TEXT_POSITIVE : o.TVs.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY,
-        [x, Z] = s.useState('unsent'),
+        [x, S] = s.useState('unsent'),
         [b, O] = s.useState(!1),
         k = (0, r.e7)([N.Z], () => N.Z.customInviteMessage),
         M = (0, r.e7)([E.Z], () => (null != l ? E.Z.getAnyStreamForUser(l.id) : null), [l]),
@@ -131,11 +131,11 @@ function D(e) {
                 e.stopPropagation();
                 try {
                     var i;
-                    Z('sending');
+                    S('sending');
                     let e = await d.Z.getOrEnsurePrivateChannel(l.id),
                         s = null !== (i = C.Z.getChannel(e)) && void 0 !== i ? i : null;
                     a()(null != s, 'Send channel must be defined'),
-                        (0, S.uL)(j.Z5c.CHANNEL(s.guild_id, s.id)),
+                        (0, Z.uL)(j.Z5c.CHANNEL(s.guild_id, s.id)),
                         await (0, _.p)({
                             channel: s,
                             content: null != k ? k : w.intl.string(w.t.DwAcMz),
@@ -148,9 +148,9 @@ function D(e) {
                             target_index: n,
                             sent_custom_message: null != k
                         }),
-                        Z('sent');
+                        S('sent');
                 } catch (e) {
-                    Z('unsent');
+                    S('unsent');
                 }
             }
         },
@@ -159,7 +159,7 @@ function D(e) {
             if (null == l) return;
             let t = await d.Z.getOrEnsurePrivateChannel(l.id),
                 n = null !== (e = C.Z.getChannel(t)) && void 0 !== e ? e : null;
-            a()(null != n, 'Send channel must be defined'), (0, S.uL)(j.Z5c.CHANNEL(n.guild_id, n.id));
+            a()(null != n, 'Send channel must be defined'), (0, Z.uL)(j.Z5c.CHANNEL(n.guild_id, n.id));
         };
     return null == l
         ? null
@@ -187,13 +187,13 @@ function D(e) {
                                   null != M && (0, i.jsx)(p.ZP, {})
                               ]
                           }),
-                          (0, i.jsxs)(m.m7, {
+                          (0, i.jsxs)(f.m7, {
                               children: [
                                   (0, i.jsx)(o.iWm, {
                                       size: 'xxs',
                                       color: g
                                   }),
-                                  (0, i.jsx)(f.ZP, {
+                                  (0, i.jsx)(m.ZP, {
                                       entry: t,
                                       textColor: h ? 'text-positive' : 'content-inventory-overlay-text-secondary',
                                       bold: !0
@@ -361,7 +361,7 @@ function z(e, t) {
                     });
             },
             onNotificationClick: (e, t) => {
-                e.stopPropagation(), s('unlock'), Z.Z.isOverlayOOPEnabledForPid((0, b.QF)()) ? c.Z.setInputLocked(!1, (0, b.QF)()) : c.Z.setInstanceLocked(!1);
+                e.stopPropagation(), s('unlock'), S.default.isOverlayOOPEnabledForPid((0, b.QF)()) ? c.Z.setInputLocked(!1, (0, b.QF)()) : c.Z.setInstanceLocked(!1);
             },
             onDismissClick: () => {
                 s('dismiss');

@@ -11,8 +11,8 @@ var i = n(25209),
     f = n(592125),
     _ = n(430824),
     p = n(594174),
-    E = n(5192),
-    h = n(709054),
+    h = n(5192),
+    E = n(709054),
     N = n(981631),
     m = n(388032);
 let I = {
@@ -21,8 +21,8 @@ let I = {
         512412940897484800: 'http://jameslantz.net/smilebot'
     },
     g = () => [m.t['0cuj7u'], m.t['MuW+CA'], m.t.osqpHR, m.t['5ToSh4'], m.t.JEB8pq, m.t.pkOV5e, m.t.kRb1Jy, m.t.EmKLY2, m.t.rPtBnZ, m.t['5B/ekZ'], m.t.ESNC3d, m.t['Iw6d8/'], m.t.WecSZ2],
-    T = () => [m.t.Jm6e09, m.t.MGRnRU, m.t.EXOEGh, m.t['5uCTFB'], m.t.rl45Qk, m.t.Bh9zpa, m.t.RdEy1N, m.t.qcdp09, m.t.F7w2Rk, m.t.gSyOgI, m.t.uYgqv7, m.t['b/1SBQ'], m.t.LhebZG],
-    C = () => [m.t['20E/ys'], m.t['oa8+kp'], m.t.zoKkXl, m.t.FP9aS0, m.t.E5Zj1d, m.t['6Anmws'], m.t.sR78HR, m.t.gA9qPz, m.t.Hkiyp6, m.t.w1HMho],
+    C = () => [m.t.Jm6e09, m.t.MGRnRU, m.t.EXOEGh, m.t['5uCTFB'], m.t.rl45Qk, m.t.Bh9zpa, m.t.RdEy1N, m.t.qcdp09, m.t.F7w2Rk, m.t.gSyOgI, m.t.uYgqv7, m.t['b/1SBQ'], m.t.LhebZG],
+    T = () => [m.t['20E/ys'], m.t['oa8+kp'], m.t.zoKkXl, m.t.FP9aS0, m.t.E5Zj1d, m.t['6Anmws'], m.t.sR78HR, m.t.gA9qPz, m.t.Hkiyp6, m.t.w1HMho],
     A = () => [m.t['8fy3DQ'], m.t.UproUV, m.t['7l3EyM'], m.t.GToyaG, m.t['DUs+Zm'], m.t.yLkbfn, m.t.oWdvws, m.t.tOoKTE, m.t['VM7+Oj'], m.t['hJx/u7']],
     v = (t) => {
         switch (t) {
@@ -30,21 +30,21 @@ let I = {
             default:
                 return g();
             case 'CLAN':
-                return C();
+                return T();
         }
     },
     O = (t) => {
         switch (t) {
             case 'NORMAL':
             default:
-                return T();
+                return C();
             case 'CLAN':
                 return A();
         }
     };
 function P(t, e) {
     let n = O(e),
-        i = h.default.extractTimestamp(t) % n.length;
+        i = E.default.extractTimestamp(t) % n.length;
     return n[i];
 }
 function b(t) {
@@ -61,26 +61,26 @@ function R(t) {
 }
 let S = {
     stringify: function (t, e) {
-        var n, h, I, g;
-        let T = null === (n = t.mentions) || void 0 === n ? void 0 : n[0],
-            C = null != T && 'string' != typeof T ? p.default.getUser(T.id) : void 0,
+        var n, E, I, g;
+        let C = null === (n = t.mentions) || void 0 === n ? void 0 : n[0],
+            T = null != C && 'string' != typeof C ? p.default.getUser(C.id) : void 0,
             A = t.channel_id,
-            v = E.ZP.getName(null, A, t.author);
+            v = h.ZP.getName(null, A, t.author);
         switch (t.type) {
             case N.uaV.RECIPIENT_ADD:
-                if (null == C) return;
+                if (null == T) return;
                 return (0, i.Rp)(
                     m.intl.formatToParts(m.t['7/Xl0d'], {
                         username: v,
                         usernameOnClick: N.dG4,
-                        otherUsername: E.ZP.getName(null, A, C),
+                        otherUsername: h.ZP.getName(null, A, T),
                         otherUsernameOnClick: N.dG4
                     })
                 );
             case N.uaV.RECIPIENT_REMOVE:
-                if (null == C) return;
+                if (null == T) return;
                 let O = t.author;
-                if (null == O || O.id === C.id)
+                if (null == O || O.id === T.id)
                     return (0, i.Rp)(
                         m.intl.formatToParts(m.t['Qn5+LS'], {
                             username: v,
@@ -91,7 +91,7 @@ let S = {
                     m.intl.formatToParts(m.t.QtZ0RE, {
                         username: v,
                         usernameOnClick: N.dG4,
-                        otherUsername: E.ZP.getName(null, A, C),
+                        otherUsername: h.ZP.getName(null, A, T),
                         otherUsernameOnClick: N.dG4
                     })
                 );
@@ -168,7 +168,7 @@ let S = {
                     })
                 );
             case N.uaV.PURCHASE_NOTIFICATION:
-                if (t instanceof d.ZP || (null === (I = t.purchase_notification) || void 0 === I ? void 0 : null === (h = I.guild_product_purchase) || void 0 === h ? void 0 : h.product_name) == null) return null;
+                if (t instanceof d.ZP || (null === (I = t.purchase_notification) || void 0 === I ? void 0 : null === (E = I.guild_product_purchase) || void 0 === E ? void 0 : E.product_name) == null) return null;
                 return (0, i.Rp)(
                     (0, a.i)({
                         username: v,
@@ -177,11 +177,11 @@ let S = {
                 );
             case N.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION:
                 if (t instanceof d.ZP) return null;
-                let k = (0, o.ZH)((0, l.e5)(t));
+                let y = (0, o.ZH)((0, l.e5)(t));
                 return (0, i.Rp)(
                     (0, u.Y)({
                         application: t.application,
-                        username: k.nick
+                        username: y.nick
                     })
                 );
             case N.uaV.PRIVATE_CHANNEL_INTEGRATION_ADDED:
@@ -257,7 +257,7 @@ let S = {
     },
     getSystemMessageUserJoin: function (t, e) {
         let n = v(e),
-            i = h.default.extractTimestamp(t) % n.length;
+            i = E.default.extractTimestamp(t) % n.length;
         return n[i];
     },
     getSystemMessageUserJoinMobile: P,

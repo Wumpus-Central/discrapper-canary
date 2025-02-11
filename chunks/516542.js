@@ -20,8 +20,8 @@ function g(e) {
         { textValue: Z, richValue: I } = E,
         [S, b] = o.useState(!1),
         y = o.useCallback(() => b(!0), []),
-        O = o.useCallback(() => b(!1), []),
-        w = o.useCallback((e, t, n) => {
+        w = o.useCallback(() => b(!1), []),
+        O = o.useCallback((e, t, n) => {
             C({
                 textValue: t,
                 richValue: n
@@ -45,14 +45,14 @@ function g(e) {
         );
     return (0, i.jsx)(c.Z, {
         innerClassName: f.textArea,
-        onChange: w,
+        onChange: O,
         placeholder: v,
         accessibilityLabel: x,
         channel: n,
         textValue: Z,
         richValue: I,
         type: s.Ie.OVERLAY_INLINE_REPLY,
-        onBlur: O,
+        onBlur: w,
         onFocus: y,
         focused: S,
         onSubmit: T,

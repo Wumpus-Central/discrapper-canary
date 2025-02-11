@@ -868,7 +868,7 @@ function $() {
 }
 function ee() {
     let e = (0, A.XE)('developer_settings'),
-        t = (0, d.e7)([O.Z], () => O.Z.getForcedRenderMode()),
+        t = (0, d.e7)([O.default], () => O.default.getForcedRenderMode()),
         [n, l] = s.useState(!1),
         [r, a] = s.useState(''),
         o = e || t === C.R5.OUT_OF_PROCESS_V2 || t === C.R5.OUT_OF_PROCESS_V3 || t === C.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION;

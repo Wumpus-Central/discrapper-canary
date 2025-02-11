@@ -3,8 +3,8 @@ var e = i(200651);
 i(192379);
 var l = i(442837),
     a = i(828214),
-    r = i(287734),
-    d = i(208049),
+    d = i(287734),
+    r = i(208049),
     s = i(893663),
     c = i(496675),
     o = i(944486),
@@ -20,7 +20,7 @@ function h(n, t) {
               id: 'join-muted-custom-join-sound',
               label: Z.intl.string(Z.t.saLMWV),
               action: () => {
-                  (0, d.Db)(n.id), r.default.selectVoiceChannel(n.id);
+                  (0, r.Db)(n.id), d.default.selectVoiceChannel(n.id);
               }
           })
         : null;

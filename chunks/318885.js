@@ -33,7 +33,7 @@ function _(e, t) {
     let o = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         f = __OVERLAY__ ? l.Z.getGame() : (0, s.pL)(),
         _ = r.ZP.getRunningGames().find((e) => e.name === (null == f ? void 0 : f.name)),
-        p = null !== (n = a.Z.getRenderMethod(null == _ ? void 0 : _.pid)) && void 0 !== n ? n : i.gl.Disabled;
+        p = null !== (n = a.default.getRenderMethod(null == _ ? void 0 : _.pid)) && void 0 !== n ? n : i.gl.Disabled;
     switch (
         ((t = {
             overlay_game_name: null != f ? f.name : 'Unknown Game',

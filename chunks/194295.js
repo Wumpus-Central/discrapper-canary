@@ -14,22 +14,22 @@ function h(e, t, n, h) {
             username: '',
             game: n.name
         }),
-        m = t.getAvatarURL(e.guild_id, 80),
-        { trackView: f, trackClick: _ } = (0, o.R)(c.n0.ActivityInvite, {
+        f = t.getAvatarURL(e.guild_id, 80),
+        { trackView: m, trackClick: _ } = (0, o.R)(c.n0.ActivityInvite, {
             notif_type: c.n0.ActivityInvite,
             notif_user_id: t.id,
             activity_type: d.mFx.JOIN_REQUEST,
             activity_name: n.name
         });
     return {
-        icon: m,
+        icon: f,
         title: p,
         body: g,
         hint: (e) => (0, a.QR)(e, (0, o.P)(), u.t['Odi54+']),
         confirmText: u.intl.string(u.t['fgP/wc']),
         cancelText: u.intl.string(u.t.tpXzJy),
         onNotificationShow: () => {
-            f();
+            m();
         },
         onConfirmClick: (t, n) => {
             i.Z.sendActivityInvite({

@@ -33,7 +33,7 @@ var v = n(501787);
 async function y() {
     let e = { outOfProcessOverlay: !0 },
         t = (0, g.Rb)('openOverlayPopout').overlayV3UI,
-        a = E.Z.getForcedRenderMode(),
+        a = E.default.getForcedRenderMode(),
         s = (0, g.b4)('openOverlayPopout');
     if (!(t || s) && a === l.R5.UNSET) return;
     let u = a === l.R5.OUT_OF_PROCESS_V3 || a === l.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,

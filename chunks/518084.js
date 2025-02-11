@@ -15,15 +15,15 @@ var i,
     h = n(481060),
     p = n(981631),
     g = n(975530),
-    m = n(801194);
-let f = p.t_t.DEFAULT,
+    f = n(801194);
+let m = p.t_t.DEFAULT,
     _ = 1,
     v = r.createContext({
-        type: f,
+        type: m,
         opacity: _
     }),
     x = r.createContext(void 0),
-    Z = (e) => {
+    S = (e) => {
         let { children: t, className: n, ...i } = e;
         return (0, a.jsx)(v.Consumer, {
             children: (e) => {
@@ -40,7 +40,7 @@ let f = p.t_t.DEFAULT,
             }
         });
     };
-class S extends (i = r.PureComponent) {
+class Z extends (i = r.PureComponent) {
     render() {
         let { disableScroll: e, children: t, className: n } = this.props;
         return (0, a.jsx)(x.Consumer, {
@@ -65,16 +65,16 @@ class S extends (i = r.PureComponent) {
     }
 }
 (l = { disableScroll: !1 }),
-    (s = 'defaultProps') in S
-        ? Object.defineProperty(S, s, {
+    (s = 'defaultProps') in Z
+        ? Object.defineProperty(Z, s, {
               value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (S[s] = l);
+        : (Z[s] = l);
 let E = (e) => {
-        let { type: t = f, width: n, height: i, children: s, className: l, opacity: r = _, onClick: o } = e;
+        let { type: t = m, width: n, height: i, children: s, className: l, opacity: r = _, onClick: o } = e;
         return (0, a.jsx)(v.Provider, {
             value: {
                 type: t,
@@ -105,7 +105,7 @@ let E = (e) => {
 (E.Background = (e) => {
     let { children: t, opacityOverride: n } = e;
     if (null == t) return null;
-    let i = [Z, S, C];
+    let i = [S, Z, C];
     return (0, a.jsx)(v.Consumer, {
         children: (e) => {
             let { opacity: s } = e,
@@ -123,7 +123,7 @@ let E = (e) => {
         }
     });
 }),
-    (E.Body = S),
+    (E.Body = Z),
     (E.Content = C),
     (E.Icon = (e) => {
         let { icon: t, label: n, onClick: i, isActive: s, tooltipPosition: l = 'top', size: r = 20, isTutorial: o = !1 } = e;
@@ -147,7 +147,7 @@ let E = (e) => {
                     onMouseEnter: l,
                     onMouseLeave: o,
                     className: d()(g.icon, { [g.toggledIconOn]: s }),
-                    innerClassName: m.flexCenter,
+                    innerClassName: f.flexCenter,
                     'aria-label': n,
                     children: (0, a.jsx)(t, {
                         color: 'currentColor',
@@ -160,5 +160,5 @@ let E = (e) => {
             }
         });
     }),
-    (E.Bar = Z);
+    (E.Bar = S);
 let I = E;

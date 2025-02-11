@@ -1,8 +1,8 @@
 n.d(t, {
     QR: () => _,
     Yj: () => v,
-    ZP: () => Z,
-    iz: () => f
+    ZP: () => S,
+    iz: () => m
 });
 var i,
     s = n(200651),
@@ -28,14 +28,14 @@ function p(e, t, n) {
     );
 }
 let g = (e) => e.stopPropagation(),
-    m = () =>
+    f = () =>
         (0, s.jsx)('div', {
             className: u.clickBlocker,
             onClick: g,
             onMouseEnter: g,
             onMouseOver: g
         }),
-    f = () => (0, s.jsx)('div', { className: u.divider }),
+    m = () => (0, s.jsx)('div', { className: u.divider }),
     _ = (e, t, n) =>
         (0, s.jsx)('div', {
             className: u.keybindMessage,
@@ -99,7 +99,7 @@ class x extends (i = l.PureComponent) {
                 ? (0, s.jsxs)(
                       l.Fragment,
                       {
-                          children: [(0, s.jsx)(f, {}), n]
+                          children: [(0, s.jsx)(m, {}), n]
                       },
                       'hint-custom'
                   )
@@ -109,7 +109,7 @@ class x extends (i = l.PureComponent) {
             l.Fragment,
             {
                 children: [
-                    (0, s.jsx)(f, {}),
+                    (0, s.jsx)(m, {}),
                     (0, s.jsx)(
                         'div',
                         {
@@ -135,7 +135,7 @@ class x extends (i = l.PureComponent) {
                 ? (0, s.jsxs)(
                       l.Fragment,
                       {
-                          children: [(0, s.jsx)(f, {}), e]
+                          children: [(0, s.jsx)(m, {}), e]
                       },
                       'footer-custom-content'
                   )
@@ -149,7 +149,7 @@ class x extends (i = l.PureComponent) {
                 l.Fragment,
                 {
                     children: [
-                        (0, s.jsx)(f, {}),
+                        (0, s.jsx)(m, {}),
                         (0, s.jsxs)('div', {
                             className: u.buttonContainer,
                             children: [
@@ -242,7 +242,7 @@ class x extends (i = l.PureComponent) {
                 [u.themePrimary]: !0,
                 [u.clickable]: null != e && !t
             }),
-            children: [this.renderCloseButton(), this.renderContent(), this.renderFooter(), t ? (0, s.jsx)(m, {}) : null]
+            children: [this.renderCloseButton(), this.renderContent(), this.renderFooter(), t ? (0, s.jsx)(f, {}) : null]
         });
     }
     constructor(e) {
@@ -274,4 +274,4 @@ p(x, 'defaultProps', {
     expand: !1,
     disabled: !1
 });
-let Z = x;
+let S = x;

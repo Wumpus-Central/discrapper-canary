@@ -11,13 +11,13 @@ var i = n(200651),
     h = n(287734),
     p = n(933557),
     g = n(600164),
-    m = n(870569),
-    f = n(345243),
+    f = n(870569),
+    m = n(345243),
     _ = n(873596),
     v = n(917405),
     x = n(430824),
-    Z = n(131951),
-    S = n(699516),
+    S = n(131951),
+    Z = n(699516),
     E = n(594174),
     C = n(979651),
     I = n(362446),
@@ -45,7 +45,7 @@ class k extends s.PureComponent {
     }
     renderChannelLink(e) {
         let { guild: t } = this.props,
-            n = (0, p.F6)(e, E.default, S.Z),
+            n = (0, p.F6)(e, E.default, Z.Z),
             s = null != t ? ''.concat(n, ' / ').concat(t.name) : n,
             l = null != t ? t.id : N.ME;
         return (0, i.jsx)(r.rU, {
@@ -53,7 +53,7 @@ class k extends s.PureComponent {
             onClick: (t) => {
                 t.stopPropagation(), u.Z.channelListScrollTo(l, e.id);
             },
-            children: (0, i.jsx)(f.Z, {
+            children: (0, i.jsx)(m.Z, {
                 className: O.channel,
                 children: s
             })
@@ -91,20 +91,20 @@ class k extends s.PureComponent {
                           (0, i.jsxs)(g.Z, {
                               grow: 0,
                               children: [
-                                  (0, i.jsx)(m.Z, {
+                                  (0, i.jsx)(f.Z, {
                                       tooltipText: p ? T.intl.string(T.t.YqAjX1) : T.intl.string(T.t['w4m94+']),
                                       icon: p ? d.nRN : d.S6n,
                                       iconForeground: p ? b.strikethrough : null,
                                       onClick: this.handleToggleSelfMute
                                   }),
-                                  (0, i.jsx)(m.Z, {
+                                  (0, i.jsx)(f.Z, {
                                       tooltipText: h ? T.intl.string(T.t['2US87+']) : T.intl.string(T.t.wjcRFR),
                                       icon: h ? d.wE8 : d.VWR,
                                       onClick: this.handleToggleSelfDeaf,
                                       iconForeground: h ? b.strikethrough : null
                                   }),
                                   null == s &&
-                                      (0, i.jsx)(m.Z, {
+                                      (0, i.jsx)(f.Z, {
                                           tooltipText: T.intl.string(T.t['6vrfgo']),
                                           onClick: this.handleDisconnect,
                                           icon: d.gkL
@@ -145,7 +145,7 @@ function M(e) {
     let { context: t, lobbyId: n, channel: s, ...l } = e,
         a = (0, o.e7)([x.Z], () => x.Z.getGuild(null == s ? void 0 : s.getGuildId())),
         r = (0, o.e7)([C.Z], () => null != s && C.Z.hasVideo(s.id)),
-        [d, c] = (0, o.Wu)([Z.Z], () => [Z.Z.isSelfMute(t) || Z.Z.isSelfMutedTemporarily(t), Z.Z.isSelfDeaf(t)]),
+        [d, c] = (0, o.Wu)([S.Z], () => [S.Z.isSelfMute(t) || S.Z.isSelfMutedTemporarily(t), S.Z.isSelfDeaf(t)]),
         [u, h, p] = (0, o.Wu)([I.Z], () => [I.Z.getConnectionState(n), I.Z.getLastPing(n), I.Z.getQuality(n)]);
     return (0, i.jsx)(k, {
         ...l,

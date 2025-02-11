@@ -146,7 +146,7 @@ function R(e) {
 function O(e) {
     let { pid: t } = e,
         n = (0, s.cj)([v.Z], () => v.Z.getOverlayPIDStatuses()),
-        r = (0, s.cj)([_.Z], () => _.Z.getTrackedGames()),
+        r = (0, s.cj)([_.default], () => _.default.getTrackedGames()),
         l = (0, s.e7)([v.Z], () => v.Z.isInputLocked(t), [t]),
         i = (0, s.e7)([v.Z], () => v.Z.DEV_isInputLockedV3(t), [t]),
         o = (0, s.e7)([v.Z], () => v.Z.DEV_isInputLocked(t), [t]),
@@ -246,7 +246,7 @@ function w() {
         [o, d] = Z(T.Odu.PERFORMANCE_DEBUG),
         b = (0, s.e7)([f.ZP], () => f.ZP.hasRenderDebugMode(x.G.ClickZones)),
         g = (0, s.e7)([f.ZP], () => f.ZP.hasRenderDebugMode(x.G.WidgetAreas)),
-        E = (0, s.e7)([_.Z], () => _.Z.getForcedRenderMode()),
+        E = (0, s.e7)([_.default], () => _.default.getForcedRenderMode()),
         [k, I] = r.useState({}),
         [w, A] = r.useState(E),
         L = (e) => {
@@ -277,11 +277,11 @@ function w() {
             ...e,
             label: ''.concat(e.label, ' ').concat(E === e.value ? '(current)' : '')
         })),
-        D = (0, s.cj)([_.Z], () => _.Z.getTrackedGames()),
+        D = (0, s.cj)([_.default], () => _.default.getTrackedGames()),
         B = (0, s.e7)([v.Z], () => v.Z.getFocusedPID()),
         M = (0, s.e7)([v.Z], () => v.Z.isFocusedPidOutOfProcess()),
         F = (0, C.QF)(),
-        z = (0, s.e7)([_.Z], () => _.Z.isOverlayOOPEnabledForPid(F), [F]),
+        z = (0, s.e7)([_.default], () => _.default.isOverlayOOPEnabledForPid(F), [F]),
         U = (0, s.e7)([m.ZP], () => m.ZP.getRunningGames());
     r.useEffect(() => {
         I((e) => {

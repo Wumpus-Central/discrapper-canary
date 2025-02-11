@@ -2,9 +2,9 @@ n.d(e, {
     PA: () => c,
     Tn: () => d,
     _i: () => N,
-    eI: () => E,
+    eI: () => h,
     vp: () => p,
-    y8: () => h
+    y8: () => E
 });
 var i = n(367907),
     a = n(200876),
@@ -80,10 +80,10 @@ function p(t) {
         })
     );
 }
-function E(t) {
+function h(t) {
     return (0, a.l)(t);
 }
-function h(t, e, n, a) {
+function E(t, e, n, a) {
     var r;
     i.ZP.trackWithMetadata(o.rMx.ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE_CLICKED, {
         guild_id: t,

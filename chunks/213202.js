@@ -3,8 +3,8 @@ var e = i(200651);
 i(192379);
 var l = i(442837),
     a = i(481060),
-    r = i(239091),
-    d = i(883385),
+    d = i(239091),
+    r = i(883385),
     s = i(108843),
     c = i(947440),
     o = i(100527),
@@ -14,9 +14,9 @@ var l = i(442837),
     x = i(212205),
     g = i(478035),
     v = i(62420),
-    j = i(420529),
-    C = i(554747),
-    f = i(924952),
+    f = i(420529),
+    j = i(554747),
+    C = i(924952),
     S = i(423589),
     _ = i(427679),
     E = i(398048),
@@ -40,12 +40,12 @@ var l = i(442837),
     R = i(981631),
     X = i(388032);
 function q(n) {
-    let { channel: t, guild: i, onSelect: d } = n,
+    let { channel: t, guild: i, onSelect: r } = n,
         s = t.isGuildStageVoice(),
         o = (0, l.e7)([_.Z], () => (s ? _.Z.getStageInstanceByChannel(t.id) : void 0), [s, t.id]),
         Z = (0, N.Z)(t),
-        j = (0, C.qY)(t.id),
-        E = (0, f.Z)(null == j ? void 0 : j.id, i, t),
+        f = (0, j.qY)(t.id),
+        E = (0, C.Z)(null == f ? void 0 : f.id, i, t),
         T = (0, I.Z)(t, o),
         p = (0, h.l)(t),
         k = (0, h.P)(t),
@@ -67,11 +67,11 @@ function q(n) {
         w = (0, M.Z)();
     return (0, e.jsxs)(a.v2r, {
         navId: 'channel-context',
-        onClose: r.Zy,
+        onClose: d.Zy,
         'aria-label': X.intl.string(X.t.Xm41aW),
-        onSelect: d,
+        onSelect: r,
         children: [
-            (0, e.jsx)(a.kSQ, { children: null != j ? E : T }),
+            (0, e.jsx)(a.kSQ, { children: null != f ? E : T }),
             (0, e.jsxs)(a.kSQ, {
                 children: [L, V, O, p]
             }),
@@ -91,13 +91,13 @@ function q(n) {
     });
 }
 function D(n) {
-    let { channel: t, guild: i, onSelect: d } = n,
+    let { channel: t, guild: i, onSelect: r } = n,
         s = t.isGuildStageVoice(),
         o = (0, l.e7)([_.Z], () => (s ? _.Z.getStageInstanceByChannel(t.id) : void 0), [s, t.id]),
         Z = (0, O.Z)(t),
         x = (0, N.Z)(t),
-        g = (0, C.qY)(t.id),
-        v = (0, f.Z)(null == g ? void 0 : g.id, i, t),
+        g = (0, j.qY)(t.id),
+        v = (0, C.Z)(null == g ? void 0 : g.id, i, t),
         R = (0, I.Z)(t, o),
         q = (0, h.l)(t),
         D = (0, h.P)(t),
@@ -118,16 +118,16 @@ function D(n) {
         nt = (0, G.Z)(t),
         ni = (0, c.Z)(t),
         ne = (0, V.Z)(t),
-        nl = (0, j.Z)(t),
+        nl = (0, f.Z)(t),
         na = (0, L.ZP)(t),
-        nr = (0, S.Mn)('ChannelListVoiceContextMenuNormal'),
-        nd = (0, Q.ZP)(t),
+        nd = (0, S.Mn)('ChannelListVoiceContextMenuNormal'),
+        nr = (0, Q.ZP)(t),
         ns = (0, M.Z)();
     return (0, e.jsxs)(a.v2r, {
         navId: 'channel-context',
-        onClose: r.Zy,
+        onClose: d.Zy,
         'aria-label': X.intl.string(X.t.Xm41aW),
-        onSelect: d,
+        onSelect: r,
         children: [
             (0, e.jsx)(a.kSQ, { children: null != g ? v : R }),
             (0, e.jsxs)(
@@ -154,7 +154,7 @@ function D(n) {
             (0, e.jsxs)(
                 a.kSQ,
                 {
-                    children: [na, nr ? nd : F]
+                    children: [na, nd ? nr : F]
                 },
                 'notifications'
             ),
@@ -177,7 +177,7 @@ function D(n) {
     });
 }
 let Y = (0, s.Z)(
-    (0, d.Z)(
+    (0, r.Z)(
         function (n) {
             return (0, Z.Z)() ? (0, e.jsx)(q, { ...n }) : (0, e.jsx)(D, { ...n });
         },

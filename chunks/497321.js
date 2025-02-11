@@ -1,10 +1,10 @@
 t.d(n, { Z: () => g }), t(47120);
-var l,
-    i = t(200651),
-    r = t(192379),
-    a = t(120356),
-    u = t.n(a),
-    o = t(481060),
+var i,
+    l = t(200651),
+    a = t(192379),
+    r = t(120356),
+    o = t.n(r),
+    u = t(481060),
     d = t(37234),
     s = t(230711),
     c = t(981631),
@@ -23,14 +23,14 @@ function p(e, n, t) {
         e
     );
 }
-class E extends (l = r.Component) {
+class E extends (i = a.Component) {
     render() {
-        return (0, i.jsxs)('div', {
+        return (0, l.jsxs)('div', {
             className: f.streamerModeEnabled,
             children: [
-                (0, i.jsx)('div', { className: f.streamerModeEnabledImage }),
-                (0, i.jsx)(o.P3F, {
-                    className: u()(f.streamerModeEnabledBtn, { [f.disabled]: this.props.disableButton }),
+                (0, l.jsx)('div', { className: f.streamerModeEnabledImage }),
+                (0, l.jsx)(u.P3F, {
+                    className: o()(f.streamerModeEnabledBtn, { [f.disabled]: this.props.disableButton }),
                     onClick: this.handleClick,
                     children: _.intl.string(_.t.Br1ls7)
                 })

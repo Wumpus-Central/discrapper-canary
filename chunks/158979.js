@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => f });
 var i = n(200651);
 n(192379);
 var s = n(481060),
@@ -22,11 +22,11 @@ function g() {
         })
     });
 }
-function m(e) {
+function f(e) {
     switch (e.type) {
         case u.nc.GO_LIVE_VOICE: {
             let { game: t, voiceGuild: p } = e,
-                { trackView: m, trackClick: f } = (0, d.R)(u.n0.GoLiveNudge, { notif_type: u.n0.GoLiveNudge });
+                { trackView: f, trackClick: m } = (0, d.R)(u.n0.GoLiveNudge, { notif_type: u.n0.GoLiveNudge });
             return {
                 icon: n(847881),
                 title: null,
@@ -37,11 +37,11 @@ function m(e) {
                 hint: () => (0, i.jsx)(g, {}),
                 renderFooter: () => (0, i.jsx)(g, {}),
                 onNotificationShow: () => {
-                    m();
+                    f();
                 },
                 onNotificationClick: (e, t) => {
-                    f('unlock'), l.Z.updateNotificationStatus(t);
-                    let d = a.Z.isOverlayOOPEnabledForPid((0, o.QF)());
+                    m('unlock'), l.Z.updateNotificationStatus(t);
+                    let d = a.default.isOverlayOOPEnabledForPid((0, o.QF)());
                     if ((d ? l.Z.setInputLocked(!1, (0, o.QF)()) : l.Z.setInstanceLocked(!1), null == r.default.getCurrentUser())) return;
                     let u = d ? { contextKey: s.u1M } : void 0;
                     (0, s.ZDy)(async () => {
@@ -56,7 +56,7 @@ function m(e) {
                     }, u);
                 },
                 onDismissClick: () => {
-                    f('dismiss');
+                    m('dismiss');
                 }
             };
         }
@@ -74,7 +74,7 @@ function m(e) {
                 },
                 onNotificationClick: (e, t) => {
                     p('unlock'), l.Z.updateNotificationStatus(t);
-                    let r = a.Z.isOverlayOOPEnabledForPid((0, o.QF)());
+                    let r = a.default.isOverlayOOPEnabledForPid((0, o.QF)());
                     r ? l.Z.setInputLocked(!1, (0, o.QF)()) : l.Z.setInstanceLocked(!1);
                     let d = r ? { contextKey: s.u1M } : void 0;
                     (0, s.ZDy)(async () => {

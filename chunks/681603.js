@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => E });
 var i = n(192379),
     o = n(149765),
     r = n(442837),
@@ -17,7 +17,7 @@ var i = n(192379),
     b = n(237997),
     x = n(145597),
     g = n(981631);
-class E extends i.Component {
+class y extends i.Component {
     componentDidUpdate(e) {
         if (this.props.locked) return null;
         let { selectedGuild: t, selectedChannel: n, isMemberPending: i, hasPreviewEnabled: o, postableChannelCount: r } = this.props;
@@ -48,7 +48,7 @@ class E extends i.Component {
         return null;
     }
 }
-let y = r.ZP.connectStores([m.Z, h.Z, f.Z, v.default, b.Z, u.ZP, p.Z, _.ZP], () => {
+let E = r.ZP.connectStores([m.Z, h.Z, f.Z, v.default, b.Z, u.ZP, p.Z, _.ZP], () => {
     var e, t, n;
     let i = m.Z.getGuildId(),
         r = h.Z.getChannelId(i),
@@ -71,4 +71,4 @@ let y = r.ZP.connectStores([m.Z, h.Z, f.Z, v.default, b.Z, u.ZP, p.Z, _.ZP], () 
         isMemberPending: d,
         postableChannelCount: l
     };
-})(E);
+})(y);

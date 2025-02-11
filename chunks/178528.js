@@ -11,13 +11,13 @@ var i = n(200651),
     h = n(591190),
     p = n(840780),
     g = n(905423),
-    m = n(680089),
-    f = n(58468),
+    f = n(680089),
+    m = n(58468),
     _ = n(796974),
     v = n(324067),
     x = n(984933),
-    Z = n(888369),
-    S = n(430824),
+    S = n(888369),
+    Z = n(430824),
     E = n(496675),
     C = n(878884),
     I = n(19780),
@@ -175,7 +175,7 @@ class D extends s.PureComponent {
 function A(e) {
     var t;
     let { guildId: n } = e,
-        s = (0, a.e7)([S.Z], () => S.Z.getGuild(n)),
+        s = (0, a.e7)([Z.Z], () => Z.Z.getGuild(n)),
         l = (0, a.e7)([x.ZP], () => x.ZP.getChannels(n)),
         r = (0, a.e7)([v.Z], () => v.Z.getCategories(n)),
         { mutedChannels: c, collapseMuted: u } = (0, a.cj)([N.ZP], () => ({
@@ -183,7 +183,7 @@ function A(e) {
             collapseMuted: N.ZP.isGuildCollapsed(n)
         })),
         h = (0, a.e7)([T.ZP], () => T.ZP.getVoiceStates(n)),
-        p = (0, a.e7)([f.Z], () => f.Z.getCollapsed()),
+        p = (0, a.e7)([m.Z], () => m.Z.getCollapsed()),
         { scrollTo: b } = (0, a.e7)([_.Z], () => _.Z.getGuildDimensions(n)),
         O = (0, g.Z)((e) => {
             let { channelId: t } = e;
@@ -191,8 +191,8 @@ function A(e) {
         }),
         j = (0, a.e7)([y.Z], () => y.Z.getVoiceChannelId()),
         M = (0, a.e7)([E.Z], () => E.Z.getGuildVersion(n)),
-        w = (0, a.e7)([m.Z], () => m.Z.version),
-        P = (0, a.e7)([Z.default], () => Z.default.getGuildChangeSentinel(n)),
+        w = (0, a.e7)([f.Z], () => f.Z.version),
+        P = (0, a.e7)([S.default], () => S.default.getGuildChangeSentinel(n)),
         R = (0, o.QN)(null == s ? void 0 : s.id),
         A = (0, d.gM)(null == s ? void 0 : s.id),
         L = null !== (t = null == s ? void 0 : s.hasFeature(k.oNc.COMMUNITY)) && void 0 !== t && t,
