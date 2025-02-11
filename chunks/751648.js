@@ -71,10 +71,11 @@ async function s(e) {
     }
 }
 function c(e) {
-    let { earnedOrbsQuantity: t } = e;
+    let { earnedOrbsQuantity: t, dedupeKey: n } = e;
     return r.Z.dispatch({
         type: 'VIRTUAL_CURRENCY_EARNED_ORBS_COACHMARK_OPEN',
-        earnedOrbsQuantity: t
+        earnedOrbsQuantity: t,
+        dedupeKey: n
     });
 }
 function d() {

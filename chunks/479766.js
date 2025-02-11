@@ -1,4 +1,4 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => s }), n(653041);
 var a,
     r = n(442837),
     l = n(570140);
@@ -78,8 +78,8 @@ class o extends (a = r.ZP.Store) {
         (this._entitlements = null), (this._redeemVirtualCurrencyError = t), (this._redeemingSkuId = null), (this._isRedeemingVirtualCurrency = !1);
     }
     handleEarnedOrbsCoachmarkOpen(e) {
-        let { earnedOrbsQuantity: t } = e;
-        (this._earnedOrbsCoachmarkOpen = !0), (this._earnedOrbsCoachmarkQuantity = t);
+        let { earnedOrbsQuantity: t, dedupeKey: n } = e;
+        !(void 0 !== n && this._earnedOrbsCoachmarkDedupeKeys.includes(n)) && ((this._earnedOrbsCoachmarkOpen = !0), (this._earnedOrbsCoachmarkQuantity = t), void 0 !== n && this._earnedOrbsCoachmarkDedupeKeys.push(n));
     }
     handleEarnedOrbsCoachmarkClose(e) {
         let {} = e;
@@ -120,6 +120,7 @@ class o extends (a = r.ZP.Store) {
             i(this, '_fetchBalanceError', null),
             i(this, '_isFetchingBalance', !1),
             i(this, '_earnedOrbsCoachmarkOpen', !1),
+            i(this, '_earnedOrbsCoachmarkDedupeKeys', []),
             i(this, '_earnedOrbsCoachmarkQuantity', 0),
             i(this, '_onboardingCoachmarkOpen', !1),
             i(this, '_onboardingCoachmarkSkip', !1);

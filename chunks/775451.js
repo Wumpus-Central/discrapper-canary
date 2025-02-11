@@ -44,7 +44,8 @@ let v = {
                         balance: A,
                         backgroundElementRef: L,
                         isCoachmarkEnabled: N,
-                        onClickPill: () => {},
+                        onCloseCallback: () => {},
+                        onClickPill: x.dG4,
                         linkOnClick: () => {
                             (0, m.navigateToQuestHome)();
                         },

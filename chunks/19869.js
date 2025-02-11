@@ -8,7 +8,7 @@ var i = n(200651),
     c = n(906732),
     d = n(335131),
     u = n(703656),
-    h = n(751648),
+    h = n(511050),
     m = n(317257),
     g = n(120786),
     x = n(775451),
@@ -26,22 +26,23 @@ function S() {
     });
 }
 function j() {
-    let [e, t] = s.useState(150),
-        [n, p] = s.useState(150),
-        [E, C] = s.useState(m.b.DEFAULT),
-        S = () => {
-            switch (E) {
+    let { openIntroToOrbsClaimedCoachmark: e } = (0, h.l)({ location: 'VirtualCurrencyComponents' }),
+        [t, n] = s.useState(150),
+        [p, E] = s.useState(150),
+        [C, S] = s.useState(m.b.DEFAULT),
+        j = () => {
+            switch (C) {
                 case m.b.DEFAULT:
-                    C(m.b.HIGHLIGHTED);
+                    S(m.b.HIGHLIGHTED);
                     break;
                 case m.b.HIGHLIGHTED:
-                    C(m.b.SELECTED);
+                    S(m.b.SELECTED);
                     break;
                 case m.b.SELECTED:
-                    C(m.b.DEFAULT);
+                    S(m.b.DEFAULT);
             }
         },
-        { analyticsLocations: j } = (0, c.ZP)(o.Z.PAYMENT_FLOW_TEST_PAGE);
+        { analyticsLocations: v } = (0, c.ZP)(o.Z.PAYMENT_FLOW_TEST_PAGE);
     return (0, i.jsxs)(N.$0, {
         children: [
             (0, i.jsx)(r.X6q, {
@@ -81,12 +82,10 @@ function j() {
                                 (0, u.s1)().location.pathname.includes(f.Z5c.COLLECTIBLES_SHOP) ||
                                     (0, d.mK)({
                                         openInLayer: !1,
-                                        analyticsLocations: j,
+                                        analyticsLocations: v,
                                         analyticsSource: o.Z.REVENUE_STORYBOOK_TEST_PAGE
                                     }),
-                                setTimeout(() => {
-                                    (0, h.hF)({ earnedOrbsQuantity: 200 });
-                                }, 500);
+                                e(!0);
                         },
                         children: 'Open Balance Widget Coachmark'
                     })
@@ -125,17 +124,17 @@ function j() {
                     }),
                     (0, i.jsx)(r.FiK, {
                         className: T.numberInput,
-                        value: e,
-                        onChange: (e) => t(e)
+                        value: t,
+                        onChange: (e) => n(e)
                     }),
                     (0, i.jsx)(l.zx, {
-                        onClick: () => p(e),
+                        onClick: () => E(t),
                         children: 'Set Balance'
                     }),
                     (0, i.jsx)(_.A4, {
-                        balance: n,
-                        balanceWidgetMode: E,
-                        onClick: () => S()
+                        balance: p,
+                        balanceWidgetMode: C,
+                        onClick: () => j()
                     })
                 ]
             }),
