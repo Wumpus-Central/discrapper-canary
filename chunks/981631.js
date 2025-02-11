@@ -1075,6 +1075,7 @@ let A = Object.freeze({
         DISMISSIBLE_CONTENT_OPTIONS: 'Dismissible Content Options',
         PAYMENT_FLOW_MODAL_TEST_PAGE: 'Payment Flow Modals',
         REVENUE_STORYBOOK_PAGE: 'Revenue Storybook',
+        VIRTUAL_CURRENCY_CONFIGURATION_PAGE: 'Virtual Currency Configuration',
         POGGERMODE: 'Powermode Settings',
         SESSIONS: 'Sessions',
         FAMILY_CENTER: 'Family Center',
