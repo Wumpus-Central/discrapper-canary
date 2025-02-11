@@ -21,6 +21,9 @@ function c(e, t, n) {
 }
 let d = new r.Z('VoiceFilterManager');
 class f extends i.Z {
+    loadNativeModule() {
+        (0, u.r5)();
+    }
     handleVoiceFilterRequestSwitch(e) {
         let { newVoiceFilterId: t } = e,
             n = null != t ? l.Z.getVoiceFilter(t) : void 0;
@@ -70,7 +73,8 @@ class f extends i.Z {
             c(this, 'actions', {
                 VOICE_FILTER_DOWNLOAD_READY: this.handleVoiceFilterDownloadReady,
                 VOICE_FILTER_REQUEST_SWITCH: this.handleVoiceFilterRequestSwitch,
-                VOICE_FILTER_DOWNLOAD_CANCELED: this.handleVoiceFilterDownloadCanceled
+                VOICE_FILTER_DOWNLOAD_CANCELED: this.handleVoiceFilterDownloadCanceled,
+                VOICE_FILTER_LOAD_MODULE: this.loadNativeModule
             });
     }
 }

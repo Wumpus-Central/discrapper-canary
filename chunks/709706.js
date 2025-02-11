@@ -22,6 +22,7 @@ function d(e, t, n) {
 }
 let f = new s.Yd('VoiceFilterStore'),
     _ = {
+        nativeVoiceFilterModuleState: u.O.UNINITIALIZED,
         models: {},
         voiceFilters: {},
         modelState: {},
@@ -111,6 +112,9 @@ class v extends (i = o.ZP.Store) {
     }
     getLimitedTimeVoices() {
         return _.limitedTimeVoices;
+    }
+    getNativeModuleState() {
+        return _.nativeVoiceFilterModuleState;
     }
 }
 function y() {
