@@ -12843,7 +12843,9 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
 }
 
 .emoji_c9d15c {
-    margin-right: 4px
+    margin-right: 4px;
+    width: 14px;
+    height: 14px
 }
 
 .icon_c9d15c {
