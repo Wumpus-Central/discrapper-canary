@@ -1,31 +1,33 @@
-n.d(l, { Z: () => U });
-var i = n(200651),
-    t = n(192379),
-    s = n(120356),
-    a = n.n(s),
-    o = n(442837),
-    r = n(481060),
+n.d(t, { Z: () => U });
+var l = n(200651),
+    a = n(192379),
+    i = n(120356),
+    s = n.n(i),
+    r = n(442837),
+    o = n(481060),
     c = n(100527),
     d = n(906732),
     u = n(807582),
-    p = n(813197),
+    m = n(813197),
     x = n(222062),
-    m = n(530329),
-    g = n(442552),
-    f = n(430824),
-    h = n(914010),
+    p = n(530329),
+    f = n(373230),
+    g = n(782818),
+    h = n(442552),
+    C = n(430824),
+    A = n(914010),
     j = n(594174),
-    C = n(626135),
+    v = n(626135),
     N = n(267642),
-    v = n(74538),
-    A = n(621961),
-    E = n(884858),
-    F = n(981631),
-    _ = n(486324),
+    E = n(74538),
+    T = n(621961),
+    F = n(884858),
+    _ = n(981631),
+    S = n(486324),
     b = n(869783),
-    I = n(388032),
+    Z = n(388032),
     L = n(755809);
-let T = [
+let R = [
     {
         gif: n(495682),
         png: n(458060)
@@ -44,60 +46,60 @@ let T = [
     }
 ];
 function y(e) {
-    let { shouldAnimate: l = !0 } = e;
-    return (0, i.jsx)('div', {
+    let { shouldAnimate: t = !0 } = e;
+    return (0, l.jsx)('div', {
         className: L.gifGrid,
-        children: T.map((e) =>
-            (0, i.jsx)(
+        children: R.map((e) =>
+            (0, l.jsx)(
                 'div',
                 {
                     className: L.gif,
-                    style: { backgroundImage: 'url('.concat(l ? e.gif : e.png, ')') }
+                    style: { backgroundImage: 'url('.concat(t ? e.gif : e.png, ')') }
                 },
                 e.gif
             )
         )
     });
 }
-function M(e) {
-    let { guildFeature: l, guild: n } = e;
-    if (null == l || null == n) return;
-    let i = (0, N._p)(l),
-        t = n.hasFeature(l);
-    if (null == i) return;
-    let s = (0, N.nW)(i);
-    return t ? I.intl.formatToPlainString(I.t.u3L3TU, { levelName: s }) : I.intl.formatToPlainString(I.t['r/v25e'], { levelName: s });
+function I(e) {
+    let { guildFeature: t, guild: n } = e;
+    if (null == t || null == n) return;
+    let l = (0, N._p)(t),
+        a = n.hasFeature(t);
+    if (null == l) return;
+    let i = (0, N.nW)(l);
+    return a ? Z.intl.formatToPlainString(Z.t.u3L3TU, { levelName: i }) : Z.intl.formatToPlainString(Z.t['r/v25e'], { levelName: i });
 }
-function S(e) {
-    let { guildFeature: l, guild: n } = e;
-    return (0, i.jsx)('div', {
+function M(e) {
+    let { guildFeature: t, guild: n } = e;
+    return (0, l.jsx)('div', {
         className: L.boostingPill,
-        children: (0, i.jsx)(u.Z, {
-            guildFeature: l,
+        children: (0, l.jsx)(u.Z, {
+            guildFeature: t,
             guild: n,
             hideTooltip: !0
         })
     });
 }
-function P(e) {
-    let { icon: l, label: n, guildFeature: t, guild: s, shouldShowPremiumIcon: o } = e,
-        c = null != s && null != t;
-    return (0, i.jsxs)('div', {
-        className: a()(L.optionDescription, { [L.hasBoostingPill]: c }),
+function w(e) {
+    let { icon: t, label: n, guildFeature: a, guild: i, shouldShowPremiumIcon: r } = e,
+        c = null != i && null != a;
+    return (0, l.jsxs)('div', {
+        className: s()(L.optionDescription, { [L.hasBoostingPill]: c }),
         'aria-hidden': !0,
         children: [
-            (0, i.jsxs)('div', {
+            (0, l.jsxs)('div', {
                 className: L.optionIconAndLabel,
                 children: [
-                    l,
-                    (0, i.jsxs)(r.Text, {
+                    t,
+                    (0, l.jsxs)(o.Text, {
                         variant: 'text-sm/semibold',
                         className: L.optionLabelText,
                         children: [
-                            o &&
-                                (0, i.jsx)(r.DY3, {
-                                    text: I.intl.string(I.t['5AFxuL']),
-                                    children: (0, i.jsx)(r.SrA, {
+                            r &&
+                                (0, l.jsx)(o.DY3, {
+                                    text: Z.intl.string(Z.t['5AFxuL']),
+                                    children: (0, l.jsx)(o.SrA, {
                                         size: 'xs',
                                         color: 'currentColor',
                                         className: L.premiumWheel
@@ -109,211 +111,212 @@ function P(e) {
                 ]
             }),
             c &&
-                (0, i.jsx)(S, {
-                    guild: s,
-                    guildFeature: t
+                (0, l.jsx)(M, {
+                    guild: i,
+                    guildFeature: a
                 })
         ]
     });
 }
-function Z(e) {
-    let { label: l, uploadType: n, guild: t, maxFileSizeBytes: s, filters: o, handleOpenImageEditingModal: c, handleFileSizeError: d } = e,
-        u = (0, A.GY)(n),
-        x = (0, A.C6)(n, { isGIF: !1 }),
-        m = M({
+function P(e) {
+    let { label: t, uploadType: n, guild: a, maxFileSizeBytes: i, filters: r, handleOpenImageEditingModal: c, handleFileSizeError: d } = e,
+        u = (0, T.GY)(n),
+        x = (0, T.C6)(n, { isGIF: !1 }),
+        p = I({
             guildFeature: x,
-            guild: t
+            guild: a
         });
-    return (0, i.jsxs)(i.Fragment, {
+    return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, i.jsx)(r.tEY, {
+            (0, l.jsx)(o.tEY, {
                 within: !0,
-                children: (0, i.jsxs)('div', {
-                    className: a()(L.option, L.imageUploadOption),
+                children: (0, l.jsxs)('div', {
+                    className: s()(L.option, L.imageUploadOption),
                     children: [
-                        (0, i.jsx)(P, {
-                            icon: (0, i.jsx)(r.FmF, {
+                        (0, l.jsx)(w, {
+                            icon: (0, l.jsx)(o.FmF, {
                                 size: 'md',
                                 color: 'currentColor'
                             }),
-                            label: l,
+                            label: t,
                             guildFeature: x,
-                            guild: t,
+                            guild: a,
                             shouldShowPremiumIcon: u
                         }),
-                        (0, i.jsx)(p.ZP, {
-                            'aria-label': l,
+                        (0, l.jsx)(m.ZP, {
+                            'aria-label': t,
                             tabIndex: 0,
                             onChange: c,
-                            maxFileSizeBytes: s,
+                            maxFileSizeBytes: i,
                             onFileSizeError: d,
-                            filters: o,
+                            filters: r,
                             multiple: !1
                         })
                     ]
                 })
             }),
-            null != m && (0, i.jsx)(r.nn4, { children: m })
+            null != p && (0, l.jsx)(o.nn4, { children: p })
         ]
     });
 }
 function O(e) {
-    let { uploadType: l, guild: n, handleOpenGIFPickerModal: t } = e,
-        { shouldAnimate: s, onMouseEnter: a, onMouseLeave: o } = (0, g.Z)(),
-        c = (0, A.Kq)(l),
-        d = (0, A.C6)(l, { isGIF: !0 }),
-        u = M({
+    let { uploadType: t, guild: n, handleOpenGIFPickerModal: a } = e,
+        { shouldAnimate: i, onMouseEnter: s, onMouseLeave: r } = (0, h.Z)(),
+        c = (0, T.Kq)(t),
+        d = (0, T.C6)(t, { isGIF: !0 }),
+        u = I({
             guildFeature: d,
             guild: n
         });
-    return (0, i.jsxs)(i.Fragment, {
+    return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, i.jsxs)(r.P3F, {
+            (0, l.jsxs)(o.P3F, {
                 className: L.option,
-                onClick: t,
-                'aria-label': I.intl.string(I.t['xsC+//']),
-                onMouseEnter: a,
-                onMouseLeave: o,
+                onClick: a,
+                'aria-label': Z.intl.string(Z.t['xsC+//']),
+                onMouseEnter: s,
+                onMouseLeave: r,
                 children: [
-                    (0, i.jsx)(y, { shouldAnimate: s }),
-                    (0, i.jsx)(P, {
-                        icon: (0, i.jsx)(r.OUq, {
+                    (0, l.jsx)(y, { shouldAnimate: i }),
+                    (0, l.jsx)(w, {
+                        icon: (0, l.jsx)(o.OUq, {
                             size: 'md',
                             color: 'currentColor'
                         }),
-                        label: I.intl.string(I.t['xsC+//']),
+                        label: Z.intl.string(Z.t['xsC+//']),
                         guildFeature: d,
                         guild: n,
                         shouldShowPremiumIcon: c
                     })
                 ]
             }),
-            null != u && (0, i.jsx)(r.nn4, { children: u })
+            null != u && (0, l.jsx)(o.nn4, { children: u })
         ]
     });
 }
 function U(e) {
-    let { transitionState: l, onClose: s, onComplete: a, uploadType: u, maxFileSizeBytes: p, showUpsellHeader: g, filters: N, analyticsLocation: A, analyticsLocations: T = [], imageSpecifications: y, modalTitle: M = I.intl.string(I.t.DToW4e), uploadOptionTitle: S = I.intl.string(I.t['MsUY/f']) } = e,
-        P = (0, o.e7)([j.default], () => j.default.getCurrentUser()),
-        U = (0, o.e7)([h.Z], () => h.Z.getGuildId()),
-        k = (0, o.e7)([f.Z], () => f.Z.getGuild(U)),
-        D = (0, r.vRw)(),
-        w = u === _.pC.AVATAR || u === _.pC.BANNER,
-        R = !v.ZP.canUseAnimatedAvatar(P) && u === _.pC.AVATAR,
-        B = (0, x.M)(!w),
-        { analyticsLocations: G } = (0, d.ZP)(T, c.Z.SELECT_IMAGE_MODAL),
-        z = t.useCallback(
-            function (e, l) {
+    let { transitionState: t, onClose: i, onComplete: s, uploadType: u, maxFileSizeBytes: m, showUpsellHeader: h, filters: N, analyticsLocation: T, analyticsLocations: R = [], imageSpecifications: y, modalTitle: I = Z.intl.string(Z.t.DToW4e), uploadOptionTitle: M = Z.intl.string(Z.t['MsUY/f']) } = e,
+        w = (0, r.e7)([j.default], () => j.default.getCurrentUser()),
+        U = (0, r.e7)([A.Z], () => A.Z.getGuildId()),
+        k = (0, r.e7)([C.Z], () => C.Z.getGuild(U)),
+        D = (0, o.vRw)(),
+        B = u === S.pC.AVATAR || u === S.pC.BANNER,
+        G = !E.ZP.canUseAnimatedAvatar(w) && u === S.pC.AVATAR,
+        H = (0, x.M)(!B),
+        z = (0, f.Tq)({ location: 'NewSelectImageModal' }),
+        { analyticsLocations: V } = (0, d.ZP)(R, c.Z.SELECT_IMAGE_MODAL),
+        W = a.useCallback(
+            function (e, t) {
                 let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                s(), a(e, l, n);
+                i(), s(e, t, n);
             },
-            [s, a]
+            [i, s]
         ),
-        H = t.useCallback(
-            (e, l) => {
-                if (l.type === b.m.MP4) return z(e, l);
-                (0, r.ZDy)(
+        q = a.useCallback(
+            (e, t) => {
+                if (t.type === b.m.MP4) return W(e, t);
+                (0, o.ZDy)(
                     async () => {
-                        let { default: t } = await Promise.all([n.e('59732'), n.e('40787')]).then(n.bind(n, 712451));
+                        let { default: a } = await Promise.all([n.e('59732'), n.e('40787')]).then(n.bind(n, 712451));
                         return (n) =>
-                            (0, i.jsx)(t, {
+                            (0, l.jsx)(a, {
                                 imgURI: e,
-                                file: l,
-                                onCrop: z,
+                                file: t,
+                                onCrop: W,
                                 uploadType: u,
-                                showUpsellHeader: g,
-                                analyticsPage: null == A ? void 0 : A.page,
+                                showUpsellHeader: h,
+                                analyticsPage: null == T ? void 0 : T.page,
                                 ...n
                             });
                     },
                     { contextKey: D }
                 );
             },
-            [null == A ? void 0 : A.page, D, z, g, u]
+            [null == T ? void 0 : T.page, D, W, h, u]
         ),
-        W = t.useCallback(() => {
-            s(), (0, E.Z)(p);
-        }, [p, s]),
-        Y = t.useCallback(() => {
-            (0, r.ZDy)(
+        Y = a.useCallback(() => {
+            i(), (0, F.Z)(m);
+        }, [m, i]),
+        X = a.useCallback(() => {
+            (0, o.ZDy)(
                 async () => {
                     let { default: e } = await n.e('72891').then(n.bind(n, 195297));
-                    return (l) =>
-                        (0, i.jsx)(e, {
+                    return (t) =>
+                        (0, l.jsx)(e, {
                             uploadType: u,
-                            onComplete: (e, l) => z(e, l, !0),
-                            showUpsellHeader: g,
-                            analyticsPage: null == A ? void 0 : A.page,
-                            ...l
+                            onComplete: (e, t) => W(e, t, !0),
+                            showUpsellHeader: h,
+                            analyticsPage: null == T ? void 0 : T.page,
+                            ...t
                         });
                 },
                 { contextKey: D }
             );
-        }, [null == A ? void 0 : A.page, D, z, g, u]);
+        }, [null == T ? void 0 : T.page, D, W, h, u]);
     return (
-        t.useEffect(() => {
-            R &&
-                C.default.track(F.rMx.PREMIUM_UPSELL_VIEWED, {
-                    type: F.jXE.UPLOAD_FILE_OR_CHOOSE_GIF_MODAL,
-                    location_stack: G
+        a.useEffect(() => {
+            G &&
+                v.default.track(_.rMx.PREMIUM_UPSELL_VIEWED, {
+                    type: _.jXE.UPLOAD_FILE_OR_CHOOSE_GIF_MODAL,
+                    location_stack: V
                 }),
-                C.default.track(F.rMx.OPEN_MODAL, {
-                    type: F.jXE.UPLOAD_FILE_OR_CHOOSE_GIF_MODAL,
-                    location: A,
-                    location_stack: G
+                v.default.track(_.rMx.OPEN_MODAL, {
+                    type: _.jXE.UPLOAD_FILE_OR_CHOOSE_GIF_MODAL,
+                    location: T,
+                    location_stack: V
                 });
-        }, [R, A, G]),
-        (0, i.jsxs)(r.Y0X, {
+        }, [G, T, V]),
+        (0, l.jsxs)(o.Y0X, {
+            transitionState: t,
+            size: o.CgR.DYNAMIC,
             className: L.modal,
-            transitionState: l,
-            size: r.CgR.DYNAMIC,
             children: [
-                (0, i.jsxs)(r.xBx, {
+                (0, l.jsxs)(o.xBx, {
                     className: L.modalHeader,
                     separator: !1,
                     children: [
-                        (0, i.jsx)(r.X6q, {
+                        (0, l.jsx)(o.X6q, {
                             variant: 'heading-lg/semibold',
-                            children: M
+                            children: I
                         }),
-                        (0, i.jsx)(r.olH, {
-                            onClick: s,
+                        (0, l.jsx)(o.olH, {
+                            onClick: i,
                             className: L.modalCloseButton
                         })
                     ]
                 }),
-                (0, i.jsxs)(r.hzk, {
+                (0, l.jsxs)(o.hzk, {
                     className: L.modalContent,
                     children: [
-                        (0, i.jsxs)('div', {
+                        (0, l.jsxs)('div', {
                             className: L.imageSelectionSection,
                             children: [
-                                (0, i.jsxs)('ul', {
+                                (0, l.jsxs)('ul', {
                                     className: L.optionsList,
-                                    'aria-label': I.intl.string(I.t.iBnqtb),
+                                    'aria-label': Z.intl.string(Z.t.iBnqtb),
                                     children: [
-                                        (0, i.jsx)('li', {
-                                            children: (0, i.jsx)(Z, {
-                                                label: S,
+                                        (0, l.jsx)('li', {
+                                            children: (0, l.jsx)(P, {
+                                                label: M,
                                                 uploadType: u,
                                                 guild: k,
-                                                handleOpenImageEditingModal: H,
-                                                maxFileSizeBytes: p,
+                                                handleOpenImageEditingModal: q,
+                                                maxFileSizeBytes: m,
                                                 filters: N,
-                                                handleFileSizeError: W
+                                                handleFileSizeError: Y
                                             })
                                         }),
-                                        (0, i.jsx)('li', {
-                                            children: (0, i.jsx)(O, {
+                                        (0, l.jsx)('li', {
+                                            children: (0, l.jsx)(O, {
                                                 uploadType: u,
                                                 guild: k,
-                                                handleOpenGIFPickerModal: Y
+                                                handleOpenGIFPickerModal: X
                                             })
                                         })
                                     ]
                                 }),
                                 null != y
-                                    ? (0, i.jsx)(r.Text, {
+                                    ? (0, l.jsx)(o.Text, {
                                           className: L.imageSpecifications,
                                           variant: 'text-sm/normal',
                                           color: 'text-muted',
@@ -322,15 +325,20 @@ function U(e) {
                                     : null
                             ]
                         }),
-                        g &&
-                            B &&
-                            (0, i.jsx)(m.Z, {
-                                uploadType: u,
-                                showUpsell: !0,
-                                position: 'inline',
-                                showShadow: !1,
-                                className: L.premiumUpsell
-                            })
+                        u === S.pC.AVATAR && z
+                            ? (0, l.jsx)(g.Z, {
+                                  className: L.recentAvatarsSection,
+                                  onClose: i
+                              })
+                            : h &&
+                              H &&
+                              (0, l.jsx)(p.Z, {
+                                  uploadType: u,
+                                  showUpsell: !0,
+                                  position: 'inline',
+                                  showShadow: !1,
+                                  className: L.premiumUpsell
+                              })
                     ]
                 })
             ]

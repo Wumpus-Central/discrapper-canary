@@ -1,4 +1,4 @@
-o.exports = {
+e.exports = {
     modal: 'modal__54675',
     modalHeader: 'modalHeader__54675',
     modalContent: 'modalContent__54675',
@@ -16,5 +16,6 @@ o.exports = {
     premiumWheel: 'premiumWheel__54675',
     boostingPill: 'boostingPill__54675',
     imageSpecifications: 'imageSpecifications__54675',
-    premiumUpsell: 'premiumUpsell__54675'
+    premiumUpsell: 'premiumUpsell__54675',
+    recentAvatarsSection: 'recentAvatarsSection__54675'
 };
