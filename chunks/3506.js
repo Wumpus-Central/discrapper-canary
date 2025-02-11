@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A });
+n.d(t, { Z: () => R });
 var i = n(200651);
 n(192379);
 var s = n(512722),
@@ -11,110 +11,109 @@ var s = n(512722),
     u = n(13245),
     h = n(825209),
     m = n(887278),
-    g = n(212632),
-    x = n(809357),
-    _ = n(371651),
-    p = n(556296),
-    E = n(808506),
-    C = n(237997),
-    N = n(626135);
+    g = n(594190),
+    x = n(212632),
+    _ = n(444295),
+    p = n(809357),
+    E = n(371651),
+    C = n(556296),
+    N = n(808506),
+    f = n(237997),
+    I = n(626135);
 n(63063);
-var f = n(13140),
-    I = n(981631),
-    T = n(388032),
-    S = n(764438);
-let j = v(null);
-function v(e) {
+var T = n(13140),
+    S = n(981631),
+    j = n(388032),
+    v = n(764438);
+let b = A(null);
+function A(e) {
     var t;
-    let n = C.Z.getNotificationPositionMode(),
-        i = n !== I._vf.DISABLED,
-        s = p.ZP.getOverlayKeybind(),
-        l = p.ZP.getOverlayChatKeybind();
+    let n = f.Z.getNotificationPositionMode(),
+        i = n !== S._vf.DISABLED,
+        s = C.ZP.getOverlayKeybind(),
+        l = C.ZP.getOverlayChatKeybind();
     return {
-        enabled: E.Z.enabled,
+        enabled: N.Z.enabled,
         notifications_enabled: i,
         notifications_position: i ? n : null,
-        text_notifications_mode: C.Z.getTextChatNotificationMode(),
-        hotkey: null != s ? (0, f.BB)(s.shortcut) : null,
-        text_activation_hotkey: null != l ? (0, f.BB)(l.shortcut) : null,
-        text_opacity_slider: C.Z.getTextWidgetOpacity(),
-        old_enabled: null !== (t = null == e ? void 0 : e.enabled) && void 0 !== t ? t : E.Z.enabled
+        text_notifications_mode: f.Z.getTextChatNotificationMode(),
+        hotkey: null != s ? (0, T.BB)(s.shortcut) : null,
+        text_activation_hotkey: null != l ? (0, T.BB)(l.shortcut) : null,
+        text_opacity_slider: f.Z.getTextWidgetOpacity(),
+        old_enabled: null !== (t = null == e ? void 0 : e.enabled) && void 0 !== t ? t : N.Z.enabled
     };
 }
-function b(e) {
+function O(e) {
     let { children: t, title: n } = e;
     return (0, i.jsx)(c.xJW, {
         title: n,
-        className: S.userSettingsOverlayField,
+        className: v.userSettingsOverlayField,
         children: t
     });
 }
-function A(e) {
+function R(e) {
     let { className: t, showHeader: n = !0 } = e,
-        { oopEnabled: s, legacyEnabled: r } = (0, o.cj)([_.Z], () => _.Z.getGlobalEnabledStatus()),
+        { oopEnabled: s, legacyEnabled: r } = (0, o.cj)([E.default], () => E.default.getGlobalEnabledStatus()),
         {
-            avatarSizeMode: E,
-            displayNameMode: f,
-            displayUserMode: A,
-            notificationPositionMode: O,
-            textChatNotificationMode: R,
-            shouldShowKeybindIndicators: D
-        } = (0, o.cj)([C.Z], () => ({
-            avatarSizeMode: C.Z.getAvatarSizeMode(),
-            displayNameMode: C.Z.getDisplayNameMode(),
-            displayUserMode: C.Z.getDisplayUserMode(),
-            notificationPositionMode: C.Z.getNotificationPositionMode(),
-            textChatNotificationMode: C.Z.getTextChatNotificationMode(),
-            shouldShowKeybindIndicators: C.Z.showKeybindIndicators
+            avatarSizeMode: N,
+            displayNameMode: T,
+            displayUserMode: R,
+            notificationPositionMode: D,
+            textChatNotificationMode: P,
+            shouldShowKeybindIndicators: y
+        } = (0, o.cj)([f.Z], () => ({
+            avatarSizeMode: f.Z.getAvatarSizeMode(),
+            displayNameMode: f.Z.getDisplayNameMode(),
+            displayUserMode: f.Z.getDisplayUserMode(),
+            notificationPositionMode: f.Z.getNotificationPositionMode(),
+            textChatNotificationMode: f.Z.getTextChatNotificationMode(),
+            shouldShowKeybindIndicators: f.Z.showKeybindIndicators
         })),
-        P = (0, o.e7)([p.ZP], () => p.ZP.getOverlayKeybind()),
-        y = (0, x.Z)({ location: 'overlay_user_settings' }),
-        Z = (0, m.$1)();
+        Z = (0, o.e7)([C.ZP], () => C.ZP.getOverlayKeybind()),
+        L = (0, p.Z)({ location: 'overlay_user_settings' }),
+        k = (0, m.$1)();
     return (
         !(function () {
-            let e = v(j);
-            a().isEqual(e, j) || (N.default.track(I.rMx.OVERLAY_SETTINGS_UPDATED, e), (j = e));
+            let e = A(b);
+            a().isEqual(e, b) || (I.default.track(S.rMx.OVERLAY_SETTINGS_UPDATED, e), (b = e));
         })(),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)(c.hjN, {
                     className: t,
                     tag: c.RB0.H1,
-                    title: n ? T.intl.string(T.t['9cb1U1']) : null,
+                    title: n ? j.intl.string(j.t['9cb1U1']) : null,
                     children: [
                         !1,
                         (0, i.jsxs)('div', {
-                            className: S.enableOverlaySection,
+                            className: v.enableOverlaySection,
                             children: [
                                 (0, i.jsx)(c.xJW, {
-                                    title: T.intl.string(T.t.XkaTrq),
-                                    className: S.enableOverlayItem,
+                                    title: j.intl.string(j.t.XkaTrq),
+                                    className: v.enableOverlayItem,
                                     children: (0, i.jsx)(c.j7V, {
-                                        className: S.enableSwitch,
+                                        className: v.enableSwitch,
                                         value: r,
-                                        disabled: Z,
-                                        note: Z ? T.intl.string(T.t.Eb0lnJ) : null,
+                                        disabled: k,
+                                        note: k ? j.intl.string(j.t.Eb0lnJ) : null,
                                         hideBorder: !0,
                                         onChange: function (e) {
-                                            u.Z.setEnabled(e, s),
-                                                N.default.track(I.rMx.OVERLAY_TOGGLED, {
-                                                    enabled: e,
-                                                    setting_type: 'overlay toggled - legacy'
-                                                });
+                                            var t, n;
+                                            u.Z.setEnabled(e, s), (0, _.o)(e, _.A.LEGACY, null !== (n = null === (t = g.ZP.getCurrentGameForAnalytics()) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : null);
                                         },
-                                        children: T.intl.string(T.t.vSP6c3)
+                                        children: j.intl.string(j.t.vSP6c3)
                                     })
                                 }),
                                 (0, i.jsx)(c.xJW, {
-                                    title: T.intl.string(T.t.VsAZcH),
-                                    className: S.enableOverlayItem,
+                                    title: j.intl.string(j.t.VsAZcH),
+                                    className: v.enableOverlayItem,
                                     children: (0, i.jsx)(h.Z, {
                                         disabled: !r,
-                                        defaultValue: null != P ? P.shortcut : [],
+                                        defaultValue: null != Z ? Z.shortcut : [],
                                         onChange: function (e) {
-                                            l()(null != P, 'Keybind should never be undefined'),
+                                            l()(null != Z, 'Keybind should never be undefined'),
                                                 d.Z.setKeybind({
-                                                    ...P,
+                                                    ...Z,
                                                     shortcut: e
                                                 });
                                         }
@@ -122,106 +121,106 @@ function A(e) {
                                 })
                             ]
                         }),
-                        (0, i.jsx)(b, {
-                            title: T.intl.string(T.t.dnvZSk),
+                        (0, i.jsx)(O, {
+                            title: j.intl.string(j.t.dnvZSk),
                             children: (0, i.jsx)(c.FXm, {
                                 options: [
                                     {
-                                        name: T.intl.string(T.t.YcOxtr),
-                                        value: I.ipw.LARGE
+                                        name: j.intl.string(j.t.YcOxtr),
+                                        value: S.ipw.LARGE
                                     },
                                     {
-                                        name: T.intl.string(T.t.BKIKq6),
-                                        value: I.ipw.SMALL
+                                        name: j.intl.string(j.t.BKIKq6),
+                                        value: S.ipw.SMALL
                                     }
                                 ],
                                 onChange: (e) => {
                                     let { value: t } = e;
                                     return u.Z.setAvatarSizeMode(t);
                                 },
-                                value: E
+                                value: N
                             })
                         }),
-                        (0, i.jsx)(b, {
-                            title: T.intl.string(T.t.J0dpcH),
+                        (0, i.jsx)(O, {
+                            title: j.intl.string(j.t.J0dpcH),
                             children: (0, i.jsx)(c.FXm, {
                                 options: [
                                     {
-                                        name: T.intl.string(T.t.nBmDra),
-                                        value: I.wC$.ALWAYS
+                                        name: j.intl.string(j.t.nBmDra),
+                                        value: S.wC$.ALWAYS
                                     },
                                     {
-                                        name: T.intl.string(T.t['2OvIZW']),
-                                        value: I.wC$.ONLY_WHILE_SPEAKING
+                                        name: j.intl.string(j.t['2OvIZW']),
+                                        value: S.wC$.ONLY_WHILE_SPEAKING
                                     },
                                     {
-                                        name: T.intl.string(T.t.ekjlPD),
-                                        value: I.wC$.NEVER
+                                        name: j.intl.string(j.t.ekjlPD),
+                                        value: S.wC$.NEVER
                                     }
                                 ],
                                 onChange: (e) => {
                                     let { value: t } = e;
                                     return u.Z.setDisplayNameMode(t);
                                 },
-                                value: f
+                                value: T
                             })
                         }),
-                        (0, i.jsx)(b, {
-                            title: T.intl.string(T.t.swsWWF),
+                        (0, i.jsx)(O, {
+                            title: j.intl.string(j.t.swsWWF),
                             children: (0, i.jsx)(c.FXm, {
                                 options: [
                                     {
-                                        name: T.intl.string(T.t.nBmDra),
-                                        value: I.OYC.ALWAYS
+                                        name: j.intl.string(j.t.nBmDra),
+                                        value: S.OYC.ALWAYS
                                     },
                                     {
-                                        name: T.intl.string(T.t['2OvIZW']),
-                                        value: I.OYC.ONLY_WHILE_SPEAKING
+                                        name: j.intl.string(j.t['2OvIZW']),
+                                        value: S.OYC.ONLY_WHILE_SPEAKING
                                     }
                                 ],
                                 onChange: (e) => {
                                     let { value: t } = e;
                                     return u.Z.setDisplayUserMode(t);
                                 },
-                                value: A
+                                value: R
                             })
                         }),
-                        y &&
-                            (0, i.jsx)(b, {
+                        L &&
+                            (0, i.jsx)(O, {
                                 children: (0, i.jsx)(c.j7V, {
-                                    value: D,
+                                    value: y,
                                     onChange: (e) => u.Z.setShowKeybindIndicators(e),
                                     hideBorder: !0,
-                                    children: T.intl.string(T.t.XZTl9v)
+                                    children: j.intl.string(j.t.XZTl9v)
                                 })
                             })
                     ]
                 }),
                 (0, i.jsxs)(c.hjN, {
                     tag: c.RB0.H1,
-                    title: T.intl.string(T.t['3GMnLi']),
-                    className: S.notificationSection,
+                    title: j.intl.string(j.t['3GMnLi']),
+                    className: v.notificationSection,
                     children: [
-                        (0, i.jsx)(b, {
-                            title: T.intl.string(T.t.IQv8Eh),
+                        (0, i.jsx)(O, {
+                            title: j.intl.string(j.t.IQv8Eh),
                             children: (0, i.jsx)('div', {
-                                className: S.notificationSettings,
-                                children: (0, i.jsx)(g.Z, {
-                                    position: O,
+                                className: v.notificationSettings,
+                                children: (0, i.jsx)(x.Z, {
+                                    position: D,
                                     onChange: (e, t) => u.Z.setNotificationPositionMode(t)
                                 })
                             })
                         }),
-                        (0, i.jsx)(b, {
+                        (0, i.jsx)(O, {
                             children: (0, i.jsx)(c.j7V, {
-                                value: O !== I._vf.DISABLED && R === I.Ypu.ENABLED,
-                                disabled: O === I._vf.DISABLED,
+                                value: D !== S._vf.DISABLED && P === S.Ypu.ENABLED,
+                                disabled: D === S._vf.DISABLED,
                                 onChange: function () {
-                                    let { ENABLED: e, DISABLED: t } = I.Ypu;
-                                    u.Z.setTextChatNotificationMode(R === e ? t : e);
+                                    let { ENABLED: e, DISABLED: t } = S.Ypu;
+                                    u.Z.setTextChatNotificationMode(P === e ? t : e);
                                 },
                                 hideBorder: !0,
-                                children: T.intl.string(T.t.Fy5kPj)
+                                children: j.intl.string(j.t.Fy5kPj)
                             })
                         })
                     ]
