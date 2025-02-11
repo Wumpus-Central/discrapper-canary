@@ -1,29 +1,29 @@
 n.d(t, {
-    T: () => i,
-    v: () => s
+    T: () => s,
+    v: () => a
 });
-var r = n(200651);
+var l = n(200651);
 n(192379);
-var l = n(481060);
-let a = 'collectibles shop product details modal',
-    i = (e) => {
-        let { product: t, category: i, analyticsSource: s, analyticsLocations: o, returnRef: d } = e;
-        (0, l.ZDy)(
+var r = n(481060);
+let i = 'collectibles shop product details modal',
+    s = (e) => {
+        let { product: t, category: s, analyticsSource: a, analyticsLocations: o, returnRef: d } = e;
+        (0, r.ZDy)(
             async () => {
                 let { default: e } = await n.e('2026').then(n.bind(n, 702370));
                 return (n) =>
-                    (0, r.jsx)(e, {
+                    (0, l.jsx)(e, {
                         ...n,
                         product: t,
-                        category: i,
-                        analyticsSource: s,
+                        category: s,
+                        analyticsSource: a,
                         analyticsLocations: o,
                         returnRef: d
                     });
             },
-            { modalKey: a }
+            { modalKey: i }
         );
     },
-    s = () => {
-        (0, l.Mr3)(a);
+    a = () => {
+        (0, r.Mr3)(i);
     };

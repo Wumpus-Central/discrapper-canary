@@ -1,9 +1,9 @@
-n.d(t, { Z: () => f }), n(47120);
-var r = n(200651),
-    l = n(192379),
-    a = n(642128),
-    i = n(780384),
-    s = n(481060),
+n.d(t, { Z: () => g }), n(47120);
+var l = n(200651),
+    r = n(192379),
+    i = n(642128),
+    s = n(780384),
+    a = n(481060),
     o = n(410030),
     d = n(965645),
     c = n(362061);
@@ -68,42 +68,42 @@ let u = [
         }
     ],
     h = 1 / 300,
-    p = (0, a.animated)(d.Z),
-    m = (0, a.animated)(c.Z),
-    g = (0, a.animated)(s.OgN),
-    f = l.memo(function (e) {
+    p = (0, i.animated)(d.Z),
+    m = (0, i.animated)(c.Z),
+    f = (0, i.animated)(a.OgN),
+    g = r.memo(function (e) {
         let {
                 themeOverride: t,
                 hovered: n,
-                isContentDismissed: a,
+                isContentDismissed: i,
                 boxColors: d = {
                     dark: u,
                     light: C
                 }
             } = e,
             c = (0, o.ZP)(),
-            [f, x] = (function (e) {
-                let [t, n] = l.useState(!1),
-                    [r, a] = l.useState(Math.floor(7 * Math.random())),
-                    i = l.useRef(r);
+            [g, x] = (function (e) {
+                let [t, n] = r.useState(!1),
+                    [l, i] = r.useState(Math.floor(7 * Math.random())),
+                    s = r.useRef(l);
                 return (
-                    l.useEffect(() => {
-                        i.current = r;
+                    r.useEffect(() => {
+                        s.current = l;
                     }),
-                    l.useEffect(() => {
+                    r.useEffect(() => {
                         if (e) return;
                         let t = Math.random() <= h;
                         if ((n(t), !t)) {
                             let e;
                             do e = Math.floor(7 * Math.random());
-                            while (e === i.current);
-                            a(e);
+                            while (e === s.current);
+                            i(e);
                         }
                     }, [e]),
-                    [t, r]
+                    [t, l]
                 );
             })(n),
-            b = (0, s.q_F)({
+            b = (0, a.q_F)({
                 reverse: !n,
                 reset: !0,
                 from: { scale: 1 },
@@ -113,16 +113,16 @@ let u = [
                     friction: 24
                 }
             }),
-            _ = a ? x : 0,
-            v = (0, i.wj)(null != t ? t : c) ? d.dark[_] : d.light[_];
-        return !n && a
-            ? (0, r.jsx)(g, {})
-            : a && f
-              ? (0, r.jsx)(m, {
-                    isDark: (0, i.wj)(c),
+            _ = i ? x : 0,
+            v = (0, s.wj)(null != t ? t : c) ? d.dark[_] : d.light[_];
+        return !n && i
+            ? (0, l.jsx)(f, {})
+            : i && g
+              ? (0, l.jsx)(m, {
+                    isDark: (0, s.wj)(c),
                     style: b
                 })
-              : (0, r.jsx)(p, {
+              : (0, l.jsx)(p, {
                     boxColor: v.box,
                     ribbonColor: v.ribbon,
                     style: b

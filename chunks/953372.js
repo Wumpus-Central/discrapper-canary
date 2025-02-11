@@ -37,7 +37,7 @@ function T(e) {
             let r = null !== (t = null === (e = i.state) || void 0 === e ? void 0 : e.trim()) && void 0 !== t ? t : null;
             return null == ('' === r ? null : r) && null == i.emoji ? null : i;
         }, [n]),
-        M = (0, l.e7)([f.Z], () => f.Z.isBlocked(null == t ? void 0 : t.id));
+        M = (0, l.e7)([f.Z], () => f.Z.isBlockedOrIgnored(null == t ? void 0 : t.id));
     if (x && M) return null;
     let k = (null == t ? void 0 : t.bot) === !0,
         U = (null == w ? void 0 : w.state) != null && 'xs' === A,

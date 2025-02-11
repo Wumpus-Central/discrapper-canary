@@ -174,7 +174,7 @@ function W(e) {
                                                     (0, i.jsx)(M.Mv, {
                                                         id: 'set-status',
                                                         action: 'PRESS_SET_STATUS',
-                                                        label: (0, i.jsx)(k.Z, { user: t }),
+                                                        label: (0, i.jsx)(k.Z, {}),
                                                         icon: () =>
                                                             (0, i.jsx)(o.qbd, {
                                                                 status: $,

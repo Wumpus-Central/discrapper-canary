@@ -4,14 +4,14 @@ n(192379);
 var r = n(278074),
     a = n(657707),
     s = n(841784),
-    o = n(406368),
+    o = n(495630),
     l = n(170187),
     u = n(937008),
     c = n(981631);
 function d(e) {
     let { activity: t, textVariant: n, textClassName: d, hideIcon: f = !1, hideText: _ = !1, hideTooltip: p = !1 } = e;
     if (f && _) return null;
-    let { text: h, tooltip: m } = (0, o.s)({ activity: t }),
+    let { text: h, tooltip: m } = (0, o.Z)({ activity: t }),
         g = (0, r.EQ)(t)
             .when(s.Z, () => a.jje)
             .with({ type: c.IIU.PLAYING }, () => a.iWm)

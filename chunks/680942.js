@@ -1,9 +1,9 @@
 n.d(t, { Z: () => x });
-var r = n(200651),
-    l = n(192379),
-    a = n(481060),
-    i = n(727637),
-    s = n(906732),
+var l = n(200651),
+    r = n(192379),
+    i = n(481060),
+    s = n(727637),
+    a = n(906732),
     o = n(333867),
     d = n(677232),
     c = n(884697),
@@ -12,8 +12,8 @@ var r = n(200651),
     h = n(474936),
     p = n(231338),
     m = n(388032),
-    g = n(452789);
-let f = {
+    f = n(452789);
+let g = {
         dark: [
             {
                 box: '#FFF19E',
@@ -76,26 +76,26 @@ let f = {
         ]
     },
     x = (e) => {
-        let { product: t, selectedVariantIndex: n, returnRef: x, onSuccess: b, tooltipDelay: _, isGiftEasterEggEnabled: v, disableCustomColor: k = !1 } = e,
-            { analyticsLocations: j } = (0, s.ZP)(),
-            L = l.useRef(null),
-            E = (0, i.Z)(L),
-            S = k ? p.BR.DARK : p.BR.LIGHT,
-            B = (0, u.hv)('CollectiblesShopGiftButton');
+        let { product: t, selectedVariantIndex: n, returnRef: x, onSuccess: b, tooltipDelay: _, isGiftEasterEggEnabled: v, disableCustomColor: j = !1 } = e,
+            { analyticsLocations: k } = (0, a.ZP)(),
+            E = r.useRef(null),
+            L = (0, s.Z)(E),
+            S = j ? p.BR.DARK : p.BR.LIGHT,
+            T = (0, u.hv)('CollectiblesShopGiftButton');
         return (0, c.x6)(t)
             ? null
-            : (0, r.jsx)(a.ua7, {
+            : (0, l.jsx)(i.ua7, {
                   text: m.intl.string(m.t['JCFN//']),
                   delay: _,
                   children: (e) =>
-                      (0, r.jsx)(a.zxk, {
+                      (0, l.jsx)(i.zxk, {
                           ...e,
-                          buttonRef: L,
-                          className: g.giftButton,
-                          color: k ? a.Ttl.BRAND : a.Ttl.CUSTOM,
-                          look: a.zxk.Looks.FILLED,
-                          size: a.PhG.ICON,
-                          innerClassName: g.giftButtonInner,
+                          buttonRef: E,
+                          className: f.giftButton,
+                          color: j ? i.Ttl.BRAND : i.Ttl.CUSTOM,
+                          look: i.zxk.Looks.FILLED,
+                          size: i.PhG.ICON,
+                          innerClassName: f.giftButtonInner,
                           'aria-label': m.intl.string(m.t.PEjaCw),
                           onClick: (e) => {
                               e.stopPropagation(),
@@ -106,9 +106,9 @@ let f = {
                                       }),
                                       isGift: !0,
                                       giftingOrigin: h.Wt.SHOP_PAGE,
-                                      analyticsLocations: j,
+                                      analyticsLocations: k,
                                       returnRef: x,
-                                      variantsReturnStyle: B,
+                                      variantsReturnStyle: T,
                                       onClose:
                                           null != b
                                               ? (e) => {
@@ -118,13 +118,13 @@ let f = {
                                   });
                           },
                           children: v
-                              ? (0, r.jsx)(d.Z, {
-                                    hovered: E,
+                              ? (0, l.jsx)(d.Z, {
+                                    hovered: L,
                                     isContentDismissed: !0,
                                     themeOverride: S,
-                                    boxColors: f
+                                    boxColors: g
                                 })
-                              : (0, r.jsx)(a.OgN, {
+                              : (0, l.jsx)(i.OgN, {
                                     size: 'md',
                                     color: 'currentColor'
                                 })
