@@ -1,17 +1,17 @@
-n.d(l, {
-    C6: () => s,
-    GY: () => o,
-    Kq: () => a
+n.d(t, {
+    C6: () => i,
+    GY: () => r,
+    Kq: () => s
 });
-var i = n(981631),
-    t = n(486324);
-function s(e, l) {
-    let { isGIF: n } = l;
-    if (e === t.pC.GUILD_BANNER) return n ? i.oNc.ANIMATED_BANNER : i.oNc.BANNER;
+var l = n(981631),
+    a = n(486324);
+function i(e, t) {
+    let { isGIF: n } = t;
+    if (e === a.pC.GUILD_BANNER) return n ? l.oNc.ANIMATED_BANNER : l.oNc.BANNER;
 }
-function a(e) {
-    return e === t.pC.AVATAR || e === t.pC.BANNER;
+function s(e) {
+    return e === a.pC.AVATAR || e === a.pC.BANNER;
 }
-function o(e) {
-    return e === t.pC.BANNER;
+function r(e) {
+    return e === a.pC.BANNER;
 }

@@ -807,7 +807,7 @@ class eC extends r.PureComponent {
             }),
             es(this, 'handleOpenImageEditingModal', (e, t) => {
                 (0, g.ZDy)(async () => {
-                    let { default: r } = await Promise.all([n.e('70687'), n.e('59732'), n.e('30258')]).then(n.bind(n, 73620));
+                    let { default: r } = await Promise.all([n.e('70687'), n.e('59732'), n.e('40826')]).then(n.bind(n, 73620));
                     return (n) =>
                         (0, i.jsx)(r, {
                             onCrop: this.handleIconChange,
@@ -842,7 +842,7 @@ class eC extends r.PureComponent {
                     return;
                 }
                 (0, g.ZDy)(async () => {
-                    let { default: r } = await Promise.all([n.e('70687'), n.e('59732'), n.e('18280')]).then(n.bind(n, 712451));
+                    let { default: r } = await Promise.all([n.e('70687'), n.e('59732'), n.e('82682')]).then(n.bind(n, 712451));
                     return (n) =>
                         (0, i.jsx)(r, {
                             imgURI: e,
@@ -1009,7 +1009,7 @@ function ef() {
 function ev(e) {
     let { uploadType: t, maxFileSizeBytes: r, onComplete: l, showUpsellHeader: s = !0, analyticsLocation: a, analyticsLocations: o } = e;
     (0, g.ZDy)(async () => {
-        let { default: e } = await Promise.all([n.e('70687'), n.e('55849'), n.e('68450')]).then(n.bind(n, 192277));
+        let { default: e } = await Promise.all([n.e('70687'), n.e('55849'), n.e('26123')]).then(n.bind(n, 192277));
         return (n) =>
             (0, i.jsx)(e, {
                 maxFileSizeBytes: r,
