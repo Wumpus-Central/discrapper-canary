@@ -1,7 +1,7 @@
 n.d(t, {
-    QM: () => N,
-    ds: () => S,
-    mG: () => A
+    QM: () => A,
+    ds: () => f,
+    mG: () => N
 }),
     n(47120);
 var l = n(200651),
@@ -11,43 +11,44 @@ var l = n(200651),
     s = n(442837),
     o = n(481060),
     u = n(664915),
-    d = n(890588),
+    d = n(751648),
     c = n(479766),
     E = n(741808),
-    C = n(388032),
+    C = n(981631),
+    h = n(388032),
     _ = n(61822),
-    h = n(668096);
-let I = () =>
+    I = n(668096);
+let g = () =>
         (0, l.jsx)('div', {
-            className: h.svgContainer,
+            className: I.svgContainer,
             children: (0, l.jsx)('img', {
                 src: n(39017),
-                className: h.svg,
+                className: I.svg,
                 alt: 'Quests Icon'
             })
         }),
-    g = (e) =>
+    T = (e) =>
         (0, l.jsx)(o.zxk, {
             ...e,
-            'aria-label': C.intl.string(C.t.cpT0Cg),
+            'aria-label': h.intl.string(h.t.cpT0Cg),
             look: o.zxk.Looks.BLANK,
             size: o.zxk.Sizes.NONE,
-            wrapperClassName: h.closeButton,
-            innerClassName: h.closeButtonInner,
+            wrapperClassName: I.closeButton,
+            innerClassName: I.closeButtonInner,
             children: (0, l.jsx)(o.Dio, {
                 size: 'refresh_sm',
                 color: 'currentColor',
-                className: h.closeButtonIcon
+                className: I.closeButtonIcon
             })
         }),
-    T = (e) => {
+    S = (e) => {
         let { invertTail: t } = e;
         return (0, l.jsxs)('div', {
-            className: r()(h.tail, t ? h.tailPositionInverted : h.tailPositionNormal),
+            className: r()(I.tail, t ? I.tailPositionInverted : I.tailPositionNormal),
             children: [
-                (0, l.jsx)('div', { className: h.tailSpine }),
+                (0, l.jsx)('div', { className: I.tailSpine }),
                 (0, l.jsx)('div', {
-                    className: r()(h.tailTargetOuter, t ? h.tailTargetPositionInverted : h.tailTargetPositionNormal),
+                    className: r()(I.tailTargetOuter, t ? I.tailTargetPositionInverted : I.tailTargetPositionNormal),
                     children: (0, l.jsx)('svg', {
                         xmlns: 'http://www.w3.org/2000/svg',
                         width: '8',
@@ -58,31 +59,25 @@ let I = () =>
                             cx: '50%',
                             cy: '50%',
                             r: '3',
-                            className: h.tailTargetInner
+                            className: I.tailTargetInner
                         })
                     })
                 })
             ]
         });
     },
-    S = (e) => {
+    f = (e) => {
         let { onClose: t, backgroundElementRef: n, renderTail: a = !1 } = e,
             [r, o] = i.useState(Date.now()),
-            [c, C] = i.useState(!1),
-            _ = i.useCallback(
+            [d, c] = i.useState(!1),
+            C = i.useCallback(
                 (e) => {
                     let t = e.top < window.innerHeight / 2;
-                    t !== c && C(t);
+                    t !== d && c(t);
                 },
-                [c]
-            );
-        (0, d.i)({
-            onDOMRectPositionChange: (e, t) => {
-                e.top !== t.top && o(Date.now());
-            },
-            elementRef: n
-        });
-        let h = (0, s.e7)([u.Z], () => u.Z.getExpandedFolders().size > 0);
+                [d]
+            ),
+            h = (0, s.e7)([u.Z], () => u.Z.getExpandedFolders().size > 0);
         return (
             i.useEffect(() => {
                 o(Date.now());
@@ -91,7 +86,7 @@ let I = () =>
                 E.X,
                 {
                     backgroundElementRef: n,
-                    getOffsetsRelativeToElement: c
+                    getOffsetsRelativeToElement: d
                         ? (e) => ({
                               left: 0,
                               top: e.height + 10
@@ -104,55 +99,64 @@ let I = () =>
                         top: 0,
                         left: 0
                     },
-                    onGetBoundingRect: _,
-                    children: (0, l.jsx)(A, {
+                    onGetBoundingRect: C,
+                    children: (0, l.jsx)(N, {
                         onClose: t,
                         renderTail: a,
-                        invertTail: c
+                        invertTail: d
                     })
                 },
                 r
             )
         );
     },
-    N = (e) => {
-        let { discoveryButtonRef: t } = e,
-            [n, l] = i.useState(!1),
-            { shouldOpenCoachmark: a, shouldSkipCoachmark: r } = (0, s.cj)([c.Z], () => {
+    A = (e) => {
+        let { isVirtualCurrencyEnabled: t, discoveryButtonRef: n } = e,
+            [l, a] = i.useState(!1),
+            { shouldOpenCoachmark: r, shouldSkipCoachmark: o } = (0, s.cj)([c.Z], () => {
                 let { shouldOpen: e, shouldSkip: t } = c.Z.onboardingCoachmark;
                 return {
                     shouldOpenCoachmark: e,
                     shouldSkipCoachmark: t
                 };
-            });
-        return (
-            i.useEffect(() => {
-                null !== t && l(a && !r);
-            }, [t, a, r]),
-            { shouldShowOnboardingCoachmark: n }
-        );
+            }),
+            u = i.useCallback(() => {
+                r && (0, d.l)();
+            }, [r]);
+        return (i.useEffect(() => {
+            null !== n && a(r && !o);
+        }, [n, r, o]),
+        t)
+            ? {
+                  shouldShowOnboardingCoachmark: l,
+                  closeOnboardingCoachmarkIfOpen: u
+              }
+            : {
+                  shouldShowOnboardingCoachmark: !1,
+                  closeOnboardingCoachmarkIfOpen: C.dG4
+              };
     },
-    A = (e) => {
+    N = (e) => {
         let { onClose: t, renderTail: n, invertTail: i = !1 } = e;
         return (0, l.jsxs)('div', {
-            className: r()(_.baseCardOutline, h.container),
+            className: r()(_.baseCardOutline, I.container),
             children: [
-                (0, l.jsx)(g, { onClick: t }),
-                (0, l.jsx)(I, {}),
+                (0, l.jsx)(T, { onClick: t }),
+                (0, l.jsx)(g, {}),
                 (0, l.jsxs)('div', {
-                    className: h.content,
+                    className: I.content,
                     children: [
                         (0, l.jsx)('div', {
                             className: _.coachmarkTitle,
-                            children: C.intl.string(C.t['3B4+wM'])
+                            children: h.intl.string(h.t['3B4+wM'])
                         }),
                         (0, l.jsx)('div', {
                             className: _.coachmarkDescription,
-                            children: C.intl.format(C.t.V6DQX1, { quantity: 200 })
+                            children: h.intl.format(h.t.V6DQX1, { quantity: 200 })
                         })
                     ]
                 }),
-                n && (0, l.jsx)(T, { invertTail: i })
+                n && (0, l.jsx)(S, { invertTail: i })
             ]
         });
     };

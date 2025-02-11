@@ -25,9 +25,9 @@ var i = n(200651),
     E = n(41776),
     j = n(905423),
     y = n(802718),
-    P = n(751648),
+    A = n(751648),
     T = n(822857),
-    A = n(34222),
+    P = n(34222),
     w = n(431286),
     R = n(796974),
     L = n(271383),
@@ -232,9 +232,9 @@ function es(e) {
         [ej]
     );
     let { analyticsLocations: ey } = (0, Z.ZP)(x.Z.GUILDS_LIST),
-        { pathname: eP } = (0, c.TH)(),
-        eT = eP.startsWith(en.Z5c.GUILD_DISCOVERY) || eP.startsWith(en.Z5c.GLOBAL_DISCOVERY),
-        eA = eP.startsWith(en.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(''));
+        { pathname: eA } = (0, c.TH)(),
+        eT = eA.startsWith(en.Z5c.GUILD_DISCOVERY) || eA.startsWith(en.Z5c.GLOBAL_DISCOVERY),
+        eP = eA.startsWith(en.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(''));
     (0, v.Ng)(() => {
         if (!eg.current && 0 !== p.size) {
             if (eT) ej.scrollToGuild(null, !1);
@@ -301,11 +301,14 @@ function es(e) {
     let eL = p.getRoots(),
         eM = (0, S.Z)(),
         eD = (0, y.U)(),
-        { enabled: eG } = (0, T.W)({ location: 'useShopViewTransition' });
+        { enabled: eG } = (0, T.W)({ location: 'GuildsBar' });
     (0, w.i)();
     let ek = l.useRef(null),
-        { shouldShowOnboardingCoachmark: eB } = (0, A.QM)({ discoveryButtonRef: ek }),
-        eO = ed.map((e) =>
+        { shouldShowOnboardingCoachmark: eB, closeOnboardingCoachmarkIfOpen: eO } = (0, P.QM)({
+            isVirtualCurrencyEnabled: eG,
+            discoveryButtonRef: ek
+        }),
+        eU = ed.map((e) =>
             (0, i.jsx)(
                 z.Z,
                 {
@@ -321,9 +324,9 @@ function es(e) {
         children: [
             eG &&
                 eB &&
-                (0, i.jsx)(A.ds, {
+                (0, i.jsx)(P.ds, {
                     backgroundElementRef: ek,
-                    onClose: P.l,
+                    onClose: A.l,
                     renderTail: !0
                 }),
             (0, i.jsx)(f.f6W, {
@@ -361,7 +364,7 @@ function es(e) {
                                             children: [
                                                 (0, i.jsx)(Y.u, {}),
                                                 eM ? (0, i.jsx)(N.Z, {}) : null,
-                                                (0, i.jsx)(Q.Z, { isOnHubVerificationRoute: eA }),
+                                                (0, i.jsx)(Q.Z, { isOnHubVerificationRoute: eP }),
                                                 (0, i.jsx)(V.Z, {}),
                                                 eD,
                                                 es.map((e) => (0, i.jsx)(et.Z, { guildId: e }, e)),
@@ -377,7 +380,7 @@ function es(e) {
                                                           'aria-label': ei.intl.string(ei.t['7hB4kp']),
                                                           children: eL.map(eR)
                                                       }),
-                                                eO,
+                                                eU,
                                                 n
                                                     ? null
                                                     : (0, i.jsx)(H.Z, {
@@ -388,6 +391,7 @@ function es(e) {
                                                 !n && s
                                                     ? (0, i.jsx)(W.Z, {
                                                           ref: ek,
+                                                          onClick: eO,
                                                           selected: eT,
                                                           className: el.discoveryIcon
                                                       })
@@ -401,6 +405,7 @@ function es(e) {
                                                   hideGradient: eS,
                                                   children: (0, i.jsx)(W.Z, {
                                                       ref: ek,
+                                                      onClick: eO,
                                                       selected: eT,
                                                       className: el.discoveryIcon
                                                   })

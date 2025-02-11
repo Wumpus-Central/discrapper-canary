@@ -49,6 +49,9 @@ class o extends (a = r.ZP.Store) {
     get isFetchingBalance() {
         return this._isFetchingBalance;
     }
+    get onboardingModalOpenedPrior() {
+        return this._onboardingModalOpenedPrior;
+    }
     handleBalanceFetch(e) {
         let {} = e;
         (this._isFetchingBalance = !0), (this._fetchBalanceError = null);
@@ -76,6 +79,14 @@ class o extends (a = r.ZP.Store) {
     handleRedeemVirtualCurrencyFail(e) {
         let { error: t } = e;
         (this._entitlements = null), (this._redeemVirtualCurrencyError = t), (this._redeemingSkuId = null), (this._isRedeemingVirtualCurrency = !1);
+    }
+    handleOnboardingModalOpen(e) {
+        let {} = e;
+        this._onboardingModalOpenedPrior = !0;
+    }
+    handleOnboardingModalReset(e) {
+        let {} = e;
+        this._onboardingModalOpenedPrior = !1;
     }
     handleEarnedOrbsCoachmarkOpen(e) {
         let { earnedOrbsQuantity: t, dedupeKey: n } = e;
@@ -106,6 +117,8 @@ class o extends (a = r.ZP.Store) {
             VIRTUAL_CURRENCY_BALANCE_FETCH_SUCCESS: (e) => this.handleBalanceFetchSuccess(e),
             VIRTUAL_CURRENCY_BALANCE_FETCH_FAIL: (e) => this.handleBalanceFetchFail(e),
             VIRTUAL_CURRENCY_BALANCE_UPDATE: (e) => this.handleBalanceUpdate(e),
+            VIRTUAL_CURRENCY_ONBOARDING_MODAL_OPEN: (e) => this.handleOnboardingModalOpen(e),
+            VIRTUAL_CURRENCY_ONBOARDING_MODAL_RESET: (e) => this.handleOnboardingModalReset(e),
             VIRTUAL_CURRENCY_EARNED_ORBS_COACHMARK_OPEN: (e) => this.handleEarnedOrbsCoachmarkOpen(e),
             VIRTUAL_CURRENCY_EARNED_ORBS_COACHMARK_CLOSE: (e) => this.handleEarnedOrbsCoachmarkClose(e),
             VIRTUAL_CURRENCY_ONBOARDING_COACHMARK_OPEN: (e) => this.handleOnboardingCoachmarkOpen(e),
@@ -123,7 +136,8 @@ class o extends (a = r.ZP.Store) {
             i(this, '_earnedOrbsCoachmarkDedupeKeys', []),
             i(this, '_earnedOrbsCoachmarkQuantity', 0),
             i(this, '_onboardingCoachmarkOpen', !1),
-            i(this, '_onboardingCoachmarkSkip', !1);
+            i(this, '_onboardingCoachmarkSkip', !1),
+            i(this, '_onboardingModalOpenedPrior', !1);
     }
 }
 i(o, 'displayName', 'VirtualCurrencyStore');
