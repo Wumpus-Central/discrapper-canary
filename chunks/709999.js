@@ -132,12 +132,16 @@ let Y = (e) => {
         l.useEffect(() => {
             let { current: e } = er;
             if (null == e) return;
-            let t = () => ea(!0);
+            let t = () => ea(!0),
+                n = (t) => {
+                    e.contains(t.relatedTarget) || ea(!1);
+                };
             return (
                 e.addEventListener('focusin', t),
+                e.addEventListener('focusout', n),
                 e.blur(),
                 () => {
-                    e.removeEventListener('focusin', t);
+                    e.removeEventListener('focusin', t), e.removeEventListener('focusout', n);
                 }
             );
         }, []),
@@ -197,7 +201,6 @@ let Y = (e) => {
                               [X.mysteryShopCard]: ej
                           }),
                           ref: er,
-                          onBlur: () => ea(!1),
                           onClick: eR,
                           'aria-label': t.name,
                           children: [
