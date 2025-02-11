@@ -1,13 +1,14 @@
-n.d(t, { Z: () => p }), n(47120);
+n.d(t, { Z: () => h }), n(47120);
 var i = n(846027),
     r = n(147913),
     a = n(353926),
     s = n(131951),
     o = n(19780),
-    l = n(743498),
-    u = n(875527),
-    c = n(981631);
-function d(e, t, n) {
+    l = n(626135),
+    u = n(743498),
+    c = n(875527),
+    d = n(981631);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,24 +21,29 @@ function d(e, t, n) {
         e
     );
 }
-function f() {
-    let { enabled: e } = u.c.getCurrentConfig({ location: 'VoiceFilterLoopbackManager' }, { autoTrackExposure: !1 });
+function _() {
+    let { enabled: e } = c.c.getCurrentConfig({ location: 'VoiceFilterLoopbackManager' }, { autoTrackExposure: !1 });
     return e;
 }
-class _ extends r.Z {
+class p extends r.Z {
     handleExperimentStateChange() {
-        !f() && s.Z.getVoiceFilterPlaybackEnabled() && (0, l._j)(!1);
+        !_() && s.Z.getVoiceFilterPlaybackEnabled() && (0, u._j)(!1);
     }
     handleRtcConnectionState(e) {
         let { state: t } = e,
             n = s.Z.getActiveVoiceFilter();
-        if (!f() || null == n) return;
+        if (!_() || null == n) return;
         let r = s.Z.getVoiceFilterPlaybackEnabled();
-        t === c.hes.RTC_CONNECTED ? i.Z.setLoopback(r) : t === c.hes.RTC_DISCONNECTED && i.Z.setLoopback(!1);
+        t === d.hes.RTC_CONNECTED ? i.Z.setLoopback(r) : t === d.hes.RTC_DISCONNECTED && i.Z.setLoopback(!1);
     }
     handleLoopbackToggle(e) {
-        let { enabled: t } = e;
-        o.Z.isConnected() && i.Z.setLoopback(t);
+        var t;
+        let { enabled: n } = e;
+        l.default.track(d.rMx.VOICE_FILTER_PLAYBACK_TOGGLED, {
+            active_voice_filter_id: null !== (t = s.Z.getActiveVoiceFilter()) && void 0 !== t ? t : null,
+            enabled: n
+        }),
+            o.Z.isConnected() && i.Z.setLoopback(n);
     }
     handleVoiceFilterApplied(e) {
         let { voiceFilterId: t } = e,
@@ -49,12 +55,12 @@ class _ extends r.Z {
     }
     constructor(...e) {
         super(...e),
-            d(this, 'actions', {
+            f(this, 'actions', {
                 RTC_CONNECTION_STATE: this.handleRtcConnectionState,
                 VOICE_FILTER_LOOPBACK_TOGGLE: this.handleLoopbackToggle,
                 VOICE_FILTER_APPLIED: this.handleVoiceFilterApplied
             }),
-            d(this, 'stores', new Map().set(a.Z, this.handleExperimentStateChange));
+            f(this, 'stores', new Map().set(a.Z, this.handleExperimentStateChange));
     }
 }
-let p = new _();
+let h = new p();

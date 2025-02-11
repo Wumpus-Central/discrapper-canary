@@ -2316,6 +2316,16 @@ var T =
     (r.INVITE_ACCEPT_JOIN_SETTINGS_SET = 'invite_accept_join_settings_set'),
     (r.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED = 'invite_accept_join_settings_expanded'),
     (r.INVITE_ACCEPT_DISMISSED = 'invite_accept_dismissed'),
+    (r.VOICE_FILTER_PICKER_OPENED = 'voice_filter_picker_opened'),
+    (r.VOICE_FILTER_ENABLED = 'voice_filter_enabled'),
+    (r.VOICE_FILTER_DISABLED = 'voice_filter_disabled'),
+    (r.VOICE_FILTER_DOWNLOAD_ATTEMPTED = 'voice_filter_download_attempted'),
+    (r.VOICE_FILTER_ACTIVATE_FAILED = 'voice_filter_activate_failed'),
+    (r.VOICE_FILTER_PLAYBACK_TOGGLED = 'voice_filter_playback_toggled'),
+    (r.VOICE_FILTER_PICKER_SCROLLED = 'voice_filter_picker_scrolled'),
+    (r.VOICE_FILTER_MIC_SELECTOR_OPENED = 'voice_filter_mic_selector_opened'),
+    (r.VOICE_FILTER_MIC_SELECTOR_INPUT_SELECTED = 'voice_filter_mic_selector_input_selected'),
+    (r.VOICE_FILTER_VOICE_SETTINGS_CLICKED = 'voice_filter_voice_settings_clicked'),
     r);
 Object.freeze({
     STORAGE_MANIFEST: (t, e) => ''.concat(t, '/storage/').concat(e, '/MANIFEST'),
