@@ -1,58 +1,75 @@
-n.d(t, { x: () => E });
-var i = n(711814),
-    r = n(149334),
-    a = n(409863),
-    s = n(357196),
-    o = n(658250),
-    l = n(691545),
-    u = n(58587),
-    c = n(912609),
-    d = n(565792),
-    f = n(583498),
-    _ = n(442866),
-    p = n(263984),
-    h = n(591501),
-    m = n(595867),
-    g = n(865790);
-let E = {
+n.d(t, { x: () => D });
+var i = n(771356),
+    r = n(640490),
+    a = n(89222),
+    s = n(466790),
+    o = n(166660),
+    l = n(415345),
+    u = n(962770),
+    c = n(909139),
+    d = n(815291),
+    f = n(760427),
+    _ = n(761491),
+    p = n(830443),
+    h = n(711814),
+    m = n(149334),
+    g = n(409863),
+    E = n(357196),
+    v = n(658250),
+    y = n(691545),
+    I = n(58587),
+    T = n(912609),
+    b = n(565792),
+    S = n(583498),
+    A = n(442866),
+    N = n(263984),
+    C = n(591501),
+    R = n(595867),
+    O = n(865790);
+let D = {
     skye: {
         name: 'Skye',
-        iconURL: _.Z,
+        iconURL: A.Z,
         splashGradient: 'radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(84.38% 468.75% at 15.63% 100%, rgba(242, 96, 195, 0.50) 0%, rgba(242, 96, 195, 0.00) 100%), linear-gradient(90deg, rgba(53, 236, 125, 0.25) 0%, rgba(53, 236, 125, 0.00) 15%)',
         baseColor: '#380527',
-        styleKey: 'skye'
+        styleKey: 'skye',
+        previewSoundURL: d.Z
     },
     quinn: {
         name: 'Quinn',
-        iconURL: c.Z,
+        iconURL: T.Z,
         splashGradient: 'radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(84.38% 468.75% at 15.63% 100%, rgba(47, 94, 67, 0.50) 0%, rgba(47, 94, 67, 0.00) 100%), linear-gradient(90deg, rgba(53, 236, 126, 0.25) 0%, rgba(53, 236, 126, 0.00) 15%)',
         baseColor: '#14291D',
-        styleKey: 'quinn'
+        styleKey: 'quinn',
+        previewSoundURL: u.Z
     },
     axel: {
         name: 'Axel',
-        iconURL: i.Z,
+        iconURL: h.Z,
         splashGradient: 'radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(84.38% 468.75% at 15.63% 100%, rgba(40, 84, 54, 0.50) 0%, rgba(40, 84, 54, 0.00) 100%), linear-gradient(90deg, rgba(104, 189, 255, 0.25) 0%, rgba(104, 189, 255, 0.00) 15%)',
         baseColor: '#14291B',
-        styleKey: 'axel'
+        styleKey: 'axel',
+        previewSoundURL: i.Z
     },
     sebastien: {
         name: 'Sébastien',
-        iconURL: f.Z,
+        iconURL: S.Z,
         splashGradient: 'radial-gradient(9% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(100% 555.56% at 0% 100%, rgba(92, 119, 31, 0.50) 0%, rgba(92, 119, 31, 0.00) 100%), linear-gradient(90deg, rgba(104, 188, 254, 0.25) 0%, rgba(104, 188, 254, 0.00) 15%)',
         baseColor: '#25300D',
-        styleKey: 'sebastien'
+        styleKey: 'sebastien',
+        previewSoundURL: c.Z
     },
     megaphone: {
         name: 'Megaphone',
-        iconURL: u.Z,
+        iconURL: I.Z,
         splashGradient: 'radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(84.38% 468.75% at 15.63% 100%, rgba(230, 90, 205, 0.50) 0%, rgba(230, 90, 205, 0.00) 100%), linear-gradient(90deg, rgba(127, 233, 134, 0.25) 0%, rgba(127, 233, 134, 0.00) 15%)',
         baseColor: '#35082D',
-        styleKey: 'megaphone'
+        styleKey: 'megaphone',
+        previewSoundURL: l.Z
     },
     robot: {
         name: '\uD83D\uDEA7 DR01D',
-        iconURL: d.Z,
+        iconURL: b.Z,
         underDevelopment: !0,
         splashGradient: 'radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(84.38% 468.75% at 15.63% 100%, rgba(61, 72, 79, 0.50) 0%, rgba(61, 72, 79, 0.00) 100%), linear-gradient(90deg, rgba(118, 233, 136, 0.25) 0%, rgba(118, 233, 136, 0.00) 15%)',
         baseColor: '#1B1F23',
@@ -60,7 +77,7 @@ let E = {
     },
     tunes: {
         name: '\uD83D\uDEA7 Tunetron',
-        iconURL: m.Z,
+        iconURL: R.Z,
         underDevelopment: !0,
         splashGradient: 'radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(100% 555.56% at 0% 100%, rgba(111, 134, 253, 0.50) 0%, rgba(111, 134, 253, 0.00) 100%), linear-gradient(90deg, rgba(254, 76, 209, 0.25) 0%, rgba(254, 76, 209, 0.00) 15%)',
         baseColor: '#010A3C',
@@ -68,7 +85,7 @@ let E = {
     },
     ghost: {
         name: '\uD83D\uDEA7 Ghost',
-        iconURL: s.Z,
+        iconURL: E.Z,
         underDevelopment: !0,
         splashGradient: 'radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(84.38% 468.75% at 15.63% 100%, rgba(110, 73, 156, 0.50) 0%, rgba(110, 73, 156, 0.00) 100%), linear-gradient(90deg, rgba(255, 76, 210, 0.25) 0%, rgba(255, 76, 210, 0.00) 15%)',
         baseColor: '#1D142A',
@@ -76,52 +93,59 @@ let E = {
     },
     space_bunny: {
         name: 'Space Bunny',
-        iconURL: h.Z,
+        iconURL: C.Z,
         splashGradient: 'radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(100% 555.56% at 0% 100%, rgba(110, 60, 223, 0.40) 0%, rgba(110, 60, 223, 0.00) 100%), linear-gradient(90deg, rgba(118, 233, 136, 0.25) 0%, rgba(118, 233, 136, 0.00) 15%)',
         baseColor: '#160935',
-        styleKey: 'spacebunny'
+        styleKey: 'spacebunny',
+        previewSoundURL: _.Z
     },
     justus: {
         name: 'Justus',
-        iconURL: l.Z,
+        iconURL: y.Z,
         splashGradient: 'radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(100% 555.56% at 0% 100%, rgba(5, 86, 248, 0.50) 0%, rgba(5, 86, 248, 0.00) 100%), linear-gradient(90deg, rgba(104, 188, 254, 0.25) 0%, rgba(104, 188, 254, 0.00) 15%)',
         baseColor: '#01153C',
-        styleKey: 'justus'
+        styleKey: 'justus',
+        previewSoundURL: o.Z
     },
     harper: {
         name: 'Harper',
-        iconURL: o.Z,
+        iconURL: v.Z,
         splashGradient: 'radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(84.38% 468.75% at 15.63% 100%, rgba(125, 87, 179, 0.50) 0%, rgba(125, 87, 179, 0.00) 100%), linear-gradient(90deg, rgba(254, 76, 209, 0.25) 0%, rgba(254, 76, 209, 0.00) 15%)',
         baseColor: '#1D132A',
-        styleKey: 'harper'
+        styleKey: 'harper',
+        previewSoundURL: s.Z
     },
     villain: {
         name: 'Villain',
-        iconURL: g.Z,
+        iconURL: O.Z,
         splashGradient: 'radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(100% 555.56% at 0% 100%, rgba(219, 2, 34, 0.50) 0%, rgba(219, 2, 34, 0.00) 100%), linear-gradient(90deg, rgba(53, 236, 125, 0.25) 0%, rgba(53, 236, 125, 0.00) 15%)',
         baseColor: '#3D0109',
-        styleKey: 'villain'
+        styleKey: 'villain',
+        previewSoundURL: p.Z
     },
     solara: {
         name: 'Solara',
-        iconURL: p.Z,
+        iconURL: N.Z,
         splashGradient: 'radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(84.38% 468.75% at 15.63% 100%, rgba(214, 155, 56, 0.50) 0%, rgba(214, 155, 56, 0.00) 100%), linear-gradient(90deg, rgba(254, 76, 209, 0.25) 0%, rgba(254, 76, 209, 0.00) 15%)',
         baseColor: '#33240A',
-        styleKey: 'solara'
+        styleKey: 'solara',
+        previewSoundURL: f.Z
     },
     cave: {
         name: 'Cave',
-        iconURL: r.Z,
+        iconURL: m.Z,
         splashGradient: 'radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(84.38% 468.75% at 15.63% 100%, rgba(207, 122, 124, 0.50) 0%, rgba(207, 122, 124, 0.00) 100%), linear-gradient(90deg, rgba(124, 188, 249, 0.25) 0%, rgba(124, 188, 249, 0.00) 15%)',
         baseColor: '#2D1011',
-        styleKey: 'cave'
+        styleKey: 'cave',
+        previewSoundURL: r.Z
     },
     deepfried: {
         name: 'Deep Fried',
-        iconURL: a.Z,
+        iconURL: g.Z,
         splashGradient: 'radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(84.38% 468.75% at 15.63% 100%, rgba(253, 177, 45, 0.50) 0%, rgba(253, 177, 45, 0.00) 100%), linear-gradient(90deg, rgba(127, 233, 135, 0.25) 0%, rgba(127, 233, 135, 0.00) 15%)',
         baseColor: '#3D2701',
-        styleKey: 'deepfried'
+        styleKey: 'deepfried',
+        previewSoundURL: a.Z
     }
 };
-(E.rachel = E.skye), (E.alex = E.quinn), (E.elliot = E.axel), (E.sebastian = E.sebastien), (E.justin = E.justus), (E.taylor = E.harper), (E.monique = E.solara);
+(D.rachel = D.skye), (D.alex = D.quinn), (D.elliot = D.axel), (D.sebastian = D.sebastien), (D.justin = D.justus), (D.taylor = D.harper), (D.monique = D.solara);

@@ -1,41 +1,27 @@
-n.d(t, { Z: () => f }), n(47120);
+n.d(t, { Z: () => c });
 var i = n(192379),
-    r = n(481060),
-    a = n(135869),
-    s = n(22382),
-    o = n(747071),
-    l = n(695346),
-    u = n(626135),
-    c = n(981631),
-    d = n(388032);
-function f(e, t) {
-    let { currentPreviewRef: n } = i.useContext(a.Z),
-        [f, _] = i.useState(!1);
+    r = n(22382),
+    a = n(747071),
+    s = n(469121),
+    o = n(695346),
+    l = n(626135),
+    u = n(981631);
+function c(e, t) {
+    let { isPlaying: n, playSound: c } = (0, s.Z)(null != e ? (0, r.Z)(e.soundId) : null);
     return {
-        playing: f,
+        isPlaying: n,
         playSound: i.useCallback(() => {
-            var i;
-            if (null == e) return !1;
-            let a = new Audio((0, s.Z)(e.soundId));
+            var n;
             return (
-                null != n.current && n.current.pause(),
-                (n.current = a),
-                (a.currentTime = 0),
-                (a.volume = (0, o.Z)(null !== (i = null == e ? void 0 : e.volume) && void 0 !== i ? i : 1, l.AY.getSetting())),
-                a.play().catch(() => {
-                    'Safari' === platform.name && (0, r.showToast)((0, r.createToast)(d.intl.string(d.t.qAsyjI), r.ToastType.FAILURE));
-                }),
-                (a.onplay = () => _(!0)),
-                (a.onpause = () => _(!1)),
-                (a.onended = () => _(!1)),
-                u.default.track(c.rMx.SOUNDMOJI_PLAY, {
+                !!c({ volume: (0, a.Z)(null !== (n = null == e ? void 0 : e.volume) && void 0 !== n ? n : 1, o.AY.getSetting()) }) &&
+                (l.default.track(u.rMx.SOUNDMOJI_PLAY, {
                     guild_id: null == t ? void 0 : t.guild_id,
                     channel_id: null == t ? void 0 : t.id,
                     sound_guild_id: null == e ? void 0 : e.guildId,
                     sound_id: null == e ? void 0 : e.soundId
                 }),
-                !0
+                !0)
             );
-        }, [e, t, n, _])
+        }, [null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, c, null == e ? void 0 : e.guildId, null == e ? void 0 : e.soundId, null == e ? void 0 : e.volume])
     };
 }
