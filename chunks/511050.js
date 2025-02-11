@@ -27,7 +27,7 @@ let m = new l.Z('VirtualCurrency'),
             ),
             g = (0, i.useCallback)(
                 (e) => {
-                    if (null === l && !e) {
+                    if (null == l && !e) {
                         m.warn('Could not open Intro to Orbs Claimed Coachmark. Reward orb quantity not found or quest does not exist with ID '.concat(h.V));
                         return;
                     }
@@ -51,7 +51,7 @@ let m = new l.Z('VirtualCurrency'),
                   closeIntroToOrbsClaimedCoachmark: x
               }
             : {
-                  rewardOrbQuantity: null,
+                  rewardOrbQuantity: void 0,
                   openIntroToOrbsClaimedCoachmark: u.dG4,
                   closeIntroToOrbsClaimedCoachmark: u.dG4
               };

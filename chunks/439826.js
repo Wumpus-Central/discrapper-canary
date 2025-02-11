@@ -129,11 +129,11 @@ function q(e) {
 }
 function k(e) {
     var t, n, s, i, u;
-    let { quest: m, isHovering: b, errorHints: y, warningHints: k, onCtxMenuClose: P, onCtxMenuOpen: I, onCtxMenuSelect: O } = e,
-        M = (0, C.q8)(m),
+    let { quest: m, isHovering: b, errorHints: y, warningHints: k, onCtxMenuClose: P, onCtxMenuOpen: I, onCtxMenuSelect: M } = e,
+        O = (0, C.q8)(m),
         W = o.useMemo(() => (0, v.fh)(m, v.eC.HERO), [m]),
-        D = (0, p.ZP)(),
-        L = ((0, c.wj)(D) ? A.BRd.DARK : A.BRd.LIGHT) === A.BRd.DARK,
+        L = (0, p.ZP)(),
+        D = ((0, c.wj)(L) ? A.BRd.DARK : A.BRd.LIGHT) === A.BRd.DARK,
         Q = o.useContext(l.S).reducedMotion.enabled,
         Z = (0, f.tP)(m),
         U = (null === (t = m.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
@@ -146,7 +146,7 @@ function k(e) {
         F = (null === (n = m.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null,
         G = (null === (s = m.userStatus) || void 0 === s ? void 0 : s.completedAt) != null,
         K = o.useCallback(() => {
-            M &&
+            O &&
                 ((0, C.zi)(m) ||
                     F ||
                     (0, g.AH)(m.id, {
@@ -154,7 +154,7 @@ function k(e) {
                         questContentCTA: h.jZ.ACCEPT_QUEST
                     }),
                 (0, S.openVideoQuestModal)(m));
-        }, [M, m, F]);
+        }, [O, m, F]);
     o.useEffect(() => {
         if (W.isAnimated && null != H.current)
             return (
@@ -206,7 +206,7 @@ function k(e) {
                                       src: W.url
                                   })
                           }),
-                    M &&
+                    O &&
                         !Q &&
                         null != Y &&
                         (0, r.jsx)(q, {
@@ -218,8 +218,8 @@ function k(e) {
             }),
             (0, r.jsx)('div', {
                 className: a()(R.overlay, {
-                    [R.darkThemeGradient]: L,
-                    [R.lightThemeGradient]: !L
+                    [R.darkThemeGradient]: D,
+                    [R.lightThemeGradient]: !D
                 })
             }),
             (0, r.jsxs)('div', {
@@ -241,7 +241,7 @@ function k(e) {
                                                 children: B.intl.string(B.t.SKNnqq)
                                             })
                                         }),
-                                    M &&
+                                    O &&
                                         (0, r.jsx)(d.ua7, {
                                             text: G ? B.intl.string(B.t.YsCuyM) : F ? B.intl.string(B.t['74Kqra']) : (0, C.zi)(m) ? B.intl.string(B.t['I6JG4+']) : B.intl.string(B.t.umdNio),
                                             children: (e) =>
@@ -259,7 +259,7 @@ function k(e) {
                                     (0, r.jsx)(N.r, {
                                         onOpen: I,
                                         onClose: P,
-                                        onSelect: O,
+                                        onSelect: M,
                                         questContent: _.jn.QUEST_HOME_DESKTOP,
                                         quest: m,
                                         hideLearnMore: !0,
@@ -291,14 +291,14 @@ function k(e) {
                                 children: [
                                     (0, r.jsx)(d.Text, {
                                         variant: 'text-sm/medium',
-                                        color: L ? 'text-muted' : 'always-white',
+                                        color: D ? 'text-muted' : 'always-white',
                                         children: B.intl.format(B.t.buEvBw, { brandName: null !== (u = null === (i = m.config.cosponsorMetadata) || void 0 === i ? void 0 : i.name) && void 0 !== u ? u : m.config.messages.gamePublisher })
                                     }),
                                     Z || U
                                         ? null
                                         : (0, r.jsx)(d.Text, {
                                               variant: 'text-sm/medium',
-                                              color: L ? 'text-muted' : 'always-white',
+                                              color: D ? 'text-muted' : 'always-white',
                                               children: B.intl.format(B.t['7D8r4O'], { expiryDate: z })
                                           })
                                 ]
@@ -309,7 +309,7 @@ function k(e) {
                         quest: m,
                         errorHints: y,
                         warningHints: k,
-                        isDarkTheme: L
+                        isDarkTheme: D
                     })
                 ]
             })

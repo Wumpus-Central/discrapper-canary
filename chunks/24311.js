@@ -16,28 +16,28 @@ function v(t) {
     let { user: n, context: v, label: b, joinCallVideo: h, id: m, onCall: x } = t,
         p = (0, d.Aq)(),
         I = (0, l.e7)([s.default], () => s.default.getId() === n.id),
-        A = (0, l.e7)([c.Z], () => c.Z.isBlocked(n.id)),
-        C = (0, l.e7)([g.Z, u.Z], () => g.Z.getVoiceChannelId() === u.Z.getDMFromUserId(n.id));
-    if (I || v === Z.IlC.POPOUT || C || n.bot || n.isProvisional) return null;
-    let L = () => {
+        _ = (0, l.e7)([c.Z], () => c.Z.isBlocked(n.id)),
+        A = (0, l.e7)([g.Z, u.Z], () => g.Z.getVoiceChannelId() === u.Z.getDMFromUserId(n.id));
+    if (I || v === Z.IlC.POPOUT || A || n.bot || n.isProvisional) return null;
+    let C = () => {
             null == x || x(), o.Z.openPrivateChannel(n.id, !0, h), p.dispatch(Z.CkL.POPOUT_CLOSE), (0, a.pTH)();
         },
-        U = !r.ZP.disableCallUserConfirmationPrompt;
+        L = !r.ZP.disableCallUserConfirmationPrompt;
     return (0, i.jsx)(a.sNh, {
         id: null != m ? m : 'call',
         label: null != b ? b : f.intl.string(f.t.JJogjo),
-        action: U
+        action: L
             ? () => {
                   (0, a.ZDy)(async () => {
                       let { default: t } = await e.e('27157').then(e.bind(e, 736454));
                       return (n) =>
                           (0, i.jsx)(t, {
-                              onSubmit: L,
+                              onSubmit: C,
                               ...n
                           });
                   });
               }
-            : L,
-        disabled: A
+            : C,
+        disabled: _
     });
 }

@@ -5,9 +5,9 @@ var l = t(200651),
     a = t(481060),
     o = t(569545),
     s = t(352954),
-    u = t(277642),
+    d = t(277642),
     c = t(441894),
-    d = t(199902),
+    u = t(199902),
     g = t(388032);
 function h(e) {
     let { stream: n, channelId: t, location: h } = e,
@@ -15,17 +15,17 @@ function h(e) {
             channelId: t,
             location: h
         }),
-        Z = (0, r.e7)([d.Z], () => null != d.Z.getActiveStreamForApplicationStream(n)),
-        I = (0, o.V9)(n),
-        m = (0, u.t)(I),
-        S = i.useCallback(() => {
-            s.Z.openSecureFramesStreamVerification(I, t);
-        }, [t, I]);
-    return f && Z && !m
+        Z = (0, r.e7)([u.Z], () => null != u.Z.getActiveStreamForApplicationStream(n)),
+        m = (0, o.V9)(n),
+        x = (0, d.t)(m),
+        I = i.useCallback(() => {
+            s.Z.openSecureFramesStreamVerification(m, t);
+        }, [t, m]);
+    return f && Z && !x
         ? (0, l.jsx)(a.sNh, {
               id: 'secure-frames-stream-verification',
               label: g.intl.string(g.t.tjbJbW),
-              action: S
+              action: I
           })
         : null;
 }

@@ -3,8 +3,8 @@ var i,
     r = n(192379),
     a = n(442837),
     s = n(481060),
-    o = n(695346),
-    l = n(135869),
+    o = n(386965),
+    l = n(695346),
     u = n(763296),
     c = n(242291),
     d = n(22382),
@@ -16,9 +16,9 @@ function p(e, t) {
                 ? arguments[2]
                 : (() => {
                       var e;
-                      return null !== (i = null === (e = o.kU.getSetting()) || void 0 === e ? void 0 : e.volume) && void 0 !== i ? i : 100;
+                      return null !== (i = null === (e = l.kU.getSetting()) || void 0 === e ? void 0 : e.volume) && void 0 !== i ? i : 100;
                   })(),
-        { currentPreviewRef: p } = r.useContext(l.Z),
+        { audioRef: p } = r.useContext(o.Z),
         [h, m] = r.useState(!1),
         g = (0, a.e7)([u.Z], () => u.Z.isPlayingSound(e.soundId), [e]),
         E = r.useCallback(

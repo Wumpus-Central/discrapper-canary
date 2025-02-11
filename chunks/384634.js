@@ -18,8 +18,8 @@ let o = (e) => {
         fill: 'none',
         viewBox: '0 0 24 24',
         children: (0, i.jsx)('rect', {
-            width: p,
-            height: h,
+            width: '18',
+            height: '18',
             x: '3',
             y: '3',
             fill: 'string' == typeof c ? c : c.css,

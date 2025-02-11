@@ -17,8 +17,8 @@ function v(t) {
         { loading: m, note: x } = (0, d.Z)(h),
         p = !m && null != x && x.length > 0,
         I = b === g.IlC.POPOUT || b === g.IlC.OVERLAY,
-        A = l.useContext(c.AnalyticsContext),
-        { analyticsLocations: C } = (0, o.ZP)();
+        _ = l.useContext(c.AnalyticsContext),
+        { analyticsLocations: A } = (0, o.ZP)();
     return h === s.default.getId() || u.Z.hidePersonalInformation || I
         ? null
         : (0, i.jsx)(a.sNh, {
@@ -31,8 +31,8 @@ function v(t) {
                       subsection: Z.Tb.NOTE,
                       guildId: e,
                       channelId: v,
-                      sourceAnalyticsLocations: C,
-                      analyticsLocation: A.location,
+                      sourceAnalyticsLocations: A,
+                      analyticsLocation: _.location,
                       appContext: b
                   });
               }

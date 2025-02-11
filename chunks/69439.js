@@ -60,17 +60,17 @@ function E(e) {
         k = (0, u.O5)(),
         P = (0, p._s)({ quest: N }),
         I = (0, p.z)(N),
-        O = (0, p.B6)(N.config.expiresAt, {
+        M = (0, p.B6)(N.config.expiresAt, {
             month: 'numeric',
             day: 'numeric'
         }),
-        { isClaiming: M, isEnrolling: W } = (0, i.cj)([m.Z], () => ({
+        { isClaiming: O, isEnrolling: W } = (0, i.cj)([m.Z], () => ({
             isClaiming: m.Z.isClaimingReward(N.id) || m.Z.isFetchingRewardCode(N.id),
             isEnrolling: m.Z.isEnrolling(N.id)
         })),
-        D = (null === (t = N.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-        L = (null === (n = N.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-        Q = L && (null === (s = N.userStatus) || void 0 === s ? void 0 : s.claimedAt) == null,
+        L = (null === (t = N.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
+        D = (null === (n = N.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
+        Q = D && (null === (s = N.userStatus) || void 0 === s ? void 0 : s.claimedAt) == null,
         Z = (0, h.iQ)(N),
         U = !(0, h.zi)(N),
         V = (0, p._Q)(N),
@@ -123,12 +123,12 @@ function E(e) {
     return (Z && Q
         ? (el = (0, r.jsx)(l.zxk, {
               color: l.Ttl.BRAND,
-              submitting: M,
+              submitting: O,
               onClick: null != er ? er : void 0,
               className: j.button,
               children: en
           }))
-        : L
+        : D
           ? (el = z
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
@@ -183,12 +183,12 @@ function E(e) {
                 : U && Q
                   ? (el = (0, r.jsx)(l.zxk, {
                         color: l.Ttl.BRAND,
-                        submitting: M,
+                        submitting: O,
                         onClick: null != er ? er : void 0,
                         className: j.button,
                         children: en
                     }))
-                  : U && D && !ei
+                  : U && L && !ei
                     ? (el = $
                           ? (0, r.jsx)(l.PhF, {
                                 className: j.platformSelectorPrimary,
@@ -238,7 +238,7 @@ function E(e) {
                                     children: v.intl.string(v.t['9KoPyM'])
                                 }))
                     : U &&
-                      !D &&
+                      !L &&
                       (el = (0, r.jsx)(l.zxk, {
                           submitting: W,
                           color: l.Ttl.BRAND,
@@ -250,7 +250,7 @@ function E(e) {
                   color: l.Ttl.PRIMARY,
                   disabled: !0,
                   className: j.button,
-                  children: v.intl.format(v.t['14o6QU'], { expiryDate: O })
+                  children: v.intl.format(v.t['14o6QU'], { expiryDate: M })
               })),
     null == el)
         ? null

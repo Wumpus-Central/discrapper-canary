@@ -25,14 +25,14 @@ var i = n(200651),
     T = n(53691),
     b = n(75145),
     S = n(609218),
-    A = n(695346),
-    N = n(19780),
-    C = n(594174),
-    R = n(979651),
-    O = n(259580),
-    D = n(626135),
-    L = n(74538),
-    x = n(135869),
+    A = n(386965),
+    N = n(695346),
+    C = n(19780),
+    R = n(594174),
+    O = n(979651),
+    D = n(259580),
+    L = n(626135),
+    x = n(74538),
     P = n(763296),
     w = n(697426),
     M = n(242291),
@@ -144,9 +144,9 @@ function eo(e) {
                                 className: z.sectionTitle,
                                 children: d()
                             }),
-                            (0, i.jsx)(O.Z, {
+                            (0, i.jsx)(D.Z, {
                                 className: z.headerIcon,
-                                direction: n ? O.Z.Directions.RIGHT : O.Z.Directions.DOWN
+                                direction: n ? D.Z.Directions.RIGHT : D.Z.Directions.DOWN
                             })
                         ]
                     })
@@ -202,8 +202,8 @@ function eu(e) {
     });
 }
 function ec(e) {
-    let { guildId: t, channel: a, containerWidth: d, onClose: g, onSelect: b, shouldValidateSelectedSound: O = !1, suppressPlaySound: Z = !1, shouldShowUpsell: F = !0, gridNotice: q, soundButtonOverlay: ec, listPadding: ed, renderHeader: ef, defaultSoundsOnly: e_ = !1, inExpressionPicker: ep, refreshEnabled: eh, analyticsSource: em } = e,
-        { currentPreviewRef: eg } = r.useContext(x.Z),
+    let { guildId: t, channel: a, containerWidth: d, onClose: g, onSelect: b, shouldValidateSelectedSound: D = !1, suppressPlaySound: Z = !1, shouldShowUpsell: F = !0, gridNotice: q, soundButtonOverlay: ec, listPadding: ed, renderHeader: ef, defaultSoundsOnly: e_ = !1, inExpressionPicker: ep, refreshEnabled: eh, analyticsSource: em } = e,
+        { audioRef: eg } = r.useContext(A.Z),
         { analyticsLocations: eE } = (0, p.ZP)(),
         { analyticsLocations: ev } = (0, p.ZP)(_.Z.PREMIUM_UPSELL),
         { location: ey } = (0, f.O)(),
@@ -215,11 +215,11 @@ function ec(e) {
             [ey]
         ),
         [eT, eb] = r.useState(null),
-        eS = (0, l.e7)([C.default], () => C.default.getCurrentUser()),
-        eA = (0, L.I5)(eS, W.p9.TIER_2),
-        eN = (0, l.e7)([R.Z], () => {
+        eS = (0, l.e7)([R.default], () => R.default.getCurrentUser()),
+        eA = (0, x.I5)(eS, W.p9.TIER_2),
+        eN = (0, l.e7)([O.Z], () => {
             var e;
-            return R.Z.getVoiceState(t, null !== (e = null == eS ? void 0 : eS.id) && void 0 !== e ? e : Y.lds);
+            return O.Z.getVoiceState(t, null !== (e = null == eS ? void 0 : eS.id) && void 0 !== e ? e : Y.lds);
         }),
         eC = (null == eN ? void 0 : eN.selfDeaf) || (null == eN ? void 0 : eN.mute) || (null == eN ? void 0 : eN.suppress),
         eR = (0, v.Iu)((e) => e.searchQuery),
@@ -229,28 +229,28 @@ function ec(e) {
         [eP, ew] = r.useState([]),
         [eM, ek] = r.useState(!1),
         eU = (0, B.FS)(eL, eP, eR).filter((e) => e.items.length > 0),
-        eG = eU.some((e) => !!(0, L._O)(e.categoryInfo) && e.categoryInfo.isNitroLocked),
+        eG = eU.some((e) => !!(0, x._O)(e.categoryInfo) && e.categoryInfo.isNitroLocked),
         eB = !eA && F && eG,
-        eZ = A.T4.useSetting(),
+        eZ = N.T4.useSetting(),
         eF = r.useMemo(() => new Set(eZ), [eZ]),
         eV = null == a,
-        ej = L.ZP.canUseCustomCallSounds(eS),
+        ej = x.ZP.canUseCustomCallSounds(eS),
         eH = r.useCallback(
             (e) => {
-                eF.has(e) ? eF.delete(e) : eF.add(e), A.T4.updateSetting(Array.from(eF));
+                eF.has(e) ? eF.delete(e) : eF.add(e), N.T4.updateSetting(Array.from(eF));
             },
             [eF]
         ),
         eY = r.useCallback(
             (e, t, n) => {
-                if (null != b && !O) return b(e, n);
+                if (null != b && !D) return b(e, n);
                 let i = (0, M.Nq)(eS, e, a, !1);
-                if (null != b && O && i) b(e, n);
+                if (null != b && D && i) b(e, n);
                 else if (!Z && i && (0, M.C0)(a)) {
                     var r;
                     (0, M.GN)(e, null !== (r = null == a ? void 0 : a.id) && void 0 !== r ? r : Y.lds, t),
                         eO &&
-                            D.default.track(Y.rMx.SEARCH_RESULT_SELECTED, {
+                            L.default.track(Y.rMx.SEARCH_RESULT_SELECTED, {
                                 search_type: Y.aib.SOUNDBOARD,
                                 channel_id: null == a ? void 0 : a.id,
                                 query: eR,
@@ -261,7 +261,7 @@ function ec(e) {
                     F && eb(e);
                 }
             },
-            [Z, eS, a, F, eO, eR, b, O]
+            [Z, eS, a, F, eO, eR, b, D]
         ),
         eW = r.useCallback(
             (e, t) => {
@@ -405,7 +405,7 @@ function ec(e) {
             null != e && eb(e);
         },
         e4 = r.useCallback(() => {
-            let e = (0, L.Px)(W.p9.TIER_2);
+            let e = (0, x.Px)(W.p9.TIER_2);
             return K.intl.format(K.t['tw/SSk'], {
                 nitroTierName: e,
                 onClick: e3
@@ -443,7 +443,7 @@ function ec(e) {
                 n = new Audio((0, k.Z)(ea));
             null != eg.current && eg.current.pause(), (eg.current = n), (n.currentTime = 0), (n.volume = (0, U.Z)(null !== (e = null == t ? void 0 : t.volume) && void 0 !== e ? e : 1)), n.play();
         }, [eg]),
-        e9 = (0, l.e7)([N.Z], () => N.Z.getMediaSessionId());
+        e9 = (0, l.e7)([C.Z], () => C.Z.getMediaSessionId());
     return (
         (0, h.Z)({
             type: o.ImpressionTypes.POPOUT,
@@ -479,7 +479,7 @@ function ec(e) {
                                   object: Y.qAy.SOUNDBOARD_SOUND
                               },
                               location_stack: ev,
-                              sku_id: L.ZP.getSkuIdForPremiumType(W.p9.TIER_2)
+                              sku_id: x.ZP.getSkuIdForPremiumType(W.p9.TIER_2)
                           },
                           onClose: () => eb(null),
                           onDisplay: e8

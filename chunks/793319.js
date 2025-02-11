@@ -173,8 +173,8 @@ function eb(e) {
                                 currentUser: n,
                                 activeStreams: null != f ? [f] : [],
                                 handleGoLive: x,
-                                onClose: l,
-                                appContext: p
+                                appContext: p,
+                                onClose: l
                             })
                         });
                     },

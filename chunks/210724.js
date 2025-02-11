@@ -56,14 +56,14 @@ function R(e) {
         k = (0, l.e7)([p.Z], () => p.Z.hasLayers()),
         P = o.useRef(null),
         I = o.useMemo(() => (0, g.q8)(s), [s]),
-        O = (null === (t = s.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-        M = (0, d.Z)(O),
+        M = (null === (t = s.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
+        O = (0, d.Z)(M),
         W = (null === (n = s.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-        D = (0, d.Z)(W),
-        { hasError: L, isLoading: Q } = (0, v.d7)(),
+        L = (0, d.Z)(W),
+        { hasError: D, isLoading: Q } = (0, v.d7)(),
         Z = o.useContext(N.T) || (R && w && !Q),
         U = o.useRef(Z),
-        V = (0, E.B)(s, Z && !L),
+        V = (0, E.B)(s, Z && !D),
         H = o.useRef(-1),
         z = o.useRef(!1),
         [F, G] = o.useState(!1),
@@ -136,15 +136,15 @@ function R(e) {
         W && V.shouldExpandOnQuestComplete && ea();
     }, [ea, W, V.shouldExpandOnQuestComplete]),
         o.useLayoutEffect(() => {
-            O && !M && z.current && ea();
-        }, [ea, O, M]),
+            M && !O && z.current && ea();
+        }, [ea, M, O]),
         o.useLayoutEffect(() => {
-            W || !O || M || z.current || eo(!1);
-        }, [O, W, M, eo]),
+            W || !M || O || z.current || eo(!1);
+        }, [M, W, O, eo]),
         o.useLayoutEffect(() => {
             Z !== U.current && ee(!1), (U.current = Z);
         }, [Z]);
-    let eh = O ? S.XZ : S.R4,
+    let eh = M ? S.XZ : S.R4,
         [{ expansionSpring: eg }, ef] = (0, c.q_F)(() => ({
             from: { expansionSpring: 0 },
             config: eh,
@@ -180,11 +180,11 @@ function R(e) {
         I && (0, b.loadVideoQuestModal)();
     }, [I]),
     o.useLayoutEffect(() => {
-        W && !D && V.canCollapseOnBlur && es();
-    }, [W, ea, V.canCollapseOnBlur, es, D]),
+        W && !L && V.canCollapseOnBlur && es();
+    }, [W, ea, V.canCollapseOnBlur, es, L]),
     o.useEffect(() => {
         var e, t;
-        L &&
+        D &&
             (0, m.dA)({
                 questId: s.id,
                 event: y.rMx.QUEST_CONTENT_RENDERING_FAILURE,
@@ -204,8 +204,8 @@ function R(e) {
                         impression_id: null === (t = P.current) || void 0 === t ? void 0 : t.getId()
                     }
                 });
-    }, [L, R, s.id]),
-    R && (Z || !$ || Q) && !L)
+    }, [D, R, s.id]),
+    R && (Z || !$ || Q) && !D)
         ? (0, r.jsx)(C.A, {
               questOrQuests: s,
               questContent: V.trackingCtx.content,
@@ -242,11 +242,11 @@ function R(e) {
                                   children: (0, r.jsx)(i.animated.div, {
                                       className: a()(A.contentWrapper, {
                                           [A.contentWrapperExpanded]: K,
-                                          [A.contentWrapperAccepted]: O
+                                          [A.contentWrapperAccepted]: M
                                       }),
                                       style: {
                                           backgroundColor: V.preEnrollmentBackgroundColor,
-                                          backgroundImage: O ? V.postEnrollmentBackgroundImage : void 0
+                                          backgroundImage: M ? V.postEnrollmentBackgroundImage : void 0
                                       },
                                       children: (0, r.jsx)(T.t, {
                                           springConfig: eh,
@@ -271,7 +271,7 @@ function R(e) {
                   );
               }
           })
-        : (L ? x.log('Not rendered due to asset error') : R || x.log('Not rendered due to ineligibility'), null);
+        : (D ? x.log('Not rendered due to asset error') : R || x.log('Not rendered due to ineligibility'), null);
 }
 let w =
     12633 == n.j

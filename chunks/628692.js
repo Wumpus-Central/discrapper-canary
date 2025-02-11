@@ -42,7 +42,7 @@ function b(e) {
     let { soundId: t } = e,
         n = (0, o.e7)([h.Z], () => h.Z.getSoundById(t)),
         r = (0, d.V2)({ location: 'SoundboardMentionInline' }),
-        { playing: a, playSound: s } = (0, p.Z)(n);
+        { isPlaying: a, playSound: s } = (0, p.Z)(n);
     return r
         ? null == n
             ? (0, i.jsx)(T, {})
@@ -90,7 +90,7 @@ let A = function (e) {
         A = (0, o.e7)([v.Z], () => v.Z.getChannel(t)),
         N = (0, c.X0)({ location: 'SoundboardMention' }),
         C = r.useRef(null),
-        { playing: R, playSound: O } = (0, p.Z)(b, A),
+        { isPlaying: R, playSound: O } = (0, p.Z)(b, A),
         D = r.useCallback(() => {
             if (O()) {
                 var e;

@@ -39,10 +39,10 @@ function E(e) {
             className: b.colorTransition
         }),
         I = A.filter((e) => ['xbox', 'playstation'].includes(e.connected_account_type)),
-        O = (0, f.Bz)(y),
-        M = (0, i.e7)([p.Z], () => p.Z.getState().theme),
-        W = (0, l.wj)(M) ? v.BRd.DARK : v.BRd.LIGHT,
-        { startConsoleQuest: D, startingConsoleQuest: L } = (0, h.GI)({
+        M = (0, f.Bz)(y),
+        O = (0, i.e7)([p.Z], () => p.Z.getState().theme),
+        W = (0, l.wj)(O) ? v.BRd.DARK : v.BRd.LIGHT,
+        { startConsoleQuest: L, startingConsoleQuest: D } = (0, h.GI)({
             questId: y.id,
             beforeRequest: () => {
                 P.startAnimation(),
@@ -107,8 +107,8 @@ function E(e) {
                                 children: j.intl.string(j.t['+/hZMz'])
                             }),
                             (0, r.jsxs)(c.P3F, {
-                                className: a()(b.refreshWrapper, { [b.disabled]: L }),
-                                onClick: D,
+                                className: a()(b.refreshWrapper, { [b.disabled]: D }),
+                                onClick: L,
                                 children: [
                                     P.render(),
                                     (0, r.jsx)(c.Text, {
@@ -131,8 +131,8 @@ function E(e) {
                             (0, r.jsx)(N, {
                                 icon: (0, r.jsx)(c.iWm, { size: 'sm' }),
                                 text: j.intl.string(j.t.XF4wuL),
-                                errors: O ? void 0 : I.map((e) => e.message),
-                                gameTile: O
+                                errors: M ? void 0 : I.map((e) => e.message),
+                                gameTile: M
                                     ? (0, r.jsx)(c.ua7, {
                                           'aria-label': y.config.messages.gameTitle,
                                           text: () =>

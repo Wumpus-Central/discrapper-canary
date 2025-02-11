@@ -1,6 +1,6 @@
 n.d(t, { Z: () => g }), n(47120);
-var l = n(200651),
-    r = n(192379),
+var r = n(200651),
+    l = n(192379),
     i = n(642128),
     s = n(780384),
     a = n(481060),
@@ -71,7 +71,7 @@ let u = [
     p = (0, i.animated)(d.Z),
     m = (0, i.animated)(c.Z),
     f = (0, i.animated)(a.OgN),
-    g = r.memo(function (e) {
+    g = l.memo(function (e) {
         let {
                 themeOverride: t,
                 hovered: n,
@@ -83,14 +83,14 @@ let u = [
             } = e,
             c = (0, o.ZP)(),
             [g, x] = (function (e) {
-                let [t, n] = r.useState(!1),
-                    [l, i] = r.useState(Math.floor(7 * Math.random())),
-                    s = r.useRef(l);
+                let [t, n] = l.useState(!1),
+                    [r, i] = l.useState(Math.floor(7 * Math.random())),
+                    s = l.useRef(r);
                 return (
-                    r.useEffect(() => {
-                        s.current = l;
+                    l.useEffect(() => {
+                        s.current = r;
                     }),
-                    r.useEffect(() => {
+                    l.useEffect(() => {
                         if (e) return;
                         let t = Math.random() <= h;
                         if ((n(t), !t)) {
@@ -100,7 +100,7 @@ let u = [
                             i(e);
                         }
                     }, [e]),
-                    [t, l]
+                    [t, r]
                 );
             })(n),
             b = (0, a.q_F)({
@@ -116,13 +116,13 @@ let u = [
             _ = i ? x : 0,
             v = (0, s.wj)(null != t ? t : c) ? d.dark[_] : d.light[_];
         return !n && i
-            ? (0, l.jsx)(f, {})
+            ? (0, r.jsx)(f, {})
             : i && g
-              ? (0, l.jsx)(m, {
+              ? (0, r.jsx)(m, {
                     isDark: (0, s.wj)(c),
                     style: b
                 })
-              : (0, l.jsx)(p, {
+              : (0, r.jsx)(p, {
                     boxColor: v.box,
                     ribbonColor: v.ribbon,
                     style: b

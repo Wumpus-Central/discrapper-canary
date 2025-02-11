@@ -26,7 +26,7 @@ function m(t) {
             muted: x,
             deafened: p = !1,
             localVideoDisabled: I = !1,
-            localVideoAutoDisabled: A = !1
+            localVideoAutoDisabled: _ = !1
         } = (0, l.cj)(
             [s.Z],
             () =>
@@ -42,7 +42,7 @@ function m(t) {
                       },
             [e, n, t]
         ),
-        C =
+        A =
             s.Z.supports(v.AN.DISABLE_VIDEO) && !e
                 ? (0, i.jsx)(
                       a.S89,
@@ -50,7 +50,7 @@ function m(t) {
                           id: 'disable-video',
                           label: b.intl.string(b.t['4MMsWF']),
                           action: () => {
-                              if (A) {
+                              if (_) {
                                   o.Z.show({
                                       title: b.intl.string(b.t.m2Hyj4),
                                       body: b.intl.string(b.t.EhaK6O),
@@ -64,7 +64,7 @@ function m(t) {
                               d.Z.setDisableLocalVideo(t, e, n);
                           },
                           checked: I,
-                          subtext: A
+                          subtext: _
                               ? (0, i.jsxs)('div', {
                                     className: h.videoPaused,
                                     children: [
@@ -82,7 +82,7 @@ function m(t) {
                       'disable-video'
                   )
                 : null,
-        L = e
+        C = e
             ? null
             : (0, i.jsx)(
                   a.S89,
@@ -134,7 +134,7 @@ function m(t) {
                   },
                   'self-deafen'
               ),
-              C
+              A
           ]
         : [
               (0, i.jsx)(
@@ -147,7 +147,7 @@ function m(t) {
                   },
                   'self-mute'
               ),
-              L,
-              C
+              C,
+              A
           ];
 }

@@ -1,6 +1,6 @@
 n.d(t, { Z: () => x }), n(47120);
-var l = n(200651),
-    r = n(192379),
+var r = n(200651),
+    l = n(192379),
     i = n(120356),
     s = n.n(i),
     a = n(442837),
@@ -17,29 +17,29 @@ var l = n(200651),
 let x = (e) => {
     let { isLoading: t, rankedSkuIds: n, handleTransition: i, numVisibleItems: x, showShopAll: b } = e,
         _ = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
-        v = r.createRef(),
+        v = l.createRef(),
         j = (0, m.u)(),
-        k = r.useMemo(() => j(n), [t, j, n]),
+        k = l.useMemo(() => j(n), [t, j, n]),
         E = (0, C.l)(k);
     return null == _
         ? null
-        : (0, l.jsxs)('div', {
+        : (0, r.jsxs)('div', {
               className: s()(g.row, g.between, g.section, g.popularPicksSection),
               children: [
-                  (0, l.jsxs)('div', {
+                  (0, r.jsxs)('div', {
                       className: g.popularPicksHeader,
                       children: [
-                          (0, l.jsx)(o.X6q, {
+                          (0, r.jsx)(o.X6q, {
                               variant: 'heading-lg/semibold',
                               children: f.intl.string(f.t.ivaAAw)
                           }),
                           b &&
-                              (0, l.jsxs)(o.P3F, {
+                              (0, r.jsxs)(o.P3F, {
                                   className: g.shopAll,
                                   onClick: () => i('shop all top'),
                                   children: [
-                                      (0, l.jsx)(o.dRF, {}),
-                                      (0, l.jsx)(o.Text, {
+                                      (0, r.jsx)(o.dRF, {}),
+                                      (0, r.jsx)(o.Text, {
                                           variant: 'text-sm/medium',
                                           children: f.intl.string(f.t.xFcotb)
                                       })
@@ -47,17 +47,17 @@ let x = (e) => {
                               })
                       ]
                   }),
-                  (0, l.jsx)('div', {
+                  (0, r.jsx)('div', {
                       className: g.feed,
                       ref: v,
                       children: t
-                          ? (0, l.jsx)(l.Fragment, { children: [...Array(12)].map((e, t) => (0, l.jsx)(h.K, {}, t + 1)) })
-                          : (0, l.jsx)(l.Fragment, {
+                          ? (0, r.jsx)(r.Fragment, { children: [...Array(12)].map((e, t) => (0, r.jsx)(h.K, {}, t + 1)) })
+                          : (0, r.jsx)(r.Fragment, {
                                 children: E.slice(0, x).map((e, t) => {
                                     let n = u.Z.getCategoryForProduct(e.skuId);
                                     return null == e || null == n
                                         ? null
-                                        : (0, l.jsx)(
+                                        : (0, r.jsx)(
                                               c.k0,
                                               {
                                                   newValue: {
@@ -65,7 +65,7 @@ let x = (e) => {
                                                       pageSection: 'popular picks',
                                                       categoryPosition: 2
                                                   },
-                                                  children: (0, l.jsx)(
+                                                  children: (0, r.jsx)(
                                                       p.Z,
                                                       {
                                                           product: e,
