@@ -86,6 +86,7 @@ let E = {
                                 }),
                                 (0, i.jsx)(s.Text, {
                                     variant: 'text-xs/normal',
+                                    color: 'text-secondary',
                                     children: b.intl.string(b.t.GnhKNz)
                                 }),
                                 (0, i.jsx)(v.D, {
@@ -95,11 +96,16 @@ let E = {
                                 })
                             ]
                         }),
-                        (0, i.jsx)(s.Qjf, {
+                        (0, i.jsx)(s.zxk, {
+                            className: S.viewSettingsButton,
                             onClick: () => {
                                 t(), c.Z.open(x.oAB.ACTIVITY_PRIVACY, null, { analyticsLocations: l });
                             },
-                            text: b.intl.string(b.t.g8usuL)
+                            look: s.zxk.Looks.LINK,
+                            color: s.zxk.Colors.CUSTOM,
+                            size: s.zxk.Sizes.TINY,
+                            fullWidth: !0,
+                            children: b.intl.string(b.t.g8usuL)
                         })
                     ]
                 })

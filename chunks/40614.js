@@ -19,18 +19,22 @@ let g = (e) => {
         _ = (0, s.Ws)({ location: h.dr.CONFLICT_CHECKS });
     return !g || f
         ? null
-        : (0, i.jsxs)(l.P3F, {
+        : (0, i.jsx)(l.P3F, {
               onClick: () => {
                   _ ? t() : r.Z.open(u.oAB.ACTIVITY_PRIVACY, null, { analyticsLocations: n });
               },
               className: m.container,
-              children: [
-                  (0, i.jsx)(l.Text, {
-                      variant: 'text-xs/medium',
-                      className: m.text,
-                      children: p.intl.string(p.t.jfrLLS)
-                  }),
-                  (0, i.jsx)(l.Fbu, { size: 'xxs' })
-              ]
+              children: (0, i.jsxs)(l.Text, {
+                  variant: 'text-xs/medium',
+                  className: m.text,
+                  color: 'header-secondary',
+                  children: [
+                      p.intl.string(p.t.jfrLLS),
+                      (0, i.jsx)(l.Fbu, {
+                          size: 'xxs',
+                          color: 'currentColor'
+                      })
+                  ]
+              })
           });
 };
