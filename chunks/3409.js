@@ -245,8 +245,9 @@ function ev(e) {
     }),
         r.useEffect(() => {
             let { completeSteps: e, setIsSubmittingCurrentStep: t } = eF.current;
-            (() => {
+            (async () => {
                 if (null == eG) return;
+                await (0, d.tZ)();
                 let n = G.Z.getPaymentSource(eG);
                 null != n && (e(n), t(!1));
             })();
