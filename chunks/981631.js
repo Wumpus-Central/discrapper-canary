@@ -1226,6 +1226,7 @@ var T =
     (r.AUDIO_DEVICE_MODULE_ERROR = 'audio_device_module_error'),
     (r.SDP_ERROR = 'sdp_error'),
     (r.CHANNEL_SIDEBAR_VIEWED = 'channel_sidebar_viewed'),
+    (r.CHANNEL_SIDEBAR_RESIZED = 'channel_sidebar_resized'),
     (r.MEMBER_LIST_VIEWED = 'member_list_viewed'),
     (r.MEMBER_LIST_TOGGLED = 'member_list_toggled'),
     (r.MEMBER_LIST_SWIPE_PEEK = 'member_list_swipe_peek'),
