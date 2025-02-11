@@ -1,11 +1,11 @@
-n.d(t, { s: () => u }), n(627341), n(192379);
+n.d(t, { Z: () => u }), n(627341);
 var i = n(278074),
     r = n(657305),
     a = n(841784),
     s = n(833664),
     o = n(981631),
     l = n(388032);
-let u = (e) => {
+function u(e) {
     let { activity: t, stream: n } = e,
         u = (null == t ? void 0 : t.name) === '' ? null : null == t ? void 0 : t.name,
         c = (null == t ? void 0 : t.details) === '' ? null : null == t ? void 0 : t.details;
@@ -52,4 +52,4 @@ let u = (e) => {
                   tooltip: l.intl.formatToPlainString(l.t['0wJXSk'], { name: null != c ? c : u })
               }))
               .otherwise(() => ({}));
-};
+}

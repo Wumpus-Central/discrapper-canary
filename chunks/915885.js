@@ -24,12 +24,13 @@ function C(e) {
     l.useEffect(() => {
         x &&
             C &&
+            t.hasFeature(_.oNc.MEMBER_VERIFICATION_GATE_ENABLED) &&
             c.Z.fetchGuildJoinRequests({
                 guildId: t.id,
                 status: h.wB.SUBMITTED,
                 limit: p.p
             });
-    }, [x, t.id, C]);
+    }, [x, t, C]);
     let b = l.useCallback(() => {
             (0, f._X)(t.id);
         }, [t.id]),
