@@ -120,7 +120,6 @@ function O(e) {
                 ]
             }),
             (0, i.jsxs)(o.mzw, {
-                className: R.modalFooter,
                 children: [
                     (0, i.jsx)('div', { children: H() }),
                     !j &&

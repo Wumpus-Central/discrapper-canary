@@ -5,7 +5,6 @@ var i = {
     modalCloseButton: 'modalCloseButton_ced2f2',
     modalContent: 'modalContent_ced2f2',
     modalPreview: 'modalPreview_ced2f2',
-    modalFooter: 'modalFooter_ced2f2',
     modalFooterShopButton: 'modalFooterShopButton_ced2f2'
 };
 e.exports = i;

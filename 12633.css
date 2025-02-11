@@ -15976,26 +15976,20 @@ div.modalHeader_c28af8 {
 .modalHeader_ced2f2 {
     display: flex;
     justify-content: space-between;
-    overflow: hidden;
-    padding: 16px
+    overflow: hidden
 }
 
 .modalCloseButton_ced2f2 {
-    align-self: flex-start;
-    padding: 0
+    padding: 0;
+    margin-right: -8px
 }
 
 .modalContent_ced2f2 {
-    display: flex;
-    padding: 0 16px
+    display: flex
 }
 
 .modalPreview_ced2f2 {
     margin-top: 24px
-}
-
-.modalFooter_ced2f2 {
-    padding: 16px
 }
 
 .modalFooterShopButton_ced2f2 {

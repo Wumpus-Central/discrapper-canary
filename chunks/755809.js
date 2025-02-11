@@ -1,4 +1,5 @@
 o.exports = {
+    modal: 'modal__54675',
     modalHeader: 'modalHeader__54675',
     modalContent: 'modalContent__54675',
     modalCloseButton: 'modalCloseButton__54675',
@@ -10,6 +11,7 @@ o.exports = {
     optionIconAndLabel: 'optionIconAndLabel__54675',
     optionLabelText: 'optionLabelText__54675',
     gifGrid: 'gifGrid__54675',
+    imageUploadOption: 'imageUploadOption__54675',
     gif: 'gif__54675',
     premiumWheel: 'premiumWheel__54675',
     boostingPill: 'boostingPill__54675',
