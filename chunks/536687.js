@@ -172,7 +172,10 @@ function k(e) {
                                             useReducedMotion: Z,
                                             isExpanded: (null === (n = M.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
                                             disabled: (null === (i = M.userStatus) || void 0 === i ? void 0 : i.completedAt) == null,
-                                            ctaLabel: h
+                                            ctaLabel: h,
+                                            onClick: () => {
+                                                (0, f.xN)(M.config) && k();
+                                            }
                                         })
                                     ]
                                 })

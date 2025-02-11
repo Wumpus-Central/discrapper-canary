@@ -42,30 +42,40 @@ function D(e) {
             var e;
             return null === (e = f.default.getCurrentUser()) || void 0 === e ? void 0 : e.hasVerifiedEmailOrPhone();
         }),
-        l = (0, p.O5)();
+        c = (0, p.O5)();
     return r.useCallback(() => {
-        null != t &&
-            (l({
-                questId: t.id,
-                questContent: n,
-                questContentCTA: p.jZ.CLAIM_REWARD,
-                questContentPosition: i,
-                questContentRowIndex: a
-            }),
-            o
-                ? (0, y.Bg)(t.config)
-                    ? (0, A.openQuestsNitroRewardModal)(t, n)
-                    : (0, y.Xv)(t.config)
-                      ? (0, b.m)(t, n)
-                      : (0, y.vQ)(t.config)
-                        ? (0, A.openQuestInGameRewardModal)(t, n)
-                        : (0, A.openQuestsRewardCodeModal)({
-                              questId: t.id,
-                              location: n,
-                              questContentPosition: i
-                          })
-                : (0, S.B)());
-    }, [t, l, n, i, a, o]);
+        if (null != t) {
+            if (
+                (c({
+                    questId: t.id,
+                    questContent: n,
+                    questContentCTA: p.jZ.CLAIM_REWARD,
+                    questContentPosition: i,
+                    questContentRowIndex: a
+                }),
+                o)
+            ) {
+                if ((0, y.Bg)(t.config)) (0, A.openQuestsNitroRewardModal)(t, n);
+                else if ((0, y.Xv)(t.config)) (0, b.m)(t, n);
+                else if ((0, y.vQ)(t.config)) (0, A.openQuestInGameRewardModal)(t, n);
+                else if ((0, y.xN)(t.config)) {
+                    (0, m.QB)(t.id, v.y$.CROSS_PLATFORM, n),
+                        (0, u.mK)({
+                            openInLayer: !1,
+                            tab: R.AW.ORBS,
+                            analyticsLocations: [],
+                            analyticsSource: l.Z.INTRO_TO_ORBS_QUEST
+                        });
+                    return;
+                } else
+                    (0, A.openQuestsRewardCodeModal)({
+                        questId: t.id,
+                        location: n,
+                        questContentPosition: i
+                    });
+            } else (0, S.B)();
+        }
+    }, [t, c, n, i, a, o]);
 }
 function L(e) {
     var t;
