@@ -1,6 +1,7 @@
 n.d(t, { Z: () => r });
 var i = n(231338);
-function r(e, t) {
-    var n;
-    return t !== i.Sk.OFFLINE && t !== i.Sk.INVISIBLE && (null !== (n = null == e ? void 0 : e.length) && void 0 !== n ? n : 0) > 0;
+function r(e) {
+    var t;
+    let { activities: n, status: r, applicationStream: a, voiceChannel: s } = e;
+    return r !== i.Sk.OFFLINE && r !== i.Sk.INVISIBLE && (null != a || null != s || (null !== (t = null == n ? void 0 : n.length) && void 0 !== t ? t : 0) > 0);
 }

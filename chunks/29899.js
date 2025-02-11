@@ -1,51 +1,27 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => l });
 var i = n(442837),
     r = n(841784),
-    a = n(592125),
-    s = n(496675),
-    o = n(158776),
-    l = n(979651),
-    u = n(231338);
-function c(e) {
+    a = n(956221),
+    s = n(158776),
+    o = n(979651);
+function l(e) {
     let { userId: t, guildId: n } = e,
-        {
-            voiceState: c,
-            voiceChannel: d,
-            isInVoiceChannel: f
-        } = (0, i.cj)([a.Z, s.Z, l.Z], () => {
-            let e = null != n ? l.Z.getVoiceState(n, t) : l.Z.getVoiceStateForUser(t),
-                i = a.Z.getChannel(null == e ? void 0 : e.channelId);
-            return (null == i ? void 0 : i.isPrivate())
-                ? {
-                      voiceState: e,
-                      voiceChannel: i,
-                      isInVoiceChannel: l.Z.isCurrentClientInVoiceChannel()
-                  }
-                : s.Z.can(u.Pl.VIEW_CHANNEL, i)
-                  ? {
-                        voiceState: e,
-                        voiceChannel: i,
-                        isInVoiceChannel: l.Z.isInChannel(null == i ? void 0 : i.id)
-                    }
-                  : {
-                        voiceState: void 0,
-                        voiceChannel: void 0,
-                        isInVoiceChannel: !1
-                    };
+        { voiceState: l, voiceChannel: u } = (0, a.Z)({
+            userId: t,
+            guildId: n
         }),
-        _ = (0, i.e7)([o.Z, l.Z], () => {
-            if (null == d) return;
-            let e = o.Z.findActivity(t, (e) => {
+        c = null == u ? void 0 : u.id;
+    return {
+        voiceState: l,
+        voiceChannel: u,
+        voiceActivity: (0, i.e7)([s.Z, o.Z], () => {
+            if (null == t || null == c) return;
+            let e = s.Z.findActivity(t, (e) => {
                 if (!(0, r.Z)(e)) return !1;
-                let n = l.Z.getVoiceStateForSession(t, e.session_id);
-                return (null == n ? void 0 : n.channelId) === d.id;
+                let n = o.Z.getVoiceStateForSession(t, e.session_id);
+                return (null == n ? void 0 : n.channelId) === c;
             });
             return null != e ? e : void 0;
-        });
-    return {
-        voiceState: c,
-        voiceChannel: d,
-        voiceActivity: _,
-        isInVoiceChannel: f
+        })
     };
 }

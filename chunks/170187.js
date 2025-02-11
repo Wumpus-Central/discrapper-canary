@@ -8,11 +8,12 @@ var r = n(120356),
     l = n(556638),
     u = n(694978);
 function c(e) {
-    let { children: t, className: n, variant: r = 'text-xs/medium' } = e;
+    let { children: t, className: n, variant: r = 'text-xs/medium', ...c } = e;
     return (0, i.jsx)(s.xv, {
         variant: r,
         color: 'none',
         className: a()(u.text, n),
+        ...c,
         children: (0, i.jsx)(o.Z, {
             delay: l.X,
             children: t
