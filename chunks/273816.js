@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(47120);
+n.d(t, { Z: () => g }), n(47120);
 var i = n(200651),
     o = n(192379),
     r = n(120356),
@@ -8,153 +8,156 @@ var i = n(200651),
     d = n(493773),
     c = n(178821),
     u = n(38618),
-    h = n(333031),
-    _ = n(887466);
-function p(e) {
+    h = n(522474),
+    _ = n(333031),
+    p = n(501787),
+    f = n(887466);
+function g(e) {
     let { locked: t, pinned: n, anchorLeft: r } = e,
-        p = (0, a.e7)([u.Z], () => u.Z.getSocket());
+        g = (0, a.e7)([u.Z], () => u.Z.getSocket());
     (0, c.nU)();
-    let [f, g] = (0, c.m8)(p),
-        { currentFPS: m, averageFrameTime: v, timeSinceLastDrop: x, onResetFrameData: E, droppedFramesRef: C, renderedFrameCount: Z, bufferFramecountRef: I, frameCheckerEffect: S } = (0, c.d6)(!0, f, !0),
-        [b, y, O] = (0, c.ZF)(p),
-        [w, N] = (0, c.Y5)(b, S),
-        T = performance.now() - g.current < c.MC,
-        j = y(v, I.current);
+    let m = (0, a.e7)([h.Z], () => h.Z.getWindow(p.$J)),
+        [v, x] = (0, c.m8)(g),
+        { currentFPS: E, averageFrameTime: C, timeSinceLastDrop: Z, onResetFrameData: I, droppedFramesRef: S, renderedFrameCount: b, bufferFramecountRef: y, frameCheckerEffect: O } = (0, c.d6)(!0, v, !0),
+        [w, N, T] = (0, c.ZF)(g),
+        [j, k] = (0, c.Y5)(w, O, m),
+        R = performance.now() - x.current < c.MC,
+        A = N(C, y.current);
     (0, d.ZP)(
         () => (
-            w(),
+            j(),
             () => {
-                N();
+                k();
             }
         )
     );
-    let k = o.useCallback(() => {
-            E(), O(), w();
-        }, [E, O, w]),
-        [R, A] = o.useState(!0),
-        [L, P] = o.useState(!0),
-        [D, M] = o.useState(!0),
-        [z, V] = o.useState(!0),
-        [W, F] = o.useState(!0);
+    let L = o.useCallback(() => {
+            I(), T(), j();
+        }, [I, T, j]),
+        [P, D] = o.useState(!0),
+        [M, z] = o.useState(!0),
+        [V, W] = o.useState(!0),
+        [F, U] = o.useState(!0),
+        [H, B] = o.useState(!0);
     return t && !n
         ? null
         : (0, i.jsxs)('div', {
-              className: l()(_.panelGroup, !r && _.rightAligned),
+              className: l()(f.panelGroup, !r && f.rightAligned),
               children: [
-                  (R || !t) &&
+                  (P || !t) &&
                       (0, i.jsxs)('div', {
-                          className: _.measurement,
+                          className: f.measurement,
                           children: [
                               !t &&
                                   (0, i.jsx)('div', {
-                                      className: _.measurementCheckbox,
+                                      className: f.measurementCheckbox,
                                       children: (0, i.jsx)(s.XZJ, {
                                           size: 16,
-                                          value: R,
-                                          onChange: (e, t) => A(t)
+                                          value: P,
+                                          onChange: (e, t) => D(t)
                                       })
                                   }),
                               (0, i.jsxs)(s.Text, {
                                   variant: 'text-md/normal',
                                   color: 'text-secondary',
-                                  className: _.measurementText,
+                                  className: f.measurementText,
                                   children: [
                                       'FPS:',
                                       ' ',
                                       (0, i.jsx)(s.Text, {
                                           tag: 'span',
                                           variant: 'code',
-                                          color: m < 30 ? 'text-danger' : m < 45 ? 'text-warning' : 'text-primary',
-                                          children: m.toFixed(2)
+                                          color: E < 30 ? 'text-danger' : E < 45 ? 'text-warning' : 'text-primary',
+                                          children: E.toFixed(2)
                                       })
                                   ]
                               })
                           ]
                       }),
-                  (L || !t) &&
+                  (M || !t) &&
                       (0, i.jsxs)('div', {
-                          className: _.measurement,
+                          className: f.measurement,
                           children: [
                               !t &&
                                   (0, i.jsx)('div', {
-                                      className: _.measurementCheckbox,
+                                      className: f.measurementCheckbox,
                                       children: (0, i.jsx)(s.XZJ, {
                                           size: 16,
-                                          value: L,
-                                          onChange: (e, t) => P(t)
+                                          value: M,
+                                          onChange: (e, t) => z(t)
                                       })
                                   }),
                               (0, i.jsxs)(s.Text, {
                                   variant: 'text-md/normal',
                                   color: 'text-secondary',
-                                  className: _.measurementText,
+                                  className: f.measurementText,
                                   children: [
                                       'Frame Times:',
                                       ' ',
                                       (0, i.jsxs)(s.Text, {
                                           tag: 'span',
                                           variant: 'code',
-                                          color: v > 1.1 * c.tO ? 'text-warning' : 'text-primary',
-                                          children: [v.toFixed(2), 'ms']
+                                          color: C > 1.1 * c.tO ? 'text-warning' : 'text-primary',
+                                          children: [C.toFixed(2), 'ms']
                                       })
                                   ]
                               })
                           ]
                       }),
-                  (D || !t) &&
+                  (V || !t) &&
                       (0, i.jsxs)('div', {
-                          className: _.measurement,
+                          className: f.measurement,
                           children: [
                               !t &&
                                   (0, i.jsx)('div', {
-                                      className: _.measurementCheckbox,
+                                      className: f.measurementCheckbox,
                                       children: (0, i.jsx)(s.XZJ, {
                                           size: 16,
-                                          value: D,
-                                          onChange: (e, t) => M(t)
+                                          value: V,
+                                          onChange: (e, t) => W(t)
                                       })
                                   }),
                               (0, i.jsxs)(s.Text, {
                                   variant: 'text-md/normal',
                                   color: 'text-secondary',
-                                  className: _.measurementText,
+                                  className: f.measurementText,
                                   children: [
                                       'Dropped Frames:',
                                       ' ',
                                       (0, i.jsx)(s.Text, {
                                           tag: 'span',
                                           variant: 'code',
-                                          color: x < 2 ? 'text-danger' : x < 5 ? 'text-warning' : 'text-primary',
-                                          children: C.current
+                                          color: Z < 2 ? 'text-danger' : Z < 5 ? 'text-warning' : 'text-primary',
+                                          children: S.current
                                       }),
                                       (0, i.jsxs)(s.Text, {
                                           tag: 'span',
                                           variant: 'code',
                                           color: 'text-secondary',
-                                          className: _.secondaryInfoText,
-                                          children: ['(', ((C.current / Z.current) * 100).toFixed(3), '%)']
+                                          className: f.secondaryInfoText,
+                                          children: ['(', ((S.current / b.current) * 100).toFixed(3), '%)']
                                       })
                                   ]
                               })
                           ]
                       }),
-                  (z || !t) &&
+                  (F || !t) &&
                       (0, i.jsxs)('div', {
-                          className: _.measurement,
+                          className: f.measurement,
                           children: [
                               !t &&
                                   (0, i.jsx)('div', {
-                                      className: _.measurementCheckbox,
+                                      className: f.measurementCheckbox,
                                       children: (0, i.jsx)(s.XZJ, {
                                           size: 16,
-                                          value: z,
-                                          onChange: (e, t) => V(t)
+                                          value: F,
+                                          onChange: (e, t) => U(t)
                                       })
                                   }),
                               (0, i.jsxs)(s.Text, {
                                   variant: 'text-md/normal',
                                   color: 'text-secondary',
-                                  className: _.measurementText,
+                                  className: f.measurementText,
                                   children: [
                                       'Rendered Frames:',
                                       ' ',
@@ -162,23 +165,23 @@ function p(e) {
                                           tag: 'span',
                                           variant: 'code',
                                           color: 'text-primary',
-                                          children: Z.current.toFixed(0)
+                                          children: b.current.toFixed(0)
                                       })
                                   ]
                               })
                           ]
                       }),
-                  (W || !t) &&
+                  (H || !t) &&
                       (0, i.jsxs)('div', {
-                          className: _.measurement,
+                          className: f.measurement,
                           children: [
                               !t &&
                                   (0, i.jsx)('div', {
-                                      className: _.measurementCheckbox,
+                                      className: f.measurementCheckbox,
                                       children: (0, i.jsx)(s.XZJ, {
                                           size: 16,
-                                          value: W,
-                                          onChange: (e, t) => F(t)
+                                          value: H,
+                                          onChange: (e, t) => B(t)
                                       })
                                   }),
                               (0, i.jsx)(s.ua7, {
@@ -190,15 +193,15 @@ function p(e) {
                                           children: (0, i.jsxs)(s.Text, {
                                               variant: 'text-md/normal',
                                               color: 'text-secondary',
-                                              className: _.measurementText,
+                                              className: f.measurementText,
                                               children: [
                                                   'Idle Frame Delta:',
                                                   ' ',
                                                   (0, i.jsxs)(s.Text, {
                                                       tag: 'span',
                                                       variant: 'code',
-                                                      color: j > 1 ? 'text-danger' : 'text-primary',
-                                                      children: [j.toFixed(2), 'ms']
+                                                      color: A > 1 ? 'text-danger' : 'text-primary',
+                                                      children: [A.toFixed(2), 'ms']
                                                   })
                                               ]
                                           })
@@ -206,7 +209,7 @@ function p(e) {
                               })
                           ]
                       }),
-                  T &&
+                  R &&
                       (0, i.jsx)(s.ua7, {
                           position: 'left',
                           text: "We don't track frames while the app is in the background, because requestAnimationFrame doesn't fire in the background",
@@ -223,10 +226,10 @@ function p(e) {
                       }),
                   !t &&
                       (0, i.jsx)('div', {
-                          className: _.bottomPanelButton,
-                          children: (0, i.jsx)(h.Z, {
+                          className: f.bottomPanelButton,
+                          children: (0, i.jsx)(_.Z, {
                               children: (0, i.jsx)(s.zxk, {
-                                  onClick: k,
+                                  onClick: L,
                                   children: 'Reset Frame Data'
                               })
                           })

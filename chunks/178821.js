@@ -25,25 +25,30 @@ let m = 1000 / 60,
     f = (1000 / 60) * 3,
     g = Math.ceil(3000 / (1000 / 60));
 function j(e, t) {
-    let r = a.useRef(null),
+    let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : window,
         n = a.useRef(null),
         s = a.useRef(null),
-        c = a.useCallback(() => {
-            null != r.current && clearInterval(r.current), null != n.current && cancelIdleCallback(n.current), null != s.current && cancelAnimationFrame(s.current);
+        c = a.useRef(null),
+        l = a.useRef(null != r ? r : window);
+    a.useEffect(() => {
+        l.current = null != r ? r : window;
+    }, [r]);
+    let i = a.useCallback(() => {
+            null != n.current && l.current.clearInterval(n.current), null != s.current && l.current.cancelIdleCallback(s.current), null != c.current && l.current.cancelAnimationFrame(c.current);
         }, []),
-        l = a.useCallback(() => {
-            r.current = setTimeout(() => {
-                (n.current = requestIdleCallback(e)),
-                    (s.current = requestAnimationFrame(() => {
-                        t(), l();
+        u = a.useCallback(() => {
+            n.current = l.current.setTimeout(() => {
+                (s.current = l.current.requestIdleCallback(e)),
+                    (c.current = l.current.requestAnimationFrame(() => {
+                        t(), u();
                     }));
             }, 12);
         }, [e, t]);
     return [
         a.useCallback(() => {
-            c(), l();
-        }, [c, l]),
-        c
+            i(), u();
+        }, [i, u]),
+        i
     ];
 }
 function T(e) {
@@ -133,9 +138,9 @@ function v(e) {
 function k(e) {
     let { socket: t, isAverageFrameTime: r } = e,
         [s, c] = v(t),
-        { currentFPS: l, averageFrameTime: o, timeSinceLastDrop: x, onResetFrameData: h, droppedFramesRef: f, renderedFrameCount: g, bufferFramecountRef: k, frameCheckerEffect: y } = b(r, s),
-        [w, R, S] = T(t),
-        [I, F] = j(w, y),
+        { currentFPS: l, averageFrameTime: o, timeSinceLastDrop: x, onResetFrameData: h, droppedFramesRef: f, renderedFrameCount: g, bufferFramecountRef: k, frameCheckerEffect: w } = b(r, s),
+        [y, R, S] = T(t),
+        [I, F] = j(y, w),
         C = performance.now() - c.current < p,
         E = R(o, k.current);
     (0, u.ZP)(
@@ -280,7 +285,7 @@ function k(e) {
         ]
     });
 }
-function y(e) {
+function w(e) {
     let { socket: t, isAverageFrameTime: r, onToggleAverageFrameTime: s } = e,
         [c, l] = a.useState(t.dispatcher.getIsRequestIdleCallbackEnabled()),
         u = a.useRef(null);
@@ -338,7 +343,7 @@ function y(e) {
         ]
     });
 }
-function w(e) {
+function y(e) {
     let { socket: t } = e,
         r = t.dispatcher.getDispatchTimings(),
         [s, l] = a.useState(!1);
@@ -535,12 +540,12 @@ function I() {
                         socket: e,
                         isAverageFrameTime: t
                     }),
-                    (0, n.jsx)(y, {
+                    (0, n.jsx)(w, {
                         socket: e,
                         isAverageFrameTime: t,
                         onToggleAverageFrameTime: r
                     }),
-                    (0, n.jsx)(w, { socket: e }),
+                    (0, n.jsx)(y, { socket: e }),
                     (0, n.jsx)(R, { socket: e })
                 ]
             })
