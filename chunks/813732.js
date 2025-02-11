@@ -1,4 +1,4 @@
-n.d(t, { Z: () => K });
+n.d(t, { Z: () => X });
 var i = n(200651),
     s = n(192379),
     l = n(120356),
@@ -31,19 +31,20 @@ var i = n(200651),
     P = n(626135),
     y = n(63063),
     Z = n(74538),
-    L = n(391077),
-    k = n(639056),
-    B = n(52164),
-    M = n(91430),
-    V = n(474936),
-    w = n(981631),
-    U = n(526761),
-    G = n(726985),
-    F = n(388032),
-    z = n(656397);
-function Y() {
+    L = n(695349),
+    k = n(391077),
+    B = n(639056),
+    M = n(52164),
+    V = n(91430),
+    w = n(474936),
+    U = n(981631),
+    G = n(526761),
+    F = n(726985),
+    z = n(388032),
+    Y = n(656397);
+function H() {
     return (0, i.jsx)(o.Zbd, {
-        className: z.noItemsCard,
+        className: Y.noItemsCard,
         type: o.Zbd.Types.CUSTOM,
         children: (0, i.jsxs)(C.Z, {
             align: C.Z.Align.CENTER,
@@ -51,50 +52,50 @@ function Y() {
                 (0, i.jsx)(N.Z, {
                     game: null,
                     size: N.Z.Sizes.SMALL,
-                    className: z.noItemsIcon
+                    className: Y.noItemsIcon
                 }),
                 (0, i.jsx)('span', {
-                    className: z.cardText,
-                    children: F.intl.string(F.t['jy/hys'])
+                    className: Y.cardText,
+                    children: z.intl.string(z.t['jy/hys'])
                 })
             ]
         })
     });
 }
-function H() {
-    let e = (0, a.e7)([D.Z], () => D.Z.getForApplication(V.CL));
+function W() {
+    let e = (0, a.e7)([D.Z], () => D.Z.getForApplication(w.CL));
     return (
         s.useEffect(() => {
-            (0, h.yD)(V.CL);
+            (0, h.yD)(w.CL);
         }, []),
         (0, i.jsxs)('section', {
             children: [
                 (0, i.jsx)(o.X6q, {
                     variant: 'heading-md/bold',
-                    className: z.accountCreditTitle,
-                    children: F.intl.string(F.t['2GKrvr'])
+                    className: Y.accountCreditTitle,
+                    children: z.intl.string(z.t['2GKrvr'])
                 }),
                 (0, i.jsx)(o.Text, {
                     variant: 'text-md/normal',
-                    className: z.accountCreditDescription,
-                    children: F.intl.string(F.t.kNEjGh)
+                    className: Y.accountCreditDescription,
+                    children: z.intl.string(z.t.kNEjGh)
                 }),
                 null != e && Z.ZP.hasAccountCredit(e)
-                    ? (0, i.jsx)(k.Z, {
-                          className: z.accountCredit,
+                    ? (0, i.jsx)(B.Z, {
+                          className: Y.accountCredit,
                           entitlements: e
                       })
-                    : (0, i.jsx)(Y, {})
+                    : (0, i.jsx)(H, {})
             ]
         })
     );
 }
-function W() {
-    return (0, i.jsx)('hr', { className: z.hr });
+function K() {
+    return (0, i.jsx)('hr', { className: Y.hr });
 }
-let K = function () {
+let X = function () {
     let e = (0, a.e7)([R.ZP], () => R.ZP.getPremiumTypeSubscription()),
-        t = (0, p.Z)({ subscriptionFilter: (e) => M.eS.has(e.status) }),
+        t = (0, p.Z)({ subscriptionFilter: (e) => V.eS.has(e.status) }),
         n = t.length > 1,
         l = (0, a.e7)([O.Z], () => (null != e && null != e.paymentSourceId ? O.Z.getPaymentSource(e.paymentSourceId) : null), [e]),
         h = (0, a.e7)([R.ZP], () => R.ZP.hasFetchedSubscriptions()),
@@ -105,15 +106,16 @@ let K = function () {
             var e, t;
             return null !== (t = null === (e = R.ZP.getActiveApplicationSubscriptions()) || void 0 === e ? void 0 : e.length) && void 0 !== t ? t : 0;
         }),
-        k = (0, a.e7)([R.ZP], () => {
+        B = (0, a.e7)([R.ZP], () => {
             var e;
             return Object.values(null !== (e = R.ZP.getSubscriptions()) && void 0 !== e ? e : {})
-                .filter((e) => e.type === w.NYc.GUILD)
-                .filter((e) => e.status !== w.O0b.ENDED).length;
+                .filter((e) => e.type === U.NYc.GUILD)
+                .filter((e) => e.status !== U.O0b.ENDED).length;
         }),
-        Y = (0, _.Z)({ forceFetch: !0 }),
-        K = null !== e ? e.currentPeriodEnd : void 0,
-        X = Y.fractionalState !== V.a$.NONE || Y.unactivatedUnits.length > 0;
+        H = (0, _.Z)({ forceFetch: !0 }),
+        X = (0, L.W)(),
+        q = null !== e ? e.currentPeriodEnd : void 0,
+        J = !X && (H.fractionalState !== w.a$.NONE || H.unactivatedUnits.length > 0);
     return (s.useEffect(
         () => (
             c.Z.wait(() => {
@@ -128,73 +130,73 @@ let K = function () {
     v.Z.enabled)
         ? (0, i.jsx)(x.Z, {})
         : h && N
-          ? D === U.cP
+          ? D === G.cP
               ? (0, i.jsx)(I.Z, { onGoBack: () => g.Z.clearSubsection() })
-              : D === U.XZ
+              : D === G.XZ
                 ? (0, i.jsx)(S.Z, { onGoBack: () => g.Z.clearSubsection() })
                 : (0, i.jsx)('div', {
-                      className: z.container,
+                      className: Y.container,
                       children: (0, i.jsxs)('div', {
-                          className: z.content,
+                          className: Y.content,
                           children: [
-                              n ? (0, i.jsx)(M.Yn, {}) : null,
+                              n ? (0, i.jsx)(V.Yn, {}) : null,
                               null != e
-                                  ? (0, i.jsx)(M.ZP, {
+                                  ? (0, i.jsx)(V.ZP, {
                                         subscription: e,
                                         paymentSource: l,
                                         busy: C,
                                         subscriptions: t
                                     })
-                                  : (0, i.jsx)(M.MM, {}),
-                              X &&
+                                  : (0, i.jsx)(V.MM, {}),
+                              J &&
                                   (0, i.jsxs)('section', {
                                       children: [
                                           (0, i.jsx)(o.X6q, {
                                               variant: 'heading-md/bold',
-                                              className: z.accountCreditTitle,
-                                              children: F.intl.string(F.t.Obre8v)
+                                              className: Y.accountCreditTitle,
+                                              children: z.intl.string(z.t.Obre8v)
                                           }),
                                           (0, i.jsx)(o.Text, {
                                               variant: 'text-md/normal',
-                                              className: z.accountCreditDescription,
-                                              children: F.intl.format(F.t['7Zi06e'], { helpCenterLink: y.Z.getArticleURL(w.BhN.FRACTIONAL_PREMIUM_ABOUT) })
+                                              className: Y.accountCreditDescription,
+                                              children: z.intl.format(z.t['7Zi06e'], { helpCenterLink: y.Z.getArticleURL(U.BhN.FRACTIONAL_PREMIUM_ABOUT) })
                                           }),
-                                          (0, i.jsx)(L.Z, {
-                                              className: z.accountCredit,
-                                              fractionalPremiumInfo: Y,
-                                              activationDate: K
+                                          (0, i.jsx)(k.Z, {
+                                              className: Y.accountCredit,
+                                              fractionalPremiumInfo: H,
+                                              activationDate: q
                                           })
                                       ]
                                   }),
                               (0, i.jsx)(j.F, {
-                                  setting: G.s6.SUBSCRIPTIONS_CREDITS,
-                                  children: (0, i.jsx)(H, {})
+                                  setting: F.s6.SUBSCRIPTIONS_CREDITS,
+                                  children: (0, i.jsx)(W, {})
                               }),
-                              k > 0 &&
+                              B > 0 &&
                                   (0, i.jsxs)(i.Fragment, {
                                       children: [
-                                          (0, i.jsx)(W, {}),
+                                          (0, i.jsx)(K, {}),
                                           (0, i.jsx)(f.Z, {
-                                              count: k,
-                                              onClickManageSubscription: () => g.Z.setSection(w.oAB.SUBSCRIPTIONS, U.cP)
+                                              count: B,
+                                              onClickManageSubscription: () => g.Z.setSection(U.oAB.SUBSCRIPTIONS, G.cP)
                                           })
                                       ]
                                   }),
                               Z > 0 &&
                                   (0, i.jsxs)(i.Fragment, {
                                       children: [
-                                          (0, i.jsx)(W, {}),
+                                          (0, i.jsx)(K, {}),
                                           (0, i.jsx)(T.Z, {
                                               count: Z,
                                               onClickManageSubscription: () => {
-                                                  g.Z.setSection(w.oAB.SUBSCRIPTIONS, U.XZ), P.default.track(w.rMx.PREMIUM_APPLICATION_SUBSCRIPTION_MANAGE_CTA_CLICKED);
+                                                  g.Z.setSection(U.oAB.SUBSCRIPTIONS, G.XZ), P.default.track(U.rMx.PREMIUM_APPLICATION_SUBSCRIPTION_MANAGE_CTA_CLICKED);
                                               }
                                           })
                                       ]
                                   }),
-                              (0, i.jsx)(W, {}),
+                              (0, i.jsx)(K, {}),
                               null != e
-                                  ? (0, i.jsx)(B.Z, {
+                                  ? (0, i.jsx)(M.Z, {
                                         subscription: e,
                                         withOverheadSeparator: !1
                                     })
@@ -203,7 +205,7 @@ let K = function () {
                       })
                   })
           : (0, i.jsx)('div', {
-                className: r()(z.container, z.loading),
+                className: r()(Y.container, Y.loading),
                 children: (0, i.jsx)(o.$jN, {})
             });
 };

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => A });
 var i = n(200651),
     r = n(192379),
     a = n(120356),
@@ -9,119 +9,122 @@ var i = n(200651),
     c = n(906732),
     d = n(565138),
     f = n(963249),
-    _ = n(199778),
-    p = n(594174),
-    h = n(314884),
-    m = n(709586),
-    g = n(267642),
-    E = n(74538),
-    v = n(678558),
-    y = n(981631),
-    I = n(474936),
-    T = n(388032),
-    b = n(359277);
-let S = function (e) {
+    _ = n(695349),
+    p = n(199778),
+    h = n(594174),
+    m = n(314884),
+    g = n(709586),
+    E = n(267642),
+    v = n(74538),
+    y = n(678558),
+    I = n(981631),
+    T = n(474936),
+    b = n(388032),
+    S = n(359277);
+let A = function (e) {
     let { closeLayer: t, guild: n, onCtaVisibilityChange: a } = e,
-        S = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
-        A = (0, o.e7)([h.Z], () => h.Z.boostSlots),
-        { analyticsLocations: N } = (0, c.ZP)(),
-        C = r.useMemo(
+        A = (0, o.e7)([h.default], () => h.default.getCurrentUser()),
+        N = (0, o.e7)([m.Z], () => m.Z.boostSlots),
+        { analyticsLocations: C } = (0, c.ZP)(),
+        R = (0, _.W)(),
+        O = r.useMemo(
             () =>
-                Object.keys(A).filter((e) => {
-                    let t = A[e];
+                Object.keys(N).filter((e) => {
+                    let t = N[e];
                     return null != t.premiumGuildSubscription && t.premiumGuildSubscription.guildId === n.id;
                 }),
-            [A, n.id]
+            [N, n.id]
         ),
-        R = r.useMemo(() => (0, g.vx)(A).length > 0, [A]);
-    function O() {
+        D = r.useMemo(() => (0, E.vx)(N).length > 0, [N]);
+    function L() {
         (0, f.Z)({
             initialPlanId: null,
-            subscriptionTier: I.Si.TIER_2,
-            analyticsLocations: N,
+            subscriptionTier: T.Si.TIER_2,
+            analyticsLocations: C,
             analyticsObject: {
-                page: y.ZY5.PREMIUM_GUILD_USER_MODAL,
-                section: y.jXE.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
-                object: y.qAy.BUTTON_ICON,
-                objectType: y.Qqv.BUY
+                page: I.ZY5.PREMIUM_GUILD_USER_MODAL,
+                section: I.jXE.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
+                object: I.qAy.BUTTON_ICON,
+                objectType: I.Qqv.BUY
             },
             onClose: (e) => e && t()
         });
     }
-    function D() {
+    function x() {
         (0, f.Z)({
             initialPlanId: null,
-            subscriptionTier: I.Si.TIER_2,
+            subscriptionTier: T.Si.TIER_2,
             isGift: !0,
-            analyticsLocations: N,
+            analyticsLocations: C,
             analyticsObject: {
-                page: y.ZY5.PREMIUM_GUILD_USER_MODAL,
-                section: y.jXE.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
-                object: y.qAy.BUTTON_ICON,
-                objectType: y.Qqv.GIFT
+                page: I.ZY5.PREMIUM_GUILD_USER_MODAL,
+                section: I.jXE.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
+                object: I.qAy.BUTTON_ICON,
+                objectType: I.Qqv.GIFT
             },
             onClose: (e) => e && t()
         });
     }
     return (0, i.jsxs)('div', {
-        className: b.guildStatus,
+        className: S.guildStatus,
         children: [
             (0, i.jsx)(d.Z, {
-                className: b.guildIcon,
+                className: S.guildIcon,
                 guild: n,
                 size: d.Z.Sizes.LARGER
             }),
             (0, i.jsx)(u.X6q, {
-                className: b.guildName,
+                className: S.guildName,
                 color: 'always-white',
                 variant: 'text-lg/bold',
                 children: n.name
             }),
             (0, i.jsxs)('div', {
-                className: b.guildBoostCountWrapper,
+                className: S.guildBoostCountWrapper,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: b.guildBoostCount,
+                        className: S.guildBoostCount,
                         children: [
-                            (0, i.jsx)(m.Z, { className: s()(b.guildBoostBadge, { [b.guildBoostBadgeWithBoosts]: n.premiumSubscriberCount > 0 }) }),
+                            (0, i.jsx)(g.Z, { className: s()(S.guildBoostBadge, { [S.guildBoostBadgeWithBoosts]: n.premiumSubscriberCount > 0 }) }),
                             (0, i.jsx)(u.Text, {
-                                className: b.guildStatusCopy,
+                                className: S.guildStatusCopy,
                                 variant: 'text-md/bold',
-                                children: T.intl.format(T.t['pob/cH'], { subscriptions: n.premiumSubscriberCount })
+                                children: b.intl.format(b.t['pob/cH'], { subscriptions: n.premiumSubscriberCount })
                             })
                         ]
                     }),
-                    C.length > 0
+                    O.length > 0
                         ? (0, i.jsx)(u.Text, {
-                              className: b.guildBoostCountCurrentUser,
+                              className: S.guildBoostCountCurrentUser,
                               variant: 'text-sm/normal',
-                              children: T.intl.format(T.t.Jeto2t, { numSubscriptions: C.length })
+                              children: b.intl.format(b.t.Jeto2t, { numSubscriptions: O.length })
                           })
                         : null
                 ]
             }),
-            (0, i.jsx)(_.Z, {
-                hide: R,
-                containerClassName: b.FPContainer
+            (0, i.jsx)(p.Z, {
+                hide: D,
+                containerClassName: S.FPContainer,
+                isInReverseTrial: R
             }),
             (0, i.jsxs)('div', {
-                className: b.guildBoostCtas,
+                className: S.guildBoostCtas,
                 children: [
                     (0, i.jsx)(l.$, {
                         onChange: a,
                         threshold: 0.9,
                         children: (0, i.jsx)('div', {
-                            className: s()(b.guildBoostCta, b.guildBoostCtaBoostWrapper),
-                            children: (0, i.jsx)(v.Z, {
-                                className: b.guildBoostCtaBoost,
-                                innerClassName: s()(b.__invalid_guildBoostCtaContent, b.guildBoostCtaBoostContent),
-                                buttonShineClassName: b.guildBoostCtaBoostShine,
+                            className: s()(S.guildBoostCta, S.guildBoostCtaBoostWrapper),
+                            children: (0, i.jsx)(y.Z, {
+                                className: S.guildBoostCtaBoost,
+                                innerClassName: s()(S.__invalid_guildBoostCtaContent, S.guildBoostCtaBoostContent),
+                                buttonShineClassName: S.guildBoostCtaBoostShine,
                                 guild: n,
                                 analyticsLocation: {
-                                    page: y.ZY5.PREMIUM_GUILD_USER_MODAL,
-                                    section: y.jXE.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
-                                    object: y.qAy.BUTTON_CTA,
-                                    objectType: y.Qqv.BUY
+                                    page: I.ZY5.PREMIUM_GUILD_USER_MODAL,
+                                    section: I.jXE.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
+                                    object: I.qAy.BUTTON_CTA,
+                                    objectType: I.Qqv.BUY
                                 },
                                 closeLayer: t,
                                 color: u.zxk.Colors.WHITE,
@@ -130,31 +133,31 @@ let S = function (e) {
                             })
                         })
                     }),
-                    E.ZP.hasFreeBoosts(S) || E.ZP.isPremium(S, I.p9.TIER_2)
+                    v.ZP.hasFreeBoosts(A) || v.ZP.isPremium(A, T.p9.TIER_2)
                         ? (0, i.jsxs)(u.zxk, {
-                              className: s()(b.guildBoostCta, b.guildBoostCtaSecondary),
-                              innerClassName: s()(b.__invalid_guildBoostCtaContent, b.guildBoostCtaGiftContent),
+                              className: s()(S.guildBoostCta, S.guildBoostCtaSecondary),
+                              innerClassName: s()(S.__invalid_guildBoostCtaContent, S.guildBoostCtaGiftContent),
                               look: u.zxk.Looks.OUTLINED,
                               color: u.zxk.Colors.WHITE,
-                              onClick: D,
+                              onClick: x,
                               size: u.zxk.Sizes.LARGE,
                               children: [
                                   (0, i.jsx)(u.OgN, {
                                       size: 'md',
                                       color: 'currentColor',
-                                      className: b.guildBoostCtaGiftIcon
+                                      className: S.guildBoostCtaGiftIcon
                                   }),
-                                  T.intl.string(T.t['8MYSQ0'])
+                                  b.intl.string(b.t['8MYSQ0'])
                               ]
                           })
                         : (0, i.jsx)(u.zxk, {
-                              className: s()(b.guildBoostCta, b.guildBoostCtaSecondary),
-                              innerClassName: s()(b.__invalid_guildBoostCtaContent, b.__invalid_guildBoostCtaSubscribeContent),
+                              className: s()(S.guildBoostCta, S.guildBoostCtaSecondary),
+                              innerClassName: s()(S.__invalid_guildBoostCtaContent, S.__invalid_guildBoostCtaSubscribeContent),
                               look: u.zxk.Looks.OUTLINED,
                               color: u.zxk.Colors.WHITE,
-                              onClick: O,
+                              onClick: L,
                               size: u.zxk.Sizes.LARGE,
-                              children: T.intl.string(T.t.Q43TvL)
+                              children: b.intl.string(b.t.Q43TvL)
                           })
                 ]
             })

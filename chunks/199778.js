@@ -14,14 +14,14 @@ var r = n(120356),
     p = n(388032),
     h = n(59683);
 function m(e) {
-    let { hide: t, pillClassName: n, containerClassName: r } = e,
-        { fractionalState: m, endsAt: g } = (0, l.Z)(),
-        E = (0, o.Z)(g, o.a.LONG_TIME_LEFT);
-    if (!0 === t || m === _.a$.NONE) return null;
-    let v = p.intl.format(p.t['4RgA6O'], { helpCenterLink: d.Z.getArticleURL(f.BhN.FRACTIONAL_PREMIUM_ABOUT) });
+    let { hide: t, pillClassName: n, containerClassName: r, isInReverseTrial: m } = e,
+        { fractionalState: g, endsAt: E } = (0, l.Z)(),
+        v = (0, o.Z)(E, o.a.LONG_TIME_LEFT);
+    if (!0 === t || g === _.a$.NONE) return null;
+    let y = m ? void 0 : p.intl.format(p.t['4RgA6O'], { helpCenterLink: d.Z.getArticleURL(f.BhN.FRACTIONAL_PREMIUM_ABOUT) });
     return (0, i.jsx)(u.Z, {
-        text: v,
-        'aria-label': v.toString(),
+        text: y,
+        'aria-label': null == y ? void 0 : y.toString(),
         tooltipClassName: h.tooltip,
         className: a()(h.unavailableCounterContainer, r),
         children: (e) =>
@@ -34,10 +34,11 @@ function m(e) {
                         className: h.unavailableCounterPillText,
                         children: p.intl.string(p.t['5nrJDA']).toUpperCase()
                     }),
-                    (0, i.jsx)(c.Z, {
-                        countdownText: E,
-                        className: h.countDownText
-                    })
+                    !m &&
+                        (0, i.jsx)(c.Z, {
+                            countdownText: v,
+                            className: h.countDownText
+                        })
                 ]
             })
     });
