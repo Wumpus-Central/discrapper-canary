@@ -12796,15 +12796,24 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     gap: 4px
 }
 
-.icon__8ac07 {
-    flex-shrink: 0;
-    width: 12px;
-    height: 12px
+.container__8ac07.textXs__8ac07 {
+    --custom-live-activity-status-icon-size: 12px;
+    --custom-live-activity-status-emoji-size: 14px
 }
 
-.icon__8ac07.fullWidth__8ac07 {
-    width: 14px;
-    height: 14px
+.container__8ac07.textSm__8ac07 {
+    --custom-live-activity-status-icon-size: 14px;
+    --custom-live-activity-status-emoji-size: 16px
+}
+
+.container__8ac07:empty {
+    display: none
+}
+
+.icon__8ac07 {
+    flex-shrink: 0;
+    width: var(--custom-live-activity-status-icon-size);
+    height: var(--custom-live-activity-status-icon-size)
 }
 
 .text__8ac07 {
@@ -12815,13 +12824,12 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
 .emoji__8ac07 {
     flex: 0 0 auto;
     margin-right: 0;
-    width: 14px;
-    height: 14px
+    width: var(--custom-live-activity-status-emoji-size);
+    height: var(--custom-live-activity-status-emoji-size)
 }
 
-.emoji__8ac07.fullWidth__8ac07 {
-    width: 16px;
-    height: 16px
+.dot__8ac07 {
+    flex-shrink: 0
 }
 
 .dot__8ac07:first-child,
