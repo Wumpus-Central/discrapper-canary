@@ -1,72 +1,75 @@
-n.d(t, { Z: () => p });
-var i = n(200651),
-    r = n(192379),
-    a = n(481060),
-    s = n(833062),
+n.d(t, {
+    WR: () => _,
+    qE: () => f,
+    wQ: () => p
+});
+var i = n(200651);
+n(192379);
+var r = n(481060),
+    a = n(833062),
+    s = n(678738),
     o = n(502762),
-    l = n(63063),
-    u = n(81866),
-    c = n(981631),
-    d = n(388032),
-    f = n(918603);
-let _ = {
-    profile: {
-        Wrapper: o.Z.Overlay,
-        className: f.profile,
-        headerVariant: 'heading-sm/semibold',
-        bodyVariant: 'text-xs/medium'
-    },
-    profile_modal: {
-        Wrapper: o.Z.Overlay,
-        className: f.profile,
-        headerVariant: 'text-xs/semibold',
-        bodyVariant: 'text-sm/normal'
-    },
-    channel_header: {
-        Wrapper: 'div',
-        className: f.channelHeader,
-        headerVariant: 'text-md/semibold',
-        bodyVariant: 'text-md/normal'
-    }
-};
+    l = n(292814),
+    u = n(388032),
+    c = n(918603);
+function d(e) {
+    return (0, i.jsx)(a.Z, { application: e }, e.id);
+}
+function f(e) {
+    let { userId: t } = e,
+        n = (0, l.e)({
+            userId: t,
+            renderApplicationName: d
+        });
+    return (0, i.jsxs)(r.Zbd, {
+        className: c.channelHeader,
+        children: [
+            (0, i.jsxs)('div', {
+                className: c.header,
+                children: [
+                    (0, i.jsx)(r.X6q, {
+                        variant: 'text-md/semibold',
+                        color: 'text-normal',
+                        children: u.intl.string(u.t.Iyka0d)
+                    }),
+                    (0, i.jsx)(r.P4T, {
+                        size: 'xs',
+                        className: c.icon
+                    })
+                ]
+            }),
+            (0, i.jsx)(r.Text, {
+                variant: 'text-md/normal',
+                color: 'text-normal',
+                children: n
+            })
+        ]
+    });
+}
+function _(e) {
+    let { userId: t, headingColor: n } = e,
+        a = (0, l.e)({
+            userId: t,
+            renderApplicationName: d
+        });
+    return (0, i.jsx)(s.Z, {
+        headingColor: n,
+        heading: u.intl.string(u.t.Iyka0d),
+        headingIcon: r.P4T,
+        children: (0, i.jsx)(r.Text, {
+            variant: 'text-xs/normal',
+            color: 'text-normal',
+            children: a
+        })
+    });
+}
 function p(e) {
-    let { look: t, userId: n } = e,
-        { Wrapper: o, className: p, headerVariant: h, bodyVariant: m } = _[t],
-        g = (0, u.Z)(n),
-        E = r.useMemo(
-            () =>
-                null != g
-                    ? d.intl.format(d.t.rSUACQ, {
-                          helpdeskArticle: l.Z.getArticleURL(c.BhN.SLAYER_PROVISIONAL_ACCOUNTS),
-                          applicationName: () => (0, i.jsx)(s.Z, { application: g }, g.id)
-                      })
-                    : d.intl.format(d.t['q+N8Ly'], { helpdeskArticle: l.Z.getArticleURL(c.BhN.SLAYER_PROVISIONAL_ACCOUNTS) }),
-            [g]
-        );
-    return (0, i.jsx)(o, {
-        className: p,
-        children: (0, i.jsxs)('div', {
-            className: f.layoutContainer,
-            children: [
-                (0, i.jsx)(a.KED, {
-                    size: 'md',
-                    className: f.icon
-                }),
-                (0, i.jsxs)('div', {
-                    children: [
-                        (0, i.jsx)(a.X6q, {
-                            variant: h,
-                            color: 'text-normal',
-                            children: d.intl.string(d.t.Iyka0d)
-                        }),
-                        (0, i.jsx)(a.Text, {
-                            variant: m,
-                            color: 'text-normal',
-                            children: E
-                        })
-                    ]
-                })
-            ]
+    let { userId: t, headingColor: n } = e;
+    return (0, i.jsx)(o.Z.Overlay, {
+        className: c.profile,
+        children: (0, i.jsx)(_, {
+            userId: t,
+            headingColor: n
         })
     });
 }

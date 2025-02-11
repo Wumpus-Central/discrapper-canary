@@ -130,11 +130,7 @@ function G(e) {
                             children: R
                         }),
                     U.intl.format(U.t['Qvg+6+'], { username: x }),
-                    (null == S ? void 0 : S.isProvisional) &&
-                        (0, i.jsx)(f.Z, {
-                            look: 'channel_header',
-                            userId: S.id
-                        }),
+                    (null == S ? void 0 : S.isProvisional) && (0, i.jsx)(f.qE, { userId: S.id }),
                     e
                 ]
             })
