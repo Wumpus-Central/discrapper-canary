@@ -107,5 +107,25 @@ let d = {
                 })
             ).body.secret
         );
+    },
+    async subscribeActivities(e) {
+        let t = e.map((e) => {
+            let { userId: t, applicationId: n, partyId: i, messageId: r, channelId: a } = e;
+            return {
+                user_id: t,
+                application_id: n,
+                party_id: i,
+                message_id: r,
+                channel_id: a
+            };
+        });
+        return (
+            await i.tn.post({
+                url: c.ANM.USER_ACTIVITY_SUBSCRIBE,
+                body: { subscriptions: t },
+                retries: 1,
+                rejectWithError: !1
+            })
+        ).body;
     }
 };

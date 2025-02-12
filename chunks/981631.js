@@ -1,8 +1,8 @@
 a.d(e, { rMx: () => T }), a(47120), a(743606);
 var r,
     n = a(512722),
-    o = a.n(n),
-    _ = a(674746);
+    _ = a.n(n),
+    o = a(674746);
 a(722770), a(106351), a(470167), a(388123);
 var i = a(275726),
     c = a(866442),
@@ -51,6 +51,7 @@ let A = Object.freeze({
                 .concat(null != a ? a : 0, '/metadata'),
         USER_ACTIVITY_JOIN: (t, e, a) => '/users/'.concat(t, '/sessions/').concat(e, '/activities/').concat(a, '/', 1),
         USER_ACTIVITY_STATISTICS: '/users/@me/activities/statistics/applications',
+        USER_ACTIVITY_SUBSCRIBE: '/users/@me/activities/subscribe',
         APPLICATION_ACTIVITY_STATISTICS: (t) => '/activities/statistics/applications/'.concat(t),
         ACTIVITIES: '/activities',
         NETWORKING_TOKEN: '/networking/token',
@@ -1103,8 +1104,8 @@ let A = Object.freeze({
         IOS: 'https://itunes.apple.com/app/discord/id985746746',
         ANDROID: 'https://play.google.com/store/apps/details?id=com.discord'
     });
-let p = (0, c._i)(_.Z.BRAND_500);
-o()(null != p, 'Brand color could not be parsed'),
+let p = (0, c._i)(o.Z.BRAND_500);
+_()(null != p, 'Brand color could not be parsed'),
     Object.freeze({
         0: 0,
         1: 2,

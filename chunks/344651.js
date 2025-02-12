@@ -178,13 +178,14 @@ function H(e) {
     }));
 }
 function Y(e) {
-    let { guildId: t, user: n, status: i, activities: r, clientStatus: a } = e;
+    let { guildId: t, user: n, status: i, activities: r, hiddenActivities: a, clientStatus: s } = e;
     k.add({
         guildId: t,
         user: n,
         status: i,
-        clientStatus: a,
-        activities: r
+        clientStatus: s,
+        activities: r,
+        hiddenActivities: a
     });
 }
 B(
@@ -235,7 +236,8 @@ B(
                             user: e.user,
                             status: e.status,
                             clientStatus: e.client_status,
-                            activities: e.activities
+                            activities: e.activities,
+                            hiddenActivities: e.hidden_activities
                         })),
                     r = e.guilds.filter((e) => !0 !== e.unavailable);
                 r.forEach((e) => {
@@ -705,12 +707,13 @@ B(
             }),
                 null != e.presences &&
                     e.presences.forEach((t) => {
-                        let { user: n, status: i, client_status: r, activities: a } = t;
+                        let { user: n, status: i, client_status: r, activities: a, hidden_activities: s } = t;
                         return Y({
                             guildId: e.guild_id,
                             user: n,
                             status: i,
                             activities: a,
+                            hiddenActivities: s,
                             clientStatus: r
                         });
                     }),
@@ -727,12 +730,13 @@ B(
             }),
                 null != e.presences &&
                     e.presences.forEach((t) => {
-                        let { user: n, status: i, client_status: r, activities: a } = t;
+                        let { user: n, status: i, client_status: r, activities: a, hidden_activities: s } = t;
                         return Y({
                             guildId: e.guild_id,
                             user: n,
                             status: i,
                             activities: a,
+                            hiddenActivities: s,
                             clientStatus: r
                         });
                     }),
@@ -928,6 +932,7 @@ B(
             user: e.user,
             status: e.status,
             activities: e.activities,
+            hiddenActivities: e.hidden_activities,
             clientStatus: e.client_status
         });
     }),
@@ -1186,6 +1191,7 @@ B(
                     user: i.user,
                     status: i.status,
                     activities: i.activities,
+                    hiddenActivities: i.hidden_activities,
                     clientStatus: i.client_status
                 });
             };
