@@ -1,43 +1,49 @@
-n.d(t, {
+a.d(t, {
     U3: () => m,
     XM: () => d,
     hd: () => c,
-    lI: () => o,
+    lI: () => r,
     py: () => u
 });
-var i = n(481060),
-    a = n(819640),
-    r = n(585483),
-    l = n(981631);
-let s = () => a.Z.hasLayers() || (0, i.$sL)(),
-    o = {
-        binds: ['right'],
-        comboKeysBindGlobal: !0,
-        action() {
-            if (!s()) return r.S.dispatch(l.CkL.CAROUSEL_NEXT), !1;
-        }
-    },
-    c = {
-        binds: ['left'],
-        comboKeysBindGlobal: !0,
-        action() {
-            if (!s()) return r.S.dispatch(l.CkL.CAROUSEL_PREV), !1;
-        }
-    },
+var n = a(481060),
+    i = a(819640),
+    s = a(585483),
+    o = a(981631);
+let l = () => i.Z.hasLayers() || (0, n.$sL)(),
+    r =
+        12633 == a.j
+            ? {
+                  binds: ['right'],
+                  comboKeysBindGlobal: !0,
+                  action() {
+                      if (!l()) return s.S.dispatch(o.CkL.CAROUSEL_NEXT), !1;
+                  }
+              }
+            : null,
+    c =
+        12633 == a.j
+            ? {
+                  binds: ['left'],
+                  comboKeysBindGlobal: !0,
+                  action() {
+                      if (!l()) return s.S.dispatch(o.CkL.CAROUSEL_PREV), !1;
+                  }
+              }
+            : null,
     d = {
         binds: ['right', 'down', 'space'],
         comboKeysBindGlobal: !0,
-        action: () => (r.S.dispatch(l.CkL.MODAL_CAROUSEL_NEXT), !1)
+        action: () => (s.S.dispatch(o.CkL.MODAL_CAROUSEL_NEXT), !1)
     },
     u = {
         binds: ['left', 'up'],
         comboKeysBindGlobal: !0,
-        action: () => (r.S.dispatch(l.CkL.MODAL_CAROUSEL_PREV), !1)
+        action: () => (s.S.dispatch(o.CkL.MODAL_CAROUSEL_PREV), !1)
     },
     m = {
         binds: ['esc'],
         comboKeysBindGlobal: !0,
         action() {
-            if (r.S.hasSubscribers(l.CkL.MODAL_CLOSE)) return r.S.dispatch(l.CkL.MODAL_CLOSE), !1;
+            if (s.S.hasSubscribers(o.CkL.MODAL_CLOSE)) return s.S.dispatch(o.CkL.MODAL_CLOSE), !1;
         }
     };

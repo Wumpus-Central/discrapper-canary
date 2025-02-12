@@ -1,3 +1,5 @@
-a.d(e, { W: () => n });
-var r = a(395848);
-let n = () => r.m.performance && performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+var i = {
+    paymentSourceNoticeCopy: 'paymentSourceNoticeCopy__1048e',
+    divider: 'divider__1048e'
+};
+e.exports = i;
