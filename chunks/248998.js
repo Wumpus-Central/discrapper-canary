@@ -19,13 +19,13 @@ function m(e) {
         p = x && !r,
         E = r ? 'header-primary' : 'text-muted',
         C = r ? 'header-secondary' : 'text-muted',
-        N = a()(n),
-        f = null != _ && r,
-        I = f ? o.P3F : 'div';
+        f = a()(n),
+        N = null != _ && r,
+        I = N ? o.P3F : 'div';
     return (0, i.jsxs)(I, {
-        className: l()(h.container, f && h.actionable),
+        className: l()(h.container, N && h.actionable),
         onClick: () => {
-            f && _();
+            N && _();
         },
         children: [
             (0, i.jsx)('div', {
@@ -44,7 +44,7 @@ function m(e) {
                             variant: 'text-xxs/semibold',
                             color: 'text-muted',
                             className: h.unlocked,
-                            children: (0, c.Y4)(N)
+                            children: (0, c.Y4)(f)
                         }),
                     (0, i.jsx)(o.Text, {
                         variant: 'text-md/medium',

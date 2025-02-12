@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(47120), n(642549), n(518263), n(970173), n(520712), n(268111), n(941497), n(32026), n(480839), n(744285), n(492257), n(873817), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648), n(653041);
+n.d(t, { Z: () => N }), n(47120), n(642549), n(518263), n(970173), n(520712), n(268111), n(941497), n(32026), n(480839), n(744285), n(492257), n(873817), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648), n(653041);
 var i = n(200651),
     s = n(192379),
     l = n(120356),
@@ -16,7 +16,7 @@ var i = n(200651),
     p = n(396386),
     E = n(346537),
     C = n(830318);
-let N = (e) => {
+let f = (e) => {
         let [t, n] = e.split(','),
             i = atob(n),
             s = t.split(';')[0],
@@ -25,10 +25,10 @@ let N = (e) => {
         for (let e = 0; e < i.length; e++) r[e] = i.charCodeAt(e);
         return new Blob([l], { type: s });
     },
-    f = (e) => {
+    N = (e) => {
         let { effect: t, back: n } = e,
             { upsertConfig: l } = (0, g.E)(),
-            f = (0, o.e7)([h.default], () => h.default.getCurrentUser()),
+            N = (0, o.e7)([h.default], () => h.default.getCurrentUser()),
             [I, T] = s.useState(!0),
             S = s.useRef(null),
             [j, v] = s.useState(!1),
@@ -41,7 +41,7 @@ let N = (e) => {
             e.length > 0 &&
                 P(
                     [...e].map((e) => {
-                        let t = N(e.base64),
+                        let t = f(e.base64),
                             n = URL.createObjectURL(t);
                         return (e.src = n), e;
                     })
@@ -63,7 +63,7 @@ let N = (e) => {
                 config: { effects: D }
             });
         }, [D, y]),
-        null == f)
+        null == N)
             ? (0, i.jsx)('div', {})
             : (0, i.jsxs)('div', {
                   className: p.root,
@@ -284,7 +284,7 @@ let N = (e) => {
                                                   className: r()(p.userProfilePreview, p.preview),
                                                   children: [
                                                       (0, i.jsx)(u.Z, {
-                                                          user: f,
+                                                          user: N,
                                                           pendingAvatar: void 0,
                                                           pendingProfileEffectId: null,
                                                           canUsePremiumCustomization: !0,

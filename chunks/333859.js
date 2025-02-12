@@ -1,4 +1,4 @@
-n.d(t, { c: () => f });
+n.d(t, { c: () => N });
 var i = n(200651);
 n(192379);
 var s = n(442837),
@@ -17,10 +17,10 @@ var s = n(442837),
     p = n(474936),
     E = n(388032),
     C = n(491654);
-let N = () => {
+let f = () => {
         (0, d.nJ)(), (0, r.xf)();
     },
-    f = () => {
+    N = () => {
         let { analyticsLocations: e } = (0, c.ZP)(o.Z.USER_SETTINGS),
             t = (0, s.e7)([u.Z], () => u.Z.isUpsellPreview),
             { enabled: n } = m.Z.getCurrentConfig(
@@ -50,7 +50,7 @@ let N = () => {
                                     (0, i.jsx)(l.zxk, {
                                         size: l.zxk.Sizes.MEDIUM,
                                         color: !n && t ? l.zxk.Colors.PRIMARY : l.zxk.Colors.BRAND,
-                                        onClick: () => N(),
+                                        onClick: () => f(),
                                         children: n ? E.intl.string(E.t.SKNnqq) : E.intl.string(E.t['hb/wEx'])
                                     }),
                                     t

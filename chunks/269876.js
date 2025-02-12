@@ -16,8 +16,8 @@ var i = n(200651),
     p = n(455655),
     E = n(106850),
     C = n(801194),
-    N = n(814632);
-let f = (0, m.hQ)();
+    f = n(814632);
+let N = (0, m.hQ)();
 function I() {
     let [e, t] = s.useState(-100),
         [n, l] = s.useState(!1),
@@ -59,7 +59,7 @@ function I() {
             onValueChange: (e) => A(-((100 - e) * 1), T),
             barStyles: { background: d.Z.unsafe_rawColors.GREEN_360.css },
             fillStyles: { background: d.Z.unsafe_rawColors.YELLOW_300.css },
-            'aria-labelledby': f,
+            'aria-labelledby': N,
             children: (0, i.jsxs)('div', {
                 className: r()(p.sliderBar, p.microphone, p.inputSensitivityBar, E.bar),
                 children: [
@@ -83,25 +83,25 @@ function I() {
                     }),
                     (0, i.jsx)(u.R94, {
                         type: u.R94.Types.DESCRIPTION,
-                        className: N.marginBottom8,
+                        className: f.marginBottom8,
                         children: _.intl.string(_.t.W3K5Ii)
                     })
                 ]
             })),
         (0, i.jsxs)(u.xJW, {
             title: _.intl.string(_.t['sqUm+v']),
-            titleId: f,
+            titleId: N,
             className: p.sensitivity,
             children: [
                 j &&
                     (0, i.jsx)(m.FG, {
                         children: (e) =>
                             (0, i.jsxs)('div', {
-                                className: r()(C.horizontal, N.marginBottom4),
+                                className: r()(C.horizontal, f.marginBottom4),
                                 children: [
                                     (0, i.jsx)(u.vwX, {
                                         tag: u.RB0.H3,
-                                        className: N.marginReset,
+                                        className: f.marginReset,
                                         children: (0, i.jsx)('label', {
                                             htmlFor: e,
                                             children: _.intl.string(_.t.I1Zuq6)
@@ -119,7 +119,7 @@ function I() {
                 !v &&
                     (0, i.jsx)(u.R94, {
                         type: u.R94.Types.DESCRIPTION,
-                        className: r()(p.inputDisabledWarning, N.marginBottom8),
+                        className: r()(p.inputDisabledWarning, f.marginBottom8),
                         children: _.intl.format(_.t['O13I+P'], { onEnableClick: () => h.Z.enable(!0) })
                     })
             ]

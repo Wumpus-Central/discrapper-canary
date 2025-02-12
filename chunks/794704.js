@@ -16,8 +16,8 @@ var i = n(200651),
     p = n(13245),
     E = n(825209),
     C = n(615287),
-    N = n(593472),
-    f = n(493773),
+    f = n(593472),
+    N = n(493773),
     I = n(887278),
     T = n(835473),
     S = n(442550),
@@ -279,7 +279,7 @@ function ei(e) {
                         (function () {
                             var e, t;
                             switch (!0) {
-                                case (null == a ? void 0 : a.fullscreenType) !== N.Jx.BORDERLESS_FULLSCREEN:
+                                case (null == a ? void 0 : a.fullscreenType) !== f.Jx.BORDERLESS_FULLSCREEN:
                                     return K.intl.string(K.t.mJmbeH);
                                 case O:
                                     return K.intl.string(K.t.C7bLTU);
@@ -315,7 +315,7 @@ function ei(e) {
                     return [K.intl.string(K.t.ONovPz), null];
             }
         })();
-    return ((0, f.ZP)(() => {
+    return ((0, N.ZP)(() => {
         x.Z.getDetectableGames();
     }),
     null == l)
@@ -714,7 +714,7 @@ function eu(e) {
         })),
         x = (0, m.e7)([M.default], () => M.default.getCurrentUser()),
         _ = (0, O.Z)({ location: 'overlay_user_settings' });
-    (0, f.ZP)(() => {
+    (0, N.ZP)(() => {
         if (F.isPlatformEmbedded) return (0, v.Ky)(), v.P7;
     }),
         (function () {

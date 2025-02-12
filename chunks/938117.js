@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(47120);
+n.d(t, { Z: () => N }), n(47120);
 var i = n(200651),
     s = n(192379),
     l = n(442837),
@@ -16,9 +16,9 @@ var i = n(200651),
     p = n(981631),
     E = n(869783),
     C = n(388032),
-    N = n(870589);
-function f(e) {
-    let { onLearnMore: t, selectedBackgroundOption: f, onSelectBackgroundOption: I, currentDeviceId: T, smallerBackgroundOptions: S, className: j } = e,
+    f = n(870589);
+function N(e) {
+    let { onLearnMore: t, selectedBackgroundOption: N, onSelectBackgroundOption: I, currentDeviceId: T, smallerBackgroundOptions: S, className: j } = e,
         v = (0, l.e7)([o.default], () => o.default.getCurrentUser()),
         [b, A] = s.useState(null),
         O = (0, g.Z)(),
@@ -29,7 +29,7 @@ function f(e) {
         Z = {
             isVideoBackgroundSupported: O,
             onSelectBackgroundOption: I,
-            selectedBackgroundOption: f
+            selectedBackgroundOption: N
         },
         L = s.useRef(Z);
     s.useEffect(() => {
@@ -54,14 +54,14 @@ function f(e) {
               children: [
                   null != b
                       ? (0, i.jsx)(r.kzN, {
-                            className: N.videoBackgroundError,
+                            className: f.videoBackgroundError,
                             children: b
                         })
                       : null,
                   (0, i.jsx)(x.Z, {
                       canUseCustomBackgrounds: R,
                       customBackgroundOptions: P,
-                      selectedOption: f,
+                      selectedOption: N,
                       onSelectOption: k,
                       onUpsellClick: () => {
                           (0, r.ZDy)(async () => {

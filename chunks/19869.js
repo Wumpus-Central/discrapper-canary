@@ -16,8 +16,8 @@ var i = n(200651),
     p = n(970815),
     E = n(720463),
     C = n(536703),
-    N = n(450272),
-    f = n(981631),
+    f = n(450272),
+    N = n(981631),
     I = n(388032),
     T = n(54328),
     S = n(226902);
@@ -44,21 +44,21 @@ function v() {
             }
         },
         { analyticsLocations: v } = (0, c.ZP)(o.Z.PAYMENT_FLOW_TEST_PAGE);
-    return (0, i.jsxs)(N.$0, {
+    return (0, i.jsxs)(f.$0, {
         children: [
             (0, i.jsx)(r.X6q, {
                 variant: 'heading-xl/semibold',
                 children: 'Balance Widget Components'
             }),
-            (0, i.jsx)(N.E_, {
+            (0, i.jsx)(f.E_, {
                 label: 'Balance Widget Menu',
                 children: (0, i.jsx)(_.V9, {
                     ctaText: I.intl.string(I.t['H57f4+']),
-                    ctaOnClick: f.dG4,
+                    ctaOnClick: N.dG4,
                     isCoachmarkEnabled: !1
                 })
             }),
-            (0, i.jsxs)(N.E_, {
+            (0, i.jsxs)(f.E_, {
                 label: 'Open Balance Widget Coachmark in Shop',
                 direction: 'vertical',
                 children: [
@@ -80,7 +80,7 @@ function v() {
                     (0, i.jsx)(l.zx, {
                         onClick: () => {
                             (0, a.xf)(),
-                                (0, u.s1)().location.pathname.includes(f.Z5c.COLLECTIBLES_SHOP) ||
+                                (0, u.s1)().location.pathname.includes(N.Z5c.COLLECTIBLES_SHOP) ||
                                     (0, d.mK)({
                                         openInLayer: !1,
                                         analyticsLocations: v,
@@ -92,7 +92,7 @@ function v() {
                     })
                 ]
             }),
-            (0, i.jsxs)(N.E_, {
+            (0, i.jsxs)(f.E_, {
                 label: 'Balance Widget Pill',
                 children: [
                     (0, i.jsx)(p.A4, {
@@ -114,7 +114,7 @@ function v() {
                     })
                 ]
             }),
-            (0, i.jsxs)(N.E_, {
+            (0, i.jsxs)(f.E_, {
                 label: 'Balance Widget Pill Interactive (click to change mode)',
                 direction: 'vertical',
                 children: [
@@ -139,12 +139,12 @@ function v() {
                     })
                 ]
             }),
-            (0, i.jsx)(N.E_, {
+            (0, i.jsx)(f.E_, {
                 label: 'Balance Widget Card',
                 children: (0, i.jsx)(x.L, {
                     ctaText: I.intl.string(I.t['H57f4+']),
                     linkText: I.intl.string(I.t['7f4H7O']),
-                    ctaOnClick: f.dG4
+                    ctaOnClick: N.dG4
                 })
             })
         ]
@@ -152,13 +152,13 @@ function v() {
 }
 function b() {
     let { resetOnboardingAnnouncementModal: e } = (0, m.Z)();
-    return (0, i.jsxs)(N.$0, {
+    return (0, i.jsxs)(f.$0, {
         children: [
             (0, i.jsx)(r.X6q, {
                 variant: 'heading-xl/semibold',
                 children: 'Onboarding Components'
             }),
-            (0, i.jsx)(N.E_, {
+            (0, i.jsx)(f.E_, {
                 label: 'Announcement Modal',
                 children: (0, i.jsx)(l.zx, {
                     onClick: () => {
@@ -177,7 +177,7 @@ function b() {
                     children: 'Open Announcement Modal'
                 })
             }),
-            (0, i.jsxs)(N.E_, {
+            (0, i.jsxs)(f.E_, {
                 label: 'Announcement Modal [Reset Dismissible Content]',
                 direction: 'vertical',
                 children: [
@@ -193,23 +193,23 @@ function b() {
                     })
                 ]
             }),
-            (0, i.jsxs)(N.E_, {
+            (0, i.jsxs)(f.E_, {
                 label: 'Onboarding Coachmark',
                 direction: 'vertical',
                 children: [
                     (0, i.jsx)(C.mG, {
-                        onClose: f.dG4,
+                        onClose: N.dG4,
                         renderTail: !1
                     }),
                     (0, i.jsxs)('div', {
                         className: S.horizontalContainer,
                         children: [
                             (0, i.jsx)(C.mG, {
-                                onClose: f.dG4,
+                                onClose: N.dG4,
                                 renderTail: !0
                             }),
                             (0, i.jsx)(C.mG, {
-                                onClose: f.dG4,
+                                onClose: N.dG4,
                                 renderTail: !0,
                                 invertTail: !0
                             })
@@ -217,12 +217,12 @@ function b() {
                     })
                 ]
             }),
-            (0, i.jsx)(N.E_, {
+            (0, i.jsx)(f.E_, {
                 label: 'Balance Widget Coachmark',
                 children: (0, i.jsx)(E.E, {
                     earnedOrbsQuantity: 200,
-                    ctaOnClick: f.dG4,
-                    linkOnClick: f.dG4
+                    ctaOnClick: N.dG4,
+                    linkOnClick: N.dG4
                 })
             })
         ]

@@ -16,8 +16,8 @@ var i = n(200651),
     p = n(626135),
     E = n(768581),
     C = n(709054),
-    N = n(647177),
-    f = n(63985),
+    f = n(647177),
+    N = n(63985),
     I = n(678916),
     T = n(981631),
     S = n(190378),
@@ -93,10 +93,10 @@ function R(e) {
     });
 }
 function D(e) {
-    let { option: t, source: s, selected: l = !1, onSelectOption: u, isAnimatedImage: E, isVideo: C, hotspotLocation: f, ...I } = e,
+    let { option: t, source: s, selected: l = !1, onSelectOption: u, isAnimatedImage: E, isVideo: C, hotspotLocation: N, ...I } = e,
         S = (0, d.O)(),
         { analyticsLocations: j } = (0, m.ZP)(h.Z.VIDEO_BACKGROUND_IMAGE_OPTION),
-        O = (0, a.e7)([_.Z], () => null != f && _.Z.hasHotspot(f)),
+        O = (0, a.e7)([_.Z], () => null != N && _.Z.hasHotspot(N)),
         D = C
             ? (0, i.jsx)(g.Z, {
                   className: A.backgroundImageOption,
@@ -107,13 +107,13 @@ function D(e) {
               })
             : (0, i.jsx)(R, {
                   isAnimated: E,
-                  option: (0, N.rD)(t) ? t : void 0,
+                  option: (0, f.rD)(t) ? t : void 0,
                   source: s
               });
     function P() {
-        null != f &&
+        null != N &&
             O &&
-            (x.Kw(f),
+            (x.Kw(N),
             p.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: v.cd.ANIMATED_VIDEO_BACKGROUND_NEW_PRESET,
                 location: S.location,
@@ -275,7 +275,7 @@ function k(e) {
         u = s.useMemo(() => n.sort((e, t) => (null == e.last_used || null == t.last_used ? C.default.compare(t.id, e.id) : new Date(t.last_used).getTime() - new Date(e.last_used).getTime())), [n]),
         g = u.length >= 25,
         { analyticsLocations: x } = (0, m.ZP)(h.Z.VIDEO_BACKGROUND_OPTIONS),
-        _ = Object.values((0, f.Z)()).sort((e, t) => I.E1[e.id] - I.E1[t.id]);
+        _ = Object.values((0, N.Z)()).sort((e, t) => I.E1[e.id] - I.E1[t.id]);
     return (0, i.jsx)(m.Gt, {
         value: x,
         children: (0, i.jsxs)('div', {
@@ -321,7 +321,7 @@ function k(e) {
                                           key: e.id,
                                           option: e,
                                           source: n,
-                                          selected: (0, N.rD)(l) && l.id === e.id,
+                                          selected: (0, f.rD)(l) && l.id === e.id,
                                           onSelectOption: r,
                                           isVideo: (0, E.ay)(e.asset),
                                           isAnimatedImage: (0, E.xR)(e.asset)

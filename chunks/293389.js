@@ -16,8 +16,8 @@ var i = n(200651),
     p = n(283595),
     E = n(626135),
     C = n(251625),
-    N = n(358085),
-    f = n(210887),
+    f = n(358085),
+    N = n(210887),
     I = n(981631),
     T = n(388032),
     S = n(841168),
@@ -25,8 +25,8 @@ var i = n(200651),
     v = n(801194),
     b = n(937551),
     A = n(814632);
-let O = a.ZP.connectStores([f.Z], () => ({ theme: f.Z.theme }))(c.ubH),
-    R = (0, N.isWindows)();
+let O = a.ZP.connectStores([N.Z], () => ({ theme: N.Z.theme }))(c.ubH),
+    R = (0, f.isWindows)();
 function D(e) {
     let { onClose: t } = e,
         n = (0, a.e7)([m.ZP], () => m.ZP.getCandidateGames()),
@@ -82,7 +82,7 @@ function P(e) {
     var t;
     let { rawGame: n, nowPlaying: l = !1, isOverride: g } = e,
         C = (0, a.cj)([m.ZP, _.Z, p.Z], () => (0, m.FZ)(n, [m.ZP, _.Z, p.Z])),
-        [N, f] = s.useState(!1),
+        [f, N] = s.useState(!1),
         [j, A] = s.useState(null !== (t = C.name) && void 0 !== t ? t : '???'),
         O = r()(v.flexCenter, {
             [S.game]: !l,
@@ -94,14 +94,14 @@ function P(e) {
         d.Z.toggleDetection(C);
     }
     function P() {
-        if (N) return;
+        if (f) return;
         let e = null != C.id ? _.Z.getDetectableGame(C.id) : null;
         E.default.track(I.rMx.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
             application_id: null == e ? void 0 : e.id,
             game_name: C.name
         }),
             (0, c.showToast)((0, c.createToast)(T.intl.formatToPlainString(T.t['6klMOj'], { gameName: C.name }), c.ToastType.SUCCESS)),
-            f(!0);
+            N(!0);
     }
     return (0, i.jsxs)('div', {
         className: O,
@@ -166,7 +166,7 @@ function P(e) {
             }),
             g
                 ? null
-                : N
+                : f
                   ? null
                   : (0, i.jsx)('div', {
                         className: r()(v.flexCenter, v.noWrap, v.justifyBetween, S.toggleContainer),

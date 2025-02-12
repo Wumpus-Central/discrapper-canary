@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(47120);
+n.d(t, { Z: () => N }), n(47120);
 var i = n(200651);
 n(192379);
 var s = n(392711),
@@ -17,11 +17,11 @@ var s = n(392711),
     p = n(65154),
     E = n(388032),
     C = n(207972),
-    N = n(814632);
-function f() {
+    f = n(814632);
+function N() {
     let e, t;
     let { analyticsLocations: s } = (0, d.ZP)(),
-        f = (0, r.e7)([x.Z], () => x.Z.theme),
+        N = (0, r.e7)([x.Z], () => x.Z.theme),
         {
             canSetInputDevice: I,
             canSetOutputDevice: T,
@@ -38,13 +38,13 @@ function f() {
     I ||
         (e = (0, i.jsx)(o.R94, {
             type: o.R94.Types.DESCRIPTION,
-            className: N.marginTop8,
+            className: f.marginTop8,
             children: E.intl.format(E.t['1iK6UV'], { onDownloadClick: () => (0, _.y)('Help Text Input Devices') })
         })),
         T ||
             (t = (0, i.jsx)(o.R94, {
                 type: o.R94.Types.DESCRIPTION,
-                className: N.marginTop8,
+                className: f.marginTop8,
                 children: E.intl.format(E.t.Ow0dbG, { onDownloadClick: () => (0, _.y)('Help Text Output Devices') })
             }));
     let A = l()(v).values().first(),
@@ -55,7 +55,7 @@ function f() {
         let t,
             { label: s, value: l } = e;
         if (m.Z.isCertified(l)) {
-            let e = (0, a.ap)(f) ? n(561259) : n(887695);
+            let e = (0, a.ap)(N) ? n(561259) : n(887695);
             t = (0, i.jsx)('img', {
                 src: e,
                 alt: 'Certified',

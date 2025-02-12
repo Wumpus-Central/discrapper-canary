@@ -21,8 +21,8 @@ var i,
     p = n(906732),
     E = n(211242),
     C = n(600164),
-    N = n(509545),
-    f = n(626135),
+    f = n(509545),
+    N = n(626135),
     I = n(122289),
     T = n(63063),
     S = n(74538),
@@ -65,8 +65,8 @@ function H(e) {
     let { premiumSubscription: n, premiumType: i, setStep: r, onClose: a, whatYouLoseExperienceEnabled: o, analyticsLocation: c } = e,
         d = (0, E.Q)(),
         [u, g] = l.useState(!1),
-        [_, N] = l.useState(!1),
-        f = (0, x.ZP)(),
+        [_, f] = l.useState(!1),
+        N = (0, x.ZP)(),
         { analyticsLocations: I } = (0, p.ZP)(),
         j = null;
     switch (n.status) {
@@ -123,7 +123,7 @@ function H(e) {
                       disabled: u,
                       onClick: async () => {
                           await Y({
-                              setHasError: N,
+                              setHasError: f,
                               onClose: a,
                               premiumSubscription: n,
                               setIsCancelling: g,
@@ -135,7 +135,7 @@ function H(e) {
                   }),
         b = (0, s.jsx)(m.zxk, {
             look: m.zxk.Looks.LINK,
-            color: (0, h.ap)(f) ? m.zxk.Colors.PRIMARY : m.zxk.Colors.WHITE,
+            color: (0, h.ap)(N) ? m.zxk.Colors.PRIMARY : m.zxk.Colors.WHITE,
             onClick: a,
             children: o ? G.intl.string(G.t.h9tkAA) : G.intl.string(G.t['ETE/oK'])
         });
@@ -188,7 +188,7 @@ function W(e) {
             analyticsLocations: l,
             analyticsLocation: _.Z.CANCEL_INVOICE_PREVIEW
         }),
-        a = (0, u.e7)([N.Z], () => N.Z.get(i.planId));
+        a = (0, u.e7)([f.Z], () => f.Z.get(i.planId));
     if (null == r || null == a) return (0, s.jsx)(m.$jN, { className: F.loading });
     let { intervalType: o, intervalCount: c } = S.ZP.getIntervalForInvoice(r);
     return (0, s.jsxs)('div', {
@@ -295,7 +295,7 @@ function J(e) {
     let n,
         { premiumSubscription: i, transitionState: r, onClose: a, analyticsLocations: c, analyticsLocation: u, initialStep: g } = e,
         E = l.useRef(new o.qA()),
-        [C, N] = l.useState(null),
+        [C, f] = l.useState(null),
         T = (0, A.yQ)(),
         j = (null == T ? void 0 : T.showCard) === !0,
         v = (null == T ? void 0 : T.tenureRewardType) === w.nW.AVATAR_DECO,
@@ -304,7 +304,7 @@ function J(e) {
     d()(null != Z, 'Should not be cancelling Nitro without premiumType');
     let L = (0, x.ZP)();
     l.useEffect(() => {
-        f.default.track(U.rMx.CANCELLATION_FLOW_STARTED, X(i));
+        N.default.track(U.rMx.CANCELLATION_FLOW_STARTED, X(i));
     }, [i]);
     let k = Z === V.p9.TIER_0 || Z === V.p9.TIER_1 || Z === V.p9.TIER_2;
     null == g && (g = k ? 1 : 2);
@@ -315,7 +315,7 @@ function J(e) {
                 [o] = l.useState(Date.now()),
                 c = l.useCallback(
                     (e) => {
-                        f.default.track(U.rMx.CANCELLATION_FLOW_STEP, {
+                        N.default.track(U.rMx.CANCELLATION_FLOW_STEP, {
                             from_step: q[i],
                             to_step: q[e],
                             step_duration_ms: Date.now() - r,
@@ -334,7 +334,7 @@ function J(e) {
     (0, B.w)(i, a, !1);
     let et = (e) => {
             a(),
-                f.default.track(U.rMx.CANCELLATION_FLOW_STEP, {
+                N.default.track(U.rMx.CANCELLATION_FLOW_STEP, {
                     from_step: q[e],
                     to_step: null,
                     step_duration_ms: Date.now() - J,
@@ -486,7 +486,7 @@ function J(e) {
         value: z,
         children: [
             (0, s.jsx)(o.O_, {
-                ref: N,
+                ref: f,
                 className: F.confettiCanvas,
                 environment: E.current
             }),

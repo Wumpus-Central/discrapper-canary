@@ -17,14 +17,14 @@ var i = n(200651),
 function E(e) {
     let { user: t, showOverlay: n, children: E } = e,
         C = (0, r.ZP)(),
-        { analyticsLocations: N } = (0, o.ZP)(a.Z.PREMIUM_UPSELL_OVERLAY);
+        { analyticsLocations: f } = (0, o.ZP)(a.Z.PREMIUM_UPSELL_OVERLAY);
     return (s.useEffect(() => {
         n &&
             d.default.track(h.rMx.PREMIUM_UPSELL_VIEWED, {
-                location_stack: N,
+                location_stack: f,
                 type: m.cd.PREMIUM_GUILD_MEMBER_PROFILE_UPSELL_INLINE
             });
-    }, [n, N]),
+    }, [n, f]),
     n)
         ? (0, i.jsxs)('div', {
               className: x.upsellOverlayContainer,

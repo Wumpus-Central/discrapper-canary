@@ -14,21 +14,21 @@ var i = n(200651),
     x = n(388032),
     _ = n(625285);
 function p(e) {
-    let { user: t, guild: n, className: l, sectionTitle: h, forcedDivider: p = !1, withTutorial: C = !1, isTryItOutFlow: N = !1 } = e,
-        { analyticsLocations: f } = (0, o.ZP)(),
+    let { user: t, guild: n, className: l, sectionTitle: h, forcedDivider: p = !1, withTutorial: C = !1, isTryItOutFlow: f = !1 } = e,
+        { analyticsLocations: N } = (0, o.ZP)(),
         I = null != n,
         { userAvatarDecoration: T, guildAvatarDecoration: S, pendingAvatarDecoration: j, pendingErrors: v } = (0, m.$U)(t, n),
         b = (0, u.Z)('enable_avatar_decoration_uploads'),
         A = s.useCallback(
             () =>
                 (0, d.ps)({
-                    analyticsLocations: f,
-                    isTryItOutFlow: N,
+                    analyticsLocations: N,
+                    isTryItOutFlow: f,
                     guild: n
                 }),
-            [f, N, n]
+            [N, f, n]
         ),
-        O = N || void 0 !== j ? null != j : (I ? S : T) != null,
+        O = f || void 0 !== j ? null != j : (I ? S : T) != null,
         R = C ? a.gtL : a.zxk;
     return (0, i.jsxs)(g.Z, {
         className: l,

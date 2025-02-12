@@ -1,6 +1,6 @@
 n.d(t, {
     Sz: () => I,
-    of: () => f
+    of: () => N
 }),
     n(653041),
     n(47120);
@@ -21,7 +21,7 @@ var i = n(200651),
     p = n(981631),
     E = n(388032),
     C = n(876457);
-async function N(e) {
+async function f(e) {
     let { premiumSubscription: t, pauseDuration: n, onClose: i, setHasError: s, setIsCancelling: l, analyticsLocations: r, analyticsLocation: a } = e;
     try {
         l(!0), s(!1), await (0, d.Mg)(t, { pauseDuration: n }, r, a), i();
@@ -29,7 +29,7 @@ async function N(e) {
         s(!0), l(!1);
     }
 }
-function f(e) {
+function N(e) {
     let { premiumType: t, onClose: n, pauseDuration: l, setPauseDuration: r, footer: o, premiumSubscription: d } = e,
         h = s.useCallback(
             (e) => {
@@ -39,7 +39,7 @@ function f(e) {
             [r]
         ),
         m = d.status === p.O0b.PAUSED ? E.intl.string(E.t.Lp9WoK) : E.intl.string(E.t.eSR83d),
-        N = (function (e) {
+        f = (function (e) {
             let t = e.status === p.O0b.PAUSED ? E.t.o3upfX : E.t.dBXZEh,
                 { durations: n, currentDaysPaused: i } = (0, x.AT)(e),
                 s = [];
@@ -64,7 +64,7 @@ function f(e) {
         })(d);
     return (
         (0, u.ZP)(() => {
-            !(N.length < 1) && r(N[0].value);
+            !(f.length < 1) && r(f[0].value);
         }),
         (0, i.jsxs)(i.Fragment, {
             children: [
@@ -93,7 +93,7 @@ function f(e) {
                 (0, i.jsx)(c.hzk, {
                     className: C.body,
                     children: (0, i.jsx)(c.FXm, {
-                        options: N,
+                        options: f,
                         onChange: h,
                         value: l
                     })
@@ -109,7 +109,7 @@ function f(e) {
 function I(e) {
     let { premiumSubscription: t, premiumType: n, onClose: l, pauseDuration: a, analyticsLocation: d } = e,
         [u, x] = s.useState(!1),
-        { analyticsLocations: f } = (0, m.ZP)(),
+        { analyticsLocations: N } = (0, m.ZP)(),
         [I, T] = s.useState(!1),
         S = (0, h.ZP)(),
         j = null,
@@ -176,13 +176,13 @@ function I(e) {
                                 color: c.zxk.Colors.RED,
                                 disabled: I || null == a,
                                 onClick: async () => {
-                                    await N({
+                                    await f({
                                         premiumSubscription: t,
                                         pauseDuration: a,
                                         setIsCancelling: T,
                                         setHasError: x,
                                         onClose: l,
-                                        analyticsLocations: f,
+                                        analyticsLocations: N,
                                         analyticsLocation: d
                                     });
                                 },

@@ -16,8 +16,8 @@ var i = n(200651),
     p = n(74538),
     E = n(199778),
     C = n(296533),
-    N = n(901750),
-    f = n(112863),
+    f = n(901750),
+    N = n(112863),
     I = n(701157),
     T = n(912152),
     S = n(615603),
@@ -45,7 +45,7 @@ function b(e) {
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(a.oQ, { className: v.blockedPaymentsWarning }),
-            (0, i.jsx)(N.Z, {
+            (0, i.jsx)(f.Z, {
                 hasGuildBoostSlots: y,
                 hasAppliedGuildBoosts: L,
                 hasBoostPerk: G,
@@ -64,7 +64,7 @@ function b(e) {
                 pillClassName: v.FPPill,
                 isInReverseTrial: V
             }),
-            !P && (0, i.jsx)(f.Z, {}),
+            !P && (0, i.jsx)(N.Z, {}),
             (null == t ? void 0 : t.isPaused) && M === j.a$.NONE
                 ? (0, i.jsx)(C.r, {
                       appliedGuildBoosts: B,

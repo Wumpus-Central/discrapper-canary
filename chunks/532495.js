@@ -17,8 +17,8 @@ var s = n(512722),
     p = n(872736),
     E = n(134795),
     C = n(610966),
-    N = n(513901),
-    f = n(451392),
+    f = n(513901),
+    N = n(451392),
     I = n(906364),
     T = n(350327),
     S = n(621853),
@@ -111,7 +111,7 @@ function D() {
                 'decoration'
             ),
             (0, i.jsx)(
-                N.Z,
+                f.Z,
                 {
                     user: L,
                     sectionTitle: O.intl.string(O.t.wR5wOj)
@@ -131,7 +131,7 @@ function D() {
                               },
                               'banner'
                           ),
-                          (0, i.jsx)(f.Z, {
+                          (0, i.jsx)(N.Z, {
                               user: L,
                               pendingAvatar: B,
                               pendingColors: F,

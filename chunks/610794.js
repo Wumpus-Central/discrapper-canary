@@ -16,14 +16,14 @@ var i = n(200651),
     p = n(981631),
     E = n(856651),
     C = n(388032),
-    N = n(849179);
-function f(e) {
+    f = n(849179);
+function N(e) {
     var t;
     let { account: n, refreshed: r, handleRefresh: o } = e,
         [c, d] = s.useState(!1),
         h = null !== (t = n.metadata) && void 0 !== t ? t : {},
         x = (0, l.e7)([g.default], () => g.default.locale),
-        f = s.useCallback(async () => {
+        N = s.useCallback(async () => {
             d(!0);
             try {
                 await o(n);
@@ -34,22 +34,22 @@ function f(e) {
         I = null;
     switch (n.type) {
         case p.ABu.REDDIT:
-            I = (0, m.oP)(h, N.metadataItem);
+            I = (0, m.oP)(h, f.metadataItem);
             break;
         case p.ABu.STEAM:
-            I = (0, m.Dq)(h, N.metadataItem);
+            I = (0, m.Dq)(h, f.metadataItem);
             break;
         case p.ABu.TWITTER:
-            I = (0, m.rJ)(h, N.metadataItem);
+            I = (0, m.rJ)(h, f.metadataItem);
             break;
         case p.ABu.EBAY:
-            I = (0, m.ul)(h, N.metadataItem);
+            I = (0, m.ul)(h, f.metadataItem);
             break;
         case p.ABu.PAYPAL:
-            I = (0, m.li)(h, N.metadataItem);
+            I = (0, m.li)(h, f.metadataItem);
             break;
         case p.ABu.TIKTOK:
-            I = (0, m.hf)(h, N.metadataItem);
+            I = (0, m.hf)(h, f.metadataItem);
     }
     let T = (0, u.FI)(h[E.PC.CREATED_AT], x),
         S = null,
@@ -69,17 +69,17 @@ function f(e) {
             (j = C.intl.string(C.t['LVh3//']))),
         r && (j = C.intl.string(C.t.i4jeWV)),
         (0, i.jsxs)('div', {
-            className: N.metadataContainer,
+            className: f.metadataContainer,
             children: [
                 S,
                 null == I
                     ? void 0
                     : I.map((e, t) =>
                           (0, i.jsxs)(i.Fragment, {
-                              children: [e, t < I.length - 1 ? (0, i.jsx)('span', { className: N.dot }) : null]
+                              children: [e, t < I.length - 1 ? (0, i.jsx)('span', { className: f.dot }) : null]
                           })
                       ),
-                null != I && I.length > 0 && null != T ? (0, i.jsx)('div', { className: N.dot }) : null,
+                null != I && I.length > 0 && null != T ? (0, i.jsx)('div', { className: f.dot }) : null,
                 null != T
                     ? (0, i.jsx)(
                           a.Text,
@@ -94,14 +94,14 @@ function f(e) {
                 (0, i.jsx)(
                     a.zxk,
                     {
-                        className: N.metadataRefreshButton,
+                        className: f.metadataRefreshButton,
                         look: a.zxk.Looks.OUTLINED,
                         color: r ? a.zxk.Colors.GREEN : a.zxk.Colors.PRIMARY,
                         size: a.zxk.Sizes.MIN,
                         submitting: c,
                         disabled: r,
                         'aria-label': C.intl.string(C.t.sCkLYG),
-                        onClick: r ? void 0 : f,
+                        onClick: r ? void 0 : N,
                         children: j
                     },
                     'refresh-button'
@@ -123,18 +123,18 @@ function I(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)('div', {
-                className: N.activityRow,
+                className: f.activityRow,
                 children: [
                     (0, i.jsx)('img', {
                         alt: p.name,
-                        className: N.connectionIcon,
+                        className: f.connectionIcon,
                         src: (0, r.wj)(_) ? p.icon.darkSVG : p.icon.lightSVG
                     }),
                     (0, i.jsxs)('div', {
-                        className: N.activitySettings,
+                        className: f.activitySettings,
                         children: [
                             (0, i.jsxs)(a.j7V, {
-                                className: N.visibilitySwitch,
+                                className: f.visibilitySwitch,
                                 hideBorder: !0,
                                 value: 1 === u,
                                 onChange: function (e) {
@@ -157,7 +157,7 @@ function I(e) {
                                         children: p.name
                                     }),
                                     E &&
-                                        (0, i.jsx)(f, {
+                                        (0, i.jsx)(N, {
                                             account: t,
                                             refreshed: l.includes(t.id),
                                             handleRefresh: n
@@ -166,7 +166,7 @@ function I(e) {
                             }),
                             E &&
                                 (0, i.jsx)(a.j7V, {
-                                    className: N.additionalDetailsSwitch,
+                                    className: f.additionalDetailsSwitch,
                                     hideBorder: !0,
                                     disabled: 1 !== u || null == t.metadata,
                                     value: 1 === g,
@@ -193,7 +193,7 @@ function I(e) {
                     })
                 ]
             }),
-            (0, i.jsx)('div', { className: N.divider })
+            (0, i.jsx)('div', { className: f.divider })
         ]
     });
 }
@@ -211,11 +211,11 @@ function T() {
     return 0 === t.length
         ? null
         : (0, i.jsxs)(a.hjN, {
-              className: N.container,
+              className: f.container,
               children: [
                   (0, i.jsx)(a.vwX, {
                       tag: a.RB0.H5,
-                      className: N.title,
+                      className: f.title,
                       children: C.intl.string(C.t.aw0GVV)
                   }),
                   t.map((e) =>

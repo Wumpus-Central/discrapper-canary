@@ -28,7 +28,7 @@ function C(e, t, n) {
         e
     );
 }
-class N extends (i = l.PureComponent) {
+class f extends (i = l.PureComponent) {
     render() {
         let { paymentSource: e, isDefault: t, isEditing: n, index: i, hideDivider: l, isForSubscription: r, locale: a, removing: c, submitting: d, onSubmit: h, onCancel: m, onDelete: _ } = this.props;
         return n
@@ -81,12 +81,12 @@ class N extends (i = l.PureComponent) {
             });
     }
 }
-C(N, 'defaultProps', {
+C(f, 'defaultProps', {
     isEditing: !1,
     hideDivider: !1,
     onEditClick: () => {}
 });
-class f extends l.PureComponent {
+class N extends l.PureComponent {
     renderFooter() {
         let { paymentSources: e } = this.props;
         return (0, s.jsxs)(u.Z, {
@@ -123,7 +123,7 @@ class f extends l.PureComponent {
             h = c.findIndex((e) => e.id === d),
             g = c.map((t, a) =>
                 (0, s.jsx)(
-                    N,
+                    f,
                     {
                         locale: n,
                         paymentSource: t,
@@ -215,4 +215,4 @@ class f extends l.PureComponent {
             });
     }
 }
-let I = f;
+let I = N;

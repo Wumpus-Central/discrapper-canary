@@ -167,17 +167,17 @@ function W(e) {
                 children: y
                     ? (0, i.jsx)(c.zxk, {
                           onClick: function (e) {
-                              e.stopPropagation(),
-                                  null != S &&
-                                      (0, f.Z)({
-                                          applicationId: S.applicationId,
-                                          activityChannelId: p.id,
-                                          locationObject: b.location,
-                                          analyticsLocations: C,
-                                          componentId: w,
-                                          isContextlessActivity: S.location.kind === o.X.CONTEXTLESS,
-                                          joinSecret: S.compositeInstanceId
-                                      });
+                              if ((e.stopPropagation(), null == S)) return;
+                              let t = S.location.kind === o.X.CONTEXTLESS;
+                              (0, f.Z)({
+                                  applicationId: S.applicationId,
+                                  activityChannelId: p.id,
+                                  locationObject: b.location,
+                                  analyticsLocations: C,
+                                  componentId: w,
+                                  isContextlessActivity: t,
+                                  joinSecret: t ? S.compositeInstanceId : void 0
+                              });
                           },
                           submitting: L,
                           size: V(E),

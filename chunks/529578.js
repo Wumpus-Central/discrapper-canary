@@ -103,7 +103,7 @@ function p() {
                                 variant: 'text-sm/semibold',
                                 children: 'Memberlist'
                             }),
-                            (0, i.jsx)(f, { namePlate: a }),
+                            (0, i.jsx)(N, { namePlate: a }),
                             (0, i.jsx)(o.Text, {
                                 variant: 'text-sm/semibold',
                                 children: 'DMs'
@@ -145,7 +145,7 @@ function p() {
                                     )
                                 )
                             }),
-                            (0, i.jsx)(N, {
+                            (0, i.jsx)(f, {
                                 label: 'border color',
                                 onChange: (e) =>
                                     c((t) =>
@@ -227,7 +227,7 @@ function C(e) {
         ]
     });
 }
-function N(e) {
+function f(e) {
     let { label: t, onChange: n } = e;
     return (0, i.jsxs)('div', {
         className: _.hexInput,
@@ -246,7 +246,7 @@ function N(e) {
         ]
     });
 }
-function f(e) {
+function N(e) {
     let { namePlate: t } = e,
         n = (0, a.e7)([h.default], () => h.default.getCurrentUser());
     return (0, i.jsx)('div', {

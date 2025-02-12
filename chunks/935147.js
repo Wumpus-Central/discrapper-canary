@@ -16,8 +16,8 @@ var i = n(200651),
     p = n(639119),
     E = n(211712),
     C = n(629654),
-    N = n(53691),
-    f = n(165583),
+    f = n(53691),
+    N = n(165583),
     I = n(267717),
     T = n(350327),
     S = n(996073),
@@ -194,7 +194,7 @@ function U(e) {
                           })
                       }),
                       !el &&
-                          (0, i.jsx)(N.p, {
+                          (0, i.jsx)(f.p, {
                               onSubscribeModalClose: es,
                               className: w.floatingUpsell,
                               showUpsell: !0,
@@ -207,7 +207,7 @@ function U(e) {
                           (0, i.jsxs)('div', {
                               children: [
                                   (0, i.jsx)('div', { className: w.premiumTier2Divider }),
-                                  (0, i.jsx)(f.ZP, {
+                                  (0, i.jsx)(N.ZP, {
                                       type: B.cd.CUSTOM_PROFILE_TRY_OUT_UPSELL,
                                       subscriptionTier: B.Si.TIER_2
                                   })

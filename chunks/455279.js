@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => f,
+    Z: () => N,
     c: () => E
 }),
     n(47120);
@@ -35,7 +35,7 @@ let C = {
     DEFAULT: _.__invalid_default,
     RECORDING: _.recording
 };
-class N extends l.PureComponent {
+class f extends l.PureComponent {
     componentWillUnmount() {
         null != this._unregisterNativeRecorder && this._unregisterNativeRecorder();
     }
@@ -136,4 +136,4 @@ class N extends l.PureComponent {
             });
     }
 }
-let f = N;
+let N = f;

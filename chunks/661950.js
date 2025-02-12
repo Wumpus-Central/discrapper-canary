@@ -17,8 +17,8 @@ var s = n(442837),
     p = n(716210),
     E = n(459674),
     C = n(803567),
-    N = n(269876),
-    f = n(976758),
+    f = n(269876),
+    N = n(976758),
     I = n(726985),
     T = n(981631),
     S = n(65154),
@@ -39,7 +39,7 @@ function b() {
                             }),
                             (0, i.jsx)(r.F, {
                                 setting: I.s6.VOICE_AND_VIDEO_VOLUME_CONTROLS,
-                                children: (0, i.jsx)(f.Z, {})
+                                children: (0, i.jsx)(N.Z, {})
                             }),
                             (0, i.jsxs)(r.F, {
                                 setting: I.s6.VOICE_AND_VIDEO_MIC_TEST,
@@ -61,7 +61,7 @@ function b() {
                             }),
                             (0, i.jsx)(r.F, {
                                 setting: I.s6.VOICE_AND_VIDEO_SENSITIVITY,
-                                children: e === S.pM.VOICE_ACTIVITY && (0, i.jsx)(N.Z, {})
+                                children: e === S.pM.VOICE_ACTIVITY && (0, i.jsx)(f.Z, {})
                             })
                         ]
                     })

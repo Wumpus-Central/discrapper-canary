@@ -20,8 +20,8 @@ function x(e) {
         p = null == x ? void 0 : x.applicationId,
         E = (0, r.e7)([a.Z], () => (null != p ? a.Z.getApplication(p) : null), [p]),
         C = null === (t = e.metadata) || void 0 === t ? void 0 : t.application_subscription_guild_id,
-        N = (0, r.e7)([o.Z], () => o.Z.getGuild(C), [C]),
-        [f, I] = i.useState(!1),
+        f = (0, r.e7)([o.Z], () => o.Z.getGuild(C), [C]),
+        [N, I] = i.useState(!1),
         T =
             null == s
                 ? void 0
@@ -49,8 +49,8 @@ function x(e) {
                   });
     return {
         application: E,
-        guild: N,
-        expanded: f,
+        guild: f,
+        expanded: N,
         handleToggleExpanded: () => I((e) => !e),
         listing: s,
         storeListing: x,
