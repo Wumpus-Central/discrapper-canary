@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => Z });
 var i = n(200651),
     l = n(192379),
     r = n(120356),
@@ -22,13 +22,13 @@ var i = n(200651),
     T = n(687683),
     S = n(981631),
     A = n(388032),
-    Z = n(356439);
-function b() {
+    b = n(356439);
+function Z() {
     let e = l.useRef(null),
         t = (0, I.Z)(),
         n = (0, C.w)(),
         r = (0, _.V)(),
-        b = (0, d.N)(),
+        Z = (0, d.N)(),
         x = (0, h.Z)('message-requests-spam-list'),
         { channelId: L } = (0, E._)(),
         y = l.useCallback(() => {
@@ -53,8 +53,8 @@ function b() {
                     {
                         index: s,
                         className: a()({
-                            [Z.selected]: null != L && L === d,
-                            [Z.siblingSelected]: null != L && L === c
+                            [b.selected]: null != L && L === d,
+                            [b.siblingSelected]: null != L && L === c
                         }),
                         channel: o.channel,
                         user: o.user,
@@ -70,14 +70,14 @@ function b() {
                 (0, i.jsxs)(
                     m.Z,
                     {
-                        className: Z.sectionTitle,
+                        className: b.sectionTitle,
                         children: [
                             A.intl.format(A.t.C79Edn, { count: n }),
-                            b && n > 0
+                            Z && n > 0
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           (0, i.jsx)(c.Text, {
-                                              className: Z.titleDivider,
+                                              className: b.titleDivider,
                                               variant: 'eyebrow',
                                               color: 'header-secondary',
                                               tag: 'span',
@@ -88,7 +88,7 @@ function b() {
                                               look: c.iLD.LINK,
                                               color: c.Ttl.LINK,
                                               size: c.PhG.SMALL,
-                                              className: Z.clearAllButton,
+                                              className: b.clearAllButton,
                                               'aria-label': A.intl.string(A.t.p6t7RE),
                                               children: A.intl.string(A.t.p6t7RE)
                                           })
@@ -99,7 +99,7 @@ function b() {
                     },
                     'message-requests-spam-title'
                 ),
-            [n, O, b]
+            [n, O, Z]
         );
     return 0 === t.length
         ? (0, i.jsx)(N.Z, { section: T.pS.SPAM })
@@ -111,7 +111,7 @@ function b() {
                       return (0, i.jsx)(
                           c.aVo,
                           {
-                              className: Z.list,
+                              className: b.list,
                               innerRole: r,
                               innerAriaLabel: A.intl.string(A.t.e7GWjY),
                               ref: (t) => {

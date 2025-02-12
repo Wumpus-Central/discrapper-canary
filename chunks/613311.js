@@ -22,8 +22,8 @@ var i = n(200651),
     T = n(606081),
     S = n(252618),
     A = n(100159),
-    Z = n(646288),
-    b = n(984370),
+    b = n(646288),
+    Z = n(984370),
     x = n(706454),
     L = n(210887),
     y = n(430824),
@@ -33,8 +33,8 @@ var i = n(200651),
     j = n(580130),
     D = n(55563),
     w = n(551428),
-    M = n(695103),
-    k = n(451478),
+    k = n(695103),
+    M = n(451478),
     U = n(626135),
     G = n(572004),
     B = n(630388),
@@ -134,24 +134,24 @@ class ec extends l.PureComponent {
     }
     renderHeader(e, t) {
         let { channel: n, isAuthenticated: r } = this.props;
-        return (0, i.jsx)(b.Z, {
+        return (0, i.jsx)(Z.Z, {
             isAuthenticated: r,
             toolbar: this.renderHeaderToolbar(e, t),
             children:
                 null != n
                     ? (0, i.jsxs)(l.Fragment, {
                           children: [
-                              (0, i.jsx)(b.Z.Icon, {
+                              (0, i.jsx)(Z.Z.Icon, {
                                   icon: d.lO_,
                                   'aria-label': ea.intl.string(ea.t['P1/Erq'])
                               }),
-                              (0, i.jsx)(b.Z.Title, { children: n.name })
+                              (0, i.jsx)(Z.Z.Title, { children: n.name })
                           ]
                       })
                     : null != t && t.premium
                       ? (0, i.jsxs)(l.Fragment, {
                             children: [
-                                (0, i.jsx)(b.Z.Icon, {
+                                (0, i.jsx)(Z.Z.Icon, {
                                     icon: d.SrA,
                                     'aria-label': ea.intl.string(ea.t.Ipxkoq)
                                 }),
@@ -161,11 +161,11 @@ class ec extends l.PureComponent {
                       : null != t
                         ? (0, i.jsxs)(l.Fragment, {
                               children: [
-                                  (0, i.jsx)(b.Z.Icon, {
+                                  (0, i.jsx)(Z.Z.Icon, {
                                       icon: d.lO_,
                                       'aria-label': ea.intl.string(ea.t['P1/Erq'])
                                   }),
-                                  (0, i.jsx)(b.Z.Title, { children: t.name })
+                                  (0, i.jsx)(Z.Z.Title, { children: t.name })
                               ]
                           })
                         : null
@@ -513,7 +513,7 @@ class ec extends l.PureComponent {
                             children: (0, i.jsxs)('div', {
                                 className: a()(es.headerPurchase, { [es.active]: o }),
                                 children: [
-                                    null != t ? (0, Z.Z)(t) : null,
+                                    null != t ? (0, b.Z)(t) : null,
                                     null != e && null != t ? (0, i.jsx)('div', { children: 'deprecated!' }) : null,
                                     (0, i.jsx)(Q.Z, {
                                         messageStyle: Q.G.SHORT,
@@ -556,7 +556,7 @@ class ec extends l.PureComponent {
 }
 let ed = (0, f.Z)(
     (0, E.Z)(
-        s.ZP.connectStores([R.Z, L.Z, x.default, k.Z, w.Z, D.Z, M.Z, I.Z, C.Z, O.Z, y.Z, j.Z], (e) => {
+        s.ZP.connectStores([R.Z, L.Z, x.default, M.Z, w.Z, D.Z, k.Z, I.Z, C.Z, O.Z, y.Z, j.Z], (e) => {
             let t,
                 n,
                 i,
@@ -569,7 +569,7 @@ let ed = (0, f.Z)(
                 null != (i = C.Z.getApplication(r)) && (t = i.destinationSkuId), (n = null != t ? D.Z.get(t) : null);
             }
             (null == n ? void 0 : n.flags) != null && (0, B.yE)(n.flags, el.l4R.STICKER_PACK) && (n = null);
-            let c = null != r && (M.Z.inTestModeForApplication(r) || I.Z.inDevModeForApplication(r));
+            let c = null != r && (k.Z.inTestModeForApplication(r) || I.Z.inDevModeForApplication(r));
             return {
                 skuId: t,
                 application: null != r ? C.Z.getApplication(r) : null,
@@ -577,7 +577,7 @@ let ed = (0, f.Z)(
                 didFetchEntitlements: null != r && j.Z.applicationIdsFetched.has(r),
                 shouldFetchStatistics: s && null != r && O.Z.shouldFetchStatisticsForApplication(r),
                 sku: n,
-                isFocused: k.Z.isFocused(),
+                isFocused: M.Z.isFocused(),
                 storeListing: w.Z.getStoreListing({
                     storeListingId: a,
                     skuId: t,

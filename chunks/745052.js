@@ -22,8 +22,8 @@ var i = n(200651),
     T = n(605236),
     S = n(243778),
     A = n(984370),
-    Z = n(797614),
-    b = n(359110),
+    b = n(797614),
+    Z = n(359110),
     x = n(6025),
     L = n(897473),
     y = n(108427),
@@ -33,8 +33,8 @@ var i = n(200651),
     j = n(592125),
     D = n(819640),
     w = n(626135),
-    M = n(647090),
-    k = n(385956),
+    k = n(647090),
+    M = n(385956),
     U = n(610697),
     G = n(26373),
     B = n(486622),
@@ -127,7 +127,7 @@ function en() {
                 ),
             [t, _, c]
         );
-    return (n.length !== t && Z.Z.increment({ name: o.V.MESSAGE_REQUEST_COUNT_DRIFT }), 0 === n.length)
+    return (n.length !== t && b.Z.increment({ name: o.V.MESSAGE_REQUEST_COUNT_DRIFT }), 0 === n.length)
         ? (0, i.jsx)(W.Z, { section: q.pS.REQUESTS })
         : (0, i.jsx)(s.bG, {
               navigator: m,
@@ -240,7 +240,7 @@ let es = (0, p.Z)(function (e) {
     let { width: t } = e,
         n = (0, H.q)();
     (0, _.ZP)(() => {
-        h.Y(X.Z5c.MESSAGE_REQUESTS), (0, y.e)('message-requests'), w.default.track(X.rMx.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }), Z.Z.increment({ name: o.V.MESSAGE_REQUEST_VIEW });
+        h.Y(X.Z5c.MESSAGE_REQUESTS), (0, y.e)('message-requests'), w.default.track(X.rMx.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }), b.Z.increment({ name: o.V.MESSAGE_REQUEST_VIEW });
     });
     let r = (0, c.e7)([O.Z], () => O.Z.theme),
         s = (0, z.w)(),
@@ -251,10 +251,10 @@ let es = (0, p.Z)(function (e) {
         }),
         g = null == p ? void 0 : p.channelId,
         f = null != p,
-        E = (0, k.T)(g),
-        I = (0, M.J)(g);
+        E = (0, M.T)(g),
+        I = (0, k.J)(g);
     l.useEffect(() => {
-        null != g && !E && I && f && ((0, b.Kh)(g), x.Z.closeChannelSidebar(R.uZ));
+        null != g && !E && I && f && ((0, Z.Kh)(g), x.Z.closeChannelSidebar(R.uZ));
     }, [g, I, f, E]);
     let [C, N] = l.useState(q.pS.REQUESTS),
         T = (e) => {

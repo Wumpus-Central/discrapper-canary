@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(47120);
+n.d(t, { Z: () => b }), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(442837),
@@ -56,19 +56,19 @@ function A(e) {
               ]
           });
 }
-let Z = (e) => {
+let b = (e) => {
     let { guildId: t } = e,
         { ref: n, width: o, height: c } = (0, s.Z)(),
         [h, m] = l.useState(v.hO.INITIAL),
-        Z = (0, r.e7)([f.Z], () => f.Z.getRequest(t)),
-        b = (0, r.e7)([u.Z], () => u.Z.getGuild(t)),
+        b = (0, r.e7)([f.Z], () => f.Z.getRequest(t)),
+        Z = (0, r.e7)([u.Z], () => u.Z.getGuild(t)),
         { hasFetchedRequestToJoinGuilds: x, guildPreviewDisabled: L } = (0, r.cj)([f.Z], () => ({
             hasFetchedRequestToJoinGuilds: f.Z.hasFetchedRequestToJoinGuilds,
             guildPreviewDisabled: f.Z.getJoinRequestGuild(t)
         }));
     l.useEffect(() => {
-        null != b && (0, d.uL)(N.Z5c.CHANNEL(t));
-    }, [b, t]),
+        null != Z && (0, d.uL)(N.Z5c.CHANNEL(t));
+    }, [Z, t]),
         l.useEffect(() => {
             x || p.Z.fetchRequestToJoinGuilds();
         }, [x]);
@@ -109,8 +109,8 @@ let Z = (e) => {
             (0, i.jsx)('div', {
                 className: S.contentWrapper,
                 children: (() => {
-                    if (null == Z) return null;
-                    switch (Z.applicationStatus) {
+                    if (null == b) return null;
+                    switch (b.applicationStatus) {
                         case _.wB.SUBMITTED:
                             return (0, i.jsx)(C.Z, {
                                 onWithdrawApplication: R,
@@ -122,7 +122,7 @@ let Z = (e) => {
                                 onReapply: O,
                                 confirmText: T.intl.string(T.t.g9tK0t),
                                 onWithdrawApplication: R,
-                                rejectionReason: Z.rejectionReason,
+                                rejectionReason: b.rejectionReason,
                                 guild: L
                             });
                         default:

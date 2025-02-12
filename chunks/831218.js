@@ -25,9 +25,9 @@ var i,
     E = n(333984),
     j = n(210887),
     y = n(592125),
-    P = n(158776),
+    A = n(158776),
     T = n(55589),
-    A = n(515753),
+    P = n(515753),
     w = n(981631),
     R = n(388032),
     L = n(220704);
@@ -294,7 +294,7 @@ class G extends (i = r.Component) {
                     c = n.some((e) => (0, _.Z)(e)),
                     d = {
                         num_users_visible: o.length,
-                        num_users_visible_with_mobile_indicator: s.filter((e) => null != e && P.Z.isMobileOnline(e)).length
+                        num_users_visible_with_mobile_indicator: s.filter((e) => null != e && A.Z.isMobileOnline(e)).length
                     };
                 (this.hasReportedAnalytics = !0),
                     g.ZP.trackWithMetadata(w.rMx.DM_LIST_VIEWED, {
@@ -325,7 +325,7 @@ class G extends (i = r.Component) {
                 return null == s
                     ? null
                     : (0, l.jsx)(
-                          A.ZP,
+                          P.ZP,
                           {
                               channel: s,
                               selected: s.id === r,
@@ -420,7 +420,7 @@ let k = (e) => {
             version: null != i ? ''.concat(i, ':').concat(y.Z.getPrivateChannelsVersion()) : y.Z.getPrivateChannelsVersion()
         })),
         b = r.useRef(null),
-        P = r.useCallback((e) => {
+        A = r.useCallback((e) => {
             let t = b.current,
                 n = document.querySelector(e);
             null != t &&
@@ -435,7 +435,7 @@ let k = (e) => {
                     }
                 });
         }, []),
-        A = r.useCallback(
+        P = r.useCallback(
             () =>
                 new Promise((e) => {
                     let t = b.current;
@@ -461,10 +461,10 @@ let k = (e) => {
         M = (0, c.ZP)({
             id: 'private-channels-'.concat(L),
             isEnabled: v.keyboardModeEnabled,
-            scrollToStart: A,
+            scrollToStart: P,
             scrollToEnd: R,
             defaultFocused: (p + (u ? 1 : 0)).toString(),
-            setFocus: P
+            setFocus: A
         });
     return (0, l.jsx)(s.bG, {
         navigator: M,

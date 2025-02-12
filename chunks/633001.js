@@ -281,8 +281,8 @@ function w() {
         B = (0, s.e7)([v.Z], () => v.Z.getFocusedPID()),
         M = (0, s.e7)([v.Z], () => v.Z.isFocusedPidOutOfProcess()),
         F = (0, C.QF)(),
-        z = (0, s.e7)([_.default], () => _.default.isOverlayOOPEnabledForPid(F), [F]),
-        U = (0, s.e7)([m.ZP], () => m.ZP.getRunningGames());
+        U = (0, s.e7)([_.default], () => _.default.isOverlayOOPEnabledForPid(F), [F]),
+        z = (0, s.e7)([m.ZP], () => m.ZP.getRunningGames());
     r.useEffect(() => {
         I((e) => {
             for (let t of Object.keys(D)) e[Number(t)] = D[Number(t)];
@@ -344,7 +344,7 @@ function w() {
             var t, n;
             return null !== (n = null === (t = k[e]) || void 0 === t ? void 0 : t.fullscreenType) && void 0 !== n ? n : 'Unknown';
         },
-        q = U.filter((e) => null == D[e.pid]);
+        q = z.filter((e) => null == D[e.pid]);
     return (0, a.jsx)(c.w0Z, {
         children: (0, a.jsxs)('div', {
             className: i()(y.panel, S.panel),
@@ -534,7 +534,7 @@ function w() {
                                 (0, a.jsxs)(c.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'text-secondary',
-                                    children: ['isOOPEnabledForPid: ', z ? 'Yes' : 'No']
+                                    children: ['isOOPEnabledForPid: ', U ? 'Yes' : 'No']
                                 })
                             ]
                         })

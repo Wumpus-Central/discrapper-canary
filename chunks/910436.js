@@ -20,23 +20,23 @@ function I(e) {
     let { party: t, onChannelContextMenu: n, quest: I } = e,
         C = (0, _.L)(),
         { voiceChannels: N, currentActivities: v, partiedMembers: T, applicationStreams: S, guildContext: A } = t,
-        Z = [],
-        b = (e) => {
+        b = [],
+        Z = (e) => {
             var t, n;
-            let { length: l } = Z;
+            let { length: l } = b;
             if (0 === l) {
-                Z.push(e);
+                b.push(e);
                 return;
             }
-            let r = Z[l - 1],
+            let r = b[l - 1],
                 a = ''.concat(null !== (t = null == e ? void 0 : e.key) && void 0 !== t ? t : ''),
                 s = ''.concat(null !== (n = null == r ? void 0 : r.key) && void 0 !== n ? n : '').startsWith('game') && a.startsWith('rich-presence');
-            Z.push((0, i.jsx)(g.Z.Separator, { inset: s }, 'sep-'.concat(a))), Z.push(e);
+            b.push((0, i.jsx)(g.Z.Separator, { inset: s }, 'sep-'.concat(a))), b.push(e);
         };
     for (let { activity: e } of (N.length > 0 &&
         N.forEach((e) => {
             let { members: t, channel: l, guild: r } = e;
-            b(
+            Z(
                 (0, i.jsx)(
                     g.Z.VoiceSection,
                     {
@@ -65,7 +65,7 @@ function I(e) {
         if (null != e) {
             let t = p.ct(e);
             if (null != t) {
-                b(t);
+                Z(t);
                 break;
             }
         }
@@ -74,7 +74,7 @@ function I(e) {
             C &&
             S.forEach((e) => {
                 let { stream: t, streamUser: n, activity: a } = e;
-                b(
+                Z(
                     (0, i.jsx)(
                         g.Z.ApplicationStreamingSection,
                         {
@@ -91,11 +91,11 @@ function I(e) {
                 );
             }),
         v.forEach((e, t) => {
-            var n, l, r, p, _, C, S, Z, x;
+            var n, l, r, p, _, C, S, b, x;
             let { activity: L, game: y, playingMembers: P, activityUser: O } = e;
             if (null == L || null == L.type) return null;
             if (v.length > 1 && L.type === E.IIU.PLAYING && !(0, a.Z)(L) && null != y)
-                b(
+                Z(
                     (0, i.jsx)(
                         g.Z.GameSection,
                         {
@@ -115,7 +115,7 @@ function I(e) {
                 let e = new Set(P.map((e) => e.id)),
                     t = null === (r = N.find((e) => null != e)) || void 0 === r ? void 0 : r.channel;
                 null != t &&
-                    b(
+                    Z(
                         (0, i.jsx)(
                             g.Z.EmbeddedActivitySection,
                             {
@@ -128,7 +128,7 @@ function I(e) {
                         )
                     );
             } else if ((null != L.assets || (0, a.Z)(L)) && L.type === E.IIU.PLAYING)
-                b(
+                Z(
                     (0, i.jsx)(
                         g.Z.RichPresenceSection,
                         {
@@ -141,7 +141,7 @@ function I(e) {
             else if ((0, d.Z)(L)) {
                 let e = N.length > 0 && N[0].members.length > 1,
                     n = P.length > 1;
-                b(
+                Z(
                     (0, i.jsx)(
                         g.Z.TwitchSection,
                         {
@@ -155,7 +155,7 @@ function I(e) {
                 );
             } else
                 (0, o.Z)(L)
-                    ? b(
+                    ? Z(
                           (0, i.jsx)(
                               g.Z.SpotifySection,
                               {
@@ -173,7 +173,7 @@ function I(e) {
                           )
                       )
                     : (null != L.assets || (0, a.Z)(L)) && L.type === E.IIU.LISTENING
-                      ? b(
+                      ? Z(
                             (0, i.jsx)(
                                 g.Z.RichPresenceSection,
                                 {
@@ -183,9 +183,9 @@ function I(e) {
                                 'rich-presence-'.concat(null !== (S = L.session_id) && void 0 !== S ? S : t, '-').concat(O.id)
                             )
                         )
-                      : (0, c.Z)(L) && b((0, i.jsx)(g.Z.XboxSection, { title: y.name }, 'xbox-'.concat(null !== (Z = L.session_id) && void 0 !== Z ? Z : t)));
-            null != I && null != y && (0, u._D)(L, I) && b((0, i.jsx)(h.Z, { quest: I }, 'quest-'.concat(I.id, '-').concat(null !== (x = L.session_id) && void 0 !== x ? x : t)));
+                      : (0, c.Z)(L) && Z((0, i.jsx)(g.Z.XboxSection, { title: y.name }, 'xbox-'.concat(null !== (b = L.session_id) && void 0 !== b ? b : t)));
+            null != I && null != y && (0, u._D)(L, I) && Z((0, i.jsx)(h.Z, { quest: I }, 'quest-'.concat(I.id, '-').concat(null !== (x = L.session_id) && void 0 !== x ? x : t)));
         }),
-        Z.length > 0 ? (0, i.jsx)(g.Z.Body, { children: Z }) : null
+        b.length > 0 ? (0, i.jsx)(g.Z.Body, { children: b }) : null
     );
 }

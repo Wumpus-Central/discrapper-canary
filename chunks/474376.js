@@ -28,7 +28,7 @@ function v(e) {
         A = (e) => {
             e !== (null == t ? void 0 : t.id) && (m.default.track(I.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, { location: { section: I.jXE.USER_PROFILE } }), g.yD(e));
         },
-        Z = S.map((l) => {
+        b = S.map((l) => {
             let r = new d.Z(l),
                 o = r.id === (null == t ? void 0 : t.id),
                 c = l.tokenStatus === _.q.INVALID,
@@ -92,7 +92,7 @@ function v(e) {
             );
         });
     return (
-        Z.push(
+        b.push(
             (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)(a.Clw, {}),
@@ -106,6 +106,6 @@ function v(e) {
                 ]
             })
         ),
-        Z
+        b
     );
 }

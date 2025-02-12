@@ -27,8 +27,8 @@ let Z = l.memo(function (e) {
         r,
         d,
         Z,
-        { stream: I, canGoLive: b, guildId: S, isStreaming: N, channel: E, canStream: j, runningGame: y, embeddedActivity: P, activity: T, application: A, analyticsContext: w } = e,
-        R = x(A, T, P),
+        { stream: I, canGoLive: b, guildId: S, isStreaming: N, channel: E, canStream: j, runningGame: y, embeddedActivity: A, activity: T, application: P, analyticsContext: w } = e,
+        R = x(P, T, A),
         L = l.useCallback(() => {
             a()(null != T, 'Received null activity'),
                 g.default.track(_.rMx.OPEN_MODAL, {
@@ -66,7 +66,7 @@ let Z = l.memo(function (e) {
             });
         }, [E, S]),
         k =
-            (null != y || null == P || (0, c.R)()) && (N || b)
+            (null != y || null == A || (0, c.R)()) && (N || b)
                 ? (N ? ((t = !1), (r = D), (d = o.g5r), (Z = v.intl.string(v.t.S5anIS))) : j ? ((t = !1), (r = G), (d = o.hGI), (Z = null != y ? v.intl.formatToPlainString(v.t.AB5gT0, { game: y.name }) : v.intl.string(v.t.FeUKeH))) : ((t = !0), (r = null), (d = o.hGI), (Z = null != E && (0, m.vd)(E.type) ? v.intl.string(v.t.uQn9Bw) : null != S ? v.intl.string(v.t.fBXEoK) : v.intl.string(v.t.n3feND))),
                   (0, i.jsx)('div', {
                       className: C.panelButtonContainer,
@@ -79,7 +79,7 @@ let Z = l.memo(function (e) {
                   }))
                 : null,
         B =
-            R && null == P
+            R && null == A
                 ? (0, i.jsx)(f.Z, {
                       tooltipText: v.intl.string(v.t['hC/Ze3']),
                       onClick: L,
@@ -87,11 +87,11 @@ let Z = l.memo(function (e) {
                   })
                 : null,
         O =
-            null == P || null == E
+            null == A || null == E
                 ? null
                 : (0, i.jsx)(f.Z, {
                       tooltipText: v.intl.string(v.t['R/FK4O']),
-                      onClick: M(P.applicationId, P.location),
+                      onClick: M(A.applicationId, A.location),
                       icon: o.PBZ
                   }),
         U = null == I ? null : (0, i.jsx)(h.Z, {});

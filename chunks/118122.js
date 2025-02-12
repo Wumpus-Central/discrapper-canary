@@ -44,7 +44,7 @@ function S(e) {
         E = l.useMemo(() => S.some((e) => e.isOwner(N)), [S, N]),
         j = (0, a.s9z)((e) => (0, a.DEQ)(e, C.PU)),
         { analyticsLocations: y } = (0, s.ZP)(),
-        P = (0, d.Q3)('CreateJoinGuildButton'),
+        A = (0, d.Q3)('CreateJoinGuildButton'),
         T = (0, i.jsx)(_.Z, {
             showPill: !1,
             id: 'create-join-button',
@@ -63,7 +63,7 @@ function S(e) {
             selected: j,
             onContextMenu: b,
             tooltip: x.intl.string(x.t.l5WIbW),
-            icon: P ? a.oFk : a.BRu
+            icon: A ? a.oFk : a.BRu
         });
     return t
         ? T

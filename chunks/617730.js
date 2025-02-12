@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => m });
 var i = n(200651);
 n(192379);
 var r = n(481060),
@@ -11,7 +11,7 @@ var r = n(481060),
     u = n(981631),
     h = n(388032),
     _ = n(766026);
-let m = (e) => {
+let g = (e) => {
     let { state: t } = e;
     switch (t) {
         case u.r2o.ACCEPTING:
@@ -21,15 +21,15 @@ let m = (e) => {
             return !1;
     }
 };
-function g(e) {
-    let { invite: t, onAcceptInvite: n, disableUser: g = !1 } = e;
+function m(e) {
+    let { invite: t, onAcceptInvite: n, disableUser: m = !1 } = e;
     if (null == t) return null;
     let p = null != t.guild ? new o.ZP(t.guild) : null,
         f = null != t.channel ? (0, a.jD)(t.channel) : null,
         E = null != t.target_application ? new l.ZP(t.target_application) : null,
-        x = g || null == t.inviter ? null : new s.Z(t.inviter),
+        x = m || null == t.inviter ? null : new s.Z(t.inviter),
         I = !((null != t.approximate_member_count && t.approximate_member_count > c.mx) || (null != p && p.hasFeature(u.oNc.COMMUNITY))) && null != x && (0, c.WT)(t),
-        C = m(t),
+        C = g(t),
         v = {
             invite: t,
             user: x,

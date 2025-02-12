@@ -37,9 +37,9 @@ function E(e) {
         j = (0, o.pY)(null === (t = E[0]) || void 0 === t ? void 0 : t.location),
         y = (0, r.NX)(j),
         {
-            guildHasVoice: P,
+            guildHasVoice: A,
             guildHasVideo: T,
-            selectedVoiceChannelHasVideo: A
+            selectedVoiceChannelHasVideo: P
         } = (0, l.cj)(
             [x.Z, I.Z, _.Z, v.Z, f.Z],
             () => {
@@ -97,7 +97,7 @@ function E(e) {
                 R = d && null !== (r = null === (l = f.Z.getChannel(c)) || void 0 === l ? void 0 : l.isGuildStageVoice()) && void 0 !== r && r,
                 L = !!d && null != m.Z.getActiveStreamForUser(w, e),
                 M = (S ? (0, s.aK)(m.Z.getAllApplicationStreams()) : m.Z.getAllApplicationStreams()).some((t) => t.guildId === e),
-                D = d && A,
+                D = d && P,
                 G = (() => {
                     if (y) return E.length > 0;
                     for (let e of E) {
@@ -108,7 +108,7 @@ function E(e) {
                 })(),
                 k = a.ZP.getEmbeddedActivitiesForGuild(e).length > 0;
             return (
-                d ? ((g = !0), (_ = (null == i ? void 0 : i.channel_id) === c), (C = R), (Z = D), (I = L), (N = k)) : ((g = P), (_ = null != i), (C = j), (Z = T), (I = M), (N = G)),
+                d ? ((g = !0), (_ = (null == i ? void 0 : i.channel_id) === c), (C = R), (Z = D), (I = L), (N = k)) : ((g = A), (_ = null != i), (C = j), (Z = T), (I = M), (N = G)),
                 {
                     audio: g,
                     video: Z,
@@ -120,6 +120,6 @@ function E(e) {
                 }
             );
         },
-        [e, n, S, A, w, y, E, i, P, T]
+        [e, n, S, P, w, y, E, i, A, T]
     );
 }

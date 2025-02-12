@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(388905),
     h = n(108427),
     _ = n(314897),
-    m = n(701190),
-    g = n(626135),
+    g = n(701190),
+    m = n(626135),
     p = n(768581),
     f = n(823379),
     E = n(264229),
@@ -67,9 +67,9 @@ function R(e) {
     let { children: t, cardChildren: n, startAnimHeightPx: a, innerStyle: s, ...c } = e,
         { invite: u } = c,
         [h, _] = r.useState(b(u)),
-        { ref: m, height: g } = (0, d.Z)(),
+        { ref: g, height: m } = (0, d.Z)(),
         p = (0, o.q_F)({
-            height: null != g && 0 !== g ? ''.concat(g, 'px') : ''.concat(a, 'px'),
+            height: null != m && 0 !== m ? ''.concat(m, 'px') : ''.concat(a, 'px'),
             config: l.config.stiff
         });
     return (
@@ -85,7 +85,7 @@ function R(e) {
                     className: S.inviteChildContainer,
                     style: p,
                     children: (0, i.jsx)('section', {
-                        ref: m,
+                        ref: g,
                         className: null == s ? void 0 : s(h),
                         children: t(h)
                     })
@@ -164,7 +164,7 @@ function j(e) {
 }
 function L(e) {
     let { inviteKey: t, transitionTo: n } = e,
-        l = (0, a.e7)([m.Z], () => m.Z.getInvite(t));
+        l = (0, a.e7)([g.Z], () => g.Z.getInvite(t));
     return (
         r.useEffect(() => {
             (0, h.e)('invite_mobile');
@@ -172,7 +172,7 @@ function L(e) {
         r.useEffect(() => {
             null != l &&
                 l.state === v.r2o.RESOLVED &&
-                g.default.track(
+                m.default.track(
                     v.rMx.INVITE_VIEWED,
                     {
                         invite_code: t,
@@ -187,7 +187,7 @@ function L(e) {
                 !(function (e, t, n) {
                     var i, r, l;
                     null == e || e.preventDefault(),
-                        g.default.track(v.rMx.INVITE_APP_OPENED, {
+                        m.default.track(v.rMx.INVITE_APP_OPENED, {
                             invite_code: (0, E.jX)(t),
                             guild_id: null == n ? void 0 : null === (i = n.guild) || void 0 === i ? void 0 : i.id,
                             channel_id: null == n ? void 0 : null === (r = n.channel) || void 0 === r ? void 0 : r.id,

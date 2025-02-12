@@ -22,8 +22,8 @@ var i = n(200651),
     T = n(504762),
     S = n(807152),
     A = n(176505),
-    Z = n(388032),
-    b = n(414204);
+    b = n(388032),
+    Z = n(414204);
 function x(e) {
     let { guildId: t } = e,
         n = (0, a.e7)([_.Z], () => _.Z.getGuild(t), [t]),
@@ -35,7 +35,7 @@ function x(e) {
         { shouldHideGuildPurchaseEntryPoints: R, restrictionsLoading: j } = (0, m.uP)(t),
         D = null == n || !O || P || j;
     (0, d.Tt)({
-        subsection: Z.intl.string(Z.t['KzCF//']),
+        subsection: b.intl.string(b.t['KzCF//']),
         location: null == n ? void 0 : n.name
     }),
         (0, c.Z)(r.tq ? 'role-subscriptions-overview' : void 0);
@@ -53,27 +53,27 @@ function x(e) {
         return (0, i.jsx)(v.z, { errorType: e });
     }
     return (0, i.jsxs)('div', {
-        className: b.container,
+        className: Z.container,
         children: [
             (0, i.jsxs)(g.Z, {
                 toolbar: (0, i.jsx)(l.Fragment, {}),
-                className: b.headerBar,
+                className: Z.headerBar,
                 children: [
                     (0, i.jsx)(g.Z.Icon, {
                         icon: (0, s.GSL)(C.Z),
                         'aria-hidden': !0
                     }),
-                    (0, i.jsx)(g.Z.Title, { children: Z.intl.string(Z.t['KzCF//']) })
+                    (0, i.jsx)(g.Z.Title, { children: b.intl.string(b.t['KzCF//']) })
                 ]
             }),
             (0, i.jsx)('div', { id: S.v }),
             (0, i.jsx)('div', {
-                className: b.content,
+                className: Z.content,
                 children: L
                     ? (0, i.jsx)(s.u2D, {
-                          className: b.scroller,
+                          className: Z.scroller,
                           children: (0, i.jsx)('div', {
-                              className: b.scrollerContent,
+                              className: Z.scrollerContent,
                               children: D ? (0, i.jsx)(s.$jN, {}) : (0, i.jsx)(N.Z, { guild: n })
                           })
                       })

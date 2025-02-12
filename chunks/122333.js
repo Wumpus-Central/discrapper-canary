@@ -23,8 +23,8 @@ var r = n(481060),
     T = n(179645),
     S = n(701476),
     A = n(785997),
-    Z = n(981631),
-    b = n(188785),
+    b = n(981631),
+    Z = n(188785),
     x = n(630724);
 function L() {
     null != i && (0, r.Mr3)(i);
@@ -102,25 +102,25 @@ class y extends s.Z {
                                 });
                         },
                         {
-                            onCloseRequest: Z.dG4,
+                            onCloseRequest: b.dG4,
                             onCloseCallback: e,
                             modalKey: i
                         }
                     );
                 },
-                predicate: () => y() && !b.a
+                predicate: () => y() && !Z.a
             },
             {
                 key: 'New User Age Gate',
                 open: c.i,
-                predicate: () => P && !y() && !b.a
+                predicate: () => P && !y() && !Z.a
             },
             {
                 key: 'Claim Account Modal',
                 open: (e) => c.j(N.isPlatformEmbedded, e),
                 predicate: () => {
                     var e;
-                    return !s && null != I.default.getCurrentUser() && !(null === (e = I.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !b.a && !(0, h.g)('new_user_manager');
+                    return !s && null != I.default.getCurrentUser() && !(null === (e = I.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !Z.a && !(0, h.g)('new_user_manager');
                 }
             },
             {
@@ -128,7 +128,7 @@ class y extends s.Z {
                 open: (e) => (0, d.hk)(L, null != e ? e : void 0),
                 predicate: () => {
                     var e;
-                    return s && !(null === (e = I.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !b.a;
+                    return s && !(null === (e = I.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !Z.a;
                 }
             },
             {

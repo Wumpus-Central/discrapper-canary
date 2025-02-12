@@ -10,14 +10,14 @@ var i = n(200651),
     u = n(108427),
     h = n(314897),
     _ = n(626135),
-    m = n(587444),
-    g = n(981631),
+    g = n(587444),
+    m = n(981631),
     p = n(58346),
     f = n(388032),
     E = n(814632);
 function x(e, t, n) {
     e.preventDefault(),
-        _.default.track(g.rMx.GUILD_TEMPLATE_APP_OPENED, {
+        _.default.track(m.rMx.GUILD_TEMPLATE_APP_OPENED, {
             guild_template_code: t,
             guild_template_name: n.name,
             guild_template_description: n.description,
@@ -49,7 +49,7 @@ function I(e) {
                     })
                 ]
             })
-          : (0, i.jsx)(m.Z, {
+          : (0, i.jsx)(g.Z, {
                 text: f.intl.string(f.t['e/rZ2t']),
                 buttonCta: f.intl.string(f.t.HAvYn5),
                 onClick: (e) => x(e, t, n)

@@ -22,8 +22,8 @@ var i = n(200651),
     T = n(981631),
     S = n(388032),
     A = n(810294),
-    Z = n(304899);
-let b = {
+    b = n(304899);
+let Z = {
     width: 14,
     height: 14
 };
@@ -68,19 +68,19 @@ function x(e) {
                         object: T.qAy.BUTTON_CTA,
                         objectType: T.Qqv.GIFT
                     },
-                    giftMessage: M()
+                    giftMessage: k()
                 });
         },
-        M = () => (n === v.hX.FRIEND_ANNIVERSARY ? S.intl.formatToPlainString(S.t['L2s/Nz'], { numberOfYears: I.Z.getFriendAnniversaryYears(t.id) }) : (0, f.Ou)(n)),
-        k = () => (n === v.hX.FRIEND_ANNIVERSARY ? S.intl.string(S.t['4LohBA']) : (0, f.Ou)(n)),
+        k = () => (n === v.hX.FRIEND_ANNIVERSARY ? S.intl.formatToPlainString(S.t['L2s/Nz'], { numberOfYears: I.Z.getFriendAnniversaryYears(t.id) }) : (0, f.Ou)(n)),
+        M = () => (n === v.hX.FRIEND_ANNIVERSARY ? S.intl.string(S.t['4LohBA']) : (0, f.Ou)(n)),
         U = () =>
             j
                 ? (0, i.jsx)(d.P3F, {
-                      'aria-label': k(),
+                      'aria-label': M(),
                       onClick: w,
-                      className: a()(Z.actionButton, A.popoutButton, {
-                          [Z.highlight]: x,
-                          [Z.actionButtonMobile]: c.tq
+                      className: a()(b.actionButton, A.popoutButton, {
+                          [b.highlight]: x,
+                          [b.actionButtonMobile]: c.tq
                       }),
                       onMouseEnter: D,
                       onMouseLeave: R,
@@ -98,15 +98,15 @@ function x(e) {
                           children: [
                               (0, i.jsx)(d.OgN, {
                                   size: 'custom',
-                                  width: b.width,
-                                  height: b.height,
+                                  width: Z.width,
+                                  height: Z.height,
                                   color: 'currentColor'
                               }),
                               (0, i.jsx)(d.Text, {
                                   variant: 'text-sm/medium',
                                   color: 'always-white',
                                   className: A.pillButtonText,
-                                  children: k()
+                                  children: M()
                               })
                           ]
                       })

@@ -19,7 +19,7 @@ let m = function (e) {
         A = () => {
             N(!1);
         },
-        Z = (e, t) => {
+        b = (e, t) => {
             null != t &&
                 (T(!0),
                 (0, d.jW)(
@@ -52,7 +52,7 @@ let m = function (e) {
                         [h.active]: f || v,
                         [h.firstItem]: 0 === t
                     }),
-                    onContextMenu: (e) => Z(e, m),
+                    onContextMenu: (e) => b(e, m),
                     onMouseEnter: S,
                     onMouseLeave: A,
                     onClick: null != g ? g : void 0,

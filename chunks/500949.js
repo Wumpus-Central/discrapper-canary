@@ -14,7 +14,7 @@ n.d(t, {
     YE: () => er,
     h9: () => el,
     iw: () => ee,
-    jC: () => U,
+    jC: () => z,
     jQ: () => F,
     lT: () => W,
     rd: () => es,
@@ -91,8 +91,8 @@ let M = {
     },
     F = Object.fromEntries(Object.keys(M).map((e) => [e, e]));
 Object.values(M).forEach((e) => Z.Z.register(e));
-let { SemanticColors: z } = D.V,
-    U = z,
+let { SemanticColors: U } = D.V,
+    z = U,
     G = CSS.supports('color', 'color(display-p3 1 0 0)') && CSS.supports('color', 'color(display-p3 1 0 0 / 1)');
 function H(e, t) {
     let [n, a] = l.useState(() => {
@@ -107,7 +107,7 @@ function H(e, t) {
     );
 }
 function V(e) {
-    let t = U[e];
+    let t = z[e];
     return {
         name: e,
         colors: Object.fromEntries(

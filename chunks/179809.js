@@ -25,7 +25,7 @@ var i = n(200651),
 let E = (0, g.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
     j = (0, s.animated)(u.Kqy);
 function y(e) {
-    let { folderNode: t, setNodeRef: n, selected: r, expanded: s, mediaState: d, mentionCount: g = 0, isMentionLowImportance: y, unread: P = !1, defaultFolderName: T, useCircleMask: A = !1, draggable: w = !1, sorting: R = !1, onDragStart: L, onDragEnd: M, onExpandCollapse: D, onContextMenu: G, renderChildNode: k, folderIconContent: B, folderIconContentClassName: O } = e,
+    let { folderNode: t, setNodeRef: n, selected: r, expanded: s, mediaState: d, mentionCount: g = 0, isMentionLowImportance: y, unread: A = !1, defaultFolderName: T, useCircleMask: P = !1, draggable: w = !1, sorting: R = !1, onDragStart: L, onDragEnd: M, onExpandCollapse: D, onContextMenu: G, renderChildNode: k, folderIconContent: B, folderIconContentClassName: O } = e,
         { id: U, name: V, children: F } = t,
         H = (0, p.Q3)('FolderItem'),
         [z, W] = l.useState(!1),
@@ -81,7 +81,7 @@ function y(e) {
                     disabled: J || s,
                     hovered: z,
                     selected: r,
-                    unread: P,
+                    unread: A,
                     className: N.pill
                 }),
                 (0, i.jsx)(I.Z, {
@@ -98,7 +98,7 @@ function y(e) {
                             : (0, i.jsx)(v.Z, {
                                   folderNode: t,
                                   expanded: s,
-                                  forceCircular: A,
+                                  forceCircular: P,
                                   sorting: R,
                                   mediaState: d,
                                   mentionCount: g,

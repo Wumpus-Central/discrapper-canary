@@ -1,8 +1,8 @@
 n.d(t, {
     P: () => y,
-    Qo: () => P,
+    Qo: () => A,
     ZP: () => j,
-    kw: () => A,
+    kw: () => P,
     rj: () => T
 });
 var i = n(200651),
@@ -32,9 +32,9 @@ function N(e) {
 }
 let E = l.memo(function (e) {
         let t,
-            { channel: r, connectChannelDragSource: h, connectChannelDropTarget: x, disableManageChannels: Z, position: E, sortingPosition: j, hideIcon: y, children: P } = e,
+            { channel: r, connectChannelDragSource: h, connectChannelDropTarget: x, disableManageChannels: Z, position: E, sortingPosition: j, hideIcon: y, children: A } = e,
             T = (0, g.Q3)('CategoryChannel'),
-            A = (0, s.e7)([C.ZP], () => C.ZP.isChannelMuted(r.getGuildId(), r.id)),
+            P = (0, s.e7)([C.ZP], () => C.ZP.isChannelMuted(r.getGuildId(), r.id)),
             w = (0, s.e7)([f.Z], () => f.Z.isCollapsed(r.id)),
             R = (0, s.e7)([v.Z], () => v.Z.can(I.Plq.MANAGE_CHANNELS, r));
         t = null != j ? (E > j ? S.containerDragAfter : S.containerDragBefore) : S.containerDefault;
@@ -92,7 +92,7 @@ let E = l.memo(function (e) {
                             ref: U,
                             className: a()(S.iconVisibility, S.wrapper, {
                                 [S.collapsed]: w,
-                                [S.muted]: A,
+                                [S.muted]: P,
                                 [S.clickable]: !0
                             }),
                             onContextMenu: M,
@@ -172,7 +172,7 @@ let E = l.memo(function (e) {
                             ]
                         })
                     }),
-                    P
+                    A
                 ]
             });
         return null != x && null != h ? x(h(V)) : V;
@@ -211,7 +211,7 @@ let E = l.memo(function (e) {
             })
         });
     }),
-    P = l.memo(function (e) {
+    A = l.memo(function (e) {
         let { category: t } = e,
             n = (0, s.e7)([x.Z], () => x.Z.isVoiceCategoryCollapsed(t.guild.id)),
             r = (0, g.Q3)('VoiceChannelCategoryButton'),
@@ -271,7 +271,7 @@ let E = l.memo(function (e) {
                 : null
             : (0, i.jsx)('div', { style: { height: 16 } });
     }),
-    A = l.memo(function (e) {
+    P = l.memo(function (e) {
         let { channel: t } = e;
         return (0, i.jsx)('li', {
             className: a()(S.containerDefault),

@@ -126,7 +126,7 @@ function A() {
                 return t;
             }),
         F = (0, p.Z)(M).filter(C.lm),
-        z = (0, u.e7)([N.Z], () => N.Z.getFakeGameToShow());
+        U = (0, u.e7)([N.Z], () => N.Z.getFakeGameToShow());
     return (0, a.jsx)('div', {
         className: i()(O.panel),
         children: (0, a.jsxs)(m.zJl, {
@@ -221,7 +221,7 @@ function A() {
                                 label: e,
                                 value: e
                             })),
-                            isSelected: (e) => e === z,
+                            isSelected: (e) => e === U,
                             select: function (e) {
                                 x.Z.dispatch({
                                     type: 'CONTENT_INVENTORY_FORCE_SHOW_GAME_SHARING',

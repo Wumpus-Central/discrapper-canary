@@ -10,15 +10,15 @@ var i = n(200651),
     u = n(259580),
     h = n(626135),
     _ = n(44609),
-    m = n(731971),
-    g = n(981631),
+    g = n(731971),
+    m = n(981631),
     p = n(388032),
     f = n(80384);
 let E = () => {
     var e;
     let [t, n] = r.useState(!1),
         l = c.G6.useSetting(),
-        { nickname: E, dmsAllowed: x, showActivity: I, mutedServer: C, setNickname: v, setDmsAllowed: N, setShowActivity: S, setMutedServer: T } = (0, m.XW)(),
+        { nickname: E, dmsAllowed: x, showActivity: I, mutedServer: C, setNickname: v, setDmsAllowed: N, setShowActivity: S, setMutedServer: T } = (0, g.XW)(),
         b = null === (e = s.Z.getProps().invite) || void 0 === e ? void 0 : e.is_nickname_changeable,
         A = (0, _.m4)({ location: 'InviteSettingsControls' });
     return (0, i.jsxs)('div', {
@@ -27,7 +27,7 @@ let E = () => {
             (0, i.jsxs)(o.P3F, {
                 className: f.header,
                 onClick: () => {
-                    t || h.default.track(g.rMx.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED), n(!t);
+                    t || h.default.track(m.rMx.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED), n(!t);
                 },
                 children: [
                     (0, i.jsx)('div', {
@@ -73,7 +73,7 @@ let E = () => {
                                 }),
                                 (0, i.jsx)(o.oil, {
                                     placeholder: p.intl.string(p.t['09Q8ys']),
-                                    maxLength: g.l$U,
+                                    maxLength: m.l$U,
                                     value: E,
                                     onChange: v
                                 })

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(411104), n(47120);
+n.d(t, { Z: () => M }), n(411104), n(47120);
 var i,
     l = n(200651),
     r = n(192379),
@@ -22,8 +22,8 @@ var i,
     T = n(626135),
     S = n(780570),
     A = n(624138),
-    Z = n(645818),
-    b = n(981631),
+    b = n(645818),
+    Z = n(981631),
     x = n(388032),
     L = n(757087);
 function y(e, t, n) {
@@ -42,9 +42,9 @@ function y(e, t, n) {
 let P = (0, A.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
     O = (0, A.Mg)(u.Z.GAME_LIST_LINKED_TO_GLOW_DURATION),
     R = Object.freeze({
-        [b.iEv.PLATFORM]: 'Platform',
-        [b.iEv.LAST_PLAYED]: 'Last Played',
-        [b.iEv.NAME]: 'Name'
+        [Z.iEv.PLATFORM]: 'Platform',
+        [Z.iEv.LAST_PLAYED]: 'Last Played',
+        [Z.iEv.NAME]: 'Name'
     }),
     j = (e) => {
         let { flag: t, icon: n, item: i, tooltip: r } = e,
@@ -60,7 +60,7 @@ let P = (0, A.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
     },
     D = [
         {
-            key: b.iEv.NAME,
+            key: Z.iEv.NAME,
             renderHeader: () => x.intl.string(x.t.dBfWfX),
             sort: !0,
             cellClassName: L.nameCell,
@@ -81,7 +81,7 @@ let P = (0, A.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
                                     className: L.nameCellText,
                                     children: e.libraryApplication.getBranchedName(e.application)
                                 }),
-                                e.libraryApplication.hasFlag(b.eHb.PREMIUM)
+                                e.libraryApplication.hasFlag(Z.eHb.PREMIUM)
                                     ? (0, l.jsx)(h.ua7, {
                                           text: x.intl.string(x.t.tG2SzM),
                                           children: (e) =>
@@ -99,7 +99,7 @@ let P = (0, A.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
                 })
         },
         {
-            key: b.iEv.PLATFORM,
+            key: Z.iEv.PLATFORM,
             renderHeader: () => x.intl.string(x.t.YR4cHB),
             sort: !0,
             cellClassName: L.platformCell,
@@ -108,12 +108,12 @@ let P = (0, A.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
                 let t = e.libraryApplication.getDistributor();
                 return (0, l.jsx)(f.Z, {
                     align: f.Z.Align.CENTER,
-                    children: null != t ? b.EOG[t] : x.intl.string(x.t['F+l3Ji'])
+                    children: null != t ? Z.EOG[t] : x.intl.string(x.t['F+l3Ji'])
                 });
             }
         },
         {
-            key: b.iEv.LAST_PLAYED,
+            key: Z.iEv.LAST_PLAYED,
             renderHeader: () => x.intl.string(x.t.FDDyjY),
             sort: !0,
             cellClassName: L.lastPlayedCell,
@@ -140,7 +140,7 @@ let P = (0, A.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
             }
         },
         {
-            key: b.iEv.ACTIONS,
+            key: Z.iEv.ACTIONS,
             renderHeader: () => null,
             cellClassName: L.actionsCell,
             render(e, t, n) {
@@ -153,18 +153,18 @@ let P = (0, A.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
                             className: L.settingIcons,
                             children: [
                                 (0, l.jsx)(j, {
-                                    flag: b.eHb.PRIVATE,
+                                    flag: Z.eHb.PRIVATE,
                                     item: e,
                                     icon: h.kZF,
                                     tooltip: x.intl.string(x.t.NozAoq)
                                 }),
                                 (0, l.jsx)(j, {
-                                    flag: b.eHb.OVERLAY_DISABLED,
+                                    flag: Z.eHb.OVERLAY_DISABLED,
                                     item: e,
                                     icon: h.o8v,
                                     tooltip: x.intl.string(x.t.Az9eqq)
                                 }),
-                                (0, l.jsx)(Z.Z, {
+                                (0, l.jsx)(b.Z, {
                                     className: s()(L.settingIcon, { [L.hidden]: !e.supportsCloudSync }),
                                     libraryApplication: e.libraryApplication
                                 })
@@ -172,12 +172,12 @@ let P = (0, A.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
                         }),
                         (0, S.Je)(e.libraryApplication)
                             ? (0, l.jsx)(_.Z, {
-                                  analyticsListSort: ((i = t.sortKey), (a = t.sortDirection), ''.concat(R[i], ' ').concat(a === b.sHY.ASCENDING ? 'ASC' : 'DESC')),
+                                  analyticsListSort: ((i = t.sortKey), (a = t.sortDirection), ''.concat(R[i], ' ').concat(a === Z.sHY.ASCENDING ? 'ASC' : 'DESC')),
                                   analyticsListIndex: n,
-                                  source: b.Sbl.APPLICATION_LIBRARY,
+                                  source: Z.Sbl.APPLICATION_LIBRARY,
                                   libraryApplication: e.libraryApplication,
                                   color: o ? h.zxk.Colors.GREEN : h.zxk.Colors.PRIMARY,
-                                  isPlayShiny: o && e.defaultAction === b.apO.PLAY,
+                                  isPlayShiny: o && e.defaultAction === Z.apO.PLAY,
                                   size: L.actionButtonSize,
                                   hideProgress: null != e.defaultAction,
                                   onDropdownOpen: () => null != t && t.setActiveRowKey(e),
@@ -207,7 +207,7 @@ let P = (0, A.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
             children: (0, l.jsx)('div', { ...d })
         });
     };
-class M extends (i = r.PureComponent) {
+class k extends (i = r.PureComponent) {
     componentDidMount() {
         let { fetched: e } = this.props;
         e && (this.handleHighlightedApplicationKey(), this.trackViewed());
@@ -247,33 +247,33 @@ class M extends (i = r.PureComponent) {
             { analyticsContext: t, applicationViewItems: n } = this.props;
         for (let t of n) {
             switch (t.libraryApplication.getDistributor()) {
-                case b.GQo.DISCORD:
+                case Z.GQo.DISCORD:
                     e.num_applications_discord++;
                     break;
-                case b.GQo.STEAM:
+                case Z.GQo.STEAM:
                     e.num_applications_steam++;
                     break;
-                case b.GQo.BATTLENET:
+                case Z.GQo.BATTLENET:
                     e.num_applications_battlenet++;
                     break;
-                case b.GQo.TWITCH:
+                case Z.GQo.TWITCH:
                     e.num_applications_twitch++;
                     break;
-                case b.GQo.UPLAY:
+                case Z.GQo.UPLAY:
                     e.num_applications_uplay++;
                     break;
-                case b.GQo.ORIGIN:
+                case Z.GQo.ORIGIN:
                     e.num_applications_origin++;
                     break;
-                case b.GQo.GOG:
+                case Z.GQo.GOG:
                     e.num_applications_gog++;
                     break;
-                case b.GQo.EPIC:
+                case Z.GQo.EPIC:
                     e.num_applications_epic++;
             }
             e.num_applications_total++;
         }
-        T.default.track(b.rMx.LIBRARY_VIEWED, {
+        T.default.track(Z.rMx.LIBRARY_VIEWED, {
             ...e,
             load_id: t.loadId
         });
@@ -399,7 +399,7 @@ class M extends (i = r.PureComponent) {
             });
     }
 }
-function k(e) {
+function M(e) {
     let t = r.useContext(T.AnalyticsContext),
         n = (0, o.TH)(),
         {
@@ -422,7 +422,7 @@ function k(e) {
             activeRowKey: v.Z.activeRowKey,
             isNavigatingByKeyboard: v.Z.isNavigatingByKeyboard
         }));
-    return (0, l.jsx)(M, {
+    return (0, l.jsx)(k, {
         ...e,
         analyticsContext: t,
         location: n,
@@ -435,4 +435,4 @@ function k(e) {
         isNavigatingByKeyboard: m
     });
 }
-y(M, 'defaultProps', { stickyHeader: !1 });
+y(k, 'defaultProps', { stickyHeader: !1 });

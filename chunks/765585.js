@@ -11,7 +11,7 @@ var i = n(200651),
     h = n(388032),
     p = n(238006);
 let m = l.forwardRef(function (e, t) {
-    let { body: n, header: r, artClassName: m, headerClassName: g, contentClassName: f, tryItText: _, dismissText: v, onTryFeature: C, onClose: x, className: Z, inlineArt: I = !1, isPremiumFeature: b = !1, shouldUseHorizontalButtons: S = !1, showGIFTag: N = !1, dismissibleContent: E, position: j = 'top', align: y = 'center', art: P, isPremiumEarlyAccess: T = !1, maxWidth: A = 280, hideDismissButton: w = !1, pointerClassName: R, dismissIconClassName: L, dismissIcon: M, onDismissIconClick: D } = e,
+    let { body: n, header: r, artClassName: m, headerClassName: g, contentClassName: f, tryItText: _, dismissText: v, onTryFeature: C, onClose: x, className: Z, inlineArt: I = !1, isPremiumFeature: b = !1, shouldUseHorizontalButtons: S = !1, showGIFTag: N = !1, dismissibleContent: E, position: j = 'top', align: y = 'center', art: A, isPremiumEarlyAccess: T = !1, maxWidth: P = 280, hideDismissButton: w = !1, pointerClassName: R, dismissIconClassName: L, dismissIcon: M, onDismissIconClick: D } = e,
         G = S ? o.zxk.Sizes.LARGE : o.zxk.Sizes.MAX,
         [k, B] = l.useState(!1),
         { ref: O, width: U } = (0, s.Z)();
@@ -22,8 +22,8 @@ let m = l.forwardRef(function (e, t) {
         l.useEffect(() => {
             var e, t;
             let n = (null !== (t = null === (e = O.current) || void 0 === e ? void 0 : e.scrollWidth) && void 0 !== t ? t : 0) + 64;
-            !k && n > A && B(!0);
-        }, [k, U, O, A]),
+            !k && n > P && B(!0);
+        }, [k, U, O, P]),
         l.useEffect(() => {
             (0, c.kk)(E);
         }, [E]),
@@ -44,7 +44,7 @@ let m = l.forwardRef(function (e, t) {
                         }),
                     (0, i.jsxs)('div', {
                         className: a()(m, I ? p.artInline : p.artAbsolute),
-                        children: [N && (0, i.jsx)(d.Z, { className: p.gifTag }), P]
+                        children: [N && (0, i.jsx)(d.Z, { className: p.gifTag }), A]
                     }),
                     (0, i.jsxs)('div', {
                         className: p.body,

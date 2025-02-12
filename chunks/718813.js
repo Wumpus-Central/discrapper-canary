@@ -46,15 +46,15 @@ let T = (0, g.Un)({
         webpackId: 838819,
         name: 'CollectiblesShop'
     }),
-    Z = (0, g.Un)({
+    b = (0, g.Un)({
         createPromise: () => Promise.all([n.e('33053'), n.e('17298'), n.e('7654'), n.e('44156'), n.e('20364'), n.e('6850'), n.e('58227'), n.e('16114'), n.e('54408'), n.e('35217'), n.e('95140')]).then(n.bind(n, 994763)),
         webpackId: 994763,
         name: 'GuildSettings'
     }),
-    b = {
+    Z = {
         [C.S9g.USER_SETTINGS]: () => (0, l.jsx)(T, {}),
         [C.S9g.CHANNEL_SETTINGS]: () => (0, l.jsx)(S, {}),
-        [C.S9g.GUILD_SETTINGS]: () => (0, l.jsx)(Z, {}),
+        [C.S9g.GUILD_SETTINGS]: () => (0, l.jsx)(b, {}),
         [C.S9g.COLLECTIBLES_SHOP]: () => (0, l.jsx)(A, {})
     },
     x = 'SHOWN',
@@ -210,7 +210,7 @@ class R extends r.PureComponent {
     renderComponent(e, t, n) {
         let i;
         return (
-            (i = 'string' == typeof e ? b[e]() : (0, l.jsx)(e, {})),
+            (i = 'string' == typeof e ? Z[e]() : (0, l.jsx)(e, {})),
             (0, l.jsxs)(
                 O,
                 {

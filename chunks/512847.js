@@ -22,7 +22,7 @@ var i = n(200651),
     T = n(938475),
     S = n(823379),
     A = n(981631);
-function Z(e, t, n, i) {
+function b(e, t, n, i) {
     l.useEffect(() => {
         let l = t(),
             a = new r.Fh(e, () => {
@@ -33,9 +33,9 @@ function Z(e, t, n, i) {
         return a.attach('useSound'), () => a.detach();
     });
 }
-function b() {
+function Z() {
     return (
-        Z(
+        b(
             [f.Z, C.Z],
             () => ({
                 inVoiceChannel: null != C.Z.getVoiceChannelId(),
@@ -61,7 +61,7 @@ function b() {
 }
 function x() {
     return (
-        Z(
+        b(
             [g.Z, I.Z, C.Z, o.Z],
             () => {
                 let e = g.Z.getChannel(C.Z.getVoiceChannelId()),
@@ -98,7 +98,7 @@ function x() {
 }
 function L() {
     return (
-        Z(
+        b(
             [N.Z],
             () => N.Z.isCurrentUserSpeaking(),
             (e, t) => {
@@ -113,7 +113,7 @@ function L() {
 }
 function y() {
     return (
-        Z(
+        b(
             [f.Z],
             () => f.Z.getActiveVoiceFilter(),
             (e, t) => {
@@ -125,7 +125,7 @@ function y() {
 }
 function P() {
     return (
-        Z(
+        b(
             [f.Z],
             () => f.Z.isSelfMutedTemporarily(),
             (e, t) => {
@@ -140,7 +140,7 @@ function P() {
 }
 function O() {
     return (
-        Z(
+        b(
             [v.Z],
             () => v.Z.userHasBeenMovedVersion,
             (e, t) => {
@@ -152,7 +152,7 @@ function O() {
 }
 function R() {
     return (
-        Z(
+        b(
             [C.Z, v.Z],
             () => {
                 let e = C.Z.getVoiceChannelId();
@@ -169,7 +169,7 @@ function R() {
 }
 function j() {
     return (
-        Z(
+        b(
             [C.Z, m.Z, p.default, v.Z, g.Z],
             () => {
                 let e, t;
@@ -232,7 +232,7 @@ function j() {
 }
 function D() {
     return (
-        Z(
+        b(
             [C.Z, a.ZP, p.default],
             () => {
                 let e = C.Z.getVoiceChannelId(),
@@ -276,6 +276,6 @@ function D() {
 }
 function w() {
     return (0, i.jsxs)(i.Fragment, {
-        children: [(0, i.jsx)(b, {}), (0, i.jsx)(x, {}), (0, i.jsx)(L, {}), (0, i.jsx)(P, {}), (0, i.jsx)(O, {}), (0, i.jsx)(j, {}), (0, i.jsx)(R, {}), (0, i.jsx)(D, {}), (0, i.jsx)(y, {})]
+        children: [(0, i.jsx)(Z, {}), (0, i.jsx)(x, {}), (0, i.jsx)(L, {}), (0, i.jsx)(P, {}), (0, i.jsx)(O, {}), (0, i.jsx)(j, {}), (0, i.jsx)(R, {}), (0, i.jsx)(D, {}), (0, i.jsx)(y, {})]
     });
 }

@@ -2,7 +2,7 @@ n.d(t, {
     CN: () => j,
     ZP: () => R,
     eP: () => T,
-    hR: () => P,
+    hR: () => A,
     jo: () => y
 });
 var i,
@@ -35,7 +35,7 @@ function j(e, t, n) {
 function y(e, t) {
     return null == t ? E.containerDefault : e > t ? E.containerDragAfter : E.containerDragBefore;
 }
-function P(e) {
+function A(e) {
     let { channel: t, disableManageChannels: n, tabIndex: i, forceShowButtons: l, hasChannelInfo: r = !1 } = e;
     if ((0, d.e7)([Z.Z, I.Z], () => n || I.Z.getGuildId() === S.I_8 || (!Z.Z.can(S.Plq.MANAGE_CHANNELS, t) && !Z.Z.can(S.Plq.MANAGE_ROLES, t) && !Z.Z.can(S.Plq.MANAGE_WEBHOOKS, t)) || ((0, v.r8)(t.type) && !Z.Z.can(S.Plq.VIEW_CHANNEL, t)) || (t.isGuildVocal() && !Z.Z.can(S.Plq.CONNECT, t)) || !v.dF.has(t.type))) return null;
     function o() {
@@ -115,7 +115,7 @@ function T(e) {
         })
     );
 }
-function A(e) {
+function P(e) {
     let { channel: t } = e,
         n = () => {
             (0, g._U)(t.guild_id, t.id);
@@ -159,13 +159,13 @@ function w(e) {
 }
 class R extends (r = o.PureComponent) {
     renderEditButton() {
-        return (0, a.jsx)(P, { ...this.props });
+        return (0, a.jsx)(A, { ...this.props });
     }
     renderInviteButton() {
         return (0, a.jsx)(T, { ...this.props });
     }
     renderRemoveSuggestionButton() {
-        return (0, a.jsx)(A, { ...this.props });
+        return (0, a.jsx)(P, { ...this.props });
     }
     renderAcceptSuggestionButton() {
         return (0, a.jsx)(w, { ...this.props });

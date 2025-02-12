@@ -1,4 +1,4 @@
-n.d(t, { default: () => O }), n(47120);
+n.d(t, { default: () => S }), n(47120);
 var i = n(200651),
     a = n(192379),
     o = n(481060),
@@ -20,26 +20,26 @@ var i = n(200651),
     I = n(747545),
     T = n(981631),
     R = n(388032),
-    S = n(45573);
-function O(e) {
-    let { transitionState: t, videoEnabled: n, onEnable: O, onClose: A } = e,
+    O = n(45573);
+function S(e) {
+    let { transitionState: t, videoEnabled: n, onEnable: S, onClose: A } = e,
         v = m.Z.getCameraComponent(),
         N = (0, u.Dt)(),
-        k = (0, h.Z)(),
-        L = f.qF.useSetting(),
+        L = (0, h.Z)(),
+        k = f.qF.useSetting(),
         [B, y] = a.useState((0, p.P)(C.default.getCurrentUser())),
         U = (0, c.O)(),
-        { analyticsLocations: w } = (0, _.ZP)(s.Z.CAMERA_PREVIEW),
-        D = a.useRef(null);
+        { analyticsLocations: D } = (0, _.ZP)(s.Z.CAMERA_PREVIEW),
+        w = a.useRef(null);
     a.useEffect(() => {
         E.default.track(T.rMx.OPEN_MODAL, { type: 'Camera Preview Modal' });
     }, []),
         a.useEffect(() => {
             var e;
-            null === (e = D.current) || void 0 === e || e.scrollToTop();
+            null === (e = w.current) || void 0 === e || e.scrollToTop();
         }, []);
     let P = async () => {
-            await x(), r.Z.setVideoEnabled(!0), null == O || O();
+            await x(), r.Z.setVideoEnabled(!0), null == S || S();
         },
         x = async () => {
             try {
@@ -53,22 +53,22 @@ function O(e) {
             await A(), (0, g.Up)(B);
         };
     return (0, i.jsx)(_.Gt, {
-        value: w,
+        value: D,
         children: (0, i.jsx)(l.Z, {
             page: T.ZY5.PREVIEW_CAMERA_MODAL,
             children: (0, i.jsxs)(o.Y0X, {
-                className: S.modalRoot,
+                className: O.modalRoot,
                 size: o.CgR.DYNAMIC,
                 'aria-labelledby': N,
                 transitionState: t,
                 children: [
                     (0, i.jsxs)(o.hzk, {
-                        className: k ? S.contentWithVideoBackgrounds : S.content,
-                        scrollerRef: D,
+                        className: L ? O.contentWithVideoBackgrounds : O.content,
+                        scrollerRef: w,
                         children: [
                             (0, i.jsx)(o.X6q, {
                                 id: N,
-                                className: S.header,
+                                className: O.header,
                                 variant: 'heading-xl/semibold',
                                 children: n ? R.intl.string(R.t.LAwwbW) : R.intl.string(R.t['/HITVF'])
                             }),
@@ -82,10 +82,10 @@ function O(e) {
                                 hideDeviceSelector: n,
                                 renderCamera: (e) =>
                                     (0, i.jsxs)('div', {
-                                        className: S.cameraPreview,
+                                        className: O.cameraPreview,
                                         children: [
                                             (0, i.jsx)('div', {
-                                                className: S.camera,
+                                                className: O.camera,
                                                 children: (0, i.jsx)(v, {
                                                     disabled: !1,
                                                     deviceId: e,
@@ -115,9 +115,9 @@ function O(e) {
                             (0, i.jsx)(o.XZJ, {
                                 size: 18,
                                 type: o.XZJ.Types.INVERTED,
-                                value: L,
+                                value: k,
                                 onChange: () => {
-                                    f.qF.updateSetting(!L), E.default.track(T.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: !L });
+                                    f.qF.updateSetting(!k), E.default.track(T.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: !k });
                                 },
                                 children: (0, i.jsx)(o.Text, {
                                     variant: 'text-sm/normal',
@@ -128,7 +128,7 @@ function O(e) {
                     }),
                     (0, i.jsx)(o.olH, {
                         onClick: A,
-                        className: S.modalClose
+                        className: O.modalClose
                     })
                 ]
             })

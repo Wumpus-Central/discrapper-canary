@@ -23,15 +23,15 @@ var i = n(200651),
 function S() {
     let e = l.useRef((0, m.PM)()),
         { onScroll: t, scrollPosition: n, resetScrollPosition: S } = (0, a.M)(),
-        { tabs: A, selectedTab: Z, setSelectedTab: b } = (0, f.Y)(),
-        x = (0, m.lg)(Z),
-        L = !C.MU.has(Z),
+        { tabs: A, selectedTab: b, setSelectedTab: Z } = (0, f.Y)(),
+        x = (0, m.lg)(b),
+        L = !C.MU.has(b),
         { searchQuery: y, onSearchTextChange: P, onClearSearch: O, onSearchSubmit: R, isSearchVisible: j } = (0, _.H)({ loadId: e.current }),
         D = p.Z.useField('searchBarState'),
         {
             onTabsAvailableWidthChange: w,
-            onCollapsedSearchBarClick: M,
-            onSearchBarBlur: k,
+            onCollapsedSearchBarClick: k,
+            onSearchBarBlur: M,
             tabsClassName: U
         } = (0, s.U)({
             isSearchBarVisible: L,
@@ -42,9 +42,9 @@ function S() {
         G = u.Z.useField('fetchedQuery'),
         B = l.useCallback(
             (e) => {
-                b(e), j && O();
+                Z(e), j && O();
             },
-            [j, O, b]
+            [j, O, Z]
         ),
         V = l.useMemo(
             () =>
@@ -67,7 +67,7 @@ function S() {
         }, [x]),
         l.useEffect(() => {
             S();
-        }, [Z, S]),
+        }, [b, S]),
         l.useEffect(() => {
             j || u.Z.setState({ scrollPosition: null });
         }, [j]),
@@ -88,7 +88,7 @@ function S() {
                             (0, i.jsx)(c.Z, {
                                 className: U,
                                 tabs: V,
-                                selectedTab: j ? null : Z,
+                                selectedTab: j ? null : b,
                                 onTabSelect: B,
                                 onAvailableWidthChange: w
                             }),
@@ -106,9 +106,9 @@ function S() {
                                 onTextChange: P,
                                 onClear: O,
                                 onSubmit: R,
-                                onCollapsedClick: M,
+                                onCollapsedClick: k,
                                 state: j ? N.GlobalDiscoverySearchBarState.DEFAULT : D,
-                                onBlur: k
+                                onBlur: M
                             })
                     ]
                 }),
@@ -119,7 +119,7 @@ function S() {
                           onGuildCardSeen: F
                       })
                     : (0, i.jsx)(E.Z, {
-                          selectedTab: Z,
+                          selectedTab: b,
                           onScroll: t,
                           onGuildCardClick: z,
                           onGuildCardSeen: F

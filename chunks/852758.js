@@ -27,7 +27,7 @@ function A() {
             theme: f.Z.theme
         })),
         A = I.Z.getVerificationTypes(e),
-        [Z, b] = l.useState(0),
+        [b, Z] = l.useState(0),
         x = (0, h.Z)(A);
     (0, p.Z)(
         {
@@ -103,7 +103,7 @@ function A() {
         }, [A, x]),
         (0, i.jsx)(C.Z, {
             types: A,
-            captchaKey: Z,
+            captchaKey: b,
             onCaptchaVerify: (e) => {
                 s.tn
                     .post({
@@ -113,7 +113,7 @@ function A() {
                         rejectWithError: !0
                     })
                     .then(d.xf, () => {
-                        b((e) => e + 1);
+                        Z((e) => e + 1);
                     });
             },
             theme: t,

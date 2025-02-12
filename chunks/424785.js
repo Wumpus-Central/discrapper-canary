@@ -26,9 +26,9 @@ var l = n(120356),
     E = n(592125),
     j = n(430824),
     y = n(607744),
-    P = n(496675),
+    A = n(496675),
     T = n(306680),
-    A = n(9156),
+    P = n(9156),
     w = n(979651),
     R = n(934415),
     L = n(98597),
@@ -222,16 +222,16 @@ function W(e) {
             unread: T.ZP.hasUnread(n.id),
             mentionCount: T.ZP.getMentionCount(n.id)
         })),
-        d = (0, a.e7)([A.ZP], () => A.ZP.resolveUnreadSetting(n)),
-        u = (0, a.cj)([E.Z, y.Z, P.Z], () => {
+        d = (0, a.e7)([P.ZP], () => P.ZP.resolveUnreadSetting(n)),
+        u = (0, a.cj)([E.Z, y.Z, A.Z], () => {
             let e = E.Z.getChannel(n.parent_id),
                 i = y.Z.getCheck(n.guild_id);
             return {
-                canManageChannel: null != t && P.Z.can(k.Plq.MANAGE_CHANNELS, n),
-                canReorderChannel: !0 !== l && (t.id === B._ || (null != e ? P.Z.can(k.Plq.MANAGE_CHANNELS, e) : P.Z.can(k.Plq.MANAGE_CHANNELS, t))),
-                canMoveMembers: P.Z.can(k.Plq.MOVE_MEMBERS, n),
-                locked: !P.Z.can(k.Plq.CONNECT, n),
-                bypassLimit: P.Z.can(k.Plq.MOVE_MEMBERS, n),
+                canManageChannel: null != t && A.Z.can(k.Plq.MANAGE_CHANNELS, n),
+                canReorderChannel: !0 !== l && (t.id === B._ || (null != e ? A.Z.can(k.Plq.MANAGE_CHANNELS, e) : A.Z.can(k.Plq.MANAGE_CHANNELS, t))),
+                canMoveMembers: A.Z.can(k.Plq.MOVE_MEMBERS, n),
+                locked: !A.Z.can(k.Plq.CONNECT, n),
+                bypassLimit: A.Z.can(k.Plq.MOVE_MEMBERS, n),
                 unverifiedAccount: !i.canChat
             };
         }),
@@ -240,7 +240,7 @@ function W(e) {
         m = (0, a.e7)([I.Z], () => I.Z.getStageInstanceByChannel(n.id), [n.id]),
         g = (0, x.Rk)(n.id, Z.pV.AUDIENCE),
         { isSubscriptionGated: _, needSubscriptionToAccess: v } = (0, f.Z)(n.id),
-        C = (0, a.e7)([A.ZP], () => A.ZP.isFavorite(t.id, n.id)),
+        C = (0, a.e7)([P.ZP], () => P.ZP.isFavorite(t.id, n.id)),
         j = (0, b.xJ)(n.id),
         w = (0, M.Z)({
             channel: n,

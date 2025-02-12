@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(447543),
     h = n(881052),
     _ = n(899370),
-    m = n(267394),
-    g = n(388905),
+    g = n(267394),
+    m = n(388905),
     p = n(639946),
     f = n(792766),
     E = n(362762),
@@ -37,7 +37,7 @@ var i = n(200651),
     B = n(436620),
     U = n(388032),
     M = n(814632);
-function F(e, t, n) {
+function G(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -51,14 +51,14 @@ function F(e, t, n) {
     );
 }
 c.ZP.initialize();
-let G = 'Accept Invite Page',
+let F = 'Accept Invite Page',
     z = {
         REGISTER: 'register',
         LOGIN: 'login'
     };
 async function V(e) {
-    let { invite: t } = await u.Z.resolveInvite(e, G);
-    null != t && (0, m.A)(t);
+    let { invite: t } = await u.Z.resolveInvite(e, F);
+    null != t && (0, g.A)(t);
 }
 class H extends r.PureComponent {
     componentDidMount() {
@@ -86,7 +86,7 @@ class H extends r.PureComponent {
             }
             u.Z.acceptInvite({
                 inviteKey: l,
-                context: this.getAcceptInviteContext(G),
+                context: this.getAcceptInviteContext(F),
                 skipOnboarding: !0,
                 callback: this.handleContinue
             });
@@ -123,28 +123,28 @@ class H extends r.PureComponent {
         });
     }
     renderSpinner(e) {
-        return (0, i.jsxs)(g.ZP, {
-            children: [(0, i.jsx)(g.Dx, { children: e }), (0, i.jsx)(g.Hh, {})]
+        return (0, i.jsxs)(m.ZP, {
+            children: [(0, i.jsx)(m.Dx, { children: e }), (0, i.jsx)(m.Hh, {})]
         });
     }
     renderInvalidInvite() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        return (0, i.jsxs)(g.ZP, {
+        return (0, i.jsxs)(m.ZP, {
             children: [
-                (0, i.jsx)(g.Ee, {
+                (0, i.jsx)(m.Ee, {
                     src: n(167969),
                     className: M.marginBottom8
                 }),
-                (0, i.jsx)(g.Dx, {
+                (0, i.jsx)(m.Dx, {
                     className: a()(M.marginTop8, M.marginBottom8),
                     children: U.intl.string(U.t.kux01N)
                 }),
-                (0, i.jsx)(g.DK, { children: e ? U.intl.string(U.t['5AkWAQ']) : U.intl.string(U.t['+qUJAg']) }),
+                (0, i.jsx)(m.DK, { children: e ? U.intl.string(U.t['5AkWAQ']) : U.intl.string(U.t['+qUJAg']) }),
                 this.renderButton(U.intl.string(U.t.fIv16O)),
-                (0, i.jsx)(g.zx, {
+                (0, i.jsx)(m.zx, {
                     onClick: () => window.open(Z.Z.getArticleURL(D.BhN.INVALID_INVITES), '_blank'),
-                    look: g.zx.Looks.LINK,
-                    color: g.zx.Colors.LINK,
+                    look: m.zx.Looks.LINK,
+                    color: m.zx.Colors.LINK,
                     className: M.marginTop8,
                     children: U.intl.string(U.t.urIwn5)
                 })
@@ -153,7 +153,7 @@ class H extends r.PureComponent {
     }
     renderErrorInvite() {
         var e, t;
-        return (0, i.jsxs)(g.ZP, {
+        return (0, i.jsxs)(m.ZP, {
             children: [
                 (0, i.jsx)(L.Z, {
                     invite: this.props.invite,
@@ -171,13 +171,13 @@ class H extends r.PureComponent {
     }
     renderAppOpened(e) {
         let t = null != e ? e : this.handleContinue;
-        return (0, i.jsxs)(g.ZP, {
+        return (0, i.jsxs)(m.ZP, {
             children: [
-                (0, i.jsx)(g.Dx, {
+                (0, i.jsx)(m.Dx, {
                     className: M.marginBottom8,
                     children: U.intl.string(U.t.csrAMD)
                 }),
-                (0, i.jsx)(g.DK, { children: U.intl.string(U.t['m1+IBg']) }),
+                (0, i.jsx)(m.DK, { children: U.intl.string(U.t['m1+IBg']) }),
                 this.renderButton(U.intl.string(U.t.fIv16O), () => t())
             ]
         });
@@ -199,7 +199,7 @@ class H extends r.PureComponent {
     renderAuthenicatedFooter() {
         let { invite: e } = this.props;
         return (null != e.stage_instance || null != e.guild_scheduled_event) && null != e.guild
-            ? (0, i.jsx)(g.ZP, {
+            ? (0, i.jsx)(m.ZP, {
                   className: M.marginTop20,
                   children: (0, i.jsx)(f.y, {
                       guild: e.guild,
@@ -213,7 +213,7 @@ class H extends r.PureComponent {
             t = null != e.stage_instance ? U.intl.string(U.t['5UKyUl']) : U.intl.string(U.t.ohMvm5);
         return (0, i.jsxs)('div', {
             children: [
-                (0, i.jsxs)(g.ZP, {
+                (0, i.jsxs)(m.ZP, {
                     children: [this.renderAuthenticatedHeader(), this.renderButton(t, this.handleAccept)]
                 }),
                 this.renderAuthenicatedFooter()
@@ -221,8 +221,8 @@ class H extends r.PureComponent {
         });
     }
     renderContinue() {
-        return (0, i.jsxs)(g.ZP, {
-            children: [(0, i.jsx)(g.Dx, { children: U.intl.string(U.t.fOc4go) }), this.renderButton(U.intl.string(U.t.fIv16O))]
+        return (0, i.jsxs)(m.ZP, {
+            children: [(0, i.jsx)(m.Dx, { children: U.intl.string(U.t.fOc4go) }), this.renderButton(U.intl.string(U.t.fIv16O))]
         });
     }
     render() {
@@ -271,24 +271,24 @@ class H extends r.PureComponent {
         var t;
         super(...e),
             (t = this),
-            F(this, 'state', { error: null }),
-            F(this, 'getAcceptInviteContext', (e) => u.Z.getInviteContext(e, this.props.invite)),
-            F(this, 'handleContinue', (e) => {
+            G(this, 'state', { error: null }),
+            G(this, 'getAcceptInviteContext', (e) => u.Z.getInviteContext(e, this.props.invite)),
+            G(this, 'handleContinue', (e) => {
                 let { invite: t, transitionTo: n } = this.props;
                 if (null != t.channel || (null == e ? void 0 : e.channel) != null) {
                     var i;
                     (null === (i = t.guild) || void 0 === i ? void 0 : i.id) != null ? n(D.Z5c.APP_WITH_INVITE_AND_GUILD_ONBOARDING(t.code)) : u.Z.transitionToInvite(null != e ? e : t, n);
                 }
             }),
-            F(this, 'handleAccept', () => {
+            G(this, 'handleAccept', () => {
                 this.setState({ error: null });
                 let e = this.getInviteKey();
                 u.Z.acceptInvite({
                     inviteKey: e,
-                    context: this.getAcceptInviteContext(G),
+                    context: this.getAcceptInviteContext(F),
                     skipOnboarding: !0,
                     callback: (t) => {
-                        (0, m.A)(t), null != t.channel && u.Z.openApp(e, t.channel.id);
+                        (0, g.A)(t), null != t.channel && u.Z.openApp(e, t.channel.id);
                     }
                 }).catch((e) => {
                     if (e instanceof h.yZ || e instanceof h.Hx) {
@@ -308,22 +308,22 @@ class H extends r.PureComponent {
                         });
                 });
             }),
-            F(this, 'handleDefaultTransition', () => {
+            G(this, 'handleDefaultTransition', () => {
                 let { defaultRoute: e, transitionTo: t } = this.props;
                 t(e);
             }),
-            F(this, 'renderButton', function (e) {
+            G(this, 'renderButton', function (e) {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : t.handleDefaultTransition,
                     { invite: r } = t.props,
                     l = null != r.stage_instance || null != r.guild_scheduled_event;
                 return B.KO
-                    ? (0, i.jsx)(g.zx, {
+                    ? (0, i.jsx)(m.zx, {
                           className: l ? M.marginTop20 : M.marginTop40,
                           onClick: n,
-                          color: l ? g.zx.Colors.GREEN : g.zx.Colors.BRAND,
+                          color: l ? m.zx.Colors.GREEN : m.zx.Colors.BRAND,
                           children: e
                       })
-                    : (0, i.jsx)(g.v6, { className: M.marginTop40 });
+                    : (0, i.jsx)(m.v6, { className: M.marginTop40 });
             });
     }
 }

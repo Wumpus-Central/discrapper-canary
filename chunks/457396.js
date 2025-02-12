@@ -27,8 +27,8 @@ var l = n(91192),
     T = n(104494),
     S = n(639119),
     A = n(655525),
-    Z = n(314684),
-    b = n(52188),
+    b = n(314684),
+    Z = n(52188),
     x = n(346497),
     L = n(924540),
     y = n(474486),
@@ -38,8 +38,8 @@ var l = n(91192),
     j = n(227140),
     D = n(474936),
     w = n(981631),
-    M = n(921944),
-    k = n(388032),
+    k = n(921944),
+    M = n(388032),
     U = n(892894);
 let G = 'NitroTabButton',
     B = (e) => {
@@ -51,7 +51,7 @@ let G = 'NitroTabButton',
             s = (0, x.Vi)(),
             o = (0, R.vx)(G),
             c = (0, R.wG)(G),
-            d = (0, Z.$_)(),
+            d = (0, b.$_)(),
             u = (0, P.V)(),
             h = (0, E.Qo)(n, i),
             m = (0, r.e7)([I.Z], () => I.Z.getCreatedAtOverride()),
@@ -74,7 +74,7 @@ let G = 'NitroTabButton',
             $ = (0, C.W)(),
             ee = (0, r.e7)([g.Z], () => g.Z.isLocalizedPromoEnabled) && null == Q,
             et = (0, x.Vi)(),
-            en = (0, Z.$_)(),
+            en = (0, b.$_)(),
             ei = (0, P.V)(),
             el = (0, R.Kn)(G),
             er = (0, R.vx)(G),
@@ -102,12 +102,12 @@ let G = 'NitroTabButton',
             er
                 ? ((t = U.referralIncentive), (V = 7))
                 : ea
-                  ? ((I = (0, i.jsx)(O.Z, { copy: k.intl.string(k.t.jyYgZ2) })), (V = 8))
+                  ? ((I = (0, i.jsx)(O.Z, { copy: M.intl.string(M.t.jyYgZ2) })), (V = 8))
                   : et
                     ? ((I = (0, i.jsx)(A.Z, {})), (V = 0))
                     : null != eg && eg === a.z.REVERSE_TRIAL_NITRO_TAB_BADGE
                       ? ((I = (0, i.jsx)(j.Z, {
-                            copy: k.intl.string(k.t.HwUCnp),
+                            copy: M.intl.string(M.t.HwUCnp),
                             showStars: !1
                         })),
                         (V = 4))
@@ -134,10 +134,10 @@ let G = 'NitroTabButton',
                               ? el
                                   ? ((I = (0, i.jsx)(y.lH, {
                                         isSelected: H,
-                                        onSelect: () => (0, u.EW)(a.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, { dismissAction: M.L.TAKE_ACTION })
+                                        onSelect: () => (0, u.EW)(a.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, { dismissAction: k.L.TAKE_ACTION })
                                     })),
                                     (V = 6))
-                                  : ee && ((I = (0, i.jsx)(b.k, { entryPoint: b.U.PrivateMessages })), H || (t = U.localizeBadge), (V = 5))
+                                  : ee && ((I = (0, i.jsx)(Z.k, { entryPoint: Z.U.PrivateMessages })), H || (t = U.localizeBadge), (V = 5))
                               : ((I = (0, i.jsx)(L.$H, {
                                     trialOffer: Q,
                                     isTabSelected: H
@@ -147,15 +147,15 @@ let G = 'NitroTabButton',
             selected: H,
             route: F,
             icon: s.SrA,
-            text: k.intl.string(k.t.Ipxkoq),
+            text: M.intl.string(M.t.Ipxkoq),
             locationState: z,
             onClick: () => {
-                eu === a.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL && eh(M.L.TAKE_ACTION),
+                eu === a.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL && eh(k.L.TAKE_ACTION),
                     f.default.track(w.rMx.NITRO_TAB_VISITED, {
                         badge_decorator: V,
                         has_premium: q
                     }),
-                    er || ea ? ((0, u.EW)(a.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: M.L.TAKE_ACTION }), ea && (0, u.EW)(a.z.REFERRAL_INCENTIVE_AWARDED_INFO, { dismissAction: M.L.TAKE_ACTION })) : null != eg && e_(M.L.USER_DISMISS);
+                    er || ea ? ((0, u.EW)(a.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: k.L.TAKE_ACTION }), ea && (0, u.EW)(a.z.REFERRAL_INCENTIVE_AWARDED_INFO, { dismissAction: k.L.TAKE_ACTION })) : null != eg && e_(k.L.USER_DISMISS);
             },
             ...W,
             ...X,

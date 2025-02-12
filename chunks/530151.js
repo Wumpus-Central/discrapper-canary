@@ -22,8 +22,8 @@ var i = n(200651),
     T = n(925329),
     S = n(707409),
     A = n(210887),
-    Z = n(283595),
-    b = n(417363),
+    b = n(283595),
+    Z = n(417363),
     x = n(941128),
     L = n(451478),
     y = n(424218),
@@ -33,7 +33,7 @@ var i = n(200651),
     j = n(981631),
     D = n(388032),
     w = n(613310);
-function M(e, t, n) {
+function k(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -46,7 +46,7 @@ function M(e, t, n) {
         e
     );
 }
-let k = (e) => {
+let M = (e) => {
         let { className: t, children: n, onContextMenu: l, item: r } = e;
         return (0, i.jsx)('div', {
             className: t,
@@ -342,7 +342,7 @@ class z extends l.PureComponent {
     }
     renderProgressPatching() {
         return (0, i.jsx)(O.Z, {
-            getHistoricalTotalBytes: b.Z.getHistoricalTotalBytesWritten,
+            getHistoricalTotalBytes: Z.Z.getHistoricalTotalBytesWritten,
             updateInterval: 5000,
             children: this.renderProgressPatchingBody
         });
@@ -382,7 +382,7 @@ class z extends l.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            M(this, 'renderProgressPatchingBody', (e, t) => {
+            k(this, 'renderProgressPatchingBody', (e, t) => {
                 let {
                     item: { state: n }
                 } = this.props;
@@ -525,14 +525,14 @@ class Q extends l.PureComponent {
                               (0, i.jsx)(R.Z, {
                                   className: a()(w.headerCell, w.networkProgress),
                                   title: D.intl.string(D.t.ytoXKi),
-                                  getHistoricalTotalBytes: b.Z.getHistoricalTotalBytesDownloaded,
+                                  getHistoricalTotalBytes: Z.Z.getHistoricalTotalBytesDownloaded,
                                   color: j.Ilk.GREEN_360,
                                   animate: l
                               }),
                               (0, i.jsx)(R.Z, {
                                   className: a()(w.headerCell, w.diskProgress),
                                   title: D.intl.string(D.t.SjohhI),
-                                  getHistoricalTotalBytes: b.Z.getHistoricalTotalBytesWritten,
+                                  getHistoricalTotalBytes: Z.Z.getHistoricalTotalBytesWritten,
                                   color: j.Ilk.BLUE_345,
                                   animate: l
                               })
@@ -544,7 +544,7 @@ class Q extends l.PureComponent {
                           data: e,
                           className: w.table,
                           rowClassName: w.row,
-                          rowComponent: k,
+                          rowComponent: M,
                           cellProps: {
                               paused: t,
                               isFocused: l,
@@ -571,9 +571,9 @@ class Q extends l.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            M(this, 'isUnmounted', !1),
-            M(this, 'isTallerThanHalfViewport', !1),
-            M(
+            k(this, 'isUnmounted', !1),
+            k(this, 'isTallerThanHalfViewport', !1),
+            k(
                 this,
                 'throttledUpdateHeight',
                 o().throttle(() => {
@@ -598,7 +598,7 @@ function J(e, t, n, i) {
                     branchId: s,
                     state: c,
                     application: o,
-                    libraryApplication: Z.Z.getLibraryApplication(a, s),
+                    libraryApplication: b.Z.getLibraryApplication(a, s),
                     finished: t,
                     index: r
                 }),
@@ -607,8 +607,8 @@ function J(e, t, n, i) {
     }, []);
 }
 let $ = (0, E.Z)(
-    c.ZP.connectStores([I.Z, b.Z, x.Z, A.Z, L.Z], () => ({
-        applications: [...J(x.Z.activeItems, !1, I.Z, b.Z), ...J(x.Z.finishedItems, !0, I.Z, b.Z)],
+    c.ZP.connectStores([I.Z, Z.Z, x.Z, A.Z, L.Z], () => ({
+        applications: [...J(x.Z.activeItems, !1, I.Z, Z.Z), ...J(x.Z.finishedItems, !0, I.Z, Z.Z)],
         paused: x.Z.paused,
         isFocused: L.Z.isFocused(),
         theme: A.Z.theme

@@ -22,8 +22,8 @@ var i = n(200651),
     T = n(611855),
     S = n(670638),
     A = n(667105),
-    Z = n(860151),
-    b = n(341907),
+    b = n(860151),
+    Z = n(341907),
     x = n(46140),
     L = n(981631),
     y = n(388032),
@@ -73,20 +73,20 @@ function R(e) {
         w = l.useCallback((e) => {
             e.stopPropagation();
         }, []),
-        M = l.useCallback(() => {
+        k = l.useCallback(() => {
             (0, h.AH)(I.id, {
                 questContent: g.jn.ACTIVITY_PANEL,
                 questContentCTA: u.jZ.ACCEPT_QUEST
             });
         }, [I]),
-        k = l.useCallback(() => {
+        M = l.useCallback(() => {
             null != I &&
                 (C({
                     questId: I.id,
                     questContent: g.jn.ACTIVITY_PANEL,
                     questContentCTA: u.jZ.TRACK_PROGRESS
                 }),
-                (0, b.navigateToQuestHome)({
+                (0, Z.navigateToQuestHome)({
                     fromContent: g.jn.ACTIVITY_PANEL,
                     questId: I.id
                 }));
@@ -97,7 +97,7 @@ function R(e) {
                 questContent: g.jn.ACTIVITY_PANEL,
                 questContentCTA: u.jZ.LEARN_MORE
             }),
-                (0, b.navigateToQuestHome)({
+                (0, Z.navigateToQuestHome)({
                     fromContent: g.jn.ACTIVITY_PANEL,
                     questId: I.id
                 });
@@ -179,7 +179,7 @@ function R(e) {
                       }),
                   V &&
                       !H &&
-                      (0, i.jsx)(Z.Z, {
+                      (0, i.jsx)(b.Z, {
                           autoplay: L,
                           className: P.rewardTileWithInstructions,
                           quest: I,
@@ -205,7 +205,7 @@ function R(e) {
                                           className: P.cta,
                                           color: c.zxk.Colors.BRAND,
                                           fullWidth: !0,
-                                          onClick: M,
+                                          onClick: k,
                                           size: c.zxk.Sizes.SMALL,
                                           submitting: N,
                                           children: y.intl.string(y.t.l7E81t)
@@ -218,7 +218,7 @@ function R(e) {
                                   className: P.cta,
                                   color: c.zxk.Colors.BRAND,
                                   fullWidth: !0,
-                                  onClick: k,
+                                  onClick: M,
                                   size: c.zxk.Sizes.SMALL,
                                   children: y.intl.string(y.t.VN1Ajo)
                               }),

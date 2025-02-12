@@ -25,9 +25,9 @@ var i = n(200651),
     E = n(550532),
     j = n(436774),
     y = n(594190),
-    P = n(925329),
+    A = n(925329),
     T = n(102172),
-    A = n(74299),
+    P = n(74299),
     w = n(914923),
     R = n(165393),
     L = n(989941),
@@ -151,10 +151,10 @@ class ea extends l.PureComponent {
               });
         let m = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(P.Z, {
+                (0, i.jsx)(A.Z, {
                     className: el.gameIcon,
                     game: n,
-                    size: P.Z.Sizes.SMALL
+                    size: A.Z.Sizes.SMALL
                 }),
                 (0, i.jsxs)('div', {
                     className: el.info,
@@ -226,8 +226,8 @@ let eo = (0, g.Z)(function (e) {
         [b] = (0, I.Z)([null !== (t = null != m && null != m.id ? m.id : null != o && null != o.id ? o.id : null != C ? C.applicationId : void 0) && void 0 !== t ? t : '']),
         N = (0, c.e7)([E.Z], () => E.Z.getFakeGameData()),
         j = (0, c.e7)([x.ZP], () => x.ZP.getCurrentEmbeddedActivity()),
-        P = (0, v.Z0)() && null != j && (0, _.R)(),
-        w = (0, c.e7)([H.Z], () => (0, A.Z)(H.Z) && (0, K.isWindows)()),
+        A = (0, v.Z0)() && null != j && (0, _.R)(),
+        w = (0, c.e7)([H.Z], () => (0, P.Z)(H.Z) && (0, K.isWindows)()),
         R = (0, c.e7)([W.Z], () => (null != a ? W.Z.findActivity(a, (e) => e.type === en.IIU.PLAYING) : null)),
         M = null != p && p.ownerId === a && p.state !== en.jm8.ENDED,
         G = (0, c.e7)([Q.default, q.Z], () => (null != u ? (0, S.F6)(u, Q.default, q.Z) : void 0)),
@@ -236,7 +236,7 @@ let eo = (0, g.Z)(function (e) {
     return (0, i.jsx)(ea, {
         ...r,
         guildId: n,
-        canGoLive: w || P || void 0 !== N,
+        canGoLive: w || A || void 0 !== N,
         activity: R,
         embeddedActivity: C,
         userId: a,

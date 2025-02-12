@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M }), n(47120);
+n.d(t, { Z: () => k }), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
@@ -22,8 +22,8 @@ var i = n(200651),
     T = n(922482),
     S = n(565799),
     A = n(501655),
-    Z = n(427679),
-    b = n(448206),
+    b = n(427679),
+    Z = n(448206),
     x = n(184301),
     L = n(347475),
     y = n(496675),
@@ -33,25 +33,25 @@ var i = n(200651),
     j = n(765305),
     D = n(388032),
     w = n(364049);
-function M(e) {
+function k(e) {
     let { guild: t, isStudyRoomNotice: n = !1 } = e,
         r = (0, E.y)(t.id),
-        M = (0, I.k5)(t.id),
-        k = (0, s.e7)([Z.Z], () => Z.Z.getStageInstanceByChannel(null == r ? void 0 : r.id), [r]),
+        k = (0, I.k5)(t.id),
+        M = (0, s.e7)([b.Z], () => b.Z.getStageInstanceByChannel(null == r ? void 0 : r.id), [r]),
         { isStageNoticeHidden: U, isEventNoticeHidden: G } = (0, s.cj)(
             [_.Z],
             () => ({
-                isStageNoticeHidden: _.Z.isLiveChannelNoticeHidden({ stageId: null == k ? void 0 : k.id }),
-                isEventNoticeHidden: _.Z.isLiveChannelNoticeHidden({ eventId: null == M ? void 0 : M.id })
+                isStageNoticeHidden: _.Z.isLiveChannelNoticeHidden({ stageId: null == M ? void 0 : M.id }),
+                isEventNoticeHidden: _.Z.isLiveChannelNoticeHidden({ eventId: null == k ? void 0 : k.id })
             }),
-            [k, M]
+            [M, k]
         ),
         B = null == r ? void 0 : r.id,
         V = (0, s.Wu)([S.Z], () => [...new Set(S.Z.getMutableParticipants(B, A.pV.SPEAKER).map((e) => e.user))], [B]),
         H = (0, s.e7)([S.Z], () => (null != B ? S.Z.getParticipantCount(B, A.pV.AUDIENCE) : 0), [B]),
         F = (0, s.e7)([y.Z], () => y.Z.can(R.Plq.CONNECT, r)),
-        z = (0, b.Z)(null == r ? void 0 : r.id),
-        W = null == M ? void 0 : M.creator_id,
+        z = (0, Z.Z)(null == r ? void 0 : r.id),
+        W = null == k ? void 0 : k.creator_id,
         Y = (0, s.e7)([P.default], () => P.default.getUser(W), [W]);
     l.useEffect(() => {
         null != W && (0, d.PR)(W);
@@ -267,8 +267,8 @@ function M(e) {
                 }
                 return { noticeType: null };
             })({
-                guildEvent: M,
-                stageInstance: k,
+                guildEvent: k,
+                stageInstance: M,
                 activeChannel: r,
                 canConnect: F,
                 myRole: z,
@@ -279,7 +279,7 @@ function M(e) {
                 isStageNoticeHidden: U,
                 isStudyRoomNotice: n
             }),
-        [M, k, r, F, z, Y, V, H, G, U, n]
+        [k, M, r, F, z, Y, V, H, G, U, n]
     );
     return null == K
         ? null
@@ -370,8 +370,8 @@ function M(e) {
                             onClick: () => {
                                 if (J) null != r && null != r.getGuildId() && ((0, T.Cq)(r), (0, v.XU)(r.getGuildId(), r.id));
                                 else {
-                                    if (null == M) return;
-                                    (0, m.bO)({ eventId: M.id });
+                                    if (null == k) return;
+                                    (0, m.bO)({ eventId: k.id });
                                 }
                             },
                             className: w.button,

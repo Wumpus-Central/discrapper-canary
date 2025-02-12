@@ -137,23 +137,23 @@ if (null === c.Z || void 0 === c.Z ? void 0 : c.Z.features.supports('notificatio
     } catch (e) {
         O.warn('Native notification setup failed with error: ', e);
     }
-async function z() {
+async function U() {
     if (null === c.Z || void 0 === c.Z ? void 0 : c.Z.features.supports('notifications')) {
         var e;
         return (null === (e = await w()) || void 0 === e ? void 0 : e.authorizationStatus) === 'authorized';
     }
     return null != M && 'granted' === M.permission;
 }
-function U(e) {
+function z(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
         n = arguments.length > 2 ? arguments[2] : void 0;
     e.includes('message') ? D(e, t, n) : P(e, t, n);
 }
 async function G(e) {
-    return (g.Z.disableNotifications && null == e.overrideStreamerMode) || !(await z()) || (N.isPlatformEmbedded && !E.ZP.shouldDisplayNotifications());
+    return (g.Z.disableNotifications && null == e.overrideStreamerMode) || !(await U()) || (N.isPlatformEmbedded && !E.ZP.shouldDisplayNotifications());
 }
 let H = {
-    hasPermission: z,
+    hasPermission: U,
     requestPermission: function (e) {
         if (null === c.Z || void 0 === c.Z ? void 0 : c.Z.features.supports('notifications'))
             try {
@@ -173,14 +173,14 @@ let H = {
             }
         null != M &&
             M.requestPermission(async () => {
-                null != e && e(await z());
+                null != e && e(await U());
             });
     },
     showNotification: async function (e, t, n, a, r) {
         var l, i, o, s;
         let c;
         if (await G(r)) {
-            null != r.sound && !1 !== r.playSoundIfDisabled && U(r.sound, null !== (l = r.volume) && void 0 !== l ? l : 1, r.soundpack);
+            null != r.sound && !1 !== r.playSoundIfDisabled && z(r.sound, null !== (l = r.volume) && void 0 !== l ? l : 1, r.soundpack);
             return;
         }
         let u = null !== (i = null == r ? void 0 : r.tag) && void 0 !== i ? i : null,
@@ -192,7 +192,7 @@ let H = {
                 null === (t = r.onShown) || void 0 === t || t.call(r), r.omitViewTracking || j.default.track(S.rMx.NOTIFICATION_VIEWED, a), Z && setTimeout(() => e.close(), 5000);
             };
         if (
-            (null == r.sound || _ || U(r.sound, null !== (o = r.volume) && void 0 !== o ? o : 1, r.soundpack),
+            (null == r.sound || _ || z(r.sound, null !== (o = r.volume) && void 0 !== o ? o : 1, r.soundpack),
             h.Z.getCurrentConfig({ location: 'showNotification' }).enabled &&
                 r.isUserAvatar &&
                 null != e &&
@@ -257,7 +257,7 @@ let H = {
                 O.warn('Native notification failed with error: ', e);
             }
         }
-        null != r.sound && x && U(r.sound, null !== (s = r.volume) && void 0 !== s ? s : 1, r.soundpack);
+        null != r.sound && x && z(r.sound, null !== (s = r.volume) && void 0 !== s ? s : 1, r.soundpack);
         let y = {
             icon: e,
             body: n,

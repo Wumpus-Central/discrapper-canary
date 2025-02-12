@@ -1,5 +1,5 @@
 n.d(t, {
-    PD: () => A,
+    PD: () => P,
     ZP: () => L,
     aR: () => w
 }),
@@ -30,7 +30,7 @@ var i = n(200651),
     E = n(981631),
     j = n(388032),
     y = n(474985);
-let P = (0, Z.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
+let A = (0, Z.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
     T = (e) => {
         let { guild: t, onSelect: n } = e,
             [r, a] = l.useState(t.premiumProgressBarEnabled),
@@ -53,8 +53,8 @@ let P = (0, Z.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
             })
         });
     },
-    A = 57,
-    w = 57 + P,
+    P = 57,
+    w = 57 + A,
     R = {
         tension: 180,
         friction: 80
@@ -64,10 +64,10 @@ let P = (0, Z.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
             r = (0, f.Q3)('GuildBoostingSidebarDisplay'),
             { analyticsLocations: d } = (0, g.ZP)(p.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY),
             { premiumSubscriberCount: _, id: Z } = t,
-            P = (0, x.rF)(_, Z),
-            A = (0, x.FZ)(P, t.id),
-            w = null == A,
-            L = null != A ? A : P,
+            A = (0, x.rF)(_, Z),
+            P = (0, x.FZ)(A, t.id),
+            w = null == P,
+            L = null != P ? P : A,
             M = (0, c.e7)([b.Z], () => {
                 var e;
                 return null !== (e = b.Z.getCountForGuild(Z)) && void 0 !== e ? e : 0;

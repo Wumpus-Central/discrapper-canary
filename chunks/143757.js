@@ -22,8 +22,8 @@ var i = n(200651),
     T = n(415439),
     S = n(981631),
     A = n(388032),
-    Z = n(796665),
-    b = n(220704);
+    b = n(796665),
+    Z = n(220704);
 function x(e) {
     let { analyticsLocations: t, analyticsContext: n } = e;
     return (0, i.jsx)(I.Z.Icon, {
@@ -36,8 +36,8 @@ function x(e) {
             });
         },
         icon: o.qJs,
-        className: Z.plusIcon,
-        iconClassName: Z.plusIcon,
+        className: b.plusIcon,
+        iconClassName: b.plusIcon,
         tooltip: A.intl.string(A.t.qJvTKS),
         tooltipPosition: 'top'
     });
@@ -51,32 +51,32 @@ function L(e) {
         E = n === t.id,
         I = null != n;
     return (0, i.jsx)(o.P3F, {
-        className: a()(Z.clickable, { [Z.disabledClickable]: I }),
+        className: a()(b.clickable, { [b.disabledClickable]: I }),
         onClick: () => (_ || I ? null : (0, T.Kt)(t, l, c)),
         'aria-label': A.intl.formatToPlainString(A.t['zLhr9/'], {
             applicationName: t.name,
             applicationDescription: t.description
         }),
         children: (0, i.jsx)(o.ua7, {
-            tooltipContentClassName: Z.tooltipContent,
+            tooltipContentClassName: b.tooltipContent,
             text: t.name,
             children: (e) => {
                 let { ...n } = e;
                 return (0, i.jsxs)('div', {
-                    className: Z.iconContainer,
+                    className: b.iconContainer,
                     ...n,
                     children: [
                         (0, i.jsx)(f.Z, {
                             application: t,
-                            className: Z.iconCard,
+                            className: b.iconCard,
                             'aria-hidden': !0,
                             rendersPlaceholder: !0
                         }),
                         E || _
                             ? (0, i.jsx)(o.$jN, {
                                   type: o.$jN.Type.PULSING_ELLIPSIS,
-                                  className: Z.spinner,
-                                  itemClassName: _ ? Z.spinnerInnerRunning : void 0
+                                  className: b.spinner,
+                                  itemClassName: _ ? b.spinnerInnerRunning : void 0
                               })
                             : null
                     ]
@@ -88,7 +88,7 @@ function L(e) {
 function y(e) {
     let { frecentApps: t, loadingAppId: n, setLoadingAppId: l, analyticsLocations: r } = e;
     return (0, i.jsx)('div', {
-        className: Z.itemContainer,
+        className: b.itemContainer,
         children: t.map((e) => {
             var t;
             return (0, i.jsx)(
@@ -127,14 +127,14 @@ function O(e) {
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)('div', {
-                    className: Z.container,
+                    className: b.container,
                     onContextMenu: P,
                     children: [
                         (0, i.jsxs)(E.Z, {
-                            className: a()(Z.headerContainer, b.privateChannelsHeaderContainer),
+                            className: a()(b.headerContainer, Z.privateChannelsHeaderContainer),
                             children: [
                                 (0, i.jsx)('span', {
-                                    className: b.headerText,
+                                    className: Z.headerText,
                                     children: A.intl.string(A.t.vayAzs)
                                 }),
                                 (0, i.jsx)(x, {

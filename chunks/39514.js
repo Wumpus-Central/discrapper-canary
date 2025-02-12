@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(978085),
     h = n(232567),
     _ = n(388905),
-    m = n(362762),
-    g = n(108427),
+    g = n(362762),
+    m = n(108427),
     p = n(314897),
     f = n(896797),
     E = n(82142),
@@ -43,7 +43,7 @@ o.ZP.initialize();
 class j extends r.PureComponent {
     componentDidMount() {
         let { authenticated: e, isResolved: t } = this.props;
-        e && this.handleAuthenticated(), t || this.resolveGiftCode(), (0, g.e)('gift_code');
+        e && this.handleAuthenticated(), t || this.resolveGiftCode(), (0, m.e)('gift_code');
     }
     componentDidUpdate(e) {
         let { authenticated: t, isResolved: n } = this.props;
@@ -254,7 +254,7 @@ class j extends r.PureComponent {
             });
     }
 }
-let L = o.ZP.connectStores([E.Z, x.Z, p.default, I.Z, f.Z, m.Z], (e) => {
+let L = o.ZP.connectStores([E.Z, x.Z, p.default, I.Z, f.Z, g.Z], (e) => {
     let t = e.match.params.giftCode,
         n = E.Z.get(t),
         i = null != n ? I.Z.get(n.skuId) : null;
@@ -267,6 +267,6 @@ let L = o.ZP.connectStores([E.Z, x.Z, p.default, I.Z, f.Z, m.Z], (e) => {
         isResolved: E.Z.getIsResolved(t),
         isAccepting: E.Z.getIsAccepting(t),
         libraryApplicationsFetched: x.Z.fetched,
-        nativeAppState: m.Z.getState(t)
+        nativeAppState: g.Z.getState(t)
     };
 })(j);

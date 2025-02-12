@@ -1,4 +1,4 @@
-n.d(t, { Z: () => U }), n(47120), n(653041);
+n.d(t, { Z: () => Z }), n(47120), n(653041);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
@@ -6,8 +6,8 @@ var i = n(200651),
     a = n(512722),
     o = n.n(a),
     c = n(392711),
-    u = n.n(c),
-    d = n(748780),
+    d = n.n(c),
+    u = n(748780),
     E = n(442837),
     _ = n(215569),
     h = n(481060),
@@ -35,10 +35,10 @@ function O(e, t, n) {
     );
 }
 let f = {
-    UP: u().throttle(() => (0, m.GN)('ddr-up'), 100),
-    DOWN: u().throttle(() => (0, m.GN)('ddr-down'), 100),
-    LEFT: u().throttle(() => (0, m.GN)('ddr-left'), 100),
-    RIGHT: u().throttle(() => (0, m.GN)('ddr-right'), 100)
+    UP: d().throttle(() => (0, m.GN)('ddr-up'), 100),
+    DOWN: d().throttle(() => (0, m.GN)('ddr-down'), 100),
+    LEFT: d().throttle(() => (0, m.GN)('ddr-left'), 100),
+    RIGHT: d().throttle(() => (0, m.GN)('ddr-right'), 100)
 };
 function P(e) {
     switch (e.keyCode) {
@@ -62,7 +62,7 @@ function D(e) {
 function M() {
     let e = l.useMemo(
         () =>
-            u()((0, I.Rv)())
+            d()((0, I.Rv)())
                 .groupBy((e) => e.group)
                 .value(),
         []
@@ -146,7 +146,7 @@ class v extends l.PureComponent {
     }
     render() {
         let { UP: e, DOWN: t, LEFT: n, RIGHT: l } = this.state;
-        return (0, i.jsxs)(d.Z.div, {
+        return (0, i.jsxs)(u.Z.div, {
             className: g.keyboardShortcutsModal,
             style: this.getStyles(),
             children: [
@@ -167,25 +167,25 @@ class v extends l.PureComponent {
                 (0, i.jsxs)('div', {
                     className: g.ddrArrows,
                     children: [
-                        (0, i.jsx)(Z, {
+                        (0, i.jsx)(U, {
                             arrow: 'LEFT',
                             isActive: n,
                             className: g.left,
                             children: 'left'
                         }),
-                        (0, i.jsx)(Z, {
+                        (0, i.jsx)(U, {
                             arrow: 'DOWN',
                             isActive: t,
                             className: g.down,
                             children: 'down'
                         }),
-                        (0, i.jsx)(Z, {
+                        (0, i.jsx)(U, {
                             arrow: 'UP',
                             isActive: e,
                             className: g.up,
                             children: 'up'
                         }),
-                        (0, i.jsx)(Z, {
+                        (0, i.jsx)(U, {
                             arrow: 'RIGHT',
                             isActive: l,
                             className: g.right,
@@ -208,9 +208,9 @@ class v extends l.PureComponent {
                 DOWN: !1,
                 LEFT: !1,
                 RIGHT: !1,
-                opacity: new d.Z.Value(1),
-                scaleX: new d.Z.Value(1),
-                scaleY: new d.Z.Value(0),
+                opacity: new u.Z.Value(1),
+                scaleX: new u.Z.Value(1),
+                scaleY: new u.Z.Value(0),
                 animating: !1
             }),
             O(this, 'scrollerRef', l.createRef()),
@@ -236,11 +236,11 @@ class v extends l.PureComponent {
                     this.state.opacity.setValue(1),
                     this.state.scaleX.setValue(0.5),
                     this.state.scaleY.setValue(1),
-                    d.Z.sequence([
-                        d.Z.timing(this.state.opacity, {
+                    u.Z.sequence([
+                        u.Z.timing(this.state.opacity, {
                             toValue: 0,
                             duration: 800,
-                            easing: d.Z.Easing.cubic
+                            easing: u.Z.Easing.cubic
                         })
                     ]).start(e);
             }),
@@ -282,10 +282,10 @@ class v extends l.PureComponent {
             });
     }
 }
-function Z(e) {
+function U(e) {
     let { isActive: t, arrow: n, className: r, children: a } = e,
         [o, c] = l.useState(t),
-        u = l.useCallback(() => {
+        d = l.useCallback(() => {
             f[n](), c(!0);
         }, [n]);
     return (
@@ -296,18 +296,18 @@ function Z(e) {
             }
         }, [o]),
         (0, i.jsx)(h.P3F, {
-            onClick: u,
+            onClick: d,
             className: s()(g.arrow, r, { [g.active]: t || o }),
             children: a
         })
     );
 }
-function U(e) {
+function Z(e) {
     let { transitionState: t, onClose: n } = e,
         [r, a] = l.useState(!1),
         [o, c] = l.useState(!1),
-        u = l.useMemo(() => (__OVERLAY__ ? (0, C.Zg)() : (0, I.Rv)()), []),
-        { keyboardModeEnabled: d, useReducedMotion: m } = (0, E.cj)([N.Z], () => ({
+        d = l.useMemo(() => (__OVERLAY__ ? (0, C.Zg)() : (0, I.Rv)()), []),
+        { keyboardModeEnabled: u, useReducedMotion: m } = (0, E.cj)([N.Z], () => ({
             keyboardModeEnabled: N.Z.keyboardModeEnabled,
             useReducedMotion: N.Z.useReducedMotion
         }));
@@ -334,8 +334,8 @@ function U(e) {
                         : (0, i.jsx)(
                               v,
                               {
-                                  content: u,
-                                  keyboardModeEnabled: d,
+                                  content: d,
+                                  keyboardModeEnabled: u,
                                   activateRagingDemon: function () {
                                       m || (T.Z.disable(), a(!0), c(!0));
                                   }

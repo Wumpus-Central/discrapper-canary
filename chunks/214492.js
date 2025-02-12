@@ -1,7 +1,7 @@
 n.d(t, {
     fq: () => I,
-    hs: () => h,
-    oF: () => _
+    hs: () => _,
+    oF: () => h
 }),
     n(47120);
 var l = n(913527),
@@ -15,7 +15,7 @@ var l = n(913527),
     c = n(553795),
     E = n(823379),
     C = n(701488);
-function _() {
+function h() {
     let e = (0, a.Wu)([d.ZP], () =>
             d.ZP.getGamesSeen(!1)
                 .filter((e) => null != e.lastLaunched && 30 >= i()().diff(e.lastLaunched, 'days'))
@@ -36,7 +36,7 @@ function _() {
         count: t
     };
 }
-function h() {
+function _() {
     let e = (0, a.e7)([c.Z], () => c.Z.getAccounts()),
         t = (0, s.ZP)(),
         n = e.length;
@@ -52,8 +52,8 @@ function h() {
     };
 }
 function I() {
-    let { assets: e, count: t } = _(),
-        { assets: n, count: l } = h(),
+    let { assets: e, count: t } = h(),
+        { assets: n, count: l } = _(),
         i = t + l;
     return {
         assets: [...e, ...n].slice(0, i > 4 ? 3 : 4),

@@ -22,8 +22,8 @@ var i = n(200651),
     T = n(540059),
     S = n(243778),
     A = n(922409),
-    Z = n(899740),
-    b = n(28476),
+    b = n(899740),
+    Z = n(28476),
     x = n(880257),
     L = n(631885),
     y = n(849862),
@@ -33,8 +33,8 @@ var i = n(200651),
     j = n(457396),
     D = n(108989),
     w = n(51596),
-    M = n(905423),
-    k = n(155409),
+    k = n(905423),
+    M = n(155409),
     U = n(210887),
     G = n(695346),
     B = n(283595),
@@ -129,14 +129,14 @@ let et = (e) => {
         });
     },
     ei = () => {
-        let e = (0, Z.q)();
+        let e = (0, b.q)();
         return e > 0 ? (0, i.jsx)(p.mAB, { count: e }) : null;
     },
     el = (e) => {
         let { selected: t } = e,
             n = (0, c.JA)('messageRequests'),
             { channelId: l } = (0, A._)();
-        if (!(0, b.a)()) return null;
+        if (!(0, Z.a)()) return null;
         let r = null == l ? void 0 : () => g.Z.preload(X.ME, l);
         return (0, i.jsx)(Y.Qj, {
             selected: t,
@@ -218,7 +218,7 @@ let ec = l.memo(function (e) {
         className: ee.privateChannels,
         'aria-label': $.intl.string($.t.ZH9aPz),
         children: [
-            (0, i.jsx)(k.Z, {
+            (0, i.jsx)(M.Z, {
                 tutorialId: 'direct-messages',
                 position: 'right',
                 offsetX: -52,
@@ -321,12 +321,12 @@ function eu() {
         r = (0, u.e7)([B.Z], () => B.Z.hasLibraryApplication()),
         a = (0, u.e7)([V.Z], () => V.Z.getCurrentPath()),
         o = (0, T.Q3)('PrivateChannels'),
-        [c, d] = (0, M.Z)((e) => {
+        [c, d] = (0, k.Z)((e) => {
             let { channelId: t, path: n } = e;
             return [t, n];
         }, s.X),
         h = (0, j.i)({ selected: null == d ? t : d.startsWith(X.Z5c.APPLICATION_STORE) }),
-        m = (0, b.a)(),
+        m = (0, Z.a)(),
         p = (function () {
             let e = G.Ex.useSetting(),
                 t = (0, x.Z)();

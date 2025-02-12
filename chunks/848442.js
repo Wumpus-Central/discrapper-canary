@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P });
+n.d(t, { Z: () => A });
 var i = n(200651);
 n(192379);
 var l = n(120356),
@@ -31,7 +31,7 @@ function y(e) {
         g = (0, a.e7)([x.Z], () => x.Z.getGuild(t)),
         S = (null == g ? void 0 : g.hasFeature(b.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0,
         y = 'false' === s.K.get(N.tM, 'false'),
-        P = (0, a.e7)([u.Z], () => u.Z.useReducedMotion);
+        A = (0, a.e7)([u.Z], () => u.Z.useReducedMotion);
     return (0, i.jsx)(I.m, {
         id: 'shop-'.concat(t),
         className: r()(j.previewChannelRow, {
@@ -51,7 +51,7 @@ function y(e) {
         trailing: (0, i.jsxs)('div', {
             className: j.gifSection,
             children: [
-                P
+                A
                     ? (0, i.jsx)(c.IGR, {
                           color: c.TVs.unsafe_rawColors.BRAND_260.css,
                           text: E.intl.string(E.t.y2b7CA),
@@ -89,7 +89,7 @@ function y(e) {
         })
     });
 }
-function P(e) {
+function A(e) {
     let { guild: t, selected: l } = e,
         r = (0, g.g)(t, 'guild_shop_channel_row'),
         a = () => {

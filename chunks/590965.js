@@ -6,8 +6,8 @@ var l,
     a = n(442837),
     o = n(570140),
     c = n(413605),
-    u = n(703656),
-    d = n(131704),
+    d = n(703656),
+    u = n(131704),
     E = n(601964),
     _ = n(592125),
     h = n(430824),
@@ -61,8 +61,8 @@ let P = new f(o.Z, {
         if (!(t.state === m.r2o.EXPIRED || t.state === m.r2o.BANNED || t.state === m.r2o.ERROR)) {
             let { channel: e, guild: n } = t;
             if (null == e) return !1;
-            if ((0, d.bc)(e.type)) {
-                if (null != _.Z.getChannel(e.id)) return (0, u.XU)(m.ME, e.id), N.ZP.focus(), !1;
+            if ((0, u.bc)(e.type)) {
+                if (null != _.Z.getChannel(e.id)) return (0, d.XU)(m.ME, e.id), N.ZP.focus(), !1;
             } else {
                 if (null == n) return !1;
                 if (null != h.Z.getGuild(n.id) && !(0, c.TY)(t)) {
@@ -75,7 +75,7 @@ let P = new f(o.Z, {
                         }
                         return null;
                     })(t);
-                    return (0, u.XU)(n.id, e), N.ZP.focus(), !1;
+                    return (0, d.XU)(n.id, e), N.ZP.focus(), !1;
                 }
             }
         }
@@ -88,7 +88,7 @@ let P = new f(o.Z, {
             return !1;
         (S = e.context), (A = !1);
         let n = (function (e) {
-            let { approximate_member_count: t, approximate_presence_count: n, code: i, state: l, target_type: r, target_user: s, target_application: a, stage_instance: o, type: c, channel: u, guild: d, is_nickname_changeable: _ } = e,
+            let { approximate_member_count: t, approximate_presence_count: n, code: i, state: l, target_type: r, target_user: s, target_application: a, stage_instance: o, type: c, channel: d, guild: u, is_nickname_changeable: _ } = e,
                 h = {
                     code: i,
                     state: l,
@@ -101,7 +101,7 @@ let P = new f(o.Z, {
                     type: c,
                     is_nickname_changeable: _
                 };
-            return null != u && (h.channel = { ...u }), null != d && (h.guild = new E.ZP(d)), null != e.inviter && (h.inviter = { ...e.inviter }), h;
+            return null != d && (h.channel = { ...d }), null != u && (h.guild = new E.ZP(u)), null != e.inviter && (h.inviter = { ...e.inviter }), h;
         })(t);
         g.push([n, e.resolve]);
     },

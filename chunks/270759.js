@@ -22,8 +22,8 @@ var i = n(200651),
     T = n(210887),
     S = n(974042),
     A = n(849862),
-    Z = n(666286),
-    b = n(596957),
+    b = n(666286),
+    Z = n(596957),
     x = n(981631),
     L = n(723359),
     y = n(388032),
@@ -54,9 +54,9 @@ let R = function (e) {
         }, []);
     let j = (0, c.e7)([T.Z], () => T.Z.theme),
         D = (0, A.If)(),
-        { section: w, rows: M } = (0, c.cj)([S.ZP], () => S.ZP.getState()),
-        k = (0, c.e7)([f.Z], () => f.Z.getSuggestionCount()),
-        U = l.useMemo(() => M.getRelationshipCounts(), [M]);
+        { section: w, rows: k } = (0, c.cj)([S.ZP], () => S.ZP.getState()),
+        M = (0, c.e7)([f.Z], () => f.Z.getSuggestionCount()),
+        U = l.useMemo(() => k.getRelationshipCounts(), [k]);
     l.useEffect(() => {
         null != t && m.Z.setInitialSection(t), 0 === U[x.OGo.FRIEND] && 0 === U[x.OGo.PENDING_INCOMING] && 0 === U[x.OGo.PENDING_OUTGOING] && 0 === U[x.OGo.BLOCKED] && m.Z.setSection(x.pJs.ADD_FRIEND);
     }, [t, U]);
@@ -68,7 +68,7 @@ let R = function (e) {
         H = [
             {
                 id: x.pJs.ONLINE,
-                show: !R || M.filter(x.pJs.ONLINE).length > 0,
+                show: !R || k.filter(x.pJs.ONLINE).length > 0,
                 content: y.intl.string(y.t.b9w3bG),
                 className: P.item
             },
@@ -80,7 +80,7 @@ let R = function (e) {
             },
             {
                 id: x.pJs.PENDING,
-                show: !R || M.filter(x.pJs.PENDING).length > 0,
+                show: !R || k.filter(x.pJs.PENDING).length > 0,
                 content: (0, i.jsxs)(i.Fragment, {
                     children: [
                         y.intl.string(y.t.p6IHGB),
@@ -96,17 +96,17 @@ let R = function (e) {
             },
             {
                 id: x.pJs.SUGGESTIONS,
-                show: k > 0,
+                show: M > 0,
                 content: (0, i.jsxs)(i.Fragment, {
                     children: [
                         y.intl.string(y.t['8rSi19']),
                         (0, i.jsx)(d.mAB, {
-                            count: k,
+                            count: M,
                             className: P.badge
                         })
                     ]
                 }),
-                ariaLabel: y.intl.formatToPlainString(y.t.AbMQp6, { count: k.toString() }),
+                ariaLabel: y.intl.formatToPlainString(y.t.AbMQp6, { count: M.toString() }),
                 className: P.item
             },
             {
@@ -176,7 +176,7 @@ let R = function (e) {
                         id: w,
                         className: P.peopleColumn,
                         'aria-labelledby': V,
-                        children: w === x.pJs.ADD_FRIEND ? (0, i.jsx)(Z.Z, {}) : (0, i.jsx)(b.Z, { titleId: V })
+                        children: w === x.pJs.ADD_FRIEND ? (0, i.jsx)(b.Z, {}) : (0, i.jsx)(Z.Z, { titleId: V })
                     }),
                     (0, i.jsx)('div', {
                         className: P.nowPlayingColumn,

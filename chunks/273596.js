@@ -27,13 +27,13 @@ let A = Object.freeze({
         left: 32,
         right: 202
     }),
-    Z = Object.freeze({
+    b = Object.freeze({
         top: 0,
         bottom: 0,
         left: 32,
         right: 32
     }),
-    b = {
+    Z = {
         page: T.ZY5.GUILD_DISCOVERY,
         object: T.qAy.CARD,
         section: T.jXE.DISCOVER_SEARCH
@@ -49,21 +49,21 @@ function L(e) {
         O = l.useContext(u.AnalyticsContext),
         [R, j] = l.useState((0, _.PM)()),
         [D, w] = l.useState(!0),
-        M = l.useRef(D),
-        [k, U] = l.useState(3),
-        G = l.useRef(k),
+        k = l.useRef(D),
+        [M, U] = l.useState(3),
+        G = l.useRef(M),
         B = l.useRef(null),
         V = l.useCallback(
             (e) => {
-                if (null != e && !P && !m) 336 * (o.length / k) <= e.height && L();
+                if (null != e && !P && !m) 336 * (o.length / M) <= e.height && L();
             },
-            [P, m, o.length, k, L]
+            [P, m, o.length, M, L]
         ),
         H = (0, d.y)((e) => {
             let t = null == e ? void 0 : e.getBoundingClientRect();
             if (null == t) return;
             let n = t.width;
-            n < 1024 && M.current ? ((M.current = !1), w(!1)) : n > 1024 && !M.current && ((M.current = !0), w(!0));
+            n < 1024 && k.current ? ((k.current = !1), w(!1)) : n > 1024 && !k.current && ((k.current = !0), w(!0));
             let i = 1;
             for (n -= D ? 450 : 0, n -= 280; n > 0; ) (n -= 264), (i += 1);
             i !== G.current && ((G.current = i), U(i)), V(t);
@@ -172,7 +172,7 @@ function L(e) {
                             style: n,
                             children: (0, i.jsx)(v.ZP, {
                                 guildId: e,
-                                onClick: async (e) => await X(e, t, y, b),
+                                onClick: async (e) => await X(e, t, y, Z),
                                 onView: (e) => F(e)
                             })
                         },
@@ -222,7 +222,7 @@ function L(e) {
                 ),
             [L]
         ),
-        $ = D ? A : Z;
+        $ = D ? A : b;
     return (0, i.jsx)('div', {
         className: S.container,
         ref: H,
@@ -230,7 +230,7 @@ function L(e) {
             ref: B,
             className: S.masonryList,
             sections: z,
-            columns: k,
+            columns: M,
             itemGutter: 16,
             padding: $,
             renderItem: Q,

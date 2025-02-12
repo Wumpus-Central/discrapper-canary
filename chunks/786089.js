@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(47120);
+n.d(t, { Z: () => Z }), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
@@ -22,15 +22,15 @@ var i = n(200651),
     T = n(685613),
     S = n(981631),
     A = n(388032),
-    Z = n(42540);
-let b = (0, l.memo)(function (e) {
-    var t, n, r, b, x, L;
+    b = n(42540);
+let Z = (0, l.memo)(function (e) {
+    var t, n, r, Z, x, L;
     let { quest: y } = e,
         [P, O] = (0, l.useState)(!1),
         [R, j] = (0, l.useState)(24),
         [D, w] = (0, l.useState)(!1),
-        M = (0, l.useRef)(null),
         k = (0, l.useRef)(null),
+        M = (0, l.useRef)(null),
         U = (0, l.useRef)(null),
         G = (0, c.e7)([_.default], () => _.default.getCurrentUser()),
         { ref: B, height: V = 0 } = (0, h.Z)(),
@@ -43,13 +43,13 @@ let b = (0, l.memo)(function (e) {
         W = y.config.rewards[z],
         Y = (null == W ? void 0 : W.type) === o.w.FRACTIONAL_PREMIUM,
         K = (null == W ? void 0 : W.type) === o.w.COLLECTIBLE,
-        q = null == W ? void 0 : null === (b = W.collectibleProduct) || void 0 === b ? void 0 : null === (r = b.items) || void 0 === r ? void 0 : r[0],
+        q = null == W ? void 0 : null === (Z = W.collectibleProduct) || void 0 === Z ? void 0 : null === (r = Z.items) || void 0 === r ? void 0 : r[0],
         X = (null == q ? void 0 : q.type) === s.Z.AVATAR_DECORATION ? q : null;
-    (0, h.P)(M, (e) => {
+    (0, h.P)(k, (e) => {
         let { height: t } = e;
-        if (!K || null == t || null == k.current || null == M.current || null == U.current) return;
-        let n = M.current.getBoundingClientRect(),
-            i = k.current.getBoundingClientRect(),
+        if (!K || null == t || null == M.current || null == k.current || null == U.current) return;
+        let n = k.current.getBoundingClientRect(),
+            i = M.current.getBoundingClientRect(),
             l = U.current.getBoundingClientRect();
         j((i.top - n.top - l.height) / 2);
     });
@@ -77,20 +77,20 @@ let b = (0, l.memo)(function (e) {
         ? null
         : (0, i.jsx)(u.tEY, {
               children: (0, i.jsxs)('div', {
-                  ref: M,
+                  ref: k,
                   tabIndex: 0,
                   onFocus: et,
                   onBlur: en,
                   onMouseEnter: et,
                   onMouseLeave: en,
-                  className: a()(Z.container, { [Z.hovered]: P }),
+                  className: a()(b.container, { [b.hovered]: P }),
                   children: [
                       null != G &&
                           K &&
                           null != X &&
                           (0, i.jsx)('div', {
                               ref: U,
-                              className: Z.decoWrapper,
+                              className: b.decoWrapper,
                               style: { top: R },
                               children: (0, i.jsx)(p.Z, {
                                   avatarDecorationOverride: X,
@@ -99,11 +99,11 @@ let b = (0, l.memo)(function (e) {
                               })
                           }),
                       Y
-                          ? (0, i.jsx)(v.Z, { className: Z.image })
+                          ? (0, i.jsx)(v.Z, { className: b.image })
                           : $.isAnimated
                             ? (0, i.jsx)(i.Fragment, {
                                   children: (0, i.jsx)(g.Z, {
-                                      className: Z.assetBlurred,
+                                      className: b.assetBlurred,
                                       autoPlay: !1,
                                       children: (0, i.jsx)('source', {
                                           src: $.url,
@@ -113,33 +113,33 @@ let b = (0, l.memo)(function (e) {
                                   })
                               })
                             : (0, i.jsx)('img', {
-                                  className: Z.image,
+                                  className: b.image,
                                   src: $.url,
                                   alt: y.config.messages.questName,
                                   onError: () => ei($.url)
                               }),
                       (0, i.jsx)('div', {
-                          className: a()(Z.overlay, {
-                              [Z.darkThemeGradient]: Q,
-                              [Z.lightThemeGradient]: !Q
+                          className: a()(b.overlay, {
+                              [b.darkThemeGradient]: Q,
+                              [b.lightThemeGradient]: !Q
                           })
                       }),
                       (0, i.jsx)('div', {
-                          ref: k,
-                          className: Z.logoContainer,
+                          ref: M,
+                          className: b.logoContainer,
                           style: { transform: 'translateY(-'.concat(ee, 'px)') },
                           children: (0, i.jsx)(T.ZP, {
-                              logotypeClassName: a()(Z.logo, { [Z.logoWithCosponsor]: J }),
+                              logotypeClassName: a()(b.logo, { [b.logoWithCosponsor]: J }),
                               quest: y,
                               withGameTile: !1
                           })
                       }),
                       (0, i.jsxs)('div', {
                           ref: B,
-                          className: Z.details,
+                          className: b.details,
                           children: [
                               (0, i.jsx)(u.X6q, {
-                                  className: Z.title,
+                                  className: b.title,
                                   variant: 'heading-md/semibold',
                                   color: 'always-white',
                                   children: A.intl.format(A.t.EAYZAg, { questName: y.config.messages.questName })

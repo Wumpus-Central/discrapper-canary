@@ -41,7 +41,7 @@ let f = l.memo(function (e) {
             isMentionLowImportance: Z.every((e) => d.default.getIsMentionLowImportance(e)),
             unread: Z.some((e) => d.default.hasUnread(e))
         })),
-        P = l.useCallback(() => {
+        A = l.useCallback(() => {
             o.Z.toggleGuildFolderExpand(_);
         }, [_]),
         T = l.useCallback(
@@ -70,7 +70,7 @@ let f = l.memo(function (e) {
         unread: y,
         mediaState: N,
         defaultFolderName: S,
-        onExpandCollapse: P,
+        onExpandCollapse: A,
         onContextMenu: T
     });
 });

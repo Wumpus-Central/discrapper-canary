@@ -35,19 +35,19 @@ function S(e) {
             isGracePeriodVisible: f.Z.isVisible(n)
         })),
         A = (0, r.e7)([m.Z], () => m.Z.isVisible(e)),
-        Z = (0, r.e7)([I.Z], () => I.Z.isVisible(e)),
-        b = (0, r.e7)([_.Z], () => _.Z.can(v.Plq.ADMINISTRATOR, e)),
+        b = (0, r.e7)([I.Z], () => I.Z.isVisible(e)),
+        Z = (0, r.e7)([_.Z], () => _.Z.can(v.Plq.ADMINISTRATOR, e)),
         x = null != T && Date.now() - T <= v.Dge,
         L = null != e ? e.premiumSubscriberCount : 0,
         y = (0, N.rF)(L, n) !== v.Eu4.NONE,
-        P = !(null != i && Date.now() - i <= 43200000) && !x && b && y,
+        P = !(null != i && Date.now() - i <= 43200000) && !x && Z && y,
         O = (0, o.m)(n),
         R = (0, r.e7)([E.Z], () => E.Z.isVisible(e)),
         j = u.Z.useShouldShowChannelNotice(n),
         D = (0, h.h6)(e),
         { enableStudyGroup: w } = (0, d.s)(e),
-        M = D.length > 0,
-        k = w && !(null == e ? void 0 : e.hasFeature(v.oNc.HUB)),
+        k = D.length > 0,
+        M = w && !(null == e ? void 0 : e.hasFeature(v.oNc.HUB)),
         U = (0, c.Vm)(n),
         G = (0, r.e7)([p.Z], () => null != p.Z.getActiveGuildSignUp(n));
     if (
@@ -73,12 +73,12 @@ function S(e) {
     )
         return 0;
     if (S) return 1;
-    if (Z) return 2;
+    if (b) return 2;
     if (O || null != U) return 3;
     if (R) return 4;
     else if (j) return 5;
-    else if (M) return 6;
-    else if (k) return 7;
+    else if (k) return 6;
+    else if (M) return 7;
     else if (G) return 8;
     return null;
 }

@@ -20,14 +20,14 @@ let I = [],
     T = {},
     S = !1,
     A = null;
-function Z() {
+function b() {
     if (((i = null != (l = p.Z.getChannel()) ? g.Z.getGuild(l.guild_id) : null), (I = null != l && null != i && _.Z.can(E.Plq.MANAGE_WEBHOOKS, l) ? f.Z.getWebhooksForChannel(i.id, l.id) : []), null != C)) {
         let e = x(C.id);
         null != e && (C = e);
     }
     (v = E.QZA.OPEN), (T = {}), (S = !1);
 }
-let b = d().debounce(() => {
+let Z = d().debounce(() => {
     S && ((null == C || d().isEqual(C, x(C.id))) && (S = !1), S || y.emitChange());
 }, 500);
 function x(e) {
@@ -85,15 +85,15 @@ let y = new L(
         __OVERLAY__
             ? {}
             : {
-                  INTEGRATION_SETTINGS_INIT: Z,
-                  INTEGRATION_SETTINGS_SAVE_SUCCESS: Z,
+                  INTEGRATION_SETTINGS_INIT: b,
+                  INTEGRATION_SETTINGS_SAVE_SUCCESS: b,
                   CHANNEL_SETTINGS_SET_SECTION: function (e) {
                       let { section: t } = e;
                       if (t !== E.CoT.INTEGRATIONS) return !1;
                       if (((r = E.b4C.OVERVIEW), null == i)) {
                           let e = p.Z.getChannel(),
                               t = null == e ? void 0 : e.getGuildId();
-                          null != e && null != t && (m.Z.fetchForChannel(t, e.id), (N = !0)), Z();
+                          null != e && null != t && (m.Z.fetchForChannel(t, e.id), (N = !0)), b();
                       }
                   },
                   INTEGRATION_SETTINGS_SET_SECTION: function (e) {
@@ -112,7 +112,7 @@ let y = new L(
                   INTEGRATION_SETTINGS_UPDATE_WEBHOOK: function (e) {
                       let { settings: t } = e;
                       if (null == C) return !1;
-                      (C = { ...C }), null != t.name && C.name !== t.name && ((C.name = t.name), (S = !0)), void 0 !== t.avatar && C.avatar !== t.avatar && ((C.avatar = t.avatar), (S = !0)), null != t.channelId && C.channel_id !== t.channelId && ((C.channel_id = t.channelId), (S = !0)), S && b();
+                      (C = { ...C }), null != t.name && C.name !== t.name && ((C.name = t.name), (S = !0)), void 0 !== t.avatar && C.avatar !== t.avatar && ((C.avatar = t.avatar), (S = !0)), null != t.channelId && C.channel_id !== t.channelId && ((C.channel_id = t.channelId), (S = !0)), S && Z();
                   },
                   CHANNEL_SETTINGS_CLOSE: function () {
                       (l = null), (i = null), (I = []), (C = null), (v = E.QZA.CLOSED);
@@ -141,7 +141,7 @@ let y = new L(
                                       let { id: n } = t;
                                       if (n === e.id) return !0;
                                   }) && I.push(e);
-                          (I = [...I]), b();
+                          (I = [...I]), Z();
                       }
                   },
                   INTEGRATION_SETTINGS_SUBMITTING: function () {

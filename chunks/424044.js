@@ -10,15 +10,15 @@ var i = n(200651),
     u = n(353926),
     h = n(185625),
     _ = n(551549),
-    m = n(108427),
-    g = n(314897),
+    g = n(108427),
+    m = n(314897),
     p = n(981631),
     f = n(388032),
     E = n(814632);
 l.ZP.initialize();
 let x = (e) => {
     let { location: t } = e,
-        n = (0, l.e7)([g.default], () => g.default.isAuthenticated()),
+        n = (0, l.e7)([m.default], () => m.default.isAuthenticated()),
         x = (0, l.e7)([u.Z], () => u.Z.hasLoadedExperiments),
         I = (0, _.oK)('RSL - Landing Page'),
         [C, v] = r.useState(!1),
@@ -68,7 +68,7 @@ let x = (e) => {
                     v(!1);
                 }
             };
-            v(!0), e((0, c.Z)(t)), (0, m.e)('report_second_look');
+            v(!0), e((0, c.Z)(t)), (0, g.e)('report_second_look');
         }, [t]),
         I &&
             !T &&

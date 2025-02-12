@@ -25,16 +25,16 @@ var i = n(200651),
     E = n(40153),
     j = n(593618),
     y = n(252686),
-    P = n(682662),
+    A = n(682662),
     T = n(674552),
-    A = n(981631),
+    P = n(981631),
     w = n(388032),
     R = n(914217);
 let L = {
     analyticsSource: {
-        page: A.ZY5.GUILD_CHANNEL,
-        section: A.jXE.CHANNEL_LIST,
-        object: A.qAy.CHANNEL
+        page: P.ZY5.GUILD_CHANNEL,
+        section: P.jXE.CHANNEL_LIST,
+        object: P.qAy.CHANNEL
     }
 };
 function M(e, t) {
@@ -72,7 +72,7 @@ let D = l.memo(function (e) {
             },
             collect: (e) => ({ dragging: e.isDragging() })
         }),
-        ed = (0, c.Ie)(null != en ? en : A.lds),
+        ed = (0, c.Ie)(null != en ? en : P.lds),
         [eu, eh] = l.useState(!1),
         ep = !X && eu,
         [em, eg] = l.useState(!1),
@@ -179,7 +179,7 @@ let D = l.memo(function (e) {
                       children: ej
                   })
               });
-    return (0, i.jsxs)(P.H, {
+    return (0, i.jsxs)(A.H, {
         ref: eN,
         children: [
             (0, i.jsx)(S.Z, {

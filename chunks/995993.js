@@ -26,7 +26,7 @@ function S(e) {
         E = (0, d.wE)(a.z.CHANNEL_BROWSER_NEW_BADGE_NUX),
         j = (0, r.Wu)([p.Z], () => Array.from(p.Z.getNewChannelIds(t.id)).filter((e) => p.Z.shouldIndicateNewChannel(t.id, e))),
         y = (0, r.e7)([g.ZP], () => g.ZP.hasUnread(t.id, Z.W.GUILD_ONBOARDING_QUESTION)),
-        P = j.length > _.Cb,
+        A = j.length > _.Cb,
         T = (0, r.e7)([u.Z, g.ZP], () => {
             let e = u.Z.lastFetchedAt(t.id),
                 n = g.ZP.lastMessageId(t.id, Z.W.GUILD_ONBOARDING_QUESTION);
@@ -34,7 +34,7 @@ function S(e) {
             let i = f.default.extractTimestamp(n);
             return null != e && e > i;
         }),
-        A = l.useCallback(() => {
+        P = l.useCallback(() => {
             (0, m.uL)(C.Z5c.CHANNEL(t.id, N ? x.oC.CUSTOMIZE_COMMUNITY : x.oC.CHANNEL_BROWSER));
         }, [t.id, N]),
         w = l.useCallback(
@@ -52,7 +52,7 @@ function S(e) {
         ),
         R = null;
     return (
-        (E && !y && !P) ||
+        (E && !y && !A) ||
             S ||
             T ||
             (R = (0, i.jsx)(s.IGR, {
@@ -70,7 +70,7 @@ function S(e) {
                 }),
             text: N ? I.intl.string(I.t.h9mGOD) : I.intl.string(I.t.et6wam),
             selected: S,
-            onClick: A,
+            onClick: P,
             onContextMenu: w,
             trailing: R
         })

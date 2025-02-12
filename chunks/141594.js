@@ -18,9 +18,9 @@ let p = () => {
         N = i.useMemo(() => ((0, d.Fc)(E) && null != I && !C ? [I.dismissibleContent] : []), [E, I, C]),
         [v, T] = (0, o.US)(N, void 0, !0),
         [S, A] = (0, o.XR)(C && (null == I ? void 0 : I.type) === r.Z.COACHTIP ? s.z.COLLECTIBLES_SHOP_ENTRY_MARKETING : null, null !== (e = null == I ? void 0 : I.version) && void 0 !== e ? e : 0, void 0, !0),
-        Z = null;
+        b = null;
     if ((null != v || null != S) && null != I && I.type === r.Z.COACHTIP) {
-        Z = {
+        b = {
             type: h.k2.COACHTIP,
             title: () => I.title,
             body: () => I.body,
@@ -30,7 +30,7 @@ let p = () => {
         };
         let e = null === (n = I.refTargetBackground) || void 0 === n ? void 0 : n.asset;
         null != e &&
-            (Z.entryPointBackgroundAssets = {
+            (b.entryPointBackgroundAssets = {
                 srcDark: null === (p = e.resting) || void 0 === p ? void 0 : p.dark,
                 srcLight: null === (g = e.resting) || void 0 === g ? void 0 : g.light,
                 srcDarkHovered: null === (_ = e.hovered) || void 0 === _ ? void 0 : _.dark,
@@ -38,10 +38,10 @@ let p = () => {
             });
     }
     return {
-        collectiblesShopTabNewBadgeDisplayOptions: Z,
+        collectiblesShopTabNewBadgeDisplayOptions: b,
         dismissCollectiblesShopTabNewBadge: () => {
             let e = C ? A : T;
-            null != Z && e(m.L.AUTO);
+            null != b && e(m.L.AUTO);
         }
     };
 };

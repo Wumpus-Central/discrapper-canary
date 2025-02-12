@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(388905),
     h = n(17894),
     _ = n(108427),
-    m = n(626135),
-    g = n(981631),
+    g = n(626135),
+    m = n(981631),
     p = n(388032),
     f = n(285596),
     E = n(814632);
@@ -39,10 +39,10 @@ function I(e) {
         })();
     });
     let v = r.useCallback(() => {
-            l(g.Z5c.LOGIN);
+            l(m.Z5c.LOGIN);
         }, [l]),
         N = r.useCallback(() => {
-            m.default.track(g.rMx.VERIFY_ACCOUNT_APP_OPENED, { verifying_user_id: C.current }), (0, h.Z)('verify_email');
+            g.default.track(m.rMx.VERIFY_ACCOUNT_APP_OPENED, { verifying_user_id: C.current }), (0, h.Z)('verify_email');
         }, []);
     return 'failed' === o
         ? (0, i.jsxs)(u.ZP, {

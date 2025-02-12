@@ -22,8 +22,8 @@ var i = n(200651),
     T = n(267097),
     S = n(364111),
     A = n(81136),
-    Z = n(141594),
-    b = n(302800),
+    b = n(141594),
+    Z = n(302800),
     x = n(215023),
     L = n(981631),
     y = n(388032),
@@ -125,32 +125,32 @@ let O = (e) => {
             ]
         });
     }),
-    M = (e) => {
+    k = (e) => {
         var t, n, r, s, u, h, g, _, f, E, I, N;
         let v, T;
-        let { selected: S, locationState: A, displayOptions: Z } = e,
-            b = (0, o.e7)([p.Z], () => p.Z.useReducedMotion),
+        let { selected: S, locationState: A, displayOptions: b } = e,
+            Z = (0, o.e7)([p.Z], () => p.Z.useReducedMotion),
             [x, L] = l.useState(0),
             [R, D] = l.useState(!1),
-            M = (0, m.ZP)(),
-            k = Z.entrypointDecorationAssets,
-            U = (0, c.wj)(M);
-        R ? (U ? ((v = null === (t = Z.entryPointBackgroundAssets) || void 0 === t ? void 0 : t.srcDarkHovered), (T = null === (r = Z.entrypointBackgroundStyle) || void 0 === r ? void 0 : null === (n = r.hovered) || void 0 === n ? void 0 : n.dark)) : ((v = null === (s = Z.entryPointBackgroundAssets) || void 0 === s ? void 0 : s.srcLightHovered), (T = null === (h = Z.entrypointBackgroundStyle) || void 0 === h ? void 0 : null === (u = h.hovered) || void 0 === u ? void 0 : u.light))) : U ? ((v = null === (g = Z.entryPointBackgroundAssets) || void 0 === g ? void 0 : g.srcDark), (T = null === (f = Z.entrypointBackgroundStyle) || void 0 === f ? void 0 : null === (_ = f.resting) || void 0 === _ ? void 0 : _.dark)) : ((v = null === (E = Z.entryPointBackgroundAssets) || void 0 === E ? void 0 : E.srcLight), (T = null === (N = Z.entrypointBackgroundStyle) || void 0 === N ? void 0 : null === (I = N.resting) || void 0 === I ? void 0 : I.light));
+            k = (0, m.ZP)(),
+            M = b.entrypointDecorationAssets,
+            U = (0, c.wj)(k);
+        R ? (U ? ((v = null === (t = b.entryPointBackgroundAssets) || void 0 === t ? void 0 : t.srcDarkHovered), (T = null === (r = b.entrypointBackgroundStyle) || void 0 === r ? void 0 : null === (n = r.hovered) || void 0 === n ? void 0 : n.dark)) : ((v = null === (s = b.entryPointBackgroundAssets) || void 0 === s ? void 0 : s.srcLightHovered), (T = null === (h = b.entrypointBackgroundStyle) || void 0 === h ? void 0 : null === (u = h.hovered) || void 0 === u ? void 0 : u.light))) : U ? ((v = null === (g = b.entryPointBackgroundAssets) || void 0 === g ? void 0 : g.srcDark), (T = null === (f = b.entrypointBackgroundStyle) || void 0 === f ? void 0 : null === (_ = f.resting) || void 0 === _ ? void 0 : _.dark)) : ((v = null === (E = b.entryPointBackgroundAssets) || void 0 === E ? void 0 : E.srcLight), (T = null === (N = b.entrypointBackgroundStyle) || void 0 === N ? void 0 : null === (I = N.resting) || void 0 === I ? void 0 : I.light));
         let G = l.useCallback(
                 (e) => {
-                    L((e) => (e + 1) % Z.assetIds.length), D(!0), null == e || e();
+                    L((e) => (e + 1) % b.assetIds.length), D(!0), null == e || e();
                 },
-                [Z.assetIds.length]
+                [b.assetIds.length]
             ),
             B = l.useCallback((e) => {
                 D(!1), null == e || e();
             }, []),
-            V = Z.title();
+            V = b.title();
         return (0, i.jsx)(d.ua7, {
             text: (0, i.jsx)(w, {
-                displayOptions: Z,
-                assetId: Z.assetIds[x],
-                reducedMotion: b
+                displayOptions: b,
+                assetId: b.assetIds[x],
+                reducedMotion: Z
             }),
             tooltipClassName: P.marketingBadgeTooltip,
             position: 'right',
@@ -160,10 +160,10 @@ let O = (e) => {
             'aria-label': 'string' == typeof V ? V : y.intl.string(y.t.rSXaxc),
             children: (e) =>
                 (0, i.jsxs)(j, {
-                    className: null != Z.entryPointClassName ? (0, C.l)(P, Z.entryPointClassName) : void 0,
+                    className: null != b.entryPointClassName ? (0, C.l)(P, b.entryPointClassName) : void 0,
                     selected: S,
                     locationState: A,
-                    icon: Z.entryPointIcon,
+                    icon: b.entryPointIcon,
                     ...e,
                     onMouseEnter: () => G(e.onMouseEnter),
                     onMouseLeave: () => B(e.onMouseLeave),
@@ -180,20 +180,20 @@ let O = (e) => {
                                     'aria-hidden': !0
                                 })
                         }),
-                        null != k &&
-                            !b &&
+                        null != M &&
+                            !Z &&
                             (0, i.jsx)('img', {
-                                src: (0, c.wj)(M) ? k.srcDark : k.srcLight,
+                                src: (0, c.wj)(k) ? M.srcDark : M.srcLight,
                                 className: a()(P.marketingButtonImage, { [P.marketingButtonImageHovered]: R }),
                                 alt: '',
                                 'aria-hidden': !0
                             }),
-                        (0, i.jsx)(O, { color: Z.badgeColor })
+                        (0, i.jsx)(O, { color: b.badgeColor })
                     ]
                 })
         });
     },
-    k = (e) => {
+    M = (e) => {
         let { selected: t, locationState: n, displayOptions: r } = e,
             a = l.useMemo(() => {
                 var e;
@@ -223,23 +223,23 @@ let O = (e) => {
     U = () => ((0, T.Z)(), null),
     G = (e) => {
         let { selected: t, locationState: n } = e,
-            { collectiblesShopTabNewBadgeDisplayOptions: l } = (0, Z.Z)(),
+            { collectiblesShopTabNewBadgeDisplayOptions: l } = (0, b.Z)(),
             r = (0, v.b)('Collectibles Shop Button');
         if (null != l)
             switch (l.type) {
-                case b.k2.TOOLTIP:
-                    return (0, i.jsx)(k, {
-                        selected: t,
-                        locationState: n,
-                        displayOptions: l
-                    });
-                case b.k2.COACHTIP:
+                case Z.k2.TOOLTIP:
                     return (0, i.jsx)(M, {
                         selected: t,
                         locationState: n,
                         displayOptions: l
                     });
-                case b.k2.BADGE:
+                case Z.k2.COACHTIP:
+                    return (0, i.jsx)(k, {
+                        selected: t,
+                        locationState: n,
+                        displayOptions: l
+                    });
+                case Z.k2.BADGE:
                     return (0, i.jsx)(D, {
                         selected: t,
                         locationState: n

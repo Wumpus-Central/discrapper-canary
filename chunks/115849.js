@@ -52,8 +52,8 @@ function A() {
     let e = l.createRef(),
         t = l.createRef(),
         [n, r] = l.useReducer(S, C),
-        { canSend: s, hint: u, success: A, error: Z } = n,
-        b = (0, h.Q3)('AddFriendInput');
+        { canSend: s, hint: u, success: A, error: b } = n,
+        Z = (0, h.Q3)('AddFriendInput');
     return (
         l.useEffect(() => {
             null != A && (o()(null != e.current, 'Input is submitting when not mounted'), (e.current.value = ''), e.current.focus());
@@ -103,7 +103,7 @@ function A() {
                                 children: _.intl.string(_.t['Rn/sLi'])
                             })
                         }),
-                        b
+                        Z
                             ? (0, i.jsx)('img', {
                                   src: I,
                                   alt: 'Wumpus Waving'
@@ -119,7 +119,7 @@ function A() {
                         ref: t,
                         className: a()(f.addFriendInputWrapper, {
                             [f.success]: A,
-                            [f.error]: Z
+                            [f.error]: b
                         }),
                         children: [
                             (0, i.jsx)(c.oil, {
@@ -160,8 +160,8 @@ function A() {
                                 'data-1p-ignore': !0,
                                 placeholder: _.intl.string(_.t['Rn/sLi']),
                                 'aria-label': _.intl.string(_.t['Rn/sLi']),
-                                'aria-invalid': null != Z || void 0,
-                                'aria-describedby': null != Z ? T : v
+                                'aria-invalid': null != b || void 0,
+                                'aria-describedby': null != b ? T : v
                             }),
                             null != u &&
                                 (0, i.jsx)('div', {
@@ -178,13 +178,13 @@ function A() {
                         ]
                     })
                 }),
-                null != Z &&
+                null != b &&
                     (0, i.jsx)(c.R94, {
                         role: 'alert',
                         id: T,
                         type: c.R94.Types.ERROR,
                         className: E.marginTop8,
-                        children: Z
+                        children: b
                     }),
                 null != A &&
                     (0, i.jsx)(c.R94, {

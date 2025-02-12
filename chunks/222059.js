@@ -25,9 +25,9 @@ var i = n(200651),
     E = n(682662),
     j = n(662146),
     y = n(674552),
-    P = n(981631),
+    A = n(981631),
     T = n(474936),
-    A = n(871465),
+    P = n(871465),
     w = n(388032),
     R = n(337951);
 let L = {
@@ -56,7 +56,7 @@ function M(e) {
         };
     if (null == n) return null;
     let B = w.intl.string(w.t.YUU0RE);
-    Z && (B = o.K.get(P.wli) ? w.intl.string(w.t.nkq1l5) : w.intl.string(w.t.Be8Q5O));
+    Z && (B = o.K.get(A.wli) ? w.intl.string(w.t.nkq1l5) : w.intl.string(w.t.Be8Q5O));
     let O = null;
     !t &&
         _ &&
@@ -76,9 +76,9 @@ function M(e) {
                 onClick: () => {
                     if (!__OVERLAY__ && (null != b && clearTimeout(b), S(setTimeout(k, 500)), M(T + 1), 15 === T)) {
                         k();
-                        let e = !o.K.get(P.wli);
-                        o.K.set(P.wli, e),
-                            e && o.K.set(A.O5, !0),
+                        let e = !o.K.get(A.wli);
+                        o.K.set(A.wli, e),
+                            e && o.K.set(P.O5, !0),
                             e ? (0, g.GN)('discodo') : (0, g.GN)('user_leave'),
                             I(!0),
                             setTimeout(() => {
@@ -93,9 +93,9 @@ function M(e) {
                     pathname: m,
                     state: {
                         analyticsSource: {
-                            page: P.ZY5.GUILD_CHANNEL,
-                            section: P.jXE.NAVIGATION,
-                            object: P.qAy.BUTTON_HOME
+                            page: A.ZY5.GUILD_CHANNEL,
+                            section: A.jXE.NAVIGATION,
+                            object: A.qAy.BUTTON_HOME
                         }
                     }
                 },
@@ -148,11 +148,11 @@ function D() {
         g = h === s && s > 0 && n + u === 0,
         f = x.Z.getHomeLink();
     return (
-        g && (f = P.Z5c.APPLICATION_STORE),
+        g && (f = A.Z5c.APPLICATION_STORE),
         (0, i.jsx)(M, {
             selected: e,
             user: d,
-            selectedChannelId: _.Z.getChannelId(P.ME),
+            selectedChannelId: _.Z.getChannelId(A.ME),
             badge: h,
             link: f,
             showProgressBadge: t

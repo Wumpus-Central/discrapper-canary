@@ -36,8 +36,8 @@ function f(e) {
             onRejectSuccess: C,
             onError: I
         }),
-        Z = T || S,
-        b = Z || A;
+        b = T || S,
+        Z = b || A;
     return (0, i.jsxs)('div', {
         className: _.container,
         children: [
@@ -56,8 +56,8 @@ function f(e) {
                         onClick: (e) => {
                             v(f.id), e.stopPropagation();
                         },
-                        disabled: b,
-                        submitting: Z,
+                        disabled: Z,
+                        submitting: b,
                         children: g.intl.string(g.t.vicfl5)
                     }),
                     (0, i.jsx)(p.Z, {

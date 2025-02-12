@@ -22,8 +22,8 @@ var i = n(200651),
     T = n(358924),
     S = n(292140),
     A = n(525296),
-    Z = n(981631),
-    b = n(674563),
+    b = n(981631),
+    Z = n(674563),
     x = n(388032),
     L = n(735315);
 let y = 15 * I.Z.Millis.MINUTE,
@@ -47,10 +47,10 @@ let y = 15 * I.Z.Millis.MINUTE,
                 let e = m
                     .filter((e) => {
                         var t, n;
-                        return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === b.wW.GAME;
+                        return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === Z.wW.GAME;
                     })
                     .map((e) => e.game.name);
-                E.default.track(Z.rMx.NOW_PLAYING_CARD_HOVERED, {
+                E.default.track(b.rMx.NOW_PLAYING_CARD_HOVERED, {
                     num_users: g,
                     num_streams: _,
                     num_activities: f,

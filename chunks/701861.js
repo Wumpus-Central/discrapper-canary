@@ -22,7 +22,7 @@ var i = n(200651),
     T = n(65154),
     S = n(388032),
     A = n(88079);
-function Z(e, t, n) {
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,7 +35,7 @@ function Z(e, t, n) {
         e
     );
 }
-function b(e) {
+function Z(e) {
     let { user: t, applicationId: n, isGameRelationship: r, onSelect: a } = e,
         u = l.useCallback(() => {
             c.Z.openPrivateChannel(t.id, !0);
@@ -163,20 +163,20 @@ class x extends l.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            Z(this, 'peopleListItemRef', l.createRef()),
-            Z(this, 'state', { isActiveRow: !1 }),
-            Z(this, 'handleOpenPrivateChannel', (e) => {
+            b(this, 'peopleListItemRef', l.createRef()),
+            b(this, 'state', { isActiveRow: !1 }),
+            b(this, 'handleOpenPrivateChannel', (e) => {
                 let { user: t } = this.props;
                 e.stopPropagation();
                 let n = a().find(m.Z.getMutablePrivateChannels(), (e) => e.type === v.d4z.DM && e.getRecipientId() === t.id);
                 null != n ? (0, h.uL)(v.Z5c.CHANNEL(v.ME, n.id)) : c.Z.openPrivateChannel(t.id);
             }),
-            Z(this, 'handleOpenActionsMenu', (e) => {
+            b(this, 'handleOpenActionsMenu', (e) => {
                 let { user: t, isGameRelationship: n, applicationId: l } = this.props;
                 (0, d.vq)(
                     e,
                     (e) =>
-                        (0, i.jsx)(b, {
+                        (0, i.jsx)(Z, {
                             ...e,
                             user: t,
                             applicationId: l,

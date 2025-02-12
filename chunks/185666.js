@@ -7,8 +7,8 @@ var l = n(481060),
     a = n(731971),
     o = n(626135),
     c = n(379164),
-    u = n(590965),
-    d = n(981631);
+    d = n(590965),
+    u = n(981631);
 let E = 'INVITE_MODAL_KEY';
 class _ extends s.Z {
     _initialize() {
@@ -19,7 +19,7 @@ class _ extends s.Z {
     }
     handleOpenModal(e) {
         let { context: t } = e;
-        u.Z.isOpen() &&
+        d.Z.isOpen() &&
             !(0, l.nfh)(E) &&
             (0, l.ZDy)(
                 async () => {
@@ -32,7 +32,7 @@ class _ extends s.Z {
                     onCloseRequest: () => {
                         let e = (0, a.e7)(),
                             t = (0, a._J)();
-                        o.default.track(d.rMx.INVITE_ACCEPT_DISMISSED, {
+                        o.default.track(u.rMx.INVITE_ACCEPT_DISMISSED, {
                             invite_code: e,
                             guild_id: t
                         }),

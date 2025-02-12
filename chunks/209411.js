@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(743142),
     h = n(893607),
     _ = n(703656),
-    m = n(314897),
-    g = n(781428),
+    g = n(314897),
+    m = n(781428),
     p = n(981631),
     f = n(176505);
 function E(e) {
@@ -32,9 +32,9 @@ function E(e) {
             },
             [e.transitionTo]
         ),
-        { isAuthenticated: n, loginStatus: E } = (0, o.cj)([m.default], () => ({
-            isAuthenticated: m.default.isAuthenticated(),
-            loginStatus: m.default.getLoginStatus()
+        { isAuthenticated: n, loginStatus: E } = (0, o.cj)([g.default], () => ({
+            isAuthenticated: g.default.isAuthenticated(),
+            loginStatus: g.default.getLoginStatus()
         })),
         { location: x, redirectTo: I } = e,
         [C, v] = r.useState(n);
@@ -69,8 +69,8 @@ function E(e) {
         }
     }),
     C || E === p.u34.LOGGING_IN)
-        ? (0, i.jsx)(g.q, {})
-        : (0, i.jsx)(g.Z, {
+        ? (0, i.jsx)(m.q, {})
+        : (0, i.jsx)(m.Z, {
               ...e,
               transitionTo: t
           });

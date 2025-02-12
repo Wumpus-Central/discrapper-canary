@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(47120);
+n.d(t, { Z: () => Z }), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
@@ -34,7 +34,7 @@ function A(e, t, n) {
         e
     );
 }
-class Z extends l.PureComponent {
+class b extends l.PureComponent {
     renderMemberInfo() {
         let { approximateMemberCount: e, approximatePresenceCount: t } = this.props.guild;
         return null == e || null == t
@@ -147,7 +147,7 @@ class Z extends l.PureComponent {
             });
     }
 }
-let b = (0, h.Z)(
+let Z = (0, h.Z)(
     o.ZP.connectStores([C.Z, _.Z], (e) => {
         let { guild: t } = e,
             n = _.Z.isLurking(t.id);
@@ -155,5 +155,5 @@ let b = (0, h.Z)(
             isInGuild: null != C.Z.getGuild(t.id) && !n,
             isLurking: n
         };
-    })(Z)
+    })(b)
 );

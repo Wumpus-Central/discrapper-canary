@@ -25,9 +25,9 @@ var i = n(200651),
     E = n(593214),
     j = n(919755),
     y = n(110977),
-    P = n(603274),
+    A = n(603274),
     T = n(981631),
-    A = n(388032),
+    P = n(388032),
     w = n(148599);
 let R = {
     analyticsSource: {
@@ -96,7 +96,7 @@ function L() {
                 unread: V && !D,
                 className: w.pill
             }),
-            (0, i.jsx)(P.Z, {
+            (0, i.jsx)(A.Z, {
                 onShow: W,
                 children: (0, i.jsx)(y.S, {
                     children: (0, i.jsx)(c.aRk, {
@@ -105,8 +105,8 @@ function L() {
                         lowerBadge: H,
                         children: (0, i.jsx)(c.LYs, {
                             ...e,
-                            ariaLabel: A.intl.formatToPlainString(A.t['/uzRsr'], {
-                                guildName: A.intl.string(A.t.wMWycn),
+                            ariaLabel: P.intl.formatToPlainString(P.t['/uzRsr'], {
+                                guildName: P.intl.string(P.t.wMWycn),
                                 mentions: U
                             }),
                             to: {

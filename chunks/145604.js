@@ -22,8 +22,8 @@ var i = n(200651),
     T = n(355298),
     S = n(454991),
     A = n(32300),
-    Z = n(371651),
-    b = n(829907),
+    b = n(371651),
+    Z = n(829907),
     x = n(427679),
     L = n(695346),
     y = n(592125),
@@ -33,8 +33,8 @@ var i = n(200651),
     j = n(131951),
     D = n(375954),
     w = n(19780),
-    M = n(944486),
-    k = n(914010),
+    k = n(944486),
+    M = n(914010),
     U = n(885110),
     G = n(9156),
     B = n(594174),
@@ -52,7 +52,7 @@ class q extends l.PureComponent {
     }
     componentDidUpdate(e) {
         var t, n, i, l;
-        let { voiceChannelId: r, voiceChannelGuildId: c, voiceChannelType: I, voiceChannelBitrate: C, videoEnabled: T, isScreenSharing: O, runningGame: j, runningGamePid: M, selectedChannelId: B, selectedGuildId: V, connected: H, homeLink: q, friendsTabSection: X, isNSFWChannel: Q, isMemberPending: J, hasPreviewEnabled: $, postableChannelCount: ee, isTextInVoice: et, numMessageRequests: en } = this.props;
+        let { voiceChannelId: r, voiceChannelGuildId: c, voiceChannelType: I, voiceChannelBitrate: C, videoEnabled: T, isScreenSharing: O, runningGame: j, runningGamePid: k, selectedChannelId: B, selectedGuildId: V, connected: H, homeLink: q, friendsTabSection: X, isNSFWChannel: Q, isMemberPending: J, hasPreviewEnabled: $, postableChannelCount: ee, isTextInVoice: et, numMessageRequests: en } = this.props;
         if (e.voiceChannelId !== r && null != e.voiceChannelId) {
             let t = E.ZP.getCurrentGameForAnalytics(),
                 n = null != t ? t.name : '',
@@ -84,7 +84,7 @@ class q extends l.PureComponent {
             (0, d.yw)(K.rMx.CHANNEL_OPENED, { ...(0, d.$H)(r) }), (0, h.a)(K.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: r });
             let l = null,
                 a = F.Z.getFocusedPID();
-            null == a || Z.default.getOverlayMethod(a) === s.gl.Disabled || (F.Z.isInstanceLocked() ? (l = K.ADE.OVERLAY_LOCKED_ACTIVATED) : F.Z.isInstanceLocked() || (l = F.Z.isPinned(K.Odu.TEXT) ? K.ADE.OVERLAY_UNLOCKED_PINNED : K.ADE.OVERLAY_UNLOCKED)),
+            null == a || b.default.getOverlayMethod(a) === s.gl.Disabled || (F.Z.isInstanceLocked() ? (l = K.ADE.OVERLAY_LOCKED_ACTIVATED) : F.Z.isInstanceLocked() || (l = F.Z.isPinned(K.Odu.TEXT) ? K.ADE.OVERLAY_UNLOCKED_PINNED : K.ADE.OVERLAY_UNLOCKED)),
                 z.default.track(K.rMx.JOIN_VOICE_CHANNEL, {
                     location: l,
                     channel_id: r,
@@ -109,11 +109,11 @@ class q extends l.PureComponent {
                 u = null;
             u = null != n ? 'custom_override' : null != e ? 'verified_game' : 'launcher';
             let h = (0, E.b6)(j),
-                m = null !== (t = Z.default.getOverlayMethod(j.pid)) && void 0 !== t ? t : h.overlayMethod;
+                m = null !== (t = b.default.getOverlayMethod(j.pid)) && void 0 !== t ? t : h.overlayMethod;
             if (
                 (setTimeout(async () => {
                     var t;
-                    let n = await (0, b.hj)(j.pid),
+                    let n = await (0, Z.hj)(j.pid),
                         { gameName: i, gameId: l, exe: a, distributor: p } = (0, f.G8)(j),
                         g = (0, A.NW)('ChatAutoAnalytics', !1),
                         _ = h.enabledLegacy || (g && h.enabledOOP),
@@ -145,10 +145,10 @@ class q extends l.PureComponent {
                     }),
                         null != a && E.ZP.addExecutableTrackedByAnalytics(a);
                 }, 10000),
-                null != j.name && null != M && P.Z.shouldReport(j.name))
+                null != j.name && null != k && P.Z.shouldReport(j.name))
             ) {
                 let e = j.name;
-                a.Z.identifyGame(M, e)
+                a.Z.identifyGame(k, e)
                     .then((e) => a.Z.reportUnverifiedGame(e))
                     .catch((e) => new _.Z('AutoAnalytics').error('Cannot identify game', e));
             }
@@ -177,7 +177,7 @@ class q extends l.PureComponent {
                       }
                     : {}),
                 postable_channels: ee,
-                premium_progress_bar_enabled: null !== (i = null === (n = R.Z.getGuild(k.Z.getGuildId())) || void 0 === n ? void 0 : n.premiumProgressBarEnabled) && void 0 !== i && i,
+                premium_progress_bar_enabled: null !== (i = null === (n = R.Z.getGuild(M.Z.getGuildId())) || void 0 === n ? void 0 : n.premiumProgressBarEnabled) && void 0 !== i && i,
                 viewing_all_channels: !G.ZP.isOptInEnabled(V),
                 num_recent_channels: v.Z.recentsChannelCount(V)
             };
@@ -238,12 +238,12 @@ class q extends l.PureComponent {
     }
 }
 function X() {
-    let [e, t] = (0, r.Wu)([M.Z], () => [M.Z.getVoiceChannelId(), M.Z.getChannelId()], []),
+    let [e, t] = (0, r.Wu)([k.Z], () => [k.Z.getVoiceChannelId(), k.Z.getChannelId()], []),
         n = (0, r.e7)([y.Z], () => y.Z.getChannel(t), [t]),
         l = (0, r.e7)([g.Z], () => (null == n ? void 0 : n.id) != null && g.Z.getChatOpen(n.id), [n]),
         a = null == n ? void 0 : n.nsfw,
         s = (0, r.e7)([y.Z], () => y.Z.getChannel(e), [e]),
-        o = (0, r.e7)([k.Z], () => k.Z.getGuildId(), []),
+        o = (0, r.e7)([M.Z], () => M.Z.getGuildId(), []),
         d = (0, r.e7)([R.Z], () => R.Z.getGuild(o), [o]),
         u = (0, r.e7)([B.default], () => B.default.getCurrentUser(), []),
         h = (0, r.e7)(
@@ -261,8 +261,8 @@ function X() {
         v = (0, r.e7)([U.Z], () => U.Z.getPrimaryActivity(), []),
         S = (0, r.e7)([E.ZP], () => E.ZP.getCurrentGameForAnalytics(), []),
         A = (0, C.Z)(o),
-        Z = (0, r.e7)([T.Z], () => T.Z.getMessageRequestsCount(), []),
-        b = {
+        b = (0, r.e7)([T.Z], () => T.Z.getMessageRequestsCount(), []),
+        Z = {
             selectedChannelId: t,
             isNSFWChannel: a,
             selectedGuildId: o,
@@ -285,7 +285,7 @@ function X() {
             isMemberPending: h,
             postableChannelCount: A,
             isTextInVoice: l,
-            numMessageRequests: Z
+            numMessageRequests: b
         };
-    return (0, i.jsx)(q, { ...b });
+    return (0, i.jsx)(q, { ...Z });
 }

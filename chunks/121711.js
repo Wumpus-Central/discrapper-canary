@@ -22,8 +22,8 @@ var i = n(200651),
     T = n(569984),
     S = n(833435),
     A = n(918701),
-    Z = n(150560),
-    b = n(558652),
+    b = n(150560),
+    Z = n(558652),
     x = n(736683),
     L = n(452081),
     y = n(46140),
@@ -35,8 +35,8 @@ var i = n(200651),
 let w = function () {
     var e;
     let { selectedTab: t, onSelectTab: n, tabs: w } = (0, L.z)(),
-        { onScroll: M, scrollPosition: k } = (0, h.M)(),
-        U = Z.Z.getState().getUtmCurrentContext(),
+        { onScroll: k, scrollPosition: M } = (0, h.M)(),
+        U = b.Z.getState().getUtmCurrentContext(),
         G = (0, S._)({ location: y.dr.QUEST_HOME_DESKTOP }) ? x.Z : x.j,
         B = l.useRef(U);
     l.useEffect(() => {
@@ -70,10 +70,10 @@ let w = function () {
         children: [
             (0, i.jsxs)(f.ZP, {
                 variant: f._6.OVERLAY,
-                children: [(0, i.jsx)('div', { className: D.dragRegion }), (0, i.jsx)(f.z6, { scrollPosition: k }), (0, i.jsx)(f.aV, { icon: s.qDn })]
+                children: [(0, i.jsx)('div', { className: D.dragRegion }), (0, i.jsx)(f.z6, { scrollPosition: M }), (0, i.jsx)(f.aV, { icon: s.qDn })]
             }),
             (0, i.jsxs)(E.Z, {
-                onScroll: M,
+                onScroll: k,
                 children: [
                     (0, i.jsx)(p.Z, {
                         title: W,
@@ -113,7 +113,7 @@ let w = function () {
                                         })
                                 ]
                             }),
-                            t === v.e5.CLAIMED ? (0, i.jsx)(G, { onSelectTab: n }) : (0, i.jsx)(b.Z, {})
+                            t === v.e5.CLAIMED ? (0, i.jsx)(G, { onSelectTab: n }) : (0, i.jsx)(Z.Z, {})
                         ]
                     })
                 ]

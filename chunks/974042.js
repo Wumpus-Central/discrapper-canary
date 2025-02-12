@@ -47,7 +47,7 @@ function A(e) {
         applicationStream: g.Z.getAnyStreamForUser(e)
     };
 }
-function Z(e) {
+function b(e) {
     let t = [];
     return (
         r()(_.ZP.memberOf(e))
@@ -62,7 +62,7 @@ function Z(e) {
         }
     );
 }
-class b extends c.Z {
+class Z extends c.Z {
     get comparator() {
         var e, t, n, i, l;
         return [this.type, null != this.giftIntentType ? 0 : 1, null !== (l = null !== (i = null === (e = this.nickname) || void 0 === e ? void 0 : e.toLowerCase()) && void 0 !== i ? i : null === (n = this.user) || void 0 === n ? void 0 : null === (t = n.globalName) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== l ? l : this.usernameLower];
@@ -80,14 +80,14 @@ class x {
                 I.Z.getRelationships(),
                 (n, i) => (
                     n === N.OGo.FRIEND && e.add(i),
-                    new b({
+                    new Z({
                         key: i,
                         type: n,
                         userId: i,
                         nickname: I.Z.getNickname(i),
                         ...S(i),
                         ...A(i),
-                        ...Z(i),
+                        ...b(i),
                         spam: I.Z.isSpam(i),
                         ignoredUser: I.Z.isIgnored(i),
                         giftIntentType: n === N.OGo.FRIEND && p.Z.isTopAffinityFriendAnniversary({ userId: i }) ? v.hX.FRIEND_ANNIVERSARY : void 0,
@@ -105,7 +105,7 @@ class x {
                     ((a === N.OGo.FRIEND && n.has(l)) ||
                         (a === N.OGo.FRIEND && n.add(l),
                         i.push(
-                            new b({
+                            new Z({
                                 key: ''.concat(l, '-').concat(r),
                                 type: a,
                                 userId: l,
@@ -113,7 +113,7 @@ class x {
                                 nickname: I.Z.getNickname(l),
                                 ...S(l),
                                 ...A(l),
-                                ...Z(l),
+                                ...b(l),
                                 spam: I.Z.isSpam(l),
                                 ignoredUser: I.Z.isIgnored(l),
                                 isGameRelationship: !0
@@ -124,14 +124,14 @@ class x {
         let l = r().map(
             u.Z.getSuggestions(),
             (e) =>
-                new b({
+                new Z({
                     key: e.key,
                     userId: e.key,
                     type: 99,
                     nickname: e.name,
                     ...S(e.key),
                     ...A(e.key),
-                    ...Z(e.key)
+                    ...b(e.key)
                 })
         );
         return new x(r().concat(n, i, l));
@@ -214,17 +214,17 @@ function w() {
     let e = O.getRelationshipCounts();
     P = 0 === e[N.OGo.FRIEND] ? (0 !== e[N.OGo.PENDING_INCOMING] ? N.pJs.PENDING : N.pJs.ADD_FRIEND) : N.pJs.ONLINE;
 }
-function M() {
+function k() {
     O = R ? new x() : O.reset();
 }
-function k(e) {
+function M(e) {
     return function () {
         return !R && !!O.update(e) && ((O = O.clone()), !0);
     };
 }
 class U extends (i = a.ZP.Store) {
     initialize() {
-        this.waitFor(I.Z, E.Z, C.default, f.Z, _.ZP, g.Z, u.Z, d.Z), this.syncWith([I.Z], M), this.syncWith([m.Z], M), this.syncWith([u.Z], M), this.syncWith([p.Z], M), this.syncWith([C.default], k(S)), this.syncWith([E.Z, g.Z], k(A)), w();
+        this.waitFor(I.Z, E.Z, C.default, f.Z, _.ZP, g.Z, u.Z, d.Z), this.syncWith([I.Z], k), this.syncWith([m.Z], k), this.syncWith([u.Z], k), this.syncWith([p.Z], k), this.syncWith([C.default], M(S)), this.syncWith([E.Z, g.Z], M(A)), w();
     }
     getState() {
         return {
@@ -244,7 +244,7 @@ let G = new U(s.Z, {
     },
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
-        return (R = null != t), M(), !R;
+        return (R = null != t), k(), !R;
     },
     LOAD_RELATIONSHIPS_SUCCESS: function () {
         y = !1;

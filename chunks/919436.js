@@ -25,7 +25,7 @@ var i,
     E = n(674552),
     j = n(981631),
     y = n(553497);
-function P(e, t, n) {
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,7 +42,7 @@ let T = {
     friction: 28,
     tension: 600
 };
-function A(e) {
+function P(e) {
     switch (e) {
         case 'height':
         case 'opacity':
@@ -66,7 +66,7 @@ class w extends (i = r.PureComponent) {
                     height: 1,
                     opacity: 1,
                     scale: 1,
-                    config: A
+                    config: P
                 })
                 .start()
                 .then(() => this.setState({ animating: !1 }));
@@ -78,7 +78,7 @@ class w extends (i = r.PureComponent) {
             scale: 1,
             opacity: 1,
             height: 1,
-            config: A
+            config: P
         })
             .start()
             .then(e);
@@ -92,7 +92,7 @@ class w extends (i = r.PureComponent) {
                     height: 0,
                     opacity: 0,
                     scale: 0,
-                    config: A
+                    config: P
                 })
                 .start()
                 .then(e)
@@ -175,17 +175,17 @@ class w extends (i = r.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            P(this, 'state', {
+            A(this, 'state', {
                 hovered: !1,
                 animating: !0,
                 controller: new a.Controller({
                     scale: 0,
                     height: 0,
                     opacity: 0,
-                    config: A
+                    config: P
                 })
             }),
-            P(this, 'handleContextMenu', (e) => {
+            A(this, 'handleContextMenu', (e) => {
                 let { channel: t } = this.props,
                     i = t.type === j.d4z.DM ? Z.default.getUser(t.getRecipientId()) : null;
                 null != i
@@ -210,7 +210,7 @@ class w extends (i = r.PureComponent) {
             });
     }
 }
-P(w, 'defaultProps', {
+A(w, 'defaultProps', {
     badge: 0,
     audio: !1,
     video: !1,

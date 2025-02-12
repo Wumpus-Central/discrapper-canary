@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(47120);
+n.d(t, { Z: () => Z }), n(47120);
 var i = n(200651);
 n(192379);
 var l = n(873546),
@@ -35,7 +35,7 @@ function S(e, t, n) {
     );
 }
 let A = 'PremiumServerDriveAnnouncementModal';
-class Z extends o.Z {
+class b extends o.Z {
     _initialize() {
         s.Z.subscribe('PREMIUM_MARKETING_DATA_READY', this.mayShowAnnouncementModal), s.Z.subscribe('PREMIUM_MARKETING_PREVIEW', this.handlePreview);
     }
@@ -98,4 +98,4 @@ class Z extends o.Z {
             });
     }
 }
-let b = new Z();
+let Z = new b();

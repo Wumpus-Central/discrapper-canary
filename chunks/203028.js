@@ -159,7 +159,7 @@ function E(e) {
                 icon: (0, i.jsx)(p.Z.Header.Icon, { src: p.Z.Header.Icon.Src.MULTIPLE })
             };
         })(E),
-        Z = (0, d.Z)({
+        b = (0, d.Z)({
             applicationId: null === (l = E.currentActivities[0]) || void 0 === l ? void 0 : null === (t = l.activity) || void 0 === t ? void 0 : t.application_id,
             location: 'FriendsActivityFeed',
             source: c.m1.FriendsActivityFeed
@@ -170,8 +170,8 @@ function E(e) {
         title: T,
         subtitle: S,
         icon: A,
-        onSubtitleClick: Z,
-        onIconClick: Z,
+        onSubtitleClick: b,
+        onIconClick: b,
         onContextMenu: (e) => I(e, v.user)
     });
 }

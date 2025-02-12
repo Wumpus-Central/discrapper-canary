@@ -176,7 +176,7 @@ class v {
         (null != i && '' !== i && E(i)) ||
             this.subscriptions.forEach((i) => {
                 var r;
-                i.evt === e && ('function' != typeof t || t(i)) && ('object' != typeof t || g(t, null !== (r = i.args) && void 0 !== r ? r : {})) && this.dispatch(i.socket, null, _.Etm.DISPATCH, i.evt, n);
+                i.evt === e && ('function' != typeof t || t(i)) && ('object' != typeof t || g(t, null !== (r = i.args) && void 0 !== r ? r : {})) && ('function' == typeof n && (n = n(i)), this.dispatch(i.socket, null, _.Etm.DISPATCH, i.evt, n));
             });
     }
     updateSubscriptions() {

@@ -86,7 +86,7 @@ class o extends (a = r.ZP.Store) {
     }
     handleOnboardingModalReset(e) {
         let {} = e;
-        this._onboardingModalOpenedPrior = !1;
+        (this._onboardingModalOpenedPrior = !1), (this._earnedOrbsCoachmarkDedupeKeys = []);
     }
     handleEarnedOrbsCoachmarkOpen(e) {
         let { earnedOrbsQuantity: t, dedupeKey: n } = e;

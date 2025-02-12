@@ -25,11 +25,11 @@ var i = n(200651),
     E = n(388032),
     j = n(467678),
     y = n(703545),
-    P = n(193873);
+    A = n(193873);
 function T(e) {
     let { style: t, withGuildIcon: n, inverted: l } = e,
         r = {
-            className: a()(P.spine, { [P.spineWithGuildIcon]: n }, { [P.invertedSpine]: l }),
+            className: a()(A.spine, { [A.spineWithGuildIcon]: n }, { [A.invertedSpine]: l }),
             style: t
         },
         { density: o } = (0, c.TCT)();
@@ -71,10 +71,10 @@ function T(e) {
               ]
           });
 }
-function A(e) {
+function P(e) {
     let { style: t, withGuildIcon: n } = e;
     return (0, i.jsx)('svg', {
-        className: a()(P.spine, { [P.spineWithGuildIcon]: n }),
+        className: a()(A.spine, { [A.spineWithGuildIcon]: n }),
         width: '12',
         height: '11',
         viewBox: '0 0 12 11',
@@ -88,7 +88,7 @@ function A(e) {
     });
 }
 let w = l.memo(function (e) {
-    let { thread: t, isSelectedChannel: r, isSelectedVoice: P, isLast: w, withGuildIcon: R } = e,
+    let { thread: t, isSelectedChannel: r, isSelectedVoice: A, isLast: w, withGuildIcon: R } = e,
         L = (0, s.e7)([C.ZP], () => C.ZP.getVoiceStatesForChannel(t), [t]),
         M = (0, s.e7)([v.Z], () => v.Z.hasVideo(t.id)),
         {
@@ -137,7 +137,7 @@ let w = l.memo(function (e) {
                 : D
                   ? E.intl.formatToPlainString(E.t.YlVvmZ, { channelName: t.name })
                   : E.intl.formatToPlainString(E.t['0nZpiI'], { channelName: t.name }),
-        Y = (0, p.Q3)('GuildSidebarThreadListEntry') ? T : A;
+        Y = (0, p.Q3)('GuildSidebarThreadListEntry') ? T : P;
     return (0, i.jsxs)('li', {
         role: H,
         className: a()(j.containerDefault, { [j.selected]: r }),
@@ -210,7 +210,7 @@ let w = l.memo(function (e) {
             }),
             (0, i.jsx)(b.Z, {
                 channel: t,
-                collapsed: !P,
+                collapsed: !A,
                 collapsedMax: 6,
                 voiceStates: L,
                 location: S.Sbl.GUILD_CHANNEL_LIST

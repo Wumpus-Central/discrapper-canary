@@ -10,15 +10,15 @@ var i = n(200651),
     u = n(570140),
     h = n(893776),
     _ = n(314897),
-    m = n(626135),
-    g = n(70956),
+    g = n(626135),
+    m = n(70956),
     p = n(970648),
     f = n(981631),
     E = n(388032),
     x = n(375078);
 let I = 'mweb_handoff_nonce',
     C = 'mweb_handoff_nonce_expiration',
-    v = 1 * g.Z.Millis.MINUTE,
+    v = 1 * m.Z.Millis.MINUTE,
     N = new Set(['nonce_missing', 'nonce_expired', 'handoff_exchange']),
     S = new Set(['deep_link_failed']),
     T = () => {
@@ -27,21 +27,21 @@ let I = 'mweb_handoff_nonce',
     b = () => {
         let e = (0, o.e7)([_.default], () => _.default.getFingerprint()),
             { fingerprint: t, handoff_token: n } = (0, l.parse)(window.location.search),
-            g = Array.isArray(t) ? (t.length > 1 ? t[0] : null) : t,
-            b = null != g ? g : null !== e ? e : void 0;
+            m = Array.isArray(t) ? (t.length > 1 ? t[0] : null) : t,
+            b = null != m ? m : null !== e ? e : void 0;
         r.useEffect(() => {
-            null !== g &&
-                e !== g &&
+            null !== m &&
+                e !== m &&
                 u.Z.dispatch({
                     type: 'FINGERPRINT',
-                    fingerprint: g
+                    fingerprint: m
                 });
-        }, [g, e]);
+        }, [m, e]);
         let [A, R] = r.useState(null),
             Z = r.useCallback(
                 (e) => {
                     R(e),
-                        m.default.track(
+                        g.default.track(
                             f.rMx.MOBILE_WEB_HANDOFF_FAILURE,
                             {
                                 reason: e,
@@ -78,7 +78,7 @@ let I = 'mweb_handoff_nonce',
                         })
                         .then((e) => h.Z.loginToken(e.body.token, !1))
                         .then(() => {
-                            m.default.track(f.rMx.LOGIN_SUCCESSFUL, {
+                            g.default.track(f.rMx.LOGIN_SUCCESSFUL, {
                                 source: f.uRl.MOBILE_WEB_HANDOFF,
                                 is_new_user: !1,
                                 fingerprint: (0, a.K)(b)
@@ -136,7 +136,7 @@ let I = 'mweb_handoff_nonce',
                                   i.set('key', e),
                                   i.set('fingerprint', b),
                                   (t.search = i.toString()),
-                                  m.default.track(
+                                  g.default.track(
                                       f.rMx.DEEP_LINK_CLICKED,
                                       {
                                           fingerprint: (0, a.K)(b),

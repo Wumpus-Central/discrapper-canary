@@ -72,7 +72,7 @@ let I = ['349134787773988865'],
                     {
                         socket: T,
                         args: { pid: S, activity: A },
-                        isSocketConnected: Z
+                        isSocketConnected: b
                     } = e;
                 if (![f.He.IPC, f.He.WEBSOCKET, f.He.POST_MESSAGE].includes(T.transport)) throw new p.Z({ errorCode: E.lTL.INVALID_COMMAND }, 'command not available from "'.concat(T.transport, '" transport'));
                 if (null == S && f.He.IPC === T.transport) throw new p.Z({ errorCode: E.lTL.INVALID_COMMAND }, 'nonzero pid required');
@@ -87,12 +87,12 @@ let I = ['349134787773988865'],
                         Promise.resolve(A)
                     );
                 A.name = T.application.name;
-                let b = T.application.id;
-                A.application_id = b;
+                let Z = T.application.id;
+                A.application_id = Z;
                 let x = T.transport === f.He.POST_MESSAGE,
                     L = (0, g.S5)(A, x);
                 L > 0 && (A.flags = L);
-                let y = d.Z.getApplication(null != b ? b : void 0);
+                let y = d.Z.getApplication(null != Z ? Z : void 0);
                 if (null != y && (0, s.Kb)(y) && x) {
                     let e = o.ZP.getCurrentEmbeddedActivity();
                     if ((null == e ? void 0 : e.applicationId) === y.id) {
@@ -128,7 +128,7 @@ let I = ['349134787773988865'],
                 return v.then((e) => {
                     var t, n;
                     let [i, l] = e;
-                    if ((null != P && (null != i ? (P.large_image = i) : delete P.large_image, null != l ? (P.small_image = l) : delete P.small_image), !Z())) return;
+                    if ((null != P && (null != i ? (P.large_image = i) : delete P.large_image, null != l ? (P.small_image = l) : delete P.small_image), !b())) return;
                     a.Z.dispatch({
                         type: 'LOCAL_ACTIVITY_UPDATE',
                         socketId: T.id,

@@ -26,7 +26,7 @@ var l = n(442837),
     E = n(276397);
 function j(e) {
     var t;
-    let { channel: n, isChannelSelected: j, isChannelCollapsed: y, voiceStates: P, enableConnectedUserLimit: T, enableActivities: A, isSubscriptionGated: w, needSubscriptionToAccess: R, isNewChannel: L, muted: M, resolvedUnreadSetting: D } = e,
+    let { channel: n, isChannelSelected: j, isChannelCollapsed: y, voiceStates: A, enableConnectedUserLimit: T, enableActivities: P, isSubscriptionGated: w, needSubscriptionToAccess: R, isNewChannel: L, muted: M, resolvedUnreadSetting: D } = e,
         G = (0, l.e7)([m.ZP], () => m.ZP.getMentionCount(n.id)),
         k = (0, l.e7)([m.ZP], () => m.ZP.getIsMentionLowImportance(n.id)),
         B = (0, o.ZP)(n),
@@ -69,19 +69,19 @@ function j(e) {
             color: 'text-muted',
             children: (0, a.NGo)(z)
         });
-    let q = null !== (t = null == P ? void 0 : P.length) && void 0 !== t ? t : 0;
+    let q = null !== (t = null == A ? void 0 : A.length) && void 0 !== t ? t : 0;
     return null != T && T && F
         ? (0, i.jsx)(Z.Z, {
               userCount: q,
               video: U || V,
               channel: n
           })
-        : y && (0, f.a)(P) && W
+        : y && (0, f.a)(A) && W
           ? (0, i.jsx)(a.IGR, {
                 text: N.intl.string(N.t.dI3q4u),
                 color: r.Z.unsafe_rawColors.RED_400.css
             })
-          : null != A && A && (0, _.u)(B)
+          : null != P && P && (0, _.u)(B)
             ? (0, i.jsx)(x.Z, {
                   embeddedApps: B,
                   muted: M

@@ -23,7 +23,7 @@ let T = l.memo(function (e) {
     let { channel: t } = e,
         { loaded: n, error: r, message: T } = (0, f.a)(t),
         S = (0, d.p)(),
-        { isBlocked: A, isIgnored: Z } = (0, s.cj)(
+        { isBlocked: A, isIgnored: b } = (0, s.cj)(
             [_.Z],
             () => ({
                 isBlocked: null != T && _.Z.isBlockedForMessage(T),
@@ -31,7 +31,7 @@ let T = l.memo(function (e) {
             }),
             [T]
         ),
-        b = (0, s.e7)([g.Z], () => g.Z.can(E.Plq.MANAGE_MESSAGES, t)),
+        Z = (0, s.e7)([g.Z], () => g.Z.can(E.Plq.MANAGE_MESSAGES, t)),
         x = p.cC.useSetting(),
         { content: L } = l.useMemo(
             () =>
@@ -60,7 +60,7 @@ let T = l.memo(function (e) {
                 color: 'text-muted',
                 children: C.intl.string(C.t['WPe+xM'])
             });
-        else if (null != T && Z)
+        else if (null != T && b)
             y = (0, i.jsx)(o.Text, {
                 className: N.messageReplacement,
                 variant: 'text-sm/normal',
@@ -68,7 +68,7 @@ let T = l.memo(function (e) {
                 children: C.intl.string(C.t.uxrh1N)
             });
         else if (null != T) {
-            let { contentPlaceholder: e, renderedContent: t } = (0, m.f)(T, L, A, Z, a()(N.messageContent, v.inlineFormat), {
+            let { contentPlaceholder: e, renderedContent: t } = (0, m.f)(T, L, A, b, a()(N.messageContent, v.inlineFormat), {
                 leadingIconClass: N.messageContentIcon,
                 trailingIconClass: N.messageContentIcon,
                 iconSize: I.WW
@@ -97,7 +97,7 @@ let T = l.memo(function (e) {
             });
     } else y = null;
     return (0, i.jsx)(c.a.Provider, {
-        value: (0, u.Z)(x, b),
+        value: (0, u.Z)(x, Z),
         children: (0, i.jsx)(o.Rny, {
             className: N.messageFocusBlock,
             children: y

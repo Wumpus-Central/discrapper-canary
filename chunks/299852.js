@@ -10,8 +10,8 @@ var i,
     u = n(388905),
     h = n(108427),
     _ = n(598077),
-    m = n(896797),
-    g = n(981631),
+    g = n(896797),
+    m = n(981631),
     p = n(930441),
     f = n(388032),
     E = n(814632);
@@ -35,7 +35,7 @@ class I extends (i = l.PureComponent) {
             t = (0, a.parse)(this.props.location.search);
         s.tn
             .post({
-                url: g.ANM.DISABLE_EMAIL_NOTIFICATIONS,
+                url: m.ANM.DISABLE_EMAIL_NOTIFICATIONS,
                 body: {
                     token: e,
                     pixel_uuid: t.hash,
@@ -88,7 +88,7 @@ class I extends (i = l.PureComponent) {
                     className: E.marginTop8,
                     color: u.zx.Colors.LINK,
                     look: u.zx.Looks.LINK,
-                    onClick: () => i(g.Z5c.SETTINGS('notifications', p.vG)),
+                    onClick: () => i(m.Z5c.SETTINGS('notifications', p.vG)),
                     children: f.intl.string(f.t.YYTira)
                 })
             ]
@@ -157,4 +157,4 @@ class I extends (i = l.PureComponent) {
     }
 }
 x(I, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) });
-let C = o.ZP.connectStores([m.Z], () => ({ defaultRoute: m.Z.defaultRoute }))(I);
+let C = o.ZP.connectStores([g.Z], () => ({ defaultRoute: g.Z.defaultRoute }))(I);

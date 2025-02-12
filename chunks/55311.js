@@ -1,11 +1,11 @@
-n.d(t, { Z: () => u });
-var i = n(200651);
-n(192379);
-var r = n(481060),
-    a = n(846027),
-    l = n(468026),
-    o = n(388032);
-function u(e, t) {
+t.d(n, { Z: () => d });
+var i = t(200651);
+t(192379);
+var r = t(481060),
+    a = t(846027),
+    l = t(468026),
+    o = t(388032);
+function d(e, n) {
     if (e) {
         (0, r.h7j)((e) =>
             (0, i.jsx)(l.default, {
@@ -16,5 +16,5 @@ function u(e, t) {
         );
         return;
     }
-    a.Z.toggleSelfDeaf({ location: t });
+    a.Z.toggleSelfDeaf({ location: n });
 }

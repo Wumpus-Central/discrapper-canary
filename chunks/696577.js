@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => Z });
 var i = n(200651),
     l = n(192379),
     r = n(442837),
@@ -123,7 +123,7 @@ function A(e) {
         ]
     });
 }
-function Z(e) {
+function b(e) {
     let { user: t, hovered: n, status: r, disambiguateGameFriends: a, isGameRelationship: s, applicationId: o } = e,
         c = g.ZP.useUserTag(t),
         d = !!a && !s,
@@ -145,7 +145,7 @@ function Z(e) {
         subText: u
     });
 }
-function b(e) {
+function Z(e) {
     let { user: t, type: n, status: r, isFocused: a, applicationId: s, disambiguateGameFriends: c, isGameRelationship: d } = e,
         u = l.useContext(p.AnalyticsContext),
         { analyticsLocations: m } = (0, o.ZP)(),
@@ -167,7 +167,7 @@ function b(e) {
             (0, i.jsxs)('div', {
                 className: v.listItemContents,
                 children: [
-                    (0, i.jsx)(Z, {
+                    (0, i.jsx)(b, {
                         user: t,
                         hovered: e,
                         status: g,

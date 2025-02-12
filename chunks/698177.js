@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(541692),
     h = n(952802),
     _ = n(388905),
-    m = n(815660),
-    g = n(388032),
+    g = n(815660),
+    m = n(388032),
     p = n(801194),
     f = n(814632);
 let E = () => {
@@ -47,7 +47,7 @@ let E = () => {
                 (0, i.jsxs)(_.Dx, {
                     className: a()(f.marginTop20, p.flex, p.justifyCenter, p.alignCenter),
                     children: [
-                        g.intl.string(g.t.WWzQtb),
+                        m.intl.string(m.t.WWzQtb),
                         (0, i.jsx)(s.owK, {
                             size: 'md',
                             color: 'currentColor',
@@ -61,16 +61,16 @@ let E = () => {
         ? j
         : (0, i.jsxs)(_.ZP, {
               children: [
-                  (0, i.jsx)(_.Dx, { children: g.intl.string(g.t.o4JNrK) }),
+                  (0, i.jsx)(_.Dx, { children: m.intl.string(m.t.o4JNrK) }),
                   (0, i.jsx)(_.DK, {
                       className: f.marginTop8,
-                      children: g.intl.string(g.t.y0tVbm)
+                      children: m.intl.string(m.t.y0tVbm)
                   }),
                   (0, i.jsxs)(_.gO, {
                       className: f.marginTop20,
                       children: [
                           (0, i.jsx)(h.Z, {
-                              label: g.intl.string(g.t.eJnn09),
+                              label: m.intl.string(m.t.eJnn09),
                               alpha2: A.alpha2,
                               countryCode: R,
                               value: e,
@@ -82,23 +82,23 @@ let E = () => {
                           }),
                           (0, i.jsx)(_.II, {
                               className: f.marginTop20,
-                              label: g.intl.string(g.t.OdzNbm),
+                              label: m.intl.string(m.t.OdzNbm),
                               value: l,
                               onChange: E,
-                              maxLength: m.z,
+                              maxLength: g.z,
                               error: T
                           }),
                           (0, i.jsx)(_.zx, {
                               size: _.zx.Sizes.SMALL,
                               look: _.zx.Looks.LINK,
                               onClick: Z,
-                              children: g.intl.string(g.t['5b60go'])
+                              children: m.intl.string(m.t['5b60go'])
                           }),
                           (0, i.jsx)(_.zx, {
                               className: f.marginTop20,
                               onClick: O,
                               submitting: x,
-                              children: g.intl.string(g.t.i4jeWV)
+                              children: m.intl.string(m.t.i4jeWV)
                           })
                       ]
                   })

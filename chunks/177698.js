@@ -18,9 +18,9 @@ var l = n(481060),
 let E = (0, g.Z)(
     (e) => {
         var t;
-        let { clientId: n, authorizations: d, scopes: u, parsedPermissions: h, responseType: g, redirectUri: E, codeChallenge: I, codeChallengeMethod: C, state: N, guildId: v, channelId: T, prompt: S, disableGuildSelect: A, disclosures: Z, integrationType: b, pid: x } = e,
+        let { clientId: n, authorizations: d, scopes: u, parsedPermissions: h, responseType: g, redirectUri: E, codeChallenge: I, codeChallengeMethod: C, state: N, guildId: v, channelId: T, prompt: S, disableGuildSelect: A, disclosures: b, integrationType: Z, pid: x } = e,
             L = 'OAuth2Authorize_'.concat(n, '_').concat(v, '_').concat(T),
-            y = null != b ? (null == d ? void 0 : d.get(b)) : void 0,
+            y = null != Z ? (null == d ? void 0 : d.get(Z)) : void 0,
             P = null !== (t = null == y ? void 0 : y.application) && void 0 !== t ? t : s.Z.getApplication(n);
         return new Promise((e, t) => {
             let s = (0, _.jU)(x),
@@ -38,7 +38,7 @@ let E = (0, g.Z)(
                             authorizations: d,
                             clientId: n,
                             scopes: null != u ? u : [],
-                            disclosures: null != Z ? Z : [],
+                            disclosures: null != b ? b : [],
                             responseType: g,
                             redirectUri: E,
                             codeChallenge: I,
@@ -49,7 +49,7 @@ let E = (0, g.Z)(
                             channelId: T,
                             prompt: S,
                             disableGuildSelect: 'boolean' == typeof A ? A : 'true' === A,
-                            integrationType: b
+                            integrationType: Z
                         }
                     });
                 return;
@@ -70,7 +70,7 @@ let E = (0, g.Z)(
                             authorizations: d,
                             clientId: n,
                             scopes: null != u ? u : [],
-                            disclosures: null != Z ? Z : [],
+                            disclosures: null != b ? b : [],
                             callback: y,
                             responseType: g,
                             redirectUri: E,
@@ -82,7 +82,7 @@ let E = (0, g.Z)(
                             channelId: T,
                             prompt: S,
                             disableGuildSelect: 'boolean' == typeof A ? A : 'true' === A,
-                            integrationType: b
+                            integrationType: Z
                         }),
                     {
                         modalKey: L,

@@ -1,6 +1,6 @@
 n.d(t, {
     X: () => S,
-    Z: () => b
+    Z: () => Z
 });
 var i,
     l = n(392711),
@@ -61,7 +61,7 @@ function A(e, t, n) {
             }
           : e;
 }
-class Z extends (i = a.ZP.DeviceSettingsStore) {
+class b extends (i = a.ZP.DeviceSettingsStore) {
     initialize(e) {
         this.waitFor(u.Z, c.Z), (_ = null != e ? e : g);
     }
@@ -87,8 +87,8 @@ class Z extends (i = a.ZP.DeviceSettingsStore) {
         return v;
     }
 }
-p(Z, 'displayName', 'ConnectedDeviceStore'), p(Z, 'persistKey', 'ConnectedDeviceStore');
-let b = new Z(s.Z, {
+p(b, 'displayName', 'ConnectedDeviceStore'), p(b, 'persistKey', 'ConnectedDeviceStore');
+let Z = new b(s.Z, {
     MEDIA_ENGINE_DEVICES: function (e) {
         let { inputDevices: t, outputDevices: n } = e,
             i = {};

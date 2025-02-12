@@ -21,8 +21,8 @@ let E = new Set(),
     T = null,
     S = null,
     A = null,
-    Z = null,
-    b = u.K.get(f.kf) || !1;
+    b = null,
+    Z = u.K.get(f.kf) || !1;
 function x(e) {
     let t = e.getGuildId(),
         n = { ...e.permissionOverwrites };
@@ -31,7 +31,7 @@ function x(e) {
 function L() {
     if (((T = p.Z.getChannel()), (S = p.Z.getCategory()), null == T)) return !1;
     let e = T.getGuildId();
-    (v = N = x(T)), null == N[A] && (A = e), (l = null != S), (i = m.o4(T, S)), (Z = null), (C = !1), (I = _.QZA.CLOSED), E.clear();
+    (v = N = x(T)), null == N[A] && (A = e), (l = null != S), (i = m.o4(T, S)), (b = null), (C = !1), (I = _.QZA.CLOSED), E.clear();
 }
 class y extends (r = d.ZP.Store) {
     initialize() {
@@ -71,7 +71,7 @@ class y extends (r = d.ZP.Store) {
         return S;
     }
     get advancedMode() {
-        return b;
+        return Z;
     }
 }
 (s = 'ChannelSettingsPermissionsStore'),
@@ -113,11 +113,11 @@ let P = new y(h.Z, {
         if (null != N && null != N[t]) A = t;
         else {
             if (null == T) return !1;
-            Z = t;
+            b = t;
         }
     },
     CHANNEL_SETTINGS_CLOSE: function () {
-        (I = _.QZA.CLOSED), (N = null), (v = null), (T = null), (S = null), (C = !1), E.clear(), (A = null), (Z = null);
+        (I = _.QZA.CLOSED), (N = null), (v = null), (T = null), (S = null), (C = !1), E.clear(), (A = null), (b = null);
     },
     CHANNEL_UPDATES: function (e) {
         let { channels: t } = e;
@@ -143,7 +143,7 @@ let P = new y(h.Z, {
                             ...n
                         })[A]
                             ? (A = t)
-                            : null != Z && null != N[Z] && ((A = Z), (Z = null)),
+                            : null != b && null != N[b] && ((A = b), (b = null)),
                         (i = m.o4(T, S)),
                         !0
                     );
@@ -159,6 +159,6 @@ let P = new y(h.Z, {
     },
     CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE: function (e) {
         let { advancedMode: t } = e;
-        (b = t), u.K.set(f.kf, t);
+        (Z = t), u.K.set(f.kf, t);
     }
 });

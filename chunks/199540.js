@@ -66,10 +66,10 @@ function N(e) {
             },
             'animate-always'
         ),
-        P = C ? y : void 0;
+        A = C ? y : void 0;
     (C || N) &&
         (t = (0, i.jsx)(o.animated.div, {
-            style: P,
+            style: A,
             className: x.expandedFolderIconWrapper,
             children: (0, i.jsx)(u.ROc, {
                 size: d ? 'sm' : 'md',
@@ -79,7 +79,7 @@ function N(e) {
         })),
         (C || !N) &&
             (n = (0, i.jsx)(o.animated.div, {
-                style: P,
+                style: A,
                 className: x.closedFolderIconWrapper,
                 children: _.slice(0, 4).map((e, t) =>
                     (0, i.jsx)(
@@ -120,12 +120,12 @@ function E(e) {
             onKeyDown: S,
             treeItemProps: { onFocus: E, ...j }
         } = e,
-        [y, P] = l.useState(!1),
+        [y, A] = l.useState(!1),
         T = l.useCallback(() => {
-            o || P(!0), null == b || b(!0);
+            o || A(!0), null == b || b(!0);
         }, [o, b]),
-        A = l.useCallback(() => {
-            o || P(!1), null == b || b(!1);
+        P = l.useCallback(() => {
+            o || A(!1), null == b || b(!1);
         }, [o, b]),
         w = (0, p.Q3)('FolderHeader'),
         R = r || null == s ? null : (0, _.Or)(s),
@@ -148,7 +148,7 @@ function E(e) {
             onClick: Z,
             onContextMenu: I,
             onMouseEnter: T,
-            onMouseLeave: A,
+            onMouseLeave: P,
             onKeyDown: S,
             onFocus: E,
             'aria-label': C.intl.formatToPlainString(C.t['90/DwM'], {

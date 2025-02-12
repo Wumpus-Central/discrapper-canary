@@ -22,8 +22,8 @@ var i,
     T = n(812206),
     S = n(933557),
     A = n(194082),
-    Z = n(264165),
-    b = n(548816),
+    b = n(264165),
+    Z = n(548816),
     x = n(925329),
     L = n(102172),
     y = n(871118),
@@ -33,8 +33,8 @@ var i,
     j = n(849171),
     D = n(314897),
     w = n(592125),
-    M = n(594174),
-    k = n(395361),
+    k = n(594174),
+    M = n(395361),
     U = n(639351),
     G = n(81063),
     B = n(823379),
@@ -152,7 +152,7 @@ let et = (e) => {
             });
             break;
         case 'SPOTIFY':
-            t = (0, l.jsx)(k.Z, {
+            t = (0, l.jsx)(M.Z, {
                 className: W.headerIcon,
                 color: c.Z.unsafe_rawColors.SPOTIFY.css
             });
@@ -234,7 +234,7 @@ en.Icon = et;
 let ei = (e) => {
     let { children: t, className: n, ...i } = e;
     return (0, l.jsx)(d.tEY, {
-        children: (0, l.jsx)(b.Z, {
+        children: (0, l.jsx)(Z.Z, {
             className: s()(n, W.wrapper),
             padded: !0,
             ...i,
@@ -245,7 +245,7 @@ let ei = (e) => {
 (ei.Header = en),
     (ei.Body = (e) => {
         let { children: t } = e;
-        return (0, l.jsx)(b.Z, {
+        return (0, l.jsx)(Z.Z, {
             inset: !0,
             padded: !1,
             className: W.body,
@@ -382,7 +382,7 @@ let ei = (e) => {
                                   }),
                                   u
                                       ? null
-                                      : (0, l.jsx)(k.Z, {
+                                      : (0, l.jsx)(M.Z, {
                                             className: W.smallImage,
                                             color: c.Z.unsafe_rawColors.SPOTIFY.css
                                         })
@@ -407,7 +407,7 @@ let ei = (e) => {
             { name: c, details: u, assets: h, application_id: m } = i;
         if (null != h && (0, C.Z)(i)) {
             var g;
-            t = (0, l.jsx)(Z.Z, {
+            t = (0, l.jsx)(b.Z, {
                 className: W.twitchSectionPreviewWrapper,
                 aspectRatio: 16 / 9,
                 children: (0, l.jsxs)(d.P3F, {
@@ -513,9 +513,9 @@ let ei = (e) => {
                     return c(t);
                 });
         }, [u]);
-        let h = (0, o.Wu)([M.default, D.default], () =>
+        let h = (0, o.Wu)([k.default, D.default], () =>
                 Array.from(a)
-                    .map((e) => (D.default.getId() === e ? null : M.default.getUser(e)))
+                    .map((e) => (D.default.getId() === e ? null : k.default.getUser(e)))
                     .filter(B.lm)
             ),
             p = (0, m.O)(),

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(411104), n(47120), n(653041);
+n.d(t, { Z: () => M }), n(411104), n(47120), n(653041);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
@@ -22,8 +22,8 @@ var i = n(200651),
     T = n(701861),
     S = n(437314),
     A = n(696577),
-    Z = n(163417),
-    b = n(830880),
+    b = n(163417),
+    Z = n(830880),
     x = n(492347),
     L = n(42575),
     y = n(617015),
@@ -40,7 +40,7 @@ function w() {
         return (t) => (0, i.jsx)(e, { ...t });
     });
 }
-function M(e) {
+function k(e) {
     let { section: t, showSpamCta: n } = e,
         r = l.useMemo(() => (n ? w : t !== P.pJs.PENDING ? D : void 0), [n, t]);
     return (0, i.jsx)('div', {
@@ -55,12 +55,12 @@ function M(e) {
         )
     });
 }
-let k = function (e) {
+let M = function (e) {
     let { titleId: t } = e,
         { analyticsLocations: n } = (0, m.ZP)(h.Z.FRIENDS_LIST),
         { rows: r, section: c } = (0, s.cj)([C.ZP], () => C.ZP.getState()),
         D = (0, s.e7)([N.Z], () => N.Z.isFocused()),
-        { relationshipCount: k, hasBlockedOrIgnored: U } = (0, s.cj)([I.Z], () => ({
+        { relationshipCount: M, hasBlockedOrIgnored: U } = (0, s.cj)([I.Z], () => ({
             relationshipCount: I.Z.getRelationshipCount(),
             hasBlockedOrIgnored: I.Z.getBlockedOrIgnoredIDs().length > 0
         })),
@@ -233,7 +233,7 @@ let k = function (e) {
         }, [c]),
         0 === X.length && '' === F[c])
     )
-        return (0, i.jsx)(M, {
+        return (0, i.jsx)(k, {
             section: c,
             showSpamCta: q
         });
@@ -244,7 +244,7 @@ let k = function (e) {
         children: (0, i.jsxs)(u.Z, {
             section: P.jXE.FRIENDS_LIST,
             children: [
-                G && U && (0, i.jsx)(b.R, {}),
+                G && U && (0, i.jsx)(Z.R, {}),
                 (0, i.jsx)(o.E1j, {
                     className: a()(R.searchBar, er ? R.searchEmptyState : null),
                     query: F[c],
@@ -252,12 +252,12 @@ let k = function (e) {
                     onClear: K,
                     size: o.E1j.Sizes.MEDIUM
                 }),
-                (0, i.jsx)(Z.Z, {
+                (0, i.jsx)(b.Z, {
                     rows: $,
                     renderRow: W,
                     renderSection: ei,
                     sectionFilter: c,
-                    isVirtualizedList: k >= y.nG,
+                    isVirtualizedList: M >= y.nG,
                     hasSearchQuery: el,
                     footer:
                         q && !er

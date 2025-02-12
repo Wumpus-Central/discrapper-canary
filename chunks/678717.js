@@ -38,8 +38,8 @@ var g = n(392750),
     B = n(958328),
     M = n(315384),
     F = n(514866),
-    z = n(678639),
-    U = n(351930),
+    U = n(678639),
+    z = n(351930),
     G = n(771751),
     H = n(596768),
     V = n(56706),
@@ -78,7 +78,7 @@ function q() {
                 {
                     id: 'stores',
                     name: 'Stores',
-                    render: () => (0, a.jsx)(z.Z, {})
+                    render: () => (0, a.jsx)(U.Z, {})
                 },
                 {
                     id: 'dispatcher',
@@ -194,7 +194,7 @@ function q() {
                     e.push({
                         id: 'subscriptions',
                         name: 'Subscriptions',
-                        render: () => (0, a.jsx)(U.Z, {})
+                        render: () => (0, a.jsx)(z.Z, {})
                     }),
                     e.push({
                         id: 'billing',

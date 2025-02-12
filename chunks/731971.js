@@ -3,10 +3,10 @@ n.d(t, {
     U1: () => T,
     XW: () => o,
     _J: () => _,
-    aP: () => d,
+    aP: () => u,
     e7: () => E,
     h6: () => I,
-    oE: () => u,
+    oE: () => d,
     pB: () => c,
     y: () => C,
     yS: () => N
@@ -90,10 +90,10 @@ let o = (0, i.U)((e) => ({
     c = (e) => {
         o.getState().initialize(e);
     },
-    u = () => {
+    d = () => {
         o.getState().reset();
     },
-    d = () => {
+    u = () => {
         let e = o.getState();
         return e.nickname !== s.nickname || e.dmsAllowed !== s.dmsAllowed || e.showActivity !== a(e.guildSize) || e.mutedServer !== s.mutedServer;
     },
