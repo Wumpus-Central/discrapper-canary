@@ -39,6 +39,16 @@ function d(e) {
         r.useEffect(() => {
             c || h();
         }, [c, h]),
+        r.useEffect(
+            () => () => {
+                document.querySelectorAll('script[src*="recaptcha/enterprise.js"],.grecaptcha-badge').forEach((e) => {
+                    var t;
+                    return null === (t = e.parentNode) || void 0 === t ? void 0 : t.removeChild(e);
+                }),
+                    null != window.grecaptcha && delete window.grecaptcha;
+            },
+            []
+        ),
         (0, a.jsx)(o.$jN, {})
     );
 }
