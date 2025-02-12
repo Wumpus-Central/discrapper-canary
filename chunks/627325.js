@@ -24,22 +24,25 @@ function Z(e) {
     let { columns: t, handleScroll: n, voiceListRef: a, showSectionHeaders: s = !1, query: Z } = e,
         N = (0, C.S)(),
         T = (0, u.e7)([m.default], () => (0, g.I5)(m.default.getCurrentUser())),
-        S = (0, u.cj)([_.Z], () => _.Z.getVoiceFilters()),
-        j = (0, u.cj)([_.Z], () => _.Z.getSortedVoiceFilters()),
-        y = T ? Object.values(S) : j,
-        A = l.useMemo(() => {
+        { voicesById: S, isNativeModuleLoading: j } = (0, u.cj)([_.Z], () => ({
+            voicesById: _.Z.getVoiceFilters(),
+            isNativeModuleLoading: _.Z.isNativeModuleLoading()
+        })),
+        y = (0, u.cj)([_.Z], () => _.Z.getSortedVoiceFilters()),
+        A = T ? Object.values(S) : y,
+        P = l.useMemo(() => {
             let e = (0, d._I)(Z.toLowerCase());
             return [
                 '' === e
-                    ? y
-                    : y.filter((t) => {
+                    ? A
+                    : A.filter((t) => {
                           let { id: n } = t;
                           return o()(e, (0, d._I)(N[n].name.toLowerCase()));
                       })
             ];
-        }, [y, Z, N]),
-        P = (e) => Math.ceil(e / t),
-        R = l.useCallback(
+        }, [A, Z, N]),
+        R = (e) => Math.ceil(e / t),
+        M = l.useCallback(
             (e) => {
                 let { sectionIndex: n, sectionRowIndex: l } = e;
                 return (0, i.jsx)(
@@ -47,7 +50,7 @@ function Z(e) {
                     {
                         className: E.row,
                         children: (0, c.range)(0, t)
-                            .map((e) => A[n][l * t + e])
+                            .map((e) => P[n][l * t + e])
                             .filter(f.lm)
                             .map((e) =>
                                 (0, i.jsx)(
@@ -63,28 +66,36 @@ function Z(e) {
                     l
                 );
             },
-            [t, A, T]
+            [t, P, T]
         );
-    return (0, i.jsx)(p.Z, {
-        fade: !0,
-        className: r()(E.container, { [E.hasHeaders]: s }),
-        renderRow: (e, t) => R(t),
-        renderSectionHeader:
-            !1 === s
-                ? void 0
-                : (e) =>
-                      (0, i.jsx)(h.Text, {
-                          variant: 'text-sm/medium',
-                          color: 'header-muted',
-                          className: E.header,
-                          children: v.intl.string(b[e])
-                      }),
-        sectionHeaderHeight: !1 === s ? void 0 : (e) => I[e],
-        rowCountBySection: A.map((e) => P(e.length)),
-        rowCount: P((0, c.sumBy)(A, (e) => e.length)),
-        rowHeight: 130,
-        onScroll: n,
-        ref: a,
-        sectionFooterHeight: T ? 0 : 40
-    });
+    return j
+        ? (0, i.jsx)('div', {
+              className: r()(E.loading),
+              children: (0, i.jsx)(h.$jN, {
+                  type: h.$jN.Type.CHASING_DOTS,
+                  animated: !0
+              })
+          })
+        : (0, i.jsx)(p.Z, {
+              fade: !0,
+              className: r()(E.container, { [E.hasHeaders]: s }),
+              renderRow: (e, t) => M(t),
+              renderSectionHeader:
+                  !1 === s
+                      ? void 0
+                      : (e) =>
+                            (0, i.jsx)(h.Text, {
+                                variant: 'text-sm/medium',
+                                color: 'header-muted',
+                                className: E.header,
+                                children: v.intl.string(b[e])
+                            }),
+              sectionHeaderHeight: !1 === s ? void 0 : (e) => I[e],
+              rowCountBySection: P.map((e) => R(e.length)),
+              rowCount: R((0, c.sumBy)(P, (e) => e.length)),
+              rowHeight: 130,
+              onScroll: n,
+              ref: a,
+              sectionFooterHeight: T ? 0 : 40
+          });
 }

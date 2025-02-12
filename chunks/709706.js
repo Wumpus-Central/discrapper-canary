@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(47120), n(51350);
+n.d(t, { Z: () => C }), n(47120), n(51350);
 var i,
     r = n(315008),
     a = n(347715),
@@ -113,8 +113,8 @@ class v extends (i = o.ZP.Store) {
     getLimitedTimeVoices() {
         return _.limitedTimeVoices;
     }
-    getNativeModuleState() {
-        return _.nativeVoiceFilterModuleState;
+    isNativeModuleLoading() {
+        return _.nativeVoiceFilterModuleState === u.O.LOADING;
     }
 }
 function y() {
@@ -162,13 +162,17 @@ function A(e) {
     let { timeInSeconds: t } = e;
     m((0, a.Z)(new Date(), t));
 }
+function N(e) {
+    _.nativeVoiceFilterModuleState = e.state;
+}
 d(v, 'displayName', 'VoiceFilterStore');
-let N = new v(l.Z, {
+let C = new v(l.Z, {
     VOICE_FILTER_DOWNLOAD_STARTED: I,
     VOICE_FILTER_DOWNLOAD_READY: T,
     VOICE_FILTER_DOWNLOAD_PROGRESS: b,
     VOICE_FILTER_DOWNLOAD_FAILED: S,
     VOICE_FILTER_CATALOG_FETCH_SUCCESS: E,
     VOICE_FILTER_UPDATE_LIMITED_TIME_VOICES: y,
-    VOICE_FILTER_DEV_TOOLS_SET_UPDATE_TIME: A
+    VOICE_FILTER_DEV_TOOLS_SET_UPDATE_TIME: A,
+    VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE: N
 });
