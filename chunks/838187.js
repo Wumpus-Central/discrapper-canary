@@ -16,6 +16,7 @@ e.exports = {
     overlayTitle: 'overlayTitle__2f4f7',
     overlayTitleText: 'overlayTitleText__2f4f7',
     overlayButton: 'overlayButton__2f4f7',
+    overlayButtonInner: 'overlayButtonInner__2f4f7',
     overlayButtonContainer: 'overlayButtonContainer__2f4f7',
     titleIcon: 'titleIcon__2f4f7',
     secureFramesIcon: 'secureFramesIcon__2f4f7',
