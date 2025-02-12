@@ -1,21 +1,22 @@
 n.d(t, {
-    FJ: () => en,
+    FJ: () => ei,
     RE: () => G,
-    S5: () => q,
+    S5: () => X,
     T5: () => V,
     Xb: () => H,
-    YK: () => ee,
-    YS: () => J,
-    _f: () => el,
+    YK: () => et,
+    YS: () => $,
+    _J: () => z,
+    _f: () => er,
     aE: () => F,
-    bu: () => ei,
-    cD: () => z,
-    s9: () => W,
-    t9: () => X,
-    tr: () => et,
-    vv: () => $,
-    zM: () => Y,
-    zy: () => K
+    bu: () => el,
+    kb: () => W,
+    s9: () => Y,
+    t9: () => Q,
+    tr: () => en,
+    vv: () => ee,
+    zM: () => K,
+    zy: () => q
 }),
     n(47120),
     n(653041),
@@ -46,8 +47,8 @@ var i,
     T = n(158776),
     S = n(594174),
     A = n(979651),
-    Z = n(70956),
-    b = n(5192),
+    b = n(70956),
+    Z = n(5192),
     x = n(226951),
     L = n(591759),
     y = n(996106),
@@ -63,8 +64,8 @@ let j = null !== (l = null === (i = L.Z.toURLSafe(window.GLOBAL_ENV.API_ENDPOINT
         return /^\d+$/.test(n) ? e : t.slice(-2).join('.');
     })(),
     w = new RegExp('^'.concat(x.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(x.Z.escape(D), '|discordapp.com|discord.com)$')),
-    M = 1 * Z.Z.Millis.MINUTE,
-    k = {};
+    k = 1 * b.Z.Millis.MINUTE,
+    M = {};
 function U(e) {
     return 'customEmoji' === e.type && (e.type = 'emoji'), 'emoji' === e.type && e.src && (e.src = G(e.src)), Array.isArray(e.content) && (e.content = e.content.map(U)), e;
 }
@@ -145,7 +146,7 @@ function F(e, t, n) {
         c = S.default.getUser(o);
     if (null == c) throw Error('Invalid user id: '.concat(o));
     return {
-        nick: b.ZP.getName(e, t, c),
+        nick: Z.ZP.getName(e, t, c),
         mute: N.Z.isLocalMute(c.id),
         volume: N.Z.getLocalVolume(c.id),
         pan: N.Z.getLocalPan(c.id),
@@ -159,22 +160,29 @@ function F(e, t, n) {
         user: (0, P.Z)(c)
     };
 }
-function z(e, t, n) {
-    let { isSpamRequest: i, applicationId: l, userIgnored: r, originApplicationId: a } = null != n ? n : {},
-        s = S.default.getUser(t);
+function z(e, t) {
     return {
         type: e,
-        user: null != s ? (0, P.Z)(s) : null,
+        user: (0, P.Z)(t),
         presence: {
-            status: T.Z.getStatus(t),
-            activity: null != l ? T.Z.getApplicationActivity(t, l) : T.Z.getPrimaryActivity(t)
-        },
-        isSpamRequest: i,
-        userIgnored: r,
-        originApplicationId: a
+            status: T.Z.getStatus(t.id, null),
+            activity: null
+        }
     };
 }
-function W(e) {
+function W(e, t) {
+    var n;
+    return null == t
+        ? e
+        : {
+              ...e,
+              presence: {
+                  ...e.presence,
+                  activity: null !== (n = T.Z.getApplicationActivity(e.user.id, t)) && void 0 !== n ? n : null
+              }
+          };
+}
+function Y(e) {
     let t;
     if (null == e) return !1;
     let n = window.location.origin;
@@ -186,11 +194,11 @@ function W(e) {
     }
     return (window.location.hostname === t && 'localhost' === t) || (null == e.match('staging') && !!(w.test(e) && w.test(n)));
 }
-function Y(e, t, n) {
+function K(e, t, n) {
     let i = C.Z.getGuild(e.getGuildId());
     return (null != i ? i.getApplicationId() : e.getApplicationId()) === t || n.indexOf(a.x.MESSAGES_READ) > -1;
 }
-function K(e) {
+function q(e) {
     switch (e) {
         case R.hes.RTC_CONNECTED:
         case R.hes.RTC_CONNECTING:
@@ -200,7 +208,7 @@ function K(e) {
             return e;
     }
 }
-function q(e) {
+function X(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         { instance: n, secrets: i, party: l } = e,
         r = 0;
@@ -209,10 +217,10 @@ function q(e) {
         s = g.Ou.getSetting();
     return t ? ((r |= R.xjy.EMBEDDED), a && (r |= R.xjy.PARTY_PRIVACY_FRIENDS), s && (r |= R.xjy.PARTY_PRIVACY_VOICE_CHANNEL)) : ((null == l ? void 0 : l.privacy) === R.RYY.PUBLIC || c.K.get('ACTIVITIES_FORCE_PUBLIC')) && (a && (r |= R.xjy.PARTY_PRIVACY_FRIENDS), s && (r |= R.xjy.PARTY_PRIVACY_VOICE_CHANNEL)), r;
 }
-function X(e, t, n) {
+function Q(e, t, n) {
     return e === R.mFx.JOIN && null != t && null != t.id && null != n.join;
 }
-function Q(e) {
+function J(e) {
     return s.tn
         .get({
             url: R.ANM.APPLICATION_RPC(e),
@@ -230,18 +238,18 @@ function Q(e) {
             }
         );
 }
-async function J(e, t, n) {
+async function $(e, t, n) {
     let i = h.Z.getApplication(t);
     if ('string' == typeof n) {
         if (e.transport === O.He.POST_MESSAGE) {
             let e = (0, u.Z)(t);
             if (null == e || !B(n, [e])) throw new y.Z({ closeCode: R.$VG.INVALID_ORIGIN }, 'Invalid Origin');
         } else {
-            let e = await Q(t);
+            let e = await J(t);
             if (((i = _.ZP.createFromServer(e)), !B(n, e.rpc_origins))) throw new y.Z({ closeCode: R.$VG.INVALID_ORIGIN }, 'Invalid Origin');
         }
     }
-    null == i && (i = _.ZP.createFromServer(await Q(t)));
+    null == i && (i = _.ZP.createFromServer(await J(t)));
     let { id: l, name: r, icon: a, coverImage: s, flags: o } = i;
     e.application = {
         id: l,
@@ -251,14 +259,14 @@ async function J(e, t, n) {
         flags: o
     };
 }
-async function $(e, t) {
-    let n = k[e];
-    null == n && ((n = new o.Z(t ? 2 : 60, M)), (k[e] = n)), await n.process();
+async function ee(e, t) {
+    let n = M[e];
+    null == n && ((n = new o.Z(t ? 2 : 60, k)), (M[e] = n)), await n.process();
 }
-function ee(e, t) {
+function et(e, t) {
     null == t && (e.authorization.scopes = [O.lH]);
 }
-function et(e) {
+function en(e) {
     let t = N.Z.getSettings(),
         n = (e) =>
             Object.values(e)
@@ -295,7 +303,7 @@ function et(e) {
         mute: t.mute
     };
 }
-function en(e, t) {
+function ei(e, t) {
     let n = N.Z.getSettings(e),
         i = t(n);
     return {
@@ -309,10 +317,10 @@ function en(e, t) {
         self_deaf: n.deaf
     };
 }
-function ei(e) {
+function el(e) {
     if (e !== O.He.POST_MESSAGE) throw new y.Z({ errorCode: R.lTL.INVALID_COMMAND }, 'command not available from "'.concat(e, ' transport'));
 }
-function el(e) {
+function er(e) {
     if (null == e.id) throw new y.Z({ errorCode: R.lTL.INVALID_COMMAND }, 'Invalid application');
     return e.id;
 }
