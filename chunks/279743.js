@@ -9,7 +9,7 @@ var o = t(200651),
     _ = t(442837),
     d = t(607070),
     u = t(663389),
-    b = t(816689);
+    b = t(934855);
 function E(e) {
     let { children: n, className: t, onFlashEnd: a, animationDelay: _ = 500 } = e,
         u = c.TVs.colors.TEXT_LINK,

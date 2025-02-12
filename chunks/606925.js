@@ -6,7 +6,7 @@ var i = n(442837),
     a = n(553795),
     s = n(915863),
     o = n(388032),
-    u = n(770662);
+    u = n(579026);
 function c(e) {
     let { platform: t, color: n, look: c, onAction: d, Icon: m } = e;
     if ((0, i.e7)([a.Z], () => a.Z.getAccounts().some((e) => e.type === t.type))) return null;

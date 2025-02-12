@@ -33,7 +33,7 @@ var i = n(200651),
     P = n(248400),
     R = n(981631),
     M = n(354459),
-    L = n(134926);
+    L = n(143783);
 let k = 16 / 9,
     O = (e) => {
         let { stageParticipant: t, rtcParticipant: n, channel: a, guildId: r, user: s, width: o, isModerator: d, onContextMenu: u, inPopout: h } = e,
@@ -173,7 +173,7 @@ let k = 16 / 9,
                         (0, u.jW)(
                             t,
                             async () => {
-                                let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('7717'), n.e('65023')]).then(n.bind(n, 757387));
+                                let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('7717'), n.e('44475')]).then(n.bind(n, 757387));
                                 return (t) =>
                                     (0, i.jsx)(e, {
                                         ...t,

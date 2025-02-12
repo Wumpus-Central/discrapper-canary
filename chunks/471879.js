@@ -7,7 +7,7 @@ n(192379);
 var r = n(442837),
     a = n(481060),
     s = n(699516),
-    o = n(904744);
+    o = n(820910);
 function l(e) {
     let { user: t, guildId: n } = e;
     return (0, i.jsx)('div', {

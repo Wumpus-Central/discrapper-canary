@@ -11,7 +11,7 @@ var i = n(200651),
     s = n.n(a),
     o = n(481060),
     l = n(388032),
-    u = n(567547);
+    u = n(997118);
 function c(e) {
     let { items: t, maxLines: n, itemWidths: i, itemGapPx: r, containerWidth: a, overflowWidth: s } = e,
         o = 0,

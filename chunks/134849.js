@@ -12,7 +12,7 @@ var i = n(200651),
     _ = n(371467),
     p = n(981631),
     f = n(388032),
-    g = n(348094);
+    g = n(218576);
 let m = [];
 function v(e) {
     return e.notification.id;

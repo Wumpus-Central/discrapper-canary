@@ -4,8 +4,8 @@ var l = n(200651),
     i = n(120356),
     a = n.n(i),
     s = n(725436),
-    u = n(952729),
-    c = n(663362);
+    u = n(903025),
+    c = n(642367);
 function o(e) {
     let { description: t, className: n, guildId: i, truncate: o = !0 } = e,
         d = r.useMemo(

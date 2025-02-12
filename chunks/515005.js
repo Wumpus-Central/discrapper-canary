@@ -18,7 +18,7 @@ var i = n(200651),
     v = n(490095),
     y = n(981631),
     I = n(388032),
-    T = n(834165);
+    T = n(742068);
 let b = (0, l.Mg)(T.__invalid_stickerPickerPreviewDimensions),
     S = (0, l.Mg)(T.__invalid_stickerPickerPreviewPadding),
     A = 250,
@@ -67,7 +67,7 @@ let b = (0, l.Mg)(T.__invalid_stickerPickerPreviewDimensions),
                                 location: j
                             }),
                             (0, u.ZDy)(async () => {
-                                let { default: t } = await Promise.all([n.e('93626'), n.e('22648')]).then(n.bind(n, 136735));
+                                let { default: t } = await Promise.all([n.e('93626'), n.e('98082')]).then(n.bind(n, 136735));
                                 return (n) =>
                                     (0, i.jsx)(t, {
                                         guildId: e.guild_id,

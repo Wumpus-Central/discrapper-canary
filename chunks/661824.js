@@ -5,7 +5,7 @@ var i = n(200651),
     s = n.n(a),
     o = n(38068),
     l = n(388032),
-    u = n(180877);
+    u = n(208555);
 let c = r.forwardRef(function (e, t) {
     let { className: n, contentClassName: r, isUnread: a, children: c, id: d, role: f, 'aria-label': _ } = e;
     return (0, i.jsxs)('div', {

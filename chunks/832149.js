@@ -1,19 +1,19 @@
-n.d(t, { Z: () => a });
-var i = n(200651);
-n(192379);
-var r = n(481060);
+o.d(t, { Z: () => a });
+var i = o(200651);
+o(192379);
+var n = o(481060);
 let a = (e) => {
-    let { product: t, analyticsLocations: a, overrideTitle: s, overrideDescription: l, shouldShowPromotionalExperience: o } = e;
-    (0, r.ZDy)(async () => {
-        let { default: e } = await Promise.resolve().then(n.bind(n, 331042));
-        return (n) =>
+    let { product: t, analyticsLocations: a, overrideTitle: l, overrideDescription: r, shouldShowPromotionalExperience: u } = e;
+    (0, n.ZDy)(async () => {
+        let { default: e } = await Promise.resolve().then(o.bind(o, 331042));
+        return (o) =>
             (0, i.jsx)(e, {
                 product: t,
                 analyticsLocations: a,
-                overrideTitle: s,
-                overrideDescription: l,
-                shouldShowPromotionalExperience: o,
-                ...n
+                overrideTitle: l,
+                overrideDescription: r,
+                shouldShowPromotionalExperience: u,
+                ...o
             });
     });
 };

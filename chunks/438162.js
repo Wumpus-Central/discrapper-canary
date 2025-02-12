@@ -4,15 +4,15 @@ var i = t(200651),
     a = t(120356),
     l = t.n(a),
     o = t(442837),
-    d = t(952265),
-    u = t(481060),
+    u = t(952265),
+    d = t(481060),
     c = t(239091),
     s = t(13245),
     _ = t(615287),
     h = t(110924),
     C = t(100527),
-    p = t(906732),
-    f = t(146282),
+    f = t(906732),
+    p = t(146282),
     m = t(70097),
     E = t(594190),
     g = t(567409),
@@ -51,7 +51,7 @@ var i = t(200651),
     q = t(981631),
     $ = t(206583),
     ee = t(388032),
-    en = t(95613);
+    en = t(514138);
 let et = !w.isPlatformEmbedded && !1,
     ei = et
         ? (0, i.jsx)(m.Z, {
@@ -79,7 +79,7 @@ function el(e) {
 }
 let eo = r.memo(function (e) {
         let { keybind: n, onClick: t, locked: r } = e;
-        return (0, i.jsx)(u.P3F, {
+        return (0, i.jsx)(d.P3F, {
             className: l()(en.overlayBackground, {
                 [en.overlayActive]: !r,
                 [en.overlayLocked]: r
@@ -96,24 +96,24 @@ let eo = r.memo(function (e) {
                       children: (0, i.jsx)(G.Z, {
                           keybind: n,
                           onClick: t,
-                          IconComponent: u.Uz9
+                          IconComponent: d.Uz9
                       })
                   })
         });
     }),
-    ed = r.memo(function (e) {
+    eu = r.memo(function (e) {
         let { locked: n, focused: t } = e;
         return n && t
             ? (0, i.jsx)(H.Z, {
                   className: en.closeContainer,
                   children: (0, i.jsx)(G.Z, {
                       onClick: () => s.Z.setInputLocked(!1, (0, D.QF)()),
-                      IconComponent: u.d$P
+                      IconComponent: d.d$P
                   })
               })
             : null;
     });
-function eu() {
+function ed() {
     if (null != T.Z.getContextMenu()) {
         (0, c.Zy)();
         return;
@@ -159,7 +159,7 @@ function eh() {
             [e]
         ),
         w = (0, o.e7)([S.Z], () => S.Z.getActiveRegions()),
-        { analyticsLocations: G } = (0, p.ZP)(C.Z.OVERLAY),
+        { analyticsLocations: G } = (0, f.ZP)(C.Z.OVERLAY),
         H = n || x;
     !(function (e, n) {
         let t = r.useRef({
@@ -197,8 +197,8 @@ function eh() {
                 a = null != i ? A.Z.getGuild(i.guild_id) : null,
                 l = null != R.Z.getCurrentUserActiveStream(),
                 o = null != t,
-                d = (0, v.Z)(y.Z) && !l && null != n,
-                u = o && null != a && null != t,
+                u = (0, v.Z)(y.Z) && !l && null != n,
+                d = o && null != a && null != t,
                 { showKeybindIndicators: c, dismissKeybindNotification: h } = (0, B.K)();
             r.useEffect(() => {
                 if (e.current) return;
@@ -216,24 +216,24 @@ function eh() {
                           markAsDismissed: h
                       }
                     : { type: J.nc.WELCOME }),
-                    d && u
+                    u && d
                         ? (i = {
                               type: J.nc.GO_LIVE_VOICE,
                               game: n,
                               voiceChannelId: t,
                               voiceGuild: a
                           })
-                        : d &&
+                        : u &&
                           (i = {
                               type: J.nc.GO_LIVE_NON_VOICE,
                               game: n
                           }),
                     s.Z.overlayMounted(i);
-            }, [o, d, u, n, t, a, c, h]);
+            }, [o, u, d, n, t, a, c, h]);
         })(),
         r.useEffect(() => {
             if (n) {
-                if (((0, d.Ay)(u.u1M), e.addEventListener('contextmenu', ea, !1), null != er)) {
+                if (((0, u.Ay)(d.u1M), e.addEventListener('contextmenu', ea, !1), null != er)) {
                     let e = Date.now() - er;
                     s.Z.track(q.rMx.OVERLAY_LOCKED, { unlocked_duration: e }), (er = null);
                 }
@@ -246,19 +246,19 @@ function eh() {
     let el = (0, o.e7)([Z.Z], () => Z.Z.getVoiceChannelId()),
         eh = (0, o.e7)([b.Z], () => b.Z.getChannel(el)),
         eC = (0, o.e7)([A.Z], () => (null != eh ? A.Z.getGuild(eh.guild_id) : null)),
-        ep = (0, o.e7)([O.default], () => O.default.getId()),
-        ef = (0, o.e7)([E.ZP, N.Z], () => (0, I.Z)(E.ZP, N.Z)),
-        em = (0, g.Ns)(null == ef ? void 0 : ef.id),
-        eE = (0, o.e7)([f.Z], () => null != f.Z.getLastFeedFetchDate($.YN.GAME_PROFILE_FEED)),
+        ef = (0, o.e7)([O.default], () => O.default.getId()),
+        ep = (0, o.e7)([E.ZP, N.Z], () => (0, I.Z)(E.ZP, N.Z)),
+        em = (0, g.Ns)(null == ep ? void 0 : ep.id),
+        eE = (0, o.e7)([p.Z], () => null != p.Z.getLastFeedFetchDate($.YN.GAME_PROFILE_FEED)),
         eg = (0, h.Z)(eE);
     return (r.useEffect(() => {
         !eg && eE && s.Z.notifyContentInventoryReady(em);
     }, [em, eE, eg]),
     m || a)
         ? null
-        : (0, i.jsx)(p.Gt, {
+        : (0, i.jsx)(f.Gt, {
               value: G,
-              children: (0, i.jsx)(u.vWI, {
+              children: (0, i.jsx)(d.vWI, {
                   children: (0, i.jsxs)('div', {
                       className: en.overlay,
                       children: [
@@ -273,7 +273,7 @@ function eh() {
                               (0, i.jsx)(eo, {
                                   locked: n,
                                   keybind: T,
-                                  onClick: eu
+                                  onClick: ed
                               }),
                           c
                               ? (0, i.jsx)(W.Z, {
@@ -292,14 +292,14 @@ function eh() {
                                       })
                                   }),
                           et &&
-                              (0, i.jsx)(ed, {
+                              (0, i.jsx)(eu, {
                                   locked: n,
                                   focused: t
                               }),
                           null != eC &&
                               null != el &&
                               (0, i.jsx)(j.Z, {
-                                  streamerId: ep,
+                                  streamerId: ef,
                                   guildId: eC.id,
                                   channelId: el
                               }),

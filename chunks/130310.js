@@ -7,8 +7,8 @@ var r = n(120356),
     l = n(785681),
     o = n(231994),
     c = n(388032),
-    d = n(447830),
-    u = n(483938);
+    d = n(983703),
+    u = n(814632);
 let m = (e) => {
         let { header: t, description: n, icon: r, inModal: l } = e;
         return (0, i.jsxs)('div', {

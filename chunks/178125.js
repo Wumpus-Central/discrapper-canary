@@ -13,7 +13,7 @@ var t = l(200651),
     v = l(593214),
     m = l(378337),
     x = l(388032),
-    g = l(253310);
+    g = l(120088);
 function j(e) {
     let { transitionState: n, onClose: l, parentId: a } = e,
         r = (0, d.e7)([u.ZP], () => u.ZP.getFlattenedGuildIds()[0]),

@@ -5,7 +5,7 @@ var r = n(692547),
     l = n(481060),
     s = n(355011),
     a = n(388032),
-    o = n(315706);
+    o = n(271395);
 let c = (e) => {
     let { title: t, subtext: n = a.intl.string(a.t.jHpxws), localizedNumber: c, isTrendingUp: d, isTrendingDown: u, tooltipText: m } = e,
         h =

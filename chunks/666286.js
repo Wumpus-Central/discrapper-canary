@@ -9,7 +9,7 @@ var i = n(200651),
     d = n(437314),
     u = n(981631),
     h = n(388032),
-    m = n(86511);
+    m = n(860428);
 function p() {
     let e = (0, s.Q3)('AddFriendHeader');
     return (0, i.jsxs)('header', {

@@ -9,7 +9,7 @@ var a = n(120356),
     r = n.n(a),
     s = n(600164),
     o = n(507675),
-    c = n(49206),
+    c = n(479230),
     d = (((i = {})[(i.TOP = 0)] = 'TOP'), (i[(i.BOTTOM = 1)] = 'BOTTOM'), i);
 function u(e) {
     let { disableGradients: t = !1, renderHeader: n, renderBottomLeft: i, renderBottomCenter: a, renderBottomRight: r, renderCenter: o } = e;

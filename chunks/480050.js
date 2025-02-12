@@ -4,7 +4,7 @@ var i = n(200651),
     a = n(120356),
     s = n.n(a),
     o = n(956664),
-    l = n(98176);
+    l = n(531043);
 let u = 400;
 function c(e) {
     let { children: t, active: n, onClick: a, className: c, style: d, width: f, height: _, maxWidth: p, maxHeight: h, panPadding: m } = e,

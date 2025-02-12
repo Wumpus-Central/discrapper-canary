@@ -8,7 +8,7 @@ var r = e(174609),
     i = e(981631),
     l = e(474936),
     d = e(388032),
-    _ = e(920792);
+    _ = e(595394);
 function p(t) {
     let { onClose: a, onCloseParent: e, analyticsSource: p, ...u } = t,
         A = (0, n.jsx)('img', {

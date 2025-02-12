@@ -31,7 +31,7 @@ var i = n(200651),
     b = n(787025),
     S = n(981631),
     A = n(388032),
-    N = n(763299);
+    N = n(147978);
 function C(e) {
     let { message: t, footer: n, headerClassName: r, showsCloseWindowText: a, spinner: o } = e;
     return (

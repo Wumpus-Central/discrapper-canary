@@ -10,7 +10,7 @@ var s = n(120356),
     c = n(692546),
     u = n(438015),
     h = n(981631),
-    p = n(855134);
+    p = n(524078);
 function g(e) {
     let { locked: t, keybind: n } = e,
         s = (0, r.Wu)([o.Z], () => o.Z.getNotifications()),

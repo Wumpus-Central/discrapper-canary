@@ -22,7 +22,7 @@ var i,
     _ = n(572004),
     h = n(217702),
     p = n(388032),
-    g = n(310764),
+    g = n(288676),
     f = (((i = {})[(i.BOT = 0)] = 'BOT'), (i[(i.ACTIVITY = 1)] = 'ACTIVITY'), i);
 function x(e) {
     let { title: t, header: n, info: i, staticBannerSrc: r, videoBannerSrc: f, bannerAspectRatio: x = 0, iconSrc: C, embedUrl: v, actions: E = [] } = e,

@@ -14,8 +14,8 @@ var i = n(200651),
     x = n(999382),
     p = n(185923),
     _ = n(388032),
-    C = n(73312),
-    f = n(750609);
+    C = n(724255),
+    f = n(489007);
 let v = { label: '' };
 function N(e) {
     let { guild: t, trait: n, index: l, onTraitUpdate: a } = e,

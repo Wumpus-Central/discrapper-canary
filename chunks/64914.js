@@ -20,10 +20,10 @@ function E() {
         n = m.Sb.useSetting(),
         E = (0, l.e7)([d.Z], () => d.Z.testModeApplicationId),
         C = (0, l.e7)([h.ZP], () => h.ZP.showPlayAgain),
-        N = s.useCallback((e) => {
+        f = s.useCallback((e) => {
             m.bm.updateSetting(!e);
         }, []),
-        f = s.useCallback((e) => {
+        N = s.useCallback((e) => {
             e ? (0, r.h7j)((e) => (0, i.jsx)(g.Z, { ...e })) : a.mc();
         }, []),
         I = s.useCallback((e) => {
@@ -70,7 +70,7 @@ function E() {
                 setting: x.s6.SETTINGS_ADVANCED_SHOW_GAME_LIBRARY,
                 children: (0, i.jsx)(r.j7V, {
                     value: !t,
-                    onChange: N,
+                    onChange: f,
                     note: p.intl.string(p.t['8mYp39']),
                     children: p.intl.string(p.t.fi3UQE)
                 })
@@ -80,7 +80,7 @@ function E() {
                 children: (0, i.jsx)(r.j7V, {
                     value: null != E,
                     note: p.intl.string(p.t['52hMnJ']),
-                    onChange: f,
+                    onChange: N,
                     children: p.intl.string(p.t.erOqlp)
                 })
             }),

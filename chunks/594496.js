@@ -17,15 +17,15 @@ var s = n(512722),
     p = n(621853),
     E = n(271383),
     C = n(594174),
-    N = n(74538),
-    f = n(51144),
+    f = n(74538),
+    N = n(51144),
     I = n(18438),
     T = n(778825),
     S = n(52597),
     j = n(430131),
     v = n(133484),
     b = n(388032),
-    A = n(23056);
+    A = n(236543);
 function O(e) {
     var t, n, s, O;
     let { guild: R } = e,
@@ -60,7 +60,7 @@ function O(e) {
     let U = (0, o.gS)(w.id),
         G = (0, r.e7)([E.ZP], () => (null == w.id ? null : E.ZP.getMember(w.id, D.id))),
         F = (0, r.e7)([p.Z], () => p.Z.getGuildMemberProfile(D.id, w.id)),
-        z = N.ZP.canUsePremiumProfileCustomization(D),
+        z = f.ZP.canUsePremiumProfileCustomization(D),
         Y = (0, c.gd)(P, null == G ? void 0 : G.avatar),
         H = (0, c.f$)(Z, null == F ? void 0 : F.banner),
         W = (0, S.p)(B, null == F ? void 0 : F.themeColors),
@@ -76,7 +76,7 @@ function O(e) {
                 j.Z,
                 {
                     errors: null !== (s = null == M ? void 0 : M.nick) && void 0 !== s ? s : null == U ? void 0 : U.nick,
-                    username: f.ZP.getName(D),
+                    username: N.ZP.getName(D),
                     pendingNick: y,
                     currentNick: null == G ? void 0 : G.nick,
                     guild: w

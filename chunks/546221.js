@@ -16,7 +16,7 @@ var r = n(481060),
     p = n(215124),
     _ = n(981631),
     C = n(388032),
-    f = n(828650);
+    f = n(872046);
 function v(e) {
     let { payoutsByPeriod: t, team: n } = e,
         l = (0, c.mY)() ? null : C.intl.format(C.t.d1sCiY, { url: null != n ? _.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(n.id) : null });

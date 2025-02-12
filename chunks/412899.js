@@ -36,7 +36,7 @@ var r = n(200651),
     P = n(944613),
     b = n(981631),
     x = n(388032),
-    G = n(695678);
+    G = n(541244);
 let F = () => Promise.resolve();
 function V(e) {
     let { userRoles: t, position: n, ...l } = e,

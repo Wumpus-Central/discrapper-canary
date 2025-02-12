@@ -22,7 +22,7 @@
             return 'string' == typeof t && /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(t);
         }),
         'undefined' != typeof crypto ? (e = crypto) : 'undefined' != typeof window && void 0 !== window.msCrypto && (e = window.msCrypto),
-        (e = e || a(636463)),
+        (e = e || a(438873)),
         (t.exports = d),
         (d.randomBytes = (function () {
             if (e) {

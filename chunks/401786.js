@@ -16,8 +16,8 @@ var i = n(200651),
     p = n(431369),
     E = n(55610),
     C = n(653798),
-    N = n(311821),
-    f = n(42818),
+    f = n(311821),
+    N = n(42818),
     I = n(314884),
     T = n(509545),
     S = n(78839),
@@ -28,7 +28,7 @@ var i = n(200651),
     O = n(474936),
     R = n(231338),
     D = n(388032),
-    P = n(522203);
+    P = n(161454);
 function y(e) {
     let { premiumSubscription: t, isInventory: n, onNext: s, onClose: l } = e;
     return (0, i.jsxs)(i.Fragment, {
@@ -182,7 +182,7 @@ function L(e) {
                                 ? (0, i.jsxs)('div', {
                                       children: [
                                           (0, i.jsx)(C.KU, {}),
-                                          (0, i.jsx)(f.nd, {
+                                          (0, i.jsx)(N.nd, {
                                               premiumSubscription: r,
                                               renewalInvoice: F,
                                               isUpdate: !0
@@ -211,7 +211,7 @@ function L(e) {
                         },
                         children: D.intl.string(D.t['/AS/gI'])
                     }),
-                    (0, i.jsx)(N.Z, { onClick: d })
+                    (0, i.jsx)(f.Z, { onClick: d })
                 ]
             })
         ]

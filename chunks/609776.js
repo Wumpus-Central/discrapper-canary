@@ -1,8 +1,8 @@
 t.d(n, { Z: () => A }), t(47120);
 var l = t(200651),
     i = t(192379),
-    a = t(913527),
-    r = t.n(a),
+    r = t(913527),
+    a = t.n(r),
     o = t(442837),
     s = t(481060),
     c = t(493773),
@@ -25,7 +25,7 @@ var l = t(200651),
     S = t(765305),
     T = t(190378),
     k = t(388032),
-    Z = t(969008);
+    Z = t(15857);
 function y(e) {
     let { stageChannelsInGuild: n, channel: t, onSelectChannel: i } = e;
     return null == i
@@ -56,11 +56,11 @@ function y(e) {
           });
 }
 function A(e) {
-    var n, t, a, v, b, A;
-    let { channel: P, guild: D, header: R, error: L, loading: G, onSave: w, onEventSave: B, onClose: O, onSelectChannel: z, isEvent: M = !1, defaultOptions: U, isSlideReady: F = !0 } = e,
+    var n, t, r, v, b, A;
+    let { channel: P, guild: D, header: R, error: L, loading: w, onSave: G, onEventSave: B, onClose: O, onSelectChannel: z, isEvent: M = !1, defaultOptions: U, isSlideReady: F = !0 } = e,
         W = i.useMemo(() => p.Z.getStageInstanceByChannel(P.id), [P.id]),
-        [V, H] = i.useState(null !== (t = null !== (n = null == U ? void 0 : U.topic) && void 0 !== n ? n : null == W ? void 0 : W.topic) && void 0 !== t ? t : ''),
-        [q, J] = i.useState(null !== (a = null == U ? void 0 : U.description) && void 0 !== a ? a : ''),
+        [H, V] = i.useState(null !== (t = null !== (n = null == U ? void 0 : U.topic) && void 0 !== n ? n : null == W ? void 0 : W.topic) && void 0 !== t ? t : ''),
+        [q, J] = i.useState(null !== (r = null == U ? void 0 : U.description) && void 0 !== r ? r : ''),
         [K] = i.useState(M),
         [Q, Y] = i.useState(null !== (v = null == U ? void 0 : U.schedule) && void 0 !== v ? v : { startDate: (0, _.ib)() }),
         [X, $] = i.useState(K && (null == U ? void 0 : U.schedule) != null),
@@ -68,9 +68,9 @@ function A(e) {
         en = (0, N.U)(P),
         et = null == W && ee && !K,
         [el, ei] = i.useState(et && en),
-        ea = (0, o.e7)([g.Z], () => g.Z.hasHotspot(T.v.LIVE_STAGE_NOTIFICATION_BADGE)),
-        er = S.j8.GUILD_ONLY,
-        [eo] = i.useState(null !== (A = null !== (b = null == U ? void 0 : U.privacyLevel) && void 0 !== b ? b : null == W ? void 0 : W.privacy_level) && void 0 !== A ? A : er),
+        er = (0, o.e7)([g.Z], () => g.Z.hasHotspot(T.v.LIVE_STAGE_NOTIFICATION_BADGE)),
+        ea = S.j8.GUILD_ONLY,
+        [eo] = i.useState(null !== (A = null !== (b = null == U ? void 0 : U.privacyLevel) && void 0 !== b ? b : null == W ? void 0 : W.privacy_level) && void 0 !== A ? A : ea),
         [es, ec] = i.useState(null == U ? void 0 : U.recurrenceRule),
         ed = (0, f._d)(P.id),
         eu = (0, f.K3)(P.id),
@@ -88,12 +88,12 @@ function A(e) {
         });
     });
     let ej = (e) => {
-            if ((e.preventDefault(), eo === S.j8.PUBLIC && V.length < 20 && !em)) {
+            if ((e.preventDefault(), eo === S.j8.PUBLIC && H.length < 20 && !em)) {
                 e_(!0);
                 return;
             }
             let n = {
-                topic: V,
+                topic: H,
                 privacyLevel: eo,
                 sendStartNotification: el
             };
@@ -108,7 +108,7 @@ function A(e) {
                     });
                 return;
             }
-            null == w || w(n);
+            null == G || G(n);
         },
         { color: eN, text: ep } = K
             ? {
@@ -134,7 +134,7 @@ function A(e) {
         var e;
         F && (null === (e = ef.current) || void 0 === e || e.focus());
     }, [F]);
-    let eI = X && null != Q.startDate && Q.startDate >= r()();
+    let eI = X && null != Q.startDate && Q.startDate >= a()();
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsxs)(s.hzk, {
@@ -156,10 +156,10 @@ function A(e) {
                                 children: [
                                     (0, l.jsx)(s.oil, {
                                         className: Z.textInput,
-                                        onChange: (e) => H(e),
+                                        onChange: (e) => V(e),
                                         placeholder: k.intl.string(k.t.ZwWrub),
                                         maxLength: C.xA,
-                                        value: V,
+                                        value: H,
                                         autoComplete: 'off',
                                         inputRef: ef
                                     }),
@@ -202,7 +202,7 @@ function A(e) {
                                             timeSelected: X,
                                             onTimeChange: $
                                         }),
-                                        null != Q.startDate && Q.startDate < r()()
+                                        null != Q.startDate && Q.startDate < a()()
                                             ? (0, l.jsx)(s.Text, {
                                                   color: 'text-danger',
                                                   variant: 'text-xs/normal',
@@ -227,7 +227,7 @@ function A(e) {
                                 ? (0, l.jsx)(h.Z, {
                                       sendStartNotification: el,
                                       setSendStartNotification: ei,
-                                      showNotificationNewBadge: ea
+                                      showNotificationNewBadge: er
                                   })
                                 : null,
                             ev && !eb
@@ -258,8 +258,8 @@ function A(e) {
                     (0, l.jsx)(s.zxk, {
                         color: eN,
                         onClick: ej,
-                        disabled: '' === V || null == eo || (M && !eI),
-                        submitting: G,
+                        disabled: '' === H || null == eo || (M && !eI),
+                        submitting: w,
                         children: ep
                     }),
                     (0, l.jsx)(s.zxk, {

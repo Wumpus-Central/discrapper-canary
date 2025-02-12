@@ -1,122 +1,122 @@
-n.d(t, { Z: () => x }), n(47120);
+n.d(t, { Z: () => _ }), n(47120);
 var i = n(200651),
-    l = n(192379),
-    a = n(120356),
-    r = n.n(a),
-    s = n(831209),
-    o = n(481060),
+    s = n(192379),
+    r = n(120356),
+    o = n.n(r),
+    a = n(831209),
+    l = n(481060),
     d = n(367907),
     c = n(177862),
-    u = n(981631),
-    m = n(388032),
-    h = n(20078);
-function x(e) {
-    let { guildId: t, transitionState: n, onClose: a } = e,
-        [x, g] = l.useState([]),
-        [p, b] = l.useState(),
-        _ = [
+    x = n(981631),
+    h = n(388032),
+    u = n(431680);
+function _(e) {
+    let { guildId: t, transitionState: n, onClose: r } = e,
+        [_, C] = s.useState([]),
+        [m, p] = s.useState(),
+        j = [
             {
-                text: m.intl.string(m.t['//3pvr']),
+                text: h.intl.string(h.t['//3pvr']),
                 value: c.C2.DM_SPAM
             },
             {
-                text: m.intl.string(m.t.SdVsio),
+                text: h.intl.string(h.t.SdVsio),
                 value: c.C2.MENTION_SPAM
             },
             {
-                text: m.intl.string(m.t.uTiSVF),
+                text: h.intl.string(h.t.uTiSVF),
                 value: c.C2.CHANNEL_SPAM
             },
             {
-                text: m.intl.string(m.t.GQczU1),
+                text: h.intl.string(h.t.GQczU1),
                 value: c.C2.SUS_NEW_MEMBERS
             },
             {
-                text: m.intl.string(m.t.AAgqy8),
+                text: h.intl.string(h.t.AAgqy8),
                 value: c.C2.CHANGING_SETTINGS
             },
             {
-                text: m.intl.string(m.t.ryPKb2),
+                text: h.intl.string(h.t.ryPKb2),
                 value: c.C2.OTHER
             }
         ];
-    function f(e) {
-        x.includes(e) ? g((t) => t.filter((t) => t !== e)) : g((t) => [...t, e]);
+    function g(e) {
+        _.includes(e) ? C((t) => t.filter((t) => t !== e)) : C((t) => [...t, e]);
     }
     return null == t
-        ? (a(), null)
-        : (0, i.jsxs)(o.Y0X, {
+        ? (r(), null)
+        : (0, i.jsxs)(l.Y0X, {
               transitionState: n,
-              size: o.CgR.MEDIUM,
+              size: l.CgR.MEDIUM,
               children: [
-                  (0, i.jsx)(o.xBx, {
+                  (0, i.jsx)(l.xBx, {
                       separator: !0,
                       children: (0, i.jsxs)('div', {
-                          className: h.headerContainer,
+                          className: u.headerContainer,
                           children: [
                               (0, i.jsxs)('div', {
-                                  className: h.headerText,
+                                  className: u.headerText,
                                   children: [
-                                      (0, i.jsx)(o.mBM, {
+                                      (0, i.jsx)(l.mBM, {
                                           size: 'xs',
-                                          color: s.Z.INTERACTIVE_NORMAL
+                                          color: a.Z.INTERACTIVE_NORMAL
                                       }),
-                                      (0, i.jsx)(o.X6q, {
+                                      (0, i.jsx)(l.X6q, {
                                           color: 'header-primary',
                                           variant: 'heading-md/semibold',
-                                          children: m.intl.string(m.t.f5hd9P)
+                                          children: h.intl.string(h.t.f5hd9P)
                                       })
                                   ]
                               }),
-                              (0, i.jsx)(o.P3F, {
-                                  onClick: a,
-                                  children: (0, i.jsx)(o.Dio, {
+                              (0, i.jsx)(l.P3F, {
+                                  onClick: r,
+                                  children: (0, i.jsx)(l.Dio, {
                                       size: 'xs',
                                       color: 'currentColor',
-                                      className: h.closeIcon
+                                      className: u.closeIcon
                                   })
                               })
                           ]
                       })
                   }),
-                  (0, i.jsx)(o.hzk, {
+                  (0, i.jsx)(l.hzk, {
                       children: (0, i.jsx)('div', {
-                          className: h.options,
-                          children: _.map((e) => {
+                          className: u.options,
+                          children: j.map((e) => {
                               let { text: t, value: n } = e;
                               return (0, i.jsxs)(
                                   'div',
                                   {
-                                      className: r()(h.optionContainer, { [h.optionContainerOther]: n === c.C2.OTHER }),
+                                      className: o()(u.optionContainer, { [u.optionContainerOther]: n === c.C2.OTHER }),
                                       children: [
-                                          (0, i.jsxs)(o.P3F, {
-                                              className: h.optionText,
-                                              onClick: () => f(n),
+                                          (0, i.jsxs)(l.P3F, {
+                                              className: u.optionText,
+                                              onClick: () => g(n),
                                               children: [
                                                   (0, i.jsx)('div', {
-                                                      children: (0, i.jsx)(o.XZJ, {
-                                                          type: o.XZJ.Types.INVERTED,
+                                                      children: (0, i.jsx)(l.XZJ, {
+                                                          type: l.XZJ.Types.INVERTED,
                                                           size: 20,
-                                                          value: x.includes(n),
-                                                          onChange: () => f(n)
+                                                          value: _.includes(n),
+                                                          onChange: () => g(n)
                                                       })
                                                   }),
-                                                  (0, i.jsx)(o.Text, {
+                                                  (0, i.jsx)(l.Text, {
                                                       variant: 'text-md/medium',
-                                                      color: x.includes(n) ? 'interactive-active' : 'interactive-normal',
+                                                      color: _.includes(n) ? 'interactive-active' : 'interactive-normal',
                                                       children: t
                                                   })
                                               ]
                                           }),
                                           n === c.C2.OTHER &&
-                                              x.includes(c.C2.OTHER) &&
+                                              _.includes(c.C2.OTHER) &&
                                               (0, i.jsx)('div', {
-                                                  className: h.textboxContainer,
-                                                  children: (0, i.jsx)(o.Kx8, {
-                                                      className: h.serverLockdownReasonText,
-                                                      placeholder: m.intl.string(m.t['PAM+JS']),
-                                                      onChange: (e) => b(e),
-                                                      value: p,
+                                                  className: u.textboxContainer,
+                                                  children: (0, i.jsx)(l.Kx8, {
+                                                      className: u.serverLockdownReasonText,
+                                                      placeholder: h.intl.string(h.t['PAM+JS']),
+                                                      onChange: (e) => p(e),
+                                                      value: m,
                                                       rows: 2,
                                                       autoFocus: !0,
                                                       flex: !0
@@ -129,20 +129,20 @@ function x(e) {
                           })
                       })
                   }),
-                  (0, i.jsx)(o.mzw, {
-                      children: (0, i.jsx)(o.zxk, {
+                  (0, i.jsx)(l.mzw, {
+                      children: (0, i.jsx)(l.zxk, {
                           onClick: function () {
-                              (0, d.yw)(u.rMx.GUILD_RAID_LOCKDOWN_FEEDBACK, {
-                                  raid_lockdown_feedback_type: x,
-                                  raid_lockdown_feedback_other_reason: p,
+                              (0, d.yw)(x.rMx.GUILD_RAID_LOCKDOWN_FEEDBACK, {
+                                  raid_lockdown_feedback_type: _,
+                                  raid_lockdown_feedback_other_reason: m,
                                   guild_id: t
                               }),
-                                  a();
+                                  r();
                           },
-                          color: o.zxk.Colors.BRAND,
-                          look: o.zxk.Looks.FILLED,
+                          color: l.zxk.Colors.BRAND,
+                          look: l.zxk.Looks.FILLED,
                           submitting: !1,
-                          children: m.intl.string(m.t.nAt0rK)
+                          children: h.intl.string(h.t.nAt0rK)
                       })
                   })
               ]

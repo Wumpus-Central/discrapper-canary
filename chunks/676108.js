@@ -7,7 +7,7 @@ var i = n(200651),
     l = n(28546),
     u = n(872635),
     c = n(185923),
-    d = n(695668);
+    d = n(840601);
 function f(e) {
     var t;
     let { editorRef: n, options: f, channel: _ } = e,

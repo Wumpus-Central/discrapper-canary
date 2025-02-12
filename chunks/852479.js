@@ -12,8 +12,8 @@ var n = l(200651),
     m = l(893966),
     h = l(527379),
     x = l(388032),
-    g = l(697301),
-    p = l(269112);
+    g = l(446012),
+    p = l(863234);
 function _(e) {
     let { guild: t, onSubmit: i } = e,
         s = (0, c.e7)([m.Z], () => m.Z.getMembersCountByGuildId(t.id, C.R_.NEW_GUILD_MEMBER), [t.id]),

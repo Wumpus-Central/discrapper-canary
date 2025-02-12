@@ -5,7 +5,7 @@ var i = n(200651),
     s = n(941524),
     a = n(563115),
     o = n(388032),
-    c = n(720210);
+    c = n(840844);
 let d = r.memo(function (e) {
     let { rule: t, onlyRoles: n = !1, onChangeRule: r } = e,
         d = (0, i.jsx)(s.Z, {

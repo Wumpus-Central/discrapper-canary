@@ -21,8 +21,8 @@ var s = n(120356),
     p = n(931331),
     E = n(754347),
     C = n(122289),
-    N = n(74538),
-    f = n(212895),
+    f = n(74538),
+    N = n(212895),
     I = n(296848),
     T = n(140465),
     S = n(695349),
@@ -34,7 +34,7 @@ var s = n(120356),
     R = n(474936),
     D = n(981631),
     P = n(388032),
-    y = n(484760);
+    y = n(949095);
 let Z = new m.Z('SubscriptionHeader.tsx'),
     L = {
         page: D.ZY5.USER_SETTINGS,
@@ -196,10 +196,10 @@ let U = function (e) {
                     Z.info('Plan not fetched for plan id: '.concat(s.planIdFromItems));
                     return;
                 }
-                let t = (0, f.DE)(e, null == m ? void 0 : m.id, !1),
+                let t = (0, N.DE)(e, null == m ? void 0 : m.id, !1),
                     n = t.length > 0 ? t[0] : s.currency,
                     i = !1;
-                1 === t.length && (null == m ? void 0 : m.id) === s.paymentSourceId && (0, f.tD)(e.id, n, null == m ? void 0 : m.id) && (i = !0),
+                1 === t.length && (null == m ? void 0 : m.id) === s.paymentSourceId && (0, N.tD)(e.id, n, null == m ? void 0 : m.id) && (i = !0),
                     i
                         ? c.O5(s, U)
                         : (0, g.Z)({
@@ -239,10 +239,10 @@ let U = function (e) {
         ei = () => {
             $(A.R.WHAT_YOU_LOSE);
         },
-        es = N.ZP.getPlanIdFromInvoice(s, r);
+        es = f.ZP.getPlanIdFromInvoice(s, r);
     if ((0, x.Q0)(es)) return null;
-    let el = N.ZP.getStatusFromInvoice(s, r),
-        er = N.ZP.getPremiumType(es),
+    let el = f.ZP.getStatusFromInvoice(s, r),
+        er = f.ZP.getPremiumType(es),
         ea = {
             [y.tier0]: er === R.p9.TIER_0,
             [y.tier1]: er === R.p9.TIER_1,
@@ -250,7 +250,7 @@ let U = function (e) {
             [y.canceled]: el === D.O0b.CANCELED,
             [y.pausePending]: el === D.O0b.PAUSE_PENDING,
             [y.paused]: el === D.O0b.PAUSED && !F,
-            [y.failedPayment]: (0, N.zV)(el)
+            [y.failedPayment]: (0, f.zV)(el)
         },
         eo = null;
     switch (er) {
@@ -284,7 +284,7 @@ let U = function (e) {
                 className: y.planInfo,
                 children: X
                     ? P.intl.format(P.t['/SfHws'], { weeks: 1 })
-                    : (0, N.qV)({
+                    : (0, f.qV)({
                           planId: es,
                           subscription: s,
                           renewalInvoicePreview: r,
@@ -296,7 +296,7 @@ let U = function (e) {
         buttons: (() => {
             let { status: e } = s;
             if (s.isPurchasedExternally) {
-                let e = (0, N.JE)(s.paymentGateway, 'SUBSCRIPTION_MANAGEMENT');
+                let e = (0, f.JE)(s.paymentGateway, 'SUBSCRIPTION_MANAGEMENT');
                 return (0, i.jsx)(o.eee, {
                     href: e,
                     useDefaultUnderlineStyles: !1,
@@ -311,8 +311,8 @@ let U = function (e) {
                 });
             }
             function t() {
-                let e = N.ZP.isSwitchingPlansDisabled(s, G),
-                    t = N.ZP.getSwitchingPlansDisabledMessage(s);
+                let e = f.ZP.isSwitchingPlansDisabled(s, G),
+                    t = f.ZP.getSwitchingPlansDisabledMessage(s);
                 return (0, i.jsxs)('div', {
                     className: y.toolsButtons,
                     children: [
@@ -356,7 +356,7 @@ let U = function (e) {
                     ]
                 });
             }
-            if (N.ZP.isBaseSubscriptionCanceled(s))
+            if (f.ZP.isBaseSubscriptionCanceled(s))
                 return (0, i.jsx)(o.zxk, {
                     className: y.toolsButton,
                     size: o.zxk.Sizes.SMALL,

@@ -6,7 +6,7 @@ var i = n(200651),
     s = n(481060),
     o = n(497505),
     c = n(415104),
-    d = n(176418);
+    d = n(402691);
 function u(e) {
     let { quests: t, isFetching: n } = e,
         r = null;

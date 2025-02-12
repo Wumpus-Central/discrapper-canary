@@ -25,7 +25,7 @@ var i = n(200651),
     T = n(276264),
     S = n(981631),
     j = n(388032),
-    y = n(303939);
+    y = n(366467);
 let A = [],
     P = N.ZP.getEnableHardwareAcceleration();
 function R(e) {
@@ -37,7 +37,7 @@ function R(e) {
         N = (0, p.Z)(t.id, 'private-channel-recipient'),
         y = (e) => {
             (0, o.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('61450')]).then(n.bind(n, 354589));
+                let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('31952')]).then(n.bind(n, 354589));
                 return (n) =>
                     (0, i.jsx)(e, {
                         ...n,

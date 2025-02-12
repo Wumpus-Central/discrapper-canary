@@ -1,45 +1,45 @@
-t.d(n, {
+n.d(t, {
     Np: () => c,
-    l8: () => o,
-    mc: () => s,
-    so: () => l
+    l8: () => s,
+    mc: () => o,
+    so: () => r
 });
-var a = t(200651);
-t(192379);
-var i = t(481060),
-    r = t(822869);
-let l = 'forward-modal';
-function o(e) {
-    let { message: n, source: o, initialSelectedDestinations: s = [], forwardOptions: c, onRequestSent: u } = e;
-    (0, r.Lb)(n.channel_id, n.id, o),
-        (0, i.ZDy)(
+var i = n(200651);
+n(192379);
+var l = n(481060),
+    a = n(822869);
+let r = 'forward-modal';
+function s(e) {
+    let { message: t, source: s, initialSelectedDestinations: o = [], forwardOptions: c, onRequestSent: d } = e;
+    (0, a.Lb)(t.channel_id, t.id, s),
+        (0, l.ZDy)(
             async () => {
-                let { ForwardModal: e } = await Promise.all([t.e('25292'), t.e('6380'), t.e('91717')]).then(t.bind(t, 930864));
-                return (t) =>
-                    (0, a.jsx)(e, {
-                        ...t,
-                        message: n,
-                        initialSelectedDestinations: s,
+                let { ForwardModal: e } = await Promise.all([n.e('25292'), n.e('6380'), n.e('13485')]).then(n.bind(n, 930864));
+                return (n) =>
+                    (0, i.jsx)(e, {
+                        ...n,
+                        message: t,
+                        initialSelectedDestinations: o,
                         forwardOptions: c,
-                        onRequestSent: u
+                        onRequestSent: d
                     });
             },
-            { modalKey: l }
+            { modalKey: r }
         );
 }
-function s() {
-    (0, i.Mr3)(l);
+function o() {
+    (0, l.Mr3)(r);
 }
 function c(e) {
-    let { message: n, failedDestinations: r, forwardOptions: l } = e;
-    (0, i.ZDy)(async () => {
-        let { ForwardFailedAlertModal: e } = await t.e('86590').then(t.bind(t, 384331));
-        return (t) =>
-            (0, a.jsx)(e, {
-                ...t,
-                message: n,
-                failedDestinations: r,
-                forwardOptions: l
+    let { message: t, failedDestinations: a, forwardOptions: r } = e;
+    (0, l.ZDy)(async () => {
+        let { ForwardFailedAlertModal: e } = await n.e('86590').then(n.bind(n, 384331));
+        return (n) =>
+            (0, i.jsx)(e, {
+                ...n,
+                message: t,
+                failedDestinations: a,
+                forwardOptions: r
             });
     });
 }

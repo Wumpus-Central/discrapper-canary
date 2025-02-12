@@ -8,7 +8,7 @@ var i = n(200651),
     c = n(569550),
     d = n(726985),
     u = n(388032),
-    h = n(483938);
+    h = n(814632);
 function m(e) {
     let { refreshStyles: t = !1 } = e,
         { enabled: n } = (0, r.S)({ location: 'UserSettingsStreamPreviews' }),

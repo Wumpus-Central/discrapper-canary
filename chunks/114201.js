@@ -18,7 +18,7 @@ var a = c(99815),
     j = c(463031),
     _ = c(981631),
     v = c(388032),
-    x = c(508193);
+    x = c(342378);
 function N(t) {
     let { guildId: e, leaderboardId: N } = t,
         Z = (0, s.e7)([f.default], () => f.default.getId()),

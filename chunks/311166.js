@@ -4,7 +4,7 @@ t(192379);
 var i = t(481060),
     r = t(195367),
     s = t(388032),
-    a = t(840050);
+    a = t(404879);
 function o(e) {
     let { isSlideReady: n, ...t } = e;
     return (0, l.jsxs)('div', {

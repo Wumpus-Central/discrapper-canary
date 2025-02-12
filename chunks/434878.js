@@ -60,7 +60,7 @@ var i = n(200651),
     es = n(981631),
     eo = n(124368),
     ec = n(388032),
-    ed = n(72895);
+    ed = n(881369);
 function eu(e) {
     let { channel: t, guild: n, sidebarState: r } = e;
     return (0, i.jsx)(

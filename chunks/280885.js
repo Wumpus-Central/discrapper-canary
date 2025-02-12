@@ -8,7 +8,7 @@ var i = n(200651),
     u = n(580552),
     c = n(249458),
     d = n(240991),
-    f = n(663362);
+    f = n(642367);
 function _(e) {
     let { userBio: t, className: n, animateOnHover: a = !1, isHovering: _ = !1, lineClamp: p = 6, setLineClamp: h = !0, textColor: m, userId: g } = e,
         E = r.useMemo(() => ((0, u.Z)(g) ? (0, i.jsx)(l.Z, {}) : null == t || '' === t ? null : (0, d.parseBioReact)(t)), [g, t]);

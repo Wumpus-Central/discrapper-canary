@@ -5,7 +5,7 @@ var r = n(120356),
     a = n.n(r),
     s = n(481060),
     o = n(556638),
-    l = n(21478);
+    l = n(694978);
 function u(e) {
     let { icon: t, tooltip: n, className: r } = e,
         u = (0, s.vjg)(s.Skl.ONLINE);

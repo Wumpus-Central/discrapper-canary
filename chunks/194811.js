@@ -7,7 +7,7 @@ var r = n(120356),
     o = n(111028),
     l = n(652853),
     u = n(228168),
-    c = n(537208);
+    c = n(309584);
 function d(e) {
     let { text: t, tags: n, platformIcon: r, contextMenu: d } = e,
         { profileType: f } = (0, l.z)();

@@ -6,7 +6,7 @@ var r = n(189223),
     i = n(410030),
     o = n(95398),
     s = n(981631),
-    c = n(658951);
+    c = n(617521);
 let d = {
     base00: l.Z.colors.BACKGROUND_SECONDARY.css,
     base03: l.Z.colors.TEXT_WARNING.css,

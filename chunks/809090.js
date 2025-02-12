@@ -6,7 +6,7 @@ var i = n(200651),
     o = n(686546),
     l = n(768581),
     u = n(895924),
-    c = n(649705),
+    c = n(426814),
     d = n(970952);
 function f(e) {
     let { section: t, isSelected: n, width: a, height: f, className: _, selectable: p = !1, isSquircle: h, onFocus: m, onBlur: g, onMouseOver: E, onMouseLeave: v, ...y } = e,

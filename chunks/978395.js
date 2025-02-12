@@ -24,7 +24,7 @@ var i = n(200651),
     A = n(915014),
     N = n(228168),
     C = n(981631),
-    R = n(593401);
+    R = n(112650);
 function O(e) {
     let { user: t, currentUser: n, displayProfile: O, guild: D, isHovering: L, onOpenProfile: x, channelId: P, onClose: w } = e,
         M = d.ZP.useName(null == D ? void 0 : D.id, P, t),

@@ -13,10 +13,10 @@ var s = n(120356),
     m = n(726985),
     g = n(981631),
     x = n(388032),
-    _ = n(430387),
-    p = n(483938);
+    _ = n(47673),
+    p = n(814632);
 function E() {
-    let { enabled: e, autoToggle: t, hideInstantInvites: s, hidePersonalInformation: E, disableSounds: C, disableNotifications: N, enableContentProtection: f } = (0, r.cj)([u.Z], () => ({ ...u.Z.getSettings() })),
+    let { enabled: e, autoToggle: t, hideInstantInvites: s, hidePersonalInformation: E, disableSounds: C, disableNotifications: f, enableContentProtection: N } = (0, r.cj)([u.Z], () => ({ ...u.Z.getSettings() })),
         I = (e, t) => {
             o.Z.update({ [e]: t });
         };
@@ -101,7 +101,7 @@ function E() {
                     (0, i.jsx)(d.F, {
                         setting: m.s6.STREAMER_MODE_DISABLE_NOTIFICATIONS,
                         children: (0, i.jsx)(a.j7V, {
-                            value: N,
+                            value: f,
                             onChange: (e) => I('disableNotifications', e),
                             note: x.intl.string(x.t.ZAmpQ0),
                             children: x.intl.string(x.t.qmYiYW)
@@ -110,7 +110,7 @@ function E() {
                     (0, i.jsx)(d.F, {
                         setting: m.s6.STREAMER_MODE_HIDE_DISCORD_WINDOW_FROM_SCREEN_CAPTURE,
                         children: (0, i.jsx)(a.j7V, {
-                            value: f,
+                            value: N,
                             onChange: (e) => I('enableContentProtection', e),
                             note: x.intl.string(x.t.P4vj0t),
                             children: x.intl.string(x.t['iA81+f'])

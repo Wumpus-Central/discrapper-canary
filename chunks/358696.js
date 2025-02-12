@@ -10,7 +10,7 @@ var r = n(120356),
     o = n(686546),
     l = n(442550),
     u = n(388032),
-    c = n(690274);
+    c = n(445956);
 let d = {
     none: void 0,
     default: c.aspectRatio,

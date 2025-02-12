@@ -17,24 +17,24 @@ var s = n(120356),
     p = n(210887),
     E = n(738486),
     C = n(726985),
-    N = n(981631),
-    f = n(388032),
-    I = n(483938);
+    f = n(981631),
+    N = n(388032),
+    I = n(814632);
 let T = n(775322),
     S = n(853453),
     j = (0, u.hQ)(),
     v = {
-        page: N.ZY5.USER_SETTINGS,
-        section: N.jXE.SETTINGS_VOICE_AND_VIDEO
+        page: f.ZY5.USER_SETTINGS,
+        section: f.jXE.SETTINGS_VOICE_AND_VIDEO
     };
 function b(e) {
     let t = e.currentTarget;
-    x.default.track(N.rMx.NOISE_CANCELLATION_LINK_CLICKED, {
+    x.default.track(f.rMx.NOISE_CANCELLATION_LINK_CLICKED, {
         text: t.text,
         href: t.href,
         location: {
-            page: N.ZY5.USER_SETTINGS,
-            section: N.jXE.SETTINGS_VOICE_AND_VIDEO
+            page: f.ZY5.USER_SETTINGS,
+            section: f.jXE.SETTINGS_VOICE_AND_VIDEO
         }
     });
 }
@@ -57,16 +57,16 @@ function A(e) {
     return (
         h &&
             m.push({
-                name: f.intl.string(f.t.rdoNzs),
+                name: N.intl.string(N.t.rdoNzs),
                 value: 2
             }),
         u &&
             m.push({
-                name: f.intl.string(f.t.qXeYHx),
+                name: N.intl.string(N.t.qXeYHx),
                 value: 1
             }),
         m.push({
-            name: f.intl.string(f.t.wkYAl5),
+            name: N.intl.string(N.t.wkYAl5),
             value: 0
         }),
         (0, i.jsxs)(o.hjN, {
@@ -76,12 +76,12 @@ function A(e) {
                     id: j,
                     tag: o.RB0.H3,
                     className: I.marginBottom8,
-                    children: f.intl.string(f.t.t8QhiY)
+                    children: N.intl.string(N.t.t8QhiY)
                 }),
                 (0, i.jsx)(o.R94, {
                     type: o.R94.Types.DESCRIPTION,
                     className: I.marginBottom8,
-                    children: f.intl.string(f.t.najZCQ)
+                    children: N.intl.string(N.t.najZCQ)
                 }),
                 (0, i.jsx)(o.FXm, {
                     options: m,
@@ -101,9 +101,9 @@ function A(e) {
                         },
                         align: d.Z.Align.CENTER,
                         body: (0, i.jsx)(o.eee, {
-                            href: _.Z.getArticleURL(N.BhN.NOISE_SUPPRESSION),
+                            href: _.Z.getArticleURL(f.BhN.NOISE_SUPPRESSION),
                             onClick: b,
-                            children: f.intl.string(f.t.hvVgAQ)
+                            children: N.intl.string(N.t.hvVgAQ)
                         })
                     }),
                 t ? null : (0, i.jsx)(o.$i$, {})
@@ -141,14 +141,14 @@ function O(e) {
             }),
             [s]
         ),
-        S = n === N.pM4.VOICE_ACTIVITY && u,
+        S = n === f.pM4.VOICE_ACTIVITY && u,
         j = (0, i.jsxs)(E.Z, {
             children: [
                 (_ || p || T) &&
                     (0, i.jsx)(o.R94, {
                         className: t ? void 0 : I.marginBottom20,
                         type: o.R94.Types.DESCRIPTION,
-                        children: f.intl.string(f.t['/Whuzs'])
+                        children: N.intl.string(N.t['/Whuzs'])
                     }),
                 (0, i.jsx)(h.F, {
                     setting: C.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ECHO_CANCELLATION,
@@ -157,12 +157,12 @@ function O(e) {
                         value: a,
                         onChange: (e) =>
                             c.Z.setEchoCancellation(e, {
-                                page: N.ZY5.USER_SETTINGS,
-                                section: N.jXE.SETTINGS_VOICE_AND_VIDEO
+                                page: f.ZY5.USER_SETTINGS,
+                                section: f.jXE.SETTINGS_VOICE_AND_VIDEO
                             }),
                         disabled: _,
                         hideBorder: t,
-                        children: f.intl.string(f.t.iWTwu7)
+                        children: N.intl.string(N.t.iWTwu7)
                     })
                 }),
                 (0, i.jsx)(h.F, {
@@ -174,10 +174,10 @@ function O(e) {
                     children: (0, i.jsx)(o.j7V, {
                         value: x,
                         onChange: (e) => c.Z.setMode(n, { vadUseKrisp: e }),
-                        note: f.intl.string(f.t.LoOB1N),
+                        note: N.intl.string(N.t.LoOB1N),
                         disabled: !S,
                         hideBorder: t,
-                        children: f.intl.string(f.t.BbESsr)
+                        children: N.intl.string(N.t.BbESsr)
                     })
                 }),
                 (0, i.jsx)(h.F, {
@@ -186,13 +186,13 @@ function O(e) {
                         value: d,
                         onChange: (e) =>
                             c.Z.setAutomaticGainControl(e, {
-                                page: N.ZY5.USER_SETTINGS,
-                                section: N.jXE.SETTINGS_VOICE_AND_VIDEO
+                                page: f.ZY5.USER_SETTINGS,
+                                section: f.jXE.SETTINGS_VOICE_AND_VIDEO
                             }),
-                        note: f.intl.string(f.t['6EjbvL']),
+                        note: N.intl.string(N.t['6EjbvL']),
                         disabled: T,
                         hideBorder: t,
-                        children: f.intl.string(f.t.cUMdHx)
+                        children: N.intl.string(N.t.cUMdHx)
                     })
                 })
             ]
@@ -201,7 +201,7 @@ function O(e) {
         ? j
         : (0, i.jsx)(o.hjN, {
               className: I.marginBottom20,
-              title: f.intl.string(f.t['6I6GUl']),
+              title: N.intl.string(N.t['6I6GUl']),
               children: j
           });
 }

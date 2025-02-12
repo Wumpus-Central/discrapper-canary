@@ -28,7 +28,7 @@ var i = n(200651),
     E = n(65145),
     I = n(981631),
     N = n(388032),
-    S = n(554715);
+    S = n(508827);
 function T(e) {
     let { className: t, children: n } = e;
     return (0, i.jsx)('ul', {

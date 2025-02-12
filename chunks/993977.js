@@ -14,7 +14,7 @@ var i = n(200651),
     g = n(34305),
     _ = n(981631),
     f = n(388032),
-    E = n(994074);
+    E = n(800280);
 function I(e) {
     let { applicationViewItems: t, restoreApplication: n } = e;
     if (0 === t.length) return null;

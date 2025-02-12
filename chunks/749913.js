@@ -52,7 +52,7 @@ var i = n(200651),
     $ = n(981631),
     ee = n(176505),
     et = n(388032),
-    en = n(523247);
+    en = n(387369);
 let ei = p.Ie.CREATE_FORUM_POST;
 function er(e) {
     let { parentChannel: t, isSearchLoading: n, onChange: l, canCreatePost: s, inputRef: o } = e,

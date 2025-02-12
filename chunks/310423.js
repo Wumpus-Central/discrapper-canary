@@ -18,7 +18,7 @@ var i = n(200651),
     C = n(981631),
     v = n(665692),
     E = n(388032),
-    I = n(790817);
+    I = n(787694);
 let N = {
         tag: 'span',
         variant: 'text-md/normal',

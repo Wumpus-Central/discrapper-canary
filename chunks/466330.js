@@ -24,7 +24,7 @@ let E = (n, e, i) =>
             icon: n === o.t4x.GUILD_HEADER ? a.ejJ : void 0,
             action: () =>
                 (0, a.ZDy)(async () => {
-                    let { default: a } = await Promise.all([t.e('7654'), t.e('13942')]).then(t.bind(t, 560114));
+                    let { default: a } = await Promise.all([t.e('7654'), t.e('76236')]).then(t.bind(t, 560114));
                     return (t) =>
                         (0, l.jsx)(a, {
                             ...t,

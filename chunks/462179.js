@@ -99,7 +99,7 @@ function j(e) {
                 ? function (e) {
                       e.stopPropagation(),
                           (0, a.ZDy)(async () => {
-                              let { default: e } = await Promise.all([t.e('84722'), t.e('20469')]).then(t.bind(t, 296864));
+                              let { default: e } = await Promise.all([t.e('84722'), t.e('59659')]).then(t.bind(t, 296864));
                               return (n) =>
                                   (0, i.jsx)(e, {
                                       ...n,
@@ -124,7 +124,7 @@ function j(e) {
                     return;
                 }
                 (0, a.ZDy)(async () => {
-                    let { default: e } = await Promise.all([t.e('7654'), t.e('48184')]).then(t.bind(t, 560114));
+                    let { default: e } = await Promise.all([t.e('7654'), t.e('60775')]).then(t.bind(t, 560114));
                     return (t) =>
                         (0, i.jsx)(e, {
                             ...t,

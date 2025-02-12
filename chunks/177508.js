@@ -13,11 +13,11 @@ var i = n(200651),
     g = n(726985),
     x = n(981631),
     _ = n(231338),
-    p = n(707853);
+    p = n(821274);
 let E = Object.keys(d.zxk.Colors).filter((e) => 'CUSTOM' !== e),
     C = Object.keys(d.zxk.Looks).filter((e) => 'BLANK' !== e),
-    N = Object.keys(d.zxk.Sizes).filter((e) => 'NONE' !== e);
-function f() {
+    f = Object.keys(d.zxk.Sizes).filter((e) => 'NONE' !== e);
+function N() {
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(d.Qjf, {
@@ -208,7 +208,7 @@ function A() {
         tabs: [
             {
                 title: 'Components',
-                component: () => (0, i.jsx)(f, {}),
+                component: () => (0, i.jsx)(N, {}),
                 setting: g.s6.DESIGN_SYSTEMS_COMPONENTS
             },
             {
@@ -237,7 +237,7 @@ function O() {
             ),
             (0, i.jsx)('hr', { className: p.sectionDivider }, e + 'divider')
         ]),
-        l = N.flatMap((e) =>
+        l = f.flatMap((e) =>
             (0, i.jsx)(d.zxk, {
                 color: d.zxk.Colors.BRAND,
                 look: d.zxk.Looks.FILLED,

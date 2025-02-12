@@ -1,20 +1,20 @@
-s.d(t, { Z: () => x }), s(390547);
+s.d(t, { Z: () => C }), s(390547);
 var n = s(200651),
-    i = s(192379),
-    l = s(120356),
-    o = s.n(l),
+    r = s(192379),
+    o = s(120356),
+    i = s.n(o),
     a = s(658722),
-    r = s.n(a),
-    h = s(392711),
-    d = s.n(h),
-    c = s(217986),
-    u = s(481060),
+    l = s.n(a),
+    c = s(392711),
+    u = s.n(c),
+    d = s(217986),
+    h = s(481060),
     p = s(600164),
-    m = s(133080),
-    f = s(388032),
-    g = s(920178),
-    C = s(801919);
-function y(e, t, s) {
+    f = s(133080),
+    m = s(388032),
+    g = s(826699),
+    _ = s(60412);
+function x(e, t, s) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,18 +27,18 @@ function y(e, t, s) {
         e
     );
 }
-class x extends i.PureComponent {
+class C extends r.PureComponent {
     renderItems() {
         let { query: e } = this.state,
-            t = c.Z.flatMap((e, t) => {
-                let { alpha2: s, phoneCountryCodes: i, name: l } = e,
-                    o = (0, m.q9)(s);
-                return i.map((e) => ({
+            t = d.Z.flatMap((e, t) => {
+                let { alpha2: s, phoneCountryCodes: r, name: o } = e,
+                    i = (0, f.q9)(s);
+                return r.map((e) => ({
                     key: ''.concat(t, '-').concat(e),
-                    name: l,
-                    translatedName: o,
+                    name: o,
+                    translatedName: i,
                     countryData: {
-                        name: l,
+                        name: o,
                         alpha2: s,
                         code: e
                     },
@@ -49,7 +49,7 @@ class x extends i.PureComponent {
                         children: [
                             (0, n.jsx)(p.Z.Child, {
                                 className: g.countryName,
-                                children: o
+                                children: i
                             }),
                             (0, n.jsx)(p.Z.Child, {
                                 className: g.countryCode,
@@ -61,10 +61,10 @@ class x extends i.PureComponent {
                     })
                 }));
             }),
-            s = d()(t)
-                .filter((t) => 0 === e.length || r()(e.toLowerCase(), t.name.toLowerCase()) || r()(e.toLowerCase(), t.translatedName.toLowerCase()))
+            s = u()(t)
+                .filter((t) => 0 === e.length || l()(e.toLowerCase(), t.name.toLowerCase()) || l()(e.toLowerCase(), t.translatedName.toLowerCase()))
                 .map((e) =>
-                    (0, i.createElement)(u.mzC.Item, {
+                    (0, r.createElement)(h.mzC.Item, {
                         ...e,
                         key: e.key,
                         onClick: () => this.onClick(e.countryData)
@@ -72,38 +72,38 @@ class x extends i.PureComponent {
                 )
                 .value();
         return 0 === s.length
-            ? (0, n.jsx)(u.mzC.Empty, { children: f.intl.string(f.t.PoWNfX) })
-            : (0, n.jsx)(u.w0Z, {
+            ? (0, n.jsx)(h.mzC.Empty, { children: m.intl.string(m.t.PoWNfX) })
+            : (0, n.jsx)(h.w0Z, {
                   className: g.phoneFieldScroller,
                   children: s
               });
     }
     render() {
         let { className: e } = this.props;
-        return (0, n.jsxs)(u.mzC, {
-            className: o()(g.phoneFieldPopout, C.elevationBorderLow, e),
+        return (0, n.jsxs)(h.mzC, {
+            className: i()(g.phoneFieldPopout, _.elevationBorderLow, e),
             children: [
-                (0, n.jsx)(u.mzC.SearchBar, {
+                (0, n.jsx)(h.mzC.SearchBar, {
                     query: this.state.query,
-                    placeholder: f.intl.string(f.t.hGOODg),
+                    placeholder: m.intl.string(m.t.hGOODg),
                     onChange: this.onChangeQuery,
                     onClear: this.onClearQuery,
                     autoComplete: 'off'
                 }),
-                (0, n.jsx)(u.mzC.Divider, {}),
+                (0, n.jsx)(h.mzC.Divider, {}),
                 this.renderItems()
             ]
         });
     }
     constructor(e) {
         super(e),
-            y(this, 'onChangeQuery', (e) => {
+            x(this, 'onChangeQuery', (e) => {
                 this.setState({ query: e });
             }),
-            y(this, 'onClearQuery', () => {
+            x(this, 'onClearQuery', () => {
                 this.setState({ query: '' });
             }),
-            y(this, 'onClick', (e) => {
+            x(this, 'onClick', (e) => {
                 var t, s;
                 null === (t = (s = this.props).onClick) || void 0 === t || t.call(s, e);
             }),

@@ -5,7 +5,7 @@ var r = n(120356),
     a = n.n(r),
     s = n(481060),
     o = n(563132),
-    l = n(824587);
+    l = n(296092);
 function u(e) {
     let { notificationBlockRef: t } = e,
         { selectedPlanNotification: n } = (0, o.JL)();

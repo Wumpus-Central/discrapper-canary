@@ -9,7 +9,7 @@ var i = n(200651),
     c = n(390507),
     d = n(679400),
     f = n(580747),
-    _ = n(143973);
+    _ = n(844928);
 function p(e, t) {
     let { color: a, src: o, size: p = 'md', width: h, height: m, className: g, initialAnimation: E, markers: v } = e,
         [y, I] = r.useState(null),

@@ -9,7 +9,7 @@ var l = n(468363),
     c = n(565640),
     d = n(51144),
     u = n(388032),
-    h = n(116324);
+    h = n(341241);
 let m = function (e) {
     let { hovered: t, activities: n, applicationStream: m, status: p, user: g, userIgnored: _ } = e,
         f = (0, c.Z)(null == g ? void 0 : g.id, 'StatusText'),

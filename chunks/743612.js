@@ -4,7 +4,7 @@ n(192379);
 var r = n(120356),
     a = n.n(r),
     s = n(481060),
-    l = n(510040);
+    l = n(832554);
 let o = (e) => {
     var t, n, r, o;
     let { title: c, shouldShowElement: d, cardVariantStyleInfo: u, description: m, titleClassName: g = '', subtitle: _ = '', subtitleClassName: p } = e;

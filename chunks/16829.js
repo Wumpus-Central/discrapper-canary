@@ -17,7 +17,7 @@ var r = n(200651),
     g = n(527379),
     O = n(327999),
     R = n(388032),
-    S = n(934672);
+    S = n(960646);
 let U = l.memo(function () {
         return (0, r.jsx)(o.ua7, {
             text: R.intl.string(R.t['vu/MiY']),

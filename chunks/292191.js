@@ -5,7 +5,7 @@ var i = n(200651),
     l = n.n(r),
     s = n(481060),
     o = n(388032),
-    c = n(420712),
+    c = n(986321),
     d = n(902294);
 function u(e) {
     let { heading: t = o.intl.string(o.t.NGw8v7), body: n = o.intl.string(o.t['1XZRY2']), className: r } = e;

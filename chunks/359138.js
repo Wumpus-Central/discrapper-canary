@@ -6,7 +6,7 @@ var i = n(200651),
     a = n(747545),
     o = n(131951),
     c = n(388032),
-    d = n(130529);
+    d = n(991520);
 function u() {
     let e = o.Z.getCameraComponent(),
         t = (0, l.e7)([o.Z], () => o.Z.getVideoDeviceId()),

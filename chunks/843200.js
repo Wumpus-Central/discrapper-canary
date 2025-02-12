@@ -11,7 +11,7 @@ var s = n(120356),
     u = n(594174),
     h = n(418632),
     m = n(388032),
-    g = n(378529);
+    g = n(55055);
 function x(e) {
     let { unclaimedNotice: t, unverifiedNotice: s, className: r } = e,
         {
@@ -31,7 +31,7 @@ function x(e) {
         });
     function E() {
         (0, c.ZDy)(async () => {
-            let { default: e } = await Promise.all([n.e('9343'), n.e('73669')]).then(n.bind(n, 642298));
+            let { default: e } = await Promise.all([n.e('9343'), n.e('58409')]).then(n.bind(n, 642298));
             return (t) => (0, i.jsx)(e, { ...t });
         });
     }

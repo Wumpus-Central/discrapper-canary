@@ -6,7 +6,7 @@ var i = n(200651),
     o = n(442837),
     l = n(481060),
     u = n(607070),
-    c = n(721232);
+    c = n(226536);
 function d(e) {
     let { children: t, heading: n, headingIcon: a, subheading: d, className: f, scrollIntoView: _ = !1, headingColor: p = 'header-secondary' } = e,
         h = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),

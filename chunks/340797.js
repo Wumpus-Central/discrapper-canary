@@ -5,7 +5,7 @@ var o = n(481060),
     i = n(946273),
     r = n(441110),
     s = n(388032),
-    l = n(387405);
+    l = n(579497);
 function c(e) {
     let { guild: t, message: n } = e;
     return (0, i.vV)(t.id, n.author.id)

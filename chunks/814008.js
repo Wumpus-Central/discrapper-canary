@@ -17,7 +17,7 @@ var s = i(200651),
     N = i(203377),
     j = i(981631),
     b = i(388032),
-    f = i(184330);
+    f = i(964343);
 let I = /^[A-Za-z0-9\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF-]+$/u,
     S = (e) => {
         var t;

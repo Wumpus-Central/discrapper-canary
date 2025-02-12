@@ -6,7 +6,7 @@ var i = n(200651),
     s = n(911969),
     o = n(399860),
     d = n(388032),
-    c = n(830754);
+    c = n(887375);
 function u(e) {
     let { applicationIcon: t, applicationName: u, canNavigate: m, command: h, guildId: x } = e,
         g = l.useMemo(() => {

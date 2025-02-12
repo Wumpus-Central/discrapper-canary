@@ -8,7 +8,7 @@ var r = n(692547),
     l = n(788858),
     u = n(170187),
     c = n(388032),
-    d = n(21478);
+    d = n(694978);
 function f(e) {
     let { channel: t, textVariant: n, textClassName: f, hideText: _ = !1, hideTooltip: p = !1 } = e,
         h = (0, a.vjg)(a.Skl.ONLINE),

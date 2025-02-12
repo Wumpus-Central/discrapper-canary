@@ -28,7 +28,7 @@ var i,
     b = n(281029),
     S = n(981631),
     N = n(388032),
-    E = n(952107);
+    E = n(467678);
 function j(e, t, n) {
     return null != t && !!t && !(0, b.ig)(n, e.type);
 }
@@ -75,7 +75,7 @@ function T(e) {
         if (null != h) {
             let e = C.Z.getAllActiveStreams().filter((e) => e.state !== S.jm8.ENDED && e.channelId === t.id);
             (0, u.ZDy)(async () => {
-                let { default: i } = await Promise.all([n.e('7654'), n.e('13942')]).then(n.bind(n, 560114));
+                let { default: i } = await Promise.all([n.e('7654'), n.e('76236')]).then(n.bind(n, 560114));
                 return (n) =>
                     (0, a.jsx)(i, {
                         ...n,

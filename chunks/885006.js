@@ -1,15 +1,15 @@
-n.d(t, { Z: () => a }), n(47120);
-var r = n(192379);
-function a() {
+n.d(t, { Z: () => r }), n(47120);
+var a = n(192379);
+function r() {
     var e, t;
-    let [n, a] = r.useState({
+    let [n, r] = a.useState({
         width: null !== (e = window.innerWidth) && void 0 !== e ? e : 1080,
         height: null !== (t = window.innerHeight) && void 0 !== t ? t : 1080
     });
     return (
-        r.useLayoutEffect(() => {
+        a.useLayoutEffect(() => {
             function e() {
-                a({
+                r({
                     width: window.innerWidth,
                     height: window.innerHeight
                 });

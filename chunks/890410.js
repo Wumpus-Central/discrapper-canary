@@ -7,7 +7,7 @@ var l = n(120356),
     s = n(492593),
     o = n(930282),
     c = n(464891),
-    d = n(235767);
+    d = n(272695);
 function u(e) {
     let { message: t, channel: n, content: l, className: u, compact: m, popoutProps: _, hideTimestamp: h = !1, withFooter: p = !1, ...g } = e,
         f = (0, r.ZP)(t);

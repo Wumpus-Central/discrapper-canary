@@ -25,7 +25,7 @@ var i = n(200651),
     L = n(626135),
     S = n(981631),
     U = n(388032),
-    f = n(137046);
+    f = n(688496);
 let D = 'VoiceChannelStatusModal';
 function A(t) {
     let { channel: e, transitionState: n, onClose: r } = t,

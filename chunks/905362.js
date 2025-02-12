@@ -25,7 +25,7 @@ function l(e) {
 }
 function u(e, t) {
     (0, a.ZDy)(async () => {
-        let { default: r } = await Promise.all([n.e('82158'), n.e('49387')]).then(n.bind(n, 717057));
+        let { default: r } = await Promise.all([n.e('82158'), n.e('47855')]).then(n.bind(n, 717057));
         return (n) => {
             let a = () => {
                 null != t && o.Z.ackUserGuildJoinRequest(e, t), n.onClose();

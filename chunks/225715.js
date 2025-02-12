@@ -13,7 +13,7 @@ var r = n(120356),
     s = n(481060),
     o = n(41959),
     l = n(245561),
-    u = n(420123);
+    u = n(762584);
 let c = (e) => {
         let { application: t, asset: n, className: r, ...a } = e;
         return (0, i.jsx)(o.Z, {

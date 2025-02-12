@@ -7,7 +7,7 @@ var r = n(120356),
     o = n.n(s),
     l = n(481060),
     u = n(565138),
-    c = n(630083);
+    c = n(916389);
 function d(e) {
     let { className: t, maxGuilds: n, guilds: r, onFocus: s, onClick: d, size: f = u.Z.Sizes.SMALLER, hideOverflowCount: _ = !1, disableGuildNameTooltip: p = !1 } = e;
     function h() {

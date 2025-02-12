@@ -10,7 +10,7 @@ var t = l(200651),
     d = l(546432),
     m = l(944486),
     h = l(388032),
-    p = l(572914);
+    p = l(938848);
 function x(e) {
     let { file: n, name: l, size: r, spoiler: x } = e,
         v = (0, s.e7)([m.Z], () => m.Z.getChannelId()),

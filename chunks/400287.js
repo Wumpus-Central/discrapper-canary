@@ -15,15 +15,15 @@ var s = n(120356),
     x = n(726985),
     _ = n(981631),
     p = n(388032),
-    E = n(483938);
+    E = n(814632);
 function C() {
     let e = (0, c.pR)(),
         t = (0, c.Ju)(),
         n = g.fq.useSetting(),
         s = g.eR.useSetting(),
         C = (0, u.V2)({ location: 'UserSettingsTextImages' }),
-        N = g.R$.useSetting(),
-        f = g.cC.useSetting(),
+        f = g.R$.useSetting(),
+        N = g.cC.useSetting(),
         I = g.vF.useSetting(),
         T = g.H1.useSetting(),
         S = g.ev.useSetting(),
@@ -210,7 +210,7 @@ function C() {
                             setting: x.s6.CHAT_TEXT_BOX_PREVIEW,
                             children: (0, i.jsx)(r.j7V, {
                                 className: l()(E.marginTop8, E.marginBottom40),
-                                value: N,
+                                value: f,
                                 onChange: (e) => {
                                     m.default.track(_.rMx.PREVIEW_MARKDOWN_TOGGLED, {
                                         enabled: e,
@@ -271,7 +271,7 @@ function C() {
                                 }
                             ],
                             onChange: (e) => g.cC.updateSetting(e.value),
-                            value: f
+                            value: N
                         })
                     ]
                 })

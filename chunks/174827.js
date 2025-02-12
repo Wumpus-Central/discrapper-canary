@@ -36,7 +36,7 @@ var l = n(200651),
     w = n(981631),
     b = n(474936),
     H = n(388032),
-    B = n(670841);
+    B = n(331034);
 function F(e) {
     var t, n, s, F;
     let { handleStepChange: G, initialPlanId: D, subscriptionTier: W, trialId: Y, referralTrialOfferId: K, handleClose: X } = e,

@@ -11,7 +11,7 @@ var i = n(200651),
     h = n(347475),
     p = n(237583),
     m = n(768581),
-    f = n(24551);
+    f = n(448971);
 function g(e) {
     let { channel: t, speaker: a, className: p } = e,
         g = (0, d.bp)(),
@@ -22,7 +22,7 @@ function g(e) {
             (0, o.jW)(
                 e,
                 async () => {
-                    let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('7717'), n.e('65023')]).then(n.bind(n, 757387));
+                    let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('7717'), n.e('44475')]).then(n.bind(n, 757387));
                     return (n) =>
                         (0, i.jsx)(e, {
                             ...n,

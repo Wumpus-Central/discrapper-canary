@@ -5,7 +5,7 @@ var i = n(200651),
     s = n.n(a),
     o = n(481060),
     l = n(189798),
-    u = n(543086);
+    u = n(56093);
 function c(e) {
     let { children: t, size: n = 16, className: a, flowerStarClassName: c, ...d } = e,
         f = r.Children.only(t),

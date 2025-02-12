@@ -28,28 +28,28 @@ let l = {
         let n = r.useRef(null),
             o = r.useRef(e);
         o.current = e;
-        let d = r.useMemo(
+        let u = r.useMemo(
                 () => () => {
                     null != n.current && n.current.play(e);
                 },
                 [e]
             ),
-            u = r.useCallback(() => {
+            d = r.useCallback(() => {
                 if (null == n.current) return;
                 let t = 'deafen' === e ? 'hover_undeafened' : 'hover_deafened';
                 n.current.play(t);
             }, [e]);
         return {
             events: {
-                onClick: d,
-                onMouseEnter: u,
+                onClick: u,
+                onMouseEnter: d,
                 onMouseLeave: r.useCallback(() => {
                     if (null == n.current) return;
                     let t = 'deafen' === e ? 'hover_undeafened' : 'hover_deafened';
                     n.current.stopIfPlaying(t);
                 }, [e])
             },
-            play: d,
+            play: u,
             Component: r.useCallback(
                 (e) =>
                     (0, i.jsx)(a.L, {

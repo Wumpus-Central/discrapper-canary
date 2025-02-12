@@ -16,13 +16,13 @@ var l = n(120356),
     p = n(496675),
     m = n(981631),
     f = n(388032),
-    g = n(981384);
+    g = n(716854);
 function _(e) {
     let { guild: t, channel: l, streamUserId: a, applicationId: r, appContext: s, exitFullScreen: o, analyticsLocation: d, guildScheduledEvent: u } = e;
     null == o || o(),
         (0, c.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([n.e('7654'), n.e('13942')]).then(n.bind(n, 560114));
+                let { default: e } = await Promise.all([n.e('7654'), n.e('76236')]).then(n.bind(n, 560114));
                 return (n) =>
                     (0, i.jsx)(e, {
                         ...n,

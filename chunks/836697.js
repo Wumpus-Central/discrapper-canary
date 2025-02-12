@@ -15,7 +15,7 @@ var i = n(200651),
     f = n(179809),
     _ = n(588275),
     v = n(388032),
-    C = n(685688);
+    C = n(105707);
 function x(e) {
     let { onActivate: t, children: n } = e,
         s = (0, r.e7)([u.Z], () => u.Z.hasJoinRequestCoackmark()),

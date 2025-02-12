@@ -1,4 +1,4 @@
-n.d(t, { h: () => N }), n(47120);
+n.d(t, { h: () => f }), n(47120);
 var i = n(200651),
     s = n(192379),
     l = n(913527),
@@ -13,7 +13,7 @@ var i = n(200651),
     g = n(305342),
     x = n(293810),
     _ = n(388032),
-    p = n(3255);
+    p = n(473639);
 let E = (e) => {
         let [t, n] = s.useState(!1),
             [i, l] = s.useState(null);
@@ -33,14 +33,14 @@ let E = (e) => {
     },
     C = (e) => {
         var t;
-        let { transitionState: n, groupListing: s, guildId: l, listing: o, subscription: C, onClose: N } = e,
-            f = (0, u.Dt)(),
+        let { transitionState: n, groupListing: s, guildId: l, listing: o, subscription: C, onClose: f } = e,
+            N = (0, u.Dt)(),
             I = (0, m.YB)(l),
             T = (null == I ? void 0 : null === (t = I.cover_image_asset) || void 0 === t ? void 0 : t.application_id) != null ? (0, h._W)(I.cover_image_asset.application_id, I.cover_image_asset, 440) : void 0,
             { analyticsLocations: S } = (0, d.ZP)(c.Z.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL),
             { cancelSubscription: j, error: v, submitting: b } = E(S),
             A = async () => {
-                (await j(C.id)) && N();
+                (await j(C.id)) && f();
             },
             O = o.role_benefits.benefits.filter((e) => e.ref_type === x.Qs.CHANNEL),
             R = o.role_benefits.benefits.filter((e) => e.ref_type === x.Qs.INTANGIBLE),
@@ -53,7 +53,7 @@ let E = (e) => {
         return (0, i.jsxs)(a.Y0X, {
             transitionState: n,
             className: p.__invalid_modal,
-            'aria-labelledby': f,
+            'aria-labelledby': N,
             children: [
                 (0, i.jsxs)('div', {
                     children: [
@@ -65,7 +65,7 @@ let E = (e) => {
                         (0, i.jsx)(a.olH, {
                             withCircleBackground: !0,
                             className: p.closeButton,
-                            onClick: N
+                            onClick: f
                         })
                     ]
                 }),
@@ -74,7 +74,7 @@ let E = (e) => {
                     className: p.content,
                     children: [
                         (0, i.jsx)(a.X6q, {
-                            id: f,
+                            id: N,
                             variant: 'text-md/medium',
                             className: p.title,
                             children: _.intl.string(_.t.O6l5tL)
@@ -104,7 +104,7 @@ let E = (e) => {
                             look: a.zxk.Looks.LINK,
                             color: a.zxk.Colors.WHITE,
                             className: p.goBackButton,
-                            onClick: N,
+                            onClick: f,
                             children: _.intl.string(_.t.EP6EPT)
                         })
                     ]
@@ -112,7 +112,7 @@ let E = (e) => {
             ]
         });
     },
-    N = (e) => {
+    f = (e) => {
         (0, a.h7j)((t) =>
             (0, i.jsx)(C, {
                 ...t,

@@ -5,7 +5,7 @@ var i = e(481060),
     r = e(313201),
     a = e(192635),
     c = e(388032),
-    o = e(607217);
+    o = e(945174);
 function l(t) {
     let { transitionState: s, Icon: e, title: l, body: u, onClose: d } = t,
         p = (0, r.Dt)();

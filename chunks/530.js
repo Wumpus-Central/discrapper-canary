@@ -10,7 +10,7 @@ var r = n(120356),
     c = n(979264),
     d = n(228168),
     f = n(388032),
-    _ = n(429963);
+    _ = n(38182);
 function p(e) {
     let { user: t, profileType: n, usernameIcon: r, tags: p, nickname: h, nicknameIcons: m, pronouns: g, className: E, isTryItOut: v, onOpenProfile: y, nicknameVariant: I = 'heading-lg/bold', pronounsVariant: T = 'text-sm/medium' } = e,
         b = {

@@ -21,7 +21,7 @@ var l = t(200651),
     E = t(765305),
     I = t(981631),
     S = t(388032),
-    T = t(49862);
+    T = t(725200);
 let Z = (e) => e === E.WX.EXTERNAL,
     y = (e, n) => {
         let t = c.Z.getChannel(e);
@@ -244,7 +244,7 @@ function P(e) {
                               name: S.intl.string(S.t.EErMzM)
                           }),
                               (0, o.ZDy)(async () => {
-                                  let { default: e } = await Promise.all([t.e('25292'), t.e('90508'), t.e('80284'), t.e('7590'), t.e('45094'), t.e('12914')]).then(t.bind(t, 218613));
+                                  let { default: e } = await Promise.all([t.e('25292'), t.e('90508'), t.e('80284'), t.e('7590'), t.e('45094'), t.e('9149')]).then(t.bind(t, 218613));
                                   return (t) =>
                                       (0, l.jsx)(e, {
                                           ...t,

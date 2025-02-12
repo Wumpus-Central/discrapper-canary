@@ -9,7 +9,7 @@ var i = e(481060),
     l = e(555638),
     d = e(42011),
     u = e(798930),
-    _ = e(522137);
+    _ = e(960405);
 function p(t) {
     let { transitionState: n, onClose: e, analyticsLocation: p, platformType: A } = t,
         { slide: T, gotoNext: C, gotoError: I, handleWaitingForConnection: b, handleAuthToken: f, expectedCallbackState: h, callbackData: N, errorCode: P } = (0, r.k)(p, A);

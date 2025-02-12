@@ -12,7 +12,7 @@ var i = n(200651),
     m = n(843445),
     p = n(981631),
     g = n(388032),
-    _ = n(2350);
+    _ = n(795049);
 let f = {
     [p.TaA.WINDOWS]: h.PlatformTypes.WINDOWS,
     [p.TaA.MACOS]: h.PlatformTypes.OSX,

@@ -1,23 +1,23 @@
-n.d(t, { Z: () => o });
-var i = n(200651);
-n(192379);
-var l = n(481060),
-    a = n(346479),
-    r = n(665906),
-    s = n(388032);
-function o(e) {
-    let t = (0, r.Xb)(e),
-        n = e.isLockedThread();
+e.d(t, { Z: () => o });
+var i = e(200651);
+e(192379);
+var a = e(481060),
+    l = e(346479),
+    r = e(665906),
+    d = e(388032);
+function o(n) {
+    let t = (0, r.Xb)(n),
+        e = n.isLockedThread();
     if (t)
-        return n
-            ? (0, i.jsx)(l.sNh, {
+        return e
+            ? (0, i.jsx)(a.sNh, {
                   id: 'unlock-thread',
-                  label: e.isForumPost() ? s.intl.string(s.t['/OKSxs']) : s.intl.string(s.t['jeyb/f']),
-                  action: () => a.Z.unlockThread(e)
+                  label: n.isForumPost() ? d.intl.string(d.t['/OKSxs']) : d.intl.string(d.t['jeyb/f']),
+                  action: () => l.Z.unlockThread(n)
               })
-            : (0, i.jsx)(l.sNh, {
+            : (0, i.jsx)(a.sNh, {
                   id: 'lock-thread',
-                  label: e.isForumPost() ? s.intl.string(s.t['Ur/0NT']) : s.intl.string(s.t.HoCqm5),
-                  action: () => a.Z.lockThread(e)
+                  label: n.isForumPost() ? d.intl.string(d.t['Ur/0NT']) : d.intl.string(d.t.HoCqm5),
+                  action: () => l.Z.lockThread(n)
               });
 }

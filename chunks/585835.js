@@ -17,7 +17,7 @@ var i = n(200651),
     _ = n(929507),
     f = n(981631),
     v = n(388032),
-    C = n(295285);
+    C = n(588741);
 function j(e) {
     var t, n, a;
     let { name: j, icon: N, imageSrc: I, iconBackgroundColor: Z, iconClassName: T, iconWrapperClassName: E, details: S, integration: y, buttonText: A, buttonDisabled: k, hasNextSection: R, onButtonClick: L, guildId: w, isScrolling: O, canShowMigrationTooltip: P, trailing: D } = e,

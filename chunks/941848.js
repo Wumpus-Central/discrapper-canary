@@ -4,7 +4,7 @@ var n = a(200651),
     s = a(481060),
     r = a(458044),
     l = a(388032),
-    o = a(702120);
+    o = a(169430);
 function c(t) {
     let { user: e, tagId: a, title: i, messageCount: r, reactionCount: c, activeAgo: d, tags: m, attachment: g } = t,
         { name: u, avatarSrc: x } = e;

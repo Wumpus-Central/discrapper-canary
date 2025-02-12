@@ -19,8 +19,8 @@ var i = n(200651),
     p = n(540059),
     E = n(605236),
     C = n(104494),
-    N = n(639119),
-    f = n(311476),
+    f = n(639119),
+    N = n(311476),
     I = n(165583),
     T = n(197115),
     S = n(504983),
@@ -30,7 +30,7 @@ var i = n(200651),
     A = n(921944),
     O = n(474936),
     R = n(388032),
-    D = n(8245);
+    D = n(906971);
 let P = () => {
         (0, E.EW)(r.z.CLIENT_THEMES_SPARKLE_PREVIEW, {
             dismissAction: A.L.PRIMARY,
@@ -43,11 +43,11 @@ let P = () => {
         var e, t;
         let { analyticsLocations: n } = (0, m.ZP)(h.Z.USER_SETTINGS),
             r = (0, l.e7)([x.Z], () => x.Z.isPreview),
-            a = (null === (t = (0, N.N)()) || void 0 === t ? void 0 : null === (e = t.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === O.Si.TIER_2,
+            a = (null === (t = (0, f.N)()) || void 0 === t ? void 0 : null === (e = t.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === O.Si.TIER_2,
             c = (0, C.Ng)(),
             d = (0, C.Wp)(c, O.Si.TIER_2),
             u = !r || a,
-            { enabled: g } = f.Z.getCurrentConfig(
+            { enabled: g } = N.Z.getCurrentConfig(
                 { location: 'UserSettingsAppearanceClientThemes' },
                 {
                     autoTrackExposure: !u,

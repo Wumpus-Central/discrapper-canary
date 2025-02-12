@@ -16,8 +16,8 @@ var i = n(200651),
     p = n(295474),
     E = n(144114),
     C = n(918505),
-    N = n(332473),
-    f = n(921801),
+    f = n(332473),
+    N = n(921801),
     I = n(485341),
     T = n(687158),
     S = n(518950),
@@ -35,22 +35,22 @@ var i = n(200651),
     k = n(815660),
     B = n(801461),
     M = n(388032),
-    V = n(55583);
+    V = n(424021);
 let w = D.ZP.getEnableHardwareAcceleration() ? u.Xo$ : u.qEK;
 function U(e) {
     var t, l;
     let { className: a, user: o } = e,
         c = s.useRef(null),
         h = (0, C.o9)(),
-        m = (0, N.b)(),
+        m = (0, f.b)(),
         g = (0, p.gS)(),
         x = null !== (l = null == g ? void 0 : null === (t = g.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== l ? l : null,
         [_, E] = s.useState(!1);
     s.useEffect(() => {
         E(null != c.current && c.current.scrollWidth > c.current.clientWidth);
     }, [o.username]);
-    let f = !o.isClaimed(),
-        I = (h && !o.isPomelo() && !o.hasVerifiedEmailOrPhone()) || f,
+    let N = !o.isClaimed(),
+        I = (h && !o.isPomelo() && !o.hasVerifiedEmailOrPhone()) || N,
         T = I ? M.intl.string(M.t['7Ngnys']) : void 0;
     return (0, i.jsxs)('div', {
         className: r()(V.field, a),
@@ -130,7 +130,7 @@ function U(e) {
                         onClick: () =>
                             (0, u.ZDy)(async () => {
                                 if (m) {
-                                    let { default: e } = await Promise.all([n.e('85342'), n.e('13494')]).then(n.bind(n, 193049));
+                                    let { default: e } = await Promise.all([n.e('85342'), n.e('26633')]).then(n.bind(n, 193049));
                                     return (t) =>
                                         (0, i.jsx)(e, {
                                             source: B.Kq.USER_SETTINGS_EDIT,
@@ -243,7 +243,7 @@ function z(e) {
                 valueMessage: M.intl.string(M.t['8SfTNz']),
                 handleClick: () =>
                     (0, u.ZDy)(async () => {
-                        let { default: e } = await Promise.all([n.e('9343'), n.e('73669')]).then(n.bind(n, 642298));
+                        let { default: e } = await Promise.all([n.e('9343'), n.e('58409')]).then(n.bind(n, 642298));
                         return (t) => (0, i.jsx)(e, { ...t });
                     })
             };
@@ -261,7 +261,7 @@ function z(e) {
                 }),
                 handleClick: () =>
                     (0, u.ZDy)(async () => {
-                        let { default: e } = await Promise.all([n.e('9343'), n.e('73669')]).then(n.bind(n, 642298));
+                        let { default: e } = await Promise.all([n.e('9343'), n.e('58409')]).then(n.bind(n, 642298));
                         return (t) => (0, i.jsx)(e, { ...t });
                     })
             };
@@ -509,25 +509,25 @@ function K() {
                     (0, i.jsxs)('div', {
                         className: V.fieldList,
                         children: [
-                            (0, i.jsx)(f.F, {
+                            (0, i.jsx)(N.F, {
                                 setting: Z.s6.ACCOUNT_DISPLAY_NAME,
                                 children: (0, i.jsx)(G, {
                                     className: V.fieldSpacerBottom,
                                     user: t
                                 })
                             }),
-                            (0, i.jsx)(f.F, {
+                            (0, i.jsx)(N.F, {
                                 setting: Z.s6.ACCOUNT_USERNAME,
                                 children: (0, i.jsx)(U, { user: t })
                             }),
-                            (0, i.jsx)(f.F, {
+                            (0, i.jsx)(N.F, {
                                 setting: Z.s6.ACCOUNT_EMAIL,
                                 children: (0, i.jsx)(z, {
                                     className: V.fieldSpacer,
                                     user: t
                                 })
                             }),
-                            (0, i.jsx)(f.F, {
+                            (0, i.jsx)(N.F, {
                                 setting: Z.s6.ACCOUNT_PHONE_NUMBER,
                                 children: (0, i.jsx)(Y, {
                                     className: V.fieldSpacer,

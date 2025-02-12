@@ -31,7 +31,7 @@ var i = n(200651),
     L = n(981631),
     D = n(710111),
     k = n(388032),
-    O = n(643884);
+    O = n(102212);
 let P = R.isPlatformEmbedded || ('Safari' !== o().name && 'Firefox' !== o().name);
 function w() {
     let e = (0, c.e7)([y.Z], () => y.Z.getProps().guild);
@@ -166,7 +166,7 @@ function F(e) {
         ? (0, i.jsx)(u.zxk, {
               onClick: function () {
                   (0, u.ZDy)(async () => {
-                      let { default: e } = await Promise.all([n.e('56035'), n.e('88315')]).then(n.bind(n, 758961));
+                      let { default: e } = await Promise.all([n.e('56035'), n.e('3585')]).then(n.bind(n, 758961));
                       return (n) =>
                           (0, i.jsx)(e, {
                               ...n,
@@ -352,7 +352,7 @@ function z(e) {
                               onClick: function (e) {
                                   e.stopPropagation(),
                                       (0, u.ZDy)(async () => {
-                                          let { default: e } = await Promise.all([n.e('56035'), n.e('88315')]).then(n.bind(n, 758961));
+                                          let { default: e } = await Promise.all([n.e('56035'), n.e('3585')]).then(n.bind(n, 758961));
                                           return (n) =>
                                               (0, i.jsx)(e, {
                                                   ...n,

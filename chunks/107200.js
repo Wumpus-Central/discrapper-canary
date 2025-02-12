@@ -9,7 +9,7 @@ var o = n(442837),
     l = n(944486),
     d = n(554174),
     u = n(710111),
-    _ = n(221035);
+    _ = n(256647);
 function f() {
     let [e, t] = (0, o.Wu)([r.Z], () => [r.Z.enabled, r.Z.keepOpen]),
         n = (0, o.e7)([l.Z], () => l.Z.getVoiceChannelId()),

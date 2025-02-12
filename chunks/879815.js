@@ -12,10 +12,10 @@ function o(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.Z,
                     i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : a.Z,
                     o = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : r.default,
-                    d = null != e ? t.getVoiceState(e.getGuildId(), o.getId()) : null;
+                    u = null != e ? t.getVoiceState(e.getGuildId(), o.getId()) : null;
                 return {
                     selfDeaf: i.isSelfDeaf(),
-                    deaf: null !== (n = null == d ? void 0 : d.deaf) && void 0 !== n && n
+                    deaf: null !== (n = null == u ? void 0 : u.deaf) && void 0 !== n && n
                 };
             })(e, l.Z, a.Z, r.default),
         [e]

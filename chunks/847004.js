@@ -8,7 +8,7 @@ var n = a(200651),
     o = a(937615),
     d = a(981631),
     m = a(388032),
-    x = a(856165);
+    x = a(136615);
 function _(e) {
     let { price: t, selected: a, onClick: l } = e;
     return (0, n.jsxs)(r.P3F, {

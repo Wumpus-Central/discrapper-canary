@@ -12,7 +12,7 @@ var i = n(200651),
     _ = n(859235),
     p = n(898463),
     h = n(981631),
-    m = n(530819),
+    m = n(78770),
     g = n(451328);
 function E(e) {
     let { channelId: t, option: n, keyboardModeEnabled: a } = e,

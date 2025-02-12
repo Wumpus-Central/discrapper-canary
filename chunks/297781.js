@@ -41,7 +41,7 @@ var i = n(200651),
     T = n(371991),
     b = n(206583),
     S = n(388032),
-    A = n(80629);
+    A = n(233855);
 let N = {
     [u.s.TOP_ARTIST]: [F],
     [u.s.PLAYED_GAME]: [P, w, x, j, k, B, V, G, U],

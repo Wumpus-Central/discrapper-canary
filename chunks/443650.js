@@ -5,7 +5,7 @@ var o = t(120356),
     l = t.n(o),
     s = t(481060),
     u = t(809086),
-    a = t(380602);
+    a = t(284492);
 function c(e) {
     let { className: n, onClose: t } = e;
     return (0, r.jsx)(s.P3F, {

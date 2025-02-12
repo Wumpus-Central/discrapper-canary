@@ -7,7 +7,7 @@ var i = n(200651),
     l = n(481060),
     u = n(422559),
     c = n(388032),
-    d = n(845896);
+    d = n(188505);
 function f(e) {
     let { application: t, permissions: n, deniedPermissions: f, onPermissionsChange: _, guild: p } = e,
         h = r.useMemo(() => a.U_(p.permissions), [p.permissions]);

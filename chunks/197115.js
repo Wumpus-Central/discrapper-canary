@@ -20,7 +20,7 @@ var r = n(120356),
     y = n(474936),
     I = n(981631),
     T = n(388032),
-    b = n(678125);
+    b = n(522241);
 function S(e) {
     let { isClaimed: t, isVerified: r, isGift: a, subscriptionTier: s, trialId: l, postSuccessGuild: u, onSubscribeModalClose: c, analyticsLocations: d, premiumModalAnalyticsLocation: _, applicationId: p, giftMessage: h } = e;
     if (!t) {

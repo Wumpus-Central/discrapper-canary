@@ -5,7 +5,7 @@ var r = n(481060),
     a = n(518950),
     s = n(182294),
     l = n(388032),
-    o = n(968983),
+    o = n(336557),
     c = n(144343);
 function d(e) {
     let { referrer: t, isMarketingPageV2Enabled: n } = e,

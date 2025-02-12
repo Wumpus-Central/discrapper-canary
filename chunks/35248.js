@@ -29,7 +29,7 @@ var i = n(200651),
     y = n(981631),
     I = n(474936),
     T = n(388032),
-    b = n(501388);
+    b = n(723957);
 let S = 1000;
 function A(e, t, n, i, r) {
     let o = y.ANM.BILLING_STANDALONE_CHECKOUT_PAGE(e, t, n, r),

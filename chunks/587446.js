@@ -5,7 +5,7 @@ var r = n(120356),
     a = n.n(r),
     s = n(481060),
     o = n(388032),
-    l = n(56341);
+    l = n(781968);
 function u(e) {
     let { text: t = o.intl.string(o.t['5AFxuL']), className: n } = e;
     return (0, i.jsx)(s.ua7, {

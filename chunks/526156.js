@@ -6,7 +6,7 @@ var s = n(120356),
     r = n(481060),
     a = n(230711),
     o = n(528084),
-    c = n(944109);
+    c = n(859416);
 let d = (e) => {
     var t;
     let { tabs: n, settingsSection: s, parentSetting: d, panelClassName: u, defaultTabIndex: h, onTabChange: m } = e,

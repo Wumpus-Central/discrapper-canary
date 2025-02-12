@@ -29,12 +29,12 @@ var l = n(392711),
     D = n(879463),
     M = n(822070),
     v = n(520540),
-    U = n(11352),
-    Z = n(474936),
+    Z = n(11352),
+    U = n(474936),
     x = n(981631),
     y = n(354459),
-    b = n(37113),
-    k = n(388032);
+    k = n(37113),
+    b = n(388032);
 function V(e, t, n) {
     return (
         t in e
@@ -121,7 +121,7 @@ class j extends o.Z {
                 e && (0, E.W)();
             }),
             V(this, '_trackCustomNotificationSoundsExposure', () => {
-                U.Y.trackExposure({ location: 'PremiumManager' });
+                Z.Y.trackExposure({ location: 'PremiumManager' });
             }),
             V(this, '_handlePremiumPaymentModalOpen', (e) => {
                 (0, u.Z)({
@@ -154,14 +154,14 @@ class j extends o.Z {
                         c = null !== (l = null === (i = _.Z.getGuild(t)) || void 0 === i ? void 0 : i.premiumTier) && void 0 !== l ? l : x.Eu4.NONE;
                     if (A.Z.cooldownIsActive() || !o || c >= x.Eu4.TIER_2 || (null == r ? void 0 : r.type) !== y.fO.STREAM || (null == r ? void 0 : r.id) === (null == n ? void 0 : n.id) || null == r.maxResolution || null == r.maxFrameRate) return;
                     S.I();
-                    let u = k.intl.formatToPlainString(k.t.AbyeZG, {
+                    let u = b.intl.formatToPlainString(b.t.AbyeZG, {
                         nickname: r.userNick,
-                        resolution: (0, b.o6)(r.maxResolution.height),
+                        resolution: (0, k.o6)(r.maxResolution.height),
                         fps: (0, N.bp)(r.maxFrameRate)
                     });
                     a.Z.sendNitroSystemMessage(e, u),
                         C.default.track(x.rMx.PREMIUM_UPSELL_MESSAGE_SENT, {
-                            type: Z.cd.HD_STREAMING_VIEWER_UPSELL,
+                            type: U.cd.HD_STREAMING_VIEWER_UPSELL,
                             location_section: null != t ? x.jXE.TEXT_IN_VOICE : x.jXE.CHANNEL_TEXT_AREA,
                             location_object: x.qAy.MESSAGE,
                             guild_id: t

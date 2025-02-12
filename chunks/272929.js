@@ -7,7 +7,7 @@ var l = n(120356),
     s = n(481060),
     o = n(871499),
     c = n(388032),
-    d = n(185215);
+    d = n(884156);
 let u = (0, r.animated)((e) => {
     let { percentComplete: t } = e;
     return (0, i.jsx)('svg', {

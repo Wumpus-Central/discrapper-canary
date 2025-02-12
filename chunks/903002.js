@@ -7,7 +7,7 @@ n(192379);
 var i = n(120356),
     a = n.n(i),
     r = n(793030),
-    s = n(741578);
+    s = n(335236);
 let o = {
         SMALL: {
             style: s.small,

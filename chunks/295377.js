@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(47120);
+n.d(t, { Z: () => N }), n(47120);
 var i = n(200651),
     s = n(192379),
     l = n(524437),
@@ -10,7 +10,7 @@ var i = n(200651),
     u = n(660243),
     h = n(981631),
     m = n(388032),
-    g = n(864331);
+    g = n(465904);
 function x() {
     return (0, i.jsxs)(r.hjN, {
         tag: r.RB0.H5,
@@ -216,7 +216,7 @@ function C() {
         ]
     });
 }
-function N() {
+function f() {
     return (0, i.jsx)(r.hjN, {
         className: g.privacyAndTerms,
         children: (0, i.jsx)(r.ToO, {
@@ -228,7 +228,7 @@ function N() {
         })
     });
 }
-let f = function (e) {
+let N = function (e) {
     let { className: t } = e,
         n = !a.G6.useSetting(),
         l = s.useRef(null);
@@ -272,7 +272,7 @@ let f = function (e) {
             (0, i.jsx)(r.$i$, { className: g.divider }),
             (0, i.jsx)('div', { ref: l }),
             (0, i.jsx)(C, {}),
-            (0, i.jsx)(N, {})
+            (0, i.jsx)(f, {})
         ]
     });
 };

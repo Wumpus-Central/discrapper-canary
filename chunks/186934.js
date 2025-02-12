@@ -10,7 +10,7 @@ var s = n(120356),
     d = n(131951),
     u = n(726985),
     h = n(388032),
-    m = n(483938);
+    m = n(814632);
 function g(e) {
     let { refreshStyles: t = !1 } = e,
         { sidechainEnabled: n, sidechainStrength: s } = (0, r.cj)([d.Z], () => ({

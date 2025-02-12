@@ -1,55 +1,55 @@
-s.d(l, { Z: () => m });
-var a = s(200651),
-    n = s(192379),
-    i = s(442837),
-    t = s(481060),
-    r = s(249842),
-    c = s(838367),
-    d = s(576306),
-    o = s(83474),
-    u = s(914620);
+a.d(l, { Z: () => m });
+var s = a(200651),
+    n = a(192379),
+    i = a(442837),
+    t = a(481060),
+    r = a(249842),
+    d = a(838367),
+    c = a(576306),
+    o = a(83474),
+    u = a(914620);
 function m(e) {
-    let { guildId: l, channelId: s, messageId: m, name: h, ...x } = e,
-        j = (0, d.h)(),
+    let { guildId: l, channelId: a, messageId: m, name: h, ...x } = e,
+        j = (0, c.h)(),
         { unavailable: g, guild: v } = (0, i.cj)(
-            [c.Z],
+            [d.Z],
             () => ({
-                guild: c.Z.getGuild(l),
-                unavailable: c.Z.hasFetchFailed(l)
+                guild: d.Z.getGuild(l),
+                unavailable: d.Z.hasFetchFailed(l)
             }),
             [l]
         ),
-        f = null != v,
-        N = n.useCallback(async () => {
+        N = null != v,
+        f = n.useCallback(async () => {
             if (!j)
                 try {
-                    f || (await (0, r.P)(l));
+                    N || (await (0, r.P)(l));
                 } catch {}
-        }, [j, f, l]);
+        }, [j, N, l]);
     return g
-        ? (0, a.jsx)(t.yRy, {
+        ? (0, s.jsx)(t.yRy, {
               position: 'right',
-              renderPopout: (e) => (0, a.jsx)(o.SK, {}),
+              renderPopout: (e) => (0, s.jsx)(o.SK, {}),
               ...x,
               clickTrap: !0
           })
-        : (0, a.jsx)(t.yRy, {
+        : (0, s.jsx)(t.yRy, {
               position: 'right',
-              preload: N,
+              preload: f,
               clickTrap: !0,
               renderPopout: (e) =>
                   j
-                      ? (0, a.jsx)(u.Z, {
+                      ? (0, s.jsx)(u.Z, {
                             ...e,
                             guildId: l,
                             name: h
                         })
                       : null == v
-                        ? (0, a.jsx)(a.Fragment, {})
-                        : (0, a.jsx)(o.sK, {
+                        ? (0, s.jsx)(s.Fragment, {})
+                        : (0, s.jsx)(o.sK, {
                               ...e,
                               guild: v,
-                              channelId: s,
+                              channelId: a,
                               messageId: m
                           }),
               ...x

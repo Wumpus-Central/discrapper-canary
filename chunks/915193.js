@@ -1,105 +1,105 @@
-t.d(n, { Z: () => p });
-var i = t(200651);
-t(192379);
-var r = t(442837),
-    a = t(692547),
-    l = t(481060),
-    o = t(493683),
-    s = t(129861),
-    d = t(700582),
-    u = t(594174),
-    c = t(388032),
-    _ = t(663230);
+i.d(n, { Z: () => Z });
+var r = i(200651);
+i(192379);
+var s = i(442837),
+    d = i(692547),
+    t = i(481060),
+    a = i(493683),
+    l = i(129861),
+    o = i(700582),
+    c = i(594174),
+    u = i(388032),
+    m = i(435867);
 function h(e) {
-    let { color: n, className: t } = e;
-    return (0, i.jsx)('svg', {
-        className: t,
+    let { color: n, className: i } = e;
+    return (0, r.jsx)('svg', {
+        className: i,
         height: '16',
         width: '80',
         viewBox: '0 0 80 16',
         xmlns: 'http://www.w3.org/2000/svg',
-        children: (0, i.jsxs)('g', {
+        children: (0, r.jsxs)('g', {
             fill: 'none',
             fillRule: 'evenodd',
             opacity: '.6',
             children: [
-                (0, i.jsx)('path', { d: 'm0 0h80v16h-80z' }),
-                (0, i.jsxs)('g', {
+                (0, r.jsx)('path', { d: 'm0 0h80v16h-80z' }),
+                (0, r.jsxs)('g', {
                     stroke: n,
                     strokeLinecap: 'round',
                     strokeLinejoin: 'round',
                     strokeWidth: '2',
                     children: [
-                        (0, i.jsx)('path', { d: 'm71 1h4v4.16' }),
-                        (0, i.jsx)('path', {
+                        (0, r.jsx)('path', { d: 'm71 1h4v4.16' }),
+                        (0, r.jsx)('path', {
                             d: 'm2 1h4v4.16',
                             transform: 'matrix(-1 0 0 1 8 0)'
                         }),
-                        (0, i.jsx)('path', { d: 'm51 1h4m6 0h4m-24 0h4m-14 0h4m-14 0h4m-23 11v-2m9-9h4' }),
-                        (0, i.jsx)('path', { d: 'm72.13 10.474 2.869 3.12 2.631-3.12' })
+                        (0, r.jsx)('path', { d: 'm51 1h4m6 0h4m-24 0h4m-14 0h4m-14 0h4m-23 11v-2m9-9h4' }),
+                        (0, r.jsx)('path', { d: 'm72.13 10.474 2.869 3.12 2.631-3.12' })
                     ]
                 })
             ]
         })
     });
 }
-function p(e, n) {
-    let t = (0, r.e7)([u.default], () => u.default.getCurrentUser());
-    return null == t || n.ownerId !== t.id || e.id === t.id
+function Z(e, n) {
+    let i = (0, s.e7)([c.default], () => c.default.getCurrentUser());
+    return null == i || n.ownerId !== i.id || e.id === i.id
         ? null
-        : (0, i.jsx)(l.sNh, {
+        : (0, r.jsx)(t.sNh, {
               id: 'make-dm-owner',
               color: 'danger',
-              label: c.intl.string(c.t['6t3CyM']),
+              label: u.intl.string(u.t['6t3CyM']),
               action: () => {
-                  (0, l.h7j)((r) =>
-                      (0, i.jsxs)(l.ConfirmModal, {
-                          bodyClassName: _.confirmModal,
-                          header: c.intl.string(c.t.WZoUsr),
-                          confirmText: c.intl.string(c.t['cY+Ooa']),
-                          cancelText: c.intl.string(c.t['ETE/oK']),
-                          onConfirm: () => o.Z.setDMOwner(n.id, e.id),
-                          ...r,
+                  (0, t.h7j)((s) =>
+                      (0, r.jsxs)(t.ConfirmModal, {
+                          bodyClassName: m.confirmModal,
+                          header: u.intl.string(u.t.WZoUsr),
+                          confirmText: u.intl.string(u.t['cY+Ooa']),
+                          cancelText: u.intl.string(u.t['ETE/oK']),
+                          onConfirm: () => a.Z.setDMOwner(n.id, e.id),
+                          ...s,
                           children: [
-                              (0, i.jsx)(h, { color: a.Z.unsafe_rawColors.PRIMARY_300.css }),
-                              (0, i.jsxs)('div', {
-                                  className: _.fromToWrapper,
+                              (0, r.jsx)(h, { color: d.Z.unsafe_rawColors.PRIMARY_300.css }),
+                              (0, r.jsxs)('div', {
+                                  className: m.fromToWrapper,
                                   children: [
-                                      (0, i.jsx)('div', {
-                                          className: _.from,
-                                          children: (0, i.jsx)(d.Z, {
-                                              user: t,
-                                              size: l.EFr.SIZE_80
+                                      (0, r.jsx)('div', {
+                                          className: m.from,
+                                          children: (0, r.jsx)(o.Z, {
+                                              user: i,
+                                              size: t.EFr.SIZE_80
                                           })
                                       }),
-                                      (0, i.jsx)('div', {
-                                          className: _.to,
-                                          children: (0, i.jsx)(d.Z, {
+                                      (0, r.jsx)('div', {
+                                          className: m.to,
+                                          children: (0, r.jsx)(o.Z, {
                                               user: e,
-                                              size: l.EFr.SIZE_80
+                                              size: t.EFr.SIZE_80
                                           })
                                       })
                                   ]
                               }),
-                              (0, i.jsx)(l.Text, {
+                              (0, r.jsx)(t.Text, {
                                   variant: 'text-md/normal',
-                                  children: c.intl.format(c.t.gsBb3N, {
-                                      usernameHook: (n, t) =>
-                                          (0, i.jsx)(
-                                              s.Z,
+                                  children: u.intl.format(u.t.gsBb3N, {
+                                      usernameHook: (n, i) =>
+                                          (0, r.jsx)(
+                                              l.Z,
                                               {
-                                                  usernameIcon: (0, i.jsx)(l.qEK, {
-                                                      className: _.avatarIcon,
+                                                  usernameIcon: (0, r.jsx)(t.qEK, {
+                                                      className: m.avatarIcon,
                                                       src: e.getAvatarURL(void 0, 16),
-                                                      size: l.EFr.SIZE_16,
+                                                      size: t.EFr.SIZE_16,
                                                       'aria-hidden': !0
                                                   }),
-                                                  className: _.discordTag,
-                                                  usernameClass: _.username,
-                                                  discriminatorClass: _.discriminator,
+                                                  className: m.discordTag,
+                                                  usernameClass: m.username,
+                                                  discriminatorClass: m.discriminator,
                                                   user: e
                                               },
-                                              t
+                                              i
                                           )
                                   })
                               })

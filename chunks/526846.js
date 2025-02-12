@@ -30,7 +30,7 @@ var i = n(200651),
     P = n(403404),
     R = n(981631),
     M = n(388032),
-    L = n(35704);
+    L = n(653308);
 let k = c.Y.APP_LAUNCHER_IN_VOICE_BANNER,
     O = 'vc-activities-'.concat((0, s.Z)());
 function D(e) {

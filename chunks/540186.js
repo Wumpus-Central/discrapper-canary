@@ -2,8 +2,8 @@ t.d(n, { Z: () => N }), t(653041);
 var l = t(200651);
 t(192379);
 var i = t(442837),
-    a = t(481060),
-    r = t(594174),
+    r = t(481060),
+    a = t(594174),
     o = t(311888),
     s = t(63063),
     c = t(5192),
@@ -13,7 +13,7 @@ var i = t(442837),
     _ = t(981631),
     h = t(765305),
     x = t(388032),
-    g = t(75231);
+    g = t(761137);
 function v(e) {
     let { icon: n } = e;
     return (0, l.jsx)('div', {
@@ -33,7 +33,7 @@ function b(e) {
                 className: g.listItemIconContainer,
                 children: n
             }),
-            (0, l.jsx)(a.Text, {
+            (0, l.jsx)(r.Text, {
                 className: g.listItemText,
                 variant: 'text-md/normal',
                 color: 'header-secondary',
@@ -44,18 +44,18 @@ function b(e) {
 }
 function j(e) {
     var n;
-    let { guild: t, channel: a, stageData: o } = e,
-        s = (0, i.e7)([r.default], () => r.default.getCurrentUser(), []),
+    let { guild: t, channel: r, stageData: o } = e,
+        s = (0, i.e7)([a.default], () => a.default.getCurrentUser(), []),
         _ = {
             id: '1337',
             guild_id: t.id,
-            channel_id: a.id,
+            channel_id: r.id,
             topic: o.topic,
             description: o.description,
             privacy_level: null !== (n = o.privacyLevel) && void 0 !== n ? n : h.j8.PUBLIC
         },
-        x = (0, d.w8)(a.id, u.pV.SPEAKER),
-        v = (0, d.Rk)(a.id, u.pV.AUDIENCE),
+        x = (0, d.w8)(r.id, u.pV.SPEAKER),
+        v = (0, d.Rk)(r.id, u.pV.AUDIENCE),
         b = x.slice(0, 5);
     return (
         null ==
@@ -65,7 +65,7 @@ function j(e) {
             }) &&
             b.push({
                 user: s,
-                userNick: c.ZP.getName(t.id, a.id, s)
+                userNick: c.ZP.getName(t.id, r.id, s)
             }),
         (0, l.jsx)('div', {
             className: g.previewCardContainer,
@@ -80,14 +80,14 @@ function j(e) {
                     speakers: b,
                     speakerCount: x.length,
                     audienceCount: Math.max(1337, v),
-                    channelName: a.name
+                    channelName: r.name
                 })
             })
         })
     );
 }
 function N(e) {
-    let { guild: n, channel: t, stageData: i, headerId: r, loading: c, onNext: d, onCancel: u, onBack: m } = e;
+    let { guild: n, channel: t, stageData: i, headerId: a, loading: c, onNext: d, onCancel: u, onBack: m } = e;
     return null == n || null == t || null == i
         ? null
         : (0, l.jsxs)(l.Fragment, {
@@ -97,19 +97,19 @@ function N(e) {
                       channel: t,
                       stageData: i
                   }),
-                  (0, l.jsxs)(a.hzk, {
+                  (0, l.jsxs)(r.hzk, {
                       className: g.container,
                       children: [
                           (0, l.jsxs)('div', {
                               className: g.header,
                               children: [
-                                  (0, l.jsx)(a.X6q, {
-                                      id: r,
+                                  (0, l.jsx)(r.X6q, {
+                                      id: a,
                                       className: g.__invalid_title,
                                       variant: 'heading-xl/semibold',
                                       children: x.intl.string(x.t.GXpXTE)
                                   }),
-                                  (0, l.jsx)(a.Text, {
+                                  (0, l.jsx)(r.Text, {
                                       className: g.subtitle,
                                       color: 'header-secondary',
                                       variant: 'text-sm/normal',
@@ -121,15 +121,15 @@ function N(e) {
                               className: g.__invalid_list,
                               children: [
                                   (0, l.jsx)(b, {
-                                      icon: (0, l.jsx)(v, { icon: a.Jmo }),
+                                      icon: (0, l.jsx)(v, { icon: r.Jmo }),
                                       text: x.intl.string(x.t.u6oOcn)
                                   }),
                                   (0, l.jsx)(b, {
-                                      icon: (0, l.jsx)(v, { icon: a.iFz }),
+                                      icon: (0, l.jsx)(v, { icon: r.iFz }),
                                       text: x.intl.string(x.t.QC8ymZ)
                                   }),
                                   (0, l.jsx)(b, {
-                                      icon: (0, l.jsx)(v, { icon: a.vdY }),
+                                      icon: (0, l.jsx)(v, { icon: r.vdY }),
                                       text: x.intl.string(x.t.mgGOT0)
                                   }),
                                   (0, l.jsx)(b, {
@@ -145,26 +145,26 @@ function N(e) {
                           })
                       ]
                   }),
-                  (0, l.jsxs)(a.mzw, {
+                  (0, l.jsxs)(r.mzw, {
                       children: [
-                          (0, l.jsx)(a.zxk, {
-                              color: a.zxk.Colors.GREEN,
+                          (0, l.jsx)(r.zxk, {
+                              color: r.zxk.Colors.GREEN,
                               onClick: d,
                               submitting: c,
                               children: x.intl.string(x.t.s8mM8P)
                           }),
-                          (0, l.jsx)(a.zxk, {
-                              color: a.zxk.Colors.PRIMARY,
+                          (0, l.jsx)(r.zxk, {
+                              color: r.zxk.Colors.PRIMARY,
                               className: g.cancelButton,
                               onClick: u,
                               children: x.intl.string(x.t['ETE/oK'])
                           }),
-                          (0, l.jsx)(a.zxk, {
-                              look: a.zxk.Looks.LINK,
-                              color: a.zxk.Colors.LINK,
+                          (0, l.jsx)(r.zxk, {
+                              look: r.zxk.Looks.LINK,
+                              color: r.zxk.Colors.LINK,
                               className: g.backButton,
                               onClick: m,
-                              size: a.zxk.Sizes.MIN,
+                              size: r.zxk.Sizes.MIN,
                               children: x.intl.string(x.t['13/7kZ'])
                           })
                       ]

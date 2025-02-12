@@ -16,8 +16,8 @@ var i = n(200651),
     p = n(688465),
     E = n(487419),
     C = n(197344),
-    N = n(476756),
-    f = n(734934),
+    f = n(476756),
+    N = n(734934),
     I = n(223683),
     T = n(312400),
     S = n(115345),
@@ -38,8 +38,8 @@ var i = n(200651),
     V = n(981631),
     w = n(468788),
     U = n(388032),
-    G = n(127861),
-    F = n(483938);
+    G = n(348207),
+    F = n(814632);
 function z(e, t, n) {
     return (
         t in e
@@ -86,7 +86,7 @@ function Y(e) {
 function H(e) {
     let { disabledSounds: t, disableAllSounds: n, notifyMessagesInSelectedChannel: l } = e,
         a = s.useRef(),
-        o = (0, f.p)(),
+        o = (0, N.p)(),
         c = s.useCallback((e, t) => {
             t.stopPropagation(), t.preventDefault(), null != a.current && a.current.stop(), (a.current = (0, O.GN)(e));
         }, []),
@@ -204,7 +204,7 @@ function H(e) {
                                   className: F.marginBottom20,
                                   children: U.intl.string(U.t.fgSHf3)
                               }),
-                              (0, i.jsx)(N.Z, {})
+                              (0, i.jsx)(f.Z, {})
                           ]
                       })
                     : null,
@@ -609,7 +609,7 @@ async function Q(e) {
         e(!1);
 }
 function $(e) {
-    let t = (0, f.p)();
+    let t = (0, N.p)();
     return (0, i.jsx)(K, {
         ...e,
         focusMode: t

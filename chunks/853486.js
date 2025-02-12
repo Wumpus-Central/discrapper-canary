@@ -11,7 +11,7 @@ var a = n(200651),
     m = n(673885),
     x = n(981631),
     h = n(388032),
-    _ = n(331030);
+    _ = n(460321);
 let p = function (e) {
     let { guild: t, guildJoinRequest: p, guildJoinRequestUser: f, onClose: C } = e,
         j = i.useMemo(() => {

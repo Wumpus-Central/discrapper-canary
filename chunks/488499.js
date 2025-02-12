@@ -1,20 +1,20 @@
-n.d(t, { Z: () => l });
-var i = n(200651);
-n(192379);
-var o = n(180781),
-    r = n(321867),
-    a = n(486324);
-function l(e) {
-    let { type: t, analyticsPage: n, analyticsSection: l, isGIF: s, banner: c } = e;
-    return [a.pC.BANNER, a.pC.AVATAR].includes(t) && s
-        ? (0, i.jsx)(r.Z, {
+o.d(e, { Z: () => l });
+var n = o(200651);
+o(192379);
+var i = o(180781),
+    a = o(321867),
+    r = o(486324);
+function l(t) {
+    let { type: e, analyticsPage: o, analyticsSection: l, isGIF: s, banner: c } = t;
+    return [r.pC.BANNER, r.pC.AVATAR].includes(e) && s
+        ? (0, n.jsx)(a.Z, {
               analyticsSection: l,
-              type: t
+              type: e
           })
-        : t === a.pC.GUILD_BANNER
-          ? (0, i.jsx)(o.Z, {
+        : e === r.pC.GUILD_BANNER
+          ? (0, n.jsx)(i.Z, {
                 analyticsSection: l,
-                analyticsPage: n,
+                analyticsPage: o,
                 isGIF: s,
                 banner: c
             })

@@ -5,7 +5,7 @@ var i = n(200651),
     s = n(457414),
     a = n(311173),
     o = n(388032),
-    c = n(540123);
+    c = n(274317);
 function d(e) {
     var t;
     let { rule: n, onChangeRule: d, collapsed: u = !1 } = e,

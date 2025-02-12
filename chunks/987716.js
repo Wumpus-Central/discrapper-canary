@@ -15,7 +15,7 @@ var i = n(200651),
     m = n(703926),
     g = n(474936),
     E = n(388032),
-    v = n(358249);
+    v = n(355620);
 let y = (e) => {
     let { isShopGift: t, className: n, optionsContainerClassName: a } = e,
         { giftRecipient: y, selectedGiftStyle: I, setSelectedGiftStyle: T, emojiConfetti: b, soundEffect: S, setEmojiConfetti: A, setSoundEffect: N } = (0, l.wD)(),

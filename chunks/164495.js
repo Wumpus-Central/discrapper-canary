@@ -18,7 +18,7 @@ var r = n(200651),
     g = n(604162),
     f = n(46140),
     _ = n(388032),
-    C = n(822923);
+    C = n(698234);
 function v(e) {
     let { quest: t, taskDetails: n } = e;
     return (0, r.jsx)(i.zxk, {

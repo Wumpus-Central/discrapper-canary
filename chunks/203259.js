@@ -5,7 +5,7 @@ var l = n(481060),
     a = n(39604),
     r = n(176127),
     s = n(388032),
-    o = n(368901);
+    o = n(536221);
 function c(e) {
     let { onOpenClipsGallery: t, clipIconRef: n, lastClipsSession: c } = e;
     return (0, i.jsxs)(l.Cys, {

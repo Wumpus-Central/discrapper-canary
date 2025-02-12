@@ -9,7 +9,7 @@ var r = n(200651),
     d = n(347475),
     u = n(210887),
     m = n(5192),
-    _ = n(682219);
+    _ = n(960627);
 function g(e) {
     let { participants: t, channel: a } = e;
     return (0, r.jsx)(o.Ttm, {
@@ -24,7 +24,7 @@ function g(e) {
                     nick: m.ZP.getNickname(null == a ? void 0 : a.guild_id, null == a ? void 0 : a.id, e),
                     onContextMenu: (t) => {
                         (0, l.jW)(t, async () => {
-                            let { default: t } = await Promise.all([n.e('79695'), n.e('69220'), n.e('34272')]).then(n.bind(n, 881351));
+                            let { default: t } = await Promise.all([n.e('79695'), n.e('69220'), n.e('5073')]).then(n.bind(n, 881351));
                             return (n) =>
                                 (0, r.jsx)(t, {
                                     ...n,

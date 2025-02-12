@@ -10,7 +10,7 @@ var l = n(120356),
     d = n(36703),
     u = n(358085),
     h = n(618158),
-    p = n(607820);
+    p = n(45601);
 function m(e) {
     let { className: t, iconClassName: n, sliderClassName: l, userId: m, context: f, currentWindow: g = window } = e,
         { currentVolume: _, muted: C } = (0, r.cj)([c.Z], () => ({

@@ -8,7 +8,7 @@ var r = n(481060),
     a = n(518950),
     s = n(998502),
     l = n(388032),
-    o = n(453348);
+    o = n(613565);
 let c = s.ZP.getEnableHardwareAcceleration() ? r.Xo$ : r.qEK,
     d = (e) => {
         let { user: t, avatarSize: n = r.EFr.SIZE_48 } = e,

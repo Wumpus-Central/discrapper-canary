@@ -12,17 +12,17 @@ var i = n(200651),
     m = n(624138),
     g = n(150414),
     x = n(993553),
-    _ = n(791692);
+    _ = n(460128);
 function p(e) {
     let { cta: t, storeListing: n, className: l } = e,
         { applicationId: p, benefits: E, description: C } = n,
-        N = s.useMemo(() => (null == n.thumbnail ? null : (0, g.q)(p, n.thumbnail, 256)), [p, n.thumbnail]),
-        { data: f } = (0, d.X)(n.skuId),
+        f = s.useMemo(() => (null == n.thumbnail ? null : (0, g.q)(p, n.thumbnail, 256)), [p, n.thumbnail]),
+        { data: N } = (0, d.X)(n.skuId),
         I = s.useMemo(() => {
-            if (null == f || 0 === f.length) return null;
-            let e = f[0];
+            if (null == N || 0 === N.length) return null;
+            let e = N[0];
             return (0, h.xg)(e);
-        }, [f]);
+        }, [N]);
     return null == I
         ? null
         : (0, i.jsxs)(a.l, {
@@ -32,9 +32,9 @@ function p(e) {
                       (0, i.jsxs)('div', {
                           className: _.headerTitle,
                           children: [
-                              null != N &&
+                              null != f &&
                                   (0, i.jsx)(c.Eep, {
-                                      src: N.href,
+                                      src: f.href,
                                       imageClassName: _.subscriptionImg,
                                       width: 48,
                                       height: 48

@@ -6,7 +6,7 @@ var i = n(200651),
     s = n(481060),
     o = n(826298),
     c = n(540059),
-    d = n(120647);
+    d = n(284211);
 let u = l.memo(function (e) {
     var t;
     let { className: n, channel: l, section: a } = e,

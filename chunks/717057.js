@@ -24,7 +24,7 @@ var i = l(200651),
     H = l(308083),
     b = l(981631),
     w = l(388032),
-    S = l(240613);
+    S = l(19943);
 function _(e) {
     var t;
     let { guildId: l, clanInfo: a, signed: r, onSignCharter: c } = e,

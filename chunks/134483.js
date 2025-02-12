@@ -34,7 +34,7 @@ var s = n(200651),
     P = n(981631),
     w = n(354459),
     D = n(388032),
-    k = n(196397);
+    k = n(289015);
 function U(e) {
     var t, n, l, h;
     let { channelId: A, quest: U, previewQuest: O, isParticipatingOverride: B } = e,

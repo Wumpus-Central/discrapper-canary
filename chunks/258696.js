@@ -32,7 +32,7 @@ var i = n(200651),
     R = n(319417),
     O = n(728386),
     D = n(474936),
-    L = n(513632);
+    L = n(446016);
 function x(e) {
     let { disabled: t, channel: n } = e,
         { enabled: r } = p.O.useExperiment({ location: 'gift-button' }),

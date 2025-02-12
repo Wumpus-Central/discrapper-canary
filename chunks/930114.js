@@ -17,7 +17,7 @@ function m(e) {
         x = (0, o.yd)(null == f ? void 0 : f.premiumType, d.p9.TIER_0);
     (0, l.ZDy)(
         async () => {
-            let { default: e } = await Promise.all([n.e('92446'), n.e('46391')]).then(n.bind(n, 409858));
+            let { default: e } = await Promise.all([n.e('92446'), n.e('89487')]).then(n.bind(n, 409858));
             return (n) => {
                 var l, a;
                 return (0, i.jsx)(e, {

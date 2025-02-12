@@ -28,7 +28,7 @@ var i = n(200651),
     O = n(666984),
     D = n(386019),
     L = n(228168),
-    x = n(537208);
+    x = n(309584);
 function P(e) {
     var t;
     let { user: n, currentUser: a, activity: P, profileGuildId: w, className: M, onClose: k } = e,

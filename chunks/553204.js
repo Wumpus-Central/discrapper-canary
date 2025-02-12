@@ -10,7 +10,7 @@ var i = n(200651),
     u = n(208567),
     m = n(624138),
     h = n(388032),
-    g = n(172883);
+    g = n(87127);
 let x = (0, m.Mg)(a.Z.ROLE_ICON_UPLOADER_ICON_SIZE);
 function p(e) {
     let { role: t, 'aria-label': n = h.intl.string(h.t['MsUY/f']), className: l, onClick: a, disabled: m = !1 } = e,

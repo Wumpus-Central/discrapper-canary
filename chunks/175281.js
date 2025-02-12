@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(47120), n(653041);
+n.d(t, { Z: () => U }), n(47120), n(653041);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
@@ -20,7 +20,7 @@ var i = n(200651),
     S = n(264549),
     R = n(981631),
     A = n(388032),
-    g = n(48042);
+    g = n(542667);
 function O(e, t, n) {
     return (
         t in e
@@ -167,25 +167,25 @@ class v extends l.PureComponent {
                 (0, i.jsxs)('div', {
                     className: g.ddrArrows,
                     children: [
-                        (0, i.jsx)(U, {
+                        (0, i.jsx)(Z, {
                             arrow: 'LEFT',
                             isActive: n,
                             className: g.left,
                             children: 'left'
                         }),
-                        (0, i.jsx)(U, {
+                        (0, i.jsx)(Z, {
                             arrow: 'DOWN',
                             isActive: t,
                             className: g.down,
                             children: 'down'
                         }),
-                        (0, i.jsx)(U, {
+                        (0, i.jsx)(Z, {
                             arrow: 'UP',
                             isActive: e,
                             className: g.up,
                             children: 'up'
                         }),
-                        (0, i.jsx)(U, {
+                        (0, i.jsx)(Z, {
                             arrow: 'RIGHT',
                             isActive: l,
                             className: g.right,
@@ -282,7 +282,7 @@ class v extends l.PureComponent {
             });
     }
 }
-function U(e) {
+function Z(e) {
     let { isActive: t, arrow: n, className: r, children: a } = e,
         [o, c] = l.useState(t),
         d = l.useCallback(() => {
@@ -302,7 +302,7 @@ function U(e) {
         })
     );
 }
-function Z(e) {
+function U(e) {
     let { transitionState: t, onClose: n } = e,
         [r, a] = l.useState(!1),
         [o, c] = l.useState(!1),

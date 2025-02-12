@@ -16,8 +16,8 @@ var i = n(200651),
     p = n(163684),
     E = n(178100),
     C = n(518638),
-    N = n(725727),
-    f = n(454982),
+    f = n(725727),
+    N = n(454982),
     I = n(197115),
     T = n(504983),
     S = n(703656),
@@ -29,7 +29,7 @@ var i = n(200651),
     R = n(981631),
     D = n(474936),
     P = n(388032),
-    y = n(897038);
+    y = n(971983);
 function Z(e) {
     let t,
         { outboundPromotion: n, code: l, addClaimedOutboundPromotionCode: a, disabled: o } = e,
@@ -37,7 +37,7 @@ function Z(e) {
         [h, m] = s.useState(!1),
         g = () => u((e) => !e),
         p = (0, x.ZP)(),
-        N = (0, C.Pz)(n.id, p),
+        f = (0, C.Pz)(n.id, p),
         I = null != l,
         T = (0, E.Z)(n, I);
     I && c
@@ -79,7 +79,7 @@ function Z(e) {
                                         className: y.promotionIcon,
                                         children: (0, i.jsx)('img', {
                                             alt: '',
-                                            src: N,
+                                            src: f,
                                             className: y.promotionIconImage
                                         })
                                     }),
@@ -121,7 +121,7 @@ function Z(e) {
             h &&
                 (0, i.jsx)(d.u_l, {
                     renderModal: (e) =>
-                        (0, i.jsx)(f.Z, {
+                        (0, i.jsx)(N.Z, {
                             ...e,
                             onClose: j,
                             onClaim: a,
@@ -147,8 +147,8 @@ let L = function () {
             (0, h.Qv)().then(() => _(!0));
         });
     }, []);
-    let { promotionsLoaded: E, activeOutboundPromotions: C, claimedEndedOutboundPromotions: f, claimedOutboundPromotionCodeMap: L, addClaimedOutboundPromotionCode: k } = (0, N.lG)(),
-        B = C.length + f.length > 0,
+    let { promotionsLoaded: E, activeOutboundPromotions: C, claimedEndedOutboundPromotions: N, claimedOutboundPromotionCodeMap: L, addClaimedOutboundPromotionCode: k } = (0, f.lG)(),
+        B = C.length + N.length > 0,
         M =
             p.g.useExperiment(
                 { location: 'EntitlementGifts' },
@@ -211,7 +211,7 @@ let L = function () {
                               children: [
                                   u,
                                   B ? (0, i.jsx)(d.$i$, { className: y.divider }) : null,
-                                  f.map((e) => {
+                                  N.map((e) => {
                                       let { code: t, promotion: n } = e;
                                       return (0, i.jsx)(
                                           Z,

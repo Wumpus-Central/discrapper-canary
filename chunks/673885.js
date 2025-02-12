@@ -10,7 +10,7 @@ var i = n(120356),
     d = n(51144),
     u = n(981631),
     m = n(388032),
-    x = n(548538);
+    x = n(161488);
 function h(e) {
     let { user: t, joinRequestId: n, className: i } = e,
         { username: h } = t,

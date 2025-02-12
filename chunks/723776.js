@@ -1,13 +1,13 @@
 t.d(n, { F: () => h });
 var l = t(200651),
     i = t(192379),
-    a = t(442837),
-    r = t(481060),
+    r = t(442837),
+    a = t(481060),
     o = t(596454),
     s = t(727637),
     c = t(607070),
     d = t(176354),
-    u = t(300694);
+    u = t(514445);
 function m(e) {
     let { emoji: n, shouldAnimate: t } = e;
     if (null == n) return null;
@@ -24,7 +24,7 @@ function _(e) {
     let { trait: n } = e,
         t = i.useRef(null),
         o = (0, s.Z)(t),
-        d = (0, a.e7)([c.Z], () => c.Z.useReducedMotion);
+        d = (0, r.e7)([c.Z], () => c.Z.useReducedMotion);
     return (null == n ? void 0 : n.label) == null || n.label.length <= 0
         ? null
         : (0, l.jsxs)('div', {
@@ -35,7 +35,7 @@ function _(e) {
                       emoji: n.emoji,
                       shouldAnimate: !d && o
                   }),
-                  (0, l.jsx)(r.Text, {
+                  (0, l.jsx)(a.Text, {
                       tag: 'span',
                       className: u.traitLabel,
                       variant: 'text-sm/normal',
@@ -57,12 +57,12 @@ function h(e) {
                     .filter((e) => e.label.length > 0),
             [n]
         ),
-        a = i.useCallback(
+        r = i.useCallback(
             (e) =>
                 'string' == typeof e
                     ? (0, l.jsx)('div', {
                           className: u.trait,
-                          children: (0, l.jsx)(r.Text, {
+                          children: (0, l.jsx)(a.Text, {
                               tag: 'span',
                               variant: 'text-sm/normal',
                               color: 'text-normal',
@@ -72,10 +72,10 @@ function h(e) {
                     : (0, l.jsx)(_, { trait: e }),
             []
         );
-    return (0, l.jsx)(r.Epb, {
+    return (0, l.jsx)(a.Epb, {
         className: u.container,
         items: t,
-        renderItem: a,
+        renderItem: r,
         maxLines: 2,
         itemGapPx: 4
     });

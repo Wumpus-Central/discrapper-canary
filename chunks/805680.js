@@ -36,7 +36,7 @@ var i = n(200651),
     U = n(185923),
     G = n(611480),
     B = n(388032),
-    Z = n(741133);
+    Z = n(346739);
 let F = P.Om + k.Su.MEDIUM,
     V = r.memo(function (e) {
         let { isActive: t, className: n, viewType: r, autoFocus: a = !1, 'aria-controls': o, ...l } = e;

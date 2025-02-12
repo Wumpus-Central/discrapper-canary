@@ -39,7 +39,7 @@ var r = n(120356),
     B = n(981631),
     Z = n(701488),
     F = n(388032),
-    V = n(537208);
+    V = n(309584);
 function j(e) {
     let { user: t, currentUser: n, activity: r, application: j, voiceGuild: H, voiceChannel: Y, className: W, onClose: K, appContext: z } = e,
         { analyticsLocations: q } = (0, _.ZP)(f.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),

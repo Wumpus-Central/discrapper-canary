@@ -1,6 +1,6 @@
 t.r(n),
     t.d(n, {
-        default: () => p,
+        default: () => f,
         useOverlayInitialFocus: () => C
     }),
     t(47120);
@@ -9,8 +9,8 @@ var i = t(200651),
     a = t(442837),
     l = t(13245),
     o = t(493773),
-    d = t(238246),
-    u = t(358085);
+    u = t(238246),
+    d = t(358085);
 t(606206);
 var c = t(998502),
     s = t(145597);
@@ -20,10 +20,10 @@ var _ = t(554370),
 function C(e) {
     let n = (0, a.e7)([h.ZP], () => {
             let e = h.ZP.getFocusedPID();
-            return !u.isPlatformEmbedded || (null != e && e !== s.R2);
+            return !d.isPlatformEmbedded || (null != e && e !== s.R2);
         }),
         [t, i] = r.useState(n),
-        d = r.useCallback(() => {
+        u = r.useCallback(() => {
             requestAnimationFrame(() => {
                 try {
                     l.Z.successfullyShown((0, s.QF)()), c.ZP.showInactive(e);
@@ -37,18 +37,18 @@ function C(e) {
         }, [e]);
     return (
         r.useEffect(() => {
-            (n || t) && n && !t && (i(!0), d());
-        }, [d, t, n, e]),
+            (n || t) && n && !t && (i(!0), u());
+        }, [u, t, n, e]),
         (0, o.Ng)(() => {
-            t && d();
+            t && u();
         }),
         t
     );
 }
-function p(e) {
+function f(e) {
     let { withTitleBar: n, windowKey: t } = e;
     return C(t)
-        ? (0, i.jsx)(d.Z, {
+        ? (0, i.jsx)(u.Z, {
               withTitleBar: n,
               windowKey: t,
               title: 'Discord Overlay',

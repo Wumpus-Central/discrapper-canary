@@ -11,7 +11,7 @@ var r = n(120356),
     d = n(626135),
     f = n(981631),
     _ = n(388032),
-    p = n(383709);
+    p = n(312867);
 function h(e) {
     var t;
     let { shopLink: n, skuId: r, onClick: o } = e,

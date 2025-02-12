@@ -14,8 +14,8 @@ var r = n(120356),
     x = n(914010),
     _ = n(233608),
     p = n(71080),
-    f = n(398332),
-    b = n(658951);
+    f = n(532054),
+    b = n(617521);
 function g(e) {
     let { title: t, can: n } = e,
         r = n ? s.dz2 : s.Dio,

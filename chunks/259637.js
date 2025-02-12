@@ -9,7 +9,7 @@ var r = n(658722),
     c = n(339085),
     d = n(456269),
     u = n(388032),
-    m = n(586956);
+    m = n(316641);
 let h = (e) => {
     let { tag: t } = e,
         { id: n, name: r, emojiId: l, emojiName: d } = t,

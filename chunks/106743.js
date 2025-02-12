@@ -4,7 +4,7 @@ var r = n(200651),
     i = n(261833),
     s = n(481060),
     o = n(184299),
-    a = n(152860);
+    a = n(43465);
 function u(e) {
     var t;
     let { quest: n, onClose: u } = e,

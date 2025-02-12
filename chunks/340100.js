@@ -7,7 +7,7 @@ var i = n(120356),
     r = n(481060),
     o = n(113434),
     d = n(26650),
-    u = n(526668);
+    u = n(232497);
 let c = function (e) {
     let { className: t, color: n = a.Z.colors.WHITE, quest: i, isInventory: c } = e,
         m = (0, o.qb)(e.quest),

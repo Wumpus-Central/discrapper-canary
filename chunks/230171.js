@@ -25,7 +25,7 @@ var i = n(200651),
     b = n(758199),
     A = n(981631),
     j = n(388032),
-    y = n(708485);
+    y = n(575904);
 function Z(e) {
     var t;
     let { app: n, embedUrl: Z, activityCustomId: R, activityReferrerId: L } = e,

@@ -7,7 +7,7 @@ var i = n(200651),
     o = n(481060),
     c = n(706454),
     d = n(388032),
-    u = n(922010);
+    u = n(396601);
 let m = (0, d.getAvailableLocales)();
 function h(e) {
     let { application: t, className: n } = e,

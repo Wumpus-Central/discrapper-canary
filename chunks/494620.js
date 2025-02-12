@@ -8,7 +8,7 @@ t(192379);
 var l = t(120356),
     a = t.n(l),
     i = t(481060),
-    c = t(122085),
+    c = t(530773),
     d = (((r = {}).INFO = 'info'), (r.WARNING = 'warning'), r);
 let u = {
         info: c.info,

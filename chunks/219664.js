@@ -34,7 +34,7 @@ var i = n(200651),
     A = n(710352),
     L = n(981631),
     F = n(388032),
-    O = n(479686);
+    O = n(108037);
 let z = r.memo(function (e) {
     let { id: t, threadId: n, goToThread: r, overrideMedia: l, className: a, coords: s, gridCoords: c, gridSectionBoundaries: d, observePostVisibilityAnalytics: u } = e,
         m = (0, o.e7)([j.Z], () => j.Z.getChannel(n));

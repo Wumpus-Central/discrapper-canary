@@ -12,7 +12,7 @@ var i = n(200651),
     _ = n(51144),
     h = n(981631),
     p = n(388032),
-    g = n(791686);
+    g = n(375798);
 function f(e) {
     var t;
     let { invite: n, getAcceptInviteContext: f } = e,

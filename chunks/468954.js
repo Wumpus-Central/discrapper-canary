@@ -5,7 +5,7 @@ var i = n(200651),
     s = n(98528),
     o = n(429155),
     l = n(810462),
-    u = n(267749);
+    u = n(89508);
 function c(e) {
     let { categories: t, collapsedCategories: n, containerWidth: c, store: d, onSelectItem: f, onSearchExpressions: _, hasSearchResults: p, defaultSearchPlaceholder: h, emptySearchPlaceholder: m, renderEmptyState: g, renderRow: E, renderSection: v, renderSectionHeader: y, renderSectionFooter: I, renderInspector: T, renderEmptySearchState: b, renderCategoryList: S, renderHeaderAccessories: A, rowHeight: N, sectionHeaderHeight: C, sectionFooterHeight: R, itemNodeWidth: O, listPaddingRight: D, itemNodeMargin: L, listPadding: x, gridNavigatorId: P, gridNotice: w, renderHeader: M, renderUpsell: k, setShowUpsell: U } = e,
         G = r.useRef(null),

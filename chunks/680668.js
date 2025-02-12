@@ -13,7 +13,7 @@ var l = n(533800),
     _ = n(358595),
     h = n(981631),
     p = n(388032),
-    g = n(791686);
+    g = n(375798);
 function f(e) {
     var t, f;
     let x,
@@ -133,7 +133,7 @@ function f(e) {
                                 children: p.intl.format(p.t['/o1IfH'], {
                                     onClick: () =>
                                         (0, a.ZDy)(async () => {
-                                            let { default: e } = await Promise.all([n.e('95468'), n.e('70506')]).then(n.bind(n, 650233));
+                                            let { default: e } = await Promise.all([n.e('95468'), n.e('78254')]).then(n.bind(n, 650233));
                                             return (t) => (0, i.jsx)(e, { ...t });
                                         })
                                 })

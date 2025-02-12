@@ -37,7 +37,7 @@ var i = n(200651),
     x = n(526761),
     P = n(231338),
     w = n(388032),
-    M = n(488850),
+    M = n(458376),
     k = (function (e) {
         return (e.EDITOR = 'EDITOR'), (e.SETTINGS = 'SETTINGS'), e;
     })({});

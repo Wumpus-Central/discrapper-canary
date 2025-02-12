@@ -40,7 +40,7 @@ var r = n(200651),
     U = n(981631),
     Z = n(217702),
     V = n(388032),
-    Y = n(152860);
+    Y = n(43465);
 let z = new Set([U.IyS.FIVE_G, U.IyS.FOUR_G, U.IyS.UNKNOWN]),
     G = {
         tension: 250,
@@ -163,8 +163,8 @@ function X(e) {
                   };
         }, u.X),
         e2 = (0, D.km)((e) => e.setVideoProgress),
-        e6 = (0, D.km)((e) => e.muted),
-        e4 = (0, D.km)((e) => e.volume),
+        e4 = (0, D.km)((e) => e.muted),
+        e6 = (0, D.km)((e) => e.volume),
         e9 = (0, c.e7)([E.Z], () => E.Z.useReducedMotion),
         e7 = (0, l.useRef)(null),
         e8 = (0, l.useRef)(null),
@@ -580,7 +580,7 @@ function X(e) {
                             }
                         },
                         onLoadedMetadata: (e) => {
-                            null != e7.current && (tl(!0), th(e5 ? e1.timestampSec : Math.max(e1.timestampSec, eL.progressSeconds)), e6 ? (e7.current.volume = 0) : (e7.current.volume = e4));
+                            null != e7.current && (tl(!0), th(e5 ? e1.timestampSec : Math.max(e1.timestampSec, eL.progressSeconds)), e4 ? (e7.current.volume = 0) : (e7.current.volume = e6));
                         },
                         onLoadStart: () => {
                             (e$.current = Date.now()),

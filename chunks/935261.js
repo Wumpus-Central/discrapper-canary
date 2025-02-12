@@ -11,7 +11,7 @@ var l = n(120356),
     u = n(565473),
     h = n(927923),
     m = n(388032),
-    p = n(718418);
+    p = n(262253);
 function g(e) {
     let { platform: t } = e;
     return t === h.YE.XBOX ? (0, i.jsx)(d.Z, { className: p.icon }) : t === h.YE.PLAYSTATION ? (0, i.jsx)(c.Z, { className: p.icon }) : null;

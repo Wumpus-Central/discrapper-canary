@@ -17,7 +17,7 @@ var i = n(200651),
     E = n(358085),
     v = n(288406),
     y = n(388032),
-    I = n(554829);
+    I = n(856501);
 let T = (e, t) => ''.concat(e, ':').concat(t),
     b = r.forwardRef(function (e, t) {
         let { emoji: n, isFavorite: r, isLargeSize: a, isMediumSize: u, isInspected: c, isDisabled: d, showPulse: _, columnIndex: h, rowIndex: m, size: E, surrogateCodePoint: T, allowAnimatedEmoji: b, selectedItemClassName: S, inNitroLockedSection: A, ...N } = e,

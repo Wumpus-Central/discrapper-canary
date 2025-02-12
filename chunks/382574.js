@@ -4,7 +4,7 @@ t(192379);
 var l = t(73880),
     s = t(137158),
     a = t(388032),
-    r = t(42497);
+    r = t(241195);
 let o = function (e) {
     let { formField: n, index: t, isDragEnabled: o, isDropHovered: c, onDrop: d, onEdit: u, onRemove: x, canRemove: m, actionsLocation: h, fieldStyle: f } = e,
         { label: v, placeholder: g } = n;

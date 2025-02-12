@@ -4,10 +4,10 @@ t.d(n, {
 });
 var l = t(442837),
     i = t(650774),
-    a = t(496675),
-    r = t(231338);
+    r = t(496675),
+    a = t(231338);
 function o(e) {
-    return (0, l.e7)([a.Z], () => null != e && a.Z.can(r.Pl.MENTION_EVERYONE, e), [e]);
+    return (0, l.e7)([r.Z], () => null != e && r.Z.can(a.Pl.MENTION_EVERYONE, e), [e]);
 }
 function s(e) {
     let n = null == e ? void 0 : e.guild_id,

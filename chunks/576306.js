@@ -1,5 +1,5 @@
-s.d(l, { h: () => n });
-let a = (0, s(818083).B)({
+a.d(l, { h: () => n });
+let s = (0, a(818083).B)({
     kind: 'user',
     id: '2024-12_new_guild_profile',
     label: 'Enables new guild profile',
@@ -13,6 +13,6 @@ let a = (0, s(818083).B)({
     ]
 });
 function n() {
-    let { enabled: e } = a.useExperiment({ location: 'GuildProfileExperiment' }, { autoTrackExposure: !1 });
+    let { enabled: e } = s.useExperiment({ location: 'GuildProfileExperiment' }, { autoTrackExposure: !1 });
     return e;
 }

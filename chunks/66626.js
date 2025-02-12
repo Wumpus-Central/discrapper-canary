@@ -6,7 +6,7 @@ var n = i(200651),
     r = i(600164),
     o = i(486527),
     c = i(388032),
-    d = i(864712);
+    d = i(199519);
 function u(e) {
     let { directoryChannelId: t, description: i, onDescriptionChange: u, categoryId: m, onCategoryIdChange: x, onSubmit: C, onClose: h, onBack: _ } = e,
         [g, f] = s.useState(!1),

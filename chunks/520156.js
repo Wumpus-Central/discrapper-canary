@@ -3,7 +3,7 @@ var e = n(200651);
 n(192379);
 var i = n(481060),
     o = n(388032),
-    l = n(458816),
+    l = n(585815),
     a = n(660028);
 let c = n(691041),
     r = () =>
@@ -96,7 +96,7 @@ let c = n(691041),
                                 }),
                                 (0, e.jsx)(b, {
                                     icon: (0, e.jsx)(d, {}),
-                                    text: o.intl.format(o.t.vt7mWl, { quantity: 100 })
+                                    text: o.intl.format(o.t.vt7mWl, { quantity: 200 })
                                 })
                             ]
                         }),

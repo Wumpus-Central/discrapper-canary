@@ -45,7 +45,7 @@ var a = n(200651),
     D = n(47930),
     G = n(981631),
     U = n(388032),
-    z = n(732175),
+    z = n(562797),
     H = n(121282);
 function F(e) {
     let { avatarSrc: t, avatarDecorationSrc: n, compact: o, onClick: i, onContextMenu: s, onMouseDown: l, onMouseEnter: c, onMouseLeave: u, onKeyDown: d, showCommunicationDisabledStyles: p = !1, className: m } = e;

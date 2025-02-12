@@ -13,7 +13,7 @@ var i = n(200651),
     x = n(466070),
     g = n(981631),
     p = n(388032),
-    b = n(250084);
+    b = n(607700);
 function _(e) {
     let { applicationId: t, channels: n } = e,
         l = (0, d.q)(t);

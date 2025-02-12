@@ -8,7 +8,7 @@ var i = n(200651),
     c = n(174767),
     d = n(594174),
     u = n(388032),
-    m = n(23943);
+    m = n(779600);
 function _(e) {
     let { inboxIconRef: t, recentsPopoutShown: n } = e,
         [_, h] = l.useState(!1),

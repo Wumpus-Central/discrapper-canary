@@ -6,7 +6,7 @@ var i = n(200651),
     o = n(436774),
     l = n(981631),
     u = n(388032),
-    c = n(890802);
+    c = n(15923);
 function d(e) {
     let { product: t, onSecondaryClick: d } = e,
         f = r.useCallback(() => {

@@ -6,7 +6,7 @@ var l = n(120356),
     r = n(481060),
     s = n(540059),
     o = n(388032),
-    c = n(922607);
+    c = n(482140);
 function d(e) {
     let { className: t, iconContainerClassName: n, icon: l, color: d, title: u, description: h, userCount: p, onClick: m, highlight: f } = e,
         g = (0, s.Q3)('GuildEventPrompt');

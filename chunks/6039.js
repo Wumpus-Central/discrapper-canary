@@ -20,7 +20,7 @@ var i = n(200651),
     N = n(981631),
     v = n(898625),
     T = n(388032),
-    S = n(906160);
+    S = n(351594);
 function A(e) {
     let { guild: t, width: n, height: r } = e,
         a = l.useMemo(

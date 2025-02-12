@@ -16,7 +16,7 @@ var l = n(200651),
     h = n(841183),
     C = n(981631),
     A = n(388032),
-    j = n(267458);
+    j = n(760913);
 function v(e) {
     let { avatar: t, orderNumber: n } = e,
         { id: a, storageHash: i, description: s } = t,

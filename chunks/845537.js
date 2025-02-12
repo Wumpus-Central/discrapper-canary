@@ -32,8 +32,8 @@ var h = n(592125),
     I = n(51144),
     T = n(377668),
     b = n(388032),
-    S = n(571785),
-    A = n(663362);
+    S = n(412621),
+    A = n(642367);
 function N(e) {
     let { emoji: t } = e;
     return (0, i.jsx)(a.ua7, {

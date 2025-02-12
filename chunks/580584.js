@@ -5,7 +5,7 @@ var a = n(332664),
     i = n(814249),
     l = n(531578),
     c = n(388032),
-    o = n(416219);
+    o = n(961860);
 let r = [
     {
         className: o.emojiThumbsUp,

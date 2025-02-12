@@ -4,7 +4,7 @@ t(192379);
 var i = t(481060),
     r = t(701488),
     s = t(388032),
-    o = t(828881),
+    o = t(511780),
     l = t(221886);
 function c(e) {
     let { application: n, onCancel: t, onClose: c, onConfirm: d, ...x } = e;

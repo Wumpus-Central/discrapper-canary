@@ -12,7 +12,7 @@ var i = n(200651),
     h = n(999382),
     g = n(981631),
     x = n(388032),
-    p = n(71329);
+    p = n(660773);
 function _(e) {
     let { guild: t, handleIconChange: n } = e,
         r = (0, s.e7)([c.Z], () => c.Z.can(g.Plq.MANAGE_GUILD, t)),

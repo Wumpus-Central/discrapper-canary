@@ -4,15 +4,15 @@ var i = t(200651),
     a = t(442837),
     l = t(481060),
     o = t(355863),
-    d = t(237997),
-    u = t(451478),
+    u = t(237997),
+    d = t(451478),
     c = t(145597),
     s = t(830917),
     _ = t(312178),
     h = t(388627),
     C = t(892127),
-    p = t(561064),
-    f = t(291508);
+    f = t(561064),
+    p = t(988612);
 function m(e) {
     return e.widget.id;
 }
@@ -25,8 +25,8 @@ function E(e, n, t, r) {
                   ...n,
                   transitionState: t,
                   cleanUp: r,
-                  dragContainerClassName: f.dragContainer,
-                  className: f.widget
+                  dragContainerClassName: p.dragContainer,
+                  className: p.widget
               },
               e
           );
@@ -34,9 +34,9 @@ function E(e, n, t, r) {
 let g = [],
     v = r.memo(function (e) {
         let { className: n } = e,
-            t = (0, p.Z)(),
-            C = (0, a.e7)([u.Z], () => u.Z.windowSize((0, s.ZY)(t))),
-            f = (0, a.e7)([d.Z], () => d.Z.isPreviewingInGame()),
+            t = (0, f.Z)(),
+            C = (0, a.e7)([d.Z], () => d.Z.windowSize((0, s.ZY)(t))),
+            p = (0, a.e7)([u.Z], () => u.Z.isPreviewingInGame()),
             v = (0, a.e7)(
                 [o.Z],
                 () => {
@@ -56,13 +56,13 @@ let g = [],
                                         id: e.id,
                                         pinned: e.pinned,
                                         anchor: e.anchor,
-                                        isPreviewingInGame: f
+                                        isPreviewingInGame: p
                                     })
                             });
                     }
                     return n;
                 },
-                [f],
+                [p],
                 h.HP
             ),
             I = r.useCallback(

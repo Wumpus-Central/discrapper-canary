@@ -1,8 +1,8 @@
 t.d(n, { Z: () => m }), t(47120);
 var l = t(192379),
     i = t(749210),
-    a = t(287734),
-    r = t(881052),
+    r = t(287734),
+    a = t(881052),
     o = t(142497),
     s = t(570188),
     c = t(471253),
@@ -20,12 +20,12 @@ function m(e, n) {
         onSave: async (l) => {
             let { topic: s, privacyLevel: d, sendStartNotification: m } = l;
             if (null != e && '' !== s && null != d) {
-                _(!0), x(null), null != t && (i.Z.selectGuild(t), a.default.selectVoiceChannel(e.id));
+                _(!0), x(null), null != t && (i.Z.selectGuild(t), r.default.selectVoiceChannel(e.id));
                 try {
                     let t;
                     null != g ? (t = await c.Ef(e, s, d)) : ((t = await c.HO(e, s, d, null != m && m)), v && o.Kw(u.v.LIVE_STAGE_NOTIFICATION_BADGE)), n(t);
                 } catch (e) {
-                    x(new r.Hx(e)), _(!1);
+                    x(new a.Hx(e)), _(!1);
                 }
             }
         }

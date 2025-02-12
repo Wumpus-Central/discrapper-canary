@@ -1,15 +1,15 @@
 n.d(t, { Z: () => c });
-var a = n(200651),
+var i = n(200651),
     l = n(192379),
-    i = n(481060),
-    s = n(43267),
-    r = n(93687),
+    a = n(481060),
+    r = n(43267),
+    s = n(93687),
     o = n(785232);
 let c = l.memo(function (e) {
     let { channel: t, size: n, facepileSizeOverride: l, experimentLocation: c, isTyping: d, status: u, className: m, animated: _ = !1, ...h } = e,
-        { isFacepileEnabled: g } = r.Z.useExperiment({ location: c }, { autoTrackExposure: !0 });
-    return t.recipients.length >= 2 && g && null == t.icon
-        ? (0, a.jsx)(o.Z, {
+        { isFacepileEnabled: p } = s.Z.useExperiment({ location: c }, { autoTrackExposure: !0 });
+    return t.recipients.length >= 2 && p && null == t.icon
+        ? (0, i.jsx)(o.Z, {
               'aria-label': h['aria-label'],
               'aria-hidden': h['aria-hidden'],
               className: m,
@@ -18,11 +18,11 @@ let c = l.memo(function (e) {
               isTyping: d,
               status: u
           })
-        : (0, a.jsx)(i.qEK, {
+        : (0, i.jsx)(a.qEK, {
               'aria-hidden': h['aria-hidden'],
               'aria-label': h['aria-label'],
               className: m,
               size: n,
-              src: (0, s.x)(t, 80, _)
+              src: (0, r.x)(t, 80, _)
           });
 });

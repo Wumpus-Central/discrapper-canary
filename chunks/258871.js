@@ -27,7 +27,7 @@ let f = [
             },
             handler: (e) =>
                 (0, a.ZDy)(async () => {
-                    let { default: t } = await Promise.all([n.e('22347'), n.e('56236'), n.e('2695')]).then(n.bind(n, 17671));
+                    let { default: t } = await Promise.all([n.e('22347'), n.e('56236'), n.e('1752')]).then(n.bind(n, 17671));
                     return (n) =>
                         (0, i.jsx)(t, {
                             ...n,
@@ -73,7 +73,7 @@ let f = [
             getName: () => g.intl.string(g.t.MJQOuL),
             handler: (e, t) =>
                 (0, a.ZDy)(async () => {
-                    let { default: l } = await Promise.all([n.e('7654'), n.e('13942')]).then(n.bind(n, 560114));
+                    let { default: l } = await Promise.all([n.e('7654'), n.e('76236')]).then(n.bind(n, 560114));
                     return (n) =>
                         (0, i.jsx)(l, {
                             ...n,

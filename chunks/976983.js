@@ -18,7 +18,7 @@ var r = n(120356),
     g = n(570961),
     x = n(290511),
     p = n(388032),
-    _ = n(277478);
+    _ = n(560111);
 function C(e) {
     var t, r, s, c;
     let { guild: u, prompt: C, singleColumn: f, promptIndex: v, option: N, hasError: j, onDragStart: I, onDragComplete: E, onDragReset: b } = e,

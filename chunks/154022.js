@@ -16,8 +16,8 @@ var i = n(200651),
     p = n(313201),
     E = n(786761),
     C = n(3148),
-    N = n(739566),
-    f = n(753206),
+    f = n(739566),
+    N = n(753206),
     I = n(440849),
     T = n(921801),
     S = n(196051),
@@ -33,8 +33,8 @@ var i = n(200651),
     Z = n(611480),
     L = n(653477),
     k = n(388032),
-    B = n(20554),
-    M = n(483938),
+    B = n(317277),
+    M = n(814632),
     V = n(328756);
 let w = (0, p.hQ)(),
     U = (0, p.hQ)(),
@@ -156,10 +156,10 @@ function H() {
                 }),
                 (0, i.jsx)('div', {
                     className: B.previewMessage,
-                    children: (0, i.jsx)(f.Z, {
+                    children: (0, i.jsx)(N.Z, {
                         compact: e,
                         author: {
-                            ...(0, N.ZH)(t),
+                            ...(0, f.ZH)(t),
                             colorString: '#DD80F4'
                         },
                         message: t

@@ -4,8 +4,8 @@ var i,
     a = t(570140),
     l = t(592125),
     o = t(271383),
-    d = t(430824);
-function u(e, n, t) {
+    u = t(430824);
+function d(e, n, t) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -23,7 +23,7 @@ let c = [],
 class _ extends (i = r.ZP.PersistedStore) {
     initialize(e) {
         var n;
-        this.waitFor(o.ZP, d.Z, l.Z), (s = new Set([...(c = null !== (n = null == e ? void 0 : e.channelHistory) && void 0 !== n ? n : [])]));
+        this.waitFor(o.ZP, u.Z, l.Z), (s = new Set([...(c = null !== (n = null == e ? void 0 : e.channelHistory) && void 0 !== n ? n : [])]));
     }
     getState() {
         return { channelHistory: c };
@@ -32,7 +32,7 @@ class _ extends (i = r.ZP.PersistedStore) {
         return c;
     }
 }
-u(_, 'displayName', 'RecentVoiceChannelStore'), u(_, 'persistKey', 'RecentVoiceChannelStore');
+d(_, 'displayName', 'RecentVoiceChannelStore'), d(_, 'persistKey', 'RecentVoiceChannelStore');
 let h = new _(a.Z, {
     POST_CONNECTION_OPEN: function () {
         s = new Set([...c]);

@@ -10,7 +10,7 @@ var r = a(200651),
     x = a(69580),
     u = a(424071),
     h = a(388032),
-    m = a(522137);
+    m = a(960405);
 let N = new d.Z('TwoWayLinkDiscordConsentWeb');
 function C(e) {
     let { platformType: t, clientId: a, scopes: s, authToken: d, onContinue: C, onError: j, onClose: k, redirectUri: v } = e,

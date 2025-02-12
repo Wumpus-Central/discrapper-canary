@@ -16,7 +16,7 @@ var l = n(120356),
     E = n(981631),
     v = n(185923),
     Z = n(388032),
-    x = n(818312);
+    x = n(197889);
 let S = ['slight_smile', 'frowning', 'smile', 'stuck_out_tongue', 'wink'];
 function N(e) {
     var t;

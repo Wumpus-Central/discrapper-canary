@@ -5,7 +5,7 @@ var r = n(120356),
     a = n.n(r),
     s = n(481060),
     o = n(540059),
-    l = n(67863);
+    l = n(924791);
 let u = (e) => {
     let { className: t, children: n, 'aria-label': r, id: u } = e;
     return (0, o.Q3)('ListSectionItem')

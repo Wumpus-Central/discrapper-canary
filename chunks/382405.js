@@ -37,7 +37,7 @@ var r = n(120356),
     U = n(228168),
     G = n(981631),
     B = n(616922),
-    Z = n(537208);
+    Z = n(309584);
 function F(e) {
     let { user: t, entry: n, header: r, className: s, onClose: l } = e,
         { profileType: c } = (0, w.z)(),

@@ -11,7 +11,7 @@ var l = n(657707),
     u = n(834129),
     m = n(981631),
     _ = n(388032),
-    h = n(368272);
+    h = n(52367);
 function p(e) {
     let { message: t, channel: n, author: p, compact: g } = e,
         { nick: f } = (0, o.Sw)(p, n),

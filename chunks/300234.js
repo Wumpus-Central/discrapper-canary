@@ -12,7 +12,7 @@ var a = n(200651),
     m = n(260483),
     g = n(314208),
     x = n(124368),
-    f = n(466218);
+    f = n(205482);
 let Z = l.memo(function (e) {
     let { threadId: t, goToThread: l, showChannelName: o } = e,
         c = (0, s.e7)([d.Z], () => d.Z.getChannel(t)),

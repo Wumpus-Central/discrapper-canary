@@ -19,7 +19,7 @@ var i = n(200651),
     y = n(228168),
     I = n(981631),
     T = n(474936),
-    b = n(503981);
+    b = n(720947);
 let S = h.ZP.getEnableHardwareAcceleration() ? l.Xo$ : l.qEK;
 function A(e) {
     let { user: t, displayProfile: n, guildId: a, channelId: h, profileType: A, animateOnHover: N, onOpenProfile: C, className: R, previewStatus: O } = e,

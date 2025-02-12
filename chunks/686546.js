@@ -10,7 +10,7 @@ var i = n(200651),
     o = n(182294),
     l = n(3682),
     u = n(419061),
-    c = n(713409),
+    c = n(129012),
     d = (function (e) {
         return (
             (e.SQUIRCLE = 'svg-mask-squircle'),

@@ -16,7 +16,7 @@ var i = n(200651),
     x = n(979007),
     C = n(981631),
     v = n(388032),
-    f = n(305420);
+    f = n(892723);
 function I(e) {
     let { application: t } = e;
     return (0, i.jsxs)('div', {
@@ -128,7 +128,7 @@ function j(e) {
                         (e = (0, h.KW)(c.flags) ? 'user' : 'guild'),
                         void (0, s.ZDy)(
                             async () => {
-                                let { SubscriptionDetailsModal: a } = await Promise.all([n.e('86282'), n.e('53065')]).then(n.bind(n, 519896));
+                                let { SubscriptionDetailsModal: a } = await Promise.all([n.e('86282'), n.e('17047')]).then(n.bind(n, 519896));
                                 return (n) =>
                                     (0, i.jsx)(a, {
                                         appId: t,

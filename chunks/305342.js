@@ -31,7 +31,7 @@ var i = n(200651),
     j = n(293810),
     y = n(981631),
     Z = n(388032),
-    R = n(640411);
+    R = n(783695);
 let L = (e) => {
         let { benefits: t, header: n, guildId: a } = e,
             [r, s] = l.useState(!1),

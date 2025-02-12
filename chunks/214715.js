@@ -4,7 +4,7 @@ var i = n(200651),
     a = n(120356),
     s = n.n(a),
     o = n(481060),
-    l = n(288271);
+    l = n(551263);
 let u = r.memo(function (e) {
     let { text: t, variant: n = 'text-xs/medium', color: a = 'text-normal', icon: u, className: c, selected: d, onMouseEnter: f, onMouseLeave: _, onClick: p } = e,
         h = r.useMemo(() => {

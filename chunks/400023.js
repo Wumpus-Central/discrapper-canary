@@ -36,7 +36,7 @@ var i = n(200651),
     D = n(406534),
     w = n(981631),
     U = n(388032),
-    B = n(813591);
+    B = n(795870);
 let F = l.memo(
         function (e) {
             var t;

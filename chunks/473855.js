@@ -5,7 +5,7 @@ var i = n(388905),
     s = n(837748),
     l = n(306453),
     a = n(58346),
-    c = n(929937);
+    c = n(896628);
 let d = {
     [a.HQ.CLASSROOM]: n(320440),
     [a.HQ.LOCAL_COMMUNITIES]: n(526916),

@@ -2,7 +2,7 @@ n.d(t, { a: () => r });
 var i = n(200651);
 n(192379);
 var l = n(481060),
-    a = n(389916);
+    a = n(634863);
 let r = (e) => {
     let { text: t, icon: n, onClick: r } = e;
     return (0, i.jsxs)(l.zxk, {

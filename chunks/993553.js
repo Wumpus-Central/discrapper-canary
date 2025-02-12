@@ -6,7 +6,7 @@ var i = n(200651),
     a = n(865824),
     o = n(481060),
     c = n(388032),
-    d = n(484338);
+    d = n(948112);
 function u(e) {
     let { children: t, lineClamp: n = 2, ...u } = e,
         [h, m] = s.useState(!1),
@@ -47,9 +47,9 @@ function u(e) {
     s.useEffect(() => {
         requestAnimationFrame(C);
     }, [C, t, n]);
-    let N = 'auto';
+    let f = 'auto';
     return (
-        null != g && (N = h ? ''.concat(g.expandedHeight, 'px') : ''.concat(g.truncatedHeight, 'px')),
+        null != g && (f = h ? ''.concat(g.expandedHeight, 'px') : ''.concat(g.truncatedHeight, 'px')),
         (0, i.jsxs)('div', {
             children: [
                 (0, i.jsx)(o.Text, {
@@ -57,7 +57,7 @@ function u(e) {
                     className: d.content,
                     lineClamp: h ? void 0 : n,
                     ref: E,
-                    style: { height: N },
+                    style: { height: f },
                     children: t
                 }),
                 _

@@ -6,7 +6,7 @@ var i = n(200651),
     l = n(642128),
     o = n(481060),
     c = n(320319),
-    d = n(364922);
+    d = n(958402);
 let u = (e) => {
     let { cards: t, className: n, cardType: a } = e,
         u = () => (window.innerWidth < 910 ? 1 : window.innerWidth < 1400 ? 2 : 3),

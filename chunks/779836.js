@@ -14,7 +14,7 @@ var l = n(120356),
     m = n(531578),
     f = n(959517),
     g = n(388032),
-    _ = n(310846);
+    _ = n(871137);
 function C(e) {
     let { summary: t, channel: n } = e,
         l = (0, s.e7)([h.Z], () => h.Z.summaryFeedback(t)),

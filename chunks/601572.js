@@ -11,49 +11,49 @@ var i = n(200651),
     u = n(313201),
     f = n(695346),
     p = n(932724),
-    g = n(716161),
-    b = n(672339),
-    h = n(898531),
+    h = n(716161),
+    g = n(672339),
+    b = n(898531),
     m = n(131951),
     C = n(594174),
     E = n(626135),
     I = n(747545),
     T = n(981631),
     R = n(388032),
-    O = n(60112);
+    O = n(45573);
 function S(e) {
     let { transitionState: t, videoEnabled: n, onEnable: S, onClose: A } = e,
         v = m.Z.getCameraComponent(),
         N = (0, u.Dt)(),
-        L = (0, h.Z)(),
+        L = (0, b.Z)(),
         k = f.qF.useSetting(),
         [B, y] = a.useState((0, p.P)(C.default.getCurrentUser())),
         U = (0, c.O)(),
-        { analyticsLocations: D } = (0, _.ZP)(s.Z.CAMERA_PREVIEW),
-        w = a.useRef(null);
+        { analyticsLocations: w } = (0, _.ZP)(s.Z.CAMERA_PREVIEW),
+        D = a.useRef(null);
     a.useEffect(() => {
         E.default.track(T.rMx.OPEN_MODAL, { type: 'Camera Preview Modal' });
     }, []),
         a.useEffect(() => {
             var e;
-            null === (e = w.current) || void 0 === e || e.scrollToTop();
+            null === (e = D.current) || void 0 === e || e.scrollToTop();
         }, []);
     let P = async () => {
             await x(), r.Z.setVideoEnabled(!0), null == S || S();
         },
         x = async () => {
             try {
-                await (0, b.wG)(B, {
+                await (0, g.wG)(B, {
                     location: {
                         page: T.ZY5.PREVIEW_CAMERA_MODAL,
                         ...U.location
                     }
                 });
             } catch (e) {}
-            await A(), (0, g.Up)(B);
+            await A(), (0, h.Up)(B);
         };
     return (0, i.jsx)(_.Gt, {
-        value: D,
+        value: w,
         children: (0, i.jsx)(l.Z, {
             page: T.ZY5.PREVIEW_CAMERA_MODAL,
             children: (0, i.jsxs)(o.Y0X, {
@@ -64,7 +64,7 @@ function S(e) {
                 children: [
                     (0, i.jsxs)(o.hzk, {
                         className: L ? O.contentWithVideoBackgrounds : O.content,
-                        scrollerRef: w,
+                        scrollerRef: D,
                         children: [
                             (0, i.jsx)(o.X6q, {
                                 id: N,

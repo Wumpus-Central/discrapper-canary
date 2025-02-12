@@ -21,19 +21,19 @@ var i = n(200651),
     p = n(726985),
     E = n(981631),
     C = n(388032),
-    N = n(912888);
-function f(e) {
+    f = n(268296);
+function N(e) {
     let { listType: t, numberOfUsers: n } = e,
         s = 'blocked' === t;
     return (0, i.jsxs)('div', {
-        className: N.header,
+        className: f.header,
         children: [
             (0, i.jsx)('div', {
-                className: N.iconContainer,
+                className: f.iconContainer,
                 children: s ? (0, i.jsx)(o.t6m, {}) : (0, i.jsx)(o.kZF, {})
             }),
             (0, i.jsxs)('div', {
-                className: N.text,
+                className: f.text,
                 children: [
                     (0, i.jsx)(o.Text, {
                         variant: 'text-md/semibold',
@@ -70,17 +70,17 @@ function I(e) {
         ? null
         : (0, i.jsx)(i.Fragment, {
               children: (0, i.jsxs)('div', {
-                  className: r()(N.row, { [N.lastRow]: l }),
+                  className: r()(f.row, { [f.lastRow]: l }),
                   children: [
                       (0, i.jsxs)('div', {
-                          className: N.userInfo,
+                          className: f.userInfo,
                           children: [
                               (0, i.jsx)(d.Z, {
                                   user: x,
                                   size: o.EFr.SIZE_40
                               }),
                               (0, i.jsxs)('div', {
-                                  className: N.text,
+                                  className: f.text,
                                   children: [
                                       (0, i.jsx)(o.Text, {
                                           variant: 'text-md/semibold',
@@ -112,14 +112,14 @@ function T(e) {
     return (0, i.jsx)(x.U, {
         setting: t,
         children: (0, i.jsxs)('div', {
-            className: N.card,
+            className: f.card,
             children: [
-                (0, i.jsx)(f, {
+                (0, i.jsx)(N, {
                     listType: l,
                     numberOfUsers: n.length
                 }),
                 (0, i.jsx)('div', {
-                    className: N.usersList,
+                    className: f.usersList,
                     children: n.slice(0, r).map((e, t) =>
                         (0, i.jsx)(
                             I,
@@ -133,12 +133,12 @@ function T(e) {
                 }),
                 r < n.length
                     ? (0, i.jsx)('div', {
-                          className: N.loadMoreContainer,
+                          className: f.loadMoreContainer,
                           children: (0, i.jsx)(o.P3F, {
                               onClick: () => {
                                   a((e) => e + 5);
                               },
-                              className: N.loadMoreButton,
+                              className: f.loadMoreButton,
                               children: (0, i.jsx)(o.Text, {
                                   variant: 'text-sm/semibold',
                                   color: 'text-normal',

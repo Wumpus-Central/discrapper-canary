@@ -7,7 +7,7 @@ n(192379);
 var r = n(120356),
     a = n.n(r),
     s = n(714338),
-    o = n(358240);
+    o = n(696537);
 function l(e) {
     let { direction: t = 'up' } = e;
     return (0, i.jsx)('svg', {

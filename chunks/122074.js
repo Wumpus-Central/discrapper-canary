@@ -25,7 +25,7 @@ var i = e(200651),
     C = e(921944),
     j = e(871465),
     m = e(388032),
-    T = e(437162);
+    T = e(476017);
 function Z(n, t) {
     let e = x.Y.useExperiment({ location: 'guild_context_menu' }, { autoTrackExposure: !0 }),
         l = U(n, void 0, a.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE, e.nestedEntry ? 'trailing' : 'top'),
@@ -132,7 +132,7 @@ function U(n, t, a, Z) {
             n !== v.aIL
                 ? () =>
                       (0, s.ZDy)(async () => {
-                          let { default: t } = await Promise.all([e.e('5863'), e.e('41901')]).then(e.bind(e, 751212));
+                          let { default: t } = await Promise.all([e.e('5863'), e.e('66900')]).then(e.bind(e, 751212));
                           return (e) =>
                               (0, i.jsx)(t, {
                                   ...e,

@@ -25,7 +25,7 @@ var l = n(200651),
     I = n(973051),
     E = n(981631),
     T = n(388032),
-    D = n(130748);
+    D = n(577692);
 function w(e) {
     let { guildId: t } = e,
         { ref: n, width: i, height: w } = (0, m.Z)(),

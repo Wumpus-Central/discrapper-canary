@@ -8,7 +8,7 @@ var l = n(120356),
     o = n(706140),
     c = n(325767),
     d = n(823188),
-    u = n(461739);
+    u = n(822047);
 let h = 'premium_tier_gradient',
     m = 'smaller_sparkle_gradient';
 function p(e) {

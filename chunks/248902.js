@@ -5,7 +5,7 @@ var i = n(481060),
     s = n(507453),
     r = n(48550),
     o = n(388032),
-    a = n(668216);
+    a = n(436441);
 function d(e) {
     let { mfaChallenge: t, setSlide: n, onClose: d } = e;
     return (0, l.jsxs)(l.Fragment, {
