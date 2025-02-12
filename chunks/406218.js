@@ -5,10 +5,11 @@ t.d(n, {
     t(47120);
 var l = t(345074),
     i = t(339085),
-    a = t(633302),
-    r = t(823379);
+    r = t(633302),
+    a = t(823379);
 let o = { label: '' };
 function s(e) {
+    var n;
     return {
         id: e.id,
         name: e.name,
@@ -21,28 +22,28 @@ function s(e) {
         traits: (function (e, n) {
             let t = Array(l.Sn).fill(o);
             for (let o of n) {
-                var r;
+                var a;
                 !(o.position < 0) &&
                     !(o.position >= l.Sn) &&
                     (t[o.position] = {
                         label: o.label,
                         emoji:
                             null !==
-                                (r = (function (e) {
+                                (a = (function (e) {
                                     let { guildId: n, emojiId: t, emojiName: l } = e,
-                                        r = i.De.get(n);
-                                    return null == t && null == l ? null : null != t ? (null != r ? r.getById(t) : null) : null != l ? a.ZP.getByName(l) : null;
+                                        a = i.De.get(n);
+                                    return null == t && null == l ? null : null != t ? (null != a ? a.getById(t) : null) : null != l ? r.ZP.getByName(l) : null;
                                 })({
                                     guildId: e,
                                     emojiId: o.emoji_id,
                                     emojiName: o.emoji_name
-                                })) && void 0 !== r
-                                ? r
+                                })) && void 0 !== a
+                                ? a
                                 : void 0
                     });
             }
             return t;
-        })(e.id, e.traits)
+        })(e.id, null !== (n = e.traits) && void 0 !== n ? n : [])
     };
 }
 function c(e) {
@@ -67,7 +68,7 @@ function c(e) {
                               emoji_animated: null === (i = e.emoji) || void 0 === i ? void 0 : i.animated
                           };
                 })
-                .filter(r.lm)),
+                .filter(a.lm)),
         n
     );
 }

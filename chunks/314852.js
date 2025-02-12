@@ -21,7 +21,8 @@ let o = new Map(),
         lastSyncTimestamp: null,
         isFetching: !1,
         isUpdating: !1,
-        error: null
+        error: null,
+        errorCode: null
     };
 function u(e) {
     let { guildId: t } = e,
@@ -53,16 +54,18 @@ function c(e) {
           });
 }
 function d(e) {
-    let { guildId: t, error: n } = e,
-        i = o.get(t);
-    null == i
+    let { guildId: t, error: n, errorCode: i } = e,
+        r = o.get(t);
+    null == r
         ? o.set(t, {
               ...l,
-              error: n
+              error: n,
+              errorCode: i
           })
         : o.set(t, {
-              ...i,
+              ...r,
               error: n,
+              errorCode: i,
               isFetching: !1
           });
 }
@@ -94,16 +97,18 @@ function _(e) {
           });
 }
 function p(e) {
-    let { guildId: t, error: n } = e,
-        i = o.get(t);
-    null == i
+    let { guildId: t, error: n, errorCode: i } = e,
+        r = o.get(t);
+    null == r
         ? o.set(t, {
               ...l,
-              error: n
+              error: n,
+              errorCode: i
           })
         : o.set(t, {
-              ...i,
+              ...r,
               error: n,
+              errorCode: i,
               isUpdating: !1
           });
 }
@@ -123,6 +128,10 @@ class h extends (i = r.ZP.Store) {
     getIsUpdating(e) {
         var t, n;
         return null != e && null !== (n = null === (t = o.get(e)) || void 0 === t ? void 0 : t.isUpdating) && void 0 !== n && n;
+    }
+    getErrorCode(e) {
+        var t, n;
+        return null == e ? null : null !== (n = null === (t = o.get(e)) || void 0 === t ? void 0 : t.errorCode) && void 0 !== n ? n : null;
     }
 }
 s(h, 'displayName', 'GuildProfileStore');
