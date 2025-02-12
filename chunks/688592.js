@@ -1,10 +1,21 @@
-e.exports = {
-    closeButton: 'closeButton__915cb',
-    content: 'content__915cb',
-    header: 'header__915cb',
-    warning: 'warning__915cb',
-    action: 'action__915cb',
-    formHeader: 'formHeader__915cb',
-    actionDescription: 'actionDescription__915cb',
-    resetButton: 'resetButton__915cb'
+var i = {
+    sliderContainer: 'sliderContainer__14ad3',
+    slider: 'slider__14ad3',
+    betaBadge: 'betaBadge__14ad3',
+    infoContainer: 'infoContainer__14ad3',
+    infoTooltip: 'infoTooltip__14ad3',
+    infoNitroContainer: 'infoNitroContainer__14ad3',
+    infoNitroBackground: 'infoNitroBackground__14ad3',
+    infoNitroTextContainer: 'infoNitroTextContainer__14ad3',
+    infoNitroIcon: 'infoNitroIcon__14ad3',
+    infoNitroText: 'infoNitroText__14ad3',
+    infoNitroBadge: 'infoNitroBadge__14ad3',
+    infoSoundContainer: 'infoSoundContainer__14ad3',
+    infoSoundInnerContainer: 'infoSoundInnerContainer__14ad3',
+    infoSoundIcon: 'infoSoundIcon__14ad3',
+    infoExpandedSoundContainer: 'infoExpandedSoundContainer__14ad3',
+    infoExpandedGuildContainer: 'infoExpandedGuildContainer__14ad3',
+    infoExpandedGuildInfo: 'infoExpandedGuildInfo__14ad3',
+    infoExpandedGuildTitle: 'infoExpandedGuildTitle__14ad3'
 };
+e.exports = i;
