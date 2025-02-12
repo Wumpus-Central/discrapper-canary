@@ -6,7 +6,7 @@ var r = n(120356),
     s = n(873546),
     o = n(481060),
     l = n(388032),
-    u = n(657775),
+    u = n(25601),
     c = (function (e) {
         return (e.DEFAULT = ''), (e.BOLD = 'Bold'), (e.SOLID = 'Solid'), e;
     })(c || {});

@@ -54,7 +54,7 @@ var t = l(200651),
     en = l(921944),
     el = l(761274),
     et = l(388032),
-    ei = l(760416);
+    ei = l(323499);
 let es = (e) => {
     let { visibleContent: n, markAsDismissed: l } = e;
     return n === d.z.GO_LIVE_SYSTEM_PICKER_COACHMARK
@@ -127,8 +127,8 @@ function ea(e) {
         [eQ, e$] = i.useState(null !== (o = k.I0.getSetting()) && void 0 !== o && o),
         [e0, e1] = i.useState(null != er ? er : null),
         e3 = null !== (R = null == eZ ? void 0 : eZ.id) && void 0 !== R ? R : ey,
-        [e2, e7] = i.useState(ek ? '' : void 0);
-    async function e4() {
+        [e2, e4] = i.useState(ek ? '' : void 0);
+    async function e9() {
         var e, n;
         a()(null != ev || null != eG || (null != eS && null != eC), 'got nothing to stream');
         let l = null !== (e = null == eZ ? void 0 : eZ.id) && void 0 !== e ? e : ey;
@@ -171,8 +171,8 @@ function ea(e) {
                         });
                 })();
     }
-    function e5() {
-        e4(), eu();
+    function e7() {
+        e9(), eu();
     }
     i.useEffect(() => {
         let e = (0, U.isWindows)() ? (0, B.Z)(E.ZP, z.Z) : null,
@@ -186,7 +186,7 @@ function ea(e) {
         }),
             I.Z.trackExposure({ location: 'GoLiveModal' });
     }, [eo]);
-    let e9 = i.useCallback(
+    let e5 = i.useCallback(
             (e, n, l) => {
                 var t;
                 let i = (0, V.Z)(e, eN, eT),
@@ -203,14 +203,14 @@ function ea(e) {
             },
             [eZ, ey, eN, eT, eY, eB, eF]
         ),
-        e6 = i.useCallback(
+        e8 = i.useCallback(
             (e) => {
                 (0, F.t)(), (0, F.T)(null != e ? e : e2);
             },
             [e2]
         );
-    function e8(e) {
-        if ((e.preventDefault(), 1 === eL)) return e6();
+    function e6(e) {
+        if ((e.preventDefault(), 1 === eL)) return e8();
         if (2 === eL) return eD(3);
         if (null != e2) return eD(1);
         let n = (0, K.Z)(ev, eG, E.ZP.getRunningGames());
@@ -223,16 +223,16 @@ function ea(e) {
                       return (l) =>
                           (0, t.jsx)(e, {
                               ...l,
-                              handleStream: e5,
+                              handleStream: e7,
                               pid: n
                           });
                   });
               })()
-            : e5();
+            : e7();
     }
     let ne = i.useCallback(
             (e) => {
-                eO(e), null != e && (eR && (null == e ? void 0 : e.id.startsWith('camera:')) !== !0 ? e7(e.id.split(':')[1]) : e7(void 0), eD(3), ew(!0));
+                eO(e), null != e && (eR && (null == e ? void 0 : e.id.startsWith('camera:')) !== !0 ? e4(e.id.split(':')[1]) : e4(void 0), eD(3), ew(!0));
             },
             [eR]
         ),
@@ -345,9 +345,9 @@ function ea(e) {
                                 previewDisabled: eQ,
                                 sourceChanged: ez,
                                 selectSource: ea,
-                                onChangeSelectedFPS: (e) => e9(eF, eB, e),
-                                onChangeSelectedResolution: (e) => e9(eF, e, eY),
-                                onChangeSelectedPreset: (e) => e9(e, eB, eY),
+                                onChangeSelectedFPS: (e) => e5(eF, eB, e),
+                                onChangeSelectedResolution: (e) => e5(eF, e, eY),
+                                onChangeSelectedPreset: (e) => e5(e, eB, eY),
                                 onChangeSelectedChannelId: eU,
                                 onChangeSelectedSource: ne,
                                 onChangeSource: () => ns(),
@@ -367,7 +367,7 @@ function ea(e) {
                         children: (0, t.jsx)('div', {
                             className: ei.modalSize,
                             children: (0, t.jsx)(H.Hu, {
-                                onSourceSelect: e5,
+                                onSourceSelect: e7,
                                 onCancel: no,
                                 pickerType: e2
                             })
@@ -429,7 +429,7 @@ function ea(e) {
                         }),
                     children: () =>
                         (0, t.jsxs)('form', {
-                            onSubmit: e8,
+                            onSubmit: e6,
                             children: [ni, nu, nd]
                         })
                 })

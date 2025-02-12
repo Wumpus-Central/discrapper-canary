@@ -30,7 +30,7 @@ var l = t(200651),
     D = t(308083),
     O = t(372897),
     G = t(388032),
-    A = t(671351);
+    A = t(335322);
 function Z(e) {
     let { title: n, emojiId: t, emojiName: i, icon: s, completed: a, Icon: d, onClick: c, ...u } = e,
         m = 'channel' === u.variant ? u.channelId : null,

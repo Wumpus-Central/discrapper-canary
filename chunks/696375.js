@@ -3,7 +3,7 @@ var i = t(200651);
 t(192379);
 var s = t(481060),
     l = t(259580),
-    a = t(766142);
+    a = t(110844);
 function r(e) {
     let { url: n, text: t, onClick: r } = e;
     return (0, i.jsx)(s.eee, {

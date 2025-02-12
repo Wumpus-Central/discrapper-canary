@@ -10,7 +10,7 @@ var a = i(120356),
     o = i(259674),
     u = i(981631),
     m = i(388032),
-    g = i(964343);
+    g = i(184330);
 let x = (e) => {
     var t;
     let { guild: i, headerId: a } = e,

@@ -8,7 +8,7 @@ var i = n(200651),
     c = n(53281),
     d = n(451593),
     u = n(694539),
-    h = n(396386);
+    h = n(336600);
 let m = (e) => {
         var t, n, s;
         let { effect: l, onClick: a } = e,

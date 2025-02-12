@@ -18,7 +18,7 @@ var a,
     _ = n(695346),
     h = n(572004),
     f = n(388032),
-    C = n(750340),
+    C = n(352271),
     E = (((a = E || {})[(a.SMALL = 0)] = 'SMALL'), (a[(a.MEDIUM = 1)] = 'MEDIUM'), a);
 function v(e) {
     let { tag: t, size: a = 1, disabled: s, className: E, onClick: v, onRemove: y, selected: x, ariaLabel: T } = e,

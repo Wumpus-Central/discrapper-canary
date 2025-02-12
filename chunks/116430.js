@@ -1,8 +1,8 @@
 a.d(e, { X: () => l });
 var r = a(622916),
     n = a(899517),
-    o = a(910731),
-    _ = a(954211),
+    _ = a(910731),
+    o = a(954211),
     i = a(394798),
     c = a(886115),
     s = a(263449),
@@ -13,12 +13,12 @@ let l = (0, a(151122)._I)((t = {}) => {
         name: 'CaptureConsole',
         setup(t) {
             'console' in n.n &&
-                (0, o.e)(({ args: a, level: r }) => {
+                (0, _.e)(({ args: a, level: r }) => {
                     (0, s.s3)() === t &&
                         e.includes(r) &&
                         !(function (t, e) {
                             let a = {
-                                level: (0, _.V)(e),
+                                level: (0, o.V)(e),
                                 extra: { arguments: t }
                             };
                             (0, s.$e)((r) => {
@@ -46,8 +46,8 @@ let l = (0, a(151122)._I)((t = {}) => {
                                     (0, E.Tb)(n, a);
                                     return;
                                 }
-                                let o = (0, c.nK)(t, ' ');
-                                (0, E.uT)(o, a);
+                                let _ = (0, c.nK)(t, ' ');
+                                (0, E.uT)(_, a);
                             });
                         })(a, r);
                 });

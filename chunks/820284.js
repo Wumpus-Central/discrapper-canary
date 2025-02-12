@@ -1,8 +1,8 @@
-a.d(e, { G: () => _ });
+a.d(e, { G: () => o });
 var r = a(572299),
     n = a(263449),
-    o = a(233517);
-let _ = function () {
+    _ = a(233517);
+let o = function () {
     return {
         bindClient(t) {
             (0, n.nZ)().setClient(t);
@@ -13,22 +13,22 @@ let _ = function () {
         getIsolationScope: n.aF,
         captureException: (t, e) => (0, n.nZ)().captureException(t, e),
         captureMessage: (t, e, a) => (0, n.nZ)().captureMessage(t, e, a),
-        captureEvent: o.eN,
+        captureEvent: _.eN,
         addBreadcrumb: r.n,
-        setUser: o.av,
-        setTags: o.mG,
-        setTag: o.YA,
-        setExtra: o.sU,
-        setExtras: o.rJ,
-        setContext: o.v,
+        setUser: _.av,
+        setTags: _.mG,
+        setTag: _.YA,
+        setExtra: _.sU,
+        setExtras: _.rJ,
+        setContext: _.v,
         getIntegration(t) {
             let e = (0, n.s3)();
             return (e && e.getIntegrationByName(t.id)) || null;
         },
-        startSession: o.yj,
-        endSession: o.TM,
+        startSession: _.yj,
+        endSession: _.TM,
         captureSession(t) {
-            if (t) return (0, o.TM)();
+            if (t) return (0, _.TM)();
             !(function () {
                 let t = (0, n.nZ)(),
                     e = (0, n.s3)(),

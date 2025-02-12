@@ -1,7 +1,7 @@
 var r,
     n,
-    o,
-    _ = a(197047),
+    _,
+    o = a(197047),
     i = a(161581),
     c = a(622281),
     s = a(251069),
@@ -12,7 +12,7 @@ var r,
     R = 'Object already initialized',
     d = i.TypeError,
     A = i.WeakMap;
-if (_ || l.state) {
+if (o || l.state) {
     var f = l.state || (l.state = new A());
     (f.get = f.get),
         (f.has = f.has),
@@ -24,7 +24,7 @@ if (_ || l.state) {
         (n = function (t) {
             return f.get(t) || {};
         }),
-        (o = function (t) {
+        (_ = function (t) {
             return f.has(t);
         });
 } else {
@@ -37,16 +37,16 @@ if (_ || l.state) {
         (n = function (t) {
             return E(t, p) ? t[p] : {};
         }),
-        (o = function (t) {
+        (_ = function (t) {
             return E(t, p);
         });
 }
 t.exports = {
     set: r,
     get: n,
-    has: o,
+    has: _,
     enforce: function (t) {
-        return o(t) ? n(t) : r(t, {});
+        return _(t) ? n(t) : r(t, {});
     },
     getterFor: function (t) {
         return function (e) {

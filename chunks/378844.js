@@ -16,7 +16,7 @@ var r = n(442837),
     p = n(981631),
     m = n(815660),
     g = n(388032),
-    f = n(199006),
+    f = n(910084),
     _ = (((i = {})[(i.VOICE = 0)] = 'VOICE'), i);
 let v = (e) => {
     let { type: t, guildId: i, closePopout: _ } = e,
@@ -60,7 +60,7 @@ let v = (e) => {
                                                     : Z
                                                       ? (0, a.ZDy)(
                                                             async () => {
-                                                                let { default: e } = await Promise.all([n.e('76540'), n.e('53734')]).then(n.bind(n, 607018));
+                                                                let { default: e } = await Promise.all([n.e('76540'), n.e('86920')]).then(n.bind(n, 607018));
                                                                 return (t) =>
                                                                     (0, l.jsx)(e, {
                                                                         reason: d.L.GUILD_PHONE_REQUIRED,

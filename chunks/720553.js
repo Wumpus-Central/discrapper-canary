@@ -5,7 +5,7 @@ var a = n(481060),
     i = n(313201),
     r = n(988158),
     o = n(388032),
-    s = n(407945);
+    s = n(767307);
 function c(t) {
     let { url: e, trustUrl: n, isProtocol: c, onConfirm: x, onCancel: d, onClose: h, transitionState: m } = t,
         u = (0, i.Dt)(),

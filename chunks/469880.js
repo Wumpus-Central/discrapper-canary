@@ -6,7 +6,7 @@ var i = n(200651),
     s = n(680298),
     o = n(289465),
     d = n(388032),
-    c = n(84417);
+    c = n(53940);
 function u(e) {
     let { applicationIcon: t, applicationName: n, canNavigate: u, guildId: m } = e,
         { results: h, query: x, setQuery: g, unfilteredCount: p } = (0, r.O)(),

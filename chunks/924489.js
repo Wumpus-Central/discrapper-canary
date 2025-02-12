@@ -16,7 +16,7 @@ var i,
     h = n(768581),
     p = n(624138),
     g = n(388032),
-    _ = n(380632),
+    _ = n(694987),
     x = (((i = {})[(i.SMALL = (0, p.Mg)(c.Z.GUILD_COUNT_SMALL_ICON_SIZE))] = 'SMALL'), (i[(i.LARGE = (0, p.Mg)(c.Z.GUILD_COUNT_LARGE_ICON_SIZE))] = 'LARGE'), i);
 let C = {
         [x.SMALL]: _.moreGuildsSmall,

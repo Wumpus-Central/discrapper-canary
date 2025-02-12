@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N });
+n.d(t, { Z: () => f });
 var i = n(200651),
     s = n(192379),
     l = n(120356),
@@ -16,8 +16,8 @@ var i = n(200651),
     p = n(78839),
     E = n(783739),
     C = n(981631),
-    f = n(749470);
-function N() {
+    N = n(638164);
+function f() {
     s.useEffect(() => {
         c.Z.wait(() => {
             d.jg(), d.tZ(), (0, u.X8)(), (0, h.Y2)(null, null, C.JjL.DISCOVERY), (0, u.tH)(!0);
@@ -29,20 +29,20 @@ function N() {
         })),
         n = (0, m.V)(),
         l = (0, a.e7)([_.Z], () => _.Z.hasFetchedPaymentSources),
-        N = (0, a.e7)([x.Z], () => x.Z.isFetchingCurrentUserAppliedBoosts);
-    return ((0, g.JR)(), e && n && l && !N)
+        f = (0, a.e7)([x.Z], () => x.Z.isFetchingCurrentUserAppliedBoosts);
+    return ((0, g.JR)(), e && n && l && !f)
         ? (0, i.jsxs)('div', {
-              className: f.container,
+              className: N.container,
               children: [
-                  (0, i.jsx)('div', { className: f.background }),
+                  (0, i.jsx)('div', { className: N.background }),
                   (0, i.jsx)('div', {
-                      className: f.content,
+                      className: N.content,
                       children: (0, i.jsx)(E.Z, { premiumSubscription: t })
                   })
               ]
           })
         : (0, i.jsx)('div', {
-              className: r()(f.container, f.loading),
+              className: r()(N.container, N.loading),
               children: (0, i.jsx)(o.$jN, {})
           });
 }

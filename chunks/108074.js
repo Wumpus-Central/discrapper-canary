@@ -1,8 +1,8 @@
 a.d(e, { W: () => i });
 var r = a(617726),
     n = a(967752),
-    o = a(510529);
-function _(t, e) {
+    _ = a(510529);
+function o(t, e) {
     let a;
     return (0, r.gv)(t, (t, r) => (e.includes(r) && (a = Array.isArray(t) ? t[1] : void 0), !!a)), a;
 }
@@ -16,14 +16,14 @@ function i(t, e) {
             if (!s) {
                 let E = (0, n.U4)(e);
                 if (!E) return;
-                let l = (0, o.U)(E, a.tunnel);
+                let l = (0, _.U)(E, a.tunnel);
                 (s = r
                     ? ((e) => {
                           let a = t(e);
                           return {
                               ...a,
                               send: async (t) => {
-                                  let e = _(t, ['event', 'transaction', 'profile', 'replay_event']);
+                                  let e = o(t, ['event', 'transaction', 'profile', 'replay_event']);
                                   return e && (e.release = r), a.send(t);
                               }
                           };
@@ -44,7 +44,7 @@ function i(t, e) {
                 let a = e({
                         envelope: t,
                         getEvent: function (e) {
-                            return _(t, e && e.length ? e : ['event']);
+                            return o(t, e && e.length ? e : ['event']);
                         }
                     })
                         .map((t) => ('string' == typeof t ? s(t, void 0) : s(t.dsn, t.release)))

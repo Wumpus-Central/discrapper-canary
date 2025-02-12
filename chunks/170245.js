@@ -8,7 +8,7 @@ var l = n(120356),
     o = n(700582),
     c = n(699516);
 n(51144);
-var d = n(424609);
+var d = n(922358);
 let u = function (e) {
     let { user: t, hovered: n, subText: l, showAccountIdentifier: u, status: h, isMobile: m, className: p } = e,
         g = (0, a.e7)([c.Z], () => c.Z.getNickname(t.id));

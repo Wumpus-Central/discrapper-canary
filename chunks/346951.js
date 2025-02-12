@@ -5,7 +5,7 @@ var i = n(200651),
     r = n(707558),
     a = n(577720),
     o = n(388032),
-    c = n(92201);
+    c = n(570853);
 let d = () => [
     {
         icon: c.perkNewsletter,

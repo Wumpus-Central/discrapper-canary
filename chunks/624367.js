@@ -21,7 +21,7 @@ var l = n(373793),
     E = n(147865),
     I = n(778569),
     N = n(388032),
-    S = n(944308);
+    S = n(220787);
 let T = (0, C.Mg)(r.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
 function b(e) {
     var t, n, r, C;

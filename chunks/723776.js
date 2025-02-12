@@ -7,7 +7,7 @@ var l = t(200651),
     s = t(727637),
     c = t(607070),
     d = t(176354),
-    u = t(514445);
+    u = t(300694);
 function m(e) {
     let { emoji: n, shouldAnimate: t } = e;
     if (null == n) return null;

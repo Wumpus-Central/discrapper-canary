@@ -19,7 +19,7 @@ var i = n(200651),
     v = n(592286),
     N = n(981631),
     j = n(388032),
-    I = n(715530);
+    I = n(765622);
 let E = 'RULE';
 function b(e) {
     let { rule: t, rulesChannel: n, index: l, onChange: a, onKeyDown: o, onClear: u, onRuleReorder: p, isDropHovered: _, focused: C, onFocus: f, previewEnabled: N, isDragEnabled: b } = e,

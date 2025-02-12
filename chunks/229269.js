@@ -13,8 +13,8 @@ var i = n(200651),
     g = n(439021),
     x = n(450272),
     _ = n(388032),
-    p = n(188206),
-    E = n(968138);
+    p = n(50734),
+    E = n(174913);
 function C() {
     return (0, i.jsx)(h.PaymentContextProvider, {
         stepConfigs: [],
@@ -28,14 +28,14 @@ function C() {
                     className: p.labelSpacing,
                     children: 'Payment-method-specific components and views may not appear for you unless your browser is supported for that payment method and they have been configured on your browser.'
                 }),
-                (0, i.jsx)(f, {}),
+                (0, i.jsx)(N, {}),
                 (0, i.jsx)(j, {}),
                 (0, i.jsx)(P, {})
             ]
         })
     });
 }
-function f() {
+function N() {
     return (0, i.jsxs)(x.$0, {
         children: [
             (0, i.jsx)(o.X6q, {
@@ -44,11 +44,11 @@ function f() {
             }),
             (0, i.jsx)(x.E_, {
                 label: 'Google Pay - Default View',
-                children: (0, i.jsx)(N, { paymentRequestWallet: 'googlePay' })
+                children: (0, i.jsx)(f, { paymentRequestWallet: 'googlePay' })
             }),
             (0, i.jsx)(x.E_, {
                 label: 'Google Pay - Connector View',
-                children: (0, i.jsx)(N, {
+                children: (0, i.jsx)(f, {
                     paymentRequestWallet: 'googlePay',
                     renderConnectorView: !0
                 })
@@ -63,11 +63,11 @@ function f() {
             }),
             (0, i.jsx)(x.E_, {
                 label: 'Apple Pay - Default View',
-                children: (0, i.jsx)(N, { paymentRequestWallet: 'applePay' })
+                children: (0, i.jsx)(f, { paymentRequestWallet: 'applePay' })
             }),
             (0, i.jsx)(x.E_, {
                 label: 'Apple Pay - Connector View',
-                children: (0, i.jsx)(N, {
+                children: (0, i.jsx)(f, {
                     renderConnectorView: !0,
                     paymentRequestWallet: 'applePay'
                 })
@@ -79,7 +79,7 @@ function f() {
         ]
     });
 }
-function N(e) {
+function f(e) {
     let t = s.useRef(null),
         n = {
             paymentLabel: _.intl.string(_.t.ZURqX1),
@@ -144,7 +144,7 @@ function T(e) {
             onPrimary: () => a(),
             onBack: () => {}
         }),
-        children: (0, i.jsx)(N, {
+        children: (0, i.jsx)(f, {
             renderConnectorView: !0,
             renderStepBody: !0,
             paymentRequestWallet: t,

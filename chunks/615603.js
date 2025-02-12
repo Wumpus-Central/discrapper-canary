@@ -16,8 +16,8 @@ var i = n(200651),
     p = n(98278),
     E = n(314684),
     C = n(594174),
-    f = n(78839),
-    N = n(267642),
+    N = n(78839),
+    f = n(267642),
     I = n(63063),
     T = n(74538),
     S = n(283029),
@@ -27,11 +27,11 @@ var i = n(200651),
     A = n(474936),
     O = n(735825),
     R = n(388032),
-    D = n(957126);
+    D = n(553065);
 function P(e) {
     let { guildBoostSlot: t, isCancellable: n, onCancel: l, onUncancel: r, premiumSubscription: a, useReducedMotion: o, fractionalPremiumState: d } = e,
         u = s.useMemo(() => (null != t.cooldownEndsAt ? new Date(t.cooldownEndsAt) : null), [t]),
-        m = (0, N.tl)(t),
+        m = (0, f.tl)(t),
         g = (null == a ? void 0 : a.isPaused) === !0 || d !== A.a$.NONE,
         x = d !== A.a$.NONE ? R.intl.format(R.t.hshta2, { helpCenterLink: I.Z.getArticleURL(b.BhN.FRACTIONAL_PREMIUM_ABOUT) }) : R.intl.string(R.t.mOWsFx);
     return (0, i.jsxs)(
@@ -130,7 +130,7 @@ function Z(e) {
 let L = function (e) {
     let t, n;
     let { guildBoostSlots: l, fractionalPremiumState: x } = e,
-        _ = (0, o.e7)([f.ZP], () => f.ZP.getPremiumTypeSubscription()),
+        _ = (0, o.e7)([N.ZP], () => N.ZP.getPremiumTypeSubscription()),
         j = (null == _ ? void 0 : _.isPausedOrPausePending) === !0,
         { fractionalState: v } = (0, u.Z)(),
         L = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
@@ -153,7 +153,7 @@ let L = function (e) {
                 s = !0;
             return (
                 l.forEach((l) => {
-                    !(0, N.tl)(l) && n++, l.isOnCooldown() ? (i = !0) : (s = !1), null != l.premiumGuildSubscription ? e.push(l) : t.push(l);
+                    !(0, f.tl)(l) && n++, l.isOnCooldown() ? (i = !0) : (s = !1), null != l.premiumGuildSubscription ? e.push(l) : t.push(l);
                 }),
                 {
                     appliedGuildBoostSlots: e,

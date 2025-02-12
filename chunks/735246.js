@@ -6,7 +6,7 @@ var i = n(200651),
     o = n(406128),
     l = n(706454),
     u = n(388032),
-    c = n(534773);
+    c = n(25294);
 function d(e) {
     let { children: t } = e,
         n = (0, a.e7)([l.default], () => l.default.locale),

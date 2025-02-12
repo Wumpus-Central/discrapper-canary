@@ -41,7 +41,7 @@ var l = n(200651),
     L = n(354459),
     F = n(65154),
     U = n(388032),
-    z = n(838187);
+    z = n(707945);
 let V = new h.Z('StreamTile');
 function W(e) {
     let { participant: t, selected: n, focused: r, idle: a, width: o, premiumIndicator: u } = e,

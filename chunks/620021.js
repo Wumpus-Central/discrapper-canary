@@ -17,7 +17,7 @@ var i = e(200651),
     h = e(51144),
     _ = e(981631),
     C = e(388032),
-    E = e(31939);
+    E = e(22704);
 function p(l) {
     let { disabled: n = !1, user: e, setNickname: r, nickname: s, error: o, hasNick: u } = l,
         c = t.useRef(null),

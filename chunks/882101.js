@@ -13,7 +13,7 @@ var l = n(481060),
     o = n(290348),
     c = n(367719),
     d = n(388032),
-    u = n(706434);
+    u = n(11473);
 let m = (e) => {
     let { listingName: t } = e;
     return (0, i.jsx)(l.X6q, {

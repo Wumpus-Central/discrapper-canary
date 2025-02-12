@@ -5,7 +5,7 @@ var i = n(200651),
     s = n.n(a),
     o = n(568611),
     l = n(481060),
-    u = n(386436);
+    u = n(731860);
 let c = r.forwardRef(function (e, t) {
     var n;
     let { avatar: r, name: a, children: c, subText: d, decorators: f, onClick: _, selected: p, muted: h, to: m, avatarClassName: g, selectedClassName: E, innerClassName: v, wrapContent: y, highlighted: I, focusProps: T, ...b } = e;

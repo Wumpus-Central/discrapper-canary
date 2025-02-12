@@ -16,11 +16,11 @@ var i = n(200651),
     p = n(431369),
     E = n(210887),
     C = n(78839),
-    f = n(74538),
-    N = n(388032),
-    I = n(890890);
+    N = n(74538),
+    f = n(388032),
+    I = n(382967);
 async function T(e, t, n, i) {
-    await (0, u.bG)(n), await (0, d.Mg)(e, { items: (0, f.MY)(e, t) }, i);
+    await (0, u.bG)(n), await (0, d.Mg)(e, { items: (0, N.MY)(e, t) }, i);
 }
 function S(e) {
     let { premiumSubscription: t, guildBoostSlotId: n, onNext: l, onClose: d } = e,
@@ -35,7 +35,7 @@ function S(e) {
                 children: [
                     (0, i.jsx)(c.vwX, {
                         tag: c.RB0.H4,
-                        children: N.intl.string(N.t.l52ih4)
+                        children: f.intl.string(f.t.l52ih4)
                     }),
                     (0, i.jsx)(c.olH, { onClick: d })
                 ]
@@ -48,7 +48,7 @@ function S(e) {
                             className: I.error,
                             children: j
                         }),
-                    N.intl.string(N.t.DY2CXl)
+                    f.intl.string(f.t.DY2CXl)
                 ]
             }),
             (0, i.jsxs)(c.mzw, {
@@ -59,21 +59,21 @@ function S(e) {
                             try {
                                 g(!0), v(null);
                                 let e = (0, p.g)(t, 1);
-                                r()((0, f.uV)(e) <= (0, f.uV)(t.additionalPlans), 'Uncanceling should not increase the number of guild subscriptions'), await T(t, e, n, S), l();
+                                r()((0, N.uV)(e) <= (0, N.uV)(t.additionalPlans), 'Uncanceling should not increase the number of guild subscriptions'), await T(t, e, n, S), l();
                             } catch (t) {
                                 let e = t instanceof h.HF ? t : new h.HF(t, t.code);
-                                v(N.intl.string(e.code === m.SM.BILLING_PAUSE_INVALID_UPDATE ? N.t.dq4vq6 : N.t['5mlOCQ'])), g(!1);
+                                v(f.intl.string(e.code === m.SM.BILLING_PAUSE_INVALID_UPDATE ? f.t.dq4vq6 : f.t['5mlOCQ'])), g(!1);
                             }
                         },
                         submitting: u,
-                        children: N.intl.string(N.t.etZP4O)
+                        children: f.intl.string(f.t.etZP4O)
                     }),
                     (0, i.jsx)(c.zxk, {
                         look: c.zxk.Looks.LINK,
                         color: (0, o.ap)(C) ? c.zxk.Colors.PRIMARY : c.zxk.Colors.WHITE,
                         onClick: d,
                         disabled: u,
-                        children: N.intl.string(N.t.oEAioK)
+                        children: f.intl.string(f.t.oEAioK)
                     })
                 ]
             })
@@ -89,19 +89,19 @@ function j(e) {
                 children: [
                     (0, i.jsx)(c.vwX, {
                         tag: c.RB0.H4,
-                        children: N.intl.string(N.t.H9QUAA)
+                        children: f.intl.string(f.t.H9QUAA)
                     }),
                     (0, i.jsx)(c.olH, { onClick: t })
                 ]
             }),
             (0, i.jsxs)(c.hzk, {
                 className: I.body,
-                children: [(0, i.jsx)('div', { className: I.uncancelImage }), (0, i.jsx)('div', { children: N.intl.string(N.t.G27uHR) })]
+                children: [(0, i.jsx)('div', { className: I.uncancelImage }), (0, i.jsx)('div', { children: f.intl.string(f.t.G27uHR) })]
             }),
             (0, i.jsx)(c.mzw, {
                 children: (0, i.jsx)(c.zxk, {
                     onClick: t,
-                    children: N.intl.string(N.t.BddRzc)
+                    children: f.intl.string(f.t.BddRzc)
                 })
             })
         ]

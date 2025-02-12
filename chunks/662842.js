@@ -32,7 +32,7 @@ var i = n(200651),
     R = n(981631),
     j = n(765305),
     D = n(388032),
-    w = n(364049);
+    w = n(809715);
 function k(e) {
     let { guild: t, isStudyRoomNotice: n = !1 } = e,
         r = (0, E.y)(t.id),

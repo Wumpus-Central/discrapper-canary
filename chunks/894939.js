@@ -16,16 +16,16 @@ var i = n(200651),
     p = n(893663),
     E = n(331642),
     C = n(63063),
-    f = n(581883),
-    N = n(738486),
+    N = n(581883),
+    f = n(738486),
     I = n(918257),
     T = n(970813),
     S = n(726985),
     j = n(981631),
     v = n(710111),
     b = n(388032),
-    A = n(630673),
-    O = n(814632);
+    A = n(904313),
+    O = n(483938);
 function R(e) {
     return (0, a.e7)([x.Z], () => {
         if (null == e) return null;
@@ -62,9 +62,9 @@ function P(e) {
         { analyticsLocations: n } = (0, d.ZP)(),
         [l, c] = s.useState(v.hY),
         m = (0, p.tT)(l),
-        f = R(m),
+        N = R(m),
         I = (null == m ? void 0 : m.type) === p.zx.GLOBAL,
-        T = (0, a.e7)([x.Z], () => x.Z.hasFetchedAllSounds()) && null != m && null == f;
+        T = (0, a.e7)([x.Z], () => x.Z.hasFetchedAllSounds()) && null != m && null == N;
     s.useEffect(() => {
         T && (0, _.tt)({ location: n });
     }, [T, n]),
@@ -107,7 +107,7 @@ function P(e) {
                     forcedDivider: !t,
                     children: [
                         (0, i.jsx)(E.Z, {
-                            sound: f,
+                            sound: N,
                             isGlobal: I,
                             onSelect: (e) => {
                                 null == e ? (0, _.aC)(l, n) : (0, _.SZ)(l, e, n);
@@ -123,13 +123,13 @@ function P(e) {
                 })
             ]
         });
-    return t ? (0, i.jsx)(N.Z, { children: D }) : D;
+    return t ? (0, i.jsx)(f.Z, { children: D }) : D;
 }
 function y(e) {
     let { guildId: t } = e,
-        n = (0, a.e7)([f.Z], () => {
+        n = (0, a.e7)([N.Z], () => {
             var e, n, i;
-            return null === (i = f.Z.settings.guilds) || void 0 === i ? void 0 : null === (n = i.guilds) || void 0 === n ? void 0 : null === (e = n[t]) || void 0 === e ? void 0 : e.joinSound;
+            return null === (i = N.Z.settings.guilds) || void 0 === i ? void 0 : null === (n = i.guilds) || void 0 === n ? void 0 : null === (e = n[t]) || void 0 === e ? void 0 : e.joinSound;
         }),
         s = R(n);
     if (null == n || null == s) return null;

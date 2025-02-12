@@ -50,7 +50,7 @@ var i = n(200651),
     Q = n(675654),
     J = n(474936),
     $ = n(388032),
-    ee = n(865165);
+    ee = n(351163);
 let et = (e) => {
         let { selected: t, ...n } = e,
             r = (0, c.JA)('friends'),

@@ -1,18 +1,18 @@
-n.d(t, { X: () => s }), n(47120);
-var a = n(200651),
-    r = n(192379),
-    l = n(392711);
-let i = (e, t) => (void 0 !== t && t > e ? t : e),
-    o = {
+n.d(t, { X: () => c }), n(47120);
+var i = n(200651),
+    a = n(192379),
+    o = n(392711);
+let r = (e, t) => (void 0 !== t && t > e ? t : e),
+    l = {
         position: 'absolute',
         pointerEvents: 'all'
     };
-function s(e) {
-    let { children: t, className: n, key: s, ...c } = e,
-        { baseStyles: d, offsets: u } = (function (e) {
-            let { key: t, backgroundElementRef: n, getOffsetsRelativeToElement: a, fallbackAbsoluteOffsets: s, onGetBoundingRect: c = () => {}, debounceTime: d = 60, minimumOffsets: u } = e,
-                [h, m] = r.useState(null),
-                x = r.useCallback(() => {
+function c(e) {
+    let { children: t, className: n, key: c, ...s } = e,
+        { baseStyles: _, offsets: d } = (function (e) {
+            let { key: t, backgroundElementRef: n, getOffsetsRelativeToElement: i, fallbackAbsoluteOffsets: c, onGetBoundingRect: s = () => {}, debounceTime: _ = 60, minimumOffsets: d } = e,
+                [u, f] = a.useState(null),
+                p = a.useCallback(() => {
                     let e = n.current;
                     return null === e
                         ? {
@@ -24,55 +24,55 @@ function s(e) {
                               width: e.offsetWidth
                           };
                 }, [n]),
-                _ = r.useCallback(() => {
+                g = a.useCallback(() => {
                     let e = n.current;
-                    if (null === e) return s;
-                    let t = { ...a(x()) },
-                        r = e.getBoundingClientRect();
-                    return void 0 !== t.top && (t.top = i(r.top + t.top, null == u ? void 0 : u.top)), void 0 !== t.left && (t.left = i(r.left + t.left, null == u ? void 0 : u.left)), void 0 !== t.right && (t.right = i(window.innerWidth - r.right + t.right, null == u ? void 0 : u.right)), void 0 !== t.bottom && (t.bottom = i(window.innerHeight - r.bottom + t.bottom, null == u ? void 0 : u.bottom)), (0, l.isEqual)(t, h) || m(t), c(r), t;
-                }, [a, s, h, x, u, n, c]);
-            r.useEffect(() => {
-                _();
-            }, [t, _]);
-            let p = r.useMemo(
+                    if (null === e) return c;
+                    let t = { ...i(p()) },
+                        a = e.getBoundingClientRect();
+                    return void 0 !== t.top && (t.top = r(a.top + t.top, null == d ? void 0 : d.top)), void 0 !== t.left && (t.left = r(a.left + t.left, null == d ? void 0 : d.left)), void 0 !== t.right && (t.right = r(window.innerWidth - a.right + t.right, null == d ? void 0 : d.right)), void 0 !== t.bottom && (t.bottom = r(window.innerHeight - a.bottom + t.bottom, null == d ? void 0 : d.bottom)), (0, o.isEqual)(t, u) || f(t), s(a), t;
+                }, [i, c, u, p, d, n, s]);
+            a.useEffect(() => {
+                g();
+            }, [t, g]);
+            let b = a.useMemo(
                 () =>
-                    (0, l.debounce)(() => {
-                        _();
-                    }, d),
-                [_, d]
+                    (0, o.debounce)(() => {
+                        g();
+                    }, _),
+                [g, _]
             );
             return (
-                r.useEffect(
+                a.useEffect(
                     () => (
-                        window.addEventListener('resize', p),
+                        window.addEventListener('resize', b),
                         () => {
-                            window.removeEventListener('resize', p);
+                            window.removeEventListener('resize', b);
                         }
                     ),
-                    [p]
+                    [b]
                 ),
                 {
-                    offsets: h,
-                    baseStyles: o,
-                    getElementDimensions: x,
-                    updateElementOffsets: _
+                    offsets: u,
+                    baseStyles: l,
+                    getElementDimensions: p,
+                    updateElementOffsets: g
                 }
             );
-        })({ ...c }),
-        h = {
-            ...d,
-            ...u
+        })({ ...s }),
+        u = {
+            ..._,
+            ...d
         };
-    return null === u
+    return null === d
         ? null
-        : (0, a.jsx)(
+        : (0, i.jsx)(
               'div',
               {
-                  style: { ...h },
+                  style: { ...u },
                   className: n,
                   children: t
               },
-              s
+              c
           );
 }
-s.displayName = 'ElementOffsetModalContentWrapper';
+c.displayName = 'ElementOffsetModalContentWrapper';

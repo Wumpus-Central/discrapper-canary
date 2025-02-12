@@ -1,14 +1,14 @@
-n.d(t, { Z: () => o });
-var a = n(570140);
-let o = {
+t.d(n, { Z: () => l });
+var i = t(570140);
+let l = {
     startTyping(e) {
-        a.Z.dispatch({
+        i.Z.dispatch({
             type: 'TYPING_START_LOCAL',
             channelId: e
         });
     },
     stopTyping(e) {
-        a.Z.dispatch({
+        i.Z.dispatch({
             type: 'TYPING_STOP_LOCAL',
             channelId: e
         });

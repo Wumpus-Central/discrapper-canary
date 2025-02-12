@@ -14,7 +14,7 @@ let u = l(a(659738)),
     h = a(26507),
     c = l(a(293808)),
     p = l(a(914486)),
-    f = l(a(755260)),
+    f = l(a(337951)),
     m = a(574276);
 ((i = s = e.ICalEventStatus || (e.ICalEventStatus = {})).CONFIRMED = 'CONFIRMED'),
     (i.TENTATIVE = 'TENTATIVE'),

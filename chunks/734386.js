@@ -28,7 +28,7 @@ var i = n(200651),
     y = n(318374),
     A = n(981631),
     P = n(388032),
-    R = n(600320);
+    R = n(36242);
 function M(e) {
     let { channel: t } = e,
         [n, a] = l.useState(!1),

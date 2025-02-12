@@ -51,7 +51,7 @@ let A = s().throttle(function (e, n) {
                     return (
                         m !== c.Z.getGuildId() && (0, b.K)(m, null === (s = d.ZP.getDefaultChannel(m)) || void 0 === s ? void 0 : s.id),
                         (0, l.ZDy)(async () => {
-                            let { default: e } = await Promise.all([t.e('22347'), t.e('56236'), t.e('14509')]).then(t.bind(t, 17671));
+                            let { default: e } = await Promise.all([t.e('22347'), t.e('56236'), t.e('892')]).then(t.bind(t, 17671));
                             return (n) =>
                                 (0, i.jsx)(e, {
                                     ...n,

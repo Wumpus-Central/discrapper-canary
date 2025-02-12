@@ -5,7 +5,7 @@ var l = n(120356),
     a = n.n(l),
     r = n(481060),
     s = n(626786),
-    o = n(154558);
+    o = n(956476);
 function c(e) {
     let { className: t, roleColor: n, roleName: l, hasRemoveIcon: c = !1, onClick: d, disabled: u = !1, verified: h = !1 } = e;
     return (0, i.jsx)(r.zxk, {

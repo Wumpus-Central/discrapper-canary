@@ -17,7 +17,7 @@ var l = t(120356),
     h = t(315416),
     I = t(765305),
     f = t(388032),
-    E = t(147576);
+    E = t(910398);
 function x(e) {
     let { children: n } = e;
     return (0, i.jsxs)('div', {
@@ -191,7 +191,7 @@ function D(e) {
                       guildId: n.guild_id,
                       onContextMenu: function (e, n) {
                           (0, s.jW)(e, async () => {
-                              let { default: e } = await Promise.all([t.e('79695'), t.e('69220'), t.e('5073')]).then(t.bind(t, 881351));
+                              let { default: e } = await Promise.all([t.e('79695'), t.e('69220'), t.e('34272')]).then(t.bind(t, 881351));
                               return (t) =>
                                   (0, i.jsx)(e, {
                                       ...t,

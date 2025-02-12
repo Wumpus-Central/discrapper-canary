@@ -3,7 +3,7 @@ var l = n(200651),
     i = n(192379),
     r = n(414910),
     a = n(226961),
-    s = n(558699);
+    s = n(372732);
 function o(e) {
     let { currentUserId: t, participant: n } = e,
         o = (0, r.Z)(n.type),

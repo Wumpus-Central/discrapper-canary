@@ -23,7 +23,7 @@ var i = n(200651),
     S = n(666984),
     A = n(670451),
     N = n(228168),
-    C = n(309584);
+    C = n(537208);
 function R(e) {
     let { user: t, currentUser: n, activity: a, className: R, onClose: O } = e,
         { profileType: D } = (0, E.z)(),

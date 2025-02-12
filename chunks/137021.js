@@ -15,7 +15,7 @@ var n = l(200651),
     x = l(823379),
     g = l(207003),
     b = l(388032),
-    _ = l(258454),
+    _ = l(36984),
     y = l(621054);
 function E(e) {
     let { applicationId: t, onClose: l, transitionState: p, message: E, launchParams: Z, onShare: N, ...j } = e,

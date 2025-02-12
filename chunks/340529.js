@@ -19,7 +19,7 @@ var r = n(120356),
     v = n(981631),
     f = n(176505),
     j = n(388032),
-    L = n(756134);
+    L = n(212287);
 function w(e) {
     let { icon: t, title: n, body: r, selected: l, disabled: o = !1, onClick: c, onPreviewDismiss: d, isNew: C = !1 } = e;
     return (0, i.jsxs)(a.kL8, {

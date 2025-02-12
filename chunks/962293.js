@@ -2,7 +2,7 @@ n.d(t, { B: () => s });
 var i = n(200651);
 n(192379);
 var r = n(481060),
-    a = n(570044);
+    a = n(614777);
 function s(e) {
     let { onClick: t } = e;
     return (0, i.jsx)(r.P3F, {

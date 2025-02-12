@@ -1,25 +1,25 @@
 a.d(e, {
     CC: () => i,
-    GY: () => _
+    GY: () => o
 });
 var r = a(899517);
 let n = new Map(),
-    o = new Set();
-function _(t, e) {
+    _ = new Set();
+function o(t, e) {
     try {
         e.exception.values.forEach((e) => {
             if (e.stacktrace)
-                for (let _ of e.stacktrace.frames || []) {
+                for (let o of e.stacktrace.frames || []) {
                     var a;
-                    if (!_.filename || _.module_metadata) continue;
+                    if (!o.filename || o.module_metadata) continue;
                     let e =
-                        ((a = _.filename),
+                        ((a = o.filename),
                         !(function (t) {
                             if (r.n._sentryModuleMetadata)
                                 for (let e of Object.keys(r.n._sentryModuleMetadata)) {
                                     let a = r.n._sentryModuleMetadata[e];
-                                    if (!o.has(e)) {
-                                        for (let r of (o.add(e), t(e).reverse()))
+                                    if (!_.has(e)) {
+                                        for (let r of (_.add(e), t(e).reverse()))
                                             if (r.filename) {
                                                 n.set(r.filename, a);
                                                 break;
@@ -28,7 +28,7 @@ function _(t, e) {
                                 }
                         })(t),
                         n.get(a));
-                    e && (_.module_metadata = e);
+                    e && (o.module_metadata = e);
                 }
         });
     } catch (t) {}

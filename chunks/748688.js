@@ -12,8 +12,8 @@ a.d(e, {
 });
 var r = a(559508),
     n = a(696486),
-    o = a(263449),
-    _ = a(622916),
+    _ = a(263449),
+    o = a(622916),
     i = a(101284),
     c = a(394798),
     s = a(617726),
@@ -66,7 +66,7 @@ let D = new WeakMap(),
 function y() {
     let t = u.m9.Profiler;
     if ('function' != typeof t) {
-        l.X && _.kg.log('[Profiling] Profiling is not supported by this browser, Profiler interface missing on window object.');
+        l.X && o.kg.log('[Profiling] Profiling is not supported by this browser, Profiler interface missing on window object.');
         return;
     }
     let e = Math.floor(m / 10);
@@ -76,20 +76,20 @@ function y() {
             maxBufferSize: e
         });
     } catch (t) {
-        l.X && (_.kg.log("[Profiling] Failed to initialize the Profiling constructor, this is likely due to a missing 'Document-Policy': 'js-profiling' header."), _.kg.log('[Profiling] Disabling profiling for current user session.')), (g = !0);
+        l.X && (o.kg.log("[Profiling] Failed to initialize the Profiling constructor, this is likely due to a missing 'Document-Policy': 'js-profiling' header."), o.kg.log('[Profiling] Disabling profiling for current user session.')), (g = !0);
     }
 }
 function P(t) {
-    if (g) return l.X && _.kg.log('[Profiling] Profiling has been disabled for the duration of the current user session.'), !1;
-    if (!t.isRecording()) return l.X && _.kg.log('[Profiling] Discarding profile because transaction was not sampled.'), !1;
-    let e = (0, o.s3)(),
+    if (g) return l.X && o.kg.log('[Profiling] Profiling has been disabled for the duration of the current user session.'), !1;
+    if (!t.isRecording()) return l.X && o.kg.log('[Profiling] Discarding profile because transaction was not sampled.'), !1;
+    let e = (0, _.s3)(),
         a = e && e.getOptions();
-    if (!a) return l.X && _.kg.log('[Profiling] Profiling disabled, no options found.'), !1;
+    if (!a) return l.X && o.kg.log('[Profiling] Profiling disabled, no options found.'), !1;
     let r = a.profilesSampleRate;
-    return (('number' != typeof r && 'boolean' != typeof r) || ('number' == typeof r && isNaN(r)) ? (l.X && _.kg.warn(`[Profiling] Invalid sample rate. Sample rate must be a boolean or a number between 0 and 1. Got ${JSON.stringify(r)} of type ${JSON.stringify(typeof r)}.`), 1) : !0 !== r && !1 !== r && (r < 0 || r > 1) && (l.X && _.kg.warn(`[Profiling] Invalid sample rate. Sample rate must be between 0 and 1. Got ${r}.`), 1)) ? (l.X && _.kg.warn('[Profiling] Discarding profile because of invalid sample rate.'), !1) : r ? !!(!0 === r || Math.random() < r) || (l.X && _.kg.log(`[Profiling] Discarding profile because it's not included in the random sample (sampling rate = ${Number(r)})`), !1) : (l.X && _.kg.log('[Profiling] Discarding profile because a negative sampling decision was inherited or profileSampleRate is set to 0'), !1);
+    return (('number' != typeof r && 'boolean' != typeof r) || ('number' == typeof r && isNaN(r)) ? (l.X && o.kg.warn(`[Profiling] Invalid sample rate. Sample rate must be a boolean or a number between 0 and 1. Got ${JSON.stringify(r)} of type ${JSON.stringify(typeof r)}.`), 1) : !0 !== r && !1 !== r && (r < 0 || r > 1) && (l.X && o.kg.warn(`[Profiling] Invalid sample rate. Sample rate must be between 0 and 1. Got ${r}.`), 1)) ? (l.X && o.kg.warn('[Profiling] Discarding profile because of invalid sample rate.'), !1) : r ? !!(!0 === r || Math.random() < r) || (l.X && o.kg.log(`[Profiling] Discarding profile because it's not included in the random sample (sampling rate = ${Number(r)})`), !1) : (l.X && o.kg.log('[Profiling] Discarding profile because a negative sampling decision was inherited or profileSampleRate is set to 0'), !1);
 }
 function v(t, e, a, n) {
-    return (a.samples.length < 2 ? (l.X && _.kg.log('[Profiling] Discarding profile because it contains less than 2 samples'), 1) : !a.frames.length && (l.X && _.kg.log('[Profiling] Discarding profile because it contains no frames'), 1))
+    return (a.samples.length < 2 ? (l.X && o.kg.log('[Profiling] Discarding profile because it contains less than 2 samples'), 1) : !a.frames.length && (l.X && o.kg.log('[Profiling] Discarding profile because it contains no frames'), 1))
         ? null
         : (function (t, e, a, n) {
               var s;
@@ -97,7 +97,7 @@ function v(t, e, a, n) {
               if (null == a) throw TypeError(`Cannot construct profiling event envelope without a valid profile. Got ${a} instead.`);
               let N = (function (t) {
                       let e = t && t.contexts && t.contexts.trace && t.contexts.trace.trace_id;
-                      return ('string' == typeof e && 32 !== e.length && l.X && _.kg.log(`[Profiling] Invalid traceId: ${e} on profiled event`), 'string' != typeof e) ? '' : e;
+                      return ('string' == typeof e && 32 !== e.length && l.X && o.kg.log(`[Profiling] Invalid traceId: ${e} on profiled event`), 'string' != typeof e) ? '' : e;
                   })(n),
                   L =
                       'thread_metadata' in (s = a)
@@ -113,15 +113,15 @@ function v(t, e, a, n) {
                                     },
                                     n = t.samples[0];
                                 if (!n) return r;
-                                let o = n.timestamp,
-                                    _ = 'number' == typeof performance.timeOrigin ? performance.timeOrigin : i.Z1 || 0,
-                                    c = _ - (i.Z1 || _);
+                                let _ = n.timestamp,
+                                    o = 'number' == typeof performance.timeOrigin ? performance.timeOrigin : i.Z1 || 0,
+                                    c = o - (i.Z1 || o);
                                 return (
-                                    t.samples.forEach((n, _) => {
+                                    t.samples.forEach((n, o) => {
                                         if (void 0 === n.stackId) {
                                             void 0 === e && ((e = a), (r.stacks[e] = []), a++),
-                                                (r.samples[_] = {
-                                                    elapsed_since_start_ns: ((n.timestamp + c - o) * 1000000).toFixed(0),
+                                                (r.samples[o] = {
+                                                    elapsed_since_start_ns: ((n.timestamp + c - _) * 1000000).toFixed(0),
                                                     stack_id: e,
                                                     thread_id: I
                                                 });
@@ -143,11 +143,11 @@ function v(t, e, a, n) {
                                                 (i = void 0 === i.parentId ? void 0 : t.stacks[i.parentId]);
                                         }
                                         let E = {
-                                            elapsed_since_start_ns: ((n.timestamp + c - o) * 1000000).toFixed(0),
+                                            elapsed_since_start_ns: ((n.timestamp + c - _) * 1000000).toFixed(0),
                                             stack_id: a,
                                             thread_id: I
                                         };
-                                        (r.stacks[a] = s), (r.samples[_] = E), a++;
+                                        (r.stacks[a] = s), (r.samples[o] = E), a++;
                                     }),
                                     r
                                 );
@@ -182,21 +182,21 @@ function v(t, e, a, n) {
                           let e;
                           let a = E.n._sentryDebugIds;
                           if (!a) return [];
-                          let r = (0, o.s3)(),
+                          let r = (0, _.s3)(),
                               n = r && r.getOptions(),
-                              _ = n && n.stackParser;
-                          if (!_) return [];
-                          let i = D.get(_);
-                          i ? (e = i) : ((e = new Map()), D.set(_, e));
+                              o = n && n.stackParser;
+                          if (!o) return [];
+                          let i = D.get(o);
+                          i ? (e = i) : ((e = new Map()), D.set(o, e));
                           let c = Object.keys(a).reduce((t, r) => {
                                   let n;
-                                  let o = e.get(r);
-                                  o ? (n = o) : ((n = _(r)), e.set(r, n));
+                                  let _ = e.get(r);
+                                  _ ? (n = _) : ((n = o(r)), e.set(r, n));
                                   for (let e = n.length - 1; e >= 0; e--) {
-                                      let o = n[e],
-                                          _ = o && o.filename;
-                                      if (o && _) {
-                                          t[_] = a[r];
+                                      let _ = n[e],
+                                          o = _ && _.filename;
+                                      if (_ && o) {
+                                          t[o] = a[r];
                                           break;
                                       }
                                   }

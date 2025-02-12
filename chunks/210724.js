@@ -28,7 +28,7 @@ var r = n(200651),
     N = n(130653),
     S = n(46140),
     y = n(981631),
-    A = n(510943);
+    A = n(577754);
 function B(e) {
     let { isExpanded: t, questId: n } = e;
     return (

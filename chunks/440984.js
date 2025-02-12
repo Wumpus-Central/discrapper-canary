@@ -1,4 +1,4 @@
-n.d(t, { D: () => f }), n(47120);
+n.d(t, { D: () => N }), n(47120);
 var i = n(200651),
     s = n(192379),
     l = n(442837),
@@ -13,11 +13,11 @@ var i = n(200651),
     g = n(798769),
     x = n(474936),
     _ = n(388032),
-    p = n(5459),
+    p = n(804247),
     E = n(982404),
     C = n(299156);
-function f(e) {
-    let { premiumSubscription: t, premiumType: n, onClose: f, confettiCanvas: N, userWasChurned: I = !1, userDiscountOffer: T } = e,
+function N(e) {
+    let { premiumSubscription: t, premiumType: n, onClose: N, confettiCanvas: f, userWasChurned: I = !1, userDiscountOffer: T } = e,
         S = (0, o.ZP)(),
         j = (0, r.wj)(S) ? E : C,
         v = s.useRef(null),
@@ -45,7 +45,7 @@ function f(e) {
             className: p.whatYouLoseButtonContainer,
             children: (0, i.jsx)(a.zxk, {
                 color: a.zxk.Colors.BRAND,
-                onClick: f,
+                onClick: N,
                 children: _.intl.string(_.t['/r8g/v'])
             })
         });
@@ -54,7 +54,7 @@ function f(e) {
             (0, i.jsx)(g.Z, {
                 premiumType: n,
                 className: p.cancellationHeader,
-                onClose: f
+                onClose: N
             }),
             (0, i.jsx)('div', {
                 ref: v,
@@ -92,7 +92,7 @@ function f(e) {
                 b &&
                 (0, i.jsx)(d.Z, {
                     confettiTarget: v.current,
-                    confettiCanvas: N,
+                    confettiCanvas: f,
                     confettiVelocityMultiplier: 0.75
                 })
         ]

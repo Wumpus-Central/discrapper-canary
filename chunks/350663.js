@@ -11,7 +11,7 @@ var i = n(200651),
     d = n(110924),
     c = n(752802),
     u = n(340101),
-    h = n(145396);
+    h = n(625130);
 let _ = 8,
     p = (e) => {
         let { participant: t, width: n, locked: o, widgetId: r, pinned: l } = e;

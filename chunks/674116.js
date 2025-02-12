@@ -16,8 +16,8 @@ var i = n(200651),
     p = n(429789),
     E = n(726763),
     C = n(208113),
-    f = n(894939),
-    N = n(710808),
+    N = n(894939),
+    f = n(710808),
     I = n(625205),
     T = n(325808),
     S = n(823087),
@@ -37,7 +37,7 @@ var i = n(200651),
     M = n(981631),
     V = n(65154),
     w = n(388032),
-    U = n(814632);
+    U = n(483938);
 let G = ''.concat(g.Z.getArticleURL(M.BhN.VOICE_VIDEO_TROUBLESHOOTING), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm');
 function F() {
     let { inputMode: e } = (0, a.cj)([h.Z], () => ({ inputMode: h.Z.getMode() })),
@@ -96,7 +96,7 @@ function F() {
             }),
             (0, i.jsx)(u.F, {
                 setting: B.s6.VOICE_AND_VIDEO_SOUNDS,
-                children: (0, i.jsx)(f.Z, {})
+                children: (0, i.jsx)(N.Z, {})
             }),
             (0, i.jsxs)(u.F, {
                 setting: B.s6.VOICE_AND_VIDEO_VIDEO,
@@ -134,7 +134,7 @@ function F() {
                         (0, i.jsx)(o.$i$, { className: U.marginBottom40 }),
                         (0, i.jsx)(u.F, {
                             setting: B.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
-                            children: (0, i.jsx)(N.Z, {})
+                            children: (0, i.jsx)(f.Z, {})
                         }),
                         (0, i.jsx)(u.F, {
                             setting: B.s6.VOICE_AND_VIDEO_RESET_VOICE_SETTINGS,

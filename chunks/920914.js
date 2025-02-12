@@ -16,8 +16,8 @@ var i = n(200651),
     p = n(410030),
     E = n(726542),
     C = n(122021),
-    f = n(275759),
-    N = n(231757),
+    N = n(275759),
+    f = n(231757),
     I = n(888496),
     T = n(605236),
     S = n(565138),
@@ -37,8 +37,8 @@ var i = n(200651),
     M = n(856651),
     V = n(921944),
     w = n(388032),
-    U = n(18528),
-    G = n(814632);
+    U = n(140991),
+    G = n(483938);
 let F = (e) => {
     var t, n;
     let s,
@@ -260,7 +260,7 @@ function z(e) {
                 var t;
                 let n = null !== (t = e.metadata) && void 0 !== t ? t : {},
                     s = null,
-                    l = (0, f.FI)(n[M.PC.CREATED_AT], g);
+                    l = (0, N.FI)(n[M.PC.CREATED_AT], g);
                 switch (e.type) {
                     case B.ABu.REDDIT:
                         s = (0, I.oP)(n, U.metadataItem);
@@ -391,7 +391,7 @@ function z(e) {
                             n = e ? 1 : 0;
                         if (e && !t) {
                             G(n),
-                                (0, N.Z)({
+                                (0, f.Z)({
                                     platformType: o.type,
                                     location: 'User Settings'
                                 });
@@ -419,7 +419,7 @@ function z(e) {
                                     n = e ? 1 : 0;
                                 if (e && !t) {
                                     P(n),
-                                        (0, N.Z)({
+                                        (0, f.Z)({
                                             platformType: o.type,
                                             location: 'User Settings'
                                         });
@@ -448,7 +448,7 @@ function z(e) {
                           className: U.integrationRevoked,
                           children: w.intl.format(w.t['6C4lgI'], {
                               onReconnect: function () {
-                                  (0, N.Z)({
+                                  (0, f.Z)({
                                       platformType: o.type,
                                       location: 'User Settings'
                                   });
@@ -503,7 +503,7 @@ function Y() {
 }
 function H(e) {
     let t = E.Z.get(e);
-    (0, N.Z)({ platformType: t.type }),
+    (0, f.Z)({ platformType: t.type }),
         R.default.track(B.rMx.ACCOUNT_LINK_STEP, {
             previous_step: 'desktop connections',
             current_step: 'desktop oauth',

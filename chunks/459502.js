@@ -12,7 +12,7 @@ var l = n(442837),
     h = n(854698),
     p = n(688641),
     m = n(388032),
-    f = n(595679);
+    f = n(58317);
 function g(e) {
     let { channelId: t } = e,
         g = (0, l.e7)([o.Z], () => o.Z.getChannel(t), [t]),
@@ -39,7 +39,7 @@ function g(e) {
                           onClick: () => {
                               x(e)
                                   ? (0, r.ZDy)(async () => {
-                                        let { default: t } = await Promise.all([n.e('22347'), n.e('84722'), n.e('97619')]).then(n.bind(n, 296864));
+                                        let { default: t } = await Promise.all([n.e('22347'), n.e('84722'), n.e('19825')]).then(n.bind(n, 296864));
                                         return (n) =>
                                             (0, i.jsx)(t, {
                                                 ...n,

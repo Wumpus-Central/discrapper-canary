@@ -5,7 +5,7 @@ var i = n(200651),
     r = n(481060),
     a = n(259580),
     o = n(991346),
-    c = n(671440);
+    c = n(101896);
 function d(e) {
     let { setting: t, hasChildren: n } = e;
     return (0, i.jsx)(r.Text, {

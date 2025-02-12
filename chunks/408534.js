@@ -18,7 +18,7 @@ var l = n(442837),
     C = n(354459),
     x = n(981631),
     v = n(388032),
-    E = n(362356);
+    E = n(821948);
 function I(e) {
     let { onClose: t, onSelect: n, channel: I } = e,
         b = (0, r.bp)(),

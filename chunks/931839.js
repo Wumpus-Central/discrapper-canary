@@ -9,7 +9,7 @@ var a = s(120356),
     r = s.n(a),
     l = s(481060),
     c = s(388032),
-    d = s(125836),
+    d = s(268242),
     o = (((i = {})[(i.Intro = 0)] = 'Intro'), (i[(i.Customize = 1)] = 'Customize'), (i[(i.Tips = 2)] = 'Tips'), i);
 function m(e) {
     let { selectedTab: t, onClick: s, submitted: i } = e;

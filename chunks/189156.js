@@ -11,7 +11,7 @@ var r = n(481060),
     o = n(502762),
     l = n(292814),
     u = n(388032),
-    c = n(918603);
+    c = n(121225);
 function d(e) {
     return (0, i.jsx)(a.Z, { application: e }, e.id);
 }

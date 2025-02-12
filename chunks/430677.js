@@ -14,7 +14,7 @@ var i = n(200651),
     x = n(430824),
     p = n(768581),
     _ = n(388032),
-    C = n(767837);
+    C = n(73806);
 let f = function (e) {
     var t, l, f, v, N;
     let { guildId: j, action: I, actionIndex: E, onChange: b, onDelete: T, onDragStart: S, onDragComplete: R, onDragReset: Z } = e,

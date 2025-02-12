@@ -4,15 +4,15 @@ a.d(e, {
     Y: () => E
 });
 var n = a(622574);
-let o = 0,
-    _ = 1 / 0,
+let _ = 0,
+    o = 1 / 0,
     i = 0,
     c = (t) => {
         t.forEach((t) => {
-            t.interactionId && ((_ = Math.min(_, t.interactionId)), (o = (i = Math.max(i, t.interactionId)) ? (i - _) / 7 + 1 : 0));
+            t.interactionId && ((o = Math.min(o, t.interactionId)), (_ = (i = Math.max(i, t.interactionId)) ? (i - o) / 7 + 1 : 0));
         });
     },
-    s = () => (r ? o : performance.interactionCount || 0),
+    s = () => (r ? _ : performance.interactionCount || 0),
     E = () => {
         'interactionCount' in performance ||
             r ||

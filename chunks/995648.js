@@ -5,7 +5,7 @@ var n = r(120356),
     a = r.n(n),
     s = r(481060),
     l = r(422559),
-    o = r(197190);
+    o = r(591430);
 function c(e) {
     let { grantedPermissions: t, disabledPermissions: r, grantedPermissionsHeader: n, disabledPermissionsHeader: c, className: d } = e;
     return (0, i.jsxs)('div', {

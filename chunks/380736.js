@@ -18,7 +18,7 @@ var l = n(200651),
     h = n(693091),
     p = n(981631),
     v = n(388032),
-    g = n(103492);
+    g = n(837449);
 function E(e, t, n) {
     return (0, l.jsx)(x, {
         keybind: e,

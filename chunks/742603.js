@@ -34,8 +34,8 @@ var l = n(120356),
     L = n(981631),
     k = n(231338),
     O = n(388032),
-    D = n(27438),
-    w = n(642367);
+    D = n(533171),
+    w = n(663362);
 function U(e) {
     let { focusedParticipant: t, channel: n } = e,
         l = (0, c.bp)(),

@@ -13,21 +13,21 @@ var i = n(200651),
     g = n(914010),
     x = n(727785),
     _ = n(388032),
-    p = n(271982);
+    p = n(664396);
 function E() {}
 let C = [x.h8.VOICE_CHANNEL];
-function f(e) {
+function N(e) {
     e.setOptions({ voiceChannelGuildFilter: null }), e.setLimit(1 / 0);
 }
-function N(e) {
+function f(e) {
     let { height: t } = e;
     return (0, i.jsx)('div', { style: { height: t } });
 }
 function I() {
-    return (0, i.jsx)(N, { height: 16 }, 'footer');
+    return (0, i.jsx)(f, { height: 16 }, 'footer');
 }
 function T() {
-    return (0, i.jsx)(N, { height: 8 }, 'header');
+    return (0, i.jsx)(f, { height: 8 }, 'header');
 }
 function S() {
     return (0, i.jsx)('div', {
@@ -90,7 +90,7 @@ function v(e) {
         c = s.useId(),
         E = s.useRef(null),
         {
-            mouseFocusEnabled: N,
+            mouseFocusEnabled: f,
             enableMouseFocus: j,
             disableMouseFocus: v
         } = (function () {
@@ -114,7 +114,7 @@ function v(e) {
         } = (0, o.Z)({
             visible: !0,
             autocompleterResultTypes: C,
-            autocompleterBeforeCreateSearchContext: f
+            autocompleterBeforeCreateSearchContext: N
         }),
         R = (function (e) {
             let t = '' !== e,
@@ -237,7 +237,7 @@ function v(e) {
                                     channel: s,
                                     category: l,
                                     focused: D === t,
-                                    onMouseEnter: () => N.current && P(t),
+                                    onMouseEnter: () => f.current && P(t),
                                     onClick: () => {
                                         a(s.id), n();
                                     },

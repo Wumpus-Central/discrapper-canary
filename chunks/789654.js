@@ -39,7 +39,7 @@ var a = n(200651),
     p = n(58755),
     f = n(246992),
     b = n(500949),
-    g = n(923432);
+    g = n(532715);
 let { SemanticColors: v } = d.V;
 function j(e) {
     return e.replaceAll(/_|\./g, '-').toLowerCase();

@@ -16,10 +16,10 @@ var i = n(200651),
     p = n(351780),
     E = n(954794),
     C = n(112843),
-    f = n(524484),
-    N = n(981631),
+    N = n(524484),
+    f = n(981631),
     I = n(388032),
-    T = n(523870);
+    T = n(705148);
 let S = {
         enabled: !0,
         combosEnabled: !0,
@@ -32,39 +32,39 @@ let S = {
     A = (0, l.range)(1, 26),
     O = () => [
         {
-            location: f.Hn.CHAT_INPUT,
+            location: N.Hn.CHAT_INPUT,
             title: I.intl.string(I.t.elTty8),
             description: I.intl.string(I.t.HtKfMj)
         },
         {
-            location: f.Hn.REACTION,
+            location: N.Hn.REACTION,
             title: I.intl.string(I.t.Ik4VIS),
             description: I.intl.string(I.t.y4rqKy)
         },
         {
-            location: f.Hn.MEMBER_USER,
+            location: N.Hn.MEMBER_USER,
             title: I.intl.string(I.t.ZXBlAg),
             description: I.intl.string(I.t['m9RD+f'])
         },
         {
-            location: f.Hn.CALL_TILE,
+            location: N.Hn.CALL_TILE,
             title: I.intl.string(I.t.V66giY),
             description: I.intl.string(I.t.fiHV7u)
         }
     ],
     R = () => [
         {
-            location: f.oZ.CHAT_INPUT,
+            location: N.oZ.CHAT_INPUT,
             title: I.intl.string(I.t.vUcvPD),
             description: I.intl.string(I.t.y00OrK)
         },
         {
-            location: f.oZ.VOICE_USER,
+            location: N.oZ.VOICE_USER,
             title: I.intl.string(I.t['TcRO5+']),
             description: I.intl.string(I.t.YJCxVV)
         },
         {
-            location: f.oZ.MENTION,
+            location: N.oZ.MENTION,
             title: I.intl.string(I.t.oW4shI),
             description: I.intl.string(I.t['mqfw/P'])
         }
@@ -391,7 +391,7 @@ function w(e) {
                 var t;
                 n(!0),
                     (0, h.GN)('poggermode_enabled'),
-                    m.S.dispatch(N.CkL.SHAKE_APP, {
+                    m.S.dispatch(f.CkL.SHAKE_APP, {
                         duration: 2000,
                         intensity: null !== (t = e.shakeIntensity) && void 0 !== t ? t : l.shakeIntensity
                     });
@@ -404,7 +404,7 @@ function w(e) {
             let i = u(l.screenshakeEnabled, e.screenshakeEnabled, l.enabled, e.enabled);
             if (1 === t && i) {
                 var s;
-                m.S.dispatch(N.CkL.SHAKE_APP, {
+                m.S.dispatch(f.CkL.SHAKE_APP, {
                     duration: 1000,
                     intensity: null !== (s = e.shakeIntensity) && void 0 !== s ? s : l.shakeIntensity
                 });

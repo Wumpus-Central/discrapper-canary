@@ -10,7 +10,7 @@ var a = c(442837),
     p = c(986398),
     r = c(69589),
     b = c(388032),
-    u = c(125537);
+    u = c(773246);
 function l(t) {
     let { userId: e, leaderboard: c } = t,
         l = (0, a.e7)([n.default], () => n.default.getUser(e));

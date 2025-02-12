@@ -4,7 +4,7 @@ n(192379);
 var r = n(120356),
     a = n.n(r),
     s = n(481060),
-    o = n(95565);
+    o = n(164085);
 function l(e) {
     let { children: t, onClick: n, className: r, tooltip: l } = e;
     return (0, i.jsx)(s.ua7, {

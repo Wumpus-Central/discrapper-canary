@@ -1,8 +1,8 @@
 a.d(e, { j: () => c });
 var r = a(696486),
     n = a(793373),
-    o = a(622916),
-    _ = a(454463),
+    _ = a(622916),
+    o = a(454463),
     i = a(163162);
 function c() {
     i.m9 && i.m9.document
@@ -13,7 +13,7 @@ function c() {
               if (i.m9.document.hidden && e) {
                   let t = 'cancelled',
                       { op: a, status: i } = (0, r.XU)(e);
-                  _.X && o.kg.log(`[Tracing] Transaction: ${t} -> since tab moved to the background, op: ${a}`),
+                  o.X && _.kg.log(`[Tracing] Transaction: ${t} -> since tab moved to the background, op: ${a}`),
                       i ||
                           e.setStatus({
                               code: n.jt,
@@ -23,5 +23,5 @@ function c() {
                       e.end();
               }
           })
-        : _.X && o.kg.warn('[Tracing] Could not set up background tab detection due to lack of global document');
+        : o.X && _.kg.warn('[Tracing] Could not set up background tab detection due to lack of global document');
 }

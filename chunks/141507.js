@@ -23,7 +23,7 @@ var i = n(200651),
     S = n(784222),
     A = n(149203),
     N = n(388032),
-    C = n(936793);
+    C = n(80725);
 let R = 250;
 function O(e) {
     return null != e && 'animated' in e;

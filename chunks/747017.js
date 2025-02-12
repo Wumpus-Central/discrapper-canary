@@ -14,7 +14,7 @@ var r = n(120356),
     p = n(303524),
     h = n(170187),
     m = n(981631),
-    g = n(629545);
+    g = n(394347);
 function E(e) {
     var t;
     let { activities: n, applicationStream: r, textClassName: E, emojiClassName: v, animate: y = !0, hideTooltip: I = !1, hideEmoji: T = !1, user: b, hasQuest: S } = e,

@@ -8,7 +8,7 @@ var i = l(120356),
     a = l(7697),
     u = l(421032),
     c = l(388032),
-    d = l(431911);
+    d = l(560425);
 function x(t) {
     let { guildId: n, recurrenceRule: l, guildEventId: i, onRecurrenceClick: x, hideScroller: k = !1, activeRecurrenceId: h } = t,
         { recurrenceStartTimes: m, canViewMoreRecurrences: z, updateRecurrenceStartTimes: g } = (0, a.Z)(i, n, l);

@@ -17,7 +17,7 @@ var d = {
     './champion_115.jpg': '328986',
     './champion_117.jpg': '220417',
     './champion_119.jpg': '466555',
-    './champion_12.jpg': '188019',
+    './champion_12.jpg': '733146',
     './champion_120.jpg': '101997',
     './champion_121.jpg': '778192',
     './champion_122.jpg': '626638',

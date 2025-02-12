@@ -7,7 +7,7 @@ var l = n(442837),
     s = n(739566),
     o = n(834129),
     c = n(388032),
-    d = n(213120);
+    d = n(766908);
 function u(e) {
     var t;
     let { message: n, compact: u, usernameHook: m, onClickThread: _, onClickViewThreads: h, onContextMenuThread: p } = e,

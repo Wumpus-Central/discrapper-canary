@@ -1,15 +1,15 @@
 var r = a(299623),
     n = a(345374),
-    o = a(874652),
-    _ = a(644659),
+    _ = a(874652),
+    o = a(644659),
     i = a(97131).f,
     c = a(828114),
     s = a(535586),
     E = a(992051),
     l = a(325008),
     u = 'Array Iterator',
-    I = _.set,
-    R = _.getterFor(u);
+    I = o.set,
+    R = o.getterFor(u);
 t.exports = c(
     Array,
     'Array',
@@ -37,7 +37,7 @@ t.exports = c(
     },
     'values'
 );
-var d = (o.Arguments = o.Array);
+var d = (_.Arguments = _.Array);
 if ((n('keys'), n('values'), n('entries'), !E && l && 'values' !== d.name))
     try {
         i(d, 'name', { value: 'values' });

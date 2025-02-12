@@ -1,8 +1,8 @@
 a.d(e, {
-    $J: () => o,
+    $J: () => _,
     E1: () => c,
     JQ: () => l,
-    S3: () => _,
+    S3: () => o,
     TE: () => n,
     Wb: () => s,
     Zj: () => r,
@@ -11,8 +11,8 @@ a.d(e, {
 });
 let r = 'sentry.source',
     n = 'sentry.sample_rate',
-    o = 'sentry.op',
-    _ = 'sentry.origin',
+    _ = 'sentry.op',
+    o = 'sentry.origin',
     i = 'sentry.idle_span_finish_reason',
     c = 'sentry.measurement_unit',
     s = 'sentry.measurement_value',

@@ -8,8 +8,8 @@ a.d(e, {
 });
 var r = a(573736),
     n = a(41754),
-    o = a(370336),
-    _ = a(688838);
+    _ = a(370336),
+    o = a(688838);
 function i(t, e = 100, a = Infinity) {
     try {
         return (function t(e, a, i = Infinity, c = Infinity, s = (0, n.i)()) {
@@ -25,7 +25,7 @@ function i(t, e = 100, a = Infinity) {
                     if ((0, r.y1)(e)) return '[VueViewModel]';
                     if ((0, r.Cy)(e)) return '[SyntheticEvent]';
                     if ('number' == typeof e && e != e) return '[NaN]';
-                    if ('function' == typeof e) return `[Function: ${(0, _.$P)(e)}]`;
+                    if ('function' == typeof e) return `[Function: ${(0, o.$P)(e)}]`;
                     if ('symbol' == typeof e) return `[${String(e)}]`;
                     if ('bigint' == typeof e) return `[BigInt: ${String(e)}]`;
                     let a = (function (t) {
@@ -50,7 +50,7 @@ function i(t, e = 100, a = Infinity) {
                 } catch (t) {}
             let R = Array.isArray(a) ? [] : {},
                 d = 0,
-                A = (0, o.Sh)(a);
+                A = (0, _.Sh)(a);
             for (let e in A) {
                 if (!Object.prototype.hasOwnProperty.call(A, e)) continue;
                 if (d >= c) {

@@ -12,7 +12,7 @@ var r = n(120356),
     f = n(445924),
     _ = n(654904),
     p = n(486324),
-    h = n(933967);
+    h = n(695731);
 let m = d.ZP.getEnableHardwareAcceleration() ? o.Xo$ : o.qEK;
 function g(e) {
     let { user: t, guild: n, displayProfile: r, canUsePremiumCustomization: d, previewAvatar: g, previewAvatarDecoration: E, previewTheme: v, previewPrimaryColor: y, className: I, disabledInputs: T, isTryItOutFlow: b, onUpsellClick: S } = e,

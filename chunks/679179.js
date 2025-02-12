@@ -1,6 +1,6 @@
 a.d(e, {
     EZ: () => i,
-    Gf: () => _
+    Gf: () => o
 });
 let r = /^(\S+:\\|\/?)([\s\S]*?)((?:\.{1,2}|[^/\\]+?|)(\.[^./\\]*|))(?:[/\\]*)$/;
 function n(...t) {
@@ -26,20 +26,20 @@ function n(...t) {
         (a ? '/' : '') + e || '.'
     );
 }
-function o(t) {
+function _(t) {
     let e = 0;
     for (; e < t.length && '' === t[e]; e++);
     let a = t.length - 1;
     for (; a >= 0 && '' === t[a]; a--);
     return e > a ? [] : t.slice(e, a - e + 1);
 }
-function _(t, e) {
+function o(t, e) {
     (t = n(t).slice(1)), (e = n(e).slice(1));
-    let a = o(t.split('/')),
-        r = o(e.split('/')),
-        _ = Math.min(a.length, r.length),
-        i = _;
-    for (let t = 0; t < _; t++)
+    let a = _(t.split('/')),
+        r = _(e.split('/')),
+        o = Math.min(a.length, r.length),
+        i = o;
+    for (let t = 0; t < o; t++)
         if (a[t] !== r[t]) {
             i = t;
             break;

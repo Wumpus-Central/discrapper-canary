@@ -16,16 +16,16 @@ var i = n(200651),
     p = n(435064),
     E = n(894694),
     C = n(779618),
-    f = n(39604),
-    N = n(442334),
+    N = n(39604),
+    f = n(442334),
     I = n(356659),
     T = n(981631),
     S = n(37113),
     j = n(526761),
     v = n(388032),
-    b = n(635446),
-    A = n(639957),
-    O = n(814632);
+    b = n(209004),
+    A = n(301899),
+    O = n(483938);
 function R() {
     let e = (0, a.e7)([g.Z], () => g.Z.getHardwareEncoding()),
         { clipsEnabled: t, remindersEnabled: n, decoupledClipsEnabled: l, clipsLength: R, clipsQuality: D } = (0, a.cj)([p.Z], () => p.Z.getSettings()),
@@ -129,7 +129,7 @@ function R() {
                         value: t,
                         note: v.intl.string(v.t['4Qw3ND']),
                         onChange: (e) =>
-                            f.em({
+                            N.em({
                                 clipsEnabled: e,
                                 trackAnalytics: !0
                             }),
@@ -157,7 +157,7 @@ function R() {
                                 value: l,
                                 note: v.intl.string(v.t.YP3ujo),
                                 onChange: (e) =>
-                                    f._Q({
+                                    N._Q({
                                         enabled: e,
                                         trackAnalytics: !0
                                     }),
@@ -177,7 +177,7 @@ function R() {
                                 className: A.formItem,
                                 value: n,
                                 note: v.intl.string(v.t.m4Cjj4),
-                                onChange: (e) => f.N0(e),
+                                onChange: (e) => N.N0(e),
                                 children: v.intl.string(v.t['3zwNf3'])
                             })
                         })
@@ -187,18 +187,18 @@ function R() {
             (0, i.jsxs)(o.hjN, {
                 className: O.marginTop20,
                 children: [
-                    (0, i.jsx)(N.Q, {
+                    (0, i.jsx)(f.Q, {
                         className: A.formItem,
-                        select: f.eU,
+                        select: N.eU,
                         title: v.intl.string(v.t.OgfUio),
                         note: v.intl.string(v.t.H7j4tb),
                         value: R,
                         options: M
                     }),
-                    (0, i.jsx)(N.Q, {
+                    (0, i.jsx)(f.Q, {
                         className: A.formItem,
                         select: (e) =>
-                            f.yi({
+                            N.yi({
                                 resolution: e,
                                 frameRate: D.frameRate
                             }),
@@ -207,10 +207,10 @@ function R() {
                         value: D.resolution,
                         options: V
                     }),
-                    (0, i.jsx)(N.Q, {
+                    (0, i.jsx)(f.Q, {
                         className: A.formItem,
                         select: (e) =>
-                            f.yi({
+                            N.yi({
                                 resolution: D.resolution,
                                 frameRate: e
                             }),
@@ -219,7 +219,7 @@ function R() {
                         value: D.frameRate,
                         options: w
                     }),
-                    (0, i.jsx)(N.O, {
+                    (0, i.jsx)(f.O, {
                         className: A.formItem,
                         title: v.intl.string(v.t.pf54ER),
                         note: v.intl.string(v.t['QyB/jI']),

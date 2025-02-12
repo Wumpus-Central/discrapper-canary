@@ -29,7 +29,7 @@ var i = t(200651),
     S = t(139712),
     j = t(765305),
     D = t(388032),
-    y = t(868602);
+    y = t(684936);
 let Z = (e, n) => (t) => {
         t.stopPropagation(), c.default.selectVoiceChannel(e.channel_id, !1), null == n || n(t);
     },

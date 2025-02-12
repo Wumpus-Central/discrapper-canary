@@ -14,12 +14,12 @@ var s = n(442837),
     g = n(63487),
     x = n(981631),
     _ = n(388032),
-    p = n(714402);
+    p = n(656751);
 function E(e) {
     var t;
-    let { app: n, currentSubscription: m, currentListing: x, alternativeListings: E, navigateToHome: f, subscriptionGroup: N, renewalSkuId: I } = e,
+    let { app: n, currentSubscription: m, currentListing: x, alternativeListings: E, navigateToHome: N, subscriptionGroup: f, renewalSkuId: I } = e,
         T = (0, r.y)(n, 100),
-        S = (0, h.KK)(N.flags),
+        S = (0, h.KK)(f.flags),
         j = S ? l.QTo : l.tBG,
         v = S ? _.intl.string(_.t['46YF2N']) : _.intl.string(_.t.fFyGiI),
         b = null === (t = m.metadata) || void 0 === t ? void 0 : t.application_subscription_guild_id,
@@ -162,7 +162,7 @@ function E(e) {
                                   {
                                       storeListing: e,
                                       guildId: b,
-                                      navigateToHome: f
+                                      navigateToHome: N
                                   },
                                   e.id
                               )

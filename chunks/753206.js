@@ -8,7 +8,7 @@ var i = n(200651),
     d = n(25015),
     u = n(963550),
     c = n(845080),
-    h = n(194240);
+    h = n(71938);
 let g = l.memo(function (e) {
     var t;
     let { message: n, channel: l, compact: r, className: g, isGroupStart: p, hideSimpleEmbedContent: f = !0, disableInteraction: C } = e,

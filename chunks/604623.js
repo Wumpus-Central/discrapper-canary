@@ -21,7 +21,7 @@ var l = s(200651),
     v = s(46887),
     f = s(981631),
     p = s(388032),
-    C = s(798623);
+    C = s(54124);
 let g = (e) => {
     let { className: t, onChange: s, textVariant: i = 'text-md/normal', label: n, value: r, isArchived: o = !1 } = e;
     return (0, l.jsx)(d.XZJ, {

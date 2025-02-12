@@ -10,7 +10,7 @@ var i = n(200651),
     u = n(469880),
     m = n(665578),
     h = n(388032),
-    x = n(218898);
+    x = n(35030);
 function g(e) {
     let { application: t, canNavigate: n, guildId: c } = e,
         m = (0, a.e7)([d.Z], () => d.Z.isUnavailable());

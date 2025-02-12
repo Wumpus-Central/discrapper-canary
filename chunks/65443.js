@@ -10,7 +10,7 @@ var s = n(200651),
     c = n(566078),
     m = n(46140),
     x = n(388032),
-    h = n(424176);
+    h = n(547992);
 function g(e) {
     let { orientation: t = 'horizontal', headingColor: n = 'text-normal', textColor: l = 'text-normal', withRewardName: g = !1, withPremiumHighlight: C = !0, quest: p } = e,
         j = (0, d.j)({ location: m.dr.QUESTS_BAR_MOBILE }),

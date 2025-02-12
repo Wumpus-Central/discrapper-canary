@@ -22,8 +22,8 @@ var i = n(200651),
     p = n(17894),
     E = n(975298),
     C = n(600164),
-    f = n(925329),
-    N = n(963249),
+    N = n(925329),
+    f = n(963249),
     I = n(301766),
     T = n(594174),
     S = n(626135),
@@ -38,7 +38,7 @@ var i = n(200651),
     y = n(592889),
     Z = n(981631),
     L = n(388032),
-    k = n(904636);
+    k = n(49474);
 function B(e) {
     let t,
         { subscription: n, renewalInvoicePreview: s, fromStandaloneBillingPage: l = !0, className: a } = e,
@@ -172,7 +172,7 @@ function w(e) {
                     children: L.intl.format(L.t['0nbf/P'], {
                         daysPastDue: t,
                         paymentModalRedirect: () => {
-                            (0, N.Z)({
+                            (0, f.Z)({
                                 initialPlanId: n.planIdFromItems,
                                 openInvoiceId: l,
                                 analyticsLocations: r
@@ -216,9 +216,9 @@ function G() {
                 children: (0, i.jsxs)(C.Z, {
                     align: C.Z.Align.CENTER,
                     children: [
-                        (0, i.jsx)(f.Z, {
+                        (0, i.jsx)(N.Z, {
                             game: null,
-                            size: f.Z.Sizes.SMALL,
+                            size: N.Z.Sizes.SMALL,
                             className: k.noItemsIcon
                         }),
                         (0, i.jsx)('span', {
@@ -255,10 +255,10 @@ function F(e) {
                       analyticsLocations: h,
                       analyticsLocation: n
                   },
-        [f] = (0, A.ED)(C);
-    f = null != u ? u : f;
-    let N = (0, E.Z)();
-    return null == p || null == f
+        [N] = (0, A.ED)(C);
+    N = null != u ? u : N;
+    let f = (0, E.Z)();
+    return null == p || null == N
         ? (0, i.jsx)(m.$jN, {})
         : (0, i.jsxs)(i.Fragment, {
               children: [
@@ -291,9 +291,9 @@ function F(e) {
                               children: [
                                   (0, i.jsx)(U, {
                                       subscription: t,
-                                      renewalInvoicePreview: f,
+                                      renewalInvoicePreview: N,
                                       className: k.detailsBlock,
-                                      fractionalPremiumInfo: N
+                                      fractionalPremiumInfo: f
                                   }),
                                   (0, i.jsxs)('div', {
                                       className: r()(k.detailsBlock, { [k.redBorder]: o }),
@@ -365,17 +365,17 @@ function H(e) {
             analyticsLocation: c
         }),
         C = null == r ? void 0 : r.invalid,
-        f = (0, u.e7)([T.default], () => {
+        N = (0, u.e7)([T.default], () => {
             var e;
             return null === (e = T.default.getCurrentUser()) || void 0 === e ? void 0 : e.hasFreePremium();
         }),
-        N = d()(s.currentPeriodEnd),
+        f = d()(s.currentPeriodEnd),
         S = null != s.paymentSourceId,
         j = null !== (t = null == E ? void 0 : E.total) && void 0 !== t ? t : 0,
-        v = !S && j > 0 && (7 >= N.diff(d()(), 'days') || s.status === Z.O0b.PAST_DUE) && !f && !s.isPurchasedExternally,
-        b = C && s.status === Z.O0b.PAST_DUE && !f && !s.isPurchasedExternally,
+        v = !S && j > 0 && (7 >= f.diff(d()(), 'days') || s.status === Z.O0b.PAST_DUE) && !N && !s.isPurchasedExternally,
+        b = C && s.status === Z.O0b.PAST_DUE && !N && !s.isPurchasedExternally,
         R = (0, O.U)(),
-        D = !f && R,
+        D = !N && R,
         P = (null == s ? void 0 : s.status) === Z.O0b.PAST_DUE ? d()().diff(d()(s.currentPeriodStart), 'days') : 0,
         [B] = (0, A.Ox)({
             subscriptionId: s.id,

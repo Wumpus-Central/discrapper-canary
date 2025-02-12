@@ -22,7 +22,7 @@ var i = n(200651),
     I = n(266665),
     E = n(203377),
     b = n(981631),
-    T = n(628405);
+    T = n(240256);
 function S(e) {
     let t,
         { editRoleId: n, setEditRoleId: l, selectedSection: S, setSelectedSection: R } = e,

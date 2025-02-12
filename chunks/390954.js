@@ -14,7 +14,7 @@ var i,
     x = n(244526),
     _ = n(981631),
     p = n(388032),
-    E = n(5040);
+    E = n(560356);
 function C(e, t, n) {
     return (
         t in e
@@ -28,7 +28,7 @@ function C(e, t, n) {
         e
     );
 }
-class f extends (i = l.PureComponent) {
+class N extends (i = l.PureComponent) {
     render() {
         let { paymentSource: e, isDefault: t, isEditing: n, index: i, hideDivider: l, isForSubscription: r, locale: a, removing: c, submitting: d, onSubmit: h, onCancel: m, onDelete: _ } = this.props;
         return n
@@ -81,12 +81,12 @@ class f extends (i = l.PureComponent) {
             });
     }
 }
-C(f, 'defaultProps', {
+C(N, 'defaultProps', {
     isEditing: !1,
     hideDivider: !1,
     onEditClick: () => {}
 });
-class N extends l.PureComponent {
+class f extends l.PureComponent {
     renderFooter() {
         let { paymentSources: e } = this.props;
         return (0, s.jsxs)(u.Z, {
@@ -123,7 +123,7 @@ class N extends l.PureComponent {
             h = c.findIndex((e) => e.id === d),
             g = c.map((t, a) =>
                 (0, s.jsx)(
-                    f,
+                    N,
                     {
                         locale: n,
                         paymentSource: t,
@@ -215,4 +215,4 @@ class N extends l.PureComponent {
             });
     }
 }
-let I = N;
+let I = f;

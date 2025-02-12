@@ -5,7 +5,7 @@ var n = s(120356),
     i = s.n(n),
     t = s(686546),
     r = s(624138),
-    c = s(468546);
+    c = s(499556);
 function d(e) {
     let { guildName: l, iconSize: s, className: n } = e,
         d = (0, r.Zg)(l);

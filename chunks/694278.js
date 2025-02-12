@@ -1,45 +1,45 @@
-n.d(e, { default: () => b }), n(47120);
-var a = n(200651),
-    r = n(192379),
-    i = n(481060),
-    o = n(881052),
-    l = n(434404),
-    s = n(78451),
-    d = n(915509),
-    c = n(981631),
-    u = n(388032),
-    _ = n(814632);
-function b(t) {
-    let { guild: e, onClose: n, hideColors: b } = t,
-        [m, x] = r.useState(e.verificationLevel),
-        [p, h] = r.useState(null),
-        g = e.hasFeature(c.oNc.COMMUNITY),
-        C = (0, s.IF)(g, b).filter((t) => !t.disabled),
-        I = r.useCallback(async () => {
-            null != p && h(null);
+e.d(n, { default: () => g }), e(47120);
+var i = e(200651),
+    r = e(192379),
+    a = e(481060),
+    l = e(881052),
+    o = e(434404),
+    s = e(78451),
+    c = e(915509),
+    d = e(981631),
+    u = e(388032),
+    _ = e(483938);
+function g(t) {
+    let { guild: n, onClose: e, hideColors: g } = t,
+        [E, m] = r.useState(n.verificationLevel),
+        [b, x] = r.useState(null),
+        N = n.hasFeature(d.oNc.COMMUNITY),
+        R = (0, s.IF)(N, g).filter((t) => !t.disabled),
+        v = r.useCallback(async () => {
+            null != b && x(null);
             try {
-                await l.Z.saveGuild(e.id, { verificationLevel: m }), l.Z.updateGuild({ verificationLevel: m }), n();
+                await o.Z.saveGuild(n.id, { verificationLevel: E }), o.Z.updateGuild({ verificationLevel: E }), e();
             } catch (t) {
-                h(new o.Hx(t).getAnyErrorMessage());
+                x(new l.Hx(t).getAnyErrorMessage());
             }
-        }, [p, e.id, m, n]);
-    return (0, a.jsx)(d.Z, {
+        }, [b, n.id, E, e]);
+    return (0, i.jsx)(c.Z, {
         ...t,
         title: u.intl.string(u.t.DpRdYG),
-        errorText: p,
-        onConfirm: I,
-        onCancel: n,
-        children: (0, a.jsxs)(i.hjN, {
+        errorText: b,
+        onConfirm: v,
+        onCancel: e,
+        children: (0, i.jsxs)(a.hjN, {
             children: [
-                (0, a.jsx)(i.R94, {
-                    type: i.R94.Types.DESCRIPTION,
+                (0, i.jsx)(a.R94, {
+                    type: a.R94.Types.DESCRIPTION,
                     className: _.marginBottom20,
                     children: u.intl.format(u.t.iuRk2t, {})
                 }),
-                (0, a.jsx)(i.FXm, {
-                    value: m,
-                    options: C,
-                    onChange: (t) => x(t.value)
+                (0, i.jsx)(a.FXm, {
+                    value: E,
+                    options: R,
+                    onChange: (t) => m(t.value)
                 })
             ]
         })

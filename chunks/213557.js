@@ -28,7 +28,7 @@ var l = t(200651),
     y = t(287746),
     T = t(981631),
     B = t(388032),
-    A = t(922681);
+    A = t(437413);
 function R(e) {
     let { channelId: n, baseChannelId: R, channelViewSource: P = 'Split View', isResourceChannelView: k } = e,
         L = (0, a.e7)([j.Z], () => j.Z.getChannel(n)),

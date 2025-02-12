@@ -15,7 +15,7 @@ var i = n(200651),
     g = n(463031),
     j = n(981631),
     f = n(388032),
-    p = n(16920);
+    p = n(673393);
 function C(e) {
     let { guildId: t, leaderboard: n, ...r } = e,
         u = (0, s.e7)([x.Z], () => x.Z.getGuild(t)),

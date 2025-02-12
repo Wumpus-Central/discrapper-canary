@@ -8,7 +8,7 @@ var i = n(200651),
     u = n(213053),
     c = n(652853),
     d = n(228168),
-    f = n(828681);
+    f = n(452953);
 let _ = Object.assign(
     r.forwardRef(function (e, t) {
         let { user: n, displayProfile: r, profileType: a, className: _, pendingThemeColors: p, themeOverride: h, children: m, forceShowPremium: g = !1 } = e,

@@ -4,7 +4,7 @@ e(192379);
 var s = e(481060),
     a = e(986035),
     c = e(388032),
-    o = e(277100);
+    o = e(113102);
 function r(t) {
     let { application: i, onAgree: e, onClose: r, onDisagree: l, ...d } = t;
     return (0, n.jsx)(s.Y0X, {

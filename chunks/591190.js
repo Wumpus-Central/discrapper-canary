@@ -3,7 +3,7 @@ var i = n(200651);
 n(192379);
 var l = n(120356),
     r = n.n(l),
-    a = n(943510);
+    a = n(580958);
 let o = () => (0, i.jsx)('div', { className: a.spacer }),
     s = () => (0, i.jsx)('div', { className: a.category }),
     c = (e) => {

@@ -17,7 +17,7 @@ var i = e(200651),
     _ = e(858380),
     I = e(981631),
     C = e(388032),
-    E = e(829566);
+    E = e(679108);
 function v(n) {
     let { user: t, onBlock: e, onIgnore: r, location: o, disallowIgnore: s, guildId: d, channelId: v } = n,
         T = (0, j.Do)({ location: 'confirm_block_modal_body' }),

@@ -11,7 +11,7 @@ var i = n(200651),
     h = n(190054),
     f = n(760373),
     N = n(388032),
-    g = n(571545);
+    g = n(35884);
 function x(e) {
     let { channelId: t } = e,
         n = (0, o.e7)([a.Z], () => {

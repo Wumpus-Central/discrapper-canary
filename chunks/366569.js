@@ -1,7 +1,7 @@
 a.d(e, { i: () => n });
 var r = a(573736);
 function n(t, e, a = () => {}) {
-    var o, _, i;
+    var _, o, i;
     let c;
     try {
         c = t();
@@ -9,16 +9,16 @@ function n(t, e, a = () => {}) {
         throw (e(t), a(), t);
     }
     return (
-        (o = c),
-        (_ = e),
+        (_ = c),
+        (o = e),
         (i = a),
-        (0, r.J8)(o)
-            ? o.then(
+        (0, r.J8)(_)
+            ? _.then(
                   (t) => (i(), t),
                   (t) => {
-                      throw (_(t), i(), t);
+                      throw (o(t), i(), t);
                   }
               )
-            : (i(), o)
+            : (i(), _)
     );
 }

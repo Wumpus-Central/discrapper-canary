@@ -8,8 +8,8 @@ a.d(e, {
 });
 var r = a(636361),
     n = a(502990),
-    o = a(907765),
-    _ = a(151122),
+    _ = a(907765),
+    o = a(151122),
     i = a(511906),
     c = a(263449),
     s = a(233517),
@@ -29,7 +29,7 @@ var r = a(636361),
     O = a(297117),
     D = a(387486);
 function g(t) {
-    return [(0, r.S)(), (0, n.C)(), (0, T.t)(), (0, p.f)(), (0, N.k)(), (0, h.O)(), (0, o.R)(), (0, L.s)()];
+    return [(0, r.S)(), (0, n.C)(), (0, T.t)(), (0, p.f)(), (0, N.k)(), (0, h.O)(), (0, _.R)(), (0, L.s)()];
 }
 function m(t = {}) {
     let e = (function (t = {}) {
@@ -48,9 +48,9 @@ function m(t = {}) {
                 a = t[e],
                 r = a && a.runtime && a.runtime.id,
                 n = (f.m9.location && f.m9.location.href) || '',
-                o = !!r && f.m9 === f.m9.top && ['chrome-extension:', 'moz-extension:', 'ms-browser-extension:'].some((t) => n.startsWith(`${t}//`)),
-                _ = void 0 !== t.nw;
-            return !!r && !o && !_;
+                _ = !!r && f.m9 === f.m9.top && ['chrome-extension:', 'moz-extension:', 'ms-browser-extension:'].some((t) => n.startsWith(`${t}//`)),
+                o = void 0 !== t.nw;
+            return !!r && !_ && !o;
         })()
     ) {
         (0, l.Cf)(() => {
@@ -62,7 +62,7 @@ function m(t = {}) {
     let a = {
             ...e,
             stackParser: (0, I.Sq)(e.stackParser || O.Dt),
-            integrations: (0, _.m8)(e),
+            integrations: (0, o.m8)(e),
             transport: e.transport || D.f
         },
         r = (0, i.M)(d.R, a);
@@ -107,20 +107,20 @@ function y(t = {}) {
     }
     let n = f.m9.document.createElement('script');
     (n.async = !0), (n.crossOrigin = 'anonymous'), (n.src = (0, E.h)(r, t)), t.onLoad && (n.onload = t.onLoad);
-    let { onClose: o } = t;
-    if (o) {
+    let { onClose: _ } = t;
+    if (_) {
         let t = (e) => {
             if ('__sentry_reportdialog_closed__' === e.data)
                 try {
-                    o();
+                    _();
                 } finally {
                     f.m9.removeEventListener('message', t);
                 }
         };
         f.m9.addEventListener('message', t);
     }
-    let _ = f.m9.document.head || f.m9.document.body;
-    _ ? _.appendChild(n) : A.X && l.kg.error('Not injecting report dialog. No injection point found in HTML');
+    let o = f.m9.document.head || f.m9.document.body;
+    o ? o.appendChild(n) : A.X && l.kg.error('Not injecting report dialog. No injection point found in HTML');
 }
 function P() {}
 function v(t) {

@@ -1,6 +1,6 @@
 var r = a(289126),
     n = a(652715),
-    o = a(220126),
-    _ = o && o.isTypedArray,
-    i = _ ? n(_) : r;
+    _ = a(220126),
+    o = _ && _.isTypedArray,
+    i = o ? n(o) : r;
 t.exports = i;

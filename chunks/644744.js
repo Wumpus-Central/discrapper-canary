@@ -8,7 +8,7 @@ var i = n(200651),
     c = n(490529),
     d = n(981631),
     u = n(388032),
-    h = n(563876);
+    h = n(427531);
 let m = {
         [d.gkr.HOUSE_1]: h.membershipDialogHouse1,
         [d.gkr.HOUSE_2]: h.membershipDialogHouse2,

@@ -5,11 +5,11 @@ var i = n(200651),
     a = n(239091),
     s = n(129861),
     o = n(600164),
-    c = n(320538);
+    c = n(368667);
 class d extends l.PureComponent {
     handleContextMenu(e, t) {
         (0, a.jW)(e, async () => {
-            let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('18509')]).then(n.bind(n, 881351));
+            let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('45078')]).then(n.bind(n, 881351));
             return (n) =>
                 (0, i.jsx)(e, {
                     ...n,

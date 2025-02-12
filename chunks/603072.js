@@ -26,8 +26,8 @@ var l = t(200651),
     w = t(176505),
     S = t(921944),
     y = t(388032),
-    T = t(857147),
-    B = t(767839);
+    T = t(499346),
+    B = t(3114);
 function A(e) {
     let { guild: n, previousChannel: t } = e,
         a = (0, Z.Z)(n);

@@ -10,7 +10,7 @@ var i = s(399606),
     d = s(430824),
     u = s(709054),
     m = s(388032),
-    x = s(4035);
+    x = s(198873);
 function v(e) {
     let { userId: l, guildId: s, textClassName: v, tooltipDelay: j } = e,
         h = (0, i.e7)([c.default], () => c.default.locale),

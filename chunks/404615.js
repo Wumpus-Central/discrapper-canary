@@ -2,7 +2,7 @@ n.d(t, { _: () => o });
 var i = n(442837),
     r = n(607070),
     a = n(391110),
-    s = n(606944);
+    s = n(755664);
 let l = {
         subtitle: { onlyShowOnHover: !1 },
         description: {

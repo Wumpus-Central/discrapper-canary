@@ -13,7 +13,7 @@ var s = n(512722),
     m = n(474936),
     g = n(981631),
     x = n(388032),
-    _ = n(817239);
+    _ = n(94950);
 function p(e) {
     let t,
         { subscription: n, withOverheadSeparator: s } = e,
@@ -26,13 +26,13 @@ function p(e) {
         });
     if (null == E) return null;
     let C = s ? _.finePrintWithOverheadSeparator : _.finePrint,
-        f = E.invoiceItems.find((e) => {
+        N = E.invoiceItems.find((e) => {
             let { subscriptionPlanId: t } = e;
             return (0, d.uZ)(t);
         });
-    if (null == f) return null;
-    let N = f.subscriptionPlanId,
-        I = c.Z.get(N);
+    if (null == N) return null;
+    let f = N.subscriptionPlanId,
+        I = c.Z.get(f);
     l()(null != I, 'Missing plan');
     let T = (0, u.T4)(E.total, E.currency);
     return (

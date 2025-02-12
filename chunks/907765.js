@@ -1,9 +1,9 @@
 a.d(e, { R: () => i });
 var r = a(622916),
     n = a(688838),
-    o = a(151122),
-    _ = a(255768);
-let i = (0, o._I)(() => {
+    _ = a(151122),
+    o = a(255768);
+let i = (0, _._I)(() => {
     let t;
     return {
         name: 'Dedupe',
@@ -25,7 +25,7 @@ let i = (0, o._I)(() => {
                                 return !!(a && r && a.type === r.type && a.value === r.value && s(t, e) && c(t, e));
                             })(a, n)))
                 )
-                    return _.X && r.kg.warn('Event dropped due to being a duplicate of previously captured event.'), null;
+                    return o.X && r.kg.warn('Event dropped due to being a duplicate of previously captured event.'), null;
             } catch (t) {}
             return (t = e);
         }

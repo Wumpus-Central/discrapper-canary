@@ -16,8 +16,8 @@ var i = n(200651),
     p = n(584825),
     E = n(305342),
     C = n(333867),
-    f = n(963249),
-    N = n(87484),
+    N = n(963249),
+    f = n(87484),
     I = n(197115),
     T = n(911367),
     S = n(43747),
@@ -26,7 +26,7 @@ var i = n(200651),
     b = n(78839),
     A = n(981631),
     O = n(474936),
-    R = n(487619);
+    R = n(155053);
 function D(e) {
     let { selectedGuildForGuildSub: t } = e,
         n = (0, p.GG)(null == t ? void 0 : t.id)[0];
@@ -146,7 +146,7 @@ let P = function () {
                         }),
                         (0, i.jsx)(a.zxk, {
                             onClick: () =>
-                                (0, f.Z)({
+                                (0, N.Z)({
                                     subscriptionTier: n,
                                     analyticsLocations: F
                                 }),
@@ -396,7 +396,7 @@ let P = function () {
                         }),
                         (0, i.jsx)(a.zxk, {
                             onClick: () =>
-                                (0, N.Z)({
+                                (0, f.Z)({
                                     applicationId: en,
                                     skuId: es,
                                     analyticsLocations: F

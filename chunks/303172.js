@@ -5,7 +5,7 @@ var r = n(481060);
 async function a(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     await (0, r.ZDy)(async () => {
-        let { default: r } = await Promise.all([n.e('85342'), n.e('26344')]).then(n.bind(n, 193049));
+        let { default: r } = await Promise.all([n.e('85342'), n.e('47815')]).then(n.bind(n, 193049));
         return (n) =>
             (0, i.jsx)(r, {
                 source: e,

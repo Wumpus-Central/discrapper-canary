@@ -3,7 +3,7 @@ var i = a(200651);
 a(192379);
 var t = a(866442),
     n = a(481060),
-    l = a(326687);
+    l = a(970533);
 let r = function (e) {
     let { colorKey: s, value: a, onChange: r, title: o } = e;
     return (0, i.jsxs)(n.xJW, {

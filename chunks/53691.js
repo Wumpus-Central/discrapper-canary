@@ -8,7 +8,7 @@ var r = n(120356),
     l = n(436774),
     u = n(197115),
     c = n(474936),
-    d = n(430885);
+    d = n(318995);
 function f(e) {
     let { showUpsell: t, text: n, textVariant: r, button: f, buttonAnalyticsObject: _, className: p, buttonStyles: h, onSubscribeModalClose: m, showShadow: g = !0, position: E = 'floating', buttonSize: v = 'md', useLockIcon: y = !1 } = e,
         I = (0, o.q_F)({

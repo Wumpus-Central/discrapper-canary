@@ -61,7 +61,7 @@ var n = t(200651),
     ei = t(524484),
     es = t(65154),
     ea = t(388032),
-    er = t(838187);
+    er = t(707945);
 let eo = [et.fO.ACTIVITY, et.fO.PRESENCE_EMBEDDED_ACTIVITY],
     ec = i.memo((e) => {
         var l, t, s, o, j;
@@ -140,8 +140,8 @@ let eo = [et.fO.ACTIVITY, et.fO.PRESENCE_EMBEDDED_ACTIVITY],
             { enabled: e7 } = (0, v.Z)({ location: 'CallTile' }),
             { showGameIcon: e4 } = Z.ZP.useExperiment({ location: 'voice_users' }, { autoTrackExposure: !1 }),
             e9 = (0, r.e7)([z.Z], () => (e4 && null != eU ? z.Z.findActivity(eU, (e) => null != e.application_id && e.type === el.IIU.PLAYING) : null), [e4, eU]),
-            e3 = (0, r.e7)([P.Z], () => ((null == e9 ? void 0 : e9.application_id) != null ? P.Z.getDetectableGame(e9.application_id) : null)),
-            e5 = (0, r.e7)([p.Z], () => (null != e3 && (null == e9 ? void 0 : e9.application_id) != null ? p.Z.getApplication(null == e9 ? void 0 : e9.application_id) : void 0)),
+            e5 = (0, r.e7)([P.Z], () => ((null == e9 ? void 0 : e9.application_id) != null ? P.Z.getDetectableGame(e9.application_id) : null)),
+            e3 = (0, r.e7)([p.Z], () => (null != e5 && (null == e9 ? void 0 : e9.application_id) != null ? p.Z.getApplication(null == e9 ? void 0 : e9.application_id) : void 0)),
             e2 = (0, R.wV)({
                 userId: eU,
                 channelId: ex.id,
@@ -364,7 +364,7 @@ let eo = [et.fO.ACTIVITY, et.fO.PRESENCE_EMBEDDED_ACTIVITY],
                                                   onContextMenu: la,
                                                   onToggleMute: ln,
                                                   participantUserId: eU,
-                                                  application: e5,
+                                                  application: e3,
                                                   secureFramesVerified: e8,
                                                   isHovered: eP
                                               }),

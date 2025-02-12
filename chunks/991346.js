@@ -26,8 +26,8 @@ var i = n(192379),
     p = n(631885),
     E = n(223639),
     C = n(160913),
-    f = n(725727),
-    N = n(977156),
+    N = n(725727),
+    f = n(977156),
     I = n(922611),
     T = n(921157),
     S = n(667172),
@@ -86,7 +86,7 @@ function U(e) {
 }
 function G() {
     var e, t, n, i;
-    let r = (0, f.YO)().length,
+    let r = (0, N.YO)().length,
         P = (0, C.U)(),
         B = (0, s.e7)([O.Z], () => O.Z.getProps().impressionSource),
         M = (0, p.gU)(),
@@ -108,7 +108,7 @@ function G() {
         W = (0, j.y0)({ location: 'settings' }),
         K = (0, S.v4)({ location: 'settings' }),
         X = (0, c.Q)(),
-        q = (0, N.Zy)({ location: V.dr.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
+        q = (0, f.Zy)({ location: V.dr.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
         { enabled: J } = E.Z.useExperiment({ location: 'UserSettingsInventory' }, { autoTrackExposure: !0 }),
         Q = (0, s.e7)([b.Z], () => b.Z.hasLibraryApplication()),
         $ = (0, s.e7)([v.default], () => v.default.hasTOTPEnabled()),

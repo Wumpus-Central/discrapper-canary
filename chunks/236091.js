@@ -13,7 +13,7 @@ var l = n(120356),
     p = n(435064),
     m = n(354459),
     f = n(388032),
-    g = n(995864);
+    g = n(362444);
 let _ = (e) => {
     let { className: t, channelId: n } = e,
         l = (0, h.Go)(),

@@ -7,7 +7,7 @@ var r = n(200651),
     l = n(481060),
     c = n(569379),
     d = n(642145),
-    u = n(593579);
+    u = n(819893);
 let p = o.forwardRef((e, t) => {
     let { quest: n, percentComplete: o, size: s = 42, strokeWidth: p = 3, glowBlur: m = 0.4, percentCompleteText: x, percentCompleteTextVariant: h = 'text-lg/medium', children: g } = e,
         f = (0, c.E)(n, o > 0),

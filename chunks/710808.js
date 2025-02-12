@@ -16,10 +16,10 @@ var i = n(200651),
     p = n(12647),
     E = n(569550),
     C = n(726985),
-    f = n(981631),
-    N = n(65154),
+    N = n(981631),
+    f = n(65154),
     I = n(388032),
-    T = n(814632);
+    T = n(483938);
 async function S() {
     let e = await d.Z.fileManager.getLogPath();
     d.Z.fileManager.showItemInFolder(e);
@@ -47,7 +47,7 @@ function v(e) {
             aecDumpSupported: x.Z.isAecDumpSupported(),
             debugLogging: x.Z.getDebugLogging(),
             aecDumpEnabled: x.Z.getAecDump(),
-            supportsConnectionReplay: x.Z.supports(N.AN.CONNECTION_REPLAY)
+            supportsConnectionReplay: x.Z.supports(f.AN.CONNECTION_REPLAY)
         })),
         A = (0, l.e7)([g.default], () => g.default.isStreamInfoOverlayEnabled),
         O = (0, l.e7)([_.ZP], () => _.ZP.shouldRecordNextConnection());
@@ -56,7 +56,7 @@ function v(e) {
         try {
             await x.Z.getMediaEngine().writeAudioDebugState(),
                 await p.Z.submitLiveCrashReport({ message: { message: 'User Live Dump' } }),
-                await (0, h.E)(f.GU0.RTC),
+                await (0, h.E)(N.GU0.RTC),
                 (function () {
                     let e = I.intl.string(I.t['fKBB8/']),
                         t = I.intl.string(I.t.BvyxEx);

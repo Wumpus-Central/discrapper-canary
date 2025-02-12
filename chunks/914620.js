@@ -7,7 +7,7 @@ var a = s(200651),
     c = s(65361),
     d = s(722300),
     o = s(910200),
-    u = s(187426);
+    u = s(449430);
 function m(e) {
     let { guildId: l, name: s, setPopoutRef: i } = e,
         { guildProfile: m, fetchGuildProfile: h, isFetching: x } = (0, c.u)(l),

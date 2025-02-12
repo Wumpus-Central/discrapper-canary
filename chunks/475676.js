@@ -18,7 +18,7 @@ var i = t(200651),
     h = t(981631),
     v = t(701488),
     _ = t(388032),
-    f = t(600094);
+    f = t(425384);
 function m(e) {
     let { application: l } = e,
         t = l.getIconURL(v.Si.LARGE),

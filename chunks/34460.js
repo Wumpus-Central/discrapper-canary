@@ -22,7 +22,7 @@ var n = a(200651),
     I = a(847004),
     v = a(981631),
     R = a(388032),
-    E = a(717961);
+    E = a(633876);
 function k(e) {
     let { name: t, imageUrl: a, selected: l, onTap: i } = e;
     return (0, n.jsxs)(d.P3F, {

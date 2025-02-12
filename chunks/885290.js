@@ -26,7 +26,7 @@ var l = n(200651),
     S = n(486324),
     b = n(869783),
     Z = n(388032),
-    L = n(755809);
+    L = n(370222);
 let R = [
     {
         gif: n(495682),
@@ -217,7 +217,7 @@ function U(e) {
                 if (t.type === b.m.MP4) return W(e, t);
                 (0, o.ZDy)(
                     async () => {
-                        let { default: a } = await Promise.all([n.e('59732'), n.e('40787')]).then(n.bind(n, 712451));
+                        let { default: a } = await Promise.all([n.e('59732'), n.e('27952')]).then(n.bind(n, 712451));
                         return (n) =>
                             (0, l.jsx)(a, {
                                 imgURI: e,

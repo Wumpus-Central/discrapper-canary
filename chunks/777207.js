@@ -6,8 +6,8 @@ var i = n(200651),
     o = n(696689),
     l = n.n(o),
     u = n(692547),
-    c = n(675050),
-    d = n(139370);
+    c = n(536121),
+    d = n(25869);
 let f = Object.fromEntries(Object.keys(u.Z.colors).map((e) => [l()(e), e])),
     _ = r.forwardRef(function (e, t) {
         let n,

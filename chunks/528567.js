@@ -1,27 +1,27 @@
 n.d(t, {
-    C: () => i,
-    s: () => o
+    C: () => r,
+    s: () => l
 });
-var a = n(939639),
-    r = n(99815),
-    l = n(388032);
-function i(e) {
+var i = n(939639),
+    a = n(99815),
+    o = n(388032);
+function r(e) {
     var t;
     return null !==
         (t = {
-            [r.E.LOL_TOTAL_KILLS]: l.intl.string(l.t.aIbY2N),
-            [r.E.LOL_TOTAL_DEATHS]: l.intl.string(l.t.Jec90d),
-            [r.E.LOL_TOTAL_ASSISTS]: l.intl.string(l.t['8+lHWV']),
-            [r.E.LOL_TOTAL_DAMAGE_DEALT]: l.intl.string(l.t['XEmO+P']),
-            [r.E.LOL_TOTAL_DAMAGE_TAKEN]: l.intl.string(l.t['TcQ7//']),
-            [r.E.LOL_TOTAL_WINS]: l.intl.string(l.t['/QfLjI']),
-            [r.E.LOL_MAX_CREEP_SCORE]: l.intl.string(l.t.M5pp7e)
+            [a.E.LOL_TOTAL_KILLS]: o.intl.string(o.t.aIbY2N),
+            [a.E.LOL_TOTAL_DEATHS]: o.intl.string(o.t.Jec90d),
+            [a.E.LOL_TOTAL_ASSISTS]: o.intl.string(o.t['8+lHWV']),
+            [a.E.LOL_TOTAL_DAMAGE_DEALT]: o.intl.string(o.t['XEmO+P']),
+            [a.E.LOL_TOTAL_DAMAGE_TAKEN]: o.intl.string(o.t['TcQ7//']),
+            [a.E.LOL_TOTAL_WINS]: o.intl.string(o.t['/QfLjI']),
+            [a.E.LOL_MAX_CREEP_SCORE]: o.intl.string(o.t.M5pp7e)
         }[e]) && void 0 !== t
         ? t
-        : l.intl.string(l.t['IraB/v']);
+        : o.intl.string(o.t['IraB/v']);
 }
-function o(e) {
-    let { statisticId: t, sortDesc: n, aggregationType: r } = e,
-        o = i(t);
-    return r === a.k.MAX ? (n ? l.intl.formatToPlainString(l.t.nJYOFx, { statisticName: o }) : l.intl.formatToPlainString(l.t.SYKIbW, { statisticName: o })) : n ? l.intl.formatToPlainString(l.t.M9sOp6, { statisticName: o }) : l.intl.formatToPlainString(l.t.USfwd3, { statisticName: o });
+function l(e) {
+    let { statisticId: t, sortDesc: n, aggregationType: a } = e,
+        l = r(t);
+    return a === i.k.MAX ? (n ? o.intl.formatToPlainString(o.t.nJYOFx, { statisticName: l }) : o.intl.formatToPlainString(o.t.SYKIbW, { statisticName: l })) : n ? o.intl.formatToPlainString(o.t.M9sOp6, { statisticName: l }) : o.intl.formatToPlainString(o.t.USfwd3, { statisticName: l });
 }

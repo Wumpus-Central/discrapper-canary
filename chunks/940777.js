@@ -28,7 +28,7 @@ var i = n(200651),
     A = n(603274),
     T = n(981631),
     P = n(388032),
-    w = n(148599);
+    w = n(913050);
 let R = {
     analyticsSource: {
         page: T.ZY5.GUILD_CHANNEL,

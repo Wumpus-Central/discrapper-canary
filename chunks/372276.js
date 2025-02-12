@@ -5,7 +5,7 @@ var r = n(278074),
     a = n(26033),
     s = n(170187),
     o = n(388032),
-    l = n(694978);
+    l = n(21478);
 function u(e) {
     let { entry: t, textClassName: n } = e,
         { message: u, title: c } = (0, r.EQ)(t)

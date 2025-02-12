@@ -9,7 +9,7 @@ var i = n(200651),
     d = n(39377),
     u = n(981631),
     h = n(388032),
-    m = n(859706);
+    m = n(386006);
 let p = [
         {
             feature: u.Qa3.SINGLE_PLAYER,

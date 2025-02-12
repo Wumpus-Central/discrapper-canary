@@ -22,8 +22,8 @@ var r = n(442837),
     T = n(915014),
     b = n(228168),
     S = n(388032),
-    A = n(914704),
-    N = n(112650);
+    A = n(699486),
+    N = n(593401);
 function C(e) {
     let { user: t, currentUser: n, displayProfile: C, guild: R, isHovering: O, onOpenProfile: D, channelId: L, onClose: x } = e,
         P = u.ZP.getName(null == R ? void 0 : R.id, L, t),

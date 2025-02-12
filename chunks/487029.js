@@ -17,7 +17,7 @@ var i = n(200651),
     C = n(964398),
     I = n(409673),
     v = n(710111),
-    m = n(279288);
+    m = n(901008);
 function T(e) {
     let { guildId: t, channel: n, width: T, height: E, keepOpen: O, interactive: _ = !0, analyticsSource: b, onClose: y } = e,
         S = (function (e) {

@@ -1,27 +1,27 @@
-t.d(a, { q: () => n }), t(291175), t(848572);
-var s = t(474936),
-    d = t(388032);
-let n = (e, a) => {
+n.d(t, { q: () => a }), n(291175), n(848572);
+var i = n(474936),
+    r = n(388032);
+let a = (e, t) => {
     switch (e) {
-        case s.JN.PREMIUM_TENURE_1_MONTH:
-        case s.JN.PREMIUM_TENURE_3_MONTH:
-        case s.JN.PREMIUM_TENURE_6_MONTH:
-        case s.w7.PREMIUM_TENURE_1_MONTH:
-        case s.w7.PREMIUM_TENURE_3_MONTH:
-        case s.w7.PREMIUM_TENURE_6_MONTH:
-            return d.intl.formatToPlainString(d.t.erUSmJ, { months: a });
-        case s.JN.PREMIUM_TENURE_12_MONTH:
-        case s.JN.PREMIUM_TENURE_24_MONTH:
-        case s.JN.PREMIUM_TENURE_36_MONTH:
-        case s.JN.PREMIUM_TENURE_60_MONTH:
-        case s.w7.PREMIUM_TENURE_12_MONTH:
-        case s.w7.PREMIUM_TENURE_24_MONTH:
-        case s.w7.PREMIUM_TENURE_36_MONTH:
-        case s.w7.PREMIUM_TENURE_60_MONTH:
-            return d.intl.formatToPlainString(d.t.IfYQVF, { years: a / 12 });
-        case s.JN.PREMIUM_TENURE_72_MONTH:
-        case s.w7.PREMIUM_TENURE_72_MONTH:
-            return d.intl.formatToPlainString(d.t.IfYQVF, { years: '6+' });
+        case i.JN.PREMIUM_TENURE_1_MONTH:
+        case i.JN.PREMIUM_TENURE_3_MONTH:
+        case i.JN.PREMIUM_TENURE_6_MONTH:
+        case i.w7.PREMIUM_TENURE_1_MONTH:
+        case i.w7.PREMIUM_TENURE_3_MONTH:
+        case i.w7.PREMIUM_TENURE_6_MONTH:
+            return r.intl.formatToPlainString(r.t.erUSmJ, { months: t });
+        case i.JN.PREMIUM_TENURE_12_MONTH:
+        case i.JN.PREMIUM_TENURE_24_MONTH:
+        case i.JN.PREMIUM_TENURE_36_MONTH:
+        case i.JN.PREMIUM_TENURE_60_MONTH:
+        case i.w7.PREMIUM_TENURE_12_MONTH:
+        case i.w7.PREMIUM_TENURE_24_MONTH:
+        case i.w7.PREMIUM_TENURE_36_MONTH:
+        case i.w7.PREMIUM_TENURE_60_MONTH:
+            return r.intl.formatToPlainString(r.t.IfYQVF, { years: t / 12 });
+        case i.JN.PREMIUM_TENURE_72_MONTH:
+        case i.w7.PREMIUM_TENURE_72_MONTH:
+            return r.intl.formatToPlainString(r.t.IfYQVF, { years: '6+' });
         default:
             return null;
     }

@@ -10,7 +10,7 @@ var i = n(200651),
     d = n(171368),
     f = n(981631),
     _ = n(388032),
-    p = n(515134);
+    p = n(348785);
 let h = 57.75,
     m = r.memo(function (e) {
         let { user: t, onClose: n, bio: a, hidePersonalInformation: m, viewFullBioDisabled: g = !1 } = e,

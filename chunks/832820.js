@@ -15,7 +15,7 @@ var i = n(200651),
     m = n(576645),
     g = n(981631),
     E = n(388032),
-    v = n(887220);
+    v = n(294358);
 function y(e) {
     let { emojiConfetti: t } = e,
         n = r.useMemo(() => (null == t ? null : null == t.id ? t.optionallyDiverseSequence : t.name), [t]);

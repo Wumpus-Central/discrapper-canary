@@ -8,7 +8,7 @@ var r = n(120356),
     l = n(692547),
     u = n(481060),
     c = n(607070),
-    d = n(956671);
+    d = n(860162);
 function f(e) {
     let t,
         { color: n, size: r, forcedIconColor: f, className: _, iconClassName: p } = e,

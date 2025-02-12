@@ -4,7 +4,7 @@ i(192379);
 var a = i(385499),
     l = i(245315),
     r = i(368859),
-    s = i(562797);
+    s = i(732175);
 function o(e) {
     let t,
         { message: i, channel: o, user: c, compact: u, isRepliedMessage: m, hideIcon: d = !1, children: p } = e;

@@ -9,7 +9,7 @@ var i = n(200651),
     c = n(302221),
     d = n(884697),
     f = n(372654),
-    _ = n(718839);
+    _ = n(982859);
 let p = (e) => null != e && /^http/i.test(e),
     h = (e) => {
         let { asset: t, size: n = f.yV, className: a, style: h, children: m, categoryBannerOverride: g } = e,

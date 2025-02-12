@@ -8,7 +8,7 @@ let a = {
     openNewUserAgeGateModal: (e) => {
         (0, s.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([n.e('63288'), n.e('1337'), n.e('5778')]).then(n.bind(n, 298237));
+                let { default: e } = await Promise.all([n.e('63288'), n.e('1337'), n.e('35567')]).then(n.bind(n, 298237));
                 return (t) => (0, i.jsx)(e, { ...t });
             },
             {

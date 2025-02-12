@@ -9,7 +9,7 @@ var s = n(120356),
     c = n(55935),
     d = n(955204),
     u = n(674680),
-    h = n(344618);
+    h = n(888961);
 function m(e) {
     let { achievementId: t, dateUnlocked: n } = e,
         s = (0, d.oX)(t);
@@ -19,13 +19,13 @@ function m(e) {
         p = x && !r,
         E = r ? 'header-primary' : 'text-muted',
         C = r ? 'header-secondary' : 'text-muted',
-        f = a()(n),
-        N = null != _ && r,
-        I = N ? o.P3F : 'div';
+        N = a()(n),
+        f = null != _ && r,
+        I = f ? o.P3F : 'div';
     return (0, i.jsxs)(I, {
-        className: l()(h.container, N && h.actionable),
+        className: l()(h.container, f && h.actionable),
         onClick: () => {
-            N && _();
+            f && _();
         },
         children: [
             (0, i.jsx)('div', {
@@ -44,7 +44,7 @@ function m(e) {
                             variant: 'text-xxs/semibold',
                             color: 'text-muted',
                             className: h.unlocked,
-                            children: (0, c.Y4)(f)
+                            children: (0, c.Y4)(N)
                         }),
                     (0, i.jsx)(o.Text, {
                         variant: 'text-md/medium',

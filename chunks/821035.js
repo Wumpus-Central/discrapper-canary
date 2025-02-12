@@ -13,7 +13,7 @@ var s = n(524437),
     m = n(726985),
     g = n(981631),
     x = n(388032),
-    _ = n(568494);
+    _ = n(834040);
 function p() {
     var e;
     let t = null === (e = (0, c.Z)()) || void 0 === e || e,
@@ -21,7 +21,7 @@ function p() {
         C = (e) => {
             !(0, r.G7)('explicit_media_redaction_settings') && (0, a.zj)(e);
         },
-        f = [
+        N = [
             {
                 value: s.Q4.BLUR,
                 label: x.intl.string(x.t.S49UaW)
@@ -31,7 +31,7 @@ function p() {
                 label: x.intl.string(x.t['D/157e'])
             }
         ],
-        N = [
+        f = [
             {
                 value: s.Q4.BLUR,
                 label: x.intl.string(x.t.S49UaW)
@@ -42,7 +42,7 @@ function p() {
             label: x.intl.string(x.t['5k5OFh'])
         };
     return (
-        t && (f.unshift(I), N.unshift(I)),
+        t && (N.unshift(I), f.unshift(I)),
         (0, i.jsxs)(u.U, {
             setting: m.s6.PRIVACY_SENSITIVE_MEDIA_V2,
             scrollPosition: h.FY.EXPLICIT_MEDIA_REDACTION_V2,
@@ -56,7 +56,7 @@ function p() {
                     title: x.intl.string(x.t['6k0AgI']),
                     titleClassName: _.selectItemTitle,
                     children: (0, i.jsx)(l.q4e, {
-                        options: f,
+                        options: N,
                         value: p,
                         onChange: (e) => C({ explicitContentFriendDm: e })
                     })
@@ -66,7 +66,7 @@ function p() {
                     title: x.intl.string(x.t.D2EGSk),
                     titleClassName: _.selectItemTitle,
                     children: (0, i.jsx)(l.q4e, {
-                        options: f,
+                        options: N,
                         value: E,
                         onChange: (e) => C({ explicitContentNonFriendDm: e })
                     })
@@ -77,7 +77,7 @@ function p() {
                         title: x.intl.string(x.t['FP+a4+']),
                         titleClassName: _.selectItemTitle,
                         children: (0, i.jsx)(l.q4e, {
-                            options: N,
+                            options: f,
                             value: n,
                             onChange: (e) => C({ explicitContentGuilds: e })
                         })

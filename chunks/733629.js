@@ -2,7 +2,7 @@ n.d(t, { Z: () => s });
 var i = n(200651);
 n(192379);
 var r = n(481060),
-    l = n(455476);
+    l = n(45596);
 function s(e) {
     let { title: t, settings: n } = e;
     return (0, i.jsxs)('div', {

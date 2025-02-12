@@ -1,11 +1,11 @@
 var r = a(962557),
     n = Function.prototype,
-    o = n.call,
-    _ = r && n.bind.bind(o, o);
+    _ = n.call,
+    o = r && n.bind.bind(_, _);
 t.exports = r
-    ? _
+    ? o
     : function (t) {
           return function () {
-              return o.apply(t, arguments);
+              return _.apply(t, arguments);
           };
       };

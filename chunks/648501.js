@@ -19,11 +19,11 @@ var l = n(442837),
     C = n(355363),
     x = n(687352),
     Z = n(876548),
-    I = n(25601),
+    I = n(369272),
     b = n(981631),
     S = n(490897),
     N = n(388032),
-    E = n(276397);
+    E = n(327262);
 function j(e) {
     var t;
     let { channel: n, isChannelSelected: j, isChannelCollapsed: y, voiceStates: A, enableConnectedUserLimit: T, enableActivities: P, isSubscriptionGated: w, needSubscriptionToAccess: R, isNewChannel: L, muted: M, resolvedUnreadSetting: D } = e,

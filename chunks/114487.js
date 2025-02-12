@@ -11,7 +11,7 @@ var i = n(200651),
     u = n(451478),
     c = n(768581),
     d = n(624138),
-    f = n(507846);
+    f = n(807541);
 function _(e) {
     let { guildId: t, guildName: n, guildIcon: r, iconSize: a, className: _, animate: p } = e,
         h = (0, o.e7)([u.Z], () => u.Z.isFocused()),

@@ -27,7 +27,7 @@ var i = n(200651),
     x = n(215023),
     L = n(981631),
     y = n(388032),
-    P = n(2556);
+    P = n(472401);
 let O = (e) => {
         let { color: t } = e;
         return (0, i.jsx)(d.IGR, {

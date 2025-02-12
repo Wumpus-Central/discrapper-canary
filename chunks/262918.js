@@ -14,7 +14,7 @@ var i = n(200651),
     g = n(986398),
     m = n(981631),
     f = n(388032),
-    w = n(416132);
+    w = n(55340);
 function j(e) {
     let { guildId: t, leaderboardId: n, ...a } = e,
         j = (0, x.Z)({

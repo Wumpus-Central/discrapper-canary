@@ -17,7 +17,7 @@ var n = i(200651),
     C = i(458879),
     h = i(981631),
     _ = i(388032),
-    g = i(199519);
+    g = i(864712);
 function f(e) {
     var t;
     let { guildTemplate: i, onClose: l, onBack: f, onHubGuildInfoSet: j, onGuildCreated: p, isSlideReady: L, hasFooter: N = !0, isCommunity: I = !1 } = e,

@@ -14,7 +14,7 @@ var r = n(120356),
     p = n(905357),
     h = n(473608),
     m = n(388032),
-    g = n(596727);
+    g = n(928605);
 let E = (e) => {
     let { skuId: t, isSelected: n, price: r, onSelect: E, shouldDisplayHeader: v = !1, className: y } = e,
         { product: I } = (0, _.T)(t),

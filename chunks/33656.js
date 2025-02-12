@@ -12,8 +12,8 @@ var i = n(200651),
     m = n(930441),
     g = n(726985),
     x = n(388032),
-    _ = n(563250),
-    p = n(814632);
+    _ = n(282088),
+    p = n(483938);
 function E(e) {
     let { label: t, onChange: n, enabled: s, subLabel: l } = e;
     return (0, i.jsx)(o.j7V, {
@@ -35,7 +35,7 @@ function C() {
         }
     }, [l, t, e]);
     let C = m.M0.reduce((e, t) => e || !!n[t], !1),
-        f = {
+        N = {
             [m.$Z.COMMUNICATION]: g.s6.NOTIFICATIONS_EMAILS_COMMUNICATION,
             [m.$Z.SOCIAL]: g.s6.NOTIFICATIONS_EMAILS_SOCIAL,
             [m.$Z.UPDATES_AND_ANNOUNCEMENTS]: g.s6.NOTIFICATIONS_EMAILS_ANNOUNCEMENTS_AND_UPDATES,
@@ -54,7 +54,7 @@ function C() {
                       children: [
                           m.Od.map((e) => {
                               let { category: t, label: s, subLabel: l } = e,
-                                  r = f[t],
+                                  r = N[t],
                                   a = (0, i.jsx)(
                                       E,
                                       {

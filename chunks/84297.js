@@ -1,7 +1,7 @@
 var r,
     n,
-    o,
-    _ = a(936940),
+    _,
+    o = a(936940),
     i = a(354848),
     c = a(622281),
     s = a(803938),
@@ -11,9 +11,9 @@ var r,
     I = a(992051),
     R = u('iterator'),
     d = !1;
-[].keys && ('next' in (o = [].keys()) ? (n = E(E(o))) !== Object.prototype && (r = n) : (d = !0)),
+[].keys && ('next' in (_ = [].keys()) ? (n = E(E(_))) !== Object.prototype && (r = n) : (d = !0)),
     !c(r) ||
-    _(function () {
+    o(function () {
         var t = {};
         return r[R].call(t) !== t;
     })

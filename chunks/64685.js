@@ -4,8 +4,8 @@ a.d(e, {
 });
 var r = a(573736),
     n = a(370336),
-    o = a(694043),
-    _ = a(101284),
+    _ = a(694043),
+    o = a(101284),
     i = a(899517),
     c = a(578346);
 function s(t, e) {
@@ -17,10 +17,10 @@ function E(t) {
     (0, c.Hj)(e, t), (0, c.D2)(e, () => l(u));
 }
 function l(t, e = !1) {
-    (!e || (0, o.t$)()) &&
+    (!e || (0, _.t$)()) &&
         (0, n.hl)(i.n, 'fetch', function (e) {
             return function (...a) {
-                let { method: o, url: s } = (function (t) {
+                let { method: _, url: s } = (function (t) {
                         if (0 === t.length)
                             return {
                                 method: 'GET',
@@ -42,10 +42,10 @@ function l(t, e = !1) {
                     E = {
                         args: a,
                         fetchData: {
-                            method: o,
+                            method: _,
                             url: s
                         },
-                        startTimestamp: 1000 * (0, _.ph)()
+                        startTimestamp: 1000 * (0, o.ph)()
                     };
                 t || (0, c.rK)('fetch', { ...E });
                 let l = Error().stack;
@@ -55,7 +55,7 @@ function l(t, e = !1) {
                         else {
                             let t = {
                                 ...E,
-                                endTimestamp: 1000 * (0, _.ph)(),
+                                endTimestamp: 1000 * (0, o.ph)(),
                                 response: e
                             };
                             (0, c.rK)('fetch', t);
@@ -66,7 +66,7 @@ function l(t, e = !1) {
                         if (!t) {
                             let t = {
                                 ...E,
-                                endTimestamp: 1000 * (0, _.ph)(),
+                                endTimestamp: 1000 * (0, o.ph)(),
                                 error: e
                             };
                             throw ((0, c.rK)('fetch', t), (0, r.VZ)(e) && void 0 === e.stack && ((e.stack = l), (0, n.xp)(e, 'framesToPop', 1)), e);
@@ -107,7 +107,7 @@ async function u(t) {
         }
     })(e, () => {
         (0, c.rK)('fetch-body-resolved', {
-            endTimestamp: 1000 * (0, _.ph)(),
+            endTimestamp: 1000 * (0, o.ph)(),
             response: t
         });
     });

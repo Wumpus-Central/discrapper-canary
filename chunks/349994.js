@@ -8,7 +8,7 @@ var a = n(200651),
     c = n(981631),
     d = n(531578),
     m = n(388032),
-    u = n(473683);
+    u = n(119392);
 let x = [
     {
         className: u.emojiThumbsUp,
