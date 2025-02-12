@@ -432,7 +432,6 @@ let eS = function (e) {
                                               return (0, i.jsx)(G.Z, {
                                                   children: ef
                                                       ? (0, i.jsx)(Q.l, {
-                                                            short: !0,
                                                             wide: !0,
                                                             showOutputDevices: !0
                                                         })
@@ -585,7 +584,6 @@ let eS = function (e) {
                                             return (0, i.jsx)(G.Z, {
                                                 children: ef
                                                     ? (0, i.jsx)(Q.l, {
-                                                          short: !0,
                                                           wide: !0,
                                                           showOutputDevices: !0
                                                       })
@@ -664,7 +662,6 @@ let eS = function (e) {
                                             return (0, i.jsx)(G.Z, {
                                                 children: ef
                                                     ? (0, i.jsx)(Q.l, {
-                                                          short: !0,
                                                           wide: !0,
                                                           showOutputDevices: !0
                                                       })
