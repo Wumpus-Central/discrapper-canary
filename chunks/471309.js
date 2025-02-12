@@ -8,7 +8,10 @@ let a = (0, i.B)({
         kind: 'user',
         id: '2024-08_tiered_tenure_badges',
         label: 'Tiered Tenure Badging',
-        defaultConfig: { enabled: !1 },
+        defaultConfig: {
+            enabled: !1,
+            isBadgeVersion2: !1
+        },
         commonTriggerPoint: r.$P.CONNECTION_OPEN,
         treatments: [
             {
@@ -16,7 +19,8 @@ let a = (0, i.B)({
                 label: 'Enable Tiered Tenure Badges v1',
                 config: {
                     enabled: !0,
-                    version: 1
+                    version: 1,
+                    isBadgeVersion2: !1
                 }
             },
             {
@@ -24,7 +28,8 @@ let a = (0, i.B)({
                 label: 'Enable Tiered Tenure Badges v2',
                 config: {
                     enabled: !0,
-                    version: 2
+                    version: 2,
+                    isBadgeVersion2: !0
                 }
             }
         ]

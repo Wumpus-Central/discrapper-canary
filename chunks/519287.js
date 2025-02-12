@@ -12,5 +12,7 @@ e.exports = {
     badgeName: 'badgeName_a92dc5',
     badgeList: 'badgeList_a92dc5',
     subscribeButton: 'subscribeButton_a92dc5',
-    earnedBadge: 'earnedBadge_a92dc5'
+    learnMoreButton: 'learnMoreButton_a92dc5',
+    earnedBadge: 'earnedBadge_a92dc5',
+    earnedBadgeSubSince: 'earnedBadgeSubSince_a92dc5'
 };

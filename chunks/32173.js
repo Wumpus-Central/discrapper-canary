@@ -498,18 +498,17 @@ let ep = () => {
             dismissibleContentType: o
         };
     }
-    let eM = (0, R.kG)(),
-        { enabled: eB } = (0, I.D)();
+    let eM = (0, R.Rw)(),
+        { enabled: eB, isBadgeVersion2: ey } = (0, I.D)();
     return (
-        null != eM &&
-            eB &&
+        ((!ey && eB && null != eM && eM.status !== R.Vq.UPCOMING) || (ey && eB)) &&
             (ew.tenureBadge = {
                 name: 'tenureBadge',
                 title: O.intl.string(O.t.rnsqpa),
                 pillText: O.intl.string(O.t.jyYgZ2).toLocaleUpperCase(),
                 perkComponent: (0, r.jsx)(j.Z, {}),
                 cardVariant: P.zW.NITRO_GRADIENT_HOVER_BORDER,
-                onClick: () => (0, S.k)(e)
+                onClick: () => (0, S.k)({ analyticsLocations: e })
             }),
         (0, v.ZP)('usePerksDiscoverabilityCard') === v.P0.SUMMER_2024 &&
             (ew.shyProject = {

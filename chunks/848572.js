@@ -1,9 +1,10 @@
 n.d(t, {
     GG: () => E,
     Rw: () => T,
+    SI: () => b,
     Vq: () => p,
+    a1: () => g,
     j_: () => m,
-    kG: () => h,
     y3: () => v
 }),
     n(724458);
@@ -26,8 +27,8 @@ let h = () => {
         return (0, f.l)(null == e ? void 0 : e.id);
     },
     m = () => {
-        let { version: e } = (0, d.D)();
-        return 2 === e ? Object.values(_.q4) : Object.values(_.Ph);
+        let { isBadgeVersion2: e } = (0, d.D)();
+        return e ? Object.values(_.q4) : Object.values(_.Ph);
     },
     g = (e) =>
         (0, a.e7)([o.Z], () => {
