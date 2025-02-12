@@ -40571,6 +40571,8 @@ img.thumbnail__0f2e8 {
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
+    grid-gap: 8px;
+    gap: 8px;
     border-radius: 4px
 }
 

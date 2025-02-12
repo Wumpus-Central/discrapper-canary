@@ -1,4 +1,4 @@
-n.d(t, { J: () => f });
+n.d(t, { J: () => f }), n(47120);
 var i = n(200651),
     l = n(192379),
     a = n(120356),
@@ -19,17 +19,18 @@ let f = (e) => {
         C = !t.available && !t.temporarilyAvailable,
         x = t.temporarilyAvailable && !n && !_,
         v = !_ && t.id === f,
-        E = null == g ? void 0 : g.previewSoundURL,
-        { isPlaying: I, playSound: b, stopSound: Z, preloadSound: N } = (0, c.Z)(E),
-        T = m[t.styleKey],
-        S = l.useCallback(() => {
+        E = null == g ? void 0 : g.previewSoundURLs,
+        [I, b] = l.useState(0),
+        { isPlaying: Z, playSound: N, stopSound: T, preloadSound: S } = (0, c.Z)(null != E ? E[I] : null, { soundId: t.id }),
+        j = m[t.styleKey],
+        y = l.useCallback(() => {
             (n || !C) && (0, d.v6)(a === t.id ? null : t.id);
         }, [a, t.id, C, n]),
-        j = l.useCallback(() => {
-            b();
-        }, [b]);
+        A = l.useCallback(() => {
+            N(), (0.25 > Math.random() || I > 0) && null != E && b((e) => (e + 1) % E.length);
+        }, [N, I, E]);
     return (0, i.jsxs)('div', {
-        className: r()(m.filter, T, {
+        className: r()(m.filter, j, {
             [m.selected]: _,
             [m.locked]: C && !_,
             [m.unlocked]: !C
@@ -37,8 +38,8 @@ let f = (e) => {
         children: [
             (0, i.jsxs)(o.P3F, {
                 className: m.selector,
-                onClick: S,
-                onMouseEnter: N,
+                onClick: y,
+                onMouseEnter: S,
                 children: [
                     (0, i.jsxs)('div', {
                         className: m.iconTreatmentsWrapper,
@@ -112,15 +113,15 @@ let f = (e) => {
             }),
             null != E &&
                 (0, i.jsx)(o.ua7, {
-                    text: p.intl.string(I ? p.t.ItuPbm : p.t['0gtbEx']),
+                    text: p.intl.string(Z ? p.t.ItuPbm : p.t['0gtbEx']),
                     children: (e) => {
                         var t;
                         return (0, i.jsx)(o.P3F, {
                             ...e,
-                            className: r()([m.hoverButtonCircle, m.previewButton], { [m.visible]: I }),
-                            onClick: I ? Z : j,
+                            className: r()([m.hoverButtonCircle, m.previewButton], { [m.visible]: Z }),
+                            onClick: Z ? T : A,
                             'aria-label': p.intl.formatToPlainString(p.t.gDzvjY, { voiceFilterName: null !== (t = null == g ? void 0 : g.name) && void 0 !== t ? t : '' }),
-                            children: I
+                            children: Z
                                 ? (0, i.jsx)(o.wNq, {
                                       size: 'custom',
                                       height: 16,
