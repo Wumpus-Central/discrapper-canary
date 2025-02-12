@@ -25,6 +25,7 @@ function C(e) {
         x &&
             C &&
             t.hasFeature(_.oNc.MEMBER_VERIFICATION_GATE_ENABLED) &&
+            t.hasFeature(_.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL) &&
             c.Z.fetchGuildJoinRequests({
                 guildId: t.id,
                 status: h.wB.SUBMITTED,
