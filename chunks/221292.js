@@ -112,7 +112,7 @@ let g = (e) => {
         });
     },
     b = (e) => {
-        let { guildId: t, channelId: n, analyticsLocations: r, action: a, display: s, activity: o, stream: l, entry: u, outbox: d } = e;
+        let { guildId: t, channelId: n, analyticsLocations: r, action: a, display: s, activity: o, stream: l, entry: u, outbox: d, voiceChannelId: f } = e;
         c.default.track(h.rMx.USER_PROFILE_ACTIVITY_ACTION, {
             ...(0, i.hH)(t),
             ...(0, i.JS)(n),
@@ -141,7 +141,8 @@ let g = (e) => {
                     : d.entries.map((e) => {
                           let { author_id: t } = e;
                           return t;
-                      })
+                      }),
+            voice_channel_id: f
         });
     },
     S = (e) => {

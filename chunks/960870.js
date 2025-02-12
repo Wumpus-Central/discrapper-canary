@@ -6,17 +6,17 @@ var i = n(192379),
     o = n(785717),
     l = n(221292);
 function u(e) {
-    let { user: t, display: n, activity: u, entry: c, stream: d, analyticsLocations: f } = e,
-        { context: _, trackUserProfileAction: p } = (0, o.KZ)(),
-        { analyticsLocations: h } = (0, a.ZP)(),
-        m = null != f ? f : h,
-        g = (0, r.e7)([s.Z], () => s.Z.getUserOutbox(t.id));
+    let { user: t, display: n, activity: u, entry: c, stream: d, voiceChannelId: f, analyticsLocations: _ } = e,
+        { context: p, trackUserProfileAction: h } = (0, o.KZ)(),
+        { analyticsLocations: m } = (0, a.ZP)(),
+        g = null != _ ? _ : m,
+        E = (0, r.e7)([s.Z], () => s.Z.getUserOutbox(t.id));
     return (0, i.useCallback)(
         (e) => {
             let { action: t } = e;
-            p({
+            h({
                 action: t,
-                analyticsLocations: m
+                analyticsLocations: g
             }),
                 (0, l.z7)({
                     action: t,
@@ -24,11 +24,12 @@ function u(e) {
                     activity: u,
                     entry: c,
                     stream: d,
-                    outbox: g,
-                    analyticsLocations: m,
-                    ..._
+                    outbox: E,
+                    voiceChannelId: f,
+                    analyticsLocations: g,
+                    ...p
                 });
         },
-        [p, _, n, u, d, c, g, m]
+        [h, p, n, u, d, c, E, f, g]
     );
 }

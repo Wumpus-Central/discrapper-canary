@@ -35,6 +35,8 @@ function L(e) {
         { analyticsLocations: w } = (0, d.ZP)(c.Z.USER_PROFILE_VOICE_ACTIVITY_CARD),
         M = (0, E.Z)({
             display: 'voice',
+            activity: { type: 'VOICE' },
+            voiceChannelId: n.id,
             user: t,
             analyticsLocations: w
         }),

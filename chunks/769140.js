@@ -52,31 +52,32 @@ function z(e) {
             [H.fullSize]: Q === F.y0.FULL_SIZE
         },
         { enabled: $, analyticsEligible: ee } = (0, m.R4)('user-profile-stream-activity-card-web'),
-        { analyticsLocations: et } = (0, h.ZP)(p.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
-        en = (0, L.Z)({
-            display: 'live',
-            user: t,
-            stream: a,
-            analyticsLocations: et
-        }),
-        ei = (0, x.Z)({
-            userId: t.id,
-            onAction: en
-        }),
-        er = (0, o.e7)([A.Z], () => A.Z.getGuild(null == a ? void 0 : a.guildId)),
-        ea = (0, o.e7)([S.Z], () => S.Z.getChannel(null == a ? void 0 : a.channelId)),
-        es = (0, o.Wu)([O.ZP], () =>
-            null != ea
-                ? O.ZP.getVoiceStatesForChannel(ea).map((e) => {
+        et = (0, o.e7)([A.Z], () => A.Z.getGuild(null == a ? void 0 : a.guildId)),
+        en = (0, o.e7)([S.Z], () => S.Z.getChannel(null == a ? void 0 : a.channelId)),
+        ei = (0, o.Wu)([O.ZP], () =>
+            null != en
+                ? O.ZP.getVoiceStatesForChannel(en).map((e) => {
                       let { user: t } = e;
                       return t;
                   })
                 : []
         ),
-        eo = (0, o.e7)([C.Z], () => C.Z.findActivity(t.id, (e) => (0, f.Z)(e) && !(0, _.Z)(e))),
-        [el, eu] = (0, y.wq)(ea),
-        { previewUrl: ec, isLoading: ed } = (0, v.Z)(null == a ? void 0 : a.guildId, null == a ? void 0 : a.channelId, null == a ? void 0 : a.ownerId),
-        ef = (0, o.e7)([N.Z], () => null != ea && N.Z.canBasicChannel(V.S7T.CONNECT, ea)),
+        er = (0, o.e7)([C.Z], () => C.Z.findActivity(t.id, (e) => (0, f.Z)(e) && !(0, _.Z)(e))),
+        { analyticsLocations: ea } = (0, h.ZP)(p.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
+        es = (0, L.Z)({
+            display: 'live',
+            voiceChannelId: null == en ? void 0 : en.id,
+            user: t,
+            stream: a,
+            analyticsLocations: ea
+        }),
+        eo = (0, x.Z)({
+            userId: t.id,
+            onAction: es
+        }),
+        { previewUrl: el, isLoading: eu } = (0, v.Z)(null == a ? void 0 : a.guildId, null == a ? void 0 : a.channelId, null == a ? void 0 : a.ownerId),
+        [ec, ed] = (0, y.wq)(en),
+        ef = (0, o.e7)([N.Z], () => null != en && N.Z.canBasicChannel(V.S7T.CONNECT, en)),
         e_ = (0, o.e7)([R.Z], () => R.Z.getRelationshipType(t.id));
     r.useEffect(() => {
         if (ee) {
@@ -90,23 +91,23 @@ function z(e) {
             });
         }
     }, [t, e_, $, ee, a]);
-    let ep = (0, d.Z)(ed ? null : ec),
-        eh = ed || null == ec ? ep : ec;
-    if (null == er || null == ea || ($ && !1 === a.discoverable)) return null;
+    let ep = (0, d.Z)(eu ? null : el),
+        eh = eu || null == el ? ep : el;
+    if (null == et || null == en || ($ && !1 === a.discoverable)) return null;
     let em = () => {
             let e = s()(Y.preview, J),
                 t = (e) => {
-                    e.stopPropagation(), en({ action: 'PRESS_IMAGE' }), u.default.selectVoiceChannel(a.channelId), (0, c.iV)(a), null == q || q();
+                    e.stopPropagation(), es({ action: 'PRESS_IMAGE' }), u.default.selectVoiceChannel(a.channelId), (0, c.iV)(a), null == q || q();
                 };
-            return null == eh && ed
+            return null == eh && eu
                 ? (0, i.jsx)('div', {
                       className: e,
                       children: (0, i.jsx)(l.$jN, {})
                   })
                 : null == eh
                   ? (0, i.jsxs)(l.P3F, {
-                        className: s()(e, Y.overlay, { [Y.clickable]: el }),
-                        onClick: el ? t : void 0,
+                        className: s()(e, Y.overlay, { [Y.clickable]: ec }),
+                        onClick: ec ? t : void 0,
                         children: [
                             (0, i.jsx)('img', {
                                 alt: '',
@@ -119,7 +120,7 @@ function z(e) {
                                             className: Y.overlayText,
                                             variant: 'text-sm/medium',
                                             color: 'always-white',
-                                            children: (0, y.P9)(eu)
+                                            children: (0, y.P9)(ed)
                                         }),
                                         (0, i.jsx)(l.Text, {
                                             variant: 'text-sm/medium',
@@ -130,8 +131,8 @@ function z(e) {
                         ]
                     })
                   : (0, i.jsxs)(l.P3F, {
-                        className: s()(e, Y.overlay, { [Y.clickable]: el }),
-                        onClick: el ? t : void 0,
+                        className: s()(e, Y.overlay, { [Y.clickable]: ec }),
+                        onClick: ec ? t : void 0,
                         children: [
                             (0, i.jsx)('img', {
                                 alt: '',
@@ -145,7 +146,7 @@ function z(e) {
                                             className: Y.overlayText,
                                             variant: 'text-sm/medium',
                                             color: 'always-white',
-                                            children: (0, y.P9)(eu)
+                                            children: (0, y.P9)(ed)
                                         }),
                                         (0, i.jsx)(l.gw7, {
                                             size: 'xs',
@@ -160,10 +161,10 @@ function z(e) {
         eg = () => {
             if (Q !== F.y0.FULL_SIZE) return null;
             let e = (e) => {
-                    e.stopPropagation(), null == en || en({ action: 'OPEN_VOICE_CHANNEL' }), ea.isGuildStageVoice() ? (0, b.Cq)(ea) : (u.default.selectVoiceChannel(ea.id), (0, I.Kh)(ea.id)), null == q || q();
+                    e.stopPropagation(), null == es || es({ action: 'OPEN_VOICE_CHANNEL' }), en.isGuildStageVoice() ? (0, b.Cq)(en) : (u.default.selectVoiceChannel(en.id), (0, I.Kh)(en.id)), null == q || q();
                 },
                 n = (e) => {
-                    e.stopPropagation(), en({ action: 'OPEN_VOICE_GUILD' }), (0, T.X)(er.id), null == q || q();
+                    e.stopPropagation(), es({ action: 'OPEN_VOICE_GUILD' }), (0, T.X)(et.id), null == q || q();
                 };
             return (0, i.jsxs)('div', {
                 className: H.details,
@@ -176,7 +177,7 @@ function z(e) {
                                 className: H.voiceChannelHeading,
                                 children: [
                                     (0, i.jsx)(G.Z, {
-                                        channel: ea,
+                                        channel: en,
                                         size: 'xxs',
                                         color: l.TVs.colors.TEXT_NORMAL,
                                         className: H.voiceIcon
@@ -184,25 +185,25 @@ function z(e) {
                                     (0, i.jsx)(l.P3F, {
                                         className: s()(H.clickableText, H.inline),
                                         onClick: e,
-                                        children: ea.name
+                                        children: en.name
                                     })
                                 ]
                             }),
                             (0, i.jsx)(k.Z, {
                                 variant: 'text-xs/normal',
-                                text: j.intl.formatToPlainString(j.t['hq/Qzc'], { guildName: er.name }),
+                                text: j.intl.formatToPlainString(j.t['hq/Qzc'], { guildName: et.name }),
                                 onClick: n
                             })
                         ]
                     }),
                     (0, i.jsx)(E.Z, {
-                        users: es,
-                        guildId: er.id,
-                        channelId: ea.id,
+                        users: ei,
+                        guildId: et.id,
+                        channelId: en.id,
                         maxUsers: U.W,
                         size: l.EFr.SIZE_16,
                         onClick: (e) => {
-                            e.stopPropagation(), null == en || en({ action: 'PRESS_VOICE_CHANNEL_AVATARS' });
+                            e.stopPropagation(), null == es || es({ action: 'PRESS_VOICE_CHANNEL_AVATARS' });
                         },
                         onUserClick: (e) => e.stopPropagation(),
                         disableUserPopout: (e) => e === t.id,
@@ -217,9 +218,9 @@ function z(e) {
                 ? null
                 : (0, i.jsx)(U.Z, {
                       user: t,
-                      guild: er,
-                      channel: ea,
-                      onAction: en,
+                      guild: et,
+                      channel: en,
+                      onAction: es,
                       onClose: q
                   }),
         ev = () =>
@@ -228,21 +229,21 @@ function z(e) {
                 : (0, i.jsx)('div', {
                       className: s()(H.actions, J),
                       children: (0, i.jsx)(B.Z, {
-                          channel: ea,
-                          onAction: en,
+                          channel: en,
+                          onAction: es,
                           onClose: q
                       })
                   });
     return (0, i.jsx)(h.Gt, {
-        value: et,
+        value: ea,
         children: (0, i.jsxs)(w.Z, {
-            ref: ei,
+            ref: eo,
             className: z,
-            onAction: en,
+            onAction: es,
             onClose: q,
             children: [
                 (0, i.jsx)(M.Z, {
-                    text: null != eo ? j.intl.formatToPlainString(j.t['4CQq9f'], { name: eo.name }) : j.intl.string(j.t['Jpkr/v']),
+                    text: null != er ? j.intl.formatToPlainString(j.t['4CQq9f'], { name: er.name }) : j.intl.string(j.t['Jpkr/v']),
                     tags: (0, i.jsx)(g.ZP, { size: g.OH.SMALL }),
                     contextMenu: (0, i.jsx)(Z.Z, {
                         display: 'live',
