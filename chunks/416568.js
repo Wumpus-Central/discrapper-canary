@@ -304,11 +304,15 @@ function es(e) {
         { enabled: eG } = (0, T.W)({ location: 'GuildsBar' });
     (0, w.i)();
     let ek = l.useRef(null),
-        { shouldShowOnboardingCoachmark: eB, closeOnboardingCoachmarkIfOpen: eO } = (0, P.QM)({
+        {
+            shouldShowOnboardingCoachmark: eB,
+            closeOnboardingCoachmarkIfOpen: eO,
+            questId: eU
+        } = (0, P.QM)({
             isVirtualCurrencyEnabled: eG,
             discoveryButtonRef: ek
         }),
-        eU = ed.map((e) =>
+        eV = ed.map((e) =>
             (0, i.jsx)(
                 z.Z,
                 {
@@ -318,12 +322,13 @@ function es(e) {
                 },
                 e.id
             )
-        );
+        ),
+        eF = eG && eB,
+        eH = eF ? eU : void 0;
     return (0, i.jsxs)(Z.Gt, {
         value: ey,
         children: [
-            eG &&
-                eB &&
+            eF &&
                 (0, i.jsx)(P.ds, {
                     backgroundElementRef: ek,
                     onClose: A.l,
@@ -380,7 +385,7 @@ function es(e) {
                                                           'aria-label': ei.intl.string(ei.t['7hB4kp']),
                                                           children: eL.map(eR)
                                                       }),
-                                                eU,
+                                                eV,
                                                 n
                                                     ? null
                                                     : (0, i.jsx)(H.Z, {
@@ -391,6 +396,7 @@ function es(e) {
                                                 !n && s
                                                     ? (0, i.jsx)(W.Z, {
                                                           ref: ek,
+                                                          questId: eH,
                                                           onClick: eO,
                                                           selected: eT,
                                                           className: el.discoveryIcon
@@ -405,6 +411,7 @@ function es(e) {
                                                   hideGradient: eS,
                                                   children: (0, i.jsx)(W.Z, {
                                                       ref: ek,
+                                                      questId: eH,
                                                       onClick: eO,
                                                       selected: eT,
                                                       className: el.discoveryIcon
