@@ -47111,6 +47111,8 @@ html.disable-forced-colors * {
     --battlenet-hsl: 199.651 calc(var(--saturation-factor, 1)*100%) 44.902%;
     --bg-animated-gradient-background-indigo-1: hsl(var(--bg-animated-gradient-background-indigo-1-hsl)/1);
     --bg-animated-gradient-background-indigo-1-hsl: 241.5 calc(var(--saturation-factor, 1)*57.143%) 27.451%;
+    --bg-animated-gradient-background-indigo-2: hsl(var(--bg-animated-gradient-background-indigo-2-hsl)/1);
+    --bg-animated-gradient-background-indigo-2-hsl: 257.059 calc(var(--saturation-factor, 1)*100%) 20%;
     --bg-animated-gradient-background-not-black: hsl(var(--bg-animated-gradient-background-not-black-hsl)/1);
     --bg-animated-gradient-background-not-black-hsl: 240 calc(var(--saturation-factor, 1)*7.143%) 5.49%;
     --bg-animated-gradient-background-pink-1: hsl(var(--bg-animated-gradient-background-pink-1-hsl)/1);

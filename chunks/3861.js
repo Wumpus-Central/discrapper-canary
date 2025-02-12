@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => b });
 var i = n(200651),
     l = n(192379),
     a = n(120356),
@@ -7,75 +7,83 @@ var i = n(200651),
     o = n(413458),
     c = n(351248),
     d = n(600164),
-    u = n(585483),
-    h = n(340295),
-    p = n(171277),
-    m = n(677845),
-    f = n(430371),
-    g = n(236564),
-    _ = n(981631),
-    C = n(354459),
-    x = n(932747);
-let v = (0, s.Z)((e) => {
-    let { participants: t, filteredParticipants: n, selectedParticipant: a, participantsVersion: s, layout: v, onSelectParticipant: E, onContextMenuParticipant: I, onFullscreenParticipant: b, channel: Z, hasConnectPermission: N, className: T, inCall: S, showParticipants: j = !0, paused: y = !1, width: A, height: P, idle: R, mode: M, popoutWindow: L, awaitingRemoteSessionInfo: k, callContainerDimensions: O } = e;
+    u = n(540059),
+    h = n(594174),
+    p = n(585483),
+    m = n(340295),
+    f = n(171277),
+    g = n(677845),
+    _ = n(430371),
+    C = n(236564),
+    x = n(45430),
+    v = n(981631),
+    E = n(354459),
+    I = n(932747);
+let b = (0, s.Z)((e) => {
+    var t, n;
+    let { participants: a, filteredParticipants: s, selectedParticipant: b, participantsVersion: Z, layout: N, onSelectParticipant: T, onContextMenuParticipant: S, onFullscreenParticipant: j, channel: y, hasConnectPermission: A, className: P, inCall: R, showParticipants: M = !0, paused: L = !1, width: k, height: O, idle: D, mode: w, popoutWindow: U, awaitingRemoteSessionInfo: B, callContainerDimensions: F } = e;
     l.useEffect(() => {
-        u.S.dispatch(_.CkL.REMEASURE_TARGET);
-    }, [A, P, O.width, O.height]);
-    let D = l.useMemo(() => n.filter((e) => e.type !== C.fO.ACTIVITY || !e.participants.some((e) => (0, o.J)(e))), [n, s]);
-    return (null == k ? void 0 : k.channelId) === Z.id
-        ? (0, i.jsx)(p.Z, { height: P })
-        : (null == Z ? void 0 : Z.isGuildVocal()) && !S
-          ? (0, i.jsx)(h.Z, {
-                channel: Z,
-                participants: t,
-                hasConnectPermission: N
+        p.S.dispatch(v.CkL.REMEASURE_TARGET);
+    }, [k, O, F.width, F.height]);
+    let H = (0, u.Q3)('ChannelCallContent'),
+        G = null !== (n = null === (t = h.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff()) && void 0 !== n && n,
+        V = l.useMemo(() => s.filter((e) => e.type !== E.fO.ACTIVITY || !e.participants.some((e) => (0, o.J)(e))), [s, Z]);
+    return (null == B ? void 0 : B.channelId) === y.id
+        ? (0, i.jsx)(f.Z, { height: O })
+        : (null == y ? void 0 : y.isGuildVocal()) && !R
+          ? (0, i.jsx)(m.Z, {
+                channel: y,
+                participants: a,
+                hasConnectPermission: A
             })
-          : M === _.WtW.VOICE
+          : w === v.WtW.VOICE
             ? (0, i.jsx)(c.Z, {
-                  guildId: Z.guild_id,
-                  width: A,
-                  className: x.voiceCallWrapper,
-                  participants: t,
-                  onContextMenu: I
+                  guildId: y.guild_id,
+                  width: k,
+                  className: I.voiceCallWrapper,
+                  participants: a,
+                  onContextMenu: S
               })
-            : ((n = S ? n : t), null == a)
-              ? 0 === n.length
-                  ? (0, i.jsx)(g.Z, {
-                        className: r()(x.videoGrid, x.hiddenParticipants),
-                        channelId: Z.id,
-                        width: A
-                    })
+            : ((s = R ? s : a), null == b)
+              ? 0 === s.length
+                  ? H && G
+                      ? (0, i.jsx)(x.Z, { channelId: y.id })
+                      : (0, i.jsx)(C.Z, {
+                            className: r()(I.videoGrid, I.hiddenParticipants),
+                            channelId: y.id,
+                            width: k
+                        })
                   : (0, i.jsx)(d.Z, {
-                        className: x.videoGridWrapper,
+                        className: I.videoGridWrapper,
                         justify: d.Z.Justify.CENTER,
                         align: d.Z.Align.CENTER,
-                        children: (0, i.jsx)(m.Z, {
-                            channel: Z,
-                            className: x.videoGrid,
-                            participants: D,
-                            totalNumberOfParticipants: t.length,
-                            onClick: E,
-                            onDoubleClick: b,
-                            onContextMenu: I,
-                            paused: y,
-                            inCall: S
+                        children: (0, i.jsx)(g.Z, {
+                            channel: y,
+                            className: I.videoGrid,
+                            participants: V,
+                            totalNumberOfParticipants: a.length,
+                            onClick: T,
+                            onDoubleClick: j,
+                            onContextMenu: S,
+                            paused: L,
+                            inCall: R
                         })
                     })
-              : (0, i.jsx)(f.Z, {
-                    onFullscreenParticipant: b,
-                    onContextMenuParticipant: I,
-                    onSelectParticipant: E,
-                    selectedParticipant: a,
-                    filteredParticipants: D,
-                    participants: t,
-                    popoutWindow: L,
-                    className: T,
-                    idle: R,
-                    height: P,
-                    width: A,
-                    layout: v,
-                    inCall: S,
-                    channel: Z,
-                    showParticipants: j
+              : (0, i.jsx)(_.Z, {
+                    onFullscreenParticipant: j,
+                    onContextMenuParticipant: S,
+                    onSelectParticipant: T,
+                    selectedParticipant: b,
+                    filteredParticipants: V,
+                    participants: a,
+                    popoutWindow: U,
+                    className: P,
+                    idle: D,
+                    height: O,
+                    width: k,
+                    layout: N,
+                    inCall: R,
+                    channel: y,
+                    showParticipants: M
                 });
 });

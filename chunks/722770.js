@@ -3,6 +3,7 @@ Object.freeze({
     APPLICATION_SUBSCRIPTION_START: 'hsl(235, calc(var(--saturation-factor, 1) * 68.5%), 52.7%)',
     BATTLENET: 'hsl(200, calc(var(--saturation-factor, 1) * 100.0%), 44.9%)',
     BG_ANIMATED_GRADIENT_BACKGROUND_INDIGO_1: 'hsl(242, calc(var(--saturation-factor, 1) * 57.1%), 27.5%)',
+    BG_ANIMATED_GRADIENT_BACKGROUND_INDIGO_2: 'hsl(257, calc(var(--saturation-factor, 1) * 100.0%), 20.0%)',
     BG_ANIMATED_GRADIENT_BACKGROUND_NOT_BLACK: 'hsl(240, calc(var(--saturation-factor, 1) * 7.1%), 5.5%)',
     BG_ANIMATED_GRADIENT_BACKGROUND_PINK_1: 'hsl(328, calc(var(--saturation-factor, 1) * 80.6%), 59.6%)',
     BG_GRADIENT_AURORA_1: 'hsl(220, calc(var(--saturation-factor, 1) * 86.5%), 17.5%)',

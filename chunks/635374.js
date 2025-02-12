@@ -6,5 +6,6 @@ e.exports = {
     channelName: 'channelName__5aa3a',
     joinButton: 'joinButton__5aa3a',
     roundButton: 'roundButton__5aa3a',
-    buttonContainer: 'buttonContainer__5aa3a'
+    buttonContainer: 'buttonContainer__5aa3a',
+    content: 'content__5aa3a'
 };

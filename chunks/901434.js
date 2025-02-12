@@ -35,6 +35,7 @@ let b = (e, t) => C.ZP.getName(e.getGuildId(), e.id, t.user),
         return (0, i.jsxs)('div', {
             className: I.container,
             children: [
+                N && (0, i.jsx)(f.Z, {}),
                 (0, i.jsx)('div', {
                     className: I.tiles,
                     style: { maxWidth: 168 * A },
