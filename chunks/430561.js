@@ -1,23 +1,23 @@
 l.d(i, {
     GY: () => h,
     PI: () => c,
-    RT: () => g,
+    RT: () => I,
     ls: () => p
 });
 var t = l(200651);
 l(192379);
 var n = l(120356),
     d = l.n(n),
-    a = l(692547),
-    r = l(481060),
-    o = l(765250),
-    s = l(388032),
+    r = l(692547),
+    a = l(481060),
+    s = l(765250),
+    o = l(388032),
     u = l(553109);
 function c(e) {
     let { children: i } = e;
     return (0, t.jsx)('div', {
         className: u.titleWrapper,
-        children: (0, t.jsx)(r.Text, {
+        children: (0, t.jsx)(a.Text, {
             variant: 'text-xs/semibold',
             color: 'header-primary',
             children: i
@@ -26,57 +26,57 @@ function c(e) {
 }
 function p(e) {
     let { onClick: i } = e,
-        l = s.intl.string(s.t['3D5yo6']);
-    return (0, t.jsx)(r.ua7, {
+        l = o.intl.string(o.t['3D5yo6']);
+    return (0, t.jsx)(a.ua7, {
         text: l,
         'aria-label': l,
         children: (e) =>
-            (0, t.jsx)(r.P3F, {
+            (0, t.jsx)(a.P3F, {
                 ...e,
                 className: u.button,
                 onClick: i,
-                children: (0, t.jsx)(r.ewm, {
+                children: (0, t.jsx)(a.ewm, {
                     size: 'xxs',
-                    color: a.Z.colors.INTERACTIVE_ACTIVE
+                    color: r.Z.colors.INTERACTIVE_ACTIVE
                 })
             })
     });
 }
 function h(e) {
     let { widgetId: i, showAllStreams: l } = e,
-        n = l ? s.intl.string(s.t.q2B3rq) : s.intl.string(s.t.JKGi6u),
+        n = l ? o.intl.string(o.t.q2B3rq) : o.intl.string(o.t.JKGi6u),
         c = () => {
-            (0, o.zG)(i, { showAllStreams: !l });
+            (0, s.zG)(i, { showAllStreams: !l });
         };
-    return (0, t.jsx)(r.ua7, {
+    return (0, t.jsx)(a.ua7, {
         text: n,
         'aria-label': n,
         children: (e) =>
-            (0, t.jsx)(r.P3F, {
+            (0, t.jsx)(a.P3F, {
                 ...e,
                 className: d()(u.button, l && u.active),
                 onClick: c,
-                children: (0, t.jsx)(r.pzj, {
+                children: (0, t.jsx)(a.pzj, {
                     size: 'xxs',
-                    color: l ? a.Z.colors.BG_BRAND : a.Z.colors.INTERACTIVE_ACTIVE
+                    color: l ? r.Z.colors.BG_BRAND : r.Z.colors.INTERACTIVE_ACTIVE
                 })
             })
     });
 }
-function g(e) {
+function I(e) {
     let { id: i, pinned: l } = e,
-        n = l ? s.intl.string(s.t.cSu80t) : s.intl.string(s.t.cM8Vnp);
-    return (0, t.jsx)(r.ua7, {
+        n = l ? o.intl.string(o.t.cSu80t) : o.intl.string(o.t.cM8Vnp);
+    return (0, t.jsx)(a.ua7, {
         text: n,
         'aria-label': n,
         children: (e) =>
-            (0, t.jsx)(r.P3F, {
+            (0, t.jsx)(a.P3F, {
                 ...e,
                 className: d()(u.button, l && u.active),
-                onClick: () => (0, o.xh)(i),
-                children: (0, t.jsx)(r.k5M, {
+                onClick: () => (0, s.xh)(i),
+                children: (0, t.jsx)(a.k5M, {
                     size: 'xxs',
-                    color: l ? a.Z.colors.BG_BRAND : a.Z.colors.INTERACTIVE_ACTIVE
+                    color: l ? r.Z.colors.BG_BRAND : r.Z.colors.INTERACTIVE_ACTIVE
                 })
             })
     });

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f });
 var i = n(26151),
-    o = n(13245),
-    r = n(287734),
-    l = n(43267),
+    r = n(13245),
+    l = n(287734),
+    o = n(43267),
     a = n(933557),
     s = n(699516),
     d = n(594174),
@@ -14,7 +14,7 @@ var i = n(26151),
 function f(e) {
     let t = (0, a.F6)(e, d.default, s.Z),
         n = p.intl.string(p.t.ssrVzM),
-        f = (0, l.x)(e),
+        f = (0, o.x)(e),
         g = (0, c.Z)(e),
         { trackView: m, trackClick: v } = (0, u.R)(h.n0.IncomingCall, {
             notif_type: h.n0.IncomingCall,
@@ -36,10 +36,10 @@ function f(e) {
             if ((v('join'), _.TPd.CALLABLE.has(e.type))) i.Z.call(e.id, !1, !1);
             else {
                 if (e.type !== _.d4z.GUILD_VOICE) return;
-                r.default.selectVoiceChannel(e.id);
+                l.default.selectVoiceChannel(e.id);
             }
-            o.Z.updateNotificationStatus(n),
-                o.Z.track(_.rMx.VOICE_CHANNEL_SELECTED, {
+            r.Z.updateNotificationStatus(n),
+                r.Z.track(_.rMx.VOICE_CHANNEL_SELECTED, {
                     location: 'Overlay Notificaiton',
                     guild_id: e.guild_id,
                     channel_id: e.id,

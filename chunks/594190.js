@@ -486,7 +486,7 @@ function eU(e) {
         a = i !== Q.enableOverlayV3[ef(t)];
     if ((r && (Q.enableOverlay[ef(t)] = n), a && null != i && (Q.enableOverlayV3[ef(t)] = i), eg(), !__OVERLAY__ && null != (null != t.id ? T.Z.getDetectableGame(t.id) : null))) {
         var s, o;
-        r && (0, v.o)(n, v.A.LEGACY_GAME, null !== (s = t.id) && void 0 !== s ? s : null), a && null != i && (0, v.o)(i, v.A.OOP_GAME, null !== (o = t.id) && void 0 !== o ? o : null);
+        r && (0, v.ou)(n, v.AE.LEGACY_GAME, null !== (s = t.id) && void 0 !== s ? s : null), a && null != i && (0, v.ou)(i, v.AE.OOP_GAME, null !== (o = t.id) && void 0 !== o ? o : null);
     }
 }
 function eG(e) {

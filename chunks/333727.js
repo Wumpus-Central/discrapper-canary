@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h });
 var i = n(278323),
-    o = n(13245),
-    r = n(45114),
-    l = n(237997),
+    r = n(13245),
+    l = n(45114),
+    o = n(237997),
     a = n(145597),
     s = n(620954),
     d = n(987650),
@@ -35,13 +35,13 @@ function h(e, t, n, h) {
                 channelId: e.id,
                 type: c.mFx.JOIN,
                 activity: h,
-                location: l.Z.isLocked((0, a.QF)()) ? c.Sbl.LOCKED_OVERLAY : c.Sbl.UNLOCKED_OVERLAY
+                location: o.Z.isLocked((0, a.QF)()) ? c.Sbl.LOCKED_OVERLAY : c.Sbl.UNLOCKED_OVERLAY
             }),
                 m('join'),
-                o.Z.updateNotificationStatus(n);
+                r.Z.updateNotificationStatus(n);
         },
         onCancelClick: (t, n) => {
-            (0, r.In)(e.id, !0, !0), o.Z.updateNotificationStatus(n), m('decline');
+            (0, l.In)(e.id, !0, !0), r.Z.updateNotificationStatus(n), m('decline');
         },
         onDismissClick: () => {
             m('dismiss');

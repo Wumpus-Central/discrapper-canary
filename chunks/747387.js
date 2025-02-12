@@ -12,10 +12,10 @@ var a = n(200651),
     u = n(599857),
     f = n(981631);
 let v = (e) => {
-    let { captchaService: t = p.hP.RECAPTCHA, sitekey: n, rqdata: v, onRender: m, onVerify: y, onError: C, onOpen: E, onClose: b, onChalExpired: _, size: R, userflow: x, ...g } = e,
+    let { captchaService: t = p.hP.RECAPTCHA, sitekey: n, rqdata: v, onRender: m, onVerify: y, onError: C, onOpen: E, onClose: b, onChalExpired: _, size: R, userflow: g, ...x } = e,
         w = r.useRef(null),
         A = (0, o.Z)(),
-        [k, S] = r.useState(!1),
+        [S, k] = r.useState(!1),
         j = r.useCallback(
             (e) => {
                 l.default.track(f.rMx.CAPTCHA_EVENT, {
@@ -43,8 +43,8 @@ let v = (e) => {
             }
         }, [v, w, R, t]),
         O = r.useCallback(() => {
-            k || (j('initial-load'), I('initial-load'), S(!0)), N();
-        }, [I, k, j, N]);
+            S || (j('initial-load'), I('initial-load'), k(!0)), N();
+        }, [I, S, j, N]);
     r.useEffect(() => {
         N();
     }, [N]),
@@ -61,11 +61,11 @@ let v = (e) => {
             [I, y, j]
         ),
         V = r.useCallback(() => {
-            j('render'), (0, h.emitCaptchaDistributionMetric)(x), null == m || m();
-        }, [m, j, x]),
+            j('render'), (0, h.emitCaptchaDistributionMetric)(g), null == m || m();
+        }, [m, j, g]),
         T = r.useCallback(() => {
-            j('open'), I('open'), (0, h.emitCaptchaDistributionMetric)(x), null == E || E();
-        }, [I, E, j, x]),
+            j('open'), I('open'), (0, h.emitCaptchaDistributionMetric)(g), null == E || E();
+        }, [I, E, j, g]),
         Z = r.useCallback(() => {
             j('close'), null == b || b(), N();
         }, [b, j, N]),
@@ -74,7 +74,7 @@ let v = (e) => {
         }, [_, j]);
     return ((null == n || '' === n) && (n = f.OL7), t === p.hP.RECAPTCHA)
         ? (0, a.jsx)(c.Z, {
-              ...g,
+              ...x,
               onLoad: O,
               onRender: V,
               onVerify: P,
@@ -83,18 +83,18 @@ let v = (e) => {
           })
         : t === p.hP.RECAPTCHA_ENTERPRISE
           ? (0, a.jsx)(u._, {
-                ...g,
+                ...x,
                 onLoad: O,
                 onRender: V,
                 onVerify: P,
                 onError: L,
                 sitekey: n,
-                action: x
+                action: g
             })
           : t === p.hP.HCAPTCHA
             ? (0, a.jsx)(i.Z, {
                   ref: w,
-                  ...g,
+                  ...x,
                   sitekey: n,
                   onLoad: O,
                   onError: L,
@@ -106,7 +106,7 @@ let v = (e) => {
                   reCaptchaCompat: !1
               })
             : (0, a.jsx)(c.Z, {
-                  ...g,
+                  ...x,
                   sitekey: n,
                   onLoad: O,
                   onRender: V,

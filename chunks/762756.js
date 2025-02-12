@@ -73,7 +73,7 @@ class C extends (i = r.PureComponent) {
                         }),
                         (0, l.jsx)('div', {
                             className: s()(_.body, f.marginTop4, f.marginBottom20),
-                            children: g.intl.format(g.t['//ppOD'], { helpCenterURL: I })
+                            children: g.intl.format(g.t['0rqMV1'], { helpCenterURL: I })
                         }),
                         (0, l.jsx)(u.Z, {
                             grow: 0,

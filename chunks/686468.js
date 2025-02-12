@@ -84,6 +84,7 @@ function T(e) {
     return (0, i.jsxs)('div', {
         className: b.container,
         children: [
+            s && (0, i.jsx)(g.Z, {}),
             (0, i.jsxs)('div', {
                 className: b.content,
                 children: [
@@ -139,8 +140,7 @@ function T(e) {
                         : null,
                     (0, i.jsx)(N, { channel: t })
                 ]
-            }),
-            s && (0, i.jsx)(g.Z, {})
+            })
         ]
     });
 }

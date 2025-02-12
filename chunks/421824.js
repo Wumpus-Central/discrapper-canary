@@ -4,9 +4,9 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var o = n(481060),
-    r = n(522474),
-    l = n(556296),
+var r = n(481060),
+    l = n(522474),
+    o = n(556296),
     a = n(13140),
     s = n(44359),
     d = n(620954),
@@ -14,9 +14,9 @@ var o = n(481060),
     u = n(981631),
     h = n(388032);
 function _() {
-    if (r.Z.getWindowOpen(u.KJ3.ACTIVITY_POPOUT)) return null;
+    if (l.Z.getWindowOpen(u.KJ3.ACTIVITY_POPOUT)) return null;
     let { trackView: e, trackClick: t } = (0, d.R)(c.n0.ClipsReminderNotification, { notif_type: c.n0.ClipsReminderNotification }),
-        n = l.ZP.getKeybindForAction(u.kg4.SAVE_CLIP);
+        n = o.ZP.getKeybindForAction(u.kg4.SAVE_CLIP);
     if (null == n) return null;
     let _ = a.BB(n.shortcut, !0);
     return {
@@ -24,7 +24,7 @@ function _() {
             keybind: _,
             keybindHook: (e, t) => (0, i.jsx)(s.Z, { keybind: _.split('+') }, t)
         }),
-        icon: (0, i.jsx)(o.AlX, {
+        icon: (0, i.jsx)(r.AlX, {
             size: 'lg',
             color: 'currentColor'
         }),
@@ -40,7 +40,7 @@ function p(e) {
     let { trackView: t, trackClick: n } = (0, d.R)(c.n0.ClipsNotification, { notif_type: c.n0.ClipsNotification });
     return {
         title: e,
-        icon: (0, i.jsx)(o.AlX, {
+        icon: (0, i.jsx)(r.AlX, {
             size: 'lg',
             color: 'currentColor'
         }),

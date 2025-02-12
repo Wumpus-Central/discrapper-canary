@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f }), n(47120), n(411104);
 var i = n(200651),
-    o = n(192379),
-    r = n(120356),
-    l = n.n(r),
+    r = n(192379),
+    l = n(120356),
+    o = n.n(l),
     a = n(348327),
     s = n.n(a),
     d = n(642128),
@@ -18,81 +18,81 @@ let p = {
 };
 function f(e) {
     let { locked: t, pinned: n } = e,
-        [r, a] = o.useState(0),
-        [f, g] = o.useState(0),
-        [m, v] = o.useState(0),
-        x = o.useRef(0),
-        [E, C] = o.useState(0),
-        { timeToLiveMs: Z, reappearTimeMs: I } = u.ZP.useState(
+        [l, a] = r.useState(0),
+        [f, g] = r.useState(0),
+        [m, v] = r.useState(0),
+        E = r.useRef(0),
+        [I, x] = r.useState(0),
+        { timeToLiveMs: C, reappearTimeMs: S } = u.ZP.useState(
             (e) => ({
                 timeToLiveMs: e.timeToLiveMs,
                 reappearTimeMs: e.reappearTimeMs
             }),
             s()
         ),
-        S = {
-            timeToLiveMs: Z,
-            reappearTimeMs: I
+        Z = {
+            timeToLiveMs: C,
+            reappearTimeMs: S
         },
-        b = o.useRef(S);
-    o.useEffect(() => {
-        b.current = S;
+        y = r.useRef(Z);
+    r.useEffect(() => {
+        y.current = Z;
     }),
-        o.useEffect(
+        r.useEffect(
             () => (
-                (x.current = setInterval(() => {
+                (E.current = setInterval(() => {
                     let e = Date.now();
                     g(e),
                         v((t) => {
                             if (0 === t) return e;
                             let n = e - t,
-                                i = b.current.timeToLiveMs,
-                                o = i + b.current.reappearTimeMs;
-                            return n > i ? t + o : t;
+                                i = y.current.timeToLiveMs,
+                                r = i + y.current.reappearTimeMs;
+                            return n > i ? t + r : t;
                         });
                 }, 100)),
                 () => {
-                    clearInterval(x.current);
+                    clearInterval(E.current);
                 }
             ),
             []
         );
-    let y = () => {
-            a(Date.now()), C((e) => e + 1);
+    let b = () => {
+            a(Date.now()), x((e) => e + 1);
         },
-        w = r > 0 && f - r < 1000,
-        O = (0, c.Yzy)(m > 0 && m < f && f - m < Z, {
+        O = l > 0 && f - l < 1000,
+        N = (0, c.Yzy)(m > 0 && m < f && f - m < C, {
             from: { opacity: 0 },
             enter: { opacity: 1 },
             leave: { opacity: 0 },
             config: p
         }),
-        [N, T] = o.useState(!1);
+        [T, w] = r.useState(!1);
     if (
-        (o.useEffect(() => {
-            E > 10 && T(!0);
-        }, [E]),
-        N)
+        (r.useEffect(() => {
+            I > 10 && w(!0);
+        }, [I]),
+        T)
     )
         throw Error('ClickZoneDebugWidget crashed, too many clicks');
     return t && !n
         ? null
         : (0, i.jsx)(i.Fragment, {
-              children: O(
+              children: N(
                   (e, t) =>
                       t &&
                       (0, i.jsx)(d.animated.div, {
                           style: e,
                           className: _.clickZoneDebugContainer,
                           children: (0, i.jsx)(h.Z, {
-                              className: l()(_.clickZone, w && _.clickBackground),
+                              className: o()(_.clickZone, O && _.clickBackground),
                               children: (0, i.jsx)(c.P3F, {
-                                  onClick: y,
+                                  onClick: b,
                                   className: _.clickable,
                                   children: (0, i.jsxs)(c.Text, {
                                       variant: 'text-md/semibold',
                                       color: 'always-white',
-                                      children: ['Click Me (', E, ')']
+                                      children: ['Click Me (', I, ')']
                                   })
                               })
                           })

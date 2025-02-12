@@ -69,7 +69,7 @@ function _() {
             };
         }),
         isDisabled: !t,
-        look: o.qQH.CUSTOM,
+        look: o.qQH.FILLED,
         className: f.selector,
         popoutPosition: 'top',
         renderOptionValue: (e) => {
@@ -99,7 +99,7 @@ function C() {
             };
         }),
         isDisabled: !t,
-        look: o.qQH.CUSTOM,
+        look: o.qQH.FILLED,
         className: f.selector,
         popoutPosition: 'top',
         renderOptionValue: (e) => {

@@ -454,7 +454,7 @@ function er(e) {
         o = (0, I.$1)(),
         c = (e, t) => {
             var n, i;
-            en(t), p.Z.setEnabled(e, r), (0, A.o)(e, A.A.LEGACY, null !== (i = null === (n = j.ZP.getCurrentGameForAnalytics()) || void 0 === n ? void 0 : n.id) && void 0 !== i ? i : null);
+            en(t), p.Z.setEnabled(e, r), (0, A.ou)(e, A.AE.LEGACY, null !== (i = null === (n = j.ZP.getCurrentGameForAnalytics()) || void 0 === n ? void 0 : n.id) && void 0 !== i ? i : null);
         },
         d = s.useMemo(() => (W.iP ? (o ? K.intl.string(K.t.r9jEV1) : K.intl.string(K.t.OzInYm)) : K.intl.string(K.t['8Ox6/P'])), [o]);
     return 0 === a.length
@@ -549,7 +549,7 @@ function eo(e) {
         o = (0, m.Wu)([j.ZP], () => j.ZP.getGamesSeen(!0)),
         c = (e, t) => {
             var n, i;
-            en(t), p.Z.setEnabled(r, e), (0, A.o)(e, A.A.OOP, null !== (i = null === (n = j.ZP.getCurrentGameForAnalytics()) || void 0 === n ? void 0 : n.id) && void 0 !== i ? i : null);
+            en(t), p.Z.setEnabled(r, e), (0, A.ou)(e, A.AE.OOP, null !== (i = null === (n = j.ZP.getCurrentGameForAnalytics()) || void 0 === n ? void 0 : n.id) && void 0 !== i ? i : null);
         },
         d = s.useMemo(() => (W.iP ? (a ? K.intl.string(K.t.C7bLTU) : K.intl.string(K.t.ndgADA)) : K.intl.string(K.t.m7X4a2)), [a]);
     return 0 === o.length

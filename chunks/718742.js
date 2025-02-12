@@ -15,8 +15,8 @@ var a = n(200651),
     m = n(140238);
 let y = new Set([o.Dvm.ENTERING, o.Dvm.ENTERED]);
 function C(e) {
-    let { onClose: t, onCaptchaVerify: n, onReject: i, transitionState: C, headerText: E, bodyText: b, rqtoken: _, serveInvisible: R, ...x } = e,
-        g = (0, d.Z)(i),
+    let { onClose: t, onCaptchaVerify: n, onReject: i, transitionState: C, headerText: E, bodyText: b, rqtoken: _, serveInvisible: R, ...g } = e,
+        x = (0, d.Z)(i),
         w = (0, s.Q3)('CaptchaModal');
     return (r.useEffect(() => {
         p.S.subscribe(h.CkL.LAYER_POP_ESCAPE_KEY, t);
@@ -59,10 +59,10 @@ function C(e) {
                                                     (0, a.jsx)(l.Z, {
                                                         size: R ? 'invisible' : void 0,
                                                         onVerify: (e) => {
-                                                            g(), n(e, _), t();
+                                                            x(), n(e, _), t();
                                                         },
                                                         onClose: R ? t : void 0,
-                                                        ...x
+                                                        ...g
                                                     })
                                                 ]
                                             })

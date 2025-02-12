@@ -12,7 +12,7 @@ var n = i(200651),
     x = i(66626),
     C = i(892322),
     h = i(15608),
-    _ = i(486527),
+    _ = i(75666),
     g = i(798981);
 function f(e) {
     let { directoryChannelId: t, transitionState: i, initialSlide: f = _.VX.CHOOSE_GUILD, onClose: j, directoryGuildName: p, directoryGuildId: L, currentCategoryId: N } = e,

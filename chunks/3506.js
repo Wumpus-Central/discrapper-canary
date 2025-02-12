@@ -99,7 +99,7 @@ function R(e) {
                                         hideBorder: !0,
                                         onChange: function (e) {
                                             var t, n;
-                                            u.Z.setEnabled(e, s), (0, _.o)(e, _.A.LEGACY, null !== (n = null === (t = g.ZP.getCurrentGameForAnalytics()) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : null);
+                                            u.Z.setEnabled(e, s), (0, _.ou)(e, _.AE.LEGACY, null !== (n = null === (t = g.ZP.getCurrentGameForAnalytics()) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : null);
                                         },
                                         children: j.intl.string(j.t.vSP6c3)
                                     })
