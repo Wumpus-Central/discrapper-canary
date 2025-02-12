@@ -1,17 +1,18 @@
 n.d(t, {
-    Q: () => _,
-    t: () => f
+    Q: () => p,
+    t: () => _
 });
 var i = n(615287),
     r = n(594190),
     a = n(371651),
     s = n(388627),
     o = n(131951),
-    l = n(449224),
-    u = n(626135),
-    c = n(367907),
-    d = n(981631);
-function f() {
+    l = n(19780),
+    u = n(449224),
+    c = n(626135),
+    d = n(367907),
+    f = n(981631);
+function _() {
     let e, t, n, i, a;
     let s = o.Z.getGoLiveSource();
     if (null != s && ((e = s.quality.resolution), (t = s.quality.frameRate), null != s.desktopSource)) {
@@ -28,27 +29,28 @@ function f() {
         share_game_id: a
     };
 }
-function _(e, t) {
+function p(e, t) {
     var n;
     let o = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        f = __OVERLAY__ ? l.Z.getGame() : (0, s.pL)(),
-        _ = r.ZP.getRunningGames().find((e) => e.name === (null == f ? void 0 : f.name)),
-        p = null !== (n = a.default.getRenderMethod(null == _ ? void 0 : _.pid)) && void 0 !== n ? n : i.gl.Disabled;
+        _ = __OVERLAY__ ? u.Z.getGame() : (0, s.pL)(),
+        p = r.ZP.getRunningGames().find((e) => e.name === (null == _ ? void 0 : _.name)),
+        h = null !== (n = a.default.getRenderMethod(null == p ? void 0 : p.pid)) && void 0 !== n ? n : i.gl.Disabled;
     switch (
         ((t = {
-            overlay_game_name: null != f ? f.name : 'Unknown Game',
-            overlay_app_id: null != f ? f.id : null,
-            overlay_render_method: i.gl[p],
+            overlay_game_name: null != _ ? _.name : 'Unknown Game',
+            overlay_app_id: null != _ ? _.id : null,
+            overlay_render_method: i.gl[h],
+            media_session_id: l.Z.getMediaSessionId(),
             ...t
         }),
         e)
     ) {
-        case d.rMx.VOICE_CHANNEL_SELECTED:
-        case d.rMx.SETTINGS_PANE_VIEWED:
-        case d.rMx.GUILD_VIEWED:
-        case d.rMx.CHANNEL_OPENED:
-            return (0, c.yw)(e, t, o);
+        case f.rMx.VOICE_CHANNEL_SELECTED:
+        case f.rMx.SETTINGS_PANE_VIEWED:
+        case f.rMx.GUILD_VIEWED:
+        case f.rMx.CHANNEL_OPENED:
+            return (0, d.yw)(e, t, o);
         default:
-            return u.default.track(e, t, { flush: o });
+            return c.default.track(e, t, { flush: o });
     }
 }

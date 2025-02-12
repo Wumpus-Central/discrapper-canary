@@ -533,7 +533,7 @@ function eD(e) {
     let { port: t } = e;
     z = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
     let n = new URLSearchParams();
-    n.append('build_id', '8f27da312dc514157dd021bf86d5e7825cf79d76'), n.append('rpc', String(t)), n.append('rpc_auth_token', z), (i = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString()));
+    n.append('build_id', 'a69efac4fe94abee1cac0e1024c6cd9666ef5410'), n.append('rpc', String(t)), n.append('rpc_auth_token', z), (i = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString()));
 }
 function eL(e) {
     let { channelId: t, ring: n } = e;
@@ -637,6 +637,10 @@ function eY() {
 class eW extends (r = s.ZP.Store) {
     initialize() {
         !(!U.iP || __OVERLAY__) && (this.waitFor(y.ZP, v.Z, C.default, A.ZP, b.default), this.syncWith([v.Z], ej), g.sr(eb, eT), C.default.addChangeListener(eI), l.Z.addInterceptor(X.queueDispatch));
+    }
+    isFocusedPidInputLocked() {
+        let e = this.getFocusedPID();
+        return null != e && this.isInputLocked(e);
     }
     isInputLocked(e) {
         return b.default.isOverlayOOPEnabledForPid(e) ? A.ZP.isInputLocked(e) : !q.has(e);

@@ -62,22 +62,22 @@ let g = r.memo(function (e) {
     }),
     v = r.memo(function (e) {
         var t, n;
-        let { primaryGuild: a, userId: f, className: p, children: h, profileViewedAnalytics: g } = e,
-            E = (0, o.e7)([c.default], () => c.default.getUser(f), [f]),
-            v = null !== (t = null == E ? void 0 : E.primaryGuild) && void 0 !== t ? t : a,
-            [y, I] = (0, d.L_)(null !== (n = null == v ? void 0 : v.identityGuildId) && void 0 !== n ? n : null),
-            T = r.useCallback(() => {
-                I();
-            }, [I]),
-            b = (0, o.e7)([u.Z], () => u.Z.theme);
+        let { primaryGuild: a, userId: f, className: p, children: h, profileViewedAnalytics: g, onShowProfile: E } = e,
+            v = (0, o.e7)([c.default], () => c.default.getUser(f), [f]),
+            y = null !== (t = null == v ? void 0 : v.primaryGuild) && void 0 !== t ? t : a,
+            [I, T] = (0, d.L_)(null !== (n = null == y ? void 0 : y.identityGuildId) && void 0 !== n ? n : null),
+            b = r.useCallback(() => {
+                T();
+            }, [T]),
+            S = (0, o.e7)([u.Z], () => u.Z.theme);
         return (0, i.jsx)(l.ze6, {
-            theme: b,
+            theme: S,
             children: (0, i.jsx)(l.yRy, {
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
                     return (0, i.jsx)(_.Z, {
-                        isLoading: y,
-                        clan: v,
+                        isLoading: I,
+                        clan: y,
                         onClose: t,
                         profileViewedAnalytics: g,
                         userId: f
@@ -93,11 +93,11 @@ let g = r.memo(function (e) {
                         ...e,
                         onClick: (t) => {
                             var n;
-                            null === (n = e.onClick) || void 0 === n || n.call(e, t), t.preventDefault(), t.stopPropagation();
+                            null === (n = e.onClick) || void 0 === n || n.call(e, t), t.preventDefault(), t.stopPropagation(), null == E || E();
                         },
                         onMouseEnter: () => {
                             var t;
-                            T(), null === (t = e.onMouseEnter) || void 0 === t || t.call(e);
+                            b(), null === (t = e.onMouseEnter) || void 0 === t || t.call(e);
                         },
                         children: h
                     })
@@ -106,16 +106,16 @@ let g = r.memo(function (e) {
     }),
     y = r.memo(function (e) {
         var t;
-        let { primaryGuild: n, userId: r, contextGuildId: a, className: l, containerClassName: u, textVariant: d, textColor: _, badgeSize: p, disableGuildProfile: h = !1, inline: g = !0, profileViewedAnalytics: y } = e,
-            I = (0, o.e7)([c.default], () => c.default.getUser(r), [r]),
-            T = null !== (t = null == I ? void 0 : I.primaryGuild) && void 0 !== t ? t : n,
-            { tag: b, badge: S, guildId: A } = (0, f.Pb)(T);
-        return (0, f.p0)(r, a) && null != A
+        let { primaryGuild: n, userId: r, contextGuildId: a, className: l, containerClassName: u, textVariant: d, textColor: _, badgeSize: p, disableGuildProfile: h = !1, inline: g = !0, profileViewedAnalytics: y, onShowProfile: I } = e,
+            T = (0, o.e7)([c.default], () => c.default.getUser(r), [r]),
+            b = null !== (t = null == T ? void 0 : T.primaryGuild) && void 0 !== t ? t : n,
+            { tag: S, badge: A, guildId: N } = (0, f.Pb)(b);
+        return (0, f.p0)(r, a) && null != N
             ? h
                 ? (0, i.jsx)(E, {
-                      guildId: A,
-                      clanTag: b,
-                      clanBadge: S,
+                      guildId: N,
+                      clanTag: S,
+                      clanBadge: A,
                       className: s()(m.noTooltip, l),
                       textVariant: d,
                       textColor: _,
@@ -123,14 +123,15 @@ let g = r.memo(function (e) {
                       inline: g
                   })
                 : (0, i.jsx)(v, {
-                      primaryGuild: T,
+                      primaryGuild: b,
                       userId: r,
                       profileViewedAnalytics: y,
                       className: u,
+                      onShowProfile: I,
                       children: (0, i.jsx)(E, {
-                          guildId: A,
-                          clanTag: b,
-                          clanBadge: S,
+                          guildId: N,
+                          clanTag: S,
+                          clanBadge: A,
                           className: l,
                           textVariant: d,
                           textColor: _,
