@@ -1,7 +1,8 @@
 n.d(t, {
+    Ir: () => U,
     J: () => H,
     YN: () => M,
-    ZP: () => U,
+    ZP: () => D,
     iZ: () => L
 }),
     n(47120);
@@ -29,8 +30,8 @@ var l = n(200651),
     N = n(227172),
     Z = n(551228),
     T = n(678869),
-    E = n(278399),
-    A = n(886217),
+    A = n(278399),
+    E = n(886217),
     _ = n(555672),
     S = n(644548),
     R = n(335326),
@@ -61,7 +62,7 @@ let z = (e) => {
                     entry: t
                 });
             case s.s.TOP_ARTIST:
-                return (0, l.jsx)(E.ZP, {
+                return (0, l.jsx)(A.ZP, {
                     ...n,
                     entry: t
                 });
@@ -123,7 +124,7 @@ let z = (e) => {
                     entry: t
                 });
             case s.s.TOP_ARTIST:
-                return (0, l.jsx)(A.Z, {
+                return (0, l.jsx)(E.Z, {
                     ...n,
                     entry: t
                 });
@@ -151,7 +152,8 @@ let z = (e) => {
                 return null;
         }
     },
-    U = a.memo((e) => {
+    U = a.createContext(void 0),
+    D = a.memo((e) => {
         var t;
         let { index: i, ...h } = e,
             [g, v] = a.useState('default'),
@@ -169,8 +171,8 @@ let z = (e) => {
                 [y, h.channel.guild_id, h.channel.id, h.entry, h.requestId, P]
             ),
             Z = a.useRef(!1),
-            [T, E] = a.useState(!1),
-            [A, _] = a.useState(!1),
+            [T, A] = a.useState(!1),
+            [E, _] = a.useState(!1),
             S = (0, c.e7)([x.Z], () => x.Z.keyboardModeEnabled);
         a.useEffect(() => {
             T && S && _(!0);
@@ -219,7 +221,7 @@ let z = (e) => {
             H = () => {
                 (Z.current = !1),
                     setTimeout(() => {
-                        Z.current || (E(!1), _(S));
+                        Z.current || (A(!1), _(S));
                     }, 100);
             };
         return (0, l.jsx)('div', {
@@ -227,18 +229,21 @@ let z = (e) => {
                 h.entry.content_type !== s.s.LEADERBOARD || (0, p.un)(d.z.LEADERBOARD_NUX_COACHMARK) || (0, p.EW)(d.z.LEADERBOARD_NUX_COACHMARK, { dismissAction: b.L.SECONDARY }),
                     (Z.current = !0),
                     setTimeout(() => {
-                        Z.current && E(!0), L(N);
+                        Z.current && A(!0), L(N);
                     }, 100);
             },
             onMouseLeave: H,
             children: (0, l.jsx)(u.yRy, {
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
-                    return (0, l.jsx)(B, {
-                        closePopout: t,
-                        updatePopoutPosition: k,
-                        trackRankingItemInteraction: M,
-                        ...h
+                    return (0, l.jsx)(U.Provider, {
+                        value: H,
+                        children: (0, l.jsx)(B, {
+                            closePopout: t,
+                            updatePopoutPosition: k,
+                            trackRankingItemInteraction: M,
+                            ...h
+                        })
                     });
                 },
                 position: 'left',
@@ -246,7 +251,7 @@ let z = (e) => {
                 positionKey: g,
                 onRequestOpen: () => L(N),
                 onRequestClose: () => {
-                    A && H();
+                    E && H();
                 },
                 spacing: 8,
                 children: (e, t) => {
@@ -263,7 +268,7 @@ let z = (e) => {
                             }
                         },
                         onClick: () => {
-                            T || E(!0);
+                            T || A(!0);
                         },
                         onContextMenu: R,
                         children: (0, l.jsx)(z, {
