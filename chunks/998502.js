@@ -1,7 +1,7 @@
 n.d(t, {
-    ZP: () => x,
-    jK: () => O,
-    tS: () => D
+    ZP: () => P,
+    jK: () => D,
+    tS: () => L
 }),
     n(47120),
     n(411104),
@@ -36,8 +36,9 @@ null != v &&
     (b = null === (i = (r = v.remoteApp).getModuleVersions) || void 0 === i ? void 0 : i.call(r)),
     (T = null === (a = (s = v.remoteApp).getBuildNumber) || void 0 === a ? void 0 : a.call(s)));
 let A = new Set(['discord_erlpack', 'discord_game_utils', 'discord_rpc', 'discord_spellcheck', 'discord_utils', 'discord_voice']),
-    N = !1;
-async function C(e) {
+    N = !1,
+    C = 'lastImageSaveDirectory';
+async function R(e) {
     let t = {
             method: 'GET',
             mode: 'cors'
@@ -47,16 +48,16 @@ async function C(e) {
     let i = await n.arrayBuffer();
     return l()(null != i, 'Data is null'), i;
 }
-function R(e) {
-    return C(e);
+function O(e) {
+    return R(e);
 }
-var O = (function (e) {
+var D = (function (e) {
         return (e[(e.Camera = 0)] = 'Camera'), (e[(e.Microphone = 1)] = 'Microphone'), (e[(e.Photo = 2)] = 'Photo'), (e[(e.InputMonitoring = 3)] = 'InputMonitoring'), (e[(e.ScreenRecording = 4)] = 'ScreenRecording'), e;
     })({}),
-    D = (function (e) {
+    L = (function (e) {
         return (e.VIDEO = 'VIDEO'), (e.MUTE = 'MUTE'), (e.DEAFEN = 'DEAFEN'), (e.DISCONNECT = 'DISCONNECT'), e;
     })({});
-function L(e) {
+function x(e) {
     var t, n, i, r, a, s, o, l;
     return {
         id: S[null !== (t = e.id) && void 0 !== t ? t : ''],
@@ -78,7 +79,7 @@ function L(e) {
         fullscreenType: null !== (l = e.fullscreenType) && void 0 !== l ? l : _.Jx.UNKNOWN
     };
 }
-let x = {
+let P = {
     requireModule: (e) => v.nativeModules.requireModule(e),
     ensureModule: (e) => (h.isPlatformEmbedded ? (__OVERLAY__ && A.has(e) ? Promise.resolve() : v.nativeModules.ensureModule(e)) : Promise.reject(Error('not embedded'))),
     get canBootstrapNewUpdater() {
@@ -131,12 +132,12 @@ let x = {
                         }
                     );
                 }),
-                (e) => t(e.map(L))
+                (e) => t(e.map(x))
             );
         } catch (e) {}
     },
     setCandidateGamesCallback(e) {
-        this.getDiscordUtils().setCandidateGamesCallback((t) => e(t.map(L)));
+        this.getDiscordUtils().setCandidateGamesCallback((t) => e(t.map(x)));
     },
     clearCandidateGamesCallback() {
         this.getDiscordUtils().clearCandidateGamesCallback();
@@ -249,7 +250,7 @@ let x = {
     },
     async copyImage(e) {
         l()(h.isPlatformEmbedded, 'Copy image method called outside native app'), l()('function' == typeof v.clipboard.copyImage, 'Copy image not supported');
-        let t = await R(e);
+        let t = await O(e);
         v.clipboard.copyImage(E.from(t), e);
     },
     async copyImageBlob(e, t) {
@@ -262,17 +263,19 @@ let x = {
         let n = m.Z.toURLSafe(e);
         if (null == n) return;
         let i = null !== (t = n.pathname.split('/').pop()) && void 0 !== t ? t : 'unknown',
-            r = await R(e),
-            a = E.from(r);
-        return v.fileManager.saveWithDialog(a, i);
+            r = f.K.get(C),
+            a = await O(e),
+            s = E.from(a),
+            o = await v.fileManager.saveWithDialog(s, i, null != r ? r : void 0);
+        null != o && f.K.set(C, o);
     },
     async saveFile(e, t) {
         var n;
         l()(h.isPlatformEmbedded, 'Save file method called outside native app');
         let i = m.Z.toURLSafe(e);
-        if (null == i) return;
+        if (null == i) return null;
         let r = null !== (n = null != t ? t : i.pathname.split('/').pop()) && void 0 !== n ? n : 'unknown',
-            a = await C(e),
+            a = await R(e),
             s = E.from(a);
         return v.fileManager.saveWithDialog(s, r);
     },
