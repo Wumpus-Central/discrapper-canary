@@ -20,13 +20,13 @@ var n = i(200651),
     w = i(486324),
     D = i(981631),
     T = i(678916),
-    I = i(388032),
-    x = i(91536);
+    x = i(388032),
+    I = i(91536);
 let _ = {
         x: 0,
         y: 0
     },
-    M = (e, t) => {
+    N = (e, t) => {
         let { width: i, height: n } = e;
         return t % 180 != 0
             ? {
@@ -38,7 +38,7 @@ let _ = {
                   height: n
               };
     };
-function N(e) {
+function M(e) {
     return (0, l.EQ)(e)
         .with(w.pC.BANNER, () => ({
             height: w.f,
@@ -312,14 +312,14 @@ function y(e) {
             }
         }, [j, ea, P, V, Q]),
         el = r.useCallback(() => {
-            let e = N(T);
+            let e = M(T);
             return e.width !== e.height;
         }, [T]),
         eu = r.useCallback(() => {
             if (null == P) return {};
             let e = P.width / P.height,
                 t = el() && e > w.MY ? j.height / P.height : 1,
-                { width: i, height: n } = M(P, V);
+                { width: i, height: n } = N(P, V);
             return {
                 width: i * U * t,
                 minWidth: i * U * t,
@@ -332,7 +332,7 @@ function y(e) {
                 if ((Z(!0), X)) {
                     let i;
                     let n = b.current,
-                        r = N(T);
+                        r = M(T);
                     if (J)
                         try {
                             let { result: e, cancelFn: a } = await (0, A.$p)({
@@ -406,19 +406,25 @@ function y(e) {
                         isGIF: J,
                         banner: i
                     }),
-                (0, n.jsx)(c.xBx, {
-                    className: x.modalHeader,
+                (0, n.jsxs)(c.xBx, {
+                    className: I.modalHeader,
                     separator: !1,
-                    children: (0, n.jsx)(c.X6q, {
-                        variant: 'heading-lg/semibold',
-                        children: I.intl.string(I.t.DxAYCA)
-                    })
+                    children: [
+                        (0, n.jsx)(c.X6q, {
+                            variant: 'heading-lg/semibold',
+                            children: x.intl.string(x.t.DxAYCA)
+                        }),
+                        (0, n.jsx)(c.olH, {
+                            onClick: R,
+                            className: I.modalCloseButton
+                        })
+                    ]
                 }),
                 (0, n.jsxs)(c.hzk, {
-                    className: x.modalContent,
+                    className: I.modalContent,
                     children: [
                         (0, n.jsxs)('div', {
-                            className: x.editingContainer,
+                            className: I.editingContainer,
                             children: [
                                 (0, n.jsx)('img', {
                                     style: {
@@ -426,7 +432,7 @@ function y(e) {
                                         transform: 'translate3d('.concat(O.current.x, 'px, ').concat(O.current.y, 'px, 0) rotate(').concat(V, 'deg)'),
                                         ...eu()
                                     },
-                                    className: o()(K ? x.imageDisabled : x.imageEnabled, x.rotationSupported),
+                                    className: o()(K ? I.imageDisabled : I.imageEnabled, I.rotationSupported),
                                     src: i,
                                     alt: 'avatar',
                                     ref: b,
@@ -434,7 +440,7 @@ function y(e) {
                                     draggable: !1
                                 }),
                                 (0, n.jsx)('div', {
-                                    className: T === w.pC.AVATAR ? x.overlayAvatar : x.overlayBanner,
+                                    className: T === w.pC.AVATAR ? I.overlayAvatar : I.overlayBanner,
                                     style: {
                                         opacity: null == P ? 0 : 1,
                                         width: j.width,
@@ -444,19 +450,19 @@ function y(e) {
                             ]
                         }),
                         (0, n.jsxs)('div', {
-                            className: x.toolsContainer,
+                            className: I.toolsContainer,
                             children: [
                                 (0, n.jsxs)('div', {
-                                    className: x.zoomControls,
+                                    className: I.zoomControls,
                                     children: [
                                         (0, n.jsx)(c.XBm, {
                                             size: 'xxs',
-                                            className: x.zoomIcon
+                                            className: I.zoomIcon
                                         }),
                                         (0, n.jsx)(
                                             c.iRW,
                                             {
-                                                className: x.slider,
+                                                className: I.slider,
                                                 initialValue: 1,
                                                 minValue: 1,
                                                 maxValue: 2,
@@ -465,25 +471,25 @@ function y(e) {
                                                 disabled: K,
                                                 equidistant: !0,
                                                 hideBubble: !0,
-                                                'aria-label': I.intl.string(I.t.dnvZSk)
+                                                'aria-label': x.intl.string(x.t.dnvZSk)
                                             },
                                             Y
                                         ),
                                         (0, n.jsx)(c.XBm, {
                                             size: 'md',
-                                            className: x.zoomIcon
+                                            className: I.zoomIcon
                                         })
                                     ]
                                 }),
                                 (0, n.jsx)(c.ua7, {
-                                    text: I.intl.string(I.t.E36Wd3),
-                                    'aria-label': I.intl.string(I.t.LzFiKC),
+                                    text: x.intl.string(x.t.E36Wd3),
+                                    'aria-label': x.intl.string(x.t.LzFiKC),
                                     children: (e) => {
                                         let { onClick: t, ...i } = e;
                                         return (0, n.jsx)(c.P3F, {
                                             onClick: eo,
-                                            'aria-label': I.intl.string(I.t.LzFiKC),
-                                            className: x.rotateButton,
+                                            'aria-label': x.intl.string(x.t.LzFiKC),
+                                            className: I.rotateButton,
                                             ...i,
                                             children: (0, n.jsx)(c.Vk2, {})
                                         });
@@ -498,36 +504,36 @@ function y(e) {
                                     uploadType: T,
                                     showUpsell: !0,
                                     position: 'inline',
-                                    className: x.premiumUpsell,
+                                    className: I.premiumUpsell,
                                     showShadow: !1
                                 })
                             })
                     ]
                 }),
                 (0, n.jsxs)(c.mzw, {
-                    className: x.modalFooter,
+                    className: I.modalFooter,
                     children: [
                         (0, n.jsx)(c.zxk, {
-                            className: x.resetButton,
+                            className: I.resetButton,
                             look: c.zxk.Looks.LINK,
                             size: c.PhG.MIN,
                             color: c.zxk.Colors.PRIMARY,
                             onClick: es,
                             disabled: !X,
-                            children: I.intl.string(I.t.yBZMsb)
+                            children: x.intl.string(x.t.yBZMsb)
                         }),
                         (0, n.jsx)(c.zxk, {
-                            className: x.linkButton,
+                            className: I.linkButton,
                             look: c.zxk.Looks.LINK,
                             size: c.PhG.MIN,
                             color: c.zxk.Colors.PRIMARY,
                             onClick: ed,
-                            children: I.intl.string(I.t['9TG40t'])
+                            children: x.intl.string(x.t['9TG40t'])
                         }),
                         (0, n.jsx)(c.zxk, {
                             submitting: K,
                             onClick: ec,
-                            children: I.intl.string(I.t.ZSHmKC)
+                            children: x.intl.string(x.t.ZSHmKC)
                         })
                     ]
                 })
