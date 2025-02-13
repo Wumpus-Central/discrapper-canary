@@ -303,7 +303,8 @@ function Q(e) {
                                       channel: r,
                                       showStreamPreview: i.id === E,
                                       onShowStreamPreview: _,
-                                      onWatchStream: P
+                                      onWatchStream: P,
+                                      isSettingsPreview: m
                                   });
                               }
                           },
@@ -321,10 +322,10 @@ function Q(e) {
 }
 function B(e) {
     var i;
-    let { locked: l, pinned: d } = e,
-        r = (0, a.e7)([w.Z, A.Z], () => A.Z.getChannel(w.Z.getVoiceChannelId())),
-        s = (0, v.ZP)(r),
-        o = (function () {
+    let { locked: l, pinned: d, isSettingsPreview: r } = e,
+        s = (0, a.e7)([w.Z, A.Z], () => A.Z.getChannel(w.Z.getVoiceChannelId())),
+        o = (0, v.ZP)(s),
+        u = (function () {
             let e = (0, a.e7)([w.Z, A.Z], () => A.Z.getChannel(w.Z.getVoiceChannelId())),
                 [i] = (0, a.e7)(
                     [M.ZP, E.Z, w.Z, A.Z],
@@ -337,64 +338,65 @@ function B(e) {
                 );
             return (0, V.Es)(null == e ? void 0 : e.id, i);
         })(),
-        u = (0, a.e7)([_.Z], () => _.Z.getStreamerActiveStreamMetadata()),
-        c = (0, W.II)(),
-        [p, h] = n.useState(new Set()),
-        g = null == r ? void 0 : r.guild_id;
+        c = (0, a.e7)([_.Z], () => _.Z.getStreamerActiveStreamMetadata()),
+        p = (0, W.II)(),
+        [h, g] = n.useState(new Set()),
+        m = null == s ? void 0 : s.guild_id;
     n.useEffect(() => {
-        let e = o.map((e) => {
+        let e = u.map((e) => {
             let { user: i } = e;
             return null == i ? void 0 : i.id;
         });
-        h((i) => {
+        g((i) => {
             let l = new Set(e);
             return Array.from(i).filter((e) => !l.has(e)).length > 0 || Array.from(l).filter((e) => !i.has(e)).length > 0 ? l : i;
         });
-    }, [o]);
-    let m = (0, a.Wu)(
+    }, [u]);
+    let Z = (0, a.Wu)(
             [_.Z],
             () =>
-                Array.from(p)
-                    .map((e) => _.Z.getStreamForUser(e, g))
+                Array.from(h)
+                    .map((e) => _.Z.getStreamForUser(e, m))
                     .filter(k.lm)
                     .map((e) => e.ownerId),
-            [p, g]
+            [h, m]
         ),
-        Z = d || !l;
+        S = d || !l;
     n.useEffect(() => {
-        Z &&
+        S &&
             (0, T.zi)(D.Odu.VOICE_V3, {
                 locked: b.Z.isInstanceLocked(),
-                shownUserIds: Array.from(p),
-                liveUserIds: m,
+                shownUserIds: Array.from(h),
+                liveUserIds: Z,
                 contentInventoryIds: []
             });
-    }, [p, m, Z]);
-    let S = (0, I.q)(null == c ? void 0 : c.id),
-        C = (0, a.cj)([_.Z, b.Z], () => {
+    }, [h, Z, S]);
+    let C = (0, I.q)(null == p ? void 0 : p.id),
+        j = (0, a.cj)([_.Z, b.Z], () => {
             let e = _.Z.getCurrentUserActiveStream();
             return {
                 displayUserMode: b.Z.getDisplayUserMode(),
                 displayNameMode: b.Z.getDisplayNameMode(),
                 avatarSizeMode: b.Z.getAvatarSizeMode(),
-                streamApplication: (null == u ? void 0 : u.pid) === (0, R.QF)() ? (0, x.Z)(c) : null,
+                streamApplication: (null == c ? void 0 : c.pid) === (0, R.QF)() ? (0, x.Z)(p) : null,
                 stream: e
             };
         });
     return (0, t.jsx)(Q, {
-        ...C,
-        application: S,
+        ...j,
+        application: C,
         ...e,
-        sortedVoiceStates: o,
-        channel: r,
-        title: null != s ? s : '',
-        streamMetadata: u,
+        sortedVoiceStates: u,
+        channel: s,
+        title: null != o ? o : '',
+        streamMetadata: c,
         streamApplication:
-            null !== (i = C.streamApplication) && void 0 !== i
+            null !== (i = j.streamApplication) && void 0 !== i
                 ? i
                 : {
                       id: null,
-                      name: null == u ? void 0 : u.sourceName
-                  }
+                      name: null == c ? void 0 : c.sourceName
+                  },
+        isSettingsPreview: r
     });
 }
