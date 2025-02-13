@@ -19,10 +19,10 @@ function a(e, t, n) {
     );
 }
 var s = (function (e) {
-    return (e.SHOP = 'SHOP'), (e.NITRO_HOME = 'NITRO_HOME'), (e.QUEST_HOME = 'QUEST_HOME'), (e.APPS_HOME = 'APPS_HOME'), e;
+    return (e.SHOP = 'SHOP'), (e.NITRO_HOME = 'NITRO_HOME'), (e.QUEST_HOME = 'QUEST_HOME'), (e.APPS_HOME = 'APPS_HOME'), (e.SETTINGS = 'SETTINGS'), e;
 })(s || {});
 class o extends i.Z {
-    static fromType(e) {
+    static fromType(e, t, n) {
         switch (e) {
             case 'SHOP':
                 return new o({
@@ -44,11 +44,17 @@ class o extends i.Z {
                     path: r.Z5c.GLOBAL_DISCOVERY_APPS,
                     type: 'APPS_HOME'
                 });
+            case 'SETTINGS':
+                return new o({
+                    path: null != t ? t : r.Z5c.SETTINGS('account'),
+                    label: n,
+                    type: 'SETTINGS'
+                });
             default:
                 throw Error('Unhandled InAppNavigationType');
         }
     }
     constructor(e) {
-        super(), a(this, 'id', void 0), a(this, 'path', void 0), a(this, 'type', void 0), (this.id = e.type), (this.path = e.path), (this.type = e.type);
+        super(), a(this, 'id', void 0), a(this, 'path', void 0), a(this, 'type', void 0), a(this, 'label', void 0), (this.id = e.type), (this.path = e.path), (this.type = e.type), (this.label = e.label);
     }
 }
