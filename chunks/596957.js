@@ -12,7 +12,7 @@ var i = n(200651),
     m = n(906732),
     p = n(835473),
     g = n(372460),
-    _ = n(91896),
+    _ = n(327419),
     f = n(795448),
     E = n(922611),
     I = n(699516),
@@ -27,12 +27,12 @@ var i = n(200651),
     x = n(492347),
     L = n(42575),
     y = n(617015),
-    O = n(981631),
-    P = n(388032),
+    P = n(981631),
+    O = n(388032),
     R = n(574514);
 let j = [];
 function D() {
-    c.Z.setSection(O.pJs.ADD_FRIEND);
+    c.Z.setSection(P.pJs.ADD_FRIEND);
 }
 function w() {
     (0, o.ZDy)(async () => {
@@ -42,7 +42,7 @@ function w() {
 }
 function k(e) {
     let { section: t, showSpamCta: n } = e,
-        r = l.useMemo(() => (n ? w : t !== O.pJs.PENDING ? D : void 0), [n, t]);
+        r = l.useMemo(() => (n ? w : t !== P.pJs.PENDING ? D : void 0), [n, t]);
     return (0, i.jsx)('div', {
         className: R.emptyStateContainer,
         children: (0, i.jsx)(
@@ -66,18 +66,17 @@ let M = function (e) {
         })),
         G = (0, E.Do)({ location: 'PeopleList' }),
         B = (0, g.wn)({ location: 'PeopleList' }),
-        V = (0, s.e7)([_.Z], () => _.Z.getGameRelationshipCount() > 0),
-        H = B && V,
-        [F, z] = l.useState(() => {
+        V = (0, _.U)({ location: 'PeopleList' }),
+        [H, F] = l.useState(() => {
             let e = {};
-            for (let t of Object.values(O.pJs)) e[t] = '';
+            for (let t of Object.values(P.pJs)) e[t] = '';
             return e;
         }),
-        W = l.useCallback(
+        z = l.useCallback(
             (e) => {
                 let { key: t, ...n } = e;
                 switch (c) {
-                    case O.pJs.BLOCKED:
+                    case P.pJs.BLOCKED:
                         return (0, i.jsx)(
                             v.Z,
                             {
@@ -86,17 +85,17 @@ let M = function (e) {
                             },
                             t
                         );
-                    case O.pJs.PENDING:
+                    case P.pJs.PENDING:
                         return (0, i.jsx)(
                             A.Z,
                             {
                                 ...n,
                                 isFocused: D,
-                                disambiguateGameRelationships: H
+                                disambiguateGameRelationships: V
                             },
                             t
                         );
-                    case O.pJs.SUGGESTIONS:
+                    case P.pJs.SUGGESTIONS:
                         return (0, i.jsx)(
                             L.Z,
                             {
@@ -105,8 +104,8 @@ let M = function (e) {
                             },
                             t
                         );
-                    case O.pJs.ONLINE:
-                    case O.pJs.ALL:
+                    case P.pJs.ONLINE:
+                    case P.pJs.ALL:
                     default:
                         return (0, i.jsx)(
                             T.Z,
@@ -118,78 +117,78 @@ let M = function (e) {
                         );
                 }
             },
-            [D, H, c]
+            [D, V, c]
         ),
-        Y = l.useCallback(
+        W = l.useCallback(
             (e) => {
-                z({
-                    ...F,
+                F({
+                    ...H,
                     [c]: e
                 });
             },
-            [F, c]
+            [H, c]
         ),
-        K = l.useCallback(() => {
-            z({
-                ...F,
+        Y = l.useCallback(() => {
+            F({
+                ...H,
                 [c]: ''
             });
-        }, [F, c]),
-        q = l.useMemo(() => c === O.pJs.PENDING && (r.filter(O.pJs.SPAM).length > 0 || r.filter(O.pJs.PENDING_IGNORED).length > 0), [r, c]),
-        X = l.useMemo(() => r.filter(c, F[c]), [r, F, c]),
-        Q = B && c === O.pJs.PENDING,
-        J = l.useMemo(() => {
-            if (!Q) return j;
+        }, [H, c]),
+        K = l.useMemo(() => c === P.pJs.PENDING && (r.filter(P.pJs.SPAM).length > 0 || r.filter(P.pJs.PENDING_IGNORED).length > 0), [r, c]),
+        q = l.useMemo(() => r.filter(c, H[c]), [r, H, c]),
+        X = B && c === P.pJs.PENDING,
+        Q = l.useMemo(() => {
+            if (!X) return j;
             let e = [];
             return (
-                X.forEach((t) => {
+                q.forEach((t) => {
                     let { applicationId: n } = t;
                     null != n && e.push(n);
                 }),
                 e
             );
-        }, [Q, X]);
-    (0, p.Z)(J, Q);
-    let $ = l.useMemo(() => {
-            if (c === O.pJs.PENDING) {
+        }, [X, q]);
+    (0, p.Z)(Q, X);
+    let J = l.useMemo(() => {
+            if (c === P.pJs.PENDING) {
                 let e = [],
                     t = [];
                 return (
-                    X.forEach((n) => {
-                        n.type === O.OGo.PENDING_INCOMING ? e.push(n) : n.type === O.OGo.PENDING_OUTGOING && t.push(n);
+                    q.forEach((n) => {
+                        n.type === P.OGo.PENDING_INCOMING ? e.push(n) : n.type === P.OGo.PENDING_OUTGOING && t.push(n);
                     }),
                     [e, t]
                 );
             }
-            return [X];
-        }, [X, c]),
-        ee = l.useMemo(() => X.filter((e) => e.type === O.OGo.PENDING_INCOMING).length, [X]),
-        et = c === O.pJs.PENDING && ee > 0 && ee >= y.yf,
-        en = l.useCallback(
+            return [q];
+        }, [q, c]),
+        $ = l.useMemo(() => q.filter((e) => e.type === P.OGo.PENDING_INCOMING).length, [q]),
+        ee = c === P.pJs.PENDING && $ > 0 && $ >= y.yf,
+        et = l.useCallback(
             (e) => {
-                e.stopPropagation(), d.Z.confirmClearPendingRelationships(ee);
+                e.stopPropagation(), d.Z.confirmClearPendingRelationships($);
             },
-            [ee]
+            [$]
         ),
-        ei = l.useCallback(
+        en = l.useCallback(
             (e) => {
                 let n = (function (e, t, n) {
                     switch (e) {
-                        case O.pJs.ONLINE:
-                            return P.intl.formatToPlainString(P.t.BagU2d, { online: t.toString() });
-                        case O.pJs.PENDING:
-                            if (0 === n) return P.intl.formatToPlainString(P.t['g+3FIS'], { count: t.toString() });
-                            if (1 === n) return P.intl.formatToPlainString(P.t.npJsRk, { count: t.toString() });
+                        case P.pJs.ONLINE:
+                            return O.intl.formatToPlainString(O.t.BagU2d, { online: t.toString() });
+                        case P.pJs.PENDING:
+                            if (0 === n) return O.intl.formatToPlainString(O.t['g+3FIS'], { count: t.toString() });
+                            if (1 === n) return O.intl.formatToPlainString(O.t.npJsRk, { count: t.toString() });
                             throw Error('Unexpected pending friend requests section index: '.concat(n));
-                        case O.pJs.SUGGESTIONS:
-                            return P.intl.formatToPlainString(P.t['DYMZ/v'], { count: t.toString() });
-                        case O.pJs.BLOCKED:
-                            return P.intl.formatToPlainString(P.t.M83kKy, { count: t.toString() });
+                        case P.pJs.SUGGESTIONS:
+                            return O.intl.formatToPlainString(O.t['DYMZ/v'], { count: t.toString() });
+                        case P.pJs.BLOCKED:
+                            return O.intl.formatToPlainString(O.t.M83kKy, { count: t.toString() });
                         default:
-                            return P.intl.formatToPlainString(P.t.rHRrhI, { count: t.toString() });
+                            return O.intl.formatToPlainString(O.t.rHRrhI, { count: t.toString() });
                     }
-                })(c, $[e].length, e);
-                return c === O.pJs.PENDING && 0 === e
+                })(c, J[e].length, e);
+                return c === P.pJs.PENDING && 0 === e
                     ? (0, i.jsxs)(
                           'div',
                           {
@@ -199,15 +198,15 @@ let M = function (e) {
                                       id: t,
                                       title: n
                                   }),
-                                  et &&
+                                  ee &&
                                       (0, i.jsx)(o.zxk, {
                                           look: o.iLD.LINK,
                                           color: o.Ttl.LINK,
                                           className: R.clearButton,
                                           size: o.zxk.Sizes.TINY,
-                                          onClick: en,
-                                          'aria-label': P.intl.string(P.t.O8k7Oz),
-                                          children: P.intl.string(P.t.O8k7Oz)
+                                          onClick: et,
+                                          'aria-label': O.intl.string(O.t.O8k7Oz),
+                                          children: O.intl.string(O.t.O8k7Oz)
                                       })
                               ]
                           },
@@ -225,42 +224,42 @@ let M = function (e) {
                           n
                       );
             },
-            [$, c, t, et, en]
+            [J, c, t, ee, et]
         );
     if (
         (l.useEffect(() => {
-            c === O.pJs.ALL && (0, f.d$)();
+            c === P.pJs.ALL && (0, f.d$)();
         }, [c]),
-        0 === X.length && '' === F[c])
+        0 === q.length && '' === H[c])
     )
         return (0, i.jsx)(k, {
             section: c,
-            showSpamCta: q
+            showSpamCta: K
         });
-    let el = '' !== F[c],
-        er = 0 === X.length && el;
+    let ei = '' !== H[c],
+        el = 0 === q.length && ei;
     return (0, i.jsx)(m.Gt, {
         value: n,
         children: (0, i.jsxs)(u.Z, {
-            section: O.jXE.FRIENDS_LIST,
+            section: P.jXE.FRIENDS_LIST,
             children: [
                 G && U && (0, i.jsx)(Z.R, {}),
                 (0, i.jsx)(o.E1j, {
-                    className: a()(R.searchBar, er ? R.searchEmptyState : null),
-                    query: F[c],
-                    onChange: Y,
-                    onClear: K,
+                    className: a()(R.searchBar, el ? R.searchEmptyState : null),
+                    query: H[c],
+                    onChange: W,
+                    onClear: Y,
                     size: o.E1j.Sizes.MEDIUM
                 }),
                 (0, i.jsx)(b.Z, {
-                    rows: $,
-                    renderRow: W,
-                    renderSection: ei,
+                    rows: J,
+                    renderRow: z,
+                    renderSection: en,
                     sectionFilter: c,
                     isVirtualizedList: M >= y.nG,
-                    hasSearchQuery: el,
+                    hasSearchQuery: ei,
                     footer:
-                        q && !er
+                        K && !el
                             ? (0, i.jsx)(o.zxk, {
                                   look: o.zxk.Looks.LINK,
                                   color: R.viewSpamButtonColor,
@@ -269,12 +268,12 @@ let M = function (e) {
                                   size: o.PhG.TINY,
                                   children: (0, i.jsx)(o.Text, {
                                       variant: 'text-xs/medium',
-                                      children: G ? P.intl.string(P.t.R40bU1) : P.intl.string(P.t.rXl8fn)
+                                      children: G ? O.intl.string(O.t.R40bU1) : O.intl.string(O.t.rXl8fn)
                                   })
                               })
                             : null
                 }),
-                er &&
+                el &&
                     (0, i.jsx)('div', {
                         className: R.emptyStateContainer,
                         children: (0, i.jsx)(S.Z, { type: S.j.SECTION_NO_RESULTS }, c)

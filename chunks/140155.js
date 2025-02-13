@@ -81,21 +81,23 @@ function A(e) {
 function N(e) {
     I();
     let t = [],
-        n = (0, c.JX)({ location: 'notification-center' }),
-        i = new Set();
+        n = (0, o.r8)({ location: 'NotificationCenterItemsStore' }),
+        i = (0, c.JX)({ location: 'notification-center' }),
+        r = new Set();
     e.relationships.forEach((e) => {
-        let { type: r, user: a, since: s, is_spam_request: o, user_ignored: l } = e,
-            u = n && l;
-        if ((u && null != a && i.add(a.id), r !== g.OGo.PENDING_INCOMING || o || u || null == a || null == s)) return null;
-        let c = _.default.getUser(a.id);
-        if (null == c) return null;
-        t.push((0, m.mH)(c, s));
+        let { type: a, user: s, since: o, is_spam_request: l, user_ignored: u, origin_application_id: c } = e,
+            d = i && u;
+        if ((d && null != s && r.add(s.id), a !== g.OGo.PENDING_INCOMING || l || d || null == s || null == o)) return null;
+        let f = _.default.getUser(s.id);
+        if (null == f) return null;
+        let p = n ? c : void 0;
+        t.push((0, m.mH)(f, o, p));
     }),
-        (0, o.r8)({ location: 'NotificationCenterItemsStore' }) &&
+        n &&
             e.gameRelationships.forEach((e) => {
-                let { type: n, id: r, application_id: a, since: s } = e;
-                if (null == r || i.has(r) || null == s || n !== g.OGo.PENDING_INCOMING) return;
-                let o = _.default.getUser(r);
+                let { type: n, id: i, application_id: a, since: s } = e;
+                if (null == i || r.has(i) || null == s || n !== g.OGo.PENDING_INCOMING) return;
+                let o = _.default.getUser(i);
                 null != o && t.push((0, m.LF)(o, s, a));
             }),
         e.guilds.forEach((e) => {
@@ -156,12 +158,13 @@ function k(e, t, n, i) {
 }
 function U(e) {
     let { relationship: t } = e,
-        { id: n, type: i, isSpamRequest: r, userIgnored: a, user: s, since: o } = t;
+        { id: n, type: i, isSpamRequest: r, userIgnored: a, user: s, since: l, originApplicationId: u } = t;
     if (i === g.OGo.PENDING_INCOMING && !r && !((0, c.JX)({ location: 'notification-center' }) && a)) {
-        if (null == o) return null;
+        if (null == l) return null;
         if (null != s) {
-            let e = _.default.getUser(s.id);
-            null != e && (v.notifCenterLocalItems = [...v.notifCenterLocalItems, (0, m.mH)(e, o)]);
+            let e = (0, o.r8)({ location: 'NotificationCenterItemsStore' }) ? u : void 0,
+                t = _.default.getUser(s.id);
+            null != t && (v.notifCenterLocalItems = [...v.notifCenterLocalItems, (0, m.mH)(t, l, e)]);
         }
     }
     i !== g.OGo.FRIEND ||

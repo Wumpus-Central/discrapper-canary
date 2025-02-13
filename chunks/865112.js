@@ -1,6 +1,6 @@
 n.d(t, {
     RB: () => N,
-    VH: () => v,
+    VH: () => E,
     Vi: () => S,
     Vu: () => T,
     q7: () => I
@@ -28,7 +28,7 @@ let C = {
         NEW_MESSAGE: p,
         GAME_RELATIONSHIP: m
     },
-    v = {
+    E = {
         MISSED_MESSAGES: h,
         FRIEND_REQUEST_REMINDER: u,
         SCHEDULED_GUILD_EVENT: c,
@@ -39,7 +39,7 @@ let C = {
         ADD_FRIEND: r,
         FIRST_MESSAGE: g
     },
-    E = (e) => {
+    v = (e) => {
         switch (e.item_enum) {
             case l.AM.ADD_FRIEND:
                 return 'ADD_FRIEND';
@@ -56,7 +56,7 @@ let C = {
     I = (e) => {
         switch (e.type) {
             case 'lifecycle_item':
-                return E(e);
+                return v(e);
             case 'missed_messages':
                 return 'MISSED_MESSAGES';
             case 'friend_request_reminder':
@@ -78,6 +78,7 @@ let C = {
                     color: i.Z.colors.BACKGROUND_ACCENT
                 };
             case l.DY.FRIEND_REQUEST_ACCEPTED:
+            case l.DY.GAME_FRIEND_REQUEST_ACCEPTED:
                 return {
                     icon: C.CHECKED,
                     color: i.Z.colors.STATUS_POSITIVE_BACKGROUND

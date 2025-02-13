@@ -18,17 +18,18 @@ let o = function (e) {
         });
     },
     l = (e, t) => e.acked || (t !== i.uL && r.default.compare(t, e.id) >= 0);
-function u(e, t) {
-    let n = r.default.fromTimestamp(new Date(t).getTime());
+function u(e, t, n) {
+    let i = r.default.fromTimestamp(new Date(t).getTime());
     return {
         acked: !1,
         forceUnacked: !0,
         other_user: e,
         kind: 'notification-center-item',
-        local_id: 'incoming_friend_requests_'.concat(e.id, '_').concat(n),
+        local_id: 'incoming_friend_requests_'.concat(e.id, '_').concat(i),
         deeplink: 'https://discord.com/users/'.concat(e.id),
         type: a.O7.INCOMING_FRIEND_REQUESTS,
-        id: n
+        id: i,
+        applicationId: n
     };
 }
 function c(e, t, n) {
