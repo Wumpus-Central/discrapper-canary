@@ -1,7 +1,8 @@
 n.d(t, {
-    RB: () => d,
+    LF: () => c,
+    RB: () => f,
     a3: () => o,
-    hn: () => c,
+    hn: () => d,
     mH: () => u,
     r: () => l
 });
@@ -30,7 +31,21 @@ function u(e, t) {
         id: n
     };
 }
-function c(e) {
+function c(e, t, n) {
+    let i = r.default.fromTimestamp(new Date(t).getTime());
+    return {
+        acked: !1,
+        forceUnacked: !0,
+        other_user: e,
+        kind: 'notification-center-item',
+        local_id: 'incoming_game_friend_requests_'.concat(e.id, '_').concat(i),
+        deeplink: 'https://discord.com/users/'.concat(e.id),
+        type: a.O7.INCOMING_GAME_FRIEND_REQUESTS,
+        id: i,
+        applicationId: n
+    };
+}
+function d(e) {
     return {
         acked: !1,
         enableBadge: !0,
@@ -41,4 +56,4 @@ function c(e) {
         deeplink: e.urls.install.toString()
     };
 }
-let d = (e) => e.type === a.DY.RECENT_MENTION || e.type === a.DY.REPLY_MENTION;
+let f = (e) => e.type === a.DY.RECENT_MENTION || e.type === a.DY.REPLY_MENTION;

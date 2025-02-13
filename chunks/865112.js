@@ -1,9 +1,9 @@
 n.d(t, {
-    RB: () => I,
-    VH: () => C,
-    Vi: () => N,
-    Vu: () => S,
-    q7: () => E
+    RB: () => N,
+    VH: () => v,
+    Vi: () => S,
+    Vu: () => T,
+    q7: () => I
 });
 var i = n(692547),
     l = n(497089),
@@ -14,30 +14,32 @@ var i = n(692547),
     c = n(659953),
     d = n(319707),
     u = n(584914),
-    m = n(334702),
-    _ = n(333722),
-    h = n(549931),
-    p = n(178561),
-    g = n(39863),
-    f = n(130312);
-let x = {
+    m = n(962575),
+    _ = n(334702),
+    h = n(333722),
+    p = n(549931),
+    g = n(178561),
+    f = n(39863),
+    x = n(130312);
+let C = {
         CHECKED: o,
         FRIENDS: d,
-        SHARE_SCREEN: g,
-        NEW_MESSAGE: h
+        SHARE_SCREEN: f,
+        NEW_MESSAGE: p,
+        GAME_RELATIONSHIP: m
     },
-    C = {
-        MISSED_MESSAGES: _,
+    v = {
+        MISSED_MESSAGES: h,
         FRIEND_REQUEST_REMINDER: u,
         SCHEDULED_GUILD_EVENT: c,
-        TOP_MESSAGES: m,
+        TOP_MESSAGES: _,
         NOTIFICATION_CENTER: s,
-        UPDATE_PROFILE: f,
+        UPDATE_PROFILE: x,
         FIND_FRIENDS: r,
         ADD_FRIEND: r,
-        FIRST_MESSAGE: p
+        FIRST_MESSAGE: g
     },
-    v = (e) => {
+    E = (e) => {
         switch (e.item_enum) {
             case l.AM.ADD_FRIEND:
                 return 'ADD_FRIEND';
@@ -51,10 +53,10 @@ let x = {
                 return 'NOTIFICATION_CENTER';
         }
     },
-    E = (e) => {
+    I = (e) => {
         switch (e.type) {
             case 'lifecycle_item':
-                return v(e);
+                return E(e);
             case 'missed_messages':
                 return 'MISSED_MESSAGES';
             case 'friend_request_reminder':
@@ -67,41 +69,47 @@ let x = {
                 return 'NOTIFICATION_CENTER';
         }
     },
-    I = (e) => ('icHighlight' === e ? 'TOP_MESSAGES' : 'NOTIFICATION_CENTER'),
-    N = (e) => {
+    N = (e) => ('icHighlight' === e ? 'TOP_MESSAGES' : 'NOTIFICATION_CENTER'),
+    S = (e) => {
         switch (e) {
             case l.DY.GO_LIVE_PUSH:
                 return {
-                    icon: x.SHARE_SCREEN,
+                    icon: C.SHARE_SCREEN,
                     color: i.Z.colors.BACKGROUND_ACCENT
                 };
             case l.DY.FRIEND_REQUEST_ACCEPTED:
                 return {
-                    icon: x.CHECKED,
+                    icon: C.CHECKED,
                     color: i.Z.colors.STATUS_POSITIVE_BACKGROUND
                 };
             case l.DY.FRIEND_REQUEST_PENDING:
             case l.DY.FRIEND_SUGGESTION_CREATED:
                 return {
-                    icon: x.FRIENDS,
+                    icon: C.FRIENDS,
                     color: i.Z.colors.BACKGROUND_ACCENT
                 };
             case l.DY.DM_FRIEND_NUDGE:
                 return {
-                    icon: x.NEW_MESSAGE,
+                    icon: C.NEW_MESSAGE,
                     color: i.Z.colors.BACKGROUND_ACCENT
                 };
             case l.O7.INCOMING_FRIEND_REQUESTS:
             case l.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED:
                 return {
-                    icon: x.FRIENDS,
+                    icon: C.FRIENDS,
+                    color: i.Z.colors.BACKGROUND_ACCENT
+                };
+            case l.O7.INCOMING_GAME_FRIEND_REQUESTS:
+            case l.O7.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED:
+                return {
+                    icon: C.GAME_RELATIONSHIP,
                     color: i.Z.colors.BACKGROUND_ACCENT
                 };
             default:
                 return null;
         }
     },
-    S = (e) => {
+    T = (e) => {
         switch (e.item_enum) {
             case l.AM.UPDATE_PROFILE:
                 return a.Y9;

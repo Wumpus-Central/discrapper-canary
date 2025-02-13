@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(47120), n(653041);
+n.d(t, { Z: () => H }), n(47120), n(653041);
 var i,
     r = n(442837),
     a = n(570140),
@@ -199,7 +199,12 @@ function F(e) {
             });
     });
 }
-class V extends (i = r.ZP.PersistedStore) {
+function V(e) {
+    e.items.forEach((e) => {
+        null != e.application && m(s.ZP.createFromServer(e.application));
+    });
+}
+class j extends (i = r.ZP.PersistedStore) {
     initialize(e) {
         if (null != e && 'object' == typeof e.botUserIdToAppUsage)
             for (let t in e.botUserIdToAppUsage) {
@@ -259,8 +264,8 @@ class V extends (i = r.ZP.PersistedStore) {
         if (null != e) return null === (t = p.botUserIdToAppUsage[e]) || void 0 === t ? void 0 : t.applicationId;
     }
 }
-o(V, 'displayName', 'ApplicationStore'), o(V, 'persistKey', 'ApplicationStore');
-let j = new V(a.Z, {
+o(j, 'displayName', 'ApplicationStore'), o(j, 'persistKey', 'ApplicationStore');
+let H = new j(a.Z, {
     LOGOUT: g,
     OVERLAY_INITIALIZE: E,
     APPLICATION_FETCH: v,
@@ -284,5 +289,6 @@ let j = new V(a.Z, {
     APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS_SUCCESS: R,
     USER_PROFILE_FETCH_SUCCESS: O,
     APP_DM_OPEN: D,
-    USER_AUTHORIZED_APPS_UPDATE: F
+    USER_AUTHORIZED_APPS_UPDATE: F,
+    LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: V
 });

@@ -6,7 +6,7 @@ var i = n(194359),
     o = n(885149);
 function l(e) {
     let { userId: t, applicationId: n, location: a, friendToken: s } = e;
-    null != n
+    return null != n
         ? r.Z.acceptGameFriendRequest({
               userId: t,
               applicationId: n
@@ -21,15 +21,13 @@ function u(e) {
     let { userId: t, applicationId: n, location: i, friendToken: r, onConfirm: u, onCancel: c } = e,
         d = s.Z.isStrangerRequest(t),
         f = (0, a.pB)('useFriendRequestActions');
-    if (null != n || !d || !f) {
-        l({
+    if (null != n || !d || !f)
+        return l({
             userId: t,
             applicationId: n,
             location: i,
             friendToken: r
         });
-        return;
-    }
     (0, o.c)({
         onConfirm: () => {
             l({
@@ -55,7 +53,7 @@ let c = {
     },
     cancelFriendRequest: function (e) {
         let { userId: t, applicationId: n, location: a } = e;
-        null != n
+        return null != n
             ? r.Z.cancelGameFriendRequest({
                   userId: t,
                   applicationId: n
