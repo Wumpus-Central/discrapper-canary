@@ -367,6 +367,7 @@ var i = (function (e) {
             (e[(e.VOICE_FILTER_LOOPBACK_COACHMARK = 497)] = 'VOICE_FILTER_LOOPBACK_COACHMARK'),
             (e[(e.VOICE_FILTER_LAUNCH_COACHMARK = 498)] = 'VOICE_FILTER_LAUNCH_COACHMARK'),
             (e[(e.VOICE_FILTER_IN_CALL_COACHMARK = 499)] = 'VOICE_FILTER_IN_CALL_COACHMARK'),
+            (e[(e.REVERSE_TRIAL_NITRO_TAB_BADGE_V2 = 500)] = 'REVERSE_TRIAL_NITRO_TAB_BADGE_V2'),
             e
         );
     })({}),
