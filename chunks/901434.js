@@ -99,8 +99,7 @@ let b = (e, t) => C.ZP.getName(e.getGuildId(), e.id, t.user),
                         }),
                         N && T && (0, i.jsx)(v.e, { channel: C })
                     ]
-                }),
-                N && (0, i.jsx)(f.Z, {})
+                })
             ]
         });
     };
