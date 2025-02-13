@@ -8,7 +8,7 @@ var i = t(200651),
     c = t(246364),
     d = t(700833),
     u = t(388032),
-    x = t(241195);
+    x = t(42497);
 function m(e) {
     let { onClick: n, text: t, icon: l } = e;
     return (0, i.jsx)('div', {

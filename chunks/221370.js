@@ -7,7 +7,7 @@ var r = n(200651),
     s = n(657707),
     c = n(481060),
     d = n(388032),
-    u = n(959559);
+    u = n(497329);
 let m = [l.z.DESKTOP, l.z.XBOX, l.z.PLAYSTATION, l.z.NINTENDO];
 function _(e) {
     let { platform: t, ...n } = e;

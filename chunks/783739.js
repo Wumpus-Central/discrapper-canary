@@ -17,12 +17,12 @@ var i = n(200651),
     E = n(199778),
     C = n(296533),
     N = n(901750),
-    I = n(112863),
-    f = n(701157),
+    f = n(112863),
+    I = n(701157),
     T = n(912152),
     S = n(615603),
     j = n(474936),
-    v = n(953380);
+    v = n(945821);
 function b(e) {
     let { premiumSubscription: t } = e,
         n = (0, l.e7)([_.Z], () => _.Z.boostSlots),
@@ -64,7 +64,7 @@ function b(e) {
                 pillClassName: v.FPPill,
                 isInReverseTrial: V
             }),
-            !P && (0, i.jsx)(I.Z, {}),
+            !P && (0, i.jsx)(f.Z, {}),
             (null == t ? void 0 : t.isPaused) && M === j.a$.NONE
                 ? (0, i.jsx)(C.r, {
                       appliedGuildBoosts: B,
@@ -78,7 +78,7 @@ function b(e) {
                 guildBoostSlots: b,
                 fractionalPremiumState: M
             }),
-            (0, i.jsx)(f.Z, {
+            (0, i.jsx)(I.Z, {
                 canAddBoosts: L && U,
                 canApplyBoosts: k
             }),

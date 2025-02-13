@@ -2,29 +2,29 @@ a.d(e, {
     QV: () => c,
     XL: () => s,
     Y: () => i,
-    nl: () => o
+    nl: () => _
 });
 var r = a(696486),
     n = a(152228),
-    _ = a(395848);
-function o(t) {
+    o = a(395848);
+function _(t) {
     return 'number' == typeof t && isFinite(t);
 }
-function i(t, e, a, { ..._ }) {
-    let o = (0, r.XU)(t).start_timestamp;
+function i(t, e, a, { ...o }) {
+    let _ = (0, r.XU)(t).start_timestamp;
     return (
-        o && o > e && 'function' == typeof t.updateStartTime && t.updateStartTime(e),
+        _ && _ > e && 'function' == typeof t.updateStartTime && t.updateStartTime(e),
         (0, n._d)(t, () => {
             let t = (0, n.qp)({
                 startTime: e,
-                ..._
+                ...o
             });
             return t && t.end(a), t;
         })
     );
 }
 function c() {
-    return _.m && _.m.addEventListener && _.m.performance;
+    return o.m && o.m.addEventListener && o.m.performance;
 }
 function s(t) {
     return t / 1000;

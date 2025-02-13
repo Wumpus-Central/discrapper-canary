@@ -1,14 +1,14 @@
 a.d(e, {
-    Ak: () => o,
+    Ak: () => _,
     QC: () => i,
     t$: () => c,
     zb: () => s
 });
 var r = a(176984),
     n = a(622916);
-let _ = a(899517).n;
-function o() {
-    if (!('fetch' in _)) return !1;
+let o = a(899517).n;
+function _() {
+    if (!('fetch' in o)) return !1;
     try {
         return new Headers(), new Request('http://www.example.com'), new Response(), !0;
     } catch (t) {
@@ -20,10 +20,10 @@ function i(t) {
 }
 function c() {
     if ('string' == typeof EdgeRuntime) return !0;
-    if (!o()) return !1;
-    if (i(_.fetch)) return !0;
+    if (!_()) return !1;
+    if (i(o.fetch)) return !0;
     let t = !1,
-        e = _.document;
+        e = o.document;
     if (e && 'function' == typeof e.createElement)
         try {
             let a = e.createElement('iframe');
@@ -34,5 +34,5 @@ function c() {
     return t;
 }
 function s() {
-    return 'ReportingObserver' in _;
+    return 'ReportingObserver' in o;
 }

@@ -4,7 +4,7 @@ n(192379);
 var l = n(120356),
     r = n.n(l),
     o = n(481060),
-    a = n(729297);
+    a = n(73671);
 function s(e) {
     let { children: t, className: n } = e;
     return (0, i.jsx)(o.Text, {

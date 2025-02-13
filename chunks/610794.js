@@ -16,14 +16,14 @@ var i = n(200651),
     p = n(981631),
     E = n(856651),
     C = n(388032),
-    N = n(849179);
-function I(e) {
+    N = n(236878);
+function f(e) {
     var t;
     let { account: n, refreshed: r, handleRefresh: o } = e,
         [c, d] = s.useState(!1),
         h = null !== (t = n.metadata) && void 0 !== t ? t : {},
         x = (0, l.e7)([g.default], () => g.default.locale),
-        I = s.useCallback(async () => {
+        f = s.useCallback(async () => {
             d(!0);
             try {
                 await o(n);
@@ -31,31 +31,31 @@ function I(e) {
                 d(!1);
             }
         }, [n, o]),
-        f = null;
+        I = null;
     switch (n.type) {
         case p.ABu.REDDIT:
-            f = (0, m.oP)(h, N.metadataItem);
+            I = (0, m.oP)(h, N.metadataItem);
             break;
         case p.ABu.STEAM:
-            f = (0, m.Dq)(h, N.metadataItem);
+            I = (0, m.Dq)(h, N.metadataItem);
             break;
         case p.ABu.TWITTER:
-            f = (0, m.rJ)(h, N.metadataItem);
+            I = (0, m.rJ)(h, N.metadataItem);
             break;
         case p.ABu.EBAY:
-            f = (0, m.ul)(h, N.metadataItem);
+            I = (0, m.ul)(h, N.metadataItem);
             break;
         case p.ABu.PAYPAL:
-            f = (0, m.li)(h, N.metadataItem);
+            I = (0, m.li)(h, N.metadataItem);
             break;
         case p.ABu.TIKTOK:
-            f = (0, m.hf)(h, N.metadataItem);
+            I = (0, m.hf)(h, N.metadataItem);
     }
     let T = (0, u.FI)(h[E.PC.CREATED_AT], x),
         S = null,
         j = C.intl.string(C.t.wzzjk5);
     return (
-        (null == f || 0 === f.length) &&
+        (null == I || 0 === I.length) &&
             null == T &&
             ((S = (0, i.jsx)(
                 a.Text,
@@ -72,14 +72,14 @@ function I(e) {
             className: N.metadataContainer,
             children: [
                 S,
-                null == f
+                null == I
                     ? void 0
-                    : f.map((e, t) =>
+                    : I.map((e, t) =>
                           (0, i.jsxs)(i.Fragment, {
-                              children: [e, t < f.length - 1 ? (0, i.jsx)('span', { className: N.dot }) : null]
+                              children: [e, t < I.length - 1 ? (0, i.jsx)('span', { className: N.dot }) : null]
                           })
                       ),
-                null != f && f.length > 0 && null != T ? (0, i.jsx)('div', { className: N.dot }) : null,
+                null != I && I.length > 0 && null != T ? (0, i.jsx)('div', { className: N.dot }) : null,
                 null != T
                     ? (0, i.jsx)(
                           a.Text,
@@ -101,7 +101,7 @@ function I(e) {
                         submitting: c,
                         disabled: r,
                         'aria-label': C.intl.string(C.t.sCkLYG),
-                        onClick: r ? void 0 : I,
+                        onClick: r ? void 0 : f,
                         children: j
                     },
                     'refresh-button'
@@ -110,7 +110,7 @@ function I(e) {
         })
     );
 }
-function f(e) {
+function I(e) {
     let { account: t, handleRefresh: n, refreshedAccountIds: l } = e,
         [u, m] = s.useState(t.visibility),
         [g, x] = s.useState(t.metadataVisibility),
@@ -157,7 +157,7 @@ function f(e) {
                                         children: p.name
                                     }),
                                     E &&
-                                        (0, i.jsx)(I, {
+                                        (0, i.jsx)(f, {
                                             account: t,
                                             refreshed: l.includes(t.id),
                                             handleRefresh: n
@@ -220,7 +220,7 @@ function T() {
                   }),
                   t.map((e) =>
                       (0, i.jsx)(
-                          f,
+                          I,
                           {
                               account: e,
                               handleRefresh: c,

@@ -7,8 +7,8 @@ var a = n(120356),
     l = n(481060),
     s = n(810568),
     c = n(388032),
-    d = n(959559),
-    u = n(954039);
+    d = n(497329),
+    u = n(186333);
 let m = [o.p.OFFICIAL, o.p.TWITTER, o.p.YOUTUBE];
 function _(e) {
     let { website: t, trackClick: n } = e,

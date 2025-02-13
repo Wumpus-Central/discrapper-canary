@@ -1,8 +1,8 @@
-n.d(t, { Z: () => s }), n(653041);
-var a,
-    r = n(442837),
-    l = n(570140);
-function i(e, t, n) {
+n.d(t, { Z: () => c }), n(653041);
+var i,
+    a = n(442837),
+    o = n(570140);
+function r(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,7 +15,7 @@ function i(e, t, n) {
         e
     );
 }
-class o extends (a = r.ZP.Store) {
+class l extends (i = a.ZP.Store) {
     get earnedOrbsCoachmark() {
         return {
             shouldOpen: this._earnedOrbsCoachmarkOpen,
@@ -109,7 +109,7 @@ class o extends (a = r.ZP.Store) {
         this._onboardingCoachmarkSkip = !0;
     }
     constructor() {
-        super(l.Z, {
+        super(o.Z, {
             VIRTUAL_CURRENCY_REDEEM_START: (e) => this.handleRedeemVirtualCurrencyStart(e),
             VIRTUAL_CURRENCY_REDEEM_SUCCESS: (e) => this.handleRedeemVirtualCurrencySuccess(e),
             VIRTUAL_CURRENCY_REDEEM_FAIL: (e) => this.handleRedeemVirtualCurrencyFail(e),
@@ -125,20 +125,20 @@ class o extends (a = r.ZP.Store) {
             VIRTUAL_CURRENCY_ONBOARDING_COACHMARK_CLOSE: (e) => this.handleOnboardingCoachmarkClose(e),
             VIRTUAL_CURRENCY_ONBOARDING_COACHMARK_SKIP: (e) => this.handleOnboardingCoachmarkSkip(e)
         }),
-            i(this, '_entitlements', null),
-            i(this, '_redeemingSkuId', null),
-            i(this, '_isRedeemingVirtualCurrency', !1),
-            i(this, '_redeemVirtualCurrencyError', null),
-            i(this, '_balance', null),
-            i(this, '_fetchBalanceError', null),
-            i(this, '_isFetchingBalance', !1),
-            i(this, '_earnedOrbsCoachmarkOpen', !1),
-            i(this, '_earnedOrbsCoachmarkDedupeKeys', []),
-            i(this, '_earnedOrbsCoachmarkQuantity', 0),
-            i(this, '_onboardingCoachmarkOpen', !1),
-            i(this, '_onboardingCoachmarkSkip', !1),
-            i(this, '_onboardingModalOpenedPrior', !1);
+            r(this, '_entitlements', null),
+            r(this, '_redeemingSkuId', null),
+            r(this, '_isRedeemingVirtualCurrency', !1),
+            r(this, '_redeemVirtualCurrencyError', null),
+            r(this, '_balance', null),
+            r(this, '_fetchBalanceError', null),
+            r(this, '_isFetchingBalance', !1),
+            r(this, '_earnedOrbsCoachmarkOpen', !1),
+            r(this, '_earnedOrbsCoachmarkDedupeKeys', []),
+            r(this, '_earnedOrbsCoachmarkQuantity', 0),
+            r(this, '_onboardingCoachmarkOpen', !1),
+            r(this, '_onboardingCoachmarkSkip', !1),
+            r(this, '_onboardingModalOpenedPrior', !1);
     }
 }
-i(o, 'displayName', 'VirtualCurrencyStore');
-let s = new o();
+r(l, 'displayName', 'VirtualCurrencyStore');
+let c = new l();

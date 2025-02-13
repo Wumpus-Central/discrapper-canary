@@ -28,7 +28,7 @@ var p = i(709054),
     _ = i(981631),
     y = i(490897),
     G = i(388032),
-    b = i(485315);
+    b = i(576888);
 function S(e) {
     let { transitionState: n, onClose: a, guildId: S } = e,
         L = (0, u.Dt)(),
@@ -100,7 +100,7 @@ function S(e) {
                                         size: s.zxk.Sizes.MIN,
                                         onClick: () => {
                                             (0, s.ZDy)(async () => {
-                                                let { default: e } = await Promise.all([i.e('58023'), i.e('94909')]).then(i.bind(i, 779250));
+                                                let { default: e } = await Promise.all([i.e('58023'), i.e('48308')]).then(i.bind(i, 779250));
                                                 return (n) =>
                                                     (0, t.jsx)(e, {
                                                         ...n,

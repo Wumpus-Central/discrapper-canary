@@ -1,7 +1,7 @@
 var r = a(161581),
     n = a(622281),
-    _ = r.document,
-    o = n(_) && n(_.createElement);
+    o = r.document,
+    _ = n(o) && n(o.createElement);
 t.exports = function (t) {
-    return o ? _.createElement(t) : {};
+    return _ ? o.createElement(t) : {};
 };

@@ -1,12 +1,12 @@
 var r = a(299623),
     n = a(980855),
-    _ = a(49693),
-    o = function (t) {
-        return function (e, a, o) {
+    o = a(49693),
+    _ = function (t) {
+        return function (e, a, _) {
             var i,
                 c = r(e),
-                s = _(c),
-                E = n(o, s);
+                s = o(c),
+                E = n(_, s);
             if (t && a != a) {
                 for (; s > E; ) if ((i = c[E++]) != i) return !0;
             } else for (; s > E; E++) if ((t || E in c) && c[E] === a) return t || E || 0;
@@ -14,6 +14,6 @@ var r = a(299623),
         };
     };
 t.exports = {
-    includes: o(!0),
-    indexOf: o(!1)
+    includes: _(!0),
+    indexOf: _(!1)
 };

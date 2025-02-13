@@ -12,7 +12,7 @@ var a = t(200651),
     x = t(636749),
     m = t(981631),
     b = t(388032),
-    g = t(838002);
+    g = t(341807);
 function v(e) {
     let { transitionState: n, onClose: t, channelId: v, warningId: h, senderId: k, description: N, safetyTipRows: f, actionRows: T, learnMore: j } = e,
         p = (0, c.e7)([u.ZP], () => u.ZP.getChannelSafetyWarning(v, h));

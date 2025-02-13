@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(627845),
     C = n(514361),
     N = n(600164),
-    I = n(313201),
-    f = n(540059),
+    f = n(313201),
+    I = n(540059),
     T = n(605236),
     S = n(786761),
     j = n(3148),
@@ -38,8 +38,8 @@ var i = n(200651),
     V = n(921944),
     w = n(959517),
     U = n(388032),
-    G = n(212962),
-    F = n(814632);
+    G = n(4823),
+    F = n(483938);
 function z(e, t, n) {
     return (
         t in e
@@ -57,9 +57,9 @@ let Y = {
         COZY: 'cozy',
         COMPACT: 'compact'
     },
-    H = (0, I.hQ)(),
-    W = (0, I.hQ)(),
-    K = (0, I.hQ)(),
+    H = (0, f.hQ)(),
+    W = (0, f.hQ)(),
+    K = (0, f.hQ)(),
     X = '1337',
     q = (e) => {
         let t = 0;
@@ -107,7 +107,7 @@ let Y = {
         ];
     },
     J = () => {
-        let e = (0, f.Q3)('ThemeTitle'),
+        let e = (0, I.Q3)('ThemeTitle'),
             t = (0, a.e7)([C.Z], () => C.Z.isPreview),
             { enabled: n } = A.Z.useExperiment(
                 { location: 'GradientSelectorsTitle' },
@@ -712,9 +712,9 @@ function et() {
                 gradientPreset: C.Z.gradientPreset
             };
         }),
-        d = (0, f.nm)('UserSettingsAppearance'),
-        u = (0, f.o9)('UserSettingsAppearance'),
-        h = (0, f.Q3)('UserSettingsAppearance');
+        d = (0, I.nm)('UserSettingsAppearance'),
+        u = (0, I.o9)('UserSettingsAppearance'),
+        h = (0, I.Q3)('UserSettingsAppearance');
     return (0, i.jsx)(h ? $ : Q, {
         messageDisplayCompact: e,
         hideSimpleEmbedContent: t && n,

@@ -1,6 +1,6 @@
 n.d(t, {
-    Sz: () => f,
-    of: () => I
+    Sz: () => I,
+    of: () => f
 }),
     n(653041),
     n(47120);
@@ -20,7 +20,7 @@ var i = n(200651),
     _ = n(798769),
     p = n(981631),
     E = n(388032),
-    C = n(876457);
+    C = n(111605);
 async function N(e) {
     let { premiumSubscription: t, pauseDuration: n, onClose: i, setHasError: s, setIsCancelling: l, analyticsLocations: r, analyticsLocation: a } = e;
     try {
@@ -29,7 +29,7 @@ async function N(e) {
         s(!0), l(!1);
     }
 }
-function I(e) {
+function f(e) {
     let { premiumType: t, onClose: n, pauseDuration: l, setPauseDuration: r, footer: o, premiumSubscription: d } = e,
         h = s.useCallback(
             (e) => {
@@ -106,11 +106,11 @@ function I(e) {
         })
     );
 }
-function f(e) {
+function I(e) {
     let { premiumSubscription: t, premiumType: n, onClose: l, pauseDuration: a, analyticsLocation: d } = e,
         [u, x] = s.useState(!1),
-        { analyticsLocations: I } = (0, m.ZP)(),
-        [f, T] = s.useState(!1),
+        { analyticsLocations: f } = (0, m.ZP)(),
+        [I, T] = s.useState(!1),
         S = (0, h.ZP)(),
         j = null,
         v = null,
@@ -174,7 +174,7 @@ function f(e) {
                         children: [
                             (0, i.jsx)(c.zxk, {
                                 color: c.zxk.Colors.RED,
-                                disabled: f || null == a,
+                                disabled: I || null == a,
                                 onClick: async () => {
                                     await N({
                                         premiumSubscription: t,
@@ -182,7 +182,7 @@ function f(e) {
                                         setIsCancelling: T,
                                         setHasError: x,
                                         onClose: l,
-                                        analyticsLocations: I,
+                                        analyticsLocations: f,
                                         analyticsLocation: d
                                     });
                                 },

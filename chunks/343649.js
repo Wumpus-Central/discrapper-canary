@@ -48,7 +48,7 @@ var l = t(200651),
     q = t(474936),
     K = t(231338),
     J = t(388032),
-    $ = t(256005);
+    $ = t(675643);
 let Q = q.Xh.NONE_MONTH,
     ee = [b.h8.PLAN_SELECT, b.h8.REVIEW, b.h8.CONFIRM],
     en = [b.h8.PLAN_SELECT, b.h8.ADD_PAYMENT_STEPS, b.h8.REVIEW, b.h8.CONFIRM];
@@ -195,21 +195,21 @@ function el(e) {
         e4 = () => {
             r(e$ === C.A.COMPLETED);
         },
-        e3 = null != ep && ep.isPurchasedExternally;
+        e1 = null != ep && ep.isPurchasedExternally;
     i.useEffect(() => {
-        eb === L.wr.PENDING || eF === b.h8.CONFIRM || null == eS || (eK !== ee && eJ(ee), ee.includes(eF) || eF === b.h8.PREMIUM_UPSELL || eV(b.h8.REVIEW)), eF === b.h8.ADD_PAYMENT_STEPS && eK !== en && eJ(en), e3 && eF !== b.h8.PLAN_SELECT && eY(b.h8.PLAN_SELECT);
-    }, [eF, eV, e3, eb, ep, eS, eK]),
+        eb === L.wr.PENDING || eF === b.h8.CONFIRM || null == eS || (eK !== ee && eJ(ee), ee.includes(eF) || eF === b.h8.PREMIUM_UPSELL || eV(b.h8.REVIEW)), eF === b.h8.ADD_PAYMENT_STEPS && eK !== en && eJ(en), e1 && eF !== b.h8.PLAN_SELECT && eY(b.h8.PLAN_SELECT);
+    }, [eF, eV, e1, eb, ep, eS, eK]),
         (0, L.bp)(eF, eb, eV, eQ),
         (0, b.dZ)(eF, e$, eQ);
-    let e1 = i.useRef(null),
+    let e3 = i.useRef(null),
         [e5, e9] = (0, I.Z)(!1, 500),
-        [e7, e2] = i.useState(null),
-        [e6, ne] = i.useState([]),
+        [e7, e6] = i.useState(null),
+        [e2, ne] = i.useState([]),
         [nn, nt] = i.useState(!1),
-        nl = i.useMemo(() => JSON.stringify(e6), [e6]);
+        nl = i.useMemo(() => JSON.stringify(e2), [e2]);
     i.useEffect(() => {
         let e;
-        eU && (null != U.Z.get(q.Xh.PREMIUM_MONTH_GUILD) && ne((e = (0, B.DE)(q.Xh.PREMIUM_MONTH_GUILD, ek, !1))), null == ek && null != ep && null != ep.paymentSourceId ? e2(ep.currency) : null != e && e2(e[0]));
+        eU && (null != U.Z.get(q.Xh.PREMIUM_MONTH_GUILD) && ne((e = (0, B.DE)(q.Xh.PREMIUM_MONTH_GUILD, ek, !1))), null == ek && null != ep && null != ep.paymentSourceId ? e6(ep.currency) : null != e && e6(e[0]));
     }, [ek, ep, eU, nl]);
     let ni = (0, R.vP)({
         paymentModalArgs: eP,
@@ -303,7 +303,7 @@ function el(e) {
                             guildId: er,
                             priceOptions: o
                         })),
-                        e3 &&
+                        e1 &&
                             null != ep &&
                             null != ep.paymentGateway &&
                             (e = (0, l.jsxs)(l.Fragment, {
@@ -323,7 +323,7 @@ function el(e) {
                         })),
                         (r = (0, l.jsx)(d.zxk, {
                             type: 'submit',
-                            disabled: e0 || 0 === ev || e3,
+                            disabled: e0 || 0 === ev || e1,
                             onClick: () => {
                                 if (!ea && (null == em || em.premiumSubscriptionType !== q.p9.TIER_2)) {
                                     eV(b.h8.PREMIUM_UPSELL);
@@ -353,7 +353,7 @@ function el(e) {
                                 eV(b.h8.ADD_PAYMENT_STEPS), eC(null);
                             },
                             onPurchaseTermsChange: eD,
-                            legalTermsNodeRef: e1,
+                            legalTermsNodeRef: e3,
                             hasLegalTermsFlash: e5
                         })),
                         (t = b.h8.PLAN_SELECT),
@@ -424,7 +424,7 @@ function el(e) {
                                           ...e,
                                           color: d.zxk.Colors.GREEN,
                                           onClick: () => {
-                                              null != e1.current && (e1.current.scrollIntoView({ behavior: 'smooth' }), e9(!0));
+                                              null != e3.current && (e3.current.scrollIntoView({ behavior: 'smooth' }), e9(!0));
                                           },
                                           type: 'submit',
                                           children: J.intl.string(J.t.eUEeCg)
@@ -452,7 +452,7 @@ function el(e) {
                           currentStep: eF,
                           paymentError: u,
                           purchaseErrorBlockRef: eR,
-                          hasCurrencies: e6.length > 1,
+                          hasCurrencies: e2.length > 1,
                           body: e,
                           footer:
                               eF !== b.h8.CONFIRM

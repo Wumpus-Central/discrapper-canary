@@ -31,7 +31,7 @@ var i = n(200651),
     L = n(981631),
     D = n(231338),
     k = n(388032),
-    O = n(593815);
+    O = n(548302);
 let P = 'WELCOME_CHANNEL',
     w = (e) => {
         var t;

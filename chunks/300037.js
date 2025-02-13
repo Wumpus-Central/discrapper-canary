@@ -15,12 +15,12 @@ var s = n(120356),
     x = n(981631),
     _ = n(474936),
     p = n(388032),
-    E = n(438767);
+    E = n(688859);
 let C = function (e) {
     let { className: t, guildId: n, boostingVariant: s } = e,
         C = (0, r.e7)([h.Z], () => h.Z.getGuild(n), [n]),
         { fractionalState: N } = (0, o.Z)(),
-        I = N === _.a$.FP_ONLY;
+        f = N === _.a$.FP_ONLY;
     return null == C
         ? (0, i.jsx)('div', {
               className: l()(t, E.guildContainer),
@@ -83,7 +83,7 @@ let C = function (e) {
                             size: a.zxk.Sizes.MEDIUM,
                             color: a.zxk.Colors.PRIMARY,
                             buttonText: p.intl.string(p.t.aBHecH),
-                            disabled: I
+                            disabled: f
                         })
                       : (0, i.jsx)(a.zxk, {
                             color: a.zxk.Colors.PRIMARY,
@@ -94,7 +94,7 @@ let C = function (e) {
                                 });
                             },
                             size: a.zxk.Sizes.MEDIUM,
-                            disabled: I,
+                            disabled: f,
                             children: p.intl.string(p.t.KLOhbG)
                         })
               ]

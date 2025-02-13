@@ -28,7 +28,7 @@ var l = n(120356),
     y = n(304471),
     T = n(981631),
     A = n(647086),
-    P = n(467678);
+    P = n(952107);
 function R(e, t, n) {
     return (
         t in e
@@ -160,7 +160,7 @@ class w extends N.ZP {
                 let { channel: t } = this.props;
                 if (t.type === T.d4z.GROUP_DM) {
                     (0, c.jW)(e, async () => {
-                        let { default: e } = await Promise.all([n.e('79695'), n.e('25421'), n.e('40979')]).then(n.bind(n, 354741));
+                        let { default: e } = await Promise.all([n.e('79695'), n.e('25421'), n.e('23352')]).then(n.bind(n, 354741));
                         return (n) =>
                             (0, i.jsx)(e, {
                                 ...n,
@@ -174,7 +174,7 @@ class w extends N.ZP {
                     let l = b.default.getUser(t.getRecipientId());
                     null != l &&
                         (0, c.jW)(e, async () => {
-                            let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('56826'), n.e('76586')]).then(n.bind(n, 131404));
+                            let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('56826'), n.e('90384')]).then(n.bind(n, 131404));
                             return (n) =>
                                 (0, i.jsx)(e, {
                                     ...n,

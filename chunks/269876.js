@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(47120);
+n.d(t, { Z: () => I }), n(47120);
 var i = n(200651),
     s = n(192379),
     l = n(120356),
@@ -13,15 +13,15 @@ var i = n(200651),
     g = n(131951),
     x = n(65154),
     _ = n(388032),
-    p = n(455655),
-    E = n(106850),
-    C = n(801194),
-    N = n(814632);
-let I = (0, m.hQ)();
-function f() {
+    p = n(575747),
+    E = n(106722),
+    C = n(179683),
+    N = n(483938);
+let f = (0, m.hQ)();
+function I() {
     let [e, t] = s.useState(-100),
         [n, l] = s.useState(!1),
-        { threshold: f, autoThreshold: T } = (0, a.cj)([g.Z], () => g.Z.getModeOptions()),
+        { threshold: I, autoThreshold: T } = (0, a.cj)([g.Z], () => g.Z.getModeOptions()),
         {
             inputMode: S,
             automaticVADSupported: j,
@@ -54,12 +54,12 @@ function f() {
     let O = (0, i.jsx)('section', {
         className: r()(p.inputSensitivityToggle, p.manual),
         children: (0, i.jsx)(u.iRW, {
-            initialValue: f + 100,
+            initialValue: I + 100,
             onValueRender: (e) => ''.concat((-((100 - e) * 1)).toFixed(0), 'dB'),
             onValueChange: (e) => A(-((100 - e) * 1), T),
             barStyles: { background: d.Z.unsafe_rawColors.GREEN_360.css },
             fillStyles: { background: d.Z.unsafe_rawColors.YELLOW_300.css },
-            'aria-labelledby': I,
+            'aria-labelledby': f,
             children: (0, i.jsxs)('div', {
                 className: r()(p.sliderBar, p.microphone, p.inputSensitivityBar, E.bar),
                 children: [
@@ -90,7 +90,7 @@ function f() {
             })),
         (0, i.jsxs)(u.xJW, {
             title: _.intl.string(_.t['sqUm+v']),
-            titleId: I,
+            titleId: f,
             className: p.sensitivity,
             children: [
                 j &&
@@ -110,7 +110,7 @@ function f() {
                                     (0, i.jsx)(u.rsf, {
                                         id: e,
                                         checked: T,
-                                        onChange: (e) => A(f, e)
+                                        onChange: (e) => A(I, e)
                                     })
                                 ]
                             })

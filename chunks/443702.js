@@ -17,12 +17,12 @@ var i = n(200651),
     E = n(594174),
     C = n(351402),
     N = n(853872),
-    I = n(78839),
-    f = n(706454),
+    f = n(78839),
+    I = n(706454),
     T = n(726985),
     S = n(981631),
     j = n(388032),
-    v = n(402621);
+    v = n(462476);
 class b extends s.PureComponent {
     componentDidMount() {
         c.Z.wait(() => {
@@ -78,13 +78,13 @@ class b extends s.PureComponent {
     }
 }
 function A() {
-    let e = (0, a.cj)([f.default, C.Z, N.Z, E.default, p.Z, I.ZP], () => {
-        let e = I.ZP.getPremiumTypeSubscription(),
+    let e = (0, a.cj)([I.default, C.Z, N.Z, E.default, p.Z, f.ZP], () => {
+        let e = f.ZP.getPremiumTypeSubscription(),
             t = E.default.getCurrentUser();
         return (
             r()(null != t, 'UserSettingsBilling: currentUser cannot be undefined'),
             {
-                locale: f.default.locale,
+                locale: I.default.locale,
                 hide: p.Z.enabled,
                 isClaimed: t.isClaimed(),
                 isVerified: t.verified,

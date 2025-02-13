@@ -1,63 +1,63 @@
-t.d(n, { Z: () => _ });
-var a = t(200651);
-t(192379);
-var i = t(120356),
-    o = t.n(i),
-    r = t(481060),
-    c = t(388032),
-    l = t(185861);
-function _(e) {
-    let { guild: n, speakers: t, speakerCount: i, className: _ } = e,
-        d = t.slice(0, 5),
-        s = d.map((e) => {
-            var t, i;
-            return (0, a.jsxs)(
+i.d(n, { Z: () => o });
+var l = i(200651);
+i(192379);
+var t = i(120356),
+    a = i.n(t),
+    s = i(481060),
+    r = i(388032),
+    c = i(947396);
+function o(e) {
+    let { guild: n, speakers: i, speakerCount: t, className: o } = e,
+        d = i.slice(0, 5),
+        u = d.map((e) => {
+            var i, t;
+            return (0, l.jsxs)(
                 'div',
                 {
-                    className: l.speakerContainer,
+                    className: c.speakerContainer,
                     children: [
-                        (0, a.jsx)(r.qEK, {
-                            src: null == e ? void 0 : null === (t = e.user) || void 0 === t ? void 0 : t.getAvatarURL(n.id, 20),
-                            size: r.EFr.SIZE_20,
-                            className: l.avatar,
+                        (0, l.jsx)(s.qEK, {
+                            src: null == e ? void 0 : null === (i = e.user) || void 0 === i ? void 0 : i.getAvatarURL(n.id, 20),
+                            size: s.EFr.SIZE_20,
+                            className: c.avatar,
                             'aria-label': ''.concat(null == e ? void 0 : e.userNick, '-avatar')
                         }),
-                        (0, a.jsx)('div', {
-                            className: l.textInGridContainer,
-                            children: (0, a.jsx)(r.Text, {
+                        (0, l.jsx)('div', {
+                            className: c.textInGridContainer,
+                            children: (0, l.jsx)(s.Text, {
                                 color: 'header-secondary',
                                 variant: 'text-sm/normal',
-                                className: l.textInGrid,
+                                className: c.textInGrid,
                                 children: null == e ? void 0 : e.userNick
                             })
                         })
                     ]
                 },
-                null == e ? void 0 : null === (i = e.user) || void 0 === i ? void 0 : i.id
+                null == e ? void 0 : null === (t = e.user) || void 0 === t ? void 0 : t.id
             );
         }),
-        u = i - d.length;
-    return (0, a.jsxs)('div', {
-        className: o()(l.grid, _),
+        h = t - d.length;
+    return (0, l.jsxs)('div', {
+        className: a()(c.grid, o),
         children: [
-            s,
-            u > 0 &&
-                (0, a.jsxs)('div', {
-                    className: l.speakerContainer,
+            u,
+            h > 0 &&
+                (0, l.jsxs)('div', {
+                    className: c.speakerContainer,
                     children: [
-                        (0, a.jsx)('div', {
-                            className: l.iconMicrophone,
-                            children: (0, a.jsx)(r.S6n, {
+                        (0, l.jsx)('div', {
+                            className: c.iconMicrophone,
+                            children: (0, l.jsx)(s.S6n, {
                                 size: 'custom',
                                 color: 'currentColor',
                                 height: 12
                             })
                         }),
-                        (0, a.jsx)(r.Text, {
+                        (0, l.jsx)(s.Text, {
                             color: 'header-secondary',
                             variant: 'text-sm/normal',
-                            className: l.textInGrid,
-                            children: c.intl.format(c.t['185ggI'], { count: u })
+                            className: c.textInGrid,
+                            children: r.intl.format(r.t['185ggI'], { count: h })
                         })
                     ]
                 })

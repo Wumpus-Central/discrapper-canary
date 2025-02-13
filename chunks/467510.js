@@ -1,24 +1,24 @@
 a.d(e, {
-    Rt: () => _,
+    Rt: () => o,
     iY: () => c,
-    l4: () => o,
+    l4: () => _,
     qT: () => i
 });
 var r = a(573736);
 let n = a(899517).n;
-function _(t, e = {}) {
+function o(t, e = {}) {
     if (!t) return '<unknown>';
     try {
         let a,
-            _ = t,
-            o = [],
+            o = t,
+            _ = [],
             i = 0,
             c = 0,
             s = Array.isArray(e) ? e : e.keyAttrs,
             E = (!Array.isArray(e) && e.maxStringLength) || 80;
         for (
             ;
-            _ &&
+            o &&
             i++ < 5 &&
             ((a = (function (t, e) {
                 let a = [];
@@ -28,9 +28,9 @@ function _(t, e = {}) {
                     if (t.dataset.sentryElement) return t.dataset.sentryElement;
                 }
                 a.push(t.tagName.toLowerCase());
-                let _ = e && e.length ? e.filter((e) => t.getAttribute(e)).map((e) => [e, t.getAttribute(e)]) : null;
-                if (_ && _.length)
-                    _.forEach((t) => {
+                let o = e && e.length ? e.filter((e) => t.getAttribute(e)).map((e) => [e, t.getAttribute(e)]) : null;
+                if (o && o.length)
+                    o.forEach((t) => {
                         a.push(`[${t[0]}="${t[1]}"]`);
                     });
                 else {
@@ -43,17 +43,17 @@ function _(t, e = {}) {
                     r && a.push(`[${e}="${r}"]`);
                 }
                 return a.join('');
-            })(_, s)),
-            'html' !== a && (!(i > 1) || !(c + 3 * o.length + a.length >= E)));
+            })(o, s)),
+            'html' !== a && (!(i > 1) || !(c + 3 * _.length + a.length >= E)));
 
         )
-            o.push(a), (c += a.length), (_ = _.parentNode);
-        return o.reverse().join(' > ');
+            _.push(a), (c += a.length), (o = o.parentNode);
+        return _.reverse().join(' > ');
     } catch (t) {
         return '<unknown>';
     }
 }
-function o() {
+function _() {
     try {
         return n.document.location.href;
     } catch (t) {

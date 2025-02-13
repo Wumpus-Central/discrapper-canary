@@ -18,8 +18,8 @@ var s = n(990547),
     E = n(703288),
     C = n(574755),
     N = n(377171),
-    I = n(540059),
-    f = n(621628),
+    f = n(540059),
+    I = n(621628),
     T = n(18438),
     S = n(778825),
     j = n(665166),
@@ -72,8 +72,8 @@ var s = n(990547),
     eE = n(327885),
     eC = n(595242),
     eN = n(463153),
-    eI = n(36192),
-    ef = n(889029),
+    ef = n(36192),
+    eI = n(889029),
     eT = n(400287),
     eS = n(554042),
     ej = n(936982),
@@ -91,7 +91,7 @@ var s = n(990547),
     eB = n(46140),
     eM = n(65154),
     eV = n(388032),
-    ew = n(700561);
+    ew = n(249778);
 let eU = () => [l.z.CLIENT_THEMES_SETTINGS_BADGE, l.z.DEKSTOP_CUSTOM_APP_ICON_BADGE],
     eG = ev.Z,
     eF = (e) => {
@@ -445,7 +445,7 @@ let eU = () => [l.z.CLIENT_THEMES_SETTINGS_BADGE, l.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eV.intl.string(eV.t['+1h0k5'])],
                 label: eV.intl.string(eV.t['+1h0k5']),
                 ariaLabel: eV.intl.string(eV.t['+1h0k5']),
-                element: eI.Z,
+                element: ef.Z,
                 newIndicatorDismissibleContentTypes: [l.z.AUTH_SESSIONS_NEW],
                 impressionName: s.ImpressionNames.USER_SETTINGS_SESSIONS,
                 impressionProperties: { source: ez }
@@ -629,7 +629,7 @@ let eU = () => [l.z.CLIENT_THEMES_SETTINGS_BADGE, l.z.DEKSTOP_CUSTOM_APP_ICON_BA
                     text: eV.intl.string(eV.t.y2b7CA),
                     color: N.Z.BG_BRAND
                 }),
-                predicate: () => (0, I.i9)('SettingsRendererConfig')
+                predicate: () => (0, f.i9)('SettingsRendererConfig')
             },
             [eL.s6.APPEARANCE_SCALING_SPACING]: {
                 section: ek.oAB.APPEARANCE,
@@ -1308,7 +1308,7 @@ let eU = () => [l.z.CLIENT_THEMES_SETTINGS_BADGE, l.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eV.intl.string(eV.t.S5GfOT)],
                 label: eV.intl.string(eV.t.S5GfOT),
                 ariaLabel: eV.intl.string(eV.t.S5GfOT),
-                element: ef.Z
+                element: eI.Z
             },
             [eL.s6.STREAMER_MODE_INTEGRATIONS]: {
                 section: ek.oAB.STREAMER_MODE,
@@ -1648,7 +1648,7 @@ let eU = () => [l.z.CLIENT_THEMES_SETTINGS_BADGE, l.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: ek.oAB.DISMISSIBLE_CONTENT_OPTIONS,
                 searchableTitles: ['Dismissible Contents'],
                 label: 'Dismissible Contents',
-                element: f.Z,
+                element: I.Z,
                 predicate: () => k.Z.isDeveloper
             },
             [eL.s6.PAYMENT_FLOW_MODALS]: {

@@ -17,7 +17,7 @@ var r = n(442837),
     _ = n(981631),
     C = n(611480),
     f = n(388032),
-    v = n(734496);
+    v = n(568450);
 let N = {
         page: _.ZY5.GUILD_SETTINGS,
         section: _.jXE.GUILD_SETTINGS_STICKERS,

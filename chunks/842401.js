@@ -4,7 +4,7 @@ n(192379);
 var i = n(481060),
     r = n(99690),
     a = n(388032),
-    s = n(588631);
+    s = n(761309);
 let o = (e) => {
     let { user: t } = e;
     return (0, l.jsxs)('div', {

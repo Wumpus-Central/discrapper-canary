@@ -6,7 +6,7 @@ var i = n(200651),
     a = n(865824),
     o = n(481060),
     c = n(388032),
-    d = n(948112);
+    d = n(484338);
 function u(e) {
     let { children: t, lineClamp: n = 2, ...u } = e,
         [h, m] = s.useState(!1),

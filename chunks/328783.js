@@ -11,7 +11,7 @@ var i = n(200651),
     h = n(170871),
     m = n(981631),
     g = n(388032),
-    x = n(39234);
+    x = n(197171);
 let _ = (0, a.hQ)(),
     p = s.memo(function (e) {
         let { availableClans: t } = e,
@@ -63,8 +63,8 @@ let _ = (0, a.hQ)(),
                 [E]
             ),
             N = s.useCallback((e) => (0, d.nE)(e, !0, m.Sbl.USER_SETTINGS), []),
-            I = s.useCallback((e) => e === a, [a]),
-            f = s.useCallback((e) => e, []),
+            f = s.useCallback((e) => e === a, [a]),
+            I = s.useCallback((e) => e, []),
             T = s.useCallback(() => (0, d.nE)(null, !1), []);
         return (0, i.jsxs)(o.Z, {
             title: g.intl.string(g.t.umdfaG),
@@ -78,12 +78,12 @@ let _ = (0, a.hQ)(),
                 (0, i.jsx)(r.PhF, {
                     className: x.select,
                     optionClassName: x.selectPopout,
-                    isSelected: I,
+                    isSelected: f,
                     options: p,
                     select: N,
                     renderOptionValue: C,
                     renderOptionLabel: E,
-                    serialize: f,
+                    serialize: I,
                     clear: T,
                     clearable: null != a
                 })

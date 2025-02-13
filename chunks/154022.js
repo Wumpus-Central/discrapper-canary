@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(786761),
     C = n(3148),
     N = n(739566),
-    I = n(753206),
-    f = n(440849),
+    f = n(753206),
+    I = n(440849),
     T = n(921801),
     S = n(196051),
     j = n(441729),
@@ -33,8 +33,8 @@ var i = n(200651),
     Z = n(611480),
     L = n(653477),
     k = n(388032),
-    B = n(317277),
-    M = n(814632),
+    B = n(20554),
+    M = n(483938),
     V = n(328756);
 let w = (0, p.hQ)(),
     U = (0, p.hQ)(),
@@ -156,7 +156,7 @@ function H() {
                 }),
                 (0, i.jsx)('div', {
                     className: B.previewMessage,
-                    children: (0, i.jsx)(I.Z, {
+                    children: (0, i.jsx)(f.Z, {
                         compact: e,
                         author: {
                             ...(0, N.ZH)(t),
@@ -394,7 +394,7 @@ function $() {
                 children: (0, i.jsx)(d.j7V, {
                     className: M.marginBottom20,
                     value: e,
-                    note: null != o ? (0, f.Z)(o) : void 0,
+                    note: null != o ? (0, I.Z)(o) : void 0,
                     onChange: A.QK.updateSetting,
                     children: k.intl.string(k.t.Iayoh4)
                 })
@@ -404,7 +404,7 @@ function $() {
                 children: (0, i.jsx)(d.j7V, {
                     className: M.marginBottom20,
                     value: t,
-                    note: null != u ? (0, f.Z)(u) : void 0,
+                    note: null != u ? (0, I.Z)(u) : void 0,
                     onChange: A.Yk.updateSetting,
                     children: k.intl.string(k.t.iIaOlZ)
                 })
@@ -425,7 +425,7 @@ function ee() {
             (0, i.jsx)(d.R94, {
                 type: d.R94.Types.DESCRIPTION,
                 className: M.marginBottom8,
-                children: null != t ? (0, f.Z)(t) : k.intl.string(k.t.GRa6U1)
+                children: null != t ? (0, I.Z)(t) : k.intl.string(k.t.GRa6U1)
             }),
             (0, i.jsx)(d.FXm, {
                 options: [

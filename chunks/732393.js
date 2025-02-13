@@ -1,76 +1,76 @@
-e.d(t, { Z: () => C }), e(47120);
-var i = e(200651);
-e(192379);
-var a = e(442837),
-    l = e(481060),
-    r = e(239091),
-    d = e(596454),
-    o = e(339085),
-    s = e(883429),
-    u = e(456269),
-    c = e(665906),
-    h = e(592125),
-    f = e(710352),
-    v = e(388032),
-    Z = e(928188);
-function g(n) {
-    let { tag: t } = n,
-        { name: e, emojiId: l, emojiName: r } = t,
-        s = (0, a.e7)([o.ZP], () => (null != l ? o.ZP.getUsableCustomEmojiById(l) : null));
+n.d(t, { Z: () => _ }), n(47120);
+var i = n(200651);
+n(192379);
+var l = n(442837),
+    a = n(481060),
+    r = n(239091),
+    s = n(596454),
+    o = n(339085),
+    c = n(883429),
+    d = n(456269),
+    u = n(665906),
+    h = n(592125),
+    p = n(710352),
+    m = n(388032),
+    f = n(769340);
+function g(e) {
+    let { tag: t } = e,
+        { name: n, emojiId: a, emojiName: r } = t,
+        c = (0, l.e7)([o.ZP], () => (null != a ? o.ZP.getUsableCustomEmojiById(a) : null));
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            null != r || null != l
-                ? (0, i.jsx)(d.Z, {
-                      className: Z.emoji,
-                      emojiId: l,
+            null != r || null != a
+                ? (0, i.jsx)(s.Z, {
+                      className: f.emoji,
+                      emojiId: a,
                       emojiName: r,
-                      animated: !!(null == s ? void 0 : s.animated)
+                      animated: !!(null == c ? void 0 : c.animated)
                   })
                 : null,
-            e
+            n
         ]
     });
 }
-function C(n) {
-    let t = (0, a.e7)([h.Z], () => h.Z.getChannel(n), [n]),
-        e = (0, c.C7)(t),
-        d = (0, a.e7)([h.Z], () => h.Z.getChannel(null == t ? void 0 : t.parent_id), [t]),
-        o = (0, u.Vm)(d),
-        Z = (0, u.eV)(t),
-        C = Z.length >= f.Cn,
-        p = (0, c.$R)(t);
+function _(e) {
+    let t = (0, l.e7)([h.Z], () => h.Z.getChannel(e), [e]),
+        n = (0, u.C7)(t),
+        s = (0, l.e7)([h.Z], () => h.Z.getChannel(null == t ? void 0 : t.parent_id), [t]),
+        o = (0, d.Vm)(s),
+        f = (0, d.eV)(t),
+        _ = f.length >= p.Cn,
+        C = (0, u.$R)(t);
     if (null == t) return (0, r.Zy)(), null;
-    if (!e || __OVERLAY__ || !t.isForumPost() || (null == o ? void 0 : o.length) === 0 || !p) return null;
-    let E = (n) => {
-            let e = new Set(Z);
-            if (e.has(n)) e.delete(n);
+    if (!n || __OVERLAY__ || !t.isForumPost() || (null == o ? void 0 : o.length) === 0 || !C) return null;
+    let x = (e) => {
+            let n = new Set(f);
+            if (n.has(e)) n.delete(e);
             else {
-                if (C) return;
-                e.add(n);
+                if (_) return;
+                n.add(e);
             }
-            let i = Array.from(e).map((n) => n.id);
-            s.Z.updateForumPostTags(t.id, i);
+            let i = Array.from(n).map((e) => e.id);
+            c.Z.updateForumPostTags(t.id, i);
         },
-        m =
+        v =
             null == o
                 ? void 0
-                : o.map((n) => {
-                      let t = Z.includes(n);
+                : o.map((e) => {
+                      let t = f.includes(e);
                       return (0, i.jsx)(
-                          l.S89,
+                          a.S89,
                           {
-                              id: n.id,
-                              label: (0, i.jsx)(g, { tag: n }),
-                              disabled: C && !t,
-                              action: () => E(n),
+                              id: e.id,
+                              label: (0, i.jsx)(g, { tag: e }),
+                              disabled: _ && !t,
+                              action: () => x(e),
                               checked: t
                           },
-                          n.id
+                          e.id
                       );
                   });
-    return (0, i.jsx)(l.sNh, {
+    return (0, i.jsx)(a.sNh, {
         id: 'edit-tags',
-        label: v.intl.string(v.t['436ZFx']),
-        children: m
+        label: m.intl.string(m.t['436ZFx']),
+        children: v
     });
 }

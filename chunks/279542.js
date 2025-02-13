@@ -26,7 +26,7 @@ var i = n(200651),
     j = n(193544),
     I = n(981631),
     E = n(388032),
-    b = n(150512);
+    b = n(75128);
 function T(e) {
     let { guild: t } = e,
         n = (0, o.e7)([g.Z], () => null != t && g.Z.can(I.Plq.MANAGE_GUILD, t), [t]),

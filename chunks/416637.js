@@ -3,7 +3,7 @@ var i = n(200651);
 n(192379);
 var l = n(120356),
     r = n.n(l),
-    o = n(260034);
+    o = n(595560);
 function a(e) {
     let { hideGradient: t, children: n } = e;
     return (0, i.jsxs)('div', {

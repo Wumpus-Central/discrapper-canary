@@ -1,18 +1,18 @@
-t.d(n, { Z: () => i });
-var o = t(200651),
-    a = t(192379),
-    r = t(325767);
-let i = a.forwardRef(function (e, n) {
-    let { width: t = 24, height: a = 24, color: i = 'currentColor', foreground: c, ...l } = e;
-    return (0, o.jsx)('svg', {
-        ...(0, r.Z)(l),
+l.d(n, { Z: () => a });
+var t = l(200651),
+    i = l(192379),
+    r = l(325767);
+let a = i.forwardRef(function (e, n) {
+    let { width: l = 24, height: i = 24, color: a = 'currentColor', foreground: s, ...o } = e;
+    return (0, t.jsx)('svg', {
+        ...(0, r.Z)(o),
         ref: n,
-        width: t,
-        height: a,
+        width: l,
+        height: i,
         viewBox: '0 0 24 24',
-        children: (0, o.jsx)('path', {
-            className: c,
-            fill: i,
+        children: (0, t.jsx)('path', {
+            className: s,
+            fill: a,
             d: 'M21 5V11.59L18 8.59L14 12.59L10 8.59L6 12.59L3 9.59V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5ZM18 11.42L21 14.42V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V12.42L6 15.42L10 11.42L14 15.42L18 11.42Z'
         })
     });

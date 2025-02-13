@@ -1,15 +1,15 @@
-let l;
-n.d(t, { Z: () => a });
-var i = n(145597);
-function a(e, t) {
+let o;
+n.d(t, { Z: () => c });
+var r = n(145597);
+function c(e, t) {
     if (__OVERLAY__) {
         let e = t.getGame(),
-            n = (0, i.QF)();
+            n = (0, r.QF)();
         return null == e || null == n
             ? null
-            : (null == l ? void 0 : l.id) === e.id && (null == l ? void 0 : l.pid) === n
-              ? l
-              : (l = {
+            : (null == o ? void 0 : o.id) === e.id && (null == o ? void 0 : o.pid) === n
+              ? o
+              : (o = {
                     id: e.id,
                     pid: n,
                     pidPath: [],

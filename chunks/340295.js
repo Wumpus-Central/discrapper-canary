@@ -14,7 +14,7 @@ var i = n(200651),
     f = n(546247),
     g = n(354459),
     _ = n(388032),
-    C = n(635374);
+    C = n(931481);
 let x = function (e) {
     var t, n;
     let { participants: a, channel: x, hasConnectPermission: v } = e,

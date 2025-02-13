@@ -1,81 +1,81 @@
-t.d(n, { F: () => h });
-var l = t(200651),
-    i = t(192379),
-    r = t(442837),
-    a = t(481060),
-    o = t(596454),
-    s = t(727637),
-    c = t(607070),
-    d = t(176354),
-    u = t(514445);
+n.d(t, { F: () => f });
+var r = n(200651),
+    i = n(192379),
+    a = n(442837),
+    l = n(481060),
+    o = n(596454),
+    s = n(727637),
+    d = n(607070),
+    c = n(176354),
+    u = n(300694);
 function m(e) {
-    let { emoji: n, shouldAnimate: t } = e;
-    if (null == n) return null;
-    let i = d.ZP.isCustomEmoji(n) ? n.name : n.surrogates;
-    return (0, l.jsx)(o.Z, {
+    let { emoji: t, shouldAnimate: n } = e;
+    if (null == t) return null;
+    let i = c.ZP.isCustomEmoji(t) ? t.name : t.surrogates;
+    return (0, r.jsx)(o.Z, {
         className: u.traitEmoji,
-        emojiId: n.id,
+        emojiId: t.id,
         emojiName: i,
-        animated: n.animated,
-        shouldAnimate: t
+        animated: t.animated,
+        shouldAnimate: n
     });
 }
 function _(e) {
-    let { trait: n } = e,
-        t = i.useRef(null),
-        o = (0, s.Z)(t),
-        d = (0, r.e7)([c.Z], () => c.Z.useReducedMotion);
-    return (null == n ? void 0 : n.label) == null || n.label.length <= 0
+    let { trait: t } = e,
+        n = i.useRef(null),
+        o = (0, s.Z)(n),
+        c = (0, a.e7)([d.Z], () => d.Z.useReducedMotion);
+    return (null == t ? void 0 : t.label) == null || t.label.length <= 0
         ? null
-        : (0, l.jsxs)('div', {
-              ref: t,
+        : (0, r.jsxs)('div', {
+              ref: n,
               className: u.trait,
               children: [
-                  (0, l.jsx)(m, {
-                      emoji: n.emoji,
-                      shouldAnimate: !d && o
+                  (0, r.jsx)(m, {
+                      emoji: t.emoji,
+                      shouldAnimate: !c && o
                   }),
-                  (0, l.jsx)(a.Text, {
+                  (0, r.jsx)(l.Text, {
                       tag: 'span',
                       className: u.traitLabel,
                       variant: 'text-sm/normal',
                       color: 'text-normal',
-                      children: n.label
+                      children: t.label
                   })
               ]
           });
 }
-function h(e) {
-    let { profile: n } = e,
-        t = i.useMemo(
+function f(e) {
+    let { profile: t } = e,
+        n = i.useMemo(
             () =>
-                n.traits
-                    .map((e, n) => ({
-                        key: 'trait-'.concat(n),
+                t.traits
+                    .map((e, t) => ({
+                        key: 'trait-'.concat(t),
                         ...e
                     }))
                     .filter((e) => e.label.length > 0),
-            [n]
+            [t]
         ),
-        r = i.useCallback(
+        a = i.useCallback(
             (e) =>
                 'string' == typeof e
-                    ? (0, l.jsx)('div', {
+                    ? (0, r.jsx)('div', {
                           className: u.trait,
-                          children: (0, l.jsx)(a.Text, {
+                          children: (0, r.jsx)(l.Text, {
                               tag: 'span',
                               variant: 'text-sm/normal',
                               color: 'text-normal',
                               children: e
                           })
                       })
-                    : (0, l.jsx)(_, { trait: e }),
+                    : (0, r.jsx)(_, { trait: e }),
             []
         );
-    return (0, l.jsx)(a.Epb, {
+    return (0, r.jsx)(l.Epb, {
         className: u.container,
-        items: t,
-        renderItem: r,
+        items: n,
+        renderItem: a,
         maxLines: 2,
         itemGapPx: 4
     });

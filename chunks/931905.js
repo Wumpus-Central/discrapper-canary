@@ -7,7 +7,7 @@ t(192379);
 var l = t(481060),
     r = t(17894),
     a = t(388032),
-    o = t(86867);
+    o = t(191494);
 let s = (n) => {
     let { onConfirm: e, onCancel: t, title: s, subtitle: u, confirmCta: c, showOpenDiscord: d = !0 } = n;
     return (0, i.jsxs)('div', {

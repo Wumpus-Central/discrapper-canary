@@ -6,7 +6,7 @@ var l = n(413335),
     o = n(703656),
     a = n(981631),
     s = n(176505),
-    c = n(324180),
+    c = n(306685),
     d = n(388032);
 function u(e) {
     let { guild: t, selected: n } = e;

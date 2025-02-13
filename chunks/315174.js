@@ -14,7 +14,7 @@ var i = n(200651),
     g = n(981631),
     f = n(647086),
     _ = n(388032),
-    v = n(338680);
+    v = n(852011);
 function C(e) {
     var t;
     let { guild: n, controller: l, guildBanner: r, animate: c } = e,

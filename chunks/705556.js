@@ -10,7 +10,7 @@ var r = n(442837),
     c = n(785717),
     d = n(475413),
     f = n(388032),
-    _ = n(808733);
+    _ = n(553728);
 function p(e) {
     let { user: t, guildId: n, fullWidth: p, appContext: h, onClose: m } = e,
         g = (0, r.e7)([l.default], () => l.default.getId() === t.id),

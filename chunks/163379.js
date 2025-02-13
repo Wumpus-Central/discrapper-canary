@@ -8,7 +8,7 @@ function s() {
     (!e && (0, r.$sL)()) ||
         (0, r.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([n.e('22878'), n.e('53937'), n.e('33355')]).then(n.bind(n, 678420));
+                let { default: e } = await Promise.all([n.e('22878'), n.e('53937'), n.e('15779')]).then(n.bind(n, 678420));
                 return (t) => (0, i.jsx)(e, { ...t });
             },
             { modalKey: a.Xd }

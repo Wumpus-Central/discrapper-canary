@@ -17,8 +17,8 @@ a.d(e, {
 });
 var r = a(370336),
     n = a(370541),
-    _ = a(101284),
-    o = a(833873),
+    o = a(101284),
+    _ = a(833873),
     i = a(356442),
     c = a(263449),
     s = a(899195),
@@ -29,13 +29,13 @@ let I = 0,
     R = 1;
 function d(t) {
     let { spanId: e, traceId: a } = t.spanContext(),
-        { data: n, op: _, parent_span_id: o, status: i, origin: c } = N(t);
+        { data: n, op: o, parent_span_id: _, status: i, origin: c } = N(t);
     return (0, r.Jr)({
-        parent_span_id: o,
+        parent_span_id: _,
         span_id: e,
         trace_id: a,
         data: n,
-        op: _,
+        op: o,
         status: i,
         origin: c
     });
@@ -55,7 +55,7 @@ function f(t) {
     return (0, n.$p)(e, a, r);
 }
 function p(t) {
-    return 'number' == typeof t ? T(t) : Array.isArray(t) ? t[0] + t[1] / 1000000000 : t instanceof Date ? T(t.getTime()) : (0, _.ph)();
+    return 'number' == typeof t ? T(t) : Array.isArray(t) ? t[0] + t[1] / 1000000000 : t instanceof Date ? T(t.getTime()) : (0, o.ph)();
 }
 function T(t) {
     return t > 9999999999 ? t / 1000 : t;
@@ -66,14 +66,14 @@ function N(t) {
         var e;
         let { spanId: a, traceId: n } = t.spanContext();
         if ((e = t).attributes && e.startTime && e.name && e.endTime && e.status) {
-            let { attributes: e, startTime: _, name: o, endTime: i, parentSpanId: c, status: l } = t;
+            let { attributes: e, startTime: o, name: _, endTime: i, parentSpanId: c, status: l } = t;
             return (0, r.Jr)({
                 span_id: a,
                 trace_id: n,
                 data: e,
-                description: o,
+                description: _,
                 parent_span_id: c,
-                start_timestamp: p(_),
+                start_timestamp: p(o),
                 timestamp: p(i) || void 0,
                 status: h(l),
                 op: e[E.$J],
@@ -119,10 +119,10 @@ function P(t) {
 }
 function v() {
     let t = (0, i.c)(),
-        e = (0, o.G)(t);
+        e = (0, _.G)(t);
     return e.getActiveSpan ? e.getActiveSpan() : (0, u.Y)((0, c.nZ)());
 }
-function C(t, e, a, r, n, _) {
-    let o = v();
-    o && (0, s.V)(o, t, e, a, r, n, _);
+function C(t, e, a, r, n, o) {
+    let _ = v();
+    _ && (0, s.V)(_, t, e, a, r, n, o);
 }

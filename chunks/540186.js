@@ -4,8 +4,8 @@ t(192379);
 var i = t(442837),
     r = t(481060),
     a = t(594174),
-    o = t(311888),
-    s = t(63063),
+    s = t(311888),
+    o = t(63063),
     c = t(5192),
     d = t(431328),
     u = t(501655),
@@ -13,7 +13,7 @@ var i = t(442837),
     _ = t(981631),
     h = t(765305),
     x = t(388032),
-    g = t(761137);
+    g = t(75231);
 function v(e) {
     let { icon: n } = e;
     return (0, l.jsx)('div', {
@@ -44,15 +44,15 @@ function b(e) {
 }
 function j(e) {
     var n;
-    let { guild: t, channel: r, stageData: o } = e,
-        s = (0, i.e7)([a.default], () => a.default.getCurrentUser(), []),
+    let { guild: t, channel: r, stageData: s } = e,
+        o = (0, i.e7)([a.default], () => a.default.getCurrentUser(), []),
         _ = {
             id: '1337',
             guild_id: t.id,
             channel_id: r.id,
-            topic: o.topic,
-            description: o.description,
-            privacy_level: null !== (n = o.privacyLevel) && void 0 !== n ? n : h.j8.PUBLIC
+            topic: s.topic,
+            description: s.description,
+            privacy_level: null !== (n = s.privacyLevel) && void 0 !== n ? n : h.j8.PUBLIC
         },
         x = (0, d.w8)(r.id, u.pV.SPEAKER),
         v = (0, d.Rk)(r.id, u.pV.AUDIENCE),
@@ -61,11 +61,11 @@ function j(e) {
         null ==
             b.find((e) => {
                 var n;
-                return (null === (n = e.user) || void 0 === n ? void 0 : n.id) === (null == s ? void 0 : s.id);
+                return (null === (n = e.user) || void 0 === n ? void 0 : n.id) === (null == o ? void 0 : o.id);
             }) &&
             b.push({
-                user: s,
-                userNick: c.ZP.getName(t.id, r.id, s)
+                user: o,
+                userNick: c.ZP.getName(t.id, r.id, o)
             }),
         (0, l.jsx)('div', {
             className: g.previewCardContainer,
@@ -133,13 +133,13 @@ function N(e) {
                                       text: x.intl.string(x.t.mgGOT0)
                                   }),
                                   (0, l.jsx)(b, {
-                                      icon: (0, l.jsx)(o.Z, {
+                                      icon: (0, l.jsx)(s.Z, {
                                           className: g.badgeIconBackground,
                                           foreground: g.badgeIconForeground,
                                           width: 40,
                                           height: 40
                                       }),
-                                      text: x.intl.format(x.t.qLmNLC, { articleURL: s.Z.getArticleURL(_.BhN.STAGE_CHANNEL_GUIDELINES) })
+                                      text: x.intl.format(x.t.qLmNLC, { articleURL: o.Z.getArticleURL(_.BhN.STAGE_CHANNEL_GUIDELINES) })
                                   })
                               ]
                           })

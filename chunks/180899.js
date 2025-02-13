@@ -1,11 +1,11 @@
-t.d(n, { Z: () => s }), t(47120);
+t.d(n, { Z: () => o }), t(47120);
 var l = t(192379),
     i = t(512722),
     r = t.n(i),
     a = t(157925),
-    o = t(765305);
-function s(e) {
-    let { stageInstance: n, defaultStep: t, error: i, onSave: s } = e,
+    s = t(765305);
+function o(e) {
+    let { stageInstance: n, defaultStep: t, error: i, onSave: o } = e,
         [c, d] = l.useState(t),
         [u, m] = l.useState(),
         [_, h] = l.useState(null);
@@ -22,14 +22,14 @@ function s(e) {
             },
             savedOptions: u,
             handleSettingsSave: function (e) {
-                if ((m(e), e.privacyLevel === o.j8.PUBLIC && (null == n ? void 0 : n.privacy_level) !== o.j8.PUBLIC)) {
+                if ((m(e), e.privacyLevel === s.j8.PUBLIC && (null == n ? void 0 : n.privacy_level) !== s.j8.PUBLIC)) {
                     d(a.lv.PUBLIC_STAGE_PREVIEW);
                     return;
                 }
-                s(e);
+                o(e);
             },
             handleDelayedSave: function () {
-                r()(null != u, 'Must have some saved options.'), s(u);
+                r()(null != u, 'Must have some saved options.'), o(u);
             }
         }
     );

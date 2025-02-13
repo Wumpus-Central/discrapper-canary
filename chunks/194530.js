@@ -9,11 +9,11 @@ var i = n(200651),
     d = n(155433),
     u = n(981631),
     h = n(388032),
-    m = n(977109);
+    m = n(609769);
 function g(e) {
     var t, n, g, x;
     let { transitionState: _, onSuccess: p, onClose: E, requirementsUpdated: C, noSkip: N = !1 } = e,
-        [I, f] = s.useState(''),
+        [f, I] = s.useState(''),
         [T, S] = s.useState(''),
         [j, v] = s.useState(''),
         [b, A] = s.useState(null),
@@ -26,7 +26,7 @@ function g(e) {
         let t = !1;
         if (('' === T ? (A(h.intl.string(h.t['/7/oPT'])), (t = !0)) : A(null), T !== j ? (R(h.intl.string(h.t.IEKYZ2)), (t = !0)) : R(null), t)) return;
         let n = await (0, a.Mn)({
-            password: I,
+            password: f,
             newPassword: T
         });
         if (null == n ? void 0 : n.ok) p();
@@ -79,8 +79,8 @@ function g(e) {
                                     error: null == D ? void 0 : null === (t = D.password) || void 0 === t ? void 0 : t[0],
                                     children: (0, i.jsx)(r.oil, {
                                         type: 'password',
-                                        value: I,
-                                        onChange: f,
+                                        value: f,
+                                        onChange: I,
                                         inputRef: y
                                     })
                                 }),

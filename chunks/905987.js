@@ -11,8 +11,8 @@ var i = s(200651),
     x = s(186523),
     h = s(553826),
     u = s(388032),
-    j = s(502529),
-    g = s(825157);
+    j = s(249999),
+    g = s(69425);
 function _(e) {
     let { count: t } = e,
         [s, a] = n.useState('server');

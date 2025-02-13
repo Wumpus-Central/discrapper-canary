@@ -1,13 +1,13 @@
 n.d(t, { Z: () => s }), n(653041), n(47120);
-var l = n(192379),
-    i = n(442837),
+var i = n(192379),
+    a = n(442837),
     r = n(430824),
-    a = n(973001);
+    l = n(973001);
 function s(e) {
     let { application: t, showMutualGuilds: n = !0 } = e,
-        s = (0, i.e7)([a.Z], () => a.Z.getGuildIdsForApplication(null == t ? void 0 : t.id), [t]),
-        o = (0, i.e7)([r.Z], () => r.Z.isLoaded());
-    return l.useMemo(() => {
+        s = (0, a.e7)([l.Z], () => l.Z.getGuildIdsForApplication(null == t ? void 0 : t.id), [t]),
+        o = (0, a.e7)([r.Z], () => r.Z.isLoaded());
+    return i.useMemo(() => {
         let e = [];
         if (!o || !n || null == s || null == t) return e;
         for (let t of s) {

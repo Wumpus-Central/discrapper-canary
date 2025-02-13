@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(47120);
+n.d(t, { Z: () => f }), n(47120);
 var i = n(200651),
     s = n(192379),
     l = n(442837),
@@ -16,9 +16,9 @@ var i = n(200651),
     p = n(981631),
     E = n(869783),
     C = n(388032),
-    N = n(870589);
-function I(e) {
-    let { onLearnMore: t, selectedBackgroundOption: I, onSelectBackgroundOption: f, currentDeviceId: T, smallerBackgroundOptions: S, className: j } = e,
+    N = n(425995);
+function f(e) {
+    let { onLearnMore: t, selectedBackgroundOption: f, onSelectBackgroundOption: I, currentDeviceId: T, smallerBackgroundOptions: S, className: j } = e,
         v = (0, l.e7)([o.default], () => o.default.getCurrentUser()),
         [b, A] = s.useState(null),
         O = (0, g.Z)(),
@@ -28,8 +28,8 @@ function I(e) {
         y = (0, a.O)(),
         Z = {
             isVideoBackgroundSupported: O,
-            onSelectBackgroundOption: f,
-            selectedBackgroundOption: I
+            onSelectBackgroundOption: I,
+            selectedBackgroundOption: f
         },
         L = s.useRef(Z);
     s.useEffect(() => {
@@ -40,7 +40,7 @@ function I(e) {
             e ? (0, m.FU)(n, T, { track: !1 }).catch(() => t(null)) : null != n && t(null);
         }, [T]);
     let k = (e) => {
-        f(e),
+        I(e),
             (0, m.FU)(e, T, { location: y.location })
                 .then(() => A(null))
                 .catch(() => {
@@ -61,7 +61,7 @@ function I(e) {
                   (0, i.jsx)(x.Z, {
                       canUseCustomBackgrounds: R,
                       customBackgroundOptions: P,
-                      selectedOption: I,
+                      selectedOption: f,
                       onSelectOption: k,
                       onUpsellClick: () => {
                           (0, r.ZDy)(async () => {

@@ -10,7 +10,7 @@ var i = n(200651),
     u = n(451478),
     m = n(981631),
     h = n(388032),
-    p = n(706313),
+    p = n(97729),
     g = n(902294);
 function _(e) {
     let { application: t, carouselItems: n } = e,

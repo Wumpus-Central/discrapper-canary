@@ -6,7 +6,7 @@ var i = r(200651),
     a = r(481060),
     c = r(378233),
     l = r(388032),
-    d = r(927314);
+    d = r(365004);
 let u = (e) => {
         let { stickerPack: t } = e;
         return (0, i.jsx)('div', {

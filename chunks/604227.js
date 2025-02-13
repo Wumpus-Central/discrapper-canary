@@ -9,17 +9,17 @@ var s = n(525654),
     c = n(320161),
     d = n(998502),
     u = n(388032),
-    h = n(180056);
+    h = n(357430);
 function m() {
     var e, t, n, s, m;
     let g = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        x = '368472',
-        _ = 'a0a04dcdefea452b1db08bdae1ad2a7bc4e52828'.substring(0, 7),
+        x = '368515',
+        _ = '74f0a074cf8392e4c2e2bc4ba981364e41118fcd'.substring(0, 7),
         p = null === a.Z || void 0 === a.Z ? void 0 : a.Z.remoteApp.getVersion(),
         E = null === a.Z || void 0 === a.Z ? void 0 : null === (e = (t = a.Z.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(t),
         C = null === a.Z || void 0 === a.Z ? void 0 : null === (n = (s = a.Z.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(s),
         N = null === (m = o.C.getCurrentBuildOverride().overrides) || void 0 === m ? void 0 : m.discord_web,
-        I = (function () {
+        f = (function () {
             var e;
             let t = null === l() || void 0 === l() ? void 0 : null === (e = l().os) || void 0 === e ? void 0 : e.toString();
             if (null == t || null == a.Z) return null;
@@ -27,13 +27,13 @@ function m() {
                 [i, s, r] = d.ZP.parsedOSRelease;
             return t.includes('Windows 10') && void 0 !== r && r >= 22000 && (t = t.replace('Windows 10', 'Windows 11')), t.includes('OS X 10.15.7') && void 0 !== i && i >= 20 && (t = 'macOS '.concat(i - 9)), ''.concat(t, ' (').concat(n, ')');
         })(),
-        f = [g, x, '('.concat(_, ')')];
+        I = [g, x, '('.concat(_, ')')];
     return (
-        null != p && (f.push('Host '.concat(p)), null != C && f.push(C.toLowerCase()), null != E && f.push('('.concat(E, ')'))),
-        f.push('Build Override: '.concat(null != N ? N.id : 'N/A')),
-        null != I && f.push(I),
+        null != p && (I.push('Host '.concat(p)), null != C && I.push(C.toLowerCase()), null != E && I.push('('.concat(E, ')'))),
+        I.push('Build Override: '.concat(null != N ? N.id : 'N/A')),
+        null != f && I.push(f),
         (0, i.jsx)(c.Z, {
-            copyValue: f.join(' '),
+            copyValue: I.join(' '),
             text: u.intl.string(u.t['9Al4QU']),
             'aria-label': !1,
             children: (e) =>
@@ -101,13 +101,13 @@ function m() {
                                       ]
                                   })
                                 : null,
-                            null != I
+                            null != f
                                 ? (0, i.jsx)(r.Text, {
                                       tag: 'span',
                                       className: h.line,
                                       variant: 'text-xs/normal',
                                       color: 'text-muted',
-                                      children: I
+                                      children: f
                                   })
                                 : null
                         ]

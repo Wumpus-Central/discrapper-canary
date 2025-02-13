@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(47120), n(642549), n(518263), n(970173), n(520712), n(268111), n(941497), n(32026), n(480839), n(744285), n(492257), n(873817), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648), n(653041);
+n.d(t, { Z: () => f }), n(47120), n(642549), n(518263), n(970173), n(520712), n(268111), n(941497), n(32026), n(480839), n(744285), n(492257), n(873817), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648), n(653041);
 var i = n(200651),
     s = n(192379),
     l = n(120356),
@@ -13,7 +13,7 @@ var i = n(200651),
     g = n(451593),
     x = n(477146),
     _ = n(329156),
-    p = n(396386),
+    p = n(336600),
     E = n(346537),
     C = n(830318);
 let N = (e) => {
@@ -25,11 +25,11 @@ let N = (e) => {
         for (let e = 0; e < i.length; e++) r[e] = i.charCodeAt(e);
         return new Blob([l], { type: s });
     },
-    I = (e) => {
+    f = (e) => {
         let { effect: t, back: n } = e,
             { upsertConfig: l } = (0, g.E)(),
-            I = (0, o.e7)([h.default], () => h.default.getCurrentUser()),
-            [f, T] = s.useState(!0),
+            f = (0, o.e7)([h.default], () => h.default.getCurrentUser()),
+            [I, T] = s.useState(!0),
             S = s.useRef(null),
             [j, v] = s.useState(!1),
             [b, A] = s.useState(!1),
@@ -63,7 +63,7 @@ let N = (e) => {
                 config: { effects: D }
             });
         }, [D, y]),
-        null == I)
+        null == f)
             ? (0, i.jsx)('div', {})
             : (0, i.jsxs)('div', {
                   className: p.root,
@@ -86,7 +86,7 @@ let N = (e) => {
                                           alt: '',
                                           width: 450
                                       }),
-                                      f &&
+                                      I &&
                                           (0, i.jsx)(_.Z, {
                                               config: {
                                                   type: a.Z.PROFILE_EFFECT,
@@ -284,7 +284,7 @@ let N = (e) => {
                                                   className: r()(p.userProfilePreview, p.preview),
                                                   children: [
                                                       (0, i.jsx)(u.Z, {
-                                                          user: I,
+                                                          user: f,
                                                           pendingAvatar: void 0,
                                                           pendingProfileEffectId: null,
                                                           canUsePremiumCustomization: !0,

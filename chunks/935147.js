@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(211712),
     C = n(629654),
     N = n(53691),
-    I = n(165583),
-    f = n(267717),
+    f = n(165583),
+    I = n(267717),
     T = n(350327),
     S = n(996073),
     j = n(25990),
@@ -36,7 +36,7 @@ var i = n(200651),
     B = n(474936),
     M = n(526761),
     V = n(388032),
-    w = n(407849);
+    w = n(466511);
 function U(e) {
     var t, n;
     let { user: U, isVisible: G, shouldShow: F } = e,
@@ -198,7 +198,7 @@ function U(e) {
                               onSubscribeModalClose: es,
                               className: w.floatingUpsell,
                               showUpsell: !0,
-                              text: V.intl.format(V.t.TmfgIy, { onClick: () => (0, f.y)(es) }),
+                              text: V.intl.format(V.t.TmfgIy, { onClick: () => (0, I.y)(es) }),
                               button: z ? V.intl.string(V.t.AfRWIy) : ea ? V.intl.formatToPlainString(V.t.bkQ4bG, { percent: null == er ? void 0 : er.discount.amount }) : V.intl.string(V.t.pj0XBA),
                               position: 'inline',
                               showShadow: !1
@@ -207,7 +207,7 @@ function U(e) {
                           (0, i.jsxs)('div', {
                               children: [
                                   (0, i.jsx)('div', { className: w.premiumTier2Divider }),
-                                  (0, i.jsx)(I.ZP, {
+                                  (0, i.jsx)(f.ZP, {
                                       type: B.cd.CUSTOM_PROFILE_TRY_OUT_UPSELL,
                                       subscriptionTier: B.Si.TIER_2
                                   })

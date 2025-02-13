@@ -1,6 +1,6 @@
 n.d(t, { Z: () => a });
 var i = n(200651),
-    l = n(317171);
+    l = n(878440);
 let a = function () {
     return (0, i.jsx)('div', {
         children: (0, i.jsxs)('div', {

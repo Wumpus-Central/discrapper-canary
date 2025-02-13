@@ -17,14 +17,14 @@ var i = n(200651),
     E = n(768581),
     C = n(709054),
     N = n(647177),
-    I = n(63985),
-    f = n(678916),
+    f = n(63985),
+    I = n(678916),
     T = n(981631),
     S = n(190378),
     j = n(486324),
     v = n(474936),
     b = n(388032),
-    A = n(531362);
+    A = n(232341);
 function O(e) {
     let { icon: t, onClick: n, text: s, children: l, className: a, selected: c = !1, disabled: d = !1, onMouseLeave: u, onBlur: h } = e;
     return (0, i.jsxs)(o.P3F, {
@@ -93,10 +93,10 @@ function R(e) {
     });
 }
 function D(e) {
-    let { option: t, source: s, selected: l = !1, onSelectOption: u, isAnimatedImage: E, isVideo: C, hotspotLocation: I, ...f } = e,
+    let { option: t, source: s, selected: l = !1, onSelectOption: u, isAnimatedImage: E, isVideo: C, hotspotLocation: f, ...I } = e,
         S = (0, d.O)(),
         { analyticsLocations: j } = (0, m.ZP)(h.Z.VIDEO_BACKGROUND_IMAGE_OPTION),
-        O = (0, a.e7)([_.Z], () => null != I && _.Z.hasHotspot(I)),
+        O = (0, a.e7)([_.Z], () => null != f && _.Z.hasHotspot(f)),
         D = C
             ? (0, i.jsx)(g.Z, {
                   className: A.backgroundImageOption,
@@ -111,9 +111,9 @@ function D(e) {
                   source: s
               });
     function P() {
-        null != I &&
+        null != f &&
             O &&
-            (x.Kw(I),
+            (x.Kw(f),
             p.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: v.cd.ANIMATED_VIDEO_BACKGROUND_NEW_PRESET,
                 location: S.location,
@@ -121,7 +121,7 @@ function D(e) {
             }));
     }
     return (0, i.jsxs)(o.P3F, {
-        ...f,
+        ...I,
         className: r()(A.backgroundOption, { [A.backgroundOptionSelected]: l }),
         onClick: () => u(t),
         onContextMenu: (e) =>
@@ -250,10 +250,10 @@ function L(e) {
         onClick: function () {
             (0, o.ZDy)(
                 async () => {
-                    let { default: e } = await Promise.all([n.e('70687'), n.e('55849'), n.e('30885')]).then(n.bind(n, 192277));
+                    let { default: e } = await Promise.all([n.e('70687'), n.e('55849'), n.e('81224')]).then(n.bind(n, 192277));
                     return (n) =>
                         (0, i.jsx)(e, {
-                            maxFileSizeBytes: f.SJ,
+                            maxFileSizeBytes: I.SJ,
                             onComplete: t,
                             uploadType: j.pC.VIDEO_BACKGROUND,
                             filters: a,
@@ -275,7 +275,7 @@ function k(e) {
         u = s.useMemo(() => n.sort((e, t) => (null == e.last_used || null == t.last_used ? C.default.compare(t.id, e.id) : new Date(t.last_used).getTime() - new Date(e.last_used).getTime())), [n]),
         g = u.length >= 25,
         { analyticsLocations: x } = (0, m.ZP)(h.Z.VIDEO_BACKGROUND_OPTIONS),
-        _ = Object.values((0, I.Z)()).sort((e, t) => f.E1[e.id] - f.E1[t.id]);
+        _ = Object.values((0, f.Z)()).sort((e, t) => I.E1[e.id] - I.E1[t.id]);
     return (0, i.jsx)(m.Gt, {
         value: x,
         children: (0, i.jsxs)('div', {
@@ -289,9 +289,9 @@ function k(e) {
                 }),
                 (0, i.jsx)(O, {
                     className: A.__invalid_backgroundOptionBlurred,
-                    selected: l === f.f7,
+                    selected: l === I.f7,
                     icon: o.yMH,
-                    onClick: () => r(f.f7),
+                    onClick: () => r(I.f7),
                     text: b.intl.string(b.t.LhSyLy),
                     children: (0, i.jsx)('div', { className: A.backgroundOptionBlurBackground })
                 }),

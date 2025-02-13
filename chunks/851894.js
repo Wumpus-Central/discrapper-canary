@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(594174),
     C = n(63063),
     N = n(74538),
-    I = n(18438),
-    f = n(778825),
+    f = n(18438),
+    I = n(778825),
     T = n(856607),
     S = n(594496),
     j = n(856768),
@@ -46,11 +46,11 @@ function O(e) {
         }),
         O = (0, a.e7)([_.Z], () => !_.Z.isFetchingProfile(l.id, null == t ? void 0 : t.id)),
         R = (0, a.e7)([p.Z], () => p.Z.hidePersonalInformation),
-        { source: D, ...P } = (0, a.cj)([f.Z], () => ({
-            ...f.Z.getAllPending(),
-            source: f.Z.getSource()
+        { source: D, ...P } = (0, a.cj)([I.Z], () => ({
+            ...I.Z.getAllPending(),
+            source: I.Z.getSource()
         }));
-    return (s.useEffect(() => () => c.Z.wait(I.W3), []),
+    return (s.useEffect(() => () => c.Z.wait(f.W3), []),
     s.useEffect(() => {
         null != D &&
             h.ZP.trackWithMetadata(v.rMx.SETTINGS_PANE_VIEWED, {
@@ -75,7 +75,7 @@ function O(e) {
                                   (0, i.jsx)(j.Z, {
                                       guildId: t.id,
                                       onChange: (e) => {
-                                          null != e && (0, I.HP)(e);
+                                          null != e && (0, f.HP)(e);
                                       }
                                   }),
                                   (0, i.jsx)(g.Z, {

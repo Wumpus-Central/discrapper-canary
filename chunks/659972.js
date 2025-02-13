@@ -7,13 +7,13 @@ var l,
 t(192379);
 var r = t(120356),
     a = t.n(r),
-    o = t(481060),
-    s = t(565138),
+    s = t(481060),
+    o = t(565138),
     c = t(372769),
     d = t(857395),
     u = t(131154),
     m = t(38981),
-    _ = t(491795),
+    _ = t(585898),
     h = (((l = {})[(l.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (l[(l.TRENDING = 1)] = 'TRENDING'), (l[(l.PERSONALIZED = 2)] = 'PERSONALIZED'), (l[(l.USER_GUILDS = 3)] = 'USER_GUILDS'), (l[(l.FRIENDS_GUILDS = 4)] = 'FRIENDS_GUILDS'), (l[(l.INTRO_CARD = 5)] = 'INTRO_CARD'), (l[(l.FEATURED = 6)] = 'FEATURED'), l);
 function x(e) {
     let { guild: n, stageInstance: t, showGuildPopout: l, setShowGuildPopout: r, handleGuildNameClick: h, source: x, speakers: g, speakerCount: v, audienceCount: b, channelName: j } = e,
@@ -31,19 +31,19 @@ function x(e) {
                             shouldShow: l,
                             onRequestClose: () => r(!1),
                             children: () =>
-                                (0, i.jsxs)(o.P3F, {
+                                (0, i.jsxs)(s.P3F, {
                                     className: _.flexContainerRow,
                                     onClick: h,
                                     children: [
-                                        (0, i.jsx)(s.Z, {
+                                        (0, i.jsx)(o.Z, {
                                             guild: n,
-                                            size: s.Z.Sizes.MINI,
+                                            size: o.Z.Sizes.MINI,
                                             className: _.guildIcon
                                         }),
                                         (0, i.jsxs)('div', {
                                             className: _.flexContainerRow,
                                             children: [
-                                                (0, i.jsx)(o.Text, {
+                                                (0, i.jsx)(s.Text, {
                                                     color: 'header-secondary',
                                                     variant: 'text-sm/normal',
                                                     className: a()(_.guildName, { [_.disabled]: null == h }),
@@ -61,7 +61,7 @@ function x(e) {
                                 6 === x &&
                                     (0, i.jsx)('div', {
                                         className: _.featuredTag,
-                                        children: (0, i.jsx)(o.Text, {
+                                        children: (0, i.jsx)(s.Text, {
                                             variant: 'text-sm/normal',
                                             className: _.featuredTagText,
                                             children: 'Featured'
@@ -75,13 +75,13 @@ function x(e) {
                         })
                     ]
                 }),
-                (0, i.jsx)(o.Text, {
+                (0, i.jsx)(s.Text, {
                     color: 'header-primary',
                     variant: 'text-lg/semibold',
                     className: _.topicText,
                     children: t.topic
                 }),
-                (0, i.jsx)(o.Text, {
+                (0, i.jsx)(s.Text, {
                     color: 'header-secondary',
                     className: _.description,
                     variant: 'text-sm/normal',
@@ -100,14 +100,14 @@ function x(e) {
                             (0, i.jsxs)('div', {
                                 className: _.footer,
                                 children: [
-                                    (0, i.jsx)(o.ewx, {
+                                    (0, i.jsx)(s.ewx, {
                                         size: 'custom',
                                         color: 'currentColor',
                                         width: 20,
                                         height: 20,
                                         className: _.icon
                                     }),
-                                    (0, i.jsx)(o.Text, {
+                                    (0, i.jsx)(s.Text, {
                                         color: 'header-secondary',
                                         className: _.__invalid_label,
                                         variant: 'text-sm/normal',

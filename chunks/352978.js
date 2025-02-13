@@ -11,7 +11,7 @@ var l,
     o = n(481060),
     u = n(763520),
     c = n(153066),
-    d = n(14759),
+    d = n(507883),
     m = (((l = {}).CONTAIN = 'contain'), (l.COVER = 'cover'), l);
 let f = r.memo(function (e) {
     let { streamId: t, onResize: n, wrapperClassName: l, videoComponent: a, className: m, fit: f = 'contain', mirror: h = !1, paused: p = !1, streamPreviewURL: v, videoSpinnerContext: g, userId: E } = e,

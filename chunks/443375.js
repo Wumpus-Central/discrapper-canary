@@ -41,7 +41,7 @@ var r = n(120356),
     F = n(981631),
     V = n(701488),
     j = n(388032),
-    H = n(309584);
+    H = n(537208);
 function Y(e) {
     var t;
     let { user: n, currentUser: r, activity: Y, application: W, voiceGuild: K, voiceChannel: z, profileGuildId: q, className: Q, onClose: X } = e,

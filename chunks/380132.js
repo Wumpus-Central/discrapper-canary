@@ -5,30 +5,30 @@ a.d(e, {
 });
 var r = a(617726),
     n = a(967752),
-    _ = a(305625),
-    o = a(696486);
-function i(t, e, a, _) {
-    let o = (0, r.HY)(a),
+    o = a(305625),
+    _ = a(696486);
+function i(t, e, a, o) {
+    let _ = (0, r.HY)(a),
         i = {
             sent_at: new Date().toISOString(),
-            ...(o && { sdk: o }),
-            ...(!!_ && e && { dsn: (0, n.RA)(e) })
+            ...(_ && { sdk: _ }),
+            ...(!!o && e && { dsn: (0, n.RA)(e) })
         },
         c = 'aggregates' in t ? [{ type: 'sessions' }, t] : [{ type: 'session' }, t.toJSON()];
     return (0, r.Jd)(i, [c]);
 }
 function c(t, e, a, n) {
-    var _;
-    let o = (0, r.HY)(a),
+    var o;
+    let _ = (0, r.HY)(a),
         i = t.type && 'replay_event' !== t.type ? t.type : 'event';
-    (_ = a && a.sdk) && ((t.sdk = t.sdk || {}), (t.sdk.name = t.sdk.name || _.name), (t.sdk.version = t.sdk.version || _.version), (t.sdk.integrations = [...(t.sdk.integrations || []), ...(_.integrations || [])]), (t.sdk.packages = [...(t.sdk.packages || []), ...(_.packages || [])]));
-    let c = (0, r.Cd)(t, o, n, e);
+    (o = a && a.sdk) && ((t.sdk = t.sdk || {}), (t.sdk.name = t.sdk.name || o.name), (t.sdk.version = t.sdk.version || o.version), (t.sdk.integrations = [...(t.sdk.integrations || []), ...(o.integrations || [])]), (t.sdk.packages = [...(t.sdk.packages || []), ...(o.packages || [])]));
+    let c = (0, r.Cd)(t, _, n, e);
     delete t.sdkProcessingMetadata;
     let s = [{ type: i }, t];
     return (0, r.Jd)(c, [s]);
 }
 function s(t, e) {
-    let a = (0, _.jC)(t[0]),
+    let a = (0, o.jC)(t[0]),
         i = e && e.getDsn(),
         c = e && e.getOptions().tunnel,
         s = {
@@ -37,7 +37,7 @@ function s(t, e) {
             ...(!!c && i && { dsn: (0, n.RA)(i) })
         },
         E = e && e.getOptions().beforeSendSpan,
-        l = E ? (t) => E((0, o.XU)(t)) : (t) => (0, o.XU)(t),
+        l = E ? (t) => E((0, _.XU)(t)) : (t) => (0, _.XU)(t),
         u = [];
     for (let e of t) {
         let t = l(e);

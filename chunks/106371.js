@@ -1,6 +1,6 @@
-n.d(t, { Z: () => l });
-var a = n(818083);
-let r = (0, a.B)({
+n.d(t, { Z: () => o });
+var i = n(818083);
+let a = (0, i.B)({
     kind: 'user',
     id: '2024-08_reaction_push_notifications_user',
     label: 'In App Notifications for Reactions',
@@ -35,7 +35,7 @@ let r = (0, a.B)({
         }
     ]
 });
-(0, a.B)({
+(0, i.B)({
     kind: 'guild',
     id: '2024-08_reaction_push_notifications_guild',
     label: 'In App Notifications for Reactions (Guild)',
@@ -48,4 +48,4 @@ let r = (0, a.B)({
         }
     ]
 });
-let l = r;
+let o = a;

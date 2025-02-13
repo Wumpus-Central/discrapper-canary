@@ -6,7 +6,7 @@ var i = n(120356),
     a = n(481060),
     s = n(5192),
     o = n(829820),
-    u = n(202122);
+    u = n(836716);
 function c(e) {
     let { activity: t, user: n, channelId: i, guildId: c, source: d, size: m, look: f, color: h, className: g, onAction: p } = e,
         { tooltip: v, loading: S, disabled: I, onClick: x } = (0, o.Fe)(t, n, d, s.ZP.getNickname(c, i, n)),

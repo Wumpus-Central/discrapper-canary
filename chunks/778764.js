@@ -17,11 +17,11 @@ var i = n(200651),
     E = n(755733),
     C = n(981631),
     N = n(388032),
-    I = n(384989);
-function f(e) {
+    f = n(460696);
+function I(e) {
     let { transitionState: t, onClose: r, ticket: o, challenge: c } = e,
         h = (0, d.Dt)(),
-        [p, f] = s.useState(''),
+        [p, I] = s.useState(''),
         [T, S] = s.useState(!0),
         [j, v] = s.useState(E.x.INIT),
         [b, A] = s.useState(''),
@@ -43,7 +43,7 @@ function f(e) {
         'aria-labelledby': h,
         children: [
             (0, i.jsxs)(a.xBx, {
-                className: I.header,
+                className: f.header,
                 separator: !1,
                 children: [
                     (0, i.jsxs)(a.X6q, {
@@ -53,7 +53,7 @@ function f(e) {
                     }),
                     (0, i.jsx)(a.olH, {
                         onClick: r,
-                        className: I.modalCloseButton
+                        className: f.modalCloseButton
                     })
                 ]
             }),
@@ -65,10 +65,10 @@ function f(e) {
                         id: E.x.INIT,
                         children: [
                             (0, i.jsxs)(a.hzk, {
-                                className: I.content,
+                                className: f.content,
                                 children: [
                                     (0, i.jsx)('div', {
-                                        className: I.icon,
+                                        className: f.icon,
                                         children: (0, i.jsx)('img', {
                                             alt: '',
                                             src: n(773072)
@@ -103,10 +103,10 @@ function f(e) {
                         id: E.x.REGISTER,
                         children: [
                             (0, i.jsxs)(a.hzk, {
-                                className: I.content,
+                                className: f.content,
                                 children: [
                                     (0, i.jsx)('div', {
-                                        className: I.icon,
+                                        className: f.icon,
                                         children: (0, i.jsx)('img', {
                                             alt: '',
                                             src: n(773072)
@@ -139,10 +139,10 @@ function f(e) {
                             },
                             children: [
                                 (0, i.jsxs)(a.hzk, {
-                                    className: I.content,
+                                    className: f.content,
                                     children: [
                                         (0, i.jsx)('div', {
-                                            className: I.icon,
+                                            className: f.icon,
                                             children: (0, i.jsx)('img', {
                                                 alt: '',
                                                 src: n(637163)
@@ -155,10 +155,10 @@ function f(e) {
                                                     children: N.intl.string(N.t['Jzd+z8'])
                                                 }),
                                                 (0, i.jsx)(a.oil, {
-                                                    className: I.input,
+                                                    className: f.input,
                                                     value: p,
                                                     onChange: (e) => {
-                                                        f(e), S(0 === e.length);
+                                                        I(e), S(0 === e.length);
                                                     },
                                                     autoFocus: !0,
                                                     minLength: 1
@@ -168,7 +168,7 @@ function f(e) {
                                     ]
                                 }),
                                 (0, i.jsxs)(a.mzw, {
-                                    className: I.footer,
+                                    className: f.footer,
                                     children: [
                                         (0, i.jsx)(a.zxk, {
                                             type: 'submit',
@@ -237,23 +237,23 @@ function S() {
     let [n, l] = s.useState(!1);
     return (0, i.jsxs)(a.hjN, {
         title: N.intl.string(N.t.y7SXYW),
-        className: I.settings,
+        className: f.settings,
         children: [
             (0, i.jsx)(a.R94, {
                 type: a.R94.Types.DESCRIPTION,
-                className: I.description,
+                className: f.description,
                 children: N.intl.string(N.t.TMukAA)
             }),
             e.length > 0 &&
                 (0, i.jsx)('div', {
-                    className: I.credentialList,
+                    className: f.credentialList,
                     children: e.map((e) =>
                         (0, i.jsx)(
                             c.Z,
                             {
                                 avatar: null,
                                 name: e.name,
-                                className: I.credentialItem,
+                                className: f.credentialItem,
                                 onContextMenu: (t) => {
                                     (0, o.vq)(t, (t) =>
                                         (0, i.jsx)(T, {
@@ -275,12 +275,12 @@ function S() {
                                         );
                                     },
                                     'aria-label': N.intl.string(N.t['+nrTbG']),
-                                    innerClassName: I.credentialOptions,
+                                    innerClassName: f.credentialOptions,
                                     children: (0, i.jsx)(a.Huf, {
                                         size: 'md',
                                         color: 'currentColor',
-                                        className: I.__invalid_overflowIcon,
-                                        colorClass: I.__invalid_overflowIconFg,
+                                        className: f.__invalid_overflowIcon,
+                                        colorClass: f.__invalid_overflowIconFg,
                                         'aria-hidden': !0
                                     })
                                 })
@@ -297,7 +297,7 @@ function S() {
                                 .then((e) => {
                                     let { ticket: t, challenge: n } = e;
                                     (0, a.h7j)((e) =>
-                                        (0, i.jsx)(f, {
+                                        (0, i.jsx)(I, {
                                             ...e,
                                             ticket: t,
                                             challenge: n

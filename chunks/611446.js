@@ -14,7 +14,7 @@ var i,
     u = n(858597),
     T = n(486213),
     _ = n(388032),
-    S = n(484627),
+    S = n(869931),
     x = (((i = {}).ACTIONS = 'ACTIONS'), (i.SAFETY_TIPS = 'SAFETY_TIPS'), (i.ABOUT_SAFETY_ALERTS = 'ABOUT_SAFETY_ALERTS'), i);
 let b = (t) => {
     let { onClose: e, channelId: n, warningId: i, warningType: x, otherUserId: b, transitionState: p } = t,

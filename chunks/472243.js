@@ -15,7 +15,7 @@ var r = n(120356),
     h = n(981631),
     m = n(474936),
     g = n(388032),
-    E = n(483400);
+    E = n(63360);
 function v(e) {
     var t, n, r, v;
     let { type: y, textValue: I, maxCharacterCount: T, showRemainingCharsAfterCount: b, className: S } = e,

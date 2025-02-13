@@ -29,7 +29,7 @@ var i = n(200651),
     D = n(981631),
     L = n(474936),
     x = n(388032),
-    P = n(109726);
+    P = n(844433);
 let w = 1500;
 function M(e) {
     let { giftCode: t, application: n, sku: a, subscriptionPlan: o, selectedGiftStyle: l, onClose: d, hasSentMessage: f, giftRecipient: h, giftMessageError: v, isSendingMessage: y } = e,

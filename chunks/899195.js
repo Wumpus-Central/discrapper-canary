@@ -1,19 +1,19 @@
 a.d(e, {
-    V: () => o,
-    y: () => _
+    V: () => _,
+    y: () => o
 });
 var r = a(370336);
 let n = '_sentryMetrics';
-function _(t) {
+function o(t) {
     let e = t[n];
     if (!e) return;
     let a = {};
     for (let [, [t, n]] of e) (a[t] || (a[t] = [])).push((0, r.Jr)(n));
     return a;
 }
-function o(t, e, a, r, _, o, i) {
+function _(t, e, a, r, o, _, i) {
     let c = t[n] || (t[n] = new Map()),
-        s = `${e}:${a}@${_}`,
+        s = `${e}:${a}@${o}`,
         E = c.get(i);
     if (E) {
         let [, t] = E;
@@ -35,7 +35,7 @@ function o(t, e, a, r, _, o, i) {
                 max: r,
                 count: 1,
                 sum: r,
-                tags: o
+                tags: _
             }
         ]);
 }

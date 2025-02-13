@@ -17,11 +17,11 @@ var i = n(200651),
     E = n(726985),
     C = n(736530),
     N = n(981631),
-    I = n(388032);
-function f(e) {
+    f = n(388032);
+function I(e) {
     let { ingress: t, guildId: n } = e,
         p = (0, h.c_)(),
-        f = u.h2.useSetting().includes(n),
+        I = u.h2.useSetting().includes(n),
         T = (0, d.q)(),
         S = s.useCallback(
             (e) => {
@@ -44,10 +44,10 @@ function f(e) {
     }
     let v = (e) => {
         (0, x.V)({
-            header: I.intl.string(I.t['uUr+GR']),
-            body: I.intl.string(I.t.hjGJBg),
-            confirmText: I.intl.string(I.t.gm1Ven),
-            cancelText: I.intl.string(I.t.p89ACg),
+            header: f.intl.string(f.t['uUr+GR']),
+            body: f.intl.string(f.t.hjGJBg),
+            confirmText: f.intl.string(f.t.gm1Ven),
+            cancelText: f.intl.string(f.t.p89ACg),
             confirmButtonColor: l.zxk.Colors.BRAND,
             onConfirm: () => {
                 u.gR.updateSetting(e), j(e, !1);
@@ -62,17 +62,17 @@ function f(e) {
         children:
             n === C.T
                 ? (0, i.jsx)(g.Z, {
-                      title: I.intl.string(I.t.RAQUSE),
-                      note: I.intl.string(I.t.wbYDfX),
+                      title: f.intl.string(f.t.RAQUSE),
+                      note: f.intl.string(f.t.wbYDfX),
                       value: !T,
                       onChange: (e) => {
                           v(!e);
                       }
                   })
                 : (0, i.jsx)(g.Z, {
-                      title: I.intl.string(I.t.RAQUSE),
-                      note: p ? I.intl.string(I.t.V0ka0d) : I.intl.string(I.t.G7c3Xl),
-                      value: !f,
+                      title: f.intl.string(f.t.RAQUSE),
+                      note: p ? f.intl.string(f.t.V0ka0d) : f.intl.string(f.t.G7c3Xl),
+                      value: !I,
                       onChange: S
                   })
     });
@@ -80,7 +80,7 @@ function f(e) {
 function T(e) {
     let { ingress: t = p.f4.USER_SETTINGS_PRIVACY_SAFETY, guildId: n } = e,
         s = (0, h.is)();
-    return (0, i.jsx)(f, {
+    return (0, i.jsx)(I, {
         ingress: t,
         guildId: null != n ? n : s
     });

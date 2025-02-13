@@ -10,7 +10,7 @@ var r = n(442837),
     d = n(974513),
     u = n(290511),
     m = n(388032),
-    h = n(373708);
+    h = n(940196);
 function g(e) {
     let { guildId: t, scrollToQuestions: n } = e,
         g = (0, r.e7)([a.Z], () => a.Z.isAdvancedMode(t)),

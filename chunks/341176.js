@@ -1,82 +1,82 @@
-t.d(n, {
-    D: () => f,
-    Z: () => p
+n.d(t, {
+    D: () => p,
+    Z: () => g
 });
-var a = t(200651),
-    i = t(120356),
-    r = t.n(i),
-    l = t(524444),
-    o = t(52824),
-    s = t(956664),
-    c = t(589530),
-    u = t(591759),
-    d = t(124347),
-    _ = t(80966),
-    h = t(604312);
-let f = {
+var i = n(200651),
+    a = n(120356),
+    r = n.n(a),
+    l = n(524444),
+    s = n(52824),
+    o = n(956664),
+    c = n(589530),
+    d = n(591759),
+    u = n(124347),
+    m = n(80966),
+    h = n(201262);
+let p = {
     DEFAULT: null,
     CONTAIN: h.contain,
     SCALE_DOWN: h.scaleDown
 };
-function p(e) {
-    let { media: n, fit: t = f.DEFAULT, obscured: i = !1, onContextMenu: p } = e,
-        { width: C, height: m, url: E, proxyUrl: S, alt: g, type: L, maxWidth: x, maxHeight: O, ...v } = n,
-        { width: b, height: A } = (0, s.zp)(null != C ? C : 0, null != m ? m : 0),
-        N = (0, o.q)({
-            proxyURL: S,
-            url: E
+function g(e) {
+    let { media: t, fit: n = p.DEFAULT, obscured: a = !1, onContextMenu: g } = e,
+        { width: _, height: x, url: C, proxyUrl: v, alt: f, type: I, maxWidth: b, maxHeight: j, ...S } = t,
+        { width: N, height: E } = (0, o.zp)(null != _ ? _ : 0, null != x ? x : 0),
+        y = (0, s.q)({
+            proxyURL: v,
+            url: C
         }),
-        D = !(null == C || 0 === C || null == m || 0 === m);
-    if ('VIDEO' === L && D && null != S) {
-        var R;
+        P = !(null == _ || 0 === _ || null == x || 0 === x);
+    if ('VIDEO' === I && P && null != v) {
+        var A;
         let e = (function (e) {
-            let n = u.Z.toURLSafe(e);
-            return null == n ? null : (n.searchParams.append('format', 'webp'), n.toString());
-        })(S);
+            let t = d.Z.toURLSafe(e);
+            return null == t ? null : (t.searchParams.append('format', 'webp'), t.toString());
+        })(v);
         if (null == e) return null;
-        let t = null !== (R = n.renderLinkComponent) && void 0 !== R ? R : l.iT;
-        return (0, a.jsx)(_.Z, {
-            ...v,
-            src: N,
-            width: C,
-            height: m,
-            maxWidth: b,
-            maxHeight: A,
+        let n = null !== (A = t.renderLinkComponent) && void 0 !== A ? A : l.iT;
+        return (0, i.jsx)(m.Z, {
+            ...S,
+            src: y,
+            width: _,
+            height: x,
+            maxWidth: N,
+            maxHeight: E,
             poster: e,
-            naturalWidth: C,
-            naturalHeight: m,
+            naturalWidth: _,
+            naturalHeight: x,
             volume: c.FC,
             autoMute: c.rs,
             onVolumeChange: c.jA,
             onMute: c.Zj,
-            renderLinkComponent: t,
-            autoPlay: !i,
-            alt: g,
-            onContextMenu: p
+            renderLinkComponent: n,
+            autoPlay: !a,
+            alt: f,
+            onContextMenu: g
         });
     }
-    return 'IMAGE' === L
-        ? D
-            ? (0, a.jsx)(d.ZP, {
-                  ...v,
-                  imageClassName: r()(h.slide, t),
-                  src: N,
-                  width: C,
-                  height: m,
+    return 'IMAGE' === I
+        ? P
+            ? (0, i.jsx)(u.ZP, {
+                  ...S,
+                  imageClassName: r()(h.slide, n),
+                  src: y,
+                  width: _,
+                  height: x,
                   shouldLink: !1,
-                  maxWidth: b,
-                  maxHeight: A,
-                  animated: !i && n.animated,
-                  autoPlay: !i,
-                  alt: g,
-                  zoomThumbnailPlaceholder: n.zoomThumbnailPlaceholder,
-                  onContextMenu: p
+                  maxWidth: N,
+                  maxHeight: E,
+                  animated: !a && t.animated,
+                  autoPlay: !a,
+                  alt: f,
+                  zoomThumbnailPlaceholder: t.zoomThumbnailPlaceholder,
+                  onContextMenu: g
               })
-            : (0, a.jsx)('img', {
-                  src: N,
-                  alt: g,
-                  className: r()(h.slide, t),
-                  onContextMenu: p
+            : (0, i.jsx)('img', {
+                  src: y,
+                  alt: f,
+                  className: r()(h.slide, n),
+                  onContextMenu: g
               })
         : null;
 }

@@ -11,7 +11,7 @@ var i = n(200651),
     h = n(499533),
     m = n(878209),
     g = n(987338),
-    x = n(53453);
+    x = n(838865);
 function _(e, t) {
     return e.map((e, n) => ({
         label: 'object' == typeof t ? t[n] : h.Z.getExperimentBucketName(e),
@@ -65,8 +65,8 @@ function E(e) {
             m((e) => !e);
         }, []),
         N = (0, a.e7)([d.Z], () => d.Z.getUserExperimentDescriptor(l)),
-        I = (0, a.e7)([d.Z], () => d.Z.getLoadedUserExperiment(l)),
-        f = (0, a.Wu)([d.Z], () =>
+        f = (0, a.e7)([d.Z], () => d.Z.getLoadedUserExperiment(l)),
+        I = (0, a.Wu)([d.Z], () =>
             r()
                 .sortBy(d.Z.getRecentExposures(g.xY.USER, l), (e) => {
                     let [t, n] = e;
@@ -138,7 +138,7 @@ function E(e) {
                                       type: o.geA.DESCRIPTION,
                                       children: ['Current assigned to bucket ', null !== (t = null == N ? void 0 : N.bucket) && void 0 !== t ? t : g.NZ.NOT_ELIGIBLE]
                                   }),
-                                  null == I
+                                  null == f
                                       ? (0, i.jsx)(o.R94, {
                                             type: o.geA.DESCRIPTION,
                                             children: 'Warning: Server did not send any experiment config. You may need to check the "Send to Client" box in the admin UI.'
@@ -157,7 +157,7 @@ function E(e) {
                                         (0, i.jsx)(o.Text, {
                                             variant: 'code',
                                             className: x.pre,
-                                            children: null == I ? 'None' : JSON.stringify(I, void 0, 2)
+                                            children: null == f ? 'None' : JSON.stringify(f, void 0, 2)
                                         }),
                                         (0, i.jsx)(o.vwX, {
                                             tag: 'h5',
@@ -177,7 +177,7 @@ function E(e) {
                                         (0, i.jsx)(o.Text, {
                                             variant: 'code',
                                             className: x.pre,
-                                            children: 0 === f.length ? 'None' : f.join('\n')
+                                            children: 0 === I.length ? 'None' : I.join('\n')
                                         })
                                     ]
                                 })
@@ -206,7 +206,7 @@ function C(e) {
             m((e) => !e);
         }, []),
         N = (0, a.e7)([d.Z], () => d.Z.getLoadedGuildExperiment(n)),
-        I = (0, a.Wu)([d.Z], () =>
+        f = (0, a.Wu)([d.Z], () =>
             r()
                 .sortBy(d.Z.getRecentExposures(g.xY.GUILD, n), (e) => {
                     let [t, n] = e;
@@ -217,7 +217,7 @@ function C(e) {
                     return ''.concat(new Date(n).toLocaleString(), ' (').concat(t, ')');
                 })
         ),
-        [f, T] = (0, a.Wu)([u.Z, d.Z], () => {
+        [I, T] = (0, a.Wu)([u.Z, d.Z], () => {
             let e = r().sortBy(r().values(u.Z.getGuilds()), (e) => e.name.toLowerCase()),
                 t = {},
                 i = [];
@@ -315,7 +315,7 @@ function C(e) {
                                         (0, i.jsx)(o.Text, {
                                             variant: 'code',
                                             className: x.pre,
-                                            children: f
+                                            children: I
                                         }),
                                         (0, i.jsx)(o.vwX, {
                                             tag: 'h5',
@@ -345,7 +345,7 @@ function C(e) {
                                         (0, i.jsx)(o.Text, {
                                             variant: 'code',
                                             className: x.pre,
-                                            children: 0 === I.length ? 'None' : I.join('\n')
+                                            children: 0 === f.length ? 'None' : f.join('\n')
                                         })
                                     ]
                                 })

@@ -16,8 +16,8 @@ var i = a(120356),
     C = a(741808),
     k = a(981631),
     u = a(388032),
-    b = a(61822),
-    f = a(923046),
+    b = a(194733),
+    f = a(899088),
     x = a(660028);
 let g = (n) => {
     let { earnedOrbsQuantity: t, descriptionText: a = u.intl.string(u.t['4YgBe3']), ctaText: i = u.intl.string(u.t.WYchdX), linkText: r = u.intl.string(u.t['H57f4+']), ctaOnClick: d, linkOnClick: m, linkTo: h } = n;

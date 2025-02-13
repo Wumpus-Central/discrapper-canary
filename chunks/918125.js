@@ -6,7 +6,7 @@ var s = n(200651),
     t = n(481060),
     i = n(235449),
     l = n(300234),
-    d = n(760946);
+    d = n(339996);
 function h(e) {
     let { guildId: a, goToThread: n } = e,
         c = (0, i.nA)(a),

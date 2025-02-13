@@ -7,7 +7,7 @@ var r = n(120356),
     o = n(403182),
     l = n(587446),
     u = n(504983),
-    c = n(679337);
+    c = n(748668);
 function d(e) {
     return e.replace(/[0-9.,]+ ?kb/g, (e) => {
         let t = 1024 * parseInt(e, 10);

@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(825209),
     C = n(615287),
     N = n(593472),
-    I = n(493773),
-    f = n(887278),
+    f = n(493773),
+    I = n(887278),
     T = n(835473),
     S = n(442550),
     j = n(594190),
@@ -48,7 +48,7 @@ var i = n(200651),
     X = n(987650),
     q = n(501787),
     J = n(388032),
-    Q = n(775254);
+    Q = n(156643);
 let $ = ee(null);
 function ee(e) {
     var t;
@@ -223,7 +223,7 @@ function er(e) {
     s.useEffect(() => {
         _(d), E(c);
     }, [d, c]);
-    let A = (0, f.$1)(),
+    let A = (0, I.$1)(),
         O = !(0, W.VS)(),
         { legacyEnabled: R, oopEnabled: P } = (0, m.cj)([D.default], () => D.default.getGlobalEnabledStatus()),
         [y] = (0, T.Z)([null !== (t = null == l ? void 0 : l.id) && void 0 !== t ? t : void 0]),
@@ -318,7 +318,7 @@ function er(e) {
                     return [J.intl.string(J.t.ONovPz), null];
             }
         })();
-    return ((0, I.ZP)(() => {
+    return ((0, f.ZP)(() => {
         x.Z.getDetectableGames();
     }),
     null == l)
@@ -454,7 +454,7 @@ function ec(e) {
     let [t, n] = s.useState(!1),
         { legacyEnabled: l, oopEnabled: r } = (0, m.cj)([D.default], () => D.default.getGlobalEnabledStatus()),
         a = (0, m.Wu)([j.ZP], () => j.ZP.getGamesSeen(!0)),
-        o = (0, f.$1)(),
+        o = (0, I.$1)(),
         c = (e, t) => {
             var n, i;
             el(t), p.Z.setEnabled(e, r), (0, A.ou)(e, A.AE.LEGACY, null !== (i = null === (n = j.ZP.getCurrentGameForAnalytics()) || void 0 === n ? void 0 : n.id) && void 0 !== i ? i : null);
@@ -613,7 +613,7 @@ function eu(e) {
 }
 function eh() {
     let e = (0, m.e7)([U.ZP], () => U.ZP.getOverlayKeybind()),
-        t = (0, f.$1)(),
+        t = (0, I.$1)(),
         n = !(0, W.VS)(),
         [s, l] = (0, m.Wu)([j.ZP], () => [j.ZP.canShowAdminWarning, j.ZP.getVisibleGame()], []),
         r = null != l && l.elevated && s;
@@ -719,14 +719,14 @@ function eg(e) {
         E = (0, O.o4)('user_settings').overlayV3UI,
         C = (0, m.e7)([w.default], () => w.default.getCurrentUser()),
         N = (0, R.Z)({ location: 'overlay_user_settings' });
-    (0, I.ZP)(() => {
+    (0, f.ZP)(() => {
         if (Y.isPlatformEmbedded) return (0, v.Ky)(), v.P7;
     }),
         (function () {
             let e = ee($);
             h().isEqual(e, $) || (z.default.track(K.rMx.OVERLAY_SETTINGS_UPDATED, e), ($ = e));
         })();
-    let [f] = s.useState(() => [em(J.intl.string(J.t.C0ZDvr), !0, !1), em(J.intl.string(J.t.iOtj8P), !1, !1, !0), em(J.intl.string(J.t['0oqNgI']), !1, !0)]),
+    let [I] = s.useState(() => [em(J.intl.string(J.t.C0ZDvr), !0, !1), em(J.intl.string(J.t.iOtj8P), !1, !1, !0), em(J.intl.string(J.t['0oqNgI']), !1, !0)]),
         T = (0, m.e7)([M.Z], () => M.Z.getWidgetsForLayout(q.OVERLAY_V3_LAYOUT_ID).find((e) => e.type === K.Odu.VOICE_V3));
     return null == C
         ? null
@@ -864,7 +864,7 @@ function eg(e) {
                                                               let t = em(e.username);
                                                               return (t.user = e), t;
                                                           })(C),
-                                                          ...f
+                                                          ...I
                                                       ],
                                                       displayNameMode: o,
                                                       displayUserMode: c,

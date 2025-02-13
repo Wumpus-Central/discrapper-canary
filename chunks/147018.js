@@ -1,7 +1,7 @@
 var r = a(161581),
     n = a(347722).f,
-    _ = a(251069),
-    o = a(859209),
+    o = a(251069),
+    _ = a(859209),
     i = a(492424),
     c = a(381740),
     s = a(474180);
@@ -20,6 +20,6 @@ t.exports = function (t, e) {
                 if (typeof u == typeof l) continue;
                 c(u, l);
             }
-            (t.sham || (l && l.sham)) && _(u, 'sham', !0), o(a, E, u, t);
+            (t.sham || (l && l.sham)) && o(u, 'sham', !0), _(a, E, u, t);
         }
 };

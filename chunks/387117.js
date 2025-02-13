@@ -1,6 +1,16 @@
 n.d(t, { V: () => i }), n(47120);
 let i = {
     Modules: {
+        form: {
+            INPUT_HEIGHT: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 48;
+                    for (let e of t) if ('visual-refresh' === e) return 44;
+                    return 48;
+                }
+            }
+        },
         chat: {
             RESIZE_HANDLE_WIDTH: { resolve: () => 8 },
             INPUT_ICON_SIZE: {
@@ -20,15 +30,16 @@ let i = {
                 }
             }
         },
-        form: {
-            INPUT_HEIGHT: {
+        guildbar: {
+            AVATAR_SIZE: {
                 resolve(e) {
                     let { enabledExperiments: t } = e;
                     if (0 === t.length) return 48;
-                    for (let e of t) if ('visual-refresh' === e) return 44;
+                    for (let e of t) if ('visual-refresh' === e) return 40;
                     return 48;
                 }
-            }
+            },
+            FOLDER_SIZE: { resolve: () => 48 }
         },
         modal: {
             HORIZONTAL_PADDING: {
@@ -57,17 +68,6 @@ let i = {
                 }
             },
             WIDTH_LARGE: { resolve: () => 800 }
-        },
-        guildbar: {
-            AVATAR_SIZE: {
-                resolve(e) {
-                    let { enabledExperiments: t } = e;
-                    if (0 === t.length) return 48;
-                    for (let e of t) if ('visual-refresh' === e) return 40;
-                    return 48;
-                }
-            },
-            FOLDER_SIZE: { resolve: () => 48 }
         }
     }
 };

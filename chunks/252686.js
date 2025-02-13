@@ -5,7 +5,7 @@ var l = n(120356),
     r = n.n(l),
     o = n(481060),
     a = n(686546),
-    s = n(943578);
+    s = n(523288);
 function c(e) {
     let { className: t } = e,
         n = (0, o.dQu)(o.TVs.modules.guildbar.AVATAR_SIZE);

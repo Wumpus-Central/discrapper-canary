@@ -3,7 +3,7 @@ var t = r(200651),
     a = r(192379),
     s = r(481060),
     l = r(388032),
-    i = r(428303);
+    i = r(972820);
 function o(e) {
     let { onConfirm: n, onClose: r, validationText: o, errorText: c, header: x, className: d, cancelText: u, confirmText: h, instructionText: p, transitionState: m, children: g } = e,
         [j, k] = a.useState(''),

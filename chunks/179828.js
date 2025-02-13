@@ -17,7 +17,7 @@ var i = t(200651),
     _ = t(314172),
     Z = t(981631),
     v = t(388032),
-    g = t(263457);
+    g = t(592508);
 function j(e) {
     let { user: n, currentUser: t, guild: a, guildMember: d, roles: c, highestRole: u, canManageRoles: I, onAddRole: f, onRemoveRole: x } = e,
         m = I && null != d,

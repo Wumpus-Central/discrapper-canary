@@ -2,7 +2,7 @@ n.d(t, { Z: () => s });
 var i = n(200651),
     l = n(192379),
     a = n(450369),
-    r = n(114619);
+    r = n(12704);
 let s = l.memo(function (e) {
     let { channel: t, participants: n, tileWidth: l, selectedParticipant: s } = e;
     return (0, i.jsx)('div', {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(47120);
+n.d(t, { Z: () => f }), n(47120);
 var i = n(200651);
 n(192379);
 var s = n(392711),
@@ -16,14 +16,14 @@ var s = n(392711),
     _ = n(962100),
     p = n(65154),
     E = n(388032),
-    C = n(207972),
-    N = n(814632);
-function I() {
+    C = n(170234),
+    N = n(483938);
+function f() {
     let e, t;
     let { analyticsLocations: s } = (0, d.ZP)(),
-        I = (0, r.e7)([x.Z], () => x.Z.theme),
+        f = (0, r.e7)([x.Z], () => x.Z.theme),
         {
-            canSetInputDevice: f,
+            canSetInputDevice: I,
             canSetOutputDevice: T,
             inputDeviceId: S,
             outputDeviceId: j
@@ -35,7 +35,7 @@ function I() {
         })),
         v = (0, u.Z)(),
         b = (0, h.Z)();
-    f ||
+    I ||
         (e = (0, i.jsx)(o.R94, {
             type: o.R94.Types.DESCRIPTION,
             className: N.marginTop8,
@@ -55,7 +55,7 @@ function I() {
         let t,
             { label: s, value: l } = e;
         if (m.Z.isCertified(l)) {
-            let e = (0, a.ap)(I) ? n(561259) : n(887695);
+            let e = (0, a.ap)(f) ? n(561259) : n(887695);
             t = (0, i.jsx)('img', {
                 src: e,
                 alt: 'Certified',

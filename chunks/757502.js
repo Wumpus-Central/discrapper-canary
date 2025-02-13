@@ -1,31 +1,31 @@
-a.d(e, { v: () => _ });
+a.d(e, { v: () => o });
 var r = a(899517),
     n = a(679179);
-let _ = (0, a(151122)._I)((t = {}) => {
+let o = (0, a(151122)._I)((t = {}) => {
     let e = t.root,
         a = t.prefix || 'app:///',
-        _ = 'window' in r.n && void 0 !== r.n.window,
-        o =
+        o = 'window' in r.n && void 0 !== r.n.window,
+        _ =
             t.iteratee ||
             (function ({ isBrowser: t, root: e, prefix: a }) {
                 return (r) => {
                     if (!r.filename) return r;
-                    let _ = /^[a-zA-Z]:\\/.test(r.filename) || (r.filename.includes('\\') && !r.filename.includes('/')),
-                        o = /^\//.test(r.filename);
+                    let o = /^[a-zA-Z]:\\/.test(r.filename) || (r.filename.includes('\\') && !r.filename.includes('/')),
+                        _ = /^\//.test(r.filename);
                     if (t) {
                         if (e) {
                             let t = r.filename;
                             0 === t.indexOf(e) && (r.filename = t.replace(e, a));
                         }
-                    } else if (_ || o) {
-                        let t = _ ? r.filename.replace(/^[a-zA-Z]:/, '').replace(/\\/g, '/') : r.filename,
-                            o = e ? (0, n.Gf)(e, t) : (0, n.EZ)(t);
-                        r.filename = `${a}${o}`;
+                    } else if (o || _) {
+                        let t = o ? r.filename.replace(/^[a-zA-Z]:/, '').replace(/\\/g, '/') : r.filename,
+                            _ = e ? (0, n.Gf)(e, t) : (0, n.EZ)(t);
+                        r.filename = `${a}${_}`;
                     }
                     return r;
                 };
             })({
-                isBrowser: _,
+                isBrowser: o,
                 root: e,
                 prefix: a
             });
@@ -49,7 +49,7 @@ let _ = (0, a(151122)._I)((t = {}) => {
                                             ...(t.stacktrace && {
                                                 stacktrace: {
                                                     ...(e = t.stacktrace),
-                                                    frames: e && e.frames && e.frames.map((t) => o(t))
+                                                    frames: e && e.frames && e.frames.map((t) => _(t))
                                                 }
                                             })
                                         };

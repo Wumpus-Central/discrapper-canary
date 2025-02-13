@@ -39,7 +39,7 @@ function x(e) {
     function L() {
         (0, r.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([n.e('2668'), n.e('36128')]).then(n.bind(n, 542055));
+                let { default: e } = await Promise.all([n.e('2668'), n.e('60097')]).then(n.bind(n, 542055));
                 return (t) => (0, i.jsx)(e, { ...t });
             },
             { modalKey: g.Qr }

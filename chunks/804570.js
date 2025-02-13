@@ -4,7 +4,7 @@ var t = l(200651),
     d = l(120356),
     r = l.n(d),
     a = l(481060),
-    s = l(997925);
+    s = l(221515);
 let o = n.memo(function (e) {
     let { emptyText: i, icon: l, absolute: n = !1 } = e;
     return (0, t.jsx)('div', {

@@ -1,12 +1,12 @@
 var r = a(581031),
     n = a(936940),
-    _ = a(332916),
-    o = Object,
+    o = a(332916),
+    _ = Object,
     i = r(''.split);
 t.exports = n(function () {
-    return !o('z').propertyIsEnumerable(0);
+    return !_('z').propertyIsEnumerable(0);
 })
     ? function (t) {
-          return 'String' === _(t) ? i(t, '') : o(t);
+          return 'String' === o(t) ? i(t, '') : _(t);
       }
-    : o;
+    : _;

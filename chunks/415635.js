@@ -11,7 +11,7 @@ var l = n(200651),
     m = n(963838),
     f = n(39127),
     h = n(981631),
-    g = n(204100);
+    g = n(893904);
 function p(e) {
     let { channelId: t, guildId: n, userId: p, containerDimensions: v } = e,
         S = (0, a.e7)([o.Z], () => o.Z.useReducedMotion),

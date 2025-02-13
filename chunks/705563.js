@@ -14,7 +14,7 @@ var l = n(442837),
     m = n(360328),
     f = n(981631),
     g = n(388032),
-    _ = n(918502);
+    _ = n(120196);
 function C(e) {
     let { channelId: t, showProfile: n = !1, showTrailingDivider: C = !1 } = e,
         x = u.default.cast(t),

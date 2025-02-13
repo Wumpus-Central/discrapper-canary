@@ -28,8 +28,8 @@ var i = n(200651),
     y = n(228392),
     A = n(981631),
     P = n(388032),
-    R = n(848489),
-    M = n(111777);
+    R = n(79541),
+    M = n(470528);
 function L(e) {
     let { postId: t, isFirstMessage: n, isLastItem: a = !1, parentChannelId: L } = e,
         { ref: k, width: O } = (0, p.Z)(),

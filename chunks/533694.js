@@ -11,7 +11,7 @@ var l = n(399606),
     u = n(331372),
     m = n(981631),
     _ = n(388032),
-    h = n(666430);
+    h = n(599555);
 function p(e) {
     let { guildId: t, user: n, username: s } = e,
         o = (0, l.e7)([r.Z], () => !r.Z.useReducedMotion),

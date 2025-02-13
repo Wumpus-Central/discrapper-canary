@@ -29,7 +29,7 @@ var i = n(200651),
     y = n(617015),
     O = n(981631),
     P = n(388032),
-    R = n(718762);
+    R = n(574514);
 let j = [];
 function D() {
     c.Z.setSection(O.pJs.ADD_FRIEND);

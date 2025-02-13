@@ -20,7 +20,7 @@ var i = n(200651),
     _ = n(691886),
     C = n(185923),
     f = n(388032),
-    v = n(122921);
+    v = n(634340);
 function N(e) {
     let { guildId: t, emojiData: n, 'aria-labelledby': l, onSelectEmoji: s } = e,
         d = (0, a.e7)([g.ZP], () => (null != n.id ? g.ZP.getCustomEmojiById(n.id) : void 0)),

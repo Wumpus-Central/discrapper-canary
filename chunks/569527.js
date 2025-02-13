@@ -25,7 +25,7 @@ var i = n(200651),
     E = n(188607),
     y = n(979007),
     P = n(981631),
-    A = n(590854);
+    A = n(178341);
 function T(e) {
     var t;
     let { onSelectApplication: n, onScroll: T } = e,

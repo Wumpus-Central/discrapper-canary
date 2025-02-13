@@ -7,7 +7,7 @@ var r = n(481060),
     l = n(292352),
     o = n(981631),
     c = n(388032),
-    d = n(195892);
+    d = n(603751);
 function u() {
     return (0, i.jsxs)(r.zxk, {
         innerClassName: d.qrCodeButtonContent,

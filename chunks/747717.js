@@ -3,7 +3,7 @@ var r = n(200651);
 n(192379);
 var l = n(120356),
     i = n.n(l),
-    s = n(43465);
+    s = n(152860);
 function o(e) {
     let { className: t, color: n } = e;
     return (0, r.jsx)('svg', {

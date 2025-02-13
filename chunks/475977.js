@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(981631),
     C = n(474936),
     N = n(388032),
-    I = n(255),
-    f = n(786792),
+    f = n(392275),
+    I = n(786792),
     T = n(161594);
 let S = (e) => {
         var t, n, s, l, a;
@@ -26,22 +26,22 @@ let S = (e) => {
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)('div', {
-                    className: I.artContainer,
+                    className: f.artContainer,
                     'aria-hidden': !0,
                     role: 'presentation',
                     children: (0, i.jsx)('img', {
                         src: null !== (s = null == o ? void 0 : o.artSrc) && void 0 !== s ? s : T,
-                        className: r()(I.art, { [I.tideArt]: null != c && c === _.C5.TIDE }),
+                        className: r()(f.art, { [f.tideArt]: null != c && c === _.C5.TIDE }),
                         alt: ''
                     })
                 }),
                 (0, i.jsxs)('div', {
-                    className: I.mainColumn,
+                    className: f.mainColumn,
                     children: [
                         (0, i.jsx)(d.X6q, {
                             variant: 'heading-lg/extrabold',
                             color: (null == o ? void 0 : o.revertTextColor) ? 'redesign-button-overlay-text' : 'currentColor',
-                            className: I.title,
+                            className: f.title,
                             children: null !== (l = null == o ? void 0 : null === (t = o.title) || void 0 === t ? void 0 : t.call(o)) && void 0 !== l ? l : N.intl.string(N.t['4Emkur'])
                         }),
                         (0, i.jsx)(d.Text, {
@@ -81,8 +81,8 @@ let S = (e) => {
             }, [n, null == j ? void 0 : j.version]),
             (0, i.jsxs)('div', {
                 ref: l,
-                className: r()(I.container, { [I.robertContainer]: T === _.C5.ROBERT }),
-                style: { backgroundImage: 'url('.concat(null !== (e = null == t ? void 0 : t.backgroundSrc) && void 0 !== e ? e : f, ')') },
+                className: r()(f.container, { [f.robertContainer]: T === _.C5.ROBERT }),
+                style: { backgroundImage: 'url('.concat(null !== (e = null == t ? void 0 : t.backgroundSrc) && void 0 !== e ? e : I, ')') },
                 children: [
                     (0, i.jsx)(S, {
                         displayOptions: t,
@@ -95,7 +95,7 @@ let S = (e) => {
                                 analyticsSource: u.Z.COLLECTIBLES_PROFILE_SETTINGS_UPSELL
                             });
                         },
-                        className: I.ctaButton,
+                        className: f.ctaButton,
                         color: d.zxk.Colors.BRAND_INVERTED,
                         children: N.intl.string(N.t.fYfGgI)
                     })

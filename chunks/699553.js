@@ -1,93 +1,93 @@
-t.d(n, {
-    C: () => d,
+n.d(t, {
+    C: () => c,
     p: () => u
 });
-var l = t(544891),
-    i = t(570140),
-    r = t(881052),
-    a = t(406218),
-    o = t(314852),
-    s = t(981631);
-let c = 'Unknown Error';
-function d(e, n) {
-    var t;
+var r = n(544891),
+    i = n(570140),
+    a = n(881052),
+    l = n(406218),
+    o = n(314852),
+    s = n(981631);
+let d = 'Unknown Error';
+function c(e, t) {
+    var n;
     if (null == e) return Promise.resolve(null);
-    let d = o.Z.getIsFetching(e),
+    let c = o.Z.getIsFetching(e),
         u = o.Z.getLastSyncTimestamp(e),
         m = o.Z.getProfile(e),
-        _ = ((t = u), Date.now() - (null != t ? t : 0) > 60000);
-    return d && !n
+        _ = ((n = u), Date.now() - (null != n ? n : 0) > 60000);
+    return c && !t
         ? Promise.resolve(null)
-        : null == m || _ || n
+        : null == m || _ || t
           ? (i.Z.dispatch({
                 type: 'GUILD_PROFILE_FETCH',
                 guildId: e
             }),
-            l.tn
+            r.tn
                 .get({
                     url: s.ANM.GUILD_PROFILE(e),
                     rejectWithError: !1
                 })
-                .then((n) => {
-                    let t = (0, a.x)(n.body);
+                .then((t) => {
+                    let n = (0, l.x)(t.body);
                     return (
                         i.Z.dispatch({
                             type: 'GUILD_PROFILE_FETCH_SUCCESS',
                             guildId: e,
-                            profile: t
+                            profile: n
                         }),
-                        t
+                        n
                     );
                 })
-                .catch((n) => {
-                    var t;
-                    let l = new r.Hx(n);
+                .catch((t) => {
+                    var n;
+                    let r = new a.Hx(t);
                     return (
                         i.Z.dispatch({
                             type: 'GUILD_PROFILE_FETCH_FAILURE',
                             guildId: e,
-                            error: null !== (t = l.getAnyErrorMessage()) && void 0 !== t ? t : c,
-                            errorCode: l.code
+                            error: null !== (n = r.getAnyErrorMessage()) && void 0 !== n ? n : d,
+                            errorCode: r.code
                         }),
                         null
                     );
                 }))
           : Promise.resolve(m);
 }
-function u(e, n) {
+function u(e, t) {
     return o.Z.getIsUpdating(e)
         ? Promise.resolve(null)
         : (i.Z.dispatch({
               type: 'GUILD_PROFILE_UPDATE',
               guildId: e,
-              updates: n
+              updates: t
           }),
-          l.tn
+          r.tn
               .patch({
                   url: s.ANM.GUILD_PROFILE(e),
-                  body: (0, a.s)(n),
+                  body: (0, l.s)(t),
                   rejectWithError: !1
               })
-              .then((n) => {
-                  let t = (0, a.x)(n.body);
+              .then((t) => {
+                  let n = (0, l.x)(t.body);
                   return (
                       i.Z.dispatch({
                           type: 'GUILD_PROFILE_UPDATE_SUCCESS',
                           guildId: e,
-                          profile: t
+                          profile: n
                       }),
-                      t
+                      n
                   );
               })
-              .catch((n) => {
-                  var t;
-                  let l = new r.Hx(n);
+              .catch((t) => {
+                  var n;
+                  let r = new a.Hx(t);
                   return (
                       i.Z.dispatch({
                           type: 'GUILD_PROFILE_UPDATE_FAILURE',
                           guildId: e,
-                          error: null !== (t = l.getAnyErrorMessage()) && void 0 !== t ? t : c,
-                          errorCode: l.code
+                          error: null !== (n = r.getAnyErrorMessage()) && void 0 !== n ? n : d,
+                          errorCode: r.code
                       }),
                       null
                   );

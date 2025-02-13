@@ -9,7 +9,7 @@ var r = n(442837),
     c = n(74538),
     d = n(474936),
     u = n(388032),
-    m = n(734474);
+    m = n(801706);
 let h = (e) => {
         let { onOpenPremiumClick: t } = e,
             n = (0, i.jsx)(l.zxk, {

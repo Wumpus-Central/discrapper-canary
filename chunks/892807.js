@@ -20,7 +20,7 @@ var i = n(200651),
     x = n(823379),
     C = n(981631),
     S = n(388032),
-    Z = n(410955);
+    Z = n(181435);
 function y(e) {
     let { channel: t, currentVoiceChannel: n } = e,
         l = (0, u.KS)(t),

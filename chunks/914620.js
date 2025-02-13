@@ -10,7 +10,7 @@ var s = a(200651),
     u = a(722300),
     m = a(910200),
     h = a(323220),
-    x = a(187426);
+    x = a(449430);
 function j(e) {
     let { guildId: l, name: a, setPopoutRef: i } = e,
         { guildProfile: j, fetchGuildProfile: g, isFetching: v } = (0, o.u)(l),

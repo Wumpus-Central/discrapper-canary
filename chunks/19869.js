@@ -17,10 +17,10 @@ var i = n(200651),
     E = n(720463),
     C = n(536703),
     N = n(450272),
-    I = n(981631),
-    f = n(388032),
-    T = n(54328),
-    S = n(226902);
+    f = n(981631),
+    I = n(388032),
+    T = n(965507),
+    S = n(688139);
 function j() {
     return (0, i.jsxs)('div', {
         children: [(0, i.jsx)(v, {}), (0, i.jsx)(b, {})]
@@ -53,8 +53,8 @@ function v() {
             (0, i.jsx)(N.E_, {
                 label: 'Balance Widget Menu',
                 children: (0, i.jsx)(_.V9, {
-                    ctaText: f.intl.string(f.t['H57f4+']),
-                    ctaOnClick: I.dG4,
+                    ctaText: I.intl.string(I.t['H57f4+']),
+                    ctaOnClick: f.dG4,
                     isCoachmarkEnabled: !1
                 })
             }),
@@ -80,7 +80,7 @@ function v() {
                     (0, i.jsx)(l.zx, {
                         onClick: () => {
                             (0, a.xf)(),
-                                (0, u.s1)().location.pathname.includes(I.Z5c.COLLECTIBLES_SHOP) ||
+                                (0, u.s1)().location.pathname.includes(f.Z5c.COLLECTIBLES_SHOP) ||
                                     (0, d.mK)({
                                         openInLayer: !1,
                                         analyticsLocations: v,
@@ -142,9 +142,9 @@ function v() {
             (0, i.jsx)(N.E_, {
                 label: 'Balance Widget Card',
                 children: (0, i.jsx)(x.L, {
-                    ctaText: f.intl.string(f.t['H57f4+']),
-                    linkText: f.intl.string(f.t['7f4H7O']),
-                    ctaOnClick: I.dG4
+                    ctaText: I.intl.string(I.t['H57f4+']),
+                    linkText: I.intl.string(I.t['7f4H7O']),
+                    ctaOnClick: f.dG4
                 })
             })
         ]
@@ -198,18 +198,18 @@ function b() {
                 direction: 'vertical',
                 children: [
                     (0, i.jsx)(C.mG, {
-                        onClose: I.dG4,
+                        onClose: f.dG4,
                         renderTail: !1
                     }),
                     (0, i.jsxs)('div', {
                         className: S.horizontalContainer,
                         children: [
                             (0, i.jsx)(C.mG, {
-                                onClose: I.dG4,
+                                onClose: f.dG4,
                                 renderTail: !0
                             }),
                             (0, i.jsx)(C.mG, {
-                                onClose: I.dG4,
+                                onClose: f.dG4,
                                 renderTail: !0,
                                 invertTail: !0
                             })
@@ -221,8 +221,8 @@ function b() {
                 label: 'Balance Widget Coachmark',
                 children: (0, i.jsx)(E.E, {
                     earnedOrbsQuantity: 200,
-                    ctaOnClick: I.dG4,
-                    linkOnClick: I.dG4
+                    ctaOnClick: f.dG4,
+                    linkOnClick: f.dG4
                 })
             })
         ]

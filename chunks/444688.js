@@ -7,7 +7,7 @@ var s = i(442837),
     o = i(418632),
     a = i(594174),
     d = i(388032),
-    c = i(598436);
+    c = i(973844);
 function u(e) {
     let { onClose: t } = e,
         l = (0, s.e7)([a.default], () => a.default.getCurrentUser());
@@ -17,7 +17,7 @@ function u(e) {
     function u() {
         c(),
             (0, r.ZDy)(async () => {
-                let { default: e } = await Promise.all([i.e('9343'), i.e('95484')]).then(i.bind(i, 642298));
+                let { default: e } = await Promise.all([i.e('9343'), i.e('44992')]).then(i.bind(i, 642298));
                 return (t) => (0, n.jsx)(e, { ...t });
             });
     }

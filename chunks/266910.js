@@ -10,7 +10,7 @@ var i = n(200651),
     d = n(484459),
     f = n(695346),
     _ = n(981631),
-    p = n(666593);
+    p = n(892183);
 let h = function (e) {
     let { style: t, src: n, backgroundSrc: h, userId: m, pulseSpeakingIndicator: g = !1, speaking: E = !1, ...v } = e,
         y = null != h ? h : n,

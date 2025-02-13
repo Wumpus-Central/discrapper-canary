@@ -28,7 +28,7 @@ var i = n(200651),
     y = n(981631),
     A = n(474936),
     P = n(388032),
-    R = n(449148);
+    R = n(52419);
 function M(e) {
     let { onSettingsButtonClick: t, wide: n, showOutputDevices: a = !1 } = e,
         [M, L] = l.useState(''),

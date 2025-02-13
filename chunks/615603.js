@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(314684),
     C = n(594174),
     N = n(78839),
-    I = n(267642),
-    f = n(63063),
+    f = n(267642),
+    I = n(63063),
     T = n(74538),
     S = n(283029),
     j = n(357956),
@@ -27,13 +27,13 @@ var i = n(200651),
     A = n(474936),
     O = n(735825),
     R = n(388032),
-    D = n(957126);
+    D = n(553065);
 function P(e) {
     let { guildBoostSlot: t, isCancellable: n, onCancel: l, onUncancel: r, premiumSubscription: a, useReducedMotion: o, fractionalPremiumState: d } = e,
         u = s.useMemo(() => (null != t.cooldownEndsAt ? new Date(t.cooldownEndsAt) : null), [t]),
-        m = (0, I.tl)(t),
+        m = (0, f.tl)(t),
         g = (null == a ? void 0 : a.isPaused) === !0 || d !== A.a$.NONE,
-        x = d !== A.a$.NONE ? R.intl.format(R.t.hshta2, { helpCenterLink: f.Z.getArticleURL(b.BhN.FRACTIONAL_PREMIUM_ABOUT) }) : R.intl.string(R.t.mOWsFx);
+        x = d !== A.a$.NONE ? R.intl.format(R.t.hshta2, { helpCenterLink: I.Z.getArticleURL(b.BhN.FRACTIONAL_PREMIUM_ABOUT) }) : R.intl.string(R.t.mOWsFx);
     return (0, i.jsxs)(
         'li',
         {
@@ -153,7 +153,7 @@ let L = function (e) {
                 s = !0;
             return (
                 l.forEach((l) => {
-                    !(0, I.tl)(l) && n++, l.isOnCooldown() ? (i = !0) : (s = !1), null != l.premiumGuildSubscription ? e.push(l) : t.push(l);
+                    !(0, f.tl)(l) && n++, l.isOnCooldown() ? (i = !0) : (s = !1), null != l.premiumGuildSubscription ? e.push(l) : t.push(l);
                 }),
                 {
                     appliedGuildBoostSlots: e,
@@ -221,7 +221,7 @@ let L = function (e) {
                 subscriptionIsPausedOrPausePending: !0,
                 hasFractionPremium: !0
             },
-            () => R.intl.format(R.t['4RgA6O'], { helpCenterLink: f.Z.getArticleURL(b.BhN.FRACTIONAL_PREMIUM_ABOUT) })
+            () => R.intl.format(R.t['4RgA6O'], { helpCenterLink: I.Z.getArticleURL(b.BhN.FRACTIONAL_PREMIUM_ABOUT) })
         )
         .with(
             {

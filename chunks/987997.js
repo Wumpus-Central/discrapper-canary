@@ -2,7 +2,7 @@ n.d(t, { Z: () => r });
 var i = n(200651);
 n(192379);
 var s = n(481060),
-    l = n(606839);
+    l = n(888967);
 function r(e) {
     let { children: t, ...n } = e;
     return (0, i.jsx)(s.zxk, {

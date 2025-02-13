@@ -119,7 +119,7 @@ function e1(e, t, n) {
     );
 }
 n(117240), n(801077), n(967368), n(272053), n(974180), n(574254), n(551428), n(55563), n(882029), n(959457), n(653255), n(663389), n(25990), n(778825), n(999382), n(388610), n(533947), n(277053), n(371398), n(141233), n(471073);
-let e2 = !1;
+let e4 = !1;
 (0, v.D)(),
     s.ZP.initialize(),
     eE.Z.loadServer(),
@@ -138,7 +138,7 @@ let e2 = !1;
                 }
             });
         }));
-let e4 = s.ZP.connectStores([F.Z, eM.Z, eD.default], () => ({
+let e3 = s.ZP.connectStores([F.Z, eM.Z, eD.default], () => ({
         isConnected: F.Z.isConnected(),
         defaultRoute: eM.Z.defaultRoute,
         defaultRouteFallback: eM.Z.fallbackRoute,
@@ -160,7 +160,7 @@ let e4 = s.ZP.connectStores([F.Z, eM.Z, eD.default], () => ({
             }
         }
     ),
-    e3 = (0, A.e)(Z.Z, null, { passProps: !1 }),
+    e2 = (0, A.e)(Z.Z, null, { passProps: !1 }),
     e7 = (0, A.e)(S.default, null, { passProps: !1 }),
     e9 = [eJ.Z5c.GUILD_BOOSTING_MARKETING(e_.Hw.guildId()), ...Array.from(e$.Vg).map((e) => eJ.Z5c.CHANNEL(e_.Hw.guildId(), e))];
 function e5(e) {
@@ -177,13 +177,13 @@ let e6 = [
         path: [eJ.Z5c.APP_WITH_INVITE_AND_GUILD_ONBOARDING(':inviteCode')],
         render(e) {
             let { match: t } = e;
-            return (0, i.jsx)(e4, { match: t });
+            return (0, i.jsx)(e3, { match: t });
         },
         isSessionRequired: !0
     },
     {
         path: [eJ.Z5c.APP],
-        render: () => (0, i.jsx)(e4, {}),
+        render: () => (0, i.jsx)(e3, {}),
         isSessionRequired: !0
     },
     {
@@ -293,7 +293,7 @@ let e6 = [
             return (
                 (0, z.h)(() => {
                     (0, o.ZDy)(async () => {
-                        let { default: e } = await Promise.all([n.e('5863'), n.e('58984')]).then(n.bind(n, 751212));
+                        let { default: e } = await Promise.all([n.e('5863'), n.e('59841')]).then(n.bind(n, 751212));
                         return (t) =>
                             (0, i.jsx)(e, {
                                 ...t,
@@ -355,7 +355,7 @@ let e6 = [
     },
     {
         path: [eJ.Z5c.CHANNEL_THREAD_VIEW(e_.Hw.guildId(), e_.Hw.channelId(), ':threadId', ':messageId?'), eJ.Z5c.CHANNEL(e_.Hw.guildId(), e_.Hw.channelId({ optional: !0 }), ':messageId?'), eJ.Z5c.ACTIVITY, eJ.Z5c.ACTIVITIES, eJ.Z5c.ACTIVITIES_HAPPENING_NOW, eJ.Z5c.ACTIVITY_DETAILS(':applicationId'), eJ.Z5c.APPLICATION_LIBRARY, eJ.Z5c.APPLICATION_STORE, eJ.Z5c.MESSAGE_REQUESTS, eJ.Z5c.COLLECTIBLES_SHOP, eJ.Z5c.COLLECTIBLES_SHOP_FULLSCREEN, eJ.Z5c.COLLECTIBLES_SHOP_PRODUCT_DETAIL(':skuId'), eJ.Z5c.GUILD_DISCOVERY, eJ.Z5c.QUEST_HOME, eJ.Z5c.GLOBAL_DISCOVERY, eJ.Z5c.GUILD_MEMBER_VERIFICATION(e_.Hw.guildId()), eJ.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(e_.Hw.guildId(), ':inviteCode?'), eJ.Z5c.GUILD_BOOSTING_MARKETING(e_.Hw.guildId()), eJ.Z5c.FEATURE(':feature'), eJ.Z5c.FAMILY_CENTER],
-        render: e3,
+        render: e2,
         isSessionRequired: !0,
         isChatRoute: !0
     },
@@ -473,8 +473,8 @@ class tt extends l.PureComponent {
                 if ((c && g && u.Z.selectGuild(i), c && d)) {
                     let n = eV.Z.getChannelId(p),
                         a = n !== l;
-                    if (!e2 || g || a || null != s) {
-                        (e2 = !0),
+                    if (!e4 || g || a || null != s) {
+                        (e4 = !0),
                             h.default.selectChannel({
                                 guildId: i,
                                 channelId: l,

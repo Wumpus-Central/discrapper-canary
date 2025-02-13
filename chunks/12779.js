@@ -6,7 +6,7 @@ var i = n(200651),
     s = n(481060),
     o = n(194082),
     c = n(14338),
-    d = n(227069);
+    d = n(597498);
 let u = l.memo(function (e) {
     let { label: t, participantCount: n, onClick: l, className: a, collapsed: u, speakers: h, channel: p, isStreamLive: m } = e;
     return (0, i.jsxs)(s.P3F, {

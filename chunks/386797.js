@@ -1,8 +1,8 @@
 a.d(e, { S: () => c });
 var r = a(151122),
     n = a(899517),
-    _ = a(873567),
-    o = a(394798);
+    o = a(873567),
+    _ = a(394798);
 let i = n.n,
     c = (0, r._I)((t = {}) => {
         let e = null != t.frameContextLines ? t.frameContextLines : 7;
@@ -11,7 +11,7 @@ let i = n.n,
             processEvent: (t) =>
                 (function (t, e) {
                     let a = i.document,
-                        r = i.location && (0, _.rt)(i.location.href);
+                        r = i.location && (0, o.rt)(i.location.href);
                     if (!a || !r) return t;
                     let n = t.exception && t.exception.values;
                     if (!n || !n.length) return t;
@@ -24,8 +24,8 @@ let i = n.n,
                             a &&
                                 a.frames &&
                                 (a.frames = a.frames.map((t) => {
-                                    var a, n, _, i;
-                                    return (a = t), (n = s), (_ = r), (i = e), a.filename === _ && a.lineno && n.length && (0, o.go)(n, a, i), a;
+                                    var a, n, o, i;
+                                    return (a = t), (n = s), (o = r), (i = e), a.filename === o && a.lineno && n.length && (0, _.go)(n, a, i), a;
                                 }));
                         }),
                         t

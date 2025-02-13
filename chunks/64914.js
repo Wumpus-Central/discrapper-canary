@@ -23,10 +23,10 @@ function E() {
         N = s.useCallback((e) => {
             m.bm.updateSetting(!e);
         }, []),
-        I = s.useCallback((e) => {
+        f = s.useCallback((e) => {
             e ? (0, r.h7j)((e) => (0, i.jsx)(g.Z, { ...e })) : a.mc();
         }, []),
-        f = s.useCallback((e) => {
+        I = s.useCallback((e) => {
             o.ZP.updatedUnsyncedSettings({ showPlayAgain: e });
         }, []),
         T = s.useCallback((e) => {
@@ -80,7 +80,7 @@ function E() {
                 children: (0, i.jsx)(r.j7V, {
                     value: null != E,
                     note: p.intl.string(p.t['52hMnJ']),
-                    onChange: I,
+                    onChange: f,
                     children: p.intl.string(p.t.erOqlp)
                 })
             }),
@@ -89,7 +89,7 @@ function E() {
                 children: (0, i.jsx)(r.j7V, {
                     value: C,
                     note: p.intl.string(p.t['B/qU4O']),
-                    onChange: f,
+                    onChange: I,
                     children: p.intl.string(p.t.qDZryM)
                 })
             })

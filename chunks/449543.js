@@ -7,7 +7,7 @@ var a = i(120356),
     l = i(718157),
     c = i(450474),
     d = i(388032),
-    o = i(964343);
+    o = i(184330);
 let u = (e) => {
     let { guild: t, guildMetadata: i, headerId: a } = e;
     return (0, s.jsxs)('div', {

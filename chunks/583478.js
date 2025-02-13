@@ -7,7 +7,7 @@ var i = n(200651),
     o = n(710845),
     c = n(168232),
     d = n(48541),
-    u = n(790777);
+    u = n(287153);
 let m = new o.Z('BalanceCounter'),
     g = (0, c.dU)(void 0) === d.C.PRODUCTION,
     _ = {

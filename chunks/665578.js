@@ -22,7 +22,7 @@ var i = n(200651),
     N = n(981631),
     I = n(689079),
     Z = n(388032),
-    T = n(515982);
+    T = n(239625);
 function E(e) {
     let { applicationId: t, commandId: a, guildId: _, inModal: f, editedTargetPermissions: E, originalApplicationPermissions: A, originalCommandPermissions: k, selectedPermissionCount: R } = e,
         L = (0, o.e7)([b.Z], () => (null == a ? null : b.Z.getCommand(a)), [a]),

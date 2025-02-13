@@ -24,7 +24,7 @@ var l = t(481060),
     y = t(228168),
     N = t(981631),
     T = t(388032),
-    b = t(757672);
+    b = t(736656);
 function P(e) {
     let { user: n, currentUser: t, guildId: P, channelId: S, messageId: L, roleId: C, sessionId: A, initialSection: O, initialSubsection: R, transitionState: M, onClose: U, sourceAnalyticsLocations: B = [] } = e,
         F = P === N.ME ? void 0 : P,

@@ -35,7 +35,7 @@ var l = n(200651),
     P = n(981631),
     k = n(474936),
     U = n(388032),
-    A = n(987434);
+    A = n(411302);
 let O = [_.h8.PLAN_SELECT, _.h8.ADD_PAYMENT_STEPS, _.h8.REVIEW, _.h8.CONFIRM];
 function R(e) {
     let { analyticsLocation: t, analyticsObject: n, analyticsSourceLocation: s, onComplete: o, transitionState: d, initialPlanId: c, subscriptionTier: j, onClose: m, trialId: L, trialFooterMessageOverride: E, reviewWarningMessage: g, openInvoiceId: S, onSubscriptionConfirmation: I, renderPurchaseConfirmation: N, postSuccessGuild: T, followupSKUInfo: M, renderHeader: v, applicationId: y, guildId: Z, referralTrialOfferId: U, skuId: A, returnRef: O, skipConfirm: R = !1, continueSessionToInitialStep: w } = e,

@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(313201),
     h = n(695103),
     m = n(388032),
-    g = n(635490),
-    x = n(814632);
+    g = n(557562),
+    x = n(483938);
 let _ = /^\d+$|^$/;
 function p(e) {
     let { onClose: t, transitionState: n } = e,
@@ -24,8 +24,8 @@ function p(e) {
             authorizationError: h.Z.error,
             authorizing: h.Z.isFetchingAuthorization
         })),
-        [N, I] = s.useState(null != p ? p : ''),
-        [f, T] = s.useState('8080'),
+        [N, f] = s.useState(null != p ? p : ''),
+        [I, T] = s.useState('8080'),
         [S, j] = s.useState('localhost'),
         v = (0, u.Dt)(),
         b = _.test(N);
@@ -39,14 +39,14 @@ function p(e) {
                 case 'proxy':
                     return (0, c.Z)(n);
             }
-        })(S, f, N);
+        })(S, I, N);
         null != (await o.Wt(N, e)) && t();
     }
     s.useEffect(() => () => a.Z.wait(() => o.q$()), []);
     let O = null != p && p === N,
         R = O
             ? function () {
-                  o.mc(), I(''), j(null);
+                  o.mc(), f(''), j(null);
               }
             : A;
     return (0, i.jsxs)(r.Y0X, {
@@ -97,7 +97,7 @@ function p(e) {
                                         maxLength: 19,
                                         error: b ? null : m.intl.string(m.t.gPNgKC),
                                         onChange: function (e) {
-                                            I(e);
+                                            f(e);
                                         },
                                         disabled: C
                                     })
@@ -133,7 +133,7 @@ function p(e) {
                                           title: m.intl.string(m.t.fF4zxs),
                                           required: !0,
                                           children: (0, i.jsx)(r.oil, {
-                                              value: f,
+                                              value: I,
                                               maxLength: 5,
                                               onChange: (e) => T(e),
                                               disabled: C
@@ -142,7 +142,7 @@ function p(e) {
                                 (0, i.jsx)(r.zxk, {
                                     submitting: C,
                                     type: 'submit',
-                                    disabled: !b || 0 === N.length || ('localhost' === S && 0 === f.length),
+                                    disabled: !b || 0 === N.length || ('localhost' === S && 0 === I.length),
                                     color: O ? r.zxk.Colors.RED : r.zxk.Colors.GREEN,
                                     children: O ? m.intl.string(m.t.d6TR3N) : m.intl.string(m.t.qwuK5O)
                                 })

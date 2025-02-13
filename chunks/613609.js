@@ -11,7 +11,7 @@ var i = n(200651),
     h = n(650233),
     m = n(981631),
     p = n(898625),
-    g = n(748506);
+    g = n(639673);
 let _ = (e) => {
     let { guildId: t, inviteCode: n } = e,
         [_, f] = l.useState(p.hO.INITIAL),

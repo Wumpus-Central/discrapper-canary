@@ -10,7 +10,7 @@ var i = n(200651),
     d = n(751688),
     f = n(5192),
     _ = n(51144),
-    p = n(916389);
+    p = n(630083);
 function h(e) {
     let { users: t, maxUsers: a, guildId: o, channelId: h, className: m, avatarClassName: g, size: E = u.EFr.SIZE_24, overflowCountVariant: v = 'text-xs/medium', overflowCountColor: y = 'interactive-normal', overflowCountClassName: I, hideOverflowCount: T = !1, disableUsernameTooltip: b = !1, disableUserPopout: S = !1, onClick: A, onFocus: N, onUserClick: C, onUserPopoutRequestClose: R } = e,
         [O, D] = r.useState(!1);
@@ -36,7 +36,7 @@ function h(e) {
                                 (0, c.jW)(
                                     t,
                                     async () => {
-                                        let { default: t } = await Promise.all([n.e('79695'), n.e('69220'), n.e('5073')]).then(n.bind(n, 881351));
+                                        let { default: t } = await Promise.all([n.e('79695'), n.e('69220'), n.e('34272')]).then(n.bind(n, 881351));
                                         return (n) =>
                                             (0, i.jsx)(t, {
                                                 ...n,

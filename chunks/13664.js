@@ -1,12 +1,12 @@
-t.d(n, { Z: () => o });
+t.d(n, { Z: () => s });
 var l = t(200651);
 t(192379);
 var i = t(481060),
     r = t(388032),
-    a = t(463852);
-function o(e) {
+    a = t(144172);
+function s(e) {
     let { sendStartNotification: n, setSendStartNotification: t } = e,
-        o = n ? r.intl.string(r.t.xAT8lJ) : r.intl.string(r.t['Y+18hY']);
+        s = n ? r.intl.string(r.t.xAT8lJ) : r.intl.string(r.t['Y+18hY']);
     return (0, l.jsx)('div', {
         className: a.notificationToggle,
         children: (0, l.jsx)(i.XZJ, {
@@ -28,7 +28,7 @@ function o(e) {
                     children: (e) =>
                         (0, l.jsx)('span', {
                             ...e,
-                            children: o
+                            children: s
                         })
                 })
             })

@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(313201),
     C = n(674180),
     N = n(565138),
-    I = n(374649),
-    f = n(908951),
+    f = n(374649),
+    I = n(908951),
     T = n(703656),
     S = n(853872),
     j = n(245950),
@@ -30,7 +30,7 @@ var i = n(200651),
     D = n(176505),
     P = n(526761),
     y = n(388032),
-    Z = n(411369);
+    Z = n(545106);
 let L = (e) => {
         let { label: t, value: n, showInfoIcon: s, infoIconTooltipText: l } = e;
         return (0, i.jsxs)('div', {
@@ -69,7 +69,7 @@ let L = (e) => {
     k = (e) => {
         let { subscription: t } = e,
             { analyticsLocations: n } = (0, x.ZP)(),
-            [s] = (0, I.ED)({
+            [s] = (0, f.ED)({
                 subscriptionId: t.id,
                 renewal: !0,
                 analyticsLocations: n,
@@ -77,7 +77,7 @@ let L = (e) => {
             }),
             l = (0, o.e7)([S.Z], () => S.Z.hasFetchedPaymentSources);
         return null != s && l
-            ? (0, i.jsx)(f.Z, {
+            ? (0, i.jsx)(I.Z, {
                   subscription: t,
                   currentInvoicePreview: s,
                   dropdownClassName: Z.paymentSourceDropdown
@@ -119,13 +119,13 @@ let L = (e) => {
     },
     M = (e) => {
         let { subscription: t } = e,
-            { listing: n, groupListing: l, guild: o, expanded: g, handleToggleExpanded: p, subscriptionInfo: I } = (0, j.Z)(t),
-            [f, S] = s.useState(!1),
+            { listing: n, groupListing: l, guild: o, expanded: g, handleToggleExpanded: p, subscriptionInfo: f } = (0, j.Z)(t),
+            [I, S] = s.useState(!1),
             M = (0, E.Dt)(),
             { analyticsLocations: V } = (0, x.ZP)(),
             { shouldHideGuildPurchaseEntryPoints: w } = (0, C.uP)(null == o ? void 0 : o.id),
             U = (null == t ? void 0 : t.paymentGateway) === R.gg$.APPLE_PARTNER;
-        if (null == l || null == n || null == I) return null;
+        if (null == l || null == n || null == f) return null;
         let G = async () => {
                 try {
                     S(!0), await d.pl(t, V), (0, O.h)();
@@ -133,7 +133,7 @@ let L = (e) => {
                     S(!1);
                 }
             },
-            { isCancelled: F, isPastDue: z, subscriptionPrice: Y, memberSince: H, nextRenewalDate: W, nextRenewalLabel: K, isTrial: X } = I,
+            { isCancelled: F, isPastDue: z, subscriptionPrice: Y, memberSince: H, nextRenewalDate: W, nextRenewalLabel: K, isTrial: X } = f,
             q = n.soft_deleted || null == o || U,
             J = () =>
                 F
@@ -264,7 +264,7 @@ let L = (e) => {
                                   (0, i.jsx)(B, {
                                       isTrial: X,
                                       isCancelled: F,
-                                      isResubscribing: f,
+                                      isResubscribing: I,
                                       shouldHideRoleSubscriptionEntryPoints: w,
                                       onCancelSubscriptionClick: () => {
                                           null != o &&

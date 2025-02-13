@@ -2,7 +2,7 @@ n.d(t, { _: () => l });
 var i = n(200651),
     r = n(192379),
     a = n(561779),
-    s = n(412411);
+    s = n(180636);
 let o = (e) => ''.concat(e.toFixed(0), '%'),
     l = r.forwardRef(function (e, t) {
         let { value: n, minValue: l = 0, maxValue: u = 100, onChange: c, renderValue: d = o, 'aria-label': f } = e,

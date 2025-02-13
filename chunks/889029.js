@@ -13,11 +13,11 @@ var s = n(120356),
     m = n(726985),
     g = n(981631),
     x = n(388032),
-    _ = n(47673),
-    p = n(814632);
+    _ = n(430387),
+    p = n(483938);
 function E() {
-    let { enabled: e, autoToggle: t, hideInstantInvites: s, hidePersonalInformation: E, disableSounds: C, disableNotifications: N, enableContentProtection: I } = (0, r.cj)([u.Z], () => ({ ...u.Z.getSettings() })),
-        f = (e, t) => {
+    let { enabled: e, autoToggle: t, hideInstantInvites: s, hidePersonalInformation: E, disableSounds: C, disableNotifications: N, enableContentProtection: f } = (0, r.cj)([u.Z], () => ({ ...u.Z.getSettings() })),
+        I = (e, t) => {
             o.Z.update({ [e]: t });
         };
     return (0, i.jsxs)(a.hjN, {
@@ -46,7 +46,7 @@ function E() {
                 children: [
                     (0, i.jsx)(a.j7V, {
                         value: e,
-                        onChange: (e) => f('enabled', e),
+                        onChange: (e) => I('enabled', e),
                         note: x.intl.format(x.t.MLVL2N, {
                             onClick: () => {
                                 c.Z.setSection(g.oAB.KEYBINDS);
@@ -58,7 +58,7 @@ function E() {
                         if (h.isPlatformEmbedded)
                             return (0, i.jsx)(a.j7V, {
                                 value: t,
-                                onChange: (e) => f('autoToggle', e),
+                                onChange: (e) => I('autoToggle', e),
                                 note: x.intl.string(x.t.ZPi4lJ),
                                 children: x.intl.string(x.t.PKDAJy)
                             });
@@ -75,7 +75,7 @@ function E() {
                         setting: m.s6.STREAMER_MODE_HIDE_PERSONAL_INFORMATION,
                         children: (0, i.jsx)(a.j7V, {
                             value: E,
-                            onChange: (e) => f('hidePersonalInformation', e),
+                            onChange: (e) => I('hidePersonalInformation', e),
                             note: x.intl.string(x.t['+9Lra2']),
                             children: x.intl.string(x.t.UpQziI)
                         })
@@ -84,7 +84,7 @@ function E() {
                         setting: m.s6.STREAMER_MODE_HIDE_INVITE_LINKS,
                         children: (0, i.jsx)(a.j7V, {
                             value: s,
-                            onChange: (e) => f('hideInstantInvites', e),
+                            onChange: (e) => I('hideInstantInvites', e),
                             note: x.intl.string(x.t.m7mS2d),
                             children: x.intl.string(x.t.q7WNGh)
                         })
@@ -93,7 +93,7 @@ function E() {
                         setting: m.s6.STREAMER_MODE_DISABLE_SOUNDS,
                         children: (0, i.jsx)(a.j7V, {
                             value: C,
-                            onChange: (e) => f('disableSounds', e),
+                            onChange: (e) => I('disableSounds', e),
                             note: x.intl.string(x.t.eAkaio),
                             children: x.intl.string(x.t.o56OZm)
                         })
@@ -102,7 +102,7 @@ function E() {
                         setting: m.s6.STREAMER_MODE_DISABLE_NOTIFICATIONS,
                         children: (0, i.jsx)(a.j7V, {
                             value: N,
-                            onChange: (e) => f('disableNotifications', e),
+                            onChange: (e) => I('disableNotifications', e),
                             note: x.intl.string(x.t.ZAmpQ0),
                             children: x.intl.string(x.t.qmYiYW)
                         })
@@ -110,8 +110,8 @@ function E() {
                     (0, i.jsx)(d.F, {
                         setting: m.s6.STREAMER_MODE_HIDE_DISCORD_WINDOW_FROM_SCREEN_CAPTURE,
                         children: (0, i.jsx)(a.j7V, {
-                            value: I,
-                            onChange: (e) => f('enableContentProtection', e),
+                            value: f,
+                            onChange: (e) => I('enableContentProtection', e),
                             note: x.intl.string(x.t.P4vj0t),
                             children: x.intl.string(x.t['iA81+f'])
                         })

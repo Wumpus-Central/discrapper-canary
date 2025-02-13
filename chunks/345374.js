@@ -1,13 +1,13 @@
 var r = a(641236),
     n = a(803938),
-    _ = a(97131).f,
-    o = r('unscopables'),
+    o = a(97131).f,
+    _ = r('unscopables'),
     i = Array.prototype;
-void 0 === i[o] &&
-    _(i, o, {
+void 0 === i[_] &&
+    o(i, _, {
         configurable: !0,
         value: n(null)
     }),
     (t.exports = function (t) {
-        i[o][t] = !0;
+        i[_][t] = !0;
     });

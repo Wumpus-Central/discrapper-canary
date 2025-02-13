@@ -12,7 +12,7 @@ var r = n(120356),
     u = n(355314),
     c = n(310752),
     d = n(731994),
-    f = n(988336);
+    f = n(255969);
 function _(e) {
     let { title: t, help: n, showPremiumUpsell: r, transitionState: s, icons: _, fileSize: p, onClose: h } = e,
         m = (0, l.Dt)(),

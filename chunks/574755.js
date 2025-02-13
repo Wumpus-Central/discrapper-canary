@@ -17,9 +17,9 @@ var i = n(200651),
     E = n(491758),
     C = n(233685),
     N = n(388032),
-    I = n(77096),
-    f = n(639957),
-    T = n(814632);
+    f = n(547536),
+    I = n(301899),
+    T = n(483938);
 function S(e) {
     let { className: t, showHeader: n = !0 } = e,
         S = u.tU.useSetting(),
@@ -41,7 +41,7 @@ function S(e) {
                         tag: a.RB0.H1,
                         title: n
                             ? (0, i.jsxs)('div', {
-                                  className: I.headerContainer,
+                                  className: f.headerContainer,
                                   children: [N.intl.string(N.t.z2jK6e), (0, i.jsx)(p.Z, {})]
                               })
                             : null,
@@ -58,7 +58,7 @@ function S(e) {
                     children: [
                         (0, i.jsx)(a.j7V, {
                             hideBorder: !0,
-                            className: f.formItem,
+                            className: I.formItem,
                             value: S,
                             note: N.intl.string(N.t['wW9/zc']),
                             onChange: (e) => _.yg({ allowVoiceRecording: e }),
@@ -68,7 +68,7 @@ function S(e) {
                             O &&
                             (0, i.jsx)(a.j7V, {
                                 hideBorder: !0,
-                                className: f.formItem,
+                                className: I.formItem,
                                 value: A,
                                 note: N.intl.string(N.t['0vjy8P']),
                                 onChange: (e) =>

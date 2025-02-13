@@ -41,7 +41,7 @@ var l,
     T = n(823379),
     k = n(5192),
     O = n(388032),
-    P = n(334227),
+    P = n(876627),
     M = (((l = {})[(l.SMALL = 0)] = 'SMALL'), (l[(l.MEDIUM = 1)] = 'MEDIUM'), (l[(l.LARGE = 2)] = 'LARGE'), l);
 let D = 1024,
     L = ['embedded_background'];

@@ -27,7 +27,7 @@ var r = n(120356),
     C = n(670451),
     R = n(228168),
     O = n(388032),
-    D = n(309584);
+    D = n(537208);
 function L(e) {
     let { user: t, voiceChannel: n, className: r, onClose: L } = e,
         { profileType: x } = (0, y.z)(),

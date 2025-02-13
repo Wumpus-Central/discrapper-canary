@@ -39,8 +39,8 @@ var i = n(200651),
     B = n(602034),
     F = n(981631),
     H = n(388032),
-    G = n(537659),
-    V = n(825266);
+    G = n(15710),
+    V = n(452246);
 let z = g.Ie.THREAD_CREATION;
 function W(e) {
     let { parentChannelId: t, parentMessageId: n, location: l } = e,

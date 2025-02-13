@@ -1,8 +1,8 @@
 a.d(e, { x: () => s });
 var r = a(696486),
     n = a(151122),
-    _ = a(622916),
-    o = a(454463),
+    o = a(622916),
+    _ = a(454463),
     i = a(243309),
     c = a(748688);
 let s = (0, n._I)(() => ({
@@ -24,13 +24,13 @@ let s = (0, n._I)(() => ({
                         r = e && e.profile && e.profile.profile_id,
                         n = e && e.profile && e.profile.start_timestamp;
                     if ('string' != typeof r || !r) {
-                        o.X && _.kg.log('[Profiling] cannot find profile for a span without a profile context');
+                        _.X && o.kg.log('[Profiling] cannot find profile for a span without a profile context');
                         continue;
                     }
                     e && e.profile && delete e.profile;
                     let i = (0, c.GC)(r);
                     if (!i) {
-                        o.X && _.kg.log(`[Profiling] Could not retrieve profile for span: ${r}`);
+                        _.X && o.kg.log(`[Profiling] Could not retrieve profile for span: ${r}`);
                         continue;
                     }
                     let s = (0, c.nm)(r, n, i, t);

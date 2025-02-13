@@ -1,8 +1,8 @@
 a.d(e, { o: () => i });
 var r = a(622916),
     n = a(967752),
-    _ = a(617726),
-    o = a(939747);
+    o = a(617726),
+    _ = a(939747);
 function i(t, e) {
     r.kg.log(`Flushing aggregated metrics, number of metrics: ${e.length}`);
     let a = t.getDsn(),
@@ -16,7 +16,7 @@ function i(t, e) {
                 }),
                 r && e && (i.dsn = (0, n.RA)(e));
             let c = (function (t) {
-                let e = (0, o.uv)(t);
+                let e = (0, _.uv)(t);
                 return [
                     {
                         type: 'statsd',
@@ -25,7 +25,7 @@ function i(t, e) {
                     e
                 ];
             })(t);
-            return (0, _.Jd)(i, [c]);
+            return (0, o.Jd)(i, [c]);
         })(e, a, t.getSdkMetadata(), t.getOptions().tunnel);
     t.sendEnvelope(i);
 }

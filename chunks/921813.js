@@ -17,7 +17,7 @@ var r = n(120356),
     g = n(165747),
     E = n(981631),
     v = n(228168),
-    y = n(514627);
+    y = n(447902);
 function I(e) {
     let { user: t, guild: n, canUsePremiumCustomization: r, onUpsellClick: I, pendingBanner: T, pendingBio: b, pendingPronouns: S, pendingAvatar: A, pendingAvatarDecoration: N, pendingNickname: C, pendingGlobalName: R, pendingThemeColors: O, pendingProfileEffectId: D, avatarClassName: L, containerClassName: x, isTryItOutFlow: P = !1, disabledInputs: w = !1, hideCustomStatus: M = !1, hideBioSection: k = !1, hideMessageInput: U = !0, hideExampleButton: G = !1 } = e,
         B = (0, l.ZP)(t.id, null == n ? void 0 : n.id),

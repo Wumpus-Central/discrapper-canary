@@ -13,7 +13,7 @@ var r = n(200651),
     p = n(709999),
     m = n(957058),
     f = n(388032),
-    g = n(957726);
+    g = n(472739);
 let x = (e) => {
     let { isLoading: t, rankedSkuIds: n, handleTransition: i, numVisibleItems: x, showShopAll: b } = e,
         _ = (0, a.e7)([d.default], () => d.default.getCurrentUser()),

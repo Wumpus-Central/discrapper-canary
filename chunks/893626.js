@@ -13,7 +13,7 @@ var t = n(200651),
     h = n(903518),
     x = n(580357),
     v = n(388032),
-    p = n(594175);
+    p = n(916753);
 function k(e) {
     var l, n, a, k;
     let { transitionState: f, onClose: I, guildId: _, welcomeMessage: j, onSave: b } = e;

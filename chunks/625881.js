@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(47120);
+n.d(t, { Z: () => I }), n(47120);
 var i = n(200651),
     s = n(192379),
     l = n(120356),
@@ -15,11 +15,11 @@ var i = n(200651),
     _ = n(474936),
     p = n(981631),
     E = n(388032),
-    C = n(258233),
+    C = n(609781),
     N = n(982404),
-    I = n(299156);
-let f = function (e) {
-    let { premiumSubscription: t, premiumType: n, onClose: l, onConfirm: f, userDiscountOffer: T } = e,
+    f = n(299156);
+let I = function (e) {
+    let { premiumSubscription: t, premiumType: n, onClose: l, onConfirm: I, userDiscountOffer: T } = e,
         [S, j] = s.useState(!1),
         [v, b] = s.useState(!1),
         A = async (e) => {
@@ -31,14 +31,14 @@ let f = function (e) {
                         body: { user_discount_offer_id: e },
                         rejectWithError: !0
                     }),
-                    f();
+                    I();
             } catch (e) {
                 j(!0);
             }
             b(!1);
         },
         O = (0, d.ZP)(),
-        R = (0, o.wj)(O) ? N : I,
+        R = (0, o.wj)(O) ? N : f,
         D = (0, g._)(t, _.Xh.PREMIUM_MONTH_TIER_2, T),
         P = (0, h.aS)(_.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
             currency: t.currency,

@@ -18,7 +18,7 @@ var i = n(200651),
     x = n(45430),
     v = n(981631),
     E = n(354459),
-    I = n(932747);
+    I = n(671289);
 let b = (0, s.Z)((e) => {
     var t, n;
     let { participants: a, filteredParticipants: s, selectedParticipant: b, participantsVersion: Z, layout: N, onSelectParticipant: T, onContextMenuParticipant: S, onFullscreenParticipant: j, channel: y, hasConnectPermission: A, className: P, inCall: R, showParticipants: M = !0, paused: L = !1, width: k, height: O, idle: D, mode: w, popoutWindow: U, awaitingRemoteSessionInfo: B, callContainerDimensions: F } = e;

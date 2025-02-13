@@ -7,7 +7,7 @@ var l = n(392711),
     s = n(289481),
     o = n(809780),
     c = n(388032),
-    d = n(535965);
+    d = n(397736);
 function u(e, t, n) {
     let { markChannelRead: l, markGuildRead: u, deleteChannel: m, toggle: _, getNumUnreadChannels: h } = t,
         p = null;

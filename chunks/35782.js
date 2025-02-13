@@ -1405,39 +1405,39 @@ let { Themes: i } = n(15202).V,
             INFO_DANGER_BACKGROUND: {
                 'visual-refresh': {
                     [i.DARK]: {
-                        raw: 'RED_NEW_75',
-                        opacity: 1
+                        raw: 'OPACITY_RED_8',
+                        opacity: 0.0784313725490196
                     },
                     [i.LIGHT]: {
-                        raw: 'RED_NEW_1',
-                        opacity: 1
+                        raw: 'OPACITY_RED_8',
+                        opacity: 0.0784313725490196
                     },
                     [i.MIDNIGHT]: {
-                        raw: 'RED_NEW_94',
-                        opacity: 1
+                        raw: 'OPACITY_RED_8',
+                        opacity: 0.0784313725490196
                     },
                     [i.DARKER]: {
-                        raw: 'RED_NEW_85',
-                        opacity: 1
+                        raw: 'OPACITY_RED_8',
+                        opacity: 0.0784313725490196
                     }
                 }
             },
             INFO_DANGER_TEXT: {
                 'visual-refresh': {
                     [i.DARK]: {
-                        raw: 'RED_NEW_12',
+                        raw: 'RED_NEW_23',
                         opacity: 1
                     },
                     [i.LIGHT]: {
-                        raw: 'RED_NEW_66',
+                        raw: 'RED_NEW_53',
                         opacity: 1
                     },
                     [i.MIDNIGHT]: {
-                        raw: 'RED_NEW_29',
+                        raw: 'RED_NEW_37',
                         opacity: 1
                     },
                     [i.DARKER]: {
-                        raw: 'RED_NEW_23',
+                        raw: 'RED_NEW_31',
                         opacity: 1
                     }
                 }
@@ -1445,39 +1445,39 @@ let { Themes: i } = n(15202).V,
             INFO_HELP_BACKGROUND: {
                 'visual-refresh': {
                     [i.DARK]: {
-                        raw: 'BLUE_NEW_77',
-                        opacity: 1
+                        raw: 'OPACITY_BLUE_8',
+                        opacity: 0.0784313725490196
                     },
                     [i.LIGHT]: {
-                        raw: 'BLUE_NEW_1',
-                        opacity: 1
+                        raw: 'OPACITY_BLUE_8',
+                        opacity: 0.0784313725490196
                     },
                     [i.MIDNIGHT]: {
-                        raw: 'BLUE_NEW_94',
-                        opacity: 1
+                        raw: 'OPACITY_BLUE_8',
+                        opacity: 0.0784313725490196
                     },
                     [i.DARKER]: {
-                        raw: 'BLUE_NEW_86',
-                        opacity: 1
+                        raw: 'OPACITY_BLUE_8',
+                        opacity: 0.0784313725490196
                     }
                 }
             },
             INFO_HELP_TEXT: {
                 'visual-refresh': {
                     [i.DARK]: {
-                        raw: 'BLUE_NEW_16',
+                        raw: 'BLUE_NEW_25',
                         opacity: 1
                     },
                     [i.LIGHT]: {
-                        raw: 'BLUE_NEW_66',
+                        raw: 'BLUE_NEW_56',
                         opacity: 1
                     },
                     [i.MIDNIGHT]: {
-                        raw: 'BLUE_NEW_31',
+                        raw: 'BLUE_NEW_40',
                         opacity: 1
                     },
                     [i.DARKER]: {
-                        raw: 'BLUE_NEW_26',
+                        raw: 'BLUE_NEW_34',
                         opacity: 1
                     }
                 }
@@ -1485,39 +1485,39 @@ let { Themes: i } = n(15202).V,
             INFO_POSITIVE_BACKGROUND: {
                 'visual-refresh': {
                     [i.DARK]: {
-                        raw: 'GREEN_NEW_76',
-                        opacity: 1
+                        raw: 'OPACITY_GREEN_8',
+                        opacity: 0.0784313725490196
                     },
                     [i.LIGHT]: {
-                        raw: 'GREEN_NEW_1',
-                        opacity: 1
+                        raw: 'OPACITY_GREEN_8',
+                        opacity: 0.0784313725490196
                     },
                     [i.MIDNIGHT]: {
-                        raw: 'GREEN_NEW_94',
-                        opacity: 1
+                        raw: 'OPACITY_GREEN_8',
+                        opacity: 0.0784313725490196
                     },
                     [i.DARKER]: {
-                        raw: 'GREEN_NEW_86',
-                        opacity: 1
+                        raw: 'OPACITY_GREEN_8',
+                        opacity: 0.0784313725490196
                     }
                 }
             },
             INFO_POSITIVE_TEXT: {
                 'visual-refresh': {
                     [i.DARK]: {
-                        raw: 'GREEN_NEW_17',
+                        raw: 'GREEN_NEW_26',
                         opacity: 1
                     },
                     [i.LIGHT]: {
-                        raw: 'GREEN_NEW_64',
+                        raw: 'GREEN_NEW_55',
                         opacity: 1
                     },
                     [i.MIDNIGHT]: {
-                        raw: 'GREEN_NEW_32',
+                        raw: 'GREEN_NEW_39',
                         opacity: 1
                     },
                     [i.DARKER]: {
-                        raw: 'GREEN_NEW_27',
+                        raw: 'GREEN_NEW_34',
                         opacity: 1
                     }
                 }
@@ -1525,39 +1525,39 @@ let { Themes: i } = n(15202).V,
             INFO_WARNING_BACKGROUND: {
                 'visual-refresh': {
                     [i.DARK]: {
-                        raw: 'YELLOW_NEW_76',
-                        opacity: 1
+                        raw: 'OPACITY_YELLOW_8',
+                        opacity: 0.0784313725490196
                     },
                     [i.LIGHT]: {
-                        raw: 'YELLOW_NEW_1',
-                        opacity: 1
+                        raw: 'OPACITY_YELLOW_8',
+                        opacity: 0.0784313725490196
                     },
                     [i.MIDNIGHT]: {
-                        raw: 'YELLOW_NEW_94',
-                        opacity: 1
+                        raw: 'OPACITY_YELLOW_8',
+                        opacity: 0.0784313725490196
                     },
                     [i.DARKER]: {
-                        raw: 'YELLOW_NEW_85',
-                        opacity: 1
+                        raw: 'OPACITY_YELLOW_8',
+                        opacity: 0.0784313725490196
                     }
                 }
             },
             INFO_WARNING_TEXT: {
                 'visual-refresh': {
                     [i.DARK]: {
-                        raw: 'YELLOW_NEW_15',
+                        raw: 'YELLOW_NEW_24',
                         opacity: 1
                     },
                     [i.LIGHT]: {
-                        raw: 'YELLOW_NEW_65',
+                        raw: 'YELLOW_NEW_54',
                         opacity: 1
                     },
                     [i.MIDNIGHT]: {
-                        raw: 'YELLOW_NEW_30',
+                        raw: 'YELLOW_NEW_38',
                         opacity: 1
                     },
                     [i.DARKER]: {
-                        raw: 'YELLOW_NEW_24',
+                        raw: 'YELLOW_NEW_32',
                         opacity: 1
                     }
                 }
@@ -2017,19 +2017,19 @@ let { Themes: i } = n(15202).V,
             TEXT_POSITIVE: {
                 'visual-refresh': {
                     [i.DARK]: {
-                        raw: 'GREEN_NEW_17',
+                        raw: 'GREEN_NEW_26',
                         opacity: 1
                     },
                     [i.LIGHT]: {
-                        raw: 'GREEN_NEW_64',
+                        raw: 'GREEN_NEW_55',
                         opacity: 1
                     },
                     [i.MIDNIGHT]: {
-                        raw: 'GREEN_NEW_32',
+                        raw: 'GREEN_NEW_39',
                         opacity: 1
                     },
                     [i.DARKER]: {
-                        raw: 'GREEN_NEW_27',
+                        raw: 'GREEN_NEW_34',
                         opacity: 1
                     }
                 }
@@ -2077,19 +2077,19 @@ let { Themes: i } = n(15202).V,
             TEXT_WARNING: {
                 'visual-refresh': {
                     [i.DARK]: {
-                        raw: 'YELLOW_NEW_15',
+                        raw: 'YELLOW_NEW_24',
                         opacity: 1
                     },
                     [i.LIGHT]: {
-                        raw: 'YELLOW_NEW_65',
+                        raw: 'YELLOW_NEW_54',
                         opacity: 1
                     },
                     [i.MIDNIGHT]: {
-                        raw: 'YELLOW_NEW_30',
+                        raw: 'YELLOW_NEW_38',
                         opacity: 1
                     },
                     [i.DARKER]: {
-                        raw: 'YELLOW_NEW_24',
+                        raw: 'YELLOW_NEW_32',
                         opacity: 1
                     }
                 }

@@ -6,7 +6,7 @@ var i = n(200651),
     a = n(588126),
     o = n(25990),
     c = n(921813),
-    d = n(424400);
+    d = n(256504);
 function u(e) {
     var t;
     let { user: u, disabledInputs: h, containerClassName: m } = e,
@@ -18,8 +18,8 @@ function u(e) {
             pendingPronouns: E,
             pendingBio: C,
             tryItOutThemeColors: N,
-            tryItOutAvatar: I,
-            tryItOutBanner: f,
+            tryItOutAvatar: f,
+            tryItOutBanner: I,
             tryItOutAvatarDecoration: T,
             tryItOutProfileEffectId: S
         } = (0, l.cj)([o.Z], () => {
@@ -36,12 +36,12 @@ function u(e) {
         user: u,
         pendingPronouns: E,
         pendingBio: C,
-        pendingBanner: null !== (t = null != f ? f : _) && void 0 !== t ? t : n(466045),
-        pendingAvatar: null != I ? I : x,
+        pendingBanner: null !== (t = null != I ? I : _) && void 0 !== t ? t : n(466045),
+        pendingAvatar: null != f ? f : x,
         pendingThemeColors: null != N ? N : p,
         pendingAvatarDecoration: j,
         pendingProfileEffectId: S,
-        avatarClassName: null != I || null != x || g.enabled ? void 0 : d.spinningAvatar,
+        avatarClassName: null != f || null != x || g.enabled ? void 0 : d.spinningAvatar,
         canUsePremiumCustomization: !0,
         isTryItOutFlow: !0,
         hideExampleButton: !0,

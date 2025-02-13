@@ -13,21 +13,21 @@ var i = n(200651),
     g = n(914010),
     x = n(727785),
     _ = n(388032),
-    p = n(271982);
+    p = n(664396);
 function E() {}
 let C = [x.h8.VOICE_CHANNEL];
 function N(e) {
     e.setOptions({ voiceChannelGuildFilter: null }), e.setLimit(1 / 0);
 }
-function I(e) {
+function f(e) {
     let { height: t } = e;
     return (0, i.jsx)('div', { style: { height: t } });
 }
-function f() {
-    return (0, i.jsx)(I, { height: 16 }, 'footer');
+function I() {
+    return (0, i.jsx)(f, { height: 16 }, 'footer');
 }
 function T() {
-    return (0, i.jsx)(I, { height: 8 }, 'header');
+    return (0, i.jsx)(f, { height: 8 }, 'header');
 }
 function S() {
     return (0, i.jsx)('div', {
@@ -90,7 +90,7 @@ function v(e) {
         c = s.useId(),
         E = s.useRef(null),
         {
-            mouseFocusEnabled: I,
+            mouseFocusEnabled: f,
             enableMouseFocus: j,
             disableMouseFocus: v
         } = (function () {
@@ -237,7 +237,7 @@ function v(e) {
                                     channel: s,
                                     category: l,
                                     focused: D === t,
-                                    onMouseEnter: () => I.current && P(t),
+                                    onMouseEnter: () => f.current && P(t),
                                     onClick: () => {
                                         a(s.id), n();
                                     },
@@ -254,7 +254,7 @@ function v(e) {
                             );
                         },
                         renderListHeader: T,
-                        renderFooter: f,
+                        renderFooter: I,
                         sectionHeight: 0,
                         rowHeight: 34,
                         className: p.voiceChannelList,

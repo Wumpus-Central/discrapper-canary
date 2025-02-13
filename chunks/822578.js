@@ -4,8 +4,8 @@ a.d(e, {
 });
 var r = a(394798),
     n = a(101284),
-    _ = a(886115),
-    o = a(899517),
+    o = a(886115),
+    _ = a(899517),
     i = a(202811),
     c = a(559508),
     s = a(263449),
@@ -22,12 +22,12 @@ function I(t, e, a, I, d, A) {
         },
         h = a.integrations || t.integrations.map((t) => t.name);
     (function (t, e) {
-        let { environment: a, release: r, dist: n, maxValueLength: o = 250 } = e;
-        'environment' in t || (t.environment = 'environment' in e ? a : c.J), void 0 === t.release && void 0 !== r && (t.release = r), void 0 === t.dist && void 0 !== n && (t.dist = n), t.message && (t.message = (0, _.$G)(t.message, o));
+        let { environment: a, release: r, dist: n, maxValueLength: _ = 250 } = e;
+        'environment' in t || (t.environment = 'environment' in e ? a : c.J), void 0 === t.release && void 0 !== r && (t.release = r), void 0 === t.dist && void 0 !== n && (t.dist = n), t.message && (t.message = (0, o.$G)(t.message, _));
         let i = t.exception && t.exception.values && t.exception.values[0];
-        i && i.value && (i.value = (0, _.$G)(i.value, o));
+        i && i.value && (i.value = (0, o.$G)(i.value, _));
         let s = t.request;
-        s && s.url && (s.url = (0, _.$G)(s.url, o));
+        s && s.url && (s.url = (0, o.$G)(s.url, _));
     })(L, t),
         (f = L),
         (p = h).length > 0 && ((f.sdk = f.sdk || {}), (f.sdk.integrations = [...(f.sdk.integrations || []), ...p])),
@@ -35,16 +35,16 @@ function I(t, e, a, I, d, A) {
         void 0 === e.type &&
             (function (t, e) {
                 let a;
-                let r = o.n._sentryDebugIds;
+                let r = _.n._sentryDebugIds;
                 if (!r) return;
                 let n = R.get(e);
                 n ? (a = n) : ((a = new Map()), R.set(e, a));
-                let _ = Object.entries(r).reduce((t, [r, n]) => {
-                    let _;
-                    let o = a.get(r);
-                    o ? (_ = o) : ((_ = e(r)), a.set(r, _));
-                    for (let e = _.length - 1; e >= 0; e--) {
-                        let a = _[e];
+                let o = Object.entries(r).reduce((t, [r, n]) => {
+                    let o;
+                    let _ = a.get(r);
+                    _ ? (o = _) : ((o = e(r)), a.set(r, o));
+                    for (let e = o.length - 1; e >= 0; e--) {
+                        let a = o[e];
                         if (a.filename) {
                             t[a.filename] = n;
                             break;
@@ -55,7 +55,7 @@ function I(t, e, a, I, d, A) {
                 try {
                     t.exception.values.forEach((t) => {
                         t.stacktrace.frames.forEach((t) => {
-                            t.filename && (t.debug_id = _[t.filename]);
+                            t.filename && (t.debug_id = o[t.filename]);
                         });
                     });
                 } catch (t) {}

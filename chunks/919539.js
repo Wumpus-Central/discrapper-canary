@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(703115),
     C = n(526761),
     N = n(726985),
-    I = n(736530),
-    f = n(981631),
+    f = n(736530),
+    I = n(981631),
     T = n(388032);
 function S(e) {
     let { ingress: t, guildId: n } = e,
@@ -32,7 +32,7 @@ function S(e) {
                 let i = (0, d.gl)();
                 e ? i.delete(n) : i.add(n),
                     m.zA.updateSetting(Array.from(i)),
-                    a.default.track(f.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
+                    a.default.track(I.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
                         action: E.Y.RESTRICT_GUILD_MESSAGE_REQUEST_TOGGLE,
                         ingress: t,
                         guild_id: n
@@ -41,7 +41,7 @@ function S(e) {
             [t, n]
         );
     function R(e, t) {
-        a.default.track(f.rMx.GUILD_DEFAULT_MESSAGE_REQUEST_UPDATED, {
+        a.default.track(I.rMx.GUILD_DEFAULT_MESSAGE_REQUEST_UPDATED, {
             default_guilds_restricted: e,
             applied_to_existing_guilds: t
         });
@@ -71,20 +71,20 @@ function S(e) {
         setting: N.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_MESSAGE_REQUESTS_V2,
         scrollPosition: C.FY.MESSAGE_REQUESTS_V2,
         children:
-            n === I.T
+            n === f.T
                 ? (0, i.jsx)(_.Z, {
                       title: T.intl.string(T.t['3o2ojo']),
                       value: !j && !b,
                       onChange: (e) => D(e, !1),
                       disabled: j,
-                      note: T.intl.format(T.t.wkm9a2, { helpdeskArticle: o.Z.getArticleURL(f.BhN.MESSAGE_REQUESTS) })
+                      note: T.intl.format(T.t.wkm9a2, { helpdeskArticle: o.Z.getArticleURL(I.BhN.MESSAGE_REQUESTS) })
                   })
                 : (0, i.jsx)(_.Z, {
                       title: T.intl.string(T.t['3o2ojo']),
                       value: !A,
                       onChange: (e) => D(e, !0),
                       disabled: v,
-                      note: S ? T.intl.format(T.t.WpnWLS, { helpdeskArticle: o.Z.getArticleURL(f.BhN.MESSAGE_REQUESTS) }) : T.intl.format(T.t.wkm9a2, { helpdeskArticle: o.Z.getArticleURL(f.BhN.MESSAGE_REQUESTS) })
+                      note: S ? T.intl.format(T.t.WpnWLS, { helpdeskArticle: o.Z.getArticleURL(I.BhN.MESSAGE_REQUESTS) }) : T.intl.format(T.t.wkm9a2, { helpdeskArticle: o.Z.getArticleURL(I.BhN.MESSAGE_REQUESTS) })
                   })
     });
 }

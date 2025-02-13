@@ -71,8 +71,8 @@ class h {
                     body: {
                         metrics: e,
                         client_info: {
-                            built_at: '1739475250712',
-                            build_number: '368472'
+                            built_at: '1739478811777',
+                            build_number: '368515'
                         }
                     },
                     retries: 1,

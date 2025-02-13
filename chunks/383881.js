@@ -5,7 +5,7 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var r = n(772848),
-    a = n(233528);
+    a = n(537339);
 function s() {
     return (0, i.jsx)('svg', {
         className: a.headerWave,

@@ -12,7 +12,7 @@ var l = n(200651),
     x = n(703656),
     h = n(981631),
     _ = n(388032),
-    N = n(584859);
+    N = n(879943);
 let v = (0, m.hQ)(),
     g = (e) => {
         let { email: t, guildId: n, onClose: s } = e,

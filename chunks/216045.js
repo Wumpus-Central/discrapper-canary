@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(957730),
     C = n(53691),
     N = n(267717),
-    I = n(296810),
-    f = n(921813),
+    f = n(296810),
+    I = n(921813),
     T = n(610794),
     S = n(935147),
     j = n(246946),
@@ -32,7 +32,7 @@ var i = n(200651),
     y = n(532495),
     Z = n(981631),
     L = n(388032),
-    k = n(316631);
+    k = n(518759);
 function B() {
     let e = (0, a.e7)([b.default], () => {
         let e = b.default.getCurrentUser();
@@ -67,8 +67,8 @@ function B() {
               value: w,
               children: [
                   (0, i.jsx)(p.Z, {}),
-                  (0, i.jsx)(I.Z, {
-                      profilePreview: (0, i.jsx)(f.Z, {
+                  (0, i.jsx)(f.Z, {
+                      profilePreview: (0, i.jsx)(I.Z, {
                           user: e,
                           canUsePremiumCustomization: V,
                           onUpsellClick: P.Z,

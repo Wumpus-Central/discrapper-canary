@@ -17,11 +17,11 @@ var i = n(200651),
     E = n(585483),
     C = n(16703),
     N = n(785145),
-    I = n(981631),
-    f = n(526761),
+    f = n(981631),
+    I = n(526761),
     T = n(726985),
     S = n(388032),
-    j = n(665932);
+    j = n(718396);
 function v() {
     c.Z.useExperiment({ location: 'profile_customization_auto' });
     let e = (0, l.e7)([u.Z], () => u.Z.getGuild()),
@@ -35,14 +35,14 @@ function v() {
     function y(t) {
         if (A !== t) {
             if (n) {
-                E.S.dispatch(I.CkL.SHAKE_APP, {
+                E.S.dispatch(f.CkL.SHAKE_APP, {
                     duration: 300,
                     intensity: a.$x
                 }),
-                    E.S.dispatch(I.CkL.EMPHASIZE_NOTICE);
+                    E.S.dispatch(f.CkL.EMPHASIZE_NOTICE);
                 return;
             }
-            t === f.NB.GUILD && null == e && null != v && (0, d.Fq)(v, R), O(t);
+            t === I.NB.GUILD && null == e && null != v && (0, d.Fq)(v, R), O(t);
         }
     }
     s.useEffect(() => {
@@ -51,7 +51,7 @@ function v() {
     let Z = !0,
         L = !0;
     return (
-        D && 1 === P.length && (P.includes(T.s6.PROFILE_SERVER_PROFILES) ? (y(f.NB.GUILD), (L = !1)) : P.includes(T.s6.PROFILE_USER_PROFILE) && (y(f.NB.USER_PROFILE), (Z = !1))),
+        D && 1 === P.length && (P.includes(T.s6.PROFILE_SERVER_PROFILES) ? (y(I.NB.GUILD), (L = !1)) : P.includes(T.s6.PROFILE_USER_PROFILE) && (y(I.NB.USER_PROFILE), (Z = !1))),
         (0, i.jsx)(o.Gt, {
             value: R,
             children: (0, i.jsxs)(r.y5t, {
@@ -72,10 +72,10 @@ function v() {
                                       r.njP.Item,
                                       {
                                           className: j.tabBarItem,
-                                          id: f.NB.USER_PROFILE,
+                                          id: I.NB.USER_PROFILE,
                                           children: S.intl.string(S.t['OU3/Pj'])
                                       },
-                                      f.NB.USER_PROFILE
+                                      I.NB.USER_PROFILE
                                   )
                                 : null,
                             Z
@@ -83,15 +83,15 @@ function v() {
                                       r.njP.Item,
                                       {
                                           className: j.tabBarItem,
-                                          id: f.NB.GUILD,
+                                          id: I.NB.GUILD,
                                           children: S.intl.string(S.t.kPHroa)
                                       },
-                                      f.NB.GUILD
+                                      I.NB.GUILD
                                   )
                                 : null
                         ]
                     }),
-                    A === f.NB.GUILD ? (0, i.jsx)(h.Z, { selectedGuild: v }) : (0, i.jsx)(g.Z, {})
+                    A === I.NB.GUILD ? (0, i.jsx)(h.Z, { selectedGuild: v }) : (0, i.jsx)(g.Z, {})
                 ]
             })
         })

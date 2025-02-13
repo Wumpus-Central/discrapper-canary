@@ -11,7 +11,7 @@ var l = n(200651),
     h = n(190054),
     f = n(760373),
     g = n(388032),
-    p = n(571545);
+    p = n(35884);
 function N(e) {
     let { channelId: t } = e,
         n = (0, a.e7)([o.Z], () => {

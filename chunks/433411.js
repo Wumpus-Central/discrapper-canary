@@ -12,23 +12,23 @@ var i = n(200651),
     m = n(150039),
     g = n(993413),
     x = n(388032),
-    _ = n(625285);
+    _ = n(654955);
 function p(e) {
     let { user: t, guild: n, className: l, sectionTitle: h, forcedDivider: p = !1, withTutorial: C = !1, isTryItOutFlow: N = !1 } = e,
-        { analyticsLocations: I } = (0, o.ZP)(),
-        f = null != n,
+        { analyticsLocations: f } = (0, o.ZP)(),
+        I = null != n,
         { userAvatarDecoration: T, guildAvatarDecoration: S, pendingAvatarDecoration: j, pendingErrors: v } = (0, m.$U)(t, n),
         b = (0, u.Z)('enable_avatar_decoration_uploads'),
         A = s.useCallback(
             () =>
                 (0, d.ps)({
-                    analyticsLocations: I,
+                    analyticsLocations: f,
                     isTryItOutFlow: N,
                     guild: n
                 }),
-            [I, N, n]
+            [f, N, n]
         ),
-        O = N || void 0 !== j ? null != j : (f ? S : T) != null,
+        O = N || void 0 !== j ? null != j : (I ? S : T) != null,
         R = C ? a.gtL : a.zxk;
     return (0, i.jsxs)(g.Z, {
         className: l,

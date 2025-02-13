@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(47120);
+n.d(t, { Z: () => p }), n(47120);
 var i,
     l = n(442837),
     r = n(570140),
@@ -37,7 +37,7 @@ function g() {
     }
     if ((null == c[n] || !c[n].has(e)) && h[e] > 50) return u[n].add(e), !0;
 }
-class p extends (i = l.ZP.PersistedStore) {
+class f extends (i = l.ZP.PersistedStore) {
     initialize(e) {
         var t, n;
         if ((this.syncWith([a.Z], g), null == e)) return;
@@ -57,8 +57,8 @@ class p extends (i = l.ZP.PersistedStore) {
         };
     }
 }
-d(p, 'displayName', 'FavoritesSuggestionStore'), d(p, 'persistKey', 'FavoritesSuggestionStore');
-let f = new p(r.Z, {
+d(f, 'displayName', 'FavoritesSuggestionStore'), d(f, 'persistKey', 'FavoritesSuggestionStore');
+let p = new f(r.Z, {
     DISMISS_FAVORITE_SUGGESTION: function (e) {
         let { guildId: t, channelId: n } = e;
         return null == c[t] && (c[t] = new Set()), c[t].add(n), u[t].delete(n), !0;

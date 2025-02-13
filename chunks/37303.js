@@ -13,7 +13,7 @@ var o = n(497505),
     m = n(206044),
     x = n(266843),
     h = n(46140),
-    g = n(266325);
+    g = n(643027);
 function C(e) {
     let { quest: t, location: n, initiallyExpanded: C, contentPosition: p } = e,
         [j, T] = i.useState(!1),

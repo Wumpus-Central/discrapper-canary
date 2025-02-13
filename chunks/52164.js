@@ -13,7 +13,7 @@ var s = n(512722),
     m = n(474936),
     g = n(981631),
     x = n(388032),
-    _ = n(817239);
+    _ = n(94950);
 function p(e) {
     let t,
         { subscription: n, withOverheadSeparator: s } = e,
@@ -31,21 +31,21 @@ function p(e) {
             return (0, d.uZ)(t);
         });
     if (null == N) return null;
-    let I = N.subscriptionPlanId,
-        f = c.Z.get(I);
-    l()(null != f, 'Missing plan');
+    let f = N.subscriptionPlanId,
+        I = c.Z.get(f);
+    l()(null != I, 'Missing plan');
     let T = (0, u.T4)(E.total, E.currency);
     return (
-        f.interval === m.rV.YEAR
+        I.interval === m.rV.YEAR
             ? (t = x.intl.format(x.t['jPz/39'], {
                   price: T,
                   termsUrl: g.EYA.TERMS,
                   paidURL: g.EYA.PAID_TERMS,
                   privacyUrl: g.EYA.PRIVACY
               }))
-            : f.interval === m.rV.MONTH &&
+            : I.interval === m.rV.MONTH &&
               (t =
-                  1 === f.intervalCount
+                  1 === I.intervalCount
                       ? x.intl.format(x.t.m27GpK, {
                             price: T,
                             termsUrl: g.EYA.TERMS,
@@ -57,7 +57,7 @@ function p(e) {
                             termsUrl: g.EYA.TERMS,
                             paidURL: g.EYA.PAID_TERMS,
                             privacyUrl: g.EYA.PRIVACY,
-                            intervalCount: f.intervalCount
+                            intervalCount: I.intervalCount
                         })),
         (0, i.jsx)(r.Text, {
             color: 'text-muted',

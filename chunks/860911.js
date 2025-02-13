@@ -20,14 +20,14 @@ class r {
 function n(t, e) {
     let a = {};
     for (let n of Object.keys(t)) {
-        let _ = t[n];
-        if ('function' != typeof _) {
-            a[n] = _;
+        let o = t[n];
+        if ('function' != typeof o) {
+            a[n] = o;
             continue;
         }
         a[n] = function () {
             for (var t = arguments.length, a = Array(t), n = 0; n < t; n++) a[n] = arguments[n];
-            return _(
+            return o(
                 ...(function (t, e) {
                     return t.map((t) =>
                         null == t

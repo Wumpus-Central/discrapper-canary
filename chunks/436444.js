@@ -18,7 +18,7 @@ var r = n(120356),
     p = n(981631),
     h = n(474936),
     m = n(388032),
-    g = n(48018);
+    g = n(906845);
 function E(e) {
     switch (e) {
         case p.Eu4.TIER_3:

@@ -5,7 +5,7 @@ var i = n(200651),
     s = n.n(a),
     o = n(507274),
     l = n(838331),
-    u = n(961167);
+    u = n(647378);
 function c(e) {
     let { children: t, placeholder: n, value: a, onChange: c, onClose: d, showScrollbar: f, className: _, multiSelect: p, ...h } = e,
         m = r.useCallback(

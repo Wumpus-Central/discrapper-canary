@@ -1,4 +1,4 @@
-n.d(t, { v4: () => l });
+n.d(e, { v4: () => a });
 let i = (0, n(818083).B)({
     kind: 'user',
     id: '2025-01_inappropriate_conversations_new_defaults',
@@ -12,8 +12,8 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-function l(e) {
-    let { location: t } = e,
-        { enabled: n } = i.useExperiment({ location: t }, { autoTrackExposure: !1 });
+function a(t) {
+    let { location: e } = t,
+        { enabled: n } = i.useExperiment({ location: e }, { autoTrackExposure: !1 });
     return n;
 }

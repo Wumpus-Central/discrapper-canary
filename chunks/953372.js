@@ -17,7 +17,7 @@ var i = n(200651),
     E = n(122943),
     v = n(556638),
     y = n(981631),
-    I = n(694978);
+    I = n(21478);
 function T(e) {
     let { user: t, activities: n, applicationStream: a, voiceChannel: T, textClassName: b, emojiClassName: S, textSize: A = 'xs', animate: N = !0, hasQuest: C = !1, hideEmoji: R = !1, hideTooltip: O = !1 } = e,
         D = 'live-activity-status-web',

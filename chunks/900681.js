@@ -19,7 +19,7 @@ var i = n(200651),
     m = n(550271),
     g = n(308083),
     E = n(388032),
-    v = n(610550);
+    v = n(843819);
 function y(e) {
     let { wildcardDescriptors: t, primaryColor: n } = e,
         a = t.filter((e) => e !== g.U6).join(', '),

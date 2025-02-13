@@ -1,7 +1,7 @@
 var r = a(325008),
     n = a(34924),
-    _ = a(733669),
-    o = a(24033),
+    o = a(733669),
+    _ = a(24033),
     i = a(966606),
     c = TypeError,
     s = Object.defineProperty,
@@ -10,9 +10,9 @@ var r = a(325008),
     u = 'configurable',
     I = 'writable';
 e.f = r
-    ? _
+    ? o
         ? function (t, e, a) {
-              if ((o(t), (e = i(e)), o(a), 'function' == typeof t && 'prototype' === e && 'value' in a && I in a && !a[I])) {
+              if ((_(t), (e = i(e)), _(a), 'function' == typeof t && 'prototype' === e && 'value' in a && I in a && !a[I])) {
                   var r = E(t, e);
                   r &&
                       r[I] &&
@@ -27,7 +27,7 @@ e.f = r
           }
         : s
     : function (t, e, a) {
-          if ((o(t), (e = i(e)), o(a), n))
+          if ((_(t), (e = i(e)), _(a), n))
               try {
                   return s(t, e, a);
               } catch (t) {}

@@ -14,8 +14,8 @@ var i = t(200651),
     x = t(428927),
     h = t(228168),
     m = t(388032),
-    _ = t(782276),
-    Z = t(480234);
+    _ = t(547759),
+    Z = t(774645);
 function v(e) {
     let { section: n, subsection: t, user: l, currentUser: o, displayProfile: s, guildId: r, onClose: a } = e;
     return n === h.oh.ACTIVITY

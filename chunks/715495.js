@@ -12,7 +12,7 @@ var i = n(200651),
     m = n(711325),
     g = n(852630),
     x = n(731994),
-    _ = n(714174);
+    _ = n(355531);
 function p() {
     var e;
     let [t, n] = (0, s.useState)(!1),
@@ -103,12 +103,12 @@ function p() {
                                 variant: 'text-sm/semibold',
                                 children: 'Memberlist'
                             }),
-                            (0, i.jsx)(I, { nameplate: a }),
+                            (0, i.jsx)(f, { nameplate: a }),
                             (0, i.jsx)(o.Text, {
                                 variant: 'text-sm/semibold',
                                 children: 'DMs'
                             }),
-                            (0, i.jsx)(f, { nameplate: a })
+                            (0, i.jsx)(I, { nameplate: a })
                         ]
                     }),
                     (0, i.jsxs)('div', {
@@ -246,7 +246,7 @@ function N(e) {
         ]
     });
 }
-function I(e) {
+function f(e) {
     let { nameplate: t } = e,
         n = (0, a.e7)([h.default], () => h.default.getCurrentUser());
     return (0, i.jsx)('div', {
@@ -288,7 +288,7 @@ function I(e) {
         })
     });
 }
-function f(e) {
+function I(e) {
     let { nameplate: t } = e;
     return (0, i.jsx)('div', {
         className: r()(_.preview, _.resizer),

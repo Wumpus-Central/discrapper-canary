@@ -13,7 +13,7 @@ var i = n(200651),
     g = n(305342),
     x = n(293810),
     _ = n(388032),
-    p = n(473639);
+    p = n(3255);
 let E = (e) => {
         let [t, n] = s.useState(!1),
             [i, l] = s.useState(null);
@@ -34,9 +34,9 @@ let E = (e) => {
     C = (e) => {
         var t;
         let { transitionState: n, groupListing: s, guildId: l, listing: o, subscription: C, onClose: N } = e,
-            I = (0, u.Dt)(),
-            f = (0, m.YB)(l),
-            T = (null == f ? void 0 : null === (t = f.cover_image_asset) || void 0 === t ? void 0 : t.application_id) != null ? (0, h._W)(f.cover_image_asset.application_id, f.cover_image_asset, 440) : void 0,
+            f = (0, u.Dt)(),
+            I = (0, m.YB)(l),
+            T = (null == I ? void 0 : null === (t = I.cover_image_asset) || void 0 === t ? void 0 : t.application_id) != null ? (0, h._W)(I.cover_image_asset.application_id, I.cover_image_asset, 440) : void 0,
             { analyticsLocations: S } = (0, d.ZP)(c.Z.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL),
             { cancelSubscription: j, error: v, submitting: b } = E(S),
             A = async () => {
@@ -53,7 +53,7 @@ let E = (e) => {
         return (0, i.jsxs)(a.Y0X, {
             transitionState: n,
             className: p.__invalid_modal,
-            'aria-labelledby': I,
+            'aria-labelledby': f,
             children: [
                 (0, i.jsxs)('div', {
                     children: [
@@ -74,7 +74,7 @@ let E = (e) => {
                     className: p.content,
                     children: [
                         (0, i.jsx)(a.X6q, {
-                            id: I,
+                            id: f,
                             variant: 'text-md/medium',
                             className: p.title,
                             children: _.intl.string(_.t.O6l5tL)

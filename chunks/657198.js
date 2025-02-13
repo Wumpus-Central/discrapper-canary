@@ -13,7 +13,7 @@ var i = n(200651),
     p = n(436660),
     h = n(887490),
     m = n(388032),
-    g = n(780908);
+    g = n(369757);
 function E(e, t, n) {
     let { attributes: r, children: a, element: s } = t;
     switch (s.type) {
