@@ -144,6 +144,7 @@ var i = (function (e) {
         (e.BLOCKED_PROFILE_PANEL = 'blocked profile panel'),
         (e.IGNORED_PROFILE_PANEL = 'blocked profile panel'),
         (e.PROFILE_CUSTOM_STATUS = 'profile custom status'),
+        (e.CUSTOM_STATUS_MODAL = 'custom status modal'),
         (e.USER_PROFILE_LIVE_ACTIVITY_CARD = 'user profile live activity card'),
         (e.USER_PROFILE_RECENT_ACTIVITY_CARD = 'user profile recent activity card'),
         (e.USER_PROFILE_VOICE_ACTIVITY_CARD = 'user profile voice activity card'),

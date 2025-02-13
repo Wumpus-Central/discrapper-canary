@@ -1,11 +1,12 @@
-n.d(e, {
+n.d(t, {
     Df: () => o,
     FO: () => s,
+    Q9: () => u,
     s0: () => i,
     wS: () => r
 });
-var a = n(231338),
-    l = n(388032);
+var l = n(231338),
+    a = n(388032);
 let i = 128,
     s = Object.freeze({
         MINUTES_30: 1800000,
@@ -16,42 +17,63 @@ let i = 128,
     }),
     o = [
         {
-            value: a.Sk.ONLINE,
-            label: () => l.intl.string(l.t.WbGtnJ)
+            value: l.Sk.ONLINE,
+            label: () => a.intl.string(a.t.WbGtnJ)
         },
         {
-            value: a.Sk.IDLE,
-            label: () => l.intl.string(l.t.qWbtVV)
+            value: l.Sk.IDLE,
+            label: () => a.intl.string(a.t.qWbtVV)
         },
         {
-            value: a.Sk.DND,
-            label: () => l.intl.string(l.t.jaNpQE)
+            value: l.Sk.DND,
+            label: () => a.intl.string(a.t.jaNpQE)
         },
         {
-            value: a.Sk.INVISIBLE,
-            label: () => l.intl.string(l.t.bg24HB)
+            value: l.Sk.INVISIBLE,
+            label: () => a.intl.string(a.t.bg24HB)
         }
     ],
     r = [
         {
             value: s.TODAY,
-            label: () => l.intl.string(l.t.GQmLra)
+            label: () => a.intl.string(a.t.GQmLra)
         },
         {
             value: s.HOURS_4,
-            label: () => l.intl.formatToPlainString(l.t.Rea2gY, { hours: 4 })
+            label: () => a.intl.formatToPlainString(a.t.Rea2gY, { hours: 4 })
         },
         {
             value: s.HOURS_1,
-            label: () => l.intl.formatToPlainString(l.t.Rea2gY, { hours: 1 })
+            label: () => a.intl.formatToPlainString(a.t.Rea2gY, { hours: 1 })
         },
         {
             value: s.MINUTES_30,
-            label: () => l.intl.formatToPlainString(l.t.TS3eJS, { minutes: 30 })
+            label: () => a.intl.formatToPlainString(a.t.TS3eJS, { minutes: 30 })
         },
         {
             value: s.DONT_CLEAR,
-            label: () => l.intl.string(l.t.bRn8cn)
+            label: () => a.intl.string(a.t.bRn8cn)
+        }
+    ],
+    u = [
+        {
+            value: s.TODAY,
+            label: () => a.intl.string(a.t.TOEOaW)
+        },
+        {
+            value: s.HOURS_4,
+            label: () => a.intl.formatToPlainString(a.t.Yizuvb, { hours: 4 })
+        },
+        {
+            value: s.HOURS_1,
+            label: () => a.intl.formatToPlainString(a.t.Yizuvb, { hours: 1 })
+        },
+        {
+            value: s.MINUTES_30,
+            label: () => a.intl.formatToPlainString(a.t['/XUoq6'], { minutes: 30 })
+        },
+        {
+            value: s.DONT_CLEAR,
+            label: () => a.intl.string(a.t.bRn8cn)
         }
     ];
-s.TODAY, s.HOURS_4, s.HOURS_1, s.MINUTES_30, s.DONT_CLEAR, () => l.intl.string(l.t.bRn8cn);

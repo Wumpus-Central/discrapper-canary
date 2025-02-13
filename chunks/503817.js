@@ -1,5 +1,8 @@
-n.d(e, { DX: () => l });
-let a = (0, n(818083).B)({
+n.d(t, {
+    DX: () => a,
+    hM: () => i
+});
+let l = (0, n(818083).B)({
     kind: 'user',
     id: '2025-01_user_profile_custom_status_edit_preview',
     label: 'User Profile Custom Status Edit Preview',
@@ -26,8 +29,16 @@ let a = (0, n(818083).B)({
         }
     ]
 });
-function l(t) {
-    let { location: e, autoTrackExposure: n = !0 } = t,
-        l = a.getCurrentConfig({ location: e }, { autoTrackExposure: n });
-    return l.enabledWithStatusSelection || l.enabledWithoutSatusSelection;
+function a(e) {
+    let { location: t, autoTrackExposure: n = !0 } = e,
+        a = l.getCurrentConfig({ location: t }, { autoTrackExposure: n });
+    return a.enabledWithStatusSelection || a.enabledWithoutSatusSelection;
+}
+function i(e) {
+    let { location: t, autoTrackExposure: n = !0 } = e,
+        { enabledWithStatusSelection: a, enabledWithoutSatusSelection: i } = l.useExperiment({ location: t }, { autoTrackExposure: n });
+    return {
+        enabledWithStatusSelection: a,
+        enabledWithoutSatusSelection: i
+    };
 }
