@@ -46,14 +46,14 @@ var i,
     v = n(375954),
     T = n(158776),
     S = n(594174),
-    b = n(979651),
-    A = n(70956),
+    A = n(979651),
+    b = n(70956),
     Z = n(5192),
     x = n(226951),
     L = n(591759),
     y = n(996106),
-    P = n(863141),
-    O = n(186901),
+    O = n(863141),
+    P = n(186901),
     R = n(981631);
 let j = null !== (l = null === (i = L.Z.toURLSafe(window.GLOBAL_ENV.API_ENDPOINT)) || void 0 === i ? void 0 : i.host) && void 0 !== l ? l : 'localhost',
     D = (function () {
@@ -64,7 +64,7 @@ let j = null !== (l = null === (i = L.Z.toURLSafe(window.GLOBAL_ENV.API_ENDPOINT
         return /^\d+$/.test(n) ? e : t.slice(-2).join('.');
     })(),
     w = new RegExp('^'.concat(x.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(x.Z.escape(D), '|discordapp.com|discord.com)$')),
-    k = 1 * A.Z.Millis.MINUTE,
+    k = 1 * b.Z.Millis.MINUTE,
     M = {};
 function U(e) {
     return 'customEmoji' === e.type && (e.type = 'emoji'), 'emoji' === e.type && e.src && (e.src = G(e.src)), Array.isArray(e.content) && (e.content = e.content.map(U)), e;
@@ -99,7 +99,7 @@ function V(e, t) {
         Promise.all(n).then(() => {
             var n;
             let l = (!e.isNSFW() || (null === (n = S.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? v.Z.getMessages(e.id).toArray().map(H) : [],
-                r = Object.values(b.Z.getVoiceStatesForChannel(e.id)).map((t) => F(i, e.id, t));
+                r = Object.values(A.Z.getVoiceStatesForChannel(e.id)).map((t) => F(i, e.id, t));
             return {
                 id: e.id,
                 name: e.name,
@@ -136,7 +136,7 @@ function H(e) {
         mention_roles: e.mention_roles || e.mentionRoles,
         embeds: e.embeds,
         attachments: e.attachments,
-        author: null != i ? (0, P.Z)(i) : void 0,
+        author: null != i ? (0, O.Z)(i) : void 0,
         pinned: e.pinned,
         type: e.type
     };
@@ -157,13 +157,13 @@ function F(e, t, n) {
             self_deaf: a,
             suppress: s
         },
-        user: (0, P.Z)(c)
+        user: (0, O.Z)(c)
     };
 }
 function z(e, t) {
     return {
         type: e,
-        user: (0, P.Z)(t),
+        user: (0, O.Z)(t),
         presence: {
             status: T.Z.getStatus(t.id, null),
             activity: null
@@ -241,7 +241,7 @@ function J(e) {
 async function $(e, t, n) {
     let i = h.Z.getApplication(t);
     if ('string' == typeof n) {
-        if (e.transport === O.He.POST_MESSAGE) {
+        if (e.transport === P.He.POST_MESSAGE) {
             let e = (0, u.Z)(t);
             if (null == e || !B(n, [e])) throw new y.Z({ closeCode: R.$VG.INVALID_ORIGIN }, 'Invalid Origin');
         } else {
@@ -264,7 +264,7 @@ async function ee(e, t) {
     null == n && ((n = new o.Z(t ? 2 : 60, k)), (M[e] = n)), await n.process();
 }
 function et(e, t) {
-    null == t && (e.authorization.scopes = [O.lH]);
+    null == t && (e.authorization.scopes = [P.lH]);
 }
 function en(e) {
     let t = N.Z.getSettings(),
@@ -318,7 +318,7 @@ function ei(e, t) {
     };
 }
 function el(e) {
-    if (e !== O.He.POST_MESSAGE) throw new y.Z({ errorCode: R.lTL.INVALID_COMMAND }, 'command not available from "'.concat(e, ' transport'));
+    if (e !== P.He.POST_MESSAGE) throw new y.Z({ errorCode: R.lTL.INVALID_COMMAND }, 'command not available from "'.concat(e, ' transport'));
 }
 function er(e) {
     if (null == e.id) throw new y.Z({ errorCode: R.lTL.INVALID_COMMAND }, 'Invalid application');

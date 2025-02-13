@@ -18,8 +18,8 @@ var s = n(512722),
     E = n(271383),
     C = n(594174),
     N = n(74538),
-    f = n(51144),
-    I = n(18438),
+    I = n(51144),
+    f = n(18438),
     T = n(778825),
     S = n(52597),
     j = n(430131),
@@ -76,7 +76,7 @@ function O(e) {
                 j.Z,
                 {
                     errors: null !== (s = null == M ? void 0 : M.nick) && void 0 !== s ? s : null == U ? void 0 : U.nick,
-                    username: f.ZP.getName(D),
+                    username: I.ZP.getName(D),
                     pendingNick: y,
                     currentNick: null == G ? void 0 : G.nick,
                     guild: w
@@ -119,7 +119,7 @@ function O(e) {
                                 ]
                             }),
                             showRemoveAvatarButton: Y,
-                            onAvatarChange: (e) => q(e, null == G ? void 0 : G.avatar, I.I5),
+                            onAvatarChange: (e) => q(e, null == G ? void 0 : G.avatar, f.I5),
                             errors: null == M ? void 0 : M.avatar,
                             guildId: w.id,
                             disabled: !z
@@ -177,7 +177,7 @@ function O(e) {
                         {
                             showRemoveBannerButton: H,
                             errors: null == M ? void 0 : M.banner,
-                            onBannerChange: (e) => q(e, null == F ? void 0 : F.banner, I.g_),
+                            onBannerChange: (e) => q(e, null == F ? void 0 : F.banner, f.g_),
                             guildId: null == w ? void 0 : w.id,
                             disabled: !z
                         },

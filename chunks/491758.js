@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(894694),
     C = n(779618),
     N = n(39604),
-    f = n(442334),
-    I = n(356659),
+    I = n(442334),
+    f = n(356659),
     T = n(981631),
     S = n(37113),
     j = n(526761),
@@ -39,15 +39,15 @@ function R() {
         M = s.useMemo(
             () => [
                 {
-                    value: I.OT.SECONDS_30,
+                    value: f.OT.SECONDS_30,
                     label: v.intl.formatToPlainString(v.t['bTFv//'], { count: 30 })
                 },
                 {
-                    value: I.OT.MINUTES_1,
+                    value: f.OT.MINUTES_1,
                     label: v.intl.formatToPlainString(v.t.ICo9Nj, { count: 1 })
                 },
                 {
-                    value: I.OT.MINUTES_2,
+                    value: f.OT.MINUTES_2,
                     label: v.intl.formatToPlainString(v.t.ICo9Nj, { count: 2 })
                 }
             ],
@@ -187,7 +187,7 @@ function R() {
             (0, i.jsxs)(o.hjN, {
                 className: O.marginTop20,
                 children: [
-                    (0, i.jsx)(f.Q, {
+                    (0, i.jsx)(I.Q, {
                         className: A.formItem,
                         select: N.eU,
                         title: v.intl.string(v.t.OgfUio),
@@ -195,7 +195,7 @@ function R() {
                         value: R,
                         options: M
                     }),
-                    (0, i.jsx)(f.Q, {
+                    (0, i.jsx)(I.Q, {
                         className: A.formItem,
                         select: (e) =>
                             N.yi({
@@ -207,7 +207,7 @@ function R() {
                         value: D.resolution,
                         options: V
                     }),
-                    (0, i.jsx)(f.Q, {
+                    (0, i.jsx)(I.Q, {
                         className: A.formItem,
                         select: (e) =>
                             N.yi({
@@ -219,7 +219,7 @@ function R() {
                         value: D.frameRate,
                         options: w
                     }),
-                    (0, i.jsx)(f.O, {
+                    (0, i.jsx)(I.O, {
                         className: A.formItem,
                         title: v.intl.string(v.t.pf54ER),
                         note: v.intl.string(v.t['QyB/jI']),

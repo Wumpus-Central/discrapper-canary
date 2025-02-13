@@ -29,15 +29,15 @@ function f(e) {
             acceptMessageRequest: v,
             isAcceptLoading: T,
             isUserProfileLoading: S,
-            isOptimisticAccepted: b
+            isOptimisticAccepted: A
         } = (0, h.m)({
             user: n,
             onAcceptSuccess: N,
             onRejectSuccess: C,
             onError: I
         }),
-        A = T || S,
-        Z = A || b;
+        b = T || S,
+        Z = b || A;
     return (0, i.jsxs)('div', {
         className: _.container,
         children: [
@@ -57,7 +57,7 @@ function f(e) {
                             v(f.id), e.stopPropagation();
                         },
                         disabled: Z,
-                        submitting: A,
+                        submitting: b,
                         children: g.intl.string(g.t.vicfl5)
                     }),
                     (0, i.jsx)(p.Z, {

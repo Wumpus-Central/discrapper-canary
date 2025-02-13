@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(305342),
     C = n(333867),
     N = n(963249),
-    f = n(87484),
-    I = n(197115),
+    I = n(87484),
+    f = n(197115),
     T = n(911367),
     S = n(43747),
     j = n(970815),
@@ -110,7 +110,7 @@ let P = function () {
                             ],
                             onChange: (e) => t(e)
                         }),
-                        (0, i.jsx)(I.Z, {
+                        (0, i.jsx)(f.Z, {
                             subscriptionTier: e,
                             isGift: !0,
                             premiumModalAnalyticsLocation: {}
@@ -396,7 +396,7 @@ let P = function () {
                         }),
                         (0, i.jsx)(a.zxk, {
                             onClick: () =>
-                                (0, f.Z)({
+                                (0, I.Z)({
                                     applicationId: en,
                                     skuId: es,
                                     analyticsLocations: F

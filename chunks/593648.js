@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(487419),
     C = n(197344),
     N = n(476756),
-    f = n(734934),
-    I = n(223683),
+    I = n(734934),
+    f = n(223683),
     T = n(312400),
     S = n(115345),
     j = n(392888),
@@ -86,7 +86,7 @@ function Y(e) {
 function H(e) {
     let { disabledSounds: t, disableAllSounds: n, notifyMessagesInSelectedChannel: l } = e,
         a = s.useRef(),
-        o = (0, f.p)(),
+        o = (0, I.p)(),
         c = s.useCallback((e, t) => {
             t.stopPropagation(), t.preventDefault(), null != a.current && a.current.stop(), (a.current = (0, O.GN)(e));
         }, []),
@@ -560,7 +560,7 @@ function J() {
                                       (0, i.jsx)(A.F, {
                                           setting: M.s6.NOTIFICATIONS_RESTORE_MOST_RECENT_SNAPSHOT,
                                           children: (0, i.jsx)(u.zxk, {
-                                              onClick: I.KP,
+                                              onClick: f.KP,
                                               children: 'Restore most recent snapshot'
                                           })
                                       }),
@@ -596,7 +596,7 @@ function J() {
 }
 async function Q(e) {
     e(!0);
-    let t = await (0, I.Tn)();
+    let t = await (0, f.Tn)();
     0 === t.length
         ? await (0, S.oL)()
         : h.Z.show({
@@ -609,7 +609,7 @@ async function Q(e) {
         e(!1);
 }
 function $(e) {
-    let t = (0, f.p)();
+    let t = (0, I.p)();
     return (0, i.jsx)(K, {
         ...e,
         focusMode: t

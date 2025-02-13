@@ -21,14 +21,14 @@ var i = n(200651),
     v = n(600164),
     T = n(606081),
     S = n(252618),
-    b = n(100159),
-    A = n(646288),
+    A = n(100159),
+    b = n(646288),
     Z = n(984370),
     x = n(706454),
     L = n(210887),
     y = n(430824),
-    P = n(496675),
-    O = n(525395),
+    O = n(496675),
+    P = n(525395),
     R = n(558314),
     j = n(580130),
     D = n(55563),
@@ -128,7 +128,7 @@ class ec extends l.PureComponent {
             carousel_video_count: l.videos,
             location: i.location.page,
             source: this._analyticsSource,
-            ...(0, b.Z)(e, !0)
+            ...(0, A.Z)(e, !0)
         }),
             (this._trackedViewed = !0);
     }
@@ -396,7 +396,7 @@ class ec extends l.PureComponent {
                 let { sku: i } = this.props;
                 null != i &&
                     U.default.track(el.rMx.STORE_LISTING_MEDIA_SCROLLED, {
-                        ...(0, b.Z)(i),
+                        ...(0, A.Z)(i),
                         card_index: n,
                         card_type: e.type === el.s9s.IMG ? 'image' : 'video'
                     });
@@ -428,7 +428,7 @@ class ec extends l.PureComponent {
             }),
             eo(this, 'renderInviteLink', () => {
                 let { channel: e, guild: t } = this.props;
-                return null != e && null != t && (P.Z.can(el.Plq.CREATE_INSTANT_INVITE, t) || null != t.vanityURLCode)
+                return null != e && null != t && (O.Z.can(el.Plq.CREATE_INSTANT_INVITE, t) || null != t.vanityURLCode)
                     ? (0, i.jsx)(d.zxk, {
                           'aria-label': ea.intl.string(ea.t.zJrgTE),
                           look: d.zxk.Looks.BLANK,
@@ -513,7 +513,7 @@ class ec extends l.PureComponent {
                             children: (0, i.jsxs)('div', {
                                 className: a()(es.headerPurchase, { [es.active]: o }),
                                 children: [
-                                    null != t ? (0, A.Z)(t) : null,
+                                    null != t ? (0, b.Z)(t) : null,
                                     null != e && null != t ? (0, i.jsx)('div', { children: 'deprecated!' }) : null,
                                     (0, i.jsx)(Q.Z, {
                                         messageStyle: Q.G.SHORT,
@@ -556,7 +556,7 @@ class ec extends l.PureComponent {
 }
 let ed = (0, f.Z)(
     (0, E.Z)(
-        s.ZP.connectStores([R.Z, L.Z, x.default, M.Z, w.Z, D.Z, k.Z, I.Z, C.Z, O.Z, y.Z, j.Z], (e) => {
+        s.ZP.connectStores([R.Z, L.Z, x.default, M.Z, w.Z, D.Z, k.Z, I.Z, C.Z, P.Z, y.Z, j.Z], (e) => {
             let t,
                 n,
                 i,
@@ -575,7 +575,7 @@ let ed = (0, f.Z)(
                 application: null != r ? C.Z.getApplication(r) : null,
                 isFetchingEntitlements: null != r && j.Z.applicationIdsFetching.has(r),
                 didFetchEntitlements: null != r && j.Z.applicationIdsFetched.has(r),
-                shouldFetchStatistics: s && null != r && O.Z.shouldFetchStatisticsForApplication(r),
+                shouldFetchStatistics: s && null != r && P.Z.shouldFetchStatisticsForApplication(r),
                 sku: n,
                 isFocused: M.Z.isFocused(),
                 storeListing: w.Z.getStoreListing({

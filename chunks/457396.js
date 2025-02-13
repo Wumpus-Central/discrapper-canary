@@ -26,14 +26,14 @@ var l = n(91192),
     v = n(767870),
     T = n(104494),
     S = n(639119),
-    b = n(655525),
-    A = n(314684),
+    A = n(655525),
+    b = n(314684),
     Z = n(52188),
     x = n(346497),
     L = n(924540),
     y = n(474486),
-    P = n(119850),
-    O = n(701910),
+    O = n(119850),
+    P = n(701910),
     R = n(938736),
     j = n(227140),
     D = n(474936),
@@ -51,8 +51,8 @@ let G = 'NitroTabButton',
             s = (0, x.Vi)(),
             o = (0, R.vx)(G),
             c = (0, R.wG)(G),
-            d = (0, A.$_)(),
-            u = (0, P.V)(),
+            d = (0, b.$_)(),
+            u = (0, O.V)(),
             h = (0, E.Qo)(n, i),
             m = (0, r.e7)([I.Z], () => I.Z.getCreatedAtOverride()),
             g = t || null != l || null != a || s || o || c || null != d || null != u || h,
@@ -74,8 +74,8 @@ let G = 'NitroTabButton',
             $ = (0, C.W)(),
             ee = (0, r.e7)([g.Z], () => g.Z.isLocalizedPromoEnabled) && null == Q,
             et = (0, x.Vi)(),
-            en = (0, A.$_)(),
-            ei = (0, P.V)(),
+            en = (0, b.$_)(),
+            ei = (0, O.V)(),
             el = (0, R.Kn)(G),
             er = (0, R.vx)(G),
             ea = (0, R.wG)(G),
@@ -102,9 +102,9 @@ let G = 'NitroTabButton',
             er
                 ? ((t = U.referralIncentive), (V = 7))
                 : ea
-                  ? ((I = (0, i.jsx)(O.Z, { copy: M.intl.string(M.t.jyYgZ2) })), (V = 8))
+                  ? ((I = (0, i.jsx)(P.Z, { copy: M.intl.string(M.t.jyYgZ2) })), (V = 8))
                   : et
-                    ? ((I = (0, i.jsx)(b.Z, {})), (V = 0))
+                    ? ((I = (0, i.jsx)(A.Z, {})), (V = 0))
                     : null != eg && eg === a.z.REVERSE_TRIAL_NITRO_TAB_BADGE
                       ? ((I = (0, i.jsx)(j.Z, {
                             copy: M.intl.string(M.t.HwUCnp),

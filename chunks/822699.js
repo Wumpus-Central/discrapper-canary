@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(533307),
     h = n(447543),
     _ = n(126399),
-    g = n(521379),
-    m = n(765717),
+    m = n(521379),
+    g = n(765717),
     p = n(267394),
     f = n(761305),
     E = n(698177),
@@ -22,8 +22,8 @@ var i = n(200651),
     N = n(264229),
     S = n(677760),
     T = n(893607),
-    b = n(314897),
-    A = n(82142),
+    A = n(314897),
+    b = n(82142),
     R = n(701190),
     Z = n(626135),
     O = n(81063),
@@ -65,14 +65,14 @@ let en = (0, D.Z)(H.Z),
     eu = (0, D.Z)(Q.Z),
     eh = (0, D.Z)(E.Z),
     e_ = (0, D.Z)(J.Z),
-    eg = (0, D.Z)(M.Z),
-    em = (0, D.Z)(f.Z),
+    em = (0, D.Z)(M.Z),
+    eg = (0, D.Z)(f.Z),
     ep = (0, D.Z)(v.Z),
     ef = (0, D.Z)(U.Z),
     eE = (0, D.Z)(W.Z),
     ex = (0, D.Z)(X.Z),
     eI = (0, D.Z)(q.Z),
-    eC = (0, D.Z)(g.Z);
+    eC = (0, D.Z)(m.Z);
 class ev extends r.PureComponent {
     static getDerivedStateFromProps(e, t) {
         var n;
@@ -166,7 +166,7 @@ class ev extends r.PureComponent {
         return (0, i.jsxs)(k.Z, {
             splash: e,
             children: [
-                (0, i.jsx)(m.Z, {
+                (0, i.jsx)(g.Z, {
                     path: $.Z5c.LOGIN_HANDOFF,
                     render: (e) =>
                         (0, i.jsx)(ei, {
@@ -174,7 +174,7 @@ class ev extends r.PureComponent {
                             redirectTo: t
                         })
                 }),
-                (0, i.jsx)(m.Z, {
+                (0, i.jsx)(g.Z, {
                     impressionName: a.ImpressionNames.USER_LOGIN,
                     path: $.Z5c.LOGIN,
                     render: (e) =>
@@ -183,7 +183,7 @@ class ev extends r.PureComponent {
                             redirectTo: t
                         })
                 }),
-                (0, i.jsx)(m.Z, {
+                (0, i.jsx)(g.Z, {
                     impressionName: a.ImpressionNames.USER_REGISTRATION,
                     path: $.Z5c.REGISTER,
                     render: (e) =>
@@ -198,7 +198,7 @@ class ev extends r.PureComponent {
                                   redirectTo: t
                               })
                 }),
-                (0, i.jsx)(m.Z, {
+                (0, i.jsx)(g.Z, {
                     path: $.Z5c.GIFT_CODE_LOGIN(':giftCode'),
                     render: (e) =>
                         (0, i.jsx)(ea, {
@@ -206,11 +206,11 @@ class ev extends r.PureComponent {
                             ...e
                         })
                 }),
-                (0, i.jsx)(m.Z, {
+                (0, i.jsx)(g.Z, {
                     path: $.Z5c.GIFT_CODE(':giftCode'),
                     render: (e) => (0, i.jsx)(ea, { ...e })
                 }),
-                (0, i.jsx)(m.Z, {
+                (0, i.jsx)(g.Z, {
                     path: [$.Z5c.INVITE_LOGIN(':inviteCode'), $.Z5c.INVITE(':inviteCode')],
                     render: (e) => {
                         let {
@@ -239,7 +239,7 @@ class ev extends r.PureComponent {
                               });
                     }
                 }),
-                (0, i.jsx)(m.Z, {
+                (0, i.jsx)(g.Z, {
                     path: [$.Z5c.GUILD_TEMPLATE_LOGIN(':guildTemplateCode'), $.Z5c.GUILD_TEMPLATE(':guildTemplateCode')],
                     render: (e) => {
                         let {
@@ -260,31 +260,31 @@ class ev extends r.PureComponent {
                               });
                     }
                 }),
-                (0, i.jsx)(m.Z, {
+                (0, i.jsx)(g.Z, {
                     path: $.Z5c.VERIFY,
                     render: (e) => (0, i.jsx)(eu, { ...e })
                 }),
-                (0, i.jsx)(m.Z, {
+                (0, i.jsx)(g.Z, {
                     path: $.Z5c.VERIFY_HUB_EMAIL,
                     render: (e) => (0, i.jsx)(ep, { ...e })
                 }),
-                (0, i.jsx)(m.Z, {
+                (0, i.jsx)(g.Z, {
                     path: $.Z5c.VERIFY_REQUEST,
                     render: (e) => (0, i.jsx)(eh, { ...e })
                 }),
-                (0, i.jsx)(m.Z, {
+                (0, i.jsx)(g.Z, {
                     path: $.Z5c.DISABLE_EMAIL_NOTIFICATIONS,
-                    render: (e) => (0, i.jsx)(eg, { ...e })
-                }),
-                (0, i.jsx)(m.Z, {
-                    path: $.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
                     render: (e) => (0, i.jsx)(em, { ...e })
                 }),
-                (0, i.jsx)(m.Z, {
+                (0, i.jsx)(g.Z, {
+                    path: $.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
+                    render: (e) => (0, i.jsx)(eg, { ...e })
+                }),
+                (0, i.jsx)(g.Z, {
                     path: $.Z5c.AUTHORIZE_IP,
                     render: (e) => (0, i.jsx)(ec, { ...e })
                 }),
-                (0, i.jsx)(m.Z, {
+                (0, i.jsx)(g.Z, {
                     path: $.Z5c.REJECT_IP,
                     render: (e) =>
                         (0, i.jsx)(e_, {
@@ -292,7 +292,7 @@ class ev extends r.PureComponent {
                             ...e
                         })
                 }),
-                (0, i.jsx)(m.Z, {
+                (0, i.jsx)(g.Z, {
                     path: $.Z5c.REJECT_MFA,
                     render: (e) =>
                         (0, i.jsx)(e_, {
@@ -300,11 +300,11 @@ class ev extends r.PureComponent {
                             ...e
                         })
                 }),
-                (0, i.jsx)(m.Z, {
+                (0, i.jsx)(g.Z, {
                     path: $.Z5c.AUTHORIZE_PAYMENT,
                     render: (e) => (0, i.jsx)(ed, { ...e })
                 }),
-                (0, i.jsx)(m.Z, {
+                (0, i.jsx)(g.Z, {
                     path: $.Z5c.RESET,
                     render: (e) =>
                         (0, i.jsx)(e_, {
@@ -312,23 +312,23 @@ class ev extends r.PureComponent {
                             ...e
                         })
                 }),
-                (0, i.jsx)(m.Z, {
+                (0, i.jsx)(g.Z, {
                     path: $.Z5c.PICK_GUILD_SETTINGS(':section?', ':subsection?'),
                     render: (e) => (0, i.jsx)(eE, { ...e })
                 }),
-                (0, i.jsx)(m.Z, {
+                (0, i.jsx)(g.Z, {
                     path: $.Z5c.CHANNEL(T.Hw.guildId(), T.Hw.channelId({ optional: !0 }), ':messageId?'),
                     render: (e) => (0, i.jsx)(ef, { ...e })
                 }),
-                (0, i.jsx)(m.Z, {
+                (0, i.jsx)(g.Z, {
                     path: $.Z5c.REPORT,
                     render: (e) => (0, i.jsx)(ex, { ...e })
                 }),
-                (0, i.jsx)(m.Z, {
+                (0, i.jsx)(g.Z, {
                     path: $.Z5c.REPORT_SECOND_LOOK,
                     render: (e) => (0, i.jsx)(eI, { ...e })
                 }),
-                (0, i.jsx)(m.Z, {
+                (0, i.jsx)(g.Z, {
                     path: $.Z5c.ACCOUNT_REVERT(':token'),
                     render: (e) => (0, i.jsx)(eC, { ...e })
                 })
@@ -353,7 +353,7 @@ class ev extends r.PureComponent {
                 : (this[t] = n);
     }
 }
-let eN = s.ZP.connectStores([b.default, R.Z, A.Z, x.Z, I.Z], (e) => {
+let eN = s.ZP.connectStores([A.default, R.Z, b.Z, x.Z, I.Z], (e) => {
     var t, n, i;
     let { match: r, location: l } = e,
         a = null == r ? void 0 : null === (t = r.params) || void 0 === t ? void 0 : t.inviteCode,
@@ -363,10 +363,10 @@ let eN = s.ZP.connectStores([b.default, R.Z, A.Z, x.Z, I.Z], (e) => {
         d = null == r ? void 0 : null === (i = r.params) || void 0 === i ? void 0 : i.guildTemplateCode;
     return {
         inviteKey: s,
-        isAuthenticated: b.default.isAuthenticated(),
+        isAuthenticated: A.default.isAuthenticated(),
         giftCode: c,
         guildTemplateCode: d,
-        gift: null != c ? A.Z.get(c) : null,
+        gift: null != c ? b.Z.get(c) : null,
         invite: null != s ? R.Z.getInvite(s) : null,
         guildTemplate: null != d ? I.Z.getGuildTemplate(d) : null,
         hasLoadedExperiments: x.Z.hasLoadedExperiments

@@ -1,5 +1,5 @@
 let i, l;
-n.d(t, { Z: () => O }), n(47120), n(610138), n(216116), n(78328), n(815648), n(653041), n(411104);
+n.d(t, { Z: () => P }), n(47120), n(610138), n(216116), n(78328), n(815648), n(653041), n(411104);
 var r = n(836560),
     a = n(392711),
     s = n.n(a),
@@ -39,16 +39,16 @@ let N = h.ZP.requireModule('discord_rpc').RPCWebSocket,
     v = window.GLOBAL_ENV.MARKETING_ENDPOINT,
     T = new c.Z('RPCServer:WSS'),
     S = [];
-function b(e) {
+function A(e) {
     return 'function' == typeof e ? e() : e;
 }
-function A() {
+function b() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
         t =
             e > 0
                 ? void 0
                 : () => {
-                      if (!b(l.listening)) return;
+                      if (!A(l.listening)) return;
                       let e = l.address().port;
                       T.info('Starting on '.concat(e)),
                           o.Z.dispatch({
@@ -62,9 +62,9 @@ function Z(e, t, n) {
     let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 200,
         l = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
         r =
-            null != b(e.headers).origin
+            null != A(e.headers).origin
                 ? {
-                      'Access-Control-Allow-Origin': b(e.headers).origin,
+                      'Access-Control-Allow-Origin': A(e.headers).origin,
                       'Access-Control-Allow-Credentials': 'true',
                       'Access-Control-Allow-Methods': 'POST, GET, PUT, PATCH, DELETE',
                       'Access-Control-Allow-Headers': 'Content-Type, Authorization'
@@ -117,10 +117,10 @@ class y extends g.Z {
         (this._sendCallback = e), (this._closeCallback = t);
     }
 }
-class P extends r.EventEmitter {
+class O extends r.EventEmitter {
     handleRequest(e, t) {
-        let [n, i] = b(e.url).split('?'),
-            l = b(e.method);
+        let [n, i] = A(e.url).split('?'),
+            l = A(e.method);
         if ('/rpc' === n && 'OPTIONS' === l) {
             Z(e, t, { body: '' });
             return;
@@ -128,7 +128,7 @@ class P extends r.EventEmitter {
         let r = 'POST' === l;
         if ('/rpc' === n && ('GET' === l || r)) {
             let n = new URLSearchParams(i),
-                l = r ? b(e.headers)['content-type'].split('/')[1] : 'json',
+                l = r ? A(e.headers)['content-type'].split('/')[1] : 'json',
                 s = function () {
                     var e, i;
                     let { protocol: l, host: r } = null !== (i = u.Z.toURLSafe(null !== (e = n.get('callback')) && void 0 !== e ? e : '')) && void 0 !== i ? i : {};
@@ -136,7 +136,7 @@ class P extends r.EventEmitter {
                 },
                 o = new y(r ? Z.bind(null, e, t) : s, r ? x.bind(null, e, t, 400) : s, Number(n.get('v')), l);
             if (r)
-                (0, _.em)(o, b(e.headers).origin, n.get('client_id'))
+                (0, _.em)(o, A(e.headers).origin, n.get('client_id'))
                     .then(() => {
                         let n = '';
                         e.on('data', (e) => (n += e)), e.on('error', () => x(e, t, 500, 'Internal Server Error')), e.on('end', () => this.handleMessage(o, n));
@@ -156,8 +156,8 @@ class P extends r.EventEmitter {
     handleConnection(e) {
         var t, n;
         let i;
-        let l = new URLSearchParams(b(e.upgradeReq).url.split('?')[1]),
-            r = null !== (t = b(e.upgradeReq).headers.origin) && void 0 !== t ? t : '';
+        let l = new URLSearchParams(A(e.upgradeReq).url.split('?')[1]),
+            r = null !== (t = A(e.upgradeReq).headers.origin) && void 0 !== t ? t : '';
         try {
             i = new L(e, Number(l.get('v')), null !== (n = l.get('encoding')) && void 0 !== n ? n : 'json');
         } catch (t) {
@@ -195,10 +195,10 @@ class P extends r.EventEmitter {
         super();
         let t = 0;
         (l = N.http.createServer()).on('error', (e) => {
-            T.error('Error: '.concat(e.message)), ('EADDRINUSE' === e.code || e.message.includes('EADDRINUSE')) && setTimeout(() => A(++t), 1000);
+            T.error('Error: '.concat(e.message)), ('EADDRINUSE' === e.code || e.message.includes('EADDRINUSE')) && setTimeout(() => b(++t), 1000);
         }),
             l.on('request', this.handleRequest.bind(this)),
-            A(t);
+            b(t);
         let n = {
             instanceId: null !== (e = l.instanceId) && void 0 !== e ? e : 0,
             server: l
@@ -206,4 +206,4 @@ class P extends r.EventEmitter {
         new N.ws.Server(n).on('connection', (e) => this.handleConnection(e));
     }
 }
-let O = new P();
+let P = new O();

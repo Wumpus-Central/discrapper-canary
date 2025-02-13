@@ -10,21 +10,21 @@ var i = n(200651),
     u = n(353926),
     h = n(185625),
     _ = n(551549),
-    g = n(108427),
-    m = n(314897),
+    m = n(108427),
+    g = n(314897),
     p = n(981631),
     f = n(388032),
     E = n(814632);
 l.ZP.initialize();
 let x = (e) => {
     let { location: t } = e,
-        n = (0, l.e7)([m.default], () => m.default.isAuthenticated()),
+        n = (0, l.e7)([g.default], () => g.default.isAuthenticated()),
         x = (0, l.e7)([u.Z], () => u.Z.hasLoadedExperiments),
         I = (0, _.oK)('RSL - Landing Page'),
         [C, v] = r.useState(!1),
         [N, S] = r.useState(f.intl.string(f.t['9exy+f'])),
-        [T, b] = r.useState(!0),
-        A = (e) => {
+        [T, A] = r.useState(!0),
+        b = (e) => {
             switch (e) {
                 case p.evJ.INVALID_FORM_BODY:
                 case p.evJ.DSA_RSL_REPORT_NOT_FOUND:
@@ -46,12 +46,12 @@ let x = (e) => {
     return (
         r.useEffect(() => {
             n
-                ? (b(!0),
+                ? (A(!0),
                   s
                       .k({ withAnalyticsToken: !0 })
-                      .then(() => b(!1))
-                      .catch(() => b(!1)))
-                : b(!1);
+                      .then(() => A(!1))
+                      .catch(() => A(!1)))
+                : A(!1);
         }, [n]),
         r.useEffect(() => {
             x || I || o.Z.getExperiments();
@@ -61,14 +61,14 @@ let x = (e) => {
                 var t, n;
                 try {
                     let n = null != e ? await (0, h.hs)(e) : void 0;
-                    null != n ? S(f.intl.string(f.t.e6mZMj)) : A(null === (t = n.body) || void 0 === t ? void 0 : t.code);
+                    null != n ? S(f.intl.string(f.t.e6mZMj)) : b(null === (t = n.body) || void 0 === t ? void 0 : t.code);
                 } catch (e) {
-                    A(null === (n = e.body) || void 0 === n ? void 0 : n.code);
+                    b(null === (n = e.body) || void 0 === n ? void 0 : n.code);
                 } finally {
                     v(!1);
                 }
             };
-            v(!0), e((0, c.Z)(t)), (0, g.e)('report_second_look');
+            v(!0), e((0, c.Z)(t)), (0, m.e)('report_second_look');
         }, [t]),
         I &&
             !T &&

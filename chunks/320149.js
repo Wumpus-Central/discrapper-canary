@@ -23,22 +23,22 @@ function T(e) {
     let { channel: t, baseChannelId: n } = e,
         T = (0, E.ZP)(t),
         S = (0, h.K)(),
-        b = (0, h.V)(),
-        A = (0, r.e7)([d.Z], () => d.Z.isMessageRequest(t.id)),
+        A = (0, h.V)(),
+        b = (0, r.e7)([d.Z], () => d.Z.isMessageRequest(t.id)),
         Z = (0, r.e7)([u.Z], () => u.Z.isSpam(t.id)),
         x = (0, p.V)(t.id, t.getRecipientId()),
         L = l.useCallback(() => {
-            _.Z.closeChannelSidebar(f.uZ), A && S && (0, g.Kh)(t.id), Z && b && (0, g.Kh)(t.id);
-        }, [t.id, Z, b, A, S]),
+            _.Z.closeChannelSidebar(f.uZ), b && S && (0, g.Kh)(t.id), Z && A && (0, g.Kh)(t.id);
+        }, [t.id, Z, A, b, S]),
         y = l.useCallback(() => {
             (0, a.showToast)((0, a.createToast)(C.intl.string(C.t.pIQ3h4), a.ToastType.FAILURE));
         }, []),
-        { markAsNotSpam: P } = (0, m.m)({
+        { markAsNotSpam: O } = (0, m.m)({
             onAcceptSuccess: L,
             onError: y
         });
     if (null == t || !t.isDM()) return null;
-    let O = [
+    let P = [
         (0, i.jsx)(
             o.ZP.Icon,
             {
@@ -52,7 +52,7 @@ function T(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(o.ZP, {
-                toolbar: O,
+                toolbar: P,
                 'aria-label': C.intl.string(C.t.BIYAqa),
                 children: (0, c.ud)({
                     channel: t,
@@ -72,7 +72,7 @@ function T(e) {
                         (0, i.jsx)(a.zxk, {
                             className: v.hamBannerButton,
                             size: a.PhG.SMALL,
-                            onClick: () => P(t, x),
+                            onClick: () => O(t, x),
                             children: C.intl.string(C.t.koqL3d)
                         })
                     ]

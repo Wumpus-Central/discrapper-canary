@@ -1,6 +1,6 @@
 n.d(t, {
-    Sz: () => I,
-    of: () => f
+    Sz: () => f,
+    of: () => I
 }),
     n(653041),
     n(47120);
@@ -29,7 +29,7 @@ async function N(e) {
         s(!0), l(!1);
     }
 }
-function f(e) {
+function I(e) {
     let { premiumType: t, onClose: n, pauseDuration: l, setPauseDuration: r, footer: o, premiumSubscription: d } = e,
         h = s.useCallback(
             (e) => {
@@ -106,11 +106,11 @@ function f(e) {
         })
     );
 }
-function I(e) {
+function f(e) {
     let { premiumSubscription: t, premiumType: n, onClose: l, pauseDuration: a, analyticsLocation: d } = e,
         [u, x] = s.useState(!1),
-        { analyticsLocations: f } = (0, m.ZP)(),
-        [I, T] = s.useState(!1),
+        { analyticsLocations: I } = (0, m.ZP)(),
+        [f, T] = s.useState(!1),
         S = (0, h.ZP)(),
         j = null,
         v = null,
@@ -174,7 +174,7 @@ function I(e) {
                         children: [
                             (0, i.jsx)(c.zxk, {
                                 color: c.zxk.Colors.RED,
-                                disabled: I || null == a,
+                                disabled: f || null == a,
                                 onClick: async () => {
                                     await N({
                                         premiumSubscription: t,
@@ -182,7 +182,7 @@ function I(e) {
                                         setIsCancelling: T,
                                         setHasError: x,
                                         onClose: l,
-                                        analyticsLocations: f,
+                                        analyticsLocations: I,
                                         analyticsLocation: d
                                     });
                                 },

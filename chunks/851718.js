@@ -66,9 +66,9 @@ function h(e) {
                 })
             });
         case c.j.SWITCH_APP_PLANS:
-            let { route: f, ...I } = h;
+            let { route: I, ...f } = h;
             return (0, i.jsx)(d.Z, {
-                ...I,
+                ...f,
                 navigateToHome: x
             });
         default:

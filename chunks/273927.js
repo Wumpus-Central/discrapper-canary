@@ -22,7 +22,7 @@ var i = n(200651),
     E = n(981631),
     C = n(388032),
     N = n(268296);
-function f(e) {
+function I(e) {
     let { listType: t, numberOfUsers: n } = e,
         s = 'blocked' === t;
     return (0, i.jsxs)('div', {
@@ -50,7 +50,7 @@ function f(e) {
         ]
     });
 }
-function I(e) {
+function f(e) {
     var t;
     let { userId: n, last: l } = e,
         g = (0, a.e7)([h.Z], () => h.Z.isBlocked(n)),
@@ -114,7 +114,7 @@ function T(e) {
         children: (0, i.jsxs)('div', {
             className: N.card,
             children: [
-                (0, i.jsx)(f, {
+                (0, i.jsx)(I, {
                     listType: l,
                     numberOfUsers: n.length
                 }),
@@ -122,7 +122,7 @@ function T(e) {
                     className: N.usersList,
                     children: n.slice(0, r).map((e, t) =>
                         (0, i.jsx)(
-                            I,
+                            f,
                             {
                                 userId: e,
                                 last: t === n.length - 1

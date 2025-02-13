@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(99690),
     h = n(937154),
     _ = n(448986),
-    g = n(388905),
-    m = n(198993),
+    m = n(388905),
+    g = n(198993),
     p = n(710845),
     f = n(314897),
     E = n(585483),
@@ -22,8 +22,8 @@ var i = n(200651),
     N = n(981631),
     S = n(231338),
     T = n(388032),
-    b = n(652565),
-    A = n(814632);
+    A = n(652565),
+    b = n(814632);
 let R = n(515695),
     Z = new p.Z('LoginQRSocket');
 function O(e) {
@@ -38,18 +38,18 @@ function O(e) {
             n && c.uvj.announce(T.intl.string(T.t.j2p129));
         }, [n]),
         (0, i.jsx)('div', {
-            className: b.qrCodeContainer,
+            className: A.qrCodeContainer,
             children:
                 '' !== t && n
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, i.jsx)(m.ZP, {
-                                  className: b.qrCode,
+                              (0, i.jsx)(g.ZP, {
+                                  className: A.qrCode,
                                   size: 160,
                                   text: t
                               }),
                               (0, i.jsx)('div', {
-                                  className: b.qrCodeOverlay,
+                                  className: A.qrCodeOverlay,
                                   children: (0, i.jsx)('img', {
                                       src: R,
                                       alt: ''
@@ -58,11 +58,11 @@ function O(e) {
                           ]
                       })
                     : (0, i.jsx)('div', {
-                          className: b.qrCodeOverlay,
+                          className: A.qrCodeOverlay,
                           'aria-label': T.intl.string(T.t.BUGkVF),
                           'aria-busy': !0,
                           children: (0, i.jsx)(c.$jN, {
-                              className: b.qrCode,
+                              className: A.qrCode,
                               type: c.$jN.Type.WANDERING_CUBES,
                               'aria-hidden': !0
                           })
@@ -87,11 +87,11 @@ function L(e) {
             return (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)(O, { text: 1 === t.step ? 'https://discord.com/ra/'.concat(t.fingerprint) : '' }),
-                    (0, i.jsx)(g.Dx, {
-                        className: A.marginBottom8,
+                    (0, i.jsx)(m.Dx, {
+                        className: b.marginBottom8,
                         children: T.intl.string(T.t.UPiHaG)
                     }),
-                    null != r ? (0, i.jsx)(j, { children: r }) : (0, i.jsx)(g.DK, { children: T.intl.format(T.t['Qq+A6u'], {}) }),
+                    null != r ? (0, i.jsx)(j, { children: r }) : (0, i.jsx)(m.DK, { children: T.intl.format(T.t['Qq+A6u'], {}) }),
                     (0, i.jsx)(c.zxk, {
                         size: c.PhG.LARGE,
                         look: c.iLD.LINK,
@@ -121,23 +121,23 @@ function L(e) {
             return (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)(u.Z, {
-                        className: b.qrAvatar,
+                        className: A.qrAvatar,
                         user: e,
                         size: c.EFr.SIZE_120,
                         isMobile: !0,
                         status: S.Sk.ONLINE
                     }),
-                    (0, i.jsx)(g.Dx, {
-                        className: A.marginBottom8,
+                    (0, i.jsx)(m.Dx, {
+                        className: b.marginBottom8,
                         children: T.intl.string(T.t.apGCUV)
                     }),
-                    (0, i.jsx)(g.DK, { children: T.intl.format(T.t.Cbl5JC, { username: ''.concat(C.ZP.getUserTag(e)) }) }),
+                    (0, i.jsx)(m.DK, { children: T.intl.format(T.t.Cbl5JC, { username: ''.concat(C.ZP.getUserTag(e)) }) }),
                     (0, i.jsx)(c.zxk, {
                         look: c.zxk.Looks.BLANK,
                         color: c.zxk.Colors.LINK,
                         size: c.zxk.Sizes.MIN,
                         onClick: n,
-                        className: b.startOverButton,
+                        className: A.startOverButton,
                         children: T.intl.string(T.t.nOOhws)
                     })
                 ]
@@ -154,21 +154,21 @@ function y(e) {
         {
             state: d,
             rsaKeyPair: u,
-            cancel: g,
-            handleFailure: m
+            cancel: m,
+            handleFailure: g
         } = (function (e) {
             let [t, n] = r.useState(0),
                 [i, l] = r.useState(!1),
                 [o, s] = r.useState({ step: 0 }),
                 [c, d] = r.useState(null),
                 u = (0, h.Z)(),
-                g = r.useMemo(() => new a.Z(1500, 30000), []),
-                m = (0, _.Z)(() => {
+                m = r.useMemo(() => new a.Z(1500, 30000), []),
+                g = (0, _.Z)(() => {
                     s({ step: 0 }), u ? n((e) => e + 1) : (Z.info('document is not visible, will defer reconnection when document becomes visible.'), l(!0));
                 }),
                 p = r.useCallback(() => {
-                    Z.error('Could not complete QR code login, trying to restart with a new QR code.'), s({ step: 0 }), g.pending || g.fail(m);
-                }, [m, g]);
+                    Z.error('Could not complete QR code login, trying to restart with a new QR code.'), s({ step: 0 }), m.pending || m.fail(g);
+                }, [g, m]);
             return (
                 r.useEffect(() => {
                     u && i && 0 === o.step && (Z.info('reconnecting, now that document is visible'), l(!1), n((e) => e + 1));
@@ -210,7 +210,7 @@ function y(e) {
                                     return;
                                 }
                                 case 'pending_remote_init': {
-                                    g.succeed(), E.S.dispatch(N.CkL.WAVE_EMPHASIZE);
+                                    m.succeed(), E.S.dispatch(N.CkL.WAVE_EMPHASIZE);
                                     let e = await (0, I.Pk)(_());
                                     if (e !== i.fingerprint) throw Error('bad fingerprint '.concat(e, ' !== ').concat(i.fingerprint));
                                     l('handshake complete awaiting remote auth.'),
@@ -254,7 +254,7 @@ function y(e) {
                                     return;
                                 }
                                 case 'cancel':
-                                    l('remote auth handshake cancelled.'), m();
+                                    l('remote auth handshake cancelled.'), g();
                                     return;
                                 case 'hello': {
                                     l('got hello, auth timeout='.concat(i.timeout_ms, 'ms'));
@@ -290,14 +290,14 @@ function y(e) {
                             l('disconnected, error: '.concat(JSON.stringify(e))), p();
                         }),
                         () => {
-                            l('cleaning up'), (r.onopen = () => null), (r.onmessage = () => null), (r.onclose = () => null), (r.onerror = () => null), r.close(1000), g.cancel(), null != u && clearTimeout(u), null != c && clearInterval(c);
+                            l('cleaning up'), (r.onopen = () => null), (r.onmessage = () => null), (r.onclose = () => null), (r.onerror = () => null), r.close(1000), m.cancel(), null != u && clearTimeout(u), null != c && clearInterval(c);
                         }
                     );
-                }, [m, e, t, g, p]),
+                }, [g, e, t, m, p]),
                 {
                     state: o,
                     rsaKeyPair: c,
-                    cancel: m,
+                    cancel: g,
                     handleFailure: p
                 }
             );
@@ -331,27 +331,27 @@ function y(e) {
                                 let n = await (0, I.FW)(u, e.body.encrypted_token);
                                 t(n);
                             } catch (e) {
-                                m();
+                                g();
                             }
-                        else m();
+                        else g();
                     })
                     .catch(() => {
-                        m();
+                        g();
                     });
-        }, [d, t, u, m]),
+        }, [d, t, u, g]),
         (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)('div', { className: b.verticalSeparator }),
+                (0, i.jsx)('div', { className: A.verticalSeparator }),
                 (0, i.jsx)(c.qBt, {
                     fillParent: !0,
-                    className: b.qrLogin,
+                    className: A.qrLogin,
                     step: p,
                     steps: [0, 1],
                     children: (0, i.jsx)('div', {
-                        className: b.qrLoginInner,
+                        className: A.qrLoginInner,
                         children: (0, i.jsx)(L, {
                             state: d,
-                            cancel: g,
+                            cancel: m,
                             conditionalMediationAbortController: n,
                             isPasswordlessActive: l
                         })

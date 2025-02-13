@@ -21,14 +21,14 @@ var i = n(200651),
     v = n(981631),
     T = n(921944),
     S = n(30513),
-    b = n(474936),
-    A = n(388032),
+    A = n(474936),
+    b = n(388032),
     Z = n(255235),
     x = n(987524),
     L = n(741160),
     y = n(829972),
-    P = n(31932),
-    O = n(642301);
+    O = n(31932),
+    P = n(642301);
 function R(e) {
     null != e && m.Z.open(e.id, (0, p.r)(e.id), { section: v.jXE.PREMIUM_GUILD_PROGRESS_BAR }, v.KsC.DISPLAY);
 }
@@ -63,18 +63,18 @@ let w = l.memo(function (e) {
         { analyticsLocations: d } = (0, o.ZP)(),
         p = () => {
             I.default.track(v.rMx.TOOLTIP_VIEWED, {
-                type: b.cd.PREMIUM_PROGRESS_BAR,
+                type: A.cd.PREMIUM_PROGRESS_BAR,
                 location: { page: v.ZY5.GUILD_CHANNEL }
             });
         },
         S = () => {
             I.default.track(v.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: b.cd.INVITE_SPLASH_UPSELL,
+                type: A.cd.INVITE_SPLASH_UPSELL,
                 location: { page: v.ZY5.GUILD_CHANNEL },
                 location_stack: d
             });
         },
-        w = (0, a.wj)(n) ? y : P,
+        w = (0, a.wj)(n) ? y : O,
         [k, M] = (0, c.US)(t, T.R.GUILD_HEADER_TOOLTIPS);
     return (0, i.jsx)(i.Fragment, {
         children: (() => {
@@ -91,15 +91,15 @@ let w = l.memo(function (e) {
                     return (0, i.jsx)(D, {
                         renderPopout: (0, i.jsx)(E.ZP, {
                             onComponentMount: p,
-                            header: A.intl.string(A.t.nxtaFx),
+                            header: b.intl.string(b.t.nxtaFx),
                             asset: (0, i.jsx)('img', {
                                 alt: '',
                                 src: w,
                                 className: x.fullWidthImage
                             }),
-                            content: A.intl.format(A.t.ujItEh, {}),
-                            buttonCTA: A.intl.string(A.t.UzVPra),
-                            secondaryButtonCTA: A.intl.string(A.t['KkK/aG']),
+                            content: b.intl.format(b.t.ujItEh, {}),
+                            buttonCTA: b.intl.string(b.t.UzVPra),
+                            secondaryButtonCTA: b.intl.string(b.t['KkK/aG']),
                             onSecondaryClick: () => R(),
                             onClick: () => R(l),
                             markAsDismissed: M
@@ -110,15 +110,15 @@ let w = l.memo(function (e) {
                     return (0, i.jsx)(D, {
                         renderPopout: (0, i.jsx)(E.ZP, {
                             onComponentMount: p,
-                            header: A.intl.string(A.t.KAsfPT),
+                            header: b.intl.string(b.t.KAsfPT),
                             asset: (0, i.jsx)('img', {
                                 alt: '',
                                 src: w,
                                 className: x.fullWidthImage
                             }),
-                            content: A.intl.format(A.t.zK1hpq, {}),
-                            buttonCTA: A.intl.string(A.t.UzVPra),
-                            secondaryButtonCTA: A.intl.string(A.t['KkK/aG']),
+                            content: b.intl.format(b.t.zK1hpq, {}),
+                            buttonCTA: b.intl.string(b.t.UzVPra),
+                            secondaryButtonCTA: b.intl.string(b.t['KkK/aG']),
                             onSecondaryClick: () => R(),
                             onClick: () => R(l),
                             markAsDismissed: M
@@ -142,12 +142,12 @@ let w = l.memo(function (e) {
                         renderGuildHeaderDropdownButton: s
                     });
                 case r.z.GUILD_HEADER_INVITE_SPLASH:
-                    let e = (0, C.f2)(l, v.Eu4.TIER_1) ? A.intl.format(A.t.DDzEVl, {}) : A.intl.formatToPlainString(A.t.pMftkJ, { boostCount: (0, C.KK)(l, v.Eu4.TIER_1) }),
-                        t = (0, C.f2)(l, v.Eu4.TIER_1) ? A.intl.string(A.t.rOFcBg) : A.intl.string(A.t.hvVgAQ);
+                    let e = (0, C.f2)(l, v.Eu4.TIER_1) ? b.intl.format(b.t.DDzEVl, {}) : b.intl.formatToPlainString(b.t.pMftkJ, { boostCount: (0, C.KK)(l, v.Eu4.TIER_1) }),
+                        t = (0, C.f2)(l, v.Eu4.TIER_1) ? b.intl.string(b.t.rOFcBg) : b.intl.string(b.t.hvVgAQ);
                     return (0, i.jsx)(D, {
                         renderPopout: (0, i.jsx)(E.ZP, {
                             onComponentMount: S,
-                            header: A.intl.string(A.t['36wK8/']),
+                            header: b.intl.string(b.t['36wK8/']),
                             asset: (0, i.jsx)('img', {
                                 alt: '',
                                 src: L,
@@ -155,7 +155,7 @@ let w = l.memo(function (e) {
                             }),
                             content: e,
                             buttonCTA: t,
-                            secondaryButtonCTA: A.intl.string(A.t.hBIHLS),
+                            secondaryButtonCTA: b.intl.string(b.t.hBIHLS),
                             onSecondaryClick: () => j(d),
                             onClick: () => j(d, l),
                             markAsDismissed: M
@@ -171,9 +171,9 @@ let w = l.memo(function (e) {
                     return (0, i.jsx)(D, {
                         renderPopout: (0, i.jsx)(E.ZP, {
                             className: Z.tooltipOverrideColor,
-                            header: A.intl.string(A.t.hLUL3t),
-                            content: A.intl.string(A.t.ahWaPT),
-                            buttonCTA: A.intl.string(A.t['NX+WJC']),
+                            header: b.intl.string(b.t.hLUL3t),
+                            content: b.intl.string(b.t.ahWaPT),
+                            buttonCTA: b.intl.string(b.t['NX+WJC']),
                             onClick: () => M(T.L.UNKNOWN),
                             markAsDismissed: M
                         }),
@@ -182,17 +182,17 @@ let w = l.memo(function (e) {
                 case r.z.GUILD_HEADER_SOUNDBOARD_PERMISSION:
                     return (0, i.jsx)(D, {
                         renderPopout: (0, i.jsx)(E.ZP, {
-                            header: A.intl.string(A.t.PZNQKC),
-                            content: A.intl.string(A.t.jQIyyM),
-                            buttonCTA: A.intl.string(A.t.RzWDqa),
-                            secondaryButtonCTA: A.intl.string(A.t.f3Pet7),
+                            header: b.intl.string(b.t.PZNQKC),
+                            content: b.intl.string(b.t.jQIyyM),
+                            buttonCTA: b.intl.string(b.t.RzWDqa),
+                            secondaryButtonCTA: b.intl.string(b.t.f3Pet7),
                             asset: (0, i.jsx)('img', {
                                 alt: '',
-                                src: O,
+                                src: P,
                                 className: x.fullWidthImage
                             }),
                             onClick: () => {
-                                m.Z.open(l.id, v.pNK.ROLES), m.Z.selectRole(l.getEveryoneRoleId(), A.intl.string(A.t.Bco7ND));
+                                m.Z.open(l.id, v.pNK.ROLES), m.Z.selectRole(l.getEveryoneRoleId(), b.intl.string(b.t.Bco7ND));
                             },
                             markAsDismissed: M
                         }),

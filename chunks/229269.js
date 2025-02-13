@@ -44,11 +44,11 @@ function N() {
             }),
             (0, i.jsx)(x.E_, {
                 label: 'Google Pay - Default View',
-                children: (0, i.jsx)(f, { paymentRequestWallet: 'googlePay' })
+                children: (0, i.jsx)(I, { paymentRequestWallet: 'googlePay' })
             }),
             (0, i.jsx)(x.E_, {
                 label: 'Google Pay - Connector View',
-                children: (0, i.jsx)(f, {
+                children: (0, i.jsx)(I, {
                     paymentRequestWallet: 'googlePay',
                     renderConnectorView: !0
                 })
@@ -63,11 +63,11 @@ function N() {
             }),
             (0, i.jsx)(x.E_, {
                 label: 'Apple Pay - Default View',
-                children: (0, i.jsx)(f, { paymentRequestWallet: 'applePay' })
+                children: (0, i.jsx)(I, { paymentRequestWallet: 'applePay' })
             }),
             (0, i.jsx)(x.E_, {
                 label: 'Apple Pay - Connector View',
-                children: (0, i.jsx)(f, {
+                children: (0, i.jsx)(I, {
                     renderConnectorView: !0,
                     paymentRequestWallet: 'applePay'
                 })
@@ -79,7 +79,7 @@ function N() {
         ]
     });
 }
-function f(e) {
+function I(e) {
     let t = s.useRef(null),
         n = {
             paymentLabel: _.intl.string(_.t.ZURqX1),
@@ -109,7 +109,7 @@ function f(e) {
                 ...e
             });
 }
-function I(e) {
+function f(e) {
     let { children: t, footer: n, className: s } = e;
     return (0, i.jsx)('div', {
         className: a()(E.root, E.focusLock, E.small, E.rootWithShadow, p.modal, s),
@@ -136,7 +136,7 @@ function T(e) {
         a = () => {
             null != n.current && n.current.show();
         };
-    return (0, i.jsx)(I, {
+    return (0, i.jsx)(f, {
         footer: (0, i.jsx)(m.Z, {
             primaryCTA: m.Z.CTAType.CONTINUE,
             primaryText: _.intl.string('applePay' === t ? _.t.WoXvJC : _.t.wnVVr6),
@@ -144,7 +144,7 @@ function T(e) {
             onPrimary: () => a(),
             onBack: () => {}
         }),
-        children: (0, i.jsx)(f, {
+        children: (0, i.jsx)(I, {
             renderConnectorView: !0,
             renderStepBody: !0,
             paymentRequestWallet: t,
@@ -155,7 +155,7 @@ function T(e) {
 }
 function S(e) {
     let { children: t } = e;
-    return (0, i.jsx)(I, {
+    return (0, i.jsx)(f, {
         className: p.choosePaymentTypeModal,
         children: (0, i.jsx)('div', {
             className: p.choosePaymentTypeContainer,

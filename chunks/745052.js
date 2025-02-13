@@ -21,14 +21,14 @@ var i = n(200651),
     v = n(252618),
     T = n(605236),
     S = n(243778),
-    b = n(984370),
-    A = n(797614),
+    A = n(984370),
+    b = n(797614),
     Z = n(359110),
     x = n(6025),
     L = n(897473),
     y = n(108427),
-    P = n(970731),
-    O = n(210887),
+    O = n(970731),
+    P = n(210887),
     R = n(433355),
     j = n(592125),
     D = n(819640),
@@ -127,7 +127,7 @@ function en() {
                 ),
             [t, _, c]
         );
-    return (n.length !== t && A.Z.increment({ name: o.V.MESSAGE_REQUEST_COUNT_DRIFT }), 0 === n.length)
+    return (n.length !== t && b.Z.increment({ name: o.V.MESSAGE_REQUEST_COUNT_DRIFT }), 0 === n.length)
         ? (0, i.jsx)(W.Z, { section: q.pS.REQUESTS })
         : (0, i.jsx)(s.bG, {
               navigator: m,
@@ -179,14 +179,14 @@ function ei(e) {
 }
 let el = function (e) {
         let { markAsDismissed: t } = e;
-        return (0, i.jsx)(P.ZP, {
+        return (0, i.jsx)(O.ZP, {
             header: $.intl.string($.t.hRT8tb),
             content: $.intl.string($.t.apPgJC),
             buttonCTA: $.intl.string($.t.LNoAQU),
             className: ee.messageRequestCoachmark,
             onClick: () => t(Q.L.UNKNOWN),
             markAsDismissed: t,
-            caretPosition: P.DF.TOP_CENTER,
+            caretPosition: O.DF.TOP_CENTER,
             headerClassName: ee.__invalid_header
         });
     },
@@ -207,7 +207,7 @@ let el = function (e) {
                               renderPopout: () =>
                                   t
                                       ? (0, i.jsx)(el, { markAsDismissed: s })
-                                      : (0, i.jsx)(P.ZP, {
+                                      : (0, i.jsx)(O.ZP, {
                                             header: $.intl.string($.t.hRT8tb),
                                             content: $.intl.string($.t['8JWodn']),
                                             buttonCTA: $.intl.string($.t.JN6EOD),
@@ -217,7 +217,7 @@ let el = function (e) {
                                                 e.stopPropagation(), m.Z.open(X.oAB.CONTENT_AND_SOCIAL, null, { scrollPosition: J.FY.MESSAGE_REQUESTS_V2 });
                                             },
                                             markAsDismissed: s,
-                                            caretPosition: P.DF.TOP_CENTER,
+                                            caretPosition: O.DF.TOP_CENTER,
                                             headerClassName: ee.__invalid_header
                                         }),
                               position: 'bottom',
@@ -240,9 +240,9 @@ let es = (0, p.Z)(function (e) {
     let { width: t } = e,
         n = (0, H.q)();
     (0, _.ZP)(() => {
-        h.Y(X.Z5c.MESSAGE_REQUESTS), (0, y.e)('message-requests'), w.default.track(X.rMx.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }), A.Z.increment({ name: o.V.MESSAGE_REQUEST_VIEW });
+        h.Y(X.Z5c.MESSAGE_REQUESTS), (0, y.e)('message-requests'), w.default.track(X.rMx.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }), b.Z.increment({ name: o.V.MESSAGE_REQUEST_VIEW });
     });
-    let r = (0, c.e7)([O.Z], () => O.Z.theme),
+    let r = (0, c.e7)([P.Z], () => P.Z.theme),
         s = (0, z.w)(),
         [d, m] = l.useState(!1),
         p = (0, c.e7)([R.ZP], () => {
@@ -273,16 +273,16 @@ let es = (0, p.Z)(function (e) {
                         (0, i.jsx)(u.f6W, {
                             theme: r,
                             children: (e) =>
-                                (0, i.jsxs)(b.Z, {
+                                (0, i.jsxs)(A.Z, {
                                     className: e,
                                     toolbar: !0,
                                     children: [
-                                        (0, i.jsx)(b.Z.Icon, {
+                                        (0, i.jsx)(A.Z.Icon, {
                                             icon: u._XJ,
                                             'aria-hidden': !0
                                         }),
-                                        (0, i.jsx)(er, { children: (0, i.jsx)(b.Z.Title, { children: $.intl.string($.t.e7GWjY) }) }),
-                                        (0, i.jsx)(b.Z.Divider, {}),
+                                        (0, i.jsx)(er, { children: (0, i.jsx)(A.Z.Title, { children: $.intl.string($.t.e7GWjY) }) }),
+                                        (0, i.jsx)(A.Z.Divider, {}),
                                         (0, i.jsxs)(u.njP, {
                                             'aria-label': $.intl.string($.t.e7GWjY),
                                             selectedItem: C,

@@ -23,8 +23,8 @@ var i = n(200651),
     E = n(716161),
     C = n(938117),
     N = n(131951),
-    f = n(626135),
-    I = n(358085),
+    I = n(626135),
+    f = n(358085),
     T = n(981631),
     S = n(726985),
     j = n(388032),
@@ -88,7 +88,7 @@ function O(e) {
                           className: v.previewToggle,
                           note: j.intl.string(j.t.WNbX4O),
                           onChange: (e) => {
-                              p.qF.updateSetting(e), f.default.track(T.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: e });
+                              p.qF.updateSetting(e), I.default.track(T.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: e });
                           },
                           value: B,
                           hideBorder: !0,
@@ -113,15 +113,15 @@ function O(e) {
                                     'aria-label': j.intl.string(j.t['t9eQ/v'])
                                 }),
                                 !l &&
-                                    !!(0, I.isWindows)() &&
-                                    !!I.isPlatformEmbedded &&
+                                    !!(0, f.isWindows)() &&
+                                    !!f.isPlatformEmbedded &&
                                     o().satisfies(m.Z.os.release, '>=10.0.22000') &&
                                     (0, i.jsx)(u.R94, {
                                         className: v.cameraDeeplink,
                                         children: j.intl.format(j.t.aJYgRk, {
                                             onCameraSettingsClick: () => {
                                                 var e;
-                                                null == P || P(), window.open(((e = Z), (0, I.getPlatform)() === I.PlatformTypes.WINDOWS ? 'ms-settings:camera' + (null != e ? '?cameraId='.concat(encodeURIComponent(e.replace(b, '{E5323777-F976-4f5b-9B55-B94699C46E44}'))) : '') : '')), f.default.track(T.rMx.SYSTEM_CAMERA_SETTINGS_OPENED, { location_stack: y });
+                                                null == P || P(), window.open(((e = Z), (0, f.getPlatform)() === f.PlatformTypes.WINDOWS ? 'ms-settings:camera' + (null != e ? '?cameraId='.concat(encodeURIComponent(e.replace(b, '{E5323777-F976-4f5b-9B55-B94699C46E44}'))) : '') : '')), I.default.track(T.rMx.SYSTEM_CAMERA_SETTINGS_OPENED, { location_stack: y });
                                             }
                                         })
                                     })

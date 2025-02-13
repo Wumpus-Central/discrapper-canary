@@ -22,37 +22,37 @@ var i = n(200651),
     E = n(275909),
     C = n(300037),
     N = n(981631),
-    f = n(474936),
-    I = n(388032),
+    I = n(474936),
+    f = n(388032),
     T = n(305322);
 function S(e) {
     let { guildTier: t, guildBoostSlot: n, showAltText: r, isCanceled: o, premiumSubscription: c } = e,
         d = s.useMemo(() => {
-            if (o) return I.intl.format(I.t.Z4ULRE, { date: c.currentPeriodEnd });
+            if (o) return f.intl.format(f.t.Z4ULRE, { date: c.currentPeriodEnd });
             let e = null != n.premiumGuildSubscription ? _.default.extractTimestamp(n.premiumGuildSubscription.id) : 0;
-            return I.intl.formatToPlainString(I.t.lY2Bur, { date: new Date(e) });
+            return f.intl.formatToPlainString(f.t.lY2Bur, { date: new Date(e) });
         }, [n, o, c]),
         u = s.useMemo(
             () =>
                 (function (e) {
                     if (null == e || e === N.Eu4.NONE) return '';
                     let t = [
-                        I.intl.formatToPlainString(I.t.dLlKX1, { numEmojiSlots: f.HO[e].limits.emoji }),
-                        I.intl.formatToPlainString(I.t['+ANIfn'], { numStickerSlots: f.HO[e].limits.stickers }),
-                        I.intl.formatToPlainString(I.t['4gt60d'], { numSoundboardSlots: f.HO[e].limits.soundboardSounds }),
-                        I.intl.formatToPlainString(I.t.XahSjY, {
-                            resolution: f.HO[e].limits.screenShareQualityResolution,
-                            framerate: f.HO[e].limits.screenShareQualityFramerate
+                        f.intl.formatToPlainString(f.t.dLlKX1, { numEmojiSlots: I.HO[e].limits.emoji }),
+                        f.intl.formatToPlainString(f.t['+ANIfn'], { numStickerSlots: I.HO[e].limits.stickers }),
+                        f.intl.formatToPlainString(f.t['4gt60d'], { numSoundboardSlots: I.HO[e].limits.soundboardSounds }),
+                        f.intl.formatToPlainString(f.t.XahSjY, {
+                            resolution: I.HO[e].limits.screenShareQualityResolution,
+                            framerate: I.HO[e].limits.screenShareQualityFramerate
                         }),
-                        I.intl.formatToPlainString(I.t.NbNs7e, { bitrate: f.HO[e].limits.bitrate / 1000 }),
-                        I.intl.formatToPlainString(I.t.VVKcpq, { filesize: f.HO[e].limits.fileSize / 1024 / 1024 }),
-                        I.intl.formatToPlainString(I.t.TbpCvr, { numVideoStageSeats: f.HO[e].limits.stageVideoUsers }),
-                        I.intl.string(I.t.LDyX3t),
-                        I.intl.string(I.t.YtGlPT)
+                        f.intl.formatToPlainString(f.t.NbNs7e, { bitrate: I.HO[e].limits.bitrate / 1000 }),
+                        f.intl.formatToPlainString(f.t.VVKcpq, { filesize: I.HO[e].limits.fileSize / 1024 / 1024 }),
+                        f.intl.formatToPlainString(f.t.TbpCvr, { numVideoStageSeats: I.HO[e].limits.stageVideoUsers }),
+                        f.intl.string(f.t.LDyX3t),
+                        f.intl.string(f.t.YtGlPT)
                     ];
-                    e >= N.Eu4.TIER_2 && (t.push(I.intl.string(I.t.SztbtL)), t.push(I.intl.string(I.t['3GK91t']))), e >= N.Eu4.TIER_3 && t.push(I.intl.string(I.t.XUUJd3));
+                    e >= N.Eu4.TIER_2 && (t.push(f.intl.string(f.t.SztbtL)), t.push(f.intl.string(f.t['3GK91t']))), e >= N.Eu4.TIER_3 && t.push(f.intl.string(f.t.XUUJd3));
                     let n = t[Math.floor(Math.random() * t.length)];
-                    return I.intl.format(I.t['/dOAmZ'], { perk: n });
+                    return f.intl.format(f.t['/dOAmZ'], { perk: n });
                 })(t),
             [t]
         ),
@@ -92,7 +92,7 @@ function j(e) {
         _ = s.useMemo(() => (null != n.cooldownEndsAt ? new Date(n.cooldownEndsAt) : null), [n]),
         C = s.useMemo(() => null != _ && _ > new Date(), [_]),
         N = (0, x.tl)(n),
-        { fractionalState: f } = (0, c.Z)();
+        { fractionalState: I } = (0, c.Z)();
     return (0, i.jsxs)('div', {
         className: T.boostContainer,
         children: [
@@ -128,7 +128,7 @@ function j(e) {
                                 guildBoostSlot: n,
                                 premiumSubscription: l,
                                 hasCancelableGuildBoostSlot: d,
-                                fractionalState: f
+                                fractionalState: I
                             });
                         },
                         position: 'right',
@@ -136,7 +136,7 @@ function j(e) {
                         children: (e) =>
                             (0, i.jsx)(a.P3F, {
                                 ...e,
-                                'aria-label': I.intl.string(I.t.PdRCRk),
+                                'aria-label': f.intl.string(f.t.PdRCRk),
                                 className: T.boostSlotMenuIcon,
                                 children: (0, i.jsx)(a.Huf, {
                                     size: 'md',

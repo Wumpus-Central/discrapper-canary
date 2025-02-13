@@ -21,13 +21,13 @@ var i = n(200651),
     v = n(294330),
     T = n(981631),
     S = n(130552);
-let b = Object.freeze({
+let A = Object.freeze({
         top: 0,
         bottom: 0,
         left: 32,
         right: 202
     }),
-    A = Object.freeze({
+    b = Object.freeze({
         top: 0,
         bottom: 0,
         left: 32,
@@ -45,8 +45,8 @@ let b = Object.freeze({
 function L(e) {
     let { loadId: t, onGuildCardSeen: n, onGuildCardClick: r } = e,
         { guildIds: o, loading: m, searchResultsQuery: T, loadMore: L, searchCategoryId: y } = (0, f.f)({ loadId: t }),
-        P = 0 === o.length && !m,
-        O = l.useContext(u.AnalyticsContext),
+        O = 0 === o.length && !m,
+        P = l.useContext(u.AnalyticsContext),
         [R, j] = l.useState((0, _.PM)()),
         [D, w] = l.useState(!0),
         k = l.useRef(D),
@@ -55,9 +55,9 @@ function L(e) {
         B = l.useRef(null),
         V = l.useCallback(
             (e) => {
-                if (null != e && !P && !m) 336 * (o.length / M) <= e.height && L();
+                if (null != e && !O && !m) 336 * (o.length / M) <= e.height && L();
             },
-            [P, m, o.length, M, L]
+            [O, m, o.length, M, L]
         ),
         H = (0, d.y)((e) => {
             let t = null == e ? void 0 : e.getBoundingClientRect();
@@ -81,10 +81,10 @@ function L(e) {
                 searchId: R,
                 query: T,
                 guildResults: o.map(p.Z.getGuild).filter(h.lm),
-                analyticsContext: O,
+                analyticsContext: P,
                 categoryId: y
             });
-        }, [O, o, t, y, R, T]);
+        }, [P, o, t, y, R, T]);
     let F = l.useCallback((e) => n(e, y), [n, y]),
         z = l.useMemo(() => (m ? [o.length, 0] : [o.length]), [o.length, m]),
         W = l.useCallback(
@@ -105,7 +105,7 @@ function L(e) {
                                             className: S.headingFilters,
                                             children: [(0, i.jsx)(I.Z, { loadId: t }), (0, i.jsx)(N.Z, { loadId: t })]
                                         }),
-                                    P && (0, i.jsx)(C.Z, { loadId: t })
+                                    O && (0, i.jsx)(C.Z, { loadId: t })
                                 ]
                             },
                             l
@@ -114,21 +114,21 @@ function L(e) {
                         return (0, i.jsx)(c.$jN, { className: a()(S.spinner, { [S.spinnerWithSidebar]: D }) }, l);
                 }
             },
-            [P, D, t]
+            [O, D, t]
         ),
         Y = l.useCallback(
             (e) => {
                 switch (e) {
                     case 0:
                         let t = D ? 16 : 50;
-                        return P ? t + 448 : t;
+                        return O ? t + 448 : t;
                     case 1:
                         return 120;
                     default:
                         throw Error('[getSectionHeight] Failed for section: '.concat(e));
                 }
             },
-            [P, D]
+            [O, D]
         ),
         K = l.useCallback(
             (e, t) => {
@@ -222,7 +222,7 @@ function L(e) {
                 ),
             [L]
         ),
-        $ = D ? b : A;
+        $ = D ? A : b;
     return (0, i.jsx)('div', {
         className: S.container,
         ref: H,

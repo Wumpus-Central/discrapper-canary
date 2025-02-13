@@ -18,8 +18,8 @@ var s = n(512722),
     E = n(371651),
     C = n(556296),
     N = n(808506),
-    f = n(237997),
-    I = n(626135);
+    I = n(237997),
+    f = n(626135);
 n(63063);
 var T = n(13140),
     S = n(981631),
@@ -28,7 +28,7 @@ var T = n(13140),
 let b = A(null);
 function A(e) {
     var t;
-    let n = f.Z.getNotificationPositionMode(),
+    let n = I.Z.getNotificationPositionMode(),
         i = n !== S._vf.DISABLED,
         s = C.ZP.getOverlayKeybind(),
         l = C.ZP.getOverlayChatKeybind();
@@ -36,10 +36,10 @@ function A(e) {
         enabled: N.Z.enabled,
         notifications_enabled: i,
         notifications_position: i ? n : null,
-        text_notifications_mode: f.Z.getTextChatNotificationMode(),
+        text_notifications_mode: I.Z.getTextChatNotificationMode(),
         hotkey: null != s ? (0, T.BB)(s.shortcut) : null,
         text_activation_hotkey: null != l ? (0, T.BB)(l.shortcut) : null,
-        text_opacity_slider: f.Z.getTextWidgetOpacity(),
+        text_opacity_slider: I.Z.getTextWidgetOpacity(),
         old_enabled: null !== (t = null == e ? void 0 : e.enabled) && void 0 !== t ? t : N.Z.enabled
     };
 }
@@ -61,13 +61,13 @@ function R(e) {
             notificationPositionMode: D,
             textChatNotificationMode: P,
             shouldShowKeybindIndicators: y
-        } = (0, o.cj)([f.Z], () => ({
-            avatarSizeMode: f.Z.getAvatarSizeMode(),
-            displayNameMode: f.Z.getDisplayNameMode(),
-            displayUserMode: f.Z.getDisplayUserMode(),
-            notificationPositionMode: f.Z.getNotificationPositionMode(),
-            textChatNotificationMode: f.Z.getTextChatNotificationMode(),
-            shouldShowKeybindIndicators: f.Z.showKeybindIndicators
+        } = (0, o.cj)([I.Z], () => ({
+            avatarSizeMode: I.Z.getAvatarSizeMode(),
+            displayNameMode: I.Z.getDisplayNameMode(),
+            displayUserMode: I.Z.getDisplayUserMode(),
+            notificationPositionMode: I.Z.getNotificationPositionMode(),
+            textChatNotificationMode: I.Z.getTextChatNotificationMode(),
+            shouldShowKeybindIndicators: I.Z.showKeybindIndicators
         })),
         Z = (0, o.e7)([C.ZP], () => C.ZP.getOverlayKeybind()),
         L = (0, p.Z)({ location: 'overlay_user_settings' }),
@@ -75,7 +75,7 @@ function R(e) {
     return (
         !(function () {
             let e = A(b);
-            a().isEqual(e, b) || (I.default.track(S.rMx.OVERLAY_SETTINGS_UPDATED, e), (b = e));
+            a().isEqual(e, b) || (f.default.track(S.rMx.OVERLAY_SETTINGS_UPDATED, e), (b = e));
         })(),
         (0, i.jsxs)(i.Fragment, {
             children: [

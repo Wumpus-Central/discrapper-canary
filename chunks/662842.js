@@ -21,14 +21,14 @@ var i = n(200651),
     v = n(703656),
     T = n(922482),
     S = n(565799),
-    b = n(501655),
-    A = n(427679),
+    A = n(501655),
+    b = n(427679),
     Z = n(448206),
     x = n(184301),
     L = n(347475),
     y = n(496675),
-    P = n(594174),
-    O = n(662868),
+    O = n(594174),
+    P = n(662868),
     R = n(981631),
     j = n(765305),
     D = n(388032),
@@ -37,7 +37,7 @@ function k(e) {
     let { guild: t, isStudyRoomNotice: n = !1 } = e,
         r = (0, E.y)(t.id),
         k = (0, I.k5)(t.id),
-        M = (0, s.e7)([A.Z], () => A.Z.getStageInstanceByChannel(null == r ? void 0 : r.id), [r]),
+        M = (0, s.e7)([b.Z], () => b.Z.getStageInstanceByChannel(null == r ? void 0 : r.id), [r]),
         { isStageNoticeHidden: U, isEventNoticeHidden: G } = (0, s.cj)(
             [_.Z],
             () => ({
@@ -47,12 +47,12 @@ function k(e) {
             [M, k]
         ),
         B = null == r ? void 0 : r.id,
-        V = (0, s.Wu)([S.Z], () => [...new Set(S.Z.getMutableParticipants(B, b.pV.SPEAKER).map((e) => e.user))], [B]),
-        H = (0, s.e7)([S.Z], () => (null != B ? S.Z.getParticipantCount(B, b.pV.AUDIENCE) : 0), [B]),
+        V = (0, s.Wu)([S.Z], () => [...new Set(S.Z.getMutableParticipants(B, A.pV.SPEAKER).map((e) => e.user))], [B]),
+        H = (0, s.e7)([S.Z], () => (null != B ? S.Z.getParticipantCount(B, A.pV.AUDIENCE) : 0), [B]),
         F = (0, s.e7)([y.Z], () => y.Z.can(R.Plq.CONNECT, r)),
         z = (0, Z.Z)(null == r ? void 0 : r.id),
         W = null == k ? void 0 : k.creator_id,
-        Y = (0, s.e7)([P.default], () => P.default.getUser(W), [W]);
+        Y = (0, s.e7)([O.default], () => O.default.getUser(W), [W]);
     l.useEffect(() => {
         null != W && (0, d.PR)(W);
     }, [W]);
@@ -301,7 +301,7 @@ function k(e) {
                   (0, i.jsxs)('div', {
                       className: w.header,
                       children: [
-                          (0, i.jsx)(O.Z, {
+                          (0, i.jsx)(P.Z, {
                               color: o.Z.unsafe_rawColors.GREEN_230.css,
                               width: 16,
                               height: 16

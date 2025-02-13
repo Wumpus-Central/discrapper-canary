@@ -34,14 +34,14 @@ function S(e) {
             lastDismissedGracePeriod: f.Z.getLastDismissedGracePeriodForGuild(n),
             isGracePeriodVisible: f.Z.isVisible(n)
         })),
-        b = (0, r.e7)([m.Z], () => m.Z.isVisible(e)),
-        A = (0, r.e7)([I.Z], () => I.Z.isVisible(e)),
+        A = (0, r.e7)([m.Z], () => m.Z.isVisible(e)),
+        b = (0, r.e7)([I.Z], () => I.Z.isVisible(e)),
         Z = (0, r.e7)([_.Z], () => _.Z.can(v.Plq.ADMINISTRATOR, e)),
         x = null != T && Date.now() - T <= v.Dge,
         L = null != e ? e.premiumSubscriberCount : 0,
         y = (0, N.rF)(L, n) !== v.Eu4.NONE,
-        P = !(null != i && Date.now() - i <= 43200000) && !x && Z && y,
-        O = (0, o.m)(n),
+        O = !(null != i && Date.now() - i <= 43200000) && !x && Z && y,
+        P = (0, o.m)(n),
         R = (0, r.e7)([E.Z], () => E.Z.isVisible(e)),
         j = u.Z.useShouldShowChannelNotice(n),
         D = (0, h.h6)(e),
@@ -57,7 +57,7 @@ function S(e) {
         l.useEffect(() => {
             let e = -1;
             return (
-                P &&
+                O &&
                     (e = window.setTimeout(
                         () => {
                             null != n && (0, a.C0)(n);
@@ -68,13 +68,13 @@ function S(e) {
                     window.clearTimeout(e);
                 }
             );
-        }, [n, P]),
-        b)
+        }, [n, O]),
+        A)
     )
         return 0;
     if (S) return 1;
-    if (A) return 2;
-    if (O || null != U) return 3;
+    if (b) return 2;
+    if (P || null != U) return 3;
     if (R) return 4;
     else if (j) return 5;
     else if (k) return 6;

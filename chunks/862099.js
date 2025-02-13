@@ -27,14 +27,14 @@ var i,
     v = n(496675),
     T = n(938475),
     S = n(626135),
-    b = n(823379),
-    A = n(15274),
+    A = n(823379),
+    b = n(15274),
     Z = n(924301),
     x = n(504160),
     L = n(151864),
     y = n(835184),
-    P = n(725436),
-    O = n(497656),
+    O = n(725436),
+    P = n(497656),
     R = n(79874),
     j = n(554747),
     D = n(230900),
@@ -192,7 +192,7 @@ function z(e) {
     let { guildEvent: n, noticeType: i } = e,
         a = (0, p.Q3)('GuildUpcomingEventNotice'),
         o = (0, D.cS)(n),
-        d = null != o ? (0, P.m)(o, !0) : null,
+        d = null != o ? (0, O.m)(o, !0) : null,
         h = (0, D.nE)(n),
         m = (0, u.KS)(h),
         { startTime: g, endTime: _ } = (0, R.ZP)(n),
@@ -212,7 +212,7 @@ function z(e) {
                     className: B.textBlock,
                     children: [
                         (0, l.jsx)(c.P3F, {
-                            onClick: () => (0, A.bO)({ eventId: n.id }),
+                            onClick: () => (0, b.bO)({ eventId: n.id }),
                             className: B.eventNameClickable,
                             children: (0, l.jsx)(c.Text, {
                                 color: 'header-primary',
@@ -297,7 +297,7 @@ function W(e) {
               onClickCloseIcon: () => (0, x.ji)({ eventId: null == t ? void 0 : t.id }),
               heading: G.intl.string(G.t['1+boPj']),
               topic: t.name,
-              location: (0, P.m)(n, !0),
+              location: (0, O.m)(n, !0),
               locationIcon: (0, l.jsx)(c._tJ, {
                   size: 'custom',
                   color: 'currentColor',
@@ -311,7 +311,7 @@ function W(e) {
 function Y(e) {
     let { guildEvent: t } = e,
         n = r.useCallback(() => {
-            (0, A.bO)({ eventId: t.id });
+            (0, b.bO)({ eventId: t.id });
         }, [t]);
     return (0, l.jsx)(c.zxk, {
         fullWidth: !0,
@@ -386,7 +386,7 @@ function Q(e) {
             p = G.intl.string(G.t.wBoE6O);
             break;
         default:
-            (0, b.vE)(i);
+            (0, A.vE)(i);
     }
     return null == a
         ? null
@@ -423,7 +423,7 @@ function Q(e) {
 let J = r.memo(function (e) {
     let { guild: t } = e,
         { showRedesignedLiveChannelNotice: n } = (0, h.o)(!0),
-        i = (0, O.y)(t.id),
+        i = (0, P.y)(t.id),
         r = (0, j.k5)(t.id),
         a = (0, j.Vm)(t.id),
         s = (0, o.e7)([C.Z], () => C.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]),

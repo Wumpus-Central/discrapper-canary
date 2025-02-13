@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(690221),
     C = n(346585),
     N = n(347649),
-    f = n(332473),
-    I = n(303172),
+    I = n(332473),
+    f = n(303172),
     T = n(518560),
     S = n(921801),
     j = n(484459),
@@ -120,7 +120,7 @@ class K extends s.PureComponent {
                       '',
                       (0, i.jsx)(E.Z, {
                           className: H.noticeTextButton,
-                          onClick: () => (0, I.Z)(z.Kq.USER_SETTINGS),
+                          onClick: () => (0, f.Z)(z.Kq.USER_SETTINGS),
                           children: Y.intl.string(Y.t.LhlgY2)
                       })
                   ]
@@ -366,7 +366,7 @@ let X = () => {
         t = (0, c.e7)([b.Z], () => b.Z.getBackupCodes()),
         n = (0, c.e7)([A.Z], () => A.Z.hidePersonalInformation),
         s = (0, c.e7)([Z.Z], () => Z.Z.theme),
-        l = (0, f.b)(),
+        l = (0, I.b)(),
         r = (0, N.CC)(),
         a = (0, c.e7)([y.default], () => y.default.locale),
         d = (0, c.e7)([O.Z], () => O.Z.getSubsection());

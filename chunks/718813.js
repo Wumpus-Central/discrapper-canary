@@ -41,12 +41,12 @@ let T = (0, g.Un)({
         webpackId: 869779,
         name: 'ChannelSettings'
     }),
-    b = (0, g.Un)({
+    A = (0, g.Un)({
         createPromise: () => n.e('45620').then(n.bind(n, 838819)),
         webpackId: 838819,
         name: 'CollectiblesShop'
     }),
-    A = (0, g.Un)({
+    b = (0, g.Un)({
         createPromise: () => Promise.all([n.e('33053'), n.e('17298'), n.e('7654'), n.e('44156'), n.e('20364'), n.e('6850'), n.e('58227'), n.e('16114'), n.e('54408'), n.e('35217'), n.e('95140')]).then(n.bind(n, 994763)),
         webpackId: 994763,
         name: 'GuildSettings'
@@ -54,8 +54,8 @@ let T = (0, g.Un)({
     Z = {
         [C.S9g.USER_SETTINGS]: () => (0, l.jsx)(T, {}),
         [C.S9g.CHANNEL_SETTINGS]: () => (0, l.jsx)(S, {}),
-        [C.S9g.GUILD_SETTINGS]: () => (0, l.jsx)(A, {}),
-        [C.S9g.COLLECTIBLES_SHOP]: () => (0, l.jsx)(b, {})
+        [C.S9g.GUILD_SETTINGS]: () => (0, l.jsx)(b, {}),
+        [C.S9g.COLLECTIBLES_SHOP]: () => (0, l.jsx)(A, {})
     },
     x = 'SHOWN',
     L = 'HIDDEN',
@@ -63,10 +63,10 @@ let T = (0, g.Un)({
         friction: 10,
         tension: 100
     };
-function P() {
+function O() {
     return r.useEffect(() => (p.Z.enable(), p.Z.enableTemp(m.u), () => p.Z.disableTemp()), []), null;
 }
-class O extends (i = r.PureComponent) {
+class P extends (i = r.PureComponent) {
     static getDerivedStateFromProps(e, t) {
         return e.mode !== t.mode
             ? {
@@ -179,7 +179,7 @@ class O extends (i = r.PureComponent) {
             });
     }
 }
-v(O, 'defaultProps', { baseLayer: !1 }), v(O, 'contextType', u.Sfi);
+v(P, 'defaultProps', { baseLayer: !1 }), v(P, 'contextType', u.Sfi);
 class R extends r.PureComponent {
     componentDidMount() {
         I.S.subscribe(C.CkL.LAYER_POP_ESCAPE_KEY, h.xf);
@@ -194,7 +194,7 @@ class R extends r.PureComponent {
         return (
             r.push(
                 (0, l.jsx)(
-                    O,
+                    P,
                     {
                         mode: 0 !== i || n ? L : x,
                         baseLayer: !0,
@@ -212,10 +212,10 @@ class R extends r.PureComponent {
         return (
             (i = 'string' == typeof e ? Z[e]() : (0, l.jsx)(e, {})),
             (0, l.jsxs)(
-                O,
+                P,
                 {
                     mode: t === n - 1 ? x : L,
-                    children: [(0, l.jsx)(P, {}), i]
+                    children: [(0, l.jsx)(O, {}), i]
                 },
                 'layer-'.concat(t)
             )

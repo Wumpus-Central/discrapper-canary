@@ -90,7 +90,7 @@ function S(e) {
         shouldHighlight: a
     });
 }
-function b(e) {
+function A(e) {
     let { disambiguateGameRelationships: t, isGameRelationship: n, applicationId: a, userTag: o } = e,
         h = l.useMemo(() => (t ? (n ? N.intl.string(N.t.ujfP6e) : N.intl.string(N.t.yltuhY)) : o), [t, n, o]),
         m = (0, r.e7)([c.Z], () => (null != a ? c.Z.getApplication(a) : null));
@@ -123,7 +123,7 @@ function b(e) {
         ]
     });
 }
-function A(e) {
+function b(e) {
     let { user: t, hovered: n, status: l, disambiguateGameRelationships: r, isGameRelationship: a, applicationId: s } = e,
         o = g.ZP.useUserTag(t);
     return (0, i.jsx)(I.Z, {
@@ -131,7 +131,7 @@ function A(e) {
         hovered: n,
         status: l,
         showAccountIdentifier: !!r && !a,
-        subText: (0, i.jsx)(b, {
+        subText: (0, i.jsx)(A, {
             disambiguateGameRelationships: r,
             isGameRelationship: a,
             applicationId: s,
@@ -161,7 +161,7 @@ function Z(e) {
             (0, i.jsxs)('div', {
                 className: v.listItemContents,
                 children: [
-                    (0, i.jsx)(A, {
+                    (0, i.jsx)(b, {
                         user: t,
                         hovered: e,
                         status: g,

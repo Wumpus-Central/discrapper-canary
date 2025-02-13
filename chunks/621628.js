@@ -17,7 +17,7 @@ var i = n(200651),
     E = n(804501),
     C = n(644570),
     N = n(814632);
-function f(e) {
+function I(e) {
     let { contents: t, content: n, onChange: s } = e,
         l = o.z[n],
         { isDismissed: r, handleToggleDismissState: a, recurringDismissibleContentInfo: c } = (0, E.x)(l, t),
@@ -42,14 +42,14 @@ function f(e) {
         })
     });
 }
-function I(e) {
+function f(e) {
     let { items: t, dismissedContents: n, handleChange: s } = e;
     return (0, i.jsx)(i.Fragment, {
         children: t
             .filter((e) => isNaN(Number(e)))
             .map((e) =>
                 (0, i.jsx)(
-                    f,
+                    I,
                     {
                         contents: n,
                         content: e,
@@ -72,7 +72,7 @@ function T() {
             dailyCapOverridden: _.Z.dailyCapOverridden,
             newUserMinAgeRequiredOverridden: _.Z.newUserMinAgeRequiredOverridden
         })),
-        [E, f] = s.useState(''),
+        [E, I] = s.useState(''),
         T =
             null !==
                 (e = (0, a.e7)([g.Z], () => {
@@ -153,8 +153,8 @@ function T() {
                         className: N.marginBottom20,
                         size: d.E1j.Sizes.LARGE,
                         query: E,
-                        onChange: f,
-                        onClear: () => f('')
+                        onChange: I,
+                        onClear: () => I('')
                     }),
                     (0, i.jsxs)(d.xJW, {
                         className: C.buttonsContainer,
@@ -177,7 +177,7 @@ function T() {
                                       className: N.marginBottom20,
                                       children: (0, i.jsx)(d.vwX, { children: 'Recently Shown' })
                                   }),
-                                  (0, i.jsx)(I, {
+                                  (0, i.jsx)(f, {
                                       items: b,
                                       dismissedContents: T,
                                       handleChange: v
@@ -192,7 +192,7 @@ function T() {
                                       className: N.marginBottom20,
                                       children: (0, i.jsx)(d.vwX, { children: 'Recent Overrides' })
                                   }),
-                                  (0, i.jsx)(I, {
+                                  (0, i.jsx)(f, {
                                       items: A,
                                       dismissedContents: T,
                                       handleChange: v
@@ -204,7 +204,7 @@ function T() {
                         className: r()(N.marginBottom20, N.marginTop20),
                         children: (0, i.jsx)(d.vwX, { children: 'Available Dismissible Contents' })
                     }),
-                    (0, i.jsx)(I, {
+                    (0, i.jsx)(f, {
                         items: O,
                         dismissedContents: T,
                         handleChange: v

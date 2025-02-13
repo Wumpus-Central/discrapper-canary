@@ -1,6 +1,6 @@
 n.d(t, {
     R: () => S,
-    Z: () => b
+    Z: () => A
 }),
     n(411104);
 var i = n(200651),
@@ -14,8 +14,8 @@ var i = n(200651),
     u = n(44609),
     h = n(47343),
     _ = n(973616),
-    g = n(131704),
-    m = n(601964),
+    m = n(131704),
+    g = n(601964),
     p = n(598077),
     f = n(594174),
     E = n(51144),
@@ -67,17 +67,17 @@ let S = () =>
                   })
                 : null;
     },
-    b = (e) => {
+    A = (e) => {
         var t;
         let n,
             r,
             s,
-            { invite: c, disableUser: S = !1, error: b, flatActivityCount: A = !1, isRegister: R = !1 } = e,
+            { invite: c, disableUser: S = !1, error: A, flatActivityCount: b = !1, isRegister: R = !1 } = e,
             Z = (0, u.WR)({ location: 'invite' }),
             { currentUser: O } = (0, l.cj)([f.default], () => ({ currentUser: f.default.getCurrentUser() }));
         if (null == c) return null;
-        let j = null != c.guild ? new m.ZP(c.guild) : null,
-            L = null != c.channel ? (0, g.jD)(c.channel) : null,
+        let j = null != c.guild ? new g.ZP(c.guild) : null,
+            L = null != c.channel ? (0, m.jD)(c.channel) : null,
             y = null != c.target_application ? new _.ZP(c.target_application) : null,
             P = S || null == c.inviter ? null : new p.Z(c.inviter),
             D = !((null != c.approximate_member_count && c.approximate_member_count > 100) || (null != j && j.hasFeature(x.oNc.COMMUNITY))) && null != P,
@@ -138,7 +138,7 @@ let S = () =>
             (r = v.intl.formatToPlainString(v.t['4aF92d'], { username: e })),
                 (w = !0),
                 (s =
-                    null != b
+                    null != A
                         ? null
                         : (0, i.jsx)(o.DK, {
                               className: N.directInviteSubTitle,
@@ -154,9 +154,9 @@ let S = () =>
                     user: D ? P : null,
                     compact: w
                 }),
-                null != b
+                null != A
                     ? (0, i.jsxs)(i.Fragment, {
-                          children: [(0, i.jsx)(o.DK, { children: v.intl.string(v.t.mDFGFh) }), (0, i.jsx)(o.Dx, { children: b })]
+                          children: [(0, i.jsx)(o.DK, { children: v.intl.string(v.t.mDFGFh) }), (0, i.jsx)(o.Dx, { children: A })]
                       })
                     : (0, i.jsxs)(i.Fragment, {
                           children: [
@@ -184,7 +184,7 @@ let S = () =>
                           className: N.activityCount,
                           online: c.approximate_presence_count,
                           total: c.approximate_member_count,
-                          flat: A
+                          flat: b
                       }),
                 Z ? (0, i.jsx)(h.R, {}) : (0, i.jsx)(o.jQ, { user: O })
             ]

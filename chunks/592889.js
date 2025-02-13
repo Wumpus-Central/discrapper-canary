@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(509545),
     C = n(74538),
     N = n(937615),
-    f = n(388032),
-    I = n(350998);
+    I = n(388032),
+    f = n(350998);
 function T(e) {
     let { subscription: t, renewalMutations: n, transitionState: s, onClose: l, analyticsLocation: r } = e,
         a = (0, c.e7)([_.Z], () => _.Z.theme),
@@ -35,7 +35,7 @@ function T(e) {
         b = (0, N.og)((0, N.T4)(v.amount, v.currency), j.interval, j.intervalCount);
     return (0, i.jsxs)(u.Y0X, {
         transitionState: s,
-        'aria-label': f.intl.string(f.t['E9kB4+']),
+        'aria-label': I.intl.string(I.t['E9kB4+']),
         children: [
             (0, i.jsxs)(u.xBx, {
                 justify: x.Z.Justify.BETWEEN,
@@ -43,19 +43,19 @@ function T(e) {
                 children: [
                     (0, i.jsx)(u.vwX, {
                         tag: u.RB0.H4,
-                        children: f.intl.string(f.t['E9kB4+'])
+                        children: I.intl.string(I.t['E9kB4+'])
                     }),
                     (0, i.jsx)(u.olH, { onClick: l })
                 ]
             }),
             (0, i.jsx)(u.hzk, {
-                className: I.modalBody,
+                className: f.modalBody,
                 children: (0, p.Q0)(t.planId)
-                    ? f.intl.format(f.t.GMp54O, {
+                    ? I.intl.format(I.t.GMp54O, {
                           downgradedPlan: C.ZP.getDisplayName(n.planId),
                           existingRate: b
                       })
-                    : f.intl.format(f.t['vx/NZ2'], {
+                    : I.intl.format(I.t['vx/NZ2'], {
                           existingPlan: C.ZP.getDisplayName(t.planId),
                           downgradedPlan: C.ZP.getDisplayName(n.planId),
                           existingRate: b
@@ -65,13 +65,13 @@ function T(e) {
                 children: [
                     (0, i.jsx)(u.zxk, {
                         onClick: S,
-                        children: f.intl.string(f.t.frE8KC)
+                        children: I.intl.string(I.t.frE8KC)
                     }),
                     (0, i.jsx)(u.zxk, {
                         look: u.zxk.Looks.LINK,
                         color: (0, d.ap)(a) ? u.zxk.Colors.PRIMARY : u.zxk.Colors.WHITE,
                         onClick: l,
-                        children: f.intl.string(f.t.oEAioK)
+                        children: I.intl.string(I.t.oEAioK)
                     })
                 ]
             })
@@ -82,18 +82,18 @@ function S(e) {
     let { subscription: t, renewalMutations: n, className: l, analyticsLocation: a } = e,
         [o, c] = s.useState(!1);
     return (0, i.jsxs)('div', {
-        className: r()(I.root, l),
+        className: r()(f.root, l),
         children: [
             (0, i.jsx)(u.P4T, {
                 size: 'custom',
                 width: 20,
                 height: 20,
                 color: 'currentColor',
-                className: I.infoIcon
+                className: f.infoIcon
             }),
             (0, i.jsx)('div', {
-                className: I.text,
-                children: f.intl.format(f.t.ar1cPj, {
+                className: f.text,
+                children: I.intl.format(I.t.ar1cPj, {
                     planName: t.hasExternalPlanChange ? (0, C.zL)(n) : C.ZP.getDisplayName(n.planId),
                     date: t.currentPeriodEnd
                 })
@@ -104,8 +104,8 @@ function S(e) {
                       onClick: (e) => {
                           c(!0), e.preventDefault();
                       },
-                      className: I.cancelLink,
-                      children: f.intl.string(f.t['ETE/oK'])
+                      className: f.cancelLink,
+                      children: I.intl.string(I.t['ETE/oK'])
                   }),
             o
                 ? (0, i.jsx)(u.u_l, {

@@ -18,18 +18,18 @@ var l = n(481060),
 let E = (0, g.Z)(
     (e) => {
         var t;
-        let { clientId: n, authorizations: d, scopes: u, parsedPermissions: h, responseType: g, redirectUri: E, codeChallenge: I, codeChallengeMethod: C, state: N, guildId: v, channelId: T, prompt: S, disableGuildSelect: b, disclosures: A, integrationType: Z, pid: x } = e,
+        let { clientId: n, authorizations: d, scopes: u, parsedPermissions: h, responseType: g, redirectUri: E, codeChallenge: I, codeChallengeMethod: C, state: N, guildId: v, channelId: T, prompt: S, disableGuildSelect: A, disclosures: b, integrationType: Z, pid: x } = e,
             L = 'OAuth2Authorize_'.concat(n, '_').concat(v, '_').concat(T),
             y = null != Z ? (null == d ? void 0 : d.get(Z)) : void 0,
-            P = null !== (t = null == y ? void 0 : y.application) && void 0 !== t ? t : s.Z.getApplication(n);
+            O = null !== (t = null == y ? void 0 : y.application) && void 0 !== t ? t : s.Z.getApplication(n);
         return new Promise((e, t) => {
             let s = (0, _.jU)(x),
                 y = (i) => {
                     let { clientId: l, location: a } = i;
                     (null == l || l === n) && (s.lock(), r.Z.unsubscribe('OVERLAY_OAUTH2_AUTHORIZE_MODAL_CLOSE', y), null != location ? e(a) : t(new p.Z({ errorCode: f.lTL.OAUTH2_ERROR }, 'User cancelled authorization')));
                 },
-                O = c.default.isOverlayOOPEnabledForPid(null != x ? x : (0, m.QF)());
-            if (s.context === f.IlC.OVERLAY && !O) {
+                P = c.default.isOverlayOOPEnabledForPid(null != x ? x : (0, m.QF)());
+            if (s.context === f.IlC.OVERLAY && !P) {
                 r.Z.subscribe('OVERLAY_OAUTH2_AUTHORIZE_MODAL_CLOSE', y),
                     r.Z.dispatch({
                         type: 'OVERLAY_OAUTH2_AUTHORIZE_MODAL_OPEN',
@@ -38,7 +38,7 @@ let E = (0, g.Z)(
                             authorizations: d,
                             clientId: n,
                             scopes: null != u ? u : [],
-                            disclosures: null != A ? A : [],
+                            disclosures: null != b ? b : [],
                             responseType: g,
                             redirectUri: E,
                             codeChallenge: I,
@@ -48,21 +48,21 @@ let E = (0, g.Z)(
                             guildId: v,
                             channelId: T,
                             prompt: S,
-                            disableGuildSelect: 'boolean' == typeof b ? b : 'true' === b,
+                            disableGuildSelect: 'boolean' == typeof A ? A : 'true' === A,
                             integrationType: Z
                         }
                     });
                 return;
             }
             let R = l.z1l;
-            null != P &&
+            null != O &&
             null !=
                 (0, a.ZP)({
-                    application: P,
+                    application: O,
                     channelId: T
                 })
                 ? (R = l.u1M)
-                : O && (R = l.u1M),
+                : P && (R = l.u1M),
                 (0, l.h7j)(
                     (e) =>
                         (0, i.jsx)(o.OAuth2AuthorizeModal, {
@@ -70,7 +70,7 @@ let E = (0, g.Z)(
                             authorizations: d,
                             clientId: n,
                             scopes: null != u ? u : [],
-                            disclosures: null != A ? A : [],
+                            disclosures: null != b ? b : [],
                             callback: y,
                             responseType: g,
                             redirectUri: E,
@@ -81,7 +81,7 @@ let E = (0, g.Z)(
                             guildId: v,
                             channelId: T,
                             prompt: S,
-                            disableGuildSelect: 'boolean' == typeof b ? b : 'true' === b,
+                            disableGuildSelect: 'boolean' == typeof A ? A : 'true' === A,
                             integrationType: Z
                         }),
                     {

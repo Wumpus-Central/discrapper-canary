@@ -18,8 +18,8 @@ var s = n(921801),
     E = n(864239),
     C = n(190014),
     N = n(301812),
-    f = n(988043),
-    I = n(919539),
+    I = n(988043),
+    f = n(919539),
     T = n(726985),
     S = n(981631),
     j = n(388032);
@@ -33,8 +33,8 @@ let v = () =>
                         setting: T.s6.PRIVACY_AND_SAFETY_SERVER_SELECTOR,
                         children: (0, i.jsx)(g.Z, {})
                     }),
-                    (0, i.jsx)(f.Z, {}),
                     (0, i.jsx)(I.Z, {}),
+                    (0, i.jsx)(f.Z, {}),
                     (0, i.jsx)(N.Z, {}),
                     (0, i.jsx)(C.Z, {})
                 ]

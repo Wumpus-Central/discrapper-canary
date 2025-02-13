@@ -1,6 +1,6 @@
 n.d(t, {
     HJ: () => h,
-    Zd: () => g,
+    Zd: () => m,
     yD: () => _
 });
 var i = n(213919),
@@ -66,7 +66,7 @@ function _(e, t) {
           Promise.resolve())
         : a.Z.switchAccountToken(n, t);
 }
-function g(e) {
+function m(e) {
     l.Z.dispatch({
         type: 'MULTI_ACCOUNT_REMOVE_ACCOUNT',
         userId: e

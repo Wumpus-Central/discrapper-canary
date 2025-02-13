@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(362762),
     h = n(409059),
     _ = n(659900),
-    g = n(962220),
-    m = n(473855),
+    m = n(962220),
+    g = n(473855),
     p = n(306453),
     f = n(929809),
     E = n(108427),
@@ -22,8 +22,8 @@ var i = n(200651),
     N = n(781428),
     S = n(163671),
     T = n(423527),
-    b = n(981631),
-    A = n(58346),
+    A = n(981631),
+    b = n(58346),
     R = n(701476),
     Z = n(630724),
     O = n(436620),
@@ -33,10 +33,10 @@ var i = n(200651),
 c.ZP.initialize();
 class P extends r.PureComponent {
     componentDidMount() {
-        (0, E.e)('guildTemplate'), O.KO || v.Z.launch('discord://' + b.Z5c.GUILD_TEMPLATE(this.props.code), () => void 0);
+        (0, E.e)('guildTemplate'), O.KO || v.Z.launch('discord://' + A.Z5c.GUILD_TEMPLATE(this.props.code), () => void 0);
     }
     componentDidUpdate(e) {
-        this.props.code !== e.code && g.Z.resolveGuildTemplate(this.props.code);
+        this.props.code !== e.code && m.Z.resolveGuildTemplate(this.props.code);
     }
     renderButton(e, t) {
         return O.KO
@@ -82,7 +82,7 @@ class P extends r.PureComponent {
     }
     renderAuthenticatedOrDownload() {
         let { guildTemplate: e } = this.props;
-        return (s()(null != e, 'guild template must not be null'), e.state === A.Rj.RESOLVING)
+        return (s()(null != e, 'guild template must not be null'), e.state === b.Rj.RESOLVING)
             ? (0, i.jsx)(d.ZP, {
                   className: L.authBox,
                   children: (0, i.jsx)(p.Z, { guildTemplate: e })
@@ -97,12 +97,12 @@ class P extends r.PureComponent {
     render() {
         let { guildTemplate: e, nativeAppState: t, authenticated: n, transitionTo: r, location: l } = this.props;
         if (null == e) return this.renderSpinner(j.intl.string(j.t.ZTNur6));
-        if (t === b.kEZ.OPEN) return this.renderAppOpened();
-        if (t === b.kEZ.OPENING) return this.renderSpinner(j.intl.string(j.t['Z+hCVV']));
+        if (t === A.kEZ.OPEN) return this.renderAppOpened();
+        if (t === A.kEZ.OPENING) return this.renderSpinner(j.intl.string(j.t['Z+hCVV']));
         switch (e.state) {
-            case A.Rj.RESOLVING:
+            case b.Rj.RESOLVING:
                 return this.renderSpinner(j.intl.string(j.t['Z+hCVV']));
-            case A.Rj.RESOLVED:
+            case b.Rj.RESOLVED:
                 if (n || !O.KO) return this.renderAuthenticatedOrDownload();
                 if (this.props.login)
                     return (0, i.jsx)(N.Z, {
@@ -118,7 +118,7 @@ class P extends r.PureComponent {
                         (0, f.c)(R.M5.ORGANIC_REGISTERED_GUILD_TEMPLATE), x.Z.flowStart(Z.MK.ORGANIC_GUILD_TEMPLATES, Z.EW.NUF_STARTED);
                     }
                 });
-            case A.Rj.EXPIRED:
+            case b.Rj.EXPIRED:
                 return this.renderInvalidGuildTemplate();
             default:
                 return null;
@@ -175,7 +175,7 @@ function k(e) {
     return (0, i.jsx)(S.Z, {
         className: L.authBox,
         children: () => [
-            (0, i.jsx)(m.Z, { guildTemplate: t }, 'template'),
+            (0, i.jsx)(g.Z, { guildTemplate: t }, 'template'),
             (0, i.jsx)(
                 'div',
                 {

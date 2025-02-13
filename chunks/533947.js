@@ -1,5 +1,5 @@
 let i, l, r;
-n.d(t, { Z: () => P }), n(653041), n(47120);
+n.d(t, { Z: () => O }), n(653041), n(47120);
 var a,
     s,
     o,
@@ -19,8 +19,8 @@ let I = [],
     v = E.QZA.CLOSED,
     T = {},
     S = !1,
-    b = null;
-function A() {
+    A = null;
+function b() {
     if (((i = null != (l = p.Z.getChannel()) ? g.Z.getGuild(l.guild_id) : null), (I = null != l && null != i && _.Z.can(E.Plq.MANAGE_WEBHOOKS, l) ? f.Z.getWebhooksForChannel(i.id, l.id) : []), null != C)) {
         let e = x(C.id);
         null != e && (C = e);
@@ -64,7 +64,7 @@ class L extends (a = u.ZP.Store) {
             webhooks: I,
             editedWebhook: C,
             section: r,
-            sectionId: b,
+            sectionId: A,
             hasChanges: this.hasChanges(),
             isFetching: N,
             errors: T
@@ -85,20 +85,20 @@ let y = new L(
         __OVERLAY__
             ? {}
             : {
-                  INTEGRATION_SETTINGS_INIT: A,
-                  INTEGRATION_SETTINGS_SAVE_SUCCESS: A,
+                  INTEGRATION_SETTINGS_INIT: b,
+                  INTEGRATION_SETTINGS_SAVE_SUCCESS: b,
                   CHANNEL_SETTINGS_SET_SECTION: function (e) {
                       let { section: t } = e;
                       if (t !== E.CoT.INTEGRATIONS) return !1;
                       if (((r = E.b4C.OVERVIEW), null == i)) {
                           let e = p.Z.getChannel(),
                               t = null == e ? void 0 : e.getGuildId();
-                          null != e && null != t && (m.Z.fetchForChannel(t, e.id), (N = !0)), A();
+                          null != e && null != t && (m.Z.fetchForChannel(t, e.id), (N = !0)), b();
                       }
                   },
                   INTEGRATION_SETTINGS_SET_SECTION: function (e) {
                       let { section: t, sectionId: n } = e;
-                      (r = t), (b = n);
+                      (r = t), (A = n);
                   },
                   INTEGRATION_SETTINGS_START_EDITING_WEBHOOK: function (e) {
                       let { webhookId: t } = e,
@@ -154,4 +154,4 @@ let y = new L(
                   }
               }
     ),
-    P = y;
+    O = y;

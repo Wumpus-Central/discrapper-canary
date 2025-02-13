@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(726542),
     C = n(122021),
     N = n(275759),
-    f = n(231757),
-    I = n(888496),
+    I = n(231757),
+    f = n(888496),
     T = n(605236),
     S = n(565138),
     j = n(297700),
@@ -263,24 +263,24 @@ function z(e) {
                     l = (0, N.FI)(n[M.PC.CREATED_AT], g);
                 switch (e.type) {
                     case B.ABu.REDDIT:
-                        s = (0, I.oP)(n, U.metadataItem);
+                        s = (0, f.oP)(n, U.metadataItem);
                         break;
                     case B.ABu.STEAM:
-                        s = (0, I.Dq)(n, U.metadataItem);
+                        s = (0, f.Dq)(n, U.metadataItem);
                         break;
                     case B.ABu.BLUESKY:
                     case B.ABu.TWITTER:
                     case B.ABu.MASTODON:
-                        s = (0, I.rJ)(n, U.metadataItem);
+                        s = (0, f.rJ)(n, U.metadataItem);
                         break;
                     case B.ABu.EBAY:
-                        s = (0, I.ul)(n, U.metadataItem);
+                        s = (0, f.ul)(n, U.metadataItem);
                         break;
                     case B.ABu.PAYPAL:
-                        s = (0, I.li)(n, U.metadataItem);
+                        s = (0, f.li)(n, U.metadataItem);
                         break;
                     case B.ABu.TIKTOK:
-                        s = (0, I.hf)(n, U.metadataItem);
+                        s = (0, f.hf)(n, U.metadataItem);
                 }
                 null !== l &&
                     (null == s && (s = []),
@@ -391,7 +391,7 @@ function z(e) {
                             n = e ? 1 : 0;
                         if (e && !t) {
                             G(n),
-                                (0, f.Z)({
+                                (0, I.Z)({
                                     platformType: o.type,
                                     location: 'User Settings'
                                 });
@@ -419,7 +419,7 @@ function z(e) {
                                     n = e ? 1 : 0;
                                 if (e && !t) {
                                     P(n),
-                                        (0, f.Z)({
+                                        (0, I.Z)({
                                             platformType: o.type,
                                             location: 'User Settings'
                                         });
@@ -448,7 +448,7 @@ function z(e) {
                           className: U.integrationRevoked,
                           children: w.intl.format(w.t['6C4lgI'], {
                               onReconnect: function () {
-                                  (0, f.Z)({
+                                  (0, I.Z)({
                                       platformType: o.type,
                                       location: 'User Settings'
                                   });
@@ -503,7 +503,7 @@ function Y() {
 }
 function H(e) {
     let t = E.Z.get(e);
-    (0, f.Z)({ platformType: t.type }),
+    (0, I.Z)({ platformType: t.type }),
         R.default.track(B.rMx.ACCOUNT_LINK_STEP, {
             previous_step: 'desktop connections',
             current_step: 'desktop oauth',

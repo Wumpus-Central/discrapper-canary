@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(55610),
     C = n(653798),
     N = n(311821),
-    f = n(42818),
-    I = n(314884),
+    I = n(42818),
+    f = n(314884),
     T = n(509545),
     S = n(78839),
     j = n(267642),
@@ -85,7 +85,7 @@ async function Z(e, t, n, i) {
         null != i
             ? i
             : (function () {
-                  let e = Object.values(I.Z.boostSlots),
+                  let e = Object.values(f.Z.boostSlots),
                       t = r().sortBy(
                           e.filter((e) => !(0, j.tl)(e)),
                           (e) => [null != e.premiumGuildSubscription, null != e.cooldownEndsAt ? new Date(e.cooldownEndsAt) : null]
@@ -97,7 +97,7 @@ async function Z(e, t, n, i) {
 }
 function L(e) {
     var t, n, l;
-    let { premiumSubscription: r, guildBoostSlotId: c, onBack: d, onNext: E, onClose: I } = e,
+    let { premiumSubscription: r, guildBoostSlotId: c, onBack: d, onNext: E, onClose: f } = e,
         [S, j] = s.useState(!1),
         [R, y] = s.useState(null),
         [L, k] = s.useMemo(() => {
@@ -107,9 +107,9 @@ function L(e) {
                 return [[], !0];
             }
         }, [r]),
-        B = s.useRef(I);
+        B = s.useRef(f);
     s.useEffect(() => {
-        B.current = I;
+        B.current = f;
     }),
         s.useEffect(() => {
             k && B.current();
@@ -159,7 +159,7 @@ function L(e) {
         { interval: W, intervalCount: K } = M;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(A.Z, { onClose: I }),
+            (0, i.jsx)(A.Z, { onClose: f }),
             (0, i.jsxs)(o.hzk, {
                 className: P.body,
                 children: [
@@ -182,7 +182,7 @@ function L(e) {
                                 ? (0, i.jsxs)('div', {
                                       children: [
                                           (0, i.jsx)(C.KU, {}),
-                                          (0, i.jsx)(f.nd, {
+                                          (0, i.jsx)(I.nd, {
                                               premiumSubscription: r,
                                               renewalInvoice: F,
                                               isUpdate: !0

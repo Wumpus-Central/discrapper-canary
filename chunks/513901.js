@@ -16,7 +16,7 @@ var i = n(200651),
     p = n(388032),
     E = n(148902);
 function C(e) {
-    let { user: t, guild: n, className: l, sectionTitle: C, forcedDivider: N = !1, withTutorial: f = !1, showBorder: I = !1, isTryItOutFlow: T = !1, initialSelectedEffectId: S } = e,
+    let { user: t, guild: n, className: l, sectionTitle: C, forcedDivider: N = !1, withTutorial: I = !1, showBorder: f = !1, isTryItOutFlow: T = !1, initialSelectedEffectId: S } = e,
         j = (0, h.Kg)(t, n),
         v = u.ZP.canUsePremiumProfileCustomization(t),
         { analyticsLocations: b } = (0, o.ZP)(),
@@ -38,13 +38,13 @@ function C(e) {
             });
     }, [v, b]);
     let D = null != n,
-        P = f ? a.gtL : a.zxk;
+        P = I ? a.gtL : a.zxk;
     return (0, i.jsx)(m.Z, {
         forcedDivider: N,
         borderType: g.Y.PREMIUM,
         hasBackground: !0,
         title: C,
-        showBorder: I,
+        showBorder: f,
         errors: O,
         className: l,
         children: (0, i.jsxs)('div', {
@@ -53,7 +53,7 @@ function C(e) {
                 (0, i.jsx)(P, {
                     size: a.zxk.Sizes.SMALL,
                     onClick: R,
-                    className: r()({ [E.buttonHighlighted]: f }),
+                    className: r()({ [E.buttonHighlighted]: I }),
                     children: p.intl.string(p.t['0nEVoK'])
                 }),
                 (T || void 0 !== A ? null != A : null != j) &&

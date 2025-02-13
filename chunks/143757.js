@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(47120);
+n.d(t, { Z: () => P }), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
@@ -21,8 +21,8 @@ var i = n(200651),
     v = n(823379),
     T = n(415439),
     S = n(981631),
-    b = n(388032),
-    A = n(796665),
+    A = n(388032),
+    b = n(796665),
     Z = n(220704);
 function x(e) {
     let { analyticsLocations: t, analyticsContext: n } = e;
@@ -36,9 +36,9 @@ function x(e) {
             });
         },
         icon: o.qJs,
-        className: A.plusIcon,
-        iconClassName: A.plusIcon,
-        tooltip: b.intl.string(b.t.qJvTKS),
+        className: b.plusIcon,
+        iconClassName: b.plusIcon,
+        tooltip: A.intl.string(A.t.qJvTKS),
         tooltipPosition: 'top'
     });
 }
@@ -51,32 +51,32 @@ function L(e) {
         E = n === t.id,
         I = null != n;
     return (0, i.jsx)(o.P3F, {
-        className: a()(A.clickable, { [A.disabledClickable]: I }),
+        className: a()(b.clickable, { [b.disabledClickable]: I }),
         onClick: () => (_ || I ? null : (0, T.Kt)(t, l, c)),
-        'aria-label': b.intl.formatToPlainString(b.t['zLhr9/'], {
+        'aria-label': A.intl.formatToPlainString(A.t['zLhr9/'], {
             applicationName: t.name,
             applicationDescription: t.description
         }),
         children: (0, i.jsx)(o.ua7, {
-            tooltipContentClassName: A.tooltipContent,
+            tooltipContentClassName: b.tooltipContent,
             text: t.name,
             children: (e) => {
                 let { ...n } = e;
                 return (0, i.jsxs)('div', {
-                    className: A.iconContainer,
+                    className: b.iconContainer,
                     ...n,
                     children: [
                         (0, i.jsx)(f.Z, {
                             application: t,
-                            className: A.iconCard,
+                            className: b.iconCard,
                             'aria-hidden': !0,
                             rendersPlaceholder: !0
                         }),
                         E || _
                             ? (0, i.jsx)(o.$jN, {
                                   type: o.$jN.Type.PULSING_ELLIPSIS,
-                                  className: A.spinner,
-                                  itemClassName: _ ? A.spinnerInnerRunning : void 0
+                                  className: b.spinner,
+                                  itemClassName: _ ? b.spinnerInnerRunning : void 0
                               })
                             : null
                     ]
@@ -88,7 +88,7 @@ function L(e) {
 function y(e) {
     let { frecentApps: t, loadingAppId: n, setLoadingAppId: l, analyticsLocations: r } = e;
     return (0, i.jsx)('div', {
-        className: A.itemContainer,
+        className: b.itemContainer,
         children: t.map((e) => {
             var t;
             return (0, i.jsx)(
@@ -105,13 +105,13 @@ function y(e) {
         })
     });
 }
-let P = (e) => {
+let O = (e) => {
     (0, c.jW)(e, async () => {
         let { default: e } = await n.e('40706').then(n.bind(n, 610909));
         return (t) => (0, i.jsx)(e, { ...t });
     });
 };
-function O(e) {
+function P(e) {
     let { bottomDivider: t } = e,
         n = (0, T.ZC)(),
         [r, s] = l.useState(void 0),
@@ -127,15 +127,15 @@ function O(e) {
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)('div', {
-                    className: A.container,
-                    onContextMenu: P,
+                    className: b.container,
+                    onContextMenu: O,
                     children: [
                         (0, i.jsxs)(E.Z, {
-                            className: a()(A.headerContainer, Z.privateChannelsHeaderContainer),
+                            className: a()(b.headerContainer, Z.privateChannelsHeaderContainer),
                             children: [
                                 (0, i.jsx)('span', {
                                     className: Z.headerText,
-                                    children: b.intl.string(b.t.vayAzs)
+                                    children: A.intl.string(A.t.vayAzs)
                                 }),
                                 (0, i.jsx)(x, {
                                     analyticsLocations: o,

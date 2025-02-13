@@ -1,6 +1,6 @@
 n.d(t, {
     Eo: () => R,
-    VD: () => P,
+    VD: () => O,
     ZP: () => j
 }),
     n(47120);
@@ -26,31 +26,31 @@ var i = n(200651),
     v = n(768581),
     T = n(356164),
     S = n(890064),
-    b = n(981631),
-    A = n(388032),
+    A = n(981631),
+    b = n(388032),
     Z = n(992676),
     x = n(129512),
     L = n(330065),
     y = n(755386);
-function P(e) {
+function O(e) {
     let { guild: t, onClick: r, onView: s } = e,
         f = (0, g.Q3)('BaseGlobalDiscoveryServersCard'),
         [E, T] = l.useState(!1),
-        [P, O] = l.useState(!1),
+        [O, P] = l.useState(!1),
         [R, j] = l.useState(!1),
         D = l.useCallback(async () => {
-            O(!0);
+            P(!0);
             try {
                 await r(t.id);
             } catch (n) {
                 var e;
                 let t = new h.Hx(n);
                 d.Z.show({
-                    title: A.intl.string(A.t.R0RpRU),
-                    body: null !== (e = t.getAnyErrorMessage()) && void 0 !== e ? e : A.intl.string(A.t.eAn6z8)
+                    title: b.intl.string(b.t.R0RpRU),
+                    body: null !== (e = t.getAnyErrorMessage()) && void 0 !== e ? e : b.intl.string(b.t.eAn6z8)
                 });
             } finally {
-                O(!1);
+                P(!1);
             }
         }, [t.id, r]),
         w = l.useCallback(
@@ -73,7 +73,7 @@ function P(e) {
             [t]
         ),
         M = (0, m.ZP)(),
-        U = t.features.has(b.oNc.HUB),
+        U = t.features.has(A.oNc.HUB),
         G = l.useMemo(() => {
             let e = v.ZP.getGuildDiscoverySplashURL({
                 id: t.id,
@@ -83,9 +83,9 @@ function P(e) {
             if (null != e) return e;
             if (U) return y;
             switch (M) {
-                case b.BRd.DARK:
+                case A.BRd.DARK:
                     return x;
-                case b.BRd.LIGHT:
+                case A.BRd.LIGHT:
                     return L;
             }
         }, [t.discoverySplash, t.id, U, M]),
@@ -103,7 +103,7 @@ function P(e) {
     return (0, i.jsxs)('div', {
         className: Z.container,
         children: [
-            P &&
+            O &&
                 (0, i.jsx)('div', {
                     className: Z.spinnerContainer,
                     children: (0, i.jsx)(c.$jN, {
@@ -118,7 +118,7 @@ function P(e) {
                 children: (0, i.jsxs)(_.Z, {
                     className: Z.card,
                     onClick: D,
-                    disabled: P,
+                    disabled: O,
                     onContextMenu: k,
                     children: [
                         (0, i.jsxs)('div', {
@@ -197,7 +197,7 @@ function P(e) {
                                                         className: Z.memberDetailsText,
                                                         variant: 'text-xs/normal',
                                                         color: 'header-secondary',
-                                                        children: A.intl.format(A.t['LC+S+v'], { membersOnline: t.presenceCount })
+                                                        children: b.intl.format(b.t['LC+S+v'], { membersOnline: t.presenceCount })
                                                     })
                                                 ]
                                             }),
@@ -210,7 +210,7 @@ function P(e) {
                                                         className: Z.memberDetailsText,
                                                         variant: 'text-xs/normal',
                                                         color: 'header-secondary',
-                                                        children: A.intl.format(A.t.zRl6XV, { count: t.memberCount })
+                                                        children: b.intl.format(b.t.zRl6XV, { count: t.memberCount })
                                                     })
                                                 ]
                                             })
@@ -224,12 +224,12 @@ function P(e) {
         ]
     });
 }
-function O(e) {
+function P(e) {
     let { guildId: t, onClick: n, onView: l } = e,
         r = (0, s.e7)([T.Z], () => T.Z.getGuild(t));
     return null == r
         ? null
-        : (0, i.jsx)(P, {
+        : (0, i.jsx)(O, {
               guild: r,
               onClick: n,
               onView: l
@@ -256,7 +256,7 @@ function R(e) {
                               state: n,
                               cleanUp: l,
                               animate: s.current,
-                              children: (0, i.jsx)(O, {
+                              children: (0, i.jsx)(P, {
                                   guildId: t.guildId,
                                   onClick: r,
                                   onView: a
@@ -288,4 +288,4 @@ function R(e) {
         })
     });
 }
-let j = l.memo(O);
+let j = l.memo(P);

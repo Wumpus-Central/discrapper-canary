@@ -23,8 +23,8 @@ function C() {
         s = g.eR.useSetting(),
         C = (0, u.V2)({ location: 'UserSettingsTextImages' }),
         N = g.R$.useSetting(),
-        f = g.cC.useSetting(),
-        I = g.vF.useSetting(),
+        I = g.cC.useSetting(),
+        f = g.vF.useSetting(),
         T = g.H1.useSetting(),
         S = g.ev.useSetting(),
         j = g.x4.useSetting(),
@@ -237,7 +237,7 @@ function C() {
                             setting: x.s6.CHAT_THREADS_SPLIT_VIEW,
                             children: (0, i.jsx)(r.j7V, {
                                 className: E.marginTop8,
-                                value: I,
+                                value: f,
                                 onChange: g.vF.updateSetting,
                                 children: p.intl.string(p.t.AInv5u)
                             })
@@ -271,7 +271,7 @@ function C() {
                                 }
                             ],
                             onChange: (e) => g.cC.updateSetting(e.value),
-                            value: f
+                            value: I
                         })
                     ]
                 })

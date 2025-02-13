@@ -17,7 +17,7 @@ let h = [
 ];
 function m(e) {
     let { showRemoveAvatarButton: t, errors: n, onAvatarChange: s, sectionTitle: m, changeAvatarButtonText: g, guildId: x, className: _, disabled: p = !1, isTryItOutFlow: E = !1, forcedDivider: C, withHighlight: N = !1 } = e,
-        f = N ? r.gtL : r.zxk;
+        I = N ? r.gtL : r.zxk;
     return (0, i.jsx)(o.Z, {
         className: _,
         title: m,
@@ -27,7 +27,7 @@ function m(e) {
         children: (0, i.jsxs)('div', {
             className: u.buttonsContainer,
             children: [
-                (0, i.jsx)(f, {
+                (0, i.jsx)(I, {
                     className: l()({ [u.buttonHighlighted]: N }),
                     size: r.zxk.Sizes.SMALL,
                     onClick: () => (0, a.$r)(c.pC.AVATAR, x, E, E ? h : void 0),

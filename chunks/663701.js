@@ -21,14 +21,14 @@ var i = n(200651),
     v = n(377171),
     T = n(540059),
     S = n(243778),
-    b = n(922409),
-    A = n(899740),
+    A = n(922409),
+    b = n(899740),
     Z = n(28476),
     x = n(880257),
     L = n(631885),
     y = n(849862),
-    P = n(522558),
-    O = n(795448),
+    O = n(522558),
+    P = n(795448),
     R = n(441623),
     j = n(457396),
     D = n(108989),
@@ -57,7 +57,7 @@ let et = (e) => {
             a = (0, y.If)(),
             s = (0, u.e7)([R.Z], () => R.Z.canShowFriendsTabBadge()),
             d = (0, u.e7)([f.Z], () => f.Z.useReducedMotion),
-            { enabled: h } = P.w.useExperiment({ location: 'Friends Tab' }, { autoTrackExposure: !1 }),
+            { enabled: h } = O.w.useExperiment({ location: 'Friends Tab' }, { autoTrackExposure: !1 }),
             m = s && h;
         l.useEffect(() => {
             m &&
@@ -73,7 +73,7 @@ let et = (e) => {
             children: [
                 (0, i.jsx)(Y.Qj, {
                     onClick: () => {
-                        m && (z.default.track(X.rMx.GIFT_INTENT_BADGE_CLICKED, { gift_intent_type: J.hX.FRIEND_ANNIVERSARY }), _.Z.setSection(X.pJs.ALL), (0, O.Gk)());
+                        m && (z.default.track(X.rMx.GIFT_INTENT_BADGE_CLICKED, { gift_intent_type: J.hX.FRIEND_ANNIVERSARY }), _.Z.setSection(X.pJs.ALL), (0, P.Gk)());
                     },
                     interactiveClassName: m ? ee.friendsBadge : void 0,
                     selected: t,
@@ -129,13 +129,13 @@ let et = (e) => {
         });
     },
     ei = () => {
-        let e = (0, A.q)();
+        let e = (0, b.q)();
         return e > 0 ? (0, i.jsx)(p.mAB, { count: e }) : null;
     },
     el = (e) => {
         let { selected: t } = e,
             n = (0, c.JA)('messageRequests'),
-            { channelId: l } = (0, b._)();
+            { channelId: l } = (0, A._)();
         if (!(0, Z.a)()) return null;
         let r = null == l ? void 0 : () => g.Z.preload(X.ME, l);
         return (0, i.jsx)(Y.Qj, {

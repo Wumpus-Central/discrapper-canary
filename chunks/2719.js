@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(144114),
     C = n(918505),
     N = n(332473),
-    f = n(921801),
-    I = n(485341),
+    I = n(921801),
+    f = n(485341),
     T = n(687158),
     S = n(518950),
     j = n(184325),
@@ -49,9 +49,9 @@ function U(e) {
     s.useEffect(() => {
         E(null != c.current && c.current.scrollWidth > c.current.clientWidth);
     }, [o.username]);
-    let f = !o.isClaimed(),
-        I = (h && !o.isPomelo() && !o.hasVerifiedEmailOrPhone()) || f,
-        T = I ? M.intl.string(M.t['7Ngnys']) : void 0;
+    let I = !o.isClaimed(),
+        f = (h && !o.isPomelo() && !o.hasVerifiedEmailOrPhone()) || I,
+        T = f ? M.intl.string(M.t['7Ngnys']) : void 0;
     return (0, i.jsxs)('div', {
         className: r()(V.field, a),
         children: [
@@ -122,7 +122,7 @@ function U(e) {
                 children: (e) =>
                     (0, i.jsx)(u.zxk, {
                         ...e,
-                        disabled: I,
+                        disabled: f,
                         size: u.zxk.Sizes.SMALL,
                         className: V.fieldButton,
                         color: u.zxk.Colors.PRIMARY,
@@ -436,7 +436,7 @@ function K() {
             return o()(null != e, 'UserSettingsAccountProfileCard: currentUser cannot be undefined'), e;
         }),
         n = (0, T.ZP)(t.id),
-        s = (0, I.Z)(n),
+        s = (0, f.Z)(n),
         l = P.co.useSetting(),
         r = (0, c.e7)([b.Z], () => b.Z.getErrors()),
         a = null == r ? void 0 : null === (e = r.avatar) || void 0 === e ? void 0 : e[0],
@@ -509,25 +509,25 @@ function K() {
                     (0, i.jsxs)('div', {
                         className: V.fieldList,
                         children: [
-                            (0, i.jsx)(f.F, {
+                            (0, i.jsx)(I.F, {
                                 setting: Z.s6.ACCOUNT_DISPLAY_NAME,
                                 children: (0, i.jsx)(G, {
                                     className: V.fieldSpacerBottom,
                                     user: t
                                 })
                             }),
-                            (0, i.jsx)(f.F, {
+                            (0, i.jsx)(I.F, {
                                 setting: Z.s6.ACCOUNT_USERNAME,
                                 children: (0, i.jsx)(U, { user: t })
                             }),
-                            (0, i.jsx)(f.F, {
+                            (0, i.jsx)(I.F, {
                                 setting: Z.s6.ACCOUNT_EMAIL,
                                 children: (0, i.jsx)(z, {
                                     className: V.fieldSpacer,
                                     user: t
                                 })
                             }),
-                            (0, i.jsx)(f.F, {
+                            (0, i.jsx)(I.F, {
                                 setting: Z.s6.ACCOUNT_PHONE_NUMBER,
                                 children: (0, i.jsx)(Y, {
                                     className: V.fieldSpacer,

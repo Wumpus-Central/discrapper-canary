@@ -1,5 +1,5 @@
 let i, l;
-n.d(t, { Z: () => P }), n(47120);
+n.d(t, { Z: () => O }), n(47120);
 var r,
     a,
     s,
@@ -20,8 +20,8 @@ let E = new Set(),
     v = null,
     T = null,
     S = null,
-    b = null,
     A = null,
+    b = null,
     Z = u.K.get(f.kf) || !1;
 function x(e) {
     let t = e.getGuildId(),
@@ -31,7 +31,7 @@ function x(e) {
 function L() {
     if (((T = p.Z.getChannel()), (S = p.Z.getCategory()), null == T)) return !1;
     let e = T.getGuildId();
-    (v = N = x(T)), null == N[b] && (b = e), (l = null != S), (i = m.o4(T, S)), (A = null), (C = !1), (I = _.QZA.CLOSED), E.clear();
+    (v = N = x(T)), null == N[A] && (A = e), (l = null != S), (i = m.o4(T, S)), (b = null), (C = !1), (I = _.QZA.CLOSED), E.clear();
 }
 class y extends (r = d.ZP.Store) {
     initialize() {
@@ -53,7 +53,7 @@ class y extends (r = d.ZP.Store) {
         return N;
     }
     get selectedOverwriteId() {
-        return b;
+        return A;
     }
     get formState() {
         return I;
@@ -83,7 +83,7 @@ class y extends (r = d.ZP.Store) {
               writable: !0
           })
         : (y[a] = s);
-let P = new y(h.Z, {
+let O = new y(h.Z, {
     CHANNEL_SETTINGS_SET_SECTION: function (e) {
         let { section: t } = e;
         if (null != T || t !== _.CoT.PERMISSIONS) return !1;
@@ -110,14 +110,14 @@ let P = new y(h.Z, {
     },
     CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION: function (e) {
         let { id: t } = e;
-        if (null != N && null != N[t]) b = t;
+        if (null != N && null != N[t]) A = t;
         else {
             if (null == T) return !1;
-            A = t;
+            b = t;
         }
     },
     CHANNEL_SETTINGS_CLOSE: function () {
-        (I = _.QZA.CLOSED), (N = null), (v = null), (T = null), (S = null), (C = !1), E.clear(), (b = null), (A = null);
+        (I = _.QZA.CLOSED), (N = null), (v = null), (T = null), (S = null), (C = !1), E.clear(), (A = null), (b = null);
     },
     CHANNEL_UPDATES: function (e) {
         let { channels: t } = e;
@@ -141,9 +141,9 @@ let P = new y(h.Z, {
                         (N = {
                             ...T.permissionOverwrites,
                             ...n
-                        })[b]
-                            ? (b = t)
-                            : null != A && null != N[A] && ((b = A), (A = null)),
+                        })[A]
+                            ? (A = t)
+                            : null != b && null != N[b] && ((A = b), (b = null)),
                         (i = m.o4(T, S)),
                         !0
                     );

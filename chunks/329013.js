@@ -20,8 +20,8 @@ var i = n(200651),
     E = n(605236),
     C = n(104494),
     N = n(639119),
-    f = n(311476),
-    I = n(165583),
+    I = n(311476),
+    f = n(165583),
     T = n(197115),
     S = n(504983),
     j = n(626135),
@@ -47,7 +47,7 @@ let P = () => {
             c = (0, C.Ng)(),
             d = (0, C.Wp)(c, O.Si.TIER_2),
             u = !r || a,
-            { enabled: g } = f.Z.getCurrentConfig(
+            { enabled: g } = I.Z.getCurrentConfig(
                 { location: 'UserSettingsAppearanceClientThemes' },
                 {
                     autoTrackExposure: !u,
@@ -121,7 +121,7 @@ let P = () => {
                                                               children: R.intl.string(R.t['E+COuL'])
                                                           }),
                                                           (0, i.jsx)('div', { className: D.premiumTier2Divider }),
-                                                          (0, i.jsx)(I.ZP, {
+                                                          (0, i.jsx)(f.ZP, {
                                                               type: O.cd.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL,
                                                               subscriptionTier: O.Si.TIER_2
                                                           })

@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(594174),
     C = n(460562),
     N = n(823379),
-    f = n(981631),
-    I = n(921944),
+    I = n(981631),
+    f = n(921944),
     T = n(388032),
     S = n(913229);
 function j() {
@@ -28,7 +28,7 @@ function j() {
         r = (0, a.e7)([E.default], () => E.default.getCurrentUser()),
         [u, m] = s.useState(!1);
     s.useEffect(() => {
-        (0, _.EW)(c.z.AUTH_SESSIONS_NEW, { dismissAction: I.L.AUTO }), (0, g.fw)();
+        (0, _.EW)(c.z.AUTH_SESSIONS_NEW, { dismissAction: f.L.AUTO }), (0, g.fw)();
         let e = setTimeout(() => m(!0), 500);
         return () => {
             clearTimeout(e), (0, g.$Z)();
@@ -36,7 +36,7 @@ function j() {
     }, []);
     let C = () => {
             o.tn.post({
-                url: f.ANM.AUTH_SESSION_NOTIFICATIONS_DEBUG,
+                url: I.ANM.AUTH_SESSION_NOTIFICATIONS_DEBUG,
                 rejectWithError: !0
             });
         },
@@ -192,9 +192,9 @@ function v(e) {
                     };
             }
         })(null === (l = o.client_info) || void 0 === l ? void 0 : l.os),
-        f = c ? null : (0, x.p)(o.approx_last_used_time),
-        I = [E, p].filter(N.lm),
-        j = [_, f].filter(N.lm);
+        I = c ? null : (0, x.p)(o.approx_last_used_time),
+        f = [E, p].filter(N.lm),
+        j = [_, I].filter(N.lm);
     return (0, i.jsxs)(
         'div',
         {
@@ -214,10 +214,10 @@ function v(e) {
                             variant: 'eyebrow',
                             className: S.sessionInfoRow,
                             children: [
-                                (0, i.jsx)('span', { children: I[0] }),
-                                I.length > 1 &&
+                                (0, i.jsx)('span', { children: f[0] }),
+                                f.length > 1 &&
                                     (0, i.jsxs)(i.Fragment, {
-                                        children: [(0, i.jsx)('span', { children: '\xB7' }), (0, i.jsx)('span', { children: I[1] })]
+                                        children: [(0, i.jsx)('span', { children: '\xB7' }), (0, i.jsx)('span', { children: f[1] })]
                                     })
                             ]
                         }),
@@ -286,7 +286,7 @@ function b() {
                         variant: 'text-sm/medium',
                         className: S.sessionInfoRow,
                         color: 'text-muted',
-                        children: (0, i.jsx)('span', { children: T.intl.format(T.t['044+8v'], { onClick: () => u.Z.setSection(f.oAB.ACCOUNT, null, { analyticsLocations: [m.Z.USER_SETTINGS_SESSIONS] }) }) })
+                        children: (0, i.jsx)('span', { children: T.intl.format(T.t['044+8v'], { onClick: () => u.Z.setSection(I.oAB.ACCOUNT, null, { analyticsLocations: [m.Z.USER_SETTINGS_SESSIONS] }) }) })
                     })
                 ]
             })

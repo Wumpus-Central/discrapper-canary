@@ -46,7 +46,7 @@ let C = { offset: 2 },
     };
 function v(e) {
     var t, l;
-    let { channel: r, user: p, nick: v, mute: T, deaf: S, serverMute: b, serverDeaf: A } = e,
+    let { channel: r, user: p, nick: v, mute: T, deaf: S, serverMute: A, serverDeaf: b } = e,
         Z = (0, s.e7)([g.Z], () => g.Z.isLocalMute(p.id)),
         x = (0, d.Z)({
             userId: p.id,
@@ -54,9 +54,9 @@ function v(e) {
         }),
         L = null !== (t = r.getGuildId()) && void 0 !== t ? t : void 0,
         y = p.getAvatarURL(r.guild_id, 24),
-        P = null != v ? v : _.ZP.getName(p),
+        O = null != v ? v : _.ZP.getName(p),
         {
-            icon: O,
+            icon: P,
             colorize: R,
             getStatus: j
         } = null !==
@@ -68,9 +68,9 @@ function v(e) {
                 if (r) return N.localMute;
                 if (l) return N.mute;
             })({
-                serverDeaf: A,
+                serverDeaf: b,
                 deaf: S,
-                serverMute: b,
+                serverMute: A,
                 mute: T,
                 localMute: Z
             })) && void 0 !== l
@@ -79,10 +79,10 @@ function v(e) {
         D =
             null != j
                 ? E.intl.formatToPlainString(E.t['1+MVBA'], {
-                      userName: P,
+                      userName: O,
                       status: j()
                   })
-                : P;
+                : O;
     function w(e) {
         null != L
             ? (0, c.jW)(e, async () => {
@@ -137,8 +137,8 @@ function v(e) {
                                 className: a()(I.avatar, { [I.speaking]: x }),
                                 style: { backgroundImage: 'url('.concat(y, ')') },
                                 children:
-                                    null != O
-                                        ? (0, i.jsx)(O, {
+                                    null != P
+                                        ? (0, i.jsx)(P, {
                                               className: a()(I.avatarIconOverlay, { [I.avatarIconRed]: R }),
                                               color: 'currentColor',
                                               size: 'xs'

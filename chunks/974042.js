@@ -39,7 +39,7 @@ function S(e) {
         usernameLower: null != t ? t.username.toLowerCase() : null
     };
 }
-function b(e) {
+function A(e) {
     return {
         status: E.Z.getStatus(e),
         isMobile: E.Z.isMobileOnline(e),
@@ -47,7 +47,7 @@ function b(e) {
         applicationStream: g.Z.getAnyStreamForUser(e)
     };
 }
-function A(e) {
+function b(e) {
     let t = [];
     return (
         r()(_.ZP.memberOf(e))
@@ -86,8 +86,8 @@ class x {
                         userId: i,
                         nickname: I.Z.getNickname(i),
                         ...S(i),
-                        ...b(i),
                         ...A(i),
+                        ...b(i),
                         spam: I.Z.isSpam(i),
                         ignoredUser: I.Z.isIgnored(i),
                         giftIntentType: n === N.OGo.FRIEND && p.Z.isTopAffinityFriendAnniversary({ userId: i }) ? v.hX.FRIEND_ANNIVERSARY : void 0,
@@ -112,8 +112,8 @@ class x {
                                 applicationId: r,
                                 nickname: I.Z.getNickname(l),
                                 ...S(l),
-                                ...b(l),
                                 ...A(l),
+                                ...b(l),
                                 spam: I.Z.isSpam(l),
                                 ignoredUser: I.Z.isIgnored(l),
                                 isGameRelationship: !0
@@ -130,8 +130,8 @@ class x {
                     type: 99,
                     nickname: e.name,
                     ...S(e.key),
-                    ...b(e.key),
-                    ...A(e.key)
+                    ...A(e.key),
+                    ...b(e.key)
                 })
         );
         return new x(r().concat(n, i, l));
@@ -201,36 +201,36 @@ class x {
 }
 let L = !0,
     y = !1,
-    P = N.pJs.ONLINE,
-    O = new x(),
+    O = N.pJs.ONLINE,
+    P = new x(),
     R = !0,
     j = !1;
 function D() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    L && (e || (P !== N.pJs.ONLINE && P !== N.pJs.ADD_FRIEND)) && !y && ((L = !1), (y = !0), o.Z.fetchRelationships());
+    L && (e || (O !== N.pJs.ONLINE && O !== N.pJs.ADD_FRIEND)) && !y && ((L = !1), (y = !0), o.Z.fetchRelationships());
 }
 function w() {
-    if (((L = !0), R ? (y = !1) : D(), (O = O.reset()), j)) return;
-    let e = O.getRelationshipCounts();
-    P = 0 === e[N.OGo.FRIEND] ? (0 !== e[N.OGo.PENDING_INCOMING] ? N.pJs.PENDING : N.pJs.ADD_FRIEND) : N.pJs.ONLINE;
+    if (((L = !0), R ? (y = !1) : D(), (P = P.reset()), j)) return;
+    let e = P.getRelationshipCounts();
+    O = 0 === e[N.OGo.FRIEND] ? (0 !== e[N.OGo.PENDING_INCOMING] ? N.pJs.PENDING : N.pJs.ADD_FRIEND) : N.pJs.ONLINE;
 }
 function k() {
-    O = R ? new x() : O.reset();
+    P = R ? new x() : P.reset();
 }
 function M(e) {
     return function () {
-        return !R && !!O.update(e) && ((O = O.clone()), !0);
+        return !R && !!P.update(e) && ((P = P.clone()), !0);
     };
 }
 class U extends (i = a.ZP.Store) {
     initialize() {
-        this.waitFor(I.Z, E.Z, C.default, f.Z, _.ZP, g.Z, u.Z, d.Z), this.syncWith([I.Z], k), this.syncWith([m.Z], k), this.syncWith([u.Z], k), this.syncWith([p.Z], k), this.syncWith([C.default], M(S)), this.syncWith([E.Z, g.Z], M(b)), w();
+        this.waitFor(I.Z, E.Z, C.default, f.Z, _.ZP, g.Z, u.Z, d.Z), this.syncWith([I.Z], k), this.syncWith([m.Z], k), this.syncWith([u.Z], k), this.syncWith([p.Z], k), this.syncWith([C.default], M(S)), this.syncWith([E.Z, g.Z], M(A)), w();
     }
     getState() {
         return {
             fetching: y,
-            section: P,
-            rows: O
+            section: O,
+            rows: P
         };
     }
 }
@@ -240,7 +240,7 @@ let G = new U(s.Z, {
         w();
     },
     FRIENDS_SET_SECTION: function (e) {
-        (P = e.section), D();
+        (O = e.section), D();
     },
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
@@ -253,6 +253,6 @@ let G = new U(s.Z, {
         (L = !0), (y = !0);
     },
     FRIENDS_SET_INITIAL_SECTION: function (e) {
-        (P = e.section), (j = !0);
+        (O = e.section), (j = !0);
     }
 });

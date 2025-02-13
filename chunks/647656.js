@@ -71,79 +71,79 @@ let I = ['349134787773988865'],
                 let v,
                     {
                         socket: T,
-                        args: { pid: S, activity: b },
-                        isSocketConnected: A
+                        args: { pid: S, activity: A },
+                        isSocketConnected: b
                     } = e;
                 if (![f.He.IPC, f.He.WEBSOCKET, f.He.POST_MESSAGE].includes(T.transport)) throw new p.Z({ errorCode: E.lTL.INVALID_COMMAND }, 'command not available from "'.concat(T.transport, '" transport'));
                 if (null == S && f.He.IPC === T.transport) throw new p.Z({ errorCode: E.lTL.INVALID_COMMAND }, 'nonzero pid required');
-                if (null == b)
+                if (null == A)
                     return (
                         a.Z.dispatch({
                             type: 'LOCAL_ACTIVITY_UPDATE',
                             socketId: T.id,
                             pid: S,
-                            activity: b
+                            activity: A
                         }),
-                        Promise.resolve(b)
+                        Promise.resolve(A)
                     );
-                b.name = T.application.name;
+                A.name = T.application.name;
                 let Z = T.application.id;
-                b.application_id = Z;
+                A.application_id = Z;
                 let x = T.transport === f.He.POST_MESSAGE,
-                    L = (0, g.S5)(b, x);
-                L > 0 && (b.flags = L);
+                    L = (0, g.S5)(A, x);
+                L > 0 && (A.flags = L);
                 let y = d.Z.getApplication(null != Z ? Z : void 0);
                 if (null != y && (0, s.Kb)(y) && x) {
                     let e = o.ZP.getCurrentEmbeddedActivity();
                     if ((null == e ? void 0 : e.applicationId) === y.id) {
                         let t = e.compositeInstanceId;
                         null != t &&
-                            (b.secrets = {
-                                join: null !== (r = null === (i = b.secrets) || void 0 === i ? void 0 : i.join) && void 0 !== r ? r : t,
-                                ...(null !== (_ = b.secrets) && void 0 !== _ ? _ : {})
+                            (A.secrets = {
+                                join: null !== (r = null === (i = A.secrets) || void 0 === i ? void 0 : i.join) && void 0 !== r ? r : t,
+                                ...(null !== (_ = A.secrets) && void 0 !== _ ? _ : {})
                             }),
-                            (b.party = {
-                                size: null !== (C = null === (n = b.party) || void 0 === n ? void 0 : n.size) && void 0 !== C ? C : c.M$,
-                                ...(null !== (N = b.party) && void 0 !== N ? N : {})
+                            (A.party = {
+                                size: null !== (C = null === (n = A.party) || void 0 === n ? void 0 : n.size) && void 0 !== C ? C : c.M$,
+                                ...(null !== (N = A.party) && void 0 !== N ? N : {})
                             }),
-                            (b.flags = b.flags | c.Cj);
+                            (A.flags = A.flags | c.Cj);
                     }
                 }
-                delete b.instance, null === (t = b.party) || void 0 === t || delete t.privacy;
-                let { assets: P, party: O, secrets: R, timestamps: j, buttons: D, type: w } = b;
-                if ((null == w && (b.type = E.IIU.PLAYING), null != R)) {
+                delete A.instance, null === (t = A.party) || void 0 === t || delete t.privacy;
+                let { assets: O, party: P, secrets: R, timestamps: j, buttons: D, type: w } = A;
+                if ((null == w && (A.type = E.IIU.PLAYING), null != R)) {
                     let e = l()
                         .values(R)
                         .filter((e) => !!e);
-                    if (null != O && l().intersection(e, [O.id]).length > 0 && !I.includes(T.application.id)) throw new p.Z({ errorCode: E.lTL.INVALID_ACTIVITY_SECRET }, 'secrets cannot match the party id');
+                    if (null != P && l().intersection(e, [P.id]).length > 0 && !I.includes(T.application.id)) throw new p.Z({ errorCode: E.lTL.INVALID_ACTIVITY_SECRET }, 'secrets cannot match the party id');
                     if (l().uniq(e).length < e.length) throw new p.Z({ errorCode: E.lTL.INVALID_ACTIVITY_SECRET }, 'secrets must be unique');
                     if (null != D) throw new p.Z({ errorCode: E.lTL.INVALID_ACTIVITY_SECRET }, 'secrets cannot currently be sent with buttons');
                 }
-                if ((null != D && ((b.metadata = { button_urls: D.map((e) => e.url) }), (b.buttons = D.map((e) => e.label))), null != j)) for (let e of Object.keys(j)) Date.now().toString().length - j[e].toString().length > 2 && (j[e] = Math.floor(j[e] * m.Z.Millis.SECOND));
-                if (null == P) v = Promise.resolve([]);
+                if ((null != D && ((A.metadata = { button_urls: D.map((e) => e.url) }), (A.buttons = D.map((e) => e.label))), null != j)) for (let e of Object.keys(j)) Date.now().toString().length - j[e].toString().length > 2 && (j[e] = Math.floor(j[e] * m.Z.Millis.SECOND));
+                if (null == O) v = Promise.resolve([]);
                 else {
                     if (null == T.application || null == T.application.id) throw Error();
-                    v = (0, h.fetchAssetIds)(T.application.id, [P.large_image, P.small_image]);
+                    v = (0, h.fetchAssetIds)(T.application.id, [O.large_image, O.small_image]);
                 }
                 return v.then((e) => {
                     var t, n;
                     let [i, l] = e;
-                    if ((null != P && (null != i ? (P.large_image = i) : delete P.large_image, null != l ? (P.small_image = l) : delete P.small_image), !A())) return;
+                    if ((null != O && (null != i ? (O.large_image = i) : delete O.large_image, null != l ? (O.small_image = l) : delete O.small_image), !b())) return;
                     a.Z.dispatch({
                         type: 'LOCAL_ACTIVITY_UPDATE',
                         socketId: T.id,
                         pid: S,
-                        activity: b
+                        activity: A
                     });
-                    let { secrets: r, party: s } = b,
+                    let { secrets: r, party: s } = A,
                         o = {
                             application_id: T.application.id,
-                            type: b.type,
-                            name: b.name,
-                            details: null !== (t = b.details) && void 0 !== t ? t : '',
-                            state: null !== (n = b.state) && void 0 !== n ? n : ''
+                            type: A.type,
+                            name: A.name,
+                            details: null !== (t = A.details) && void 0 !== t ? t : '',
+                            state: null !== (n = A.state) && void 0 !== n ? n : ''
                         };
-                    return null != r && ((o.has_match_secret = !!r.match), (o.has_join_secret = !!r.join)), null != P && (o.has_images = !!(P.large_image || P.small_image)), null != s && ((o.party_max = null != s.size && s.size[1] > 0 ? s.size[1] : void 0), (o.party_id = s.id)), u.default.track(E.rMx.ACTIVITY_UPDATED, o), b;
+                    return null != r && ((o.has_match_secret = !!r.match), (o.has_join_secret = !!r.join)), null != O && (o.has_images = !!(O.large_image || O.small_image)), null != s && ((o.party_max = null != s.size && s.size[1] > 0 ? s.size[1] : void 0), (o.party_id = s.id)), u.default.track(E.rMx.ACTIVITY_UPDATED, o), A;
                 });
             }
         }

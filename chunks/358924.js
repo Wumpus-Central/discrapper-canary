@@ -21,14 +21,14 @@ var i,
     v = n(906732),
     T = n(812206),
     S = n(933557),
-    b = n(194082),
-    A = n(264165),
+    A = n(194082),
+    b = n(264165),
     Z = n(548816),
     x = n(925329),
     L = n(102172),
     y = n(871118),
-    P = n(707409),
-    O = n(359110),
+    O = n(707409),
+    P = n(359110),
     R = n(769654),
     j = n(849171),
     D = n(314897),
@@ -88,10 +88,10 @@ class $ extends r.Component {
             : X(
                   (0, f.Z)(t)
                       ? (0, l.jsx)(Q, { timestamps: n })
-                      : (0, l.jsx)(P.ZP, {
+                      : (0, l.jsx)(O.ZP, {
                             start: n.start,
                             end: n.end,
-                            location: P.ZP.Locations.USER_ACTIVITY,
+                            location: O.ZP.Locations.USER_ACTIVITY,
                             className: W.__invalid_playTime
                         })
               );
@@ -301,7 +301,7 @@ let ei = (e) => {
                     }),
                     (0, l.jsx)(d.P3F, {
                         onClick: () => {
-                            u.default.selectVoiceChannel(a.id), (0, O.Kh)(a.id);
+                            u.default.selectVoiceChannel(a.id), (0, P.Kh)(a.id);
                         },
                         focusProps: { ringTarget: m },
                         children: (0, l.jsxs)('div', {
@@ -407,7 +407,7 @@ let ei = (e) => {
             { name: c, details: u, assets: h, application_id: m } = i;
         if (null != h && (0, C.Z)(i)) {
             var g;
-            t = (0, l.jsx)(A.Z, {
+            t = (0, l.jsx)(b.Z, {
                 className: W.twitchSectionPreviewWrapper,
                 aspectRatio: 16 / 9,
                 children: (0, l.jsxs)(d.P3F, {
@@ -495,7 +495,7 @@ let ei = (e) => {
                         (0, l.jsxs)('div', {
                             children: [q(V.ZP.getName(r)), X(g)]
                         }),
-                        (0, l.jsx)(b.ZP, { size: b.ZP.Sizes.SMALL })
+                        (0, l.jsx)(A.ZP, { size: A.ZP.Sizes.SMALL })
                     ]
                 }),
                 p

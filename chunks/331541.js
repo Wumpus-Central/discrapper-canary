@@ -21,14 +21,14 @@ var i = n(200651),
     v = n(483424),
     T = n(681837),
     S = n(502762),
-    b = n(530),
-    A = n(309494),
+    A = n(530),
+    b = n(309494),
     Z = n(4517),
     x = n(171368),
     L = n(420654),
     y = n(695346),
-    P = n(158776),
-    O = n(246946),
+    O = n(158776),
+    P = n(246946),
     R = n(572004),
     j = n(5192),
     D = n(74538),
@@ -56,8 +56,8 @@ function W(e) {
     l.useEffect(() => {
         null == W || W(Q.current);
     }, [Q, W]);
-    let $ = (0, s.e7)([P.Z], () => P.Z.getStatus(t.id)),
-        ee = (0, s.e7)([O.Z], () => O.Z.hidePersonalInformation),
+    let $ = (0, s.e7)([O.Z], () => O.Z.getStatus(t.id)),
+        ee = (0, s.e7)([P.Z], () => P.Z.hidePersonalInformation),
         et = (0, m.p)(),
         en = y.Sb.useSetting(),
         ei = (0, U.I)($),
@@ -115,7 +115,7 @@ function W(e) {
                         (0, i.jsxs)(o.Ttm, {
                             className: F.body,
                             children: [
-                                (0, i.jsx)(b.Z, {
+                                (0, i.jsx)(A.Z, {
                                     user: t,
                                     className: F.username,
                                     profileType: V.y0.BITE_SIZE,
@@ -130,7 +130,7 @@ function W(e) {
                                     nicknameIcons: (0, i.jsxs)(i.Fragment, {
                                         children: [
                                             (0, i.jsx)(T.Z, { userId: t.id }),
-                                            (0, i.jsx)(A.Z, {
+                                            (0, i.jsx)(b.Z, {
                                                 user: t,
                                                 isHovering: J
                                             })

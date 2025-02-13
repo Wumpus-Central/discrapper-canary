@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(15640),
     C = n(600164),
     N = n(925329),
-    f = n(406174),
-    I = n(810762),
+    I = n(406174),
+    f = n(810762),
     T = n(681833),
     S = n(856888),
     j = n(921801),
@@ -131,7 +131,7 @@ let X = function () {
         ? (0, i.jsx)(x.Z, {})
         : h && N
           ? D === G.cP
-              ? (0, i.jsx)(I.Z, { onGoBack: () => g.Z.clearSubsection() })
+              ? (0, i.jsx)(f.Z, { onGoBack: () => g.Z.clearSubsection() })
               : D === G.XZ
                 ? (0, i.jsx)(S.Z, { onGoBack: () => g.Z.clearSubsection() })
                 : (0, i.jsx)('div', {
@@ -176,7 +176,7 @@ let X = function () {
                                   (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           (0, i.jsx)(K, {}),
-                                          (0, i.jsx)(f.Z, {
+                                          (0, i.jsx)(I.Z, {
                                               count: B,
                                               onClickManageSubscription: () => g.Z.setSection(U.oAB.SUBSCRIPTIONS, G.cP)
                                           })

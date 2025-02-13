@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(47120);
+n.d(t, { Z: () => f }), n(47120);
 var i = n(200651),
     s = n(192379),
     l = n(120356),
@@ -17,7 +17,7 @@ var i = n(200651),
     E = n(981631),
     C = n(388032),
     N = n(633137);
-let f = [
+let I = [
     {
         label: 'Latin alphabet',
         value: 'aBcDeFgHiJkLmNoPqRsTuVwXyZ'
@@ -47,13 +47,13 @@ let f = [
         value: 'custom'
     }
 ];
-function I() {
+function f() {
     let [e, t] = s.useState(Math.round((window.outerWidth / window.innerWidth) * 100)),
         { platformZoom: n, theme: l } = (0, a.cj)([p.Z, m.Z], () => ({
             theme: p.Z.theme,
             platformZoom: m.Z.zoom
         })),
-        [I, T] = s.useState('upright'),
+        [f, T] = s.useState('upright'),
         S = ['normal', 'medium', 'semibold', 'bold', 'extrabold'],
         j = new Map([
             ['normal', 400],
@@ -74,22 +74,22 @@ function I() {
             return (0, x.fD)() ? (null === (t = g.C.getCurrentBuildOverride()) || void 0 === t ? void 0 : null === (e = t.overrides) || void 0 === e ? void 0 : e.discord_web) : null;
         }),
         [A, O] = (0, h.R)('playground-overrideText', null),
-        [R, D] = (0, h.R)('playground-defaultText', f[0].value),
+        [R, D] = (0, h.R)('playground-defaultText', I[0].value),
         P = s.useCallback(
             (e) => {
-                let t = f.find((t) => {
+                let t = I.find((t) => {
                     let { value: n } = t;
                     return n === e;
                 });
-                '' === e || null == e ? (D(f[0].value), O(null)) : null != t ? D(t.value) : (D('custom'), O(e));
+                '' === e || null == e ? (D(I[0].value), O(null)) : null != t ? D(t.value) : (D('custom'), O(e));
             },
             [O, D]
         );
     return (0, i.jsx)('div', {
         className: N.fullscreen,
         style: {
-            '--playground-font-family': 'mono' === I ? 'gg mono' : 'gg sans',
-            '--playground-font-style': 'italic' === I ? 'italic' : 'normal'
+            '--playground-font-family': 'mono' === f ? 'gg mono' : 'gg sans',
+            '--playground-font-style': 'italic' === f ? 'italic' : 'normal'
         },
         children: (0, i.jsxs)(o.hjN, {
             tag: o.RB0.H1,
@@ -122,7 +122,7 @@ function I() {
                         (0, i.jsx)(o.xJW, {
                             children: (0, i.jsx)(o.q4e, {
                                 className: N.select,
-                                options: f,
+                                options: I,
                                 onChange: (e) => P(e),
                                 value: R
                             })
@@ -180,7 +180,7 @@ function I() {
                                 onChange: (e) => {
                                     T(e.value);
                                 },
-                                value: I
+                                value: f
                             })
                         }),
                         (0, i.jsx)(u.Z, {

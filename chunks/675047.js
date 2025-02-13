@@ -28,14 +28,14 @@ function N() {
           })
         : null;
 }
-function f() {
+function I() {
     return (0, i.jsx)(_.Z, {
         title: C.intl.string(C.t.BG7Qsb),
         webSetting: E.s6.PRIVACY_AND_SAFETY_RECEIVE_DISCORD_DATA_CATEGORY,
         children: (0, i.jsx)(d.Z, {})
     });
 }
-function I() {
+function f() {
     return (0, i.jsxs)(_.Z, {
         title: C.intl.string(C.t.SRZyHh),
         webSetting: E.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY,
@@ -49,7 +49,7 @@ function T() {
         }),
         (0, i.jsxs)(c.N, {
             header: C.intl.string(C.t.OAuOHB),
-            children: [(0, i.jsx)(I, {}), (0, i.jsx)(f, {}), (0, i.jsx)(N, {})]
+            children: [(0, i.jsx)(f, {}), (0, i.jsx)(I, {}), (0, i.jsx)(N, {})]
         })
     );
 }

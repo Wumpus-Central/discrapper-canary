@@ -21,8 +21,8 @@ var i = n(200651),
     v = n(20967),
     T = n(504762),
     S = n(807152),
-    b = n(176505),
-    A = n(388032),
+    A = n(176505),
+    b = n(388032),
     Z = n(414204);
 function x(e) {
     let { guildId: t } = e,
@@ -30,12 +30,12 @@ function x(e) {
         x = (0, a.e7)([p.Z], () => p.Z.isConnected()),
         L = (0, h.Z)(t),
         y = (0, I.Z)(t),
-        P = (0, a.e7)([f.Z], () => f.Z.isSubscriptionFetching),
-        O = (0, E.f)(),
+        O = (0, a.e7)([f.Z], () => f.Z.isSubscriptionFetching),
+        P = (0, E.f)(),
         { shouldHideGuildPurchaseEntryPoints: R, restrictionsLoading: j } = (0, m.uP)(t),
-        D = null == n || !O || P || j;
+        D = null == n || !P || O || j;
     (0, d.Tt)({
-        subsection: A.intl.string(A.t['KzCF//']),
+        subsection: b.intl.string(b.t['KzCF//']),
         location: null == n ? void 0 : n.name
     }),
         (0, c.Z)(r.tq ? 'role-subscriptions-overview' : void 0);
@@ -45,7 +45,7 @@ function x(e) {
             o.jg();
         }, []),
         l.useEffect(() => {
-            w && !r.tq && (0, u.M)(t, b.oC.ROLE_SUBSCRIPTIONS);
+            w && !r.tq && (0, u.M)(t, A.oC.ROLE_SUBSCRIPTIONS);
         }, [t, w]),
         r.tq && w)
     ) {
@@ -63,7 +63,7 @@ function x(e) {
                         icon: (0, s.GSL)(C.Z),
                         'aria-hidden': !0
                     }),
-                    (0, i.jsx)(g.Z.Title, { children: A.intl.string(A.t['KzCF//']) })
+                    (0, i.jsx)(g.Z.Title, { children: b.intl.string(b.t['KzCF//']) })
                 ]
             }),
             (0, i.jsx)('div', { id: S.v }),

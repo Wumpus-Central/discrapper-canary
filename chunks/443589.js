@@ -21,8 +21,8 @@ var i = n(200651),
     v = n(474936),
     T = n(981631),
     S = n(388032),
-    b = n(810294),
-    A = n(304899);
+    A = n(810294),
+    b = n(304899);
 let Z = {
     width: 14,
     height: 14
@@ -30,7 +30,7 @@ let Z = {
 function x(e) {
     let { recipientUser: t, giftIntentType: n, analyticsPage: r, shouldHighlight: x } = e,
         { analyticsLocations: L } = (0, u.ZP)(),
-        { isHovered: y, setIsHovered: P, onMouseEnter: O, onMouseLeave: R } = (0, p.Z)(200, 300),
+        { isHovered: y, setIsHovered: O, onMouseEnter: P, onMouseLeave: R } = (0, p.Z)(200, 300),
         { enableEmojiCTA: j } = E.w.useExperiment({ location: 'GiftIntentActionButton' }, { autoTrackExposure: !1 });
     l.useEffect(() => {
         let e = g.Z.getUserAffinity(t.id);
@@ -45,9 +45,9 @@ function x(e) {
     }, [t, n]);
     let D = l.useCallback(
             (e) => {
-                'focus' !== e.type && O();
+                'focus' !== e.type && P();
             },
-            [O]
+            [P]
         ),
         w = (e) => {
             e.stopPropagation();
@@ -78,15 +78,15 @@ function x(e) {
                 ? (0, i.jsx)(d.P3F, {
                       'aria-label': M(),
                       onClick: w,
-                      className: a()(A.actionButton, b.popoutButton, {
-                          [A.highlight]: x,
-                          [A.actionButtonMobile]: c.tq
+                      className: a()(b.actionButton, A.popoutButton, {
+                          [b.highlight]: x,
+                          [b.actionButtonMobile]: c.tq
                       }),
                       onMouseEnter: D,
                       onMouseLeave: R,
                       children: (0, i.jsx)(s.animated.div, {
-                          className: b.spriteContainer,
-                          children: (0, i.jsx)('div', { className: b.sprite })
+                          className: A.spriteContainer,
+                          children: (0, i.jsx)('div', { className: A.sprite })
                       })
                   })
                 : (0, i.jsx)(d.zxk, {
@@ -94,7 +94,7 @@ function x(e) {
                       onMouseEnter: D,
                       onMouseLeave: R,
                       children: (0, i.jsxs)('div', {
-                          className: b.pillContentContainer,
+                          className: A.pillContentContainer,
                           children: [
                               (0, i.jsx)(d.OgN, {
                                   size: 'custom',
@@ -105,7 +105,7 @@ function x(e) {
                               (0, i.jsx)(d.Text, {
                                   variant: 'text-sm/medium',
                                   color: 'always-white',
-                                  className: b.pillButtonText,
+                                  className: A.pillButtonText,
                                   children: M()
                               })
                           ]
@@ -120,14 +120,14 @@ function x(e) {
         align: 'top',
         spacing: 9,
         onRequestClose: () => {
-            P(!1);
+            O(!1);
         },
         renderPopout: (e) =>
             (0, i.jsx)(N.Z, {
                 giftIntentType: n,
                 premiumGiftIntentCardType: N.U.COACHMARK,
                 recipientUser: t,
-                onMouseEnter: O,
+                onMouseEnter: P,
                 onMouseLeave: R,
                 popoutPosition: e.position,
                 analyticsPage: r,

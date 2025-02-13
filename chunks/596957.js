@@ -21,18 +21,18 @@ var i = n(200651),
     v = n(434184),
     T = n(701861),
     S = n(437314),
-    b = n(696577),
-    A = n(163417),
+    A = n(696577),
+    b = n(163417),
     Z = n(830880),
     x = n(492347),
     L = n(42575),
     y = n(617015),
-    P = n(981631),
-    O = n(388032),
+    O = n(981631),
+    P = n(388032),
     R = n(718762);
 let j = [];
 function D() {
-    c.Z.setSection(P.pJs.ADD_FRIEND);
+    c.Z.setSection(O.pJs.ADD_FRIEND);
 }
 function w() {
     (0, o.ZDy)(async () => {
@@ -42,7 +42,7 @@ function w() {
 }
 function k(e) {
     let { section: t, showSpamCta: n } = e,
-        r = l.useMemo(() => (n ? w : t !== P.pJs.PENDING ? D : void 0), [n, t]);
+        r = l.useMemo(() => (n ? w : t !== O.pJs.PENDING ? D : void 0), [n, t]);
     return (0, i.jsx)('div', {
         className: R.emptyStateContainer,
         children: (0, i.jsx)(
@@ -70,14 +70,14 @@ let M = function (e) {
         H = B && V,
         [F, z] = l.useState(() => {
             let e = {};
-            for (let t of Object.values(P.pJs)) e[t] = '';
+            for (let t of Object.values(O.pJs)) e[t] = '';
             return e;
         }),
         W = l.useCallback(
             (e) => {
                 let { key: t, ...n } = e;
                 switch (c) {
-                    case P.pJs.BLOCKED:
+                    case O.pJs.BLOCKED:
                         return (0, i.jsx)(
                             v.Z,
                             {
@@ -86,9 +86,9 @@ let M = function (e) {
                             },
                             t
                         );
-                    case P.pJs.PENDING:
+                    case O.pJs.PENDING:
                         return (0, i.jsx)(
-                            b.Z,
+                            A.Z,
                             {
                                 ...n,
                                 isFocused: D,
@@ -96,7 +96,7 @@ let M = function (e) {
                             },
                             t
                         );
-                    case P.pJs.SUGGESTIONS:
+                    case O.pJs.SUGGESTIONS:
                         return (0, i.jsx)(
                             L.Z,
                             {
@@ -105,8 +105,8 @@ let M = function (e) {
                             },
                             t
                         );
-                    case P.pJs.ONLINE:
-                    case P.pJs.ALL:
+                    case O.pJs.ONLINE:
+                    case O.pJs.ALL:
                     default:
                         return (0, i.jsx)(
                             T.Z,
@@ -135,9 +135,9 @@ let M = function (e) {
                 [c]: ''
             });
         }, [F, c]),
-        q = l.useMemo(() => c === P.pJs.PENDING && (r.filter(P.pJs.SPAM).length > 0 || r.filter(P.pJs.PENDING_IGNORED).length > 0), [r, c]),
+        q = l.useMemo(() => c === O.pJs.PENDING && (r.filter(O.pJs.SPAM).length > 0 || r.filter(O.pJs.PENDING_IGNORED).length > 0), [r, c]),
         X = l.useMemo(() => r.filter(c, F[c]), [r, F, c]),
-        Q = B && c === P.pJs.PENDING,
+        Q = B && c === O.pJs.PENDING,
         J = l.useMemo(() => {
             if (!Q) return j;
             let e = [];
@@ -151,20 +151,20 @@ let M = function (e) {
         }, [Q, X]);
     (0, p.Z)(J, Q);
     let $ = l.useMemo(() => {
-            if (c === P.pJs.PENDING) {
+            if (c === O.pJs.PENDING) {
                 let e = [],
                     t = [];
                 return (
                     X.forEach((n) => {
-                        n.type === P.OGo.PENDING_INCOMING ? e.push(n) : n.type === P.OGo.PENDING_OUTGOING && t.push(n);
+                        n.type === O.OGo.PENDING_INCOMING ? e.push(n) : n.type === O.OGo.PENDING_OUTGOING && t.push(n);
                     }),
                     [e, t]
                 );
             }
             return [X];
         }, [X, c]),
-        ee = l.useMemo(() => X.filter((e) => e.type === P.OGo.PENDING_INCOMING).length, [X]),
-        et = c === P.pJs.PENDING && ee > 0 && ee >= y.yf,
+        ee = l.useMemo(() => X.filter((e) => e.type === O.OGo.PENDING_INCOMING).length, [X]),
+        et = c === O.pJs.PENDING && ee > 0 && ee >= y.yf,
         en = l.useCallback(
             (e) => {
                 e.stopPropagation(), d.Z.confirmClearPendingRelationships(ee);
@@ -175,21 +175,21 @@ let M = function (e) {
             (e) => {
                 let n = (function (e, t, n) {
                     switch (e) {
-                        case P.pJs.ONLINE:
-                            return O.intl.formatToPlainString(O.t.BagU2d, { online: t.toString() });
-                        case P.pJs.PENDING:
-                            if (0 === n) return O.intl.formatToPlainString(O.t['g+3FIS'], { count: t.toString() });
-                            if (1 === n) return O.intl.formatToPlainString(O.t.npJsRk, { count: t.toString() });
+                        case O.pJs.ONLINE:
+                            return P.intl.formatToPlainString(P.t.BagU2d, { online: t.toString() });
+                        case O.pJs.PENDING:
+                            if (0 === n) return P.intl.formatToPlainString(P.t['g+3FIS'], { count: t.toString() });
+                            if (1 === n) return P.intl.formatToPlainString(P.t.npJsRk, { count: t.toString() });
                             throw Error('Unexpected pending friend requests section index: '.concat(n));
-                        case P.pJs.SUGGESTIONS:
-                            return O.intl.formatToPlainString(O.t['DYMZ/v'], { count: t.toString() });
-                        case P.pJs.BLOCKED:
-                            return O.intl.formatToPlainString(O.t.M83kKy, { count: t.toString() });
+                        case O.pJs.SUGGESTIONS:
+                            return P.intl.formatToPlainString(P.t['DYMZ/v'], { count: t.toString() });
+                        case O.pJs.BLOCKED:
+                            return P.intl.formatToPlainString(P.t.M83kKy, { count: t.toString() });
                         default:
-                            return O.intl.formatToPlainString(O.t.rHRrhI, { count: t.toString() });
+                            return P.intl.formatToPlainString(P.t.rHRrhI, { count: t.toString() });
                     }
                 })(c, $[e].length, e);
-                return c === P.pJs.PENDING && 0 === e
+                return c === O.pJs.PENDING && 0 === e
                     ? (0, i.jsxs)(
                           'div',
                           {
@@ -206,8 +206,8 @@ let M = function (e) {
                                           className: R.clearButton,
                                           size: o.zxk.Sizes.TINY,
                                           onClick: en,
-                                          'aria-label': O.intl.string(O.t.O8k7Oz),
-                                          children: O.intl.string(O.t.O8k7Oz)
+                                          'aria-label': P.intl.string(P.t.O8k7Oz),
+                                          children: P.intl.string(P.t.O8k7Oz)
                                       })
                               ]
                           },
@@ -229,7 +229,7 @@ let M = function (e) {
         );
     if (
         (l.useEffect(() => {
-            c === P.pJs.ALL && (0, f.d$)();
+            c === O.pJs.ALL && (0, f.d$)();
         }, [c]),
         0 === X.length && '' === F[c])
     )
@@ -242,7 +242,7 @@ let M = function (e) {
     return (0, i.jsx)(m.Gt, {
         value: n,
         children: (0, i.jsxs)(u.Z, {
-            section: P.jXE.FRIENDS_LIST,
+            section: O.jXE.FRIENDS_LIST,
             children: [
                 G && U && (0, i.jsx)(Z.R, {}),
                 (0, i.jsx)(o.E1j, {
@@ -252,7 +252,7 @@ let M = function (e) {
                     onClear: K,
                     size: o.E1j.Sizes.MEDIUM
                 }),
-                (0, i.jsx)(A.Z, {
+                (0, i.jsx)(b.Z, {
                     rows: $,
                     renderRow: W,
                     renderSection: ei,
@@ -269,7 +269,7 @@ let M = function (e) {
                                   size: o.PhG.TINY,
                                   children: (0, i.jsx)(o.Text, {
                                       variant: 'text-xs/medium',
-                                      children: G ? O.intl.string(O.t.R40bU1) : O.intl.string(O.t.rXl8fn)
+                                      children: G ? P.intl.string(P.t.R40bU1) : P.intl.string(P.t.rXl8fn)
                                   })
                               })
                             : null

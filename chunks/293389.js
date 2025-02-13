@@ -17,15 +17,15 @@ var i = n(200651),
     E = n(626135),
     C = n(251625),
     N = n(358085),
-    f = n(210887),
-    I = n(981631),
+    I = n(210887),
+    f = n(981631),
     T = n(388032),
     S = n(841168),
     j = n(60412),
     v = n(801194),
     b = n(937551),
     A = n(814632);
-let O = a.ZP.connectStores([f.Z], () => ({ theme: f.Z.theme }))(c.ubH),
+let O = a.ZP.connectStores([I.Z], () => ({ theme: I.Z.theme }))(c.ubH),
     R = (0, N.isWindows)();
 function D(e) {
     let { onClose: t } = e,
@@ -82,7 +82,7 @@ function P(e) {
     var t;
     let { rawGame: n, nowPlaying: l = !1, isOverride: g } = e,
         C = (0, a.cj)([m.ZP, _.Z, p.Z], () => (0, m.FZ)(n, [m.ZP, _.Z, p.Z])),
-        [N, f] = s.useState(!1),
+        [N, I] = s.useState(!1),
         [j, A] = s.useState(null !== (t = C.name) && void 0 !== t ? t : '???'),
         O = r()(v.flexCenter, {
             [S.game]: !l,
@@ -96,12 +96,12 @@ function P(e) {
     function P() {
         if (N) return;
         let e = null != C.id ? _.Z.getDetectableGame(C.id) : null;
-        E.default.track(I.rMx.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
+        E.default.track(f.rMx.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
             application_id: null == e ? void 0 : e.id,
             game_name: C.name
         }),
             (0, c.showToast)((0, c.createToast)(T.intl.formatToPlainString(T.t['6klMOj'], { gameName: C.name }), c.ToastType.SUCCESS)),
-            f(!0);
+            I(!0);
     }
     return (0, i.jsxs)('div', {
         className: O,

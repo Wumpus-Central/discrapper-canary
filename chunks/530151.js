@@ -21,14 +21,14 @@ var i = n(200651),
     v = n(167533),
     T = n(925329),
     S = n(707409),
-    b = n(210887),
-    A = n(283595),
+    A = n(210887),
+    b = n(283595),
     Z = n(417363),
     x = n(941128),
     L = n(451478),
     y = n(424218),
-    P = n(780570),
-    O = n(353042),
+    O = n(780570),
+    P = n(353042),
     R = n(86826),
     j = n(981631),
     D = n(388032),
@@ -293,7 +293,7 @@ class z extends l.PureComponent {
             if (null != i && null != l) {
                 let n = B(l, r),
                     a = B(i, r),
-                    s = Math.floor((t = P.xI(i, l)));
+                    s = Math.floor((t = O.xI(i, l)));
                 e =
                     r === j.f07.PAUSING
                         ? D.intl.formatToPlainString(D.t.vjxhWl, {
@@ -324,7 +324,7 @@ class z extends l.PureComponent {
         if (null == e) return null;
         let { progress: n, total: i } = e;
         if (null == n || null == i) return null;
-        let l = P.xI(n, i),
+        let l = O.xI(n, i),
             r = Math.floor(l),
             a =
                 0 === n && 1 === i
@@ -341,7 +341,7 @@ class z extends l.PureComponent {
         });
     }
     renderProgressPatching() {
-        return (0, i.jsx)(O.Z, {
+        return (0, i.jsx)(P.Z, {
             getHistoricalTotalBytes: Z.Z.getHistoricalTotalBytesWritten,
             updateInterval: 5000,
             children: this.renderProgressPatchingBody
@@ -352,7 +352,7 @@ class z extends l.PureComponent {
         if (null == e) return null;
         let { total: t, progress: n, stage: i, type: l } = e;
         if (null == t || null == n || null == i) return null;
-        let r = P.xI(n, t),
+        let r = O.xI(n, t),
             a = Math.floor(r);
         return this.renderBody({
             percent: r,
@@ -389,8 +389,8 @@ class z extends l.PureComponent {
                 if (null == n) return null;
                 let { stage: i, progress: l, total: r, type: a, readerProgress: s } = n;
                 if (null == l || null == r || null == i) return null;
-                let o = P.xI(l, r),
-                    c = P.xI(null != s ? s : 0, r),
+                let o = O.xI(l, r),
+                    c = O.xI(null != s ? s : 0, r),
                     d = (e[e.length - 1] / t) * 1000,
                     u = r - l,
                     h = F({
@@ -598,7 +598,7 @@ function J(e, t, n, i) {
                     branchId: s,
                     state: c,
                     application: o,
-                    libraryApplication: A.Z.getLibraryApplication(a, s),
+                    libraryApplication: b.Z.getLibraryApplication(a, s),
                     finished: t,
                     index: r
                 }),
@@ -607,10 +607,10 @@ function J(e, t, n, i) {
     }, []);
 }
 let $ = (0, E.Z)(
-    c.ZP.connectStores([I.Z, Z.Z, x.Z, b.Z, L.Z], () => ({
+    c.ZP.connectStores([I.Z, Z.Z, x.Z, A.Z, L.Z], () => ({
         applications: [...J(x.Z.activeItems, !1, I.Z, Z.Z), ...J(x.Z.finishedItems, !0, I.Z, Z.Z)],
         paused: x.Z.paused,
         isFocused: L.Z.isFocused(),
-        theme: b.Z.theme
+        theme: A.Z.theme
     }))((0, f.Z)(Q))
 );

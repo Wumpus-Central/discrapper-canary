@@ -17,7 +17,7 @@ var i = n(200651),
     E = n(982404),
     C = n(299156);
 function N(e) {
-    let { premiumSubscription: t, premiumType: n, onClose: N, confettiCanvas: f, userWasChurned: I = !1, userDiscountOffer: T } = e,
+    let { premiumSubscription: t, premiumType: n, onClose: N, confettiCanvas: I, userWasChurned: f = !1, userDiscountOffer: T } = e,
         S = (0, o.ZP)(),
         j = (0, r.wj)(S) ? E : C,
         v = s.useRef(null),
@@ -74,7 +74,7 @@ function N(e) {
                                               }),
                                               (0, i.jsx)(a.X6q, {
                                                   variant: 'heading-xl/bold',
-                                                  children: I ? _.intl.string(_.t.gOOPaG) : _.intl.string(_.t.PZSyRk)
+                                                  children: f ? _.intl.string(_.t.gOOPaG) : _.intl.string(_.t.PZSyRk)
                                               })
                                           ]
                                       }),
@@ -92,7 +92,7 @@ function N(e) {
                 b &&
                 (0, i.jsx)(d.Z, {
                     confettiTarget: v.current,
-                    confettiCanvas: f,
+                    confettiCanvas: I,
                     confettiVelocityMultiplier: 0.75
                 })
         ]

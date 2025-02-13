@@ -21,14 +21,14 @@ var i = n(200651),
     v = n(113434),
     T = n(569984),
     S = n(833435),
-    b = n(918701),
-    A = n(150560),
+    A = n(918701),
+    b = n(150560),
     Z = n(558652),
     x = n(736683),
     L = n(452081),
     y = n(46140),
-    P = n(642145),
-    O = n(981631),
+    O = n(642145),
+    P = n(981631),
     R = n(215023),
     j = n(388032),
     D = n(144411);
@@ -36,7 +36,7 @@ let w = function () {
     var e;
     let { selectedTab: t, onSelectTab: n, tabs: w } = (0, L.z)(),
         { onScroll: k, scrollPosition: M } = (0, h.M)(),
-        U = A.Z.getState().getUtmCurrentContext(),
+        U = b.Z.getState().getUtmCurrentContext(),
         G = (0, S._)({ location: y.dr.QUEST_HOME_DESKTOP }) ? x.Z : x.j,
         B = l.useRef(U);
     l.useEffect(() => {
@@ -57,10 +57,10 @@ let w = function () {
             });
         }, [t]);
     let { enabled: V } = (0, I.W)({ location: y.dr.QUEST_HOME_DESKTOP }),
-        H = null !== (e = (0, a.e7)([T.Z], () => T.Z.getQuest(P.V), [])) && void 0 !== e ? e : null,
-        F = null !== H && !(0, b.zi)(H),
+        H = null !== (e = (0, a.e7)([T.Z], () => T.Z.getQuest(O.V), [])) && void 0 !== e ? e : null,
+        F = null !== H && !(0, A.zi)(H),
         z = l.useCallback(() => {
-            !F && window.open(N.Z.getArticleURL(O.BhN.QUESTS_LEARN_MORE));
+            !F && window.open(N.Z.getArticleURL(P.BhN.QUESTS_LEARN_MORE));
         }, [F]);
     (0, u.Tt)({ location: j.intl.string(j.t.JALI2N) });
     let W = F ? j.intl.format(j.t.BCBIlp, {}) : j.intl.format(j.t.lmMBf3, {}),

@@ -10,8 +10,8 @@ var i,
     u = n(442837),
     h = n(846519),
     _ = n(481060),
-    g = n(893776),
-    m = n(881052),
+    m = n(893776),
+    g = n(881052),
     p = n(899370),
     f = n(224841),
     E = n(13430),
@@ -22,8 +22,8 @@ var i,
     N = n(481230),
     S = n(388905),
     T = n(853268),
-    b = n(639946),
-    A = n(616952),
+    A = n(639946),
+    b = n(616952),
     R = n(792766),
     Z = n(692483),
     O = n(100159),
@@ -107,7 +107,7 @@ class ec extends (i = l.PureComponent) {
             },
             { flush: !0 }
         ),
-            null == this.props.consentRequired && g.Z.getLocationMetadata(),
+            null == this.props.consentRequired && m.Z.getLocationMetadata(),
             (0, G.e)('register');
     }
     componentWillUnmount() {
@@ -156,7 +156,7 @@ class ec extends (i = l.PureComponent) {
             { invite: a, guildTemplate: o, giftCode: s, onRegister: c, usernameSuggestion: d, isMobileWebInviteRegistration: u } = this.props,
             h = null != a ? a.code : null,
             _ = null != s ? s.skuId : null,
-            g = I.MD.getState(),
+            m = I.MD.getState(),
             p = (0, Y.Ew)(d) ? null : t === d,
             f = ee.a ? await (0, Z.K)(t) : t,
             E = ee.a ? await (0, Z.K)(n) : n;
@@ -178,7 +178,7 @@ class ec extends (i = l.PureComponent) {
                       guildTemplateCode: null == o ? void 0 : o.code,
                       giftCodeSKUId: _,
                       birthday: l,
-                      promoEmailConsent: g.required ? g : null
+                      promoEmailConsent: m.required ? m : null
                   })
                 : await (0, N.ZP)({
                       consent: r,
@@ -189,7 +189,7 @@ class ec extends (i = l.PureComponent) {
                   }),
                 null == c || c();
         } catch (t) {
-            if ((this.setState({ registering: !1 }), !(t instanceof m.Hx))) return;
+            if ((this.setState({ registering: !1 }), !(t instanceof g.Hx))) return;
             let e = (0, v.F)(t);
             this.setState({ apiErrors: e });
         }
@@ -302,7 +302,7 @@ class ec extends (i = l.PureComponent) {
                   guild: e.guild
               })
             : (null == e ? void 0 : e.guild_scheduled_event) != null
-              ? (0, r.jsx)(b.r, {
+              ? (0, r.jsx)(A.r, {
                     channel: e.channel,
                     guildScheduledEvent: e.guild_scheduled_event
                 })
@@ -423,10 +423,10 @@ class ec extends (i = l.PureComponent) {
               });
     }
     renderFull(e, t) {
-        let { email: n, username: i, globalName: a, password: s, consent: c, parsedDateOfBirth: d, globalNameFocused: u, emailClientError: h, usernameClientError: g, passwordClientError: m, dateOfBirthClientError: p, registering: f, apiErrors: { email: x, username: I, global_name: C, password: v, date_of_birth: N } = {} } = this.state,
+        let { email: n, username: i, globalName: a, password: s, consent: c, parsedDateOfBirth: d, globalNameFocused: u, emailClientError: h, usernameClientError: m, passwordClientError: g, dateOfBirthClientError: p, registering: f, apiErrors: { email: x, username: I, global_name: C, password: v, date_of_birth: N } = {} } = this.state,
             {
                 consentRequired: T,
-                isMobileWebInviteRegistration: b,
+                isMobileWebInviteRegistration: A,
                 uniqueUsernameRegistrationConfig: { suggestions: R },
                 authBoxClassName: Z,
                 hasLoggedInAccounts: O,
@@ -513,7 +513,7 @@ class ec extends (i = l.PureComponent) {
                                         usernameClientError: 0 === e.length ? ei.intl.string(ei.t.EkokLy) : null
                                     });
                                 },
-                                error: null != g ? g : es(I),
+                                error: null != m ? m : es(I),
                                 setRef: (e) => {
                                     this.usernameRef = e;
                                 },
@@ -531,7 +531,7 @@ class ec extends (i = l.PureComponent) {
                                 password: e,
                                 passwordClientError: 0 === e.length ? ei.intl.string(ei.t.EkokLy) : null
                             }),
-                        error: null != m ? m : es(v),
+                        error: null != g ? g : es(v),
                         type: 'password',
                         setRef: (e) => {
                             this.passwordRef = e;
@@ -549,7 +549,7 @@ class ec extends (i = l.PureComponent) {
                         required: !0
                     }),
                     j && L,
-                    (0, r.jsx)(A.Z, {}),
+                    (0, r.jsx)(b.Z, {}),
                     w,
                     P,
                     y,
@@ -557,8 +557,8 @@ class ec extends (i = l.PureComponent) {
                     ee.a
                         ? null
                         : (0, r.jsx)(S.zx, {
-                              look: b ? S.zx.Looks.FILLED : S.zx.Looks.LINK,
-                              color: b ? S.zx.Colors.PRIMARY : S.zx.Colors.LINK,
+                              look: A ? S.zx.Looks.FILLED : S.zx.Looks.LINK,
+                              color: A ? S.zx.Colors.PRIMARY : S.zx.Colors.LINK,
                               onClick: this.handleGotoLogin,
                               className: el.marginTop20,
                               children: ei.intl.string(ei.t['r/jzu7'])
@@ -593,7 +593,7 @@ class ec extends (i = l.PureComponent) {
                   tag: 'form',
                   className: Z,
                   children: [
-                      O && !b
+                      O && !A
                           ? (0, r.jsx)(S.zx, {
                                 onClick: this.handleGotoLogin,
                                 look: S.zx.Looks.LINK,
@@ -660,7 +660,7 @@ class ec extends (i = l.PureComponent) {
                     return;
                 }
                 let h = null != a ? (0, s.parse)(a.search) : {};
-                null != l ? (t = Q.Z5c.INVITE_LOGIN(l.code)) : null != i ? (t = Q.Z5c.GIFT_CODE_LOGIN(i.code)) : null != r ? (t = Q.Z5c.GUILD_TEMPLATE_LOGIN(r.code)) : null != c ? ((t = Q.Z5c.LOGIN), (h.redirect_to = c)) : ((t = Q.Z5c.LOGIN), '' !== n && (h = { email: n })), g.Z.loginReset(), d(t, { search: (0, s.stringify)(h) }), null == o || o(e), K.S.dispatch(Q.CkL.WAVE_EMPHASIZE);
+                null != l ? (t = Q.Z5c.INVITE_LOGIN(l.code)) : null != i ? (t = Q.Z5c.GIFT_CODE_LOGIN(i.code)) : null != r ? (t = Q.Z5c.GUILD_TEMPLATE_LOGIN(r.code)) : null != c ? ((t = Q.Z5c.LOGIN), (h.redirect_to = c)) : ((t = Q.Z5c.LOGIN), '' !== n && (h = { email: n })), m.Z.loginReset(), d(t, { search: (0, s.stringify)(h) }), null == o || o(e), K.S.dispatch(Q.CkL.WAVE_EMPHASIZE);
             }),
             ea(this, 'handleSubmit', (e) => {
                 null == e || e.preventDefault();

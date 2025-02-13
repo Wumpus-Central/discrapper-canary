@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(541692),
     h = n(952802),
     _ = n(388905),
-    g = n(815660),
-    m = n(388032),
+    m = n(815660),
+    g = n(388032),
     p = n(801194),
     f = n(814632);
 let E = () => {
@@ -20,23 +20,23 @@ let E = () => {
         [x, I] = r.useState(!1),
         [C, v] = r.useState(!1),
         [N, S] = r.useState(null),
-        [T, b] = r.useState(null),
-        A = (0, o.e7)([u.Z], () => u.Z.getCountryCode()),
-        R = A.code.split(' ')[0],
+        [T, A] = r.useState(null),
+        b = (0, o.e7)([u.Z], () => u.Z.getCountryCode()),
+        R = b.code.split(' ')[0],
         Z = async () => {
             try {
                 await c.Z.resendCode(e);
             } catch (e) {
-                b(e.body.message);
+                A(e.body.message);
             }
         },
         O = async () => {
             I(!0);
             try {
                 let { token: t } = await c.Z.verifyPhone(R + e, l);
-                S(null), b(null), v(!0), c.Z.validatePhoneForSupport(t);
+                S(null), A(null), v(!0), c.Z.validatePhoneForSupport(t);
             } catch (e) {
-                e.body.message ? (S(null), b(e.body.message)) : (S(e.body.phone), b(e.body.code));
+                e.body.message ? (S(null), A(e.body.message)) : (S(e.body.phone), A(e.body.code));
             } finally {
                 I(!1);
             }
@@ -47,7 +47,7 @@ let E = () => {
                 (0, i.jsxs)(_.Dx, {
                     className: a()(f.marginTop20, p.flex, p.justifyCenter, p.alignCenter),
                     children: [
-                        m.intl.string(m.t.WWzQtb),
+                        g.intl.string(g.t.WWzQtb),
                         (0, i.jsx)(s.owK, {
                             size: 'md',
                             color: 'currentColor',
@@ -61,17 +61,17 @@ let E = () => {
         ? j
         : (0, i.jsxs)(_.ZP, {
               children: [
-                  (0, i.jsx)(_.Dx, { children: m.intl.string(m.t.o4JNrK) }),
+                  (0, i.jsx)(_.Dx, { children: g.intl.string(g.t.o4JNrK) }),
                   (0, i.jsx)(_.DK, {
                       className: f.marginTop8,
-                      children: m.intl.string(m.t.y0tVbm)
+                      children: g.intl.string(g.t.y0tVbm)
                   }),
                   (0, i.jsxs)(_.gO, {
                       className: f.marginTop20,
                       children: [
                           (0, i.jsx)(h.Z, {
-                              label: m.intl.string(m.t.eJnn09),
-                              alpha2: A.alpha2,
+                              label: g.intl.string(g.t.eJnn09),
+                              alpha2: b.alpha2,
                               countryCode: R,
                               value: e,
                               autoComplete: 'off',
@@ -82,23 +82,23 @@ let E = () => {
                           }),
                           (0, i.jsx)(_.II, {
                               className: f.marginTop20,
-                              label: m.intl.string(m.t.OdzNbm),
+                              label: g.intl.string(g.t.OdzNbm),
                               value: l,
                               onChange: E,
-                              maxLength: g.z,
+                              maxLength: m.z,
                               error: T
                           }),
                           (0, i.jsx)(_.zx, {
                               size: _.zx.Sizes.SMALL,
                               look: _.zx.Looks.LINK,
                               onClick: Z,
-                              children: m.intl.string(m.t['5b60go'])
+                              children: g.intl.string(g.t['5b60go'])
                           }),
                           (0, i.jsx)(_.zx, {
                               className: f.marginTop20,
                               onClick: O,
                               submitting: x,
-                              children: m.intl.string(m.t.i4jeWV)
+                              children: g.intl.string(g.t.i4jeWV)
                           })
                       ]
                   })

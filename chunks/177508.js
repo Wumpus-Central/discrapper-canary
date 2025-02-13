@@ -17,7 +17,7 @@ var i = n(200651),
 let E = Object.keys(d.zxk.Colors).filter((e) => 'CUSTOM' !== e),
     C = Object.keys(d.zxk.Looks).filter((e) => 'BLANK' !== e),
     N = Object.keys(d.zxk.Sizes).filter((e) => 'NONE' !== e);
-function f() {
+function I() {
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(d.Qjf, {
@@ -43,7 +43,7 @@ function f() {
         ]
     });
 }
-let I = ['neutral', 'blue_new', 'blurple', 'green_new', 'red_new', 'teal_new', 'yellow_new', 'orange_new'],
+let f = ['neutral', 'blue_new', 'blurple', 'green_new', 'red_new', 'teal_new', 'yellow_new', 'orange_new'],
     T = ['background-surface-highest', 'background-surface-higher', 'background-surface-high', 'background-base-low', 'background-base-lower', 'background-base-lowest'],
     S = ['background-mod-subtle', 'background-mod-normal', 'background-mod-strong'],
     j = ['critical', 'warning', 'positive', 'info'],
@@ -161,7 +161,7 @@ function b() {
                 className: p.heading,
                 children: 'Scales'
             }),
-            I.map((e) =>
+            f.map((e) =>
                 (0, i.jsxs)(
                     'div',
                     {
@@ -208,7 +208,7 @@ function A() {
         tabs: [
             {
                 title: 'Components',
-                component: () => (0, i.jsx)(f, {}),
+                component: () => (0, i.jsx)(I, {}),
                 setting: g.s6.DESIGN_SYSTEMS_COMPONENTS
             },
             {

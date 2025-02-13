@@ -10,7 +10,7 @@ var i = n(200651),
 function u(e) {
     let { transitionTo: t, token: n, width: u } = e,
         [h, _] = r.useState(d.n.START),
-        [g, m] = r.useState(null),
+        [m, g] = r.useState(null),
         [p, f] = r.useState(''),
         E = { impression_group: l.ImpressionGroups.ACCOUNT_REVERT_FLOW };
     return (0, i.jsx)('div', {
@@ -18,7 +18,7 @@ function u(e) {
         children: (0, i.jsxs)(a.MyZ, {
             activeSlide: h,
             width: u,
-            onSlideReady: m,
+            onSlideReady: g,
             children: [
                 (0, i.jsx)(a.Mi4, {
                     id: d.n.START,
@@ -37,7 +37,7 @@ function u(e) {
                         setOriginalEmail: f,
                         setSlide: _,
                         transitionTo: t,
-                        ready: g === d.n.PASSWORD,
+                        ready: m === d.n.PASSWORD,
                         token: n
                     })
                 }),

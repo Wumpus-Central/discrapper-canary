@@ -48,7 +48,7 @@ function S(e) {
     }
     return e.name;
 }
-function b(e, t, n) {
+function A(e, t, n) {
     return null == e || e.displayName !== t
         ? {
               displayName: t,
@@ -61,7 +61,7 @@ function b(e, t, n) {
             }
           : e;
 }
-class A extends (i = a.ZP.DeviceSettingsStore) {
+class b extends (i = a.ZP.DeviceSettingsStore) {
     initialize(e) {
         this.waitFor(u.Z, c.Z), (_ = null != e ? e : g);
     }
@@ -87,8 +87,8 @@ class A extends (i = a.ZP.DeviceSettingsStore) {
         return v;
     }
 }
-p(A, 'displayName', 'ConnectedDeviceStore'), p(A, 'persistKey', 'ConnectedDeviceStore');
-let Z = new A(s.Z, {
+p(b, 'displayName', 'ConnectedDeviceStore'), p(b, 'persistKey', 'ConnectedDeviceStore');
+let Z = new b(s.Z, {
     MEDIA_ENGINE_DEVICES: function (e) {
         let { inputDevices: t, outputDevices: n } = e,
             i = {};
@@ -127,12 +127,12 @@ let Z = new A(s.Z, {
                 : (r()
                       .difference(s, a)
                       .forEach((e) => {
-                          C[e] = b(C[e], e, h.QyF.INPUT);
+                          C[e] = A(C[e], e, h.QyF.INPUT);
                       }),
                   r()
                       .difference(c, o)
                       .forEach((e) => {
-                          C[e] = b(C[e], e, h.QyF.OUTPUT);
+                          C[e] = A(C[e], e, h.QyF.OUTPUT);
                       })),
             !(r().isEqual(a, s) && r().isEqual(o, c)) && ((E = i), (I = l), !0)
         );

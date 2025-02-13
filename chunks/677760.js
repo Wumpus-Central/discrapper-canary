@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(388905),
     h = n(108427),
     _ = n(314897),
-    g = n(701190),
-    m = n(626135),
+    m = n(701190),
+    g = n(626135),
     p = n(768581),
     f = n(823379),
     E = n(264229),
@@ -27,7 +27,7 @@ function T() {
         children: (0, i.jsx)(o.$jN, {})
     });
 }
-let b = (e) => {
+let A = (e) => {
     let t = (null == e ? void 0 : e.state) == null && (null == e ? void 0 : e.channel) == null;
     if (null == e || null == e.state || t) return 0;
     let n = e.state;
@@ -49,7 +49,7 @@ let b = (e) => {
             (0, f.vE)(n);
     }
 };
-function A(e) {
+function b(e) {
     let { invite: t, onAcceptInvite: n } = e;
     return (null == t ? void 0 : t.state) === v.r2o.BANNED
         ? (0, i.jsx)(c.u, {
@@ -66,15 +66,15 @@ function A(e) {
 function R(e) {
     let { children: t, cardChildren: n, startAnimHeightPx: a, innerStyle: s, ...c } = e,
         { invite: u } = c,
-        [h, _] = r.useState(b(u)),
-        { ref: g, height: m } = (0, d.Z)(),
+        [h, _] = r.useState(A(u)),
+        { ref: m, height: g } = (0, d.Z)(),
         p = (0, o.q_F)({
-            height: null != m && 0 !== m ? ''.concat(m, 'px') : ''.concat(a, 'px'),
+            height: null != g && 0 !== g ? ''.concat(g, 'px') : ''.concat(a, 'px'),
             config: l.config.stiff
         });
     return (
         r.useEffect(() => {
-            let e = b(u);
+            let e = A(u);
             e !== h && _(e);
         }, [u, h]),
         (0, i.jsxs)(l.animated.div, {
@@ -85,7 +85,7 @@ function R(e) {
                     className: S.inviteChildContainer,
                     style: p,
                     children: (0, i.jsx)('section', {
-                        ref: g,
+                        ref: m,
                         className: null == s ? void 0 : s(h),
                         children: t(h)
                     })
@@ -117,7 +117,7 @@ function O(e) {
                         invite: t
                     });
                 case 2:
-                    return (0, i.jsx)(A, {
+                    return (0, i.jsx)(b, {
                         ...e,
                         invite: t
                     });
@@ -164,7 +164,7 @@ function j(e) {
 }
 function L(e) {
     let { inviteKey: t, transitionTo: n } = e,
-        l = (0, a.e7)([g.Z], () => g.Z.getInvite(t));
+        l = (0, a.e7)([m.Z], () => m.Z.getInvite(t));
     return (
         r.useEffect(() => {
             (0, h.e)('invite_mobile');
@@ -172,7 +172,7 @@ function L(e) {
         r.useEffect(() => {
             null != l &&
                 l.state === v.r2o.RESOLVED &&
-                m.default.track(
+                g.default.track(
                     v.rMx.INVITE_VIEWED,
                     {
                         invite_code: t,
@@ -187,7 +187,7 @@ function L(e) {
                 !(function (e, t, n) {
                     var i, r, l;
                     null == e || e.preventDefault(),
-                        m.default.track(v.rMx.INVITE_APP_OPENED, {
+                        g.default.track(v.rMx.INVITE_APP_OPENED, {
                             invite_code: (0, E.jX)(t),
                             guild_id: null == n ? void 0 : null === (i = n.guild) || void 0 === i ? void 0 : i.id,
                             channel_id: null == n ? void 0 : null === (r = n.channel) || void 0 === r ? void 0 : r.id,

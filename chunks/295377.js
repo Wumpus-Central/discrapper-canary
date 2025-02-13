@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(47120);
+n.d(t, { Z: () => I }), n(47120);
 var i = n(200651),
     s = n(192379),
     l = n(524437),
@@ -228,7 +228,7 @@ function N() {
         })
     });
 }
-let f = function (e) {
+let I = function (e) {
     let { className: t } = e,
         n = !a.G6.useSetting(),
         l = s.useRef(null);

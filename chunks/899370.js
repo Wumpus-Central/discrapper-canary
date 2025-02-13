@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => m });
 var i,
     r,
     l,
@@ -23,7 +23,7 @@ class _ extends (l = o.ZP.Store) {
               writable: !0
           })
         : (_[i] = r);
-let g = new _(s.Z, {
+let m = new _(s.Z, {
     AGE_GATE_PREVENT_UNDERAGE_REGISTRATION: function () {
         (u = Date.now()), (document.cookie = ''.concat(h, '=1;path=/'));
     },

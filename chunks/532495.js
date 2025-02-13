@@ -18,8 +18,8 @@ var s = n(512722),
     E = n(134795),
     C = n(610966),
     N = n(513901),
-    f = n(451392),
-    I = n(906364),
+    I = n(451392),
+    f = n(906364),
     T = n(350327),
     S = n(621853),
     j = n(687158),
@@ -81,7 +81,7 @@ function D() {
                 onGlobalNameChange: a.UZ
             }),
             (0, i.jsx)(
-                I.Z,
+                f.Z,
                 {
                     sectionTitle: O.intl.string(O.t['+T3RIy']),
                     errors: z.pronouns,
@@ -131,7 +131,7 @@ function D() {
                               },
                               'banner'
                           ),
-                          (0, i.jsx)(f.Z, {
+                          (0, i.jsx)(I.Z, {
                               user: L,
                               pendingAvatar: B,
                               pendingColors: F,

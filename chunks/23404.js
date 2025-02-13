@@ -21,14 +21,14 @@ var i = n(200651),
     v = n(65443),
     T = n(611855),
     S = n(670638),
-    b = n(667105),
-    A = n(860151),
+    A = n(667105),
+    b = n(860151),
     Z = n(341907),
     x = n(46140),
     L = n(981631),
     y = n(388032),
-    P = n(152706);
-function O(e) {
+    O = n(152706);
+function P(e) {
     var t;
     let { quest: n } = e,
         l = (0, m.B6)(n.config.expiresAt),
@@ -37,15 +37,15 @@ function O(e) {
         u = (0, o.wj)(a) ? L.BRd.DARK : L.BRd.LIGHT,
         h = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
     return (0, i.jsxs)('div', {
-        className: P.heading,
+        className: O.heading,
         children: [
             (0, i.jsx)('img', {
-                className: P.headingGameTile,
+                className: O.headingGameTile,
                 alt: '',
                 src: (0, I.fh)(n, I.eC.GAME_TILE, u).url
             }),
             (0, i.jsxs)('div', {
-                className: P.headingCopy,
+                className: O.headingCopy,
                 children: [
                     (0, i.jsx)(c.X6q, {
                         variant: 'heading-md/semibold',
@@ -102,7 +102,7 @@ function R(e) {
                     questId: I.id
                 });
         }, [I.id, C]),
-        G = (0, b.hf)({
+        G = (0, A.hf)({
             quest: I,
             location: g.jn.ACTIVITY_PANEL
         }),
@@ -125,7 +125,7 @@ function R(e) {
               ref: (e) => {
                   d.current = e;
               },
-              className: a()(P.wrapper, { [P.wrapperQuestAccepted]: V }),
+              className: a()(O.wrapper, { [O.wrapperQuestAccepted]: V }),
               onClick: w,
               onKeyPress: w,
               onFocus: j,
@@ -134,9 +134,9 @@ function R(e) {
               onMouseLeave: D,
               children: [
                   (0, i.jsxs)('div', {
-                      className: P.utils,
+                      className: O.utils,
                       children: [
-                          V ? (0, i.jsx)(O, { quest: I }) : (0, i.jsx)(T.Z, {}),
+                          V ? (0, i.jsx)(P, { quest: I }) : (0, i.jsx)(T.Z, {}),
                           (0, i.jsx)(S.r, {
                               quest: I,
                               questContent: g.jn.ACTIVITY_PANEL,
@@ -149,7 +149,7 @@ function R(e) {
                                       children: (0, i.jsx)(c.xhG, {
                                           size: 'md',
                                           color: 'currentColor',
-                                          className: P.submenuIcon
+                                          className: O.submenuIcon
                                       })
                                   })
                           })
@@ -158,9 +158,9 @@ function R(e) {
                   !V &&
                       (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, i.jsx)(O, { quest: I }),
+                              (0, i.jsx)(P, { quest: I }),
                               (0, i.jsxs)('div', {
-                                  className: P.instructions,
+                                  className: O.instructions,
                                   children: [
                                       (0, i.jsx)(c.Text, {
                                           variant: 'text-sm/normal',
@@ -179,22 +179,22 @@ function R(e) {
                       }),
                   V &&
                       !H &&
-                      (0, i.jsx)(A.Z, {
+                      (0, i.jsx)(b.Z, {
                           autoplay: L,
-                          className: P.rewardTileWithInstructions,
+                          className: O.rewardTileWithInstructions,
                           quest: I,
                           questContent: g.jn.ACTIVITY_PANEL,
                           location: x.dr.ACTIVITY_PANEL,
                           taskDetails: W
                       }),
                   (0, i.jsxs)('div', {
-                      className: P.ctas,
+                      className: O.ctas,
                       children: [
                           !V &&
                               (0, i.jsxs)(i.Fragment, {
                                   children: [
                                       (0, i.jsx)(c.zxk, {
-                                          className: P.cta,
+                                          className: O.cta,
                                           color: c.zxk.Colors.PRIMARY,
                                           fullWidth: !0,
                                           size: c.zxk.Sizes.SMALL,
@@ -202,7 +202,7 @@ function R(e) {
                                           children: y.intl.string(y.t.LLLLPD)
                                       }),
                                       (0, i.jsx)(c.zxk, {
-                                          className: P.cta,
+                                          className: O.cta,
                                           color: c.zxk.Colors.BRAND,
                                           fullWidth: !0,
                                           onClick: k,
@@ -215,7 +215,7 @@ function R(e) {
                           V &&
                               !H &&
                               (0, i.jsx)(c.zxk, {
-                                  className: P.cta,
+                                  className: O.cta,
                                   color: c.zxk.Colors.BRAND,
                                   fullWidth: !0,
                                   onClick: M,
@@ -224,7 +224,7 @@ function R(e) {
                               }),
                           H &&
                               (0, i.jsx)(c.zxk, {
-                                  className: P.cta,
+                                  className: O.cta,
                                   color: c.zxk.Colors.BRAND,
                                   fullWidth: !0,
                                   onClick: G,
