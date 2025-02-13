@@ -1,103 +1,108 @@
-n.d(t, { r: () => _ });
+n.d(t, { r: () => E });
 var i = n(200651);
 n(192379);
-var s = n(793030),
-    l = n(481060),
-    r = n(230711),
-    a = n(695346),
-    o = n(903002),
-    c = n(214492),
-    d = n(981631),
-    u = n(388032),
-    h = n(676260),
-    m = n(146036),
-    g = n(510176);
-function x(e) {
-    let { headerAssetSrc: t, headerText: n, description: r, assets: a = [], assetCount: c = 0, disabled: d = !1, onClick: m } = e;
-    return (0, i.jsxs)('div', {
-        className: h.container,
-        children: [
-            (0, i.jsxs)('div', {
-                className: h.headerContainer,
-                children: [
-                    (0, i.jsx)('img', {
-                        src: t,
-                        alt: '',
-                        className: h.headerAsset
-                    }),
-                    (0, i.jsx)(s.X6, {
-                        variant: 'heading-lg/normal',
-                        color: 'header-primary',
-                        children: n
-                    }),
-                    (0, i.jsx)(s.xv, {
-                        variant: 'text-sm/normal',
-                        color: 'text-muted',
-                        children: r
-                    })
-                ]
-            }),
-            d
-                ? (0, i.jsx)(s.xv, {
-                      variant: 'text-sm/semibold',
-                      color: 'text-muted',
-                      children: u.intl.string(u.t.jfrLLS)
-                  })
-                : (0, i.jsxs)('div', {
-                      className: h.sharingContainer,
-                      children: [
-                          (0, i.jsx)('div', {
-                              className: h.sharingTitleSpacer,
-                              children:
-                                  c > 0 &&
-                                  (0, i.jsx)(s.xv, {
-                                      variant: 'text-sm/semibold',
-                                      children: u.intl.string(u.t.NOIHs7)
-                                  })
-                          }),
-                          (0, i.jsxs)('div', {
-                              className: h.manageContainer,
-                              children: [
-                                  (0, i.jsx)(o.D, {
-                                      assets: a,
-                                      assetCount: c,
-                                      size: o.F.MEDIUM
-                                  }),
-                                  (0, i.jsx)(l.zxk, {
-                                      onClick: m,
-                                      color: l.zxk.Colors.PRIMARY,
-                                      children: 'Manage'
-                                  })
-                              ]
-                          })
-                      ]
-                  })
-        ]
+var s = n(120356),
+    l = n.n(s),
+    r = n(793030),
+    a = n(481060),
+    o = n(230711),
+    c = n(695346),
+    d = n(903002),
+    u = n(214492),
+    h = n(981631),
+    m = n(388032),
+    g = n(676260),
+    x = n(146036),
+    _ = n(510176);
+function p(e) {
+    let { headerAssetSrc: t, headerText: n, description: s, assets: o = [], assetCount: c = 0, disabled: u = !1, onClick: h } = e;
+    return (0, i.jsx)('div', {
+        className: g.container,
+        children: (0, i.jsxs)('div', {
+            className: l()(g.innerContainer, { [g.disabled]: u }),
+            children: [
+                (0, i.jsxs)('div', {
+                    className: g.headerContainer,
+                    children: [
+                        (0, i.jsx)('img', {
+                            src: t,
+                            alt: '',
+                            className: g.headerAsset
+                        }),
+                        (0, i.jsx)(r.X6, {
+                            variant: 'heading-md/medium',
+                            color: 'header-primary',
+                            children: n
+                        }),
+                        (0, i.jsx)(r.xv, {
+                            variant: 'text-sm/normal',
+                            color: 'text-muted',
+                            children: s
+                        })
+                    ]
+                }),
+                u
+                    ? (0, i.jsx)(r.xv, {
+                          variant: 'text-sm/semibold',
+                          color: 'text-muted',
+                          children: m.intl.string(m.t.jfrLLS)
+                      })
+                    : (0, i.jsxs)('div', {
+                          className: g.sharingContainer,
+                          children: [
+                              (0, i.jsx)('div', {
+                                  className: g.sharingTitleSpacer,
+                                  children:
+                                      c > 0 &&
+                                      (0, i.jsx)(r.xv, {
+                                          variant: 'text-sm/semibold',
+                                          children: m.intl.string(m.t.NOIHs7)
+                                      })
+                              }),
+                              (0, i.jsxs)('div', {
+                                  className: g.manageContainer,
+                                  children: [
+                                      (0, i.jsx)(d.D, {
+                                          assets: o,
+                                          assetCount: c,
+                                          size: d.F.MEDIUM
+                                      }),
+                                      (0, i.jsx)(a.zxk, {
+                                          onClick: h,
+                                          color: a.zxk.Colors.PRIMARY,
+                                          children: 'Manage'
+                                      })
+                                  ]
+                              })
+                          ]
+                      })
+            ]
+        })
     });
 }
-function _() {
-    let e = !a.G6.useSetting(),
-        { assets: t, count: n } = (0, c.oF)(),
-        { assets: s, count: l } = (0, c.hs)();
+function E() {
+    let e = !c.G6.useSetting(),
+        { assets: t, count: n } = (0, u.oF)(),
+        { assets: s, count: l } = (0, u.hs)();
     return (0, i.jsxs)('div', {
-        className: h.cardsContainer,
+        className: g.cardsContainer,
         children: [
-            (0, i.jsx)(x, {
-                headerAssetSrc: m,
-                headerText: u.intl.string(u.t.CQkyMj),
-                description: u.intl.string(u.t.ctRS3d),
+            (0, i.jsx)(p, {
+                headerAssetSrc: x,
+                headerText: m.intl.string(m.t.CQkyMj),
+                description: m.intl.string(m.t.ctRS3d),
                 assets: t,
                 assetCount: n,
-                onClick: () => r.Z.open(d.oAB.REGISTERED_GAMES),
+                onClick: () => o.Z.open(h.oAB.REGISTERED_GAMES),
                 disabled: e
             }),
-            (0, i.jsx)(x, {
-                headerAssetSrc: g,
-                headerText: u.intl.string(u.t['3fe7U1']),
-                description: u.intl.string(u.t.DU5UXF),
+            (0, i.jsx)(p, {
+                headerAssetSrc: _,
+                headerText: m.intl.string(m.t['3fe7U1']),
+                description: m.intl.string(m.t.DU5UXF),
                 assets: s,
                 assetCount: l,
-                onClick: () => r.Z.open(d.oAB.CONNECTIONS),
+                onClick: () => o.Z.open(h.oAB.CONNECTIONS),
                 disabled: e
             })
         ]
