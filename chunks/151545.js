@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => E });
 var i = n(200651);
 n(192379);
 var r = n(442837),
@@ -9,70 +9,68 @@ var r = n(442837),
     u = n(592125),
     c = n(430824),
     d = n(979651),
-    f = n(9161),
-    _ = n(456644),
-    p = n(409057),
-    h = n(443375),
-    m = n(128277),
-    g = n(263059),
-    E = n(981631);
-function v(e) {
-    let { user: t, currentUser: n, activity: v, className: y, onClose: I, profileGuildId: T } = e,
-        { recentActivityTabEnabled: b } = (0, f.O)({ location: 'UserProfileActivityCardWrapper' }),
-        { recentActivityEnabled: S } = (0, _.i)({ location: 'UserProfileActivityCardWrapper' }),
-        A = t.id === n.id,
-        N = (b || S) && !A && !t.bot,
-        { voiceGuild: C, voiceChannel: R } = (0, r.cj)([c.Z, d.Z, u.Z], () => {
+    f = n(456644),
+    _ = n(409057),
+    p = n(443375),
+    h = n(128277),
+    m = n(263059),
+    g = n(981631);
+function E(e) {
+    let { user: t, currentUser: n, activity: E, className: v, onClose: y, profileGuildId: I } = e,
+        { recentActivityEnabled: T } = (0, f.i)({ location: 'UserProfileActivityCardWrapper' }),
+        b = t.id === n.id,
+        S = T && !b && !t.bot,
+        { voiceGuild: A, voiceChannel: N } = (0, r.cj)([c.Z, d.Z, u.Z], () => {
             var e;
-            if (!(0, a.Z)(v)) return {};
-            let n = null === (e = d.Z.getVoiceStateForSession(t.id, null == v ? void 0 : v.session_id)) || void 0 === e ? void 0 : e.channelId,
+            if (!(0, a.Z)(E)) return {};
+            let n = null === (e = d.Z.getVoiceStateForSession(t.id, null == E ? void 0 : E.session_id)) || void 0 === e ? void 0 : e.channelId,
                 i = u.Z.getChannel(n);
             return {
                 voiceGuild: c.Z.getGuild(null == i ? void 0 : i.getGuildId()),
                 voiceChannel: i
             };
         });
-    (0, l.q)(null == v ? void 0 : v.application_id);
-    let O = (0, r.e7)([o.Z], () => ((null == v ? void 0 : v.application_id) != null ? o.Z.getApplication(v.application_id) : (null == v ? void 0 : v.name) != null ? o.Z.getApplicationByName(v.name) : null));
-    return (null == v ? void 0 : v.type) === E.IIU.CUSTOM_STATUS || (null == v ? void 0 : v.type) === E.IIU.HANG_STATUS
+    (0, l.q)(null == E ? void 0 : E.application_id);
+    let C = (0, r.e7)([o.Z], () => ((null == E ? void 0 : E.application_id) != null ? o.Z.getApplication(E.application_id) : (null == E ? void 0 : E.name) != null ? o.Z.getApplicationByName(E.name) : null));
+    return (null == E ? void 0 : E.type) === g.IIU.CUSTOM_STATUS || (null == E ? void 0 : E.type) === g.IIU.HANG_STATUS
         ? null
-        : (0, s.Z)(v)
-          ? N
-              ? (0, i.jsx)(g.Z, {
+        : (0, s.Z)(E)
+          ? S
+              ? (0, i.jsx)(m.Z, {
                     user: t,
                     currentUser: n,
-                    activity: v,
-                    profileGuildId: T,
-                    className: y,
-                    onClose: I
+                    activity: E,
+                    profileGuildId: I,
+                    className: v,
+                    onClose: y
                 })
-              : (0, i.jsx)(m.Z, {
+              : (0, i.jsx)(h.Z, {
                     user: t,
                     currentUser: n,
-                    activity: v,
-                    className: y,
-                    onClose: I
+                    activity: E,
+                    className: v,
+                    onClose: y
                 })
-          : N
-            ? (0, i.jsx)(h.Z, {
+          : S
+            ? (0, i.jsx)(p.Z, {
                   user: t,
                   currentUser: n,
-                  activity: v,
-                  application: O,
-                  voiceGuild: C,
-                  voiceChannel: R,
-                  profileGuildId: T,
-                  className: y,
-                  onClose: I
+                  activity: E,
+                  application: C,
+                  voiceGuild: A,
+                  voiceChannel: N,
+                  profileGuildId: I,
+                  className: v,
+                  onClose: y
               })
-            : (0, i.jsx)(p.Z, {
+            : (0, i.jsx)(_.Z, {
                   user: t,
                   currentUser: n,
-                  activity: v,
-                  application: O,
-                  voiceGuild: C,
-                  voiceChannel: R,
-                  className: y,
-                  onClose: I
+                  activity: E,
+                  application: C,
+                  voiceGuild: A,
+                  voiceChannel: N,
+                  className: v,
+                  onClose: y
               });
 }

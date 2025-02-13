@@ -1,21 +1,19 @@
-n.d(t, { Z: () => l });
+n.d(t, { Z: () => o });
 var i = n(200651);
 n(192379);
-var r = n(9161),
-    a = n(456644),
-    s = n(527790),
-    o = n(248930);
-function l(e) {
-    let { location: t, user: n, currentUser: l, ...u } = e,
-        { recentActivityTabEnabled: c } = (0, r.O)({ location: t }),
-        { recentActivityEnabled: d } = (0, a.i)({ location: t });
-    return (c || d) && n.id !== l.id && !n.bot
-        ? (0, i.jsx)(o.Z, {
+var r = n(456644),
+    a = n(527790),
+    s = n(248930);
+function o(e) {
+    let { location: t, user: n, currentUser: o, ...l } = e,
+        { recentActivityEnabled: u } = (0, r.i)({ location: t });
+    return u && n.id !== o.id && !n.bot
+        ? (0, i.jsx)(s.Z, {
               user: n,
-              ...u
+              ...l
           })
-        : (0, i.jsx)(s.Z, {
+        : (0, i.jsx)(a.Z, {
               user: n,
-              ...u
+              ...l
           });
 }
