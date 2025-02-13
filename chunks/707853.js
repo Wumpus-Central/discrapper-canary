@@ -1,4 +1,7 @@
 e.exports = {
+    root: 'root__6fdb8',
+    themes: 'themes__6fdb8',
+    themeSelectionGroup: 'themeSelectionGroup__6fdb8',
     section: 'section__6fdb8',
     sectionDivider: 'sectionDivider__6fdb8',
     buttons: 'buttons__6fdb8',

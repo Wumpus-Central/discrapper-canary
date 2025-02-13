@@ -985,6 +985,7 @@ let A = Object.freeze({
     Object.freeze({
         TEXT_PLAYGROUND: 'Text Playground',
         DESIGN_SYSTEMS: 'Design System',
+        DESIGN_SYSTEMS_COLORS: 'Design System',
         INTL_TESTING: 'Intl Testing',
         OVERVIEW: 'Overview',
         BROWSER: 'Browser',
