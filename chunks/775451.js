@@ -38,10 +38,9 @@ let v = {
             { shouldOpen: D } = (0, g.Mm)({
                 renderEarnedOrbsCoachmark: (e) => {
                     var t;
-                    let { earnedOrbsQuantity: i } = e;
+                    let { earnedOrbsQuantity: r } = e;
                     (t = {
-                        earnedOrbsQuantity: i,
-                        balance: A,
+                        earnedOrbsQuantity: r,
                         backgroundElementRef: L,
                         isCoachmarkEnabled: N,
                         onCloseCallback: x.dG4,
@@ -62,7 +61,7 @@ let v = {
                         (0, o.ZDy)(async () => {
                             let { BalanceWidgetEarnedOrbsCoachmarkModal: e } = await n.e('82081').then(n.bind(n, 720463));
                             return (n) =>
-                                e({
+                                (0, i.jsx)(e, {
                                     ...t,
                                     ...n
                                 });
