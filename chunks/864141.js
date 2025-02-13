@@ -47,7 +47,8 @@ function L(e) {
         U = (0, o.e7)([m.Z], () => m.Z.getGuild(n.guild_id)),
         G = (0, g.Z)(n),
         B = (0, f.ZP)(n),
-        Z = () => {
+        Z = () => (n.isDM() || n.isGroupDM() ? O.intl.string(O.t.bl1Mz8) : n.isGuildStageVoice() ? O.intl.string(O.t.Q1lNen) : O.intl.string(O.t.bl1Mz8)),
+        F = () => {
             let e = (e) => {
                     e.stopPropagation(), null == M || M({ action: 'OPEN_VOICE_CHANNEL' }), n.isGuildStageVoice() ? (0, h.Cq)(n) : (u.default.selectVoiceChannel(n.id), (0, _.Kh)(n.id)), null == L || L();
                 },
@@ -86,7 +87,7 @@ function L(e) {
                 })
             });
         },
-        F = () =>
+        V = () =>
             (0, i.jsx)('div', {
                 className: a()(D.actions, P),
                 children: (0, i.jsx)(N.Z, {
@@ -104,7 +105,7 @@ function L(e) {
             onClose: L,
             children: [
                 (0, i.jsx)(T.Z, {
-                    text: O.intl.string(n.isGuildStageVoice() ? O.t.Q1lNen : O.t.bl1Mz8),
+                    text: Z(),
                     contextMenu: (0, i.jsx)(C.Z, {
                         display: 'voice',
                         user: t,
@@ -120,12 +121,12 @@ function L(e) {
                                 users: G,
                                 channel: n
                             }),
-                            Z(),
-                            x === R.y0.FULL_SIZE && F()
+                            F(),
+                            x === R.y0.FULL_SIZE && V()
                         ]
                     })
                 }),
-                x !== R.y0.FULL_SIZE && F()
+                x !== R.y0.FULL_SIZE && V()
             ]
         })
     });

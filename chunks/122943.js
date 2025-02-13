@@ -39,8 +39,7 @@ function f(e) {
                 ? (0, i.jsx)(u.Z, {
                       variant: n,
                       className: f,
-                      style: { color: h },
-                      children: c.intl.string(c.t['NGg/fn'])
+                      children: c.intl.string(c.t.bl1Mz8)
                   })
                 : t.isGuildStageVoice()
                   ? (0, i.jsx)(u.Z, {
