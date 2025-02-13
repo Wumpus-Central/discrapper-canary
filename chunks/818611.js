@@ -177,14 +177,7 @@ let y = 3,
                         ...t,
                         position: 'absolute'
                     },
-                    children: (0, i.jsx)(c.y5t, {
-                        forceLevel: 5,
-                        children: (0, i.jsx)(c.X6q, {
-                            variant: 'eyebrow',
-                            color: 'header-secondary',
-                            children: n
-                        })
-                    })
+                    children: (0, i.jsx)(c.vwX, { children: n })
                 });
             };
         return (0, i.jsx)(c.GMG, {
