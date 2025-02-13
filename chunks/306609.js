@@ -48,7 +48,7 @@ function M(e) {
         [H, G] = l.useState(!1),
         { activeVoice: V } = (0, I.o)(),
         z = (0, c.q_F)({
-            transform: B ? 'translateY(-'.concat(6, 'px) scale(').concat(0.96, ')') : 'translateY(0px) scale(1)',
+            transform: B ? 'translateY(-'.concat(8, 'px) scale(').concat(0.96, ')') : 'translateY(0px) scale(1)',
             config: { duration: 200 }
         }),
         W = (0, c.q_F)({

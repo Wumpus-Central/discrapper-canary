@@ -1,8 +1,8 @@
 i.d(t, {
     Tj: () => m,
-    WG: () => d,
+    WG: () => c,
     ZD: () => h,
-    pD: () => c
+    pD: () => d
 }),
     i(653041);
 var n = i(990547);
@@ -14,7 +14,7 @@ i(358085);
 var o = i(573261),
     s = i(981631),
     u = i(388032);
-async function d() {
+async function c() {
     return (
         await l.tn.get({
             url: s.ANM.BUG_REPORTS,
@@ -22,7 +22,7 @@ async function d() {
         })
     ).body;
 }
-function c(e) {
+function d(e) {
     var t, i;
     return null !== (i = null !== (t = null == e ? void 0 : e.name) && void 0 !== t ? t : '' + (null == e ? void 0 : e.squad)) && void 0 !== i ? i : '';
 }
@@ -56,7 +56,7 @@ function m() {
 }
 async function h(e, t, i) {
     var l, u;
-    let d = [
+    let c = [
         {
             name: 'name',
             value: e.name
@@ -75,60 +75,60 @@ async function h(e, t, i) {
         }
     ];
     '' !== e.description &&
-        d.push({
+        c.push({
             name: 'description',
             value: e.description
         }),
         '' !== e.url &&
-            d.push({
+            c.push({
                 name: 'external_url',
                 value: e.url
             }),
         null != e.buildOverride &&
-            d.push({
+            c.push({
                 name: 'build_override',
                 value: e.buildOverride
             });
-    let c = null === (l = e.feature) || void 0 === l ? void 0 : l.asana_inbox_id;
-    null != c &&
-        '' !== c &&
-        d.push({
+    let d = null === (l = e.feature) || void 0 === l ? void 0 : l.asana_inbox_id;
+    null != d &&
+        '' !== d &&
+        c.push({
             name: 'asana_inbox_id',
-            value: ''.concat(c)
+            value: ''.concat(d)
         });
     let m = null === (u = e.feature) || void 0 === u ? void 0 : u.name;
     null != m &&
         '' !== m &&
-        d.push({
+        c.push({
             name: 'feature_name',
             value: m
         }),
         t.overridePlatformInformation &&
-            (d.push({
+            (c.push({
                 name: 'device',
                 value: t.device
             }),
-            d.push({
+            c.push({
                 name: 'os',
                 value: t.operatingSystem
             }),
-            d.push({
+            c.push({
                 name: 'os_version',
                 value: t.operatingSystemVersion
             }),
-            d.push({
+            c.push({
                 name: 'client_version',
                 value: t.clientVersion
             }),
-            d.push({
+            c.push({
                 name: 'client_build_number',
                 value: t.clientBuildNumber
             }),
-            d.push({
+            c.push({
                 name: 'release_channel',
                 value: window.GLOBAL_ENV.RELEASE_CHANNEL
             }),
-            d.push({
+            c.push({
                 name: 'locale',
                 value: t.locale
             })),
@@ -137,12 +137,12 @@ async function h(e, t, i) {
         return await o.Z.post({
             url: s.ANM.BUG_REPORTS,
             attachments: i,
-            fields: d,
+            fields: c,
             trackedActionData: {
                 event: n.NetworkActionNames.BUG_REPORT_SUBMIT,
                 properties: {
                     priority: e.priority,
-                    asana_inbox_id: c
+                    asana_inbox_id: d
                 }
             },
             rejectWithError: !1

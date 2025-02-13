@@ -1,5 +1,5 @@
-n.d(e, { A: () => l });
-let a = (0, n(818083).B)({
+n.d(t, { A: () => a });
+let l = (0, n(818083).B)({
     kind: 'user',
     id: '2025-02_custom_status_editing_without_status_selector',
     label: 'Custom Status Editing Without Status Selector',
@@ -12,7 +12,7 @@ let a = (0, n(818083).B)({
         }
     ]
 });
-function l(t) {
-    let { location: e, autoTrackExposure: n = !0 } = t;
-    return a.getCurrentConfig({ location: e }, { autoTrackExposure: n }).enabled;
+function a(e) {
+    let { location: t, autoTrackExposure: n = !0 } = e;
+    return l.getCurrentConfig({ location: t }, { autoTrackExposure: n }).enabled;
 }

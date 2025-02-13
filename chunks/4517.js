@@ -104,7 +104,7 @@ function M(e) {
         let e = U.current.getBoundingClientRect().height,
             t = G.current.getBoundingClientRect().height;
         K(t > e), (B.current = e), (Z.current = t);
-    }, [z]);
+    }, [z, _, a]);
     let q = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         [Q] = r.useState(() => new u.V7());
     r.useEffect(() => () => Q.stop(), [Q]);
@@ -333,13 +333,10 @@ function G(e) {
         m = (0, h.Z)(a.id),
         { analyticsLocations: E } = (0, p.ZP)(_.Z.PROFILE_CUSTOM_STATUS),
         { allProfileReactReplyEnabled: y } = (0, v.i)({ location: r }),
-        I = !f && !a.bot && y,
-        T = null !== (t = null == m ? void 0 : m.emoji) && void 0 !== t ? t : null,
-        b = null !== (n = null == m ? void 0 : m.state) && void 0 !== n ? n : null,
-        S = null != b && '' !== b ? b : null;
+        I = !f && !a.bot && y;
     if (null != o || null != u) {
         let e = null != u ? u : null,
-            t = null != o ? o : null;
+            t = null != o && '' !== o ? o : null;
         return (0, i.jsx)(p.Gt, {
             value: E,
             children: (0, i.jsx)(M, {
@@ -350,6 +347,9 @@ function G(e) {
             })
         });
     }
+    let T = null !== (t = null == m ? void 0 : m.emoji) && void 0 !== t ? t : null,
+        b = null !== (n = null == m ? void 0 : m.state) && void 0 !== n ? n : null,
+        S = null != b && '' !== b ? b : null;
     return null != T || null != S || f
         ? null == T && null == S
             ? (0, i.jsx)(p.Gt, {
