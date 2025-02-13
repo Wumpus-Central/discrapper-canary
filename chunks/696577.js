@@ -90,19 +90,19 @@ function S(e) {
         shouldHighlight: a
     });
 }
-function A(e) {
-    let { isGameRelationship: t, applicationId: n } = e,
-        l = t ? N.intl.string(N.t.ujfP6e) : N.intl.string(N.t.yltuhY),
-        a = (0, r.e7)([c.Z], () => (null != n ? c.Z.getApplication(n) : null));
+function b(e) {
+    let { disambiguateGameRelationships: t, isGameRelationship: n, applicationId: a, userTag: o } = e,
+        h = l.useMemo(() => (t ? (n ? N.intl.string(N.t.ujfP6e) : N.intl.string(N.t.yltuhY)) : o), [t, n, o]),
+        m = (0, r.e7)([c.Z], () => (null != a ? c.Z.getApplication(a) : null));
     return (0, i.jsxs)('div', {
         className: v.applicationSublabel,
         children: [
             (0, i.jsx)(s.Text, {
-                variant: 'text-xxs/medium',
+                variant: 'text-xs/medium',
                 color: 'text-secondary',
-                children: l
+                children: h
             }),
-            null != a &&
+            null != m &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(u.Z, {
@@ -110,43 +110,37 @@ function A(e) {
                             width: 2
                         }),
                         (0, i.jsx)(d.Z, {
-                            game: a,
+                            game: m,
                             size: d.Z.Sizes.XXSMALL
                         }),
                         (0, i.jsx)(s.Text, {
-                            variant: 'text-xxs/medium',
+                            variant: 'text-xs/medium',
                             color: 'text-secondary',
-                            children: a.name
+                            children: m.name
                         })
                     ]
                 })
         ]
     });
 }
-function b(e) {
-    let { user: t, hovered: n, status: r, disambiguateGameFriends: a, isGameRelationship: s, applicationId: o } = e,
-        c = g.ZP.useUserTag(t),
-        d = !!a && !s,
-        u = l.useMemo(
-            () =>
-                a
-                    ? (0, i.jsx)(A, {
-                          isGameRelationship: s,
-                          applicationId: o
-                      })
-                    : c,
-            [o, a, s, c]
-        );
+function A(e) {
+    let { user: t, hovered: n, status: l, disambiguateGameRelationships: r, isGameRelationship: a, applicationId: s } = e,
+        o = g.ZP.useUserTag(t);
     return (0, i.jsx)(I.Z, {
         user: t,
         hovered: n,
-        status: r,
-        showAccountIdentifier: d,
-        subText: u
+        status: l,
+        showAccountIdentifier: !!r && !a,
+        subText: (0, i.jsx)(b, {
+            disambiguateGameRelationships: r,
+            isGameRelationship: a,
+            applicationId: s,
+            userTag: o
+        })
     });
 }
 function Z(e) {
-    let { user: t, type: n, status: r, isFocused: a, applicationId: s, disambiguateGameFriends: c, isGameRelationship: d } = e,
+    let { user: t, type: n, status: r, isFocused: a, applicationId: s, disambiguateGameRelationships: c, isGameRelationship: d } = e,
         u = l.useContext(p.AnalyticsContext),
         { analyticsLocations: m } = (0, o.ZP)(),
         g = r === C.Skl.OFFLINE ? C.Skl.UNKNOWN : r,
@@ -167,11 +161,11 @@ function Z(e) {
             (0, i.jsxs)('div', {
                 className: v.listItemContents,
                 children: [
-                    (0, i.jsx)(b, {
+                    (0, i.jsx)(A, {
                         user: t,
                         hovered: e,
                         status: g,
-                        disambiguateGameFriends: c,
+                        disambiguateGameRelationships: c,
                         isGameRelationship: d,
                         applicationId: s
                     }),
