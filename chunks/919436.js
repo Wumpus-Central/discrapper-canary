@@ -117,24 +117,24 @@ class R extends (i = r.PureComponent) {
         return null != t ? t.getAvatarURL(void 0, 48, !1) : (0, h.x)(e);
     }
     render() {
-        let { channel: e, channelName: t, selected: n, badge: i, audio: r, video: s, stream: d, isCurrentUserInThisDMCall: u, unread: h, isGDMFacepileEnabled: p } = this.props,
-            { hovered: m, animating: g } = this.state,
-            _ = e.isMultiUserDM() && null == e.icon && p;
+        let { channel: e, channelName: t, selected: n, badge: i, audio: r, video: s, stream: d, isCurrentUserInThisDMCall: u, unread: h, isGDMFacepileEnabled: p, isVisualRefreshEnabled: m } = this.props,
+            { hovered: g, animating: _ } = this.state,
+            v = e.isMultiUserDM() && null == e.icon && p;
         return (0, l.jsx)(o.animated.div, {
             style: this.getAnimatedStyle(),
             children: (0, l.jsxs)(S.H, {
                 children: [
                     (0, l.jsx)(b.Z, {
-                        hovered: !g && m,
-                        selected: !g && n,
-                        unread: !g && h,
+                        hovered: !_ && g,
+                        selected: !_ && n,
+                        unread: !_ && h,
                         className: y.pill
                     }),
                     (0, l.jsx)(N.Z, {
                         text: null != t ? t : '',
                         selected: n,
                         children: (0, l.jsx)(c.aRk, {
-                            selected: n || m,
+                            selected: !m && (n || g),
                             lowerBadge: i > 0 ? (0, E.Ne)(i) : null,
                             upperBadge: (0, E.Or)({
                                 audio: r,
@@ -150,12 +150,12 @@ class R extends (i = r.PureComponent) {
                                         to: j.Z5c.CHANNEL(j.ME, e.id),
                                         onMouseEnter: () => this.setState({ hovered: !0 }),
                                         onMouseLeave: () => this.setState({ hovered: !1 }),
-                                        selected: n || m,
+                                        selected: n || g,
                                         ariaLabel: null != t ? t : '',
                                         onContextMenu: this.handleContextMenu,
-                                        icon: _ ? void 0 : this.getChannelIcon(),
-                                        backgroundStyle: _ ? 'on-hover' : 'always',
-                                        children: _
+                                        icon: v ? void 0 : this.getChannelIcon(),
+                                        backgroundStyle: v ? 'on-hover' : 'always',
+                                        children: v
                                             ? (0, l.jsx)(f.Z, {
                                                   channel: e,
                                                   size: c.EFr.SIZE_48,
@@ -243,6 +243,7 @@ let w = r.forwardRef(function (e, t) {
         stream: a,
         isCurrentUserInThisDMCall: I,
         isGDMFacepileEnabled: f,
-        size: N ? S : 56
+        size: N ? S : 56,
+        isVisualRefreshEnabled: N
     });
 });
