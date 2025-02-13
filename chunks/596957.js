@@ -21,8 +21,8 @@ var i = n(200651),
     v = n(434184),
     T = n(701861),
     S = n(437314),
-    A = n(696577),
-    b = n(163417),
+    b = n(696577),
+    A = n(163417),
     Z = n(830880),
     x = n(492347),
     L = n(42575),
@@ -88,11 +88,11 @@ let M = function (e) {
                         );
                     case P.pJs.PENDING:
                         return (0, i.jsx)(
-                            A.Z,
+                            b.Z,
                             {
                                 ...n,
                                 isFocused: D,
-                                disambiguateGameFriends: H
+                                disambiguateGameRelationships: H
                             },
                             t
                         );
@@ -252,7 +252,7 @@ let M = function (e) {
                     onClear: K,
                     size: o.E1j.Sizes.MEDIUM
                 }),
-                (0, i.jsx)(b.Z, {
+                (0, i.jsx)(A.Z, {
                     rows: $,
                     renderRow: W,
                     renderSection: ei,

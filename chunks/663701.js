@@ -21,8 +21,8 @@ var i = n(200651),
     v = n(377171),
     T = n(540059),
     S = n(243778),
-    A = n(922409),
-    b = n(899740),
+    b = n(922409),
+    A = n(899740),
     Z = n(28476),
     x = n(880257),
     L = n(631885),
@@ -129,13 +129,13 @@ let et = (e) => {
         });
     },
     ei = () => {
-        let e = (0, b.q)();
+        let e = (0, A.q)();
         return e > 0 ? (0, i.jsx)(p.mAB, { count: e }) : null;
     },
     el = (e) => {
         let { selected: t } = e,
             n = (0, c.JA)('messageRequests'),
-            { channelId: l } = (0, A._)();
+            { channelId: l } = (0, b._)();
         if (!(0, Z.a)()) return null;
         let r = null == l ? void 0 : () => g.Z.preload(X.ME, l);
         return (0, i.jsx)(Y.Qj, {

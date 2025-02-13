@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(47120);
+n.d(t, { Z: () => b }), n(47120);
 var i = n(237997),
     l = n(998502),
     r = n(576027),
@@ -39,7 +39,7 @@ let T = {
         ...o.M,
         ...c.n
     },
-    A = {
+    b = {
         server: s.Z,
         commands: T,
         events: S,

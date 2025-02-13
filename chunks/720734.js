@@ -21,8 +21,8 @@ var i = n(200651),
     v = n(634894),
     T = n(586902),
     S = n(907305),
-    A = n(468363),
-    b = n(297369),
+    b = n(468363),
+    A = n(297369),
     Z = n(953372),
     x = n(570928),
     L = n(100527),
@@ -75,8 +75,8 @@ var i = n(200651),
     ev = n(626135),
     eT = n(768581),
     eS = n(572004),
-    eA = n(70956),
-    eb = n(74538),
+    eb = n(70956),
+    eA = n(74538),
     eZ = n(374023),
     ex = n(51144),
     eL = n(998502),
@@ -101,8 +101,8 @@ function ek(e, t, n) {
     );
 }
 let eM = eL.ZP.getEnableHardwareAcceleration() ? _.Xo$ : _.qEK,
-    eU = 2 * eA.Z.Millis.MINUTE,
-    eG = 30 * eA.Z.Millis.DAY;
+    eU = 2 * eb.Z.Millis.MINUTE,
+    eG = 30 * eb.Z.Millis.DAY;
 function eB(e) {
     let { speaking: t, streaming: n, currentUser: l, status: r, handleMouseLeave: s, renderNameTag: o } = e,
         c = (0, H.Q3)('RTC Avatar'),
@@ -193,7 +193,7 @@ class eV extends l.PureComponent {
         if (null == r) return null;
         if (
             (n || o) &&
-            (0, b.Z)({
+            (0, A.Z)({
                 activities: t,
                 status: a,
                 applicationStream: l,
@@ -563,7 +563,7 @@ function eH() {
             return null != e ? ep.Z.getChannel(e) : null;
         }),
         { mute: g, selfMute: E, suppress: I } = (0, eo.Z)(p),
-        { selfDeaf: C, deaf: b } = (0, es.Z)(p),
+        { selfDeaf: C, deaf: A } = (0, es.Z)(p),
         Z = (0, o.e7)([R.C], () => {
             var e;
             return (0, j.fD)() ? (null === (e = R.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web) : null;
@@ -576,10 +576,10 @@ function eH() {
         M = (0, o.e7)([W.Z], () => null != W.Z.getAwaitingRemoteSessionInfo()),
         U = (0, $.D)(),
         G = (0, N.u)(),
-        B = eb.ZP.canUsePremiumGuildMemberProfile(t),
+        B = eA.ZP.canUsePremiumGuildMemberProfile(t),
         V = (null == t ? void 0 : null === (e = t.avatarDecoration) || void 0 === e ? void 0 : e.skuId) === ej.rL,
         { activityStatusCleanupEnabled: H } = (0, S.w)({ location: 'Account' }),
-        { voiceActivityStatusEnabled: z } = (0, A.U)({ location: 'Account' }),
+        { voiceActivityStatusEnabled: z } = (0, b.U)({ location: 'Account' }),
         { enabled: Y } = (0, D.Z)({ location: 'Account' }),
         K = 'account';
     (0, v.j)({
@@ -636,7 +636,7 @@ function eH() {
                 premiumSubscription: x,
                 selfDeaf: C,
                 selfMute: E,
-                serverDeaf: b,
+                serverDeaf: A,
                 serverMute: g,
                 speaking: u,
                 speakingWhileMuted: P,
@@ -675,8 +675,8 @@ function ez(e) {
         v = (0, h.O)(C ? 'unmute' : 'mute'),
         T = (0, m.P)(C ? 'unmute' : 'mute'),
         { activeVoice: S } = (0, ed.o)(),
-        { Component: A, events: b, play: Z } = null != S ? T : v,
-        x = n || r ? _.v0G : A,
+        { Component: b, events: A, play: Z } = null != S ? T : v,
+        x = n || r ? _.v0G : b,
         { mode: P } = (0, ea.ZP)({ location: 'RTC Microphone Button' }),
         O = null != o ? o : (0, k.Z)(t, n, r, a, P === ea.BK.GroupedButtonsRedMic),
         { analyticsLocations: R } = (0, y.ZP)(L.Z.AUDIO_INPUT_BUTTON),
@@ -703,10 +703,10 @@ function ez(e) {
                     tooltipColor: c,
                     tooltipForceOpen: d,
                     onMouseEnter: () => {
-                        u(), b.onMouseEnter();
+                        u(), A.onMouseEnter();
                     },
                     onMouseLeave: () => {
-                        p(), b.onMouseLeave();
+                        p(), A.onMouseLeave();
                     },
                     icon: (0, i.jsx)(x, {
                         size: 'custom',

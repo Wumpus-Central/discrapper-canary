@@ -29,14 +29,14 @@ function p(e) {
             isRejectLoading: v,
             isUserProfileLoading: T,
             isOptimisticAccepted: S,
-            isOptimisticRejected: A
+            isOptimisticRejected: b
         } = (0, d.m)({
             user: n,
             onAcceptSuccess: E,
             onRejectSuccess: f,
             onError: _
         }),
-        b = N || v || T || S || A;
+        A = N || v || T || S || b;
     return (0, i.jsxs)('div', {
         className: m.container,
         children: [
@@ -55,8 +55,8 @@ function p(e) {
                         onClick: (e) => {
                             e.stopPropagation(), C(p.id);
                         },
-                        disabled: b,
-                        submitting: v || A,
+                        disabled: A,
+                        submitting: v || b,
                         children: h.intl.string(h.t.B2nygY)
                     }),
                     (0, i.jsx)(r.zxk, {
@@ -66,7 +66,7 @@ function p(e) {
                         onClick: (e) => {
                             e.stopPropagation(), I(p.id);
                         },
-                        disabled: b,
+                        disabled: A,
                         submitting: N || T || S,
                         children: h.intl.string(h.t.Kz8Pws)
                     })

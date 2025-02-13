@@ -21,8 +21,8 @@ var i = n(200651),
     v = n(65443),
     T = n(611855),
     S = n(670638),
-    A = n(667105),
-    b = n(860151),
+    b = n(667105),
+    A = n(860151),
     Z = n(341907),
     x = n(46140),
     L = n(981631),
@@ -102,7 +102,7 @@ function R(e) {
                     questId: I.id
                 });
         }, [I.id, C]),
-        G = (0, A.hf)({
+        G = (0, b.hf)({
             quest: I,
             location: g.jn.ACTIVITY_PANEL
         }),
@@ -179,7 +179,7 @@ function R(e) {
                       }),
                   V &&
                       !H &&
-                      (0, i.jsx)(b.Z, {
+                      (0, i.jsx)(A.Z, {
                           autoplay: L,
                           className: P.rewardTileWithInstructions,
                           quest: I,

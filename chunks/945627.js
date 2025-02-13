@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(726985),
     C = n(981631),
     N = n(388032),
-    I = n(318889);
-function f() {
+    f = n(318889);
+function I() {
     let e = (0, r.e7)([u.Z], () => u.Z.getGameFriendCount()),
         [t] = (0, r.e7)(
             [u.Z],
@@ -74,7 +74,7 @@ function f() {
                             {
                                 src: r,
                                 'aria-label': l,
-                                className: I.icon
+                                className: f.icon
                             },
                             l
                         )
@@ -89,13 +89,13 @@ function f() {
             o.Z.open(C.oAB.AUTHORIZED_APPS);
         }, []);
     return (0, i.jsxs)('div', {
-        className: I.header,
+        className: f.header,
         children: [
             (0, i.jsxs)('div', {
-                className: I.gameRelationships,
+                className: f.gameRelationships,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: I.gameRelationshipsDetails,
+                        className: f.gameRelationshipsDetails,
                         children: [
                             (0, i.jsx)(a.Text, {
                                 variant: 'text-md/medium',
@@ -110,15 +110,15 @@ function f() {
                         ]
                     }),
                     (0, i.jsx)('div', {
-                        className: I.gameRelationshipIcons,
+                        className: f.gameRelationshipIcons,
                         children: _
                     })
                 ]
             }),
-            (0, i.jsx)('div', { className: I.divider }),
+            (0, i.jsx)('div', { className: f.divider }),
             (0, i.jsxs)(a.P3F, {
                 onClick: p,
-                className: I.manageGamesLink,
+                className: f.manageGamesLink,
                 children: [
                     (0, i.jsx)(a.Text, {
                         variant: 'text-xs/normal',
@@ -128,7 +128,7 @@ function f() {
                     (0, i.jsx)(a.Fbu, {
                         size: 'xxs',
                         color: a.TVs.colors.INTERACTIVE_NORMAL,
-                        className: I.manageGamesChevron
+                        className: f.manageGamesChevron
                     })
                 ]
             })
@@ -139,7 +139,7 @@ function T() {
     let e = g._j.useSetting();
     return (0, i.jsxs)(x.Z, {
         children: [
-            (0, i.jsx)(f, {}),
+            (0, i.jsx)(I, {}),
             (0, i.jsx)(_.U, {
                 setting: E.s6.PRIVACY_AND_SAFETY_ALLOW_GAME_FRIEND_DMS,
                 children: (0, i.jsx)(p.Z, {

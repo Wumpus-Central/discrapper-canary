@@ -6,8 +6,8 @@ var n = i(200651),
     o = i(544891),
     s = i(481060),
     u = i(53281),
-    c = i(476326),
-    d = i(304761),
+    d = i(476326),
+    c = i(304761),
     m = i(273031),
     h = i(859235),
     v = i(898463),
@@ -57,7 +57,7 @@ function w(e) {
         [el, er] = l.useState(''),
         [ea, eo] = l.useState(!1),
         [es, eu] = l.useState(!1),
-        [ec, ed] = l.useState(!1),
+        [ed, ec] = l.useState(!1),
         [em, eh] = l.useState(!1);
     l.useEffect(() => {
         let e = Math.random().toString(16).slice(2);
@@ -68,9 +68,9 @@ function w(e) {
                 rejectWithError: !0
             })
             .then((e) => {
-                if (null != e.body && '59be3949efccc7f7ca9905d7eb58b75f194a2cc1' !== e.body.hash) {
+                if (null != e.body && '915f91daa2c282040b6c0be03adf1db75e2820fe' !== e.body.hash) {
                     {
-                        let e = new Date('1739465455652'),
+                        let e = new Date('1739469492622'),
                             t = new Date();
                         (0, g.TD)(t, e).hours > 6 && eh(!0);
                     }
@@ -82,9 +82,9 @@ function w(e) {
             let e = f.default.getCurrentUser();
             return (null == e ? void 0 : e.isStaff()) || (null == e ? void 0 : e.isStaffPersonal());
         }),
-        ex = (0, a.e7)([d.C], () => {
+        ex = (0, a.e7)([c.C], () => {
             var e;
-            return null === (e = d.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web;
+            return null === (e = c.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web;
         }),
         ef = () => {
             null == T || T();
@@ -94,7 +94,7 @@ function w(e) {
         };
     async function eg() {
         var e, t;
-        if ((ed(!1), '' === W || null == R)) {
+        if ((ec(!1), '' === W || null == R)) {
             eo(!0);
             return;
         }
@@ -129,7 +129,7 @@ function w(e) {
                 },
                 a,
                 r
-            ).catch(() => ed(!0));
+            ).catch(() => ec(!0));
         eu(!1),
             null != o && o.ok
                 ? (ev && window.open(o.body.permalink_url, '_blank'),
@@ -142,7 +142,7 @@ function w(e) {
                               asanaTask: o.body
                           });
                   }))
-                : ed(!0);
+                : ec(!0);
     }
     return (
         l.useEffect(() => {
@@ -386,10 +386,10 @@ function w(e) {
                                                             ...V,
                                                             ...Array.from(e.currentTarget.files).map(
                                                                 (e) =>
-                                                                    new c.ZP({
+                                                                    new d.ZP({
                                                                         id: (0, r.Z)(),
                                                                         file: e,
-                                                                        platform: c.ow.WEB
+                                                                        platform: d.ow.WEB
                                                                     })
                                                             )
                                                         ]);
@@ -449,7 +449,7 @@ function w(e) {
                                               ]
                                           })
                                         : null,
-                                    ec
+                                    ed
                                         ? (0, n.jsx)(s.Text, {
                                               color: 'text-danger',
                                               variant: 'text-sm/normal',

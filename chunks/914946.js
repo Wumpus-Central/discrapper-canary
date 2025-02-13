@@ -46,8 +46,8 @@ var i,
     v = n(375954),
     T = n(158776),
     S = n(594174),
-    A = n(979651),
-    b = n(70956),
+    b = n(979651),
+    A = n(70956),
     Z = n(5192),
     x = n(226951),
     L = n(591759),
@@ -64,7 +64,7 @@ let j = null !== (l = null === (i = L.Z.toURLSafe(window.GLOBAL_ENV.API_ENDPOINT
         return /^\d+$/.test(n) ? e : t.slice(-2).join('.');
     })(),
     w = new RegExp('^'.concat(x.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(x.Z.escape(D), '|discordapp.com|discord.com)$')),
-    k = 1 * b.Z.Millis.MINUTE,
+    k = 1 * A.Z.Millis.MINUTE,
     M = {};
 function U(e) {
     return 'customEmoji' === e.type && (e.type = 'emoji'), 'emoji' === e.type && e.src && (e.src = G(e.src)), Array.isArray(e.content) && (e.content = e.content.map(U)), e;
@@ -99,7 +99,7 @@ function V(e, t) {
         Promise.all(n).then(() => {
             var n;
             let l = (!e.isNSFW() || (null === (n = S.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? v.Z.getMessages(e.id).toArray().map(H) : [],
-                r = Object.values(A.Z.getVoiceStatesForChannel(e.id)).map((t) => F(i, e.id, t));
+                r = Object.values(b.Z.getVoiceStatesForChannel(e.id)).map((t) => F(i, e.id, t));
             return {
                 id: e.id,
                 name: e.name,

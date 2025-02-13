@@ -23,7 +23,7 @@ let T = l.memo(function (e) {
     let { channel: t } = e,
         { loaded: n, error: r, message: T } = (0, f.a)(t),
         S = (0, d.p)(),
-        { isBlocked: A, isIgnored: b } = (0, s.cj)(
+        { isBlocked: b, isIgnored: A } = (0, s.cj)(
             [_.Z],
             () => ({
                 isBlocked: null != T && _.Z.isBlockedForMessage(T),
@@ -53,14 +53,14 @@ let T = l.memo(function (e) {
             children: C.intl.string(C.t.BZHld3)
         });
     else if (n) {
-        if (null != T && A)
+        if (null != T && b)
             y = (0, i.jsx)(o.Text, {
                 className: N.messageReplacement,
                 variant: 'text-sm/normal',
                 color: 'text-muted',
                 children: C.intl.string(C.t['WPe+xM'])
             });
-        else if (null != T && b)
+        else if (null != T && A)
             y = (0, i.jsx)(o.Text, {
                 className: N.messageReplacement,
                 variant: 'text-sm/normal',
@@ -68,7 +68,7 @@ let T = l.memo(function (e) {
                 children: C.intl.string(C.t.uxrh1N)
             });
         else if (null != T) {
-            let { contentPlaceholder: e, renderedContent: t } = (0, m.f)(T, L, A, b, a()(N.messageContent, v.inlineFormat), {
+            let { contentPlaceholder: e, renderedContent: t } = (0, m.f)(T, L, b, A, a()(N.messageContent, v.inlineFormat), {
                 leadingIconClass: N.messageContentIcon,
                 trailingIconClass: N.messageContentIcon,
                 iconSize: I.WW

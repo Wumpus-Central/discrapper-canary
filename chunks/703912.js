@@ -21,21 +21,21 @@ var i = n(664751),
     v = n(186901),
     T = n(981631);
 let S = 'CachedTokens';
-function A(e, t, n) {
-    return (0, N.S)() ? b(e, t, n) : Z(e, t, n);
+function b(e, t, n) {
+    return (0, N.S)() ? A(e, t, n) : Z(e, t, n);
 }
-async function b(e, t, n) {
+async function A(e, t, n) {
     let i,
         r,
         s,
         o,
         c,
-        { client_id: d, response_type: u = 'code', redirect_uri: g, code_challenge: _, code_challenge_method: N, state: v, nonce: S, scope: A, permissions: b, guild_id: Z, channel_id: x, prompt: L, disable_guild_select: y, integration_type: P, pid: O, signal: R } = e;
+        { client_id: d, response_type: u = 'code', redirect_uri: g, code_challenge: _, code_challenge_method: N, state: v, nonce: S, scope: b, permissions: A, guild_id: Z, channel_id: x, prompt: L, disable_guild_select: y, integration_type: P, pid: O, signal: R } = e;
     if (null == R ? void 0 : R.aborted) throw new C.Z({ errorCode: T.lTL.UNKNOWN_ERROR }, 'Request aborted');
     if (null == d) throw new C.Z({ errorCode: T.lTL.OAUTH2_ERROR }, 'No Client ID provided');
     if (null != g) throw new C.Z({ errorCode: T.lTL.OAUTH2_ERROR }, 'Redirect URI cannot be used in the RPC OAuth2 Authorization flow');
     let j = [];
-    if (('string' == typeof A ? (j = A.split(' ').filter((e) => e.length > 0)) : Array.isArray(A) && (j = A), null == f.default.getCurrentUser())) throw new C.Z({ errorCode: T.lTL.OAUTH2_ERROR }, 'Client is not logged in');
+    if (('string' == typeof b ? (j = b.split(' ').filter((e) => e.length > 0)) : Array.isArray(b) && (j = b), null == f.default.getCurrentUser())) throw new C.Z({ errorCode: T.lTL.OAUTH2_ERROR }, 'Client is not logged in');
     null != P && (r = Number(P));
     try {
         [s, { disclosures: o, allAcked: c }] = await Promise.all([
@@ -83,7 +83,7 @@ async function b(e, t, n) {
     null == n || n(s.application, x, O);
     let w = I.Hn;
     try {
-        w = a.vB(null != b ? b : 0);
+        w = a.vB(null != A ? A : 0);
     } catch (e) {}
     return (
         null != s.integration_type && Object.values(l.Y).includes(s.integration_type) && (i = new Map()).set(s.integration_type, s),
@@ -114,21 +114,21 @@ async function Z(e, t, n) {
         N,
         v,
         S,
-        { client_id: A, response_type: b = 'code', redirect_uri: Z, code_challenge: x, code_challenge_method: L, state: y, nonce: P, scope: O, permissions: R, guild_id: j, channel_id: D, prompt: w, disable_guild_select: k, integration_type: M, pid: U, signal: G } = e;
+        { client_id: b, response_type: A = 'code', redirect_uri: Z, code_challenge: x, code_challenge_method: L, state: y, nonce: P, scope: O, permissions: R, guild_id: j, channel_id: D, prompt: w, disable_guild_select: k, integration_type: M, pid: U, signal: G } = e;
     if (null == G ? void 0 : G.aborted) throw new C.Z({ errorCode: T.lTL.UNKNOWN_ERROR }, 'Request aborted');
-    if (null == A) throw new C.Z({ errorCode: T.lTL.OAUTH2_ERROR }, 'No Client ID provided');
+    if (null == b) throw new C.Z({ errorCode: T.lTL.OAUTH2_ERROR }, 'No Client ID provided');
     if (null != Z) throw new C.Z({ errorCode: T.lTL.OAUTH2_ERROR }, 'Redirect URI cannot be used in the RPC OAuth2 Authorization flow');
     let B = [];
     if (('string' == typeof O ? (B = O.split(' ').filter((e) => e.length > 0)) : Array.isArray(O) && (B = O), null == f.default.getCurrentUser())) throw new C.Z({ errorCode: T.lTL.OAUTH2_ERROR }, 'Client is not logged in');
-    let V = null !== (r = u.Z.getApplication(A)) && void 0 !== r ? r : null;
-    (null == V || ((s = V.id), (null !== (o = u.Z.getApplicationLastUpdated(s)) && void 0 !== o ? o : 0) < Date.now() - 5000)) && (V = _.ZP.createFromServer(await (0, g.UM)(A, G)));
+    let V = null !== (r = u.Z.getApplication(b)) && void 0 !== r ? r : null;
+    (null == V || ((s = V.id), (null !== (o = u.Z.getApplicationLastUpdated(s)) && void 0 !== o ? o : 0) < Date.now() - 5000)) && (V = _.ZP.createFromServer(await (0, g.UM)(b, G)));
     let H = null != V && (0, E.yE)(V.flags, T.udG.EMBEDDED) && (null === (i = V.integrationTypesConfig) || void 0 === i ? void 0 : i[l.Y.USER_INSTALL]) != null;
     d = null == M ? (H ? l.Y.USER_INSTALL : l.Y.GUILD_INSTALL) : Number(M);
     try {
         N = await (0, m.Ww)({
-            clientId: A,
+            clientId: b,
             scopes: B,
-            responseType: b,
+            responseType: A,
             redirectUri: Z,
             codeChallenge: x,
             codeChallengeMethod: L,
@@ -151,9 +151,9 @@ async function Z(e, t, n) {
             return (
                 await (0, m.Iq)({
                     authorize: !0,
-                    clientId: A,
+                    clientId: b,
                     scopes: B,
-                    responseType: b,
+                    responseType: A,
                     redirectUri: Z,
                     codeChallenge: x,
                     codeChallengeMethod: L,
@@ -174,11 +174,11 @@ async function Z(e, t, n) {
     return (
         null != N.integration_type && Object.values(l.Y).includes(N.integration_type) && (c = new Map()).set(N.integration_type, N),
         t({
-            clientId: A,
+            clientId: b,
             authorizations: c,
             scopes: B,
             parsedPermissions: F,
-            responseType: b,
+            responseType: A,
             redirectUri: Z,
             codeChallenge: x,
             codeChallengeMethod: L,
@@ -250,7 +250,7 @@ function L(e, t) {
                     if (null == n) throw new C.Z({ errorCode: T.lTL.INVALID_COMMAND }, 'No application.');
                     let o = r.x.IDENTIFY,
                         d = () =>
-                            A(
+                            b(
                                 {
                                     client_id: n,
                                     scope: o,
@@ -331,7 +331,7 @@ function L(e, t) {
                             let s = r.scopes || r.scope;
                             return (
                                 delete r.scopes,
-                                A(
+                                b(
                                     {
                                         ...r,
                                         scope: s,

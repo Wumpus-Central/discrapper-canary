@@ -28,7 +28,7 @@ var i,
     D = n(670512),
     M = n(981631),
     v = n(388032),
-    Z = n(956208);
+    x = n(956208);
 function U(e, t, n) {
     return (
         t in e
@@ -42,16 +42,16 @@ function U(e, t, n) {
         e
     );
 }
-let x = () =>
+let Z = () =>
     (0, l.jsxs)('div', {
-        className: Z.emptyState,
+        className: x.emptyState,
         children: [
             (0, l.jsx)('div', {
-                className: Z.emptyStateNote,
+                className: x.emptyStateNote,
                 children: v.intl.string(v.t.bpbATE)
             }),
             (0, l.jsx)('div', {
-                className: Z.emptyStateCTA,
+                className: x.emptyStateCTA,
                 children: (0, l.jsx)(d.eee, {
                     href: O.Z.getArticleURL(M.BhN.QUICK_SWITCHER_TUTORIAL),
                     children: v.intl.string(v.t['4iPfEB'])
@@ -65,7 +65,7 @@ class y extends (i = r.Component) {
         return (0, l.jsx)(L.$W, {
             ...this.props,
             children: (0, l.jsx)('div', {
-                className: Z.miscContainer,
+                className: x.miscContainer,
                 children: null != e ? e.name : null
             })
         });
@@ -107,7 +107,7 @@ function G(e, t, n) {
             children: (e) =>
                 (0, l.jsx)('span', {
                     ...e,
-                    className: Z.autocompleteQuerySymbol,
+                    className: x.autocompleteQuerySymbol,
                     children: t
                 })
         },
@@ -148,7 +148,7 @@ class w extends r.PureComponent {
             i = t.length > 0 && '' !== n;
         return (0, l.jsx)(d.tEY, {
             children: (0, l.jsx)('input', {
-                className: Z.input,
+                className: x.input,
                 'aria-label': v.intl.string(v.t.ZvKwYW),
                 ref: this.inputRef,
                 type: 'text',
@@ -173,7 +173,7 @@ class w extends r.PureComponent {
         let { query: e } = this.state,
             { results: t } = this.props;
         return 0 === t.length && e.length > 0
-            ? (0, l.jsx)(x, {})
+            ? (0, l.jsx)(Z, {})
             : 0 === t.length
               ? null
               : (0, l.jsx)(d._2F, {
@@ -185,7 +185,7 @@ class w extends r.PureComponent {
                     rowHeight: 34,
                     paddingBottom: 10,
                     sections: [t.length],
-                    className: Z.scroller,
+                    className: x.scroller,
                     renderRow: this.renderRow,
                     renderSection: this.renderSection
                 });
@@ -198,7 +198,7 @@ class w extends r.PureComponent {
     }
     renderProtip() {
         return (0, l.jsx)(C.Z, {
-            className: a()(Z.protip, { [Z.hasContent]: this.state.query.length > 0 }),
+            className: a()(x.protip, { [x.hasContent]: this.state.query.length > 0 }),
             type: C.Z.Types.INLINE,
             children: v.intl.format(v.t.wukqXV, {
                 userSymbolHook: (e, t) => G(t, h.xQ.USER, v.intl.string(v.t.GQRCGh)),
@@ -219,10 +219,10 @@ class w extends r.PureComponent {
             'aria-label': v.intl.string(v.t.ZvKwYW),
             size: d.CgR.DYNAMIC,
             transitionState: this.props.transitionState,
-            className: a()(Z.container, o.tq && Z.mobileContainer),
+            className: a()(x.container, o.tq && x.mobileContainer),
             fullscreenOnMobile: !1,
             children: (0, l.jsxs)('div', {
-                className: a()(Z.quickswitcher, o.tq && Z.mobileQuickswitcher),
+                className: a()(x.quickswitcher, o.tq && x.mobileQuickswitcher),
                 onMouseMove: this.handleMouseMove,
                 children: [this.renderInput(), this.renderResults(), this.renderProtip(), this.renderTutorial()]
             })

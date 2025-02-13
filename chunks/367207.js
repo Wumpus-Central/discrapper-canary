@@ -29,9 +29,9 @@ var l = n(392711),
     D = n(879463),
     M = n(822070),
     v = n(520540),
-    Z = n(11352),
+    x = n(11352),
     U = n(474936),
-    x = n(981631),
+    Z = n(981631),
     y = n(354459),
     k = n(37113),
     b = n(388032);
@@ -121,7 +121,7 @@ class j extends o.Z {
                 e && (0, E.W)();
             }),
             V(this, '_trackCustomNotificationSoundsExposure', () => {
-                Z.Y.trackExposure({ location: 'PremiumManager' });
+                x.Y.trackExposure({ location: 'PremiumManager' });
             }),
             V(this, '_handlePremiumPaymentModalOpen', (e) => {
                 (0, u.Z)({
@@ -151,8 +151,8 @@ class j extends o.Z {
                     let r = d.Z.getSelectedParticipant(e),
                         s = (0, g.o)(r, n),
                         { sendNitroMessage: o } = (0, R.TD)(s),
-                        c = null !== (l = null === (i = _.Z.getGuild(t)) || void 0 === i ? void 0 : i.premiumTier) && void 0 !== l ? l : x.Eu4.NONE;
-                    if (A.Z.cooldownIsActive() || !o || c >= x.Eu4.TIER_2 || (null == r ? void 0 : r.type) !== y.fO.STREAM || (null == r ? void 0 : r.id) === (null == n ? void 0 : n.id) || null == r.maxResolution || null == r.maxFrameRate) return;
+                        c = null !== (l = null === (i = _.Z.getGuild(t)) || void 0 === i ? void 0 : i.premiumTier) && void 0 !== l ? l : Z.Eu4.NONE;
+                    if (A.Z.cooldownIsActive() || !o || c >= Z.Eu4.TIER_2 || (null == r ? void 0 : r.type) !== y.fO.STREAM || (null == r ? void 0 : r.id) === (null == n ? void 0 : n.id) || null == r.maxResolution || null == r.maxFrameRate) return;
                     S.I();
                     let u = b.intl.formatToPlainString(b.t.AbyeZG, {
                         nickname: r.userNick,
@@ -160,10 +160,10 @@ class j extends o.Z {
                         fps: (0, N.bp)(r.maxFrameRate)
                     });
                     a.Z.sendNitroSystemMessage(e, u),
-                        C.default.track(x.rMx.PREMIUM_UPSELL_MESSAGE_SENT, {
+                        C.default.track(Z.rMx.PREMIUM_UPSELL_MESSAGE_SENT, {
                             type: U.cd.HD_STREAMING_VIEWER_UPSELL,
-                            location_section: null != t ? x.jXE.TEXT_IN_VOICE : x.jXE.CHANNEL_TEXT_AREA,
-                            location_object: x.qAy.MESSAGE,
+                            location_section: null != t ? Z.jXE.TEXT_IN_VOICE : Z.jXE.CHANNEL_TEXT_AREA,
+                            location_object: Z.qAy.MESSAGE,
                             guild_id: t
                         });
                 }, 200)

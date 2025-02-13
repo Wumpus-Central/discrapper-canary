@@ -26,8 +26,8 @@ var l = n(91192),
     v = n(767870),
     T = n(104494),
     S = n(639119),
-    A = n(655525),
-    b = n(314684),
+    b = n(655525),
+    A = n(314684),
     Z = n(52188),
     x = n(346497),
     L = n(924540),
@@ -51,7 +51,7 @@ let G = 'NitroTabButton',
             s = (0, x.Vi)(),
             o = (0, R.vx)(G),
             c = (0, R.wG)(G),
-            d = (0, b.$_)(),
+            d = (0, A.$_)(),
             u = (0, P.V)(),
             h = (0, E.Qo)(n, i),
             m = (0, r.e7)([I.Z], () => I.Z.getCreatedAtOverride()),
@@ -74,7 +74,7 @@ let G = 'NitroTabButton',
             $ = (0, C.W)(),
             ee = (0, r.e7)([g.Z], () => g.Z.isLocalizedPromoEnabled) && null == Q,
             et = (0, x.Vi)(),
-            en = (0, b.$_)(),
+            en = (0, A.$_)(),
             ei = (0, P.V)(),
             el = (0, R.Kn)(G),
             er = (0, R.vx)(G),
@@ -104,7 +104,7 @@ let G = 'NitroTabButton',
                 : ea
                   ? ((I = (0, i.jsx)(O.Z, { copy: M.intl.string(M.t.jyYgZ2) })), (V = 8))
                   : et
-                    ? ((I = (0, i.jsx)(A.Z, {})), (V = 0))
+                    ? ((I = (0, i.jsx)(b.Z, {})), (V = 0))
                     : null != eg && eg === a.z.REVERSE_TRIAL_NITRO_TAB_BADGE
                       ? ((I = (0, i.jsx)(j.Z, {
                             copy: M.intl.string(M.t.HwUCnp),

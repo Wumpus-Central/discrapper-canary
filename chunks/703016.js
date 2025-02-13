@@ -21,8 +21,8 @@ var i = n(913527),
     v = n(9156),
     T = n(594174),
     S = n(51144),
-    A = n(196051),
-    b = n(441729),
+    b = n(196051),
+    A = n(441729),
     Z = n(653477),
     x = n(981631),
     L = n(388032);
@@ -79,11 +79,11 @@ function w() {
 }
 async function k(e, t, n, i, l) {
     let r = s.e6(e, n);
-    null !== r && (null == O && w(), t ? await (0, A.NB)() : null == P || P.removeEventListener('end', A.NB), r.addEventListener('end', A.NB), null != i && r.addEventListener('start', i), null != l && r.addEventListener('end', l), (P = r), s.iq(r, O));
+    null !== r && (null == O && w(), t ? await (0, b.NB)() : null == P || P.removeEventListener('end', b.NB), r.addEventListener('end', b.NB), null != i && r.addEventListener('start', i), null != l && r.addEventListener('end', l), (P = r), s.iq(r, O));
 }
 function M(e, t, n, i, l) {
     k(e, t, l, () => {
-        (0, A.Bo)(n, i);
+        (0, b.Bo)(n, i);
     });
 }
 function U(e) {
@@ -91,7 +91,7 @@ function U(e) {
     k(t, n, i, l, r);
 }
 function G() {
-    return null !== P && P.removeEventListener('end', A.NB), s.M9(), (P = null), !0;
+    return null !== P && P.removeEventListener('end', b.NB), s.M9(), (P = null), !0;
 }
 function B(e) {
     var t, n, i;
@@ -112,10 +112,10 @@ function V(e) {
     let u = N.Z.getChannelId(),
         f = p.ZP.getCurrentSidebarChannelId(u),
         T = s === u || s === f,
-        A = h.OW.getSetting() && o.tts && T,
-        b = I.Z.getTTSType(),
-        L = (null === (t = o.author) || void 0 === t ? void 0 : t.id) !== m.default.getId() && (b === x.PrB.ALL_CHANNELS || (b === x.PrB.SELECTED_CHANNEL && T));
-    if ((A || L) && !C.Z.isBlockedOrIgnoredForMessage(o)) {
+        b = h.OW.getSetting() && o.tts && T,
+        A = I.Z.getTTSType(),
+        L = (null === (t = o.author) || void 0 === t ? void 0 : t.id) !== m.default.getId() && (A === x.PrB.ALL_CHANNELS || (A === x.PrB.SELECTED_CHANNEL && T));
+    if ((b || L) && !C.Z.isBlockedOrIgnoredForMessage(o)) {
         if (y.indexOf(o.id) >= 0) return !1;
         y.unshift(o.id) > 10 && y.pop();
         let e = d.getGuildId();
@@ -129,8 +129,8 @@ function V(e) {
 }
 function H(e) {
     let { id: t, channelId: n } = e,
-        i = b.Z.currentMessage;
-    return null != i && t === i.messageId && n === i.channelId && ((0, A.NB)(), !0);
+        i = A.Z.currentMessage;
+    return null != i && t === i.messageId && n === i.channelId && ((0, b.NB)(), !0);
 }
 function F() {
     E.Z.isSelfDeaf() && s.M9();

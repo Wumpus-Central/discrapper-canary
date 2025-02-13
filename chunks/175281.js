@@ -167,25 +167,25 @@ class v extends l.PureComponent {
                 (0, i.jsxs)('div', {
                     className: g.ddrArrows,
                     children: [
-                        (0, i.jsx)(Z, {
+                        (0, i.jsx)(x, {
                             arrow: 'LEFT',
                             isActive: n,
                             className: g.left,
                             children: 'left'
                         }),
-                        (0, i.jsx)(Z, {
+                        (0, i.jsx)(x, {
                             arrow: 'DOWN',
                             isActive: t,
                             className: g.down,
                             children: 'down'
                         }),
-                        (0, i.jsx)(Z, {
+                        (0, i.jsx)(x, {
                             arrow: 'UP',
                             isActive: e,
                             className: g.up,
                             children: 'up'
                         }),
-                        (0, i.jsx)(Z, {
+                        (0, i.jsx)(x, {
                             arrow: 'RIGHT',
                             isActive: l,
                             className: g.right,
@@ -282,7 +282,7 @@ class v extends l.PureComponent {
             });
     }
 }
-function Z(e) {
+function x(e) {
     let { isActive: t, arrow: n, className: r, children: a } = e,
         [o, c] = l.useState(t),
         d = l.useCallback(() => {

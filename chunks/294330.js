@@ -26,8 +26,8 @@ var i = n(200651),
     v = n(768581),
     T = n(356164),
     S = n(890064),
-    A = n(981631),
-    b = n(388032),
+    b = n(981631),
+    A = n(388032),
     Z = n(992676),
     x = n(129512),
     L = n(330065),
@@ -46,8 +46,8 @@ function P(e) {
                 var e;
                 let t = new h.Hx(n);
                 d.Z.show({
-                    title: b.intl.string(b.t.R0RpRU),
-                    body: null !== (e = t.getAnyErrorMessage()) && void 0 !== e ? e : b.intl.string(b.t.eAn6z8)
+                    title: A.intl.string(A.t.R0RpRU),
+                    body: null !== (e = t.getAnyErrorMessage()) && void 0 !== e ? e : A.intl.string(A.t.eAn6z8)
                 });
             } finally {
                 O(!1);
@@ -73,7 +73,7 @@ function P(e) {
             [t]
         ),
         M = (0, m.ZP)(),
-        U = t.features.has(A.oNc.HUB),
+        U = t.features.has(b.oNc.HUB),
         G = l.useMemo(() => {
             let e = v.ZP.getGuildDiscoverySplashURL({
                 id: t.id,
@@ -83,9 +83,9 @@ function P(e) {
             if (null != e) return e;
             if (U) return y;
             switch (M) {
-                case A.BRd.DARK:
+                case b.BRd.DARK:
                     return x;
-                case A.BRd.LIGHT:
+                case b.BRd.LIGHT:
                     return L;
             }
         }, [t.discoverySplash, t.id, U, M]),
@@ -197,7 +197,7 @@ function P(e) {
                                                         className: Z.memberDetailsText,
                                                         variant: 'text-xs/normal',
                                                         color: 'header-secondary',
-                                                        children: b.intl.format(b.t['LC+S+v'], { membersOnline: t.presenceCount })
+                                                        children: A.intl.format(A.t['LC+S+v'], { membersOnline: t.presenceCount })
                                                     })
                                                 ]
                                             }),
@@ -210,7 +210,7 @@ function P(e) {
                                                         className: Z.memberDetailsText,
                                                         variant: 'text-xs/normal',
                                                         color: 'header-secondary',
-                                                        children: b.intl.format(b.t.zRl6XV, { count: t.memberCount })
+                                                        children: A.intl.format(A.t.zRl6XV, { count: t.memberCount })
                                                     })
                                                 ]
                                             })
