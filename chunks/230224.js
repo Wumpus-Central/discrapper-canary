@@ -3,7 +3,7 @@ n.d(t, {
     JI: () => A,
     UM: () => j,
     V6: () => Z,
-    WT: () => v,
+    WT: () => C,
     X7: () => N,
     jq: () => O,
     mx: () => x
@@ -34,8 +34,8 @@ let x = 100,
         };
         return 0 === i.memberCount && 0 === i.memberCount ? null : i;
     },
-    C = (e) => e.target_type === m.Iq.STREAM && null != e.target_user,
-    v = (e) => {
+    v = (e) => e.target_type === m.Iq.STREAM && null != e.target_user,
+    C = (e) => {
         var t;
         return (null === (t = e.channel) || void 0 === t ? void 0 : t.type) === g.d4z.GROUP_DM;
     },
@@ -90,12 +90,12 @@ function Z(e) {
 }
 function O(e) {
     let { invite: t, showBigUserIcon: n } = e,
-        l = r.useMemo(() => (n ? null : C(t) && null != t.target_user ? h.ZP.getUserAvatarURL(t.target_user) : b(t) && null != t.inviter ? h.ZP.getUserAvatarURL(t.inviter) : null), [t, n]),
+        l = r.useMemo(() => (n ? null : v(t) && null != t.target_user ? h.ZP.getUserAvatarURL(t.target_user) : b(t) && null != t.inviter ? h.ZP.getUserAvatarURL(t.inviter) : null), [t, n]),
         a = f.intl.string(f.t['3rE1Pz']);
-    if (v(t)) {
+    if (C(t)) {
         var c, d;
         a = (null === (c = t.channel) || void 0 === c ? void 0 : c.name) != null && (null === (d = t.inviter) || void 0 === d ? void 0 : d.username) != null ? f.intl.format(f.t.Lu4h19, { username: t.inviter.username }) : f.intl.string(f.t.OsdY8P);
-    } else C(t) && null != t.target_user ? (a = f.intl.formatToPlainString(f.t.x2L32d, { username: t.target_user.username })) : T(t) ? (a = f.intl.string(f.t['FDsl+P'])) : b(t) && null != t.inviter && (a = f.intl.format(f.t.spU2mJ, { username: _.ZP.getFormattedName(t.inviter) }));
+    } else v(t) && null != t.target_user ? (a = f.intl.formatToPlainString(f.t.x2L32d, { username: t.target_user.username })) : T(t) ? (a = f.intl.string(f.t['FDsl+P'])) : b(t) && null != t.inviter && (a = f.intl.format(f.t.spU2mJ, { username: _.ZP.getFormattedName(t.inviter) }));
     return (0, i.jsxs)('div', {
         className: E.inviteJoinContainer,
         children: [

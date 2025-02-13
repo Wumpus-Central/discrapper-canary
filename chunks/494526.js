@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(47120), n(411104);
+n.d(t, { Z: () => P }), n(47120), n(411104);
 var i = n(200651),
     r = n(192379),
     l = n(533126),
@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(585483),
     x = n(358085),
     I = n(172517),
-    C = n(51144),
-    v = n(998502),
+    v = n(51144),
+    C = n(998502),
     N = n(981631),
     S = n(231338),
     T = n(388032),
@@ -100,8 +100,8 @@ function L(e) {
                         onClick: () =>
                             (function (e) {
                                 let t =
-                                    x.isPlatformEmbedded && v.ZP.supportsFeature(N.eRX.WEBAUTHN)
-                                        ? v.ZP.webAuthnAuthenticate
+                                    x.isPlatformEmbedded && C.ZP.supportsFeature(N.eRX.WEBAUTHN)
+                                        ? C.ZP.webAuthnAuthenticate
                                         : (e) => {
                                               let t = (0, l.wz)(JSON.parse(e));
                                               return (0, l.U2)(t).then((e) => JSON.stringify(e));
@@ -131,7 +131,7 @@ function L(e) {
                         className: b.marginBottom8,
                         children: T.intl.string(T.t.apGCUV)
                     }),
-                    (0, i.jsx)(m.DK, { children: T.intl.format(T.t.Cbl5JC, { username: ''.concat(C.ZP.getUserTag(e)) }) }),
+                    (0, i.jsx)(m.DK, { children: T.intl.format(T.t.Cbl5JC, { username: ''.concat(v.ZP.getUserTag(e)) }) }),
                     (0, i.jsx)(c.zxk, {
                         look: c.zxk.Looks.BLANK,
                         color: c.zxk.Colors.LINK,
@@ -148,7 +148,7 @@ function L(e) {
             return (0, i.jsx)(c.$jN, { type: c.$jN.Type.WANDERING_CUBES });
     }
 }
-function y(e) {
+function P(e) {
     let { authTokenCallback: t, conditionalMediationAbortController: n } = e,
         l = (0, o.e7)([f.default], () => f.default.getIsPasswordlessActive()),
         {

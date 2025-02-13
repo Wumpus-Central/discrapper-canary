@@ -1,7 +1,7 @@
 n.d(e, {
     PA: () => c,
     Tn: () => d,
-    _i: () => N,
+    _i: () => m,
     eI: () => h,
     vp: () => p,
     y8: () => E
@@ -93,7 +93,7 @@ function E(t, e, n, a) {
         role_subscription_listing_id: a
     });
 }
-function N(t, e) {
+function m(t, e) {
     var n;
     return {
         guild_id: t.guild_id,

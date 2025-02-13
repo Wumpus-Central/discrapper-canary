@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(82142),
     x = n(283595),
     I = n(55563),
-    C = n(669079),
-    v = n(63063),
+    v = n(669079),
+    C = n(63063),
     N = n(51144),
     S = n(481153),
     T = n(781428),
@@ -100,7 +100,7 @@ class j extends r.PureComponent {
                     children: R.intl.string(R.t.fIv16O)
                 }),
                 (0, i.jsx)(_.zx, {
-                    onClick: () => window.open(v.Z.getArticleURL(b.BhN.GIFTING), '_blank'),
+                    onClick: () => window.open(C.Z.getArticleURL(b.BhN.GIFTING), '_blank'),
                     look: _.zx.Looks.LINK,
                     color: _.zx.Colors.LINK,
                     children: R.intl.string(R.t['/CjuXF'])
@@ -261,7 +261,7 @@ let L = o.ZP.connectStores([E.Z, x.Z, p.default, I.Z, f.Z, m.Z], (e) => {
     return {
         giftCode: n,
         sku: i,
-        libraryApplication: null != i && (null == n ? void 0 : n.entitlementBranches) != null ? C.z2(n.entitlementBranches, i, x.Z) : null,
+        libraryApplication: null != i && (null == n ? void 0 : n.entitlementBranches) != null ? v.z2(n.entitlementBranches, i, x.Z) : null,
         authenticated: p.default.isAuthenticated(),
         defaultRoute: f.Z.defaultRoute,
         isResolved: E.Z.getIsResolved(t),

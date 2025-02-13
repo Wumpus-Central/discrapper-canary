@@ -20,7 +20,7 @@ function p(e) {
         let e = (0, o.Z)(t);
         a.Z.verify(e), (0, d.e)('verify_hub_email');
     }, [t]);
-    let C = () => {
+    let v = () => {
         (0, h.Z)(I), f(!0);
     };
     return p
@@ -53,7 +53,7 @@ function p(e) {
                         children: m.intl.string(m.t.dAfGb2)
                     }),
                     (0, i.jsx)(s.zx, {
-                        onClick: C,
+                        onClick: v,
                         children: m.intl.string(m.t.uJWIj4)
                     })
                 ]
@@ -74,7 +74,7 @@ function p(e) {
                           children: m.intl.string(m.t.tQpeAw)
                       }),
                       (0, i.jsx)(s.zx, {
-                          onClick: C,
+                          onClick: v,
                           children: m.intl.string(m.t.uJWIj4)
                       })
                   ]

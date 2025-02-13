@@ -21,7 +21,7 @@ function x(e) {
 function I(e) {
     let { location: t, transitionTo: l = x } = e,
         [o, I] = r.useState('submitting'),
-        C = r.useRef(void 0);
+        v = r.useRef(void 0);
     (0, c.ZP)(() => {
         (0, _.e)('verify_email');
         let e = (0, d.Z)(t);
@@ -32,17 +32,17 @@ function I(e) {
         (async () => {
             try {
                 let t = await s.Z.verify(e);
-                I('succeeded'), (C.current = t);
+                I('succeeded'), (v.current = t);
             } catch (e) {
                 I('failed');
             }
         })();
     });
-    let v = r.useCallback(() => {
+    let C = r.useCallback(() => {
             l(g.Z5c.LOGIN);
         }, [l]),
         N = r.useCallback(() => {
-            m.default.track(g.rMx.VERIFY_ACCOUNT_APP_OPENED, { verifying_user_id: C.current }), (0, h.Z)('verify_email');
+            m.default.track(g.rMx.VERIFY_ACCOUNT_APP_OPENED, { verifying_user_id: v.current }), (0, h.Z)('verify_email');
         }, []);
     return 'failed' === o
         ? (0, i.jsxs)(u.ZP, {
@@ -60,7 +60,7 @@ function I(e) {
                       children: p.intl.string(p.t.tQpeAw)
                   }),
                   (0, i.jsx)(u.zx, {
-                      onClick: v,
+                      onClick: C,
                       children: p.intl.string(p.t.dKhVQE)
                   })
               ]

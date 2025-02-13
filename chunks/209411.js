@@ -37,7 +37,7 @@ function E(e) {
             loginStatus: m.default.getLoginStatus()
         })),
         { location: x, redirectTo: I } = e,
-        [C, v] = r.useState(n);
+        [v, C] = r.useState(n);
     function N(e) {
         let { handoffKey: t, handoffToken: n, handoffSource: i } = e;
         (0, c.Yz)({
@@ -45,14 +45,14 @@ function E(e) {
             handoffToken: n,
             handoffSource: i
         }),
-            v(!1);
+            C(!1);
     }
     return ((0, d.ZP)(() => {
         if (null != x) {
             let { handoff_key: e, handoff_token: t } = (0, l.parse)(x.search);
             if (null != e && null != t) {
                 let n = null != I ? (0, u.L)(I) : void 0;
-                C
+                v
                     ? s.Z.logout(null).finally(() => {
                           N({
                               handoffKey: e,
@@ -68,7 +68,7 @@ function E(e) {
             }
         }
     }),
-    C || E === p.u34.LOGGING_IN)
+    v || E === p.u34.LOGGING_IN)
         ? (0, i.jsx)(g.q, {})
         : (0, i.jsx)(g.Z, {
               ...e,

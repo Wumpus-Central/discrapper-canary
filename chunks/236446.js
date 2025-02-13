@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(108427),
     x = n(390885),
     I = n(314897),
-    C = n(896797),
-    v = n(954824),
+    v = n(896797),
+    C = n(954824),
     N = n(781428),
     S = n(163671),
     T = n(423527),
@@ -29,11 +29,11 @@ var i = n(200651),
     O = n(436620),
     j = n(388032),
     L = n(249079),
-    y = n(483938);
+    P = n(483938);
 c.ZP.initialize();
-class P extends r.PureComponent {
+class y extends r.PureComponent {
     componentDidMount() {
-        (0, E.e)('guildTemplate'), O.KO || v.Z.launch('discord://' + A.Z5c.GUILD_TEMPLATE(this.props.code), () => void 0);
+        (0, E.e)('guildTemplate'), O.KO || C.Z.launch('discord://' + A.Z5c.GUILD_TEMPLATE(this.props.code), () => void 0);
     }
     componentDidUpdate(e) {
         this.props.code !== e.code && m.Z.resolveGuildTemplate(this.props.code);
@@ -41,11 +41,11 @@ class P extends r.PureComponent {
     renderButton(e, t) {
         return O.KO
             ? (0, i.jsx)(d.zx, {
-                  className: y.marginTop40,
+                  className: P.marginTop40,
                   onClick: t,
                   children: e
               })
-            : (0, i.jsx)(d.v6, { className: y.marginTop40 });
+            : (0, i.jsx)(d.v6, { className: P.marginTop40 });
     }
     renderSpinner(e) {
         return (0, i.jsxs)(d.ZP, {
@@ -57,10 +57,10 @@ class P extends r.PureComponent {
             children: [
                 (0, i.jsx)(d.Ee, {
                     src: n(167969),
-                    className: y.marginBottom8
+                    className: P.marginBottom8
                 }),
                 (0, i.jsx)(d.Dx, {
-                    className: a()(y.marginTop8, y.marginBottom8),
+                    className: a()(P.marginTop8, P.marginBottom8),
                     children: j.intl.string(j.t.C7ZRNz)
                 }),
                 (0, i.jsx)(d.DK, { children: j.intl.string(j.t.A6MwXF) }),
@@ -72,7 +72,7 @@ class P extends r.PureComponent {
         return (0, i.jsxs)(d.ZP, {
             children: [
                 (0, i.jsx)(d.Dx, {
-                    className: y.marginBottom8,
+                    className: P.marginBottom8,
                     children: j.intl.string(j.t.csrAMD)
                 }),
                 (0, i.jsx)(d.DK, { children: j.intl.string(j.t['m1+IBg']) }),
@@ -147,9 +147,9 @@ function D(e) {
         guildTemplate: (0, c.e7)([h.Z], () => h.Z.getGuildTemplate(e.code)),
         nativeAppState: (0, c.e7)([u.Z], () => u.Z.getState(e.code)),
         authenticated: (0, c.e7)([I.default], () => I.default.isAuthenticated()),
-        defaultRoute: (0, c.e7)([C.Z], () => C.Z.defaultRoute)
+        defaultRoute: (0, c.e7)([v.Z], () => v.Z.defaultRoute)
     };
-    return (0, i.jsx)(P, {
+    return (0, i.jsx)(y, {
         ...e,
         ...t
     });

@@ -4,8 +4,8 @@ t(192379);
 var r = t(442837),
     a = t(692547),
     l = t(481060),
-    o = t(493683),
-    s = t(129861),
+    s = t(493683),
+    o = t(129861),
     d = t(700582),
     u = t(594174),
     c = t(388032),
@@ -58,7 +58,7 @@ function p(e, n) {
                           header: c.intl.string(c.t.WZoUsr),
                           confirmText: c.intl.string(c.t['cY+Ooa']),
                           cancelText: c.intl.string(c.t['ETE/oK']),
-                          onConfirm: () => o.Z.setDMOwner(n.id, e.id),
+                          onConfirm: () => s.Z.setDMOwner(n.id, e.id),
                           ...r,
                           children: [
                               (0, i.jsx)(h, { color: a.Z.unsafe_rawColors.PRIMARY_300.css }),
@@ -86,7 +86,7 @@ function p(e, n) {
                                   children: c.intl.format(c.t.gsBb3N, {
                                       usernameHook: (n, t) =>
                                           (0, i.jsx)(
-                                              s.Z,
+                                              o.Z,
                                               {
                                                   usernameIcon: (0, i.jsx)(l.qEK, {
                                                       className: _.avatarIcon,

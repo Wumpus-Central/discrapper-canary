@@ -20,8 +20,8 @@ var i,
     E = n(254942),
     x = n(388905),
     I = n(379760),
-    C = n(600164),
-    v = n(100159),
+    v = n(600164),
+    C = n(100159),
     N = n(473855),
     S = n(124860),
     T = n(86779),
@@ -32,8 +32,8 @@ var i,
     O = n(952802),
     j = n(108427),
     L = n(365007),
-    y = n(314897),
-    P = n(117240),
+    P = n(314897),
+    y = n(117240),
     D = n(896797),
     k = n(626135),
     w = n(585483),
@@ -77,7 +77,7 @@ class J extends (i = l.PureComponent) {
                     location: null != i ? 'Invite Login Page' : 'Non-Invite Login Page',
                     login_source: this.loginSource,
                     authenticated: t,
-                    ...(null != n ? (0, v.Z)(n, !1, !1) : {})
+                    ...(null != n ? (0, C.Z)(n, !1, !1) : {})
                 },
                 { flush: !0 }
             ),
@@ -157,7 +157,7 @@ class J extends (i = l.PureComponent) {
             let e = window.location.protocol + window.GLOBAL_ENV.API_ENDPOINT + z.ANM.SSO,
                 t = {
                     ...r,
-                    token: y.default.getToken()
+                    token: P.default.getToken()
                 };
             window.location = ''.concat(e, '?').concat((0, c.stringify)(t));
         }
@@ -343,10 +343,10 @@ class J extends (i = l.PureComponent) {
                           })
                     : (0, r.jsx)(M.Z, { invite: i })),
             (0, r.jsxs)(
-                C.Z,
+                v.Z,
                 {
-                    direction: C.Z.Direction.HORIZONTAL,
-                    align: C.Z.Align.CENTER,
+                    direction: v.Z.Direction.HORIZONTAL,
+                    align: v.Z.Align.CENTER,
                     children: [
                         (0, r.jsxs)('div', {
                             className: K.mainLoginContainer,
@@ -743,13 +743,13 @@ class J extends (i = l.PureComponent) {
 }
 Y(J, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) });
 let X = function (e) {
-    let t = (0, u.cj)([P.Z, D.Z, y.default, A.Z, Z.Z], () => ({
-        authenticated: y.default.isAuthenticated(),
-        handoffAvailable: P.Z.isHandoffAvailable(),
-        user: P.Z.user,
-        loginStatus: y.default.getLoginStatus(),
-        mfaTicket: y.default.getMFATicket(),
-        mfaMethods: y.default.getMFAMethods(),
+    let t = (0, u.cj)([y.Z, D.Z, P.default, A.Z, Z.Z], () => ({
+        authenticated: P.default.isAuthenticated(),
+        handoffAvailable: y.Z.isHandoffAvailable(),
+        user: y.Z.user,
+        loginStatus: P.default.getLoginStatus(),
+        mfaTicket: P.default.getMFATicket(),
+        mfaMethods: P.default.getMFAMethods(),
         defaultRoute: D.Z.defaultRoute,
         country: Z.Z.getCountryCode(),
         hasLoggedInAccounts: A.Z.getHasLoggedInAccounts()

@@ -18,7 +18,7 @@ let E = () => {
     var e;
     let [t, n] = r.useState(!1),
         l = c.G6.useSetting(),
-        { nickname: E, dmsAllowed: x, showActivity: I, mutedServer: C, setNickname: v, setDmsAllowed: N, setShowActivity: S, setMutedServer: T } = (0, m.XW)(),
+        { nickname: E, dmsAllowed: x, showActivity: I, mutedServer: v, setNickname: C, setDmsAllowed: N, setShowActivity: S, setMutedServer: T } = (0, m.XW)(),
         A = null === (e = s.Z.getProps().invite) || void 0 === e ? void 0 : e.is_nickname_changeable,
         b = (0, _.m4)({ location: 'InviteSettingsControls' });
     return (0, i.jsxs)('div', {
@@ -75,7 +75,7 @@ let E = () => {
                                     placeholder: p.intl.string(p.t['09Q8ys']),
                                     maxLength: g.l$U,
                                     value: E,
-                                    onChange: v
+                                    onChange: C
                                 })
                             ]
                         }),
@@ -93,7 +93,7 @@ let E = () => {
                     b &&
                         (0, i.jsx)(d.Z, {
                             title: p.intl.string(p.t['0nZCqK']),
-                            value: C,
+                            value: v,
                             onChange: T
                         })
                 ]

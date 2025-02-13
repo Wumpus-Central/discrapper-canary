@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(362762),
     x = n(978684),
     I = n(264229),
-    C = n(929809),
-    v = n(703656),
+    v = n(929809),
+    C = n(703656),
     N = n(108427),
     S = n(314897),
     T = n(896797),
@@ -29,8 +29,8 @@ var i = n(200651),
     O = n(782605),
     j = n(954824),
     L = n(588705),
-    y = n(781428),
-    P = n(423527),
+    P = n(781428),
+    y = n(423527),
     D = n(981631),
     k = n(188785),
     w = n(701476),
@@ -70,7 +70,7 @@ class H extends r.PureComponent {
         if (!t && e) {
             let e = this.getInviteKey(),
                 { baseCode: t } = (0, I.fU)(e);
-            (0, v.dL)(D.Z5c.INVITE_LOGIN(t));
+            (0, C.dL)(D.Z5c.INVITE_LOGIN(t));
         }
     }
     componentDidUpdate(e) {
@@ -93,7 +93,7 @@ class H extends r.PureComponent {
         }
         if ((n !== e.nativeAppState && n === D.kEZ.OPEN && this.track(D.rMx.INVITE_APP_INVOKED, !1), this.getMode() === z.REGISTER && i && !e.authenticated)) {
             let { channel: e } = t;
-            null != e && ((0, C.c)(w.M5.INVITE_UNCLAIMED), null != t.guild ? r(D.Z5c.APP_WITH_INVITE_AND_GUILD_ONBOARDING(t.code)) : u.Z.transitionToInvite(t, r));
+            null != e && ((0, v.c)(w.M5.INVITE_UNCLAIMED), null != t.guild ? r(D.Z5c.APP_WITH_INVITE_AND_GUILD_ONBOARDING(t.code)) : u.Z.transitionToInvite(t, r));
         }
     }
     getInviteKey() {
@@ -242,13 +242,13 @@ class H extends r.PureComponent {
                 if (n && (0, R.yE)(null !== (a = e.flags) && void 0 !== a ? a : 0, o.$.IS_GUEST_INVITE)) return u.Z.openApp(e.code), d.x.set(x.J, e.code), this.renderAppOpened(() => r(D.Z5c.APP));
                 if (n || !B.KO) return this.renderAuthenticatedOrDownload();
                 if (this.getMode() === z.LOGIN)
-                    return (0, i.jsx)(y.Z, {
+                    return (0, i.jsx)(P.Z, {
                         invite: e,
                         transitionTo: r,
                         location: l
                     });
                 else
-                    return (0, i.jsx)(P.Z, {
+                    return (0, i.jsx)(y.Z, {
                         invite: e,
                         onLoginStart: () => this.track(D.rMx.INVITE_LOGIN, !0),
                         location: l,

@@ -21,7 +21,7 @@ let x = (e) => {
         n = (0, l.e7)([g.default], () => g.default.isAuthenticated()),
         x = (0, l.e7)([u.Z], () => u.Z.hasLoadedExperiments),
         I = (0, _.oK)('RSL - Landing Page'),
-        [C, v] = r.useState(!1),
+        [v, C] = r.useState(!1),
         [N, S] = r.useState(f.intl.string(f.t['9exy+f'])),
         [T, A] = r.useState(!0),
         b = (e) => {
@@ -65,10 +65,10 @@ let x = (e) => {
                 } catch (e) {
                     b(null === (n = e.body) || void 0 === n ? void 0 : n.code);
                 } finally {
-                    v(!1);
+                    C(!1);
                 }
             };
-            v(!0), e((0, c.Z)(t)), (0, m.e)('report_second_look');
+            C(!0), e((0, c.Z)(t)), (0, m.e)('report_second_look');
         }, [t]),
         I &&
             !T &&
@@ -78,7 +78,7 @@ let x = (e) => {
                         className: E.marginBottom8,
                         children: N
                     }),
-                    C && (0, i.jsx)(a.$jN, {})
+                    v && (0, i.jsx)(a.$jN, {})
                 ]
             })
     );

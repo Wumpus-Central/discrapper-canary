@@ -150,9 +150,9 @@ let A = (e) => {
         });
     },
     C = (e) => {
-        let { className: t, children: n, isProminent: r } = e;
+        let { className: t, children: n } = e;
         return (0, i.jsx)(s.Text, {
-            variant: r ? 'text-sm/normal' : 'text-xs/normal',
+            variant: 'text-xs/normal',
             className: a()(m.subText, t),
             children: n
         });

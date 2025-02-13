@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(981631),
     x = n(474936),
     I = n(388032),
-    C = n(753997),
-    v = n(179683),
+    v = n(753997),
+    C = n(179683),
     N = n(483938);
 let S = o.ZP.connectStores([p.Z, c.Z, g.Z, m.default], (e) => {
     let { giftCode: t } = e,
@@ -46,7 +46,7 @@ let S = o.ZP.connectStores([p.Z, c.Z, g.Z, m.default], (e) => {
                     ? (0, i.jsx)(_.Z, {
                           defaultAnimationState: h.SR.LOOP,
                           giftStyle: n.giftStyle,
-                          className: C.seasonalIcon
+                          className: v.seasonalIcon
                       })
                     : (0, i.jsx)(d.qE, {
                           src: null != l ? l.getAvatarURL(void 0, 100) : null,
@@ -61,12 +61,12 @@ let S = o.ZP.connectStores([p.Z, c.Z, g.Z, m.default], (e) => {
                           children: [
                               (0, i.jsx)(d.DK, { children: g }),
                               (0, i.jsxs)(d.Dx, {
-                                  className: a()(N.marginTop8, v.flexCenter),
+                                  className: a()(N.marginTop8, C.flexCenter),
                                   children: [
                                       o.productLine !== E.POd.COLLECTIBLES &&
                                           (0, i.jsx)(u.Z, {
                                               size: u.Z.Sizes.MEDIUM,
-                                              className: C.applicationIcon,
+                                              className: v.applicationIcon,
                                               game: c,
                                               skuId: o.id
                                           }),

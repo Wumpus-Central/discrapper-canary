@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(264229),
     x = n(230224),
     I = n(617730),
-    C = n(258356),
-    v = n(981631),
+    v = n(258356),
+    C = n(981631),
     N = n(388032),
     S = n(526967);
 function T() {
@@ -32,18 +32,18 @@ let A = (e) => {
     if (null == e || null == e.state || t) return 0;
     let n = e.state;
     switch (n) {
-        case v.r2o.RESOLVED:
-        case v.r2o.ACCEPTED:
-        case v.r2o.APP_NOT_OPENED:
-        case v.r2o.APP_OPENED:
-        case v.r2o.ACCEPTING:
-        case v.r2o.APP_OPENING:
+        case C.r2o.RESOLVED:
+        case C.r2o.ACCEPTED:
+        case C.r2o.APP_NOT_OPENED:
+        case C.r2o.APP_OPENED:
+        case C.r2o.ACCEPTING:
+        case C.r2o.APP_OPENING:
             return 1;
-        case v.r2o.EXPIRED:
-        case v.r2o.BANNED:
-        case v.r2o.ERROR:
+        case C.r2o.EXPIRED:
+        case C.r2o.BANNED:
+        case C.r2o.ERROR:
             return 2;
-        case v.r2o.RESOLVING:
+        case C.r2o.RESOLVING:
             return 0;
         default:
             (0, f.vE)(n);
@@ -51,7 +51,7 @@ let A = (e) => {
 };
 function b(e) {
     let { invite: t, onAcceptInvite: n } = e;
-    return (null == t ? void 0 : t.state) === v.r2o.BANNED
+    return (null == t ? void 0 : t.state) === C.r2o.BANNED
         ? (0, i.jsx)(c.u, {
               text: N.intl.string(N.t['5AkWAQ']),
               buttonCta: N.intl.string(N.t['8osdkp']),
@@ -98,7 +98,7 @@ function R(e) {
 function Z(e) {
     let { invite: t } = e;
     if (null == t || !(0, x.JI)(t)) return null;
-    let n = (e) => (null == t ? null : 1 === e ? (0, i.jsx)(C.X, { invite: t }) : null);
+    let n = (e) => (null == t ? null : 1 === e ? (0, i.jsx)(v.X, { invite: t }) : null);
     return (0, i.jsx)(R, {
         startAnimHeightPx: 0,
         innerStyle: () => S.guildInfoInner,
@@ -149,7 +149,7 @@ function j(e) {
         null != e && ((l.backgroundImage = 'url('.concat(e, ')')), (l.backgroundSize = 'cover'));
     }
     return (0, i.jsxs)(u.ZP, {
-        theme: v.BRd.DARK,
+        theme: C.BRd.DARK,
         className: S.splashBackground,
         style: l,
         contentClassName: S.centerAuthBoxContent,
@@ -171,9 +171,9 @@ function L(e) {
         }, []),
         r.useEffect(() => {
             null != l &&
-                l.state === v.r2o.RESOLVED &&
+                l.state === C.r2o.RESOLVED &&
                 g.default.track(
-                    v.rMx.INVITE_VIEWED,
+                    C.rMx.INVITE_VIEWED,
                     {
                         invite_code: t,
                         friends_count: null == l ? void 0 : l.friends_count
@@ -187,13 +187,13 @@ function L(e) {
                 !(function (e, t, n) {
                     var i, r, l;
                     null == e || e.preventDefault(),
-                        g.default.track(v.rMx.INVITE_APP_OPENED, {
+                        g.default.track(C.rMx.INVITE_APP_OPENED, {
                             invite_code: (0, E.jX)(t),
                             guild_id: null == n ? void 0 : null === (i = n.guild) || void 0 === i ? void 0 : i.id,
                             channel_id: null == n ? void 0 : null === (r = n.channel) || void 0 === r ? void 0 : r.id,
                             inviter_id: null == n ? void 0 : null === (l = n.inviter) || void 0 === l ? void 0 : l.id
                         });
-                    let a = null != n && n.state !== v.r2o.EXPIRED && n.state !== v.r2o.BANNED ? t : void 0,
+                    let a = null != n && n.state !== C.r2o.EXPIRED && n.state !== C.r2o.BANNED ? t : void 0,
                         o = _.default.getFingerprint(),
                         c = null != o ? o : _.default.getId(),
                         d = null != n && (null == n ? void 0 : n.type) != null ? Number(null == n ? void 0 : n.type) : void 0;

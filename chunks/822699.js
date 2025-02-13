@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(698177),
     x = n(353926),
     I = n(409059),
-    C = n(962220),
-    v = n(637776),
+    v = n(962220),
+    C = n(637776),
     N = n(264229),
     S = n(677760),
     T = n(893607),
@@ -29,8 +29,8 @@ var i = n(200651),
     O = n(81063),
     j = n(449934),
     L = n(768581),
-    y = n(625054),
-    P = n(645499),
+    P = n(625054),
+    y = n(645499),
     D = n(320830),
     k = n(721751),
     w = n(718182),
@@ -67,19 +67,19 @@ let en = (0, D.Z)(H.Z),
     e_ = (0, D.Z)(J.Z),
     em = (0, D.Z)(M.Z),
     eg = (0, D.Z)(f.Z),
-    ep = (0, D.Z)(v.Z),
+    ep = (0, D.Z)(C.Z),
     ef = (0, D.Z)(U.Z),
     eE = (0, D.Z)(W.Z),
     ex = (0, D.Z)(X.Z),
     eI = (0, D.Z)(q.Z),
-    eC = (0, D.Z)(m.Z);
-class ev extends r.PureComponent {
+    ev = (0, D.Z)(m.Z);
+class eC extends r.PureComponent {
     static getDerivedStateFromProps(e, t) {
         var n;
         let { invite: i, location: r } = e,
             { backgroundId: a } = t,
             o = null !== (n = (0, l.parse)(r.search).redirect_to) && void 0 !== n ? n : null;
-        (null == o || '' === o || !(0, P.B)(o) || o.startsWith($.Z5c.ME)) && (o = null);
+        (null == o || '' === o || !(0, y.B)(o) || o.startsWith($.Z5c.ME)) && (o = null);
         let s = null;
         if (null == i) s = (0, j.gK)(o);
         else if ((null == i ? void 0 : i.state) === $.r2o.RESOLVED) {
@@ -106,7 +106,7 @@ class ev extends r.PureComponent {
                 $.rMx.INVITE_OPENED,
                 {
                     invite_code: (0, N.jX)(e),
-                    load_time: y.Z.getTimeSinceNavigationStart()
+                    load_time: P.Z.getTimeSinceNavigationStart()
                 },
                 { flush: !0 }
             )),
@@ -146,12 +146,12 @@ class ev extends r.PureComponent {
                 $.rMx.GUILD_TEMPLATE_OPENED,
                 {
                     guild_template_code: e,
-                    load_time: y.Z.getTimeSinceNavigationStart()
+                    load_time: P.Z.getTimeSinceNavigationStart()
                 },
                 { flush: !0 }
             ),
-            C.Z.resolveGuildTemplate(e),
-            C.Z.openNativeAppModal(e));
+            v.Z.resolveGuildTemplate(e),
+            v.Z.openNativeAppModal(e));
     }
     resolveGiftCode() {
         let { giftCode: e } = this.props;
@@ -330,7 +330,7 @@ class ev extends r.PureComponent {
                 }),
                 (0, i.jsx)(g.Z, {
                     path: $.Z5c.ACCOUNT_REVERT(':token'),
-                    render: (e) => (0, i.jsx)(eC, { ...e })
+                    render: (e) => (0, i.jsx)(ev, { ...e })
                 })
             ]
         });
@@ -371,4 +371,4 @@ let eN = s.ZP.connectStores([A.default, R.Z, b.Z, x.Z, I.Z], (e) => {
         guildTemplate: null != d ? I.Z.getGuildTemplate(d) : null,
         hasLoadedExperiments: x.Z.hasLoadedExperiments
     };
-})(ev);
+})(eC);

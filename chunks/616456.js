@@ -1022,8 +1022,8 @@ class t6 {
         this.head && (e.previous ? ((e.previous.next = e.next), e.next ? (e.next.previous = e.previous) : (this.tail = e.previous)) : ((this.head = e.next), this.head ? (this.head.previous = null) : (this.tail = null)), t.__ln && delete t.__ln, this.length--);
     }
 }
-let t4 = (t, e) => `${t}@${e}`;
-class t5 {
+let t5 = (t, e) => `${t}@${e}`;
+class t4 {
     constructor() {
         (this.frozen = !1),
             (this.locked = !1),
@@ -1248,7 +1248,7 @@ class t5 {
                                                   let r = a.getId(e);
                                                   return !a.has(r) || ((!e.parentNode || e.parentNode.nodeType !== e.DOCUMENT_NODE) && (!e.parentNode || t(e.parentNode, a)));
                                               })(t.target, this.mirror) ||
-                                              (this.movedSet.has(e) && this.movedMap[t4(a, r)]
+                                              (this.movedSet.has(e) && this.movedMap[t5(a, r)]
                                                   ? t8(this.movedSet, e)
                                                   : this.removes.push({
                                                         parentId: r,
@@ -1265,7 +1265,7 @@ class t5 {
                         if (tx(t, this.mirror)) return;
                         this.movedSet.add(t);
                         let a = null;
-                        e && this.mirror.hasNode(e) && (a = this.mirror.getId(e)), a && -1 !== a && (this.movedMap[t4(this.mirror.getId(t), a)] = !0);
+                        e && this.mirror.hasNode(e) && (a = this.mirror.getId(e)), a && -1 !== a && (this.movedMap[t5(this.mirror.getId(t), a)] = !0);
                     } else this.addedSet.add(t), this.droppedSet.delete(t);
                     !tk(t, this.blockClass, this.blockSelector, this.unblockSelector, !1) &&
                         (t.childNodes.forEach((t) => this.genAdds(t)),
@@ -1357,7 +1357,7 @@ function er(t) {
     return t && t.target;
 }
 function en(t, e) {
-    let a = new t5();
+    let a = new t4();
     ea.push(a), a.init(t);
     let r = window.MutationObserver || window.__rrMutationObserver,
         n = ee([window, 'optionalAccess', (t) => t.Zone, 'optionalAccess', (t) => t.__symbol__, 'optionalCall', (t) => t('MutationObserver')]);
@@ -3523,18 +3523,18 @@ function e6(t) {
         previousSessionId: t.previousSessionId
     };
 }
-function e4(t) {
+function e5(t) {
     if (e2())
         try {
             F.sessionStorage.setItem(V, JSON.stringify(t));
         } catch (t) {}
 }
-function e5({ sessionSampleRate: t, allowBuffering: e, stickySession: a = !1 }, { previousSessionId: r } = {}) {
+function e4({ sessionSampleRate: t, allowBuffering: e, stickySession: a = !1 }, { previousSessionId: r } = {}) {
     let n = e6({
         sampled: e3(t) ? 'session' : !!e && 'buffer',
         previousSessionId: r
     });
-    return a && e4(n), n;
+    return a && e5(n), n;
 }
 function e8(t, e, a = +new Date()) {
     return null === t || void 0 === e || e < 0 || (0 !== e && t + e <= a);
@@ -3570,9 +3570,9 @@ function at({ traceInternals: t, sessionIdleExpire: e, maxReplayDuration: a, pre
               sessionIdleExpire: e,
               maxReplayDuration: a
           })
-            ? (eq('[Replay] Session in sessionStorage is expired, creating new one...'), e5(n, { previousSessionId: o.id }))
+            ? (eq('[Replay] Session in sessionStorage is expired, creating new one...'), e4(n, { previousSessionId: o.id }))
             : o
-        : (eq('[Replay] Creating new session', t), e5(n, { previousSessionId: r }));
+        : (eq('[Replay] Creating new session', t), e4(n, { previousSessionId: r }));
 }
 function ae(t, e, a) {
     return !!ar(t, e) && (aa(t, e, a), !0);
@@ -4327,7 +4327,7 @@ class aU {
                                     return !0;
                                 if ('buffer' === t.recordingMode && t.session && t.eventBuffer) {
                                     let e = t.eventBuffer.getEarliestTimestamp();
-                                    e && (e$(`[Replay] Updating session start time to earliest event in buffer to ${new Date(e)}`, t.getOptions()._experiments.traceInternals), (t.session.started = e), t.getOptions().stickySession && e4(t.session));
+                                    e && (e$(`[Replay] Updating session start time to earliest event in buffer to ${new Date(e)}`, t.getOptions()._experiments.traceInternals), (t.session.started = e), t.getOptions().stickySession && e5(t.session));
                                 }
                                 return 'session' === t.recordingMode && t.flush(), !0;
                             });
@@ -4945,7 +4945,7 @@ class aU {
         };
     }
     _maybeSaveSession() {
-        this.session && this._options.stickySession && e4(this.session);
+        this.session && this._options.stickySession && e5(this.session);
     }
     __init6() {
         this._onMutationHandler = (t) => {

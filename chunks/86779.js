@@ -17,12 +17,12 @@ var i = n(200651),
     E = n(388032),
     x = n(435695);
 let I = 'mweb_handoff_nonce',
-    C = 'mweb_handoff_nonce_expiration',
-    v = 1 * g.Z.Millis.MINUTE,
+    v = 'mweb_handoff_nonce_expiration',
+    C = 1 * g.Z.Millis.MINUTE,
     N = new Set(['nonce_missing', 'nonce_expired', 'handoff_exchange']),
     S = new Set(['deep_link_failed']),
     T = () => {
-        c.K.remove(I), c.K.remove(C);
+        c.K.remove(I), c.K.remove(v);
     },
     A = () => {
         let e = (0, o.e7)([_.default], () => _.default.getFingerprint()),
@@ -58,7 +58,7 @@ let I = 'mweb_handoff_nonce',
             null != n && 'null' !== n && null == O && null === b && Z('nonce_missing'),
             r.useEffect(() => {
                 if (null != O) {
-                    let e = c.K.get(C);
+                    let e = c.K.get(v);
                     (null == e || Date.now() >= e) && (Z('nonce_expired'), T());
                 }
             }, [O, Z]),
@@ -127,7 +127,7 @@ let I = 'mweb_handoff_nonce',
                           color: d.zxk.Colors.BRAND_INVERTED,
                           onClick: () => {
                               let e = p.Z.generateNonce();
-                              c.K.set(I, e), c.K.set(C, Date.now() + v);
+                              c.K.set(I, e), c.K.set(v, Date.now() + C);
                               let t = new URL(f.x0X),
                                   n = new URLSearchParams(window.location.search);
                               n.delete('fingerprint'), n.delete('handoff_token');

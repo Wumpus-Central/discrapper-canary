@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(47120);
+n.d(t, { Z: () => C }), n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(990547),
@@ -18,7 +18,7 @@ var i = n(200651),
     x = n(637213),
     I = n(483938);
 a.ZP.initialize();
-let C = (e) => {
+let v = (e) => {
         let { title: t, menuType: r } = e,
             a = () => {
                 (0, o.ZDy)(async () => {
@@ -70,11 +70,11 @@ let C = (e) => {
             })
         });
     },
-    v = () => {
+    C = () => {
         let [e, t] = r.useState(!0),
             [n, l] = r.useState(!1),
             _ = (0, a.e7)([g.default], () => g.default.isAuthenticated()),
-            v = (0, a.e7)([u.Z], () => u.Z.hasLoadedExperiments),
+            C = (0, a.e7)([u.Z], () => u.Z.hasLoadedExperiments),
             N = () => {
                 (0, m.qJ)()
                     .then(() => {
@@ -96,10 +96,10 @@ let C = (e) => {
             }, [_]),
             r.useEffect(() => {
                 (async () => {
-                    v || (await s.Z.getLocationMetadata(), s.Z.getExperiments());
+                    C || (await s.Z.getLocationMetadata(), s.Z.getExperiments());
                 })();
-            }, [v]),
-            e || !v
+            }, [C]),
+            e || !C
                 ? (0, i.jsx)(d.ZP, { children: (0, i.jsx)(o.$jN, {}) })
                 : n &&
                   (0, i.jsxs)(d.ZP, {
@@ -115,11 +115,11 @@ let C = (e) => {
                           (0, i.jsxs)('div', {
                               className: x.container,
                               children: [
-                                  (0, i.jsx)(C, {
+                                  (0, i.jsx)(v, {
                                       title: E.intl.string(E.t.fuqnBA),
                                       menuType: h.BM.MESSAGE
                                   }),
-                                  (0, i.jsx)(C, {
+                                  (0, i.jsx)(v, {
                                       title: E.intl.string(E.t.F4jrRU),
                                       menuType: h.BM.USER
                                   })

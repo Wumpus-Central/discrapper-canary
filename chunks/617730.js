@@ -29,8 +29,8 @@ function g(e) {
         E = null != t.target_application ? new l.ZP(t.target_application) : null,
         x = g || null == t.inviter ? null : new s.Z(t.inviter),
         I = !((null != t.approximate_member_count && t.approximate_member_count > c.mx) || (null != p && p.hasFeature(u.oNc.COMMUNITY))) && null != x && (0, c.WT)(t),
-        C = m(t),
-        v = {
+        v = m(t),
+        C = {
             invite: t,
             user: x,
             guild: p,
@@ -41,7 +41,7 @@ function g(e) {
         ? (0, i.jsx)(d.Z, {
               invite: t,
               channel: f,
-              isSubmitting: C,
+              isSubmitting: v,
               onAcceptInvite: n
           })
         : (0, i.jsxs)('div', {
@@ -55,17 +55,17 @@ function g(e) {
                   (0, c.X7)(t)
                       ? null
                       : (0, i.jsx)(c.jq, {
-                            ...v,
+                            ...C,
                             showBigUserIcon: I
                         }),
                   (0, i.jsx)(c.UM, {
-                      ...v,
+                      ...C,
                       showBigUserIcon: I
                   }),
-                  (0, i.jsx)(c.V6, { ...v }),
+                  (0, i.jsx)(c.V6, { ...C }),
                   (0, i.jsx)(r.zxk, {
                       onClick: n,
-                      submitting: C,
+                      submitting: v,
                       className: _.acceptButton,
                       children: h.intl.string(h.t.ohMvm5)
                   })

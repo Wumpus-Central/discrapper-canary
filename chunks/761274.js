@@ -4,7 +4,7 @@ n.d(t, {
     PQ: () => r
 });
 var i = (function (e) {
-        return (e.AUTHORIZED = 'authorized'), (e.DENIED = 'denied'), (e.RESTRICTED = 'restricted'), (e.UNDETERMINED = 'undetermined'), e;
+        return (e.AUTHORIZED = 'authorized'), (e.DENIED = 'denied'), (e.RESTRICTED = 'restricted'), (e.LIMITED = 'limited'), (e.UNDETERMINED = 'undetermined'), e;
     })({}),
     r = (function (e) {
         return (e.DISMISSED = 'dismissed'), (e.DENIED = 'denied'), (e.ACCEPTED = 'accepted'), (e.NO_DEVICES = 'no_devices'), (e.ERROR = 'error'), (e.NONE = 'none'), e;

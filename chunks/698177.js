@@ -18,7 +18,7 @@ let E = () => {
     let [e, t] = r.useState(''),
         [l, E] = r.useState(''),
         [x, I] = r.useState(!1),
-        [C, v] = r.useState(!1),
+        [v, C] = r.useState(!1),
         [N, S] = r.useState(null),
         [T, A] = r.useState(null),
         b = (0, o.e7)([u.Z], () => u.Z.getCountryCode()),
@@ -34,7 +34,7 @@ let E = () => {
             I(!0);
             try {
                 let { token: t } = await c.Z.verifyPhone(R + e, l);
-                S(null), A(null), v(!0), c.Z.validatePhoneForSupport(t);
+                S(null), A(null), C(!0), c.Z.validatePhoneForSupport(t);
             } catch (e) {
                 e.body.message ? (S(null), A(e.body.message)) : (S(e.body.phone), A(e.body.code));
             } finally {
@@ -57,7 +57,7 @@ let E = () => {
                 })
             ]
         });
-    return C
+    return v
         ? j
         : (0, i.jsxs)(_.ZP, {
               children: [

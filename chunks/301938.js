@@ -16,8 +16,8 @@ var i = n(200651),
     f = n(483938);
 function E(e) {
     let { setOriginalEmail: t, setSlide: l, ready: E, token: x } = e,
-        [I, C] = r.useState(!1),
-        [v, N] = r.useState(null),
+        [I, v] = r.useState(!1),
+        [C, N] = r.useState(null),
         [S, T] = r.useState(null),
         [A, b] = r.useState(''),
         R = r.useRef(null);
@@ -53,7 +53,7 @@ function E(e) {
                             className: f.marginBottom20,
                             value: A,
                             onChange: b,
-                            error: v,
+                            error: C,
                             autoComplete: 'new-password',
                             maxLength: 72,
                             placeholder: g.intl.string(g.t['yY/PXV'])
@@ -68,9 +68,9 @@ function E(e) {
                                     }
                                     return (
                                         null != S && T(null),
-                                        null != v && N(null),
+                                        null != C && N(null),
                                         t(''),
-                                        C(!0),
+                                        v(!0),
                                         h.Z.post({
                                             url: m.ANM.ACCOUNT_REVERT,
                                             body: {
@@ -110,7 +110,7 @@ function E(e) {
                                                 u.S.dispatch(m.CkL.WAVE_EMPHASIZE);
                                             })
                                             .finally(() => {
-                                                C(!1);
+                                                v(!1);
                                             })
                                     );
                                 }
