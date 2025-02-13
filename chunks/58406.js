@@ -22,9 +22,10 @@ class c {
     async requestAuthorization(e, t, n) {
         if ('function' != typeof t) throw Error('requestAuthorization: Was provided with not a function for '.concat(e, '.'));
         i.default.track(o.rMx.PERMISSIONS_REQUESTED, { type: e });
-        let a = (await t()) === s.NZ.AUTHORIZED,
-            l = a ? s.PQ.ACCEPTED : s.PQ.DENIED;
-        return r.Z.setPermission(e, l), !a && n.showAuthorizationError && this.showAlert(e), a;
+        let a = await t(),
+            l = a === s.NZ.AUTHORIZED || a === s.NZ.LIMITED,
+            u = l ? s.PQ.ACCEPTED : s.PQ.DENIED;
+        return r.Z.setPermission(e, u), !l && n.showAuthorizationError && this.showAlert(e), l;
     }
     requestPermission(e, t) {
         let n = c.defaultNativePermissionsRequestOptions(t);
