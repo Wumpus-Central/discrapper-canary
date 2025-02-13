@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(47120);
+n.d(t, { Z: () => g }), n(47120);
 var i,
     r = n(442837),
     a = n(570140);
@@ -112,7 +112,25 @@ function p(e) {
               isUpdating: !1
           });
 }
-class h extends (i = r.ZP.Store) {
+function h(e) {
+    let { form: t, guildId: n } = e,
+        i = null == t ? void 0 : t.profile;
+    if (null == i) return;
+    let r = o.get(n);
+    null == r
+        ? o.set(n, {
+              ...l,
+              profile: i,
+              lastSyncTimestamp: Date.now()
+          })
+        : o.set(n, {
+              ...r,
+              profile: i,
+              lastSyncTimestamp: Date.now(),
+              isFetching: !1
+          });
+}
+class m extends (i = r.ZP.Store) {
     getProfile(e) {
         var t, n;
         return null == e ? null : null !== (n = null === (t = o.get(e)) || void 0 === t ? void 0 : t.profile) && void 0 !== n ? n : null;
@@ -134,12 +152,13 @@ class h extends (i = r.ZP.Store) {
         return null == e ? null : null !== (n = null === (t = o.get(e)) || void 0 === t ? void 0 : t.errorCode) && void 0 !== n ? n : null;
     }
 }
-s(h, 'displayName', 'GuildProfileStore');
-let m = new h(a.Z, {
+s(m, 'displayName', 'GuildProfileStore');
+let g = new m(a.Z, {
     GUILD_PROFILE_FETCH: u,
     GUILD_PROFILE_FETCH_SUCCESS: c,
     GUILD_PROFILE_FETCH_FAILURE: d,
     GUILD_PROFILE_UPDATE: f,
     GUILD_PROFILE_UPDATE_SUCCESS: _,
-    GUILD_PROFILE_UPDATE_FAILURE: p
+    GUILD_PROFILE_UPDATE_FAILURE: p,
+    MEMBER_VERIFICATION_FORM_UPDATE: h
 });
