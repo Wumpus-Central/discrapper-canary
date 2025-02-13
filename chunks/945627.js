@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(726985),
     C = n(981631),
     N = n(388032),
-    f = n(318889);
-function I() {
+    I = n(318889);
+function f() {
     let e = (0, r.e7)([u.Z], () => u.Z.getGameFriendCount()),
         [t] = (0, r.e7)(
             [u.Z],
@@ -74,7 +74,7 @@ function I() {
                             {
                                 src: r,
                                 'aria-label': l,
-                                className: f.icon
+                                className: I.icon
                             },
                             l
                         )
@@ -89,13 +89,13 @@ function I() {
             o.Z.open(C.oAB.AUTHORIZED_APPS);
         }, []);
     return (0, i.jsxs)('div', {
-        className: f.header,
+        className: I.header,
         children: [
             (0, i.jsxs)('div', {
-                className: f.gameRelationships,
+                className: I.gameRelationships,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: f.gameRelationshipsDetails,
+                        className: I.gameRelationshipsDetails,
                         children: [
                             (0, i.jsx)(a.Text, {
                                 variant: 'text-md/medium',
@@ -110,19 +110,27 @@ function I() {
                         ]
                     }),
                     (0, i.jsx)('div', {
-                        className: f.gameRelationshipIcons,
+                        className: I.gameRelationshipIcons,
                         children: _
                     })
                 ]
             }),
-            (0, i.jsx)('div', { className: f.divider }),
-            (0, i.jsx)(a.P3F, {
+            (0, i.jsx)('div', { className: I.divider }),
+            (0, i.jsxs)(a.P3F, {
                 onClick: p,
-                children: (0, i.jsx)(a.Text, {
-                    variant: 'text-xs/normal',
-                    color: 'interactive-normal',
-                    children: N.intl.format(N.t.oYaYOT, {})
-                })
+                className: I.manageGamesLink,
+                children: [
+                    (0, i.jsx)(a.Text, {
+                        variant: 'text-xs/normal',
+                        color: 'interactive-normal',
+                        children: N.intl.format(N.t.oYaYOT, {})
+                    }),
+                    (0, i.jsx)(a.Fbu, {
+                        size: 'xxs',
+                        color: a.TVs.colors.INTERACTIVE_NORMAL,
+                        className: I.manageGamesChevron
+                    })
+                ]
             })
         ]
     });
@@ -131,7 +139,7 @@ function T() {
     let e = g._j.useSetting();
     return (0, i.jsxs)(x.Z, {
         children: [
-            (0, i.jsx)(I, {}),
+            (0, i.jsx)(f, {}),
             (0, i.jsx)(_.U, {
                 setting: E.s6.PRIVACY_AND_SAFETY_ALLOW_GAME_FRIEND_DMS,
                 children: (0, i.jsx)(p.Z, {
