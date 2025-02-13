@@ -17,13 +17,13 @@ var s = n(990547),
     p = n(163379),
     E = n(703288),
     C = n(574755),
-    f = n(377171),
-    N = n(540059),
+    N = n(377171),
+    f = n(540059),
     I = n(621628),
     T = n(18438),
     S = n(778825),
     j = n(665166),
-    v = n(529578),
+    v = n(715495),
     b = n(351780),
     A = n(231765),
     O = n(813732),
@@ -71,8 +71,8 @@ var s = n(990547),
     ep = n(593648),
     eE = n(327885),
     eC = n(595242),
-    ef = n(463153),
-    eN = n(36192),
+    eN = n(463153),
+    ef = n(36192),
     eI = n(889029),
     eT = n(400287),
     eS = n(554042),
@@ -99,7 +99,7 @@ let eU = () => [l.z.CLIENT_THEMES_SETTINGS_BADGE, l.z.DEKSTOP_CUSTOM_APP_ICON_BA
         return Object.freeze({
             [eL.s6.SEARCH_NO_RESULTS]: {
                 section: m.ID.CUSTOM,
-                element: ef.Z
+                element: eN.Z
             },
             [eL.s6.ACCOUNT_SECURITY_TAB]: {
                 section: ek.oAB.ACCOUNT,
@@ -425,7 +425,7 @@ let eU = () => [l.z.CLIENT_THEMES_SETTINGS_BADGE, l.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 badgeCount: eY,
                 newIndicator: (0, i.jsx)(a.IGR, {
                     text: eV.intl.string(eV.t.y2b7CA),
-                    color: f.Z.BG_BRAND
+                    color: N.Z.BG_BRAND
                 }),
                 newIndicatorDismissibleContentTypes: [l.z.FAMILY_CENTER_NEW_BADGE]
             },
@@ -445,7 +445,7 @@ let eU = () => [l.z.CLIENT_THEMES_SETTINGS_BADGE, l.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eV.intl.string(eV.t['+1h0k5'])],
                 label: eV.intl.string(eV.t['+1h0k5']),
                 ariaLabel: eV.intl.string(eV.t['+1h0k5']),
-                element: eN.Z,
+                element: ef.Z,
                 newIndicatorDismissibleContentTypes: [l.z.AUTH_SESSIONS_NEW],
                 impressionName: s.ImpressionNames.USER_SETTINGS_SESSIONS,
                 impressionProperties: { source: ez }
@@ -627,9 +627,9 @@ let eU = () => [l.z.CLIENT_THEMES_SETTINGS_BADGE, l.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 parent: eL.s6.APPEARANCE,
                 newIndicator: (0, i.jsx)(a.IGR, {
                     text: eV.intl.string(eV.t.y2b7CA),
-                    color: f.Z.BG_BRAND
+                    color: N.Z.BG_BRAND
                 }),
-                predicate: () => (0, N.i9)('SettingsRendererConfig')
+                predicate: () => (0, f.i9)('SettingsRendererConfig')
             },
             [eL.s6.APPEARANCE_SCALING_SPACING]: {
                 section: ek.oAB.APPEARANCE,
@@ -1735,10 +1735,10 @@ let eU = () => [l.z.CLIENT_THEMES_SETTINGS_BADGE, l.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 element: P.Z,
                 predicate: () => k.Z.isDeveloper
             },
-            [eL.s6.NAME_PLATE_TOOL]: {
-                section: ek.oAB.NAME_PLATE_TOOL,
-                searchableTitles: ['Name Plates Tool'],
-                label: 'Name Plates Tool',
+            [eL.s6.NAMEPLATES_PREVIEW_TOOL]: {
+                section: ek.oAB.NAMEPLATES_PREVIEW_TOOL,
+                searchableTitles: ['Nameplates Preview Tool'],
+                label: 'Nameplates Preview Tool',
                 element: v.Z,
                 predicate: () => k.Z.isDeveloper
             },

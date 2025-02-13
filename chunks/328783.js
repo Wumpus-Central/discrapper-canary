@@ -62,8 +62,8 @@ let _ = (0, a.hQ)(),
                 },
                 [E]
             ),
-            f = s.useCallback((e) => (0, d.nE)(e, !0, m.Sbl.USER_SETTINGS), []),
-            N = s.useCallback((e) => e === a, [a]),
+            N = s.useCallback((e) => (0, d.nE)(e, !0, m.Sbl.USER_SETTINGS), []),
+            f = s.useCallback((e) => e === a, [a]),
             I = s.useCallback((e) => e, []),
             T = s.useCallback(() => (0, d.nE)(null, !1), []);
         return (0, i.jsxs)(o.Z, {
@@ -78,9 +78,9 @@ let _ = (0, a.hQ)(),
                 (0, i.jsx)(r.PhF, {
                     className: x.select,
                     optionClassName: x.selectPopout,
-                    isSelected: N,
+                    isSelected: f,
                     options: p,
-                    select: f,
+                    select: N,
                     renderOptionValue: C,
                     renderOptionLabel: E,
                     serialize: I,

@@ -16,8 +16,8 @@ var i,
     p = n(724757),
     E = n(600164),
     C = n(239827),
-    f = n(818035),
-    N = n(509545),
+    N = n(818035),
+    f = n(509545),
     I = n(78839),
     T = n(74538),
     S = n(807160),
@@ -57,9 +57,9 @@ function D(e) {
             },
             [t, r, m]
         ),
-        f = (0, p.Z)('billing-history', o);
+        N = (0, p.Z)('billing-history', o);
     return (0, s.jsx)(d.bG, {
-        navigator: f,
+        navigator: N,
         children: (0, s.jsx)(d.SJ, {
             children: (e) => {
                 let { ref: t, ...l } = e;
@@ -180,7 +180,7 @@ function y(e) {
     return !(null == n || null == i || Object.values(j.Si).includes(n) || (0, T.PV)(i));
 }
 function Z(e) {
-    let t = (0, u.e7)([f.Z], () => f.Z.getPayments()),
+    let t = (0, u.e7)([N.Z], () => N.Z.getPayments()),
         n = (0, u.e7)([I.ZP], () => I.ZP.getPremiumTypeSubscription()),
         i = l.useMemo(
             () =>
@@ -202,7 +202,7 @@ function Z(e) {
                 ),
             [t]
         ),
-        a = (0, u.Wu)([N.Z], () => N.Z.getPlanIdsForSkus(Array.from(r))),
+        a = (0, u.Wu)([f.Z], () => f.Z.getPlanIdsForSkus(Array.from(r))),
         o = l.useCallback(() => a.length === i.size, [a, i]);
     return (
         l.useEffect(() => {

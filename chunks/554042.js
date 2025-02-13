@@ -16,8 +16,8 @@ var i = n(200651),
     p = n(210887),
     E = n(981631),
     C = n(388032),
-    f = n(633137);
-let N = [
+    N = n(633137);
+let f = [
     {
         label: 'Latin alphabet',
         value: 'aBcDeFgHiJkLmNoPqRsTuVwXyZ'
@@ -74,19 +74,19 @@ function I() {
             return (0, x.fD)() ? (null === (t = g.C.getCurrentBuildOverride()) || void 0 === t ? void 0 : null === (e = t.overrides) || void 0 === e ? void 0 : e.discord_web) : null;
         }),
         [A, O] = (0, h.R)('playground-overrideText', null),
-        [R, D] = (0, h.R)('playground-defaultText', N[0].value),
+        [R, D] = (0, h.R)('playground-defaultText', f[0].value),
         P = s.useCallback(
             (e) => {
-                let t = N.find((t) => {
+                let t = f.find((t) => {
                     let { value: n } = t;
                     return n === e;
                 });
-                '' === e || null == e ? (D(N[0].value), O(null)) : null != t ? D(t.value) : (D('custom'), O(e));
+                '' === e || null == e ? (D(f[0].value), O(null)) : null != t ? D(t.value) : (D('custom'), O(e));
             },
             [O, D]
         );
     return (0, i.jsx)('div', {
-        className: f.fullscreen,
+        className: N.fullscreen,
         style: {
             '--playground-font-family': 'mono' === I ? 'gg mono' : 'gg sans',
             '--playground-font-style': 'italic' === I ? 'italic' : 'normal'
@@ -95,7 +95,7 @@ function I() {
             tag: o.RB0.H1,
             children: [
                 (0, i.jsxs)('div', {
-                    className: f.toolbar,
+                    className: N.toolbar,
                     children: [
                         (0, i.jsxs)('div', {
                             children: [
@@ -121,15 +121,15 @@ function I() {
                         }),
                         (0, i.jsx)(o.xJW, {
                             children: (0, i.jsx)(o.q4e, {
-                                className: f.select,
-                                options: N,
+                                className: N.select,
+                                options: f,
                                 onChange: (e) => P(e),
                                 value: R
                             })
                         }),
                         (0, i.jsx)(o.xJW, {
                             children: (0, i.jsx)('div', {
-                                className: f.input,
+                                className: N.input,
                                 children: (0, i.jsx)(o.oil, {
                                     placeholder: 'Enter custom input...',
                                     value: null != A ? A : '',
@@ -140,7 +140,7 @@ function I() {
                         (0, i.jsx)(o.xJW, {
                             children: (0, i.jsx)(o.FXm, {
                                 withTransparentBackground: !0,
-                                className: f.theme,
+                                className: N.theme,
                                 orientation: 'horizontal',
                                 options: [
                                     {
@@ -161,7 +161,7 @@ function I() {
                         (0, i.jsx)(o.xJW, {
                             children: (0, i.jsx)(o.FXm, {
                                 withTransparentBackground: !0,
-                                className: f.theme,
+                                className: N.theme,
                                 orientation: 'horizontal',
                                 options: [
                                     {
@@ -190,14 +190,14 @@ function I() {
                     ]
                 }),
                 (0, i.jsxs)('div', {
-                    className: f.textGrid,
+                    className: N.textGrid,
                     children: [
                         (0, i.jsx)('div', {}),
                         S.map((e) =>
                             (0, i.jsx)(
                                 'div',
                                 {
-                                    className: f.columnHeading,
+                                    className: N.columnHeading,
                                     children: (0, i.jsx)(o.X6q, {
                                         variant: 'eyebrow',
                                         children: e
@@ -214,7 +214,7 @@ function I() {
                                         (0, i.jsxs)(
                                             'div',
                                             {
-                                                className: f.fontSize,
+                                                className: N.fontSize,
                                                 children: [
                                                     (0, i.jsxs)(o.X6q, {
                                                         variant: 'eyebrow',
@@ -237,10 +237,10 @@ function I() {
                                             return (0, i.jsx)(
                                                 'div',
                                                 {
-                                                    className: f.textSample,
+                                                    className: N.textSample,
                                                     children: (0, i.jsxs)('div', {
                                                         title: ''.concat(e, 'px at ').concat(t),
-                                                        className: r()(f.text, { [f.breakAnywhere]: !s.includes(' ') }),
+                                                        className: r()(N.text, { [N.breakAnywhere]: !s.includes(' ') }),
                                                         style: {
                                                             fontSize: e,
                                                             fontWeight: j.get(t)

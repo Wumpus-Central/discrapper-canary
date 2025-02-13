@@ -1085,7 +1085,7 @@ let A = Object.freeze({
         COLLECTIBLES_SHOP: 'Shop',
         COLLECTIBLES_SHOP_VIEW_ALL_CATEGORY_ITEMS: 'Collectibles Shop View All Category Items',
         PROFILE_EFFECTS_PREVIEW_TOOL: 'Profile Effects Preview Tool',
-        NAME_PLATE_TOOL: 'Name Plate Tool',
+        NAMEPLATES_PREVIEW_TOOL: 'Nameplates Preview Tool',
         COMMUNITY_ALERTS: 'Community Alerts Settings',
         HIGHLIGHT_NOTIFICATIONS: 'Highlight notification settings',
         QUESTS: 'Quests',

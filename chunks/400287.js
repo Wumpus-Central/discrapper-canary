@@ -22,8 +22,8 @@ function C() {
         n = g.fq.useSetting(),
         s = g.eR.useSetting(),
         C = (0, u.V2)({ location: 'UserSettingsTextImages' }),
-        f = g.R$.useSetting(),
-        N = g.cC.useSetting(),
+        N = g.R$.useSetting(),
+        f = g.cC.useSetting(),
         I = g.vF.useSetting(),
         T = g.H1.useSetting(),
         S = g.ev.useSetting(),
@@ -210,7 +210,7 @@ function C() {
                             setting: x.s6.CHAT_TEXT_BOX_PREVIEW,
                             children: (0, i.jsx)(r.j7V, {
                                 className: l()(E.marginTop8, E.marginBottom40),
-                                value: f,
+                                value: N,
                                 onChange: (e) => {
                                     m.default.track(_.rMx.PREVIEW_MARKDOWN_TOGGLED, {
                                         enabled: e,
@@ -271,7 +271,7 @@ function C() {
                                 }
                             ],
                             onChange: (e) => g.cC.updateSetting(e.value),
-                            value: N
+                            value: f
                         })
                     ]
                 })

@@ -26,8 +26,8 @@ var i = n(192379),
     p = n(631885),
     E = n(223639),
     C = n(160913),
-    f = n(725727),
-    N = n(977156),
+    N = n(725727),
+    f = n(977156),
     I = n(922611),
     T = n(921157),
     S = n(667172),
@@ -66,7 +66,7 @@ function U(e) {
             },
             {
                 divider: !0,
-                settings: [M.s6.CHANGELOG, M.s6.MERCHANDISE, M.s6.HYPESQUAD, M.s6.TOWNHALL, M.s6.EXPERIMENTS, M.s6.DEVELOPER_OPTIONS, M.s6.HOTSPOT_OPTIONS, M.s6.DISMISSIBLE_CONTENT_OPTIONS, M.s6.PAYMENT_FLOW_MODALS, M.s6.REVENUE_STORYBOOK, M.s6.VIRTUAL_CURRENCY_CONFIGURATION, M.s6.DESIGN_SYSTEMS, M.s6.TEXT_PLAYGROUND, M.s6.TEXT_COMPONENTS, M.s6.INTL_TESTING, M.s6.PROFILE_EFFECTS_PREVIEW_TOOL, M.s6.NAME_PLATE_TOOL, M.s6.WEB_SETTING_TREE_TOOL, M.s6.QUEST_PREVIEW_TOOL]
+                settings: [M.s6.CHANGELOG, M.s6.MERCHANDISE, M.s6.HYPESQUAD, M.s6.TOWNHALL, M.s6.EXPERIMENTS, M.s6.DEVELOPER_OPTIONS, M.s6.HOTSPOT_OPTIONS, M.s6.DISMISSIBLE_CONTENT_OPTIONS, M.s6.PAYMENT_FLOW_MODALS, M.s6.REVENUE_STORYBOOK, M.s6.VIRTUAL_CURRENCY_CONFIGURATION, M.s6.DESIGN_SYSTEMS, M.s6.TEXT_PLAYGROUND, M.s6.TEXT_COMPONENTS, M.s6.INTL_TESTING, M.s6.PROFILE_EFFECTS_PREVIEW_TOOL, M.s6.NAMEPLATES_PREVIEW_TOOL, M.s6.WEB_SETTING_TREE_TOOL, M.s6.QUEST_PREVIEW_TOOL]
             },
             {
                 divider: !0,
@@ -86,7 +86,7 @@ function U(e) {
 }
 function G() {
     var e, t, n, i;
-    let r = (0, f.YO)().length,
+    let r = (0, N.YO)().length,
         P = (0, C.U)(),
         B = (0, s.e7)([O.Z], () => O.Z.getProps().impressionSource),
         M = (0, p.gU)(),
@@ -108,7 +108,7 @@ function G() {
         W = (0, j.y0)({ location: 'settings' }),
         K = (0, S.v4)({ location: 'settings' }),
         X = (0, c.Q)(),
-        q = (0, N.Zy)({ location: V.dr.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
+        q = (0, f.Zy)({ location: V.dr.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
         { enabled: J } = E.Z.useExperiment({ location: 'UserSettingsInventory' }, { autoTrackExposure: !0 }),
         Q = (0, s.e7)([b.Z], () => b.Z.hasLibraryApplication()),
         $ = (0, s.e7)([v.default], () => v.default.hasTOTPEnabled()),

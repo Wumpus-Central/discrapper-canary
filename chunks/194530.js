@@ -12,8 +12,8 @@ var i = n(200651),
     m = n(977109);
 function g(e) {
     var t, n, g, x;
-    let { transitionState: _, onSuccess: p, onClose: E, requirementsUpdated: C, noSkip: f = !1 } = e,
-        [N, I] = s.useState(''),
+    let { transitionState: _, onSuccess: p, onClose: E, requirementsUpdated: C, noSkip: N = !1 } = e,
+        [f, I] = s.useState(''),
         [T, S] = s.useState(''),
         [j, v] = s.useState(''),
         [b, A] = s.useState(null),
@@ -26,7 +26,7 @@ function g(e) {
         let t = !1;
         if (('' === T ? (A(h.intl.string(h.t['/7/oPT'])), (t = !0)) : A(null), T !== j ? (R(h.intl.string(h.t.IEKYZ2)), (t = !0)) : R(null), t)) return;
         let n = await (0, a.Mn)({
-            password: N,
+            password: f,
             newPassword: T
         });
         if (null == n ? void 0 : n.ok) p();
@@ -61,7 +61,7 @@ function g(e) {
                             className: m.subtitle,
                             children: C ? h.intl.string(h.t['37iHbW']) : h.intl.string(h.t.iOurYm)
                         }),
-                        !0 !== f &&
+                        !0 !== N &&
                             (0, i.jsx)(r.olH, {
                                 onClick: E,
                                 className: m.modalCloseButton
@@ -79,7 +79,7 @@ function g(e) {
                                     error: null == D ? void 0 : null === (t = D.password) || void 0 === t ? void 0 : t[0],
                                     children: (0, i.jsx)(r.oil, {
                                         type: 'password',
-                                        value: N,
+                                        value: f,
                                         onChange: I,
                                         inputRef: y
                                     })
@@ -115,7 +115,7 @@ function g(e) {
                                     submitting: P === u.QZA.SUBMITTING,
                                     children: h.intl.string(h.t.i4jeWV)
                                 }),
-                                !0 !== f &&
+                                !0 !== N &&
                                     (0, i.jsx)(r.zxk, {
                                         className: m.cancel,
                                         look: r.zxk.Looks.LINK,

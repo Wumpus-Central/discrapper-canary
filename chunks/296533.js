@@ -21,8 +21,8 @@ var i = n(200651),
     p = n(357956),
     E = n(275909),
     C = n(300037),
-    f = n(981631),
-    N = n(474936),
+    N = n(981631),
+    f = n(474936),
     I = n(388032),
     T = n(305322);
 function S(e) {
@@ -35,22 +35,22 @@ function S(e) {
         u = s.useMemo(
             () =>
                 (function (e) {
-                    if (null == e || e === f.Eu4.NONE) return '';
+                    if (null == e || e === N.Eu4.NONE) return '';
                     let t = [
-                        I.intl.formatToPlainString(I.t.dLlKX1, { numEmojiSlots: N.HO[e].limits.emoji }),
-                        I.intl.formatToPlainString(I.t['+ANIfn'], { numStickerSlots: N.HO[e].limits.stickers }),
-                        I.intl.formatToPlainString(I.t['4gt60d'], { numSoundboardSlots: N.HO[e].limits.soundboardSounds }),
+                        I.intl.formatToPlainString(I.t.dLlKX1, { numEmojiSlots: f.HO[e].limits.emoji }),
+                        I.intl.formatToPlainString(I.t['+ANIfn'], { numStickerSlots: f.HO[e].limits.stickers }),
+                        I.intl.formatToPlainString(I.t['4gt60d'], { numSoundboardSlots: f.HO[e].limits.soundboardSounds }),
                         I.intl.formatToPlainString(I.t.XahSjY, {
-                            resolution: N.HO[e].limits.screenShareQualityResolution,
-                            framerate: N.HO[e].limits.screenShareQualityFramerate
+                            resolution: f.HO[e].limits.screenShareQualityResolution,
+                            framerate: f.HO[e].limits.screenShareQualityFramerate
                         }),
-                        I.intl.formatToPlainString(I.t.NbNs7e, { bitrate: N.HO[e].limits.bitrate / 1000 }),
-                        I.intl.formatToPlainString(I.t.VVKcpq, { filesize: N.HO[e].limits.fileSize / 1024 / 1024 }),
-                        I.intl.formatToPlainString(I.t.TbpCvr, { numVideoStageSeats: N.HO[e].limits.stageVideoUsers }),
+                        I.intl.formatToPlainString(I.t.NbNs7e, { bitrate: f.HO[e].limits.bitrate / 1000 }),
+                        I.intl.formatToPlainString(I.t.VVKcpq, { filesize: f.HO[e].limits.fileSize / 1024 / 1024 }),
+                        I.intl.formatToPlainString(I.t.TbpCvr, { numVideoStageSeats: f.HO[e].limits.stageVideoUsers }),
                         I.intl.string(I.t.LDyX3t),
                         I.intl.string(I.t.YtGlPT)
                     ];
-                    e >= f.Eu4.TIER_2 && (t.push(I.intl.string(I.t.SztbtL)), t.push(I.intl.string(I.t['3GK91t']))), e >= f.Eu4.TIER_3 && t.push(I.intl.string(I.t.XUUJd3));
+                    e >= N.Eu4.TIER_2 && (t.push(I.intl.string(I.t.SztbtL)), t.push(I.intl.string(I.t['3GK91t']))), e >= N.Eu4.TIER_3 && t.push(I.intl.string(I.t.XUUJd3));
                     let n = t[Math.floor(Math.random() * t.length)];
                     return I.intl.format(I.t['/dOAmZ'], { perk: n });
                 })(t),
@@ -65,7 +65,7 @@ function S(e) {
             },
             'animate-always'
         );
-    return o || t === f.Eu4.NONE
+    return o || t === N.Eu4.NONE
         ? (0, i.jsx)('div', {
               className: T.boostDescriptionInnerContainer,
               children: (0, i.jsx)(a.Text, {
@@ -91,8 +91,8 @@ function j(e) {
         g = (0, r.e7)([o.Z], () => o.Z.useReducedMotion),
         _ = s.useMemo(() => (null != n.cooldownEndsAt ? new Date(n.cooldownEndsAt) : null), [n]),
         C = s.useMemo(() => null != _ && _ > new Date(), [_]),
-        f = (0, x.tl)(n),
-        { fractionalState: N } = (0, c.Z)();
+        N = (0, x.tl)(n),
+        { fractionalState: f } = (0, c.Z)();
     return (0, i.jsxs)('div', {
         className: T.boostContainer,
         children: [
@@ -100,14 +100,14 @@ function j(e) {
                 className: T.boostInnerContainer,
                 children: [
                     (0, i.jsx)(E.Z, {
-                        isCanceled: f,
+                        isCanceled: N,
                         hasCooldown: C,
                         useReducedMotion: g
                     }),
                     (0, i.jsx)('div', {
                         className: T.boostDescriptionContainer,
                         children:
-                            null != _ && C && !f
+                            null != _ && C && !N
                                 ? (0, i.jsx)(p.Z, {
                                       className: T.boostDescriptionInnerContainer,
                                       cooldown: _.getTime()
@@ -116,7 +116,7 @@ function j(e) {
                                       guildTier: t,
                                       guildBoostSlot: n,
                                       showAltText: h,
-                                      isCanceled: f,
+                                      isCanceled: N,
                                       premiumSubscription: l
                                   })
                     }),
@@ -128,7 +128,7 @@ function j(e) {
                                 guildBoostSlot: n,
                                 premiumSubscription: l,
                                 hasCancelableGuildBoostSlot: d,
-                                fractionalState: N
+                                fractionalState: f
                             });
                         },
                         position: 'right',

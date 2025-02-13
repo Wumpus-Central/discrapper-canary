@@ -16,8 +16,8 @@ var i = n(200651),
     p = n(246946),
     E = n(594174),
     C = n(460562),
-    f = n(823379),
-    N = n(981631),
+    N = n(823379),
+    f = n(981631),
     I = n(921944),
     T = n(388032),
     S = n(913229);
@@ -36,11 +36,11 @@ function j() {
     }, []);
     let C = () => {
             o.tn.post({
-                url: N.ANM.AUTH_SESSION_NOTIFICATIONS_DEBUG,
+                url: f.ANM.AUTH_SESSION_NOTIFICATIONS_DEBUG,
                 rejectWithError: !0
             });
         },
-        [f, j] = s.useState(new Set());
+        [N, j] = s.useState(new Set());
     return l
         ? (0, i.jsx)(h.Z, {})
         : ((e =
@@ -81,10 +81,10 @@ function j() {
                                                           v,
                                                           {
                                                               session: e,
-                                                              useChecks: f.size > 0,
-                                                              checked: f.has(e.id_hash),
+                                                              useChecks: N.size > 0,
+                                                              checked: N.has(e.id_hash),
                                                               setChecked: (t) => {
-                                                                  let n = new Set(f);
+                                                                  let n = new Set(N);
                                                                   t ? n.add(e.id_hash) : n.delete(e.id_hash), j(n);
                                                               }
                                                           },
@@ -99,7 +99,7 @@ function j() {
                             n.length > 0
                                 ? (0, i.jsxs)(d.hjN, {
                                       tag: d.RB0.H5,
-                                      title: f.size > 0 ? T.intl.string(T.t.mMEmRE) : T.intl.string(T.t.Vij32N),
+                                      title: N.size > 0 ? T.intl.string(T.t.mMEmRE) : T.intl.string(T.t.Vij32N),
                                       children: [
                                           (0, i.jsx)(d.R94, {
                                               type: d.geA.DESCRIPTION,
@@ -111,9 +111,9 @@ function j() {
                                               size: d.zxk.Sizes.SMALL,
                                               className: S.logOutAllButton,
                                               onClick: () => {
-                                                  f.size > 0 ? (0, g.L$)(Array.from(f)) : (0, g.L$)(n.map((e) => e.id_hash));
+                                                  N.size > 0 ? (0, g.L$)(Array.from(N)) : (0, g.L$)(n.map((e) => e.id_hash));
                                               },
-                                              children: f.size > 0 ? T.intl.formatToPlainString(T.t['83CPLi'], { count: f.size }) : T.intl.string(T.t.cLmmeX)
+                                              children: N.size > 0 ? T.intl.formatToPlainString(T.t['83CPLi'], { count: N.size }) : T.intl.string(T.t.cLmmeX)
                                           })
                                       ]
                                   })
@@ -192,9 +192,9 @@ function v(e) {
                     };
             }
         })(null === (l = o.client_info) || void 0 === l ? void 0 : l.os),
-        N = c ? null : (0, x.p)(o.approx_last_used_time),
-        I = [E, p].filter(f.lm),
-        j = [_, N].filter(f.lm);
+        f = c ? null : (0, x.p)(o.approx_last_used_time),
+        I = [E, p].filter(N.lm),
+        j = [_, f].filter(N.lm);
     return (0, i.jsxs)(
         'div',
         {
@@ -286,7 +286,7 @@ function b() {
                         variant: 'text-sm/medium',
                         className: S.sessionInfoRow,
                         color: 'text-muted',
-                        children: (0, i.jsx)('span', { children: T.intl.format(T.t['044+8v'], { onClick: () => u.Z.setSection(N.oAB.ACCOUNT, null, { analyticsLocations: [m.Z.USER_SETTINGS_SESSIONS] }) }) })
+                        children: (0, i.jsx)('span', { children: T.intl.format(T.t['044+8v'], { onClick: () => u.Z.setSection(f.oAB.ACCOUNT, null, { analyticsLocations: [m.Z.USER_SETTINGS_SESSIONS] }) }) })
                     })
                 ]
             })

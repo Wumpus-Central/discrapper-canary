@@ -29,6 +29,7 @@ let x = function (e) {
     return (0, i.jsxs)('div', {
         className: C.container,
         children: [
+            Z && N && (0, i.jsx)(f.Z, {}),
             (0, i.jsx)('div', {
                 className: C.tiles,
                 style: { maxWidth: 168 * T },
@@ -85,8 +86,7 @@ let x = function (e) {
                 onClick: b,
                 size: s.zxk.Sizes.MEDIUM,
                 children: v ? _.intl.string(_.t['96ANUF']) : _.intl.string(_.t.TVBCKS)
-            }),
-            Z && N && (0, i.jsx)(f.Z, {})
+            })
         ]
     });
 };

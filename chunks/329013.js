@@ -19,8 +19,8 @@ var i = n(200651),
     p = n(540059),
     E = n(605236),
     C = n(104494),
-    f = n(639119),
-    N = n(311476),
+    N = n(639119),
+    f = n(311476),
     I = n(165583),
     T = n(197115),
     S = n(504983),
@@ -43,11 +43,11 @@ let P = () => {
         var e, t;
         let { analyticsLocations: n } = (0, m.ZP)(h.Z.USER_SETTINGS),
             r = (0, l.e7)([x.Z], () => x.Z.isPreview),
-            a = (null === (t = (0, f.N)()) || void 0 === t ? void 0 : null === (e = t.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === O.Si.TIER_2,
+            a = (null === (t = (0, N.N)()) || void 0 === t ? void 0 : null === (e = t.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === O.Si.TIER_2,
             c = (0, C.Ng)(),
             d = (0, C.Wp)(c, O.Si.TIER_2),
             u = !r || a,
-            { enabled: g } = N.Z.getCurrentConfig(
+            { enabled: g } = f.Z.getCurrentConfig(
                 { location: 'UserSettingsAppearanceClientThemes' },
                 {
                     autoTrackExposure: !u,

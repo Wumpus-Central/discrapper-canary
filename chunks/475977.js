@@ -16,8 +16,8 @@ var i = n(200651),
     p = n(302800),
     E = n(981631),
     C = n(474936),
-    f = n(388032),
-    N = n(255),
+    N = n(388032),
+    f = n(255),
     I = n(786792),
     T = n(161594);
 let S = (e) => {
@@ -26,28 +26,28 @@ let S = (e) => {
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)('div', {
-                    className: N.artContainer,
+                    className: f.artContainer,
                     'aria-hidden': !0,
                     role: 'presentation',
                     children: (0, i.jsx)('img', {
                         src: null !== (s = null == o ? void 0 : o.artSrc) && void 0 !== s ? s : T,
-                        className: r()(N.art, { [N.tideArt]: null != c && c === _.C5.TIDE }),
+                        className: r()(f.art, { [f.tideArt]: null != c && c === _.C5.TIDE }),
                         alt: ''
                     })
                 }),
                 (0, i.jsxs)('div', {
-                    className: N.mainColumn,
+                    className: f.mainColumn,
                     children: [
                         (0, i.jsx)(d.X6q, {
                             variant: 'heading-lg/extrabold',
                             color: (null == o ? void 0 : o.revertTextColor) ? 'redesign-button-overlay-text' : 'currentColor',
-                            className: N.title,
-                            children: null !== (l = null == o ? void 0 : null === (t = o.title) || void 0 === t ? void 0 : t.call(o)) && void 0 !== l ? l : f.intl.string(f.t['4Emkur'])
+                            className: f.title,
+                            children: null !== (l = null == o ? void 0 : null === (t = o.title) || void 0 === t ? void 0 : t.call(o)) && void 0 !== l ? l : N.intl.string(N.t['4Emkur'])
                         }),
                         (0, i.jsx)(d.Text, {
                             variant: 'text-sm/normal',
                             color: (null == o ? void 0 : o.revertTextColor) ? 'redesign-button-overlay-text' : 'currentColor',
-                            children: null !== (a = null == o ? void 0 : null === (n = o.description) || void 0 === n ? void 0 : n.call(o)) && void 0 !== a ? a : f.intl.string(f.t.gn7SZW)
+                            children: null !== (a = null == o ? void 0 : null === (n = o.description) || void 0 === n ? void 0 : n.call(o)) && void 0 !== a ? a : N.intl.string(N.t.gn7SZW)
                         })
                     ]
                 })
@@ -81,7 +81,7 @@ let S = (e) => {
             }, [n, null == j ? void 0 : j.version]),
             (0, i.jsxs)('div', {
                 ref: l,
-                className: r()(N.container, { [N.robertContainer]: T === _.C5.ROBERT }),
+                className: r()(f.container, { [f.robertContainer]: T === _.C5.ROBERT }),
                 style: { backgroundImage: 'url('.concat(null !== (e = null == t ? void 0 : t.backgroundSrc) && void 0 !== e ? e : I, ')') },
                 children: [
                     (0, i.jsx)(S, {
@@ -95,9 +95,9 @@ let S = (e) => {
                                 analyticsSource: u.Z.COLLECTIBLES_PROFILE_SETTINGS_UPSELL
                             });
                         },
-                        className: N.ctaButton,
+                        className: f.ctaButton,
                         color: d.zxk.Colors.BRAND_INVERTED,
-                        children: f.intl.string(f.t.fYfGgI)
+                        children: N.intl.string(N.t.fYfGgI)
                     })
                 ]
             })

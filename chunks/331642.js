@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(47120);
+n.d(t, { Z: () => N }), n(47120);
 var i = n(200651),
     s = n(192379),
     l = n(442837),
@@ -76,7 +76,7 @@ function C(e) {
         })
     });
 }
-function f(e) {
+function N(e) {
     let { sound: t, isGlobal: n, onSelect: s } = e,
         l = null != t,
         c = null == t ? void 0 : t.emojiId,

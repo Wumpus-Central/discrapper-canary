@@ -47,7 +47,7 @@ function _() {
                 e
             );
         }, [_, n, p, m]),
-        f = s.useCallback(
+        N = s.useCallback(
             (e) => {
                 let t = (null == e ? void 0 : e.label) === x.label() && (null == e ? void 0 : e.value) === x.value;
                 return null == e || '' === e.value || t
@@ -76,6 +76,6 @@ function _() {
         },
         value: e,
         options: C,
-        renderOptionPrefix: f
+        renderOptionPrefix: N
     });
 }

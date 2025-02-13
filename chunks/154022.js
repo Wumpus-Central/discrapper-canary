@@ -16,8 +16,8 @@ var i = n(200651),
     p = n(313201),
     E = n(786761),
     C = n(3148),
-    f = n(739566),
-    N = n(753206),
+    N = n(739566),
+    f = n(753206),
     I = n(440849),
     T = n(921801),
     S = n(196051),
@@ -156,10 +156,10 @@ function H() {
                 }),
                 (0, i.jsx)('div', {
                     className: B.previewMessage,
-                    children: (0, i.jsx)(N.Z, {
+                    children: (0, i.jsx)(f.Z, {
                         compact: e,
                         author: {
-                            ...(0, f.ZH)(t),
+                            ...(0, N.ZH)(t),
                             colorString: '#DD80F4'
                         },
                         message: t

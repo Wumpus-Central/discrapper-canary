@@ -16,8 +16,8 @@ var i = n(200651),
     p = n(15980),
     E = n(755733),
     C = n(981631),
-    f = n(388032),
-    N = n(384989);
+    N = n(388032),
+    f = n(384989);
 function I(e) {
     let { transitionState: t, onClose: r, ticket: o, challenge: c } = e,
         h = (0, d.Dt)(),
@@ -33,7 +33,7 @@ function I(e) {
             try {
                 e = await t;
             } catch (e) {
-                g.Z.captureException(e), R(f.intl.string(f.t.xSCvBQ)), v(E.x.INIT);
+                g.Z.captureException(e), R(N.intl.string(N.t.xSCvBQ)), v(E.x.INIT);
                 return;
             }
             A(e), v(E.x.NAME);
@@ -43,17 +43,17 @@ function I(e) {
         'aria-labelledby': h,
         children: [
             (0, i.jsxs)(a.xBx, {
-                className: N.header,
+                className: f.header,
                 separator: !1,
                 children: [
                     (0, i.jsxs)(a.X6q, {
                         id: h,
                         variant: 'heading-lg/semibold',
-                        children: [j === E.x.INIT && f.intl.string(f.t.vrOCCg), j === E.x.REGISTER && f.intl.string(f.t.wePEBA), j === E.x.NAME && f.intl.string(f.t['cY/IOj'])]
+                        children: [j === E.x.INIT && N.intl.string(N.t.vrOCCg), j === E.x.REGISTER && N.intl.string(N.t.wePEBA), j === E.x.NAME && N.intl.string(N.t['cY/IOj'])]
                     }),
                     (0, i.jsx)(a.olH, {
                         onClick: r,
-                        className: N.modalCloseButton
+                        className: f.modalCloseButton
                     })
                 ]
             }),
@@ -65,10 +65,10 @@ function I(e) {
                         id: E.x.INIT,
                         children: [
                             (0, i.jsxs)(a.hzk, {
-                                className: N.content,
+                                className: f.content,
                                 children: [
                                     (0, i.jsx)('div', {
-                                        className: N.icon,
+                                        className: f.icon,
                                         children: (0, i.jsx)('img', {
                                             alt: '',
                                             src: n(773072)
@@ -86,7 +86,7 @@ function I(e) {
                                     (0, i.jsx)('div', {
                                         children: (0, i.jsx)(a.Text, {
                                             variant: 'text-md/normal',
-                                            children: f.intl.string(f.t.Lh5vTU)
+                                            children: N.intl.string(N.t.Lh5vTU)
                                         })
                                     })
                                 ]
@@ -94,7 +94,7 @@ function I(e) {
                             (0, i.jsx)(a.mzw, {
                                 children: (0, i.jsx)(a.zxk, {
                                     onClick: D,
-                                    children: f.intl.string(f.t.oibaQU)
+                                    children: N.intl.string(N.t.oibaQU)
                                 })
                             })
                         ]
@@ -103,10 +103,10 @@ function I(e) {
                         id: E.x.REGISTER,
                         children: [
                             (0, i.jsxs)(a.hzk, {
-                                className: N.content,
+                                className: f.content,
                                 children: [
                                     (0, i.jsx)('div', {
-                                        className: N.icon,
+                                        className: f.icon,
                                         children: (0, i.jsx)('img', {
                                             alt: '',
                                             src: n(773072)
@@ -115,7 +115,7 @@ function I(e) {
                                     (0, i.jsx)('div', {
                                         children: (0, i.jsx)(a.Text, {
                                             variant: 'text-md/normal',
-                                            children: f.intl.string(f.t.aVMiX1)
+                                            children: N.intl.string(N.t.aVMiX1)
                                         })
                                     })
                                 ]
@@ -134,15 +134,15 @@ function I(e) {
                                         })
                                         .then(() => r())
                                         .catch(() => {
-                                            R(f.intl.string(f.t.fEptJC)), v(E.x.INIT);
+                                            R(N.intl.string(N.t.fEptJC)), v(E.x.INIT);
                                         });
                             },
                             children: [
                                 (0, i.jsxs)(a.hzk, {
-                                    className: N.content,
+                                    className: f.content,
                                     children: [
                                         (0, i.jsx)('div', {
-                                            className: N.icon,
+                                            className: f.icon,
                                             children: (0, i.jsx)('img', {
                                                 alt: '',
                                                 src: n(637163)
@@ -152,10 +152,10 @@ function I(e) {
                                             children: [
                                                 (0, i.jsx)(a.Text, {
                                                     variant: 'text-md/normal',
-                                                    children: f.intl.string(f.t['Jzd+z8'])
+                                                    children: N.intl.string(N.t['Jzd+z8'])
                                                 }),
                                                 (0, i.jsx)(a.oil, {
-                                                    className: N.input,
+                                                    className: f.input,
                                                     value: p,
                                                     onChange: (e) => {
                                                         I(e), S(0 === e.length);
@@ -168,12 +168,12 @@ function I(e) {
                                     ]
                                 }),
                                 (0, i.jsxs)(a.mzw, {
-                                    className: N.footer,
+                                    className: f.footer,
                                     children: [
                                         (0, i.jsx)(a.zxk, {
                                             type: 'submit',
                                             disabled: T,
-                                            children: f.intl.string(f.t['5dyZ1d'])
+                                            children: N.intl.string(N.t['5dyZ1d'])
                                         }),
                                         (0, i.jsx)(a.zxk, {
                                             look: a.zxk.Looks.LINK,
@@ -181,7 +181,7 @@ function I(e) {
                                             onClick: () => {
                                                 v(E.x.INIT);
                                             },
-                                            children: f.intl.string(f.t['13/7kZ'])
+                                            children: N.intl.string(N.t['13/7kZ'])
                                         })
                                     ]
                                 })
@@ -198,12 +198,12 @@ function T(e) {
     return (0, i.jsxs)(a.v2r, {
         navId: 'webauthn-credential-actions',
         onClose: o.Zy,
-        'aria-label': f.intl.string(f.t['+nrTbG']),
+        'aria-label': N.intl.string(N.t['+nrTbG']),
         onSelect: t,
         children: [
             (0, i.jsx)(a.sNh, {
                 id: 'webauthn-edit-credential-'.concat(s.id),
-                label: f.intl.string(f.t.bt75u7),
+                label: N.intl.string(N.t.bt75u7),
                 action: () => {
                     (0, a.ZDy)(async () => {
                         let { default: e } = await n.e('804').then(n.bind(n, 89616));
@@ -217,7 +217,7 @@ function T(e) {
             }),
             (0, i.jsx)(a.sNh, {
                 id: 'webauthn-delete-credential-'.concat(s.id),
-                label: f.intl.string(f.t['+xgS+P']),
+                label: N.intl.string(N.t['+xgS+P']),
                 color: 'danger',
                 action: () => {
                     (0, _.cT)(s);
@@ -236,24 +236,24 @@ function S() {
     }, [t]);
     let [n, l] = s.useState(!1);
     return (0, i.jsxs)(a.hjN, {
-        title: f.intl.string(f.t.y7SXYW),
-        className: N.settings,
+        title: N.intl.string(N.t.y7SXYW),
+        className: f.settings,
         children: [
             (0, i.jsx)(a.R94, {
                 type: a.R94.Types.DESCRIPTION,
-                className: N.description,
-                children: f.intl.string(f.t.TMukAA)
+                className: f.description,
+                children: N.intl.string(N.t.TMukAA)
             }),
             e.length > 0 &&
                 (0, i.jsx)('div', {
-                    className: N.credentialList,
+                    className: f.credentialList,
                     children: e.map((e) =>
                         (0, i.jsx)(
                             c.Z,
                             {
                                 avatar: null,
                                 name: e.name,
-                                className: N.credentialItem,
+                                className: f.credentialItem,
                                 onContextMenu: (t) => {
                                     (0, o.vq)(t, (t) =>
                                         (0, i.jsx)(T, {
@@ -274,13 +274,13 @@ function S() {
                                             })
                                         );
                                     },
-                                    'aria-label': f.intl.string(f.t['+nrTbG']),
-                                    innerClassName: N.credentialOptions,
+                                    'aria-label': N.intl.string(N.t['+nrTbG']),
+                                    innerClassName: f.credentialOptions,
                                     children: (0, i.jsx)(a.Huf, {
                                         size: 'md',
                                         color: 'currentColor',
-                                        className: N.__invalid_overflowIcon,
-                                        colorClass: N.__invalid_overflowIconFg,
+                                        className: f.__invalid_overflowIcon,
+                                        colorClass: f.__invalid_overflowIconFg,
                                         'aria-hidden': !0
                                     })
                                 })
@@ -305,7 +305,7 @@ function S() {
                                     );
                                 })
                                 .catch((e) => {
-                                    e.message !== f.intl.string(f.t.N2yb9f) && g.Z.captureException(e);
+                                    e.message !== N.intl.string(N.t.N2yb9f) && g.Z.captureException(e);
                                 })
                                 .finally(() => {
                                     l(!1);
@@ -314,7 +314,7 @@ function S() {
                     submitting: n,
                     disabled: !h.Ae,
                     size: a.zxk.Sizes.SMALL,
-                    children: f.intl.string(f.t.vrOCCg)
+                    children: N.intl.string(N.t.vrOCCg)
                 })
             })
         ]
