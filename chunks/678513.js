@@ -2,8 +2,8 @@ n.d(t, { Z: () => g }), n(47120);
 var i,
     l,
     r,
-    a = n(442837),
-    o = n(570140),
+    o = n(442837),
+    a = n(570140),
     s = n(445507);
 let c = {
         'valorant-user': s.qJ,
@@ -17,7 +17,7 @@ let c = {
 function p() {
     for (let e in ((d = null), u)) delete u[e];
 }
-class m extends (i = a.ZP.Store) {
+class m extends (i = o.ZP.Store) {
     getActiveUserSignUp() {
         return d;
     }
@@ -38,7 +38,7 @@ class m extends (i = a.ZP.Store) {
               writable: !0
           })
         : (m[l] = r);
-let g = new m(o.Z, {
+let g = new m(a.Z, {
     ENABLE_USER_SIGN_UP: function (e) {
         let { key: t } = e,
             n = c[t];

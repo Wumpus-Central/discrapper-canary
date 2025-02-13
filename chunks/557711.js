@@ -8,9 +8,9 @@ var i = n(120356),
     o = n(829820),
     u = n(202122);
 function c(e) {
-    let { activity: t, user: n, channelId: i, guildId: c, source: d, size: m, look: h, color: g, className: f, onAction: p } = e,
+    let { activity: t, user: n, channelId: i, guildId: c, source: d, size: m, look: f, color: h, className: g, onAction: p } = e,
         { tooltip: v, loading: S, disabled: I, onClick: x } = (0, o.Fe)(t, n, d, s.ZP.getNickname(c, i, n)),
-        T = () => {
+        E = () => {
             null == p || p(), x();
         };
     return (0, l.jsx)(a.ua7, {
@@ -19,11 +19,11 @@ function c(e) {
             let { onMouseEnter: n, onMouseLeave: i } = e;
             return (0, l.jsx)(a.zxk, {
                 size: m,
-                className: r()(u.syncButton, f),
+                className: r()(u.syncButton, g),
                 innerClassName: u.syncButtonInner,
-                look: h,
-                color: g,
-                onClick: T,
+                look: f,
+                color: h,
+                onClick: E,
                 onMouseEnter: n,
                 onMouseLeave: i,
                 disabled: I,

@@ -2,8 +2,8 @@ n.d(t, { i: () => v }), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(442837),
-    a = n(704215),
-    o = n(952265),
+    o = n(704215),
+    a = n(952265),
     s = n(481060),
     c = n(570140),
     d = n(243778),
@@ -18,17 +18,17 @@ function v() {
     let { hasLayers: e } = (0, r.cj)([h.Z], () => ({ hasLayers: h.Z.hasLayers() })),
         { onboardingModalOpenedPrior: t } = (0, r.cj)([g.Z], () => ({ onboardingModalOpenedPrior: g.Z.onboardingModalOpenedPrior })),
         { enabled: v } = (0, m.W)({ location: 'vc-announcement-modal' }),
-        C = v ? [a.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL] : [],
-        [x, Z] = (0, d.US)(C, void 0, !0),
-        I = (0, s.s9z)(s.JQI);
+        C = v ? [o.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL] : [],
+        [x, I] = (0, d.US)(C, void 0, !0),
+        Z = (0, s.s9z)(s.JQI);
     l.useEffect(() => {
         v &&
             !t &&
-            x === a.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL &&
+            x === o.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL &&
             !e &&
-            !I &&
+            !Z &&
             (c.Z.dispatch({ type: 'VIRTUAL_CURRENCY_ONBOARDING_MODAL_OPEN' }),
-            (0, o.ZD)(
+            (0, a.ZD)(
                 async () => {
                     let { AnnouncementModal: e } = await n.e('3073').then(n.bind(n, 520156));
                     return function (t) {
@@ -44,9 +44,9 @@ function v() {
                 },
                 {
                     onCloseCallback: () => {
-                        Z(f.L.UNKNOWN), (0, p.U9)();
+                        I(f.L.UNKNOWN), (0, p.U9)();
                     }
                 }
             ));
-    }, [x, v, t, Z, e, I]);
+    }, [x, v, t, I, e, Z]);
 }

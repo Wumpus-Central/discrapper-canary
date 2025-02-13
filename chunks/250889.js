@@ -1,15 +1,15 @@
 n.d(t, {
-    H: () => r,
-    Z: () => a
+    H: () => a,
+    Z: () => r
 });
-var i = n(726542),
-    l = n(973616);
-let r = 'xbox:';
-class a extends l.ZP {
+var l = n(726542),
+    i = n(973616);
+let a = 'xbox:';
+class r extends i.ZP {
     getIconURL() {
-        return i.Z.get('xbox').icon.lightPNG;
+        return l.Z.get('xbox').icon.lightPNG;
     }
     constructor(e) {
-        super(e), (this.id = ''.concat(r).concat(e.name)), (this.name = e.name);
+        super(e), (this.id = ''.concat(a).concat(e.name)), (this.name = e.name);
     }
 }

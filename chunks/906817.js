@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(997638),
-    a = n(362658),
-    o = n(216306),
+    o = n(362658),
+    a = n(216306),
     s = n(155409),
     c = n(540126),
     d = n(301342),
@@ -52,13 +52,13 @@ function _(e, t) {
 }
 let v = l.memo(function (e) {
     let { sectionIndex: t, guild: n, guildChannels: g, guildChannelsVersion: f, selectedChannelId: _, disableManageChannels: v } = e,
-        { isFavoritesPerk: C } = (0, a.z)('ChannelListSection'),
+        { isFavoritesPerk: C } = (0, o.z)('ChannelListSection'),
         x = l.useCallback(() => {
             let e = g.getCategoryFromSection(g.recentsSectionNumber);
             if (null == e) return;
             let t = null,
                 i = e.getShownChannelAndThreadIds();
-            null != _ && i.includes(_) && (t = (0, o.KY)(g)), (0, o.Uo)(n.id, i, t);
+            null != _ && i.includes(_) && (t = (0, a.KY)(g)), (0, a.Uo)(n.id, i, t);
         }, [n.id, _, g, f]);
     switch (t) {
         case c.wZ:
@@ -74,10 +74,10 @@ let v = l.memo(function (e) {
                 onDismiss: x
             });
         case g.voiceChannelsSectionNumber: {
-            var Z;
+            var I;
             let e = g.getCategoryFromSection(g.voiceChannelsSectionNumber);
             if (null == e || e.isEmpty()) return null;
-            let n = null === (Z = g.getChannelFromSectionRow(t, 0)) || void 0 === Z ? void 0 : Z.channel;
+            let n = null === (I = g.getChannelFromSectionRow(t, 0)) || void 0 === I ? void 0 : I.channel;
             return (0, i.jsxs)(l.Fragment, {
                 children: [
                     (0, i.jsx)('div', { className: m.sectionDivider }),

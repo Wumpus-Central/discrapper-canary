@@ -1,8 +1,8 @@
 n.d(t, { Z: () => D }), n(47120);
 var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    o = n.n(l),
+    l = n(192379),
+    r = n(120356),
+    o = n.n(r),
     a = n(399606),
     s = n(46973),
     d = n(481060),
@@ -27,11 +27,11 @@ var i = n(200651),
     N = n(1226),
     T = n(981631),
     w = n(388032),
-    k = n(359501);
-function A(e) {
+    A = n(359501);
+function k(e) {
     let { participant: t } = e,
         n = t.user.id,
-        l = (0, a.e7)(
+        r = (0, a.e7)(
             [Z.Z],
             () => {
                 let e = (0, f.Z)(t.type);
@@ -41,17 +41,17 @@ function A(e) {
         ),
         o = (0, a.e7)([S.default], () => S.default.getId()),
         { hasVideo: u } = (0, x.Z)(t, o),
-        h = l && u,
-        _ = r.useCallback(() => {
+        h = r && u,
+        _ = l.useCallback(() => {
             c.Z.toggleLocalMute(n, s.Yn.STREAM);
         }, [n]);
     return (0, i.jsx)(d.ua7, {
         text: h ? w.intl.string(w.t.YqAjX1) : w.intl.string(w.t['w4m94+']),
         children: (e) => {
-            let { onClick: n, ...r } = e;
+            let { onClick: n, ...l } = e;
             return (0, i.jsx)(d.P3F, {
-                ...r,
-                className: k.controlAction,
+                ...l,
+                className: A.controlAction,
                 onClick: (e) => {
                     e.stopPropagation(),
                         (0, O.Ws)(T.Odu.GO_LIVE, {
@@ -75,19 +75,19 @@ function A(e) {
         }
     });
 }
-function j(e, t, r) {
-    return (l) => {
+function j(e, t, l) {
+    return (r) => {
         (0, O.Ws)(T.Odu.GO_LIVE, {
             type: O.Qu.GO_LIVE,
             value: O.bk.SETTINGS_OPENED,
             userId: e.user.id
         }),
-            l.stopPropagation(),
-            null == r || r(),
-            (0, u.jW)(l, async () => {
-                let { default: r } = await n.e('5704').then(n.bind(n, 360429));
+            r.stopPropagation(),
+            null == l || l(),
+            (0, u.jW)(r, async () => {
+                let { default: l } = await n.e('5704').then(n.bind(n, 360429));
                 return (n) =>
-                    (0, i.jsx)(r, {
+                    (0, i.jsx)(l, {
                         ...n,
                         stream: e.stream,
                         exitFullscreen: () => {},
@@ -97,8 +97,8 @@ function j(e, t, r) {
     };
 }
 function R(e) {
-    let { hasActiveStream: t, participant: n, onEnablePin: r } = e,
-        l = (0, p.bp)(),
+    let { hasActiveStream: t, participant: n, onEnablePin: l } = e,
+        r = (0, p.bp)(),
         s = n.user,
         c = (0, a.e7)(
             [y.default],
@@ -111,16 +111,16 @@ function R(e) {
         u = t ? w.intl.string(w.t.tLxK4u) : w.intl.string(w.t.E5RDnJ);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)('div', { className: o()(k.controlBackground, { [k.controlsWithActiveStream]: t }) }),
+            (0, i.jsx)('div', { className: o()(A.controlBackground, { [A.controlsWithActiveStream]: t }) }),
             !t &&
                 (0, i.jsx)('div', {
-                    className: k.watchActionContainer,
+                    className: A.watchActionContainer,
                     children: (0, i.jsx)(d.ua7, {
                         text: u,
                         children: (e) =>
                             (0, i.jsxs)(d.P3F, {
                                 ...e,
-                                className: k.watchButton,
+                                className: A.watchButton,
                                 onClick: () => {
                                     var t;
                                     null === (t = e.onClick) || void 0 === t || t.call(e),
@@ -128,7 +128,7 @@ function R(e) {
                                             forceMultiple: !0,
                                             noFocus: !0
                                         }),
-                                        r(),
+                                        l(),
                                         (0, O.Ws)(T.Odu.GO_LIVE, {
                                             type: O.Qu.GO_LIVE,
                                             value: O.bk.ENABLED,
@@ -150,12 +150,12 @@ function R(e) {
                     })
                 }),
             (0, i.jsxs)('div', {
-                className: k.controls,
+                className: A.controls,
                 children: [
                     (0, i.jsx)('div', {
-                        className: k.controlUser,
+                        className: A.controlUser,
                         children: (0, i.jsxs)('div', {
-                            className: k.controlUserContainer,
+                            className: A.controlUserContainer,
                             children: [
                                 (0, i.jsx)(d.pzj, {
                                     size: 'xs',
@@ -181,20 +181,20 @@ function R(e) {
                         })
                     }),
                     (0, i.jsx)('div', {
-                        className: k.controlActions,
+                        className: A.controlActions,
                         children:
                             t &&
                             (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    (0, i.jsx)(A, { participant: n }),
+                                    (0, i.jsx)(k, { participant: n }),
                                     (0, i.jsx)(d.ua7, {
                                         text: w.intl.string(w.t['3D5yo6']),
                                         children: (e) => {
-                                            let { onClick: t, ...r } = e;
+                                            let { onClick: t, ...l } = e;
                                             return (0, i.jsx)(d.P3F, {
-                                                ...r,
-                                                className: k.controlAction,
-                                                onClick: j(n, l, t),
+                                                ...l,
+                                                className: A.controlAction,
+                                                onClick: j(n, r, t),
                                                 children: (0, i.jsx)(d.xhG, {
                                                     size: 'sm',
                                                     color: 'currentColor'
@@ -211,62 +211,62 @@ function R(e) {
     });
 }
 let L = new Set([T.jm8.ENDED, T.jm8.FAILED, T.jm8.PAUSED]),
-    D = r.memo(function (e) {
-        let { participant: t, width: n, locked: r, widgetId: l, pinned: s } = e,
+    D = l.memo(function (e) {
+        let { participant: t, width: n, locked: l, widgetId: r, pinned: s } = e,
             c = (0, a.e7)([C.Z], () => C.Z.getActiveStreamForUser(t.user.id, t.stream.guildId), [t.user.id, t.stream.guildId]),
             u = (0, p.bp)(),
             _ = null != c && L.has(c.state),
             f = null != c,
             m = (0, N.yA)(t.stream),
             x = (0, N.xN)(t.stream);
-        return (!f && r) || _
+        return (!f && l) || _
             ? null
             : (0, i.jsxs)('div', {
-                  className: k.tile,
+                  className: A.tile,
                   children: [
                       f &&
-                          !r &&
+                          !l &&
                           (0, i.jsx)(g.ZP, {
                               size: g.ZP.Sizes.SMALL,
-                              className: k.liveIndicator
+                              className: A.liveIndicator
                           }),
                       f
                           ? (0, i.jsx)('div', {
-                                className: k.streamTile,
+                                className: A.streamTile,
                                 children: (0, i.jsx)(d.kL8, {
                                     'aria-label': w.intl.formatToPlainString(w.t.gHPz3d, { streamerName: t.user.username }),
                                     onClick: () => {},
                                     onContextMenu: j(t, u),
-                                    className: k.streamTile,
+                                    className: A.streamTile,
                                     style: { transform: 'scale('.concat(m, ')') },
                                     children: (0, i.jsx)(I.Z, {
                                         participant: t,
                                         width: n,
                                         fit: null != x ? x : E.L.CONTAIN,
                                         inPopout: !0,
-                                        focused: !r,
+                                        focused: !l,
                                         paused: !1,
                                         selected: !1,
-                                        wrapperClassName: r ? k.streamTileWrapper : void 0,
+                                        wrapperClassName: l ? A.streamTileWrapper : void 0,
                                         inOverlayPopout: !0
                                     })
                                 })
                             })
                           : (0, i.jsx)('div', {
-                                className: k.streamPreview,
+                                className: A.streamPreview,
                                 children: (0, i.jsx)(v.Z, {
                                     noText: !0,
-                                    className: o()(k.absoluteFill),
+                                    className: o()(A.absoluteFill),
                                     stream: t.stream
                                 })
                             }),
-                      r
+                      l
                           ? null
                           : (0, i.jsx)(R, {
                                 participant: t,
                                 hasActiveStream: f,
                                 onEnablePin: () => {
-                                    s || (0, h.xh)(l);
+                                    s || (0, h.xh)(r);
                                 }
                             })
                   ]

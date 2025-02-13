@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => h });
 var l,
     i,
     r = n(200651),
@@ -12,7 +12,7 @@ let m = {
     BLOCK: d.block,
     INLINE: d.inline
 };
-class h extends (i = a.PureComponent) {
+class f extends (i = a.PureComponent) {
     render() {
         let { children: e, className: t, textClassName: n, type: l = m.BLOCK, style: i } = this.props;
         return (0, r.jsxs)('div', {
@@ -35,12 +35,12 @@ class h extends (i = a.PureComponent) {
         });
     }
 }
-(l = 'Types') in h
-    ? Object.defineProperty(h, l, {
+(l = 'Types') in f
+    ? Object.defineProperty(f, l, {
           value: m,
           enumerable: !0,
           configurable: !0,
           writable: !0
       })
-    : (h[l] = m);
-let g = h;
+    : (f[l] = m);
+let h = f;

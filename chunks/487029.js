@@ -1,129 +1,129 @@
-n.d(t, { Z: () => T }), n(47120), n(653041);
-var i = n(200651),
-    l = n(192379),
-    o = n(990547),
-    s = n(442837),
-    a = n(100527),
-    r = n(906732),
+n.d(t, { Z: () => E }), n(47120), n(653041);
+var l = n(200651),
+    i = n(192379),
+    a = n(990547),
+    r = n(442837),
+    o = n(100527),
+    s = n(906732),
     c = n(213609),
     u = n(675478),
     d = n(19780),
     h = n(709054),
     f = n(208049),
-    N = n(763296),
-    g = n(242291),
-    x = n(174470),
-    p = n(549771),
-    C = n(964398),
-    I = n(409673),
-    v = n(710111),
-    m = n(279288);
-function T(e) {
-    let { guildId: t, channel: n, width: T, height: E, keepOpen: O, interactive: _ = !0, analyticsSource: b, onClose: y } = e,
-        S = (function (e) {
-            let [t, n] = (0, s.Wu)([N.Z], () => [N.Z.getSounds(), N.Z.getFavorites()]);
-            return l.useMemo(() => {
-                let i = [],
-                    l = [...e, v.X8],
-                    o = (e, l) => {
-                        var o, s;
-                        for (let a of null !== (s = null === (o = t.get(e)) || void 0 === o ? void 0 : o.sort((e, t) => h.default.compare(e.soundId, t.soundId))) && void 0 !== s ? s : []) {
-                            let e = n.has(a.soundId);
-                            ((e && l) || (!e && !l)) && a.available && i.push(a);
+    g = n(763296),
+    p = n(242291),
+    N = n(174470),
+    v = n(549771),
+    x = n(964398),
+    m = n(409673),
+    C = n(710111),
+    I = n(279288);
+function E(e) {
+    let { guildId: t, channel: n, width: E, height: T, keepOpen: y, interactive: Z = !0, analyticsSource: O, onClose: b } = e,
+        _ = (function (e) {
+            let [t, n] = (0, r.Wu)([g.Z], () => [g.Z.getSounds(), g.Z.getFavorites()]);
+            return i.useMemo(() => {
+                let l = [],
+                    i = [...e, C.X8],
+                    a = (e, i) => {
+                        var a, r;
+                        for (let o of null !== (r = null === (a = t.get(e)) || void 0 === a ? void 0 : a.sort((e, t) => h.default.compare(e.soundId, t.soundId))) && void 0 !== r ? r : []) {
+                            let e = n.has(o.soundId);
+                            ((e && i) || (!e && !i)) && o.available && l.push(o);
                         }
                     };
-                return l.forEach((e) => o(e, !0)), l.forEach((e) => o(e, !1)), i;
+                return i.forEach((e) => a(e, !0)), i.forEach((e) => a(e, !1)), l;
             }, [t, n, e]);
-        })((0, p.h)(n, !0)),
-        Z = (0, x.j)(),
-        R = l.useRef(null),
-        [j, A] = l.useState(void 0),
-        P = (0, s.e7)([d.Z], () => d.Z.getMediaSessionId()),
-        { analyticsLocations: w } = (0, r.ZP)(a.Z.SOUNDBOARD_WHEEL),
-        k = l.useCallback(
+        })((0, v.h)(n, !0)),
+        S = (0, N.j)(),
+        w = i.useRef(null),
+        [A, P] = i.useState(void 0),
+        j = (0, r.e7)([d.Z], () => d.Z.getMediaSessionId()),
+        { analyticsLocations: R } = (0, s.ZP)(o.Z.SOUNDBOARD_WHEEL),
+        k = i.useCallback(
             (e) => {
-                (0, g.GN)(e, n.id, w), y();
+                (0, p.GN)(e, n.id, R), b();
             },
-            [w, n.id, y]
+            [R, n.id, b]
         );
-    l.useEffect(() => {
+    i.useEffect(() => {
         f.w(), u.DZ.loadIfNecessary();
     }, []),
-        l.useEffect(() => {
-            0 === S.length && 0 === Z.length && y();
-        }, [S.length, Z, y]),
-        l.useEffect(
+        i.useEffect(() => {
+            0 === _.length && 0 === S.length && b();
+        }, [_.length, S, b]),
+        i.useEffect(
             () => () => {
-                let e = R.current;
-                O || null == e || k(e);
+                let e = w.current;
+                y || null == e || k(e);
             },
-            [O, k]
+            [y, k]
         ),
         (0, c.Z)(
             {
-                type: o.ImpressionTypes.POPOUT,
-                name: o.ImpressionNames.SOUNDBOARD_POPOUT,
+                type: a.ImpressionTypes.POPOUT,
+                name: a.ImpressionNames.SOUNDBOARD_POPOUT,
                 properties: {
-                    source: b,
+                    source: O,
                     guild_id: t,
-                    media_session_id: P
+                    media_session_id: j
                 }
             },
-            { disableTrack: !_ }
+            { disableTrack: !Z }
         );
-    let D = l.useCallback((e) => {
-            (R.current = e), A(null == e ? void 0 : e.soundId);
+    let D = i.useCallback((e) => {
+            (w.current = e), P(null == e ? void 0 : e.soundId);
         }, []),
-        M = l.useCallback(
+        F = i.useCallback(
             (e) => {
                 if (null == e) {
                     D(null);
                     return;
                 }
-                let t = S[e];
+                let t = _[e];
                 null != t && D(t);
             },
-            [D, S]
+            [D, _]
         ),
-        F = l.useCallback(
+        M = i.useCallback(
             (e) => {
                 if (null == e) return;
-                let t = S[e];
+                let t = _[e];
                 null != t && k(t);
             },
-            [S, k]
+            [_, k]
         ),
-        B = l.useMemo(
+        B = i.useMemo(
             () =>
-                S.map((e) =>
-                    (0, i.jsx)(
-                        I.ZP,
+                _.map((e) =>
+                    (0, l.jsx)(
+                        m.ZP,
                         {
-                            interactive: _,
-                            className: m.soundButton,
+                            interactive: Z,
+                            className: I.soundButton,
                             sound: e,
-                            focused: j === e.soundId,
+                            focused: A === e.soundId,
                             channel: n
                         },
                         e.soundId
                     )
                 ),
-            [j, n, _, S]
+            [A, n, Z, _]
         );
-    return 0 === S.length
+    return 0 === _.length
         ? null
-        : (0, i.jsx)(r.Gt, {
-              value: w,
-              children: (0, i.jsx)(C.Z, {
-                  wheelWidth: T,
-                  wheelHeight: E,
+        : (0, l.jsx)(s.Gt, {
+              value: R,
+              children: (0, l.jsx)(x.Z, {
+                  wheelWidth: E,
+                  wheelHeight: T,
                   itemWidth: 96,
                   itemHeight: 52,
-                  showDeadZoneIndicator: !O,
-                  activeItem: j,
-                  onItemSelect: M,
-                  onItemAction: F,
-                  interactive: _,
+                  showDeadZoneIndicator: !y,
+                  activeItem: A,
+                  onItemSelect: F,
+                  onItemAction: M,
+                  interactive: Z,
                   children: B
               })
           });

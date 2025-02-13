@@ -1,10 +1,10 @@
-n.d(t, { Z: () => eo }), n(47120);
+n.d(t, { Z: () => ea }), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    o = n(512722),
-    s = n.n(o),
+    o = n.n(r),
+    a = n(512722),
+    s = n.n(a),
     c = n(442837),
     d = n(481060),
     u = n(570140),
@@ -17,19 +17,19 @@ var i = n(200651),
     v = n(214629),
     C = n(566620),
     x = n(317381),
-    Z = n(736409),
-    I = n(835473),
+    I = n(736409),
+    Z = n(835473),
     b = n(413523),
     S = n(933557),
     N = n(194082),
     E = n(550532),
     j = n(436774),
     y = n(594190),
-    A = n(925329),
-    T = n(102172),
+    T = n(925329),
+    A = n(102172),
     P = n(74299),
-    w = n(914923),
-    R = n(165393),
+    R = n(914923),
+    w = n(165393),
     L = n(989941),
     M = n(690221),
     D = n(231664),
@@ -59,7 +59,7 @@ let er = (0, m.Z)(function (e) {
     let { message: t } = e;
     return (0, i.jsx)(X.Z, { children: t });
 });
-class ea extends l.PureComponent {
+class eo extends l.PureComponent {
     renderSparkles() {
         let { useReducedMotion: e } = this.props;
         async function t() {
@@ -89,12 +89,12 @@ class ea extends l.PureComponent {
     }
     renderScreenshare() {
         let { isStreaming: e, streamMetadata: t, streamQualityIndicator: n } = this.props,
-            { title: l, sanitizedTitle: r } = (0, w.Z)(t);
+            { title: l, sanitizedTitle: r } = (0, R.Z)(t);
         return (0, i.jsxs)('div', {
             className: el.gameWrapper,
             children: [
                 e
-                    ? (0, i.jsx)(R.Z, { title: r })
+                    ? (0, i.jsx)(w.Z, { title: r })
                     : (0, i.jsx)(N.ZP, {
                           look: N.ZP.Looks.GRAY,
                           size: N.ZP.Sizes.SMALL,
@@ -126,10 +126,10 @@ class ea extends l.PureComponent {
     }
     renderEmbeddedActivity() {
         let e, t;
-        let { application: n, embeddedActivity: l, channel: r, channelName: o, guildForConnectedChannel: s } = this.props;
+        let { application: n, embeddedActivity: l, channel: r, channelName: a, guildForConnectedChannel: s } = this.props;
         if (null == l || null == r || null == n) return null;
         let c = { start: l.connectedSince },
-            h = o;
+            h = a;
         null != s ? ((e = en.Z5c.CHANNEL(s.id, r.id)), (h = ''.concat(h, ' / ').concat(s.name))) : (e = en.Z5c.CHANNEL(en.ME, r.id));
         let p = (0, i.jsx)(M.Z, {
             href: e,
@@ -151,10 +151,10 @@ class ea extends l.PureComponent {
               });
         let m = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(A.Z, {
+                (0, i.jsx)(T.Z, {
                     className: el.gameIcon,
                     game: n,
-                    size: A.Z.Sizes.SMALL
+                    size: T.Z.Sizes.SMALL
                 }),
                 (0, i.jsxs)('div', {
                     className: el.info,
@@ -164,7 +164,7 @@ class ea extends l.PureComponent {
         });
         return (0, _.R)()
             ? (0, i.jsx)(d.P3F, {
-                  className: a()(el.gameWrapper, el.clickableGameWrapper),
+                  className: o()(el.gameWrapper, el.clickableGameWrapper),
                   onClick: () => {
                       u.Z.dispatch({ type: 'ACTIVITY_POPOUT_WINDOW_OPEN' });
                   },
@@ -176,13 +176,13 @@ class ea extends l.PureComponent {
               });
     }
     render() {
-        let { canGoLive: e, embeddedActivity: t, runningGame: n, isStreaming: l, streamMetadata: r, application: o, activity: s, className: c, isForceShowSharingPopout: d, setIsForceShowSharingPopout: u } = this.props;
-        return l || (((0, ee.y)(o, s, t) || e) && (null != n || null != t))
-            ? (0, i.jsx)(Z.j, {
+        let { canGoLive: e, embeddedActivity: t, runningGame: n, isStreaming: l, streamMetadata: r, application: a, activity: s, className: c, isForceShowSharingPopout: d, setIsForceShowSharingPopout: u } = this.props;
+        return l || (((0, ee.y)(a, s, t) || e) && (null != n || null != t))
+            ? (0, i.jsx)(I.j, {
                   isForceShowSharingPopout: d,
                   setIsForceShowSharingPopout: u,
                   children: (0, i.jsx)('div', {
-                      className: a()(el.panel, c),
+                      className: o()(el.panel, c),
                       children: (0, i.jsxs)('div', {
                           className: el.body,
                           children: [null == n || (l && (null == r ? void 0 : r.pid) == null) ? (null != t ? this.renderEmbeddedActivity() : this.renderScreenshare()) : this.renderGame(), this.renderActions()]
@@ -210,11 +210,11 @@ class ea extends l.PureComponent {
                 : (this[t] = n);
     }
 }
-let eo = (0, g.Z)(function (e) {
+let ea = (0, g.Z)(function (e) {
     var t;
     let { guildId: n, ...r } = e,
-        a = (0, c.e7)([O.default], () => O.default.getId()),
-        o = (0, c.e7)([y.ZP, J.Z], () => (0, L.Z)(y.ZP, J.Z)),
+        o = (0, c.e7)([O.default], () => O.default.getId()),
+        a = (0, c.e7)([y.ZP, J.Z], () => (0, L.Z)(y.ZP, J.Z)),
         s = (0, c.e7)([Y.Z, U.Z], () => U.Z.getChannel(Y.Z.getVoiceChannelId())),
         d = (0, c.e7)([x.ZP], () => x.ZP.getConnectedActivityChannelId()),
         u = (0, c.e7)([U.Z], () => U.Z.getChannel(d)),
@@ -222,30 +222,30 @@ let eo = (0, g.Z)(function (e) {
         [p, m] = (0, c.Wu)([B.Z], () => [B.Z.getCurrentUserActiveStream(), B.Z.getStreamerActiveStreamMetadata()]),
         g = (0, c.e7)([f.Z], () => f.Z.useReducedMotion),
         C = (0, c.e7)([x.ZP], () => (null != u ? x.ZP.getSelfEmbeddedActivityForChannel(u.id) : null)),
-        Z = (0, c.e7)([F.Z, z.Z, V.ZP], () => (null != s ? T.JL(s, F.Z, z.Z, !1) : null != n && T.h_(V.ZP.getChannels(n), F.Z, z.Z).length > 0)),
-        [b] = (0, I.Z)([null !== (t = null != m && null != m.id ? m.id : null != o && null != o.id ? o.id : null != C ? C.applicationId : void 0) && void 0 !== t ? t : '']),
+        I = (0, c.e7)([F.Z, z.Z, V.ZP], () => (null != s ? A.JL(s, F.Z, z.Z, !1) : null != n && A.h_(V.ZP.getChannels(n), F.Z, z.Z).length > 0)),
+        [b] = (0, Z.Z)([null !== (t = null != m && null != m.id ? m.id : null != a && null != a.id ? a.id : null != C ? C.applicationId : void 0) && void 0 !== t ? t : '']),
         N = (0, c.e7)([E.Z], () => E.Z.getFakeGameData()),
         j = (0, c.e7)([x.ZP], () => x.ZP.getCurrentEmbeddedActivity()),
-        A = (0, v.Z0)() && null != j && (0, _.R)(),
-        w = (0, c.e7)([H.Z], () => (0, P.Z)(H.Z) && (0, K.isWindows)()),
-        R = (0, c.e7)([W.Z], () => (null != a ? W.Z.findActivity(a, (e) => e.type === en.IIU.PLAYING) : null)),
-        M = null != p && p.ownerId === a && p.state !== en.jm8.ENDED,
+        T = (0, v.Z0)() && null != j && (0, _.R)(),
+        R = (0, c.e7)([H.Z], () => (0, P.Z)(H.Z) && (0, K.isWindows)()),
+        w = (0, c.e7)([W.Z], () => (null != o ? W.Z.findActivity(o, (e) => e.type === en.IIU.PLAYING) : null)),
+        M = null != p && p.ownerId === o && p.state !== en.jm8.ENDED,
         G = (0, c.e7)([Q.default, q.Z], () => (null != u ? (0, S.F6)(u, Q.default, q.Z) : void 0)),
         k = (0, D.Z)(),
         [X, $] = l.useState(!1);
-    return (0, i.jsx)(ea, {
+    return (0, i.jsx)(eo, {
         ...r,
         guildId: n,
-        canGoLive: w || A || void 0 !== N,
-        activity: R,
+        canGoLive: R || T || void 0 !== N,
+        activity: w,
         embeddedActivity: C,
-        userId: a,
-        runningGame: null != N ? N : o,
+        userId: o,
+        runningGame: null != N ? N : a,
         application: b,
         useReducedMotion: g,
         isStreaming: M,
         channel: u,
-        canStream: Z,
+        canStream: I,
         stream: p,
         streamMetadata: m,
         channelName: G,

@@ -1,6 +1,6 @@
 n.d(t, {
     bb: () => r,
-    lN: () => a
+    lN: () => o
 });
 var i = n(818083),
     l = n(987338);
@@ -18,7 +18,7 @@ let r = (0, i.B)({
         }
     ]
 });
-function a(e) {
+function o(e) {
     let { alwaysShowDirectory: t } = r.useExperiment({ location: 'useShowBrowseChannelsExperiment' });
     return t || !e;
 }

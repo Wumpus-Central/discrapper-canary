@@ -1,12 +1,12 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => o });
 var i = n(200651);
 n(192379);
 var l = n(377171),
     r = n(325767);
-function a(e) {
-    let { width: t = 24, height: n = 24, ...a } = e;
+function o(e) {
+    let { width: t = 24, height: n = 24, ...o } = e;
     return (0, i.jsxs)('svg', {
-        ...(0, r.Z)(a),
+        ...(0, r.Z)(o),
         width: t,
         height: n,
         viewBox: '0 0 24 24',

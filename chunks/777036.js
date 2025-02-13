@@ -1,7 +1,7 @@
 n.d(t, { Z: () => f });
 var i = n(26151),
-    r = n(13245),
-    l = n(287734),
+    l = n(13245),
+    r = n(287734),
     o = n(43267),
     a = n(933557),
     s = n(699516),
@@ -36,10 +36,10 @@ function f(e) {
             if ((v('join'), _.TPd.CALLABLE.has(e.type))) i.Z.call(e.id, !1, !1);
             else {
                 if (e.type !== _.d4z.GUILD_VOICE) return;
-                l.default.selectVoiceChannel(e.id);
+                r.default.selectVoiceChannel(e.id);
             }
-            r.Z.updateNotificationStatus(n),
-                r.Z.track(_.rMx.VOICE_CHANNEL_SELECTED, {
+            l.Z.updateNotificationStatus(n),
+                l.Z.track(_.rMx.VOICE_CHANNEL_SELECTED, {
                     location: 'Overlay Notificaiton',
                     guild_id: e.guild_id,
                     channel_id: e.id,

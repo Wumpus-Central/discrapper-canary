@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(411104), n(47120);
+n.d(t, { Z: () => g }), n(411104), n(47120);
 var l,
     i,
     r = n(200651),
@@ -21,14 +21,14 @@ function c(e, t, n) {
 }
 var d = (((l = d || {}).ACTIVITY_FEED = 'ACTIVITY_FEED'), (l.ACTIVITY_FEED_NEW = 'ACTIVITY_FEED_NEW'), (l.USER_ACTIVITY = 'USER_ACTIVITY'), (l.GAME_LIBRARY_TIME_PLAYED = 'GAME_LIBRARY_TIME_PLAYED'), (l.GAME_LIBRARY_LAST_PLAYED = 'GAME_LIBRARY_LAST_PLAYED'), l),
     m = (((i = m || {}).START = 'START'), (i.END = 'END'), (i.TIME = 'TIME'), i);
-let h = (e) => (t, n) =>
+let f = (e) => (t, n) =>
         null == n
             ? ''
             : u.intl.format(e(), {
                   time: t,
                   ...n
               }),
-    g = {
+    h = {
         ACTIVITY_FEED: {
             START: {
                 [s.J6.SECONDS]: () => u.intl.string(u.t.ahzZr6),
@@ -48,10 +48,10 @@ let h = (e) => (t, n) =>
         },
         ACTIVITY_FEED_NEW: {
             START: {
-                [s.J6.SECONDS]: h(() => u.t.Bf3PRU),
-                [s.J6.MINUTES]: h(() => u.t['A9P+dX']),
-                [s.J6.HOURS]: h(() => u.t.KwVzfn),
-                [s.J6.DAYS]: h(() => u.t.hbUpBA)
+                [s.J6.SECONDS]: f(() => u.t.Bf3PRU),
+                [s.J6.MINUTES]: f(() => u.t['A9P+dX']),
+                [s.J6.HOURS]: f(() => u.t.KwVzfn),
+                [s.J6.DAYS]: f(() => u.t.hbUpBA)
             },
             END: {
                 [s.J6.SECONDS]: (e) => u.intl.formatToPlainString(u.t.C3MTOD, { seconds: e }),
@@ -98,7 +98,7 @@ let h = (e) => (t, n) =>
             }
         }
     };
-function f(e) {
+function g(e) {
     var t, n;
     return (
         (n = class extends (t = a.PureComponent) {
@@ -122,7 +122,7 @@ function f(e) {
             getTimeUnit(e, t, n) {
                 let l = (0, s.jU)(e, (e) =>
                     (function (e, t, n) {
-                        let l = g[n];
+                        let l = h[n];
                         if (null != l) {
                             let n = l[t];
                             if (null != n) return null != n[e];
@@ -143,7 +143,7 @@ function f(e) {
                     o = this.getType();
                 if (null == o) return null;
                 let u = this.getTimeUnit(a, t, o),
-                    c = g[t][o];
+                    c = h[t][o];
                 if (null == c) return null;
                 let d = c[u],
                     m = Math.floor((0, s.A3)(a, u));

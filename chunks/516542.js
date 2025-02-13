@@ -1,7 +1,7 @@
 n.d(t, { Z: () => g }), n(47120);
 var i = n(200651),
-    r = n(192379),
-    l = n(904245),
+    l = n(192379),
+    r = n(904245),
     o = n(13245),
     a = n(655687),
     s = n(541716),
@@ -16,26 +16,26 @@ function g(e) {
     let { id: t, channel: n, onSend: g } = e,
         m = (0, h.Z)(),
         { placeholder: v, accessibilityLabel: E } = (0, a.Z)({ channel: n }),
-        [I, x] = r.useState(() => (0, d.H2)()),
+        [I, x] = l.useState(() => (0, d.H2)()),
         { textValue: C, richValue: S } = I,
-        [Z, y] = r.useState(!1),
-        b = r.useCallback(() => y(!0), []),
-        O = r.useCallback(() => y(!1), []),
-        N = r.useCallback((e, t, n) => {
+        [Z, y] = l.useState(!1),
+        b = l.useCallback(() => y(!0), []),
+        O = l.useCallback(() => y(!1), []),
+        N = l.useCallback((e, t, n) => {
             x({
                 textValue: t,
                 richValue: n
             });
         }, []),
-        T = r.useCallback(
+        T = l.useCallback(
             (e) => {
                 'Escape' === e.key && o.Z.updateNotificationStatus(t, p._1z.ACTIVE);
             },
             [t]
         ),
-        w = r.useCallback(
+        w = l.useCallback(
             () => (
-                C.length > m || (l.Z.sendMessage(n.id, u.ZP.parse(n, C), !1), o.Z.setInputLocked(!0, (0, _.QF)()), o.Z.updateNotificationStatus(t, p._1z.DISMISSED), null == g || g(C)),
+                C.length > m || (r.Z.sendMessage(n.id, u.ZP.parse(n, C), !1), o.Z.setInputLocked(!0, (0, _.QF)()), o.Z.updateNotificationStatus(t, p._1z.DISMISSED), null == g || g(C)),
                 Promise.resolve({
                     shouldClear: !1,
                     shouldRefocus: !0

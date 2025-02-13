@@ -2,8 +2,8 @@ n.d(t, { Z: () => x }), n(47120);
 var i,
     l,
     r,
-    a = n(442837),
-    o = n(570140),
+    o = n(442837),
+    a = n(570140),
     s = n(131704),
     c = n(251625),
     d = n(592125),
@@ -24,7 +24,7 @@ function v(e) {
         n = d.Z.getChannel(t);
     return !!(null != n && (0, s.hv)(n.type)) && f();
 }
-class C extends (i = a.ZP.Store) {
+class C extends (i = o.ZP.Store) {
     initialize() {
         this.waitFor(p.Z, d.Z, h.Z, u.ZP);
     }
@@ -41,7 +41,7 @@ class C extends (i = a.ZP.Store) {
               writable: !0
           })
         : (C[l] = r);
-let x = new C(o.Z, {
+let x = new C(a.Z, {
     CONNECTION_OPEN: _,
     OVERLAY_INITIALIZE: _,
     MESSAGE_CREATE: v,

@@ -1,9 +1,9 @@
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => R });
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    o = n(91192),
+    o = n.n(r),
+    a = n(91192),
     s = n(442837),
     c = n(481060),
     d = n(493683),
@@ -17,23 +17,23 @@ var i = n(200651),
     v = n(979651),
     C = n(938475),
     x = n(714794),
-    Z = n(876548),
-    I = n(25601),
+    I = n(876548),
+    Z = n(25601),
     b = n(207055),
     S = n(981631),
     N = n(124368),
     E = n(388032),
     j = n(467678),
     y = n(703545),
-    A = n(193873);
-function T(e) {
+    T = n(193873);
+function A(e) {
     let { style: t, withGuildIcon: n, inverted: l } = e,
         r = {
-            className: a()(A.spine, { [A.spineWithGuildIcon]: n }, { [A.invertedSpine]: l }),
+            className: o()(T.spine, { [T.spineWithGuildIcon]: n }, { [T.invertedSpine]: l }),
             style: t
         },
-        { density: o } = (0, c.TCT)();
-    return 'cozy' === o
+        { density: a } = (0, c.TCT)();
+    return 'cozy' === a
         ? (0, i.jsxs)('svg', {
               ...r,
               width: '10',
@@ -74,7 +74,7 @@ function T(e) {
 function P(e) {
     let { style: t, withGuildIcon: n } = e;
     return (0, i.jsx)('svg', {
-        className: a()(A.spine, { [A.spineWithGuildIcon]: n }),
+        className: o()(T.spine, { [T.spineWithGuildIcon]: n }),
         width: '12',
         height: '11',
         viewBox: '0 0 12 11',
@@ -87,8 +87,8 @@ function P(e) {
         })
     });
 }
-let w = l.memo(function (e) {
-    let { thread: t, isSelectedChannel: r, isSelectedVoice: A, isLast: w, withGuildIcon: R } = e,
+let R = l.memo(function (e) {
+    let { thread: t, isSelectedChannel: r, isSelectedVoice: T, isLast: R, withGuildIcon: w } = e,
         L = (0, s.e7)([C.ZP], () => C.ZP.getVoiceStatesForChannel(t), [t]),
         M = (0, s.e7)([v.Z], () => v.Z.hasVideo(t.id)),
         {
@@ -126,7 +126,7 @@ let w = l.memo(function (e) {
             [t.id]
         ),
         F = null == L ? 0 : L.length,
-        { role: H, ...z } = (0, o.JA)(t.id),
+        { role: H, ...z } = (0, a.JA)(t.id),
         W = l.useRef(null),
         q =
             G > 0
@@ -137,16 +137,16 @@ let w = l.memo(function (e) {
                 : D
                   ? E.intl.formatToPlainString(E.t.YlVvmZ, { channelName: t.name })
                   : E.intl.formatToPlainString(E.t['0nZpiI'], { channelName: t.name }),
-        Y = (0, p.Q3)('GuildSidebarThreadListEntry') ? T : P;
+        Y = (0, p.Q3)('GuildSidebarThreadListEntry') ? A : P;
     return (0, i.jsxs)('li', {
         role: H,
-        className: a()(j.containerDefault, { [j.selected]: r }),
+        className: o()(j.containerDefault, { [j.selected]: r }),
         children: [
-            (0, i.jsx)(Y, { withGuildIcon: R }),
-            w
+            (0, i.jsx)(Y, { withGuildIcon: w }),
+            R
                 ? null
                 : (0, i.jsx)(Y, {
-                      withGuildIcon: R,
+                      withGuildIcon: w,
                       inverted: !0,
                       style: { transform: 'rotateX(180deg) translateY(-9px)' }
                   }),
@@ -159,16 +159,16 @@ let w = l.memo(function (e) {
                     right: 4
                 },
                 children: (0, i.jsxs)('div', {
-                    className: a()(j.iconVisibility, y.wrapper, y.typeThread, {
+                    className: o()(j.iconVisibility, y.wrapper, y.typeThread, {
                         [y.modeSelected]: r,
                         [y.modeMuted]: !r && B,
                         [y.modeUnreadImportant]: !B && !r && D,
-                        [y.withGuildIcon]: R
+                        [y.withGuildIcon]: w
                     }),
                     onMouseDown: U,
                     onContextMenu: V,
                     children: [
-                        !D || B || r ? null : (0, i.jsx)('div', { className: a()(y.unread, y.unreadImportant) }),
+                        !D || B || r ? null : (0, i.jsx)('div', { className: o()(y.unread, y.unreadImportant) }),
                         (0, i.jsx)(c.P3F, {
                             ...z,
                             innerRef: W,
@@ -177,7 +177,7 @@ let w = l.memo(function (e) {
                             'aria-label': q,
                             focusProps: { enabled: !1 },
                             children: (0, i.jsxs)('div', {
-                                className: a()(y.linkTop, y.__invalid_threadMainContent),
+                                className: o()(y.linkTop, y.__invalid_threadMainContent),
                                 children: [
                                     (0, i.jsx)(h.Z, {
                                         className: y.name,
@@ -188,14 +188,14 @@ let w = l.memo(function (e) {
                                         className: y.children,
                                         children: [
                                             F > 0 && t.userLimit > 0
-                                                ? (0, i.jsx)(Z.Z, {
+                                                ? (0, i.jsx)(I.Z, {
                                                       userCount: F,
                                                       video: M,
                                                       channel: t
                                                   })
                                                 : null,
                                             (0, x.Z)(G)
-                                                ? (0, i.jsx)(I.Z, {
+                                                ? (0, i.jsx)(Z.Z, {
                                                       mentionsCount: G,
                                                       isMentionLowImportance: k
                                                   })
@@ -210,7 +210,7 @@ let w = l.memo(function (e) {
             }),
             (0, i.jsx)(b.Z, {
                 channel: t,
-                collapsed: !A,
+                collapsed: !T,
                 collapsedMax: 6,
                 voiceStates: L,
                 location: S.Sbl.GUILD_CHANNEL_LIST

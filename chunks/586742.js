@@ -1,8 +1,8 @@
-n.d(t, { Z: () => k });
+n.d(t, { Z: () => A });
 var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    o = n.n(l),
+    l = n(192379),
+    r = n(120356),
+    o = n.n(r),
     a = n(442837),
     s = n(481060),
     d = n(239091),
@@ -27,31 +27,31 @@ var i = n(200651),
     N = n(499484);
 function T(e) {
     var t;
-    let { participant: n, channel: r, context: l } = e,
+    let { participant: n, channel: l, context: r } = e,
         o = null === (t = n.user) || void 0 === t ? void 0 : t.id;
-    return (0, a.e7)([v.Z], () => null != n.user && null != l && null != r && v.Z.isLocalVideoDisabled(o, l), [o, n.user, l, r]) ? null : (0, i.jsx)(f.ZP, { ...e });
+    return (0, a.e7)([v.Z], () => null != n.user && null != r && null != l && v.Z.isLocalVideoDisabled(o, r), [o, n.user, r, l]) ? null : (0, i.jsx)(f.ZP, { ...e });
 }
 function w(e) {
-    let { context: t = b.Yn.DEFAULT, participants: l, locked: a, widget: c, channel: u, width: h, height: _, containerRef: f } = e,
-        g = (e, r) => {
-            let l = e.user;
+    let { context: t = b.Yn.DEFAULT, participants: r, locked: a, widget: c, channel: u, width: h, height: _, containerRef: f } = e,
+        g = (e, l) => {
+            let r = e.user;
             (0, x.Ws)(y.Odu.VIDEO, {
                 type: x.Qu.CAMERA,
                 value: x.bk.SETTINGS_OPENED,
-                userId: null == l ? void 0 : l.id
+                userId: null == r ? void 0 : r.id
             }),
-                (0, d.jW)(r, async () => {
+                (0, d.jW)(l, async () => {
                     let { default: e } = await Promise.all([n.e('79695'), n.e('6524')]).then(n.bind(n, 27900));
                     return (n) =>
                         (0, i.jsx)(e, {
                             ...n,
-                            user: l,
+                            user: r,
                             mediaEngineContext: t
                         });
                 });
         },
-        m = l.length > 0 && null != t && null != u && (!a || c.pinned);
-    r.useEffect(() => {
+        m = r.length > 0 && null != t && null != u && (!a || c.pinned);
+    l.useEffect(() => {
         (0, C.m3)(
             {
                 locked: a,
@@ -63,7 +63,7 @@ function w(e) {
         );
     }, [a, c, m]);
     let v = 'boolean' != typeof c.meta.horizontal || c.meta.horizontal;
-    return 0 !== l.length || a
+    return 0 !== r.length || a
         ? null == u
             ? null
             : (0, i.jsx)('div', {
@@ -74,7 +74,7 @@ function w(e) {
                       [N.hidden]: !m && a
                   }),
                   style: { opacity: c.opacity },
-                  children: l.map((e) =>
+                  children: r.map((e) =>
                       (0, i.jsx)(
                           T,
                           {
@@ -111,25 +111,25 @@ function w(e) {
                 })
             });
 }
-function k(e) {
+function A(e) {
     let t = (0, a.e7)([E.Z, m.Z], () => m.Z.getChannel(E.Z.getVoiceChannelId())),
         n = (0, _.ZP)(t),
-        l = null == t ? void 0 : t.id,
-        o = (0, a.Wu)([h.Z], () => (null != l ? h.Z.getVideoParticipants(l) : [])),
-        s = (0, a.e7)([h.Z], () => (null != l ? h.Z.getParticipantsVersion(l) : 0)),
+        r = null == t ? void 0 : t.id,
+        o = (0, a.Wu)([h.Z], () => (null != r ? h.Z.getVideoParticipants(r) : [])),
+        s = (0, a.e7)([h.Z], () => (null != r ? h.Z.getParticipantsVersion(r) : 0)),
         d = (0, a.Wu)(
             [h.Z],
             () =>
-                null == l
+                null == r
                     ? []
-                    : h.Z.getVideoParticipants(l).map((e) => {
+                    : h.Z.getVideoParticipants(r).map((e) => {
                           var t;
                           return null === (t = e.user) || void 0 === t ? void 0 : t.id;
                       }),
-            [l]
+            [r]
         ),
         p = e.widget.pinned || !e.locked;
-    r.useEffect(() => {
+    l.useEffect(() => {
         p &&
             (0, x.zi)(y.Odu.VIDEO, {
                 locked: I.Z.isInstanceLocked(),
@@ -154,10 +154,10 @@ function k(e) {
             containerWidth: e.width,
             containerHeight: e.height
         },
-        T = r.useRef(N);
+        T = l.useRef(N);
     return (
-        r.useLayoutEffect(() => void (T.current = N)),
-        r.useLayoutEffect(() => {
+        l.useLayoutEffect(() => void (T.current = N)),
+        l.useLayoutEffect(() => {
             let { size: e, id: t, containerWidth: n, containerHeight: i } = T.current;
             ((f && e.height > e.width) || (!f && e.width > e.height)) &&
                 (0, c.nv)({

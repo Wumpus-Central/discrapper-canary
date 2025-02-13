@@ -3,11 +3,11 @@ var i = n(200651);
 n(192379);
 var l = n(120356),
     r = n.n(l),
-    a = n(481060),
-    o = n(686546),
+    o = n(481060),
+    a = n(686546),
     s = n(23586);
 function c(e) {
-    let { tooltipText: t, children: n, onContextMenu: l, onClick: c, disabled: d, icon: u, iconForeground: h, innerClassName: p, className: m, tooltipClassName: g, onMouseEnter: f, onMouseLeave: _, 'aria-label': v, 'aria-checked': C, role: x, tooltipColor: Z, tooltipForceOpen: I, tooltipContentClassName: b } = e,
+    let { tooltipText: t, children: n, onContextMenu: l, onClick: c, disabled: d, icon: u, iconForeground: h, innerClassName: p, className: m, tooltipClassName: g, onMouseEnter: f, onMouseLeave: _, 'aria-label': v, 'aria-checked': C, role: x, tooltipColor: I, tooltipForceOpen: Z, tooltipContentClassName: b } = e,
         S =
             'function' == typeof u
                 ? (0, i.jsx)(u, {
@@ -18,19 +18,19 @@ function c(e) {
                       color: 'currentColor'
                   })
                 : u;
-    return (0, i.jsx)(a.ua7, {
+    return (0, i.jsx)(o.ua7, {
         tooltipClassName: g,
         text: t,
         'aria-label': v,
-        color: Z,
+        color: I,
         tooltipContentClassName: b,
-        forceOpen: I,
+        forceOpen: Z,
         children: (e) => {
             let { onClick: t, onMouseEnter: u, onMouseLeave: h, ...g } = e;
-            return (0, i.jsxs)(a.zxk, {
+            return (0, i.jsxs)(o.zxk, {
                 ...g,
-                look: a.zxk.Looks.BLANK,
-                size: a.zxk.Sizes.NONE,
+                look: o.zxk.Looks.BLANK,
+                size: o.zxk.Sizes.NONE,
                 disabled: d,
                 innerClassName: p,
                 wrapperClassName: r()(s.button, m),
@@ -52,10 +52,10 @@ function c(e) {
                 'aria-checked': C,
                 children: [
                     null != n
-                        ? (0, i.jsx)(o.ZP, {
+                        ? (0, i.jsx)(a.ZP, {
                               width: 20,
                               height: 20,
-                              mask: o.ZP.Masks.PANEL_BUTTON,
+                              mask: a.ZP.Masks.PANEL_BUTTON,
                               children: S
                           })
                         : S,

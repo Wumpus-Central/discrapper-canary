@@ -2,8 +2,8 @@ n.d(t, { Z: () => u }), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(481060),
-    a = n(460562),
-    o = n(768581),
+    o = n(460562),
+    a = n(768581),
     s = n(682662),
     c = n(662146),
     d = n(411411);
@@ -16,7 +16,7 @@ function u(e) {
                 className: d.circleIconButton,
                 selected: t,
                 lowerBadge: (0, i.jsx)(r.G2e, {
-                    icon: (0, r.GSL)(a.Z),
+                    icon: (0, r.GSL)(o.Z),
                     disableColor: !0,
                     className: d.geoRestrictedBadge
                 }),
@@ -41,7 +41,7 @@ function u(e) {
                     },
                     icon:
                         null != e.icon
-                            ? o.ZP.getGuildIconURL({
+                            ? a.ZP.getGuildIconURL({
                                   id: e.id,
                                   icon: e.icon,
                                   canAnimate: !1,

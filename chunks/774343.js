@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => A });
 var l,
     i,
     a,
@@ -10,8 +10,8 @@ var l,
     c = n(592125),
     E = n(896797),
     C = n(430824),
-    h = n(944486),
-    _ = n(55589),
+    _ = n(944486),
+    h = n(55589),
     I = n(981631);
 let g = (null !== (s = null === (r = window) || void 0 === r ? void 0 : null === (a = r.location) || void 0 === a ? void 0 : a.pathname) && void 0 !== s ? s : '').startsWith(I.Z5c.ACTIVITIES) ? I.Z5c.ACTIVITIES : null;
 function T(e) {
@@ -21,7 +21,7 @@ function T(e) {
 }
 class S extends (o = u.ZP.Store) {
     initialize() {
-        this.waitFor(E.Z, _.Z, h.Z, C.Z, c.Z);
+        this.waitFor(E.Z, h.Z, _.Z, C.Z, c.Z);
     }
     getHomeLink() {
         return null != g ? g : E.Z.fallbackRoute;
@@ -36,10 +36,10 @@ class S extends (o = u.ZP.Store) {
               writable: !0
           })
         : (S[l] = i);
-let f = new S(d.Z, {
+let A = new S(d.Z, {
     OVERLAY_INITIALIZE: function () {
-        let e = _.Z.getPrivateChannelIds(),
-            t = h.Z.getChannelId(I.ME);
+        let e = h.Z.getPrivateChannelIds(),
+            t = _.Z.getChannelId(I.ME);
         (null != t || null != e[0]) && (g = I.Z5c.CHANNEL(I.ME, null != t ? t : e[0]));
     },
     APP_VIEW_SET_HOME_LINK: T,

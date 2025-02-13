@@ -8,8 +8,8 @@ n.d(t, {
 var i,
     l = n(200651),
     r = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(748780),
     c = n(442837),
     d = n(692547),
@@ -23,8 +23,8 @@ var i,
     v = n(780570),
     C = n(353042),
     x = n(981631),
-    Z = n(388032),
-    I = n(733738);
+    I = n(388032),
+    Z = n(733738);
 function b(e, t, n) {
     return (
         t in e
@@ -40,55 +40,55 @@ function b(e, t, n) {
 }
 let S = {
     [x.vxO.INSTALLING]: {
-        [m.J6.NONE]: (e, t) => Z.intl.formatToPlainString(Z.t['p+2sEx'], { name: e }),
+        [m.J6.NONE]: (e, t) => I.intl.formatToPlainString(I.t['p+2sEx'], { name: e }),
         [m.J6.SECONDS]: (e, t) =>
-            Z.intl.formatToPlainString(Z.t['/0NgPD'], {
+            I.intl.formatToPlainString(I.t['/0NgPD'], {
                 name: e,
                 timeRemaining: t
             }),
         [m.J6.MINUTES]: (e, t) =>
-            Z.intl.formatToPlainString(Z.t.ZIwMzs, {
+            I.intl.formatToPlainString(I.t.ZIwMzs, {
                 name: e,
                 timeRemaining: t
             }),
         [m.J6.HOURS]: (e, t) =>
-            Z.intl.formatToPlainString(Z.t['3IQDUl'], {
+            I.intl.formatToPlainString(I.t['3IQDUl'], {
                 name: e,
                 timeRemaining: t
             })
     },
     [x.vxO.UPDATING]: {
-        [m.J6.NONE]: (e, t) => Z.intl.formatToPlainString(Z.t['6F9QzM'], { name: e }),
+        [m.J6.NONE]: (e, t) => I.intl.formatToPlainString(I.t['6F9QzM'], { name: e }),
         [m.J6.SECONDS]: (e, t) =>
-            Z.intl.formatToPlainString(Z.t['2OVgVl'], {
+            I.intl.formatToPlainString(I.t['2OVgVl'], {
                 name: e,
                 timeRemaining: t
             }),
         [m.J6.MINUTES]: (e, t) =>
-            Z.intl.formatToPlainString(Z.t.mgQg1N, {
+            I.intl.formatToPlainString(I.t.mgQg1N, {
                 name: e,
                 timeRemaining: t
             }),
         [m.J6.HOURS]: (e, t) =>
-            Z.intl.formatToPlainString(Z.t['aTdq4+'], {
+            I.intl.formatToPlainString(I.t['aTdq4+'], {
                 name: e,
                 timeRemaining: t
             })
     },
     [x.vxO.REPAIRING]: {
-        [m.J6.NONE]: (e, t) => Z.intl.formatToPlainString(Z.t['p+2sEx'], { name: e }),
+        [m.J6.NONE]: (e, t) => I.intl.formatToPlainString(I.t['p+2sEx'], { name: e }),
         [m.J6.SECONDS]: (e, t) =>
-            Z.intl.formatToPlainString(Z.t['/0NgPD'], {
+            I.intl.formatToPlainString(I.t['/0NgPD'], {
                 name: e,
                 timeRemaining: t
             }),
         [m.J6.MINUTES]: (e, t) =>
-            Z.intl.formatToPlainString(Z.t.ZIwMzs, {
+            I.intl.formatToPlainString(I.t.ZIwMzs, {
                 name: e,
                 timeRemaining: t
             }),
         [m.J6.HOURS]: (e, t) =>
-            Z.intl.formatToPlainString(Z.t['3IQDUl'], {
+            I.intl.formatToPlainString(I.t['3IQDUl'], {
                 name: e,
                 timeRemaining: t
             })
@@ -98,7 +98,7 @@ class N extends r.PureComponent {
     renderText() {
         let { state: e, isPaused: t } = this.props;
         if (e.type === x.vxO.UPDATING || e.type === x.vxO.REPAIRING || e.type === x.vxO.INSTALLING) {
-            if (t) return Z.intl.string(Z.t['5oxtFR']);
+            if (t) return I.intl.string(I.t['5oxtFR']);
             if (e.stage === x.f07.PATCHING || e.stage === x.f07.REPAIRING)
                 return (0, l.jsx)(C.Z, {
                     getHistoricalTotalBytes: f.Z.getHistoricalTotalBytesWritten,
@@ -110,17 +110,17 @@ class N extends r.PureComponent {
     }
     render() {
         let e = this.renderText();
-        return null != e ? e : Z.intl.string(Z.t.cw57am);
+        return null != e ? e : I.intl.string(I.t.cw57am);
     }
     constructor(...e) {
         super(...e),
             b(this, 'renderProgressBody', (e, t) => {
                 let { state: n, application: i } = this.props,
-                    { stage: l, progress: r, total: a, type: o } = n;
-                if (null == r || null == a || null == l) return null;
+                    { stage: l, progress: r, total: o, type: a } = n;
+                if (null == r || null == o || null == l) return null;
                 let s = (e[e.length - 1] / t) * 1000,
-                    c = 0 !== s ? Math.max(1, (a - r) / s) : null,
-                    d = S[o],
+                    c = 0 !== s ? Math.max(1, (o - r) / s) : null,
+                    d = S[a],
                     u = null != d ? Object.keys(d) : [],
                     { unit: h, time: p } = (0, m.CI)(null != c ? c / 60 : null, u);
                 if (null != d && null != h) {
@@ -150,7 +150,7 @@ class E extends (i = r.PureComponent) {
     getTooltipText() {
         let { firstApplication: e, firstState: t, isPaused: n } = this.props;
         return null == e || null == t
-            ? Z.intl.string(Z.t.cw57am)
+            ? I.intl.string(I.t.cw57am)
             : (0, l.jsx)(N, {
                   application: e,
                   state: t,
@@ -161,7 +161,7 @@ class E extends (i = r.PureComponent) {
         let { percent: e, isPaused: t, className: n } = this.props;
         return (0, l.jsx)(s.Z.div, {
             style: { transform: [{ scale: this.state.animationScale }] },
-            className: o()(n, I.progressContainer),
+            className: a()(n, Z.progressContainer),
             onClick: this.handleOnClick,
             children: (0, l.jsx)(h.ua7, {
                 text: this.getTooltipText(),
@@ -176,7 +176,7 @@ class E extends (i = r.PureComponent) {
                             children: (0, l.jsx)(h._8t, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: I.downloadIcon
+                                className: Z.downloadIcon
                             })
                         })
                     })

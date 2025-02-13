@@ -2,8 +2,8 @@ n.d(t, { Z: () => v });
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    o = n(442837),
+    o = n.n(r),
+    a = n(442837),
     s = n(481060),
     c = n(362721),
     d = n(12498),
@@ -16,31 +16,31 @@ var i = n(200651),
     _ = n(642367);
 function v(e) {
     let { channel: t, connected: n, hovered: r, subtitle: v, onClick: C } = e,
-        x = (0, o.e7)([d.Z], () => d.Z.getChannelStatus(t)),
-        Z = null != x && x.length > 0,
-        I = (0, c.ZP)(t, !0),
+        x = (0, a.e7)([d.Z], () => d.Z.getChannelStatus(t)),
+        I = null != x && x.length > 0,
+        Z = (0, c.ZP)(t, !0),
         b = null != v && v.length > 0;
     l.useEffect(() => {
-        Z &&
+        I &&
             p.default.track(m.rMx.VOICE_CHANNEL_TOPIC_VIEWED, {
                 guild_id: t.guild_id,
                 channel_id: t.id
             });
-    }, [t.id, Z, t.guild_id]);
+    }, [t.id, I, t.guild_id]);
     let S = (0, s.bWb)().enabled ? 12 : 14;
     if (null == t.guild_id) return null;
-    let N = a()(f.statusDiv, n && I ? f.hoverable : null);
-    return Z
+    let N = o()(f.statusDiv, n && Z ? f.hoverable : null);
+    return I
         ? (0, i.jsx)(s.P3F, {
               className: N,
-              onClick: I ? C : void 0,
+              onClick: Z ? C : void 0,
               children: (0, i.jsx)(s.Text, {
                   variant: 'text-xs/medium',
-                  className: a()(f.statusText, _.markup),
+                  className: o()(f.statusText, _.markup),
                   children: (0, i.jsx)(u.Z, { children: h.Z.parseVoiceChannelStatus(x, !0, { channelId: t.id }) })
               })
           })
-        : n && I && (!b || r)
+        : n && Z && (!b || r)
           ? (0, i.jsxs)(s.P3F, {
                 className: N,
                 onClick: C,

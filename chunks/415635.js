@@ -9,33 +9,33 @@ var l = n(200651),
     c = n(37091),
     d = n(721264),
     m = n(963838),
-    h = n(39127),
-    g = n(981631),
-    f = n(204100);
+    f = n(39127),
+    h = n(981631),
+    g = n(204100);
 function p(e) {
     let { channelId: t, guildId: n, userId: p, containerDimensions: v } = e,
         S = (0, a.e7)([o.Z], () => o.Z.useReducedMotion),
         [I, x] = i.useState([]),
-        T = I.length < 50;
+        E = I.length < 50;
     i.useEffect(() => {
         function e(e) {
             var l;
-            let { channelId: i, userId: a, emoji: s, animationType: o, animationId: h } = e;
+            let { channelId: i, userId: a, emoji: s, animationType: o, animationId: f } = e;
             if ((null != p && p !== a) || (c.Z.getEnabled() && (0, d.Z)(null !== (l = null == s ? void 0 : s.name) && void 0 !== l ? l : ''))) return;
-            let f = null != s && null != o && null != h;
-            if (i === t && !S && T && f) {
+            let g = null != s && null != o && null != f;
+            if (i === t && !S && E && g) {
                 let e = (0, m._r)(s),
                     l = null != s.id && !s.animated,
                     i = {
                         id: (0, r.Z)(),
                         animationType: o,
-                        animationId: h,
+                        animationId: f,
                         shouldResize: l,
                         url: e,
                         userId: a
                     };
                 x((e) => [...e, i]),
-                    u.ZP.trackWithMetadata(g.rMx.VOICE_CHANNEL_EFFECT_VIEWED, {
+                    u.ZP.trackWithMetadata(h.rMx.VOICE_CHANNEL_EFFECT_VIEWED, {
                         channel_id: t,
                         guild_id: n
                     });
@@ -47,8 +47,8 @@ function p(e) {
                 s.Z.unsubscribe('VOICE_CHANNEL_EFFECT_SEND', e);
             }
         );
-    }, [t, n, p, S, T]);
-    let Z = i.useCallback((e) => {
+    }, [t, n, p, S, E]);
+    let T = i.useCallback((e) => {
         x((t) => {
             let n = [...t],
                 l = n.findIndex((t) => t.id === e);
@@ -58,17 +58,17 @@ function p(e) {
     return S
         ? null
         : (0, l.jsx)('div', {
-              className: f.effectsWrapper,
+              className: g.effectsWrapper,
               style: { width: v.width },
               children: (0, l.jsx)('div', {
-                  className: f.effects,
+                  className: g.effects,
                   children: I.map((e) =>
                       (0, l.jsx)(
-                          h.Z,
+                          f.Z,
                           {
                               containerDimensions: v,
                               effect: e,
-                              onComplete: Z
+                              onComplete: T
                           },
                           e.id
                       )

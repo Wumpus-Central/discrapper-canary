@@ -2,8 +2,8 @@ n.d(t, { Z: () => f }), n(653041), n(47120), n(724458);
 var i = n(200651),
     l = n(192379),
     r = n(442837),
-    a = n(239091),
-    o = n(749210),
+    o = n(239091),
+    a = n(749210),
     s = n(905423),
     c = n(664915),
     d = n(888369),
@@ -15,8 +15,8 @@ var i = n(200651),
 let f = l.memo(function (e) {
     let { folderNode: t, ...f } = e,
         { id: _, name: v, color: C, children: x } = t,
-        Z = x.map((e) => e.id),
-        I = (0, s.Z)((e) => e.guildId),
+        I = x.map((e) => e.id),
+        Z = (0, s.Z)((e) => e.guildId),
         b = (0, r.e7)([c.Z], () => c.Z.isFolderExpanded(_)),
         S = (function (e) {
             let t = e.children
@@ -37,16 +37,16 @@ let f = l.memo(function (e) {
             isMentionLowImportance: j,
             unread: y
         } = (0, r.cj)([d.default], () => ({
-            mentionCount: Z.map((e) => d.default.getMentionCount(e)).reduce((e, t) => e + t, 0),
-            isMentionLowImportance: Z.every((e) => d.default.getIsMentionLowImportance(e)),
-            unread: Z.some((e) => d.default.hasUnread(e))
+            mentionCount: I.map((e) => d.default.getMentionCount(e)).reduce((e, t) => e + t, 0),
+            isMentionLowImportance: I.every((e) => d.default.getIsMentionLowImportance(e)),
+            unread: I.some((e) => d.default.hasUnread(e))
         })),
-        A = l.useCallback(() => {
-            o.Z.toggleGuildFolderExpand(_);
+        T = l.useCallback(() => {
+            a.Z.toggleGuildFolderExpand(_);
         }, [_]),
-        T = l.useCallback(
+        A = l.useCallback(
             (e) => {
-                (0, a.jW)(e, async () => {
+                (0, o.jW)(e, async () => {
                     let { default: e } = await n.e('52590').then(n.bind(n, 205784));
                     return (t) =>
                         (0, i.jsx)(e, {
@@ -64,13 +64,13 @@ let f = l.memo(function (e) {
         ...f,
         folderNode: t,
         expanded: b,
-        selected: null != I && Z.includes(I),
+        selected: null != Z && I.includes(Z),
         mentionCount: E,
         isMentionLowImportance: j,
         unread: y,
         mediaState: N,
         defaultFolderName: S,
-        onExpandCollapse: A,
-        onContextMenu: T
+        onExpandCollapse: T,
+        onContextMenu: A
     });
 });

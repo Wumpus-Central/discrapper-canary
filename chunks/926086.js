@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f }), n(47120), n(411104);
 var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    o = n.n(l),
+    l = n(192379),
+    r = n(120356),
+    o = n.n(r),
     a = n(348327),
     s = n.n(a),
     d = n(642128),
@@ -18,11 +18,11 @@ let p = {
 };
 function f(e) {
     let { locked: t, pinned: n } = e,
-        [l, a] = r.useState(0),
-        [f, g] = r.useState(0),
-        [m, v] = r.useState(0),
-        E = r.useRef(0),
-        [I, x] = r.useState(0),
+        [r, a] = l.useState(0),
+        [f, g] = l.useState(0),
+        [m, v] = l.useState(0),
+        E = l.useRef(0),
+        [I, x] = l.useState(0),
         { timeToLiveMs: C, reappearTimeMs: S } = u.ZP.useState(
             (e) => ({
                 timeToLiveMs: e.timeToLiveMs,
@@ -34,11 +34,11 @@ function f(e) {
             timeToLiveMs: C,
             reappearTimeMs: S
         },
-        y = r.useRef(Z);
-    r.useEffect(() => {
+        y = l.useRef(Z);
+    l.useEffect(() => {
         y.current = Z;
     }),
-        r.useEffect(
+        l.useEffect(
             () => (
                 (E.current = setInterval(() => {
                     let e = Date.now();
@@ -47,8 +47,8 @@ function f(e) {
                             if (0 === t) return e;
                             let n = e - t,
                                 i = y.current.timeToLiveMs,
-                                r = i + y.current.reappearTimeMs;
-                            return n > i ? t + r : t;
+                                l = i + y.current.reappearTimeMs;
+                            return n > i ? t + l : t;
                         });
                 }, 100)),
                 () => {
@@ -60,16 +60,16 @@ function f(e) {
     let b = () => {
             a(Date.now()), x((e) => e + 1);
         },
-        O = l > 0 && f - l < 1000,
+        O = r > 0 && f - r < 1000,
         N = (0, c.Yzy)(m > 0 && m < f && f - m < C, {
             from: { opacity: 0 },
             enter: { opacity: 1 },
             leave: { opacity: 0 },
             config: p
         }),
-        [T, w] = r.useState(!1);
+        [T, w] = l.useState(!1);
     if (
-        (r.useEffect(() => {
+        (l.useEffect(() => {
             I > 10 && w(!0);
         }, [I]),
         T)

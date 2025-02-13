@@ -2,8 +2,8 @@ n.d(t, { Z: () => L }), n(47120), n(724458), n(653041);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    o = n(91192),
+    o = n.n(r),
+    a = n(91192),
     s = n(442837),
     c = n(481060),
     d = n(493683),
@@ -17,39 +17,39 @@ var i = n(200651),
     v = n(593364),
     C = n(905423),
     x = n(199902),
-    Z = n(592125),
-    I = n(944486),
+    I = n(592125),
+    Z = n(944486),
     b = n(979651),
     S = n(709054),
     N = n(853856),
     E = n(593214),
     j = n(919755),
     y = n(110977),
-    A = n(603274),
-    T = n(981631),
+    T = n(603274),
+    A = n(981631),
     P = n(388032),
-    w = n(148599);
-let R = {
+    R = n(148599);
+let w = {
     analyticsSource: {
-        page: T.ZY5.GUILD_CHANNEL,
-        section: T.jXE.CHANNEL_LIST,
-        object: T.qAy.CHANNEL
+        page: A.ZY5.GUILD_CHANNEL,
+        section: A.jXE.CHANNEL_LIST,
+        object: A.qAy.CHANNEL
     }
 };
 function L() {
-    let e = (0, o.Ie)('favorites'),
+    let e = (0, a.Ie)('favorites'),
         { favoriteAdded: t, clearFavoriteAdded: r } = (0, E.up)(),
         [L, M] = l.useState(!1),
         { favoriteServerMuted: D, favoriteChannels: G } = (0, s.cj)([N.Z], () => ({
             favoriteChannels: N.Z.getFavoriteChannels(),
             favoriteServerMuted: N.Z.favoriteServerMuted
         })),
-        k = (0, s.e7)([I.Z], () => I.Z.getChannelId(T.I_8)),
-        B = (0, s.e7)([Z.Z], () => Z.Z.getChannel(k)),
-        O = (0, C.Z)((e) => e.guildId) === T.I_8,
+        k = (0, s.e7)([Z.Z], () => Z.Z.getChannelId(A.I_8)),
+        B = (0, s.e7)([I.Z], () => I.Z.getChannel(k)),
+        O = (0, C.Z)((e) => e.guildId) === A.I_8,
         { badge: U, unread: V } = (0, j.Z)(G),
         F = (function (e) {
-            let t = (0, s.e7)([I.Z], () => I.Z.getVoiceChannelId()),
+            let t = (0, s.e7)([Z.Z], () => Z.Z.getVoiceChannelId()),
                 n = null != t && null != e[t],
                 i = (0, s.e7)([x.Z], () => {
                     if (!n) return !1;
@@ -58,21 +58,21 @@ function L() {
                 }),
                 l = (0, s.e7)([x.Z], () => x.Z.getAllApplicationStreams().some((t) => null != e[t.channelId])),
                 r = (0, s.e7)([b.Z], () => n && null != t && b.Z.hasVideo(t), [n, t]),
-                a = (0, s.Wu)([h.ZP], () => S.default.keys(e).reduce((e, t) => (e.push(...h.ZP.getEmbeddedActivitiesForChannel(t)), e), [])),
-                o = (0, s.e7)([h.ZP], () =>
+                o = (0, s.Wu)([h.ZP], () => S.default.keys(e).reduce((e, t) => (e.push(...h.ZP.getEmbeddedActivitiesForChannel(t)), e), [])),
+                a = (0, s.e7)([h.ZP], () =>
                     Array.from(h.ZP.getSelfEmbeddedActivities().values()).some((t) => {
                         let { location: n } = t,
                             i = (0, p.pY)(n);
                         return null != i && null != e[i];
                     })
                 ),
-                c = a.length > 0,
+                c = o.length > 0,
                 d = !1,
                 u = !1,
                 m = !1,
                 g = !1;
             return (
-                n ? ((d = !r), (u = r), (m = i), (g = o)) : ((m = l), (g = c)),
+                n ? ((d = !r), (u = r), (m = i), (g = a)) : ((m = l), (g = c)),
                 (0, _.Or)({
                     audio: d,
                     video: u,
@@ -94,9 +94,9 @@ function L() {
                 selected: O,
                 hovered: L,
                 unread: V && !D,
-                className: w.pill
+                className: R.pill
             }),
-            (0, i.jsx)(A.Z, {
+            (0, i.jsx)(T.Z, {
                 onShow: W,
                 children: (0, i.jsx)(y.S, {
                     children: (0, i.jsx)(c.aRk, {
@@ -110,8 +110,8 @@ function L() {
                                 mentions: U
                             }),
                             to: {
-                                pathname: T.Z5c.CHANNEL(T.I_8, k),
-                                state: R
+                                pathname: A.Z5c.CHANNEL(A.I_8, k),
+                                state: w
                             },
                             selected: O || L,
                             onMouseEnter: () => M(!0),
@@ -126,11 +126,11 @@ function L() {
                                 });
                             },
                             children: (0, i.jsx)('div', {
-                                className: a()(w.ring, { [w.ringActive]: t }),
+                                className: o()(R.ring, { [R.ringActive]: t }),
                                 children: (0, i.jsx)(c.r7p, {
                                     size: 'custom',
                                     color: 'currentColor',
-                                    className: w.favoriteIcon,
+                                    className: R.favoriteIcon,
                                     width: 20,
                                     height: 20
                                 })

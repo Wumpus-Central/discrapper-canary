@@ -2,8 +2,8 @@ n.d(t, { Z: () => N }), n(411104), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    o = n(442837),
+    o = n.n(r),
+    a = n(442837),
     s = n(493683),
     c = n(239091),
     d = n(146773),
@@ -17,7 +17,7 @@ var i = n(200651),
     v = n(981631),
     C = n(490897),
     x = n(467678);
-function Z(e, t, n) {
+function I(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -30,35 +30,35 @@ function Z(e, t, n) {
         e
     );
 }
-function I(e, t) {
+function Z(e, t) {
     let n = t.getGuildId();
     if (null == n) throw Error('TextChannel, preloadChannel: Channel does not have a guildId');
     s.Z.preload(n, t.id);
 }
 class b extends f.ZP {
     render() {
-        let { channel: e, selected: t, connectChannelDropTarget: n, connectChannelDragSource: l, connectDragPreview: r, canReorderChannel: o } = this.props,
+        let { channel: e, selected: t, connectChannelDropTarget: n, connectChannelDragSource: l, connectDragPreview: r, canReorderChannel: a } = this.props,
             s = (0, i.jsx)('li', {
-                className: a()(this.getClassName(), { [x.disabled]: this.isDisabled() }),
+                className: o()(this.getClassName(), { [x.disabled]: this.isDisabled() }),
                 'data-dnd-name': e.name,
                 children: (0, i.jsxs)(_.Z, {
                     className: x.iconVisibility,
                     channel: e,
                     selected: t,
                     onClick: this.handleClick,
-                    onMouseDown: I,
+                    onMouseDown: Z,
                     onContextMenu: this.handleContextMenu,
-                    connectDragPreview: o ? r : null,
+                    connectDragPreview: a ? r : null,
                     'aria-label': (0, u.ZP)({ channel: e }),
                     resolvedUnreadSetting: C.i.ONLY_MENTIONS,
                     children: [this.renderInviteButton(), this.renderEditButton()]
                 })
             });
-        return o ? n(l(s)) : s;
+        return a ? n(l(s)) : s;
     }
     constructor(...e) {
         super(...e),
-            Z(this, 'handleContextMenu', (e) => {
+            I(this, 'handleContextMenu', (e) => {
                 let { channel: t } = this.props,
                     l = m.Z.getGuild(t.getGuildId());
                 null != l &&
@@ -72,7 +72,7 @@ class b extends f.ZP {
                             });
                     });
             }),
-            Z(this, 'handleClick', (e) => {
+            I(this, 'handleClick', (e) => {
                 (function (e) {
                     let t = e.getGuildId();
                     if (null == t) throw Error('TextChannel, transitionTo: Channel does not have a guildId');
@@ -92,7 +92,7 @@ class b extends f.ZP {
 let S = (0, d.B)(b),
     N = l.memo(function (e) {
         let { channel: t, guild: n, disableSorting: l } = e,
-            r = (0, o.cj)([p.Z, g.Z], () => {
+            r = (0, a.cj)([p.Z, g.Z], () => {
                 let e = p.Z.getChannel(t.parent_id);
                 return {
                     canManageChannel: g.Z.can(v.Plq.MANAGE_CHANNELS, t),

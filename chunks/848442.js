@@ -1,10 +1,10 @@
-n.d(t, { Z: () => A });
+n.d(t, { Z: () => T });
 var i = n(200651);
 n(192379);
 var l = n(120356),
     r = n.n(l),
-    a = n(399606),
-    o = n(704215),
+    o = n(399606),
+    a = n(704215),
     s = n(433517),
     c = n(481060),
     d = n(239091),
@@ -18,8 +18,8 @@ var l = n(120356),
     v = n(703656),
     C = n(984933),
     x = n(430824),
-    Z = n(626135),
-    I = n(434479),
+    I = n(626135),
+    Z = n(434479),
     b = n(981631),
     S = n(176505),
     N = n(629481),
@@ -28,11 +28,11 @@ var l = n(120356),
 function y(e) {
     let { guildId: t, selected: n, handleClick: l } = e,
         d = (0, m.RF)(t, 'guild_shop_channel_row'),
-        g = (0, a.e7)([x.Z], () => x.Z.getGuild(t)),
+        g = (0, o.e7)([x.Z], () => x.Z.getGuild(t)),
         S = (null == g ? void 0 : g.hasFeature(b.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0,
         y = 'false' === s.K.get(N.tM, 'false'),
-        A = (0, a.e7)([u.Z], () => u.Z.useReducedMotion);
-    return (0, i.jsx)(I.m, {
+        T = (0, o.e7)([u.Z], () => u.Z.useReducedMotion);
+    return (0, i.jsx)(Z.m, {
         id: 'shop-'.concat(t),
         className: r()(j.previewChannelRow, {
             [j.selected]: n,
@@ -51,7 +51,7 @@ function y(e) {
         trailing: (0, i.jsxs)('div', {
             className: j.gifSection,
             children: [
-                A
+                T
                     ? (0, i.jsx)(c.IGR, {
                           color: c.TVs.unsafe_rawColors.BRAND_260.css,
                           text: E.intl.string(E.t.y2b7CA),
@@ -68,8 +68,8 @@ function y(e) {
                         onClick: (e) => {
                             if (
                                 (e.stopPropagation(),
-                                (0, _.EW)(o.z.SERVER_SHOP_PHANTOM_PREVIEW),
-                                Z.default.track(b.rMx.GUILD_SHOP_PREVIEW_CLICK, {
+                                (0, _.EW)(a.z.SERVER_SHOP_PHANTOM_PREVIEW),
+                                I.default.track(b.rMx.GUILD_SHOP_PREVIEW_CLICK, {
                                     ...(0, h.hH)(t),
                                     action_taken: N.mz.DISMISS_CHANNEL_ROW
                                 }),
@@ -89,19 +89,19 @@ function y(e) {
         })
     });
 }
-function A(e) {
+function T(e) {
     let { guild: t, selected: l } = e,
         r = (0, g.g)(t, 'guild_shop_channel_row'),
-        a = () => {
+        o = () => {
             s.K.set(N.tM, 'true'), (0, v.uL)(b.Z5c.CHANNEL(t.id, S.oC.GUILD_SHOP));
         };
     return r
         ? (0, i.jsx)(y, {
               guildId: t.id,
               selected: l,
-              handleClick: a
+              handleClick: o
           })
-        : (0, i.jsx)(I.m, {
+        : (0, i.jsx)(Z.m, {
               id: 'shop-'.concat(t.id),
               renderIcon: (e) =>
                   (0, i.jsx)(f.Z, {
@@ -111,7 +111,7 @@ function A(e) {
                   }),
               text: E.intl.string(E.t.al5EXF),
               selected: l,
-              onClick: a,
+              onClick: o,
               onContextMenu: (e) => {
                   null != t &&
                       (0, d.jW)(e, async () => {

@@ -1,6 +1,6 @@
 n.d(t, {
     QM: () => N,
-    ds: () => A,
+    ds: () => f,
     mG: () => p
 }),
     n(47120);
@@ -15,8 +15,8 @@ var l = n(200651),
     c = n(479766),
     E = n(741808),
     C = n(981631),
-    h = n(642145),
-    _ = n(388032),
+    _ = n(642145),
+    h = n(388032),
     I = n(61822),
     g = n(668096);
 let T = () =>
@@ -31,7 +31,7 @@ let T = () =>
     S = (e) =>
         (0, l.jsx)(o.zxk, {
             ...e,
-            'aria-label': _.intl.string(_.t.cpT0Cg),
+            'aria-label': h.intl.string(h.t.cpT0Cg),
             look: o.zxk.Looks.BLANK,
             size: o.zxk.Sizes.NONE,
             wrapperClassName: g.closeButton,
@@ -42,7 +42,7 @@ let T = () =>
                 className: g.closeButtonIcon
             })
         }),
-    f = (e) => {
+    A = (e) => {
         let { invertTail: t } = e;
         return (0, l.jsxs)('div', {
             className: r()(g.tail, t ? g.tailPositionInverted : g.tailPositionNormal),
@@ -67,7 +67,7 @@ let T = () =>
             ]
         });
     },
-    A = (e) => {
+    f = (e) => {
         let { onClose: t, backgroundElementRef: n, renderTail: a = !1 } = e,
             [r, o] = i.useState(Date.now()),
             [d, c] = i.useState(!1),
@@ -78,11 +78,11 @@ let T = () =>
                 },
                 [d]
             ),
-            h = (0, s.e7)([u.Z], () => u.Z.getExpandedFolders().size > 0);
+            _ = (0, s.e7)([u.Z], () => u.Z.getExpandedFolders().size > 0);
         return (
             i.useEffect(() => {
                 o(Date.now());
-            }, [h]),
+            }, [_]),
             (0, l.jsx)(
                 E.X,
                 {
@@ -131,7 +131,7 @@ let T = () =>
             ? {
                   shouldShowOnboardingCoachmark: l,
                   closeOnboardingCoachmarkIfOpen: u,
-                  questId: h.V
+                  questId: _.V
               }
             : {
                   shouldShowOnboardingCoachmark: !1,
@@ -151,15 +151,15 @@ let T = () =>
                     children: [
                         (0, l.jsx)('div', {
                             className: I.coachmarkTitle,
-                            children: _.intl.string(_.t['3B4+wM'])
+                            children: h.intl.string(h.t['3B4+wM'])
                         }),
                         (0, l.jsx)('div', {
                             className: I.coachmarkDescription,
-                            children: _.intl.format(_.t.V6DQX1, { quantity: 200 })
+                            children: h.intl.format(h.t.V6DQX1, { quantity: 200 })
                         })
                     ]
                 }),
-                n && (0, l.jsx)(f, { invertTail: i })
+                n && (0, l.jsx)(A, { invertTail: i })
             ]
         });
     };

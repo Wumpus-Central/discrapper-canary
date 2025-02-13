@@ -1,78 +1,78 @@
-n.d(t, { Z: () => x });
-var i = n(200651),
-    l = n(192379),
-    o = n(442837),
-    s = n(481060),
-    a = n(19780),
-    r = n(571826),
+n.d(t, { Z: () => N });
+var l = n(200651),
+    i = n(192379),
+    a = n(442837),
+    r = n(481060),
+    o = n(19780),
+    s = n(571826),
     c = n(630759),
     u = n(301107),
     d = n(785792),
     h = n(190054),
     f = n(760373),
-    N = n(388032),
-    g = n(571545);
-function x(e) {
+    g = n(388032),
+    p = n(571545);
+function N(e) {
     let { channelId: t } = e,
-        n = (0, o.e7)([a.Z], () => {
+        n = (0, a.e7)([o.Z], () => {
             var e;
-            return null === (e = a.Z.getSecureFramesState()) || void 0 === e ? void 0 : e.epochAuthenticator;
+            return null === (e = o.Z.getSecureFramesState()) || void 0 === e ? void 0 : e.epochAuthenticator;
         }),
-        x = (0, u.W)({
+        N = (0, u.W)({
             fingerprintBase64: n,
             chunkSize: f.y6,
             desiredLength: f.YP
         }),
-        p = l.useCallback(() => {
-            (0, r.PM)({ channelId: t });
+        v = i.useCallback(() => {
+            (0, s.PM)({ channelId: t });
         }, [t]);
-    return (0, i.jsxs)('div', {
-        className: g.container,
+    return (0, l.jsxs)('div', {
+        className: p.container,
         children: [
-            (0, i.jsxs)('div', {
-                className: g.tag,
+            (0, l.jsxs)('div', {
+                className: p.tag,
                 children: [
-                    (0, i.jsx)(s.mBM, {
+                    (0, l.jsx)(r.mBM, {
                         size: 'xxs',
-                        color: s.TVs.colors.TEXT_POSITIVE
+                        color: r.TVs.colors.TEXT_POSITIVE
                     }),
-                    (0, i.jsx)(s.Text, {
+                    (0, l.jsx)(r.Text, {
                         variant: 'text-xs/medium',
                         color: 'text-positive',
-                        children: N.intl.string(N.t['3BogKS'])
+                        children: g.intl.string(g.t['3BogKS'])
                     })
                 ]
             }),
-            (0, i.jsx)(s.Text, {
+            (0, l.jsx)(r.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-secondary',
-                children: N.intl.string(N.t.B9JNsr)
+                children: g.intl.string(g.t.B9JNsr)
             }),
-            (0, i.jsxs)('div', {
-                className: g.header,
+            (0, l.jsxs)('div', {
+                className: p.header,
                 children: [
-                    (0, i.jsx)(s.X6q, {
+                    (0, l.jsx)(r.X6q, {
                         variant: 'text-sm/bold',
                         color: 'header-primary',
-                        children: N.intl.string(N.t.cTQI5u)
+                        children: g.intl.string(g.t.cTQI5u)
                     }),
-                    null != x &&
-                        (0, i.jsx)(h.H, {
-                            chunks: x,
-                            color: s.TVs.colors.INTERACTIVE_NORMAL.css,
-                            onCopy: p
+                    null != N &&
+                        (0, l.jsx)(h.H, {
+                            chunks: N,
+                            color: r.TVs.colors.INTERACTIVE_NORMAL.css,
+                            onCopy: v
                         })
                 ]
             }),
-            (0, i.jsx)(d.b, {
-                className: g.code,
-                chunks: x,
+            (0, l.jsx)(d.b, {
+                className: p.code,
+                chunks: N,
                 columns: f.WK
             }),
-            (0, i.jsx)(s.Text, {
+            (0, l.jsx)(r.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-secondary',
-                children: N.intl.format(N.t.wKxADQ, { helpArticle: (0, c.uV)() })
+                children: g.intl.format(g.t.wKxADQ, { helpArticle: (0, c.uV)() })
             })
         ]
     });

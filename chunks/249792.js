@@ -3,8 +3,8 @@ var i = n(200651);
 n(192379);
 var l = n(120356),
     r = n.n(l),
-    a = n(642128),
-    o = n(692547),
+    o = n(642128),
+    a = n(692547),
     s = n(481060),
     c = n(565138),
     d = n(252686),
@@ -14,8 +14,8 @@ function h(e) {
         m = {},
         g = {};
     (m.transform = 'translate3d(10px, 10px, 0) scale3d(3, 3, 1)'), (g.transform = 'translate3d(0, 0, 0) scale3d(1, 1, 1)');
-    let f = (0, s.dQu)(o.Z.unsafe_rawColors.BRAND_500).hex(),
-        _ = (0, s.dQu)(o.Z.unsafe_rawColors.PRIMARY_630).hex();
+    let f = (0, s.dQu)(a.Z.unsafe_rawColors.BRAND_500).hex(),
+        _ = (0, s.dQu)(a.Z.unsafe_rawColors.PRIMARY_630).hex();
     l && null == t.icon && ((m.backgroundColor = f), (g.backgroundColor = _));
     let v = (0, s.Yzy)(n, {
         from: m,
@@ -38,7 +38,7 @@ function h(e) {
                             children: (0, i.jsxs)('div', {
                                 className: u.closedFolderIconWrapper,
                                 children: [
-                                    (0, i.jsx)(a.animated.div, {
+                                    (0, i.jsx)(o.animated.div, {
                                         className: u.folderIconPreview,
                                         style: e,
                                         children: (0, i.jsx)(c.Z, {

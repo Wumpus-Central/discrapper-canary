@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g }), n(47120);
 var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    o = n.n(l),
+    l = n(192379),
+    r = n(120356),
+    o = n.n(r),
     a = n(442837),
     s = n(481060),
     d = n(493773),
@@ -13,36 +13,36 @@ var i = n(200651),
     p = n(501787),
     f = n(887466);
 function g(e) {
-    let { locked: t, pinned: n, anchorLeft: l } = e,
+    let { locked: t, pinned: n, anchorLeft: r } = e,
         g = (0, a.e7)([u.Z], () => u.Z.getSocket());
     (0, c.nU)();
     let m = (0, a.e7)([h.Z], () => h.Z.getWindow(p.$J)),
         [v, E] = (0, c.m8)(g),
         { currentFPS: I, averageFrameTime: x, timeSinceLastDrop: C, onResetFrameData: S, droppedFramesRef: Z, renderedFrameCount: y, bufferFramecountRef: b, frameCheckerEffect: O } = (0, c.d6)(!0, v, !0),
         [N, T, w] = (0, c.ZF)(g),
-        [k, A] = (0, c.Y5)(N, O, m),
+        [A, k] = (0, c.Y5)(N, O, m),
         j = performance.now() - E.current < c.MC,
         R = T(x, b.current);
     (0, d.ZP)(
         () => (
-            k(),
+            A(),
             () => {
-                A();
+                k();
             }
         )
     );
-    let L = r.useCallback(() => {
-            S(), w(), k();
-        }, [S, w, k]),
-        [D, P] = r.useState(!0),
-        [M, z] = r.useState(!0),
-        [V, W] = r.useState(!0),
-        [U, F] = r.useState(!0),
-        [B, G] = r.useState(!0);
+    let L = l.useCallback(() => {
+            S(), w(), A();
+        }, [S, w, A]),
+        [D, P] = l.useState(!0),
+        [M, z] = l.useState(!0),
+        [V, W] = l.useState(!0),
+        [U, F] = l.useState(!0),
+        [G, B] = l.useState(!0);
     return t && !n
         ? null
         : (0, i.jsxs)('div', {
-              className: o()(f.panelGroup, !l && f.rightAligned),
+              className: o()(f.panelGroup, !r && f.rightAligned),
               children: [
                   (D || !t) &&
                       (0, i.jsxs)('div', {
@@ -171,7 +171,7 @@ function g(e) {
                               })
                           ]
                       }),
-                  (B || !t) &&
+                  (G || !t) &&
                       (0, i.jsxs)('div', {
                           className: f.measurement,
                           children: [
@@ -180,8 +180,8 @@ function g(e) {
                                       className: f.measurementCheckbox,
                                       children: (0, i.jsx)(s.XZJ, {
                                           size: 16,
-                                          value: B,
-                                          onChange: (e, t) => G(t)
+                                          value: G,
+                                          onChange: (e, t) => B(t)
                                       })
                                   }),
                               (0, i.jsx)(s.ua7, {

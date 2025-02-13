@@ -1,10 +1,10 @@
-n.d(t, { Z: () => A }), n(47120), n(390547), n(653041);
+n.d(t, { Z: () => T }), n(47120), n(390547), n(653041);
 var i = n(200651);
 n(192379);
 var l = n(120356),
     r = n.n(l),
-    a = n(392711),
-    o = n.n(a),
+    o = n(392711),
+    a = n.n(o),
     s = n(442837),
     c = n(481060),
     d = n(317381),
@@ -18,8 +18,8 @@ var l = n(120356),
     v = n(938475),
     C = n(823379),
     x = n(709054),
-    Z = n(853856),
-    I = n(981631),
+    I = n(853856),
+    Z = n(981631),
     b = n(388032),
     S = n(222594),
     N = n(577187);
@@ -42,19 +42,19 @@ function E(e, t) {
           });
 }
 function j() {
-    let e = (0, s.Wu)([Z.Z, f.Z], () =>
+    let e = (0, s.Wu)([I.Z, f.Z], () =>
             x.default
-                .keys(Z.Z.getFavoriteChannels())
+                .keys(I.Z.getFavoriteChannels())
                 .map((e) => f.Z.getChannel(e))
                 .filter(C.lm)
         ),
         t = e.map((e) => e.id),
-        n = e.filter((e) => e.type === I.d4z.GUILD_VOICE),
-        l = e.filter((e) => e.type === I.d4z.GUILD_STAGE_VOICE).map((e) => e.id),
+        n = e.filter((e) => e.type === Z.d4z.GUILD_VOICE),
+        l = e.filter((e) => e.type === Z.d4z.GUILD_STAGE_VOICE).map((e) => e.id),
         r = (0, s.Wu)(
             [v.ZP],
             () =>
-                o().flatMap(n, (e) =>
+                a().flatMap(n, (e) =>
                     v.ZP.getVoiceStatesForChannel(e).map((e) => {
                         let { user: t } = e;
                         return t;
@@ -62,8 +62,8 @@ function j() {
                 ),
             [n]
         ),
-        a = (0, s.Wu)([p.Z], () =>
-            o().flatMap(l, (e) =>
+        o = (0, s.Wu)([p.Z], () =>
+            a().flatMap(l, (e) =>
                 p.Z.getMutableParticipants(e, m.pV.SPEAKER)
                     .filter((e) => e.type === m.Ui.VOICE)
                     .map((e) => {
@@ -100,12 +100,12 @@ function j() {
         ),
         j = (0, s.Wu)([_.default], () => N.map((e) => _.default.getUser(e)), [N]),
         y = (0, s.Wu)([_.default], () => b.map((e) => _.default.getUser(e)), [b]),
-        A = E(
+        T = E(
             c.gj8,
             r.filter((e) => !b.includes(e.id) && !N.includes(e.id))
         ),
-        T =
-            0 === a.length
+        A =
+            0 === o.length
                 ? null
                 : (0, i.jsxs)('div', {
                       className: S.row,
@@ -117,7 +117,7 @@ function j() {
                           }),
                           (0, i.jsx)(u.Z, {
                               guildId: void 0,
-                              users: a,
+                              users: o,
                               max: 3
                           }),
                           (0, i.jsxs)('div', {
@@ -141,9 +141,9 @@ function j() {
             c.hGI,
             y.filter((e) => null != e && !N.includes(e.id))
         ),
-        w = E(c.nG3, j);
+        R = E(c.nG3, j);
     return (0, i.jsxs)(i.Fragment, {
-        children: [T, A, P, w]
+        children: [A, T, P, R]
     });
 }
 function y() {
@@ -160,7 +160,7 @@ function y() {
         ]
     });
 }
-function A(e) {
+function T(e) {
     let { 'aria-label': t = !1, onShow: n, children: l } = e,
         r = (0, h.Q3)('FavoritesTooltip');
     return (0, i.jsx)(c.ua7, {

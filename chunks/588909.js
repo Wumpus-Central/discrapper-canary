@@ -1,8 +1,8 @@
 n.d(t, { Z: () => Z }), n(47120);
 var i = n(200651);
 n(192379);
-var r = n(952265),
-    l = n(24124),
+var l = n(952265),
+    r = n(24124),
     o = n(13245),
     a = n(620662),
     s = n(835473),
@@ -44,7 +44,7 @@ function Z(e, t) {
                     (0, a.Z)(t, m.xjy.JOIN) &&
                     ((E.cancelText = I.intl.string(I.t['6F9ivr'])),
                     (E.onCancelClick = (e, n) => {
-                        d('unlock'), o.Z.updateNotificationStatus(n), o.Z.setInputLocked(!1, (0, u.QF)()), (0, l.h7)(t, !1, m.IlC.POPOUT);
+                        d('unlock'), o.Z.updateNotificationStatus(n), o.Z.setInputLocked(!1, (0, u.QF)()), (0, r.h7)(t, !1, m.IlC.POPOUT);
                     }));
                 break;
             }
@@ -55,7 +55,7 @@ function Z(e, t) {
                         d('unlock'),
                             o.Z.updateNotificationStatus(t),
                             o.Z.setInputLocked(!1, (0, u.QF)()),
-                            (0, r.ZD)(
+                            (0, l.ZD)(
                                 async () => {
                                     let { default: e } = await Promise.all([n.e('79477'), n.e('52211')]).then(n.bind(n, 60594));
                                     return (t) =>
@@ -76,7 +76,7 @@ function Z(e, t) {
                     ((E.renderFooter = () =>
                         (0, i.jsx)('div', {
                             className: C.container,
-                            children: (0, i.jsx)(_.i, { entries: s.entries })
+                            children: (0, i.jsx)(_.lX, { gamingId: null == e ? void 0 : e.id })
                         })),
                     (E.onNotificationShow = () => {
                         o.Z.track(m.rMx.OVERLAY_GAME_INVITE_NOTIFICATION_SHOWN, {

@@ -1,18 +1,18 @@
 n.d(t, {
-    IN: () => a,
-    oZ: () => r
+    IN: () => o,
+    oZ: () => s
 }),
     n(200651),
     n(192379);
-var i = n(570140);
+var l = n(570140);
 n(238246), n(788983), n(592125), n(19780);
-var l = n(237997);
+var i = n(237997);
 n(998502), n(487029);
-var o = n(710111);
+var a = n(710111);
 n(981631), n(388032);
-let s = {
-    width: o.FW.width,
-    height: o.FW.height,
+let r = {
+    width: a.FW.width,
+    height: a.FW.height,
     resizable: !1,
     movable: !1,
     alwaysOnTop: !0,
@@ -24,30 +24,30 @@ let s = {
     backgroundColor: '#00000000',
     titleBarStyle: null
 };
-function a(e, t) {
-    i.Z.dispatch({
+function o(e, t) {
+    l.Z.dispatch({
         type: 'OVERLAY_SET_INPUT_LOCKED',
         locked: !1,
         pid: t
     }),
-        i.Z.dispatch({
+        l.Z.dispatch({
             type: 'SOUNDBOARD_SET_OVERLAY_ENABLED',
             pid: t,
             enabled: !0,
             keepOpen: e
         });
 }
-function r(e) {
-    i.Z.dispatch({
+function s(e) {
+    l.Z.dispatch({
         type: 'SOUNDBOARD_SET_OVERLAY_ENABLED',
         pid: e,
         enabled: !1
     }),
-        l.Z.isLocked(e) ||
-            i.Z.dispatch({
+        i.Z.isLocked(e) ||
+            l.Z.dispatch({
                 type: 'OVERLAY_SET_INPUT_LOCKED',
                 locked: !0,
                 pid: e
             });
 }
-o.FW.padding, s.width, s.height;
+a.FW.padding, r.width, r.height;

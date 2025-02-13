@@ -2,8 +2,8 @@ n.d(t, { Z: () => _ });
 var i = n(200651),
     l = n(192379),
     r = n(636977),
-    a = n(481060),
-    o = n(132871),
+    o = n(481060),
+    a = n(132871),
     s = n(147890),
     c = n(571457),
     d = n(836768),
@@ -34,7 +34,7 @@ let _ = l.forwardRef(function (e, t) {
                 case p.GlobalDiscoveryTab.APPS:
                     return (0, s.dx)({
                         restorePreviousView: !0,
-                        entrypoint: { name: o.n3.GLOBAL_DISCOVERY_BUTTON }
+                        entrypoint: { name: a.n3.GLOBAL_DISCOVERY_BUTTON }
                     });
                 default:
                     return (0, u.transitionToGlobalDiscovery)({ tab: e });
@@ -49,6 +49,6 @@ let _ = l.forwardRef(function (e, t) {
         },
         selected: n,
         tooltip: f.intl.string(f.t['4nEZLi']),
-        icon: a.Jmo
+        icon: o.Jmo
     });
 });

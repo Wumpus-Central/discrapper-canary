@@ -15,26 +15,26 @@ var l = n(192379),
     c = n(592125),
     d = n(271383),
     m = n(878884),
-    h = n(19780),
-    g = n(594174),
-    f = n(979651),
+    f = n(19780),
+    h = n(594174),
+    g = n(979651),
     p = n(823379);
 function v(e, t) {
-    let n = (0, r.e7)([m.Z, h.Z], () => (e === h.Z.getChannelId() ? m.Z.getDesyncedVoiceStates() : null)),
+    let n = (0, r.e7)([m.Z, f.Z], () => (e === f.Z.getChannelId() ? m.Z.getDesyncedVoiceStates() : null)),
         a = (0, r.Wu)([s.Z], () => (null == e ? [] : [...s.Z.getGuildRingingUsers(e)])),
-        u = (0, r.Wu)([g.default], () => a.map((e) => g.default.getUser(e)).filter(p.lm)),
-        f = (0, r.e7)([c.Z], () => c.Z.getBasicChannel(e)),
+        u = (0, r.Wu)([h.default], () => a.map((e) => h.default.getUser(e)).filter(p.lm)),
+        g = (0, r.e7)([c.Z], () => c.Z.getBasicChannel(e)),
         v = l.useMemo(
             () =>
                 u.map((e) => ({
                     voiceState: new o.Z(e.id),
                     user: e,
-                    member: (null == f ? void 0 : f.guild_id) != null ? d.ZP.getMember(null == f ? void 0 : f.guild_id, e.id) : null,
+                    member: (null == g ? void 0 : g.guild_id) != null ? d.ZP.getMember(null == g ? void 0 : g.guild_id, e.id) : null,
                     nick: e.globalName,
                     comparator: e.globalName,
                     _isPlaceholder: !1
                 })),
-            [u, null == f ? void 0 : f.guild_id]
+            [u, null == g ? void 0 : g.guild_id]
         );
     return l.useMemo(
         () =>
@@ -62,7 +62,7 @@ function v(e, t) {
     );
 }
 function S(e, t) {
-    let n = (0, r.e7)([m.Z, h.Z], () => (e === h.Z.getChannelId() ? m.Z.getDesyncedParticipants() : null));
+    let n = (0, r.e7)([m.Z, f.Z], () => (e === f.Z.getChannelId() ? m.Z.getDesyncedParticipants() : null));
     return l.useMemo(
         () =>
             (function (e, t) {
@@ -84,12 +84,12 @@ function S(e, t) {
 }
 function I(e, t) {
     let n = (0, r.e7)([u.default], () => u.default.getId() === t),
-        i = (0, r.e7)([h.Z], () => h.Z.getChannelId()),
+        i = (0, r.e7)([f.Z], () => f.Z.getChannelId()),
         a = l.useRef(null),
         [s, o] = l.useState(!1),
         [c, d] = l.useState(!1),
-        m = (0, r.e7)([h.Z, f.Z], () => null != t && null != e && h.Z.getChannelId() === e && null != f.Z.isInChannel(e, t) && h.Z.isUserConnected(t)),
-        g = (0, r.e7)([h.Z, f.Z], () => null != t && null != e && h.Z.getChannelId() === e && null != f.Z.isInChannel(e, t) && !h.Z.isUserConnected(t));
+        m = (0, r.e7)([f.Z, g.Z], () => null != t && null != e && f.Z.getChannelId() === e && null != g.Z.isInChannel(e, t) && f.Z.isUserConnected(t)),
+        h = (0, r.e7)([f.Z, g.Z], () => null != t && null != e && f.Z.getChannelId() === e && null != g.Z.isInChannel(e, t) && !f.Z.isUserConnected(t));
     return (
         l.useEffect(() => {
             m && d(!0);
@@ -99,7 +99,7 @@ function I(e, t) {
         }, [e, i]),
         l.useEffect(
             () => (
-                g && null == a.current
+                h && null == a.current
                     ? (a.current = setTimeout(() => {
                           (a.current = null), o(!0);
                       }, 250))
@@ -108,7 +108,7 @@ function I(e, t) {
                     clearTimeout(a.current), (a.current = null);
                 }
             ),
-            [g]
+            [h]
         ),
         !n && c && s
     );

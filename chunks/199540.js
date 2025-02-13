@@ -2,8 +2,8 @@ n.d(t, { Z: () => E }), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    o = n(642128),
+    o = n.n(r),
+    a = n(642128),
     s = n(866442),
     c = n(442837),
     d = n(477690),
@@ -17,14 +17,14 @@ var i = n(200651),
     v = n(981631),
     C = n(388032),
     x = n(893539);
-let Z = (0, f.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
-    I = (0, f.Mg)(d.Z.FOLDER_ITEM_GUILD_ICON_SIZE),
+let I = (0, f.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
+    Z = (0, f.Mg)(d.Z.FOLDER_ITEM_GUILD_ICON_SIZE),
     b = ['13px 4px 4px 4px', '4px 13px 4px 4px', '4px 4px 4px 13px', '4px 4px 13px 4px'];
 function S(e) {
     let { guildId: t, animate: n, index: l } = e,
         r = (0, c.e7)([g.Z], () => g.Z.getGuild(t), [t]),
-        a = (0, p.Q3)('GuildIcon'),
-        o = (0, u.dQu)(u.TVs.modules.guildbar.AVATAR_SIZE);
+        o = (0, p.Q3)('GuildIcon'),
+        a = (0, u.dQu)(u.TVs.modules.guildbar.AVATAR_SIZE);
     return null == r
         ? (0, i.jsx)('div', {
               className: x.guildIconUnavailable,
@@ -33,18 +33,18 @@ function S(e) {
         : (0, i.jsx)(m.Z, {
               guild: r,
               animate: n,
-              size: a ? m.Z.Sizes.MINI : m.Z.Sizes.SMOL,
-              iconSize: a ? o : void 0,
-              lossless: a,
+              size: o ? m.Z.Sizes.MINI : m.Z.Sizes.SMOL,
+              iconSize: o ? a : void 0,
+              lossless: o,
               className: x.guildIcon,
               tabIndex: -1,
-              style: a ? { borderRadius: b[l] } : void 0
+              style: o ? { borderRadius: b[l] } : void 0
           });
 }
 function N(e) {
     let t,
         n,
-        { folderNode: r, hovered: a, expanded: c } = e,
+        { folderNode: r, hovered: o, expanded: c } = e,
         d = (0, p.Q3)('FolderIconContent'),
         { color: h, children: m } = r,
         g = null != h ? h : v.Wyy,
@@ -52,11 +52,11 @@ function N(e) {
         _ = m.map((e) => e.id),
         [C, b] = l.useState(!1),
         [N, E] = l.useState(c),
-        j = d ? (c ? 22 : -11) : c ? 0 : -I,
+        j = d ? (c ? 22 : -11) : c ? 0 : -Z,
         y = (0, u.q_F)(
             {
                 transform: 'translate3d(0, '.concat(j, 'px, 0)'),
-                config: { duration: Z },
+                config: { duration: I },
                 onStart() {
                     b(!0), E(c);
                 },
@@ -66,10 +66,10 @@ function N(e) {
             },
             'animate-always'
         ),
-        A = C ? y : void 0;
+        T = C ? y : void 0;
     (C || N) &&
-        (t = (0, i.jsx)(o.animated.div, {
-            style: A,
+        (t = (0, i.jsx)(a.animated.div, {
+            style: T,
             className: x.expandedFolderIconWrapper,
             children: (0, i.jsx)(u.ROc, {
                 size: d ? 'sm' : 'md',
@@ -78,8 +78,8 @@ function N(e) {
             })
         })),
         (C || !N) &&
-            (n = (0, i.jsx)(o.animated.div, {
-                style: A,
+            (n = (0, i.jsx)(a.animated.div, {
+                style: T,
                 className: x.closedFolderIconWrapper,
                 children: _.slice(0, 4).map((e, t) =>
                     (0, i.jsx)(
@@ -87,16 +87,16 @@ function N(e) {
                         {
                             index: t,
                             guildId: e,
-                            animate: a
+                            animate: o
                         },
                         e
                     )
                 )
             }));
-    let T = { backgroundColor: d && f ? u.TVs.colors.BG_MOD_SUBTLE.css : (0, s.br)(g, 0.4) };
+    let A = { backgroundColor: d && f ? u.TVs.colors.BG_MOD_SUBTLE.css : (0, s.br)(g, 0.4) };
     return (0, i.jsxs)('div', {
         'aria-hidden': !0,
-        style: c ? void 0 : T,
+        style: c ? void 0 : A,
         className: x.folderIconWrapper,
         children: [t, n]
     });
@@ -106,7 +106,7 @@ function E(e) {
             folderNode: t,
             forceCircular: n,
             expanded: r,
-            sorting: o,
+            sorting: a,
             mediaState: s,
             mentionCount: c = 0,
             isMentionLowImportance: d,
@@ -114,40 +114,40 @@ function E(e) {
             folderGroupId: g,
             folderIconContentClassName: f,
             folderIconContent: v,
-            onClick: Z,
-            onContextMenu: I,
+            onClick: I,
+            onContextMenu: Z,
             onHoverChange: b,
             onKeyDown: S,
             treeItemProps: { onFocus: E, ...j }
         } = e,
-        [y, A] = l.useState(!1),
-        T = l.useCallback(() => {
-            o || A(!0), null == b || b(!0);
-        }, [o, b]),
+        [y, T] = l.useState(!1),
+        A = l.useCallback(() => {
+            a || T(!0), null == b || b(!0);
+        }, [a, b]),
         P = l.useCallback(() => {
-            o || A(!1), null == b || b(!1);
-        }, [o, b]),
-        w = (0, p.Q3)('FolderHeader'),
-        R = r || null == s ? null : (0, _.Or)(s),
+            a || T(!1), null == b || b(!1);
+        }, [a, b]),
+        R = (0, p.Q3)('FolderHeader'),
+        w = r || null == s ? null : (0, _.Or)(s),
         L = !r && c > 0 ? (0, _.Ne)(c, d ? h.Z.BACKGROUND_ACCENT : h.Z.STATUS_DANGER) : null,
         M = (0, u.dQu)(u.TVs.modules.guildbar.FOLDER_SIZE);
     return (0, i.jsx)(u.aRk, {
         isFolder: !0,
-        style: w
+        style: R
             ? {
                   width: M,
                   height: M
               }
             : void 0,
-        selected: !!w || !n,
-        upperBadge: R,
+        selected: !!R || !n,
+        upperBadge: w,
         lowerBadge: L,
         lowerBadgeSize: { width: (0, u.OVM)(c) },
         children: (0, i.jsx)(u.P3F, {
-            className: a()(x.folder, { [x.hover]: y }),
-            onClick: Z,
-            onContextMenu: I,
-            onMouseEnter: T,
+            className: o()(x.folder, { [x.hover]: y }),
+            onClick: I,
+            onContextMenu: Z,
+            onMouseEnter: A,
             onMouseLeave: P,
             onKeyDown: S,
             onFocus: E,
@@ -163,7 +163,7 @@ function E(e) {
             children:
                 null != v
                     ? (0, i.jsx)('div', {
-                          className: a()(x.expandedFolderIconWrapper, f),
+                          className: o()(x.expandedFolderIconWrapper, f),
                           children: v
                       })
                     : (0, i.jsx)(N, {

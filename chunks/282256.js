@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(47120);
+n.d(t, { Z: () => f }), n(47120);
 var l = n(200651),
     i = n(192379),
     r = n(120356),
@@ -9,10 +9,10 @@ var l = n(200651),
     c = n(353093),
     d = n(979264),
     m = n(438633);
-let h = i.memo(function (e) {
-    let { children: t, isOverlay: n, contextGuildId: r, ...h } = e,
-        g = i.useRef(null),
-        [f, p] = i.useState({ maskImage: 'none' }),
+let f = i.memo(function (e) {
+    let { children: t, isOverlay: n, contextGuildId: r, ...f } = e,
+        h = i.useRef(null),
+        [g, p] = i.useState({ maskImage: 'none' }),
         v = (0, u.Z)(() => {
             var e, t;
             if (n) {
@@ -20,7 +20,7 @@ let h = i.memo(function (e) {
                 return;
             }
             let l = null === (e = S.current) || void 0 === e ? void 0 : e.getBoundingClientRect(),
-                i = null === (t = g.current) || void 0 === t ? void 0 : t.getBoundingClientRect();
+                i = null === (t = h.current) || void 0 === t ? void 0 : t.getBoundingClientRect();
             if (null == l || null == i) {
                 p({ maskImage: 'none' });
                 return;
@@ -34,20 +34,20 @@ let h = i.memo(function (e) {
             p({ maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) '.concat(a, 'px)') });
         }),
         S = (0, o.y)(v),
-        I = (0, c.p0)(h.userId, r),
+        I = (0, c.p0)(f.userId, r),
         x = {
             handleResize: v,
             positionTrackerRef: S
         },
-        T = i.useRef(x);
+        E = i.useRef(x);
     i.useEffect(() => {
-        T.current = x;
+        E.current = x;
     }),
         i.useEffect(() => {
-            let { handleResize: e, positionTrackerRef: t } = T.current;
+            let { handleResize: e, positionTrackerRef: t } = E.current;
             null != t.current && e();
         }, [I]);
-    let Z = (0, s.O)(v);
+    let T = (0, s.O)(v);
     return (0, l.jsxs)('div', {
         className: a()(m.container, n && m.isOverlayContainer),
         ref: S,
@@ -58,15 +58,15 @@ let h = i.memo(function (e) {
             }),
             (0, l.jsx)('div', {
                 className: m.chipletParent,
-                ref: Z,
+                ref: T,
                 children: (0, l.jsx)('span', {
                     className: a()(m.chipletContainer, !I && n && m.noPadding),
-                    ref: g,
-                    style: f,
+                    ref: h,
+                    style: g,
                     children: (0, l.jsx)(d.ZP, {
-                        ...h,
+                        ...f,
                         contextGuildId: r,
-                        className: a()(h.className, n && m.isOverlayTag)
+                        className: a()(f.className, n && m.isOverlayTag)
                     })
                 })
             })

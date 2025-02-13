@@ -2,8 +2,8 @@ n.d(t, { Z: () => S });
 var i = n(200651),
     l = n(192379),
     r = n(442837),
-    a = n(481060),
-    o = n(239091),
+    o = n(481060),
+    a = n(239091),
     s = n(906732),
     c = n(560067),
     d = n(540059),
@@ -17,8 +17,8 @@ var i = n(200651),
     v = n(981631),
     C = n(675999),
     x = n(388032),
-    Z = n(663345);
-let I = {
+    I = n(663345);
+let Z = {
     origin: {
         x: -16,
         y: 0
@@ -31,21 +31,21 @@ let I = {
     }
 };
 function b(e) {
-    (0, o.jW)(e, async () => {
+    (0, a.jW)(e, async () => {
         let { default: e } = await n.e('9606').then(n.bind(n, 987578));
         return (t) => (0, i.jsx)(e, { ...t });
     });
 }
 function S(e) {
     let { disableTooltip: t, lastTargetNode: n } = e,
-        o = (0, r.e7)([m.Z], () => m.Z.getGuilds()),
-        S = l.useMemo(() => Object.values(o), [o]),
+        a = (0, r.e7)([m.Z], () => m.Z.getGuilds()),
+        S = l.useMemo(() => Object.values(a), [a]),
         N = (0, r.e7)([g.default], () => g.default.getCurrentUser()),
         E = l.useMemo(() => S.some((e) => e.isOwner(N)), [S, N]),
-        j = (0, a.s9z)((e) => (0, a.DEQ)(e, C.PU)),
+        j = (0, o.s9z)((e) => (0, o.DEQ)(e, C.PU)),
         { analyticsLocations: y } = (0, s.ZP)(),
-        A = (0, d.Q3)('CreateJoinGuildButton'),
-        T = (0, i.jsx)(_.Z, {
+        T = (0, d.Q3)('CreateJoinGuildButton'),
+        A = (0, i.jsx)(_.Z, {
             showPill: !1,
             id: 'create-join-button',
             onClick: () => {
@@ -63,18 +63,18 @@ function S(e) {
             selected: j,
             onContextMenu: b,
             tooltip: x.intl.string(x.t.l5WIbW),
-            icon: A ? a.oFk : a.BRu
+            icon: T ? o.oFk : o.BRu
         });
     return t
-        ? T
+        ? A
         : (0, i.jsx)('div', {
-              className: Z.tutorialContainer,
+              className: I.tutorialContainer,
               children: (0, i.jsxs)(p.Z, {
                   tutorialId: E ? 'create-more-servers' : 'create-first-server',
-                  inlineSpecs: I,
+                  inlineSpecs: Z,
                   position: 'right',
                   children: [
-                      T,
+                      A,
                       null != n &&
                           (0, i.jsx)(f.ZP, {
                               name: x.intl.string(x.t['45xjMz']),

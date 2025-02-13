@@ -9,14 +9,14 @@ var i = n(442837),
     u = n(44880);
 let c = (e) => {
     let { guildId: t, channelId: n, color: c, look: d, onAction: m } = e,
-        h = (0, i.e7)([a.Z], () => a.Z.isInChannel(n), [n]);
+        f = (0, i.e7)([a.Z], () => a.Z.isInChannel(n), [n]);
     return (0, l.jsx)(
         s.Z,
         {
             className: u.button,
             color: c,
             look: d,
-            disabled: h,
+            disabled: f,
             onClick: () => {
                 null == m || m(), r.AC(t, n);
             },

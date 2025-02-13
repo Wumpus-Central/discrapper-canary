@@ -10,14 +10,14 @@ var i = n(442837),
     c = n(102172),
     d = n(199902),
     m = n(592125),
-    h = n(585483),
-    g = n(915863),
-    f = n(981631),
+    f = n(585483),
+    h = n(915863),
+    g = n(981631),
     p = n(388032),
     v = n(394631);
 function S(e) {
     let { isCurrentUser: t, color: n, look: S, applicationStream: I, onAction: x } = e,
-        { activeStream: T, watchingOtherStream: Z } = (0, i.cj)([d.Z], () => ({
+        { activeStream: E, watchingOtherStream: T } = (0, i.cj)([d.Z], () => ({
             activeStream: d.Z.getActiveStreamForApplicationStream(I),
             watchingOtherStream:
                 null != I &&
@@ -26,16 +26,16 @@ function S(e) {
                     return t !== I.ownerId;
                 }).length > 0
         })),
-        y = (0, i.e7)([m.Z], () => m.Z.getChannel(null == I ? void 0 : I.channelId)),
-        [N, E] = (0, c.wq)(y),
-        C = (0, u.Aq)(),
-        A = null != T && null != I && T.state !== f.jm8.ENDED && T.ownerId === I.ownerId,
-        j = (e) => {
-            null != I && (null == x || x(), s.default.selectVoiceChannel(I.channelId), A || (0, o.iV)(I, { forceMultiple: e }), C.dispatch(f.CkL.POPOUT_CLOSE), h.S.dispatch(f.CkL.MODAL_CLOSE), a.Z.popAll());
+        Z = (0, i.e7)([m.Z], () => m.Z.getChannel(null == I ? void 0 : I.channelId)),
+        [y, N] = (0, c.wq)(Z),
+        A = (0, u.Aq)(),
+        C = null != E && null != I && E.state !== g.jm8.ENDED && E.ownerId === I.ownerId,
+        P = (e) => {
+            null != I && (null == x || x(), s.default.selectVoiceChannel(I.channelId), C || (0, o.iV)(I, { forceMultiple: e }), A.dispatch(g.CkL.POPOUT_CLOSE), f.S.dispatch(g.CkL.MODAL_CLOSE), a.Z.popAll());
         };
     if (null == I) return null;
-    let P = (0, c.P9)(E);
-    t ? (P = p.intl.string(p.t.XvBdeX)) : A && (P = p.intl.string(p.t.JH1SJy));
+    let j = (0, c.P9)(N);
+    t ? (j = p.intl.string(p.t.XvBdeX)) : C && (j = p.intl.string(p.t.JH1SJy));
     let b = {
         color: n,
         look: S
@@ -43,10 +43,10 @@ function S(e) {
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsxs)(
-                g.Z,
+                h.Z,
                 {
-                    disabled: t || A || !N,
-                    onClick: () => j(!1),
+                    disabled: t || C || !y,
+                    onClick: () => P(!1),
                     ...b,
                     fullWidth: !0,
                     children: [
@@ -55,20 +55,20 @@ function S(e) {
                             color: 'currentColor',
                             className: v.streamIcon
                         }),
-                        P
+                        j
                     ]
                 },
                 'play'
             ),
-            Z && !A
+            T && !C
                 ? (0, l.jsx)(r.ua7, {
                       text: p.intl.string(p.t.wCrzur),
                       children: (e) =>
-                          (0, l.jsx)(g.Z, {
+                          (0, l.jsx)(h.Z, {
                               ...e,
                               onClick: () => {
                                   var t;
-                                  null === (t = e.onClick) || void 0 === t || t.call(e), j(!0);
+                                  null === (t = e.onClick) || void 0 === t || t.call(e), P(!0);
                               },
                               ...b,
                               className: v.iconButton,

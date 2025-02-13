@@ -1,5 +1,5 @@
-t.d(n, { Z: () => r });
-var i = t(388032);
-function r(e, n, t) {
-    return t ? i.intl.string(i.t['2Ne/Y2']) : n ? i.intl.string(i.t.QZ7WSU) : e ? i.intl.string(i.t['2US87+']) : i.intl.string(i.t.wjcRFR);
+n.d(t, { Z: () => i });
+var l = n(388032);
+function i(e, t, n) {
+    return n ? l.intl.string(l.t['2Ne/Y2']) : t ? l.intl.string(l.t.QZ7WSU) : e ? l.intl.string(l.t['2US87+']) : l.intl.string(l.t.wjcRFR);
 }

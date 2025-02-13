@@ -1,8 +1,8 @@
 n.d(t, { Z: () => I });
 var i = n(200651);
 n(192379);
-var r = n(13245),
-    l = n(937889),
+var l = n(13245),
+    r = n(937889),
     o = n(703656),
     a = n(460181),
     s = n(974180),
@@ -34,7 +34,7 @@ function I(e, t, n, I) {
         title: S,
         body:
             t.content.length > 0
-                ? (0, l.ZP)(t, {
+                ? (0, r.ZP)(t, {
                       noStyleAndInteraction: !0,
                       formatInline: !0,
                       hideSimpleEmbedContent: !1
@@ -55,7 +55,7 @@ function I(e, t, n, I) {
         },
         onNotificationClick: () => {
             let n = (0, h.QF)();
-            _.ZP.isInputLocked(n) ? (b('unlock'), r.Z.setInputLocked(!1, n)) : (b('jump'), (0, o.uL)(v.Z5c.CHANNEL(e.guild_id, e.id, t.id)), c.isPlatformEmbedded && u.ZP.focus());
+            _.ZP.isInputLocked(n) ? (b('unlock'), l.Z.setInputLocked(!1, n)) : (b('jump'), (0, o.uL)(v.Z5c.CHANNEL(e.guild_id, e.id, t.id)), c.isPlatformEmbedded && u.ZP.focus());
         },
         onDismissClick: () => {
             b('dismiss');

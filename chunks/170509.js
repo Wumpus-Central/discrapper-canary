@@ -3,23 +3,23 @@ var i = n(200651);
 n(192379);
 var l = n(481060),
     r = n(933557),
-    a = n(388032),
-    o = n(135765);
+    o = n(388032),
+    a = n(135765);
 function s(e) {
     let { channel: t, category: n, ...s } = e,
         c = (0, r.ZP)(t, !0),
         d = (0, r.ZP)(n);
     return (0, i.jsx)(l.ConfirmModal, {
-        header: a.intl.string(a.t.YWMtRU),
-        confirmText: a.intl.string(a.t.eW8Gy8),
-        cancelText: a.intl.string(a.t.s4uM3d),
+        header: o.intl.string(o.t.YWMtRU),
+        confirmText: o.intl.string(o.t.eW8Gy8),
+        cancelText: o.intl.string(o.t.s4uM3d),
         confirmButtonColor: l.zxk.Colors.BRAND,
         ...s,
         children: (0, i.jsx)(l.Text, {
             variant: 'text-md/normal',
-            className: o.message,
+            className: a.message,
             selectable: !1,
-            children: a.intl.format(a.t['iKW+jY'], {
+            children: o.intl.format(o.t['iKW+jY'], {
                 channelName: c,
                 categoryName: d
             })

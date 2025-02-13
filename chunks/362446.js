@@ -1,10 +1,10 @@
 n.d(t, { Z: () => f }), n(724458);
-var i,
-    l,
-    o,
-    s = n(442837),
-    a = n(570140),
-    r = n(981631);
+var l,
+    i,
+    a,
+    r = n(442837),
+    o = n(570140),
+    s = n(981631);
 let c = {};
 function u(e) {
     let t = c[(e = null != e ? e : 'null')];
@@ -12,8 +12,8 @@ function u(e) {
         null == t &&
             (t = c[e] =
                 {
-                    state: r.hes.DISCONNECTED,
-                    quality: r.IE4.UNKNOWN,
+                    state: s.hes.DISCONNECTED,
+                    quality: s.IE4.UNKNOWN,
                     pings: [],
                     hostname: null,
                     lossRate: null
@@ -22,10 +22,10 @@ function u(e) {
     );
 }
 function d(e, t, n) {
-    let i = c[(e = null != e ? e : 'null')];
-    return null != i ? t(i) : n;
+    let l = c[(e = null != e ? e : 'null')];
+    return null != l ? t(l) : n;
 }
-class h extends (i = s.ZP.Store) {
+class h extends (l = r.ZP.Store) {
     getConnectionState(e) {
         return d(
             e,
@@ -33,7 +33,7 @@ class h extends (i = s.ZP.Store) {
                 let { state: t } = e;
                 return t;
             },
-            r.hes.DISCONNECTED
+            s.hes.DISCONNECTED
         );
     }
     getQuality(e) {
@@ -43,7 +43,7 @@ class h extends (i = s.ZP.Store) {
                 let { quality: t } = e;
                 return t;
             },
-            r.IE4.UNKNOWN
+            s.IE4.UNKNOWN
         );
     }
     getHostname(e) {
@@ -86,16 +86,16 @@ class h extends (i = s.ZP.Store) {
         );
     }
 }
-(o = 'OverlayRTCConnectionStore'),
-    (l = 'displayName') in h
-        ? Object.defineProperty(h, l, {
-              value: o,
+(a = 'OverlayRTCConnectionStore'),
+    (i = 'displayName') in h
+        ? Object.defineProperty(h, i, {
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (h[l] = o);
-let f = new h(a.Z, {
+        : (h[i] = a);
+let f = new h(o.Z, {
     OVERLAY_INITIALIZE: function (e) {
         c = e.rtcConnectionStates;
     },

@@ -1,44 +1,44 @@
-n.d(t, { U: () => p });
-var i = n(200651),
-    l = n(192379),
-    r = n(399606),
-    a = n(481060),
+n.d(t, { U: () => f });
+var l = n(200651),
+    i = n(192379),
+    a = n(399606),
+    r = n(481060),
     o = n(592125),
     s = n(922482),
     c = n(750154),
-    d = n(427679),
-    u = n(388032);
+    u = n(427679),
+    d = n(388032);
 function h(e) {
     var t, n;
     let { activity: h } = e,
-        { channelId: p } = null !== (t = (0, c.rq)(h)) && void 0 !== t ? t : {},
-        m = (0, r.e7)([d.Z], () => d.Z.getStageInstanceByChannel(p), [p]),
-        g = l.useRef(null),
-        f = l.useCallback(() => {
-            let e = o.Z.getChannel(p);
+        { channelId: f } = null !== (t = (0, c.rq)(h)) && void 0 !== t ? t : {},
+        g = (0, a.e7)([u.Z], () => u.Z.getStageInstanceByChannel(f), [f]),
+        p = i.useRef(null),
+        N = i.useCallback(() => {
+            let e = o.Z.getChannel(f);
             null != e && s.Cq(e);
-        }, [p]),
-        _ = null !== (n = null == m ? void 0 : m.topic) && void 0 !== n ? n : h.name,
-        v = u.intl.formatToPlainString(u.t['T+DNAA'], { channel: _ });
-    return (0, i.jsx)('div', {
-        ref: g,
-        children: (0, i.jsx)(a.P3F, {
-            onClick: f,
-            focusProps: { ringTarget: g },
-            children: (0, i.jsx)(a.X6q, {
+        }, [f]),
+        v = null !== (n = null == g ? void 0 : g.topic) && void 0 !== n ? n : h.name,
+        x = d.intl.formatToPlainString(d.t['T+DNAA'], { channel: v });
+    return (0, l.jsx)('div', {
+        ref: p,
+        children: (0, l.jsx)(r.P3F, {
+            onClick: N,
+            focusProps: { ringTarget: p },
+            children: (0, l.jsx)(r.X6q, {
                 variant: 'heading-sm/semibold',
-                children: v
+                children: x
             })
         })
     });
 }
-class p {
+class f {
     shouldShow(e) {
         return (0, c.JE)(e);
     }
     createHeader(e) {
         return {
-            subtitle: u.intl.string(u.t['+AJFJy']),
+            subtitle: d.intl.string(d.t['+AJFJy']),
             icon: null
         };
     }

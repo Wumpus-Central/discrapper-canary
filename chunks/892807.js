@@ -1,8 +1,8 @@
 n.d(t, { Z: () => N }), n(724458), n(653041), n(47120);
 var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    o = n.n(l),
+    l = n(192379),
+    r = n(120356),
+    o = n.n(r),
     a = n(442837),
     s = n(481060),
     d = n(410575),
@@ -23,14 +23,14 @@ var i = n(200651),
     Z = n(410955);
 function y(e) {
     let { channel: t, currentVoiceChannel: n } = e,
-        r = (0, u.KS)(t),
-        l = t.id === (null == n ? void 0 : n.id),
-        a = l ? s.TVs.colors.TEXT_POSITIVE : s.TVs.colors.INTERACTIVE_NORMAL;
+        l = (0, u.KS)(t),
+        r = t.id === (null == n ? void 0 : n.id),
+        a = r ? s.TVs.colors.TEXT_POSITIVE : s.TVs.colors.INTERACTIVE_NORMAL;
     return (0, i.jsxs)('div', {
         className: Z.channelNameContainer,
         children: [
-            null != r
-                ? (0, i.jsx)(r, {
+            null != l
+                ? (0, i.jsx)(l, {
                       color: a,
                       size: 'xs'
                   })
@@ -38,7 +38,7 @@ function y(e) {
             (0, i.jsx)(s.Text, {
                 variant: 'text-sm/semibold',
                 className: o()(Z.label, Z.channelName),
-                color: l ? 'text-positive' : 'text-normal',
+                color: r ? 'text-positive' : 'text-normal',
                 children: (0, c.F6)(t, E.default, v.Z)
             })
         ]
@@ -46,17 +46,17 @@ function y(e) {
 }
 function b(e) {
     let { channel: t, currentVoiceChannel: n } = e,
-        r = t.getGuildId(),
-        l = (0, a.e7)([g.Z], () => g.Z.getGuild(r), [r]),
+        l = t.getGuildId(),
+        r = (0, a.e7)([g.Z], () => g.Z.getGuild(l), [l]),
         o = t.id === (null == n ? void 0 : n.id);
-    return null == l
+    return null == r
         ? null
         : (0, i.jsx)('div', {
               className: Z.channelMenuSubContainer,
               children: (0, i.jsx)(s.Text, {
                   variant: 'text-xs/normal',
                   color: o ? 'text-positive' : void 0,
-                  children: l.name
+                  children: r.name
               })
           });
 }
@@ -69,17 +69,17 @@ function O(e) {
                     .map((e) => E.default.getUser(e.userId))
                     .filter(x.lm)
                     .sort((e, t) => {
-                        var n, i, r, l;
-                        return (null !== (r = null === (n = p.Z.getUserAffinity(t.id)) || void 0 === n ? void 0 : n.affinity) && void 0 !== r ? r : 0) - (null !== (l = null === (i = p.Z.getUserAffinity(e.id)) || void 0 === i ? void 0 : i.affinity) && void 0 !== l ? l : 0);
+                        var n, i, l, r;
+                        return (null !== (l = null === (n = p.Z.getUserAffinity(t.id)) || void 0 === n ? void 0 : n.affinity) && void 0 !== l ? l : 0) - (null !== (r = null === (i = p.Z.getUserAffinity(e.id)) || void 0 === i ? void 0 : i.affinity) && void 0 !== r ? r : 0);
                     }),
             [t.id]
         ),
-        r = t.getGuildId();
-    return null == r
+        l = t.getGuildId();
+    return null == l
         ? null
         : (0, i.jsx)(h.Z, {
               users: n,
-              guildId: r,
+              guildId: l,
               maxUsers: 3,
               size: s.EFr.SIZE_20,
               overflowCountClassName: Z.overflowCount,
@@ -88,11 +88,11 @@ function O(e) {
           });
 }
 function N(e) {
-    let { currentVoiceChannel: t, onClose: n, onSelect: l } = e,
+    let { currentVoiceChannel: t, onClose: n, onSelect: r } = e,
         o = (0, a.Wu)([v.Z, p.Z], () =>
             v.Z.getFriendIDs().sort((e, t) => {
-                var n, i, r, l;
-                return null == e && null == t ? 0 : null == e ? 1 : null == t ? -1 : (null !== (r = null === (n = p.Z.getUserAffinity(t)) || void 0 === n ? void 0 : n.affinity) && void 0 !== r ? r : 0) - (null !== (l = null === (i = p.Z.getUserAffinity(e)) || void 0 === i ? void 0 : i.affinity) && void 0 !== l ? l : 0);
+                var n, i, l, r;
+                return null == e && null == t ? 0 : null == e ? 1 : null == t ? -1 : (null !== (l = null === (n = p.Z.getUserAffinity(t)) || void 0 === n ? void 0 : n.affinity) && void 0 !== l ? l : 0) - (null !== (r = null === (i = p.Z.getUserAffinity(e)) || void 0 === i ? void 0 : i.affinity) && void 0 !== r ? r : 0);
             })
         ),
         c = (0, a.Wu)(
@@ -118,18 +118,18 @@ function N(e) {
                         .reduce((t, n) => {
                             let i = null == n ? void 0 : n.channelId;
                             if (null == i) return t;
-                            let r = f.Z.getChannel(i);
-                            return null != r && m.Z.can(C.Plq.CONNECT, r) && !e.has(i) && t.size < 3 && t.add(i), t;
+                            let l = f.Z.getChannel(i);
+                            return null != l && m.Z.can(C.Plq.CONNECT, l) && !e.has(i) && t.size < 3 && t.add(i), t;
                         }, new Set());
                 return [...Array.from(e), ...t].map((e) => f.Z.getChannel(e)).filter(x.lm);
             },
             [c]
         ),
-        h = r.useCallback(
+        h = l.useCallback(
             (e) => {
-                l(e), n();
+                r(e), n();
             },
-            [l, n]
+            [r, n]
         );
     return (0, i.jsx)(d.Z, {
         section: C.jXE.CONTEXT_MENU,
