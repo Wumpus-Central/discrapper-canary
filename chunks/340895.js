@@ -115,8 +115,9 @@ function P() {
 function w() {
     let e = f.default.getId();
     S.forEach((t) => {
-        let n = t;
-        l.Z.getGuildRingingUsers(n).has(e) || C(n);
+        var n;
+        let i = t;
+        null != (null === (n = _.Z.getChannel(i)) || void 0 === n ? void 0 : n.guild_id) && (l.Z.getGuildRingingUsers(i).has(e) || C(i));
     });
 }
 class M extends (r = a.ZP.Store) {
