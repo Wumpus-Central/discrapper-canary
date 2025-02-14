@@ -1,6 +1,6 @@
 n.d(t, {
-    V9: () => S,
-    ek: () => N
+    V9: () => I,
+    ek: () => S
 }),
     n(47120);
 var i = n(200651),
@@ -9,52 +9,53 @@ var i = n(200651),
     l = n.n(r),
     a = n(512969),
     o = n(481060),
-    c = n(100527),
-    d = n(906732),
-    u = n(335131),
-    m = n(341907),
-    g = n(23547),
-    h = n(790542),
-    x = n(317257),
-    _ = n(120786),
-    p = n(970815),
-    E = n(981631),
-    C = n(215023),
-    f = n(388032),
-    T = n(125709);
-let N = {
-        START: T.alignLeft,
-        END: T.alignRight
+    c = n(351773),
+    d = n(100527),
+    u = n(906732),
+    m = n(335131),
+    g = n(341907),
+    h = n(23547),
+    x = n(790542),
+    _ = n(317257),
+    p = n(120786),
+    E = n(970815),
+    C = n(981631),
+    f = n(215023),
+    T = n(388032),
+    N = n(125709);
+let S = {
+        START: N.alignLeft,
+        END: N.alignRight
     },
-    S = (e) => {
-        let { showNotificationBadge: t, ctaText: r, ctaOnClick: S, isCoachmarkEnabled: I = !0, linkText: b = f.intl.string(f.t['7f4H7O']), linkTo: v, cardAlignment: j = N.START, className: A } = e,
-            { balance: O } = (0, h.A)(),
-            [R, P] = s.useState(x.b.DEFAULT),
-            [D, y] = s.useState(!1),
-            [Z, k] = s.useState(!1),
-            L = (0, a.TH)(),
-            { analyticsLocations: B } = (0, d.ZP)(c.Z.VIRTUAL_CURRENCY_BALANCE_WIDGET),
-            M = s.useRef(null),
-            { shouldOpen: w } = (0, g.Mm)({
+    I = (e) => {
+        let { showNotificationBadge: t, ctaText: r, ctaOnClick: I, isCoachmarkEnabled: b = !0, linkText: v = T.intl.string(T.t['7f4H7O']), linkTo: j, cardAlignment: A = S.START, className: O } = e,
+            { balance: R } = (0, x.A)(),
+            [P, D] = s.useState(_.b.DEFAULT),
+            [y, Z] = s.useState(!1),
+            [k, L] = s.useState(!1),
+            B = (0, a.TH)(),
+            { analyticsLocations: M } = (0, u.ZP)(d.Z.VIRTUAL_CURRENCY_BALANCE_WIDGET),
+            w = s.useRef(null),
+            { shouldOpen: V } = (0, h.Mm)({
                 renderEarnedOrbsCoachmark: (e) => {
                     var t;
                     let { earnedOrbsQuantity: s } = e;
                     (t = {
                         earnedOrbsQuantity: s,
-                        backgroundElementRef: M,
-                        isCoachmarkEnabled: I,
-                        onCloseCallback: E.dG4,
-                        onClickPill: E.dG4,
+                        backgroundElementRef: w,
+                        isCoachmarkEnabled: b,
+                        onCloseCallback: C.dG4,
+                        onClickPill: C.dG4,
                         linkOnClick: () => {
-                            (0, m.navigateToQuestHome)();
+                            (0, g.navigateToQuestHome)();
                         },
                         ctaOnClick: () => {
-                            L.pathname !== E.Z5c.COLLECTIBLES_SHOP &&
-                                (0, u.mK)({
+                            B.pathname !== C.Z5c.COLLECTIBLES_SHOP &&
+                                (0, m.mK)({
                                     openInLayer: !1,
-                                    tab: C.AW.ORBS,
-                                    analyticsLocations: B,
-                                    analyticsSource: c.Z.VIRTUAL_CURRENCY_EARNED_ORBS_COACHMARK
+                                    tab: f.AW.ORBS,
+                                    analyticsLocations: M,
+                                    analyticsSource: d.Z.VIRTUAL_CURRENCY_EARNED_ORBS_COACHMARK
                                 });
                         }
                     }).isCoachmarkEnabled &&
@@ -65,46 +66,50 @@ let N = {
                                     ...t,
                                     ...n
                                 });
-                        }, g.cb);
+                        }, h.cb);
                 }
             }),
-            V = () => {
-                y(!D);
-            };
-        return (
-            s.useEffect(() => {
-                P(D ? x.b.SELECTED : x.b.DEFAULT);
-            }, [D, P]),
-            s.useEffect(() => {
-                I && ((0, g.wH)() || w ? (k(!0), y(!1)) : k(!1));
-            }, [I, w]),
-            (0, i.jsxs)('div', {
-                className: l()(T.container, A, {
-                    [T.hidden]: Z,
-                    [T.visible]: !Z
+            U = s.useCallback(() => {
+                let e = !y;
+                D(e ? _.b.SELECTED : _.b.DEFAULT), Z(e);
+            }, [y]);
+        s.useEffect(() => {
+            b && ((0, h.wH)() || V ? (L(!0), Z(!1)) : L(!1));
+        }, [b, V]);
+        let G = s.useCallback(() => {
+                y && U();
+            }, [y, U]),
+            F = (0, c.Z)(null, G);
+        return (0, i.jsxs)('div', {
+            className: l()(N.container, O, {
+                [N.hidden]: k,
+                [N.visible]: !k
+            }),
+            children: [
+                (0, i.jsx)(E.A4, {
+                    ref: w,
+                    balance: R,
+                    balanceWidgetMode: P,
+                    onMouseDown: (e) => {
+                        e.stopPropagation();
+                    },
+                    onClick: U,
+                    showNotificationBadge: t
                 }),
-                children: [
-                    (0, i.jsx)(p.A4, {
-                        ref: M,
-                        balance: O,
-                        balanceWidgetMode: R,
-                        onClick: V,
-                        showNotificationBadge: t
-                    }),
-                    D &&
-                        (0, i.jsx)('div', {
-                            className: l()(T.cardContainer, j),
-                            children: (0, i.jsx)(_.L, {
-                                ctaText: r,
-                                ctaOnClick: () => {
-                                    V(), S();
-                                },
-                                linkText: b,
-                                linkTo: v
-                            })
+                y &&
+                    (0, i.jsx)('div', {
+                        className: l()(N.cardContainer, A),
+                        ref: F,
+                        children: (0, i.jsx)(p.L, {
+                            ctaText: r,
+                            ctaOnClick: () => {
+                                U(), I();
+                            },
+                            linkText: v,
+                            linkTo: j
                         })
-                ]
-            })
-        );
+                    })
+            ]
+        });
     };
-S.CardAlignment = N;
+I.CardAlignment = S;
