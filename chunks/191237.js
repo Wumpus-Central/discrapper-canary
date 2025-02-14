@@ -1,16 +1,22 @@
-n.d(e, { Z: () => r });
-var i = n(200651);
+n.d(t, { Z: () => l });
+var a = n(200651);
 n(192379);
-var o = n(481060);
-let r = {
-    showAgeVerification: (t) => {
-        (0, o.ZDy)(async () => {
-            let { default: e } = await n.e('12014').then(n.bind(n, 879367));
+var r = n(481060);
+let l = {
+    showAgeVerification: (e) => {
+        (0, r.ZDy)(async () => {
+            let { default: t } = await n.e('12014').then(n.bind(n, 879367));
             return (n) =>
-                (0, i.jsx)(e, {
-                    ...t,
+                (0, a.jsx)(t, {
+                    ...e,
                     ...n
                 });
+        });
+    },
+    showAgeVerificationModal: () => {
+        (0, r.ZDy)(async () => {
+            let { default: e } = await n.e('80144').then(n.bind(n, 634997));
+            return (t) => (0, a.jsx)(e, { ...t });
         });
     }
 };
