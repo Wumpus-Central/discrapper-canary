@@ -67,7 +67,7 @@ class E extends (i = r.ZP.PersistedStore) {
         return f;
     }
 }
-l(E, 'displayName', 'UserAffinitiesStoreV2'), l(E, 'persistKey', 'UserAffinitiesStoreV2');
+l(E, 'displayName', 'UserAffinitiesV2Store'), l(E, 'persistKey', 'UserAffinitiesStoreV2');
 let v = new E(a.Z, {
     LOAD_USER_AFFINITIES_V2: p,
     LOAD_USER_AFFINITIES_V2_SUCCESS: h,
