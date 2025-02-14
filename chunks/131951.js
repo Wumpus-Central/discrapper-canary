@@ -827,7 +827,14 @@ function tF(e) {
                 !e.sidechainAvailable && t.sidechainCompression ? (tR({ sidechainCompressionSettingVersion: 0 }), ns(!1)) : e.sidechainAvailable && t.sidechainCompressionSettingVersion < eb && (tR({ sidechainCompressionSettingVersion: eb }), ns(e.sidechainEnabled));
             });
     let t = tp();
-    tA() && (t.automaticAudioSubsystem && nw(), t.audioSubsystemSettingVersion < eS && (tR({ audioSubsystemSettingVersion: eS }), t.automaticAudioSubsystem || eP.getAudioSubsystem() === ep.iA.LEGACY || nP(ep.iA.AUTOMATIC))), tG();
+    tA() && (t.automaticAudioSubsystem && nw(), t.audioSubsystemSettingVersion < eS && (tR({ audioSubsystemSettingVersion: eS }), t.automaticAudioSubsystem || eP.getAudioSubsystem() === ep.iA.LEGACY || nP(ep.iA.AUTOMATIC))),
+        (0, W.wt)({
+            location: 'MediaEngineStore',
+            autoTrackExposure: !1
+        }) &&
+            null !== t.mostRecentlyRequestedVoiceFilter &&
+            (0, Y.J_)(),
+        tG();
 }
 function tV(e) {
     let { mediaEngineState: t } = e;
@@ -1393,12 +1400,6 @@ class n3 extends (o = h.ZP.Store) {
         tT(),
             tC(),
             nR(),
-            (0, W.wt)({
-                location: 'MediaEngineStore',
-                autoTrackExposure: !1
-            }) &&
-                null !== tp().mostRecentlyRequestedVoiceFilter &&
-                (0, Y.J_)(),
             t0(),
             (tl = {
                 [ep.AN.VIDEO]: eP.supports(ep.AN.VIDEO),
