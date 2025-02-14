@@ -7,7 +7,7 @@ var s = n(120356),
     a = n(693789),
     o = n(116390),
     c = n(194733),
-    d = n(660028);
+    d = n(232474);
 let u = () =>
         (0, i.jsx)('div', {
             className: o.gifContainer,

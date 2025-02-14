@@ -14,5 +14,5 @@ t.exports = {
     closeButton: 'closeButton_f01b76',
     closeButtonIcon: 'closeButtonIcon_f01b76',
     betaBadge: 'betaBadge_f01b76',
-    orbIconContainer: 'orbIconContainer_f01b76'
+    orbIconSVG: 'orbIconSVG_f01b76'
 };

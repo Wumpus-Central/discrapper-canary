@@ -9,26 +9,26 @@ var n = i(200651),
     d = i(400842),
     _ = i(271267),
     u = i(981631),
-    E = i(388032),
-    h = i(9710),
+    h = i(388032),
+    E = i(9710),
     b = i(653904);
 function A() {
     return (0, n.jsxs)('div', {
-        className: h.eligibilityHeader,
+        className: E.eligibilityHeader,
         children: [
             (0, n.jsx)(l.X6q, {
-                className: h.eligibilityHeaderText,
+                className: E.eligibilityHeaderText,
                 variant: 'heading-lg/extrabold',
                 color: 'header-primary',
-                children: E.intl.string(E.t['3s47iI'])
+                children: h.intl.string(h.t['3s47iI'])
             }),
             (0, n.jsx)('img', {
-                className: h.eligibilityHeaderImage,
+                className: E.eligibilityHeaderImage,
                 src: b,
                 alt: ''
             }),
             (0, n.jsx)(l.olH, {
-                className: h.eligibilityHeaderCloseButton,
+                className: E.eligibilityHeaderCloseButton,
                 onClick: () => {
                     (0, l.Mr3)(_.Q);
                 }
@@ -37,7 +37,7 @@ function A() {
     });
 }
 function M(e) {
-    let { eligibility: t, eligibilityLoading: i, eligibilityError: E, guildId: b, onEligibilityBecameStale: A } = e,
+    let { eligibility: t, eligibilityLoading: i, eligibilityError: h, guildId: b, onEligibilityBecameStale: A } = e,
         M = r.useMemo(
             () => ({
                 onEligibilityBecameStale: A,
@@ -52,14 +52,14 @@ function M(e) {
             [b, A]
         ),
         g = (0, o.Z)(t, M);
-    return null != E
+    return null != h
         ? (0, n.jsx)('div', {
-              className: h.paddedContainer,
-              children: (0, n.jsx)(c.Z, { children: E.message })
+              className: E.paddedContainer,
+              children: (0, n.jsx)(c.Z, { children: h.message })
           })
         : null == g || i
           ? (0, n.jsx)('div', {
-                className: h.paddedContainer,
+                className: E.paddedContainer,
                 children: (0, n.jsx)(l.$jN, {})
             })
           : (0, n.jsx)('div', {
@@ -86,7 +86,7 @@ function M(e) {
 function g(e) {
     let { eligibility: t, eligibilityLoading: i, eligibilityError: r, refreshEligibility: o, guildId: a, transitionState: s } = e;
     return (0, n.jsxs)(l.Y0X, {
-        className: h.eligibilityModal,
+        className: E.eligibilityModal,
         size: l.CgR.MEDIUM,
         transitionState: s,
         children: [

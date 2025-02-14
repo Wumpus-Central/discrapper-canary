@@ -3,50 +3,50 @@ n.d(t, {
     vs: () => i
 });
 let i = Object.values({
-    Crimson: {
+    crimson: {
         darkBackground: '#900007',
         lightBackground: '#893A99',
-        name: 'Crimson'
+        name: 'crimson'
     },
-    Berry: {
+    berry: {
         darkBackground: '#893A99',
         lightBackground: '#B11FCF',
-        name: 'Berry'
+        name: 'berry'
     },
-    Sky: {
+    sky: {
         darkBackground: '#0080B7',
         lightBackground: '#56CCFF',
-        name: 'Sky'
+        name: 'sky'
     },
-    Teal: {
+    teal: {
         darkBackground: '#086460',
         lightBackground: '#7DEED7',
-        name: 'Teal'
+        name: 'teal'
     },
-    Forest: {
+    forest: {
         darkBackground: '#2D5401',
         lightBackground: '#6AA624',
-        name: 'Forest'
+        name: 'forest'
     },
-    'Bubble Gum': {
+    bubble_gum: {
         darkBackground: '#DC3E97',
         lightBackground: '#F957B3',
-        name: 'Bubble Gum'
+        name: 'bubble_gum'
     },
-    Violet: {
+    violet: {
         darkBackground: '#730BC8',
         lightBackground: '#972FED',
-        name: 'Violet'
+        name: 'violet'
     },
-    Cobalt: {
+    cobalt: {
         darkBackground: '#0131C2',
         lightBackground: '#4278FF',
-        name: 'Cobalt'
+        name: 'cobalt'
     },
-    Clover: {
+    clover: {
         darkBackground: '#047B20',
         lightBackground: '#63CD5A',
-        name: 'Clover'
+        name: 'clover'
     }
 });
 var r = (function (e) {

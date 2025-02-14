@@ -18,14 +18,14 @@ var s = n(120356),
     x = n(388032),
     _ = n(194733),
     p = n(899088),
-    E = n(660028);
+    E = n(232474);
 let C = (e) => {
     let { earnedOrbsQuantity: t, descriptionText: n = x.intl.string(x.t['4YgBe3']), ctaText: s = x.intl.string(x.t.WYchdX), linkText: c = x.intl.string(x.t['H57f4+']), ctaOnClick: d, linkOnClick: u, linkTo: m } = e;
     return (0, i.jsxs)('div', {
         className: r()(p.container, _.baseCardOutline),
         children: [
             (0, i.jsx)('div', {
-                className: r()(p.gifContainer, { [p.centerContent]: !0 }),
+                className: r()(p.gifContainer, p.centerContent),
                 children: (0, i.jsx)('img', {
                     src: E.Z,
                     className: p.gif,
