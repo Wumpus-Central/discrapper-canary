@@ -8,8 +8,6 @@ e.exports = {
     flexFormTitle: 'flexFormTitle_cd0bbe',
     guildFeatureAvailabilityIndicator: 'guildFeatureAvailabilityIndicator_cd0bbe',
     upsell: 'upsell_cd0bbe',
-    upsellButton: 'upsellButton_cd0bbe',
-    premiumUpsellBadge: 'premiumUpsellBadge_cd0bbe',
     progressBarImage: 'progressBarImage_cd0bbe',
     marginTop16: 'marginTop16_cd0bbe',
     marginTop8: 'marginTop8_cd0bbe',

@@ -1,6 +1,7 @@
 e.exports = {
     inviteSettingsInviteRow: 'inviteSettingsInviteRow__1de14',
-    headerSection: 'headerSection__1de14',
+    header: 'header__1de14',
+    actions: 'actions__1de14',
     headerDivider: 'headerDivider__1de14',
     revokeInvite: 'revokeInvite__1de14',
     text: 'text__1de14',

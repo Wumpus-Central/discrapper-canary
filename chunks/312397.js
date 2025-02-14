@@ -35,8 +35,8 @@ var i = n(200651),
     A = n(35125),
     L = n(536442),
     D = n(142497),
-    k = n(884858),
-    O = n(516129),
+    O = n(884858),
+    k = n(516129),
     P = n(813197),
     w = n(208567),
     M = n(592125),
@@ -45,13 +45,13 @@ var i = n(200651),
     B = n(496675),
     F = n(699516),
     z = n(594174),
-    H = n(709586),
-    V = n(768581),
-    W = n(630388),
-    Y = n(823379),
-    K = n(63063),
-    q = n(434404),
-    X = n(999382),
+    H = n(768581),
+    V = n(630388),
+    W = n(823379),
+    Y = n(63063),
+    K = n(434404),
+    q = n(999382),
+    X = n(157176),
     Q = n(203377),
     J = n(981631),
     $ = n(30513),
@@ -104,7 +104,7 @@ function ep(e) {
     };
 }
 let e_ = () => {
-    let { guild: e, originalGuild: t, submitting: n, errors: l } = (0, u.cj)([X.Z], () => X.Z.getProps()),
+    let { guild: e, originalGuild: t, submitting: n, errors: l } = (0, u.cj)([q.Z], () => q.Z.getProps()),
         s = r.useMemo(() => (0, Q.LG)(l), [l]),
         a = r.useCallback(() => {
             if (null == e) return;
@@ -127,10 +127,10 @@ let e_ = () => {
                 homeHeader: e.homeHeader,
                 profile: e.profile
             };
-            (0, Y.OL)(new Set(e.features), new Set(t.features)) || (n.features = e.features), q.Z.saveGuild(e.id, n);
+            (0, W.OL)(new Set(e.features), new Set(t.features)) || (n.features = e.features), K.Z.saveGuild(e.id, n);
         }, [e, t]),
         o = r.useCallback(() => {
-            null != e && q.Z.init(e.id);
+            null != e && K.Z.init(e.id);
         }, [e]);
     return (0, i.jsx)(x.Z, {
         submitting: n,
@@ -153,34 +153,34 @@ class eC extends r.PureComponent {
         }
     }
     handleNameChange(e) {
-        q.Z.updateGuild({ name: e });
+        K.Z.updateGuild({ name: e });
     }
     handleAFKChannelChange(e) {
-        e === ea && (e = null), q.Z.updateGuild({ afkChannelId: e });
+        e === ea && (e = null), K.Z.updateGuild({ afkChannelId: e });
     }
     handleAFKTimeoutChange(e) {
-        q.Z.updateGuild({ afkTimeout: parseInt(e, 10) });
+        K.Z.updateGuild({ afkTimeout: parseInt(e, 10) });
     }
     handleSystemChannelChange(e) {
-        e === eo && (e = null), q.Z.updateGuild({ systemChannelId: e });
+        e === eo && (e = null), K.Z.updateGuild({ systemChannelId: e });
     }
     handleDefaultMessageNotificationsChange(e) {
         let { value: t } = e;
-        q.Z.updateGuild({ defaultMessageNotifications: t });
+        K.Z.updateGuild({ defaultMessageNotifications: t });
     }
     handleSplashChange(e) {
-        q.Z.updateGuild({ splash: e });
+        K.Z.updateGuild({ splash: e });
     }
     handleSystemChannelFlagsChange(e, t) {
         let { guild: n } = this.props,
-            i = (0, W.mB)(n.systemChannelFlags, e, t);
-        q.Z.updateGuild({ systemChannelFlags: i });
+            i = (0, V.mB)(n.systemChannelFlags, e, t);
+        K.Z.updateGuild({ systemChannelFlags: i });
     }
     handlePremiumProgressBarEnabledChange(e) {
-        q.Z.updateGuild({ premiumProgressBarEnabled: e });
+        K.Z.updateGuild({ premiumProgressBarEnabled: e });
     }
     handleChangeDescription(e) {
-        q.Z.updateGuild({ description: e });
+        K.Z.updateGuild({ description: e });
     }
     renderBaseSettings() {
         let { guild: e, errors: t, canManageGuild: n } = this.props;
@@ -202,7 +202,7 @@ class eC extends r.PureComponent {
                                     disabled: !n,
                                     hint: en.intl.string(en.t['6yrpFR']),
                                     makeURL: (t) =>
-                                        V.ZP.getGuildIconURL({
+                                        H.ZP.getGuildIconURL({
                                             id: e.id,
                                             icon: t,
                                             canAnimate: !0,
@@ -372,8 +372,8 @@ class eC extends r.PureComponent {
             label: en.intl.string(en.t.ibUhoa)
         });
         let c = (0, A.eI)(t),
-            u = c || (0, W.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS),
-            m = c || (0, W.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES);
+            u = c || (0, V.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS),
+            m = c || (0, V.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES);
         return (0, i.jsxs)(g.hjN, {
             className: ei.divider,
             children: [
@@ -394,7 +394,7 @@ class eC extends r.PureComponent {
                 (0, i.jsx)(g.j7V, {
                     className: ei.marginTop20,
                     onChange: this.handleShowJoinsChange,
-                    value: !(0, W.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_JOIN_NOTIFICATIONS),
+                    value: !(0, V.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_JOIN_NOTIFICATIONS),
                     hideBorder: !0,
                     disabled: !r || a === eo,
                     children: en.intl.string(en.t['+f0bXV'])
@@ -402,7 +402,7 @@ class eC extends r.PureComponent {
                 (0, i.jsx)(g.j7V, {
                     className: s()(ei.__invalid_marginReset, ei.marginTop20),
                     onChange: this.handleShowJoinRepliesChange,
-                    value: !(0, W.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES),
+                    value: !(0, V.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES),
                     hideBorder: !0,
                     disabled: !r || a === eo,
                     children: en.intl.string(en.t['72k7jY'])
@@ -410,7 +410,7 @@ class eC extends r.PureComponent {
                 (0, i.jsx)(g.j7V, {
                     className: s()(ei.__invalid_marginReset, ei.marginTop20),
                     onChange: this.handleShowSubscriptionsChange,
-                    value: !(0, W.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_PREMIUM_SUBSCRIPTIONS),
+                    value: !(0, V.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_PREMIUM_SUBSCRIPTIONS),
                     hideBorder: !0,
                     disabled: !r || a === eo,
                     children: en.intl.string(en.t['2L8NCA'])
@@ -418,7 +418,7 @@ class eC extends r.PureComponent {
                 (0, i.jsx)(g.j7V, {
                     className: s()(ei.__invalid_marginReset, ei.marginTop20),
                     onChange: this.handleShowGuildRemindersChange,
-                    value: !(0, W.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_GUILD_REMINDER_NOTIFICATIONS),
+                    value: !(0, V.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_GUILD_REMINDER_NOTIFICATIONS),
                     hideBorder: !0,
                     disabled: !r || a === eo,
                     children: en.intl.string(en.t['NvnW+f'])
@@ -427,7 +427,7 @@ class eC extends r.PureComponent {
                     (0, i.jsx)(g.j7V, {
                         className: s()(ei.__invalid_marginReset, ei.marginTop20),
                         onChange: this.handleShowGuildRoleSubscriptionPurchaseMessages,
-                        value: !(0, W.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS),
+                        value: !(0, V.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS),
                         hideBorder: !0,
                         disabled: !r || a === eo,
                         children: en.intl.string(en.t['54n19f'])
@@ -436,7 +436,7 @@ class eC extends r.PureComponent {
                     (0, i.jsx)(g.j7V, {
                         className: s()(ei.__invalid_marginReset, ei.marginTop20),
                         onChange: this.handleShowGuildRoleSubscriptionPurchaseMessageRepliesChange,
-                        value: !(0, W.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES),
+                        value: !(0, V.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES),
                         hideBorder: !0,
                         disabled: !r || a === eo,
                         children: en.intl.string(en.t.IhF5d3)
@@ -445,7 +445,7 @@ class eC extends r.PureComponent {
                     (0, i.jsx)(g.j7V, {
                         className: s()(ei.__invalid_marginReset, ei.marginTop20),
                         onChange: this.handleShowDeadchatPromptMessageChange,
-                        value: !(0, W.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_CHANNEL_PROMPT_DEADCHAT),
+                        value: !(0, V.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_CHANNEL_PROMPT_DEADCHAT),
                         hideBorder: !0,
                         disabled: !r || a === eo,
                         children: (0, i.jsxs)('div', {
@@ -529,7 +529,7 @@ class eC extends r.PureComponent {
                           onChange: this.handleConversationSummariesToggle,
                           value: e.hasFeature(J.oNc.SUMMARIES_ENABLED_BY_USER),
                           hideBorder: !0,
-                          note: en.intl.format(en.t['c6Cy/v'], { helpdeskArticle: K.Z.getArticleURL(J.BhN.CONVERSATION_SUMMARIES) }),
+                          note: en.intl.format(en.t['c6Cy/v'], { helpdeskArticle: Y.Z.getArticleURL(J.BhN.CONVERSATION_SUMMARIES) }),
                           disabled: !t,
                           children: (0, i.jsxs)('div', {
                               className: ei.badgedItem,
@@ -551,11 +551,11 @@ class eC extends r.PureComponent {
         let { guild: e, canManageGuild: t } = this.props,
             n = e.hasFeature(J.oNc.INVITE_SPLASH),
             r = t && n,
-            l = (0, i.jsx)(O.Z, {
+            l = (0, i.jsx)(k.Z, {
                 image: e.splash,
                 makeURL: (t) =>
                     null != t
-                        ? V.ZP.getGuildSplashURL({
+                        ? H.ZP.getGuildSplashURL({
                               id: e.id,
                               splash: t
                           })
@@ -565,7 +565,7 @@ class eC extends r.PureComponent {
                 hint: en.intl.string(en.t.uPvxqK),
                 enabled: r,
                 maxFileSizeBytes: et.B,
-                onFileSizeError: () => (0, k.Z)(et.B)
+                onFileSizeError: () => (0, O.Z)(et.B)
             });
         return (0, i.jsx)('div', {
             ref: this._inviteSectionRef,
@@ -599,7 +599,7 @@ class eC extends r.PureComponent {
                                 }),
                                 (0, i.jsx)(g.R94, {
                                     type: g.geA.DESCRIPTION,
-                                    children: en.intl.format(en.t.ZYA9PT, { articleURL: K.Z.getArticleURL(J.BhN.GUILD_INVITE_SPLASH) })
+                                    children: en.intl.format(en.t.ZYA9PT, { articleURL: Y.Z.getArticleURL(J.BhN.GUILD_INVITE_SPLASH) })
                                 }),
                                 n
                                     ? (0, i.jsxs)(g.zxk, {
@@ -612,11 +612,14 @@ class eC extends r.PureComponent {
                                                   disabled: !r,
                                                   onChange: this.handleSplashChange,
                                                   maxFileSizeBytes: et.B,
-                                                  onFileSizeError: () => (0, k.Z)(et.B)
+                                                  onFileSizeError: () => (0, O.Z)(et.B)
                                               })
                                           ]
                                       })
-                                    : this.uploadBGUpsellButton(this.handleInviteSplashUpsellButton)
+                                    : (0, i.jsx)(X.e, {
+                                          className: ei.marginTop16,
+                                          onClick: this.handleInviteSplashUpsellButton
+                                      })
                             ]
                         }),
                         (0, i.jsx)(T.Z.Child, {
@@ -642,11 +645,11 @@ class eC extends r.PureComponent {
             r = e.hasFeature(J.oNc.BANNER),
             l = e.hasFeature(J.oNc.ANIMATED_BANNER),
             s = r && t,
-            a = (0, i.jsx)(O.Z, {
+            a = (0, i.jsx)(k.Z, {
                 image: e.banner,
                 makeURL: (t) =>
                     null != t
-                        ? V.ZP.getGuildBannerURL(
+                        ? H.ZP.getGuildBannerURL(
                               {
                                   id: e.id,
                                   banner: t
@@ -717,9 +720,14 @@ class eC extends r.PureComponent {
                             }),
                             (0, i.jsx)(g.R94, {
                                 type: g.geA.DESCRIPTION,
-                                children: en.intl.format(en.t.vBcWUl, { articleURL: K.Z.getArticleURL(J.BhN.GUILD_BANNER_SPLASH) })
+                                children: en.intl.format(en.t.vBcWUl, { articleURL: Y.Z.getArticleURL(J.BhN.GUILD_BANNER_SPLASH) })
                             }),
-                            r ? o : this.uploadBGUpsellButton(this.handleBannerUpsellButton)
+                            r
+                                ? o
+                                : (0, i.jsx)(X.e, {
+                                      className: ei.marginTop16,
+                                      onClick: this.handleBannerUpsellButton
+                                  })
                         ]
                     }),
                     (0, i.jsx)(T.Z.Child, {
@@ -803,7 +811,7 @@ class eC extends r.PureComponent {
             es(this, '_inviteSectionRef', r.createRef()),
             es(this, '_notificationSectionRef', r.createRef()),
             es(this, 'handleIconChange', (e) => {
-                q.Z.updateGuild({ icon: e });
+                K.Z.updateGuild({ icon: e });
             }),
             es(this, 'handleOpenImageEditingModal', (e, t) => {
                 (0, g.ZDy)(async () => {
@@ -838,7 +846,7 @@ class eC extends r.PureComponent {
             }),
             es(this, 'handleHomeHeaderChange', (e, t) => {
                 if (null == e || void 0 === t) {
-                    q.Z.updateGuild({ homeHeader: null });
+                    K.Z.updateGuild({ homeHeader: null });
                     return;
                 }
                 (0, g.ZDy)(async () => {
@@ -847,7 +855,7 @@ class eC extends r.PureComponent {
                         (0, i.jsx)(r, {
                             imgURI: e,
                             file: t,
-                            onCrop: (e) => q.Z.updateGuild({ homeHeader: e }),
+                            onCrop: (e) => K.Z.updateGuild({ homeHeader: e }),
                             uploadType: ee.pC.HOME_HEADER,
                             ...n
                         });
@@ -886,7 +894,7 @@ class eC extends r.PureComponent {
                         return;
                     }
                 }
-                q.Z.updateGuild({ banner: e });
+                K.Z.updateGuild({ banner: e });
             }),
             es(this, 'handleShowModalUpsell', (e, t, n, i) => {
                 e.preventDefault(), e.stopPropagation();
@@ -931,35 +939,18 @@ class eC extends r.PureComponent {
             es(this, 'handleConversationSummariesToggle', (e) => {
                 let { guild: t } = this.props,
                     n = new Set(t.features);
-                e ? n.add(J.oNc.SUMMARIES_ENABLED_BY_USER) : n.delete(J.oNc.SUMMARIES_ENABLED_BY_USER), q.Z.updateGuild({ features: n });
+                e ? n.add(J.oNc.SUMMARIES_ENABLED_BY_USER) : n.delete(J.oNc.SUMMARIES_ENABLED_BY_USER), K.Z.updateGuild({ features: n });
             }),
             es(this, 'handleShowActivityFeedToggle', (e) => {
                 let { guild: t } = this.props,
                     n = new Set(t.features);
-                e ? (n.add(J.oNc.ACTIVITY_FEED_ENABLED_BY_USER), n.delete(J.oNc.ACTIVITY_FEED_DISABLED_BY_USER)) : (n.add(J.oNc.ACTIVITY_FEED_DISABLED_BY_USER), n.delete(J.oNc.ACTIVITY_FEED_ENABLED_BY_USER)), q.Z.updateGuild({ features: n });
-            }),
-            es(this, 'uploadBGUpsellButton', (e) =>
-                (0, i.jsxs)(g.gtL, {
-                    color: g.zxk.Colors.GREEN,
-                    className: s()(ei.marginTop16),
-                    innerClassName: ei.upsellButton,
-                    onClick: e,
-                    children: [
-                        (0, i.jsx)(H.Z, {
-                            height: 16,
-                            width: 16,
-                            className: ei.premiumUpsellBadge
-                        }),
-                        ' ',
-                        en.intl.string(en.t['+7XY39'])
-                    ]
-                })
-            );
+                e ? (n.add(J.oNc.ACTIVITY_FEED_ENABLED_BY_USER), n.delete(J.oNc.ACTIVITY_FEED_DISABLED_BY_USER)) : (n.add(J.oNc.ACTIVITY_FEED_DISABLED_BY_USER), n.delete(J.oNc.ACTIVITY_FEED_ENABLED_BY_USER)), K.Z.updateGuild({ features: n });
+            });
     }
 }
 function ef() {
     var e;
-    let { guild: t, errors: n, submitting: l, subsection: s } = (0, u.cj)([X.Z], () => X.Z.getProps()),
+    let { guild: t, errors: n, submitting: l, subsection: s } = (0, u.cj)([q.Z], () => q.Z.getProps()),
         a = (0, _.ZP)(),
         { analyticsLocations: c } = (0, v.ZP)(C.Z.OVERVIEW);
     r.useEffect(() => {

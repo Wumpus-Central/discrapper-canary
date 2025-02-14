@@ -30,8 +30,8 @@ var i = n(200651),
     A = n(823379),
     L = n(434404),
     D = n(360606),
-    k = n(946724),
-    O = n(999382),
+    O = n(946724),
+    k = n(999382),
     P = n(44550),
     w = n(853714),
     M = n(359191),
@@ -108,7 +108,7 @@ let eb = {
                     element: e_.Z,
                     type: o.bT.SCROLLABLE_CUSTOM,
                     notice: {
-                        stores: [O.Z],
+                        stores: [k.Z],
                         element: eC.Z
                     }
                 };
@@ -138,11 +138,13 @@ let eb = {
                 };
             case ev.pNK.INVITES:
                 return {
-                    section: ev.pNK.OVERVIEW,
+                    section: ev.pNK.INVITES,
                     impressionName: r.ImpressionNames.GUILD_SETTINGS_INVITES_V2,
                     label: eI.intl.string(eI.t.YOt3Oj),
                     ariaLabel: eI.intl.string(eI.t.YOt3Oj),
-                    element: em.Z
+                    element: em.Z,
+                    type: o.bT.CUSTOM,
+                    predicate: () => t.canManageGuild
                 };
             case ev.pNK.OVERVIEW:
                 return {
@@ -152,7 +154,7 @@ let eb = {
                     ariaLabel: eI.intl.string(eI.t['/dp6yc']),
                     element: et.Z,
                     notice: {
-                        stores: [O.Z],
+                        stores: [k.Z],
                         element: et.O
                     }
                 };
@@ -165,7 +167,7 @@ let eb = {
                     type: o.bT.MINIMAL,
                     ariaLabel: eI.intl.string(eI.t.KXcECw),
                     notice: {
-                        stores: [k.Z],
+                        stores: [O.Z],
                         element: F._
                     },
                     predicate: () => t.canManageRoles
@@ -250,7 +252,7 @@ let eb = {
                     ariaLabel: eI.intl.string(eI.t.CIsNZ2),
                     element: Q.Z,
                     notice: {
-                        stores: [D.default, O.Z],
+                        stores: [D.default, k.Z],
                         element: Q.j
                     },
                     predicate: () => t.canManageGuild || t.canManageWebhooks || t.canUnlinkChannels
@@ -351,7 +353,7 @@ let eb = {
                     ariaLabel: t.guild.hasFeature(ev.oNc.COMMUNITY) ? eI.intl.string(eI.t['/dp6yc']) : eI.intl.string(eI.t.ElKTeX),
                     newIndicator: !t.guild.hasFeature(ev.oNc.COMMUNITY) && null != t.memberCount && t.memberCount >= ej.U3 && b.qc.hasHotspot(b.v6.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL),
                     notice: {
-                        stores: [O.Z],
+                        stores: [k.Z],
                         element: W.X
                     }
                 };
@@ -395,7 +397,7 @@ let eb = {
                     label: eI.intl.string(eI.t.oGaVGx),
                     element: K.Z,
                     notice: {
-                        stores: [O.Z],
+                        stores: [k.Z],
                         element: K.s
                     },
                     predicate: () => !t.memberVerificationRolloutEnabled && t.canManageGuild && t.guild.hasFeature(ev.oNc.COMMUNITY),
@@ -412,7 +414,7 @@ let eb = {
                     ariaLabel: eI.intl.string(eI.t.kGlQGB),
                     element: q.Z,
                     notice: {
-                        stores: [O.Z],
+                        stores: [k.Z],
                         element: q.J
                     },
                     type: o.bT.CUSTOM,
