@@ -19,8 +19,10 @@ function u(e, t, n) {
     );
 }
 function c() {
-    let { enabled: e } = s.c.getCurrentConfig({ location: 'VoiceFiltersCatalogManager' }, { autoTrackExposure: !1 });
-    return e;
+    return (0, s.wt)({
+        location: 'VoiceFiltersCatalogManager',
+        autoTrackExposure: !1
+    });
 }
 class d extends r.Z {
     _initialize() {}

@@ -1,8 +1,10 @@
 n.d(t, {
-    H: () => r,
-    c: () => i
+    Hu: () => o,
+    wt: () => s
 });
-let i = (0, n(818083).B)({
+var i = n(818083),
+    r = n(358085);
+let a = (0, i.B)({
     kind: 'user',
     id: '2024-10_flamingo',
     label: 'Flamingo',
@@ -25,7 +27,13 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-function r(e) {
-    let { enabled: t } = i.useExperiment({ location: e }, { autoTrackExposure: !0 });
-    return t;
+function s(e) {
+    let { location: t, autoTrackExposure: n } = e,
+        { enabled: i } = a.getCurrentConfig({ location: t }, { autoTrackExposure: n });
+    return i && (0, r.isDesktop)();
+}
+function o(e) {
+    let { location: t, autoTrackExposure: n } = e,
+        { enabled: i } = a.useExperiment({ location: t }, { autoTrackExposure: n });
+    return i && (0, r.isDesktop)();
 }

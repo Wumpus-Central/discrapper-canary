@@ -681,7 +681,10 @@ function eW(e) {
         { mode: b } = (0, ea.ZP)({ location: 'RTC Microphone Button' }),
         O = null != o ? o : (0, M.Z)(t, n, r, a, b === ea.BK.GroupedButtonsRedMic),
         { analyticsLocations: P } = (0, y.ZP)(L.Z.AUDIO_INPUT_BUTTON),
-        R = (0, ed.H)(L.Z.AUDIO_INPUT_BUTTON);
+        R = (0, ed.Hu)({
+            location: L.Z.AUDIO_INPUT_BUTTON,
+            autoTrackExposure: !0
+        });
     l.useEffect(() => () => Z(), [I, Z]);
     let j = l.useCallback(
             (e) => {

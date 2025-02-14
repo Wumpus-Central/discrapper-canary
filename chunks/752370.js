@@ -31,8 +31,10 @@ let v = 30 * f.Z.Millis.MINUTE,
     y = 10 * f.Z.Millis.SECOND,
     I = new a.Z('VoiceFilterFeedbackManager');
 function T() {
-    let { enabled: e } = p.c.getCurrentConfig({ location: 'VoiceFilterFeedbackManager' }, { autoTrackExposure: !1 });
-    return e;
+    return (0, p.wt)({
+        location: 'VoiceFilterFeedbackManager',
+        autoTrackExposure: !1
+    });
 }
 class b extends r.Z {
     handleMediaEngineStoreChange() {

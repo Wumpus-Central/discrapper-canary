@@ -1393,7 +1393,12 @@ class n3 extends (o = h.ZP.Store) {
         tT(),
             tC(),
             nR(),
-            W.c.getCurrentConfig({ location: 'MediaEngineStore' }, { autoTrackExposure: !1 }).enabled && null !== tp().mostRecentlyRequestedVoiceFilter && (0, Y.J_)(),
+            (0, W.wt)({
+                location: 'MediaEngineStore',
+                autoTrackExposure: !1
+            }) &&
+                null !== tp().mostRecentlyRequestedVoiceFilter &&
+                (0, Y.J_)(),
             t0(),
             (tl = {
                 [ep.AN.VIDEO]: eP.supports(ep.AN.VIDEO),

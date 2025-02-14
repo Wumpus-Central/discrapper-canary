@@ -22,8 +22,10 @@ function f(e, t, n) {
     );
 }
 function _() {
-    let { enabled: e } = c.c.getCurrentConfig({ location: 'VoiceFilterLoopbackManager' }, { autoTrackExposure: !1 });
-    return e;
+    return (0, c.wt)({
+        location: 'VoiceFilterLoopbackManager',
+        autoTrackExposure: !1
+    });
 }
 class p extends r.Z {
     handleExperimentStateChange() {

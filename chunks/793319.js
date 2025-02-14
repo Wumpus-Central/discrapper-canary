@@ -397,7 +397,10 @@ let eS = function (e) {
         { reachedLimit: $, limit: ee } = (0, es.Z)(a),
         { analyticsLocations: ed } = (0, E.ZP)(v.Z.VOICE_CONTROL_TRAY),
         ep = (0, er.Z)(a),
-        ef = (0, J.H)(v.Z.VOICE_CONTROL_TRAY);
+        ef = (0, J.Hu)({
+            location: v.Z.VOICE_CONTROL_TRAY,
+            autoTrackExposure: !0
+        });
     if (!W)
         return (0, i.jsx)(E.Gt, {
             value: ed,
