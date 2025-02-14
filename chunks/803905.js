@@ -1,99 +1,100 @@
 n.d(t, {
-    $0: () => O,
-    AN: () => k,
-    Ct: () => N,
-    EQ: () => Z,
-    Ej: () => b,
-    ME: () => h,
-    O1: () => I,
-    O8: () => L,
-    Pl: () => T,
-    Ry: () => A,
-    Uw: () => P,
-    ZE: () => M,
-    _G: () => y,
-    _O: () => S,
-    _y: () => m,
-    do: () => U,
-    g7: () => D,
-    g_: () => _,
-    hs: () => E,
-    j4: () => R,
-    ks: () => V,
-    lX: () => v,
-    m_: () => p,
-    qH: () => x,
-    tj: () => g,
-    uw: () => C,
-    wN: () => B,
-    zZ: () => G,
-    zm: () => w
+    $0: () => D,
+    AN: () => U,
+    Ct: () => C,
+    EQ: () => F,
+    Ej: () => S,
+    ME: () => m,
+    O1: () => T,
+    O8: () => x,
+    Pl: () => b,
+    Ry: () => N,
+    Uw: () => w,
+    ZE: () => k,
+    _G: () => I,
+    _O: () => A,
+    _y: () => g,
+    do: () => G,
+    g7: () => L,
+    g_: () => p,
+    hs: () => v,
+    j4: () => O,
+    ks: () => j,
+    lX: () => y,
+    m_: () => h,
+    qH: () => P,
+    tj: () => E,
+    uw: () => R,
+    wN: () => Z,
+    zZ: () => B,
+    zm: () => M
 });
 var i = n(848246),
     r = n(710845),
     a = n(380684),
     s = n(533293),
-    o = n(575691),
-    l = n(474936);
-let u = new r.Z('ProductCatalog.tsx'),
-    c = Object.freeze({
-        [l.p9.TIER_0]: l.Si.TIER_0,
-        [l.p9.TIER_1]: l.Si.TIER_1,
-        [l.p9.TIER_2]: l.Si.TIER_2
+    o = n(526998),
+    l = n(575691),
+    u = n(474936);
+let c = new r.Z('ProductCatalog.tsx'),
+    d = Object.freeze({
+        [u.p9.TIER_0]: u.Si.TIER_0,
+        [u.p9.TIER_1]: u.Si.TIER_1,
+        [u.p9.TIER_2]: u.Si.TIER_2
     });
-function d(e, t) {
+function f(e, t) {
     if (null == t || null == t.premiumType) return !1;
     try {
-        let n = c[t.premiumType];
-        if (null == n) return u.warn("Cannot find the corresponding SKU to the user's premium type ".concat(t.premiumType)), !1;
-        let i = F[n];
-        if (null == i) return u.warn("Cannot find the corresponding product catalog entry to the user's SKU ".concat(n, ' and premium type ').concat(t.premiumType)), !1;
+        let n = d[t.premiumType];
+        if (null == n) return c.warn("Cannot find the corresponding SKU to the user's premium type ".concat(t.premiumType)), !1;
+        let i = V[n];
+        if (null == i) return c.warn("Cannot find the corresponding product catalog entry to the user's SKU ".concat(n, ' and premium type ').concat(t.premiumType)), !1;
         return i.skuFeatures.includes(e);
     } catch (e) {
         var n;
-        u.error("Error while retrieving user's feature access: ".concat(null !== (n = e.message) && void 0 !== n ? n : JSON.stringify(e)));
+        c.error("Error while retrieving user's feature access: ".concat(null !== (n = e.message) && void 0 !== n ? n : JSON.stringify(e)));
     }
     return !1;
 }
-class f extends s.Z {
+class _ extends s.Z {
     constructor(e, t) {
-        super(e, (e) => d(this, e), t);
+        super(e, (e) => f(this, e), t);
     }
 }
-let _ = new f(i.q.ANIMATED_EMOJIS),
-    p = new f(i.q.EMOJIS_EVERYWHERE),
-    h = new f(i.q.STICKERS_EVERYWHERE),
-    m = new f(i.q.SOUNDBOARD_EVERYWHERE),
-    g = new f(i.q.CUSTOM_CALL_SOUNDS),
-    E = new f(i.q.PREMIUM_VOICE_FILTERS),
-    v = new f(i.q.ANIMATED_AVATAR),
-    y = new f(i.q.CUSTOM_DISCRIMINATOR),
-    I = new f(i.q.PREMIUM_GUILD_MEMBER_PROFILE),
-    T = new f('profileBadges'),
-    b = new f(i.q.PROFILE_PREMIUM_FEATURES, 'custom banner and avatar decoration'),
-    S = new f('collectibles'),
-    A = new f(i.q.INCREASED_RECENT_AVATARS_LIMIT),
-    N = new f('appIcons'),
-    C = new f(i.q.CLIENT_THEMES),
-    R = new f('boostDiscount'),
-    O = new f('freeBoosts'),
-    D = new f(i.q.STREAM_MID_QUALITY),
-    L = new f(i.q.STREAM_HIGH_QUALITY),
-    x = new f(i.q.CUSTOM_NOTIFICATION_SOUNDS),
-    P = new f('fancyVoiceChannelReactions'),
-    w = new f('installPremiumApplications'),
-    M = new f('redeemPremiumPerks'),
-    k = new f(i.q.VIDEO_FILTER_ASSETS);
+let p = new _(i.q.ANIMATED_EMOJIS),
+    h = new _(i.q.EMOJIS_EVERYWHERE),
+    m = new _(i.q.STICKERS_EVERYWHERE),
+    g = new _(i.q.SOUNDBOARD_EVERYWHERE),
+    E = new _(i.q.CUSTOM_CALL_SOUNDS),
+    v = new _(i.q.PREMIUM_VOICE_FILTERS),
+    y = new _(i.q.ANIMATED_AVATAR),
+    I = new _(i.q.CUSTOM_DISCRIMINATOR),
+    T = new _(i.q.PREMIUM_GUILD_MEMBER_PROFILE),
+    b = new _('profileBadges'),
+    S = new _(i.q.PROFILE_PREMIUM_FEATURES, 'custom banner and avatar decoration'),
+    A = new _('collectibles'),
+    N = new _(i.q.INCREASED_RECENT_AVATARS_LIMIT),
+    C = new _('appIcons'),
+    R = new _(i.q.CLIENT_THEMES),
+    O = new _('boostDiscount'),
+    D = new _('freeBoosts'),
+    L = new _(i.q.STREAM_MID_QUALITY),
+    x = new _(i.q.STREAM_HIGH_QUALITY),
+    P = new _(i.q.CUSTOM_NOTIFICATION_SOUNDS),
+    w = new _('fancyVoiceChannelReactions'),
+    M = new _('installPremiumApplications'),
+    k = new _('redeemPremiumPerks'),
+    U = new _(i.q.VIDEO_FILTER_ASSETS);
 new s.Z(i.q.INCREASED_FILE_UPLOAD_SIZE, a.h);
-let U = new f(i.q.INCREASED_GUILD_LIMIT),
-    G = new f(i.q.INCREASED_MESSAGE_LENGTH),
-    B = new f('increasedVideoUploadQuality'),
-    Z = new f('uploadLargeFiles'),
-    F = Object.freeze({
-        [l.Si.TIER_0]: new o.Z(l.Si.TIER_0, [_, p, h, T, k, B, Z, N]),
-        [l.Si.TIER_1]: new o.Z(l.Si.TIER_1, [_, p, v, y, T, R, D, P, B, Z, N]),
-        [l.Si.TIER_2]: new o.Z(l.Si.TIER_2, [_, p, h, m, g, v, y, I, T, b, C, R, O, D, L, P, w, M, k, U, G, B, Z, N, S, x, E, A])
+let G = new _(i.q.INCREASED_GUILD_LIMIT),
+    B = new _(i.q.INCREASED_MESSAGE_LENGTH),
+    Z = new _('increasedVideoUploadQuality'),
+    F = new _('uploadLargeFiles'),
+    V = Object.freeze({
+        [u.Si.TIER_0]: new l.Z(u.Si.TIER_0, [p, h, m, b, U, Z, F, C]),
+        [u.Si.TIER_1]: new l.Z(u.Si.TIER_1, [p, h, y, I, b, O, L, w, Z, F, C]),
+        [u.Si.TIER_2]: new l.Z(u.Si.TIER_2, [p, h, m, g, E, y, I, T, b, S, R, O, D, L, x, w, M, k, U, G, B, Z, F, C, A, P, v, N])
     });
-function V(e, t) {
-    return e.getFeatureValue(t);
+function j(e, t) {
+    return !(0, o.U)('canUserUse', t) && e.getFeatureValue(t);
 }
