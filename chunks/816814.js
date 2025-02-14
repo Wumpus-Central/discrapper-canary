@@ -31,36 +31,15 @@ let s = {
                 rejectWithError: !1
             })
         ).body,
-    verifyEmailCode: async (e) =>
-        (
-            await n.tn.post({
-                url: o.ANM.MFA_TOTP_ENABLE_VERIFY,
-                body: { code: e },
-                rejectWithError: !1
-            })
-        ).body,
-    resendEmailCode: (e) =>
-        n.tn.post({
-            url: o.ANM.MFA_TOTP_ENABLE_RESEND,
-            body: { password: e },
-            rejectWithError: !1
-        }),
-    setEmailToken(e) {
-        r.Z.dispatch({
-            type: 'MFA_ENABLE_EMAIL_TOKEN',
-            token: e
-        });
-    },
     enable(e) {
-        let { password: t, code: i, secret: l, emailToken: a } = e;
+        let { password: t, code: i, secret: l } = e;
         return n.tn
             .post({
                 url: o.ANM.MFA_TOTP_ENABLE,
                 body: {
                     code: i,
                     secret: l,
-                    password: t,
-                    email_token: a
+                    password: t
                 },
                 oldFormErrors: !0,
                 rejectWithError: !1

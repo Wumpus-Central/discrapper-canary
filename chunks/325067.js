@@ -1,4 +1,4 @@
-i.d(t, { Z: () => g });
+i.d(t, { Z: () => M });
 var n,
     r,
     l,
@@ -9,16 +9,15 @@ var n,
     d = i(570140);
 let _ = !1,
     u = [],
-    E = '',
     h = '',
-    b = !1,
-    A = {
+    E = !1,
+    b = {
         viewNonce: '',
         regenerateNonce: ''
     };
-class M extends (l = c.ZP.Store) {
+class A extends (l = c.ZP.Store) {
     getVerificationKey() {
-        return E;
+        return h;
     }
     getBackupCodes() {
         return u;
@@ -27,32 +26,25 @@ class M extends (l = c.ZP.Store) {
         return _;
     }
     getNonces() {
-        return A;
-    }
-    get emailToken() {
-        return h;
+        return b;
     }
     get hasSeenBackupPrompt() {
-        return b;
+        return E;
     }
 }
 (r = 'MFAStore'),
-    (n = 'displayName') in M
-        ? Object.defineProperty(M, n, {
+    (n = 'displayName') in A
+        ? Object.defineProperty(A, n, {
               value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (M[n] = r);
-let g = new M(d.Z, {
+        : (A[n] = r);
+let M = new A(d.Z, {
     MFA_ENABLE_SUCCESS: function (e) {
         let { token: t, codes: i } = e;
         void 0 !== t && s.setToken(t), (u = i);
-    },
-    MFA_ENABLE_EMAIL_TOKEN: function (e) {
-        let { token: t } = e;
-        h = t;
     },
     MFA_DISABLE_SUCCESS: function (e) {
         let { token: t } = e;
@@ -69,13 +61,13 @@ let g = new M(d.Z, {
     },
     MFA_VIEW_BACKUP_CODES: function (e) {
         let { codes: t, key: i } = e;
-        (u = a().sortBy(t, 'code')), (E = i);
+        (u = a().sortBy(t, 'code')), (h = i);
     },
     MFA_SEND_VERIFICATION_KEY: function (e) {
         let { nonces: t } = e;
-        A = t;
+        b = t;
     },
     MFA_SEEN_BACKUP_CODE_PROMPT: function () {
-        b = !0;
+        E = !0;
     }
 });
