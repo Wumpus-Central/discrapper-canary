@@ -85,9 +85,10 @@ function N(e) {
         i = (0, c.JX)({ location: 'notification-center' }),
         r = new Set();
     e.relationships.forEach((e) => {
-        let { type: a, user: s, since: o, is_spam_request: l, user_ignored: u, origin_application_id: c } = e,
-            d = i && u;
-        if ((d && null != s && r.add(s.id), a !== g.OGo.PENDING_INCOMING || l || d || null == s || null == o)) return null;
+        let { type: a, user: s, since: o, is_spam_request: l, user_ignored: u, origin_application_id: c } = e;
+        if (null == s) return null;
+        let d = i && u;
+        if ((d && r.add(s.id), a !== g.OGo.PENDING_INCOMING || l || d || null == o)) return null;
         let f = _.default.getUser(s.id);
         if (null == f) return null;
         let p = n ? c : void 0;
@@ -96,7 +97,7 @@ function N(e) {
         n &&
             e.gameRelationships.forEach((e) => {
                 let { type: n, id: i, application_id: a, since: s } = e;
-                if (null == i || r.has(i) || null == s || n !== g.OGo.PENDING_INCOMING) return;
+                if (n !== g.OGo.PENDING_INCOMING || r.has(i)) return;
                 let o = _.default.getUser(i);
                 null != o && t.push((0, m.LF)(o, s, a));
             }),
@@ -193,11 +194,10 @@ function B(e) {
     if (f.Z.isBlockedOrIgnored(n)) return !1;
     if (i === g.OGo.PENDING_INCOMING) {
         let e = _.default.getUser(n);
-        if (null != r && null != e) return (v.notifCenterLocalItems = [...v.notifCenterLocalItems, (0, m.LF)(e, r, a)]), !0;
-    }
-    return (
-        i === g.OGo.FRIEND &&
-        ((v.notifCenterLocalItems = v.notifCenterLocalItems.map((e) =>
+        null != r && null != e && (v.notifCenterLocalItems = [...v.notifCenterLocalItems, (0, m.LF)(e, r, a)]);
+    } else {
+        if (i !== g.OGo.FRIEND) return !1;
+        v.notifCenterLocalItems = v.notifCenterLocalItems.map((e) =>
             k(e, h.O7.INCOMING_GAME_FRIEND_REQUESTS, n, a)
                 ? {
                       ...e,
@@ -207,9 +207,8 @@ function B(e) {
                       type: h.O7.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED
                   }
                 : e
-        )),
-        !0)
-    );
+        );
+    }
 }
 function Z(e) {
     let { userId: t, applicationId: n } = e;
