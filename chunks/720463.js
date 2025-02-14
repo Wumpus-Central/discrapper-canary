@@ -13,8 +13,8 @@ var s = n(120356),
     d = n(790542),
     u = n(317257),
     m = n(970815),
-    h = n(741808),
-    g = n(981631),
+    g = n(741808),
+    h = n(981631),
     x = n(388032),
     _ = n(194733),
     p = n(899088),
@@ -72,10 +72,10 @@ function f(e) {
         E = async () => {
             await (0, c.j2)(), await a(), o();
         };
-    return (0, i.jsxs)(h.X, {
+    return (0, i.jsxs)(g.X, {
         className: p.coachmarkModalContainer,
         backgroundElementRef: n,
-        onGetBoundingRect: g.dG4,
+        onGetBoundingRect: h.dG4,
         getOffsetsRelativeToElement: () => ({
             top: 0,
             right: 0
@@ -91,7 +91,6 @@ function f(e) {
                     await E(), s();
                 },
                 balance: _,
-                placeholderBalance: null != _ ? _ : 0,
                 balanceWidgetMode: u.b.DEFAULT
             }),
             (0, i.jsx)(C, {

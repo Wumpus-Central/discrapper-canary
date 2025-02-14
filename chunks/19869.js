@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(335131),
     u = n(703656),
     m = n(511050),
-    h = n(52647),
-    g = n(317257),
+    g = n(52647),
+    h = n(317257),
     x = n(120786),
     _ = n(775451),
     p = n(970815),
@@ -29,21 +29,22 @@ function b() {
 function v() {
     let { openIntroToOrbsClaimedCoachmark: e } = (0, m.l)({ location: 'VirtualCurrencyComponents' }),
         [t, n] = s.useState(150),
-        [h, E] = s.useState(150),
-        [C, I] = s.useState(g.b.DEFAULT),
-        b = () => {
-            switch (C) {
-                case g.b.DEFAULT:
-                    I(g.b.HIGHLIGHTED);
+        [g, E] = s.useState(150),
+        [C, I] = s.useState(500),
+        [b, v] = s.useState(h.b.DEFAULT),
+        j = () => {
+            switch (b) {
+                case h.b.DEFAULT:
+                    v(h.b.HIGHLIGHTED);
                     break;
-                case g.b.HIGHLIGHTED:
-                    I(g.b.SELECTED);
+                case h.b.HIGHLIGHTED:
+                    v(h.b.SELECTED);
                     break;
-                case g.b.SELECTED:
-                    I(g.b.DEFAULT);
+                case h.b.SELECTED:
+                    v(h.b.DEFAULT);
             }
         },
-        { analyticsLocations: v } = (0, c.ZP)(o.Z.PAYMENT_FLOW_TEST_PAGE);
+        { analyticsLocations: A } = (0, c.ZP)(o.Z.PAYMENT_FLOW_TEST_PAGE);
     return (0, i.jsxs)(f.$0, {
         children: [
             (0, i.jsx)(l.X6q, {
@@ -83,7 +84,7 @@ function v() {
                                 (0, u.s1)().location.pathname.includes(T.Z5c.COLLECTIBLES_SHOP) ||
                                     (0, d.mK)({
                                         openInLayer: !1,
-                                        analyticsLocations: v,
+                                        analyticsLocations: A,
                                         analyticsSource: o.Z.REVENUE_STORYBOOK_TEST_PAGE
                                     }),
                                 e(!0);
@@ -97,20 +98,24 @@ function v() {
                 children: [
                     (0, i.jsx)(p.A4, {
                         balance: 150,
-                        balanceWidgetMode: g.b.DEFAULT
+                        balanceWidgetMode: h.b.DEFAULT
                     }),
                     (0, i.jsx)(p.A4, {
                         balance: 150,
-                        balanceWidgetMode: g.b.HIGHLIGHTED
+                        balanceWidgetMode: h.b.HIGHLIGHTED
                     }),
                     (0, i.jsx)(p.A4, {
                         balance: 150,
-                        balanceWidgetMode: g.b.SELECTED
+                        balanceWidgetMode: h.b.SELECTED
                     }),
                     (0, i.jsx)(p.A4, {
                         balance: 0,
-                        balanceWidgetMode: g.b.DEFAULT,
+                        balanceWidgetMode: h.b.DEFAULT,
                         showNotificationBadge: !0
+                    }),
+                    (0, i.jsx)(p.A4, {
+                        balance: null,
+                        balanceWidgetMode: h.b.DEFAULT
                     })
                 ]
             }),
@@ -121,7 +126,7 @@ function v() {
                     (0, i.jsx)(l.Text, {
                         variant: 'text-md/normal',
                         style: { marginBottom: '4px' },
-                        children: 'Enter a number to see the balance widget pill update:'
+                        children: 'Enter a number and click Set Balance to see the balance widget pill update:'
                     }),
                     (0, i.jsx)(l.FiK, {
                         className: S.numberInput,
@@ -132,10 +137,32 @@ function v() {
                         onClick: () => E(t),
                         children: 'Set Balance'
                     }),
-                    (0, i.jsx)(p.A4, {
-                        balance: h,
-                        balanceWidgetMode: C,
-                        onClick: () => b()
+                    (0, i.jsx)(l.Text, {
+                        variant: 'text-md/normal',
+                        style: { marginBottom: '4px' },
+                        children: 'Enter a number (loading time in milliseconds) and click Simulate Loading State to see the balance widget pill update:'
+                    }),
+                    (0, i.jsx)(l.FiK, {
+                        className: S.numberInput,
+                        value: C,
+                        onChange: (e) => I(e)
+                    }),
+                    (0, i.jsx)(r.zx, {
+                        onClick: () => {
+                            E(null),
+                                setTimeout(() => {
+                                    E(t);
+                                }, C);
+                        },
+                        children: 'Simulate Loading State'
+                    }),
+                    (0, i.jsx)('div', {
+                        className: S.interactivePillContainer,
+                        children: (0, i.jsx)(p.A4, {
+                            balance: g,
+                            balanceWidgetMode: b,
+                            onClick: () => j()
+                        })
                     })
                 ]
             }),
@@ -151,7 +178,7 @@ function v() {
     });
 }
 function j() {
-    let { resetOnboardingAnnouncementModal: e } = (0, h.Z)();
+    let { resetOnboardingAnnouncementModal: e } = (0, g.Z)();
     return (0, i.jsxs)(f.$0, {
         children: [
             (0, i.jsx)(l.X6q, {

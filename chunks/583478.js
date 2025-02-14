@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(47120);
+n.d(t, { Z: () => f }), n(47120);
 var i = n(200651),
     s = n(192379),
     r = n(120356),
@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(48541),
     u = n(287153);
 let m = new o.Z('BalanceCounter'),
-    h = (0, c.dU)(void 0) === d.C.PRODUCTION,
-    g = {
+    g = (0, c.dU)(void 0) === d.C.PRODUCTION,
+    h = {
         jump: 1,
         duration: 1
     },
@@ -19,24 +19,24 @@ let m = new o.Z('BalanceCounter'),
             {
                 delta: 200,
                 duration: 1000,
-                tickConfig: { ...g }
+                tickConfig: { ...h }
             },
             {
                 delta: 500,
                 duration: 2000,
-                tickConfig: { ...g }
+                tickConfig: { ...h }
             }
         ].sort((e, t) => e.delta - t.delta),
         NEGATIVE: [
             {
                 delta: 1000,
                 duration: 1000,
-                tickConfig: { ...g }
+                tickConfig: { ...h }
             },
             {
                 delta: 4000,
                 duration: 2000,
-                tickConfig: { ...g }
+                tickConfig: { ...h }
             }
         ].sort((e, t) => e.delta - t.delta)
     },
@@ -66,7 +66,7 @@ function p(e, t) {
         }
     }
 })(),
-    h ||
+    g ||
         m.log('Initializing data structures for BalanceCounter speed and tick configurations: ', {
             MAX_ANIMATION_DURATION_MS: 3000,
             ANIMATION_THRESHOLDS: x
@@ -82,16 +82,17 @@ let E = (e, t, n, i) => {
             duration: 1
         };
     },
-    C = (e) => {
-        let { value: t, placeholderValue: n } = e,
+    C = (e) => (null === e ? 0 : ''.concat(e).length),
+    f = (e) => {
+        let { value: t, className: n } = e,
             [r, o] = (0, s.useState)(null),
             c = (0, s.useRef)(null),
             d = (0, s.useRef)(null),
-            g = (0, s.useRef)(null);
+            h = (0, s.useRef)(null);
         (0, s.useEffect)(() => {
             if (null === t) return;
             let e = null !== d.current ? t - d.current : t;
-            g.current = {
+            h.current = {
                 lastChangedAt: Date.now(),
                 totalDelta: Math.abs(e),
                 changeType: e > 0 ? 'POSITIVE' : 'NEGATIVE'
@@ -99,16 +100,19 @@ let E = (e, t, n, i) => {
         }, [t]),
             (0, s.useEffect)(() => {
                 var e;
-                if (null === t) return;
+                if (null === t) {
+                    null !== r && o(null);
+                    return;
+                }
                 if (null === r || null === d.current) {
                     o(t), (d.current = t);
                     return;
                 }
                 if (r === t) {
-                    if (!h && null !== g.current) {
+                    if (!g && null !== h.current) {
                         let e = Date.now();
                         m.log('Balance Counter finished updating: ', {
-                            time: e - g.current.lastChangedAt,
+                            time: e - h.current.lastChangedAt,
                             delta: r - d.current
                         });
                     }
@@ -117,7 +121,7 @@ let E = (e, t, n, i) => {
                 }
                 if (null !== c.current) return;
                 let { totalDelta: n, changeType: i } =
-                        null !== (e = g.current) && void 0 !== e
+                        null !== (e = h.current) && void 0 !== e
                             ? e
                             : {
                                   totalDelta: Math.abs(t - d.current),
@@ -128,12 +132,15 @@ let E = (e, t, n, i) => {
                     (c.current = null), r < t ? o(r + s) : r > t && o(r - s);
                 }, l);
             }, [r, t, o]);
-        let x = null === r ? n : r,
-            _ = null !== x ? ''.concat(x).length : 1;
+        let x = null === t,
+            _ = null === r ? C(t) : C(r);
         return (0, i.jsx)(a.Text, {
             variant: 'text-md/semibold',
-            className: l()(u.balanceCounterText),
-            style: { width: ''.concat(_, 'ch') },
-            children: x
+            className: l()([u.balanceCounterText, n]),
+            style: {
+                width: 'calc('.concat(x ? 0 : _, 'ch + ').concat(x ? '0px' : '8px', ')'),
+                opacity: x ? 0 : 1
+            },
+            children: r
         });
     };

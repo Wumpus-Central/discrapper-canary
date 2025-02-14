@@ -13,8 +13,8 @@ var i = n(200651),
     d = n(906732),
     u = n(335131),
     m = n(341907),
-    h = n(23547),
-    g = n(790542),
+    g = n(23547),
+    h = n(790542),
     x = n(317257),
     _ = n(120786),
     p = n(970815),
@@ -28,14 +28,14 @@ let N = {
     },
     S = (e) => {
         let { showNotificationBadge: t, ctaText: r, ctaOnClick: S, isCoachmarkEnabled: I = !0, linkText: b = f.intl.string(f.t['7f4H7O']), linkTo: v, cardAlignment: j = N.START, className: A } = e,
-            { balance: O } = (0, g.A)(),
+            { balance: O } = (0, h.A)(),
             [R, P] = s.useState(x.b.DEFAULT),
             [D, y] = s.useState(!1),
             [Z, k] = s.useState(!1),
             L = (0, a.TH)(),
             { analyticsLocations: B } = (0, d.ZP)(c.Z.VIRTUAL_CURRENCY_BALANCE_WIDGET),
             M = s.useRef(null),
-            { shouldOpen: w } = (0, h.Mm)({
+            { shouldOpen: w } = (0, g.Mm)({
                 renderEarnedOrbsCoachmark: (e) => {
                     var t;
                     let { earnedOrbsQuantity: s } = e;
@@ -65,7 +65,7 @@ let N = {
                                     ...t,
                                     ...n
                                 });
-                        }, h.cb);
+                        }, g.cb);
                 }
             }),
             V = () => {
@@ -76,7 +76,7 @@ let N = {
                 P(D ? x.b.SELECTED : x.b.DEFAULT);
             }, [D, P]),
             s.useEffect(() => {
-                I && ((0, h.wH)() || w ? (k(!0), y(!1)) : k(!1));
+                I && ((0, g.wH)() || w ? (k(!0), y(!1)) : k(!1));
             }, [I, w]),
             (0, i.jsxs)('div', {
                 className: l()(T.container, A, {
@@ -87,7 +87,6 @@ let N = {
                     (0, i.jsx)(p.A4, {
                         ref: M,
                         balance: O,
-                        placeholderBalance: null != O ? O : 0,
                         balanceWidgetMode: R,
                         onClick: V,
                         showNotificationBadge: t
