@@ -15,10 +15,10 @@ function f(e) {
     let t = (0, a.F6)(e, d.default, s.Z),
         n = p.intl.string(p.t.ssrVzM),
         f = (0, o.x)(e),
-        g = (0, u.Z)(e),
-        { trackView: m, trackClick: v } = (0, c.R)(h.n0.IncomingCall, {
+        m = (0, u.Z)(e),
+        { trackView: g, trackClick: v } = (0, c.R)(h.n0.IncomingCall, {
             notif_type: h.n0.IncomingCall,
-            notif_user_id: g,
+            notif_user_id: m,
             guild_id: e.guild_id,
             channel_id: e.id,
             channel_type: e.type
@@ -30,7 +30,7 @@ function f(e) {
         confirmText: p.intl.string(p.t['0D/6R0']),
         cancelText: p.intl.string(p.t.BVN4pK),
         onNotificationShow: () => {
-            m();
+            g();
         },
         onConfirmClick: (t, n) => {
             if ((v('join'), _.TPd.CALLABLE.has(e.type))) i.Z.call(e.id, !1, !1);

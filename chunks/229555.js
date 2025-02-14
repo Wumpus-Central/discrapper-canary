@@ -10,7 +10,7 @@ var s = n(120356),
     d = n(474936),
     u = n(388032),
     m = n(734073);
-let h = (e, t) => {
+let g = (e, t) => {
         if ((null == e ? void 0 : e.status) === o.Vq.EARNED) {
             var n;
             return 2 === e.badgeVersion ? u.intl.format(u.t.Hu4jfn, { date: null != t ? t : new Date() }) : u.intl.format(u.t.zl7yMD, { date: null !== (n = e.earnedOnDate) && void 0 !== n ? n : new Date() });
@@ -22,7 +22,7 @@ let h = (e, t) => {
               })
             : null;
     },
-    g = (e) => {
+    h = (e) => {
         switch (e) {
             case d.JN.PREMIUM_TENURE_1_MONTH:
             case d.w7.PREMIUM_TENURE_1_MONTH:
@@ -64,7 +64,7 @@ let h = (e, t) => {
             f = (0, a.q)(d, p);
         return 1 === x
             ? (0, i.jsxs)('div', {
-                  className: r()(m.container, g(d)),
+                  className: r()(m.container, h(d)),
                   children: [
                       (0, i.jsx)('div', {}),
                       ' ',
@@ -83,14 +83,14 @@ let h = (e, t) => {
                               }),
                               (0, i.jsx)(l.xv, {
                                   variant: 'text-xs/normal',
-                                  children: h(t)
+                                  children: g(t)
                               })
                           ]
                       })
                   ]
               })
             : (0, i.jsxs)('div', {
-                  className: r()(m.container, g(d)),
+                  className: r()(m.container, h(d)),
                   children: [
                       (0, i.jsx)('div', {}),
                       ' ',
@@ -117,7 +117,7 @@ let h = (e, t) => {
                               }),
                               (0, i.jsx)(l.xv, {
                                   variant: 'text-xs/normal',
-                                  children: h(t, n)
+                                  children: g(t, n)
                               })
                           ]
                       })

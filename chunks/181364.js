@@ -4,8 +4,8 @@ n(192379);
 var s = n(13245),
     l = n(593481),
     a = n(371651),
-    r = n(237997),
-    o = n(145597),
+    o = n(237997),
+    r = n(145597),
     d = n(312839),
     c = n(987650),
     u = n(388032);
@@ -27,11 +27,11 @@ function g(e) {
             notifType: m
         } = (function (e, t) {
             if (t.type === c.nc.NEWS) {
-                var n, i, s, l, a, r, o, d;
+                var n, i, s, l, a, o, r, d;
                 return {
                     icon: null !== (a = null === (n = t.news) || void 0 === n ? void 0 : n.icon) && void 0 !== a ? a : e.icon,
-                    title: null !== (r = null === (i = t.news) || void 0 === i ? void 0 : i.title) && void 0 !== r ? r : e.title,
-                    body: null !== (o = null === (s = t.news) || void 0 === s ? void 0 : s.body) && void 0 !== o ? o : e.body,
+                    title: null !== (o = null === (i = t.news) || void 0 === i ? void 0 : i.title) && void 0 !== o ? o : e.title,
+                    body: null !== (r = null === (s = t.news) || void 0 === s ? void 0 : s.body) && void 0 !== r ? r : e.body,
                     hint: null !== (d = null === (l = t.news) || void 0 === l ? void 0 : l.hint) && void 0 !== d ? d : e.hint,
                     notifType: null != t.news ? c.n0.NewsNudge : e.notifType
                 };
@@ -56,7 +56,7 @@ function g(e) {
             f();
         },
         onNotificationClick: (e, n) => {
-            v('unlock'), t === c.nc.NEWS && s.Z.updateNotificationStatus(n), a.default.isOverlayOOPEnabledForPid((0, o.QF)()) ? s.Z.setInputLocked(!1, (0, o.QF)()) : r.Z.isInstanceLocked() && s.Z.setInstanceLocked(!1);
+            v('unlock'), t === c.nc.NEWS && s.Z.updateNotificationStatus(n), a.default.isOverlayOOPEnabledForPid((0, r.QF)()) ? s.Z.setInputLocked(!1, (0, r.QF)()) : o.Z.isInstanceLocked() && s.Z.setInstanceLocked(!1);
         },
         onDismissClick: () => {
             v('dismiss');

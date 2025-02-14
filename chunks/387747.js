@@ -10,8 +10,8 @@ var s = n(410575),
     d = n(541540),
     u = n(206339),
     m = n(726985),
-    h = n(981631),
-    g = n(932653);
+    g = n(981631),
+    h = n(932653);
 function x() {
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -19,36 +19,36 @@ function x() {
                 setting: m.s6.GIFT_NITRO,
                 children: (0, i.jsx)(a.Z, {
                     location: r.Z.USER_SETTINGS_GIFT_INVENTORY,
-                    className: g.giftNitro,
-                    imageClassName: g.giftNitroImage,
+                    className: h.giftNitro,
+                    imageClassName: h.giftNitroImage,
                     textContainerOverrideStyles: {
                         padding: '32px',
                         width: '360px'
                     },
                     analyticsLocation: {
-                        page: h.ZY5.GIFTING_SETTINGS,
-                        section: h.jXE.GIFT_BANNER
+                        page: g.ZY5.GIFTING_SETTINGS,
+                        section: g.jXE.GIFT_BANNER
                     }
                 })
             }),
             (0, i.jsx)(c.F, {
                 setting: m.s6.GIFT_CODE_REDEMPTION,
                 children: (0, i.jsx)(s.Z, {
-                    section: h.jXE.LIBRARY_INVENTORY_CODE_REDEMPTION,
+                    section: g.jXE.LIBRARY_INVENTORY_CODE_REDEMPTION,
                     children: (0, i.jsx)(d.Z, {})
                 })
             }),
             (0, i.jsx)(c.F, {
                 setting: m.s6.GIFT_INVENTORY_QUESTS,
                 children: (0, i.jsx)(s.Z, {
-                    section: h.jXE.QUESTS,
+                    section: g.jXE.QUESTS,
                     children: (0, i.jsx)(o.Z, {})
                 })
             }),
             (0, i.jsx)(c.F, {
                 setting: m.s6.GIFT_INVENTORY_LIST,
                 children: (0, i.jsx)(s.Z, {
-                    section: h.jXE.LIBRARY_INVENTORY_GIFTS_LIST,
+                    section: g.jXE.LIBRARY_INVENTORY_GIFTS_LIST,
                     children: (0, i.jsx)(u.Z, {})
                 })
             }),

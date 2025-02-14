@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(692547),
     u = n(481060),
     m = n(230711),
-    h = n(129861),
-    g = n(279837),
+    g = n(129861),
+    h = n(279837),
     x = n(952306),
     _ = n(299206),
     p = n(295474),
@@ -42,9 +42,9 @@ function U(e) {
     let { className: a, user: o } = e,
         c = s.useRef(null),
         m = (0, C.o9)(),
-        h = (0, f.b)(),
-        g = (0, p.gS)(),
-        x = null !== (r = null == g ? void 0 : null === (t = g.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== r ? r : null,
+        g = (0, f.b)(),
+        h = (0, p.gS)(),
+        x = null !== (r = null == h ? void 0 : null === (t = h.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== r ? r : null,
         [_, E] = s.useState(!1);
     s.useEffect(() => {
         E(null != c.current && c.current.scrollWidth > c.current.clientWidth);
@@ -86,7 +86,7 @@ function U(e) {
                     ]
                 })
             }),
-            h &&
+            g &&
                 (0, i.jsx)('div', {
                     className: w.pomeloWarning,
                     children: (0, i.jsx)(u.ua7, {
@@ -129,7 +129,7 @@ function U(e) {
                         'aria-label': M.intl.string(M.t['JECa9/']),
                         onClick: () =>
                             (0, u.ZDy)(async () => {
-                                if (h) {
+                                if (g) {
                                     let { default: e } = await Promise.all([n.e('85342'), n.e('13494')]).then(n.bind(n, 193049));
                                     return (t) =>
                                         (0, i.jsx)(e, {
@@ -154,11 +154,11 @@ function G(e) {
         o = (0, p.gS)(),
         c = null !== (n = null == o ? void 0 : null === (t = o.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== n ? n : null,
         m = R.ZP.getGlobalName(r),
-        h = s.useRef(null),
-        [g, x] = s.useState(!1);
+        g = s.useRef(null),
+        [h, x] = s.useState(!1);
     return (
         s.useEffect(() => {
-            x(null != h.current && h.current.scrollWidth > h.current.clientWidth);
+            x(null != g.current && g.current.scrollWidth > g.current.clientWidth);
         }, [m]),
         (0, i.jsxs)('div', {
             className: l()(w.field, a),
@@ -174,7 +174,7 @@ function G(e) {
                             }),
                             (0, i.jsx)('div', {
                                 className: w.usernameInnerRow,
-                                ref: h,
+                                ref: g,
                                 children: (0, i.jsx)(u.Text, {
                                     tag: 'span',
                                     color: 'header-primary',
@@ -207,7 +207,7 @@ function G(e) {
                     color: u.zxk.Colors.PRIMARY,
                     'aria-label': M.intl.string(M.t.YXeWYG),
                     onClick: W,
-                    children: g ? M.intl.string(M.t['16kTw8']) : M.intl.string(M.t.bt75u7)
+                    children: h ? M.intl.string(M.t['16kTw8']) : M.intl.string(M.t.bt75u7)
                 })
             ]
         })
@@ -356,7 +356,7 @@ function z(e) {
                                   'aria-label': M.intl.string(M.t.Rpn4Aw),
                                   onClick: function () {
                                       (0, u.h7j)((e) =>
-                                          (0, i.jsx)(g.default, {
+                                          (0, i.jsx)(h.default, {
                                               ...e,
                                               title: M.intl.string(M.t['3CTiKi']),
                                               children: r.hasFlag(k.xW$.MFA_SMS) ? M.intl.string(M.t.jrhJys) : void 0,
@@ -473,7 +473,7 @@ function K() {
                             (0, i.jsxs)('div', {
                                 className: w.profileCardUsernameRow,
                                 children: [
-                                    (0, i.jsx)(h.Z, {
+                                    (0, i.jsx)(g.Z, {
                                         user: t,
                                         className: w.userTag,
                                         discriminatorClass: w.discriminator

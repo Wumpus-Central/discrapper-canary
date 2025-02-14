@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(709586),
     u = n(267642),
     m = n(981631),
-    h = n(388032),
-    g = n(502247);
+    g = n(388032),
+    h = n(502247);
 let x = function () {
     let e = s.useRef(null),
         { analyticsLocations: t } = (0, l.ZP)(),
@@ -47,24 +47,24 @@ let x = function () {
     }
     let E = (0, u.aq)({ fractionalState: x });
     return (0, i.jsxs)('div', {
-        className: g.wrapper,
+        className: h.wrapper,
         children: [
             (0, i.jsx)(d.Z, {
-                className: g.boostIcon,
+                className: h.boostIcon,
                 width: 16,
                 height: 16
             }),
             (0, i.jsx)(r.Text, {
-                className: g.copy,
+                className: h.copy,
                 color: 'header-secondary',
                 variant: 'text-sm/medium',
-                children: h.intl.format(h.t.kqC5vr, {
+                children: g.intl.format(g.t.kqC5vr, {
                     boostAnyGuildHook: (e, t) => {
                         let n = null != E,
                             s = (0, i.jsx)(
                                 r.zxk,
                                 {
-                                    className: g.cta,
+                                    className: h.cta,
                                     disabled: n,
                                     color: r.zxk.Colors.LINK,
                                     look: r.zxk.Looks.LINK,

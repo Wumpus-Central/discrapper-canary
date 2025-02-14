@@ -1,9 +1,9 @@
 n.d(t, {
     $s: () => I,
-    AV: () => g,
+    AV: () => h,
     Hg: () => b,
     Kn: () => S,
-    Nq: () => h,
+    Nq: () => g,
     TW: () => _,
     pn: () => p,
     uv: () => f,
@@ -20,8 +20,8 @@ var i = n(442837),
     d = n(796634),
     u = n(981631),
     m = n(388032);
-let h = '40%',
-    g = 8,
+let g = '40%',
+    h = 8,
     x = (e) => {
         let { hasSentAll: t, hasSentAtLeastOne: n, numSentUsers: i, helpdeskArticle: s } = e;
         return t
@@ -85,9 +85,9 @@ let h = '40%',
             case u.g2L.NOT_ELIGIBLE:
                 return n ? m.intl.string(m.t.M47CJS) : m.intl.string(m.t.USo4s7);
             case u.g2L.ELIGIBLE:
-                if (i.sent < 2) return m.intl.formatToPlainString(m.t.md2GU1, { discountRate: h });
+                if (i.sent < 2) return m.intl.formatToPlainString(m.t.md2GU1, { discountRate: g });
                 if (i.redeemed === d.Q) return m.intl.string(m.t.SRJkUV);
-                return m.intl.formatToPlainString(m.t.O8mswM, { discountRate: h });
+                return m.intl.formatToPlainString(m.t.O8mswM, { discountRate: g });
             case u.g2L.QUALIFIED:
             case u.g2L.COOLDOWN:
             case u.g2L.UNAPPLIED:
@@ -106,7 +106,7 @@ let h = '40%',
                 });
             case u.g2L.ELIGIBLE:
                 let r = {
-                    discountRate: h,
+                    discountRate: g,
                     learnMoreLink: t,
                     subscriptionInterval: m.intl.string(m.t.FPybU1)
                 };

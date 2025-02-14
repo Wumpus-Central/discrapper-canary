@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(18438),
     u = n(778825),
     m = n(851894),
-    h = n(484459),
-    g = n(216045),
+    g = n(484459),
+    h = n(216045),
     x = n(839469),
     _ = n(25990),
     p = n(594174),
@@ -46,7 +46,7 @@ function v() {
         }
     }
     s.useEffect(() => {
-        null != j && (0, h.Z)(j.id, j.getAvatarURL(null == v ? void 0 : v.id, 80), { guildId: null == v ? void 0 : v.id });
+        null != j && (0, g.Z)(j.id, j.getAvatarURL(null == v ? void 0 : v.id, 80), { guildId: null == v ? void 0 : v.id });
     }, [null == v ? void 0 : v.id, j]);
     let Z = !0,
         k = !0;
@@ -91,7 +91,7 @@ function v() {
                                 : null
                         ]
                     }),
-                    A === N.NB.GUILD ? (0, i.jsx)(m.Z, { selectedGuild: v }) : (0, i.jsx)(g.Z, {})
+                    A === N.NB.GUILD ? (0, i.jsx)(m.Z, { selectedGuild: v }) : (0, i.jsx)(h.Z, {})
                 ]
             })
         })

@@ -9,19 +9,19 @@ var i = n(200651),
     d = n(716161),
     u = n(672339),
     m = n(747545),
-    h = n(131951),
-    g = n(594174),
+    g = n(131951),
+    h = n(594174),
     x = n(981631),
     _ = n(388032),
     p = n(130529);
 function E(e) {
     let { previewEnabled: t, onEnablePreview: n, onCancelPreview: E } = e,
-        C = h.Z.getCameraComponent(),
-        [f, T] = s.useState((0, c.P)(g.default.getCurrentUser())),
+        C = g.Z.getCameraComponent(),
+        [f, T] = s.useState((0, c.P)(h.default.getCurrentUser())),
         N = s.useRef(!1),
         S = s.useRef(f),
         I = (0, o.O)(),
-        b = (0, r.e7)([h.Z], () => h.Z.isVideoAvailable());
+        b = (0, r.e7)([g.Z], () => g.Z.isVideoAvailable());
     return (
         s.useEffect(
             () => () => {

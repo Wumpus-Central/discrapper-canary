@@ -14,8 +14,8 @@ var i = n(200651),
     d = n(158153),
     u = n(280942),
     m = n(314684),
-    h = n(209747),
-    g = n(430824),
+    g = n(209747),
+    h = n(430824),
     x = n(267642),
     _ = n(709054),
     p = n(357956),
@@ -87,8 +87,8 @@ function I(e) {
           );
 }
 function b(e) {
-    let { guildTier: t, guildBoostSlot: n, premiumSubscription: r, hasCancelableGuildBoostSlot: d, showAltText: m, isLastGuildBoostSlot: h } = e,
-        g = (0, l.e7)([o.Z], () => o.Z.useReducedMotion),
+    let { guildTier: t, guildBoostSlot: n, premiumSubscription: r, hasCancelableGuildBoostSlot: d, showAltText: m, isLastGuildBoostSlot: g } = e,
+        h = (0, l.e7)([o.Z], () => o.Z.useReducedMotion),
         _ = s.useMemo(() => (null != n.cooldownEndsAt ? new Date(n.cooldownEndsAt) : null), [n]),
         C = s.useMemo(() => null != _ && _ > new Date(), [_]),
         f = (0, x.tl)(n),
@@ -102,7 +102,7 @@ function b(e) {
                     (0, i.jsx)(E.Z, {
                         isCanceled: f,
                         hasCooldown: C,
-                        useReducedMotion: g
+                        useReducedMotion: h
                     }),
                     (0, i.jsx)('div', {
                         className: S.boostDescriptionContainer,
@@ -146,13 +146,13 @@ function b(e) {
                     })
                 ]
             }),
-            !h && (0, i.jsx)('div', { className: S.boostContainerSeparator })
+            !g && (0, i.jsx)('div', { className: S.boostContainerSeparator })
         ]
     });
 }
 function v(e) {
     let { guildId: t, guildBoostSlotRecords: n, premiumSubscription: s, hasCancelableGuildBoostSlot: r, showAltText: a } = e,
-        o = (0, l.e7)([g.Z], () => g.Z.getGuild(t), [t]);
+        o = (0, l.e7)([h.Z], () => h.Z.getGuild(t), [t]);
     return (0, i.jsxs)('div', {
         className: S.appliedBoostContainer,
         children: [
@@ -179,7 +179,7 @@ function v(e) {
 }
 function j(e) {
     let { guildId: t, appliedGuildBoosts: n, premiumSubscription: s } = e,
-        r = (0, l.e7)([g.Z], () => g.Z.getGuild(t), [t]),
+        r = (0, l.e7)([h.Z], () => h.Z.getGuild(t), [t]),
         a = _.default.fromTimestamp(Date.now());
     if (
         (n.forEach((e) => {
@@ -188,7 +188,7 @@ function j(e) {
         null == a)
     )
         return null;
-    let o = h.Z.createFromServer(
+    let o = g.Z.createFromServer(
         {
             id: _.default.fromTimestamp(Date.now()),
             subscription_id: s.id,

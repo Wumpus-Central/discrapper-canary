@@ -8,9 +8,9 @@ __OVERLAY__ &&
     o.Z.subscribe('OVERLAY_OAUTH2_AUTHORIZE_MODAL_OPEN', function (e) {
         let {
                 clientId: t,
-                authorizeProps: { authorizations: d, permissions: c, ...l }
+                authorizeProps: { authorizations: d, permissions: l, ...c }
             } = e,
-            u = 'OAuth2Authorize_'.concat(t, '_').concat(l.guildId, '_').concat(l.channelId);
+            u = 'OAuth2Authorize_'.concat(t, '_').concat(c.guildId, '_').concat(c.channelId);
         function _(e) {
             let { location: n } = e;
             o.Z.dispatch({
@@ -21,7 +21,7 @@ __OVERLAY__ &&
         }
         let f = s.Hn;
         try {
-            f = r.vB(null != c ? c : 0);
+            f = r.vB(null != l ? l : 0);
         } catch (e) {}
         (0, a.ZDy)(
             async () => {
@@ -29,7 +29,7 @@ __OVERLAY__ &&
                 return (t) =>
                     (0, i.jsx)(e, {
                         ...t,
-                        ...l,
+                        ...c,
                         authorizations: new Map(d),
                         permissions: f,
                         callback: _

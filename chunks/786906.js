@@ -3,8 +3,8 @@ var i = n(200651),
     s = n(192379),
     l = n(120356),
     a = n.n(l),
-    r = n(442837),
-    o = n(481060),
+    o = n(442837),
+    r = n(481060),
     d = n(13245),
     c = n(287734),
     u = n(933557),
@@ -41,12 +41,12 @@ class I extends s.Component {
         let e, t;
         let { channel: n, channelHasActiveCall: s, userIsInChannelCall: l, isBlocked: a } = this.props;
         if (!(0, g.hv)(n.type)) return null;
-        let r = o.Csw,
+        let o = r.Csw,
             d = !1;
         return (
-            s ? (l ? ((e = C.intl.string(C.t['4ry6ys'])), (r = o.gkL)) : (e = C.intl.string(C.t['0D/6R0']))) : a ? ((e = C.intl.string(C.t.PHzjvb)), (t = o.ua7.Colors.RED), (d = !0)) : (e = C.intl.string(C.t.focH1t)),
+            s ? (l ? ((e = C.intl.string(C.t['4ry6ys'])), (o = r.gkL)) : (e = C.intl.string(C.t['0D/6R0']))) : a ? ((e = C.intl.string(C.t.PHzjvb)), (t = r.ua7.Colors.RED), (d = !0)) : (e = C.intl.string(C.t.focH1t)),
             (0, i.jsx)(h.Z.Icon, {
-                icon: r,
+                icon: o,
                 tooltip: e,
                 onClick: this.handleClickCall,
                 tooltipColor: t,
@@ -55,7 +55,7 @@ class I extends s.Component {
         );
     }
     render() {
-        let { className: e, draggableClassName: t, locked: n, channel: s, channelName: l, guild: r, onMouseDown: d, onContextMenu: c, isPreviewingInGame: u, disableDragIndicator: g } = this.props,
+        let { className: e, draggableClassName: t, locked: n, channel: s, channelName: l, guild: o, onMouseDown: d, onContextMenu: c, isPreviewingInGame: u, disableDragIndicator: g } = this.props,
             { showOpacitySlider: m } = this.state;
         return m && !n
             ? (0, i.jsxs)(E.ZP.Bar, {
@@ -63,7 +63,7 @@ class I extends s.Component {
                   children: [
                       (0, i.jsx)(S.Z, {}),
                       (0, i.jsx)(h.Z.Icon, {
-                          icon: o.Dio,
+                          icon: r.Dio,
                           onClick: this.handleCloseOpacitySettings,
                           tooltip: C.intl.string(C.t.cpT0Cg)
                       })
@@ -83,7 +83,7 @@ class I extends s.Component {
                           children: [
                               u || n || g
                                   ? null
-                                  : (0, i.jsx)(o.Vni, {
+                                  : (0, i.jsx)(r.Vni, {
                                         size: 'custom',
                                         color: 'currentColor',
                                         className: a()(y.dragIcon, t),
@@ -94,7 +94,7 @@ class I extends s.Component {
                                   channel: s,
                                   channelName: l
                               }),
-                              n ? null : (0, p.v0)(s, r)
+                              n ? null : (0, p.v0)(s, o)
                           ]
                       })
                   })
@@ -133,13 +133,13 @@ class I extends s.Component {
                               this.renderCallButton(),
                               n
                                   ? (0, i.jsx)(h.Z.Icon, {
-                                        icon: o._S3,
+                                        icon: r._S3,
                                         tooltip: C.intl.string(C.t.OVovCQ),
                                         onClick: this.handleOpenOpacitySettings
                                     })
                                   : null,
                               (0, i.jsx)(h.Z.Icon, {
-                                  icon: n ? o.QVc : o.k5M,
+                                  icon: n ? r.QVc : r.k5M,
                                   tooltip: l,
                                   selected: n,
                                   onClick: t
@@ -151,17 +151,17 @@ class I extends s.Component {
 }
 function _(e) {
     let { channel: t, ...n } = e,
-        s = (0, r.e7)([x.Z, f.Z], () => {
+        s = (0, o.e7)([x.Z, f.Z], () => {
             let e = x.Z.getVoiceChannelId();
             return f.Z.getChannel(e);
         }),
-        l = (0, r.e7)([v.Z], () => v.Z.getGuild(t.guild_id)),
-        a = (0, r.e7)([m.Z], () => m.Z.isCallActive(t.id)),
-        o = (0, u.ZP)(t),
-        d = (0, r.e7)([Z.Z], () => !!t.isDM() && null != t.getRecipientId() && Z.Z.isBlocked(t.getRecipientId()));
+        l = (0, o.e7)([v.Z], () => v.Z.getGuild(t.guild_id)),
+        a = (0, o.e7)([m.Z], () => m.Z.isCallActive(t.id)),
+        r = (0, u.ZP)(t),
+        d = (0, o.e7)([Z.Z], () => !!t.isDM() && null != t.getRecipientId() && Z.Z.isBlocked(t.getRecipientId()));
     return (0, i.jsx)(I, {
         channel: t,
-        channelName: o,
+        channelName: r,
         guild: l,
         channelHasActiveCall: a,
         userIsInChannelCall: null != s && s.id === t.id,

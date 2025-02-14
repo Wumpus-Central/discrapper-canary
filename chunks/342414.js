@@ -10,8 +10,8 @@ var s = n(120356),
     d = n(975298),
     u = n(125529),
     m = n(975104),
-    h = n(63063),
-    g = n(775412),
+    g = n(63063),
+    h = n(775412),
     x = n(695349),
     _ = n(520540),
     p = n(501862),
@@ -142,7 +142,7 @@ let R = (e) => {
         let { className: t, location: n } = e,
             { analyticsLocations: s } = (0, o.ZP)(a.Z.PREMIUM_MARKETING_HERO_CTA),
             l = (0, x.W)(),
-            m = (0, g._O)(),
+            m = (0, h._O)(),
             _ = v.intl.string(v.t.qYKftb),
             C = (0, E.b)(n),
             T = (0, N.pn)(n),
@@ -155,7 +155,7 @@ let R = (e) => {
         let B = null;
         if (Z !== I.a$.NONE && !l) {
             (m = !0), (_ = v.intl.string(v.t.vaqFvb)), (O = !0);
-            let e = v.intl.format(v.t['yR+oDA'], { helpCenterLink: h.Z.getArticleURL(b.BhN.FRACTIONAL_PREMIUM_ABOUT) });
+            let e = v.intl.format(v.t['yR+oDA'], { helpCenterLink: g.Z.getArticleURL(b.BhN.FRACTIONAL_PREMIUM_ABOUT) });
             B = (0, i.jsx)(u.Z, {
                 text: e,
                 'aria-label': e.toString(),

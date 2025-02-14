@@ -3,8 +3,8 @@ var i = n(200651),
     s = n(192379),
     l = n(442837),
     a = n(481060),
-    r = n(13245),
-    o = n(600164),
+    o = n(13245),
+    r = n(600164),
     d = n(212632),
     c = n(906467),
     u = n(556296),
@@ -68,7 +68,7 @@ function N() {
         t = e !== f._vf.DISABLED,
         n = u.ZP.getOverlayKeybind(),
         i = u.ZP.getOverlayChatKeybind();
-    r.Z.track(f.rMx.OVERLAY_SETTINGS_UPDATED, {
+    o.Z.track(f.rMx.OVERLAY_SETTINGS_UPDATED, {
         enabled: !0,
         notifications_enabled: t,
         notifications_position: t ? e : null,
@@ -80,35 +80,35 @@ function N() {
 }
 class I extends s.PureComponent {
     componentDidMount() {
-        r.Z.track(f.rMx.SETTINGS_PANE_VIEWED, {
+        o.Z.track(f.rMx.SETTINGS_PANE_VIEWED, {
             settings_type: 'overlay',
             destination_pane: 'OVERLAY SETTINGS',
             origin_pane: null
         });
     }
     handleChangeNotificationPositionMode(e, t) {
-        r.Z.setNotificationPositionMode(t), N();
+        o.Z.setNotificationPositionMode(t), N();
     }
     handleChangeAvatarSizeMode(e) {
         let { value: t } = e;
-        r.Z.setAvatarSizeMode(t);
+        o.Z.setAvatarSizeMode(t);
     }
     handleChangeDisplayNameMode(e) {
         let { value: t } = e;
-        r.Z.setDisplayNameMode(t);
+        o.Z.setDisplayNameMode(t);
     }
     handleChangeDisplayUserMode(e) {
         let { value: t } = e;
-        r.Z.setDisplayUserMode(t);
+        o.Z.setDisplayUserMode(t);
     }
     renderHeader() {
-        return (0, i.jsxs)(o.Z, {
-            direction: o.Z.Direction.VERTICAL,
+        return (0, i.jsxs)(r.Z, {
+            direction: r.Z.Direction.VERTICAL,
             grow: 0,
             shrink: 0,
             className: Z.header,
             children: [
-                (0, i.jsxs)(o.Z, {
+                (0, i.jsxs)(r.Z, {
                     children: [
                         (0, i.jsx)(a.vwX, {
                             className: Z.headerTitle,
@@ -177,7 +177,7 @@ class I extends s.PureComponent {
         );
     }
     renderGeneralSettings() {
-        let { textChatNotificationMode: e, notificationPositionMode: t, shouldShowKeybindIndicators: n, showKeybindIndicators: l, shouldShowInviteNotification: o } = this.props,
+        let { textChatNotificationMode: e, notificationPositionMode: t, shouldShowKeybindIndicators: n, showKeybindIndicators: l, shouldShowInviteNotification: r } = this.props,
             c = t !== f._vf.DISABLED;
         return (0, i.jsxs)(s.Fragment, {
             children: [
@@ -197,7 +197,7 @@ class I extends s.PureComponent {
                     children: v.intl.string(v.t.Fy5kPj)
                 }),
                 (0, i.jsx)(a.j7V, {
-                    value: o,
+                    value: r,
                     onChange: this.handleToggleInviteNotification,
                     hideBorder: !0,
                     note: v.intl.string(v.t.W9DVVV),
@@ -206,7 +206,7 @@ class I extends s.PureComponent {
                 l &&
                     (0, i.jsx)(a.j7V, {
                         value: n,
-                        onChange: (e) => r.Z.setShowKeybindIndicators(e),
+                        onChange: (e) => o.Z.setShowKeybindIndicators(e),
                         hideBorder: !0,
                         children: v.intl.string(v.t.XZTl9v)
                     })
@@ -304,11 +304,11 @@ class I extends s.PureComponent {
             S(this, 'handleToggleTextChatNotifications', () => {
                 let { ENABLED: e, DISABLED: t } = f.Ypu,
                     n = this.props.textChatNotificationMode === e ? t : e;
-                r.Z.setTextChatNotificationMode(n), N();
+                o.Z.setTextChatNotificationMode(n), N();
             }),
             S(this, 'handleToggleInviteNotification', () => {
                 let e = this.props.shouldShowInviteNotification;
-                r.Z.setShowGameInviteNotification(!e);
+                o.Z.setShowGameInviteNotification(!e);
             });
     }
 }
@@ -318,8 +318,8 @@ function _(e) {
             avatarSizeMode: n,
             displayNameMode: s,
             displayUserMode: a,
-            notificationPositionMode: r,
-            textChatNotificationMode: o,
+            notificationPositionMode: o,
+            textChatNotificationMode: r,
             shouldShowKeybindIndicators: d,
             shouldShowInviteNotification: c
         } = (0, l.cj)([h.Z], () => ({
@@ -337,8 +337,8 @@ function _(e) {
         avatarSizeMode: n,
         displayNameMode: s,
         displayUserMode: a,
-        notificationPositionMode: r,
-        textChatNotificationMode: o,
+        notificationPositionMode: o,
+        textChatNotificationMode: r,
         shouldShowKeybindIndicators: d,
         showKeybindIndicators: u,
         shouldShowInviteNotification: c

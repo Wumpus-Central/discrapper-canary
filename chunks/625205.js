@@ -10,8 +10,8 @@ var s = n(392711),
     d = n(906732),
     u = n(687058),
     m = n(253052),
-    h = n(463395),
-    g = n(131951),
+    g = n(463395),
+    h = n(131951),
     x = n(210887),
     _ = n(962100),
     p = n(65154),
@@ -27,11 +27,11 @@ function T() {
             canSetOutputDevice: S,
             inputDeviceId: I,
             outputDeviceId: b
-        } = (0, l.cj)([g.Z], () => ({
-            canSetInputDevice: g.Z.supports(p.AN.AUDIO_INPUT_DEVICE),
-            canSetOutputDevice: g.Z.supports(p.AN.AUDIO_OUTPUT_DEVICE),
-            inputDeviceId: g.Z.getInputDeviceId(),
-            outputDeviceId: g.Z.getOutputDeviceId()
+        } = (0, l.cj)([h.Z], () => ({
+            canSetInputDevice: h.Z.supports(p.AN.AUDIO_INPUT_DEVICE),
+            canSetOutputDevice: h.Z.supports(p.AN.AUDIO_OUTPUT_DEVICE),
+            inputDeviceId: h.Z.getInputDeviceId(),
+            outputDeviceId: h.Z.getOutputDeviceId()
         })),
         v = (0, u.Z)(),
         j = (0, m.Z)();
@@ -54,7 +54,7 @@ function T() {
     function D(e) {
         let t,
             { label: s, value: r } = e;
-        if (h.Z.isCertified(r)) {
+        if (g.Z.isCertified(r)) {
             let e = (0, a.ap)(T) ? n(561259) : n(887695);
             t = (0, i.jsx)('img', {
                 src: e,
@@ -69,7 +69,7 @@ function T() {
                 children: [
                     (0, i.jsx)('span', {
                         className: C.deviceOptionLabel,
-                        children: h.Z.getCertifiedDeviceName(r, s)
+                        children: g.Z.getCertifiedDeviceName(r, s)
                     }),
                     t
                 ]

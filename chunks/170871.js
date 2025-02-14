@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(47120);
+n.d(t, { Z: () => g }), n(47120);
 var i = n(200651),
     s = n(192379),
     r = n(120356),
@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(979264),
     u = n(308083),
     m = n(126314);
-function h(e) {
-    let { className: t, clanTag: n, clanBadge: r, onTagClick: h, guildId: g, guildName: x, guildIcon: _, guildIconSize: p, memberCount: E } = e,
+function g(e) {
+    let { className: t, clanTag: n, clanBadge: r, onTagClick: g, guildId: h, guildName: x, guildIcon: _, guildIconSize: p, memberCount: E } = e,
         C = s.useRef(null),
         [f, T] = s.useState(!1);
     return (
@@ -25,7 +25,7 @@ function h(e) {
                     className: m.guildPrefixContainer,
                     children: [
                         (0, i.jsx)(o.b, {
-                            guildId: g,
+                            guildId: h,
                             guildName: x,
                             guildIcon: _,
                             iconSize: p,
@@ -55,11 +55,11 @@ function h(e) {
                 (0, i.jsx)('div', {
                     className: m.tagContainer,
                     children: (0, i.jsx)(d.aG, {
-                        guildId: g,
+                        guildId: h,
                         className: m.tag,
                         clanTag: n,
                         clanBadge: r,
-                        onClick: h,
+                        onClick: g,
                         badgeSize: u.NC.SIZE_16,
                         textColor: 'interactive-normal',
                         textVariant: 'text-sm/semibold',

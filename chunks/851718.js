@@ -10,13 +10,13 @@ var i = n(200651),
     u = n(388032);
 function m(e) {
     let { subscriptions: t, updateHeader: n } = e,
-        [m, h] = s.useState({ route: c.j.HOME }),
-        { route: g } = m,
+        [m, g] = s.useState({ route: c.j.HOME }),
+        { route: h } = m,
         x = () => {
-            h({ route: c.j.HOME });
+            g({ route: c.j.HOME });
         },
         _ = (e) => {
-            h({
+            g({
                 route: c.j.SWITCH_APP_PLANS,
                 ...e
             }),
@@ -49,7 +49,7 @@ function m(e) {
     }, [t]);
     let { loadState: C } = (0, a.qz)(),
         f = C !== a.jd.LOADED;
-    switch (g) {
+    switch (h) {
         case c.j.HOME:
             return (0, i.jsx)(i.Fragment, {
                 children: t.map((e) => {
@@ -72,6 +72,6 @@ function m(e) {
                 navigateToHome: x
             });
         default:
-            (0, r.vE)(g);
+            (0, r.vE)(h);
     }
 }

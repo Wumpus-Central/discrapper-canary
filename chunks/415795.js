@@ -19,8 +19,8 @@ var i,
     d = n(471445),
     u = n(16206),
     m = n(790145),
-    h = n(925329),
-    g = n(565138),
+    g = n(925329),
+    h = n(565138),
     x = n(754688),
     _ = n(237583),
     p = n(430824),
@@ -102,10 +102,10 @@ class b extends r.Component {
         let { guild: e } = this.props;
         return (0, s.jsx)('div', {
             className: N.guildIconContainer,
-            children: (0, s.jsx)(g.Z, {
+            children: (0, s.jsx)(h.Z, {
                 tabIndex: -1,
                 guild: e,
-                size: g.Z.Sizes.MINI,
+                size: h.Z.Sizes.MINI,
                 className: N.guildIcon
             })
         });
@@ -428,7 +428,7 @@ class O extends r.Component {
             children: [
                 (0, s.jsx)('div', {
                     className: N.iconContainer,
-                    children: (0, s.jsx)(h.Z, {
+                    children: (0, s.jsx)(g.Z, {
                         tabIndex: -1,
                         className: N.gameIcon,
                         game: t,

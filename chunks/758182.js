@@ -10,8 +10,8 @@ var a = n(149765),
     d = n(570140),
     u = n(86670),
     m = n(261375),
-    h = n(17567),
-    g = n(795513),
+    g = n(17567),
+    h = n(795513),
     x = n(685736),
     _ = n(266750),
     p = n(768910),
@@ -78,14 +78,14 @@ async function F(e, t, n) {
     let c = null !== (i = j.Z.getGuildId()) && void 0 !== i ? i : null,
         u = null !== (s = v.Z.getChannelId()) && void 0 !== s ? s : null,
         m = performance.now(),
-        h = I.Z.loadCachedMessages.measureAsyncWithoutNesting(() => G(e, c, u)),
-        g = I.Z.fetchGuildCache.measureAsync(() => z(e, n)),
+        g = I.Z.loadCachedMessages.measureAsyncWithoutNesting(() => G(e, c, u)),
+        h = I.Z.fetchGuildCache.measureAsync(() => z(e, n)),
         x = I.Z.fetchGuildCache.measureAsync(() => Y(e, n)),
         _ = null != e ? l.Z.timeAsync('\uD83D\uDCBE', 'cache: private_channels', () => f.Z.getAsync(e, null)) : Promise.resolve([]),
         T = null == e ? Promise.resolve({}) : l.Z.timeAsync('\uD83D\uDCBE', 'cache: user_settings', () => C.Z.getAll(e)),
         N = null == e ? Promise.resolve([]) : l.Z.timeAsync('\uD83D\uDCBE', 'cache: read_states', () => p.Z.getAll(e)),
         b = null == e ? Promise.resolve([]) : l.Z.timeAsync('\uD83D\uDCBE', 'cache: user_guild_settings', () => E.Z.getAll(e)),
-        [[A, O], R, D, Z, k, L, B] = await Promise.all([h, g, x, _, T, N, b]),
+        [[A, O], R, D, Z, k, L, B] = await Promise.all([g, h, x, _, T, N, b]),
         M = performance.now() - m;
     if ((y.verbose('cache loaded in '.concat(M, 'ms (channel_history ').concat(A, 'ms)')), null == O)) return (0, P.Z)('database:history_cache_null'), y.verbose('finished without dispatching CACHE_LOADED'), [!1, null, 0];
     {
@@ -148,10 +148,10 @@ async function z(e, t) {
         case 'other':
             '@me' === t.guildId && (H = !0);
     }
-    if (H) return null !== (n = await (0, u.dI)(() => l.Z.timeAsync('\uD83D\uDCBE', 'cache: guilds', () => h.Z.getAsync(e)))) && void 0 !== n ? n : [];
+    if (H) return null !== (n = await (0, u.dI)(() => l.Z.timeAsync('\uD83D\uDCBE', 'cache: guilds', () => g.Z.getAsync(e)))) && void 0 !== n ? n : [];
     let s = null !== (i = (await _.Z.getCommittedVersions()).initial_guild_id) && void 0 !== i ? i : t.guildId;
     if (null == s || '@me' === s) return [];
-    let r = await (0, u.dI)(() => h.Z.getOneAsync(e, s));
+    let r = await (0, u.dI)(() => g.Z.getOneAsync(e, s));
     return null != r ? [r] : [];
 }
 async function Y(e, t) {
@@ -179,8 +179,8 @@ async function W(e, t, n, i) {
     y.verbose('loading late lazy cache');
     let [s, r, o] = await I.Z.fetchLazyCache.measureAsync(() =>
             Promise.all([
-                (0, u.dI)(() => (null != e ? l.Z.timeAsync('\uD83D\uDCBE', 'cache: cache_version', () => g.Z.okAsync(e)) : Promise.resolve(!0))),
-                (0, u.dI)(() => (null == e || H ? Promise.resolve([]) : l.Z.timeAsync('\uD83D\uDCBE', 'cache: lazy guilds', () => h.Z.getAsync(e)))),
+                (0, u.dI)(() => (null != e ? l.Z.timeAsync('\uD83D\uDCBE', 'cache: cache_version', () => h.Z.okAsync(e)) : Promise.resolve(!0))),
+                (0, u.dI)(() => (null == e || H ? Promise.resolve([]) : l.Z.timeAsync('\uD83D\uDCBE', 'cache: lazy guilds', () => g.Z.getAsync(e)))),
                 (0, u.dI)(() =>
                     null != e
                         ? l.Z.timeAsync('\uD83D\uDCBE', 'cache: basic_channels', () => m.Z.getAsync(e))
@@ -271,8 +271,8 @@ async function W(e, t, n, i) {
                 let [n, i] = t;
                 return e + i.length;
             }, 0),
-            h = c.length,
-            g = o.all.reduce((e, t) => {
+            g = c.length,
+            h = o.all.reduce((e, t) => {
                 let [n, i] = t;
                 return e + i.length;
             }, 0),
@@ -280,7 +280,7 @@ async function W(e, t, n, i) {
                 let [n, i] = t;
                 return e + i.length;
             }, 0),
-            p = g - _,
+            p = h - _,
             E = 0 === o.stale.length ? '' : ' \xB7 '.concat(o.stale.join(', '));
         y.verbose(
             'lazy_cache_summary: (\n        ok: true\n        meta:\n          auth_user_id: '
@@ -290,7 +290,7 @@ async function W(e, t, n, i) {
                 .concat(s, '\n            name: ')
                 .concat(null == e ? void 0 : e.name, '\n        data:\n          database:\n            guilds: ')
                 .concat(r.length, '\n            basic_channels:\n              total: ')
-                .concat(g, ' (')
+                .concat(h, ' (')
                 .concat(o.channels.length, ' guilds)\n              stale: ')
                 .concat(p, ' (')
                 .concat(o.stale.length, ' guilds')
@@ -302,10 +302,10 @@ async function W(e, t, n, i) {
             I.Z.setCacheInfo({
                 guilds: r.length,
                 privateChannels: i,
-                basicChannels: g,
+                basicChannels: h,
                 basicChannelsStale: p,
                 fullChannels: m,
-                fullChannelGuilds: h
+                fullChannelGuilds: g
             });
     });
 }

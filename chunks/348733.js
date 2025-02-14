@@ -4,8 +4,8 @@ n(192379);
 var s = n(120356),
     l = n.n(s),
     a = n(392711),
-    r = n(442837),
-    o = n(261435),
+    o = n(442837),
+    r = n(261435),
     d = n(237997),
     c = n(692546),
     u = n(438015),
@@ -13,8 +13,8 @@ var s = n(120356),
     p = n(855134);
 function g(e) {
     let { locked: t, keybind: n } = e,
-        s = (0, r.Wu)([o.Z], () => o.Z.getNotifications()),
-        u = (0, r.e7)([d.Z], () => d.Z.getNotificationPositionMode());
+        s = (0, o.Wu)([r.Z], () => r.Z.getNotifications()),
+        u = (0, o.e7)([d.Z], () => d.Z.getNotificationPositionMode());
     if (u === h._vf.DISABLED) return null;
     let g = s.filter((e) => !t || e.status !== h._1z.TIMED_OUT),
         f = (0, a.groupBy)(g, (e) => e.type);

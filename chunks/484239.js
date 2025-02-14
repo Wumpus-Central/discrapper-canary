@@ -10,8 +10,8 @@ var s = n(120356),
     d = n(735825),
     u = n(510040),
     m = n(721239),
-    h = n(557634),
-    g = n(992429);
+    g = n(557634),
+    h = n(992429);
 let x = (e) => {
     var t;
     let n,
@@ -22,13 +22,13 @@ let x = (e) => {
         O = (null == A ? void 0 : A.nitroTenureStatus) === d.EB.REDEEMABLE;
     switch (null == A ? void 0 : A.nitroTenureStatus) {
         case d.EB.REDEEMABLE:
-            (n = g), (s = 'unlocked icon');
+            (n = h), (s = 'unlocked icon');
             break;
         case d.EB.PENDING:
             (n = m), (s = 'locked icon');
             break;
         case d.EB.REDEEMED:
-            (n = h), (s = 'thumbs up icon');
+            (n = g), (s = 'thumbs up icon');
             break;
         default:
             (n = void 0), (s = '');

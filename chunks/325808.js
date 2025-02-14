@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(230711),
     u = n(825209),
     m = n(906732),
-    h = n(313201),
-    g = n(131951),
+    g = n(313201),
+    h = n(131951),
     x = n(358085),
     _ = n(962100),
     p = n(981631),
@@ -18,14 +18,14 @@ var i = n(200651),
     C = n(453526),
     f = n(483938);
 let T = !x.isPlatformEmbedded,
-    N = (0, h.hQ)();
+    N = (0, g.hQ)();
 function S(e) {
     return e >= 1000 ? ((e /= 1000), ''.concat(e.toFixed(2), 's')) : ''.concat(e.toFixed(0), ' ms');
 }
 function I(e) {
     let t,
         { inputMode: n } = e,
-        { shortcut: s, delay: r } = (0, a.cj)([g.Z], () => g.Z.getModeOptions());
+        { shortcut: s, delay: r } = (0, a.cj)([h.Z], () => h.Z.getModeOptions());
     return (
         (t =
             x.isPlatformEmbedded || n !== p.pM4.PUSH_TO_TALK
@@ -84,7 +84,7 @@ function I(e) {
 }
 function b() {
     let { analyticsLocations: e } = (0, m.ZP)(),
-        t = (0, a.e7)([g.Z], () => g.Z.getMode()),
+        t = (0, a.e7)([h.Z], () => h.Z.getMode()),
         r = [
             {
                 value: p.pM4.VOICE_ACTIVITY,

@@ -4,8 +4,8 @@ n(192379);
 var s = n(13245),
     l = n(371651),
     a = n(703656),
-    r = n(460181),
-    o = n(974180),
+    o = n(460181),
+    r = n(974180),
     d = n(237997),
     c = n(150097),
     u = n(358085),
@@ -40,7 +40,7 @@ function Z(e, t, n, Z) {
                 : null,
         maxBodyLines: 2,
         onNotificationShow: () => {
-            Z && (0, r.GN)(o.Ay, o.yk), y();
+            Z && (0, o.GN)(r.Ay, r.yk), y();
         },
         onNotificationClick: () => {
             if (l.default.isOverlayOOPEnabledForPid((0, p.QF)())) {

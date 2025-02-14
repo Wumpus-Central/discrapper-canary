@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(230711),
     u = n(921801),
     m = n(131951),
-    h = n(663389),
-    g = n(63063),
+    g = n(663389),
+    h = n(63063),
     x = n(680924),
     _ = n(58765),
     p = n(429789),
@@ -38,17 +38,17 @@ var i = n(200651),
     w = n(65154),
     V = n(388032),
     U = n(483938);
-let G = ''.concat(g.Z.getArticleURL(M.BhN.VOICE_VIDEO_TROUBLESHOOTING), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm');
+let G = ''.concat(h.Z.getArticleURL(M.BhN.VOICE_VIDEO_TROUBLESHOOTING), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm');
 function F() {
     let { inputMode: e } = (0, a.cj)([m.Z], () => ({ inputMode: m.Z.getMode() })),
-        t = (0, a.e7)([h.Z], () => h.Z.getSubsection()),
+        t = (0, a.e7)([g.Z], () => g.Z.getSubsection()),
         n = s.createRef(),
         r = s.createRef();
     s.useEffect(() => {
         var e, i;
         t === L.GA && (null == n || null === (e = n.current) || void 0 === e || e.scrollIntoView(), d.Z.clearSubsection()), t === L.gP && (null == r || null === (i = r.current) || void 0 === i || i.scrollIntoView(), d.Z.clearSubsection());
     }, [n, r, t]);
-    let g = (0, _.Z)();
+    let h = (0, _.Z)();
     return (0, i.jsxs)(o.hjN, {
         tag: o.RB0.H1,
         title: V.intl.string(V.t.NiTd0d),
@@ -126,7 +126,7 @@ function F() {
                         (0, i.jsx)(O.Z, {}),
                         (0, i.jsx)(b.Z, {}),
                         (0, i.jsx)(p.Z, {}),
-                        g && (0, i.jsx)(j.Z, {}),
+                        h && (0, i.jsx)(j.Z, {}),
                         (0, i.jsx)(C.Z, {}),
                         (0, i.jsx)(v.Z, {}),
                         (0, i.jsx)(A.Z, {}),

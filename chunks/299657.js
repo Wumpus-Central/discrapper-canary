@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(355467),
     u = n(179360),
     m = n(821849),
-    h = n(232567),
-    g = n(497321),
+    g = n(232567),
+    h = n(497321),
     x = n(100527),
     _ = n(906732),
     p = n(211242),
@@ -60,7 +60,7 @@ let w = function (e) {
     s.useEffect(() => {
         c.Z.wait(async () => {
             let e = Date.now();
-            await Promise.all([d.jg(), (0, u.X8)(), d.tZ(), (0, m.Y2)(J, null, B.JjL.DISCOVERY), null != G && Q && q && (0, h.In)(G)]), (K.current = Date.now() - e), W(!1);
+            await Promise.all([d.jg(), (0, u.X8)(), d.tZ(), (0, m.Y2)(J, null, B.JjL.DISCOVERY), null != G && Q && q && (0, g.In)(G)]), (K.current = Date.now() - e), W(!1);
         });
     }, [J, G, Q, q]),
     s.useEffect(() => {
@@ -74,7 +74,7 @@ let w = function (e) {
             });
     }, [r, Y]),
     (0, a.e7)([S.Z], () => S.Z.enabled))
-        ? (0, i.jsx)(g.Z, {})
+        ? (0, i.jsx)(h.Z, {})
         : n
           ? (0, i.jsx)(C.c8, {})
           : t === L.EZ.ApplicationStoreHome && q

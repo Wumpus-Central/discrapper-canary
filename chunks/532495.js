@@ -10,8 +10,8 @@ var s = n(512722),
     d = n(328783),
     u = n(295474),
     m = n(150039),
-    h = n(126631),
-    g = n(433411),
+    g = n(126631),
+    h = n(433411),
     x = n(532432),
     _ = n(349177),
     p = n(872736),
@@ -103,7 +103,7 @@ function P() {
                 'avatar'
             ),
             (0, i.jsx)(
-                g.Z,
+                h.Z,
                 {
                     user: k,
                     sectionTitle: O.intl.string(O.t['7v0T9P'])
@@ -151,7 +151,7 @@ function P() {
                       'color'
                   ),
             (0, i.jsx)(
-                h.Z,
+                g.Z,
                 {
                     sectionTitle: O.intl.string(O.t.NepzEx),
                     errors: $,

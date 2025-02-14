@@ -1,8 +1,8 @@
 n.d(t, {
-    M8: () => g,
+    M8: () => h,
     Rd: () => x,
     VM: () => m,
-    gU: () => h,
+    gU: () => g,
     j_: () => _,
     mq: () => d,
     rW: () => u
@@ -36,12 +36,12 @@ function m() {
         n = e ? c.AG : c.i0;
     return t.length >= n;
 }
-function h() {
+function g() {
     let e = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
         t = (0, i.e7)([r.Z], () => r.Z.getLinkedUsers());
     return null == e ? 0 : Object.values(t).filter((t) => null != t && t.link_status === c.ne.PENDING && e.id !== t.requestor_id).length;
 }
-function g() {
+function h() {
     let e = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
         t = (0, i.e7)([r.Z], () => r.Z.getLinkedUsers());
     return null == e ? 0 : Object.values(t).filter((e) => null != e && e.link_status === c.ne.ACTIVE).length;

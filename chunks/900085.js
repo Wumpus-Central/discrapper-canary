@@ -12,8 +12,8 @@ var i,
     E = n(714338),
     h = n(212819),
     I = n(815372),
-    p = n(14429),
-    m = n(576855),
+    m = n(14429),
+    p = n(576855),
     C = n(313201),
     T = n(991346),
     N = n(592125),
@@ -201,9 +201,9 @@ class Y extends l.PureComponent {
         return 'quick-switcher-'.concat(this._listId, '-item-').concat(e);
     }
     renderProtip() {
-        return (0, r.jsx)(m.Z, {
+        return (0, r.jsx)(p.Z, {
             className: a()(U.protip, { [U.hasContent]: this.state.query.length > 0 }),
-            type: m.Z.Types.INLINE,
+            type: p.Z.Types.INLINE,
             children: k.intl.format(k.t.wukqXV, {
                 userSymbolHook: (e, t) => W(t, h.xQ.USER, k.intl.string(k.t.GQRCGh)),
                 textChannelSymbolHook: (e, t) => W(t, h.xQ.TEXT_CHANNEL, k.intl.string(k.t.wrwhub)),
@@ -401,7 +401,7 @@ class Y extends l.PureComponent {
                 let { row: t } = e,
                     n = this.props.results[t],
                     { selectedIndex: i } = this.props,
-                    { showScores: l } = p.Z.getCurrentConfig({ location: '62f4be_1' }, { autoTrackExposure: !1 });
+                    { showScores: l } = m.Z.getCurrentConfig({ location: '62f4be_1' }, { autoTrackExposure: !1 });
                 switch (n.type) {
                     case h.h8.HEADER:
                         return (0, r.jsx)(M.h4, { children: n.record.text }, ''.concat(n.type, '-').concat(n.record.id));

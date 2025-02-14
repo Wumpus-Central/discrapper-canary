@@ -3,8 +3,8 @@ var i = n(278323),
     s = n(13245),
     l = n(45114),
     a = n(593481),
-    r = n(237997),
-    o = n(312839),
+    o = n(237997),
+    r = n(312839),
     d = n(981631),
     c = n(987650),
     u = n(388032);
@@ -15,7 +15,7 @@ function h(e, t, n, h) {
             game: n.name
         }),
         m = t.getAvatarURL(e.guild_id, 80),
-        { trackView: f, trackClick: v } = (0, o.R)(c.n0.ActivityInvite, {
+        { trackView: f, trackClick: v } = (0, r.R)(c.n0.ActivityInvite, {
             notif_type: c.n0.ActivityInvite,
             notif_user_id: t.id,
             activity_type: d.mFx.JOIN_REQUEST,
@@ -25,7 +25,7 @@ function h(e, t, n, h) {
         icon: m,
         title: p,
         body: g,
-        hint: (e) => (0, a.QR)(e, (0, o.P)(), u.t['Odi54+']),
+        hint: (e) => (0, a.QR)(e, (0, r.P)(), u.t['Odi54+']),
         confirmText: u.intl.string(u.t['fgP/wc']),
         cancelText: u.intl.string(u.t.tpXzJy),
         onNotificationShow: () => {
@@ -36,7 +36,7 @@ function h(e, t, n, h) {
                 channelId: e.id,
                 type: d.mFx.JOIN,
                 activity: h,
-                location: r.Z.isInstanceLocked() ? d.Sbl.LOCKED_OVERLAY : d.Sbl.UNLOCKED_OVERLAY
+                location: o.Z.isInstanceLocked() ? d.Sbl.LOCKED_OVERLAY : d.Sbl.UNLOCKED_OVERLAY
             }),
                 v('join'),
                 s.Z.updateNotificationStatus(n);

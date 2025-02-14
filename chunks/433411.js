@@ -9,15 +9,15 @@ var i = n(200651),
     d = n(1585),
     u = n(580747),
     m = n(345861),
-    h = n(150039),
-    g = n(993413),
+    g = n(150039),
+    h = n(993413),
     x = n(388032),
     _ = n(654955);
 function p(e) {
     let { user: t, guild: n, className: r, sectionTitle: m, forcedDivider: p = !1, withTutorial: C = !1, isTryItOutFlow: f = !1 } = e,
         { analyticsLocations: T } = (0, o.ZP)(),
         N = null != n,
-        { userAvatarDecoration: S, guildAvatarDecoration: I, pendingAvatarDecoration: b, pendingErrors: v } = (0, h.$U)(t, n),
+        { userAvatarDecoration: S, guildAvatarDecoration: I, pendingAvatarDecoration: b, pendingErrors: v } = (0, g.$U)(t, n),
         j = (0, u.Z)('enable_avatar_decoration_uploads'),
         A = s.useCallback(
             () =>
@@ -30,7 +30,7 @@ function p(e) {
         ),
         O = f || void 0 !== b ? null != b : (N ? I : S) != null,
         R = C ? a.gtL : a.zxk;
-    return (0, i.jsxs)(g.Z, {
+    return (0, i.jsxs)(h.Z, {
         className: r,
         forcedDivider: p,
         hasBackground: !0,
@@ -53,7 +53,7 @@ function p(e) {
                             look: a.zxk.Looks.LINK,
                             size: a.zxk.Sizes.SMALL,
                             onClick: function () {
-                                (0, h.PO)(null == n ? void 0 : n.id, null);
+                                (0, g.PO)(null == n ? void 0 : n.id, null);
                             },
                             children: (0, c.ad)(t, n) ? x.intl.string(x.t['GsW4/v']) : x.intl.string(x.t.GReZ6O)
                         })

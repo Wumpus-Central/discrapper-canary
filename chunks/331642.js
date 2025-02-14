@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(74538),
     u = n(242291),
     m = n(830253),
-    h = n(792165),
-    g = n(409673),
+    g = n(792165),
+    h = n(409673),
     x = n(603074),
     _ = n(388032),
     p = n(691686);
@@ -36,13 +36,13 @@ function E(e) {
                     channel: null,
                     onClose: t,
                     onSelect: m,
-                    gridNotice: u ? null : (0, i.jsx)(h.o, {}),
+                    gridNotice: u ? null : (0, i.jsx)(g.o, {}),
                     analyticsSource: 'call sounds edit setting'
                 })
             });
         },
         children: (e) =>
-            (0, i.jsx)(g.hU, {
+            (0, i.jsx)(h.hU, {
                 ...e,
                 onClick: () => {
                     l(!n);
@@ -66,7 +66,7 @@ function C(e) {
                       emojiName: t.emojiName,
                       soundName: t.name
                   });
-    return (0, i.jsx)(g.hU, {
+    return (0, i.jsx)(h.hU, {
         onClick: n,
         text: s,
         children: (0, i.jsx)(a.gj8, {
@@ -129,7 +129,7 @@ function f(e) {
                     (0, i.jsx)(E, { onSelect: s }),
                     r &&
                         !n &&
-                        (0, i.jsx)(g.hU, {
+                        (0, i.jsx)(h.hU, {
                             onClick: () => s(null),
                             text: _.intl.string(_.t.jmtcGB),
                             children: (0, i.jsx)(a.XHJ, {

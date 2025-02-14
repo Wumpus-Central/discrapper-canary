@@ -3,8 +3,8 @@ var i = n(200651),
     s = n(192379),
     l = n(442837),
     a = n(481060),
-    r = n(13245),
-    o = n(313201),
+    o = n(13245),
+    r = n(313201),
     d = n(237997),
     c = n(766032),
     u = n(987650),
@@ -12,13 +12,13 @@ var i = n(200651),
     p = n(388032),
     g = n(788278);
 let m = Object.values(u.wF).map((e) => 100 * e),
-    f = (0, o.hQ)();
+    f = (0, r.hQ)();
 class v extends s.PureComponent {
     handleUpdateBackgroundOpacity(e) {
-        r.Z.setTextWidgetOpacity((0, c.Z)(e / 100)), r.Z.track(h.rMx.OVERLAY_SETTINGS_UPDATED, { text_opacity_slider: e });
+        o.Z.setTextWidgetOpacity((0, c.Z)(e / 100)), o.Z.track(h.rMx.OVERLAY_SETTINGS_UPDATED, { text_opacity_slider: e });
     }
     handlePreviewBackgroundOpacity(e) {
-        r.Z.setTextWidgetOpacity((0, c.Z)(e / 100));
+        o.Z.setTextWidgetOpacity((0, c.Z)(e / 100));
     }
     render() {
         return (0, i.jsxs)('div', {

@@ -10,8 +10,8 @@ var i = n(200651),
 let u = (e) => {
     let { cards: t, className: n, cardType: r } = e,
         u = () => (window.innerWidth < 910 ? 1 : window.innerWidth < 1400 ? 2 : 3),
-        [m, h] = s.useState(0),
-        [g, x] = s.useState(u()),
+        [m, g] = s.useState(0),
+        [h, x] = s.useState(u()),
         _ = t.length;
     s.useEffect(() => {
         let e = () => {
@@ -25,8 +25,8 @@ let u = (e) => {
         );
     }, []),
         s.useEffect(() => {
-            h((e) => (_ > g && e > _ - g ? _ - g : _ <= g ? 0 : e));
-        }, [_, g]);
+            g((e) => (_ > h && e > _ - h ? _ - h : _ <= h ? 0 : e));
+        }, [_, h]);
     let p = m > 0,
         E = s.useCallback((e) => ({ x: (e - m) * 100 }), [m]),
         [C, f] = (0, o.bYB)(t.length, E);
@@ -39,11 +39,11 @@ let u = (e) => {
             children: (0, i.jsxs)('div', {
                 className: d.cardContainer,
                 children: [
-                    _ > g &&
+                    _ > h &&
                         (0, i.jsx)(o.P3F, {
                             onClick: p
                                 ? () => {
-                                      h((e) => (0 === e ? _ - g : e - 1));
+                                      g((e) => (0 === e ? _ - h : e - 1));
                                   }
                                 : void 0,
                             className: l()({
@@ -77,10 +77,10 @@ let u = (e) => {
                             );
                         })
                     }),
-                    _ > g &&
+                    _ > h &&
                         (0, i.jsx)(o.P3F, {
                             onClick: () => {
-                                h((e) => (e >= _ - g ? 0 : e + 1));
+                                g((e) => (e >= _ - h ? 0 : e + 1));
                             },
                             className: d.rightArrow,
                             children: (0, i.jsx)(o.ZSh, {
@@ -88,11 +88,11 @@ let u = (e) => {
                                 colorClass: d.arrowIcon
                             })
                         }),
-                    _ > g &&
+                    _ > h &&
                         (0, i.jsx)('div', {
                             className: d.cardProgressBar,
                             children: t.map((e, t) => {
-                                if (!(t > _ - g)) return (0, i.jsx)('div', { className: t === m ? d.selectedDot : d.dot }, 'progress_bar_dot_'.concat(t));
+                                if (!(t > _ - h)) return (0, i.jsx)('div', { className: t === m ? d.selectedDot : d.dot }, 'progress_bar_dot_'.concat(t));
                             })
                         })
                 ]

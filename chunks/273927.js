@@ -14,8 +14,8 @@ var i = n(200651),
     d = n(99690),
     u = n(100527),
     m = n(699516),
-    h = n(594174),
-    g = n(63063),
+    g = n(594174),
+    h = n(63063),
     x = n(838436),
     _ = n(526761),
     p = n(726985),
@@ -53,19 +53,19 @@ function T(e) {
 function N(e) {
     var t;
     let { userId: n, last: r } = e,
-        g = (0, a.e7)([m.Z], () => m.Z.isBlocked(n)),
-        x = (0, a.e7)([h.default], () => h.default.getUser(n)),
+        h = (0, a.e7)([m.Z], () => m.Z.isBlocked(n)),
+        x = (0, a.e7)([g.default], () => g.default.getUser(n)),
         [_, p] = s.useState(!1),
         E = s.useCallback(() => {
             p(!0),
-                g
+                h
                     ? c.Z.unblockUser(n).catch(() => {
                           p(!1);
                       })
                     : c.Z.unignoreUser(n, u.Z.USER_SETTINGS).catch(() => {
                           p(!1);
                       });
-        }, [g, n]);
+        }, [h, n]);
     return null == x
         ? null
         : (0, i.jsx)(i.Fragment, {
@@ -100,7 +100,7 @@ function N(e) {
                           color: o.Ttl.PRIMARY,
                           onClick: E,
                           submitting: _,
-                          children: C.intl.string(g ? C.t.XyHpKC : C.t['8wXU9P'])
+                          children: C.intl.string(h ? C.t.XyHpKC : C.t['8wXU9P'])
                       })
                   ]
               })
@@ -175,7 +175,7 @@ function v() {
         children: [
             (0, i.jsx)(x.H, {
                 header: C.intl.string(C.t['3wRorq']),
-                description: C.intl.format(C.t['0aNQo6'], { helpArticle: g.Z.getArticleURL(E.BhN.STEALTH_REMEDIATION_FEATURE_GUIDE) })
+                description: C.intl.format(C.t['0aNQo6'], { helpArticle: h.Z.getArticleURL(E.BhN.STEALTH_REMEDIATION_FEATURE_GUIDE) })
             }),
             (0, i.jsx)(I, {}),
             (0, i.jsx)(b, {})

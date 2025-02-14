@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(313201),
     u = n(202858),
     m = n(287880),
-    h = n(358085),
-    g = n(960048),
+    g = n(358085),
+    h = n(960048),
     x = n(998502),
     _ = n(365007),
     p = n(15980),
@@ -29,11 +29,11 @@ function N(e) {
         P = async () => {
             let e;
             v(E.x.REGISTER);
-            let t = h.isPlatformEmbedded && x.ZP.supportsFeature(C.eRX.WEBAUTHN) ? x.ZP.webAuthnRegister(c) : r.Ue(JSON.parse(c)).then((e) => JSON.stringify(e));
+            let t = g.isPlatformEmbedded && x.ZP.supportsFeature(C.eRX.WEBAUTHN) ? x.ZP.webAuthnRegister(c) : r.Ue(JSON.parse(c)).then((e) => JSON.stringify(e));
             try {
                 e = await t;
             } catch (e) {
-                g.Z.captureException(e), R(f.intl.string(f.t.xSCvBQ)), v(E.x.INIT);
+                h.Z.captureException(e), R(f.intl.string(f.t.xSCvBQ)), v(E.x.INIT);
                 return;
             }
             A(e), v(E.x.NAME);
@@ -305,7 +305,7 @@ function I() {
                                     );
                                 })
                                 .catch((e) => {
-                                    e.message !== f.intl.string(f.t.N2yb9f) && g.Z.captureException(e);
+                                    e.message !== f.intl.string(f.t.N2yb9f) && h.Z.captureException(e);
                                 })
                                 .finally(() => {
                                     r(!1);

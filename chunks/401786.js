@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(179360),
     u = n(881052),
     m = n(128069),
-    h = n(100527),
-    g = n(906732),
+    g = n(100527),
+    h = n(906732),
     x = n(600164),
     _ = n(374649),
     p = n(431369),
@@ -121,14 +121,14 @@ function k(e) {
                 premiumGuildPlan: null != e ? S.Z.getForSkuAndInterval((0, v.Wz)(O.Si.GUILD), e.interval, e.intervalCount) : null
             };
         }),
-        { analyticsLocations: V } = (0, g.ZP)(),
+        { analyticsLocations: V } = (0, h.ZP)(),
         [U] = (0, _.ED)({
             subscriptionId: l.id,
             renewal: !0,
             currency: l.currency,
             paymentSourceId: l.paymentSourceId,
             analyticsLocations: V,
-            analyticsLocation: h.Z.GUILD_BOOST_SLOT_CANCELLATION_MODAL_CURRENT_INVOICE_PREVIEW
+            analyticsLocation: g.Z.GUILD_BOOST_SLOT_CANCELLATION_MODAL_CURRENT_INVOICE_PREVIEW
         }),
         G = null != w ? (0, v.Zx)(l, null !== (r = null === (t = k[0]) || void 0 === t ? void 0 : t.quantity) && void 0 !== r ? r : 0, w.id) : null,
         [F] = (0, _.ED)({
@@ -136,7 +136,7 @@ function k(e) {
             items: G,
             renewal: !0,
             analyticsLocations: V,
-            analyticsLocation: h.Z.GUILD_BOOST_SLOT_CANCELLATION_MODAL_RENEWAL_INVOICE_PREVIEW
+            analyticsLocation: g.Z.GUILD_BOOST_SLOT_CANCELLATION_MODAL_RENEWAL_INVOICE_PREVIEW
         });
     if (null == F || null == M || null == w || null == U) return (0, i.jsx)(o.$jN, {});
     let H =
@@ -252,7 +252,7 @@ function B(e) {
     }, []);
     let d = (0, a.e7)([I.ZP], () => I.ZP.getPremiumTypeSubscription()),
         [u, m] = s.useState(1),
-        { analyticsLocations: x } = (0, g.ZP)(h.Z.GUILD_BOOST_CANCELLATION_MODAL);
+        { analyticsLocations: x } = (0, h.ZP)(g.Z.GUILD_BOOST_CANCELLATION_MODAL);
     if (null == d) t = (0, i.jsx)(o.hzk, { children: (0, i.jsx)(o.$jN, {}) });
     else
         switch (u) {
@@ -282,7 +282,7 @@ function B(e) {
             default:
                 throw Error('Unexpected step: '.concat(u));
         }
-    return (0, i.jsx)(g.Gt, {
+    return (0, i.jsx)(h.Gt, {
         value: x,
         children: (0, i.jsx)(o.Y0X, {
             transitionState: r,

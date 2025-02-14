@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(230711),
     u = n(825209),
     m = n(706454),
-    h = n(494620),
-    g = n(131951),
+    g = n(494620),
+    h = n(131951),
     x = n(556296),
     _ = n(924557),
     p = n(435064),
@@ -27,12 +27,12 @@ var i = n(200651),
     A = n(301899),
     O = n(483938);
 function R() {
-    let e = (0, a.e7)([g.Z], () => g.Z.getHardwareEncoding()),
+    let e = (0, a.e7)([h.Z], () => h.Z.getHardwareEncoding()),
         { clipsEnabled: t, remindersEnabled: n, decoupledClipsEnabled: r, clipsLength: R, clipsQuality: P } = (0, a.cj)([p.Z], () => p.Z.getSettings()),
         D = (0, a.e7)([p.Z], () => p.Z.getHardwareClassification()),
         y = (0, a.e7)([x.ZP], () => x.ZP.getKeybindForAction(S.kg4.SAVE_CLIP, !0)),
         Z = p.Z.isDecoupledGameClippingEnabled(),
-        k = (0, C.Z)(g.Z),
+        k = (0, C.Z)(h.Z),
         { showClipsHeaderEntrypoint: L } = _.NV.useExperiment({ location: 'clips_recording_settings' }, { autoTrackExposure: !1 });
     l()(null != y, 'Save clip keybind unset');
     let B = (0, a.e7)([m.default], () => m.default.locale),
@@ -110,14 +110,14 @@ function R() {
                 disabled: !e,
                 children: [
                     !e &&
-                        (0, i.jsx)(h.Z, {
-                            look: h.z.WARNING,
+                        (0, i.jsx)(g.Z, {
+                            look: g.z.WARNING,
                             className: A.formItem,
                             children: v.intl.format(v.t.kiaF4e, { onClick: () => d.Z.open(S.oAB.VOICE, null, { scrollPosition: b.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION }) })
                         }),
                     D === E.x.BELOW_MINIMUM
-                        ? (0, i.jsx)(h.Z, {
-                              look: h.z.WARNING,
+                        ? (0, i.jsx)(g.Z, {
+                              look: g.z.WARNING,
                               className: A.formItem,
                               children: v.intl.string(v.t.SIxrIC)
                           })
@@ -136,7 +136,7 @@ function R() {
                         children: v.intl.string(v.t.h8rgrK)
                     }),
                     e &&
-                        (0, i.jsx)(h.Z, {
+                        (0, i.jsx)(g.Z, {
                             className: A.formItem,
                             children: v.intl.string(v.t['Z+Mfqa'])
                         })

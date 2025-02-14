@@ -3,8 +3,8 @@ var i = n(200651),
     s = n(192379),
     l = n(642128),
     a = n(442837),
-    r = n(481060),
-    o = n(619915),
+    o = n(481060),
+    r = n(619915),
     d = n(554747),
     c = n(373274),
     u = n(315174),
@@ -23,9 +23,9 @@ var i = n(200651),
     N = n(19780),
     I = n(944486),
     _ = n(9156),
-    j = n(938475),
-    T = n(518084),
-    O = n(669083),
+    O = n(938475),
+    j = n(518084),
+    T = n(669083),
     k = n(711553),
     M = n(981631),
     b = n(647086),
@@ -68,7 +68,7 @@ class D extends s.PureComponent {
     }
     renderSettings(e) {
         let { closePopout: t } = e;
-        return (0, i.jsx)(O.Z, { onClose: t });
+        return (0, i.jsx)(T.Z, { onClose: t });
     }
     setAnimatedValue(e) {
         let { guild: t } = this.props,
@@ -106,7 +106,7 @@ class D extends s.PureComponent {
     render() {
         let { onDragStart: e, ...t } = this.props,
             { guild: n } = t,
-            { controller: s, renderBanner: l, bannerVisible: a, communityInfoVisible: o } = this.state,
+            { controller: s, renderBanner: l, bannerVisible: a, communityInfoVisible: r } = this.state,
             d = (null == n ? void 0 : n.id) === b._ ? c.j : c.E;
         return (0, i.jsxs)(k.Z, {
             header:
@@ -120,13 +120,13 @@ class D extends s.PureComponent {
                           headerClassName: w.guildHeaderInner,
                           onMouseDown: e,
                           disableBannerAnimation: !1,
-                          communityInfoVisible: o,
-                          children: (0, i.jsx)(r.yRy, {
+                          communityInfoVisible: r,
+                          children: (0, i.jsx)(o.yRy, {
                               position: 'right',
                               renderPopout: this.renderSettings,
                               children: (e) =>
-                                  (0, i.jsx)(T.ZP.Icon, {
-                                      icon: r.ewm,
+                                  (0, i.jsx)(j.ZP.Icon, {
+                                      icon: o.ewm,
                                       label: P.intl.string(P.t['3D5yo6']),
                                       ...e
                                   })
@@ -177,15 +177,15 @@ function A(e) {
     let { guildId: n } = e,
         s = (0, a.e7)([E.Z], () => E.Z.getGuild(n)),
         l = (0, a.e7)([x.ZP], () => x.ZP.getChannels(n)),
-        r = (0, a.e7)([Z.Z], () => Z.Z.getCategories(n)),
+        o = (0, a.e7)([Z.Z], () => Z.Z.getCategories(n)),
         { mutedChannels: c, collapseMuted: u } = (0, a.cj)([_.ZP], () => ({
             mutedChannels: _.ZP.getMutedChannels(n),
             collapseMuted: _.ZP.isGuildCollapsed(n)
         })),
-        h = (0, a.e7)([j.ZP], () => j.ZP.getVoiceStates(n)),
+        h = (0, a.e7)([O.ZP], () => O.ZP.getVoiceStates(n)),
         p = (0, a.e7)([f.Z], () => f.Z.getCollapsed()),
-        { scrollTo: T } = (0, a.e7)([v.Z], () => v.Z.getGuildDimensions(n)),
-        O = (0, g.Z)((e) => {
+        { scrollTo: j } = (0, a.e7)([v.Z], () => v.Z.getGuildDimensions(n)),
+        T = (0, g.Z)((e) => {
             let { channelId: t } = e;
             return t;
         }),
@@ -193,7 +193,7 @@ function A(e) {
         b = (0, a.e7)([C.Z], () => C.Z.getGuildVersion(n)),
         P = (0, a.e7)([m.Z], () => m.Z.version),
         w = (0, a.e7)([S.default], () => S.default.getGuildChangeSentinel(n)),
-        R = (0, o.QN)(null == s ? void 0 : s.id),
+        R = (0, r.QN)(null == s ? void 0 : s.id),
         A = (0, d.gM)(null == s ? void 0 : s.id),
         L = null !== (t = null == s ? void 0 : s.hasFeature(M.oNc.COMMUNITY)) && void 0 !== t && t,
         z = (0, a.e7)([N.Z], () => N.Z.getChannelId()),
@@ -202,10 +202,10 @@ function A(e) {
         guildId: n,
         guild: s,
         channels: l,
-        categories: r,
+        categories: o,
         mutedChannels: c,
-        scrollToChannel: T,
-        selectedChannelId: O,
+        scrollToChannel: j,
+        selectedChannelId: T,
         selectedVoiceChannelId: k,
         voiceStates: h,
         rtcConnectedChannelId: z,

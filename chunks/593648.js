@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(524437),
     u = n(481060),
     m = n(668781),
-    h = n(292556),
-    g = n(87051),
+    g = n(292556),
+    h = n(87051),
     x = n(419363),
     _ = n(818083),
     p = n(688465),
@@ -93,7 +93,7 @@ function Y(e) {
         d = s.useCallback(
             (e, n) => {
                 let i = t.filter((t) => t !== e);
-                n || i.push(e), h.default.setDisabledSounds(i);
+                n || i.push(e), g.default.setDisabledSounds(i);
             },
             [t]
         );
@@ -192,12 +192,12 @@ function Y(e) {
                 sound: 'reconnect'
             }
         ],
-        g = null != C.Z.useHolidaySoundpack();
+        h = null != C.Z.useHolidaySoundpack();
     return (0, i.jsx)(A.F, {
         setting: M.s6.NOTIFICATIONS_SOUNDS,
         children: (0, i.jsxs)(u.hjN, {
             children: [
-                g
+                h
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [
                               (0, i.jsx)(u.vwX, {
@@ -215,13 +215,13 @@ function Y(e) {
                 (0, i.jsx)(u.j7V, {
                     note: U.intl.string(U.t['7oXUio']),
                     value: r,
-                    onChange: h.default.setNotifyMessagesInSelectedChannel,
+                    onChange: g.default.setNotifyMessagesInSelectedChannel,
                     children: U.intl.string(U.t.lF5GGR)
                 }),
                 (0, i.jsx)(u.j7V, {
                     note: U.intl.string(U.t['+B0XLC']),
                     value: n,
-                    onChange: h.default.toggleDisableAllSounds,
+                    onChange: g.default.toggleDisableAllSounds,
                     children: U.intl.string(U.t['2ZhCOT'])
                 }),
                 m.map((e) => {
@@ -344,18 +344,18 @@ class K extends s.PureComponent {
             (n = 'UserSettingsModal'),
                 D.Z.requestPermission((e) => {
                     let t = e ? w.$Ab.ENABLED : w.$Ab.BLOCKED;
-                    h.default.setPermissionsState(t, n);
+                    g.default.setPermissionsState(t, n);
                 });
-        } else h.default.setDesktopType(t);
+        } else g.default.setDesktopType(t);
     }
     handleTTSChange(e) {
         let t = e.value;
-        h.default.setTTSType(t);
+        g.default.setTTSType(t);
     }
     render() {
         let { desktopType: e, afkTimeout: t, disableUnreadBadge: n, taskbarFlash: s, disabledSounds: r, disableAllSounds: a, notifyMessagesInSelectedChannel: c, focusMode: d } = this.props,
             m = y.isPlatformEmbedded && (0, y.isWindows)(),
-            h = o()
+            g = o()
                 .range(1, 11)
                 .map((e) => ({
                     value: 60 * e,
@@ -408,7 +408,7 @@ class K extends s.PureComponent {
                             (0, i.jsx)(u.q4e, {
                                 value: t,
                                 onChange: k.CM.updateSetting,
-                                options: h
+                                options: g
                             }),
                             (0, i.jsx)(u.R94, {
                                 type: u.geA.DESCRIPTION,
@@ -435,10 +435,10 @@ class K extends s.PureComponent {
     constructor(...e) {
         super(...e),
             H(this, 'handleToggleShowUnreadBadge', () => {
-                h.default.setDisableUnreadBadge(!this.props.disableUnreadBadge);
+                g.default.setDisableUnreadBadge(!this.props.disableUnreadBadge);
             }),
             H(this, 'handleToggleShowFlash', () => {
-                h.default.setTaskbarFlash(!this.props.taskbarFlash);
+                g.default.setTaskbarFlash(!this.props.taskbarFlash);
             }),
             H(this, 'renderTTS', () => {
                 if (!x.Zh) return null;
@@ -503,7 +503,7 @@ function X() {
                   className: F.marginBottom20,
                   value: t,
                   onChange: (e) => {
-                      g.Z.setAccountFlag(V.c.MENTION_ON_ALL_MESSAGES, e);
+                      h.Z.setAccountFlag(V.c.MENTION_ON_ALL_MESSAGES, e);
                   },
                   note: "Increments the mention count when receiving a message in a channel set to 'All Messages'",
                   children: 'Mention on all messages?'
@@ -540,7 +540,7 @@ function J() {
                                   disabled: r || n,
                                   note: 'Turns on the new notification system',
                                   onChange: (e) => {
-                                      g.Z.setAccountFlag(V.c.USE_NEW_NOTIFICATIONS, e);
+                                      h.Z.setAccountFlag(V.c.USE_NEW_NOTIFICATIONS, e);
                                   },
                                   children: U.intl.string(U.t.z21l8P)
                               })
@@ -579,7 +579,7 @@ function J() {
                                               hideBorder: !0,
                                               value: n,
                                               onChange: (e) => {
-                                                  g.Z.setAccountFlag(V.c.USE_NEW_NOTIFICATIONS, e);
+                                                  h.Z.setAccountFlag(V.c.USE_NEW_NOTIFICATIONS, e);
                                               },
                                               children: 'Toggle new system on/off'
                                           })

@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(726542),
     u = n(275759),
     m = n(231757),
-    h = n(888496),
-    g = n(706454),
+    g = n(888496),
+    h = n(706454),
     x = n(553795),
     _ = n(63063),
     p = n(981631),
@@ -22,7 +22,7 @@ function T(e) {
     let { account: n, refreshed: l, handleRefresh: o } = e,
         [c, d] = s.useState(!1),
         m = null !== (t = n.metadata) && void 0 !== t ? t : {},
-        x = (0, r.e7)([g.default], () => g.default.locale),
+        x = (0, r.e7)([h.default], () => h.default.locale),
         T = s.useCallback(async () => {
             d(!0);
             try {
@@ -34,22 +34,22 @@ function T(e) {
         N = null;
     switch (n.type) {
         case p.ABu.REDDIT:
-            N = (0, h.oP)(m, f.metadataItem);
+            N = (0, g.oP)(m, f.metadataItem);
             break;
         case p.ABu.STEAM:
-            N = (0, h.Dq)(m, f.metadataItem);
+            N = (0, g.Dq)(m, f.metadataItem);
             break;
         case p.ABu.TWITTER:
-            N = (0, h.rJ)(m, f.metadataItem);
+            N = (0, g.rJ)(m, f.metadataItem);
             break;
         case p.ABu.EBAY:
-            N = (0, h.ul)(m, f.metadataItem);
+            N = (0, g.ul)(m, f.metadataItem);
             break;
         case p.ABu.PAYPAL:
-            N = (0, h.li)(m, f.metadataItem);
+            N = (0, g.li)(m, f.metadataItem);
             break;
         case p.ABu.TIKTOK:
-            N = (0, h.hf)(m, f.metadataItem);
+            N = (0, g.hf)(m, f.metadataItem);
     }
     let S = (0, u.FI)(m[E.PC.CREATED_AT], x),
         I = null,
@@ -112,11 +112,11 @@ function T(e) {
 }
 function N(e) {
     let { account: t, handleRefresh: n, refreshedAccountIds: r } = e,
-        [u, h] = s.useState(t.visibility),
-        [g, x] = s.useState(t.metadataVisibility),
+        [u, g] = s.useState(t.visibility),
+        [h, x] = s.useState(t.metadataVisibility),
         _ = (0, c.ZP)();
     s.useEffect(() => {
-        h(t.visibility), x(t.metadataVisibility);
+        g(t.visibility), x(t.metadataVisibility);
     }, [t]);
     let p = d.Z.get(t.type),
         E = !0 === p.hasMetadata;
@@ -141,14 +141,14 @@ function N(e) {
                                     let { verified: n } = t,
                                         i = e ? 1 : 0;
                                     if (e && !n) {
-                                        h(i),
+                                        g(i),
                                             (0, m.Z)({
                                                 platformType: t.type,
                                                 location: 'User Settings'
                                             });
                                         return;
                                     }
-                                    h(i), o.Z.setVisibility(t.type, t.id, i);
+                                    g(i), o.Z.setVisibility(t.type, t.id, i);
                                 },
                                 children: [
                                     (0, i.jsx)(a.Text, {
@@ -169,7 +169,7 @@ function N(e) {
                                     className: f.additionalDetailsSwitch,
                                     hideBorder: !0,
                                     disabled: 1 !== u || null == t.metadata,
-                                    value: 1 === g,
+                                    value: 1 === h,
                                     onChange: function (e) {
                                         let { verified: n } = t,
                                             i = e ? 1 : 0;

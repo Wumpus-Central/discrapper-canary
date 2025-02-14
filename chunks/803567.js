@@ -10,8 +10,8 @@ var s = n(120356),
     d = n(600164),
     u = n(313201),
     m = n(921801),
-    h = n(463395),
-    g = n(131951),
+    g = n(463395),
+    h = n(131951),
     x = n(626135),
     _ = n(63063),
     p = n(210887),
@@ -46,26 +46,26 @@ function A(e) {
             noiseSuppression: r,
             noiseSuppressionSupported: u,
             noiseCancellationSupported: m
-        } = (0, l.cj)([g.Z], () => ({
-            noiseCancellation: g.Z.getNoiseCancellation(),
-            noiseSuppression: g.Z.getNoiseSuppression(),
-            noiseSuppressionSupported: g.Z.isNoiseSuppressionSupported(),
-            noiseCancellationSupported: g.Z.isNoiseCancellationSupported()
+        } = (0, l.cj)([h.Z], () => ({
+            noiseCancellation: h.Z.getNoiseCancellation(),
+            noiseSuppression: h.Z.getNoiseSuppression(),
+            noiseSuppressionSupported: h.Z.isNoiseSuppressionSupported(),
+            noiseCancellationSupported: h.Z.isNoiseCancellationSupported()
         }));
     if (!u && !m) return null;
-    let h = [];
+    let g = [];
     return (
         m &&
-            h.push({
+            g.push({
                 name: T.intl.string(T.t.rdoNzs),
                 value: 2
             }),
         u &&
-            h.push({
+            g.push({
                 name: T.intl.string(T.t.qXeYHx),
                 value: 1
             }),
-        h.push({
+        g.push({
             name: T.intl.string(T.t.wkYAl5),
             value: 0
         }),
@@ -84,7 +84,7 @@ function A(e) {
                     children: T.intl.string(T.t.najZCQ)
                 }),
                 (0, i.jsx)(o.FXm, {
-                    options: h,
+                    options: g,
                     onChange: (e) => {
                         c.Z.setNoiseCancellation(2 === e.value, v), c.Z.setNoiseSuppression(1 === e.value, v);
                     },
@@ -120,24 +120,24 @@ function O(e) {
             automaticGainControl: d,
             vadAutoThreshold: u,
             vadUseKrisp: x
-        } = (0, l.cj)([g.Z], () => ({
-            inputMode: g.Z.getMode(),
-            inputDeviceId: g.Z.getInputDeviceId(),
-            echoCancellation: g.Z.getEchoCancellation(),
-            automaticGainControl: g.Z.getAutomaticGainControl(),
-            vadAutoThreshold: g.Z.getModeOptions().autoThreshold,
-            vadUseKrisp: g.Z.getModeOptions().vadUseKrisp
+        } = (0, l.cj)([h.Z], () => ({
+            inputMode: h.Z.getMode(),
+            inputDeviceId: h.Z.getInputDeviceId(),
+            echoCancellation: h.Z.getEchoCancellation(),
+            automaticGainControl: h.Z.getAutomaticGainControl(),
+            vadAutoThreshold: h.Z.getModeOptions().autoThreshold,
+            vadUseKrisp: h.Z.getModeOptions().vadUseKrisp
         })),
         {
             hasEchoCancellation: _,
             hasNoiseSuppression: p,
             hasAutomaticGainControl: S
         } = (0, l.cj)(
-            [h.Z],
+            [g.Z],
             () => ({
-                hasEchoCancellation: h.Z.hasEchoCancellation(s),
-                hasNoiseSuppression: h.Z.hasNoiseSuppression(s),
-                hasAutomaticGainControl: h.Z.hasAutomaticGainControl(s)
+                hasEchoCancellation: g.Z.hasEchoCancellation(s),
+                hasNoiseSuppression: g.Z.hasNoiseSuppression(s),
+                hasAutomaticGainControl: g.Z.hasAutomaticGainControl(s)
             }),
             [s]
         ),

@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(481060),
     u = n(159351),
     m = n(366939),
-    h = n(623573),
-    g = n(190947),
+    g = n(623573),
+    h = n(190947),
     x = n(275850),
     _ = n(906732),
     p = n(15640),
@@ -78,7 +78,7 @@ function O(e) {
         K = () => {
             (0, d.ZDy)(
                 async () => (e) =>
-                    (0, i.jsx)(h.default, {
+                    (0, i.jsx)(g.default, {
                         ...e,
                         onAddPaymentSource: W,
                         analyticsLocation: O
@@ -143,13 +143,13 @@ function O(e) {
                     });
                 })(),
                 null != t.paymentSourceId
-                    ? (0, i.jsx)(g.b, {
+                    ? (0, i.jsx)(h.b, {
                           currencies: n,
                           children: (0, i.jsxs)('div', {
                               className: l()(j.currency, A.flex, A.alignCenter),
                               children: [
                                   (0, i.jsx)('div', { children: v.intl.string(v.t['0YjaXV']) }),
-                                  (0, i.jsx)(g.Z, {
+                                  (0, i.jsx)(h.Z, {
                                       className: j.currencyDropdown,
                                       selectedCurrency: U,
                                       currencies: n,

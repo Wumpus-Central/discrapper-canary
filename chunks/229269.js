@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(502109),
     u = n(241209),
     m = n(563132),
-    h = n(586585),
-    g = n(439021),
+    g = n(586585),
+    h = n(439021),
     x = n(450272),
     _ = n(388032),
     p = n(50734),
@@ -95,7 +95,7 @@ function T(e) {
             })
         };
     return e.renderStepBody
-        ? (0, i.jsx)(g.t, {
+        ? (0, i.jsx)(h.t, {
               ...n,
               ...e
           })
@@ -137,8 +137,8 @@ function S(e) {
             null != n.current && n.current.show();
         };
     return (0, i.jsx)(N, {
-        footer: (0, i.jsx)(h.Z, {
-            primaryCTA: h.Z.CTAType.CONTINUE,
+        footer: (0, i.jsx)(g.Z, {
+            primaryCTA: g.Z.CTAType.CONTINUE,
             primaryText: _.intl.string('applePay' === t ? _.t.WoXvJC : _.t.wnVVr6),
             primaryDisabled: !r,
             onPrimary: () => a(),
@@ -264,7 +264,7 @@ function P() {
         [n, l] = s.useState(A),
         [a, c] = s.useState(R(O)),
         [d, m] = s.useState(O),
-        [h, g] = s.useState(null),
+        [g, h] = s.useState(null),
         [_, E] = s.useState(
             (0, i.jsx)(x.DS, {
                 errorLabel: v.CONFIGURABLE,
@@ -308,11 +308,11 @@ function P() {
                 value: a,
                 onChange: c
             }),
-            null != h &&
+            null != g &&
                 (0, i.jsx)(o.Text, {
                     variant: 'text-md/normal',
                     color: 'text-danger',
-                    children: h
+                    children: g
                 }),
             (0, i.jsx)(o.zxk, {
                 className: p.applyChangesButton,
@@ -347,9 +347,9 @@ function P() {
                             ),
                             l(t),
                             m(n),
-                            g(null);
+                            h(null);
                     } catch (e) {
-                        console.error('ConfigurableStripeExpressCheckoutElement - error parsing JSON: ', e), g('Error parsing JSON. Check console for more information.');
+                        console.error('ConfigurableStripeExpressCheckoutElement - error parsing JSON: ', e), h('Error parsing JSON. Check console for more information.');
                     }
                 },
                 children: 'Apply Changes'

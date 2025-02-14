@@ -10,8 +10,8 @@ var s = n(100527),
     d = n(417420),
     u = n(973465),
     m = n(546997),
-    h = n(186934),
-    g = n(520384),
+    g = n(186934),
+    h = n(520384),
     x = n(154784),
     _ = n(267006),
     p = n(726985),
@@ -35,7 +35,7 @@ function C() {
                 title: E.intl.string(E.t.KDdjoq),
                 webSetting: p.s6.VOICE_AND_VIDEO_VIDEO_STREAMING,
                 children: (0, i.jsxs)(a.Z, {
-                    children: [(0, i.jsx)(g.Z, { refreshStyles: !0 }), e && (0, i.jsx)(h.Z, { refreshStyles: !0 }), (0, i.jsx)(m.Z, { refreshStyles: !0 })]
+                    children: [(0, i.jsx)(h.Z, { refreshStyles: !0 }), e && (0, i.jsx)(g.Z, { refreshStyles: !0 }), (0, i.jsx)(m.Z, { refreshStyles: !0 })]
                 })
             }),
             (0, i.jsx)(l.Z, {

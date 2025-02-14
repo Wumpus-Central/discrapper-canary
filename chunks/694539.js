@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(53281),
     u = n(921813),
     m = n(594174),
-    h = n(572004),
-    g = n(451593),
+    g = n(572004),
+    h = n(451593),
     x = n(477146),
     _ = n(329156),
     p = n(336600),
@@ -27,7 +27,7 @@ let f = (e) => {
     },
     T = (e) => {
         let { effect: t, back: n } = e,
-            { upsertConfig: r } = (0, g.E)(),
+            { upsertConfig: r } = (0, h.E)(),
             T = (0, o.e7)([m.default], () => m.default.getCurrentUser()),
             [N, S] = s.useState(!0),
             I = s.useRef(null),
@@ -232,7 +232,7 @@ let f = (e) => {
                                               (0, i.jsx)(c.zxk, {
                                                   color: c.Ttl.BRAND,
                                                   onClick: () => {
-                                                      (0, h.JG)((0, x.HV)(P, 'proto')), (0, c.showToast)((0, c.createToast)('Copied to clipboard!', c.ToastType.SUCCESS));
+                                                      (0, g.JG)((0, x.HV)(P, 'proto')), (0, c.showToast)((0, c.createToast)('Copied to clipboard!', c.ToastType.SUCCESS));
                                                   },
                                                   children: 'Export'
                                               })
@@ -255,7 +255,7 @@ let f = (e) => {
                                               (0, i.jsx)(c.zxk, {
                                                   color: c.Ttl.GREEN,
                                                   onClick: () => {
-                                                      (0, h.JG)(JSON.stringify(t)), (0, c.showToast)((0, c.createToast)('Copied to clipboard!', c.ToastType.SUCCESS));
+                                                      (0, g.JG)(JSON.stringify(t)), (0, c.showToast)((0, c.createToast)('Copied to clipboard!', c.ToastType.SUCCESS));
                                                   },
                                                   children: 'Share'
                                               })

@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(205822),
     u = n(329013),
     m = n(594174),
-    h = n(711325),
-    g = n(852630),
+    g = n(711325),
+    h = n(852630),
     x = n(731994),
     _ = n(355531);
 function p() {
@@ -18,7 +18,7 @@ function p() {
     let [t, n] = (0, s.useState)(!1),
         [r, l] = (0, s.useState)(!1),
         [a, c] = (0, s.useState)(null),
-        [m, g] = (0, s.useState)([]),
+        [m, h] = (0, s.useState)([]),
         p = (0, s.useCallback)((e) => {
             c((t) =>
                 null == t
@@ -40,7 +40,7 @@ function p() {
             );
         }, []),
         I = (0, s.useCallback)((e) => {
-            g((t) => t.filter((t) => t !== e));
+            h((t) => t.filter((t) => t !== e));
         }, []);
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -76,7 +76,7 @@ function p() {
                             t && (0, i.jsx)(u.i, {}),
                             ' ',
                             r &&
-                                (0, i.jsx)(h.Z, {
+                                (0, i.jsx)(g.Z, {
                                     selected: null == a ? void 0 : null === (e = a.palette) || void 0 === e ? void 0 : e.name,
                                     onSelect: (e) => {
                                         c((t) =>
@@ -124,7 +124,7 @@ function p() {
                                 icons: x.pA,
                                 onDrop: (e) => {
                                     let t = URL.createObjectURL(e[0]);
-                                    g((e) => {
+                                    h((e) => {
                                         let n = Array.from(e);
                                         return n.push(t), n;
                                     });
@@ -300,7 +300,7 @@ function N(e) {
                     variant: 'text-sm/semibold',
                     children: 'DEFAULT'
                 }),
-                (0, i.jsx)(g.Z, { nameplate: t }),
+                (0, i.jsx)(h.Z, { nameplate: t }),
                 (0, i.jsx)(o.Text, {
                     className: _.label,
                     variant: 'text-sm/semibold',
@@ -308,11 +308,11 @@ function N(e) {
                 }),
                 (0, i.jsxs)('div', {
                     children: [
-                        (0, i.jsx)(g.Z, {
+                        (0, i.jsx)(h.Z, {
                             selected: !0,
                             nameplate: t
                         }),
-                        (0, i.jsx)(g.Z, { selected: !0 })
+                        (0, i.jsx)(h.Z, { selected: !0 })
                     ]
                 })
             ]

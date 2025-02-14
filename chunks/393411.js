@@ -14,8 +14,8 @@ var s = n(120356),
     d = n(100527),
     u = n(906732),
     m = n(975298),
-    h = n(710845),
-    g = n(963249),
+    g = n(710845),
+    h = n(963249),
     x = n(301766),
     _ = n(509545),
     p = n(931331),
@@ -35,7 +35,7 @@ var s = n(120356),
     P = n(981631),
     D = n(388032),
     y = n(484760);
-let Z = new h.Z('SubscriptionHeader.tsx'),
+let Z = new g.Z('SubscriptionHeader.tsx'),
     k = {
         page: P.ZY5.USER_SETTINGS,
         section: P.jXE.SETTINGS_PREMIUM,
@@ -144,7 +144,7 @@ function V() {
         buttons: (0, i.jsx)(j.Z, {
             className: y.toolsButton,
             onClick: () =>
-                (0, g.Z)({
+                (0, h.Z)({
                     subscriptionTier: R.Si.TIER_1,
                     analyticsLocations: e,
                     analyticsObject: k
@@ -156,7 +156,7 @@ function V() {
 }
 let U = function (e) {
     var t;
-    let { subscription: s, renewalInvoicePreview: l, paymentSource: h, busy: O, analyticsLocation: V } = e,
+    let { subscription: s, renewalInvoicePreview: l, paymentSource: g, busy: O, analyticsLocation: V } = e,
         { analyticsLocations: U } = (0, u.ZP)(d.Z.SUBSCRIPTION_HEADER),
         { fractionalState: G } = (0, m.Z)({ forceFetch: !1 }),
         F = G === R.a$.FP_SUB_PAUSED,
@@ -196,13 +196,13 @@ let U = function (e) {
                     Z.info('Plan not fetched for plan id: '.concat(s.planIdFromItems));
                     return;
                 }
-                let t = (0, T.DE)(e, null == h ? void 0 : h.id, !1),
+                let t = (0, T.DE)(e, null == g ? void 0 : g.id, !1),
                     n = t.length > 0 ? t[0] : s.currency,
                     i = !1;
-                1 === t.length && (null == h ? void 0 : h.id) === s.paymentSourceId && (0, T.tD)(e.id, n, null == h ? void 0 : h.id) && (i = !0),
+                1 === t.length && (null == g ? void 0 : g.id) === s.paymentSourceId && (0, T.tD)(e.id, n, null == g ? void 0 : g.id) && (i = !0),
                     i
                         ? c.O5(s, U)
-                        : (0, g.Z)({
+                        : (0, h.Z)({
                               initialPlanId: s.planIdFromItems,
                               analyticsLocations: U,
                               analyticsLocation: V,
@@ -223,7 +223,7 @@ let U = function (e) {
                 return;
             }
             s.status === P.O0b.PAUSED
-                ? (0, g.Z)({
+                ? (0, h.Z)({
                       initialPlanId: s.planIdFromItems,
                       analyticsLocations: U,
                       analyticsLocation: V,
@@ -343,7 +343,7 @@ let U = function (e) {
                                     disabled: e,
                                     className: y.toolsButton,
                                     onClick: () => {
-                                        (0, g.Z)({
+                                        (0, h.Z)({
                                             analyticsLocations: U,
                                             analyticsLocation: V,
                                             analyticsObject: k,

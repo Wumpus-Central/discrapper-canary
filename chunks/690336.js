@@ -14,7 +14,7 @@ var i = n(200651),
 function f(e) {
     return e.widget.id;
 }
-function g(e, t, n, l) {
+function m(e, t, n, l) {
     return n === o.pJH.YEETED
         ? null
         : (0, i.jsx)(
@@ -27,7 +27,7 @@ function g(e, t, n, l) {
               e
           );
 }
-let m = [],
+let g = [],
     v = l.memo(function (e) {
         let { className: t } = e,
             n = (0, _.Z)(),
@@ -36,7 +36,7 @@ let m = [],
                 [a.Z],
                 () => {
                     let e = a.Z.getLayout(p.OVERLAY_V3_LAYOUT_ID);
-                    if (null == e) return m;
+                    if (null == e) return g;
                     let t = [];
                     for (let n of e.widgets) {
                         let e = a.Z.getWidget(n);
@@ -65,7 +65,7 @@ let m = [],
             );
         return (0, i.jsx)(o.W3x, {
             items: v,
-            renderItem: g,
+            renderItem: m,
             getItemKey: f,
             wrapChildren: E
         });

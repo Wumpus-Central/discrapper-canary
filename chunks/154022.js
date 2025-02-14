@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(481060),
     u = n(230711),
     m = n(419363),
-    h = n(857595),
-    g = n(607070),
+    g = n(857595),
+    h = n(607070),
     x = n(627845),
     _ = n(600164),
     p = n(313201),
@@ -40,7 +40,7 @@ let V = (0, p.hQ)(),
     U = (0, p.hQ)(),
     G = (0, p.hQ)(),
     F = o().debounce((e) => {
-        (0, h.o2)(e);
+        (0, g.o2)(e);
     }, 250),
     H = o().debounce((e) => {
         (0, I.Ct)(e);
@@ -170,9 +170,9 @@ function Y() {
     });
 }
 function W() {
-    let { saturation: e, desaturateUserColors: t } = (0, c.cj)([g.Z], () => ({
-        saturation: g.Z.saturation,
-        desaturateUserColors: g.Z.desaturateUserColors
+    let { saturation: e, desaturateUserColors: t } = (0, c.cj)([h.Z], () => ({
+        saturation: h.Z.saturation,
+        desaturateUserColors: h.Z.desaturateUserColors
     }));
     return (0, i.jsxs)(d.hjN, {
         className: M.marginTop20,
@@ -206,7 +206,7 @@ function W() {
                     hideBorder: !0,
                     className: l()(M.marginTop20, M.marginBottom20),
                     value: t,
-                    onChange: h.f1,
+                    onChange: g.f1,
                     note: L.intl.string(L.t.nlAOER),
                     children: L.intl.string(L.t.bQCodH)
                 })
@@ -215,21 +215,21 @@ function W() {
     });
 }
 function K() {
-    let e = (0, c.e7)([g.Z], () => g.Z.alwaysShowLinkDecorations);
+    let e = (0, c.e7)([h.Z], () => h.Z.alwaysShowLinkDecorations);
     return (0, i.jsx)(d.xJW, {
         className: M.marginTop20,
         children: (0, i.jsx)(d.j7V, {
             note: L.intl.string(L.t['72i5GB']),
             value: e,
             onChange: function () {
-                (0, h.gs)(!e);
+                (0, g.gs)(!e);
             },
             children: L.intl.string(L.t.OLZFBw)
         })
     });
 }
 function q() {
-    let e = (0, c.e7)([g.Z], () => g.Z.roleStyle);
+    let e = (0, c.e7)([h.Z], () => h.Z.roleStyle);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)(d.xJW, {
@@ -257,7 +257,7 @@ function q() {
                             }
                         ],
                         onChange: function (e) {
-                            (0, h.u1)(e.value);
+                            (0, g.u1)(e.value);
                         },
                         value: e
                     })
@@ -268,7 +268,7 @@ function q() {
     });
 }
 function X() {
-    let e = (0, c.e7)([g.Z], () => g.Z.hideTags);
+    let e = (0, c.e7)([h.Z], () => h.Z.hideTags);
     return (0, i.jsx)(d.xJW, {
         title: L.intl.string(L.t.UQt6dX),
         className: M.marginTop20,
@@ -276,14 +276,14 @@ function X() {
             setting: D.s6.ACCESSIBILITY_TAGS_NAMES,
             children: (0, i.jsx)(d.j7V, {
                 value: !e,
-                onChange: () => (0, h.Nv)(!e),
+                onChange: () => (0, g.Nv)(!e),
                 children: L.intl.string(L.t.UPwh1N)
             })
         })
     });
 }
 function J() {
-    let e = (0, c.e7)([g.Z], () => g.Z.syncProfileThemeWithUserTheme),
+    let e = (0, c.e7)([h.Z], () => h.Z.syncProfileThemeWithUserTheme),
         t = s.useRef(null);
     return (
         (0, R.Z)(t, P.rP.SYNC_PROFILE_THEME_WITH_USER_THEME),
@@ -301,7 +301,7 @@ function J() {
                     }),
                     className: M.marginTop20,
                     value: e,
-                    onChange: h.Uv,
+                    onChange: g.Uv,
                     children: L.intl.string(L.t['sSY+mJ'])
                 })
             })
@@ -309,14 +309,14 @@ function J() {
     );
 }
 function Q() {
-    let [e] = (0, c.Wu)([g.Z], () => [g.Z.syncForcedColors, g.Z.systemForcedColors]),
+    let [e] = (0, c.Wu)([h.Z], () => [h.Z.syncForcedColors, h.Z.systemForcedColors]),
         [t, n] = s.useState(e);
     s.useEffect(() => {
         n(e);
     }, [e]);
     let r = s.useRef(null);
     s.useEffect(() => {
-        null != r.current && (clearTimeout(r.current), (r.current = null)), t !== e && (r.current = setTimeout(() => (0, h.qz)(t), 150));
+        null != r.current && (clearTimeout(r.current), (r.current = null)), t !== e && (r.current = setTimeout(() => (0, g.qz)(t), 150));
     }, [t, e]);
     let l = L.intl.format(L.t.GwEVEx, { learnMoreLink: j.Z.getArticleURL(y.BhN.FORCED_COLORS) });
     return (0, i.jsx)(d.xJW, {
@@ -342,10 +342,10 @@ function $() {
             systemPrefersReducedMotion: a,
             gifAutoPlayOverrideReason: o,
             animateEmojiOverrideReason: u
-        } = (0, c.cj)([g.Z, O.Z], () => ({
-            systemPrefersReducedMotion: g.Z.systemPrefersReducedMotion,
-            rawPrefersReducedMotion: g.Z.rawPrefersReducedMotion,
-            useReducedMotion: g.Z.useReducedMotion,
+        } = (0, c.cj)([h.Z, O.Z], () => ({
+            systemPrefersReducedMotion: h.Z.systemPrefersReducedMotion,
+            rawPrefersReducedMotion: h.Z.rawPrefersReducedMotion,
+            useReducedMotion: h.Z.useReducedMotion,
             gifAutoPlayOverrideReason: O.Z.getAppliedOverrideReasonKey('gifAutoPlay'),
             animateEmojiOverrideReason: O.Z.getAppliedOverrideReasonKey('animateEmoji')
         })),
@@ -353,12 +353,12 @@ function $() {
     (0, R.Z)(m, P.rP.REDUCED_MOTION);
     let x = s.useCallback(
             (e, t) => {
-                (0, h.Zt)(t ? 'auto' : a);
+                (0, g.Zt)(t ? 'auto' : a);
             },
             [a]
         ),
         _ = s.useCallback((e) => {
-            (0, h.Zt)(e ? 'reduce' : 'no-preference');
+            (0, g.Zt)(e ? 'reduce' : 'no-preference');
         }, []);
     return (0, i.jsxs)(d.xJW, {
         ref: m,
@@ -450,7 +450,7 @@ function ee() {
     });
 }
 function et() {
-    let e = (0, c.e7)([g.Z], () => g.Z.isSubmitButtonEnabled),
+    let e = (0, c.e7)([h.Z], () => h.Z.isSubmitButtonEnabled),
         t = A.dN.useSetting(),
         n = s.useRef(null);
     return (
@@ -468,7 +468,7 @@ function et() {
                     children: (0, i.jsx)(d.j7V, {
                         className: M.marginTop20,
                         value: e,
-                        onChange: h.eN,
+                        onChange: g.eN,
                         children: L.intl.string(L.t['3Fztn5'])
                     })
                 }),

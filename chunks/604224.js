@@ -10,8 +10,8 @@ var s = n(100527),
     d = n(625528),
     u = n(674116),
     m = n(754367),
-    h = n(661950),
-    g = n(726985),
+    g = n(661950),
+    h = n(726985),
     x = n(981631),
     _ = n(388032);
 function p() {
@@ -21,23 +21,23 @@ function p() {
     let n = [
         {
             title: _.intl.string(_.t.K3lovL),
-            component: h.Z,
-            setting: g.s6.VOICE_AND_VIDEO_VOICE_TAB
+            component: g.Z,
+            setting: h.s6.VOICE_AND_VIDEO_VOICE_TAB
         },
         {
             title: _.intl.string(_.t.FlNoSU),
             component: d.Z,
-            setting: g.s6.VOICE_AND_VIDEO_VIDEO_TAB
+            setting: h.s6.VOICE_AND_VIDEO_VIDEO_TAB
         },
         {
             title: _.intl.string(_.t.ABjMWF),
             component: c.Z,
-            setting: g.s6.VOICE_AND_VIDEO_SOUNDBOARD_TAB
+            setting: h.s6.VOICE_AND_VIDEO_SOUNDBOARD_TAB
         },
         {
             title: _.intl.string(_.t.OFpL3d),
             component: m.Z,
-            setting: g.s6.VOICE_AND_VIDEO_DEBUG_TAB
+            setting: h.s6.VOICE_AND_VIDEO_DEBUG_TAB
         }
     ];
     return (0, i.jsx)(r.Gt, {
@@ -45,7 +45,7 @@ function p() {
         children: (0, i.jsx)(l.N, {
             header: _.intl.string(_.t.B1fFpa),
             children: (0, i.jsx)(a.Z, {
-                parentSetting: g.s6.VOICE_AND_VIDEO,
+                parentSetting: h.s6.VOICE_AND_VIDEO,
                 settingsSection: x.oAB.VOICE,
                 tabs: n
             })

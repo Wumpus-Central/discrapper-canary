@@ -9,22 +9,22 @@ var i = n(200651),
     d = n(695103),
     u = n(998502),
     m = n(740492),
-    h = n(695346),
-    g = n(399970),
+    g = n(695346),
+    h = n(399970),
     x = n(726985),
     _ = n(981631),
     p = n(388032);
 function E() {
     let [e] = s.useState(() => u.ZP.getEnableHardwareAcceleration()),
-        t = h.bm.useSetting(),
-        n = h.Sb.useSetting(),
+        t = g.bm.useSetting(),
+        n = g.Sb.useSetting(),
         E = (0, r.e7)([d.Z], () => d.Z.testModeApplicationId),
         C = (0, r.e7)([m.ZP], () => m.ZP.showPlayAgain),
         f = s.useCallback((e) => {
-            h.bm.updateSetting(!e);
+            g.bm.updateSetting(!e);
         }, []),
         T = s.useCallback((e) => {
-            e ? (0, l.h7j)((e) => (0, i.jsx)(g.Z, { ...e })) : a.mc();
+            e ? (0, l.h7j)((e) => (0, i.jsx)(h.Z, { ...e })) : a.mc();
         }, []),
         N = s.useCallback((e) => {
             o.ZP.updatedUnsyncedSettings({ showPlayAgain: e });
@@ -52,7 +52,7 @@ function E() {
                 setting: x.s6.SETTINGS_ADVANCED_DEVELOPER_MODE,
                 children: (0, i.jsx)(l.j7V, {
                     value: n,
-                    onChange: h.Sb.updateSetting,
+                    onChange: g.Sb.updateSetting,
                     note: p.intl.format(p.t['CY6q/f'], { apiDocsUrl: _.EYA.API_DOCS }),
                     children: p.intl.string(p.t.ObIb1d)
                 })

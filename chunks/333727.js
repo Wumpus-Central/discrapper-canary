@@ -15,7 +15,7 @@ function h(e, t, n, h) {
             game: n.name
         }),
         f = t.getAvatarURL(e.guild_id, 80),
-        { trackView: g, trackClick: m } = (0, s.R)(d.n0.ActivityInvite, {
+        { trackView: m, trackClick: g } = (0, s.R)(d.n0.ActivityInvite, {
             notif_type: d.n0.ActivityInvite,
             notif_user_id: t.id,
             activity_type: u.mFx.JOIN_REQUEST,
@@ -28,7 +28,7 @@ function h(e, t, n, h) {
         confirmText: c.intl.string(c.t['fgP/wc']),
         cancelText: c.intl.string(c.t.tpXzJy),
         onNotificationShow: () => {
-            g();
+            m();
         },
         onConfirmClick: (t, n) => {
             i.Z.sendActivityInvite({
@@ -37,14 +37,14 @@ function h(e, t, n, h) {
                 activity: h,
                 location: o.Z.isLocked((0, a.QF)()) ? u.Sbl.LOCKED_OVERLAY : u.Sbl.UNLOCKED_OVERLAY
             }),
-                m('join'),
+                g('join'),
                 l.Z.updateNotificationStatus(n);
         },
         onCancelClick: (t, n) => {
-            (0, r.In)(e.id, !0, !0), l.Z.updateNotificationStatus(n), m('decline');
+            (0, r.In)(e.id, !0, !0), l.Z.updateNotificationStatus(n), g('decline');
         },
         onDismissClick: () => {
-            m('dismiss');
+            g('dismiss');
         }
     };
 }

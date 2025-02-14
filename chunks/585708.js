@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => x });
 var i = n(200651);
 n(192379);
 var l = n(13245),
@@ -13,16 +13,16 @@ var l = n(13245),
     _ = n(610394),
     p = n(516542),
     f = n(380736),
-    g = n(620954),
-    m = n(987650),
+    m = n(620954),
+    g = n(987650),
     v = n(981631),
     E = n(388032);
-function I(e, t, n, I) {
-    var x;
+function x(e, t, n, x) {
+    var I;
     let { icon: C, title: S, body: Z } = (0, d.Xi)(e, t, n),
-        { trackView: y, trackClick: O } = (0, g.R)(m.n0.TextChat, {
-            notif_type: m.n0.TextChat,
-            notif_user_id: null === (x = t.author) || void 0 === x ? void 0 : x.id,
+        { trackView: y, trackClick: O } = (0, m.R)(g.n0.TextChat, {
+            notif_type: g.n0.TextChat,
+            notif_user_id: null === (I = t.author) || void 0 === I ? void 0 : I.id,
             message_id: t.id,
             message_type: t.type,
             guild_id: e.guild_id,
@@ -40,7 +40,7 @@ function I(e, t, n, I) {
                       hideSimpleEmbedContent: !1
                   }).content
                 : Z,
-        hint: (e) => (e ? null : (0, f.QR)((0, g.P)(), E.t.ykjOAA, E.intl.string(E.t.jZkzVF))),
+        hint: (e) => (e ? null : (0, f.QR)((0, m.P)(), E.t.ykjOAA, E.intl.string(E.t.jZkzVF))),
         maxBodyLines: 2,
         renderFooter: (t, n) =>
             t
@@ -51,7 +51,7 @@ function I(e, t, n, I) {
                   })
                 : null,
         onNotificationShow: () => {
-            I && (0, a.GN)(s.Ay, s.yk), y();
+            x && (0, a.GN)(s.Ay, s.yk), y();
         },
         onNotificationClick: () => {
             let n = (0, h.QF)();

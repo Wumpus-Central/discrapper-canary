@@ -10,8 +10,8 @@ var s = n(512722),
     d = n(660216),
     u = n(13245),
     m = n(825209),
-    h = n(887278),
-    g = n(594190),
+    g = n(887278),
+    h = n(594190),
     x = n(212632),
     _ = n(444295),
     p = n(809357),
@@ -71,7 +71,7 @@ function R(e) {
         })),
         Z = (0, o.e7)([C.ZP], () => C.ZP.getOverlayKeybind()),
         k = (0, p.Z)({ location: 'overlay_user_settings' }),
-        L = (0, h.$1)();
+        L = (0, g.$1)();
     return (
         !(function () {
             let e = A(j);
@@ -99,7 +99,7 @@ function R(e) {
                                         hideBorder: !0,
                                         onChange: function (e) {
                                             var t, n;
-                                            u.Z.setEnabled(e, s), (0, _.ou)(e, _.AE.LEGACY, null !== (n = null === (t = g.ZP.getCurrentGameForAnalytics()) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : null);
+                                            u.Z.setEnabled(e, s), (0, _.ou)(e, _.AE.LEGACY, null !== (n = null === (t = h.ZP.getCurrentGameForAnalytics()) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : null);
                                         },
                                         children: b.intl.string(b.t.vSP6c3)
                                     })

@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(933970),
     u = n(340453),
     m = n(292352),
-    h = n(388032),
-    g = n(586372);
+    g = n(388032),
+    h = n(586372);
 function x(e) {
     let { user: t } = e,
         r = (0, a.e7)([c.default], () => c.default.getCurrentUser()),
@@ -27,20 +27,20 @@ function x(e) {
                 });
         }, [r, t]);
     return (0, i.jsxs)('div', {
-        className: g.container,
+        className: h.container,
         children: [
             (0, i.jsx)('div', {
-                className: g.details,
+                className: h.details,
                 children: (0, i.jsx)(u.Z, {
                     otherUser: t,
                     status: m.ne.ACTIVE
                 })
             }),
             (0, i.jsx)('div', {
-                className: g.actions,
+                className: h.actions,
                 children: (0, i.jsx)(d.Z, {
                     icon: o.Dio,
-                    tooltip: h.intl.string(h.t.l20ZZm),
+                    tooltip: g.intl.string(g.t.l20ZZm),
                     onClick: x
                 })
             })

@@ -3,8 +3,8 @@ var i,
     s = n(192379),
     l = n(392711),
     a = n.n(l),
-    r = n(995295),
-    o = n(374470),
+    o = n(995295),
+    r = n(374470),
     d = n(902704),
     c = n(846519),
     u = n(13245),
@@ -103,8 +103,8 @@ class y extends (i = s.PureComponent) {
             f(this, 'zone', a().uniqueId('ClickArea')),
             f(this, 'interval', new c.Xp()),
             f(this, 'updateZone', () => {
-                let e = (0, r.findDOMNode)(this);
-                if ((0, o.k)(e)) {
+                let e = (0, o.findDOMNode)(this);
+                if ((0, r.k)(e)) {
                     let { left: t, top: n, right: i, bottom: s } = e.getBoundingClientRect();
                     E(this.zone, {
                         instance: this,

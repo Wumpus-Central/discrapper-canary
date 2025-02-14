@@ -9,27 +9,27 @@ var i = n(200651),
     d = n(692547),
     u = n(481060),
     m = n(846027),
-    h = n(313201),
-    g = n(131951),
+    g = n(313201),
+    h = n(131951),
     x = n(65154),
     _ = n(388032),
     p = n(575747),
     E = n(106722),
     C = n(179683),
     f = n(483938);
-let T = (0, h.hQ)();
+let T = (0, g.hQ)();
 function N() {
     let [e, t] = s.useState(-100),
         [n, r] = s.useState(!1),
-        { threshold: N, autoThreshold: S } = (0, a.cj)([g.Z], () => g.Z.getModeOptions()),
+        { threshold: N, autoThreshold: S } = (0, a.cj)([h.Z], () => h.Z.getModeOptions()),
         {
             inputMode: I,
             automaticVADSupported: b,
             isEnabled: v
-        } = (0, a.cj)([g.Z], () => ({
-            inputMode: g.Z.getMode(),
-            automaticVADSupported: g.Z.supports(x.AN.AUTOMATIC_VAD),
-            isEnabled: g.Z.isEnabled()
+        } = (0, a.cj)([h.Z], () => ({
+            inputMode: h.Z.getMode(),
+            automaticVADSupported: h.Z.supports(x.AN.AUTOMATIC_VAD),
+            isEnabled: h.Z.isEnabled()
         }));
     function j(e, n) {
         t(e), r((n & x.Dg.VOICE) === x.Dg.VOICE);
@@ -44,10 +44,10 @@ function N() {
         let e = new c.V7();
         return (
             e.start(1000, () => {
-                g.Z.getMediaEngine().on(o.aB.VoiceActivity, j), e.stop();
+                h.Z.getMediaEngine().on(o.aB.VoiceActivity, j), e.stop();
             }),
             () => {
-                g.Z.getMediaEngine().removeListener(o.aB.VoiceActivity, j), e.stop();
+                h.Z.getMediaEngine().removeListener(o.aB.VoiceActivity, j), e.stop();
             }
         );
     }, []);
@@ -94,7 +94,7 @@ function N() {
             className: p.sensitivity,
             children: [
                 b &&
-                    (0, i.jsx)(h.FG, {
+                    (0, i.jsx)(g.FG, {
                         children: (e) =>
                             (0, i.jsxs)('div', {
                                 className: l()(C.horizontal, f.marginBottom4),

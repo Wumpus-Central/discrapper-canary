@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(653041);
+n.d(t, { Z: () => h }), n(653041);
 var i = n(200651);
 n(192379);
 var s = n(442837),
@@ -10,12 +10,12 @@ var s = n(442837),
     d = n(726985),
     u = n(65154),
     m = n(388032),
-    h = n(483938);
-function g(e) {
+    g = n(483938);
+function h(e) {
     let { refreshStyles: t = !1 } = e,
         {
             audioSubsystem: n,
-            legacyAudioSubsystemSupported: g,
+            legacyAudioSubsystemSupported: h,
             experimentalAudioSubsystemSupported: x,
             automaticAudioSubsystemSupported: _
         } = (0, s.cj)([o.Z], () => ({
@@ -25,7 +25,7 @@ function g(e) {
             automaticAudioSubsystemSupported: o.Z.supports(u.AN.AUTOMATIC_AUDIO_SUBSYSTEM)
         })),
         p = (0, i.jsx)(r.q4e, {
-            className: h.marginBottom20,
+            className: g.marginBottom20,
             value: n,
             options: (function (e, t, n) {
                 let i = [
@@ -52,7 +52,7 @@ function g(e) {
                         }),
                     i
                 );
-            })(g, x, _),
+            })(h, x, _),
             onChange: (e) => {
                 (0, c.Z)(m.intl.string(m.t.uY7AcX), m.intl.string(m.t.gBqik5), () => l.Z.setAudioSubsystem(e));
             }
@@ -65,9 +65,9 @@ function g(e) {
                   children: p
               })
             : (0, i.jsxs)(r.hjN, {
-                  className: h.marginBottom20,
+                  className: g.marginBottom20,
                   title: m.intl.string(m.t.wVBHr6),
-                  children: [p, (0, i.jsx)(r.$i$, { className: h.marginBottom20 })]
+                  children: [p, (0, i.jsx)(r.$i$, { className: g.marginBottom20 })]
               })
     });
 }

@@ -10,8 +10,8 @@ var s = n(990547),
     d = n(37234),
     u = n(809206),
     m = n(230711),
-    h = n(493544),
-    g = n(579806),
+    g = n(493544),
+    h = n(579806),
     x = n(782568),
     _ = n(758182),
     p = n(163379),
@@ -64,8 +64,8 @@ var s = n(990547),
     ed = n(956699),
     eu = n(54942),
     em = n(293389),
-    eh = n(88624),
-    eg = n(387747),
+    eg = n(88624),
+    eh = n(387747),
     ex = n(389650),
     e_ = n(649157),
     ep = n(593648),
@@ -98,7 +98,7 @@ let eU = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
         let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: eF, impressionSource: eH, numOfPendingFamilyRequests: ez, isOverlaySupported: eY, isClipsBetaTagShowing: eW = !1, shouldMergeGameSettings: eK, isKeywordFilteringEnabled: eq, isStaff: eX, isInappropriateConversationWarningEnabled: eJ, isInapproprateConversationsDefaultOn: eQ, paymentsBlocked: e$, isEligibleForQuests: e0, showGiftNitro: e1, isStricterMessageRequestsEnabled: e2, hasLibraryApplication: e3, hasTOTPEnabled: e6, developerMode: e4, isAdultUser: e8, hasSecureFramesVerifiedUserIds: e7, hypeSquadRemoved: e5, stealthRemediationEnabled: e9, hasIgnoredUsers: te, hasBlockedUsers: tt, isAllowGameFriendDMsVisible: tn, useRefreshedVoiceAndVideo: ti, hasRedesignedActivitySharing: ts } = e;
         return Object.freeze({
             [ek.s6.SEARCH_NO_RESULTS]: {
-                section: h.ID.CUSTOM,
+                section: g.ID.CUSTOM,
                 element: ef.Z
             },
             [ek.s6.ACCOUNT_SECURITY_TAB]: {
@@ -231,7 +231,7 @@ let eU = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
             },
             [ek.s6.PROFILE_CUSTOMIZATION]: {
                 section: eL.oAB.PROFILE_CUSTOMIZATION,
-                type: h.bT.WIDE,
+                type: g.bT.WIDE,
                 searchableTitles: [ew.intl.string(ew.t['vi7f+v'])],
                 label: ew.intl.string(ew.t['vi7f+v']),
                 ariaLabel: ew.intl.string(ew.t['vi7f+v']),
@@ -549,7 +549,7 @@ let eU = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eL.oAB.INVENTORY,
                 searchableTitles: [ew.intl.string(ew.t['jcSP+v'])],
                 label: ew.intl.string(ew.t['jcSP+v']),
-                element: eg.Z,
+                element: eh.Z,
                 ariaLabel: ew.intl.string(ew.t['jcSP+v']),
                 badgeCount: t
             },
@@ -1039,7 +1039,7 @@ let eU = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eL.oAB.VOICE,
                 searchableTitles: [ew.intl.string(ew.t['726JHB'])],
                 parent: ek.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
-                predicate: () => F.isPlatformEmbedded && M.Z.supports(eM.AN.DEBUG_LOGGING) && null != g.Z.fileManager.readLogFiles
+                predicate: () => F.isPlatformEmbedded && M.Z.supports(eM.AN.DEBUG_LOGGING) && null != h.Z.fileManager.readLogFiles
             },
             [ek.s6.VOICE_AND_VIDEO_RESET_VOICE_SETTINGS]: {
                 section: eL.oAB.VOICE,
@@ -1362,7 +1362,7 @@ let eU = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 parent: ek.s6.STREAMER_MODE,
                 predicate: () => {
                     var e, t, n;
-                    return null !== (n = null === g.Z || void 0 === g.Z ? void 0 : null === (t = g.Z.window) || void 0 === t ? void 0 : null === (e = t.supportsContentProtection) || void 0 === e ? void 0 : e.call(t)) && void 0 !== n && n;
+                    return null !== (n = null === h.Z || void 0 === h.Z ? void 0 : null === (t = h.Z.window) || void 0 === t ? void 0 : null === (e = t.supportsContentProtection) || void 0 === e ? void 0 : e.call(t)) && void 0 !== n && n;
                 }
             },
             [ek.s6.SETTINGS_ADVANCED]: {
@@ -1470,7 +1470,7 @@ let eU = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eL.oAB.HYPESQUAD_ONLINE,
                 searchableTitles: [ew.intl.string(ew.t['k0R+4e'])],
                 label: ew.intl.string(ew.t['k0R+4e']),
-                element: eh.Z,
+                element: eg.Z,
                 predicate: () => !e5
             },
             [ek.s6.TOWNHALL]: {
@@ -1800,11 +1800,11 @@ let eU = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 })
             },
             [ek.s6.SOCIAL_LINKS]: {
-                section: h.ID.CUSTOM,
+                section: g.ID.CUSTOM,
                 element: X.Z
             },
             [ek.s6.CLIENT_DEBUG_INFO]: {
-                section: h.ID.CUSTOM,
+                section: g.ID.CUSTOM,
                 element: Y.Z
             }
         });

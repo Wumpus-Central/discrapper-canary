@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(497321),
     u = n(100527),
     m = n(367907),
-    h = n(906732),
-    g = n(296810),
+    g = n(906732),
+    h = n(296810),
     x = n(921813),
     _ = n(621853),
     p = n(246946),
@@ -39,7 +39,7 @@ function A(e) {
 }
 function O(e) {
     let { selectedGuild: t } = e,
-        { analyticsLocations: n } = (0, h.ZP)(u.Z.GUILD_PROFILE),
+        { analyticsLocations: n } = (0, g.ZP)(u.Z.GUILD_PROFILE),
         r = (0, a.e7)([E.default], () => {
             let e = E.default.getCurrentUser();
             return l()(null != e, 'GuildIdentitySettingsPage: user cannot be undefined'), e;
@@ -62,7 +62,7 @@ function O(e) {
     R)
         ? (0, i.jsx)(d.Z, {})
         : O
-          ? (0, i.jsxs)(h.Gt, {
+          ? (0, i.jsxs)(g.Gt, {
                 value: n,
                 children: [
                     (0, i.jsx)(o.Text, {
@@ -78,7 +78,7 @@ function O(e) {
                                           null != e && (0, T.HP)(e);
                                       }
                                   }),
-                                  (0, i.jsx)(g.Z, {
+                                  (0, i.jsx)(h.Z, {
                                       previewTitle: j.intl.formatToPlainString(j.t.Tc0slJ, { guildName: null == t ? void 0 : t.name }),
                                       profilePreview: (0, i.jsx)(x.Z, {
                                           user: r,

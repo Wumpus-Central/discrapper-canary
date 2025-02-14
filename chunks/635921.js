@@ -14,8 +14,8 @@ var s = n(120356),
     d = n(535322),
     u = n(357355),
     m = n(140465),
-    h = n(775412),
-    g = n(650032),
+    g = n(775412),
+    h = n(650032),
     x = n(104494),
     _ = n(639119),
     p = n(105759),
@@ -73,7 +73,7 @@ let R = (e) => {
     var t, n;
     let { isFullscreen: s, className: d, buttonClassName: f, subscriptionTier: S, entrypoint: R, isDarkMode: P } = e,
         { analyticsLocations: D } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA),
-        y = (0, h._O)(),
+        y = (0, g._O)(),
         Z = (0, x.Ng)(),
         k = (0, x.Wp)(Z, I.Si.TIER_2) ? I.Si.TIER_2 : void 0,
         L = (0, _.N)(),
@@ -81,7 +81,7 @@ let R = (e) => {
         M = (0, E.Vi)(),
         w = (0, l.e7)([u.Z], () => u.Z.affinities),
         V = (0, p.Z)(),
-        { enabled: U } = g._.useExperiment({ location: 'HeroHeading' }, { autoTrackExposure: !1 }),
+        { enabled: U } = h._.useExperiment({ location: 'HeroHeading' }, { autoTrackExposure: !1 }),
         G = R === I.EZ.ApplicationStoreHome && null != V && U,
         F = w.length > 0;
     return (0, i.jsx)(c.Gt, {

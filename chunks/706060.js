@@ -15,10 +15,10 @@ function d(e) {
 }
 function u(e) {
     let { setting: t, children: n, depth: o } = e,
-        [m, h] = s.useState(1 === o),
-        g = s.useCallback(() => {
-            h(!m);
-        }, [m, h]);
+        [m, g] = s.useState(1 === o),
+        h = s.useCallback(() => {
+            g(!m);
+        }, [m, g]);
     if (0 === n.length)
         return (0, i.jsx)(
             'div',
@@ -59,7 +59,7 @@ function u(e) {
             children: [
                 (0, i.jsxs)(l.P3F, {
                     className: c.headerBar,
-                    onClick: g,
+                    onClick: h,
                     children: [
                         (0, i.jsx)(d, {
                             setting: t,

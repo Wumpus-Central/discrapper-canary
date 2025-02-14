@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(481060),
     u = n(230711),
     m = n(497321),
-    h = n(100527),
-    g = n(43015),
+    g = n(100527),
+    h = n(43015),
     x = n(136097),
     _ = n(605236),
     p = n(246946),
@@ -26,12 +26,12 @@ function b() {
     let { currentSession: t, otherSessions: n } = (0, x.h)(),
         r = (0, a.e7)([p.Z], () => p.Z.hidePersonalInformation),
         l = (0, a.e7)([E.default], () => E.default.getCurrentUser()),
-        [u, h] = s.useState(!1);
+        [u, g] = s.useState(!1);
     s.useEffect(() => {
-        (0, _.EW)(c.z.AUTH_SESSIONS_NEW, { dismissAction: N.L.AUTO }), (0, g.fw)();
-        let e = setTimeout(() => h(!0), 500);
+        (0, _.EW)(c.z.AUTH_SESSIONS_NEW, { dismissAction: N.L.AUTO }), (0, h.fw)();
+        let e = setTimeout(() => g(!0), 500);
         return () => {
-            clearTimeout(e), (0, g.$Z)();
+            clearTimeout(e), (0, h.$Z)();
         };
     }, []);
     let C = () => {
@@ -111,7 +111,7 @@ function b() {
                                               size: d.zxk.Sizes.SMALL,
                                               className: I.logOutAllButton,
                                               onClick: () => {
-                                                  f.size > 0 ? (0, g.L$)(Array.from(f)) : (0, g.L$)(n.map((e) => e.id_hash));
+                                                  f.size > 0 ? (0, h.L$)(Array.from(f)) : (0, h.L$)(n.map((e) => e.id_hash));
                                               },
                                               children: f.size > 0 ? S.intl.formatToPlainString(S.t['83CPLi'], { count: f.size }) : S.intl.string(S.t.cLmmeX)
                                           })
@@ -167,7 +167,7 @@ function b() {
 }
 function v(e) {
     var t, n, s, r, a;
-    let { session: o, current: c, setChecked: u, checked: m, useChecks: h } = e,
+    let { session: o, current: c, setChecked: u, checked: m, useChecks: g } = e,
         _ = null !== (a = null === (t = o.client_info) || void 0 === t ? void 0 : t.location) && void 0 !== a ? a : null === (n = o.client_info) || void 0 === n ? void 0 : n.ip,
         p = null === (s = o.client_info) || void 0 === s ? void 0 : s.platform,
         { text: E, icon: C } = (function (e) {
@@ -236,7 +236,7 @@ function v(e) {
                 }),
                 c
                     ? null
-                    : h
+                    : g
                       ? (0, i.jsx)('div', {
                             className: I.sessionCheckbox,
                             children: (0, i.jsx)(d.XZJ, {
@@ -249,7 +249,7 @@ function v(e) {
                       : (0, i.jsx)(d.P3F, {
                             className: I.sessionMoreButton,
                             onClick: (e) => {
-                                e.shiftKey ? null == u || u(!0) : (0, g.L$)(o.id_hash);
+                                e.shiftKey ? null == u || u(!0) : (0, h.L$)(o.id_hash);
                             },
                             'aria-label': S.intl.string(S.t.E4MJNj),
                             children: (0, i.jsx)(d.Dio, {
@@ -286,7 +286,7 @@ function j() {
                         variant: 'text-sm/medium',
                         className: I.sessionInfoRow,
                         color: 'text-muted',
-                        children: (0, i.jsx)('span', { children: S.intl.format(S.t['044+8v'], { onClick: () => u.Z.setSection(T.oAB.ACCOUNT, null, { analyticsLocations: [h.Z.USER_SETTINGS_SESSIONS] }) }) })
+                        children: (0, i.jsx)('span', { children: S.intl.format(S.t['044+8v'], { onClick: () => u.Z.setSection(T.oAB.ACCOUNT, null, { analyticsLocations: [g.Z.USER_SETTINGS_SESSIONS] }) }) })
                     })
                 ]
             })

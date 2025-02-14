@@ -194,19 +194,19 @@ function J(e, t) {
             enabledLegacy: !1,
             overlayMethod: l.gl.Disabled
         };
-    if (!Z() && B()) {
-        let e = X(n);
-        return {
-            ...e,
-            overlayMethod: e.enabledLegacy ? e.overlayMethod : l.gl.Disabled
-        };
-    }
     if (!(0, E.NW)('determineOverlayMethod', !1)) {
         let e = X(n),
             t = e.enabledLegacy && B();
         return {
             ...e,
             overlayMethod: t ? e.overlayMethod : l.gl.Disabled
+        };
+    }
+    if (!Z() && B()) {
+        let e = X(n);
+        return {
+            ...e,
+            overlayMethod: e.enabledLegacy ? e.overlayMethod : l.gl.Disabled
         };
     }
     if (!(0, m.VS)())
@@ -372,8 +372,8 @@ async function ea(e) {
     if ((n.overlayMethod === r.overlayMethod && n.oopEnabled === r.enabledOOP && n.legacyEnabled === r.enabledLegacy && r.overlayMethod !== l.gl.Disabled) || (!(D !== m.R2 && null !== D) && n.state === l.mM.OVERLAY_RENDERING)) return t;
     let a = N === l.R5.OUT_OF_PROCESS_V2 || N === l.R5.OUT_OF_PROCESS_V3 || N === l.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,
         s = N === l.R5.IN_PROCESS_V2,
-        o = (0, y.PD)(n, i),
-        u = (0, y.DH)(n, i);
+        o = (0, y.PD)(n, i, Z()),
+        u = (0, y.DH)(n, i, Z());
     switch (
         (S.verbose('Overlay method different for pid '.concat(e), {
             oldOverlayMethod: n.overlayMethod,
@@ -410,7 +410,7 @@ function eo(e, t) {
 async function el(e) {
     let t = !1;
     for (let n of e) (t = (await ea(n)) || t), await (0, a._v)(100);
-    t && (S.info('determineAllOverlayMethodSwaps has changes'), eC.emitChange());
+    t && (S.info('determineFullscreenOverlayMethodSwaps has changes'), eC.emitChange());
 }
 function eu(e) {
     null == x &&
@@ -442,7 +442,7 @@ async function ec(e, t) {
         R && i && (0, m.vR)(!0),
         C || R)
     )
-        n && S.info('Legacy change'), i && S.info('OOP change'), er();
+        n && S.info('Legacy change'), i && S.info('OOP change'), em();
     else for (let e of j()) await ee(e), await (0, a._v)(100);
 }
 function ed() {

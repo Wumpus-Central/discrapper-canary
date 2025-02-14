@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(931240),
     u = n(353093),
     m = n(170871),
-    h = n(981631),
-    g = n(388032),
+    g = n(981631),
+    h = n(388032),
     x = n(197171);
 let _ = (0, a.hQ)(),
     p = s.memo(function (e) {
@@ -62,18 +62,18 @@ let _ = (0, a.hQ)(),
                 },
                 [E]
             ),
-            f = s.useCallback((e) => (0, d.nE)(e, !0, h.Sbl.USER_SETTINGS), []),
+            f = s.useCallback((e) => (0, d.nE)(e, !0, g.Sbl.USER_SETTINGS), []),
             T = s.useCallback((e) => e === a, [a]),
             N = s.useCallback((e) => e, []),
             S = s.useCallback(() => (0, d.nE)(null, !1), []);
         return (0, i.jsxs)(o.Z, {
-            title: g.intl.string(g.t.umdfaG),
+            title: h.intl.string(h.t.umdfaG),
             titleId: _,
             children: [
                 (0, i.jsx)(l.Text, {
                     className: x.subtitle,
                     variant: 'text-sm/normal',
-                    children: g.intl.string(g.t.Mrf7fX)
+                    children: h.intl.string(h.t.Mrf7fX)
                 }),
                 (0, i.jsx)(l.PhF, {
                     className: x.select,

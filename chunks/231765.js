@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(607070),
     u = n(578361),
     m = n(460181),
-    h = n(585483),
-    g = n(57562),
+    g = n(585483),
+    h = n(57562),
     x = n(955204),
     _ = n(64078),
     p = n(351780),
@@ -111,7 +111,7 @@ function y(e) {
         value: t,
         note: N.intl.string(N.t.KuYbWF),
         onChange: (e) => {
-            e || (0, g.T)(x.hn.DISABLE_POGGERMODE),
+            e || (0, h.T)(x.hn.DISABLE_POGGERMODE),
                 e && (!n || r)
                     ? (0, o.h7j)((e) =>
                           (0, i.jsx)(o.ConfirmModal, {
@@ -255,7 +255,7 @@ function L(e) {
         c = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         u = !t || !n || c,
         m = (e, t) => {
-            null != e.shakeIntensity && e.shakeIntensity > s && (0, g.T)(x.hn.MORE), a(e, t);
+            null != e.shakeIntensity && e.shakeIntensity > s && (0, h.T)(x.hn.MORE), a(e, t);
         };
     return (0, i.jsxs)(o.hjN, {
         tag: o.RB0.H1,
@@ -386,25 +386,25 @@ function V(e) {
     function u(e, t, n, i) {
         return (null != t ? t : e) && (null != i ? i : n);
     }
-    let g = (e) => {
+    let h = (e) => {
             if (e.enabled && !1 === r.enabled) {
                 var t;
                 n(!0),
                     (0, m.GN)('poggermode_enabled'),
-                    h.S.dispatch(T.CkL.SHAKE_APP, {
+                    g.S.dispatch(T.CkL.SHAKE_APP, {
                         duration: 2000,
                         intensity: null !== (t = e.shakeIntensity) && void 0 !== t ? t : r.shakeIntensity
                     });
             }
         },
         x = (e, t) => {
-            if ((g(e), (0, _.AI)(e), null == t)) return;
+            if ((h(e), (0, _.AI)(e), null == t)) return;
             let n = u(r.confettiEnabled, e.confettiEnabled, r.enabled, e.enabled);
             0 === t && n && d.fire(a.x, a.y, { settings: e });
             let i = u(r.screenshakeEnabled, e.screenshakeEnabled, r.enabled, e.enabled);
             if (1 === t && i) {
                 var s;
-                h.S.dispatch(T.CkL.SHAKE_APP, {
+                g.S.dispatch(T.CkL.SHAKE_APP, {
                     duration: 1000,
                     intensity: null !== (s = e.shakeIntensity) && void 0 !== s ? s : r.shakeIntensity
                 });
@@ -469,7 +469,7 @@ function F() {
         [n, r] = s.useState(G(e)),
         [a, c] = s.useState(!1),
         m = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
-        h = a && !m;
+        g = a && !m;
     return (
         s.useEffect(() => {
             let t = setTimeout(() => {
@@ -478,7 +478,7 @@ function F() {
             return () => clearTimeout(t);
         }, [e]),
         s.useEffect(() => {
-            Math.random() > 0.99 && (0, g.T)(x.hn.VISITOR_100);
+            Math.random() > 0.99 && (0, h.T)(x.hn.VISITOR_100);
         }, []),
         (0, i.jsxs)(i.Fragment, {
             children: [
@@ -489,11 +489,11 @@ function F() {
                     children: U(e, t, c)
                 }),
                 (0, i.jsx)('div', {
-                    className: h ? S.enableAnimationOverlayVisible : S.enableAnimationOverlayHidden,
+                    className: g ? S.enableAnimationOverlayVisible : S.enableAnimationOverlayHidden,
                     children: (0, i.jsx)(o.Fmz, {
                         className: S.enableAnimation,
                         importData: w,
-                        shouldAnimate: h,
+                        shouldAnimate: g,
                         autoplay: !1,
                         resetOnPlay: !0,
                         loop: !1,

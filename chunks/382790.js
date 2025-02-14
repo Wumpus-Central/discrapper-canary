@@ -3,8 +3,8 @@ var i,
     s = n(200651),
     l = n(192379),
     a = n(120356),
-    r = n.n(a),
-    o = n(442837),
+    o = n.n(a),
+    r = n(442837),
     d = n(552062),
     c = n(416568),
     u = n(914010),
@@ -53,7 +53,7 @@ class E extends (i = l.PureComponent) {
                       }),
             a = n ? 'div' : h.ZP;
         return (0, s.jsxs)(a, {
-            className: r()(Z.base, { [Z.widget]: !n }, i),
+            className: o()(Z.base, { [Z.widget]: !n }, i),
             children: [
                 (0, s.jsx)(c.Z, {
                     isOverlay: !0,
@@ -73,4 +73,4 @@ class E extends (i = l.PureComponent) {
     }
 }
 x(E, 'defaultProps', { contained: !1 });
-let C = o.ZP.connectStores([u.Z], () => ({ selectedGuildId: u.Z.getGuildId() }))(E);
+let C = r.ZP.connectStores([u.Z], () => ({ selectedGuildId: u.Z.getGuildId() }))(E);

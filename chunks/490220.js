@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(256504);
 function u(e) {
     var t;
-    let { user: u, disabledInputs: m, containerClassName: h } = e,
-        { reducedMotion: g } = s.useContext(l.Sfi),
+    let { user: u, disabledInputs: m, containerClassName: g } = e,
+        { reducedMotion: h } = s.useContext(l.Sfi),
         {
             pendingAvatar: x,
             pendingBanner: _,
@@ -32,7 +32,7 @@ function u(e) {
         }),
         b = (0, a.Z)(S, !1);
     return (0, i.jsx)(c.Z, {
-        containerClassName: h,
+        containerClassName: g,
         user: u,
         pendingPronouns: E,
         pendingBio: C,
@@ -41,7 +41,7 @@ function u(e) {
         pendingThemeColors: null != f ? f : p,
         pendingAvatarDecoration: b,
         pendingProfileEffectId: I,
-        avatarClassName: null != T || null != x || g.enabled ? void 0 : d.spinningAvatar,
+        avatarClassName: null != T || null != x || h.enabled ? void 0 : d.spinningAvatar,
         canUsePremiumCustomization: !0,
         isTryItOutFlow: !0,
         hideExampleButton: !0,

@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(415795),
     u = n(592125),
     m = n(984933),
-    h = n(430824),
-    g = n(914010),
+    g = n(430824),
+    h = n(914010),
     x = n(727785),
     _ = n(388032),
     p = n(664396);
@@ -119,9 +119,9 @@ function v(e) {
         R = (function (e) {
             let t = '' !== e,
                 n = (0, r.Wu)(
-                    [m.ZP, u.Z, g.Z],
+                    [m.ZP, u.Z, h.Z],
                     () => {
-                        let e = g.Z.getGuildId();
+                        let e = h.Z.getGuildId();
                         if (t || null == e) return [];
                         let n = [];
                         for (let t of m.ZP.getVocalChannelIds(e)) {
@@ -229,7 +229,7 @@ function v(e) {
                                 })();
                             if (null == s) return null;
                             let r = null != s.parent_id ? u.Z.getChannel(s.parent_id) : void 0,
-                                l = h.Z.getGuild(s.guild_id);
+                                l = g.Z.getGuild(s.guild_id);
                             return (0, i.jsx)(
                                 d.$W,
                                 {
@@ -271,13 +271,13 @@ function j(e) {
             channel: n,
             category: s,
             guild: a
-        } = (0, r.cj)([u.Z, h.Z], () => {
+        } = (0, r.cj)([u.Z, g.Z], () => {
             let e = null != t ? u.Z.getChannel(t) : void 0;
             return null != e
                 ? {
                       channel: e,
                       category: null != e.parent_id ? u.Z.getChannel(e.parent_id) : void 0,
-                      guild: null != e.guild_id ? h.Z.getGuild(e.guild_id) : void 0
+                      guild: null != e.guild_id ? g.Z.getGuild(e.guild_id) : void 0
                   }
                 : {
                       channel: void 0,

@@ -10,19 +10,19 @@ var s = n(442837),
     d = n(430824),
     u = n(55563),
     m = n(171246),
-    h = n(263519),
-    g = n(63487),
+    g = n(263519),
+    h = n(63487),
     x = n(981631),
     _ = n(388032),
     p = n(656751);
 function E(e) {
     var t;
-    let { app: n, currentSubscription: h, currentListing: x, alternativeListings: E, navigateToHome: f, subscriptionGroup: T, renewalSkuId: N } = e,
+    let { app: n, currentSubscription: g, currentListing: x, alternativeListings: E, navigateToHome: f, subscriptionGroup: T, renewalSkuId: N } = e,
         S = (0, l.y)(n, 100),
         I = (0, m.KK)(T.flags),
         b = I ? r.QTo : r.tBG,
         v = I ? _.intl.string(_.t['46YF2N']) : _.intl.string(_.t.fFyGiI),
-        j = null === (t = h.metadata) || void 0 === t ? void 0 : t.application_subscription_guild_id,
+        j = null === (t = g.metadata) || void 0 === t ? void 0 : t.application_subscription_guild_id,
         A = (0, s.e7)([d.Z], () => (I && null != j ? d.Z.getGuild(j) : void 0), [j, I]),
         O = (0, s.e7)(
             [u.Z],
@@ -31,7 +31,7 @@ function E(e) {
             },
             [N]
         ),
-        R = (0, g.p)(h.currentPeriodEnd);
+        R = (0, h.p)(g.currentPeriodEnd);
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsxs)('div', {
@@ -174,7 +174,7 @@ function E(e) {
 }
 function C(e) {
     let { storeListing: t, guildId: n, navigateToHome: s } = e,
-        { openModal: l } = (0, h.Z)({
+        { openModal: l } = (0, g.Z)({
             analyticsLocation: x.Sbl.APP_SUBSCRIPTIONS_MANAGEMENT,
             skuId: t.skuId,
             initialSubscribeForGuild: n,

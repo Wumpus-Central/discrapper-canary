@@ -9,14 +9,14 @@ var i = n(200651),
     d = n(58385),
     u = n(889989),
     m = n(937615),
-    h = n(624138),
-    g = n(150414),
+    g = n(624138),
+    h = n(150414),
     x = n(993553),
     _ = n(791692);
 function p(e) {
     let { cta: t, storeListing: n, className: r } = e,
         { applicationId: p, benefits: E, description: C } = n,
-        f = s.useMemo(() => (null == n.thumbnail ? null : (0, g.q)(p, n.thumbnail, 256)), [p, n.thumbnail]),
+        f = s.useMemo(() => (null == n.thumbnail ? null : (0, h.q)(p, n.thumbnail, 256)), [p, n.thumbnail]),
         { data: T } = (0, d.X)(n.skuId),
         N = s.useMemo(() => {
             if (null == T || 0 === T.length) return null;
@@ -57,7 +57,7 @@ function p(e) {
                   ]
               }),
               children: [
-                  !(0, h.Ew)(C) &&
+                  !(0, g.Ew)(C) &&
                       (0, i.jsx)('div', {
                           className: _.description,
                           children: (0, i.jsx)(x.Z, {

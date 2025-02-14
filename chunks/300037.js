@@ -10,8 +10,8 @@ var s = n(120356),
     d = n(623624),
     u = n(678558),
     m = n(430824),
-    h = n(709586),
-    g = n(267642),
+    g = n(709586),
+    h = n(267642),
     x = n(981631),
     _ = n(474936),
     p = n(388032),
@@ -50,7 +50,7 @@ let C = function (e) {
                           (0, i.jsxs)('div', {
                               className: E.guildBoostStatsContainer,
                               children: [
-                                  (0, i.jsx)(h.Z, {
+                                  (0, i.jsx)(g.Z, {
                                       className: E.guildBoostBadge,
                                       width: 16,
                                       height: 16
@@ -64,7 +64,7 @@ let C = function (e) {
                                   (0, i.jsx)(a.Text, {
                                       variant: 'text-sm/bold',
                                       color: 'text-muted',
-                                      children: (0, g.nW)(C.premiumTier, { useLevels: !1 })
+                                      children: (0, h.nW)(C.premiumTier, { useLevels: !1 })
                                   })
                               ]
                           })

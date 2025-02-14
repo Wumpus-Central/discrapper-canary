@@ -9,60 +9,60 @@ var i = n(200651),
     d = n(709054),
     u = n(660243),
     m = n(981631),
-    h = n(388032),
-    g = n(864331);
+    g = n(388032),
+    h = n(864331);
 function x() {
     return (0, i.jsxs)(l.hjN, {
         tag: l.RB0.H5,
-        title: h.intl.string(h.t['iT/e8f']),
-        className: g.howItWorksTitle,
+        title: g.intl.string(g.t['iT/e8f']),
+        className: h.howItWorksTitle,
         children: [
             (0, i.jsx)(l.R94, {
                 type: l.R94.Types.DESCRIPTION,
-                className: g.howItWorksDescription,
-                children: h.intl.string(h.t.WF4laG)
+                className: h.howItWorksDescription,
+                children: g.intl.string(g.t.WF4laG)
             }),
             (0, i.jsxs)('div', {
-                className: g.howItWorksNotes,
+                className: h.howItWorksNotes,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: g.note,
+                        className: h.note,
                         children: [
                             (0, i.jsx)(l.Text, {
                                 variant: 'text-sm/medium',
-                                children: h.intl.string(h.t.mDJcn5)
+                                children: g.intl.string(g.t.mDJcn5)
                             }),
                             (0, i.jsx)(l.Text, {
                                 variant: 'text-xs/medium',
-                                children: h.intl.string(h.t.JzMvOj)
+                                children: g.intl.string(g.t.JzMvOj)
                             })
                         ]
                     }),
-                    (0, i.jsx)('div', { className: g.howItWorksDivider }),
+                    (0, i.jsx)('div', { className: h.howItWorksDivider }),
                     (0, i.jsxs)('div', {
-                        className: g.note,
+                        className: h.note,
                         children: [
                             (0, i.jsx)(l.Text, {
                                 variant: 'text-sm/medium',
-                                children: h.intl.string(h.t.BzqoHB)
+                                children: g.intl.string(g.t.BzqoHB)
                             }),
                             (0, i.jsx)(l.Text, {
                                 variant: 'text-xs/medium',
-                                children: h.intl.string(h.t.RgzRPD)
+                                children: g.intl.string(g.t.RgzRPD)
                             })
                         ]
                     }),
-                    (0, i.jsx)('div', { className: g.howItWorksDivider }),
+                    (0, i.jsx)('div', { className: h.howItWorksDivider }),
                     (0, i.jsxs)('div', {
-                        className: g.note,
+                        className: h.note,
                         children: [
                             (0, i.jsx)(l.Text, {
                                 variant: 'text-sm/medium',
-                                children: h.intl.string(h.t['C2uz/v'])
+                                children: g.intl.string(g.t['C2uz/v'])
                             }),
                             (0, i.jsx)(l.Text, {
                                 variant: 'text-xs/medium',
-                                children: h.intl.string(h.t.VN4Spq)
+                                children: g.intl.string(g.t.VN4Spq)
                             })
                         ]
                     })
@@ -74,7 +74,7 @@ function x() {
 function _() {
     return (0, i.jsx)(l.hjN, {
         tag: l.RB0.H5,
-        title: h.intl.string(h.t['+RndDg']),
+        title: g.intl.string(g.t['+RndDg']),
         children: (0, i.jsx)(u.r, {})
     });
 }
@@ -89,15 +89,15 @@ function p() {
                     };
                     (0, l.h7j)((e) =>
                         (0, i.jsx)(l.ConfirmModal, {
-                            header: h.intl.string(h.t['uUr+GR']),
-                            confirmText: h.intl.string(h.t.gm1Ven),
-                            cancelText: h.intl.string(h.t.p89ACg),
+                            header: g.intl.string(g.t['uUr+GR']),
+                            confirmText: g.intl.string(g.t.gm1Ven),
+                            cancelText: g.intl.string(g.t.p89ACg),
                             onCancel: t,
                             confirmButtonColor: l.zxk.Colors.BRAND,
                             ...e,
                             children: (0, i.jsx)(l.Text, {
                                 variant: 'text-md/normal',
-                                children: h.intl.string(h.t.EFu2Ki)
+                                children: g.intl.string(g.t.EFu2Ki)
                             })
                         })
                     );
@@ -105,27 +105,27 @@ function p() {
         };
     return (0, i.jsxs)(l.hjN, {
         tag: l.RB0.H5,
-        title: h.intl.string(h.t.kJFenZ),
-        titleClassName: g.title,
+        title: g.intl.string(g.t.kJFenZ),
+        titleClassName: h.title,
         children: [
             (0, i.jsx)(l.vwX, {
                 disabled: e,
                 tag: l.RB0.H5,
-                children: h.intl.string(h.t.gbo4l5)
+                children: g.intl.string(g.t.gbo4l5)
             }),
             (0, i.jsx)(l.R94, {
                 disabled: e,
                 type: l.R94.Types.DESCRIPTION,
-                className: g.description,
-                children: h.intl.format(h.t.nUsCOj, { helpdeskURL: c.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS) })
+                className: h.description,
+                children: g.intl.format(g.t.nUsCOj, { helpdeskURL: c.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS) })
             }),
             (0, i.jsx)(l.j7V, {
                 disabled: e,
                 hideBorder: !0,
                 onChange: (e) => n(!e),
-                note: h.intl.format(h.t.dtkj8P, { helpdeskURL: c.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS) }),
+                note: g.intl.format(g.t.dtkj8P, { helpdeskURL: c.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS) }),
                 value: t === r.E5.OFF,
-                children: h.intl.string(h.t.YldX6O)
+                children: g.intl.string(g.t.YldX6O)
             })
         ]
     });
@@ -136,24 +136,24 @@ function E() {
         n = a.Ou.useSetting();
     return (0, i.jsxs)(l.hjN, {
         tag: l.RB0.H5,
-        title: h.intl.string(h.t['5gexRU']),
-        titleClassName: g.title,
+        title: g.intl.string(g.t['5gexRU']),
+        titleClassName: h.title,
         children: [
             (0, i.jsx)(l.j7V, {
                 disabled: e,
                 hideBorder: !0,
                 onChange: (e) => a.cP.updateSetting(e),
-                note: h.intl.string(h.t.IjucAA),
+                note: g.intl.string(g.t.IjucAA),
                 value: t,
-                children: h.intl.string(h.t.eVdoIy)
+                children: g.intl.string(g.t.eVdoIy)
             }),
             (0, i.jsx)(l.j7V, {
                 disabled: e,
                 hideBorder: !0,
                 onChange: (e) => a.Ou.updateSetting(e),
-                note: h.intl.string(h.t.oCONqK),
+                note: g.intl.string(g.t.oCONqK),
                 value: n,
-                children: h.intl.string(h.t['tuKl+v'])
+                children: g.intl.string(g.t['tuKl+v'])
             })
         ]
     });
@@ -162,32 +162,32 @@ function C() {
     let e = !a.G6.useSetting();
     return (0, i.jsxs)(l.hjN, {
         tag: l.RB0.H5,
-        title: h.intl.string(h.t.Wspazs),
+        title: g.intl.string(g.t.Wspazs),
         children: [
             (0, i.jsx)(l.R94, {
                 type: l.R94.Types.DESCRIPTION,
-                children: h.intl.format(h.t.vfamcX, { helpdeskURL: c.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS) })
+                children: g.intl.format(g.t.vfamcX, { helpdeskURL: c.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS) })
             }),
             (0, i.jsxs)('div', {
-                className: g.allActivityNotes,
+                className: h.allActivityNotes,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: g.allActivityNote,
+                        className: h.allActivityNote,
                         children: [
                             (0, i.jsx)(l.QTo, { size: 'sm' }),
                             (0, i.jsx)(l.R94, {
                                 type: l.R94.Types.DESCRIPTION,
-                                children: h.intl.string(h.t.GlYjeX)
+                                children: g.intl.string(g.t.GlYjeX)
                             })
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: g.allActivityNote,
+                        className: h.allActivityNote,
                         children: [
                             (0, i.jsx)(l.kZF, { size: 'sm' }),
                             (0, i.jsx)(l.R94, {
                                 type: l.R94.Types.DESCRIPTION,
-                                children: h.intl.string(h.t.XXksWl)
+                                children: g.intl.string(g.t.XXksWl)
                             })
                         ]
                     })
@@ -196,13 +196,13 @@ function C() {
             e
                 ? (0, i.jsx)(l.zxk, {
                       grow: !1,
-                      className: g.disableButton,
+                      className: h.disableButton,
                       onClick: () => a.G6.updateSetting(!0),
-                      children: h.intl.string(h.t['Ay/Nho'])
+                      children: g.intl.string(g.t['Ay/Nho'])
                   })
                 : (0, i.jsx)(l.zxk, {
                       grow: !1,
-                      className: g.disableButton,
+                      className: h.disableButton,
                       color: l.Ttl.RED,
                       look: l.iLD.OUTLINED,
                       onClick: () => {
@@ -211,17 +211,17 @@ function C() {
                               return (t) => (0, i.jsx)(e, { ...t });
                           });
                       },
-                      children: h.intl.string(h.t.YjQQjo)
+                      children: g.intl.string(g.t.YjQQjo)
                   })
         ]
     });
 }
 function f() {
     return (0, i.jsx)(l.hjN, {
-        className: g.privacyAndTerms,
+        className: h.privacyAndTerms,
         children: (0, i.jsx)(l.ToO, {
             type: l.ToO.Types.PRIMARY,
-            body: h.intl.format(h.t.xvCsx8, {
+            body: g.intl.format(g.t.xvCsx8, {
                 termsLink: m.EYA.TERMS,
                 privacyLink: m.EYA.PRIVACY
             })
@@ -235,41 +235,41 @@ let T = function (e) {
     return (0, i.jsxs)(l.hjN, {
         className: t,
         tag: l.RB0.H1,
-        title: h.intl.string(h.t['6x5uWV']),
+        title: g.intl.string(g.t['6x5uWV']),
         children: [
             n &&
                 (0, i.jsxs)(l.P3F, {
                     onClick: () => {
                         null != r.current && r.current.scrollIntoView({ behavior: 'smooth' });
                     },
-                    className: g.enableBanner,
+                    className: h.enableBanner,
                     children: [
                         (0, i.jsxs)('div', {
-                            className: g.bannerTitle,
+                            className: h.bannerTitle,
                             children: [
                                 (0, i.jsx)(l.aNP, { color: l.TVs.colors.STATUS_WARNING_BACKGROUND }),
                                 (0, i.jsx)(l.Text, {
                                     variant: 'text-sm/medium',
                                     color: 'interactive-active',
-                                    children: h.intl.string(h.t.n6DWMT)
+                                    children: g.intl.string(g.t.n6DWMT)
                                 })
                             ]
                         }),
                         (0, i.jsx)(l.Text, {
                             variant: 'text-sm/medium',
                             color: 'interactive-active',
-                            children: h.intl.string(h.t.Qyjz8f)
+                            children: g.intl.string(g.t.Qyjz8f)
                         })
                     ]
                 }),
             (0, i.jsx)(x, {}),
-            (0, i.jsx)(l.$i$, { className: g.divider }),
+            (0, i.jsx)(l.$i$, { className: h.divider }),
             (0, i.jsx)(_, {}),
-            (0, i.jsx)(l.$i$, { className: g.divider }),
+            (0, i.jsx)(l.$i$, { className: h.divider }),
             (0, i.jsx)(p, {}),
-            (0, i.jsx)(l.$i$, { className: g.divider }),
+            (0, i.jsx)(l.$i$, { className: h.divider }),
             (0, i.jsx)(E, {}),
-            (0, i.jsx)(l.$i$, { className: g.divider }),
+            (0, i.jsx)(l.$i$, { className: h.divider }),
             (0, i.jsx)('div', { ref: r }),
             (0, i.jsx)(C, {}),
             (0, i.jsx)(f, {})

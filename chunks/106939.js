@@ -12,8 +12,8 @@ var i = n(200651),
     d = n(704215),
     u = n(481060),
     m = n(150063),
-    h = n(493773),
-    g = n(758119),
+    g = n(493773),
+    h = n(758119),
     x = n(100527),
     _ = n(906732),
     p = n(252618),
@@ -157,7 +157,7 @@ function Y() {
         f = b.default.getCurrentUser(),
         S = null != e,
         I = r && null != f && !S;
-    (0, h.ZP)(() => {
+    (0, g.ZP)(() => {
         (0, N.e)('family-center'),
             j.ZP.initialPageLoad(),
             n ||
@@ -190,7 +190,7 @@ function Y() {
         }
     }, [r, S]),
     s.useEffect(() => {
-        I && (0, g.mN)(M.L0.FAMILY_CENTER);
+        I && (0, h.mN)(M.L0.FAMILY_CENTER);
     }, [I]),
     I)
         ? null
@@ -227,7 +227,7 @@ function W() {
         H = b.default.getCurrentUser(),
         Y = null != t,
         W = a && null != H && !Y;
-    (0, h.ZP)(() => {
+    (0, g.ZP)(() => {
         m.Y(B.Z5c.FAMILY_CENTER),
             (0, N.e)('family-center'),
             !A.Z.isLoading() && A.Z.canRefetch() && j.ZP.initialPageLoad(),
@@ -266,7 +266,7 @@ function W() {
             a && t && void 0 === e && I.Ex.updateSetting(!0);
         }, [a, t]),
         s.useEffect(() => {
-            W && (0, g.mN)(M.L0.FAMILY_CENTER);
+            W && (0, h.mN)(M.L0.FAMILY_CENTER);
         }, [W]),
         W)
     )

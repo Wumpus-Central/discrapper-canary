@@ -9,8 +9,8 @@ var i = n(374470),
     d = n(807092),
     u = n(6025),
     m = n(897473),
-    h = n(913663),
-    g = n(268350),
+    g = n(913663),
+    h = n(268350),
     x = n(433355),
     _ = n(592125),
     p = n(703558),
@@ -46,15 +46,15 @@ let j = {
         if (!1 === A(n) || !1 === A(c)) return !1;
         if (null != n && (null == l ? void 0 : l.type) === m.tI.CREATE_THREAD) return u.Z.closeChannelSidebar(n), !1;
         let d = O(n),
-            h = O(c);
-        return null == n || d || h || null == l ? (null != n && !d && o.Z.getChatOpen(n) ? s.Z.updateChatOpen(n, !1) : b.S.dispatch(v.CkL.SCROLLTO_PRESENT)) : u.Z.closeChannelSidebar(n), !1;
+            g = O(c);
+        return null == n || d || g || null == l ? (null != n && !d && o.Z.getChatOpen(n) ? s.Z.updateChatOpen(n, !1) : b.S.dispatch(v.CkL.SCROLLTO_PRESENT)) : u.Z.closeChannelSidebar(n), !1;
     }
 };
 function A(e) {
     if (null != e) {
         if (E.Z.isEditingAny(e)) return r.Z.endEditMessage(e), !1;
         if (null != d.Z.getPendingReply(e)) return (0, c.A6)(e), !1;
-        if (null != h.Z.getStickerPreview(e, p.d.ChannelMessage)) return (0, g.qB)(e, p.d.ChannelMessage), !1;
+        if (null != g.Z.getStickerPreview(e, p.d.ChannelMessage)) return (0, h.qB)(e, p.d.ChannelMessage), !1;
     }
 }
 function O(e) {

@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(355467),
     u = n(230711),
     m = n(497321),
-    h = n(231428),
-    g = n(390954),
+    g = n(231428),
+    h = n(390954),
     x = n(89057),
     _ = n(921801),
     p = n(246946),
@@ -46,7 +46,7 @@ class j extends s.PureComponent {
                             })
                           : (0, i.jsx)(_.F, {
                                 setting: S.s6.BILLING_PAYMENT_METHODS,
-                                children: (0, i.jsx)(g.Z, {
+                                children: (0, i.jsx)(h.Z, {
                                     paymentSources: n,
                                     defaultPaymentSourceId: s,
                                     premiumSubscriptionPaymentSourceId: null != l && l.status !== I.O0b.CANCELED ? l.paymentSourceId : null,
@@ -64,7 +64,7 @@ class j extends s.PureComponent {
                                       tag: 'h1',
                                       children: b.intl.string(b.t.obLrcH)
                                   }),
-                                  children: [(0, i.jsx)(x.oQ, {}), (0, i.jsx)(h.Z, { locale: r })]
+                                  children: [(0, i.jsx)(x.oQ, {}), (0, i.jsx)(g.Z, { locale: r })]
                               })
                           })
                       }),

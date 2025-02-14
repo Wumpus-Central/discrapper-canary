@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(481060),
     u = n(240872),
     m = n(514361),
-    h = n(705262),
-    g = n(526156),
+    g = n(705262),
+    h = n(526156),
     x = n(726985),
     _ = n(981631),
     p = n(231338),
@@ -234,7 +234,7 @@ function O() {
 function R() {
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(g.Z, {
+            (0, i.jsx)(h.Z, {
                 parentSetting: x.s6.DESIGN_SYSTEMS,
                 settingsSection: _.oAB.DESIGN_SYSTEMS,
                 tabs: [
@@ -252,9 +252,9 @@ function R() {
             }),
             (0, i.jsx)('div', {
                 className: E.themes,
-                children: (0, i.jsx)(h.ZP, {
-                    type: h.yH.SETTINGS,
-                    children: (0, i.jsx)(h.ZP.Basic, { className: E.themeSelectionGroup })
+                children: (0, i.jsx)(g.ZP, {
+                    type: g.yH.SETTINGS,
+                    children: (0, i.jsx)(g.ZP.Basic, { className: E.themeSelectionGroup })
                 })
             })
         ]
@@ -837,7 +837,7 @@ function B() {
         [n, r] = s.useState(null),
         [l, o] = s.useState([]),
         [c, u] = s.useState([]),
-        [m, h] = s.useState([]);
+        [m, g] = s.useState([]);
     return (0, i.jsxs)('div', {
         className: E.searchableSelectExamples,
         children: [
@@ -870,7 +870,7 @@ function B() {
                 multi: !0,
                 clearable: !0,
                 value: m,
-                onChange: (e) => h(e),
+                onChange: (e) => g(e),
                 options: a.G
             }),
             (0, i.jsx)(d.VcW, {

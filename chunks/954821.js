@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(906732),
     u = n(313201),
     m = n(73346),
-    h = n(584825),
-    g = n(305342),
+    g = n(584825),
+    h = n(305342),
     x = n(293810),
     _ = n(388032),
     p = n(3255);
@@ -35,7 +35,7 @@ let E = (e) => {
         var t;
         let { transitionState: n, groupListing: s, guildId: r, listing: o, subscription: C, onClose: f } = e,
             T = (0, u.Dt)(),
-            N = (0, h.YB)(r),
+            N = (0, g.YB)(r),
             S = (null == N ? void 0 : null === (t = N.cover_image_asset) || void 0 === t ? void 0 : t.application_id) != null ? (0, m._W)(N.cover_image_asset.application_id, N.cover_image_asset, 440) : void 0,
             { analyticsLocations: I } = (0, d.ZP)(c.Z.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL),
             { cancelSubscription: b, error: v, submitting: j } = E(I),
@@ -84,7 +84,7 @@ let E = (e) => {
                             variant: 'text-sm/normal',
                             children: D
                         }),
-                        (0, i.jsx)(g.c, {
+                        (0, i.jsx)(h.c, {
                             listingId: o.id,
                             guildId: s.guild_id,
                             className: p.benefits

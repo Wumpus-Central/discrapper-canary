@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(579806),
     u = n(600164),
     m = n(729345),
-    h = n(921801),
-    g = n(857192),
+    g = n(921801),
+    h = n(857192),
     x = n(131951),
     _ = n(226961),
     p = n(12647),
@@ -49,7 +49,7 @@ function v(e) {
             aecDumpEnabled: x.Z.getAecDump(),
             supportsConnectionReplay: x.Z.supports(T.AN.CONNECTION_REPLAY)
         })),
-        A = (0, r.e7)([g.default], () => g.default.isStreamInfoOverlayEnabled),
+        A = (0, r.e7)([h.default], () => h.default.isStreamInfoOverlayEnabled),
         O = (0, r.e7)([_.ZP], () => _.ZP.shouldRecordNextConnection());
     async function R() {
         d(!0);
@@ -94,7 +94,7 @@ function v(e) {
     }
     let P = (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(h.F, {
+            (0, i.jsx)(g.F, {
                 setting: C.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_STREAM_INFO_OVERLAY,
                 children: (0, i.jsx)(l.j7V, {
                     value: A,
@@ -106,7 +106,7 @@ function v(e) {
                     children: N.intl.string(N.t['0CEP6e'])
                 })
             }),
-            (0, i.jsx)(h.F, {
+            (0, i.jsx)(g.F, {
                 setting: C.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_AEC_DUMP,
                 children: (0, i.jsx)(l.j7V, {
                     value: j,
@@ -116,7 +116,7 @@ function v(e) {
                     children: N.intl.string(N.t['r6K+TE'])
                 })
             }),
-            (0, i.jsxs)(h.F, {
+            (0, i.jsxs)(g.F, {
                 setting: C.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_CONNECTION_REPLAY,
                 children: [
                     (0, i.jsx)(l.j7V, {
@@ -143,7 +143,7 @@ function v(e) {
                     t ? null : (0, i.jsx)(l.$i$, { className: S.marginBottom20 })
                 ]
             }),
-            (0, i.jsx)(h.F, {
+            (0, i.jsx)(g.F, {
                 setting: C.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_LOGGING,
                 children: (0, i.jsxs)('div', {
                     children: [

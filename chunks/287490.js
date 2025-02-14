@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(353926),
     u = n(430824),
     m = n(499533),
-    h = n(878209),
-    g = n(987338),
+    g = n(878209),
+    h = n(987338),
     x = n(838865);
 function _(e, t) {
     return e.map((e, n) => ({
@@ -22,7 +22,7 @@ function p() {
     let e = (0, a.cj)([d.Z], () => d.Z.getAllExperimentOverrideDescriptors()),
         t = (0, a.cj)([d.Z], () => d.Z.getRegisteredExperiments()),
         [n, r] = s.useState(''),
-        l = (0, h.Ro)((0, h.Tc)((0, h.Cg)(t), e), n);
+        l = (0, g.Ro)((0, g.Tc)((0, g.Cg)(t), e), n);
     return (0, i.jsxs)(o.hjN, {
         tag: o.RB0.H1,
         title: 'Experiments',
@@ -35,7 +35,7 @@ function p() {
             }),
             l.length > 0
                 ? l.map((t) => {
-                      let n = t.experiment.type === g.xY.GUILD ? C : E;
+                      let n = t.experiment.type === h.xY.GUILD ? C : E;
                       return (0, i.jsx)(
                           n,
                           {
@@ -59,16 +59,16 @@ function p() {
 function E(e) {
     var t;
     let { experiment: n, experimentId: r, overrideDescriptor: u } = e,
-        [m, h] = s.useState(null != u),
+        [m, g] = s.useState(null != u),
         [p, E] = s.useState(!1),
         C = s.useCallback(() => {
-            h((e) => !e);
+            g((e) => !e);
         }, []),
         f = (0, a.e7)([d.Z], () => d.Z.getUserExperimentDescriptor(r)),
         T = (0, a.e7)([d.Z], () => d.Z.getLoadedUserExperiment(r)),
         N = (0, a.Wu)([d.Z], () =>
             l()
-                .sortBy(d.Z.getRecentExposures(g.xY.USER, r), (e) => {
+                .sortBy(d.Z.getRecentExposures(h.xY.USER, r), (e) => {
                     let [t, n] = e;
                     return -n;
                 })
@@ -136,7 +136,7 @@ function E(e) {
                               children: [
                                   (0, i.jsxs)(o.R94, {
                                       type: o.geA.DESCRIPTION,
-                                      children: ['Current assigned to bucket ', null !== (t = null == f ? void 0 : f.bucket) && void 0 !== t ? t : g.NZ.NOT_ELIGIBLE]
+                                      children: ['Current assigned to bucket ', null !== (t = null == f ? void 0 : f.bucket) && void 0 !== t ? t : h.NZ.NOT_ELIGIBLE]
                                   }),
                                   null == T
                                       ? (0, i.jsx)(o.R94, {
@@ -200,15 +200,15 @@ function E(e) {
 }
 function C(e) {
     let { experiment: t, experimentId: n, overrideDescriptor: r } = e,
-        [m, h] = s.useState(null != r),
+        [m, g] = s.useState(null != r),
         [p, E] = s.useState(!1),
         C = s.useCallback(() => {
-            h((e) => !e);
+            g((e) => !e);
         }, []),
         f = (0, a.e7)([d.Z], () => d.Z.getLoadedGuildExperiment(n)),
         T = (0, a.Wu)([d.Z], () =>
             l()
-                .sortBy(d.Z.getRecentExposures(g.xY.GUILD, n), (e) => {
+                .sortBy(d.Z.getRecentExposures(h.xY.GUILD, n), (e) => {
                     let [t, n] = e;
                     return -n;
                 })
@@ -224,7 +224,7 @@ function C(e) {
             for (let r of e) {
                 var s;
                 let e = d.Z.getGuildExperimentDescriptor(n, r.id),
-                    l = null !== (s = null == e ? void 0 : e.bucket) && void 0 !== s ? s : g.NZ.NOT_ELIGIBLE;
+                    l = null !== (s = null == e ? void 0 : e.bucket) && void 0 !== s ? s : h.NZ.NOT_ELIGIBLE;
                 l in t || (t[l] = 0), t[l]++, i.push(''.concat(r.name, ': ').concat(l));
             }
             let r = l()(t)

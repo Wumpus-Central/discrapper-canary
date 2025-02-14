@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(240872),
     u = n(23645),
     m = n(712364),
-    h = n(279837),
-    g = n(600164),
+    g = n(279837),
+    h = n(600164),
     x = n(144114),
     _ = n(921801),
     p = n(607018),
@@ -101,7 +101,7 @@ class Z extends s.PureComponent {
             });
         }
         if (a)
-            e = (0, i.jsx)(g.Z, {
+            e = (0, i.jsx)(h.Z, {
                 className: l ? '' : P.marginTop8,
                 children: (0, i.jsx)(o.zxk, {
                     color: o.zxk.Colors.RED,
@@ -114,7 +114,7 @@ class Z extends s.PureComponent {
             });
         else {
             let t = (0, I.c)(s);
-            e = (0, i.jsxs)(g.Z, {
+            e = (0, i.jsxs)(h.Z, {
                 className: l ? '' : P.marginTop8,
                 children: [
                     (0, i.jsx)(o.zxk, {
@@ -182,15 +182,15 @@ class Z extends s.PureComponent {
                         className: P.marginBottom20,
                         children: O.intl.format(O.t.OhmvYm, {})
                     }),
-                    (0, i.jsxs)(g.Z, {
+                    (0, i.jsxs)(h.Z, {
                         children: [
-                            (0, i.jsx)(g.Z.Child, {
+                            (0, i.jsx)(h.Z.Child, {
                                 children: (0, i.jsx)('ul', {
                                     className: R.checkboxGroup,
                                     children: s(t.slice(0, t.length / 2))
                                 })
                             }),
-                            (0, i.jsx)(g.Z.Child, {
+                            (0, i.jsx)(h.Z.Child, {
                                 children: (0, i.jsx)('ul', {
                                     className: R.checkboxGroup,
                                     children: s(t.slice(t.length / 2))
@@ -218,16 +218,16 @@ class Z extends s.PureComponent {
                     className: P.marginBottom20,
                     children: O.intl.string(O.t.bQwxiY)
                 }),
-                (0, i.jsxs)(g.Z, {
-                    justify: g.Z.Justify.START,
+                (0, i.jsxs)(h.Z, {
+                    justify: h.Z.Justify.START,
                     className: P.marginBottom20,
                     children: [
-                        (0, i.jsx)(g.Z.Child, {
+                        (0, i.jsx)(h.Z.Child, {
                             wrap: !0,
                             grow: 0,
                             children: n
                         }),
-                        (0, i.jsxs)(g.Z.Child, {
+                        (0, i.jsxs)(h.Z.Child, {
                             wrap: !0,
                             children: [
                                 (0, i.jsx)(_.F, {
@@ -338,7 +338,7 @@ class Z extends s.PureComponent {
             }),
             D(this, 'sendMFABackupCodesVerificationKeyEmail', () => {
                 (0, o.h7j)((e) =>
-                    (0, i.jsx)(h.default, {
+                    (0, i.jsx)(g.default, {
                         ...e,
                         handleSubmit: (e) =>
                             c.Z.sendMFABackupCodesVerificationKeyEmail(e).then(() => {
@@ -386,7 +386,7 @@ class Z extends s.PureComponent {
                 let { currentUser: e } = this.props,
                     t = () => {
                         (0, o.h7j)((e) =>
-                            (0, i.jsx)(h.default, {
+                            (0, i.jsx)(g.default, {
                                 ...e,
                                 handleSubmit: c.Z.enableSMS,
                                 title: O.intl.string(O.t.DZQe29)
@@ -397,7 +397,7 @@ class Z extends s.PureComponent {
             }),
             D(this, 'handleDisableSMS', () => {
                 (0, o.h7j)((e) =>
-                    (0, i.jsx)(h.default, {
+                    (0, i.jsx)(g.default, {
                         ...e,
                         handleSubmit: c.Z.disableSMS,
                         title: O.intl.string(O.t.KLWnio),

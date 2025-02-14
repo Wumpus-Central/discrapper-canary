@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(481060),
     u = n(100527),
     m = n(906732),
-    h = n(626135),
-    g = n(335131),
+    g = n(626135),
+    h = n(335131),
     x = n(874703),
     _ = n(410154),
     p = n(302800),
@@ -73,7 +73,7 @@ let I = (e) => {
                       }
                     : p.GX[S]),
             s.useEffect(() => {
-                h.default.track(E.rMx.PREMIUM_UPSELL_VIEWED, {
+                g.default.track(E.rMx.PREMIUM_UPSELL_VIEWED, {
                     type: C.cd.COLLECTIBLES_PROFILE_SETTINGS_UPSELL,
                     location_stack: n,
                     version: null == b ? void 0 : b.version
@@ -90,7 +90,7 @@ let I = (e) => {
                     }),
                     (0, i.jsx)(d.zxk, {
                         onClick: () => {
-                            (0, g.mK)({
+                            (0, h.mK)({
                                 analyticsLocations: n,
                                 analyticsSource: u.Z.COLLECTIBLES_PROFILE_SETTINGS_UPSELL
                             });

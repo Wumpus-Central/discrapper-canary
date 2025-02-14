@@ -10,8 +10,8 @@ var s = n(120356),
     d = n(140465),
     u = n(474936),
     m = n(981631),
-    h = n(388032),
-    g = n(234254);
+    g = n(388032),
+    h = n(234254);
 let x = (e) => {
     let t,
         n,
@@ -19,15 +19,15 @@ let x = (e) => {
         E = (0, d.Nx)();
     if (null == s) return null;
     let C = null != s ? c.ZP.getPremiumPlanItem(s) : null;
-    if ((c.ZP.isBoostOnlySubscription(s) ? (t = h.intl.string(h.t.Uj0md3)) : null != C && (t = c.ZP.getDisplayPremiumType(C.planId)), null == t)) return null;
+    if ((c.ZP.isBoostOnlySubscription(s) ? (t = g.intl.string(g.t.Uj0md3)) : null != C && (t = c.ZP.getDisplayPremiumType(C.planId)), null == t)) return null;
     let f = () => a.Z.open(m.oAB.SUBSCRIPTIONS),
         T = (null != C ? c.ZP.getSkuIdForPlan(C.planId) : null) === u.Si.TIER_1;
     return (
         (n = null != p ? p : E || _ ? 'always-white' : 'text-normal'),
         (0, i.jsxs)(l.Zbd, {
-            className: r()(g.container, x, {
-                [g.lightTextLink]: _,
-                [g.centerText]: E
+            className: r()(h.container, x, {
+                [h.lightTextLink]: _,
+                [h.centerText]: E
             }),
             type: l.Zbd.Types.CUSTOM,
             children: [
@@ -36,17 +36,17 @@ let x = (e) => {
                     width: 20,
                     height: 20,
                     color: 'currentColor',
-                    className: r()(g.icon, { [g.lightThemeColorOnly]: E || _ })
+                    className: r()(h.icon, { [h.lightThemeColorOnly]: E || _ })
                 }),
                 (0, i.jsx)(l.Text, {
                     variant: 'text-sm/medium',
                     color: n,
                     children: T
-                        ? h.intl.format(h.t['tYuv+f'], {
+                        ? g.intl.format(g.t['tYuv+f'], {
                               helpdeskArticle: o.Z.getArticleURL(m.BhN.PREMIUM_DETAILS),
                               onSubscriptionsClick: f
                           })
-                        : h.intl.format(h.t.xHRgU1, {
+                        : g.intl.format(g.t.xHRgU1, {
                               subscriptionName: t,
                               onSubscriptionsClick: f
                           })

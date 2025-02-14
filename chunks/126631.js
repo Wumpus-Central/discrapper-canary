@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(131704),
     u = n(993413),
     m = n(981631),
-    h = n(388032),
-    g = n(548286);
+    g = n(388032),
+    h = n(548286);
 let x = (0, c.hQ)(),
     _ = (0, d.kt)({
         id: '1',
@@ -32,15 +32,15 @@ function E(e) {
         (0, i.jsxs)(u.Z, {
             title: t,
             titleId: x,
-            description: h.intl.string(h.t.Bbw6AQ),
+            description: g.intl.string(g.t.Bbw6AQ),
             errors: n,
             disabled: f,
             children: [
                 (0, i.jsx)(o.Z, {
                     'aria-describedby': p,
                     'aria-labelledby': x,
-                    className: g.bioTextAreaContainer,
-                    innerClassName: g.bioTextArea,
+                    className: h.bioTextAreaContainer,
+                    innerClassName: h.bioTextArea,
                     maxCharacterCount: m.tPV,
                     onChange: function (e, t, n) {
                         t !== T && (N(t), I(n), c(t));
@@ -68,7 +68,7 @@ function E(e) {
                 }),
                 (0, i.jsx)(r.nn4, {
                     id: p,
-                    children: h.intl.format(h.t['+DFxLS'], { maxLength: m.tPV })
+                    children: g.intl.format(g.t['+DFxLS'], { maxLength: m.tPV })
                 })
             ]
         })

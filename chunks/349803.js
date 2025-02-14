@@ -10,8 +10,8 @@ var s = n(120356),
     d = n(104494),
     u = n(639119),
     m = n(318747),
-    h = n(409100),
-    g = n(474936),
+    g = n(409100),
+    h = n(474936),
     x = n(981631),
     _ = n(174892);
 let p = function (e) {
@@ -19,7 +19,7 @@ let p = function (e) {
     let { isVisible: s, isFullscreen: p, subscriptionTier: E, isMarketingPageV2: C } = e,
         f = null === (t = (0, u.N)()) || void 0 === t ? void 0 : t.subscription_trial,
         T = (0, d.Ng)(),
-        N = (0, d.Wp)(T, g.Si.TIER_2) ? g.Si.TIER_2 : void 0,
+        N = (0, d.Wp)(T, h.Si.TIER_2) ? h.Si.TIER_2 : void 0,
         S = (0, o.q_F)({
             transform: s ? 'translateY(-100%)' : 'translateY(0%)',
             opacity: s ? 1 : 0,
@@ -40,7 +40,7 @@ let p = function (e) {
         children: (0, i.jsxs)('div', {
             className: C ? _.innerWrapperV2 : _.innerWrapperV1,
             children: [
-                (0, i.jsx)(h.Z, {
+                (0, i.jsx)(g.Z, {
                     className: r()(_.button, { [_.subButton]: v }),
                     subscriptionTier: null !== (n = null != E ? E : null == f ? void 0 : f.sku_id) && void 0 !== n ? n : N,
                     premiumModalAnalyticsLocation: I,

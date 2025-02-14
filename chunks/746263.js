@@ -9,7 +9,7 @@ var i = n(200651),
     d = n(451593),
     u = n(694539),
     m = n(336600);
-let h = (e) => {
+let g = (e) => {
         var t, n, s;
         let { effect: r, onClick: a } = e,
             { deleteConfig: c } = (0, d.E)();
@@ -43,7 +43,7 @@ let h = (e) => {
             ]
         });
     },
-    g = () => ({
+    h = () => ({
         id: (0, a.Z)(),
         name: 'New Profile Effect',
         config: { effects: [] }
@@ -75,7 +75,7 @@ function x() {
                                     className: m.grid,
                                     children: Object.values(e).map((e) =>
                                         (0, i.jsx)(
-                                            h,
+                                            g,
                                             {
                                                 effect: e,
                                                 onClick: (e) => {
@@ -120,7 +120,7 @@ function x() {
                                 }),
                                 (0, i.jsx)(o.zxk, {
                                     onClick: () => {
-                                        t(g());
+                                        t(h());
                                     },
                                     children: 'Create New Effect'
                                 })

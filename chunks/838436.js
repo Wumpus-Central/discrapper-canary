@@ -35,7 +35,7 @@ function m(e) {
         ]
     });
 }
-function h(e) {
+function g(e) {
     let { setting: t, className: n, children: s } = e;
     return (0, i.jsx)(a.F, {
         setting: t,
@@ -45,14 +45,14 @@ function h(e) {
         })
     });
 }
-function g(e) {
+function h(e) {
     let { setting: t, className: n, children: s, scrollPosition: l, scrollHighlightDelay: m } = e,
-        h = (0, o.a)(l);
+        g = (0, o.a)(l);
     return (0, i.jsx)(a.F, {
         setting: t,
         children: (0, i.jsxs)('div', {
             className: r()(u.container, n, { [d.settingsBackgroundFlashElement]: null != l }),
-            ref: h,
+            ref: g,
             children: [
                 s,
                 null != l
@@ -66,5 +66,5 @@ function g(e) {
     });
 }
 function x(e) {
-    return null != e.scrollPosition ? (0, i.jsx)(g, { ...e }) : (0, i.jsx)(h, { ...e });
+    return null != e.scrollPosition ? (0, i.jsx)(h, { ...e }) : (0, i.jsx)(g, { ...e });
 }

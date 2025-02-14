@@ -10,8 +10,8 @@ var s = n(524437),
     d = n(63063),
     u = n(838436),
     m = n(526761),
-    h = n(726985),
-    g = n(981631),
+    g = n(726985),
+    h = n(981631),
     x = n(388032),
     _ = n(834040);
 function p() {
@@ -44,12 +44,12 @@ function p() {
     return (
         t && (f.unshift(N), T.unshift(N)),
         (0, i.jsxs)(u.U, {
-            setting: h.s6.PRIVACY_SENSITIVE_MEDIA_V2,
+            setting: g.s6.PRIVACY_SENSITIVE_MEDIA_V2,
             scrollPosition: m.FY.EXPLICIT_MEDIA_REDACTION_V2,
             children: [
                 (0, i.jsx)(u.H, {
                     header: x.intl.string(x.t['c/UOwM']),
-                    description: x.intl.format(x.t.ZUvrwM, { learnMoreLink: d.Z.getArticleURL(g.BhN.EXPLICIT_MEDIA_REDACTION) })
+                    description: x.intl.format(x.t.ZUvrwM, { learnMoreLink: d.Z.getArticleURL(h.BhN.EXPLICIT_MEDIA_REDACTION) })
                 }),
                 (0, i.jsx)(r.xJW, {
                     tag: r.RB0.H3,

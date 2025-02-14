@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(709054),
     u = n(914788),
     m = n(546791),
-    h = n(259756),
-    g = n(785681),
+    g = n(259756),
+    h = n(785681),
     x = n(985002),
     _ = n(858719),
     p = n(780985),
@@ -54,10 +54,10 @@ function D(e) {
         r = (0, E.Z)(),
         a = (0, _.ws)(t),
         c = (0, _.C7)(t),
-        { loadMore: u, isMoreLoading: g } = (0, x.G)({ onError: n }),
+        { loadMore: u, isMoreLoading: h } = (0, x.G)({ onError: n }),
         p = v.tx.get(t),
         [C, f] = s.useState(v.iB),
-        S = (0, h.Xi)({ location: 'family_center_activity_section_web' }),
+        S = (0, g.Xi)({ location: 'family_center_activity_section_web' }),
         I = s.useCallback(() => {
             f((e) => e + v.iB), u(t);
         }, [t, u]);
@@ -121,7 +121,7 @@ function D(e) {
                       className: O.loadMoreBar,
                       onClick: I,
                       role: 'button',
-                      children: g
+                      children: h
                           ? (0, i.jsx)(o.$jN, {
                                 type: o.$jN.Type.PULSING_ELLIPSIS,
                                 className: O.spinner
@@ -139,7 +139,7 @@ function D(e) {
 let y = () => {
         let e = (0, E.Z)(),
             t = (0, C.mq)(v.ne.ACTIVE),
-            n = (0, g.o)(A.intl.formatToPlainString(A.t['7hqFl5'], { activeLinks: t.length }), A.intl.string(A.t['Q/D/0d'])),
+            n = (0, h.o)(A.intl.formatToPlainString(A.t['7hqFl5'], { activeLinks: t.length }), A.intl.string(A.t['Q/D/0d'])),
             s = (0, m.Qr)(!!e),
             r = (0, C.Rd)(s);
         return e && t.length > 1

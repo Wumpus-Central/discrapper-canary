@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(626135),
     u = n(74538),
     m = n(150039),
-    h = n(993413),
-    g = n(504983),
+    g = n(993413),
+    h = n(504983),
     x = n(981631),
     _ = n(474936),
     p = n(388032),
@@ -39,9 +39,9 @@ function C(e) {
     }, [v, j]);
     let P = null != n,
         D = T ? a.gtL : a.zxk;
-    return (0, i.jsx)(h.Z, {
+    return (0, i.jsx)(g.Z, {
         forcedDivider: f,
-        borderType: g.Y.PREMIUM,
+        borderType: h.Y.PREMIUM,
         hasBackground: !0,
         title: C,
         showBorder: N,

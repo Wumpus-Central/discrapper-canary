@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => g,
+    Z: () => m,
     z: () => _
 });
 var i = n(200651),
@@ -36,8 +36,8 @@ let _ = 8,
         friction: 18,
         clamp: !0
     },
-    g = l.memo(function (e) {
-        let { widgetId: t, tileWidth: n, layout: l, locked: r, streamParticipants: u, participantsVersion: g, pinned: m } = e,
+    m = l.memo(function (e) {
+        let { widgetId: t, tileWidth: n, layout: l, locked: r, streamParticipants: u, participantsVersion: m, pinned: g } = e,
             v = (9 / 16) * n,
             E = u.map((e) => ({
                 participant: e,
@@ -46,14 +46,14 @@ let _ = 8,
                 locked: r,
                 widgetId: t,
                 height: v,
-                pinned: m
+                pinned: g
             })),
-            I = (0, d.Z)(n),
-            x = l === c.C5.VERTICAL,
+            x = (0, d.Z)(n),
+            I = l === c.C5.VERTICAL,
             C = 0,
             S = 0,
             Z = (0, s.Yzy)(
-                x
+                I
                     ? E.map((e, t) => ({
                           ...e,
                           y: (C += e.height + (t > 0 ? _ : 0)) - e.height,
@@ -94,17 +94,17 @@ let _ = 8,
                         };
                     },
                     config: f,
-                    trail: n !== I ? 0 : 100
+                    trail: n !== x ? 0 : 100
                 },
-                n !== I ? 'animate-never' : 'respect-motion-settings'
+                n !== x ? 'animate-never' : 'respect-motion-settings'
             );
         return (0, i.jsx)('div', {
             className: o()({
                 [h.gridContainer]: !0,
-                [h.vertical]: x,
-                [h.horizontal]: !x
+                [h.vertical]: I,
+                [h.horizontal]: !I
             }),
-            style: x ? { height: C } : { width: S },
+            style: I ? { height: C } : { width: S },
             children: Z((e, t, l, r) =>
                 (0, i.jsx)(a.animated.div, {
                     className: h.gridItem,

@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(481060),
     u = n(570140),
     m = n(496929),
-    h = n(37234),
-    g = n(230711),
+    g = n(37234),
+    h = n(230711),
     x = n(410030),
     _ = n(454585),
     p = n(163684),
@@ -34,8 +34,8 @@ function Z(e) {
     let t,
         { outboundPromotion: n, code: r, addClaimedOutboundPromotionCode: a, disabled: o } = e,
         [c, u] = s.useState(!1),
-        [m, h] = s.useState(!1),
-        g = () => u((e) => !e),
+        [m, g] = s.useState(!1),
+        h = () => u((e) => !e),
         p = (0, x.ZP)(),
         f = (0, C.Pz)(n.id, p),
         N = null != r,
@@ -43,26 +43,26 @@ function Z(e) {
     N && c
         ? (t = D.intl.format(D.t.pkxVx8, {
               endDate: S,
-              onClickDetails: g
+              onClickDetails: h
           }))
         : N && !c
           ? (t = D.intl.format(D.t['4sFeoa'], {
                 endDate: S,
-                onClickDetails: g
+                onClickDetails: h
             }))
           : !N && c
             ? (t = D.intl.format(D.t['RBnE+v'], {
                   endDate: S,
-                  onClickDetails: g
+                  onClickDetails: h
               }))
             : N ||
               c ||
               (t = D.intl.format(D.t['57+7Qk'], {
                   endDate: S,
-                  onClickDetails: g
+                  onClickDetails: h
               }));
     let I = N ? D.intl.string(D.t['2cHUtr']) : D.intl.string(D.t.O13yh4),
-        b = s.useCallback(() => h(!1), []),
+        b = s.useCallback(() => g(!1), []),
         { outboundTitle: v, outboundTermsAndConditions: j } = n;
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -103,7 +103,7 @@ function Z(e) {
                                 className: y.promotionCardButton,
                                 color: d.zxk.Colors.BRAND,
                                 size: d.zxk.Sizes.SMALL,
-                                onClick: () => h(!0),
+                                onClick: () => g(!0),
                                 disabled: !0 === o,
                                 children: I
                             })
@@ -183,7 +183,7 @@ let k = function () {
                                                     className: y.promoDescription,
                                                     children: D.intl.format(D.t.G4fwxM, {
                                                         onClick: () => {
-                                                            (0, h.xf)(), (0, I.uL)(R.Z5c.APPLICATION_STORE);
+                                                            (0, g.xf)(), (0, I.uL)(R.Z5c.APPLICATION_STORE);
                                                         }
                                                     })
                                                 })
@@ -301,7 +301,7 @@ let k = function () {
                                                 className: y.emptyStateSubtext,
                                                 children: D.intl.format(D.t.HezvJy, {
                                                     onClick: function () {
-                                                        g.Z.open(R.oAB.PREMIUM);
+                                                        h.Z.open(R.oAB.PREMIUM);
                                                     }
                                                 })
                                             })

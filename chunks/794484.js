@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(410154),
     u = n(695349),
     m = n(314684),
-    h = n(687362),
-    g = n(675619),
+    g = n(687362),
+    h = n(675619),
     x = n(119850),
     _ = n(32173),
     p = n(391110),
@@ -52,7 +52,7 @@ let T = (e) => {
         let { className: r, variant: N = p.R0.PERKS_DISCOVERABILITY, noBackground: S = !1, leftAlignHeaders: I = !1, showAllPerksButton: b, headerClassname: v, isFullScreen: j = !0, shouldAutoScroll: A = !1 } = e,
             O = s.useRef(null),
             R = (0, m.yQ)(),
-            P = (0, h.vi)(R),
+            P = (0, g.vi)(R),
             D = (0, d.ZP)('perks-discoverability'),
             y = N === p.R0.WHATS_NEW,
             Z = (0, m.IY)(),
@@ -64,7 +64,7 @@ let T = (e) => {
                 y && P && Z();
             },
             B = P && y;
-        (0, g.r)({
+        (0, h.r)({
             ref: O,
             shouldScroll: B || A,
             onScrollEnd: L,

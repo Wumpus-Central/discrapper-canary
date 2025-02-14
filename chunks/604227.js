@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(47120), n(757143), n(653041);
+n.d(t, { Z: () => g }), n(47120), n(757143), n(653041);
 var i = n(200651);
 n(192379);
 var s = n(525654),
@@ -10,15 +10,15 @@ var s = n(525654),
     d = n(998502),
     u = n(388032),
     m = n(357430);
-function h() {
-    var e, t, n, s, h;
-    let g = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        x = '368658',
-        _ = 'a65bf1638676f91a5e21ad8c6649b9289ac7cc98'.substring(0, 7),
+function g() {
+    var e, t, n, s, g;
+    let h = window.GLOBAL_ENV.RELEASE_CHANNEL,
+        x = '368738',
+        _ = 'd8c12d3136cf28751ca1179361049d74951a3e79'.substring(0, 7),
         p = null === a.Z || void 0 === a.Z ? void 0 : a.Z.remoteApp.getVersion(),
         E = null === a.Z || void 0 === a.Z ? void 0 : null === (e = (t = a.Z.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(t),
         C = null === a.Z || void 0 === a.Z ? void 0 : null === (n = (s = a.Z.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(s),
-        f = null === (h = o.C.getCurrentBuildOverride().overrides) || void 0 === h ? void 0 : h.discord_web,
+        f = null === (g = o.C.getCurrentBuildOverride().overrides) || void 0 === g ? void 0 : g.discord_web,
         T = (function () {
             var e;
             let t = null === r() || void 0 === r() ? void 0 : null === (e = r().os) || void 0 === e ? void 0 : e.toString();
@@ -27,7 +27,7 @@ function h() {
                 [i, s, l] = d.ZP.parsedOSRelease;
             return t.includes('Windows 10') && void 0 !== l && l >= 22000 && (t = t.replace('Windows 10', 'Windows 11')), t.includes('OS X 10.15.7') && void 0 !== i && i >= 20 && (t = 'macOS '.concat(i - 9)), ''.concat(t, ' (').concat(n, ')');
         })(),
-        N = [g, x, '('.concat(_, ')')];
+        N = [h, x, '('.concat(_, ')')];
     return (
         null != p && (N.push('Host '.concat(p)), null != C && N.push(C.toLowerCase()), null != E && N.push('('.concat(E, ')'))),
         N.push('Build Override: '.concat(null != f ? f.id : 'N/A')),
@@ -50,7 +50,7 @@ function h() {
                                 variant: 'text-xs/normal',
                                 color: 'text-muted',
                                 children: [
-                                    g,
+                                    h,
                                     ' ',
                                     x,
                                     ' ',

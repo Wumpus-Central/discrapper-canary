@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(530618),
     u = n(74538),
     m = n(937615),
-    h = n(230916),
-    g = n(798769),
+    g = n(230916),
+    h = n(798769),
     x = n(474936),
     _ = n(388032),
     p = n(804247),
@@ -22,7 +22,7 @@ function f(e) {
         b = (0, l.wj)(I) ? E : C,
         v = s.useRef(null),
         [j, A] = s.useState(!1),
-        O = (0, h._)(t, x.Xh.PREMIUM_MONTH_TIER_2, S),
+        O = (0, g._)(t, x.Xh.PREMIUM_MONTH_TIER_2, S),
         R = (0, u.aS)(x.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
             currency: t.currency,
             paymentSourceId: t.paymentSourceId
@@ -51,7 +51,7 @@ function f(e) {
         });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(g.Z, {
+            (0, i.jsx)(h.Z, {
                 premiumType: n,
                 className: p.cancellationHeader,
                 onClose: f

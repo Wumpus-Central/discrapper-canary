@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(88658),
     u = n(750832),
     m = n(976978),
-    h = n(695346),
-    g = n(639814),
+    g = n(695346),
+    h = n(639814),
     x = n(838436),
     _ = n(51331),
     p = n(922628),
@@ -22,16 +22,16 @@ var i = n(200651),
     S = n(388032);
 function I(e) {
     let { ingress: t, guildId: n } = e,
-        I = (0, g.c_)(),
+        I = (0, h.c_)(),
         b = (0, m.q)(),
-        v = h.h2.useSetting().includes(n),
-        j = h.mX.useSetting(),
-        A = h.zA.useSetting().includes(n),
+        v = g.h2.useSetting().includes(n),
+        j = g.mX.useSetting(),
+        A = g.zA.useSetting().includes(n),
         O = s.useCallback(
             (e) => {
                 let i = (0, d.gl)();
                 e ? i.delete(n) : i.add(n),
-                    h.zA.updateSetting(Array.from(i)),
+                    g.zA.updateSetting(Array.from(i)),
                     a.default.track(N.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
                         action: E.Y.RESTRICT_GUILD_MESSAGE_REQUEST_TOGGLE,
                         ingress: t,
@@ -59,10 +59,10 @@ function I(e) {
                       cancelText: S.intl.string(S.t.p89ACg),
                       confirmButtonColor: r.zxk.Colors.BRAND,
                       onConfirm: () => {
-                          h.mX.updateSetting(n), R(n, !1);
+                          g.mX.updateSetting(n), R(n, !1);
                       },
                       onCancel: () => {
-                          h.mX.updateSetting(n), h.zA.updateSetting(n ? c.default.keys(l.Z.getGuilds()) : []), R(n, !0);
+                          g.mX.updateSetting(n), g.zA.updateSetting(n ? c.default.keys(l.Z.getGuilds()) : []), R(n, !0);
                       }
                   }));
         }
@@ -90,7 +90,7 @@ function I(e) {
 }
 function b(e) {
     let { ingress: t = C.f4.USER_SETTINGS_PRIVACY_SAFETY, guildId: n } = e,
-        s = (0, g.is)();
+        s = (0, h.is)();
     return (0, i.jsx)(I, {
         ingress: t,
         guildId: null != n ? n : s

@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(906732),
     u = n(856768),
     m = n(993413),
-    h = n(921801),
-    g = n(208049),
+    g = n(921801),
+    h = n(208049),
     x = n(763296),
     _ = n(242291),
     p = n(893663),
@@ -37,11 +37,11 @@ function P(e) {
     let { refreshStyles: t = !1 } = e,
         n = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsxs)(h.F, {
+                (0, i.jsxs)(g.F, {
                     setting: I.s6.VOICE_AND_VIDEO_SOUNDBOARD,
                     children: [(0, i.jsx)(N.Z, { refreshStyles: t }), (0, i.jsx)(S.Z, { refreshStyles: t })]
                 }),
-                (0, i.jsxs)(h.F, {
+                (0, i.jsxs)(g.F, {
                     setting: I.s6.VOICE_AND_VIDEO_ENTRANCE_SOUNDS,
                     children: [t ? null : (0, i.jsx)(o.$i$, { className: A.callSoundsDivider }), (0, i.jsx)(D, { refreshStyles: t })]
                 })
@@ -61,15 +61,15 @@ function D(e) {
     let { refreshStyles: t } = e,
         { analyticsLocations: n } = (0, d.ZP)(),
         [r, c] = s.useState(v.hY),
-        h = (0, p.tT)(r),
-        f = R(h),
-        N = (null == h ? void 0 : h.type) === p.zx.GLOBAL,
-        S = (0, a.e7)([x.Z], () => x.Z.hasFetchedAllSounds()) && null != h && null == f;
+        g = (0, p.tT)(r),
+        f = R(g),
+        N = (null == g ? void 0 : g.type) === p.zx.GLOBAL,
+        S = (0, a.e7)([x.Z], () => x.Z.hasFetchedAllSounds()) && null != g && null == f;
     s.useEffect(() => {
         S && (0, _.tt)({ location: n });
     }, [S, n]),
         s.useEffect(() => {
-            (0, g.w)();
+            (0, h.w)();
         }, []);
     let I = s.useCallback((e, t) => {
             let { inDropdown: n } = t;

@@ -10,8 +10,8 @@ var s = n(512722),
     d = n(792423),
     u = n(674985),
     m = n(594174),
-    h = n(843200),
-    g = n(388032),
+    g = n(843200),
+    h = n(388032),
     x = n(212243);
 function _() {
     let {
@@ -36,19 +36,19 @@ function _() {
                 (0, i.jsx)(a.X6q, {
                     variant: 'heading-xxl/semibold',
                     className: x.introHeader,
-                    children: null == e ? g.intl.string(g.t.iZowCQ) : g.intl.string(g.t.e7fL7O)
+                    children: null == e ? h.intl.string(h.t.iZowCQ) : h.intl.string(h.t.e7fL7O)
                 }),
                 (0, i.jsx)(a.Text, {
                     variant: 'text-lg/normal',
-                    children: g.intl.string(g.t['6FaVFB'])
+                    children: h.intl.string(h.t['6FaVFB'])
                 })
             ]
         }),
         children: [
-            (0, i.jsx)(h.Z, {
+            (0, i.jsx)(g.Z, {
                 className: x.verificationNotice,
-                unclaimedNotice: g.intl.string(g.t.vZU8Ki),
-                unverifiedNotice: g.intl.string(g.t.T7TYEB)
+                unclaimedNotice: h.intl.string(h.t.vZU8Ki),
+                unverifiedNotice: h.intl.string(h.t.T7TYEB)
             }),
             (0, i.jsx)(c.Z, {
                 houseMembership: e,

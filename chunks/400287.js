@@ -10,8 +10,8 @@ var s = n(120356),
     d = n(454585),
     u = n(125900),
     m = n(921801),
-    h = n(626135),
-    g = n(695346),
+    g = n(626135),
+    h = n(695346),
     x = n(726985),
     _ = n(981631),
     p = n(388032),
@@ -19,18 +19,18 @@ var s = n(120356),
 function C() {
     let e = (0, c.pR)(),
         t = (0, c.Ju)(),
-        n = g.fq.useSetting(),
-        s = g.eR.useSetting(),
+        n = h.fq.useSetting(),
+        s = h.eR.useSetting(),
         C = (0, u.V2)({ location: 'UserSettingsTextImages' }),
-        f = g.R$.useSetting(),
-        T = g.cC.useSetting(),
-        N = g.vF.useSetting(),
-        S = g.H1.useSetting(),
-        I = g.ev.useSetting(),
-        b = g.x4.useSetting(),
-        v = g.RS.useSetting(),
-        j = g.NA.useSetting(),
-        A = g.nc.useSetting(),
+        f = h.R$.useSetting(),
+        T = h.cC.useSetting(),
+        N = h.vF.useSetting(),
+        S = h.H1.useSetting(),
+        I = h.ev.useSetting(),
+        b = h.x4.useSetting(),
+        v = h.RS.useSetting(),
+        j = h.NA.useSetting(),
+        A = h.nc.useSetting(),
         { analyticsLocations: O } = (0, o.ZP)(a.Z.TEXT_AND_IMAGES);
     return (0, i.jsxs)(l.hjN, {
         tag: l.RB0.H1,
@@ -48,7 +48,7 @@ function C() {
                         children: (0, i.jsx)(l.j7V, {
                             className: r()(E.marginTop8, E.marginBottom20),
                             value: v,
-                            onChange: g.RS.updateSetting,
+                            onChange: h.RS.updateSetting,
                             children: p.intl.string(p.t.U47N1t)
                         })
                     }),
@@ -58,7 +58,7 @@ function C() {
                             className: r()(E.marginTop8, E.marginBottom20),
                             value: b,
                             note: p.intl.formatToPlainString(p.t.qjjvqK, { maxSize: 10 }),
-                            onChange: g.x4.updateSetting,
+                            onChange: h.x4.updateSetting,
                             children: p.intl.string(p.t.VP11Nj)
                         })
                     }),
@@ -68,7 +68,7 @@ function C() {
                             className: r()(E.marginTop8, E.marginBottom40),
                             value: S,
                             note: p.intl.string(p.t.T0rbtL),
-                            onChange: g.H1.updateSetting,
+                            onChange: h.H1.updateSetting,
                             children: p.intl.string(p.t['w8j+yc'])
                         })
                     })
@@ -86,7 +86,7 @@ function C() {
                         children: (0, i.jsx)(l.j7V, {
                             className: r()(E.marginTop8, E.marginBottom40),
                             value: j,
-                            onChange: g.NA.updateSetting,
+                            onChange: h.NA.updateSetting,
                             children: p.intl.string(p.t.xX0ZTE)
                         })
                     })
@@ -104,7 +104,7 @@ function C() {
                         children: (0, i.jsx)(l.j7V, {
                             className: r()(E.marginTop8, E.marginBottom20),
                             value: A,
-                            onChange: g.nc.updateSetting,
+                            onChange: h.nc.updateSetting,
                             children: p.intl.string(p.t.Iv24sr)
                         })
                     }),
@@ -114,7 +114,7 @@ function C() {
                             className: E.marginBottom40,
                             value: I,
                             note: d.Z.parse(p.intl.string(p.t['20dvub'])),
-                            onChange: g.ev.updateSetting,
+                            onChange: h.ev.updateSetting,
                             children: p.intl.string(p.t['79qal5'])
                         })
                     })
@@ -138,7 +138,7 @@ function C() {
                                       value: e,
                                       note: p.intl.string(p.t.r3uQUV),
                                       onChange: (t) => {
-                                          h.default.track(_.rMx.STICKER_SUGGESTIONS_ENABLED_TOGGLED, {
+                                          g.default.track(_.rMx.STICKER_SUGGESTIONS_ENABLED_TOGGLED, {
                                               enabled: !e,
                                               location: { section: _.jXE.SETTINGS_TEXT_AND_IMAGES },
                                               location_stack: O
@@ -155,12 +155,12 @@ function C() {
                                 value: n,
                                 note: p.intl.string(p.t['/eVrj4']),
                                 onChange: (e) => {
-                                    h.default.track(_.rMx.STICKERS_IN_AUTOCOMPLETE_TOGGLED, {
+                                    g.default.track(_.rMx.STICKERS_IN_AUTOCOMPLETE_TOGGLED, {
                                         enabled: e,
                                         location: { section: _.jXE.SETTINGS_TEXT_AND_IMAGES },
                                         location_stack: O
                                     }),
-                                        g.fq.updateSetting(e);
+                                        h.fq.updateSetting(e);
                                 },
                                 children: p.intl.string(p.t['29xPVV'])
                             })
@@ -185,11 +185,11 @@ function C() {
                                     value: s,
                                     note: p.intl.string(p.t.hrSIhI),
                                     onChange: (e) => {
-                                        h.default.track(_.rMx.SOUNDMOJI_IN_AUTOCOMPLETE_TOGGLED, {
+                                        g.default.track(_.rMx.SOUNDMOJI_IN_AUTOCOMPLETE_TOGGLED, {
                                             checked: e,
                                             location: { section: _.jXE.SETTINGS_TEXT_AND_IMAGES }
                                         }),
-                                            g.eR.updateSetting(e);
+                                            h.eR.updateSetting(e);
                                     },
                                     children: p.intl.string(p.t['CtYr+f'])
                                 })
@@ -212,11 +212,11 @@ function C() {
                                 className: r()(E.marginTop8, E.marginBottom40),
                                 value: f,
                                 onChange: (e) => {
-                                    h.default.track(_.rMx.PREVIEW_MARKDOWN_TOGGLED, {
+                                    g.default.track(_.rMx.PREVIEW_MARKDOWN_TOGGLED, {
                                         enabled: e,
                                         location: { section: _.jXE.SETTINGS_TEXT_AND_IMAGES }
                                     }),
-                                        g.R$.updateSetting(e);
+                                        h.R$.updateSetting(e);
                                 },
                                 children: p.intl.string(p.t.AqGrEB)
                             })
@@ -238,7 +238,7 @@ function C() {
                             children: (0, i.jsx)(l.j7V, {
                                 className: E.marginTop8,
                                 value: N,
-                                onChange: g.vF.updateSetting,
+                                onChange: h.vF.updateSetting,
                                 children: p.intl.string(p.t.AInv5u)
                             })
                         })
@@ -270,7 +270,7 @@ function C() {
                                     value: _.A2N.ALWAYS
                                 }
                             ],
-                            onChange: (e) => g.cC.updateSetting(e.value),
+                            onChange: (e) => h.cC.updateSetting(e.value),
                             value: T
                         })
                     ]

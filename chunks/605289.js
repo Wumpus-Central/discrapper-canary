@@ -10,8 +10,8 @@ var s = n(120356),
     d = n(985754),
     u = n(222727),
     m = n(318747),
-    h = n(409100),
-    g = n(474936),
+    g = n(409100),
+    h = n(474936),
     x = n(981631),
     _ = n(237719);
 let p = function (e) {
@@ -50,14 +50,14 @@ let p = function (e) {
             (0, i.jsxs)('div', {
                 className: _.ctaButtonContainer,
                 children: [
-                    (0, i.jsx)(h.Z, {
+                    (0, i.jsx)(g.Z, {
                         forceInverted: !0,
                         className: _.ctaButton,
-                        subscriptionTier: g.Si.TIER_2
+                        subscriptionTier: h.Si.TIER_2
                     }),
                     (0, i.jsx)(m.Z, {
                         forceWhite: !0,
-                        subscriptionTier: g.Si.TIER_2,
+                        subscriptionTier: h.Si.TIER_2,
                         className: _.ctaButton
                     })
                 ]

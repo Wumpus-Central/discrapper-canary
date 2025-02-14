@@ -10,8 +10,8 @@ var s = n(399606),
     d = n(552045),
     u = n(87792),
     m = n(302289),
-    h = n(946690),
-    g = n(456771),
+    g = n(946690),
+    h = n(456771),
     x = n(292352),
     _ = n(388032),
     p = n(860392);
@@ -35,19 +35,19 @@ let E = () => {
                   (0, i.jsxs)('div', {
                       className: p.featureCards,
                       children: [
-                          (0, i.jsx)(h.Z, {
+                          (0, i.jsx)(g.Z, {
                               iconClassName: p.chatCheckIcon,
                               icon: r.eQA,
                               header: _.intl.string(_.t['001l3t']),
                               description: E
                           }),
-                          (0, i.jsx)(h.Z, {
+                          (0, i.jsx)(g.Z, {
                               icon: r.tEF,
                               header: _.intl.string(_.t.yipAeH),
                               description: C
                           }),
-                          (0, i.jsx)(h.Z, {
-                              icon: T ? r.IkH : (0, r.GSL)(g.Z),
+                          (0, i.jsx)(g.Z, {
+                              icon: T ? r.IkH : (0, r.GSL)(h.Z),
                               header: _.intl.string(_.t.hhOuMT),
                               description: f
                           })

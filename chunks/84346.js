@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => x });
 var i = n(200651),
     l = n(239091),
     r = n(32300),
@@ -12,11 +12,11 @@ var i = n(200651),
     _ = n(586742),
     p = n(243487),
     f = n(430561),
-    g = n(134849),
-    m = n(501787),
+    m = n(134849),
+    g = n(501787),
     v = n(981631),
     E = n(388032);
-let I = {
+let x = {
     [v.Odu.VIDEO]: {
         renderWidget(e) {
             let { widget: t, locked: n, size: l, padding: r, borderWidth: o } = e;
@@ -68,12 +68,12 @@ let I = {
             return (0, u.js)(t)
                 ? 'boolean' != typeof t.meta.horizontal || t.meta.horizontal
                     ? {
-                          width: Math.max(n.width, m.vZ),
-                          height: Math.min(n.height, 2 * m.mo + 2 * i + 2 * l)
+                          width: Math.max(n.width, g.vZ),
+                          height: Math.min(n.height, 2 * g.mo + 2 * i + 2 * l)
                       }
                     : {
-                          height: Math.max(n.height, m.vZ),
-                          width: Math.min(n.width, 2 * m.mo + 2 * i + 2 * l)
+                          height: Math.max(n.height, g.vZ),
+                          width: Math.min(n.width, 2 * g.mo + 2 * i + 2 * l)
                       }
                 : n;
         }
@@ -269,7 +269,7 @@ let I = {
     [v.Odu.NOTIFICATIONS]: {
         renderWidget(e) {
             let { locked: t } = e;
-            return (0, i.jsx)(g.Z, { locked: t });
+            return (0, i.jsx)(m.Z, { locked: t });
         },
         renderTitle: () => (0, i.jsx)(f.PI, { children: E.intl.string(E.t.gnKWdX) }),
         renderButtons: (e, t) =>

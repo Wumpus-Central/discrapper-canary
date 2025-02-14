@@ -24,8 +24,8 @@ var i = n(278074),
     d = n(331119),
     u = n(575595),
     m = n(650032),
-    h = n(391110),
-    g = n(474936),
+    g = n(391110),
+    h = n(474936),
     x = n(735825),
     _ = n(388032);
 let p = (e) => {
@@ -134,10 +134,10 @@ let b = (e, t, n) => ((0, r.wj)(e) ? t : n),
             c = () => {
                 r !== l.C5.DEFAULT ? o({ card: n.specialShopPerks }) : o({ card: n.specialMemberPricing });
             },
-            { enabled: h } = m._.getCurrentConfig({ location: v }, { autoTrackExposure: !1 }),
-            { enabled: g } = u.r.getCurrentConfig({ location: v }, { autoTrackExposure: !1 }),
+            { enabled: g } = m._.getCurrentConfig({ location: v }, { autoTrackExposure: !1 }),
+            { enabled: h } = u.r.getCurrentConfig({ location: v }, { autoTrackExposure: !1 }),
             { enabled: x } = d.C.getCurrentConfig({ location: v }, { autoTrackExposure: !1 }),
-            _ = h && !g && !x,
+            _ = g && !h && !x,
             p = P();
         return null != n.tenureBadge && o({ card: n.tenureBadge }), null != n.tenureRewardCollectible && !0 === s && o({ card: n.tenureRewardCollectible }), null != n.freeBoost && !0 === s && o({ card: n.freeBoost }), null != n.shyProject && o({ card: n.shyProject }), i && p ? (0 === t.length && c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })) : i && !p && (_ || null != n.shyProject ? _ && o({ card: n.referralProgram }) : c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })), o({ card: n.earlyAccess }), c(), o({ card: n.unlimitedSuperReactions }), t;
     },
@@ -145,16 +145,16 @@ let b = (e, t, n) => ((0, r.wj)(e) ? t : n),
         let { perksCards: t, variant: n, shopMarketingVariation: s, isFullScreen: r, showTenureCard: l, isPremiumSubscriber: a, fractionalState: o, isInReverseTrial: c } = e,
             d = [];
         switch (n) {
-            case h.R0.PERKS_DISCOVERABILITY:
+            case g.R0.PERKS_DISCOVERABILITY:
                 d = (0, i.EQ)({
                     isPremiumSubscriber: a,
                     fractionalState: o
                 })
                     .with({ isPremiumSubscriber: !1 }, () => [t.profiles, t.moreEmojiPower, t.largeUploads, t.hdVideo, t.clientThemes, t.customAppIcons])
-                    .with({ fractionalState: g.a$.FP_ONLY }, () => [t.profiles, t.clientThemes, t.hdVideo])
+                    .with({ fractionalState: h.a$.FP_ONLY }, () => [t.profiles, t.clientThemes, t.hdVideo])
                     .otherwise(() => [t.profiles, t.clientThemes, t.serverBoosts]);
                 break;
-            case h.R0.WHATS_NEW:
+            case g.R0.WHATS_NEW:
                 d = j({
                     cards: d,
                     perksCards: t,
@@ -163,23 +163,23 @@ let b = (e, t, n) => ((0, r.wj)(e) ? t : n),
                     shopMarketingVariation: s
                 });
                 break;
-            case h.R0.CARD_CAROUSEL_FIRST_ROW:
+            case g.R0.CARD_CAROUSEL_FIRST_ROW:
                 d = (0, i.EQ)({ isPremiumSubscriber: a })
                     .with({ isPremiumSubscriber: !1 }, () => [t.serverBoosts, t.superReactions, t.earlyAccessSeeAllVariant, t.specialShopPerks])
                     .otherwise(() => [t.customAppIcons, t.moreEmojiPower, t.customSoundsEverywhere, t.specialStickerAccess]);
                 break;
-            case h.R0.CARD_CAROUSEL_SECOND_ROW:
+            case g.R0.CARD_CAROUSEL_SECOND_ROW:
                 d = (0, i.EQ)({
                     isPremiumSubscriber: a,
                     fractionalState: o
                 })
                     .with({ isPremiumSubscriber: !1 }, () => [t.customSoundsEverywhere, t.specialStickerAccess])
-                    .with({ fractionalState: g.a$.FP_ONLY }, () => (c ? [t.earlyAccessSeeAllVariant, t.specialMemberPricingSeeAllVariant, t.largeUploads, t.hdVideo, t.superReactions] : [t.greyServerBoosts, t.earlyAccessSeeAllVariant, t.specialMemberPricingSeeAllVariant, t.largeUploads, t.hdVideo, t.superReactions]))
+                    .with({ fractionalState: h.a$.FP_ONLY }, () => (c ? [t.earlyAccessSeeAllVariant, t.specialMemberPricingSeeAllVariant, t.largeUploads, t.hdVideo, t.superReactions] : [t.greyServerBoosts, t.earlyAccessSeeAllVariant, t.specialMemberPricingSeeAllVariant, t.largeUploads, t.hdVideo, t.superReactions]))
                     .otherwise(() => [t.earlyAccessSeeAllVariant, t.specialMemberPricingSeeAllVariant, t.largeUploads, t.hdVideo, t.superReactions]);
                 break;
-            case h.R0.CARD_CAROUSEL_THIRD_ROW:
+            case g.R0.CARD_CAROUSEL_THIRD_ROW:
                 d = (0, i.EQ)({ fractionalState: o })
-                    .with({ fractionalState: g.a$.FP_ONLY }, () => (c ? [t.entranceSoundsSeeAllVariation] : [t.entranceSoundsSeeAllVariation, t.greyBadge]))
+                    .with({ fractionalState: h.a$.FP_ONLY }, () => (c ? [t.entranceSoundsSeeAllVariation] : [t.entranceSoundsSeeAllVariation, t.greyBadge]))
                     .otherwise(() => [t.entranceSoundsSeeAllVariation, t.badge]);
         }
         return r || (d = d.filter((e) => !e.hideOnNarrowScreen)), d;
@@ -187,7 +187,7 @@ let b = (e, t, n) => ((0, r.wj)(e) ? t : n),
     O = (e) => {
         let t = (0, s.e7)([o.ZP], () => o.ZP.getPremiumTypeSubscription()),
             n = null != t ? c.ZP.getPremiumPlanItem(t) : null,
-            i = (null != n ? c.ZP.getSkuIdForPlan(n.planId) : null) === g.Si.TIER_2;
+            i = (null != n ? c.ZP.getSkuIdForPlan(n.planId) : null) === h.Si.TIER_2;
         return e
             ? i
                 ? {
@@ -209,5 +209,5 @@ let b = (e, t, n) => ((0, r.wj)(e) ? t : n),
     },
     P = () => {
         let e = a.default.getCurrentUser();
-        return (0, c.M5)(e, g.p9.TIER_2);
+        return (0, c.M5)(e, h.p9.TIER_2);
     };

@@ -22,9 +22,9 @@ let m = () => {
         m = i.useCallback(() => {
             n.isDismissed && n.handleToggleDismissState(), (0, d.l)(), l.Z.dispatch({ type: 'VIRTUAL_CURRENCY_ONBOARDING_MODAL_RESET' });
         }, [n]),
-        { handleResetStatusClick: h } = (0, o.kJ)(u.V);
+        { handleResetStatusClick: g } = (0, o.kJ)(u.V);
     return {
         resetOnboardingAnnouncementModal: m,
-        resetQuestStatus: h
+        resetQuestStatus: g
     };
 };

@@ -10,8 +10,8 @@ var s = n(120356),
     d = n(220082),
     u = n(687158),
     m = n(576635),
-    h = n(74538),
-    g = n(193528),
+    g = n(74538),
+    h = n(193528),
     x = n(993413),
     _ = n(388032),
     p = n(480548);
@@ -24,7 +24,7 @@ function E(e) {
             pendingThemeColors: s,
             isPreview: !0
         }),
-        j = h.ZP.canUsePremiumProfileCustomization(t),
+        j = g.ZP.canUsePremiumProfileCustomization(t),
         A = null != n ? n : t.getAvatarURL(C, 80),
         O = (0, c.dQu)(o.Z.unsafe_rawColors.PRIMARY_530).hex(),
         R = (0, d.Cf)(A, O, !1);
@@ -43,7 +43,7 @@ function E(e) {
             children: [
                 (0, i.jsx)('div', {
                     className: p.sparkleContainer,
-                    children: (0, i.jsx)(g.Z, {
+                    children: (0, i.jsx)(h.Z, {
                         onChange: (e) => P([e, v]),
                         color: b,
                         suggestedColors: R,
@@ -59,7 +59,7 @@ function E(e) {
                 }),
                 (0, i.jsx)('div', {
                     className: p.sparkleContainer,
-                    children: (0, i.jsx)(g.Z, {
+                    children: (0, i.jsx)(h.Z, {
                         onChange: (e) => P([b, e]),
                         color: v,
                         suggestedColors: R,

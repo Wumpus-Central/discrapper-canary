@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(533307),
     u = n(189907),
     m = n(812206),
-    h = n(600164),
-    g = n(925329),
+    g = n(600164),
+    h = n(925329),
     x = n(981632),
     _ = n(314897),
     p = n(82142),
@@ -57,8 +57,8 @@ class O extends s.PureComponent {
     render() {
         let { hideCode: e, giftCode: t } = this.props,
             { copyMode: n } = this.state;
-        return (0, i.jsxs)(h.Z, {
-            direction: h.Z.Direction.VERTICAL,
+        return (0, i.jsxs)(g.Z, {
+            direction: g.Z.Direction.VERTICAL,
             className: j.giftCodeRow,
             children: [
                 (0, i.jsx)(c.kO8, {
@@ -137,9 +137,9 @@ class R extends s.PureComponent {
         );
     }
     renderGenerateGiftCodeRow() {
-        return (0, i.jsxs)(h.Z, {
-            justify: h.Z.Justify.BETWEEN,
-            align: h.Z.Align.CENTER,
+        return (0, i.jsxs)(g.Z, {
+            justify: g.Z.Justify.BETWEEN,
+            align: g.Z.Align.CENTER,
             className: j.generateCodeRow,
             children: [
                 (0, i.jsx)(c.Text, {
@@ -175,8 +175,8 @@ class R extends s.PureComponent {
                         children: (0, i.jsxs)('div', {
                             className: j.cardHeader,
                             children: [
-                                (0, i.jsxs)(h.Z, {
-                                    align: h.Z.Align.CENTER,
+                                (0, i.jsxs)(g.Z, {
+                                    align: g.Z.Align.CENTER,
                                     children: [
                                         null != d
                                             ? (0, i.jsx)(x.Z, {
@@ -184,9 +184,9 @@ class R extends s.PureComponent {
                                                   className: j.seasonalGiftBox,
                                                   shouldAnimate: this.state.isHovered
                                               })
-                                            : (0, i.jsx)(g.Z, {
+                                            : (0, i.jsx)(h.Z, {
                                                   game: t,
-                                                  size: g.Z.Sizes.MEDIUM,
+                                                  size: h.Z.Sizes.MEDIUM,
                                                   skuId: l.id
                                               }),
                                         (0, i.jsxs)('div', {

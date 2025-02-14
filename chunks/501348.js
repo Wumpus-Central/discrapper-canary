@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(780384),
     u = n(481060),
     m = n(153867),
-    h = n(230711),
-    g = n(493773),
+    g = n(230711),
+    h = n(493773),
     x = n(714338),
     _ = n(857595),
     p = n(607070),
@@ -293,7 +293,7 @@ class Q extends s.Component {
                       children: (0, E.b)()
                           ? U.intl.format(U.t.Jae48P, {
                                 onClick: () => {
-                                    h.Z.open(M.oAB.ACCESSIBILITY);
+                                    g.Z.open(M.oAB.ACCESSIBILITY);
                                 }
                             })
                           : U.intl.string(U.t.AUMSZG)
@@ -491,7 +491,7 @@ class Q extends s.Component {
                     className: F.marginTop20,
                     children: U.intl.format(U.t['5LEQdX'], {
                         onAccessibilityClick() {
-                            h.Z.open(M.oAB.ACCESSIBILITY);
+                            g.Z.open(M.oAB.ACCESSIBILITY);
                         }
                     })
                 })
@@ -669,7 +669,7 @@ class $ extends Q {
                 className: G.a11yCallout,
                 children: U.intl.format(U.t['5LEQdX'], {
                     onAccessibilityClick() {
-                        h.Z.open(M.oAB.ACCESSIBILITY);
+                        g.Z.open(M.oAB.ACCESSIBILITY);
                     }
                 })
             });
@@ -694,7 +694,7 @@ function et() {
         s = Z.L1.useSetting(),
         r = Z.hg.useSetting(),
         l = Z.YC.useSetting();
-    (0, g.ZP)(() => {
+    (0, h.ZP)(() => {
         ee(o.z.CLIENT_THEMES_SETTINGS_BADGE), ee(o.z.DEKSTOP_CUSTOM_APP_ICON_BADGE), ee(o.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
     });
     let c = (0, a.cj)([D.Z, y.ZP, p.Z, R.default, C.Z], () => {

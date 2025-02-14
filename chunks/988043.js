@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(976978),
     u = n(695346),
     m = n(639814),
-    h = n(838436),
-    g = n(51331),
+    g = n(838436),
+    h = n(51331),
     x = n(922628),
     _ = n(703115),
     p = n(526761),
@@ -57,11 +57,11 @@ function N(e) {
             }
         });
     };
-    return (0, i.jsx)(h.U, {
+    return (0, i.jsx)(g.U, {
         setting: E.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_DMS_V2,
         children:
             n === C.T
-                ? (0, i.jsx)(g.Z, {
+                ? (0, i.jsx)(h.Z, {
                       title: T.intl.string(T.t.RAQUSE),
                       note: T.intl.string(T.t.wbYDfX),
                       value: !S,
@@ -69,7 +69,7 @@ function N(e) {
                           v(!e);
                       }
                   })
-                : (0, i.jsx)(g.Z, {
+                : (0, i.jsx)(h.Z, {
                       title: T.intl.string(T.t.RAQUSE),
                       note: p ? T.intl.string(T.t.V0ka0d) : T.intl.string(T.t.G7c3Xl),
                       value: !N,

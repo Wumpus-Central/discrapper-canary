@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(442837),
     u = n(692547),
     m = n(481060),
-    h = n(570140),
-    g = n(661111),
+    g = n(570140),
+    h = n(661111),
     x = n(179658),
     _ = n(491428),
     p = n(225433),
@@ -458,7 +458,7 @@ class J extends s.Component {
     renderSettingsForm() {
         let { ttlSeconds: e, releaseChannel: t, userIdEntry: n, userIdEntryError: s, allowedVersions: r, allowedVersionEntry: l, allowedVersionEntryError: a, allowLoggedOut: o, experiments: c, experimentsError: d } = this.state,
             u = V.S6.find((t) => t.value === e),
-            h = r.map((e) => ({
+            g = r.map((e) => ({
                 label: e,
                 value: e
             }));
@@ -518,7 +518,7 @@ class J extends s.Component {
                                   className: F.marginBottom20,
                                   children: (0, i.jsx)(m.q4e, {
                                       value: null,
-                                      options: h,
+                                      options: g,
                                       onChange: this.handleRemoveAllowedVersion,
                                       isDisabled: 0 === r.length
                                   })
@@ -910,7 +910,7 @@ function ee() {
                               setting: M.s6.DEVELOPER_OPTIONS_CLEAR_CACHES,
                               children: (0, i.jsx)(m.zxk, {
                                   onClick: () => {
-                                      h.Z.dispatch({
+                                      g.Z.dispatch({
                                           type: 'CLEAR_CACHES',
                                           reason: 'Requested by user',
                                           preventWritingCachesAgainThisSession: !0,
@@ -1013,7 +1013,7 @@ let et = d.ZP.connectStores([D.default], () => ({
     disableAppCollectionsCache: D.default.disableAppCollectionsCache,
     preventPopoutClose: D.default.preventPopoutClose
 }))((e) => {
-    let { isTracingRequests: t, isForcedCanary: n, isLoggingGatewayEvents: s, isLoggingOverlayEvents: r, isLoggingAnalyticsEvents: l, isAxeEnabled: a, cssDebuggingEnabled: o, layoutDebuggingEnabled: c, isSourceMapsEnabled: d, isAnalyticsDebuggerEnabled: u, isIdleStatusIndicatorEnabled: h, onlyShowPreviewAppCollections: g, disableAppCollectionsCache: _, preventPopoutClose: p } = e;
+    let { isTracingRequests: t, isForcedCanary: n, isLoggingGatewayEvents: s, isLoggingOverlayEvents: r, isLoggingAnalyticsEvents: l, isAxeEnabled: a, cssDebuggingEnabled: o, layoutDebuggingEnabled: c, isSourceMapsEnabled: d, isAnalyticsDebuggerEnabled: u, isIdleStatusIndicatorEnabled: g, onlyShowPreviewAppCollections: h, disableAppCollectionsCache: _, preventPopoutClose: p } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(P.F, {
@@ -1088,7 +1088,7 @@ let et = d.ZP.connectStores([D.default], () => ({
                         (0, i.jsx)(P.F, {
                             setting: M.s6.DEVELOPER_OPTIONS_IDLE_STATUS_INDICATOR,
                             children: (0, i.jsx)(m.j7V, {
-                                value: h,
+                                value: g,
                                 note: 'Displays a floating idle status indicator',
                                 onChange: (e) => (0, x.y)({ idleStatusIndicatorEnabled: e }),
                                 children: 'Enable idle status indicator'
@@ -1115,7 +1115,7 @@ let et = d.ZP.connectStores([D.default], () => ({
                         (0, i.jsx)(P.F, {
                             setting: M.s6.DEVELOPER_OPTIONS_PREVIEW_UNPUBLISHED_COLLECTIONS,
                             children: (0, i.jsx)(m.j7V, {
-                                value: g,
+                                value: h,
                                 note: "Only show application collections (e.g. in App Directory, App Launcher in text) that have the 'preview' active state. This disables application collections cache, too, so you can see collections updates immediately.",
                                 onChange: (e) => (0, x.y)({ onlyShowPreviewAppCollections: e }),
                                 children: 'Preview unpublished application collections'
@@ -1204,7 +1204,7 @@ function ei() {
                         }),
                         (0, i.jsx)(m.zxk, {
                             onClick: () => {
-                                '' === n ? g.Z.setChangelogOverride(null) : g.Z.setChangelogOverride(n);
+                                '' === n ? h.Z.setChangelogOverride(null) : h.Z.setChangelogOverride(n);
                             },
                             disabled: t === n,
                             children: 'Update Changelog'

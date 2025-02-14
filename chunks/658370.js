@@ -10,8 +10,8 @@ var s = n(120356),
     d = n(639119),
     u = n(404615),
     m = n(743612),
-    h = n(409100),
-    g = n(474936),
+    g = n(409100),
+    h = n(474936),
     x = n(388032),
     _ = n(510040);
 let p = (e) => {
@@ -44,9 +44,9 @@ let p = (e) => {
                 description: f
             }),
             N &&
-                (0, i.jsx)(h.Z, {
+                (0, i.jsx)(g.Z, {
                     className: E,
-                    subscriptionTier: g.Si.TIER_2,
+                    subscriptionTier: h.Si.TIER_2,
                     buttonText: O,
                     color: l.zxk.Colors.GREEN,
                     look: l.zxk.Looks.FILLED

@@ -9,39 +9,39 @@ var i = n(200651),
     d = n(410030),
     u = n(70097),
     m = n(626135),
-    h = n(526167),
-    g = n(831964),
+    g = n(526167),
+    h = n(831964),
     x = n(981631),
     _ = n(869783),
     p = n(388032),
     E = n(324119);
 let C = (e) => {
         let { name: t, title: n, description: r, descriptionCta: p, previewImage: C, videoUrl: f, shouldLoadVideo: T, index: N, isCompact: S, isReducedMotion: I, onClick: b } = e,
-            v = (0, h.rO)(),
+            v = (0, g.rO)(),
             j = s.useRef(null),
             A = s.useRef(0),
             O = (function (e) {
                 let t;
                 switch (e) {
-                    case g.dm.EMOJIS:
+                    case h.dm.EMOJIS:
                         t = E.emojisBackground;
                         break;
-                    case g.dm.REFERRAL_PROGRAM:
+                    case h.dm.REFERRAL_PROGRAM:
                         t = E.referralProgramBackground;
                         break;
-                    case g.dm.NO_LIMITS:
+                    case h.dm.NO_LIMITS:
                         t = E.noLimitsBackground;
                         break;
-                    case g.dm.NEW_APP_STYLES:
+                    case h.dm.NEW_APP_STYLES:
                         t = E.newStylesBackground;
                         break;
-                    case g.dm.YOUR_SPACE:
+                    case h.dm.YOUR_SPACE:
                         t = E.yourSpaceBackground;
                         break;
-                    case g.dm.SERVER_PROFILES:
+                    case h.dm.SERVER_PROFILES:
                         t = E.serverProfilesBackground;
                         break;
-                    case g.dm.SHOW_YOUR_STYLE:
+                    case h.dm.SHOW_YOUR_STYLE:
                         t = E.yourStyleBackground;
                 }
                 return t;
@@ -144,8 +144,8 @@ let C = (e) => {
     },
     f = s.memo(function (e) {
         let { className: t, shouldLoadVideo: n, isBestOfNitro: s = !1, isReducedMotion: r } = e,
-            a = Object.values((0, g.ZP)(s)),
-            o = s ? Object.values((0, g.__)()) : null;
+            a = Object.values((0, h.ZP)(s)),
+            o = s ? Object.values((0, h.__)()) : null;
         return (0, i.jsx)(i.Fragment, {
             children: (0, i.jsxs)('div', {
                 className: l()(E.boxBackdrop, t),

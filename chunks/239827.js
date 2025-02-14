@@ -7,22 +7,22 @@ var i = n(200651),
     o = n(388032),
     c = n(244955);
 let d = s.forwardRef(function (e, t) {
-    let { currentPageIndex: n, numPages: s, onChangePage: r, children: d, className: u, showPageCount: m = !0, ...h } = e,
-        g = n <= 0,
+    let { currentPageIndex: n, numPages: s, onChangePage: r, children: d, className: u, showPageCount: m = !0, ...g } = e,
+        h = n <= 0,
         x = n >= s - 1;
     return (0, i.jsxs)('div', {
         className: l()(c.__invalid_paginator, u),
         ref: t,
-        ...h,
+        ...g,
         children: [
             d,
             (0, i.jsxs)('div', {
                 className: c.pageActions,
                 children: [
                     (0, i.jsx)(a.P3F, {
-                        className: l()(c.pageButtonPrev, { [c.disabled]: g }),
-                        tabIndex: g ? -1 : 0,
-                        onClick: g ? void 0 : () => r(n - 1),
+                        className: l()(c.pageButtonPrev, { [c.disabled]: h }),
+                        tabIndex: h ? -1 : 0,
+                        onClick: h ? void 0 : () => r(n - 1),
                         children: (0, i.jsx)(a.V7D, {
                             size: 'md',
                             color: 'currentColor',

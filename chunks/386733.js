@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(906732),
     u = n(518950),
     m = n(598077),
-    h = n(626135),
-    g = n(63063),
+    g = n(626135),
+    h = n(63063),
     x = n(281494),
     _ = n(276444),
     p = n(520540),
@@ -136,7 +136,7 @@ let v = (e) => {
             e === x.Fe.REDEEMED && B.redeemed++, e === x.Fe.CONVERTED && (B.redeemed++, B.converted++);
         });
         let M = B.sent === E.Q,
-            w = g.Z.getArticleURL(N.BhN.REFERRAL_PROGRAM),
+            w = h.Z.getArticleURL(N.BhN.REFERRAL_PROGRAM),
             { analyticsLocations: V } = (0, d.ZP)(c.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
             U = s.useRef(null),
             G = (B.sent / E.Q) * 100,
@@ -213,7 +213,7 @@ let v = (e) => {
                                             className: I.expandedProgressBarSelectFriendsCTA,
                                             color: o.Ttl.CUSTOM,
                                             onClick: () => {
-                                                h.default.track(N.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: V }),
+                                                g.default.track(N.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: V }),
                                                     (0, o.ZDy)(async () => {
                                                         let { default: e } = await n.e('47435').then(n.bind(n, 204387));
                                                         return (t) =>

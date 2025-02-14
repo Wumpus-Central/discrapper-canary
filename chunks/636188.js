@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(2052),
     u = n(493773),
     m = n(100527),
-    h = n(906732),
-    g = n(70097),
+    g = n(906732),
+    h = n(70097),
     x = n(142497),
     _ = n(810788),
     p = n(626135),
@@ -95,10 +95,10 @@ function R(e) {
 function P(e) {
     let { option: t, source: s, selected: r = !1, onSelectOption: u, isAnimatedImage: E, isVideo: C, hotspotLocation: T, ...N } = e,
         I = (0, d.O)(),
-        { analyticsLocations: b } = (0, h.ZP)(m.Z.VIDEO_BACKGROUND_IMAGE_OPTION),
+        { analyticsLocations: b } = (0, g.ZP)(m.Z.VIDEO_BACKGROUND_IMAGE_OPTION),
         O = (0, a.e7)([_.Z], () => null != T && _.Z.hasHotspot(T)),
         P = C
-            ? (0, i.jsx)(g.Z, {
+            ? (0, i.jsx)(h.Z, {
                   className: A.backgroundImageOption,
                   src: s,
                   loop: !0,
@@ -220,7 +220,7 @@ function y(e) {
 function Z(e) {
     let { onClick: t } = e,
         n = (0, d.O)(),
-        { analyticsLocations: s } = (0, h.ZP)(m.Z.VIDEO_BACKGROUND_CUSTOM_UPSELL);
+        { analyticsLocations: s } = (0, g.ZP)(m.Z.VIDEO_BACKGROUND_CUSTOM_UPSELL);
     return (
         (0, u.ZP)(() => {
             p.default.track(S.rMx.PREMIUM_UPSELL_VIEWED, {
@@ -273,10 +273,10 @@ function k(e) {
 function L(e) {
     let { canUseCustomBackgrounds: t, customBackgroundOptions: n, selectedOption: r, onSelectOption: l, onUpsellClick: a, onAddBackgroundImage: c, smallerOptions: d } = e,
         u = s.useMemo(() => n.sort((e, t) => (null == e.last_used || null == t.last_used ? C.default.compare(t.id, e.id) : new Date(t.last_used).getTime() - new Date(e.last_used).getTime())), [n]),
-        g = u.length >= 25,
-        { analyticsLocations: x } = (0, h.ZP)(m.Z.VIDEO_BACKGROUND_OPTIONS),
+        h = u.length >= 25,
+        { analyticsLocations: x } = (0, g.ZP)(m.Z.VIDEO_BACKGROUND_OPTIONS),
         _ = Object.values((0, T.Z)()).sort((e, t) => N.E1[e.id] - N.E1[t.id]);
-    return (0, i.jsx)(h.Gt, {
+    return (0, i.jsx)(g.Gt, {
         value: x,
         children: (0, i.jsxs)('div', {
             className: d ? A.backgroundOptionsSmall : A.backgroundOptionsLarge,
@@ -298,7 +298,7 @@ function L(e) {
                 t
                     ? (0, i.jsx)(k, {
                           onAddBackgroundImage: c,
-                          disabled: g
+                          disabled: h
                       })
                     : (0, i.jsx)(Z, { onClick: a }),
                 u.map((e) =>

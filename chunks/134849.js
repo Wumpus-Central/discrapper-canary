@@ -12,8 +12,8 @@ var i = n(200651),
     _ = n(371467),
     p = n(981631),
     f = n(388032),
-    g = n(348094);
-let m = [];
+    m = n(348094);
+let g = [];
 function v(e) {
     return e.notification.id;
 }
@@ -31,19 +31,19 @@ function E(e, t, n, l) {
         e
     );
 }
-function I(e) {
+function x(e) {
     return (0, i.jsx)('div', {
-        className: g.container,
+        className: m.container,
         children: e
     });
 }
-let x = (e) => l.useState(() => new h.AS(e))[0],
+let I = (e) => l.useState(() => new h.AS(e))[0],
     C = l.memo(function (e) {
         let { locked: t } = e,
             n = (0, r.e7)(
                 [a.Z, _.Z],
                 () => {
-                    if (a.Z.getNotificationPositionMode() === p._vf.DISABLED) return m;
+                    if (a.Z.getNotificationPositionMode() === p._vf.DISABLED) return g;
                     let e = [],
                         n = 0;
                     for (let i of _.Z.getNotifications()) {
@@ -61,7 +61,7 @@ let x = (e) => l.useState(() => new h.AS(e))[0],
                 [t],
                 d.E6
             ),
-            c = x(t);
+            c = I(t);
         return (l.useLayoutEffect(() => c.updateState(n, t)), l.useLayoutEffect(() => (c.initialize((0, u.i)()), () => c.cleanUp()), [c]), 0 !== n.length || t)
             ? (0, i.jsx)(h.S4.Provider, {
                   value: c,
@@ -69,7 +69,7 @@ let x = (e) => l.useState(() => new h.AS(e))[0],
                       items: n,
                       renderItem: E,
                       getItemKey: v,
-                      wrapChildren: I
+                      wrapChildren: x
                   })
               })
             : t

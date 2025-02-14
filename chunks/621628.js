@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(481060),
     u = n(600164),
     m = n(118012),
-    h = n(675478),
-    g = n(581883),
+    g = n(675478),
+    h = n(581883),
     x = n(883904),
     _ = n(68985),
     p = n(211644),
@@ -75,9 +75,9 @@ function S() {
         [E, T] = s.useState(''),
         S =
             null !==
-                (e = (0, a.e7)([g.Z], () => {
+                (e = (0, a.e7)([h.Z], () => {
                     var e;
-                    return null === (e = g.Z.settings.userContent) || void 0 === e ? void 0 : e.dismissedContents;
+                    return null === (e = h.Z.settings.userContent) || void 0 === e ? void 0 : e.dismissedContents;
                 })) && void 0 !== e
                 ? e
                 : new Uint8Array(),
@@ -160,11 +160,11 @@ function S() {
                         className: C.buttonsContainer,
                         children: [
                             (0, i.jsx)(d.zxk, {
-                                onClick: h.sr,
+                                onClick: g.sr,
                                 children: 'Clear All Dismissed Contents'
                             }),
                             (0, i.jsx)(d.zxk, {
-                                onClick: h.bE,
+                                onClick: g.bE,
                                 children: 'Check All Dismissed Contents'
                             })
                         ]

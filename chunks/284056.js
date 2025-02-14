@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => N,
-    _: () => h._
+    _: () => g._
 }),
     n(47120);
 var i = n(200651),
@@ -13,8 +13,8 @@ var i = n(200651),
     d = n(481060),
     u = n(846027),
     m = n(393238),
-    h = n(794347),
-    g = n(131951),
+    g = n(794347),
+    h = n(131951),
     x = n(19780),
     _ = n(626135),
     p = n(981631),
@@ -38,7 +38,7 @@ class T extends s.PureComponent {
         this._initTimeout.start(1000, this.setupVoiceActivity);
     }
     componentWillUnmount() {
-        this._initTimeout.stop(), this._silenceTimeout.stop(), this._micTestStop(), g.Z.getMediaEngine().removeListener(o.aB.VoiceActivity, this.handleVoiceActivity);
+        this._initTimeout.stop(), this._silenceTimeout.stop(), this._micTestStop(), h.Z.getMediaEngine().removeListener(o.aB.VoiceActivity, this.handleVoiceActivity);
     }
     _micTestStart() {
         let { isVoiceConnected: e, inputDeviceName: t, inputVolume: n, outputDeviceName: i, outputVolume: s, inputMode: r, vadAutoThreshold: l, vadThreshold: a, location: o, isDeafened: c } = this.props,
@@ -85,9 +85,9 @@ class T extends s.PureComponent {
     }
     render() {
         let { isVoiceConnected: e, title: t, description: n, notchBackground: s, buttonTest: r, buttonStop: l, buttonClassName: a, buttonColor: o, isDeafened: c, buttonMinWidth: u, measureButtonRef: m } = this.props,
-            { isMicTesting: g, volume: x } = this.state,
-            _ = e && !g ? E.intl.string(E.t['9viE2N']) : null;
-        g && e && !c && this._micTestStop();
+            { isMicTesting: h, volume: x } = this.state,
+            _ = e && !h ? E.intl.string(E.t['9viE2N']) : null;
+        h && e && !c && this._micTestStop();
         let p = l.length >= r.length ? l : r;
         return (0, i.jsxs)('div', {
             className: C.container,
@@ -134,12 +134,12 @@ class T extends s.PureComponent {
                                     className: a,
                                     color: o,
                                     style: null != u ? { minWidth: u } : { visibility: 'hidden' },
-                                    children: g ? l : r
+                                    children: h ? l : r
                                 });
                             }
                         }),
-                        (0, i.jsx)(h.Z, {
-                            progress: g ? x + 100 : 0,
+                        (0, i.jsx)(g.Z, {
+                            progress: h ? x + 100 : 0,
                             notchBackground: s,
                             children: this.renderCaption()
                         })
@@ -161,7 +161,7 @@ class T extends s.PureComponent {
                 didDeafenUser: !1
             }),
             f(this, 'setupVoiceActivity', () => {
-                g.Z.getMediaEngine().on(o.aB.VoiceActivity, this.handleVoiceActivity);
+                h.Z.getMediaEngine().on(o.aB.VoiceActivity, this.handleVoiceActivity);
             }),
             f(this, 'handleVoiceActivity', (e) => {
                 let { isMicTesting: t } = this.state;
@@ -193,31 +193,31 @@ function N(e) {
             inputVolume: c,
             outputVolume: d,
             inputMode: u,
-            isDeafened: h
-        } = (0, a.cj)([g.Z], () => {
-            let e = g.Z.getInputDeviceId(),
-                t = g.Z.getInputDevices(),
+            isDeafened: g
+        } = (0, a.cj)([h.Z], () => {
+            let e = h.Z.getInputDeviceId(),
+                t = h.Z.getInputDevices(),
                 n = l().find(t, (t) => {
                     let { id: n } = t;
                     return n === e;
                 }),
-                i = g.Z.getOutputDeviceId(),
-                s = g.Z.getOutputDevices(),
+                i = h.Z.getOutputDeviceId(),
+                s = h.Z.getOutputDevices(),
                 r = l().find(s, (e) => {
                     let { id: t } = e;
                     return t === i;
                 }),
-                a = g.Z.getModeOptions(),
-                o = g.Z.getInputVolume(),
-                c = g.Z.getOutputVolume();
+                a = h.Z.getModeOptions(),
+                o = h.Z.getInputVolume(),
+                c = h.Z.getOutputVolume();
             return {
                 inputDevice: n,
                 outputDevice: r,
                 modeOptions: a,
                 inputVolume: o,
                 outputVolume: c,
-                inputMode: g.Z.getMode(),
-                isDeafened: g.Z.isSelfDeaf()
+                inputMode: h.Z.getMode(),
+                isDeafened: h.Z.isSelfDeaf()
             };
         }),
         _ = (0, a.e7)([x.Z], () => x.Z.isConnected()),
@@ -227,7 +227,7 @@ function N(e) {
         inputVolume: c,
         outputVolume: d,
         inputMode: u,
-        isDeafened: h,
+        isDeafened: g,
         vadThreshold: o.threshold,
         vadAutoThreshold: o.autoThreshold,
         inputDeviceName: null !== (t = null == s ? void 0 : s.name) && void 0 !== t ? t : '',

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => ex,
-    u: () => eg
+    u: () => eh
 });
 var i,
     s = n(200651);
@@ -13,8 +13,8 @@ var r = n(399606),
     d = n(975298),
     u = n(779618),
     m = n(832149),
-    h = n(300284),
-    g = n(703656),
+    g = n(300284),
+    h = n(703656),
     x = n(547972),
     _ = n(131951),
     p = n(594174),
@@ -67,15 +67,15 @@ var r = n(399606),
     ed = n(698173),
     eu = n(926262),
     em = n(371435),
-    eh = n(83663),
-    eg = (((i = {}).CLIENT_THEMES = 'clientThemes'), (i.CLIPS = 'clips'), (i.EARLY_ACCESS = 'earlyAccess'), (i.ENTRANCE_SOUNDS = 'entranceSounds'), (i.PROFILES = 'profiles'), (i.REMIXING = 'remixing'), (i.SERVER_BOOSTS = 'serverBoosts'), (i.GREY_SERVER_BOOSTS = 'greyServerBoosts'), (i.SPECIAL_MEMBER_PRICING = 'specialMemberPricing'), (i.SPECIAL_MEMBER_PRICING_SEE_ALL_VARIANT = 'specialMemberPricingSeeAllVariant'), (i.SPECIAL_SHOP_PERKS = 'specialShopPerks'), (i.UNLIMITED_SUPER_REACTIONS = 'unlimitedSuperReactions'), (i.SUPER_REACTIONS = 'superReactions'), (i.UPCOMING_DROP_UNTIMED = 'upcomingDropUntimed'), (i.CUSTOM_APP_ICONS = 'customAppIcons'), (i.MORE_EMOJI_POWER = 'moreEmojiPower'), (i.CUSTOM_SOUNDS_EVERYWHERE = 'customSoundsEverywhere'), (i.SPECIAL_STICKER_ACCESS = 'specialStickerAccess'), (i.LARGE_UPLOADS = 'largeUploads'), (i.HD_VIDEO = 'hdVideo'), (i.BADGE = 'badge'), (i.GREY_BADGE = 'greyBadge'), (i.ENTRANCE_SOUNDS_SEE_ALL_VARIATION = 'entranceSoundsSeeAllVariation'), (i.EARLY_ACCESS_SEE_ALL_VARIATION = 'earlyAccessSeeAllVariant'), (i.FREE_BOOST = 'freeBoost'), (i.TENURE_REWARD_COLLECTIBLE = 'tenureRewardCollectible'), (i.REFERRAL_PROGRAM = 'referralProgram'), (i.NEW_APP_STYLES_UPDATE_JUNE_2024 = 'newAppStylesUpdateJune2024'), (i.SERVER_PROFILES = 'serverProfiles'), (i.SHY_PROJECT = 'shyProject'), (i.TENURE_BADGE = 'tenureBadge'), i);
+    eg = n(83663),
+    eh = (((i = {}).CLIENT_THEMES = 'clientThemes'), (i.CLIPS = 'clips'), (i.EARLY_ACCESS = 'earlyAccess'), (i.ENTRANCE_SOUNDS = 'entranceSounds'), (i.PROFILES = 'profiles'), (i.REMIXING = 'remixing'), (i.SERVER_BOOSTS = 'serverBoosts'), (i.GREY_SERVER_BOOSTS = 'greyServerBoosts'), (i.SPECIAL_MEMBER_PRICING = 'specialMemberPricing'), (i.SPECIAL_MEMBER_PRICING_SEE_ALL_VARIANT = 'specialMemberPricingSeeAllVariant'), (i.SPECIAL_SHOP_PERKS = 'specialShopPerks'), (i.UNLIMITED_SUPER_REACTIONS = 'unlimitedSuperReactions'), (i.SUPER_REACTIONS = 'superReactions'), (i.UPCOMING_DROP_UNTIMED = 'upcomingDropUntimed'), (i.CUSTOM_APP_ICONS = 'customAppIcons'), (i.MORE_EMOJI_POWER = 'moreEmojiPower'), (i.CUSTOM_SOUNDS_EVERYWHERE = 'customSoundsEverywhere'), (i.SPECIAL_STICKER_ACCESS = 'specialStickerAccess'), (i.LARGE_UPLOADS = 'largeUploads'), (i.HD_VIDEO = 'hdVideo'), (i.BADGE = 'badge'), (i.GREY_BADGE = 'greyBadge'), (i.ENTRANCE_SOUNDS_SEE_ALL_VARIATION = 'entranceSoundsSeeAllVariation'), (i.EARLY_ACCESS_SEE_ALL_VARIATION = 'earlyAccessSeeAllVariant'), (i.FREE_BOOST = 'freeBoost'), (i.TENURE_REWARD_COLLECTIBLE = 'tenureRewardCollectible'), (i.REFERRAL_PROGRAM = 'referralProgram'), (i.NEW_APP_STYLES_UPDATE_JUNE_2024 = 'newAppStylesUpdateJune2024'), (i.SERVER_PROFILES = 'serverProfiles'), (i.SHY_PROJECT = 'shyProject'), (i.TENURE_BADGE = 'tenureBadge'), i);
 let ex = () => {
     let { analyticsLocations: e } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_PERK_CARD),
         t = (0, a.ZP)(),
         n = (0, C.BU)(D.Uq / 1024, { useKibibytes: !0 }),
         i = (0, r.e7)([E.ZP], () => E.ZP.getPremiumTypeSubscription()),
-        eg = null != i ? T.ZP.getPremiumPlanItem(i) : null,
-        ex = (null != eg ? T.ZP.getSkuIdForPlan(eg.planId) : null) === D.Si.TIER_2,
+        eh = null != i ? T.ZP.getPremiumPlanItem(i) : null,
+        ex = (null != eh ? T.ZP.getSkuIdForPlan(eh.planId) : null) === D.Si.TIER_2,
         e_ = p.default.getCurrentUser(),
         ep = (0, T.I5)(e_, D.p9.TIER_2),
         eE = (0, T.I5)(e_, D.p9.TIER_0),
@@ -88,7 +88,7 @@ let ex = () => {
         eb = (0, S.Kb)(y.qY),
         { fractionalState: ev } = (0, d.Z)(),
         ej = ev === D.a$.FP_ONLY,
-        eA = (0, h.Z)({
+        eA = (0, g.Z)({
             scrollPosition: k.Y_.TRY_IT_OUT,
             analyticsLocations: e
         }),
@@ -99,7 +99,7 @@ let ex = () => {
             });
         },
         eR = () => {
-            (0, g.uL)(Z.Z5c.COLLECTIBLES_SHOP);
+            (0, h.uL)(Z.Z5c.COLLECTIBLES_SHOP);
         },
         eP = () => {
             l.Z.open(Z.oAB.APPEARANCE, null, { scrollPosition: k.h1.CUSTOM_APP_ICONS });
@@ -362,7 +362,7 @@ let ex = () => {
                 name: 'greyBadge',
                 title: B.intl.string(B.t.dcFfSE),
                 subtitle: B.intl.string(B.t['37MFFh']),
-                perkImage: eh.Z,
+                perkImage: eg.Z,
                 description: B.intl.string(B.t.T1IS4u),
                 imageOverlayText: B.intl.string(B.t.lcYttb)
             },

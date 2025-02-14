@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(780384),
     u = n(481060),
     m = n(570140),
-    h = n(457330),
-    g = n(497321),
+    g = n(457330),
+    h = n(497321),
     x = n(23551),
     _ = n(468026),
     p = n(410030),
@@ -61,7 +61,7 @@ let F = (e) => {
             (s = (0, i.jsx)(u.zxk, {
                 size: u.PhG.SMALL,
                 onClick: function () {
-                    h.Z.joinServer(r.id, () => {});
+                    g.Z.joinServer(r.id, () => {});
                 },
                 disabled: l,
                 children: (0, i.jsx)('span', { children: l ? V.intl.string(V.t.RXvQQk) : V.intl.string(V.t.XpeFYm) })
@@ -114,7 +114,7 @@ function H(e) {
     let n,
         r,
         l,
-        { onDisconnect: a, account: o, theme: m, locale: g } = e,
+        { onDisconnect: a, account: o, theme: m, locale: h } = e,
         [x, p] = s.useState(o.friendSync),
         [S, I] = s.useState(o.visibility),
         [v, j] = s.useState(o.metadataVisibility),
@@ -139,7 +139,7 @@ function H(e) {
         s.useEffect(() => {
             if (!1 === o.verified) return;
             let { inProgressVisibility: e, inProgressMetadataVisibility: t } = J.current;
-            null != e && (I(e), h.Z.setVisibility(o.type, o.id, e), D(null)), null != t && (j(t), h.Z.setMetadataVisibility(o.type, o.id, t), G(null));
+            null != e && (I(e), g.Z.setVisibility(o.type, o.id, e), D(null)), null != t && (j(t), g.Z.setMetadataVisibility(o.type, o.id, t), G(null));
         }, [o]);
     function Q() {
         let e = E.Z.get(o.type),
@@ -260,7 +260,7 @@ function H(e) {
                 var t;
                 let n = null !== (t = e.metadata) && void 0 !== t ? t : {},
                     s = null,
-                    r = (0, f.FI)(n[M.PC.CREATED_AT], g);
+                    r = (0, f.FI)(n[M.PC.CREATED_AT], h);
                 switch (e.type) {
                     case B.ABu.REDDIT:
                         s = (0, N.oP)(n, U.metadataItem);
@@ -338,7 +338,7 @@ function H(e) {
                                     ? void 0
                                     : () => {
                                           z(!0),
-                                              h.Z.refresh(e.type, e.id).finally(() => {
+                                              g.Z.refresh(e.type, e.id).finally(() => {
                                                   setTimeout(() => {
                                                       Y.push(e.id), W(Y), z(!1);
                                                   }, 2000);
@@ -361,7 +361,7 @@ function H(e) {
                     hideBorder: !0,
                     value: x,
                     onChange: function (e) {
-                        p(e), h.Z.setFriendSync(o.type, o.id, e);
+                        p(e), g.Z.setFriendSync(o.type, o.id, e);
                     },
                     children: (0, i.jsx)(u.Text, {
                         variant: 'text-sm/semibold',
@@ -374,7 +374,7 @@ function H(e) {
                     hideBorder: !0,
                     value: A,
                     onChange: function (e) {
-                        O(e), h.Z.setShowActivity(o.type, o.id, e);
+                        O(e), g.Z.setShowActivity(o.type, o.id, e);
                     },
                     children: (0, i.jsx)(u.Text, {
                         variant: 'text-sm/semibold',
@@ -397,7 +397,7 @@ function H(e) {
                                 });
                             return;
                         }
-                        j(n), h.Z.setMetadataVisibility(o.type, o.id, n);
+                        j(n), g.Z.setMetadataVisibility(o.type, o.id, n);
                     },
                     disabled: 1 !== S || null == o.metadata,
                     children: (0, i.jsx)(u.Text, {
@@ -425,7 +425,7 @@ function H(e) {
                                         });
                                     return;
                                 }
-                                I(n), h.Z.setVisibility(o.type, o.id, n);
+                                I(n), g.Z.setVisibility(o.type, o.id, n);
                             },
                             children: (0, i.jsx)(u.Text, {
                                 variant: 'text-sm/semibold',
@@ -600,7 +600,7 @@ function K(e) {
                                 onDisconnect: () =>
                                     (function (e) {
                                         let { type: t, id: n } = e;
-                                        h.Z.disconnect(t, n);
+                                        g.Z.disconnect(t, n);
                                     })(e)
                             },
                             t
@@ -620,10 +620,10 @@ let q = () => {
     (0, a.e7)([A.ZP], () => A.ZP.getFlattenedGuildIds());
     let l = (0, a.e7)([D.default], () => D.default.locale);
     return (s.useEffect(() => {
-        h.Z.fetch();
+        g.Z.fetch();
     }, []),
     e)
-        ? (0, i.jsx)(g.Z, {})
+        ? (0, i.jsx)(h.Z, {})
         : (0, i.jsxs)(u.hjN, {
               className: U.__invalid_connections,
               tag: u.RB0.H1,

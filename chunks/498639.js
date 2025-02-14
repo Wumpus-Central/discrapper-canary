@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(72924),
     u = n(100527),
     m = n(906732),
-    h = n(228624),
-    g = n(883904),
+    g = n(228624),
+    h = n(883904),
     x = n(678558),
     _ = n(730647),
     p = n(584825),
@@ -77,7 +77,7 @@ let D = function () {
         [en, ei] = s.useState(''),
         [es, er] = s.useState(A.lds),
         [el, ea] = s.useState(A.lds),
-        eo = (0, h.hv)('PaymentFlowModalTestPage');
+        eo = (0, g.hv)('PaymentFlowModalTestPage');
     return (0, i.jsx)(m.Gt, {
         value: F,
         children: (0, i.jsxs)(a.hjN, {
@@ -446,7 +446,7 @@ let D = function () {
                 (0, i.jsx)(a.xJW, {
                     className: R.formItem,
                     children: (0, i.jsx)(a.zxk, {
-                        onClick: () => (0, g.EG)(),
+                        onClick: () => (0, h.EG)(),
                         children: 'Reset DismissibleContentFrameworkStore'
                     })
                 })

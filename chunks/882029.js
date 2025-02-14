@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => h });
 var i,
     s = n(442837),
     r = n(570140),
@@ -21,7 +21,7 @@ function d(e, t, n) {
 }
 let u = { unlockedAchievements: {} },
     m = { ...u };
-class h extends (i = s.ZP.PersistedStore) {
+class g extends (i = s.ZP.PersistedStore) {
     initialize(e) {
         this.waitFor(l.default, c.ZP);
         let t = null != e ? e : { ...u };
@@ -38,8 +38,8 @@ class h extends (i = s.ZP.PersistedStore) {
         return null !== (t = m.unlockedAchievements[e]) && void 0 !== t ? t : null;
     }
 }
-d(h, 'displayName', 'PoggermodeAchievementStore'), d(h, 'persistKey', 'PoggermodeAchievementStore');
-let g = new h(r.Z, {
+d(g, 'displayName', 'PoggermodeAchievementStore'), d(g, 'persistKey', 'PoggermodeAchievementStore');
+let h = new g(r.Z, {
     POGGERMODE_ACHIEVEMENT_UNLOCK: function (e) {
         let { achievementId: t } = e;
         if (!o.Z.isEnabled()) return !1;

@@ -11,13 +11,13 @@ var c = n(630759),
 n(921157);
 var u = n(171368),
     m = n(594174),
-    h = n(51144),
-    g = n(388032),
+    g = n(51144),
+    h = n(388032),
     x = n(695978);
 function _(e) {
     let { userId: t, count: n } = e,
         d = (0, r.e7)([m.default], () => m.default.getUser(t)),
-        _ = h.ZP.getFormattedName(d),
+        _ = g.ZP.getFormattedName(d),
         p = s.useCallback(() => {
             (0, c.Zn)(t);
         }, [t]),
@@ -50,7 +50,7 @@ function _(e) {
                         (0, i.jsx)(l.Text, {
                             variant: 'text-md/medium',
                             color: 'header-secondary',
-                            children: g.intl.format(g.t['/MBjYG'], { count: n })
+                            children: h.intl.format(h.t['/MBjYG'], { count: n })
                         })
                     ]
                 }),
@@ -78,7 +78,7 @@ function p(e) {
                     (0, i.jsx)(l.Text, {
                         variant: 'text-sm/semibold',
                         color: 'interactive-active',
-                        children: g.intl.format(g.t.N4qBBA, { index: a + 1 })
+                        children: h.intl.format(h.t.N4qBBA, { index: a + 1 })
                     }),
                     (0, i.jsx)(l.Text, {
                         variant: 'text-sm/medium',

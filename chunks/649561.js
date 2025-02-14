@@ -5,25 +5,25 @@ var i = n(200651),
     o = n.n(a),
     s = n(392711),
     d = n.n(s),
-    c = n(818405),
-    l = n(587158),
+    l = n(818405),
+    c = n(587158),
     u = n(286379),
     _ = n(481060),
     f = n(13245),
     p = n(490029),
     h = n(797614),
     v = n(593481),
-    g = n(703656),
-    m = n(254761),
-    E = n(70956),
-    x = n(960048),
-    Z = n(145597),
+    m = n(703656),
+    x = n(254761),
+    g = n(70956),
+    E = n(960048),
+    C = n(145597),
     b = n(692546),
-    y = n(518084),
-    C = n(987650),
+    Z = n(518084),
+    y = n(987650),
     I = n(981631),
     k = n(388032),
-    A = n(912469);
+    O = n(912469);
 function L(e, t, n) {
     return (
         t in e
@@ -37,10 +37,10 @@ function L(e, t, n) {
         e
     );
 }
-let w = 10 * E.Z.Millis.SECOND;
+let A = 10 * g.Z.Millis.SECOND;
 function T() {
-    let e = (0, Z.QF)(),
-        t = (0, Z.Ht)();
+    let e = (0, C.QF)(),
+        t = (0, C.Ht)();
     (0, p.lW)({
         type: I.BmY.DISPATCH,
         pid: e,
@@ -56,7 +56,7 @@ function T() {
 }
 class N extends r.PureComponent {
     componentDidMount() {
-        (this.notificationTimer = setTimeout(this.hideNotification, w)), f.Z.track(I.rMx.NOTIFICATION_VIEWED, { notif_type: C.n0.OverlayCrashed });
+        (this.notificationTimer = setTimeout(this.hideNotification, A)), f.Z.track(I.rMx.NOTIFICATION_VIEWED, { notif_type: y.n0.OverlayCrashed });
     }
     componentWillUnmount() {
         let { notificationTimer: e } = this;
@@ -74,15 +74,15 @@ class N extends r.PureComponent {
                       theme: I.BRd.DARK,
                       children: (r) =>
                           (0, i.jsxs)(_.P3F, {
-                              className: o()(r, A.container),
+                              className: o()(r, O.container),
                               onClick: (e) => e.stopPropagation(),
                               children: [
                                   (0, i.jsx)(v.ZP, {
                                       expand: !0,
-                                      icon: (0, i.jsx)(m.Z, {
+                                      icon: (0, i.jsx)(x.Z, {
                                           width: 40,
                                           height: 40,
-                                          className: A.notificationIcon
+                                          className: O.notificationIcon
                                       }),
                                       title: k.intl.string(k.t.U38qZm),
                                       confirmText: k.intl.string(k.t.TzAl1d),
@@ -91,14 +91,14 @@ class N extends r.PureComponent {
                                       onDismissClick: this.hideNotification
                                   }),
                                   n && null != e
-                                      ? (0, i.jsxs)(y.ZP, {
-                                            className: A.stackTrace,
+                                      ? (0, i.jsxs)(Z.ZP, {
+                                            className: O.stackTrace,
                                             children: [
-                                                (0, i.jsx)(y.ZP.Bar, { children: 'Error Details' }),
-                                                (0, i.jsx)(y.ZP.Content, {
-                                                    className: A.stackTraceCode,
+                                                (0, i.jsx)(Z.ZP.Bar, { children: 'Error Details' }),
+                                                (0, i.jsx)(Z.ZP.Content, {
+                                                    className: O.stackTraceCode,
                                                     children: (0, i.jsx)('code', {
-                                                        className: A.code,
+                                                        className: O.code,
                                                         children: (0, i.jsx)('pre', { children: t.stack })
                                                     })
                                                 })
@@ -128,7 +128,7 @@ class N extends r.PureComponent {
                     f.Z.track(
                         I.rMx.NOTIFICATION_CLICKED,
                         {
-                            notif_type: C.n0.OverlayCrashed,
+                            notif_type: y.n0.OverlayCrashed,
                             action_type: 'reload'
                         },
                         !0
@@ -143,12 +143,12 @@ class N extends r.PureComponent {
             });
     }
 }
-let O = d().throttle(
+let w = d().throttle(
     () => {
         h.Z.increment(
             {
                 name: u.V.APP_CRASHED,
-                tags: ['reason:'.concat(c.v.UNHANDLED_JS_ERROR), 'level:'.concat(l.c.FATAL)]
+                tags: ['reason:'.concat(l.v.UNHANDLED_JS_ERROR), 'level:'.concat(c.c.FATAL)]
             },
             !0
         );
@@ -158,16 +158,16 @@ let O = d().throttle(
 );
 class S extends r.PureComponent {
     componentDidCatch(e, t) {
-        let n = (0, g.s1)().location;
+        let n = (0, m.s1)().location;
         this.setState({
             error: e,
             info: t
         });
-        let i = (0, Z.QF)(),
-            r = (0, Z.Ht)();
+        let i = (0, C.QF)(),
+            r = (0, C.Ht)();
         (0, p.lW)({
             type: I.BmY.DISPATCH,
-            pid: (0, Z.QF)(),
+            pid: (0, C.QF)(),
             token: r,
             payloads: [
                 {
@@ -183,7 +183,7 @@ class S extends r.PureComponent {
             ]
         }),
             setImmediate(() => window.addEventListener('click', T));
-        let a = x.Z.captureCrash(e, { extra: t });
+        let a = E.Z.captureCrash(e, { extra: t });
         f.Z.track(I.rMx.APP_CRASHED, {
             path: n.pathname,
             extra: t,
@@ -192,7 +192,7 @@ class S extends r.PureComponent {
             sentry_issue_id: a,
             error_level: 'fatal'
         }),
-            O();
+            w();
     }
     render() {
         let { children: e, className: t } = this.props,

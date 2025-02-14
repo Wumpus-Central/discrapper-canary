@@ -4,8 +4,8 @@ n(192379);
 var s = n(481060),
     l = n(13245),
     a = n(371651),
-    r = n(594174),
-    o = n(145597),
+    o = n(594174),
+    r = n(145597),
     d = n(312839),
     c = n(981631),
     u = n(987650),
@@ -41,8 +41,8 @@ function m(e) {
                 },
                 onNotificationClick: (e, t) => {
                     f('unlock'), l.Z.updateNotificationStatus(t);
-                    let d = a.default.isOverlayOOPEnabledForPid((0, o.QF)());
-                    if ((d ? l.Z.setInputLocked(!1, (0, o.QF)()) : l.Z.setInstanceLocked(!1), null == r.default.getCurrentUser())) return;
+                    let d = a.default.isOverlayOOPEnabledForPid((0, r.QF)());
+                    if ((d ? l.Z.setInputLocked(!1, (0, r.QF)()) : l.Z.setInstanceLocked(!1), null == o.default.getCurrentUser())) return;
                     let u = d ? { contextKey: s.u1M } : void 0;
                     (0, s.ZDy)(async () => {
                         let { default: e } = await Promise.all([n.e('93382'), n.e('79477'), n.e('8211')]).then(n.bind(n, 60594));
@@ -62,7 +62,7 @@ function m(e) {
         }
         case u.nc.GO_LIVE_NON_VOICE: {
             let { game: t } = e,
-                { trackView: r, trackClick: p } = (0, d.R)(u.n0.GoLiveNonVoiceNudge, { notif_type: u.n0.GoLiveNonVoiceNudge });
+                { trackView: o, trackClick: p } = (0, d.R)(u.n0.GoLiveNonVoiceNudge, { notif_type: u.n0.GoLiveNonVoiceNudge });
             return {
                 icon: n(847881),
                 title: null,
@@ -70,13 +70,13 @@ function m(e) {
                 hint: () => (0, i.jsx)(g, {}),
                 renderFooter: () => (0, i.jsx)(g, {}),
                 onNotificationShow: () => {
-                    r();
+                    o();
                 },
                 onNotificationClick: (e, t) => {
                     p('unlock'), l.Z.updateNotificationStatus(t);
-                    let r = a.default.isOverlayOOPEnabledForPid((0, o.QF)());
-                    r ? l.Z.setInputLocked(!1, (0, o.QF)()) : l.Z.setInstanceLocked(!1);
-                    let d = r ? { contextKey: s.u1M } : void 0;
+                    let o = a.default.isOverlayOOPEnabledForPid((0, r.QF)());
+                    o ? l.Z.setInputLocked(!1, (0, r.QF)()) : l.Z.setInstanceLocked(!1);
+                    let d = o ? { contextKey: s.u1M } : void 0;
                     (0, s.ZDy)(async () => {
                         let { default: e } = await Promise.all([n.e('93382'), n.e('79477'), n.e('8211')]).then(n.bind(n, 60594));
                         return (t) =>

@@ -9,8 +9,8 @@ var i,
     d = n(91192),
     u = n(442837),
     m = n(481060),
-    h = n(570140),
-    g = n(355467),
+    g = n(570140),
+    h = n(355467),
     x = n(827837),
     _ = n(821849),
     p = n(724757),
@@ -43,7 +43,7 @@ function P(e) {
     let { payments: t, locale: n, compactMode: i, numPages: l } = e,
         o = r.useRef(null),
         [c, u] = r.useState(0),
-        [h, x] = r.useState(null),
+        [g, x] = r.useState(null),
         _ = t.slice(10 * c, (c + 1) * 10);
     r.useEffect(() => {
         var e;
@@ -53,9 +53,9 @@ function P(e) {
             (e) => {
                 u(e);
                 let n = t[t.length - 1].id;
-                e >= l - 2 && h !== n && ((0, g.cQ)(10, n), x(n));
+                e >= l - 2 && g !== n && ((0, h.cQ)(10, n), x(n));
             },
-            [t, l, h]
+            [t, l, g]
         ),
         f = (0, p.Z)('billing-history', o);
     return (0, s.jsx)(d.bG, {
@@ -97,8 +97,8 @@ class D extends (i = r.PureComponent) {
         return Math.max(Math.ceil(this.props.payments.length / 10), 1);
     }
     componentDidMount() {
-        h.Z.wait(() => {
-            (0, x.N)(), (0, g.cQ)(30);
+        g.Z.wait(() => {
+            (0, x.N)(), (0, h.cQ)(30);
         });
     }
     renderPremiumExternalSubscription(e) {
@@ -207,7 +207,7 @@ function Z(e) {
     return (
         r.useEffect(() => {
             o() ||
-                h.Z.wait(() => {
+                g.Z.wait(() => {
                     l.forEach((e) => (0, _.GZ)(e, void 0, void 0, !0, void 0));
                 });
         }, [o, l]),

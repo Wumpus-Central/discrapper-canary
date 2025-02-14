@@ -3,8 +3,8 @@ var i = n(200651),
     s = n(192379),
     l = n(512722),
     a = n.n(l),
-    r = n(442837),
-    o = n(481060),
+    o = n(442837),
+    r = n(481060),
     d = n(493683),
     c = n(13245),
     u = n(99690),
@@ -23,9 +23,9 @@ var i = n(200651),
     N = n(158776),
     I = n(594174),
     _ = n(237997),
-    j = n(5192),
-    T = n(145597),
-    O = n(312839),
+    O = n(5192),
+    j = n(145597),
+    T = n(312839),
     k = n(981631),
     M = n(701488),
     b = n(987650),
@@ -34,7 +34,7 @@ var i = n(200651),
 function R(e) {
     let { game: t, trackClick: n, onDismissClick: l } = e,
         a = (0, h.q)(t.id),
-        d = (0, r.e7)([_.Z], () => _.Z.showInviteNotification),
+        d = (0, o.e7)([_.Z], () => _.Z.showInviteNotification),
         u = s.useCallback(
             (e) => {
                 e.stopPropagation(), n(d ? 'muted' : 'unmuted'), c.Z.setShowGameInviteNotification(!d);
@@ -53,7 +53,7 @@ function R(e) {
                         src: p,
                         size: 16
                     }),
-                    (0, i.jsx)(o.Text, {
+                    (0, i.jsx)(r.Text, {
                         className: w.gameInfo,
                         variant: 'text-sm/semibold',
                         color: 'header-primary',
@@ -64,31 +64,31 @@ function R(e) {
             (0, i.jsxs)('div', {
                 className: w.headerRight,
                 children: [
-                    (0, i.jsx)(o.zxk, {
-                        look: o.zxk.Looks.BLANK,
-                        size: o.zxk.Sizes.NONE,
+                    (0, i.jsx)(r.zxk, {
+                        look: r.zxk.Looks.BLANK,
+                        size: r.zxk.Sizes.NONE,
                         className: w.muteButton,
                         onClick: u,
                         children: d
-                            ? (0, i.jsx)(o.Dkj, {
+                            ? (0, i.jsx)(r.Dkj, {
                                   size: 'xs',
-                                  color: o.TVs.colors.WHITE,
+                                  color: r.TVs.colors.WHITE,
                                   className: w.muteIcon
                               })
-                            : (0, i.jsx)(o.owu, {
+                            : (0, i.jsx)(r.owu, {
                                   size: 'xs',
-                                  color: o.TVs.colors.WHITE,
+                                  color: r.TVs.colors.WHITE,
                                   className: w.muteIcon
                               })
                     }),
-                    (0, i.jsx)(o.zxk, {
-                        look: o.zxk.Looks.BLANK,
-                        size: o.zxk.Sizes.NONE,
+                    (0, i.jsx)(r.zxk, {
+                        look: r.zxk.Looks.BLANK,
+                        size: r.zxk.Sizes.NONE,
                         onClick: l,
                         className: w.dismissButton,
-                        children: (0, i.jsx)(o.CTb, {
+                        children: (0, i.jsx)(r.CTb, {
                             size: 'xs',
-                            color: o.TVs.colors.WHITE,
+                            color: r.TVs.colors.WHITE,
                             className: w.dismissIcon
                         })
                     })
@@ -99,14 +99,14 @@ function R(e) {
 }
 function D(e) {
     let { entry: t, idx: n } = e,
-        l = (0, r.e7)([I.default], () => I.default.getUser(t.author_id)),
+        l = (0, o.e7)([I.default], () => I.default.getUser(t.author_id)),
         h = (0, Z.kr)(t),
-        g = h ? o.TVs.colors.TEXT_POSITIVE : o.TVs.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY,
+        g = h ? r.TVs.colors.TEXT_POSITIVE : r.TVs.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY,
         [x, S] = s.useState('unsent'),
-        [T, O] = s.useState(!1),
-        M = (0, r.e7)([_.Z], () => _.Z.customInviteMessage),
-        b = (0, r.e7)([C.Z], () => (null != l ? C.Z.getAnyStreamForUser(l.id) : null), [l]),
-        { isMobileOnline: R, status: D } = (0, r.cj)(
+        [j, T] = s.useState(!1),
+        M = (0, o.e7)([_.Z], () => _.Z.customInviteMessage),
+        b = (0, o.e7)([C.Z], () => (null != l ? C.Z.getAnyStreamForUser(l.id) : null), [l]),
+        { isMobileOnline: R, status: D } = (0, o.cj)(
             [N.Z],
             () =>
                 null == l
@@ -122,7 +122,7 @@ function D(e) {
         );
     s.useEffect(() => {
         if ('sent' === x) {
-            let e = setTimeout(() => O(!0), 2000);
+            let e = setTimeout(() => T(!0), 2000);
             return () => clearTimeout(e);
         }
     }, [x]);
@@ -178,18 +178,18 @@ function D(e) {
                           (0, i.jsxs)('div', {
                               className: w.usernameWrapper,
                               children: [
-                                  (0, i.jsx)(o.Text, {
+                                  (0, i.jsx)(r.Text, {
                                       className: w.username,
                                       variant: 'text-md/medium',
                                       color: 'header-primary',
-                                      children: j.ZP.getName(void 0, void 0, l)
+                                      children: O.ZP.getName(void 0, void 0, l)
                                   }),
                                   null != b && (0, i.jsx)(p.ZP, {})
                               ]
                           }),
                           (0, i.jsxs)(m.m7, {
                               children: [
-                                  (0, i.jsx)(o.iWm, {
+                                  (0, i.jsx)(r.iWm, {
                                       size: 'xxs',
                                       color: g
                                   }),
@@ -204,22 +204,22 @@ function D(e) {
                   }),
                   (0, i.jsx)('div', {
                       className: w.inviteButtonWrapper,
-                      children: (0, i.jsx)(o.zxk, {
+                      children: (0, i.jsx)(r.zxk, {
                           submitting: 'sending' === x,
-                          onClick: T ? L : A,
+                          onClick: j ? L : A,
                           className: w.inviteButton,
-                          color: o.Ttl.PRIMARY,
-                          look: 'sent' === x ? o.iLD.OUTLINED : o.iLD.FILLED,
-                          size: o.PhG.MAX,
+                          color: r.Ttl.PRIMARY,
+                          look: 'sent' === x ? r.iLD.OUTLINED : r.iLD.FILLED,
+                          size: r.PhG.MAX,
                           children:
                               'sent' === x
-                                  ? T
-                                      ? (0, i.jsx)(o.kBi, { size: 'sm' })
-                                      : (0, i.jsx)(o.kSu, {
+                                  ? j
+                                      ? (0, i.jsx)(r.kBi, { size: 'sm' })
+                                      : (0, i.jsx)(r.kSu, {
                                             size: 'sm',
-                                            color: o.TVs.colors.WHITE
+                                            color: r.TVs.colors.WHITE
                                         })
-                                  : (0, i.jsx)(o.Uuj, { size: 'sm' })
+                                  : (0, i.jsx)(r.Uuj, { size: 'sm' })
                       })
                   })
               ]
@@ -227,7 +227,7 @@ function D(e) {
 }
 function A(e) {
     let { onCancel: t, onSave: n } = e,
-        l = (0, r.e7)([_.Z], () => _.Z.customInviteMessage),
+        l = (0, o.e7)([_.Z], () => _.Z.customInviteMessage),
         a = s.createRef(),
         [d, u] = s.useState(null != l ? l : P.intl.string(P.t.DwAcMz)),
         [h, p] = s.useState(d.length),
@@ -237,7 +237,7 @@ function A(e) {
     return (0, i.jsxs)('div', {
         className: w.editMessageContainer,
         children: [
-            (0, i.jsx)(o.oil, {
+            (0, i.jsx)(r.oil, {
                 autoFocus: !0,
                 inputRef: a,
                 onClick: (e) => e.stopPropagation(),
@@ -248,8 +248,8 @@ function A(e) {
                         let t = a.current,
                             s = null !== (n = t.selectionStart) && void 0 !== n ? n : 0,
                             l = null !== (i = t.selectionEnd) && void 0 !== i ? i : 0,
-                            r = t.value;
-                        (t.value = r.substring(0, s) + ' ' + r.substring(l)), t.setSelectionRange(s + 1, s + 1), p(r.length);
+                            o = t.value;
+                        (t.value = o.substring(0, s) + ' ' + o.substring(l)), t.setSelectionRange(s + 1, s + 1), p(o.length);
                     }
                     'Enter' === e.key && g(e), 'Escape' === e.key && (e.preventDefault(), t(e));
                 },
@@ -263,24 +263,24 @@ function A(e) {
             (0, i.jsxs)('div', {
                 className: w.editMessageButtons,
                 children: [
-                    (0, i.jsxs)(o.Text, {
+                    (0, i.jsxs)(r.Text, {
                         className: w.charCount,
                         variant: 'text-xs/normal',
                         color: 'header-muted',
                         children: [h, '/', 99]
                     }),
-                    (0, i.jsx)(o.zxk, {
+                    (0, i.jsx)(r.zxk, {
                         onClick: t,
                         className: w.cancelButton,
-                        look: o.zxk.Looks.BLANK,
-                        size: o.zxk.Sizes.TINY,
+                        look: r.zxk.Looks.BLANK,
+                        size: r.zxk.Sizes.TINY,
                         children: P.intl.string(P.t['ETE/oK'])
                     }),
-                    (0, i.jsx)(o.zxk, {
+                    (0, i.jsx)(r.zxk, {
                         onClick: g,
-                        color: o.zxk.Colors.PRIMARY,
-                        look: o.zxk.Looks.FILLED,
-                        size: o.zxk.Sizes.TINY,
+                        color: r.zxk.Colors.PRIMARY,
+                        look: r.zxk.Looks.FILLED,
+                        size: r.zxk.Sizes.TINY,
                         children: P.intl.string(P.t.R3BPHx)
                     })
                 ]
@@ -291,26 +291,26 @@ function A(e) {
 function L(e) {
     let { entries: t } = e,
         n = t.slice(0, 5),
-        l = (0, r.e7)([_.Z], () => _.Z.customInviteMessage),
+        l = (0, o.e7)([_.Z], () => _.Z.customInviteMessage),
         a = P.intl.formatToPlainString(P.t['5uzKGB'], { inviteMessage: null != l ? l : P.intl.string(P.t.DwAcMz) }),
         [d, u] = s.useState(!1);
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(x.iz, {}),
-            (0, i.jsxs)(o.Text, {
+            (0, i.jsxs)(r.Text, {
                 className: w.helpText,
                 variant: 'text-sm/medium',
                 color: 'header-secondary',
                 children: [
                     a,
-                    (0, i.jsx)(o.zxk, {
+                    (0, i.jsx)(r.zxk, {
                         onClick: (e) => {
                             e.stopPropagation(), u(!d), c.Z.setInstanceLocked(d);
                         },
                         className: w.editButton,
-                        look: o.zxk.Looks.BLANK,
-                        size: o.zxk.Sizes.NONE,
-                        children: (0, i.jsx)(o.vdY, {
+                        look: r.zxk.Looks.BLANK,
+                        size: r.zxk.Sizes.NONE,
+                        children: (0, i.jsx)(r.vdY, {
                             color: 'currentColor',
                             size: 'xxs'
                         })
@@ -341,7 +341,7 @@ function L(e) {
     });
 }
 function z(e, t) {
-    let { trackView: n, trackClick: s } = (0, O.R)(b.n0.SendGameInvitesNotification, { notif_type: b.n0.SendGameInvitesNotification });
+    let { trackView: n, trackClick: s } = (0, T.R)(b.n0.SendGameInvitesNotification, { notif_type: b.n0.SendGameInvitesNotification });
     return (
         a()(t.length > 0, 'Some entries must be present'),
         {
@@ -361,7 +361,7 @@ function z(e, t) {
                     });
             },
             onNotificationClick: (e, t) => {
-                e.stopPropagation(), s('unlock'), S.default.isOverlayOOPEnabledForPid((0, T.QF)()) ? c.Z.setInputLocked(!1, (0, T.QF)()) : c.Z.setInstanceLocked(!1);
+                e.stopPropagation(), s('unlock'), S.default.isOverlayOOPEnabledForPid((0, j.QF)()) ? c.Z.setInputLocked(!1, (0, j.QF)()) : c.Z.setInstanceLocked(!1);
             },
             onDismissClick: () => {
                 s('dismiss');

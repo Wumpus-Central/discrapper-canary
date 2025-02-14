@@ -10,8 +10,8 @@ var s = n(120356),
     d = n(631885),
     u = n(568671),
     m = n(292352),
-    h = n(388032),
-    g = n(40322),
+    g = n(388032),
+    h = n(40322),
     x = n(308803),
     _ = n(633488),
     p = n(361848);
@@ -22,29 +22,29 @@ let E = () => {
         return (0, d.VM)() || (t && e.length > 0)
             ? null
             : (0, i.jsx)('div', {
-                  className: g.button,
+                  className: h.button,
                   children: t
                       ? (0, i.jsx)(l.zxk, {
                             fullWidth: !1,
                             size: l.PhG.LARGE,
                             onClick: () => n(m.dG.REQUESTS),
-                            children: h.intl.string(h.t.LhlgY2)
+                            children: g.intl.string(g.t.LhlgY2)
                         })
                       : (0, i.jsx)(u.Z, {})
               });
     },
     C = () => {
         let e = (0, c.Z)(),
-            t = (0, a.o)(h.intl.string(h.t.T7GyW1), h.intl.string(h.t.goKE2d)),
-            n = (0, a.o)(h.intl.format(h.t.MXjDSk, { articleLink: 'https://support.discord.com/hc/articles/14155060633623' }), h.intl.format(h.t.EMCf6u, { articleLink: 'https://support.discord.com/hc/articles/14155043715735' }));
+            t = (0, a.o)(g.intl.string(g.t.T7GyW1), g.intl.string(g.t.goKE2d)),
+            n = (0, a.o)(g.intl.format(g.t.MXjDSk, { articleLink: 'https://support.discord.com/hc/articles/14155060633623' }), g.intl.format(g.t.EMCf6u, { articleLink: 'https://support.discord.com/hc/articles/14155043715735' }));
         return (0, i.jsxs)('div', {
-            className: r()(g.container, x.box),
+            className: r()(h.container, x.box),
             children: [
                 (0, i.jsxs)('div', {
                     children: [
                         (0, i.jsx)('div', {
                             children: (0, i.jsxs)('div', {
-                                className: g.headerText,
+                                className: h.headerText,
                                 children: [
                                     (0, i.jsx)(l.X6q, {
                                         variant: 'heading-xl/medium',
@@ -62,10 +62,10 @@ let E = () => {
                     ]
                 }),
                 (0, i.jsx)('div', {
-                    className: g.headerImage,
+                    className: h.headerImage,
                     children: (0, i.jsx)('img', {
                         src: e ? _ : p,
-                        alt: h.intl.string(h.t.ffg6xc)
+                        alt: g.intl.string(g.t.ffg6xc)
                     })
                 })
             ]

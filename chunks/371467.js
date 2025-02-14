@@ -12,24 +12,24 @@ var i,
     _ = n(786761),
     p = n(695346),
     f = n(163612),
-    g = n(314897),
-    m = n(592125),
+    m = n(314897),
+    g = n(592125),
     v = n(375954),
     E = n(292959),
-    I = n(158776),
-    x = n(885110),
+    x = n(158776),
+    I = n(885110),
     C = n(246946),
     S = n(594174),
     Z = n(974180),
     y = n(237997),
     O = n(70956),
-    b = n(150097),
-    N = n(129724),
+    N = n(150097),
+    b = n(129724),
     T = n(145597),
     w = n(371651),
     A = n(610394),
-    k = n(388627),
-    j = n(996050),
+    j = n(388627),
+    k = n(996050),
     R = n(609626),
     L = n(421824),
     D = n(777036),
@@ -40,8 +40,8 @@ var i,
     W = n(388032);
 let U = 5 * O.Z.Millis.SECOND,
     F = 8 * O.Z.Millis.SECOND,
-    G = 30 * O.Z.Millis.SECOND,
     B = 30 * O.Z.Millis.SECOND,
+    G = 30 * O.Z.Millis.SECOND,
     H = Object.freeze({
         timestamp: 0,
         priority: 0,
@@ -60,7 +60,7 @@ function J() {
     Y.filter((e) => 1 === e.type && e.status === V._1z.TIMED_OUT)
         .sort((e, t) => t.timestamp - e.timestamp)
         .forEach((t, n) => {
-            (n >= e || t.timestamp < Date.now() - G) && q(t.id, V._1z.DISMISSED);
+            (n >= e || t.timestamp < Date.now() - B) && q(t.id, V._1z.DISMISSED);
         });
 }
 function q(e) {
@@ -142,9 +142,9 @@ function et(e, t) {
 function en(e) {
     let { channelId: t, ringing: n } = e,
         i = ee(t);
-    if (!n.includes(g.default.getId())) return q(i);
+    if (!n.includes(m.default.getId())) return q(i);
     if (null != i) return !1;
-    let l = m.Z.getChannel(t);
+    let l = g.Z.getChannel(t);
     if (
         null == l ||
         !l.isRingable() ||
@@ -153,7 +153,7 @@ function en(e) {
                 guildId: e.guildId,
                 location: 'OverlayV3StartRinging'
             }).enabled) ||
-        x.Z.getStatus() === V.Skl.DND ||
+        I.Z.getStatus() === V.Skl.DND ||
         p.QZ.getSetting()
     )
         return !1;
@@ -168,7 +168,7 @@ function en(e) {
 }
 class ei extends (i = d.ZP.Store) {
     initialize() {
-        this.waitFor(m.Z, S.default);
+        this.waitFor(g.Z, S.default);
     }
     getNotifications() {
         return Y;
@@ -194,7 +194,7 @@ let el = new ei(u.Z, {
         J(0);
         let i = null !== (t = A.ZP.getFocusedPID()) && void 0 !== t ? t : T.R2;
         if (w.default.hasChangedRenderMode(i)) return;
-        let l = (0, z.Z)((0, k.pL)(), n);
+        let l = (0, z.Z)((0, j.pL)(), n);
         null != l &&
             et(l, {
                 priority: 2,
@@ -217,25 +217,25 @@ let el = new ei(u.Z, {
     MESSAGE_CREATE: function (e) {
         var t, n, i, l;
         let { channelId: r, message: o } = e,
-            s = m.Z.getChannel(r),
+            s = g.Z.getChannel(r),
             d = S.default.getUser(null === (t = o.author) || void 0 === t ? void 0 : t.id);
         if (null == s || null == d) return !1;
         if ((null === (n = o.activity) || void 0 === n ? void 0 : n.type) === V.mFx.JOIN || (null === (i = o.activity) || void 0 === i ? void 0 : i.type) === V.mFx.JOIN_REQUEST) {
-            if (!(0, b.eF)(o, r, !0, !0)) return !1;
+            if (!(0, N.eF)(o, r, !0, !0)) return !1;
             let e = (function (e, t, n) {
                 var i;
                 let l, r;
-                if ((a()(null != t.activity, 'received null message activity'), n.id === g.default.getId())) return !1;
-                let o = (0, k.pL)(),
+                if ((a()(null != t.activity, 'received null message activity'), n.id === m.default.getId())) return !1;
+                let o = (0, j.pL)(),
                     s = null !== (i = null == o ? void 0 : o.altId) && void 0 !== i ? i : null == o ? void 0 : o.id;
                 if (null == o || null == s) return !1;
                 switch (t.activity.type) {
                     case V.mFx.JOIN:
-                        if (null == (l = I.Z.getApplicationActivity(n.id, s)) || null == l.party || l.party.id !== t.activity.party_id) return !1;
-                        r = (0, j.Z)(e, t, n, o, l);
+                        if (null == (l = x.Z.getApplicationActivity(n.id, s)) || null == l.party || l.party.id !== t.activity.party_id) return !1;
+                        r = (0, k.Z)(e, t, n, o, l);
                         break;
                     case V.mFx.JOIN_REQUEST:
-                        if (null == (l = x.Z.getApplicationActivity(s)) || null == l.party || l.party.id !== t.activity.party_id) return !1;
+                        if (null == (l = I.Z.getApplicationActivity(s)) || null == l.party || l.party.id !== t.activity.party_id) return !1;
                         r = (0, P.Z)(e, n, o, l);
                 }
                 return (
@@ -244,14 +244,14 @@ let el = new ei(u.Z, {
                         priority: 2,
                         expirationExternallyManaged: !0,
                         channelId: e.id,
-                        duration: B
+                        duration: G
                     }),
                     !0)
                 );
             })(s, o, d);
             if (!1 !== e) return e;
         }
-        if (y.Z.getTextChatNotificationMode() === V.Ypu.DISABLED || C.Z.disableNotifications || !(0, b.eF)(o, r)) return !1;
+        if (y.Z.getTextChatNotificationMode() === V.Ypu.DISABLED || C.Z.disableNotifications || !(0, N.eF)(o, r)) return !1;
         let u = !E.Z.isSoundDisabled(Z.Ay),
             c = null !== (l = v.Z.getMessage(r, o.id)) && void 0 !== l ? l : (0, _.e5)(o);
         et((0, M.Z)(s, c, d, u), {
@@ -286,12 +286,12 @@ let el = new ei(u.Z, {
             }).enabled
         )
             return !1;
-        i.includes(g.default.getId()) && q(ee(t));
+        i.includes(m.default.getId()) && q(ee(t));
     },
     ACTIVITY_USER_ACTION: function (e) {
         let t,
             { actionType: n, user: i, applicationId: l } = e,
-            r = (0, k.pL)();
+            r = (0, j.pL)();
         return (
             null != r &&
             (null == r ? void 0 : r.id) != null &&
@@ -308,7 +308,7 @@ let el = new ei(u.Z, {
         et((0, L.f)(W.intl.string(W.t.NBMK9v)));
     },
     CLIPS_SAVE_CLIP: function () {
-        et((0, L.f)(W.intl.format(W.t.KLhk6u, { duration: (0, N.A)(h.Z.getSettings().clipsLength / 1000, !0) })));
+        et((0, L.f)(W.intl.format(W.t.KLhk6u, { duration: (0, b.A)(h.Z.getSettings().clipsLength / 1000, !0) })));
     },
     CLIPS_SAVE_CLIP_ERROR: function () {
         et((0, L.f)(W.intl.string(W.t['1ZbZur'])));

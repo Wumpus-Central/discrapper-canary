@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(780384),
     u = n(481060),
     m = n(355467),
-    h = n(100527),
-    g = n(906732),
+    g = n(100527),
+    h = n(906732),
     x = n(600164),
     _ = n(210887),
     p = n(301766),
@@ -22,7 +22,7 @@ var i = n(200651),
 function S(e) {
     let { subscription: t, renewalMutations: n, transitionState: s, onClose: r, analyticsLocation: l } = e,
         a = (0, c.e7)([_.Z], () => _.Z.theme),
-        { analyticsLocations: S } = (0, g.ZP)(h.Z.SUBSCRIPTION_CANCEL_DOWNGRADE_MODAL);
+        { analyticsLocations: S } = (0, h.ZP)(g.Z.SUBSCRIPTION_CANCEL_DOWNGRADE_MODAL);
     async function I() {
         await (0, m.dP)(t, t.planId, S, l), r();
     }

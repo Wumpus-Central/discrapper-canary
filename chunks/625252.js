@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(37234),
     u = n(410030),
     m = n(605236),
-    h = n(626135),
-    g = n(617136),
+    g = n(626135),
+    h = n(617136),
     x = n(497505),
     _ = n(341907),
     p = n(981631),
@@ -23,9 +23,9 @@ function T() {
         n = s.useCallback(() => {
             (0, d.xf)(),
                 (0, _.navigateToQuestHome)({ fromContent: x.jn.QUEST_HOME_MOVE_CALLOUT }),
-                h.default.track(p.rMx.QUEST_CONTENT_CLICKED, {
-                    cta_name: g.jZ.VIEW_QUESTS,
-                    ...(0, g.mH)(x.jn.QUEST_HOME_MOVE_CALLOUT)
+                g.default.track(p.rMx.QUEST_CONTENT_CLICKED, {
+                    cta_name: h.jZ.VIEW_QUESTS,
+                    ...(0, h.mH)(x.jn.QUEST_HOME_MOVE_CALLOUT)
                 });
         }, []);
     return (

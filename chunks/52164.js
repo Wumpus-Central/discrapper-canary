@@ -10,8 +10,8 @@ var s = n(512722),
     d = n(74538),
     u = n(937615),
     m = n(374649),
-    h = n(474936),
-    g = n(981631),
+    g = n(474936),
+    h = n(981631),
     x = n(388032),
     _ = n(94950);
 function p(e) {
@@ -36,27 +36,27 @@ function p(e) {
     r()(null != N, 'Missing plan');
     let S = (0, u.T4)(E.total, E.currency);
     return (
-        N.interval === h.rV.YEAR
+        N.interval === g.rV.YEAR
             ? (t = x.intl.format(x.t['jPz/39'], {
                   price: S,
-                  termsUrl: g.EYA.TERMS,
-                  paidURL: g.EYA.PAID_TERMS,
-                  privacyUrl: g.EYA.PRIVACY
+                  termsUrl: h.EYA.TERMS,
+                  paidURL: h.EYA.PAID_TERMS,
+                  privacyUrl: h.EYA.PRIVACY
               }))
-            : N.interval === h.rV.MONTH &&
+            : N.interval === g.rV.MONTH &&
               (t =
                   1 === N.intervalCount
                       ? x.intl.format(x.t.m27GpK, {
                             price: S,
-                            termsUrl: g.EYA.TERMS,
-                            paidURL: g.EYA.PAID_TERMS,
-                            privacyUrl: g.EYA.PRIVACY
+                            termsUrl: h.EYA.TERMS,
+                            paidURL: h.EYA.PAID_TERMS,
+                            privacyUrl: h.EYA.PRIVACY
                         })
                       : x.intl.format(x.t['9xf5V1'], {
                             price: S,
-                            termsUrl: g.EYA.TERMS,
-                            paidURL: g.EYA.PAID_TERMS,
-                            privacyUrl: g.EYA.PRIVACY,
+                            termsUrl: h.EYA.TERMS,
+                            paidURL: h.EYA.PAID_TERMS,
+                            privacyUrl: h.EYA.PRIVACY,
                             intervalCount: N.intervalCount
                         })),
         (0, i.jsx)(l.Text, {
@@ -69,7 +69,7 @@ function p(e) {
 }
 function E(e) {
     let { subscription: t, withOverheadSeparator: n } = e;
-    return t.status === g.O0b.CANCELED || t.isPurchasedExternally
+    return t.status === h.O0b.CANCELED || t.isPurchasedExternally
         ? null
         : (0, i.jsx)(p, {
               subscription: t,

@@ -11,7 +11,7 @@ var i = n(200651),
 function m() {
     let e = (0, r.e7)([o.default], () => o.default.locale),
         [t, m] = s.useState(e),
-        [h] = s.useState(() =>
+        [g] = s.useState(() =>
             (0, c.getAvailableLocales)().map((e) => {
                 let t;
                 try {
@@ -46,7 +46,7 @@ function m() {
                 };
             })
         ),
-        g = s.useCallback((e) => {
+        h = s.useCallback((e) => {
             let { value: t } = e;
             m(t), u.nextTick(() => a.ZP.updateLocale(t));
         }, []);
@@ -57,8 +57,8 @@ function m() {
             children: (0, i.jsx)(l.xJW, {
                 title: c.intl.string(c.t['mx+sp6']),
                 children: (0, i.jsx)(l.FXm, {
-                    onChange: g,
-                    options: h,
+                    onChange: h,
+                    options: g,
                     value: t
                 })
             })

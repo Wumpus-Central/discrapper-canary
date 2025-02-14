@@ -10,8 +10,8 @@ var s = n(120356),
     d = n(78839),
     u = n(63063),
     m = n(74538),
-    h = n(821629),
-    g = n(346497),
+    g = n(821629),
+    h = n(346497),
     x = n(409100),
     _ = n(725727),
     p = n(474936),
@@ -22,7 +22,7 @@ let T = function (e) {
     let { isFullScreen: t, buttonClassName: s } = e,
         { promotion: T } = (0, _.mq)(),
         N = (0, l.e7)([d.ZP], () => d.ZP.getPremiumTypeSubscription());
-    if (!(0, g.Vi)()) return null;
+    if (!(0, h.Vi)()) return null;
     let S = new Date(T.endDate);
     return (0, i.jsx)(c.O, {
         newLocations: [o.Z.PREMIUM_MARKETING_PAGE_BANNER],
@@ -50,7 +50,7 @@ let T = function (e) {
                                 (0, i.jsx)(a.Text, {
                                     className: f.countdown,
                                     variant: 'text-sm/bold',
-                                    children: (0, i.jsx)(h.Z, { endDate: S })
+                                    children: (0, i.jsx)(g.Z, { endDate: S })
                                 }),
                                 (0, i.jsx)(a.Text, {
                                     variant: 'text-sm/medium',

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => g });
 var i = n(200651);
 n(192379);
 var s = n(442837),
@@ -10,17 +10,17 @@ var s = n(442837),
     d = n(474494),
     u = n(981631),
     m = n(800963);
-let h = function (e) {
+let g = function (e) {
     let { localizedPricingPromo: t } = e,
         n = t.countryCode,
-        h = (0, s.e7)([l.default], () => l.default.locale);
+        g = (0, s.e7)([l.default], () => l.default.locale);
     (0, c.U)(u.jXE.SETTINGS_PREMIUM_BANNER, n);
-    let g = (0, s.e7)([a.ZP], () => a.ZP.getPremiumTypeSubscription()),
+    let h = (0, s.e7)([a.ZP], () => a.ZP.getPremiumTypeSubscription()),
         { localizedPricingBannerBody: x } = (0, o.vB)({
             localizedPricingPromo: t,
-            subscription: g,
+            subscription: h,
             forceSingleLine: !0,
-            userLocale: h
+            userLocale: g
         });
     return (0, i.jsxs)('div', {
         className: m.bannerContainer,

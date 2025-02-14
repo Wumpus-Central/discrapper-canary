@@ -19,10 +19,10 @@ let p = {
 function f(e) {
     let { locked: t, pinned: n } = e,
         [r, a] = l.useState(0),
-        [f, g] = l.useState(0),
-        [m, v] = l.useState(0),
+        [f, m] = l.useState(0),
+        [g, v] = l.useState(0),
         E = l.useRef(0),
-        [I, x] = l.useState(0),
+        [x, I] = l.useState(0),
         { timeToLiveMs: C, reappearTimeMs: S } = c.ZP.useState(
             (e) => ({
                 timeToLiveMs: e.timeToLiveMs,
@@ -42,7 +42,7 @@ function f(e) {
             () => (
                 (E.current = setInterval(() => {
                     let e = Date.now();
-                    g(e),
+                    m(e),
                         v((t) => {
                             if (0 === t) return e;
                             let n = e - t,
@@ -58,10 +58,10 @@ function f(e) {
             []
         );
     let O = () => {
-            a(Date.now()), x((e) => e + 1);
+            a(Date.now()), I((e) => e + 1);
         },
-        b = r > 0 && f - r < 1000,
-        N = (0, u.Yzy)(m > 0 && m < f && f - m < C, {
+        N = r > 0 && f - r < 1000,
+        b = (0, u.Yzy)(g > 0 && g < f && f - g < C, {
             from: { opacity: 0 },
             enter: { opacity: 1 },
             leave: { opacity: 0 },
@@ -70,29 +70,29 @@ function f(e) {
         [T, w] = l.useState(!1);
     if (
         (l.useEffect(() => {
-            I > 10 && w(!0);
-        }, [I]),
+            x > 10 && w(!0);
+        }, [x]),
         T)
     )
         throw Error('ClickZoneDebugWidget crashed, too many clicks');
     return t && !n
         ? null
         : (0, i.jsx)(i.Fragment, {
-              children: N(
+              children: b(
                   (e, t) =>
                       t &&
                       (0, i.jsx)(d.animated.div, {
                           style: e,
                           className: _.clickZoneDebugContainer,
                           children: (0, i.jsx)(h.Z, {
-                              className: o()(_.clickZone, b && _.clickBackground),
+                              className: o()(_.clickZone, N && _.clickBackground),
                               children: (0, i.jsx)(u.P3F, {
                                   onClick: O,
                                   className: _.clickable,
                                   children: (0, i.jsxs)(u.Text, {
                                       variant: 'text-md/semibold',
                                       color: 'always-white',
-                                      children: ['Click Me (', I, ')']
+                                      children: ['Click Me (', x, ')']
                                   })
                               })
                           })

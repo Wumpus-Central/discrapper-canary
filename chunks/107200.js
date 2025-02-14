@@ -6,13 +6,13 @@ var r = n(442837),
     o = n(183584),
     s = n(487029),
     d = n(592125),
-    c = n(944486),
-    l = n(554174),
+    l = n(944486),
+    c = n(554174),
     u = n(710111),
     _ = n(221035);
 function f() {
     let [e, t] = (0, r.Wu)([a.Z], () => [a.Z.enabled, a.Z.keepOpen]),
-        n = (0, r.e7)([c.Z], () => c.Z.getVoiceChannelId()),
+        n = (0, r.e7)([l.Z], () => l.Z.getVoiceChannelId()),
         f = (0, r.e7)([d.Z], () => d.Z.getChannel(n), [n]),
         p = null == f ? void 0 : f.getGuildId();
     return e && null != f
@@ -25,7 +25,7 @@ function f() {
                   channel: f,
                   keepOpen: t,
                   onClose: function () {
-                      let e = (0, l.Z)();
+                      let e = (0, c.Z)();
                       null != e && (0, o.oZ)(e);
                   },
                   analyticsSource: 'overlay'

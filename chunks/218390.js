@@ -13,8 +13,8 @@ var i = n(200651),
     d = n(622535),
     u = n(780384),
     m = n(481060),
-    h = n(570140),
-    g = n(355467),
+    g = n(570140),
+    h = n(355467),
     x = n(37234),
     _ = n(821849),
     p = n(230711),
@@ -62,8 +62,8 @@ function en(e) {
         a = t.planIdFromItems === K.Xh.PREMIUM_YEAR_TIER_2,
         c = n || l,
         d = null != t.trialEndsAt ? o()(t.trialEndsAt).diff(o()(), 'd') : 0,
-        h = K.GP[t.planIdFromItems],
-        g = k.ZP.formatPriceString(k.ZP.getDefaultPrice(h.id), h.interval);
+        g = K.GP[t.planIdFromItems],
+        h = k.ZP.formatPriceString(k.ZP.getDefaultPrice(g.id), g.interval);
     if (c) {
         var x, _, p;
         return (0, i.jsxs)(i.Fragment, {
@@ -82,16 +82,16 @@ function en(e) {
                     children: l
                         ? X.intl.format(X.t['2CGBrq'], {
                               remainingTime: d,
-                              price: g
+                              price: h
                           })
                         : a
                           ? X.intl.format(X.t['+qqh6u'], {
                                 percent: null !== (x = null == s ? void 0 : s.percentage) && void 0 !== x ? x : K.Bo,
-                                regularPrice: g
+                                regularPrice: h
                             })
                           : X.intl.formatToPlainString(X.t['3Ziutb'], {
                                 percent: null !== (_ = null == s ? void 0 : s.percentage) && void 0 !== _ ? _ : K.M_,
-                                regularPrice: g,
+                                regularPrice: h,
                                 numMonths: null !== (p = null == s ? void 0 : s.duration) && void 0 !== p ? p : K.rt
                             })
                 })
@@ -101,7 +101,7 @@ function en(e) {
     return (0, i.jsx)(H.Z, {
         variant: void 0,
         subscriptionTier: K.Si.TIER_2,
-        interval: h.interval
+        interval: g.interval
     });
 }
 function ei() {
@@ -324,8 +324,8 @@ let el = function () {
     let O = (0, V.b)(T),
         D = (0, Y.pn)(T);
     s.useEffect(() => {
-        h.Z.wait(async () => {
-            f || e || (await Promise.all([g.jg(), g.tZ(), (0, _.Y2)(p, null, q.JjL.DISCOVERY)])), o(!1);
+        g.Z.wait(async () => {
+            f || e || (await Promise.all([h.jg(), h.tZ(), (0, _.Y2)(p, null, q.JjL.DISCOVERY)])), o(!1);
         });
     }, [p, f, e]);
     let [Z, k] = s.useState(!1);

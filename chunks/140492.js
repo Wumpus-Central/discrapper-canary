@@ -9,12 +9,12 @@ var i = n(358230),
     d = n(923834),
     u = n(55589),
     m = n(823379),
-    h = n(475468),
-    g = n(981631),
+    g = n(475468),
+    h = n(981631),
     x = n(176505);
 let _ = () => {
     let e = r.Z.getMessageRequestsCount() > 0 || l.Z.getSpamChannelsCount() > 0;
-    return [g.Z5c.FRIENDS, c.Z.hasLibraryApplication() && !o.bm.getSetting() ? g.Z5c.APPLICATION_LIBRARY : null, g.Z5c.APPLICATION_STORE, e ? g.Z5c.MESSAGE_REQUESTS : null, g.Z5c.COLLECTIBLES_SHOP, o.Ex.getSetting() ? g.Z5c.FAMILY_CENTER : null].filter(m.lm);
+    return [h.Z5c.FRIENDS, c.Z.hasLibraryApplication() && !o.bm.getSetting() ? h.Z5c.APPLICATION_LIBRARY : null, h.Z5c.APPLICATION_STORE, e ? h.Z5c.MESSAGE_REQUESTS : null, h.Z5c.COLLECTIBLES_SHOP, o.Ex.getSetting() ? h.Z5c.FAMILY_CENTER : null].filter(m.lm);
 };
 function p() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
@@ -31,9 +31,9 @@ function p() {
               _().includes(m)
                   ? !(function (e) {
                         let t = d.Z.getCurrentRoute();
-                        e === g.Z5c.APPLICATION_STORE && null != t ? (0, h.z)(t) : (0, h.z)(e);
+                        e === h.Z5c.APPLICATION_STORE && null != t ? (0, g.z)(t) : (0, g.z)(e);
                     })(m)
-                  : ((n = g.ME), (0, h.K)(n, m));
+                  : ((n = h.ME), (0, g.K)(n, m));
           })(e)
         : (function (e, t) {
               var n, r, l;
@@ -41,6 +41,6 @@ function p() {
                   c = (0, i.Z)(t, { withCurrentVoiceChannel: !0 }).map((e) => e.id);
               (0, s.s)(t) && c.unshift(x.oC.GUILD_HOME);
               let d = ((n = (null != o ? c.indexOf(o) : -1) + e), (r = c.length), n < 0 ? r - 1 : n >= r ? 0 : n);
-              (l = c[d]), (0, h.K)(t, l);
+              (l = c[d]), (0, g.K)(t, l);
           })(e, t);
 }

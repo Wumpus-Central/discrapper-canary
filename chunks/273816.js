@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(47120);
+n.d(t, { Z: () => m }), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
@@ -12,22 +12,22 @@ var i = n(200651),
     _ = n(333031),
     p = n(501787),
     f = n(249582);
-function g(e) {
+function m(e) {
     let { locked: t, pinned: n, anchorLeft: r } = e,
-        g = (0, a.e7)([c.Z], () => c.Z.getSocket());
+        m = (0, a.e7)([c.Z], () => c.Z.getSocket());
     (0, u.nU)();
-    let m = (0, a.e7)([h.Z], () => h.Z.getWindow(p.$J)),
-        [v, E] = (0, u.m8)(g),
-        { currentFPS: I, averageFrameTime: x, timeSinceLastDrop: C, onResetFrameData: S, droppedFramesRef: Z, renderedFrameCount: y, bufferFramecountRef: O, frameCheckerEffect: b } = (0, u.d6)(!0, v, !0),
-        [N, T, w] = (0, u.ZF)(g),
-        [A, k] = (0, u.Y5)(N, b, m),
-        j = performance.now() - E.current < u.MC,
-        R = T(x, O.current);
+    let g = (0, a.e7)([h.Z], () => h.Z.getWindow(p.$J)),
+        [v, E] = (0, u.m8)(m),
+        { currentFPS: x, averageFrameTime: I, timeSinceLastDrop: C, onResetFrameData: S, droppedFramesRef: Z, renderedFrameCount: y, bufferFramecountRef: O, frameCheckerEffect: N } = (0, u.d6)(!0, v, !0),
+        [b, T, w] = (0, u.ZF)(m),
+        [A, j] = (0, u.Y5)(b, N, g),
+        k = performance.now() - E.current < u.MC,
+        R = T(I, O.current);
     (0, d.ZP)(
         () => (
             A(),
             () => {
-                k();
+                j();
             }
         )
     );
@@ -38,7 +38,7 @@ function g(e) {
         [M, z] = l.useState(!0),
         [V, W] = l.useState(!0),
         [U, F] = l.useState(!0),
-        [G, B] = l.useState(!0);
+        [B, G] = l.useState(!0);
     return t && !n
         ? null
         : (0, i.jsxs)('div', {
@@ -67,8 +67,8 @@ function g(e) {
                                       (0, i.jsx)(s.Text, {
                                           tag: 'span',
                                           variant: 'code',
-                                          color: I < 30 ? 'text-danger' : I < 45 ? 'text-warning' : 'text-primary',
-                                          children: I.toFixed(2)
+                                          color: x < 30 ? 'text-danger' : x < 45 ? 'text-warning' : 'text-primary',
+                                          children: x.toFixed(2)
                                       })
                                   ]
                               })
@@ -97,8 +97,8 @@ function g(e) {
                                       (0, i.jsxs)(s.Text, {
                                           tag: 'span',
                                           variant: 'code',
-                                          color: x > 1.1 * u.tO ? 'text-warning' : 'text-primary',
-                                          children: [x.toFixed(2), 'ms']
+                                          color: I > 1.1 * u.tO ? 'text-warning' : 'text-primary',
+                                          children: [I.toFixed(2), 'ms']
                                       })
                                   ]
                               })
@@ -171,7 +171,7 @@ function g(e) {
                               })
                           ]
                       }),
-                  (G || !t) &&
+                  (B || !t) &&
                       (0, i.jsxs)('div', {
                           className: f.measurement,
                           children: [
@@ -180,8 +180,8 @@ function g(e) {
                                       className: f.measurementCheckbox,
                                       children: (0, i.jsx)(s.XZJ, {
                                           size: 16,
-                                          value: G,
-                                          onChange: (e, t) => B(t)
+                                          value: B,
+                                          onChange: (e, t) => G(t)
                                       })
                                   }),
                               (0, i.jsx)(s.ua7, {
@@ -209,7 +209,7 @@ function g(e) {
                               })
                           ]
                       }),
-                  j &&
+                  k &&
                       (0, i.jsx)(s.ua7, {
                           position: 'left',
                           text: "We don't track frames while the app is in the background, because requestAnimationFrame doesn't fire in the background",

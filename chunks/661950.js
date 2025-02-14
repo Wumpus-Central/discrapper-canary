@@ -10,8 +10,8 @@ var s = n(442837),
     d = n(738486),
     u = n(429789),
     m = n(208113),
-    h = n(625205),
-    g = n(325808),
+    g = n(625205),
+    h = n(325808),
     x = n(823087),
     _ = n(232388),
     p = n(716210),
@@ -35,7 +35,7 @@ function j() {
                         children: [
                             (0, i.jsx)(l.F, {
                                 setting: N.s6.VOICE_AND_VIDEO_DEVICES,
-                                children: (0, i.jsx)(h.Z, {})
+                                children: (0, i.jsx)(g.Z, {})
                             }),
                             (0, i.jsx)(l.F, {
                                 setting: N.s6.VOICE_AND_VIDEO_VOLUME_CONTROLS,
@@ -57,7 +57,7 @@ function j() {
                         children: [
                             (0, i.jsx)(l.F, {
                                 setting: N.s6.VOICE_AND_VIDEO_INPUT_MODE,
-                                children: (0, i.jsx)(g.Z, {})
+                                children: (0, i.jsx)(h.Z, {})
                             }),
                             (0, i.jsx)(l.F, {
                                 setting: N.s6.VOICE_AND_VIDEO_SENSITIVITY,

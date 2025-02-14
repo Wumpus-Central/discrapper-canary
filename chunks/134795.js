@@ -10,14 +10,14 @@ var s = n(120356),
     d = n(388032),
     u = n(651885);
 function m(e) {
-    let { showRemoveBannerButton: t, errors: n, onBannerChange: s, guildId: m, className: h, disabled: g = !1, showPremiumIcon: x = !0, isTryItOutFlow: _ = !1, forcedDivider: p, withHighlight: E = !1 } = e,
+    let { showRemoveBannerButton: t, errors: n, onBannerChange: s, guildId: m, className: g, disabled: h = !1, showPremiumIcon: x = !0, isTryItOutFlow: _ = !1, forcedDivider: p, withHighlight: E = !1 } = e,
         C = E ? l.gtL : l.zxk;
     return (0, i.jsx)(o.Z, {
-        className: h,
+        className: g,
         title: d.intl.string(d.t.Vgdusr),
         showPremiumIcon: x,
         errors: n,
-        disabled: g,
+        disabled: h,
         forcedDivider: p,
         children: (0, i.jsxs)('div', {
             className: u.buttonsContainer,

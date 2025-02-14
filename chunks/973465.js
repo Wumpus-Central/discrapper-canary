@@ -15,7 +15,7 @@ function m() {
             isVideoAvailable: d.Z.isVideoAvailable()
         })),
         { analyticsLocations: m } = (0, o.ZP)(),
-        h = s.useMemo(
+        g = s.useMemo(
             () =>
                 Object.values(e).map((e) => {
                     let { id: t, name: n } = e;
@@ -30,7 +30,7 @@ function m() {
         title: u.intl.string(u.t.FsQ3OT),
         children: (0, i.jsx)(l.q4e, {
             placeholder: u.intl.string(u.t['t9eQ/v']),
-            options: h,
+            options: g,
             value: t,
             isDisabled: !n,
             onChange: (e) => a.Z.setVideoDevice(e, { analyticsLocations: m }),

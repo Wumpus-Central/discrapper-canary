@@ -14,8 +14,8 @@ var i = n(200651),
     d = n(355467),
     u = n(493773),
     m = n(410030),
-    h = n(906732),
-    g = n(600164),
+    g = n(906732),
+    h = n(600164),
     x = n(296848),
     _ = n(798769),
     p = n(981631),
@@ -38,7 +38,7 @@ function T(e) {
             },
             [l]
         ),
-        h = d.status === p.O0b.PAUSED ? E.intl.string(E.t.Lp9WoK) : E.intl.string(E.t.eSR83d),
+        g = d.status === p.O0b.PAUSED ? E.intl.string(E.t.Lp9WoK) : E.intl.string(E.t.eSR83d),
         f = (function (e) {
             let t = e.status === p.O0b.PAUSED ? E.t.o3upfX : E.t.dBXZEh,
                 { durations: n, currentDaysPaused: i } = (0, x.AT)(e),
@@ -85,7 +85,7 @@ function T(e) {
                             (0, i.jsx)(c.X6q, {
                                 variant: 'heading-sm/medium',
                                 className: C.subtitle,
-                                children: h
+                                children: g
                             })
                         ]
                     })
@@ -99,7 +99,7 @@ function T(e) {
                     })
                 }),
                 (0, i.jsx)(c.mzw, {
-                    justify: g.Z.Justify.START,
+                    justify: h.Z.Justify.START,
                     children: o
                 })
             ]
@@ -109,7 +109,7 @@ function T(e) {
 function N(e) {
     let { premiumSubscription: t, premiumType: n, onClose: r, pauseDuration: a, analyticsLocation: d } = e,
         [u, x] = s.useState(!1),
-        { analyticsLocations: T } = (0, h.ZP)(),
+        { analyticsLocations: T } = (0, g.ZP)(),
         [N, S] = s.useState(!1),
         I = (0, m.ZP)(),
         b = null,
@@ -168,7 +168,7 @@ function N(e) {
                     ]
                 }),
                 (0, i.jsx)(c.mzw, {
-                    justify: g.Z.Justify.START,
+                    justify: h.Z.Justify.START,
                     children: (0, i.jsxs)('div', {
                         className: C.whatYouLoseButtonContainer,
                         children: [

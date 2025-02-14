@@ -6,8 +6,8 @@ var t = '\uD800-\uDFFF',
     o = '[\uD800-\uDBFF][\uDC00-\uDFFF]',
     s = '(?:' + n + '|' + i + ')?',
     d = '[\\ufe0e\\ufe0f]?',
-    c = '(?:\\u200d(?:' + [r, a, o].join('|') + ')' + d + s + ')*',
-    l = RegExp(i + '(?=' + i + ')|' + ('(?:' + [r + n + '?', n, a, o, '[' + t + ']'].join('|')) + ')' + (d + s + c), 'g');
+    l = '(?:\\u200d(?:' + [r, a, o].join('|') + ')' + d + s + ')*',
+    c = RegExp(i + '(?=' + i + ')|' + ('(?:' + [r + n + '?', n, a, o, '[' + t + ']'].join('|')) + ')' + (d + s + l), 'g');
 e.exports = function (e) {
-    return e.match(l) || [];
+    return e.match(c) || [];
 };

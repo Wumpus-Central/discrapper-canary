@@ -12,23 +12,23 @@ var i = n(200651),
     _ = n(872810),
     p = n(40851),
     f = n(414910),
-    g = n(194082),
-    m = n(979264),
+    m = n(194082),
+    g = n(979264),
     v = n(871118),
     E = n(352978),
-    I = n(833519),
-    x = n(839662),
+    x = n(833519),
+    I = n(839662),
     C = n(199902),
     S = n(314897),
     Z = n(131951),
     y = n(594174),
     O = n(5192),
-    b = n(444295),
-    N = n(1226),
+    N = n(444295),
+    b = n(1226),
     T = n(981631),
     w = n(388032),
     A = n(233654);
-function k(e) {
+function j(e) {
     let { participant: t } = e,
         n = t.user.id,
         r = (0, a.e7)(
@@ -40,7 +40,7 @@ function k(e) {
             [t]
         ),
         o = (0, a.e7)([S.default], () => S.default.getId()),
-        { hasVideo: c } = (0, x.Z)(t, o),
+        { hasVideo: c } = (0, I.Z)(t, o),
         h = r && c,
         _ = l.useCallback(() => {
             u.Z.toggleLocalMute(n, s.Yn.STREAM);
@@ -54,9 +54,9 @@ function k(e) {
                 className: A.controlAction,
                 onClick: (e) => {
                     e.stopPropagation(),
-                        (0, b.Ws)(T.Odu.GO_LIVE, {
-                            type: b.Qu.AUDIO,
-                            value: h ? b.bk.ENABLED : b.bk.DISABLED,
+                        (0, N.Ws)(T.Odu.GO_LIVE, {
+                            type: N.Qu.AUDIO,
+                            value: h ? N.bk.ENABLED : N.bk.DISABLED,
                             userId: t.user.id
                         }),
                         null == n || n(),
@@ -75,11 +75,11 @@ function k(e) {
         }
     });
 }
-function j(e, t, l) {
+function k(e, t, l) {
     return (r) => {
-        (0, b.Ws)(T.Odu.GO_LIVE, {
-            type: b.Qu.GO_LIVE,
-            value: b.bk.SETTINGS_OPENED,
+        (0, N.Ws)(T.Odu.GO_LIVE, {
+            type: N.Qu.GO_LIVE,
+            value: N.bk.SETTINGS_OPENED,
             userId: e.user.id
         }),
             r.stopPropagation(),
@@ -129,9 +129,9 @@ function R(e) {
                                             noFocus: !0
                                         }),
                                         l(),
-                                        (0, b.Ws)(T.Odu.GO_LIVE, {
-                                            type: b.Qu.GO_LIVE,
-                                            value: b.bk.ENABLED,
+                                        (0, N.Ws)(T.Odu.GO_LIVE, {
+                                            type: N.Qu.GO_LIVE,
+                                            value: N.bk.ENABLED,
                                             userId: n.user.id
                                         });
                                 },
@@ -166,13 +166,13 @@ function R(e) {
                                     color: 'always-white',
                                     children: O.ZP.getName(n.stream.guildId, n.stream.channelId, s)
                                 }),
-                                (0, i.jsx)(m.ZP, {
+                                (0, i.jsx)(g.ZP, {
                                     primaryGuild: u.primaryGuild,
                                     userId: s.id,
                                     onShowProfile: () => {
-                                        (0, b.Ws)(T.Odu.GO_LIVE, {
-                                            type: b.Qu.GO_LIVE,
-                                            value: b.bk.GUILD_PROFILE_OPENED,
+                                        (0, N.Ws)(T.Odu.GO_LIVE, {
+                                            type: N.Qu.GO_LIVE,
+                                            value: N.bk.GUILD_PROFILE_OPENED,
                                             userId: n.user.id
                                         });
                                     }
@@ -186,7 +186,7 @@ function R(e) {
                             t &&
                             (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    (0, i.jsx)(k, { participant: n }),
+                                    (0, i.jsx)(j, { participant: n }),
                                     (0, i.jsx)(d.ua7, {
                                         text: w.intl.string(w.t['3D5yo6']),
                                         children: (e) => {
@@ -194,7 +194,7 @@ function R(e) {
                                             return (0, i.jsx)(d.P3F, {
                                                 ...l,
                                                 className: A.controlAction,
-                                                onClick: j(n, r, t),
+                                                onClick: k(n, r, t),
                                                 children: (0, i.jsx)(d.xhG, {
                                                     size: 'sm',
                                                     color: 'currentColor'
@@ -217,8 +217,8 @@ let L = new Set([T.jm8.ENDED, T.jm8.FAILED, T.jm8.PAUSED]),
             c = (0, p.bp)(),
             _ = null != u && L.has(u.state),
             f = null != u,
-            m = (0, N.yA)(t.stream),
-            x = (0, N.xN)(t.stream);
+            g = (0, b.yA)(t.stream),
+            I = (0, b.xN)(t.stream);
         return (!f && l) || _
             ? null
             : (0, i.jsxs)('div', {
@@ -226,8 +226,8 @@ let L = new Set([T.jm8.ENDED, T.jm8.FAILED, T.jm8.PAUSED]),
                   children: [
                       f &&
                           !l &&
-                          (0, i.jsx)(g.ZP, {
-                              size: g.ZP.Sizes.SMALL,
+                          (0, i.jsx)(m.ZP, {
+                              size: m.ZP.Sizes.SMALL,
                               className: A.liveIndicator
                           }),
                       f
@@ -236,13 +236,13 @@ let L = new Set([T.jm8.ENDED, T.jm8.FAILED, T.jm8.PAUSED]),
                                 children: (0, i.jsx)(d.kL8, {
                                     'aria-label': w.intl.formatToPlainString(w.t.gHPz3d, { streamerName: t.user.username }),
                                     onClick: () => {},
-                                    onContextMenu: j(t, c),
+                                    onContextMenu: k(t, c),
                                     className: A.streamTile,
-                                    style: { transform: 'scale('.concat(m, ')') },
-                                    children: (0, i.jsx)(I.Z, {
+                                    style: { transform: 'scale('.concat(g, ')') },
+                                    children: (0, i.jsx)(x.Z, {
                                         participant: t,
                                         width: n,
-                                        fit: null != x ? x : E.L.CONTAIN,
+                                        fit: null != I ? I : E.L.CONTAIN,
                                         inPopout: !0,
                                         focused: !l,
                                         paused: !1,

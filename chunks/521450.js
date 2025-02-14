@@ -9,16 +9,16 @@ var i = n(200651),
     d = n(481060),
     u = n(37234),
     m = n(960412),
-    h = n(151662),
-    g = n(695346),
+    g = n(151662),
+    h = n(695346),
     x = n(981631),
     _ = n(930441),
     p = n(388032),
     E = n(469006),
     C = n(483938);
 let f = () => {
-    let e = g.Ex.useSetting(),
-        { categories: t, initialized: n } = (0, c.cj)([h.Z], () => h.Z.getEmailSettings());
+    let e = h.Ex.useSetting(),
+        { categories: t, initialized: n } = (0, c.cj)([g.Z], () => g.Z.getEmailSettings());
     return (
         s.useEffect(() => {
             null == n && (0, m.Y7)();
@@ -36,7 +36,7 @@ let f = () => {
                     value: e,
                     note: p.intl.string(p.t['5MdB3t']),
                     hideBorder: !0,
-                    onChange: g.Ex.updateSetting,
+                    onChange: h.Ex.updateSetting,
                     children: p.intl.string(p.t.zkEceX)
                 }),
                 e

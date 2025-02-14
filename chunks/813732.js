@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(355467),
     u = n(179360),
     m = n(496929),
-    h = n(821849),
-    g = n(230711),
+    g = n(821849),
+    h = n(230711),
     x = n(497321),
     _ = n(975298),
     p = n(167354),
@@ -119,10 +119,10 @@ let q = function () {
     return (s.useEffect(
         () => (
             c.Z.wait(() => {
-                (0, h.Y2)(), d.jg(), (0, u.X8)(), d.tZ();
+                (0, g.Y2)(), d.jg(), (0, u.X8)(), d.tZ();
             }),
             function () {
-                g.Z.clearSubsection();
+                h.Z.clearSubsection();
             }
         ),
         []
@@ -131,9 +131,9 @@ let q = function () {
         ? (0, i.jsx)(x.Z, {})
         : m && f
           ? P === G.cP
-              ? (0, i.jsx)(N.Z, { onGoBack: () => g.Z.clearSubsection() })
+              ? (0, i.jsx)(N.Z, { onGoBack: () => h.Z.clearSubsection() })
               : P === G.XZ
-                ? (0, i.jsx)(I.Z, { onGoBack: () => g.Z.clearSubsection() })
+                ? (0, i.jsx)(I.Z, { onGoBack: () => h.Z.clearSubsection() })
                 : (0, i.jsx)('div', {
                       className: z.container,
                       children: (0, i.jsxs)('div', {
@@ -178,7 +178,7 @@ let q = function () {
                                           (0, i.jsx)(K, {}),
                                           (0, i.jsx)(T.Z, {
                                               count: B,
-                                              onClickManageSubscription: () => g.Z.setSection(U.oAB.SUBSCRIPTIONS, G.cP)
+                                              onClickManageSubscription: () => h.Z.setSection(U.oAB.SUBSCRIPTIONS, G.cP)
                                           })
                                       ]
                                   }),
@@ -189,7 +189,7 @@ let q = function () {
                                           (0, i.jsx)(S.Z, {
                                               count: Z,
                                               onClickManageSubscription: () => {
-                                                  g.Z.setSection(U.oAB.SUBSCRIPTIONS, G.XZ), D.default.track(U.rMx.PREMIUM_APPLICATION_SUBSCRIPTION_MANAGE_CTA_CLICKED);
+                                                  h.Z.setSection(U.oAB.SUBSCRIPTIONS, G.XZ), D.default.track(U.rMx.PREMIUM_APPLICATION_SUBSCRIPTION_MANAGE_CTA_CLICKED);
                                               }
                                           })
                                       ]

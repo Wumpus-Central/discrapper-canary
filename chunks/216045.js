@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(570140),
     u = n(232567),
     m = n(809206),
-    h = n(497321),
-    g = n(634894),
+    g = n(497321),
+    h = n(634894),
     x = n(100527),
     _ = n(906732),
     p = n(475977),
@@ -49,11 +49,11 @@ function B() {
         { analyticsLocations: V } = (0, _.ZP)(x.Z.PROFILE);
     s.useEffect(() => () => d.Z.wait(m.W3), []);
     let U = 'UserSettingsProfileCustomization';
-    (0, g.j)({
+    (0, h.j)({
         location: U + ' auto on',
         autoTrackExposure: !0
     }),
-        (0, g.j)({
+        (0, h.j)({
             location: U + ' auto off',
             autoTrackExposure: !1
         });
@@ -62,7 +62,7 @@ function B() {
         z = !w,
         Y = s.useRef(null);
     return t
-        ? (0, i.jsx)(h.Z, {})
+        ? (0, i.jsx)(g.Z, {})
         : (0, i.jsxs)(_.Gt, {
               value: V,
               children: [

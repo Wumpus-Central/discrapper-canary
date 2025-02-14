@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(906732),
     u = n(433811),
     m = n(214852),
-    h = n(626135),
-    g = n(533525),
+    g = n(626135),
+    h = n(533525),
     x = n(314684),
     _ = n(794484),
     p = n(536844),
@@ -31,7 +31,7 @@ let j = 'SubscriberNitroHome',
             { analyticsLocations: r } = (0, d.ZP)(c.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
             [A, O] = s.useState(!1);
         (0, x.FM)();
-        let R = (0, g.b)(j),
+        let R = (0, h.b)(j),
             P = (0, C.TW)(j),
             D = 'true' === new URLSearchParams(window.location.search).get('autoScroll');
         return (
@@ -77,7 +77,7 @@ let j = 'SubscriberNitroHome',
                                     (0, i.jsx)('div', { className: b.footerSpacing }),
                                     (0, i.jsx)(a.$, {
                                         onChange: (e) => {
-                                            e && !A && (h.default.track(S.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: r }), O(!0));
+                                            e && !A && (g.default.track(S.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: r }), O(!0));
                                         },
                                         children: (0, i.jsx)('div', { className: b.bottomOfPageVisibilitySensor })
                                     }),

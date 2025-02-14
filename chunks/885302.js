@@ -11,7 +11,7 @@ let a = (e, t) => (null != t ? t : e ? 0.5 : 0.2),
             d = (0, r.ZP)(),
             u = (0, s.ap)(d),
             m = a(u, t),
-            h = o(u, n);
+            g = o(u, n);
         return (0, i.jsxs)('svg', {
             style: { overflow: 'visible' },
             width: '80%',
@@ -83,7 +83,7 @@ let a = (e, t) => (null != t ? t : e ? 0.5 : 0.2),
                             cy: '57.0796',
                             rx: '56.3726',
                             ry: '56.3726',
-                            fill: null != n ? n : h,
+                            fill: null != n ? n : g,
                             fillOpacity: m
                         }),
                         (0, i.jsxs)('g', {

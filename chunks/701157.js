@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(653041);
+n.d(t, { Z: () => g }), n(653041);
 var i = n(200651),
     s = n(192379),
     r = n(442837),
@@ -9,18 +9,18 @@ var i = n(200651),
     d = n(300037),
     u = n(388032),
     m = n(161838);
-let h = function (e) {
+let g = function (e) {
     let { canAddBoosts: t, canApplyBoosts: n } = e,
-        h = (0, r.e7)([a.Z], () => a.Z.affinities),
-        g = (0, r.e7)([o.ZP], () => o.ZP.getFlattenedGuildIds()),
+        g = (0, r.e7)([a.Z], () => a.Z.affinities),
+        h = (0, r.e7)([o.ZP], () => o.ZP.getFlattenedGuildIds()),
         x = s.useMemo(() => {
-            let e = h.slice(0, 3).map((e) => e.guildId);
-            for (let t = 0; t < g.length && !(e.length >= 3); t++) {
-                let n = g[t];
+            let e = g.slice(0, 3).map((e) => e.guildId);
+            for (let t = 0; t < h.length && !(e.length >= 3); t++) {
+                let n = h[t];
                 e.includes(n) || e.push(n);
             }
             return e;
-        }, [h, g]);
+        }, [g, h]);
     return 0 === x.length
         ? null
         : (0, i.jsxs)('div', {
@@ -43,7 +43,7 @@ let h = function (e) {
                           e
                       )
                   ),
-                  g.length > 3 && n && (0, i.jsx)(c.Z, {})
+                  h.length > 3 && n && (0, i.jsx)(c.Z, {})
               ]
           });
 };

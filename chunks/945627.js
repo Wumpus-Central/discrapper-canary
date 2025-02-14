@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(372460),
     u = n(91896),
     m = n(768581),
-    h = n(136015),
-    g = n(695346),
+    g = n(136015),
+    h = n(695346),
     x = n(546957),
     _ = n(838436),
     p = n(51331),
@@ -42,24 +42,24 @@ function N() {
                 ];
             },
             [],
-            h.Q
+            g.Q
         ),
         n = (0, d.wn)({ location: 'GameFriendDMsSettingHeader' }),
-        g = (0, c.Z)(t, n),
+        h = (0, c.Z)(t, n),
         x = s.useMemo(() => {
             let e = [];
             for (let t = 0; t < 2; t++) {
-                let n = g[t];
+                let n = h[t];
                 if (null == n) break;
                 e.push(n.name);
             }
-            let t = g.length - 2;
+            let t = h.length - 2;
             return t > 0 && e.push(f.intl.format(f.t['EADv+/'], { count: t })), e.join(', ');
-        }, [g]),
+        }, [h]),
         _ = s.useMemo(() => {
             let e = [];
-            for (let t = 0; t < g.length; t++) {
-                let n = g[t];
+            for (let t = 0; t < h.length; t++) {
+                let n = h[t];
                 if (null == n) continue;
                 let { icon: s, name: r } = n;
                 if (null == s) continue;
@@ -84,7 +84,7 @@ function N() {
                     break;
             }
             return e;
-        }, [g]),
+        }, [h]),
         p = s.useCallback(() => {
             o.Z.open(C.oAB.AUTHORIZED_APPS);
         }, []);
@@ -136,7 +136,7 @@ function N() {
     });
 }
 function S() {
-    let e = g._j.useSetting();
+    let e = h._j.useSetting();
     return (0, i.jsxs)(x.Z, {
         children: [
             (0, i.jsx)(N, {}),
@@ -146,7 +146,7 @@ function S() {
                     title: f.intl.string(f.t['/U8Iwc']),
                     note: f.intl.string(f.t.WO2Hlp),
                     value: e,
-                    onChange: g._j.updateSetting
+                    onChange: h._j.updateSetting
                 })
             })
         ]

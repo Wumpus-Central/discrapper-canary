@@ -7,9 +7,9 @@ var i,
     s,
     l,
     a = n(200651),
-    r = n(192379),
-    o = n(120356),
-    d = n.n(o),
+    o = n(192379),
+    r = n(120356),
+    d = n.n(r),
     c = n(877921),
     u = n.n(c),
     h = n(481060),
@@ -18,11 +18,11 @@ var i,
     m = n(179683);
 let f = p.t_t.DEFAULT,
     v = 1,
-    Z = r.createContext({
+    Z = o.createContext({
         type: f,
         opacity: v
     }),
-    x = r.createContext(void 0),
+    x = o.createContext(void 0),
     S = (e) => {
         let { children: t, className: n, ...i } = e;
         return (0, a.jsx)(Z.Consumer, {
@@ -40,7 +40,7 @@ let f = p.t_t.DEFAULT,
             }
         });
     };
-class E extends (i = r.PureComponent) {
+class E extends (i = o.PureComponent) {
     render() {
         let { disableScroll: e, children: t, className: n } = this.props;
         return (0, a.jsx)(x.Consumer, {
@@ -74,11 +74,11 @@ class E extends (i = r.PureComponent) {
           })
         : (E[s] = l);
 let C = (e) => {
-        let { type: t = f, width: n, height: i, children: s, className: l, opacity: r = v, onClick: o } = e;
+        let { type: t = f, width: n, height: i, children: s, className: l, opacity: o = v, onClick: r } = e;
         return (0, a.jsx)(Z.Provider, {
             value: {
                 type: t,
-                opacity: r
+                opacity: o
             },
             children: (0, a.jsx)('div', {
                 className: d()(g.widget, g[u()(t)], l),
@@ -86,7 +86,7 @@ let C = (e) => {
                     width: n,
                     height: i
                 },
-                onClick: o,
+                onClick: r,
                 children: s
             })
         });
@@ -110,7 +110,7 @@ let C = (e) => {
         children: (e) => {
             let { opacity: s } = e,
                 l = { backgroundColor: 'rgba(54, 57, 63, '.concat('' + (null != n ? n : s), ')') };
-            if ('string' == typeof t.type) return r.cloneElement(t, { style: l });
+            if ('string' == typeof t.type) return o.cloneElement(t, { style: l });
             if (i.includes(t.type))
                 return (0, a.jsx)(x.Provider, {
                     value: l,
@@ -126,9 +126,9 @@ let C = (e) => {
     (C.Body = E),
     (C.Content = y),
     (C.Icon = (e) => {
-        let { icon: t, label: n, onClick: i, isActive: s, tooltipPosition: l = 'top', size: r = 20, isTutorial: o = !1 } = e;
+        let { icon: t, label: n, onClick: i, isActive: s, tooltipPosition: l = 'top', size: o = 20, isTutorial: r = !1 } = e;
         return (0, a.jsx)(h.ua7, {
-            text: o
+            text: r
                 ? (0, a.jsx)('div', {
                       className: g.tutorialTip,
                       children: n
@@ -136,24 +136,24 @@ let C = (e) => {
                 : n,
             'aria-label': n,
             position: l,
-            forceOpen: o,
-            color: o ? h.ua7.Colors.BRAND : h.ua7.Colors.BLACK,
+            forceOpen: r,
+            color: r ? h.ua7.Colors.BRAND : h.ua7.Colors.BLACK,
             children: (e) => {
-                let { onMouseEnter: l, onMouseLeave: o } = e;
+                let { onMouseEnter: l, onMouseLeave: r } = e;
                 return (0, a.jsx)(h.zxk, {
                     look: h.zxk.Looks.BLANK,
                     size: h.zxk.Sizes.NONE,
                     onClick: i,
                     onMouseEnter: l,
-                    onMouseLeave: o,
+                    onMouseLeave: r,
                     className: d()(g.icon, { [g.toggledIconOn]: s }),
                     innerClassName: m.flexCenter,
                     'aria-label': n,
                     children: (0, a.jsx)(t, {
                         color: 'currentColor',
                         size: 'custom',
-                        width: r,
-                        height: r,
+                        width: o,
+                        height: o,
                         role: 'img'
                     })
                 });

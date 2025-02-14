@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(724458), n(653041), n(47120);
+n.d(t, { Z: () => b }), n(724458), n(653041), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
@@ -12,12 +12,12 @@ var i = n(200651),
     _ = n(46145),
     p = n(814443),
     f = n(592125),
-    g = n(430824),
-    m = n(496675),
+    m = n(430824),
+    g = n(496675),
     v = n(699516),
     E = n(594174),
-    I = n(979651),
-    x = n(823379),
+    x = n(979651),
+    I = n(823379),
     C = n(981631),
     S = n(388032),
     Z = n(181435);
@@ -47,7 +47,7 @@ function y(e) {
 function O(e) {
     let { channel: t, currentVoiceChannel: n } = e,
         l = t.getGuildId(),
-        r = (0, a.e7)([g.Z], () => g.Z.getGuild(l), [l]),
+        r = (0, a.e7)([m.Z], () => m.Z.getGuild(l), [l]),
         o = t.id === (null == n ? void 0 : n.id);
     return null == r
         ? null
@@ -60,14 +60,14 @@ function O(e) {
               })
           });
 }
-function b(e) {
+function N(e) {
     let { channel: t } = e,
         n = (0, a.Wu)(
-            [I.Z, E.default, p.Z],
+            [x.Z, E.default, p.Z],
             () =>
-                Object.values(I.Z.getVoiceStatesForChannel(t.id))
+                Object.values(x.Z.getVoiceStatesForChannel(t.id))
                     .map((e) => E.default.getUser(e.userId))
-                    .filter(x.lm)
+                    .filter(I.lm)
                     .sort((e, t) => {
                         var n, i, l, r;
                         return (null !== (l = null === (n = p.Z.getUserAffinity(t.id)) || void 0 === n ? void 0 : n.affinity) && void 0 !== l ? l : 0) - (null !== (r = null === (i = p.Z.getUserAffinity(e.id)) || void 0 === i ? void 0 : i.affinity) && void 0 !== r ? r : 0);
@@ -87,7 +87,7 @@ function b(e) {
               disableUserPopout: !0
           });
 }
-function N(e) {
+function b(e) {
     let { currentVoiceChannel: t, onClose: n, onSelect: r } = e,
         o = (0, a.Wu)([v.Z, p.Z], () =>
             v.Z.getFriendIDs().sort((e, t) => {
@@ -105,23 +105,23 @@ function N(e) {
             [o]
         ),
         c = (0, a.Wu)(
-            [_.Z, I.Z, f.Z, m.Z],
+            [_.Z, x.Z, f.Z, g.Z],
             () => {
                 let e = new Set(
                         _.Z.getChannelHistory().reduce((e, t) => {
                             let n = f.Z.getChannel(t);
-                            return null != n && m.Z.can(C.Plq.CONNECT, n) && e.length < 5 && e.push(t), e;
+                            return null != n && g.Z.can(C.Plq.CONNECT, n) && e.length < 5 && e.push(t), e;
                         }, [])
                     ),
                     t = u
-                        .map((e) => I.Z.getDiscoverableVoiceStateForUser(e.id))
+                        .map((e) => x.Z.getDiscoverableVoiceStateForUser(e.id))
                         .reduce((t, n) => {
                             let i = null == n ? void 0 : n.channelId;
                             if (null == i) return t;
                             let l = f.Z.getChannel(i);
-                            return null != l && m.Z.can(C.Plq.CONNECT, l) && !e.has(i) && t.size < 3 && t.add(i), t;
+                            return null != l && g.Z.can(C.Plq.CONNECT, l) && !e.has(i) && t.size < 3 && t.add(i), t;
                         }, new Set());
-                return [...Array.from(e), ...t].map((e) => f.Z.getChannel(e)).filter(x.lm);
+                return [...Array.from(e), ...t].map((e) => f.Z.getChannel(e)).filter(I.lm);
             },
             [u]
         ),
@@ -154,7 +154,7 @@ function N(e) {
                             }),
                             icon: (0, i.jsx)('div', {
                                 className: Z.icon,
-                                children: (0, i.jsx)(b, {
+                                children: (0, i.jsx)(N, {
                                     channel: e,
                                     currentVoiceChannel: t
                                 })

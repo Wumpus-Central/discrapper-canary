@@ -10,8 +10,8 @@ var s = n(512722),
     d = n(126631),
     u = n(433411),
     m = n(532432),
-    h = n(134795),
-    g = n(513901),
+    g = n(134795),
+    h = n(513901),
     x = n(451392),
     _ = n(906364),
     p = n(621853),
@@ -150,7 +150,7 @@ function O(e) {
                         'decoration'
                     ),
                     (0, i.jsx)(
-                        g.Z,
+                        h.Z,
                         {
                             sectionTitle: (0, i.jsxs)(i.Fragment, {
                                 children: [
@@ -173,7 +173,7 @@ function O(e) {
                         'effect'
                     ),
                     (0, i.jsx)(
-                        h.Z,
+                        g.Z,
                         {
                             showRemoveBannerButton: Y,
                             errors: null == M ? void 0 : M.banner,

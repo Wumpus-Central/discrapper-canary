@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(47120);
+n.d(t, { Z: () => m }), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(904245),
@@ -12,17 +12,17 @@ var i = n(200651),
     _ = n(145597),
     p = n(981631),
     f = n(776439);
-function g(e) {
-    let { id: t, channel: n, onSend: g } = e,
-        m = (0, h.Z)(),
+function m(e) {
+    let { id: t, channel: n, onSend: m } = e,
+        g = (0, h.Z)(),
         { placeholder: v, accessibilityLabel: E } = (0, a.Z)({ channel: n }),
-        [I, x] = l.useState(() => (0, d.H2)()),
-        { textValue: C, richValue: S } = I,
+        [x, I] = l.useState(() => (0, d.H2)()),
+        { textValue: C, richValue: S } = x,
         [Z, y] = l.useState(!1),
         O = l.useCallback(() => y(!0), []),
-        b = l.useCallback(() => y(!1), []),
-        N = l.useCallback((e, t, n) => {
-            x({
+        N = l.useCallback(() => y(!1), []),
+        b = l.useCallback((e, t, n) => {
+            I({
                 textValue: t,
                 richValue: n
             });
@@ -35,24 +35,24 @@ function g(e) {
         ),
         w = l.useCallback(
             () => (
-                C.length > m || (r.Z.sendMessage(n.id, c.ZP.parse(n, C), !1), o.Z.setInputLocked(!0, (0, _.QF)()), o.Z.updateNotificationStatus(t, p._1z.DISMISSED), null == g || g(C)),
+                C.length > g || (r.Z.sendMessage(n.id, c.ZP.parse(n, C), !1), o.Z.setInputLocked(!0, (0, _.QF)()), o.Z.updateNotificationStatus(t, p._1z.DISMISSED), null == m || m(C)),
                 Promise.resolve({
                     shouldClear: !1,
                     shouldRefocus: !0
                 })
             ),
-            [C, m, n, t, g]
+            [C, g, n, t, m]
         );
     return (0, i.jsx)(u.Z, {
         innerClassName: f.textArea,
-        onChange: N,
+        onChange: b,
         placeholder: v,
         accessibilityLabel: E,
         channel: n,
         textValue: C,
         richValue: S,
         type: s.Ie.OVERLAY_INLINE_REPLY,
-        onBlur: b,
+        onBlur: N,
         onFocus: O,
         focused: Z,
         onSubmit: w,
