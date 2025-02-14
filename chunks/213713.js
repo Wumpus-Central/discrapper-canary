@@ -22,8 +22,8 @@ var a = n(200651),
     N = n(550532),
     T = n(71585),
     E = n(146282),
-    S = n(780106),
-    y = n(650613),
+    y = n(780106),
+    S = n(650613),
     k = n(789086),
     R = n(206583),
     I = n(166470),
@@ -193,7 +193,7 @@ function A() {
                     ]
                 }),
                 !1,
-                (0, a.jsx)(y.Z, {}),
+                (0, a.jsx)(S.Z, {}),
                 (0, a.jsxs)(m.hjN, {
                     children: [
                         (0, a.jsx)(m.vwX, { children: 'Game Profile' }),
@@ -217,7 +217,7 @@ function A() {
                             children: 'Force show game:'
                         }),
                         (0, a.jsx)(m.PhF, {
-                            options: S.h.map((e) => ({
+                            options: y.h.map((e) => ({
                                 label: e,
                                 value: e
                             })),

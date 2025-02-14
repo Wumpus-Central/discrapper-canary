@@ -23,8 +23,8 @@ var g = n(392750),
     N = n(789654),
     T = n(719672),
     E = n(691867),
-    S = n(916790),
-    y = n(645973),
+    y = n(916790),
+    S = n(645973),
     k = n(903502),
     R = n(912072),
     I = n(272193),
@@ -83,7 +83,7 @@ function q() {
                 {
                     id: 'dispatcher',
                     name: 'Dispatcher',
-                    render: () => (0, a.jsx)(S.Z, {})
+                    render: () => (0, a.jsx)(y.Z, {})
                 }
             ];
             return (
@@ -97,7 +97,7 @@ function q() {
                     (e.push({
                         id: 'end_to_end_encryption',
                         name: 'E2EE',
-                        render: () => (0, a.jsx)(y.Z, {})
+                        render: () => (0, a.jsx)(S.Z, {})
                     }),
                     e.push({
                         id: 'clans',

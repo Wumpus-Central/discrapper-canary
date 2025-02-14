@@ -22,8 +22,8 @@ var r,
     N = n(358085),
     T = n(960048),
     E = n(998502),
-    S = n(981631);
-function y(e, t, n) {
+    y = n(981631);
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -98,13 +98,13 @@ if (R) {
                 null != e[this.id] && (delete e[this.id], E.ZP.send('NOTIFICATION_CLOSE', this.id), this.onclose());
             }
             constructor(t, { body: n, icon: a }) {
-                y(this, 'id', M._id++),
-                    y(this, 'title', void 0),
-                    y(this, 'body', void 0),
-                    y(this, 'icon', void 0),
-                    y(this, 'onshow', function () {}),
-                    y(this, 'onclick', function () {}),
-                    y(this, 'onclose', function () {}),
+                S(this, 'id', M._id++),
+                    S(this, 'title', void 0),
+                    S(this, 'body', void 0),
+                    S(this, 'icon', void 0),
+                    S(this, 'onshow', function () {}),
+                    S(this, 'onclick', function () {}),
+                    S(this, 'onclose', function () {}),
                     (this.title = t),
                     (this.body = n),
                     (this.icon = a),
@@ -118,8 +118,8 @@ if (R) {
                     });
             }
         }),
-        y(r, 'permission', 'granted'),
-        y(r, '_id', 0),
+        S(r, 'permission', 'granted'),
+        S(r, '_id', 0),
         (M = r);
 }
 let F = {};
@@ -130,7 +130,7 @@ if (null === c.Z || void 0 === c.Z ? void 0 : c.Z.features.supports('notificatio
             else {
                 var a, r, l;
                 let e = F[n];
-                (null == e ? void 0 : null === (a = e.options) || void 0 === a ? void 0 : a.omitClickTracking) || j.default.track(S.rMx.NOTIFICATION_CLICKED, null == e ? void 0 : e.trackingProps), null == e || null === (l = e.options) || void 0 === l || null === (r = l.onClick) || void 0 === r || r.call(l);
+                (null == e ? void 0 : null === (a = e.options) || void 0 === a ? void 0 : a.omitClickTracking) || j.default.track(y.rMx.NOTIFICATION_CLICKED, null == e ? void 0 : e.trackingProps), null == e || null === (l = e.options) || void 0 === l || null === (r = l.onClick) || void 0 === r || r.call(l);
             }
         }),
             E.ZP.invoke('NOTIFICATIONS_REMOVE_ALL_NOTIFICATIONS');
@@ -189,7 +189,7 @@ let H = {
             _ = x && (null == m ? void 0 : m.sound) === !0,
             g = (e) => {
                 var t;
-                null === (t = r.onShown) || void 0 === t || t.call(r), r.omitViewTracking || j.default.track(S.rMx.NOTIFICATION_VIEWED, a), Z && setTimeout(() => e.close(), 5000);
+                null === (t = r.onShown) || void 0 === t || t.call(r), r.omitViewTracking || j.default.track(y.rMx.NOTIFICATION_VIEWED, a), Z && setTimeout(() => e.close(), 5000);
             };
         if (
             (null == r.sound || _ || z(r.sound, null !== (o = r.volume) && void 0 !== o ? o : 1, r.soundpack),
@@ -258,7 +258,7 @@ let H = {
             }
         }
         null != r.sound && x && z(r.sound, null !== (s = r.volume) && void 0 !== s ? s : 1, r.soundpack);
-        let y = {
+        let S = {
             icon: e,
             body: n,
             tag: u,
@@ -266,14 +266,14 @@ let H = {
         };
         k && f.Z.taskbarFlash && E.ZP.flashFrame(!0);
         try {
-            c = new M(t, y);
+            c = new M(t, S);
         } catch (e) {
             return null;
         }
         return (g(c),
         (c.onclick = () => {
             var e;
-            N.isPlatformEmbedded ? E.ZP.focus() : (window.focus(), c.close()), r.omitClickTracking || j.default.track(S.rMx.NOTIFICATION_CLICKED, a), null === (e = r.onClick) || void 0 === e || e.call(r);
+            N.isPlatformEmbedded ? E.ZP.focus() : (window.focus(), c.close()), r.omitClickTracking || j.default.track(y.rMx.NOTIFICATION_CLICKED, a), null === (e = r.onClick) || void 0 === e || e.call(r);
         }),
         I)
             ? c

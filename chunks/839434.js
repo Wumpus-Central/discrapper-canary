@@ -339,7 +339,7 @@ class es extends (i = l.PureComponent) {
             en(this, 'handleUserContextMenu', (e, t) => {
                 let { context: i } = this.props;
                 (0, h.jW)(e, async () => {
-                    let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('45078')]).then(n.bind(n, 881351));
+                    let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('4616')]).then(n.bind(n, 881351));
                     return (n) =>
                         (0, s.jsx)(e, {
                             ...n,

@@ -48,7 +48,7 @@ function v(e) {
             }),
             (0, i.jsx)(c.Text, {
                 variant: 'text-xs/semibold',
-                color: 'text-positive',
+                color: 'currentColor',
                 className: f.barText,
                 children: g.intl.format(g.t['fDlr+P'], { count: _.length })
             }),

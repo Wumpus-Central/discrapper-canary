@@ -1,6 +1,6 @@
 n.d(t, {
     P: () => j,
-    Z: () => _
+    Z: () => w
 });
 var l = n(200651);
 n(192379);
@@ -45,9 +45,9 @@ function P(e) {
     });
 }
 let j = u.Z.Types,
-    _ = function (e) {
-        let { activity: t, user: n, useStoreStream: i = !0, showActions: s = !0, hideHeader: c = !1, showChannelDetails: N = !1, analyticsParams: j, ..._ } = e,
-            w = (0, a.e7)([T.Z, x.Z], () => {
+    w = function (e) {
+        let { activity: t, user: n, useStoreStream: i = !0, showActions: s = !0, hideHeader: c = !1, showChannelDetails: N = !1, analyticsParams: j, ...w } = e,
+            _ = (0, a.e7)([T.Z, x.Z], () => {
                 var e;
                 return x.Z.getChannel(null === (e = T.Z.getVoiceStateForUser(n.id)) || void 0 === e ? void 0 : e.channelId);
             }),
@@ -64,7 +64,7 @@ let j = u.Z.Types,
         return (null == t ? void 0 : t.type) === y.IIU.HANG_STATUS
             ? null
             : (0, l.jsx)(u.Z, {
-                  ..._,
+                  ...w,
                   activity: t,
                   user: n,
                   application: M,
@@ -72,14 +72,14 @@ let j = u.Z.Types,
                   activityGuild: null != R ? R : L,
                   showReactions: U,
                   showChannelDetails: N,
-                  channel: N ? w : void 0,
+                  channel: N ? _ : void 0,
                   renderActions: s
                       ? () =>
                             (0, l.jsxs)('div', {
                                 className: r()(U && C.actionsWrapper),
                                 children: [
                                     (0, l.jsx)(P, {
-                                        ..._,
+                                        ...w,
                                         applicationStream: b,
                                         activity: t,
                                         user: n

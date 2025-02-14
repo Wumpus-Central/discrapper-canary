@@ -22,7 +22,7 @@ var a = n(200651),
     N = n(388032),
     T = n(822295),
     E = n(658951);
-let S = [
+let y = [
     {
         key: 'event',
         cellClassName: T.eventColumn,
@@ -40,7 +40,7 @@ let S = [
         }
     }
 ];
-function y(e) {
+function S(e) {
     let { children: t } = e;
     return (0, a.jsx)(u.zJl, {
         className: T.customPropertiesContainer,
@@ -115,7 +115,7 @@ let R = [
                                 })
                             ]
                         }),
-                        (0, a.jsx)(y, {
+                        (0, a.jsx)(S, {
                             children: Object.entries(n).map((e) => {
                                 let [t, n] = e;
                                 return (0, a.jsx)(
@@ -200,7 +200,7 @@ function O() {
                 ),
             []
         ),
-        y = r.useMemo(
+        S = r.useMemo(
             () =>
                 m.filter((e) => {
                     for (let t of c) if (I[t].filter(e)) return !0;
@@ -212,7 +212,7 @@ function O() {
         g(t, s);
     }, [t, g, s]);
     let [k, O] = r.useState(void 0),
-        Z = y.find((e) => e.key === k),
+        Z = S.find((e) => e.key === k),
         { TabBar: w, renderSelectedTab: A } = (0, C.Z)({ tabs: R }, []);
     return (0, a.jsxs)('div', {
         ref: e,
@@ -266,8 +266,8 @@ function O() {
                 })
             }),
             (0, a.jsx)(j.Z, {
-                columns: S,
-                data: y,
+                columns: y,
+                data: S,
                 selectedRowKey: k,
                 onClickRow: (e) => O(e.key)
             }),

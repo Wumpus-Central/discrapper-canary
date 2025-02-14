@@ -22,8 +22,8 @@ var a = n(200651),
     N = n(246992),
     T = n(981631),
     E = n(501787),
-    S = n(435264),
-    y = n(658951);
+    y = n(435264),
+    S = n(658951);
 let k = {
         [T.Odu.CLICK_ZONE_DEBUG]: (e) => ({
             type: T.Odu.CLICK_ZONE_DEBUG,
@@ -63,7 +63,7 @@ function I(e) {
         n = (0, s.e7)([m.ZP], () => m.ZP.getGameForPID(t.pid)),
         r = (0, s.e7)([g.Z], () => g.Z.getGameForPID(t.pid));
     return (0, a.jsxs)('div', {
-        className: S.panelGroup,
+        className: y.panelGroup,
         children: [
             (0, a.jsx)(c.Text, {
                 variant: 'text-md/bold',
@@ -347,10 +347,10 @@ function w() {
         q = z.filter((e) => null == D[e.pid]);
     return (0, a.jsx)(c.w0Z, {
         children: (0, a.jsxs)('div', {
-            className: i()(y.panel, S.panel),
+            className: i()(S.panel, y.panel),
             children: [
                 (0, a.jsxs)('div', {
-                    className: S.panelGroup,
+                    className: y.panelGroup,
                     children: [
                         (0, a.jsx)(c.ua7, {
                             position: 'left',
@@ -444,7 +444,7 @@ function w() {
                     children: (e) =>
                         (0, a.jsx)('div', {
                             ...e,
-                            className: S.panelGroup,
+                            className: y.panelGroup,
                             children: (0, a.jsx)(c.PhF, {
                                 serialize: (e) => e,
                                 isSelected: (e) => e === w,
@@ -462,7 +462,7 @@ function w() {
                             (0, a.jsx)('div', {
                                 ...e,
                                 children: (0, a.jsxs)('div', {
-                                    className: S.panelGroup,
+                                    className: y.panelGroup,
                                     children: [
                                         (0, a.jsx)(c.Text, {
                                             variant: 'text-md/bold',
@@ -491,7 +491,7 @@ function w() {
                         (0, a.jsx)('div', {
                             ...e,
                             children: (0, a.jsxs)('div', {
-                                className: S.panelGroup,
+                                className: y.panelGroup,
                                 children: [
                                     0 === Object.keys(D).length &&
                                         (0, a.jsx)(c.Text, {
@@ -505,7 +505,7 @@ function w() {
                         })
                 }),
                 (0, a.jsxs)('div', {
-                    className: S.panelGroup,
+                    className: y.panelGroup,
                     children: [
                         0 === Object.keys(D).length &&
                             (0, a.jsx)(c.Text, {
@@ -547,7 +547,7 @@ function w() {
                         (0, a.jsx)('div', {
                             ...e,
                             children: (0, a.jsxs)('div', {
-                                className: S.panelGroup,
+                                className: y.panelGroup,
                                 children: [
                                     0 === Object.keys(D).length &&
                                         (0, a.jsx)(c.Text, {

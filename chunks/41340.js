@@ -67,8 +67,8 @@ function g(e) {
     let { subscription: g, onUpdated: v } = e,
         [j, C] = r.useState(!1),
         [N, T] = r.useState(!1),
-        [E, S] = r.useState(null),
-        y = (e) => ((null == e && (e = g.status), e in f) ? f[e] : 'Unknown status '.concat(e)),
+        [E, y] = r.useState(null),
+        S = (e) => ((null == e && (e = g.status), e in f) ? f[e] : 'Unknown status '.concat(e)),
         k = (e) => {
             let t = new Date(e);
             return u.default.fromTimestamp(t.getTime());
@@ -100,7 +100,7 @@ function g(e) {
                     rejectWithError: !1
                 });
             } catch (e) {
-                S(e.body.message);
+                y(e.body.message);
             }
             v();
         },
@@ -134,7 +134,7 @@ function g(e) {
                 (0, a.jsxs)(s.Text, {
                     style: { marginBottom: '15px' },
                     variant: 'text-md/normal',
-                    children: ['Status: ', y()]
+                    children: ['Status: ', S()]
                 }),
                 null != g.metadata &&
                     (0, a.jsxs)('div', {
@@ -207,7 +207,7 @@ function g(e) {
                                         tag: s.RB0.H3,
                                         className: _.formSection,
                                         children: (0, a.jsx)(s.PhF, {
-                                            serialize: (e) => y(e),
+                                            serialize: (e) => S(e),
                                             isSelected: (e) => e === g.status,
                                             options: b,
                                             select: (e) => R({ status: e }),
@@ -227,7 +227,7 @@ function g(e) {
                                             null !== E &&
                                                 (0, a.jsx)(s.kzN, {
                                                     className: _.error,
-                                                    onDismiss: () => S(null),
+                                                    onDismiss: () => y(null),
                                                     children: E
                                                 })
                                         ]

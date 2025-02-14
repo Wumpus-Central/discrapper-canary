@@ -59,7 +59,7 @@ function v() {
                 t
             );
         }),
-        S = Object.values(null != T ? T : {}).map((e) => {
+        y = Object.values(null != T ? T : {}).map((e) => {
             let { title: t, flag: n } = e,
                 r = i.e$(j, n);
             return (0, a.jsx)(
@@ -93,7 +93,7 @@ function v() {
                             variant: 'heading-md/semibold',
                             children: null != r ? 'Permissions in '.concat(r.name) : 'No guild selected'
                         }),
-                        S
+                        y
                     ]
                 })
             ]

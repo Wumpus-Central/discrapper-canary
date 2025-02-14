@@ -3,8 +3,8 @@ var l = n(200651),
     i = n(192379),
     r = n(442837),
     a = n(481060),
-    u = n(239091),
-    o = n(883385),
+    o = n(239091),
+    u = n(883385),
     d = n(108843),
     s = n(2052),
     c = n(100527),
@@ -26,14 +26,14 @@ var l = n(200651),
     U = n(981631),
     h = n(388032);
 let y = (0, d.Z)(
-    (0, o.Z)(
+    (0, u.Z)(
         function (e) {
             var t;
-            let { user: n, guildId: o, channelId: d, context: U, onSelect: y, moderationAlertId: D, analyticsLocation: P, analyticsLocations: R, onCloseContextMenu: L, showTransferOwnershipItem: b } = e,
+            let { user: n, guildId: u, channelId: d, context: U, onSelect: y, moderationAlertId: D, analyticsLocation: P, analyticsLocations: R, onCloseContextMenu: L, showTransferOwnershipItem: b } = e,
                 { analyticsLocations: p } = (0, E.ZP)(c.Z.CONTEXT_MENU),
                 j = (0, s.O)(),
                 x = null !== (t = null == R ? void 0 : R[0]) && void 0 !== t ? t : p[0],
-                G = (0, f.sE)(o, {
+                G = (0, f.sE)(u, {
                     location: x,
                     targetUserId: n.id
                 }),
@@ -41,22 +41,22 @@ let y = (0, d.Z)(
                     [A.Z],
                     () => {
                         var e;
-                        return null !== (e = A.Z.getUserVoiceChannelId(o, n.id)) && void 0 !== e ? e : void 0;
+                        return null !== (e = A.Z.getUserVoiceChannelId(u, n.id)) && void 0 !== e ? e : void 0;
                     },
-                    [o, n.id]
+                    [u, n.id]
                 ),
                 k = i.useCallback(() => {
                     G(f.jQ.COPY_ID);
                 }, [G]),
-                w = (0, r.e7)([M.ZP], () => M.ZP.isMember(o, n.id), [o, n.id]),
+                w = (0, r.e7)([M.ZP], () => M.ZP.isMember(u, n.id), [u, n.id]),
                 q = (0, T.Z)({
                     userId: n.id,
-                    guildId: o,
+                    guildId: u,
                     sourceAnalyticsLocations: R
                 }),
                 F = (0, I.Z)(n.id, U),
                 K = (0, g.Z)({
-                    guildId: o,
+                    guildId: u,
                     userId: n.id,
                     analyticsLocation: null != P ? P : j.location,
                     analyticsLocations: [x],
@@ -64,31 +64,31 @@ let y = (0, d.Z)(
                 }),
                 V = (0, N.Z)({
                     user: n,
-                    guildId: o,
+                    guildId: u,
                     location: x,
                     channelId: d
                 }),
                 W = (0, O.Z)({
                     user: n,
-                    guildId: o,
+                    guildId: u,
                     location: x,
                     channelId: d
                 }),
-                Y = (0, Z.Z)(n, o, null != d ? d : B, x),
+                Y = (0, Z.Z)(n, u, null != d ? d : B, x),
                 H = (0, S.Z)(d, D),
-                Q = (0, v.Z)(n, o),
-                X = (0, C.Z)(n.id, o, !1, x),
+                Q = (0, v.Z)(n, u),
+                X = (0, C.Z)(n.id, u, !1, x),
                 J = (0, _.Z)({
                     id: n.id,
                     label: h.intl.string(h.t['/AXYnJ']),
                     onSuccess: k
                 }),
-                z = (0, m.Z)(n, o),
+                z = (0, m.Z)(n, u),
                 $ = !!(null == n ? void 0 : n.isNonUserBot());
             return (0, l.jsxs)(a.v2r, {
                 navId: 'user-context',
                 onClose: () => {
-                    (0, u.Zy)(), null == L || L();
+                    (0, o.Zy)(), null == L || L();
                 },
                 'aria-label': h.intl.string(h.t.liqwPD),
                 onSelect: y,

@@ -5,8 +5,8 @@ var r = e(481060),
     l = e(239091),
     s = e(410575),
     a = e(108843),
-    d = e(100527),
-    c = e(299206),
+    c = e(100527),
+    d = e(299206),
     u = e(88966),
     o = e(37258),
     h = e(981631),
@@ -14,8 +14,8 @@ var r = e(481060),
 let f = (0, a.Z)(
     function (n) {
         let { user: t, analyticsContext: e, onSelect: a } = n,
-            d = (0, o.Z)({ userId: t.id }),
-            f = (0, c.Z)({
+            c = (0, o.Z)({ userId: t.id }),
+            f = (0, d.Z)({
                 id: t.id,
                 label: Z.intl.string(Z.t['/AXYnJ'])
             }),
@@ -31,12 +31,12 @@ let f = (0, a.Z)(
                 onSelect: a,
                 children: [
                     (0, i.jsxs)(r.kSQ, {
-                        children: [!v && d, !v && p]
+                        children: [!v && c, !v && p]
                     }),
                     (0, i.jsx)(r.kSQ, { children: f })
                 ]
             })
         });
     },
-    [d.Z.CONTEXT_MENU, d.Z.BANNED_USER_MENU]
+    [c.Z.CONTEXT_MENU, c.Z.BANNED_USER_MENU]
 );

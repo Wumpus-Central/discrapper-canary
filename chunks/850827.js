@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => _ });
 var l = n(200651);
 n(192379);
 var i = n(120356),
@@ -27,9 +27,9 @@ var i = n(120356),
     C = n(757182),
     P = n(910424),
     j = n(981631),
-    _ = n(701491);
-let w = (0, c.Z)((e) => {
-    let { activity: t, embeddedActivity: n, user: i, applicationStream: a, className: c, guildId: w, channelId: b, source: R, color: L = u.zxk.Colors.WHITE, look: M = u.zxk.Looks.OUTLINED, type: O, onAction: D } = e,
+    w = n(701491);
+let _ = (0, c.Z)((e) => {
+    let { activity: t, embeddedActivity: n, user: i, applicationStream: a, className: c, guildId: _, channelId: b, source: R, color: L = u.zxk.Colors.WHITE, look: M = u.zxk.Looks.OUTLINED, type: O, onAction: D } = e,
         U = (0, o.e7)([h.default], () => {
             let e = h.default.getCurrentUser();
             return s()(null != e, 'UserActivityActions: currentUser cannot be undefined'), e;
@@ -43,7 +43,7 @@ let w = (0, c.Z)((e) => {
         align: m.Z.Align.STRETCH,
         direction: B,
         wrap: F ? m.Z.Wrap.WRAP : m.Z.Wrap.NO_WRAP,
-        className: r()(c, _.buttonsWrapper, F ? _.vertical : _.horizontal),
+        className: r()(c, w.buttonsWrapper, F ? w.vertical : w.horizontal),
         children: (() => {
             if ((0, S.Z)(t))
                 return (0, l.jsx)(
@@ -75,7 +75,7 @@ let w = (0, c.Z)((e) => {
                         {
                             activity: t,
                             user: i,
-                            guildId: w,
+                            guildId: _,
                             channelId: b,
                             source: R,
                             look: M,

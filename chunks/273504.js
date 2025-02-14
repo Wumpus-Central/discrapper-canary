@@ -3,8 +3,8 @@ n.d(t, {
     Ic: () => N,
     Lg: () => Z,
     OU: () => M,
-    RH: () => o,
-    Ux: () => u,
+    RH: () => u,
+    Ux: () => o,
     VW: () => c,
     Vg: () => A,
     Vk: () => _,
@@ -22,9 +22,9 @@ var l,
     i = n(401653),
     r = n(95930),
     a = n(41381),
-    u = (((l = {})[(l.PROFANITY = 1)] = 'PROFANITY'), (l[(l.SEXUAL_CONTENT = 2)] = 'SEXUAL_CONTENT'), (l[(l.SLURS = 3)] = 'SLURS'), l);
+    o = (((l = {})[(l.PROFANITY = 1)] = 'PROFANITY'), (l[(l.SEXUAL_CONTENT = 2)] = 'SEXUAL_CONTENT'), (l[(l.SLURS = 3)] = 'SLURS'), l);
 a.f.USER_PROFILE, a.f.SERVER_POLICY, a.f.MENTION_SPAM, a.f.ML_SPAM, a.f.DEFAULT_KEYWORD_LIST, a.f.KEYWORD;
-let o = 1000,
+let u = 1000,
     d = 100,
     s = 1000,
     c = 10,

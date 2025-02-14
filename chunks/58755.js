@@ -99,7 +99,7 @@ function b(e) {
     let { scale: t, setState: n, onClose: r } = e,
         { name: c, base: p, darkness: f, lightness: b, showColumnarPalettePreview: g, colorSpace: j, easingStrength: C = 1, useP3ColorSpace: N, steps: T = 26 } = t,
         E = (0, m.XM)(t),
-        S = (0, m.W6)(E, c);
+        y = (0, m.W6)(E, c);
     return (0, a.jsxs)(d.hjN, {
         className: x.paletteSettings,
         children: [
@@ -269,7 +269,7 @@ function b(e) {
                                 let [r, c] = e,
                                     u = (0, m.HI)(c),
                                     h = (0, o.Z)((0, s.Z)('black'), c) > 4.5 ? 'black' : 'white',
-                                    x = S[r];
+                                    x = y[r];
                                 return (0, a.jsxs)(
                                     'div',
                                     {

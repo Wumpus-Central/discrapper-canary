@@ -36,7 +36,7 @@ function S(e) {
     if (null == I) return null;
     let j = (0, c.P9)(y);
     t ? (j = p.intl.string(p.t.XvBdeX)) : C && (j = p.intl.string(p.t.JH1SJy));
-    let _ = {
+    let w = {
         color: n,
         look: S
     };
@@ -47,7 +47,7 @@ function S(e) {
                 {
                     disabled: t || C || !N,
                     onClick: () => P(!1),
-                    ..._,
+                    ...w,
                     fullWidth: !0,
                     children: [
                         (0, l.jsx)(r.hGI, {
@@ -70,7 +70,7 @@ function S(e) {
                                   var t;
                                   null === (t = e.onClick) || void 0 === t || t.call(e), P(!0);
                               },
-                              ..._,
+                              ...w,
                               className: v.iconButton,
                               size: v.iconButtonSize,
                               children: (0, l.jsx)(r.OgY, {

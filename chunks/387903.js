@@ -31,8 +31,8 @@ var l,
     C = n(630388),
     P = n(153066),
     j = n(740265),
-    _ = n(122810),
-    w = n(833664),
+    w = n(122810),
+    _ = n(833664),
     b = n(503438),
     R = n(802856),
     L = n(420660),
@@ -267,7 +267,7 @@ class W extends (l = a.PureComponent) {
     }
     renderGameImage(e) {
         let { user: t, type: n, application: l, activityGuild: i } = this.props;
-        return null != e.assets || (0, _.Z)(e) || e.type !== D.IIU.PLAYING || 'ActivityFeed' === n || t.bot
+        return null != e.assets || (0, w.Z)(e) || e.type !== D.IIU.PLAYING || 'ActivityFeed' === n || t.bot
             ? null
             : null == l && null != i
               ? (0, r.jsx)('div', { className: o()(k.gameIcon, k.screenshareIcon) })
@@ -281,7 +281,7 @@ class W extends (l = a.PureComponent) {
         if (l) return null;
         let { details: i, type: a } = e;
         if (a === D.IIU.CUSTOM_STATUS) return null;
-        let s = (0, w.Z)(e),
+        let s = (0, _.Z)(e),
             u = e.name,
             c = u;
         return (s && null != n
@@ -314,7 +314,7 @@ class W extends (l = a.PureComponent) {
             i = n,
             a = n;
         if (e.type === D.IIU.CUSTOM_STATUS) i = l;
-        else if (!(0, w.Z)(e)) {
+        else if (!(0, _.Z)(e)) {
             if (((i = l), (a = l), (0, b.Z)(e) && null != l))
                 i = U.intl.format(U.t.uU9le3, {
                     artists: a,
@@ -389,11 +389,11 @@ class W extends (l = a.PureComponent) {
     }
     renderTimePlayed(e) {
         let { activityGuild: t } = this.props;
-        if (!(0, w.Z)(e) || (0, b.Z)(e)) return null;
+        if (!(0, _.Z)(e) || (0, b.Z)(e)) return null;
         let { timestamps: n } = e;
         return null == n
             ? null
-            : (0, _.Z)(e)
+            : (0, w.Z)(e)
               ? (0, r.jsx)(z, { timestamps: n })
               : (0, r.jsx)(Z.ZP, {
                     start: n.start,
@@ -422,7 +422,7 @@ class W extends (l = a.PureComponent) {
         let { state: a, party: s, assets: o } = e,
             u = a,
             c = a;
-        return (!(0, w.Z)(e) &&
+        return (!(0, _.Z)(e) &&
             ((u = null == o ? void 0 : o.large_text),
             (c = null == o ? void 0 : o.large_text),
             (0, b.Z)(e) &&

@@ -57,7 +57,7 @@ function E(e) {
         })
     });
 }
-let S = [
+let y = [
     {
         id: 'action',
         name: 'Action',
@@ -101,13 +101,13 @@ let S = [
         }
     }
 ];
-function y(e) {
+function S(e) {
     let { actionLog: t, initialHeight: n } = e,
         l = r.useMemo(
             () =>
                 t.error
                     ? [
-                          ...S,
+                          ...y,
                           {
                               id: 'error',
                               name: (0, a.jsxs)(a.Fragment, {
@@ -138,7 +138,7 @@ function y(e) {
                               }
                           }
                       ]
-                    : S,
+                    : y,
             [t]
         ),
         { TabBar: o, renderSelectedTab: s } = (0, v.Z)({ tabs: l }, [l]);
@@ -259,8 +259,8 @@ function R() {
         r.useEffect(() => {
             N.current = null;
         }, []);
-    let S = t.trim().length > 0,
-        R = r.useMemo(() => (S ? x : p ? c : s), [s, x, S, p, c]);
+    let y = t.trim().length > 0,
+        R = r.useMemo(() => (y ? x : p ? c : s), [s, x, y, p, c]);
     return (0, a.jsxs)('div', {
         ref: e,
         className: i()(C.panel, j.panel),
@@ -292,7 +292,7 @@ function R() {
                 onClickRow: (e) => v(e.actionLog)
             }),
             null != b &&
-                (0, a.jsx)(y, {
+                (0, a.jsx)(S, {
                     actionLog: b,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300
                 })
