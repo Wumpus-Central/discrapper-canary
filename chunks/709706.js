@@ -116,6 +116,9 @@ class v extends (i = o.ZP.Store) {
     isNativeModuleLoading() {
         return _.nativeVoiceFilterModuleState === u.O.LOADING;
     }
+    hasNativeModuleFailed() {
+        return _.nativeVoiceFilterModuleState === u.O.FAILED;
+    }
 }
 function y() {
     let e = h(_.limitedTimeVoices);
