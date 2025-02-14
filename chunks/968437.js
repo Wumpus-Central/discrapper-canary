@@ -1,38 +1,35 @@
 n.d(t, {
-    WD: () => f,
-    nt: () => d
+    WD: () => u,
+    nt: () => l
 });
 var i = n(404759),
     r = n.n(i);
 n(913527);
-var a = n(124368),
-    s = n(388032);
-let o = 60,
-    l = 1440,
-    u = 4320,
-    c = 10080;
-function d() {
+var a = n(70956),
+    s = n(124368),
+    o = n(388032);
+function l() {
     return [
         {
-            label: s.intl.string(s.t.cs8A1d),
-            value: o
+            label: o.intl.string(o.t.cs8A1d),
+            value: a.Z.Minutes.HOUR
         },
         {
-            label: s.intl.string(s.t.zFKbrK),
-            value: l
+            label: o.intl.string(o.t.zFKbrK),
+            value: a.Z.Minutes.DAY
         },
         {
-            label: s.intl.string(s.t.TmPIZW),
-            value: u
+            label: o.intl.string(o.t.TmPIZW),
+            value: 3 * a.Z.Minutes.DAY
         },
         {
-            label: s.intl.string(s.t['/7i2en']),
-            value: c
+            label: o.intl.string(o.t['/7i2en']),
+            value: a.Z.Minutes.WEEK
         }
     ];
 }
-function f(e, t) {
+function u(e, t) {
     var n;
-    return null !== (n = null != t ? t : null == e ? void 0 : e.defaultAutoArchiveDuration) && void 0 !== n ? n : a.AX;
+    return null !== (n = null != t ? t : null == e ? void 0 : e.defaultAutoArchiveDuration) && void 0 !== n ? n : s.AX;
 }
-r()(() => d().map((e) => e.value));
+a.Z.Minutes.HOUR, a.Z.Minutes.DAY, a.Z.Minutes.DAY, a.Z.Minutes.WEEK, r()(() => l().map((e) => e.value));
