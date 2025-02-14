@@ -26,7 +26,12 @@ let u = {
         [r.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL]: 0,
         [r.z.TRIAL_NUX_EMOJI_BUTTON]: 0,
         [r.z.TRIAL_NUX_EMOJI_PICKER]: 0,
-        [r.z.TRIAL_NUX_STREAM_COACH_MARK]: 0
+        [r.z.TRIAL_NUX_STREAM_COACH_MARK]: 0,
+        [r.z.OVERLAY_OOP_SETTINGS_NUX]: 0,
+        [r.z.OVERLAY_OOP_WELCOME_NUX]: 0,
+        [r.z.OVERLAY_OOP_WELCOME_BACKGROUND_NUX]: 0,
+        [r.z.OVERLAY_OOP_WELCOME_SWITCH_FROM_IP_NUX]: 0,
+        [r.z.OVERLAY_OOP_WELCOME_BACKGROUND_SWITCH_FROM_IP_NUX]: 0
     },
     c = s.Z.Millis.DAY;
 function d(e) {

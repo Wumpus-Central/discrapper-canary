@@ -86,8 +86,9 @@ function v(e) {
     let i = m[n];
     return null != i && i(e);
 }
-function y(e, t) {
+function y(e, t, n) {
     if (e.overlayMethod !== i.gl.OutOfProcess && e.overlayMethod !== i.gl.OutOfProcessLimitedInteraction) return !1;
+    if (!n) return !0;
     switch (t) {
         case r.Jx.UNKNOWN:
         case r.Jx.FULLSCREEN:
@@ -95,8 +96,8 @@ function y(e, t) {
     }
     return !1;
 }
-function I(e, t) {
-    if (e.overlayMethod !== i.gl.Hook) return !1;
+function I(e, t, n) {
+    if (e.overlayMethod !== i.gl.Hook || !n) return !1;
     switch (t) {
         case r.Jx.UNKNOWN:
         case r.Jx.MINIMIZED:

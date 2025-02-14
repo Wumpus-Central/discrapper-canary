@@ -130,6 +130,7 @@ class O {
             S(this, 'counters', {
                 [b.n0.NewsNudge]: new R(),
                 [b.n0.WelcomeNudge]: new R(),
+                [b.n0.OopWelcomeNudge]: new R(),
                 [b.n0.TextChat]: new R(),
                 [b.n0.ActivityUserJoin]: new R(),
                 [b.n0.ActivityInvite]: new R(),

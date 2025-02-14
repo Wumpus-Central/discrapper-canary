@@ -29,5 +29,11 @@ e.exports = {
     widgetContainer: 'widgetContainer__9d98d',
     select: 'select__9d98d',
     widgetHeaderContainer: 'widgetHeaderContainer__9d98d',
-    formItemTitle: 'formItemTitle__9d98d'
+    formItemTitle: 'formItemTitle__9d98d',
+    overlaySettingsNux: 'overlaySettingsNux__9d98d',
+    closeCircleButton: 'closeCircleButton__9d98d',
+    nuxFirstImage: 'nuxFirstImage__9d98d',
+    nuxUserSettingsImage: 'nuxUserSettingsImage__9d98d',
+    mainTitleContainer: 'mainTitleContainer__9d98d',
+    nuxDivider: 'nuxDivider__9d98d'
 };
