@@ -14,7 +14,7 @@ var l = n(873546),
     p = n(775412),
     g = n(695349),
     _ = n(913976),
-    f = n(533990),
+    f = n(526552),
     E = n(104494),
     I = n(29920),
     C = n(346497),
@@ -85,14 +85,10 @@ class Z extends o.Z {
             S(this, 'mayShowAnnouncementModal', async () => {
                 if ((await (0, C.l2)(), m.s.isDisallowPopupsSet())) return;
                 let e = this.getOfferFromStore(),
-                    t = f.Z.getCurrentConfig({ location: 'announcementManager' }, { autoTrackExposure: !1 }).inExperiment || f.Z.isAAMode({ location: 'announcementManager' }),
-                    n = (0, d.un)(r.z.REVERSE_TRIAL_ENDED_UPSELL),
+                    t = f.Z.getCurrentConfig({ location: 'announcementManager' }, { autoTrackExposure: !1 }).enabled,
+                    n = (0, d.un)(r.z.Q1_2025_FOLLOW_UP_REVERSE_TRIAL_OFFER),
                     i = c.default.getCurrentUser();
-                if (t && !n && !(0, a.$sL)() && !(0, h.I5)(i)) {
-                    let t = await (0, g.r)(e.userTrialOffer);
-                    null != t && (0, N.Z)({ upsellType: t });
-                }
-                if ((null == i || i.verified) && !(0, a.$sL)() && _.Z.getCurrentConfig({ location: 'OfferAnnouncementManager' }).enabled && !l.tq) {
+                if ((t && !n && !(0, a.$sL)() && !(0, h.I5)(i) && (await (0, g.G)(e.userTrialOffer)) && (0, N.Z)({ upsellType: T.cd.REVERSE_TRIAL_FOLLOWUP_UPSELL }), (null == i || i.verified) && !(0, a.$sL)() && _.Z.getCurrentConfig({ location: 'OfferAnnouncementManager' }).enabled && !l.tq)) {
                     for (let t of await (0, I.He)(e)) if (await this.maybeOpenServerDriveAnnouncementModal(t, !1)) break;
                 }
             });

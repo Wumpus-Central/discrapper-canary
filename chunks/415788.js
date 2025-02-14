@@ -1,52 +1,50 @@
-n.d(e, { default: () => p }), n(47120);
-var s = n(200651);
-n(192379);
-var r = n(120356),
-    i = n.n(r),
+n.d(e, { default: () => S }), n(47120);
+var s = n(200651),
+    i = n(192379),
     a = n(704215),
-    o = n(100527),
-    c = n(906732),
-    u = n(243778),
-    b = n(790527),
-    d = n(474936),
-    E = n(981631),
-    l = n(921944),
+    r = n(100527),
+    o = n(906732),
+    c = n(243778),
+    u = n(790527),
+    b = n(981631),
+    d = n(921944),
     _ = n(388032),
-    L = n(323509),
-    S = n(746458);
-function p(t) {
-    let e,
-        n,
-        r,
-        { upsellType: p, onClose: C, transitionState: g } = t,
-        A = p === d.cd.REVERSE_TRIAL_FOLLOWUP_UPSELL,
-        [R, T] = (0, u.US)([a.z.REVERSE_TRIAL_ENDED_UPSELL]);
+    l = n(323509),
+    E = n(746458);
+function S(t) {
+    let { upsellType: e, onClose: n, transitionState: S } = t,
+        [p, C] = (0, c.US)([a.z.Q1_2025_FOLLOW_UP_REVERSE_TRIAL_OFFER]);
     return (
-        (0, c.ZP)(o.Z.REVERSE_TRIAL_UPSELL_MODAL),
-        A ? ((e = _.intl.string(_.t.CCMEZW)), (n = _.intl.string(_.t.gFGZZG)), (r = _.intl.string(_.t.J61px8))) : ((e = _.intl.string(_.t.N1JBY2)), (n = _.intl.string(_.t['h5/w39'])), (r = _.intl.string(_.t['8x0jKS']))),
-        (0, s.jsx)(b.Z, {
-            artURL: S.Z,
-            artContainerClassName: i()(L.artContainer, { [L.grayArt]: !A }),
+        (0, o.ZP)(r.Z.REVERSE_TRIAL_UPSELL_MODAL),
+        i.useEffect(
+            () => () => {
+                C(d.L.USER_DISMISS);
+            },
+            [C]
+        ),
+        (0, s.jsx)(u.Z, {
+            artURL: E.Z,
+            artContainerClassName: l.artContainer,
             enableArtBoxShadow: !1,
-            type: p,
-            title: e,
-            body: n,
-            bodyClassName: L.subHeader,
-            glowUp: n,
+            type: e,
+            title: _.intl.string(_.t.CCMEZW),
+            body: _.intl.string(_.t.gFGZZG),
+            bodyClassName: l.subHeader,
+            glowUp: _.intl.string(_.t.gFGZZG),
             onSubscribeClick: () => {
-                T(l.L.TAKE_ACTION);
+                C(d.L.TAKE_ACTION);
             },
             backButtonText: _.intl.string(_.t.cpT0Cg),
-            subscribeButtonText: r,
-            subscribeButtonClassname: L.subscribeButton,
+            subscribeButtonText: _.intl.string(_.t.J61px8),
+            subscribeButtonClassname: l.subscribeButton,
             useSubscribeButtonGradient: !0,
             hidePremiumOfferUpsell: !0,
             analyticsLocation: {
-                section: E.jXE.REVERSE_TRIAL_UPSELL_MODAL,
-                object: E.qAy.BUTTON_CTA
+                section: b.jXE.REVERSE_TRIAL_UPSELL_MODAL,
+                object: b.qAy.BUTTON_CTA
             },
-            transitionState: g,
-            onClose: () => (T(l.L.USER_DISMISS), C())
+            transitionState: S,
+            onClose: () => (C(d.L.USER_DISMISS), n())
         })
     );
 }

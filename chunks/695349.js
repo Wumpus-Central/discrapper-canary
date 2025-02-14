@@ -1,6 +1,6 @@
 n.d(t, {
-    W: () => m,
-    r: () => p
+    G: () => p,
+    W: () => m
 });
 var i = n(442837),
     r = n(496929),
@@ -16,9 +16,15 @@ let _ = 259200000;
 async function p(e) {
     let t = s.default.getCurrentUser(),
         n = (0, u.I5)(t);
-    null != t && n && !l.Z.fetchedAllEntitlements && (0, r.p0)({ entitlementType: f.qc2.FRACTIONAL_REDEMPTION });
+    null == t ||
+        n ||
+        l.Z.fetchedEndedEntitlements ||
+        (await (0, r.p0)({
+            entitlementType: f.qc2.FRACTIONAL_REDEMPTION,
+            excludeEnded: !1
+        }));
     let i = l.Z.getReverseTrialEntitlement(!0);
-    if (!n && null != i && null != i.endsAt && i.endsAt.getTime() < Date.now() && !(i.endsAt.getTime() < Date.now() - _) && i.sourceType === f.kNB.REVERSE_TRIAL && (null == e && (await (0, c.T)()), null != o.Z.getUserTrialOffer(d.Rt))) return d.cd.REVERSE_TRIAL_FOLLOWUP_UPSELL;
+    return !!(!n && null != i && null != i.endsAt && i.endsAt.getTime() < Date.now()) && !(i.endsAt.getTime() < Date.now() - _) && i.sourceType === f.kNB.REVERSE_TRIAL && (null == e && (await (0, c.T)()), null != o.Z.getUserTrialOffer(d.Rt));
 }
 function h() {
     let e = (0, i.e7)([s.default], () => s.default.getCurrentUser()),

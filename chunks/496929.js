@@ -42,7 +42,7 @@ function o(e) {
     );
 }
 async function l(e) {
-    let { withSku: t = !1, withApplication: n = !1, entitlementType: a } = e;
+    let { withSku: t = !1, withApplication: n = !1, excludeEnded: a = !0, entitlementType: o } = e;
     r.Z.dispatch({ type: 'ENTITLEMENTS_FETCH_FOR_USER_START' });
     try {
         let e = await i.tn.get({
@@ -50,13 +50,15 @@ async function l(e) {
             query: {
                 with_sku: t,
                 with_application: n,
-                entitlement_type: a
+                entitlement_type: o,
+                exclude_ended: a
             },
             rejectWithError: !0
         });
         r.Z.dispatch({
             type: 'ENTITLEMENTS_FETCH_FOR_USER_SUCCESS',
-            entitlements: e.body
+            entitlements: e.body,
+            excludeEnded: a
         });
     } catch (e) {
         r.Z.dispatch({ type: 'ENTITLEMENTS_FETCH_FOR_USER_FAIL' });
