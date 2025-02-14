@@ -60,7 +60,7 @@ class C {
                     if (this.isGPUBoosted === n) return;
                     let i = await (null === l.Z || void 0 === l.Z ? void 0 : null === (t = l.Z.processUtils) || void 0 === t ? void 0 : null === (e = t.getGpuProcessId) || void 0 === e ? void 0 : e.call(t));
                     if (null == i) return;
-                    m.ZP.SetGPUBoostEnabledByPid(i, n) && (this.isGPUBoosted = n);
+                    m.ZP.SetGPUBoostEnabledByPid(i, n) && (this.isGPUBoosted = n), eP.emitChange();
                 } catch (e) {
                     (null === (n = e.message) || void 0 === n ? void 0 : n.includes('IPC method called after context was released')) && this.resetGPUBoosts(), R.error('Error during GPU boost request flush:', e), K(null != k ? k : g.R2, e);
                 }
@@ -464,6 +464,9 @@ class ex extends (i = r.ZP.Store) {
     }
     isReady(e) {
         return O.has(e);
+    }
+    isGPUBoosted() {
+        return x.isGPUBoosted;
     }
 }
 A(ex, 'displayName', 'OverlayStore-v3');
