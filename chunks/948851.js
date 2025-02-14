@@ -22,18 +22,17 @@ function h(e) {
             children: [
                 (0, l.jsx)(s.xJW, {
                     title: o.intl.string(o.t['60qw29']),
-                    children: (0, l.jsx)(s.q4e, {
-                        value: null !== (t = null == E ? void 0 : E.value) && void 0 !== t ? t : u[0].value,
+                    children: (0, l.jsx)(s.VcW, {
                         options: u,
-                        onChange: x,
-                        maxVisibleItems: 8
+                        value: null !== (t = null == E ? void 0 : E.value) && void 0 !== t ? t : u[0].value,
+                        onChange: x
                     })
                 }),
                 (0, l.jsx)(s.xJW, {
                     title: o.intl.string(o.t.jDqWHR),
-                    children: (0, l.jsx)(s.q4e, {
-                        value: null == T ? void 0 : T.value,
+                    children: (0, l.jsx)(s.VcW, {
                         options: c,
+                        value: null == T ? void 0 : T.value,
                         onChange: I
                     })
                 }),
