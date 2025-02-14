@@ -1,72 +1,72 @@
-n.d(t, { Z: () => h }), n(47120);
+n.d(t, { Z: () => p }), n(47120);
 var i = n(200651),
-    r = n(192379),
-    a = n(392711),
-    s = n(846519),
-    l = n(481060),
+    s = n(192379),
+    r = n(392711),
+    l = n(846519),
+    a = n(481060),
     o = n(626135),
     c = n(572004),
     d = n(70956),
     u = n(981631),
     m = n(388032);
-let g = d.Z.Millis.SECOND,
-    _ = 2 * g,
-    p = d.Z.Millis.HALF_SECOND,
-    f = [() => m.intl.string(m.t.MSaeTU), () => m.intl.string(m.t.UmrCw8), () => m.intl.string(m.t.gKE0Ji), () => m.intl.string(m.t['4DSKbm']), () => m.intl.string(m.t['+8ENdX']), () => m.intl.string(m.t.GlWHv7), () => m.intl.string(m.t.hIzxU1), () => m.intl.string(m.t['26uMPD']), () => m.intl.string(m.t.uFs7R0), () => m.intl.string(m.t.bLXdcX), () => m.intl.string(m.t.gPg9fX)];
-function h(e) {
-    let { text: t, copyValue: n, children: d, onCopy: m, 'aria-label': h, delay: x = p } = e,
-        [E, C] = r.useState(0),
-        [b, v] = r.useState(!1),
-        [T, N] = r.useState(!1),
-        [I] = r.useState(() => new s.V7()),
-        [R] = r.useState(() => new s.V7());
+let h = d.Z.Millis.SECOND,
+    g = 2 * h,
+    x = d.Z.Millis.HALF_SECOND,
+    _ = [() => m.intl.string(m.t.MSaeTU), () => m.intl.string(m.t.UmrCw8), () => m.intl.string(m.t.gKE0Ji), () => m.intl.string(m.t['4DSKbm']), () => m.intl.string(m.t['+8ENdX']), () => m.intl.string(m.t.GlWHv7), () => m.intl.string(m.t.hIzxU1), () => m.intl.string(m.t['26uMPD']), () => m.intl.string(m.t.uFs7R0), () => m.intl.string(m.t.bLXdcX), () => m.intl.string(m.t.gPg9fX)];
+function p(e) {
+    let { text: t, copyValue: n, children: d, onCopy: m, 'aria-label': p, delay: E = x } = e,
+        [C, f] = s.useState(0),
+        [T, N] = s.useState(!1),
+        [S, I] = s.useState(!1),
+        [b] = s.useState(() => new l.V7()),
+        [v] = s.useState(() => new l.V7());
     if (
-        (r.useEffect(
+        (s.useEffect(
             () => () => {
-                I.stop(), R.stop();
+                b.stop(), v.stop();
             },
-            [I, R]
+            [b, v]
         ),
         !c.wS)
     )
         return (0, i.jsx)(i.Fragment, { children: d({}) });
-    let j = E >= f.length - 1,
-        S = j ? l.FGA.RED : l.FGA.GREEN,
-        A = b ? S : l.FGA.PRIMARY,
-        P = () => {
-            null == m || m(), (0, c.JG)(n), o.default.track(u.rMx.TEXT_COPIED), T || C(E + 1), N(!0), v(!0), I.start(g, () => N(!1)), R.start(_, () => C(0));
+    let j = C >= _.length - 1,
+        A = j ? a.FGA.RED : a.FGA.GREEN,
+        O = T ? A : a.FGA.PRIMARY,
+        R = () => {
+            null == m || m(), (0, c.JG)(n), o.default.track(u.rMx.TEXT_COPIED), S || f(C + 1), I(!0), N(!0), b.start(h, () => I(!1)), v.start(g, () => f(0));
         };
-    return (0, i.jsx)(l.ua7, {
+    return (0, i.jsx)(a.ua7, {
         text: (() => {
             var e;
-            if (!b) return t;
-            let n = (0, a.clamp)(E - 1, 0, f.length - 1),
-                r = null !== (e = f[n]) && void 0 !== e ? e : f[0];
-            return (0, i.jsx)(l.UkV, {
+            if (!T) return t;
+            let n = (0, r.clamp)(C - 1, 0, _.length - 1),
+                s = null !== (e = _[n]) && void 0 !== e ? e : _[0];
+            return (0, i.jsx)(a.UkV, {
                 isShaking: j,
-                children: r()
+                children: s()
             });
         })(),
-        delay: x,
-        'aria-label': h,
-        color: A,
-        forceOpen: T,
+        delay: E,
+        'aria-label': p,
+        color: O,
+        forceOpen: S,
         onAnimationRest: (e, t) => {
-            !T && b && t.phase === u.UkZ.LEAVE && v(!1);
+            !S && T && t.phase === u.UkZ.LEAVE && N(!1);
         },
         children: (e) => {
             let { onClick: t, onMouseEnter: n, ...i } = e;
             return d({
                 ...i,
                 onClick: () => {
-                    null == t || t(), P();
+                    null == t || t(), R();
                 },
                 onMouseEnter: () => {
-                    if (!b) {
+                    if (!T) {
                         null == n || n();
                         return;
                     }
-                    I.stop(), N(!1);
+                    b.stop(), I(!1);
                 }
             });
         }

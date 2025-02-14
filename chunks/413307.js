@@ -5,8 +5,8 @@ var i = n(200651),
     a = n(324262),
     s = n(434404),
     o = n(981631),
-    c = n(388032),
-    d = n(438825);
+    d = n(388032),
+    c = n(438825);
 let u = (e) => {
     let { guild: t } = e,
         n = l.useCallback(() => {
@@ -16,10 +16,10 @@ let u = (e) => {
         guild: t,
         onDismissed: n,
         onClick: () => s.Z.open(t.id, o.pNK.COMMUNITY),
-        message: c.intl.string(c.t['2klD0d']),
+        message: d.intl.string(d.t['2klD0d']),
         trackingSource: o.PsQ.ENABLE_PUBLIC_GUILD_UPSELL_NOTICE,
         type: o.vID.PUBLIC_UPSELL,
-        image: d,
-        cta: c.intl.string(c.t.hvVgAQ)
+        image: c,
+        cta: d.intl.string(d.t.hvVgAQ)
     });
 };

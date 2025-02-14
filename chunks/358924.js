@@ -5,8 +5,8 @@ var i,
     a = n(120356),
     s = n.n(a),
     o = n(442837),
-    c = n(692547),
-    d = n(481060),
+    d = n(692547),
+    c = n(481060),
     u = n(287734),
     h = n(438139),
     m = n(2052),
@@ -22,9 +22,9 @@ var i,
     T = n(812206),
     S = n(933557),
     A = n(194082),
-    b = n(264165),
-    Z = n(548816),
-    x = n(925329),
+    Z = n(264165),
+    x = n(548816),
+    b = n(925329),
     L = n(102172),
     y = n(871118),
     O = n(707409),
@@ -33,8 +33,8 @@ var i,
     j = n(849171),
     D = n(314897),
     w = n(592125),
-    k = n(594174),
-    M = n(395361),
+    M = n(594174),
+    k = n(395361),
     U = n(639351),
     G = n(81063),
     B = n(823379),
@@ -50,7 +50,7 @@ let Y = {
     K = [14, 14, 12, 12, 10, 8, 6],
     q = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        return (0, l.jsx)(d.Text, {
+        return (0, l.jsx)(c.Text, {
             className: s()(W.textContent, t),
             variant: 'text-sm/semibold',
             children: e
@@ -58,7 +58,7 @@ let Y = {
     },
     X = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        return (0, l.jsx)(d.Text, {
+        return (0, l.jsx)(c.Text, {
             className: s()(W.textContent, t),
             variant: 'text-xs/normal',
             children: e
@@ -100,7 +100,7 @@ class $ extends r.Component {
         var e, t;
         let {
             activity: { assets: i, details: r, state: a, application_id: o },
-            getAssetImage: c
+            getAssetImage: d
         } = this.props;
         return (0, l.jsx)(J, {
             children: (0, l.jsxs)('div', {
@@ -112,13 +112,13 @@ class $ extends r.Component {
                               children: [
                                   (0, l.jsx)('img', {
                                       alt: null !== (e = i.large_text) && void 0 !== e ? e : '',
-                                      src: c(o, i.large_image, [Y.LARGE, Y.LARGE]),
+                                      src: d(o, i.large_image, [Y.LARGE, Y.LARGE]),
                                       className: s()(W.largeImage, { [W.largeImageMask]: null != i.small_image })
                                   }),
                                   null != i.small_image
                                       ? (0, l.jsx)('img', {
                                             alt: null !== (t = i.small_text) && void 0 !== t ? t : '',
-                                            src: c(o, i.small_image, [Y.SMALL, Y.SMALL]),
+                                            src: d(o, i.small_image, [Y.SMALL, Y.SMALL]),
                                             className: W.smallImage
                                         })
                                       : null
@@ -148,22 +148,22 @@ let et = (e) => {
         case 'XBOX':
             t = (0, l.jsx)(U.Z, {
                 className: W.headerIcon,
-                color: c.Z.unsafe_rawColors.PRIMARY_300.css
+                color: d.Z.unsafe_rawColors.PRIMARY_300.css
             });
             break;
         case 'SPOTIFY':
-            t = (0, l.jsx)(M.Z, {
+            t = (0, l.jsx)(k.Z, {
                 className: W.headerIcon,
-                color: c.Z.unsafe_rawColors.SPOTIFY.css
+                color: d.Z.unsafe_rawColors.SPOTIFY.css
             });
             break;
         case 'MULTIPLE':
             t = (0, l.jsx)('div', {
                 className: W.multipleIconWrapper,
-                children: (0, l.jsx)(d.iWm, {
+                children: (0, l.jsx)(c.iWm, {
                     size: 'md',
                     className: s()(W.headerIcon, W.multipleIcon),
-                    color: c.Z.unsafe_rawColors.PRIMARY_300.css
+                    color: d.Z.unsafe_rawColors.PRIMARY_300.css
                 })
             });
             break;
@@ -175,7 +175,7 @@ let et = (e) => {
             });
     }
     return null != i || null != r
-        ? (0, l.jsx)(d.P3F, {
+        ? (0, l.jsx)(c.P3F, {
               onClick: i,
               className: s()(null != i ? W.clickable : ''),
               onContextMenu: r,
@@ -185,8 +185,8 @@ let et = (e) => {
 };
 et.Src = ee;
 let en = (e) => {
-    let { priorityUser: t, title: n, subtitle: i, icon: r, onSubtitleClick: a, onIconClick: o, onContextMenu: c, guildId: u } = e,
-        h = (0, l.jsx)(d.Text, {
+    let { priorityUser: t, title: n, subtitle: i, icon: r, onSubtitleClick: a, onIconClick: o, onContextMenu: d, guildId: u } = e,
+        h = (0, l.jsx)(c.Text, {
             color: 'header-secondary',
             className: W.textContent,
             variant: 'text-sm/normal',
@@ -195,24 +195,24 @@ let en = (e) => {
     return (0, l.jsxs)('header', {
         className: null != r ? W.headerFull : W.headerSimple,
         children: [
-            (0, l.jsx)(d.qEK, {
+            (0, l.jsx)(c.qEK, {
                 src: t.user.getAvatarURL(u, 32),
                 'aria-label': t.user.username,
-                size: d.EFr.SIZE_32,
+                size: c.EFr.SIZE_32,
                 className: W.headerAvatar,
                 status: t.status,
-                onContextMenu: c
+                onContextMenu: d
             }),
             (0, l.jsxs)('div', {
                 className: W.__invalid_headerDetails,
                 children: [
-                    (0, l.jsx)(d.Text, {
+                    (0, l.jsx)(c.Text, {
                         className: s()(W.textContent),
                         variant: 'text-md/semibold',
                         children: n
                     }),
                     null != a
-                        ? (0, l.jsx)(d.P3F, {
+                        ? (0, l.jsx)(c.P3F, {
                               className: W.clickable,
                               onClick: a,
                               children: h
@@ -221,7 +221,7 @@ let en = (e) => {
                 ]
             }),
             null != r && null != o
-                ? (0, l.jsx)(d.P3F, {
+                ? (0, l.jsx)(c.P3F, {
                       className: W.clickable,
                       onClick: o,
                       children: r
@@ -233,8 +233,8 @@ let en = (e) => {
 en.Icon = et;
 let ei = (e) => {
     let { children: t, className: n, ...i } = e;
-    return (0, l.jsx)(d.tEY, {
-        children: (0, l.jsx)(Z.Z, {
+    return (0, l.jsx)(c.tEY, {
+        children: (0, l.jsx)(x.Z, {
             className: s()(n, W.wrapper),
             padded: !0,
             ...i,
@@ -245,7 +245,7 @@ let ei = (e) => {
 (ei.Header = en),
     (ei.Body = (e) => {
         let { children: t } = e;
-        return (0, l.jsx)(Z.Z, {
+        return (0, l.jsx)(x.Z, {
             inset: !0,
             padded: !1,
             className: W.body,
@@ -258,7 +258,7 @@ let ei = (e) => {
     }),
     (ei.VoiceSection = (e) => {
         var t, n;
-        let { guild: i, channel: a, partySize: o, members: c, onChannelContextMenu: h } = e,
+        let { guild: i, channel: a, partySize: o, members: d, onChannelContextMenu: h } = e,
             m = r.useRef(null),
             p = (0, S.ZP)(a, !0);
         return (0, l.jsx)(J, {
@@ -267,7 +267,7 @@ let ei = (e) => {
                 ref: m,
                 onContextMenu: (e) => h(e, a),
                 children: [
-                    (0, l.jsx)(d.P3F, {
+                    (0, l.jsx)(c.P3F, {
                         onClick: () => (0, R.X)(i.id),
                         'aria-hidden': !0,
                         tabIndex: -1,
@@ -290,7 +290,7 @@ let ei = (e) => {
                                       }),
                                 (0, l.jsx)('div', {
                                     className: W.voiceSectionIconWrapper,
-                                    children: (0, l.jsx)(d.gj8, {
+                                    children: (0, l.jsx)(c.gj8, {
                                         size: 'md',
                                         color: 'currentColor',
                                         className: W.voiceSectionIcon
@@ -299,7 +299,7 @@ let ei = (e) => {
                             ]
                         })
                     }),
-                    (0, l.jsx)(d.P3F, {
+                    (0, l.jsx)(c.P3F, {
                         onClick: () => {
                             u.default.selectVoiceChannel(a.id), (0, P.Kh)(a.id);
                         },
@@ -311,7 +311,7 @@ let ei = (e) => {
                     }),
                     (0, l.jsx)(H.Z, {
                         partySize: o,
-                        members: c,
+                        members: d,
                         guildId: i.id
                     })
                 ]
@@ -363,7 +363,7 @@ let ei = (e) => {
         let {
             activity: { assets: n, details: i, state: r, application_id: a },
             partySize: o,
-            members: d,
+            members: c,
             isSolo: u,
             getAssetImage: h
         } = e;
@@ -382,9 +382,9 @@ let ei = (e) => {
                                   }),
                                   u
                                       ? null
-                                      : (0, l.jsx)(M.Z, {
+                                      : (0, l.jsx)(k.Z, {
                                             className: W.smallImage,
-                                            color: c.Z.unsafe_rawColors.SPOTIFY.css
+                                            color: d.Z.unsafe_rawColors.SPOTIFY.css
                                         })
                               ]
                           })
@@ -395,7 +395,7 @@ let ei = (e) => {
                     (0, l.jsx)(H.Z, {
                         minAvatarsShown: u ? 2 : 1,
                         partySize: o,
-                        members: d
+                        members: c
                     })
                 ]
             })
@@ -404,13 +404,13 @@ let ei = (e) => {
     (ei.TwitchSection = (e) => {
         let t,
             { activity: i, user: r, getAssetImage: a, guildId: o } = e,
-            { name: c, details: u, assets: h, application_id: m } = i;
+            { name: d, details: u, assets: h, application_id: m } = i;
         if (null != h && (0, C.Z)(i)) {
             var g;
-            t = (0, l.jsx)(b.Z, {
+            t = (0, l.jsx)(Z.Z, {
                 className: W.twitchSectionPreviewWrapper,
                 aspectRatio: 16 / 9,
-                children: (0, l.jsxs)(d.P3F, {
+                children: (0, l.jsxs)(c.P3F, {
                     href: (0, _.Z)(i),
                     tag: 'a',
                     target: '_blank',
@@ -443,14 +443,14 @@ let ei = (e) => {
                             className: W.twitchSectionIcon
                         }),
                         (0, l.jsxs)('div', {
-                            children: [q(c), null != u ? X(u) : null]
+                            children: [q(d), null != u ? X(u) : null]
                         }),
                         null != r
-                            ? (0, l.jsx)(d.qEK, {
+                            ? (0, l.jsx)(c.qEK, {
                                   src: r.getAvatarURL(o, 24),
                                   'aria-label': r.username,
                                   className: W.twitchSectionAvatar,
-                                  size: d.EFr.SIZE_24
+                                  size: c.EFr.SIZE_24
                               })
                             : null
                     ]
@@ -461,10 +461,10 @@ let ei = (e) => {
     }),
     (ei.ApplicationStreamingSection = (e) => {
         var t, n;
-        let { activity: i, user: r, applicationStream: a, onPreviewClick: s, guildId: c } = e,
+        let { activity: i, user: r, applicationStream: a, onPreviewClick: s, guildId: d } = e,
             u = (0, o.e7)([w.Z], () => w.Z.getChannel(a.channelId)),
             [h, m] = (0, L.wq)(u),
-            p = (0, l.jsxs)(d.P3F, {
+            p = (0, l.jsxs)(c.P3F, {
                 onClick: h ? s : void 0,
                 className: W.applicationStreamingPreviewWrapper,
                 children: [
@@ -472,7 +472,7 @@ let ei = (e) => {
                         stream: a,
                         className: W.applicationStreamingPreviewSize
                     }),
-                    (0, l.jsx)(d.Text, {
+                    (0, l.jsx)(c.Text, {
                         className: W.applicationStreamingHoverText,
                         variant: 'text-sm/medium',
                         color: 'always-white',
@@ -486,9 +486,9 @@ let ei = (e) => {
                 (0, l.jsxs)('div', {
                     className: W.applicationStreamingSection,
                     children: [
-                        (0, l.jsx)(d.qEK, {
-                            size: d.EFr.SIZE_32,
-                            src: r.getAvatarURL(c, 32),
+                        (0, l.jsx)(c.qEK, {
+                            size: c.EFr.SIZE_32,
+                            src: r.getAvatarURL(d, 32),
                             'aria-label': r.username,
                             className: W.applicationStreamingAvatar
                         }),
@@ -504,18 +504,18 @@ let ei = (e) => {
     }),
     (ei.EmbeddedActivitySection = (e) => {
         let { activity: t, channel: n, guildId: i, participants: a } = e,
-            [s, c] = r.useState(null),
+            [s, d] = r.useState(null),
             u = t.application_id;
         r.useEffect(() => {
             null != u &&
                 (0, G.fetchAssetIds)(u, ['embedded_background']).then((e) => {
                     let [t] = e;
-                    return c(t);
+                    return d(t);
                 });
         }, [u]);
-        let h = (0, o.Wu)([k.default, D.default], () =>
+        let h = (0, o.Wu)([M.default, D.default], () =>
                 Array.from(a)
-                    .map((e) => (D.default.getId() === e ? null : k.default.getUser(e)))
+                    .map((e) => (D.default.getId() === e ? null : M.default.getUser(e)))
                     .filter(B.lm)
             ),
             p = (0, m.O)(),
@@ -530,14 +530,14 @@ let ei = (e) => {
                 (0, l.jsxs)('div', {
                     className: W.embeddedActivityTopRow,
                     children: [
-                        (0, l.jsx)(x.Z, {
+                        (0, l.jsx)(b.Z, {
                             game: f,
-                            size: x.Z.Sizes.XSMALL,
+                            size: b.Z.Sizes.XSMALL,
                             className: W.embeddedActivityIcon
                         }),
                         (0, l.jsx)('div', {
                             className: W.embeddedActivityName,
-                            children: (0, l.jsx)(d.Text, {
+                            children: (0, l.jsx)(c.Text, {
                                 variant: 'text-sm/semibold',
                                 children: f.name
                             })
@@ -545,7 +545,7 @@ let ei = (e) => {
                         null != E
                             ? (0, l.jsx)('div', {
                                   className: W.embeddedActivityTimeElapsed,
-                                  children: (0, l.jsx)(d.Text, {
+                                  children: (0, l.jsx)(c.Text, {
                                       color: 'text-muted',
                                       variant: 'text-sm/normal',
                                       children: (0, l.jsx)(Q, { timestamps: E })
@@ -574,8 +574,8 @@ let ei = (e) => {
                                 }),
                                 (0, l.jsx)('div', {
                                     className: W.embeddedActivityJoinWrapper,
-                                    children: (0, l.jsx)(d.zxk, {
-                                        size: d.zxk.Sizes.SMALL,
+                                    children: (0, l.jsx)(c.zxk, {
+                                        size: c.zxk.Sizes.SMALL,
                                         onClick: (e) => {
                                             e.stopPropagation(),
                                                 (0, g.Z)({

@@ -1,18 +1,18 @@
-i.d(e, { Z: () => m });
+i.d(e, { Z: () => p });
 var t = i(200651),
-    r = i(192379),
-    a = i(793030),
-    s = i(442837),
-    o = i(481060),
+    a = i(192379),
+    r = i(793030),
+    o = i(442837),
+    s = i(481060),
     c = i(834129),
     l = i(271383),
     d = i(709586),
     u = i(388032),
     x = i(494248);
-function m(n) {
+function p(n) {
     var e;
     let { boost: i } = n,
-        { username: m, roleColor: v } = (0, s.cj)(
+        { username: p, roleColor: v } = (0, o.cj)(
             [l.ZP],
             () => {
                 var n, e, t;
@@ -23,13 +23,13 @@ function m(n) {
             },
             [i]
         ),
-        p = r.useCallback(
+        m = a.useCallback(
             () =>
-                (0, t.jsx)(o.PUh, {
-                    name: m,
+                (0, t.jsx)(s.PUh, {
+                    name: p,
                     color: null != v ? v : void 0
                 }),
-            [m, v]
+            [p, v]
         );
     return (0, t.jsx)(c.Z, {
         className: x.textContainer,
@@ -41,11 +41,11 @@ function m(n) {
         iconContainerClassName: x.iconContainer,
         timestamp: null !== (e = i.endsAt) && void 0 !== e ? e : void 0,
         compact: !0,
-        children: (0, t.jsx)(a.xv, {
+        children: (0, t.jsx)(r.xv, {
             variant: 'text-md/semibold',
             children: u.intl.format(u.t['57St//'], {
-                username: m,
-                usernameHook: p
+                username: p,
+                usernameHook: m
             })
         })
     });

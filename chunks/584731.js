@@ -5,8 +5,8 @@ var i = n(442837),
     a = n(710845),
     s = n(592125),
     o = n(375954),
-    c = n(625236);
-function d(e, t, n) {
+    d = n(625236);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,7 +36,7 @@ class m extends i.ZP.Store {
         return null !== (i = null === (n = this.guilds.get(e)) || void 0 === n ? void 0 : n.messageRecord(t)) && void 0 !== i ? i : null;
     }
     data(e) {
-        return this.guilds.has(e) || this.guilds.set(e, new c.B()), this.guilds.get(e);
+        return this.guilds.has(e) || this.guilds.set(e, new d.B()), this.guilds.get(e);
     }
     handleOneGuildCreate(e) {
         var t, n;
@@ -122,8 +122,8 @@ class m extends i.ZP.Store {
             MESSAGE_UPDATE: (e) => this.handleMessageUpdate(e),
             THREAD_LIST_SYNC: (e) => this.handleThreadListSync(e)
         }),
-            d(this, 'guilds', new Map()),
-            d(this, 'generation', 0);
+            c(this, 'guilds', new Map()),
+            c(this, 'generation', 0);
     }
 }
 new m();

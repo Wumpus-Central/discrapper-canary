@@ -1,34 +1,34 @@
-n.d(t, {
+i.d(t, {
     Ae: () => d,
     Qe: () => h,
-    U0: () => m,
+    U0: () => g,
     bV: () => u,
-    uZ: () => c
+    uZ: () => o
 }),
-    n(518263),
-    n(970173),
-    n(520712),
-    n(268111),
-    n(941497),
-    n(32026),
-    n(480839),
-    n(744285),
-    n(492257),
-    n(873817),
-    n(757143);
-var i,
-    s,
-    l,
-    r = n(943418);
-let a = null !== (l = null === (i = window) || void 0 === i ? void 0 : i.crypto) && void 0 !== l ? l : null === (s = window) || void 0 === s ? void 0 : s.msCrypto,
-    o = 'Uint8Array' in window,
-    c = null != a && 'getRandomValues' in a && o,
-    d = 'PublicKeyCredential' in window && o;
+    i(518263),
+    i(970173),
+    i(520712),
+    i(268111),
+    i(941497),
+    i(32026),
+    i(480839),
+    i(744285),
+    i(492257),
+    i(873817),
+    i(757143);
+var s,
+    n,
+    r,
+    a = i(943418);
+let c = null !== (r = null === (s = window) || void 0 === s ? void 0 : s.crypto) && void 0 !== r ? r : null === (n = window) || void 0 === n ? void 0 : n.msCrypto,
+    l = 'Uint8Array' in window,
+    o = null != c && 'getRandomValues' in c && l,
+    d = 'PublicKeyCredential' in window && l;
 function u() {
     var e;
     return (
-        (e = a.getRandomValues(new Uint8Array(20))),
-        r
+        (e = c.getRandomValues(new Uint8Array(20))),
+        a
             .encode(e)
             .toString('utf8')
             .replace(/=/g, '')
@@ -40,7 +40,7 @@ function u() {
 function h(e) {
     return e.replace(/[\s._-]+/g, '').toUpperCase();
 }
-function m(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 'Discord';
-    return 'otpauth://totp/'.concat(encodeURI(n), ':').concat(encodeURI(e), '?secret=').concat(h(t), '&issuer=').concat(encodeURIComponent(n));
+function g(e, t) {
+    let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 'Discord';
+    return 'otpauth://totp/'.concat(encodeURI(i), ':').concat(encodeURI(e), '?secret=').concat(h(t), '&issuer=').concat(encodeURIComponent(i));
 }

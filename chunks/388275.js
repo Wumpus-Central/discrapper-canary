@@ -24,9 +24,9 @@ function I(e) {
         N = (0, i.e7)([m.Z], () => m.Z.getDraft(t.channel_id, m.d.ForwardContextMessage)),
         [P, Z] = l.useState(() => (0, c.eK)(N)),
         { textValue: M, richValue: w } = P,
-        [D, R] = l.useState(!1),
-        O = l.useCallback(() => R(!0), []),
-        j = l.useCallback(() => R(!1), []),
+        [R, D] = l.useState(!1),
+        O = l.useCallback(() => D(!0), []),
+        j = l.useCallback(() => D(!1), []),
         k = l.useCallback(
             (e, n, a) => {
                 Z({
@@ -79,7 +79,7 @@ function I(e) {
                                 type: o.Ie.FORWARD_MESSAGE_INPUT,
                                 onBlur: j,
                                 onFocus: O,
-                                focused: D,
+                                focused: R,
                                 onSubmit: G,
                                 parentModalKey: g.so,
                                 autoCompletePosition: 'bottom',

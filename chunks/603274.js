@@ -3,8 +3,8 @@ var i = n(200651);
 n(192379);
 var l = n(120356),
     r = n.n(l),
-    o = n(392711),
-    a = n.n(o),
+    a = n(392711),
+    o = n.n(a),
     s = n(442837),
     c = n(481060),
     d = n(317381),
@@ -54,7 +54,7 @@ function j() {
         r = (0, s.Wu)(
             [v.ZP],
             () =>
-                a().flatMap(n, (e) =>
+                o().flatMap(n, (e) =>
                     v.ZP.getVoiceStatesForChannel(e).map((e) => {
                         let { user: t } = e;
                         return t;
@@ -62,8 +62,8 @@ function j() {
                 ),
             [n]
         ),
-        o = (0, s.Wu)([p.Z], () =>
-            a().flatMap(l, (e) =>
+        a = (0, s.Wu)([p.Z], () =>
+            o().flatMap(l, (e) =>
                 p.Z.getMutableParticipants(e, m.pV.SPEAKER)
                     .filter((e) => e.type === m.Ui.VOICE)
                     .map((e) => {
@@ -105,7 +105,7 @@ function j() {
             r.filter((e) => !b.includes(e.id) && !N.includes(e.id))
         ),
         A =
-            0 === o.length
+            0 === a.length
                 ? null
                 : (0, i.jsxs)('div', {
                       className: S.row,
@@ -117,7 +117,7 @@ function j() {
                           }),
                           (0, i.jsx)(u.Z, {
                               guildId: void 0,
-                              users: o,
+                              users: a,
                               max: 3
                           }),
                           (0, i.jsxs)('div', {

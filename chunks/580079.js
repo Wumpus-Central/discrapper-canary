@@ -5,8 +5,8 @@ var i,
     a = n(392711),
     s = n.n(a),
     o = n(442837),
-    c = n(570140),
-    d = n(592125);
+    d = n(570140),
+    c = n(592125);
 n(914010);
 var u = n(709054),
     h = n(176505);
@@ -64,7 +64,7 @@ class C extends (i = o.ZP.Store) {
               writable: !0
           })
         : (C[l] = r),
-    new C(c.Z, {
+    new C(d.Z, {
         CHANNEL_SELECT: function (e) {
             let { channelId: t, guildId: n } = e;
             if (!(0, h.ME)(t) || null == n) return !1;
@@ -88,7 +88,7 @@ class C extends (i = o.ZP.Store) {
             var t;
             let { channelId: n, message: i, optimistic: l, isPushNotification: r } = e;
             if (l || r) return !1;
-            let a = d.Z.getChannel(n);
+            let a = c.Z.getChannel(n);
             if (null == a) return !1;
             let s = a.guild_id;
             if (null == s || null == m[s]) return !1;

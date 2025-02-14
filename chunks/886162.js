@@ -5,8 +5,8 @@ var i = n(200651),
     a = n(399606),
     s = n(481060),
     o = n(232567),
-    c = n(213609),
-    d = n(313201),
+    d = n(213609),
+    c = n(313201),
     u = n(23434),
     h = n(981631),
     m = n(388032),
@@ -15,12 +15,12 @@ function g(e) {
     let { transitionState: t } = e,
         g = (0, a.e7)([u.Z], () => u.Z.getAction()),
         [_, f] = l.useState(!1),
-        E = (0, d.Dt)();
+        E = (0, c.Dt)();
     async function I() {
         return f(!0), g === h.c2C.AGREEMENTS && f(await (0, o.Lr)()), null;
     }
     return (
-        (0, c.Z)(
+        (0, d.Z)(
             {
                 type: r.ImpressionTypes.VIEW,
                 name: r.ImpressionNames.USER_AGREEMENTS,

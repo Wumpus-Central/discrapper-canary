@@ -16,8 +16,8 @@ var i = n(200651),
     f = n(607070),
     x = n(367907),
     C = n(313201),
-    v = n(592125),
-    E = n(984933),
+    E = n(592125),
+    v = n(984933),
     I = n(768119),
     N = n(944486),
     S = n(585483),
@@ -210,12 +210,12 @@ class O extends l.PureComponent {
                     return;
                 }
                 let n = N.Z.getChannelId(),
-                    i = v.Z.getChannel(n);
-                if (((null == i ? void 0 : i.isThread()) && (i = v.Z.getChannel(null == i ? void 0 : i.parent_id)), null == i || i.isPrivate())) {
+                    i = E.Z.getChannel(n);
+                if (((null == i ? void 0 : i.isThread()) && (i = E.Z.getChannel(null == i ? void 0 : i.parent_id)), null == i || i.isPrivate())) {
                     this.focusEditor();
                     return;
                 }
-                let l = E.ZP.getTextChannelNameDisambiguations(i.getGuildId())[i.id],
+                let l = v.ZP.getTextChannelNameDisambiguations(i.getGuildId())[i.id],
                     a = null != l ? l.name : i.name;
                 Promise.resolve().then(() => {
                     let { _editorRef: e } = this;

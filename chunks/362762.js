@@ -1,12 +1,12 @@
 n.d(t, { Z: () => u });
 var i,
     r,
-    l,
-    a = n(442837),
-    o = n(570140),
-    s = n(981631);
+    a,
+    l = n(442837),
+    s = n(570140),
+    o = n(981631);
 let c = {};
-class d extends (l = a.ZP.Store) {
+class d extends (a = l.ZP.Store) {
     getState(e) {
         return c[e];
     }
@@ -20,17 +20,17 @@ class d extends (l = a.ZP.Store) {
               writable: !0
           })
         : (d[i] = r);
-let u = new d(o.Z, {
+let u = new d(s.Z, {
     NATIVE_APP_MODAL_OPENING: function (e) {
         let { code: t } = e;
-        c[t] = s.kEZ.OPENING;
+        c[t] = o.kEZ.OPENING;
     },
     NATIVE_APP_MODAL_OPENED: function (e) {
         let { code: t } = e;
-        c[t] = s.kEZ.OPEN;
+        c[t] = o.kEZ.OPEN;
     },
     NATIVE_APP_MODAL_OPEN_FAILED: function (e) {
         let { code: t } = e;
-        c[t] = s.kEZ.OPEN_FAIL;
+        c[t] = o.kEZ.OPEN_FAIL;
     }
 });

@@ -6,8 +6,8 @@ var l = n(481060),
     a = n(70097),
     s = n(970731),
     o = n(626135),
-    c = n(63063),
-    d = n(981631),
+    d = n(63063),
+    c = n(981631),
     u = n(388032),
     h = n(636277);
 function m(e) {
@@ -23,7 +23,7 @@ function m(e) {
                 (0, i.jsx)(l.Text, {
                     color: 'always-white',
                     variant: 'text-sm/normal',
-                    children: u.intl.format(u.t['2Sapx8'], { hcArticleUrl: c.Z.getCreatorSupportArticleURL(d.BhN.MEDIA_CHANNEL) })
+                    children: u.intl.format(u.t['2Sapx8'], { hcArticleUrl: d.Z.getCreatorSupportArticleURL(c.BhN.MEDIA_CHANNEL) })
                 })
             ]
         });
@@ -38,13 +38,13 @@ function m(e) {
         }),
         buttonCTA: u.intl.string(u.t.JzJpg4),
         onClick: () => {
-            o.default.track(d.rMx.MEDIA_CHANNEL_UPSELL_CLICKED, { ...(0, r.hH)(t) }),
+            o.default.track(c.rMx.MEDIA_CHANNEL_UPSELL_CLICKED, { ...(0, r.hH)(t) }),
                 (0, l.ZDy)(async () => {
                     let { default: e } = await Promise.all([n.e('45094'), n.e('20110')]).then(n.bind(n, 218613));
                     return (n) =>
                         (0, i.jsx)(e, {
                             ...n,
-                            channelType: d.d4z.GUILD_MEDIA,
+                            channelType: c.d4z.GUILD_MEDIA,
                             guildId: t
                         });
                 });

@@ -12,8 +12,8 @@ var i = n(200651),
     h = n(388032),
     x = n(314380);
 function g(e) {
-    let { webhooks: t, selectableWebhookChannels: n, lastCreatedWebhookId: g, editedWebhook: p, errors: b, canNavigate: _ } = e,
-        f = l.useMemo(
+    let { webhooks: t, selectableWebhookChannels: n, lastCreatedWebhookId: g, editedWebhook: p, errors: f, canNavigate: b } = e,
+        v = l.useMemo(
             () =>
                 Object.values(n).map((e) => ({
                     value: e.id,
@@ -21,7 +21,7 @@ function g(e) {
                 })),
             [n]
         ),
-        v = l.useMemo(() => {
+        _ = l.useMemo(() => {
             let e = {};
             for (let i of t)
                 if (i.channel_id in e) e[i.channel_id].webhooks.push(i);
@@ -35,18 +35,18 @@ function g(e) {
                 }
             return Object.values(e).sort((e, t) => e.channel.name.localeCompare(t.channel.name));
         }, [n, t]),
-        C = l.useCallback(
+        N = l.useCallback(
             (e) => {
-                _() && (e === (null == p ? void 0 : p.id) ? r.Z.stopEditingWebhook() : r.Z.startEditingWebhook(e));
+                b() && (e === (null == p ? void 0 : p.id) ? r.Z.stopEditingWebhook() : r.Z.startEditingWebhook(e));
             },
-            [_, p]
+            [b, p]
         );
     return (0, i.jsx)('div', {
         className: x.__invalid_list,
-        children: v.map((e) => {
+        children: _.map((e) => {
             let { channel: t, webhooks: n } = e;
             return (function (e) {
-                let { channel: t, webhooks: n, channelOptions: l, lastCreatedWebhookId: r, editedWebhook: g, errors: p, toggleWebhookExpand: b } = e;
+                let { channel: t, webhooks: n, channelOptions: l, lastCreatedWebhookId: r, editedWebhook: g, errors: p, toggleWebhookExpand: f } = e;
                 return (0, i.jsxs)(
                     'div',
                     {
@@ -75,7 +75,7 @@ function g(e) {
                                               editedWebhook: g,
                                               channelOptions: l,
                                               isExpanded: (null == g ? void 0 : g.id) === e.id,
-                                              onToggleExpand: () => b(e.id),
+                                              onToggleExpand: () => f(e.id),
                                               errors: p
                                           },
                                           e.id
@@ -89,7 +89,7 @@ function g(e) {
                                               channelOptions: l,
                                               isExpanded: (null == g ? void 0 : g.id) === e.id,
                                               isNew: r === e.id,
-                                              onToggleExpand: () => b(e.id),
+                                              onToggleExpand: () => f(e.id),
                                               errors: p
                                           },
                                           e.id
@@ -102,11 +102,11 @@ function g(e) {
             })({
                 channel: t,
                 webhooks: n,
-                channelOptions: f,
+                channelOptions: v,
                 lastCreatedWebhookId: g,
                 editedWebhook: p,
-                errors: b,
-                toggleWebhookExpand: C
+                errors: f,
+                toggleWebhookExpand: N
             });
         })
     });

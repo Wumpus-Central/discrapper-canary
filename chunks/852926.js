@@ -10,8 +10,8 @@ var i = n(13245),
     a = n(998502),
     s = n(13140),
     o = n(996106),
-    c = n(914946),
-    d = n(186901),
+    d = n(914946),
+    c = n(186901),
     u = n(981631);
 let h = ['207646673902501888'];
 function m(e) {
@@ -38,13 +38,13 @@ function m(e) {
           });
 }
 let p = async (e, t, n) => {
-        if (((0, c.YK)(e, t), (null == n || '' === n) && (0, c.s9)(t))) return (e.authorization.scopes = [d.cE, d.CN]), Promise.resolve();
+        if (((0, d.YK)(e, t), (null == n || '' === n) && (0, d.s9)(t))) return (e.authorization.scopes = [c.cE, c.CN]), Promise.resolve();
         if (null == n || '' === n) return Promise.reject(new o.Z({ closeCode: u.$VG.INVALID_CLIENTID }, 'No Client ID Specified'));
-        let i = a.ZP.releaseChannel !== u.R5N.CANARY && !h.includes(n) && e.transport !== d.He.POST_MESSAGE;
-        return await (0, c.vv)(n, i), (0, c.YS)(e, n, t);
+        let i = a.ZP.releaseChannel !== u.R5N.CANARY && !h.includes(n) && e.transport !== c.He.POST_MESSAGE;
+        return await (0, d.vv)(n, i), (0, d.YS)(e, n, t);
     },
     g = () =>
-        (0, c.tr)((e) => {
+        (0, d.tr)((e) => {
             let t = [];
             return (
                 null != e.modeOptions.shortcut &&
@@ -61,7 +61,7 @@ let p = async (e, t, n) => {
             );
         }),
     _ = (e) =>
-        (0, c.FJ)(e, (e) => {
+        (0, d.FJ)(e, (e) => {
             let t = '';
             return null != e.modeOptions.shortcut && Array.isArray(e.modeOptions.shortcut) && (t = (0, s.BB)(e.modeOptions.shortcut)), t;
         });

@@ -5,8 +5,8 @@ var i = n(200651),
     a = n.n(r),
     s = n(442837),
     o = n(304106),
-    c = n(649974),
-    d = n(246946),
+    d = n(649974),
+    c = n(246946),
     u = n(594174),
     h = n(525395),
     m = n(55563),
@@ -83,11 +83,11 @@ class C extends l.Component {
         });
     }
 }
-let N = s.ZP.connectStores([m.Z, u.default, p.Z, c.Z, h.Z, d.Z], (e) => {
+let N = s.ZP.connectStores([m.Z, u.default, p.Z, d.Z, h.Z, c.Z], (e) => {
     let { sku: t } = e;
     return {
-        socialReasons: (0, g.Gg)(t.id, m.Z, u.default, c.Z, h.Z),
+        socialReasons: (0, g.Gg)(t.id, m.Z, u.default, d.Z, h.Z),
         nonSocialReasons: (0, g.Ww)(t.id, m.Z, p.Z),
-        hidePersonalInformation: d.Z.hidePersonalInformation
+        hidePersonalInformation: c.Z.hidePersonalInformation
     };
 })(C);

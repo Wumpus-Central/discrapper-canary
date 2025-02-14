@@ -23,7 +23,7 @@ function p(e) {
         })(g),
         x = (0, r.j)('HDStreamingUpgradedMessage'),
         C = () => (0, s.k)(p, 'HDStreamingUpgradedMessage'),
-        v = x ? C : o.Z.getArticleURL(m.BhN.HD_STREAMING_POTION);
+        E = x ? C : o.Z.getArticleURL(m.BhN.HD_STREAMING_POTION);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', {
@@ -57,7 +57,7 @@ function p(e) {
                             (0, i.jsx)(l.Text, {
                                 color: 'text-primary',
                                 variant: 'text-xs/normal',
-                                children: _.intl.format(_.t['bmGF+f'], { helpCenterLink: v })
+                                children: _.intl.format(_.t['bmGF+f'], { helpCenterLink: E })
                             })
                         ]
                     })

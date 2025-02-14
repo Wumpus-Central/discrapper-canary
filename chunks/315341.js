@@ -5,8 +5,8 @@ var i = n(442837),
     a = n(381499),
     s = n(433517),
     o = n(581364),
-    c = n(536442),
-    d = n(592125),
+    d = n(536442),
+    c = n(592125),
     u = n(915486),
     h = n(48481),
     m = n(981631),
@@ -26,7 +26,7 @@ function g(e, t) {
     );
 }
 function _(e, t, n) {
-    return !!c.qc.hasHiddenHotspot(t) && g(e, n);
+    return !!d.qc.hasHiddenHotspot(t) && g(e, n);
 }
 let f = [
     {
@@ -42,7 +42,7 @@ let f = [
             let o = null !== (t = s.K.get('unread-messages-collapsed-channels')) && void 0 !== t ? t : {};
             for (let t in o) {
                 if (!o[t]) continue;
-                let l = d.Z.getChannel(t);
+                let l = c.Z.getChannel(t);
                 null != l &&
                     ((i = !0),
                     (0, h.i7)(e, null !== (n = l.guild_id) && void 0 !== n ? n : '0', l.id, (e) => {
@@ -69,7 +69,7 @@ let f = [
         version: 4,
         run(e) {
             let t = !1;
-            return (!0 === s.K.get('HAS_SEEN_HUB_UPSELL') || c.qc.hasHiddenHotspot(c.v6.HUB_SECOND_EMAIL_CONNECTION_UPSELL)) && (t = g(e, l.z.HUB_WAITLIST_UPSELL)), t;
+            return (!0 === s.K.get('HAS_SEEN_HUB_UPSELL') || d.qc.hasHiddenHotspot(d.v6.HUB_SECOND_EMAIL_CONNECTION_UPSELL)) && (t = g(e, l.z.HUB_WAITLIST_UPSELL)), t;
         },
         cleanup() {
             s.K.remove('HAS_SEEN_HUB_UPSELL');
@@ -78,34 +78,34 @@ let f = [
     {
         version: 5,
         run(e) {
-            var t, n, i, l, o, c, d;
+            var t, n, i, l, o, d, c;
             let u = !1;
-            (e.textAndImages = null !== (t = e.textAndImages) && void 0 !== t ? t : r.Me.create()), (e.notifications = null !== (n = e.notifications) && void 0 !== n ? n : r.sf.create()), (e.privacy = null !== (i = e.privacy) && void 0 !== i ? i : r.bE.create()), (e.voiceAndVideo = null !== (l = e.voiceAndVideo) && void 0 !== l ? l : r.v_.create()), (e.gameLibrary = null !== (o = e.gameLibrary) && void 0 !== o ? o : r.Fm.create()), (e.debug = null !== (c = e.debug) && void 0 !== c ? c : r.tA.create());
-            let h = null !== (d = s.K.get('UserSettingsStore')) && void 0 !== d ? d : {};
+            (e.textAndImages = null !== (t = e.textAndImages) && void 0 !== t ? t : r.Me.create()), (e.notifications = null !== (n = e.notifications) && void 0 !== n ? n : r.sf.create()), (e.privacy = null !== (i = e.privacy) && void 0 !== i ? i : r.bE.create()), (e.voiceAndVideo = null !== (l = e.voiceAndVideo) && void 0 !== l ? l : r.v_.create()), (e.gameLibrary = null !== (o = e.gameLibrary) && void 0 !== o ? o : r.Fm.create()), (e.debug = null !== (d = e.debug) && void 0 !== d ? d : r.tA.create());
+            let h = null !== (c = s.K.get('UserSettingsStore')) && void 0 !== c ? c : {};
             return 'boolean' == typeof h.useRichChatTextBox && ((e.textAndImages.useRichChatInput = a.D5.create({ value: h.useRichChatTextBox })), (u = !0)), 'string' == typeof h.renderSpoilers && ((e.textAndImages.renderSpoilers = a.Gm.create({ value: h.renderSpoilers })), (u = !0)), 'boolean' == typeof h.useThreadSidebar && ((e.textAndImages.useThreadSidebar = a.D5.create({ value: h.useThreadSidebar })), (u = !0)), 'boolean' == typeof h.showInAppNotifications && ((e.notifications.showInAppNotifications = a.D5.create({ value: h.showInAppNotifications })), (u = !0)), h.emojiPickerCollapsedSections instanceof Array && ((e.textAndImages.emojiPickerCollapsedSections = h.emojiPickerCollapsedSections), (u = !0)), h.stickerPickerCollapsedSections instanceof Array && ((e.textAndImages.stickerPickerCollapsedSections = h.stickerPickerCollapsedSections), (u = !0)), 'boolean' == typeof h.viewImageDescriptions && ((e.textAndImages.viewImageDescriptions = a.D5.create({ value: h.viewImageDescriptions })), (u = !0)), 'boolean' == typeof h.showCommandSuggestions && ((e.textAndImages.showCommandSuggestions = a.D5.create({ value: h.showCommandSuggestions })), (u = !0)), 'boolean' == typeof h.alwaysPreviewVideo && ((e.voiceAndVideo.alwaysPreviewVideo = a.D5.create({ value: h.alwaysPreviewVideo })), (u = !0)), 'boolean' == typeof h.notifyFriendsOnGoLive && ((e.notifications.notifyFriendsOnGoLive = a.D5.create({ value: h.notifyFriendsOnGoLive })), (u = !0)), 'boolean' == typeof h.installShortcutDesktop && ((e.gameLibrary.installShortcutDesktop = a.D5.create({ value: h.installShortcutDesktop })), (u = !0)), 'boolean' == typeof h.installShortcutStartMenu && ((e.gameLibrary.installShortcutStartMenu = a.D5.create({ value: h.installShortcutStartMenu })), (u = !0)), 'boolean' == typeof h.allowActivityPartyPrivacyFriends && ((e.privacy.allowActivityPartyPrivacyFriends = a.D5.create({ value: h.allowActivityPartyPrivacyFriends })), (u = !0)), 'boolean' == typeof h.allowActivityPartyPrivacyVoiceChannel && ((e.privacy.allowActivityPartyPrivacyVoiceChannel = a.D5.create({ value: h.allowActivityPartyPrivacyVoiceChannel })), (u = !0)), 'boolean' == typeof h.rtcPanelShowVoiceStates && ((e.debug.rtcPanelShowVoiceStates = a.D5.create({ value: h.rtcPanelShowVoiceStates })), (u = !0)), u;
         },
         cleanup() {}
     },
     {
         version: 7,
-        run: (e) => _(e, c.v6.APPLICATION_COMMAND_TOOLTIP, l.z.APPLICATION_COMMAND_TOOLTIP),
+        run: (e) => _(e, d.v6.APPLICATION_COMMAND_TOOLTIP, l.z.APPLICATION_COMMAND_TOOLTIP),
         cleanup() {}
     },
     {
         version: 8,
-        run: (e) => _(e, c.v6.CHANNEL_BANNER_MEMBER_LIST_NOTICE, l.z.CHANNELINFO_CHANNELBANNER_NOTICE),
+        run: (e) => _(e, d.v6.CHANNEL_BANNER_MEMBER_LIST_NOTICE, l.z.CHANNELINFO_CHANNELBANNER_NOTICE),
         cleanup() {}
     },
     {
         version: 9,
-        run: (e) => (c.qc.hasHiddenHotspot(c.v6.MULTI_ACCOUNT_TOOLTIP) && s.K.set(p.Ip, 'true'), _(e, c.v6.MULTI_ACCOUNT_TOOLTIP, l.z.ACCOUNT_MULTIACCOUNT_TOOLTIP)),
+        run: (e) => (d.qc.hasHiddenHotspot(d.v6.MULTI_ACCOUNT_TOOLTIP) && s.K.set(p.Ip, 'true'), _(e, d.v6.MULTI_ACCOUNT_TOOLTIP, l.z.ACCOUNT_MULTIACCOUNT_TOOLTIP)),
         cleanup() {}
     },
     {
         version: 10,
         run(e) {
             var t;
-            let n = _(e, c.v6.HUB_LINK_CHANNEL_NOTICE, l.z.CHANNEL_NOTICE_HUBLINK),
+            let n = _(e, d.v6.HUB_LINK_CHANNEL_NOTICE, l.z.CHANNEL_NOTICE_HUBLINK),
                 i = null !== (t = s.K.get('channelNotices')) && void 0 !== t ? t : {};
             return !1 === i[m.vID.INVITE] && g(e, l.z.CHANNEL_NOTICE_INVITE) && (n = !0), !1 === i[m.vID.QUICKSWITCHER] && g(e, l.z.CHANNEL_NOTICE_QUICKSWITCHER) && (n = !0), !1 === i[m.vID.GUILD_BOOSTING] && g(e, l.z.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION) && (n = !0), n;
         },
@@ -117,7 +117,7 @@ let f = [
         version: 11,
         run(e) {
             let t = !1;
-            return _(e, c.v6.GUILD_EVENT_UPSELL, l.z.GUILD_HEADER_EVENT_UPSELL) && (t = !0), _(e, c.v6.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP, l.z.GUILD_HEADER_PREMIUM_GUILD_PROGRESS) && (t = !0), _(e, c.v6.ANIMATED_GUILD_BANNER_GUILD_HEADER_TOOLTIP, l.z.GUILD_HEADER_ANIMATED_GUILD_BANNER) && (t = !0), t;
+            return _(e, d.v6.GUILD_EVENT_UPSELL, l.z.GUILD_HEADER_EVENT_UPSELL) && (t = !0), _(e, d.v6.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP, l.z.GUILD_HEADER_PREMIUM_GUILD_PROGRESS) && (t = !0), _(e, d.v6.ANIMATED_GUILD_BANNER_GUILD_HEADER_TOOLTIP, l.z.GUILD_HEADER_ANIMATED_GUILD_BANNER) && (t = !0), t;
         },
         cleanup() {}
     },
@@ -135,7 +135,7 @@ let f = [
         version: 13,
         run(e) {
             let t = !1;
-            return s.K.get('hidePremiumPromo') && g(e, l.z.NAGBAR_NOTICE_PREMIUM_PROMO) && (t = !0), s.K.get('hidePremiumTier2TrialEnding') && g(e, l.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING) && (t = !0), s.K.get('hidePremiumReactivateNotice') && g(e, l.z.NAGBAR_NOTICE_PREMIUM_REACTIVATE) && (t = !0), _(e, c.v6.INVITE_SPLASH_GUILD_HEADER_TOOLTIP, l.z.GUILD_HEADER_INVITE_SPLASH) && (t = !0), t;
+            return s.K.get('hidePremiumPromo') && g(e, l.z.NAGBAR_NOTICE_PREMIUM_PROMO) && (t = !0), s.K.get('hidePremiumTier2TrialEnding') && g(e, l.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING) && (t = !0), s.K.get('hidePremiumReactivateNotice') && g(e, l.z.NAGBAR_NOTICE_PREMIUM_REACTIVATE) && (t = !0), _(e, d.v6.INVITE_SPLASH_GUILD_HEADER_TOOLTIP, l.z.GUILD_HEADER_INVITE_SPLASH) && (t = !0), t;
         },
         cleanup() {
             s.K.remove('hidePremiumPromo'), s.K.remove('hidePremiumTier2TrialEnding'), s.K.remove('hidePremiumReactivateNotice');
@@ -143,12 +143,12 @@ let f = [
     },
     {
         version: 14,
-        run: (e) => _(e, c.v6.ACTIVITY_BEB_TUTORIAL, l.z.ACTIVITIES_TUTORIAL_COACH_MARK),
+        run: (e) => _(e, d.v6.ACTIVITY_BEB_TUTORIAL, l.z.ACTIVITIES_TUTORIAL_COACH_MARK),
         cleanup() {}
     },
     {
         version: 15,
-        run: (e) => _(e, c.v6.NOW_PLAYING_CONSENT_CARD, l.z.NOW_PLAYING_CONSENT_CARD),
+        run: (e) => _(e, d.v6.NOW_PLAYING_CONSENT_CARD, l.z.NOW_PLAYING_CONSENT_CARD),
         cleanup() {}
     },
     {
@@ -177,7 +177,7 @@ let f = [
         version: 18,
         run(e) {
             let t = !1;
-            return _(e, c.v6.GUILD_DELETE_FEEDBACK, l.z.GUILD_DELETE_FEEDBACK) && (t = !0), _(e, c.v6.GUILD_LEAVE_FEEDBACK, l.z.GUILD_LEAVE_FEEDBACK) && (t = !0), t;
+            return _(e, d.v6.GUILD_DELETE_FEEDBACK, l.z.GUILD_DELETE_FEEDBACK) && (t = !0), _(e, d.v6.GUILD_LEAVE_FEEDBACK, l.z.GUILD_LEAVE_FEEDBACK) && (t = !0), t;
         },
         cleanup() {}
     },

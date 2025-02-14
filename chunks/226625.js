@@ -5,8 +5,8 @@ var i = n(200651),
     a = n.n(r),
     s = n(392711),
     o = n.n(s),
-    c = n(642128),
-    d = n(442837),
+    d = n(642128),
+    c = n(442837),
     u = n(481060),
     h = n(607070),
     m = n(939486);
@@ -17,7 +17,7 @@ let p = {
 };
 function g(e) {
     let { className: t, pageMultiplier: n } = e,
-        r = (0, d.e7)([h.Z], () => h.Z.useReducedMotion),
+        r = (0, c.e7)([h.Z], () => h.Z.useReducedMotion),
         [s, g] = l.useState({
             x: 0,
             y: 0
@@ -46,9 +46,9 @@ function g(e) {
                 y: s.y
             });
         }, [s.x, s.y, E]),
-        (0, i.jsx)(c.animated.div, {
+        (0, i.jsx)(d.animated.div, {
             style: {
-                transform: (0, c.to)([f.x, f.y], (e, t) => 'translate3d('.concat(e, 'px, ').concat(t, 'px, 0)'))
+                transform: (0, d.to)([f.x, f.y], (e, t) => 'translate3d('.concat(e, 'px, ').concat(t, 'px, 0)'))
             },
             className: a()(m.background, t)
         })

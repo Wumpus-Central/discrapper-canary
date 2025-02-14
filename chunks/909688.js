@@ -1,7 +1,7 @@
 n.d(t, { j: () => i });
-var r = n(818083),
-    l = n(987338);
-let i = (0, r.B)({
+var l = n(818083),
+    r = n(987338);
+let i = (0, l.B)({
     kind: 'user',
     id: '2025-01_mobile_shop_adaptive_back_button_color',
     label: 'mobile shop adaptive back button color',
@@ -13,5 +13,5 @@ let i = (0, r.B)({
             config: { enabled: !0 }
         }
     ],
-    commonTriggerPoint: l.$P.COLLECTIBLES_SHOP_OPEN
+    commonTriggerPoint: r.$P.COLLECTIBLES_SHOP_OPEN
 });

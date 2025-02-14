@@ -17,7 +17,7 @@ var l = n(442837),
     f = n(900849),
     x = n(981631);
 function C(e) {
-    let { channel: t, onClick: n, beforeTransition: C, className: v, openChatWithoutConnecting: E } = e,
+    let { channel: t, onClick: n, beforeTransition: C, className: E, openChatWithoutConnecting: v } = e,
         I = (0, l.e7)([p.default, h.Z], () => (null == t ? '' : (0, o.F6)(t, p.default, h.Z)), [t]);
     return (0, i.jsx)(a.ua7, {
         text: I,
@@ -26,7 +26,7 @@ function C(e) {
             let { onMouseEnter: l, onMouseLeave: o } = e;
             return (0, i.jsx)(c.Z, {
                 role: 'link',
-                className: v,
+                className: E,
                 onClick: (e) => {
                     e.stopPropagation(),
                         null != n
@@ -51,7 +51,7 @@ function C(e) {
                                       return;
                                   }
                                   (0, d.uL)(x.Z5c.CHANNEL(e, t));
-                              })(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, E));
+                              })(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, v));
                 },
                 onMouseEnter: l,
                 onMouseLeave: o,

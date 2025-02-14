@@ -6,23 +6,23 @@ var i = n(200651),
     a = n(442837),
     s = n(481060),
     d = n(493773),
-    c = n(178821),
-    u = n(38618),
+    u = n(178821),
+    c = n(38618),
     h = n(522474),
     _ = n(333031),
     p = n(501787),
     f = n(249582);
 function g(e) {
     let { locked: t, pinned: n, anchorLeft: r } = e,
-        g = (0, a.e7)([u.Z], () => u.Z.getSocket());
-    (0, c.nU)();
+        g = (0, a.e7)([c.Z], () => c.Z.getSocket());
+    (0, u.nU)();
     let m = (0, a.e7)([h.Z], () => h.Z.getWindow(p.$J)),
-        [v, E] = (0, c.m8)(g),
-        { currentFPS: I, averageFrameTime: x, timeSinceLastDrop: C, onResetFrameData: S, droppedFramesRef: Z, renderedFrameCount: y, bufferFramecountRef: b, frameCheckerEffect: O } = (0, c.d6)(!0, v, !0),
-        [N, T, w] = (0, c.ZF)(g),
-        [A, k] = (0, c.Y5)(N, O, m),
-        j = performance.now() - E.current < c.MC,
-        R = T(x, b.current);
+        [v, E] = (0, u.m8)(g),
+        { currentFPS: I, averageFrameTime: x, timeSinceLastDrop: C, onResetFrameData: S, droppedFramesRef: Z, renderedFrameCount: y, bufferFramecountRef: O, frameCheckerEffect: b } = (0, u.d6)(!0, v, !0),
+        [N, T, w] = (0, u.ZF)(g),
+        [A, k] = (0, u.Y5)(N, b, m),
+        j = performance.now() - E.current < u.MC,
+        R = T(x, O.current);
     (0, d.ZP)(
         () => (
             A(),
@@ -97,7 +97,7 @@ function g(e) {
                                       (0, i.jsxs)(s.Text, {
                                           tag: 'span',
                                           variant: 'code',
-                                          color: x > 1.1 * c.tO ? 'text-warning' : 'text-primary',
+                                          color: x > 1.1 * u.tO ? 'text-warning' : 'text-primary',
                                           children: [x.toFixed(2), 'ms']
                                       })
                                   ]

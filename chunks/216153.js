@@ -2,14 +2,14 @@ n.d(t, { Y: () => u });
 var i = n(200651);
 n(192379);
 var s = n(704215),
-    l = n(231757),
-    r = n(63063),
+    r = n(231757),
+    l = n(63063),
     a = n(249881),
     o = n(981631),
     c = n(388032),
     d = n(195794);
 let u = () => {
-    let e = r.Z.getArticleURL(o.BhN.XBOX_CONNECTION);
+    let e = l.Z.getArticleURL(o.BhN.XBOX_CONNECTION);
     return (0, i.jsx)(a.t, {
         title: c.intl.string(c.t['2okkZW']),
         body: c.intl.format(c.t.OnERSU, { help_article: e }),
@@ -21,7 +21,7 @@ let u = () => {
         }),
         newIndicatorDismissibleContent: s.z.XBOX_ONE_WAY_RECONNECT,
         onClick: () =>
-            (0, l.Z)({
+            (0, r.Z)({
                 platformType: o.ABu.XBOX,
                 location: 'Xbox two way upsell'
             })

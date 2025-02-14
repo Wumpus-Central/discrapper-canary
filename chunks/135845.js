@@ -18,7 +18,7 @@ function f(e) {
     let t,
         n,
         l,
-        { invite: f, currentUserId: x, guild: C, onTransitionToInviteChannel: v, onAcceptInstantInvite: E } = e,
+        { invite: f, currentUserId: x, guild: C, onTransitionToInviteChannel: E, onAcceptInstantInvite: v } = e,
         I = null == C ? void 0 : C.id,
         N = (0, r.e7)([u.Z], () => u.Z.getGuildId()),
         S = (0, r.e7)([d.Z], () => (null != f && null != f.target_user ? d.Z.getActiveStreamForUser(f.target_user.id, I) : null), [f, I]),
@@ -36,7 +36,7 @@ function f(e) {
         C = new c.ZP(f.guild);
     }
     let P = null != f.channel ? (0, o.jD)(f.channel) : null,
-        k = b ? v : E;
+        k = b ? E : v;
     L && !A ? (l = Z ? p.intl.string(p.t.oBLoZG) : p.intl.formatToPlainString(p.t['0QJmAw'], { name: y.username })) : ((t = p.intl.string(p.t['I6JG4+'])), (n = s.Z.Button.Colors.GREEN), b && ((t = p.intl.string(p.t['Q1W99/'])), (n = s.Z.Button.Colors.PRIMARY)), (l = Z ? p.intl.string(p.t['4hyaHh']) : p.intl.formatToPlainString(p.t.QmlLEh, { name: y.username })));
     let M = N === C.id && null != P ? (0, i.jsx)(s.Z.Channel, { channel: P }) : p.intl.formatToPlainString(p.t.u0vaDA, { guildName: C.name });
     return (0, i.jsxs)(s.Z, {

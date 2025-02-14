@@ -5,7 +5,7 @@ var i = n(200651),
     a = n(986035),
     s = n(388032),
     o = n(336086);
-function c(e, t, n) {
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,7 +18,7 @@ function c(e, t, n) {
         e
     );
 }
-class d extends l.PureComponent {
+class c extends l.PureComponent {
     render() {
         let {
             game: { name: e }
@@ -37,12 +37,12 @@ class d extends l.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            c(this, 'handleDisagree', () => {
+            d(this, 'handleDisagree', () => {
                 (0, r.M9)();
             }),
-            c(this, 'handleAgree', () => {
+            d(this, 'handleAgree', () => {
                 (0, r.cj)();
             });
     }
 }
-let u = d;
+let u = c;

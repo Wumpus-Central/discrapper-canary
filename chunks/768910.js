@@ -1,9 +1,9 @@
 n.d(t, { Z: () => m }), n(47120);
 var i = n(392711),
-    r = n.n(i),
-    a = n(710845),
-    s = n(592125),
-    l = n(306680),
+    s = n.n(i),
+    r = n(710845),
+    l = n(592125),
+    a = n(306680),
     o = n(709054),
     c = n(287328);
 function d(e, t, n) {
@@ -19,7 +19,7 @@ function d(e, t, n) {
         e
     );
 }
-let u = new a.Z('ReadStates'),
+let u = new r.Z('ReadStates'),
     m = new (class {
         async getAll(e) {
             let t = performance.now(),
@@ -37,15 +37,15 @@ let u = new a.Z('ReadStates'),
             null != this.readStateVersion && (null != e.version ? (this.readStateVersion = e.version) : u.log('Received null read states version', e));
         }
         handleWriteCaches(e, t) {
-            let n = l.ZP.getAllReadStates(!1);
+            let n = a.ZP.getAllReadStates(!1);
             if (t) {
                 var i;
                 if (null == this.readStateVersion) return;
                 let t = '0',
-                    a = '0',
-                    l = Object.keys(s.Z.getMutablePrivateChannels()),
-                    d = new Set(l);
-                for (let e of ((a = null !== (i = r()(l).sort(o.default.compare).reverse().value()[0]) && void 0 !== i ? i : '0'), n)) null != e._lastMessageId && (1 === o.default.compare(e._lastMessageId, t) && (t = e._lastMessageId), d.has(e.channelId) && 1 === o.default.compare(e._lastMessageId, a) && (a = e._lastMessageId));
+                    r = '0',
+                    a = Object.keys(l.Z.getMutablePrivateChannels()),
+                    d = new Set(a);
+                for (let e of ((r = null !== (i = s()(a).sort(o.default.compare).reverse().value()[0]) && void 0 !== i ? i : '0'), n)) null != e._lastMessageId && (1 === o.default.compare(e._lastMessageId, t) && (t = e._lastMessageId), d.has(e.channelId) && 1 === o.default.compare(e._lastMessageId, r) && (r = e._lastMessageId));
                 c.Z.nonGuildVersionsTransaction(e).putAll([
                     {
                         id: 'highest_last_message_id',
@@ -53,7 +53,7 @@ let u = new a.Z('ReadStates'),
                     },
                     {
                         id: 'private_channels_version',
-                        versionString: a
+                        versionString: r
                     },
                     {
                         id: 'read_state_version',
@@ -61,8 +61,8 @@ let u = new a.Z('ReadStates'),
                     }
                 ]);
             }
-            let a = c.Z.readStatesTransaction(e);
-            a.delete(), n.forEach((e) => a.put(''.concat(e.type, '-').concat(e.channelId), e));
+            let r = c.Z.readStatesTransaction(e);
+            r.delete(), n.forEach((e) => r.put(''.concat(e.type, '-').concat(e.channelId), e));
         }
         constructor() {
             d(this, 'readStateVersion', null),

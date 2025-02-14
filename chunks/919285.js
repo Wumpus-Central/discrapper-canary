@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => c });
 var i = n(200651);
 n(192379);
 var l = n(324262),
@@ -6,8 +6,8 @@ var l = n(324262),
     a = n(929507),
     s = n(981631),
     o = n(388032),
-    c = n(943935);
-function d(e) {
+    d = n(943935);
+function c(e) {
     let { guild: t } = e,
         n = () => a.Z.dismissNotice(t.id);
     return (0, i.jsx)(l.Z, {
@@ -16,7 +16,7 @@ function d(e) {
         cta: o.intl.string(o.t.RzWDqa),
         message: o.intl.format(o.t['kQ/MDg'], {}),
         type: s.vID.COMMANDS_MIGRATION,
-        image: c,
+        image: d,
         onClick: () => {
             n(), r.Z.open(t.id, s.pNK.INTEGRATIONS);
         },

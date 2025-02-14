@@ -6,8 +6,8 @@ var l = n(442837),
     a = n(481060),
     s = n(410575),
     o = n(100527),
-    c = n(906732),
-    d = n(313201),
+    d = n(906732),
+    c = n(313201),
     u = n(243778),
     h = n(352455),
     m = n(480294),
@@ -16,10 +16,10 @@ var l = n(442837),
     _ = n(388032),
     f = n(150737);
 function E() {
-    let { analyticsLocations: e } = (0, c.ZP)(o.Z.ACTIVE_NOW_COLUMN),
+    let { analyticsLocations: e } = (0, d.ZP)(o.Z.ACTIVE_NOW_COLUMN),
         t = (0, l.e7)([m.Z], () => m.Z.hasConsented(g.pjP.PERSONALIZATION)) ? [] : [r.z.NOW_PLAYING_CONSENT_CARD],
-        n = (0, d.Dt)();
-    return (0, i.jsx)(c.Gt, {
+        n = (0, c.Dt)();
+    return (0, i.jsx)(d.Gt, {
         value: e,
         children: (0, i.jsx)(s.Z, {
             section: g.jXE.ACTIVE_NOW_COLUMN,

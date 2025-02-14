@@ -1,6 +1,6 @@
 n.d(t, { Z: () => x });
-var r = n(200651),
-    l = n(192379),
+var l = n(200651),
+    r = n(192379),
     i = n(481060),
     s = n(727637),
     a = n(906732),
@@ -78,17 +78,17 @@ let g = {
     x = (e) => {
         let { product: t, selectedVariantIndex: n, returnRef: x, onSuccess: b, tooltipDelay: _, isGiftEasterEggEnabled: v, disableCustomColor: j = !1 } = e,
             { analyticsLocations: k } = (0, a.ZP)(),
-            E = l.useRef(null),
+            E = r.useRef(null),
             L = (0, s.Z)(E),
             S = j ? p.BR.DARK : p.BR.LIGHT,
             T = (0, u.hv)('CollectiblesShopGiftButton');
         return (0, c.x6)(t)
             ? null
-            : (0, r.jsx)(i.ua7, {
+            : (0, l.jsx)(i.ua7, {
                   text: m.intl.string(m.t['JCFN//']),
                   delay: _,
                   children: (e) =>
-                      (0, r.jsx)(i.zxk, {
+                      (0, l.jsx)(i.zxk, {
                           ...e,
                           buttonRef: E,
                           className: f.giftButton,
@@ -118,13 +118,13 @@ let g = {
                                   });
                           },
                           children: v
-                              ? (0, r.jsx)(d.Z, {
+                              ? (0, l.jsx)(d.Z, {
                                     hovered: L,
                                     isContentDismissed: !0,
                                     themeOverride: S,
                                     boxColors: g
                                 })
-                              : (0, r.jsx)(i.OgN, {
+                              : (0, l.jsx)(i.OgN, {
                                     size: 'md',
                                     color: 'currentColor'
                                 })

@@ -5,8 +5,8 @@ var i = n(570140),
     a = n(594174),
     s = n(358085),
     o = n(53365),
-    c = n(981631);
-class d extends l.Z {
+    d = n(981631);
+class c extends l.Z {
     _initialize() {
         i.Z.subscribe('CONNECTION_OPEN', this.maybeFetchEligiblity);
     }
@@ -21,7 +21,7 @@ class d extends l.Z {
                 if ((0, s.isDesktop)() || (0, s.isWeb)()) {
                     let e = Object.values(r.Z.getGuilds()),
                         t = a.default.getCurrentUser(),
-                        n = e.filter((e) => e.isOwner(t) && !e.hasFeature(c.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE) && !e.hasFeature(c.oNc.CREATOR_MONETIZABLE_RESTRICTED) && !e.hasFeature(c.oNc.CREATOR_MONETIZABLE_DISABLED) && (e.hasFeature(c.oNc.CREATOR_MONETIZABLE) || e.hasFeature(c.oNc.CREATOR_MONETIZABLE_PROVISIONAL)));
+                        n = e.filter((e) => e.isOwner(t) && !e.hasFeature(d.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE) && !e.hasFeature(d.oNc.CREATOR_MONETIZABLE_RESTRICTED) && !e.hasFeature(d.oNc.CREATOR_MONETIZABLE_DISABLED) && (e.hasFeature(d.oNc.CREATOR_MONETIZABLE) || e.hasFeature(d.oNc.CREATOR_MONETIZABLE_PROVISIONAL)));
                     n.length > 0 && (await (0, o.av)(n.map((e) => e.id)));
                 }
             }),
@@ -35,4 +35,4 @@ class d extends l.Z {
                 : (this[t] = n);
     }
 }
-let u = new d();
+let u = new c();

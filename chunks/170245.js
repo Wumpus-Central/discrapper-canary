@@ -6,36 +6,36 @@ var l = n(120356),
     a = n(442837),
     s = n(129861),
     o = n(700582),
-    c = n(699516);
+    d = n(699516);
 n(51144);
-var d = n(922358);
+var c = n(922358);
 let u = function (e) {
     let { user: t, hovered: n, subText: l, showAccountIdentifier: u, status: h, isMobile: m, className: p } = e,
-        g = (0, a.e7)([c.Z], () => c.Z.getNickname(t.id));
+        g = (0, a.e7)([d.Z], () => d.Z.getNickname(t.id));
     return (0, i.jsxs)('div', {
-        className: r()(d.userInfo, p, { [d.hovered]: n }),
+        className: r()(c.userInfo, p, { [c.hovered]: n }),
         children: [
             (0, i.jsx)(o.Z, {
                 user: t,
-                className: d.avatar,
+                className: c.avatar,
                 animate: n,
                 status: h,
                 isMobile: m
             }),
             (0, i.jsxs)('div', {
-                className: d.text,
+                className: c.text,
                 children: [
                     (0, i.jsx)(s.Z, {
                         user: t,
                         nick: g,
-                        botClass: d.botTag,
-                        className: r()(d.discordTag, { [d.alignPomelo]: t.isPomelo() }),
-                        usernameClass: d.username,
-                        discriminatorClass: d.discriminator,
+                        botClass: c.botTag,
+                        className: r()(c.discordTag, { [c.alignPomelo]: t.isPomelo() }),
+                        usernameClass: c.username,
+                        discriminatorClass: c.discriminator,
                         showAccountIdentifier: u
                     }),
                     (0, i.jsx)('div', {
-                        className: d.subtext,
+                        className: c.subtext,
                         children: l
                     })
                 ]

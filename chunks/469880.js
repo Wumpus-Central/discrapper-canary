@@ -10,9 +10,9 @@ var i = n(200651),
 function u(e) {
     let { applicationIcon: t, applicationName: n, canNavigate: u, guildId: m } = e,
         { results: h, query: x, setQuery: g, unfilteredCount: p } = (0, r.O)(),
-        b = null != h && p > 0;
+        f = null != h && p > 0;
     return (0, i.jsx)(l.Fragment, {
-        children: b
+        children: f
             ? (0, i.jsx)(o.Z, {
                   bar: (0, i.jsx)(a.E1j, {
                       query: x,

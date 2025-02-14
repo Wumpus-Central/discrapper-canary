@@ -5,8 +5,8 @@ var i = n(200651),
     a = n(481060),
     s = n(541716),
     o = n(665149),
-    c = n(910611),
-    d = n(355298),
+    d = n(910611),
+    c = n(355298),
     u = n(333984),
     h = n(26373),
     m = n(486622),
@@ -24,12 +24,12 @@ function T(e) {
         T = (0, E.ZP)(t),
         S = (0, h.K)(),
         A = (0, h.V)(),
-        b = (0, r.e7)([d.Z], () => d.Z.isMessageRequest(t.id)),
-        Z = (0, r.e7)([u.Z], () => u.Z.isSpam(t.id)),
-        x = (0, p.V)(t.id, t.getRecipientId()),
+        Z = (0, r.e7)([c.Z], () => c.Z.isMessageRequest(t.id)),
+        x = (0, r.e7)([u.Z], () => u.Z.isSpam(t.id)),
+        b = (0, p.V)(t.id, t.getRecipientId()),
         L = l.useCallback(() => {
-            _.Z.closeChannelSidebar(f.uZ), b && S && (0, g.Kh)(t.id), Z && A && (0, g.Kh)(t.id);
-        }, [t.id, Z, A, b, S]),
+            _.Z.closeChannelSidebar(f.uZ), Z && S && (0, g.Kh)(t.id), x && A && (0, g.Kh)(t.id);
+        }, [t.id, x, A, Z, S]),
         y = l.useCallback(() => {
             (0, a.showToast)((0, a.createToast)(C.intl.string(C.t.pIQ3h4), a.ToastType.FAILURE));
         }, []),
@@ -54,13 +54,13 @@ function T(e) {
             (0, i.jsx)(o.ZP, {
                 toolbar: P,
                 'aria-label': C.intl.string(C.t.BIYAqa),
-                children: (0, c.ud)({
+                children: (0, d.ud)({
                     channel: t,
                     channelName: T,
                     inSidebar: !0
                 })
             }),
-            Z &&
+            x &&
                 (0, i.jsxs)('div', {
                     className: v.hamBanner,
                     children: [
@@ -72,7 +72,7 @@ function T(e) {
                         (0, i.jsx)(a.zxk, {
                             className: v.hamBannerButton,
                             size: a.PhG.SMALL,
-                            onClick: () => O(t, x),
+                            onClick: () => O(t, b),
                             children: C.intl.string(C.t.koqL3d)
                         })
                     ]

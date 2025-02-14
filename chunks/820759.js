@@ -4,8 +4,8 @@ n.d(t, {
 });
 var i = n(200651),
     s = n(120356),
-    l = n.n(s),
-    r = n(481060),
+    r = n.n(s),
+    l = n(481060),
     a = n(688139);
 let o = () => (0, i.jsx)('hr', { className: a.sectionDivider }),
     c = (e) => {
@@ -13,13 +13,13 @@ let o = () => (0, i.jsx)('hr', { className: a.sectionDivider }),
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(o, {}),
-                (0, i.jsx)(r.Text, {
+                (0, i.jsx)(l.Text, {
                     variant: 'text-md/semibold',
                     className: a.labelSpacing,
                     children: t
                 }),
                 (0, i.jsx)('div', {
-                    className: l()(a.container, c, { [a.verticalContainer]: 'vertical' === s }),
+                    className: r()(a.container, c, { [a.verticalContainer]: 'vertical' === s }),
                     children: n
                 })
             ]

@@ -1,5 +1,5 @@
-n.d(t, { c: () => l });
-let r = (0, n(818083).B)({
+n.d(t, { c: () => r });
+let l = (0, n(818083).B)({
         kind: 'user',
         id: '2024-12_robert_holiday_promo',
         label: 'Robert Holiday Promo Switch Experiment',
@@ -12,4 +12,4 @@ let r = (0, n(818083).B)({
             }
         ]
     }),
-    l = (e) => r.useExperiment({ location: e }).showRobertPromo;
+    r = (e) => l.useExperiment({ location: e }).showRobertPromo;

@@ -2,8 +2,8 @@ n.d(t, { Z: () => R });
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    o = n.n(r),
-    a = n(91192),
+    a = n.n(r),
+    o = n(91192),
     s = n(442837),
     c = n(481060),
     d = n(493683),
@@ -29,11 +29,11 @@ var i = n(200651),
 function A(e) {
     let { style: t, withGuildIcon: n, inverted: l } = e,
         r = {
-            className: o()(T.spine, { [T.spineWithGuildIcon]: n }, { [T.invertedSpine]: l }),
+            className: a()(T.spine, { [T.spineWithGuildIcon]: n }, { [T.invertedSpine]: l }),
             style: t
         },
-        { density: a } = (0, c.TCT)();
-    return 'cozy' === a
+        { density: o } = (0, c.TCT)();
+    return 'cozy' === o
         ? (0, i.jsxs)('svg', {
               ...r,
               width: '10',
@@ -74,7 +74,7 @@ function A(e) {
 function P(e) {
     let { style: t, withGuildIcon: n } = e;
     return (0, i.jsx)('svg', {
-        className: o()(T.spine, { [T.spineWithGuildIcon]: n }),
+        className: a()(T.spine, { [T.spineWithGuildIcon]: n }),
         width: '12',
         height: '11',
         viewBox: '0 0 12 11',
@@ -126,7 +126,7 @@ let R = l.memo(function (e) {
             [t.id]
         ),
         F = null == L ? 0 : L.length,
-        { role: H, ...z } = (0, a.JA)(t.id),
+        { role: H, ...z } = (0, o.JA)(t.id),
         W = l.useRef(null),
         q =
             G > 0
@@ -140,7 +140,7 @@ let R = l.memo(function (e) {
         Y = (0, p.Q3)('GuildSidebarThreadListEntry') ? A : P;
     return (0, i.jsxs)('li', {
         role: H,
-        className: o()(j.containerDefault, { [j.selected]: r }),
+        className: a()(j.containerDefault, { [j.selected]: r }),
         children: [
             (0, i.jsx)(Y, { withGuildIcon: w }),
             R
@@ -159,7 +159,7 @@ let R = l.memo(function (e) {
                     right: 4
                 },
                 children: (0, i.jsxs)('div', {
-                    className: o()(j.iconVisibility, y.wrapper, y.typeThread, {
+                    className: a()(j.iconVisibility, y.wrapper, y.typeThread, {
                         [y.modeSelected]: r,
                         [y.modeMuted]: !r && B,
                         [y.modeUnreadImportant]: !B && !r && D,
@@ -168,7 +168,7 @@ let R = l.memo(function (e) {
                     onMouseDown: U,
                     onContextMenu: V,
                     children: [
-                        !D || B || r ? null : (0, i.jsx)('div', { className: o()(y.unread, y.unreadImportant) }),
+                        !D || B || r ? null : (0, i.jsx)('div', { className: a()(y.unread, y.unreadImportant) }),
                         (0, i.jsx)(c.P3F, {
                             ...z,
                             innerRef: W,
@@ -177,7 +177,7 @@ let R = l.memo(function (e) {
                             'aria-label': q,
                             focusProps: { enabled: !1 },
                             children: (0, i.jsxs)('div', {
-                                className: o()(y.linkTop, y.__invalid_threadMainContent),
+                                className: a()(y.linkTop, y.__invalid_threadMainContent),
                                 children: [
                                     (0, i.jsx)(h.Z, {
                                         className: y.name,

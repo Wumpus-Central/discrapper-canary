@@ -6,8 +6,8 @@ var l = n(442837),
     a = n(129861),
     s = n(607070),
     o = n(570928),
-    c = n(388905),
-    d = n(1585),
+    d = n(388905),
+    c = n(1585),
     u = n(125988),
     h = n(43267),
     m = n(522289),
@@ -35,7 +35,7 @@ let v = (e) => {
                       (0, i.jsx)(m.Z, {
                           guilds: n,
                           maxGuilds: 3,
-                          size: c.Vj.Sizes.SMOL,
+                          size: d.Vj.Sizes.SMOL,
                           hideOverflowCount: !0
                       }),
                       (0, i.jsx)(r.Text, {
@@ -50,14 +50,14 @@ let v = (e) => {
     T = _.ZP.getEnableHardwareAcceleration() ? r.Xo$ : r.qEK;
 function S(e) {
     var t;
-    let { channel: n, otherUser: c, active: m } = e,
+    let { channel: n, otherUser: d, active: m } = e,
         _ = (0, l.e7)([s.Z], () => s.Z.useReducedMotion),
-        E = (0, l.e7)([p.Z], () => (null == c ? null : p.Z.getNickname(c.id))),
+        E = (0, l.e7)([p.Z], () => (null == d ? null : p.Z.getNickname(d.id))),
         S = !_ && m,
         A = (0, f.c)(n),
-        { avatarDecorationSrc: b } = (0, u.Z)({
-            user: c,
-            size: (0, d.y9)(r.EFr.SIZE_40),
+        { avatarDecorationSrc: Z } = (0, u.Z)({
+            user: d,
+            size: (0, c.y9)(r.EFr.SIZE_40),
             onlyAnimateOnHover: !0
         });
     return (0, i.jsxs)(i.Fragment, {
@@ -65,9 +65,9 @@ function S(e) {
             (0, i.jsx)(T, {
                 className: N.avatar,
                 src: (0, h.x)(n, 40, S),
-                avatarDecoration: b,
+                avatarDecoration: Z,
                 size: r.EFr.SIZE_40,
-                'aria-label': null !== (t = null == c ? void 0 : c.username) && void 0 !== t ? t : C.intl.string(C.t['30mdIy'])
+                'aria-label': null !== (t = null == d ? void 0 : d.username) && void 0 !== t ? t : C.intl.string(C.t['30mdIy'])
             }),
             (0, i.jsxs)('div', {
                 className: N.userPreview,
@@ -77,11 +77,11 @@ function S(e) {
                         children: [
                             (0, i.jsx)(a.Z, {
                                 nick: E,
-                                user: c,
+                                user: d,
                                 showAccountIdentifier: !0,
                                 className: N.tagContainer,
                                 usernameClass: N.username,
-                                discriminatorClass: null != g.ZP.getGlobalName(c) ? N.globalName : N.discriminator
+                                discriminatorClass: null != g.ZP.getGlobalName(d) ? N.globalName : N.discriminator
                             }),
                             (0, i.jsx)(r.Text, {
                                 className: N.timestampWithPreview,
@@ -94,7 +94,7 @@ function S(e) {
                     (0, i.jsx)(o.Z, {
                         hoverText: (0, i.jsx)(I.Z, { channel: n }),
                         forceHover: m,
-                        children: (0, i.jsx)(v, { userId: c.id })
+                        children: (0, i.jsx)(v, { userId: d.id })
                     })
                 ]
             })

@@ -9,8 +9,8 @@ var i = n(200651),
     a = n(481060),
     s = n(239091),
     o = n(585237),
-    c = n(551428),
-    d = n(388032);
+    d = n(551428),
+    c = n(388032);
 function u(e, t, n) {
     return (
         t in e
@@ -41,7 +41,7 @@ class m extends l.PureComponent {
                   onDropdownClick: this.handleContextMenu,
                   onContextMenu: this.handleContextMenu,
                   ...a,
-                  children: d.intl.string(d.t.hElye3)
+                  children: c.intl.string(c.t.hElye3)
               });
     }
     constructor(...e) {
@@ -62,7 +62,7 @@ class m extends l.PureComponent {
                 return (0, i.jsx)(a.v2r, {
                     onSelect: l,
                     navId: 'test-store-listing',
-                    'aria-label': d.intl.string(d.t.ogxXGh),
+                    'aria-label': c.intl.string(c.t.ogxXGh),
                     onClose: s.Zy,
                     children: r
                 });
@@ -72,10 +72,10 @@ class m extends l.PureComponent {
             });
     }
 }
-let p = r.ZP.connectStores([c.Z], (e) => {
+let p = r.ZP.connectStores([d.Z], (e) => {
     let { skuId: t } = e;
     return {
-        storeListings: c.Z.getUnpublishedForSKU(t),
-        primaryStoreListing: c.Z.getForSKU(t)
+        storeListings: d.Z.getUnpublishedForSKU(t),
+        primaryStoreListing: d.Z.getForSKU(t)
     };
 })(m);

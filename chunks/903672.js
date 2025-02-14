@@ -16,8 +16,8 @@ var i = n(200651),
     f = n(695346),
     x = n(592125),
     C = n(731290),
-    v = n(944486),
-    E = n(455199),
+    E = n(944486),
+    v = n(455199),
     I = n(655354),
     N = n(999671),
     S = n(324081),
@@ -33,15 +33,15 @@ let Z = {
     }
 };
 function R(e, t, n) {
-    let i = t ? E.Z.guildFilter : null,
-        l = t ? E.Z.roleFilter : null,
-        a = t ? E.Z.everyoneFilter : null,
+    let i = t ? v.Z.guildFilter : null,
+        l = t ? v.Z.roleFilter : null,
+        a = t ? v.Z.everyoneFilter : null,
         r = null;
     null != e && null != i && (r = i === A.NgX.ALL_SERVERS ? null : e.getGuildId()), d.Z.fetchRecentMentions(n, A.DJj, r, l, a);
 }
 function L(e) {
     let { setTab: t, onJump: n, badgeState: a, closePopout: c } = e,
-        p = (0, s.e7)([x.Z, v.Z], () => x.Z.getChannel(v.Z.getChannelId())),
+        p = (0, s.e7)([x.Z, E.Z], () => x.Z.getChannel(E.Z.getChannelId())),
         {
             messages: f,
             hasMore: C,
@@ -49,20 +49,20 @@ function L(e) {
             guildFilter: S,
             roleFilter: T,
             everyoneFilter: Z
-        } = (0, s.cj)([E.Z], () => ({
-            messages: E.Z.getMentions(),
-            hasMore: E.Z.hasMore,
-            loading: E.Z.loading,
-            guildFilter: E.Z.guildFilter,
-            roleFilter: E.Z.roleFilter,
-            everyoneFilter: E.Z.everyoneFilter
+        } = (0, s.cj)([v.Z], () => ({
+            messages: v.Z.getMentions(),
+            hasMore: v.Z.hasMore,
+            loading: v.Z.loading,
+            guildFilter: v.Z.guildFilter,
+            roleFilter: v.Z.roleFilter,
+            everyoneFilter: v.Z.everyoneFilter
         })),
         L = (0, g.Us)({ location: 'RecentMentions' }),
         k = (0, _.Z)(S),
         O = (0, _.Z)(T),
         D = (0, _.Z)(Z);
     l.useEffect(() => {
-        if (!E.Z.hasLoadedEver) {
+        if (!v.Z.hasLoadedEver) {
             R(p, !0);
             return;
         }

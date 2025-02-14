@@ -1,10 +1,10 @@
-n.d(t, { Z: () => x }), n(47120);
+n.d(t, { Z: () => E }), n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(442837),
-    a = n(481060),
-    o = n(893776),
-    s = n(232567),
+    a = n(442837),
+    l = n(481060),
+    s = n(893776),
+    o = n(232567),
     c = n(129293),
     d = n(388905),
     u = n(353926),
@@ -14,56 +14,56 @@ var i = n(200651),
     g = n(314897),
     p = n(981631),
     f = n(388032),
-    E = n(483938);
-l.ZP.initialize();
-let x = (e) => {
+    x = n(483938);
+a.ZP.initialize();
+let E = (e) => {
     let { location: t } = e,
-        n = (0, l.e7)([g.default], () => g.default.isAuthenticated()),
-        x = (0, l.e7)([u.Z], () => u.Z.hasLoadedExperiments),
+        n = (0, a.e7)([g.default], () => g.default.isAuthenticated()),
+        E = (0, a.e7)([u.Z], () => u.Z.hasLoadedExperiments),
         I = (0, _.oK)('RSL - Landing Page'),
         [v, C] = r.useState(!1),
-        [N, S] = r.useState(f.intl.string(f.t['9exy+f'])),
-        [T, A] = r.useState(!0),
-        b = (e) => {
+        [N, b] = r.useState(f.intl.string(f.t['9exy+f'])),
+        [S, T] = r.useState(!0),
+        A = (e) => {
             switch (e) {
                 case p.evJ.INVALID_FORM_BODY:
                 case p.evJ.DSA_RSL_REPORT_NOT_FOUND:
-                    S(f.intl.string(f.t.bzXDfX));
+                    b(f.intl.string(f.t.bzXDfX));
                     break;
                 case p.evJ.DSA_RSL_ALREADY_REQUESTED:
-                    S(f.intl.string(f.t.rV00ws));
+                    b(f.intl.string(f.t.rV00ws));
                     break;
                 case p.evJ.DSA_RSL_LIMITED_TIME:
-                    S(f.intl.string(f.t['0dI29v']));
+                    b(f.intl.string(f.t['0dI29v']));
                     break;
                 case p.evJ.DSA_RSL_REPORT_INELIGIBLE:
-                    S(f.intl.string(f.t['RGa/GR']));
+                    b(f.intl.string(f.t['RGa/GR']));
                     break;
                 default:
-                    S(f.intl.string(f.t['0QLzfn']));
+                    b(f.intl.string(f.t['0QLzfn']));
             }
         };
     return (
         r.useEffect(() => {
             n
-                ? (A(!0),
-                  s
+                ? (T(!0),
+                  o
                       .k({ withAnalyticsToken: !0 })
-                      .then(() => A(!1))
-                      .catch(() => A(!1)))
-                : A(!1);
+                      .then(() => T(!1))
+                      .catch(() => T(!1)))
+                : T(!1);
         }, [n]),
         r.useEffect(() => {
-            x || I || o.Z.getExperiments();
-        }, [x, I]),
+            E || I || s.Z.getExperiments();
+        }, [E, I]),
         r.useEffect(() => {
             let e = async (e) => {
                 var t, n;
                 try {
                     let n = null != e ? await (0, h.hs)(e) : void 0;
-                    null != n ? S(f.intl.string(f.t.e6mZMj)) : b(null === (t = n.body) || void 0 === t ? void 0 : t.code);
+                    null != n ? b(f.intl.string(f.t.e6mZMj)) : A(null === (t = n.body) || void 0 === t ? void 0 : t.code);
                 } catch (e) {
-                    b(null === (n = e.body) || void 0 === n ? void 0 : n.code);
+                    A(null === (n = e.body) || void 0 === n ? void 0 : n.code);
                 } finally {
                     C(!1);
                 }
@@ -71,14 +71,14 @@ let x = (e) => {
             C(!0), e((0, c.Z)(t)), (0, m.e)('report_second_look');
         }, [t]),
         I &&
-            !T &&
+            !S &&
             (0, i.jsxs)(d.ZP, {
                 children: [
                     (0, i.jsx)(d.Dx, {
-                        className: E.marginBottom8,
+                        className: x.marginBottom8,
                         children: N
                     }),
-                    v && (0, i.jsx)(a.$jN, {})
+                    v && (0, i.jsx)(l.$jN, {})
                 ]
             })
     );

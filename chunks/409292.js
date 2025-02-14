@@ -5,8 +5,8 @@ var i = n(200651),
     a = n(442837),
     s = n(493683),
     o = n(112724),
-    c = n(108427),
-    d = n(184107),
+    d = n(108427),
+    c = n(184107),
     u = n(410575),
     h = n(613311),
     m = n(601564),
@@ -27,7 +27,7 @@ function _(e, t, n) {
 }
 class f extends l.Component {
     componentDidMount() {
-        this.fetchStoreListing(), (0, c.e)('channel_store_listing');
+        this.fetchStoreListing(), (0, d.e)('channel_store_listing');
     }
     render() {
         return null != this.props.skuId
@@ -64,8 +64,8 @@ class f extends l.Component {
     }
 }
 let E = (0, o.Z)(
-    a.ZP.connectStores([d.Z], (e) => {
+    a.ZP.connectStores([c.Z], (e) => {
         let { channel: t, inputSkuId: n } = e;
-        return { skuId: null != n ? n : d.Z.getSkuIdForChannel(t.id) };
+        return { skuId: null != n ? n : c.Z.getSkuIdForChannel(t.id) };
     })(f)
 );

@@ -12,17 +12,17 @@ function s(e) {
                 { PaymentModal: l } = await Promise.resolve().then(n.bind(n, 791785)),
                 { STEPS: r } = await Promise.all([n.e('8016'), n.e('17938'), n.e('54433'), n.e('61349')]).then(n.bind(n, 7305));
             return (n) => {
-                let { onClose: v, ...E } = n;
+                let { onClose: E, ...v } = n;
                 return (0, i.jsx)(e, {
                     activeSubscription: s,
                     stepConfigs: r,
                     skuIDs: [C],
                     children: (0, i.jsx)(a.KB, {
                         children: (0, i.jsx)(l, {
-                            ...E,
+                            ...v,
                             initialPlanId: t,
                             onClose: (e) => {
-                                v(), null == d || d(e);
+                                E(), null == d || d(e);
                             },
                             analyticsLocations: _,
                             analyticsObject: u,

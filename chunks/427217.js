@@ -6,10 +6,10 @@ var l = n(120356),
     a = n(584973),
     s = n(52833);
 function o(e) {
-    let { activity: t, className: n, emojiClassName: l, textClassName: o, placeholderText: c, soloEmojiClassName: d, animate: u = !0, hideTooltip: h = !1, hideEmoji: m = !1, children: p } = e;
+    let { activity: t, className: n, emojiClassName: l, textClassName: o, placeholderText: d, soloEmojiClassName: c, animate: u = !0, hideTooltip: h = !1, hideEmoji: m = !1, children: p } = e;
     if (null == t) return null;
     let { emoji: g } = t,
-        _ = null != t.state && '' !== t.state ? t.state : c;
+        _ = null != t.state && '' !== t.state ? t.state : d;
     return (0, i.jsxs)('div', {
         className: r()(s.__invalid_container, n),
         children: [
@@ -17,7 +17,7 @@ function o(e) {
                 ? null
                 : (0, i.jsx)(a.Z, {
                       emoji: g,
-                      className: r()(s.emoji, l, null != d ? { [d]: null == _ || '' === _ } : null),
+                      className: r()(s.emoji, l, null != c ? { [c]: null == _ || '' === _ } : null),
                       animate: u,
                       hideTooltip: h
                   }),

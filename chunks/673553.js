@@ -1,36 +1,36 @@
-t.d(n, { U: () => h }), t(47120);
-var i = t(610521),
-    r = t(607070),
-    s = t(819640),
-    l = t(131951),
-    o = t(19780),
-    a = t(585483),
-    d = t(5967),
-    c = t(13140),
-    u = t(981631);
-let E = new Set(['PageDown', 'PageUp', 'Home', 'End', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight']),
-    p = new Set(['Alt', 'AltGraph', 'CapsLock', 'Control', 'Fn', 'FnLock', 'Hyper', 'Meta', 'NumLock', 'OS', 'ScrollLock', 'Shift', 'Super', 'Symbol', 'SymbolLock']),
-    b = new Set(['F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7', 'F8', 'F9', 'F10', 'F11', 'F12', 'F13', 'F14', 'F15', 'F16', 'F17', 'F18', 'F19', 'F20', 'Accept', 'ContextMenu', 'Find', 'ZoomIn', 'ZoomOut']),
-    C = new Set(['ChannelDown', 'ChannelUp', 'MediaFastForward', 'MediaPause', 'MediaPlay', 'MediaPlayPause', 'MediaRecord', 'MediaRewind', 'MediaStop', 'MediaTrackNext', 'MediaTrackPrevious', 'AudioBalanceLeft', 'AudioBalanceRight', 'AudioBassDown', 'AudioBassBoostDown', 'AudioBassBoostToggle', 'AudioBassBoostUp', 'AudioBassUp', 'AudioFaderFront', 'AudioFaderReader', 'AudioSurroundModeNext', 'AudioTrebleDown', 'AudioTreblUp', 'AudioVolumeDown', 'AudioVolumeMute', 'AudioVolumeUp', 'VolumeUp', 'VolumeDown', 'VolumeMute']),
-    h = {
+n.d(t, { U: () => _ }), n(47120);
+var i = n(610521),
+    s = n(607070),
+    r = n(819640),
+    l = n(131951),
+    a = n(19780),
+    o = n(585483),
+    c = n(5967),
+    d = n(13140),
+    u = n(981631);
+let m = new Set(['PageDown', 'PageUp', 'Home', 'End', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight']),
+    h = new Set(['Alt', 'AltGraph', 'CapsLock', 'Control', 'Fn', 'FnLock', 'Hyper', 'Meta', 'NumLock', 'OS', 'ScrollLock', 'Shift', 'Super', 'Symbol', 'SymbolLock']),
+    g = new Set(['F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7', 'F8', 'F9', 'F10', 'F11', 'F12', 'F13', 'F14', 'F15', 'F16', 'F17', 'F18', 'F19', 'F20', 'Accept', 'ContextMenu', 'Find', 'ZoomIn', 'ZoomOut']),
+    x = new Set(['ChannelDown', 'ChannelUp', 'MediaFastForward', 'MediaPause', 'MediaPlay', 'MediaPlayPause', 'MediaRecord', 'MediaRewind', 'MediaStop', 'MediaTrackNext', 'MediaTrackPrevious', 'AudioBalanceLeft', 'AudioBalanceRight', 'AudioBassDown', 'AudioBassBoostDown', 'AudioBassBoostToggle', 'AudioBassBoostUp', 'AudioBassUp', 'AudioFaderFront', 'AudioFaderReader', 'AudioSurroundModeNext', 'AudioTrebleDown', 'AudioTreblUp', 'AudioVolumeDown', 'AudioVolumeMute', 'AudioVolumeUp', 'VolumeUp', 'VolumeDown', 'VolumeMute']),
+    _ = {
         binds: ['any-character'],
-        keydown(e, n) {
-            var t;
-            let h = null === (t = (0, d.uB)(e)) || void 0 === t ? void 0 : t.activeElement;
-            if ((0, d.VG)(h) || i.fC.isActive() || p.has(n) || b.has(n) || C.has(n)) return !1;
-            let g = null != h && 'BODY' === h.tagName;
+        keydown(e, t) {
+            var n;
+            let _ = null === (n = (0, c.uB)(e)) || void 0 === n ? void 0 : n.activeElement;
+            if ((0, c.VG)(_) || i.fC.isActive() || h.has(t) || g.has(t) || x.has(t)) return !1;
+            let p = null != _ && 'BODY' === _.tagName;
             return (
-                !((r.Z.keyboardModeEnabled && !g && !/^[a-zA-Z0-9]$/.test(n)) || a.S.hasSubscribers(u.CkL.MODAL_CLOSE) || s.Z.hasLayers()) &&
-                ('Tab' === n && a.S.hasSubscribers(u.CkL.TEXTAREA_FOCUS) && null != document.querySelector('[data-can-focus="true"]')
-                    ? (e.preventDefault(), a.S.dispatch(u.CkL.TEXTAREA_FOCUS), !1)
+                !((s.Z.keyboardModeEnabled && !p && !/^[a-zA-Z0-9]$/.test(t)) || o.S.hasSubscribers(u.CkL.MODAL_CLOSE) || r.Z.hasLayers()) &&
+                ('Tab' === t && o.S.hasSubscribers(u.CkL.TEXTAREA_FOCUS) && null != document.querySelector('[data-can-focus="true"]')
+                    ? (e.preventDefault(), o.S.dispatch(u.CkL.TEXTAREA_FOCUS), !1)
                     : !(
-                          o.Z.isConnected() &&
+                          a.Z.isConnected() &&
                           l.Z.getMode() === u.pM4.PUSH_TO_TALK &&
                           !l.Z.isSelfMute() &&
                           Object.values(l.Z.getShortcuts())
-                              .map(c.d2)
-                              .some((n) => n.map((e) => e.keyCode).includes(e.keyCode))
-                      ) && void (e.metaKey || e.ctrlKey || E.has(n) || a.S.dispatchToLastSubscribed(u.CkL.TEXTAREA_FOCUS)))
+                              .map(d.d2)
+                              .some((t) => t.map((e) => e.keyCode).includes(e.keyCode))
+                      ) && void (e.metaKey || e.ctrlKey || m.has(t) || o.S.dispatchToLastSubscribed(u.CkL.TEXTAREA_FOCUS)))
             );
         }
     };

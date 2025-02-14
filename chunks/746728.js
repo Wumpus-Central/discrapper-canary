@@ -9,34 +9,34 @@ var i = n(200651),
     a = n.n(r),
     s = n(481060),
     o = n(706454),
-    c = n(959165),
-    d = n(164991),
+    d = n(959165),
+    c = n(164991),
     u = n(783393),
     h = n(112471),
     m = n(877696);
 function p(e) {
     let { categoryId: t, loadId: n } = e;
-    d.Z.setState({ categoryId: t }),
-        c.Z.loadCategoryResults({
+    c.Z.setState({ categoryId: t }),
+        d.Z.loadCategoryResults({
             loadId: n,
             categoryId: t,
-            query: d.Z.getField('fetchedQuery'),
-            languageCode: d.Z.getField('languageCode')
+            query: c.Z.getField('fetchedQuery'),
+            languageCode: c.Z.getField('languageCode')
         });
 }
 function g(e) {
     let { loadId: t, categoryId: n, count: r } = e,
-        c = l.useCallback(() => {
+        d = l.useCallback(() => {
             p({
                 categoryId: n,
                 loadId: t
             });
         }, [n, t]),
-        h = d.Z.useField('categoryId') === n,
+        h = c.Z.useField('categoryId') === n,
         g = r.toLocaleString(o.default.locale),
         _ = (0, u.E)({ categoryId: n });
     return (0, i.jsxs)(s.P3F, {
-        onClick: c,
+        onClick: d,
         className: a()(m.category, { [m.selected]: h }),
         children: [
             (0, i.jsx)(s.Text, {

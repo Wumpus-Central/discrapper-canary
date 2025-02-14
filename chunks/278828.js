@@ -1,7 +1,7 @@
-n.d(t, { Q: () => l });
+n.d(t, { Q: () => r });
 var i = n(381499),
     s = n(675478);
-let l = (e) =>
+let r = (e) =>
     s.hW.updateAsync(
         'privacy',
         (t) => {

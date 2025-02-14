@@ -2,14 +2,14 @@ n.d(t, { r: () => c });
 var i = n(200651);
 n(192379);
 var r = n(481060),
-    l = n(471445),
-    a = n(742593),
-    o = n(583114);
-function s(e) {
+    a = n(471445),
+    l = n(742593),
+    s = n(583114);
+function o(e) {
     let { channel: t } = e,
-        n = (0, l.Th)(t.type);
+        n = (0, a.Th)(t.type);
     return (0, i.jsxs)('div', {
-        className: o.channelInfoContainer,
+        className: s.channelInfoContainer,
         children: [
             null != n
                 ? (0, i.jsx)(n, {
@@ -20,7 +20,7 @@ function s(e) {
                   })
                 : null,
             (0, i.jsx)(r.Text, {
-                className: o.channelInfoText,
+                className: s.channelInfoText,
                 color: 'none',
                 variant: 'text-sm/semibold',
                 children: t.name
@@ -31,20 +31,20 @@ function s(e) {
 function c(e) {
     let { channel: t, guildScheduledEvent: n } = e;
     return (0, i.jsxs)('div', {
-        className: o.container,
+        className: s.container,
         children: [
-            (0, i.jsx)(a.HZ, {
-                className: o.statusContainer,
+            (0, i.jsx)(l.HZ, {
+                className: s.statusContainer,
                 guildId: n.guild_id,
                 guildEvent: n,
                 eventPreview: n
             }),
-            (0, i.jsx)(a.Rf, {
+            (0, i.jsx)(l.Rf, {
                 name: n.name,
                 description: n.description,
                 guildId: n.guild_id
             }),
-            null != t && n.channel_id === t.id ? (0, i.jsx)(s, { channel: t }) : null
+            null != t && n.channel_id === t.id ? (0, i.jsx)(o, { channel: t }) : null
         ]
     });
 }

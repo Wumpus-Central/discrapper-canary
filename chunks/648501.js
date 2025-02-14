@@ -3,8 +3,8 @@ var i = n(200651);
 n(192379);
 var l = n(442837),
     r = n(692547),
-    o = n(481060),
-    a = n(619915),
+    a = n(481060),
+    o = n(619915),
     s = n(456269),
     c = n(921711),
     d = n(368442),
@@ -29,7 +29,7 @@ function j(e) {
     let { channel: n, isChannelSelected: j, isChannelCollapsed: y, voiceStates: T, enableConnectedUserLimit: A, enableActivities: P, isSubscriptionGated: R, needSubscriptionToAccess: w, isNewChannel: L, muted: M, resolvedUnreadSetting: D } = e,
         G = (0, l.e7)([m.ZP], () => m.ZP.getMentionCount(n.id)),
         k = (0, l.e7)([m.ZP], () => m.ZP.getIsMentionLowImportance(n.id)),
-        B = (0, a.ZP)(n),
+        B = (0, o.ZP)(n),
         O = (0, l.e7)([p.Z], () => !p.Z.can(b.Plq.CONNECT, n)),
         U = (0, l.e7)([g.Z], () => g.Z.hasVideo(n.id)),
         V = (0, d.PK)(n.id) && n.isGuildStageVoice(),
@@ -52,22 +52,22 @@ function j(e) {
         });
     if ((0, c.O)(R)) return (0, i.jsx)(c.Z, { locked: w });
     if (L)
-        return (0, i.jsx)(o.IGR, {
+        return (0, i.jsx)(a.IGR, {
             text: N.intl.string(N.t.y2b7CA),
             color: r.Z.unsafe_rawColors.BRAND_260.css,
             className: E.newChannel
         });
     if (!M && D === S.i.ALL_MESSAGES && n.isForumLikeChannel() && null != H && H > 0)
-        return (0, i.jsx)(o.Text, {
+        return (0, i.jsx)(a.Text, {
             variant: 'text-xs/semibold',
             color: 'text-brand',
-            children: N.intl.format(N.t.GkAbqa, { count: (0, o.NGo)(H) })
+            children: N.intl.format(N.t.GkAbqa, { count: (0, a.NGo)(H) })
         });
     if (!M && n.isForumLikeChannel() && null != z && z > 0)
-        return (0, i.jsx)(o.Text, {
+        return (0, i.jsx)(a.Text, {
             variant: 'text-xs/semibold',
             color: 'text-muted',
-            children: (0, o.NGo)(z)
+            children: (0, a.NGo)(z)
         });
     let q = null !== (t = null == T ? void 0 : T.length) && void 0 !== t ? t : 0;
     return null != A && A && F
@@ -77,7 +77,7 @@ function j(e) {
               channel: n
           })
         : y && (0, f.a)(T) && W
-          ? (0, i.jsx)(o.IGR, {
+          ? (0, i.jsx)(a.IGR, {
                 text: N.intl.string(N.t.dI3q4u),
                 color: r.Z.unsafe_rawColors.RED_400.css
             })

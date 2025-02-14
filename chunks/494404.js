@@ -22,8 +22,8 @@ var i = n(200651),
     f = n(294218),
     x = n(703656),
     C = n(210887),
-    v = n(592125),
-    E = n(375954),
+    E = n(592125),
+    v = n(375954),
     I = n(496675),
     N = n(933429),
     S = n(451478),
@@ -142,7 +142,7 @@ let M = d.ZP.connectStores([I.Z], (e) => {
     return { canManageMessages: null != t && I.Z.can(A.Plq.MANAGE_MESSAGES, t) };
 })(k);
 function O(e) {
-    let { analyticsName: t, items: n, hasMore: a, loading: s, loadMore: m, renderHeader: _, renderEmptyState: f, renderItem: x, getProTip: v, scrollerClassName: E, className: I, listName: Z } = e,
+    let { analyticsName: t, items: n, hasMore: a, loading: s, loadMore: m, renderHeader: _, renderEmptyState: f, renderItem: x, getProTip: E, scrollerClassName: v, className: I, listName: Z } = e,
         L = l.useRef(null),
         P = (0, h.Z)(Z, L),
         k = (0, d.e7)([N.ZP], () => N.ZP.hasNotice()),
@@ -221,7 +221,7 @@ function O(e) {
                     className: y.scrollingFooterWrap,
                     children: f(C.Z.theme)
                 }));
-    let B = null == v ? void 0 : v(),
+    let B = null == E ? void 0 : E(),
         G =
             F && null != B
                 ? (0, i.jsx)('div', {
@@ -249,7 +249,7 @@ function O(e) {
             component: _(),
             children: [
                 (0, i.jsxs)(u.Den, {
-                    className: r()(y.messagesPopout, E),
+                    className: r()(y.messagesPopout, v),
                     onScroll: V ? D : void 0,
                     ref: L,
                     children: [
@@ -276,8 +276,8 @@ function O(e) {
 }
 function D(e) {
     let { analyticsName: t, onFetch: n, channel: a, messages: r, hasMore: s, loading: o, loadMore: c, onJump: u, canCloseAllMessages: h = !1, renderHeader: p, renderEmptyState: g, renderMessage: C, getProTip: I, scrollerClassName: N, className: S, onCloseMessage: T, listName: b } = e,
-        Z = (0, d.e7)([E.Z], () => {
-            let e = null != a ? E.Z.getMessages(a.id) : null;
+        Z = (0, d.e7)([v.Z], () => {
+            let e = null != a ? v.Z.getMessages(a.id) : null;
             return null != e && null != e.jumpTargetId && e.loadingMore && null == e.get(e.jumpTargetId);
         });
     function R(e, n) {
@@ -295,7 +295,7 @@ function D(e) {
                 confirmText: j.intl.string(j.t.BddRzc)
             });
         else if (!Z) {
-            let e = v.Z.getChannel(s);
+            let e = E.Z.getChannel(s);
             null != e && (_.Z.trackJump(s, i, t), (0, x.uL)(A.Z5c.CHANNEL(e.getGuildId(), s, i))), null == u || u(n);
         }
     }

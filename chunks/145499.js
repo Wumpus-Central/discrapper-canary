@@ -178,10 +178,10 @@ let b = (e, t) => (e < (0, p.A3)(j.Eu4.NONE) ? j.Eu4.NONE : e < (0, p.A3)(j.Eu4.
                     T = (0, p.A3)(c.tier, t),
                     L = (0, p.ig)(c.tier),
                     D = d.slice(f, T),
-                    k = D.length > 0,
-                    O = S < c.tier,
+                    O = D.length > 0,
+                    k = S < c.tier,
                     P = b(d.length, t),
-                    w = x && !O && P === c.tier && T !== D.length,
+                    w = x && !k && P === c.tier && T !== D.length,
                     M = w || D.length > 0,
                     U = T - f,
                     G = n(872732),
@@ -228,7 +228,7 @@ let b = (e, t) => (e < (0, p.A3)(j.Eu4.NONE) ? j.Eu4.NONE : e < (0, p.A3)(j.Eu4.
                                                 (0, i.jsx)(
                                                     N.Z,
                                                     {
-                                                        isDisabled: O,
+                                                        isDisabled: k,
                                                         sticker: e,
                                                         canManageSticker: _(e)
                                                     },
@@ -238,7 +238,7 @@ let b = (e, t) => (e < (0, p.A3)(j.Eu4.NONE) ? j.Eu4.NONE : e < (0, p.A3)(j.Eu4.
                                             z
                                         ]
                                     }),
-                                !O &&
+                                !k &&
                                     !w &&
                                     0 === D.length &&
                                     (0, i.jsx)('div', {
@@ -249,8 +249,8 @@ let b = (e, t) => (e < (0, p.A3)(j.Eu4.NONE) ? j.Eu4.NONE : e < (0, p.A3)(j.Eu4.
                                             children: I.intl.string(I.t.lqwv0N)
                                         })
                                     }),
-                                O &&
-                                    !k &&
+                                k &&
+                                    !O &&
                                     (0, i.jsxs)('div', {
                                         className: E.emptyTierWrapper,
                                         children: [

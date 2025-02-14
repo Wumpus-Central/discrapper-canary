@@ -5,10 +5,10 @@ var i = n(224706),
     o = n(620954),
     a = n(987650),
     s = n(388032);
-function d(e, t, n, d, c) {
+function d(e, t, n, d, u) {
     if (null == t.activity || null == d.id) return null;
-    let u = t.activity.type,
-        h = c.session_id;
+    let c = t.activity.type,
+        h = u.session_id;
     if (null == h) return null;
     let { icon: _, title: p, body: f } = (0, r.Xi)(e, t, n),
         { trackView: g, trackClick: m } = (0, o.R)(a.n0.ActivityInvite, {
@@ -19,8 +19,8 @@ function d(e, t, n, d, c) {
             guild_id: e.guild_id,
             channel_id: e.id,
             channel_type: e.type,
-            activity_type: u,
-            activity_name: c.name
+            activity_type: c,
+            activity_name: u.name
         });
     return {
         icon: _,

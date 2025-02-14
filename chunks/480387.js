@@ -5,52 +5,52 @@ n.d(t, {
 });
 var i = n(213919),
     r = n(544891),
-    l = n(570140),
-    a = n(893776),
-    o = n(710845),
-    s = n(314897),
+    a = n(570140),
+    l = n(893776),
+    s = n(710845),
+    o = n(314897),
     c = n(726745),
     d = n(981631);
-let u = new o.Z('MultiAccountActionCreators');
+let u = new s.Z('MultiAccountActionCreators');
 function h() {
-    let e = s.default.getId();
+    let e = o.default.getId();
     c.Z.getUsers().forEach(async (t) => {
         let n,
-            { id: a } = t,
-            o = i.getToken(a);
-        if (null == o || '' === o) {
-            l.Z.dispatch({
+            { id: l } = t,
+            s = i.getToken(l);
+        if (null == s || '' === s) {
+            a.Z.dispatch({
                 type: 'MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE',
-                userId: a
+                userId: l
             });
             return;
         }
-        l.Z.dispatch({
+        a.Z.dispatch({
             type: 'MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST',
-            userId: a
+            userId: l
         });
         try {
             n = await r.tn.get({
                 url: d.ANM.ME,
-                headers: { authorization: o },
+                headers: { authorization: s },
                 retries: 3,
                 rejectWithError: !1
             });
         } catch (t) {
             let e = (null == t ? void 0 : t.status) === 401 || (null == t ? void 0 : t.status) === 403;
-            l.Z.dispatch({
+            a.Z.dispatch({
                 type: e ? 'MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE' : 'MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS',
-                userId: a
+                userId: l
             });
             return;
         }
-        l.Z.dispatch({
-            type: e === a ? 'CURRENT_USER_UPDATE' : 'USER_UPDATE',
+        a.Z.dispatch({
+            type: e === l ? 'CURRENT_USER_UPDATE' : 'USER_UPDATE',
             user: n.body
         }),
-            l.Z.dispatch({
+            a.Z.dispatch({
                 type: 'MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS',
-                userId: a
+                userId: l
             });
     });
 }
@@ -59,15 +59,15 @@ function _(e, t) {
     let n = i.getToken(e);
     return null == n
         ? (u.log('Switching accounts failed because there was no token'),
-          l.Z.dispatch({
+          a.Z.dispatch({
               type: 'MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE',
               userId: e
           }),
           Promise.resolve())
-        : a.Z.switchAccountToken(n, t);
+        : l.Z.switchAccountToken(n, t);
 }
 function m(e) {
-    l.Z.dispatch({
+    a.Z.dispatch({
         type: 'MULTI_ACCOUNT_REMOVE_ACCOUNT',
         userId: e
     });

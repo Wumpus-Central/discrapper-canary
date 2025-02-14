@@ -6,20 +6,20 @@ var l = n(120356),
     a = n(481060),
     s = n(747219);
 function o(e) {
-    let { padded: t = !0, inset: n = !1, active: l = !1, className: o, children: c, onClick: d, ...u } = e;
-    return null != d
+    let { padded: t = !0, inset: n = !1, active: l = !1, className: o, children: d, onClick: c, ...u } = e;
+    return null != c
         ? (0, i.jsx)(a.P3F, {
-              onClick: d,
-              tabIndex: null != d ? 0 : -1,
+              onClick: c,
+              tabIndex: null != c ? 0 : -1,
               className: r()(o, {
                   [s.outer]: !n,
                   [s.inset]: n,
                   [s.padded]: t,
                   [s.active]: l,
-                  [s.interactive]: null != d
+                  [s.interactive]: null != c
               }),
               ...u,
-              children: c
+              children: d
           })
         : (0, i.jsx)('div', {
               className: r()(o, {
@@ -29,6 +29,6 @@ function o(e) {
                   [s.active]: l
               }),
               ...u,
-              children: c
+              children: d
           });
 }

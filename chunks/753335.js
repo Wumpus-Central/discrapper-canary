@@ -1,18 +1,18 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => d });
 var i = n(570140),
     l = n(703656),
     r = n(998502),
     a = n(852926),
     s = n(186901),
     o = n(981631);
-let c = {
+let d = {
     [o.Etm.OPEN_MESSAGE]: {
         scope: s.lH,
         handler(e) {
             let {
-                args: { guild_id: t, channel_id: n, message_id: s, pid: c }
+                args: { guild_id: t, channel_id: n, message_id: s, pid: d }
             } = e;
-            if ((0, a.jU)(c).context === o.IlC.OVERLAY) {
+            if ((0, a.jU)(d).context === o.IlC.OVERLAY) {
                 i.Z.dispatch({
                     type: 'OVERLAY_OPEN_MESSAGE',
                     guildId: t,

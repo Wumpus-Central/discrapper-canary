@@ -31,8 +31,8 @@ var r = n(442837),
     A = n(176505),
     L = n(829857),
     D = n(388032),
-    k = n(223007);
-function O(e) {
+    O = n(223007);
+function k(e) {
     let { application: t, guild: n } = e,
         l = (0, C.YB)(n.id),
         s = (0, C.qi)(n.id),
@@ -167,10 +167,10 @@ function M(e) {
             (0, p.vE)(h);
     }
     return (0, i.jsxs)('div', {
-        className: k.container,
+        className: O.container,
         children: [
             (0, i.jsxs)('div', {
-                className: k.mainContent,
+                className: O.mainContent,
                 children: [
                     (0, i.jsx)(l.vwX, {
                         tag: 'h1',
@@ -183,10 +183,10 @@ function M(e) {
                     (0, i.jsx)(j.Z, { guild: n }),
                     c && (0, i.jsx)(P, { application: a }),
                     (0, i.jsxs)('div', {
-                        className: k.tabBarContainer,
+                        className: O.tabBarContainer,
                         children: [
                             (0, i.jsxs)(l.njP, {
-                                className: k.tabBar,
+                                className: O.tabBar,
                                 'aria-label': D.intl.string(D.t['+1H47u']),
                                 selectedItem: h,
                                 type: 'top',
@@ -213,7 +213,7 @@ function M(e) {
                                     }),
                                     L
                                         ? (0, i.jsx)(l.njP.Item, {
-                                              className: k.__invalid_tabBarItem,
+                                              className: O.__invalid_tabBarItem,
                                               id: R.ue.PAYMENT,
                                               children: D.intl.string(D.t.p2Rsdn)
                                           })
@@ -222,7 +222,7 @@ function M(e) {
                             }),
                             c &&
                                 (0, i.jsx)('div', {
-                                    className: k.previewButton,
+                                    className: O.previewButton,
                                     children: (0, i.jsx)(l.ua7, {
                                         text: D.intl.string(D.t['1wCH4O']),
                                         children: (e) => {
@@ -236,7 +236,7 @@ function M(e) {
                                                 size: l.zxk.Sizes.SMALL,
                                                 grow: !T,
                                                 look: l.zxk.Looks.OUTLINED,
-                                                className: k.previewButton,
+                                                className: O.previewButton,
                                                 children: D.intl.string(D.t.vM81yc)
                                             });
                                         }
@@ -247,7 +247,7 @@ function M(e) {
                     t
                 ]
             }),
-            (0, i.jsx)(O, {
+            (0, i.jsx)(k, {
                 application: a,
                 guild: n
             })

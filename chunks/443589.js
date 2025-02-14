@@ -1,12 +1,12 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => b });
 var i = n(200651),
     l = n(192379),
     r = n(120356),
     a = n.n(r),
     s = n(642128),
     o = n(990547),
-    c = n(873546),
-    d = n(481060),
+    d = n(873546),
+    c = n(481060),
     u = n(906732),
     h = n(213609),
     m = n(963249),
@@ -22,13 +22,13 @@ var i = n(200651),
     T = n(981631),
     S = n(388032),
     A = n(781057),
-    b = n(74344);
-let Z = {
+    Z = n(74344);
+let x = {
     width: 14,
     height: 14
 };
-function x(e) {
-    let { recipientUser: t, giftIntentType: n, analyticsPage: r, shouldHighlight: x } = e,
+function b(e) {
+    let { recipientUser: t, giftIntentType: n, analyticsPage: r, shouldHighlight: b } = e,
         { analyticsLocations: L } = (0, u.ZP)(),
         { isHovered: y, setIsHovered: O, onMouseEnter: P, onMouseLeave: R } = (0, p.Z)(200, 300),
         { enableEmojiCTA: j } = E.w.useExperiment({ location: 'GiftIntentActionButton' }, { autoTrackExposure: !1 });
@@ -68,19 +68,19 @@ function x(e) {
                         object: T.qAy.BUTTON_CTA,
                         objectType: T.Qqv.GIFT
                     },
-                    giftMessage: k()
+                    giftMessage: M()
                 });
         },
-        k = () => (n === v.hX.FRIEND_ANNIVERSARY ? S.intl.formatToPlainString(S.t['L2s/Nz'], { numberOfYears: I.Z.getFriendAnniversaryYears(t.id) }) : (0, f.Ou)(n)),
-        M = () => (n === v.hX.FRIEND_ANNIVERSARY ? S.intl.string(S.t['4LohBA']) : (0, f.Ou)(n)),
+        M = () => (n === v.hX.FRIEND_ANNIVERSARY ? S.intl.formatToPlainString(S.t['L2s/Nz'], { numberOfYears: I.Z.getFriendAnniversaryYears(t.id) }) : (0, f.Ou)(n)),
+        k = () => (n === v.hX.FRIEND_ANNIVERSARY ? S.intl.string(S.t['4LohBA']) : (0, f.Ou)(n)),
         U = () =>
             j
-                ? (0, i.jsx)(d.P3F, {
-                      'aria-label': M(),
+                ? (0, i.jsx)(c.P3F, {
+                      'aria-label': k(),
                       onClick: w,
-                      className: a()(b.actionButton, A.popoutButton, {
-                          [b.highlight]: x,
-                          [b.actionButtonMobile]: c.tq
+                      className: a()(Z.actionButton, A.popoutButton, {
+                          [Z.highlight]: b,
+                          [Z.actionButtonMobile]: d.tq
                       }),
                       onMouseEnter: D,
                       onMouseLeave: R,
@@ -89,30 +89,30 @@ function x(e) {
                           children: (0, i.jsx)('div', { className: A.sprite })
                       })
                   })
-                : (0, i.jsx)(d.zxk, {
+                : (0, i.jsx)(c.zxk, {
                       onClick: w,
                       onMouseEnter: D,
                       onMouseLeave: R,
                       children: (0, i.jsxs)('div', {
                           className: A.pillContentContainer,
                           children: [
-                              (0, i.jsx)(d.OgN, {
+                              (0, i.jsx)(c.OgN, {
                                   size: 'custom',
-                                  width: Z.width,
-                                  height: Z.height,
+                                  width: x.width,
+                                  height: x.height,
                                   color: 'currentColor'
                               }),
-                              (0, i.jsx)(d.Text, {
+                              (0, i.jsx)(c.Text, {
                                   variant: 'text-sm/medium',
                                   color: 'always-white',
                                   className: A.pillButtonText,
-                                  children: M()
+                                  children: k()
                               })
                           ]
                       })
                   });
-    return (0, i.jsx)(d.yRy, {
-        animation: d.yRy.Animation.FADE,
+    return (0, i.jsx)(c.yRy, {
+        animation: c.yRy.Animation.FADE,
         nudgeAlignIntoViewport: !1,
         closeOnScroll: !0,
         shouldShow: y,

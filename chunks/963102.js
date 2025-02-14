@@ -1,6 +1,6 @@
 n.d(t, { I: () => j }), n(653041);
-var r = n(200651),
-    l = n(192379),
+var l = n(200651),
+    r = n(192379),
     i = n(120356),
     s = n.n(i),
     a = n(442837),
@@ -18,11 +18,11 @@ var r = n(200651),
     b = n(388032),
     _ = n(960211);
 function v(e) {
-    let { tab: t, displayText: n, selected: l, handleTransition: i } = e;
-    return (0, r.jsx)(u.Z.Title, {
+    let { tab: t, displayText: n, selected: r, handleTransition: i } = e;
+    return (0, l.jsx)(u.Z.Title, {
         onClick: () => i(t),
         wrapperClassName: _.tabWrapper,
-        className: s()(_.tab, { [_.selected]: l }),
+        className: s()(_.tab, { [_.selected]: r }),
         children: n
     });
 }
@@ -32,7 +32,7 @@ function j(e) {
         L = (0, a.e7)([m.default], () => m.default.getCurrentUser()),
         S = (null == L ? void 0 : L.isStaff()) || (null == L ? void 0 : L.isStaffPersonal()) || !1,
         { enabled: T } = (0, h.W)({ location: 'collectibles_shop_header_bar' }),
-        I = [
+        B = [
             {
                 tab: x.AW.HOME,
                 displayText: b.intl.string(b.t.ijDDw8)
@@ -44,25 +44,25 @@ function j(e) {
         ];
     return (
         T &&
-            I.push({
+            B.push({
                 tab: x.AW.ORBS,
                 displayText: b.intl.string(b.t.q6uIys)
             }),
-        (0, r.jsx)(o.f6W, {
+        (0, l.jsx)(o.f6W, {
             theme: E,
             children: (e) =>
-                (0, r.jsxs)(u.Z, {
+                (0, l.jsxs)(u.Z, {
                     className: s()(e, _.headerBar, { [_.fullscreenHeaderBar]: t }),
                     innerClassname: T ? _.headerBarInner : void 0,
-                    toolbar: t || !S ? null : (0, r.jsx)(l.Fragment, {}),
+                    toolbar: t || !S ? null : (0, l.jsx)(r.Fragment, {}),
                     children: [
-                        (0, r.jsx)(f.Z, { className: _.discordLogo }),
-                        (0, r.jsx)(u.Z.Title, { children: b.intl.string(b.t.pWG4zc) }),
-                        (0, r.jsx)('div', {
+                        (0, l.jsx)(f.Z, { className: _.discordLogo }),
+                        (0, l.jsx)(u.Z.Title, { children: b.intl.string(b.t.pWG4zc) }),
+                        (0, l.jsx)('div', {
                             className: _.tabs,
-                            children: I.map((e) => {
+                            children: B.map((e) => {
                                 let { tab: t, displayText: n } = e;
-                                return (0, r.jsx)(
+                                return (0, l.jsx)(
                                     v,
                                     {
                                         tab: t,
@@ -75,18 +75,18 @@ function j(e) {
                             })
                         }),
                         (T || t) &&
-                            (0, r.jsxs)('div', {
+                            (0, l.jsxs)('div', {
                                 className: _.alignedRightContent,
                                 children: [
                                     T &&
-                                        (0, r.jsx)(p.V9, {
+                                        (0, l.jsx)(p.V9, {
                                             cardAlignment: p.V9.CardAlignment.END,
                                             className: _.balanceWidgetMenu,
                                             ctaText: b.intl.string(b.t['H57f4+']),
                                             ctaOnClick: () => (0, C.navigateToQuestHome)()
                                         }),
                                     t &&
-                                        (0, r.jsx)(d.Z, {
+                                        (0, l.jsx)(d.Z, {
                                             closeAction: n ? g.DR : i,
                                             keybind: 'ESC'
                                         })

@@ -1,100 +1,100 @@
-n.d(t, { R: () => E }), n(47120);
-var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    a = n.n(l),
-    o = n(481060),
-    s = n(590965),
-    c = n(695346),
-    d = n(51331),
-    u = n(259580),
-    h = n(626135),
-    _ = n(44609),
-    m = n(731971),
-    g = n(981631),
-    p = n(388032),
-    f = n(181550);
-let E = () => {
+t.d(n, { R: () => h }), t(47120);
+var i = t(200651),
+    l = t(192379),
+    a = t(120356),
+    r = t.n(a),
+    s = t(481060),
+    o = t(590965),
+    c = t(695346),
+    u = t(51331),
+    d = t(259580),
+    m = t(626135),
+    _ = t(44609),
+    p = t(731971),
+    x = t(981631),
+    g = t(388032),
+    N = t(181550);
+let h = () => {
     var e;
-    let [t, n] = r.useState(!1),
-        l = c.G6.useSetting(),
-        { nickname: E, dmsAllowed: x, showActivity: I, mutedServer: v, setNickname: C, setDmsAllowed: N, setShowActivity: S, setMutedServer: T } = (0, m.XW)(),
-        A = null === (e = s.Z.getProps().invite) || void 0 === e ? void 0 : e.is_nickname_changeable,
-        b = (0, _.m4)({ location: 'InviteSettingsControls' });
+    let [n, t] = l.useState(!1),
+        a = c.G6.useSetting(),
+        { nickname: h, dmsAllowed: v, showActivity: E, mutedServer: I, setNickname: f, setDmsAllowed: j, setShowActivity: S, setMutedServer: C } = (0, p.XW)(),
+        A = null === (e = o.Z.getProps().invite) || void 0 === e ? void 0 : e.is_nickname_changeable,
+        T = (0, _.m4)({ location: 'InviteSettingsControls' });
     return (0, i.jsxs)('div', {
-        className: a()(f.editProfileContainer, { [f.opened]: t }),
+        className: r()(N.editProfileContainer, { [N.opened]: n }),
         children: [
-            (0, i.jsxs)(o.P3F, {
-                className: f.header,
+            (0, i.jsxs)(s.P3F, {
+                className: N.header,
                 onClick: () => {
-                    t || h.default.track(g.rMx.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED), n(!t);
+                    n || m.default.track(x.rMx.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED), t(!n);
                 },
                 children: [
                     (0, i.jsx)('div', {
-                        className: f.headerIconWrapper,
-                        children: (0, i.jsx)(o.ewm, { size: 'md' })
+                        className: N.headerIconWrapper,
+                        children: (0, i.jsx)(s.ewm, { size: 'md' })
                     }),
                     (0, i.jsxs)('div', {
-                        className: f.title,
+                        className: N.title,
                         children: [
-                            (0, i.jsx)(o.Text, {
+                            (0, i.jsx)(s.Text, {
                                 variant: 'eyebrow',
                                 color: 'header-secondary',
-                                children: p.intl.string(p.t.A5wHQ0)
+                                children: g.intl.string(g.t.A5wHQ0)
                             }),
-                            (0, i.jsx)(o.Text, {
+                            (0, i.jsx)(s.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'interactive-normal',
-                                children: p.intl.string(p.t.UKCSER)
+                                children: g.intl.string(g.t.UKCSER)
                             })
                         ]
                     }),
                     (0, i.jsx)('div', {
-                        className: a()(f.caret, { [f.opened]: t }),
-                        children: (0, i.jsx)(u.Z, {
+                        className: r()(N.caret, { [N.opened]: n }),
+                        children: (0, i.jsx)(d.Z, {
                             width: 18,
                             height: 18,
-                            direction: u.Z.Directions.UP
+                            direction: d.Z.Directions.UP
                         })
                     })
                 ]
             }),
             (0, i.jsxs)('div', {
-                className: a()(f.customizationSection, { [f.opened]: t }, A ? null : f.condensed),
+                className: r()(N.customizationSection, { [N.opened]: n }, A ? null : N.condensed),
                 children: [
                     A &&
                         (0, i.jsxs)('div', {
-                            className: f.serverNickname,
+                            className: N.serverNickname,
                             children: [
-                                (0, i.jsx)(o.Text, {
+                                (0, i.jsx)(s.Text, {
                                     variant: 'eyebrow',
                                     color: 'header-secondary',
-                                    children: p.intl.string(p.t.me1lRk)
+                                    children: g.intl.string(g.t.me1lRk)
                                 }),
-                                (0, i.jsx)(o.oil, {
-                                    placeholder: p.intl.string(p.t['09Q8ys']),
-                                    maxLength: g.l$U,
-                                    value: E,
-                                    onChange: C
+                                (0, i.jsx)(s.oil, {
+                                    placeholder: g.intl.string(g.t['09Q8ys']),
+                                    maxLength: x.l$U,
+                                    value: h,
+                                    onChange: f
                                 })
                             ]
                         }),
-                    (0, i.jsx)(d.Z, {
-                        title: p.intl.string(p.t['/2ed39']),
-                        value: x,
-                        onChange: N
+                    (0, i.jsx)(u.Z, {
+                        title: g.intl.string(g.t['/2ed39']),
+                        value: v,
+                        onChange: j
                     }),
-                    l &&
-                        (0, i.jsx)(d.Z, {
-                            title: p.intl.string(p.t.bN4m1N),
-                            value: I,
+                    a &&
+                        (0, i.jsx)(u.Z, {
+                            title: g.intl.string(g.t.bN4m1N),
+                            value: E,
                             onChange: S
                         }),
-                    b &&
-                        (0, i.jsx)(d.Z, {
-                            title: p.intl.string(p.t['0nZCqK']),
-                            value: v,
-                            onChange: T
+                    T &&
+                        (0, i.jsx)(u.Z, {
+                            title: g.intl.string(g.t['0nZCqK']),
+                            value: I,
+                            onChange: C
                         })
                 ]
             })

@@ -10,8 +10,8 @@ var t = l(200651),
     d = l(704215),
     m = l(481060),
     x = l(668781),
-    h = l(872810),
-    g = l(410575),
+    g = l(872810),
+    h = l(410575),
     Z = l(579806),
     v = l(636449),
     S = l(317381),
@@ -26,8 +26,8 @@ var t = l(200651),
     P = l(751571),
     R = l(970731),
     k = l(695346),
-    b = l(361291),
-    A = l(592125),
+    A = l(361291),
+    b = l(592125),
     M = l(430824),
     _ = l(131951),
     L = l(944486),
@@ -39,8 +39,8 @@ var t = l(200651),
     G = l(998502),
     O = l(668519),
     W = l(451467),
-    V = l(537413),
-    F = l(299570),
+    F = l(537413),
+    V = l(299570),
     J = l(960861),
     B = l(989941),
     X = l(399299),
@@ -74,9 +74,9 @@ let es = (e) => {
 function ea(e) {
     var n, s, o, R, y, O;
     let { selectGuild: q = !1, selectSource: ea = !0, guildId: er, analyticsLocation: eo, onClose: eu, transitionState: ec } = e,
-        { preset: ed, resolution: em, fps: ex, soundshareEnabled: eh } = (0, c.cj)([b.Z], () => b.Z.getState()),
-        eg = i.useRef(Date.now()),
-        eZ = (0, c.e7)([L.Z, A.Z], () => A.Z.getChannel(L.Z.getVoiceChannelId())),
+        { preset: ed, resolution: em, fps: ex, soundshareEnabled: eg } = (0, c.cj)([A.Z], () => A.Z.getState()),
+        eh = i.useRef(Date.now()),
+        eZ = (0, c.e7)([L.Z, b.Z], () => b.Z.getChannel(L.Z.getVoiceChannelId())),
         ev = (0, c.e7)([E.ZP, z.Z], () => ((0, U.isWindows)() ? (0, B.Z)(E.ZP, z.Z) : null)),
         eS = (0, c.e7)([S.ZP], () => S.ZP.getCurrentEmbeddedActivity()),
         ej = (0, f.q)(null == eS ? void 0 : eS.applicationId),
@@ -97,14 +97,14 @@ function ea(e) {
             var e;
             return null != ep ? (null === (e = M.Z.getGuild(ep)) || void 0 === e ? void 0 : e.premiumTier) : null;
         }),
-        [eE, eI] = null !== (s = (0, V.Z)(ed, eN, eT)) && void 0 !== s ? s : [$.LY.RESOLUTION_720, $.ws.FPS_30],
+        [eE, eI] = null !== (s = (0, F.Z)(ed, eN, eT)) && void 0 !== s ? s : [$.LY.RESOLUTION_720, $.ws.FPS_30],
         { lastPickerAction: eP } = (0, c.e7)([J.ZP], () => J.ZP.getPickerState()),
         eR = _.Z.getUseSystemScreensharePicker();
     (0, J.UB)();
     let ek = eR && (0, U.isMac)() && u().satisfies(null === Z.Z || void 0 === Z.Z ? void 0 : Z.Z.os.release, Q.jR),
-        eb = [];
-    ec === m.Dvm.ENTERED && eR && (0, U.isMac)() && eb.push(d.z.GO_LIVE_SYSTEM_PICKER_COACHMARK);
-    let [eA, eM] = (0, T.US)(eb, void 0, !0);
+        eA = [];
+    ec === m.Dvm.ENTERED && eR && (0, U.isMac)() && eA.push(d.z.GO_LIVE_SYSTEM_PICKER_COACHMARK);
+    let [eb, eM] = (0, T.US)(eA, void 0, !0);
     ed !== $.tI.PRESET_CUSTOM && ((em = eE), (ex = eI)), (0, W.Z)(ed, em, ex, eN, eT) || ((em = eE), (ex = eI));
     let e_ = (0, p.Dt)(),
         [eL, eD] = i.useState(((O = ea && !ek), q ? 0 : O ? 2 : 3)),
@@ -119,11 +119,11 @@ function ea(e) {
                   }
                 : null
         ),
-        [eW, eV] = i.useState(null),
-        [eF, eJ] = i.useState(ed),
+        [eW, eF] = i.useState(null),
+        [eV, eJ] = i.useState(ed),
         [eB, eX] = i.useState(em),
         [eY, eH] = i.useState(ex),
-        [eK, eq] = i.useState(eh),
+        [eK, eq] = i.useState(eg),
         [eQ, e$] = i.useState(null !== (o = k.I0.getSetting()) && void 0 !== o && o),
         [e0, e1] = i.useState(null != er ? er : null),
         e3 = null !== (R = null == eZ ? void 0 : eZ.id) && void 0 !== R ? R : ey,
@@ -133,14 +133,14 @@ function ea(e) {
         a()(null != ev || null != eG || (null != eS && null != eC), 'got nothing to stream');
         let l = null !== (e = null == eZ ? void 0 : eZ.id) && void 0 !== e ? e : ey;
         a()(null != l, 'Received null target channel ID');
-        let t = A.Z.getChannel(l),
+        let t = b.Z.getChannel(l),
             i = null !== (n = null == t ? void 0 : t.getGuildId()) && void 0 !== n ? n : er;
         if (null == eZ && !(await (0, j.Z)({ channelId: l }))) return;
-        let s = eF,
+        let s = eV,
             r = eB,
             o = eY;
         (0, W.Z)(s, r, o, eN, eT, t) || ((s = $.tI.PRESET_VIDEO), (r = $.LY.RESOLUTION_720), (o = $.ws.FPS_30)),
-            (0, h.Rc)({
+            (0, g.Rc)({
                 preset: s,
                 resolution: r,
                 frameRate: o,
@@ -151,7 +151,7 @@ function ea(e) {
             d = null,
             m = null;
         null == c && (null != eG ? ((d = eG.id), (m = eG.name)) : null != eC && ((d = eC), (m = null == ej ? void 0 : ej.name))),
-            (0, h.WH)(i, l, {
+            (0, g.WH)(i, l, {
                 pid: c,
                 sourceId: d,
                 sourceName: m,
@@ -159,9 +159,9 @@ function ea(e) {
                 sound: eK,
                 previewDisabled: eQ,
                 nativePickerStyleUsed: e2,
-                goLiveModalDurationMs: Date.now() - eg.current
+                goLiveModalDurationMs: Date.now() - eh.current
             }),
-            null != eA && eM(en.L.AUTO_DISMISS),
+            null != eb && eM(en.L.AUTO_DISMISS),
             eR ||
                 (async () => {
                     (await P.Z.hasPermission(el.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 })) ||
@@ -189,23 +189,23 @@ function ea(e) {
     let e5 = i.useCallback(
             (e, n, l) => {
                 var t;
-                let i = (0, V.Z)(e, eN, eT),
+                let i = (0, F.Z)(e, eN, eT),
                     [s, r] = null != i ? i : [n, l];
-                e !== eF && ((n = s), (l = r));
+                e !== eV && ((n = s), (l = r));
                 let o = null !== (t = null == eZ ? void 0 : eZ.id) && void 0 !== t ? t : ey;
                 a()(null != o, 'Received null target channel ID');
-                let u = A.Z.getChannel(o);
+                let u = b.Z.getChannel(o);
                 if (!(0, W.Z)(e, n, l, eN, eT, u)) {
-                    let [e, t] = (0, V.Z)($.tI.PRESET_VIDEO, eN, eT);
+                    let [e, t] = (0, F.Z)($.tI.PRESET_VIDEO, eN, eT);
                     (n = e), (l = t);
                 }
-                l !== eY && eH(l), n !== eB && eX(n), s !== n || r !== l ? eJ($.tI.PRESET_CUSTOM) : e !== eF && eJ(e);
+                l !== eY && eH(l), n !== eB && eX(n), s !== n || r !== l ? eJ($.tI.PRESET_CUSTOM) : e !== eV && eJ(e);
             },
-            [eZ, ey, eN, eT, eY, eB, eF]
+            [eZ, ey, eN, eT, eY, eB, eV]
         ),
         e8 = i.useCallback(
             (e) => {
-                (0, F.t)(), (0, F.T)(null != e ? e : e2);
+                (0, V.t)(), (0, V.T)(null != e ? e : e2);
             },
             [e2]
         );
@@ -283,7 +283,7 @@ function ea(e) {
             })
         }),
         ns = i.useCallback(() => {
-            eR && (0, F.t)(), eD(2);
+            eR && (0, V.t)(), eD(2);
         }, [eR]),
         na = (function (e, n, l, t) {
             switch (e) {
@@ -337,7 +337,7 @@ function ea(e) {
                             className: ei.modalSize,
                             children: (0, t.jsx)(X.Z, {
                                 selectedChannelId: null !== (y = null == eZ ? void 0 : eZ.id) && void 0 !== y ? y : ey,
-                                selectedPreset: eF,
+                                selectedPreset: eV,
                                 selectedResolution: eB,
                                 selectedSource: eG,
                                 selectedFPS: eY,
@@ -345,13 +345,13 @@ function ea(e) {
                                 previewDisabled: eQ,
                                 sourceChanged: ez,
                                 selectSource: ea,
-                                onChangeSelectedFPS: (e) => e5(eF, eB, e),
-                                onChangeSelectedResolution: (e) => e5(eF, e, eY),
+                                onChangeSelectedFPS: (e) => e5(eV, eB, e),
+                                onChangeSelectedResolution: (e) => e5(eV, e, eY),
                                 onChangeSelectedPreset: (e) => e5(e, eB, eY),
                                 onChangeSelectedChannelId: eU,
                                 onChangeSelectedSource: ne,
                                 onChangeSource: () => ns(),
-                                onChangeAudioDevice: (e) => eV(e),
+                                onChangeAudioDevice: (e) => eF(e),
                                 onChangeGuild: () => eD(0),
                                 onChangeSound: (e) => eq(e),
                                 onChangePreviewDisabled: (e) => e$(e),
@@ -404,7 +404,7 @@ function ea(e) {
                       })
             ]
         });
-    return (0, t.jsx)(g.Z, {
+    return (0, t.jsx)(h.Z, {
         page: ee.ZY5.GO_LIVE_MODAL,
         children: (0, t.jsxs)(m.Y0X, {
             'aria-labelledby': e_,
@@ -420,11 +420,11 @@ function ea(e) {
                 (0, t.jsx)(m.yRy, {
                     position: 'right',
                     align: 'center',
-                    shouldShow: null != eA,
+                    shouldShow: null != eb,
                     spacing: 18,
                     renderPopout: () =>
                         (0, t.jsx)(es, {
-                            visibleContent: eA,
+                            visibleContent: eb,
                             markAsDismissed: eM
                         }),
                     children: () =>

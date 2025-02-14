@@ -1,6 +1,6 @@
 n.d(t, {
-    T: () => _,
-    Z: () => C
+    T: () => h,
+    Z: () => _
 }),
     n(653041);
 var l = n(192379),
@@ -13,10 +13,10 @@ var l = n(192379),
     d = n(944486),
     c = n(981631),
     E = n(647086);
-function C(e) {
+function _(e) {
     let { withVoiceChannels: t = !1, withCurrentVoiceChannel: n = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         l = arguments.length > 2 ? arguments[2] : void 0;
-    return h(
+    return C(
         e === E._ || e === c.I_8 ? (0, r.t)() : a.Z.getGuildWithoutChangingGuildActionRows(e).guildChannels,
         {
             currentVoiceChannelId: d.Z.getVoiceChannelId(),
@@ -29,22 +29,22 @@ function C(e) {
         l
     );
 }
-function _(e, t, n) {
+function h(e, t, n) {
     let { withVoiceChannels: a = !1, withCurrentVoiceChannel: r = !1 } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
         s = arguments.length > 4 ? arguments[4] : void 0,
         c = (0, i.e7)([u.default], () => u.default.getGuildChangeSentinel(e)),
         E = (0, i.e7)([o.Z], () => o.Z.version),
-        { currentVoiceChannelId: C, selectedChannelId: _ } = (0, i.cj)([d.Z], () => ({
+        { currentVoiceChannelId: _, selectedChannelId: h } = (0, i.cj)([d.Z], () => ({
             currentVoiceChannelId: d.Z.getVoiceChannelId(),
             selectedChannelId: d.Z.getChannelId()
         }));
     return (0, l.useMemo)(
         () =>
-            h(
+            C(
                 t,
                 {
-                    currentVoiceChannelId: C,
-                    selectedChannelId: _
+                    currentVoiceChannelId: _,
+                    selectedChannelId: h
                 },
                 {
                     withVoiceChannels: a,
@@ -55,7 +55,7 @@ function _(e, t, n) {
         [t, n, c, E]
     );
 }
-function h(e, t) {
+function C(e, t) {
     let { currentVoiceChannelId: n, selectedChannelId: l } = t,
         { withVoiceChannels: i, withCurrentVoiceChannel: a } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         r = arguments.length > 3 ? arguments[3] : void 0,

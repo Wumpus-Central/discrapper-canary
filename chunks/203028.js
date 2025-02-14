@@ -6,8 +6,8 @@ var l = n(512722),
     a = n(841784),
     s = n(503438),
     o = n(802856),
-    c = n(810568),
-    d = n(168524),
+    d = n(810568),
+    c = n(168524),
     u = n(707409),
     h = n(51144),
     m = n(761282),
@@ -49,9 +49,9 @@ function E(e) {
         })(E),
         { subtitle: S, icon: A } = (function (e) {
             var t;
-            let { priorityMembers: l, partiedMembers: c, voiceChannels: d, currentActivities: h } = e,
+            let { priorityMembers: l, partiedMembers: d, voiceChannels: c, currentActivities: h } = e,
                 E = l.length,
-                I = c.length - E,
+                I = d.length - E,
                 C = h[0],
                 N = null == C ? void 0 : C.activity,
                 v = null == C ? void 0 : C.startedPlayingTime,
@@ -116,7 +116,7 @@ function E(e) {
                 }
             }
             if (0 === h.length) {
-                if (d.length > 0)
+                if (c.length > 0)
                     return {
                         subtitle: f.intl.string(f.t.grGyaW),
                         icon: null
@@ -159,10 +159,10 @@ function E(e) {
                 icon: (0, i.jsx)(p.Z.Header.Icon, { src: p.Z.Header.Icon.Src.MULTIPLE })
             };
         })(E),
-        b = (0, d.Z)({
+        Z = (0, c.Z)({
             applicationId: null === (l = E.currentActivities[0]) || void 0 === l ? void 0 : null === (t = l.activity) || void 0 === t ? void 0 : t.application_id,
             location: 'FriendsActivityFeed',
-            source: c.m1.FriendsActivityFeed
+            source: d.m1.FriendsActivityFeed
         });
     return (0, i.jsx)(p.Z.Header, {
         priorityUser: v,
@@ -170,8 +170,8 @@ function E(e) {
         title: T,
         subtitle: S,
         icon: A,
-        onSubtitleClick: b,
-        onIconClick: b,
+        onSubtitleClick: Z,
+        onIconClick: Z,
         onContextMenu: (e) => I(e, v.user)
     });
 }

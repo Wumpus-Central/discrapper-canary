@@ -10,8 +10,8 @@ var t = l(200651),
     d = l(410575),
     m = l(2052),
     x = l(924557),
-    h = l(600164),
-    g = l(436774),
+    g = l(600164),
+    h = l(436774),
     Z = l(140465),
     v = l(774026),
     S = l(592125),
@@ -26,7 +26,7 @@ var t = l(200651),
     P = l(323499),
     R = l(421618),
     k = l(483938);
-function b(e) {
+function A(e) {
     let { analyticsLocation: n, onClose: i } = e;
     (0, c.ZDy)(async () => {
         let { default: e } = await l.e('28479').then(l.bind(l, 78865));
@@ -38,13 +38,13 @@ function b(e) {
             });
     });
 }
-function A() {
+function b() {
     return (0, t.jsxs)('div', {
         className: R.toolTipTextContainer,
         children: [
             (0, t.jsx)(c.SrA, {
                 size: 'md',
-                color: g.JX.PREMIUM_TIER_2,
+                color: h.JX.PREMIUM_TIER_2,
                 className: a()(R.premiumIcon)
             }),
             (0, t.jsx)(c.Text, {
@@ -59,14 +59,14 @@ function M(e) {
     let n,
         l,
         { type: i, selected: s, needsPremium: r, needsDemo: o, analyticsLocation: u, onClick: d, onClose: m, setIsHovering: x } = e,
-        { value: h, label: g } = i;
+        { value: g, label: h } = i;
     return (
         r
             ? ((n = (0, t.jsx)(c.DY3, {
                   tooltipClassName: R.tooltip,
                   spacing: 6,
                   'aria-label': I.intl.string(I.t.sEAnVF),
-                  text: (0, t.jsx)(A, {}),
+                  text: (0, t.jsx)(b, {}),
                   children: (0, t.jsx)('div', {
                       className: R.textContainer,
                       onMouseEnter: () => x(!0),
@@ -74,12 +74,12 @@ function M(e) {
                       children: (0, t.jsx)(c.Text, {
                           variant: 'text-xs/bold',
                           className: a()(R.selectorNitroText, R.enhancedSelectorNitroText),
-                          children: g
+                          children: h
                       })
                   })
               })),
               (l = () =>
-                  b({
+                  A({
                       analyticsLocation: u,
                       onClose: m
                   })))
@@ -88,10 +88,10 @@ function M(e) {
                   children: (0, t.jsx)(c.Text, {
                       variant: 'text-xs/normal',
                       className: a()(R.selectorText, { [R.enhancedSelectorNitroText]: o }),
-                      children: g
+                      children: h
                   })
               })),
-              (l = () => d(h))),
+              (l = () => d(g))),
         {
             content: n,
             className: a()(R.selectorButton, {
@@ -104,7 +104,7 @@ function M(e) {
     );
 }
 function _(e) {
-    let { onClose: n, selectedPreset: l, selectedResolution: s, selectedFPS: a, onResolutionChange: r, onFPSChange: g, onPresetChange: A, targetGuildPremiumTier: _, captureDeviceSelected: L } = e,
+    let { onClose: n, selectedPreset: l, selectedResolution: s, selectedFPS: a, onResolutionChange: r, onFPSChange: h, onPresetChange: b, targetGuildPremiumTier: _, captureDeviceSelected: L } = e,
         D = (0, u.e7)([C.default], () => {
             let e = C.default.getCurrentUser();
             return o()(null != e, 'StreamSettings: user cannot be undefined'), e;
@@ -116,8 +116,8 @@ function _(e) {
         G = (0, Z.B4)({ location: 'StreamSettings' }),
         O = C.default.getUser(null == z ? void 0 : z.hdStreamingBuyerId),
         W = null != z && null != z.hdStreamingUntil && new Date(z.hdStreamingUntil) > new Date() && null != O,
-        V = !w && !U,
-        [F, J] = i.useState(!1),
+        F = !w && !U,
+        [V, J] = i.useState(!1),
         B = L ? T.z8 : T.WC,
         X = {
             ...y,
@@ -145,7 +145,7 @@ function _(e) {
                     needsPremium: !(0, N.Z)(l, s, e.value, D, _, z),
                     needsDemo: G && e.value === T.ws.FPS_60,
                     analyticsLocation: X,
-                    onClick: () => g(e.value),
+                    onClick: () => h(e.value),
                     onClose: n,
                     setIsHovering: J
                 })
@@ -173,7 +173,7 @@ function _(e) {
             l === T.tI.PRESET_DOCUMENTS
                 ? (0, t.jsxs)(t.Fragment, {
                       children: [
-                          (0, t.jsx)(h.Z, {
+                          (0, t.jsx)(g.Z, {
                               children: (0, t.jsx)(c.xJW, {
                                   title: I.intl.string(I.t.rHyPXl),
                                   titleClassName: P.formItemTitleSlim,
@@ -184,11 +184,11 @@ function _(e) {
                                   })
                               })
                           }),
-                          V
+                          F
                               ? (0, t.jsx)(p.Z, {
                                     message: I.intl.string(I.t.deDogI),
                                     onClose: n,
-                                    openStreamUpsellModal: b
+                                    openStreamUpsellModal: A
                                 })
                               : null,
                           G && (0, t.jsx)(p.c, {}),
@@ -203,7 +203,7 @@ function _(e) {
                   })
                 : (0, t.jsxs)(t.Fragment, {
                       children: [
-                          (0, t.jsxs)(h.Z, {
+                          (0, t.jsxs)(g.Z, {
                               children: [
                                   (0, t.jsx)(c.xJW, {
                                       title: I.intl.string(I.t.rHyPXl),
@@ -219,11 +219,11 @@ function _(e) {
                                   })
                               ]
                           }),
-                          V
+                          F
                               ? (0, t.jsx)(p.Z, {
                                     onClose: n,
-                                    openStreamUpsellModal: b,
-                                    glow: F
+                                    openStreamUpsellModal: A,
+                                    glow: V
                                 })
                               : null,
                           G && (0, t.jsx)(p.c, {}),
@@ -249,7 +249,7 @@ function _(e) {
                         value: l,
                         className: k.marginTop8,
                         options: K,
-                        onChange: (e) => A(e)
+                        onChange: (e) => b(e)
                     }),
                     q
                 ]

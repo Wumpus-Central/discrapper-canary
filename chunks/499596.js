@@ -13,10 +13,10 @@ var i = l(120356),
 function x(e) {
     let { channel: n, users: l, selected: i = !1 } = e,
         x = (0, o.ZP)(n),
-        h = null;
+        g = null;
     null != l &&
         l.length > 0 &&
-        (h = (0, t.jsx)(r.Z, {
+        (g = (0, t.jsx)(r.Z, {
             guildId: n.guild_id,
             className: m.voiceUserList,
             users: l,
@@ -70,16 +70,16 @@ function x(e) {
             max: 5,
             showUserPopout: !1
         }));
-    let g = (0, u.KS)(n);
+    let h = (0, u.KS)(n);
     return (0, t.jsxs)('div', {
         className: s()(m.channelInfo, { [m.selected]: i }),
         children: [
-            (0, t.jsx)(g, { className: m.channelIcon }),
+            (0, t.jsx)(h, { className: m.channelIcon }),
             (0, t.jsx)('div', {
                 className: m.channelName,
                 children: x
             }),
-            h
+            g
         ]
     });
 }

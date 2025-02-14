@@ -2,8 +2,8 @@ n.d(t, { Z: () => u });
 var i = n(200651);
 n(192379);
 var s = n(693789),
-    l = n(481060),
-    r = n(37234),
+    r = n(481060),
+    l = n(37234),
     a = n(703656),
     o = n(52647),
     c = n(450272),
@@ -12,7 +12,7 @@ let u = function () {
     let { resetOnboardingAnnouncementModal: e, resetQuestStatus: t } = (0, o.Z)();
     return (0, i.jsxs)(c.$0, {
         children: [
-            (0, i.jsx)(l.X6q, {
+            (0, i.jsx)(r.X6q, {
                 variant: 'heading-xl/semibold',
                 children: 'Virtual Currency Configuration'
             }),
@@ -20,7 +20,7 @@ let u = function () {
                 label: 'Reset Onboarding State',
                 direction: 'vertical',
                 children: [
-                    (0, i.jsx)(l.Text, {
+                    (0, i.jsx)(r.Text, {
                         variant: 'text-md/normal',
                         color: 'info-help-text',
                         style: { marginBottom: '8px' },
@@ -28,11 +28,11 @@ let u = function () {
                     }),
                     (0, i.jsx)(s.zx, {
                         onClick: () => {
-                            e(), t(), (0, r.xf)(), (0, a.uL)(d.Z5c.APP);
+                            e(), t(), (0, l.xf)(), (0, a.uL)(d.Z5c.APP);
                         },
                         children: 'Reset Onboarding State'
                     }),
-                    (0, i.jsx)(l.Text, {
+                    (0, i.jsx)(r.Text, {
                         variant: 'text-md/normal',
                         color: 'info-help-text',
                         children: 'Your may have to refresh your client after being redirected to the main application in order to see these changes.'

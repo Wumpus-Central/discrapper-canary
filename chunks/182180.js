@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => v });
 var i = n(200651),
     l = n(192379),
     a = n(481060),
@@ -42,7 +42,7 @@ function C(e) {
         })
     });
 }
-function v(e) {
+function E(e) {
     let { guildId: t, user: n, username: l } = e;
     return (0, i.jsxs)('div', {
         className: x.welcomeCard,
@@ -58,11 +58,11 @@ function v(e) {
         ]
     });
 }
-function E(e) {
+function v(e) {
     var t, a;
     let { channel: h, message: f, compact: x } = e,
         C = (0, o.ZP)(f),
-        E = (function (e) {
+        v = (function (e) {
             let { author: t, channel: n, message: i } = e,
                 a = n.guild_id,
                 o = (0, c.l)({
@@ -91,7 +91,7 @@ function E(e) {
             author: C
         }),
         I = (null === (t = f.roleSubscriptionData) || void 0 === t ? void 0 : t.total_months_subscribed) != null && (null === (a = f.roleSubscriptionData) || void 0 === a ? void 0 : a.total_months_subscribed) <= 1;
-    return null == E
+    return null == v
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
@@ -99,10 +99,10 @@ function E(e) {
                       icon: n(570111),
                       timestamp: f.timestamp,
                       compact: x,
-                      children: E
+                      children: v
                   }),
                   I &&
-                      (0, i.jsx)(v, {
+                      (0, i.jsx)(E, {
                           guildId: h.guild_id,
                           user: f.author,
                           username: C.nick

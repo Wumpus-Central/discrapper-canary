@@ -30,11 +30,11 @@ var i = n(200651),
     A = n(990734),
     L = n(179517),
     D = n(79829);
-let k = (0, h.Un)({
+let O = (0, h.Un)({
         createPromise: () => n.e('4848').then(n.bind(n, 336231)),
         webpackId: 336231
     }),
-    O = o().debounce((e, t) => (0, N.Uv)(e, t), 200);
+    k = o().debounce((e, t) => (0, N.Uv)(e, t), 200);
 function P(e) {
     let { role: t, disabled: n } = e,
         [l, s] = r.useState(t.name);
@@ -50,7 +50,7 @@ function P(e) {
                 value: l,
                 maxLength: R.VKK,
                 onChange: function (e) {
-                    s(e), O(t.id, e);
+                    s(e), k(t.id, e);
                 },
                 disabled: n
             })
@@ -69,7 +69,7 @@ function w(e) {
                 children: Z.intl.string(Z.t['9UCxlZ'])
             }),
             (0, i.jsx)(
-                k,
+                O,
                 {
                     defaultColor: R.p6O,
                     colors: R.pmI,

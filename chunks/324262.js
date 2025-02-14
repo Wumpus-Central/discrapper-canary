@@ -5,21 +5,21 @@ var i = n(200651),
     a = n.n(r),
     s = n(481060),
     o = n(367907),
-    c = n(626135),
-    d = n(986332),
+    d = n(626135),
+    c = n(986332),
     u = n(428695),
     h = n(981631),
     m = n(388032),
     p = n(576590);
 let g = a().debounce(o.ZP.trackWithMetadata, 500),
     _ = (e) => {
-        let { guild: t, title: n, message: r, image: a, type: d, imageMarginX: u, imageMarginTop: _, trackingSource: f, undismissable: E, onDismissed: I, onClick: C, cta: N, ctaColor: v } = e;
+        let { guild: t, title: n, message: r, image: a, type: c, imageMarginX: u, imageMarginTop: _, trackingSource: f, undismissable: E, onDismissed: I, onClick: C, cta: N, ctaColor: v } = e;
         l.useEffect(() => {
             g(h.rMx.CHANNEL_NOTICE_VIEWED, {
-                notice_type: d,
+                notice_type: c,
                 guild_id: t.id
             });
-        }, [t.id, d]);
+        }, [t.id, c]);
         let T = null;
         'function' == typeof N
             ? (T = N())
@@ -28,11 +28,11 @@ let g = a().debounce(o.ZP.trackWithMetadata, 500),
                   className: p.btn,
                   size: s.zxk.Sizes.SMALL,
                   onClick: () => {
-                      null != d &&
-                          c.default.track(h.rMx.CHANNEL_NOTICE_CTA_CLICKED, {
+                      null != c &&
+                          d.default.track(h.rMx.CHANNEL_NOTICE_CTA_CLICKED, {
                               source: f,
                               guild_id: t.id,
-                              notice_type: d
+                              notice_type: c
                           }),
                           null == C || C();
                   },
@@ -48,7 +48,7 @@ let g = a().debounce(o.ZP.trackWithMetadata, 500),
                     ? null
                     : (0, i.jsx)(s.P3F, {
                           onClick: () => {
-                              o.ZP.trackWithMetadata(h.rMx.CHANNEL_NOTICE_CLOSED, { notice_type: d }), null == I || I();
+                              o.ZP.trackWithMetadata(h.rMx.CHANNEL_NOTICE_CLOSED, { notice_type: c }), null == I || I();
                           },
                           className: p.close,
                           'aria-label': m.intl.string(m.t.WAI6xs),
@@ -92,6 +92,6 @@ let g = a().debounce(o.ZP.trackWithMetadata, 500),
         });
     },
     f = function (e) {
-        let { showRedesignedChannelNotice: t } = (0, d.o)(!0);
+        let { showRedesignedChannelNotice: t } = (0, c.o)(!0);
         return t ? (0, i.jsx)(u.Z, { ...e }) : (0, i.jsx)(_, { ...e });
     };

@@ -5,8 +5,8 @@ var i = n(200651),
     a = n.n(r),
     s = n(442837),
     o = n(481060),
-    c = n(239091),
-    d = n(2052),
+    d = n(239091),
+    c = n(2052),
     u = n(774226),
     h = n(317381),
     m = n(16609),
@@ -22,9 +22,9 @@ var i = n(200651),
     T = n(415439),
     S = n(981631),
     A = n(388032),
-    b = n(697607),
-    Z = n(714355);
-function x(e) {
+    Z = n(697607),
+    x = n(714355);
+function b(e) {
     let { analyticsLocations: t, analyticsContext: n } = e;
     return (0, i.jsx)(I.Z.Icon, {
         onClick: () => {
@@ -36,47 +36,47 @@ function x(e) {
             });
         },
         icon: o.qJs,
-        className: b.plusIcon,
-        iconClassName: b.plusIcon,
+        className: Z.plusIcon,
+        iconClassName: Z.plusIcon,
         tooltip: A.intl.string(A.t.qJvTKS),
         tooltipPosition: 'top'
     });
 }
 function L(e) {
-    let { application: t, loadingAppId: n, setLoadingAppId: l, botUserId: r, analyticsLocations: c } = e,
-        d = (0, s.e7)([C.Z], () => C.Z.getDMFromUserId(r)),
+    let { application: t, loadingAppId: n, setLoadingAppId: l, botUserId: r, analyticsLocations: d } = e,
+        c = (0, s.e7)([C.Z], () => C.Z.getDMFromUserId(r)),
         p = (0, s.e7)([h.ZP], () => h.ZP.getCurrentEmbeddedActivity()),
         g = (0, u.GK)(),
-        _ = null != p && p.applicationId === t.id && (g || (0, m.pY)(p.location) === d),
+        _ = null != p && p.applicationId === t.id && (g || (0, m.pY)(p.location) === c),
         E = n === t.id,
         I = null != n;
     return (0, i.jsx)(o.P3F, {
-        className: a()(b.clickable, { [b.disabledClickable]: I }),
-        onClick: () => (_ || I ? null : (0, T.Kt)(t, l, c)),
+        className: a()(Z.clickable, { [Z.disabledClickable]: I }),
+        onClick: () => (_ || I ? null : (0, T.Kt)(t, l, d)),
         'aria-label': A.intl.formatToPlainString(A.t['zLhr9/'], {
             applicationName: t.name,
             applicationDescription: t.description
         }),
         children: (0, i.jsx)(o.ua7, {
-            tooltipContentClassName: b.tooltipContent,
+            tooltipContentClassName: Z.tooltipContent,
             text: t.name,
             children: (e) => {
                 let { ...n } = e;
                 return (0, i.jsxs)('div', {
-                    className: b.iconContainer,
+                    className: Z.iconContainer,
                     ...n,
                     children: [
                         (0, i.jsx)(f.Z, {
                             application: t,
-                            className: b.iconCard,
+                            className: Z.iconCard,
                             'aria-hidden': !0,
                             rendersPlaceholder: !0
                         }),
                         E || _
                             ? (0, i.jsx)(o.$jN, {
                                   type: o.$jN.Type.PULSING_ELLIPSIS,
-                                  className: b.spinner,
-                                  itemClassName: _ ? b.spinnerInnerRunning : void 0
+                                  className: Z.spinner,
+                                  itemClassName: _ ? Z.spinnerInnerRunning : void 0
                               })
                             : null
                     ]
@@ -88,7 +88,7 @@ function L(e) {
 function y(e) {
     let { frecentApps: t, loadingAppId: n, setLoadingAppId: l, analyticsLocations: r } = e;
     return (0, i.jsx)('div', {
-        className: b.itemContainer,
+        className: Z.itemContainer,
         children: t.map((e) => {
             var t;
             return (0, i.jsx)(
@@ -106,7 +106,7 @@ function y(e) {
     });
 }
 let O = (e) => {
-    (0, c.jW)(e, async () => {
+    (0, d.jW)(e, async () => {
         let { default: e } = await n.e('40706').then(n.bind(n, 610909));
         return (t) => (0, i.jsx)(e, { ...t });
     });
@@ -116,28 +116,28 @@ function P(e) {
         n = (0, T.ZC)(),
         [r, s] = l.useState(void 0),
         { analyticsLocations: o } = (0, _.ZP)(g.Z.APP_DMS_QUICK_LAUNCHER),
-        c = l.useRef(!1),
-        u = (0, d.O)(),
+        d = l.useRef(!1),
+        u = (0, c.O)(),
         h = l.useMemo(() => n.filter(v.lm).slice(0, 8), [n]);
     return (
         l.useLayoutEffect(() => {
             var e;
-            !c.current && ((c.current = !0), N.default.track(S.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION, { apps_dm_quick_launcher_application_ids: null !== (e = h.map((e) => Number(e.id))) && void 0 !== e ? e : [] }));
+            !d.current && ((d.current = !0), N.default.track(S.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION, { apps_dm_quick_launcher_application_ids: null !== (e = h.map((e) => Number(e.id))) && void 0 !== e ? e : [] }));
         }, [h]),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)('div', {
-                    className: b.container,
+                    className: Z.container,
                     onContextMenu: O,
                     children: [
                         (0, i.jsxs)(E.Z, {
-                            className: a()(b.headerContainer, Z.privateChannelsHeaderContainer),
+                            className: a()(Z.headerContainer, x.privateChannelsHeaderContainer),
                             children: [
                                 (0, i.jsx)('span', {
-                                    className: Z.headerText,
+                                    className: x.headerText,
                                     children: A.intl.string(A.t.vayAzs)
                                 }),
-                                (0, i.jsx)(x, {
+                                (0, i.jsx)(b, {
                                     analyticsLocations: o,
                                     analyticsContext: u
                                 })

@@ -6,18 +6,18 @@ var l = n(120356),
     a = n(44315),
     s = n(600164),
     o = n(120998),
-    c = n(353042),
-    d = n(388032),
+    d = n(353042),
+    c = n(388032),
     u = n(517454);
 let h = function (e) {
     var t;
     let { title: n, className: l, color: h, animate: m, gradientStopColor: p, getHistoricalTotalBytes: g } = e,
         _ = (0, a.Sl)(h).hex,
         f = null === (t = (0, a.Sl)(p)) || void 0 === t ? void 0 : t.hex;
-    return (0, i.jsx)(c.Z, {
+    return (0, i.jsx)(d.Z, {
         getHistoricalTotalBytes: g,
         children: (e, t, a) => {
-            var c;
+            var d;
             return (0, i.jsx)('div', {
                 className: r()(u.monitor, l),
                 children: (0, i.jsxs)(s.Z, {
@@ -33,7 +33,7 @@ let h = function (e) {
                                 }),
                                 (0, i.jsx)('div', {
                                     className: u.rate,
-                                    children: (c = (e[e.length - 1] / t) * 1000) > 1000 ? d.intl.formatToPlainString(d.t['WU+gTU'], { size: Math.round(c / 1000) }) : d.intl.formatToPlainString(d.t.wnF6TE, { size: Math.round(c) })
+                                    children: (d = (e[e.length - 1] / t) * 1000) > 1000 ? c.intl.formatToPlainString(c.t['WU+gTU'], { size: Math.round(d / 1000) }) : c.intl.formatToPlainString(c.t.wnF6TE, { size: Math.round(d) })
                                 })
                             ]
                         }),

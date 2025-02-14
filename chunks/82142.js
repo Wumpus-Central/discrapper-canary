@@ -16,8 +16,8 @@ let p = {},
     f = [],
     x = [],
     C = [],
-    v = new Set(),
-    E = {},
+    E = new Set(),
+    v = {},
     I = {},
     N = new Set();
 function S(e) {
@@ -90,10 +90,10 @@ class Z extends (i = o.ZP.Store) {
         return x.includes(e);
     }
     getUserGiftCodesFetchingForSKUAndPlan(e, t) {
-        return v.has((0, _.Bg)(e, t));
+        return E.has((0, _.Bg)(e, t));
     }
     getUserGiftCodesLoadedAtForSKUAndPlan(e, t) {
-        return E[(0, _.Bg)(e, t)];
+        return v[(0, _.Bg)(e, t)];
     }
     getResolvingCodes() {
         return f;
@@ -173,17 +173,17 @@ let R = new Z(d.Z, {
         },
         GIFT_CODES_FETCH: function (e) {
             let { skuId: t, subscriptionPlanId: n } = e;
-            v.add((0, _.Bg)(t, n));
+            E.add((0, _.Bg)(t, n));
         },
         GIFT_CODES_FETCH_SUCCESS: function (e) {
             let { giftCodes: t, skuId: n, subscriptionPlanId: i } = e;
             t.forEach(S);
             let l = (0, _.Bg)(n, i);
-            (E[l] = Date.now()), v.delete(l);
+            (v[l] = Date.now()), E.delete(l);
         },
         GIFT_CODES_FETCH_FAILURE: function (e) {
             let { skuId: t, subscriptionPlanId: n } = e;
-            v.delete((0, _.Bg)(t, n));
+            E.delete((0, _.Bg)(t, n));
         },
         MESSAGE_CREATE: A,
         MESSAGE_UPDATE: A,

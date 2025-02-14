@@ -2,8 +2,8 @@ n.d(t, { Z: () => c });
 var i = n(200651);
 n(192379);
 var s = n(526156),
-    l = n(229269),
-    r = n(19869),
+    r = n(229269),
+    l = n(19869),
     a = n(726985),
     o = n(981631);
 function c() {
@@ -13,12 +13,12 @@ function c() {
         tabs: [
             {
                 title: 'Virtual Currency (Orb) Components',
-                component: () => (0, i.jsx)(r.O, {}),
+                component: () => (0, i.jsx)(l.O, {}),
                 setting: a.s6.ORB_COMPONENTS
             },
             {
                 title: 'Payment Components',
-                component: () => (0, i.jsx)(l.f, {}),
+                component: () => (0, i.jsx)(r.f, {}),
                 setting: a.s6.PAYMENT_COMPONENTS
             }
         ]

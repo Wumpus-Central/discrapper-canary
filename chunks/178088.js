@@ -16,8 +16,8 @@ var i = n(200651),
     f = n(585483),
     x = n(400445),
     C = n(153209),
-    v = n(956961),
-    E = n(903672),
+    E = n(956961),
+    v = n(903672),
     I = n(711165),
     N = n(946443),
     S = n(264233),
@@ -102,7 +102,7 @@ function A(e) {
                                   closePopout: w
                               })
                             : k === s.X.MENTIONS
-                              ? (0, i.jsx)(E.Z, {
+                              ? (0, i.jsx)(v.Z, {
                                     setTab: M,
                                     onJump: z,
                                     badgeState: j,
@@ -115,7 +115,7 @@ function A(e) {
                                       closePopout: w
                                   })
                                 : U && k === s.X.TODOS
-                                  ? (0, i.jsx)(v.Z, {
+                                  ? (0, i.jsx)(E.Z, {
                                         setTab: M,
                                         onJump: z,
                                         closePopout: w

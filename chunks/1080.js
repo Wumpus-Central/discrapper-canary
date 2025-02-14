@@ -42,7 +42,7 @@ function D(e, t, n) {
         e
     );
 }
-function k(e) {
+function O(e) {
     var t;
     let { transitionState: n, guild: l, user: s, ban: a, hideDiscriminator: o, onClose: c } = e,
         [u, g] = r.useState(!1),
@@ -133,7 +133,7 @@ function k(e) {
         ]
     });
 }
-class O extends r.PureComponent {
+class k extends r.PureComponent {
     render() {
         let { user: e, hideDiscriminator: t, guild: n } = this.props,
             r = b.ZP.getGlobalName(e);
@@ -176,7 +176,7 @@ class O extends r.PureComponent {
             D(this, 'handleShowModal', () => {
                 let { guild: e, user: t, hideDiscriminator: n, ban: r } = this.props;
                 (0, d.h7j)((l) =>
-                    (0, i.jsx)(k, {
+                    (0, i.jsx)(O, {
                         ...l,
                         guild: e,
                         user: t,
@@ -226,7 +226,7 @@ let P = r.forwardRef(function (e, t) {
                     o = null == s ? void 0 : s.get(null !== (t = null == r ? void 0 : r.id) && void 0 !== t ? t : '');
                 if (null != r && null != o)
                     return (0, i.jsx)(
-                        O,
+                        k,
                         {
                             user: r,
                             ban: o,
@@ -361,8 +361,8 @@ function M() {
         ),
         Z = r.useMemo(() => R(C, u, f), [C, R, u, f]),
         D = null != C,
-        k = Z.length % 1000 == 0 && Z.length > 0 && D,
-        O = 0 === Z.length,
+        O = Z.length % 1000 == 0 && Z.length > 0 && D,
+        k = 0 === Z.length,
         [M, U] = r.useState({
             currentPage: 1,
             pageSize: 100
@@ -386,14 +386,14 @@ function M() {
             (e) => {
                 var t, n, i;
                 null === (t = b.current) || void 0 === t || t.scrollToSectionTop(0),
-                    (e + 1) * M.pageSize > Z.length && k && !h && ((z.current = null !== (i = null === (n = Z[Z.length - 1]) || void 0 === n ? void 0 : n.id) && void 0 !== i ? i : null), G(z.current)),
-                    (null != B[e - 1] || k) &&
+                    (e + 1) * M.pageSize > Z.length && O && !h && ((z.current = null !== (i = null === (n = Z[Z.length - 1]) || void 0 === n ? void 0 : n.id) && void 0 !== i ? i : null), G(z.current)),
+                    (null != B[e - 1] || O) &&
                         U((t) => ({
                             ...t,
                             currentPage: e
                         }));
             },
-            [M.pageSize, Z, k, B, G, h]
+            [M.pageSize, Z, O, B, G, h]
         ),
         z = r.useRef(null);
     r.useEffect(() => {
@@ -415,15 +415,15 @@ function M() {
                   (0, i.jsxs)('div', {
                       className: s()(L.scrollerContainer),
                       children: [
-                          !O &&
+                          !k &&
                               (0, i.jsx)(P, {
                                   guild: l,
                                   bans: C,
                                   sortedBans: H,
                                   ref: b
                               }),
-                          !k &&
-                              O &&
+                          !O &&
+                              k &&
                               (0, i.jsxs)(d.ubH, {
                                   theme: N,
                                   className: L.emptyState,
@@ -447,7 +447,7 @@ function M() {
                       className: s()(L.__invalid_paginationContainer),
                       children: (0, i.jsx)(d.DsT, {
                           className: s()(L.paginationInput),
-                          totalCount: Z.length + (k ? M.pageSize : 0),
+                          totalCount: Z.length + (O ? M.pageSize : 0),
                           pageSize: M.pageSize,
                           currentPage: M.currentPage,
                           onPageChange: F,

@@ -6,16 +6,16 @@ var l = n(442837),
     a = n(949389),
     s = n(324262),
     o = n(434404),
-    c = n(899667),
-    d = n(267642),
+    d = n(899667),
+    c = n(267642),
     u = n(981631),
     h = n(388032),
     m = n(571472);
 let p = (e) => {
     let { guild: t } = e,
         n = t.id,
-        p = (0, l.e7)([c.Z], () => c.Z.getAppliedGuildBoostsForGuild(t.id));
-    return null == p || 0 >= (0, d._k)(p, n)
+        p = (0, l.e7)([d.Z], () => d.Z.getAppliedGuildBoostsForGuild(t.id));
+    return null == p || 0 >= (0, c._k)(p, n)
         ? null
         : (0, i.jsx)(s.Z, {
               guild: t,

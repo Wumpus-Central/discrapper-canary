@@ -11,7 +11,7 @@ var i,
     a = n(240773),
     s = n(495852),
     o = (((i = {})[(i.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (i[(i.OPEN_MARKETING_PAGE = 1)] = 'OPEN_MARKETING_PAGE'), (i[(i.OPEN_TIER_2_PAYMENT_MODAL = 2)] = 'OPEN_TIER_2_PAYMENT_MODAL'), i);
-class c extends s.C {
+class d extends s.C {
     create(e) {
         let t = {
             header: '',
@@ -99,7 +99,7 @@ class c extends s.C {
         ]);
     }
 }
-let d = new c();
+let c = new d();
 class u extends s.C {
     create(e) {
         let t = {
@@ -415,7 +415,7 @@ class f extends s.C {
                     r.helpArticleId = e.string();
                     break;
                 case 5:
-                    r.featureCards.push(d.internalBinaryRead(e, e.uint32(), n));
+                    r.featureCards.push(c.internalBinaryRead(e, e.uint32(), n));
                     break;
                 case 6:
                     r.button = h.internalBinaryRead(e, e.uint32(), n, r.button);
@@ -455,7 +455,7 @@ class f extends s.C {
     }
     internalBinaryWrite(e, t, n) {
         '' !== e.header && t.tag(1, l.TD.LengthDelimited).string(e.header), '' !== e.subheader && t.tag(2, l.TD.LengthDelimited).string(e.subheader), '' !== e.videoLink && t.tag(3, l.TD.LengthDelimited).string(e.videoLink), '' !== e.helpArticleId && t.tag(4, l.TD.LengthDelimited).string(e.helpArticleId);
-        for (let i = 0; i < e.featureCards.length; i++) d.internalBinaryWrite(e.featureCards[i], t.tag(5, l.TD.LengthDelimited).fork(), n).join();
+        for (let i = 0; i < e.featureCards.length; i++) c.internalBinaryWrite(e.featureCards[i], t.tag(5, l.TD.LengthDelimited).fork(), n).join();
         e.button && h.internalBinaryWrite(e.button, t.tag(6, l.TD.LengthDelimited).fork(), n).join(), '' !== e.dismissKey && t.tag(7, l.TD.LengthDelimited).string(e.dismissKey), '' !== e.heroArtVideoLinkLightTheme && t.tag(8, l.TD.LengthDelimited).string(e.heroArtVideoLinkLightTheme), '' !== e.heroArtImageLinkDarkTheme && t.tag(9, l.TD.LengthDelimited).string(e.heroArtImageLinkDarkTheme), '' !== e.heroArtImageLinkLightTheme && t.tag(10, l.TD.LengthDelimited).string(e.heroArtImageLinkLightTheme), '' !== e.modalTopPill && t.tag(11, l.TD.LengthDelimited).string(e.modalTopPill), '' !== e.body && t.tag(12, l.TD.LengthDelimited).string(e.body);
         for (let i = 0; i < e.heroArtVideoSubtitles.length; i++) _.internalBinaryWrite(e.heroArtVideoSubtitles[i], t.tag(13, l.TD.LengthDelimited).fork(), n).join();
         e.storage && p.internalBinaryWrite(e.storage, t.tag(14, l.TD.LengthDelimited).fork(), n).join();
@@ -493,7 +493,7 @@ class f extends s.C {
                 name: 'feature_cards',
                 kind: 'message',
                 repeat: 1,
-                T: () => d
+                T: () => c
             },
             {
                 no: 6,

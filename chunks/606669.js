@@ -1,42 +1,42 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => o });
 var i = n(200651);
 n(192379);
-var o = n(442837),
-    r = n(481060),
+var r = n(442837),
+    l = n(481060),
     a = n(857595),
-    l = n(607070),
-    s = n(388032);
-function c() {
+    s = n(607070),
+    c = n(388032);
+function o() {
     let {
             saturation: e,
             useReducedMotion: t,
             roleStyle: n
-        } = (0, o.cj)([l.Z], () => ({
-            saturation: l.Z.saturation,
-            useReducedMotion: l.Z.useReducedMotion,
-            roleStyle: l.Z.roleStyle
+        } = (0, r.cj)([s.Z], () => ({
+            saturation: s.Z.saturation,
+            useReducedMotion: s.Z.useReducedMotion,
+            roleStyle: s.Z.roleStyle
         })),
-        c = [
+        o = [
             {
-                name: s.intl.string(s.t.YEOEi4),
+                name: c.intl.string(c.t.YEOEi4),
                 value: 'username'
             },
             {
-                name: s.intl.string(s.t.mQaro6),
+                name: c.intl.string(c.t.mQaro6),
                 value: 'dot'
             },
             {
-                name: s.intl.string(s.t.Ji2EVF),
+                name: c.intl.string(c.t.Ji2EVF),
                 value: 'hidden'
             }
         ];
     return [
         (0, i.jsx)(
-            r.kSQ,
+            l.kSQ,
             {
-                children: (0, i.jsx)(r.S89, {
+                children: (0, i.jsx)(l.S89, {
                     id: 'reduced-motion',
-                    label: s.intl.string(s.t.b3XBzs),
+                    label: c.intl.string(c.t.b3XBzs),
                     checked: t,
                     action: () => (0, a.Zt)(t ? 'no-preference' : 'reduce')
                 })
@@ -44,41 +44,41 @@ function c() {
             'reduced-motion'
         ),
         (0, i.jsx)(
-            r.kSQ,
+            l.kSQ,
             {
-                children: (0, i.jsx)(r.II_, {
+                children: (0, i.jsx)(l.II_, {
                     id: 'input',
-                    label: s.intl.string(s.t['5PWWCQ']),
+                    label: c.intl.string(c.t['5PWWCQ']),
                     control: (t, n) =>
-                        (0, i.jsx)(r._wy, {
+                        (0, i.jsx)(l._wy, {
                             ...t,
                             ref: n,
                             value: 100 * e,
                             onChange: (e) => (0, a.o2)(e / 100),
-                            'aria-label': s.intl.string(s.t['5PWWCQ'])
+                            'aria-label': c.intl.string(c.t['5PWWCQ'])
                         })
                 })
             },
             'input'
         ),
         (0, i.jsx)(
-            r.kSQ,
+            l.kSQ,
             {
-                children: (0, i.jsx)(r.sNh, {
+                children: (0, i.jsx)(l.sNh, {
                     id: 'role-colors',
-                    label: s.intl.string(s.t.uSOPWl),
-                    children: c.map((e) => {
-                        let { name: t, value: o } = e;
+                    label: c.intl.string(c.t.uSOPWl),
+                    children: o.map((e) => {
+                        let { name: t, value: r } = e;
                         return (0, i.jsx)(
-                            r.k5B,
+                            l.k5B,
                             {
-                                id: o,
+                                id: r,
                                 group: 'role-colors',
-                                checked: o === n,
+                                checked: r === n,
                                 label: t,
-                                action: () => (0, a.u1)(o)
+                                action: () => (0, a.u1)(r)
                             },
-                            o
+                            r
                         );
                     })
                 })

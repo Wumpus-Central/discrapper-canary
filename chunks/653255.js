@@ -1,23 +1,23 @@
 n.d(t, { Z: () => b });
 var o,
     r,
-    c,
-    i = n(442837),
+    i,
+    c = n(442837),
     d = n(570140),
-    _ = n(358085),
+    l = n(358085),
     a = n(998502),
-    l = n(869614),
-    s = n(281083),
+    s = n(869614),
+    _ = n(281083),
     u = n(672598);
 let f = !1,
     g = !0,
     p = !1;
-class h extends (c = i.ZP.Store) {
+class h extends (i = c.ZP.Store) {
     initialize() {
-        !_.isPlatformEmbedded ||
+        !l.isPlatformEmbedded ||
             __OVERLAY__ ||
             a.ZP.getGPUDriverVersions().then((e) => {
-                (f = (0, u.Z)(e)), (g = (0, l.Z)(e)), (p = (0, s.Z)(e)), this.emitChange();
+                (f = (0, u.Z)(e)), (g = (0, s.Z)(e)), (p = (0, _.Z)(e)), this.emitChange();
             });
     }
     get GPUDriversOutdated() {

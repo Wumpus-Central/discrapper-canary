@@ -1,9 +1,9 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => g });
 var i,
-    r = n(442837),
-    a = n(570140),
-    s = n(314897),
-    l = n(57562),
+    s = n(442837),
+    r = n(570140),
+    l = n(314897),
+    a = n(57562),
     o = n(351780),
     c = n(843693);
 function d(e, t, n) {
@@ -21,9 +21,9 @@ function d(e, t, n) {
 }
 let u = { unlockedAchievements: {} },
     m = { ...u };
-class g extends (i = r.ZP.PersistedStore) {
+class h extends (i = s.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(s.default, c.ZP);
+        this.waitFor(l.default, c.ZP);
         let t = null != e ? e : { ...u };
         for (let e in t) m[e] = t[e];
     }
@@ -38,8 +38,8 @@ class g extends (i = r.ZP.PersistedStore) {
         return null !== (t = m.unlockedAchievements[e]) && void 0 !== t ? t : null;
     }
 }
-d(g, 'displayName', 'PoggermodeAchievementStore'), d(g, 'persistKey', 'PoggermodeAchievementStore');
-let _ = new g(a.Z, {
+d(h, 'displayName', 'PoggermodeAchievementStore'), d(h, 'persistKey', 'PoggermodeAchievementStore');
+let g = new h(r.Z, {
     POGGERMODE_ACHIEVEMENT_UNLOCK: function (e) {
         let { achievementId: t } = e;
         if (!o.Z.isEnabled()) return !1;
@@ -52,7 +52,7 @@ let _ = new g(a.Z, {
                 }
             }),
             setTimeout(() => {
-                (0, l.D)(t, !0);
+                (0, a.D)(t, !0);
             }, 2000));
     }
 });

@@ -26,8 +26,8 @@ var g = n(392750),
     S = n(916790),
     y = n(645973),
     k = n(903502),
-    I = n(912072),
-    R = n(272193),
+    R = n(912072),
+    I = n(272193),
     O = n(735959),
     Z = n(246992),
     w = n(496025),
@@ -137,7 +137,7 @@ function q() {
                 e.push({
                     id: 'overlays',
                     name: 'Dev Overlays',
-                    render: () => (0, a.jsx)(I.Z, { devSettingsCategory: b.zU.OVERLAYS })
+                    render: () => (0, a.jsx)(R.Z, { devSettingsCategory: b.zU.OVERLAYS })
                 }),
                 e.push({
                     id: 'messaging',
@@ -147,7 +147,7 @@ function q() {
                 e.push({
                     id: 'reporting',
                     name: 'Reporting',
-                    render: () => (0, a.jsx)(I.Z, { devSettingsCategory: b.zU.REPORTING })
+                    render: () => (0, a.jsx)(R.Z, { devSettingsCategory: b.zU.REPORTING })
                 }),
                 e.push({
                     id: 'permissions',
@@ -204,7 +204,7 @@ function q() {
                 e.push({
                     id: 'gifting_intent',
                     name: 'Gifting Intent',
-                    render: () => (0, a.jsx)(R.Z, {})
+                    render: () => (0, a.jsx)(I.Z, {})
                 }),
                 e.push({
                     id: 'voice_filters',

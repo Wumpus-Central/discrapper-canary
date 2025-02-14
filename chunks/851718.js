@@ -1,22 +1,22 @@
-n.d(t, { Z: () => h }), n(47120);
+n.d(t, { Z: () => m }), n(47120);
 var i = n(200651),
     s = n(192379),
-    l = n(823379),
-    r = n(106976),
+    r = n(823379),
+    l = n(106976),
     a = n(270144),
     o = n(301935),
     c = n(630656),
     d = n(10970),
     u = n(388032);
-function h(e) {
+function m(e) {
     let { subscriptions: t, updateHeader: n } = e,
-        [h, m] = s.useState({ route: c.j.HOME }),
-        { route: g } = h,
+        [m, h] = s.useState({ route: c.j.HOME }),
+        { route: g } = m,
         x = () => {
-            m({ route: c.j.HOME });
+            h({ route: c.j.HOME });
         },
         _ = (e) => {
-            m({
+            h({
                 route: c.j.SWITCH_APP_PLANS,
                 ...e
             }),
@@ -32,7 +32,7 @@ function h(e) {
                     ...e,
                     [n.id]: o.G.LOADING
                 })),
-                (0, r.vY)(t)
+                (0, l.vY)(t)
                     .then(() => {
                         E((e) => ({
                             ...e,
@@ -48,7 +48,7 @@ function h(e) {
         }
     }, [t]);
     let { loadState: C } = (0, a.qz)(),
-        N = C !== a.jd.LOADED;
+        f = C !== a.jd.LOADED;
     switch (g) {
         case c.j.HOME:
             return (0, i.jsx)(i.Fragment, {
@@ -59,19 +59,19 @@ function h(e) {
                         {
                             subscription: e,
                             navigateToSwitchPlan: _,
-                            loadingState: N ? o.G.LOADING : null !== (t = p[e.id]) && void 0 !== t ? t : o.G.LOADING
+                            loadingState: f ? o.G.LOADING : null !== (t = p[e.id]) && void 0 !== t ? t : o.G.LOADING
                         },
                         e.id
                     );
                 })
             });
         case c.j.SWITCH_APP_PLANS:
-            let { route: f, ...I } = h;
+            let { route: T, ...N } = m;
             return (0, i.jsx)(d.Z, {
-                ...I,
+                ...N,
                 navigateToHome: x
             });
         default:
-            (0, l.vE)(g);
+            (0, r.vE)(g);
     }
 }

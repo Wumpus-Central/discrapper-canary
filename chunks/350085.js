@@ -5,29 +5,29 @@ var i = n(392711),
     a = n(808506),
     s = n(237997),
     o = n(996106),
-    c = n(186901),
-    d = n(981631);
+    d = n(186901),
+    c = n(981631);
 let u = {
-    [d.zMe.OVERLAY_UPDATE]: {
-        scope: c.lH,
+    [c.zMe.OVERLAY_UPDATE]: {
+        scope: d.lH,
         handler(e) {
             let {
                 args: { pid: t },
                 socket: n
             } = e;
-            if ('number' != typeof t || t < 10) throw new o.Z({ errorCode: d.lTL.INVALID_EVENT }, 'Invalid pid');
+            if ('number' != typeof t || t < 10) throw new o.Z({ errorCode: c.lTL.INVALID_EVENT }, 'Invalid pid');
             return (e) => {
                 let { prevState: i, dispatch: o } = e,
-                    c = a.Z.enabled,
-                    d = !0,
+                    d = a.Z.enabled,
+                    c = !0,
                     u = n.application.id;
                 if (null != u) {
                     let e = r.Z.getActiveLibraryApplication(u);
-                    null != e && (c = c && e.isOverlayEnabled()), (d = s.Z.isLocked(t));
+                    null != e && (d = d && e.isOverlayEnabled()), (c = s.Z.isLocked(t));
                 }
                 let h = {
-                    enabled: c,
-                    locked: d
+                    enabled: d,
+                    locked: c
                 };
                 return l().isEqual(h, i) || o(h), h;
             };

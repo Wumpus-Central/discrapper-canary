@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(47120);
+n.d(t, { Z: () => x }), n(47120);
 var i = n(200651);
 n(192379);
 var l = n(873546),
@@ -6,8 +6,8 @@ var l = n(873546),
     a = n(481060),
     s = n(570140),
     o = n(317770),
-    c = n(605236),
-    d = n(594174),
+    d = n(605236),
+    c = n(594174),
     u = n(431),
     h = n(74538),
     m = n(374023),
@@ -35,7 +35,7 @@ function S(e, t, n) {
     );
 }
 let A = 'PremiumServerDriveAnnouncementModal';
-class b extends o.Z {
+class Z extends o.Z {
     _initialize() {
         s.Z.subscribe('PREMIUM_MARKETING_DATA_READY', this.mayShowAnnouncementModal), s.Z.subscribe('PREMIUM_MARKETING_PREVIEW', this.handlePreview);
     }
@@ -72,7 +72,7 @@ class b extends o.Z {
                 this.maybeOpenServerDriveAnnouncementModal(t, !0);
             }),
             S(this, 'getOfferFromStore', () => {
-                let e = d.default.getCurrentUser();
+                let e = c.default.getCurrentUser();
                 if ((0, h.I5)(e)) return {};
                 let t = [T.hs, T.RU, T.rB, T.ih]
                     .map((e) => u.Z.getUserDiscountOffer(e))
@@ -86,8 +86,8 @@ class b extends o.Z {
                 if ((await (0, C.l2)(), m.s.isDisallowPopupsSet())) return;
                 let e = this.getOfferFromStore(),
                     t = f.Z.getCurrentConfig({ location: 'announcementManager' }, { autoTrackExposure: !1 }).inExperiment || f.Z.isAAMode({ location: 'announcementManager' }),
-                    n = (0, c.un)(r.z.REVERSE_TRIAL_ENDED_UPSELL),
-                    i = d.default.getCurrentUser();
+                    n = (0, d.un)(r.z.REVERSE_TRIAL_ENDED_UPSELL),
+                    i = c.default.getCurrentUser();
                 if (t && !n && !(0, a.$sL)() && !(0, h.I5)(i)) {
                     let t = await (0, g.r)(e.userTrialOffer);
                     null != t && (0, N.Z)({ upsellType: t });
@@ -98,4 +98,4 @@ class b extends o.Z {
             });
     }
 }
-let Z = new b();
+let x = new Z();

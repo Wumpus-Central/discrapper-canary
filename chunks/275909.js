@@ -2,21 +2,21 @@ n.d(t, { Z: () => o });
 var i = n(200651);
 n(192379);
 var s = n(120356),
-    l = n.n(s),
-    r = n(283029),
+    r = n.n(s),
+    l = n(283029),
     a = n(803237);
 let o = function (e) {
     let { className: t, hasCooldown: s, isCanceled: o, useReducedMotion: c } = e;
     return (0, i.jsxs)('div', {
-        className: l()(a.boostIconContainer, t),
+        className: r()(a.boostIconContainer, t),
         children: [
             o
                 ? (0, i.jsx)('img', {
-                      className: l()(a.boostIcon, a.boostIconCanceled),
+                      className: r()(a.boostIcon, a.boostIconCanceled),
                       src: n(457026),
                       alt: ''
                   })
-                : (0, i.jsx)(r.Z, {
+                : (0, i.jsx)(l.Z, {
                       className: a.boostIcon,
                       boostInCooldown: s,
                       useReducedMotion: c

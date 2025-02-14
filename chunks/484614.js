@@ -1,58 +1,58 @@
-n.d(t, { Z: () => h });
-var i,
-    l = n(200651),
-    s = n(192379),
-    a = n(846519),
-    r = n(481060),
-    o = n(572004),
-    d = n(388032);
-function c(e, t, n) {
+s.d(t, { Z: () => f });
+var n,
+    i = s(200651),
+    r = s(192379),
+    o = s(846519),
+    l = s(481060),
+    a = s(572004),
+    c = s(388032);
+function u(e, t, s) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: n,
+                  value: s,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[t] = s),
         e
     );
 }
-class u extends (i = s.PureComponent) {
+class d extends (n = r.PureComponent) {
     componentWillUnmount() {
         this._timeout.stop();
     }
     render() {
         let { text: e } = this.props,
             { mode: t } = this.state,
-            n = t === r.kO8.Modes.SUCCESS ? d.intl.string(d.t['t5VZ8/']) : e;
-        return (0, l.jsx)(r.kO8, {
+            s = t === l.kO8.Modes.SUCCESS ? c.intl.string(c.t['t5VZ8/']) : e;
+        return (0, i.jsx)(l.kO8, {
             ...this.props,
             onCopy: this.handleCopy,
             mode: t,
-            text: n,
-            supportsCopy: o.wS
+            text: s,
+            supportsCopy: a.wS
         });
     }
     handleCopy(e) {
-        let { onCopy: t, delay: n = 1000 } = this.props,
-            i = (0, o.JG)(e);
-        this.setState({ mode: i ? r.kO8.Modes.SUCCESS : r.kO8.Modes.ERROR }), this._timeout.start(n, () => this.setState({ mode: r.kO8.Modes.DEFAULT })), null == t || t(e);
+        let { onCopy: t, delay: s = 1000 } = this.props,
+            n = (0, a.JG)(e);
+        this.setState({ mode: n ? l.kO8.Modes.SUCCESS : l.kO8.Modes.ERROR }), this._timeout.start(s, () => this.setState({ mode: l.kO8.Modes.DEFAULT })), null == t || t(e);
     }
     getVerticalButtonColor(e) {
         switch (e) {
-            case r.kO8.Modes.SUCCESS:
-                return r.zxk.Colors.GREEN;
-            case r.kO8.Modes.ERROR:
-                return r.zxk.Colors.RED;
+            case l.kO8.Modes.SUCCESS:
+                return l.zxk.Colors.GREEN;
+            case l.kO8.Modes.ERROR:
+                return l.zxk.Colors.RED;
             default:
-                return r.zxk.Colors.BRAND;
+                return l.zxk.Colors.BRAND;
         }
     }
     constructor(e) {
-        super(e), c(this, '_timeout', void 0), (this.state = { mode: r.kO8.Modes.DEFAULT }), (this._timeout = new a.V7()), (this.handleCopy = this.handleCopy.bind(this));
+        super(e), u(this, '_timeout', void 0), (this.state = { mode: l.kO8.Modes.DEFAULT }), (this._timeout = new o.V7()), (this.handleCopy = this.handleCopy.bind(this));
     }
 }
-c(u, 'defaultProps', { delay: 1000 });
-let h = u;
+u(d, 'defaultProps', { delay: 1000 });
+let f = d;

@@ -5,18 +5,18 @@ var i = n(200651),
     a = n.n(r),
     s = n(399606),
     o = n(243778),
-    c = n(914010),
-    d = n(566840),
+    d = n(914010),
+    c = n(566840),
     u = n(921944),
     h = n(310799);
 let m = l.memo(function (e) {
     let { state: t, markAsDismissed: n } = e,
         { name: r, guildId: s, boundingRect: o } = t,
-        c = l.useMemo(() => {
+        d = l.useMemo(() => {
             var e, t, n;
             return (e = 0), (t = 0), (n = 0), null;
         }, [r, s, n]);
-    return null == c
+    return null == d
         ? null
         : (0, i.jsx)('div', {
               className: a()(h.upsell, !(null != o && !(o.y < 0)) && h.hidden),
@@ -27,12 +27,12 @@ let m = l.memo(function (e) {
                             top: o.top,
                             left: o.right - o.x
                         },
-              children: c
+              children: d
           });
 });
 function p() {
-    let e = (0, s.e7)([c.Z], () => c.Z.getGuildId()),
-        t = (0, d.Eg)(e),
+    let e = (0, s.e7)([d.Z], () => d.Z.getGuildId()),
+        t = (0, c.Eg)(e),
         [n, l] = (0, o.US)(
             Object.values(t)
                 .filter((e) => {

@@ -1,6 +1,6 @@
 n.d(t, {
     X: () => S,
-    Z: () => Z
+    Z: () => x
 });
 var i,
     l = n(392711),
@@ -8,8 +8,8 @@ var i,
     a = n(442837),
     s = n(570140),
     o = n(846027),
-    c = n(581883),
-    d = n(358085),
+    d = n(581883),
+    c = n(358085),
     u = n(131951),
     h = n(981631),
     m = n(65154);
@@ -42,7 +42,7 @@ let g = {},
     },
     T = /\(([^)]+)\)/;
 function S(e) {
-    if ((0, d.getPlatform)() === d.PlatformTypes.WINDOWS) {
+    if ((0, c.getPlatform)() === c.PlatformTypes.WINDOWS) {
         let t = e.name.match(T);
         if (null != t) return t[1];
     }
@@ -61,9 +61,9 @@ function A(e, t, n) {
             }
           : e;
 }
-class b extends (i = a.ZP.DeviceSettingsStore) {
+class Z extends (i = a.ZP.DeviceSettingsStore) {
     initialize(e) {
-        this.waitFor(u.Z, c.Z), (_ = null != e ? e : g);
+        this.waitFor(u.Z, d.Z), (_ = null != e ? e : g);
     }
     getUserAgnosticState() {
         return _;
@@ -87,8 +87,8 @@ class b extends (i = a.ZP.DeviceSettingsStore) {
         return v;
     }
 }
-p(b, 'displayName', 'ConnectedDeviceStore'), p(b, 'persistKey', 'ConnectedDeviceStore');
-let Z = new b(s.Z, {
+p(Z, 'displayName', 'ConnectedDeviceStore'), p(Z, 'persistKey', 'ConnectedDeviceStore');
+let x = new Z(s.Z, {
     MEDIA_ENGINE_DEVICES: function (e) {
         let { inputDevices: t, outputDevices: n } = e,
             i = {};
@@ -118,11 +118,11 @@ let Z = new b(s.Z, {
         let a = Object.keys(E),
             s = Object.keys(i),
             o = Object.keys(I),
-            c = Object.keys(l),
-            d = r().difference(a, s),
-            u = r().difference(o, c);
+            d = Object.keys(l),
+            c = r().difference(a, s),
+            u = r().difference(o, d);
         return (
-            d.length > 0 || u.length > 0
+            c.length > 0 || u.length > 0
                 ? (C = {})
                 : (r()
                       .difference(s, a)
@@ -130,11 +130,11 @@ let Z = new b(s.Z, {
                           C[e] = A(C[e], e, h.QyF.INPUT);
                       }),
                   r()
-                      .difference(c, o)
+                      .difference(d, o)
                       .forEach((e) => {
                           C[e] = A(C[e], e, h.QyF.OUTPUT);
                       })),
-            !(r().isEqual(a, s) && r().isEqual(o, c)) && ((E = i), (I = l), !0)
+            !(r().isEqual(a, s) && r().isEqual(o, d)) && ((E = i), (I = l), !0)
         );
     },
     CONNECTED_DEVICE_SET: function (e) {

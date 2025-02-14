@@ -6,9 +6,9 @@ n.d(t, {
 var i,
     l,
     r,
-    o,
-    a = n(392711),
-    s = n.n(a),
+    a,
+    o = n(392711),
+    s = n.n(o),
     c = n(442837),
     d = n(570140),
     u = n(220444),
@@ -57,8 +57,8 @@ function R(e) {
     let { guildChannels: l } = Z.Z.getGuildWithoutChangingGuildActionRows(e),
         r = l.getChannels(null !== (t = y[e]) && void 0 !== t ? t : []);
     if (null == r || 0 === r.length) return !1;
-    let o = null,
-        a = null,
+    let a = null,
+        o = null,
         c = null,
         d = null,
         u = !0,
@@ -78,7 +78,7 @@ function R(e) {
     if (h || u)
         for (let e = f.length - 1; e >= 0; e--) {
             let t = f[e];
-            (T(t.id) || s().some(t.threadIds, T)) && (null == a && (a = t.id), (I = !0)), (A(t.id) || s().some(t.threadIds, A)) && (null == o && (o = t.id), (x += _.ZP.getMentionCount(t.id)), (x += s().sumBy(t.threadIds, _.ZP.getMentionCount)));
+            (T(t.id) || s().some(t.threadIds, T)) && (null == o && (o = t.id), (I = !0)), (A(t.id) || s().some(t.threadIds, A)) && (null == a && (a = t.id), (x += _.ZP.getMentionCount(t.id)), (x += s().sumBy(t.threadIds, _.ZP.getMentionCount)));
         }
     if (h || u)
         for (let e = 0; e < C.length; e++) {
@@ -112,14 +112,14 @@ function R(e) {
             ? (R = {
                   mode: 'mentions',
                   mentionCount: x,
-                  targetChannelId: o
+                  targetChannelId: a
               })
             : h &&
               I &&
               (R = {
                   mode: 'unread',
                   mentionCount: 0,
-                  targetChannelId: a
+                  targetChannelId: o
               });
     let L = null != R && (null == E || ('mentions' !== E.mode && 'mentions' === R.mode)),
         M = null != E && ('mentions' === E.mode || !L);
@@ -171,15 +171,15 @@ class B extends (i = c.ZP.Store) {
         return null !== (t = j[e]) && void 0 !== t ? t : E;
     }
 }
-(o = 'ChannelListUnreadsStore'),
+(a = 'ChannelListUnreadsStore'),
     (r = 'displayName') in B
         ? Object.defineProperty(B, r, {
-              value: o,
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (B[r] = o);
+        : (B[r] = a);
 let O = new B(d.Z, {
     UPDATE_CHANNEL_LIST_DIMENSIONS: function (e) {
         let { guildId: t, channelIds: n } = e,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648), n(47120);
+n.d(t, { Z: () => x }), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648), n(47120);
 var i = n(200651);
 n(192379);
 var l = n(756647),
@@ -6,8 +6,8 @@ var l = n(756647),
     a = n(570140),
     s = n(355467),
     o = n(899742),
-    c = n(457330),
-    d = n(533307),
+    d = n(457330),
+    c = n(533307),
     u = n(447543),
     h = n(185669),
     m = n(962220),
@@ -23,7 +23,7 @@ var l = n(756647),
     T = n(996106),
     S = n(186901),
     A = n(981631);
-function b(e, t) {
+function Z(e, t) {
     null != e &&
         I.default.track(A.rMx.EXTERNAL_DYNAMIC_LINK_RECEIVED, {
             invite_code: null,
@@ -33,7 +33,7 @@ function b(e, t) {
             link_type: t
         });
 }
-let Z = {
+let x = {
     [A.Etm.INVITE_BROWSER]: {
         scope: S.cE,
         async handler(e) {
@@ -92,7 +92,7 @@ let Z = {
             } = e;
             return new Promise((e, l) => {
                 a.Z.wait(() => {
-                    d.Z.resolveGiftCode(t, !0, !0)
+                    c.Z.resolveGiftCode(t, !0, !0)
                         .then((l) => {
                             let { giftCode: a } = l;
                             v.ZP.focus(),
@@ -123,19 +123,19 @@ let Z = {
             } = e;
             switch ((v.ZP.focus(), t)) {
                 case S.jE.USER_SETTINGS:
-                    null != n && ((0, g.dL)(A.Z5c.SETTINGS(n.section, n.subsection)), b(n.fingerprint, 'settings'));
+                    null != n && ((0, g.dL)(A.Z5c.SETTINGS(n.section, n.subsection)), Z(n.fingerprint, 'settings'));
                     break;
                 case S.jE.CHANGELOG:
-                    null != n && ((0, g.dL)(N.Z.formatPathWithQuery(A.Z5c.CHANGELOGS(n.date), n.query)), b(n.fingerprint, 'changelog'));
+                    null != n && ((0, g.dL)(N.Z.formatPathWithQuery(A.Z5c.CHANGELOGS(n.date), n.query)), Z(n.fingerprint, 'changelog'));
                     break;
                 case S.jE.LIBRARY:
-                    (0, g.dL)(A.Z5c.APPLICATION_LIBRARY), null != n && b(n.fingerprint, 'library');
+                    (0, g.dL)(A.Z5c.APPLICATION_LIBRARY), null != n && Z(n.fingerprint, 'library');
                     break;
                 case S.jE.STORE_HOME:
-                    (0, g.dL)(A.Z5c.APPLICATION_STORE), null != n && b(n.fingerprint, 'store');
+                    (0, g.dL)(A.Z5c.APPLICATION_STORE), null != n && Z(n.fingerprint, 'store');
                     break;
                 case S.jE.STORE_LISTING:
-                    null != n && ((0, g.dL)(A.Z5c.APPLICATION_STORE_LISTING_SKU(n.skuId, n.slug)), b(n.fingerprint, 'store'));
+                    null != n && ((0, g.dL)(A.Z5c.APPLICATION_STORE_LISTING_SKU(n.skuId, n.slug)), Z(n.fingerprint, 'store'));
                     break;
                 case S.jE.PICK_GUILD_SETTINGS:
                     null != n &&
@@ -143,7 +143,7 @@ let Z = {
                             pathname: A.Z5c.PICK_GUILD_SETTINGS(n.section, n.subsection),
                             search: n.search
                         }),
-                        b(n.fingerprint, 'guild_settings'));
+                        Z(n.fingerprint, 'guild_settings'));
                     break;
                 case S.jE.CHANNEL:
                     null != n &&
@@ -151,7 +151,7 @@ let Z = {
                             pathname: A.Z5c.CHANNEL(n.guildId, n.channelId, n.messageId),
                             search: n.search
                         }),
-                        b(n.fingerprint, 'channel'));
+                        Z(n.fingerprint, 'channel'));
                     break;
                 case S.jE.QUEST_HOME:
                     null != n
@@ -159,7 +159,7 @@ let Z = {
                               pathname: A.Z5c.QUEST_HOME,
                               hash: n.questId
                           }),
-                          b(n.fingerprint, 'quest_home'))
+                          Z(n.fingerprint, 'quest_home'))
                         : (0, g.dL)(A.Z5c.QUEST_HOME);
                     break;
                 case S.jE.DISCOVERY_GAME_RESULTS:
@@ -168,7 +168,7 @@ let Z = {
                             pathname: A.Z5c.GLOBAL_DISCOVERY_SERVERS,
                             search: '?game='.concat(n.gameId)
                         }),
-                        b(n.fingerprint, 'discovery_game'));
+                        Z(n.fingerprint, 'discovery_game'));
                     break;
                 case S.jE.OAUTH2:
                     let i = new URL(A.Z5c.OAUTH2_AUTHORIZE, window.location.origin);
@@ -198,7 +198,7 @@ let Z = {
             try {
                 return (
                     f.Z.deletePendingAuthorizedState(r),
-                    await c.Z.callback(t, {
+                    await d.Z.callback(t, {
                         code: n,
                         openid_params: i,
                         iss: l,

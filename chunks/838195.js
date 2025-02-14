@@ -6,11 +6,11 @@ var l = n(481060),
     a = n(531826);
 function s(e) {
     let { applicationId: t, channelId: s, mediaUrl: o } = e,
-        c = r.Z.getApplication(t),
-        d =
+        d = r.Z.getApplication(t),
+        c =
             null !=
             (0, a.ZP)({
-                application: c,
+                application: d,
                 channelId: s
             })
                 ? l.u1M
@@ -28,7 +28,7 @@ function s(e) {
         },
         {
             modalKey: 'activity-share-moment-modal',
-            contextKey: d
+            contextKey: c
         }
     );
 }

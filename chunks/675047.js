@@ -1,24 +1,24 @@
-n.d(t, { Z: () => T });
+n.d(t, { Z: () => S });
 var i = n(200651);
 n(192379);
 var s = n(924628),
-    l = n(493773),
-    r = n(977059),
+    r = n(493773),
+    l = n(977059),
     a = n(630759),
     o = n(398826),
     c = n(10298),
     d = n(623196),
     u = n(993315),
-    h = n(883382),
-    m = n(940021),
+    m = n(883382),
+    h = n(940021),
     g = n(402583),
     x = n(230341),
     _ = n(893996),
     p = n(266132),
     E = n(726985),
     C = n(388032);
-function N() {
-    let { enabled: e } = (0, r.S)({ location: 'UserSettingsDataAndPrivacy' });
+function f() {
+    let { enabled: e } = (0, l.S)({ location: 'UserSettingsDataAndPrivacy' });
     return e
         ? (0, i.jsxs)(_.Z, {
               title: C.intl.string(C.t.WWaFn5),
@@ -28,28 +28,28 @@ function N() {
           })
         : null;
 }
-function f() {
+function T() {
     return (0, i.jsx)(_.Z, {
         title: C.intl.string(C.t.BG7Qsb),
         webSetting: E.s6.PRIVACY_AND_SAFETY_RECEIVE_DISCORD_DATA_CATEGORY,
         children: (0, i.jsx)(d.Z, {})
     });
 }
-function I() {
+function N() {
     return (0, i.jsxs)(_.Z, {
         title: C.intl.string(C.t.SRZyHh),
         webSetting: E.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY,
-        children: [(0, i.jsx)(g.Z, {}), (0, i.jsx)(m.Z, {}), (0, i.jsx)(h.Z, {}), (0, i.jsx)(u.Z, {})]
+        children: [(0, i.jsx)(g.Z, {}), (0, i.jsx)(h.Z, {}), (0, i.jsx)(m.Z, {}), (0, i.jsx)(u.Z, {})]
     });
 }
-function T() {
+function S() {
     return (
-        (0, l.ZP)(() => {
+        (0, r.ZP)(() => {
             (0, s.I)(), (0, o.A)();
         }),
         (0, i.jsxs)(c.N, {
             header: C.intl.string(C.t.OAuOHB),
-            children: [(0, i.jsx)(I, {}), (0, i.jsx)(f, {}), (0, i.jsx)(N, {})]
+            children: [(0, i.jsx)(N, {}), (0, i.jsx)(T, {}), (0, i.jsx)(f, {})]
         })
     );
 }

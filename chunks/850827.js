@@ -21,29 +21,29 @@ var i = n(120356),
     E = n(719216),
     T = n(429589),
     Z = n(636245),
-    y = n(697761),
-    N = n(611459),
+    N = n(697761),
+    y = n(611459),
     A = n(544671),
     C = n(757182),
     P = n(910424),
     j = n(981631),
-    b = n(701491);
+    _ = n(701491);
 let w = (0, c.Z)((e) => {
-    let { activity: t, embeddedActivity: n, user: i, applicationStream: a, className: c, guildId: w, channelId: _, source: R, color: L = u.zxk.Colors.WHITE, look: M = u.zxk.Looks.OUTLINED, type: O, onAction: U } = e,
-        D = (0, o.e7)([h.default], () => {
+    let { activity: t, embeddedActivity: n, user: i, applicationStream: a, className: c, guildId: w, channelId: b, source: R, color: L = u.zxk.Colors.WHITE, look: M = u.zxk.Looks.OUTLINED, type: O, onAction: D } = e,
+        U = (0, o.e7)([h.default], () => {
             let e = h.default.getCurrentUser();
             return s()(null != e, 'UserActivityActions: currentUser cannot be undefined'), e;
         }),
         k = O === I.Y.STREAM_PREVIEW || null != a,
         G = (0, v.Z)(t),
-        Y = G || k ? m.Z.Direction.HORIZONTAL : m.Z.Direction.VERTICAL,
-        B = Y === m.Z.Direction.VERTICAL;
+        B = G || k ? m.Z.Direction.HORIZONTAL : m.Z.Direction.VERTICAL,
+        F = B === m.Z.Direction.VERTICAL;
     return (0, l.jsx)(m.Z, {
         grow: 0,
         align: m.Z.Align.STRETCH,
-        direction: Y,
-        wrap: B ? m.Z.Wrap.WRAP : m.Z.Wrap.NO_WRAP,
-        className: r()(c, b.buttonsWrapper, B ? b.vertical : b.horizontal),
+        direction: B,
+        wrap: F ? m.Z.Wrap.WRAP : m.Z.Wrap.NO_WRAP,
+        className: r()(c, _.buttonsWrapper, F ? _.vertical : _.horizontal),
         children: (() => {
             if ((0, S.Z)(t))
                 return (0, l.jsx)(
@@ -52,7 +52,7 @@ let w = (0, c.Z)((e) => {
                         platform: d.Z.get(j.ABu.XBOX),
                         look: M,
                         color: L,
-                        onAction: U,
+                        onAction: D,
                         Icon: p.Z
                     },
                     'ConnectPlatformActivityButton'
@@ -64,7 +64,7 @@ let w = (0, c.Z)((e) => {
                         look: M,
                         color: L,
                         platform: d.Z.get(j.ABu.PLAYSTATION),
-                        onAction: U,
+                        onAction: D,
                         Icon: g.Z
                     },
                     'ConnectPlatformActivityButton'
@@ -76,23 +76,23 @@ let w = (0, c.Z)((e) => {
                             activity: t,
                             user: i,
                             guildId: w,
-                            channelId: _,
+                            channelId: b,
                             source: R,
                             look: M,
                             color: L,
-                            onAction: U
+                            onAction: D
                         },
                         'spotify-activity-sync-button'
                     ),
                     n = (0, l.jsx)(
-                        N.Z,
+                        y.Z,
                         {
                             activity: t,
                             user: i,
                             source: R,
                             look: M,
                             color: L,
-                            onAction: U
+                            onAction: D
                         },
                         'spotify-activity-play-button'
                     );
@@ -111,7 +111,7 @@ let w = (0, c.Z)((e) => {
                               channelId: e.channelId,
                               color: L,
                               look: M,
-                              onAction: U
+                              onAction: D
                           },
                           e.channelId
                       );
@@ -120,11 +120,11 @@ let w = (0, c.Z)((e) => {
                 ? (0, l.jsx)(
                       P.Z,
                       {
-                          isCurrentUser: D.id === i.id,
+                          isCurrentUser: U.id === i.id,
                           color: L,
                           look: M,
                           applicationStream: a,
-                          onAction: U
+                          onAction: D
                       },
                       'watch-button'
                   )
@@ -136,7 +136,7 @@ let w = (0, c.Z)((e) => {
                                   activity: t,
                                   color: L,
                                   look: M,
-                                  onAction: U
+                                  onAction: D
                               },
                               'watch-button'
                           ),
@@ -148,18 +148,18 @@ let w = (0, c.Z)((e) => {
                                   user: i,
                                   color: L,
                                   look: M,
-                                  onAction: U
+                                  onAction: D
                               },
                               'join-activity-button'
                           ),
                           (0, l.jsx)(
-                              y.Z,
+                              N.Z,
                               {
                                   activity: t,
                                   user: i,
                                   color: L,
                                   look: M,
-                                  onAction: U
+                                  onAction: D
                               },
                               'notify-button'
                           ),
@@ -170,7 +170,7 @@ let w = (0, c.Z)((e) => {
                                   color: L,
                                   look: M,
                                   activity: t,
-                                  onAction: U
+                                  onAction: D
                               },
                               'custom-activity-button'
                           )

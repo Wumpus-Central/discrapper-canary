@@ -2,8 +2,8 @@ n.d(t, { Z: () => N }), n(411104), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    o = n.n(r),
-    a = n(442837),
+    a = n.n(r),
+    o = n(442837),
     s = n(493683),
     c = n(239091),
     d = n(146773),
@@ -37,9 +37,9 @@ function Z(e, t) {
 }
 class b extends f.ZP {
     render() {
-        let { channel: e, selected: t, connectChannelDropTarget: n, connectChannelDragSource: l, connectDragPreview: r, canReorderChannel: a } = this.props,
+        let { channel: e, selected: t, connectChannelDropTarget: n, connectChannelDragSource: l, connectDragPreview: r, canReorderChannel: o } = this.props,
             s = (0, i.jsx)('li', {
-                className: o()(this.getClassName(), { [x.disabled]: this.isDisabled() }),
+                className: a()(this.getClassName(), { [x.disabled]: this.isDisabled() }),
                 'data-dnd-name': e.name,
                 children: (0, i.jsxs)(_.Z, {
                     className: x.iconVisibility,
@@ -48,13 +48,13 @@ class b extends f.ZP {
                     onClick: this.handleClick,
                     onMouseDown: Z,
                     onContextMenu: this.handleContextMenu,
-                    connectDragPreview: a ? r : null,
+                    connectDragPreview: o ? r : null,
                     'aria-label': (0, u.ZP)({ channel: e }),
                     resolvedUnreadSetting: C.i.ONLY_MENTIONS,
                     children: [this.renderInviteButton(), this.renderEditButton()]
                 })
             });
-        return a ? n(l(s)) : s;
+        return o ? n(l(s)) : s;
     }
     constructor(...e) {
         super(...e),
@@ -92,7 +92,7 @@ class b extends f.ZP {
 let S = (0, d.B)(b),
     N = l.memo(function (e) {
         let { channel: t, guild: n, disableSorting: l } = e,
-            r = (0, a.cj)([p.Z, g.Z], () => {
+            r = (0, o.cj)([p.Z, g.Z], () => {
                 let e = p.Z.getChannel(t.parent_id);
                 return {
                     canManageChannel: g.Z.can(v.Plq.MANAGE_CHANNELS, t),

@@ -16,8 +16,8 @@ var i,
     f = n(29270),
     x = n(709586),
     C = n(267642),
-    v = n(739566),
-    E = n(834129),
+    E = n(739566),
+    v = n(834129),
     I = n(981631),
     N = n(388032),
     S = n(834009);
@@ -143,8 +143,8 @@ function D(e) {
         ),
         { createMultipleConfettiAt: g, confettiCanvas: f } = a.useContext(h.h),
         [x, C] = a.useState(null),
-        v = (0, o.uR)(f, x),
-        E = (function (e, t) {
+        E = (0, o.uR)(f, x),
+        v = (function (e, t) {
             if (null == e) return 'enter';
             switch (e) {
                 case 'enter':
@@ -207,7 +207,7 @@ function D(e) {
         a.useEffect(() => {
             if (I && 'leaf_fall' === u) {
                 let e = Z[p].leafRotationDirection;
-                v.createConfetti(
+                E.createConfetti(
                     {
                         id: ''.concat(R, '-').concat((0, c.Z)()),
                         position: {
@@ -257,7 +257,7 @@ function D(e) {
                     { sprite: 'TOP_LEFT' === p ? P : k }
                 );
             }
-        }, [I, v, p, u]),
+        }, [I, E, p, u]),
         (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(o.Ji, {
@@ -278,7 +278,7 @@ function D(e) {
                     children: (0, l.jsx)(m.kci, {
                         animationRef: w,
                         className: s()(S.easterEggAnimation, { [S.easterEggAnimationHideLeaf]: N }),
-                        nextScene: E,
+                        nextScene: v,
                         sceneSegments: T,
                         onScenePlay: y,
                         onSceneComplete: D,
@@ -309,7 +309,7 @@ function w(e) {
         [b, A] = a.useState(!1),
         j = a.useRef(null),
         { reducedMotion: y } = a.useContext(m.Sfi),
-        Z = (0, v.ZH)(n),
+        Z = (0, E.ZH)(n),
         L = Z.nick,
         P = s(Z);
     t =
@@ -369,7 +369,7 @@ function w(e) {
             onMouseEnter: k
         })
     });
-    return (0, l.jsxs)(E.Z, {
+    return (0, l.jsxs)(v.Z, {
         iconNode: F,
         timestamp: n.timestamp,
         compact: i,

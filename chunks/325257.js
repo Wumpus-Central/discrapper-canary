@@ -2,8 +2,8 @@ n.d(t, { Z: () => D }), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    o = n.n(r),
-    a = n(999153),
+    a = n.n(r),
+    o = n(999153),
     s = n(642128),
     c = n(91192),
     d = n(399606),
@@ -39,7 +39,7 @@ let L = {
 };
 function M(e, t) {
     (0, m.jW)(e, async () => {
-        let { default: e } = await Promise.all([n.e('33053'), n.e('17298'), n.e('78258'), n.e('7654'), n.e('44156'), n.e('90255'), n.e('6850'), n.e('58227'), n.e('16114'), n.e('54408'), n.e('23958'), n.e('21881'), n.e('33213'), n.e('57832')]).then(n.bind(n, 545135));
+        let { default: e } = await Promise.all([n.e('68445'), n.e('7654'), n.e('44156'), n.e('63104'), n.e('6850'), n.e('58227'), n.e('16114'), n.e('54408'), n.e('11684'), n.e('21881'), n.e('33213'), n.e('2486')]).then(n.bind(n, 545135));
         return (n) =>
             (0, i.jsx)(e, {
                 ...n,
@@ -53,10 +53,10 @@ let D = l.memo(function (e) {
         { id: en, parentId: ei } = G,
         el = (0, _.Q3)('GuildItem'),
         er = null !== (t = e.upperBadge) && void 0 !== t ? t : q ? (0, A.Ny)() : null != W ? (0, A.Or)(W) : void 0,
-        eo = null !== (n = e.lowerBadge) && void 0 !== n ? n : void 0;
-    null == eo && Y > 0 ? (eo = null !== (r = (0, A.Ne)(Y, Q ? f.Z.BACKGROUND_ACCENT : f.Z.STATUS_DANGER)) && void 0 !== r ? r : void 0) : null == eo && null != ee && (eo = null !== (m = (0, A.jt)({ guildJoinRequestStatus: ee })) && void 0 !== m ? m : void 0);
-    let ea = null !== (D = e.lowerBadgeSize) && void 0 !== D ? D : { width: (0, h.OVM)(Y) },
-        [{ dragging: es }, ec] = (0, a.c)({
+        ea = null !== (n = e.lowerBadge) && void 0 !== n ? n : void 0;
+    null == ea && Y > 0 ? (ea = null !== (r = (0, A.Ne)(Y, Q ? f.Z.BACKGROUND_ACCENT : f.Z.STATUS_DANGER)) && void 0 !== r ? r : void 0) : null == ea && null != ee && (ea = null !== (m = (0, A.jt)({ guildJoinRequestStatus: ee })) && void 0 !== m ? m : void 0);
+    let eo = null !== (D = e.lowerBadgeSize) && void 0 !== D ? D : { width: (0, h.OVM)(Y) },
+        [{ dragging: es }, ec] = (0, o.c)({
             type: b.eD.GUILD,
             item: () => (
                 requestAnimationFrame(() => {
@@ -166,7 +166,7 @@ let D = l.memo(function (e) {
                   'data-dnd-name': V.toString(),
                   style: { scale: null == et ? 1 : et },
                   'data-drop-hovering': ef,
-                  className: o()(w.blobContainer, {
+                  className: a()(w.blobContainer, {
                       [w.sorting]: X,
                       [w.wobble]: ef,
                       [w.selected]: ef || H
@@ -174,8 +174,8 @@ let D = l.memo(function (e) {
                   children: (0, i.jsx)(h.aRk, {
                       selected: !!el || ef || H || ep,
                       upperBadge: er,
-                      lowerBadge: eo,
-                      lowerBadgeSize: ea,
+                      lowerBadge: ea,
+                      lowerBadgeSize: eo,
                       children: ej
                   })
               });

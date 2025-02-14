@@ -78,7 +78,7 @@ function p(e) {
             mainContainerRef: f
         }),
         {
-            state: { value: L, tags: D, selections: k, isSelecting: O }
+            state: { value: L, tags: D, selections: O, isSelecting: k }
         } = N,
         P = (0, o.Z)(D),
         [w, M] = r.useState(!1),
@@ -103,7 +103,7 @@ function p(e) {
             (e) => (t) => {
                 if (t) {
                     var n;
-                    let t = k.includes(D[e]);
+                    let t = O.includes(D[e]);
                     null === (n = C.current) || void 0 === n || n.focus(),
                         t
                             ? Z(e)
@@ -118,7 +118,7 @@ function p(e) {
                               }));
                 } else Z(e, !0), M(!0);
             },
-            [R, Z, k, D]
+            [R, Z, O, D]
         );
     return (0, i.jsxs)('div', {
         className: s()(h.mainContainer, p),
@@ -139,8 +139,8 @@ function p(e) {
                                 onBlur: G,
                                 onFocus: B(t),
                                 onRemove: () => T(t),
-                                isSelected: k.includes(e),
-                                isSelecting: O,
+                                isSelected: O.includes(e),
+                                isSelecting: k,
                                 error: u[e],
                                 forceShowErrorTooltip: !w && t === D.length - 1
                             },

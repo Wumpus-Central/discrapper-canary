@@ -6,13 +6,13 @@ var l = n(685072),
     a = n(15274),
     s = n(389303),
     o = n(881824),
-    c = n(719100),
-    d = n(870569),
+    d = n(719100),
+    c = n(870569),
     u = n(388032);
 function h(e) {
     let { tooltipText: t, onClick: n } = e,
         { events: r, Component: a } = (0, l.K)();
-    return (0, i.jsx)(d.Z, {
+    return (0, i.jsx)(c.Z, {
         tooltipText: t,
         onClick: n,
         ...r,
@@ -24,7 +24,7 @@ function m(e) {
     return (0, i.jsx)(h, {
         tooltipText: u.intl.string(u.t.SMKyio),
         onClick: () => {
-            if ((0, c.Z)(t)) {
+            if ((0, d.Z)(t)) {
                 (0, o.Us)(t);
                 return;
             }

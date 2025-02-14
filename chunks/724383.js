@@ -5,8 +5,8 @@ var i = n(200651),
     a = n(442837),
     s = n(252618),
     o = n(353926),
-    c = n(319443),
-    d = n(106075),
+    d = n(319443),
+    c = n(106075),
     u = n(121711),
     h = n(823379),
     m = n(571457),
@@ -20,9 +20,9 @@ let E = function () {
         n = (function (e) {
             switch (e) {
                 case _.GlobalDiscoveryTab.SERVERS:
-                    return (0, i.jsx)(d.Z, {});
+                    return (0, i.jsx)(c.Z, {});
                 case _.GlobalDiscoveryTab.APPS:
-                    return (0, i.jsx)(c.default, {});
+                    return (0, i.jsx)(d.default, {});
                 case _.GlobalDiscoveryTab.QUESTS:
                     return (0, i.jsx)(u.Z, {});
                 default:

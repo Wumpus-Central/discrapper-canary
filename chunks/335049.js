@@ -13,13 +13,13 @@ var i = n(200651),
     x = n(581364),
     g = n(471445),
     p = n(91218),
-    b = n(518738),
-    _ = n(592125),
-    f = n(271383),
-    v = n(430824),
-    C = n(246946),
+    f = n(518738),
+    b = n(592125),
+    v = n(271383),
+    _ = n(430824),
+    N = n(246946),
     j = n(594174),
-    N = n(51144),
+    C = n(51144),
     I = n(981631),
     Z = n(388032),
     T = n(649397);
@@ -76,15 +76,15 @@ function S(e) {
             name: h,
             categoryName: p
         } = (0, c.cj)(
-            [_.Z],
+            [b.Z],
             () => {
                 if (d === n)
                     return {
                         name: Z.intl.string(Z.t['7YqSGx']),
                         icon: u.VL1
                     };
-                let e = _.Z.getChannel(n),
-                    i = (null == e ? void 0 : e.parent_id) != null ? _.Z.getChannel(e.parent_id) : null;
+                let e = b.Z.getChannel(n),
+                    i = (null == e ? void 0 : e.parent_id) != null ? b.Z.getChannel(e.parent_id) : null;
                 return {
                     icon: null != e ? (0, g.KS)(e, t) : null,
                     name: null == e ? void 0 : e.name,
@@ -93,7 +93,7 @@ function S(e) {
             },
             [d, t, n]
         ),
-        b = l.useCallback(
+        f = l.useCallback(
             (e) => {
                 n !== d && o(e);
             },
@@ -102,7 +102,7 @@ function S(e) {
     return null == m || null == h
         ? null
         : (0, i.jsxs)('div', {
-              onContextMenu: b,
+              onContextMenu: f,
               className: T.identifier,
               children: [
                   (0, i.jsx)(m, {
@@ -132,13 +132,13 @@ function S(e) {
 function y(e) {
     var t;
     let { guild: a, id: s, isLocked: o, lockTooltipText: h } = e,
-        x = (0, c.e7)([v.Z], () => v.Z.getRole(a.id, s)),
-        g = (0, b.p9)({
+        x = (0, c.e7)([_.Z], () => _.Z.getRole(a.id, s)),
+        g = (0, f.p9)({
             guildId: a.id,
             roleId: s,
             size: 24
         }),
-        _ = l.useCallback(
+        b = l.useCallback(
             (e) => {
                 null != a &&
                     null != x &&
@@ -157,7 +157,7 @@ function y(e) {
     return (null == x ? void 0 : x.name) == null
         ? null
         : (0, i.jsxs)('div', {
-              onContextMenu: _,
+              onContextMenu: b,
               className: T.identifier,
               children: [
                   null != g
@@ -186,14 +186,14 @@ function A(e) {
     let { guild: t, id: n, isLocked: l, lockTooltipText: a, openEntryContextMenu: r } = e,
         s = (0, c.e7)([j.default], () => j.default.getUser(n)),
         o = (0, c.e7)(
-            [f.ZP],
+            [v.ZP],
             () => {
                 var e;
-                return null === (e = f.ZP.getMember(t.id, n)) || void 0 === e ? void 0 : e.nick;
+                return null === (e = v.ZP.getMember(t.id, n)) || void 0 === e ? void 0 : e.nick;
             },
             [t.id, n]
         ),
-        d = (0, c.e7)([C.Z], () => C.Z.hidePersonalInformation);
+        d = (0, c.e7)([N.Z], () => N.Z.hidePersonalInformation);
     return null == s
         ? null
         : (0, i.jsxs)('div', {
@@ -217,7 +217,7 @@ function A(e) {
                       : (0, i.jsx)(u.Text, {
                             className: T.tag,
                             variant: 'text-sm/normal',
-                            children: N.ZP.getUserTag(s)
+                            children: C.ZP.getUserTag(s)
                         }),
                   l ? (0, i.jsx)(k, { tooltipText: a }) : null
               ]

@@ -5,7 +5,7 @@ var l = n(481060),
     r = n(812206),
     a = n(531826);
 function s(e) {
-    let { applicationId: t, channelId: s, launchParams: o, message: c, onShare: d } = e,
+    let { applicationId: t, channelId: s, launchParams: o, message: d, onShare: c } = e,
         u = r.Z.getApplication(t),
         h =
             null !=
@@ -23,8 +23,8 @@ function s(e) {
                     applicationId: t,
                     channelId: s,
                     launchParams: o,
-                    message: c,
-                    onShare: d,
+                    message: d,
+                    onShare: c,
                     ...n
                 });
         },
@@ -32,7 +32,7 @@ function s(e) {
             modalKey: 'activity-share-moment-modal',
             contextKey: h,
             onCloseCallback: () => {
-                d(!1);
+                c(!1);
             }
         }
     );

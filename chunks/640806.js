@@ -6,16 +6,16 @@ var l = n(704215),
     a = n(765585),
     s = n(981631),
     o = n(921944),
-    c = n(388032),
-    d = n(439200);
+    d = n(388032),
+    c = n(439200);
 function u(e) {
     let { markAsDismissed: t } = e;
     return (0, i.jsx)(a.Z, {
-        header: c.intl.string(c.t['89R9tb']),
-        body: c.intl.string(c.t['/BB09P']),
-        tryItText: c.intl.string(c.t.jVcuVV),
+        header: d.intl.string(d.t['89R9tb']),
+        body: d.intl.string(d.t['/BB09P']),
+        tryItText: d.intl.string(d.t.jVcuVV),
         dismissibleContent: l.z.SOUNDBOARD_VOLUME_EDUCATION,
-        artClassName: d.art,
+        artClassName: c.art,
         onTryFeature: () => {
             r.Z.open(s.oAB.VOICE), t(o.L.UNKNOWN);
         },

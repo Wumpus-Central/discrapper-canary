@@ -85,8 +85,8 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
         let { canManageGuild: A } = (0, l.cj)([_.Z], () => ({ canManageGuild: _.Z.can(T.Plq.MANAGE_GUILD, n) })),
             L = (0, l.e7)([N.Z], () => N.Z.isGuildMetadataLoaded()),
             D = (0, l.e7)([N.Z], () => (null != n ? N.Z.getMetadata() : null)),
-            k = (0, l.e7)([N.Z], () => (null != n && (null == D ? void 0 : D.isPublished) ? N.Z.getSlug() : null)),
-            [O, P] = r.useState([!0]),
+            O = (0, l.e7)([N.Z], () => (null != n && (null == D ? void 0 : D.isPublished) ? N.Z.getSlug() : null)),
+            [k, P] = r.useState([!0]),
             [w, M] = r.useState(!0),
             [U, G] = r.useState([!1]),
             [B, F] = r.useState(['']),
@@ -171,7 +171,7 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
             K = (e, t) => {
                 let i = [...D.socialLinks],
                     r = [...B],
-                    l = [...O];
+                    l = [...k];
                 (r[t] = e), (i[t] = b.z[e].baseUrl), (l[t] = !0), P(l), F(r), M(l.every((e) => !0 === e)), (0, h.t$)(n.id, i);
             },
             q = (e, t) => {
@@ -183,7 +183,7 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
             X = (e) => {
                 let t = [...U];
                 t.splice(e, 1), G(t);
-                let i = [...O];
+                let i = [...k];
                 i.splice(e, 1), P(i);
                 let r = [...B];
                 r.splice(e, 1), F(r);
@@ -252,8 +252,8 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                 children: [S.intl.format(S.t['+ScrMT'], { discordURL: window.GLOBAL_ENV.MARKETING_ENDPOINT }), ' ', S.intl.format(S.t.T6WtKy, { learnMoreURL: f.Z.getArticleURL(T.BhN.SERVER_WEB_PAGES) })]
                                             }),
                                             (() => {
-                                                if (!D.isPublished || null == k) return;
-                                                let e = Z + k;
+                                                if (!D.isPublished || null == O) return;
+                                                let e = Z + O;
                                                 return (0, i.jsx)(i.Fragment, {
                                                     children: (0, i.jsxs)(a.hjN, {
                                                         className: R.noDividerFormSection,
@@ -533,7 +533,7 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                             },
                                                                             'link-' + t
                                                                         ),
-                                                                        O[t]
+                                                                        k[t]
                                                                             ? (0, i.jsx)(
                                                                                   a.owK,
                                                                                   {

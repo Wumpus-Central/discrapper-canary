@@ -1,7 +1,7 @@
 n.d(t, { Z: () => d });
 var i,
-    l = n(442837),
-    r = n(570140);
+    r = n(442837),
+    l = n(570140);
 function s(e, t, n) {
     return (
         t in e
@@ -19,7 +19,7 @@ function a() {
     return { lastTriggered: 0 };
 }
 let o = a();
-class c extends (i = l.ZP.PersistedStore) {
+class c extends (i = r.ZP.PersistedStore) {
     initialize(e) {
         o = {
             ...a(),
@@ -34,7 +34,7 @@ class c extends (i = l.ZP.PersistedStore) {
     }
 }
 s(c, 'displayName', 'HDStreamingViewerStore'), s(c, 'persistKey', 'HDStreamingViewerStore');
-let d = new c(r.Z, {
+let d = new c(l.Z, {
     LOGOUT: function () {
         o = a();
     },

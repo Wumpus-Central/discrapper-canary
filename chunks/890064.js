@@ -5,8 +5,8 @@ var i = n(200651),
     a = n.n(r),
     s = n(481060),
     o = n(951394),
-    c = n(858523),
-    d = n(388032),
+    d = n(858523),
+    c = n(388032),
     u = n(123621);
 let h = function (e) {
     let { guild: t, className: n } = e,
@@ -16,14 +16,14 @@ let h = function (e) {
     return (0, i.jsx)('div', {
         className: a()(u.actionButtonsContainer, n, { [u.forceButtonsShow]: r }),
         children: (0, i.jsx)(o.ZP, {
-            children: (0, i.jsx)(c.R, {
+            children: (0, i.jsx)(d.R, {
                 onRequestOpen: m,
                 onRequestClose: p,
                 guild: t,
                 children: (e) => {
                     let { onClick: t, ...n } = e;
                     return (0, i.jsx)(s.ua7, {
-                        text: d.intl.string(d.t.UKOtz8),
+                        text: c.intl.string(c.t.UKOtz8),
                         hideOnClick: !0,
                         children: (e) => {
                             let { onClick: l, ...r } = e;
@@ -33,7 +33,7 @@ let h = function (e) {
                                 onClick: (e) => {
                                     e.stopPropagation(), null == l || l(), t(e);
                                 },
-                                'aria-label': d.intl.string(d.t.UKOtz8),
+                                'aria-label': c.intl.string(c.t.UKOtz8),
                                 children: (0, i.jsx)(s.xhG, {
                                     size: 'md',
                                     color: 'currentColor',

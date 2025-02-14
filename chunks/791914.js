@@ -16,8 +16,8 @@ var l = n(399606),
     g = n(388032),
     f = n(582188);
 function x(e) {
-    let { tab: t, setTab: n, children: x, badgeState: C, closePopout: v } = e,
-        { showReminders: E } = _.Z.useExperiment({ location: 'RecentsHeader' }, { autoTrackExposure: !1 }),
+    let { tab: t, setTab: n, children: x, badgeState: C, closePopout: E } = e,
+        { showReminders: v } = _.Z.useExperiment({ location: 'RecentsHeader' }, { autoTrackExposure: !1 }),
         { enabled: I, inInbox: N } = u.Z.useExperiment({ location: 'RecentsPopout' }),
         S = (0, h.Us)({ location: 'RecentsHeader' }),
         { enabled: T } = d.Z.useExperiment({ location: 'RecentsHeader' }),
@@ -42,7 +42,7 @@ function x(e) {
                     }),
                     (0, i.jsxs)('div', {
                         className: f.controls,
-                        children: [x, (0, i.jsx)(p.Z, { closePopout: v })]
+                        children: [x, (0, i.jsx)(p.Z, { closePopout: E })]
                     })
                 ]
             }),
@@ -104,7 +104,7 @@ function x(e) {
                                   children: 0 === A ? g.intl.string(g.t['2pAkDA']) : g.intl.formatToPlainString(g.t.I4fryM, { count: A })
                               })
                             : null,
-                        E && !I
+                        v && !I
                             ? (0, i.jsx)(r.njP.Item, {
                                   'aria-label': 'todos',
                                   id: a.X.TODOS,

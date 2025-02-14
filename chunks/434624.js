@@ -15,12 +15,12 @@ var i = n(200651),
 let g = l.memo(function (e) {
         let t,
             n,
-            { useChatFontScaling: l, hideEmoji: a, emoji: c, className: g, count: f, me: x, me_burst: C, burst_count: v, burst_colors: E, readOnly: I, isLurking: N, isGuest: S, isPendingMember: T, type: b, emojiSize: A } = e,
+            { useChatFontScaling: l, hideEmoji: a, emoji: c, className: g, count: f, me: x, me_burst: C, burst_count: E, burst_colors: v, readOnly: I, isLurking: N, isGuest: S, isPendingMember: T, type: b, emojiSize: A } = e,
             j = b === m.O.BURST,
             y = (0, _.y4)(x, C, b),
-            Z = (0, u.v)(j && null != E ? E : []),
+            Z = (0, u.v)(j && null != v ? v : []),
             R = l ? p : h,
-            L = j ? v : f,
+            L = j ? E : f,
             P = (0, d.y)(L, _.aO),
             k = {};
         if (j && null != Z) {

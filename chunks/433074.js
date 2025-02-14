@@ -16,8 +16,8 @@ var i = n(200651),
     f = n(626135),
     x = n(135431),
     C = n(674588),
-    v = n(264043),
-    E = n(132871),
+    E = n(264043),
+    v = n(132871),
     I = n(147890),
     N = n(981631),
     S = n(388032),
@@ -26,7 +26,7 @@ function b(e) {
     var t, n, b;
     let { code: A, message: j, embedUrl: y } = e,
         { enabled: Z } = d.G.useExperiment({ location: 'ApplicationDirectoryProfileEmbed' }),
-        [R, L, P] = (0, s.Wu)([v.Z], () => [v.Z.getApplication(A), v.Z.isInvalidApplication(A), v.Z.getApplicationFetchState(A)], [A]),
+        [R, L, P] = (0, s.Wu)([E.Z], () => [E.Z.getApplication(A), E.Z.isInvalidApplication(A), E.Z.getApplicationFetchState(A)], [A]),
         k = (0, s.e7)([_.default], () => _.default.locale),
         M = (0, s.e7)([p.Z], () => {
             var e;
@@ -43,7 +43,7 @@ function b(e) {
     }, [A]),
         l.useEffect(() => {
             D &&
-                P === v.M.FETCHED &&
+                P === E.M.FETCHED &&
                 f.default.track(N.rMx.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
                     application_id: A,
                     device_platform: a.tq ? 'mobile_web' : 'desktop_web',
@@ -71,10 +71,10 @@ function b(e) {
             channel_id: j.channel_id
         }),
             (0, I.dx)({
-                view: E.eN.APPLICATION,
+                view: v.eN.APPLICATION,
                 guildId: M,
                 applicationId: A,
-                entrypoint: { name: E.n3.APPLICATION_DIRECTORY_PROFILE_EMBED }
+                entrypoint: { name: v.n3.APPLICATION_DIRECTORY_PROFILE_EMBED }
             });
     };
     if (Z && null != R)
@@ -102,7 +102,7 @@ function b(e) {
                 })
             ]
         });
-    if (null == R || P === v.M.FETCHING)
+    if (null == R || P === E.M.FETCHING)
         return (0, i.jsxs)(m.Z, {
             containerRef: U,
             children: [(0, i.jsx)(m.Z.Header, { text: S.intl.string(S.t.m9hXGR) }), (0, i.jsx)(m.Z.Body, { resolving: !0 })]

@@ -1,12 +1,12 @@
-n.d(t, { D: () => b }), n(411104);
+n.d(t, { D: () => Z }), n(411104);
 var i = n(903772),
     l = n(433517),
     r = n(570140),
     a = n(188471),
     s = n(581567),
     o = n(594190),
-    c = n(19780),
-    d = n(626135),
+    d = n(19780),
+    c = n(626135),
     u = n(70956),
     h = n(848479),
     m = n(960048),
@@ -57,19 +57,19 @@ async function v() {
         message: 'Tracking Heartbeat',
         data: { initialized: n.initialized }
     });
-    let c = {
+    let d = {
             client_heartbeat_initialization_timestamp: n.initialized,
             client_heartbeat_version: 17
         },
         u = h.Z.getMemoryUsageElectronRenderer();
-    null != u && (c.client_heartbeat_renderer_memory = u);
+    null != u && (d.client_heartbeat_renderer_memory = u);
     let f = h.Z.getMemoryUsageElectronRendererUsedHeapSize();
-    null != f && (c.client_heartbeat_renderer_memory_used_heap = f);
+    null != f && (d.client_heartbeat_renderer_memory_used_heap = f);
     {
         let e = o.ZP.getCurrentGameForAnalytics();
-        null != e && ((c.client_heartbeat_current_game_id = e.id), (c.client_heartbeat_current_game_name = e.name), (c.client_heartbeat_current_game_executable = (0, s.N6)(e.exePath)), (c.client_heartbeat_current_game_distributor = e.distributor), (c.uses_client_mods = (0, i.e)()));
+        null != e && ((d.client_heartbeat_current_game_id = e.id), (d.client_heartbeat_current_game_name = e.name), (d.client_heartbeat_current_game_executable = (0, s.N6)(e.exePath)), (d.client_heartbeat_current_game_distributor = e.distributor), (d.uses_client_mods = (0, i.e)()));
     }
-    d.default.track(g.rMx.CLIENT_HEARTBEAT, c), l.K.set(_, Date.now().toString()), (0, a.Z)();
+    c.default.track(g.rMx.CLIENT_HEARTBEAT, d), l.K.set(_, Date.now().toString()), (0, a.Z)();
 }
 let T = null,
     S = !0;
@@ -82,14 +82,14 @@ function A() {
         }
     else !I || ((I = !1), m.Z.addBreadcrumb({ message: 'Stopping Analytics Heartbeat' }), (0, p.fr)(!1), N(), (0, a.Z)());
 }
-function b() {
-    m.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), c.Z.addChangeListener(x), r.Z.subscribe('WINDOW_FOCUS', L), r.Z.subscribe('APP_STATE_UPDATE', y), r.Z.subscribe('LOGIN_SUCCESS', Z), A();
-}
 function Z() {
-    v(!0);
+    m.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), d.Z.addChangeListener(b), r.Z.subscribe('WINDOW_FOCUS', L), r.Z.subscribe('APP_STATE_UPDATE', y), r.Z.subscribe('LOGIN_SUCCESS', x), A();
 }
 function x() {
-    let e = c.Z.getState();
+    v(!0);
+}
+function b() {
+    let e = d.Z.getState();
     T !== e && ((T = e), A());
 }
 function L(e) {

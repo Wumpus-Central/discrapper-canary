@@ -6,8 +6,8 @@ var l = n(544891),
     a = n(481060),
     s = n(496929),
     o = n(115130),
-    c = n(812206),
-    d = n(594174),
+    d = n(812206),
+    c = n(594174),
     u = n(580130),
     h = n(695103),
     m = n(70956),
@@ -24,14 +24,14 @@ let E = 10 * m.Z.Millis.SECOND,
                     l = t.application.id;
                 try {
                     if (null == l) throw new g.Z({ errorCode: f.lTL.INVALID_COMMAND }, 'No application.');
-                    let e = c.Z.getApplication(l);
+                    let e = d.Z.getApplication(l);
                     if (null == e) throw new g.Z({ errorCode: f.lTL.INVALID_ENTITLEMENT }, 'SKU does not exist.');
                     let t = e.primarySkuId;
                     if (null == t) throw new g.Z({ errorCode: f.lTL.INVALID_ENTITLEMENT }, 'SKU does not exist.');
                     return Promise.race([
                         (function (e, t) {
-                            let n = u.Z.isEntitledToSku(d.default.getCurrentUser(), e, t);
-                            return null != n ? Promise.resolve(n) : (0, s.yD)(t).then(() => !0 === u.Z.isEntitledToSku(d.default.getCurrentUser(), e, t));
+                            let n = u.Z.isEntitledToSku(c.default.getCurrentUser(), e, t);
+                            return null != n ? Promise.resolve(n) : (0, s.yD)(t).then(() => !0 === u.Z.isEntitledToSku(c.default.getCurrentUser(), e, t));
                         })(t, e.id).then((e) => {
                             if (!e) throw new g.Z({ errorCode: f.lTL.INVALID_ENTITLEMENT }, 'User does not have entitlement.');
                         }),

@@ -6,14 +6,14 @@ var l = n(120356),
     a = n(481060),
     s = n(924628),
     o = n(230711),
-    c = n(548816),
-    d = n(981631),
+    d = n(548816),
+    c = n(981631),
     u = n(921944),
     h = n(388032),
     m = n(947349);
 function p(e) {
     let { className: t, markAsDismissed: n } = e;
-    return (0, i.jsxs)(c.Z, {
+    return (0, i.jsxs)(d.Z, {
         className: r()(m.card, t),
         children: [
             (0, i.jsx)(a.X6q, {
@@ -25,7 +25,7 @@ function p(e) {
                 variant: 'text-sm/normal',
                 children: h.intl.format(h.t.NkFrzM, {
                     onPrivacyClick: () => {
-                        o.Z.open(d.oAB.DATA_AND_PRIVACY);
+                        o.Z.open(c.oAB.DATA_AND_PRIVACY);
                     }
                 })
             }),
@@ -34,7 +34,7 @@ function p(e) {
                 children: [
                     (0, i.jsx)(a.zxk, {
                         size: a.zxk.Sizes.SMALL,
-                        onClick: () => (0, s.g)([d.pjP.PERSONALIZATION], []),
+                        onClick: () => (0, s.g)([c.pjP.PERSONALIZATION], []),
                         children: h.intl.string(h.t.ebojgI)
                     }),
                     (0, i.jsx)(a.zxk, {

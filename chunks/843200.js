@@ -2,18 +2,18 @@ n.d(t, { Z: () => x });
 var i = n(200651);
 n(192379);
 var s = n(120356),
-    l = n.n(s),
-    r = n(512722),
-    a = n.n(r),
+    r = n.n(s),
+    l = n(512722),
+    a = n.n(l),
     o = n(442837),
     c = n(481060),
     d = n(600164),
     u = n(594174),
-    h = n(418632),
-    m = n(388032),
+    m = n(418632),
+    h = n(388032),
     g = n(378529);
 function x(e) {
-    let { unclaimedNotice: t, unverifiedNotice: s, className: r } = e,
+    let { unclaimedNotice: t, unverifiedNotice: s, className: l } = e,
         {
             isClaimed: x,
             isVerified: _,
@@ -38,7 +38,7 @@ function x(e) {
     return x && _
         ? null
         : (0, i.jsx)(c.Zbd, {
-              className: l()(g.wrapper, r),
+              className: r()(g.wrapper, l),
               children: (0, i.jsxs)(d.Z, {
                   align: d.Z.Align.CENTER,
                   children: [
@@ -51,7 +51,7 @@ function x(e) {
                           children: [
                               (0, i.jsx)(c.Text, {
                                   variant: 'text-sm/normal',
-                                  children: x ? (null != s ? s : m.intl.string(m.t.WuyBbG)) : null != t ? t : m.intl.string(m.t['f+Zaoq'])
+                                  children: x ? (null != s ? s : h.intl.string(h.t.WuyBbG)) : null != t ? t : h.intl.string(h.t['f+Zaoq'])
                               }),
                               (0, i.jsxs)(d.Z, {
                                   justify: d.Z.Justify.CENTER,
@@ -62,13 +62,13 @@ function x(e) {
                                               ? (0, i.jsx)(d.Z.Child, {
                                                     grow: 0,
                                                     shrink: 0,
-                                                    children: (0, i.jsx)(h.Z, {})
+                                                    children: (0, i.jsx)(m.Z, {})
                                                 })
                                               : (0, i.jsx)(c.zxk, {
                                                     size: c.zxk.Sizes.MEDIUM,
                                                     color: c.zxk.Colors.BRAND,
                                                     onClick: E,
-                                                    children: m.intl.string(m.t.ydw5nZ)
+                                                    children: h.intl.string(h.t.ydw5nZ)
                                                 })
                                           : (0, i.jsx)(d.Z.Child, {
                                                 grow: 0,
@@ -82,7 +82,7 @@ function x(e) {
                                                             return (t) => (0, i.jsx)(e, { ...t });
                                                         });
                                                     },
-                                                    children: m.intl.string(m.t.fiNVio)
+                                                    children: h.intl.string(h.t.fiNVio)
                                                 })
                                             }),
                                       x && p
@@ -93,7 +93,7 @@ function x(e) {
                                                     color: c.zxk.Colors.PRIMARY,
                                                     look: c.zxk.Looks.LINK,
                                                     onClick: E,
-                                                    children: m.intl.string(m.t.Vm8akJ)
+                                                    children: h.intl.string(h.t.Vm8akJ)
                                                 })
                                             })
                                           : null

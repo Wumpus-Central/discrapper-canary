@@ -5,8 +5,8 @@ var i = n(392711),
     a = n(377108),
     s = n(433517),
     o = n(709054),
-    c = n(48481),
-    d = n(526761),
+    d = n(48481),
+    c = n(526761),
     u = n(981631);
 let h = 'selectedChannelGuildFrecency';
 function m(e) {
@@ -71,7 +71,7 @@ let p = [
             let { state: n } = r.ZP.PersistedStore.migrateAndReadStoreState('StickersPersistedStore', [(e) => (null == e || 0 === Object.keys(e).length ? t() : e), (e) => (null == e || 0 === Object.keys(e).length ? t() : (null == e.favorites && (e.favorites = []), e))]);
             if (null == n) return !1;
             let i = !1;
-            return n.favorites.length > 0 && ((e.favoriteStickers = a.Lt.create()), (e.favoriteStickers.stickerIds = l().uniq(n.favorites).slice(0, d.oX)), (i = !0)), l().size(n.usageHistory) > 0 && ((e.stickerFrecency = a.ls.create()), (e.stickerFrecency.stickers = (0, c.tU)(n.usageHistory, 100)), (i = !0)), i;
+            return n.favorites.length > 0 && ((e.favoriteStickers = a.Lt.create()), (e.favoriteStickers.stickerIds = l().uniq(n.favorites).slice(0, c.oX)), (i = !0)), l().size(n.usageHistory) > 0 && ((e.stickerFrecency = a.ls.create()), (e.stickerFrecency.stickers = (0, d.tU)(n.usageHistory, 100)), (i = !0)), i;
         },
         cleanup() {
             s.K.remove('StickersPersistedStore');
@@ -83,7 +83,7 @@ let p = [
             let { state: t } = r.ZP.PersistedStore.migrateAndReadStoreState('EmojiStore', [() => ({ usageHistory: s.K.get('EmojiUsageHistory') || {} })]);
             if (null == t) return !1;
             let n = !1;
-            return null != t.favorites && t.favorites.length > 0 && ((e.favoriteEmojis = a.ND.create()), (e.favoriteEmojis.emojis = l().uniq(t.favorites).slice(0, d.oX)), (n = !0)), l().size(t.usageHistory) > 0 && ((e.emojiFrecency = a.PL.create()), (e.emojiFrecency.emojis = (0, c.tU)(t.usageHistory, 100)), (n = !0)), n;
+            return null != t.favorites && t.favorites.length > 0 && ((e.favoriteEmojis = a.ND.create()), (e.favoriteEmojis.emojis = l().uniq(t.favorites).slice(0, c.oX)), (n = !0)), l().size(t.usageHistory) > 0 && ((e.emojiFrecency = a.PL.create()), (e.emojiFrecency.emojis = (0, d.tU)(t.usageHistory, 100)), (n = !0)), n;
         },
         cleanup() {
             s.K.remove('EmojiStore'), s.K.remove('EmojiUsageHistory'), s.K.remove('EmojiDiversitySurrogate');
@@ -107,9 +107,9 @@ let p = [
                     continue;
                 }
                 let s = a.JM.toBinary(r).length + l.length + 7;
-                n + s > d.vY || ((n += s), (e.favoriteGifs.gifs[l] = r));
+                n + s > c.vY || ((n += s), (e.favoriteGifs.gifs[l] = r));
             }
-            for (n = a.wK.toBinary(e.favoriteGifs).length; n > d.vY; ) {
+            for (n = a.wK.toBinary(e.favoriteGifs).length; n > c.vY; ) {
                 let t = 0;
                 for (let n in e.favoriteGifs.gifs) if ((delete e.favoriteGifs.gifs[n], ++t >= 10)) break;
                 n = a.wK.toBinary(e.favoriteGifs).length;
@@ -124,7 +124,7 @@ let p = [
             let { state: t } = r.ZP.PersistedStore.migrateAndReadStoreState('ApplicationCommandFrecency', []);
             if (null == t) return !1;
             let n = !1;
-            return l().size(t.usageHistory) > 0 && ((e.applicationCommandFrecency = a.YI.create()), (e.applicationCommandFrecency.applicationCommands = (0, c.tU)(t.usageHistory, 500)), (n = !0)), n;
+            return l().size(t.usageHistory) > 0 && ((e.applicationCommandFrecency = a.YI.create()), (e.applicationCommandFrecency.applicationCommands = (0, d.tU)(t.usageHistory, 500)), (n = !0)), n;
         },
         cleanup() {
             s.K.remove('ApplicationCommandFrecency');
@@ -159,7 +159,7 @@ let p = [
             let t = s.K.get(h);
             if (null == t) return !1;
             for (let e in t) u.Xyh.test(e) || delete t[e];
-            return (e.guildAndChannelFrecency = a.lG.create()), (e.guildAndChannelFrecency.guildAndChannels = (0, c.tU)(t, 100)), !0;
+            return (e.guildAndChannelFrecency = a.lG.create()), (e.guildAndChannelFrecency.guildAndChannels = (0, d.tU)(t, 100)), !0;
         },
         cleanup() {
             s.K.remove(h);

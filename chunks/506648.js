@@ -5,8 +5,8 @@ var i = n(200651),
     a = n(770146),
     s = n(863969),
     o = n(38761),
-    c = n(6074),
-    d = n(39377),
+    d = n(6074),
+    c = n(39377),
     u = n(981631),
     h = n(388032),
     m = n(386006);
@@ -57,7 +57,7 @@ let p = [
             feature: u.Qa3.RICH_PRESENCE,
             getText: () => h.intl.string(h.t.PVSVtL),
             getTooltip: () => h.intl.string(h.t.O6Yp4e),
-            IconComponent: c.Z
+            IconComponent: d.Z
         },
         {
             feature: u.Qa3.DISCORD_GAME_INVITES,
@@ -87,7 +87,7 @@ let p = [
             feature: u.Qa3.SECURE_NETWORKING,
             getText: () => h.intl.string(h.t.GKFWLy),
             getTooltip: () => h.intl.string(h.t.VudViI),
-            IconComponent: d.Z
+            IconComponent: c.Z
         }
     ],
     g = (e) => {

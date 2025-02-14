@@ -6,8 +6,8 @@ var i,
     a = n.n(o),
     s = n(772848),
     d = n(442837),
-    c = n(570140),
-    u = n(13245),
+    u = n(570140),
+    c = n(13245),
     h = n(435064),
     _ = n(786761),
     p = n(695346),
@@ -22,8 +22,8 @@ var i,
     S = n(594174),
     Z = n(974180),
     y = n(237997),
-    b = n(70956),
-    O = n(150097),
+    O = n(70956),
+    b = n(150097),
     N = n(129724),
     T = n(145597),
     w = n(371651),
@@ -38,10 +38,10 @@ var i,
     z = n(588909),
     V = n(981631),
     W = n(388032);
-let U = 5 * b.Z.Millis.SECOND,
-    F = 8 * b.Z.Millis.SECOND,
-    G = 30 * b.Z.Millis.SECOND,
-    B = 30 * b.Z.Millis.SECOND,
+let U = 5 * O.Z.Millis.SECOND,
+    F = 8 * O.Z.Millis.SECOND,
+    G = 30 * O.Z.Millis.SECOND,
+    B = 30 * O.Z.Millis.SECOND,
     H = Object.freeze({
         timestamp: 0,
         priority: 0,
@@ -115,7 +115,7 @@ function et(e, t) {
                     start() {
                         let l = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : t,
                             r = l ? V._1z.TIMED_OUT : V._1z.DISMISSED;
-                        -1 === i && (i = setTimeout(() => u.Z.updateNotificationStatus(e, r), null != n ? n : U));
+                        -1 === i && (i = setTimeout(() => c.Z.updateNotificationStatus(e, r), null != n ? n : U));
                     },
                     stop() {
                         clearTimeout(i), (i = -1);
@@ -183,7 +183,7 @@ class ei extends (i = d.ZP.Store) {
               writable: !0
           })
         : (ei[l] = r);
-let el = new ei(c.Z, {
+let el = new ei(u.Z, {
     OVERLAY_UPDATE_NOTIFICATION_STATUS: function (e) {
         let { notificationId: t, status: n } = e;
         q(t, n);
@@ -221,7 +221,7 @@ let el = new ei(c.Z, {
             d = S.default.getUser(null === (t = o.author) || void 0 === t ? void 0 : t.id);
         if (null == s || null == d) return !1;
         if ((null === (n = o.activity) || void 0 === n ? void 0 : n.type) === V.mFx.JOIN || (null === (i = o.activity) || void 0 === i ? void 0 : i.type) === V.mFx.JOIN_REQUEST) {
-            if (!(0, O.eF)(o, r, !0, !0)) return !1;
+            if (!(0, b.eF)(o, r, !0, !0)) return !1;
             let e = (function (e, t, n) {
                 var i;
                 let l, r;
@@ -251,10 +251,10 @@ let el = new ei(c.Z, {
             })(s, o, d);
             if (!1 !== e) return e;
         }
-        if (y.Z.getTextChatNotificationMode() === V.Ypu.DISABLED || C.Z.disableNotifications || !(0, O.eF)(o, r)) return !1;
-        let c = !E.Z.isSoundDisabled(Z.Ay),
-            u = null !== (l = v.Z.getMessage(r, o.id)) && void 0 !== l ? l : (0, _.e5)(o);
-        et((0, M.Z)(s, u, d, c), {
+        if (y.Z.getTextChatNotificationMode() === V.Ypu.DISABLED || C.Z.disableNotifications || !(0, b.eF)(o, r)) return !1;
+        let u = !E.Z.isSoundDisabled(Z.Ay),
+            c = null !== (l = v.Z.getMessage(r, o.id)) && void 0 !== l ? l : (0, _.e5)(o);
+        et((0, M.Z)(s, c, d, u), {
             type: 1,
             channelId: s.id,
             expirationExternallyManaged: !0,

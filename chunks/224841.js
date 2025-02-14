@@ -2,16 +2,16 @@ n.d(t, { Z: () => h });
 var i = n(200651);
 n(192379);
 var r = n(481060),
-    l = n(388905),
-    a = n(703656),
-    o = n(63063),
-    s = n(981631),
+    a = n(388905),
+    l = n(703656),
+    s = n(63063),
+    o = n(981631),
     c = n(388032),
     d = n(981469);
-let u = () => (0, a.uL)(s.Z5c.LOGIN),
+let u = () => (0, l.uL)(o.Z5c.LOGIN),
     h = (e) => {
-        let { authBoxClassName: t, underageMessage: a } = e;
-        return (0, i.jsxs)(l.ZP, {
+        let { authBoxClassName: t, underageMessage: l } = e;
+        return (0, i.jsxs)(a.ZP, {
             className: t,
             children: [
                 (0, i.jsx)('img', {
@@ -19,15 +19,15 @@ let u = () => (0, a.uL)(s.Z5c.LOGIN),
                     src: n(231443),
                     className: d.img
                 }),
-                (0, i.jsx)(l.Dx, {
+                (0, i.jsx)(a.Dx, {
                     className: d.title,
                     children: c.intl.string(c.t.nCB6GR)
                 }),
-                (0, i.jsx)(l.DK, {
+                (0, i.jsx)(a.DK, {
                     className: d.subtitle,
                     children: c.intl.format(c.t.b0QzXV, {
-                        underageMessage: null != a ? a : c.intl.string(c.t.WqEH4O),
-                        helpURL: o.Z.getArticleURL(s.BhN.AGE_GATE)
+                        underageMessage: null != l ? l : c.intl.string(c.t.WqEH4O),
+                        helpURL: s.Z.getArticleURL(o.BhN.AGE_GATE)
                     })
                 }),
                 (0, i.jsx)(r.zxk, {

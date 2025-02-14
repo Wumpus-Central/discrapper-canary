@@ -2,8 +2,8 @@ n.d(t, { Z: () => k }), n(47120);
 var i,
     l = n(200651),
     r = n(192379),
-    o = n(299608),
-    a = n.n(o),
+    a = n(299608),
+    o = n.n(a),
     s = n(91192),
     c = n(924826),
     d = n(442837),
@@ -241,12 +241,12 @@ class G extends (i = r.Component) {
             { preRenderedChildren: n } = this.state;
         return (0, l.jsx)(s.SJ, {
             children: (i) => {
-                let { ref: r, role: o, ...a } = i;
+                let { ref: r, role: a, ...o } = i;
                 return (0, l.jsx)(h.Wdt, {
                     children: (i) =>
                         (0, l.jsx)(h.aVo, {
                             fade: !0,
-                            innerRole: o,
+                            innerRole: a,
                             innerAriaLabel: w.intl.string(w.t.YUU0RE),
                             innerTag: 'ul',
                             ref: (e) => {
@@ -262,7 +262,7 @@ class G extends (i = r.Component) {
                             renderSection: this.renderSection,
                             renderRow: this.renderRow,
                             sections: [n, Math.max(e.length, 1)],
-                            ...a,
+                            ...o,
                             ...i
                         })
                 });
@@ -288,12 +288,12 @@ class G extends (i = r.Component) {
                 if (0 === n.length) return;
                 let l = r.Children.count(this.props.children);
                 if (null == t) return;
-                let o = Math.round((t.offsetHeight - 44 * l) / 44),
-                    a = o > n.length ? n.slice(0, o + 1) : n,
-                    s = a.map((e) => (null != i[e] ? i[e].getRecipientId() : null)),
+                let a = Math.round((t.offsetHeight - 44 * l) / 44),
+                    o = a > n.length ? n.slice(0, a + 1) : n,
+                    s = o.map((e) => (null != i[e] ? i[e].getRecipientId() : null)),
                     c = n.some((e) => (0, _.Z)(e)),
                     d = {
-                        num_users_visible: a.length,
+                        num_users_visible: o.length,
                         num_users_visible_with_mobile_indicator: s.filter((e) => null != e && T.Z.isMobileOnline(e)).length
                     };
                 (this.hasReportedAnalytics = !0),
@@ -311,7 +311,7 @@ class G extends (i = r.Component) {
             M(
                 this,
                 'handleScroll',
-                a()(() => {
+                o()(() => {
                     if (null != this._list) {
                         let e = this._list.getScrollerNode();
                         null != e && p.Z.updateChannelListScroll(R.ME, e.scrollTop);
@@ -320,7 +320,7 @@ class G extends (i = r.Component) {
             ),
             M(this, 'renderDM', (e, t) => {
                 let { privateChannelIds: n, channels: i, selectedChannelId: r } = this.props,
-                    { totalRowCount: o, preRenderedChildren: a } = this.state,
+                    { totalRowCount: a, preRenderedChildren: o } = this.state,
                     s = i[n[t]];
                 return null == s
                     ? null
@@ -329,8 +329,8 @@ class G extends (i = r.Component) {
                           {
                               channel: s,
                               selected: s.id === r,
-                              'aria-posinset': a + t + 1,
-                              'aria-setsize': o
+                              'aria-posinset': o + t + 1,
+                              'aria-setsize': a
                           },
                           s.id
                       );
@@ -379,21 +379,21 @@ class G extends (i = r.Component) {
             }),
             M(this, 'getRowHeight', (e, t) => {
                 let { privateChannelIds: n, isVisualRefreshEnabled: i, density: l } = this.props,
-                    { nonNullChildren: o } = this.state,
-                    a = 44;
+                    { nonNullChildren: a } = this.state,
+                    o = 44;
                 if (i) {
                     if (0 === e) {
-                        let e = o[t];
+                        let e = a[t];
                         if (r.isValidElement(e)) {
                             var s;
-                            a = (null === (s = e.key) || void 0 === s ? void 0 : s.startsWith('section-divider')) ? 25 : 'dm-quick-launcher' === e.key ? 67 : 40;
+                            o = (null === (s = e.key) || void 0 === s ? void 0 : s.startsWith('section-divider')) ? 25 : 'dm-quick-launcher' === e.key ? 67 : 40;
                         }
-                    } else a = 'compact' === l ? 44 : 50;
+                    } else o = 'compact' === l ? 44 : 50;
                 } else if (0 === e) {
-                    let e = o[t];
-                    r.isValidElement(e) && 'dm-quick-launcher' === e.key && (a = 80);
+                    let e = a[t];
+                    r.isValidElement(e) && 'dm-quick-launcher' === e.key && (o = 80);
                 }
-                return 1 === e && 0 === t && 0 === n.length ? 428 : a;
+                return 1 === e && 0 === t && 0 === n.length ? 428 : o;
             });
     }
 }
@@ -401,8 +401,8 @@ M(G, 'defaultProps', { padding: 8 });
 let k = (e) => {
     let t = (0, x.Q3)('ConnectedPrivateChannelsList'),
         { density: n } = (0, h.TCT)(),
-        { version: i, theme: o, children: a, showDMHeader: u } = e,
-        p = r.Children.count(a),
+        { version: i, theme: a, children: o, showDMHeader: u } = e,
+        p = r.Children.count(o),
         g = y.Z.getMutablePrivateChannels(),
         f = (0, N.k1)(g),
         _ = (0, d.Wu)(
@@ -415,7 +415,7 @@ let k = (e) => {
         );
     (0, Z.z)(I.R);
     let v = (0, d.cj)([m.Z, j.Z, y.Z], () => ({
-            theme: j.Z.darkSidebar ? R.BRd.DARK : o,
+            theme: j.Z.darkSidebar ? R.BRd.DARK : a,
             keyboardModeEnabled: m.Z.keyboardModeEnabled,
             version: null != i ? ''.concat(i, ':').concat(y.Z.getPrivateChannelsVersion()) : y.Z.getPrivateChannelsVersion()
         })),
@@ -474,10 +474,10 @@ let k = (e) => {
             channels: f,
             privateChannelIds: _,
             listRef: b,
-            theme: o,
+            theme: a,
             version: i,
             ...e,
-            children: a,
+            children: o,
             ...v
         })
     });

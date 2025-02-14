@@ -9,8 +9,8 @@ var l = n(581282),
     a = n(663002),
     s = n(2052),
     o = n(410030),
-    c = n(100527),
-    d = n(906732),
+    d = n(100527),
+    c = n(906732),
     u = n(605236),
     h = n(960048),
     m = n(276792),
@@ -23,7 +23,7 @@ function g(e) {
 function _(e) {
     let { renderModalProps: t, properties: n } = e,
         { location: l } = (0, s.O)(),
-        { analyticsLocations: r } = (0, d.ZP)(c.Z.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL),
+        { analyticsLocations: r } = (0, c.ZP)(d.Z.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL),
         u = (0, o.ZP)(),
         g = (0, a.ap)(u);
     if ('announcementModalVariant1' === n.properties.oneofKind) {

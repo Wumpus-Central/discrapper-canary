@@ -1,70 +1,70 @@
-n.d(t, { Z: () => f }), n(47120);
+n.d(t, { Z: () => T }), n(47120);
 var i = n(200651),
     s = n(192379),
-    l = n(442837),
-    r = n(481060),
+    r = n(442837),
+    l = n(481060),
     a = n(2052),
     o = n(594174),
     c = n(74538),
     d = n(716161),
     u = n(634041),
-    h = n(647177),
-    m = n(672339),
+    m = n(647177),
+    h = n(672339),
     g = n(898531),
     x = n(636188),
     _ = n(678916),
     p = n(981631),
     E = n(869783),
     C = n(388032),
-    N = n(425995);
-function f(e) {
-    let { onLearnMore: t, selectedBackgroundOption: f, onSelectBackgroundOption: I, currentDeviceId: T, smallerBackgroundOptions: S, className: j } = e,
-        v = (0, l.e7)([o.default], () => o.default.getCurrentUser()),
-        [b, A] = s.useState(null),
+    f = n(425995);
+function T(e) {
+    let { onLearnMore: t, selectedBackgroundOption: T, onSelectBackgroundOption: N, currentDeviceId: S, smallerBackgroundOptions: I, className: b } = e,
+        v = (0, r.e7)([o.default], () => o.default.getCurrentUser()),
+        [j, A] = s.useState(null),
         O = (0, g.Z)(),
         R = c.ZP.canUseCustomBackgrounds(v),
-        D = (0, l.cj)([u.Z], () => (R ? u.Z.videoFilterAssets : {})),
-        P = s.useMemo(() => Object.values(D).filter((e) => e.type === _.xV.BACKGROUND), [D]),
+        P = (0, r.cj)([u.Z], () => (R ? u.Z.videoFilterAssets : {})),
+        D = s.useMemo(() => Object.values(P).filter((e) => e.type === _.xV.BACKGROUND), [P]),
         y = (0, a.O)(),
         Z = {
             isVideoBackgroundSupported: O,
-            onSelectBackgroundOption: I,
-            selectedBackgroundOption: f
+            onSelectBackgroundOption: N,
+            selectedBackgroundOption: T
         },
-        L = s.useRef(Z);
+        k = s.useRef(Z);
     s.useEffect(() => {
-        L.current = Z;
+        k.current = Z;
     }),
         s.useEffect(() => {
-            let { isVideoBackgroundSupported: e, onSelectBackgroundOption: t, selectedBackgroundOption: n } = L.current;
-            e ? (0, m.FU)(n, T, { track: !1 }).catch(() => t(null)) : null != n && t(null);
-        }, [T]);
-    let k = (e) => {
-        I(e),
-            (0, m.FU)(e, T, { location: y.location })
+            let { isVideoBackgroundSupported: e, onSelectBackgroundOption: t, selectedBackgroundOption: n } = k.current;
+            e ? (0, h.FU)(n, S, { track: !1 }).catch(() => t(null)) : null != n && t(null);
+        }, [S]);
+    let L = (e) => {
+        N(e),
+            (0, h.FU)(e, S, { location: y.location })
                 .then(() => A(null))
                 .catch(() => {
-                    A(C.intl.string(C.t.ejrSLS)), (0, m.FU)(null, T, { location: y.location });
+                    A(C.intl.string(C.t.ejrSLS)), (0, h.FU)(null, S, { location: y.location });
                 });
     };
     return O
-        ? (0, i.jsxs)(r.xJW, {
+        ? (0, i.jsxs)(l.xJW, {
               title: C.intl.string(C.t.lZTUPj),
-              className: j,
+              className: b,
               children: [
-                  null != b
-                      ? (0, i.jsx)(r.kzN, {
-                            className: N.videoBackgroundError,
-                            children: b
+                  null != j
+                      ? (0, i.jsx)(l.kzN, {
+                            className: f.videoBackgroundError,
+                            children: j
                         })
                       : null,
                   (0, i.jsx)(x.Z, {
                       canUseCustomBackgrounds: R,
-                      customBackgroundOptions: P,
-                      selectedOption: f,
-                      onSelectOption: k,
+                      customBackgroundOptions: D,
+                      selectedOption: T,
+                      onSelectOption: L,
                       onUpsellClick: () => {
-                          (0, r.ZDy)(async () => {
+                          (0, l.ZDy)(async () => {
                               let { default: e } = await n.e('87200').then(n.bind(n, 592163));
                               return (n) =>
                                   (0, i.jsx)(e, {
@@ -82,14 +82,14 @@ function f(e) {
                           return new Promise(async (i) => {
                               try {
                                   let i = await (0, d.Ff)(e, _.xV.BACKGROUND);
-                                  k(i), (0, h.g5)(i, t.type === E.m.MP4, n), A(null);
+                                  L(i), (0, m.g5)(i, t.type === E.m.MP4, n), A(null);
                               } catch (e) {
                                   A(e.message);
                               }
                               i();
                           });
                       },
-                      smallerOptions: S
+                      smallerOptions: I
                   })
               ]
           })

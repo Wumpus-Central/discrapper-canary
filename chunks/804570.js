@@ -1,20 +1,20 @@
-l.d(i, { E: () => o });
-var t = l(200651),
-    n = l(192379),
-    d = l(120356),
-    r = l.n(d),
-    a = l(481060),
-    s = l(221515);
+i.d(l, { E: () => o });
+var t = i(200651),
+    n = i(192379),
+    r = i(120356),
+    d = i.n(r),
+    a = i(481060),
+    s = i(221515);
 let o = n.memo(function (e) {
-    let { emptyText: i, icon: l, absolute: n = !1 } = e;
+    let { emptyText: l, icon: i, absolute: n = !1 } = e;
     return (0, t.jsx)('div', {
-        className: r()(s.emptyWidgetContainer, n && s.absolute),
+        className: d()(s.emptyWidgetContainer, n && s.absolute),
         children: (0, t.jsx)(a.ua7, {
-            text: i,
+            text: l,
             children: (e) =>
                 (0, t.jsx)('div', {
                     ...e,
-                    children: (0, t.jsx)(l, {
+                    children: (0, t.jsx)(i, {
                         size: 'md',
                         color: a.TVs.colors.WHITE,
                         className: s.emptyWidgetIcon

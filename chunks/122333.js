@@ -6,8 +6,8 @@ var r = n(481060),
     a = n(570140),
     s = n(317770),
     o = n(622822),
-    c = n(391650),
-    d = n(305325),
+    d = n(391650),
+    c = n(305325),
     u = n(983736),
     h = n(341298),
     m = n(390885),
@@ -23,9 +23,9 @@ var r = n(481060),
     T = n(179645),
     S = n(701476),
     A = n(785997),
-    b = n(981631),
-    Z = n(188785),
-    x = n(630724);
+    Z = n(981631),
+    x = n(188785),
+    b = n(630724);
 function L() {
     null != i && (0, r.Mr3)(i);
 }
@@ -43,13 +43,13 @@ class y extends s.Z {
         if (null == a) return;
         switch (a) {
             case S.M5.INVITE_UNCLAIMED:
-                m.Z.flowStart(x.MK.INVITE, x.EW.NUF_STARTED);
+                m.Z.flowStart(b.MK.INVITE, b.EW.NUF_STARTED);
                 break;
             case S.M5.ORGANIC_REGISTERED:
-                m.Z.flowStart(x.MK.ORGANIC, x.EW.NUF_STARTED);
+                m.Z.flowStart(b.MK.ORGANIC, b.EW.NUF_STARTED);
                 break;
             case S.M5.MARKETING_UNCLAIMED:
-                m.Z.flowStart(x.MK.ORGANIC_MARKETING, x.EW.NUF_STARTED);
+                m.Z.flowStart(b.MK.ORGANIC_MARKETING, b.EW.NUF_STARTED);
         }
         let s = !1,
             L = E.Z.getGuildId();
@@ -66,25 +66,25 @@ class y extends s.Z {
                     let t = (e) => {
                         switch (e) {
                             case A.F.AGE_GATE:
-                                m.Z.flowStep(x.MK.ANY, x.EW.AGE_GATE);
+                                m.Z.flowStep(b.MK.ANY, b.EW.AGE_GATE);
                                 break;
                             case A.F.CHOOSE_TEMPLATE:
-                                m.Z.flowStep(x.MK.ANY, x.X2.GUILD_TEMPLATES);
+                                m.Z.flowStep(b.MK.ANY, b.X2.GUILD_TEMPLATES);
                                 break;
                             case A.F.CUSTOMIZE_GUILD:
-                                m.Z.flowStep(x.MK.ANY, x.X2.GUILD_CREATE);
+                                m.Z.flowStep(b.MK.ANY, b.X2.GUILD_CREATE);
                                 break;
                             case A.F.CHANNEL_PROMPT:
-                                m.Z.flowStep(x.MK.ANY, x.X2.CHANNEL_PROMPT);
+                                m.Z.flowStep(b.MK.ANY, b.X2.CHANNEL_PROMPT);
                                 break;
                             case A.F.JOIN_GUILD:
-                                m.Z.flowStep(x.MK.ANY, x.X2.JOIN_GUILD);
+                                m.Z.flowStep(b.MK.ANY, b.X2.JOIN_GUILD);
                                 break;
                             case A.F.CREATION_INTENT:
-                                m.Z.flowStep(x.MK.ANY, x.X2.CREATION_INTENT);
+                                m.Z.flowStep(b.MK.ANY, b.X2.CREATION_INTENT);
                                 break;
                             case A.F.COMPLETE:
-                                m.Z.flowStep(x.MK.ANY, x.X2.SUCCESS);
+                                m.Z.flowStep(b.MK.ANY, b.X2.SUCCESS);
                                 break;
                             case null:
                                 break;
@@ -102,33 +102,33 @@ class y extends s.Z {
                                 });
                         },
                         {
-                            onCloseRequest: b.dG4,
+                            onCloseRequest: Z.dG4,
                             onCloseCallback: e,
                             modalKey: i
                         }
                     );
                 },
-                predicate: () => y() && !Z.a
+                predicate: () => y() && !x.a
             },
             {
                 key: 'New User Age Gate',
-                open: c.i,
-                predicate: () => O && !y() && !Z.a
+                open: d.i,
+                predicate: () => O && !y() && !x.a
             },
             {
                 key: 'Claim Account Modal',
-                open: (e) => c.j(N.isPlatformEmbedded, e),
+                open: (e) => d.j(N.isPlatformEmbedded, e),
                 predicate: () => {
                     var e;
-                    return !s && null != I.default.getCurrentUser() && !(null === (e = I.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !Z.a && !(0, h.g)('new_user_manager');
+                    return !s && null != I.default.getCurrentUser() && !(null === (e = I.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !x.a && !(0, h.g)('new_user_manager');
                 }
             },
             {
                 key: 'Verification Gate with Claim Account',
-                open: (e) => (0, d.hk)(L, null != e ? e : void 0),
+                open: (e) => (0, c.hk)(L, null != e ? e : void 0),
                 predicate: () => {
                     var e;
-                    return s && !(null === (e = I.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !Z.a;
+                    return s && !(null === (e = I.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !x.a;
                 }
             },
             {
@@ -149,7 +149,7 @@ class y extends s.Z {
             }
         ]),
             (t = () => {
-                v.H(), m.Z.flowStep(x.MK.ANY, x.EW.NUF_COMPLETE, !0);
+                v.H(), m.Z.flowStep(b.MK.ANY, b.EW.NUF_COMPLETE, !0);
             }),
             [...e].reverse().forEach((e) => {
                 let n = t;

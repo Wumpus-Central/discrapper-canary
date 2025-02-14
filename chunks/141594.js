@@ -5,22 +5,22 @@ var i = n(192379),
     a = n(442837),
     s = n(704215),
     o = n(243778),
-    c = n(594174),
-    d = n(51144),
+    d = n(594174),
+    c = n(51144),
     u = n(874703),
     h = n(302800),
     m = n(921944);
 let p = () => {
     var e, t, n, p, g, _, f;
-    let E = (0, a.e7)([c.default], () => c.default.getCurrentUser()),
+    let E = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
         I = (0, a.e7)([u.Z], () => u.Z.getMarketingBySurface(l.K.DESKTOP_SHOP_BUTTON)),
         C = (null == I ? void 0 : I.dismissibleContent) === s.z.COLLECTIBLES_SHOP_ENTRY_MARKETING,
-        N = i.useMemo(() => ((0, d.Fc)(E) && null != I && !C ? [I.dismissibleContent] : []), [E, I, C]),
+        N = i.useMemo(() => ((0, c.Fc)(E) && null != I && !C ? [I.dismissibleContent] : []), [E, I, C]),
         [v, T] = (0, o.US)(N, void 0, !0),
         [S, A] = (0, o.XR)(C && (null == I ? void 0 : I.type) === r.Z.COACHTIP ? s.z.COLLECTIBLES_SHOP_ENTRY_MARKETING : null, null !== (e = null == I ? void 0 : I.version) && void 0 !== e ? e : 0, void 0, !0),
-        b = null;
+        Z = null;
     if ((null != v || null != S) && null != I && I.type === r.Z.COACHTIP) {
-        b = {
+        Z = {
             type: h.k2.COACHTIP,
             title: () => I.title,
             body: () => I.body,
@@ -30,7 +30,7 @@ let p = () => {
         };
         let e = null === (n = I.refTargetBackground) || void 0 === n ? void 0 : n.asset;
         null != e &&
-            (b.entryPointBackgroundAssets = {
+            (Z.entryPointBackgroundAssets = {
                 srcDark: null === (p = e.resting) || void 0 === p ? void 0 : p.dark,
                 srcLight: null === (g = e.resting) || void 0 === g ? void 0 : g.light,
                 srcDarkHovered: null === (_ = e.hovered) || void 0 === _ ? void 0 : _.dark,
@@ -38,10 +38,10 @@ let p = () => {
             });
     }
     return {
-        collectiblesShopTabNewBadgeDisplayOptions: b,
+        collectiblesShopTabNewBadgeDisplayOptions: Z,
         dismissCollectiblesShopTabNewBadge: () => {
             let e = C ? A : T;
-            null != b && e(m.L.AUTO);
+            null != Z && e(m.L.AUTO);
         }
     };
 };

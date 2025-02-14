@@ -5,8 +5,8 @@ var i = n(200651),
     a = n(324262),
     s = n(981631),
     o = n(388032),
-    c = n(510342);
-class d extends l.PureComponent {
+    d = n(510342);
+class c extends l.PureComponent {
     render() {
         return (0, i.jsx)(a.Z, {
             guild: this.props.guild,
@@ -15,10 +15,10 @@ class d extends l.PureComponent {
             cta: o.intl.string(o.t['8dCrV1']),
             trackingSource: s.PsQ.GUILD_MFA_WARNING,
             type: s.vID.MFA_WARNING,
-            image: c,
+            image: d,
             imageMarginX: 54,
             undismissable: !0
         });
     }
 }
-let u = d;
+let u = c;

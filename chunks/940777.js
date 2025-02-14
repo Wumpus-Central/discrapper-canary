@@ -2,8 +2,8 @@ n.d(t, { Z: () => L }), n(47120), n(724458), n(653041);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    o = n.n(r),
-    a = n(91192),
+    a = n.n(r),
+    o = n(91192),
     s = n(442837),
     c = n(481060),
     d = n(493683),
@@ -37,7 +37,7 @@ let w = {
     }
 };
 function L() {
-    let e = (0, a.Ie)('favorites'),
+    let e = (0, o.Ie)('favorites'),
         { favoriteAdded: t, clearFavoriteAdded: r } = (0, E.up)(),
         [L, M] = l.useState(!1),
         { favoriteServerMuted: D, favoriteChannels: G } = (0, s.cj)([N.Z], () => ({
@@ -58,21 +58,21 @@ function L() {
                 }),
                 l = (0, s.e7)([x.Z], () => x.Z.getAllApplicationStreams().some((t) => null != e[t.channelId])),
                 r = (0, s.e7)([b.Z], () => n && null != t && b.Z.hasVideo(t), [n, t]),
-                o = (0, s.Wu)([h.ZP], () => S.default.keys(e).reduce((e, t) => (e.push(...h.ZP.getEmbeddedActivitiesForChannel(t)), e), [])),
-                a = (0, s.e7)([h.ZP], () =>
+                a = (0, s.Wu)([h.ZP], () => S.default.keys(e).reduce((e, t) => (e.push(...h.ZP.getEmbeddedActivitiesForChannel(t)), e), [])),
+                o = (0, s.e7)([h.ZP], () =>
                     Array.from(h.ZP.getSelfEmbeddedActivities().values()).some((t) => {
                         let { location: n } = t,
                             i = (0, p.pY)(n);
                         return null != i && null != e[i];
                     })
                 ),
-                c = o.length > 0,
+                c = a.length > 0,
                 d = !1,
                 u = !1,
                 m = !1,
                 g = !1;
             return (
-                n ? ((d = !r), (u = r), (m = i), (g = a)) : ((m = l), (g = c)),
+                n ? ((d = !r), (u = r), (m = i), (g = o)) : ((m = l), (g = c)),
                 (0, _.Or)({
                     audio: d,
                     video: u,
@@ -126,7 +126,7 @@ function L() {
                                 });
                             },
                             children: (0, i.jsx)('div', {
-                                className: o()(R.ring, { [R.ringActive]: t }),
+                                className: a()(R.ring, { [R.ringActive]: t }),
                                 children: (0, i.jsx)(c.r7p, {
                                     size: 'custom',
                                     color: 'currentColor',

@@ -1,15 +1,15 @@
 n.d(t, { Z: () => m });
 var i,
+    s,
     r,
-    a,
-    s = n(442837),
-    l = n(570140);
+    l = n(442837),
+    a = n(570140);
 let o = {},
     c = null;
 function d() {
     (o = {}), (c = null);
 }
-class u extends (a = s.ZP.Store) {
+class u extends (r = l.ZP.Store) {
     getEmailSettings() {
         return {
             categories: o,
@@ -17,16 +17,16 @@ class u extends (a = s.ZP.Store) {
         };
     }
 }
-(r = 'EmailSettingsStore'),
+(s = 'EmailSettingsStore'),
     (i = 'displayName') in u
         ? Object.defineProperty(u, i, {
-              value: r,
+              value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (u[i] = r);
-let m = new u(l.Z, {
+        : (u[i] = s);
+let m = new u(a.Z, {
     CONNECTION_OPEN: d,
     LOGOUT: d,
     EMAIL_SETTINGS_FETCH_SUCCESS: function (e) {

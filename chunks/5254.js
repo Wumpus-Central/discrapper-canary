@@ -5,8 +5,8 @@ var i,
     a = n(392711),
     s = n.n(a),
     o = n(442837),
-    c = n(570140),
-    d = n(598077),
+    d = n(570140),
+    c = n(598077),
     u = n(594174),
     h = n(388380),
     m = n(72937);
@@ -20,7 +20,7 @@ function E(e) {
     return {
         key: e.suggested_user.id,
         name: null === (t = s().first(e.reasons)) || void 0 === t ? void 0 : t.name,
-        user: new d.Z(e.suggested_user),
+        user: new c.Z(e.suggested_user),
         mutualFriendsCount: e.mutual_friends_count,
         contactNames: n
     };
@@ -51,7 +51,7 @@ class I extends (i = o.ZP.Store) {
               writable: !0
           })
         : (I[l] = r);
-let C = new I(c.Z, {
+let C = new I(d.Z, {
     CONNECTION_OPEN: function (e) {
         (p = {}), (g = e.friendSuggestionCount) > 0 ? ((f = !0), _ || !f || ((_ = !0), (f = !1), h.Z.fetch())) : (0, m.Z)();
     },

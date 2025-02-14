@@ -16,8 +16,8 @@ var i = n(200651),
     f = n(147890),
     x = n(240991),
     C = n(706454),
-    v = n(592125),
-    E = n(496675),
+    E = n(592125),
+    v = n(496675),
     I = n(944486),
     N = n(914010),
     S = n(768581),
@@ -110,10 +110,10 @@ function Z(e) {
         }, [q, k, z, n]),
         { analyticsLocations: ee } = (0, u.ZP)(d.Z.APP_MESSAGE_EMBED),
         et = (0, r.e7)(
-            [v.Z, E.Z, I.Z],
+            [E.Z, v.Z, I.Z],
             () => {
-                let e = v.Z.getChannel(I.Z.getChannelId());
-                return null != e && (e.isPrivate() || E.Z.can(A.Plq.SEND_MESSAGES, e));
+                let e = E.Z.getChannel(I.Z.getChannelId());
+                return null != e && (e.isPrivate() || v.Z.can(A.Plq.SEND_MESSAGES, e));
             },
             []
         ),

@@ -16,8 +16,8 @@ var i = n(200651),
     f = n(783097),
     x = n(895924),
     C = n(311819),
-    v = n(321231),
-    E = n(758199),
+    E = n(321231),
+    v = n(758199),
     I = n(429551),
     N = n(973616),
     S = n(314897),
@@ -141,7 +141,7 @@ let F = l.memo(function (e) {
                       });
         },
         el = ee.disabled ? O.intl.string(O.t.JBnc7O) : O.intl.string(O.t.cX9uLS),
-        { enabled: ea } = v.G.useExperiment({ location: 'EmbeddedActivityInstanceEmbed' });
+        { enabled: ea } = E.G.useExperiment({ location: 'EmbeddedActivityInstanceEmbed' });
     if (ea) {
         let e;
         let t = y.ZP.getApplicationIconURL({
@@ -173,7 +173,7 @@ let F = l.memo(function (e) {
                         };
                 }
             })(X);
-        return (0, i.jsx)(E.W, {
+        return (0, i.jsx)(v.W, {
             header: I.name,
             title: d,
             iconSrc: t,

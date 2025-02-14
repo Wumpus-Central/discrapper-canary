@@ -55,14 +55,14 @@ function b(e) {
             }));
         },
         D = (0, g.ss)(t),
-        k = (0, g.Gp)(),
-        O = r.useCallback(() => {
-            k &&
+        O = (0, g.Gp)(),
+        k = r.useCallback(() => {
+            O &&
                 h.jJ.trackExposure({
                     guildId: t,
                     location: 'b2d9de_1'
                 }),
-                k && D
+                O && D
                     ? (0, d.ZDy)(
                           async () => {
                               let { default: e } = await n.e('9558').then(n.bind(n, 34460));
@@ -78,7 +78,7 @@ function b(e) {
                           { modalKey: I }
                       )
                     : T();
-        }, [t, S, T, l, k, D]),
+        }, [t, S, T, l, O, D]),
         P = C.Lo(A),
         w = r.useCallback(() => A.forEach(C.GM), [A]),
         M = (0, _.mY)(),
@@ -86,12 +86,12 @@ function b(e) {
     return (
         r.useEffect(
             () => (
-                U === v.KsC.ROLE_SUBSCRIPTION_TIER_TEMPLATE && O(),
+                U === v.KsC.ROLE_SUBSCRIPTION_TIER_TEMPLATE && k(),
                 () => {
                     (0, d.Mr3)(I);
                 }
             ),
-            [U, O]
+            [U, k]
         ),
         (0, i.jsxs)(i.Fragment, {
             children: [
@@ -115,7 +115,7 @@ function b(e) {
                             )
                         ),
                         (0, i.jsxs)(d.P3F, {
-                            onClick: M ? void 0 : O,
+                            onClick: M ? void 0 : k,
                             className: s()(j.createTierButton, { [j.disabled]: M }),
                             'aria-disabled': M,
                             children: [

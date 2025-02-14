@@ -1,40 +1,40 @@
 n.d(t, { Z: () => _ }), n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(120356),
-    a = n.n(l),
-    o = n(536285),
-    s = n(857458),
+    a = n(120356),
+    l = n.n(a),
+    s = n(536285),
+    o = n(857458),
     c = n(388905),
     d = n(703656),
     u = n(388032),
     h = n(483938);
 let _ = function (e) {
-    let { match: t, location: n, attemptDeepLink: l } = e,
+    let { match: t, location: n, attemptDeepLink: a } = e,
         [_, m] = r.useState(0);
     r.useEffect(() => {
-        o.default.once('connected', () => {
+        s.default.once('connected', () => {
             m(1);
         }),
-            o.default.once('disconnected', () => {
-                (0, d.uL)((0, s.M)());
+            s.default.once('disconnected', () => {
+                (0, d.uL)((0, o.M)());
             }),
-            o.default.connect();
+            s.default.connect();
     }, []),
         r.useEffect(() => {
             if (0 !== _) return;
-            let e = setTimeout(() => (0, d.uL)((0, s.M)()), 3000);
+            let e = setTimeout(() => (0, d.uL)((0, o.M)()), 3000);
             return () => clearTimeout(e);
         }, [_]);
     let g = r.useCallback(
         async (e, t) => {
             try {
-                m(2), await l(e, t), m(3);
+                m(2), await a(e, t), m(3);
             } catch (e) {
                 console.error('Error opening deeplink', e);
             }
         },
-        [l]
+        [a]
     );
     if ((0, d.DB)()) return null;
     switch (_) {
@@ -52,10 +52,10 @@ let _ = function (e) {
                         children: u.intl.string(u.t.UQvCf3)
                     }),
                     (0, i.jsx)(c.zx, {
-                        className: a()(h.marginTop8, h.marginCenterHorz),
+                        className: l()(h.marginTop8, h.marginCenterHorz),
                         color: c.zx.Colors.LINK,
                         look: c.zx.Looks.LINK,
-                        onClick: () => (0, d.uL)((0, s.M)()),
+                        onClick: () => (0, d.uL)((0, o.M)()),
                         children: u.intl.string(u.t['2ixEBg'])
                     })
                 ]

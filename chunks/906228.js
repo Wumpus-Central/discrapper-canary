@@ -1,12 +1,12 @@
-n.d(t, { Z: () => d }), n(47120);
+n.d(t, { Z: () => c }), n(47120);
 var i = n(243814),
     l = n(120960),
     r = n(996106),
     a = n(452426),
     s = n(186901),
     o = n(981631),
-    c = n(65154);
-let d = {
+    d = n(65154);
+let c = {
     [o.Etm.SET_CERTIFIED_DEVICES]: {
         scope: {
             [s.Gp.ANY]: [i.x.RPC, s.lH]
@@ -17,7 +17,7 @@ let d = {
                 .keys({
                     devices: e.array().items(
                         (0, a.Z)(e).keys({
-                            type: e.string().required().valid([c.h7.AUDIO_INPUT, c.h7.AUDIO_OUTPUT, c.h7.VIDEO_INPUT]),
+                            type: e.string().required().valid([d.h7.AUDIO_INPUT, d.h7.AUDIO_OUTPUT, d.h7.VIDEO_INPUT]),
                             id: e.string().required().min(1),
                             vendor: (0, a.Z)(e)
                                 .required()

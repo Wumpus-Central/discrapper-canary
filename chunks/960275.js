@@ -5,8 +5,8 @@ var i = n(570140),
     a = n(57562),
     s = n(882029),
     o = n(955204),
-    c = n(351780),
-    d = n(843693);
+    d = n(351780),
+    c = n(843693);
 function u(e, t, n) {
     return (
         t in e
@@ -40,10 +40,10 @@ class m extends l.Z {
                     channelId: n,
                     message: { author: i, nonce: l, mentions: u }
                 } = e;
-                if (!c.Z.isEnabled()) return !1;
+                if (!d.Z.isEnabled()) return !1;
                 let m = r.default.getId();
-                if (((null == u ? void 0 : u.find((e) => e.id === m)) != null ? (0, a.T)(o.hn.PING_ME) : (null !== (t = null == u ? void 0 : u.length) && void 0 !== t ? t : 0) > 0 && (null == i ? void 0 : i.id) === m && (0, a.T)(o.hn.PING_SOMEONE), !(0, d.wU)(null == i ? void 0 : i.id, m, l, h))) return !1;
-                let p = d.ZP.getMostRecentMessageCombo(n),
+                if (((null == u ? void 0 : u.find((e) => e.id === m)) != null ? (0, a.T)(o.hn.PING_ME) : (null !== (t = null == u ? void 0 : u.length) && void 0 !== t ? t : 0) > 0 && (null == i ? void 0 : i.id) === m && (0, a.T)(o.hn.PING_SOMEONE), !(0, c.wU)(null == i ? void 0 : i.id, m, l, h))) return !1;
+                let p = c.ZP.getMostRecentMessageCombo(n),
                     { combo: g } = null != p ? p : {};
                 if (null == g) return !1;
                 Object.values(o.hn).forEach((e) => {

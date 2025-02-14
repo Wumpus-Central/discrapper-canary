@@ -10,17 +10,17 @@ var i = n(570140),
     a = n(973616),
     s = n(314897),
     o = n(630388),
-    c = n(774226),
-    d = n(317381),
+    d = n(774226),
+    c = n(317381),
     u = n(981631);
 async function h(e) {
     var t, n;
     let { applicationId: h, socketId: g } = e,
-        _ = d.ZP.getCurrentEmbeddedActivity();
+        _ = c.ZP.getCurrentEmbeddedActivity();
     if ((null == _ ? void 0 : _.applicationId) !== h) return;
     let f = _.compositeInstanceId,
         E = null !== (t = r.Z.getApplication(h)) && void 0 !== t ? t : a.ZP.createFromServer(await l.ZP.fetchApplication(h));
-    if (!(0, c.Kb)(E) || null == f || null == E || !(0, o.yE)(E.flags, u.udG.EMBEDDED)) return;
+    if (!(0, d.Kb)(E) || null == f || null == E || !(0, o.yE)(E.flags, u.udG.EMBEDDED)) return;
     let I = {
         type: 0,
         session_id: null !== (n = s.default.getSessionId()) && void 0 !== n ? n : void 0,

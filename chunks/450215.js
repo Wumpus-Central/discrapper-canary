@@ -26,7 +26,7 @@ function E(e) {
         [y, A] = r.useState(a),
         L = (0, c.e7)([x.Z], () => x.Z.getSubscriptionListing(y)),
         D = null == L,
-        [k, O] = r.useState(D),
+        [O, k] = r.useState(D),
         P = null == L ? void 0 : L.subscription_plans[0],
         w = null !== (t = null == L ? void 0 : L.published) && void 0 !== t && t,
         M = null !== (n = null == L ? void 0 : L.archived) && void 0 !== n && n,
@@ -47,7 +47,7 @@ function E(e) {
         className: I.container,
         children: [
             (0, i.jsxs)('div', {
-                className: s()(I.header, { [I.headerExpanded]: k }),
+                className: s()(I.header, { [I.headerExpanded]: O }),
                 children: [
                     (0, i.jsx)('div', {
                         className: I.headerImageContainer,
@@ -103,14 +103,14 @@ function E(e) {
                             })
                         ]
                     }),
-                    k
+                    O
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
                                   (0, i.jsx)(d.zxk, {
                                       look: d.zxk.Looks.BLANK,
                                       className: I.cancel,
                                       onClick: () => {
-                                          C.GM(y), D ? null == T || T() : O(!1);
+                                          C.GM(y), D ? null == T || T() : k(!1);
                                       },
                                       children: j.intl.string(j.t['ETE/oK'])
                                   }),
@@ -133,7 +133,7 @@ function E(e) {
                               ]
                           })
                         : (0, i.jsx)(d.P3F, {
-                              onClick: () => O(!0),
+                              onClick: () => k(!0),
                               'aria-label': j.intl.string(j.t['2qPbmJ']),
                               children: (0, i.jsx)(d.vdY, {
                                   size: 'xs',
@@ -143,7 +143,7 @@ function E(e) {
                           })
                 ]
             }),
-            k &&
+            O &&
                 (0, i.jsx)(_.I, {
                     editStateId: y,
                     guildId: l,

@@ -2,15 +2,15 @@ n.d(t, { Z: () => x });
 var i = n(200651);
 n(192379);
 var s = n(524437),
-    l = n(481060),
-    r = n(63063),
+    r = n(481060),
+    l = n(63063),
     a = n(78451),
     o = n(695346),
     c = n(838436),
     d = n(973005),
     u = n(726985),
-    h = n(981631),
-    m = n(388032),
+    m = n(981631),
+    h = n(388032),
     g = n(94180);
 function x() {
     var e;
@@ -21,10 +21,10 @@ function x() {
         setting: u.s6.PRIVACY_DIRECT_MESSAGE_SPAM_FILTER_V2,
         children: [
             (0, i.jsx)(c.H, {
-                header: m.intl.string(m.t.tiCXaG),
-                description: m.intl.format(m.t.RvjRRE, { appealLink: r.Z.getArticleURL(h.BhN.SAFE_DIRECT_MESSAGING) })
+                header: h.intl.string(h.t.tiCXaG),
+                description: h.intl.format(h.t.RvjRRE, { appealLink: l.Z.getArticleURL(m.BhN.SAFE_DIRECT_MESSAGING) })
             }),
-            (0, i.jsx)(l.FXm, {
+            (0, i.jsx)(r.FXm, {
                 className: g.radioGroup,
                 radioItemClassName: g.radioGroupItem,
                 value: x,

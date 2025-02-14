@@ -5,8 +5,8 @@ var i = n(200651),
     a = n(481060),
     s = n(58642),
     o = n(600164),
-    c = n(695346),
-    d = n(490983),
+    d = n(695346),
+    c = n(490983),
     u = n(626135),
     h = n(630388),
     m = n(804739),
@@ -68,10 +68,10 @@ function I(e) {
 }
 class C extends l.PureComponent {
     handleToggleShortcutDesktop(e) {
-        c.Xc.updateSetting(e);
+        d.Xc.updateSetting(e);
     }
     handleToggleShortcutStartMenu(e) {
-        c.Pe.updateSetting(e);
+        d.Pe.updateSetting(e);
     }
     trackRestoreApplication(e, t) {
         u.default.track(_.rMx.APPLICATION_SETTINGS_UPDATED, {
@@ -141,9 +141,9 @@ class C extends l.PureComponent {
 }
 function N() {
     let e = {
-        installShortcutDesktop: c.Xc.useSetting(),
-        installShortcutStartMenu: c.Pe.useSetting(),
-        hiddenLibraryApplicationViewItems: (0, r.e7)([d.Z], () => d.Z.hiddenLibraryApplicationViewItems)
+        installShortcutDesktop: d.Xc.useSetting(),
+        installShortcutStartMenu: d.Pe.useSetting(),
+        hiddenLibraryApplicationViewItems: (0, r.e7)([c.Z], () => c.Z.hiddenLibraryApplicationViewItems)
     };
     return (0, i.jsx)(C, { ...e });
 }

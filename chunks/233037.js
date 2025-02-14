@@ -11,8 +11,8 @@ var i = l(442837),
     d = l(102172),
     m = l(499596),
     x = l(148381),
-    h = l(388032),
-    g = l(26918);
+    g = l(388032),
+    h = l(26918);
 function Z(e) {
     let { selectedChannelId: n, guildId: l, onChangeSelectedChannelId: Z } = e,
         v = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
@@ -41,13 +41,13 @@ function Z(e) {
             };
         });
     return (0, t.jsx)(x.Z, {
-        title: h.intl.string(h.t['eg7R/v']),
-        scrollerInnerClassName: g.channelSelectScrollerInner,
+        title: g.intl.string(g.t['eg7R/v']),
+        scrollerInnerClassName: h.channelSelectScrollerInner,
         children: (0, t.jsx)(s.FXm, {
             options: C,
             value: n,
-            itemInfoClassName: g.channelInfoWrapper,
-            itemTitleClassName: g.channelTitleWrapper,
+            itemInfoClassName: h.channelInfoWrapper,
+            itemTitleClassName: h.channelTitleWrapper,
             onChange: (e) => {
                 let { value: n } = e;
                 return Z(n);

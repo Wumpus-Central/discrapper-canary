@@ -24,8 +24,8 @@ var i = n(200651),
     f = n(203143),
     x = n(79390),
     C = n(839963),
-    v = n(294608),
-    E = n(65145),
+    E = n(294608),
+    v = n(65145),
     I = n(981631),
     N = n(388032),
     S = n(554715);
@@ -58,7 +58,7 @@ function A(e) {
 }
 function j(e) {
     let { className: t, onClick: n, isSelected: l, isFirstAnswer: a, children: s } = e,
-        { pollAnswerRef: c } = (0, E.dv)();
+        { pollAnswerRef: c } = (0, v.dv)();
     return (0, i.jsx)(o.P3F, {
         role: 'checkbox',
         className: r()(t, S.enabled),
@@ -72,7 +72,7 @@ function y(e) {
     let t,
         { className: n, children: l, onClick: a, isSelected: s, hasSelectedAnyAnswer: c, isFirstAnswer: d } = e;
     t = c ? (s ? 0 : -1) : d ? 0 : -1;
-    let { pollAnswerRef: u } = (0, E.dv)();
+    let { pollAnswerRef: u } = (0, v.dv)();
     return (0, i.jsx)(o.P3F, {
         role: 'radio',
         className: r()(n, S.enabled),
@@ -132,8 +132,8 @@ function Z(e) {
 }
 function R(e) {
     let { className: t, answer: n, children: a, hasSelectedAnyAnswer: s, isFirstAnswer: o, elementType: c } = e,
-        { channelId: d, messageId: u } = (0, v.pE)(),
-        m = (0, v.$B)(n.style),
+        { channelId: d, messageId: u } = (0, E.pE)(),
+        m = (0, E.$B)(n.style),
         _ = !0 === n.isSelected,
         h = l.useCallback(() => {
             f.Z.handlePollAnswerTapped({
@@ -205,7 +205,7 @@ function k(e, t) {
 }
 function M(e) {
     let { media: t, containerClassName: n, attachmentClassName: l, emojiClassName: a, fallback: r } = e,
-        { message: s } = (0, v.GF)();
+        { message: s } = (0, E.GF)();
     if (null != t.attachmentIds && t.attachmentIds.length > 0) {
         let e = s.attachments.find((e) => {
             var n;

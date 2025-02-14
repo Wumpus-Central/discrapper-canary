@@ -1,64 +1,64 @@
 n.d(t, { Z: () => p }), n(47120);
 var i = n(200651),
     s = n(192379),
-    l = n(120356),
-    r = n.n(l),
+    r = n(120356),
+    l = n.n(r),
     a = n(772848),
     o = n(866442),
     c = n(692547),
     d = n(481060),
     u = n(699682),
-    h = n(44315),
-    m = n(654904),
+    m = n(44315),
+    h = n(654904),
     g = n(981631),
     x = n(388032),
     _ = n(403708);
 function p(e) {
-    let { onChange: t, onClose: n, color: l, suggestedColors: p, disabled: E, label: C, colorPickerMiddle: N, colorPickerFooter: f, showEyeDropper: I } = e,
-        T = s.useRef(null),
-        S = (0, d.dQu)(c.Z.colors.BACKGROUND_PRIMARY).hex(),
-        j = c.Z.colors.BACKGROUND_ACCENT.css,
-        v = (0, m.DP)(l),
-        b = (0, o.Rf)(l),
-        A = b === S ? j : b,
-        O = (0, h.Lq)(v ? g.Ilk.WHITE_500 : g.Ilk.PRIMARY_530),
-        R = (0, u.Z)(N),
-        D = (0, u.Z)(f),
-        [P, y] = s.useState((0, a.Z)());
+    let { onChange: t, onClose: n, color: r, suggestedColors: p, disabled: E, label: C, colorPickerMiddle: f, colorPickerFooter: T, showEyeDropper: N } = e,
+        S = s.useRef(null),
+        I = (0, d.dQu)(c.Z.colors.BACKGROUND_PRIMARY).hex(),
+        b = c.Z.colors.BACKGROUND_ACCENT.css,
+        v = (0, h.DP)(r),
+        j = (0, o.Rf)(r),
+        A = j === I ? b : j,
+        O = (0, m.Lq)(v ? g.Ilk.WHITE_500 : g.Ilk.PRIMARY_530),
+        R = (0, u.Z)(f),
+        P = (0, u.Z)(T),
+        [D, y] = s.useState((0, a.Z)());
     return (
         s.useEffect(() => {
-            (R !== N || D !== f) && y((0, a.Z)());
-        }, [f, N, D, R]),
+            (R !== f || P !== T) && y((0, a.Z)());
+        }, [T, f, P, R]),
         (0, i.jsx)(d.yRy, {
-            positionKey: P,
+            positionKey: D,
             renderPopout: (e) =>
                 (0, i.jsx)(d.Z$W, {
                     ...e,
-                    value: l,
+                    value: r,
                     onChange: t,
                     suggestedColors: p,
-                    middle: N,
-                    footer: f,
-                    showEyeDropper: I
+                    middle: f,
+                    footer: T,
+                    showEyeDropper: N
                 }),
             onRequestClose: n,
             children: (e) => {
                 let { onClick: t, ...n } = e;
                 return (0, i.jsxs)('div', {
-                    ref: T,
-                    className: r()(_.colorSwatch, { [_.disabled]: E }),
+                    ref: S,
+                    className: l()(_.colorSwatch, { [_.disabled]: E }),
                     children: [
                         (0, i.jsx)(d.P3F, {
                             ...n,
                             tabIndex: E ? -1 : 0,
                             onClick: E ? g.dG4 : t,
                             style: {
-                                backgroundColor: b,
+                                backgroundColor: j,
                                 borderColor: A
                             },
                             className: _.swatch,
                             'aria-label': x.intl.string(x.t.Qp04hI),
-                            focusProps: { ringTarget: T },
+                            focusProps: { ringTarget: S },
                             children: (0, i.jsx)(d.vdY, {
                                 size: 'custom',
                                 className: _.editPencilIcon,

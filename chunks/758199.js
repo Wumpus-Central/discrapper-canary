@@ -25,19 +25,19 @@ var i,
     g = n(310764),
     f = (((i = {})[(i.BOT = 0)] = 'BOT'), (i[(i.ACTIVITY = 1)] = 'ACTIVITY'), i);
 function x(e) {
-    let { title: t, header: n, info: i, staticBannerSrc: r, videoBannerSrc: f, bannerAspectRatio: x = 0, iconSrc: C, embedUrl: v, actions: E = [] } = e,
+    let { title: t, header: n, info: i, staticBannerSrc: r, videoBannerSrc: f, bannerAspectRatio: x = 0, iconSrc: C, embedUrl: E, actions: v = [] } = e,
         { primaryColor: I, secondaryColor: N } = (0, u.Z)(null != C ? C : r),
         S = 'linear-gradient(45deg, '.concat(I, ', ').concat(N, ')'),
         T = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
         b =
-            _.wS && null != v
+            _.wS && null != E
                 ? (0, l.jsx)(c.zxk, {
                       look: c.zxk.Looks.BLANK,
                       size: c.zxk.Sizes.ICON,
                       'aria-label': p.intl.string(p.t.WqhZsr),
                       className: g.linkIcon,
                       onClick: () => {
-                          (0, _.JG)(v), (0, c.showToast)((0, c.createToast)(p.intl.string(p.t['L/PwZW']), c.ToastType.SUCCESS));
+                          (0, _.JG)(E), (0, c.showToast)((0, c.createToast)(p.intl.string(p.t['L/PwZW']), c.ToastType.SUCCESS));
                       },
                       children: (0, l.jsx)(c.xPt, {
                           size: 'xs',
@@ -126,10 +126,10 @@ function x(e) {
                             null == n && b
                         ]
                     }),
-                    E.length > 0 &&
+                    v.length > 0 &&
                         (0, l.jsx)('div', {
                             className: g.actionWrapper,
-                            children: E.map((e, t) => {
+                            children: v.map((e, t) => {
                                 let { label: n, onClick: i, disabledReason: a, submitting: r } = e,
                                     s = null != a,
                                     o = 0 === t,

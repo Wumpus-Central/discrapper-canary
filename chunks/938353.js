@@ -30,8 +30,8 @@ var i,
     f = n(433074),
     x = n(421474),
     C = n(603270),
-    v = n(162297),
-    E = n(222709),
+    E = n(162297),
+    v = n(222709),
     I = n(446411),
     N = n(960904),
     S = n(161314),
@@ -84,8 +84,8 @@ var i,
     ef = n(70956),
     ex = n(408433),
     eC = n(630388),
-    ev = n(709054),
-    eE = n(591759),
+    eE = n(709054),
+    ev = n(591759),
     eI = n(169525),
     eN = n(786761),
     eS = n(161010),
@@ -299,7 +299,7 @@ class e2 extends (i = a.Component) {
                             );
                   } else if (n === N.g.APP_OAUTH2_LINK)
                       return (0, l.jsx)(
-                          v.Z,
+                          E.Z,
                           {
                               applicationId: i,
                               embedUrl: a
@@ -438,7 +438,7 @@ class e2 extends (i = a.Component) {
                     });
                 return c in h && (g && ((o.onClick = h[c]), (o.handlePreloadImage = p[c])), 'IMAGE' === o.item.type && (o.onViewItem = h[c])), o;
             }),
-            v = n
+            E = n
                 ? (0, l.jsx)(P.Z, {
                       className: eK.hideIfMessageNotFocused,
                       messageId: e.id,
@@ -448,7 +448,7 @@ class e2 extends (i = a.Component) {
                 : void 0;
         return (0, l.jsx)(eU.Z, {
             items: C,
-            inlineForwardButton: v
+            inlineForwardButton: E
         });
     }
     renderEmbeds(e) {
@@ -462,7 +462,7 @@ class e2 extends (i = a.Component) {
                       renderLinkComponent: ew.iT
                   };
                   if (t.type === eV.hBH.ARTICLE && null != t.url && /^https?:\/\/(?:canary|ptb|www)?\.discord(?:app)?\.com\/store\/skus\/(?:[0-9]+)/.test(t.url) && null != t.provider && 'Discord' === t.provider.name) {
-                      let a = eE.Z.safeParseWithQuery(t.url);
+                      let a = ev.Z.safeParseWithQuery(t.url);
                       if (null != a && null != a.pathname) {
                           let r = a.pathname.split('/')[3];
                           if (null != r)
@@ -512,7 +512,7 @@ class e2 extends (i = a.Component) {
     renderPublishBump(e) {
         return this.props.channel.type !== eV.d4z.GUILD_ANNOUNCEMENT || this.props.isMessageSnapshot
             ? null
-            : (0, l.jsx)(E.Z, {
+            : (0, l.jsx)(v.Z, {
                   channelId: e.channel_id,
                   messageId: e.id
               });
@@ -552,7 +552,7 @@ class e2 extends (i = a.Component) {
             });
     }
     renderThreadRoleMentionWarning(e) {
-        if (e.hasFlag(eV.iLy.FAILED_TO_MENTION_SOME_ROLES_IN_THREAD) && this.props.isCurrentUser && !(Date.now() - ev.default.extractTimestamp(e.id) >= eJ))
+        if (e.hasFlag(eV.iLy.FAILED_TO_MENTION_SOME_ROLES_IN_THREAD) && this.props.isCurrentUser && !(Date.now() - eE.default.extractTimestamp(e.id) >= eJ))
             return (0, l.jsx)('div', {
                 className: eY.threadRoleMentionFailure,
                 children: eW.intl.string(eW.t.ma8Rs7)
@@ -695,8 +695,8 @@ class e2 extends (i = a.Component) {
             f = this.renderPublishBump(t),
             x = this.renderEphemeralAccessories(t),
             C = this.renderStickersAccessories(t),
-            v = this.renderThreadAccessories(t),
-            E = this.renderComponentAccessories(t),
+            E = this.renderThreadAccessories(t),
+            v = this.renderComponentAccessories(t),
             I = this.renderThreadRoleMentionWarning(t),
             N = this.renderEmbeddedApplicationInstanceEmbed(t),
             S = this.renderInteractionPremiumUpsell(t),
@@ -707,12 +707,12 @@ class e2 extends (i = a.Component) {
             y = this.renderMediaObscureNotice(t),
             Z = this.renderPoll(t, i),
             R = this.renderForwardedMessage(t);
-        return null == o && null == u && null == h && null == p && null == g && null == c && null == d && null == f && null == x && null == C && null == v && null == E && null == N && null == I && null == T && null == b && null != S && null == Z && null == j && null == R
+        return null == o && null == u && null == h && null == p && null == g && null == c && null == d && null == f && null == x && null == C && null == E && null == v && null == N && null == I && null == T && null == b && null != S && null == Z && null == j && null == R
             ? null
             : (0, l.jsxs)('div', {
                   id: (0, eM.bX)(t),
                   className: s()(e, eY.container),
-                  children: [R, I, Z, o, c, d, T, u, m, h, y, p, C, E, N, S, _, g, f, x, a && this.renderSuppressConfirmModal(), r && this.renderRemoveAttachmentConfirmModal(), v, b, A, j]
+                  children: [R, I, Z, o, c, d, T, u, m, h, y, p, C, v, N, S, _, g, f, x, a && this.renderSuppressConfirmModal(), r && this.renderRemoveAttachmentConfirmModal(), E, b, A, j]
               });
     }
     constructor(...e) {
@@ -827,8 +827,8 @@ function e3(e) {
             }),
             [h, n]
         ),
-        v = (0, M.ux)(n.guild_id),
-        [, E] = (0, O.AB)(n.guild_id),
+        E = (0, M.ux)(n.guild_id),
+        [, v] = (0, O.AB)(n.guild_id),
         I = (0, es.$R)(n),
         N = (s === i.author.id || C) && i.author.id !== eV.LAt && !1 !== a && !(0, eC.yE)(i.flags, eV.iLy.EPHEMERAL) && I && 1 === (0, eb.Z)(i),
         S = s === i.author.id && I && !r,
@@ -841,9 +841,9 @@ function e3(e) {
             canAddNewReactions: x,
             isLurking: p,
             isGuest: g,
-            communicationDisabled: E,
+            communicationDisabled: v,
             isActiveChannelOrUnarchivableThread: I,
-            isAutomodQuarantined: v
+            isAutomodQuarantined: E
         }),
         L = (0, z.A)((null !== (t = i.editedTimestamp) && void 0 !== t ? t : i.timestamp).valueOf()),
         P = (0, X.Z)(null == n ? void 0 : n.id),
@@ -893,7 +893,7 @@ let e4 = (e) => {
         f = (0, X.Z)(null == i ? void 0 : i.id),
         x = (0, b.V)(i.id, n.author.id),
         C = (0, A.r)(n.id),
-        v = (0, J.Z)(n);
+        E = (0, J.Z)(n);
     return (0, l.jsx)(e2, {
         ...u,
         message: n,
@@ -909,7 +909,7 @@ let e4 = (e) => {
         inlineEmbedMedia: _,
         renderEmbeds: h,
         gifAutoPlay: p,
-        poll: v,
+        poll: E,
         showListsAndHeaders: g,
         showMaskedLinks: g,
         shouldHideMediaOptions: f,

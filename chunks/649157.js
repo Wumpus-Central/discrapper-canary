@@ -1,17 +1,17 @@
-n.d(t, { Z: () => h }), n(47120);
+n.d(t, { Z: () => m }), n(47120);
 var i = n(200651),
     s = n(192379),
-    l = n(442837),
-    r = n(481060),
+    r = n(442837),
+    l = n(481060),
     a = n(153867),
     o = n(706454),
     c = n(388032),
     d = n(862075),
     u = n(444675);
-function h() {
-    let e = (0, l.e7)([o.default], () => o.default.locale),
-        [t, h] = s.useState(e),
-        [m] = s.useState(() =>
+function m() {
+    let e = (0, r.e7)([o.default], () => o.default.locale),
+        [t, m] = s.useState(e),
+        [h] = s.useState(() =>
             (0, c.getAvailableLocales)().map((e) => {
                 let t;
                 try {
@@ -48,17 +48,17 @@ function h() {
         ),
         g = s.useCallback((e) => {
             let { value: t } = e;
-            h(t), u.nextTick(() => a.ZP.updateLocale(t));
+            m(t), u.nextTick(() => a.ZP.updateLocale(t));
         }, []);
-    return (0, i.jsx)(r.hjN, {
-        tag: r.RB0.H1,
+    return (0, i.jsx)(l.hjN, {
+        tag: l.RB0.H1,
         title: c.intl.string(c.t.IHMsPj),
-        children: (0, i.jsx)(r.hjN, {
-            children: (0, i.jsx)(r.xJW, {
+        children: (0, i.jsx)(l.hjN, {
+            children: (0, i.jsx)(l.xJW, {
                 title: c.intl.string(c.t['mx+sp6']),
-                children: (0, i.jsx)(r.FXm, {
+                children: (0, i.jsx)(l.FXm, {
                     onChange: g,
-                    options: m,
+                    options: h,
                     value: t
                 })
             })

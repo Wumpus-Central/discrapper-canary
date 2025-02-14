@@ -1,5 +1,5 @@
 n.d(t, {
-    h: () => E,
+    h: () => v,
     x: () => I
 });
 var i = n(200651);
@@ -20,8 +20,8 @@ var l = n(120356),
     f = n(575460),
     x = n(293810),
     C = n(388032),
-    v = n(187391);
-let E = (e) => {
+    E = n(187391);
+let v = (e) => {
         let { onClose: t, listing: n, step: l, guildId: r } = e,
             o = (0, h.YB)(r),
             u = (0, c.Z)(x.Xy),
@@ -32,37 +32,37 @@ let E = (e) => {
                 return null == t && l !== d.h8.CONFIRM
                     ? null
                     : null == t
-                      ? (0, i.jsx)('div', { className: v.headerImageEmpty })
+                      ? (0, i.jsx)('div', { className: E.headerImageEmpty })
                       : (0, i.jsx)('img', {
                             src: t,
                             alt: '',
-                            className: v.headerImage
+                            className: E.headerImage
                         });
             })();
         return (0, i.jsxs)('div', {
-            className: a()(v.headerContainer, { [v.headerEmpty]: u || null == _ }),
+            className: a()(E.headerContainer, { [E.headerEmpty]: u || null == _ }),
             children: [
                 _,
                 (() => {
                     if (l !== d.h8.CONFIRM) return null;
                     let e = null == n.image_asset ? void 0 : (0, m._W)(n.application_id, n.image_asset, 80);
                     return (0, i.jsx)('div', {
-                        className: v.tierImageContainer,
+                        className: E.tierImageContainer,
                         children: (0, i.jsx)('img', {
                             src: e,
                             alt: '',
-                            className: v.tierImage
+                            className: E.tierImage
                         })
                     });
                 })(),
                 (0, i.jsx)(s.P3F, {
-                    className: v.closeContainer,
+                    className: E.closeContainer,
                     onClick: () => t(!1),
                     'aria-label': C.intl.string(C.t.cpT0Cg),
                     children: (0, i.jsx)(s.Dio, {
                         size: 'md',
                         color: 'currentColor',
-                        className: v.closeIcon
+                        className: E.closeIcon
                     })
                 })
             ]
@@ -75,16 +75,16 @@ let E = (e) => {
             d = n.role_benefits.benefits.filter(_.rC).slice(0, null === c.length ? 4 : 3),
             m = (0, g.Z)(d).slice(0, null === c.length ? 4 : 3);
         return (0, i.jsxs)('div', {
-            className: v.confirmationContainer,
+            className: E.confirmationContainer,
             children: [
                 (0, i.jsx)(s.X6q, {
-                    className: v.confirmationHeader,
+                    className: E.confirmationHeader,
                     variant: 'heading-xl/semibold',
                     color: 'header-secondary',
                     children: C.intl.format(C.t['1HIsTk'], { serverName: null == a ? void 0 : a.toString() })
                 }),
                 (0, i.jsx)(s.Text, {
-                    className: v.confirmationSubtitle,
+                    className: E.confirmationSubtitle,
                     variant: 'text-md/normal',
                     color: 'header-secondary',
                     children: C.intl.format(C.t.oi3gio, { tier: n.name })
@@ -95,11 +95,11 @@ let E = (e) => {
                             (0, i.jsx)(s.Text, {
                                 variant: 'text-xs/normal',
                                 color: 'header-secondary',
-                                className: v.confirmationSectionLabel,
+                                className: E.confirmationSectionLabel,
                                 children: C.intl.string(C.t.w0CQ09)
                             }),
                             (0, i.jsx)('div', {
-                                className: v.confirmationBenefits,
+                                className: E.confirmationBenefits,
                                 children: m.map((e) =>
                                     (0, i.jsx)(
                                         f.Z,
@@ -123,24 +123,24 @@ let E = (e) => {
                             (0, i.jsx)(s.Text, {
                                 variant: 'text-xs/medium',
                                 color: 'header-secondary',
-                                className: v.confirmationSectionLabel,
+                                className: E.confirmationSectionLabel,
                                 children: C.intl.string(C.t['6Y1FLi'])
                             }),
                             (0, i.jsxs)('div', {
-                                className: v.emojiBenefitsRow,
+                                className: E.emojiBenefitsRow,
                                 children: [
                                     (0, i.jsx)(o.Z, {
                                         emojiId: t.id,
                                         emojiName: t.name,
                                         animated: null !== (e = t.animated) && void 0 !== e && e,
-                                        className: v.emojiImage
+                                        className: E.emojiImage
                                     }),
                                     (0, i.jsxs)('div', {
                                         children: [
                                             (0, i.jsx)(s.Text, {
                                                 variant: 'text-md/medium',
                                                 color: 'header-primary',
-                                                className: v.emojiName,
+                                                className: E.emojiName,
                                                 children: C.intl.string(C.t.PrKk4u)
                                             }),
                                             (0, i.jsx)(s.Text, {
@@ -156,7 +156,7 @@ let E = (e) => {
                     });
                 })(),
                 (0, i.jsx)(s.zxk, {
-                    className: v.confirmationButton,
+                    className: E.confirmationButton,
                     onClick: () => t(!0),
                     children: C.intl.string(C.t['Ph+ecH'])
                 })

@@ -5,8 +5,8 @@ var i = n(72924),
     a = n(996106),
     s = n(452426),
     o = n(561205),
-    c = n(334288),
-    d = n(852926),
+    d = n(334288),
+    c = n(852926),
     u = n(186901),
     h = n(981631),
     m = n(474936);
@@ -41,10 +41,10 @@ let _ = {
                 socket: t,
                 args: { sku_id: n, pid: l }
             } = e;
-            (0, c.f)(t.transport);
+            (0, d.f)(t.transport);
             let r = t.application.id;
             if (null == r) throw new a.Z({ errorCode: h.lTL.INVALID_COMMAND }, 'No application.');
-            let { lock: s, context: m } = (0, d.jU)(t.transport !== u.He.POST_MESSAGE ? l : null);
+            let { lock: s, context: m } = (0, c.jU)(t.transport !== u.He.POST_MESSAGE ? l : null);
             if (null == (0, o.Z)()) throw new a.Z({ errorCode: h.lTL.INVALID_CHANNEL }, 'Invalid channel');
             let _ = { page: h.ZY5.IN_APP };
             return (async () => {
@@ -76,8 +76,8 @@ let _ = {
                 socket: t,
                 args: { pid: n }
             } = e;
-            if (((0, c.f)(t.transport), null == t.application.id)) throw new a.Z({ errorCode: h.lTL.INVALID_COMMAND }, 'No application.');
-            let { lock: i, context: l } = (0, d.jU)(t.transport !== u.He.POST_MESSAGE ? n : null);
+            if (((0, d.f)(t.transport), null == t.application.id)) throw new a.Z({ errorCode: h.lTL.INVALID_COMMAND }, 'No application.');
+            let { lock: i, context: l } = (0, c.jU)(t.transport !== u.He.POST_MESSAGE ? n : null);
             return g(l, { page: h.ZY5.IN_APP }).then(
                 () => {
                     i();

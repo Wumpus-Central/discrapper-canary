@@ -18,8 +18,8 @@ function f(e) {
     let { invite: n, getAcceptInviteContext: f } = e,
         x = (0, a.e7)([d.default], () => d.default.getId()),
         C = (null === (t = n.inviter) || void 0 === t ? void 0 : t.id) === x,
-        v = n.state === h.r2o.ACCEPTING,
-        E = (0, a.e7)([m.Z], () => {
+        E = n.state === h.r2o.ACCEPTING,
+        v = (0, a.e7)([m.Z], () => {
             var e;
             return null != n.inviter && m.Z.isFriend(null === (e = n.inviter) || void 0 === e ? void 0 : e.id);
         }),
@@ -34,10 +34,10 @@ function f(e) {
             });
         }, [n.code, f]);
     if (null == n.inviter) return null;
-    let S = E ? I : N,
+    let S = v ? I : N,
         T = p.intl.string(p.t.ib7Ng4),
         b = o.Z.Button.Colors.GREEN;
-    E ? ((T = p.intl.string(p.t.xhxnPj)), (b = o.Z.Button.Colors.PRIMARY)) : C && ((T = p.intl.string(p.t.ib7Ng4)), (b = o.Z.Button.Colors.PRIMARY));
+    v ? ((T = p.intl.string(p.t.xhxnPj)), (b = o.Z.Button.Colors.PRIMARY)) : C && ((T = p.intl.string(p.t.ib7Ng4)), (b = o.Z.Button.Colors.PRIMARY));
     let A = C ? p.intl.string(p.t.eQyu1N) : p.intl.string(p.t.PYJHW1),
         j = null != n.inviter ? ''.concat(n.inviter.username) : '',
         y = null != n.inviter ? _.ZP.getUserTag(n.inviter) : '';
@@ -51,18 +51,18 @@ function f(e) {
                         children: [
                             (0, i.jsx)(o.Z.Icon, {
                                 user: new c.Z(n.inviter),
-                                onClick: E ? S : void 0
+                                onClick: v ? S : void 0
                             }),
                             (0, i.jsx)(o.Z.Info, {
                                 title: j,
-                                onClick: E ? S : void 0,
+                                onClick: v ? S : void 0,
                                 children: y
                             })
                         ]
                     }),
                     (0, i.jsx)(o.Z.Button, {
                         onClick: S,
-                        submitting: v,
+                        submitting: E,
                         isDisabled: C,
                         color: b,
                         children: T

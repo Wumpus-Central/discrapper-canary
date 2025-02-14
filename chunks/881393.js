@@ -5,8 +5,8 @@ var i = n(496929),
     a = n(115130),
     s = n(106976),
     o = n(695103),
-    c = n(996106),
-    d = n(334288),
+    d = n(996106),
+    c = n(334288),
     u = n(186901),
     h = n(981631);
 async function m(e, t) {
@@ -47,9 +47,9 @@ async function m(e, t) {
 }
 async function p(e) {
     let { socket: t } = e;
-    (0, d.f)(t.transport);
+    (0, c.f)(t.transport);
     let n = t.application.id;
-    if (null == n) throw new c.Z({ errorCode: h.lTL.INVALID_COMMAND }, 'No application.');
+    if (null == n) throw new d.Z({ errorCode: h.lTL.INVALID_COMMAND }, 'No application.');
     if (o.Z.inTestModeForApplication(n) || a.Z.inDevModeForApplication(n)) {
         let e = await l.uE(n, !1),
             t = await m(n, e);
@@ -69,9 +69,9 @@ async function p(e) {
 }
 function g(e) {
     let { socket: t } = e;
-    (0, d.f)(t.transport);
+    (0, c.f)(t.transport);
     let n = t.application.id;
-    if (null == n) throw new c.Z({ errorCode: h.lTL.INVALID_COMMAND }, 'No application.');
+    if (null == n) throw new d.Z({ errorCode: h.lTL.INVALID_COMMAND }, 'No application.');
     return i.yD(n);
 }
 let _ = {

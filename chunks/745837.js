@@ -6,8 +6,8 @@ var l = n(120356),
     a = n(442837),
     s = n(481060),
     o = n(547972),
-    c = n(556296),
-    d = n(63063),
+    d = n(556296),
+    c = n(63063),
     u = n(13140),
     h = n(435064),
     m = n(39604),
@@ -20,7 +20,7 @@ function I(e) {
     (0, o.Z)(_.Z.CLIPS), (0, m.UW)(e);
 }
 function C() {
-    let e = (0, a.e7)([c.ZP], () => c.ZP.getKeybindForAction(g.kg4.SAVE_CLIP));
+    let e = (0, a.e7)([d.ZP], () => d.ZP.getKeybindForAction(g.kg4.SAVE_CLIP));
     if (null == e) return (0, i.jsx)(i.Fragment, { children: f.intl.string(f.t.miecxM) });
     let t = u.BB(e.shortcut, !0);
     return (0, i.jsx)(i.Fragment, {
@@ -52,7 +52,7 @@ let N = {
             }),
         buttonCopy: () => f.intl.string(f.t.vDGv9f),
         ctaOnClick: () => {
-            window.open(d.Z.getArticleURL(g.BhN.CLIPS), '_blank');
+            window.open(c.Z.getArticleURL(g.BhN.CLIPS), '_blank');
         },
         containerClass: E.container
     },
@@ -81,12 +81,12 @@ function v() {
             clipsError: h.Z.getLastClipsError()
         })),
         n = null != t ? p.D5.Error : e ? p.D5.Enabled : p.D5.Disabled,
-        { bodyCopy: l, buttonCopy: r, ctaOnClick: o, textColor: c, buttonColor: d, buttonLook: u, containerClass: g } = N[n];
+        { bodyCopy: l, buttonCopy: r, ctaOnClick: o, textColor: d, buttonColor: c, buttonLook: u, containerClass: g } = N[n];
     return (0, i.jsxs)('div', {
         className: g,
         children: [
             (0, i.jsx)(s.Text, {
-                color: c,
+                color: d,
                 variant: 'text-sm/medium',
                 children: l()
             }),
@@ -104,7 +104,7 @@ function v() {
             (0, i.jsx)(s.zxk, {
                 onClick: o,
                 className: E.buttonCTA,
-                color: d,
+                color: c,
                 look: u,
                 fullWidth: !0,
                 size: s.zxk.Sizes.SMALL,

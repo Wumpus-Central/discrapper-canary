@@ -20,23 +20,23 @@ let s = 12 * n(70956).Z.Millis.HOUR,
         profileThemesRelevanceExceeded: null,
         savedAt: null
     },
-    c = { hasFetchedRelevance: !1 },
-    d = o,
-    u = c;
+    d = { hasFetchedRelevance: !1 },
+    c = o,
+    u = d;
 class h extends (i = l.ZP.PersistedStore) {
     initialize(e) {
-        (u = c), (d = o);
+        (u = d), (c = o);
         let t = new Date();
-        null != e && null != e.savedAt && t.getTime() - e.savedAt < s && (d = e);
+        null != e && null != e.savedAt && t.getTime() - e.savedAt < s && (c = e);
     }
     get hasFetchedRelevance() {
         return u.hasFetchedRelevance;
     }
     get profileThemesRelevanceExceeded() {
-        return d.profileThemesRelevanceExceeded;
+        return c.profileThemesRelevanceExceeded;
     }
     getState() {
-        return d;
+        return c;
     }
 }
 a(h, 'displayName', 'PerksRelevanceStore'), a(h, 'persistKey', 'PerksRelevanceStore');
@@ -46,10 +46,10 @@ let m = new h(r.Z, {
     },
     BILLING_PERKS_RELEVANCE_FETCH_SUCCESS: function (e) {
         let { res: t } = e;
-        null != t && ((d.profileThemesRelevanceExceeded = t.eligible), (d.savedAt = new Date().getTime()));
+        null != t && ((c.profileThemesRelevanceExceeded = t.eligible), (c.savedAt = new Date().getTime()));
     },
     BILLING_PERKS_RELEVANCE_FETCH_FAIL: function () {},
     LOGOUT: function () {
-        (u = c), (d = o);
+        (u = d), (c = o);
     }
 });

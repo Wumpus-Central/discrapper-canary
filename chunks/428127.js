@@ -2,8 +2,8 @@ n.d(t, { Z: () => C });
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    o = n.n(r),
-    a = n(642128),
+    a = n.n(r),
+    o = n(642128),
     s = n(442837),
     c = n(481060),
     d = n(492162),
@@ -20,7 +20,7 @@ let _ = {
 function v(e) {
     var t;
     let { guildChannels: n, jumpToVoiceChannels: r } = e,
-        a = n.getCategoryFromSection(n.voiceChannelsSectionNumber),
+        o = n.getCategoryFromSection(n.voiceChannelsSectionNumber),
         s = (0, d.Z)(n.id),
         h = l.useCallback(
             (e) => {
@@ -28,7 +28,7 @@ function v(e) {
             },
             [r]
         ),
-        m = null !== (t = null == a ? void 0 : a.getChannelRecords()) && void 0 !== t ? t : [],
+        m = null !== (t = null == o ? void 0 : o.getChannelRecords()) && void 0 !== t ? t : [],
         _ = (0, p.c4)({
             channels: m,
             selectedChannelId: null,
@@ -36,7 +36,7 @@ function v(e) {
             voiceStates: s
         });
     return (0, i.jsxs)(c.P3F, {
-        className: o()(f.bar, f.voiceBar),
+        className: a()(f.bar, f.voiceBar),
         onClick: h,
         children: [
             (0, i.jsx)(c.gj8, {
@@ -83,17 +83,17 @@ function C(e) {
             [u, b]
         );
     return (0, i.jsx)('div', {
-        className: o()(f.container, {
+        className: a()(f.container, {
             [f.top]: 'top' === t,
             [f.bottom]: 'bottom' === t
         }),
-        children: (0, i.jsx)(a.animated.div, {
+        children: (0, i.jsx)(o.animated.div, {
             className: f.containerPadding,
             style: N,
             'aria-hidden': S,
             children:
                 I === m.x.HIDDEN
-                    ? (0, i.jsx)('div', { className: o()(f.bar, f.emptyBar) })
+                    ? (0, i.jsx)('div', { className: a()(f.bar, f.emptyBar) })
                     : I === m.x.UNREAD
                       ? (0, i.jsxs)(c.P3F, {
                             className: f.bar,
@@ -124,7 +124,7 @@ function C(e) {
                         })
                       : I === m.x.MENTIONS
                         ? (0, i.jsx)(c.P3F, {
-                              className: o()(f.bar, f.mentionsBar),
+                              className: a()(f.bar, f.mentionsBar),
                               onClick: E,
                               children: (0, i.jsx)(c.Text, {
                                   variant: 'text-xs/semibold',

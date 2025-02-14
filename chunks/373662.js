@@ -13,7 +13,7 @@ var i = n(200651),
     d = n(388032),
     u = n(403420);
 function m(e) {
-    let { label: t, ariaLabel: n, tooltipText: l, tooltipColor: m, icon: _, iconProps: h, onClick: p, onTooltipShow: g, onTooltipHide: f, disabled: x, dangerous: C, separator: v, sparkle: E, showNewBadge: I, buttonClassName: N, children: S, ...T } = e,
+    let { label: t, ariaLabel: n, tooltipText: l, tooltipColor: m, icon: _, iconProps: h, onClick: p, onTooltipShow: g, onTooltipHide: f, disabled: x, dangerous: C, separator: E, sparkle: v, showNewBadge: I, buttonClassName: N, children: S, ...T } = e,
         { canShowReactionsOnMessageHover: b } = c.ZP.useExperiment({ location: 'HoverBarButton' }, { autoTrackExposure: !0 });
     return (
         c.Xb.useExperiment({ location: 'HoverBarButton' }, { autoTrackExposure: !0 }),
@@ -54,7 +54,7 @@ function m(e) {
                                           children: S
                                       })
                                     : null,
-                                E && (0, i.jsx)(r.K1N, {}),
+                                v && (0, i.jsx)(r.K1N, {}),
                                 I &&
                                     (0, i.jsx)(r.IGR, {
                                         text: d.intl.string(d.t.y2b7CA),
@@ -63,7 +63,7 @@ function m(e) {
                                     })
                             ]
                         }),
-                        v && (0, i.jsx)(o.Z0, {})
+                        E && (0, i.jsx)(o.Z0, {})
                     ]
                 });
             }

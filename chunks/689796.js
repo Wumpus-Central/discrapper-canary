@@ -5,15 +5,15 @@ var i = n(200651),
     a = n(770146),
     s = n(600164),
     o = n(981631),
-    c = n(388032),
-    d = n(631489);
+    d = n(388032),
+    c = n(631489);
 class u extends l.PureComponent {
     renderContentRatingImage() {
         let { contentRating: e, contentRatingAgency: t } = this.props.sku;
         return null == e || null == t
             ? null
             : (0, i.jsx)(r.Z, {
-                  className: d.rating,
+                  className: c.rating,
                   agency: t,
                   rating: e.rating
               });
@@ -26,71 +26,71 @@ class u extends l.PureComponent {
         if (null == e || null == t) return null;
         let l = {
                 [o.aIt.ESRB]: {
-                    1: c.intl.string(c.t.ErVezc),
-                    2: c.intl.string(c.t.xLyerK),
-                    3: c.intl.string(c.t.UmB6j4),
-                    4: c.intl.string(c.t.NHOQIy),
-                    5: c.intl.string(c.t.U6xTOz),
-                    6: c.intl.string(c.t['51xJIy']),
-                    7: c.intl.string(c.t.uayp6u),
-                    8: c.intl.string(c.t.c1GtKi),
-                    9: c.intl.string(c.t.Hz8vra),
-                    10: c.intl.string(c.t.qSyzdX),
-                    11: c.intl.string(c.t.K68q8f),
-                    12: c.intl.string(c.t.Yb0n6O),
-                    13: c.intl.string(c.t.IIFZqq),
-                    14: c.intl.string(c.t['NZ/JGR']),
-                    15: c.intl.string(c.t['5qETTU']),
-                    16: c.intl.string(c.t.kJGLz8),
-                    17: c.intl.string(c.t.cB2QRE),
-                    18: c.intl.string(c.t.g9SiEx),
-                    19: c.intl.string(c.t['Xe0T5+']),
-                    20: c.intl.string(c.t['4k6sY2']),
-                    21: c.intl.string(c.t.cxFiDA),
-                    22: c.intl.string(c.t.YvpQKy),
-                    23: c.intl.string(c.t.i2gbpa),
-                    24: c.intl.string(c.t['LooT/f']),
-                    25: c.intl.string(c.t['/AIXho']),
-                    26: c.intl.string(c.t.oo09Hx),
-                    27: c.intl.string(c.t.XCUBe3),
-                    28: c.intl.string(c.t.g6dipa),
-                    29: c.intl.string(c.t.YYGUqq),
-                    30: c.intl.string(c.t.WsqFnJ),
-                    31: c.intl.string(c.t.zePEoq),
-                    32: c.intl.string(c.t.bGErw8),
-                    33: c.intl.string(c.t['imoY9/']),
-                    34: c.intl.string(c.t['Z+VBdn']),
-                    35: c.intl.string(c.t.eBgo0N),
-                    36: c.intl.string(c.t['6SVTt7']),
-                    37: c.intl.string(c.t['8Lme6e']),
-                    38: c.intl.string(c.t.ettX4O),
-                    39: c.intl.string(c.t.nnVZFx),
-                    40: c.intl.string(c.t.TWlbXl),
-                    41: c.intl.string(c.t.CAGgEx),
-                    42: c.intl.string(c.t['jRZf+f']),
-                    43: c.intl.string(c.t['4Vg0mp'])
+                    1: d.intl.string(d.t.ErVezc),
+                    2: d.intl.string(d.t.xLyerK),
+                    3: d.intl.string(d.t.UmB6j4),
+                    4: d.intl.string(d.t.NHOQIy),
+                    5: d.intl.string(d.t.U6xTOz),
+                    6: d.intl.string(d.t['51xJIy']),
+                    7: d.intl.string(d.t.uayp6u),
+                    8: d.intl.string(d.t.c1GtKi),
+                    9: d.intl.string(d.t.Hz8vra),
+                    10: d.intl.string(d.t.qSyzdX),
+                    11: d.intl.string(d.t.K68q8f),
+                    12: d.intl.string(d.t.Yb0n6O),
+                    13: d.intl.string(d.t.IIFZqq),
+                    14: d.intl.string(d.t['NZ/JGR']),
+                    15: d.intl.string(d.t['5qETTU']),
+                    16: d.intl.string(d.t.kJGLz8),
+                    17: d.intl.string(d.t.cB2QRE),
+                    18: d.intl.string(d.t.g9SiEx),
+                    19: d.intl.string(d.t['Xe0T5+']),
+                    20: d.intl.string(d.t['4k6sY2']),
+                    21: d.intl.string(d.t.cxFiDA),
+                    22: d.intl.string(d.t.YvpQKy),
+                    23: d.intl.string(d.t.i2gbpa),
+                    24: d.intl.string(d.t['LooT/f']),
+                    25: d.intl.string(d.t['/AIXho']),
+                    26: d.intl.string(d.t.oo09Hx),
+                    27: d.intl.string(d.t.XCUBe3),
+                    28: d.intl.string(d.t.g6dipa),
+                    29: d.intl.string(d.t.YYGUqq),
+                    30: d.intl.string(d.t.WsqFnJ),
+                    31: d.intl.string(d.t.zePEoq),
+                    32: d.intl.string(d.t.bGErw8),
+                    33: d.intl.string(d.t['imoY9/']),
+                    34: d.intl.string(d.t['Z+VBdn']),
+                    35: d.intl.string(d.t.eBgo0N),
+                    36: d.intl.string(d.t['6SVTt7']),
+                    37: d.intl.string(d.t['8Lme6e']),
+                    38: d.intl.string(d.t.ettX4O),
+                    39: d.intl.string(d.t.nnVZFx),
+                    40: d.intl.string(d.t.TWlbXl),
+                    41: d.intl.string(d.t.CAGgEx),
+                    42: d.intl.string(d.t['jRZf+f']),
+                    43: d.intl.string(d.t['4Vg0mp'])
                 },
                 [o.aIt.PEGI]: {
-                    1: c.intl.string(c.t.VcO2U1),
-                    2: c.intl.string(c.t['wt264+']),
-                    3: c.intl.string(c.t['5yzEJS']),
-                    4: c.intl.string(c.t.NBQZX1),
-                    5: c.intl.string(c.t['4UG90d']),
-                    6: c.intl.string(c.t.Cf5CtL),
-                    7: c.intl.string(c.t.ai9C3d)
+                    1: d.intl.string(d.t.VcO2U1),
+                    2: d.intl.string(d.t['wt264+']),
+                    3: d.intl.string(d.t['5yzEJS']),
+                    4: d.intl.string(d.t.NBQZX1),
+                    5: d.intl.string(d.t['4UG90d']),
+                    6: d.intl.string(d.t.Cf5CtL),
+                    7: d.intl.string(d.t.ai9C3d)
                 }
             },
             r = e.descriptors.map((e) => l[t][e]).join(', ');
         return (0, i.jsxs)('div', {
             className: n,
             children: [
-                (0, i.jsx)(a.Z, { children: c.intl.string(c.t.q9Zqgo) }),
+                (0, i.jsx)(a.Z, { children: d.intl.string(d.t.q9Zqgo) }),
                 (0, i.jsxs)(s.Z, {
-                    className: d.content,
+                    className: c.content,
                     children: [
                         this.renderContentRatingImage(),
                         (0, i.jsx)('div', {
-                            className: d.__invalid_info,
+                            className: c.__invalid_info,
                             children: r
                         })
                     ]

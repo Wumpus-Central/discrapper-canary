@@ -1,12 +1,12 @@
-n.d(t, { Z: () => k }), n(47120);
+n.d(t, { Z: () => M }), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
     a = n.n(r),
     s = n(442837),
     o = n(692547),
-    c = n(481060),
-    d = n(232567),
+    d = n(481060),
+    c = n(232567),
     u = n(100527),
     h = n(471445),
     m = n(15274),
@@ -22,9 +22,9 @@ var i = n(200651),
     T = n(922482),
     S = n(565799),
     A = n(501655),
-    b = n(427679),
-    Z = n(448206),
-    x = n(184301),
+    Z = n(427679),
+    x = n(448206),
+    b = n(184301),
     L = n(347475),
     y = n(496675),
     O = n(594174),
@@ -33,28 +33,28 @@ var i = n(200651),
     j = n(765305),
     D = n(388032),
     w = n(809715);
-function k(e) {
+function M(e) {
     let { guild: t, isStudyRoomNotice: n = !1 } = e,
         r = (0, E.y)(t.id),
-        k = (0, I.k5)(t.id),
-        M = (0, s.e7)([b.Z], () => b.Z.getStageInstanceByChannel(null == r ? void 0 : r.id), [r]),
+        M = (0, I.k5)(t.id),
+        k = (0, s.e7)([Z.Z], () => Z.Z.getStageInstanceByChannel(null == r ? void 0 : r.id), [r]),
         { isStageNoticeHidden: U, isEventNoticeHidden: G } = (0, s.cj)(
             [_.Z],
             () => ({
-                isStageNoticeHidden: _.Z.isLiveChannelNoticeHidden({ stageId: null == M ? void 0 : M.id }),
-                isEventNoticeHidden: _.Z.isLiveChannelNoticeHidden({ eventId: null == k ? void 0 : k.id })
+                isStageNoticeHidden: _.Z.isLiveChannelNoticeHidden({ stageId: null == k ? void 0 : k.id }),
+                isEventNoticeHidden: _.Z.isLiveChannelNoticeHidden({ eventId: null == M ? void 0 : M.id })
             }),
-            [M, k]
+            [k, M]
         ),
         B = null == r ? void 0 : r.id,
         V = (0, s.Wu)([S.Z], () => [...new Set(S.Z.getMutableParticipants(B, A.pV.SPEAKER).map((e) => e.user))], [B]),
         H = (0, s.e7)([S.Z], () => (null != B ? S.Z.getParticipantCount(B, A.pV.AUDIENCE) : 0), [B]),
         F = (0, s.e7)([y.Z], () => y.Z.can(R.Plq.CONNECT, r)),
-        z = (0, Z.Z)(null == r ? void 0 : r.id),
-        W = null == k ? void 0 : k.creator_id,
+        z = (0, x.Z)(null == r ? void 0 : r.id),
+        W = null == M ? void 0 : M.creator_id,
         Y = (0, s.e7)([O.default], () => O.default.getUser(W), [W]);
     l.useEffect(() => {
-        null != W && (0, d.PR)(W);
+        null != W && (0, c.PR)(W);
     }, [W]);
     let {
         noticeType: K,
@@ -69,7 +69,7 @@ function k(e) {
     } = l.useMemo(
         () =>
             (function (e) {
-                let { guildEvent: t, stageInstance: n, activeChannel: l, canConnect: r, myRole: a, eventCreator: s, speakers: o, listenerCount: d, isEventNoticeHidden: u, isStageNoticeHidden: m, isStudyRoomNotice: _ } = e,
+                let { guildEvent: t, stageInstance: n, activeChannel: l, canConnect: r, myRole: a, eventCreator: s, speakers: o, listenerCount: c, isEventNoticeHidden: u, isStageNoticeHidden: m, isStudyRoomNotice: _ } = e,
                     E = null != n && null != l && !m,
                     I = null != t ? (0, N.DK)(t) : null;
                 if (_ && null != l) {
@@ -101,7 +101,7 @@ function k(e) {
                                 noticeType: 0,
                                 title: n.topic,
                                 location: l.name,
-                                locationIcon: (0, i.jsx)(c.ewx, {
+                                locationIcon: (0, i.jsx)(d.ewx, {
                                     size: 'custom',
                                     color: 'currentColor',
                                     width: 16,
@@ -113,23 +113,23 @@ function k(e) {
                                 onClose: () => (0, g.ji)({ stageId: null == n ? void 0 : n.id }),
                                 users: o.length > 5 ? o.slice(0, 5) : o,
                                 overflowUsers:
-                                    d < 1
+                                    c < 1
                                         ? null
                                         : (0, i.jsxs)('div', {
                                               className: w.pill,
                                               children: [
-                                                  (0, i.jsx)(c.VWR, {
+                                                  (0, i.jsx)(d.VWR, {
                                                       size: 'custom',
                                                       color: 'currentColor',
                                                       width: 12,
                                                       height: 12,
                                                       className: w.pillIcon
                                                   }),
-                                                  (0, i.jsx)(c.Text, {
+                                                  (0, i.jsx)(d.Text, {
                                                       variant: 'text-xs/medium',
                                                       color: 'header-secondary',
                                                       className: w.pillLabel,
-                                                      children: d
+                                                      children: c
                                                   })
                                               ]
                                           })
@@ -145,7 +145,7 @@ function k(e) {
                                 noticeType: 0,
                                 title: n.topic,
                                 location: l.name,
-                                locationIcon: (0, i.jsx)(c.ewx, {
+                                locationIcon: (0, i.jsx)(d.ewx, {
                                     size: 'custom',
                                     color: 'currentColor',
                                     width: 16,
@@ -157,23 +157,23 @@ function k(e) {
                                 onClose: () => (0, g.ji)({ stageId: null == n ? void 0 : n.id }),
                                 users: o.length > 5 ? o.slice(0, 5) : o,
                                 overflowUsers:
-                                    d < 1
+                                    c < 1
                                         ? null
                                         : (0, i.jsxs)('div', {
                                               className: w.pill,
                                               children: [
-                                                  (0, i.jsx)(c.VWR, {
+                                                  (0, i.jsx)(d.VWR, {
                                                       size: 'custom',
                                                       color: 'currentColor',
                                                       width: 12,
                                                       height: 12,
                                                       className: w.pillIcon
                                                   }),
-                                                  (0, i.jsx)(c.Text, {
+                                                  (0, i.jsx)(d.Text, {
                                                       variant: 'text-xs/medium',
                                                       color: 'header-secondary',
                                                       className: w.pillLabel,
-                                                      children: d
+                                                      children: c
                                                   })
                                               ]
                                           })
@@ -188,7 +188,7 @@ function k(e) {
                             noticeType: 1,
                             title: t.name,
                             location: (0, f.m)(e, !0),
-                            locationIcon: (0, i.jsx)(c._tJ, {
+                            locationIcon: (0, i.jsx)(d._tJ, {
                                 size: 'custom',
                                 color: 'currentColor',
                                 width: 16,
@@ -205,14 +205,14 @@ function k(e) {
                                     : (0, i.jsxs)('div', {
                                           className: w.pill,
                                           children: [
-                                              (0, i.jsx)(c.r7p, {
+                                              (0, i.jsx)(d.r7p, {
                                                   size: 'custom',
                                                   color: 'currentColor',
                                                   width: 12,
                                                   height: 12,
                                                   className: w.pillIcon
                                               }),
-                                              (0, i.jsx)(c.Text, {
+                                              (0, i.jsx)(d.Text, {
                                                   variant: 'text-xs/medium',
                                                   color: 'header-secondary',
                                                   className: w.pillLabel,
@@ -247,14 +247,14 @@ function k(e) {
                                     : (0, i.jsxs)('div', {
                                           className: w.pill,
                                           children: [
-                                              (0, i.jsx)(c.r7p, {
+                                              (0, i.jsx)(d.r7p, {
                                                   size: 'custom',
                                                   color: 'currentColor',
                                                   width: 12,
                                                   height: 12,
                                                   className: w.pillIcon
                                               }),
-                                              (0, i.jsx)(c.Text, {
+                                              (0, i.jsx)(d.Text, {
                                                   variant: 'text-xs/medium',
                                                   color: 'header-secondary',
                                                   className: w.pillLabel,
@@ -267,8 +267,8 @@ function k(e) {
                 }
                 return { noticeType: null };
             })({
-                guildEvent: k,
-                stageInstance: M,
+                guildEvent: M,
+                stageInstance: k,
                 activeChannel: r,
                 canConnect: F,
                 myRole: z,
@@ -279,7 +279,7 @@ function k(e) {
                 isStageNoticeHidden: U,
                 isStudyRoomNotice: n
             }),
-        [k, M, r, F, z, Y, V, H, G, U, n]
+        [M, k, r, F, z, Y, V, H, G, U, n]
     );
     return null == K
         ? null
@@ -287,11 +287,11 @@ function k(e) {
               className: w.container,
               children: [
                   null != en
-                      ? (0, i.jsx)(c.P3F, {
+                      ? (0, i.jsx)(d.P3F, {
                             onClick: en,
                             className: w.close,
                             'aria-label': D.intl.string(D.t.WAI6xs),
-                            children: (0, i.jsx)(c.Dio, {
+                            children: (0, i.jsx)(d.Dio, {
                                 size: 'md',
                                 color: 'currentColor',
                                 className: w.closeIcon
@@ -306,7 +306,7 @@ function k(e) {
                               width: 16,
                               height: 16
                           }),
-                          (0, i.jsx)(c.Text, {
+                          (0, i.jsx)(d.Text, {
                               variant: 'text-xs/semibold',
                               color: 'text-positive',
                               children: D.intl.string(D.t.dI3q4u)
@@ -319,9 +319,9 @@ function k(e) {
                           children: [
                               ee.map((e) =>
                                   (0, i.jsx)(
-                                      c.yRy,
+                                      d.yRy,
                                       {
-                                          preload: () => (0, x.Z)(e, { guildId: t.id }),
+                                          preload: () => (0, b.Z)(e, { guildId: t.id }),
                                           renderPopout: (n) =>
                                               (0, i.jsx)(L.Z, {
                                                   ...n,
@@ -331,11 +331,11 @@ function k(e) {
                                               }),
                                           position: 'right',
                                           children: (n) =>
-                                              (0, i.jsx)(c.qEK, {
+                                              (0, i.jsx)(d.qEK, {
                                                   ...n,
                                                   src: e.getAvatarURL(t.id, 24),
                                                   'aria-label': e.username,
-                                                  size: c.EFr.SIZE_24,
+                                                  size: d.EFr.SIZE_24,
                                                   className: w.avatar
                                               })
                                       },
@@ -345,7 +345,7 @@ function k(e) {
                               et
                           ]
                       }),
-                  (0, i.jsx)(c.Text, {
+                  (0, i.jsx)(d.Text, {
                       variant: 'text-md/medium',
                       color: 'header-primary',
                       className: a()(w.title, w.live),
@@ -355,7 +355,7 @@ function k(e) {
                       className: w.locationContainer,
                       children: [
                           Q,
-                          (0, i.jsx)(c.Text, {
+                          (0, i.jsx)(d.Text, {
                               variant: 'text-xs/normal',
                               color: 'text-muted',
                               className: w.location,
@@ -364,14 +364,14 @@ function k(e) {
                       ]
                   }),
                   J || 1 === K
-                      ? (0, i.jsx)(c.zxk, {
-                            size: c.zxk.Sizes.SMALL,
-                            color: c.zxk.Colors.GREEN,
+                      ? (0, i.jsx)(d.zxk, {
+                            size: d.zxk.Sizes.SMALL,
+                            color: d.zxk.Colors.GREEN,
                             onClick: () => {
                                 if (J) null != r && null != r.getGuildId() && ((0, T.Cq)(r), (0, v.XU)(r.getGuildId(), r.id));
                                 else {
-                                    if (null == k) return;
-                                    (0, m.bO)({ eventId: k.id });
+                                    if (null == M) return;
+                                    (0, m.bO)({ eventId: M.id });
                                 }
                             },
                             className: w.button,

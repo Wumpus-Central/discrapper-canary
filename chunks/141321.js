@@ -17,10 +17,10 @@ var i = n(200651),
     x = n(206943);
 function C(e) {
     let { onOpen: t, onClose: n, className: C } = e,
-        v = (0, a.e7)([_.default], () => _.default.getCurrentUser()),
-        E = (0, s.Q3)('RecentsButton'),
+        E = (0, a.e7)([_.default], () => _.default.getCurrentUser()),
+        v = (0, s.Q3)('RecentsButton'),
         I = l.useRef(null),
-        N = (0, a.e7)([m.ZP], () => (null == v ? void 0 : v.id) != null && m.ZP.getMentionCount(v.id, g.W.NOTIFICATION_CENTER) > 0),
+        N = (0, a.e7)([m.ZP], () => (null == E ? void 0 : E.id) != null && m.ZP.getMentionCount(E.id, g.W.NOTIFICATION_CENTER) > 0),
         { enabled: S } = c.Z.useExperiment({ location: 'RecentsButton' }, { autoTrackExposure: !1 }),
         T = (0, a.e7)([o.Z], () => S && o.Z.getUnseenInviteCount() > 0),
         b = (0, r.dQu)(r.TVs.modules.chat.INPUT_ICON_SIZE);
@@ -47,7 +47,7 @@ function C(e) {
                             className: C,
                             onClick: e,
                             icon: r.xx7,
-                            iconSize: E ? b : void 0,
+                            iconSize: v ? b : void 0,
                             'aria-label': f.intl.string(f.t.GSmTKC),
                             tooltip: t ? null : f.intl.string(f.t.GSmTKC),
                             selected: t,

@@ -5,8 +5,8 @@ var i = n(200651),
     a = n(115849),
     s = n(540059),
     o = n(645792),
-    c = n(787642),
-    d = n(437314),
+    d = n(787642),
+    c = n(437314),
     u = n(981631),
     h = n(388032),
     m = n(86511);
@@ -29,12 +29,12 @@ let g = function () {
     return (0, i.jsxs)(l.Fragment, {
         children: [
             (0, i.jsx)(p, {}),
-            (0, o.b)() && (0, i.jsx)(c.Z, {}),
+            (0, o.b)() && (0, i.jsx)(d.Z, {}),
             e
                 ? null
                 : (0, i.jsx)('div', {
                       className: m.emptyState,
-                      children: (0, i.jsx)(d.Z, { type: u.pJs.ADD_FRIEND })
+                      children: (0, i.jsx)(c.Z, { type: u.pJs.ADD_FRIEND })
                   })
         ]
     });

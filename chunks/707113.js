@@ -31,8 +31,8 @@ function _(e) {
 function f(e) {
     let { guild: n, className: t, onPageChange: r, onMemberSelect: s } = e,
         f = n.id,
-        v = (0, o.e7)([u.Z], () => u.Z.getEstimatedMemberSearchCountByGuildId(f), [f]),
-        b = (0, d.$j)(f),
+        b = (0, o.e7)([u.Z], () => u.Z.getEstimatedMemberSearchCountByGuildId(f), [f]),
+        v = (0, d.$j)(f),
         N = (0, d.M3)(f),
         g = i.useCallback(
             (e) => {
@@ -40,23 +40,23 @@ function f(e) {
             },
             [s]
         ),
-        T = (0, m.xb)(N, b, v),
-        I = i.useRef(null),
+        T = (0, m.xb)(N, v, b),
         p = i.useRef(null),
+        I = i.useRef(null),
         E = i.useCallback(() => {
             var e;
-            null === (e = I.current) || void 0 === e || e.resetSearchText();
+            null === (e = p.current) || void 0 === e || e.resetSearchText();
         }, []);
     return (0, l.jsx)('div', {
         className: a()(C.mainTableContainer, t),
         children: (0, l.jsxs)(c.Den, {
             className: a()(C.horizatonalScroller),
-            ref: p,
+            ref: I,
             orientation: 'horizontal',
             children: [
                 (0, l.jsx)(j.Z, {
                     guild: n,
-                    ref: I
+                    ref: p
                 }),
                 (0, l.jsx)(_, { guild: n }),
                 (0, l.jsx)(x.Z, {

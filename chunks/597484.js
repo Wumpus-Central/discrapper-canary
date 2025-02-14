@@ -1,4 +1,4 @@
-t.exports = {
+e.exports = {
     emailVerificationModal: 'emailVerificationModal_a2241a',
     animationContainer: 'animationContainer_a2241a',
     title: 'title_a2241a',

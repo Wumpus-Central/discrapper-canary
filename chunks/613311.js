@@ -1,12 +1,12 @@
-n.d(t, { Z: () => ed }), n(411104), n(724458), n(653041), n(733860), n(47120), n(789020);
+n.d(t, { Z: () => ec }), n(411104), n(724458), n(653041), n(733860), n(47120), n(789020);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
     a = n.n(r),
     s = n(442837),
     o = n(846519),
-    c = n(780384),
-    d = n(481060),
+    d = n(780384),
+    c = n(481060),
     u = n(570140),
     h = n(659429),
     m = n(496929),
@@ -22,9 +22,9 @@ var i = n(200651),
     T = n(606081),
     S = n(252618),
     A = n(100159),
-    b = n(646288),
-    Z = n(984370),
-    x = n(706454),
+    Z = n(646288),
+    x = n(984370),
+    b = n(706454),
     L = n(210887),
     y = n(430824),
     O = n(496675),
@@ -33,8 +33,8 @@ var i = n(200651),
     j = n(580130),
     D = n(55563),
     w = n(551428),
-    k = n(695103),
-    M = n(451478),
+    M = n(695103),
+    k = n(451478),
     U = n(626135),
     G = n(572004),
     B = n(630388),
@@ -71,7 +71,7 @@ function eo(e, t, n) {
         e
     );
 }
-class ec extends l.PureComponent {
+class ed extends l.PureComponent {
     get isChannelType() {
         return null != this.props.channel;
     }
@@ -134,25 +134,25 @@ class ec extends l.PureComponent {
     }
     renderHeader(e, t) {
         let { channel: n, isAuthenticated: r } = this.props;
-        return (0, i.jsx)(Z.Z, {
+        return (0, i.jsx)(x.Z, {
             isAuthenticated: r,
             toolbar: this.renderHeaderToolbar(e, t),
             children:
                 null != n
                     ? (0, i.jsxs)(l.Fragment, {
                           children: [
-                              (0, i.jsx)(Z.Z.Icon, {
-                                  icon: d.lO_,
+                              (0, i.jsx)(x.Z.Icon, {
+                                  icon: c.lO_,
                                   'aria-label': ea.intl.string(ea.t['P1/Erq'])
                               }),
-                              (0, i.jsx)(Z.Z.Title, { children: n.name })
+                              (0, i.jsx)(x.Z.Title, { children: n.name })
                           ]
                       })
                     : null != t && t.premium
                       ? (0, i.jsxs)(l.Fragment, {
                             children: [
-                                (0, i.jsx)(Z.Z.Icon, {
-                                    icon: d.SrA,
+                                (0, i.jsx)(x.Z.Icon, {
+                                    icon: c.SrA,
                                     'aria-label': ea.intl.string(ea.t.Ipxkoq)
                                 }),
                                 (0, i.jsx)($.Z, { sku: t })
@@ -161,11 +161,11 @@ class ec extends l.PureComponent {
                       : null != t
                         ? (0, i.jsxs)(l.Fragment, {
                               children: [
-                                  (0, i.jsx)(Z.Z.Icon, {
-                                      icon: d.lO_,
+                                  (0, i.jsx)(x.Z.Icon, {
+                                      icon: c.lO_,
                                       'aria-label': ea.intl.string(ea.t['P1/Erq'])
                                   }),
-                                  (0, i.jsx)(Z.Z.Title, { children: t.name })
+                                  (0, i.jsx)(x.Z.Title, { children: t.name })
                               ]
                           })
                         : null
@@ -204,7 +204,7 @@ class ec extends l.PureComponent {
     renderHeaderAssets(e, t, n) {
         let { theme: l } = this.props,
             r = t.headerBackground,
-            a = (0, c.ap)(l) ? t.headerLogoLightTheme : t.headerLogoDarkTheme;
+            a = (0, d.ap)(l) ? t.headerLogoLightTheme : t.headerLogoDarkTheme;
         return null == r || null == a
             ? (0, i.jsx)('div', { className: es.noHeaderSpacer })
             : (0, i.jsxs)('div', {
@@ -347,7 +347,7 @@ class ec extends l.PureComponent {
                     (0, i.jsx)(v.Z, {
                         align: v.Z.Align.CENTER,
                         justify: v.Z.Justify.CENTER,
-                        children: (0, i.jsx)(d.$jN, { className: es.spinner })
+                        children: (0, i.jsx)(c.$jN, { className: es.spinner })
                     })
                 ]
             });
@@ -415,8 +415,8 @@ class ec extends l.PureComponent {
                 let { channel: e, guild: t } = this.props;
                 null != e &&
                     null != t &&
-                    (0, d.ZDy)(async () => {
-                        let { default: l } = await Promise.all([n.e('7654'), n.e('13942')]).then(n.bind(n, 560114));
+                    (0, c.ZDy)(async () => {
+                        let { default: l } = await Promise.all([n.e('7654'), n.e('25586')]).then(n.bind(n, 560114));
                         return (n) =>
                             (0, i.jsx)(l, {
                                 ...n,
@@ -429,13 +429,13 @@ class ec extends l.PureComponent {
             eo(this, 'renderInviteLink', () => {
                 let { channel: e, guild: t } = this.props;
                 return null != e && null != t && (O.Z.can(el.Plq.CREATE_INSTANT_INVITE, t) || null != t.vanityURLCode)
-                    ? (0, i.jsx)(d.zxk, {
+                    ? (0, i.jsx)(c.zxk, {
                           'aria-label': ea.intl.string(ea.t.zJrgTE),
-                          look: d.zxk.Looks.BLANK,
-                          size: d.zxk.Sizes.NONE,
+                          look: c.zxk.Looks.BLANK,
+                          size: c.zxk.Sizes.NONE,
                           onClick: this.handleCreateInstantInvite,
                           className: es.link,
-                          children: (0, i.jsx)(d.xPt, {
+                          children: (0, i.jsx)(c.xPt, {
                               size: 'md',
                               color: 'currentColor',
                               className: es.linkIcon
@@ -447,21 +447,21 @@ class ec extends l.PureComponent {
                 let { showLinkCopied: e } = this.state;
                 return this.isChannelType
                     ? this.renderInviteLink()
-                    : (0, i.jsx)(d.ua7, {
+                    : (0, i.jsx)(c.ua7, {
                           text: e ? ea.intl.string(ea.t.uvTCOT) : null,
                           position: 'left',
                           forceOpen: e,
                           children: (t) => {
                               let { onMouseEnter: n, onMouseLeave: l } = t;
-                              return (0, i.jsx)(d.zxk, {
+                              return (0, i.jsx)(c.zxk, {
                                   'aria-label': e ? ea.intl.string(ea.t.uvTCOT) : ea.intl.string(ea.t.WqhZsr),
-                                  look: d.zxk.Looks.BLANK,
-                                  size: d.zxk.Sizes.NONE,
+                                  look: c.zxk.Looks.BLANK,
+                                  size: c.zxk.Sizes.NONE,
                                   onClick: this.copyCurrentUrl,
                                   onMouseEnter: n,
                                   onMouseLeave: l,
                                   className: es.link,
-                                  children: (0, i.jsx)(d.xPt, {
+                                  children: (0, i.jsx)(c.xPt, {
                                       size: 'md',
                                       color: 'currentColor',
                                       className: es.linkIcon
@@ -513,7 +513,7 @@ class ec extends l.PureComponent {
                             children: (0, i.jsxs)('div', {
                                 className: a()(es.headerPurchase, { [es.active]: o }),
                                 children: [
-                                    null != t ? (0, b.Z)(t) : null,
+                                    null != t ? (0, Z.Z)(t) : null,
                                     null != e && null != t ? (0, i.jsx)('div', { children: 'deprecated!' }) : null,
                                     (0, i.jsx)(Q.Z, {
                                         messageStyle: Q.G.SHORT,
@@ -546,7 +546,7 @@ class ec extends l.PureComponent {
                     ? (0, i.jsx)(v.Z, {
                           align: v.Z.Align.CENTER,
                           justify: v.Z.Justify.CENTER,
-                          children: (0, i.jsx)(d.$jN, {})
+                          children: (0, i.jsx)(c.$jN, {})
                       })
                     : l === ei.b.SMALL
                       ? this.renderSmall(e, t, n)
@@ -554,9 +554,9 @@ class ec extends l.PureComponent {
             });
     }
 }
-let ed = (0, f.Z)(
+let ec = (0, f.Z)(
     (0, E.Z)(
-        s.ZP.connectStores([R.Z, L.Z, x.default, M.Z, w.Z, D.Z, k.Z, I.Z, C.Z, P.Z, y.Z, j.Z], (e) => {
+        s.ZP.connectStores([R.Z, L.Z, b.default, k.Z, w.Z, D.Z, M.Z, I.Z, C.Z, P.Z, y.Z, j.Z], (e) => {
             let t,
                 n,
                 i,
@@ -569,7 +569,7 @@ let ed = (0, f.Z)(
                 null != (i = C.Z.getApplication(r)) && (t = i.destinationSkuId), (n = null != t ? D.Z.get(t) : null);
             }
             (null == n ? void 0 : n.flags) != null && (0, B.yE)(n.flags, el.l4R.STICKER_PACK) && (n = null);
-            let c = null != r && (k.Z.inTestModeForApplication(r) || I.Z.inDevModeForApplication(r));
+            let d = null != r && (M.Z.inTestModeForApplication(r) || I.Z.inDevModeForApplication(r));
             return {
                 skuId: t,
                 application: null != r ? C.Z.getApplication(r) : null,
@@ -577,19 +577,19 @@ let ed = (0, f.Z)(
                 didFetchEntitlements: null != r && j.Z.applicationIdsFetched.has(r),
                 shouldFetchStatistics: s && null != r && P.Z.shouldFetchStatisticsForApplication(r),
                 sku: n,
-                isFocused: M.Z.isFocused(),
+                isFocused: k.Z.isFocused(),
                 storeListing: w.Z.getStoreListing({
                     storeListingId: a,
                     skuId: t,
                     channelId: null != o ? o.id : null,
-                    isTestMode: c
+                    isTestMode: d
                 }),
-                isInTestMode: null != r && c,
+                isInTestMode: null != r && d,
                 matureAgree: R.Z.didMatureAgree,
                 theme: L.Z.theme,
-                locale: x.default.locale,
+                locale: b.default.locale,
                 guild: null != o ? y.Z.getGuild(o.getGuildId()) : null
             };
-        })(ec)
+        })(ed)
     )
 );

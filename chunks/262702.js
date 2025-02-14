@@ -5,8 +5,8 @@ var i = n(570140),
     a = n(317770),
     s = n(569545),
     o = n(199902),
-    c = n(314897),
-    d = n(592125),
+    d = n(314897),
+    c = n(592125),
     u = n(131951),
     h = n(590415);
 function m(e, t, n) {
@@ -33,10 +33,10 @@ class p extends a.Z {
         super(...e),
             m(this, 'handleVoiceStateUpdates', (e) => {
                 let { voiceStates: t } = e,
-                    n = c.default.getId();
+                    n = d.default.getId();
                 t.forEach((e) => {
                     var t;
-                    e.userId === n && (null === (t = d.Z.getChannel(e.channelId)) || void 0 === t ? void 0 : t.isGuildStageVoice()) && (0, h.gf)(e) !== h.xO.ON_STAGE && (this.handleStopStream(e), this.handleStopUserVideo());
+                    e.userId === n && (null === (t = c.Z.getChannel(e.channelId)) || void 0 === t ? void 0 : t.isGuildStageVoice()) && (0, h.gf)(e) !== h.xO.ON_STAGE && (this.handleStopStream(e), this.handleStopUserVideo());
                 });
             }),
             m(this, 'handleStopStream', (e) => {

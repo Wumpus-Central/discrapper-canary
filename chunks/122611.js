@@ -5,8 +5,8 @@ var i = n(200651),
     a = n(704215),
     s = n(433517),
     o = n(705348),
-    c = n(243778),
-    d = n(360453),
+    d = n(243778),
+    c = n(360453),
     u = n(377743),
     h = n(834743),
     m = n(862099),
@@ -22,31 +22,31 @@ var i = n(200651),
     T = n(8521),
     S = n(760326),
     A = n(785203),
-    b = n(652785),
-    Z = n(921944);
-function x(e) {
+    Z = n(652785),
+    x = n(921944);
+function b(e) {
     e.stopPropagation();
 }
 function L(e) {
     var t;
     let { guild: n } = e,
-        [d, m] = l.useState(null !== (t = s.K.get(b.Iv)) && void 0 !== t ? t : 0),
+        [c, m] = l.useState(null !== (t = s.K.get(Z.Iv)) && void 0 !== t ? t : 0),
         g = (e) => {
-            s.K.set(b.Iv, e), m(e);
+            s.K.set(Z.Iv, e), m(e);
         },
-        _ = (0, r.Wu)(b.HG, () =>
-            b.XN.filter((e) => {
+        _ = (0, r.Wu)(Z.HG, () =>
+            Z.XN.filter((e) => {
                 let { store: t } = e;
-                return null == t ? void 0 : t.channelNoticePredicate(n, d);
+                return null == t ? void 0 : t.channelNoticePredicate(n, c);
             }).map((e) => e.dismissibleContentType)
         );
-    return (0, i.jsx)(c.ZP, {
+    return (0, i.jsx)(d.ZP, {
         contentTypes: _,
-        groupName: Z.R.CHANNEL_NOTICES,
+        groupName: x.R.CHANNEL_NOTICES,
         children: (e) => {
             let { visibleContent: t, markAsDismissed: l } = e,
                 r = () => {
-                    g(Date.now()), l(Z.L.UNKNOWN);
+                    g(Date.now()), l(x.L.UNKNOWN);
                 },
                 s = (() => {
                     switch (t) {
@@ -78,7 +78,7 @@ function L(e) {
                         case a.z.LINKED_ROLE_ADMIN_GUILD:
                             return (0, i.jsx)(o.Z, {
                                 guild: n,
-                                markAsDismissed: () => l(Z.L.UNKNOWN)
+                                markAsDismissed: () => l(x.L.UNKNOWN)
                             });
                         default:
                             return null;
@@ -87,7 +87,7 @@ function L(e) {
             return null == s
                 ? null
                 : (0, i.jsx)('div', {
-                      onContextMenu: x,
+                      onContextMenu: b,
                       children: s
                   });
         }
@@ -99,7 +99,7 @@ let y = (e) => {
         case A.R.ENABLE_PUBLIC_GUILD:
             return (0, i.jsx)(E.Z, { guild: t });
         case A.R.APPLIED_GUILD_BOOST_GRACE_PERIOD:
-            return (0, i.jsx)(d.Z, { guild: t });
+            return (0, i.jsx)(c.Z, { guild: t });
         case A.R.MAX_MEMBER_COUNT:
             return (0, i.jsx)(T.Z, { guild: t });
         case A.R.GUILD_LIVE_CHANNEL:

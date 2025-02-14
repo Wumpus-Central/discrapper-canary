@@ -1,6 +1,6 @@
-n.d(t, { P: () => l });
-var i = n(481060),
-    s = n(388032);
-function l() {
-    (0, i.showToast)((0, i.createToast)(s.intl.string(s.t['TGg/2t']), i.ToastType.FAILURE));
+s.d(e, { P: () => i });
+var l = s(481060),
+    n = s(388032);
+function i() {
+    (0, l.showToast)((0, l.createToast)(n.intl.string(n.t['TGg/2t']), l.ToastType.FAILURE));
 }

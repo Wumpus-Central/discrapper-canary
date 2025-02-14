@@ -1,47 +1,47 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => f });
 var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    l = n(568611),
+    s = n(192379),
+    r = n(120356),
+    l = n.n(r),
+    a = n(568611),
     o = n(435935),
     c = n(442837),
     d = n(481060),
     u = n(37234),
     m = n(960412),
-    g = n(151662),
-    _ = n(695346),
-    p = n(981631),
-    f = n(930441),
-    h = n(388032),
-    x = n(469006),
-    E = n(483938);
-let C = () => {
-    let e = _.Ex.useSetting(),
-        { categories: t, initialized: n } = (0, c.cj)([g.Z], () => g.Z.getEmailSettings());
+    h = n(151662),
+    g = n(695346),
+    x = n(981631),
+    _ = n(930441),
+    p = n(388032),
+    E = n(469006),
+    C = n(483938);
+let f = () => {
+    let e = g.Ex.useSetting(),
+        { categories: t, initialized: n } = (0, c.cj)([h.Z], () => h.Z.getEmailSettings());
     return (
-        r.useEffect(() => {
+        s.useEffect(() => {
             null == n && (0, m.Y7)();
         }, [n]),
         (0, i.jsxs)('div', {
-            className: x.container,
+            className: E.container,
             children: [
                 (0, i.jsx)(d.Text, {
                     variant: 'eyebrow',
                     color: 'text-muted',
-                    children: h.intl.string(h.t.USIXU1)
+                    children: p.intl.string(p.t.USIXU1)
                 }),
                 (0, i.jsx)(d.j7V, {
-                    className: s()(E.marginTop8, E.marginBottom20),
+                    className: l()(C.marginTop8, C.marginBottom20),
                     value: e,
-                    note: h.intl.string(h.t['5MdB3t']),
+                    note: p.intl.string(p.t['5MdB3t']),
                     hideBorder: !0,
-                    onChange: _.Ex.updateSetting,
-                    children: h.intl.string(h.t.zkEceX)
+                    onChange: g.Ex.updateSetting,
+                    children: p.intl.string(p.t.zkEceX)
                 }),
                 e
                     ? (0, i.jsx)(d.Zbd, {
-                          className: x.enableCard,
+                          className: E.enableCard,
                           type: d.Zbd.Types.CUSTOM,
                           outline: !0,
                           children: (0, i.jsxs)(o.k, {
@@ -51,22 +51,22 @@ let C = () => {
                                       children: (0, i.jsx)(d.Text, {
                                           variant: 'text-sm/semibold',
                                           color: 'text-normal',
-                                          children: h.intl.string(h.t.xAVm7O)
+                                          children: p.intl.string(p.t.xAVm7O)
                                       })
                                   }),
                                   (0, i.jsx)(d.P3F, {
-                                      children: (0, i.jsx)(l.rU, {
+                                      children: (0, i.jsx)(a.rU, {
                                           onClick: u.xf,
                                           to: {
-                                              pathname: p.Z5c.FAMILY_CENTER,
+                                              pathname: x.Z5c.FAMILY_CENTER,
                                               state: { scrollRestoration: !1 }
                                           },
-                                          children: h.intl.string(h.t.cUIXFR)
+                                          children: p.intl.string(p.t.cUIXFR)
                                       })
                                   }),
                                   (0, i.jsx)(d.G2e, {
                                       icon: d.ZSh,
-                                      className: x.arrow,
+                                      className: E.arrow,
                                       disableColor: !0
                                   })
                               ]
@@ -74,14 +74,14 @@ let C = () => {
                       })
                     : null,
                 (0, i.jsx)(d.j7V, {
-                    className: s()(E.marginTop20, E.marginBottom20),
-                    value: !!t[f.$Z.FAMILY_CENTER_DIGEST],
-                    note: h.intl.string(h.t['y34S4+']),
+                    className: l()(C.marginTop20, C.marginBottom20),
+                    value: !!t[_.$Z.FAMILY_CENTER_DIGEST],
+                    note: p.intl.string(p.t['y34S4+']),
                     hideBorder: !0,
                     onChange: function (e) {
-                        (0, m.pR)(f.$Z.FAMILY_CENTER_DIGEST, e);
+                        (0, m.pR)(_.$Z.FAMILY_CENTER_DIGEST, e);
                     },
-                    children: h.intl.string(h.t.irvJKS)
+                    children: p.intl.string(p.t.irvJKS)
                 })
             ]
         })

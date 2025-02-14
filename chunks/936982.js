@@ -1,34 +1,34 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => m });
 var i = n(200651),
     s = n(192379),
-    l = n(442837),
-    r = n(481060),
+    r = n(442837),
+    l = n(481060),
     a = n(457330),
     o = n(497321),
     c = n(410030),
     d = n(246946),
     u = n(388032);
-let h = () => {
-    let e = (0, l.e7)([d.Z], () => d.Z.hidePersonalInformation),
+let m = () => {
+    let e = (0, r.e7)([d.Z], () => d.Z.hidePersonalInformation),
         t = (0, c.ZP)();
     return (s.useEffect(() => {
         a.Z.fetch();
     }, []),
     e)
         ? (0, i.jsx)(o.Z, {})
-        : (0, i.jsx)(r.hjN, {
-              tag: r.RB0.H1,
+        : (0, i.jsx)(l.hjN, {
+              tag: l.RB0.H1,
               title: u.intl.string(u.t['Ig/XFR']),
-              children: (0, i.jsxs)(r.ubH, {
+              children: (0, i.jsxs)(l.ubH, {
                   theme: t,
                   children: [
-                      (0, i.jsx)(r.oxh, {
+                      (0, i.jsx)(l.oxh, {
                           darkSrc: n(703152),
                           lightSrc: n(548617),
                           width: 230,
                           height: 220
                       }),
-                      (0, i.jsx)(r.OZU, {
+                      (0, i.jsx)(l.OZU, {
                           note: u.intl.string(u.t.WenGZ2),
                           children: u.intl.string(u.t['aoLS8/'])
                       })

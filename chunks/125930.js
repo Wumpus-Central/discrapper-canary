@@ -5,8 +5,8 @@ var i = n(200651),
     a = n.n(r),
     s = n(481060),
     o = n(770146),
-    c = n(600164),
-    d = n(424218),
+    d = n(600164),
+    c = n(424218),
     u = n(823379),
     h = n(358085),
     m = n(843445),
@@ -48,7 +48,7 @@ let I = (e) => [
     },
     {
         key: g.intl.string(g.t['+WJ5XV']),
-        value: null != e.ram ? g.intl.formatToPlainString(g.t.RNRSl5, { size: (0, d.BU)(1000 * e.ram, { showDecimalForGB: !1 }) }) : null
+        value: null != e.ram ? g.intl.formatToPlainString(g.t.RNRSl5, { size: (0, c.BU)(1000 * e.ram, { showDecimalForGB: !1 }) }) : null
     },
     {
         key: g.intl.string(g.t['+3s/V1']),
@@ -56,7 +56,7 @@ let I = (e) => [
     },
     {
         key: g.intl.string(g.t['L+x5wM']),
-        value: null != e.disk ? (0, d.BU)(1000 * e.disk, { showDecimalForGB: !1 }) : null
+        value: null != e.disk ? (0, c.BU)(1000 * e.disk, { showDecimalForGB: !1 }) : null
     },
     {
         key: g.intl.string(g.t['Ghp2/P']),
@@ -84,7 +84,7 @@ class C extends l.PureComponent {
             l = Object.keys(t);
         return 1 === l.length
             ? null
-            : (0, i.jsxs)(c.Z, {
+            : (0, i.jsxs)(d.Z, {
                   className: _.tabs,
                   children: [
                       (0, i.jsx)('div', { className: _.separator }),

@@ -2,8 +2,8 @@ n.d(t, { Z: () => v });
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    o = n.n(r),
-    a = n(442837),
+    a = n.n(r),
+    o = n(442837),
     s = n(481060),
     c = n(362721),
     d = n(12498),
@@ -16,7 +16,7 @@ var i = n(200651),
     _ = n(663362);
 function v(e) {
     let { channel: t, connected: n, hovered: r, subtitle: v, onClick: C } = e,
-        x = (0, a.e7)([d.Z], () => d.Z.getChannelStatus(t)),
+        x = (0, o.e7)([d.Z], () => d.Z.getChannelStatus(t)),
         I = null != x && x.length > 0,
         Z = (0, c.ZP)(t, !0),
         b = null != v && v.length > 0;
@@ -29,14 +29,14 @@ function v(e) {
     }, [t.id, I, t.guild_id]);
     let S = (0, s.bWb)().enabled ? 12 : 14;
     if (null == t.guild_id) return null;
-    let N = o()(f.statusDiv, n && Z ? f.hoverable : null);
+    let N = a()(f.statusDiv, n && Z ? f.hoverable : null);
     return I
         ? (0, i.jsx)(s.P3F, {
               className: N,
               onClick: Z ? C : void 0,
               children: (0, i.jsx)(s.Text, {
                   variant: 'text-xs/medium',
-                  className: o()(f.statusText, _.markup),
+                  className: a()(f.statusText, _.markup),
                   children: (0, i.jsx)(u.Z, { children: h.Z.parseVoiceChannelStatus(x, !0, { channelId: t.id }) })
               })
           })

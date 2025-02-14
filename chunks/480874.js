@@ -1,12 +1,12 @@
-n.d(t, { Z: () => Z });
+n.d(t, { Z: () => x });
 var i = n(200651),
     l = n(192379),
     r = n(120356),
     a = n.n(r),
     s = n(91192),
     o = n(286379),
-    c = n(481060),
-    d = n(183126),
+    d = n(481060),
+    c = n(183126),
     u = n(493773),
     h = n(209613),
     m = n(82295),
@@ -22,17 +22,17 @@ var i = n(200651),
     T = n(687683),
     S = n(981631),
     A = n(388032),
-    b = n(754960);
-function Z() {
+    Z = n(754960);
+function x() {
     let e = l.useRef(null),
         t = (0, I.Z)(),
         n = (0, C.w)(),
         r = (0, _.V)(),
-        Z = (0, d.N)(),
-        x = (0, h.Z)('message-requests-spam-list'),
+        x = (0, c.N)(),
+        b = (0, h.Z)('message-requests-spam-list'),
         { channelId: L } = (0, E._)(),
         y = l.useCallback(() => {
-            (0, c.showToast)((0, c.createToast)(A.intl.string(A.t.EDYbS0), c.ToastType.FAILURE));
+            (0, d.showToast)((0, d.createToast)(A.intl.string(A.t.EDYbS0), d.ToastType.FAILURE));
         }, []),
         { rejectAll: O } = (0, f.m)({ onError: y }),
         P = l.useCallback(() => {
@@ -46,21 +46,21 @@ function Z() {
                 var n, l;
                 let { row: s } = e,
                     o = t[s],
-                    c = null === (l = t[s + 1]) || void 0 === l ? void 0 : null === (n = l.channel) || void 0 === n ? void 0 : n.id,
-                    d = o.channel.id;
+                    d = null === (l = t[s + 1]) || void 0 === l ? void 0 : null === (n = l.channel) || void 0 === n ? void 0 : n.id,
+                    c = o.channel.id;
                 return (0, i.jsx)(
                     v.Z,
                     {
                         index: s,
                         className: a()({
-                            [b.selected]: null != L && L === d,
-                            [b.siblingSelected]: null != L && L === c
+                            [Z.selected]: null != L && L === c,
+                            [Z.siblingSelected]: null != L && L === d
                         }),
                         channel: o.channel,
                         user: o.user,
                         hasSingleMessageRequest: r
                     },
-                    d
+                    c
                 );
             },
             [t, r, L]
@@ -70,25 +70,25 @@ function Z() {
                 (0, i.jsxs)(
                     m.Z,
                     {
-                        className: b.sectionTitle,
+                        className: Z.sectionTitle,
                         children: [
                             A.intl.format(A.t.C79Edn, { count: n }),
-                            Z && n > 0
+                            x && n > 0
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
-                                          (0, i.jsx)(c.Text, {
-                                              className: b.titleDivider,
+                                          (0, i.jsx)(d.Text, {
+                                              className: Z.titleDivider,
                                               variant: 'eyebrow',
                                               color: 'header-secondary',
                                               tag: 'span',
                                               children: '\u2022'
                                           }),
-                                          (0, i.jsx)(c.zxk, {
+                                          (0, i.jsx)(d.zxk, {
                                               onClick: P,
-                                              look: c.iLD.LINK,
-                                              color: c.Ttl.LINK,
-                                              size: c.PhG.SMALL,
-                                              className: b.clearAllButton,
+                                              look: d.iLD.LINK,
+                                              color: d.Ttl.LINK,
+                                              size: d.PhG.SMALL,
+                                              className: Z.clearAllButton,
                                               'aria-label': A.intl.string(A.t.p6t7RE),
                                               children: A.intl.string(A.t.p6t7RE)
                                           })
@@ -99,19 +99,19 @@ function Z() {
                     },
                     'message-requests-spam-title'
                 ),
-            [n, P, Z]
+            [n, P, x]
         );
     return 0 === t.length
         ? (0, i.jsx)(N.Z, { section: T.pS.SPAM })
         : (0, i.jsx)(s.bG, {
-              navigator: x,
+              navigator: b,
               children: (0, i.jsx)(s.SJ, {
                   children: (n) => {
                       let { ref: l, role: r, ...a } = n;
                       return (0, i.jsx)(
-                          c.aVo,
+                          d.aVo,
                           {
-                              className: b.list,
+                              className: Z.list,
                               innerRole: r,
                               innerAriaLabel: A.intl.string(A.t.e7GWjY),
                               ref: (t) => {

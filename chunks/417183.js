@@ -5,8 +5,8 @@ var i = n(200651),
     a = n.n(r),
     s = n(748780),
     o = n(91192),
-    c = n(481060),
-    d = n(239091),
+    d = n(481060),
+    c = n(239091),
     u = n(617015),
     h = n(179935);
 function m(e, t, n) {
@@ -51,18 +51,18 @@ class p extends l.PureComponent {
     }
     render() {
         let { height: e, opacity: t, hovered: n, isContextMenuActive: l } = this.state,
-            { children: r, user: d, onClick: u, isActive: m, className: p, activeClassName: g } = this.props;
+            { children: r, user: c, onClick: u, isActive: m, className: p, activeClassName: g } = this.props;
         return (0, i.jsx)(o.mh, {
-            id: d.id,
+            id: c.id,
             children: (o) =>
-                (0, i.jsx)(c.tEY, {
+                (0, i.jsx)(d.tEY, {
                     offset: {
                         left: -8,
                         right: -8
                     },
                     children: (0, i.jsx)(s.Z.div, {
                         className: a()(p, h.peopleListItem, null != g ? { [g]: m || l } : null, { [h.active]: m || l }),
-                        onContextMenu: (e) => this.handleContextMenu(e, d),
+                        onContextMenu: (e) => this.handleContextMenu(e, c),
                         onMouseEnter: this.handleMouseEnter,
                         onMouseLeave: this.handleMouseLeave,
                         onClick: null != u ? u : void 0,
@@ -94,7 +94,7 @@ class p extends l.PureComponent {
             }),
             m(this, 'handleContextMenu', (e, t) => {
                 this.setState({ isContextMenuActive: !0 }),
-                    (0, d.jW)(
+                    (0, c.jW)(
                         e,
                         async () => {
                             let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('45078')]).then(n.bind(n, 881351));

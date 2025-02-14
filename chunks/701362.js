@@ -20,14 +20,14 @@ var l = n(200651),
     E = n(102172),
     T = n(687516),
     Z = n(718805),
-    y = n(871118),
-    N = n(981631),
+    N = n(871118),
+    y = n(981631),
     A = n(388032),
     C = n(343430);
 class P extends i.PureComponent {
     componentDidMount() {
         let { user: e, streamApplication: t } = this.props;
-        x.default.track(N.rMx.OPEN_POPOUT, {
+        x.default.track(y.rMx.OPEN_POPOUT, {
             type: 'Stream Preview',
             other_user_id: e.id,
             application_id: null != t ? t.id : null,
@@ -42,7 +42,7 @@ class P extends i.PureComponent {
             onClick: t,
             className: C.previewContainer,
             children: [
-                (0, l.jsx)(y.Z, {
+                (0, l.jsx)(N.Z, {
                     className: C.previewImage,
                     stream: e
                 }),
@@ -83,8 +83,8 @@ class P extends i.PureComponent {
                                             channelId: n.channelId,
                                             analyticsParams: {
                                                 location: {
-                                                    page: N.ZY5.GO_LIVE_MODAL,
-                                                    section: N.jXE.STREAM_VIEWER_POPOUT
+                                                    page: y.ZY5.GO_LIVE_MODAL,
+                                                    section: y.jXE.STREAM_VIEWER_POPOUT
                                                 }
                                             },
                                             onAction: r
@@ -120,9 +120,9 @@ function j(e) {
         m = (0, s.e7)([g.default], () => g.default.getId()),
         x = (0, T.Cf)(u),
         Z = (0, s.e7)([S.Z], () => (0, T.Um)(u, S.Z)),
-        y = i.useMemo(() => ({ [n.guild_id]: [t.id] }), [n.guild_id, t.id]);
+        N = i.useMemo(() => ({ [n.guild_id]: [t.id] }), [n.guild_id, t.id]);
     return (
-        (0, c.$)(y),
+        (0, c.$)(N),
         (0, l.jsx)(P, {
             ...r,
             canWatch: a,

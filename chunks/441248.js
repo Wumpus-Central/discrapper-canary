@@ -3,8 +3,8 @@ var i = n(200651);
 n(192379);
 var l = n(120356),
     r = n.n(l),
-    o = n(481060),
-    a = n(40614),
+    a = n(481060),
+    o = n(40614),
     s = n(925329),
     c = n(810568),
     d = n(168524),
@@ -19,7 +19,7 @@ function m(e) {
             source: c.m1.RtcPanel,
             trackEntryPointImpression: !0
         });
-    return (0, i.jsx)(o.P3F, {
+    return (0, i.jsx)(a.P3F, {
         onClick: l,
         className: r()(null != l && p.clickableGameName),
         children: (0, i.jsx)(u.Z, {
@@ -43,7 +43,7 @@ function g(e) {
                         pid: null == l ? void 0 : l.pid
                     }),
                     t
-                        ? (0, i.jsx)(o.Odl, {
+                        ? (0, i.jsx)(a.Odl, {
                               size: 'md',
                               color: 'currentColor',
                               className: p.liveBadge
@@ -62,7 +62,7 @@ function g(e) {
                               })
                           })
                         : null,
-                    (0, i.jsx)(a.V, { onClick: r })
+                    (0, i.jsx)(o.V, { onClick: r })
                 ]
             })
         ]

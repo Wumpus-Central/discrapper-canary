@@ -2,8 +2,8 @@ n.d(t, { U: () => v });
 var i = n(200651),
     l = n(192379),
     r = n(91192),
-    o = n(481060),
-    a = n(442837),
+    a = n(481060),
+    o = n(442837),
     s = n(239091),
     c = n(410030),
     d = n(377171),
@@ -15,9 +15,9 @@ var i = n(200651),
     f = n(276970);
 function _(e) {
     let { target: t } = e,
-        a = (0, r.Ie)('fakedoor'),
+        o = (0, r.Ie)('fakedoor'),
         p = l.useCallback(() => {
-            (0, o.ZDy)(async () => {
+            (0, a.ZDy)(async () => {
                 let { default: e } = await Promise.all([n.e('22862'), n.e('85889')]).then(n.bind(n, 646202));
                 return (n) =>
                     (0, i.jsx)(e, {
@@ -47,11 +47,11 @@ function _(e) {
                     className: f.tooltipBackground,
                     style: { background: v }
                 }),
-                (0, i.jsx)(o.X6q, {
+                (0, i.jsx)(a.X6q, {
                     variant: 'heading-sm/medium',
                     children: t.tooltipHeader
                 }),
-                (0, i.jsx)(o.Text, {
+                (0, i.jsx)(a.Text, {
                     variant: 'text-xs/normal',
                     children: g.intl.string(g.t.IIbwAg)
                 })
@@ -60,24 +60,24 @@ function _(e) {
         x = (0, c.Fg)();
     return (0, i.jsxs)(u.H, {
         children: [
-            (0, i.jsx)(o.ze6, {
+            (0, i.jsx)(a.ze6, {
                 theme: m.BRd.DARK,
                 children: (0, i.jsx)(h.Z, {
                     text: C,
                     tooltipClass: f.tooltip,
                     tooltipContentClass: f.tooltipContent,
-                    children: (0, i.jsx)(o.ze6, {
+                    children: (0, i.jsx)(a.ze6, {
                         theme: x,
-                        children: (0, i.jsx)(o.aRk, {
-                            lowerBadge: (0, i.jsx)(o.mAB, {
+                        children: (0, i.jsx)(a.aRk, {
+                            lowerBadge: (0, i.jsx)(a.mAB, {
                                 count: 1,
                                 color: d.Z.BG_BRAND
                             }),
-                            children: (0, i.jsx)(o.LYs, {
-                                ...a,
+                            children: (0, i.jsx)(a.LYs, {
+                                ...o,
                                 onClick: p,
                                 onContextMenu: _,
-                                children: (0, i.jsx)(o.Dkj, { color: d.Z.TEXT_NORMAL })
+                                children: (0, i.jsx)(a.Dkj, { color: d.Z.TEXT_NORMAL })
                             })
                         })
                     })
@@ -94,6 +94,6 @@ function _(e) {
     });
 }
 function v() {
-    let e = (0, a.e7)([p.Z], () => p.Z.getActiveUserSignUp());
+    let e = (0, o.e7)([p.Z], () => p.Z.getActiveUserSignUp());
     return null == e ? null : (0, i.jsx)(_, { target: e });
 }

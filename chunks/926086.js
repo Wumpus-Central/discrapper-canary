@@ -6,8 +6,8 @@ var i = n(200651),
     a = n(348327),
     s = n.n(a),
     d = n(642128),
-    c = n(481060),
-    u = n(667142),
+    u = n(481060),
+    c = n(667142),
     h = n(333031),
     _ = n(380917);
 let p = {
@@ -23,7 +23,7 @@ function f(e) {
         [m, v] = l.useState(0),
         E = l.useRef(0),
         [I, x] = l.useState(0),
-        { timeToLiveMs: C, reappearTimeMs: S } = u.ZP.useState(
+        { timeToLiveMs: C, reappearTimeMs: S } = c.ZP.useState(
             (e) => ({
                 timeToLiveMs: e.timeToLiveMs,
                 reappearTimeMs: e.reappearTimeMs
@@ -57,11 +57,11 @@ function f(e) {
             ),
             []
         );
-    let b = () => {
+    let O = () => {
             a(Date.now()), x((e) => e + 1);
         },
-        O = r > 0 && f - r < 1000,
-        N = (0, c.Yzy)(m > 0 && m < f && f - m < C, {
+        b = r > 0 && f - r < 1000,
+        N = (0, u.Yzy)(m > 0 && m < f && f - m < C, {
             from: { opacity: 0 },
             enter: { opacity: 1 },
             leave: { opacity: 0 },
@@ -85,11 +85,11 @@ function f(e) {
                           style: e,
                           className: _.clickZoneDebugContainer,
                           children: (0, i.jsx)(h.Z, {
-                              className: o()(_.clickZone, O && _.clickBackground),
-                              children: (0, i.jsx)(c.P3F, {
-                                  onClick: b,
+                              className: o()(_.clickZone, b && _.clickBackground),
+                              children: (0, i.jsx)(u.P3F, {
+                                  onClick: O,
                                   className: _.clickable,
-                                  children: (0, i.jsxs)(c.Text, {
+                                  children: (0, i.jsxs)(u.Text, {
                                       variant: 'text-md/semibold',
                                       color: 'always-white',
                                       children: ['Click Me (', I, ')']

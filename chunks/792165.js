@@ -19,9 +19,9 @@ var l = n(442837),
 function C(e) {
     var t;
     let { onClose: n, markAsDismissed: C } = e,
-        v = (0, l.e7)([u.default], () => u.default.getCurrentUser()),
-        E = (t = null == v ? void 0 : v.premiumType) === p.p9.TIER_2 ? f.intl.string(f.t.jqO5Qk) : null == t ? f.intl.string(f.t.f2qjw8) : f.intl.string(f.t.SblICQ),
-        I = m.ZP.canUseCustomCallSounds(v);
+        E = (0, l.e7)([u.default], () => u.default.getCurrentUser()),
+        v = (t = null == E ? void 0 : E.premiumType) === p.p9.TIER_2 ? f.intl.string(f.t.jqO5Qk) : null == t ? f.intl.string(f.t.f2qjw8) : f.intl.string(f.t.SblICQ),
+        I = m.ZP.canUseCustomCallSounds(E);
     return (0, i.jsxs)(d.Z, {
         isShown: !0,
         type: d.Y.PREMIUM,
@@ -56,7 +56,7 @@ function C(e) {
             }),
             (0, i.jsx)(r.x, {
                 variant: 'text-sm/normal',
-                children: E
+                children: v
             }),
             I
                 ? (0, i.jsx)(a.zx, {

@@ -6,15 +6,15 @@ var l = n(120356),
     a = n(704215),
     s = n(927359),
     o = n(706140),
-    c = n(325767),
-    d = n(823188),
+    d = n(325767),
+    c = n(823188),
     u = n(461739);
 let h = 'premium_tier_gradient',
     m = 'smaller_sparkle_gradient';
 function p(e) {
     let { width: t = 14, height: n = 15, color: l = 'white', foreground: r, ...a } = e;
     return (0, i.jsxs)('svg', {
-        ...(0, c.Z)({ ...a }),
+        ...(0, d.Z)({ ...a }),
         preserveAspectRatio: 'none',
         width: t,
         height: n,
@@ -72,12 +72,12 @@ function p(e) {
     });
 }
 function g(e) {
-    let { className: t, startsAt: n, endsAt: l, messageStyle: c, upperCase: g, showSparkles: _ } = e,
+    let { className: t, startsAt: n, endsAt: l, messageStyle: d, upperCase: g, showSparkles: _ } = e,
         [f] = (0, o.Tt)(a.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL, {
             showAfterTimestamp: n.valueOf(),
             cooldownDurationMs: 0
         }),
-        E = (0, s.Z)(l, c);
+        E = (0, s.Z)(l, d);
     return (
         g && (E = E.toUpperCase()),
         (0, i.jsxs)('div', {
@@ -97,9 +97,9 @@ function g(e) {
                           ]
                       })
                     : null,
-                (0, i.jsx)(d.mn, {
+                (0, i.jsx)(c.mn, {
                     text: E,
-                    colorOptions: f === a.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL ? d.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL : d.VE.PREMIUM_TIER_2_GREY_FILL
+                    colorOptions: f === a.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL ? c.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL : c.VE.PREMIUM_TIER_2_GREY_FILL
                 })
             ]
         })

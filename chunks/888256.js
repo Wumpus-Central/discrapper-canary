@@ -2,15 +2,15 @@ n.d(t, { Z: () => c });
 var i = n(200651);
 n(192379);
 var s = n(481060),
-    l = n(921801),
-    r = n(726985),
+    r = n(921801),
+    l = n(726985),
     a = n(388032),
     o = n(865306);
 function c(e) {
     let { className: t, currentUser: n, handleDisableAccount: c, handleDeleteAccount: d } = e,
         u = n.isClaimed();
-    return (0, i.jsx)(l.F, {
-        setting: r.s6.ACCOUNT_DISABLE_ACCOUNT,
+    return (0, i.jsx)(r.F, {
+        setting: l.s6.ACCOUNT_DISABLE_ACCOUNT,
         children: (0, i.jsxs)(s.hjN, {
             className: t,
             title: a.intl.string(a.t.ZKsIkp),
@@ -33,8 +33,8 @@ function c(e) {
                                   children: a.intl.string(a.t.jf5GGR)
                               })
                             : null,
-                        (0, i.jsx)(l.F, {
-                            setting: r.s6.ACCOUNT_DELETE_ACCOUNT,
+                        (0, i.jsx)(r.F, {
+                            setting: l.s6.ACCOUNT_DELETE_ACCOUNT,
                             children: (0, i.jsx)(s.zxk, {
                                 look: s.iLD.OUTLINED,
                                 color: s.Ttl.RED,

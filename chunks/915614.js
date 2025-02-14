@@ -8,7 +8,7 @@ var l = n(120356),
     s = n(4119);
 function d(e) {
     let { onClick: t, keybind: n, className: l, IconComponent: d } = e,
-        c = (0, a.o)();
+        u = (0, a.o)();
     return (0, i.jsxs)('div', {
         className: r()(s.buttonContainer, l),
         children: [
@@ -22,7 +22,7 @@ function d(e) {
                     'aria-hidden': !0
                 })
             }),
-            null != n && c
+            null != n && u
                 ? (0, i.jsx)(o.Text, {
                       className: r()(s.keybind),
                       'aria-hidden': !0,

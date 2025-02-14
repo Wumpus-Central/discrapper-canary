@@ -6,13 +6,13 @@ var l = n(442837),
     a = n(314897),
     s = n(768419),
     o = n(456190),
-    c = n(239470),
-    d = n(894344),
+    d = n(239470),
+    c = n(894344),
     u = n(203777),
     h = n(616922),
     m = n(388032);
 function p(e, t, n) {
-    let p = (0, l.e7)([s.Z, a.default], () => (null != t ? (0, c.Z)(s.Z, a.default, t, e) : void 0), [e, t]);
+    let p = (0, l.e7)([s.Z, a.default], () => (null != t ? (0, d.Z)(s.Z, a.default, t, e) : void 0), [e, t]);
     if (null == p || null == e || null == t) return null;
     let g = p.isCurrentUser || p.notPlayable || p.playingSameTrack,
         _ = p.isCurrentUser || p.syncingWithUser || p.syncingWithParty;
@@ -33,7 +33,7 @@ function p(e, t, n) {
                   r.sNh,
                   {
                       id: 'spotify-sync-'.concat(e.session_id),
-                      action: () => (0, d.Z)(p, h.kG.USER_ACTIVITY_SYNC, n),
+                      action: () => (0, c.Z)(p, h.kG.USER_ACTIVITY_SYNC, n),
                       label: m.intl.string(m.t.eU3inJ),
                       subtext: _ ? (0, o.Z)(p, h.kG.USER_ACTIVITY_SYNC) : void 0,
                       disabled: _

@@ -6,8 +6,8 @@ var l = n(481060),
     a = n(536442),
     s = n(810788),
     o = n(592125),
-    c = n(131951),
-    d = n(944486),
+    d = n(131951),
+    c = n(944486),
     u = n(556296),
     h = n(131468),
     m = n(208049),
@@ -44,8 +44,8 @@ class v extends h.Z {
             (t = this),
             N(this, 'playingSoundsWeb', new Map()),
             N(this, '_stopAndClearSounds', () => {
-                c.Z.supports(C.AN.SAMPLE_PLAYBACK) &&
-                    c.Z.getMediaEngine().eachConnection((e) => {
+                d.Z.supports(C.AN.SAMPLE_PLAYBACK) &&
+                    d.Z.getMediaEngine().eachConnection((e) => {
                         e.stopAllSamplesLocalPlayback();
                     }),
                     this.playingSoundsWeb.forEach((e) => {
@@ -57,8 +57,8 @@ class v extends h.Z {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
                     i = arguments.length > 2 ? arguments[2] : void 0,
                     l = arguments.length > 3 ? arguments[3] : void 0,
-                    r = null != l && d.Z.getVoiceChannelId() === l;
-                if ((null == l || r) && !c.Z.isDeaf() && !p.Z.isLocalSoundboardMuted(i))
+                    r = null != l && c.Z.getVoiceChannelId() === l;
+                if ((null == l || r) && !d.Z.isDeaf() && !p.Z.isLocalSoundboardMuted(i))
                     try {
                         let l = {
                             soundKey: ''.concat(i, '-').concat(e),
@@ -66,7 +66,7 @@ class v extends h.Z {
                             soundVolume: (0, f.Z)(n),
                             reportSoundStartedPlaying: () => (0, m.xR)(e, i)
                         };
-                        c.Z.supports(C.AN.SAMPLE_PLAYBACK) ? await (0, E.$)(l) : await (0, E.h)(l, t.playingSoundsWeb);
+                        d.Z.supports(C.AN.SAMPLE_PLAYBACK) ? await (0, E.$)(l) : await (0, E.h)(l, t.playingSoundsWeb);
                     } finally {
                         (0, m.R)(e, i);
                     }
@@ -77,10 +77,10 @@ class v extends h.Z {
             N(this, '_handleOpenEducationModal', (e, t) => {
                 if (null == e) return;
                 let r = o.Z.getChannel(t),
-                    c = u.ZP.getKeybindForAction(I.kg4.SOUNDBOARD_HOLD);
+                    d = u.ZP.getKeybindForAction(I.kg4.SOUNDBOARD_HOLD);
                 null != r &&
                     (0, g.Z)(r) &&
-                    null != c &&
+                    null != d &&
                     s.Z.hasHotspot(a.v6.SOUNDBOARD_WHEEL_EDUCATION_MODAL) &&
                     (0, l.ZDy)(async () => {
                         let { default: t } = await n.e('69208').then(n.bind(n, 490166));
@@ -88,7 +88,7 @@ class v extends h.Z {
                             (0, i.jsx)(t, {
                                 ...n,
                                 guildId: e,
-                                keybind: c,
+                                keybind: d,
                                 channel: r
                             });
                     });

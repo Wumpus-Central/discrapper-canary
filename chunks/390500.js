@@ -1,17 +1,17 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => d });
 var i = n(200651),
     l = n(192379),
     r = n(481060),
     a = n(970606),
     s = n(388032),
     o = n(739387);
-let c = function (e) {
+let d = function (e) {
     let { onWithdrawApplication: t, guild: n = null } = e,
-        c = null == n ? void 0 : n.id;
+        d = null == n ? void 0 : n.id;
     return (
         l.useEffect(() => {
-            null != c && (0, a.Pq)(c);
-        }, [c]),
+            null != d && (0, a.Pq)(d);
+        }, [d]),
         (0, i.jsxs)('div', {
             className: o.confirmation,
             children: [

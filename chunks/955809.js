@@ -12,7 +12,7 @@ function c(n) {
               label: d.intl.string(d.t['pOul5+']),
               action: () =>
                   (0, e.ZDy)(async () => {
-                      let { default: i } = await t.e('66063').then(t.bind(t, 344516));
+                      let { default: i } = await t.e('45406').then(t.bind(t, 344516));
                       return (t) =>
                           (0, l.jsx)(i, {
                               ...t,

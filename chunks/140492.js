@@ -1,46 +1,46 @@
-t.d(n, { Z: () => g }), t(47120), t(733860);
-var i = t(358230),
-    r = t(931261),
-    s = t(355298),
-    l = t(333984),
-    o = t(905423),
-    a = t(695346),
-    d = t(283595),
-    c = t(923834),
-    u = t(55589),
-    E = t(823379),
-    p = t(475468),
-    b = t(981631),
-    C = t(176505);
-let h = () => {
-    let e = s.Z.getMessageRequestsCount() > 0 || l.Z.getSpamChannelsCount() > 0;
-    return [b.Z5c.FRIENDS, d.Z.hasLibraryApplication() && !a.bm.getSetting() ? b.Z5c.APPLICATION_LIBRARY : null, b.Z5c.APPLICATION_STORE, e ? b.Z5c.MESSAGE_REQUESTS : null, b.Z5c.COLLECTIBLES_SHOP, a.Ex.getSetting() ? b.Z5c.FAMILY_CENTER : null].filter(E.lm);
+n.d(t, { Z: () => p }), n(47120), n(733860);
+var i = n(358230),
+    s = n(931261),
+    r = n(355298),
+    l = n(333984),
+    a = n(905423),
+    o = n(695346),
+    c = n(283595),
+    d = n(923834),
+    u = n(55589),
+    m = n(823379),
+    h = n(475468),
+    g = n(981631),
+    x = n(176505);
+let _ = () => {
+    let e = r.Z.getMessageRequestsCount() > 0 || l.Z.getSpamChannelsCount() > 0;
+    return [g.Z5c.FRIENDS, c.Z.hasLibraryApplication() && !o.bm.getSetting() ? g.Z5c.APPLICATION_LIBRARY : null, g.Z5c.APPLICATION_STORE, e ? g.Z5c.MESSAGE_REQUESTS : null, g.Z5c.COLLECTIBLES_SHOP, o.Ex.getSetting() ? g.Z5c.FAMILY_CENTER : null].filter(m.lm);
 };
-function g() {
+function p() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-        n = o.Z.getState().guildId;
-    null == n
+        t = a.Z.getState().guildId;
+    null == t
         ? (function (e) {
-              var n, t;
-              let { channelId: i, path: r, basePath: s } = o.Z.getState(),
+              var t, n;
+              let { channelId: i, path: s, basePath: r } = a.Z.getState(),
                   l = u.Z.getPrivateChannelIds(),
-                  a = __OVERLAY__ ? l : [...h(), ...l],
-                  d = (null == i ? ((n = null != r ? r : s), h().findIndex((e) => n.startsWith(e))) : null != i ? a.indexOf(i) : 0) + e;
-              d >= a.length ? (d = 0) : d < 0 && (d = a.length - 1);
-              let E = a[d];
-              h().includes(E)
+                  o = __OVERLAY__ ? l : [..._(), ...l],
+                  c = (null == i ? ((t = null != s ? s : r), _().findIndex((e) => t.startsWith(e))) : null != i ? o.indexOf(i) : 0) + e;
+              c >= o.length ? (c = 0) : c < 0 && (c = o.length - 1);
+              let m = o[c];
+              _().includes(m)
                   ? !(function (e) {
-                        let n = c.Z.getCurrentRoute();
-                        e === b.Z5c.APPLICATION_STORE && null != n ? (0, p.z)(n) : (0, p.z)(e);
-                    })(E)
-                  : ((t = b.ME), (0, p.K)(t, E));
+                        let t = d.Z.getCurrentRoute();
+                        e === g.Z5c.APPLICATION_STORE && null != t ? (0, h.z)(t) : (0, h.z)(e);
+                    })(m)
+                  : ((n = g.ME), (0, h.K)(n, m));
           })(e)
-        : (function (e, n) {
-              var t, s, l;
-              let a = o.Z.getState().channelId,
-                  d = (0, i.Z)(n, { withCurrentVoiceChannel: !0 }).map((e) => e.id);
-              (0, r.s)(n) && d.unshift(C.oC.GUILD_HOME);
-              let c = ((t = (null != a ? d.indexOf(a) : -1) + e), (s = d.length), t < 0 ? s - 1 : t >= s ? 0 : t);
-              (l = d[c]), (0, p.K)(n, l);
-          })(e, n);
+        : (function (e, t) {
+              var n, r, l;
+              let o = a.Z.getState().channelId,
+                  c = (0, i.Z)(t, { withCurrentVoiceChannel: !0 }).map((e) => e.id);
+              (0, s.s)(t) && c.unshift(x.oC.GUILD_HOME);
+              let d = ((n = (null != o ? c.indexOf(o) : -1) + e), (r = c.length), n < 0 ? r - 1 : n >= r ? 0 : n);
+              (l = c[d]), (0, h.K)(t, l);
+          })(e, t);
 }

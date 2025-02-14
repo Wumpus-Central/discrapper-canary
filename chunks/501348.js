@@ -1,46 +1,46 @@
 n.d(t, { Z: () => et }), n(47120);
 var i = n(200651),
     s = n(192379),
-    l = n(120356),
-    r = n.n(l),
+    r = n(120356),
+    l = n.n(r),
     a = n(442837),
     o = n(704215),
     c = n(524437),
     d = n(780384),
     u = n(481060),
-    h = n(153867),
-    m = n(230711),
+    m = n(153867),
+    h = n(230711),
     g = n(493773),
     x = n(714338),
     _ = n(857595),
     p = n(607070),
     E = n(627845),
     C = n(514361),
-    N = n(600164),
-    f = n(313201),
-    I = n(540059),
-    T = n(605236),
-    S = n(786761),
-    j = n(3148),
+    f = n(600164),
+    T = n(313201),
+    N = n(540059),
+    S = n(605236),
+    I = n(786761),
+    b = n(3148),
     v = n(739566),
-    b = n(753206),
+    j = n(753206),
     A = n(311476),
     O = n(921801),
     R = n(594174),
-    D = n(358085),
-    P = n(210887),
+    P = n(358085),
+    D = n(210887),
     y = n(740492),
     Z = n(695346),
-    L = n(329013),
-    k = n(333859),
+    k = n(329013),
+    L = n(333859),
     B = n(726985),
     M = n(981631),
-    V = n(921944),
-    w = n(959517),
+    w = n(921944),
+    V = n(959517),
     U = n(388032),
     G = n(4823),
     F = n(483938);
-function z(e, t, n) {
+function H(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -53,52 +53,52 @@ function z(e, t, n) {
         e
     );
 }
-let Y = {
+let z = {
         COZY: 'cozy',
         COMPACT: 'compact'
     },
-    H = (0, f.hQ)(),
-    W = (0, f.hQ)(),
-    K = (0, f.hQ)(),
-    X = '1337',
-    q = (e) => {
+    Y = (0, T.hQ)(),
+    W = (0, T.hQ)(),
+    K = (0, T.hQ)(),
+    q = '1337',
+    X = (e) => {
         let t = 0;
         return [
-            (0, S.e5)({
-                ...(0, j.ZP)({
-                    channelId: X,
+            (0, I.e5)({
+                ...(0, b.ZP)({
+                    channelId: q,
                     content: U.intl.string(U.t.oZxkEh)
                 }),
                 state: M.yb.SENT,
                 id: ''.concat(t++)
             }),
-            (0, S.e5)({
-                ...(0, j.ZP)({
-                    channelId: X,
+            (0, I.e5)({
+                ...(0, b.ZP)({
+                    channelId: q,
                     content: (0, d.wj)(e) ? U.intl.string(U.t['WGb/v7']) : U.intl.string(U.t['62m4m5'])
                 }),
                 state: M.yb.SENT,
                 id: ''.concat(t++)
             }),
-            (0, S.e5)({
-                ...(0, j.ZP)({
-                    channelId: X,
+            (0, I.e5)({
+                ...(0, b.ZP)({
+                    channelId: q,
                     content: U.intl.string(U.t.a0Byo6)
                 }),
                 state: M.yb.SENT,
                 id: ''.concat(t++)
             }),
-            (0, S.e5)({
-                ...(0, j.ZP)({
-                    channelId: X,
+            (0, I.e5)({
+                ...(0, b.ZP)({
+                    channelId: q,
                     content: U.intl.string(U.t.bmwEWF)
                 }),
                 state: M.yb.SENT,
                 id: ''.concat(t++)
             }),
-            (0, S.e5)({
-                ...(0, j.ZP)({
-                    channelId: X,
+            (0, I.e5)({
+                ...(0, b.ZP)({
+                    channelId: q,
                     content: U.intl.string(U.t.hK9QW1)
                 }),
                 state: M.yb.SENT,
@@ -107,7 +107,7 @@ let Y = {
         ];
     },
     J = () => {
-        let e = (0, I.Q3)('ThemeTitle'),
+        let e = (0, N.Q3)('ThemeTitle'),
             t = (0, a.e7)([C.Z], () => C.Z.isPreview),
             { enabled: n } = A.Z.useExperiment(
                 { location: 'GradientSelectorsTitle' },
@@ -136,21 +136,21 @@ let Y = {
                                   })
                           ]
                       }),
-                      (0, i.jsx)(L.g, {})
+                      (0, i.jsx)(k.g, {})
                   ]
               });
     };
 class Q extends s.Component {
     renderZoomSlider() {
         let { isRefreshEnabled: e } = this.props;
-        return D.isPlatformEmbedded
+        return P.isPlatformEmbedded
             ? (0, i.jsxs)(u.xJW, {
                   className: F.marginTop20,
                   children: [
                       (0, i.jsx)(u.vwX, {
-                          id: H,
+                          id: Y,
                           tag: u.RB0.H5,
-                          className: r()(G.title, F.marginBottom8),
+                          className: l()(G.title, F.marginBottom8),
                           children: U.intl.string(U.t.i19n5O)
                       }),
                       e &&
@@ -160,14 +160,14 @@ class Q extends s.Component {
                               children: U.intl.string(U.t.ip0uSU)
                           }),
                       (0, i.jsx)(u.iRW, {
-                          className: r()(F.marginTop20, F.marginBottom4),
+                          className: l()(F.marginTop20, F.marginBottom4),
                           initialValue: this.props.zoom,
                           defaultValue: M.yqN.ZOOM_DEFAULT,
                           markers: M.yqN.ZOOM_SCALES,
                           stickToMarkers: !0,
                           onValueChange: this.handleZoomChange,
                           onValueRender: this.handleSliderRender,
-                          'aria-labelledby': H
+                          'aria-labelledby': Y
                       }),
                       (0, i.jsx)(u.R94, {
                           type: u.R94.Types.DESCRIPTION,
@@ -185,7 +185,7 @@ class Q extends s.Component {
                 (0, i.jsx)(u.vwX, {
                     id: W,
                     tag: u.RB0.H5,
-                    className: r()(G.title, F.marginBottom8),
+                    className: l()(G.title, F.marginBottom8),
                     children: U.intl.string(U.t.qPOqoK)
                 }),
                 e &&
@@ -194,10 +194,10 @@ class Q extends s.Component {
                         className: G.subtext,
                         children: 'Increase or decrease the size of the chat font'
                     }),
-                (0, i.jsx)(N.Z, {
-                    align: N.Z.Align.CENTER,
+                (0, i.jsx)(f.Z, {
+                    align: f.Z.Align.CENTER,
                     children: (0, i.jsx)(u.iRW, {
-                        className: r()({
+                        className: l()({
                             [F.marginTop20]: !e,
                             [F.marginBottom4]: !e
                         }),
@@ -223,7 +223,7 @@ class Q extends s.Component {
                 (0, i.jsx)(u.vwX, {
                     id: K,
                     tag: u.RB0.H5,
-                    className: r()(G.title, F.marginBottom8),
+                    className: l()(G.title, F.marginBottom8),
                     children: U.intl.string(U.t.Q6lKkp)
                 }),
                 n &&
@@ -233,13 +233,13 @@ class Q extends s.Component {
                         children: U.intl.string(U.t.p7eUra)
                     }),
                 (0, i.jsx)(u.iRW, {
-                    className: r()({
+                    className: l()({
                         [F.marginTop20]: !n,
                         [F.marginBottom4]: !n
                     }),
                     initialValue: t,
-                    defaultValue: e ? w.c8 : w.pq,
-                    markers: w.fP,
+                    defaultValue: e ? V.c8 : V.pq,
+                    markers: V.fP,
                     stickToMarkers: !0,
                     onValueChange: this.handleMessageSpacingChange,
                     onValueRender: this.handleSliderRenderPX,
@@ -252,15 +252,15 @@ class Q extends s.Component {
     }
     renderPreview() {
         let { messageDisplayCompact: e, theme: t, messageGroupSpacing: n, hideSimpleEmbedContent: s } = this.props,
-            l = (0, d.wj)(t) ? this.darkMessages : this.lightMessages;
+            r = (0, d.wj)(t) ? this.darkMessages : this.lightMessages;
         return (0, i.jsx)(u.Rny, {
             children: (0, i.jsx)(u.Zbd, {
-                className: r()(G.preview, F.marginBottom40, e ? G.compactPreview : void 0, 'group-spacing-'.concat(null != n ? n : e ? w.c8 : w.pq)),
+                className: l()(G.preview, F.marginBottom40, e ? G.compactPreview : void 0, 'group-spacing-'.concat(null != n ? n : e ? V.c8 : V.pq)),
                 outline: !0,
                 'aria-hidden': !0,
-                children: l.map((t, n) =>
+                children: r.map((t, n) =>
                     (0, i.jsx)(
-                        b.Z,
+                        j.Z,
                         {
                             author: (0, v.ZH)(t),
                             message: t,
@@ -276,10 +276,10 @@ class Q extends s.Component {
         });
     }
     renderTheme() {
-        let { theme: e, useForcedColors: t, darkSidebar: n, gradientPreset: s, isRefreshEnabled: l } = this.props;
+        let { theme: e, useForcedColors: t, darkSidebar: n, gradientPreset: s, isRefreshEnabled: r } = this.props;
         return t
             ? (0, i.jsx)(u.xJW, {
-                  className: r()(F.marginTop8, F.marginBottom40),
+                  className: l()(F.marginTop8, F.marginBottom40),
                   title: (0, i.jsx)('div', {
                       className: G.themeTitle,
                       children: (0, i.jsx)('div', {
@@ -293,13 +293,13 @@ class Q extends s.Component {
                       children: (0, E.b)()
                           ? U.intl.format(U.t.Jae48P, {
                                 onClick: () => {
-                                    m.Z.open(M.oAB.ACCESSIBILITY);
+                                    h.Z.open(M.oAB.ACCESSIBILITY);
                                 }
                             })
                           : U.intl.string(U.t.AUMSZG)
                   })
               })
-            : l
+            : r
               ? (0, i.jsx)(i.Fragment, {
                     children: (0, i.jsxs)(u.Kqy, {
                         gap: 24,
@@ -311,7 +311,7 @@ class Q extends s.Component {
                             }),
                             (0, i.jsx)(u.xJW, {
                                 title: (0, i.jsx)(J, {}),
-                                children: (0, i.jsx)(L.i, {})
+                                children: (0, i.jsx)(k.i, {})
                             })
                         ]
                     })
@@ -320,10 +320,10 @@ class Q extends s.Component {
                     className: F.marginTop8,
                     title: (0, i.jsx)(J, {}),
                     children: [
-                        (0, i.jsx)(L.i, {}),
+                        (0, i.jsx)(k.i, {}),
                         (0, i.jsx)(O.F, {
                             setting: B.s6.APPEARANCE_ICON,
-                            children: (0, i.jsx)(k.c, {})
+                            children: (0, i.jsx)(L.c, {})
                         }),
                         (0, i.jsx)(u.j7V, {
                             value: n && (0, d.ap)(e) && !t,
@@ -344,15 +344,15 @@ class Q extends s.Component {
                     options: [
                         {
                             name: U.intl.string(U.t.KZIadn),
-                            value: Y.COZY
+                            value: z.COZY
                         },
                         {
                             name: U.intl.string(U.t['6+nTjY']),
-                            value: Y.COMPACT
+                            value: z.COMPACT
                         }
                     ],
                     onChange: this.handleMessageDisplayModeChange,
-                    value: this.props.messageDisplayCompact ? Y.COMPACT : Y.COZY
+                    value: this.props.messageDisplayCompact ? z.COMPACT : z.COZY
                 }),
                 (0, i.jsx)(u.j7V, {
                     value: this.props.messageDisplayCompact && this.props.displayCompactAvatars,
@@ -423,11 +423,11 @@ class Q extends s.Component {
             title: t
                 ? (0, i.jsx)(u.Text, {
                       variant: 'text-lg/medium',
-                      className: r()(G.timeTitle, G.title),
+                      className: l()(G.timeTitle, G.title),
                       children: U.intl.string(U.t.dyamEB)
                   })
                 : U.intl.string(U.t.dyamEB),
-            className: r()({ [F.marginTop20]: !t }),
+            className: l()({ [F.marginTop20]: !t }),
             children: (0, i.jsx)(u.FXm, {
                 options: [
                     {
@@ -491,7 +491,7 @@ class Q extends s.Component {
                     className: F.marginTop20,
                     children: U.intl.format(U.t['5LEQdX'], {
                         onAccessibilityClick() {
-                            m.Z.open(M.oAB.ACCESSIBILITY);
+                            h.Z.open(M.oAB.ACCESSIBILITY);
                         }
                     })
                 })
@@ -525,19 +525,19 @@ class Q extends s.Component {
     }
     constructor(...e) {
         super(...e),
-            z(this, 'darkMessages', q(M.BRd.DARK)),
-            z(this, 'lightMessages', q(M.BRd.LIGHT)),
-            z(this, 'handleDisplayCompactAvatarsChanged', (e) => {
-                h.ZP.updatedUnsyncedSettings({ displayCompactAvatars: e });
+            H(this, 'darkMessages', X(M.BRd.DARK)),
+            H(this, 'lightMessages', X(M.BRd.LIGHT)),
+            H(this, 'handleDisplayCompactAvatarsChanged', (e) => {
+                m.ZP.updatedUnsyncedSettings({ displayCompactAvatars: e });
             }),
-            z(this, 'handleDesktopRefreshEnabledChanged', (e) => {
-                h.ZP.updatedUnsyncedSettings({ disableVisualRefresh: !e });
+            H(this, 'handleDesktopRefreshEnabledChanged', (e) => {
+                m.ZP.updatedUnsyncedSettings({ disableVisualRefresh: !e });
             }),
-            z(this, 'handleMessageDisplayModeChange', (e) => {
+            H(this, 'handleMessageDisplayModeChange', (e) => {
                 let { value: t } = e;
-                Z.jU.updateSetting(t === Y.COMPACT), (0, _.ZZ)();
+                Z.jU.updateSetting(t === z.COMPACT), (0, _.ZZ)();
             }),
-            z(this, 'handleUIDensityChange', (e) => {
+            H(this, 'handleUIDensityChange', (e) => {
                 let { value: t } = e;
                 t !== c.Pi.UNSET_UI_DENSITY && Z.YC.updateSetting(t);
             });
@@ -552,7 +552,7 @@ class $ extends Q {
             }),
             n = (0, i.jsx)(O.F, {
                 setting: B.s6.APPEARANCE_ICON,
-                children: (0, i.jsx)(k.c, {})
+                children: (0, i.jsx)(L.c, {})
             }),
             s = (0, i.jsxs)(O.F, {
                 setting: B.s6.APPEARANCE_LIST_SPACING,
@@ -588,7 +588,7 @@ class $ extends Q {
                     (0, i.jsx)(u.$i$, { className: G.divider })
                 ]
             }),
-            l = (0, i.jsxs)(O.F, {
+            r = (0, i.jsxs)(O.F, {
                 setting: B.s6.APPEARANCE_MESSAGE_DISPLAY_COMPACT,
                 children: [
                     (0, i.jsxs)(u.Kqy, {
@@ -620,15 +620,15 @@ class $ extends Q {
                                 options: [
                                     {
                                         name: U.intl.string(U.t.Jqj4cX),
-                                        value: Y.COZY
+                                        value: z.COZY
                                     },
                                     {
                                         name: U.intl.string(U.t['1JNcPT']),
-                                        value: Y.COMPACT
+                                        value: z.COMPACT
                                     }
                                 ],
                                 onChange: this.handleMessageDisplayModeChange,
-                                value: this.props.messageDisplayCompact ? Y.COMPACT : Y.COZY
+                                value: this.props.messageDisplayCompact ? z.COMPACT : z.COZY
                             }),
                             this.props.messageDisplayCompact &&
                                 (0, i.jsx)(u.j7V, {
@@ -647,7 +647,7 @@ class $ extends Q {
                     (0, i.jsx)(u.$i$, { className: G.divider })
                 ]
             }),
-            r = (0, i.jsxs)(O.F, {
+            l = (0, i.jsxs)(O.F, {
                 setting: B.s6.APPEARANCE_SCALING_SPACING,
                 children: [
                     (0, i.jsx)(u.Text, {
@@ -669,21 +669,21 @@ class $ extends Q {
                 className: G.a11yCallout,
                 children: U.intl.format(U.t['5LEQdX'], {
                     onAccessibilityClick() {
-                        m.Z.open(M.oAB.ACCESSIBILITY);
+                        h.Z.open(M.oAB.ACCESSIBILITY);
                     }
                 })
             });
         return (0, i.jsxs)(u.hjN, {
             tag: u.RB0.H1,
             title: U.intl.string(U.t['iHH+k5']),
-            children: [this.renderVisualRefreshOverride(), t, n, s, l, r, a, o]
+            children: [this.renderVisualRefreshOverride(), t, n, s, r, l, a, o]
         });
     }
 }
 let ee = (e) => {
-    (0, T.un)(e) ||
-        (0, T.EW)(e, {
-            dismissAction: V.L.AUTO,
+    (0, S.un)(e) ||
+        (0, S.EW)(e, {
+            dismissAction: w.L.AUTO,
             forceTrack: !0
         });
 };
@@ -692,18 +692,18 @@ function et() {
         t = Z.RS.useSetting(),
         n = Z.NA.useSetting(),
         s = Z.L1.useSetting(),
-        l = Z.hg.useSetting(),
-        r = Z.YC.useSetting();
+        r = Z.hg.useSetting(),
+        l = Z.YC.useSetting();
     (0, g.ZP)(() => {
         ee(o.z.CLIENT_THEMES_SETTINGS_BADGE), ee(o.z.DEKSTOP_CUSTOM_APP_ICON_BADGE), ee(o.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
     });
-    let c = (0, a.cj)([P.Z, y.ZP, p.Z, R.default, C.Z], () => {
+    let c = (0, a.cj)([D.Z, y.ZP, p.Z, R.default, C.Z], () => {
             var e, t;
             return {
-                theme: P.Z.theme,
+                theme: D.Z.theme,
                 useForcedColors: p.Z.useForcedColors,
                 useSystemTheme: y.ZP.useSystemTheme,
-                darkSidebar: P.Z.darkSidebar,
+                darkSidebar: D.Z.darkSidebar,
                 fontSize: p.Z.fontSize,
                 zoom: p.Z.zoom,
                 messageGroupSpacing: p.Z.messageGroupSpacing,
@@ -712,17 +712,17 @@ function et() {
                 gradientPreset: C.Z.gradientPreset
             };
         }),
-        d = (0, I.nm)('UserSettingsAppearance'),
-        u = (0, I.o9)('UserSettingsAppearance'),
-        h = (0, I.Q3)('UserSettingsAppearance');
-    return (0, i.jsx)(h ? $ : Q, {
+        d = (0, N.nm)('UserSettingsAppearance'),
+        u = (0, N.o9)('UserSettingsAppearance'),
+        m = (0, N.Q3)('UserSettingsAppearance');
+    return (0, i.jsx)(m ? $ : Q, {
         messageDisplayCompact: e,
         hideSimpleEmbedContent: t && n,
         clientTheme: s,
-        timestampHourCycle: l,
-        isRefreshEnabled: h,
+        timestampHourCycle: r,
+        isRefreshEnabled: m,
         isRefreshExperimentEnabled: u,
-        density: r,
+        density: l,
         canOptOutOfRefresh: d,
         ...c
     });

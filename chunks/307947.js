@@ -6,21 +6,21 @@ var l = n(442837),
     a = n(210887),
     s = n(687683),
     o = n(388032),
-    c = n(32090),
-    d = n(138715),
+    d = n(32090),
+    c = n(138715),
     u = n(979770);
 function h(e) {
     let { section: t } = e,
         n = (0, l.e7)([a.Z], () => a.Z.theme);
     return (0, i.jsxs)(r.ubH, {
         theme: n,
-        className: c.emptyStateContainer,
+        className: d.emptyStateContainer,
         children: [
             (0, i.jsx)(r.oxh, {
                 width: 415,
                 height: 200,
                 lightSrc: u,
-                darkSrc: d
+                darkSrc: c
             }),
             (0, i.jsx)(r.OZU, { note: t === s.pS.SPAM ? o.intl.string(o.t.hasFPT) : o.intl.string(o.t.SXrqTU) })
         ]

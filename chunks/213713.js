@@ -25,13 +25,13 @@ var a = n(200651),
     S = n(780106),
     y = n(650613),
     k = n(789086),
-    I = n(206583),
-    R = n(166470),
+    R = n(206583),
+    I = n(166470),
     O = n(658951);
 let Z = [
     {
         key: 'type',
-        cellClassName: i()(R.cell, R.cellType),
+        cellClassName: i()(I.cell, I.cellType),
         render(e) {
             let { type: t } = e;
             return (0, a.jsx)(m.Text, {
@@ -42,7 +42,7 @@ let Z = [
     },
     {
         key: 'count',
-        cellClassName: i()(R.cell, R.cellCount),
+        cellClassName: i()(I.cell, I.cellCount),
         render(e) {
             let { entries: t } = e;
             return (0, a.jsx)('div', {
@@ -55,7 +55,7 @@ let Z = [
     },
     {
         key: 'only?',
-        cellClassName: R.cell,
+        cellClassName: I.cell,
         render(e) {
             let { type: t } = e;
             return (0, a.jsx)(w, { type: t });
@@ -84,7 +84,7 @@ function w(e) {
 }
 function A() {
     var e, t;
-    let n = (0, u.e7)([E.Z], () => E.Z.getFeed(I.YN.GLOBAL_FEED)),
+    let n = (0, u.e7)([E.Z], () => E.Z.getFeed(R.YN.GLOBAL_FEED)),
         l = (0, u.e7)([E.Z], () => E.Z.getDebugImpressionCappingDisabled()),
         o = (0, u.e7)([T.Z], () => T.Z.getDebugFastImpressionCappingEnabled()),
         c = (function (e) {
@@ -100,7 +100,7 @@ function A() {
         })(null == n ? void 0 : null === (e = n.entries) || void 0 === e ? void 0 : e.map((e) => e.content)),
         w = (0, u.e7)([E.Z], () => {
             var e;
-            return (null === (e = E.Z.getFeedState(I.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.loading) === !0;
+            return (null === (e = E.Z.getFeedState(R.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.loading) === !0;
         }),
         [A, P] = r.useState(''),
         D = (0, u.e7)(
@@ -130,7 +130,7 @@ function A() {
     return (0, a.jsx)('div', {
         className: i()(O.panel),
         children: (0, a.jsxs)(m.zJl, {
-            className: R.content,
+            className: I.content,
             children: [
                 (0, a.jsxs)(m.hjN, {
                     children: [
@@ -147,7 +147,7 @@ function A() {
                             onClick: function () {
                                 x.Z.dispatch({
                                     type: 'CONTENT_INVENTORY_MANUAL_REFRESH',
-                                    feedId: I.YN.GLOBAL_FEED,
+                                    feedId: R.YN.GLOBAL_FEED,
                                     feature: d.L.INBOX
                                 });
                             },

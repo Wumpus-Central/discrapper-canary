@@ -1,50 +1,50 @@
-n.d(t, { Z: () => D });
+n.d(t, { Z: () => P });
 var i = n(200651);
 n(192379);
 var s = n(512722),
-    l = n.n(s),
-    r = n(442837),
+    r = n.n(s),
+    l = n(442837),
     a = n(809206),
     o = n(634894),
     c = n(891728),
     d = n(328783),
     u = n(295474),
-    h = n(150039),
-    m = n(126631),
+    m = n(150039),
+    h = n(126631),
     g = n(433411),
     x = n(532432),
     _ = n(349177),
     p = n(872736),
     E = n(134795),
     C = n(610966),
-    N = n(513901),
-    f = n(451392),
-    I = n(906364),
-    T = n(350327),
-    S = n(621853),
-    j = n(687158),
+    f = n(513901),
+    T = n(451392),
+    N = n(906364),
+    S = n(350327),
+    I = n(621853),
+    b = n(687158),
     v = n(25990),
-    b = n(594174),
+    j = n(594174),
     A = n(74538),
     O = n(388032),
     R = n(997628);
-function D() {
-    var e, t, n, s, D, P, y, Z;
-    let L = (0, r.e7)([b.default], () => {
-            let e = b.default.getCurrentUser();
-            return l()(null != e, 'DefaultCustomizationSections: user cannot be undefined'), e;
+function P() {
+    var e, t, n, s, P, D, y, Z;
+    let k = (0, l.e7)([j.default], () => {
+            let e = j.default.getCurrentUser();
+            return r()(null != e, 'DefaultCustomizationSections: user cannot be undefined'), e;
         }),
-        k = (0, r.e7)([S.Z], () => S.Z.getUserProfile(L.id)),
+        L = (0, l.e7)([I.Z], () => I.Z.getUserProfile(k.id)),
         {
             pendingAvatar: B,
             pendingGlobalName: M,
-            pendingBanner: V,
-            pendingBio: w,
+            pendingBanner: w,
+            pendingBio: V,
             pendingPronouns: U,
             pendingAccentColor: G,
             pendingThemeColors: F,
-            errors: z
-        } = (0, r.cj)([v.Z], () => {
+            errors: H
+        } = (0, l.cj)([v.Z], () => {
             let e = v.Z.getAllPending(),
                 t = v.Z.getErrors();
             return {
@@ -52,42 +52,42 @@ function D() {
                 errors: t
             };
         }),
-        Y = (0, u.gS)(),
-        H = A.ZP.canUsePremiumProfileCustomization(L),
-        W = (0, h.gd)(B, L.avatar),
-        K = (0, h.f$)(V, null == k ? void 0 : k.banner),
-        X = 'DefaultCustomizationSections';
+        z = (0, u.gS)(),
+        Y = A.ZP.canUsePremiumProfileCustomization(k),
+        W = (0, m.gd)(B, k.avatar),
+        K = (0, m.f$)(w, null == L ? void 0 : L.banner),
+        q = 'DefaultCustomizationSections';
     (0, o.j)({
-        location: X + ' auto on',
+        location: q + ' auto on',
         autoTrackExposure: !0
     }),
         (0, o.j)({
-            location: X + ' auto off',
+            location: q + ' auto off',
             autoTrackExposure: !1
         });
-    let q = (0, j.ZP)(L.id),
-        J = null == q ? void 0 : q.getLegacyUsername(),
-        Q = (null !== (n = null === (e = z.global_name) || void 0 === e ? void 0 : e.length) && void 0 !== n ? n : 0) > 0 ? z.global_name : null !== (s = null == Y ? void 0 : Y.nick) && void 0 !== s ? s : [],
-        $ = (null !== (D = null === (t = z.bio) || void 0 === t ? void 0 : t.length) && void 0 !== D ? D : 0) > 0 ? z.bio : null !== (P = null == Y ? void 0 : Y.bio) && void 0 !== P ? P : [],
+    let X = (0, b.ZP)(k.id),
+        J = null == X ? void 0 : X.getLegacyUsername(),
+        Q = (null !== (n = null === (e = H.global_name) || void 0 === e ? void 0 : e.length) && void 0 !== n ? n : 0) > 0 ? H.global_name : null !== (s = null == z ? void 0 : z.nick) && void 0 !== s ? s : [],
+        $ = (null !== (P = null === (t = H.bio) || void 0 === t ? void 0 : t.length) && void 0 !== P ? P : 0) > 0 ? H.bio : null !== (D = null == z ? void 0 : z.bio) && void 0 !== D ? D : [],
         ee = (0, c.V)();
     return (0, i.jsxs)('div', {
         className: R.sectionsContainer,
         children: [
             (0, i.jsx)(_.Z, {
-                placeholder: L.username,
+                placeholder: k.username,
                 errors: Q,
-                currentGlobalName: L.globalName,
+                currentGlobalName: k.globalName,
                 pendingGlobalName: M,
                 onGlobalNameChange: a.UZ
             }),
             (0, i.jsx)(
-                I.Z,
+                N.Z,
                 {
                     sectionTitle: O.intl.string(O.t['+T3RIy']),
-                    errors: z.pronouns,
-                    onPronounsChange: T.ID,
+                    errors: H.pronouns,
+                    onPronounsChange: S.ID,
                     pendingPronouns: U,
-                    currentPronouns: null !== (y = null == k ? void 0 : k.pronouns) && void 0 !== y ? y : ''
+                    currentPronouns: null !== (y = null == L ? void 0 : L.pronouns) && void 0 !== y ? y : ''
                 },
                 'pronouns'
             ),
@@ -96,7 +96,7 @@ function D() {
                 {
                     onAvatarChange: a.I5,
                     showRemoveAvatarButton: W,
-                    errors: z.avatar,
+                    errors: H.avatar,
                     sectionTitle: O.intl.string(O.t.lqaIxM),
                     forcedDivider: !0
                 },
@@ -105,37 +105,37 @@ function D() {
             (0, i.jsx)(
                 g.Z,
                 {
-                    user: L,
+                    user: k,
                     sectionTitle: O.intl.string(O.t['7v0T9P'])
                 },
                 'decoration'
             ),
             (0, i.jsx)(
-                N.Z,
+                f.Z,
                 {
-                    user: L,
+                    user: k,
                     sectionTitle: O.intl.string(O.t.wR5wOj)
                 },
                 'effect'
             ),
-            H
+            Y
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
                           (0, i.jsx)(
                               E.Z,
                               {
                                   showRemoveBannerButton: K,
-                                  errors: z.banner,
-                                  onBannerChange: T.g_,
+                                  errors: H.banner,
+                                  onBannerChange: S.g_,
                                   forcedDivider: !0
                               },
                               'banner'
                           ),
-                          (0, i.jsx)(f.Z, {
-                              user: L,
+                          (0, i.jsx)(T.Z, {
+                              user: k,
                               pendingAvatar: B,
                               pendingColors: F,
-                              onThemeColorsChange: T.z5,
+                              onThemeColorsChange: S.z5,
                               forcedDivider: !0
                           })
                       ]
@@ -143,21 +143,21 @@ function D() {
                 : (0, i.jsx)(
                       C.Z,
                       {
-                          user: L,
-                          savedUserColor: null == k ? void 0 : k.accentColor,
+                          user: k,
+                          savedUserColor: null == L ? void 0 : L.accentColor,
                           pendingColor: G,
-                          setPendingAccentColor: T.CM
+                          setPendingAccentColor: S.CM
                       },
                       'color'
                   ),
             (0, i.jsx)(
-                m.Z,
+                h.Z,
                 {
                     sectionTitle: O.intl.string(O.t.NepzEx),
                     errors: $,
-                    onBioChange: (e) => (0, h.xQ)(e, null == k ? void 0 : k.bio),
-                    pendingBio: w,
-                    currentBio: null !== (Z = null == k ? void 0 : k.bio) && void 0 !== Z ? Z : ''
+                    onBioChange: (e) => (0, m.xQ)(e, null == L ? void 0 : L.bio),
+                    pendingBio: V,
+                    currentBio: null !== (Z = null == L ? void 0 : L.bio) && void 0 !== Z ? Z : ''
                 },
                 'bio'
             ),

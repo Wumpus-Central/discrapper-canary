@@ -1,6 +1,6 @@
 n.d(t, {
     Ep: () => a,
-    nS: () => r
+    nS: () => l
 });
 var i = n(818083);
 let s = (0, i.B)({
@@ -33,7 +33,7 @@ let s = (0, i.B)({
             }
         ]
     }),
-    l = (0, i.B)({
+    r = (0, i.B)({
         kind: 'user',
         id: '2025-02_dm_defaults',
         label: 'Default DM Settings',
@@ -63,13 +63,13 @@ let s = (0, i.B)({
             }
         ]
     }),
-    r = (e) => {
-        let t = l.useExperiment({ location: e }, { autoTrackExposure: !1 }),
+    l = (e) => {
+        let t = r.useExperiment({ location: e }, { autoTrackExposure: !1 }),
             n = s.useExperiment({ location: e }, { autoTrackExposure: !1 });
         return t.dmOffByDefault || n.dmOffByDefault;
     },
     a = (e) => {
-        let t = l.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }),
+        let t = r.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }),
             n = s.getCurrentConfig({ location: e }, { autoTrackExposure: !1 });
         return t.messageRequestOnByDefault || n.messageRequestOnByDefault;
     };

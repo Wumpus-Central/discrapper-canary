@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(47120);
+n.d(t, { Z: () => N }), n(47120);
 var l,
     i,
     r,
@@ -94,7 +94,7 @@ class Z extends (l = o.ZP.Store) {
               writable: !0
           })
         : (Z[i] = r);
-let y = new Z(u.Z, {
+let N = new Z(u.Z, {
     CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
         let { guilds: t, presences: n } = e,
             l = !1;

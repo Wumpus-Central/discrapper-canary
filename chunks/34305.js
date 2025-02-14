@@ -5,8 +5,8 @@ var i = n(200651),
     a = n(481060),
     s = n(325432),
     o = n(570928),
-    c = n(600164),
-    d = n(579022),
+    d = n(600164),
+    c = n(579022),
     u = n(391690),
     h = n(424218),
     m = n(358085),
@@ -31,7 +31,7 @@ class I extends l.PureComponent {
     renderDiskUsageCircle() {
         let { metadata: e } = this.props;
         return null != e && null != e.availableKB && null != e.totalKB
-            ? (0, i.jsx)(d.Z, {
+            ? (0, i.jsx)(c.Z, {
                   total: e.totalKB,
                   used: e.totalKB - e.availableKB
               })
@@ -39,20 +39,20 @@ class I extends l.PureComponent {
     }
     renderViewing() {
         let e, t;
-        let { path: n, label: l, editingPath: r, isDefault: s, metadata: d } = this.props;
+        let { path: n, label: l, editingPath: r, isDefault: s, metadata: c } = this.props;
         return (
-            null != d && ((e = null != d.availableKB ? (0, h.BU)(d.availableKB, { useKibibytes: !0 }) : null), (t = null != d.totalKB ? (0, h.BU)(d.totalKB, { useKibibytes: !0 }) : null)),
-            (0, i.jsxs)(c.Z, {
+            null != c && ((e = null != c.availableKB ? (0, h.BU)(c.availableKB, { useKibibytes: !0 }) : null), (t = null != c.totalKB ? (0, h.BU)(c.totalKB, { useKibibytes: !0 }) : null)),
+            (0, i.jsxs)(d.Z, {
                 className: _.installationPath,
-                align: c.Z.Align.CENTER,
+                align: d.Z.Align.CENTER,
                 children: [
                     this.renderDiskUsageCircle(),
-                    (0, i.jsxs)(c.Z, {
-                        direction: c.Z.Direction.VERTICAL,
+                    (0, i.jsxs)(d.Z, {
+                        direction: d.Z.Direction.VERTICAL,
                         className: _.__invalid_descriptionWrapper,
                         children: [
-                            (0, i.jsxs)(c.Z, {
-                                align: c.Z.Align.CENTER,
+                            (0, i.jsxs)(d.Z, {
+                                align: d.Z.Align.CENTER,
                                 children: [
                                     (0, i.jsx)(a.X6q, {
                                         className: _.rowTitle,
@@ -67,7 +67,7 @@ class I extends l.PureComponent {
                                         : null
                                 ]
                             }),
-                            null != d && null != e && null != t
+                            null != c && null != e && null != t
                                 ? (0, i.jsx)(o.Z, {
                                       className: _.rowBody,
                                       hoverText: g.intl.formatToPlainString(g.t.Fxo9e3, {
@@ -100,10 +100,10 @@ class I extends l.PureComponent {
         return (0, i.jsx)(a.Zbd, {
             editable: !0,
             className: _.installationPathEditing,
-            children: (0, i.jsxs)(c.Z, {
+            children: (0, i.jsxs)(d.Z, {
                 children: [
                     this.renderDiskUsageCircle(),
-                    (0, i.jsxs)(c.Z.Child, {
+                    (0, i.jsxs)(d.Z.Child, {
                         children: [
                             (0, i.jsx)(a.xJW, {
                                 title: g.intl.string(g.t.AJkKCA),
@@ -130,7 +130,7 @@ class I extends l.PureComponent {
                                 children: g.intl.string(g.t.Z2MWuL)
                             }),
                             (0, i.jsx)(a.$i$, { className: _.separator }),
-                            (0, i.jsxs)(c.Z, {
+                            (0, i.jsxs)(d.Z, {
                                 children: [
                                     (0, i.jsx)(a.zxk, {
                                         disabled: t || this.props.isDefault,
@@ -140,8 +140,8 @@ class I extends l.PureComponent {
                                         onClick: this.handleRemoveLocation,
                                         children: g.intl.string(g.t.iBUzS0)
                                     }),
-                                    (0, i.jsxs)(c.Z, {
-                                        justify: c.Z.Justify.END,
+                                    (0, i.jsxs)(d.Z, {
+                                        justify: d.Z.Justify.END,
                                         children: [
                                             (0, i.jsx)(a.zxk, {
                                                 size: a.zxk.Sizes.SMALL,

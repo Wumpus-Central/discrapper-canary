@@ -5,8 +5,8 @@ var i = n(200651),
     a = n(442837),
     s = n(481060),
     o = n(607070),
-    c = n(454008);
-let d = {
+    d = n(454008);
+let c = {
         mass: 1,
         tension: 600,
         friction: 60,
@@ -23,12 +23,12 @@ let d = {
                           ? {
                                 from: { opacity: 0 },
                                 to: { opacity: 1 },
-                                config: d
+                                config: c
                             }
                           : {
                                 from: { opacity: 1 },
                                 to: { opacity: 0 },
-                                config: d,
+                                config: c,
                                 onRest: () => {
                                     u();
                                 }
@@ -38,7 +38,7 @@ let d = {
             g = (0, s.q_F)(p);
         return (0, i.jsx)(r.animated.div, {
             style: g,
-            className: c.transitionItem,
+            className: d.transitionItem,
             children: h
         });
     };

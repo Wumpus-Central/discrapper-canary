@@ -2,14 +2,14 @@ n.d(t, { Z: () => u });
 var i = n(200651);
 n(192379);
 var s = n(630759),
-    l = n(921157),
-    r = n(76793),
+    r = n(921157),
+    l = n(76793),
     a = n(838436),
     o = n(726985),
     c = n(388032),
     d = n(64552);
 function u() {
-    let e = (0, l.s)();
+    let e = (0, r.s)();
     return (0, i.jsxs)(a.U, {
         setting: o.s6.PRIVACY_ENCRYPTION_VERIFIED_DEVICES_V2,
         children: [
@@ -22,7 +22,7 @@ function u() {
                     'div',
                     {
                         className: d.item,
-                        children: (0, i.jsx)(r.q, { userId: e })
+                        children: (0, i.jsx)(l.q, { userId: e })
                     },
                     e
                 )

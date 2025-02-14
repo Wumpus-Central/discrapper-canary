@@ -73,7 +73,7 @@ function g(e) {
             let t = new Date(e);
             return u.default.fromTimestamp(t.getTime());
         },
-        I = async (e) => {
+        R = async (e) => {
             let { status: t = g.status, premiumStreakStart: n, endedAt: a } = e,
                 r = {
                     subscription_status: t,
@@ -87,7 +87,7 @@ function g(e) {
             }),
                 v();
         },
-        R = async () => {
+        I = async () => {
             try {
                 await o.tn.post({
                     url: '/debug/subscriptions/'.concat(g.id, '/transition'),
@@ -210,7 +210,7 @@ function g(e) {
                                             serialize: (e) => y(e),
                                             isSelected: (e) => e === g.status,
                                             options: b,
-                                            select: (e) => I({ status: e }),
+                                            select: (e) => R({ status: e }),
                                             popoutLayerContext: h.O$
                                         })
                                     }),
@@ -221,7 +221,7 @@ function g(e) {
                                         children: [
                                             (0, a.jsx)(s.zxk, {
                                                 size: s.zxk.Sizes.SMALL,
-                                                onClick: (e) => R(),
+                                                onClick: (e) => I(),
                                                 children: 'Renew Subscription'
                                             }),
                                             null !== E &&
@@ -239,7 +239,7 @@ function g(e) {
                                         children: (0, a.jsx)('input', {
                                             type: 'date',
                                             value: null === (l = g.premiumSince) || void 0 === l ? void 0 : l.toISOString().substring(0, 10),
-                                            onChange: (e) => I({ premiumStreakStart: e.target.value })
+                                            onChange: (e) => R({ premiumStreakStart: e.target.value })
                                         })
                                     }),
                                     (0, a.jsx)(s.hjN, {
@@ -249,7 +249,7 @@ function g(e) {
                                         children: (0, a.jsx)('input', {
                                             type: 'date',
                                             value: w,
-                                            onChange: (e) => I({ endedAt: e.target.value })
+                                            onChange: (e) => R({ endedAt: e.target.value })
                                         })
                                     })
                                 ]

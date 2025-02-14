@@ -4,16 +4,16 @@ var i,
     a = n(442837),
     s = n(570140),
     o = n(353926),
-    c = n(160462);
-function d() {
-    c.W.trigger();
+    d = n(160462);
+function c() {
+    d.W.trigger();
 }
 class u extends (r = a.ZP.Store) {
     initialize() {
         this.waitFor(o.Z);
     }
     constructor() {
-        super(s.Z, { CONNECTION_OPEN: d }, s.c.Early);
+        super(s.Z, { CONNECTION_OPEN: c }, s.c.Early);
     }
 }
 (l = 'ExperimentTriggerPointStore'),

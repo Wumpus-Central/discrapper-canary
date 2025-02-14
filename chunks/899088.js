@@ -1,4 +1,4 @@
-n.exports = {
+e.exports = {
     container: 'container__4d8b6',
     gifContainer: 'gifContainer__4d8b6',
     centerContent: 'centerContent__4d8b6',

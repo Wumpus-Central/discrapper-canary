@@ -5,8 +5,8 @@ var i = n(200651),
     a = n(324262),
     s = n(623624),
     o = n(650774),
-    c = n(981631),
-    d = n(921944),
+    d = n(981631),
+    c = n(921944),
     u = n(388032),
     h = n(241626);
 class m extends l.PureComponent {
@@ -14,12 +14,12 @@ class m extends l.PureComponent {
         let { guild: e, memberCount: t, markAsDismissed: n } = this.props;
         return (0, i.jsx)(a.Z, {
             guild: e,
-            onDismissed: () => n(d.L.UNKNOWN),
+            onDismissed: () => n(c.L.UNKNOWN),
             onClick: this.handleButtonClick,
             message: null == t || t < 30 ? u.intl.string(u.t.hlitVV) : u.intl.string(u.t.XHtaDA),
             cta: u.intl.string(u.t['vqb+Hx']),
-            trackingSource: c.PsQ.GUILD_SUBSCRIPTION_NOTICE,
-            type: c.vID.GUILD_BOOSTING,
+            trackingSource: d.PsQ.GUILD_SUBSCRIPTION_NOTICE,
+            type: d.vID.GUILD_BOOSTING,
             image: h,
             imageMarginX: 26
         });
@@ -33,8 +33,8 @@ class m extends l.PureComponent {
                 (0, s.f)({
                     guildId: e.id,
                     location: {
-                        section: c.jXE.CHANNEL_NOTICE,
-                        object: c.qAy.SERVER_STATUS_CTA
+                        section: d.jXE.CHANNEL_NOTICE,
+                        object: d.qAy.SERVER_STATUS_CTA
                     }
                 });
             }),

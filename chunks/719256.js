@@ -5,8 +5,8 @@ var i = n(846519),
     a = n(220082),
     s = n(594174),
     o = n(125268),
-    c = n(813900);
-function d(e, t, n) {
+    d = n(813900);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,19 +28,19 @@ class u extends r.Z {
     }
     _handleVoiceChannelEffectReceived(e) {
         var t;
-        let { lineId: n, points: i, userId: l, streamerId: r, emojiHose: d } = e;
+        let { lineId: n, points: i, userId: l, streamerId: r, emojiHose: c } = e;
         if (null != r && l !== (null === (t = s.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) {
             if (null != i && null != n) {
                 let e = s.default.getUser(l);
-                null != e && (0, a.vM)(e.getAvatarURL(null, c.Ks)), (0, o.cV)(n, l, r, i);
-            } else null != d && ((d.lastUpdatedAt = Date.now()), (0, o.gr)(d, l, r));
+                null != e && (0, a.vM)(e.getAvatarURL(null, d.Ks)), (0, o.cV)(n, l, r, i);
+            } else null != c && ((c.lastUpdatedAt = Date.now()), (0, o.gr)(c, l, r));
         }
     }
     constructor(...e) {
         super(...e),
-            d(this, 'linesToUpdate', {}),
-            d(this, 'lineBatchTimer', new i.Xp()),
-            d(this, '_handleDrawLinePoint', (e) => {
+            c(this, 'linesToUpdate', {}),
+            c(this, 'lineBatchTimer', new i.Xp()),
+            c(this, '_handleDrawLinePoint', (e) => {
                 let { channelId: t, lineId: n, streamerId: i, point: l } = e;
                 null == this.linesToUpdate[n]
                     ? (this.linesToUpdate[n] = {
@@ -49,9 +49,9 @@ class u extends r.Z {
                           points: [l]
                       })
                     : this.linesToUpdate[n].points.push(l),
-                    null == this.lineBatchTimer._ref && this.lineBatchTimer.start(c.Fq, this.sendLineBatch);
+                    null == this.lineBatchTimer._ref && this.lineBatchTimer.start(d.Fq, this.sendLineBatch);
             }),
-            d(this, 'sendLineBatch', () => {
+            c(this, 'sendLineBatch', () => {
                 for (let e in this.linesToUpdate) {
                     let { channelId: t, points: n, streamerId: i } = this.linesToUpdate[e];
                     (0, o.AX)(t, e, i, n);

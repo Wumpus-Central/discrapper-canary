@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(47120);
+n.d(t, { Z: () => v }), n(47120);
 var i = n(200651),
     l = n(192379),
     a = n(442837),
@@ -20,10 +20,10 @@ function C(e) {
         l = (p.default.extractTimestamp(n.id) + p.default.extractTimestamp(i.id)) % t.length;
     return t[l];
 }
-function v(e) {
+function E(e) {
     let { currentUser: t, channel: n, message: a, buttonLabels: d, stickers: u, event: m, eventProperties: _ } = e,
         [p, f] = l.useState(!1),
-        v = l.useMemo(
+        E = l.useMemo(
             () =>
                 C({
                     assets: u,
@@ -32,7 +32,7 @@ function v(e) {
                 }),
             [u, t, a]
         ),
-        E = l.useMemo(
+        v = l.useMemo(
             () =>
                 C({
                     assets: d,
@@ -63,7 +63,7 @@ function v(e) {
                 })({
                     channel: n,
                     message: a,
-                    sticker: v
+                    sticker: E
                 }),
                 (function (e) {
                     let { sticker: t, event: n, eventProperties: i } = e;
@@ -73,11 +73,11 @@ function v(e) {
                             sticker_id: t.id
                         });
                 })({
-                    sticker: v,
+                    sticker: E,
                     event: m,
                     eventProperties: _
                 }));
-        }, [n, a, v, m, _]);
+        }, [n, a, E, m, _]);
     return (0, i.jsxs)(r.zxk, {
         className: x.CTAMessageButtonOuter,
         innerClassName: x.CTAMessageButton,
@@ -89,14 +89,14 @@ function v(e) {
             (0, i.jsx)(c.ZP, {
                 className: x.CTAMessageSticker,
                 isInteracting: p,
-                sticker: v,
+                sticker: E,
                 size: 28
             }),
-            E
+            v
         ]
     });
 }
-function E(e) {
+function v(e) {
     let { channel: t, message: n, buttonLabels: l, stickers: r, event: s, eventProperties: o } = e,
         c = _.default.getCurrentUser(),
         h = (function (e) {
@@ -119,7 +119,7 @@ function E(e) {
     return null != c && h
         ? (0, i.jsx)('div', {
               className: x.CTAMessage,
-              children: (0, i.jsx)(v, {
+              children: (0, i.jsx)(E, {
                   currentUser: c,
                   channel: t,
                   message: n,

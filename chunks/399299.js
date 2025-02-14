@@ -10,8 +10,8 @@ var t = l(200651),
     d = l(605436),
     m = l(600164),
     x = l(594190),
-    h = l(925329),
-    g = l(565138),
+    g = l(925329),
+    h = l(565138),
     Z = l(977059),
     v = l(695346),
     S = l(494620),
@@ -26,8 +26,8 @@ var t = l(200651),
     P = l(823379),
     R = l(63063),
     k = l(358085),
-    b = l(653255),
-    A = l(989941),
+    A = l(653255),
+    b = l(989941),
     M = l(618407),
     _ = l(586290),
     L = l(233037),
@@ -39,16 +39,16 @@ var t = l(200651),
     G = l(981631),
     O = l(526761),
     W = l(388032),
-    V = l(409972),
-    F = l(323499);
+    F = l(409972),
+    V = l(323499);
 function J(e) {
     let { selectedSource: n, selectSource: l, sourceChanged: i, onChangeSource: s } = e,
-        a = (0, r.e7)([x.ZP, E.Z], () => ((0, k.isWindows)() ? (0, A.Z)(x.ZP, E.Z) : null)),
+        a = (0, r.e7)([x.ZP, E.Z], () => ((0, k.isWindows)() ? (0, b.Z)(x.ZP, E.Z) : null)),
         u = (0, r.e7)([c.Z], () => ((null == a ? void 0 : a.id) != null ? c.Z.getApplication(a.id) : null)),
         d = (0, r.e7)([x.ZP], () => x.ZP.getRunningGames()),
         m = (0, r.Wu)([c.Z], () => d.map((e) => (null != e.id ? c.Z.getApplication(e.id) : null)).filter(P.lm), [d]),
-        g = null;
-    if ((null != n ? (g = n.name) : null != a && (g = a.name), null == g)) return null;
+        h = null;
+    if ((null != n ? (h = n.name) : null != a && (h = a.name), null == h)) return null;
     let Z = (0, y.Z)(a, n, d),
         v = i
             ? m.find((e) => {
@@ -59,24 +59,24 @@ function J(e) {
         S = null != n && n.id.startsWith('screen') ? o.pzj : o.GON;
     return (0, t.jsx)(o.xJW, {
         title: W.intl.string(W.t.TC7Ev7),
-        className: F.modalContent,
-        titleClassName: F.formItemTitleVerySlim,
+        className: V.modalContent,
+        titleClassName: V.formItemTitleVerySlim,
         children: (0, t.jsxs)(z.Z, {
             children: [
                 null != v
-                    ? (0, t.jsx)(h.Z, {
+                    ? (0, t.jsx)(g.Z, {
                           game: v,
-                          size: h.Z.Sizes.XSMALL,
-                          className: V.selectedIcon
+                          size: g.Z.Sizes.XSMALL,
+                          className: F.selectedIcon
                       })
-                    : (0, t.jsx)(S, { className: V.selectedIcon }),
+                    : (0, t.jsx)(S, { className: F.selectedIcon }),
                 (0, t.jsx)('span', {
-                    className: V.ellipsisText,
-                    children: g
+                    className: F.ellipsisText,
+                    children: h
                 }),
                 l
                     ? (0, t.jsx)(o.zxk, {
-                          className: V.changeButton,
+                          className: F.changeButton,
                           color: o.zxk.Colors.PRIMARY,
                           size: o.zxk.Sizes.SMALL,
                           onClick: s,
@@ -94,21 +94,21 @@ function B(e) {
         ? (n(), null)
         : (0, t.jsx)(o.xJW, {
               title: W.intl.string(W.t.WC3u3t),
-              className: F.modalContent,
-              titleClassName: F.formItemTitle,
+              className: V.modalContent,
+              titleClassName: V.formItemTitle,
               children: (0, t.jsxs)(z.Z, {
                   children: [
-                      (0, t.jsx)(g.Z, {
+                      (0, t.jsx)(h.Z, {
                           guild: i,
-                          size: g.Z.Sizes.SMALLER,
-                          className: V.selectedIcon
+                          size: h.Z.Sizes.SMALLER,
+                          className: F.selectedIcon
                       }),
                       (0, t.jsx)('span', {
-                          className: V.ellipsisText,
+                          className: F.ellipsisText,
                           children: i.toString()
                       }),
                       (0, t.jsx)(o.zxk, {
-                          className: V.changeButton,
+                          className: F.changeButton,
                           color: o.zxk.Colors.PRIMARY,
                           size: o.zxk.Sizes.SMALL,
                           onClick: n,
@@ -122,14 +122,14 @@ function X(e) {
     let { text: n } = e;
     return (0, t.jsxs)(m.Z, {
         align: m.Z.Align.CENTER,
-        className: V.warning,
+        className: F.warning,
         children: [
             (0, t.jsx)(o.P4T, {
                 size: 'custom',
                 width: 20,
                 height: 20,
                 color: 'currentColor',
-                className: V.warningIcon
+                className: F.warningIcon
             }),
             (0, t.jsx)(o.Text, {
                 color: 'none',
@@ -151,7 +151,7 @@ function Y(e) {
         }, []);
     return l >= 2 && l <= U.tB
         ? (0, t.jsx)(o.xJW, {
-              className: a()(F.modalContent, V.checkboxRow),
+              className: a()(V.modalContent, F.checkboxRow),
               children: (0, t.jsx)(o.XZJ, {
                   value: !!s,
                   type: o.XZJ.Types.INVERTED,
@@ -173,7 +173,7 @@ function H(e) {
             [l]
         );
     return (0, t.jsx)(o.xJW, {
-        className: a()(F.modalContent, V.checkboxRow),
+        className: a()(V.modalContent, F.checkboxRow),
         children: (0, t.jsx)(o.XZJ, {
             value: n,
             type: o.XZJ.Types.INVERTED,
@@ -194,7 +194,7 @@ function K(e) {
             [l]
         );
     return (0, t.jsx)(o.xJW, {
-        className: a()(F.modalContent, V.checkboxRow),
+        className: a()(V.modalContent, F.checkboxRow),
         children: (0, t.jsx)(o.XZJ, {
             value: n,
             type: o.XZJ.Types.INVERTED,
@@ -207,10 +207,10 @@ function K(e) {
     });
 }
 function q(e) {
-    let { selectedSource: n, selectedFPS: l, selectedChannelId: s, selectedPreset: a, selectedResolution: o, sourceChanged: c, selectedGuildId: m, targetGuildPremiumTier: x, selectSource: h, selectGuild: g, sound: v, previewDisabled: C, onClose: f, onChangeSelectedFPS: E, onChangeSelectedResolution: I, onChangeSelectedPreset: P, onChangeSelectedChannelId: k, onChangeSource: A, onChangeAudioDevice: z, onChangeGuild: y, onChangeSound: U, onChangePreviewDisabled: F } = e,
+    let { selectedSource: n, selectedFPS: l, selectedChannelId: s, selectedPreset: a, selectedResolution: o, sourceChanged: c, selectedGuildId: m, targetGuildPremiumTier: x, selectSource: g, selectGuild: h, sound: v, previewDisabled: C, onClose: f, onChangeSelectedFPS: E, onChangeSelectedResolution: I, onChangeSelectedPreset: P, onChangeSelectedChannelId: k, onChangeSource: b, onChangeAudioDevice: z, onChangeGuild: y, onChangeSound: U, onChangePreviewDisabled: V } = e,
         q = (0, r.e7)([p.Z, j.Z], () => j.Z.getChannel(p.Z.getVoiceChannelId())),
-        Q = (0, r.e7)([b.Z], () => b.Z.GPUDriversOutdated),
-        $ = (0, r.e7)([b.Z], () => b.Z.problematicGPUDriver),
+        Q = (0, r.e7)([A.Z], () => A.Z.GPUDriversOutdated),
+        $ = (0, r.e7)([A.Z], () => A.Z.problematicGPUDriver),
         ee = (0, r.e7)([T.default], () => T.default.getCurrentUser()),
         en = (0, M.Z)();
     null != n && n.id.startsWith('screen') && !N.Z.supportsScreenSoundshare() && (en = W.intl.string(W.t['1b0Gm5']));
@@ -224,15 +224,15 @@ function q(e) {
             el
                 ? (0, t.jsx)(_.Z, {
                       selectedSource: n,
-                      onChangeVideoDeviceSource: A,
+                      onChangeVideoDeviceSource: b,
                       onChangeAudioDevice: z
                   })
                 : (0, t.jsxs)('div', {
                       children: [
                           (0, t.jsx)(J, {
-                              selectSource: h,
+                              selectSource: g,
                               sourceChanged: c,
-                              onChangeSource: A,
+                              onChangeSource: b,
                               selectedSource: n
                           }),
                           null != en ? (0, t.jsx)(X, { text: en }) : null,
@@ -245,7 +245,7 @@ function q(e) {
                               : null
                       ]
                   }),
-            g && null != m
+            h && null != m
                 ? (0, t.jsx)(B, {
                       guildId: m,
                       onChange: y
@@ -264,7 +264,7 @@ function q(e) {
             es &&
                 (0, t.jsx)(S.Z, {
                     look: S.z.WARNING,
-                    className: V.hardwareWarning,
+                    className: F.hardwareWarning,
                     children: W.intl.format(W.t.zCLXws, {
                         onClick: () => {
                             f(), u.Z.open(G.oAB.VOICE, null, { scrollPosition: O.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION });
@@ -285,7 +285,7 @@ function q(e) {
             ea &&
                 (0, t.jsx)(K, {
                     enabled: C,
-                    onChange: F
+                    onChange: V
                 })
         ]
     });

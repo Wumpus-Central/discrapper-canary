@@ -6,17 +6,17 @@ var l = n(990547),
     a = n(213609),
     s = n(434404),
     o = n(970731),
-    c = n(430824),
-    d = n(594174),
+    d = n(430824),
+    c = n(594174),
     u = n(981631),
     h = n(388032),
     m = n(710825),
     p = n(968153);
 function g(e) {
     let { guildId: t, markAsDismissed: n } = e,
-        g = (0, r.e7)([c.Z, d.default], () => {
-            let e = d.default.getCurrentUser(),
-                n = c.Z.getGuild(t);
+        g = (0, r.e7)([d.Z, c.default], () => {
+            let e = c.default.getCurrentUser(),
+                n = d.Z.getGuild(t);
             return (null == n ? void 0 : n.isOwner(e)) === !0;
         });
     return (

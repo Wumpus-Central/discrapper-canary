@@ -1,4 +1,4 @@
-E.exports = {
+e.exports = {
     phoneField: 'phoneField_a0c54f',
     countryButton: 'countryButton_a0c54f',
     countryButtonInner: 'countryButtonInner_a0c54f',

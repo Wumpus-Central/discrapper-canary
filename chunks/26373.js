@@ -1,5 +1,5 @@
 n.d(t, {
-    K: () => d,
+    K: () => c,
     V: () => u
 });
 var i = n(192379),
@@ -8,8 +8,8 @@ var i = n(192379),
     a = n(355298),
     s = n(333984),
     o = n(899740),
-    c = n(355350);
-function d() {
+    d = n(355350);
+function c() {
     let e = (0, o.q)(),
         t = i.useRef(e),
         n = (0, l.e7)([a.Z], () => a.Z.isReady()),
@@ -22,7 +22,7 @@ function d() {
     );
 }
 function u() {
-    let e = (0, c.w)(),
+    let e = (0, d.w)(),
         t = i.useRef(e),
         n = (0, l.e7)([s.Z], () => s.Z.isReady()),
         a = i.useRef(n);

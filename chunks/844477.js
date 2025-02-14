@@ -1,8 +1,8 @@
 n.d(t, { z: () => u });
 var i = n(200651),
     s = n(120356),
-    l = n.n(s),
-    r = n(84735),
+    r = n.n(s),
+    l = n(84735),
     a = n(993365),
     o = n(649953);
 let c = {
@@ -18,12 +18,12 @@ let c = {
         lg: 'md'
     };
 function u(e) {
-    let { role: t = 'button', variant: n = 'primary', size: s = 'md', text: u, icon: h, iconPosition: m = 'end', iconOpticalOffsetMargin: g = 0, focusProps: x, ..._ } = e;
+    let { role: t = 'button', variant: n = 'primary', size: s = 'md', text: u, icon: m, iconPosition: h = 'end', iconOpticalOffsetMargin: g = 0, focusProps: x, ..._ } = e;
     function p() {
-        if (null == h) return;
+        if (null == m) return;
         let e = (function () {
             if (0 === g) return {};
-            switch (m) {
+            switch (h) {
                 case 'start':
                     return { marginLeft: g };
                 case 'end':
@@ -31,20 +31,20 @@ function u(e) {
             }
             return {};
         })();
-        return (0, i.jsx)(h, {
+        return (0, i.jsx)(m, {
             color: 'currentColor',
             style: e,
             size: d[s]
         });
     }
-    return (0, i.jsx)(r.t, {
+    return (0, i.jsx)(l.t, {
         ...x,
         children: (0, i.jsxs)('button', {
             role: t,
-            className: l()(o.button, o[s], o[n]),
+            className: r()(o.button, o[s], o[n]),
             ..._,
             children: [
-                null != h && 'start' === m && (0, i.jsx)(p, {}),
+                null != m && 'start' === h && (0, i.jsx)(p, {}),
                 (0, i.jsx)(a.x, {
                     tag: 'span',
                     variant: c[s],
@@ -53,7 +53,7 @@ function u(e) {
                     lineClamp: 1,
                     children: u
                 }),
-                null != h && 'end' === m && (0, i.jsx)(p, {})
+                null != m && 'end' === h && (0, i.jsx)(p, {})
             ]
         })
     });

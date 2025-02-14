@@ -5,8 +5,8 @@ var i = n(200651),
     a = n(749210),
     s = n(322665),
     o = n(17845),
-    c = n(374939),
-    d = n(283293),
+    d = n(374939),
+    c = n(283293),
     u = n(469988),
     h = n(526383),
     m = n(294330),
@@ -27,7 +27,7 @@ let f = function (e) {
                 })),
             [n]
         );
-    return (0, i.jsxs)(d.Z, {
+    return (0, i.jsxs)(c.Z, {
         onScroll: t,
         children: [
             (0, i.jsx)(o.Z, {
@@ -35,7 +35,7 @@ let f = function (e) {
                 description: p.intl.string(p.t['F/IQCA']),
                 children: (0, i.jsx)(s.Z, {})
             }),
-            (0, i.jsxs)(c.Z, {
+            (0, i.jsxs)(d.Z, {
                 children: [
                     n.length > 0
                         ? (0, i.jsxs)(i.Fragment, {

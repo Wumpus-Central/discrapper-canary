@@ -8,8 +8,8 @@ function s(e, t) {
     let n = e.username,
         s = a.intl.format(a.t['Yk+uYG'], { username: '' }),
         d = (0, i.ov)(e),
-        c = a.intl.string(a.t.WRj1Wl),
-        { trackView: u, trackClick: h } = (0, l.R)(r.n0.ActivityUserJoin, {
+        u = a.intl.string(a.t.WRj1Wl),
+        { trackView: c, trackClick: h } = (0, l.R)(r.n0.ActivityUserJoin, {
             notif_type: r.n0.ActivityUserJoin,
             notif_user_id: e.id,
             activity_type: o.mFx.JOIN,
@@ -19,9 +19,9 @@ function s(e, t) {
         icon: d,
         title: n,
         body: s,
-        hint: c,
+        hint: u,
         onNotificationShow: () => {
-            u();
+            c();
         },
         onDismissClick: () => {
             h('dismiss');

@@ -5,8 +5,8 @@ var i = n(200651),
     a = n.n(r),
     s = n(954955),
     o = n.n(s),
-    c = n(442837),
-    d = n(481060),
+    d = n(442837),
+    c = n(481060),
     u = n(570140),
     h = n(569984),
     m = n(918701),
@@ -22,9 +22,9 @@ var i = n(200651),
     T = n(358924),
     S = n(292140),
     A = n(525296),
-    b = n(981631),
-    Z = n(674563),
-    x = n(388032),
+    Z = n(981631),
+    x = n(674563),
+    b = n(388032),
     L = n(658385);
 let y = 15 * I.Z.Millis.MINUTE,
     O = (0, A.Z)(function (e) {
@@ -33,7 +33,7 @@ let y = 15 * I.Z.Millis.MINUTE,
                 party: t,
                 onUserContextMenu: n
             }),
-            c = (0, i.jsx)(N.Z, {
+            d = (0, i.jsx)(N.Z, {
                 party: t,
                 onChannelContextMenu: r,
                 quest: a
@@ -47,10 +47,10 @@ let y = 15 * I.Z.Millis.MINUTE,
                 let e = m
                     .filter((e) => {
                         var t, n;
-                        return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === Z.wW.GAME;
+                        return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === x.wW.GAME;
                     })
                     .map((e) => e.game.name);
-                E.default.track(b.rMx.NOW_PLAYING_CARD_HOVERED, {
+                E.default.track(Z.rMx.NOW_PLAYING_CARD_HOVERED, {
                     num_users: g,
                     num_streams: _,
                     num_activities: f,
@@ -59,8 +59,8 @@ let y = 15 * I.Z.Millis.MINUTE,
                 });
             }, [g, _, f, I, m]),
             A = o()(C, y);
-        return null != s || null != c
-            ? (0, i.jsx)(d.yRy, {
+        return null != s || null != d
+            ? (0, i.jsx)(c.yRy, {
                   position: 'left',
                   renderPopout: (e) => {
                       let { closePopout: n } = e;
@@ -79,7 +79,7 @@ let y = 15 * I.Z.Millis.MINUTE,
                           className: L.itemCard,
                           active: n,
                           children: (0, i.jsxs)('div', {
-                              children: [s, c]
+                              children: [s, d]
                           })
                       });
                   }
@@ -94,14 +94,14 @@ function R() {
             needsRefresh: n,
             fetching: r,
             currentUser: a
-        } = (0, c.cj)([f.Z, g.Z, _.default], () => ({
+        } = (0, d.cj)([f.Z, g.Z, _.default], () => ({
             nowPlayingCards: f.Z.nowPlayingCards,
             loaded: f.Z.loaded,
             needsRefresh: g.Z.needsRefresh(),
             fetching: g.Z.getFetching(),
             currentUser: _.default.getCurrentUser()
         })),
-        s = (0, c.e7)([h.Z], () => h.Z.quests);
+        s = (0, d.e7)([h.Z], () => h.Z.quests);
     l.useEffect(() => (u.Z.wait(() => C.L()), () => u.Z.wait(() => C.v())), [null == a ? void 0 : a.id]),
         l.useEffect(() => {
             n && !r && P();
@@ -137,22 +137,22 @@ function R() {
                   : (0, i.jsxs)('div', {
                         className: L.emptyCard,
                         children: [
-                            (0, i.jsx)(d.X6q, {
+                            (0, i.jsx)(c.X6q, {
                                 variant: 'heading-md/semibold',
                                 className: L.emptyHeader,
-                                children: x.intl.string(x.t['ngJ/5u'])
+                                children: b.intl.string(b.t['ngJ/5u'])
                             }),
-                            (0, i.jsx)(d.Text, {
+                            (0, i.jsx)(c.Text, {
                                 color: 'none',
                                 className: L.emptyText,
                                 variant: 'text-sm/normal',
-                                children: x.intl.string(x.t['99ZWxc'])
+                                children: b.intl.string(b.t['99ZWxc'])
                             })
                         ]
                     })),
           (0, i.jsx)(i.Fragment, { children: p }))
         : (0, i.jsx)('div', {
               className: L.emptyCard,
-              children: (0, i.jsx)(d.$jN, {})
+              children: (0, i.jsx)(c.$jN, {})
           });
 }

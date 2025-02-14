@@ -31,9 +31,9 @@ function R(e) {
         y = (0, s.e7)([C.default], () => C.default.getCurrentUser()),
         A = (null == Z ? void 0 : Z.isOwner(y)) === !0,
         { loading: L } = (0, o.H)(t),
-        [D, k] = r.useState(n ? 'manage_listings' : 'payment');
+        [D, O] = r.useState(n ? 'manage_listings' : 'payment');
     (0, u.P)(Z);
-    let O = r.useCallback(() => {
+    let k = r.useCallback(() => {
         if (null == Z) return;
         let e = _.Z.getRole(Z.id, Z.getEveryoneRoleId());
         if (null == e) return;
@@ -70,7 +70,7 @@ function R(e) {
             className: S.tabBar,
             'aria-label': T.intl.string(T.t.X6h2g4),
             selectedItem: D,
-            onItemSelect: k,
+            onItemSelect: O,
             children: [
                 (0, i.jsx)(d.Z, {
                     id: 'basic_info',
@@ -95,7 +95,7 @@ function R(e) {
                     ? (0, i.jsx)('div', {
                           className: S.previewButton,
                           children: (0, i.jsx)(a.zxk, {
-                              onClick: O,
+                              onClick: k,
                               color: a.zxk.Colors.PRIMARY,
                               size: a.zxk.Sizes.SMALL,
                               look: a.zxk.Looks.OUTLINED,

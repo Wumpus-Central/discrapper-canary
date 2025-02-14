@@ -1,6 +1,6 @@
 n.d(t, {
-    Df: () => u,
-    S_: () => c,
+    Df: () => c,
+    S_: () => u,
     V5: () => a,
     VX: () => o,
     ZP: () => h,
@@ -17,10 +17,10 @@ let l = {
     a = 20000,
     s = 500,
     d = 1000;
-function c(e) {
+function u(e) {
     r.setState({ timeToLiveMs: e });
 }
-function u(e) {
+function c(e) {
     r.setState({ reappearTimeMs: e });
 }
 let h = r;

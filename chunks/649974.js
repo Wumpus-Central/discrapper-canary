@@ -5,8 +5,8 @@ var i,
     a = n(442837),
     s = n(570140),
     o = n(656063),
-    c = n(814443),
-    d = n(158776),
+    d = n(814443),
+    c = n(158776),
     u = n(594174),
     h = n(981631);
 let m = !1,
@@ -71,27 +71,27 @@ function E(e) {
 }
 function I() {
     let e = !1;
-    if (!c.Z.needsRefresh() && !m) {
+    if (!d.Z.needsRefresh() && !m) {
         let t;
         (p = {}),
             (g = {}),
             (t = !1),
-            d.Z.getUserIds().forEach((e) => {
+            c.Z.getUserIds().forEach((e) => {
                 let n = u.default.getUser(e);
                 null != n &&
                     (t =
                         E({
                             user: n,
-                            activities: d.Z.getActivities(e)
+                            activities: c.Z.getActivities(e)
                         }) || t);
             }),
             (e = t);
     }
-    return (m = !c.Z.needsRefresh()), e;
+    return (m = !d.Z.needsRefresh()), e;
 }
 class C extends (r = a.ZP.Store) {
     initialize() {
-        this.waitFor(c.Z), this.syncWith([c.Z], I);
+        this.waitFor(d.Z), this.syncWith([d.Z], I);
     }
     get games() {
         return p;

@@ -1,76 +1,76 @@
-n.d(t, { Z: () => T }), n(47120);
+n.d(t, { Z: () => S }), n(47120);
 var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    l = n(481060),
+    s = n(192379),
+    r = n(120356),
+    l = n.n(r),
+    a = n(481060),
     o = n(100527),
     c = n(906732),
     d = n(70097),
     u = n(526167),
     m = n(140465),
-    g = n(104494),
-    _ = n(639119),
-    p = n(635921),
-    f = n(474936),
-    h = n(869783),
-    x = n(388032),
-    E = n(759172),
-    C = n(839526),
-    b = n(4046),
-    v = n(423741);
-let T = (e) => {
+    h = n(104494),
+    g = n(639119),
+    x = n(635921),
+    _ = n(474936),
+    p = n(869783),
+    E = n(388032),
+    C = n(759172),
+    f = n(839526),
+    T = n(4046),
+    N = n(423741);
+let S = (e) => {
     var t, n;
-    let { className: a, isFooterVisible: T, isDarkMode: N, isReducedMotion: I } = e,
-        { analyticsLocations: R } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_FOOTER_CTA),
-        j = (0, g.Ng)(),
-        S = (0, g.Wp)(j, f.Si.TIER_2) ? f.Si.TIER_2 : void 0,
-        A = (0, _.N)(),
-        P = (0, m.Nx)(),
-        Z = (0, u.rO)(),
-        w = r.useRef(null),
-        [M, B] = r.useState(!1);
+    let { className: r, isFooterVisible: S, isDarkMode: I, isReducedMotion: b } = e,
+        { analyticsLocations: v } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_FOOTER_CTA),
+        j = (0, h.Ng)(),
+        A = (0, h.Wp)(j, _.Si.TIER_2) ? _.Si.TIER_2 : void 0,
+        O = (0, g.N)(),
+        R = (0, m.Nx)(),
+        P = (0, u.rO)(),
+        D = s.useRef(null),
+        [y, Z] = s.useState(!1);
     return (
-        r.useEffect(() => {
-            !T || I || M || null == w.current || w.current.play();
-        }, [T, I, M]),
+        s.useEffect(() => {
+            !S || b || y || null == D.current || D.current.play();
+        }, [S, b, y]),
         (0, i.jsx)(c.Gt, {
-            value: R,
+            value: v,
             children: (0, i.jsxs)('div', {
-                className: s()(E.container, a),
+                className: l()(C.container, r),
                 children: [
-                    (0, i.jsx)(l.X6q, {
-                        className: E.footerHeader,
+                    (0, i.jsx)(a.X6q, {
+                        className: C.footerHeader,
                         variant: 'display-md',
                         color: 'header-primary',
-                        children: x.intl.string(x.t.lEw32t)
+                        children: E.intl.string(E.t.lEw32t)
                     }),
-                    (0, i.jsx)(p.PK, {
-                        subscriptionTier: null !== (n = null == A ? void 0 : null === (t = A.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : S,
-                        inOfferExperience: P,
-                        containerClassName: s()(E.footerCTAContainer),
+                    (0, i.jsx)(x.PK, {
+                        subscriptionTier: null !== (n = null == O ? void 0 : null === (t = O.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : A,
+                        inOfferExperience: R,
+                        containerClassName: l()(C.footerCTAContainer),
                         isMarketingPageV2Enabled: !0,
-                        isDarkMode: N
+                        isDarkMode: I
                     }),
                     (0, i.jsx)('div', {
-                        className: E.footerArtContainer,
+                        className: C.footerArtContainer,
                         children: (0, i.jsx)(d.Z, {
                             playsInline: !0,
                             preload: 'auto',
-                            poster: b.Z,
-                            className: s()(E.footerArt),
+                            poster: T.Z,
+                            className: l()(C.footerArt),
                             onEnded: () => {
-                                B(!0);
+                                Z(!0);
                             },
-                            ref: w,
+                            ref: D,
                             children: (0, i.jsx)('source', {
-                                src: Z ? C.Z : v.Z,
-                                type: Z ? h.m.MP4 : h.m.WEBM
+                                src: P ? f.Z : N.Z,
+                                type: P ? p.m.MP4 : p.m.WEBM
                             })
                         })
                     }),
-                    (0, i.jsx)('div', { className: E.leftGradient }),
-                    (0, i.jsx)('div', { className: E.rightGradient })
+                    (0, i.jsx)('div', { className: C.leftGradient }),
+                    (0, i.jsx)('div', { className: C.rightGradient })
                 ]
             })
         })

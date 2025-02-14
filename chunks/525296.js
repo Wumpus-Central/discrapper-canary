@@ -1,11 +1,11 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => d });
 var i = n(200651),
     l = n(192379),
     r = n(493683),
     a = n(239091),
     s = n(730749),
     o = n(430824);
-function c(e) {
+function d(e) {
     return (0, s.Z)(
         class extends l.Component {
             render() {
@@ -36,7 +36,7 @@ function c(e) {
             }
             handleGuildContextMenu(e, t) {
                 (0, a.jW)(e, async () => {
-                    let { default: e } = await Promise.all([n.e('33053'), n.e('17298'), n.e('7654'), n.e('44156'), n.e('90255'), n.e('6850'), n.e('58227'), n.e('16114'), n.e('54408'), n.e('23958'), n.e('33213'), n.e('16524')]).then(n.bind(n, 545135));
+                    let { default: e } = await Promise.all([n.e('7654'), n.e('44156'), n.e('63104'), n.e('6850'), n.e('58227'), n.e('16114'), n.e('54408'), n.e('11684'), n.e('33213'), n.e('16524')]).then(n.bind(n, 545135));
                     return (n) =>
                         (0, i.jsx)(e, {
                             ...n,

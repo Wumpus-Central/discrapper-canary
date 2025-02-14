@@ -1,31 +1,31 @@
-s.d(t, { Z: () => l }), s(47120);
-var a = s(200651),
-    n = s(192379),
-    i = s(332009);
-function r(e, t, s) {
+a.d(t, { Z: () => o }), a(47120);
+var n = a(200651),
+    s = a(192379),
+    l = a(332009);
+function i(e, t, a) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: s,
+                  value: a,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = s),
+            : (e[t] = a),
         e
     );
 }
-class o extends n.Component {
+class r extends s.Component {
     componentDidUpdate(e) {
         let {
-            props: { location: t, shouldScrollToTop: s },
-            scrollRef: { current: a }
+            props: { location: t, shouldScrollToTop: a },
+            scrollRef: { current: n }
         } = this;
-        null != a && t !== e.location && (null != s ? s(this.props) && (a.scrollTop = 0) : (a.scrollTop = 0));
+        null != n && t !== e.location && (null != a ? a(this.props) && (n.scrollTop = 0) : (n.scrollTop = 0));
     }
     render() {
         let { className: e, render: t } = this.props;
-        return (0, a.jsx)('div', {
+        return (0, n.jsx)('div', {
             ref: this.scrollRef,
             className: e,
             children: t(this.scrollTo, this.getScrollTop)
@@ -33,11 +33,11 @@ class o extends n.Component {
     }
     constructor(...e) {
         super(...e),
-            r(this, 'scrollRef', n.createRef()),
-            r(this, 'scrollTo', (e) => {
+            i(this, 'scrollRef', s.createRef()),
+            i(this, 'scrollTo', (e) => {
                 null != this.scrollRef.current && (this.scrollRef.current.scrollTop = e);
             }),
-            r(this, 'getScrollTop', () => (null == this.scrollRef.current ? 0 : this.scrollRef.current.scrollTop));
+            i(this, 'getScrollTop', () => (null == this.scrollRef.current ? 0 : this.scrollRef.current.scrollTop));
     }
 }
-let l = (0, i.EN)(o);
+let o = (0, l.EN)(r);

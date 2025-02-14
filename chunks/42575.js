@@ -5,8 +5,8 @@ var i = n(200651),
     a = n(194359),
     s = n(906732),
     o = n(388380),
-    c = n(171368),
-    d = n(626135),
+    d = n(171368),
+    c = n(626135),
     u = n(321488),
     h = n(417183),
     m = n(170245),
@@ -15,7 +15,7 @@ var i = n(200651),
     _ = n(290457);
 function f(e) {
     let { user: t, nickname: n, status: f, isFocused: E } = e,
-        I = l.useContext(d.AnalyticsContext),
+        I = l.useContext(c.AnalyticsContext),
         { analyticsLocations: C } = (0, s.ZP)(),
         N = (e) => {
             null == e || e.stopPropagation(),
@@ -35,7 +35,7 @@ function f(e) {
         isFocused: E,
         user: t,
         onClick: () =>
-            (0, c.openUserProfileModal)({
+            (0, d.openUserProfileModal)({
                 userId: t.id,
                 sourceAnalyticsLocations: C,
                 analyticsLocation: I.location

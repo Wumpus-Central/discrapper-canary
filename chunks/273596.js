@@ -5,8 +5,8 @@ var i = n(200651),
     a = n.n(r),
     s = n(392711),
     o = n.n(s),
-    c = n(481060),
-    d = n(393903),
+    d = n(481060),
+    c = n(393903),
     u = n(626135),
     h = n(823379),
     m = n(900849),
@@ -27,18 +27,18 @@ let A = Object.freeze({
         left: 32,
         right: 202
     }),
-    b = Object.freeze({
+    Z = Object.freeze({
         top: 0,
         bottom: 0,
         left: 32,
         right: 32
     }),
-    Z = {
+    x = {
         page: T.ZY5.GUILD_DISCOVERY,
         object: T.qAy.CARD,
         section: T.jXE.DISCOVER_SEARCH
     },
-    x = o().throttle(m.c6, 1000, {
+    b = o().throttle(m.c6, 1000, {
         leading: !1,
         trailing: !0
     });
@@ -49,21 +49,21 @@ function L(e) {
         P = l.useContext(u.AnalyticsContext),
         [R, j] = l.useState((0, _.PM)()),
         [D, w] = l.useState(!0),
-        k = l.useRef(D),
-        [M, U] = l.useState(3),
-        G = l.useRef(M),
+        M = l.useRef(D),
+        [k, U] = l.useState(3),
+        G = l.useRef(k),
         B = l.useRef(null),
         V = l.useCallback(
             (e) => {
-                if (null != e && !O && !m) 336 * (o.length / M) <= e.height && L();
+                if (null != e && !O && !m) 336 * (o.length / k) <= e.height && L();
             },
-            [O, m, o.length, M, L]
+            [O, m, o.length, k, L]
         ),
-        H = (0, d.y)((e) => {
+        H = (0, c.y)((e) => {
             let t = null == e ? void 0 : e.getBoundingClientRect();
             if (null == t) return;
             let n = t.width;
-            n < 1024 && k.current ? ((k.current = !1), w(!1)) : n > 1024 && !k.current && ((k.current = !0), w(!0));
+            n < 1024 && M.current ? ((M.current = !1), w(!1)) : n > 1024 && !M.current && ((M.current = !0), w(!0));
             let i = 1;
             for (n -= D ? 450 : 0, n -= 280; n > 0; ) (n -= 264), (i += 1);
             i !== G.current && ((G.current = i), U(i)), V(t);
@@ -76,7 +76,7 @@ function L(e) {
             j((0, _.PM)());
         }, [T]),
         l.useEffect(() => {
-            x({
+            b({
                 loadId: t,
                 searchId: R,
                 query: T,
@@ -111,7 +111,7 @@ function L(e) {
                             l
                         );
                     case 1:
-                        return (0, i.jsx)(c.$jN, { className: a()(S.spinner, { [S.spinnerWithSidebar]: D }) }, l);
+                        return (0, i.jsx)(d.$jN, { className: a()(S.spinner, { [S.spinnerWithSidebar]: D }) }, l);
                 }
             },
             [O, D, t]
@@ -172,7 +172,7 @@ function L(e) {
                             style: n,
                             children: (0, i.jsx)(v.ZP, {
                                 guildId: e,
-                                onClick: async (e) => await X(e, t, y, Z),
+                                onClick: async (e) => await X(e, t, y, x),
                                 onView: (e) => F(e)
                             })
                         },
@@ -222,15 +222,15 @@ function L(e) {
                 ),
             [L]
         ),
-        $ = D ? A : b;
+        $ = D ? A : Z;
     return (0, i.jsx)('div', {
         className: S.container,
         ref: H,
-        children: (0, i.jsx)(c.GMG, {
+        children: (0, i.jsx)(d.GMG, {
             ref: B,
             className: S.masonryList,
             sections: z,
-            columns: M,
+            columns: k,
             itemGutter: 16,
             padding: $,
             renderItem: Q,

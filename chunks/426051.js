@@ -5,8 +5,8 @@ var i = n(200651),
     a = n(481060),
     s = n(797614),
     o = n(359110),
-    c = n(6025),
-    d = n(433355),
+    d = n(6025),
+    c = n(433355),
     u = n(26373),
     h = n(486622),
     m = n(376191),
@@ -20,10 +20,10 @@ function f(e) {
             (0, a.showToast)((0, a.createToast)(g.intl.string(g.t.pIQ3h4), a.ToastType.FAILURE)), s.Z.increment({ name: r.V.SPAM_MESSAGE_REQUEST_ERROR_VIEW });
         }, []),
         C = l.useCallback(() => {
-            c.Z.closeChannelSidebar(d.uZ);
+            d.Z.closeChannelSidebar(c.uZ);
         }, []),
         N = l.useCallback(() => {
-            c.Z.closeChannelSidebar(d.uZ), E && (0, o.Kh)(f.id);
+            d.Z.closeChannelSidebar(c.uZ), E && (0, o.Kh)(f.id);
         }, [f.id, E]),
         {
             acceptMessageRequest: v,
@@ -36,8 +36,8 @@ function f(e) {
             onRejectSuccess: C,
             onError: I
         }),
-        b = T || S,
-        Z = b || A;
+        Z = T || S,
+        x = Z || A;
     return (0, i.jsxs)('div', {
         className: _.container,
         children: [
@@ -56,8 +56,8 @@ function f(e) {
                         onClick: (e) => {
                             v(f.id), e.stopPropagation();
                         },
-                        disabled: Z,
-                        submitting: b,
+                        disabled: x,
+                        submitting: Z,
                         children: g.intl.string(g.t.vicfl5)
                     }),
                     (0, i.jsx)(p.Z, {

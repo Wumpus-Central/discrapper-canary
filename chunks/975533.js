@@ -1,12 +1,12 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => b });
 var i = n(570140),
     l = n(846027),
     r = n(13245),
     a = n(287734),
     s = n(872810),
     o = n(223245),
-    c = n(317770),
-    d = n(924557),
+    d = n(317770),
+    c = n(924557),
     u = n(39604),
     h = n(569545),
     m = n(722835),
@@ -22,7 +22,7 @@ var i = n(570140),
     T = n(554174),
     S = n(981631),
     A = n(65154);
-let b = {
+let Z = {
     [S.kg4.TOGGLE_PRIORITY_SPEAKER]: {
         onTrigger() {},
         keyEvents: {}
@@ -33,7 +33,7 @@ let b = {
     },
     [S.kg4.PUSH_TO_TALK]: {
         onTrigger(e, t) {
-            E.Z.getMode(t.context) === S.pM4.PUSH_TO_TALK && ((b[S.kg4.PUSH_TO_TALK].isPressed = e), E.Z.getMediaEngine().eachConnection((t) => t.setForceAudioInput(e, !1), t.context));
+            E.Z.getMode(t.context) === S.pM4.PUSH_TO_TALK && ((Z[S.kg4.PUSH_TO_TALK].isPressed = e), E.Z.getMediaEngine().eachConnection((t) => t.setForceAudioInput(e, !1), t.context));
         },
         keyEvents: {
             keyup: !0,
@@ -43,7 +43,7 @@ let b = {
     },
     [S.kg4.PUSH_TO_TALK_PRIORITY]: {
         onTrigger(e) {
-            E.Z.getMode() === S.pM4.PUSH_TO_TALK && ((b[S.kg4.PUSH_TO_TALK_PRIORITY].isPressed = e), E.Z.getMediaEngine().eachConnection((t) => t.setForceAudioInput(e, !0), A.Yn.DEFAULT));
+            E.Z.getMode() === S.pM4.PUSH_TO_TALK && ((Z[S.kg4.PUSH_TO_TALK_PRIORITY].isPressed = e), E.Z.getMediaEngine().eachConnection((t) => t.setForceAudioInput(e, !0), A.Yn.DEFAULT));
         },
         keyEvents: {
             keyup: !0,
@@ -53,7 +53,7 @@ let b = {
     },
     [S.kg4.PUSH_TO_MUTE]: {
         onTrigger(e) {
-            E.Z.getMode() === S.pM4.VOICE_ACTIVITY && ((b[S.kg4.PUSH_TO_MUTE].isPressed = e), l.Z.setTemporarySelfMute(e));
+            E.Z.getMode() === S.pM4.VOICE_ACTIVITY && ((Z[S.kg4.PUSH_TO_MUTE].isPressed = e), l.Z.setTemporarySelfMute(e));
         },
         keyEvents: {
             keyup: !0,
@@ -189,7 +189,7 @@ let b = {
     },
     [S.kg4.SAVE_CLIP]: {
         onTrigger: () => {
-            (0, d.ln)() && (v.default.track(S.rMx.CLIP_SAVE_KEYBIND_PRESSED), (0, u.C1)());
+            (0, c.ln)() && (v.default.track(S.rMx.CLIP_SAVE_KEYBIND_PRESSED), (0, u.C1)());
         },
         keyEvents: {
             keyup: !1,
@@ -222,15 +222,15 @@ let b = {
         }
     }
 };
-class Z extends c.Z {
+class x extends d.Z {
     _initialize() {
         i.Z.wait(() =>
             i.Z.dispatch({
                 type: 'KEYBINDS_REGISTER_GLOBAL_KEYBIND_ACTIONS',
-                keybinds: b
+                keybinds: Z
             })
         );
     }
     _terminate() {}
 }
-let x = new Z();
+let b = new x();

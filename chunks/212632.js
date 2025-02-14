@@ -1,43 +1,43 @@
-n.d(t, { Z: () => p }), n(47120);
-var i = n(200651),
-    s = n(192379),
-    l = n(120356),
-    r = n.n(l),
-    a = n(481060),
+n.d(t, { Z: () => I }), n(47120);
+var l = n(200651),
+    i = n(192379),
+    a = n(120356),
+    r = n.n(a),
+    s = n(481060),
     o = n(981631),
-    c = n(388032),
+    u = n(388032),
     d = n(361143),
-    u = n(483938);
-let h = 0,
-    m = () => 'notification-position-selector-'.concat(h++),
-    g = (e) => {
+    c = n(483938);
+let E = 0,
+    _ = () => 'notification-position-selector-'.concat(E++),
+    h = (e) => {
         switch (e) {
             case o._vf.TOP_LEFT:
-                return c.intl.string(c.t.xlchpa);
+                return u.intl.string(u.t.xlchpa);
             case o._vf.TOP_RIGHT:
-                return c.intl.string(c.t['4uHRHB']);
+                return u.intl.string(u.t['4uHRHB']);
             case o._vf.BOTTOM_LEFT:
-                return c.intl.string(c.t.ovWFnJ);
+                return u.intl.string(u.t.ovWFnJ);
             case o._vf.BOTTOM_RIGHT:
-                return c.intl.string(c.t['M/9V7+']);
+                return u.intl.string(u.t['M/9V7+']);
             default:
-                return c.intl.string(c.t.AlY4ZW);
+                return u.intl.string(u.t.AlY4ZW);
         }
     },
-    x = [o._vf.DISABLED, o._vf.TOP_LEFT, o._vf.TOP_RIGHT, o._vf.BOTTOM_LEFT, o._vf.BOTTOM_RIGHT];
-function _(e) {
+    C = [o._vf.DISABLED, o._vf.TOP_LEFT, o._vf.TOP_RIGHT, o._vf.BOTTOM_LEFT, o._vf.BOTTOM_RIGHT];
+function T(e) {
     let { position: t, onChange: n } = e,
-        [l] = s.useState(() => m()),
-        h = t === o._vf.DISABLED ? c.intl.string(c.t.R6LxVV) : c.intl.formatToPlainString(c.t.XXHDMz, { position: g(t) });
-    return (0, i.jsxs)('div', {
+        [a] = i.useState(() => _()),
+        E = t === o._vf.DISABLED ? u.intl.string(u.t.R6LxVV) : u.intl.formatToPlainString(u.t.XXHDMz, { position: h(t) });
+    return (0, l.jsxs)('div', {
         children: [
-            (0, i.jsx)(a.tEY, {
+            (0, l.jsx)(s.tEY, {
                 within: !0,
                 offset: -2,
-                children: (0, i.jsx)('div', {
+                children: (0, l.jsx)('div', {
                     className: r()(d.wrapper, { [d.disabledSelected]: t === o._vf.DISABLED }),
-                    children: x.map((e) =>
-                        (0, i.jsxs)(
+                    children: C.map((e) =>
+                        (0, l.jsxs)(
                             'label',
                             {
                                 className: r()({
@@ -49,17 +49,17 @@ function _(e) {
                                     [d.bottomLeft]: e === o._vf.BOTTOM_LEFT
                                 }),
                                 children: [
-                                    g(e),
+                                    h(e),
                                     e === o._vf.DISABLED
-                                        ? (0, i.jsx)(a.t6m, {
+                                        ? (0, l.jsx)(s.t6m, {
                                               size: 'md',
                                               color: 'currentColor',
                                               className: d.disabledIcon
                                           })
                                         : null,
-                                    (0, i.jsx)('input', {
+                                    (0, l.jsx)('input', {
                                         type: 'radio',
-                                        name: l,
+                                        name: a,
                                         value: e,
                                         onChange: (t) => n(t, e),
                                         className: d.hiddenInput
@@ -71,13 +71,13 @@ function _(e) {
                     )
                 })
             }),
-            (0, i.jsx)(a.R94, {
-                type: a.geA.DESCRIPTION,
-                className: u.marginTop8,
-                children: h
+            (0, l.jsx)(s.R94, {
+                type: s.geA.DESCRIPTION,
+                className: c.marginTop8,
+                children: E
             })
         ]
     });
 }
-_.Positions = o._vf;
-let p = _;
+T.Positions = o._vf;
+let I = T;

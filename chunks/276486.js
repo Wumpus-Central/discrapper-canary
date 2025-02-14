@@ -43,7 +43,7 @@ function d(e) {
                 onClick: () => {
                     (0, l.ZDy)(
                         async () => {
-                            let { default: e } = await Promise.all([n.e('76540'), n.e('24729')]).then(n.bind(n, 607018));
+                            let { default: e } = await Promise.all([n.e('76540'), n.e('98523')]).then(n.bind(n, 607018));
                             return (t) =>
                                 (0, i.jsx)(e, {
                                     reason: r.L.GUILD_PHONE_REQUIRED,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => c });
 var i = n(200651);
 n(192379);
 var l = n(442837),
@@ -6,10 +6,10 @@ var l = n(442837),
     a = n(862099),
     s = n(938475),
     o = n(388032),
-    c = n(644833);
-let d = function (e) {
+    d = n(644833);
+let c = function (e) {
     let { name: t, channel: n } = e,
-        d = (0, l.Wu)(
+        c = (0, l.Wu)(
             [s.ZP],
             () =>
                 s.ZP.getVoiceStatesForChannel(n).map((e) => {
@@ -28,12 +28,12 @@ let d = function (e) {
                 ? (0, i.jsx)(u, {
                       size: 'xs',
                       color: 'currentColor',
-                      className: c.icon
+                      className: d.icon
                   })
                 : null,
         children: (0, i.jsx)(a.Co, {
             channel: n,
-            speakers: d,
+            speakers: c,
             voiceType: a.bZ.STUDY_ROOM
         })
     });

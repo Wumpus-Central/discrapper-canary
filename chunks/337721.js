@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => c });
 var i = n(200651);
 n(192379);
 var l = n(434404),
@@ -6,8 +6,8 @@ var l = n(434404),
     a = n(981631),
     s = n(388032),
     o = n(471475),
-    c = n(930128);
-function d(e) {
+    d = n(930128);
+function c(e) {
     let { guild: t, markAsDismissed: n } = e;
     return (0, i.jsx)(r.ZP, {
         header: s.intl.string(s.t.Hgd22t),
@@ -16,7 +16,7 @@ function d(e) {
             className: o.image,
             children: (0, i.jsx)('img', {
                 alt: '',
-                src: c
+                src: d
             })
         }),
         buttonCTA: s.intl.string(s.t['9l+df3']),

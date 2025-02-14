@@ -216,7 +216,7 @@ function k(e) {
             return null != n && (0, h.bO)({ eventId: n.id }), !0;
         };
     if (B && (null == k ? void 0 : k.startsWith('/settings/'))) {
-        let { default: e } = n(357269),
+        let { default: e } = n(722589),
             t = e(k);
         if (null != t)
             return (e) => (

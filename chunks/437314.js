@@ -10,8 +10,8 @@ var i,
     a = n(748780),
     s = n(442837),
     o = n(481060),
-    c = n(540059),
-    d = n(922611),
+    d = n(540059),
+    c = n(922611),
     u = n(210887),
     h = n(981631),
     m = n(388032),
@@ -107,7 +107,7 @@ let f = Object.freeze({
         let { theme: t } = e,
             n = m.intl.string(m.t['oi+B4u']),
             i = f.SECTION_ALL,
-            a = (0, c.Q3)('AddFriendEmpty');
+            a = (0, d.Q3)('AddFriendEmpty');
         return (0, l.jsx)(r.Fragment, {
             children: (0, l.jsxs)(o.ubH, {
                 theme: t,
@@ -173,8 +173,8 @@ class I extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            g(this, 'isStealthRemediationEnabled', (0, d.Do)({ location: 'FriendsEmptyState' })),
-            g(this, 'isDesktopVisualRefreshEnabled', (0, c.i9)('FriendsEmptyState')),
+            g(this, 'isStealthRemediationEnabled', (0, c.Do)({ location: 'FriendsEmptyState' })),
+            g(this, 'isDesktopVisualRefreshEnabled', (0, d.i9)('FriendsEmptyState')),
             g(this, 'state', { opacity: new a.Z.Value(1) }),
             g(this, 'componentWillEnter', (e) => {
                 this.state.opacity.setValue(0),

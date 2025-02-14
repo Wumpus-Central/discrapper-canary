@@ -6,8 +6,8 @@ var l = n(481060),
     a = n(24124),
     s = n(447543),
     o = n(13245),
-    c = n(596223),
-    d = n(710845),
+    d = n(596223),
+    c = n(710845),
     u = n(293273),
     h = n(885110),
     m = n(996106),
@@ -16,7 +16,7 @@ var l = n(481060),
     _ = n(852926),
     f = n(186901),
     E = n(981631);
-let I = new d.Z('RPCCommandsOverlay'),
+let I = new c.Z('RPCCommandsOverlay'),
     C = {
         [E.Etm.SET_OVERLAY_LOCKED]: {
             scope: f.lH,
@@ -62,9 +62,9 @@ let I = new d.Z('RPCCommandsOverlay'),
                 let r = u.Z.getApplicationActivity(l);
                 if (null == r || null == r.secrets || !(0, p.t9)(n, r.party, r.secrets)) throw new m.Z({ errorCode: E.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure an activity includes a party and appropriate secret.');
                 let { lock: s, context: o } = (0, _.jU)(i),
-                    d = (0, c.Z)(r, h.Z);
-                return (0, a.h7)(r, d, o).then(() => {
-                    if ((s(), d)) throw new m.Z({ errorCode: E.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure user does have have privacy enabled.');
+                    c = (0, d.Z)(r, h.Z);
+                return (0, a.h7)(r, c, o).then(() => {
+                    if ((s(), c)) throw new m.Z({ errorCode: E.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure user does have have privacy enabled.');
                 });
             }
         },
@@ -115,7 +115,7 @@ let I = new d.Z('RPCCommandsOverlay'),
                 let { lock: s } = (0, _.jU)(t);
                 return new Promise((e) => {
                     (0, l.ZDy)(async () => {
-                        let { default: t } = await n.e('66063').then(n.bind(n, 344516));
+                        let { default: t } = await n.e('45406').then(n.bind(n, 344516));
                         return (n) =>
                             (0, i.jsx)(t, {
                                 ...n,

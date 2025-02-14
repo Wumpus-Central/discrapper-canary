@@ -39,26 +39,26 @@ let y = (e, t, n) => {
     Z = (e) => {
         let { channel: t, entry: n, onReaction: d, onVoiceChannelPreview: Z } = e,
             T = (0, i.e7)([s.default], () => s.default.getUser(n.author_id)),
-            { largeImage: E } = (0, m.rv)({ entry: n }),
-            { primaryColor: A, secondaryColor: _ } = (0, g.Z)(null == E ? void 0 : E.src),
+            { largeImage: A } = (0, m.rv)({ entry: n }),
+            { primaryColor: E, secondaryColor: _ } = (0, g.Z)(null == A ? void 0 : A.src),
             S = (0, i.e7)([o.default], () => o.default.locale),
             R = (0, p.Z)(f.ABu.CRUNCHYROLL),
             k = (0, x.ap)(n.extra.media_assets_large_text),
             w = a.useCallback(
                 (e) => {
-                    if (null != T && (null == E ? void 0 : E.src) != null)
+                    if (null != T && (null == A ? void 0 : A.src) != null)
                         return (0, h.B)({
                             entry: n,
-                            mediaImageSrc: null == E ? void 0 : E.src,
+                            mediaImageSrc: null == A ? void 0 : A.src,
                             avatarSrc: T.getAvatarURL(null == t ? void 0 : t.guild_id, 128),
                             description: y(n, t, T),
                             timestamp: (0, x.yh)(n, S),
                             episodeDescription: k,
-                            colors: [A, _],
+                            colors: [E, _],
                             channelId: e
                         });
                 },
-                [t, n, k, S, null == E ? void 0 : E.src, A, _, T]
+                [t, n, k, S, null == A ? void 0 : A.src, E, _, T]
             ),
             O = () => {
                 if (null == n.extra.url) return;

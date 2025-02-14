@@ -1,7 +1,7 @@
 n.d(t, {
-    QM: () => N,
-    ds: () => f,
-    mG: () => p
+    QM: () => A,
+    ds: () => p,
+    mG: () => N
 }),
     n(47120);
 var l = n(200651),
@@ -14,42 +14,42 @@ var l = n(200651),
     d = n(751648),
     c = n(479766),
     E = n(741808),
-    C = n(981631),
-    _ = n(642145),
-    h = n(388032),
-    I = n(194733),
-    g = n(33461);
-let T = () =>
+    _ = n(981631),
+    h = n(642145),
+    C = n(388032),
+    T = n(194733),
+    I = n(33461);
+let g = () =>
         (0, l.jsx)('div', {
-            className: g.svgContainer,
+            className: I.svgContainer,
             children: (0, l.jsx)('img', {
                 src: n(39017),
-                className: g.svg,
+                className: I.svg,
                 alt: 'Quests Icon'
             })
         }),
     S = (e) =>
         (0, l.jsx)(o.zxk, {
             ...e,
-            'aria-label': h.intl.string(h.t.cpT0Cg),
+            'aria-label': C.intl.string(C.t.cpT0Cg),
             look: o.zxk.Looks.BLANK,
             size: o.zxk.Sizes.NONE,
-            wrapperClassName: g.closeButton,
-            innerClassName: g.closeButtonInner,
+            wrapperClassName: I.closeButton,
+            innerClassName: I.closeButtonInner,
             children: (0, l.jsx)(o.Dio, {
                 size: 'refresh_sm',
                 color: 'currentColor',
-                className: g.closeButtonIcon
+                className: I.closeButtonIcon
             })
         }),
-    A = (e) => {
+    f = (e) => {
         let { invertTail: t } = e;
         return (0, l.jsxs)('div', {
-            className: r()(g.tail, t ? g.tailPositionInverted : g.tailPositionNormal),
+            className: r()(I.tail, t ? I.tailPositionInverted : I.tailPositionNormal),
             children: [
-                (0, l.jsx)('div', { className: g.tailSpine }),
+                (0, l.jsx)('div', { className: I.tailSpine }),
                 (0, l.jsx)('div', {
-                    className: r()(g.tailTargetOuter, t ? g.tailTargetPositionInverted : g.tailTargetPositionNormal),
+                    className: r()(I.tailTargetOuter, t ? I.tailTargetPositionInverted : I.tailTargetPositionNormal),
                     children: (0, l.jsx)('svg', {
                         xmlns: 'http://www.w3.org/2000/svg',
                         width: '8',
@@ -60,29 +60,29 @@ let T = () =>
                             cx: '50%',
                             cy: '50%',
                             r: '3',
-                            className: g.tailTargetInner
+                            className: I.tailTargetInner
                         })
                     })
                 })
             ]
         });
     },
-    f = (e) => {
+    p = (e) => {
         let { onClose: t, backgroundElementRef: n, renderTail: a = !1 } = e,
             [r, o] = i.useState(Date.now()),
             [d, c] = i.useState(!1),
-            C = i.useCallback(
+            _ = i.useCallback(
                 (e) => {
                     let t = e.top < window.innerHeight / 2;
                     t !== d && c(t);
                 },
                 [d]
             ),
-            _ = (0, s.e7)([u.Z], () => u.Z.getExpandedFolders().size > 0);
+            h = (0, s.e7)([u.Z], () => u.Z.getExpandedFolders().size > 0);
         return (
             i.useEffect(() => {
                 o(Date.now());
-            }, [_]),
+            }, [h]),
             (0, l.jsx)(
                 E.X,
                 {
@@ -100,8 +100,8 @@ let T = () =>
                         top: 0,
                         left: 0
                     },
-                    onGetBoundingRect: C,
-                    children: (0, l.jsx)(p, {
+                    onGetBoundingRect: _,
+                    children: (0, l.jsx)(N, {
                         onClose: t,
                         renderTail: a,
                         invertTail: d
@@ -111,7 +111,7 @@ let T = () =>
             )
         );
     },
-    N = (e) => {
+    A = (e) => {
         let { isVirtualCurrencyEnabled: t, discoveryButtonRef: n } = e,
             [l, a] = i.useState(!1),
             { shouldOpenCoachmark: r, shouldSkipCoachmark: o } = (0, s.cj)([c.Z], () => {
@@ -131,35 +131,35 @@ let T = () =>
             ? {
                   shouldShowOnboardingCoachmark: l,
                   closeOnboardingCoachmarkIfOpen: u,
-                  questId: _.V
+                  questId: h.V
               }
             : {
                   shouldShowOnboardingCoachmark: !1,
-                  closeOnboardingCoachmarkIfOpen: C.dG4,
+                  closeOnboardingCoachmarkIfOpen: _.dG4,
                   questId: void 0
               };
     },
-    p = (e) => {
+    N = (e) => {
         let { onClose: t, renderTail: n, invertTail: i = !1 } = e;
         return (0, l.jsxs)('div', {
-            className: r()(I.baseCardOutline, g.container),
+            className: r()(T.baseCardOutline, I.container),
             children: [
                 (0, l.jsx)(S, { onClick: t }),
-                (0, l.jsx)(T, {}),
+                (0, l.jsx)(g, {}),
                 (0, l.jsxs)('div', {
-                    className: g.content,
+                    className: I.content,
                     children: [
                         (0, l.jsx)('div', {
-                            className: I.coachmarkTitle,
-                            children: h.intl.string(h.t['3B4+wM'])
+                            className: T.coachmarkTitle,
+                            children: C.intl.string(C.t['3B4+wM'])
                         }),
                         (0, l.jsx)('div', {
-                            className: I.coachmarkDescription,
-                            children: h.intl.format(h.t.V6DQX1, { quantity: 200 })
+                            className: T.coachmarkDescription,
+                            children: C.intl.format(C.t.V6DQX1, { quantity: 200 })
                         })
                     ]
                 }),
-                n && (0, l.jsx)(A, { invertTail: i })
+                n && (0, l.jsx)(f, { invertTail: i })
             ]
         });
     };

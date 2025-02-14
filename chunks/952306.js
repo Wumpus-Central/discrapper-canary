@@ -2,8 +2,8 @@ n.d(t, { Z: () => a });
 var i = n(200651);
 n(192379);
 var s = n(481060),
-    l = n(723359),
-    r = n(231338);
+    r = n(723359),
+    l = n(231338);
 let a = {
     openNewUserAgeGateModal: (e) => {
         (0, s.ZDy)(
@@ -12,8 +12,8 @@ let a = {
                 return (t) => (0, i.jsx)(e, { ...t });
             },
             {
-                modalKey: l.$$,
-                onCloseRequest: r.dG,
+                modalKey: r.$$,
+                onCloseRequest: l.dG,
                 onCloseCallback: e
             }
         );
@@ -31,7 +31,7 @@ let a = {
                     });
             },
             {
-                onCloseRequest: e ? r.dG : null,
+                onCloseRequest: e ? l.dG : null,
                 onCloseCallback: t
             }
         );

@@ -1,9 +1,9 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var i = n(200651);
 n(192379);
 var l = n(481060),
     r = n(441336);
-function o(e) {
+function a(e) {
     let { userCount: t } = e;
     return (0, i.jsxs)('div', {
         className: r.container,

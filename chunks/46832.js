@@ -5,8 +5,8 @@ var i = n(836560),
     a = n(626135),
     s = n(585483),
     o = n(70956),
-    c = n(996106),
-    d = n(631467),
+    d = n(996106),
+    c = n(631467),
     u = n(452426),
     h = n(186901),
     m = n(981631);
@@ -27,7 +27,7 @@ let g = 10 * o.Z.Millis.SECOND,
     _ = new Map(),
     f = new Set(),
     E = (e, t, n) => {
-        n([d.Z.CLOSE, t], e);
+        n([c.Z.CLOSE, t], e);
     };
 class I extends i.EventEmitter {
     routeEvent(e, t, n, i) {
@@ -37,23 +37,23 @@ class I extends i.EventEmitter {
         }
         let [l, r] = n;
         switch (l) {
-            case d.Z.HANDSHAKE:
-                if (null != e) throw new c.Z({ closeCode: m.$VG.CLOSE_UNSUPPORTED }, 'Already connected');
+            case c.Z.HANDSHAKE:
+                if (null != e) throw new d.Z({ closeCode: m.$VG.CLOSE_UNSUPPORTED }, 'Already connected');
                 return this.handleHandshake(t, r, i);
-            case d.Z.FRAME:
-                if (null == e) throw new c.Z({ closeCode: m.$VG.CLOSE_UNSUPPORTED }, 'Not connected');
+            case c.Z.FRAME:
+                if (null == e) throw new d.Z({ closeCode: m.$VG.CLOSE_UNSUPPORTED }, 'Not connected');
                 return this.handleFrame(t, e, r);
-            case d.Z.CLOSE:
-                if (null == e) throw new c.Z({ closeCode: m.$VG.CLOSE_UNSUPPORTED }, 'Not connected');
+            case c.Z.CLOSE:
+                if (null == e) throw new d.Z({ closeCode: m.$VG.CLOSE_UNSUPPORTED }, 'Not connected');
                 return this.handleClose(e, r);
             default:
-                throw new c.Z({ closeCode: m.$VG.CLOSE_UNSUPPORTED }, 'Invalid opcode');
+                throw new d.Z({ closeCode: m.$VG.CLOSE_UNSUPPORTED }, 'Invalid opcode');
         }
     }
     constructor(e, t, i, o) {
-        var d;
+        var c;
         super(),
-            (d = this),
+            (c = this),
             p(this, 'validateSocketClient', void 0),
             p(this, 'logger', void 0),
             p(this, 'createPostMessageProxySocket', void 0),
@@ -62,7 +62,7 @@ class I extends i.EventEmitter {
             p(this, 'disconnectSocket', function (e, t) {
                 var n, i;
                 let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                d.emit('disconnect', e, l ? void 0 : t), e.close(t.code, null !== (n = t.message) && void 0 !== n ? n : 'Unknown');
+                c.emit('disconnect', e, l ? void 0 : t), e.close(t.code, null !== (n = t.message) && void 0 !== n ? n : 'Unknown');
                 let [r] =
                     null !==
                         (i = Array.from(_.entries()).find((t) => {
@@ -117,7 +117,7 @@ class I extends i.EventEmitter {
                 try {
                     this.routeEvent(i, t, e, n);
                 } catch (e) {
-                    if (e instanceof c.Z && e.errorCode === m.lTL.INVALID_PAYLOAD) throw e;
+                    if (e instanceof d.Z && e.errorCode === m.lTL.INVALID_PAYLOAD) throw e;
                     null != i
                         ? this.disconnectSocket(
                               i,
@@ -140,11 +140,11 @@ class I extends i.EventEmitter {
             p(this, 'handleFrame', (e, t, n) => {
                 var i;
                 let l;
-                if (e !== t.origin) throw new c.Z({ closeCode: m.$VG.INVALID_ORIGIN }, 'Origin has changed');
+                if (e !== t.origin) throw new d.Z({ closeCode: m.$VG.INVALID_ORIGIN }, 'Origin has changed');
                 try {
                     l = 'string' == typeof n ? JSON.parse(n) : n;
                 } catch (e) {
-                    throw new c.Z({ closeCode: m.$VG.CLOSE_UNSUPPORTED }, 'Payload not recognized encoding');
+                    throw new d.Z({ closeCode: m.$VG.CLOSE_UNSUPPORTED }, 'Payload not recognized encoding');
                 }
                 null === (i = this.onFrameHandled) || void 0 === i || i.call(this, l, this.logger, t), this.emit('request', t, l);
             }),
@@ -166,10 +166,10 @@ class I extends i.EventEmitter {
                             })
                     );
                 } catch (e) {
-                    throw new c.Z({ closeCode: m.$VG.CLOSE_UNSUPPORTED }, e.message);
+                    throw new d.Z({ closeCode: m.$VG.CLOSE_UNSUPPORTED }, e.message);
                 }
                 let s = t.frame_id;
-                if (!f.has(s)) throw (this.logger.error('Unrecognized frame ID '.concat(s)), new c.Z({ closeCode: m.$VG.CLOSE_UNSUPPORTED }, 'Unrecognized frame ID '.concat(s)));
+                if (!f.has(s)) throw (this.logger.error('Unrecognized frame ID '.concat(s)), new d.Z({ closeCode: m.$VG.CLOSE_UNSUPPORTED }, 'Unrecognized frame ID '.concat(s)));
                 null != t.sdk_version &&
                     a.default.track(m.rMx.ACTIVITY_HANDSHAKE, {
                         application_id: t.client_id,
@@ -191,7 +191,7 @@ class I extends i.EventEmitter {
                 }
                 this.logger.info('Socket Opened: '.concat(l.id));
                 try {
-                    if ((await this.validateSocketClient(l, e, t.client_id), !f.has(s))) throw (this.logger.error('Frame ID '.concat(s, ' no longer exists')), new c.Z({ closeCode: m.$VG.CLOSE_UNSUPPORTED }, 'Unrecognized frame ID '.concat(s)));
+                    if ((await this.validateSocketClient(l, e, t.client_id), !f.has(s))) throw (this.logger.error('Frame ID '.concat(s, ' no longer exists')), new d.Z({ closeCode: m.$VG.CLOSE_UNSUPPORTED }, 'Unrecognized frame ID '.concat(s)));
                     _.set(e, l), f.delete(s), l.authorization.scopes.push(h.b_), this.emit('connect', l), this.logger.info('Socket Validated: '.concat(l.id));
                 } catch (e) {
                     throw (this.logger.info('Socket Closed: '.concat(l.id, ', ').concat(e.message)), e);
@@ -210,7 +210,7 @@ class I extends i.EventEmitter {
                             })
                     );
                 } catch (e) {
-                    throw new c.Z({ closeCode: m.$VG.CLOSE_UNSUPPORTED }, e.message);
+                    throw new d.Z({ closeCode: m.$VG.CLOSE_UNSUPPORTED }, e.message);
                 }
                 this.disconnectSocket(e, t);
             }),

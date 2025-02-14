@@ -1,10 +1,10 @@
 n.d(t, { Z: () => I }), n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(120356),
-    a = n.n(l),
-    o = n(442837),
-    s = n(893776),
+    a = n(120356),
+    l = n.n(a),
+    s = n(442837),
+    o = n(893776),
     c = n(493773),
     d = n(129293),
     u = n(388905),
@@ -14,13 +14,13 @@ var i = n(200651),
     g = n(981631),
     p = n(388032),
     f = n(657822),
-    E = n(483938);
-function x(e) {
+    x = n(483938);
+function E(e) {
     n.g.location.assign(e);
 }
 function I(e) {
-    let { location: t, transitionTo: l = x } = e,
-        [o, I] = r.useState('submitting'),
+    let { location: t, transitionTo: a = E } = e,
+        [s, I] = r.useState('submitting'),
         v = r.useRef(void 0);
     (0, c.ZP)(() => {
         (0, _.e)('verify_email');
@@ -31,7 +31,7 @@ function I(e) {
         }
         (async () => {
             try {
-                let t = await s.Z.verify(e);
+                let t = await o.Z.verify(e);
                 I('succeeded'), (v.current = t);
             } catch (e) {
                 I('failed');
@@ -39,24 +39,24 @@ function I(e) {
         })();
     });
     let C = r.useCallback(() => {
-            l(g.Z5c.LOGIN);
-        }, [l]),
+            a(g.Z5c.LOGIN);
+        }, [a]),
         N = r.useCallback(() => {
             m.default.track(g.rMx.VERIFY_ACCOUNT_APP_OPENED, { verifying_user_id: v.current }), (0, h.Z)('verify_email');
         }, []);
-    return 'failed' === o
+    return 'failed' === s
         ? (0, i.jsxs)(u.ZP, {
               children: [
                   (0, i.jsx)(u.Ee, {
                       src: n(375673),
-                      className: a()(f.image, E.marginBottom20)
+                      className: l()(f.image, x.marginBottom20)
                   }),
                   (0, i.jsx)(u.Dx, {
-                      className: E.marginBottom8,
+                      className: x.marginBottom8,
                       children: p.intl.string(p.t.PCgG39)
                   }),
                   (0, i.jsx)(u.DK, {
-                      className: E.marginBottom40,
+                      className: x.marginBottom40,
                       children: p.intl.string(p.t.tQpeAw)
                   }),
                   (0, i.jsx)(u.zx, {
@@ -65,15 +65,15 @@ function I(e) {
                   })
               ]
           })
-        : 'succeeded' === o
+        : 'succeeded' === s
           ? (0, i.jsxs)(u.ZP, {
                 children: [
                     (0, i.jsx)(u.Ee, {
                         src: n(73962),
-                        className: a()(f.image, E.marginBottom20)
+                        className: l()(f.image, x.marginBottom20)
                     }),
                     (0, i.jsx)(u.Dx, {
-                        className: E.marginBottom40,
+                        className: x.marginBottom40,
                         children: p.intl.string(p.t.dAfGb2)
                     }),
                     (0, i.jsx)(u.zx, {
@@ -86,14 +86,14 @@ function I(e) {
                 children: [
                     (0, i.jsx)(u.Ee, {
                         src: n(892235),
-                        className: a()(f.image, E.marginBottom20)
+                        className: l()(f.image, x.marginBottom20)
                     }),
                     (0, i.jsx)(u.Dx, {
-                        className: E.marginBottom8,
+                        className: x.marginBottom8,
                         children: p.intl.string(p.t['0c8+5u'])
                     }),
                     (0, i.jsx)(u.DK, {
-                        className: E.marginBottom40,
+                        className: x.marginBottom40,
                         children: p.intl.string(p.t.ULTCBA)
                     }),
                     (0, i.jsx)(u.zx, {
@@ -103,4 +103,4 @@ function I(e) {
                 ]
             });
 }
-o.ZP.initialize();
+s.ZP.initialize();

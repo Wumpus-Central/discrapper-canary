@@ -1,4 +1,4 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => d });
 var i = n(996106),
     l = n(631467),
     r = n(76238),
@@ -17,7 +17,7 @@ function o(e, t, n) {
         e
     );
 }
-class c extends r.Z {
+class d extends r.Z {
     send(e) {
         var t;
         null === (t = this.onSendingToRPCClient) || void 0 === t || t.call(this, e, this.id), this.postMessageToRPCClient([l.Z.FRAME, e], this.origin);
@@ -34,9 +34,9 @@ class c extends r.Z {
             ),
             (this.closed = !0);
     }
-    constructor({ origin: e, postMessageToRPCClient: t, frameId: n, version: l, encoding: r, logger: c, postClose: d, onSendingToRPCClient: u }) {
+    constructor({ origin: e, postMessageToRPCClient: t, frameId: n, version: l, encoding: r, logger: d, postClose: c, onSendingToRPCClient: u }) {
         if ((super(a.He.POST_MESSAGE, l, r), o(this, 'origin', void 0), o(this, 'frameId', void 0), o(this, 'postMessageToRPCClient', void 0), o(this, 'logger', void 0), o(this, 'postClose', void 0), o(this, 'onSendingToRPCClient', void 0), o(this, 'closed', void 0), -1 === ['etf', 'json'].indexOf(r))) throw new i.Z({ closeCode: s.$VG.INVALID_ENCODING }, 'Invalid Encoding: '.concat(r));
         if ('etf' === r) throw new i.Z({ closeCode: s.$VG.INVALID_ENCODING }, 'Erlpack cannot be used on this client');
-        (this.origin = e), (this.postMessageToRPCClient = t), (this.frameId = n), (this.logger = c), (this.postClose = d), (this.onSendingToRPCClient = u), (this.closed = !1);
+        (this.origin = e), (this.postMessageToRPCClient = t), (this.frameId = n), (this.logger = d), (this.postClose = c), (this.onSendingToRPCClient = u), (this.closed = !1);
     }
 }

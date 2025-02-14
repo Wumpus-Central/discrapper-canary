@@ -16,8 +16,8 @@ var i = n(200651),
     f = n(617379),
     x = n(324081),
     C = n(305248),
-    v = n(520116),
-    E = n(981631),
+    E = n(520116),
+    v = n(981631),
     I = n(388032),
     N = n(478693);
 let S = l.memo(function (e) {
@@ -79,12 +79,12 @@ let S = l.memo(function (e) {
         )
             return null;
         let _ = (e, i) => {
-            (0, m.yw)(E.rMx.INBOX_CHANNEL_CLICKED, {
+            (0, m.yw)(v.rMx.INBOX_CHANNEL_CLICKED, {
                 channel_id: t.channelId,
                 guild_id: t.guildId
             });
             let l = null != i ? i : t.oldestUnreadMessageId;
-            (0, h.uL)(E.Z5c.CHANNEL(t.guildId, t.channelId, 'forum' === t.type ? null : l)), n(e);
+            (0, h.uL)(v.Z5c.CHANNEL(t.guildId, t.channelId, 'forum' === t.type ? null : l)), n(e);
         };
         return (0, i.jsx)('div', {
             className: N.channel,
@@ -100,7 +100,7 @@ let S = l.memo(function (e) {
                 children: t.collapsed
                     ? null
                     : 'messages' === t.type
-                      ? (0, i.jsx)(v.Z, {
+                      ? (0, i.jsx)(E.Z, {
                             channel: t,
                             channelRecord: s,
                             gotoChannel: _
@@ -133,7 +133,7 @@ function b(e) {
               }),
         onClick: function () {
             r && null != t.guildId ? l(t.guildId) : n(t),
-                (0, m.yw)(E.rMx.INBOX_CHANNEL_ACKED, {
+                (0, m.yw)(v.rMx.INBOX_CHANNEL_ACKED, {
                     channel_id: t.channelId,
                     guild_id: t.guildId,
                     marked_all_channels_as_read: !1,
@@ -146,7 +146,7 @@ function A(e) {
     let { channel: t, toggle: n, getNumUnreadChannels: l } = e;
     function a() {
         n(t),
-            (0, m.yw)(E.rMx.INBOX_CHANNEL_COLLAPSED, {
+            (0, m.yw)(v.rMx.INBOX_CHANNEL_COLLAPSED, {
                 channel_id: t.channelId,
                 guild_id: t.guildId,
                 num_unread_channels_remaining: l(),

@@ -1,38 +1,38 @@
-t.d(n, {
-    Z: () => _,
-    z: () => d
+n.d(t, {
+    Z: () => u,
+    z: () => a
 });
-var r,
-    o = t(200651);
-t(192379);
-var l = t(120356),
-    a = t.n(l),
-    i = t(481060),
-    c = t(122085),
-    d = (((r = {}).INFO = 'info'), (r.WARNING = 'warning'), r);
-let u = {
-        info: c.info,
-        warning: c.warning
+var o,
+    r = n(200651);
+n(192379);
+var i = n(120356),
+    c = n.n(i),
+    d = n(481060),
+    l = n(122085),
+    a = (((o = {}).INFO = 'info'), (o.WARNING = 'warning'), o);
+let s = {
+        info: l.info,
+        warning: l.warning
     },
-    s = {
-        info: i.d3s,
-        warning: i.P4T
+    _ = {
+        info: d.d3s,
+        warning: d.P4T
     };
-function _(e) {
-    let { children: n, className: t, look: r = 'info' } = e,
-        l = s[r];
-    return (0, o.jsxs)('div', {
-        className: a()(c.root, t, u[r]),
+function u(e) {
+    let { children: t, className: n, look: o = 'info' } = e,
+        i = _[o];
+    return (0, r.jsxs)('div', {
+        className: c()(l.root, n, s[o]),
         children: [
-            (0, o.jsx)(l, {
-                className: c.icon,
+            (0, r.jsx)(i, {
+                className: l.icon,
                 color: 'currentColor'
             }),
-            (0, o.jsx)(i.Text, {
-                className: c.text,
+            (0, r.jsx)(d.Text, {
+                className: l.text,
                 variant: 'text-sm/medium',
                 color: 'text-normal',
-                children: n
+                children: t
             })
         ]
     });

@@ -3,8 +3,8 @@ var i = n(200651);
 n(192379);
 var l = n(413335),
     r = n(434479),
-    o = n(703656),
-    a = n(981631),
+    a = n(703656),
+    o = n(981631),
     s = n(176505),
     c = n(306685),
     d = n(388032);
@@ -16,7 +16,7 @@ function u(e) {
         text: d.intl.string(c.Z.yv3DJC),
         selected: n,
         onClick: () => {
-            (0, o.uL)(a.Z5c.CHANNEL(t.id, s.oC.GUILD_BOOSTS));
+            (0, a.uL)(o.Z5c.CHANNEL(t.id, s.oC.GUILD_BOOSTS));
         }
     });
 }

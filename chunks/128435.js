@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(627341);
+n.d(t, { Z: () => v }), n(627341);
 var i = n(200651),
     l = n(192379),
     a = n(120356),
@@ -114,7 +114,7 @@ function C(e) {
                   className: o
               });
 }
-function v(e) {
+function E(e) {
     let { message: t, poll: n, className: l } = e,
         a = (0, m.$B)(n.containerStyle),
         d = (function (e, t) {
@@ -181,13 +181,13 @@ function v(e) {
               })
           });
 }
-function E(e) {
+function v(e) {
     let { message: t, poll: n, className: l } = e;
     return (0, i.jsx)(m.XL, {
         message: t,
         poll: n,
         children: (0, i.jsx)(_.Pk, {
-            children: (0, i.jsx)(v, {
+            children: (0, i.jsx)(E, {
                 message: t,
                 poll: n,
                 className: l

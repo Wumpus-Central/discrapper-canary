@@ -3,13 +3,13 @@ n.d(t, { Z: () => m }), n(47120);
 var a,
     s,
     o,
-    c = n(442837),
-    d = n(570140);
+    d = n(442837),
+    c = n(570140);
 function u() {
     (l = {}), (i = {}), (r = new Set());
 }
 u();
-class h extends (a = c.ZP.Store) {
+class h extends (a = d.ZP.Store) {
     getStatisticsForApplication(e) {
         return i[e];
     }
@@ -27,7 +27,7 @@ class h extends (a = c.ZP.Store) {
               writable: !0
           })
         : (h[s] = o);
-let m = new h(d.Z, {
+let m = new h(c.Z, {
     APPLICATION_ACTIVITY_STATISTICS_FETCH_START: function (e) {
         let { applicationId: t } = e;
         r.add(t);

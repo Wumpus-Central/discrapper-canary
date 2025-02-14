@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => c });
 var i = n(200651);
 n(192379);
 var l = n(704215),
@@ -6,14 +6,14 @@ var l = n(704215),
     a = n(300284),
     s = n(526761),
     o = n(388032),
-    c = n(884423);
-function d() {
+    d = n(884423);
+function c() {
     let e = (0, a.Z)({ scrollPosition: s.Y_.TRY_IT_OUT });
     return (0, i.jsx)(r.Z, {
         isPremiumFeature: !0,
         shouldUseHorizontalButtons: !0,
         inlineArt: !0,
-        artClassName: c.profileThemesArt,
+        artClassName: d.profileThemesArt,
         onTryFeature: e,
         header: o.intl.string(o.t.V95BHB),
         body: o.intl.string(o.t['Cxm79/']),

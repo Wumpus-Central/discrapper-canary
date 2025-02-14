@@ -13,13 +13,13 @@ var i = n(200651),
     x = n(600164),
     g = n(339085),
     p = n(434404),
-    b = n(598077),
-    _ = n(430824),
-    f = n(246946),
-    v = n(259580),
-    C = n(531087),
+    f = n(598077),
+    b = n(430824),
+    v = n(246946),
+    _ = n(259580),
+    N = n(531087),
     j = n(768581),
-    N = n(709054),
+    C = n(709054),
     I = n(486199),
     Z = n(981631),
     T = n(388032),
@@ -28,11 +28,11 @@ var i = n(200651),
 function y(e) {
     let t,
         { guild: n, integration: a, editedIntegration: s, isExpanded: y, onToggleExpand: A, onDisable: k, onEnable: R } = e,
-        L = (0, c.e7)([_.Z], () => _.Z.getRoles(n.id)),
-        [w, O] = l.useState(!1),
-        P = (0, c.e7)([f.Z], () => f.Z.hidePersonalInformation),
+        L = (0, c.e7)([b.Z], () => b.Z.getRoles(n.id)),
+        [O, w] = l.useState(!1),
+        P = (0, c.e7)([v.Z], () => v.Z.hidePersonalInformation),
         D = l.useCallback(() => {
-            O(!0), R(a);
+            w(!0), R(a);
         }, [a, R]),
         M = l.useCallback(() => {
             a.syncing ||
@@ -59,8 +59,8 @@ function y(e) {
         }, [a.role_id]),
         {
             serviceName: W,
-            channelURL: H,
-            expireBehaviorLabel: z,
+            channelURL: z,
+            expireBehaviorLabel: H,
             syncLabel: G,
             subscribersText: F
         } = l.useMemo(() => {
@@ -129,7 +129,7 @@ function y(e) {
         }, [n.id, L, a.enable_emoticons, a.id, a.role_id]);
     if (
         (l.useEffect(() => {
-            (null == s ? void 0 : s.id) === a.id && (null == s ? void 0 : s.enabled) === !0 && O(!1);
+            (null == s ? void 0 : s.id) === a.id && (null == s ? void 0 : s.enabled) === !0 && w(!1);
         }, [s, a.id]),
         a.enabled && null != a.user)
     )
@@ -137,20 +137,20 @@ function y(e) {
             {
                 icon: u.T39,
                 text: P
-                    ? T.intl.formatToPlainString(T.t.gcdJ8P, { timestamp: N.default.extractTimestamp(a.id) })
+                    ? T.intl.formatToPlainString(T.t.gcdJ8P, { timestamp: C.default.extractTimestamp(a.id) })
                     : T.intl.formatToPlainString(T.t.Nu9sam, {
-                          user: null != a.user ? new b.Z(a.user).tag : null,
-                          timestamp: N.default.extractTimestamp(a.id)
+                          user: null != a.user ? new f.Z(a.user).tag : null,
+                          timestamp: C.default.extractTimestamp(a.id)
                       })
             }
         ];
     else {
-        let e = new URL(H);
+        let e = new URL(z);
         t = [
             {
                 text: T.intl.format(T.t.BegylZ, {
                     serviceName: W,
-                    accountUrl: H,
+                    accountUrl: z,
                     accountUrlText: e.hostname + e.pathname
                 })
             }
@@ -169,9 +169,9 @@ function y(e) {
                     ? (0, i.jsx)(x.Z.Child, {
                           shrink: 0,
                           grow: 0,
-                          children: (0, i.jsx)(v.Z, {
+                          children: (0, i.jsx)(_.Z, {
                               className: E.expandIcon,
-                              expanded: y && !w,
+                              expanded: y && !O,
                               'aria-hidden': !0
                           })
                       })
@@ -182,9 +182,9 @@ function y(e) {
                               size: u.zxk.Sizes.SMALL,
                               color: u.zxk.Colors.PRIMARY,
                               onClick: D,
-                              disabled: w,
-                              children: w
-                                  ? (0, i.jsx)(C.Z, {
+                              disabled: O,
+                              children: O
+                                  ? (0, i.jsx)(N.Z, {
                                         width: 24,
                                         height: 24
                                     })
@@ -196,7 +196,7 @@ function y(e) {
         X = null;
     return (
         y &&
-            !w &&
+            !O &&
             null != s &&
             (X = (0, i.jsxs)(x.Z, {
                 className: E.body,
@@ -254,7 +254,7 @@ function y(e) {
                                                     disabled: t.syncing || t.revoked,
                                                     onClick: s,
                                                     children: t.syncing
-                                                        ? (0, i.jsx)(C.Z, {
+                                                        ? (0, i.jsx)(N.Z, {
                                                               width: 24,
                                                               height: 24
                                                           })
@@ -328,7 +328,7 @@ function y(e) {
                         });
                     })({
                         integration: s,
-                        labelText: z,
+                        labelText: H,
                         onBehaviorChange: function (e) {
                             m.Z.updateIntegration({ expireBehavior: e });
                         },
@@ -414,7 +414,7 @@ function y(e) {
                     a.enabled
                         ? (0, i.jsx)(u.P3F, {
                               className: E.expandableHeader,
-                              'aria-expanded': y && !w,
+                              'aria-expanded': y && !O,
                               onClick: A,
                               children: Y
                           })

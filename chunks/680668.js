@@ -18,8 +18,8 @@ function f(e) {
     var t, f;
     let x,
         C,
-        v,
-        { onTransitionToInviteChannel: E, onAcceptInstantInvite: I, guild: N, invite: S, author: T, currentUserId: b } = e,
+        E,
+        { onTransitionToInviteChannel: v, onAcceptInstantInvite: I, guild: N, invite: S, author: T, currentUserId: b } = e,
         A = b === T.id,
         { channel: j, approximate_member_count: y, approximate_presence_count: Z } = S,
         R = S.state === h.r2o.ACCEPTING,
@@ -36,7 +36,7 @@ function f(e) {
         let e = (0, d.rF)(S.guild.premium_subscription_count, S.guild.id);
         N.premiumTier = e;
     }
-    let F = P ? E : I,
+    let F = P ? v : I,
         U = (0, m.e)({
             isVoiceChannel: M,
             isOwnInvite: A,
@@ -61,7 +61,7 @@ function f(e) {
             ]
         })),
         D &&
-            (v = (0, i.jsx)(a.DY3, {
+            (E = (0, i.jsx)(a.DY3, {
                 className: g.tooltipContainer,
                 text: p.intl.string(p.t['/FeTKy']),
                 children: (0, i.jsx)(a.d3s, {
@@ -100,7 +100,7 @@ function f(e) {
                 (0, i.jsx)(s.Z.GuildSplash, { guild: N }),
                 (0, i.jsx)(s.Z.Header, {
                     text: U,
-                    extra: v
+                    extra: E
                 }),
                 (0, i.jsxs)(s.Z.Body, {
                     children: [

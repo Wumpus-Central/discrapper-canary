@@ -1,58 +1,58 @@
 n.d(t, {
-    Z: () => x,
-    _: () => p
+    Z: () => E,
+    _: () => x
 });
 var i,
-    r = n(200651),
-    a = n(192379),
-    s = n(120356),
-    l = n.n(s),
+    s = n(200651),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
     o = n(692547),
     c = n(477690),
     d = n(393238),
     u = n(162168),
     m = n(624138),
-    g = n(539294);
-let _ = (0, m.Mg)(c.Z.GRADIENT_PROGRESS_NOTCH_WIDTH);
-var p = (((i = {}).BLACK = 'BLACK'), (i.GRAY = 'GRAY'), i);
-let f = {
-    BLACK: g.black,
-    GRAY: g.gray
+    h = n(539294);
+let g = (0, m.Mg)(c.Z.GRADIENT_PROGRESS_NOTCH_WIDTH);
+var x = (((i = {}).BLACK = 'BLACK'), (i.GRAY = 'GRAY'), i);
+let _ = {
+    BLACK: h.black,
+    GRAY: h.gray
 };
-function h(e) {
-    return Math.round(e / _) * _;
+function p(e) {
+    return Math.round(e / g) * g;
 }
-function x(e) {
-    let { notchBackground: t, progress: n, gradientStart: i = o.Z.unsafe_rawColors.YELLOW_260.css, gradientEnd: s = o.Z.unsafe_rawColors.GREEN_360.css, className: c, children: m } = e,
-        { ref: _, width: p } = (0, d.Z)(),
-        x = a.useMemo(() => (null != p ? h(p) : 0), [p]),
-        E = a.useMemo(() => {
-            let e = Math.abs(h((x * (100 - Math.max(0, Math.min(100, n)))) / 100) - x);
+function E(e) {
+    let { notchBackground: t, progress: n, gradientStart: i = o.Z.unsafe_rawColors.YELLOW_260.css, gradientEnd: l = o.Z.unsafe_rawColors.GREEN_360.css, className: c, children: m } = e,
+        { ref: g, width: x } = (0, d.Z)(),
+        E = r.useMemo(() => (null != x ? p(x) : 0), [x]),
+        C = r.useMemo(() => {
+            let e = Math.abs(p((E * (100 - Math.max(0, Math.min(100, n)))) / 100) - E);
             return { transform: 'translateX('.concat(e, 'px)') };
-        }, [n, x]),
-        C = a.useMemo(
+        }, [n, E]),
+        f = r.useMemo(
             () => ({
-                width: ''.concat(x, 'px'),
-                background: n <= 0 ? 'none' : 'linear-gradient(to right, '.concat(i, ', ').concat(s, ')')
+                width: ''.concat(E, 'px'),
+                background: n <= 0 ? 'none' : 'linear-gradient(to right, '.concat(i, ', ').concat(l, ')')
             }),
-            [s, i, n, x]
+            [l, i, n, E]
         );
-    return (0, r.jsxs)('div', {
-        className: g.wrapper,
-        ref: _,
+    return (0, s.jsxs)('div', {
+        className: h.wrapper,
+        ref: g,
         children: [
-            (0, r.jsxs)('div', {
-                className: l()(g.container, c),
-                style: C,
+            (0, s.jsxs)('div', {
+                className: a()(h.container, c),
+                style: f,
                 children: [
-                    (0, r.jsx)('div', {
-                        className: g.progress,
-                        style: E
+                    (0, s.jsx)('div', {
+                        className: h.progress,
+                        style: C
                     }),
-                    0 !== x &&
-                        (0, r.jsx)(u.Z, {
-                            width: x,
-                            className: l()(g.notches, f[t])
+                    0 !== E &&
+                        (0, s.jsx)(u.Z, {
+                            width: E,
+                            className: a()(h.notches, _[t])
                         })
                 ]
             }),

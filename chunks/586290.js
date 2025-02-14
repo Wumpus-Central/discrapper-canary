@@ -10,8 +10,8 @@ var t = l(200651),
     d = l(687058),
     m = l(537135),
     x = l(176940),
-    h = l(388032),
-    g = l(604196),
+    g = l(388032),
+    h = l(604196),
     Z = l(323499),
     v = l(483938);
 function S(e) {
@@ -41,22 +41,22 @@ function S(e) {
                         children: (0, t.jsxs)(m.Z, {
                             children: [
                                 (0, t.jsx)('span', {
-                                    className: g.ellipsisText,
+                                    className: h.ellipsisText,
                                     children: n.name
                                 }),
                                 (0, t.jsx)(c.zxk, {
-                                    className: g.changeButton,
+                                    className: h.changeButton,
                                     color: c.zxk.Colors.PRIMARY,
                                     size: c.zxk.Sizes.SMALL,
                                     onClick: l,
-                                    children: h.intl.string(h.t.GEgsAw)
+                                    children: g.intl.string(g.t.GEgsAw)
                                 })
                             ]
                         })
                     }),
                     (0, t.jsx)(c.xJW, {
                         className: v.marginTop8,
-                        title: h.intl.string(h.t.y4ooen),
+                        title: g.intl.string(g.t.y4ooen),
                         children: (0, t.jsx)(c.q4e, {
                             value: j,
                             className: v.__invalid_marginaTop8,

@@ -9,8 +9,8 @@ var i = n(200651),
     a = n(15729),
     s = n(442837),
     o = n(481060),
-    c = n(230711),
-    d = n(174556),
+    d = n(230711),
+    c = n(174556),
     u = n(320007),
     h = n(540059),
     m = n(916069),
@@ -26,9 +26,9 @@ var i = n(200651),
     T = n(944486),
     S = n(914010),
     A = n(451478),
-    b = n(998502),
-    Z = n(228488),
-    x = n(950796),
+    Z = n(998502),
+    x = n(228488),
+    b = n(950796),
     L = n(981631),
     y = n(741764),
     O = n(388032),
@@ -40,20 +40,20 @@ function j() {
         n = (0, s.e7)([T.Z], () => T.Z.getChannelId()),
         l = (0, s.e7)([S.Z], () => S.Z.getGuildId()),
         a = (0, s.e7)([N.Z], () => N.Z.getChannel(n), [n]),
-        c = v.Z.getGuild(l),
-        d = (0, m.Z)(),
+        d = v.Z.getGuild(l),
+        c = (0, m.Z)(),
         u = null;
     return (
-        null != c
-            ? ((u = d
+        null != d
+            ? ((u = c
                   ? (0, i.jsx)(o.r7p, { size: 'xs' })
                   : (0, i.jsx)(p.Z, {
-                        guild: c,
+                        guild: d,
                         size: p.Z.Sizes.MINI,
                         active: !0,
                         className: P.guildIcon
                     })),
-              (e = c.name))
+              (e = d.name))
             : null != a && (a.isDM() || a.isGroupDM())
               ? ((e = O.intl.string(O.t.YUU0RE)), (u = (0, i.jsx)(o.gw7, { size: 'xs' })))
               : t.pathname.startsWith(L.Z5c.GLOBAL_DISCOVERY)
@@ -82,21 +82,21 @@ function j() {
 }
 function D() {
     l.useLayoutEffect(() => {
-        b.ZP.setMinimumSize(y.J, y.N);
+        Z.ZP.setMinimumSize(y.J, y.N);
     }, []);
     let e = (0, h.TH)('AppTitleBar'),
         t = !R((e) => e.isOpen) && e,
-        { hasBugReporterAccess: n } = d.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 });
+        { hasBugReporterAccess: n } = c.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 });
     l.useLayoutEffect(() => {
-        b.ZP.setMinimumSize(y.J, y.N);
+        Z.ZP.setMinimumSize(y.J, y.N);
     }, []);
     let r = (0, s.e7)([C.Z], () => (C.Z.darkSidebar ? L.BRd.DARK : void 0));
-    return (0, s.e7)([A.Z, E.Z], () => (0, Z.rB)())
+    return (0, s.e7)([A.Z, E.Z], () => (0, x.rB)())
         ? null
         : (0, i.jsx)(o.f6W, {
               theme: r,
               children: (e) =>
-                  (0, i.jsx)(x.T, {
+                  (0, i.jsx)(b.T, {
                       className: e,
                       leading:
                           t &&
@@ -112,7 +112,7 @@ function D() {
                                   (0, i.jsx)(o.P3F, {
                                       className: P.button,
                                       onClick: () => {
-                                          c.Z.open(L.oAB.ACCOUNT);
+                                          d.Z.open(L.oAB.ACCOUNT);
                                       },
                                       children: (0, i.jsx)(o.ewm, {
                                           size: 'xs',

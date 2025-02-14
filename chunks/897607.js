@@ -6,21 +6,21 @@ var l = n(392711),
     a = n(481060),
     s = n(463395),
     o = n(820486),
-    c = n(131951),
-    d = n(65154);
+    d = n(131951),
+    c = n(65154);
 let u = new Set(['DisplayPort']),
     h = !1;
 function m() {
     let e;
     if (h) return;
-    let t = c.Z.getInputDeviceId(),
-        l = c.Z.getOutputDeviceId();
+    let t = d.Z.getInputDeviceId(),
+        l = d.Z.getOutputDeviceId();
     if (o.Z.getState().neverShowModal || r().isEmpty(o.Z.lastDeviceConnected)) return;
-    let m = (0, o.X)(c.Z.getInputDevices()[t]),
-        p = (0, o.X)(c.Z.getOutputDevices()[l]);
+    let m = (0, o.X)(d.Z.getInputDevices()[t]),
+        p = (0, o.X)(d.Z.getOutputDevices()[l]);
     if (r().some(o.Z.lastDeviceConnected, (e) => u.has(e.displayName) || e.displayName === m || e.displayName === p)) return;
     let g = r().some(o.Z.lastDeviceConnected, (e) => s.Z.isCertified(o.Z.inputDevices[e.displayName]) || s.Z.isCertified(o.Z.outputDevices[e.displayName]));
-    if (((t === d.w5 && o.Z.lastInputSystemDevice.justChanged) || (l === d.w5 && o.Z.lastOutputSystemDevice.justChanged)) && !g) return;
+    if (((t === c.w5 && o.Z.lastInputSystemDevice.justChanged) || (l === c.w5 && o.Z.lastOutputSystemDevice.justChanged)) && !g) return;
     let _ = r().first(Object.keys(o.Z.lastDeviceConnected)),
         f = null != _ && '' !== _ ? o.Z.lastDeviceConnected[_] : null;
     null != f &&

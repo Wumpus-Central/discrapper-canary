@@ -1,24 +1,24 @@
 i.d(e, { Z: () => c });
 var t = i(200651);
 i(192379);
-var r = i(793030),
-    a = i(690221),
-    s = i(767218),
-    o = i(155337);
+var a = i(793030),
+    r = i(690221),
+    o = i(767218),
+    s = i(155337);
 function c() {
     return (0, t.jsxs)('div', {
-        className: o.container,
+        className: s.container,
         children: [
             (0, t.jsxs)('div', {
-                className: o.headerContainer,
+                className: s.headerContainer,
                 children: [
-                    (0, t.jsx)(r.xv, {
+                    (0, t.jsx)(a.xv, {
                         variant: 'eyebrow',
                         children: 'Server Boosts'
                     }),
-                    (0, t.jsx)(a.Z, {
+                    (0, t.jsx)(r.Z, {
                         onClick: () => {},
-                        children: (0, t.jsx)(r.xv, {
+                        children: (0, t.jsx)(a.xv, {
                             variant: 'text-xs/semibold',
                             color: 'currentColor',
                             children: 'Learn More'
@@ -27,19 +27,19 @@ function c() {
                 ]
             }),
             (0, t.jsxs)('div', {
-                className: o.contentContainer,
+                className: s.contentContainer,
                 children: [
-                    (0, t.jsx)(s.Z, {
+                    (0, t.jsx)(o.Z, {
                         count: 3,
-                        type: s.b.AVAILABLE
+                        type: o.b.AVAILABLE
                     }),
-                    (0, t.jsx)(s.Z, {
+                    (0, t.jsx)(o.Z, {
                         count: 2,
-                        type: s.b.SPENT
+                        type: o.b.SPENT
                     }),
-                    (0, t.jsx)(s.Z, {
+                    (0, t.jsx)(o.Z, {
                         count: 5,
-                        type: s.b.TOTAL
+                        type: o.b.TOTAL
                     })
                 ]
             })

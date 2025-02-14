@@ -1,4 +1,4 @@
-s.r(
+a.r(
     (e.exports = {
         localePicker: 'localePicker_dda9b4',
         opener: 'opener_dda9b4',

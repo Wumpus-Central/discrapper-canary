@@ -124,7 +124,7 @@ let E = i.memo(function (e) {
                                             color: o.zxk.Colors.PRIMARY,
                                             onClick: () =>
                                                 (0, o.ZDy)(async () => {
-                                                    let { default: e } = await Promise.all([l.e('7654'), l.e('13942')]).then(l.bind(l, 560114));
+                                                    let { default: e } = await Promise.all([l.e('7654'), l.e('25586')]).then(l.bind(l, 560114));
                                                     return (l) =>
                                                         (0, a.jsx)(e, {
                                                             ...l,

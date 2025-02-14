@@ -11,34 +11,34 @@ var i,
     h = n(836932),
     p = n(175553),
     g = n(158979),
-    f = n(181912),
-    m = n(791288),
-    _ = n(194295),
-    v = n(998033),
+    m = n(181912),
+    f = n(791288),
+    v = n(194295),
+    Z = n(998033),
     x = n(181364),
     S = n(435064),
-    Z = n(668761),
-    E = n(86071),
-    C = n(358446),
-    I = n(371651),
-    y = n(428598),
-    N = n(695346),
-    T = n(163612),
-    b = n(314897),
+    E = n(668761),
+    C = n(86071),
+    y = n(358446),
+    N = n(371651),
+    I = n(428598),
+    _ = n(695346),
+    j = n(163612),
+    T = n(314897),
     O = n(592125),
-    j = n(292959),
-    k = n(158776),
-    M = n(944486),
-    w = n(885110),
-    P = n(246946),
+    k = n(292959),
+    M = n(158776),
+    b = n(944486),
+    P = n(885110),
+    w = n(246946),
     R = n(594174),
     D = n(974180),
     A = n(808506),
     L = n(237997),
     z = n(70956),
-    B = n(150097),
-    V = n(129724),
-    W = n(145597),
+    V = n(150097),
+    W = n(129724),
+    B = n(145597),
     F = n(449224),
     U = n(981631),
     G = n(987650),
@@ -103,11 +103,11 @@ function es(e) {
     if (!L.Z.showInviteNotification) return !1;
     let n = F.Z.getGame();
     if (null == n || 0 === t.length) return;
-    let { affinityThreshold: i } = E.Z.getCurrentConfig({ location: 'OverlayNotificationsStore' }),
+    let { affinityThreshold: i } = C.Z.getCurrentConfig({ location: 'OverlayNotificationsStore' }),
         s = t;
     if (null != i) {
         var l;
-        let e = y.Z.getUserAffinitiesMap();
+        let e = I.Z.getUserAffinitiesMap();
         s =
             null !==
                 (l = t.filter((t) => {
@@ -119,7 +119,7 @@ function es(e) {
                 : [];
     }
     0 !== s.length &&
-        ei((0, m.Z)(n, s), {
+        ei((0, f.Z)(n, s), {
             priority: 2,
             type: 'content-inventory',
             expirationExternallyManaged: !0,
@@ -129,24 +129,24 @@ function es(e) {
 function el(e) {
     let { channelId: t, ringing: n } = e,
         i = en(t);
-    if (!n.includes(b.default.getId())) return ee(i);
+    if (!n.includes(T.default.getId())) return ee(i);
     if (null != i) return !1;
     let s = O.Z.getChannel(t);
     if (
         null == s ||
         !s.isRingable() ||
         ('GUILD_RING_START' === e.type &&
-            !T.Z.getCurrentConfig({
+            !j.Z.getCurrentConfig({
                 guildId: e.guildId,
                 location: 'OverlayStartRinging'
             }).enabled) ||
-        w.Z.getStatus() === U.Skl.DND ||
-        N.QZ.getSetting()
+        P.Z.getStatus() === U.Skl.DND ||
+        _.QZ.getSetting()
     )
         return !1;
     let l = J.find((e) => 1 === e.type && e.channelId === t && e.messageType === U.uaV.CALL);
     null != l && ee(l.id),
-        ei((0, f.Z)(s), {
+        ei((0, m.Z)(s), {
             priority: 1,
             expirationExternallyManaged: !0,
             type: 2,
@@ -178,14 +178,14 @@ let er = new ea(c.Z, {
     OVERLAY_MOUNTED: function (e) {
         var t;
         let { nudges: n } = e;
-        if (I.default.hasChangedRenderMode(null !== (t = A.Z.getFocusedPID()) && void 0 !== t ? t : (0, W.QF)())) return;
+        if (N.default.hasChangedRenderMode(null !== (t = A.Z.getFocusedPID()) && void 0 !== t ? t : (0, B.QF)())) return;
         let i = (function (e) {
             switch (e.type) {
                 case G.nc.GO_LIVE_VOICE:
                 case G.nc.GO_LIVE_NON_VOICE:
                     return (0, g.Z)(e);
                 case G.nc.KEYBIND_INDICATORS:
-                    return (0, C.Z)(e);
+                    return (0, y.Z)(e);
                 case G.nc.NEWS:
                 default:
                     return (0, x.Z)(e);
@@ -217,20 +217,20 @@ let er = new ea(c.Z, {
             o = R.default.getUser(null === (t = l.author) || void 0 === t ? void 0 : t.id);
         if (null == a || null == o) return !1;
         if ((null === (n = l.activity) || void 0 === n ? void 0 : n.type) === U.mFx.JOIN || (null === (i = l.activity) || void 0 === i ? void 0 : i.type) === U.mFx.JOIN_REQUEST) {
-            if (!(0, B.eF)(l, s, !0, !0)) return !1;
+            if (!(0, V.eF)(l, s, !0, !0)) return !1;
             let e = (function (e, t, n) {
                 let i, s;
-                if ((r()(null != t.activity, 'received null message activity'), n.id === b.default.getId())) return !1;
+                if ((r()(null != t.activity, 'received null message activity'), n.id === T.default.getId())) return !1;
                 let l = F.Z.getGame();
                 if (null == l) return !1;
                 switch (t.activity.type) {
                     case U.mFx.JOIN:
-                        if (null == (i = k.Z.getApplicationActivity(n.id, l.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
+                        if (null == (i = M.Z.getApplicationActivity(n.id, l.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
                         s = (0, h.Z)(e, t, n, l, i);
                         break;
                     case U.mFx.JOIN_REQUEST:
-                        if (null == (i = w.Z.getApplicationActivity(l.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
-                        s = (0, _.Z)(e, n, l, i);
+                        if (null == (i = P.Z.getApplicationActivity(l.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
+                        s = (0, v.Z)(e, n, l, i);
                 }
                 if (null == s) return !1;
                 let a = ei(s, {
@@ -242,9 +242,9 @@ let er = new ea(c.Z, {
             })(a, l, o);
             if (!1 !== e) return e;
         }
-        if (((!L.Z.isInstanceLocked() || L.Z.isPinned(U.Odu.TEXT)) && s === M.Z.getChannelId()) || L.Z.getTextChatNotificationMode() === U.Ypu.DISABLED || P.Z.disableNotifications || !(0, B.eF)(l, s)) return !1;
-        let d = !j.Z.isSoundDisabled(D.Ay);
-        ei((0, v.Z)(a, l, o, d), {
+        if (((!L.Z.isInstanceLocked() || L.Z.isPinned(U.Odu.TEXT)) && s === b.Z.getChannelId()) || L.Z.getTextChatNotificationMode() === U.Ypu.DISABLED || w.Z.disableNotifications || !(0, V.eF)(l, s)) return !1;
+        let d = !k.Z.isSoundDisabled(D.Ay);
+        ei((0, Z.Z)(a, l, o, d), {
             type: 1,
             channelId: a.id,
             messageType: l.type
@@ -268,13 +268,13 @@ let er = new ea(c.Z, {
     GUILD_RING_STOP: function (e) {
         let { channelId: t, guildId: n, ringing: i } = e;
         if (
-            !T.Z.getCurrentConfig({
+            !j.Z.getCurrentConfig({
                 guildId: n,
                 location: 'OverlayStopRinging'
             }).enabled
         )
             return !1;
-        i.includes(b.default.getId()) && ee(en(t));
+        i.includes(T.default.getId()) && ee(en(t));
     },
     ACTIVITY_USER_ACTION: function (e) {
         let t,
@@ -292,24 +292,24 @@ let er = new ea(c.Z, {
         );
     },
     CLIPS_SAVE_CLIP_START: function () {
-        ei((0, Z.f)(H.intl.string(H.t.NBMK9v)));
+        ei((0, E.f)(H.intl.string(H.t.NBMK9v)));
     },
     CLIPS_SAVE_CLIP: function () {
-        ei((0, Z.f)(H.intl.formatToPlainString(H.t.KLhk6u, { duration: (0, V.A)(S.Z.getSettings().clipsLength / 1000, !0) })));
+        ei((0, E.f)(H.intl.formatToPlainString(H.t.KLhk6u, { duration: (0, W.A)(S.Z.getSettings().clipsLength / 1000, !0) })));
     },
     CLIPS_SAVE_CLIP_ERROR: function () {
-        ei((0, Z.f)(H.intl.string(H.t['1ZbZur'])));
+        ei((0, E.f)(H.intl.string(H.t['1ZbZur'])));
     },
     STREAM_START: function (e) {
-        let t = (0, Z.y)();
+        let t = (0, E.y)();
         null != t && ei(t);
     },
     OVERLAY_CONTENT_INVENTORY_READY: function (e) {
         var t;
         let { contentInventoryEntries: n } = e;
-        if (0 === n.length || ((q = n), I.default.hasChangedRenderMode(null !== (t = A.Z.getFocusedPID()) && void 0 !== t ? t : (0, W.QF)()) || null == F.Z.getGame())) return;
-        let { enabled: i, affinityThreshold: s } = E.Z.getCurrentConfig({ location: 'OverlayNotificationsStore' });
-        i && (0 !== y.Z.getUserAffinities().length || null == s) && es({ contentInventoryEntries: n });
+        if (0 === n.length || ((q = n), N.default.hasChangedRenderMode(null !== (t = A.Z.getFocusedPID()) && void 0 !== t ? t : (0, B.QF)()) || null == F.Z.getGame())) return;
+        let { enabled: i, affinityThreshold: s } = C.Z.getCurrentConfig({ location: 'OverlayNotificationsStore' });
+        i && (0 !== I.Z.getUserAffinities().length || null == s) && es({ contentInventoryEntries: n });
     },
     LOAD_USER_AFFINITIES_V2_SUCCESS: function (e) {
         let { affineUsers: t } = e;

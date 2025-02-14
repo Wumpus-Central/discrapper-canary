@@ -1,9 +1,9 @@
-t.d(n, {
-    iN: () => r,
-    oV: () => s
+n.d(t, {
+    iN: () => s,
+    oV: () => r
 });
-var i = t(846027);
-let r = {
+var i = n(846027);
+let s = {
         binds: ['mod+shift+m'],
         comboKeysBindGlobal: !0,
         action: () => (
@@ -14,7 +14,7 @@ let r = {
             !1
         )
     },
-    s = {
+    r = {
         binds: ['mod+shift+d'],
         comboKeysBindGlobal: !0,
         action: () => (

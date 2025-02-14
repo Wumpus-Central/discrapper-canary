@@ -1,64 +1,64 @@
-a.d(t, {
-    BalanceWidgetEarnedOrbsCoachmarkModal: () => _,
-    E: () => g
+n.d(t, {
+    BalanceWidgetEarnedOrbsCoachmarkModal: () => f,
+    E: () => C
 });
-var e = a(200651);
-a(192379);
-var i = a(120356),
-    c = a.n(i),
-    s = a(568611),
-    l = a(693789),
-    o = a(481060),
-    r = a(751648),
-    d = a(790542),
-    m = a(317257),
-    h = a(970815),
-    C = a(741808),
-    k = a(981631),
-    u = a(388032),
-    b = a(194733),
-    f = a(899088),
-    x = a(660028);
-let g = (n) => {
-    let { earnedOrbsQuantity: t, descriptionText: a = u.intl.string(u.t['4YgBe3']), ctaText: i = u.intl.string(u.t.WYchdX), linkText: r = u.intl.string(u.t['H57f4+']), ctaOnClick: d, linkOnClick: m, linkTo: h } = n;
-    return (0, e.jsxs)('div', {
-        className: c()(f.container, b.baseCardOutline),
+var i = n(200651);
+n(192379);
+var s = n(120356),
+    r = n.n(s),
+    l = n(568611),
+    a = n(693789),
+    o = n(481060),
+    c = n(751648),
+    d = n(790542),
+    u = n(317257),
+    m = n(970815),
+    h = n(741808),
+    g = n(981631),
+    x = n(388032),
+    _ = n(194733),
+    p = n(899088),
+    E = n(660028);
+let C = (e) => {
+    let { earnedOrbsQuantity: t, descriptionText: n = x.intl.string(x.t['4YgBe3']), ctaText: s = x.intl.string(x.t.WYchdX), linkText: c = x.intl.string(x.t['H57f4+']), ctaOnClick: d, linkOnClick: u, linkTo: m } = e;
+    return (0, i.jsxs)('div', {
+        className: r()(p.container, _.baseCardOutline),
         children: [
-            (0, e.jsx)('div', {
-                className: c()(f.gifContainer, { [f.centerContent]: !0 }),
-                children: (0, e.jsx)('img', {
-                    src: x.Z,
-                    className: f.gif,
+            (0, i.jsx)('div', {
+                className: r()(p.gifContainer, { [p.centerContent]: !0 }),
+                children: (0, i.jsx)('img', {
+                    src: E.Z,
+                    className: p.gif,
                     alt: 'Orb GIF'
                 })
             }),
-            (0, e.jsxs)('div', {
-                className: f.contentContainer,
+            (0, i.jsxs)('div', {
+                className: p.contentContainer,
                 children: [
-                    (0, e.jsx)('h3', {
-                        className: b.coachmarkTitle,
-                        children: u.intl.format(u.t.lA7CLi, { quantity: t })
+                    (0, i.jsx)('h3', {
+                        className: _.coachmarkTitle,
+                        children: x.intl.format(x.t.lA7CLi, { quantity: t })
                     }),
-                    (0, e.jsx)(o.Text, {
+                    (0, i.jsx)(o.Text, {
                         variant: 'text-sm/medium',
-                        className: b.coachmarkDescription,
-                        children: a
+                        className: _.coachmarkDescription,
+                        children: n
                     }),
-                    (0, e.jsx)(l.zx, {
-                        className: f.ctaButton,
-                        color: l.zx.Colors.BRAND,
-                        look: l.zx.Looks.FILLED,
+                    (0, i.jsx)(a.zx, {
+                        className: p.ctaButton,
+                        color: a.zx.Colors.BRAND,
+                        look: a.zx.Looks.FILLED,
                         onClick: d,
                         fullWidth: !0,
-                        children: i
+                        children: s
                     }),
-                    (0, e.jsx)(s.rU, {
-                        to: { pathname: h },
-                        onClick: m,
-                        children: (0, e.jsx)(o.Text, {
+                    (0, i.jsx)(l.rU, {
+                        to: { pathname: m },
+                        onClick: u,
+                        children: (0, i.jsx)(o.Text, {
                             variant: 'text-sm/medium',
-                            className: f.link,
-                            children: r
+                            className: p.link,
+                            children: c
                         })
                     })
                 ]
@@ -66,16 +66,16 @@ let g = (n) => {
         ]
     });
 };
-function _(n) {
-    let { earnedOrbsQuantity: t, backgroundElementRef: a, onClickPill: i, ctaOnClick: c, linkOnClick: s, onClose: l, onCloseCallback: o, ...u } = n,
-        { balance: b } = (0, d.A)(),
-        x = async () => {
-            await (0, r.j2)(), await l(), o();
+function f(e) {
+    let { earnedOrbsQuantity: t, backgroundElementRef: n, onClickPill: s, ctaOnClick: r, linkOnClick: l, onClose: a, onCloseCallback: o, ...x } = e,
+        { balance: _ } = (0, d.A)(),
+        E = async () => {
+            await (0, c.j2)(), await a(), o();
         };
-    return (0, e.jsxs)(C.X, {
-        className: f.coachmarkModalContainer,
-        backgroundElementRef: a,
-        onGetBoundingRect: k.dG4,
+    return (0, i.jsxs)(h.X, {
+        className: p.coachmarkModalContainer,
+        backgroundElementRef: n,
+        onGetBoundingRect: g.dG4,
         getOffsetsRelativeToElement: () => ({
             top: 0,
             right: 0
@@ -86,21 +86,21 @@ function _(n) {
             right: 32
         },
         children: [
-            (0, e.jsx)(h.A4, {
+            (0, i.jsx)(m.A4, {
                 onClick: async () => {
-                    await x(), i();
+                    await E(), s();
                 },
-                balance: b,
-                placeholderBalance: null != b ? b : 0,
-                balanceWidgetMode: m.b.DEFAULT
+                balance: _,
+                placeholderBalance: null != _ ? _ : 0,
+                balanceWidgetMode: u.b.DEFAULT
             }),
-            (0, e.jsx)(g, {
+            (0, i.jsx)(C, {
                 earnedOrbsQuantity: t,
                 ctaOnClick: async () => {
-                    await x(), c();
+                    await E(), r();
                 },
                 linkOnClick: async () => {
-                    await x(), s();
+                    await E(), l();
                 }
             })
         ]

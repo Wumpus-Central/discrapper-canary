@@ -2,28 +2,28 @@ n.d(t, { Z: () => p });
 var i = n(200651);
 n(192379);
 var s = n(120356),
-    l = n.n(s),
-    r = n(442837),
+    r = n.n(s),
+    l = n(442837),
     a = n(780384),
     o = n(481060),
     c = n(600164),
     d = n(921801),
     u = n(210887),
-    h = n(726985),
-    m = n(388032),
+    m = n(726985),
+    h = n(388032),
     g = n(483938);
 let x = n(651714),
     _ = n(297166);
 function p(e) {
     let { refreshStyles: t = !1 } = e,
-        n = (0, r.e7)([u.Z], () => u.Z.theme);
+        n = (0, l.e7)([u.Z], () => u.Z.theme);
     return (0, i.jsx)(d.F, {
-        setting: h.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_AUDIO,
+        setting: m.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_AUDIO,
         children: (0, i.jsx)(o.hjN, {
-            className: l()({ [g.marginBottom20]: !t }),
-            title: m.intl.string(m.t.DSGme3),
+            className: r()({ [g.marginBottom20]: !t }),
+            title: h.intl.string(h.t.DSGme3),
             children: (0, i.jsx)(o.ToO, {
-                className: l()({ [g.marginBottom20]: !t }),
+                className: r()({ [g.marginBottom20]: !t }),
                 type: o.Dd5.PRIMARY,
                 imageData: {
                     src: (0, a.ap)(n) ? x : _,
@@ -31,7 +31,7 @@ function p(e) {
                     height: 40
                 },
                 align: c.Z.Align.CENTER,
-                body: m.intl.string(m.t['2nDAzM'])
+                body: h.intl.string(h.t['2nDAzM'])
             })
         })
     });

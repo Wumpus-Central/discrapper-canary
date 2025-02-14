@@ -19,9 +19,9 @@ function g(e) {
         f = l(g),
         {
             avatarSrc: x,
-            eventHandlers: { onMouseEnter: C, onMouseLeave: v }
+            eventHandlers: { onMouseEnter: C, onMouseLeave: E }
         } = (0, d.m)(!0),
-        E =
+        v =
             '' !== t.content
                 ? new Date(t.content).toLocaleString(h.intl.currentLocale, {
                       hour: 'numeric',
@@ -33,7 +33,7 @@ function g(e) {
                 : '';
     return (0, i.jsx)('div', {
         onMouseEnter: C,
-        onMouseLeave: v,
+        onMouseLeave: E,
         children: (0, i.jsx)(u.Z, {
             className: a()(p.mainContainer, { [p.compact]: n }),
             iconNode: n ? null : (0, i.jsx)(d.S, { src: x }),
@@ -72,7 +72,7 @@ function g(e) {
                                 ? h.intl.format(h.t['+m8eDw'], {
                                       username: g.nick,
                                       usernameHook: f,
-                                      time: E
+                                      time: v
                                   })
                                 : h.intl.format(h.t.BHeke3, {
                                       username: g.nick,

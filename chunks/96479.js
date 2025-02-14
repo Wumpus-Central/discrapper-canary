@@ -6,13 +6,13 @@ var l = n(6025),
     a = n(626135),
     s = n(585483),
     o = n(922409),
-    c = n(545724),
-    d = n(749405),
+    d = n(545724),
+    c = n(749405),
     u = n(981631);
 function h(e) {
     let { index: t, className: n, channel: h, user: m, hasSingleMessageRequest: p } = e,
         { channelId: g } = (0, o._)();
-    return (0, i.jsx)(c.Z, {
+    return (0, i.jsx)(d.Z, {
         index: t,
         className: n,
         isFocused: g === h.id,
@@ -35,7 +35,7 @@ function h(e) {
                 }, 0);
         },
         children: (e) =>
-            (0, i.jsx)(d.C, {
+            (0, i.jsx)(c.C, {
                 active: e,
                 user: m,
                 channel: h

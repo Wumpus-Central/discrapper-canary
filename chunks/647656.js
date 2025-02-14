@@ -5,8 +5,8 @@ var i = n(392711),
     a = n(570140),
     s = n(774226),
     o = n(317381),
-    c = n(173439),
-    d = n(812206),
+    d = n(173439),
+    c = n(812206),
     u = n(626135),
     h = n(81063),
     m = n(70956),
@@ -72,7 +72,7 @@ let I = ['349134787773988865'],
                     {
                         socket: T,
                         args: { pid: S, activity: A },
-                        isSocketConnected: b
+                        isSocketConnected: Z
                     } = e;
                 if (![f.He.IPC, f.He.WEBSOCKET, f.He.POST_MESSAGE].includes(T.transport)) throw new p.Z({ errorCode: E.lTL.INVALID_COMMAND }, 'command not available from "'.concat(T.transport, '" transport'));
                 if (null == S && f.He.IPC === T.transport) throw new p.Z({ errorCode: E.lTL.INVALID_COMMAND }, 'nonzero pid required');
@@ -87,13 +87,13 @@ let I = ['349134787773988865'],
                         Promise.resolve(A)
                     );
                 A.name = T.application.name;
-                let Z = T.application.id;
-                A.application_id = Z;
-                let x = T.transport === f.He.POST_MESSAGE,
-                    L = (0, g.S5)(A, x);
+                let x = T.application.id;
+                A.application_id = x;
+                let b = T.transport === f.He.POST_MESSAGE,
+                    L = (0, g.S5)(A, b);
                 L > 0 && (A.flags = L);
-                let y = d.Z.getApplication(null != Z ? Z : void 0);
-                if (null != y && (0, s.Kb)(y) && x) {
+                let y = c.Z.getApplication(null != x ? x : void 0);
+                if (null != y && (0, s.Kb)(y) && b) {
                     let e = o.ZP.getCurrentEmbeddedActivity();
                     if ((null == e ? void 0 : e.applicationId) === y.id) {
                         let t = e.compositeInstanceId;
@@ -103,10 +103,10 @@ let I = ['349134787773988865'],
                                 ...(null !== (_ = A.secrets) && void 0 !== _ ? _ : {})
                             }),
                             (A.party = {
-                                size: null !== (C = null === (n = A.party) || void 0 === n ? void 0 : n.size) && void 0 !== C ? C : c.M$,
+                                size: null !== (C = null === (n = A.party) || void 0 === n ? void 0 : n.size) && void 0 !== C ? C : d.M$,
                                 ...(null !== (N = A.party) && void 0 !== N ? N : {})
                             }),
-                            (A.flags = A.flags | c.Cj);
+                            (A.flags = A.flags | d.Cj);
                     }
                 }
                 delete A.instance, null === (t = A.party) || void 0 === t || delete t.privacy;
@@ -128,7 +128,7 @@ let I = ['349134787773988865'],
                 return v.then((e) => {
                     var t, n;
                     let [i, l] = e;
-                    if ((null != O && (null != i ? (O.large_image = i) : delete O.large_image, null != l ? (O.small_image = l) : delete O.small_image), !b())) return;
+                    if ((null != O && (null != i ? (O.large_image = i) : delete O.large_image, null != l ? (O.small_image = l) : delete O.small_image), !Z())) return;
                     a.Z.dispatch({
                         type: 'LOCAL_ACTIVITY_UPDATE',
                         socketId: T.id,

@@ -26,7 +26,7 @@ function x(e) {
         children: (0, i.jsxs)('div', {
             className: g.channelHeader,
             'data-recents-channel': t.id,
-            children: [(0, i.jsx)(C, { channel: t }), t.isPrivate() ? null : (0, i.jsx)(s.Fbu, { size: 'xxs' }), (0, i.jsx)(v, { channel: t }), n]
+            children: [(0, i.jsx)(C, { channel: t }), t.isPrivate() ? null : (0, i.jsx)(s.Fbu, { size: 'xxs' }), (0, i.jsx)(E, { channel: t }), n]
         })
     });
 }
@@ -51,7 +51,7 @@ function C(e) {
                 children: (0, i.jsx)(s.kBi, { size: 'xxs' })
             });
 }
-function v(e) {
+function E(e) {
     let { channel: t } = e,
         n = (0, o.e7)([h.Z], () => h.Z.getGuild(t.guild_id)),
         l = (0, d.ZP)(t, !1),

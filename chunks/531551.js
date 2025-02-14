@@ -1,4 +1,4 @@
-n.d(t, { Z: () => c }), n(411104);
+n.d(t, { Z: () => d }), n(411104);
 var i = n(570140),
     l = n(51025),
     r = n(314897),
@@ -13,7 +13,7 @@ function s() {
 function o() {
     l.ob();
 }
-let c = {
+let d = {
     init() {
         i.Z.subscribe('CONNECTION_OPEN', s), i.Z.subscribe('LOGOUT', o);
     }

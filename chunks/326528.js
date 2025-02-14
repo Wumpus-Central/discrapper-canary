@@ -1,8 +1,8 @@
 n.d(t, { b: () => d });
 var i = n(481060),
     s = n(358085),
-    l = n(991346),
-    r = n(168308),
+    r = n(991346),
+    l = n(168308),
     a = n(726985),
     o = n(332325),
     c = n(388032);
@@ -41,5 +41,5 @@ function d() {
             return e.length > 0 ? e : n;
         }
         return n;
-    })((0, r.bC)(), (0, l.Gj)(a.s6.GAMES));
+    })((0, l.bC)(), (0, r.Gj)(a.s6.GAMES));
 }

@@ -1,8 +1,8 @@
 n.d(t, { q: () => E });
 var i = n(200651),
     s = n(192379),
-    l = n(442837),
-    r = n(481060),
+    r = n(442837),
+    l = n(481060),
     a = n(232567),
     o = n(700582);
 n(90641), n(615830);
@@ -10,14 +10,14 @@ var c = n(630759),
     d = n(931500);
 n(921157);
 var u = n(171368),
-    h = n(594174),
-    m = n(51144),
+    m = n(594174),
+    h = n(51144),
     g = n(388032),
     x = n(695978);
 function _(e) {
     let { userId: t, count: n } = e,
-        d = (0, l.e7)([h.default], () => h.default.getUser(t)),
-        _ = m.ZP.getFormattedName(d),
+        d = (0, r.e7)([m.default], () => m.default.getUser(t)),
+        _ = h.ZP.getFormattedName(d),
         p = s.useCallback(() => {
             (0, c.Zn)(t);
         }, [t]),
@@ -33,66 +33,66 @@ function _(e) {
                     (0, i.jsx)(o.Z, {
                         className: x.avatar,
                         user: d,
-                        size: r.EFr.SIZE_40
+                        size: l.EFr.SIZE_40
                     }),
                 (0, i.jsxs)('div', {
                     className: x.text,
                     children: [
-                        (0, i.jsx)(r.P3F, {
+                        (0, i.jsx)(l.P3F, {
                             className: x.username,
                             onClick: E,
-                            children: (0, i.jsx)(r.Text, {
+                            children: (0, i.jsx)(l.Text, {
                                 variant: 'text-md/semibold',
                                 color: 'interactive-active',
                                 children: _
                             })
                         }),
-                        (0, i.jsx)(r.Text, {
+                        (0, i.jsx)(l.Text, {
                             variant: 'text-md/medium',
                             color: 'header-secondary',
                             children: g.intl.format(g.t['/MBjYG'], { count: n })
                         })
                     ]
                 }),
-                (0, i.jsx)(r.P3F, {
+                (0, i.jsx)(l.P3F, {
                     onClick: p,
                     className: x.sectionIconContainer,
-                    children: (0, i.jsx)(r.XHJ, { size: 'xs' })
+                    children: (0, i.jsx)(l.XHJ, { size: 'xs' })
                 })
             ]
         })
     );
 }
 function p(e) {
-    let { className: t, userId: n, verification: l, index: a } = e,
-        o = (0, c.bo)(l.timestamp),
+    let { className: t, userId: n, verification: r, index: a } = e,
+        o = (0, c.bo)(r.timestamp),
         d = s.useCallback(() => {
-            (0, c.ZU)(n, l.verifiedKey);
-        }, [l.verifiedKey, n]);
+            (0, c.ZU)(n, r.verifiedKey);
+        }, [r.verifiedKey, n]);
     return (0, i.jsxs)('div', {
         className: t,
         children: [
             (0, i.jsxs)('div', {
                 className: x.text,
                 children: [
-                    (0, i.jsx)(r.Text, {
+                    (0, i.jsx)(l.Text, {
                         variant: 'text-sm/semibold',
                         color: 'interactive-active',
                         children: g.intl.format(g.t.N4qBBA, { index: a + 1 })
                     }),
-                    (0, i.jsx)(r.Text, {
+                    (0, i.jsx)(l.Text, {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
                         children: o
                     })
                 ]
             }),
-            (0, i.jsx)(r.P3F, {
+            (0, i.jsx)(l.P3F, {
                 className: x.icon,
                 onClick: d,
-                children: (0, i.jsx)(r.Dio, {
+                children: (0, i.jsx)(l.Dio, {
                     size: 'md',
-                    color: r.TVs.colors.INTERACTIVE_NORMAL
+                    color: l.TVs.colors.INTERACTIVE_NORMAL
                 })
             })
         ]
@@ -107,7 +107,7 @@ function E(e) {
                 userId: t,
                 count: n.length
             }),
-            n.map((e, l) =>
+            n.map((e, r) =>
                 (0, i.jsxs)(
                     s.Fragment,
                     {
@@ -115,13 +115,13 @@ function E(e) {
                             (0, i.jsx)(p, {
                                 className: x.row,
                                 userId: t,
-                                index: l,
+                                index: r,
                                 verification: e
                             }),
-                            l !== n.length - 1 && (0, i.jsx)('div', { className: x.divider })
+                            r !== n.length - 1 && (0, i.jsx)('div', { className: x.divider })
                         ]
                     },
-                    ''.concat(l, '-').concat(e.timestamp)
+                    ''.concat(r, '-').concat(e.timestamp)
                 )
             )
         ]

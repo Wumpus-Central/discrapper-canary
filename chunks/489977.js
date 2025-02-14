@@ -5,8 +5,8 @@ var i = n(570140),
     a = n(18438),
     s = n(378879),
     o = n(350327),
-    c = n(594174),
-    d = n(74538),
+    d = n(594174),
+    c = n(74538),
     u = n(486324);
 let h = (e) => {
         let { imageSrc: t, file: n, guildId: i, isTryItOutFlow: r } = e;
@@ -14,9 +14,9 @@ let h = (e) => {
             (0, o.c_)(t);
             return;
         }
-        let h = c.default.getCurrentUser(),
+        let h = d.default.getCurrentUser(),
             m = null != i ? a.I5 : l.I5,
-            p = d.ZP.canUseAnimatedAvatar(h);
+            p = c.ZP.canUseAnimatedAvatar(h);
         if (p || 'image/gif' !== n.type) {
             m(t);
             return;
@@ -32,10 +32,10 @@ let h = (e) => {
             (0, o.f4)(t);
             return;
         }
-        let l = c.default.getCurrentUser(),
+        let l = d.default.getCurrentUser(),
             r = null != n ? a.g_ : o.g_,
-            h = d.ZP.canUsePremiumProfileCustomization(l);
-        if (d.ZP.canUsePremiumProfileCustomization(l)) {
+            h = c.ZP.canUsePremiumProfileCustomization(l);
+        if (c.ZP.canUsePremiumProfileCustomization(l)) {
             r(t);
             return;
         }

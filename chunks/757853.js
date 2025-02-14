@@ -34,8 +34,8 @@ var a,
     Z = n(51144),
     M = n(784384),
     w = n(981631),
-    D = n(490897),
-    R = n(388032),
+    R = n(490897),
+    D = n(388032),
     O = n(121059),
     j = (((a = {}).TOGGLE = 'toggle'), (a.SEND = 'send'), a);
 function k(e) {
@@ -135,7 +135,7 @@ function k(e) {
                                       color: m.zxk.Colors.PRIMARY,
                                       look: m.zxk.Looks.LINK,
                                       onClick: S,
-                                      children: R.intl.string(R.t['HO/oXl'])
+                                      children: D.intl.string(D.t['HO/oXl'])
                                   })
                                 : (0, l.jsx)('div', {
                                       className: r()(
@@ -145,7 +145,7 @@ function k(e) {
                                           }),
                                           O.fauxButton
                                       ),
-                                      children: R.intl.string(R.t.TXNS7e)
+                                      children: D.intl.string(D.t.TXNS7e)
                                   }),
                             I &&
                                 (0, l.jsx)(m.zxk, {
@@ -153,7 +153,7 @@ function k(e) {
                                     color: m.zxk.Colors.BRAND,
                                     look: m.zxk.Looks.OUTLINED,
                                     onClick: T,
-                                    children: R.intl.string(R.t.KyUKhY)
+                                    children: D.intl.string(D.t.KyUKhY)
                                 })
                         ]
                     })
@@ -203,7 +203,7 @@ function U(e) {
             let e = A.Z.getChannel(t.parent_id);
             return null == e ? null : (0, f.F6)(e, L.default, b.Z, !1);
         }),
-        o = (0, u.e7)([v.ZP], () => v.ZP.lastMessageTimestamp(t.id, D.W.CHANNEL)),
+        o = (0, u.e7)([v.ZP], () => v.ZP.lastMessageTimestamp(t.id, R.W.CHANNEL)),
         d = null == i ? void 0 : i.name;
     if (t.isThread() || t.isForumPost()) {
         let e = t.isForumPost() ? m.Mmi : m.VL1;

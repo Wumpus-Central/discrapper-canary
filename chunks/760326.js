@@ -6,8 +6,8 @@ var l = n(481060),
     a = n(51596),
     s = n(324262),
     o = n(981631),
-    c = n(921944),
-    d = n(388032),
+    d = n(921944),
+    c = n(388032),
     u = n(932478);
 let h = (e) => {
     let t = r.$.binds['0']
@@ -17,9 +17,9 @@ let h = (e) => {
         .toUpperCase();
     return (0, i.jsx)(s.Z, {
         guild: e.guild,
-        onDismissed: () => e.markAsDismissed(c.L.UNKNOWN),
+        onDismissed: () => e.markAsDismissed(d.L.UNKNOWN),
         onClick: () => (0, a.$Z)('CHANNEL_NOTICE'),
-        message: d.intl.string(d.t.Qhk8cn),
+        message: c.intl.string(c.t.Qhk8cn),
         cta: t,
         trackingSource: o.PsQ.QUICK_SWITCHER_NOTICE,
         type: o.vID.QUICKSWITCHER,

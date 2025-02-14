@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(653041), n(47120), n(724458);
+n.d(t, { Z: () => j }), n(653041), n(47120), n(724458);
 var i,
     l = n(200651),
     s = n(192379),
@@ -217,4 +217,4 @@ class f extends (i = s.Component) {
     }
 }
 x(f, 'defaultProps', { sections: [null] });
-let v = o.ZP.connectStores([c.Z], () => ({ keyboardModeEnabled: c.Z.keyboardModeEnabled }))(f);
+let j = o.ZP.connectStores([c.Z], () => ({ keyboardModeEnabled: c.Z.keyboardModeEnabled }))(f);

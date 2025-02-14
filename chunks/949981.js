@@ -17,22 +17,22 @@ function g(e) {
     let t,
         { invite: n, author: l, currentUserId: g, onTransitionToInviteChannel: f, onAcceptInstantInvite: x } = e,
         C = g === l.id,
-        v = n.state === _.r2o.ACCEPTING,
-        E = (0, r.e7)([c.Z], () => (null != n.channel ? c.Z.getChannel(n.channel.id) : null), [n]);
-    a()(null == E || E.isPrivate(), 'must be a private channel');
-    let I = null != E;
-    if (null == E) {
+        E = n.state === _.r2o.ACCEPTING,
+        v = (0, r.e7)([c.Z], () => (null != n.channel ? c.Z.getChannel(n.channel.id) : null), [n]);
+    a()(null == v || v.isPrivate(), 'must be a private channel');
+    let I = null != v;
+    if (null == v) {
         if (null == n.channel) return (0, i.jsx)(m.Z, {});
-        (E = (0, o.jD)(n.channel)), (t = null != n.channel && null != n.channel.recipients ? n.channel.recipients : []);
+        (v = (0, o.jD)(n.channel)), (t = null != n.channel && null != n.channel.recipients ? n.channel.recipients : []);
     } else {
-        t = E.recipients.reduce((e, t) => {
+        t = v.recipients.reduce((e, t) => {
             let n = d.default.getUser(t);
             return null != n && e.push(n), e;
         }, []);
         let e = d.default.getCurrentUser();
         I && null != e && t.push(e);
     }
-    let N = E.name;
+    let N = v.name;
     (null == N || '' === N) &&
         (N =
             t.length > 0
@@ -57,7 +57,7 @@ function g(e) {
                             className: p.headerLine,
                             children: [
                                 (0, i.jsx)(s.Z.Icon, {
-                                    channel: E,
+                                    channel: v,
                                     onClick: I ? S : void 0
                                 }),
                                 (0, i.jsx)(s.Z.Info, {
@@ -69,7 +69,7 @@ function g(e) {
                         }),
                         (0, i.jsx)(s.Z.Button, {
                             onClick: S,
-                            submitting: v,
+                            submitting: E,
                             isDisabled: I,
                             color: b,
                             children: T

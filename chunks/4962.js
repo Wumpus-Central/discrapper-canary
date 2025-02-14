@@ -6,17 +6,17 @@ var r = n(120356),
     a = n.n(r),
     s = n(442837),
     o = n(481060),
-    c = n(700582),
-    d = n(451478),
+    d = n(700582),
+    c = n(451478),
     u = n(388032),
     h = n(662927),
     m = (((i = m || {})[(i.STAFF_NOTES = 1)] = 'STAFF_NOTES'), i);
-let p = s.ZP.connectStores([d.Z], () => ({ animate: d.Z.isFocused() }))((e) => {
+let p = s.ZP.connectStores([c.Z], () => ({ animate: c.Z.isFocused() }))((e) => {
         let { user: t, className: n, animate: i } = e;
         return (0, l.jsxs)('div', {
             className: a()(h.staffReviewHeader, n),
             children: [
-                (0, l.jsx)(c.Z, {
+                (0, l.jsx)(d.Z, {
                     size: o.EFr.SIZE_32,
                     user: t,
                     animate: i

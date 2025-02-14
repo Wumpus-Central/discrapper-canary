@@ -1,9 +1,9 @@
 n.d(t, { Q: () => b });
-var r = n(200651);
+var s = n(200651);
 n(192379);
-var o = n(120356),
-    s = n.n(o),
-    a = n(54042),
+var r = n(120356),
+    a = n.n(r),
+    o = n(54042),
     i = n(179839),
     l = n(481060),
     c = n(230711),
@@ -15,10 +15,10 @@ var o = n(120356),
     h = n(981631),
     g = n(388032),
     f = n(359982);
-function _(e) {
-    let { quest: t, isConnected: n, consoleType: o } = e,
+function v(e) {
+    let { quest: t, isConnected: n, consoleType: r } = e,
         c = (0, u.O5)();
-    return (0, r.jsx)(l.P3F, {
+    return (0, s.jsx)(l.P3F, {
         className: f.connectConsoleButtonWrapper,
         onClick: () => {
             c({
@@ -26,34 +26,34 @@ function _(e) {
                 questContent: p.jn.QUEST_BAR_V2,
                 questContentCTA: u.jZ.CONNECT_CONSOLE
             }),
-                (0, d.Z)({ platformType: o });
+                (0, d.Z)({ platformType: r });
         },
         children:
-            o === h.ABu.PLAYSTATION
-                ? (0, r.jsx)(a.T, {
-                      colorClass: s()(f.connectConsoleButton, n ? f.playstationButtonConnected : f.connectConsoleButtonUnconnected),
+            r === h.ABu.PLAYSTATION
+                ? (0, s.jsx)(o.T, {
+                      colorClass: a()(f.connectConsoleButton, n ? f.playstationButtonConnected : f.connectConsoleButtonUnconnected),
                       size: 'sm'
                   })
-                : (0, r.jsx)(i.M, {
-                      colorClass: s()(f.connectConsoleButton, n ? f.xboxButtonConnected : f.connectConsoleButtonUnconnected),
+                : (0, s.jsx)(i.M, {
+                      colorClass: a()(f.connectConsoleButton, n ? f.xboxButtonConnected : f.connectConsoleButtonUnconnected),
                       size: 'sm'
                   })
     });
 }
-function C(e) {
+function _(e) {
     let { text: t, quest: n } = e,
-        o = (0, u.O5)();
-    return (0, r.jsx)(l.P3F, {
+        r = (0, u.O5)();
+    return (0, s.jsx)(l.P3F, {
         className: f.showConnectionsButton,
         onClick: () => {
-            o({
+            r({
                 questId: n.id,
                 questContent: p.jn.QUEST_BAR_V2,
                 questContentCTA: u.jZ.VIEW_CONSOLE_CONNECTIONS_LINK
             }),
                 c.Z.open(h.oAB.CONNECTIONS);
         },
-        children: (0, r.jsx)(l.Text, {
+        children: (0, s.jsx)(l.Text, {
             'aria-label': t,
             color: 'none',
             variant: 'text-xxs/normal',
@@ -61,33 +61,33 @@ function C(e) {
         })
     });
 }
-function v(e) {
-    let { quest: t, xboxAccounts: n, playstationAccounts: o, xboxAndPlaystationAccounts: a } = e,
-        i = a.slice(0, 2),
-        c = a.length > 0,
+function C(e) {
+    let { quest: t, xboxAccounts: n, playstationAccounts: r, xboxAndPlaystationAccounts: o } = e,
+        i = o.slice(0, 2),
+        c = o.length > 0,
         d = n.length > 0,
-        u = o.length > 0;
-    return (0, r.jsxs)('div', {
+        u = r.length > 0;
+    return (0, s.jsxs)('div', {
         className: f.inlineConsoleConnectionDetails,
         children: [
-            (0, r.jsxs)('div', {
+            (0, s.jsxs)('div', {
                 className: f.inlineConsoleConnectionDetailsUpper,
                 children: [
-                    (0, r.jsx)(l.Text, {
+                    (0, s.jsx)(l.Text, {
                         color: 'header-secondary',
                         variant: 'text-xxs/normal',
                         children: c ? g.intl.string(g.t['u30/ur']) : g.intl.string(g.t.owFNBw)
                     }),
-                    (0, r.jsxs)('div', {
+                    (0, s.jsxs)('div', {
                         className: f.inlineConsoleConnectionDetailsIcons,
                         children: [
-                            (0, r.jsx)(_, {
+                            (0, s.jsx)(v, {
                                 consoleType: h.ABu.PLAYSTATION,
                                 isConnected: u,
                                 quest: t
                             }),
-                            (0, r.jsx)('div', { className: f.consoleIconDivider }),
-                            (0, r.jsx)(_, {
+                            (0, s.jsx)('div', { className: f.consoleIconDivider }),
+                            (0, s.jsx)(v, {
                                 consoleType: h.ABu.XBOX,
                                 isConnected: d,
                                 quest: t
@@ -97,21 +97,21 @@ function v(e) {
                 ]
             }),
             c &&
-                (0, r.jsxs)('div', {
+                (0, s.jsxs)('div', {
                     className: f.inlineConsoleConnectionDetailsLower,
                     children: [
                         i.map((e, t) =>
-                            (0, r.jsxs)(
+                            (0, s.jsxs)(
                                 'div',
                                 {
-                                    className: s()(f.inlineConsoleConnectionDetailsLowerItem, t > 0 ? f.marginTop4px : void 0),
+                                    className: a()(f.inlineConsoleConnectionDetailsLowerItem, t > 0 ? f.marginTop4px : void 0),
                                     children: [
-                                        (0, r.jsx)(l.Text, {
+                                        (0, s.jsx)(l.Text, {
                                             color: 'header-secondary',
                                             variant: 'text-xxs/normal',
                                             children: e.type === h.ABu.XBOX ? g.intl.string(g.t.MEhKlp) : g.intl.string(g.t['74VQCA'])
                                         }),
-                                        (0, r.jsx)(l.Text, {
+                                        (0, s.jsx)(l.Text, {
                                             color: 'header-secondary',
                                             variant: 'text-xxs/normal',
                                             children: e.name
@@ -121,8 +121,8 @@ function v(e) {
                                 t
                             )
                         ),
-                        a.length > 2 &&
-                            (0, r.jsx)(C, {
+                        o.length > 2 &&
+                            (0, s.jsx)(_, {
                                 text: g.intl.string(g.t.o8ZkKS),
                                 quest: t
                             })
@@ -134,7 +134,7 @@ function v(e) {
 function j(e) {
     let { xboxAndPlaystationAccounts: t, quest: n } = e;
     return t.length > 0
-        ? (0, r.jsx)(C, {
+        ? (0, s.jsx)(_, {
               text: g.intl.string(g.t['qiS+xs']),
               quest: n
           })
@@ -142,14 +142,14 @@ function j(e) {
 }
 function b(e) {
     let t = (0, m.P)({ location: x.dr.QUESTS_BAR });
-    return (0, r.jsxs)(r.Fragment, {
+    return (0, s.jsxs)(s.Fragment, {
         children: [
-            (0, r.jsx)(l.Text, {
+            (0, s.jsx)(l.Text, {
                 color: 'text-muted',
                 variant: 'text-xs/medium',
                 children: g.intl.string(g.t.EJFSvL)
             }),
-            t ? (0, r.jsx)(v, { ...e }) : (0, r.jsx)(j, { ...e })
+            t ? (0, s.jsx)(C, { ...e }) : (0, s.jsx)(j, { ...e })
         ]
     });
 }

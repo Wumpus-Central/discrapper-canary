@@ -27,7 +27,7 @@ let T = (e, t) =>
             username: t.username,
             activity: e.extra.activity_name
         }),
-    E = (e, t, n) => {
+    A = (e, t, n) => {
         let l = Z.t['bES+y8'],
             a = p.ZP.getName(t.guild_id, t.id, n),
             i = e.extra.activity_name;
@@ -38,7 +38,7 @@ let T = (e, t) =>
             })
             .replaceAll('*', '');
     },
-    A = (e) => {
+    E = (e) => {
         let { entry: t, channel: n, users: l, countOthers: a } = e,
             i = Z.t['7j/5mp'];
         return Z.intl
@@ -68,13 +68,13 @@ let T = (e, t) =>
                     if ((null == S ? void 0 : S.src) == null || null == t || null == R) return;
                     let l =
                         U > 0
-                            ? A({
+                            ? E({
                                   entry: n,
                                   channel: t,
                                   users: [B, H],
                                   countOthers: U
                               })
-                            : E(n, t, R);
+                            : A(n, t, R);
                     return (0, j.C4)({
                         entry: n,
                         applicationImageSrc: null == S ? void 0 : S.src,

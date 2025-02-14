@@ -12,9 +12,9 @@ n.d(t, {
     UE: () => j,
     XZ: () => z,
     Xo: () => ee,
-    _T: () => Z,
+    _T: () => R,
     d9: () => w,
-    mR: () => R,
+    mR: () => Z,
     p9: () => M,
     qs: () => x,
     rU: () => K
@@ -69,14 +69,14 @@ function L(e, t) {
         l = (0, g.Z)(() => t);
     return i.useMemo(() => l(n), [n, l]);
 }
-function Z(e) {
+function R(e) {
     let t = L(e, (e) => {
         var t;
         return null !== (t = null == e ? void 0 : e.name) && void 0 !== t ? t : '';
     });
     return P(e, 'name', t);
 }
-function R(e) {
+function Z(e) {
     let t = L(e, (e) => {
         var t;
         return null == e ? void 0 : null === (t = e.subscription_plans[0]) || void 0 === t ? void 0 : t.price;

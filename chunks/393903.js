@@ -1,27 +1,27 @@
-n.d(t, { y: () => a });
-var l = n(192379),
-    i = n(237617),
-    r = n(889711);
-function a(e) {
+n.d(t, { y: () => s });
+var r = n(192379),
+    l = n(237617),
+    i = n(889711);
+function s(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        n = (0, l.useRef)(null),
-        a = (0, l.useRef)(null),
-        s = (0, i.Z)(() => e(n.current));
+        n = (0, r.useRef)(null),
+        s = (0, r.useRef)(null),
+        o = (0, l.Z)(() => e(n.current));
     return (
-        (0, l.useLayoutEffect)(() => {
+        (0, r.useLayoutEffect)(() => {
             if (!t) return;
-            null == a.current && (a.current = (0, r.pP)(s.current));
+            null == s.current && (s.current = (0, i.pP)(o.current));
             let e = n.current,
-                l = a.current;
-            null != e && null != l && (0, r.YP)(l, e);
-        }, [t, e, s]),
-        (0, l.useEffect)(() => {
+                r = s.current;
+            null != e && null != r && (0, i.YP)(r, e);
+        }, [t, e, o]),
+        (0, r.useEffect)(() => {
             if (!t) return;
             let e = n.current,
-                l = a.current;
-            if (null != e && null != l)
+                r = s.current;
+            if (null != e && null != r)
                 return () => {
-                    (0, r.UC)(l, e);
+                    (0, i.UC)(r, e);
                 };
         }, [t]),
         n

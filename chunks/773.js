@@ -1,35 +1,35 @@
 i.d(e, { Z: () => u });
 var t = i(200651),
-    r = i(120356),
-    a = i.n(r),
-    s = i(481060),
-    o = i(413335),
+    a = i(120356),
+    r = i.n(a),
+    o = i(481060),
+    s = i(413335),
     c = i(306685),
     l = i(388032),
     d = i(390621);
 function u(n) {
-    let { className: e, active: i, onPrimaryClick: r, onSecondaryClick: u } = n;
+    let { className: e, active: i, onPrimaryClick: a, onSecondaryClick: u } = n;
     return (0, t.jsxs)('div', {
-        className: a()(d.container, e),
+        className: r()(d.container, e),
         children: [
             i &&
-                (0, t.jsx)(s.ua7, {
+                (0, t.jsx)(o.ua7, {
                     text: l.intl.string(c.Z.R3ZG5O),
                     children: (n) =>
-                        (0, t.jsx)(s.zxk, {
+                        (0, t.jsx)(o.zxk, {
                             ...n,
                             className: d.secondaryButton,
-                            color: s.Ttl.PRIMARY,
+                            color: o.Ttl.PRIMARY,
                             'aria-label': l.intl.string(c.Z.R3ZG5O),
                             grow: !1,
                             onClick: u,
-                            children: (0, t.jsx)(o.Z, {})
+                            children: (0, t.jsx)(s.Z, {})
                         })
                 }),
-            (0, t.jsx)(s.zxk, {
+            (0, t.jsx)(o.zxk, {
                 className: d.primaryButton,
                 grow: !0,
-                onClick: r,
+                onClick: a,
                 children: i ? l.intl.string(c.Z['g5Ds6+']) : l.intl.string(c.Z.adzkaW)
             })
         ]

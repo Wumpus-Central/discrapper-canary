@@ -1,6 +1,6 @@
-n.d(t, { M: () => l });
+n.d(t, { M: () => r });
 var i = n(570140);
-function l(e) {
+function r(e) {
     i.Z.dispatch({
         type: 'PREMIUM_REQUIRED_MODAL_CLOSE',
         shouldContinue: e

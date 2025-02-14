@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(47120);
+n.d(t, { Z: () => v }), n(47120);
 var i = n(200651),
     l = n(192379),
     a = n(780384),
@@ -13,15 +13,15 @@ var i = n(200651),
     x = n(981631),
     g = n(388032),
     p = n(698050),
-    b = n(893916),
-    _ = n(408942);
-function f(e) {
+    f = n(893916),
+    b = n(408942);
+function v(e) {
     let t,
-        { guild: n, channel: f, customWebhooks: v, editedWebhook: C, selectableWebhookChannels: j, refToScroller: N, errors: I, canNavigate: Z } = e,
+        { guild: n, channel: v, customWebhooks: _, editedWebhook: N, selectableWebhookChannels: j, refToScroller: C, errors: I, canNavigate: Z } = e,
         T = (0, c.ZP)(),
         [E, S] = l.useState(null),
         [y, A] = l.useState(null);
-    if (null != f) t = f;
+    if (null != v) t = v;
     else {
         let e = Object.values(j);
         t = e.length > 0 ? e[0] : null;
@@ -52,7 +52,7 @@ function f(e) {
         }
     }, [Z, t, n]);
     (0, d.ZP)(() => {
-        0 === v.length && k();
+        0 === _.length && k();
     });
     let R = null !== t;
     return (0, i.jsxs)(r.hjN, {
@@ -65,7 +65,7 @@ function f(e) {
                 })
             }),
             (0, i.jsx)(r.$i$, { className: p.headerDivider }),
-            v.length > 0
+            _.length > 0
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
                           (0, i.jsx)(r.zxk, {
@@ -76,8 +76,8 @@ function f(e) {
                               children: g.intl.string(g.t['nrO/HB'])
                           }),
                           (0, i.jsx)(h.Z, {
-                              webhooks: v,
-                              editedWebhook: C,
+                              webhooks: _,
+                              editedWebhook: N,
                               selectableWebhookChannels: j,
                               lastCreatedWebhookId: null == E ? void 0 : E.id,
                               errors: I,
@@ -86,7 +86,7 @@ function f(e) {
                       ]
                   })
                 : (function (e, t, n) {
-                      let l = (0, a.wj)(e) ? b : _;
+                      let l = (0, a.wj)(e) ? f : b;
                       return (0, i.jsxs)(u.Z, {
                           direction: u.Z.Direction.VERTICAL,
                           align: u.Z.Align.CENTER,

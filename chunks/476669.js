@@ -5,8 +5,8 @@ var i = n(200651),
     a = n(239091),
     s = n(129861),
     o = n(600164),
-    c = n(368667);
-class d extends l.PureComponent {
+    d = n(368667);
+class c extends l.PureComponent {
     handleContextMenu(e, t) {
         (0, a.jW)(e, async () => {
             let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('45078')]).then(n.bind(n, 881351));
@@ -23,7 +23,7 @@ class d extends l.PureComponent {
             : (0, i.jsxs)(
                   o.Z,
                   {
-                      className: c.user,
+                      className: d.user,
                       align: o.Z.Align.CENTER,
                       onContextMenu: (t) => {
                           null != e && this.handleContextMenu(t, e);
@@ -33,13 +33,13 @@ class d extends l.PureComponent {
                               src: e.getAvatarURL(void 0, 24),
                               'aria-label': e.username,
                               size: r.EFr.SIZE_24,
-                              className: c.avatar
+                              className: d.avatar
                           }),
                           (0, i.jsx)(s.Z, {
                               user: e,
-                              className: c.tag,
-                              usernameClass: c.username,
-                              discriminatorClass: c.discriminator
+                              className: d.tag,
+                              usernameClass: d.username,
+                              discriminatorClass: d.discriminator
                           })
                       ]
                   },
@@ -50,14 +50,14 @@ class d extends l.PureComponent {
         let { party: e, header: t } = this.props,
             n = e.map((e) => this.renderUser(e));
         return (0, i.jsxs)('div', {
-            className: c.userList,
+            className: d.userList,
             children: [
                 (0, i.jsx)('div', {
-                    className: c.header,
+                    className: d.header,
                     children: t
                 }),
                 (0, i.jsx)(r.zJl, {
-                    className: c.content,
+                    className: d.content,
                     fade: !0,
                     children: n
                 })
@@ -65,4 +65,4 @@ class d extends l.PureComponent {
         });
     }
 }
-let u = d;
+let u = c;

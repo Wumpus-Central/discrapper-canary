@@ -1,4 +1,4 @@
-n.d(t, { default: () => v }), n(47120);
+n.d(t, { default: () => _ }), n(47120);
 var i = n(200651),
     l = n(192379),
     a = n(831209),
@@ -13,25 +13,25 @@ var i = n(200651),
     x = n(487419),
     g = n(821312),
     p = n(676770),
-    b = n(981631),
-    _ = n(388032),
-    f = n(941030);
-function v(e) {
-    let { guildId: t, transitionState: n, onClose: v, analyticsData: C } = e,
+    f = n(981631),
+    b = n(388032),
+    v = n(941030);
+function _(e) {
+    let { guildId: t, transitionState: n, onClose: _, analyticsData: N } = e,
         j = (0, r.e7)([d.Z], () => d.Z.getGuild(t), [t]),
-        N = !!(null == j ? void 0 : j.hasFeature(b.oNc.INVITES_DISABLED)),
+        C = !!(null == j ? void 0 : j.hasFeature(f.oNc.INVITES_DISABLED)),
         [I] = l.useState(!1),
         [Z, T] = l.useState(p.Fl),
         E = (0, r.e7)([x.Z], () => x.Z.getGuildIncident(t)),
         S = (0, m.BT)(j),
-        y = (0, h.SG)(E) || N,
+        y = (0, h.SG)(E) || C,
         A = (0, h.sN)(E),
         [k, R] = l.useState(y),
-        [L, w] = l.useState(A),
-        [O, P] = l.useState(!1),
-        D = k !== y || L !== A || O,
-        M = N && !S;
-    if (null == j) return v(), null;
+        [L, O] = l.useState(A),
+        [w, P] = l.useState(!1),
+        D = k !== y || L !== A || w,
+        M = C && !S;
+    if (null == j) return _(), null;
     function B() {
         R((e) => !e);
     }
@@ -42,7 +42,7 @@ function v(e) {
             (0, i.jsx)(s.xBx, {
                 separator: !0,
                 children: (0, i.jsxs)('div', {
-                    className: f.headerContainer,
+                    className: v.headerContainer,
                     children: [
                         (0, i.jsx)(s.mBM, {
                             size: 'xs',
@@ -51,7 +51,7 @@ function v(e) {
                         (0, i.jsx)(s.X6q, {
                             color: 'header-primary',
                             variant: 'heading-md/semibold',
-                            children: _.intl.string(_.t.oCYAc3)
+                            children: b.intl.string(b.t.oCYAc3)
                         }),
                         (0, i.jsx)(o.Z, {})
                     ]
@@ -59,10 +59,10 @@ function v(e) {
             }),
             (0, i.jsx)(s.hzk, {
                 children: (0, i.jsxs)('div', {
-                    className: f.mainContainer,
+                    className: v.mainContainer,
                     children: [
                         (0, i.jsx)(s.PhF, {
-                            placeholder: _.intl.string(_.t.vKYZzc),
+                            placeholder: b.intl.string(b.t.vKYZzc),
                             options: (0, p.c1)(),
                             select: (e) => {
                                 T(e), P(!0);
@@ -71,31 +71,31 @@ function v(e) {
                             serialize: (e) => String(e)
                         }),
                         (0, i.jsxs)('div', {
-                            className: f.pauseContainer,
+                            className: v.pauseContainer,
                             children: [
                                 (0, i.jsxs)('div', {
-                                    className: f.pauseText,
+                                    className: v.pauseText,
                                     children: [
                                         (0, i.jsx)(s.Text, {
                                             variant: 'text-md/semibold',
                                             color: 'header-primary',
-                                            children: _.intl.string(_.t.Uwsjn5)
+                                            children: b.intl.string(b.t.Uwsjn5)
                                         }),
                                         (0, i.jsx)(s.Text, {
                                             variant: 'text-sm/normal',
                                             color: 'text-muted',
-                                            children: _.intl.string(_.t.qPJkZm)
+                                            children: b.intl.string(b.t.qPJkZm)
                                         })
                                     ]
                                 }),
                                 (0, i.jsx)(s.ua7, {
-                                    text: _.intl.string(_.t['9GPbsb']),
-                                    shouldShow: N,
+                                    text: b.intl.string(b.t['9GPbsb']),
+                                    shouldShow: C,
                                     children: (e) =>
                                         (0, i.jsx)('div', {
                                             ...e,
                                             children: (0, i.jsx)(s.rsf, {
-                                                className: f.toggle,
+                                                className: v.toggle,
                                                 onChange: B,
                                                 checked: k,
                                                 disabled: M
@@ -105,27 +105,27 @@ function v(e) {
                             ]
                         }),
                         (0, i.jsxs)('div', {
-                            className: f.pauseContainer,
+                            className: v.pauseContainer,
                             children: [
                                 (0, i.jsxs)('div', {
-                                    className: f.pauseText,
+                                    className: v.pauseText,
                                     children: [
                                         (0, i.jsx)(s.Text, {
                                             variant: 'text-md/semibold',
                                             color: 'header-primary',
-                                            children: _.intl.string(_.t.wrDmAw)
+                                            children: b.intl.string(b.t.wrDmAw)
                                         }),
                                         (0, i.jsx)(s.Text, {
                                             variant: 'text-sm/normal',
                                             color: 'text-muted',
-                                            children: _.intl.string(_.t.UQbJW1)
+                                            children: b.intl.string(b.t.UQbJW1)
                                         })
                                     ]
                                 }),
                                 (0, i.jsx)(s.rsf, {
-                                    className: f.toggle,
+                                    className: v.toggle,
                                     onChange: function () {
-                                        w((e) => !e);
+                                        O((e) => !e);
                                     },
                                     checked: L
                                 })
@@ -149,8 +149,8 @@ function v(e) {
                                       )
                                   ))
                                 : (0, u.n)(j.id, k, L, Z);
-                            let { source: e, alertType: n, messageId: l } = C;
-                            c.default.track(b.rMx.GUILD_RAID_INTERVENTION_STATE_CHANGE, {
+                            let { source: e, alertType: n, messageId: l } = N;
+                            c.default.track(f.rMx.GUILD_RAID_INTERVENTION_STATE_CHANGE, {
                                 guild_id: t,
                                 source: e,
                                 raid_alert_id: l,
@@ -159,20 +159,20 @@ function v(e) {
                                 intervention_type_disabled: (0, h.lk)(k, L),
                                 duration: 60 * Z
                             }),
-                                v();
+                                _();
                         },
                         color: s.zxk.Colors.BRAND,
                         look: s.zxk.Looks.FILLED,
                         submitting: I,
                         disabled: !D,
-                        children: _.intl.string(_.t['pwm/z8'])
+                        children: b.intl.string(b.t['pwm/z8'])
                     }),
                     (0, i.jsx)(s.zxk, {
-                        onClick: v,
+                        onClick: _,
                         color: s.zxk.Colors.PRIMARY,
                         look: s.zxk.Looks.LINK,
                         disabled: I,
-                        children: _.intl.string(_.t['ETE/oK'])
+                        children: b.intl.string(b.t['ETE/oK'])
                     })
                 ]
             })

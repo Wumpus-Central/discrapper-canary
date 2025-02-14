@@ -9,8 +9,8 @@ var i = n(200651),
     a = n(642128),
     s = n(481060),
     d = n(110924),
-    c = n(752802),
-    u = n(340101),
+    u = n(752802),
+    c = n(340101),
     h = n(625130);
 let _ = 8,
     p = (e) => {
@@ -18,7 +18,7 @@ let _ = 8,
         return (0, i.jsx)('div', {
             className: h.tileContainer,
             children: (0, i.jsx)(
-                c.Z,
+                u.Z,
                 {
                     participant: t,
                     width: n,
@@ -37,9 +37,9 @@ let _ = 8,
         clamp: !0
     },
     g = l.memo(function (e) {
-        let { widgetId: t, tileWidth: n, layout: l, locked: r, streamParticipants: c, participantsVersion: g, pinned: m } = e,
+        let { widgetId: t, tileWidth: n, layout: l, locked: r, streamParticipants: u, participantsVersion: g, pinned: m } = e,
             v = (9 / 16) * n,
-            E = c.map((e) => ({
+            E = u.map((e) => ({
                 participant: e,
                 key: e.user.id,
                 width: n,
@@ -49,7 +49,7 @@ let _ = 8,
                 pinned: m
             })),
             I = (0, d.Z)(n),
-            x = l === u.C5.VERTICAL,
+            x = l === c.C5.VERTICAL,
             C = 0,
             S = 0,
             Z = (0, s.Yzy)(

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d }), n(47120);
 var i = n(200651),
     s = n(192379),
-    l = n(481060),
-    r = n(401190),
+    r = n(481060),
+    l = n(401190),
     a = n(388032),
     o = n(469991);
 function c(e, t, n) {
@@ -36,16 +36,16 @@ class d extends s.PureComponent {
                   className: o.leaveActionWrapper,
                   children: [
                       this.renderErrorMessage(),
-                      (0, i.jsxs)(l.Text, {
+                      (0, i.jsxs)(r.Text, {
                           variant: 'text-sm/normal',
                           children: [
                               a.intl.string(a.t.ziWmcH),
-                              (0, i.jsx)(l.zxk, {
+                              (0, i.jsx)(r.zxk, {
                                   className: o.leaveButton,
-                                  color: l.zxk.Colors.LINK,
-                                  look: l.zxk.Looks.LINK,
+                                  color: r.zxk.Colors.LINK,
+                                  look: r.zxk.Looks.LINK,
                                   onClick: this.handleLeaveHypeSquadClick,
-                                  size: l.zxk.Sizes.NONE,
+                                  size: r.zxk.Sizes.NONE,
                                   submitting: e,
                                   children: a.intl.string(a.t['WH+dho'])
                               })
@@ -66,7 +66,7 @@ class d extends s.PureComponent {
             }),
             c(this, 'handleLeaveHypeSquadClick', () => {
                 this.setState({ isRequestPending: !0 }, () => {
-                    r.Z.leaveHypeSquadOnline()
+                    l.Z.leaveHypeSquadOnline()
                         .then(() => {
                             this.setState({ isRequestPending: !1 });
                         })

@@ -1,8 +1,8 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var i = n(200651);
 n(192379);
 var l = n(682662),
     r = n(677035);
-function o() {
+function a() {
     return (0, i.jsx)(l.H, { children: (0, i.jsx)('div', { className: r.guildSeparator }) });
 }

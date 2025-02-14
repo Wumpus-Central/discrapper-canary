@@ -3,8 +3,8 @@ var i = n(200651);
 n(192379);
 var l = n(120356),
     r = n.n(l),
-    o = n(91192),
-    a = n(589440),
+    a = n(91192),
+    o = n(589440),
     s = n(481060),
     c = n(794243),
     d = n(952107),
@@ -12,8 +12,8 @@ var l = n(120356),
 function h(e) {
     var t;
     let { id: n, className: l, innerClassName: h, renderIcon: p, text: m, selected: g, trailing: f, showUnread: _ = !1, ...v } = e,
-        C = (0, o.JA)(n),
-        x = null !== (t = (0, a.q)(m)) && void 0 !== t ? t : '';
+        C = (0, a.JA)(n),
+        x = null !== (t = (0, o.q)(m)) && void 0 !== t ? t : '';
     return (0, i.jsx)('li', {
         children: (0, i.jsxs)(s.kL8, {
             ...v,

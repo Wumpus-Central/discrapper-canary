@@ -19,8 +19,8 @@ var i,
     f = n(541716),
     x = n(28546),
     C = n(963249),
-    v = n(703656),
-    E = n(594174),
+    E = n(703656),
+    v = n(594174),
     I = n(626135),
     N = n(51144),
     S = n(479446),
@@ -36,7 +36,7 @@ var i,
     k = (((i = {}).SYSTEM_MESSAGE = 'system_message'), (i.COACHMARK = 'coachmark'), i);
 function M(e) {
     let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: i, onMouseEnter: r, onMouseLeave: k, popoutPosition: M, analyticsPage: O, analyticsSection: D, glow: w, giftIntentSecondaryAction: F } = e,
-        U = (0, c.e7)([E.default], () => E.default.getCurrentUser()),
+        U = (0, c.e7)([v.default], () => v.default.getCurrentUser()),
         { analyticsLocations: B } = (0, p.ZP)(),
         G = (0, c.e7)([b.Z], () => b.Z.getFriendAnniversaryYears(i.id));
     a.useEffect(() => {
@@ -123,7 +123,7 @@ function M(e) {
                                             cta_type: F
                                         }),
                                         F === j.X2.VIEW_ALL
-                                            ? ((0, v.uL)(y.Z5c.FRIENDS), _.Z.setSection(y.pJs.ALL))
+                                            ? ((0, E.uL)(y.Z5c.FRIENDS), _.Z.setSection(y.pJs.ALL))
                                             : F === j.X2.SEND_MESSAGE &&
                                               ((0, T.PV)(i.id),
                                               m.Z.openPrivateChannel(i.id).then(() => {

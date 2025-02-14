@@ -1,20 +1,20 @@
-n.d(t, { Z: () => u }), n(757143);
-var l = n(192379),
-    i = n(442837),
-    r = n(131951),
-    a = n(65154),
-    s = n(388032);
-let o = /^Default/;
-function u() {
-    let e = (0, i.e7)([r.Z], () => r.Z.getInputDevices());
-    return l.useMemo(() => {
+n.d(t, { Z: () => a }), n(757143);
+var o = n(192379),
+    r = n(442837),
+    i = n(131951),
+    c = n(65154),
+    d = n(388032);
+let l = /^Default/;
+function a() {
+    let e = (0, r.e7)([i.Z], () => i.Z.getInputDevices());
+    return o.useMemo(() => {
         let t = { ...e },
-            n = t[a.w5];
+            n = t[c.w5];
         return (
             null == n ||
-                (t[a.w5] = {
+                (t[c.w5] = {
                     ...n,
-                    name: n.disabled ? s.intl.string(s.t['/QIjDA']) : n.name.replace(o, s.intl.string(s.t.bBvAEB))
+                    name: n.disabled ? d.intl.string(d.t['/QIjDA']) : n.name.replace(l, d.intl.string(d.t.bBvAEB))
                 }),
             t
         );

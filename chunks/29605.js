@@ -35,8 +35,8 @@ var i = n(200651),
     A = n(434404),
     L = n(471613),
     D = n(999382),
-    k = n(981631),
-    O = n(185923),
+    O = n(981631),
+    k = n(185923),
     P = n(388032),
     w = n(826557),
     M = n(730533);
@@ -88,7 +88,7 @@ let U = d().throttle(x.OQ, 1000),
                             },
                             size: h.oil.Sizes.MINI,
                             value: o,
-                            maxLength: O.Yc,
+                            maxLength: k.Yc,
                             disabled: a
                         }),
                         (0, i.jsx)('div', {
@@ -260,16 +260,16 @@ let U = d().throttle(x.OQ, 1000),
             c = Math.min(o - l, o - s),
             d = a.premiumTier,
             u = (0, Z.FZ)(d, a.id);
-        return null == u || d === k.Eu4.TIER_3 || c > 0
+        return null == u || d === O.Eu4.TIER_3 || c > 0
             ? null
-            : (c > o ? ((t = P.intl.formatToPlainString(P.t.j0UH0t, { level: u })), (n = P.intl.formatToPlainString(P.t.VQeyKy, { level: u })), (r = k.qAy.BOOST_UPSELL_BANNER_LOST_LEVEL)) : ((t = P.intl.string(P.t.zT9Sxc)), (n = P.intl.formatToPlainString(P.t.dBZ1RU, { level: u })), (r = k.qAy.BOOST_UPSELL_BANNER_SLOTS_FULL)),
+            : (c > o ? ((t = P.intl.formatToPlainString(P.t.j0UH0t, { level: u })), (n = P.intl.formatToPlainString(P.t.VQeyKy, { level: u })), (r = O.qAy.BOOST_UPSELL_BANNER_LOST_LEVEL)) : ((t = P.intl.string(P.t.zT9Sxc)), (n = P.intl.formatToPlainString(P.t.dBZ1RU, { level: u })), (r = O.qAy.BOOST_UPSELL_BANNER_SLOTS_FULL)),
               (0, i.jsx)(N.Z, {
                   header: t,
                   text: n,
                   guild: a,
                   analyticsLocation: {
-                      page: k.ZY5.GUILD_SETTINGS,
-                      section: k.jXE.GUILD_SETTINGS_STICKERS,
+                      page: O.ZY5.GUILD_SETTINGS,
+                      section: O.jXE.GUILD_SETTINGS_STICKERS,
                       object: r,
                       objectType: (0, Z.ge)(u)
                   }
@@ -316,7 +316,7 @@ let U = d().throttle(x.OQ, 1000),
                 }),
             H = async (n) => {
                 l((0, u.Z)()),
-                    T.default.track(k.rMx.EMOJI_UPLOAD_STARTED, {
+                    T.default.track(O.rMx.EMOJI_UPLOAD_STARTED, {
                         guild_id: e.id,
                         upload_id: t
                     }),
@@ -365,7 +365,7 @@ let U = d().throttle(x.OQ, 1000),
                                 K &&
                                     (0, i.jsx)(h.R94, {
                                         type: h.geA.DESCRIPTION,
-                                        children: P.intl.format(P.t.uMkfTk, { onClick: () => A.Z.open(e.id, k.pNK.ROLE_SUBSCRIPTIONS, void 0, k.KsC.ROLE_SUBSCRIPTION_EMOJI) })
+                                        children: P.intl.format(P.t.uMkfTk, { onClick: () => A.Z.open(e.id, O.pNK.ROLE_SUBSCRIPTIONS, void 0, O.KsC.ROLE_SUBSCRIPTION_EMOJI) })
                                     }),
                                 (0, i.jsxs)('div', {
                                     children: [
@@ -386,7 +386,7 @@ let U = d().throttle(x.OQ, 1000),
                                                 (0, i.jsx)('li', {
                                                     children: (0, i.jsx)(h.R94, {
                                                         type: h.geA.DESCRIPTION,
-                                                        children: P.intl.format(P.t.gfAXoa, { maxSize: O.xG })
+                                                        children: P.intl.format(P.t.gfAXoa, { maxSize: k.xG })
                                                     })
                                                 }),
                                                 (0, i.jsx)('li', {
@@ -411,7 +411,7 @@ let U = d().throttle(x.OQ, 1000),
                                     onClick: () => {
                                         let t = (0, u.Z)();
                                         l(t),
-                                            T.default.track(k.rMx.EMOJI_UPLOAD_STARTED, {
+                                            T.default.track(O.rMx.EMOJI_UPLOAD_STARTED, {
                                                 guild_id: e.id,
                                                 upload_id: t
                                             });

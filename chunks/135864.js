@@ -5,8 +5,8 @@ var i = n(200651),
     a = n.n(r),
     s = n(636977),
     o = n(481060),
-    c = n(132871),
-    d = n(147890),
+    d = n(132871),
+    c = n(147890),
     u = n(31569),
     h = n(164991),
     m = n(859921),
@@ -50,9 +50,9 @@ function v(e) {
                     );
                 case E.GlobalDiscoveryTab.APPS:
                     if (!v)
-                        return (0, d.dx)({
+                        return (0, c.dx)({
                             restorePreviousView: !0,
-                            entrypoint: { name: c.n3.GLOBAL_DISCOVERY_SIDEBAR }
+                            entrypoint: { name: d.n3.GLOBAL_DISCOVERY_SIDEBAR }
                         });
                     u.Z.resetState(), (0, f.transitionToGlobalDiscovery)({ tab: t });
                     return;

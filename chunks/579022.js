@@ -8,14 +8,14 @@ let s = Math.ceil(2 * Math.PI * 20),
     o = (e) => {
         let { total: t, used: n } = e,
             o = Math.max(0, Math.min(1, n / t)),
-            c = ''.concat(Math.floor(100 * o), '%');
+            d = ''.concat(Math.floor(100 * o), '%');
         return (0, i.jsx)(l.ua7, {
-            text: r.intl.formatToPlainString(r.t['2eoRMj'], { used: c }),
+            text: r.intl.formatToPlainString(r.t['2eoRMj'], { used: d }),
             children: (e) =>
                 (0, i.jsxs)('div', {
                     className: a.wrapper,
                     role: 'progressbar',
-                    'aria-label': r.intl.formatToPlainString(r.t['2eoRMj'], { used: c }),
+                    'aria-label': r.intl.formatToPlainString(r.t['2eoRMj'], { used: d }),
                     ...e,
                     children: [
                         (0, i.jsxs)('svg', {
@@ -50,7 +50,7 @@ let s = Math.ceil(2 * Math.PI * 20),
                         (0, i.jsx)('aside', {
                             className: a.usageInfo,
                             'aria-hidden': !0,
-                            children: c
+                            children: d
                         })
                     ]
                 })

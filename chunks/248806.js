@@ -6,8 +6,8 @@ var l = n(243814),
     a = n(846027),
     s = n(872810),
     o = n(594190),
-    c = n(989941),
-    d = n(173507),
+    d = n(989941),
+    c = n(173507),
     u = n(199902),
     h = n(131951),
     m = n(449224),
@@ -23,7 +23,7 @@ let I = {
         },
         handler() {
             let e = h.Z.isVideoEnabled();
-            null != (0, _.Z)() && (e ? a.Z.setVideoEnabled(!1) : (0, d.Z)(() => a.Z.setVideoEnabled(!0), E.IlC.APP));
+            null != (0, _.Z)() && (e ? a.Z.setVideoEnabled(!1) : (0, c.Z)(() => a.Z.setVideoEnabled(!0), E.IlC.APP));
         }
     },
     [E.Etm.TOGGLE_SCREENSHARE]: {
@@ -40,7 +40,7 @@ let I = {
                 } = e,
                 l = u.Z.getCurrentUserActiveStream(),
                 a = u.Z.getStreamerActiveStreamMetadata(),
-                d = (0, c.Z)(o.ZP, m.Z),
+                c = (0, d.Z)(o.ZP, m.Z),
                 h = (0, _.Z)();
             null != h &&
                 (null != t && null != a && a.pid !== t && (0, p.isWindows)()
@@ -49,8 +49,8 @@ let I = {
                       ? (0, s.L6)(!1)
                       : null != t && (0, p.isWindows)()
                         ? (0, s.WH)(h.guild_id, h.id, { pid: t })
-                        : null != d
-                          ? (0, s.WH)(h.guild_id, h.id, { pid: d.pid })
+                        : null != c
+                          ? (0, s.WH)(h.guild_id, h.id, { pid: c.pid })
                           : (0, r.ZDy)(async () => {
                                 let { default: e } = await Promise.all([n.e('93382'), n.e('79477'), n.e('87007')]).then(n.bind(n, 60594));
                                 return (t) =>

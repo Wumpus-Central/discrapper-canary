@@ -8,10 +8,10 @@ var l = n(780384),
 function o(e) {
     let { text: t, onClick: n } = e,
         o = (0, a.ZP)(),
-        c = (0, l.wj)(o);
+        d = (0, l.wj)(o);
     return (0, i.jsxs)(r.zxk, {
         size: 'medium',
-        color: c ? r.Ttl.TRANSPARENT : r.Ttl.WHITE,
+        color: d ? r.Ttl.TRANSPARENT : r.Ttl.WHITE,
         className: s.button,
         onClick: n,
         innerClassName: s.innerButton,

@@ -1,25 +1,25 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => c });
 var i,
     l,
     r,
     a = n(442837),
     s = n(570140);
 let o = {};
-class c extends (r = a.ZP.Store) {
+class d extends (r = a.ZP.Store) {
     getSkuIdForChannel(e) {
         return o[e];
     }
 }
 (l = 'ChannelSKUStore'),
-    (i = 'displayName') in c
-        ? Object.defineProperty(c, i, {
+    (i = 'displayName') in d
+        ? Object.defineProperty(d, i, {
               value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (c[i] = l);
-let d = new c(s.Z, {
+        : (d[i] = l);
+let c = new d(s.Z, {
     CONNECTION_OPEN: function () {
         o = {};
     },

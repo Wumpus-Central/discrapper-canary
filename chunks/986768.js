@@ -6,7 +6,7 @@ var r = n(238679),
     a = n(981631),
     s = n(701488);
 function o(e, t, n) {
-    var o, c;
+    var o, d;
     switch (t) {
         case a.zMe.ACTIVITY_PIP_MODE_UPDATE: {
             let t = null === (o = e.application) || void 0 === o ? void 0 : o.id,
@@ -14,7 +14,7 @@ function o(e, t, n) {
             return null != n ? { is_pip_mode: n !== s.cE.FOCUSED } : null;
         }
         case a.zMe.ACTIVITY_LAYOUT_MODE_UPDATE: {
-            let t = null === (c = e.application) || void 0 === c ? void 0 : c.id,
+            let t = null === (d = e.application) || void 0 === d ? void 0 : d.id,
                 n = null != t ? i.ZP.getLayoutModeForApp(t) : null;
             return null != n ? { layout_mode: n } : null;
         }

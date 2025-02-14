@@ -1,5 +1,5 @@
-n.d(t, { B: () => l });
-let r = (0, n(818083).B)({
+n.d(t, { B: () => r });
+let l = (0, n(818083).B)({
         kind: 'user',
         id: '2024-10_shop_tile_impression_logging',
         label: 'Shop tile impressions logging',
@@ -12,4 +12,4 @@ let r = (0, n(818083).B)({
             }
         ]
     }),
-    l = (e) => r.useExperiment({ location: e }).enabled;
+    r = (e) => l.useExperiment({ location: e }).enabled;

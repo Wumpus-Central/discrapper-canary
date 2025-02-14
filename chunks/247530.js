@@ -1,4 +1,4 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => d });
 var i = n(200651);
 n(192379);
 var l = n(481060),
@@ -6,7 +6,7 @@ var l = n(481060),
     a = n(872810),
     s = n(51144),
     o = n(388032);
-function c(e) {
+function d(e) {
     let { applicationStreams: t } = e;
     return t.map((e) => {
         let { stream: t, streamUser: n } = e;

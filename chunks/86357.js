@@ -60,14 +60,14 @@ let p = (e) => {
             children: (0, u.Z)(t)
         });
     },
-    v = (e) => {
+    E = (e) => {
         let { sku: t, className: n } = e;
         return (0, r.jsxs)('div', {
             className: c()(_.row, n),
             children: [(0, r.jsx)(f, { sku: t }), (0, r.jsx)(x, { sku: t }), (0, r.jsx)(C, { sku: t })]
         });
     },
-    E = (e) => {
+    v = (e) => {
         let { className: t } = e;
         return (0, r.jsx)('div', {
             className: t,
@@ -89,7 +89,7 @@ class I extends (i = s.PureComponent) {
         let { className: n, sku: i } = this.props;
         switch (e) {
             case 5:
-                return (0, r.jsx)(E, { className: c()(t, n) });
+                return (0, r.jsx)(v, { className: c()(t, n) });
             case 1:
                 return (0, r.jsx)(p, { className: c()(t, n) });
             case 3:
@@ -98,7 +98,7 @@ class I extends (i = s.PureComponent) {
                     className: c()(t, n)
                 });
             case 2:
-                return (0, r.jsx)(v, {
+                return (0, r.jsx)(E, {
                     sku: i,
                     className: c()(t, n)
                 });
@@ -113,14 +113,14 @@ class I extends (i = s.PureComponent) {
         let { className: t, sku: n } = this.props;
         switch (e) {
             case 5:
-                return (0, r.jsx)(E, { className: c()(t) });
+                return (0, r.jsx)(v, { className: c()(t) });
             case 3:
                 return (0, r.jsx)(g, {
                     sku: n,
                     className: c()(_.directoryHeroPricePremium, t)
                 });
             case 2:
-                return (0, r.jsx)(v, {
+                return (0, r.jsx)(E, {
                     sku: n,
                     className: c()(_.directoryHeroPrice, t)
                 });
@@ -136,7 +136,7 @@ class I extends (i = s.PureComponent) {
         let { className: n, sku: i } = this.props;
         switch (e) {
             case 5:
-                t = (0, r.jsx)(E, {});
+                t = (0, r.jsx)(v, {});
                 break;
             case 2:
                 t = (0, r.jsxs)(s.Fragment, {

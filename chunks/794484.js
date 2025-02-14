@@ -1,149 +1,149 @@
-n.d(t, { Z: () => v }), n(47120);
+n.d(t, { Z: () => N }), n(47120);
 var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    l = n(119617),
+    s = n(192379),
+    r = n(120356),
+    l = n.n(r),
+    a = n(119617),
     o = n(481060),
     c = n(975298),
     d = n(410154),
     u = n(695349),
     m = n(314684),
-    g = n(687362),
-    _ = n(675619),
-    p = n(119850),
-    f = n(32173),
-    h = n(391110),
-    x = n(75077),
-    E = n(320319),
-    C = n(544232);
-let b = (e) => {
-        let { showAllPerksButton: t, leftAlignHeaders: n, title: r, headerClassname: a } = e,
-            s = (0, i.jsx)(o.X6q, {
+    h = n(687362),
+    g = n(675619),
+    x = n(119850),
+    _ = n(32173),
+    p = n(391110),
+    E = n(75077),
+    C = n(320319),
+    f = n(544232);
+let T = (e) => {
+        let { showAllPerksButton: t, leftAlignHeaders: n, title: s, headerClassname: r } = e,
+            l = (0, i.jsx)(o.X6q, {
                 variant: 'heading-xxl/extrabold',
                 color: 'header-primary',
-                className: null != a ? a : C.heading,
-                children: r
+                className: null != r ? r : f.heading,
+                children: s
             });
         return null == t
-            ? s
+            ? l
             : n
               ? (0, i.jsxs)('div', {
-                    className: C.sectionHeader,
+                    className: f.sectionHeader,
                     children: [
-                        s,
+                        l,
                         null != t &&
                             (0, i.jsx)('div', {
-                                className: C.showAllPerksButton,
+                                className: f.showAllPerksButton,
                                 children: t
                             })
                     ]
                 })
               : (0, i.jsx)('div', {
-                    className: C.container,
+                    className: f.container,
                     children: (0, i.jsx)('div', {
-                        className: C.sectionHeaderSeeAll,
-                        children: s
+                        className: f.sectionHeaderSeeAll,
+                        children: l
                     })
                 });
     },
-    v = (e) => {
+    N = (e) => {
         var t, n;
-        let { className: a, variant: v = h.R0.PERKS_DISCOVERABILITY, noBackground: T = !1, leftAlignHeaders: N = !1, showAllPerksButton: I, headerClassname: R, isFullScreen: j = !0, shouldAutoScroll: S = !1 } = e,
-            A = r.useRef(null),
-            P = (0, m.yQ)(),
-            Z = (0, g.vi)(P),
-            w = (0, d.ZP)('perks-discoverability'),
-            M = v === h.R0.WHATS_NEW,
-            B = (0, m.IY)(),
-            y = (0, p.x)();
-        r.useEffect(() => {
-            M && !Z && (B(), y());
-        }, [B, y, M, Z]);
-        let k = () => {
-                M && Z && B();
+        let { className: r, variant: N = p.R0.PERKS_DISCOVERABILITY, noBackground: S = !1, leftAlignHeaders: I = !1, showAllPerksButton: b, headerClassname: v, isFullScreen: j = !0, shouldAutoScroll: A = !1 } = e,
+            O = s.useRef(null),
+            R = (0, m.yQ)(),
+            P = (0, h.vi)(R),
+            D = (0, d.ZP)('perks-discoverability'),
+            y = N === p.R0.WHATS_NEW,
+            Z = (0, m.IY)(),
+            k = (0, x.x)();
+        s.useEffect(() => {
+            y && !P && (Z(), k());
+        }, [Z, k, y, P]);
+        let L = () => {
+                y && P && Z();
             },
-            O = Z && M;
-        (0, _.r)({
-            ref: A,
-            shouldScroll: O || S,
-            onScrollEnd: k,
-            onCleanup: k
+            B = P && y;
+        (0, g.r)({
+            ref: O,
+            shouldScroll: B || A,
+            onScrollEnd: L,
+            onCleanup: L
         });
-        let L = (0, x.Op)(M),
-            D = (0, f.Z)(),
-            U = (0, x.mN)(),
-            { fractionalState: G } = (0, c.Z)(),
-            V = (0, u.W)(),
-            H = (0, x.sP)({
-                perksCards: D,
-                variant: v,
-                shopMarketingVariation: w,
+        let M = (0, E.Op)(y),
+            w = (0, _.Z)(),
+            V = (0, E.mN)(),
+            { fractionalState: U } = (0, c.Z)(),
+            G = (0, u.W)(),
+            F = (0, E.sP)({
+                perksCards: w,
+                variant: N,
+                shopMarketingVariation: D,
                 isFullScreen: j,
-                showTenureCard: null == P ? void 0 : P.showCard,
-                isPremiumSubscriber: U,
-                fractionalState: G,
-                isInReverseTrial: V
+                showTenureCard: null == R ? void 0 : R.showCard,
+                isPremiumSubscriber: V,
+                fractionalState: U,
+                isInReverseTrial: G
             }),
-            F = H.some((e) => null != e.pillText),
-            [W, z] = r.useState(null),
-            Y = r.useRef(new l.qA());
+            H = F.some((e) => null != e.pillText),
+            [z, Y] = s.useState(null),
+            W = s.useRef(new a.qA());
         return (0, i.jsxs)(i.Fragment, {
             children: [
-                ((null == D ? void 0 : null === (t = D.freeBoost) || void 0 === t ? void 0 : t.name) === f.u.FREE_BOOST || (null == D ? void 0 : null === (n = D.tenureRewardCollectible) || void 0 === n ? void 0 : n.name) === f.u.TENURE_REWARD_COLLECTIBLE) &&
-                    (0, i.jsx)(l.O_, {
-                        ref: z,
-                        className: C.confettiCanvas,
-                        environment: Y.current
+                ((null == w ? void 0 : null === (t = w.freeBoost) || void 0 === t ? void 0 : t.name) === _.u.FREE_BOOST || (null == w ? void 0 : null === (n = w.tenureRewardCollectible) || void 0 === n ? void 0 : n.name) === _.u.TENURE_REWARD_COLLECTIBLE) &&
+                    (0, i.jsx)(a.O_, {
+                        ref: Y,
+                        className: f.confettiCanvas,
+                        environment: W.current
                     }),
                 (0, i.jsxs)('div', {
-                    ref: A,
-                    className: s()(
-                        C.section,
+                    ref: O,
+                    className: l()(
+                        f.section,
                         {
-                            [C.centerAlignSection]: !N,
-                            [C.leftAlignSection]: N
+                            [f.centerAlignSection]: !I,
+                            [f.leftAlignSection]: I
                         },
-                        a
+                        r
                     ),
                     children: [
-                        (0, i.jsx)(b, {
-                            showAllPerksButton: I,
-                            leftAlignHeaders: N,
-                            title: L.title,
-                            headerClassname: R
+                        (0, i.jsx)(T, {
+                            showAllPerksButton: b,
+                            leftAlignHeaders: I,
+                            title: M.title,
+                            headerClassname: v
                         }),
                         (0, i.jsx)(o.Text, {
                             variant: 'text-lg/normal',
                             color: 'header-primary',
-                            className: s()(C.subtitle, {
-                                [C.subtitle]: null == I || N,
-                                [C.subtitleWithButton]: null != I && !N,
-                                [C.fullWidth]: M || N,
-                                [C.moreSubtitleMargin]: F,
-                                [C.leftAlignSubtitle]: N,
-                                [C.centerAlignSubtitle]: !N
+                            className: l()(f.subtitle, {
+                                [f.subtitle]: null == b || I,
+                                [f.subtitleWithButton]: null != b && !I,
+                                [f.fullWidth]: y || I,
+                                [f.moreSubtitleMargin]: H,
+                                [f.leftAlignSubtitle]: I,
+                                [f.centerAlignSubtitle]: !I
                             }),
-                            children: L.subtitle
+                            children: M.subtitle
                         }),
-                        !N &&
-                            null != I &&
+                        !I &&
+                            null != b &&
                             (0, i.jsx)('div', {
-                                className: s()(C.showAllPerksButtonCenter),
-                                children: I
+                                className: l()(f.showAllPerksButtonCenter),
+                                children: b
                             }),
                         (0, i.jsx)('div', {
-                            className: s()({
-                                [C.cardContainer]: j,
-                                [C.cardContainerNarrowWidth]: !j
+                            className: l()({
+                                [f.cardContainer]: j,
+                                [f.cardContainerNarrowWidth]: !j
                             }),
-                            children: H.map((e, t) =>
+                            children: F.map((e, t) =>
                                 (0, i.jsx)(
-                                    E.Z,
+                                    C.Z,
                                     {
-                                        confettiCanvas: e.name === f.u.FREE_BOOST || e.name === f.u.TENURE_REWARD_COLLECTIBLE ? W : void 0,
+                                        confettiCanvas: e.name === _.u.FREE_BOOST || e.name === _.u.TENURE_REWARD_COLLECTIBLE ? z : void 0,
                                         ...e,
-                                        forceShadow: T
+                                        forceShadow: S
                                     },
                                     ''.concat(e.name, '_').concat(t)
                                 )

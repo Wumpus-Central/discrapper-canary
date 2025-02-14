@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d }), n(47120);
+n.d(t, { Z: () => c }), n(47120);
 var i = n(748780),
     l = n(570140),
     r = n(317770),
@@ -17,7 +17,7 @@ function o(e, t, n) {
         e
     );
 }
-class c extends r.Z {
+class d extends r.Z {
     _initialize() {
         s.Z.addChangeListener(this.handlePopoutWindowChange), l.Z.subscribe('WINDOW_FOCUS', this.handleMainWindowFocus);
     }
@@ -43,4 +43,4 @@ class c extends r.Z {
             });
     }
 }
-let d = new c();
+let c = new d();

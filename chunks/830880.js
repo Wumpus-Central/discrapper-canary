@@ -6,8 +6,8 @@ var l = n(704215),
     a = n(230711),
     s = n(243778),
     o = n(981631),
-    c = n(921944),
-    d = n(526761),
+    d = n(921944),
+    c = n(526761),
     u = n(726985),
     h = n(388032),
     m = n(502781);
@@ -15,7 +15,7 @@ function p() {
     let [e, t] = (0, s.US)([l.z.RESTRICTED_ACCOUNTS_SETTING_NOTICE]),
         n = e === l.z.RESTRICTED_ACCOUNTS_SETTING_NOTICE,
         p = () => {
-            a.Z.open(o.oAB.CONTENT_AND_SOCIAL, u.s6.RESTRICTED_USERS, { scrollPosition: d.FY.RESTRICTED_ACCOUNTS });
+            a.Z.open(o.oAB.CONTENT_AND_SOCIAL, u.s6.RESTRICTED_USERS, { scrollPosition: c.FY.RESTRICTED_ACCOUNTS });
         };
     return n
         ? (0, i.jsxs)('div', {
@@ -39,7 +39,7 @@ function p() {
                   }),
                   (0, i.jsx)(r.P3F, {
                       className: m.closeButton,
-                      onClick: () => t(c.L.USER_DISMISS),
+                      onClick: () => t(d.L.USER_DISMISS),
                       children: (0, i.jsx)(r.Dio, {})
                   })
               ]

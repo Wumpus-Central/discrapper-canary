@@ -24,7 +24,7 @@ function g(e) {
             title: l,
             body: p,
             hint: g,
-            notifType: f
+            notifType: m
         } = (function (e, t) {
             if (t.type === c.nc.NEWS) {
                 var n, i, s, l, a, r, o, d;
@@ -38,7 +38,7 @@ function g(e) {
             }
             return e;
         })(h(), e),
-        { trackView: m, trackClick: _ } = (0, d.R)(f, { notif_type: f });
+        { trackView: f, trackClick: v } = (0, d.R)(m, { notif_type: m });
     return {
         icon: n,
         title: l,
@@ -53,13 +53,13 @@ function g(e) {
                 children: u.intl.string(u.t['9MyuT0'])
             }),
         onNotificationShow: () => {
-            m();
+            f();
         },
         onNotificationClick: (e, n) => {
-            _('unlock'), t === c.nc.NEWS && s.Z.updateNotificationStatus(n), a.default.isOverlayOOPEnabledForPid((0, o.QF)()) ? s.Z.setInputLocked(!1, (0, o.QF)()) : r.Z.isInstanceLocked() && s.Z.setInstanceLocked(!1);
+            v('unlock'), t === c.nc.NEWS && s.Z.updateNotificationStatus(n), a.default.isOverlayOOPEnabledForPid((0, o.QF)()) ? s.Z.setInputLocked(!1, (0, o.QF)()) : r.Z.isInstanceLocked() && s.Z.setInstanceLocked(!1);
         },
         onDismissClick: () => {
-            _('dismiss');
+            v('dismiss');
         }
     };
 }

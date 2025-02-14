@@ -23,15 +23,15 @@ var l = n(200651),
     N = n(371991),
     Z = n(410441),
     T = n(981631),
-    E = n(616922),
-    A = n(388032),
+    A = n(616922),
+    E = n(388032),
     _ = n(967437),
     S = n(687765);
 let R = (e, t, n) => {
     let { artist: l, media: a } = e,
-        i = A.t['6iNxrq'],
+        i = E.t['6iNxrq'],
         r = g.ZP.getName(t.guild_id, t.id, n);
-    return A.intl
+    return E.intl
         .formatToMarkdownString(i, {
             artist: l,
             userName: r,
@@ -139,10 +139,10 @@ function w(e) {
                     y.Ll,
                     {
                         onClick: () => {
-                            (0, x.Z)(Y, E.kG.USER_ACTIVITY_SYNC), O();
+                            (0, x.Z)(Y, A.kG.USER_ACTIVITY_SYNC), O();
                         },
                         IconComponent: s.iOO,
-                        children: A.intl.string(A.t.eU3inJ)
+                        children: E.intl.string(E.t.eU3inJ)
                     },
                     'listen-along'
                 )
@@ -155,11 +155,11 @@ function w(e) {
             B.media.provider === i.p.SPOTIFY
                 ? (0, l.jsx)(Z.Z, {
                       onClick: n,
-                      'aria-label': A.intl.string(A.t.rRffNz),
+                      'aria-label': E.intl.string(E.t.rRffNz),
                       Icon: p.Z
                   })
                 : null,
-        userDescription: (0, C.kr)(w) ? A.t.Tzx5Dw : A.t.CcVI1d,
+        userDescription: (0, C.kr)(w) ? E.t.Tzx5Dw : E.t.CcVI1d,
         title: U,
         onClickTitle: g,
         subtitle: W,
@@ -176,7 +176,7 @@ function w(e) {
                     user: D,
                     channel: _,
                     generateReactionImage: q,
-                    reactionImageAltText: A.intl.formatToPlainString(A.t.h2yWWV, {
+                    reactionImageAltText: E.intl.formatToPlainString(E.t.h2yWWV, {
                         username: D.username,
                         activity: H
                     }),

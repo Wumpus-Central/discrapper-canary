@@ -1,19 +1,19 @@
 n.d(t, { Z: () => x });
 var i = n(200651),
     s = n(192379),
-    l = n(442837),
-    r = n(692547),
+    r = n(442837),
+    l = n(692547),
     a = n(481060),
     o = n(768762),
     c = n(823379),
     d = n(882029),
     u = n(955204),
-    h = n(248998),
-    m = n(388032),
+    m = n(248998),
+    h = n(388032),
     g = n(690969);
 function x(e) {
     let { onBackClick: t } = e,
-        n = (0, l.e7)([d.Z], () => d.Z.getAllUnlockedAchievements()),
+        n = (0, r.e7)([d.Z], () => d.Z.getAllUnlockedAchievements()),
         x = s.useMemo(() => Object.values(n).sort((e, t) => t.dateUnlocked - e.dateUnlocked), [n]),
         _ = s.useMemo(
             () =>
@@ -37,7 +37,7 @@ function x(e) {
                         (0, i.jsx)(a.Text, {
                             variant: 'text-lg/normal',
                             color: 'text-normal',
-                            children: m.intl.string(m.t['13/7kZ'])
+                            children: h.intl.string(h.t['13/7kZ'])
                         })
                     ]
                 })
@@ -51,12 +51,12 @@ function x(e) {
                             (0, i.jsx)(a.X6q, {
                                 variant: 'heading-lg/extrabold',
                                 color: 'header-primary',
-                                children: m.intl.string(m.t['6jI0hY'])
+                                children: h.intl.string(h.t['6jI0hY'])
                             }),
                             (0, i.jsx)(a.Text, {
                                 variant: 'text-md/normal',
                                 color: 'header-secondary',
-                                children: m.intl.string(m.t.GuUItb)
+                                children: h.intl.string(h.t.GuUItb)
                             })
                         ]
                     }),
@@ -64,7 +64,7 @@ function x(e) {
                         className: g.headerIcon,
                         children: (0, i.jsx)(a.rm8, {
                             size: 'custom',
-                            color: r.Z.unsafe_rawColors.ORANGE_345.css,
+                            color: l.Z.unsafe_rawColors.ORANGE_345.css,
                             width: 40,
                             height: 40
                         })
@@ -79,7 +79,7 @@ function x(e) {
                         children: x.map((e) => {
                             let { achievementId: t, dateUnlocked: n } = e;
                             return (0, i.jsx)(
-                                h.Z,
+                                m.Z,
                                 {
                                     achievementId: t,
                                     dateUnlocked: n
@@ -98,12 +98,12 @@ function x(e) {
                             children: (0, i.jsx)(a.Text, {
                                 variant: 'text-md/bold',
                                 color: 'header-secondary',
-                                children: m.intl.string(m.t.GFyMg4)
+                                children: h.intl.string(h.t.GFyMg4)
                             })
                         }),
                         (0, i.jsx)('div', {
                             className: g.achievementGrid,
-                            children: _.map((e) => (0, i.jsx)(h.Z, { achievementId: e.id }, e.id))
+                            children: _.map((e) => (0, i.jsx)(m.Z, { achievementId: e.id }, e.id))
                         })
                     ]
                 }),

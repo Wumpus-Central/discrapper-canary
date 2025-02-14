@@ -5,8 +5,8 @@ var i = n(200651),
     a = n.n(r),
     s = n(442837),
     o = n(481060),
-    c = n(493683),
-    d = n(239091),
+    d = n(493683),
+    c = n(239091),
     u = n(443589),
     h = n(703656),
     m = n(592125),
@@ -22,7 +22,7 @@ var i = n(200651),
     T = n(65154),
     S = n(388032),
     A = n(337336);
-function b(e, t, n) {
+function Z(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,13 +35,13 @@ function b(e, t, n) {
         e
     );
 }
-function Z(e) {
+function x(e) {
     let { user: t, applicationId: n, isGameRelationship: r, onSelect: a } = e,
         u = l.useCallback(() => {
-            c.Z.openPrivateChannel(t.id, !0);
+            d.Z.openPrivateChannel(t.id, !0);
         }, [t.id]),
         h = l.useCallback(() => {
-            c.Z.openPrivateChannel(t.id, !0, !0);
+            d.Z.openPrivateChannel(t.id, !0, !0);
         }, [t.id]),
         m = l.useCallback(() => {
             f.Z.removeFriend({
@@ -72,7 +72,7 @@ function Z(e) {
     return (0, i.jsxs)(o.v2r, {
         navId: 'friend-row',
         'aria-label': S.intl.string(S.t.liqwPD),
-        onClose: d.Zy,
+        onClose: c.Zy,
         onSelect: a,
         children: [
             !I && E
@@ -97,7 +97,7 @@ function Z(e) {
         ]
     });
 }
-class x extends l.PureComponent {
+class b extends l.PureComponent {
     componentWillLeave(e) {
         null != this.peopleListItemRef.current && this.peopleListItemRef.current.componentWillLeave(e);
     }
@@ -105,14 +105,14 @@ class x extends l.PureComponent {
         null != this.peopleListItemRef.current && this.peopleListItemRef.current.componentWillEnter(e);
     }
     render() {
-        let { user: e, isFocused: t, activities: n, applicationStream: l, status: r, isMobile: a, isGameRelationship: s, giftIntentType: c } = this.props,
+        let { user: e, isFocused: t, activities: n, applicationStream: l, status: r, isMobile: a, isGameRelationship: s, giftIntentType: d } = this.props,
             { isActiveRow: h } = this.state;
         return (0, i.jsx)(I.Z, {
             ref: this.peopleListItemRef,
             isFocused: t,
             isActive: h,
             user: e,
-            onOtherHover: () => (h ? null : (0, d.Zy)()),
+            onOtherHover: () => (h ? null : (0, c.Zy)()),
             onClick: this.handleOpenPrivateChannel,
             children: (t) =>
                 (0, i.jsxs)('div', {
@@ -136,10 +136,10 @@ class x extends l.PureComponent {
                         (0, i.jsxs)('div', {
                             className: A.actions,
                             children: [
-                                null != c &&
+                                null != d &&
                                     (0, i.jsx)(u.Z, {
                                         recipientUser: e,
-                                        giftIntentType: c,
+                                        giftIntentType: d,
                                         analyticsPage: v.ZY5.FRIENDS_LIST,
                                         shouldHighlight: t
                                     }),
@@ -163,20 +163,20 @@ class x extends l.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            b(this, 'peopleListItemRef', l.createRef()),
-            b(this, 'state', { isActiveRow: !1 }),
-            b(this, 'handleOpenPrivateChannel', (e) => {
+            Z(this, 'peopleListItemRef', l.createRef()),
+            Z(this, 'state', { isActiveRow: !1 }),
+            Z(this, 'handleOpenPrivateChannel', (e) => {
                 let { user: t } = this.props;
                 e.stopPropagation();
                 let n = a().find(m.Z.getMutablePrivateChannels(), (e) => e.type === v.d4z.DM && e.getRecipientId() === t.id);
-                null != n ? (0, h.uL)(v.Z5c.CHANNEL(v.ME, n.id)) : c.Z.openPrivateChannel(t.id);
+                null != n ? (0, h.uL)(v.Z5c.CHANNEL(v.ME, n.id)) : d.Z.openPrivateChannel(t.id);
             }),
-            b(this, 'handleOpenActionsMenu', (e) => {
+            Z(this, 'handleOpenActionsMenu', (e) => {
                 let { user: t, isGameRelationship: n, applicationId: l } = this.props;
-                (0, d.vq)(
+                (0, c.vq)(
                     e,
                     (e) =>
-                        (0, i.jsx)(Z, {
+                        (0, i.jsx)(x, {
                             ...e,
                             user: t,
                             applicationId: l,
@@ -192,4 +192,4 @@ class x extends l.PureComponent {
             });
     }
 }
-let L = x;
+let L = b;

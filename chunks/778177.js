@@ -16,8 +16,8 @@ var i = n(200651),
     f = n(542051),
     x = n(349033),
     C = n(999650),
-    v = n(933557),
-    E = n(471445),
+    E = n(933557),
+    v = n(471445),
     I = n(592125),
     N = n(271383),
     S = n(699516),
@@ -93,16 +93,16 @@ let F = m()('2015-05-15').local(),
         let { channel: l, text: a } = n;
         if (null == l) return (0, i.jsx)('strong', { children: a });
         let r = I.Z.getChannel(l.parent_id),
-            s = (0, E.KS)(l);
+            s = (0, v.KS)(l);
         return (0, i.jsxs)('div', {
             className: D.resultChannel,
             children: [
                 null != s ? (0, i.jsx)(s, { className: D.searchResultChannelIcon }) : null,
-                (0, i.jsx)('strong', { children: (0, v.F6)(l, y.default, S.Z) }),
+                (0, i.jsx)('strong', { children: (0, E.F6)(l, y.default, S.Z) }),
                 null != r
                     ? (0, i.jsx)('span', {
                           className: D.searchResultChannelCategory,
-                          children: (0, v.F6)(r, y.default, S.Z)
+                          children: (0, E.F6)(r, y.default, S.Z)
                       })
                     : null
             ]
@@ -113,10 +113,10 @@ let F = m()('2015-05-15').local(),
             n,
             { id: l, searchId: a, result: s, group: o, className: c, role: d, tabIndex: u, 'aria-selected': m, onSelect: _, onFocus: h, showFilter: g, renderResult: f } = e;
         if (g) {
-            var x, v;
+            var x, E;
             t = (0, i.jsx)('span', {
                 className: D.filter,
-                children: null !== (v = null === (x = C.ZP[o]) || void 0 === x ? void 0 : x.key) && void 0 !== v ? v : 'addme:'
+                children: null !== (E = null === (x = C.ZP[o]) || void 0 === x ? void 0 : x.key) && void 0 !== E ? E : 'addme:'
             });
         }
         return (

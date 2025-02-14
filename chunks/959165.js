@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d }), n(47120);
+n.d(t, { Z: () => c }), n(47120);
 var i = n(900849),
     l = n(762692),
     r = n(331114),
@@ -17,8 +17,8 @@ function o(e, t, n) {
         e
     );
 }
-class c {}
-let d = new (class extends c {
+class d {}
+let c = new (class extends d {
     constructor(...e) {
         super(...e),
             o(this, 'loadMoreCategoryResults', async (e) => {
@@ -74,10 +74,10 @@ let d = new (class extends c {
             o(this, 'loadCategoryResultsAndCounts', async (e) => {
                 let { query: t, loadId: n, categoryId: a, languageCode: o } = e;
                 if ('' === t.trim()) return;
-                let c = r.Z.getIsFetchingCounts(t),
-                    d = r.Z.getIsFetchingCounts(t);
-                c ||
-                    d ||
+                let d = r.Z.getIsFetchingCounts(t),
+                    c = r.Z.getIsFetchingCounts(t);
+                d ||
+                    c ||
                     (s.Z.setState({
                         fetchedQuery: t,
                         resultsQuery: ''

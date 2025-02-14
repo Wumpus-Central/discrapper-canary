@@ -16,8 +16,8 @@ var i = n(200651),
     f = n(825829),
     x = n(226192),
     C = n(36459),
-    v = n(336197),
-    E = n(359110),
+    E = n(336197),
+    v = n(359110),
     I = n(347475),
     N = n(496675),
     S = n(594174),
@@ -255,7 +255,7 @@ function Q(e) {
         }, [s.id, ee, Q, o]),
         eu = l.useCallback(
             (e) => {
-                null != et && null != Y && (e.stopPropagation(), e.preventDefault(), (0, v.Z)(w.Z5c.CHANNEL(null == Y ? void 0 : Y.guild_id, null == Y ? void 0 : Y.id, et)));
+                null != et && null != Y && (e.stopPropagation(), e.preventDefault(), (0, E.Z)(w.Z5c.CHANNEL(null == Y ? void 0 : Y.guild_id, null == Y ? void 0 : Y.id, et)));
             },
             [Y, et]
         ),
@@ -267,7 +267,7 @@ function Q(e) {
                         channelId: e,
                         messageId: s.id
                     }),
-                    (0, E.Kh)(e));
+                    (0, v.Kh)(e));
             },
             [s, Y]
         ),

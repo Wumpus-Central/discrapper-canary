@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => c });
 var i = n(200651);
 n(192379);
 var l = n(990547),
@@ -6,14 +6,14 @@ var l = n(990547),
     a = n(313201),
     s = n(758119),
     o = n(388032),
-    c = n(283026);
-function d(e) {
+    d = n(283026);
+function c(e) {
     let { transitionState: t } = e,
-        d = (0, a.Dt)();
+        c = (0, a.Dt)();
     return (0, i.jsxs)(r.Y0X, {
         transitionState: t,
         size: r.CgR.SMALL,
-        'aria-labelledby': d,
+        'aria-labelledby': c,
         impression: {
             impressionName: l.ImpressionNames.USER_AGE_GATE,
             impressionProperties: { existing_user: !0 }
@@ -21,22 +21,22 @@ function d(e) {
         children: [
             (0, i.jsx)(r.hzk, {
                 children: (0, i.jsxs)('div', {
-                    className: c.container,
+                    className: d.container,
                     children: [
                         (0, i.jsx)('img', {
                             alt: '',
                             src: n(863181),
-                            className: c.img
+                            className: d.img
                         }),
                         (0, i.jsx)(r.X6q, {
                             variant: 'heading-xl/semibold',
-                            className: c.title,
-                            id: d,
+                            className: d.title,
+                            id: c,
                             children: o.intl.string(o.t.gUiIGR)
                         }),
                         (0, i.jsx)(r.Text, {
                             color: 'header-secondary',
-                            className: c.subtitle,
+                            className: d.subtitle,
                             variant: 'text-sm/normal',
                             children: o.intl.string(o.t.susqq6)
                         })

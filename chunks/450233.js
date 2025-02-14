@@ -8,8 +8,8 @@ var i,
     a,
     s = n(200651),
     o = n(192379),
-    c = n(442837),
-    d = n(570140),
+    d = n(442837),
+    c = n(570140),
     u = n(16084),
     h = n(855775),
     m = n(388032),
@@ -31,7 +31,7 @@ class g extends (a = o.PureComponent) {
         }
     }
     componentWillUnmount() {
-        null != this.props.purchaseError && d.Z.wait(() => u.pB());
+        null != this.props.purchaseError && c.Z.wait(() => u.pB());
     }
     render() {
         let { className: e, purchaseError: t, messageStyle: n } = this.props;
@@ -52,4 +52,4 @@ class g extends (a = o.PureComponent) {
               writable: !0
           })
         : (g[l] = r);
-let _ = c.ZP.connectStores([h.Z], () => ({ purchaseError: h.Z.error }))(g);
+let _ = d.ZP.connectStores([h.Z], () => ({ purchaseError: h.Z.error }))(g);

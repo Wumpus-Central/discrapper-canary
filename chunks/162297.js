@@ -16,8 +16,8 @@ var i = n(200651),
     f = n(606192),
     x = n(213459),
     C = n(132871),
-    v = n(147890),
-    E = n(220082),
+    E = n(147890),
+    v = n(220082),
     I = n(240991),
     N = n(592125),
     S = n(496675),
@@ -56,7 +56,7 @@ function F(e) {
     var t;
     let { application: n, embedUrl: d } = e,
         u = null === (t = n.bot) || void 0 === t ? void 0 : t.id,
-        E = (0, g.ye)(n) && null != u,
+        v = (0, g.ye)(n) && null != u,
         A = (0, s.e7)([b.Z], () => {
             var e;
             return null !== (e = b.Z.getGuildId()) && void 0 !== e ? e : void 0;
@@ -147,7 +147,7 @@ function F(e) {
                           (0, i.jsxs)('div', {
                               className: M.buttonContainer,
                               children: [
-                                  E &&
+                                  v &&
                                       (0, i.jsx)(o.zxk, {
                                           color: o.zxk.Colors.BRAND,
                                           type: 'button',
@@ -158,14 +158,14 @@ function F(e) {
                                   (K || Y) &&
                                       q &&
                                       (0, i.jsx)(o.zxk, {
-                                          color: E ? o.zxk.Colors.PRIMARY : o.zxk.Colors.BRAND,
+                                          color: v ? o.zxk.Colors.PRIMARY : o.zxk.Colors.BRAND,
                                           type: 'button',
                                           size: o.zxk.Sizes.MEDIUM,
                                           onClick: () => {
                                               var e;
                                               r.Y.USER_INSTALL in (null !== (e = n.integrationTypesConfig) && void 0 !== e ? e : {}) || K
                                                   ? (0, g.X)(n.id)
-                                                  : (0, v.dx)({
+                                                  : (0, E.dx)({
                                                         guildId: A,
                                                         view: C.eN.APPLICATION,
                                                         applicationId: n.id,
@@ -174,7 +174,7 @@ function F(e) {
                                           },
                                           children: k.intl.string(k.t.fbcCzc)
                                       }),
-                                  !E &&
+                                  !v &&
                                       !K &&
                                       (0, i.jsx)(o.zxk, {
                                           color: o.zxk.Colors.PRIMARY,
@@ -207,7 +207,7 @@ function U(e) {
             size: 280,
             names: ['embedded_cover']
         }),
-        a = (0, E.ZP)(n, ''),
+        a = (0, v.ZP)(n, ''),
         r = t.bot,
         s = null,
         o = {};

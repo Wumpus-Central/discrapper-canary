@@ -5,8 +5,8 @@ var i = n(200651),
     a = n.n(r),
     s = n(91192),
     o = n(286379),
-    c = n(442837),
-    d = n(704215),
+    d = n(442837),
+    c = n(704215),
     u = n(481060),
     h = n(150063),
     m = n(230711),
@@ -22,9 +22,9 @@ var i = n(200651),
     T = n(605236),
     S = n(243778),
     A = n(984370),
-    b = n(797614),
-    Z = n(359110),
-    x = n(6025),
+    Z = n(797614),
+    x = n(359110),
+    b = n(6025),
     L = n(897473),
     y = n(108427),
     O = n(970731),
@@ -33,8 +33,8 @@ var i = n(200651),
     j = n(592125),
     D = n(819640),
     w = n(626135),
-    k = n(647090),
-    M = n(385956),
+    M = n(647090),
+    k = n(385956),
     U = n(610697),
     G = n(26373),
     B = n(486622),
@@ -57,11 +57,11 @@ function en() {
         t = (0, H.q)(),
         n = (0, F.Z)(),
         r = (0, G.K)(),
-        c = (0, g.N)(),
-        d = l.useCallback(() => {
+        d = (0, g.N)(),
+        c = l.useCallback(() => {
             (0, u.showToast)((0, u.createToast)($.intl.string($.t.EDYbS0), u.ToastType.FAILURE));
         }, []),
-        { rejectAll: h } = (0, B.m)({ onError: d }),
+        { rejectAll: h } = (0, B.m)({ onError: c }),
         m = (0, E.Z)('message-requests-list'),
         { channelId: p } = (0, V._)(),
         _ = l.useCallback(() => {
@@ -72,21 +72,21 @@ function en() {
                 var t, l;
                 let { row: s } = e,
                     o = n[s],
-                    c = null === (l = n[s + 1]) || void 0 === l ? void 0 : null === (t = l.channel) || void 0 === t ? void 0 : t.id,
-                    d = o.channel.id;
+                    d = null === (l = n[s + 1]) || void 0 === l ? void 0 : null === (t = l.channel) || void 0 === t ? void 0 : t.id,
+                    c = o.channel.id;
                 return (0, i.jsx)(
                     Y.Z,
                     {
                         index: s,
                         className: a()({
-                            [ee.selected]: null != p && p === d,
-                            [ee.siblingSelected]: null != p && p === c
+                            [ee.selected]: null != p && p === c,
+                            [ee.siblingSelected]: null != p && p === d
                         }),
                         channel: o.channel,
                         user: o.user,
                         hasSingleMessageRequest: r
                     },
-                    d
+                    c
                 );
             },
             [r, n, p]
@@ -99,7 +99,7 @@ function en() {
                         className: ee.sectionTitle,
                         children: [
                             t > 0 ? $.intl.formatToPlainString($.t.rA4iWV, { count: t }) : $.intl.string($.t.flPU6u),
-                            c && t > 0
+                            d && t > 0
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           (0, i.jsx)(u.Text, {
@@ -125,9 +125,9 @@ function en() {
                     },
                     'title'
                 ),
-            [t, _, c]
+            [t, _, d]
         );
-    return (n.length !== t && b.Z.increment({ name: o.V.MESSAGE_REQUEST_COUNT_DRIFT }), 0 === n.length)
+    return (n.length !== t && Z.Z.increment({ name: o.V.MESSAGE_REQUEST_COUNT_DRIFT }), 0 === n.length)
         ? (0, i.jsx)(W.Z, { section: q.pS.REQUESTS })
         : (0, i.jsx)(s.bG, {
               navigator: m,
@@ -163,8 +163,8 @@ function en() {
 }
 function ei(e) {
     let { pageWidth: t, onSidebarResize: n } = e,
-        l = (0, c.e7)([R.ZP], () => R.ZP.getSidebarState(R.uZ)),
-        r = (0, c.e7)([j.Z], () => j.Z.getChannel(null == l ? void 0 : l.channelId));
+        l = (0, d.e7)([R.ZP], () => R.ZP.getSidebarState(R.uZ)),
+        r = (0, d.e7)([j.Z], () => j.Z.getChannel(null == l ? void 0 : l.channelId));
     if (null == l || l.type !== L.tI.VIEW_MESSAGE_REQUEST || null == r || !r.isPrivate()) return null;
     let a = t - X.R7I;
     return (0, i.jsx)(I.Z, {
@@ -193,16 +193,16 @@ let el = function (e) {
     er = (e) => {
         let t = (0, U.Z)(),
             n = () => D.Z.hasLayers() || (0, u.$sL)(),
-            r = (0, c.e7)([f.Z], () => f.Z.useReducedMotion);
+            r = (0, d.e7)([f.Z], () => f.Z.useReducedMotion);
         return (
             l.useEffect(() => {
-                (0, T.kk)(d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK);
+                (0, T.kk)(c.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK);
             }, []),
             (0, i.jsx)(S.ZP, {
-                contentTypes: [d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK],
+                contentTypes: [c.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK],
                 children: (l) => {
                     let { visibleContent: a, markAsDismissed: s } = l;
-                    return a === d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK
+                    return a === c.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK
                         ? (0, i.jsx)(u.yRy, {
                               renderPopout: () =>
                                   t
@@ -240,21 +240,21 @@ let es = (0, p.Z)(function (e) {
     let { width: t } = e,
         n = (0, H.q)();
     (0, _.ZP)(() => {
-        h.Y(X.Z5c.MESSAGE_REQUESTS), (0, y.e)('message-requests'), w.default.track(X.rMx.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }), b.Z.increment({ name: o.V.MESSAGE_REQUEST_VIEW });
+        h.Y(X.Z5c.MESSAGE_REQUESTS), (0, y.e)('message-requests'), w.default.track(X.rMx.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }), Z.Z.increment({ name: o.V.MESSAGE_REQUEST_VIEW });
     });
-    let r = (0, c.e7)([P.Z], () => P.Z.theme),
+    let r = (0, d.e7)([P.Z], () => P.Z.theme),
         s = (0, z.w)(),
-        [d, m] = l.useState(!1),
-        p = (0, c.e7)([R.ZP], () => {
+        [c, m] = l.useState(!1),
+        p = (0, d.e7)([R.ZP], () => {
             let e = R.ZP.getSidebarState(R.uZ);
             return null != e && e.type === L.tI.VIEW_MESSAGE_REQUEST ? e : null;
         }),
         g = null == p ? void 0 : p.channelId,
         f = null != p,
-        E = (0, M.T)(g),
-        I = (0, k.J)(g);
+        E = (0, k.T)(g),
+        I = (0, M.J)(g);
     l.useEffect(() => {
-        null != g && !E && I && f && ((0, Z.Kh)(g), x.Z.closeChannelSidebar(R.uZ));
+        null != g && !E && I && f && ((0, x.Kh)(g), b.Z.closeChannelSidebar(R.uZ));
     }, [g, I, f, E]);
     let [C, N] = l.useState(q.pS.REQUESTS),
         T = (e) => {
@@ -267,7 +267,7 @@ let es = (0, p.Z)(function (e) {
                 (0, i.jsxs)('div', {
                     className: a()(et.chat, ee.container, {
                         [et.threadSidebarOpen]: f,
-                        [et.threadSidebarFloating]: f && d
+                        [et.threadSidebarFloating]: f && c
                     }),
                     children: [
                         (0, i.jsx)(u.f6W, {

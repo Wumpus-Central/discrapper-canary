@@ -29,7 +29,7 @@ function u(e) {
                         });
                 });
         }, [t, u, m, h, x]),
-        b = l.useCallback(
+        f = l.useCallback(
             (e) => {
                 (0, r.jW)(e, async () => {
                     let { default: e } = await n.e('5396').then(n.bind(n, 731646));
@@ -43,24 +43,24 @@ function u(e) {
             },
             [h]
         ),
-        _ = h.type === s.yU.CHAT ? a.SsZ : a.hH0,
-        f = (0, o.gw)(h.type, h.displayName);
+        b = h.type === s.yU.CHAT ? a.SsZ : a.hH0,
+        v = (0, o.gw)(h.type, h.displayName);
     return (0, i.jsxs)(a.P3F, {
         onClick: p,
         className: c.item,
-        onContextMenu: b,
+        onContextMenu: f,
         children: [
             (0, i.jsxs)('div', {
                 className: c.identifier,
                 children: [
-                    (0, i.jsx)(_, {
+                    (0, i.jsx)(b, {
                         className: c.icon,
                         size: 'md',
                         color: 'currentColor'
                     }),
                     (0, i.jsx)(a.Text, {
                         variant: 'text-md/normal',
-                        children: f
+                        children: v
                     })
                 ]
             }),

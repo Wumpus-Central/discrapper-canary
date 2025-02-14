@@ -1,34 +1,34 @@
-t.d(n, {
+n.d(t, {
     Gi: () => c,
     YJ: () => d,
     zY: () => u
 });
-var o = t(200651);
-t(192379);
-var r = t(481060),
-    i = t(476770),
-    s = t(592286),
-    a = t(388032),
-    l = t(35761);
+var o = n(200651);
+n(192379);
+var r = n(481060),
+    i = n(476770),
+    a = n(592286),
+    s = n(388032),
+    l = n(35761);
 function c(e) {
-    let { value: n, placeholder: t, onChange: i, disabled: a, autofocus: l, className: c } = e;
+    let { value: t, placeholder: n, onChange: i, disabled: s, autofocus: l, className: c } = e;
     return (0, o.jsx)(r.oil, {
         inputClassName: c,
-        maxLength: s.tL,
-        value: null != n ? n : '',
-        placeholder: t,
+        maxLength: a.tL,
+        value: null != t ? t : '',
+        placeholder: n,
         onChange: i,
-        disabled: a,
+        disabled: s,
         autoFocus: l
     });
 }
 function d(e) {
-    let { formField: n } = e;
+    let { formField: t } = e;
     return (0, o.jsx)(i.CA, {
-        title: n.label,
+        title: t.label,
         children: (0, o.jsx)(r.Kx8, {
             className: l.disabledFieldBackground,
-            value: n.response,
+            value: t.response,
             disabled: !0,
             autoFocus: !0,
             rows: 2
@@ -36,14 +36,14 @@ function d(e) {
     });
 }
 function u(e) {
-    let { formField: n, autofocus: t, onChange: r } = e;
+    let { formField: t, autofocus: n, onChange: r } = e;
     return (0, o.jsx)(i.hK, {
-        title: n.label,
+        title: t.label,
         children: (0, o.jsx)(c, {
             onChange: r,
-            value: n.response,
-            autofocus: t,
-            placeholder: a.intl.string(a.t['Sqn+Wl'])
+            value: t.response,
+            autofocus: n,
+            placeholder: s.intl.string(s.t['Sqn+Wl'])
         })
     });
 }

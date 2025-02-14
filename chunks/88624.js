@@ -2,15 +2,15 @@ n.d(t, { Z: () => _ });
 var i = n(200651);
 n(192379);
 var s = n(512722),
-    l = n.n(s),
-    r = n(442837),
+    r = n.n(s),
+    l = n(442837),
     a = n(481060),
     o = n(346951),
     c = n(644744),
     d = n(792423),
     u = n(674985),
-    h = n(594174),
-    m = n(843200),
+    m = n(594174),
+    h = n(843200),
     g = n(388032),
     x = n(212243);
 function _() {
@@ -18,10 +18,10 @@ function _() {
         houseMembership: e,
         isClaimed: t,
         isVerified: n
-    } = (0, r.cj)([h.default, u.Z], () => {
-        let e = h.default.getCurrentUser();
+    } = (0, l.cj)([m.default, u.Z], () => {
+        let e = m.default.getCurrentUser();
         return (
-            l()(null != e, 'UserSettingsHypeSquad: currentUser cannot be undefined'),
+            r()(null != e, 'UserSettingsHypeSquad: currentUser cannot be undefined'),
             {
                 houseMembership: u.Z.getHouseMembership(),
                 isClaimed: e.isClaimed(),
@@ -45,7 +45,7 @@ function _() {
             ]
         }),
         children: [
-            (0, i.jsx)(m.Z, {
+            (0, i.jsx)(h.Z, {
                 className: x.verificationNotice,
                 unclaimedNotice: g.intl.string(g.t.vZU8Ki),
                 unverifiedNotice: g.intl.string(g.t.T7TYEB)

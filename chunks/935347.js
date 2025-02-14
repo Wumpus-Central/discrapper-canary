@@ -5,8 +5,8 @@ var i = n(200651),
     a = n.n(r),
     s = n(392711),
     o = n.n(s),
-    c = n(442837),
-    d = n(433517),
+    d = n(442837),
+    c = n(433517),
     u = n(481060),
     h = n(205355),
     m = n(607070),
@@ -22,8 +22,8 @@ var i = n(200651),
     T = n(905656),
     S = n(981631),
     A = n(388032),
-    b = n(249630);
-function Z(e, t, n) {
+    Z = n(249630);
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,7 +36,7 @@ function Z(e, t, n) {
         e
     );
 }
-class x extends l.PureComponent {
+class b extends l.PureComponent {
     createSound() {
         let { soundpack: e } = this.props,
             t = (0, _.uk)('discodo', e);
@@ -51,7 +51,7 @@ class x extends l.PureComponent {
             s = r && n && !i && !l;
         e.soundpack !== a && (this._connectedSound = this.createSound()),
             e.connected !== r || s
-                ? (r && null != this.videoRef && d.K.get(S.wli) && this._connectedSound.play(),
+                ? (r && null != this.videoRef && c.K.get(S.wli) && this._connectedSound.play(),
                   this.setState({
                       problems: !1,
                       hide: r
@@ -74,7 +74,7 @@ class x extends l.PureComponent {
                 null != this._eventLoadingText && (l = this._eventLoadingText),
                 null != t && ((l = t.name), (r = t.incident_updates[0].body)),
                 (0, i.jsxs)('div', {
-                    className: b.container,
+                    className: Z.container,
                     'data-fade': n,
                     style: {
                         '--connecting-container-fade-duration': ''.concat(200, 'ms'),
@@ -82,30 +82,30 @@ class x extends l.PureComponent {
                     },
                     children: [
                         (0, i.jsxs)('div', {
-                            className: b.content,
+                            className: Z.content,
                             children: [
                                 (0, i.jsx)(T.Z, {
                                     autoPlay: !0,
                                     loop: !e,
                                     setRef: this.setVideoRef,
                                     onReady: this.handleReady,
-                                    className: a()(b.spinner, this.state.ready ? b.ready : '')
+                                    className: a()(Z.spinner, this.state.ready ? Z.ready : '')
                                 }),
                                 (0, i.jsxs)('div', {
-                                    className: b.text,
+                                    className: Z.text,
                                     children: [
                                         null != t
                                             ? null
                                             : (0, i.jsx)('div', {
-                                                  className: b.tipTitle,
+                                                  className: Z.tipTitle,
                                                   children: A.intl.string(A.t.v0R1Li)
                                               }),
                                         (0, i.jsx)('div', {
-                                            className: null != t ? b.title : b.tip,
+                                            className: null != t ? Z.title : Z.tip,
                                             children: l
                                         }),
                                         (0, i.jsx)('div', {
-                                            className: b.body,
+                                            className: Z.body,
                                             children: r
                                         })
                                     ]
@@ -113,32 +113,32 @@ class x extends l.PureComponent {
                             ]
                         }),
                         (0, i.jsxs)('div', {
-                            className: a()(b.problems, { [b.slideIn]: this.state.problems }),
+                            className: a()(Z.problems, { [Z.slideIn]: this.state.problems }),
                             children: [
                                 (0, i.jsx)('div', {
-                                    className: b.problemsText,
+                                    className: Z.problemsText,
                                     children: A.intl.string(A.t.AG2zPD)
                                 }),
                                 (0, i.jsxs)('div', {
                                     children: [
                                         (0, i.jsxs)(u.eee, {
-                                            className: b.twitterLink,
+                                            className: Z.twitterLink,
                                             href: S.yXt.TWITTER_SUPPORT,
                                             target: '_blank',
                                             children: [
                                                 (0, i.jsx)(u.TAi, {
                                                     size: 'xs',
                                                     color: 'currentColor',
-                                                    className: b.icon
+                                                    className: Z.icon
                                                 }),
                                                 A.intl.string(A.t.KlyTbm)
                                             ]
                                         }),
                                         (0, i.jsxs)(u.eee, {
-                                            className: b.statusLink,
+                                            className: Z.statusLink,
                                             href: S.yXt.STATUS,
                                             target: '_blank',
-                                            children: [(0, i.jsx)(C.Z, { className: b.icon }), A.intl.string(A.t.AgXXy8)]
+                                            children: [(0, i.jsx)(C.Z, { className: Z.icon }), A.intl.string(A.t.AgXXy8)]
                                         })
                                     ]
                                 })
@@ -151,11 +151,11 @@ class x extends l.PureComponent {
     }
     constructor(e) {
         super(e),
-            Z(this, 'videoRef', null),
-            Z(this, '_noProblemsTimeout', null),
-            Z(this, '_problemsTimeout', null),
-            Z(this, '_connectedSound', this.createSound()),
-            Z(
+            x(this, 'videoRef', null),
+            x(this, '_noProblemsTimeout', null),
+            x(this, '_problemsTimeout', null),
+            x(this, '_connectedSound', this.createSound()),
+            x(
                 this,
                 '_loadingText',
                 (function () {
@@ -171,7 +171,7 @@ class x extends l.PureComponent {
                                     u.M2$,
                                     {
                                         shortcut: 'tab',
-                                        className: b.keybind
+                                        className: Z.keybind
                                     },
                                     t
                                 )
@@ -185,7 +185,7 @@ class x extends l.PureComponent {
                                     u.M2$,
                                     {
                                         shortcut: 'f6',
-                                        className: b.keybind
+                                        className: Z.keybind
                                     },
                                     t
                                 ),
@@ -194,7 +194,7 @@ class x extends l.PureComponent {
                                     u.M2$,
                                     {
                                         shortcut: 'tab',
-                                        className: b.keybind
+                                        className: Z.keybind
                                     },
                                     t
                                 )
@@ -246,7 +246,7 @@ class x extends l.PureComponent {
                                     u.M2$,
                                     {
                                         shortcut: 'mod+k',
-                                        className: b.keybind
+                                        className: Z.keybind
                                     },
                                     t
                                 )
@@ -257,7 +257,7 @@ class x extends l.PureComponent {
                                     u.M2$,
                                     {
                                         shortcut: 'alt+click',
-                                        className: b.keybind
+                                        className: Z.keybind
                                     },
                                     t
                                 )
@@ -268,7 +268,7 @@ class x extends l.PureComponent {
                                     u.M2$,
                                     {
                                         shortcut: 'shift+esc',
-                                        className: b.keybind
+                                        className: Z.keybind
                                     },
                                     t
                                 )
@@ -279,7 +279,7 @@ class x extends l.PureComponent {
                                     u.M2$,
                                     {
                                         shortcut: 'shift+alt+up',
-                                        className: b.keybind
+                                        className: Z.keybind
                                     },
                                     t
                                 ),
@@ -288,7 +288,7 @@ class x extends l.PureComponent {
                                     u.M2$,
                                     {
                                         shortcut: 'down',
-                                        className: b.keybind
+                                        className: Z.keybind
                                     },
                                     t
                                 )
@@ -299,7 +299,7 @@ class x extends l.PureComponent {
                                     u.M2$,
                                     {
                                         shortcut: 'mod+/',
-                                        className: b.keybind
+                                        className: Z.keybind
                                     },
                                     t
                                 )
@@ -310,7 +310,7 @@ class x extends l.PureComponent {
                                     u.M2$,
                                     {
                                         shortcut: 'shift+return',
-                                        className: b.keybind
+                                        className: Z.keybind
                                     },
                                     t
                                 )
@@ -321,7 +321,7 @@ class x extends l.PureComponent {
                                     u.M2$,
                                     {
                                         shortcut: 'shift',
-                                        className: b.keybind
+                                        className: Z.keybind
                                     },
                                     t
                                 )
@@ -332,7 +332,7 @@ class x extends l.PureComponent {
                                     u.M2$,
                                     {
                                         shortcut: 'up',
-                                        className: b.keybind
+                                        className: Z.keybind
                                     },
                                     t
                                 )
@@ -341,7 +341,7 @@ class x extends l.PureComponent {
                     return E.default.locale.startsWith('en-') && e.push(A.intl.string(A.t.dQ9Wqq)), e[o().random(e.length - 1)];
                 })()
             ),
-            Z(
+            x(
                 this,
                 '_eventLoadingText',
                 (function () {
@@ -349,16 +349,16 @@ class x extends l.PureComponent {
                     if (null != e && e.length > 0) return e[o().random(e.length - 1)];
                 })()
             ),
-            Z(this, 'handleReady', () => {
+            x(this, 'handleReady', () => {
                 this.setState({ ready: !0 }), (0, N.isDesktop)() && (v.ZP.send('UPDATED_QUOTES', ['Hold Tight \u2014 Loading Discord']), v.ZP.send('UPDATE_OPEN_ON_STARTUP'));
             }),
-            Z(this, 'setVideoRef', (e) => {
+            x(this, 'setVideoRef', (e) => {
                 this.videoRef = e;
             }),
-            Z(this, 'setProblemsTimeout', () => {
+            x(this, 'setProblemsTimeout', () => {
                 null == this._problemsTimeout && (this._problemsTimeout = setTimeout(() => this.setState({ problems: !0 }), 10000));
             }),
-            Z(this, 'clearProblemsTimeout', () => {
+            x(this, 'clearProblemsTimeout', () => {
                 clearTimeout(this._problemsTimeout), (this._problemsTimeout = null);
             });
         let { connected: t } = e;
@@ -371,7 +371,7 @@ class x extends l.PureComponent {
             (this._connectedSound.volume = 1);
     }
 }
-let L = c.ZP.connectStores([p.Z, I.Z, f.Z, m.Z], () => ({
+let L = d.ZP.connectStores([p.Z, I.Z, f.Z, m.Z], () => ({
     isTryingToConnect: p.Z.isTryingToConnect(),
     connected: p.Z.isConnected(),
     incident: I.Z.getIncident(),
@@ -380,7 +380,7 @@ let L = c.ZP.connectStores([p.Z, I.Z, f.Z, m.Z], () => ({
 }))((e) => {
     let { isTryingToConnect: t, connected: n, incident: l, soundpack: r, reducedMotion: a } = e;
     return t
-        ? (0, i.jsx)(x, {
+        ? (0, i.jsx)(b, {
               reducedMotion: a,
               soundpack: r,
               connected: n,

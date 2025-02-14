@@ -2,15 +2,15 @@ n.d(t, { Z: () => C });
 var i = n(200651);
 n(192379);
 var s = n(120356),
-    l = n.n(s),
-    r = n(399606),
+    r = n.n(s),
+    l = n(399606),
     a = n(481060),
     o = n(975298),
     c = n(565138),
     d = n(623624),
     u = n(678558),
-    h = n(430824),
-    m = n(709586),
+    m = n(430824),
+    h = n(709586),
     g = n(267642),
     x = n(981631),
     _ = n(474936),
@@ -18,12 +18,12 @@ var s = n(120356),
     E = n(688859);
 let C = function (e) {
     let { className: t, guildId: n, boostingVariant: s } = e,
-        C = (0, r.e7)([h.Z], () => h.Z.getGuild(n), [n]),
-        { fractionalState: N } = (0, o.Z)(),
-        f = N === _.a$.FP_ONLY;
+        C = (0, l.e7)([m.Z], () => m.Z.getGuild(n), [n]),
+        { fractionalState: f } = (0, o.Z)(),
+        T = f === _.a$.FP_ONLY;
     return null == C
         ? (0, i.jsx)('div', {
-              className: l()(t, E.guildContainer),
+              className: r()(t, E.guildContainer),
               children: (0, i.jsx)('div', {
                   className: E.guildInfoContainer,
                   children: (0, i.jsx)(a.Text, {
@@ -33,7 +33,7 @@ let C = function (e) {
               })
           })
         : (0, i.jsxs)('div', {
-              className: l()(t, E.guildContainer),
+              className: r()(t, E.guildContainer),
               children: [
                   (0, i.jsx)(c.Z, {
                       className: E.__invalid_guildIcon,
@@ -50,7 +50,7 @@ let C = function (e) {
                           (0, i.jsxs)('div', {
                               className: E.guildBoostStatsContainer,
                               children: [
-                                  (0, i.jsx)(m.Z, {
+                                  (0, i.jsx)(h.Z, {
                                       className: E.guildBoostBadge,
                                       width: 16,
                                       height: 16
@@ -83,7 +83,7 @@ let C = function (e) {
                             size: a.zxk.Sizes.MEDIUM,
                             color: a.zxk.Colors.PRIMARY,
                             buttonText: p.intl.string(p.t.aBHecH),
-                            disabled: f
+                            disabled: T
                         })
                       : (0, i.jsx)(a.zxk, {
                             color: a.zxk.Colors.PRIMARY,
@@ -94,7 +94,7 @@ let C = function (e) {
                                 });
                             },
                             size: a.zxk.Sizes.MEDIUM,
-                            disabled: f,
+                            disabled: T,
                             children: p.intl.string(p.t.KLOhbG)
                         })
               ]

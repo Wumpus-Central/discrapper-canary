@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => A,
+    Z: () => E,
     u: () => T
 }),
     n(47120);
@@ -59,7 +59,7 @@ function T(e) {
         })
     });
 }
-function E(e) {
+function A(e) {
     let { otherAccessories: t, isEmojiPickerExpanded: n, onSetExpanded: a, onFocus: i } = e;
     return (0, l.jsxs)(l.Fragment, {
         children: [
@@ -78,8 +78,8 @@ function E(e) {
         ]
     });
 }
-function A(e) {
-    let { channel: t, title: n, closePopout: i, onFocus: s, onSelectEmoji: d, onSelectDisabledEmoji: u, onExpandedToggle: h, emojiSearchProps: g, recentlyUsedEmojis: j, analyticsOverride: A } = e,
+function E(e) {
+    let { channel: t, title: n, closePopout: i, onFocus: s, onSelectEmoji: d, onSelectDisabledEmoji: u, onExpandedToggle: h, emojiSearchProps: g, recentlyUsedEmojis: j, analyticsOverride: E } = e,
         _ = (0, m.Dt)(),
         [S, R] = a.useState(!1),
         k = (0, x.wC)(t.guild_id),
@@ -120,7 +120,7 @@ function A(e) {
                 className: y.container,
                 children: [
                     (0, l.jsx)(p.Z, {
-                        analyticsOverride: A,
+                        analyticsOverride: E,
                         channel: t,
                         className: r()(y.animatedPicker, { [y.animatedPickerTall]: S }),
                         headerClassName: r()(y.emojiPickerHeader, { [y.emojiPickerHeaderExpanded]: S }),
@@ -131,7 +131,7 @@ function A(e) {
                         pickerIntention: N,
                         searchProps: {
                             ...g,
-                            accessory: (0, l.jsx)(E, {
+                            accessory: (0, l.jsx)(A, {
                                 otherAccessories: null == g ? void 0 : g.accessory,
                                 isEmojiPickerExpanded: S,
                                 onSetExpanded: O,

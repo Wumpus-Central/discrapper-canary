@@ -1,4 +1,4 @@
-t.d(n, { Z: () => L });
+t.d(n, { Z: () => w });
 var l = t(200651),
     i = t(192379),
     r = t(120356),
@@ -15,13 +15,13 @@ var l = t(200651),
     C = t(328977),
     _ = t(666233),
     f = t(360328),
-    v = t(171368),
-    b = t(598077),
+    b = t(171368),
+    v = t(598077),
     N = t(430824),
     g = t(709054),
     T = t(51144),
-    I = t(981631),
-    p = t(308083),
+    p = t(981631),
+    I = t(308083),
     E = t(388032),
     S = t(261074),
     R = t(360429);
@@ -29,7 +29,7 @@ function M(e) {
     let { icon: n, label: t, onClick: i, disabled: r } = e;
     return (0, l.jsxs)(d.P3F, {
         className: a()(S.actionButton, { [S.disabled]: r }),
-        onClick: r ? I.dG4 : i,
+        onClick: r ? p.dG4 : i,
         'aria-label': t,
         children: [
             (0, l.jsx)(n, {
@@ -50,13 +50,13 @@ function A(e) {
     let { user: n, guildId: t, joinRequest: i } = e,
         { analyticsLocations: r } = (0, u.ZP)(),
         s = () => {
-            (0, v.openUserProfileModal)({
+            (0, b.openUserProfileModal)({
                 userId: n.id,
                 joinRequestId: i.joinRequestId,
                 sourceAnalyticsLocations: r,
                 analyticsLocation: {
-                    section: I.jXE.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
-                    object: I.qAy.JOIN_REQUEST
+                    section: p.jXE.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
+                    object: p.qAy.JOIN_REQUEST
                 }
             });
         };
@@ -93,7 +93,7 @@ function A(e) {
                                         primaryGuild: null == n ? void 0 : n.primaryGuild,
                                         userId: null == n ? void 0 : n.id,
                                         contextGuildId: t,
-                                        badgeSize: p.NC.SIZE_16,
+                                        badgeSize: I.NC.SIZE_16,
                                         textVariant: 'heading-md/semibold',
                                         className: R.memberClanTag,
                                         containerClassName: R.memberClanTagContainer
@@ -124,7 +124,7 @@ function A(e) {
         ]
     });
 }
-function k(e) {
+function Z(e) {
     let { user: n, guildId: t, joinRequest: i } = e,
         { approveRequest: r, rejectRequest: a, handleOpenInterview: s, submitting: o } = (0, f.s)(t, n.id, i.joinRequestId, i.interviewChannelId);
     return (0, l.jsxs)('div', {
@@ -151,7 +151,7 @@ function k(e) {
         ]
     });
 }
-function Z(e) {
+function k(e) {
     var n;
     let { joinRequest: t } = e,
         { actionedAt: i, actionedByUser: r, rejectionReason: a } = t;
@@ -247,7 +247,7 @@ function P(e) {
         ]
     });
 }
-function L(e) {
+function w(e) {
     let { guildId: n } = e,
         t = (0, C.L)({ guildId: n }),
         { user: r } = null != t ? t : {},
@@ -255,7 +255,7 @@ function L(e) {
             var e;
             return null !== (e = null == t ? void 0 : t.formResponses) && void 0 !== e ? e : [];
         }, [null == t ? void 0 : t.formResponses]),
-        o = i.useMemo(() => (null != r ? new b.Z(r) : null), [r]),
+        o = i.useMemo(() => (null != r ? new v.Z(r) : null), [r]),
         u = (0, c.e7)([N.Z], () => N.Z.getGuild(n), [n]);
     return ((0, x.Tt)({
         subsection: E.intl.string(E.t.nqrK8f),
@@ -277,12 +277,12 @@ function L(e) {
                                       joinRequest: t
                                   }),
                                   t.applicationStatus === j.wB.SUBMITTED &&
-                                      (0, l.jsx)(k, {
+                                      (0, l.jsx)(Z, {
                                           user: o,
                                           guildId: n,
                                           joinRequest: t
                                       }),
-                                  t.applicationStatus === j.wB.REJECTED && (0, l.jsx)(Z, { joinRequest: t })
+                                  t.applicationStatus === j.wB.REJECTED && (0, l.jsx)(k, { joinRequest: t })
                               ]
                           }),
                           (0, l.jsxs)('div', {

@@ -17,8 +17,8 @@ function g(e) {
     let n = (0, s.e7)([c.Z], () => c.Z.getHighestRole(t)),
         l = (0, s.Wu)([o.ZP], () => o.ZP.getMembers(e), [e]),
         g = (0, s.cj)([u.default], () => u.default.getUsers()),
-        _ = (0, s.Wu)([d.Z], () => Object.values(d.Z.getRoles(e)), [e]),
-        f = i.useMemo(() => {
+        b = (0, s.Wu)([d.Z], () => Object.values(d.Z.getRoles(e)), [e]),
+        v = i.useMemo(() => {
             let e = [];
             for (let n of l) {
                 let i = g[n.userId];
@@ -40,14 +40,14 @@ function g(e) {
             }
             return e;
         }, [t, l, g]),
-        v = (e) => {
+        _ = (e) => {
             var t;
             return e.managed && (null === (t = e.tags) || void 0 === t ? void 0 : t.bot_id) != null;
         },
-        C = i.useMemo(() => {
+        N = i.useMemo(() => {
             let i = [];
-            for (let l of _) {
-                if (v(l)) continue;
+            for (let l of b) {
+                if (_(l)) continue;
                 let a = !r.e$(l.permissions, x.Plq.ADMINISTRATOR) && c.Z.isRoleHigher(t, n, l),
                     s = {
                         id: l.id,
@@ -57,21 +57,21 @@ function g(e) {
                 l.id === e ? i.unshift(s) : i.push(s);
             }
             return i;
-        }, [_, e, t, n]),
-        [j, N] = i.useState(''),
+        }, [b, e, t, n]),
+        [j, C] = i.useState(''),
         I = i.useMemo(() => {
             var t;
             let n = (t = j).startsWith('@') ? t.substr(1) : t,
-                i = j.startsWith('@') ? C.filter((t) => t.id === e) : C;
+                i = j.startsWith('@') ? N.filter((t) => t.id === e) : N;
             return {
-                members: (0, h.B)(f, p, n),
-                roles: (0, h.B)(i, b, n)
+                members: (0, h.B)(v, p, n),
+                roles: (0, h.B)(i, f, n)
             };
-        }, [e, f, j, C]);
+        }, [e, v, j, N]);
     return {
         query: j,
         results: I,
-        setQuery: N,
+        setQuery: C,
         unfilteredCount: I.members.length + I.roles.length
     };
 }
@@ -85,7 +85,7 @@ function p(e) {
         }
     );
 }
-function b(e) {
+function f(e) {
     return {
         id: e.id,
         names: [e.name]

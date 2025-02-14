@@ -1,48 +1,48 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => T });
 var i = n(200651),
     s = n(192379),
-    l = n(120356),
-    r = n.n(l),
+    r = n(120356),
+    l = n.n(r),
     a = n(442837),
     o = n(481060),
     c = n(570140),
     d = n(355467),
     u = n(179360),
-    h = n(821849),
-    m = n(15640),
+    m = n(821849),
+    h = n(15640),
     g = n(314684),
     x = n(899667),
     _ = n(853872),
     p = n(78839),
     E = n(783739),
     C = n(981631),
-    N = n(638164);
-function f() {
+    f = n(638164);
+function T() {
     s.useEffect(() => {
         c.Z.wait(() => {
-            d.jg(), d.tZ(), (0, u.X8)(), (0, h.Y2)(null, null, C.JjL.DISCOVERY), (0, u.tH)(!0);
+            d.jg(), d.tZ(), (0, u.X8)(), (0, m.Y2)(null, null, C.JjL.DISCOVERY), (0, u.tH)(!0);
         });
     }, []);
     let { hasFetchedSubscriptions: e, premiumSubscription: t } = (0, a.cj)([p.ZP], () => ({
             hasFetchedSubscriptions: p.ZP.hasFetchedSubscriptions(),
             premiumSubscription: p.ZP.getPremiumTypeSubscription()
         })),
-        n = (0, m.V)(),
-        l = (0, a.e7)([_.Z], () => _.Z.hasFetchedPaymentSources),
-        f = (0, a.e7)([x.Z], () => x.Z.isFetchingCurrentUserAppliedBoosts);
-    return ((0, g.JR)(), e && n && l && !f)
+        n = (0, h.V)(),
+        r = (0, a.e7)([_.Z], () => _.Z.hasFetchedPaymentSources),
+        T = (0, a.e7)([x.Z], () => x.Z.isFetchingCurrentUserAppliedBoosts);
+    return ((0, g.JR)(), e && n && r && !T)
         ? (0, i.jsxs)('div', {
-              className: N.container,
+              className: f.container,
               children: [
-                  (0, i.jsx)('div', { className: N.background }),
+                  (0, i.jsx)('div', { className: f.background }),
                   (0, i.jsx)('div', {
-                      className: N.content,
+                      className: f.content,
                       children: (0, i.jsx)(E.Z, { premiumSubscription: t })
                   })
               ]
           })
         : (0, i.jsx)('div', {
-              className: r()(N.container, N.loading),
+              className: l()(f.container, f.loading),
               children: (0, i.jsx)(o.$jN, {})
           });
 }

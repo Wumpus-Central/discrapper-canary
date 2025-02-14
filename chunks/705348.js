@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => c });
 var i = n(200651);
 n(192379);
 var l = n(324262),
@@ -6,11 +6,11 @@ var l = n(324262),
     a = n(981631),
     s = n(921944),
     o = n(388032),
-    c = n(157476);
-function d(e) {
+    d = n(157476);
+function c(e) {
     let { guild: t, markAsDismissed: n } = e;
     return (0, i.jsx)(l.Z, {
-        image: c,
+        image: d,
         guild: t,
         onDismissed: () => n(s.L.UNKNOWN),
         onClick: () => {

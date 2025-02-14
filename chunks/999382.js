@@ -114,7 +114,7 @@ function ed(e) {
             location: '7f0c91_1'
         });
         e || T.Z.fetchGuildBans(o.id);
-    } else if (i === w.pNK.INSTANT_INVITES)
+    } else if (i === w.pNK.INSTANT_INVITES || i === w.pNK.INVITES)
         v.tn
             .get({
                 url: w.ANM.GUILD_INSTANT_INVITES(o.id),

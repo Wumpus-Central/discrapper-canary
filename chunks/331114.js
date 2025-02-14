@@ -17,7 +17,7 @@ function s(e, t, n) {
     );
 }
 let o = new Map();
-class c {
+class d {
     handleSearchCountStart() {
         (this.error = null), (this.isFetching = !0);
     }
@@ -31,9 +31,9 @@ class c {
         s(this, 'isInitialFetchComplete', !1), s(this, 'isFetching', !1), s(this, 'error', null), s(this, 'counts', null);
     }
 }
-function d(e) {
+function c(e) {
     var t;
-    let n = null !== (t = o.get(e)) && void 0 !== t ? t : new c();
+    let n = null !== (t = o.get(e)) && void 0 !== t ? t : new d();
     return o.set(e, n), n;
 }
 function u(e, t) {
@@ -58,15 +58,15 @@ let m = new h(r.Z, {
     },
     GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_START: function (e) {
         let { query: t } = e;
-        d(t).handleSearchCountStart();
+        c(t).handleSearchCountStart();
     },
     GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_SUCCESS: function (e) {
         let { query: t, categoryCounts: n } = e;
-        d(t).handleSearchCountSuccess(n);
+        c(t).handleSearchCountSuccess(n);
     },
     GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_FAILURE: function (e) {
         let { query: t, error: n } = e;
-        d(t).handleSearchCountFailure(n);
+        c(t).handleSearchCountFailure(n);
     },
     GLOBAL_DISCOVERY_SERVERS_SEARCH_CLEAR: function (e) {
         let { ignoreQueries: t } = e,

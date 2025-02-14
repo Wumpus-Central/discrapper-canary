@@ -1,24 +1,24 @@
-n.d(t, { Z: () => h }), n(47120), n(653041);
+n.d(t, { Z: () => m }), n(47120), n(653041);
 var i = n(200651),
     s = n(192379),
-    l = n(772848),
-    r = n(481060),
+    r = n(772848),
+    l = n(481060),
     a = n(259580),
     o = n(991346),
     c = n(101896);
 function d(e) {
     let { setting: t, hasChildren: n } = e;
-    return (0, i.jsx)(r.Text, {
+    return (0, i.jsx)(l.Text, {
         variant: n ? 'text-md/bold' : 'text-md/normal',
         children: t
     });
 }
 function u(e) {
     let { setting: t, children: n, depth: o } = e,
-        [h, m] = s.useState(1 === o),
+        [m, h] = s.useState(1 === o),
         g = s.useCallback(() => {
-            m(!h);
-        }, [h, m]);
+            h(!m);
+        }, [m, h]);
     if (0 === n.length)
         return (0, i.jsx)(
             'div',
@@ -30,9 +30,9 @@ function u(e) {
                     hasChildren: !1
                 })
             },
-            (0, l.Z)()
+            (0, r.Z)()
         );
-    let x = h
+    let x = m
         ? (0, i.jsx)('div', {
               className: c.settingNodeChildren,
               children: n
@@ -46,7 +46,7 @@ function u(e) {
                               children: e.children,
                               depth: o + 1
                           },
-                          (0, l.Z)()
+                          (0, r.Z)()
                       )
                   )
           })
@@ -57,7 +57,7 @@ function u(e) {
             style: { marginLeft: 8 * o },
             className: c.settingNode,
             children: [
-                (0, i.jsxs)(r.P3F, {
+                (0, i.jsxs)(l.P3F, {
                     className: c.headerBar,
                     onClick: g,
                     children: [
@@ -66,7 +66,7 @@ function u(e) {
                             hasChildren: n.length > 0
                         }),
                         (0, i.jsx)(a.Z, {
-                            direction: h ? a.Z.Directions.DOWN : a.Z.Directions.RIGHT,
+                            direction: m ? a.Z.Directions.DOWN : a.Z.Directions.RIGHT,
                             className: c.headerCaret
                         })
                     ]
@@ -74,10 +74,10 @@ function u(e) {
                 x
             ]
         },
-        (0, l.Z)()
+        (0, r.Z)()
     );
 }
-function h() {
+function m() {
     let e = (0, o.Pt)(),
         t = [],
         n = Object.keys(e)
@@ -113,7 +113,7 @@ function h() {
     return (0, i.jsxs)('div', {
         className: c.root,
         children: [
-            (0, i.jsx)(r.X6q, {
+            (0, i.jsx)(l.X6q, {
                 variant: 'heading-lg/bold',
                 children: 'Settings Tree'
             }),
@@ -129,7 +129,7 @@ function h() {
                                 children: e.children,
                                 depth: 1
                             },
-                            (0, l.Z)()
+                            (0, r.Z)()
                         )
                     )
             })

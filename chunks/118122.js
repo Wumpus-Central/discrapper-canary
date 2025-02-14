@@ -2,8 +2,8 @@ n.d(t, { Z: () => S });
 var i = n(200651),
     l = n(192379),
     r = n(442837),
-    o = n(481060),
-    a = n(239091),
+    a = n(481060),
+    o = n(239091),
     s = n(906732),
     c = n(560067),
     d = n(540059),
@@ -31,18 +31,18 @@ let Z = {
     }
 };
 function b(e) {
-    (0, a.jW)(e, async () => {
+    (0, o.jW)(e, async () => {
         let { default: e } = await n.e('9606').then(n.bind(n, 987578));
         return (t) => (0, i.jsx)(e, { ...t });
     });
 }
 function S(e) {
     let { disableTooltip: t, lastTargetNode: n } = e,
-        a = (0, r.e7)([m.Z], () => m.Z.getGuilds()),
-        S = l.useMemo(() => Object.values(a), [a]),
+        o = (0, r.e7)([m.Z], () => m.Z.getGuilds()),
+        S = l.useMemo(() => Object.values(o), [o]),
         N = (0, r.e7)([g.default], () => g.default.getCurrentUser()),
         E = l.useMemo(() => S.some((e) => e.isOwner(N)), [S, N]),
-        j = (0, o.s9z)((e) => (0, o.DEQ)(e, C.PU)),
+        j = (0, a.s9z)((e) => (0, a.DEQ)(e, C.PU)),
         { analyticsLocations: y } = (0, s.ZP)(),
         T = (0, d.Q3)('CreateJoinGuildButton'),
         A = (0, i.jsx)(_.Z, {
@@ -63,7 +63,7 @@ function S(e) {
             selected: j,
             onContextMenu: b,
             tooltip: x.intl.string(x.t.l5WIbW),
-            icon: T ? o.oFk : o.BRu
+            icon: T ? a.oFk : a.BRu
         });
     return t
         ? A

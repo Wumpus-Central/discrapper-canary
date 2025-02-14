@@ -13,8 +13,8 @@ var l = n(780384),
     h = n(893916),
     x = n(408942);
 function g(e) {
-    let { followedChannelWebhooks: t, editedWebhook: n, selectableWebhookChannels: g, errors: p, canNavigate: b } = e,
-        _ = (0, r.ZP)();
+    let { followedChannelWebhooks: t, editedWebhook: n, selectableWebhookChannels: g, errors: p, canNavigate: f } = e,
+        b = (0, r.ZP)();
     return (0, i.jsxs)(a.hjN, {
         children: [
             (0, i.jsx)(a.R94, {
@@ -28,7 +28,7 @@ function g(e) {
                       editedWebhook: n,
                       selectableWebhookChannels: g,
                       errors: p,
-                      canNavigate: b
+                      canNavigate: f
                   })
                 : (function (e, t) {
                       let n = (0, l.wj)(e) ? h : x;
@@ -52,7 +52,7 @@ function g(e) {
                               })
                           ]
                       });
-                  })(_, () => open(o.Z.getArticleURL(c.BhN.CHANNEL_FOLLOWING)))
+                  })(b, () => open(o.Z.getArticleURL(c.BhN.CHANNEL_FOLLOWING)))
         ]
     });
 }

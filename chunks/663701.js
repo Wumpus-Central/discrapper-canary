@@ -5,8 +5,8 @@ var i = n(200651),
     a = n.n(r),
     s = n(232713),
     o = n(990547),
-    c = n(91192),
-    d = n(873546),
+    d = n(91192),
+    c = n(873546),
     u = n(442837),
     h = n(704215),
     m = n(952265),
@@ -22,9 +22,9 @@ var i = n(200651),
     T = n(540059),
     S = n(243778),
     A = n(922409),
-    b = n(899740),
-    Z = n(28476),
-    x = n(880257),
+    Z = n(899740),
+    x = n(28476),
+    b = n(880257),
     L = n(631885),
     y = n(849862),
     O = n(522558),
@@ -33,8 +33,8 @@ var i = n(200651),
     j = n(457396),
     D = n(108989),
     w = n(51596),
-    k = n(905423),
-    M = n(155409),
+    M = n(905423),
+    k = n(155409),
     U = n(210887),
     G = n(695346),
     B = n(283595),
@@ -53,10 +53,10 @@ var i = n(200651),
     ee = n(351163);
 let et = (e) => {
         let { selected: t, ...n } = e,
-            r = (0, c.JA)('friends'),
+            r = (0, d.JA)('friends'),
             a = (0, y.If)(),
             s = (0, u.e7)([R.Z], () => R.Z.canShowFriendsTabBadge()),
-            d = (0, u.e7)([f.Z], () => f.Z.useReducedMotion),
+            c = (0, u.e7)([f.Z], () => f.Z.useReducedMotion),
             { enabled: h } = O.w.useExperiment({ location: 'Friends Tab' }, { autoTrackExposure: !1 }),
             m = s && h;
         l.useEffect(() => {
@@ -91,7 +91,7 @@ let et = (e) => {
                     children: a > 0 ? (0, i.jsx)(p.mAB, { count: a }) : null
                 }),
                 m &&
-                    !d &&
+                    !c &&
                     (0, i.jsx)(D.Z, {
                         className: ee.confetti,
                         wind: 0,
@@ -117,7 +117,7 @@ let et = (e) => {
     },
     en = (e) => {
         let { selected: t, hideGameUpdateProgressIndicator: n, ...l } = e,
-            r = (0, c.JA)('library');
+            r = (0, d.JA)('library');
         return (0, i.jsx)(Y.Qj, {
             selected: t,
             route: X.Z5c.APPLICATION_LIBRARY,
@@ -129,14 +129,14 @@ let et = (e) => {
         });
     },
     ei = () => {
-        let e = (0, b.q)();
+        let e = (0, Z.q)();
         return e > 0 ? (0, i.jsx)(p.mAB, { count: e }) : null;
     },
     el = (e) => {
         let { selected: t } = e,
-            n = (0, c.JA)('messageRequests'),
+            n = (0, d.JA)('messageRequests'),
             { channelId: l } = (0, A._)();
-        if (!(0, Z.a)()) return null;
+        if (!(0, x.a)()) return null;
         let r = null == l ? void 0 : () => g.Z.preload(X.ME, l);
         return (0, i.jsx)(Y.Qj, {
             selected: t,
@@ -151,7 +151,7 @@ let et = (e) => {
     er = (e) => {
         let { selected: t } = e,
             n = $.intl.string($.t.Rkdixs),
-            r = (0, c.JA)('family-center'),
+            r = (0, d.JA)('family-center'),
             [a, s] = l.useState(!0);
         return (0, i.jsx)(Y.Qj, {
             selected: t,
@@ -212,18 +212,18 @@ function eo(e) {
     }
     return e.startsWith(X.Z5c.APPLICATION_STORE) ? (e === X.Z5c.APPLICATION_STORE ? X.ZY5.STORE_DIRECTORY_HOME : e.startsWith(X.Z5c.APPLICATION_STORE) ? X.ZY5.STORE_DIRECTORY_BROWSE : X.ZY5.STORE_LISTING) : X.ZY5.DM_CHANNEL;
 }
-let ec = l.memo(function (e) {
-    let { showLibrary: t, hasLibraryApplication: n, homeLink: l, premiumTabSelected: r, isVisualRefreshEnabled: s, shouldShowNitroTab: o, shouldShowMessageRequestsRow: c, shouldShowFamilyCenterRow: u, shouldShowQuickLauncherRow: h, selectedChannelId: m, path: g } = e;
+let ed = l.memo(function (e) {
+    let { showLibrary: t, hasLibraryApplication: n, homeLink: l, premiumTabSelected: r, isVisualRefreshEnabled: s, shouldShowNitroTab: o, shouldShowMessageRequestsRow: d, shouldShowFamilyCenterRow: u, shouldShowQuickLauncherRow: h, selectedChannelId: m, path: g } = e;
     return (0, i.jsxs)('nav', {
         className: ee.privateChannels,
         'aria-label': $.intl.string($.t.ZH9aPz),
         children: [
-            (0, i.jsx)(M.Z, {
+            (0, i.jsx)(k.Z, {
                 tutorialId: 'direct-messages',
                 position: 'right',
                 offsetX: -52,
                 children: (0, i.jsx)('div', {
-                    className: a()(ee.searchBar, { [ee.themedHeaderMobile]: d.tq }),
+                    className: a()(ee.searchBar, { [ee.themedHeaderMobile]: c.tq }),
                     children: s
                         ? (0, i.jsx)(p.zxk, {
                               grow: !0,
@@ -235,7 +235,7 @@ let ec = l.memo(function (e) {
                           })
                         : (0, i.jsx)('button', {
                               type: 'button',
-                              className: a()(ee.searchBarComponent, { [ee.themedSearchBarMobile]: d.tq }),
+                              className: a()(ee.searchBarComponent, { [ee.themedSearchBarMobile]: c.tq }),
                               onClick: es,
                               children: $.intl.string($.t.LzcpeX)
                           })
@@ -258,7 +258,7 @@ let ec = l.memo(function (e) {
                               'library'
                           )
                         : null,
-                    c ? (0, i.jsx)(el, { selected: null == g ? null != l && l.startsWith(X.Z5c.MESSAGE_REQUESTS) : g === X.Z5c.MESSAGE_REQUESTS }, 'message-requests') : null,
+                    d ? (0, i.jsx)(el, { selected: null == g ? null != l && l.startsWith(X.Z5c.MESSAGE_REQUESTS) : g === X.Z5c.MESSAGE_REQUESTS }, 'message-requests') : null,
                     o
                         ? (0, i.jsx)(
                               j.g,
@@ -291,14 +291,14 @@ let ec = l.memo(function (e) {
                         'discord-shop'
                     ),
                     u ? (0, i.jsx)(er, { selected: (null != l && l.startsWith(X.Z5c.FAMILY_CENTER)) || (null != g && g.startsWith(X.Z5c.FAMILY_CENTER)) }, 'family-center') : null,
-                    s ? (0, i.jsx)(ed, {}, 'section-divider-top') : null,
-                    h ? (0, i.jsx)(C.Z, { bottomDivider: s ? (0, i.jsx)(ed, {}) : null }, 'dm-quick-launcher') : null
+                    s ? (0, i.jsx)(ec, {}, 'section-divider-top') : null,
+                    h ? (0, i.jsx)(C.Z, { bottomDivider: s ? (0, i.jsx)(ec, {}) : null }, 'dm-quick-launcher') : null
                 ]
             })
         ]
     });
 });
-function ed() {
+function ec() {
     return (0, i.jsx)('div', { className: ee.sectionDivider });
 }
 function eu() {
@@ -321,19 +321,19 @@ function eu() {
         r = (0, u.e7)([B.Z], () => B.Z.hasLibraryApplication()),
         a = (0, u.e7)([V.Z], () => V.Z.getCurrentPath()),
         o = (0, T.Q3)('PrivateChannels'),
-        [c, d] = (0, k.Z)((e) => {
+        [d, c] = (0, M.Z)((e) => {
             let { channelId: t, path: n } = e;
             return [t, n];
         }, s.X),
-        h = (0, j.i)({ selected: null == d ? t : d.startsWith(X.Z5c.APPLICATION_STORE) }),
-        m = (0, Z.a)(),
+        h = (0, j.i)({ selected: null == c ? t : c.startsWith(X.Z5c.APPLICATION_STORE) }),
+        m = (0, x.a)(),
         p = (function () {
             let e = G.Ex.useSetting(),
-                t = (0, x.Z)();
+                t = (0, b.Z)();
             return !0 === e && !0 === t;
         })(),
         g = (0, I.FW)();
-    return (0, i.jsx)(ec, {
+    return (0, i.jsx)(ed, {
         theme: l,
         showLibrary: n,
         hasLibraryApplication: r,
@@ -345,7 +345,7 @@ function eu() {
         shouldShowMessageRequestsRow: m,
         shouldShowFamilyCenterRow: p,
         shouldShowQuickLauncherRow: g,
-        selectedChannelId: c,
-        path: d
+        selectedChannelId: d,
+        path: c
     });
 }

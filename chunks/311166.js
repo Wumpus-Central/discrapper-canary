@@ -1,32 +1,32 @@
-t.d(n, { Z: () => o });
-var l = t(200651);
-t(192379);
-var i = t(481060),
-    r = t(195367),
-    s = t(388032),
-    a = t(840050);
+l.d(n, { Z: () => o });
+var t = l(200651);
+l(192379);
+var i = l(481060),
+    a = l(195367),
+    r = l(388032),
+    s = l(840050);
 function o(e) {
-    let { isSlideReady: n, ...t } = e;
-    return (0, l.jsxs)('div', {
-        className: a.__invalid_slideContainer,
+    let { isSlideReady: n, ...l } = e;
+    return (0, t.jsxs)('div', {
+        className: s.__invalid_slideContainer,
         children: [
-            (0, l.jsxs)('div', {
-                className: a.header,
+            (0, t.jsxs)('div', {
+                className: s.header,
                 children: [
-                    (0, l.jsx)(i.X6q, {
+                    (0, t.jsx)(i.X6q, {
                         variant: 'heading-xl/semibold',
-                        children: s.intl.string(s.t.GG6vbm)
+                        children: r.intl.string(r.t.GG6vbm)
                     }),
-                    (0, l.jsx)(i.Text, {
+                    (0, t.jsx)(i.Text, {
                         color: 'header-secondary',
-                        className: a.text,
+                        className: s.text,
                         variant: 'text-sm/normal',
-                        children: s.intl.string(s.t.q5lgwc)
+                        children: r.intl.string(r.t.q5lgwc)
                     })
                 ]
             }),
-            (0, l.jsx)(r.Z, {
-                ...t,
+            (0, t.jsx)(a.Z, {
+                ...l,
                 canSetFocus: n
             })
         ]

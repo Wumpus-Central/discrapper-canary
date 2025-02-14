@@ -5,8 +5,8 @@ var i = n(200651),
     a = n(317770),
     s = n(19780),
     o = n(594174),
-    c = n(979651),
-    d = n(960048),
+    d = n(979651),
+    c = n(960048),
     u = n(699910),
     h = n(981631);
 function m(e, t, n) {
@@ -47,7 +47,7 @@ class g extends a.Z {
                     _ = null == m ? void 0 : null === (e = m.avatarDecoration) || void 0 === e ? void 0 : e.skuId,
                     f = null == m ? void 0 : null === (t = m.avatarDecoration) || void 0 === t ? void 0 : t.expiresAt;
                 if ((('1251324401459265537' === _ || '1252353273256480818' === _) && (f = 1726106879), null == m)) return !1;
-                let E = c.Z.getVoiceStateForUser(m.id);
+                let E = d.Z.getVoiceStateForUser(m.id);
                 return null != f && 1000 * f < Date.now() && g !== h.hes.RTC_CONNECTED
                     ? ((0, l.Mr3)(p),
                       (0, l.ZDy)(
@@ -61,10 +61,10 @@ class g extends a.Z {
                           },
                           { modalKey: p }
                       ),
-                      d.Z.captureMessage('Collectible expiry modal shown'),
+                      c.Z.captureMessage('Collectible expiry modal shown'),
                       !0)
                     : (('1251324401459265537' === _ || '1252353273256480818' === _) &&
-                          d.Z.captureMessage('Collectible expiry modal not shown', {
+                          c.Z.captureMessage('Collectible expiry modal not shown', {
                               tags: {
                                   isExpired: (null != f && 1000 * f < Date.now()).toString(),
                                   rtcConnected: (g === h.hes.RTC_CONNECTED).toString(),

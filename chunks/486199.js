@@ -9,7 +9,7 @@ var l = n(120356),
     d = n(388032),
     c = n(272798);
 function u(e) {
-    let { name: t, description: n, icon: l, imageSrc: u, iconBackgroundColor: m, iconClassName: h, iconWrapperClassName: x, details: g, detailsClassName: p, isHeader: b, isPremium: _ } = e;
+    let { name: t, description: n, icon: l, imageSrc: u, iconBackgroundColor: m, iconClassName: h, iconWrapperClassName: x, details: g, detailsClassName: p, isHeader: f, isPremium: b } = e;
     return (0, i.jsxs)(s.Z, {
         justify: s.Z.Justify.CENTER,
         className: c.wrapper,
@@ -121,8 +121,8 @@ function u(e) {
                 description: n,
                 details: g,
                 detailsClassName: p,
-                isHeader: b,
-                isPremium: _
+                isHeader: f,
+                isPremium: b
             })
         ]
     });

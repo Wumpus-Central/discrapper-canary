@@ -1,14 +1,14 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => c });
 var i = n(200651),
     l = n(192379),
     r = n(481060),
     a = n(745752),
     s = n(17181),
     o = n(388032),
-    c = n(957050);
-function d(e) {
+    d = n(957050);
+function c(e) {
     let { guildId: t, channelId: n } = e,
-        d = l.useCallback(() => {
+        c = l.useCallback(() => {
             null != t &&
                 null != n &&
                 ((0, a.I1)(t),
@@ -18,16 +18,16 @@ function d(e) {
                 }));
         }, [t, n]);
     return (0, i.jsx)('div', {
-        className: c.container,
+        className: d.container,
         children: (0, i.jsxs)('div', {
-            className: c.explainerContainer,
+            className: d.explainerContainer,
             children: [
                 (0, i.jsx)(r.Text, {
                     variant: 'text-md/normal',
                     children: o.intl.string(o.t.FWtdQk)
                 }),
                 (0, i.jsx)(r.zxk, {
-                    onClick: d,
+                    onClick: c,
                     children: (0, i.jsx)(r.Text, {
                         variant: 'text-md/medium',
                         children: o.intl.string(o.t.VVFjAA)

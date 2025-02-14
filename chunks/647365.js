@@ -1,14 +1,14 @@
 n.d(t, { Z: () => i });
-var r = n(200651);
+var s = n(200651);
 n(192379);
-var o = n(453217),
-    s = n(578080),
-    a = n(203111);
+var r = n(453217),
+    a = n(578080),
+    o = n(203111);
 let i = function (e) {
     let { collapsedHeight: t, expandedContentRef: n, expansionSpring: i, isExpanded: l, isExpansionAnimationComplete: c, onCtxMenuOpened: d, onCtxMenuClosed: u, onCtxMenuSelection: p, quest: m, useReducedMotion: x } = e;
-    return (0, r.jsx)(s.Z, {
+    return (0, s.jsx)(a.Z, {
         expansionSpring: i,
-        className: a.content,
+        className: o.content,
         collapsedHeight: t,
         onCtxMenuOpen: d,
         onCtxMenuClose: u,
@@ -18,8 +18,8 @@ let i = function (e) {
         quest: m,
         useReducedMotion: x,
         ref: n,
-        children: (0, r.jsx)(o.Z, {
-            className: a.content,
+        children: (0, s.jsx)(r.Z, {
+            className: o.content,
             expansionSpring: i,
             isExpanded: l,
             isExpansionAnimationComplete: c,

@@ -5,8 +5,8 @@ var i = n(200651),
     a = n(442837),
     s = n(481060),
     o = n(100527),
-    c = n(213609),
-    d = n(335131),
+    d = n(213609),
+    c = n(335131),
     u = n(252618),
     h = n(979233),
     m = n(175307),
@@ -22,9 +22,9 @@ var i = n(200651),
     T = n(569984),
     S = n(833435),
     A = n(918701),
-    b = n(150560),
-    Z = n(558652),
-    x = n(736683),
+    Z = n(150560),
+    x = n(558652),
+    b = n(736683),
     L = n(452081),
     y = n(46140),
     O = n(642145),
@@ -35,16 +35,16 @@ var i = n(200651),
 let w = function () {
     var e;
     let { selectedTab: t, onSelectTab: n, tabs: w } = (0, L.z)(),
-        { onScroll: k, scrollPosition: M } = (0, h.M)(),
-        U = b.Z.getState().getUtmCurrentContext(),
-        G = (0, S._)({ location: y.dr.QUEST_HOME_DESKTOP }) ? x.Z : x.j,
+        { onScroll: M, scrollPosition: k } = (0, h.M)(),
+        U = Z.Z.getState().getUtmCurrentContext(),
+        G = (0, S._)({ location: y.dr.QUEST_HOME_DESKTOP }) ? b.Z : b.j,
         B = l.useRef(U);
     l.useEffect(() => {
         B.current = U;
     }),
         l.useEffect(() => {
             let { current: e } = B;
-            (0, c.h)({
+            (0, d.h)({
                 name: r.ImpressionNames.QUEST_HOME,
                 type: r.ImpressionTypes.VIEW,
                 properties: {
@@ -70,10 +70,10 @@ let w = function () {
         children: [
             (0, i.jsxs)(f.ZP, {
                 variant: f._6.OVERLAY,
-                children: [(0, i.jsx)('div', { className: D.dragRegion }), (0, i.jsx)(f.z6, { scrollPosition: M }), (0, i.jsx)(f.aV, { icon: s.qDn })]
+                children: [(0, i.jsx)('div', { className: D.dragRegion }), (0, i.jsx)(f.z6, { scrollPosition: k }), (0, i.jsx)(f.aV, { icon: s.qDn })]
             }),
             (0, i.jsxs)(E.Z, {
-                onScroll: k,
+                onScroll: M,
                 children: [
                     (0, i.jsx)(p.Z, {
                         title: W,
@@ -103,7 +103,7 @@ let w = function () {
                                             cardAlignment: C.ek.END,
                                             ctaText: j.intl.string(j.t.iEw2Nz),
                                             ctaOnClick: () => {
-                                                (0, d.mK)({
+                                                (0, c.mK)({
                                                     openInLayer: !1,
                                                     tab: R.AW.ORBS,
                                                     analyticsLocations: [],
@@ -113,7 +113,7 @@ let w = function () {
                                         })
                                 ]
                             }),
-                            t === v.e5.CLAIMED ? (0, i.jsx)(G, { onSelectTab: n }) : (0, i.jsx)(Z.Z, {})
+                            t === v.e5.CLAIMED ? (0, i.jsx)(G, { onSelectTab: n }) : (0, i.jsx)(x.Z, {})
                         ]
                     })
                 ]

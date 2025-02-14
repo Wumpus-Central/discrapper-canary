@@ -6,8 +6,8 @@ var l = n(120356),
     a = n(981631),
     s = n(193330);
 let o = '1',
-    c = '2',
-    d = '3',
+    d = '2',
+    c = '3',
     u = '4',
     h = '5',
     m = '6',
@@ -19,8 +19,8 @@ let o = '1',
     I = {
         [a.aIt.ESRB]: {
             [o]: s.esrbEveryone,
-            [c]: s.esrbEveryoneTenPlus,
-            [d]: s.esrbTeen,
+            [d]: s.esrbEveryoneTenPlus,
+            [c]: s.esrbTeen,
             [u]: s.esrbMature,
             [h]: s.esrbAdult,
             [m]: s.esrbRatingPending

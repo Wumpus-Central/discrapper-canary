@@ -35,8 +35,8 @@ var i = n(200651),
     f = n(375954),
     x = n(594174),
     C = n(585483),
-    v = n(5967),
-    E = n(630388),
+    E = n(5967),
+    v = n(630388),
     I = n(358085),
     N = n(51144),
     S = n(91047),
@@ -104,7 +104,7 @@ function D(e, t) {
 function w(e, t, a, s) {
     let { id: o } = t,
         { id: d, flags: u } = e,
-        m = (0, E.yE)(u, b.iLy.EPHEMERAL),
+        m = (0, v.yE)(u, b.iLy.EPHEMERAL),
         _ = (0, c.bp)();
     return l.useCallback(
         (e, t) => {
@@ -222,21 +222,21 @@ function H(e) {
                 },
                 [t, n]
             )),
-        [x, v] = l.useState(r);
+        [x, E] = l.useState(r);
     g.current = x || g.current;
-    let E = l.useCallback(
+    let v = l.useCallback(
             (e) => {
-                o && (0, h.T6)(), x || (C.S.dispatchKeyed(b.LPv.ANIMATE_CHAT_AVATAR, p, !0), f(e), v(!0));
+                o && (0, h.T6)(), x || (C.S.dispatchKeyed(b.LPv.ANIMATE_CHAT_AVATAR, p, !0), f(e), E(!0));
             },
             [x, p, o, f]
         ),
         I = l.useCallback(() => {
-            C.S.dispatchKeyed(b.LPv.ANIMATE_CHAT_AVATAR, p, !1), v(!1);
+            C.S.dispatchKeyed(b.LPv.ANIMATE_CHAT_AVATAR, p, !1), E(!1);
         }, [p]);
     return {
         hasHovered: g.current,
         isHovered: x,
-        handleMouseEnter: E,
+        handleMouseEnter: v,
         handleMouseLeave: I
     };
 }
@@ -247,7 +247,7 @@ function V(e, t) {
         handleFocus: l.useCallback(
             (t) => {
                 var n, l;
-                let a = null !== (l = null === (n = (0, v.uB)(t)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== l ? l : null;
+                let a = null !== (l = null === (n = (0, E.uB)(t)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== l ? l : null;
                 (t.target === t.currentTarget || t.currentTarget.contains(a)) && (r(!0), i(!0)), null != e && e(t);
             },
             [e]
@@ -255,7 +255,7 @@ function V(e, t) {
         handleBlur: l.useCallback(
             (e) => {
                 var n, l;
-                let a = null !== (l = null === (n = (0, v.uB)(e)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== l ? l : null;
+                let a = null !== (l = null === (n = (0, E.uB)(e)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== l ? l : null;
                 (e.target !== e.currentTarget && e.currentTarget.contains(a)) || i(!1), null != t && t(e);
             },
             [t]

@@ -1,40 +1,40 @@
 n.d(t, { Z: () => x }), n(47120), n(642549);
 var i = n(200651),
     s = n(192379),
-    l = n(120356),
-    r = n.n(l),
+    r = n(120356),
+    l = n.n(r),
     a = n(772848),
     o = n(481060),
     c = n(53281),
     d = n(451593),
     u = n(694539),
-    h = n(336600);
-let m = (e) => {
+    m = n(336600);
+let h = (e) => {
         var t, n, s;
-        let { effect: l, onClick: a } = e,
+        let { effect: r, onClick: a } = e,
             { deleteConfig: c } = (0, d.E)();
         return (0, i.jsxs)(o.P3F, {
-            className: h.previewCard,
+            className: m.previewCard,
             onClick: () => {
-                a(l);
+                a(r);
             },
             children: [
                 (0, i.jsx)('div', {
-                    className: h.previewCardImage,
-                    style: { backgroundImage: 'url('.concat(null === (s = l.config) || void 0 === s ? void 0 : null === (n = s.effects) || void 0 === n ? void 0 : null === (t = n[0]) || void 0 === t ? void 0 : t.base64, ')') }
+                    className: m.previewCardImage,
+                    style: { backgroundImage: 'url('.concat(null === (s = r.config) || void 0 === s ? void 0 : null === (n = s.effects) || void 0 === n ? void 0 : null === (t = n[0]) || void 0 === t ? void 0 : t.base64, ')') }
                 }),
                 (0, i.jsxs)('div', {
-                    className: r()(h.previewCardFooter, h.row),
+                    className: l()(m.previewCardFooter, m.row),
                     children: [
                         (0, i.jsx)(o.Text, {
                             variant: 'text-md/bold',
-                            children: l.name
+                            children: r.name
                         }),
                         (0, i.jsx)(o.zxk, {
                             color: o.Ttl.RED,
                             look: o.iLD.LINK,
                             onClick: (e) => {
-                                e.preventDefault(), e.stopPropagation(), c(l.id);
+                                e.preventDefault(), e.stopPropagation(), c(r.id);
                             },
                             children: 'Delete'
                         })
@@ -50,36 +50,36 @@ let m = (e) => {
     });
 function x() {
     let { profileEffects: e, upsertConfig: t } = (0, d.E)(),
-        [n, l] = s.useState(),
+        [n, r] = s.useState(),
         a = s.useRef(null),
         x = (e) => {
             (0, o.showToast)((0, o.createToast)(e, o.ToastType.FAILURE));
         };
     return (0, i.jsxs)('div', {
-        className: h.root,
+        className: m.root,
         children: [
             null == n &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsxs)('div', {
-                            className: h.col,
+                            className: m.col,
                             children: [
                                 (0, i.jsx)('div', {
-                                    className: h.section,
+                                    className: m.section,
                                     children: (0, i.jsx)(o.X6q, {
                                         variant: 'heading-lg/bold',
                                         children: 'Profile Effects'
                                     })
                                 }),
                                 (0, i.jsx)('div', {
-                                    className: h.grid,
+                                    className: m.grid,
                                     children: Object.values(e).map((e) =>
                                         (0, i.jsx)(
-                                            m,
+                                            h,
                                             {
                                                 effect: e,
                                                 onClick: (e) => {
-                                                    l(e);
+                                                    r(e);
                                                 }
                                             },
                                             e.id
@@ -89,10 +89,10 @@ function x() {
                             ]
                         }),
                         (0, i.jsxs)('div', {
-                            className: r()(h.row, h.end, h.section),
+                            className: l()(m.row, m.end, m.section),
                             children: [
                                 (0, i.jsxs)('div', {
-                                    className: h.uploadButton,
+                                    className: m.uploadButton,
                                     children: [
                                         (0, i.jsx)(o.Text, {
                                             variant: 'text-md/normal',
@@ -132,7 +132,7 @@ function x() {
                 (0, i.jsx)(u.Z, {
                     effect: n,
                     back: () => {
-                        l(void 0);
+                        r(void 0);
                     }
                 })
         ]

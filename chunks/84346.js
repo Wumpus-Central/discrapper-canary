@@ -6,8 +6,8 @@ var i = n(200651),
     a = n(926086),
     s = n(353038),
     d = n(761374),
-    c = n(340101),
-    u = n(273816),
+    u = n(340101),
+    c = n(273816),
     h = n(2923),
     _ = n(586742),
     p = n(243487),
@@ -40,7 +40,7 @@ let I = {
                                 (a = e),
                                 (s = t),
                                 void (
-                                    (0, c.js)(a) &&
+                                    (0, u.js)(a) &&
                                     (0, l.jW)(o, async () => {
                                         let { default: e } = await n.e('26775').then(n.bind(n, 740579));
                                         return (
@@ -65,7 +65,7 @@ let I = {
             }),
         resizeValidation(e) {
             let { widget: t, computedSize: n, borderWidth: i, padding: l } = e;
-            return (0, c.js)(t)
+            return (0, u.js)(t)
                 ? 'boolean' != typeof t.meta.horizontal || t.meta.horizontal
                     ? {
                           width: Math.max(n.width, m.vZ),
@@ -154,7 +154,7 @@ let I = {
     [v.Odu.PERFORMANCE_DEBUG]: {
         renderWidget(e) {
             let { widget: t, locked: n, anchorLeft: l } = e;
-            return (0, i.jsx)(u.Z, {
+            return (0, i.jsx)(c.Z, {
                 id: t.id,
                 anchorLeft: l,
                 locked: n,
@@ -174,7 +174,7 @@ let I = {
         renderWidget(e) {
             var t;
             let { widget: n, locked: l, size: r, dragStart: o, anchorTop: a, anchorLeft: s } = e;
-            return (0, c.ZL)(n)
+            return (0, u.ZL)(n)
                 ? (0, i.jsx)(d.Z, {
                       id: n.id,
                       locked: l,
@@ -195,7 +195,7 @@ let I = {
         renderTitle: () => (0, i.jsx)(f.PI, { children: E.intl.string(E.t['386XRk']) }),
         renderButtons(e, t) {
             var r;
-            return (0, c.ZL)(e)
+            return (0, u.ZL)(e)
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
                           (0, i.jsx)(f.ls, {
@@ -206,7 +206,7 @@ let I = {
                                       (a = e),
                                       (s = t),
                                       void (
-                                          (0, c.ZL)(a) &&
+                                          (0, u.ZL)(a) &&
                                           (0, l.jW)(o, async () => {
                                               let { default: e } = await n.e('34684').then(n.bind(n, 68738));
                                               return (
@@ -239,16 +239,16 @@ let I = {
             let { operation: t, computedSize: n, originSize: i, borderWidth: l, padding: r, containerSpecs: o } = e,
                 a = 2 * l + 2 * r,
                 d = i.width - a,
-                c = i.height - a,
-                u = d / c,
-                h = c / d,
+                u = i.height - a,
+                c = d / u,
+                h = u / d,
                 _ = (() => {
                     switch (t) {
                         case s.B.RESIZE_NORTH:
                         case s.B.RESIZE_SOUTH:
                             return {
                                 height: n.height,
-                                width: Math.round((n.height - a) * u + a)
+                                width: Math.round((n.height - a) * c + a)
                             };
                         default:
                             return {
@@ -257,7 +257,7 @@ let I = {
                             };
                     }
                 })();
-            return _.width > o.maxX && ((_.width = o.maxX), (_.height = (o.maxX - a) * h + a)), _.height > o.maxY && ((_.height = o.maxY), (_.width = (o.maxY - a) * u + a)), _;
+            return _.width > o.maxX && ((_.width = o.maxX), (_.height = (o.maxX - a) * h + a)), _.height > o.maxY && ((_.height = o.maxY), (_.width = (o.maxY - a) * c + a)), _;
         }
     },
     [v.Odu.QUICK_ACTIONS]: {

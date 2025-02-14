@@ -5,20 +5,20 @@ var i = n(200651),
     a = n(571457),
     s = n(823379),
     o = n(275131),
-    c = n(356164),
-    d = n(726115),
+    d = n(356164),
+    c = n(726115),
     u = n(962486),
     h = n(149788),
     m = n(128449);
 function p(e) {
     let { onScroll: t, onGuildCardSeen: n, onGuildCardClick: a } = e,
-        s = (0, r.e7)([c.Z], () => {
+        s = (0, r.e7)([d.Z], () => {
             var e;
-            return null !== (e = c.Z.getGuildIds({ categoryId: m.Hk })) && void 0 !== e ? e : m.q5;
+            return null !== (e = d.Z.getGuildIds({ categoryId: m.Hk })) && void 0 !== e ? e : m.q5;
         }),
-        d = (0, r.e7)([c.Z], () => {
+        c = (0, r.e7)([d.Z], () => {
             var e;
-            return null === (e = c.Z.getIsFetching({ categoryId: m.Hk })) || void 0 === e || e;
+            return null === (e = d.Z.getIsFetching({ categoryId: m.Hk })) || void 0 === e || e;
         });
     return (
         l.useEffect(() => {
@@ -27,7 +27,7 @@ function p(e) {
         (0, i.jsx)(u.Z, {
             tab: m.vf.FEATURED,
             guildIds: s,
-            loading: d,
+            loading: c,
             onScroll: t,
             onGuildCardSeen: n,
             onGuildCardClick: a
@@ -36,14 +36,14 @@ function p(e) {
 }
 function g(e) {
     let { tab: t, onScroll: n, onGuildCardSeen: a, onGuildCardClick: s } = e,
-        h = (0, d.lg)(t),
-        p = (0, r.e7)([c.Z], () => {
+        h = (0, c.lg)(t),
+        p = (0, r.e7)([d.Z], () => {
             var e;
-            return null !== (e = c.Z.getGuildIds({ categoryId: h })) && void 0 !== e ? e : m.q5;
+            return null !== (e = d.Z.getGuildIds({ categoryId: h })) && void 0 !== e ? e : m.q5;
         }),
-        g = (0, r.e7)([c.Z], () => {
+        g = (0, r.e7)([d.Z], () => {
             var e;
-            return null === (e = c.Z.getIsFetching({ categoryId: h })) || void 0 === e || e;
+            return null === (e = d.Z.getIsFetching({ categoryId: h })) || void 0 === e || e;
         });
     return (
         l.useEffect(() => {
@@ -63,7 +63,7 @@ function _(e) {
     let { selectedTab: t, onScroll: n, onGuildCardSeen: r, onGuildCardClick: o } = e;
     switch (
         (l.useEffect(() => {
-            let e = (0, d.lg)(t);
+            let e = (0, c.lg)(t);
             (0, a.kR)({ selectedCategoryId: e });
         }, [t]),
         t)

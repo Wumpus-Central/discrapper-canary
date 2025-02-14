@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => m });
 var i = n(200651);
 n(192379);
 var s = n(481060),
@@ -22,11 +22,11 @@ function g() {
         })
     });
 }
-function f(e) {
+function m(e) {
     switch (e.type) {
         case u.nc.GO_LIVE_VOICE: {
             let { game: t, voiceGuild: p } = e,
-                { trackView: f, trackClick: m } = (0, d.R)(u.n0.GoLiveNudge, { notif_type: u.n0.GoLiveNudge });
+                { trackView: m, trackClick: f } = (0, d.R)(u.n0.GoLiveNudge, { notif_type: u.n0.GoLiveNudge });
             return {
                 icon: n(847881),
                 title: null,
@@ -37,15 +37,15 @@ function f(e) {
                 hint: () => (0, i.jsx)(g, {}),
                 renderFooter: () => (0, i.jsx)(g, {}),
                 onNotificationShow: () => {
-                    f();
+                    m();
                 },
                 onNotificationClick: (e, t) => {
-                    m('unlock'), l.Z.updateNotificationStatus(t);
+                    f('unlock'), l.Z.updateNotificationStatus(t);
                     let d = a.default.isOverlayOOPEnabledForPid((0, o.QF)());
                     if ((d ? l.Z.setInputLocked(!1, (0, o.QF)()) : l.Z.setInstanceLocked(!1), null == r.default.getCurrentUser())) return;
                     let u = d ? { contextKey: s.u1M } : void 0;
                     (0, s.ZDy)(async () => {
-                        let { default: e } = await Promise.all([n.e('93382'), n.e('79477'), n.e('38109')]).then(n.bind(n, 60594));
+                        let { default: e } = await Promise.all([n.e('93382'), n.e('79477'), n.e('8211')]).then(n.bind(n, 60594));
                         return (t) =>
                             (0, i.jsx)(e, {
                                 ...t,
@@ -56,7 +56,7 @@ function f(e) {
                     }, u);
                 },
                 onDismissClick: () => {
-                    m('dismiss');
+                    f('dismiss');
                 }
             };
         }
@@ -78,7 +78,7 @@ function f(e) {
                     r ? l.Z.setInputLocked(!1, (0, o.QF)()) : l.Z.setInstanceLocked(!1);
                     let d = r ? { contextKey: s.u1M } : void 0;
                     (0, s.ZDy)(async () => {
-                        let { default: e } = await Promise.all([n.e('93382'), n.e('79477'), n.e('38109')]).then(n.bind(n, 60594));
+                        let { default: e } = await Promise.all([n.e('93382'), n.e('79477'), n.e('8211')]).then(n.bind(n, 60594));
                         return (t) =>
                             (0, i.jsx)(e, {
                                 ...t,

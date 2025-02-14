@@ -30,8 +30,8 @@ var i,
     a = n(243814),
     s = n(544891),
     o = n(63023),
-    c = n(433517),
-    d = n(904245),
+    d = n(433517),
+    c = n(904245),
     u = n(155268),
     h = n(812206),
     m = n(454585),
@@ -47,9 +47,9 @@ var i,
     T = n(158776),
     S = n(594174),
     A = n(979651),
-    b = n(70956),
-    Z = n(5192),
-    x = n(226951),
+    Z = n(70956),
+    x = n(5192),
+    b = n(226951),
     L = n(591759),
     y = n(996106),
     O = n(863141),
@@ -63,9 +63,9 @@ let j = null !== (l = null === (i = L.Z.toURLSafe(window.GLOBAL_ENV.API_ENDPOINT
             n = t[t.length - 1];
         return /^\d+$/.test(n) ? e : t.slice(-2).join('.');
     })(),
-    w = new RegExp('^'.concat(x.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(x.Z.escape(D), '|discordapp.com|discord.com)$')),
-    k = 1 * b.Z.Millis.MINUTE,
-    M = {};
+    w = new RegExp('^'.concat(b.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(b.Z.escape(D), '|discordapp.com|discord.com)$')),
+    M = 1 * Z.Z.Millis.MINUTE,
+    k = {};
 function U(e) {
     return 'customEmoji' === e.type && (e.type = 'emoji'), 'emoji' === e.type && e.src && (e.src = G(e.src)), Array.isArray(e.content) && (e.content = e.content.map(U)), e;
 }
@@ -90,7 +90,7 @@ function V(e, t) {
             n.push(
                 new Promise((t) => {
                     v.Z.whenReady(e.id, () => t()),
-                        d.Z.fetchMessages({
+                        c.Z.fetchMessages({
                             channelId: e.id,
                             limit: R.AQB
                         });
@@ -143,13 +143,13 @@ function H(e) {
 }
 function F(e, t, n) {
     let { mute: i, deaf: l, selfMute: r, selfDeaf: a, suppress: s, userId: o } = n,
-        c = S.default.getUser(o);
-    if (null == c) throw Error('Invalid user id: '.concat(o));
+        d = S.default.getUser(o);
+    if (null == d) throw Error('Invalid user id: '.concat(o));
     return {
-        nick: Z.ZP.getName(e, t, c),
-        mute: N.Z.isLocalMute(c.id),
-        volume: N.Z.getLocalVolume(c.id),
-        pan: N.Z.getLocalPan(c.id),
+        nick: x.ZP.getName(e, t, d),
+        mute: N.Z.isLocalMute(d.id),
+        volume: N.Z.getLocalVolume(d.id),
+        pan: N.Z.getLocalPan(d.id),
         voice_state: {
             mute: i,
             deaf: l,
@@ -157,7 +157,7 @@ function F(e, t, n) {
             self_deaf: a,
             suppress: s
         },
-        user: (0, O.Z)(c)
+        user: (0, O.Z)(d)
     };
 }
 function z(e, t) {
@@ -215,7 +215,7 @@ function X(e) {
     n && (r |= R.xjy.INSTANCE), (null == i ? void 0 : i.join) != null && (r |= R.xjy.JOIN);
     let a = g.cP.getSetting(),
         s = g.Ou.getSetting();
-    return t ? ((r |= R.xjy.EMBEDDED), a && (r |= R.xjy.PARTY_PRIVACY_FRIENDS), s && (r |= R.xjy.PARTY_PRIVACY_VOICE_CHANNEL)) : ((null == l ? void 0 : l.privacy) === R.RYY.PUBLIC || c.K.get('ACTIVITIES_FORCE_PUBLIC')) && (a && (r |= R.xjy.PARTY_PRIVACY_FRIENDS), s && (r |= R.xjy.PARTY_PRIVACY_VOICE_CHANNEL)), r;
+    return t ? ((r |= R.xjy.EMBEDDED), a && (r |= R.xjy.PARTY_PRIVACY_FRIENDS), s && (r |= R.xjy.PARTY_PRIVACY_VOICE_CHANNEL)) : ((null == l ? void 0 : l.privacy) === R.RYY.PUBLIC || d.K.get('ACTIVITIES_FORCE_PUBLIC')) && (a && (r |= R.xjy.PARTY_PRIVACY_FRIENDS), s && (r |= R.xjy.PARTY_PRIVACY_VOICE_CHANNEL)), r;
 }
 function Q(e, t, n) {
     return e === R.mFx.JOIN && null != t && null != t.id && null != n.join;
@@ -260,8 +260,8 @@ async function $(e, t, n) {
     };
 }
 async function ee(e, t) {
-    let n = M[e];
-    null == n && ((n = new o.Z(t ? 2 : 60, k)), (M[e] = n)), await n.process();
+    let n = k[e];
+    null == n && ((n = new o.Z(t ? 2 : 60, M)), (k[e] = n)), await n.process();
 }
 function et(e, t) {
     null == t && (e.authorization.scopes = [P.lH]);

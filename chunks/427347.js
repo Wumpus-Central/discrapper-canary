@@ -6,8 +6,8 @@ var l = n(704215),
     a = n(230711),
     s = n(100527),
     o = n(906732),
-    c = n(605236),
-    d = n(314910),
+    d = n(605236),
+    c = n(314910),
     u = n(378364),
     h = n(197344),
     m = n(226625),
@@ -18,16 +18,16 @@ var l = n(704215),
 function E(e) {
     let { dismissibleContent: t } = e,
         n = h.Z.useIsEligible(),
-        u = (0, c.wE)(t),
+        u = (0, d.wE)(t),
         { analyticsLocations: E } = (0, o.ZP)(s.Z.HOLIDAY_COACHMARK),
         I = (e) => {
-            (0, c.EW)(l.z.HOLIDAY_COACHMARK_HALLOWEEN_2024, { dismissAction: e });
+            (0, d.EW)(l.z.HOLIDAY_COACHMARK_HALLOWEEN_2024, { dismissAction: e });
         },
         C = () => {
             a.Z.open(p.oAB.NOTIFICATIONS, null, { analyticsLocations: E }), I(g.L.SECONDARY);
         };
     return n && !u
-        ? (0, i.jsx)(d.ZP, {
+        ? (0, i.jsx)(c.ZP, {
               children: (0, i.jsxs)('div', {
                   className: f.wrapper,
                   children: [

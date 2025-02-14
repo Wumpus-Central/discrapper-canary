@@ -1,22 +1,22 @@
 n.d(t, { Z: () => p }), n(47120), n(724458), n(653041);
 var i = n(200651),
     s = n(192379),
-    l = n(442837),
-    r = n(481060),
+    r = n(442837),
+    l = n(481060),
     a = n(313201),
     o = n(993413),
     c = n(594174),
     d = n(931240),
     u = n(353093),
-    h = n(170871),
-    m = n(981631),
+    m = n(170871),
+    h = n(981631),
     g = n(388032),
     x = n(197171);
 let _ = (0, a.hQ)(),
     p = s.memo(function (e) {
         let { availableClans: t } = e,
             n = s.useMemo(() => new Map(t.map((e) => [e.id, e])), [t]),
-            a = (0, l.e7)([c.default], () => {
+            a = (0, r.e7)([c.default], () => {
                 var e;
                 return (0, u.Pb)(null === (e = c.default.getCurrentUser()) || void 0 === e ? void 0 : e.primaryGuild).guildId;
             }),
@@ -39,17 +39,17 @@ let _ = (0, a.hQ)(),
                 (e) => {
                     var t, s;
                     if (null == e) return null;
-                    let l = n.get(e.value);
-                    if (null == l) return null;
-                    let r = null === (t = l.profile) || void 0 === t ? void 0 : t.tag;
-                    return null == r
+                    let r = n.get(e.value);
+                    if (null == r) return null;
+                    let l = null === (t = r.profile) || void 0 === t ? void 0 : t.tag;
+                    return null == l
                         ? null
-                        : (0, i.jsx)(h.Z, {
-                              clanTag: r,
-                              clanBadge: null === (s = l.profile) || void 0 === s ? void 0 : s.badge,
-                              guildId: l.id,
+                        : (0, i.jsx)(m.Z, {
+                              clanTag: l,
+                              clanBadge: null === (s = r.profile) || void 0 === s ? void 0 : s.badge,
+                              guildId: r.id,
                               guildName: e.label,
-                              guildIcon: l.icon,
+                              guildIcon: r.icon,
                               guildIconSize: 32
                           });
                 },
@@ -62,29 +62,29 @@ let _ = (0, a.hQ)(),
                 },
                 [E]
             ),
-            N = s.useCallback((e) => (0, d.nE)(e, !0, m.Sbl.USER_SETTINGS), []),
-            f = s.useCallback((e) => e === a, [a]),
-            I = s.useCallback((e) => e, []),
-            T = s.useCallback(() => (0, d.nE)(null, !1), []);
+            f = s.useCallback((e) => (0, d.nE)(e, !0, h.Sbl.USER_SETTINGS), []),
+            T = s.useCallback((e) => e === a, [a]),
+            N = s.useCallback((e) => e, []),
+            S = s.useCallback(() => (0, d.nE)(null, !1), []);
         return (0, i.jsxs)(o.Z, {
             title: g.intl.string(g.t.umdfaG),
             titleId: _,
             children: [
-                (0, i.jsx)(r.Text, {
+                (0, i.jsx)(l.Text, {
                     className: x.subtitle,
                     variant: 'text-sm/normal',
                     children: g.intl.string(g.t.Mrf7fX)
                 }),
-                (0, i.jsx)(r.PhF, {
+                (0, i.jsx)(l.PhF, {
                     className: x.select,
                     optionClassName: x.selectPopout,
-                    isSelected: f,
+                    isSelected: T,
                     options: p,
-                    select: N,
+                    select: f,
                     renderOptionValue: C,
                     renderOptionLabel: E,
-                    serialize: I,
-                    clear: T,
+                    serialize: N,
+                    clear: S,
                     clearable: null != a
                 })
             ]

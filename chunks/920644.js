@@ -6,20 +6,20 @@ var l = n(990547),
     a = n(313201),
     s = n(703656),
     o = n(63063),
-    c = n(758119),
-    d = n(981631),
+    d = n(758119),
+    c = n(981631),
     u = n(388032),
     h = n(682042);
 function m() {
-    (0, c.qV)(), (0, s.uL)(d.Z5c.LOGIN);
+    (0, d.qV)(), (0, s.uL)(c.Z5c.LOGIN);
 }
 function p(e) {
     let { underageMessage: t, transitionState: s } = e,
-        c = (0, a.Dt)();
+        d = (0, a.Dt)();
     return (0, i.jsxs)(r.Y0X, {
         transitionState: s,
         size: r.CgR.SMALL,
-        'aria-labelledby': c,
+        'aria-labelledby': d,
         impression: {
             impressionName: l.ImpressionNames.USER_AGE_GATE_UNDERAGE,
             impressionProperties: { existing_user: !0 }
@@ -37,7 +37,7 @@ function p(e) {
                         (0, i.jsx)(r.X6q, {
                             variant: 'heading-xl/semibold',
                             className: h.title,
-                            id: c,
+                            id: d,
                             children: u.intl.string(u.t['NR/zrK'])
                         }),
                         (0, i.jsx)(r.Text, {
@@ -46,7 +46,7 @@ function p(e) {
                             variant: 'text-sm/normal',
                             children: u.intl.format(u.t.b0QzXV, {
                                 underageMessage: null != t ? t : u.intl.string(u.t.WqEH4O),
-                                helpURL: o.Z.getArticleURL(d.BhN.AGE_GATE)
+                                helpURL: o.Z.getArticleURL(c.BhN.AGE_GATE)
                             })
                         }),
                         (0, i.jsx)(r.Text, {

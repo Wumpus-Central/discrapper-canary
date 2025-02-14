@@ -1,38 +1,38 @@
 n.d(t, { Z: () => E }), n(47120);
 var i = n(200651),
     s = n(192379),
-    l = n(442837),
-    r = n(481060),
+    r = n(442837),
+    l = n(481060),
     a = n(570140),
     o = n(2052),
     c = n(932724),
     d = n(716161),
     u = n(672339),
-    h = n(747545),
-    m = n(131951),
+    m = n(747545),
+    h = n(131951),
     g = n(594174),
     x = n(981631),
     _ = n(388032),
     p = n(130529);
 function E(e) {
     let { previewEnabled: t, onEnablePreview: n, onCancelPreview: E } = e,
-        C = m.Z.getCameraComponent(),
-        [N, f] = s.useState((0, c.P)(g.default.getCurrentUser())),
-        I = s.useRef(!1),
-        T = s.useRef(N),
-        S = (0, o.O)(),
-        j = (0, l.e7)([m.Z], () => m.Z.isVideoAvailable());
+        C = h.Z.getCameraComponent(),
+        [f, T] = s.useState((0, c.P)(g.default.getCurrentUser())),
+        N = s.useRef(!1),
+        S = s.useRef(f),
+        I = (0, o.O)(),
+        b = (0, r.e7)([h.Z], () => h.Z.isVideoAvailable());
     return (
         s.useEffect(
             () => () => {
-                I.current && a.Z.wait(() => (0, d.Up)(T.current));
+                N.current && a.Z.wait(() => (0, d.Up)(S.current));
             },
             []
         ),
-        (0, i.jsx)(h.Z, {
-            selectedBackgroundOption: N,
+        (0, i.jsx)(m.Z, {
+            selectedBackgroundOption: f,
             onSelectBackgroundOption: (e) => {
-                (I.current = !0), (T.current = e), f(e), (0, u.wG)(e, { location: S.location }).catch(x.dG4);
+                (N.current = !0), (S.current = e), T(e), (0, u.wG)(e, { location: I.location }).catch(x.dG4);
             },
             onCancelPreview: E,
             renderCamera: (e) =>
@@ -48,7 +48,7 @@ function E(e) {
                                       height: 218,
                                       disabled: !t
                                   }),
-                                  (0, i.jsx)(h.S, {})
+                                  (0, i.jsx)(m.S, {})
                               ]
                           })
                       })
@@ -56,13 +56,13 @@ function E(e) {
                           className: p.cameraWrapper,
                           children: [
                               (0, i.jsx)('div', { className: p.previewImage }),
-                              (0, i.jsx)(r.ua7, {
-                                  text: j ? null : _.intl.string(_.t['8jSzSU']),
+                              (0, i.jsx)(l.ua7, {
+                                  text: b ? null : _.intl.string(_.t['8jSzSU']),
                                   children: (e) =>
-                                      (0, i.jsx)(r.zxk, {
+                                      (0, i.jsx)(l.zxk, {
                                           ...e,
                                           onClick: n,
-                                          disabled: !j,
+                                          disabled: !b,
                                           children: _.intl.string(_.t.JIf4v7)
                                       })
                               })

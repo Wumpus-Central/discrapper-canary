@@ -5,8 +5,8 @@ var i = n(392711),
     a = n(755264),
     s = n(315341),
     o = n(262847),
-    c = n(675478),
-    d = n(581883),
+    d = n(675478),
+    c = n(581883),
     u = n(526761);
 let h = {
     init() {
@@ -14,10 +14,10 @@ let h = {
     }
 };
 function m() {
-    let e = d.Z.getFullState(),
+    let e = c.Z.getFullState(),
         t = e[u.yP.PRELOADED_USER_SETTINGS];
-    t.editInfo.triggeredMigrations && c.hW.markDirtyFromMigration(t.proto, t.editInfo.cleanupFuncs),
-        l().forEach(c.aj, (t, n) => {
+    t.editInfo.triggeredMigrations && d.hW.markDirtyFromMigration(t.proto, t.editInfo.cleanupFuncs),
+        l().forEach(d.aj, (t, n) => {
             let i = e[Number(n)];
             null != i.editInfo.offlineEditDataVersion && null != i.editInfo.protoToSave && t.scheduleSaveFromOfflineEdit();
         });
@@ -28,19 +28,19 @@ function p(e) {
         delaySeconds: i,
         jitter: l
     } = e;
-    c.aj[n].markDirty(t, {
+    d.aj[n].markDirty(t, {
         delaySeconds: i,
         jitter: l
     });
 }
 function g(e) {
     let { settingsType: t } = e;
-    c.aj[t].loadIfNecessary();
+    d.aj[t].loadIfNecessary();
 }
 function _(e) {
     let { state: t } = e;
     ('inactive' === t || 'background' === t) &&
-        l().forEach(c.aj, (e, t) => {
-            null != d.Z.getFullState()[Number(t)].editInfo.timeout && (e.logger.log('Triggering persistChanges due to AppStateUpdate'), e.persistChanges());
+        l().forEach(d.aj, (e, t) => {
+            null != c.Z.getFullState()[Number(t)].editInfo.timeout && (e.logger.log('Triggering persistChanges due to AppStateUpdate'), e.persistChanges());
         });
 }

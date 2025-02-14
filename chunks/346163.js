@@ -37,8 +37,8 @@ function x(e) {
               creatorRevenuePolicyUrl: a.Z.getArticleURL(h.BhN.CREATOR_POLICY)
           }));
     let D = n && _ && !1 === p,
-        k = n && !1 === x,
-        O = (0, m.f)(),
+        O = n && !1 === x,
+        k = (0, m.f)(),
         P = T && A && _ ? g.intl.format(g.t.wbVIUF, {}) : void 0;
     return (
         i.useEffect(() => {
@@ -59,10 +59,10 @@ function x(e) {
             hasPreviousApplicationRejection: T,
             requestRejectedNoticeText: t,
             reapplyNoticeText: P,
-            showAcceptTermsFlow: k,
-            wasRejectedInV1: k && (R || T),
+            showAcceptTermsFlow: O,
+            wasRejectedInV1: O && (R || T),
             requirementsFinePrintText: L,
-            acceptTermsCheckboxText: O
+            acceptTermsCheckboxText: k
         }
     );
 }

@@ -100,7 +100,7 @@ function S(e) {
                                         size: s.zxk.Sizes.MIN,
                                         onClick: () => {
                                             (0, s.ZDy)(async () => {
-                                                let { default: e } = await Promise.all([i.e('58023'), i.e('48308')]).then(i.bind(i, 779250));
+                                                let { default: e } = await Promise.all([i.e('58023'), i.e('68073')]).then(i.bind(i, 779250));
                                                 return (n) =>
                                                     (0, t.jsx)(e, {
                                                         ...n,

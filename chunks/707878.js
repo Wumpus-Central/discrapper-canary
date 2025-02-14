@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(47120);
+n.d(t, { Z: () => Z }), n(47120);
 var i = n(200651),
     s = n(192379),
     l = n(442837),
@@ -11,9 +11,9 @@ var i = n(200651),
     h = n(981631),
     p = n(388032),
     g = n(788278);
-let f = Object.values(u.wF).map((e) => 100 * e),
-    m = (0, o.hQ)();
-class _ extends s.PureComponent {
+let m = Object.values(u.wF).map((e) => 100 * e),
+    f = (0, o.hQ)();
+class v extends s.PureComponent {
     handleUpdateBackgroundOpacity(e) {
         r.Z.setTextWidgetOpacity((0, c.Z)(e / 100)), r.Z.track(h.rMx.OVERLAY_SETTINGS_UPDATED, { text_opacity_slider: e });
     }
@@ -25,7 +25,7 @@ class _ extends s.PureComponent {
             className: g.container,
             children: [
                 (0, i.jsx)(a.vwX, {
-                    id: m,
+                    id: f,
                     tag: a.RB0.H5,
                     className: g.title,
                     children: p.intl.string(p.t.OVovCQ)
@@ -36,16 +36,16 @@ class _ extends s.PureComponent {
                         mini: !0,
                         initialValue: this.initialValue,
                         defaultValue: this.initialValue,
-                        minValue: f[0],
-                        maxValue: f[f.length - 1],
+                        minValue: m[0],
+                        maxValue: m[m.length - 1],
                         handleSize: 10,
                         onValueChange: this.handleUpdateBackgroundOpacity,
                         asValueChanges: this.handlePreviewBackgroundOpacity,
-                        markers: f,
+                        markers: m,
                         onMarkerRender: h.dG4,
                         equidistant: !0,
                         stickToMarkers: !0,
-                        'aria-labelledby': m
+                        'aria-labelledby': f
                     })
                 })
             ]
@@ -66,4 +66,4 @@ class _ extends s.PureComponent {
                 : (this[t] = n);
     }
 }
-let v = l.ZP.connectStores([d.Z], () => ({ opacity: d.Z.getTextWidgetOpacity() }))(_);
+let Z = l.ZP.connectStores([d.Z], () => ({ opacity: d.Z.getTextWidgetOpacity() }))(v);

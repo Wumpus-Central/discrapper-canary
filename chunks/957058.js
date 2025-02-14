@@ -1,12 +1,12 @@
 n.d(t, { u: () => o });
-var r = n(192379),
-    l = n(557816),
-    i = n.n(l),
+var l = n(192379),
+    r = n(557816),
+    i = n.n(r),
     s = n(597688),
     a = n(228624);
 let o = () => {
     let e = (0, a.ed)('CollectiblesFeedShop');
-    return (0, r.useCallback)(
+    return (0, l.useCallback)(
         (t) =>
             i()(
                 t

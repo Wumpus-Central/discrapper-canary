@@ -6,8 +6,8 @@ var l = n(481060),
     a = n(317770),
     s = n(592125),
     o = n(944486),
-    c = n(914010),
-    d = n(594174),
+    d = n(914010),
+    c = n(594174),
     u = n(758119),
     h = n(920644),
     m = n(208381),
@@ -16,7 +16,7 @@ var l = n(481060),
 function _(e, t) {
     var n;
     if (null == e) return;
-    let i = d.default.getCurrentUser();
+    let i = c.default.getCurrentUser();
     (null === (n = s.Z.getChannel(t)) || void 0 === n ? void 0 : n.isNSFW()) && null != i && null == i.nsfwAllowed && (0, u.mN)(p.L0.NSFW_CHANNEL);
 }
 class f extends a.Z {
@@ -31,7 +31,7 @@ class f extends a.Z {
         _(t, n);
     }
     handleConnectionOpen() {
-        _(c.Z.getGuildId(), o.Z.getChannelId());
+        _(d.Z.getGuildId(), o.Z.getChannelId());
     }
     handleAgeGateModalOpen(e) {
         let { source: t } = e;

@@ -16,8 +16,8 @@ var i = n(200651),
     f = n(594174),
     x = n(630388),
     C = n(74538),
-    v = n(833803),
-    E = n(566006),
+    E = n(833803),
+    v = n(566006),
     I = n(981631),
     N = n(185923),
     S = n(474936),
@@ -42,14 +42,14 @@ class y extends l.Component {
         let { type: e, message: t, className: n, children: l, useChatFontScaling: a, tabIndex: s = 0 } = this.props,
             { isReactionPickerActive: o } = this.state,
             c = t.state === I.yb.SENDING,
-            _ = e === E.O.BURST;
+            _ = e === v.O.BURST;
         if (c || (0, x.yE)(t.flags, I.iLy.EPHEMERAL)) return null;
         let h = f.default.getCurrentUser(),
             p = (0, C.I5)(h),
             g = _ ? T.intl.string(T.t.Kfcszs) : T.intl.string(T.t.lfIHs7);
         !p && _ && (g = (0, i.jsx)(m.X, { tooltipText: T.intl.string(T.t.Kfcszs) }));
         let S = a ? A : b,
-            { canShowImprovedReactionButton: j } = v.Z.getCurrentConfig({ location: 'ButtonAddReaction' }, { autoTrackExposure: !this.props.isForumToolbar }),
+            { canShowImprovedReactionButton: j } = E.Z.getCurrentConfig({ location: 'ButtonAddReaction' }, { autoTrackExposure: !this.props.isForumToolbar }),
             y = {
                 size: 'sm',
                 color: 'currentColor',
@@ -104,7 +104,7 @@ class y extends l.Component {
                 let { type: t, channel: n } = this.props;
                 e.stopPropagation();
                 let i = f.default.getCurrentUser();
-                t !== E.O.BURST ||
+                t !== v.O.BURST ||
                     (0, C.I5)(i) ||
                     (0, _.m)({
                         analytics: {
@@ -121,7 +121,7 @@ class y extends l.Component {
                     { type: n, channel: l, message: a } = this.props,
                     r = {
                         openPopoutType: 'message_reaction_emoji_picker',
-                        ...(n === E.O.BURST && {
+                        ...(n === v.O.BURST && {
                             openPopoutType: 'message_super_reaction_emoji_picker',
                             page: null != l.getGuildId() ? I.ZY5.GUILD_CHANNEL : I.ZY5.DM_CHANNEL,
                             section: (0, p.s4)(l),

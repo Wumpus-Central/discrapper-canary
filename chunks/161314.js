@@ -16,8 +16,8 @@ var i = n(200651),
     f = n(430824),
     x = n(626135),
     C = n(76535),
-    v = n(866104),
-    E = n(886176),
+    E = n(866104),
+    v = n(886176),
     I = n(981631),
     N = n(388032),
     S = n(535152);
@@ -49,12 +49,12 @@ function T(e) {
           : (0, i.jsxs)('div', {
                 className: S.guildShopEmbed,
                 children: [
-                    (0, i.jsx)(v.Z, { coverImageAsset: null !== (t = b.cover_image_asset) && void 0 !== t ? t : null }),
+                    (0, i.jsx)(E.Z, { coverImageAsset: null !== (t = b.cover_image_asset) && void 0 !== t ? t : null }),
                     (0, i.jsx)(d.LZC, { size: 16 }),
                     (0, i.jsxs)('div', {
                         className: S.serverShopLabel,
                         children: [
-                            (0, i.jsx)(E.Z, {
+                            (0, i.jsx)(v.Z, {
                                 height: '16px',
                                 width: '16px',
                                 color: o.Z.INTERACTIVE_NORMAL
@@ -113,7 +113,7 @@ function T(e) {
                                 children: (0, i.jsxs)('div', {
                                     className: S.guildShopEmbedCtaContent,
                                     children: [
-                                        (0, i.jsx)(E.Z, {
+                                        (0, i.jsx)(v.Z, {
                                             height: '18px',
                                             width: '18px'
                                         }),

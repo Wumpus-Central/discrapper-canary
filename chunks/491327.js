@@ -5,8 +5,8 @@ var i = n(392711),
     a = n(447543),
     s = n(287734),
     o = n(703656),
-    c = n(131704),
-    d = n(592125),
+    d = n(131704),
+    c = n(592125),
     u = n(430824),
     h = n(496675),
     m = n(944486),
@@ -28,7 +28,7 @@ let v = {
                     args: { channel_id: t },
                     socket: n
                 } = e,
-                i = d.Z.getChannel(t);
+                i = c.Z.getChannel(t);
             if (null == i) throw new _.Z({ errorCode: N.lTL.INVALID_CHANNEL }, 'Invalid channel id: '.concat(t));
             if (i.isPrivate()) {
                 let e = n.authorization.scopes;
@@ -43,7 +43,7 @@ let v = {
             let {
                     args: { guild_id: t }
                 } = e,
-                n = l().values(d.Z.loadAllGuildAndPrivateChannelsFromDisk());
+                n = l().values(c.Z.loadAllGuildAndPrivateChannelsFromDisk());
             if (t) {
                 let e = u.Z.getGuild(t);
                 if (null == e) throw new _.Z({ errorCode: N.lTL.INVALID_GUILD }, 'Invalid guild id: '.concat(t));
@@ -97,13 +97,13 @@ let v = {
             let E = m.Z.getVoiceChannelId();
             if (null != E && E !== i && !1 === r) throw new _.Z({ errorCode: N.lTL.SELECT_VOICE_FORCE_REQUIRED }, 'User is already joined to a voice channel.');
             return t
-                .storeWait(n, () => d.Z.getChannel(i), l)
+                .storeWait(n, () => c.Z.getChannel(i), l)
                 .catch(() => {
                     throw new _.Z({ errorCode: N.lTL.SELECT_CHANNEL_TIMED_OUT }, 'Request to select voice channel timed out.');
                 })
                 .then((e) => {
                     if (null == e) throw new _.Z({ errorCode: N.lTL.INVALID_CHANNEL }, 'Invalid channel id: '.concat(i));
-                    if (!(0, c.vd)(e.type)) throw new _.Z({ errorCode: N.lTL.INVALID_CHANNEL }, 'Channel is not a voice channel');
+                    if (!(0, d.vd)(e.type)) throw new _.Z({ errorCode: N.lTL.INVALID_CHANNEL }, 'Channel is not a voice channel');
                     return Promise.all([Promise.resolve(e), (0, f.T5)(e, (0, f.zM)(e, n.application.id, n.authorization.scopes))]);
                 })
                 .then((e) => {
@@ -123,7 +123,7 @@ let v = {
         handler(e) {
             let { socket: t } = e,
                 n = m.Z.getVoiceChannelId(),
-                i = null != n ? d.Z.getChannel(n) : null;
+                i = null != n ? c.Z.getChannel(n) : null;
             return null != i ? (0, f.T5)(i, (0, f.zM)(i, t.application.id, t.authorization.scopes)) : null;
         }
     },
@@ -144,13 +144,13 @@ let v = {
             } = e;
             return i
                 ? t
-                      .storeWait(n, () => d.Z.getChannel(i), l)
+                      .storeWait(n, () => c.Z.getChannel(i), l)
                       .catch(() => {
                           throw new _.Z({ errorCode: N.lTL.SELECT_CHANNEL_TIMED_OUT }, 'Request to select text channel timed out.');
                       })
                       .then((e) => {
                           if (null == e) throw new _.Z({ errorCode: N.lTL.INVALID_CHANNEL }, 'Invalid channel id: '.concat(i));
-                          if (!(0, c.Qm)(e.type)) throw new _.Z({ errorCode: N.lTL.INVALID_CHANNEL }, 'Channel is not a text channel');
+                          if (!(0, d.Qm)(e.type)) throw new _.Z({ errorCode: N.lTL.INVALID_CHANNEL }, 'Channel is not a text channel');
                           return Promise.all([Promise.resolve(e), (0, f.T5)(e, (0, f.zM)(e, n.application.id, n.authorization.scopes))]);
                       })
                       .then((e) => {

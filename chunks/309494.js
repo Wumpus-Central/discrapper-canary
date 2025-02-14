@@ -6,20 +6,20 @@ var l = n(120356),
     a = n(481060),
     s = n(320161),
     o = n(572004),
-    c = n(51144),
-    d = n(785717),
+    d = n(51144),
+    c = n(785717),
     u = n(475413),
     h = n(388032),
     m = n(254924);
 function p(e) {
     let { user: t, isHovering: n } = e,
-        { trackUserProfileAction: l } = (0, d.KZ)();
+        { trackUserProfileAction: l } = (0, c.KZ)();
     return o.wS
         ? (0, i.jsx)(s.Z, {
               text: h.intl.string(h.t.y5MwJy),
               delay: 0,
               'aria-label': !1,
-              copyValue: c.ZP.getUserTag(t, {
+              copyValue: d.ZP.getUserTag(t, {
                   decoration: 'never',
                   identifiable: 'always'
               }),

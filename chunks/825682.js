@@ -6,13 +6,13 @@ var l = n(468363),
     a = n(956221),
     s = n(771173),
     o = n(372276),
-    c = n(565640),
-    d = n(51144),
+    d = n(565640),
+    c = n(51144),
     u = n(388032),
     h = n(116324);
 let m = function (e) {
     let { hovered: t, activities: n, applicationStream: m, status: p, user: g, userIgnored: _ } = e,
-        f = (0, c.Z)(null == g ? void 0 : g.id, 'StatusText'),
+        f = (0, d.Z)(null == g ? void 0 : g.id, 'StatusText'),
         { voiceActivityStatusEnabled: E } = (0, l.U)({ location: 'StatusText' }),
         { voiceChannel: I } = (0, a.Z)({ userId: null == g ? void 0 : g.id }),
         C = E ? I : void 0;
@@ -45,6 +45,6 @@ let m = function (e) {
               })
             : (0, i.jsx)('div', {
                   className: h.text,
-                  children: (0, d.u5)(p)
+                  children: (0, c.u5)(p)
               });
 };

@@ -5,8 +5,8 @@ var i = n(200651),
     a = n(194359),
     s = n(906732),
     o = n(171368),
-    c = n(626135),
-    d = n(321488),
+    d = n(626135),
+    c = n(321488),
     u = n(417183),
     h = n(170245),
     m = n(981631),
@@ -14,7 +14,7 @@ var i = n(200651),
     g = n(821583);
 function _(e) {
     let { user: t, key: n, isFocused: _ } = e,
-        f = l.useContext(c.AnalyticsContext),
+        f = l.useContext(d.AnalyticsContext),
         { analyticsLocations: E } = (0, s.ZP)(),
         I = (e) => {
             e.stopPropagation(), a.Z.unblockUser(t.id, { location: 'Friends' });
@@ -40,9 +40,9 @@ function _(e) {
                             status: m.Skl.UNKNOWN,
                             subText: p.intl.string(p.t['4bDptL'])
                         }),
-                        (0, i.jsx)(d.Z, {
+                        (0, i.jsx)(c.Z, {
                             icon: r.I9k,
-                            actionType: d.Z.ActionTypes.DENY,
+                            actionType: c.Z.ActionTypes.DENY,
                             tooltip: p.intl.string(p.t.XyHpKC),
                             onClick: I,
                             shouldHighlight: e

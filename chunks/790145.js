@@ -1,22 +1,22 @@
-t.d(n, { Z: () => o });
-var i = t(200651);
-t(192379);
-var r = t(120356),
-    s = t.n(r),
-    l = t(92280);
-let o = (e) => {
-    let { value: n = 0, text: t, className: r, lowImportance: o, ...a } = e;
-    return null != t
+n.d(t, { Z: () => a });
+var i = n(200651);
+n(192379);
+var s = n(120356),
+    r = n.n(s),
+    l = n(92280);
+let a = (e) => {
+    let { value: t = 0, text: n, className: s, lowImportance: a, ...o } = e;
+    return null != n
         ? (0, i.jsx)('div', {
-              className: s()(l.wrapper, r, o && l.lowImportance),
-              ...a,
-              children: t
+              className: r()(l.wrapper, s, a && l.lowImportance),
+              ...o,
+              children: n
           })
-        : n > 0
+        : t > 0
           ? (0, i.jsx)('div', {
-                className: s()(l.wrapper, r, o && l.lowImportance),
-                ...a,
-                children: n
+                className: r()(l.wrapper, s, a && l.lowImportance),
+                ...o,
+                children: t
             })
           : null;
 };

@@ -2,8 +2,8 @@ n.d(t, { Z: () => E }), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    o = n.n(r),
-    a = n(642128),
+    a = n.n(r),
+    o = n(642128),
     s = n(866442),
     c = n(442837),
     d = n(477690),
@@ -23,8 +23,8 @@ let I = (0, f.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
 function S(e) {
     let { guildId: t, animate: n, index: l } = e,
         r = (0, c.e7)([g.Z], () => g.Z.getGuild(t), [t]),
-        o = (0, p.Q3)('GuildIcon'),
-        a = (0, u.dQu)(u.TVs.modules.guildbar.AVATAR_SIZE);
+        a = (0, p.Q3)('GuildIcon'),
+        o = (0, u.dQu)(u.TVs.modules.guildbar.AVATAR_SIZE);
     return null == r
         ? (0, i.jsx)('div', {
               className: x.guildIconUnavailable,
@@ -33,18 +33,18 @@ function S(e) {
         : (0, i.jsx)(m.Z, {
               guild: r,
               animate: n,
-              size: o ? m.Z.Sizes.MINI : m.Z.Sizes.SMOL,
-              iconSize: o ? a : void 0,
-              lossless: o,
+              size: a ? m.Z.Sizes.MINI : m.Z.Sizes.SMOL,
+              iconSize: a ? o : void 0,
+              lossless: a,
               className: x.guildIcon,
               tabIndex: -1,
-              style: o ? { borderRadius: b[l] } : void 0
+              style: a ? { borderRadius: b[l] } : void 0
           });
 }
 function N(e) {
     let t,
         n,
-        { folderNode: r, hovered: o, expanded: c } = e,
+        { folderNode: r, hovered: a, expanded: c } = e,
         d = (0, p.Q3)('FolderIconContent'),
         { color: h, children: m } = r,
         g = null != h ? h : v.Wyy,
@@ -68,7 +68,7 @@ function N(e) {
         ),
         T = C ? y : void 0;
     (C || N) &&
-        (t = (0, i.jsx)(a.animated.div, {
+        (t = (0, i.jsx)(o.animated.div, {
             style: T,
             className: x.expandedFolderIconWrapper,
             children: (0, i.jsx)(u.ROc, {
@@ -78,7 +78,7 @@ function N(e) {
             })
         })),
         (C || !N) &&
-            (n = (0, i.jsx)(a.animated.div, {
+            (n = (0, i.jsx)(o.animated.div, {
                 style: T,
                 className: x.closedFolderIconWrapper,
                 children: _.slice(0, 4).map((e, t) =>
@@ -87,7 +87,7 @@ function N(e) {
                         {
                             index: t,
                             guildId: e,
-                            animate: o
+                            animate: a
                         },
                         e
                     )
@@ -106,7 +106,7 @@ function E(e) {
             folderNode: t,
             forceCircular: n,
             expanded: r,
-            sorting: a,
+            sorting: o,
             mediaState: s,
             mentionCount: c = 0,
             isMentionLowImportance: d,
@@ -122,11 +122,11 @@ function E(e) {
         } = e,
         [y, T] = l.useState(!1),
         A = l.useCallback(() => {
-            a || T(!0), null == b || b(!0);
-        }, [a, b]),
+            o || T(!0), null == b || b(!0);
+        }, [o, b]),
         P = l.useCallback(() => {
-            a || T(!1), null == b || b(!1);
-        }, [a, b]),
+            o || T(!1), null == b || b(!1);
+        }, [o, b]),
         R = (0, p.Q3)('FolderHeader'),
         w = r || null == s ? null : (0, _.Or)(s),
         L = !r && c > 0 ? (0, _.Ne)(c, d ? h.Z.BACKGROUND_ACCENT : h.Z.STATUS_DANGER) : null,
@@ -144,7 +144,7 @@ function E(e) {
         lowerBadge: L,
         lowerBadgeSize: { width: (0, u.OVM)(c) },
         children: (0, i.jsx)(u.P3F, {
-            className: o()(x.folder, { [x.hover]: y }),
+            className: a()(x.folder, { [x.hover]: y }),
             onClick: I,
             onContextMenu: Z,
             onMouseEnter: A,
@@ -163,7 +163,7 @@ function E(e) {
             children:
                 null != v
                     ? (0, i.jsx)('div', {
-                          className: o()(x.expandedFolderIconWrapper, f),
+                          className: a()(x.expandedFolderIconWrapper, f),
                           children: v
                       })
                     : (0, i.jsx)(N, {

@@ -3,16 +3,16 @@ var i = n(200651);
 n(192379);
 var l = n(442837),
     r = n(481060),
-    o = n(540059),
-    a = n(594174),
+    a = n(540059),
+    o = n(594174),
     s = n(74538),
     c = n(327943),
     d = n(997945),
     u = n(630117),
     h = n(441319);
 function p() {
-    let e = (0, o.Q3)('AppIconHome'),
-        [t, n, p] = (0, l.Wu)([a.default, c.Z], () => [c.Z.getCurrentDesktopIcon(), c.Z.isEditorOpen, s.ZP.isPremium(a.default.getCurrentUser())]),
+    let e = (0, a.Q3)('AppIconHome'),
+        [t, n, p] = (0, l.Wu)([o.default, c.Z], () => [c.Z.getCurrentDesktopIcon(), c.Z.isEditorOpen, s.ZP.isPremium(o.default.getCurrentUser())]),
         m = (0, h.aW)(t),
         g = t !== d.aH.DEFAULT && (p || n),
         f = e ? 24 : 30,

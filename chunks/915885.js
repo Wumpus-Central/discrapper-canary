@@ -2,8 +2,8 @@ n.d(t, { Z: () => C });
 var i = n(200651),
     l = n(192379),
     r = n(442837),
-    o = n(704215),
-    a = n(481060),
+    a = n(704215),
+    o = n(481060),
     s = n(566840),
     c = n(693546),
     d = n(826581),
@@ -35,13 +35,13 @@ function C(e) {
     let b = l.useCallback(() => {
             (0, f._X)(t.id);
         }, [t.id]),
-        S = (0, s.XL)(t.id, o.z.MEMBERS_LAUNCH_UPSELL);
+        S = (0, s.XL)(t.id, a.z.MEMBERS_LAUNCH_UPSELL);
     return (0, i.jsx)('div', {
         ref: S,
         children: (0, i.jsx)(m.m, {
             id: 'members-'.concat(t.id),
             renderIcon: (e) =>
-                (0, i.jsx)(a.BFJ, {
+                (0, i.jsx)(o.BFJ, {
                     size: 'md',
                     color: 'currentColor',
                     className: e
@@ -49,7 +49,7 @@ function C(e) {
             text: v.intl.string(v.t.oclz3d),
             selected: n,
             onClick: b,
-            trailing: Z > 0 ? (0, i.jsx)(a.mAB, { count: Z }) : null
+            trailing: Z > 0 ? (0, i.jsx)(o.mAB, { count: Z }) : null
         })
     });
 }

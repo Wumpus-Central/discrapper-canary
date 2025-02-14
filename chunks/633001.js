@@ -57,8 +57,8 @@ let k = {
             pinned: !0
         })
     },
-    I = (e, t) => e.find((e) => e.type === t);
-function R(e) {
+    R = (e, t) => e.find((e) => e.type === t);
+function I(e) {
     let { trackedGame: t } = e,
         n = (0, s.e7)([m.ZP], () => m.ZP.getGameForPID(t.pid)),
         r = (0, s.e7)([g.Z], () => g.Z.getGameForPID(t.pid));
@@ -226,7 +226,7 @@ function O(e) {
     });
 }
 function Z(e) {
-    let t = I(Object.values((0, s.Wu)([b.Z], () => b.Z.getWidgetsForLayout(E.OVERLAY_V3_LAYOUT_ID))), e);
+    let t = R(Object.values((0, s.Wu)([b.Z], () => b.Z.getWidgetsForLayout(E.OVERLAY_V3_LAYOUT_ID))), e);
     return [
         t,
         () => {
@@ -247,7 +247,7 @@ function w() {
         b = (0, s.e7)([f.ZP], () => f.ZP.hasRenderDebugMode(x.G.ClickZones)),
         g = (0, s.e7)([f.ZP], () => f.ZP.hasRenderDebugMode(x.G.WidgetAreas)),
         E = (0, s.e7)([_.default], () => _.default.getForcedRenderMode()),
-        [k, I] = r.useState({}),
+        [k, R] = r.useState({}),
         [w, A] = r.useState(E),
         L = (e) => {
             A(e), u.Z.forceRenderMode(e);
@@ -284,7 +284,7 @@ function w() {
         U = (0, s.e7)([_.default], () => _.default.isOverlayOOPEnabledForPid(F), [F]),
         z = (0, s.e7)([m.ZP], () => m.ZP.getRunningGames());
     r.useEffect(() => {
-        I((e) => {
+        R((e) => {
             for (let t of Object.keys(D)) e[Number(t)] = D[Number(t)];
             return e;
         });
@@ -499,7 +499,7 @@ function w() {
                                             color: 'text-normal',
                                             children: 'No running games'
                                         }),
-                                    Object.values(D).map((e) => (0, a.jsx)(R, { trackedGame: e }, e.pid))
+                                    Object.values(D).map((e) => (0, a.jsx)(I, { trackedGame: e }, e.pid))
                                 ]
                             })
                         })

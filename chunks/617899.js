@@ -5,8 +5,8 @@ var i = n(200651),
     a = n(904245),
     s = n(944486),
     o = n(324262),
-    c = n(981631),
-    d = n(921944),
+    d = n(981631),
+    c = n(921944),
     u = n(388032),
     h = n(589148);
 function m(e, t, n) {
@@ -31,8 +31,8 @@ class p extends l.PureComponent {
             onClick: this.handleInvite,
             message: e,
             cta: u.intl.string(u.t.BN75l5),
-            trackingSource: c.PsQ.INVITE_NOTICE,
-            type: c.vID.INVITE,
+            trackingSource: d.PsQ.INVITE_NOTICE,
+            type: d.vID.INVITE,
             image: h,
             imageMarginX: 46
         });
@@ -42,18 +42,18 @@ class p extends l.PureComponent {
             m(this, 'handleInvite', () => {
                 let { guild: e } = this.props;
                 (0, r.ZDy)(async () => {
-                    let { default: t } = await Promise.all([n.e('7654'), n.e('13942')]).then(n.bind(n, 560114));
+                    let { default: t } = await Promise.all([n.e('7654'), n.e('25586')]).then(n.bind(n, 560114));
                     return (n) =>
                         (0, i.jsx)(t, {
                             ...n,
                             guild: e,
-                            source: c.t4x.INVITE_NOTICE
+                            source: d.t4x.INVITE_NOTICE
                         });
                 });
             }),
             m(this, 'handleClose', () => {
                 let e = s.Z.getChannelId();
-                this.props.markAsDismissed(d.L.UNKNOWN), null != e && a.Z.sendBotMessage(e, u.intl.formatToPlainString(u.t.DEn7np, { invitePeople: u.intl.string(u.t.BN75l5) }));
+                this.props.markAsDismissed(c.L.UNKNOWN), null != e && a.Z.sendBotMessage(e, u.intl.formatToPlainString(u.t.DEn7np, { invitePeople: u.intl.string(u.t.BN75l5) }));
             });
     }
 }

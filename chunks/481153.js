@@ -1,10 +1,10 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => b });
 var i = n(200651),
     r = n(192379),
-    l = n(120356),
-    a = n.n(l),
-    o = n(442837),
-    s = n(481060),
+    a = n(120356),
+    l = n.n(a),
+    s = n(442837),
+    o = n(481060),
     c = n(812206),
     d = n(388905),
     u = n(925329),
@@ -14,13 +14,13 @@ var i = n(200651),
     g = n(509545),
     p = n(55563),
     f = n(296848),
-    E = n(981631),
-    x = n(474936),
+    x = n(981631),
+    E = n(474936),
     I = n(388032),
     v = n(753997),
     C = n(179683),
     N = n(483938);
-let S = o.ZP.connectStores([p.Z, c.Z, g.Z, m.default], (e) => {
+let b = s.ZP.connectStores([p.Z, c.Z, g.Z, m.default], (e) => {
     let { giftCode: t } = e,
         n = p.Z.get(t.skuId),
         { subscriptionPlanId: i } = t;
@@ -31,13 +31,13 @@ let S = o.ZP.connectStores([p.Z, c.Z, g.Z, m.default], (e) => {
         gifter: m.default.getUser(t.userId)
     };
 })((e) => {
-    let { error: t, giftCode: n, gifter: l, sku: o, application: c, subscriptionPlan: m } = e,
-        g = null == l ? I.intl.string(I.t.lTGZAg) : I.intl.formatToPlainString(I.t.TjWdPT, { username: l.username }),
-        p = o.name;
+    let { error: t, giftCode: n, gifter: a, sku: s, application: c, subscriptionPlan: m } = e,
+        g = null == a ? I.intl.string(I.t.lTGZAg) : I.intl.formatToPlainString(I.t.TjWdPT, { username: a.username }),
+        p = s.name;
     return (
         null != m &&
-            (p = I.intl.formatToPlainString(m.interval === x.rV.MONTH ? I.t.CTpcCQ : I.t.rgPWGx, {
-                skuName: o.name,
+            (p = I.intl.formatToPlainString(m.interval === E.rV.MONTH ? I.t.CTpcCQ : I.t.rgPWGx, {
+                skuName: s.name,
                 intervalCount: m.intervalCount
             })),
         (0, i.jsxs)(r.Fragment, {
@@ -49,8 +49,8 @@ let S = o.ZP.connectStores([p.Z, c.Z, g.Z, m.default], (e) => {
                           className: v.seasonalIcon
                       })
                     : (0, i.jsx)(d.qE, {
-                          src: null != l ? l.getAvatarURL(void 0, 100) : null,
-                          size: s.EFr.DEPRECATED_SIZE_100,
+                          src: null != a ? a.getAvatarURL(void 0, 100) : null,
+                          size: o.EFr.DEPRECATED_SIZE_100,
                           className: N.marginBottom20
                       }),
                 null != t
@@ -61,14 +61,14 @@ let S = o.ZP.connectStores([p.Z, c.Z, g.Z, m.default], (e) => {
                           children: [
                               (0, i.jsx)(d.DK, { children: g }),
                               (0, i.jsxs)(d.Dx, {
-                                  className: a()(N.marginTop8, C.flexCenter),
+                                  className: l()(N.marginTop8, C.flexCenter),
                                   children: [
-                                      o.productLine !== E.POd.COLLECTIBLES &&
+                                      s.productLine !== x.POd.COLLECTIBLES &&
                                           (0, i.jsx)(u.Z, {
                                               size: u.Z.Sizes.MEDIUM,
                                               className: v.applicationIcon,
                                               game: c,
-                                              skuId: o.id
+                                              skuId: s.id
                                           }),
                                       p
                                   ]

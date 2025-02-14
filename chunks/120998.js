@@ -5,8 +5,8 @@ var i,
     a = n(392711),
     s = n.n(a),
     o = n(302221),
-    c = n(281642);
-function d(e, t, n) {
+    d = n(281642);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -43,7 +43,7 @@ class u extends (i = r.PureComponent) {
             className: e,
             children: (0, l.jsx)('canvas', {
                 ref: this.canvas,
-                className: c.canvas,
+                className: d.canvas,
                 width: t,
                 height: n
             })
@@ -51,21 +51,21 @@ class u extends (i = r.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            d(this, 'dataChangedAt', void 0),
-            d(this, 'fillColor', void 0),
-            d(this, 'maxValue', void 0),
-            d(this, 'canvas', r.createRef()),
-            d(this, 'animationFrameRequestId', void 0),
-            d(this, 'updateAnimation', (e) => {
+            c(this, 'dataChangedAt', void 0),
+            c(this, 'fillColor', void 0),
+            c(this, 'maxValue', void 0),
+            c(this, 'canvas', r.createRef()),
+            c(this, 'animationFrameRequestId', void 0),
+            c(this, 'updateAnimation', (e) => {
                 let t, n;
                 let i = this.canvas.current;
                 if (null == i) return;
-                let { data: l, updateInterval: r, color: a, numUpdatesToShow: s, lineWidth: c, animate: d, gradientStopColor: u } = this.props;
+                let { data: l, updateInterval: r, color: a, numUpdatesToShow: s, lineWidth: d, animate: c, gradientStopColor: u } = this.props;
                 if (l.length < 2) return;
                 let h = Math.max(Math.min((e - this.dataChangedAt) / r, 1), 0),
                     m = i.getContext('2d'),
                     p = this.maxValue;
-                (m.strokeStyle = a), (m.lineWidth = c);
+                (m.strokeStyle = a), (m.lineWidth = d);
                 let g = i.height - m.lineWidth,
                     _ = m.createLinearGradient(0, 0, 0, g);
                 if (null != u) _.addColorStop(0, u);
@@ -93,9 +93,9 @@ class u extends (i = r.PureComponent) {
                     m.lineTo(C - E, 0),
                     m.lineTo(0, 0),
                     m.fill(),
-                    d && h < 1 && (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation));
+                    c && h < 1 && (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation));
             });
     }
 }
-d(u, 'defaultProps', { animate: !0 });
+c(u, 'defaultProps', { animate: !0 });
 let h = u;

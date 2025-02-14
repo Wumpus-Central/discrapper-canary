@@ -3,13 +3,13 @@ var i = n(200651);
 n(192379);
 var l = n(120356),
     r = n.n(l),
-    o = n(481060),
-    a = n(56508);
+    a = n(481060),
+    o = n(56508);
 function s(e) {
     let { children: t, className: n } = e;
-    return (0, i.jsx)(o.Text, {
+    return (0, i.jsx)(a.Text, {
         color: 'none',
-        className: r()(a.title, n),
+        className: r()(o.title, n),
         variant: 'text-sm/medium',
         children: t
     });

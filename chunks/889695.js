@@ -16,8 +16,8 @@ var i = n(200651),
     f = n(962086),
     x = n(160404),
     C = n(225675),
-    v = n(981631),
-    E = n(388032),
+    E = n(981631),
+    v = n(388032),
     I = n(473022);
 function N(e) {
     var t;
@@ -84,12 +84,12 @@ function S(e) {
             forceRoles: P,
             context: a
         }),
-        c.$e(v.Plq.MANAGE_GUILD, v.Plq.MANAGE_ROLES)
+        c.$e(E.Plq.MANAGE_GUILD, E.Plq.MANAGE_ROLES)
     ) || a.isOwner(n.id))
         ? (0, i.jsx)('div', {
               className: I.container,
               children: (0, i.jsx)(u.hQY, {
-                  placeholder: E.intl.string(E.t.Sojqsr),
+                  placeholder: v.intl.string(v.t.Sojqsr),
                   value: j,
                   onChange: y,
                   autoFocus: !0,
@@ -132,6 +132,6 @@ function S(e) {
           })
         : (0, i.jsx)(u.Text, {
               variant: 'text-md/medium',
-              children: E.intl.string(E.t.MNSTbW)
+              children: v.intl.string(v.t.MNSTbW)
           });
 }

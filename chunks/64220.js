@@ -1,11 +1,11 @@
-n.d(t, { Z: () => d }), n(47120);
+n.d(t, { Z: () => c }), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(481060),
     a = n(921944),
     s = n(388032),
     o = n(369889);
-function c(e) {
+function d(e) {
     let { markAsDismissed: t } = e;
     return (
         l.useEffect(() => {
@@ -32,7 +32,7 @@ function c(e) {
         })
     );
 }
-function d(e) {
+function c(e) {
     let { children: t, markAsDismissed: n } = e,
         [a, s] = l.useState(!1);
     return (
@@ -48,7 +48,7 @@ function d(e) {
             position: 'top',
             align: 'left',
             shouldShow: a,
-            renderPopout: () => (0, i.jsx)(c, { markAsDismissed: n }),
+            renderPopout: () => (0, i.jsx)(d, { markAsDismissed: n }),
             children: t
         })
     );

@@ -1,13 +1,13 @@
-n.d(t, { Z: () => d }), n(47120);
+n.d(t, { Z: () => c }), n(47120);
 var i = n(594174),
     l = n(768581),
     r = n(956664),
     a = n(996106),
     s = n(452426),
     o = n(186901),
-    c = n(981631);
-let d = {
-    [c.Etm.GET_IMAGE]: {
+    d = n(981631);
+let c = {
+    [d.Etm.GET_IMAGE]: {
         scope: o.lH,
         validation: (e) =>
             (0, s.Z)(e)
@@ -21,17 +21,17 @@ let d = {
         handler(e) {
             let t,
                 {
-                    args: { type: n, id: s, format: o = 'png', size: d = 128 }
+                    args: { type: n, id: s, format: o = 'png', size: c = 128 }
                 } = e;
             if ('user' === n) {
                 let e = i.default.getUser(s);
                 if (null != e) {
-                    t = l.ZP.getUserAvatarURL(e, !1, d, o);
+                    t = l.ZP.getUserAvatarURL(e, !1, c, o);
                     let n = window.GLOBAL_ENV.CDN_HOST;
                     null != n && -1 !== t.indexOf(n) && (t += '&_=');
-                } else throw new a.Z({ errorCode: c.lTL.INVALID_USER }, 'Invalid user id: '.concat(s));
+                } else throw new a.Z({ errorCode: d.lTL.INVALID_USER }, 'Invalid user id: '.concat(s));
             }
-            if (null == t) throw new a.Z({ errorCode: c.lTL.INVALID_COMMAND }, 'No valid type.');
+            if (null == t) throw new a.Z({ errorCode: d.lTL.INVALID_COMMAND }, 'No valid type.');
             return fetch(t)
                 .then((e) => e.blob())
                 .then((e) => (0, r.fD)(e))

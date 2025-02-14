@@ -5,17 +5,17 @@ var i,
     a = n(442837),
     s = n(570140),
     o = n(331114),
-    c = n(356164);
-let d = [];
+    d = n(356164);
+let c = [];
 function u() {
-    d = [];
+    c = [];
 }
 class h extends (r = a.ZP.Store) {
     initialize() {
-        this.waitFor(o.Z, c.Z);
+        this.waitFor(o.Z, d.Z);
     }
     getVisibleTabs() {
-        return d;
+        return c;
     }
 }
 (l = 'GlobalDiscoveryServersSearchLayoutStore'),
@@ -34,6 +34,6 @@ let m = new h(s.Z, {
         let { query: t } = e,
             n = o.Z.getCounts(t);
         if (null == n) return !1;
-        d = n;
+        c = n;
     }
 });

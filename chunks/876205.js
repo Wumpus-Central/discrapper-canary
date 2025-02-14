@@ -27,12 +27,12 @@ function p(e) {
         p = (0, r.bWb)().enabled;
     if (null == c || !s) return null;
     let g = d.BB(c.shortcut),
-        f = p ? h[n].new : h[n].legacy,
-        m = t ? f.slash : f.default;
+        m = p ? h[n].new : h[n].legacy,
+        f = t ? m.slash : m.default;
     return (0, i.jsxs)('div', {
         className: u.keybindIndicator,
         children: [
-            (0, i.jsx)(m, {
+            (0, i.jsx)(f, {
                 className: u.keybindIcon,
                 size: 'xs',
                 color: 'currentColor'

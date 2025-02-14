@@ -34,7 +34,7 @@ let a = {
                 },
                 [e]
             ),
-            c = l.useCallback(() => {
+            d = l.useCallback(() => {
                 if (null == t.current) return;
                 let n = 'enable' === e ? 'hover_disabled' : 'hover_enabled';
                 t.current.play(n);
@@ -42,7 +42,7 @@ let a = {
         return {
             events: {
                 onClick: o,
-                onMouseEnter: c,
+                onMouseEnter: d,
                 onMouseLeave: l.useCallback(() => {
                     if (null == t.current) return;
                     let n = 'enable' === e ? 'hover_disabled' : 'hover_enabled';

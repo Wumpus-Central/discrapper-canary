@@ -16,8 +16,8 @@ var i,
     f = n(580130),
     x = n(55563),
     C = n(981631);
-let v = 'DetectedOffPlatformPremiumPerksStore',
-    E = {},
+let E = 'DetectedOffPlatformPremiumPerksStore',
+    v = {},
     I = {},
     N = [];
 function S() {
@@ -35,8 +35,8 @@ function S() {
             continue;
         }
         f.Z.applicationIdsFetching.has(i.id) || f.Z.isEntitledToSku(g.default.getCurrentUser(), t, i.id, i.id) || !l.available
-            ? null != E[t] && (delete E[t], (e = !0))
-            : ((E[t] = {
+            ? null != v[t] && (delete v[t], (e = !0))
+            : ((v[t] = {
                   skuId: t,
                   applicationId: n
               }),
@@ -47,10 +47,10 @@ function S() {
 class T extends (i = o.ZP.Store) {
     initialize() {
         var e;
-        this.waitFor(p.ZP, x.Z, f.Z), (N = null !== (e = c.K.get(v)) && void 0 !== e ? e : N);
+        this.waitFor(p.ZP, x.Z, f.Z), (N = null !== (e = c.K.get(E)) && void 0 !== e ? e : N);
     }
     getDetectedOffPlatformPremiumPerks() {
-        return s().values(E);
+        return s().values(v);
     }
 }
 (a = 'DetectedOffPlatformPremiumPerksStore'),
@@ -64,7 +64,7 @@ class T extends (i = o.ZP.Store) {
         : (T[l] = a);
 let b = new T(d.Z, {
     LOGOUT: function () {
-        (E = {}), (I = {});
+        (v = {}), (I = {});
     },
     SKU_FETCH_SUCCESS: S,
     ENTITLEMENT_FETCH_APPLICATION_SUCCESS: S,
@@ -72,8 +72,8 @@ let b = new T(d.Z, {
     APPLICATION_FETCH_SUCCESS: S,
     DETECTED_OFF_PLATFORM_PREMIUM_PERKS_DISMISS: function (e) {
         let { skuId: t } = e;
-        if ((delete E[t], N.includes(t))) return !1;
-        N.push(t), c.K.set(v, N);
+        if ((delete v[t], N.includes(t))) return !1;
+        N.push(t), c.K.set(E, N);
     },
     RUNNING_GAMES_CHANGE: function () {
         let e = !1;

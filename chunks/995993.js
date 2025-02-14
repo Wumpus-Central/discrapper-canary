@@ -2,8 +2,8 @@ n.d(t, { m: () => S });
 var i = n(200651),
     l = n(192379),
     r = n(399606),
-    o = n(704215),
-    a = n(692547),
+    a = n(704215),
+    o = n(692547),
     s = n(481060),
     c = n(239091),
     d = n(605236),
@@ -23,7 +23,7 @@ var i = n(200651),
 function S(e) {
     let { guild: t, selected: S } = e,
         N = (0, h.Z)(t),
-        E = (0, d.wE)(o.z.CHANNEL_BROWSER_NEW_BADGE_NUX),
+        E = (0, d.wE)(a.z.CHANNEL_BROWSER_NEW_BADGE_NUX),
         j = (0, r.Wu)([p.Z], () => Array.from(p.Z.getNewChannelIds(t.id)).filter((e) => p.Z.shouldIndicateNewChannel(t.id, e))),
         y = (0, r.e7)([g.ZP], () => g.ZP.hasUnread(t.id, I.W.GUILD_ONBOARDING_QUESTION)),
         T = j.length > _.Cb,
@@ -56,7 +56,7 @@ function S(e) {
             S ||
             A ||
             (w = (0, i.jsx)(s.IGR, {
-                color: a.Z.colors.BADGE_BRAND_BG.css,
+                color: o.Z.colors.BADGE_BRAND_BG.css,
                 text: Z.intl.string(Z.t.y2b7CA),
                 className: b.newChannel
             })),

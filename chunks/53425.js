@@ -2,8 +2,8 @@ n.d(t, { Z: () => f });
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    o = n.n(r),
-    a = n(442837),
+    a = n.n(r),
+    o = n(442837),
     s = n(481060),
     c = n(540059),
     d = n(592125),
@@ -16,8 +16,8 @@ let f = l.memo(function (e) {
     let { channel: t, selectedChannel: n, selectedVoiceChannelId: l, sortedThreadIds: r, withGuildIcon: f } = e,
         { density: _ } = (0, s.TCT)(),
         v = (0, c.Q3)('GuildSidebarThreadList'),
-        C = (0, a.Wu)([d.Z], () => r.map((e) => d.Z.getChannel(e)).filter(h.lm), [r]),
-        x = (0, a.e7)([u.ZP], () => {
+        C = (0, o.Wu)([d.Z], () => r.map((e) => d.Z.getChannel(e)).filter(h.lm), [r]),
+        x = (0, o.e7)([u.ZP], () => {
             let e = C[C.length - 1];
             if (null == e) return 0;
             let t = u.ZP.getVoiceStates(e.guild_id)[e.id];
@@ -30,7 +30,7 @@ let f = l.memo(function (e) {
             'aria-label': m.intl.formatToPlainString(m.t.EiyIi4, { channelName: t.name }),
             children: [
                 (0, i.jsx)('div', {
-                    className: o()(g.spineBorder, { [g.spineBorderWithGuildIcon]: f }),
+                    className: a()(g.spineBorder, { [g.spineBorderWithGuildIcon]: f }),
                     style: { bottom: (v && 'cozy' === _ ? 28 : 24) + x }
                 }),
                 C.map((e, t) =>

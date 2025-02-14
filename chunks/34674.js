@@ -12,9 +12,9 @@ n.d(t, {
     n(815648),
     n(47120),
     n(860911);
-var i = n(477690);
+var a = n(477690);
 n(481060);
-var a = n(911969);
+var i = n(911969);
 n(703656);
 var o = n(736408),
     r = n(981631),
@@ -27,11 +27,11 @@ function s() {
     };
 }
 function _(e) {
-    let { itemId: t, hash: n, containerWidth: a = parseFloat(i.Z.APPLICATION_DIRECTORY_CONTENT_MAX_WIDTH) } = e;
+    let { itemId: t, hash: n, containerWidth: i = parseFloat(a.Z.APPLICATION_DIRECTORY_CONTENT_MAX_WIDTH) } = e;
     return (0, o.$)({
         itemId: t,
         hash: n,
-        containerWidth: a
+        containerWidth: i
     });
 }
 let d = (e) => {
@@ -41,7 +41,7 @@ let d = (e) => {
 };
 function u(e) {
     switch (e.type) {
-        case a.ee.MEDIA_PROXY:
+        case i.ee.MEDIA_PROXY:
             var t;
             let n = null !== (t = e.proxy_url) && void 0 !== t ? t : e.url;
             return {
@@ -50,12 +50,12 @@ function u(e) {
                 height: 0,
                 src: n
             };
-        case a.ee.YOUTUBE:
-            let i = d(e.url);
-            if (null != i)
+        case i.ee.YOUTUBE:
+            let a = d(e.url);
+            if (null != a)
                 return {
                     type: r.s9s.YOUTUBE_VIDEO,
-                    youtubeVideoId: i
+                    youtubeVideoId: a
                 };
     }
     return console.warn('Unsupported carousel item', e), null;

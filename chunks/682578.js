@@ -1,7 +1,7 @@
-n.d(t, { J: () => l });
+n.d(t, { J: () => r });
 var i = n(442837),
     s = n(594174);
-let l = () =>
+let r = () =>
     (0, i.e7)([s.default], () => {
         var e;
         let t = s.default.getCurrentUser();

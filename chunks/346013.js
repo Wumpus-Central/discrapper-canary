@@ -16,8 +16,8 @@ var i = n(200651),
     f = n(1585),
     x = n(841762),
     C = n(336197),
-    v = n(406432),
-    E = n(348238),
+    E = n(406432),
+    v = n(348238),
     I = n(38267),
     N = n(184301),
     S = n(347475),
@@ -39,7 +39,7 @@ function w(e) {
     let { embedUrl: s, message: w, channel: F } = e,
         U = (0, L.J)(s, w),
         { setPopout: B } = (0, I.Z)(w.id, k.d$),
-        G = (0, E.qo)(w, F, B, !0),
+        G = (0, v.qo)(w, F, B, !0),
         H = T.QK.useSetting(),
         V = (0, Z.n)(),
         [z, W] = l.useState(!1),
@@ -110,7 +110,7 @@ function w(e) {
             !et.enabled && ei((e) => !e);
         },
         em = U.coverImage,
-        e_ = null != em && (0, v.d$)(em);
+        e_ = null != em && (0, E.d$)(em);
     return (0, i.jsxs)('div', {
         className: O.postPreviewContainer,
         children: [

@@ -6,8 +6,8 @@ var l = n(481060),
     a = n(626135),
     s = n(358085),
     o = n(998502),
-    c = n(258220),
-    d = n(981631);
+    d = n(258220),
+    c = n(981631);
 let u = 'activity-hardware-acceleration-modal';
 function h(e) {
     r.ZP.disableActivityHardwareAccelerationPrompt ||
@@ -25,7 +25,7 @@ function h(e) {
             {
                 modalKey: u,
                 onCloseRequest: () => {
-                    a.default.track(d.rMx.MODAL_DISMISSED, { type: c.r }), (0, l.Mr3)(u);
+                    a.default.track(c.rMx.MODAL_DISMISSED, { type: d.r }), (0, l.Mr3)(u);
                 }
             }
         );

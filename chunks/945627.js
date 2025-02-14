@@ -1,31 +1,31 @@
-n.d(t, { Z: () => T }), n(47120), n(653041);
+n.d(t, { Z: () => S }), n(47120), n(653041);
 var i = n(200651),
     s = n(192379),
-    l = n(392711),
-    r = n(442837),
+    r = n(392711),
+    l = n(442837),
     a = n(481060),
     o = n(230711),
     c = n(835473),
     d = n(372460),
     u = n(91896),
-    h = n(768581),
-    m = n(136015),
+    m = n(768581),
+    h = n(136015),
     g = n(695346),
     x = n(546957),
     _ = n(838436),
     p = n(51331),
     E = n(726985),
     C = n(981631),
-    N = n(388032),
-    f = n(187044);
-function I() {
-    let e = (0, r.e7)([u.Z], () => u.Z.getGameFriendCount()),
-        [t] = (0, r.e7)(
+    f = n(388032),
+    T = n(187044);
+function N() {
+    let e = (0, l.e7)([u.Z], () => u.Z.getGameFriendCount()),
+        [t] = (0, l.e7)(
             [u.Z],
             () => {
                 let e = u.Z.getGameRelationships().values();
                 return [
-                    (0, l.chain)(e)
+                    (0, r.chain)(e)
                         .filter((e) => {
                             let { type: t } = e;
                             return t === C.OGo.FRIEND;
@@ -42,7 +42,7 @@ function I() {
                 ];
             },
             [],
-            m.Q
+            h.Q
         ),
         n = (0, d.wn)({ location: 'GameFriendDMsSettingHeader' }),
         g = (0, c.Z)(t, n),
@@ -54,16 +54,16 @@ function I() {
                 e.push(n.name);
             }
             let t = g.length - 2;
-            return t > 0 && e.push(N.intl.format(N.t['EADv+/'], { count: t })), e.join(', ');
+            return t > 0 && e.push(f.intl.format(f.t['EADv+/'], { count: t })), e.join(', ');
         }, [g]),
         _ = s.useMemo(() => {
             let e = [];
             for (let t = 0; t < g.length; t++) {
                 let n = g[t];
                 if (null == n) continue;
-                let { icon: s, name: l } = n;
+                let { icon: s, name: r } = n;
                 if (null == s) continue;
-                let r = h.ZP.getApplicationIconURL({
+                let l = m.ZP.getApplicationIconURL({
                     id: n.id,
                     icon: n.icon
                 });
@@ -72,11 +72,11 @@ function I() {
                         (0, i.jsx)(
                             'img',
                             {
-                                src: r,
-                                'aria-label': l,
-                                className: f.icon
+                                src: l,
+                                'aria-label': r,
+                                className: T.icon
                             },
-                            l
+                            r
                         )
                     ),
                     3 === e.length)
@@ -89,18 +89,18 @@ function I() {
             o.Z.open(C.oAB.AUTHORIZED_APPS);
         }, []);
     return (0, i.jsxs)('div', {
-        className: f.header,
+        className: T.header,
         children: [
             (0, i.jsxs)('div', {
-                className: f.gameRelationships,
+                className: T.gameRelationships,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: f.gameRelationshipsDetails,
+                        className: T.gameRelationshipsDetails,
                         children: [
                             (0, i.jsx)(a.Text, {
                                 variant: 'text-md/medium',
                                 color: 'header-primary',
-                                children: N.intl.format(N.t.iPZSeX, { count: e })
+                                children: f.intl.format(f.t.iPZSeX, { count: e })
                             }),
                             (0, i.jsx)(a.Text, {
                                 variant: 'text-sm/medium',
@@ -110,41 +110,41 @@ function I() {
                         ]
                     }),
                     (0, i.jsx)('div', {
-                        className: f.gameRelationshipIcons,
+                        className: T.gameRelationshipIcons,
                         children: _
                     })
                 ]
             }),
-            (0, i.jsx)('div', { className: f.divider }),
+            (0, i.jsx)('div', { className: T.divider }),
             (0, i.jsxs)(a.P3F, {
                 onClick: p,
-                className: f.manageGamesLink,
+                className: T.manageGamesLink,
                 children: [
                     (0, i.jsx)(a.Text, {
                         variant: 'text-xs/normal',
                         color: 'interactive-normal',
-                        children: N.intl.format(N.t.oYaYOT, {})
+                        children: f.intl.format(f.t.oYaYOT, {})
                     }),
                     (0, i.jsx)(a.Fbu, {
                         size: 'xxs',
                         color: a.TVs.colors.INTERACTIVE_NORMAL,
-                        className: f.manageGamesChevron
+                        className: T.manageGamesChevron
                     })
                 ]
             })
         ]
     });
 }
-function T() {
+function S() {
     let e = g._j.useSetting();
     return (0, i.jsxs)(x.Z, {
         children: [
-            (0, i.jsx)(I, {}),
+            (0, i.jsx)(N, {}),
             (0, i.jsx)(_.U, {
                 setting: E.s6.PRIVACY_AND_SAFETY_ALLOW_GAME_FRIEND_DMS,
                 children: (0, i.jsx)(p.Z, {
-                    title: N.intl.string(N.t['/U8Iwc']),
-                    note: N.intl.string(N.t.WO2Hlp),
+                    title: f.intl.string(f.t['/U8Iwc']),
+                    note: f.intl.string(f.t.WO2Hlp),
                     value: e,
                     onChange: g._j.updateSetting
                 })

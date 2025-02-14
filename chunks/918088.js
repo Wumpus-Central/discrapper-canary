@@ -23,8 +23,8 @@ var i = n(278074),
     f = n(798628),
     x = n(79390),
     C = n(839963),
-    v = n(897325),
-    E = n(57101),
+    E = n(897325),
+    v = n(57101),
     I = n(562293),
     N = n(981631),
     S = n(388032);
@@ -98,17 +98,17 @@ function y(e, t) {
     let _ = e.state === N.yb.SENT,
         h = _ ? (null != r ? r : (0, I.H)(s.expiry)) : '',
         p = null == h && _,
-        { selectedAnswerIds: g, submitting: x, editing: C, showResults: v } = null !== (l = null != t ? t : (0, f.fU)(e.getChannelId(), e.id)) && void 0 !== l ? l : T,
-        E = e.reactions,
+        { selectedAnswerIds: g, submitting: x, editing: C, showResults: E } = null !== (l = null != t ? t : (0, f.fU)(e.getChannelId(), e.id)) && void 0 !== l ? l : T,
+        v = e.reactions,
         S = !0;
     if (!j(e)) {
         let t = m.Z.getMessage(e.channel_id, e.id);
-        (S = !e.isSearchHit && null != t), (E = null !== (a = null == t ? void 0 : t.reactions) && void 0 !== a ? a : E);
+        (S = !e.isSearchHit && null != t), (v = null !== (a = null == t ? void 0 : t.reactions) && void 0 !== a ? a : v);
     }
     let b = g.size > 0,
-        A = E.some((e) => !0 === e.me_vote),
+        A = v.some((e) => !0 === e.me_vote),
         y = !C && A,
-        Z = y || p || v,
+        Z = y || p || E,
         R = _ && S && (!A || C || Z),
         L = null === (i = d.Z.getChannel(e.getChannelId())) || void 0 === i ? void 0 : null === (n = i.getGuildId) || void 0 === n ? void 0 : n.call(i),
         P = null != L ? u.ZP.getSelfMember(L) : null,
@@ -128,11 +128,11 @@ function y(e, t) {
         isExpired: p,
         isInteractive: S,
         isSent: _,
-        reactions: E,
+        reactions: v,
         selectedAnswerIds: g,
         submitting: x,
         tapShouldOpenVotersModal: Z,
-        showResults: v
+        showResults: E
     };
 }
 function Z(e, t) {
@@ -144,7 +144,7 @@ function Z(e, t) {
     if (null == I) return;
     let N = a.Z.useReducedMotion,
         T = null === (o = d.Z.getChannel(e.getChannelId())) || void 0 === o ? void 0 : null === (n = o.getGuildId) || void 0 === n ? void 0 : n.call(o),
-        j = (0, v.E)(I, T),
+        j = (0, E.E)(I, T),
         Z = f.answers,
         R = f.layout_type,
         L = y(e, t, { formattedExpirationLabel: m });
@@ -325,7 +325,7 @@ function Z(e, t) {
             .exhaustive(),
         answerTapAccessibilityLabel: W ? $ : void 0,
         layoutType: R,
-        resources: (0, E.Z)({
+        resources: (0, v.Z)({
             theme: u,
             layoutType: R
         }),

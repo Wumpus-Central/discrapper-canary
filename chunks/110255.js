@@ -14,14 +14,14 @@ function _(e) {
     let { channel: t, closePopout: n, onSelect: _, navId: h, label: p, location: g, includeGuildMute: f } = e,
         x = (0, s.c)(t),
         C = (0, o.EQ)(t),
-        v = (0, l.e7)([m.Z], () => m.Z.getGuild(t.guild_id)),
-        E = (0, c.Z)(v),
+        E = (0, l.e7)([m.Z], () => m.Z.getGuild(t.guild_id)),
+        v = (0, c.Z)(E),
         I = (0, d.Mn)('ChannelNotificationSettingsPopoutMenu') && u.$N.has(t.type);
     return (0, i.jsxs)(a.v2r, {
         navId: h,
         onClose: n,
         'aria-label': p,
         onSelect: _,
-        children: [(0, i.jsx)(a.kSQ, { children: (0, r.ZP)(t, g) }), f ? (0, i.jsx)(a.kSQ, { children: E }) : null, I ? C : (0, i.jsx)(a.kSQ, { children: x })]
+        children: [(0, i.jsx)(a.kSQ, { children: (0, r.ZP)(t, g) }), f ? (0, i.jsx)(a.kSQ, { children: v }) : null, I ? C : (0, i.jsx)(a.kSQ, { children: x })]
     });
 }

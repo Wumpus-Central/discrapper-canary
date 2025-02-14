@@ -5,8 +5,8 @@ var i = n(200651),
     a = n(442837),
     s = n(544891),
     o = n(481060),
-    c = n(893776),
-    d = n(37234),
+    d = n(893776),
+    c = n(37234),
     u = n(809206),
     h = n(110924),
     m = n(714338),
@@ -27,8 +27,8 @@ function A() {
             theme: f.Z.theme
         })),
         A = I.Z.getVerificationTypes(e),
-        [b, Z] = l.useState(0),
-        x = (0, h.Z)(A);
+        [Z, x] = l.useState(0),
+        b = (0, h.Z)(A);
     (0, p.Z)(
         {
             type: r.ImpressionTypes.MODAL,
@@ -57,7 +57,7 @@ function A() {
         y = () => {
             (0, o.ZDy)(
                 async () => {
-                    let { default: e } = await Promise.all([n.e('76540'), n.e('39050')]).then(n.bind(n, 607018));
+                    let { default: e } = await Promise.resolve().then(n.bind(n, 607018));
                     return (t) =>
                         (0, i.jsx)(e, {
                             reason: _.L.USER_ACTION_REQUIRED,
@@ -81,7 +81,7 @@ function A() {
             []
         ),
         l.useEffect(() => {
-            (null == x ? void 0 : x[0]) === v.PUi.PHONE &&
+            (null == b ? void 0 : b[0]) === v.PUi.PHONE &&
                 (null == A ? void 0 : A[0]) === v.PUi.EMAIL &&
                 (0, o.ZDy)(
                     async () => {
@@ -100,10 +100,10 @@ function A() {
                         onCloseCallback: L
                     }
                 );
-        }, [A, x]),
+        }, [A, b]),
         (0, i.jsx)(C.Z, {
             types: A,
-            captchaKey: b,
+            captchaKey: Z,
             onCaptchaVerify: (e) => {
                 s.tn
                     .post({
@@ -112,8 +112,8 @@ function A() {
                         oldFormErrors: !0,
                         rejectWithError: !0
                     })
-                    .then(d.xf, () => {
-                        Z((e) => e + 1);
+                    .then(c.xf, () => {
+                        x((e) => e + 1);
                     });
             },
             theme: t,
@@ -129,7 +129,7 @@ function A() {
                                 header: S.intl.string(S.t['2jxGen']),
                                 confirmText: S.intl.string(S.t['2jxGen']),
                                 cancelText: S.intl.string(S.t['ETE/oK']),
-                                onConfirm: () => c.Z.logout(),
+                                onConfirm: () => d.Z.logout(),
                                 ...n,
                                 children: (0, i.jsx)(t, {
                                     variant: 'text-md/normal',

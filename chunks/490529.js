@@ -1,15 +1,15 @@
 n.d(t, {
-    X8: () => m,
-    tI: () => h,
+    X8: () => h,
+    tI: () => m,
     uj: () => a
 }),
     n(653041);
 var i = n(512722),
     s = n.n(i),
-    l = n(981631),
-    r = n(388032);
+    r = n(981631),
+    l = n(388032);
 let a = () => {
-        let e = Object.keys(l.gkr);
+        let e = Object.keys(r.gkr);
         return e[Math.floor(Math.random() * e.length)];
     },
     o = () => {
@@ -20,37 +20,37 @@ let a = () => {
         }
         return e;
     },
-    c = () => [r.intl.string(r.t.wWV9Ex), r.intl.string(r.t.ujB5uL), r.intl.string(r.t.zYNt1N), r.intl.string(r.t.CQkJcn), r.intl.string(r.t.dPgrQk), r.intl.string(r.t.uS4tV1), r.intl.string(r.t.DMzlBg), r.intl.string(r.t['4A4ezc']), r.intl.string(r.t.wshlHR), r.intl.string(r.t.pxkSfn), r.intl.string(r.t['FAs+YG']), r.intl.string(r.t['dY+C+f']), r.intl.string(r.t['1DiI6+']), r.intl.string(r.t.r23dp6), r.intl.string(r.t['/cxmLy'])],
+    c = () => [l.intl.string(l.t.wWV9Ex), l.intl.string(l.t.ujB5uL), l.intl.string(l.t.zYNt1N), l.intl.string(l.t.CQkJcn), l.intl.string(l.t.dPgrQk), l.intl.string(l.t.uS4tV1), l.intl.string(l.t.DMzlBg), l.intl.string(l.t['4A4ezc']), l.intl.string(l.t.wshlHR), l.intl.string(l.t.pxkSfn), l.intl.string(l.t['FAs+YG']), l.intl.string(l.t['dY+C+f']), l.intl.string(l.t['1DiI6+']), l.intl.string(l.t.r23dp6), l.intl.string(l.t['/cxmLy'])],
     d = () => [
-        [r.intl.string(r.t.o6ELq6), r.intl.string(r.t.VVcLQk), r.intl.string(r.t['v/5qvr']), r.intl.string(r.t.dMYFq6)],
-        [r.intl.string(r.t['R2dI+f']), r.intl.string(r.t.s0EqhI), r.intl.string(r.t.ex6tvr), r.intl.string(r.t.lk2Bt7)],
-        [r.intl.string(r.t.NOC4TU), r.intl.string(r.t.FlDBfH), r.intl.string(r.t.MLzlRU), r.intl.string(r.t['1j46Zm'])],
-        [r.intl.string(r.t.NyWJLy), r.intl.string(r.t['uF0u8/']), r.intl.string(r.t.BZuLSU), r.intl.string(r.t['27zWTk'])],
-        [r.intl.string(r.t['Aq4y+v']), r.intl.string(r.t.rr72eH), r.intl.string(r.t['2v7Vv7']), r.intl.string(r.t.H5wx2d)],
-        [r.intl.string(r.t.tld7IS), r.intl.string(r.t.OOfrPj), r.intl.string(r.t.QbtUj4), r.intl.string(r.t['88DsQk'])],
-        [r.intl.string(r.t.wURefn), r.intl.string(r.t['6abY0d']), r.intl.string(r.t.VttdKC), r.intl.string(r.t.N9tGcH)],
-        [r.intl.string(r.t['pK+hm5']), r.intl.string(r.t.fpfjDQ), r.intl.string(r.t.QDZPw8), r.intl.string(r.t.DJBGub)],
-        [r.intl.string(r.t.b5ar8f), r.intl.string(r.t.SBETho), r.intl.string(r.t.WsXEqa), r.intl.string(r.t['1jEI+P'])],
-        [r.intl.string(r.t['Y+ztvL']), r.intl.string(r.t.PCjFjI), r.intl.string(r.t.jjodpK), r.intl.string(r.t['5tHTjI'])],
-        [r.intl.string(r.t.jD0BbW), r.intl.string(r.t.zFZP2d), r.intl.string(r.t.AQi4BA), r.intl.string(r.t.HNGDgo)],
-        [r.intl.string(r.t['8PHLGh']), r.intl.string(r.t.PAWXCg), r.intl.string(r.t.pyRWsr), r.intl.string(r.t.SfbdaG)],
-        [r.intl.string(r.t['VdyT7+']), r.intl.string(r.t['9tQrr6']), r.intl.string(r.t['E11H4+']), r.intl.string(r.t.TRNpXF)],
-        [r.intl.string(r.t.gFpEVl), r.intl.string(r.t.oqF1lZ), r.intl.string(r.t['itk+io']), r.intl.string(r.t.WyvPFx)],
-        [r.intl.string(r.t['zaKm/f']), r.intl.string(r.t.SES9Zm), r.intl.string(r.t.ebblm5), r.intl.string(r.t.csrWfH)]
+        [l.intl.string(l.t.o6ELq6), l.intl.string(l.t.VVcLQk), l.intl.string(l.t['v/5qvr']), l.intl.string(l.t.dMYFq6)],
+        [l.intl.string(l.t['R2dI+f']), l.intl.string(l.t.s0EqhI), l.intl.string(l.t.ex6tvr), l.intl.string(l.t.lk2Bt7)],
+        [l.intl.string(l.t.NOC4TU), l.intl.string(l.t.FlDBfH), l.intl.string(l.t.MLzlRU), l.intl.string(l.t['1j46Zm'])],
+        [l.intl.string(l.t.NyWJLy), l.intl.string(l.t['uF0u8/']), l.intl.string(l.t.BZuLSU), l.intl.string(l.t['27zWTk'])],
+        [l.intl.string(l.t['Aq4y+v']), l.intl.string(l.t.rr72eH), l.intl.string(l.t['2v7Vv7']), l.intl.string(l.t.H5wx2d)],
+        [l.intl.string(l.t.tld7IS), l.intl.string(l.t.OOfrPj), l.intl.string(l.t.QbtUj4), l.intl.string(l.t['88DsQk'])],
+        [l.intl.string(l.t.wURefn), l.intl.string(l.t['6abY0d']), l.intl.string(l.t.VttdKC), l.intl.string(l.t.N9tGcH)],
+        [l.intl.string(l.t['pK+hm5']), l.intl.string(l.t.fpfjDQ), l.intl.string(l.t.QDZPw8), l.intl.string(l.t.DJBGub)],
+        [l.intl.string(l.t.b5ar8f), l.intl.string(l.t.SBETho), l.intl.string(l.t.WsXEqa), l.intl.string(l.t['1jEI+P'])],
+        [l.intl.string(l.t['Y+ztvL']), l.intl.string(l.t.PCjFjI), l.intl.string(l.t.jjodpK), l.intl.string(l.t['5tHTjI'])],
+        [l.intl.string(l.t.jD0BbW), l.intl.string(l.t.zFZP2d), l.intl.string(l.t.AQi4BA), l.intl.string(l.t.HNGDgo)],
+        [l.intl.string(l.t['8PHLGh']), l.intl.string(l.t.PAWXCg), l.intl.string(l.t.pyRWsr), l.intl.string(l.t.SfbdaG)],
+        [l.intl.string(l.t['VdyT7+']), l.intl.string(l.t['9tQrr6']), l.intl.string(l.t['E11H4+']), l.intl.string(l.t.TRNpXF)],
+        [l.intl.string(l.t.gFpEVl), l.intl.string(l.t.oqF1lZ), l.intl.string(l.t['itk+io']), l.intl.string(l.t.WyvPFx)],
+        [l.intl.string(l.t['zaKm/f']), l.intl.string(l.t.SES9Zm), l.intl.string(l.t.ebblm5), l.intl.string(l.t.csrWfH)]
     ],
-    u = () => [l.gkr.HOUSE_1, l.gkr.HOUSE_2, l.gkr.HOUSE_3, l.jsM],
-    h = () => {
+    u = () => [r.gkr.HOUSE_1, r.gkr.HOUSE_2, r.gkr.HOUSE_3, r.jsM],
+    m = () => {
         let e = u(),
             t = c(),
             n = d();
         return o().map((i) => {
-            let l = t[i],
-                r = n[i];
+            let r = t[i],
+                l = n[i];
             return (
-                s()(null != l && null != r, 'Invalid HypeSquad quiz question index'),
+                s()(null != r && null != l, 'Invalid HypeSquad quiz question index'),
                 {
-                    prompt: l,
-                    options: r.map((t, n) => {
+                    prompt: r,
+                    options: l.map((t, n) => {
                         let i = e[n];
                         return (
                             s()(null !== i, 'Invalid HypeSquad quiz question option index'),
@@ -64,9 +64,9 @@ let a = () => {
             );
         });
     },
-    m = (e) =>
+    h = (e) =>
         ({
-            [l.gkr.HOUSE_1]: r.intl.string(r.t.ORKdHR),
-            [l.gkr.HOUSE_2]: r.intl.string(r.t.aKf3dn),
-            [l.gkr.HOUSE_3]: r.intl.string(r.t['21LOa2'])
+            [r.gkr.HOUSE_1]: l.intl.string(l.t.ORKdHR),
+            [r.gkr.HOUSE_2]: l.intl.string(l.t.aKf3dn),
+            [r.gkr.HOUSE_3]: l.intl.string(l.t['21LOa2'])
         })[e];

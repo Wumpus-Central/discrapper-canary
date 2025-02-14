@@ -23,8 +23,8 @@ var i,
     f = n(220444),
     x = n(601070),
     C = n(344185),
-    v = n(569471),
-    E = n(723170),
+    E = n(569471),
+    v = n(723170),
     I = n(675478),
     N = n(581883),
     S = n(131704),
@@ -281,7 +281,7 @@ class H extends r.EventEmitter {
                 e.length !== this.state.channels.length && this.setState({ channels: e });
             }),
             (this.handleJoinedThreadsStoreChange = () => {
-                let e = this.state.channels.filter((e) => !v.Z.isMuted(e.channelId));
+                let e = this.state.channels.filter((e) => !E.Z.isMuted(e.channelId));
                 e.length !== this.state.channels.length && this.setState({ channels: e });
             }),
             (this.handleActiveThreadsStoreChange = () => {
@@ -407,7 +407,7 @@ function W(e, t, n, i) {
                 if (Date.now() - e > K) return 6;
             }
             if (i.isThread()) {
-                let e = (0, E.J)(i);
+                let e = (0, v.J)(i);
                 return e === w.iN.ALL_MESSAGES ? 4 : e === w.iN.NO_MESSAGES ? 7 : 5;
             }
             {
@@ -467,7 +467,7 @@ function X(e) {
         }, [null == s ? void 0 : s.channels, null == s ? void 0 : s.loadState]),
         a.useEffect(() => (y.Z.addChangeListener(t.reloadMessages), () => y.Z.removeChangeListener(t.reloadMessages)), [t.reloadMessages]),
         a.useEffect(() => (P.ZP.addChangeListener(t.handleUserGuildSettingsStoreChange), () => P.ZP.removeChangeListener(t.handleUserGuildSettingsStoreChange)), [t]),
-        a.useEffect(() => (v.Z.addChangeListener(t.handleJoinedThreadsStoreChange), () => v.Z.removeChangeListener(t.handleJoinedThreadsStoreChange)), [t]),
+        a.useEffect(() => (E.Z.addChangeListener(t.handleJoinedThreadsStoreChange), () => E.Z.removeChangeListener(t.handleJoinedThreadsStoreChange)), [t]),
         a.useEffect(() => (C.Z.addChangeListener(t.handleActiveThreadsStoreChange), () => C.Z.removeChangeListener(t.handleActiveThreadsStoreChange)), [t]),
         [s, t]
     );

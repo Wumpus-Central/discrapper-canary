@@ -1,6 +1,6 @@
 n.d(t, {
     K: () => g,
-    Z: () => f
+    Z: () => m
 }),
     n(47120);
 var i = n(200651);
@@ -26,7 +26,7 @@ function g() {
         dismissKeybindNotification: t
     };
 }
-function f(e) {
+function m(e) {
     let { markAsDismissed: t } = e,
         { trackView: n, trackClick: s } = (0, r.R)(c.n0.KeybindIndicatorsNotification, { notif_type: c.n0.KeybindIndicatorsNotification });
     return {

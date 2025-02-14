@@ -6,10 +6,10 @@ var r = n(120356),
     a = n.n(r),
     s = n(873546),
     o = n(481060),
-    c = n(74344),
-    d = (((i = d || {})[(i.ACCEPT = 0)] = 'ACCEPT'), (i[(i.DENY = 1)] = 'DENY'), (i[(i.DEFAULT = 2)] = 'DEFAULT'), i);
+    d = n(74344),
+    c = (((i = c || {})[(i.ACCEPT = 0)] = 'ACCEPT'), (i[(i.DENY = 1)] = 'DENY'), (i[(i.DEFAULT = 2)] = 'DEFAULT'), i);
 function u(e) {
-    let { icon: t, tooltip: n, onClick: i, actionType: r = 2, shouldHighlight: d } = e;
+    let { icon: t, tooltip: n, onClick: i, actionType: r = 2, shouldHighlight: c } = e;
     return (0, l.jsx)(o.ua7, {
         text: n,
         children: (e) =>
@@ -17,18 +17,18 @@ function u(e) {
                 ...e,
                 'aria-label': n,
                 onClick: i,
-                className: a()(c.actionButton, {
-                    [c.actionAccept]: 0 === r,
-                    [c.actionDeny]: 1 === r,
-                    [c.highlight]: d,
-                    [c.actionButtonMobile]: s.tq
+                className: a()(d.actionButton, {
+                    [d.actionAccept]: 0 === r,
+                    [d.actionDeny]: 1 === r,
+                    [d.highlight]: c,
+                    [d.actionButtonMobile]: s.tq
                 }),
                 children: (0, l.jsx)(t, {
-                    className: c.icon,
+                    className: d.icon,
                     color: 'currentColor'
                 })
             })
     });
 }
-u.ActionTypes = d;
+u.ActionTypes = c;
 let h = u;

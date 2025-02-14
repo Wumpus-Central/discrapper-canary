@@ -1,48 +1,48 @@
-n.d(t, { Z: () => k }), n(47120);
+n.d(t, { Z: () => L }), n(47120);
 var i = n(200651),
     s = n(192379),
-    l = n(120356),
-    r = n.n(l),
+    r = n(120356),
+    l = n.n(r),
     a = n(442837),
     o = n(692547),
     c = n(481060),
     d = n(224706),
     u = n(225433),
-    h = n(570928),
-    m = n(594190),
+    m = n(570928),
+    h = n(594190),
     g = n(320724),
     x = n(297700),
     _ = n(77498),
     p = n(283595),
     E = n(626135),
     C = n(251625),
-    N = n(358085),
-    f = n(210887),
-    I = n(981631),
-    T = n(388032),
-    S = n(186825),
-    j = n(801919),
+    f = n(358085),
+    T = n(210887),
+    N = n(981631),
+    S = n(388032),
+    I = n(186825),
+    b = n(801919),
     v = n(179683),
-    b = n(730533),
+    j = n(730533),
     A = n(483938);
-let O = a.ZP.connectStores([f.Z], () => ({ theme: f.Z.theme }))(c.ubH),
-    R = (0, N.isWindows)();
-function D(e) {
+let O = a.ZP.connectStores([T.Z], () => ({ theme: T.Z.theme }))(c.ubH),
+    R = (0, f.isWindows)();
+function P(e) {
     let { onClose: t } = e,
-        n = (0, a.e7)([m.ZP], () => m.ZP.getCandidateGames()),
-        [l, o] = s.useState(null),
+        n = (0, a.e7)([h.ZP], () => h.ZP.getCandidateGames()),
+        [r, o] = s.useState(null),
         u = n.map((e) => ({
             key: e.pid,
             value: e,
             label: null != e.name ? e.name : ''
         }));
     return (0, i.jsxs)(c.VqE, {
-        className: r()(S.addGamePopout, j.elevationBorderHigh),
-        'aria-label': T.intl.string(T.t.GTCx0t),
+        className: l()(I.addGamePopout, b.elevationBorderHigh),
+        'aria-label': S.intl.string(S.t.GTCx0t),
         children: [
             (0, i.jsx)(c.VcW, {
-                placeholder: T.intl.string(T.t.XqMe3N),
-                value: l,
+                placeholder: S.intl.string(S.t.XqMe3N),
+                value: r,
                 options: u,
                 onChange: function (e) {
                     o(e);
@@ -55,73 +55,73 @@ function D(e) {
                         children: e.label
                     })
             }),
-            (0, i.jsx)(c.$i$, { className: r()(A.marginTop8, A.marginBottom8) }),
+            (0, i.jsx)(c.$i$, { className: l()(A.marginTop8, A.marginBottom8) }),
             (0, i.jsxs)('div', {
-                className: r()(S.actions, v.horizontal),
+                className: l()(I.actions, v.horizontal),
                 children: [
                     (0, i.jsx)(c.zxk, {
-                        className: S.cancelButton,
+                        className: I.cancelButton,
                         look: c.iLD.LINK,
                         color: c.Ttl.PRIMARY,
                         onClick: t,
-                        children: T.intl.string(T.t['ETE/oK'])
+                        children: S.intl.string(S.t['ETE/oK'])
                     }),
                     (0, i.jsx)(c.zxk, {
-                        disabled: null == l,
+                        disabled: null == r,
                         onClick: function () {
-                            null != l && (d.Z.addGame(l.pid, l.name), t());
+                            null != r && (d.Z.addGame(r.pid, r.name), t());
                         },
-                        children: T.intl.string(T.t.GTCx0t)
+                        children: S.intl.string(S.t.GTCx0t)
                     })
                 ]
             })
         ]
     });
 }
-function P(e) {
+function D(e) {
     var t;
-    let { rawGame: n, nowPlaying: l = !1, isOverride: g } = e,
-        C = (0, a.cj)([m.ZP, _.Z, p.Z], () => (0, m.FZ)(n, [m.ZP, _.Z, p.Z])),
-        [N, f] = s.useState(!1),
-        [j, A] = s.useState(null !== (t = C.name) && void 0 !== t ? t : '???'),
-        O = r()(v.flexCenter, {
-            [S.game]: !l,
-            [S.activeGame]: l,
-            [b.card]: !l,
-            [S.nowPlaying]: null != C && l
+    let { rawGame: n, nowPlaying: r = !1, isOverride: g } = e,
+        C = (0, a.cj)([h.ZP, _.Z, p.Z], () => (0, h.FZ)(n, [h.ZP, _.Z, p.Z])),
+        [f, T] = s.useState(!1),
+        [b, A] = s.useState(null !== (t = C.name) && void 0 !== t ? t : '???'),
+        O = l()(v.flexCenter, {
+            [I.game]: !r,
+            [I.activeGame]: r,
+            [j.card]: !r,
+            [I.nowPlaying]: null != C && r
         });
-    function D() {
+    function P() {
         d.Z.toggleDetection(C);
     }
-    function P() {
-        if (N) return;
+    function D() {
+        if (f) return;
         let e = null != C.id ? _.Z.getDetectableGame(C.id) : null;
-        E.default.track(I.rMx.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
+        E.default.track(N.rMx.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
             application_id: null == e ? void 0 : e.id,
             game_name: C.name
         }),
-            (0, c.showToast)((0, c.createToast)(T.intl.formatToPlainString(T.t['6klMOj'], { gameName: C.name }), c.ToastType.SUCCESS)),
-            f(!0);
+            (0, c.showToast)((0, c.createToast)(S.intl.formatToPlainString(S.t['6klMOj'], { gameName: C.name }), c.ToastType.SUCCESS)),
+            T(!0);
     }
     return (0, i.jsxs)('div', {
         className: O,
         children: [
             (0, i.jsxs)('div', {
-                className: r()(S.gameNameLastPlayed, v.vertical),
+                className: l()(I.gameNameLastPlayed, v.vertical),
                 children: [
                     C.verified && !g
                         ? (0, i.jsxs)('div', {
-                              className: S.detectedApplication,
+                              className: I.detectedApplication,
                               children: [
                                   (0, i.jsx)('div', {
-                                      className: S.gameName,
+                                      className: I.gameName,
                                       children: C.name
                                   }),
                                   (0, i.jsx)(c.ua7, {
-                                      text: T.intl.string(T.t['4PJP5u']),
+                                      text: S.intl.string(S.t['4PJP5u']),
                                       children: (e) =>
                                           (0, i.jsx)(x.Z, {
-                                              className: S.gameVerifiedIcon,
+                                              className: I.gameVerifiedIcon,
                                               size: 18,
                                               color: o.Z.unsafe_rawColors.BRAND_500.css,
                                               ...e,
@@ -136,12 +136,12 @@ function P(e) {
                               ]
                           })
                         : (0, i.jsx)('input', {
-                              className: r()(S.gameName, S.gameNameInput),
+                              className: l()(I.gameName, I.gameNameInput),
                               type: 'text',
                               maxLength: 128,
-                              value: j,
+                              value: b,
                               onBlur: function () {
-                                  C.name !== j && d.Z.editName(C, j);
+                                  C.name !== b && d.Z.editName(C, b);
                               },
                               onKeyDown: function (e) {
                                   13 === e.keyCode && (e.currentTarget.blur(), e.preventDefault());
@@ -152,10 +152,10 @@ function P(e) {
                         let e;
                         let { played: t, exePath: n } = C;
                         return (
-                            l ? (e = T.intl.string(T.t.VbV5dn)) : null != t && '' !== t && (e = T.intl.format(T.t.gGeOEx, { when: t })),
+                            r ? (e = S.intl.string(S.t.VbV5dn)) : null != t && '' !== t && (e = S.intl.format(S.t.gGeOEx, { when: t })),
                             (0, i.jsx)('div', {
-                                className: S.lastPlayed,
-                                children: (0, i.jsx)(h.Z, {
+                                className: I.lastPlayed,
+                                children: (0, i.jsx)(m.Z, {
                                     hoverText: null != n && '' !== n ? n.toUpperCase() : '',
                                     children: e
                                 })
@@ -166,25 +166,25 @@ function P(e) {
             }),
             g
                 ? null
-                : N
+                : f
                   ? null
                   : (0, i.jsx)('div', {
-                        className: r()(v.flexCenter, v.noWrap, v.justifyBetween, S.toggleContainer),
+                        className: l()(v.flexCenter, v.noWrap, v.justifyBetween, I.toggleContainer),
                         children: (0, i.jsx)(c.ua7, {
-                            text: T.intl.string(T.t['y0B+lp']),
+                            text: S.intl.string(S.t['y0B+lp']),
                             children: (e) => {
                                 let { onMouseEnter: t, onMouseLeave: n } = e;
                                 return (0, i.jsx)(c.P3F, {
-                                    'aria-label': T.intl.string(T.t['y0B+lp']),
-                                    className: S.toggleIcon,
-                                    onClick: P,
+                                    'aria-label': S.intl.string(S.t['y0B+lp']),
+                                    className: I.toggleIcon,
+                                    onClick: D,
                                     onMouseEnter: t,
                                     onMouseLeave: n,
                                     children: (0, i.jsx)(c.U65, {
                                         size: 'md',
                                         color: 'currentColor',
-                                        className: S.toggleIconOn,
-                                        colorClass: S.fill
+                                        className: I.toggleIconOn,
+                                        colorClass: I.fill
                                     })
                                 });
                             }
@@ -196,25 +196,25 @@ function P(e) {
                         ? (0, i.jsx)(c.tEF, {
                               size: 'md',
                               color: 'currentColor',
-                              className: S.toggleIconOn,
-                              colorClass: S.fill
+                              className: I.toggleIconOn,
+                              colorClass: I.fill
                           })
                         : (0, i.jsx)(c.kZF, {
                               size: 'md',
                               color: 'currentColor',
-                              className: S.toggleIconOff,
-                              colorClass: S.fill
+                              className: I.toggleIconOff,
+                              colorClass: I.fill
                           });
                 return (0, i.jsx)('div', {
-                    className: r()(v.flexCenter, v.noWrap, v.justifyBetween, S.toggleContainer),
+                    className: l()(v.flexCenter, v.noWrap, v.justifyBetween, I.toggleContainer),
                     children: (0, i.jsx)(c.ua7, {
-                        text: T.intl.string(T.t.QmitzM),
+                        text: S.intl.string(S.t.QmitzM),
                         children: (e) => {
                             let { onMouseEnter: n, onMouseLeave: s } = e;
                             return (0, i.jsx)(c.P3F, {
-                                'aria-label': T.intl.string(T.t.QmitzM),
-                                className: S.toggleIcon,
-                                onClick: D,
+                                'aria-label': S.intl.string(S.t.QmitzM),
+                                className: I.toggleIcon,
+                                onClick: P,
                                 onMouseEnter: n,
                                 onMouseLeave: s,
                                 children: t
@@ -230,42 +230,42 @@ function P(e) {
                         ? (0, i.jsx)(c.pzj, {
                               size: 'md',
                               color: 'currentColor',
-                              className: S.toggleIconOn,
-                              colorClass: S.fill
+                              className: I.toggleIconOn,
+                              colorClass: I.fill
                           })
                         : (0, i.jsx)(c.o8v, {
                               size: 'md',
                               color: 'currentColor',
-                              className: S.toggleIconOff,
-                              colorClass: S.fill
+                              className: I.toggleIconOff,
+                              colorClass: I.fill
                           }),
                     s = t
                         ? (0, i.jsx)(c.ua7, {
-                              text: T.intl.string(T.t.Vfw2Ly),
+                              text: S.intl.string(S.t.Vfw2Ly),
                               children: (e) =>
                                   (0, i.jsx)('i', {
-                                      className: S.overlayWarningIcon,
+                                      className: I.overlayWarningIcon,
                                       ...e
                                   })
                           })
                         : null;
                 return (0, i.jsxs)('div', {
-                    className: r()(v.flexCenter, v.noWrap, v.justifyBetween, S.toggleContainer),
+                    className: l()(v.flexCenter, v.noWrap, v.justifyBetween, I.toggleContainer),
                     children: [
                         s,
                         (0, i.jsx)(c.ua7, {
-                            text: T.intl.string(T.t['1+O+Tk']),
+                            text: S.intl.string(S.t['1+O+Tk']),
                             children: (t) => {
-                                let { onMouseEnter: s, onMouseLeave: l } = t;
+                                let { onMouseEnter: s, onMouseLeave: r } = t;
                                 return (0, i.jsx)(c.P3F, {
-                                    'aria-label': T.intl.string(T.t['1+O+Tk']),
-                                    className: S.toggleIcon,
+                                    'aria-label': S.intl.string(S.t['1+O+Tk']),
+                                    className: I.toggleIcon,
                                     onClick: () => {
                                         var t;
                                         return (t = !e), void d.Z.toggleOverlay(C, t, t);
                                     },
                                     onMouseEnter: s,
-                                    onMouseLeave: l,
+                                    onMouseLeave: r,
                                     children: n
                                 });
                             }
@@ -273,9 +273,9 @@ function P(e) {
                     ]
                 });
             })(),
-            !l || g
+            !r || g
                 ? (0, i.jsx)(u.Z, {
-                      className: S.removeGame,
+                      className: I.removeGame,
                       onClick: function () {
                           d.Z.deleteEntry(C);
                       }
@@ -286,17 +286,17 @@ function P(e) {
 }
 function y() {
     return (0, i.jsx)('div', {
-        className: r()(v.flexCenter, S.notDetected, S.activeGame),
+        className: l()(v.flexCenter, I.notDetected, I.activeGame),
         children: (0, i.jsxs)('div', {
-            className: r()(S.gameNameLastPlayed, v.vertical),
+            className: l()(I.gameNameLastPlayed, v.vertical),
             children: [
                 (0, i.jsx)('div', {
-                    className: S.gameName,
-                    children: T.intl.string(T.t['H68X9/'])
+                    className: I.gameName,
+                    children: S.intl.string(S.t['H68X9/'])
                 }),
                 (0, i.jsx)('div', {
-                    className: S.lastPlayed,
-                    children: T.intl.string(T.t.T5Ilm5)
+                    className: I.lastPlayed,
+                    children: S.intl.string(S.t.T5Ilm5)
                 })
             ]
         })
@@ -317,43 +317,43 @@ function Z(e) {
         ]
     });
 }
-let L = (0, C.oH)(function () {
+let k = (0, C.oH)(function () {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
         return new Set(t.map((e) => e.exePath));
     }),
-    k = function (e) {
+    L = function (e) {
         let { className: t, showHeader: n = !0 } = e,
-            l = (0, a.Wu)([m.ZP], () => m.ZP.getGamesSeen(!0)),
-            { runningGame: o, overrideExePaths: d } = (0, a.cj)([m.ZP], () => ({
-                runningGame: m.ZP.getVisibleGame(),
-                overrideExePaths: L(...m.ZP.getOverrides())
+            r = (0, a.Wu)([h.ZP], () => h.ZP.getGamesSeen(!0)),
+            { runningGame: o, overrideExePaths: d } = (0, a.cj)([h.ZP], () => ({
+                runningGame: h.ZP.getVisibleGame(),
+                overrideExePaths: k(...h.ZP.getOverrides())
             }));
         return (
             s.useEffect(() => ((0, g.Ky)(), g.P7), []),
             (0, i.jsxs)(c.hjN, {
                 tag: 'h1',
-                title: n ? T.intl.string(T.t.AVDyEh) : null,
+                title: n ? S.intl.string(S.t.AVDyEh) : null,
                 className: t,
                 children: [
                     null != o
                         ? (0, i.jsx)(
-                              P,
+                              D,
                               {
                                   rawGame: o,
                                   isOverride: d.has(o.exePath),
                                   nowPlaying: !0
                               },
-                              (0, m.rH)(o)
+                              (0, h.rH)(o)
                           )
                         : (0, i.jsx)(y, {}),
                     (0, i.jsxs)('div', {
-                        className: r()(S.nowPlayingAdd, A.marginReset, A.marginTop8, A.marginBottom20),
+                        className: l()(I.nowPlayingAdd, A.marginReset, A.marginTop8, A.marginBottom20),
                         children: [
-                            (0, i.jsx)('span', { children: T.intl.string(T.t.xwhoqK) }),
+                            (0, i.jsx)('span', { children: S.intl.string(S.t.xwhoqK) }),
                             (0, i.jsx)(c.yRy, {
                                 renderPopout: (e) => {
                                     let { closePopout: t } = e;
-                                    return (0, i.jsx)(D, { onClose: t });
+                                    return (0, i.jsx)(P, { onClose: t });
                                 },
                                 align: 'center',
                                 position: 'bottom',
@@ -363,32 +363,32 @@ let L = (0, C.oH)(function () {
                                         look: c.iLD.LINK,
                                         size: c.PhG.MIN,
                                         color: c.Ttl.LINK,
-                                        children: T.intl.string(T.t.GjgdXV)
+                                        children: S.intl.string(S.t.GjgdXV)
                                     })
                             })
                         ]
                     }),
-                    0 === l.length
-                        ? (0, i.jsx)(Z, { children: (0, i.jsx)(c.OZU, { children: T.intl.string(T.t['1yiJws']) }) })
+                    0 === r.length
+                        ? (0, i.jsx)(Z, { children: (0, i.jsx)(c.OZU, { children: S.intl.string(S.t['1yiJws']) }) })
                         : (0, i.jsxs)(c.hjN, {
                               className: A.marginTop40,
                               children: [
                                   (0, i.jsx)(c.vwX, {
                                       className: A.marginBottom4,
-                                      children: T.intl.string(T.t.jCOdv7)
+                                      children: S.intl.string(S.t.jCOdv7)
                                   }),
                                   (0, i.jsx)(c.R94, {
                                       type: c.geA.DESCRIPTION,
-                                      children: T.intl.format(T.t.KPA3m5, { igdbLink: 'https://www.igdb.com/about' })
+                                      children: S.intl.format(S.t.KPA3m5, { igdbLink: 'https://www.igdb.com/about' })
                                   }),
-                                  l.map((e) =>
+                                  r.map((e) =>
                                       (0, i.jsx)(
-                                          P,
+                                          D,
                                           {
                                               rawGame: e,
                                               isOverride: d.has(e.exePath)
                                           },
-                                          (0, m.rH)(e)
+                                          (0, h.rH)(e)
                                       )
                                   )
                               ]

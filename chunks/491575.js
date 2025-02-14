@@ -5,8 +5,8 @@ var i = n(200651),
     a = n.n(r),
     s = n(481060),
     o = n(176299),
-    c = n(512847),
-    d = n(612226),
+    d = n(512847),
+    c = n(612226),
     u = n(714338),
     h = n(607070),
     m = n(317858),
@@ -27,7 +27,7 @@ let v = l.memo(function () {
             a()(null != l, 'Shakeable is shaken when not mounted'), l.shake(n, i);
         }, []);
     return (
-        l.useEffect(() => (u.Z.setLayout(d.ZP), u.Z.enable(), () => u.Z.disable()), []),
+        l.useEffect(() => (u.Z.setLayout(c.ZP), u.Z.enable(), () => u.Z.disable()), []),
         l.useEffect(
             () => (
                 f.S.subscribe(C.CkL.SHAKE_APP, t),
@@ -47,7 +47,7 @@ let v = l.memo(function () {
                     children: (0, i.jsx)(o.Z, {})
                 }),
                 (0, i.jsx)(p.Z, {}),
-                (0, i.jsx)(c.Z, {}),
+                (0, i.jsx)(d.Z, {}),
                 (0, i.jsx)(E.Z, {}),
                 (0, i.jsx)(g.Z, {}),
                 (0, i.jsx)(s.c43, {})

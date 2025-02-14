@@ -45,8 +45,8 @@ var i = n(512722),
     b = n(944486),
     P = n(9156),
     L = n(979651),
-    Z = n(938475),
-    R = n(823379),
+    R = n(938475),
+    Z = n(823379),
     D = n(709054),
     w = n(968358),
     M = n(203818),
@@ -464,7 +464,7 @@ class et extends J {
         if ((super(e), !e.optInEnabled)) return;
         this.channels = s()(null !== (n = P.ZP.getGuildFavorites(e.id)) && void 0 !== n ? n : [])
             .map((e) => T.Z.getChannel(e))
-            .filter(R.lm)
+            .filter(Z.lm)
             .map((e) => new ed(this, e, t))
             .keyBy((e) => e.id)
             .value();
@@ -853,7 +853,7 @@ function eg(e, t, n) {
                     type: 'event',
                     name: i.name
                 };
-            let l = Z.ZP.getVoiceStatesForChannel(e);
+            let l = R.ZP.getVoiceStatesForChannel(e);
             if (n && t && (0, w.a)(l)) return { type: 'go-live' };
             let r = d.Z.getChannelStatus(e);
             if (null != r && r.length > 0)
@@ -867,7 +867,7 @@ function eg(e, t, n) {
                     var t;
                     return null === (t = o.Z.getApplication(e.applicationId)) || void 0 === t ? void 0 : t.name;
                 })
-                .filter(R.lm);
+                .filter(Z.lm);
             if (s.length > 0)
                 return {
                     type: 'embedded-activities',

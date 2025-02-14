@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(47120);
+n.d(t, { Z: () => R }), n(47120);
 var a = n(200651),
     r = n(192379),
     l = n(120356),
@@ -182,7 +182,7 @@ let k = [
         }
     }
 ];
-function I() {
+function R() {
     let e = r.useRef(null),
         [t, n] = r.useState(''),
         l = (function (e) {
@@ -260,7 +260,7 @@ function I() {
             N.current = null;
         }, []);
     let S = t.trim().length > 0,
-        I = r.useMemo(() => (S ? x : p ? c : s), [s, x, S, p, c]);
+        R = r.useMemo(() => (S ? x : p ? c : s), [s, x, S, p, c]);
     return (0, a.jsxs)('div', {
         ref: e,
         className: i()(C.panel, j.panel),
@@ -287,7 +287,7 @@ function I() {
             }),
             (0, a.jsx)(g.Z, {
                 columns: k,
-                data: I,
+                data: R,
                 selectedRowKey: null == b ? void 0 : b.id.toString(),
                 onClickRow: (e) => v(e.actionLog)
             }),

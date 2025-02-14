@@ -37,25 +37,25 @@ let j = (e, t, n, l) => {
         let { channel: t, entry: n, disableGameProfileLinks: i, onReaction: o, onVoiceChannelPreview: f } = e,
             { largeImage: P } = (0, s.rv)({ entry: n }),
             { user: y, details: N, appName: Z } = (0, v.n)(n),
-            { primaryColor: T, secondaryColor: E } = (0, u.Z)(null == P ? void 0 : P.src),
-            A = (0, c.yA)(n),
+            { primaryColor: T, secondaryColor: A } = (0, u.Z)(null == P ? void 0 : P.src),
+            E = (0, c.yA)(n),
             _ = (0, c.Nq)(n),
             S = a.useCallback(
                 (e) => {
-                    if (null != t && null != y && null != A && null != _ && (0, x.qy)(_))
+                    if (null != t && null != y && null != E && null != _ && (0, x.qy)(_))
                         return (0, d.SO)({
                             entry: n,
                             applicationImageSrc: null == P ? void 0 : P.src,
                             avatarSrcs: [y.getAvatarURL(null == t ? void 0 : t.guild_id, 128)],
                             description: j(n, t, y, _),
-                            timestamp: C.intl.formatToPlainString(C.t.YL7UEx, { hours: Math.round(A / r.Z.Seconds.HOUR) }),
-                            colors: [T, E],
+                            timestamp: C.intl.formatToPlainString(C.t.YL7UEx, { hours: Math.round(E / r.Z.Seconds.HOUR) }),
+                            colors: [T, A],
                             channelId: e
                         });
                 },
-                [null == P ? void 0 : P.src, t, A, n, T, _, E, y]
+                [null == P ? void 0 : P.src, t, E, n, T, _, A, y]
             );
-        if (null == y || null == A || null == _ || !(0, x.qy)(_)) return null;
+        if (null == y || null == E || null == _ || !(0, x.qy)(_)) return null;
         let R = null != n.extra.platform ? m.v[n.extra.platform] : null;
         return (0, l.jsxs)(p.yR, {
             children: [

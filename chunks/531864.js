@@ -1,6 +1,6 @@
 n.d(t, { Z: () => m }), n(47120);
-var r = n(200651),
-    l = n(192379),
+var l = n(200651),
+    r = n(192379),
     i = n(120356),
     s = n.n(i),
     a = n(979554),
@@ -102,31 +102,31 @@ let h = {
     m = (e) => {
         let { peaking: t, transitioning: n, style: i } = e,
             h = window.innerHeight,
-            [m, f] = l.useState(!1),
+            [m, f] = r.useState(!1),
             g = p.map((e) => {
                 let { skuId: t } = e;
                 return d.Z.getProduct(t);
             });
         return (
-            l.useEffect(() => {
+            r.useEffect(() => {
                 n &&
                     setTimeout(() => {
                         f(!0);
                     }, u.lb);
             }, [n]),
-            (0, r.jsx)('div', {
+            (0, l.jsx)('div', {
                 style: i,
                 className: s()(C.jumbleWrapper, {
                     [C.peaking]: t,
                     [C.transitioned]: m
                 }),
                 children: p.map((e, t) => {
-                    var l, i;
+                    var r, i;
                     let { top: s, left: d, rotation: p, size: m, skuId: f } = e,
-                        x = null === (l = g[t]) || void 0 === l ? void 0 : l.items[0],
+                        x = null === (r = g[t]) || void 0 === r ? void 0 : r.items[0],
                         b = null === (i = g[t]) || void 0 === i ? void 0 : i.type,
                         _ = b === a.Z.AVATAR_DECORATION ? 384 : 512;
-                    return (0, r.jsxs)(
+                    return (0, l.jsxs)(
                         'div',
                         {
                             className: C.asset,
@@ -140,10 +140,10 @@ let h = {
                                 transitionDuration: ''.concat(u.lb - 200 * Math.random(), 'ms')
                             },
                             children: [
-                                null != x && b === a.Z.AVATAR_DECORATION && (0, r.jsx)(c.R, { item: x }),
+                                null != x && b === a.Z.AVATAR_DECORATION && (0, l.jsx)(c.R, { item: x }),
                                 null != x &&
                                     b === a.Z.PROFILE_EFFECT &&
-                                    (0, r.jsx)(o.Z, {
+                                    (0, l.jsx)(o.Z, {
                                         profileEffectId: x.id,
                                         isPurchased: !1,
                                         isHovering: !0

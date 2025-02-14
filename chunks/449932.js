@@ -3,8 +3,8 @@ var i = n(200651);
 n(192379);
 var l = n(120356),
     r = n.n(l),
-    o = n(442837),
-    a = n(481060),
+    a = n(442837),
+    o = n(481060),
     s = n(717881),
     c = n(503438),
     d = n(850827),
@@ -20,15 +20,15 @@ var l = n(120356),
     x = n(398644);
 function I(e) {
     let { guildId: t, member: n, className: l } = e,
-        o = null != n.member ? (0, _.CA)(n.member) : null;
-    return (0, i.jsx)(a.ua7, {
+        a = null != n.member ? (0, _.CA)(n.member) : null;
+    return (0, i.jsx)(o.ua7, {
         text: n.nick,
         position: 'bottom',
         children: (e) => {
             var s;
-            return (0, i.jsx)(a.qEK, {
-                src: null != o ? o : n.user.getAvatarURL(t, 16),
-                size: a.EFr.SIZE_16,
+            return (0, i.jsx)(o.qEK, {
+                src: null != a ? a : n.user.getAvatarURL(t, 16),
+                size: o.EFr.SIZE_16,
                 className: r()(l, x.partyAvatar),
                 'aria-label': null !== (s = n.nick) && void 0 !== s ? s : v.ZP.getName(n.user),
                 ...e
@@ -69,7 +69,7 @@ let b = (e) => {
         _ = (0, u.Q3)('ChannelActivityRow'),
         v = null != r,
         I = v ? Array.from(r.embeddedActivity.userIds) : [],
-        b = (0, o.e7)([f.default, g.default], () => {
+        b = (0, a.e7)([f.default, g.default], () => {
             if (v) return f.default.getUser(I[0]);
             if (null != l) {
                 var e, t;
@@ -120,8 +120,8 @@ let b = (e) => {
                     user: b,
                     guildId: t.getGuildId(),
                     channelId: t.id,
-                    color: _ ? a.zxk.Colors.PRIMARY : x.button,
-                    look: _ ? a.zxk.Looks.FILLED : void 0,
+                    color: _ ? o.zxk.Colors.PRIMARY : x.button,
+                    look: _ ? o.zxk.Looks.FILLED : void 0,
                     onAction: p
                 })
             })

@@ -1,44 +1,44 @@
-s.r(t), s.d(t, { default: () => m }), s(47120);
-var a = s(200651),
-    n = s(192379),
-    i = s(548668),
-    r = s(231262),
-    o = s(501522),
-    l = s(442837),
-    c = s(153867),
-    d = s(706454),
-    u = s(626135),
-    p = s(981631),
-    _ = s(388032),
-    h = s(285085);
-class N extends n.Component {
+a.r(t), a.d(t, { default: () => p }), a(47120);
+var n = a(200651),
+    s = a(192379),
+    l = a(548668),
+    i = a(231262),
+    r = a(501522),
+    o = a(442837),
+    c = a(153867),
+    d = a(706454),
+    u = a(626135),
+    _ = a(981631),
+    N = a(388032),
+    h = a(285085);
+class m extends s.Component {
     shouldScrollToTop(e) {
         let { location: t } = e;
-        return t.pathname.startsWith(p.Z5c.APPLICATION_STORE_LISTING_SKU('')) || t.pathname.startsWith(p.Z5c.APPLICATION_STORE_LISTING_APPLICATION(''));
+        return t.pathname.startsWith(_.Z5c.APPLICATION_STORE_LISTING_SKU('')) || t.pathname.startsWith(_.Z5c.APPLICATION_STORE_LISTING_APPLICATION(''));
     }
     render() {
-        let { location: e, className: t, render: s, locale: l } = this.props;
-        return (0, a.jsx)(o.Z, {
+        let { location: e, className: t, render: a, locale: o } = this.props;
+        return (0, n.jsx)(r.Z, {
             className: t,
             shouldScrollToTop: this.shouldScrollToTop,
-            render: (t, o) =>
-                (0, a.jsxs)(n.Fragment, {
+            render: (t, r) =>
+                (0, n.jsxs)(s.Fragment, {
                     children: [
-                        (0, a.jsx)(r.h, {
+                        (0, n.jsx)(i.h, {
                             avoidRouter: !0,
-                            locale: l,
+                            locale: o,
                             authRedirectTo: e.pathname,
                             track: u.default.track,
                             className: h.marketingHeader,
                             onChangeLocale: this.handleHeaderLocaleChange,
                             mobileClassName: h.marketingHeader,
-                            openNavAriaLabel: _.intl.string(_.t.Fs9k3N),
-                            hideNavAriaLabel: _.intl.string(_.t.AbfyHB),
-                            skipToContentLabel: _.intl.string(_.t['18gavL'])
+                            openNavAriaLabel: N.intl.string(N.t.Fs9k3N),
+                            hideNavAriaLabel: N.intl.string(N.t.AbfyHB),
+                            skipToContentLabel: N.intl.string(N.t['18gavL'])
                         }),
-                        s(t, o),
-                        (0, a.jsx)(i.$, {
-                            locale: l,
+                        a(t, r),
+                        (0, n.jsx)(l.$, {
+                            locale: o,
                             authRedirectTo: e.pathname,
                             avoidRouter: !0,
                             track: u.default.track,
@@ -49,20 +49,20 @@ class N extends n.Component {
         });
     }
     constructor(...e) {
-        var t, s;
+        var t, a;
         super(...e),
             (t = 'handleHeaderLocaleChange'),
-            (s = (e) => {
+            (a = (e) => {
                 e !== this.props.locale && c.ZP.overrideLocale(e);
             }),
             t in this
                 ? Object.defineProperty(this, t, {
-                      value: s,
+                      value: a,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (this[t] = s);
+                : (this[t] = a);
     }
 }
-let m = l.ZP.connectStores([d.default], () => ({ locale: d.default.locale }))(N);
+let p = o.ZP.connectStores([d.default], () => ({ locale: d.default.locale }))(m);

@@ -1,20 +1,20 @@
 n.d(t, {
     default: () => g,
-    y: () => m
+    y: () => h
 });
 var i = n(200651);
 n(192379);
 var s = n(481060),
-    l = n(490220),
-    r = n(594174),
+    r = n(490220),
+    l = n(594174),
     a = n(98278),
     o = n(790527),
     c = n(474936),
     d = n(981631),
     u = n(388032),
-    h = n(170274);
-function m(e) {
-    let t = r.default.getCurrentUser();
+    m = n(170274);
+function h(e) {
+    let t = l.default.getCurrentUser();
     null != t &&
         (0, s.ZDy)(async () => {
             let { default: s } = await Promise.resolve().then(n.bind(n, 267717));
@@ -34,8 +34,8 @@ function m(e) {
 function g(e) {
     let { user: t, onClose: n, ...s } = e;
     return (0, i.jsx)(o.Z, {
-        modalClassName: h.modal,
-        modalContentClassName: h.modalContent,
+        modalClassName: m.modal,
+        modalContentClassName: m.modalContent,
         type: c.cd.TRY_IT_OUT_MODAL_UPSELL,
         title: u.intl.string(u.t.reVc0N),
         body: u.intl.string(u.t.KckEj4),
@@ -49,9 +49,9 @@ function g(e) {
         hideBackButton: !0,
         showEnhancedUpsell: !0,
         LeadingComponent: (0, i.jsx)('div', {
-            className: h.previewContainerParent,
-            children: (0, i.jsx)(l.Z, {
-                containerClassName: h.previewContainer,
+            className: m.previewContainerParent,
+            children: (0, i.jsx)(r.Z, {
+                containerClassName: m.previewContainer,
                 user: t,
                 disabledInputs: !0
             })

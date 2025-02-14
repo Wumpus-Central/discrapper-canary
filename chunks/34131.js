@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => c });
 var i = n(200651);
 n(192379);
 var l = n(70097),
@@ -6,16 +6,16 @@ var l = n(70097),
     a = n(970731),
     s = n(981631),
     o = n(388032),
-    c = n(592167);
-function d(e) {
+    d = n(592167);
+function c(e) {
     let { guildId: t, markAsDismissed: n } = e;
     return (0, i.jsx)('div', {
-        className: c.container,
+        className: d.container,
         children: (0, i.jsx)(a.ZP, {
             header: o.intl.string(o.t.gCgirq),
             content: o.intl.string(o.t.fLMZFx),
             asset: (0, i.jsx)(l.Z, {
-                className: c.video,
+                className: d.video,
                 src: 'https://cdn.discordapp.com/assets/server-subscription-tier-template/upsell.mov',
                 autoPlay: !0,
                 loop: !0

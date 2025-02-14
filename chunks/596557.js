@@ -5,8 +5,8 @@ var i = n(200651),
     a = n(481060),
     s = n(785697),
     o = n(626135),
-    c = n(700785),
-    d = n(645041),
+    d = n(700785),
+    c = n(645041),
     u = n(981631),
     h = n(921944),
     m = n(647086),
@@ -14,13 +14,13 @@ var i = n(200651),
 function g(e) {
     var t;
     let g = (0, s.SE)(e),
-        _ = p.$X.some((t) => (null == e ? void 0 : e.id) !== m._ && c.oz(t, e)),
+        _ = p.$X.some((t) => (null == e ? void 0 : e.id) !== m._ && d.oz(t, e)),
         f = (null == e ? void 0 : e.defaultMessageNotifications) === u.bL.ALL_MESSAGES,
-        E = (0, d.FT)(r.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : u.lds),
+        E = (0, c.FT)(r.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : u.lds),
         I = g && (_ || f) && !E,
         C = l.useCallback(() => {
             var t;
-            (0, d.Qd)(r.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : u.lds, !0, h.L.DISMISS);
+            (0, c.Qd)(r.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : u.lds, !0, h.L.DISMISS);
         }, [e]),
         N = l.useRef(!1);
     l.useEffect(() => {

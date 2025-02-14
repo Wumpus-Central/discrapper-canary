@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(47120);
+n.d(t, { Z: () => O }), n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(642128),
@@ -171,12 +171,12 @@ let A = (e) => [
               })
             : null;
     },
-    k = (e) => {
+    O = (e) => {
         let { guildId: t, onClose: n } = e,
             [R, L] = r.useState(T.Wy.GAMES),
             {
-                initialSettings: k,
-                settings: O,
+                initialSettings: O,
+                settings: k,
                 errors: P,
                 submitting: w,
                 dirty: M
@@ -230,10 +230,10 @@ let A = (e) => [
                 M ? h.S.dispatch(S.CkL.EMPHASIZE_NOTICE) : n();
             }, [M, n]),
             Y = async () => {
-                await (0, g.Ii)(t, O), (0, x.Af)(t);
+                await (0, g.Ii)(t, k), (0, x.Af)(t);
             },
             K = r.useMemo(() => null != P && Object.values(P).some((e) => null != e), [P]);
-        if (null == O) return null;
+        if (null == k) return null;
         let q = A(P);
         return (0, i.jsxs)(l.animated.div, {
             style: G,
@@ -326,7 +326,7 @@ let A = (e) => [
                                                     title: Z.intl.string(Z.t.t6Mbq6),
                                                     description: Z.intl.string(Z.t.E7Ymwc),
                                                     onUpdateGames: F,
-                                                    gameApplicationIds: null !== (e = O.gameApplicationIds) && void 0 !== e ? e : new Set(),
+                                                    gameApplicationIds: null !== (e = k.gameApplicationIds) && void 0 !== e ? e : new Set(),
                                                     error: P.gameApplicationIds,
                                                     guildId: t,
                                                     includeSuggestedGames: !0
@@ -336,7 +336,7 @@ let A = (e) => [
                                                     title: Z.intl.string(Z.t.W0h7pa),
                                                     description: Z.intl.string(Z.t.JHYekZ),
                                                     onUpdatePlaystyle: z,
-                                                    playstyle: O.playstyle,
+                                                    playstyle: k.playstyle,
                                                     error: P.playstyle
                                                 });
                                             case T.Wy.UTILITY_TRAITS:
@@ -345,30 +345,30 @@ let A = (e) => [
                                                     title: Z.intl.string(Z.t.G4tP09),
                                                     description: Z.intl.string(Z.t['6Eos19']),
                                                     onUpdateTraits: H,
-                                                    progress: O
+                                                    progress: k
                                                 });
                                             case T.Wy.INTERESTS:
                                                 return (0, i.jsx)(N.Z, {
                                                     guildId: t,
                                                     handleUpdate: V,
-                                                    progress: O,
+                                                    progress: k,
                                                     error: P.interests
                                                 });
                                             case T.Wy.DESCRIPTION:
                                                 return (0, i.jsx)(f.Z, {
                                                     guildId: t,
                                                     handleUpdate: V,
-                                                    progress: O,
+                                                    progress: k,
                                                     errors: P
                                                 });
                                             case T.Wy.CUSTOMIZE_TAG_BADGE:
                                                 return (0, i.jsx)(E.Z, {
                                                     handleUpdate: V,
-                                                    tag: O.tag,
+                                                    tag: k.tag,
                                                     error: P.tag,
-                                                    badge: O.badgeKind,
-                                                    primaryColor: O.badgePrimaryColor,
-                                                    secondaryColor: O.badgeSecondaryColor,
+                                                    badge: k.badgeKind,
+                                                    primaryColor: k.badgePrimaryColor,
+                                                    secondaryColor: k.badgeSecondaryColor,
                                                     furthestStep: T.Wy.CUSTOMIZE_TAG_BADGE,
                                                     inSettings: !0
                                                 });
@@ -382,7 +382,7 @@ let A = (e) => [
                                                 return (0, i.jsx)(C.Z, {
                                                     guildId: t,
                                                     handleUpdate: V,
-                                                    progress: O
+                                                    progress: k
                                                 });
                                             default:
                                                 return null;
@@ -399,7 +399,7 @@ let A = (e) => [
                                                 onSave: Y,
                                                 submitting: w,
                                                 onReset: () => {
-                                                    (0, g.mf)(t, k);
+                                                    (0, g.mf)(t, O);
                                                 },
                                                 errorMessage: Object.values(P).find((e) => null != e)
                                             })

@@ -5,8 +5,8 @@ var i = n(200651),
     a = n.n(r),
     s = n(481060),
     o = n(497505),
-    c = n(415104),
-    d = n(176418);
+    d = n(415104),
+    c = n(176418);
 function u(e) {
     let { quests: t, isFetching: n } = e,
         r = null;
@@ -45,23 +45,23 @@ function u(e) {
     }, []);
     let p = h >= 1610 ? 3 : h >= 1340 ? 2 : 1;
     return n && 0 === t.length
-        ? (0, i.jsx)(s.$jN, { className: d.spinner })
+        ? (0, i.jsx)(s.$jN, { className: c.spinner })
         : (0, i.jsx)(
               'div',
               {
-                  className: d.container,
+                  className: c.container,
                   children: t.map((e, t) => {
                       let n = Math.floor(t / p);
                       return (0, i.jsx)(
-                          c.Z,
+                          d.Z,
                           {
                               quest: e,
                               questContent: o.jn.QUEST_HOME_DESKTOP,
                               contentPosition: t,
                               rowIndex: n,
-                              className: a()(d.questTile, {
-                                  [d.selected]: u && e.id === r,
-                                  [d.unselected]: u && e.id !== r
+                              className: a()(c.questTile, {
+                                  [c.selected]: u && e.id === r,
+                                  [c.unselected]: u && e.id !== r
                               })
                           },
                           e.id

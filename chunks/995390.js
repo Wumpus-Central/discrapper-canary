@@ -11,8 +11,8 @@ var i = n(192379),
     m = n(592125),
     h = n(430824),
     x = n(496675),
-    p = n(594174),
-    g = n(823379),
+    g = n(594174),
+    p = n(823379),
     f = n(905753),
     b = n(399860),
     v = n(981631);
@@ -53,7 +53,7 @@ function _(e, t, n) {
             },
             [n]
         ),
-        j = (0, o.e7)(
+        N = (0, o.e7)(
             [f.Z],
             () => {
                 var e;
@@ -61,15 +61,15 @@ function _(e, t, n) {
             },
             [n]
         ),
-        N = null != n ? n : t,
+        j = null != n ? n : t,
         C = null != n ? _ : r,
-        I = i.useMemo(() => (null != j ? j : { ...(null != C ? C : {}) }), [j, C]),
+        I = i.useMemo(() => (null != N ? N : { ...(null != C ? C : {}) }), [N, C]),
         Z = i.useMemo(() => Object.keys(I).length, [I]),
         T = i.useMemo(() => (null == C || null == I ? null : !s().isEqual(C, I)), [C, I]);
     return (
         i.useEffect(() => {
-            N === t && (T ? d.Z.startEditingCommandPermissions(N) : d.Z.stopEditingCommandPermissions(N));
-        }, [t, T, N]),
+            j === t && (T ? d.Z.startEditingCommandPermissions(j) : d.Z.stopEditingCommandPermissions(j));
+        }, [t, T, j]),
         {
             originalApplicationPermissions: r,
             originalCommandPermissions: _,
@@ -77,9 +77,9 @@ function _(e, t, n) {
                 let n = (0, o.e7)([h.Z], () => h.Z.getGuild(e), [e]);
                 a()(null != n, 'guild must be present to be editing its integration settings');
                 let l = (0, o.e7)([x.Z], () => x.Z.getHighestRole(n), [n]),
-                    r = (0, o.e7)([p.default], () => {
+                    r = (0, o.e7)([g.default], () => {
                         var e;
-                        return null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.id;
+                        return null === (e = g.default.getCurrentUser()) || void 0 === e ? void 0 : e.id;
                     });
                 a()(null != r, 'useComputePermissions: currentUserId must not be null');
                 let s = r === n.ownerId,
@@ -104,29 +104,29 @@ function _(e, t, n) {
                             Object.fromEntries(
                                 d
                                     .map(m.Z.getChannel)
-                                    .filter(g.lm)
+                                    .filter(p.lm)
                                     .map((e) => [e.id, e])
                             ),
                         [d]
                     ),
-                    j = (0, o.cj)(
+                    N = (0, o.cj)(
                         [h.Z],
                         () =>
                             Object.fromEntries(
                                 f
                                     .map((t) => h.Z.getRole(e, t))
-                                    .filter(g.lm)
+                                    .filter(p.lm)
                                     .map((e) => [e.id, e])
                             ),
                         [f, e]
                     ),
-                    N = (0, o.cj)(
-                        [p.default],
+                    j = (0, o.cj)(
+                        [g.default],
                         () =>
                             Object.fromEntries(
                                 b
-                                    .map(p.default.getUser)
-                                    .filter(g.lm)
+                                    .map(g.default.getUser)
+                                    .filter(p.lm)
                                     .map((e) => [e.id, e])
                             ),
                         [b]
@@ -144,10 +144,10 @@ function _(e, t, n) {
                             (t = e || x.Z.can(v.Plq.VIEW_CHANNEL, n)), (d = !0);
                         } else if (o.type === c.Kw.ROLE) {
                             let i = o.id === e,
-                                a = j[o.id];
+                                a = N[o.id];
                             (t = i || null != a), (d = s || i || x.Z.isRoleHigher(n, l, a));
                         } else if (o.type === c.Kw.USER) {
-                            let e = N[o.id];
+                            let e = j[o.id];
                             (t = null != e), (d = null != e && (s || x.Z.canManageUser(v.Plq.USE_APPLICATION_COMMANDS, e, n)));
                         }
                         a[r] = {
@@ -157,7 +157,7 @@ function _(e, t, n) {
                         };
                     }
                     return a;
-                }, [_, n, l, s, t, j, N]);
+                }, [_, n, l, s, t, N, j]);
             })(e, I),
             hasChanges: T,
             selectedPermissionCount: Z

@@ -5,8 +5,8 @@ var l = n(200651),
     a = n(561716),
     r = n(721383),
     o = n(313201),
-    _ = n(63063),
-    s = n(857595),
+    s = n(63063),
+    _ = n(857595),
     d = n(981631),
     u = n(388032),
     h = n(164048);
@@ -15,7 +15,7 @@ function p(t) {
         p = (0, o.Dt)();
     return (
         i.useEffect(() => {
-            s.r_();
+            _.r_();
         }, []),
         (0, l.jsxs)(c.Y0X, {
             transitionState: e,
@@ -70,7 +70,7 @@ function p(t) {
                         }),
                         (0, l.jsx)(c.Text, {
                             variant: 'text-md/normal',
-                            children: u.intl.format(u.t.EWFVSU, { link: _.Z.getArticleURL(d.BhN.KEYBOARD_NAVIGATION) })
+                            children: u.intl.format(u.t.EWFVSU, { link: s.Z.getArticleURL(d.BhN.KEYBOARD_NAVIGATION) })
                         })
                     ]
                 }),

@@ -6,11 +6,11 @@ var i = n(278323),
     a = n(145597),
     s = n(620954),
     d = n(987650),
-    c = n(981631),
-    u = n(388032);
+    u = n(981631),
+    c = n(388032);
 function h(e, t, n, h) {
     let _ = t.username,
-        p = u.intl.format(u.t.VDODnp, {
+        p = c.intl.format(c.t.VDODnp, {
             username: '',
             game: n.name
         }),
@@ -18,24 +18,24 @@ function h(e, t, n, h) {
         { trackView: g, trackClick: m } = (0, s.R)(d.n0.ActivityInvite, {
             notif_type: d.n0.ActivityInvite,
             notif_user_id: t.id,
-            activity_type: c.mFx.JOIN_REQUEST,
+            activity_type: u.mFx.JOIN_REQUEST,
             activity_name: h.name
         });
     return {
         icon: f,
         title: _,
         body: p,
-        confirmText: u.intl.string(u.t['fgP/wc']),
-        cancelText: u.intl.string(u.t.tpXzJy),
+        confirmText: c.intl.string(c.t['fgP/wc']),
+        cancelText: c.intl.string(c.t.tpXzJy),
         onNotificationShow: () => {
             g();
         },
         onConfirmClick: (t, n) => {
             i.Z.sendActivityInvite({
                 channelId: e.id,
-                type: c.mFx.JOIN,
+                type: u.mFx.JOIN,
                 activity: h,
-                location: o.Z.isLocked((0, a.QF)()) ? c.Sbl.LOCKED_OVERLAY : c.Sbl.UNLOCKED_OVERLAY
+                location: o.Z.isLocked((0, a.QF)()) ? u.Sbl.LOCKED_OVERLAY : u.Sbl.UNLOCKED_OVERLAY
             }),
                 m('join'),
                 l.Z.updateNotificationStatus(n);

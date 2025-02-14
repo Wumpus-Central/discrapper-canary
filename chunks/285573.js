@@ -2,8 +2,8 @@ n.d(t, { Z: () => v });
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    o = n.n(r),
-    a = n(442837),
+    a = n.n(r),
+    o = n(442837),
     s = n(239091),
     c = n(146773),
     d = n(592125),
@@ -16,13 +16,13 @@ var i = n(200651),
     _ = n(952107);
 let v = (0, c.B)(function (e) {
     let { guild: t, selectedChannelId: r, position: c, disableManageChannels: v, sorting: C, sortingType: x, sortingPosition: I, connectChannelDragSource: Z, connectChannelDropTarget: b, tabIndex: S } = e,
-        N = (0, a.e7)([d.Z, u.ZP], () => {
+        N = (0, o.e7)([d.Z, u.ZP], () => {
             let e = u.ZP.getDirectoryChannelIds(t.id);
             return 0 === e.length ? null : d.Z.getChannel(e[0]);
         }),
-        E = (0, a.e7)([d.Z], () => d.Z.getChannel(null == N ? void 0 : N.parent_id)),
+        E = (0, o.e7)([d.Z], () => d.Z.getChannel(null == N ? void 0 : N.parent_id)),
         j = r === (null == N ? void 0 : N.id),
-        y = (0, a.e7)([h.Z], () => (null != E ? h.Z.can(g.Plq.MANAGE_CHANNELS, E) : null != t && h.Z.can(g.Plq.MANAGE_CHANNELS, t))),
+        y = (0, o.e7)([h.Z], () => (null != E ? h.Z.can(g.Plq.MANAGE_CHANNELS, E) : null != t && h.Z.can(g.Plq.MANAGE_CHANNELS, t))),
         T = l.useCallback(
             (e) => {
                 null != N &&
@@ -41,7 +41,7 @@ let v = (0, c.B)(function (e) {
     let A = (0, p.jo)(c, I),
         P = (0, p.CN)(N, C, x),
         R = (0, i.jsx)('div', {
-            className: o()(A, {
+            className: a()(A, {
                 [_.disabled]: P,
                 [_.selected]: j
             }),

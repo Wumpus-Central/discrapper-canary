@@ -2,26 +2,26 @@ n.r(t),
     n.d(t, {
         transitionToGlobalDiscovery: () =>
             function e(t) {
-                var n, h, g;
-                let b = t.tab;
-                switch ((_.Z.setState({ selectedTab: b }), b)) {
+                var n, b, h;
+                let g = t.tab;
+                switch ((_.Z.setState({ selectedTab: g }), g)) {
                     case d.GlobalDiscoveryTab.SERVERS:
                         let m = t.selectedServersTab;
                         return (
                             null != m
                                 ? o.Z.setState({
                                       selectedTab: m,
-                                      entrypoint: null !== (n = t.entrypoint) && void 0 !== n ? n : p.Qq.UNKNOWN
+                                      entrypoint: null !== (n = t.entrypoint) && void 0 !== n ? n : f.Qq.UNKNOWN
                                   })
-                                : o.Z.setState({ entrypoint: null !== (h = t.entrypoint) && void 0 !== h ? h : p.Qq.UNKNOWN }),
+                                : o.Z.setState({ entrypoint: null !== (b = t.entrypoint) && void 0 !== b ? b : f.Qq.UNKNOWN }),
                             (0, l.uL)(u.Z5c.GLOBAL_DISCOVERY_SERVERS, t.extra)
                         );
                     case d.GlobalDiscoveryTab.APPS:
                         if (null != t.newSessionState) {
-                            let n = (0, a.PM)(),
+                            let n = (0, i.PM)(),
                                 { guildId: o, entrypoint: r } = t.newSessionState;
                             if (
-                                (i.z8.setState({
+                                (a.z8.setState({
                                     sessionId: n,
                                     guildId: null != o ? o : null,
                                     entrypoint: r,
@@ -31,27 +31,27 @@ n.r(t),
                                     source: null == r ? void 0 : r.name,
                                     session_id: n,
                                     guild_id: o,
-                                    user_id: null === (g = c.default.getCurrentUser()) || void 0 === g ? void 0 : g.id
+                                    user_id: null === (h = c.default.getCurrentUser()) || void 0 === h ? void 0 : h.id
                                 }),
                                 t.newSessionState.restorePreviousView)
                             )
                                 return e(
                                     (function () {
-                                        let { lastItem: e } = i.aQ.getState();
+                                        let { lastItem: e } = a.aQ.getState();
                                         if (null != e)
                                             switch (e.type) {
-                                                case i.m_.APPLICATION:
+                                                case a.m_.APPLICATION:
                                                     return {
                                                         tab: d.GlobalDiscoveryTab.APPS,
                                                         applicationId: e.applicationId,
                                                         section: e.section
                                                     };
-                                                case i.m_.CATEGORY:
+                                                case a.m_.CATEGORY:
                                                     return {
                                                         tab: d.GlobalDiscoveryTab.APPS,
                                                         categoryId: Number(e.categoryId)
                                                     };
-                                                case i.m_.SEARCH:
+                                                case a.m_.SEARCH:
                                                     var t;
                                                     return {
                                                         tab: d.GlobalDiscoveryTab.APPS,
@@ -65,9 +65,9 @@ n.r(t),
                                 );
                         }
                         if (null != t.applicationId) {
-                            if (t.section === f.GlobalDiscoveryAppsSections.STORE) {
+                            if (t.section === p.GlobalDiscoveryAppsSections.STORE) {
                                 if (null != t.skuId) return (0, l.uL)(u.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(t.applicationId, t.skuId));
-                                return (0, l.uL)(u.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t.applicationId, f.GlobalDiscoveryAppsSections.STORE));
+                                return (0, l.uL)(u.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t.applicationId, p.GlobalDiscoveryAppsSections.STORE));
                             }
                             return (0, l.uL)(u.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(t.applicationId));
                         }
@@ -83,7 +83,7 @@ n.r(t),
                             questId: t.questId
                         });
                     default:
-                        throw Error('[transitionToGlobalDiscovery] Unhandled tab type: '.concat(b));
+                        throw Error('[transitionToGlobalDiscovery] Unhandled tab type: '.concat(g));
                 }
             }
     }),
@@ -93,8 +93,8 @@ n.r(t),
     n(815648),
     n(47120),
     n(411104);
-var i = n(258971),
-    a = n(726115),
+var a = n(258971),
+    i = n(726115),
     o = n(859921),
     r = n(341907),
     l = n(703656),
@@ -103,5 +103,5 @@ var i = n(258971),
     _ = n(836768),
     d = n(49898),
     u = n(981631),
-    f = n(979007),
-    p = n(128449);
+    p = n(979007),
+    f = n(128449);

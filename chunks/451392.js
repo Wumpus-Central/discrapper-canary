@@ -2,50 +2,50 @@ n.d(t, { Z: () => E });
 var i = n(200651);
 n(192379);
 var s = n(120356),
-    l = n.n(s),
-    r = n(498607),
-    a = n.n(r),
+    r = n.n(s),
+    l = n(498607),
+    a = n.n(l),
     o = n(692547),
     c = n(481060),
     d = n(220082),
     u = n(687158),
-    h = n(576635),
-    m = n(74538),
+    m = n(576635),
+    h = n(74538),
     g = n(193528),
     x = n(993413),
     _ = n(388032),
     p = n(480548);
 function E(e) {
-    let { user: t, pendingAvatar: n, pendingColors: s, onThemeColorsChange: r, preventDisabled: E, guildId: C, className: N, showPremiumIcon: f = !0, showResetThemeButton: I = !1, forcedDivider: T } = e,
-        S = (0, u.ZP)(t.id, C),
-        { primaryColor: j, secondaryColor: v } = (0, h.Z)({
+    let { user: t, pendingAvatar: n, pendingColors: s, onThemeColorsChange: l, preventDisabled: E, guildId: C, className: f, showPremiumIcon: T = !0, showResetThemeButton: N = !1, forcedDivider: S } = e,
+        I = (0, u.ZP)(t.id, C),
+        { primaryColor: b, secondaryColor: v } = (0, m.Z)({
             user: t,
-            displayProfile: S,
+            displayProfile: I,
             pendingThemeColors: s,
             isPreview: !0
         }),
-        b = m.ZP.canUsePremiumProfileCustomization(t),
+        j = h.ZP.canUsePremiumProfileCustomization(t),
         A = null != n ? n : t.getAvatarURL(C, 80),
         O = (0, c.dQu)(o.Z.unsafe_rawColors.PRIMARY_530).hex(),
         R = (0, d.Cf)(A, O, !1);
-    if (null == j || null == v) return null;
-    let D = (e) => {
-        r(a()(e, null == S ? void 0 : S.themeColors) ? void 0 : e);
+    if (null == b || null == v) return null;
+    let P = (e) => {
+        l(a()(e, null == I ? void 0 : I.themeColors) ? void 0 : e);
     };
     return (0, i.jsx)(x.Z, {
         title: _.intl.string(_.t.DMeO2d),
-        disabled: !b && !E,
-        className: l()(p.__invalid_profileThemesSection, N),
-        showPremiumIcon: f,
-        forcedDivider: T,
+        disabled: !j && !E,
+        className: r()(p.__invalid_profileThemesSection, f),
+        showPremiumIcon: T,
+        forcedDivider: S,
         children: (0, i.jsxs)('div', {
             className: p.sectionContainer,
             children: [
                 (0, i.jsx)('div', {
                     className: p.sparkleContainer,
                     children: (0, i.jsx)(g.Z, {
-                        onChange: (e) => D([e, v]),
-                        color: j,
+                        onChange: (e) => P([e, v]),
+                        color: b,
                         suggestedColors: R,
                         showEyeDropper: !0,
                         label: (0, i.jsx)(c.Text, {
@@ -60,7 +60,7 @@ function E(e) {
                 (0, i.jsx)('div', {
                     className: p.sparkleContainer,
                     children: (0, i.jsx)(g.Z, {
-                        onChange: (e) => D([j, e]),
+                        onChange: (e) => P([b, e]),
                         color: v,
                         suggestedColors: R,
                         showEyeDropper: !0,
@@ -73,14 +73,14 @@ function E(e) {
                         })
                     })
                 }),
-                I &&
+                N &&
                     null != C &&
                     (0, i.jsx)(c.zxk, {
                         className: p.resetButton,
                         color: c.zxk.Colors.PRIMARY,
                         look: c.zxk.Looks.LINK,
                         size: c.zxk.Sizes.SMALL,
-                        onClick: () => D([null, null]),
+                        onClick: () => P([null, null]),
                         children: _.intl.string(_.t['L+Gmoa'])
                     })
             ]

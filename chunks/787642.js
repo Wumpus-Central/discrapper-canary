@@ -5,8 +5,8 @@ var i = n(200651),
     a = n(313201),
     s = n(540059),
     o = n(703656),
-    c = n(769654),
-    d = n(430824),
+    d = n(769654),
+    c = n(430824),
     u = n(626135),
     h = n(768581),
     m = n(125631),
@@ -47,10 +47,10 @@ function I(e, t, n) {
     );
 }
 function C() {
-    let e = Object.values(d.Z.getGuilds()).filter((e) => e.hasFeature(p.oNc.HUB)),
+    let e = Object.values(c.Z.getGuilds()).filter((e) => e.hasFeature(p.oNc.HUB)),
         t = (0, s.Q3)('AddFriendOtherPlaces'),
         n = (e) => {
-            u.default.track(p.rMx.ADD_FRIEND_OTHER_PLACES_HUB_CLICKED, { guild_id: e }), (0, c.X)(e);
+            u.default.track(p.rMx.ADD_FRIEND_OTHER_PLACES_HUB_CLICKED, { guild_id: e }), (0, d.X)(e);
         };
     return (0, i.jsxs)(l.Fragment, {
         children: [

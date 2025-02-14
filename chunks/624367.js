@@ -17,8 +17,8 @@ var l = n(373793),
     f = n(835473),
     x = n(914010),
     C = n(624138),
-    v = n(135431),
-    E = n(147865),
+    E = n(135431),
+    v = n(147865),
     I = n(778569),
     N = n(388032),
     S = n(220787);
@@ -34,15 +34,15 @@ function b(e) {
         }),
         P = null == R ? void 0 : null === (t = R.bot) || void 0 === t ? void 0 : t.id,
         k = null != R && (0, d.ye)(R),
-        M = (0, E.ZP)(null !== (r = null == R ? void 0 : R.maxParticipants) && void 0 !== r ? r : 0),
+        M = (0, v.ZP)(null !== (r = null == R ? void 0 : R.maxParticipants) && void 0 !== r ? r : 0),
         O = (0, I.Z)({
             applicationId: b,
             size: T,
             names: ['embedded_cover']
         }),
         D = null !== (C = null == R ? void 0 : R.id) && void 0 !== C ? C : '0',
-        w = (0, v.TK)(D, (0, m.PL)(!0, !1)),
-        F = (0, v.TK)(D, (0, m.LD)(L, !1)),
+        w = (0, E.TK)(D, (0, m.PL)(!0, !1)),
+        F = (0, E.TK)(D, (0, m.LD)(L, !1)),
         U = async () => {
             if (null != P && (null == R ? void 0 : R.id) != null)
                 try {

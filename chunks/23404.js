@@ -5,8 +5,8 @@ var i = n(200651),
     a = n.n(r),
     s = n(442837),
     o = n(663002),
-    c = n(481060),
-    d = n(210887),
+    d = n(481060),
+    c = n(210887),
     u = n(617136),
     h = n(272008),
     m = n(113434),
@@ -22,9 +22,9 @@ var i = n(200651),
     T = n(611855),
     S = n(670638),
     A = n(667105),
-    b = n(860151),
-    Z = n(341907),
-    x = n(46140),
+    Z = n(860151),
+    x = n(341907),
+    b = n(46140),
     L = n(981631),
     y = n(388032),
     O = n(773190);
@@ -33,7 +33,7 @@ function P(e) {
     let { quest: n } = e,
         l = (0, m.B6)(n.config.expiresAt),
         r = (0, m.B6)(C.r.build(n.config).rewardsExpireAt),
-        a = (0, s.e7)([d.Z], () => d.Z.getState().theme),
+        a = (0, s.e7)([c.Z], () => c.Z.getState().theme),
         u = (0, o.wj)(a) ? L.BRd.DARK : L.BRd.LIGHT,
         h = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
     return (0, i.jsxs)('div', {
@@ -47,12 +47,12 @@ function P(e) {
             (0, i.jsxs)('div', {
                 className: O.headingCopy,
                 children: [
-                    (0, i.jsx)(c.X6q, {
+                    (0, i.jsx)(d.X6q, {
                         variant: 'heading-md/semibold',
                         color: 'header-primary',
                         children: h ? y.intl.string(y.t.XBboAA) : y.intl.formatToPlainString(y.t.EQa7oq, { questName: n.config.messages.questName })
                     }),
-                    (0, i.jsx)(c.Text, {
+                    (0, i.jsx)(d.Text, {
                         variant: 'text-xs/normal',
                         color: 'header-secondary',
                         children: h ? y.intl.formatToPlainString(y.t.APddvL, { expirationDate: r }) : y.intl.formatToPlainString(y.t['pX+fmp'], { expirationDate: l })
@@ -64,7 +64,7 @@ function P(e) {
 }
 function R(e) {
     var t, n, r, o;
-    let { nodeRef: d, quest: I } = e,
+    let { nodeRef: c, quest: I } = e,
         C = (0, u.O5)(),
         N = (0, s.e7)([p.Z], () => p.Z.isEnrolling(I.id), [I]),
         [L, R] = l.useState(!1),
@@ -73,20 +73,20 @@ function R(e) {
         w = l.useCallback((e) => {
             e.stopPropagation();
         }, []),
-        k = l.useCallback(() => {
+        M = l.useCallback(() => {
             (0, h.AH)(I.id, {
                 questContent: g.jn.ACTIVITY_PANEL,
                 questContentCTA: u.jZ.ACCEPT_QUEST
             });
         }, [I]),
-        M = l.useCallback(() => {
+        k = l.useCallback(() => {
             null != I &&
                 (C({
                     questId: I.id,
                     questContent: g.jn.ACTIVITY_PANEL,
                     questContentCTA: u.jZ.TRACK_PROGRESS
                 }),
-                (0, Z.navigateToQuestHome)({
+                (0, x.navigateToQuestHome)({
                     fromContent: g.jn.ACTIVITY_PANEL,
                     questId: I.id
                 }));
@@ -97,7 +97,7 @@ function R(e) {
                 questContent: g.jn.ACTIVITY_PANEL,
                 questContentCTA: u.jZ.LEARN_MORE
             }),
-                (0, Z.navigateToQuestHome)({
+                (0, x.navigateToQuestHome)({
                     fromContent: g.jn.ACTIVITY_PANEL,
                     questId: I.id
                 });
@@ -115,15 +115,15 @@ function R(e) {
         Y = (0, E.DD)({
             quest: I,
             taskDetails: W,
-            location: x.dr.ACTIVITY_PANEL,
+            location: b.dr.ACTIVITY_PANEL,
             questContent: g.jn.ACTIVITY_PANEL
         }),
-        K = (0, f.j)({ location: x.dr.QUESTS_BAR_MOBILE });
+        K = (0, f.j)({ location: b.dr.QUESTS_BAR_MOBILE });
     return z || B || F
         ? null
         : (0, i.jsxs)('div', {
               ref: (e) => {
-                  d.current = e;
+                  c.current = e;
               },
               className: a()(O.wrapper, { [O.wrapperQuestAccepted]: V }),
               onClick: w,
@@ -143,10 +143,10 @@ function R(e) {
                               shouldShowDisclosure: (null === (o = I.userStatus) || void 0 === o ? void 0 : o.enrolledAt) == null,
                               showShareLink: !0,
                               children: (e) =>
-                                  (0, i.jsx)(c.P3F, {
+                                  (0, i.jsx)(d.P3F, {
                                       ...e,
                                       'aria-label': y.intl.string(y.t.DEoVWV),
-                                      children: (0, i.jsx)(c.xhG, {
+                                      children: (0, i.jsx)(d.xhG, {
                                           size: 'md',
                                           color: 'currentColor',
                                           className: O.submenuIcon
@@ -162,7 +162,7 @@ function R(e) {
                               (0, i.jsxs)('div', {
                                   className: O.instructions,
                                   children: [
-                                      (0, i.jsx)(c.Text, {
+                                      (0, i.jsx)(d.Text, {
                                           variant: 'text-sm/normal',
                                           color: 'text-normal',
                                           children: Y
@@ -179,12 +179,12 @@ function R(e) {
                       }),
                   V &&
                       !H &&
-                      (0, i.jsx)(b.Z, {
+                      (0, i.jsx)(Z.Z, {
                           autoplay: L,
                           className: O.rewardTileWithInstructions,
                           quest: I,
                           questContent: g.jn.ACTIVITY_PANEL,
-                          location: x.dr.ACTIVITY_PANEL,
+                          location: b.dr.ACTIVITY_PANEL,
                           taskDetails: W
                       }),
                   (0, i.jsxs)('div', {
@@ -193,20 +193,20 @@ function R(e) {
                           !V &&
                               (0, i.jsxs)(i.Fragment, {
                                   children: [
-                                      (0, i.jsx)(c.zxk, {
+                                      (0, i.jsx)(d.zxk, {
                                           className: O.cta,
-                                          color: c.zxk.Colors.PRIMARY,
+                                          color: d.zxk.Colors.PRIMARY,
                                           fullWidth: !0,
-                                          size: c.zxk.Sizes.SMALL,
+                                          size: d.zxk.Sizes.SMALL,
                                           onClick: U,
                                           children: y.intl.string(y.t.LLLLPD)
                                       }),
-                                      (0, i.jsx)(c.zxk, {
+                                      (0, i.jsx)(d.zxk, {
                                           className: O.cta,
-                                          color: c.zxk.Colors.BRAND,
+                                          color: d.zxk.Colors.BRAND,
                                           fullWidth: !0,
-                                          onClick: k,
-                                          size: c.zxk.Sizes.SMALL,
+                                          onClick: M,
+                                          size: d.zxk.Sizes.SMALL,
                                           submitting: N,
                                           children: y.intl.string(y.t.l7E81t)
                                       })
@@ -214,21 +214,21 @@ function R(e) {
                               }),
                           V &&
                               !H &&
-                              (0, i.jsx)(c.zxk, {
+                              (0, i.jsx)(d.zxk, {
                                   className: O.cta,
-                                  color: c.zxk.Colors.BRAND,
+                                  color: d.zxk.Colors.BRAND,
                                   fullWidth: !0,
-                                  onClick: M,
-                                  size: c.zxk.Sizes.SMALL,
+                                  onClick: k,
+                                  size: d.zxk.Sizes.SMALL,
                                   children: y.intl.string(y.t.VN1Ajo)
                               }),
                           H &&
-                              (0, i.jsx)(c.zxk, {
+                              (0, i.jsx)(d.zxk, {
                                   className: O.cta,
-                                  color: c.zxk.Colors.BRAND,
+                                  color: d.zxk.Colors.BRAND,
                                   fullWidth: !0,
                                   onClick: G,
-                                  size: c.zxk.Sizes.SMALL,
+                                  size: d.zxk.Sizes.SMALL,
                                   children: y.intl.string(y.t.cfY4PD)
                               })
                       ]

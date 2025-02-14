@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => v });
 var i = n(200651),
     l = n(192379),
     a = n(392711),
@@ -13,17 +13,17 @@ var i = n(200651),
     x = n(466070),
     g = n(981631),
     p = n(388032),
-    b = n(250084);
-function _(e) {
+    f = n(250084);
+function b(e) {
     let { applicationId: t, channels: n } = e,
         l = (0, d.q)(t);
     return 0 === n.length || null == l
         ? null
         : (0, i.jsxs)('div', {
-              className: b.applicationGroup,
+              className: f.applicationGroup,
               children: [
                   (0, i.jsxs)('div', {
-                      className: b.header,
+                      className: f.header,
                       children: [
                           (0, i.jsx)(u.Z, {
                               game: l,
@@ -44,7 +44,7 @@ function _(e) {
                               application: l,
                               name: e.name,
                               icon: null !== (t = (0, c.KS)(e)) && void 0 !== t ? t : void 0,
-                              iconWrapperClassName: b.iconwrapper,
+                              iconWrapperClassName: f.iconwrapper,
                               hasNextSection: !0,
                               trailing: (0, i.jsx)(s.vdY, { size: 'xs' })
                           },
@@ -54,7 +54,7 @@ function _(e) {
               ]
           });
 }
-function f(e) {
+function v(e) {
     let { guild: t } = e,
         n = (0, m.F)(t.id),
         a = r().groupBy(n, (e) => {
@@ -72,10 +72,10 @@ function f(e) {
                     type: s.geA.DESCRIPTION,
                     children: p.intl.format(p.t['9gsSLi'], { helpdeskArticle: h.Z.getArticleURL(g.BhN.LINKED_LOBBIES) })
                 }),
-                (0, i.jsx)(s.$i$, { className: b.headerDivider }),
+                (0, i.jsx)(s.$i$, { className: f.headerDivider }),
                 d.map((e) =>
                     (0, i.jsx)(
-                        _,
+                        b,
                         {
                             applicationId: e,
                             channels: a[e]

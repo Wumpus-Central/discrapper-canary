@@ -27,9 +27,9 @@ var a = n(200651),
     y = n(621054);
 function N(e) {
     let { message: t, initialSelectedDestinations: N, forwardOptions: P, onClose: Z, onRequestSent: M, ...w } = e,
-        { channel_id: D, id: R } = t,
+        { channel_id: R, id: D } = t,
         { hasOneTapSendButton: O, hasMessageInput: j, hasPreview: k } = (0, I.yk)({ location: 'ForwardModal' }),
-        F = l.useMemo(() => (0, d.dL)(D), [D]),
+        F = l.useMemo(() => (0, d.dL)(R), [R]),
         [G, U] = l.useState(!1),
         H = (0, s.e7)(
             [_.Z],
@@ -39,7 +39,7 @@ function N(e) {
             },
             [t]
         ),
-        W = (0, s.e7)([m.Z], () => m.Z.getChannel(D), [D]),
+        W = (0, s.e7)([m.Z], () => m.Z.getChannel(R), [R]),
         z = (0, E.ZF)(),
         Q = (0, E.mh)(),
         V = l.useRef(0),
@@ -55,25 +55,25 @@ function N(e) {
         }),
         en = l.useCallback(
             (e) => {
-                $(e), et(e), (B.current += 1), '' !== e && Q(D, R);
+                $(e), et(e), (B.current += 1), '' !== e && Q(R, D);
             },
-            [D, R, Q, et]
+            [R, D, Q, et]
         ),
         ea = l.useCallback(() => {
             (0, E.sF)({
-                channelId: D,
-                messageId: R,
+                channelId: R,
+                messageId: D,
                 numDestinationChanges: V.current,
                 numQueryChanges: B.current
             }),
                 Z();
-        }, [D, R, Z]),
+        }, [R, D, Z]),
         el = l.useCallback(() => {
             var e;
-            let t = null === (e = m.Z.getChannel(D)) || void 0 === e ? void 0 : e.guild_id,
-                n = (0, h.wR)(t, D, R);
-            (0, r.showToast)((0, r.createToast)(b.intl.string(b.t['L/PwZW']), r.ToastType.LINK)), (0, g.JG)(n), (0, E.xp)(D, R);
-        }, [D, R]),
+            let t = null === (e = m.Z.getChannel(R)) || void 0 === e ? void 0 : e.guild_id,
+                n = (0, h.wR)(t, R, D);
+            (0, r.showToast)((0, r.createToast)(b.intl.string(b.t['L/PwZW']), r.ToastType.LINK)), (0, g.JG)(n), (0, E.xp)(R, D);
+        }, [R, D]),
         ei = l.useCallback(() => {
             $('');
         }, [$]),
@@ -100,7 +100,7 @@ function N(e) {
         ),
         eo = l.useCallback(
             (e) => {
-                z(D, R, '' !== J),
+                z(R, D, '' !== J),
                     K((t) => {
                         let n = t.findIndex((t) => {
                             let { type: n, id: a } = t;
@@ -111,13 +111,13 @@ function N(e) {
                         return a.splice(n, 1), (V.current += 1), a;
                     });
             },
-            [D, Y, R, J, z]
+            [R, Y, D, J, z]
         ),
         ec = l.useCallback(
             async function (e) {
                 var l;
                 let { withMessage: i, transitionToDestination: s, closeAfterSend: u } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                    h = null !== (l = _.Z.getMessage(D, R)) && void 0 !== l ? l : t;
+                    h = null !== (l = _.Z.getMessage(R, D)) && void 0 !== l ? l : t;
                 if (null == h) {
                     (0, r.showToast)((0, r.createToast)(b.intl.string(b.t.R0RpRU), r.ToastType.FAILURE));
                     return;
@@ -157,8 +157,8 @@ function N(e) {
                     })
                 ) {
                     (0, E.gP)({
-                        channelId: D,
-                        messageId: R,
+                        channelId: R,
+                        messageId: D,
                         hasError: !1,
                         hasContextMessage: null != i && '' !== i,
                         numDestinations: g.length,
@@ -170,8 +170,8 @@ function N(e) {
                     return;
                 }
                 (0, E.gP)({
-                    channelId: D,
-                    messageId: R,
+                    channelId: R,
+                    messageId: D,
                     hasError: !0,
                     hasContextMessage: null != i && '' !== i,
                     numDestinations: g.length,
@@ -186,7 +186,7 @@ function N(e) {
                     forwardOptions: P
                 });
             },
-            [D, P, R, t, M, er]
+            [R, P, D, t, M, er]
         ),
         ed = l.useCallback(
             (e) => {

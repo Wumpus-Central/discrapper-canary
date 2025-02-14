@@ -5,8 +5,8 @@ var i = n(192379),
     a = n(525654),
     s = n.n(a),
     o = n(442837),
-    c = n(91896),
-    d = n(849862),
+    d = n(91896),
+    c = n(849862),
     u = n(888369),
     h = n(292959),
     m = n(699516),
@@ -29,9 +29,9 @@ else if (C.has(s().layout)) {
 }
 function v() {
     let e = (0, o.e7)([p.Z], () => p.Z.hasIncomingCalls()),
-        t = (0, o.e7)([u.default, m.Z, h.Z, c.Z], () => {
+        t = (0, o.e7)([u.default, m.Z, h.Z, d.Z], () => {
             let e = u.default.getTotalMentionCount(),
-                t = (0, d.m$)([m.Z, c.Z]),
+                t = (0, c.m$)([m.Z, d.Z]),
                 n = u.default.hasAnyUnread(),
                 i = h.Z.getDisableUnreadBadge(),
                 l = e + t;

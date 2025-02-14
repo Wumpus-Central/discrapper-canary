@@ -1,8 +1,8 @@
-n.d(t, { Z: () => _ }), n(47120);
-var r = n(200651),
-    o = n(192379),
-    s = n(120356),
-    a = n.n(s),
+n.d(t, { Z: () => v }), n(47120);
+var s = n(200651),
+    r = n(192379),
+    a = n(120356),
+    o = n.n(a),
     i = n(617136),
     l = n(113434),
     c = n(497505),
@@ -14,48 +14,48 @@ var r = n(200651),
     h = n(981631),
     g = n(672191);
 function f(e) {
-    let { quest: t, className: n, questContent: s, contentPosition: c, rowIndex: u, impressionRef: f } = e,
-        [_, C] = o.useState(!1),
-        [v, j] = o.useState([]),
+    let { quest: t, className: n, questContent: a, contentPosition: c, rowIndex: u, impressionRef: f } = e,
+        [v, _] = r.useState(!1),
+        [C, j] = r.useState([]),
         b = (0, l.qb)(t),
-        T = o.useMemo(() => (0, d.q8)(t), [t]),
+        T = r.useMemo(() => (0, d.q8)(t), [t]),
         E = (0, i._F)(),
-        N = o.useCallback(() => {
-            C(!0),
+        S = r.useCallback(() => {
+            _(!0),
                 E({
                     questId: t.id,
                     event: h.rMx.QUEST_HOVER,
-                    properties: (0, i.mH)(s)
+                    properties: (0, i.mH)(a)
                 }),
                 T && (0, p.loadVideoQuestModal)();
-        }, [E, t.id, s, T]),
-        S = o.useCallback(() => {
-            C(!1),
+        }, [E, t.id, a, T]),
+        N = r.useCallback(() => {
+            _(!1),
                 E({
                     questId: t.id,
                     event: h.rMx.QUEST_HOVER_OFF,
-                    properties: (0, i.mH)(s)
+                    properties: (0, i.mH)(a)
                 });
-        }, [E, t.id, s]);
-    return (0, r.jsxs)('div', {
+        }, [E, t.id, a]);
+    return (0, s.jsxs)('div', {
         id: 'quest-tile-'.concat(t.id),
         ref: (e) => {
             f.current = e;
         },
-        className: a()(g.container, n),
-        onMouseEnter: N,
-        onMouseLeave: S,
+        className: o()(g.container, n),
+        onMouseEnter: S,
+        onMouseLeave: N,
         children: [
-            (0, r.jsx)(m.Z, {
+            (0, s.jsx)(m.Z, {
                 quest: t,
-                isHovering: _,
-                errorHints: v,
+                isHovering: v,
+                errorHints: C,
                 warningHints: b
             }),
-            (0, r.jsx)(x.Z, {
+            (0, s.jsx)(x.Z, {
                 quest: t,
-                questContent: s,
-                isHovering: _,
+                questContent: a,
+                isHovering: v,
                 contentPosition: c,
                 rowIndex: u,
                 onReceiveErrorHints: j
@@ -63,15 +63,15 @@ function f(e) {
         ]
     });
 }
-function _(e) {
-    return (0, r.jsx)(u.A, {
+function v(e) {
+    return (0, s.jsx)(u.A, {
         questOrQuests: e.quest,
         questContent: e.questContent,
         questContentPosition: e.contentPosition,
         questContentRowIndex: e.rowIndex,
         trackGuildAndChannelMetadata: e.questContent === c.jn.QUESTS_EMBED,
         children: (t) =>
-            (0, r.jsx)(f, {
+            (0, s.jsx)(f, {
                 ...e,
                 impressionRef: t
             })

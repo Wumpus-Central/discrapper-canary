@@ -1,8 +1,8 @@
 n.d(t, { v: () => p });
-var r = n(497505),
-    o = n(988303),
-    s = n(941348),
-    a = n(658590),
+var s = n(497505),
+    r = n(988303),
+    a = n(941348),
+    o = n(658590),
     i = n(647365),
     l = n(743294);
 let c = {
@@ -20,7 +20,7 @@ let c = {
     },
     d = l.Li,
     u = {
-        component: s.Z,
+        component: a.Z,
         getCollapsedHeight: (e) => {
             var t;
             return (null === (t = e.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null ? 66 : 40;
@@ -33,9 +33,9 @@ let c = {
         getVerticalPadding: () => d
     },
     p = (e, t, n) => {
-        var s;
-        let i = (null === (s = e.userStatus) || void 0 === s ? void 0 : s.enrolledAt) != null,
-            l = (!i && t === o.P.V2) || (i && n === o.P.V2) || (0, a.a)(e),
+        var a;
+        let i = (null === (a = e.userStatus) || void 0 === a ? void 0 : a.enrolledAt) != null,
+            l = (!i && t === r.P.V2) || (i && n === r.P.V2) || (0, o.a)(e),
             d = l ? u : c;
         return {
             component: d.component,
@@ -46,6 +46,6 @@ let c = {
             canCollapseOnBlur: d.canCollapseOnBlur(e),
             shouldExpandOnQuestComplete: d.shouldExpandOnQuestComplete(e),
             paddingVertical: d.getVerticalPadding(),
-            trackingCtx: { content: l ? r.jn.QUEST_BAR_V2 : r.jn.QUEST_BAR }
+            trackingCtx: { content: l ? s.jn.QUEST_BAR_V2 : s.jn.QUEST_BAR }
         };
     };

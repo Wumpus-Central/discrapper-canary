@@ -7,8 +7,8 @@ var l = n(442837),
     a = n(487029),
     s = n(592125),
     d = n(944486),
-    c = n(554174),
-    u = n(710111),
+    u = n(554174),
+    c = n(710111),
     h = n(122593);
 function _() {
     let [e, t] = (0, l.Wu)([r.Z], () => [r.Z.enabled, r.Z.keepOpen]),
@@ -19,13 +19,13 @@ function _() {
         ? (0, i.jsx)('div', {
               className: h.container,
               children: (0, i.jsx)(a.Z, {
-                  width: u.FW.width,
-                  height: u.FW.height,
+                  width: c.FW.width,
+                  height: c.FW.height,
                   guildId: p,
                   channel: _,
                   keepOpen: t,
                   onClose: function () {
-                      let e = (0, c.Z)();
+                      let e = (0, u.Z)();
                       null != e && (0, o.oZ)(e);
                   },
                   analyticsSource: 'overlay'

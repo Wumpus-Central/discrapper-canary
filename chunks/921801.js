@@ -1,12 +1,12 @@
-t.d(n, { F: () => a });
-var o = t(200651);
-t(192379);
-var i = t(991346);
-let a = (e) => {
-    var n;
-    let { setting: t, children: a } = e,
-        r = (0, i.Pt)(),
-        l = (0, i.Gj)(t),
-        s = r[t];
-    return (null == s.predicate || (null === (n = s.predicate) || void 0 === n ? void 0 : n.call(s)) === !0) && (!(l.size > 0) || l.has(t)) ? (0, o.jsx)(o.Fragment, { children: a }) : null;
+i.d(e, { F: () => s });
+var n = i(200651);
+i(192379);
+var r = i(991346);
+let s = (t) => {
+    var e;
+    let { setting: i, children: s } = t,
+        o = (0, r.Pt)(),
+        l = (0, r.Gj)(i),
+        a = o[i];
+    return (null == a.predicate || (null === (e = a.predicate) || void 0 === e ? void 0 : e.call(a)) === !0) && (!(l.size > 0) || l.has(i)) ? (0, n.jsx)(n.Fragment, { children: s }) : null;
 };

@@ -2,8 +2,8 @@ n.d(t, { Z: () => I }), n(47120), n(653041);
 var i = n(200651),
     l = n(192379),
     r = n(442837),
-    o = n(481060),
-    a = n(110924),
+    a = n(481060),
+    o = n(110924),
     s = n(540059),
     c = n(693546),
     d = n(863249),
@@ -22,7 +22,7 @@ function x(e) {
         c = l.useCallback(() => {
             d.ZP.clearCoachmark();
         }, []),
-        h = (0, a.Z)(s),
+        h = (0, o.Z)(s),
         p = l.useRef(null);
     return (
         l.useEffect(() => {
@@ -34,7 +34,7 @@ function x(e) {
         (0, i.jsxs)('div', {
             className: C.container,
             children: [
-                (0, i.jsx)(o.yRy, {
+                (0, i.jsx)(a.yRy, {
                     ref: p,
                     shouldShow: s,
                     renderPopout: () =>
@@ -47,21 +47,21 @@ function x(e) {
                                         (0, i.jsxs)('div', {
                                             className: C.coachmarkTextContainer,
                                             children: [
-                                                (0, i.jsx)(o.X6q, {
+                                                (0, i.jsx)(a.X6q, {
                                                     variant: 'heading-md/medium',
                                                     children: v.intl.string(v.t['0YV0YG'])
                                                 }),
-                                                (0, i.jsx)(o.Text, {
+                                                (0, i.jsx)(a.Text, {
                                                     variant: 'text-xs/normal',
                                                     color: 'text-muted',
                                                     children: v.intl.string(v.t['0UQVDA'])
                                                 })
                                             ]
                                         }),
-                                        (0, i.jsx)(o.zxk, {
+                                        (0, i.jsx)(a.zxk, {
                                             fullWidth: !0,
-                                            size: o.PhG.SMALL,
-                                            color: o.Ttl.BRAND,
+                                            size: a.PhG.SMALL,
+                                            color: a.Ttl.BRAND,
                                             onClick: c,
                                             children: v.intl.string(v.t['4r+amZ'])
                                         })
@@ -92,7 +92,7 @@ function I(e) {
         b = (0, r.e7)([h.Z], () => h.Z.getGuildId()),
         S = (0, r.e7)([u.Z], () => u.Z.hasFetchedRequestToJoinGuilds),
         N = (0, g.Z)(),
-        E = (0, a.Z)(b),
+        E = (0, o.Z)(b),
         j = l.useMemo(() => {
             let e = (0, m.qQ)({
                 folderId: p.S.PENDING_JOIN_REQUESTS_FOLDER,
@@ -125,7 +125,7 @@ function I(e) {
                       Z(!I), d.ZP.clearCoachmark();
                   },
                   folderIconContentClassName: C.folderIconContent,
-                  folderIconContent: (0, i.jsx)(o.wGF, {
+                  folderIconContent: (0, i.jsx)(a.wGF, {
                       size: n ? 'sm' : 'md',
                       color: 'currentColor',
                       className: C.pendingIcon

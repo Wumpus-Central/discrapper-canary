@@ -16,8 +16,8 @@ var i = n(200651),
     f = n(528011),
     x = n(533244),
     C = n(825829),
-    v = n(226192),
-    E = n(36459),
+    E = n(226192),
+    v = n(36459),
     I = n(434404),
     N = n(518950),
     S = n(347475),
@@ -211,14 +211,14 @@ function B(e) {
     var t;
     let { message: n, compact: a } = e,
         { joinAttempts: r, raidDatetime: s, dmsSent: d, raidType: p, resolvedReason: g } = (0, C.FL)(n),
-        E = (0, m.e7)([T.Z], () => T.Z.getChannel(n.channel_id), [n.channel_id]),
-        I = null !== (t = null == E ? void 0 : E.guild_id) && void 0 !== t ? t : null,
+        v = (0, m.e7)([T.Z], () => T.Z.getChannel(n.channel_id), [n.channel_id]),
+        I = null !== (t = null == v ? void 0 : v.guild_id) && void 0 !== t ? t : null,
         { shouldShowIncidentActions: N } = (0, f.mI)(I),
         S = (0, y.sR)(n.author.id, n.channel_id),
         b = l.useCallback(() => {
-            let e = null == E ? void 0 : E.guild_id;
-            null != e && (0, v.kW)(n.id, e);
-        }, [n.id, E]),
+            let e = null == v ? void 0 : v.guild_id;
+            null != e && (0, E.kW)(n.id, e);
+        }, [n.id, v]),
         A = p === u.$.DM_RAID,
         j = A ? h.P4T : h.b6m;
     return (0, i.jsx)(H, {
@@ -363,8 +363,8 @@ function G(e) {
                     onClick: function () {
                         null != r &&
                             null != c &&
-                            (0, E.UE)(r, c, () => {
-                                (0, p.c)(d), (0, E.T9)(r);
+                            (0, v.UE)(r, c, () => {
+                                (0, p.c)(d), (0, v.T9)(r);
                             });
                     },
                     color: h.zxk.Colors.LINK,

@@ -5,22 +5,22 @@ var i,
     a = n(442837),
     s = n(570140),
     o = n(810788),
-    c = n(430824),
-    d = n(981631);
+    d = n(430824),
+    c = n(981631);
 let u = !1;
 function h(e) {
-    let t = c.Z.getGuild(e);
-    return !!(null != t && t.hasFeature(d.oNc.HUB)) && ((u = !0), !0);
+    let t = d.Z.getGuild(e);
+    return !!(null != t && t.hasFeature(c.oNc.HUB)) && ((u = !0), !0);
 }
 function m() {
     return !0;
 }
 class p extends (i = a.ZP.Store) {
     initialize() {
-        this.waitFor(c.Z, o.Z), this.syncWith([o.Z], m);
+        this.waitFor(d.Z, o.Z), this.syncWith([o.Z], m);
     }
     channelNoticePredicate(e) {
-        return !!e.hasFeature(d.oNc.LINKED_TO_HUB) && !u;
+        return !!e.hasFeature(c.oNc.LINKED_TO_HUB) && !u;
     }
 }
 (r = 'HubLinkNoticeStore'),

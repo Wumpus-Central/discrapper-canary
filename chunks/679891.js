@@ -5,8 +5,8 @@ var i = n(570140),
     a = n(594190),
     s = n(928518),
     o = n(131951),
-    c = n(451478),
-    d = n(981631),
+    d = n(451478),
+    c = n(981631),
     u = n(65154);
 function h(e, t, n) {
     return (
@@ -25,7 +25,7 @@ let m = new Set(),
     p = new Set(),
     g = null;
 function _() {
-    for (let e of m) l.Z.setDisableLocalVideo(e, d.ZUi.MANUAL_ENABLED, u.Yn.DEFAULT, !1);
+    for (let e of m) l.Z.setDisableLocalVideo(e, c.ZUi.MANUAL_ENABLED, u.Yn.DEFAULT, !1);
     p.clear(), m.clear();
 }
 class f extends r.Z {
@@ -39,11 +39,11 @@ class f extends r.Z {
         let { userId: t, context: n, streamId: i } = e;
         if (n !== u.Yn.DEFAULT || null == i) return;
         let r = null != a.ZP.getVisibleGame(),
-            h = c.Z.isVisible(),
-            g = s.Z.getWindowVisible(d.KJ3.CHANNEL_CALL_POPOUT),
+            h = d.Z.isVisible(),
+            g = s.Z.getWindowVisible(c.KJ3.CHANNEL_CALL_POPOUT),
             _ = o.Z.isLocalVideoDisabled(t, n),
             f = p.has(t);
-        !r || h || g || _ || f || (m.add(t), l.Z.setDisableLocalVideo(t, d.ZUi.DISABLED, n, !1));
+        !r || h || g || _ || f || (m.add(t), l.Z.setDisableLocalVideo(t, c.ZUi.DISABLED, n, !1));
     }
     handleManualLocalVideoToggle(e) {
         let { userId: t, persist: n } = e;
@@ -60,7 +60,7 @@ class f extends r.Z {
                 t !== g && (_(), (g = t));
             }),
             h(this, 'handlePopoutChange', () => {
-                s.Z.getWindowVisible(d.KJ3.CHANNEL_CALL_POPOUT) && _();
+                s.Z.getWindowVisible(c.KJ3.CHANNEL_CALL_POPOUT) && _();
             });
     }
 }

@@ -16,8 +16,8 @@ var i = n(200651),
     f = n(623624),
     x = n(533694),
     C = n(182180),
-    v = n(924301),
-    E = n(225890),
+    E = n(924301),
+    v = n(225890),
     I = n(434404),
     N = n(507435),
     S = n(504733),
@@ -70,8 +70,8 @@ var i = n(200651),
     ef = n(29338),
     ex = n(461135),
     eC = n(296571),
-    ev = n(587737),
-    eE = n(482239),
+    eE = n(587737),
+    ev = n(482239),
     eI = n(328749),
     eN = n(4305),
     eS = n(910548),
@@ -148,7 +148,7 @@ let eR = Object.freeze({
                     messageId: t.id
                 });
             return n.isThread()
-                ? (0, i.jsx)(ev.Z, {
+                ? (0, i.jsx)(eE.Z, {
                       message: t,
                       channel: n,
                       compact: l,
@@ -182,7 +182,7 @@ let eR = Object.freeze({
                     messageId: t.id
                 });
             return n.isThread()
-                ? (0, i.jsx)(eE.Z, {
+                ? (0, i.jsx)(ev.Z, {
                       message: t,
                       channel: n,
                       compact: l,
@@ -519,7 +519,7 @@ let eR = Object.freeze({
                     guildId: n.guild_id,
                     messageId: t.id
                 }),
-                s = (0, a.e7)([v.ZP], () => v.ZP.getActiveEventByChannel(n.id), [n.id]);
+                s = (0, a.e7)([E.ZP], () => E.ZP.getActiveEventByChannel(n.id), [n.id]);
             return (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)(ef.Z, {
@@ -527,7 +527,7 @@ let eR = Object.freeze({
                         compact: l,
                         usernameHook: r
                     }),
-                    null != s && s.name === t.content ? (0, i.jsx)(E.Z, { code: ''.concat(n.guild_id, '-').concat(s.id) }) : null
+                    null != s && s.name === t.content ? (0, i.jsx)(v.Z, { code: ''.concat(n.guild_id, '-').concat(s.id) }) : null
                 ]
             });
         },

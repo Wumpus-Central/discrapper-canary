@@ -2,33 +2,33 @@ n.d(t, { Z: () => g });
 var i = n(200651);
 n(192379);
 var s = n(120356),
-    l = n.n(s),
-    r = n(442837),
+    r = n.n(s),
+    l = n(442837),
     a = n(481060),
     o = n(846027),
     c = n(921801),
     d = n(131951),
     u = n(726985),
-    h = n(388032),
-    m = n(483938);
+    m = n(388032),
+    h = n(483938);
 function g(e) {
     let { refreshStyles: t = !1 } = e,
-        { sidechainEnabled: n, sidechainStrength: s } = (0, r.cj)([d.Z], () => ({
+        { sidechainEnabled: n, sidechainStrength: s } = (0, l.cj)([d.Z], () => ({
             sidechainEnabled: d.Z.getSidechainCompression(),
             sidechainStrength: d.Z.getSidechainCompressionStrength()
         })),
         g = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(a.j7V, {
-                    className: t ? null : l()(m.marginTop8, m.marginBottom20),
+                    className: t ? null : r()(h.marginTop8, h.marginBottom20),
                     value: n,
                     onChange: (e) => o.Z.setSidechainCompression(e),
-                    note: h.intl.string(h.t.zlA23N),
+                    note: m.intl.string(m.t.zlA23N),
                     hideBorder: t,
-                    children: h.intl.string(h.t['/jwMtr'])
+                    children: m.intl.string(m.t['/jwMtr'])
                 }),
                 (0, i.jsx)(a.xJW, {
-                    title: h.intl.string(h.t.fhEzfn),
+                    title: m.intl.string(m.t.fhEzfn),
                     children: (0, i.jsx)(a.iRW, {
                         initialValue: s,
                         minValue: 1,
@@ -42,7 +42,7 @@ function g(e) {
         children: t
             ? g
             : (0, i.jsx)(a.hjN, {
-                  className: m.marginBottom20,
+                  className: h.marginBottom20,
                   children: g
               })
     });

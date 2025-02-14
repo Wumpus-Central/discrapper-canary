@@ -17,58 +17,58 @@ function o(e, t, n) {
         e
     );
 }
-let c = {};
-c = {
+let d = {};
+d = {
     lastDismissedGracePeriods: {},
     isVisible: {}
 };
-class d extends (i = l.ZP.PersistedStore) {
+class c extends (i = l.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (c = e);
+        null != e && (d = e);
     }
     getLastDismissedGracePeriodForGuild(e) {
-        return null != c.lastDismissedGracePeriods[e] ? c.lastDismissedGracePeriods[e] : null;
+        return null != d.lastDismissedGracePeriods[e] ? d.lastDismissedGracePeriods[e] : null;
     }
     isVisible(e) {
-        return null != e && null != c.isVisible[e] && c.isVisible[e];
+        return null != e && null != d.isVisible[e] && d.isVisible[e];
     }
     getState() {
-        return c;
+        return d;
     }
 }
-o(d, 'displayName', 'GuildBoostingGracePeriodNoticeStore'),
-    o(d, 'persistKey', 'PremiumGuildGracePeriodNoticeStore'),
-    o(d, 'migrations', [
+o(c, 'displayName', 'GuildBoostingGracePeriodNoticeStore'),
+    o(c, 'persistKey', 'PremiumGuildGracePeriodNoticeStore'),
+    o(c, 'migrations', [
         (e) => ({
             ...e,
             lastDismissedGracePeriods: null != e ? { ...e.lastDismissedGracePeriods } : {},
             isVisible: {}
         })
     ]);
-let u = new d(r.Z, {
+let u = new c(r.Z, {
     GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: function (e) {
         let { guildId: t, appliedBoosts: n } = e,
-            i = null != c.lastDismissedGracePeriods[t] ? c.lastDismissedGracePeriods[t] : null,
+            i = null != d.lastDismissedGracePeriods[t] ? d.lastDismissedGracePeriods[t] : null,
             l = null != i && Date.now() - i <= s.Dge,
             r = null != n && !l && (0, a.Vx)(n, t);
-        c = {
-            ...c,
+        d = {
+            ...d,
             isVisible: {
-                ...c.isVisible,
+                ...d.isVisible,
                 [t]: r
             }
         };
     },
     BOOSTED_GUILD_GRACE_PERIOD_NOTICE_DISMISS: function (e) {
         let t = e.guildId;
-        c = {
-            ...c,
+        d = {
+            ...d,
             lastDismissedGracePeriods: {
-                ...c.lastDismissedGracePeriods,
+                ...d.lastDismissedGracePeriods,
                 [t]: Date.now()
             },
             isVisible: {
-                ...c.isVisible,
+                ...d.isVisible,
                 [t]: !1
             }
         };

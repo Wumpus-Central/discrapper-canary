@@ -1,11 +1,11 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => d });
 var i = n(192379),
     l = n(442837),
     r = n(592125),
     a = n(594174),
     s = n(900255),
     o = n(333984);
-function c() {
+function d() {
     let e = (0, l.e7)([r.Z], () => r.Z.getPrivateChannelsVersion()),
         t = (0, l.Wu)(
             [r.Z, o.Z],

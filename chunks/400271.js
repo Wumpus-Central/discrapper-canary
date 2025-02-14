@@ -5,8 +5,8 @@ var i,
     a = n(442837),
     s = n(433517),
     o = n(570140),
-    c = n(650774),
-    d = n(430824),
+    d = n(650774),
+    c = n(430824),
     u = n(496675),
     h = n(135899),
     m = n(981631);
@@ -15,11 +15,11 @@ let p = 'publicUpsellChannelNoticeGuilds',
 class _ extends (i = a.ZP.Store) {
     initialize() {
         var e;
-        this.waitFor(u.Z, d.Z, c.Z), this.syncWith([u.Z, d.Z, c.Z], m.dG4), (g = e = new Set(s.K.get(p)));
+        this.waitFor(u.Z, c.Z, d.Z), this.syncWith([u.Z, c.Z, d.Z], m.dG4), (g = e = new Set(s.K.get(p)));
     }
     isVisible(e) {
         if (null == e) return;
-        let t = c.Z.getMemberCount(e.id);
+        let t = d.Z.getMemberCount(e.id);
         return !g.has(e.id) && null != t && t >= h.U3 && u.Z.can(m.Plq.ADMINISTRATOR, e) && !e.hasFeature(m.oNc.COMMUNITY);
     }
 }

@@ -5,18 +5,18 @@ var i = n(710845),
     a = n(46832),
     s = n(852926),
     o = n(748635),
-    c = n(981631);
-let d = new i.Z('RPCServer:PostMessage'),
+    d = n(981631);
+let c = new i.Z('RPCServer:PostMessage'),
     u = (e, t, n) => {
-        (l.default.isLoggingOverlayEvents || e.cmd !== c.Etm.OVERLAY) && t.info('Socket Message: '.concat(n.id), (0, r.Z)(e));
+        (l.default.isLoggingOverlayEvents || e.cmd !== d.Etm.OVERLAY) && t.info('Socket Message: '.concat(n.id), (0, r.Z)(e));
     },
     h = (function () {
-        let e = new a.Z(s.em, d, o.Z, u);
+        let e = new a.Z(s.em, c, o.Z, u);
         return (
             window.addEventListener('message', (t) => {
                 if (window === t.source) return;
                 if (null == t.source || null == t.source.postMessage) {
-                    d.error('Unknown event source');
+                    c.error('Unknown event source');
                     return;
                 }
                 let n = t.source,

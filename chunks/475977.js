@@ -1,92 +1,92 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => b });
 var i = n(200651),
     s = n(192379),
-    l = n(120356),
-    r = n.n(l),
+    r = n(120356),
+    l = n.n(r),
     a = n(115434),
     o = n(264181),
     c = n(399606),
     d = n(481060),
     u = n(100527),
-    h = n(906732),
-    m = n(626135),
+    m = n(906732),
+    h = n(626135),
     g = n(335131),
     x = n(874703),
     _ = n(410154),
     p = n(302800),
     E = n(981631),
     C = n(474936),
-    N = n(388032),
-    f = n(392275),
-    I = n(786792),
-    T = n(161594);
-let S = (e) => {
-        var t, n, s, l, a;
+    f = n(388032),
+    T = n(392275),
+    N = n(786792),
+    S = n(161594);
+let I = (e) => {
+        var t, n, s, r, a;
         let { displayOptions: o, marketingVariant: c } = e;
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)('div', {
-                    className: f.artContainer,
+                    className: T.artContainer,
                     'aria-hidden': !0,
                     role: 'presentation',
                     children: (0, i.jsx)('img', {
-                        src: null !== (s = null == o ? void 0 : o.artSrc) && void 0 !== s ? s : T,
-                        className: r()(f.art, { [f.tideArt]: null != c && c === _.C5.TIDE }),
+                        src: null !== (s = null == o ? void 0 : o.artSrc) && void 0 !== s ? s : S,
+                        className: l()(T.art, { [T.tideArt]: null != c && c === _.C5.TIDE }),
                         alt: ''
                     })
                 }),
                 (0, i.jsxs)('div', {
-                    className: f.mainColumn,
+                    className: T.mainColumn,
                     children: [
                         (0, i.jsx)(d.X6q, {
                             variant: 'heading-lg/extrabold',
                             color: (null == o ? void 0 : o.revertTextColor) ? 'redesign-button-overlay-text' : 'currentColor',
-                            className: f.title,
-                            children: null !== (l = null == o ? void 0 : null === (t = o.title) || void 0 === t ? void 0 : t.call(o)) && void 0 !== l ? l : N.intl.string(N.t['4Emkur'])
+                            className: T.title,
+                            children: null !== (r = null == o ? void 0 : null === (t = o.title) || void 0 === t ? void 0 : t.call(o)) && void 0 !== r ? r : f.intl.string(f.t['4Emkur'])
                         }),
                         (0, i.jsx)(d.Text, {
                             variant: 'text-sm/normal',
                             color: (null == o ? void 0 : o.revertTextColor) ? 'redesign-button-overlay-text' : 'currentColor',
-                            children: null !== (a = null == o ? void 0 : null === (n = o.description) || void 0 === n ? void 0 : n.call(o)) && void 0 !== a ? a : N.intl.string(N.t.gn7SZW)
+                            children: null !== (a = null == o ? void 0 : null === (n = o.description) || void 0 === n ? void 0 : n.call(o)) && void 0 !== a ? a : f.intl.string(f.t.gn7SZW)
                         })
                     ]
                 })
             ]
         });
     },
-    j = () => {
+    b = () => {
         var e;
         let t;
-        let { analyticsLocations: n } = (0, h.ZP)(u.Z.COLLECTIBLES_PROFILE_SETTINGS_UPSELL),
-            l = s.useRef(null),
-            T = (0, _.ZP)('CollectiblesUpsellBanner'),
-            j = (0, c.e7)([x.Z], () => x.Z.getMarketingBySurface(a.K.EDIT_PROFILE_SETTINGS));
+        let { analyticsLocations: n } = (0, m.ZP)(u.Z.COLLECTIBLES_PROFILE_SETTINGS_UPSELL),
+            r = s.useRef(null),
+            S = (0, _.ZP)('CollectiblesUpsellBanner'),
+            b = (0, c.e7)([x.Z], () => x.Z.getMarketingBySurface(a.K.EDIT_PROFILE_SETTINGS));
         return (
             (t =
-                (null == j ? void 0 : j.type) === o.Z.BANNER
+                (null == b ? void 0 : b.type) === o.Z.BANNER
                     ? {
-                          artSrc: j.popoutAsset,
-                          backgroundSrc: j.asset,
-                          title: () => j.title,
-                          description: () => j.body,
-                          revertTextColor: j.revertTextColor
+                          artSrc: b.popoutAsset,
+                          backgroundSrc: b.asset,
+                          title: () => b.title,
+                          description: () => b.body,
+                          revertTextColor: b.revertTextColor
                       }
-                    : p.GX[T]),
+                    : p.GX[S]),
             s.useEffect(() => {
-                m.default.track(E.rMx.PREMIUM_UPSELL_VIEWED, {
+                h.default.track(E.rMx.PREMIUM_UPSELL_VIEWED, {
                     type: C.cd.COLLECTIBLES_PROFILE_SETTINGS_UPSELL,
                     location_stack: n,
-                    version: null == j ? void 0 : j.version
+                    version: null == b ? void 0 : b.version
                 });
-            }, [n, null == j ? void 0 : j.version]),
+            }, [n, null == b ? void 0 : b.version]),
             (0, i.jsxs)('div', {
-                ref: l,
-                className: r()(f.container, { [f.robertContainer]: T === _.C5.ROBERT }),
-                style: { backgroundImage: 'url('.concat(null !== (e = null == t ? void 0 : t.backgroundSrc) && void 0 !== e ? e : I, ')') },
+                ref: r,
+                className: l()(T.container, { [T.robertContainer]: S === _.C5.ROBERT }),
+                style: { backgroundImage: 'url('.concat(null !== (e = null == t ? void 0 : t.backgroundSrc) && void 0 !== e ? e : N, ')') },
                 children: [
-                    (0, i.jsx)(S, {
+                    (0, i.jsx)(I, {
                         displayOptions: t,
-                        marketingVariant: T
+                        marketingVariant: S
                     }),
                     (0, i.jsx)(d.zxk, {
                         onClick: () => {
@@ -95,9 +95,9 @@ let S = (e) => {
                                 analyticsSource: u.Z.COLLECTIBLES_PROFILE_SETTINGS_UPSELL
                             });
                         },
-                        className: f.ctaButton,
+                        className: T.ctaButton,
                         color: d.zxk.Colors.BRAND_INVERTED,
-                        children: N.intl.string(N.t.fYfGgI)
+                        children: f.intl.string(f.t.fYfGgI)
                     })
                 ]
             })

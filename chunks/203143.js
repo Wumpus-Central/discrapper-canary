@@ -23,8 +23,8 @@ var i = n(512722),
     f = n(48854),
     x = n(869765),
     C = n(314897),
-    v = n(592125),
-    E = n(703558),
+    E = n(592125),
+    v = n(703558),
     I = n(607744),
     N = n(375954),
     S = n(117530),
@@ -64,7 +64,7 @@ function P(e) {
 }
 function k(e) {
     let { channelId: t, messageId: n, answerId: i } = e,
-        l = v.Z.getChannel(t);
+        l = E.Z.getChannel(t);
     if (null == l) return;
     if (p.Z.isLurking(l.guild_id)) {
         P({
@@ -140,7 +140,7 @@ async function D(e) {
 }
 async function w(e) {
     let { channelId: t, messageId: n } = e,
-        i = v.Z.getChannel(t);
+        i = E.Z.getChannel(t);
     if (null == i) return;
     if (p.Z.isLurking(i.guild_id)) {
         P({
@@ -211,7 +211,7 @@ async function w(e) {
 }
 async function F(e) {
     let { channelId: t, messageId: n } = e,
-        i = v.Z.getChannel(t);
+        i = E.Z.getChannel(t);
     if (null != i) {
         if (p.Z.isLurking(i.guild_id)) {
             P({
@@ -389,7 +389,7 @@ let B = {
     handlePollActionTapped: U,
     createPoll: async function (e) {
         let { channel: t, question: n, answers: i, allowMultiSelect: l, duration: a, layout: r, onClose: o } = e,
-            c = S.Z.getUploads(t.id, E.d.Poll),
+            c = S.Z.getUploads(t.id, v.d.Poll),
             d = i.map((e) => {
                 var t, n;
                 let i = null == c ? void 0 : c.findIndex((t) => t.id === e.localCreationAnswerId),

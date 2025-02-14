@@ -10,11 +10,11 @@ var i = n(200651),
     a = n(91192),
     s = n(657707),
     o = n(481060),
-    c = n(209613),
-    d = n(475413),
+    d = n(209613),
+    c = n(475413),
     u = n(907553);
 function h(e) {
-    let { id: t, label: n, icon: c, hint: h, renderSubmenu: m, ...p } = e,
+    let { id: t, label: n, icon: d, hint: h, renderSubmenu: m, ...p } = e,
         { onFocus: g, ..._ } = (0, a.JA)(t),
         { id: f } = (0, a.f$)(),
         [E, I] = l.useState(!1),
@@ -26,7 +26,7 @@ function h(e) {
             });
     }, [t, f, C]);
     let N = (e) =>
-        (0, i.jsxs)(d.kF, {
+        (0, i.jsxs)(c.kF, {
             ...e,
             ..._,
             ...p,
@@ -41,7 +41,7 @@ function h(e) {
                 null == e || null === (t = e.onMouseEnter) || void 0 === t || t.call(e), g();
             },
             children: [
-                (0, i.jsx)(c, {
+                (0, i.jsx)(d, {
                     size: 'xs',
                     color: 'currentColor'
                 }),
@@ -68,7 +68,7 @@ function h(e) {
 }
 function m(e) {
     let { id: t, children: n } = e,
-        l = (0, c.Z)(t);
+        l = (0, d.Z)(t);
     return (0, i.jsx)(a.bG, {
         navigator: l,
         children: (0, i.jsx)(a.SJ, {

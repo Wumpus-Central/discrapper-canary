@@ -14,22 +14,22 @@ function h(e, t, n, h) {
             username: '',
             game: n.name
         }),
-        f = t.getAvatarURL(e.guild_id, 80),
-        { trackView: m, trackClick: _ } = (0, o.R)(c.n0.ActivityInvite, {
+        m = t.getAvatarURL(e.guild_id, 80),
+        { trackView: f, trackClick: v } = (0, o.R)(c.n0.ActivityInvite, {
             notif_type: c.n0.ActivityInvite,
             notif_user_id: t.id,
             activity_type: d.mFx.JOIN_REQUEST,
             activity_name: n.name
         });
     return {
-        icon: f,
+        icon: m,
         title: p,
         body: g,
         hint: (e) => (0, a.QR)(e, (0, o.P)(), u.t['Odi54+']),
         confirmText: u.intl.string(u.t['fgP/wc']),
         cancelText: u.intl.string(u.t.tpXzJy),
         onNotificationShow: () => {
-            m();
+            f();
         },
         onConfirmClick: (t, n) => {
             i.Z.sendActivityInvite({
@@ -38,14 +38,14 @@ function h(e, t, n, h) {
                 activity: h,
                 location: r.Z.isInstanceLocked() ? d.Sbl.LOCKED_OVERLAY : d.Sbl.UNLOCKED_OVERLAY
             }),
-                _('join'),
+                v('join'),
                 s.Z.updateNotificationStatus(n);
         },
         onCancelClick: (t, n) => {
-            (0, l.In)(e.id, !0, !0), s.Z.updateNotificationStatus(n), _('decline');
+            (0, l.In)(e.id, !0, !0), s.Z.updateNotificationStatus(n), v('decline');
         },
         onDismissClick: () => {
-            _('dismiss');
+            v('dismiss');
         }
     };
 }

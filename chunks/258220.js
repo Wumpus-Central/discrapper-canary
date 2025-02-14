@@ -9,8 +9,8 @@ var i = n(200651),
     a = n(153867),
     s = n(835473),
     o = n(600164),
-    c = n(626135),
-    d = n(998502),
+    d = n(626135),
+    c = n(998502),
     u = n(981631),
     h = n(388032),
     m = n(251627);
@@ -22,12 +22,12 @@ function g(e) {
         [E] = (0, s.Z)([n]),
         I = null !== (t = null == E ? void 0 : E.name) && void 0 !== t ? t : 'This Activity';
     l.useEffect(() => {
-        c.default.track(u.rMx.OPEN_MODAL, { type: p });
+        d.default.track(u.rMx.OPEN_MODAL, { type: p });
     }, []);
     let C = () => {
         let e = 'temporary';
         _ && ((e = 'permanent'), a.ZP.updatedUnsyncedSettings({ disableActivityHardwareAccelerationPrompt: !0 })),
-            c.default.track(u.rMx.MODAL_DISMISSED, {
+            d.default.track(u.rMx.MODAL_DISMISSED, {
                 type: p,
                 dismiss_type: e
             }),
@@ -82,7 +82,7 @@ function g(e) {
                     (0, i.jsx)(r.zxk, {
                         color: r.zxk.Colors.BRAND,
                         onClick: () => {
-                            c.default.track(u.rMx.ACTIVITY_ENABLE_HARDWARE_ACCELERATION, { application_id: n }), d.ZP.setEnableHardwareAcceleration(!0);
+                            d.default.track(u.rMx.ACTIVITY_ENABLE_HARDWARE_ACCELERATION, { application_id: n }), c.ZP.setEnableHardwareAcceleration(!0);
                         },
                         children: h.intl.string(h.t['/wlDqq'])
                     })

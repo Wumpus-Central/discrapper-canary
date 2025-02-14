@@ -16,8 +16,8 @@ var i = n(200651),
     f = n(906732),
     x = n(783097),
     C = n(581364),
-    v = n(592180),
-    E = n(347475),
+    E = n(592180),
+    v = n(347475),
     I = n(598077),
     N = n(768581),
     S = n(585483),
@@ -47,7 +47,7 @@ function P(e) {
 }
 function k(e, t, n, l, a) {
     var s, o, c;
-    let { message: d, compact: m, channel: _, isInteractionUserBlocked: h, isInteractionUserIgnored: p, showAvatarPopout: g, showTargetAvatarPopout: f, onClickAvatar: x, onUserContextMenu: C, onClickTargetAvatar: v, onTargetUserContextMenu: E, onPopoutRequestClose: I } = e;
+    let { message: d, compact: m, channel: _, isInteractionUserBlocked: h, isInteractionUserIgnored: p, showAvatarPopout: g, showTargetAvatarPopout: f, onClickAvatar: x, onUserContextMenu: C, onClickTargetAvatar: E, onTargetUserContextMenu: v, onPopoutRequestClose: I } = e;
     if (m && 1 === n) return null;
     if ((m && null == d.activityInstance) || h || p)
         return (0, i.jsx)('div', {
@@ -81,8 +81,8 @@ function k(e, t, n, l, a) {
                 user: t,
                 guildId: _.guild_id,
                 guildAvatar: S,
-                onClick: 1 === n ? v : x,
-                onContextMenu: 1 === n ? E : C
+                onClick: 1 === n ? E : x,
+                onContextMenu: 1 === n ? v : C
             }),
         b = 1 === n ? f : g;
     return null != a && null != b
@@ -125,7 +125,7 @@ function D(e) {
         N = l.useMemo(
             () => (e, t, n) => (
                 o()(null != s && null != t, 'ExecuteCommand: user and channel cannot be undefined'),
-                (0, i.jsx)(E.Z, {
+                (0, i.jsx)(v.Z, {
                     ...e,
                     channelId: s.id,
                     messageId: a.id,
@@ -168,7 +168,7 @@ function D(e) {
             'user'
         );
     };
-    if ((null == a ? void 0 : a.activityInstance) === null || (0, v.g)(a))
+    if ((null == a ? void 0 : a.activityInstance) === null || (0, E.g)(a))
         (n = R.intl.format(R.t['rg7U+P'], {
             userHook: V,
             commandHook: () => {
@@ -204,7 +204,7 @@ function D(e) {
                                         ]
                                     })
                                 });
-                            if (!(0, v.g)(l))
+                            if (!(0, E.g)(l))
                                 return (0, i.jsx)('div', {
                                     className: L.commandName,
                                     children: o

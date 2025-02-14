@@ -9,7 +9,7 @@ var l = n(481060),
     a = n(981631);
 let s = 'command-share-modal';
 function o(e) {
-    let { applicationId: t, channel: o, command: c, previewMessage: d, requireLaunchChannel: u, onShareResult: h } = e,
+    let { applicationId: t, channel: o, command: d, previewMessage: c, requireLaunchChannel: u, onShareResult: h } = e,
         m = r.Z.getWindowOpen(a.KJ3.ACTIVITY_POPOUT) ? l.u1M : l.z1l;
     (0, l.ZDy)(
         async () => {
@@ -18,8 +18,8 @@ function o(e) {
                 (0, i.jsx)(e, {
                     applicationId: t,
                     channel: o,
-                    command: c,
-                    previewMessage: d,
+                    command: d,
+                    previewMessage: c,
                     onShareResult: h,
                     requireLaunchChannel: u,
                     ...n

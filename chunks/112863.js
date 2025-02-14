@@ -2,8 +2,8 @@ n.d(t, { Z: () => u });
 var i = n(200651);
 n(192379);
 var s = n(481060),
-    l = n(37234),
-    r = n(703656),
+    r = n(37234),
+    l = n(703656),
     a = n(981631),
     o = n(388032),
     c = n(526887),
@@ -34,7 +34,7 @@ function u() {
             (0, i.jsx)(s.zxk, {
                 color: s.zxk.Colors.PRIMARY,
                 onClick: () => {
-                    (0, r.uL)(a.Z5c.GUILD_DISCOVERY), (0, l.xf)();
+                    (0, l.uL)(a.Z5c.GUILD_DISCOVERY), (0, r.xf)();
                 },
                 size: s.zxk.Sizes.LARGE,
                 children: o.intl.string(o.t.JFlifn)

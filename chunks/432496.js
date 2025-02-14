@@ -8,10 +8,10 @@ function o(e) {
     var t, n;
     return null !== (n = null === (t = a[e]) || void 0 === t ? void 0 : t.fetchState) && void 0 !== n ? n : 0;
 }
-function c() {
+function d() {
     a = {};
 }
-class d extends i.ZP.Store {
+class c extends i.ZP.Store {
     isFetchingFriendsForGuild(e) {
         return 1 === o(e);
     }
@@ -26,11 +26,11 @@ class d extends i.ZP.Store {
             r.Z.requestMembersById(e, t, !1));
     }
 }
-let u = new d(l.Z, {
-    CONNECTION_OPEN: c,
-    LOGOUT: c,
-    RELATIONSHIP_ADD: c,
-    RELATIONSHIP_REMOVE: c,
+let u = new c(l.Z, {
+    CONNECTION_OPEN: d,
+    LOGOUT: d,
+    RELATIONSHIP_ADD: d,
+    RELATIONSHIP_REMOVE: d,
     GUILD_MEMBERS_CHUNK_BATCH: function (e) {
         var t, n;
         let i = e.chunks[0],

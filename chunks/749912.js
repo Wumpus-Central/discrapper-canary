@@ -1,11 +1,11 @@
-a.d(s, { Z: () => d }), a(47120);
-var i = a(200651);
-a(192379);
-var t = a(754700),
-    n = a(481060),
-    l = a(70956),
-    r = a(433930);
-let o = [
+n.d(t, { Z: () => c }), n(47120);
+var s = n(200651);
+n(192379);
+var r = n(754700),
+    a = n(481060),
+    o = n(70956),
+    i = n(433930);
+let l = [
         {
             value: 1,
             label: 'Stream Desktop'
@@ -31,66 +31,66 @@ let o = [
             label: 'Play Activity'
         }
     ],
-    d = function (e) {
-        let { onSelect: s, taskDuration: a = 10, taskConfig: d } = e;
-        return (0, i.jsxs)(i.Fragment, {
+    c = function (e) {
+        let { onSelect: t, taskDuration: n = 10, taskConfig: c } = e;
+        return (0, s.jsxs)(s.Fragment, {
             children: [
-                (0, i.jsxs)(n.xJW, {
+                (0, s.jsxs)(a.xJW, {
                     children: [
-                        (0, i.jsx)(n.vwX, {
-                            tag: n.RB0.H5,
+                        (0, s.jsx)(a.vwX, {
+                            tag: a.RB0.H5,
                             children: 'Task Type(s)'
                         }),
-                        (0, i.jsx)(n.R94, {
-                            children: (0, i.jsx)(n.PhF, {
-                                className: r.taskPresetSelect,
+                        (0, s.jsx)(a.R94, {
+                            children: (0, s.jsx)(a.PhF, {
+                                className: i.taskPresetSelect,
                                 placeholder: 'Select Task Preset',
-                                options: o,
-                                renderOptionValue: (e) => e.map((e) => (0, i.jsx)('div', { children: e.label }, e.value)),
-                                renderOptionLabel: (e) => (0, i.jsx)('div', { children: e.label }),
+                                options: l,
+                                renderOptionValue: (e) => e.map((e) => (0, s.jsx)('div', { children: e.label }, e.value)),
+                                renderOptionLabel: (e) => (0, s.jsx)('div', { children: e.label }),
                                 isSelected: (e) =>
                                     e ===
                                     (function (e) {
-                                        let s = t.X.PLAY_ON_PLAYSTATION in e || t.X.PLAY_ON_XBOX in e,
-                                            a = t.X.PLAY_ON_DESKTOP in e || t.X.PLAY_ON_DESKTOP_V2 in e,
-                                            i = t.X.STREAM_ON_DESKTOP in e,
-                                            n = t.X.WATCH_VIDEO in e,
-                                            l = t.X.PLAY_ACTIVITY in e;
-                                        return s && a ? 4 : s ? 3 : a ? 0 : i ? 1 : n ? 2 : l ? 5 : void 0;
-                                    })(d.tasks),
+                                        let t = r.X.PLAY_ON_PLAYSTATION in e || r.X.PLAY_ON_XBOX in e,
+                                            n = r.X.PLAY_ON_DESKTOP in e || r.X.PLAY_ON_DESKTOP_V2 in e,
+                                            s = r.X.STREAM_ON_DESKTOP in e,
+                                            a = r.X.WATCH_VIDEO in e,
+                                            o = r.X.PLAY_ACTIVITY in e;
+                                        return t && n ? 4 : t ? 3 : n ? 0 : s ? 1 : a ? 2 : o ? 5 : void 0;
+                                    })(c.tasks),
                                 select: (e) => {
-                                    s({
-                                        ...d,
-                                        tasks: (function (e, s) {
-                                            let a = [];
+                                    t({
+                                        ...c,
+                                        tasks: (function (e, t) {
+                                            let n = [];
                                             switch (e) {
                                                 case 1:
-                                                    a = [t.X.STREAM_ON_DESKTOP];
+                                                    n = [r.X.STREAM_ON_DESKTOP];
                                                     break;
                                                 case 0:
-                                                    a = [t.X.PLAY_ON_DESKTOP];
+                                                    n = [r.X.PLAY_ON_DESKTOP];
                                                     break;
                                                 case 3:
-                                                    a = [t.X.PLAY_ON_PLAYSTATION, t.X.PLAY_ON_XBOX];
+                                                    n = [r.X.PLAY_ON_PLAYSTATION, r.X.PLAY_ON_XBOX];
                                                     break;
                                                 case 4:
-                                                    a = [t.X.PLAY_ON_DESKTOP, t.X.PLAY_ON_PLAYSTATION, t.X.PLAY_ON_XBOX];
+                                                    n = [r.X.PLAY_ON_DESKTOP, r.X.PLAY_ON_PLAYSTATION, r.X.PLAY_ON_XBOX];
                                                     break;
                                                 case 2:
-                                                    a = [t.X.WATCH_VIDEO];
+                                                    n = [r.X.WATCH_VIDEO];
                                                     break;
                                                 case 5:
-                                                    a = [t.X.PLAY_ACTIVITY];
+                                                    n = [r.X.PLAY_ACTIVITY];
                                             }
-                                            let i = {};
-                                            for (let e of a)
-                                                i[e] = {
+                                            let s = {};
+                                            for (let e of n)
+                                                s[e] = {
                                                     eventName: e,
-                                                    target: s,
+                                                    target: t,
                                                     externalIds: []
                                                 };
-                                            return i;
-                                        })(e, a)
+                                            return s;
+                                        })(e, n)
                                     });
                                 },
                                 serialize: String
@@ -98,28 +98,28 @@ let o = [
                         })
                     ]
                 }),
-                (0, i.jsxs)(n.xJW, {
+                (0, s.jsxs)(a.xJW, {
                     children: [
-                        (0, i.jsx)(n.vwX, {
-                            tag: n.RB0.H5,
+                        (0, s.jsx)(a.vwX, {
+                            tag: a.RB0.H5,
                             children: 'Task Duration'
                         }),
-                        (0, i.jsx)(n.R94, {
-                            children: (0, i.jsx)(n.oil, {
-                                value: String(a / l.Z.Seconds.MINUTE),
+                        (0, s.jsx)(a.R94, {
+                            children: (0, s.jsx)(a.oil, {
+                                value: String(n / o.Z.Seconds.MINUTE),
                                 onChange: function (e) {
-                                    let a = Number(e);
-                                    if (isNaN(a)) return;
-                                    a *= l.Z.Seconds.MINUTE;
-                                    let i = { ...d.tasks };
-                                    for (let [e, s] of Object.entries(i))
-                                        i[e] = {
-                                            ...s,
-                                            target: a
+                                    let n = Number(e);
+                                    if (isNaN(n)) return;
+                                    n *= o.Z.Seconds.MINUTE;
+                                    let s = { ...c.tasks };
+                                    for (let [e, t] of Object.entries(s))
+                                        s[e] = {
+                                            ...t,
+                                            target: n
                                         };
-                                    s({
-                                        ...d,
-                                        tasks: i
+                                    t({
+                                        ...c,
+                                        tasks: s
                                     });
                                 }
                             })

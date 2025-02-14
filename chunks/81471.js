@@ -5,8 +5,8 @@ var i = n(200651),
     a = n.n(r),
     s = n(442837),
     o = n(481060),
-    c = n(95398),
-    d = n(905405),
+    d = n(95398),
+    c = n(905405),
     u = n(255269),
     h = n(937889),
     m = n(267128),
@@ -22,8 +22,8 @@ var i = n(200651),
 let T = l.memo(function (e) {
     let { channel: t } = e,
         { loaded: n, error: r, message: T } = (0, f.a)(t),
-        S = (0, d.p)(),
-        { isBlocked: A, isIgnored: b } = (0, s.cj)(
+        S = (0, c.p)(),
+        { isBlocked: A, isIgnored: Z } = (0, s.cj)(
             [_.Z],
             () => ({
                 isBlocked: null != T && _.Z.isBlockedForMessage(T),
@@ -31,8 +31,8 @@ let T = l.memo(function (e) {
             }),
             [T]
         ),
-        Z = (0, s.e7)([g.Z], () => g.Z.can(E.Plq.MANAGE_MESSAGES, t)),
-        x = p.cC.useSetting(),
+        x = (0, s.e7)([g.Z], () => g.Z.can(E.Plq.MANAGE_MESSAGES, t)),
+        b = p.cC.useSetting(),
         { content: L } = l.useMemo(
             () =>
                 (null == T ? void 0 : T.content) != null && '' !== T.content
@@ -60,7 +60,7 @@ let T = l.memo(function (e) {
                 color: 'text-muted',
                 children: C.intl.string(C.t['WPe+xM'])
             });
-        else if (null != T && b)
+        else if (null != T && Z)
             y = (0, i.jsx)(o.Text, {
                 className: N.messageReplacement,
                 variant: 'text-sm/normal',
@@ -68,7 +68,7 @@ let T = l.memo(function (e) {
                 children: C.intl.string(C.t.uxrh1N)
             });
         else if (null != T) {
-            let { contentPlaceholder: e, renderedContent: t } = (0, m.f)(T, L, A, b, a()(N.messageContent, v.inlineFormat), {
+            let { contentPlaceholder: e, renderedContent: t } = (0, m.f)(T, L, A, Z, a()(N.messageContent, v.inlineFormat), {
                 leadingIconClass: N.messageContentIcon,
                 trailingIconClass: N.messageContentIcon,
                 iconSize: I.WW
@@ -96,8 +96,8 @@ let T = l.memo(function (e) {
                 children: C.intl.string(C.t['0KfDxM'])
             });
     } else y = null;
-    return (0, i.jsx)(c.a.Provider, {
-        value: (0, u.Z)(x, Z),
+    return (0, i.jsx)(d.a.Provider, {
+        value: (0, u.Z)(b, x),
         children: (0, i.jsx)(o.Rny, {
             className: N.messageFocusBlock,
             children: y

@@ -1,14 +1,14 @@
-n.d(t, { E: () => d }), n(47120);
+n.d(t, { E: () => c }), n(47120);
 var i = n(192379),
     l = n(442837),
     r = n(353926),
     a = n(358085),
     s = n(335131),
     o = n(52030),
-    c = n(228624);
-function d(e, t) {
+    d = n(228624);
+function c(e, t) {
     let n = (0, l.e7)([r.Z], () => r.Z.hasLoadedExperiments),
-        d = (0, c.hv)('useMaybeFetchCollectiblesShopHome'),
+        c = (0, d.hv)('useMaybeFetchCollectiblesShopHome'),
         u = (0, a.isDesktop)() || (0, a.isWeb)(),
         [h, m, p, g, _, f] = (0, l.Wu)([o.Z], () => {
             var t, n;
@@ -17,12 +17,12 @@ function d(e, t) {
         E = (0, i.useMemo)(
             () => ({
                 ...t,
-                variantsReturnStyle: d,
+                variantsReturnStyle: c,
                 includeBundles: u,
                 includePopularPicks: !0,
                 includeDynamicBlocks: !0
             }),
-            [t, d, u]
+            [t, c, u]
         ),
         I = (0, i.useMemo)(() => !(0, s.oc)(g, E), [g, E]),
         C = (0, i.useMemo)(() => Date.now() - m < 600000, [m]);

@@ -5,8 +5,8 @@ var i,
     a = n(695346),
     s = n(885110),
     o = n(70956),
-    c = n(981631);
-function d(e, t, n) {
+    d = n(981631);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -38,11 +38,11 @@ class p extends (i = l.ZP.PersistedStore) {
         return { x: a.Cr.getSetting() };
     }
 }
-d(p, 'displayName', 'HabitualDNDStore'),
-    d(p, 'persistKey', 'habitualDND'),
+c(p, 'displayName', 'HabitualDNDStore'),
+    c(p, 'persistKey', 'habitualDND'),
     new p(r.Z, {
         POST_CONNECTION_OPEN: function () {
-            s.Z.getStatus() === c.Skl.DND && '0' === a.Cr.getSetting()
+            s.Z.getStatus() === d.Skl.DND && '0' === a.Cr.getSetting()
                 ? (u.push(Date.now()),
                   (u = u.filter((e) => e > Date.now() - 5 * o.Z.Millis.DAY)),
                   m() &&

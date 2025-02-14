@@ -1,22 +1,22 @@
 n.d(t, { Z: () => _ }), n(47120);
 var i = n(200651),
     s = n(192379),
-    l = n(442837),
-    r = n(2052),
+    r = n(442837),
+    l = n(2052),
     a = n(921801),
     o = n(932724),
     c = n(716161),
     d = n(672339),
     u = n(938117),
-    h = n(131951),
-    m = n(594174),
+    m = n(131951),
+    h = n(594174),
     g = n(726985),
     x = n(981631);
 function _() {
-    let e = (0, r.O)(),
+    let e = (0, l.O)(),
         t = s.useRef(!1),
-        n = (0, l.e7)([h.Z], () => h.Z.getVideoDeviceId()),
-        [_, p] = s.useState((0, o.P)(m.default.getCurrentUser())),
+        n = (0, r.e7)([m.Z], () => m.Z.getVideoDeviceId()),
+        [_, p] = s.useState((0, o.P)(h.default.getCurrentUser())),
         E = s.useRef(_);
     return (
         s.useEffect(

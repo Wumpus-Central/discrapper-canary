@@ -5,8 +5,8 @@ var i = n(544891),
     a = n(812206),
     s = n(695103),
     o = n(626135),
-    c = n(630388),
-    d = n(996106),
+    d = n(630388),
+    c = n(996106),
     u = n(914946),
     h = n(452426),
     m = n(561205),
@@ -31,9 +31,9 @@ let _ = {
             let s = n.application.id,
                 h = (0, m.Z)(),
                 p = null == h ? void 0 : h.getGuildId();
-            if (null == h) throw new d.Z({ errorCode: g.lTL.INVALID_COMMAND }, 'Invalid channel');
+            if (null == h) throw new c.Z({ errorCode: g.lTL.INVALID_COMMAND }, 'Invalid channel');
             let _ = a.Z.getApplication(s);
-            if (!(0, c.yE)(null !== (t = null == _ ? void 0 : _.flags) && void 0 !== t ? t : 0, g.udG.EMBEDDED_FIRST_PARTY)) throw new d.Z({ errorCode: g.lTL.INVALID_COMMAND }, 'This application cannot access this API');
+            if (!(0, d.yE)(null !== (t = null == _ ? void 0 : _.flags) && void 0 !== t ? t : 0, g.udG.EMBEDDED_FIRST_PARTY)) throw new c.Z({ errorCode: g.lTL.INVALID_COMMAND }, 'This application cannot access this API');
             let f = (0, r.U)(s),
                 E = {
                     activity_application_id: s,
@@ -52,7 +52,7 @@ let _ = {
         handler(e) {
             let { socket: t } = e,
                 n = t.application.id;
-            if (null == n) throw new d.Z({ errorCode: g.lTL.INVALID_COMMAND }, 'No application.');
+            if (null == n) throw new c.Z({ errorCode: g.lTL.INVALID_COMMAND }, 'No application.');
             return i.tn
                 .post({
                     url: g.ANM.APPLICATION_TICKET(n),

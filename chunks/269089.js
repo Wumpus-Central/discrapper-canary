@@ -6,11 +6,11 @@ var l = n(570140),
     a = n(317770),
     s = n(663993),
     o = n(355863),
-    c = n(788983),
-    d = n(981631);
+    d = n(788983),
+    c = n(981631);
 n(316095);
 let u = (0, s.Un)({
-        createPromise: () => Promise.all([n.e('33053'), n.e('80960')]).then(n.bind(n, 223455)),
+        createPromise: () => n.e('80960').then(n.bind(n, 223455)),
         webpackId: 223455,
         name: 'PopoutWindowChannelCall'
     }),
@@ -20,12 +20,12 @@ let u = (0, s.Un)({
         name: 'PopoutWindowStageChannelCall'
     }),
     m = (0, s.Un)({
-        createPromise: () => Promise.all([n.e('33053'), n.e('80960')]).then(n.bind(n, 945778)),
+        createPromise: () => n.e('80960').then(n.bind(n, 945778)),
         webpackId: 945778,
         name: 'PopoutWindowRTCDebug'
     }),
     p = (0, s.Un)({
-        createPromise: () => Promise.all([n.e('81966'), n.e('93382'), n.e('92922'), n.e('28420'), n.e('27278')]).then(n.bind(n, 748623)),
+        createPromise: () => Promise.all([n.e('93382'), n.e('92922'), n.e('69838'), n.e('27278')]).then(n.bind(n, 748623)),
         webpackId: 748623,
         name: 'PopoutWindowActivity'
     });
@@ -38,8 +38,8 @@ class g extends a.Z {
     }
     handleOpenChannelCallPopout(e) {
         let { channel: t } = e;
-        c.bA(
-            d.KJ3.CHANNEL_CALL_POPOUT,
+        d.bA(
+            c.KJ3.CHANNEL_CALL_POPOUT,
             (e) =>
                 t.isGuildStageVoice()
                     ? (0, i.jsx)(h, {
@@ -64,7 +64,7 @@ class g extends a.Z {
                         if (e.nodeType === Node.ELEMENT_NODE && 'LINK' === e.tagName && 'stylesheet' === e.rel) {
                             let t = e.href,
                                 n = e.integrity;
-                            c.YS(t, n);
+                            d.YS(t, n);
                         }
                 }
         })),
@@ -74,7 +74,7 @@ class g extends a.Z {
         null != this._observer && (this._observer.disconnect(), (this._observer = null));
     }
     handleOpenRTCDebugPopout() {
-        c.bA(d.KJ3.RTC_DEBUG_POPOUT, (e) => (0, i.jsx)(m, { windowKey: e }), {
+        d.bA(c.KJ3.RTC_DEBUG_POPOUT, (e) => (0, i.jsx)(m, { windowKey: e }), {
             defaultWidth: 854,
             defaultHeight: 480
         });
@@ -82,7 +82,7 @@ class g extends a.Z {
     async handleOpenActivityPopout() {
         let { OVERLAY_V3_LAYOUT_ID: e } = await Promise.resolve().then(n.bind(n, 501787));
         (0, r.te)(e, o.Z.getDefaultLayout(e, 1), 1),
-            c.bA(d.KJ3.ACTIVITY_POPOUT, (e) => (0, i.jsx)(p, { windowKey: e }), {
+            d.bA(c.KJ3.ACTIVITY_POPOUT, (e) => (0, i.jsx)(p, { windowKey: e }), {
                 defaultWidth: 854,
                 defaultHeight: 480
             });

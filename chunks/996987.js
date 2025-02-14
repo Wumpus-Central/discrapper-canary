@@ -9,18 +9,18 @@ var l = n(481060),
     d = n(388032),
     c = n(483938);
 function u(e) {
-    let { value: t, onChange: n, children: u, note: m, helpdeskArticleId: h, style: x, disabled: g = !1, hideBorder: p = !1, className: b = c.marginBottom20 } = e,
-        _ = (0, r.Dt)();
+    let { value: t, onChange: n, children: u, note: m, helpdeskArticleId: h, style: x, disabled: g = !1, hideBorder: p = !1, className: f = c.marginBottom20 } = e,
+        b = (0, r.Dt)();
     return (0, i.jsxs)(a.Z, {
         style: x,
-        className: b,
+        className: f,
         direction: a.Z.Direction.VERTICAL,
         children: [
             (0, i.jsxs)(a.Z, {
                 children: [
                     (0, i.jsx)(a.Z.Child, {
                         children: (0, i.jsx)(l.vwX, {
-                            id: _,
+                            id: b,
                             className: c.marginReset,
                             tag: l.RB0.H3,
                             disabled: g,
@@ -34,7 +34,7 @@ function u(e) {
                             value: t,
                             onChange: n,
                             disabled: g,
-                            labelledBy: _
+                            labelledBy: b
                         })
                     })
                 ]

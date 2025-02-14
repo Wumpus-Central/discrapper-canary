@@ -5,8 +5,8 @@ var i,
     a = n(120356),
     s = n.n(a),
     o = n(873546),
-    c = n(481060),
-    d = n(599857),
+    d = n(481060),
+    c = n(599857),
     u = n(600164),
     h = n(63063),
     m = n(1964),
@@ -35,7 +35,7 @@ class C extends (i = r.PureComponent) {
             children: e.map((e) =>
                 e === p.PUi.CAPTCHA
                     ? (0, l.jsx)(
-                          d.Z,
+                          c.Z,
                           {
                               onVerify: i,
                               theme: n
@@ -43,7 +43,7 @@ class C extends (i = r.PureComponent) {
                           t
                       )
                     : (0, l.jsx)(
-                          c.zxk,
+                          d.zxk,
                           {
                               className: s()(f.marginBottom20),
                               onClick: () => this.handleClick(e),

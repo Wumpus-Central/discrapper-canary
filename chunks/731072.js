@@ -9,32 +9,32 @@ var i = n(200651),
     c = n(13051),
     u = n(73690);
 function m(e) {
-    let { integrations: t, editedIntegration: n, guild: m, platformType: h, labelText: x, descriptionText: g, helpText: p, canNavigate: b } = e,
-        _ = s.Z.get(h),
-        f = l.useCallback(
-            async (e) => {
-                b() && (await o.Z.enableIntegration(m.id, e.type, e.id), r.Z.startEditingIntegration(e.id));
-            },
-            [b, m.id]
-        ),
+    let { integrations: t, editedIntegration: n, guild: m, platformType: h, labelText: x, descriptionText: g, helpText: p, canNavigate: f } = e,
+        b = s.Z.get(h),
         v = l.useCallback(
-            (e) => {
-                b() && (e.id === (null == n ? void 0 : n.id) && r.Z.stopEditingIntegration(), o.Z.disableIntegration(m.id, e.id));
+            async (e) => {
+                f() && (await o.Z.enableIntegration(m.id, e.type, e.id), r.Z.startEditingIntegration(e.id));
             },
-            [b, n, m.id]
+            [f, m.id]
         ),
-        C = l.useCallback(
+        _ = l.useCallback(
             (e) => {
-                b() && (e === (null == n ? void 0 : n.id) ? r.Z.stopEditingIntegration() : r.Z.startEditingIntegration(e));
+                f() && (e.id === (null == n ? void 0 : n.id) && r.Z.stopEditingIntegration(), o.Z.disableIntegration(m.id, e.id));
             },
-            [b, n]
+            [f, n, m.id]
+        ),
+        N = l.useCallback(
+            (e) => {
+                f() && (e === (null == n ? void 0 : n.id) ? r.Z.stopEditingIntegration() : r.Z.startEditingIntegration(e));
+            },
+            [f, n]
         );
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(d.Z, {
                 name: x,
-                icon: null == _ ? void 0 : _.icon.whiteSVG,
-                iconBackgroundColor: null == _ ? void 0 : _.color,
+                icon: null == b ? void 0 : b.icon.whiteSVG,
+                iconBackgroundColor: null == b ? void 0 : b.color,
                 iconClassName: u.platformIcon,
                 description: g,
                 isHeader: !0
@@ -48,9 +48,9 @@ function m(e) {
                         editedIntegration: n,
                         guild: m,
                         isExpanded: (null == n ? void 0 : n.id) === e.id,
-                        onEnable: f,
-                        onDisable: v,
-                        onToggleExpand: () => C(e.id)
+                        onEnable: v,
+                        onDisable: _,
+                        onToggleExpand: () => N(e.id)
                     },
                     e.id
                 )

@@ -200,7 +200,7 @@ let V = l.memo(function (e) {
                                   icon: o.b7C,
                                   action: () =>
                                       (0, o.ZDy)(async () => {
-                                          let { default: e } = await Promise.all([t.e('23217'), t.e('33053'), t.e('8016'), t.e('17298'), t.e('76540'), t.e('17938'), t.e('81966'), t.e('22646'), t.e('3940'), t.e('48923'), t.e('30419'), t.e('18824'), t.e('72897'), t.e('15521')]).then(t.bind(t, 241420));
+                                          let { default: e } = await t.e('59500').then(t.bind(t, 241420));
                                           return (t) =>
                                               (0, i.jsx)(e, {
                                                   ...t,
@@ -347,7 +347,7 @@ let V = l.memo(function (e) {
                                   icon: eZ ? void 0 : o.Dkj,
                                   action: () =>
                                       (0, o.ZDy)(async () => {
-                                          let { default: e } = await Promise.all([t.e('5863'), t.e('59841')]).then(t.bind(t, 751212));
+                                          let { default: e } = await Promise.all([t.e('5863'), t.e('31898')]).then(t.bind(t, 751212));
                                           return (t) =>
                                               (0, i.jsx)(e, {
                                                   ...t,
@@ -361,7 +361,7 @@ let V = l.memo(function (e) {
                                   icon: o.b7C,
                                   action: () =>
                                       (0, o.ZDy)(async () => {
-                                          let { default: e } = await Promise.all([t.e('23217'), t.e('33053'), t.e('8016'), t.e('17298'), t.e('76540'), t.e('17938'), t.e('81966'), t.e('22646'), t.e('3940'), t.e('48923'), t.e('30419'), t.e('18824'), t.e('72897'), t.e('15521')]).then(t.bind(t, 241420));
+                                          let { default: e } = await t.e('59500').then(t.bind(t, 241420));
                                           return (t) =>
                                               (0, i.jsx)(e, {
                                                   ...t,

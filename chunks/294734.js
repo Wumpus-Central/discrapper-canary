@@ -16,8 +16,8 @@ var i = n(200651),
     f = n(906467),
     x = n(430824),
     C = n(496675),
-    v = n(699516),
-    E = n(594174),
+    E = n(699516),
+    v = n(594174),
     I = n(100604),
     N = n(694784),
     S = n(39154),
@@ -45,7 +45,7 @@ function j() {
 function y(e) {
     let { message: t, snapshot: n, index: u } = e,
         m = l.useMemo(() => new I.r(t, n, u), [t, n, u]),
-        _ = (0, r.e7)([g.Z, E.default, v.Z, C.Z, x.Z, d.Z], () => m.getForwardInfo(g.Z, E.default, v.Z, C.Z, x.Z, d.Z).footerInfo, [m], s.Z),
+        _ = (0, r.e7)([g.Z, v.default, E.Z, C.Z, x.Z, d.Z], () => m.getForwardInfo(g.Z, v.default, E.Z, C.Z, x.Z, d.Z).footerInfo, [m], s.Z),
         h = l.useCallback(() => {
             (0, N.Z)(t);
         }, [t]);
@@ -83,7 +83,7 @@ function Z(e) {
         d = p.NA.useSetting(),
         x = (0, r.e7)([f.Z], () => f.Z.isDeveloper),
         C = (0, u.A)((null !== (t = o.editedTimestamp) && void 0 !== t ? t : o.timestamp).valueOf()),
-        { content: v, hasSpoilerEmbeds: E } = (0, _.Z)(o, {
+        { content: E, hasSpoilerEmbeds: v } = (0, _.Z)(o, {
             hideSimpleEmbedContent: c && d,
             isInteracting: !1,
             formatInline: !1,
@@ -109,7 +109,7 @@ function Z(e) {
                               (0, i.jsx)(j, {}),
                               (0, i.jsx)(m.ZP, {
                                   message: o,
-                                  content: v
+                                  content: E
                               }),
                               (0, h.Z)({
                                   channelMessageProps: {
@@ -117,7 +117,7 @@ function Z(e) {
                                       channel: I,
                                       compact: N
                                   },
-                                  hasSpoilerEmbeds: E,
+                                  hasSpoilerEmbeds: v,
                                   isInteracting: !1,
                                   isMessageSnapshot: !0,
                                   renderThreadAccessory: !1

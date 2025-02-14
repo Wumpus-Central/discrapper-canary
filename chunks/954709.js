@@ -1,4 +1,4 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => d });
 var i = n(664081),
     l = n(570140),
     r = n(317770),
@@ -16,4 +16,4 @@ class o extends r.Z {
         (0, s.R2)({ release: e ? i.P.BETA : i.P.PROD });
     }
 }
-let c = new o();
+let d = new o();

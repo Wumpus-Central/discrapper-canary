@@ -1,7 +1,7 @@
 n.d(t, { Z: () => l });
 var i = n(864106);
 function l(e) {
-    let { userId: t, nick: n, guildId: l, avatar: r, avatarDecoration: a, banner: s, bio: o, pronouns: c, colorString: d } = e;
+    let { userId: t, nick: n, guildId: l, avatar: r, avatarDecoration: a, banner: s, bio: o, pronouns: d, colorString: c } = e;
     return {
         user_id: t,
         nick: n,
@@ -10,7 +10,7 @@ function l(e) {
         avatar_decoration_data: (0, i.FG)(a),
         banner: s,
         bio: o,
-        pronouns: c,
-        color_string: d
+        pronouns: d,
+        color_string: c
     };
 }

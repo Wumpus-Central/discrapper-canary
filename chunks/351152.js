@@ -11,8 +11,8 @@ var i = l(120356),
     d = l(984933),
     m = l(430824),
     x = l(496675),
-    h = l(771845),
-    g = l(259580),
+    g = l(771845),
+    h = l(259580),
     Z = l(102172),
     v = l(148381),
     S = l(388032),
@@ -42,8 +42,8 @@ function f(e) {
                       className: C.guildName,
                       children: i.toString()
                   }),
-                  (0, t.jsx)(g.Z, {
-                      direction: g.Z.Directions.RIGHT,
+                  (0, t.jsx)(h.Z, {
+                      direction: h.Z.Directions.RIGHT,
                       className: C.guildArrow
                   })
               ]
@@ -52,7 +52,7 @@ function f(e) {
 }
 function N(e) {
     let { onSelectGuild: n } = e,
-        l = (0, o.e7)([h.ZP], () => h.ZP.getGuildFolders());
+        l = (0, o.e7)([g.ZP], () => g.ZP.getGuildFolders());
     return (0, t.jsx)(v.Z, {
         title: S.intl.string(S.t.JsqeEh),
         scrollerClassName: s()(C.guildScroller, j.marginBottom),

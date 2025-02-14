@@ -5,7 +5,7 @@ var i,
     a,
     s = n(200651),
     o = n(192379);
-function c(e, t, n) {
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,7 +18,7 @@ function c(e, t, n) {
         e
     );
 }
-function d(e, t) {
+function c(e, t) {
     return {
         '@type': e,
         ...(function e(t) {
@@ -42,10 +42,10 @@ function d(e, t) {
     };
 }
 function u(e) {
-    return d('Thing', e);
+    return c('Thing', e);
 }
 function h(e) {
-    return d('Product', e);
+    return c('Product', e);
 }
 h.Image = function (e) {
     if (null == e) return null;
@@ -55,12 +55,12 @@ h.Image = function (e) {
 var m = (((l = m || {}).DAMAGED = 'http://schema.org/DamagedCondition'), (l.NEW = 'http://schema.org/NewCondition'), (l.REFURBISHED = 'http://schema.org/RefurbishedCondition'), (l.USED = 'http://schema.org/UsedCondition'), l),
     p = (((r = p || {}).DISCONTINUED = 'http://schema.org/Discontinued'), (r.IN_STOCK = 'http://schema.org/InStock'), (r.IN_STORE_ONLY = 'http://schema.org/InStoreOnly'), (r.LIMITED_AVAILABILITY = 'http://schema.org/LimitedAvailability'), (r.ONLINE_ONLY = 'http://schema.org/OnlineOnly'), (r.OUT_OF_STOCK = 'http://schema.org/OutOfStock'), (r.PREORDER = 'http://schema.org/PreOrder'), (r.PRESALE = 'http://schema.org/PreSale'), (r.SOLD_OUT = 'http://schema.org/SoldOut'), r);
 function g(e) {
-    return d('Offer', e);
+    return c('Offer', e);
 }
 (g.ItemConditions = m), (g.ItemAvailability = p);
 var _ = (((a = _ || {}).YEARLY = 'ANN'), (a.MONTHLY = 'MON'), a);
 function f(e) {
-    return d('QuantitativeValue', e);
+    return c('QuantitativeValue', e);
 }
 f.UnitCodes = _;
 class E extends (i = o.Component) {
@@ -76,30 +76,30 @@ class E extends (i = o.Component) {
         });
     }
 }
-c(E, 'Thing', u),
-    c(E, 'Brand', u),
-    c(E, 'Person', function (e) {
-        return d('Person', e);
+d(E, 'Thing', u),
+    d(E, 'Brand', u),
+    d(E, 'Person', function (e) {
+        return c('Person', e);
     }),
-    c(E, 'Organization', function (e) {
-        return d('Organization', e);
+    d(E, 'Organization', function (e) {
+        return c('Organization', e);
     }),
-    c(E, 'ItemPage', function (e) {
-        return d('ItemPage', e);
+    d(E, 'ItemPage', function (e) {
+        return c('ItemPage', e);
     }),
-    c(E, 'Product', h),
-    c(E, 'Offer', g),
-    c(E, 'Rating', function (e) {
-        return d('Rating', e);
+    d(E, 'Product', h),
+    d(E, 'Offer', g),
+    d(E, 'Rating', function (e) {
+        return c('Rating', e);
     }),
-    c(E, 'AggregateRating', function (e) {
-        return d('AggregateRating', e);
+    d(E, 'AggregateRating', function (e) {
+        return c('AggregateRating', e);
     }),
-    c(E, 'AggregateOffer', function (e) {
-        return d('AggregateOffer', e);
+    d(E, 'AggregateOffer', function (e) {
+        return c('AggregateOffer', e);
     }),
-    c(E, 'QuantitativeValue', f),
-    c(E, 'UnitPriceSpecification', function (e) {
-        return d('UnitPriceSpecification', e);
+    d(E, 'QuantitativeValue', f),
+    d(E, 'UnitPriceSpecification', function (e) {
+        return c('UnitPriceSpecification', e);
     });
 let I = E;

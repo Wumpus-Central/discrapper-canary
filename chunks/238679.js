@@ -9,8 +9,8 @@ var i = n(392711),
     a = n(16609),
     s = n(594174),
     o = n(823379),
-    c = n(5192),
-    d = n(863141),
+    d = n(5192),
+    c = n(863141),
     u = n(186901);
 function h() {
     let e = r.ZP.getCurrentEmbeddedActivity();
@@ -21,9 +21,9 @@ function h() {
         participants: Array.from(e.userIds, (e) => {
             let i = s.default.getUser(e);
             if (null == i) return;
-            let l = (0, c.y)(t, n, i);
+            let l = (0, d.y)(t, n, i);
             return {
-                ...(0, d.Z)(i),
+                ...(0, c.Z)(i),
                 nickname: null != l ? l : void 0
             };
         }).filter(o.lm)

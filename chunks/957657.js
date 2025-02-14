@@ -5,15 +5,15 @@ var i = n(200651),
     a = n(984370),
     s = n(703656),
     o = n(626135),
-    c = n(804739),
-    d = n(981631),
+    d = n(804739),
+    c = n(981631),
     u = n(388032),
     h = n(855154);
-let m = (0, c.Q)() || !1,
+let m = (0, d.Q)() || !1,
     p = l.memo(function (e) {
         let { currentRoute: t, renderToolbar: n } = e,
-            c = l.useContext(o.AnalyticsContext),
-            p = m || t === d.Z5c.APPLICATION_LIBRARY_SETTINGS;
+            d = l.useContext(o.AnalyticsContext),
+            p = m || t === c.Z5c.APPLICATION_LIBRARY_SETTINGS;
         return (0, i.jsxs)(a.Z, {
             className: h.libraryHeader,
             toolbar: null == n ? void 0 : n(),
@@ -32,21 +32,21 @@ let m = (0, c.Q)() || !1,
                             (0, s.uL)(e, {
                                 state: {
                                     analyticsSource: {
-                                        ...c.location,
-                                        section: d.jXE.TABS,
-                                        object: d.qAy.NAVIGATION_LINK
+                                        ...d.location,
+                                        section: c.jXE.TABS,
+                                        object: c.qAy.NAVIGATION_LINK
                                     }
                                 }
                             });
                     },
                     children: [
                         (0, i.jsx)(r.njP.Item, {
-                            id: d.Z5c.APPLICATION_LIBRARY,
+                            id: c.Z5c.APPLICATION_LIBRARY,
                             children: u.intl.string(u.t.p7ARTE)
                         }),
                         p
                             ? (0, i.jsx)(r.njP.Item, {
-                                  id: d.Z5c.APPLICATION_LIBRARY_SETTINGS,
+                                  id: c.Z5c.APPLICATION_LIBRARY_SETTINGS,
                                   children: u.intl.string(u.t['3D5yo6'])
                               })
                             : null

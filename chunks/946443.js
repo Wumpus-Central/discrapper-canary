@@ -20,8 +20,8 @@ var i = n(200651),
     f = n(626135),
     x = n(585483),
     C = n(358085),
-    v = n(143316),
-    E = n(240126),
+    E = n(143316),
+    v = n(240126),
     I = n(791914),
     N = n(147522),
     S = n(809780),
@@ -102,7 +102,7 @@ function j(e) {
                     badgeState: D,
                     closePopout: O
                 }),
-                (0, i.jsx)(E.Z, {
+                (0, i.jsx)(v.Z, {
                     Icon: m.xx7,
                     header: b.intl.string(b.t['6XMM+P']),
                     tip: (null === (R = o().os) || void 0 === R ? void 0 : R.family) === 'OS X' ? b.intl.string(b.t.w9uDOT) : b.intl.string(b.t.BiUJCw)
@@ -119,7 +119,7 @@ function j(e) {
                 setTab: L,
                 badgeState: D,
                 closePopout: O,
-                children: (0, i.jsx)(v.Z, {
+                children: (0, i.jsx)(E.Z, {
                     type: 'top-header',
                     onClick: V
                 })
@@ -191,7 +191,7 @@ function Z(e) {
                 badgeState: n,
                 closePopout: l
             }),
-            (0, i.jsx)(E.Z, {
+            (0, i.jsx)(v.Z, {
                 Icon: m.xx7,
                 disableStars: !0,
                 header: b.intl.string(b.t['KG/ynZ']),

@@ -21,8 +21,8 @@ var i = n(200651),
     f = n(551428),
     x = n(626135),
     C = n(572004),
-    v = n(601911),
-    E = n(504211),
+    E = n(601911),
+    v = n(504211),
     I = n(381961),
     N = n(970321),
     S = n(680005),
@@ -38,7 +38,7 @@ let y = L(function (e) {
                 () => {
                     var e;
                     let n = c.Z.getApplication(t),
-                        i = null != n ? (0, v.y)(n, 45) : void 0,
+                        i = null != n ? (0, E.y)(n, 45) : void 0,
                         l = null === (e = _.Z.getBasicChannel(o.channel_id)) || void 0 === e ? void 0 : e.guild_id;
                     return [n, c.Z.isFetchingApplication(t), c.Z.didFetchingApplicationFail(t), p.Z.getStoreLayout(t), p.Z.getFetchStatus(t), l, i];
                 },
@@ -82,7 +82,7 @@ let y = L(function (e) {
             description: L,
             link: ''.concat(location.protocol, '//').concat(location.host).concat(T.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(m.id, b.GlobalDiscoveryAppsSections.STORE)),
             onLinkCopy: () => {
-                (0, E.X)(t, E.B.STORE_EMBED);
+                (0, v.X)(t, v.B.STORE_EMBED);
             },
             iconSrc: S,
             onIconClick: () => {
@@ -116,7 +116,7 @@ let y = L(function (e) {
                         a = g.Z.get(p),
                         r = null !== (n = null == a ? void 0 : null === (t = a.application) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : null == a ? void 0 : a.applicationId,
                         s = null !== (i = null != r ? c.Z.getApplication(r) : void 0) && void 0 !== i ? i : null == a ? void 0 : a.application,
-                        o = null != s ? (0, v.y)(s, 45) : void 0,
+                        o = null != s ? (0, E.y)(s, 45) : void 0,
                         u = h.Z.getForSKU(p),
                         m = (null == a ? void 0 : a.applicationId) === d;
                     return [m ? a : null, m ? s : null, f.Z.getForSKU(p), g.Z.isFetching(p), g.Z.didFetchingSkuFail(p), u.length > 0 ? u[0] : null, l, o];
@@ -223,7 +223,7 @@ let y = L(function (e) {
             description: z,
             link: ''.concat(location.protocol, '//').concat(location.host).concat(T.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(y.id, b.GlobalDiscoveryAppsSections.STORE)),
             onLinkCopy: () => {
-                (0, E.X)(y.id, E.B.SKU_EMBED, p);
+                (0, v.X)(y.id, v.B.SKU_EMBED, p);
             },
             iconSrc: O,
             onIconClick: () => {

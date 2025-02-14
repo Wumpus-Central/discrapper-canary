@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => v });
 var i = n(200651),
     l = n(192379),
     s = n(120356),
@@ -14,13 +14,13 @@ var i = n(200651),
     p = n(710352),
     x = n(981631),
     f = n(388032),
-    v = n(278565);
-function j(e) {
+    j = n(278565);
+function v(e) {
     let { channel: t } = e,
         s = (0, r.e7)([m.Z], () => m.Z.can(x.Plq.MANAGE_CHANNELS, t), [t]),
         u = t.availableTags.length >= p.pC,
         g = t.availableTags.length > 0,
-        j = l.useCallback(() => {
+        v = l.useCallback(() => {
             let e = t.availableTags.length >= p.pC;
             s &&
                 !e &&
@@ -53,12 +53,12 @@ function j(e) {
         {
             handleDragStart: b,
             handleDragReset: Z,
-            handleDragComplete: S
+            handleDragComplete: T
         } = (0, h.Z)(t.availableTags, (e) => {
             (0, c.pW)({ availableTags: e });
         });
     return (0, i.jsxs)('div', {
-        className: v.tags,
+        className: j.tags,
         children: [
             g
                 ? t.availableTags.map((e) =>
@@ -69,7 +69,7 @@ function j(e) {
                               availableTags: t.availableTags,
                               canManageChannels: s,
                               onTagClick: N,
-                              onDragComplete: S,
+                              onDragComplete: T,
                               onDragReset: Z,
                               onDragStart: b
                           },
@@ -79,8 +79,8 @@ function j(e) {
                 : null,
             g
                 ? (0, i.jsx)(d.P3F, {
-                      onClick: j,
-                      className: a()(v.addTags, { [v.disabled]: !s || u }),
+                      onClick: v,
+                      className: a()(j.addTags, { [j.disabled]: !s || u }),
                       children: (0, i.jsx)(d.qJs, {
                           size: 'custom',
                           'aria-label': f.intl.string(f.t['/jubeH']),
@@ -91,7 +91,7 @@ function j(e) {
                   })
                 : (0, i.jsx)(d.zxk, {
                       disabled: !s,
-                      onClick: j,
+                      onClick: v,
                       children: f.intl.string(f.t['/jubeH'])
                   })
         ]
@@ -114,9 +114,9 @@ function C(e) {
             onDragReset: d
         });
     return (0, i.jsx)('div', {
-        className: a()(v.container, {
-            [v.dropIndicatorBefore]: null != m && c < m,
-            [v.dropIndicatorAfter]: null != m && c > m
+        className: a()(j.container, {
+            [j.dropIndicatorBefore]: null != m && c < m,
+            [j.dropIndicatorAfter]: null != m && c > m
         }),
         ref: (e) => h(p(e)),
         onMouseEnter: () => x(l),

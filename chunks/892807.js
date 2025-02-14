@@ -6,8 +6,8 @@ var i = n(200651),
     a = n(442837),
     s = n(481060),
     d = n(410575),
-    c = n(933557),
-    u = n(471445),
+    u = n(933557),
+    c = n(471445),
     h = n(318374),
     _ = n(46145),
     p = n(814443),
@@ -23,7 +23,7 @@ var i = n(200651),
     Z = n(181435);
 function y(e) {
     let { channel: t, currentVoiceChannel: n } = e,
-        l = (0, u.KS)(t),
+        l = (0, c.KS)(t),
         r = t.id === (null == n ? void 0 : n.id),
         a = r ? s.TVs.colors.TEXT_POSITIVE : s.TVs.colors.INTERACTIVE_NORMAL;
     return (0, i.jsxs)('div', {
@@ -39,12 +39,12 @@ function y(e) {
                 variant: 'text-sm/semibold',
                 className: o()(Z.label, Z.channelName),
                 color: r ? 'text-positive' : 'text-normal',
-                children: (0, c.F6)(t, E.default, v.Z)
+                children: (0, u.F6)(t, E.default, v.Z)
             })
         ]
     });
 }
-function b(e) {
+function O(e) {
     let { channel: t, currentVoiceChannel: n } = e,
         l = t.getGuildId(),
         r = (0, a.e7)([g.Z], () => g.Z.getGuild(l), [l]),
@@ -60,7 +60,7 @@ function b(e) {
               })
           });
 }
-function O(e) {
+function b(e) {
     let { channel: t } = e,
         n = (0, a.Wu)(
             [I.Z, E.default, p.Z],
@@ -95,7 +95,7 @@ function N(e) {
                 return null == e && null == t ? 0 : null == e ? 1 : null == t ? -1 : (null !== (l = null === (n = p.Z.getUserAffinity(t)) || void 0 === n ? void 0 : n.affinity) && void 0 !== l ? l : 0) - (null !== (r = null === (i = p.Z.getUserAffinity(e)) || void 0 === i ? void 0 : i.affinity) && void 0 !== r ? r : 0);
             })
         ),
-        c = (0, a.Wu)(
+        u = (0, a.Wu)(
             [E.default],
             () =>
                 o.reduce((e, t) => {
@@ -104,7 +104,7 @@ function N(e) {
                 }, []),
             [o]
         ),
-        u = (0, a.Wu)(
+        c = (0, a.Wu)(
             [_.Z, I.Z, f.Z, m.Z],
             () => {
                 let e = new Set(
@@ -113,7 +113,7 @@ function N(e) {
                             return null != n && m.Z.can(C.Plq.CONNECT, n) && e.length < 5 && e.push(t), e;
                         }, [])
                     ),
-                    t = c
+                    t = u
                         .map((e) => I.Z.getDiscoverableVoiceStateForUser(e.id))
                         .reduce((t, n) => {
                             let i = null == n ? void 0 : n.channelId;
@@ -123,7 +123,7 @@ function N(e) {
                         }, new Set());
                 return [...Array.from(e), ...t].map((e) => f.Z.getChannel(e)).filter(x.lm);
             },
-            [c]
+            [u]
         ),
         h = l.useCallback(
             (e) => {
@@ -139,7 +139,7 @@ function N(e) {
             onClose: n,
             'aria-label': S.intl.string(S.t['+9QSnp']),
             children: (0, i.jsx)(s.kSQ, {
-                children: u.map((e) =>
+                children: c.map((e) =>
                     (0, i.jsx)(
                         s.sNh,
                         {
@@ -148,13 +148,13 @@ function N(e) {
                                 channel: e,
                                 currentVoiceChannel: t
                             }),
-                            subtext: (0, i.jsx)(b, {
+                            subtext: (0, i.jsx)(O, {
                                 channel: e,
                                 currentVoiceChannel: t
                             }),
                             icon: (0, i.jsx)('div', {
                                 className: Z.icon,
-                                children: (0, i.jsx)(O, {
+                                children: (0, i.jsx)(b, {
                                     channel: e,
                                     currentVoiceChannel: t
                                 })

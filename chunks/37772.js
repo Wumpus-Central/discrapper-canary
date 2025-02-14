@@ -16,8 +16,8 @@ var i = n(200651),
     f = n(699516),
     x = n(709054),
     C = n(786761),
-    v = n(493892),
-    E = n(901461),
+    E = n(493892),
+    v = n(901461),
     I = n(739566),
     N = n(443877),
     S = n(492593),
@@ -74,7 +74,7 @@ let w = l.memo(function e(t) {
               channel: W,
               hasThread: !1
           })
-        : (f.Z.isBlockedForMessage(o) ? (l = M.t['+FcYMz']) : f.Z.isIgnoredForMessage(o) ? (l = M.t.VFWjc3) : (0, v.DQ)(o) && H && (l = M.t.xfkfTE), void 0 !== l)
+        : (f.Z.isBlockedForMessage(o) ? (l = M.t['+FcYMz']) : f.Z.isIgnoredForMessage(o) ? (l = M.t.VFWjc3) : (0, E.DQ)(o) && H && (l = M.t.xfkfTE), void 0 !== l)
           ? (0, i.jsx)(F, {
                 className: O,
                 compact: P,
@@ -125,7 +125,7 @@ let w = l.memo(function e(t) {
                 onClick: U,
                 hasThread: !1 !== G && null != ei && o.hasFlag(k.iLy.HAS_THREAD),
                 hasReply: o.type === k.uaV.REPLY,
-                isSystemMessage: (0, E.Z)(o),
+                isSystemMessage: (0, v.Z)(o),
                 messageRef: er
             });
 });

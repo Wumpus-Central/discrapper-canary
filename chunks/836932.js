@@ -11,8 +11,8 @@ function c(e, t, n, c, u) {
     let h = t.activity.type,
         p = u.session_id;
     if (null == p) return null;
-    let { icon: g, title: f, body: m } = (0, a.Xi)(e, t, n),
-        { trackView: _, trackClick: v } = (0, r.R)(o.n0.ActivityInvite, {
+    let { icon: g, title: m, body: f } = (0, a.Xi)(e, t, n),
+        { trackView: v, trackClick: Z } = (0, r.R)(o.n0.ActivityInvite, {
             notif_type: o.n0.ActivityInvite,
             notif_user_id: n.id,
             message_id: t.id,
@@ -25,11 +25,11 @@ function c(e, t, n, c, u) {
         });
     return {
         icon: g,
-        title: f,
-        body: m,
+        title: m,
+        body: f,
         hint: (e) => (0, l.QR)(e, (0, r.P)(), d.t.aB5xLy),
         onNotificationShow: () => {
-            _();
+            v();
         },
         confirmText: d.intl.string(d.t.VJlc0d),
         onConfirmClick: (l, a) => {
@@ -41,10 +41,10 @@ function c(e, t, n, c, u) {
                 messageId: t.id
             }),
                 s.Z.updateNotificationStatus(a),
-                v('join');
+                Z('join');
         },
         onDismissClick: () => {
-            v('dismiss');
+            Z('dismiss');
         }
     };
 }

@@ -6,19 +6,19 @@ var l = n(704215),
     a = n(570140),
     s = n(317770),
     o = n(605236),
-    c = n(650774),
-    d = n(430824),
+    d = n(650774),
+    c = n(430824),
     u = n(496675),
     h = n(228392),
     m = n(981631),
     p = n(921944);
 let g = (e) => {
     var t;
-    let n = d.Z.getGuild(e),
+    let n = c.Z.getGuild(e),
         i = !!(null == n ? void 0 : n.hasFeature(m.oNc.COMMUNITY)),
         r = u.Z.can(m.Plq.MANAGE_CHANNELS, n),
         a = (0, o.un)(l.z.FORUM_CHANNEL_UPSELL_MODAL),
-        s = null !== (t = c.Z.getMemberCount(e)) && void 0 !== t ? t : 0;
+        s = null !== (t = d.Z.getMemberCount(e)) && void 0 !== t ? t : 0;
     return i && r && !a && s >= 200;
 };
 class _ extends s.Z {

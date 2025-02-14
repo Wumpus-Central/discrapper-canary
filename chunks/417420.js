@@ -2,20 +2,20 @@ n.d(t, { Z: () => u });
 var i = n(200651);
 n(192379);
 var s = n(481060),
-    l = n(921801),
-    r = n(626135),
+    r = n(921801),
+    l = n(626135),
     a = n(695346),
     o = n(726985),
     c = n(981631),
     d = n(388032);
 function u() {
     let e = a.qF.useSetting();
-    return (0, i.jsx)(l.F, {
+    return (0, i.jsx)(r.F, {
         setting: o.s6.VOICE_AND_VIDEO_VIDEO_CAMERA_PREVIEW,
         children: (0, i.jsx)(s.j7V, {
             note: d.intl.string(d.t.WNbX4O),
             onChange: (e) => {
-                a.qF.updateSetting(e), r.default.track(c.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: e });
+                a.qF.updateSetting(e), l.default.track(c.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: e });
             },
             value: e,
             hideBorder: !0,

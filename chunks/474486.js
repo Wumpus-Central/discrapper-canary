@@ -9,8 +9,8 @@ var i = n(200651),
     a = n(481060),
     s = n(605236),
     o = n(765585),
-    c = n(703656),
-    d = n(119269),
+    d = n(703656),
+    c = n(119269),
     u = n(938736),
     h = n(227140),
     m = n(981631),
@@ -59,14 +59,14 @@ let f = 'url(#dark-purple-gradient)',
                     contentClassName: _.incentiveCoachtipContainer,
                     pointerClassName: _.incentiveTooltipPointer,
                     onTryFeature: () => {
-                        (0, c.uL)(m.Z5c.NITRO_HOME), C();
+                        (0, d.uL)(m.Z5c.NITRO_HOME), C();
                     },
                     art: (0, i.jsx)(i.Fragment, {
-                        children: (0, i.jsx)(d.ZP, {
+                        children: (0, i.jsx)(c.ZP, {
                             staticPercentage: 100,
                             iconClassName: _.incentiveIcon,
                             showAnimations: !1,
-                            progressCircleVariation: d.Qo.NITRO_LOGO,
+                            progressCircleVariation: c.Qo.NITRO_LOGO,
                             ellipseOpacity: 1,
                             circleColor: f,
                             circleStroke: f,
@@ -92,11 +92,11 @@ let f = 'url(#dark-purple-gradient)',
                 children: [
                     (0, i.jsx)('div', {
                         className: _.iconContainer,
-                        children: (0, i.jsx)(d.ZP, {
+                        children: (0, i.jsx)(c.ZP, {
                             staticPercentage: 100,
                             iconClassName: _.icon,
                             showAnimations: !0,
-                            progressCircleVariation: d.Qo.NITRO_LOGO,
+                            progressCircleVariation: c.Qo.NITRO_LOGO,
                             ellipseOpacity: 1,
                             customAnimationClassName: _.customCircleAnimation,
                             circleColor: 'url(#purple-gradient)'

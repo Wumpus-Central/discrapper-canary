@@ -5,23 +5,23 @@ var i = n(243814),
     a = n(13140),
     s = n(996106),
     o = n(452426),
-    c = n(186901),
-    d = n(981631),
+    d = n(186901),
+    c = n(981631),
     u = n(65154);
 function h(e) {
     let t = e.application.id;
-    if (null == t) throw new s.Z({ errorCode: d.lTL.INVALID_COMMAND }, 'No application.');
+    if (null == t) throw new s.Z({ errorCode: c.lTL.INVALID_COMMAND }, 'No application.');
     return t;
 }
 let m = {
-    [d.Etm.SET_VOICE_SETTINGS_2]: {
-        scope: c.lH,
+    [c.Etm.SET_VOICE_SETTINGS_2]: {
+        scope: d.lH,
         validation: (e) =>
             (0, o.Z)(e)
                 .required()
                 .keys({
                     input_mode: (0, o.Z)(e).keys({
-                        type: e.string().valid(Object.keys(d.pM4)),
+                        type: e.string().valid(Object.keys(c.pM4)),
                         shortcut: e.string().required()
                     }),
                     self_mute: e.boolean(),
@@ -36,8 +36,8 @@ let m = {
             null != n && l.Z.setMode(n.type, { shortcut: (0, a.Kd)(n.shortcut) }, o), null != i && i !== r.Z.isSelfMute(o) && l.Z.toggleSelfMute({ context: o }), null != s && s !== r.Z.isSelfDeaf(o) && l.Z.toggleSelfDeaf({ context: o });
         }
     },
-    [d.Etm.SET_USER_VOICE_SETTINGS_2]: {
-        scope: c.lH,
+    [c.Etm.SET_USER_VOICE_SETTINGS_2]: {
+        scope: d.lH,
         validation: (e) =>
             (0, o.Z)(e)
                 .required()
@@ -55,16 +55,16 @@ let m = {
             null != i && i !== r.Z.isLocalMute(n, s) && l.Z.toggleLocalMute(n, s), null != a && l.Z.setLocalVolume(n, a, s);
         }
     },
-    [d.Etm.PUSH_TO_TALK]: {
+    [c.Etm.PUSH_TO_TALK]: {
         scope: {
-            [c.Gp.ALL]: [i.x.RPC, i.x.RPC_VOICE_WRITE]
+            [d.Gp.ALL]: [i.x.RPC, i.x.RPC_VOICE_WRITE]
         },
         validation: (e) => (0, o.Z)(e).required().keys({ active: e.boolean() }),
         handler(e) {
             let {
                 args: { active: t }
             } = e;
-            r.Z.getMode(u.Yn.DEFAULT) === d.pM4.PUSH_TO_TALK && r.Z.getMediaEngine().eachConnection((e) => e.setForceAudioInput(t), u.Yn.DEFAULT);
+            r.Z.getMode(u.Yn.DEFAULT) === c.pM4.PUSH_TO_TALK && r.Z.getMediaEngine().eachConnection((e) => e.setForceAudioInput(t), u.Yn.DEFAULT);
         }
     }
 };

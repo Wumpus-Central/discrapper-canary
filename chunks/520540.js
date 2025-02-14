@@ -1,11 +1,11 @@
-t.d(n, {
+n.d(t, {
     g: () => l,
-    p: () => s
+    p: () => r
 });
 var i,
-    r = t(818083),
-    s = (((i = {})[(i.VARIANT_1 = 0)] = 'VARIANT_1'), (i[(i.VARIANT_2 = 1)] = 'VARIANT_2'), i);
-let l = (0, r.B)({
+    s = n(818083),
+    r = (((i = {})[(i.VARIANT_1 = 0)] = 'VARIANT_1'), (i[(i.VARIANT_2 = 1)] = 'VARIANT_2'), i);
+let l = (0, s.B)({
     kind: 'user',
     id: '2024-03_referral_program_sender',
     label: 'Referral Program Sender Experience',

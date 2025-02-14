@@ -1,44 +1,44 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => x });
 var i = n(200651);
 n(192379);
-var r = n(120356),
-    a = n.n(r),
-    s = n(468194),
-    l = n(399606),
+var s = n(120356),
+    r = n.n(s),
+    l = n(468194),
+    a = n(399606),
     o = n(481060),
     c = n(372769),
     d = n(914788),
     u = n(981631),
     m = n(388032),
-    g = n(791273);
-let _ = [18, 18, 16, 16, 14, 12, 10],
-    p = (e) => {
+    h = n(791273);
+let g = [18, 18, 16, 16, 14, 12, 10],
+    x = (e) => {
         let { guildId: t } = e,
-            n = (0, l.e7)([d.Z], () => d.Z.getGuild(t));
+            n = (0, a.e7)([d.Z], () => d.Z.getGuild(t));
         if (void 0 === n) return null;
-        let r = n.hasFeature(u.oNc.VERIFIED) || n.hasFeature(u.oNc.PARTNERED),
-            p = n.toString(),
-            f = n.getIconURL(40, !0),
-            h = null,
-            x = _[_.length - 1];
-        if (null == n.icon && null != p) {
-            var E;
-            x = null !== (E = _[(h = (0, s.Zg)(p)).length - 1]) && void 0 !== E ? E : _[_.length - 1];
+        let s = n.hasFeature(u.oNc.VERIFIED) || n.hasFeature(u.oNc.PARTNERED),
+            x = n.toString(),
+            _ = n.getIconURL(40, !0),
+            p = null,
+            E = g[g.length - 1];
+        if (null == n.icon && null != x) {
+            var C;
+            E = null !== (C = g[(p = (0, l.Zg)(x)).length - 1]) && void 0 !== C ? C : g[g.length - 1];
         }
         return (0, i.jsxs)('div', {
-            className: g.container,
+            className: h.container,
             children: [
                 (0, i.jsxs)('div', {
-                    style: { fontSize: x },
+                    style: { fontSize: E },
                     children: [
-                        null != h
+                        null != p
                             ? (0, i.jsx)('div', {
-                                  className: a()(g.childWrapper, g.acronym),
+                                  className: r()(h.childWrapper, h.acronym),
                                   'aria-hidden': !0,
-                                  children: h
+                                  children: p
                               })
                             : null,
-                        null != f
+                        null != _
                             ? (0, i.jsx)(o.qEK, {
                                   src: n.getIconURL(40, !0),
                                   size: o.EFr.SIZE_40,
@@ -48,17 +48,17 @@ let _ = [18, 18, 16, 16, 14, 12, 10],
                     ]
                 }),
                 (0, i.jsxs)('div', {
-                    className: g.descriptors,
+                    className: h.descriptors,
                     children: [
                         (0, i.jsxs)('div', {
-                            className: g.header,
+                            className: h.header,
                             children: [
-                                r
+                                s
                                     ? (0, i.jsx)(c.Z, {
                                           guild: n,
                                           tooltipPosition: 'bottom',
                                           tooltipColor: o.ua7.Colors.PRIMARY,
-                                          className: g.guildBadge
+                                          className: h.guildBadge
                                       })
                                     : null,
                                 (0, i.jsx)(o.Text, {

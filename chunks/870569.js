@@ -3,8 +3,8 @@ var i = n(200651);
 n(192379);
 var l = n(120356),
     r = n.n(l),
-    o = n(481060),
-    a = n(686546),
+    a = n(481060),
+    o = n(686546),
     s = n(29557);
 function c(e) {
     let { tooltipText: t, children: n, onContextMenu: l, onClick: c, disabled: d, icon: u, iconForeground: h, innerClassName: p, className: m, tooltipClassName: g, onMouseEnter: f, onMouseLeave: _, 'aria-label': v, 'aria-checked': C, role: x, tooltipColor: I, tooltipForceOpen: Z, tooltipContentClassName: b } = e,
@@ -18,7 +18,7 @@ function c(e) {
                       color: 'currentColor'
                   })
                 : u;
-    return (0, i.jsx)(o.ua7, {
+    return (0, i.jsx)(a.ua7, {
         tooltipClassName: g,
         text: t,
         'aria-label': v,
@@ -27,10 +27,10 @@ function c(e) {
         forceOpen: Z,
         children: (e) => {
             let { onClick: t, onMouseEnter: u, onMouseLeave: h, ...g } = e;
-            return (0, i.jsxs)(o.zxk, {
+            return (0, i.jsxs)(a.zxk, {
                 ...g,
-                look: o.zxk.Looks.BLANK,
-                size: o.zxk.Sizes.NONE,
+                look: a.zxk.Looks.BLANK,
+                size: a.zxk.Sizes.NONE,
                 disabled: d,
                 innerClassName: p,
                 wrapperClassName: r()(s.button, m),
@@ -52,10 +52,10 @@ function c(e) {
                 'aria-checked': C,
                 children: [
                     null != n
-                        ? (0, i.jsx)(a.ZP, {
+                        ? (0, i.jsx)(o.ZP, {
                               width: 20,
                               height: 20,
-                              mask: a.ZP.Masks.PANEL_BUTTON,
+                              mask: o.ZP.Masks.PANEL_BUTTON,
                               children: S
                           })
                         : S,

@@ -1,11 +1,11 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => r });
 var i = n(200651);
 n(192379);
-var r = n(325767);
-function a(e) {
-    let { width: t = 80, height: n = 20, color: a = 'currentColor', foreground: s, ...l } = e;
+var s = n(325767);
+function r(e) {
+    let { width: t = 80, height: n = 20, color: r = 'currentColor', foreground: l, ...a } = e;
     return (0, i.jsxs)('svg', {
-        ...(0, r.Z)(l),
+        ...(0, s.Z)(a),
         width: t,
         height: n,
         viewBox: '0 0 '.concat(t, ' ').concat(n),
@@ -17,8 +17,8 @@ function a(e) {
                 children: (0, i.jsx)('path', {
                     d: 'm0 0h8v20h-8zm4 2c-1.1045695 0-2 .8954305-2 2v12c0 1.1045695.8954305 2 2 2s2-.8954305 2-2v-12c0-1.1045695-.8954305-2-2-2z',
                     fillRule: 'evenodd',
-                    fill: a,
-                    className: s
+                    fill: r,
+                    className: l
                 })
             }),
             (0, i.jsx)('rect', {

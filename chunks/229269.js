@@ -1,22 +1,22 @@
 n.d(t, { f: () => C }), n(47120);
 var i = n(200651),
     s = n(192379),
-    l = n(734530),
-    r = n(120356),
-    a = n.n(r),
+    r = n(734530),
+    l = n(120356),
+    a = n.n(l),
     o = n(481060),
     c = n(801937),
     d = n(502109),
     u = n(241209),
-    h = n(563132),
-    m = n(586585),
+    m = n(563132),
+    h = n(586585),
     g = n(439021),
     x = n(450272),
     _ = n(388032),
     p = n(50734),
     E = n(174913);
 function C() {
-    return (0, i.jsx)(h.PaymentContextProvider, {
+    return (0, i.jsx)(m.PaymentContextProvider, {
         stepConfigs: [],
         skuIDs: [],
         activeSubscription: null,
@@ -28,14 +28,14 @@ function C() {
                     className: p.labelSpacing,
                     children: 'Payment-method-specific components and views may not appear for you unless your browser is supported for that payment method and they have been configured on your browser.'
                 }),
-                (0, i.jsx)(N, {}),
-                (0, i.jsx)(j, {}),
-                (0, i.jsx)(P, {})
+                (0, i.jsx)(f, {}),
+                (0, i.jsx)(b, {}),
+                (0, i.jsx)(D, {})
             ]
         })
     });
 }
-function N() {
+function f() {
     return (0, i.jsxs)(x.$0, {
         children: [
             (0, i.jsx)(o.X6q, {
@@ -44,18 +44,18 @@ function N() {
             }),
             (0, i.jsx)(x.E_, {
                 label: 'Google Pay - Default View',
-                children: (0, i.jsx)(f, { paymentRequestWallet: 'googlePay' })
+                children: (0, i.jsx)(T, { paymentRequestWallet: 'googlePay' })
             }),
             (0, i.jsx)(x.E_, {
                 label: 'Google Pay - Connector View',
-                children: (0, i.jsx)(f, {
+                children: (0, i.jsx)(T, {
                     paymentRequestWallet: 'googlePay',
                     renderConnectorView: !0
                 })
             }),
             (0, i.jsx)(x.E_, {
                 label: 'Google Pay - Add Payment Step Body Connector View',
-                children: (0, i.jsx)(T, { paymentRequestWallet: 'googlePay' })
+                children: (0, i.jsx)(S, { paymentRequestWallet: 'googlePay' })
             }),
             (0, i.jsx)(o.X6q, {
                 variant: 'heading-xl/semibold',
@@ -63,23 +63,23 @@ function N() {
             }),
             (0, i.jsx)(x.E_, {
                 label: 'Apple Pay - Default View',
-                children: (0, i.jsx)(f, { paymentRequestWallet: 'applePay' })
+                children: (0, i.jsx)(T, { paymentRequestWallet: 'applePay' })
             }),
             (0, i.jsx)(x.E_, {
                 label: 'Apple Pay - Connector View',
-                children: (0, i.jsx)(f, {
+                children: (0, i.jsx)(T, {
                     renderConnectorView: !0,
                     paymentRequestWallet: 'applePay'
                 })
             }),
             (0, i.jsx)(x.E_, {
                 label: 'Apple Pay - Add Payment Step Body Connector View',
-                children: (0, i.jsx)(T, { paymentRequestWallet: 'applePay' })
+                children: (0, i.jsx)(S, { paymentRequestWallet: 'applePay' })
             })
         ]
     });
 }
-function f(e) {
+function T(e) {
     let t = s.useRef(null),
         n = {
             paymentLabel: _.intl.string(_.t.ZURqX1),
@@ -109,7 +109,7 @@ function f(e) {
                 ...e
             });
 }
-function I(e) {
+function N(e) {
     let { children: t, footer: n, className: s } = e;
     return (0, i.jsx)('div', {
         className: a()(E.root, E.focusLock, E.small, E.rootWithShadow, p.modal, s),
@@ -129,33 +129,33 @@ function I(e) {
         })
     });
 }
-function T(e) {
+function S(e) {
     let { paymentRequestWallet: t } = e,
         n = s.useRef(null),
-        [l, r] = s.useState(!1),
+        [r, l] = s.useState(!1),
         a = () => {
             null != n.current && n.current.show();
         };
-    return (0, i.jsx)(I, {
-        footer: (0, i.jsx)(m.Z, {
-            primaryCTA: m.Z.CTAType.CONTINUE,
+    return (0, i.jsx)(N, {
+        footer: (0, i.jsx)(h.Z, {
+            primaryCTA: h.Z.CTAType.CONTINUE,
             primaryText: _.intl.string('applePay' === t ? _.t.WoXvJC : _.t.wnVVr6),
-            primaryDisabled: !l,
+            primaryDisabled: !r,
             onPrimary: () => a(),
             onBack: () => {}
         }),
-        children: (0, i.jsx)(f, {
+        children: (0, i.jsx)(T, {
             renderConnectorView: !0,
             renderStepBody: !0,
             paymentRequestWallet: t,
             paymentRequestRef: n,
-            onValidPaymentRequest: () => r(!0)
+            onValidPaymentRequest: () => l(!0)
         })
     });
 }
-function S(e) {
+function I(e) {
     let { children: t } = e;
-    return (0, i.jsx)(I, {
+    return (0, i.jsx)(N, {
         className: p.choosePaymentTypeModal,
         children: (0, i.jsx)('div', {
             className: p.choosePaymentTypeContainer,
@@ -163,7 +163,7 @@ function S(e) {
         })
     });
 }
-function j() {
+function b() {
     let e = {
         onChooseType: () => {},
         onStripePaymentMethodReceived: (e) => {
@@ -179,7 +179,7 @@ function j() {
             }),
             (0, i.jsx)(x.E_, {
                 label: 'All Payment Request Wallets Enabled',
-                children: (0, i.jsx)(S, {
+                children: (0, i.jsx)(I, {
                     children: (0, i.jsx)(c.ZP, {
                         ...e,
                         onChooseType: () => {},
@@ -189,7 +189,7 @@ function j() {
             }),
             (0, i.jsx)(x.E_, {
                 label: 'No Payment Wallets Enabled',
-                children: (0, i.jsx)(S, {
+                children: (0, i.jsx)(I, {
                     children: (0, i.jsx)(c.ZP, {
                         ...e,
                         onChooseType: () => {},
@@ -199,7 +199,7 @@ function j() {
             }),
             (0, i.jsx)(x.E_, {
                 label: 'Is Eligible for Trial',
-                children: (0, i.jsx)(S, {
+                children: (0, i.jsx)(I, {
                     children: (0, i.jsx)(c.ZP, {
                         ...e,
                         isEligibleForTrial: !0,
@@ -218,7 +218,7 @@ let v = {
         APPLE_AND_GPAY_DISABLED: 'Express Checkout Element - Google Pay and Apple Pay Disabled',
         CONFIGURABLE: 'Express Checkout Element - Configurable'
     },
-    b = {
+    j = {
         GPAY_FILTERED: {
             wallets: {
                 googlePay: 'always',
@@ -259,17 +259,17 @@ let v = {
         buttonHeight: 40
     },
     R = (e) => (void 0 !== e ? JSON.stringify(e, null, 2) : 'undefined');
-function D() {
+function P() {
     let [e, t] = s.useState(R(A)),
-        [n, r] = s.useState(A),
+        [n, l] = s.useState(A),
         [a, c] = s.useState(R(O)),
-        [d, h] = s.useState(O),
-        [m, g] = s.useState(null),
+        [d, m] = s.useState(O),
+        [h, g] = s.useState(null),
         [_, E] = s.useState(
             (0, i.jsx)(x.DS, {
                 errorLabel: v.CONFIGURABLE,
                 elementOptions: A,
-                children: (0, i.jsx)(l.ExpressCheckoutElement, {
+                children: (0, i.jsx)(r.ExpressCheckoutElement, {
                     onConfirm: (e) => {
                         console.log('ExpressCheckoutElement onConfirm event: ', e);
                     },
@@ -308,11 +308,11 @@ function D() {
                 value: a,
                 onChange: c
             }),
-            null != m &&
+            null != h &&
                 (0, i.jsx)(o.Text, {
                     variant: 'text-md/normal',
                     color: 'text-danger',
-                    children: m
+                    children: h
                 }),
             (0, i.jsx)(o.zxk, {
                 className: p.applyChangesButton,
@@ -335,7 +335,7 @@ function D() {
                                         (0, i.jsx)(x.DS, {
                                             errorLabel: v.CONFIGURABLE,
                                             elementOptions: t,
-                                            children: (0, i.jsx)(l.ExpressCheckoutElement, {
+                                            children: (0, i.jsx)(r.ExpressCheckoutElement, {
                                                 onConfirm: (e) => {
                                                     console.log('ExpressCheckoutElement onConfirm event: ', e);
                                                 },
@@ -345,8 +345,8 @@ function D() {
                                     ]
                                 })
                             ),
-                            r(t),
-                            h(n),
+                            l(t),
+                            m(n),
                             g(null);
                     } catch (e) {
                         console.error('ConfigurableStripeExpressCheckoutElement - error parsing JSON: ', e), g('Error parsing JSON. Check console for more information.');
@@ -376,7 +376,7 @@ function D() {
         ]
     });
 }
-function P() {
+function D() {
     return (0, i.jsxs)(x.$0, {
         children: [
             (0, i.jsx)(o.X6q, {
@@ -388,7 +388,7 @@ function P() {
                 children: (0, i.jsx)('div', {
                     children: (0, i.jsx)(x.DS, {
                         errorLabel: v.DEFAULT,
-                        children: (0, i.jsx)(l.ExpressCheckoutElement, {
+                        children: (0, i.jsx)(r.ExpressCheckoutElement, {
                             onConfirm: (e) => {
                                 console.log('ExpressCheckoutElement onConfirm event: ', e);
                             },
@@ -412,15 +412,15 @@ function P() {
                                 }),
                                 (0, i.jsx)(u.Z, {
                                     className: p.markdown,
-                                    children: ''.concat('``').concat(R(b[e]), ' ').concat('``')
+                                    children: ''.concat('``').concat(R(j[e]), ' ').concat('``')
                                 }),
                                 (0, i.jsx)(x.DS, {
                                     errorLabel: t,
-                                    children: (0, i.jsx)(l.ExpressCheckoutElement, {
+                                    children: (0, i.jsx)(r.ExpressCheckoutElement, {
                                         onConfirm: (e) => {
                                             console.log('ExpressCheckoutElement onConfirm event: ', e);
                                         },
-                                        options: b[e]
+                                        options: j[e]
                                     })
                                 })
                             ]
@@ -431,7 +431,7 @@ function P() {
             }),
             (0, i.jsx)(x.E_, {
                 label: v.CONFIGURABLE,
-                children: (0, i.jsx)(D, {})
+                children: (0, i.jsx)(P, {})
             })
         ]
     });

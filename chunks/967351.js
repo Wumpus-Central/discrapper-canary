@@ -5,8 +5,8 @@ var i = n(413135),
     a = n.n(r),
     s = n(710845),
     o = n(998502),
-    c = n(901077),
-    d = n(76238),
+    d = n(901077),
+    c = n(76238),
     u = n(852926),
     h = n(981631);
 let m = o.ZP.requireModule('discord_rpc').RPCIPC,
@@ -100,9 +100,9 @@ function C(e) {
     }
     C(e);
 }
-class N extends d.Z {
+class N extends c.Z {
     send(e) {
-        p.info('Socket Emit: '.concat(this.id), (0, c.Z)(e)), this.socket.write(I(g.FRAME, e));
+        p.info('Socket Emit: '.concat(this.id), (0, d.Z)(e)), this.socket.write(I(g.FRAME, e));
     }
     close(e, t) {
         this.socket.end(
@@ -169,7 +169,7 @@ class v extends l.EventEmitter {
                     (0, u.em)(n, null, i)
                         .then(() => {
                             e.on('request', (e) => {
-                                p.info('Socket Message: '.concat(n.id), (0, c.Z)(e)), this.emit('request', n, e);
+                                p.info('Socket Message: '.concat(n.id), (0, d.Z)(e)), this.emit('request', n, e);
                             }),
                                 this.emit('connect', n);
                         })

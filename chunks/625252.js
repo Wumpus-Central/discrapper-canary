@@ -1,40 +1,40 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => T });
 var i = n(200651),
     s = n(192379),
-    l = n(120356),
-    r = n.n(l),
+    r = n(120356),
+    l = n.n(r),
     a = n(704215),
     o = n(780384),
     c = n(481060),
     d = n(37234),
     u = n(410030),
-    h = n(605236),
-    m = n(626135),
+    m = n(605236),
+    h = n(626135),
     g = n(617136),
     x = n(497505),
     _ = n(341907),
     p = n(981631),
     E = n(388032),
     C = n(999426),
-    N = n(66094);
-function f() {
+    f = n(66094);
+function T() {
     let e = (0, o.wj)((0, u.ZP)()),
         t = s.useMemo(() => ({ backgroundImage: 'url('.concat('https://cdn.discordapp.com/assets/discovery/quests-wumpus-hikes-mountain-transparent-background.png', ')') }), []),
         n = s.useCallback(() => {
             (0, d.xf)(),
                 (0, _.navigateToQuestHome)({ fromContent: x.jn.QUEST_HOME_MOVE_CALLOUT }),
-                m.default.track(p.rMx.QUEST_CONTENT_CLICKED, {
+                h.default.track(p.rMx.QUEST_CONTENT_CLICKED, {
                     cta_name: g.jZ.VIEW_QUESTS,
                     ...(0, g.mH)(x.jn.QUEST_HOME_MOVE_CALLOUT)
                 });
         }, []);
     return (
         s.useCallback(() => {
-            (0, h.EW)(a.z.GIFT_INVENTORY_QUESTS_MOVED_TO_QUEST_HOME);
+            (0, m.EW)(a.z.GIFT_INVENTORY_QUESTS_MOVED_TO_QUEST_HOME);
         }, []),
-        (0, h.un)(a.z.GIFT_INVENTORY_QUESTS_MOVED_TO_QUEST_HOME),
+        (0, m.un)(a.z.GIFT_INVENTORY_QUESTS_MOVED_TO_QUEST_HOME),
         (0, i.jsxs)('div', {
-            className: r()(C.container),
+            className: l()(C.container),
             style: t,
             children: [
                 !1,
@@ -46,7 +46,7 @@ function f() {
                             children: [
                                 (0, i.jsx)('img', {
                                     alt: '',
-                                    src: N,
+                                    src: f,
                                     className: C.icon
                                 }),
                                 (0, i.jsx)(c.X6q, {

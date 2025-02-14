@@ -6,8 +6,8 @@ var l = n(399606),
     a = n(70097),
     s = n(970731),
     o = n(19199),
-    c = n(921944),
-    d = n(388032),
+    d = n(921944),
+    c = n(388032),
     u = n(718458);
 let h = (e) => {
     let { markAsDismissed: t } = e,
@@ -21,12 +21,12 @@ let h = (e) => {
                   autoPlay: !n,
                   width: '100%'
               }),
-              header: d.intl.string(d.t.ajEMl5),
-              content: d.intl.string(d.t.xmrJWl),
-              buttonCTA: d.intl.string(d.t['NX+WJC']),
+              header: c.intl.string(c.t.ajEMl5),
+              content: c.intl.string(c.t.xmrJWl),
+              buttonCTA: c.intl.string(c.t['NX+WJC']),
               className: u.__invalid_coachmark,
               onClick: (e) => {
-                  e.stopPropagation(), t(c.L.UNKNOWN);
+                  e.stopPropagation(), t(d.L.UNKNOWN);
               },
               markAsDismissed: t,
               caretPosition: s.DF.BOTTOM_CENTER,

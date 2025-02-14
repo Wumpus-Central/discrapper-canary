@@ -16,8 +16,8 @@ var i = n(200651),
     f = n(620662),
     x = n(994339),
     C = n(503438),
-    v = n(981631),
-    E = n(616922),
+    E = n(981631),
+    v = n(616922),
     I = n(388032),
     N = n(290215);
 function S(e, t, n) {
@@ -78,7 +78,7 @@ class b extends l.PureComponent {
         return null == e || null == e.party || null == e.party.size || e.party.size.length < 2 ? [-1, -1] : e.party.size;
     }
     getActionableMode() {
-        return [v.mFx.LISTEN, v.mFx].includes(this.props.activityActionType) || this.props.isPreview || this.canJoin() ? 'Actionable' : 'NotActionable';
+        return [E.mFx.LISTEN, E.mFx].includes(this.props.activityActionType) || this.props.isPreview || this.canJoin() ? 'Actionable' : 'NotActionable';
     }
     isInParty() {
         let { activity: e, myPartyId: t, isPreview: n } = this.props;
@@ -96,34 +96,34 @@ class b extends l.PureComponent {
         return this.props.activityActionType === e;
     }
     isEmbeddedActivityApplication() {
-        return (0, f.Z)(this.props.activity, v.xjy.EMBEDDED);
+        return (0, f.Z)(this.props.activity, E.xjy.EMBEDDED);
     }
     canJoin() {
         let { activity: e, isPreview: t, isGameLaunchable: n, isInBrowser: i } = this.props;
-        return !!t || (!(this.isDeadInvite() || !this.isActionType(v.mFx.JOIN) || !(0, f.Z)(e, v.xjy.JOIN) || !this.hasPartySize() || this.isPartyFull() || this.isInParty()) && (!!this.isEmbeddedActivityApplication() || (!i && !!n)));
+        return !!t || (!(this.isDeadInvite() || !this.isActionType(E.mFx.JOIN) || !(0, f.Z)(e, E.xjy.JOIN) || !this.hasPartySize() || this.isPartyFull() || this.isInParty()) && (!!this.isEmbeddedActivityApplication() || (!i && !!n)));
     }
     canSendInvite() {
         let { activity: e, isPreview: t } = this.props;
-        return !!t || !(this.isDeadInvite() || !this.isActionType(v.mFx.JOIN_REQUEST) || !(0, f.Z)(e, v.xjy.JOIN) || !this.hasPartySize() || this.isPartyFull());
+        return !!t || !(this.isDeadInvite() || !this.isActionType(E.mFx.JOIN_REQUEST) || !(0, f.Z)(e, E.xjy.JOIN) || !this.hasPartySize() || this.isPartyFull());
     }
     canSync() {
         let { activity: e, isPreview: t, isSyncable: n, isInBrowser: i } = this.props;
-        return !!t || !((!this.isActionType(v.mFx.LISTEN) && !this.isActionType(v.mFx.WATCH)) || this.isDeadInvite() || !(0, f.Z)(e, v.xjy.SYNC) || i || !n || this.isInParty());
+        return !!t || !((!this.isActionType(E.mFx.LISTEN) && !this.isActionType(E.mFx.WATCH)) || this.isDeadInvite() || !(0, f.Z)(e, E.xjy.SYNC) || i || !n || this.isInParty());
     }
     getHelpdeskArticleURL() {
         let { partyId: e } = this.props;
-        return null != e && (0, E.Ps)(e) ? v.BhN.SPOTIFY_CONNECTION : v.BhN.RICH_PRESENCE_INTRODUCTION;
+        return null != e && (0, v.Ps)(e) ? E.BhN.SPOTIFY_CONNECTION : E.BhN.RICH_PRESENCE_INTRODUCTION;
     }
     renderHeaderText() {
         let { activityActionType: e, name: t } = this.props;
         switch (e) {
-            case v.mFx.LISTEN:
+            case E.mFx.LISTEN:
                 return I.intl.formatToPlainString(I.t['/8czHx'], { name: t });
-            case v.mFx.WATCH:
+            case E.mFx.WATCH:
                 return I.intl.formatToPlainString(I.t.BBJXVl, { name: t });
-            case v.mFx.JOIN:
+            case E.mFx.JOIN:
                 return I.intl.string(I.t['hC/Ze3']);
-            case v.mFx.JOIN_REQUEST:
+            case E.mFx.JOIN_REQUEST:
             default:
                 return I.intl.string(I.t.Ckxb6u);
         }
@@ -133,17 +133,17 @@ class b extends l.PureComponent {
             [c, u] = this.getPartySize();
         if (this.isDeadInvite())
             switch (e) {
-                case v.mFx.LISTEN:
+                case E.mFx.LISTEN:
                     return I.intl.string(I.t['84qx9v']);
-                case v.mFx.WATCH:
+                case E.mFx.WATCH:
                     return I.intl.string(I.t.B9kbnZ);
-                case v.mFx.JOIN:
-                case v.mFx.JOIN_REQUEST:
+                case E.mFx.JOIN:
+                case E.mFx.JOIN_REQUEST:
                 default:
                     return I.intl.string(I.t['2Gbof3']);
             }
-        return !a || l || this.isEmbeddedActivityApplication() || e !== v.mFx.JOIN
-            ? this.isActionType(v.mFx.LISTEN) || this.isActionType(v.mFx.WATCH)
+        return !a || l || this.isEmbeddedActivityApplication() || e !== E.mFx.JOIN
+            ? this.isActionType(E.mFx.LISTEN) || this.isActionType(E.mFx.WATCH)
                 ? null != s && null != s.details && null != s.state && (0, C.Z)(s)
                     ? [
                           (0, i.jsx)(
@@ -182,10 +182,10 @@ class b extends l.PureComponent {
                               'state'
                           )
                       ]
-                    : this.isActionType(v.mFx.LISTEN)
+                    : this.isActionType(E.mFx.LISTEN)
                       ? I.intl.string(I.t.gXYoq6)
                       : I.intl.string(I.t.eyKDl5)
-                : this.isActionType(v.mFx.JOIN_REQUEST)
+                : this.isActionType(E.mFx.JOIN_REQUEST)
                   ? this.isPartyFull()
                       ? I.intl.string(I.t.jfrMtr)
                       : this.hasPartySize() && 0 !== u
@@ -211,7 +211,7 @@ class b extends l.PureComponent {
             m = null != d ? d(u) : null;
         return null != m
             ? m
-            : !this.isDeadInvite() && this.isActionType(v.mFx.LISTEN) && null != a && null != s && null != r && (0, E.Ps)(a)
+            : !this.isDeadInvite() && this.isActionType(E.mFx.LISTEN) && null != a && null != s && null != r && (0, v.Ps)(a)
               ? c({
                     ...u,
                     activity: r,
@@ -238,7 +238,7 @@ class b extends l.PureComponent {
                                           disabled: l
                                       }
                                     : {
-                                          children: this.isActionType(v.mFx.JOIN_REQUEST) ? I.intl.string(I.t['hC/Ze3']) : I.intl.string(I.t.VJlc0d),
+                                          children: this.isActionType(E.mFx.JOIN_REQUEST) ? I.intl.string(I.t['hC/Ze3']) : I.intl.string(I.t.VJlc0d),
                                           disabled: !0
                                       }
                             : {
@@ -262,7 +262,7 @@ class b extends l.PureComponent {
     renderParty() {
         let { partyId: e, partyMembers: t, hideParty: n, guildId: l } = this.props,
             [a, r] = this.getPartySize(),
-            s = this.hasPartySize() || this.isActionType(v.mFx.LISTEN) || this.isActionType(v.mFx.WATCH);
+            s = this.hasPartySize() || this.isActionType(E.mFx.LISTEN) || this.isActionType(E.mFx.WATCH);
         if (null == e || this.isDeadInvite() || !s || n) return null;
         let o = [...t],
             c = Math.min(a, 6);
@@ -284,7 +284,7 @@ class b extends l.PureComponent {
     }
     render() {
         let { className: e, coverImage: t, name: n, activity: l } = this.props,
-            a = this.isActionType(v.mFx.JOIN) || this.isActionType(v.mFx.JOIN_REQUEST),
+            a = this.isActionType(E.mFx.JOIN) || this.isActionType(E.mFx.JOIN_REQUEST),
             d = this.isDeadInvite(),
             u = null;
         null == t || null == l || a

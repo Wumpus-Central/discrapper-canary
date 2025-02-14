@@ -41,7 +41,7 @@ let C = 'in-app',
 function O(e) {
     let { questId: t, location: r, questContentPosition: a, preview: s = !1, previewQuest: l = null } = e;
     (0, o.ZDy)(async () => {
-        let { default: e } = await Promise.all([n.e('48923'), n.e('99393'), n.e('28044'), n.e('54114')]).then(n.bind(n, 985866));
+        let { default: e } = await Promise.all([n.e('99393'), n.e('48923'), n.e('34770')]).then(n.bind(n, 985866));
         return (n) =>
             (0, i.jsx)(e, {
                 ...n,

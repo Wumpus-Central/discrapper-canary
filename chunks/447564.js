@@ -20,8 +20,8 @@ var i = n(200651),
     f = n(82950),
     x = n(981631),
     C = n(388032),
-    v = n(142621),
-    E = n(99713);
+    E = n(142621),
+    v = n(99713);
 let I = (e, t) => {
     (0, _.mx)(t),
         (0, s.ZDy)(
@@ -50,8 +50,8 @@ function T(e) {
         n = (0, _.T$)(t),
         [r, d] = (0, l.useState)(!1),
         { price: p, fetchingPrice: g, error: f } = (0, _.R2)(h.FX),
-        { entitlement: C, fetchedEntitlement: v, error: E } = (0, _.t6)(h.FX),
-        I = f || E,
+        { entitlement: C, fetchedEntitlement: E, error: v } = (0, _.t6)(h.FX),
+        I = f || v,
         { analyticsLocations: N } = (0, c.ZP)([o.Z.HD_STREAMING_POTION_MODAL]),
         S = null != C && !C.consumed;
     (0, l.useEffect)(
@@ -80,7 +80,7 @@ function T(e) {
         onActionClick: () => {
             d(!0), (S ? T : A)();
         },
-        loading: g || !v
+        loading: g || !E
     });
 }
 let b = (e) => {
@@ -92,7 +92,7 @@ let b = (e) => {
               : (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsxs)('div', {
-                            className: v.modal,
+                            className: E.modal,
                             children: [(0, i.jsx)(A, {}), (0, i.jsx)(j, { channel: t })]
                         }),
                         (0, i.jsx)(y, {
@@ -105,7 +105,7 @@ let b = (e) => {
     },
     A = () =>
         (0, i.jsx)('img', {
-            className: v.image,
+            className: E.image,
             src: 'https://cdn.discordapp.com/assets/premium/roadblocks/hd_streaming.png',
             alt: C.intl.string(C.t.DdigcX)
         }),
@@ -114,10 +114,10 @@ let b = (e) => {
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)('div', {
-                    className: v.body,
+                    className: E.body,
                     children: [
                         (0, i.jsxs)('div', {
-                            className: v.heading,
+                            className: E.heading,
                             children: [
                                 (0, i.jsx)(s.X6q, {
                                     variant: 'heading-lg/bold',
@@ -142,9 +142,9 @@ let b = (e) => {
                         })
                     ]
                 }),
-                (0, i.jsx)('div', { className: v.divider }),
+                (0, i.jsx)('div', { className: E.divider }),
                 (0, i.jsxs)('div', {
-                    className: v.applyingTo,
+                    className: E.applyingTo,
                     children: [
                         (0, i.jsx)(s.Text, {
                             variant: 'eyebrow',
@@ -159,7 +159,7 @@ let b = (e) => {
     y = (e) => {
         let { buttonState: t, price: n, onActionClick: l } = e;
         return (0, i.jsxs)('div', {
-            className: v.footer,
+            className: E.footer,
             children: [
                 (0, i.jsx)(s.zxk, {
                     onClick: () => {
@@ -185,7 +185,7 @@ let b = (e) => {
                 4: C.intl.string(C.t.utRdl5)
             }[t];
             return (0, i.jsx)(s.ua7, {
-                tooltipContentClassName: v.tooltip,
+                tooltipContentClassName: E.tooltip,
                 text: e,
                 children: (e) =>
                     (0, i.jsx)(s.zxk, {
@@ -203,7 +203,7 @@ let b = (e) => {
         return (0, i.jsx)(s.zxk, {
             onClick: l,
             children: (0, i.jsxs)('div', {
-                className: v.buttonCopy,
+                className: E.buttonCopy,
                 children: [
                     (0, i.jsx)(s.hh5, {
                         color: r.Z.colors.WHITE,
@@ -216,12 +216,12 @@ let b = (e) => {
     },
     R = () =>
         (0, i.jsx)('div', {
-            className: v.anomaly,
+            className: E.anomaly,
             children: (0, i.jsxs)('div', {
-                className: v.error,
+                className: E.error,
                 children: [
                     (0, i.jsx)(s.Eep, {
-                        src: E,
+                        src: v,
                         width: 178,
                         height: 190
                     }),
@@ -234,9 +234,9 @@ let b = (e) => {
         }),
     L = () =>
         (0, i.jsx)('div', {
-            className: v.anomaly,
+            className: E.anomaly,
             children: (0, i.jsx)('div', {
-                className: v.spinner,
+                className: E.spinner,
                 children: (0, i.jsx)(s.$jN, {})
             })
         });

@@ -66,12 +66,12 @@ function y(e) {
             },
             [n.id, t.id]
         ),
-        k = (0, c.Wu)([_.Z], () => {
+        O = (0, c.Wu)([_.Z], () => {
             var e;
             return null !== (e = _.Z.getEditedRoleConnectionConfigurationsMap().get(n.id)) && void 0 !== e ? e : [];
         }),
-        O = k.length > 1 ? m.O1.OR : m.O1.AND,
-        P = r.useMemo(() => (O === m.O1.OR ? k.flat() : null != k && k.length > 0 ? k[0] : []), [O, k]),
+        k = O.length > 1 ? m.O1.OR : m.O1.AND,
+        P = r.useMemo(() => (k === m.O1.OR ? O.flat() : null != O && O.length > 0 ? O[0] : []), [k, O]),
         w = r.useMemo(() => new Set(P.map((e) => e.connectionType)), [P]);
     function M(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
@@ -83,7 +83,7 @@ function y(e) {
             operator: void 0,
             value: void 0
         }),
-            (0, p.d_)(n.id, R(i, O));
+            (0, p.d_)(n.id, R(i, k));
     }
     function U() {
         u.Z.dispatch({
@@ -176,7 +176,7 @@ function y(e) {
                                 'aria-labelledby': S
                             })
                         });
-                    })(l, n.id, O, P, (e, t) => (0, p.d_)(n.id, R(e, t))),
+                    })(l, n.id, k, P, (e, t) => (0, p.d_)(n.id, R(e, t))),
                     (function (e, t, n, r, l) {
                         function s(n, i) {
                             let r = [];
@@ -240,7 +240,7 @@ function y(e) {
                                 )
                             )
                         });
-                    })(P, (e) => (0, p.d_)(n.id, R(e, O)), l, n.id, o),
+                    })(P, (e) => (0, p.d_)(n.id, R(e, k)), l, n.id, o),
                     e
                 ]
             }));

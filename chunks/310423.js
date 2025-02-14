@@ -16,8 +16,8 @@ var i = n(200651),
     f = n(594174),
     x = n(739566),
     C = n(981631),
-    v = n(665692),
-    E = n(388032),
+    E = n(665692),
+    v = n(388032),
     I = n(790817);
 let N = {
         tag: 'span',
@@ -111,7 +111,7 @@ let b = l.memo(function (e) {
                                                 sourceAnalyticsLocations: L,
                                                 analyticsLocation: { section: C.jXE.CHANNEL_TEXT_AREA_AUTOCOMPLETE }
                                             }),
-                                        children: [v.ME, e.nick]
+                                        children: [E.ME, e.nick]
                                     });
                                 }
                                 break;
@@ -122,7 +122,7 @@ let b = l.memo(function (e) {
                                 null != t &&
                                     (I = (0, i.jsxs)(_.Z, {
                                         ...S,
-                                        children: [v.zy, t.name]
+                                        children: [E.zy, t.name]
                                     }));
                                 break;
                             }
@@ -132,7 +132,7 @@ let b = l.memo(function (e) {
                                 null != t &&
                                     (I = (0, i.jsxs)(_.Z, {
                                         ...S,
-                                        children: [v.ME, t.name]
+                                        children: [E.ME, t.name]
                                     }));
                                 break;
                             }
@@ -141,7 +141,7 @@ let b = l.memo(function (e) {
                                     t = null != j ? g.Z.getRole(j.id, e) : void 0;
                                 if (null != t)
                                     I = (0, i.jsxs)(_.Z, {
-                                        children: [v.ME, t.name]
+                                        children: [E.ME, t.name]
                                     });
                                 else {
                                     let t = f.default.getUser(e);
@@ -155,14 +155,14 @@ let b = l.memo(function (e) {
                                                     guildId: A.guild_id,
                                                     analyticsLocation: { section: C.jXE.CHANNEL_TEXT_AREA_AUTOCOMPLETE }
                                                 }),
-                                            children: [v.ME, e.nick]
+                                            children: [E.ME, e.nick]
                                         });
                                     }
                                 }
                                 break;
                             }
                             case c.jw.ATTACHMENT:
-                                I = T(E.intl.string(E.t.nONJVV));
+                                I = T(v.intl.string(v.t.nONJVV));
                                 break;
                             default: {
                                 let e = null == R ? void 0 : null === (d = R.choices) || void 0 === d ? void 0 : d.find((e) => e.value === b.value);

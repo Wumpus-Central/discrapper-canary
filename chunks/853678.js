@@ -5,8 +5,8 @@ var i = n(45792),
     a = n(636449),
     s = n(317381),
     o = n(611577),
-    c = n(840074),
-    d = n(16609),
+    d = n(840074),
+    c = n(16609),
     u = n(812206),
     h = n(12647),
     m = n(630388),
@@ -40,7 +40,7 @@ let T = new Set([v.Fu, v.JT]),
                     }
                     let t = s.ZP.getCurrentEmbeddedActivity(),
                         i = u.Z.getApplication(null == t ? void 0 : t.applicationId),
-                        l = (0, d.pY)(null == t ? void 0 : t.location);
+                        l = (0, c.pY)(null == t ? void 0 : t.location);
                     return new Promise((t) =>
                         (0, p.q)(
                             {
@@ -92,7 +92,7 @@ let T = new Set([v.Fu, v.JT]),
                 if (null == s) throw new _.Z({ errorCode: N.lTL.INVALID_COMMAND }, 'No channel found');
                 if (!(0, m.yE)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, N.udG.EMBEDDED)) throw new _.Z({ errorCode: N.lTL.INVALID_COMMAND }, 'This application cannot access this API');
                 return new Promise((e) => {
-                    (0, c._)({
+                    (0, d._)({
                         applicationId: a,
                         channelId: s.id,
                         launchParams: {

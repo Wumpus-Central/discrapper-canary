@@ -5,8 +5,8 @@ var i = n(200651),
     a = n.n(r),
     s = n(481060),
     o = n(55935),
-    c = n(981631),
-    d = n(388032),
+    d = n(981631),
+    c = n(388032),
     u = n(25671);
 let h = (e) => {
         let { IconComponent: t, className: n } = e;
@@ -45,21 +45,21 @@ let h = (e) => {
 class p extends l.Component {
     render() {
         let { reason: e, className: t } = this.props;
-        return e.type === c.AzA.RECENT_RELEASE_DATE
+        return e.type === d.AzA.RECENT_RELEASE_DATE
             ? (0, i.jsx)(m, {
                   className: t,
                   circle: (0, i.jsx)(h, { IconComponent: s.Que }),
-                  smallHeader: d.intl.string(d.t.u81aYW),
+                  smallHeader: c.intl.string(c.t.u81aYW),
                   text: (0, o.vc)(e.releaseDate, 'LL')
               })
-            : e.type === c.AzA.RELEASE_DATE
+            : e.type === d.AzA.RELEASE_DATE
               ? (0, i.jsx)(m, {
                     className: t,
                     circle: (0, i.jsx)(h, { IconComponent: s.Que }),
-                    smallHeader: d.intl.string(d.t.qpwaNT),
+                    smallHeader: c.intl.string(c.t.qpwaNT),
                     text: (0, o.vc)(e.releaseDate, 'LL')
                 })
-              : e.type === c.AzA.EARLY_ACCESS
+              : e.type === d.AzA.EARLY_ACCESS
                 ? null != e.releaseDate
                     ? (0, i.jsx)(m, {
                           className: t,
@@ -67,7 +67,7 @@ class p extends l.Component {
                               IconComponent: s.d$P,
                               className: u.earlyAccess
                           }),
-                          smallHeader: d.intl.string(d.t.HYys0t),
+                          smallHeader: c.intl.string(c.t.HYys0t),
                           text: (0, o.vc)(e.releaseDate, 'LL')
                       })
                     : (0, i.jsx)(m, {
@@ -76,22 +76,22 @@ class p extends l.Component {
                               IconComponent: s.d$P,
                               className: u.earlyAccess
                           }),
-                          text: d.intl.string(d.t.HYys0t)
+                          text: c.intl.string(c.t.HYys0t)
                       })
-                : e.type === c.AzA.FLAVOR_TEXT
+                : e.type === d.AzA.FLAVOR_TEXT
                   ? (0, i.jsx)(m, {
                         circle: (0, i.jsx)(h, { IconComponent: s.dz2 }),
                         text: e.flavorText,
                         className: t
                     })
-                  : e.type === c.AzA.HAS_FREE_PREMIUM_CONTENT
+                  : e.type === d.AzA.HAS_FREE_PREMIUM_CONTENT
                     ? (0, i.jsx)(m, {
                           className: t,
                           circle: (0, i.jsx)(h, {
                               IconComponent: s.SrA,
                               className: u.premiumCircle
                           }),
-                          text: d.intl.string(d.t.R9SwVl)
+                          text: c.intl.string(c.t.R9SwVl)
                       })
                     : null;
     }

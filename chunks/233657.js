@@ -3,8 +3,8 @@ var i = n(200651);
 n(192379);
 var l = n(442837),
     r = n(704215),
-    o = n(481060),
-    a = n(239091),
+    a = n(481060),
+    o = n(239091),
     s = n(605236),
     c = n(554747),
     d = n(306680),
@@ -25,7 +25,7 @@ function f(e) {
         ),
         C = (0, l.e7)([u.ZP], () => u.ZP.isMuteScheduledEventsEnabled(t.id));
     async function x() {
-        await (0, o.ZDy)(async () => {
+        await (0, a.ZDy)(async () => {
             let { default: e } = await Promise.all([n.e('22347'), n.e('56236'), n.e('2695')]).then(n.bind(n, 17671));
             return (n) =>
                 (0, i.jsx)(e, {
@@ -40,7 +40,7 @@ function f(e) {
     return (0, i.jsx)(h.m, {
         id: 'upcoming-events-'.concat(t.id),
         renderIcon: (e) =>
-            (0, i.jsx)(o.Que, {
+            (0, i.jsx)(a.Que, {
                 size: 'md',
                 color: 'currentColor',
                 className: e
@@ -49,7 +49,7 @@ function f(e) {
         selected: f,
         onClick: x,
         onContextMenu: (e) => {
-            (0, a.jW)(e, async () => {
+            (0, o.jW)(e, async () => {
                 let { default: e } = await n.e('95307').then(n.bind(n, 867757));
                 return (n) =>
                     (0, i.jsx)(e, {
@@ -61,7 +61,7 @@ function f(e) {
         showUnread: _ && !C,
         trailing:
             !C && v > 0
-                ? (0, i.jsx)(o.mAB, {
+                ? (0, i.jsx)(a.mAB, {
                       className: g.numberBadge,
                       disableColor: !0,
                       count: v

@@ -5,22 +5,22 @@ var i,
     a = n(442837),
     s = n(570140),
     o = n(430824),
-    c = n(981631);
-class d extends (r = a.ZP.Store) {
+    d = n(981631);
+class c extends (r = a.ZP.Store) {
     initialize() {
-        this.waitFor(o.Z), this.syncWith([o.Z], c.dG4);
+        this.waitFor(o.Z), this.syncWith([o.Z], d.dG4);
     }
     channelNoticePredicate(e, t) {
-        return !e.hasFeature(c.oNc.BANNER) && Date.now() - t >= c.Hqc;
+        return !e.hasFeature(d.oNc.BANNER) && Date.now() - t >= d.Hqc;
     }
 }
 (l = 'GuildBoostingNoticeStore'),
-    (i = 'displayName') in d
-        ? Object.defineProperty(d, i, {
+    (i = 'displayName') in c
+        ? Object.defineProperty(c, i, {
               value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (d[i] = l);
-let u = new d(s.Z);
+        : (c[i] = l);
+let u = new c(s.Z);

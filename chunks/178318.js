@@ -4,8 +4,8 @@ var r = n(836560),
     a = n(392711),
     s = n.n(a),
     o = n(570140),
-    c = n(710845),
-    d = n(857192),
+    d = n(710845),
+    c = n(857192),
     u = n(591759),
     h = n(998502),
     m = n(996106),
@@ -37,12 +37,12 @@ try {
 }
 let N = h.ZP.requireModule('discord_rpc').RPCWebSocket,
     v = window.GLOBAL_ENV.MARKETING_ENDPOINT,
-    T = new c.Z('RPCServer:WSS'),
+    T = new d.Z('RPCServer:WSS'),
     S = [];
 function A(e) {
     return 'function' == typeof e ? e() : e;
 }
-function b() {
+function Z() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
         t =
             e > 0
@@ -58,7 +58,7 @@ function b() {
                   };
     l.listen(E.V6Z + (e % E.frH), '127.0.0.1', t);
 }
-function Z(e, t, n) {
+function x(e, t, n) {
     let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 200,
         l = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
         r =
@@ -80,9 +80,9 @@ function Z(e, t, n) {
         }),
         t.end(n);
 }
-function x(e, t, n, i) {
+function b(e, t, n, i) {
     let l = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
-    Z(
+    x(
         e,
         t,
         {
@@ -94,7 +94,7 @@ function x(e, t, n, i) {
 }
 class L extends g.Z {
     send(e) {
-        (d.default.isLoggingOverlayEvents || (e.cmd !== E.Etm.OVERLAY && e.evt !== E.zMe.OVERLAY)) && T.info('Socket Emit: '.concat(this.id), (0, p.Z)(e)), null != i && 'etf' === this.encoding ? this._socket.send(i.pack(e), { binary: !0 }) : this._socket.send(JSON.stringify(e));
+        (c.default.isLoggingOverlayEvents || (e.cmd !== E.Etm.OVERLAY && e.evt !== E.zMe.OVERLAY)) && T.info('Socket Emit: '.concat(this.id), (0, p.Z)(e)), null != i && 'etf' === this.encoding ? this._socket.send(i.pack(e), { binary: !0 }) : this._socket.send(JSON.stringify(e));
     }
     close(e, t) {
         this._socket.close(e, t);
@@ -107,7 +107,7 @@ class L extends g.Z {
 }
 class y extends g.Z {
     send(e) {
-        (d.default.isLoggingOverlayEvents || e.cmd !== E.Etm.OVERLAY) && T.info('Socket Emit: '.concat(this.id), e), this._sendCallback(e);
+        (c.default.isLoggingOverlayEvents || e.cmd !== E.Etm.OVERLAY) && T.info('Socket Emit: '.concat(this.id), e), this._sendCallback(e);
     }
     close(e, t) {
         this._closeCallback(t, e);
@@ -122,7 +122,7 @@ class O extends r.EventEmitter {
         let [n, i] = A(e.url).split('?'),
             l = A(e.method);
         if ('/rpc' === n && 'OPTIONS' === l) {
-            Z(e, t, { body: '' });
+            x(e, t, { body: '' });
             return;
         }
         let r = 'POST' === l;
@@ -134,12 +134,12 @@ class O extends r.EventEmitter {
                     let { protocol: l, host: r } = null !== (i = u.Z.toURLSafe(null !== (e = n.get('callback')) && void 0 !== e ? e : '')) && void 0 !== i ? i : {};
                     l === location.protocol && r === location.host ? t.setHeader('Location', n.get('callback')) : t.setHeader('Location', v), t.writeHead(301), t.end();
                 },
-                o = new y(r ? Z.bind(null, e, t) : s, r ? x.bind(null, e, t, 400) : s, Number(n.get('v')), l);
+                o = new y(r ? x.bind(null, e, t) : s, r ? b.bind(null, e, t, 400) : s, Number(n.get('v')), l);
             if (r)
                 (0, _.em)(o, A(e.headers).origin, n.get('client_id'))
                     .then(() => {
                         let n = '';
-                        e.on('data', (e) => (n += e)), e.on('error', () => x(e, t, 500, 'Internal Server Error')), e.on('end', () => this.handleMessage(o, n));
+                        e.on('data', (e) => (n += e)), e.on('error', () => b(e, t, 500, 'Internal Server Error')), e.on('end', () => this.handleMessage(o, n));
                     })
                     .catch((e) => {
                         let { code: t, message: n } = e;
@@ -151,7 +151,7 @@ class O extends r.EventEmitter {
             }
             return;
         }
-        x(e, t, 404, 'Not Found');
+        b(e, t, 404, 'Not Found');
     }
     handleConnection(e) {
         var t, n;
@@ -188,17 +188,17 @@ class O extends r.EventEmitter {
             e.close(E.$VG.CLOSE_UNSUPPORTED, 'Payload not '.concat(e.encoding));
             return;
         }
-        (d.default.isLoggingOverlayEvents || n.cmd !== E.Etm.OVERLAY) && T.info('Socket Message: '.concat(e.id), (0, p.Z)(n)), this.emit('request', e, n);
+        (c.default.isLoggingOverlayEvents || n.cmd !== E.Etm.OVERLAY) && T.info('Socket Message: '.concat(e.id), (0, p.Z)(n)), this.emit('request', e, n);
     }
     constructor() {
         var e;
         super();
         let t = 0;
         (l = N.http.createServer()).on('error', (e) => {
-            T.error('Error: '.concat(e.message)), ('EADDRINUSE' === e.code || e.message.includes('EADDRINUSE')) && setTimeout(() => b(++t), 1000);
+            T.error('Error: '.concat(e.message)), ('EADDRINUSE' === e.code || e.message.includes('EADDRINUSE')) && setTimeout(() => Z(++t), 1000);
         }),
             l.on('request', this.handleRequest.bind(this)),
-            b(t);
+            Z(t);
         let n = {
             instanceId: null !== (e = l.instanceId) && void 0 !== e ? e : 0,
             server: l

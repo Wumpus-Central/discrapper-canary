@@ -17,8 +17,8 @@ var l = n(120356),
     f = n(313201),
     x = n(565138),
     C = n(199902),
-    v = n(592125),
-    E = n(430824),
+    E = n(592125),
+    v = n(430824),
     I = n(158776),
     N = n(306680),
     S = n(594174),
@@ -87,7 +87,7 @@ function Z(e) {
 }
 function R(e) {
     let { channel: t, gotoChannel: n } = e,
-        l = (0, s.e7)([E.Z], () => E.Z.getGuild(t.guild_id));
+        l = (0, s.e7)([v.Z], () => v.Z.getGuild(t.guild_id));
     return null == l
         ? null
         : (0, i.jsx)(x.Z, {
@@ -102,8 +102,8 @@ function R(e) {
 }
 function L(e) {
     let { channel: t, gotoChannel: n, mentionCount: l } = e,
-        r = (0, s.e7)([E.Z], () => E.Z.getGuild(t.guild_id)),
-        c = (0, s.e7)([v.Z], () => v.Z.getChannel(t.parent_id)),
+        r = (0, s.e7)([v.Z], () => v.Z.getGuild(t.guild_id)),
+        c = (0, s.e7)([E.Z], () => E.Z.getChannel(t.parent_id)),
         d = (0, s.e7)([N.ZP], () => N.ZP.getIsMentionLowImportance(t.id)),
         u = (0, p.KS)(t, r),
         m = (0, h.ZP)(t, !1),

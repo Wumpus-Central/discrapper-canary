@@ -2,8 +2,8 @@ n.d(t, { Z: () => E }), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    o = n.n(r),
-    a = n(442837),
+    a = n.n(r),
+    o = n(442837),
     s = n(481060),
     c = n(503438),
     d = n(39628),
@@ -19,11 +19,11 @@ var i = n(200651),
 let x = u.u.SIZE_24;
 function I(e) {
     var t, n;
-    let { activity: r, user: o, embeddedApp: a, onOpenSpotifyAlbum: d } = e,
+    let { activity: r, user: a, embeddedApp: o, onOpenSpotifyAlbum: d } = e,
         u = null == r ? void 0 : r.assets,
         h = null == r ? void 0 : r.application_id;
     if (null == r || null == u || (null == u.large_image && null == u.small_image))
-        return null != a
+        return null != o
             ? (function (e) {
                   let t = f.ZP.getApplicationIconURL({
                           id: e.application.id,
@@ -40,7 +40,7 @@ function I(e) {
                               className: C.applicationLargeImage
                           })
                   });
-              })(a)
+              })(o)
             : null;
     let p = null !== (t = u.large_image) && void 0 !== t ? t : u.small_image,
         m = (0, c.Z)(r),
@@ -57,7 +57,7 @@ function I(e) {
         ? ((v = (0, i.jsx)(s.P3F, {
               className: C.clickable,
               onClick: () => {
-                  d(r, o.id);
+                  d(r, a.id);
               },
               children: v
           })),
@@ -74,13 +74,13 @@ function I(e) {
 function Z(e) {
     let { activity: t, embeddedApp: n, onOpenSpotifyTrack: l } = e,
         r = null == t ? void 0 : t.details,
-        o = null == t ? void 0 : t.name,
-        a = o;
-    if (null != n) a = n.application.name;
+        a = null == t ? void 0 : t.name,
+        o = a;
+    if (null != n) o = n.application.name;
     else {
         if (!(null != t && (0, c.Z)(t)) || null == t.sync_id || null == r || null == l) return null;
-        (o = r),
-            (a = (0, i.jsx)(s.P3F, {
+        (a = r),
+            (o = (0, i.jsx)(s.P3F, {
                 className: C.headerLink,
                 onClick: () => {
                     l(t);
@@ -89,37 +89,37 @@ function Z(e) {
             }));
     }
     return (0, i.jsx)(h.Z, {
-        title: o,
+        title: a,
         className: C.header,
-        children: a
+        children: o
     });
 }
 function b(e) {
     let { activity: t, user: n, onOpenSpotifyArtist: l } = e,
         r = null == t ? void 0 : t.details,
-        a = null == t ? void 0 : t.state,
+        o = null == t ? void 0 : t.state,
         s = r;
     return (null != t &&
         (0, c.Z)(t) &&
-        null != a &&
+        null != o &&
         (s = [
             (0, i.jsx)(
                 p.Z,
                 {
-                    artists: a,
+                    artists: o,
                     linkClassName: C.bodyLink,
                     canOpen: null != t.sync_id,
                     onOpenSpotifyArtist: (e) => {
                         null == l || l(t, n.id, e);
                     }
                 },
-                a
+                o
             )
         ]),
     null == s || '' === s)
         ? null
         : (0, i.jsx)('div', {
-              className: o()(C.ellipsisRow, C.colorHeaderSecondary, C.bodyTextSize),
+              className: a()(C.ellipsisRow, C.colorHeaderSecondary, C.bodyTextSize),
               children: s
           });
 }
@@ -129,7 +129,7 @@ function S(e) {
     return null == n || '' === n || (0, c.Z)(t)
         ? null
         : (0, i.jsx)('div', {
-              className: o()(C.ellipsisRow, C.colorHeaderSecondary, C.bodyTextSize, C.__invalid_activity),
+              className: a()(C.ellipsisRow, C.colorHeaderSecondary, C.bodyTextSize, C.__invalid_activity),
               children: n
           });
 }
@@ -148,10 +148,10 @@ function N(e) {
     });
 }
 function E(e) {
-    let { activity: t, embeddedApp: n, user: r, channel: o, sortedVoiceStates: d, onOpenSpotifyTrack: h, onOpenSpotifyArtist: p, onOpenSpotifyAlbum: g } = e,
+    let { activity: t, embeddedApp: n, user: r, channel: a, sortedVoiceStates: d, onOpenSpotifyTrack: h, onOpenSpotifyArtist: p, onOpenSpotifyAlbum: g } = e,
         f = [];
     null != n ? (f = Array.from(n.embeddedActivity.userIds)) : (0, c.Z)(t) && null != d && (f = d.map((e) => e.user.id));
-    let E = (0, a.Wu)([m.default], () => f.map((e) => m.default.getUser(e)).filter(_.lm)),
+    let E = (0, o.Wu)([m.default], () => f.map((e) => m.default.getUser(e)).filter(_.lm)),
         j = null != n || (0, c.Z)(t),
         y = l.useMemo(() => {
             let e = new Map();
@@ -195,7 +195,7 @@ function E(e) {
                                   f.length > 0 &&
                                       (0, i.jsx)(u.Z, {
                                           className: C.usersSummary,
-                                          guildId: o.guild_id,
+                                          guildId: a.guild_id,
                                           users: E,
                                           size: x,
                                           max: 7,
@@ -212,7 +212,7 @@ function E(e) {
                                                       children: (0, i.jsx)(
                                                           'img',
                                                           {
-                                                              src: e.getAvatarURL(o.guild_id, x),
+                                                              src: e.getAvatarURL(a.guild_id, x),
                                                               alt: l,
                                                               className: C.avatar
                                                           },

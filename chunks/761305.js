@@ -1,10 +1,10 @@
-n.d(t, { Z: () => x }), n(47120);
+n.d(t, { Z: () => E }), n(47120);
 var i,
     r = n(200651),
-    l = n(192379),
-    a = n(593473),
-    o = n(442837),
-    s = n(544891),
+    a = n(192379),
+    l = n(593473),
+    s = n(442837),
+    o = n(544891),
     c = n(108427),
     d = n(601964),
     u = n(896797),
@@ -26,12 +26,12 @@ function f(e, t, n) {
         e
     );
 }
-o.ZP.initialize();
-class E extends (i = l.PureComponent) {
+s.ZP.initialize();
+class x extends (i = a.PureComponent) {
     componentDidMount() {
         let e = (0, h.Z)(this.props.location),
-            t = (0, a.parse)(this.props.location.search);
-        s.tn
+            t = (0, l.parse)(this.props.location.search);
+        o.tn
             .post({
                 url: m.ANM.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
                 body: {
@@ -126,5 +126,5 @@ class E extends (i = l.PureComponent) {
             });
     }
 }
-f(E, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) });
-let x = o.ZP.connectStores([u.Z], () => ({ defaultRoute: u.Z.defaultRoute }))(E);
+f(x, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) });
+let E = s.ZP.connectStores([u.Z], () => ({ defaultRoute: u.Z.defaultRoute }))(x);

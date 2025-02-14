@@ -99,14 +99,14 @@ let E = [
                 }),
                 [S, R]
             ),
-            k = r.useMemo(() => {
+            O = r.useMemo(() => {
                 if (S === Z && R === y) return 1;
                 for (let e = 0; e < v.ym.length; e++) if (v.ym[e].primary === l.brandPrimaryColor && v.ym[e].secondary === l.brandSecondaryColor) return 2 + e;
                 return 0;
             }, [S, R, Z, y, l.brandPrimaryColor, l.brandSecondaryColor]),
-            [O, P] = r.useState(!1),
-            w = 0 === k,
-            M = 1 === k,
+            [k, P] = r.useState(!1),
+            w = 0 === O,
+            M = 1 === O,
             U = r.useMemo(() => {
                 if (w) return D;
                 if (M)
@@ -115,13 +115,13 @@ let E = [
                         secondary: null != y ? y : f.vY
                     };
                 {
-                    let e = v.ym[k - 2];
+                    let e = v.ym[O - 2];
                     return {
                         primary: e.primary,
                         secondary: e.secondary
                     };
                 }
-            }, [D, M, w, Z, y, k]),
+            }, [D, M, w, Z, y, O]),
             G = r.useCallback(() => {
                 let e = E[Math.floor(Math.random() * E.length)].bannerKind;
                 n({
@@ -212,7 +212,7 @@ let E = [
                                                         onSecondaryColorChange: (e) => {
                                                             n({ brandSecondaryColor: (0, d.Rf)(e) });
                                                         },
-                                                        shouldShow: O,
+                                                        shouldShow: k,
                                                         onRequestClose: () => P(!1),
                                                         children: (e) =>
                                                             (0, i.jsx)(m.P3F, {
@@ -220,7 +220,7 @@ let E = [
                                                                 onClick: () => {
                                                                     P((e) => !e);
                                                                 },
-                                                                className: o()(j.brandItemContainer, { [j.brandItemContainerSelected]: 0 === k }),
+                                                                className: o()(j.brandItemContainer, { [j.brandItemContainerSelected]: 0 === O }),
                                                                 children: (0, i.jsx)(b, {
                                                                     name: N.intl.string(N.t.AemVoa),
                                                                     isCustom: !0
@@ -234,7 +234,7 @@ let E = [
                                                                 brandSecondaryColor: null != y ? y : v.K_
                                                             });
                                                         },
-                                                        className: o()(j.brandItemContainer, { [j.brandItemContainerSelected]: 1 === k }),
+                                                        className: o()(j.brandItemContainer, { [j.brandItemContainerSelected]: 1 === O }),
                                                         children: (0, i.jsx)(b, {
                                                             name: N.intl.string(N.t['1Pvr/v']),
                                                             primaryColor: Z,
@@ -252,7 +252,7 @@ let E = [
                                                                         brandSecondaryColor: v.ym[t].secondary
                                                                     });
                                                                 },
-                                                                className: o()(j.brandItemContainer, { [j.brandItemContainerSelected]: k === t + 2 }),
+                                                                className: o()(j.brandItemContainer, { [j.brandItemContainerSelected]: O === t + 2 }),
                                                                 children: (0, i.jsx)(b, {
                                                                     name: e.name,
                                                                     primaryColor: e.primary,

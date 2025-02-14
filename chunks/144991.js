@@ -45,7 +45,7 @@ class x extends l.PureComponent {
             x = null == h ? void 0 : h(a),
             g = !!(c || x),
             p = 'string' == typeof x ? this.renderDisabledIndicator(x) : null,
-            b = r()({ [m.title]: null != p });
+            f = r()({ [m.title]: null != p });
         return null == s
             ? (0, i.jsxs)(
                   u.Z,
@@ -58,7 +58,7 @@ class x extends l.PureComponent {
                       children: [
                           p,
                           (0, i.jsx)('span', {
-                              className: b,
+                              className: f,
                               children: t
                           })
                       ]
@@ -75,7 +75,7 @@ class x extends l.PureComponent {
                       children: [
                           p,
                           (0, i.jsx)('span', {
-                              className: b,
+                              className: f,
                               children: t
                           })
                       ]

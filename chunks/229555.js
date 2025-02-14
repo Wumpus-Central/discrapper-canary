@@ -1,16 +1,16 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => x });
 var i = n(200651);
 n(192379);
-var r = n(120356),
-    a = n.n(r),
-    s = n(793030),
-    l = n(553896),
+var s = n(120356),
+    r = n.n(s),
+    l = n(793030),
+    a = n(553896),
     o = n(848572),
     c = n(787528),
     d = n(474936),
     u = n(388032),
     m = n(734073);
-let g = (e, t) => {
+let h = (e, t) => {
         if ((null == e ? void 0 : e.status) === o.Vq.EARNED) {
             var n;
             return 2 === e.badgeVersion ? u.intl.format(u.t.Hu4jfn, { date: null != t ? t : new Date() }) : u.intl.format(u.t.zl7yMD, { date: null !== (n = e.earnedOnDate) && void 0 !== n ? n : new Date() });
@@ -22,7 +22,7 @@ let g = (e, t) => {
               })
             : null;
     },
-    _ = (e) => {
+    g = (e) => {
         switch (e) {
             case d.JN.PREMIUM_TENURE_1_MONTH:
             case d.w7.PREMIUM_TENURE_1_MONTH:
@@ -53,71 +53,71 @@ let g = (e, t) => {
                 return;
         }
     },
-    p = () => {
+    x = () => {
         var e;
         let t = (0, o.Rw)(),
             n = null !== (e = (0, o.GG)()) && void 0 !== e ? e : new Date();
         if (null == t) return null;
-        let r = (0, c.J)(t.id),
-            { id: d, badgeVersion: p, nameUnformatted: f, tenureReqNumMonths: h, hasWideArt: x } = t,
-            E = u.intl.string(f),
-            C = (0, l.q)(d, h);
-        return 1 === p
+        let s = (0, c.J)(t.id),
+            { id: d, badgeVersion: x, nameUnformatted: _, tenureReqNumMonths: p, hasWideArt: E } = t,
+            C = u.intl.string(_),
+            f = (0, a.q)(d, p);
+        return 1 === x
             ? (0, i.jsxs)('div', {
-                  className: a()(m.container, _(d)),
+                  className: r()(m.container, g(d)),
                   children: [
                       (0, i.jsx)('div', {}),
                       ' ',
                       (0, i.jsx)('img', {
-                          src: r,
-                          alt: E,
+                          src: s,
+                          alt: C,
                           className: m.badgeImage
                       }),
                       (0, i.jsxs)('div', {
                           className: m.textColumn,
                           children: [
-                              (0, i.jsx)(s.xv, {
+                              (0, i.jsx)(l.xv, {
                                   variant: 'text-lg/semibold',
                                   className: m.badgeText,
-                                  children: E
+                                  children: C
                               }),
-                              (0, i.jsx)(s.xv, {
+                              (0, i.jsx)(l.xv, {
                                   variant: 'text-xs/normal',
-                                  children: g(t)
+                                  children: h(t)
                               })
                           ]
                       })
                   ]
               })
             : (0, i.jsxs)('div', {
-                  className: a()(m.container, _(d)),
+                  className: r()(m.container, g(d)),
                   children: [
                       (0, i.jsx)('div', {}),
                       ' ',
                       (0, i.jsx)('img', {
-                          src: r,
-                          alt: E,
-                          className: a()(m.badgeImage, m.badgeImageV2, {
+                          src: s,
+                          alt: C,
+                          className: r()(m.badgeImage, m.badgeImageV2, {
                               [m.upcomingBadge]: t.status === o.Vq.UPCOMING,
-                              [m.wide]: x
+                              [m.wide]: E
                           })
                       }),
                       (0, i.jsxs)('div', {
                           className: m.textColumn,
                           children: [
-                              (0, i.jsx)(s.xv, {
+                              (0, i.jsx)(l.xv, {
                                   variant: 'text-lg/semibold',
-                                  className: m.badgeText,
-                                  children: E
-                              }),
-                              (0, i.jsx)(s.xv, {
-                                  variant: 'text-md/normal',
                                   className: m.badgeText,
                                   children: C
                               }),
-                              (0, i.jsx)(s.xv, {
+                              (0, i.jsx)(l.xv, {
+                                  variant: 'text-md/normal',
+                                  className: m.badgeText,
+                                  children: f
+                              }),
+                              (0, i.jsx)(l.xv, {
                                   variant: 'text-xs/normal',
-                                  children: g(t, n)
+                                  children: h(t, n)
                               })
                           ]
                       })

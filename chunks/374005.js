@@ -5,8 +5,8 @@ var i = n(200651),
     a = n(393238),
     s = n(540059),
     o = n(720734),
-    c = n(840780),
-    d = n(235555),
+    d = n(840780),
+    c = n(235555),
     u = n(746508),
     h = n(210724),
     m = n(905423),
@@ -20,7 +20,7 @@ function I(e) {
         let { guildId: t } = e;
         return t;
     });
-    return (0, i.jsx)(c.Z, {
+    return (0, i.jsx)(d.Z, {
         ...e,
         guildId: t
     });
@@ -46,7 +46,7 @@ function C() {
                 children: [
                     e && (0, i.jsx)(p.Z, {}),
                     (0, i.jsx)(h.Z, {}),
-                    (0, i.jsx)(d.Z, {}),
+                    (0, i.jsx)(c.Z, {}),
                     (0, i.jsx)(g.Z, {
                         section: _.jXE.ACTIVITY_PANEL,
                         children: (0, i.jsx)(I, { className: E.activityPanel })

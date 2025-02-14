@@ -1,4 +1,4 @@
-l.d(n, { Z: () => h });
+l.d(n, { Z: () => g });
 var t = l(200651);
 l(192379);
 var i = l(913527),
@@ -11,16 +11,16 @@ var i = l(913527),
     d = l(981631),
     m = l(388032),
     x = l(434687);
-function h(e) {
+function g(e) {
     var n;
-    let { streamingUntil: l, user: i, channel: h } = e,
-        g = (0, r.JZ)(i, h),
+    let { streamingUntil: l, user: i, channel: g } = e,
+        h = (0, r.JZ)(i, g),
         Z = (0, o.l)({
             user: i,
-            channelId: h.id,
-            guildId: h.guild_id,
+            channelId: g.id,
+            guildId: g.guild_id,
             messageId: void 0
-        })(g),
+        })(h),
         v = s()(l).diff(s()(), 'hours');
     return v <= 0
         ? null

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(47120);
+n.d(t, { Z: () => v }), n(47120);
 var i = n(200651),
     l = n(192379),
     a = n(477690),
@@ -16,7 +16,7 @@ var i = n(200651),
     f = n(474936),
     x = n(117724);
 let C = (0, u.Mg)(a.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
-    v = (e) => {
+    E = (e) => {
         null != e &&
             o.ZP.trackWithMetadata(g.rMx.EXPRESSION_TOOLTIP_VIEWED, {
                 type: f.cd.STICKER_IN_MESSAGE_HOVER,
@@ -26,12 +26,12 @@ let C = (0, u.Mg)(a.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
                 is_custom: (0, _.z)(e.type)
             });
     },
-    E = (e) => {
+    v = (e) => {
         let { renderableSticker: t, channel: n, isInteracting: a } = e,
             [o, u] = l.useState(!0),
             [_, g] = l.useState(String(Date.now())),
             [f] = (0, m.XW)(t, a),
-            { analyticsLocations: E } = (0, c.ZP)(s.Z.STICKER_MESSAGE),
+            { analyticsLocations: v } = (0, c.ZP)(s.Z.STICKER_MESSAGE),
             I = (0, i.jsxs)('span', {
                 className: x.stickerName,
                 children: [
@@ -44,7 +44,7 @@ let C = (0, u.Mg)(a.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
                 ]
             });
         return (0, i.jsx)(c.Gt, {
-            value: E,
+            value: v,
             children: (0, i.jsx)(r.yRy, {
                 align: 'center',
                 animation: r.yRy.Animation.TRANSLATE,
@@ -67,7 +67,7 @@ let C = (0, u.Mg)(a.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
                         text: (0, d.Y)(I),
                         'aria-label': !1,
                         onTooltipShow: () => {
-                            v(f);
+                            E(f);
                         },
                         children: (e) =>
                             (0, i.jsx)(r.P3F, {

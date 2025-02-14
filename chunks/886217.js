@@ -40,10 +40,10 @@ let N = (e, t, n, l) => {
         }),
     T = (e) => {
         let { channel: t, entry: n, onReaction: i, onVoiceChannelPreview: m } = e,
-            { parent_title: T, provider: E, image_url: A } = n.extra.media,
+            { parent_title: T, provider: A, image_url: E } = n.extra.media,
             _ = n.extra.artist.name,
             S = (0, o.e7)([c.default], () => c.default.getUser(n.author_id)),
-            { primaryColor: R, secondaryColor: k } = (0, g.Z)(A),
+            { primaryColor: R, secondaryColor: k } = (0, g.Z)(E),
             w = (0, x.Nq)(n),
             O = a.useCallback(() => {
                 if (null == t || null == S || !(0, u.Hi)(w, v.y9)) return;
@@ -51,13 +51,13 @@ let N = (e, t, n, l) => {
                 return (0, h.CR)({
                     user: S,
                     channel: t,
-                    mediaImageSrc: A,
+                    mediaImageSrc: E,
                     artist: _,
                     description: e,
                     colors: [R, k],
                     badges: (0, h.UU)(n)
                 });
-            }, [A, _, t, n, R, w, k, S]),
+            }, [E, _, t, n, R, w, k, S]),
             b = (0, p.Z)(f.ABu.SPOTIFY);
         if (null == S || !(0, u.Hi)(w, v.y9)) return null;
         let M = () => {
@@ -78,7 +78,7 @@ let N = (e, t, n, l) => {
                     channel: t,
                     entry: n,
                     headerIcons:
-                        E === r.p.SPOTIFY
+                        A === r.p.SPOTIFY
                             ? (0, l.jsx)(I.Z, {
                                   onClick: b,
                                   Icon: d.Z,

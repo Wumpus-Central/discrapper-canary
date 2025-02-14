@@ -183,9 +183,9 @@ let r = {
     o = (e) =>
         e.object({
             type: e.number().valid(1).required(),
-            components: e.array().max(5).items(c(e))
+            components: e.array().max(5).items(d(e))
         }),
-    c = (e) =>
+    d = (e) =>
         e.object({
             type: e.number().valid(2).required(),
             style: e.number().min(1).max(5).required(),

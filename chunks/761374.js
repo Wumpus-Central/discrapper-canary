@@ -6,8 +6,8 @@ var i = n(200651),
     a = n(765250),
     s = n(13245),
     d = n(393238),
-    c = n(493773),
-    u = n(358221),
+    u = n(493773),
+    c = n(358221),
     h = n(569545),
     _ = n(199902),
     p = n(314897),
@@ -22,8 +22,8 @@ var i = n(200651),
     S = n(340101),
     Z = n(981631),
     y = n(388032),
-    b = n(667933);
-let O = [];
+    O = n(667933);
+let b = [];
 function N(e, t, n, i) {
     let l = (i - 1) * x.z;
     return e === S.C5.HORIZONTAL ? Math.min(Math.max((t - l) / i, 256), Math.max((16 * n) / 9, 256)) : Math.min(Math.max(t, 256), Math.max((((n - l) / i) * 16) / 9, 256));
@@ -56,17 +56,17 @@ function T(e) {
             streamParticipants: J,
             participantIds: q
         } = (0, r.cj)(
-            [_.Z, u.Z],
+            [_.Z, c.Z],
             () => {
                 if (null == V)
                     return {
-                        streamParticipants: O,
+                        streamParticipants: b,
                         participantsVersion: -1,
                         participantIds: []
                     };
                 let e = new Set(_.Z.getAllActiveStreamsForChannel(V).map((e) => (0, h.V9)(e))),
                     t = (t) => e.has((0, h.V9)(t.stream)),
-                    n = u.Z.getStreamParticipants(V).filter((e) => e.user.id !== Y && (!!G || t(e)));
+                    n = c.Z.getStreamParticipants(V).filter((e) => e.user.id !== Y && (!!G || t(e)));
                 return (
                     n.sort((e, n) => {
                         if (Q) {
@@ -82,7 +82,7 @@ function T(e) {
                         streamParticipants: n,
                         activeStreams: e,
                         participantIds: n.map((e) => e.user.id),
-                        participantsVersion: u.Z.getParticipantsVersion(V)
+                        participantsVersion: c.Z.getParticipantsVersion(V)
                     }
                 );
             },
@@ -106,10 +106,10 @@ function T(e) {
                 })(n, i, t, r),
                 a = N(S.C5.VERTICAL, n, i, t),
                 s = null != r ? r : o === a ? S.C5.VERTICAL : S.C5.HORIZONTAL,
-                [d, c] = l.useState(o);
+                [d, u] = l.useState(o);
             return (
                 l.useEffect(() => {
-                    e || c(o);
+                    e || u(o);
                 }, [e, o]),
                 {
                     layout: s,
@@ -216,7 +216,7 @@ function T(e) {
         l.useEffect(() => {
             s.Z.setGpuBoostRequested(C.zS.OVERLAY_VIDEO_STREAM_RENDERING, !ee);
         }, [ee]),
-        (0, c.ZP)(() => () => {
+        (0, u.ZP)(() => () => {
             s.Z.setGpuBoostRequested(C.zS.OVERLAY_VIDEO_STREAM_RENDERING, !1);
         });
     let [er, eo] = l.useState(new Set());
@@ -249,7 +249,7 @@ function T(e) {
                     absolute: !0
                 })
           : (0, i.jsx)('div', {
-                className: b.goLiveGridContainer,
+                className: O.goLiveGridContainer,
                 style: { opacity: k },
                 ref: F,
                 children: (0, i.jsx)(x.Z, {

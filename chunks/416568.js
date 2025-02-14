@@ -2,9 +2,9 @@ n.d(t, { Z: () => ec }), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    o = n.n(r),
-    a = n(392711),
-    s = n.n(a),
+    a = n.n(r),
+    o = n(392711),
+    s = n.n(o),
     c = n(512969),
     d = n(91192),
     u = n(374470),
@@ -68,8 +68,8 @@ function er(e, t, n) {
         e
     );
 }
-let eo = (0, G.isWindows)() ? 4 : (0, G.isMac)() ? 0 : 12;
-class ea {
+let ea = (0, G.isWindows)() ? 4 : (0, G.isMac)() ? 0 : 12;
+class eo {
     setGuildsTree(e) {
         this.guildsTree = e;
     }
@@ -146,13 +146,13 @@ class ea {
             }),
             (this.isItemVisible = (e, t, n) => {
                 let { iconTotalSize: i, badgeVisibleBuffer: l, heightBeforeIcons: r } = this.sizes,
-                    o = this.scrollerRef.current;
-                if (null == o) return !1;
-                let a = n.findIndex((t) => ('string' == typeof t || null == t ? t === e : t.includes(e)));
-                if (a < 0) return !1;
-                let s = i * a + r;
+                    a = this.scrollerRef.current;
+                if (null == a) return !1;
+                let o = n.findIndex((t) => ('string' == typeof t || null == t ? t === e : t.includes(e)));
+                if (o < 0) return !1;
+                let s = i * o + r;
                 t || (s += l);
-                let c = o.getScrollerState();
+                let c = a.getScrollerState();
                 return (!t && !!(s >= c.scrollTop)) || (!!t && !!(s + i <= c.scrollTop + c.offsetHeight));
             }),
             (this.handleScroll = () => {
@@ -174,7 +174,7 @@ class ea {
     }
 }
 function es(e) {
-    let { disableAppDownload: t = G.isPlatformEmbedded, isOverlay: n = !1, className: r, themeOverride: a } = e,
+    let { disableAppDownload: t = G.isPlatformEmbedded, isOverlay: n = !1, className: r, themeOverride: o } = e,
         s = (0, b.Q3)('GuildsBar'),
         { density: u } = (0, f.TCT)(),
         [p] = (0, h.Wu)([D.ZP], () => {
@@ -201,7 +201,7 @@ function es(e) {
         eE = (0, f.dQu)(g.Z.modules.guildbar.AVATAR_SIZE),
         ej = l.useMemo(
             () =>
-                new ea(
+                new eo(
                     p,
                     eb,
                     eN,
@@ -216,7 +216,7 @@ function es(e) {
                             iconTotalSize: e,
                             badgeVisibleBuffer: e - 16,
                             separatorSize: i,
-                            heightBeforeIcons: eo + i
+                            heightBeforeIcons: ea + i
                         };
                     })(eE, s, 0)
                 ),
@@ -335,10 +335,10 @@ function es(e) {
                     renderTail: !0
                 }),
             (0, i.jsx)(f.f6W, {
-                theme: a,
+                theme: o,
                 children: (e) =>
                     (0, i.jsx)('nav', {
-                        className: o()(el.wrapper, r, e, { [el.hidden]: ec }),
+                        className: a()(el.wrapper, r, e, { [el.hidden]: ec }),
                         'aria-label': ei.intl.string(ei.t.PjnF2t),
                         children: (0, i.jsxs)('ul', {
                             ref: eC,
@@ -358,7 +358,7 @@ function es(e) {
                                     className: el.itemsContainer,
                                     children: [
                                         (0, i.jsxs)(f.xVE, {
-                                            className: o()({
+                                            className: a()({
                                                 [el.scroller]: !0,
                                                 [el.scrolling]: eZ
                                             }),
@@ -424,7 +424,7 @@ function es(e) {
                                     ref: ev,
                                     isVisible: ej.isItemVisible,
                                     onJumpTo: ej.handleJumpToGuild,
-                                    className: o()(el.unreadMentionsIndicatorBottom, { [el.unreadMentionsFixedFooter]: !n }),
+                                    className: a()(el.unreadMentionsIndicatorBottom, { [el.unreadMentionsFixedFooter]: !n }),
                                     barClassName: el.unreadMentionsBar
                                 })
                             ]

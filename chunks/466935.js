@@ -2,8 +2,8 @@ n.d(t, { Z: () => C });
 var i = n(200651),
     l = n(192379),
     r = n(442837),
-    o = n(481060),
-    a = n(970606),
+    a = n(481060),
+    o = n(970606),
     s = n(693546),
     c = n(826581),
     d = n(246364),
@@ -40,14 +40,14 @@ function C(e) {
             text: v.intl.string(v.t.tcvVXF),
             selected: n,
             onClick: () => {
-                (0, a.Q2)({
+                (0, o.Q2)({
                     guildId: t.id,
                     source: f.jXE.CHANNEL_LIST,
                     tab: _.oC.MEMBER_APPLICATIONS
                 }),
                     (0, h.uL)(f.Z5c.CHANNEL(t.id, _.oC.MEMBER_APPLICATIONS));
             },
-            trailing: I > 0 ? (0, i.jsx)(o.mAB, { count: I }) : null
+            trailing: I > 0 ? (0, i.jsx)(a.mAB, { count: I }) : null
         })
     );
 }

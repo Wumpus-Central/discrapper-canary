@@ -255,7 +255,7 @@ function Y(e) {
         l = n ? (0, i.jsx)(V, { guild: t }) : null,
         d = (0, u.e7)([T.Z], () => T.Z.isViewingRoles(t.id)),
         f = null != o ? o : l,
-        _ = (0, I.I)(t);
+        _ = (0, I.Ij)(t);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)('div', {

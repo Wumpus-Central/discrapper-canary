@@ -2,8 +2,8 @@ n.d(t, { Z: () => _ });
 var i = n(200651),
     l = n(192379),
     r = n(442837),
-    o = n(481060),
-    a = n(746916),
+    a = n(481060),
+    o = n(746916),
     s = n(965638),
     c = n(905423),
     d = n(486472),
@@ -17,7 +17,7 @@ let _ = l.memo(function (e) {
     let { guildNode: t, lowerBadge: n } = e,
         _ = t.id,
         v = (0, r.e7)([h.Z], () => h.Z.getGuild(_)),
-        C = (0, a.E)(v),
+        C = (0, o.E)(v),
         x = (0, r.e7)([p.Z], () => p.Z.isFocused()),
         I = (0, r.e7)([d.Z], () => d.Z.isUnavailable(_)),
         Z = (0, c.Z)((e) => e.guildId),
@@ -31,7 +31,7 @@ let _ = l.memo(function (e) {
             isMentionLowImportance: u.default.getIsMentionLowImportance(_),
             unread: u.default.hasUnread(_)
         })),
-        j = (0, s.I)(v) && 0 === S,
+        j = (0, s.Ij)(v) && 0 === S,
         y = l.useMemo(
             () =>
                 null != n
@@ -39,7 +39,7 @@ let _ = l.memo(function (e) {
                     : j
                       ? (0, i.jsx)('div', {
                             className: f.pauseBackground,
-                            children: (0, i.jsx)(o.fpf, {
+                            children: (0, i.jsx)(a.fpf, {
                                 size: 'custom',
                                 color: 'currentColor',
                                 className: f.pause,

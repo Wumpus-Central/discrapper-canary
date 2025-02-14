@@ -1,7 +1,7 @@
-n.d(t, { Z: () => l });
+n.d(t, { Z: () => r });
 var i = n(969943),
     s = n(388032);
-function l(e) {
+function r(e) {
     switch (e) {
         case i.mX.REDUCED_MOTION:
             return s.intl.format(s.t['1dT9V1'], {});

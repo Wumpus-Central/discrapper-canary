@@ -20,8 +20,8 @@ var i = n(200651),
     f = n(934826),
     x = n(768318),
     C = n(570533),
-    v = n(971792),
-    E = n(629262),
+    E = n(971792),
+    v = n(629262),
     I = n(761966),
     N = n(893729),
     S = n(845970),
@@ -131,9 +131,9 @@ let L = (e) => {
     },
     k = (e) => {
         let { listingId: t, guildId: n, className: l } = e,
-            a = (0, v.Z)(n, t),
+            a = (0, E.Z)(n, t),
             [s] = g.UE(t),
-            c = (0, E.Z)(s),
+            c = (0, v.Z)(s),
             [d] = g.R7(t),
             u = g.qs(t, n),
             [m] = g.XZ(t, n);
@@ -215,7 +215,7 @@ let L = (e) => {
         var t;
         let { listingId: n, guildId: a, groupListingId: d, analyticsLocation: _ } = e,
             C = (0, p.jO)(n),
-            { openModal: v, canOpenModal: E, cannotOpenReason: N, isCheckingTrialEligibility: S } = (0, A.Z)(C, a, d, _),
+            { openModal: E, canOpenModal: v, cannotOpenReason: N, isCheckingTrialEligibility: S } = (0, A.Z)(C, a, d, _),
             L = (0, s.e7)([m.Z], () => m.Z.isSyncing),
             { activeSubscription: P, activeSubscriptionListing: O } = (0, f.Z)(d),
             D = (null == O ? void 0 : O.id) === n,
@@ -297,15 +297,15 @@ let L = (e) => {
                                                             children: w ? Z.intl.string(Z.t.iKHmu7) : Z.intl.string(Z.t.XvAuMj)
                                                         })
                                                       : (0, i.jsx)(o.ua7, {
-                                                            text: E ? null : N,
-                                                            'aria-label': null !== (t = E && N) && void 0 !== t && t,
+                                                            text: v ? null : N,
+                                                            'aria-label': null !== (t = v && N) && void 0 !== t && t,
                                                             children: (e) =>
                                                                 (0, i.jsx)(I.Z, {
                                                                     ...e,
                                                                     fullWidth: !0,
-                                                                    disabled: !E || L,
+                                                                    disabled: !v || L,
                                                                     submitting: S,
-                                                                    onClick: v,
+                                                                    onClick: E,
                                                                     onlyShineOnHover: !0,
                                                                     children: Z.intl.string(Z.t.fM5Zsb)
                                                                 })

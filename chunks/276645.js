@@ -24,7 +24,7 @@ function o(e) {
         },
         onClick: () => {
             (0, l.ZDy)(async () => {
-                let { default: e } = await Promise.all([n.e('5863'), n.e('59841')]).then(n.bind(n, 751212));
+                let { default: e } = await Promise.all([n.e('5863'), n.e('31898')]).then(n.bind(n, 751212));
                 return (n) =>
                     (0, i.jsx)(e, {
                         ...n,

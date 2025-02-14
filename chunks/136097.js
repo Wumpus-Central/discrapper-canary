@@ -5,13 +5,13 @@ n.d(t, {
     n(47120);
 var i = n(192379),
     s = n(913527),
-    l = n.n(s),
-    r = n(442837),
+    r = n.n(s),
+    l = n(442837),
     a = n(314897),
     o = n(673096),
     c = n(388032);
 function d() {
-    let e = (0, r.cj)([o.Z], () => o.Z.getSessions());
+    let e = (0, l.cj)([o.Z], () => o.Z.getSessions());
     return i.useMemo(() => {
         let t = [...e],
             n = null,
@@ -30,5 +30,5 @@ function d() {
     }, [e]);
 }
 function u(e) {
-    return (Date.now() - e.valueOf()) / 1000 / 60 / 60 < 1 ? c.intl.string(c.t.TXCmfH) : l()(e).fromNow();
+    return (Date.now() - e.valueOf()) / 1000 / 60 / 60 < 1 ? c.intl.string(c.t.TXCmfH) : r()(e).fromNow();
 }

@@ -13,8 +13,8 @@ var i = n(200651),
     x = n(388032),
     g = n(950463);
 function p(e) {
-    let { webhook: t, editedWebhook: n, channelOptions: p, isExpanded: b, errors: _, onToggleExpand: f } = e,
-        v = l.useMemo(() => {
+    let { webhook: t, editedWebhook: n, channelOptions: p, isExpanded: f, errors: b, onToggleExpand: v } = e,
+        _ = l.useMemo(() => {
             var e;
             return null != (e = t.avatar) && /^data:/.test(e)
                 ? e
@@ -24,7 +24,7 @@ function p(e) {
                       discriminator: h.fo$
                   });
         }, [t]),
-        C = l.useCallback(() => {
+        N = l.useCallback(() => {
             (0, a.h7j)((e) =>
                 (0, i.jsx)(a.ConfirmModal, {
                     ...e,
@@ -73,11 +73,11 @@ function p(e) {
                 'guild-source'
             )
         }));
-    let N = null;
+    let C = null;
     return (
-        b &&
+        f &&
             null != n &&
-            (N = (0, i.jsxs)('div', {
+            (C = (0, i.jsxs)('div', {
                 className: g.body,
                 children: [
                     (0, i.jsx)(a.$i$, { className: g.topDivider }),
@@ -97,7 +97,7 @@ function p(e) {
                                                         s.Z.updateWebhook({ name: e });
                                                     },
                                                     maxLength: 80,
-                                                    error: _.name
+                                                    error: b.name
                                                 })
                                             })
                                         }),
@@ -119,7 +119,7 @@ function p(e) {
                                 (0, i.jsx)(a.$i$, { className: g.bottomDivider }),
                                 (0, i.jsx)(d.Z, {
                                     children: (0, i.jsx)(a.zxk, {
-                                        onClick: C,
+                                        onClick: N,
                                         size: a.zxk.Sizes.SMALL,
                                         color: a.zxk.Colors.RED,
                                         look: a.zxk.Looks.LINK,
@@ -140,26 +140,26 @@ function p(e) {
                 children: [
                     (0, i.jsx)(a.P3F, {
                         className: g.header,
-                        'aria-expanded': b,
-                        onClick: f,
+                        'aria-expanded': f,
+                        onClick: v,
                         children: (0, i.jsxs)(d.Z, {
                             align: d.Z.Align.CENTER,
                             children: [
                                 (0, i.jsx)(m.Z, {
                                     name: t.name,
-                                    imageSrc: v,
+                                    imageSrc: _,
                                     detailsClassName: g.__invalid_description,
                                     details: j
                                 }),
                                 (0, i.jsx)(c.Z, {
                                     className: g.expandIcon,
-                                    expanded: b,
+                                    expanded: f,
                                     'aria-hidden': !0
                                 })
                             ]
                         })
                     }),
-                    N
+                    C
                 ]
             })
         })

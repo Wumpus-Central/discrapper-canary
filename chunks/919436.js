@@ -2,8 +2,8 @@ n.d(t, { Z: () => w }), n(411104), n(47120);
 var i,
     l = n(200651),
     r = n(192379),
-    o = n(642128),
-    a = n(91192),
+    a = n(642128),
+    o = n(91192),
     s = n(442837),
     c = n(481060),
     d = n(239091),
@@ -120,7 +120,7 @@ class R extends (i = r.PureComponent) {
         let { channel: e, channelName: t, selected: n, badge: i, audio: r, video: s, stream: d, isCurrentUserInThisDMCall: u, unread: h, isGDMFacepileEnabled: p, isVisualRefreshEnabled: m } = this.props,
             { hovered: g, animating: _ } = this.state,
             v = e.isMultiUserDM() && null == e.icon && p;
-        return (0, l.jsx)(o.animated.div, {
+        return (0, l.jsx)(a.animated.div, {
             style: this.getAnimatedStyle(),
             children: (0, l.jsxs)(S.H, {
                 children: [
@@ -143,7 +143,7 @@ class R extends (i = r.PureComponent) {
                                 isCurrentUserConnected: u
                             }),
                             lowerBadgeSize: { width: (0, c.OVM)(i) },
-                            children: (0, l.jsx)(a.mh, {
+                            children: (0, l.jsx)(o.mh, {
                                 id: e.id,
                                 children: (i) =>
                                     (0, l.jsx)(c.LYs, {
@@ -178,7 +178,7 @@ class R extends (i = r.PureComponent) {
             T(this, 'state', {
                 hovered: !1,
                 animating: !0,
-                controller: new o.Controller({
+                controller: new a.Controller({
                     scale: 0,
                     height: 0,
                     opacity: 0,
@@ -220,15 +220,15 @@ let w = r.forwardRef(function (e, t) {
     let n = e.channel.id,
         i = (0, p.ZP)(e.channel),
         r = (0, s.e7)([v.Z], () => v.Z.getChannelId(), []),
-        o = (0, s.e7)([u.Z], () => (null != r ? u.Z.getMode(r) : j.WtW.VOICE), [r]),
-        a = (0, s.e7)([_.Z], () => _.Z.getAllApplicationStreamsForChannel(n).length > 0),
+        a = (0, s.e7)([u.Z], () => (null != r ? u.Z.getMode(r) : j.WtW.VOICE), [r]),
+        o = (0, s.e7)([_.Z], () => _.Z.getAllApplicationStreamsForChannel(n).length > 0),
         d = (0, s.e7)([x.Z], () => x.Z.getChannelId(), []),
         h = (0, s.e7)([C.ZP], () => C.ZP.getMentionCount(n), [n]),
         { isFacepileEnabled: f } = g.Z.useExperiment({ location: 'unread_direct_message' }, { autoTrackExposure: !1 }),
         I = r === n,
         Z = !1,
         b = !1;
-    I && ((Z = o === j.WtW.VOICE), (b = o === j.WtW.VIDEO));
+    I && ((Z = a === j.WtW.VOICE), (b = a === j.WtW.VIDEO));
     let S = (0, c.dQu)(c.TVs.modules.guildbar.AVATAR_SIZE),
         N = (0, m.Q3)('DirectMessage');
     return (0, l.jsx)(R, {
@@ -240,7 +240,7 @@ let w = r.forwardRef(function (e, t) {
         badge: h,
         audio: Z,
         video: b,
-        stream: a,
+        stream: o,
         isCurrentUserInThisDMCall: I,
         isGDMFacepileEnabled: f,
         size: N ? S : 56,

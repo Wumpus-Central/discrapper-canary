@@ -27,16 +27,16 @@ function S(e) {
                 }).length > 0
         })),
         Z = (0, i.e7)([m.Z], () => m.Z.getChannel(null == I ? void 0 : I.channelId)),
-        [y, N] = (0, c.wq)(Z),
+        [N, y] = (0, c.wq)(Z),
         A = (0, u.Aq)(),
         C = null != E && null != I && E.state !== g.jm8.ENDED && E.ownerId === I.ownerId,
         P = (e) => {
             null != I && (null == x || x(), s.default.selectVoiceChannel(I.channelId), C || (0, o.iV)(I, { forceMultiple: e }), A.dispatch(g.CkL.POPOUT_CLOSE), f.S.dispatch(g.CkL.MODAL_CLOSE), a.Z.popAll());
         };
     if (null == I) return null;
-    let j = (0, c.P9)(N);
+    let j = (0, c.P9)(y);
     t ? (j = p.intl.string(p.t.XvBdeX)) : C && (j = p.intl.string(p.t.JH1SJy));
-    let b = {
+    let _ = {
         color: n,
         look: S
     };
@@ -45,9 +45,9 @@ function S(e) {
             (0, l.jsxs)(
                 h.Z,
                 {
-                    disabled: t || C || !y,
+                    disabled: t || C || !N,
                     onClick: () => P(!1),
-                    ...b,
+                    ..._,
                     fullWidth: !0,
                     children: [
                         (0, l.jsx)(r.hGI, {
@@ -70,7 +70,7 @@ function S(e) {
                                   var t;
                                   null === (t = e.onClick) || void 0 === t || t.call(e), P(!0);
                               },
-                              ...b,
+                              ..._,
                               className: v.iconButton,
                               size: v.iconButtonSize,
                               children: (0, l.jsx)(r.OgY, {

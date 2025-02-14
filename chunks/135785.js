@@ -1,54 +1,54 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => x });
 var i = n(200651);
 n(192379);
-var r = n(120356),
-    a = n.n(r),
-    s = n(481060),
-    l = n(230711),
+var s = n(120356),
+    r = n.n(s),
+    l = n(481060),
+    a = n(230711),
     o = n(63063),
     c = n(74538),
     d = n(140465),
     u = n(474936),
     m = n(981631),
-    g = n(388032),
-    _ = n(234254);
-let p = (e) => {
+    h = n(388032),
+    g = n(234254);
+let x = (e) => {
     let t,
         n,
-        { premiumSubscription: r, className: p, isFullscreen: f = !1, textColor: h } = e,
-        x = (0, d.Nx)();
-    if (null == r) return null;
-    let E = null != r ? c.ZP.getPremiumPlanItem(r) : null;
-    if ((c.ZP.isBoostOnlySubscription(r) ? (t = g.intl.string(g.t.Uj0md3)) : null != E && (t = c.ZP.getDisplayPremiumType(E.planId)), null == t)) return null;
-    let C = () => l.Z.open(m.oAB.SUBSCRIPTIONS),
-        b = (null != E ? c.ZP.getSkuIdForPlan(E.planId) : null) === u.Si.TIER_1;
+        { premiumSubscription: s, className: x, isFullscreen: _ = !1, textColor: p } = e,
+        E = (0, d.Nx)();
+    if (null == s) return null;
+    let C = null != s ? c.ZP.getPremiumPlanItem(s) : null;
+    if ((c.ZP.isBoostOnlySubscription(s) ? (t = h.intl.string(h.t.Uj0md3)) : null != C && (t = c.ZP.getDisplayPremiumType(C.planId)), null == t)) return null;
+    let f = () => a.Z.open(m.oAB.SUBSCRIPTIONS),
+        T = (null != C ? c.ZP.getSkuIdForPlan(C.planId) : null) === u.Si.TIER_1;
     return (
-        (n = null != h ? h : x || f ? 'always-white' : 'text-normal'),
-        (0, i.jsxs)(s.Zbd, {
-            className: a()(_.container, p, {
-                [_.lightTextLink]: f,
-                [_.centerText]: x
+        (n = null != p ? p : E || _ ? 'always-white' : 'text-normal'),
+        (0, i.jsxs)(l.Zbd, {
+            className: r()(g.container, x, {
+                [g.lightTextLink]: _,
+                [g.centerText]: E
             }),
-            type: s.Zbd.Types.CUSTOM,
+            type: l.Zbd.Types.CUSTOM,
             children: [
-                (0, i.jsx)(s.P4T, {
+                (0, i.jsx)(l.P4T, {
                     size: 'custom',
                     width: 20,
                     height: 20,
                     color: 'currentColor',
-                    className: a()(_.icon, { [_.lightThemeColorOnly]: x || f })
+                    className: r()(g.icon, { [g.lightThemeColorOnly]: E || _ })
                 }),
-                (0, i.jsx)(s.Text, {
+                (0, i.jsx)(l.Text, {
                     variant: 'text-sm/medium',
                     color: n,
-                    children: b
-                        ? g.intl.format(g.t['tYuv+f'], {
+                    children: T
+                        ? h.intl.format(h.t['tYuv+f'], {
                               helpdeskArticle: o.Z.getArticleURL(m.BhN.PREMIUM_DETAILS),
-                              onSubscriptionsClick: C
+                              onSubscriptionsClick: f
                           })
-                        : g.intl.format(g.t.xHRgU1, {
+                        : h.intl.format(h.t.xHRgU1, {
                               subscriptionName: t,
-                              onSubscriptionsClick: C
+                              onSubscriptionsClick: f
                           })
                 })
             ]

@@ -3,8 +3,8 @@ var i = n(200651);
 n(192379);
 var l = n(120356),
     r = n.n(l),
-    o = n(481060),
-    a = n(925329),
+    a = n(481060),
+    o = n(925329),
     s = n(512359);
 function c(e) {
     let { className: t, embeddedApps: n, muted: l } = e;
@@ -12,7 +12,7 @@ function c(e) {
     if (1 === n.length)
         return (0, i.jsx)('div', {
             className: r()(s.container, t, l && s.modeMuted),
-            children: (0, i.jsx)(a.Z, {
+            children: (0, i.jsx)(o.Z, {
                 game: n[0].application,
                 className: s.icon20px
             })
@@ -22,16 +22,16 @@ function c(e) {
         return (0, i.jsxs)('div', {
             className: r()(s.container, t, l && s.modeMuted),
             children: [
-                (0, i.jsx)(a.Z, {
+                (0, i.jsx)(o.Z, {
                     game: n[0].application,
                     className: s.icon20px
                 }),
                 2 === n.length
-                    ? (0, i.jsx)(a.Z, {
+                    ? (0, i.jsx)(o.Z, {
                           game: n[1].application,
                           className: s.icon20px
                       })
-                    : (0, i.jsx)(o.Text, {
+                    : (0, i.jsx)(a.Text, {
                           className: s.overflow,
                           variant: 'text-xs/bold',
                           color: 'interactive-active',

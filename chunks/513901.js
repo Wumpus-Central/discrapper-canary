@@ -1,71 +1,71 @@
 n.d(t, { Z: () => C });
 var i = n(200651),
     s = n(192379),
-    l = n(120356),
-    r = n.n(l),
+    r = n(120356),
+    l = n.n(r),
     a = n(481060),
     o = n(906732),
     c = n(642619),
     d = n(626135),
     u = n(74538),
-    h = n(150039),
-    m = n(993413),
+    m = n(150039),
+    h = n(993413),
     g = n(504983),
     x = n(981631),
     _ = n(474936),
     p = n(388032),
     E = n(980657);
 function C(e) {
-    let { user: t, guild: n, className: l, sectionTitle: C, forcedDivider: N = !1, withTutorial: f = !1, showBorder: I = !1, isTryItOutFlow: T = !1, initialSelectedEffectId: S } = e,
-        j = (0, h.Kg)(t, n),
+    let { user: t, guild: n, className: r, sectionTitle: C, forcedDivider: f = !1, withTutorial: T = !1, showBorder: N = !1, isTryItOutFlow: S = !1, initialSelectedEffectId: I } = e,
+        b = (0, m.Kg)(t, n),
         v = u.ZP.canUsePremiumProfileCustomization(t),
-        { analyticsLocations: b } = (0, o.ZP)(),
-        { pendingProfileEffectId: A, errors: O } = (0, h.bd)(n),
+        { analyticsLocations: j } = (0, o.ZP)(),
+        { pendingProfileEffectId: A, errors: O } = (0, m.bd)(n),
         R = s.useCallback(
             () =>
                 (0, c.H)({
-                    analyticsLocations: b,
-                    initialSelectedEffectId: S,
+                    analyticsLocations: j,
+                    initialSelectedEffectId: I,
                     guild: n
                 }),
-            [b, S, n]
+            [j, I, n]
         );
     s.useEffect(() => {
         v &&
             d.default.track(x.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: _.cd.PROFILE_EFFECTS_INLINE_SETTINGS,
-                location_stack: b
+                location_stack: j
             });
-    }, [v, b]);
-    let D = null != n,
-        P = f ? a.gtL : a.zxk;
-    return (0, i.jsx)(m.Z, {
-        forcedDivider: N,
+    }, [v, j]);
+    let P = null != n,
+        D = T ? a.gtL : a.zxk;
+    return (0, i.jsx)(h.Z, {
+        forcedDivider: f,
         borderType: g.Y.PREMIUM,
         hasBackground: !0,
         title: C,
-        showBorder: I,
+        showBorder: N,
         errors: O,
-        className: l,
+        className: r,
         children: (0, i.jsxs)('div', {
             className: E.buttonsContainer,
             children: [
-                (0, i.jsx)(P, {
+                (0, i.jsx)(D, {
                     size: a.zxk.Sizes.SMALL,
                     onClick: R,
-                    className: r()({ [E.buttonHighlighted]: f }),
+                    className: l()({ [E.buttonHighlighted]: T }),
                     children: p.intl.string(p.t['0nEVoK'])
                 }),
-                (T || void 0 !== A ? null != A : null != j) &&
+                (S || void 0 !== A ? null != A : null != b) &&
                     (0, i.jsx)(a.zxk, {
                         className: E.removeButton,
                         color: a.zxk.Colors.PRIMARY,
                         look: a.zxk.Looks.LINK,
                         size: a.zxk.Sizes.SMALL,
                         onClick: function () {
-                            (0, h.s6)(null, j, null == n ? void 0 : n.id);
+                            (0, m.s6)(null, b, null == n ? void 0 : n.id);
                         },
-                        children: D ? p.intl.string(p.t.GJ3Fcn) : p.intl.string(p.t['Ld+f5e'])
+                        children: P ? p.intl.string(p.t.GJ3Fcn) : p.intl.string(p.t['Ld+f5e'])
                     })
             ]
         })

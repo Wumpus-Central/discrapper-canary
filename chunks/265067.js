@@ -5,8 +5,8 @@ var i = n(243814),
     a = n(763296),
     s = n(697426),
     o = n(242291),
-    c = n(641015),
-    d = n(594174),
+    d = n(641015),
+    c = n(594174),
     u = n(996106),
     h = n(452426),
     m = n(736045),
@@ -38,13 +38,13 @@ let _ = {
                 args: { guild_id: t, sound_id: n }
             } = e;
             await (0, r.w)();
-            let i = d.default.getCurrentUser(),
+            let i = c.default.getCurrentUser(),
                 s = a.Z.getSound(t, n),
                 h = (0, m.Z)(),
                 p = null != s && null != i && (0, o.Nq)(i, s, h);
             if (null == h) throw new u.Z({ errorCode: g.lT.INVALID_CHANNEL }, 'Invalid Channel.');
             if (p) {
-                if ((0, c.Z)(h)) null != s && (0, o.GN)(s, h.id, [l.Z.RPC]);
+                if ((0, d.Z)(h)) null != s && (0, o.GN)(s, h.id, [l.Z.RPC]);
                 else throw new u.Z({ errorCode: g.lT.INVALID_PERMISSIONS }, 'Invalid Permissions.');
             } else throw new u.Z({ errorCode: g.lT.INVALID_SOUND }, 'Invalid Sound.');
         }

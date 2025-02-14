@@ -32,8 +32,8 @@ var c = n(442837),
     N = n(543241),
     Z = n(318374),
     T = n(258609),
-    E = n(810568),
-    A = n(168524),
+    A = n(810568),
+    E = n(168524),
     _ = n(102172),
     S = n(871118),
     R = n(565138),
@@ -122,8 +122,8 @@ function eh(e) {
 function ep(e) {
     let { channel: t, user: n, generateReactionImage: i, reactionImageAltText: r, onReaction: o, entry: p, buttons: g = [], header: v, onVoiceChannelPreview: P } = e,
         [N, Z] = a.useState(!1),
-        [T, E] = a.useState(null),
-        A = (0, c.e7)([H.Z], () => null != t && es.TPd.CONTENT_ENTRY_EMBEDS.has(t.type) && H.Z.can(es.Plq.SEND_MESSAGES, t)),
+        [T, A] = a.useState(null),
+        E = (0, c.e7)([H.Z], () => null != t && es.TPd.CONTENT_ENTRY_EMBEDS.has(t.type) && H.Z.can(es.Plq.SEND_MESSAGES, t)),
         [_, S] = a.useState(!1),
         [b, q] = a.useState(!1),
         { voiceBar: J, joinVoiceButton: X } = (function (e) {
@@ -461,10 +461,10 @@ function ep(e) {
                         (0, l.jsx)(j.A7, {
                             placeholder: eh,
                             onEnter: eC,
-                            setEditorRef: (e) => E(e),
+                            setEditorRef: (e) => A(e),
                             channel: N ? t : void 0,
                             showEmojiButton: null != eI,
-                            renderAttachButton: A
+                            renderAttachButton: E
                                 ? () =>
                                       (0, l.jsx)(m.ua7, {
                                           text: ep,
@@ -685,11 +685,11 @@ function ej(e) {
     let { title: n, subtitle: a, badges: i, children: o, onClickThumbnail: s, onClickTitle: c, onClickSubtitle: d, headerIcons: u, disableGameProfileLinks: x = !1, showCoverImage: h = !0, onUserPopoutClosed: p, trackRankingItemInteraction: g, ...v } = e,
         { entry: C } = v,
         j = (0, X.dX)(C),
-        I = (0, A.Z)(
+        I = (0, E.Z)(
             {
                 location: 'ContentPopout',
                 applicationId: j && !x ? (null === (t = C.extra) || void 0 === t ? void 0 : t.application_id) : void 0,
-                source: E.m1.ActivityCard,
+                source: A.m1.ActivityCard,
                 trackEntryPointImpression: !0,
                 sourceUserId: C.author_id
             },
@@ -769,11 +769,11 @@ function eI(e) {
         [j] = a.useMemo(() => (0, _.p9)(C, F.Z, B.Z, H.Z, T.Z), [C]),
         { entry: I } = v,
         f = (0, X.dX)(I),
-        P = (0, A.Z)(
+        P = (0, E.Z)(
             {
                 location: 'ContentPopout',
                 applicationId: f ? (null === (t = I.extra) || void 0 === t ? void 0 : t.application_id) : void 0,
-                source: E.m1.ActivityCard,
+                source: A.m1.ActivityCard,
                 trackEntryPointImpression: !0,
                 sourceUserId: I.author_id
             },

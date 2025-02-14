@@ -37,7 +37,7 @@ function I(e) {
                 S(!1);
             }
         }, []),
-        k = r.useCallback(
+        O = r.useCallback(
             async (e) => {
                 try {
                     await g.Z.saveGuild(b, e, { throwErr: !0 });
@@ -47,7 +47,7 @@ function I(e) {
             },
             [b]
         ),
-        O = r.useCallback(
+        k = r.useCallback(
             async (e, t) => {
                 try {
                     await d.ZP.updateVerificationForm(b, e, t);
@@ -70,9 +70,9 @@ function I(e) {
                               }
                           ]
                         : [];
-                await O(n, e);
+                await k(n, e);
             },
-            [O]
+            [k]
         ),
         w = r.useCallback(() => {
             if (l.joinType === C.A.INVITE) {
@@ -81,7 +81,7 @@ function I(e) {
                 D(async () => {
                     if (I.hasFeature(v.oNc.DISCOVERABLE)) {
                         let e = new Set(I.features);
-                        e.delete(v.oNc.DISCOVERABLE), await k({ features: e });
+                        e.delete(v.oNc.DISCOVERABLE), await O({ features: e });
                     }
                     x.verificationDirty && (await P(e, n));
                 });
@@ -91,9 +91,9 @@ function I(e) {
                 D(async () => {
                     if (I.hasFeature(v.oNc.DISCOVERABLE)) {
                         let e = new Set(I.features);
-                        e.delete(v.oNc.DISCOVERABLE), await k({ features: e });
+                        e.delete(v.oNc.DISCOVERABLE), await O({ features: e });
                     }
-                    x.verificationDirty && (await O([...e], !0));
+                    x.verificationDirty && (await k([...e], !0));
                 });
             } else if (l.joinType === C.A.DISCOVERABLE) {
                 let { requireTerms: e, termRules: t = [] } = l,
@@ -104,7 +104,7 @@ function I(e) {
                         let e = new Set(I.features);
                         e.add(v.oNc.DISCOVERABLE),
                             e.delete(v.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL),
-                            await k({
+                            await O({
                                 features: e,
                                 discoverySplash: I.discoverySplash,
                                 description: I.description,
@@ -121,7 +121,7 @@ function I(e) {
                     }
                 });
             }
-        }, [l, D, I, x, k, P, O, _, E]),
+        }, [l, D, I, x, O, P, k, _, E]),
         M = r.useCallback(() => {
             let e = (e) => {
                     if (l.joinType === C.A.DISCOVERABLE && l.settingsView === f.U.ELIGIBLE_DISABLED) {

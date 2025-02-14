@@ -1,10 +1,10 @@
-n.d(t, { Z: () => E }), n(47120);
+n.d(t, { Z: () => x }), n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(120356),
-    a = n.n(l),
-    o = n(442837),
-    s = n(481060),
+    a = n(120356),
+    l = n.n(a),
+    s = n(442837),
+    o = n(481060),
     c = n(144114),
     d = n(742458),
     u = n(541692),
@@ -14,41 +14,41 @@ var i = n(200651),
     g = n(388032),
     p = n(179683),
     f = n(483938);
-let E = () => {
+let x = () => {
     let [e, t] = r.useState(''),
-        [l, E] = r.useState(''),
-        [x, I] = r.useState(!1),
+        [a, x] = r.useState(''),
+        [E, I] = r.useState(!1),
         [v, C] = r.useState(!1),
-        [N, S] = r.useState(null),
-        [T, A] = r.useState(null),
-        b = (0, o.e7)([u.Z], () => u.Z.getCountryCode()),
-        R = b.code.split(' ')[0],
+        [N, b] = r.useState(null),
+        [S, T] = r.useState(null),
+        A = (0, s.e7)([u.Z], () => u.Z.getCountryCode()),
+        R = A.code.split(' ')[0],
         Z = async () => {
             try {
                 await c.Z.resendCode(e);
             } catch (e) {
-                A(e.body.message);
+                T(e.body.message);
             }
         },
-        O = async () => {
+        j = async () => {
             I(!0);
             try {
-                let { token: t } = await c.Z.verifyPhone(R + e, l);
-                S(null), A(null), C(!0), c.Z.validatePhoneForSupport(t);
+                let { token: t } = await c.Z.verifyPhone(R + e, a);
+                b(null), T(null), C(!0), c.Z.validatePhoneForSupport(t);
             } catch (e) {
-                e.body.message ? (S(null), A(e.body.message)) : (S(e.body.phone), A(e.body.code));
+                e.body.message ? (b(null), T(e.body.message)) : (b(e.body.phone), T(e.body.code));
             } finally {
                 I(!1);
             }
         },
-        j = (0, i.jsxs)(_.ZP, {
+        O = (0, i.jsxs)(_.ZP, {
             children: [
                 (0, i.jsx)(_.Ee, { src: n(292824) }),
                 (0, i.jsxs)(_.Dx, {
-                    className: a()(f.marginTop20, p.flex, p.justifyCenter, p.alignCenter),
+                    className: l()(f.marginTop20, p.flex, p.justifyCenter, p.alignCenter),
                     children: [
                         g.intl.string(g.t.WWzQtb),
-                        (0, i.jsx)(s.owK, {
+                        (0, i.jsx)(o.owK, {
                             size: 'md',
                             color: 'currentColor',
                             className: f.marginLeft8
@@ -58,7 +58,7 @@ let E = () => {
             ]
         });
     return v
-        ? j
+        ? O
         : (0, i.jsxs)(_.ZP, {
               children: [
                   (0, i.jsx)(_.Dx, { children: g.intl.string(g.t.o4JNrK) }),
@@ -71,7 +71,7 @@ let E = () => {
                       children: [
                           (0, i.jsx)(h.Z, {
                               label: g.intl.string(g.t.eJnn09),
-                              alpha2: b.alpha2,
+                              alpha2: A.alpha2,
                               countryCode: R,
                               value: e,
                               autoComplete: 'off',
@@ -83,10 +83,10 @@ let E = () => {
                           (0, i.jsx)(_.II, {
                               className: f.marginTop20,
                               label: g.intl.string(g.t.OdzNbm),
-                              value: l,
-                              onChange: E,
+                              value: a,
+                              onChange: x,
                               maxLength: m.z,
-                              error: T
+                              error: S
                           }),
                           (0, i.jsx)(_.zx, {
                               size: _.zx.Sizes.SMALL,
@@ -96,8 +96,8 @@ let E = () => {
                           }),
                           (0, i.jsx)(_.zx, {
                               className: f.marginTop20,
-                              onClick: O,
-                              submitting: x,
+                              onClick: j,
+                              submitting: E,
                               children: g.intl.string(g.t.i4jeWV)
                           })
                       ]

@@ -5,18 +5,18 @@ var i = n(192379),
     a = n(493683),
     s = n(100527),
     o = n(906732),
-    c = n(835473),
-    d = n(703656),
+    d = n(835473),
+    c = n(703656),
     u = n(594174),
     h = n(122613),
     m = n(388032);
 function p(e) {
     var t, n;
     let { match: p } = e,
-        g = null !== (n = (0, d.DR)()) && void 0 !== n ? n : [],
+        g = null !== (n = (0, c.DR)()) && void 0 !== n ? n : [],
         { analyticsLocations: _ } = (0, o.ZP)([...g, s.Z.ACTIVITY_DETAIL_PAGE]),
         { applicationId: f } = p.params,
-        [E] = (0, c.Z)([f]),
+        [E] = (0, d.Z)([f]),
         I = null == E ? void 0 : null === (t = E.bot) || void 0 === t ? void 0 : t.id,
         C = (0, l.e7)([u.default], () => u.default.getCurrentUser());
     return (

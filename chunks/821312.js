@@ -13,8 +13,8 @@ var i = n(200651),
 function x(e) {
     let { guildId: t, transitionState: n, onClose: a } = e,
         [x, g] = l.useState([]),
-        [p, b] = l.useState(),
-        _ = [
+        [p, f] = l.useState(),
+        b = [
             {
                 text: m.intl.string(m.t['//3pvr']),
                 value: c.C2.DM_SPAM
@@ -40,7 +40,7 @@ function x(e) {
                 value: c.C2.OTHER
             }
         ];
-    function f(e) {
+    function v(e) {
         x.includes(e) ? g((t) => t.filter((t) => t !== e)) : g((t) => [...t, e]);
     }
     return null == t
@@ -82,7 +82,7 @@ function x(e) {
                   (0, i.jsx)(o.hzk, {
                       children: (0, i.jsx)('div', {
                           className: h.options,
-                          children: _.map((e) => {
+                          children: b.map((e) => {
                               let { text: t, value: n } = e;
                               return (0, i.jsxs)(
                                   'div',
@@ -91,14 +91,14 @@ function x(e) {
                                       children: [
                                           (0, i.jsxs)(o.P3F, {
                                               className: h.optionText,
-                                              onClick: () => f(n),
+                                              onClick: () => v(n),
                                               children: [
                                                   (0, i.jsx)('div', {
                                                       children: (0, i.jsx)(o.XZJ, {
                                                           type: o.XZJ.Types.INVERTED,
                                                           size: 20,
                                                           value: x.includes(n),
-                                                          onChange: () => f(n)
+                                                          onChange: () => v(n)
                                                       })
                                                   }),
                                                   (0, i.jsx)(o.Text, {
@@ -115,7 +115,7 @@ function x(e) {
                                                   children: (0, i.jsx)(o.Kx8, {
                                                       className: h.serverLockdownReasonText,
                                                       placeholder: m.intl.string(m.t['PAM+JS']),
-                                                      onChange: (e) => b(e),
+                                                      onChange: (e) => f(e),
                                                       value: p,
                                                       rows: 2,
                                                       autoFocus: !0,

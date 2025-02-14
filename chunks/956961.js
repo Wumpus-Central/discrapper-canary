@@ -16,8 +16,8 @@ var i = n(200651),
     f = n(695346),
     x = n(592125),
     C = n(655354),
-    v = n(324081),
-    E = n(791914),
+    E = n(324081),
+    v = n(791914),
     I = n(981631),
     N = n(388032),
     S = n(858430),
@@ -37,7 +37,7 @@ function A(e) {
     return (0, i.jsxs)('div', {
         className: S.container,
         children: [
-            (0, i.jsx)(E.Z, {
+            (0, i.jsx)(v.Z, {
                 tab: d.X.TODOS,
                 setTab: t,
                 closePopout: n
@@ -72,17 +72,17 @@ function j(e) {
         g = () => {
             (0, h.uL)(I.Z5c.CHANNEL(null == d ? void 0 : d.getGuildId(), a.channelId, a.messageId));
         },
-        E = null;
+        v = null;
     return (null != a.dueAt &&
         (a.dueAt > new Date()
             ? ((t = 'text-muted'),
-              (E = N.intl.formatToPlainString(N.t.H4gnX1, {
+              (v = N.intl.formatToPlainString(N.t.H4gnX1, {
                   duration: o()
                       .duration(a.dueAt.getTime() - Date.now(), 'millisecond')
                       .humanize()
               })))
             : ((t = 'text-danger'),
-              (E = N.intl.formatToPlainString(N.t['Uq7Y+/'], {
+              (v = N.intl.formatToPlainString(N.t['Uq7Y+/'], {
                   duration: o()
                       .duration(Date.now() - a.dueAt.getTime(), 'millisecond')
                       .humanize()
@@ -92,7 +92,7 @@ function j(e) {
         : (0, i.jsxs)('div', {
               className: T.container,
               children: [
-                  (0, i.jsx)(v.Z, {
+                  (0, i.jsx)(E.Z, {
                       channel: d,
                       gotoChannel: g,
                       children: (0, i.jsxs)('div', {
@@ -113,11 +113,11 @@ function j(e) {
                                         ]
                                     })
                                   : null,
-                              null != E
+                              null != v
                                   ? (0, i.jsx)(u.Text, {
                                         variant: 'text-sm/medium',
                                         color: t,
-                                        children: E
+                                        children: v
                                     })
                                   : null,
                               (0, i.jsx)(u.DY3, {

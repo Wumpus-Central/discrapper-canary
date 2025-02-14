@@ -5,35 +5,35 @@ n.d(t, {
 }),
     n(47120),
     n(653041);
-var r = n(200651),
-    o = n(192379),
-    s = n(995295),
-    a = n(642128),
+var s = n(200651),
+    r = n(192379),
+    a = n(995295),
+    o = n(642128),
     i = n(393238),
     l = n(743294);
-let c = o.createContext({
+let c = r.createContext({
         registerComponent: () => {},
         unregisterComponent: () => {},
         animatedComponents: {},
-        expandedContentRef: o.createRef(),
-        collapsedContentRef: o.createRef(),
+        expandedContentRef: r.createRef(),
+        collapsedContentRef: r.createRef(),
         recalculateAnimationPositions: () => {},
         animatedComponentProps: [],
         expansionSpring: null,
         mountPoints: new Map()
     }),
-    d = o.forwardRef(function (e, t) {
+    d = r.forwardRef(function (e, t) {
         var n;
         let { children: l, id: d, inState: u, isTextTransition: p = !1 } = e,
-            { recalculateAnimationPositions: m, registerComponent: x, unregisterComponent: h, expansionSpring: g, mountPoints: f } = o.useContext(c),
-            _ = o.useRef(null),
-            C = o.useRef(null),
-            v = o.useRef();
-        o.useEffect(() => {
+            { recalculateAnimationPositions: m, registerComponent: x, unregisterComponent: h, expansionSpring: g, mountPoints: f } = r.useContext(c),
+            v = r.useRef(null),
+            _ = r.useRef(null),
+            C = r.useRef();
+        r.useEffect(() => {
             m();
         }, [m]),
-            o.useLayoutEffect(() => {
-                let e = _.current;
+            r.useLayoutEffect(() => {
+                let e = v.current;
                 return (
                     null != e && x(e, d, u),
                     () => {
@@ -41,25 +41,25 @@ let c = o.createContext({
                     }
                 );
             }, [d, u, x, h]);
-        let j = o.useCallback(
+        let j = r.useCallback(
             (e) => {
                 let { height: t } = e;
-                v.current !== t && (m(), (v.current = t));
+                C.current !== t && (m(), (C.current = t));
             },
             [m]
         );
-        (0, i.P)(_, j);
+        (0, i.P)(v, j);
         let b = null === (n = f.get(d)) || void 0 === n ? void 0 : n.current,
             T = null;
         return (
             null == b
                 ? (T = null)
                 : p && null != g
-                  ? (T = (0, r.jsxs)(r.Fragment, {
+                  ? (T = (0, s.jsxs)(s.Fragment, {
                         children: [
                             'collapsed' === u &&
-                                (0, s.createPortal)(
-                                    (0, r.jsx)(a.animated.div, {
+                                (0, a.createPortal)(
+                                    (0, s.jsx)(o.animated.div, {
                                         style: {
                                             position: 'absolute',
                                             opacity: g.to({
@@ -67,13 +67,13 @@ let c = o.createContext({
                                                 output: [1, 0]
                                             })
                                         },
-                                        children: l(C)
+                                        children: l(_)
                                     }),
                                     b
                                 ),
                             'expanded' === u &&
-                                (0, s.createPortal)(
-                                    (0, r.jsx)(a.animated.div, {
+                                (0, a.createPortal)(
+                                    (0, s.jsx)(o.animated.div, {
                                         style: {
                                             position: 'absolute',
                                             opacity: g.to({
@@ -81,65 +81,65 @@ let c = o.createContext({
                                                 output: [0, 1]
                                             })
                                         },
-                                        children: l(C)
+                                        children: l(_)
                                     }),
                                     b
                                 )
                         ]
                     }))
-                  : 'collapsed' === u && (T = (0, s.createPortal)(l(C), b)),
-            (0, r.jsxs)('div', {
+                  : 'collapsed' === u && (T = (0, a.createPortal)(l(_), b)),
+            (0, s.jsxs)('div', {
                 style: { opacity: (null == T && 'collapsed' === u) || null == b ? 1 : 0 },
                 ref: t,
-                children: [l(_), T]
+                children: [l(v), T]
             })
         );
     }),
     u = (e) => {
-        let { children: t, expandedContentRef: n, collapsedContentRef: s, expansionSpring: a } = e,
-            [i, d] = o.useState({}),
-            [u, p] = o.useState([]),
-            [m, x] = o.useState(() => new Map()),
-            h = o.useCallback((e, t, n) => {
-                d((r) => {
-                    var o;
-                    let s =
-                        null !== (o = r[t]) && void 0 !== o
-                            ? o
+        let { children: t, expandedContentRef: n, collapsedContentRef: a, expansionSpring: o } = e,
+            [i, d] = r.useState({}),
+            [u, p] = r.useState([]),
+            [m, x] = r.useState(() => new Map()),
+            h = r.useCallback((e, t, n) => {
+                d((s) => {
+                    var r;
+                    let a =
+                        null !== (r = s[t]) && void 0 !== r
+                            ? r
                             : {
                                   expanded: null,
                                   collapsed: null
                               };
                     return {
-                        ...r,
+                        ...s,
                         [t]: {
-                            ...s,
+                            ...a,
                             [n]: e
                         }
                     };
                 }),
                     x((e) => {
                         let n = new Map(e);
-                        return n.set(t, o.createRef()), n;
+                        return n.set(t, r.createRef()), n;
                     });
             }, []),
-            g = o.useCallback((e, t) => {
+            g = r.useCallback((e, t) => {
                 let n = !1;
-                d((r) => {
-                    var o;
-                    let s =
-                        null !== (o = r[e]) && void 0 !== o
-                            ? o
+                d((s) => {
+                    var r;
+                    let a =
+                        null !== (r = s[e]) && void 0 !== r
+                            ? r
                             : {
                                   expanded: null,
                                   collapsed: null
                               };
                     return (
-                        (s[t] = null),
-                        (n = null == s.expanded && null == s.collapsed),
+                        (a[t] = null),
+                        (n = null == a.expanded && null == a.collapsed),
                         {
-                            ...r,
-                            [e]: s
+                            ...s,
+                            [e]: a
                         }
                     );
                 }),
@@ -149,22 +149,22 @@ let c = o.createContext({
                             return n.delete(e), n;
                         });
             }, []),
-            f = o.useCallback(() => {
+            f = r.useCallback(() => {
                 let e = [];
                 for (let t in i) {
-                    if (null == i[t] || null == n.current || null == s.current) continue;
-                    let r = i[t].collapsed,
-                        o = i[t].expanded;
-                    if (null == r || null == o) continue;
-                    let a = o.getBoundingClientRect(),
+                    if (null == i[t] || null == n.current || null == a.current) continue;
+                    let s = i[t].collapsed,
+                        r = i[t].expanded;
+                    if (null == s || null == r) continue;
+                    let o = r.getBoundingClientRect(),
                         c = n.current.getBoundingClientRect(),
-                        d = r.getBoundingClientRect(),
-                        u = s.current.getBoundingClientRect(),
-                        p = a.top - c.top + l.Li,
+                        d = s.getBoundingClientRect(),
+                        u = a.current.getBoundingClientRect(),
+                        p = o.top - c.top + l.Li,
                         m = d.top - u.top,
-                        x = a.left - c.left + l.Li,
+                        x = o.left - c.left + l.Li,
                         h = d.left - u.left,
-                        g = -a.right + c.right + l.Li,
+                        g = -o.right + c.right + l.Li,
                         f = -d.right + u.right;
                     e.push({
                         id: t,
@@ -174,21 +174,21 @@ let c = o.createContext({
                         expandedRight: g,
                         collapsedTop: m,
                         expandedTop: p,
-                        width: a.width
+                        width: o.width
                     });
                 }
                 p(e);
-            }, [i, n, s, p]);
-        return (0, r.jsx)(c.Provider, {
+            }, [i, n, a, p]);
+        return (0, s.jsx)(c.Provider, {
             value: {
                 registerComponent: h,
                 unregisterComponent: g,
                 animatedComponents: i,
                 expandedContentRef: n,
-                collapsedContentRef: s,
+                collapsedContentRef: a,
                 recalculateAnimationPositions: f,
                 animatedComponentProps: u,
-                expansionSpring: a,
+                expansionSpring: o,
                 mountPoints: m
             },
             children: t

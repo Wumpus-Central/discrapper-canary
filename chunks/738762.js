@@ -5,13 +5,13 @@ var i = n(200651),
     a = n(493683),
     s = n(367907),
     o = n(205129),
-    c = n(626135),
-    d = n(981631),
+    d = n(626135),
+    c = n(981631),
     u = n(388032);
 function h(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         { priorityMembers: n, partiedMembers: h } = e,
-        m = l.useContext(c.AnalyticsContext),
+        m = l.useContext(d.AnalyticsContext),
         p = n.map((e) => {
             let { user: t } = e;
             return t.id;
@@ -23,10 +23,10 @@ function h(e) {
               id: 'message',
               action: function () {
                   a.Z.openPrivateChannel(p).then((t) =>
-                      s.ZP.trackWithMetadata(d.rMx.ACTIVITY_FEED_DM_VISITED, {
+                      s.ZP.trackWithMetadata(c.rMx.ACTIVITY_FEED_DM_VISITED, {
                           source: {
                               ...m.location,
-                              object: d.qAy.LIST_ITEM
+                              object: c.qAy.LIST_ITEM
                           },
                           channel_id: t,
                           recipient_id: 'string' == typeof p ? p : p[0],

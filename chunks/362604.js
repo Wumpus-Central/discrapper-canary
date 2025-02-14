@@ -17,14 +17,14 @@ var i = n(200651),
     x = n(635511);
 function C(e) {
     let { message: t, channel: a, compact: C } = e,
-        v = (0, s.Wu)([u.Z], () => Array.from(u.Z.getAllGuildStickers().values()).flat()).slice(0, 20),
-        [E, I] = l.useState(null);
+        E = (0, s.Wu)([u.Z], () => Array.from(u.Z.getAllGuildStickers().values()).flat()).slice(0, 20),
+        [v, I] = l.useState(null);
     return (l.useEffect(() => {
         let e = setInterval(() => {
-            v.length > 0 && I(v[Math.floor(Math.random() * v.length)]);
+            E.length > 0 && I(E[Math.floor(Math.random() * E.length)]);
         }, 500);
         return () => clearInterval(e);
-    }, [v]),
+    }, [E]),
     null == a.guild_id)
         ? null
         : (0, i.jsxs)('div', {
@@ -82,10 +82,10 @@ function C(e) {
                                           (0, p.O)(t.id, a);
                                   },
                                   children:
-                                      null != E
+                                      null != v
                                           ? (0, i.jsx)(m.ZP, {
                                                 size: 32,
-                                                sticker: E
+                                                sticker: v
                                             })
                                           : (0, i.jsx)(o.EO4, {
                                                 size: 'md',

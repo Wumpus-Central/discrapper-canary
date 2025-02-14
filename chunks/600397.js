@@ -23,7 +23,7 @@ function p(e) {
         })(),
         C = (0, a.q)(t.applicationId);
     if (null == C) return null;
-    let v = _.intl.format(_.t.m7Lwam, {
+    let E = _.intl.format(_.t.m7Lwam, {
         username: f,
         usernameHook: x,
         gameName: C.name,
@@ -50,6 +50,6 @@ function p(e) {
         iconNode: (0, i.jsx)(l.iWm, { size: 'sm' }),
         compact: g,
         contentClassName: h.content,
-        children: (0, i.jsx)('div', { children: v })
+        children: (0, i.jsx)('div', { children: E })
     });
 }
