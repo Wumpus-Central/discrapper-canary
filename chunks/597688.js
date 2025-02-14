@@ -58,7 +58,18 @@ let m = new Map(),
         (I = m), (T = g), (A = y), (C = !1), (R = new Set()), (i = t), (a = Date.now());
     },
     U = (e) => {
-        0 === e.categories.length ? ((I = m), (T = g)) : (0, o.isEqual)([...I.values()], e.categories) || ((I = new Map(e.categories.map((e) => [e.skuId, e]))), (S = new Map(e.categories.map((e) => [e.storeListingId, e]))), (T = new Map((0, _.Cs)(I, !0).map((e) => [e.skuId, e]))), (b = new Map((0, _.Cs)(I, !1).map((e) => [e.storeListingId, e])))), B(e.categories, T), (r = Date.now()), (C = !1), (i = void 0), (a = void 0);
+        if (0 === e.categories.length) (I = m), (T = g);
+        else if (!(0, o.isEqual)([...I.values()], e.categories)) {
+            let t = new Map(e.categories.map((e) => [e.skuId, e])),
+                n = new Date();
+            I.forEach((e, i) => {
+                !t.has(i) && (null == e.unpublishedAt || e.unpublishedAt > n) && t.set(i, e);
+            }),
+                (S = new Map((I = t).values().map((e) => [e.storeListingId, e]))),
+                (T = new Map((0, _.Cs)(I, !0).map((e) => [e.skuId, e]))),
+                (b = new Map((0, _.Cs)(I, !1).map((e) => [e.storeListingId, e])));
+        }
+        B(e.categories, T), (r = Date.now()), (C = !1), (i = void 0), (a = void 0);
     },
     G = (e) => {
         if (0 === e.shopHome.categories.length) return;
