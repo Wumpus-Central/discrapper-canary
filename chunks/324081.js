@@ -178,7 +178,10 @@ function P(e) {
             };
         }),
         { voiceActivityStatusEnabled: o } = (0, c.U)({ location: 'RecentsChannelHeader' }),
-        { voiceChannel: _ } = (0, u.Z)({ userId: null == n ? void 0 : n.id }),
+        { voiceChannel: _ } = (0, u.Z)({
+            userId: null == n ? void 0 : n.id,
+            surface: 'recents-channel-header'
+        }),
         h = o ? _ : void 0;
     return (0, d.Z)({
         activities: a,

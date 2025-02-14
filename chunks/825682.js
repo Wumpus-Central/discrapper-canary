@@ -14,7 +14,10 @@ let m = function (e) {
     let { hovered: t, activities: n, applicationStream: m, status: p, user: g, userIgnored: _ } = e,
         f = (0, d.Z)(null == g ? void 0 : g.id, 'StatusText'),
         { voiceActivityStatusEnabled: E } = (0, l.U)({ location: 'StatusText' }),
-        { voiceChannel: I } = (0, a.Z)({ userId: null == g ? void 0 : g.id }),
+        { voiceChannel: I } = (0, a.Z)({
+            userId: null == g ? void 0 : g.id,
+            surface: 'status-text'
+        }),
         C = E ? I : void 0;
     return _
         ? (0, i.jsx)('div', {

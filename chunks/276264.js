@@ -50,7 +50,8 @@ let U = (0, D.Mg)(o.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
             [ev, ey] = r.useState(null),
             { voiceChannel: eI } = (0, f.Z)({
                 userId: e_,
-                guildId: X
+                guildId: X,
+                surface: 'member-list-item'
             }),
             { voiceActivityStatusEnabled: eT } = (0, c.U)({ location: 'MemberListItem' }),
             eb = eT ? eI : void 0,

@@ -416,7 +416,10 @@ let er = (e) => {
         ),
         _ = (0, H.Z)(null == r ? void 0 : r.id, 'PrivateChannel'),
         { voiceActivityStatusEnabled: h } = (0, I.U)({ location: 'PrivateChannel' }),
-        { voiceChannel: C } = (0, S.Z)({ userId: d }),
+        { voiceChannel: C } = (0, S.Z)({
+            userId: d,
+            surface: 'private-channel'
+        }),
         T = (0, E.e7)(
             [W.default, B.Z],
             () =>

@@ -13,11 +13,11 @@ var l = t(442837),
     f = t(29899),
     p = t(678738),
     x = t(151545),
-    h = t(744802),
-    m = t(493043),
+    m = t(744802),
+    h = t(493043),
     _ = t(864141),
-    Z = t(228168),
-    v = t(981631),
+    v = t(228168),
+    Z = t(981631),
     g = t(388032),
     j = t(488909),
     E = t(547759);
@@ -28,7 +28,8 @@ function y(e) {
         { live: L, recent: C, stream: A } = (0, I.Z)(n.id),
         { voiceChannel: O, voiceActivity: R } = (0, f.Z)({
             userId: n.id,
-            guildId: N
+            guildId: N,
+            surface: 'user-profile-modal-activity'
         }),
         M = (0, l.e7)([r.Z], () => r.Z.isFetchingUserOutbox(n.id)),
         U = n.id === t.id,
@@ -48,7 +49,7 @@ function y(e) {
                       ? (0, i.jsxs)(p.Z, {
                             children: [
                                 null != A &&
-                                    (0, i.jsx)(m.Z, {
+                                    (0, i.jsx)(h.Z, {
                                         location: 'UserProfileModalActivity',
                                         user: n,
                                         currentUser: t,
@@ -87,17 +88,17 @@ function y(e) {
                                           (0, i.jsx)(
                                               o.eee,
                                               {
-                                                  href: c.Z.getArticleURL(v.BhN.ACTIVITY_STATUS_SETTINGS),
+                                                  href: c.Z.getArticleURL(Z.BhN.ACTIVITY_STATUS_SETTINGS),
                                                   children: e
                                               },
                                               n
                                           )
                                   })
                                 : void 0,
-                            scrollIntoView: T === Z.Tb.RECENT_ACTIVITY,
+                            scrollIntoView: T === v.Tb.RECENT_ACTIVITY,
                             children: C.map((e) =>
                                 (0, i.jsx)(
-                                    h.Z,
+                                    m.Z,
                                     {
                                         location: 'UserProfileModalActivity',
                                         user: n,

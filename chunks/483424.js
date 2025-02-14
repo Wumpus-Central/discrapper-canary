@@ -22,7 +22,8 @@ function y(e) {
         [C] = S,
         { voiceChannel: R, voiceActivity: O } = (0, p.Z)({
             userId: t.id,
-            guildId: I
+            guildId: I,
+            surface: 'user-profile-featured-activity'
         }),
         D = null != C && C === O,
         L = t.id === n.id,
