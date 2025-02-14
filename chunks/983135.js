@@ -1,8 +1,8 @@
 t.d(n, {
     $K: () => p,
-    IG: () => j,
+    IG: () => C,
     Nb: () => v,
-    Ts: () => C,
+    Ts: () => j,
     Wy: () => D,
     di: () => O
 }),
@@ -21,8 +21,8 @@ var l = t(570140),
     h = t(430824),
     N = t(823379),
     g = t(434404),
-    x = t(889369),
-    E = t(570961),
+    E = t(889369),
+    x = t(570961),
     T = t(84658),
     S = t(176505),
     _ = t(290511),
@@ -40,9 +40,9 @@ function v(e) {
             upsellType: e
         });
 }
-async function C(e, n) {
+async function j(e, n) {
     let t = a.Z.getEnabled(e),
-        r = Array.from(x.Z.editedDefaultChannelIds).filter((e) => null != I.Z.getChannel(e)),
+        r = Array.from(E.Z.editedDefaultChannelIds).filter((e) => null != I.Z.getChannel(e)),
         [o, c] = (0, d.d9)(e, [...r]);
     if (t && n === _.Un.ONBOARDING_DEFAULT && (c.length < _.md || o.length < _.X)) {
         i.Z.show({
@@ -52,7 +52,7 @@ async function C(e, n) {
         return;
     }
     try {
-        await (0, E.n_)(e, { mode: n });
+        await (0, x.n_)(e, { mode: n });
     } catch (t) {
         var u;
         let { fieldName: e, error: n } = null !== (u = new s.Z(t).getAnyErrorMessageAndField()) && void 0 !== u ? u : {};
@@ -67,7 +67,7 @@ async function C(e, n) {
         mode: n
     });
 }
-function j(e, n) {
+function C(e, n) {
     let t = T.xh.findIndex((e) => e === n);
     -1 !== t && t !== T.xh.length - 1 && p(T.xh[t + 1]);
 }

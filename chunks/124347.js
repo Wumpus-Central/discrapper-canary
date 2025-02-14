@@ -358,7 +358,7 @@ class R extends (i = a.Component) {
             (0, f.Vv)(this.getSrc(this.getRatio(), R.isAnimated(this.props))) && (this.state.readyState = v.zo9.READY);
     }
 }
-I(R, 'visibilityObserver', new l.Z({ threshold: 0.7 })),
+I(R, 'visibilityObserver', new l.Z({ threshold: 0.6 })),
     I(R, 'defaultProps', {
         shouldLink: !1,
         autoPlay: !1,

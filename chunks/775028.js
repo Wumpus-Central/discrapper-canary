@@ -8,8 +8,8 @@ var l = t(200651),
     d = t(692547),
     c = t(481060),
     u = t(239091),
-    m = t(111028),
-    h = t(605236),
+    h = t(111028),
+    m = t(605236),
     x = t(66999),
     _ = t(549631),
     p = t(473403),
@@ -80,10 +80,10 @@ function R(e) {
         ]
     });
 }
-let P = i.memo(function () {
+let k = i.memo(function () {
         return (0, l.jsx)('div', { className: T.separator });
     }),
-    k = i.memo(function (e) {
+    P = i.memo(function (e) {
         let { index: n } = e;
         return (0, l.jsx)(
             c.Text,
@@ -96,7 +96,7 @@ let P = i.memo(function () {
         );
     }),
     L = i.memo(function (e) {
-        let { channel: n, category: i, guild: a, isFirstChannel: s, isLastChannel: h, onChannelClick: Z, tooltipDirection: E = 'right' } = e,
+        let { channel: n, category: i, guild: a, isFirstChannel: s, isLastChannel: m, onChannelClick: Z, tooltipDirection: E = 'right' } = e,
             { isSubscriptionGated: R } = (0, x.Z)(n.id),
             L = (0, b.Mf)(a.id, n.id, i.id),
             O = (0, b.t4)(a.id, n.id, i.id),
@@ -159,7 +159,7 @@ let P = i.memo(function () {
                         e.topic.length > 0 &&
                         t.push(
                             (0, l.jsx)(
-                                m.Z,
+                                h.Z,
                                 {
                                     children: (0, l.jsx)(c.Text, {
                                         className: T.topic,
@@ -170,7 +170,7 @@ let P = i.memo(function () {
                                 'topic'
                             )
                         ),
-                    [t.map((e, n) => [e, (0, l.jsx)(k, { index: n }, 'subtitle-separator-'.concat(n))])].flat(2).slice(0, -1)
+                    [t.map((e, n) => [e, (0, l.jsx)(P, { index: n }, 'subtitle-separator-'.concat(n))])].flat(2).slice(0, -1)
                 );
             })(n, D),
             W = (e) => (
@@ -199,7 +199,7 @@ let P = i.memo(function () {
                         (0, l.jsxs)(c.P3F, {
                             className: r()(T.channelRow, {
                                 [T.firstChannel]: s,
-                                [T.lastChannel]: h,
+                                [T.lastChannel]: m,
                                 [T.disabled]: O
                             }),
                             ...e,
@@ -216,7 +216,7 @@ let P = i.memo(function () {
                                                     channel: n,
                                                     guild: a
                                                 }),
-                                                (0, l.jsx)(m.Z, {
+                                                (0, l.jsx)(h.Z, {
                                                     className: T.__invalid_name,
                                                     children: (0, l.jsx)(c.Text, {
                                                         className: T.channelText,
@@ -271,19 +271,19 @@ let P = i.memo(function () {
                             ]
                         })
                 }),
-                !h && (0, l.jsx)(P, {})
+                !m && (0, l.jsx)(k, {})
             ]
         });
     });
 function O(e) {
     let { categories: n, guild: t, className: a, innerClassName: o, hasSidebar: d } = e,
         { onChannelClick: u } = (0, Z.Z)(t.id),
-        m = (0, h.wE)(s.z.CHANNEL_BROWSER_NUX) ? 0 : -1,
+        h = (0, m.wE)(s.z.CHANNEL_BROWSER_NUX) ? 0 : -1,
         x = i.useCallback(
             (e) => {
                 let { section: i } = e;
-                if (0 === i && -1 === m) return null;
-                let a = n._categories[i + m];
+                if (0 === i && -1 === h) return null;
+                let a = n._categories[i + h];
                 return (0, l.jsx)(
                     R,
                     {
@@ -294,13 +294,13 @@ function O(e) {
                     a.channel.id
                 );
             },
-            [n, t, m, u]
+            [n, t, h, u]
         ),
         _ = i.useCallback(
             (e) => {
                 let { section: i, row: a } = e;
-                if (0 === i && -1 === m) return (0, l.jsx)(E.Z, { guild: t });
-                let r = n._categories[i + m],
+                if (0 === i && -1 === h) return (0, l.jsx)(E.Z, { guild: t });
+                let r = n._categories[i + h],
                     o = n[r.channel.id][a];
                 return null == o
                     ? null
@@ -318,7 +318,7 @@ function O(e) {
                           o.channel.id
                       );
             },
-            [n, t, m, d, u]
+            [n, t, h, d, u]
         ),
         p = (0, E.q)(t.id),
         f = (0, N.tn)(t.id, n, 64, p);

@@ -42,7 +42,7 @@ function g(e) {
         : null;
 }
 function p(e) {
-    let { color: t, id: s, role: a, guild: c, children: p, isDragging: x, selectedItem: f, onItemSelect: j, itemType: v, locked: C, lockTooltip: N, showContextMenu: b, theme: Z, roleStyle: T, 'aria-label': S } = e,
+    let { color: t, id: s, role: a, guild: c, children: p, isDragging: x, selectedItem: f, onItemSelect: v, itemType: j, locked: C, lockTooltip: N, showContextMenu: Z, theme: b, roleStyle: T, 'aria-label': S } = e,
         E = l.useCallback(
             (e) => {
                 (0, d.jW)(e, async () => {
@@ -63,8 +63,8 @@ function p(e) {
               className: m.role,
               id: s,
               selectedItem: f,
-              onItemSelect: j,
-              itemType: v,
+              onItemSelect: v,
+              itemType: j,
               'aria-label': null != N ? ''.concat(S, ', ').concat(N) : S,
               children: (0, i.jsxs)('div', {
                   className: m.roleContent,
@@ -82,7 +82,7 @@ function p(e) {
                             }),
                       (function () {
                           if (!C) return null;
-                          let e = (0, r.wj)(Z) ? n(27377) : n(514811);
+                          let e = (0, r.wj)(b) ? n(27377) : n(514811);
                           return (0, i.jsx)(o.ua7, {
                               text: N,
                               color: o.ua7.Colors.RED,
@@ -99,7 +99,7 @@ function p(e) {
                           onContextMenu: E,
                           children: p
                       }),
-                      b && null != a
+                      Z && null != a
                           ? (0, i.jsx)(g, {
                                 guild: c,
                                 role: a

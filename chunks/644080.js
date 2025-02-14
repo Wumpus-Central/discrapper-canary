@@ -16,10 +16,10 @@ var a = l(200651),
     C = l(709586),
     _ = l(768581),
     v = l(981631),
-    Z = l(388032),
-    I = l(700878),
-    p = l(63190),
-    j = l(102219);
+    I = l(388032),
+    Z = l(700878),
+    j = l(63190),
+    p = l(102219);
 let N = (e) => {
     let n = i.useMemo(
         () =>
@@ -44,8 +44,8 @@ function b(e) {
         };
     return n.hasFeature(v.oNc.BANNER)
         ? (0, a.jsxs)(o.zxk, {
-              className: I.editButton,
-              innerClassName: I.editButtonInner,
+              className: Z.editButton,
+              innerClassName: Z.editButtonInner,
               type: 'button',
               size: o.zxk.Sizes.MEDIUM,
               color: o.zxk.Colors.BRAND,
@@ -55,20 +55,20 @@ function b(e) {
                       size: 'xs',
                       color: d.Z.unsafe_rawColors.WHITE_500.css
                   }),
-                  Z.intl.string(Z.t.b0y3DA)
+                  I.intl.string(I.t.b0y3DA)
               ]
           })
         : (0, a.jsxs)(o.gtL, {
               color: o.zxk.Colors.GREEN,
-              className: I.editButton,
-              innerClassName: I.editButtonInner,
+              className: Z.editButton,
+              innerClassName: Z.editButtonInner,
               onClick: l,
               children: [
                   (0, a.jsx)(C.Z, {
                       height: 16,
                       width: 16
                   }),
-                  Z.intl.string(Z.t['+7XY39'])
+                  I.intl.string(I.t['+7XY39'])
               ]
           });
 }
@@ -79,35 +79,35 @@ let E = i.memo(function (e) {
         C = (0, s.e7)([f.Z], () => (0, x.b)(f.Z, n)),
         _ = (0, c.ZP)();
     return (0, a.jsxs)('div', {
-        className: I.header,
+        className: Z.header,
         children: [
             (0, a.jsxs)('div', {
-                className: I.headerArtWrapper,
+                className: Z.headerArtWrapper,
                 children: [
                     (0, a.jsx)('div', {
-                        className: r()(I.headerArt, { [I.headerArtPlaceholder]: !d }),
-                        style: { backgroundImage: 'url('.concat(d ? t : 'dark' === _ ? p : j, ')') }
+                        className: r()(Z.headerArt, { [Z.headerArtPlaceholder]: !d }),
+                        style: { backgroundImage: 'url('.concat(d ? t : 'dark' === _ ? j : p, ')') }
                     }),
                     g && (0, a.jsx)(b, { guild: n })
                 ]
             }),
             (0, a.jsx)('div', {
-                className: I.titleWrapper,
+                className: Z.titleWrapper,
                 children: (0, a.jsxs)('div', {
                     className: i,
                     children: [
                         (0, a.jsx)(u.Z, {
-                            className: I.headerIcon,
+                            className: Z.headerIcon,
                             guild: n,
                             size: u.Z.Sizes.XLARGE,
                             active: !0
                         }),
                         (0, a.jsx)(o.y5t, {
                             children: (0, a.jsxs)('div', {
-                                className: I.headerName,
+                                className: Z.headerName,
                                 children: [
                                     (0, a.jsx)(o.X6q, {
-                                        className: I.headerName,
+                                        className: Z.headerName,
                                         variant: 'heading-xxl/bold',
                                         children: n.name
                                     }),
@@ -119,7 +119,7 @@ let E = i.memo(function (e) {
                                     }),
                                     C &&
                                         (0, a.jsx)(o.zxk, {
-                                            className: I.inviteButton,
+                                            className: Z.inviteButton,
                                             size: o.zxk.Sizes.MEDIUM,
                                             color: o.zxk.Colors.PRIMARY,
                                             onClick: () =>
@@ -132,7 +132,7 @@ let E = i.memo(function (e) {
                                                             source: v.t4x.GUILD_HOME
                                                         });
                                                 }),
-                                            children: Z.intl.string(Z.t.VINpSE)
+                                            children: I.intl.string(I.t.VINpSE)
                                         })
                                 ]
                             })

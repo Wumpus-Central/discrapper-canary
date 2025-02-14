@@ -1,4 +1,4 @@
-n.d(t, { c: () => i });
+n.d(t, { cb: () => i });
 let i = [
     {
         name: 'Soul',

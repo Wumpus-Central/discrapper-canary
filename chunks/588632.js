@@ -10,7 +10,7 @@ function c(e) {
     return null != e && (null != e.id || null != e.name);
 }
 function u(e) {
-    let { options: n, value: t, onChange: u, canBeNew: m, memberCounts: h } = e,
+    let { options: n, value: t, onChange: u, canBeNew: h, memberCounts: m } = e,
         x = i.useMemo(() => {
             let e = new Map();
             return (
@@ -52,12 +52,12 @@ function u(e) {
                 if (null == e || n.inPill) return;
                 let t = x.get(e.value);
                 if (null == t || !c(t.emoji)) return;
-                let i = null == h || null == t.roleIds ? 0 : Math.max(...t.roleIds.map((e) => h[e])),
-                    o = null != h && i > 0;
+                let i = null == m || null == t.roleIds ? 0 : Math.max(...t.roleIds.map((e) => m[e])),
+                    o = null != m && i > 0;
                 return (0, l.jsxs)('div', {
                     className: d.suffix,
                     children: [
-                        m &&
+                        h &&
                             t.isUnseen &&
                             (0, l.jsx)(r.IGR, {
                                 color: a.Z.unsafe_rawColors.BRAND_260.css,
@@ -77,7 +77,7 @@ function u(e) {
                     ]
                 });
             },
-            [m, h, x]
+            [h, m, x]
         ),
         g = i.useCallback(
             (e) => {

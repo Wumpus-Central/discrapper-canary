@@ -1,6 +1,6 @@
 t.d(n, {
     Z: () => b,
-    k: () => Z
+    k: () => L
 }),
     t(789020);
 var l = t(200651),
@@ -17,21 +17,21 @@ var l = t(200651),
     h = t(937111),
     N = t(592125),
     g = t(271383),
-    x = t(430824),
-    E = t(496675),
+    E = t(430824),
+    x = t(496675),
     T = t(186523),
     S = t(768581),
     _ = t(630388),
     f = t(526120),
     p = t(563534),
     v = t(846121),
-    C = t(216701),
-    j = t(981631),
+    j = t(216701),
+    C = t(981631),
     D = t(308083),
     O = t(372897),
     G = t(388032),
     A = t(335322);
-function Z(e) {
+function L(e) {
     let { title: n, emojiId: t, emojiName: i, icon: s, completed: a, Icon: d, onClick: c, ...u } = e,
         m = 'channel' === u.variant ? u.channelId : null,
         I = 'static' === u.variant ? u.subtitle : u.channelName,
@@ -55,10 +55,10 @@ function Z(e) {
                       alt: '',
                       'aria-hidden': !0
                   })
-                : (0, l.jsx)(C.Z, {
+                : (0, l.jsx)(j.Z, {
                       emojiId: t,
                       emojiName: i,
-                      size: C.R.LARGE,
+                      size: j.R.LARGE,
                       defaultComponent: (0, l.jsx)('div', {
                           className: A.channelIconContainer,
                           children: (0, l.jsx)(d, {
@@ -99,20 +99,20 @@ function Z(e) {
         ]
     });
 }
-function L(e) {
+function Z(e) {
     var n;
     let { action: t, completed: s } = e,
         { channelId: r, title: u, emoji: m, icon: I } = t,
         { id: h, name: g } = null != m ? m : {},
-        x = (0, a.e7)([N.Z], () => N.Z.getChannel(r)),
-        T = (0, d.ZP)(x, !0),
-        S = (0, a.e7)([E.Z], () => E.Z.can(j.Plq.VIEW_CHANNEL, x)),
+        E = (0, a.e7)([N.Z], () => N.Z.getChannel(r)),
+        T = (0, d.ZP)(E, !0),
+        S = (0, a.e7)([x.Z], () => x.Z.can(C.Plq.VIEW_CHANNEL, E)),
         _ = i.useMemo(() => {
-            if (null != x) return () => (0, f.gp)(x.guild_id, x.id);
-        }, [x]);
-    if (null == x || !S) return null;
-    let p = null !== (n = (0, c.KS)(x)) && void 0 !== n ? n : o.VL1;
-    return (0, l.jsx)(Z, {
+            if (null != E) return () => (0, f.gp)(E.guild_id, E.id);
+        }, [E]);
+    if (null == E || !S) return null;
+    let p = null !== (n = (0, c.KS)(E)) && void 0 !== n ? n : o.VL1;
+    return (0, l.jsx)(L, {
         variant: 'channel',
         channelId: r,
         title: u,
@@ -131,8 +131,8 @@ function b(e) {
         s = (0, a.e7)([p.Z], () => p.Z.getNewMemberActions(t), [t]),
         d = (0, a.e7)([v.Z], () => v.Z.getCompletedActions(t)),
         c = (0, a.e7)([g.ZP], () => g.ZP.getSelfMember(t)),
-        N = (0, a.e7)([x.Z], () => x.Z.getGuild(t)),
-        E = null != N ? (0, m.ky)(N.id, null === (n = N.profile) || void 0 === n ? void 0 : n.badge, D.NC.SIZE_16) : null,
+        N = (0, a.e7)([E.Z], () => E.Z.getGuild(t)),
+        x = null != N ? (0, m.ky)(N.id, null === (n = N.profile) || void 0 === n ? void 0 : n.badge, D.NC.SIZE_16) : null,
         T = (0, a.e7)([h.Z], () => h.Z.getRequest(t));
     i.useEffect(() => {
         var e;
@@ -151,8 +151,8 @@ function b(e) {
                       color: 'header-primary',
                       children: G.intl.string(G.t.LhlgY2)
                   }),
-                  (null == N ? void 0 : N.hasFeature(j.oNc.CLAN)) &&
-                      null != E &&
+                  (null == N ? void 0 : N.hasFeature(C.oNc.CLAN)) &&
+                      null != x &&
                       (0, l.jsx)(o.P3F, {
                           className: A.clickableAction,
                           onClick: () => (0, u.CK)(t, null == T ? void 0 : T.joinRequestId),
@@ -162,7 +162,7 @@ function b(e) {
                                   (0, l.jsx)('div', {
                                       className: A.tagIconContainer,
                                       children: (0, l.jsx)(I.KQ, {
-                                          src: E,
+                                          src: x,
                                           size: D.NC.SIZE_16
                                       })
                                   }),
@@ -179,7 +179,7 @@ function b(e) {
                       }),
                   s.map((e) =>
                       (0, l.jsx)(
-                          L,
+                          Z,
                           {
                               action: e,
                               completed: (null == d ? void 0 : d[e.channelId]) === !0,

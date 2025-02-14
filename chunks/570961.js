@@ -1,9 +1,9 @@
 t.d(n, {
     $y: () => _,
-    Kk: () => x,
+    Kk: () => E,
     NB: () => g,
     en: () => v,
-    fi: () => E,
+    fi: () => x,
     n_: () => f,
     rS: () => S,
     tS: () => T
@@ -26,7 +26,7 @@ var l = t(544891),
 function g() {
     i.Z.dispatch({ type: 'GUILD_SETTINGS_ONBOARDING_PROMPTS_RESET' });
 }
-function x(e, n, t) {
+function E(e, n, t) {
     T(
         e,
         m.Z.editedOnboardingPrompts.map((e) =>
@@ -39,7 +39,7 @@ function x(e, n, t) {
         )
     );
 }
-function E(e, n) {
+function x(e, n) {
     T(
         e,
         m.Z.editedOnboardingPrompts.filter((e) => e.id !== n)
@@ -89,13 +89,13 @@ async function S(e, n) {
             };
         }),
         g = I.filter((e) => e.inOnboarding),
-        x = I.filter((e) => !0 !== e.inOnboarding),
-        E = I.map((n) => p(e, I, n));
-    if (E.filter(u.lm).length > 0)
+        E = I.filter((e) => !0 !== e.inOnboarding),
+        x = I.map((n) => p(e, I, n));
+    if (x.filter(u.lm).length > 0)
         throw (
             (i.Z.dispatch({
                 type: 'GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED',
-                errors: E
+                errors: x
             }),
             Error('failed to locally validate prompts'))
         );
@@ -107,11 +107,11 @@ async function S(e, n) {
             }),
             i.Z.dispatch({
                 type: 'GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED',
-                errors: E
+                errors: x
             }),
             Error('too many prompts in onboarding'))
         );
-    let T = [...g, ...x];
+    let T = [...g, ...E];
     i.Z.dispatch({ type: 'GUILD_SETTINGS_ONBOARDING_PROMPTS_SUBMIT' });
     try {
         await f(e.id, { prompts: T.map(h.dr) }),

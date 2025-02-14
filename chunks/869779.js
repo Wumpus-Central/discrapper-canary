@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => O });
+n.r(t), n.d(t, { default: () => B });
 var i = n(200651),
     l = n(192379),
     s = n(442837),
@@ -14,12 +14,12 @@ var i = n(200651),
     p = n(351123),
     x = n(685929),
     f = n(665906),
-    j = n(210887),
-    v = n(131704),
+    v = n(210887),
+    j = n(131704),
     C = n(533947),
     N = n(277053),
-    b = n(388610),
-    Z = n(592125),
+    Z = n(388610),
+    b = n(592125),
     T = n(496675),
     S = n(699516),
     E = n(594174),
@@ -55,7 +55,7 @@ class k extends l.PureComponent {
         (a || s || r || o) && (i !== A.QZA.CLOSED || i === t) && (s || l !== A.CoT.PERMISSIONS) && (r || o || l !== A.CoT.INTEGRATIONS) ? l !== n && P(l, n) : (0, d.xf)();
     }
     render() {
-        let { theme: e, sidebarTheme: t, section: n, channel: l, category: s, canManageRoles: r, canManageChannels: h, canDeleteChannels: x, canManageWebhooks: f, canUnlinkChannel: j } = this.props;
+        let { theme: e, sidebarTheme: t, section: n, channel: l, category: s, canManageRoles: r, canManageChannels: h, canDeleteChannels: x, canManageWebhooks: f, canUnlinkChannel: v } = this.props;
         return null == l
             ? null
             : (0, i.jsx)(c.ZP, {
@@ -68,8 +68,8 @@ class k extends l.PureComponent {
                       let { channel: t, category: n, canManageRoles: l, canManageChannels: s, canDeleteChannels: r, canManageWebhooks: c, canUnlinkChannel: h } = e,
                           x = (0, g.KS)(t),
                           { GUILD_CATEGORY: f } = A.d4z,
-                          j = v.Ec.has(t.type),
-                          Z = t.type === f ? M.intl.string(M.t.ifbXnJ) : j ? (t.isForumPost() ? M.intl.string(M.t.nEOg1N) : M.intl.string(M.t.H7vTe3)) : M.intl.string(M.t['8D8Rsb']);
+                          v = j.Ec.has(t.type),
+                          b = t.type === f ? M.intl.string(M.t.ifbXnJ) : v ? (t.isForumPost() ? M.intl.string(M.t.nEOg1N) : M.intl.string(M.t.H7vTe3)) : M.intl.string(M.t['8D8Rsb']);
                       return [
                           {
                               section: u.ID.HEADER,
@@ -106,7 +106,7 @@ class k extends l.PureComponent {
                               element: I.Z,
                               notice: {
                                   element: I.G,
-                                  stores: [b.Z]
+                                  stores: [Z.Z]
                               }
                           },
                           {
@@ -117,14 +117,14 @@ class k extends l.PureComponent {
                                   element: L.n,
                                   stores: [N.Z]
                               },
-                              predicate: () => l && !j
+                              predicate: () => l && !v
                           },
                           {
                               section: A.CoT.INSTANT_INVITES,
                               label: M.intl.string(M.t['9F90iY']),
                               element: w.Z,
                               type: u.bT.CUSTOM,
-                              predicate: () => t.type !== f && s && !j
+                              predicate: () => t.type !== f && s && !v
                           },
                           {
                               section: A.CoT.INTEGRATIONS,
@@ -135,7 +135,7 @@ class k extends l.PureComponent {
                                   stores: [C.Z],
                                   element: _.B
                               },
-                              predicate: () => (!!c || !!h) && v.Ti.has(t.type)
+                              predicate: () => (!!c || !!h) && j.Ti.has(t.type)
                           },
                           { section: u.ID.DIVIDER },
                           {
@@ -148,8 +148,8 @@ class k extends l.PureComponent {
                                           (0, d.xf)();
                                   });
                               },
-                              label: Z,
-                              ariaLabel: Z,
+                              label: b,
+                              ariaLabel: b,
                               icon: (0, i.jsx)(a.XHJ, {
                                   size: 'xs',
                                   color: 'currentColor'
@@ -164,17 +164,17 @@ class k extends l.PureComponent {
                       canManageChannels: h,
                       canDeleteChannels: x,
                       canManageWebhooks: f,
-                      canUnlinkChannel: j
+                      canUnlinkChannel: v
                   })
               });
     }
 }
-function O() {
-    let { channel: e, analyticsLocation: t } = (0, s.cj)([b.Z], () => b.Z.getProps()),
-        n = (0, s.e7)([b.Z], () => b.Z.getFormState()),
-        l = (0, s.e7)([b.Z], () => b.Z.getSection()),
-        a = (0, s.e7)([j.Z], () => j.Z.theme),
-        r = (0, s.e7)([j.Z], () => (j.Z.darkSidebar ? A.BRd.DARK : void 0)),
+function B() {
+    let { channel: e, analyticsLocation: t } = (0, s.cj)([Z.Z], () => Z.Z.getProps()),
+        n = (0, s.e7)([Z.Z], () => Z.Z.getFormState()),
+        l = (0, s.e7)([Z.Z], () => Z.Z.getSection()),
+        a = (0, s.e7)([v.Z], () => v.Z.theme),
+        r = (0, s.e7)([v.Z], () => (v.Z.darkSidebar ? A.BRd.DARK : void 0)),
         o = (0, f.C7)(e),
         d = (0, f.Xb)(e),
         {
@@ -188,7 +188,7 @@ function O() {
             canManageWebhooks: null != e && T.Z.can(A.Plq.MANAGE_WEBHOOKS, e),
             canUnlinkChannel: (0, x.C)(e, T.Z)
         })),
-        g = (0, s.e7)([Z.Z], () => Z.Z.getChannel(null == e ? void 0 : e.parent_id));
+        g = (0, s.e7)([b.Z], () => b.Z.getChannel(null == e ? void 0 : e.parent_id));
     return (0, i.jsx)(k, {
         channel: e,
         category: g,

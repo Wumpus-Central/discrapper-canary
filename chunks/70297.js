@@ -12,8 +12,8 @@ var i = t(120356),
     d = t(434404),
     c = t(707076),
     u = t(398758),
-    m = t(981631),
-    h = t(921944),
+    h = t(981631),
+    m = t(921944),
     x = t(388032),
     _ = t(721525),
     p = t(697611);
@@ -45,7 +45,7 @@ function g(e) {
                           (0, l.jsx)(o.zxk, {
                               className: _.checkItOut,
                               onClick: () => {
-                                  d.Z.open(n.id, m.pNK.ONBOARDING), (0, s.EW)(f, { dismissAction: h.L.PRIMARY });
+                                  d.Z.open(n.id, h.pNK.ONBOARDING), (0, s.EW)(f, { dismissAction: m.L.PRIMARY });
                               },
                               color: o.zxk.Colors.BRAND_INVERTED,
                               children: (0, l.jsx)(o.Text, {
@@ -98,7 +98,7 @@ function g(e) {
             (0, l.jsx)(o.P3F, {
                 className: _.closeButton,
                 onClick: () => {
-                    (0, s.EW)(f, { dismissAction: h.L.DISMISS });
+                    (0, s.EW)(f, { dismissAction: m.L.DISMISS });
                 },
                 children: (0, l.jsx)(o.Dio, {
                     size: 'md',

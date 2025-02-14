@@ -1,4 +1,4 @@
-t.d(n, { Z: () => E }), t(47120);
+t.d(n, { Z: () => x }), t(47120);
 var l,
     i,
     s,
@@ -15,7 +15,7 @@ let I = !1,
 function g() {
     (I = !1), (h = null), null != (h = u.Z.getGuildId()) && u.Z.getSection() === m.pNK.ONBOARDING && (N = new Set(c.Z.getDefaultChannelIds(h)));
 }
-class x extends (l = o.ZP.Store) {
+class E extends (l = o.ZP.Store) {
     initialize() {
         this.waitFor(u.Z, c.Z);
     }
@@ -36,15 +36,15 @@ class x extends (l = o.ZP.Store) {
     }
 }
 (s = 'GuildSettingsDefaultChannelsStore'),
-    (i = 'displayName') in x
-        ? Object.defineProperty(x, i, {
+    (i = 'displayName') in E
+        ? Object.defineProperty(E, i, {
               value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (x[i] = s);
-let E = new x(d.Z, {
+        : (E[i] = s);
+let x = new E(d.Z, {
     GUILD_SETTINGS_INIT: g,
     GUILD_SETTINGS_SET_SECTION: g,
     GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: g,

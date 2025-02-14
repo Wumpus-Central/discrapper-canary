@@ -1,4 +1,4 @@
-t.d(n, { Z: () => h }), t(47120);
+t.d(n, { Z: () => m }), t(47120);
 var l = t(192379),
     i = t(442837),
     a = t(570140),
@@ -8,16 +8,16 @@ var l = t(192379),
     d = t(152376),
     c = t(724213),
     u = t(981631);
-function m(e) {
+function h(e) {
     a.Z.dispatch({
         type: 'CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES',
         guildId: e
     });
 }
-function h(e) {
+function m(e) {
     let n = (0, i.e7)([s.ZP], () => s.ZP.getPendingChannelUpdates(e));
     return (
-        l.useEffect(() => (m(e), () => m(e)), [e]),
+        l.useEffect(() => (h(e), () => h(e)), [e]),
         l.useEffect(() => {
             null != n && (0, d.C1)(e, n);
         }, [e, n]),

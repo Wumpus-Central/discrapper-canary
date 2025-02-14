@@ -1,41 +1,41 @@
 n.d(t, { F: () => f });
-var r = n(200651),
-    i = n(192379),
+var i = n(200651),
+    r = n(192379),
     a = n(442837),
     l = n(481060),
-    o = n(596454),
-    s = n(727637),
+    s = n(596454),
+    o = n(727637),
     d = n(607070),
     c = n(176354),
     u = n(300694);
 function m(e) {
     let { emoji: t, shouldAnimate: n } = e;
     if (null == t) return null;
-    let i = c.ZP.isCustomEmoji(t) ? t.name : t.surrogates;
-    return (0, r.jsx)(o.Z, {
+    let r = c.ZP.isCustomEmoji(t) ? t.name : t.surrogates;
+    return (0, i.jsx)(s.Z, {
         className: u.traitEmoji,
         emojiId: t.id,
-        emojiName: i,
+        emojiName: r,
         animated: t.animated,
         shouldAnimate: n
     });
 }
 function _(e) {
     let { trait: t } = e,
-        n = i.useRef(null),
-        o = (0, s.Z)(n),
+        n = r.useRef(null),
+        s = (0, o.Z)(n),
         c = (0, a.e7)([d.Z], () => d.Z.useReducedMotion);
     return (null == t ? void 0 : t.label) == null || t.label.length <= 0
         ? null
-        : (0, r.jsxs)('div', {
+        : (0, i.jsxs)('div', {
               ref: n,
               className: u.trait,
               children: [
-                  (0, r.jsx)(m, {
+                  (0, i.jsx)(m, {
                       emoji: t.emoji,
-                      shouldAnimate: !c && o
+                      shouldAnimate: !c && s
                   }),
-                  (0, r.jsx)(l.Text, {
+                  (0, i.jsx)(l.Text, {
                       tag: 'span',
                       className: u.traitLabel,
                       variant: 'text-sm/normal',
@@ -47,7 +47,7 @@ function _(e) {
 }
 function f(e) {
     let { profile: t } = e,
-        n = i.useMemo(
+        n = r.useMemo(
             () =>
                 t.traits
                     .map((e, t) => ({
@@ -57,22 +57,22 @@ function f(e) {
                     .filter((e) => e.label.length > 0),
             [t]
         ),
-        a = i.useCallback(
+        a = r.useCallback(
             (e) =>
                 'string' == typeof e
-                    ? (0, r.jsx)('div', {
+                    ? (0, i.jsx)('div', {
                           className: u.trait,
-                          children: (0, r.jsx)(l.Text, {
+                          children: (0, i.jsx)(l.Text, {
                               tag: 'span',
                               variant: 'text-sm/normal',
                               color: 'text-normal',
                               children: e
                           })
                       })
-                    : (0, r.jsx)(_, { trait: e }),
+                    : (0, i.jsx)(_, { trait: e }),
             []
         );
-    return (0, r.jsx)(l.Epb, {
+    return (0, i.jsx)(l.Epb, {
         className: u.container,
         items: n,
         renderItem: a,

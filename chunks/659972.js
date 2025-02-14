@@ -5,8 +5,8 @@ t.d(n, {
 var l,
     i = t(200651);
 t(192379);
-var r = t(120356),
-    a = t.n(r),
+var a = t(120356),
+    r = t.n(a),
     s = t(481060),
     o = t(565138),
     c = t(372769),
@@ -16,7 +16,7 @@ var r = t(120356),
     _ = t(585898),
     h = (((l = {})[(l.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (l[(l.TRENDING = 1)] = 'TRENDING'), (l[(l.PERSONALIZED = 2)] = 'PERSONALIZED'), (l[(l.USER_GUILDS = 3)] = 'USER_GUILDS'), (l[(l.FRIENDS_GUILDS = 4)] = 'FRIENDS_GUILDS'), (l[(l.INTRO_CARD = 5)] = 'INTRO_CARD'), (l[(l.FEATURED = 6)] = 'FEATURED'), l);
 function x(e) {
-    let { guild: n, stageInstance: t, showGuildPopout: l, setShowGuildPopout: r, handleGuildNameClick: h, source: x, speakers: g, speakerCount: v, audienceCount: b, channelName: j } = e,
+    let { guild: n, stageInstance: t, showGuildPopout: l, setShowGuildPopout: a, handleGuildNameClick: h, source: x, speakers: g, speakerCount: v, audienceCount: b, channelName: j } = e,
         N = n.id;
     return (0, i.jsx)('div', {
         className: _.contentContainer,
@@ -29,7 +29,7 @@ function x(e) {
                         (0, i.jsx)(d.Z, {
                             guildId: N,
                             shouldShow: l,
-                            onRequestClose: () => r(!1),
+                            onRequestClose: () => a(!1),
                             children: () =>
                                 (0, i.jsxs)(s.P3F, {
                                     className: _.flexContainerRow,
@@ -46,7 +46,7 @@ function x(e) {
                                                 (0, i.jsx)(s.Text, {
                                                     color: 'header-secondary',
                                                     variant: 'text-sm/normal',
-                                                    className: a()(_.guildName, { [_.disabled]: null == h }),
+                                                    className: r()(_.guildName, { [_.disabled]: null == h }),
                                                     children: n.name
                                                 }),
                                                 (0, i.jsx)(c.Z, { guild: n })

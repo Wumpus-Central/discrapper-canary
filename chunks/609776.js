@@ -1,8 +1,8 @@
 t.d(n, { Z: () => y }), t(47120);
 var l = t(200651),
     i = t(192379),
-    r = t(913527),
-    a = t.n(r),
+    a = t(913527),
+    r = t.n(a),
     s = t(442837),
     o = t(481060),
     c = t(493773),
@@ -56,11 +56,11 @@ function A(e) {
           });
 }
 function y(e) {
-    var n, t, r, v, b, y;
+    var n, t, a, v, b, y;
     let { channel: P, guild: R, header: D, error: L, loading: w, onSave: G, onEventSave: O, onClose: B, onSelectChannel: z, isEvent: M = !1, defaultOptions: U, isSlideReady: F = !0 } = e,
         W = i.useMemo(() => I.Z.getStageInstanceByChannel(P.id), [P.id]),
         [H, V] = i.useState(null !== (t = null !== (n = null == U ? void 0 : U.topic) && void 0 !== n ? n : null == W ? void 0 : W.topic) && void 0 !== t ? t : ''),
-        [q, J] = i.useState(null !== (r = null == U ? void 0 : U.description) && void 0 !== r ? r : ''),
+        [q, J] = i.useState(null !== (a = null == U ? void 0 : U.description) && void 0 !== a ? a : ''),
         [K] = i.useState(M),
         [Q, Y] = i.useState(null !== (v = null == U ? void 0 : U.schedule) && void 0 !== v ? v : { startDate: (0, _.ib)() }),
         [X, $] = i.useState(K && (null == U ? void 0 : U.schedule) != null),
@@ -68,9 +68,9 @@ function y(e) {
         en = (0, N.U)(P),
         et = null == W && ee && !K,
         [el, ei] = i.useState(et && en),
-        er = (0, s.e7)([g.Z], () => g.Z.hasHotspot(T.v.LIVE_STAGE_NOTIFICATION_BADGE)),
-        ea = S.j8.GUILD_ONLY,
-        [es] = i.useState(null !== (y = null !== (b = null == U ? void 0 : U.privacyLevel) && void 0 !== b ? b : null == W ? void 0 : W.privacy_level) && void 0 !== y ? y : ea),
+        ea = (0, s.e7)([g.Z], () => g.Z.hasHotspot(T.v.LIVE_STAGE_NOTIFICATION_BADGE)),
+        er = S.j8.GUILD_ONLY,
+        [es] = i.useState(null !== (y = null !== (b = null == U ? void 0 : U.privacyLevel) && void 0 !== b ? b : null == W ? void 0 : W.privacy_level) && void 0 !== y ? y : er),
         [eo, ec] = i.useState(null == U ? void 0 : U.recurrenceRule),
         ed = (0, f._d)(P.id),
         eu = (0, f.K3)(P.id),
@@ -134,7 +134,7 @@ function y(e) {
         var e;
         F && (null === (e = ef.current) || void 0 === e || e.focus());
     }, [F]);
-    let ep = X && null != Q.startDate && Q.startDate >= a()();
+    let ep = X && null != Q.startDate && Q.startDate >= r()();
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsxs)(o.hzk, {
@@ -202,7 +202,7 @@ function y(e) {
                                             timeSelected: X,
                                             onTimeChange: $
                                         }),
-                                        null != Q.startDate && Q.startDate < a()()
+                                        null != Q.startDate && Q.startDate < r()()
                                             ? (0, l.jsx)(o.Text, {
                                                   color: 'text-danger',
                                                   variant: 'text-xs/normal',
@@ -227,7 +227,7 @@ function y(e) {
                                 ? (0, l.jsx)(h.Z, {
                                       sendStartNotification: el,
                                       setSendStartNotification: ei,
-                                      showNotificationNewBadge: er
+                                      showNotificationNewBadge: ea
                                   })
                                 : null,
                             ev && !eb

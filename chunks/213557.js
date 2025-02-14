@@ -8,8 +8,8 @@ var l = t(200651),
     d = t(36311),
     c = t(367907),
     u = t(188471),
-    m = t(541716),
-    h = t(526120),
+    h = t(541716),
+    m = t(526120),
     x = t(563534),
     _ = t(736052),
     p = t(665149),
@@ -30,7 +30,7 @@ var l = t(200651),
     B = t(388032),
     A = t(437413);
 function R(e) {
-    let { channelId: n, baseChannelId: R, channelViewSource: P = 'Split View', isResourceChannelView: k } = e,
+    let { channelId: n, baseChannelId: R, channelViewSource: k = 'Split View', isResourceChannelView: P } = e,
         L = (0, a.e7)([j.Z], () => j.Z.getChannel(n)),
         O = (0, a.e7)([b.Z], () => b.Z.getGuild(null == L ? void 0 : L.getGuildId())),
         M = (0, a.e7)([w.default], () => w.default.getCurrentUser()),
@@ -51,10 +51,10 @@ function R(e) {
                 ((z.current = !0),
                 (0, c.yw)(T.rMx.CHANNEL_OPENED, {
                     ...(0, c.$H)(L.id),
-                    channel_view: P
+                    channel_view: k
                 }),
                 (0, u.a)(T.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: L.id }));
-        }, [L, P]),
+        }, [L, k]),
         null == L || null == O)
     )
         return null;
@@ -99,8 +99,8 @@ function R(e) {
                           },
                           handleClick: () => {
                               let e = E.Z.getMessages(L.id);
-                              if (k) {
-                                  (0, v.uL)(T.Z5c.CHANNEL(L.guild_id, L.id)), (0, h.C3)(L.guild_id, null);
+                              if (P) {
+                                  (0, v.uL)(T.Z5c.CHANNEL(L.guild_id, L.id)), (0, m.C3)(L.guild_id, null);
                                   return;
                               }
                               (0, v.XU)(L.guild_id, L.id, e.jumpTargetId);
@@ -114,7 +114,7 @@ function R(e) {
                           {
                               channel: L,
                               guild: O,
-                              chatInputType: m.Ie.SIDEBAR
+                              chatInputType: h.Ie.SIDEBAR
                           },
                           n
                       )

@@ -13,10 +13,10 @@ var l,
 let h = !1,
     N = null,
     g = [],
-    x = !1,
-    E = [];
+    E = !1,
+    x = [];
 function T() {
-    (h = !1), (N = null), (E = []), (x = !1), null != (N = u.Z.getGuildId()) && u.Z.getSection() === m.pNK.ONBOARDING && ((g = c.Z.getOnboardingPrompts(N)), (x = c.Z.isAdvancedMode(N)));
+    (h = !1), (N = null), (x = []), (E = !1), null != (N = u.Z.getGuildId()) && u.Z.getSection() === m.pNK.ONBOARDING && ((g = c.Z.getOnboardingPrompts(N)), (E = c.Z.isAdvancedMode(N)));
 }
 class S extends (s = o.ZP.Store) {
     initialize() {
@@ -32,13 +32,13 @@ class S extends (s = o.ZP.Store) {
         return h;
     }
     get errors() {
-        return E;
+        return x;
     }
     get editedOnboardingPrompts() {
         return g;
     }
     get advancedMode() {
-        return x;
+        return E;
     }
 }
 (i = 'GuildSettingsOnboardingPromptsStore'),
@@ -59,21 +59,21 @@ let _ = new S(d.Z, {
     GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS: T,
     GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED: function (e) {
         var n;
-        (E = null !== (n = e.errors) && void 0 !== n ? n : []), (h = !1);
+        (x = null !== (n = e.errors) && void 0 !== n ? n : []), (h = !1);
     },
     GUILD_SETTINGS_ONBOARDING_PROMPTS_EDIT: function (e) {
         let { prompts: n } = e;
         g = n;
     },
     GUILD_SETTINGS_ONBOARDING_PROMPTS_SUBMIT: function () {
-        (h = !0), (E = []);
+        (h = !0), (x = []);
     },
     GUILD_SETTINGS_ONBOARDING_PROMPTS_ERRORS: function (e) {
         var n;
-        E = null !== (n = e.errors) && void 0 !== n ? n : [];
+        x = null !== (n = e.errors) && void 0 !== n ? n : [];
     },
     GUILD_SETTINGS_ONBOARDING_SET_MODE: function (e) {
         let { mode: n } = e;
-        x = n === I.Un.ONBOARDING_ADVANCED;
+        E = n === I.Un.ONBOARDING_ADVANCED;
     }
 });

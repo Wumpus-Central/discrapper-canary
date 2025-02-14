@@ -505,7 +505,7 @@ var eg = (function (e) {
         );
     })({}),
     eE = (function (e) {
-        return (e[(e.PREMIUM_TIER_1 = 1)] = 'PREMIUM_TIER_1'), (e[(e.PREMIUM_TIER_2 = 2)] = 'PREMIUM_TIER_2'), (e[(e.GUILD_BOOST = 4)] = 'GUILD_BOOST'), (e[(e.PREMIUM_TIER_0 = 8)] = 'PREMIUM_TIER_0'), e;
+        return (e[(e.PREMIUM_TIER_1 = 1)] = 'PREMIUM_TIER_1'), (e[(e.PREMIUM_TIER_2 = 2)] = 'PREMIUM_TIER_2'), (e[(e.GUILD_BOOST = 4)] = 'GUILD_BOOST'), (e[(e.PREMIUM_TIER_0 = 8)] = 'PREMIUM_TIER_0'), (e[(e.ON_REVERSE_TRIAL = 16)] = 'ON_REVERSE_TRIAL'), e;
     })({});
 let ev = Object.freeze({
         '978380684370378762': 8,

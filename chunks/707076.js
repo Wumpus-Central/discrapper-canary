@@ -1,5 +1,5 @@
 t.d(n, {
-    Z: () => j,
+    Z: () => C,
     j: () => v
 });
 var l = t(200651);
@@ -17,8 +17,8 @@ var i = t(120356),
     h = t(594174),
     N = t(626135),
     g = t(999382),
-    x = t(983135),
-    E = t(84658),
+    E = t(983135),
+    x = t(84658),
     T = t(981631),
     S = t(388032),
     _ = t(461973);
@@ -149,7 +149,7 @@ function v(e) {
         ]
     });
 }
-function C() {
+function j() {
     let e = [
         {
             message: S.t.FUUXXl,
@@ -174,7 +174,7 @@ function C() {
     ];
     return (0, l.jsx)(c.i, { testimonials: e });
 }
-function j() {
+function C() {
     let e = (0, r.e7)([g.Z], () => g.Z.getGuildId()),
         n = (0, r.e7)([I.Z], () => I.Z.getGuild(e)),
         t = (0, r.e7)([h.default], () => h.default.getCurrentUser());
@@ -218,11 +218,11 @@ function j() {
                                       null != e &&
                                           (N.default.track(T.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
                                               ...(0, o.hH)(e),
-                                              step: E.PG[E.PG.LANDING],
+                                              step: x.PG[x.PG.LANDING],
                                               back: !1,
                                               skip: !1
                                           }),
-                                          (0, x.IG)(e, E.PG.LANDING));
+                                          (0, E.IG)(e, x.PG.LANDING));
                                   },
                                   color: a.zxk.Colors.BRAND,
                                   disabled: !1,
@@ -232,7 +232,7 @@ function j() {
                       ]
                   }),
                   (0, l.jsx)(a.$i$, {}),
-                  (0, l.jsx)(C, {}),
+                  (0, l.jsx)(j, {}),
                   (0, l.jsx)(a.$i$, {}),
                   (0, l.jsxs)('div', {
                       className: _.valuesContainer,

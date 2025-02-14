@@ -37,7 +37,7 @@ function p(e) {
             }),
             (0, i.jsx)('div', {
                 className: g.grid,
-                children: m.c.map((e) => {
+                children: m.cb.map((e) => {
                     let { name: t, color: n } = e,
                         r = (0, o.DT)(n, 1.75),
                         a = 'radial-gradient(105.43% 127.05% at 50.1% 127.05%, '.concat(r, ' 20.65%, ').concat(n, ' 85.16%)');

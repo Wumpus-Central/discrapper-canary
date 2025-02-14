@@ -1,11 +1,11 @@
-t.d(n, { Z: () => p });
+t.d(n, { Z: () => f });
 var i = t(200651);
 t(192379);
 var r = t(442837),
     a = t(692547),
     l = t(481060),
-    s = t(493683),
-    o = t(129861),
+    o = t(493683),
+    s = t(129861),
     d = t(700582),
     u = t(594174),
     c = t(388032),
@@ -43,7 +43,7 @@ function h(e) {
         })
     });
 }
-function p(e, n) {
+function f(e, n) {
     let t = (0, r.e7)([u.default], () => u.default.getCurrentUser());
     return null == t || n.ownerId !== t.id || e.id === t.id
         ? null
@@ -58,7 +58,7 @@ function p(e, n) {
                           header: c.intl.string(c.t.WZoUsr),
                           confirmText: c.intl.string(c.t['cY+Ooa']),
                           cancelText: c.intl.string(c.t['ETE/oK']),
-                          onConfirm: () => s.Z.setDMOwner(n.id, e.id),
+                          onConfirm: () => o.Z.setDMOwner(n.id, e.id),
                           ...r,
                           children: [
                               (0, i.jsx)(h, { color: a.Z.unsafe_rawColors.PRIMARY_300.css }),
@@ -86,7 +86,7 @@ function p(e, n) {
                                   children: c.intl.format(c.t.gsBb3N, {
                                       usernameHook: (n, t) =>
                                           (0, i.jsx)(
-                                              o.Z,
+                                              s.Z,
                                               {
                                                   usernameIcon: (0, i.jsx)(l.qEK, {
                                                       className: _.avatarIcon,

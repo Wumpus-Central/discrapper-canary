@@ -8,8 +8,8 @@ var l = t(200651),
     d = t(692547),
     c = t(481060),
     u = t(111028),
-    m = t(252618),
-    h = t(605236),
+    h = t(252618),
+    m = t(605236),
     x = t(473403),
     _ = t(984370),
     p = t(216306),
@@ -32,12 +32,12 @@ function A(e) {
     let { guild: n, previousChannel: t } = e,
         a = (0, Z.Z)(n);
     i.useEffect(() => {
-        (0, h.EW)(s.z.CHANNEL_BROWSER_NEW_BADGE_NUX, { dismissAction: S.L.DISMISS });
+        (0, m.EW)(s.z.CHANNEL_BROWSER_NEW_BADGE_NUX, { dismissAction: S.L.DISMISS });
     });
     let r = a ? y.intl.formatToPlainString(y.t.uqZgYW, { guildName: n.name }) : y.intl.formatToPlainString(y.t.velJeX, { guildName: n.name }),
         o = a ? y.intl.string(y.t.h9mGOD) : y.intl.string(y.t.et6wam);
     return (
-        (0, m.Tt)({ location: r }),
+        (0, h.Tt)({ location: r }),
         (0, l.jsxs)(_.Z, {
             className: T.header,
             innerClassname: T.innerHeader,
@@ -100,14 +100,14 @@ function R(e) {
     let { guildId: n, selectedSection: t } = e,
         a = (0, o.e7)([j.Z], () => j.Z.getGuild(n)),
         s = (0, Z.Z)(a),
-        [u, m] = i.useState(null != t ? t : E.l7.CUSTOMIZE);
+        [u, h] = i.useState(null != t ? t : E.l7.CUSTOMIZE);
     i.useEffect(() => {
-        null != t && m(t);
+        null != t && h(t);
     }, [t]);
-    let h = (0, o.e7)([N.Z], () => N.Z.getLastSelectedChannelId(n)),
+    let m = (0, o.e7)([N.Z], () => N.Z.getLastSelectedChannelId(n)),
         x = (0, o.e7)([v.ZP], () => v.ZP.getCurrentSidebarChannelId(w.oC.CHANNEL_BROWSER)),
         _ = null != x && u === E.l7.BROWSE,
-        C = (0, o.e7)([I.Z], () => I.Z.getChannel(h)),
+        C = (0, o.e7)([I.Z], () => I.Z.getChannel(m)),
         S = (0, o.e7)([g.Z], () => g.Z.getNewChannelIds(n).size > 0),
         R = (0, p.fU)(n);
     return null == a
@@ -130,7 +130,7 @@ function R(e) {
                                           type: 'top',
                                           look: 'brand',
                                           selectedItem: u,
-                                          onItemSelect: (e) => m(e),
+                                          onItemSelect: (e) => h(e),
                                           children: [
                                               (0, l.jsx)(
                                                   c.njP.Item,
@@ -165,7 +165,7 @@ function R(e) {
                                           case E.l7.CUSTOMIZE:
                                               return (0, l.jsx)(b.Z, {
                                                   guildId: n,
-                                                  onBrowseChannels: () => m(E.l7.BROWSE)
+                                                  onBrowseChannels: () => h(E.l7.BROWSE)
                                               });
                                           case E.l7.BROWSE:
                                           default:

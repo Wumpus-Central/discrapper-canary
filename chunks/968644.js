@@ -1,6 +1,6 @@
 t.d(n, {
-    Z: () => m,
-    p: () => h
+    Z: () => h,
+    p: () => m
 });
 var l = t(442837),
     i = t(933557),
@@ -21,16 +21,16 @@ function u(e, n, t) {
               itemHook: n
           });
 }
-function m(e) {
-    let { guild: n, prompt: t, selectedRoleIds: m, selectedChannelIds: h, itemHook: x } = e,
+function h(e) {
+    let { guild: n, prompt: t, selectedRoleIds: h, selectedChannelIds: m, itemHook: x } = e,
         _ = (0, l.e7)([r.Z], () => (null != n ? r.Z.getRoles(n.id) : void 0)),
         p = (0, l.Wu)([a.Z, s.default, o.Z], () =>
-            Array.from(h)
+            Array.from(m)
                 .map((e) => a.Z.getChannel(e))
                 .filter(d.lm)
                 .map((e) => (0, i.F6)(e, s.default, o.Z, !0))
         ),
-        f = Array.from(m)
+        f = Array.from(h)
             .map((e) => {
                 var n;
                 return null === (n = (null != _ ? _ : {})[e]) || void 0 === n ? void 0 : n.name;
@@ -57,11 +57,11 @@ function m(e) {
         helpTextAdditional: C
     };
 }
-function h(e) {
-    let { guild: n, prompt: t, selectedRoleIds: u, selectedChannelIds: m, itemHook: h } = e,
+function m(e) {
+    let { guild: n, prompt: t, selectedRoleIds: u, selectedChannelIds: h, itemHook: m } = e,
         x = (0, l.e7)([r.Z], () => (null != n ? r.Z.getRoles(n.id) : void 0)),
         _ = (0, l.Wu)([a.Z, s.default, o.Z], () =>
-            Array.from(m)
+            Array.from(h)
                 .map((e) => a.Z.getChannel(e))
                 .filter(d.lm)
                 .map((e) => (0, i.F6)(e, s.default, o.Z, !0))
@@ -81,7 +81,7 @@ function h(e) {
                   extraCount: Math.max(p.length - 2, 0),
                   role1: p[0],
                   role2: p[1],
-                  itemHook: h
+                  itemHook: m
               }))
             : _.length > 0 && 0 === p.length
               ? (f = c.intl.format(c.t.ZKywGR, {
@@ -89,7 +89,7 @@ function h(e) {
                     extraCount: Math.max(_.length - 2, 0),
                     channel1: _[0],
                     channel2: _[1],
-                    itemHook: h
+                    itemHook: m
                 }))
               : _.length > 0 &&
                 p.length > 0 &&
@@ -98,7 +98,7 @@ function h(e) {
                     extraChannelCount: Math.max(_.length - 2, 0),
                     channel1: _[0],
                     channel2: _[1],
-                    itemHook: h,
+                    itemHook: m,
                     roleCount: p.length,
                     extraRoleCount: Math.max(p.length - 2, 0),
                     role1: p[0],

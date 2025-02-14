@@ -14,12 +14,12 @@ var i = n(200651),
     p = n(134433),
     x = n(600164),
     f = n(156699),
-    j = n(693196),
-    v = n(434404),
+    v = n(693196),
+    j = n(434404),
     C = n(200498),
     N = n(146085),
-    b = n(192079),
-    Z = n(277053),
+    Z = n(192079),
+    b = n(277053),
     T = n(271383),
     S = n(430824),
     E = n(496675),
@@ -34,49 +34,49 @@ var i = n(200651),
     D = n(981631),
     P = n(231338),
     k = n(388032),
-    O = n(922240);
-function B(e) {
+    B = n(922240);
+function O(e) {
     let { channel: t, roles: n, members: l, disabledReason: s, getRemoveTooltipHint: r } = e;
     return (0, i.jsx)(o.aVo, {
-        className: O.roleMemberList,
+        className: B.roleMemberList,
         sections: [n.length, l.length],
         renderRow: function (e) {
             let u,
                 f,
-                j,
-                { section: v, row: N } = e,
-                b = !1;
-            switch (v) {
+                v,
+                { section: j, row: N } = e,
+                Z = !1;
+            switch (j) {
                 case M.m$.ROLES:
-                    var Z;
-                    (j =
-                        (f = n[N]).rowType === M.aC.ROLE && (null === (Z = f.tags) || void 0 === Z ? void 0 : Z.guild_connections) === null
+                    var b;
+                    (v =
+                        (f = n[N]).rowType === M.aC.ROLE && (null === (b = f.tags) || void 0 === b ? void 0 : b.guild_connections) === null
                             ? (0, i.jsx)(p.Z, {
-                                  className: O.shield,
+                                  className: B.shield,
                                   color: f.colorString,
                                   size: 20
                               })
                             : (0, i.jsx)(o.lZ8, {
                                   size: 'custom',
-                                  className: O.shield,
+                                  className: B.shield,
                                   color: f.colorString,
                                   height: 20
                               })),
                         (u = (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsx)('div', {
-                                    className: O.rowHeight,
-                                    children: j
+                                    className: B.rowHeight,
+                                    children: v
                                 }),
                                 (0, i.jsx)(o.Text, {
                                     variant: 'text-sm/normal',
-                                    className: O.rowLabel,
+                                    className: B.rowLabel,
                                     color: f.disabled ? 'text-muted' : 'text-normal',
                                     children: f.name
                                 })
                             ]
                         })),
-                        (b = f.disabled);
+                        (Z = f.disabled);
                     break;
                 case M.m$.MEMBERS:
                     (f = l[N]),
@@ -88,42 +88,42 @@ function B(e) {
                                     'aria-hidden': !0
                                 }),
                                 (0, i.jsx)(o.Text, {
-                                    className: O.rowLabel,
+                                    className: B.rowLabel,
                                     variant: 'text-sm/normal',
                                     children: f.name
                                 }),
                                 f.bot &&
                                     (0, i.jsx)(g.Z, {
                                         verified: f.verifiedBot,
-                                        className: O.rowBotTag
+                                        className: B.rowBotTag
                                     }),
                                 null != f.nickname &&
                                     (0, i.jsx)(o.Text, {
                                         color: 'text-muted',
-                                        className: O.rowLabelSubText,
+                                        className: B.rowLabelSubText,
                                         variant: 'text-sm/normal',
                                         children: f.username
                                     })
                             ]
                         })),
-                        (b = f.disabled);
+                        (Z = f.disabled);
                     break;
                 default:
                     f = null;
             }
             if (null == f) return null;
-            let T = !b && null == s && null != f.id;
+            let T = !Z && null == s && null != f.id;
             return (0, i.jsxs)(
                 x.Z,
                 {
                     justify: x.Z.Justify.BETWEEN,
                     align: x.Z.Align.CENTER,
-                    className: O.memberRow,
+                    className: B.memberRow,
                     children: [
                         (0, i.jsx)(x.Z, {
                             justify: x.Z.Justify.START,
                             align: x.Z.Align.CENTER,
-                            className: O.__invalid_memberRowBody,
+                            className: B.__invalid_memberRowBody,
                             children: u
                         }),
                         (0, i.jsx)(o.Text, {
@@ -133,7 +133,7 @@ function B(e) {
                         }),
                         f.rowType !== M.aC.EMPTY_STATE &&
                             (0, i.jsx)(o.DY3, {
-                                className: O.removeIconContainer,
+                                className: B.removeIconContainer,
                                 text: null != s ? s : r(f.rowType, f.disabled),
                                 children: (0, i.jsx)(o.P3F, {
                                     onClick: () => {
@@ -163,7 +163,7 @@ function B(e) {
                                     children: (0, i.jsx)(o.k$p, {
                                         size: 'md',
                                         color: 'currentColor',
-                                        className: a()(O.removeIcon, { [O.disabledRemoveIcon]: b || s })
+                                        className: a()(B.removeIcon, { [B.disabledRemoveIcon]: Z || s })
                                     })
                                 })
                             })
@@ -202,7 +202,7 @@ function V(e) {
         });
     }
     return (0, i.jsxs)('div', {
-        className: a()(O.settingCard, O.active),
+        className: a()(B.settingCard, B.active),
         children: [
             (0, i.jsx)(L.Z, {
                 label: k.intl.string(k.t.StpcFR),
@@ -210,23 +210,23 @@ function V(e) {
                 icon: (0, i.jsx)(o.ewx, {
                     size: 'custom',
                     color: 'currentColor',
-                    className: O.cardIcon,
+                    className: B.cardIcon,
                     height: 20,
                     width: 20
                 }),
                 id: 'StageModeratorSettingCard'
             }),
             (0, i.jsxs)('div', {
-                className: O.cardFolder,
+                className: B.cardFolder,
                 children: [
                     (0, i.jsxs)(x.Z, {
                         justify: x.Z.Justify.BETWEEN,
                         align: x.Z.Align.CENTER,
-                        className: O.folderHeader,
+                        className: B.folderHeader,
                         children: [
                             (0, i.jsx)(o.vwX, {
                                 tag: 'h5',
-                                className: O.folderTitle,
+                                className: B.folderTitle,
                                 children: k.intl.string(k.t['7BWDRU'])
                             }),
                             (0, i.jsx)(o.ua7, {
@@ -244,12 +244,12 @@ function V(e) {
                             })
                         ]
                     }),
-                    (0, i.jsx)(B, {
+                    (0, i.jsx)(O, {
                         channel: l,
                         roles: c,
                         members: u,
                         disabledReason: h ? null : k.intl.string(k.t.arRuER),
-                        getRemoveTooltipHint: b.kk
+                        getRemoveTooltipHint: Z.kk
                     })
                 ]
             })
@@ -264,7 +264,7 @@ function G(e) {
     async function g() {
         let e = l.accessPermissions,
             a = R.default.getCurrentUser();
-        if (!s && null != (await (0, j.T)(t.id, l.id))) {
+        if (!s && null != (await (0, v.T)(t.id, l.id))) {
             (0, o.ZDy)(async () => {
                 let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 878678));
                 return (n) =>
@@ -277,7 +277,7 @@ function G(e) {
                             variant: 'text-md/normal',
                             children: k.intl.format(k.t.DwY2vL, {
                                 onClick: () => {
-                                    v.Z.open(t.id, D.pNK.ONBOARDING), n.onClose();
+                                    j.Z.open(t.id, D.pNK.ONBOARDING), n.onClose();
                                 }
                             })
                         })
@@ -295,14 +295,14 @@ function G(e) {
     return (
         l.isCategory() ? ((p.title = k.intl.string(k.t.lEPAZ2)), (p.subtitle = k.intl.string(k.t['RQUk6+'])), (p.formLabel = k.intl.string(k.t['8VIxJi']))) : l.type === D.d4z.GUILD_VOICE && (p.subtitle = k.intl.string(k.t.cLjvKi)),
         (0, i.jsxs)('div', {
-            className: a()(O.settingCard, { [O.active]: s }),
+            className: a()(B.settingCard, { [B.active]: s }),
             children: [
                 (0, i.jsx)(L.Z, {
                     description: p.subtitle,
                     icon: (0, i.jsx)(o.mBM, {
                         size: 'custom',
                         color: 'currentColor',
-                        className: O.cardIcon,
+                        className: B.cardIcon,
                         height: 20,
                         width: 20
                     }),
@@ -312,11 +312,11 @@ function G(e) {
                     value: s
                 }),
                 (0, i.jsxs)('div', {
-                    className: O.cardFolder,
+                    className: B.cardFolder,
                     children: [
                         m &&
                             (0, i.jsx)('div', {
-                                className: O.adminWarning,
+                                className: B.adminWarning,
                                 children: (0, i.jsx)(o.Wn, {
                                     messageType: o.QYI.WARNING,
                                     children: k.intl.string(k.t['5f3HIC'])
@@ -326,7 +326,7 @@ function G(e) {
                             !m &&
                             !s &&
                             (0, i.jsx)('div', {
-                                className: O.adminWarning,
+                                className: B.adminWarning,
                                 children: (0, i.jsx)(o.Wn, {
                                     messageType: o.QYI.WARNING,
                                     children: k.intl.string(k.t.ZAk4Q0)
@@ -338,11 +338,11 @@ function G(e) {
                                     (0, i.jsxs)(x.Z, {
                                         justify: x.Z.Justify.BETWEEN,
                                         align: x.Z.Align.CENTER,
-                                        className: O.folderHeader,
+                                        className: B.folderHeader,
                                         children: [
                                             (0, i.jsx)(o.vwX, {
                                                 tag: 'h5',
-                                                className: O.folderTitle,
+                                                className: B.folderTitle,
                                                 children: p.formLabel
                                             }),
                                             (0, i.jsx)(o.zxk, {
@@ -363,7 +363,7 @@ function G(e) {
                                             })
                                         ]
                                     }),
-                                    (0, i.jsx)(B, {
+                                    (0, i.jsx)(O, {
                                         channel: l,
                                         roles: d,
                                         members: c,
@@ -381,19 +381,19 @@ function U(e) {
     let { title: t } = e;
     return (0, i.jsxs)('div', {
         children: [
-            (0, i.jsx)(o.$i$, { className: O.divider }),
+            (0, i.jsx)(o.$i$, { className: B.divider }),
             (0, i.jsx)(o.vwX, {
-                className: a()(O.folderTitle, O.sectionTitle),
+                className: a()(B.folderTitle, B.sectionTitle),
                 tag: 'h5',
                 children: t
             })
         ]
     });
 }
-let W = r.ZP.connectStores([Z.Z, E.Z, T.ZP, S.Z], () => {
+let W = r.ZP.connectStores([b.Z, E.Z, T.ZP, S.Z], () => {
     let e;
-    let t = Z.Z.channel,
-        n = Z.Z.category,
+    let t = b.Z.channel,
+        n = b.Z.category,
         i = [],
         l = [],
         s = {},
@@ -403,8 +403,8 @@ let W = r.ZP.connectStores([Z.Z, E.Z, T.ZP, S.Z], () => {
         let n = T.ZP.getMemberIds(null == e ? void 0 : e.id);
         if (null != e) {
             let r = S.Z.getRoles(e.id);
-            (s = Z.Z.editedPermissionIds.reduce((e, t) => {
-                let n = Z.Z.getPermissionOverwrite(t);
+            (s = b.Z.editedPermissionIds.reduce((e, t) => {
+                let n = b.Z.getPermissionOverwrite(t);
                 return null != n && (e[t] = n), e;
             }, {})),
                 (i = w.kA(e, r, t, t.accessPermissions, s)),
@@ -420,26 +420,26 @@ let W = r.ZP.connectStores([Z.Z, E.Z, T.ZP, S.Z], () => {
         filteredRoles: i,
         guild: e,
         isPrivateGuildChannel: a,
-        locked: Z.Z.locked,
+        locked: b.Z.locked,
         permissionUpdates: s
     };
 })(function (e) {
     let { canSyncChannel: t, category: s, channel: a, filteredMembers: r, filteredRoles: d, guild: c, isPrivateGuildChannel: h, locked: m, permissionUpdates: g } = e,
         [p, x] = l.useState(!_.Uu(P.Pl.SEND_MESSAGES, a));
     if (null == a || null == c) return null;
-    let j = {
+    let v = {
         title: k.intl.string(k.t.BAZMBg),
         subtitle: k.intl.string(k.t.XLrZys)
     };
     return (
-        a.isCategory() && ((j.title = k.intl.string(k.t['/uELTk'])), (j.subtitle = k.intl.string(k.t['8iAg3d']))),
+        a.isCategory() && ((v.title = k.intl.string(k.t['/uELTk'])), (v.subtitle = k.intl.string(k.t['8iAg3d']))),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(o.vwX, {
                     tag: 'h1',
-                    children: j.title
+                    children: v.title
                 }),
-                (0, i.jsx)(o.R94, { children: j.subtitle }),
+                (0, i.jsx)(o.R94, { children: v.subtitle }),
                 null != s && t
                     ? m
                         ? (0, i.jsx)(A.Z, {

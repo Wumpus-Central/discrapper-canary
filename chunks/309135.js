@@ -1,10 +1,10 @@
 n.r(t), n.d(t, { default: () => v });
-var r = n(200651),
-    i = n(192379),
+var i = n(200651),
+    r = n(192379),
     a = n(215569),
     l = n(481060),
-    o = n(852860),
-    s = n(313201),
+    s = n(852860),
+    o = n(313201),
     d = n(944163),
     c = n(266395),
     u = n(187565),
@@ -13,7 +13,7 @@ var r = n(200651),
     f = n(388032),
     x = n(912885);
 let h = () =>
-        (0, r.jsx)(o.Z, {
+        (0, i.jsx)(s.Z, {
             submitting: !1,
             message: f.intl.string(f.t['8g514e']),
             onReset: () => {
@@ -27,44 +27,44 @@ let h = () =>
             onSaveButtonColor: l.Ttl.RED
         }),
     v = (e) => {
-        let { transitionState: t, guildId: n, onClose: o, onComplete: _, isPreview: f = !1 } = e,
+        let { transitionState: t, guildId: n, onClose: s, onComplete: _, isPreview: f = !1 } = e,
             v = (0, c.rb)((e) => e.shouldShowWarning),
             g = (0, u.ng)(n, f),
-            p = (0, s.Dt)();
-        return (i.useEffect(() => {
-            g === d.t && o();
-        }, [o, g]),
+            p = (0, o.Dt)();
+        return (r.useEffect(() => {
+            g === d.t && s();
+        }, [s, g]),
         g === d.t)
             ? null
-            : (0, r.jsxs)(r.Fragment, {
+            : (0, i.jsxs)(i.Fragment, {
                   children: [
-                      (0, r.jsxs)(l.Y0X, {
+                      (0, i.jsxs)(l.Y0X, {
                           transitionState: t,
                           'aria-labelledby': p,
                           size: l.CgR.DYNAMIC,
                           className: x.container,
                           hideShadow: !0,
                           children: [
-                              (0, r.jsx)('div', {
+                              (0, i.jsx)('div', {
                                   className: x.closeButton,
-                                  children: (0, r.jsx)(l.olH, { onClick: () => o(!1) })
+                                  children: (0, i.jsx)(l.olH, { onClick: () => s(!1) })
                               }),
-                              (0, r.jsx)(m.Z, {
+                              (0, i.jsx)(m.Z, {
                                   verificationForm: g,
                                   headerId: p,
                                   guildId: n,
-                                  onClose: o,
+                                  onClose: s,
                                   onComplete: _,
                                   isPreview: f
                               })
                           ]
                       }),
-                      (0, r.jsx)(a.W, {
+                      (0, i.jsx)(a.W, {
                           children:
                               !0 === v &&
-                              (0, r.jsx)(l.oXn, {
+                              (0, i.jsx)(l.oXn, {
                                   className: x.notice,
-                                  children: (0, r.jsx)(h, {})
+                                  children: (0, i.jsx)(h, {})
                               })
                       })
                   ]
