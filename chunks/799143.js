@@ -28,6 +28,7 @@ function g(e) {
                 color: o.TVs.colors.INTERACTIVE_MUTED
             }),
             (0, i.jsx)(o.Text, {
+                lineClamp: 1,
                 variant: 'text-md/normal',
                 color: 'text-secondary',
                 children: t
