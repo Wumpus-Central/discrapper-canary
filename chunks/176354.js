@@ -21,7 +21,7 @@ var i = n(738774),
     p = n(185923);
 let h = 2097152,
     m = new Set([p.Z5.PREMIUM_LOCKED, p.Z5.ROLE_SUBSCRIPTION_LOCKED]),
-    g = new Set([p.Z5.PREMIUM_LOCKED, p.Z5.GUILD_SUBSCRIPTION_UNAVAILABLE, p.Z5.ROLE_SUBSCRIPTION_LOCKED, p.Z5.ROLE_SUBSCRIPTION_UNAVAILABLE]),
+    g = new Set([...m, p.Z5.GUILD_SUBSCRIPTION_UNAVAILABLE, p.Z5.ROLE_SUBSCRIPTION_UNAVAILABLE]),
     E = new Set([p.Z5.DISALLOW_EXTERNAL, p.Z5.GUILD_SUBSCRIPTION_UNAVAILABLE, p.Z5.ONLY_GUILD_EMOJIS_ALLOWED]);
 function v(e) {
     return e.type === r.B.GUILD || null != e.guildId;
@@ -74,12 +74,11 @@ let b = {
     getEmojiUnavailableReason: I,
     isCustomEmoji: v,
     getEmojiUnavailableReasons(e) {
-        let { categoryEmojis: t, channel: n, guildId: i, intention: r, computeUnfiltered: a = !1 } = e,
-            s = new Set(),
+        let { categoryEmojis: t, channel: n, guildId: i, intention: r } = e,
+            a = new Set(),
+            s = [],
             o = 0,
-            l = a ? [] : void 0,
-            u = 0,
-            c = !1;
+            l = !1;
         for (let e of t) {
             let t = I({
                 emoji: e,
@@ -87,14 +86,13 @@ let b = {
                 guildId: i,
                 intention: r
             });
-            null != t ? (E.has(t) ? o++ : a && (null == l || l.push(e)), m.has(t) && (c || t !== p.Z5.PREMIUM_LOCKED || (c = !0), null != e.id && s.add(e.id), u++)) : a && (null == l || l.push(e));
+            null != t && (E.has(t) || s.push(e), g.has(t) && (null != e.id && a.add(e.id), m.has(t) && (l || t !== p.Z5.PREMIUM_LOCKED || (l = !0), o++))), s.push(e);
         }
         return {
-            emojisDisabled: s,
-            emojisUnfiltered: l,
-            emojisFilteredCount: o,
-            emojisPremiumLockedCount: u,
-            emojiNitroLocked: c
+            emojisDisabled: a,
+            emojisUnfiltered: s,
+            emojisPremiumLockedCount: o,
+            emojiNitroLocked: l
         };
     },
     isEmojiFiltered(e) {

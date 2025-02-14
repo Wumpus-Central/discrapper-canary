@@ -91,13 +91,12 @@ let O = function (e, t) {
                     id: b.UX.SOUNDMOJI,
                     isNitroLocked: !1
                 },
-                d = (i, r) =>
+                d = (i) =>
                     v.ZP.getEmojiUnavailableReasons({
                         categoryEmojis: i,
                         channel: t,
                         guildId: n,
-                        intention: e,
-                        computeUnfiltered: r
+                        intention: e
                     });
             return (
                 ((e, r) => {
@@ -106,8 +105,8 @@ let O = function (e, t) {
                         if ((r === b.En.GUILD && (e = p.Z.getGuild(a)), null == e)) continue;
                         let s = null == i ? void 0 : i[e.id];
                         if (null == s || 0 === s.length) continue;
-                        let { emojisDisabled: o, emojisFilteredCount: l, emojisPremiumLockedCount: c, emojiNitroLocked: f } = d(s, !1);
-                        if (null != t && s.length === l) continue;
+                        let { emojisDisabled: o, emojisUnfiltered: l, emojisPremiumLockedCount: c, emojiNitroLocked: f } = d(s);
+                        if (null != t && 0 === l.length) continue;
                         let _ = null;
                         r === b.En.GUILD &&
                             (_ = {
@@ -123,7 +122,7 @@ let O = function (e, t) {
                 l.ZP.categories.reduce(
                     (t, i) => {
                         if (i === b.UX.TOP_GUILD_EMOJI) {
-                            let { emojisDisabled: e, emojisUnfiltered: n } = d(O, !0);
+                            let { emojisDisabled: e, emojisUnfiltered: n } = d(O);
                             if (null == n || 0 === n.length) return t;
                             t.push({
                                 type: b.En.TOP_GUILD_EMOJI,
@@ -134,7 +133,7 @@ let O = function (e, t) {
                                 emojisDisabled: e
                             });
                         } else if (i === b.UX.RECENT) {
-                            let { emojisDisabled: n, emojisUnfiltered: r } = d(e === A.Hz.REACTION && (g || E) ? _ : o, !0);
+                            let { emojisDisabled: n, emojisUnfiltered: r } = d(e === A.Hz.REACTION && (g || E) ? _ : o);
                             if (null == r || 0 === r.length) return t;
                             t.push({
                                 type: b.En.RECENT,
@@ -145,7 +144,7 @@ let O = function (e, t) {
                                 emojisDisabled: n
                             });
                         } else if (i === b.UX.FAVORITES) {
-                            let { emojisDisabled: e, emojisUnfiltered: n } = d(S, !0);
+                            let { emojisDisabled: e, emojisUnfiltered: n } = d(S);
                             if (null == n || 0 === n.length) return t;
                             t.push({
                                 type: b.En.FAVORITES,
