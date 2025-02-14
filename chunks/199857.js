@@ -253,28 +253,32 @@ class E extends l.Z {
                     .concat(null == l ? 'null' : l)
             );
         let u = this.buildSSRCsFromOutboundStreams();
-        return (0, c.Rx)({
-            type: 'answer',
-            baseSDP: l,
-            audioCodec: n,
-            audioPayloadType: i,
-            audioBitRate: this.voiceBitrate,
-            videoCodec: r,
-            videoPayloadType: a,
-            videoBitRate: 2500,
-            sendingVideo: s,
-            rtxPayloadType: o,
+        return {
             ssrcs: u,
-            extensions: this.extensions
-        });
+            answer: (0, c.Rx)({
+                type: 'answer',
+                baseSDP: l,
+                audioCodec: n,
+                audioPayloadType: i,
+                audioBitRate: this.voiceBitrate,
+                videoCodec: r,
+                videoPayloadType: a,
+                videoBitRate: 2500,
+                sendingVideo: s,
+                rtxPayloadType: o,
+                ssrcs: u,
+                extensions: this.extensions
+            })
+        };
     }
     async setRemoteAnswer() {
         let e = this.pc,
-            t = this.generateSDPAnswer();
+            { ssrcs: t, answer: n } = this.generateSDPAnswer(),
+            i = e.localDescription;
         try {
-            await e.setRemoteDescription(t);
+            await e.setRemoteDescription(n);
         } catch (e) {
-            this.logger.warn('Failed to set remote answer: '.concat(e, ', type: ').concat(t.type, ', sdp: ').concat(t.sdp)), this.emit(o.Sh.SdpError, 'setRemoteDescription', e.message, t.type, t.sdp);
+            this.logger.warn('Failed to set remote answer: '.concat(e, ', type: ').concat(n.type, ', sdp: ').concat(n.sdp)), this.emit(o.Sh.SdpError, 'setRemoteDescription', e.message, n.type, n.sdp), null != i && this.emit(o.Sh.SdpError, 'setLocalDescription', e.message, i.type, i.sdp), this.emit(o.Sh.SdpError, 'generateSDPAnswer', e.message, 'ssrcs', JSON.stringify(t));
         }
         (this.unassignedStreams.audio.length > 0 || this.unassignedStreams.video.length > 0) && ((this.negotiationNeeded = !0), this.logger.info('Renegotiating: Streams left unassigned after negotiation - renegotiate')), (this.negotiating = !1), this.negotiationNeeded && this.handleNegotiationNeeded();
     }
