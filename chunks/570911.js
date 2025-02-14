@@ -1,35 +1,39 @@
 n.d(t, { c: () => i });
 let i = [
     {
-        name: 'Boulder',
-        color: '#8c8d8d'
-    },
-    {
-        name: 'Cascade',
-        color: '#43abe9'
-    },
-    {
-        name: 'Thunder',
-        color: '#e8c02f'
-    },
-    {
         name: 'Soul',
-        color: '#e72282'
-    },
-    {
-        name: 'Marsh',
-        color: '#e86e1d'
+        color: '#ff1c90'
     },
     {
         name: 'Volcano',
         color: '#e81d1e'
     },
     {
+        name: 'Marsh',
+        color: '#e86e1d'
+    },
+    {
+        name: 'Thunder',
+        color: '#e8c02f'
+    },
+    {
+        name: 'Rising',
+        color: '#71368a'
+    },
+    {
+        name: 'Zephyr',
+        color: '#029FFC'
+    },
+    {
+        name: 'Cascade',
+        color: '#4fe2ca'
+    },
+    {
         name: 'Earth',
         color: '#406601'
     },
     {
-        name: 'Zephyr',
-        color: '#4892d5'
+        name: 'Boulder',
+        color: '#272727'
     }
 ];
