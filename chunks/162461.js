@@ -1,6 +1,7 @@
 n.d(t, {
     DG: () => s,
     MY: () => o,
+    iC: () => f,
     nP: () => d,
     sA: () => l,
     wm: () => u
@@ -73,3 +74,16 @@ let c = (0, i.B)({
 function d(e) {
     return c.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
 }
+let f = (0, i.B)({
+    kind: 'user',
+    id: '2025-02_game_profile_reenable',
+    label: 'Re-enable content inventory on game profile',
+    defaultConfig: { enabled: !1 },
+    treatments: [
+        {
+            id: 1,
+            label: 'Re-enable',
+            config: { enabled: !0 }
+        }
+    ]
+});
