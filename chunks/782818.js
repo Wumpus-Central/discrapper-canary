@@ -66,7 +66,8 @@ function E(e) {
         { avatars: n, loading: i } = (0, f.S)(),
         { recentAvatarsLimit: s, numberOfLockedAvatarSlots: r } = (0, x.p)(t),
         o = n.length > s ? n.slice(0, s) : n,
-        d = Math.max(s - o.length, 0);
+        d = o.length,
+        u = Math.max(s - d, 0);
     return (a.useEffect(() => {
         (0, p.N)();
     }, []),
@@ -75,26 +76,27 @@ function E(e) {
         : (0, l.jsxs)('div', {
               className: j.recentAvatarContainer,
               children: [
-                  (0, l.jsx)('ul', {
-                      'aria-label': A.intl.string(A.t.lsU63N),
-                      className: j.recentAvatarList,
-                      children: o.map((e, t) =>
-                          (0, l.jsx)(
-                              'li',
-                              {
-                                  children: (0, l.jsx)(v, {
-                                      avatar: e,
-                                      orderNumber: t + 1
-                                  })
-                              },
-                              e.id
-                          )
-                      )
-                  }),
                   d > 0 &&
+                      (0, l.jsx)('ul', {
+                          'aria-label': A.intl.string(A.t.lsU63N),
+                          className: j.recentAvatarList,
+                          children: o.map((e, t) =>
+                              (0, l.jsx)(
+                                  'li',
+                                  {
+                                      children: (0, l.jsx)(v, {
+                                          avatar: e,
+                                          orderNumber: t + 1
+                                      })
+                                  },
+                                  e.id
+                              )
+                          )
+                      }),
+                  u > 0 &&
                       (0, l.jsxs)('div', {
                           className: j.emptyAvatarSlots,
-                          children: [(0, l.jsx)(c.nn4, { children: A.intl.format(A.t['8W2HOz'], { numberOfEmptyAvatarSlots: d }) }), [...Array(d)].map((e) => (0, l.jsx)(g.Z, { className: j.avatarPlaceholder }, e))]
+                          children: [(0, l.jsx)(c.nn4, { children: A.intl.format(A.t['8W2HOz'], { numberOfEmptyAvatarSlots: u }) }), [...Array(u)].map((e) => (0, l.jsx)(g.Z, { className: j.avatarPlaceholder }, e))]
                       }),
                   !t && (0, l.jsx)(N, { numberOfLockedAvatarSlots: r })
               ]
