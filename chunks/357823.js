@@ -1,7 +1,7 @@
-t.d(n, { default: () => T });
-var i = t(200651);
+t.d(e, { default: () => h });
+var l = t(200651);
 t(192379);
-var l = t(481060),
+var i = t(481060),
     r = t(239091),
     a = t(883385),
     u = t(108843),
@@ -10,87 +10,60 @@ var l = t(481060),
     s = t(819403),
     c = t(286694),
     E = t(314897),
-    _ = t(933409),
-    g = t(389052),
-    f = t(158508),
-    v = t(991307),
-    Z = t(37258),
-    h = t(700994),
-    A = t(981631),
-    S = t(388032);
-let T = (0, u.Z)(
+    _ = t(238296),
+    g = t(933409),
+    f = t(981631),
+    v = t(388032);
+let h = (0, u.Z)(
     (0, a.Z)(
-        function (e) {
-            let { user: n, guildId: t, channel: a, onSelect: u } = e,
-                d = a.id,
-                A = (0, Z.Z)({
-                    userId: n.id,
-                    guildId: t,
-                    channelId: d,
-                    showGuildProfile: !0,
-                    icon: (0, i.jsx)(l.tBG, { size: 'sm' }),
-                    label: S.intl.string(S.t.iXAna2)
+        function (n) {
+            let { user: e, channel: t, guildId: a, onSelect: u, context: d } = n,
+                f = t.id,
+                h = e.isNonUserBot(),
+                A = e.id === E.default.getId(),
+                T = (0, s.Z)(e),
+                S = (0, c.Z)(e, a, f),
+                I = (0, _.Y)({
+                    isOwnSettings: A,
+                    userId: e.id,
+                    channelId: f,
+                    guildId: a,
+                    context: d
                 }),
-                T = (0, h.Z)(n.id),
-                M = (0, v.Z)(n.id),
-                m = (0, f.Z)({
-                    user: n,
-                    guildId: t,
-                    channelId: d,
-                    location: 'GuildVoiceUserContextMenu'
-                }),
-                I = (0, g.Z)({
-                    user: n,
-                    guildId: t,
-                    channelId: d,
-                    location: 'GuildChannelUserContextMenu'
-                }),
-                C = (0, _.Z)(n, t, d),
-                b = (0, o.Z)({
-                    id: n.id,
-                    label: S.intl.string(S.t['/AXYnJ'])
-                }),
-                N = (0, s.Z)(n),
-                P = (0, c.Z)(n, t, d),
-                D = n.isNonUserBot(),
-                U = n.id === E.default.getId();
-            return (0, i.jsx)(l.v2r, {
+                Z = (0, _.E)(e, f, a),
+                M = (0, g.Z)(e, a, f),
+                C = (0, o.Z)({
+                    id: e.id,
+                    label: v.intl.string(v.t['/AXYnJ'])
+                });
+            return (0, l.jsx)(i.v2r, {
                 navId: 'user-context',
                 onClose: r.Zy,
-                'aria-label': S.intl.string(S.t.liqwPD),
+                'aria-label': v.intl.string(v.t.liqwPD),
                 onSelect: u,
                 variant: 'fixed',
                 children:
-                    !D &&
-                    (0, i.jsxs)(i.Fragment, {
+                    !h &&
+                    (0, l.jsxs)(l.Fragment, {
                         children: [
-                            (0, i.jsxs)(l.kSQ, {
-                                children: [N, P]
+                            (0, l.jsxs)(i.kSQ, {
+                                children: [T, S]
                             }),
-                            (0, i.jsx)(l.kSQ, { children: A }),
-                            (0, i.jsxs)(l.kSQ, {
-                                children: [T, M]
-                            }),
-                            !U &&
-                                (0, i.jsx)(l.kSQ, {
-                                    children: (0, i.jsxs)(l.sNh, {
+                            I,
+                            !A &&
+                                (0, l.jsx)(i.kSQ, {
+                                    children: (0, l.jsxs)(i.sNh, {
                                         id: 'more-options',
-                                        label: S.intl.string(S.t.PdRCRk),
-                                        children: [
-                                            (0, i.jsx)(l.kSQ, { children: b }),
-                                            (0, i.jsxs)(l.kSQ, {
-                                                children: [m, I]
-                                            }),
-                                            (0, i.jsx)(l.kSQ, { children: C })
-                                        ]
+                                        label: v.intl.string(v.t.PdRCRk),
+                                        children: [Z, (0, l.jsx)(i.kSQ, { children: M })]
                                     })
                                 }),
-                            U && (0, i.jsx)(l.kSQ, { children: (0, i.jsx)(l.kSQ, { children: b }) })
+                            A && (0, l.jsx)(i.kSQ, { children: C })
                         ]
                     })
             });
         },
-        { object: A.qAy.CONTEXT_MENU }
+        { object: f.qAy.CONTEXT_MENU }
     ),
     [d.Z.VOICE_USER]
 );

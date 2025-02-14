@@ -43,7 +43,7 @@ var i = n(200651),
     V = n(928518),
     z = n(191302),
     W = n(703656),
-    Y = n(648384),
+    Y = n(880395),
     q = n(740492),
     K = n(793319),
     X = n(3861),
@@ -412,7 +412,8 @@ class ez extends l.PureComponent {
                     case ew.fO.USER:
                         this.trackCallTileContextMenuImpression(e, ew.TH.USER);
                         let h = e_.default.getUser(e.id);
-                        if (null != h)
+                        if (null != h) {
+                            if (this.props.enableSimplifiedCallSettings && l) return (0, Y.D)(t, h, s, u);
                             switch (s.type) {
                                 case eU.d4z.DM:
                                     return (0, _.jW)(
@@ -452,27 +453,30 @@ class ez extends l.PureComponent {
                                 case eU.d4z.GUILD_VOICE:
                                 case eU.d4z.PUBLIC_THREAD:
                                 case eU.d4z.PRIVATE_THREAD:
-                                    let p = s.getGuildId();
-                                    if ((o()(null != p, 'GuildID null for guild voice channel'), this.props.enableSimplifiedCallSettings && l)) return (0, Y.p)(t, h, s, p, u);
-                                    return (0, _.jW)(
-                                        t,
-                                        async () => {
-                                            let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('7717'), n.e('65023')]).then(n.bind(n, 757387));
-                                            return (t) =>
-                                                (0, i.jsx)(e, {
-                                                    ...t,
-                                                    showMediaItems: !0,
-                                                    showChannelCallItems: !0,
-                                                    showChatItems: !1,
-                                                    user: h,
-                                                    channel: s,
-                                                    guildId: p,
-                                                    showModalItems: !0
-                                                });
-                                        },
-                                        u
+                                    let e = s.getGuildId();
+                                    return (
+                                        o()(null != e, 'GuildID null for guild voice channel'),
+                                        (0, _.jW)(
+                                            t,
+                                            async () => {
+                                                let { default: t } = await Promise.all([n.e('79695'), n.e('98783'), n.e('7717'), n.e('65023')]).then(n.bind(n, 757387));
+                                                return (n) =>
+                                                    (0, i.jsx)(t, {
+                                                        ...n,
+                                                        showMediaItems: !0,
+                                                        showChannelCallItems: !0,
+                                                        showChatItems: !1,
+                                                        user: h,
+                                                        channel: s,
+                                                        guildId: e,
+                                                        showModalItems: !0
+                                                    });
+                                            },
+                                            u
+                                        )
                                     );
                             }
+                        }
                 }
             }),
             eH(this, 'handleCallResize', (e) => {
