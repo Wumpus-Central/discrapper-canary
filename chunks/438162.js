@@ -69,12 +69,7 @@ function ei(e) {
 function eo(e) {
     (0, d.jW)(e, async () => {
         let { default: e } = await n.e('17610').then(n.bind(n, 385620));
-        return (t) =>
-            (0, r.jsx)(e, {
-                ...t,
-                layoutId: D.qU,
-                version: 1
-            });
+        return (t) => (0, r.jsx)(e, { ...t });
     });
 }
 let e_ = a.memo(function (e) {

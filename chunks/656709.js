@@ -1,4 +1,7 @@
-n.d(t, { p: () => a });
+n.d(t, {
+    k: () => s,
+    p: () => a
+});
 var i = n(904245),
     r = n(957730);
 function a(e) {
@@ -9,4 +12,9 @@ function a(e) {
         contentInventoryEntry: u,
         doNotNotifyOnError: o
     });
+}
+function s(e) {
+    let { channel: t, content: n, whenReady: a, doNotNotifyOnError: s } = e,
+        o = r.ZP.parse(t, n);
+    return i.Z.sendMessage(t.id, o, a, { doNotNotifyOnError: s });
 }

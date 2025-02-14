@@ -80,12 +80,18 @@ function Y(e) {
                         o()(null != n, 'Send channel must be defined'),
                             (0, O.uL)(B.Z5c.CHANNEL(n.guild_id, n.id)),
                             (0, v.i)(B.IlC.OVERLAY),
-                            await (0, S.p)({
-                                channel: n,
-                                content: G.intl.string(G.t.DwAcMz),
-                                entry: t,
-                                whenReady: !0
-                            });
+                            !0 === t.extra.fake_inventory_item
+                                ? await (0, S.k)({
+                                      channel: n,
+                                      content: G.intl.string(G.t.DwAcMz),
+                                      whenReady: !0
+                                  })
+                                : await (0, S.p)({
+                                      channel: n,
+                                      content: G.intl.string(G.t.DwAcMz),
+                                      entry: t,
+                                      whenReady: !0
+                                  });
                     }
                     f.Z.track(B.rMx.OVERLAY_GAME_INVITE_SENT, {
                         target_user_id: a.id,
@@ -365,7 +371,8 @@ function q(e) {
                                     extra: {
                                         type: 'played_game_extra',
                                         game_name: null !== (o = null === (i = e.activity) || void 0 === i ? void 0 : i.name) && void 0 !== o ? o : e.game.name,
-                                        application_id: null !== (u = null === (l = e.activity) || void 0 === l ? void 0 : l.application_id) && void 0 !== u ? u : e.game.id
+                                        application_id: null !== (u = null === (l = e.activity) || void 0 === l ? void 0 : l.application_id) && void 0 !== u ? u : e.game.id,
+                                        fake_inventory_item: !0
                                     },
                                     content_type: s.s.PLAYED_GAME,
                                     author_type: a.i.USER,
