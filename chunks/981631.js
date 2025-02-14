@@ -1,8 +1,8 @@
 a.d(e, { rMx: () => T }), a(47120), a(743606);
 var r,
     n = a(512722),
-    o = a.n(n),
-    _ = a(674746);
+    _ = a.n(n),
+    o = a(674746);
 a(722770), a(106351), a(470167), a(388123);
 var i = a(275726),
     c = a(866442),
@@ -1105,8 +1105,8 @@ let A = Object.freeze({
         IOS: 'https://itunes.apple.com/app/discord/id985746746',
         ANDROID: 'https://play.google.com/store/apps/details?id=com.discord'
     });
-let p = (0, c._i)(_.Z.BRAND_500);
-o()(null != p, 'Brand color could not be parsed'),
+let p = (0, c._i)(o.Z.BRAND_500);
+_()(null != p, 'Brand color could not be parsed'),
     Object.freeze({
         0: 0,
         1: 2,
@@ -2329,6 +2329,7 @@ var T =
     (r.VOICE_FILTER_DOWNLOAD_ATTEMPTED = 'voice_filter_download_attempted'),
     (r.VOICE_FILTER_ACTIVATE_FAILED = 'voice_filter_activate_failed'),
     (r.VOICE_FILTER_PLAYBACK_TOGGLED = 'voice_filter_playback_toggled'),
+    (r.VOICE_FILTER_PREVIEW_PLAYED = 'voice_filter_preview_played'),
     (r.VOICE_FILTER_PICKER_SCROLLED = 'voice_filter_picker_scrolled'),
     (r.VOICE_FILTER_MIC_SELECTOR_OPENED = 'voice_filter_mic_selector_opened'),
     (r.VOICE_FILTER_MIC_SELECTOR_INPUT_SELECTED = 'voice_filter_mic_selector_input_selected'),
