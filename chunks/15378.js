@@ -1,6 +1,5 @@
 e.exports = {
     welcomeMessageContainer: 'welcomeMessageContainer__6f212',
-    welcomeMessageProfileContainer: 'welcomeMessageProfileContainer__6f212',
     avatar: 'avatar__6f212',
     avatarBackground: 'avatarBackground__6f212',
     avatarBorder: 'avatarBorder__6f212',
