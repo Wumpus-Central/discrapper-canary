@@ -1,4 +1,4 @@
-n.d(t, { Z: () => z }), n(47120);
+n.d(t, { Z: () => K }), n(47120);
 var i = n(392711),
     r = n(126313),
     a = n(570140),
@@ -181,24 +181,15 @@ function H() {
         });
 }
 function Y() {
-    let { enabled: e } = u.Z.getCurrentConfig({ location: 'ContentInventoryManager' }, { autoTrackExposure: !0 });
-    e &&
+    let { enabled: e } = u.Z.getCurrentConfig({ location: 'ContentInventoryManager' }, { autoTrackExposure: !0 }),
+        t = (0, c.Rb)('ContentInventoryManager').allowActivityWidget;
+    (e || t) &&
         U({
             feedId: y.YN.GAME_PROFILE_FEED,
             feature: r.L.OVERLAY_INVITES
         });
 }
-function W(e) {
-    let { locked: t } = e,
-        n = (0, c.Rb)('ContentInventoryManager').allowActivityWidget;
-    !t &&
-        n &&
-        U({
-            feedId: y.YN.GAME_PROFILE_FEED,
-            feature: r.L.OVERLAY_INVITES
-        });
-}
-class K extends s.Z {
+class W extends s.Z {
     constructor(...e) {
         super(...e),
             T(this, 'actions', {
@@ -211,9 +202,8 @@ class K extends s.Z {
                 CONTENT_INVENTORY_INBOX_STALE: V,
                 SPOTIFY_NEW_TRACK: j,
                 GAME_PROFILE_OPEN: H,
-                OVERLAY_SET_INPUT_LOCKED: W,
                 OVERLAY_READY: Y
             });
     }
 }
-let z = new K();
+let K = new W();
