@@ -490,8 +490,15 @@ function eh(e) {
     );
 }
 async function em() {
-    let e = j();
-    for (let t of (S.info('Retracking '.concat(e.length, ' games')), await eg(), await (0, a._v)(2000), e)) await $(t), await (0, a._v)(100);
+    await eg(), await (0, a._v)(2000);
+    let e = j(),
+        t = new Set([
+            ...f.ZP.getRunningGames()
+                .filter((e) => f.ZP.getOverlayEnabledForGame(e))
+                .map((e) => e.pid),
+            ...e
+        ]);
+    for (let n of (S.info('Retracking '.concat(t.size, ' games (').concat(e.length, ' already tracked)')), t)) await $(n), await (0, a._v)(100);
     S.info('Retracked '.concat(e.length, ' games'));
 }
 async function eg() {
