@@ -41875,7 +41875,8 @@ img.thumbnail__0f2e8 {
 .visual-refresh .container__9293f {
     --__header-bar-background: var(--background-base-lower);
     border-bottom: 1px solid var(--border-subtle);
-    padding-left: 20px
+    padding-left: 20px;
+    height: var(--custom-channel-header-height)
 }
 
 .upperContainer__9293f {
@@ -55309,7 +55310,7 @@ img[alt] {
     --custom-app-sidebar-target-width: calc(var(--custom-guild-sidebar-width) + var(--custom-guild-list-width));
     --custom-rtc-account-height: 44px;
     --custom-app-top-bar-height: 36px;
-    --custom-channel-header-height: 56px;
+    --custom-channel-header-height: 52px;
     --custom-member-list-width: 265px;
     --custom-channel-textarea-text-area-height: 54px
 }
@@ -55320,7 +55321,7 @@ img[alt] {
 }
 
 .density-compact.visual-refresh {
-    --custom-channel-header-height: 56px
+    --custom-channel-header-height: 48px
 }
 
 .grecaptcha-badge {
