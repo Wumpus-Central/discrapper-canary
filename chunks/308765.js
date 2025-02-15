@@ -133,10 +133,6 @@ let r = {
         actions: ['INTERACTION_MODAL_CREATE', 'INTERACTION_IFRAME_MODAL_CREATE', 'INTERACTION_IFRAME_MODAL_CLOSE', 'RPC_APP_DISCONNECTED'],
         inlineRequire: () => n(189334).Z
     },
-    LocalizedPricingPromoManager: {
-        actions: ['POST_CONNECTION_OPEN'],
-        inlineRequire: () => n(519143).Z
-    },
     LoginRequiredActionManager: {
         actions: ['POST_CONNECTION_OPEN'],
         inlineRequire: () => n(858386).Z

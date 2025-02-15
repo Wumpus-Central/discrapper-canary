@@ -1,13 +1,12 @@
 n.d(t, {
-    B$: () => eb,
     Dk: () => V,
     EH: () => ey,
     EO: () => eu,
     G: () => ee,
     GE: () => eT,
-    GM: () => eA,
+    GM: () => eS,
     GV: () => Z,
-    K2: () => eS,
+    K2: () => eb,
     LI: () => b,
     MH: () => X,
     Mg: () => ed,
@@ -35,7 +34,7 @@ n.d(t, {
     pl: () => ef,
     qu: () => ec,
     qv: () => P,
-    r5: () => eN,
+    r5: () => eA,
     rt: () => eI,
     sF: () => F,
     sk: () => et,
@@ -1193,31 +1192,13 @@ async function eT() {
         return o.Z.dispatch({ type: 'BILLING_IP_COUNTRY_CODE_FAILURE' }), e;
     }
 }
-async function eb() {
-    try {
-        let e = await s.tn.get({
-            url: E.ANM.BILLING_LOCALIZED_PROMO,
-            rejectWithError: !1
-        });
-        if (null != e.body.localized_pricing_promo) {
-            let t = e.body.localized_pricing_promo;
-            o.Z.dispatch({
-                type: 'BILLING_SET_LOCALIZED_PRICING_PROMO',
-                localizedPricingPromo: t
-            });
-        }
-        return e;
-    } catch (e) {
-        return o.Z.dispatch({ type: 'BILLING_LOCALIZED_PRICING_PROMO_FAILURE' }), e;
-    }
-}
-function eS() {
+function eb() {
     o.Z.dispatch({ type: 'RESET_PAYMENT_ID' });
 }
-function eA() {
+function eS() {
     o.Z.dispatch({ type: 'BILLING_SUBSCRIPTION_RESET' });
 }
-function eN(e) {
+function eA(e) {
     o.Z.dispatch({
         type: 'USER_PAYMENT_BROWSER_CHECKOUT_STARTED',
         loadId: e
