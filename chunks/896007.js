@@ -38,7 +38,6 @@ function g(e) {
         let e = [];
         e.push(m(d.pNK.PROFILE, S)),
             e.push(m(d.pNK.TAG, S)),
-            e.push(m(d.pNK.LAYOUT, S)),
             e.push(m(d.pNK.ENGAGEMENT, S)),
             b &&
                 (e.push({ section: h.DIVIDER }),
@@ -80,7 +79,7 @@ function g(e) {
             e.push(m(d.pNK.GUILD_AUTOMOD, S)));
         let r = t.hasFeature(d.oNc.COMMUNITY) && f,
             s = T();
-        return (n || r || s) && (e.push({ section: h.DIVIDER }), e.push(m(d.pNK.COMMUNITY, S)), e.push(m(d.pNK.ONBOARDING, S)), e.push(m(d.pNK.ANALYTICS, S)), e.push(m(d.pNK.COMMUNITY_WELCOME, S)), e.push(m(d.pNK.ROLE_SUBSCRIPTIONS, S)), e.push(m(d.pNK.GUILD_PRODUCTS, S)), e.push(m(d.pNK.ROLE_SUBSCRIPTIONS_STORE_PAGE, S))), e.push({ section: h.DIVIDER }), e.push(m(d.pNK.GUILD_TEMPLATES, S)), e.push(m(d.pNK.WIDGET, S)), e.push(m(d.pNK.DELETE, S)), e.filter(o.lm);
+        return (n || r || s) && (e.push({ section: h.DIVIDER }), e.push(m(d.pNK.COMMUNITY, S)), e.push(m(d.pNK.ONBOARDING, S)), e.push(m(d.pNK.ANALYTICS, S)), e.push(m(d.pNK.COMMUNITY_WELCOME, S)), e.push(m(d.pNK.ROLE_SUBSCRIPTIONS, S)), e.push(m(d.pNK.GUILD_PRODUCTS, S)), e.push(m(d.pNK.ROLE_SUBSCRIPTIONS_STORE_PAGE, S))), e.push({ section: h.DIVIDER }), e.push(m(d.pNK.GUILD_PREMIUM, S)), e.push(m(d.pNK.GUILD_TEMPLATES, S)), e.push(m(d.pNK.DELETE, S)), e.filter(o.lm);
     }
     return [
         {
