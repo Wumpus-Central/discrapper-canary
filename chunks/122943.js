@@ -39,18 +39,18 @@ function f(e) {
                 ? (0, i.jsx)(u.Z, {
                       variant: n,
                       className: f,
-                      children: c.intl.string(c.t.bl1Mz8)
+                      children: c.intl.string(c.t['9FaEzs'])
                   })
                 : t.isGuildStageVoice()
                   ? (0, i.jsx)(u.Z, {
                         variant: n,
                         className: f,
-                        children: c.intl.string(c.t.Q1lNen)
+                        children: c.intl.string(c.t.QygGCA)
                     })
                   : (0, i.jsx)(u.Z, {
                         variant: n,
                         className: f,
-                        children: c.intl.string(c.t.bl1Mz8)
+                        children: c.intl.string(c.t.msxteH)
                     });
     return (0, i.jsxs)(i.Fragment, {
         children: [E(), !_ && v()]

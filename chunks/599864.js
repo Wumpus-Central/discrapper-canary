@@ -17,7 +17,7 @@ function h(e) {
         { profileType: m } = (0, c.z)(),
         g = (0, r.e7)([u.Z], () => u.Z.isInChannel(t.id));
     if (!(0, r.e7)([l.Z], () => t.isPrivate() || l.Z.can(_.Plq.CONNECT, t))) return null;
-    let E = () => (m === f.y0.FULL_SIZE ? p.intl.string(p.t['3xjX0d']) : t.isDM() || t.isGroupDM() ? p.intl.string(p.t['7hwn2N']) : t.isGuildStageVoice() ? p.intl.string(p.t.g6pBAg) : p.intl.string(p.t.iOqmAQ)),
+    let E = () => (m === f.y0.FULL_SIZE ? p.intl.string(p.t['3xjX0d']) : t.isDM() || t.isGroupDM() ? p.intl.string(p.t['7hwn2N']) : t.isGuildStageVoice() ? p.intl.string(p.t.Acqcoq) : p.intl.string(p.t.BXxdl5)),
         v = () => (m === f.y0.FULL_SIZE ? p.intl.string(p.t.VJlc0d) : t.isDM() || t.isGroupDM() ? p.intl.string(p.t.ozoE2N) : t.isGuildStageVoice() ? p.intl.string(p.t['7vb2cX']) : p.intl.string(p.t['96ANUF']));
     return (0, i.jsx)(d.tG, {
         text: g ? E() : v(),

@@ -29,10 +29,10 @@ let _ = {
 };
 class p extends (i = a.Component) {
     render() {
-        let { type: e, avatarSize: t, className: n } = this.props;
+        let { type: e, avatarSize: t, className: n, childrenClassName: i, doNotAnimate: a } = this.props;
         return '2' === e
             ? (0, r.jsxs)('div', {
-                  className: o()(c.multiplePlaceholder, n),
+                  className: o()(c.multiplePlaceholder, c.multiplePlaceholderAnimated, n),
                   children: [
                       (0, r.jsxs)(u.Z, {
                           children: [(0, r.jsx)('div', { className: o()(c.placeholderAvatar, _[t], c.avatarMasked) }), (0, r.jsx)('div', { className: o()(c.placeholderAvatar, _[t], c.avatarMasked) }), (0, r.jsx)('div', { className: o()(c.placeholderAvatar, _[t]) })]
@@ -45,12 +45,12 @@ class p extends (i = a.Component) {
                   ]
               })
             : (0, r.jsxs)(u.Z, {
-                  className: o()(c.placeholder, n),
+                  className: o()(c.placeholder, !a && c.placeholderAnimated, n),
                   children: [
-                      (0, r.jsx)('div', { className: o()(c.placeholderAvatar, _[t]) }),
+                      (0, r.jsx)('div', { className: o()(c.placeholderAvatar, _[t], i) }),
                       (0, r.jsx)(u.Z, {
                           grow: 1,
-                          className: c.placeholderUsername,
+                          className: o()(c.placeholderUsername, i),
                           style: { maxWidth: this.placeholderMaxWidth }
                       })
                   ]

@@ -1,9 +1,9 @@
 n.d(t, { Z: () => r });
 var l = n(200651);
 function r(e) {
-    let { width: t = 24, height: n = 24, boxColor: r, ribbonColor: i, style: s } = e;
+    let { width: t = 24, height: n = 24, boxColor: r, ribbonColor: i, style: a } = e;
     return (0, l.jsxs)('svg', {
-        style: s,
+        style: a,
         width: t,
         height: n,
         viewBox: '0 0 24 24',

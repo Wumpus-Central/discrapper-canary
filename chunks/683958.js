@@ -1,4 +1,4 @@
-n.d(t, { ApplicationCommandShareModal: () => C }), n(47120);
+n.d(t, { ApplicationCommandShareModal: () => N }), n(47120);
 var l = n(200651),
     s = n(192379),
     i = n(481060),
@@ -17,11 +17,11 @@ var l = n(200651),
     x = n(388032),
     _ = n(125135),
     v = n(621054);
-let Z = [a.yU.CHAT],
-    j = () => {
+let j = [a.yU.CHAT],
+    y = () => {
         (0, i.Mr3)(p.s);
     };
-function y(e) {
+function C(e) {
     let { sendLabel: t, canSend: n, isSending: a, onSend: r } = e,
         o = s.useCallback(() => {
             r();
@@ -40,9 +40,9 @@ function y(e) {
         })
     });
 }
-function C(e) {
+function N(e) {
     var t;
-    let { applicationId: n, channel: a, command: p, onClose: C, requireLaunchChannel: N, onShareResult: S, previewMessage: E, ...L } = e,
+    let { applicationId: n, channel: a, command: p, onClose: N, requireLaunchChannel: S, onShareResult: Z, previewMessage: E, ...L } = e,
         M = s.useMemo(() => (0, o.dL)(a.id), [a]),
         [P, T] = s.useState(!1),
         { commands: w, loading: A } =
@@ -52,7 +52,7 @@ function C(e) {
             }),
             (0, m.v1)(
                 t,
-                { commandTypes: Z },
+                { commandTypes: j },
                 {
                     applicationId: n,
                     allowFetch: !1,
@@ -60,10 +60,10 @@ function C(e) {
                 }
             )),
         R = s.useRef(0),
-        [D, k] = s.useState(N ? [M] : []),
+        [D, k] = s.useState(S ? [M] : []),
         I = D.length,
         F = I >= 5,
-        [U, q] = s.useState(''),
+        [q, U] = s.useState(''),
         { results: z, updateSearchText: H } = (0, u.s)({
             selectedDestinations: D,
             originDestination: M,
@@ -71,24 +71,24 @@ function C(e) {
         }),
         W = s.useCallback(
             (e) => {
-                q(e), H(e);
+                U(e), H(e);
             },
             [H]
         ),
         O = s.useCallback(() => {
-            S(!1), C();
-        }, [S, C]),
+            Z(!1), N();
+        }, [Z, N]),
         [G] = (0, r.Z)([n]),
         X = s.useCallback(() => {
-            q('');
-        }, [q]),
+            U('');
+        }, [U]),
         B = s.useRef(null);
     s.useEffect(() => {
-        if ('' === U) {
+        if ('' === q) {
             var e;
             null === (e = B.current) || void 0 === e || e.focus();
         }
-    }, [U]);
+    }, [q]);
     let V = s.useCallback(
             (e) => {
                 k((t) => {
@@ -96,7 +96,7 @@ function C(e) {
                         let { type: n, id: l } = t;
                         return n === e.type && l === e.id;
                     });
-                    if (-1 === n) return F ? t : (q(''), (R.current += 1), [e, ...t]);
+                    if (-1 === n) return F ? t : (U(''), (R.current += 1), [e, ...t]);
                     let l = [...t];
                     return l.splice(n, 1), (R.current += 1), l;
                 });
@@ -114,7 +114,7 @@ function C(e) {
                 if (null === Y) return;
                 T(!0);
                 let n = (await Promise.all(e.map(o.qx))).filter(h.lm);
-                t && (S(!0), j()),
+                t && (Z(!0), y()),
                     n.forEach(async (e) => {
                         let t = c.Z.getChannel(e);
                         if (null == t) return;
@@ -129,10 +129,10 @@ function C(e) {
                                 }
                             })) && (0, i.showToast)((0, i.createToast)(x.intl.string(x.t['5WjJcn']), i.ToastType.MESSAGE));
                     }),
-                    S(!0),
-                    j();
+                    Z(!0),
+                    y();
             },
-            [S, Y]
+            [Z, Y]
         ),
         K = s.useCallback(() => {
             Q(D, { closeAfterSend: !0 });
@@ -216,7 +216,7 @@ function C(e) {
                         className: _.search,
                         ref: B,
                         size: i.E1j.Sizes.MEDIUM,
-                        query: U,
+                        query: q,
                         onChange: W,
                         onClear: X,
                         placeholder: x.intl.string(x.t['5h0QOD']),
@@ -226,7 +226,7 @@ function C(e) {
                 ]
             }),
             $,
-            (0, l.jsx)(y, {
+            (0, l.jsx)(C, {
                 sendLabel: x.intl.string(x.t.TXNS7e),
                 canSend: I > 0,
                 isSending: P,

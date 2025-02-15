@@ -47,7 +47,7 @@ function L(e) {
         U = (0, o.e7)([m.Z], () => m.Z.getGuild(n.guild_id)),
         G = (0, g.Z)(n),
         B = (0, f.ZP)(n),
-        Z = () => (n.isDM() || n.isGroupDM() ? O.intl.string(O.t.bl1Mz8) : n.isGuildStageVoice() ? O.intl.string(O.t.Q1lNen) : O.intl.string(O.t.bl1Mz8)),
+        Z = () => (n.isDM() || n.isGroupDM() ? O.intl.string(O.t['9FaEzs']) : n.isGuildStageVoice() ? O.intl.string(O.t.QygGCA) : O.intl.string(O.t.msxteH)),
         F = () => {
             let e = (e) => {
                     e.stopPropagation(), null == M || M({ action: 'OPEN_VOICE_CHANNEL' }), n.isGuildStageVoice() ? (0, h.Cq)(n) : (u.default.selectVoiceChannel(n.id), (0, _.Kh)(n.id)), null == L || L();

@@ -2,18 +2,18 @@ n.d(t, { Z: () => x });
 var l = n(200651),
     r = n(192379),
     i = n(481060),
-    s = n(727637),
-    a = n(906732),
+    a = n(727637),
+    s = n(906732),
     o = n(333867),
     d = n(677232),
     c = n(884697),
     u = n(228624),
     C = n(67409),
     h = n(474936),
-    p = n(231338),
-    m = n(388032),
-    f = n(290057);
-let g = {
+    m = n(231338),
+    p = n(388032),
+    g = n(290057);
+let f = {
         dark: [
             {
                 box: '#FFF19E',
@@ -76,27 +76,27 @@ let g = {
         ]
     },
     x = (e) => {
-        let { product: t, selectedVariantIndex: n, returnRef: x, onSuccess: b, tooltipDelay: _, isGiftEasterEggEnabled: v, disableCustomColor: j = !1 } = e,
-            { analyticsLocations: k } = (0, a.ZP)(),
+        let { product: t, selectedVariantIndex: n, returnRef: x, onSuccess: b, tooltipDelay: v, isGiftEasterEggEnabled: _, disableCustomColor: j = !1 } = e,
+            { analyticsLocations: k } = (0, s.ZP)(),
             E = r.useRef(null),
-            L = (0, s.Z)(E),
-            S = j ? p.BR.DARK : p.BR.LIGHT,
+            L = (0, a.Z)(E),
+            S = j ? m.BR.DARK : m.BR.LIGHT,
             T = (0, u.hv)('CollectiblesShopGiftButton');
         return (0, c.x6)(t)
             ? null
             : (0, l.jsx)(i.ua7, {
-                  text: m.intl.string(m.t['JCFN//']),
-                  delay: _,
+                  text: p.intl.string(p.t['JCFN//']),
+                  delay: v,
                   children: (e) =>
                       (0, l.jsx)(i.zxk, {
                           ...e,
                           buttonRef: E,
-                          className: f.giftButton,
+                          className: g.giftButton,
                           color: j ? i.Ttl.BRAND : i.Ttl.CUSTOM,
                           look: i.zxk.Looks.FILLED,
                           size: i.PhG.ICON,
-                          innerClassName: f.giftButtonInner,
-                          'aria-label': m.intl.string(m.t.PEjaCw),
+                          innerClassName: g.giftButtonInner,
+                          'aria-label': p.intl.string(p.t.PEjaCw),
                           onClick: (e) => {
                               e.stopPropagation(),
                                   (0, o.Z)({
@@ -117,12 +117,12 @@ let g = {
                                               : void 0
                                   });
                           },
-                          children: v
+                          children: _
                               ? (0, l.jsx)(d.Z, {
                                     hovered: L,
                                     isContentDismissed: !0,
                                     themeOverride: S,
-                                    boxColors: g
+                                    boxColors: f
                                 })
                               : (0, l.jsx)(i.OgN, {
                                     size: 'md',
