@@ -1,9 +1,12 @@
-n.d(t, { Z: () => i });
-let i = (0, n(818083).B)({
+n.d(t, { Z: () => r });
+var i = n(818083),
+    l = n(987338);
+let r = (0, i.B)({
     kind: 'user',
     id: '2025-02_reverse_trial_load_test',
     label: 'Reverse Trials',
     defaultConfig: { enabled: !1 },
+    commonTriggerPoint: l.$P.CONNECTION_OPEN,
     treatments: [
         {
             id: 1,
