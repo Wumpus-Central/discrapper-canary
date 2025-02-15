@@ -1,18 +1,18 @@
-s.d(t, { Z: () => o });
+s.d(t, { Z: () => l });
 var n = s(200651);
 s(192379);
 var i = s(692547),
     r = s(313201);
-function o(e) {
+function l(e) {
     let { isSelected: t, ...s } = e,
-        o = (0, r.Dt)();
+        l = (0, r.Dt)();
     return (0, n.jsxs)('svg', {
         ...s,
         width: '16',
         height: '16',
         viewBox: '0 0 16 16',
         xmlns: 'http://www.w3.org/2000/svg',
-        fill: 'url(#'.concat(o, ')'),
+        fill: 'url(#'.concat(l, ')'),
         children: [
             (0, n.jsx)('path', {
                 d: 'M10 9.33332C10.7364 9.33332 11.3334 8.73637 11.3334 7.99999C11.3334 7.26361 10.7364 6.66666 10 6.66666C9.26364 6.66666 8.66669 7.26361 8.66669 7.99999C8.66669 8.73637 9.26364 9.33332 10 9.33332Z',

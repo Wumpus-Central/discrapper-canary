@@ -3,8 +3,8 @@ var i = n(544891),
     r = n(570140),
     a = n(893776),
     l = n(899742),
-    s = n(743142),
-    o = n(117240),
+    o = n(743142),
+    s = n(117240),
     c = n(626135),
     d = n(317770),
     u = n(981631);
@@ -22,7 +22,7 @@ class _ extends d.Z {
         r.Z.unsubscribe('BROWSER_HANDOFF_END', this.handleEnd), r.Z.unsubscribe('BROWSER_HANDOFF_FROM_APP', this.handleHandoff);
     }
     handleHandoff(e) {
-        let { handoffKey: t, handoffToken: n, fingerprint: r, handoffSource: o } = e;
+        let { handoffKey: t, handoffToken: n, fingerprint: r, handoffSource: s } = e;
         null != n
             ? i.tn
                   .post({
@@ -36,20 +36,20 @@ class _ extends d.Z {
                   .then(
                       (e) => {
                           let { body: t } = e;
-                          (0, l.Vb)(t.user), a.Z.loginToken(t.token, !1), h(!0, o);
+                          (0, l.Vb)(t.user), a.Z.loginToken(t.token, !1), h(!0, s);
                       },
                       (e) => {
-                          if ((null != r && h(!1, o), a.Z.setFingerprint(r), (0, l.lx)(), o === s.F.ROLE_SUBSCRIPTION)) {
+                          if ((null != r && h(!1, s), a.Z.setFingerprint(r), (0, l.lx)(), s === o.F.ROLE_SUBSCRIPTION)) {
                               var t;
                               c.default.track(u.rMx.MOBILE_WEB_HANDOFF_FAILURE, {
                                   reason: null !== (t = e.message) && void 0 !== t ? t : e.text,
-                                  handoff_source: o
+                                  handoff_source: s
                               });
                           }
                       }
                   )
             : null != r
-              ? (a.Z.setFingerprint(r), h(!1, o), (0, l.lx)())
+              ? (a.Z.setFingerprint(r), h(!1, s), (0, l.lx)())
               : (a.Z.setFingerprint(r), (0, l.by)());
     }
     constructor(...e) {
@@ -58,8 +58,8 @@ class _ extends d.Z {
             (t = 'handleEnd'),
             (n = (e) => {
                 let { handoffToken: t, fingerprint: n } = e,
-                    i = o.Z.key;
-                null != i && o.Z.isHandoffAvailable()
+                    i = s.Z.key;
+                null != i && s.Z.isHandoffAvailable()
                     ? this.handleHandoff({
                           handoffKey: i,
                           handoffToken: t,

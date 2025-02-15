@@ -3,8 +3,8 @@ var i = n(200651),
     r = n(192379),
     a = n(120356),
     l = n.n(a),
-    s = n(533800),
-    o = n(756647),
+    o = n(533800),
+    s = n(756647),
     c = n(442837),
     d = n(298444),
     u = n(447543),
@@ -81,7 +81,7 @@ class K extends r.PureComponent {
         else if (this.getMode() === z.LOGIN && i !== e.authenticated && i) {
             let e = b.default.getFingerprint();
             if (null != e) {
-                let t = (0, o.s)(e);
+                let t = (0, s.s)(e);
                 this.track(k.rMx.INVITE_LOGIN_SUCCESSFUL, !0, { prev_user_id: t });
             }
             u.Z.acceptInvite({
@@ -239,7 +239,7 @@ class K extends r.PureComponent {
                 return this.renderSpinner(M.intl.string(M.t['Z+hCVV']));
             case k.r2o.RESOLVED:
                 var l;
-                if (n && (0, R.yE)(null !== (l = e.flags) && void 0 !== l ? l : 0, s.$.IS_GUEST_INVITE)) return u.Z.openApp(e.code), d.x.set(E.J, e.code), this.renderAppOpened(() => r(k.Z5c.APP));
+                if (n && (0, R.yE)(null !== (l = e.flags) && void 0 !== l ? l : 0, o.$.IS_GUEST_INVITE)) return u.Z.openApp(e.code), d.x.set(E.J, e.code), this.renderAppOpened(() => r(k.Z5c.APP));
                 if (n || !B.KO) return this.renderAuthenticatedOrDownload();
                 if (this.getMode() === z.LOGIN)
                     return (0, i.jsx)(y.Z, {

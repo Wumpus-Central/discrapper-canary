@@ -42,8 +42,8 @@ var l,
     G = n(626135),
     z = n(630388),
     H = n(971130),
-    q = n(264229),
-    W = n(366980),
+    W = n(264229),
+    q = n(366980),
     K = n(277364),
     Y = n(585385),
     X = n(603236),
@@ -135,7 +135,7 @@ class eu extends (l = s.PureComponent) {
             s = i ? t : null != e ? e : t;
         return null == s
             ? s
-            : (0, q.tV)({
+            : (0, W.tV)({
                   baseCode: s,
                   guildScheduledEventId: null == n ? void 0 : n.id
               });
@@ -320,7 +320,7 @@ class eu extends (l = s.PureComponent) {
         var e;
         let { guild: t, showFriends: n, streamUserId: l, application: s } = this.props;
         if (n) return this.renderFriendsBody();
-        let a = (0, W.Z)(null !== (e = this.getInviteKey()) && void 0 !== e ? e : ''),
+        let a = (0, q.Z)(null !== (e = this.getInviteKey()) && void 0 !== e ? e : ''),
             r = D.default.getCurrentUser();
         d()(null != r, 'InstantInviteModal: user cannot be undefined');
         let o = t.isOwner(r) ? et.intl.string(et.t.HFbByM) : et.intl.string(et.t.ueBhAw);
@@ -352,7 +352,7 @@ class eu extends (l = s.PureComponent) {
         let { noInvitesAvailable: t, showFriends: n, guildScheduledEvent: l, streamUserId: s, application: a, inviteChannel: o, modalState: d } = this.props,
             { maxAge: u } = d,
             c = null,
-            h = (0, W.Z)(null !== (e = this.getInviteKey()) && void 0 !== e ? e : '');
+            h = (0, q.Z)(null !== (e = this.getInviteKey()) && void 0 !== e ? e : '');
         if (n) {
             let e = et.intl.string(et.t.MLkj7O);
             null != s ? (e = et.intl.string(et.t['1b9nen'])) : null != a ? (e = et.intl.string(et.t.iI1gMj)) : null != l ? (e = et.intl.string(et.t.KaWCyM)) : (null == o ? void 0 : o.isGuildStageVoice()) && (e = et.intl.string(et.t['2frWa2'])),
@@ -585,7 +585,7 @@ let ec = s.forwardRef(function (e, t) {
             },
             [A, P, u, c]
         ),
-        [G, H, q, W] = (0, v.Wu)([L.Z, F.ZP], () => [L.Z.getInviteSuggestionRows(), L.Z.getTotalSuggestionsCount() >= 1, L.Z.getInitialCounts(), null != a && null != A ? F.ZP.getVoiceStatesForChannel(A) : null], [A, a]),
+        [G, H, W, q] = (0, v.Wu)([L.Z, F.ZP], () => [L.Z.getInviteSuggestionRows(), L.Z.getTotalSuggestionsCount() >= 1, L.Z.getInitialCounts(), null != a && null != A ? F.ZP.getVoiceStatesForChannel(A) : null], [A, a]),
         Y = (0, v.e7)(
             [R.ZP],
             () => {
@@ -600,8 +600,8 @@ let ec = s.forwardRef(function (e, t) {
         [et] = s.useState(() => {
             let e = new Set();
             return (
-                null != u && null != W
-                    ? W.forEach((t) => {
+                null != u && null != q
+                    ? q.forEach((t) => {
                           let { user: n } = t;
                           e.add(n.id);
                       })
@@ -735,7 +735,7 @@ let ec = s.forwardRef(function (e, t) {
             application: ei,
             rows: G,
             showFriends: H,
-            initialCounts: q,
+            initialCounts: W,
             code: ea,
             source: o,
             welcomeToServer: I,

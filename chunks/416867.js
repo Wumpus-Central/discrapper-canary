@@ -3,8 +3,8 @@ var n = s(200651);
 s(192379);
 var i = s(481060),
     r = s(313201),
-    o = s(192635),
-    l = s(388032),
+    l = s(192635),
+    o = s(388032),
     a = s(607217);
 function c(e) {
     let { transitionState: t, Icon: s, title: c, body: u, onClose: d } = e,
@@ -16,7 +16,7 @@ function c(e) {
         children: [
             (0, n.jsxs)(i.hzk, {
                 children: [
-                    (0, n.jsx)(o.Z, { Icon: s }),
+                    (0, n.jsx)(l.Z, { Icon: s }),
                     (0, n.jsx)(i.LZC, { size: 24 }),
                     (0, n.jsx)(i.X6q, {
                         id: f,
@@ -37,7 +37,7 @@ function c(e) {
                 size: i.zxk.Sizes.MEDIUM,
                 grow: !1,
                 onClick: d,
-                children: l.intl.string(l.t['NX+WJC'])
+                children: o.intl.string(o.t['NX+WJC'])
             })
         ]
     });

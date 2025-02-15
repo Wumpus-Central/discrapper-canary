@@ -3,8 +3,8 @@ var i = n(39612),
     r = n(271579),
     a = n(756647),
     l = n(625128),
-    s = n(626135),
-    o = n(954824),
+    o = n(626135),
+    s = n(954824),
     c = n(751189),
     d = n(981631);
 let u = 'template',
@@ -22,12 +22,12 @@ let u = 'template',
                     fingerprint: t,
                     attemptId: l
                 });
-            s.default.track(d.rMx.DEEP_LINK_CLICKED, {
+            o.default.track(d.rMx.DEEP_LINK_CLICKED, {
                 fingerprint: (0, a.K)(t),
                 attempt_id: l,
                 source: u,
                 guild_template_code: e
             }),
-                o.Z.launch(c, () => {});
+                s.Z.launch(c, () => {});
         }
     };

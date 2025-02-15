@@ -3,8 +3,8 @@ var i = n(200651),
     r = n(192379),
     a = n(215569),
     l = n(481060),
-    s = n(852860),
-    o = n(313201),
+    o = n(852860),
+    s = n(313201),
     d = n(944163),
     c = n(266395),
     u = n(187565),
@@ -13,7 +13,7 @@ var i = n(200651),
     f = n(388032),
     x = n(912885);
 let h = () =>
-        (0, i.jsx)(s.Z, {
+        (0, i.jsx)(o.Z, {
             submitting: !1,
             message: f.intl.string(f.t['8g514e']),
             onReset: () => {
@@ -27,13 +27,13 @@ let h = () =>
             onSaveButtonColor: l.Ttl.RED
         }),
     v = (e) => {
-        let { transitionState: t, guildId: n, onClose: s, onComplete: _, isPreview: f = !1 } = e,
+        let { transitionState: t, guildId: n, onClose: o, onComplete: _, isPreview: f = !1 } = e,
             v = (0, c.rb)((e) => e.shouldShowWarning),
             g = (0, u.ng)(n, f),
-            p = (0, o.Dt)();
+            p = (0, s.Dt)();
         return (r.useEffect(() => {
-            g === d.t && s();
-        }, [s, g]),
+            g === d.t && o();
+        }, [o, g]),
         g === d.t)
             ? null
             : (0, i.jsxs)(i.Fragment, {
@@ -47,13 +47,13 @@ let h = () =>
                           children: [
                               (0, i.jsx)('div', {
                                   className: x.closeButton,
-                                  children: (0, i.jsx)(l.olH, { onClick: () => s(!1) })
+                                  children: (0, i.jsx)(l.olH, { onClick: () => o(!1) })
                               }),
                               (0, i.jsx)(m.Z, {
                                   verificationForm: g,
                                   headerId: p,
                                   guildId: n,
-                                  onClose: s,
+                                  onClose: o,
                                   onComplete: _,
                                   isPreview: f
                               })

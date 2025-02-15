@@ -4,8 +4,8 @@ a.d(e, {
 });
 var r = a(578346),
     n = a(370336),
-    o = a(101284),
-    _ = a(573736),
+    _ = a(101284),
+    o = a(573736),
     i = a(395848);
 let c = '__sentry_xhr_v3__';
 function s(t) {
@@ -16,10 +16,10 @@ function E() {
     let t = XMLHttpRequest.prototype;
     (0, n.hl)(t, 'open', function (t) {
         return function (...e) {
-            let a = 1000 * (0, o.ph)(),
-                i = (0, _.HD)(e[0]) ? e[0].toUpperCase() : void 0,
+            let a = 1000 * (0, _.ph)(),
+                i = (0, o.HD)(e[0]) ? e[0].toUpperCase() : void 0,
                 s = (function (t) {
-                    if ((0, _.HD)(t)) return t;
+                    if ((0, o.HD)(t)) return t;
                     try {
                         return t.toString();
                     } catch (t) {}
@@ -38,7 +38,7 @@ function E() {
                         t.status_code = this.status;
                     } catch (t) {}
                     let e = {
-                        endTimestamp: 1000 * (0, o.ph)(),
+                        endTimestamp: 1000 * (0, _.ph)(),
                         startTimestamp: a,
                         xhr: this
                     };
@@ -57,7 +57,7 @@ function E() {
                     return function (...e) {
                         let [a, r] = e,
                             n = this[c];
-                        return n && (0, _.HD)(a) && (0, _.HD)(r) && (n.request_headers[a.toLowerCase()] = r), t.apply(this, e);
+                        return n && (0, o.HD)(a) && (0, o.HD)(r) && (n.request_headers[a.toLowerCase()] = r), t.apply(this, e);
                     };
                 }),
                 t.apply(this, e)
@@ -70,7 +70,7 @@ function E() {
                 if (!a) return t.apply(this, e);
                 void 0 !== e[0] && (a.body = e[0]);
                 let n = {
-                    startTimestamp: 1000 * (0, o.ph)(),
+                    startTimestamp: 1000 * (0, _.ph)(),
                     xhr: this
                 };
                 return (0, r.rK)('xhr', n), t.apply(this, e);

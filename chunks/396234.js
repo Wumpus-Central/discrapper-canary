@@ -4,13 +4,13 @@ a.d(e, {
 });
 var r = a(370336),
     n = a(394798),
-    o = a(305625),
-    _ = a(696486);
+    _ = a(305625),
+    o = a(696486);
 function i(t, e) {
     var a, i, c, s;
     let { fingerprint: E, span: l, breadcrumbs: u, sdkProcessingMetadata: I } = e;
     (function (t, e) {
-        let { extra: a, tags: n, user: o, contexts: _, level: i, transactionName: c } = e,
+        let { extra: a, tags: n, user: _, contexts: o, level: i, transactionName: c } = e,
             s = (0, r.Jr)(a);
         s &&
             Object.keys(s).length &&
@@ -25,14 +25,14 @@ function i(t, e) {
                 ...E,
                 ...t.tags
             });
-        let l = (0, r.Jr)(o);
+        let l = (0, r.Jr)(_);
         l &&
             Object.keys(l).length &&
             (t.user = {
                 ...l,
                 ...t.user
             });
-        let u = (0, r.Jr)(_);
+        let u = (0, r.Jr)(o);
         u &&
             Object.keys(u).length &&
             (t.contexts = {
@@ -45,15 +45,15 @@ function i(t, e) {
         l &&
             (function (t, e) {
                 (t.contexts = {
-                    trace: (0, _.wy)(e),
+                    trace: (0, o.wy)(e),
                     ...t.contexts
                 }),
                     (t.sdkProcessingMetadata = {
-                        dynamicSamplingContext: (0, o.jC)(e),
+                        dynamicSamplingContext: (0, _.jC)(e),
                         ...t.sdkProcessingMetadata
                     });
-                let a = (0, _.Gx)(e),
-                    r = (0, _.XU)(a).description;
+                let a = (0, o.Gx)(e),
+                    r = (0, o.XU)(a).description;
                 r && !t.transaction && 'transaction' === t.type && (t.transaction = r);
             })(t, l),
         (a = t),
@@ -73,13 +73,13 @@ function i(t, e) {
         });
 }
 function c(t, e) {
-    let { extra: a, tags: r, user: n, contexts: o, level: _, sdkProcessingMetadata: i, breadcrumbs: c, fingerprint: E, eventProcessors: l, attachments: u, propagationContext: I, transactionName: R, span: d } = e;
+    let { extra: a, tags: r, user: n, contexts: _, level: o, sdkProcessingMetadata: i, breadcrumbs: c, fingerprint: E, eventProcessors: l, attachments: u, propagationContext: I, transactionName: R, span: d } = e;
     s(t, 'extra', a),
         s(t, 'tags', r),
         s(t, 'user', n),
-        s(t, 'contexts', o),
+        s(t, 'contexts', _),
         s(t, 'sdkProcessingMetadata', i),
-        _ && (t.level = _),
+        o && (t.level = o),
         R && (t.transactionName = R),
         d && (t.span = d),
         c.length && (t.breadcrumbs = [...t.breadcrumbs, ...c]),

@@ -32,7 +32,7 @@ var i = n(200651),
     O = n(703656),
     N = n(93127),
     b = n(814443),
-    T = n(428598),
+    T = n(752048),
     w = n(409057),
     A = n(199902),
     j = n(592125),
@@ -319,7 +319,7 @@ function q(e) {
     });
     let c = (0, u.e7)([k.Z], () => (null == t ? null : k.Z.getApplicationActivity(t)), [t]),
         h = (0, u.Wu)(
-            [P.Z, L.Z, b.Z],
+            [P.Z, L.Z, b.Z, T.Z],
             () => {
                 if (null == t) return [];
                 let e = P.Z.nowPlayingCards,
@@ -419,69 +419,69 @@ function ee(e) {
             maxUserShowCount: 12
         }),
         S = C.entries;
-    return (
-        l.useEffect(() => {
-            if (null == p || t) return;
-            let e = new Set([...a.map((e) => e.author_id), ...f.map((e) => e.activityUser.id)]),
-                n = Array.from(e).filter(
-                    (e) =>
-                        null !=
-                        S.find((t) => {
-                            let { author_id: n } = t;
-                            return e === n;
-                        })
-                ),
-                i = Array.from(e).filter((e) => {
-                    let t = S.find((t) => {
+    return (l.useEffect(() => {
+        if (null == p || t) return;
+        let e = new Set([...a.map((e) => e.author_id), ...f.map((e) => e.activityUser.id)]),
+            n = Array.from(e).filter(
+                (e) =>
+                    null !=
+                    S.find((t) => {
                         let { author_id: n } = t;
                         return e === n;
-                    });
-                    return (
-                        null != t &&
-                        t.traits.find((e) => {
-                            let { type: t } = e;
-                            return t === d.N.IS_LIVE;
-                        })
-                    );
+                    })
+            ),
+            i = Array.from(e).filter((e) => {
+                let t = S.find((t) => {
+                    let { author_id: n } = t;
+                    return e === n;
                 });
-            (0, U.zi)(B.Odu.ACTIVITY, {
-                locked: M.Z.isInstanceLocked(),
-                shownUserIds: Array.from(n),
-                liveUserIds: i,
-                contentInventoryIds: a.map((e) => e.id)
+                return (
+                    null != t &&
+                    t.traits.find((e) => {
+                        let { type: t } = e;
+                        return t === d.N.IS_LIVE;
+                    })
+                );
             });
-        }, [a, f, t, p, S]),
-        0 === a.length && null == p
-            ? null
-            : (0, i.jsxs)('div', {
-                  className: H.container,
-                  children: [
-                      null != p && null != s
-                          ? (0, i.jsx)(w.Z, {
-                                className: H.activityCard,
-                                activity: p,
-                                user: s,
-                                currentUser: s,
-                                appContext: B.IlC.OVERLAY
-                            })
-                          : null,
-                      m && !I
-                          ? (0, i.jsx)(c.zxk, {
-                                className: H.inviteFriendsButton,
-                                onClick: () => {
-                                    (0, _.h7)(p, !1, B.IlC.POPOUT),
-                                        (0, U.Ws)(B.Odu.ACTIVITY, {
-                                            type: U.Qu.INVITE,
-                                            value: U.bk.PANEL_OPENED
-                                        });
-                                },
-                                size: c.PhG.SMALL,
-                                color: c.Ttl.PRIMARY,
-                                children: G.intl.string(G.t['6Qgren'])
-                            })
-                          : null,
-                      (0, i.jsx)(X, { ...C })
-                  ]
-              })
-    );
+        (0, U.zi)(B.Odu.ACTIVITY, {
+            locked: M.Z.isInstanceLocked(),
+            shownUserIds: Array.from(n),
+            liveUserIds: i,
+            contentInventoryIds: a.map((e) => e.id)
+        });
+    }, [a, f, t, p, S]),
+    t)
+        ? null
+        : 0 === a.length && null == p
+          ? null
+          : (0, i.jsxs)('div', {
+                className: H.container,
+                children: [
+                    null != p && null != s
+                        ? (0, i.jsx)(w.Z, {
+                              className: H.activityCard,
+                              activity: p,
+                              user: s,
+                              currentUser: s,
+                              appContext: B.IlC.OVERLAY
+                          })
+                        : null,
+                    m && !I
+                        ? (0, i.jsx)(c.zxk, {
+                              className: H.inviteFriendsButton,
+                              onClick: () => {
+                                  (0, _.h7)(p, !1, B.IlC.POPOUT),
+                                      (0, U.Ws)(B.Odu.ACTIVITY, {
+                                          type: U.Qu.INVITE,
+                                          value: U.bk.PANEL_OPENED
+                                      });
+                              },
+                              size: c.PhG.SMALL,
+                              color: c.Ttl.PRIMARY,
+                              children: G.intl.string(G.t['6Qgren'])
+                          })
+                        : null,
+                    (0, i.jsx)(X, { ...C })
+                ]
+            });
 }

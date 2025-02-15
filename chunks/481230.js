@@ -6,8 +6,8 @@ var i = n(913527),
     r = n.n(i),
     a = n(990547),
     l = n(570140),
-    s = n(479531),
-    o = n(771308),
+    o = n(479531),
+    s = n(771308),
     c = n(314897),
     d = n(626135),
     u = n(573261),
@@ -76,9 +76,9 @@ function p(e) {
                     });
             },
             (e) => {
-                let t = new s.Z(e);
+                let t = new o.Z(e);
                 throw (
-                    (null != t.getFieldErrors('date_of_birth') && o.wE(m.L0.REGISTER),
+                    (null != t.getFieldErrors('date_of_birth') && s.wE(m.L0.REGISTER),
                     d.default.track(_.rMx.REGISTER_SUBMIT_ERRORED, {
                         is_unique_username_registration: !0,
                         email_error_reason: t.getFirstFieldErrorMessage('email'),

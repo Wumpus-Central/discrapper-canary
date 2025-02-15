@@ -1,12 +1,12 @@
 a.d(e, {
     $2: () => i,
-    WD: () => _,
+    WD: () => o,
     cW: () => c
 });
 var r,
     n,
-    o = a(573736);
-function _(t) {
+    _ = a(573736);
+function o(t) {
     return new c((e) => {
         e(t);
     });
@@ -87,7 +87,7 @@ class c {
     __init3() {
         this._setResult = (t, e) => {
             if (this._state === n.PENDING) {
-                if ((0, o.J8)(e)) {
+                if ((0, _.J8)(e)) {
                     e.then(this._resolve, this._reject);
                     return;
                 }

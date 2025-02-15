@@ -3,8 +3,8 @@ var i = n(200651),
     r = n(192379),
     a = n(442837),
     l = n(481060),
-    s = n(388905),
-    o = n(409059),
+    o = n(388905),
+    s = n(409059),
     c = n(962220),
     d = n(306453),
     u = n(108427),
@@ -29,20 +29,20 @@ function E(e, t, n) {
 }
 function I(e) {
     let { code: t } = e,
-        n = (0, a.e7)([o.Z], () => o.Z.getGuildTemplate(t));
+        n = (0, a.e7)([s.Z], () => s.Z.getGuildTemplate(t));
     return (r.useEffect(() => {
         (0, u.e)('guild_template_mobile');
     }, []),
     null == n || n.state === p.Rj.RESOLVING)
-        ? (0, i.jsx)(s.ZP, { children: (0, i.jsx)(l.$jN, {}) })
+        ? (0, i.jsx)(o.ZP, { children: (0, i.jsx)(l.$jN, {}) })
         : n.state === p.Rj.RESOLVED
-          ? (0, i.jsxs)(s.ZP, {
+          ? (0, i.jsxs)(o.ZP, {
                 children: [
                     (0, i.jsx)(d.Z, {
                         guildTemplate: n,
                         tall: !0
                     }),
-                    (0, i.jsx)(s.zx, {
+                    (0, i.jsx)(o.zx, {
                         onClick: (e) => E(e, t, n),
                         className: x.marginTop20,
                         children: f.intl.string(f.t['a3Gl+f'])

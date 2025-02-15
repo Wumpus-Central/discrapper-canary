@@ -1,7 +1,7 @@
 var r = a(147018),
     n = a(926515),
-    o = a(992051),
-    _ = a(539459),
+    _ = a(992051),
+    o = a(539459),
     i = a(354848),
     c = a(673743),
     s = a(144748),
@@ -12,8 +12,8 @@ var r = a(147018),
     R = a(641236),
     d = a(874652),
     A = a(84297),
-    f = _.PROPER,
-    p = _.CONFIGURABLE,
+    f = o.PROPER,
+    p = o.CONFIGURABLE,
     T = A.IteratorPrototype,
     N = A.BUGGY_SAFARI_ITERATORS,
     L = R('iterator'),
@@ -23,8 +23,8 @@ var r = a(147018),
     g = function () {
         return this;
     };
-t.exports = function (t, e, a, _, R, A, m) {
-    c(a, e, _);
+t.exports = function (t, e, a, o, R, A, m) {
+    c(a, e, o);
     var y,
         P,
         v,
@@ -50,12 +50,12 @@ t.exports = function (t, e, a, _, R, A, m) {
         U = (!N && M) || C(R),
         w = ('Array' === e && b.entries) || M;
     if (
-        (w && (y = s(w.call(new t()))) !== Object.prototype && y.next && (o || s(y) === T || (E ? E(y, T) : i(y[L]) || I(y, L, g)), l(y, S, !0, !0), o && (d[S] = g)),
+        (w && (y = s(w.call(new t()))) !== Object.prototype && y.next && (_ || s(y) === T || (E ? E(y, T) : i(y[L]) || I(y, L, g)), l(y, S, !0, !0), _ && (d[S] = g)),
         f &&
             R === O &&
             M &&
             M.name !== O &&
-            (!o && p
+            (!_ && p
                 ? u(b, 'name', O)
                 : ((G = !0),
                   (U = function () {
@@ -82,5 +82,5 @@ t.exports = function (t, e, a, _, R, A, m) {
                 P
             );
     }
-    return (!o || m) && b[L] !== U && I(b, L, U, { name: R }), (d[e] = U), P;
+    return (!_ || m) && b[L] !== U && I(b, L, U, { name: R }), (d[e] = U), P;
 };

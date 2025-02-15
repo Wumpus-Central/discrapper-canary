@@ -13,7 +13,7 @@ var l = t(481060),
     f = t(981631),
     p = t(388032),
     x = t(565323);
-function h(e) {
+function m(e) {
     let { user: n, analyticsLocation: t, ...l } = e,
         o = (0, c.Y)({
             user: n,
@@ -33,7 +33,7 @@ function h(e) {
                   })
           });
 }
-function m(e) {
+function h(e) {
     let { gameFriends: n, hasIncomingPendingGameFriends: t, hasOutgoingPendingGameFriends: o, user: s, analyticsLocation: r } = e,
         {
             onMouseEnter: a,
@@ -44,7 +44,7 @@ function m(e) {
             hasIncomingPendingGameFriends: t,
             hasOutgoingPendingGameFriends: o
         });
-    return (0, i.jsx)(h, {
+    return (0, i.jsx)(m, {
         tooltipText: c,
         ariaLabel: d,
         icon: l.KED,
@@ -55,8 +55,8 @@ function m(e) {
 }
 function _(e) {
     let { isCurrentUser: n, user: t, relationshipType: c, friendToken: u, onClose: _ } = e,
-        { newestAnalyticsLocation: Z } = (0, s.ZP)(),
-        v = (0, r.wn)({ location: 'UserProfileModalHeaderActionButtons' }),
+        { newestAnalyticsLocation: v } = (0, s.ZP)(),
+        Z = (0, r.wn)({ location: 'UserProfileModalHeaderActionButtons' }),
         { gameFriends: g, hasOutgoingPendingGameFriends: j, hasIncomingPendingGameFriends: E } = (0, I.H)({ userId: t.id }),
         y = g.length > 0 || j || E;
     return n || c === f.OGo.BLOCKED
@@ -69,13 +69,13 @@ function _(e) {
                     onClose: _
                 })
             })
-          : c === f.OGo.NONE && v && y
+          : c === f.OGo.NONE && Z && y
             ? (0, i.jsxs)('div', {
                   className: x.multipleButtons,
                   children: [
-                      (0, i.jsx)(m, {
+                      (0, i.jsx)(h, {
                           user: t,
-                          analyticsLocation: Z,
+                          analyticsLocation: v,
                           gameFriends: g,
                           hasIncomingPendingGameFriends: E,
                           hasOutgoingPendingGameFriends: j
@@ -90,11 +90,11 @@ function _(e) {
               ? (0, i.jsxs)('div', {
                     className: x.multipleButtons,
                     children: [
-                        (0, i.jsx)(h, {
+                        (0, i.jsx)(m, {
                             icon: l.iHX,
                             tooltipText: p.intl.string(p.t.zz2i8v),
                             user: t,
-                            analyticsLocation: Z
+                            analyticsLocation: v
                         }),
                         (0, i.jsx)(d.c, {
                             userId: t.id,
@@ -106,11 +106,11 @@ function _(e) {
                 ? (0, i.jsxs)('div', {
                       className: x.multipleButtons,
                       children: [
-                          (0, i.jsx)(h, {
+                          (0, i.jsx)(m, {
                               icon: l.iHX,
                               tooltipText: p.intl.string(p.t.ZOFd1N),
                               user: t,
-                              analyticsLocation: Z
+                              analyticsLocation: v
                           }),
                           (0, i.jsx)(d.c, {
                               userId: t.id,
@@ -133,7 +133,7 @@ function _(e) {
                               onClick: () => {
                                   o.Z.addRelationship({
                                       userId: t.id,
-                                      context: { location: Z },
+                                      context: { location: v },
                                       friendToken: u
                                   });
                               }

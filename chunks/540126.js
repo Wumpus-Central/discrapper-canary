@@ -1,13 +1,13 @@
 n.d(t, {
     Bz: () => eg,
     Cb: () => B,
-    Fq: () => k,
+    Fq: () => V,
     PB: () => Y,
     VR: () => et,
     ZP: () => q,
     p2: () => z,
     wF: () => K,
-    wZ: () => V,
+    wZ: () => k,
     wd: () => W,
     zR: () => ef
 }),
@@ -69,8 +69,8 @@ function j(e, t, n) {
 }
 let H = 'placeholder-channel-id',
     B = 2,
-    k = 0,
-    V = 1,
+    V = 0,
+    k = 1,
     z = 2,
     Y = 3,
     W = 4,
@@ -159,9 +159,9 @@ class Q {
     }
     getCategoryFromSection(e) {
         switch (e) {
-            case k:
-                throw Error('Invalid section. Use getChannelNoticeSection instead');
             case V:
+                throw Error('Invalid section. Use getChannelNoticeSection instead');
+            case k:
                 throw Error('Invalid section. Use getGuildActionSection instead');
             case z:
                 return this.favoritesCategory;
@@ -196,7 +196,7 @@ class Q {
               };
     }
     isPlaceholderRow(e, t) {
-        return l()(e > V, 'Invalid section'), e !== this.recentsSectionNumber && this.getRows()[e][t] === H;
+        return l()(e > k, 'Invalid section'), e !== this.recentsSectionNumber && this.getRows()[e][t] === H;
     }
     getFirstVoiceChannel(e) {
         if (void 0 === this.firstVoiceChannel) {
@@ -220,7 +220,7 @@ class Q {
             return [
                 {
                     row: this.getGuildActionSection().getRows().indexOf(t),
-                    section: V
+                    section: k
                 }
             ];
         let n = [],

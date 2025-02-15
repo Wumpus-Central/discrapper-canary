@@ -13,8 +13,8 @@ var i = n(200651),
     r = n(192379),
     a = n(120356),
     l = n.n(a),
-    s = n(481060),
-    o = n(388905),
+    o = n(481060),
+    s = n(388905),
     c = n(118012),
     d = n(925329),
     u = n(372769),
@@ -60,15 +60,15 @@ let E = 100,
                   size: x.appIconSize
               })
             : null != n
-              ? (0, i.jsx)(o.qE, {
+              ? (0, i.jsx)(s.qE, {
                     src: n.getAvatarURL(void 0, 100),
-                    size: s.EFr.DEPRECATED_SIZE_100,
+                    size: o.EFr.DEPRECATED_SIZE_100,
                     className: x.avatar
                 })
               : null != t
-                ? (0, i.jsx)(o.Vj, {
+                ? (0, i.jsx)(s.Vj, {
                       guild: t,
-                      size: o.Vj.Sizes.LARGER,
+                      size: s.Vj.Sizes.LARGER,
                       className: x.guildIcon,
                       animate: !0
                   })
@@ -77,13 +77,13 @@ let E = 100,
 function Z(e) {
     var t;
     let { invite: n, textClassName: r, className: a } = e,
-        s = I(n);
-    return null == s || A(n) || (null == n ? void 0 : null === (t = n.guild) || void 0 === t ? void 0 : t.id) === p.fQ
+        o = I(n);
+    return null == o || A(n) || (null == n ? void 0 : null === (t = n.guild) || void 0 === t ? void 0 : t.id) === p.fQ
         ? null
-        : (0, i.jsx)(o.EJ, {
+        : (0, i.jsx)(s.EJ, {
               className: l()(x.activityCount, a),
-              online: s.onlineCount,
-              total: s.memberCount,
+              online: o.onlineCount,
+              total: o.memberCount,
               textClassName: r,
               flat: !0
           });
@@ -102,12 +102,12 @@ function j(e) {
             null != a &&
                 (0, i.jsx)('div', {
                     className: x.inviterIconWrapper,
-                    children: (0, i.jsx)(o.qE, {
+                    children: (0, i.jsx)(s.qE, {
                         src: a,
-                        size: s.EFr.SIZE_24
+                        size: o.EFr.SIZE_24
                     })
                 }),
-            (0, i.jsx)(o.DK, {
+            (0, i.jsx)(s.DK, {
                 className: x.__invalid_inviteJoinSubTitle,
                 children: l
             })
@@ -122,9 +122,9 @@ function O(e) {
     if (null != l)
         m &&
             null == h &&
-            (t = (0, i.jsx)(o.Vj, {
+            (t = (0, i.jsx)(s.Vj, {
                 guild: l,
-                size: o.Vj.Sizes.SMALL
+                size: s.Vj.Sizes.SMALL
             })),
             (n = l.name),
             null != h &&
@@ -132,16 +132,16 @@ function O(e) {
                 (r = (0, i.jsxs)('div', {
                     className: x.inviteJoinContainer,
                     children: [
-                        (0, i.jsx)(o.DK, {
+                        (0, i.jsx)(s.DK, {
                             className: x.appIn,
                             children: f.intl.string(f.t['3gg9fH'])
                         }),
                         (0, i.jsxs)('div', {
                             className: x.guildContainer,
                             children: [
-                                (0, i.jsx)(o.Vj, {
+                                (0, i.jsx)(s.Vj, {
                                     guild: l,
-                                    size: o.Vj.Sizes.SMALL
+                                    size: s.Vj.Sizes.SMALL
                                 }),
                                 (0, i.jsx)(c.Z, {
                                     className: x.appGuildName,
@@ -160,22 +160,22 @@ function O(e) {
         null != d.name && '' !== d.name
             ? ((n = d.name),
               null != d.icon &&
-                  (t = (0, i.jsx)(o.MC, {
+                  (t = (0, i.jsx)(s.MC, {
                       channel: d,
-                      size: s.EFr.SIZE_32
+                      size: o.EFr.SIZE_32
                   })))
             : (n = e);
     } else if (null != a) {
         let e = _.ZP.getFormattedName(a);
         (n = f.intl.formatToPlainString(f.t['4aF92d'], { username: e })),
-            (r = (0, i.jsx)(o.DK, {
+            (r = (0, i.jsx)(s.DK, {
                 className: x.directInviteSubTitle,
                 children: f.intl.format(f.t.Quj7HR, { username: e })
             }));
     }
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsxs)(o.Dx, {
+            (0, i.jsxs)(s.Dx, {
                 className: x.title,
                 children: [
                     null != l

@@ -7,8 +7,8 @@ var n,
     i = s(200651);
 s(192379);
 var r = s(120356),
-    o = s.n(r),
-    l = s(442837),
+    l = s.n(r),
+    o = s(442837),
     a = s(246946),
     c = s(91802),
     u = s(222727),
@@ -103,14 +103,14 @@ let es = new Map([
 ]);
 function en(e) {
     let { entryPoint: t, className: s } = e,
-        n = (0, l.e7)([a.Z], () => a.Z.hidePersonalInformation),
+        n = (0, o.e7)([a.Z], () => a.Z.hidePersonalInformation),
         r = (0, c.n)(),
         p = null == r ? void 0 : r.countryCode;
     if (((0, u.U)(d.jXE.SETTINGS_PREMIUM, p), null == p || !es.has(p) || n)) return null;
     let g = es.get(p),
         x = 'badgeIcon' + et[t];
     return (0, i.jsx)('img', {
-        className: o()(s, f[x]),
+        className: l()(s, f[x]),
         'aria-hidden': !0,
         alt: 'Wumpus holding a country-specific flag',
         src: g

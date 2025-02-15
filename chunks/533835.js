@@ -1,4 +1,4 @@
-t.d(n, { default: () => Z }), t(47120);
+t.d(n, { default: () => v }), t(47120);
 var i = t(200651),
     l = t(192379),
     o = t(512722),
@@ -12,36 +12,36 @@ var i = t(200651),
     f = t(971393),
     p = t(787018),
     x = t(752342),
-    h = t(886794),
-    m = t(409394);
+    m = t(886794),
+    h = t(409394);
 let _ = [a.Z.BITE_SIZE_PROFILE_POPOUT, a.Z.PROFILE_PANEL];
-function Z(e) {
+function v(e) {
     let { user: n, ...t } = e,
         o = (0, r.e7)([I.default], () => I.default.getCurrentUser());
     s()(null != o, 'UserProfileModalWrapper: currentUser cannot be undefined');
-    let { isBlocked: a, isIgnored: Z } = (0, r.cj)([u.Z], () => ({
+    let { isBlocked: a, isIgnored: v } = (0, r.cj)([u.Z], () => ({
             isBlocked: u.Z.isBlocked(n.id),
             isIgnored: u.Z.isIgnored(n.id)
         })),
-        v = (0, d.Do)({ location: 'UserProfileModalWrapper' }),
-        [g, j] = l.useState(a || (v && (Z || a))),
+        Z = (0, d.Do)({ location: 'UserProfileModalWrapper' }),
+        [g, j] = l.useState(a || (Z && (v || a))),
         E = (0, f.sS)({ location: 'UserProfileModalWrapper' });
     l.useEffect(() => {
-        j(Z || a);
-    }, [Z, a]);
+        j(v || a);
+    }, [v, a]);
     let y = !_.some((e) => {
             var n;
             return (null !== (n = t.sourceAnalyticsLocations) && void 0 !== n ? n : []).includes(e);
         }),
         N = c.Rt.useSetting();
-    return g && E && y && !v
+    return g && E && y && !Z
         ? (0, i.jsx)(p.Z, {
               user: n,
               currentUser: o,
               onViewBlockedProfileClick: () => j(!1),
               ...t
           })
-        : g && y && v && !(Z && N)
+        : g && y && Z && !(v && N)
           ? (0, i.jsx)(p.W, {
                 user: n,
                 currentUser: o,
@@ -49,7 +49,7 @@ function Z(e) {
                 ...t
             })
           : n.isNonUserBot()
-            ? (0, i.jsx)(h.Z, {
+            ? (0, i.jsx)(m.Z, {
                   ...t,
                   user: n,
                   currentUser: o
@@ -60,7 +60,7 @@ function Z(e) {
                     user: n,
                     currentUser: o
                 })
-              : (0, i.jsx)(m.Z, {
+              : (0, i.jsx)(h.Z, {
                     ...t,
                     user: n,
                     currentUser: o

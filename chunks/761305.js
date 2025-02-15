@@ -3,8 +3,8 @@ var i,
     r = n(200651),
     a = n(192379),
     l = n(593473),
-    s = n(442837),
-    o = n(544891),
+    o = n(442837),
+    s = n(544891),
     c = n(108427),
     d = n(601964),
     u = n(896797),
@@ -26,12 +26,12 @@ function f(e, t, n) {
         e
     );
 }
-s.ZP.initialize();
+o.ZP.initialize();
 class x extends (i = a.PureComponent) {
     componentDidMount() {
         let e = (0, h.Z)(this.props.location),
             t = (0, l.parse)(this.props.location.search);
-        o.tn
+        s.tn
             .post({
                 url: m.ANM.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
                 body: {
@@ -127,4 +127,4 @@ class x extends (i = a.PureComponent) {
     }
 }
 f(x, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) });
-let E = s.ZP.connectStores([u.Z], () => ({ defaultRoute: u.Z.defaultRoute }))(x);
+let E = o.ZP.connectStores([u.Z], () => ({ defaultRoute: u.Z.defaultRoute }))(x);

@@ -13,11 +13,11 @@ var l = t(481060),
     f = t(681837),
     p = t(502762),
     x = t(530),
-    h = t(871604),
-    m = t(952124),
+    m = t(871604),
+    h = t(952124),
     _ = t(53558),
-    Z = t(544989),
-    v = t(934861),
+    v = t(544989),
+    Z = t(934861),
     g = t(4517),
     j = t(740628),
     E = t(398145),
@@ -54,9 +54,9 @@ function P(e) {
                     displayProfile: D,
                     profileType: y.y0.FULL_SIZE,
                     children: [
-                        (0, i.jsx)(Z.Z, {
+                        (0, i.jsx)(v.Z, {
                             profileType: y.y0.FULL_SIZE,
-                            children: (0, i.jsx)(m.Z, {
+                            children: (0, i.jsx)(h.Z, {
                                 user: n,
                                 guildId: F
                             })
@@ -88,12 +88,12 @@ function P(e) {
                                         (0, i.jsxs)('div', {
                                             className: b.headerButtons,
                                             children: [
-                                                (0, i.jsx)(v.c, {
+                                                (0, i.jsx)(Z.c, {
                                                     userId: n.id,
                                                     onClose: U,
                                                     className: b.messageTextButton
                                                 }),
-                                                (0, i.jsx)(v.v, {
+                                                (0, i.jsx)(Z.v, {
                                                     userId: n.id,
                                                     onClose: U,
                                                     tooltipContainerClassName: b.messageIconButton
@@ -102,7 +102,7 @@ function P(e) {
                                                     user: n,
                                                     guildId: F
                                                 }),
-                                                (0, i.jsx)(h.Z, { user: n })
+                                                (0, i.jsx)(m.Z, { user: n })
                                             ]
                                         })
                                     ]

@@ -13,11 +13,11 @@ var l = t(442837),
     f = t(91433),
     p = t(944043),
     x = t(502762),
-    h = t(530),
-    m = t(740628),
+    m = t(530),
+    h = t(740628),
     _ = t(643518),
-    Z = t(228168),
-    v = t(981631),
+    v = t(228168),
+    Z = t(981631),
     g = t(736656);
 function j(e) {
     var n;
@@ -40,20 +40,20 @@ function j(e) {
     return (0, i.jsxs)('div', {
         className: g.body,
         children: [
-            (0, i.jsx)(h.Z, {
+            (0, i.jsx)(m.Z, {
                 user: t,
-                profileType: Z.y0.FULL_SIZE,
+                profileType: v.y0.FULL_SIZE,
                 nickname: U,
                 pronouns: null == N ? void 0 : N.pronouns,
                 nicknameVariant: 'heading-xl/bold',
                 nicknameIcons: (0, i.jsx)(I.Z, { userId: t.id }),
                 tags: (0, i.jsx)(c.Z, {
                     displayProfile: N,
-                    profileType: Z.y0.FULL_SIZE,
+                    profileType: v.y0.FULL_SIZE,
                     onClose: S
                 })
             }),
-            L === v.OGo.PENDING_INCOMING &&
+            L === Z.OGo.PENDING_INCOMING &&
                 (0, i.jsx)(x.Z.Overlay, {
                     className: g.friendRequestBannerOverlay,
                     children: (0, i.jsx)(f.Z, {
@@ -93,7 +93,7 @@ function j(e) {
                 }),
             (0, i.jsx)(x.Z.Overlay, {
                 className: g.overlay,
-                children: (0, i.jsx)(m.Z, {
+                children: (0, i.jsx)(h.Z, {
                     user: t,
                     currentUser: j,
                     displayProfile: N,

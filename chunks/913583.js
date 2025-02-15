@@ -4,8 +4,8 @@ n(192379);
 var r = n(990547),
     a = n(481060),
     l = n(213609),
-    s = n(388905),
-    o = n(760213),
+    o = n(388905),
+    s = n(760213),
     c = n(388032),
     d = n(224299);
 function u(e) {
@@ -15,20 +15,20 @@ function u(e) {
             type: r.ImpressionTypes.MODAL,
             name: r.ImpressionNames.MULTI_ACCOUNT_SWITCH_LANDING
         }),
-        (0, i.jsxs)(s.ZP, {
+        (0, i.jsxs)(o.ZP, {
             className: d.chooseAccountAuthBox,
             children: [
-                (0, i.jsx)(s.Dx, { children: c.intl.string(c.t['bVbB6+']) }),
+                (0, i.jsx)(o.Dx, { children: c.intl.string(c.t['bVbB6+']) }),
                 (0, i.jsx)(a.Text, {
                     className: d.chooseAccountHelpText,
                     variant: 'text-md/normal',
                     color: 'header-secondary',
                     children: c.intl.string(c.t['0M5fNz'])
                 }),
-                (0, i.jsx)(o.Z, {
+                (0, i.jsx)(s.Z, {
                     actionText: c.intl.string(c.t['DSN+h4']),
                     onAction: (e) => {
-                        e === o.W.LOGIN_REQUIRED && t();
+                        e === s.W.LOGIN_REQUIRED && t();
                     }
                 }),
                 (0, i.jsx)('div', {

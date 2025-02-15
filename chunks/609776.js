@@ -57,11 +57,11 @@ function A(e) {
 }
 function y(e) {
     var n, t, a, v, b, y;
-    let { channel: P, guild: R, header: D, error: L, loading: w, onSave: G, onEventSave: O, onClose: B, onSelectChannel: z, isEvent: M = !1, defaultOptions: U, isSlideReady: F = !0 } = e,
+    let { channel: P, guild: R, header: D, error: L, loading: w, onSave: G, onEventSave: O, onClose: B, onSelectChannel: M, isEvent: z = !1, defaultOptions: U, isSlideReady: F = !0 } = e,
         W = i.useMemo(() => I.Z.getStageInstanceByChannel(P.id), [P.id]),
-        [H, V] = i.useState(null !== (t = null !== (n = null == U ? void 0 : U.topic) && void 0 !== n ? n : null == W ? void 0 : W.topic) && void 0 !== t ? t : ''),
+        [V, H] = i.useState(null !== (t = null !== (n = null == U ? void 0 : U.topic) && void 0 !== n ? n : null == W ? void 0 : W.topic) && void 0 !== t ? t : ''),
         [q, J] = i.useState(null !== (a = null == U ? void 0 : U.description) && void 0 !== a ? a : ''),
-        [K] = i.useState(M),
+        [K] = i.useState(z),
         [Q, Y] = i.useState(null !== (v = null == U ? void 0 : U.schedule) && void 0 !== v ? v : { startDate: (0, _.ib)() }),
         [X, $] = i.useState(K && (null == U ? void 0 : U.schedule) != null),
         ee = (0, N.J)(P),
@@ -78,7 +78,7 @@ function y(e) {
         eh = (0, u.Q3)('StageChannelSettings'),
         ex = (0, d.ZP)(P),
         eg = (0, m.q)(R),
-        ev = null != z,
+        ev = null != M,
         eb = eg.length > 1;
     (0, c.ZP)(() => {
         j.default.track(E.rMx.START_STAGE_OPENED, {
@@ -88,12 +88,12 @@ function y(e) {
         });
     });
     let ej = (e) => {
-            if ((e.preventDefault(), es === S.j8.PUBLIC && H.length < 20 && !em)) {
+            if ((e.preventDefault(), es === S.j8.PUBLIC && V.length < 20 && !em)) {
                 e_(!0);
                 return;
             }
             let n = {
-                topic: H,
+                topic: V,
                 privacyLevel: es,
                 sendStartNotification: el
             };
@@ -150,16 +150,16 @@ function y(e) {
                         className: Z.form,
                         children: [
                             (0, l.jsxs)(o.xJW, {
-                                title: M ? k.intl.string(k.t['0HbEQ0']) : k.intl.string(k.t['5FPBOD']),
+                                title: z ? k.intl.string(k.t['0HbEQ0']) : k.intl.string(k.t['5FPBOD']),
                                 className: Z.topicFormItem,
                                 required: !0,
                                 children: [
                                     (0, l.jsx)(o.oil, {
                                         className: Z.textInput,
-                                        onChange: (e) => V(e),
+                                        onChange: (e) => H(e),
                                         placeholder: k.intl.string(k.t.ZwWrub),
                                         maxLength: C.xA,
-                                        value: H,
+                                        value: V,
                                         autoComplete: 'off',
                                         inputRef: ef
                                     }),
@@ -184,7 +184,7 @@ function y(e) {
                                 ? (0, l.jsx)(A, {
                                       stageChannelsInGuild: eg,
                                       channel: P,
-                                      onSelectChannel: z
+                                      onSelectChannel: M
                                   })
                                 : null,
                             K &&
@@ -212,7 +212,7 @@ function y(e) {
                                             : null
                                     ]
                                 }),
-                            M &&
+                            z &&
                                 (0, l.jsx)(o.xJW, {
                                     title: k.intl.string(k.t['+gRCCw']),
                                     className: Z.formItem,
@@ -258,7 +258,7 @@ function y(e) {
                     (0, l.jsx)(o.zxk, {
                         color: eN,
                         onClick: ej,
-                        disabled: '' === H || null == es || (M && !ep),
+                        disabled: '' === V || null == es || (z && !ep),
                         submitting: w,
                         children: eI
                     }),

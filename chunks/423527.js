@@ -3,8 +3,8 @@ var i,
     r = n(200651),
     a = n(192379),
     l = n(120356),
-    s = n.n(l),
-    o = n(593473),
+    o = n.n(l),
+    s = n(593473),
     c = n(278074),
     d = n(990547),
     u = n(442837),
@@ -70,14 +70,14 @@ function ea(e, t, n) {
 }
 u.ZP.initialize();
 let el = /\.$/,
-    es = (e) =>
+    eo = (e) =>
         Array.isArray(e)
             ? e
                   .map((e) => e.replace(el, ''))
                   .join('. ')
                   .trim()
             : e;
-class eo extends (i = a.PureComponent) {
+class es extends (i = a.PureComponent) {
     get registrationSource() {
         let { giftCode: e, guildTemplate: t, invite: n } = this.props;
         if (null != e) return 'gift';
@@ -124,8 +124,8 @@ class eo extends (i = a.PureComponent) {
     }
     componentDidUpdate(e, t) {
         let { authenticated: n, isUnderage: i, invite: r, onChangeStep: a } = this.props,
-            { apiErrors: l, parsedDateOfBirth: s } = this.state;
-        (t.apiErrors !== l || t.parsedDateOfBirth !== s) &&
+            { apiErrors: l, parsedDateOfBirth: o } = this.state;
+        (t.apiErrors !== l || t.parsedDateOfBirth !== o) &&
             (this.hasError('email') || this.hasError('phone')
                 ? null != this.emailRef && this.emailRef.focus()
                 : this.hasError('username')
@@ -143,8 +143,8 @@ class eo extends (i = a.PureComponent) {
                               this.setState({ isRateLimited: !1 });
                           }))),
             n && !e.authenticated && ((0, L.c)(ee.M5.ORGANIC_REGISTERED), this.redirectIfAuthenticated());
-        let o = Q.EW.FULL;
-        i || this.hasError('date_of_birth') ? (o = Q.EW.AGE_GATE) : null != r && (null != r.guild || null != r.channel) && (o = Q.EW.INVITE), a(o);
+        let s = Q.EW.FULL;
+        i || this.hasError('date_of_birth') ? (s = Q.EW.AGE_GATE) : null != r && (null != r.guild || null != r.channel) && (s = Q.EW.INVITE), a(s);
     }
     redirectIfAuthenticated() {
         let { authenticated: e, transitionTo: t, redirectTo: n } = this.props;
@@ -152,9 +152,9 @@ class eo extends (i = a.PureComponent) {
     }
     async handleRegister() {
         let { email: e, username: t, globalName: n, password: i, consent: r, parsedDateOfBirth: a } = this.state,
-            { invite: l, guildTemplate: s, giftCode: o, onRegister: c, usernameSuggestion: d, isMobileWebInviteRegistration: u } = this.props,
+            { invite: l, guildTemplate: o, giftCode: s, onRegister: c, usernameSuggestion: d, isMobileWebInviteRegistration: u } = this.props,
             h = null != l ? l.code : null,
-            _ = null != o ? o.skuId : null,
+            _ = null != s ? s.skuId : null,
             m = I.MD.getState(),
             p = (0, W.Ew)(d) ? null : t === d,
             f = $.a ? await (0, R.K)(t) : t,
@@ -174,7 +174,7 @@ class eo extends (i = a.PureComponent) {
                       password: i,
                       invite: h,
                       usedUsernameSuggestion: p,
-                      guildTemplateCode: null == s ? void 0 : s.code,
+                      guildTemplateCode: null == o ? void 0 : o.code,
                       giftCodeSKUId: _,
                       birthday: a,
                       promoEmailConsent: m.required ? m : null
@@ -327,8 +327,8 @@ class eo extends (i = a.PureComponent) {
                 apiErrors: { username: n, global_name: i },
                 globalName: a
             } = this.state,
-            { subText: l, consentText: s } = this.renderConsentComponents(),
-            o = (null == e ? void 0 : e.stage_instance) != null || (null == e ? void 0 : e.guild_scheduled_event) != null,
+            { subText: l, consentText: o } = this.renderConsentComponents(),
+            s = (null == e ? void 0 : e.stage_instance) != null || (null == e ? void 0 : e.guild_scheduled_event) != null,
             c = (e) => {
                 this.setState({ globalName: e });
             };
@@ -340,12 +340,12 @@ class eo extends (i = a.PureComponent) {
                     className: t,
                     children: [
                         this.renderInviteHeader(),
-                        o ? (0, r.jsx)('div', { className: ei.divider }) : null,
+                        s ? (0, r.jsx)('div', { className: ei.divider }) : null,
                         (0, r.jsxs)(N.gO, {
-                            className: o ? void 0 : er.marginTop40,
+                            className: s ? void 0 : er.marginTop40,
                             children: [
                                 (0, r.jsx)(_.vwX, {
-                                    error: es(null != i ? i : n),
+                                    error: eo(null != i ? i : n),
                                     children: en.intl.string(en.t['9AjdkJ'])
                                 }),
                                 (0, r.jsx)(_.ua7, {
@@ -374,7 +374,7 @@ class eo extends (i = a.PureComponent) {
                                 }),
                                 this.renderInviteButton(),
                                 l,
-                                s,
+                                o,
                                 $.a
                                     ? null
                                     : (0, r.jsx)(N.zx, {
@@ -388,7 +388,7 @@ class eo extends (i = a.PureComponent) {
                         })
                     ]
                 }),
-                null != e && o
+                null != e && s
                     ? (0, r.jsx)(N.ZP, {
                           className: er.marginTop20,
                           children: (0, r.jsx)(A.y, {
@@ -407,12 +407,12 @@ class eo extends (i = a.PureComponent) {
         return 'string' != typeof e
             ? null
             : (0, r.jsx)(N.i_, {
-                  className: s()(er.marginTop20, ei.errorMessage),
+                  className: o()(er.marginTop20, ei.errorMessage),
                   children: e
               });
     }
     renderFull(e, t) {
-        let { email: n, username: i, globalName: l, password: o, consent: c, parsedDateOfBirth: d, globalNameFocused: u, emailClientError: h, usernameClientError: m, passwordClientError: g, dateOfBirthClientError: p, registering: f, apiErrors: { email: E, username: I, global_name: v, password: C, date_of_birth: b } = {} } = this.state,
+        let { email: n, username: i, globalName: l, password: s, consent: c, parsedDateOfBirth: d, globalNameFocused: u, emailClientError: h, usernameClientError: m, passwordClientError: g, dateOfBirthClientError: p, registering: f, apiErrors: { email: E, username: I, global_name: v, password: C, date_of_birth: b } = {} } = this.state,
             {
                 consentRequired: S,
                 isMobileWebInviteRegistration: A,
@@ -454,7 +454,7 @@ class eo extends (i = a.PureComponent) {
                                 email: e,
                                 emailClientError: 0 === e.length ? en.intl.string(en.t.EkokLy) : null
                             }),
-                        error: null != h ? h : es(E),
+                        error: null != h ? h : eo(E),
                         type: 'email',
                         setRef: (e) => {
                             this.emailRef = e;
@@ -467,7 +467,7 @@ class eo extends (i = a.PureComponent) {
                         name: 'global_name',
                         value: l,
                         onChange: (e) => this.setState({ globalName: e }),
-                        error: es(v),
+                        error: eo(v),
                         maxLength: et.hy,
                         setRef: (e) => {
                             this.globalNameRef = e;
@@ -501,7 +501,7 @@ class eo extends (i = a.PureComponent) {
                                         usernameClientError: 0 === e.length ? en.intl.string(en.t.EkokLy) : null
                                     });
                                 },
-                                error: null != m ? m : es(I),
+                                error: null != m ? m : eo(I),
                                 setRef: (e) => {
                                     this.usernameRef = e;
                                 },
@@ -513,13 +513,13 @@ class eo extends (i = a.PureComponent) {
                     (0, r.jsx)(N.II, {
                         label: en.intl.string(en.t['CIGa+/']),
                         name: 'password',
-                        value: o,
+                        value: s,
                         onChange: (e) =>
                             this.setState({
                                 password: e,
                                 passwordClientError: 0 === e.length ? en.intl.string(en.t.EkokLy) : null
                             }),
-                        error: null != g ? g : es(C),
+                        error: null != g ? g : eo(C),
                         type: 'password',
                         setRef: (e) => {
                             this.passwordRef = e;
@@ -532,7 +532,7 @@ class eo extends (i = a.PureComponent) {
                         name: 'date_of_birth',
                         onChange: this.handleBirthdayChange,
                         ref: this.dateOfBirthRef,
-                        error: null != p ? p : es(b),
+                        error: null != p ? p : eo(b),
                         value: d,
                         required: !0
                     }),
@@ -556,7 +556,7 @@ class eo extends (i = a.PureComponent) {
             ? (0, r.jsx)(J.Z, {
                   onSubmit: this.handleSubmit,
                   tag: 'form',
-                  className: s()(Z, ei.horizontalAuthBox),
+                  className: o()(Z, ei.horizontalAuthBox),
                   children: () => [
                       B,
                       (0, r.jsxs)(
@@ -641,13 +641,13 @@ class eo extends (i = a.PureComponent) {
             ea(this, 'handleGotoLogin', (e) => {
                 let t;
                 let { email: n } = this.state,
-                    { giftCode: i, guildTemplate: r, invite: a, location: l, onLoginStart: s, redirectTo: c, transitionTo: d, isMobileWebInviteRegistration: u } = this.props;
+                    { giftCode: i, guildTemplate: r, invite: a, location: l, onLoginStart: o, redirectTo: c, transitionTo: d, isMobileWebInviteRegistration: u } = this.props;
                 if (u) {
-                    null == s || s(e);
+                    null == o || o(e);
                     return;
                 }
-                let h = null != l ? (0, o.parse)(l.search) : {};
-                null != a ? (t = X.Z5c.INVITE_LOGIN(a.code)) : null != i ? (t = X.Z5c.GIFT_CODE_LOGIN(i.code)) : null != r ? (t = X.Z5c.GUILD_TEMPLATE_LOGIN(r.code)) : null != c ? ((t = X.Z5c.LOGIN), (h.redirect_to = c)) : ((t = X.Z5c.LOGIN), '' !== n && (h = { email: n })), m.Z.loginReset(), d(t, { search: (0, o.stringify)(h) }), null == s || s(e), K.S.dispatch(X.CkL.WAVE_EMPHASIZE);
+                let h = null != l ? (0, s.parse)(l.search) : {};
+                null != a ? (t = X.Z5c.INVITE_LOGIN(a.code)) : null != i ? (t = X.Z5c.GIFT_CODE_LOGIN(i.code)) : null != r ? (t = X.Z5c.GUILD_TEMPLATE_LOGIN(r.code)) : null != c ? ((t = X.Z5c.LOGIN), (h.redirect_to = c)) : ((t = X.Z5c.LOGIN), '' !== n && (h = { email: n })), m.Z.loginReset(), d(t, { search: (0, s.stringify)(h) }), null == o || o(e), K.S.dispatch(X.CkL.WAVE_EMPHASIZE);
             }),
             ea(this, 'handleSubmit', (e) => {
                 null == e || e.preventDefault();
@@ -681,7 +681,7 @@ class eo extends (i = a.PureComponent) {
                     }
                 });
             });
-        let n = null != e.location ? (0, o.parse)(e.location.search) : {};
+        let n = null != e.location ? (0, s.parse)(e.location.search) : {};
         this.state = {
             email: null !== (t = n.email) && void 0 !== t ? t : '',
             username: '',
@@ -712,7 +712,7 @@ function ec(e) {
         })),
         n = (0, w.F4)(),
         i = (0, u.e7)([k.Z], () => k.Z.registrationUsernameSuggestion()),
-        [l, s] = a.useState(Q.EW.FULL);
+        [l, o] = a.useState(Q.EW.FULL);
     return (
         (0, E.Z)(
             {
@@ -726,8 +726,8 @@ function ec(e) {
             {},
             [l]
         ),
-        (0, r.jsx)(eo, {
-            onChangeStep: (e) => s(e),
+        (0, r.jsx)(es, {
+            onChangeStep: (e) => o(e),
             uniqueUsernameRegistrationConfig: n,
             usernameSuggestion: i,
             ...e,
@@ -737,7 +737,7 @@ function ec(e) {
 }
 function ed(e) {
     let t,
-        { username: n, suggestion: i, globalName: a, livecheckEnabled: l, isUsernameFocused: s, onClickSuggestion: o } = e,
+        { username: n, suggestion: i, globalName: a, livecheckEnabled: l, isUsernameFocused: o, onClickSuggestion: s } = e,
         d = (0, B.a)(n, l, !0),
         u = l && n.length > 0;
     return (
@@ -780,7 +780,7 @@ function ed(e) {
                     color: 'text-normal',
                     children: en.intl.format(en.t.nDGqqq, {
                         suggestion: i,
-                        nameOnClick: o
+                        nameOnClick: s
                     })
                 })
               : (0, r.jsx)(_.Text, {
@@ -789,14 +789,14 @@ function ed(e) {
                     children: en.intl.string(en.t.z7c4bG)
                 })),
         (0, r.jsx)(M.Z, {
-            show: (u && (null == d ? void 0 : d.type) === D.K.ERROR) || s,
+            show: (u && (null == d ? void 0 : d.type) === D.K.ERROR) || o,
             top: -12,
             bottom: 20,
             children: t
         })
     );
 }
-ea(eo, 'defaultProps', {
+ea(es, 'defaultProps', {
     giftCodeResolved: !1,
     transitionTo: (e) => n.g.location.assign(e)
 });

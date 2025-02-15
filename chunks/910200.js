@@ -3,8 +3,8 @@ var i = n(200651),
     r = n(120356),
     a = n.n(r),
     l = n(442837),
-    s = n(692547),
-    o = n(481060),
+    o = n(692547),
+    s = n(481060),
     d = n(410030),
     c = n(220082),
     u = n(114487),
@@ -28,7 +28,7 @@ function C(e) {
                 }),
                 i = (0, c.ZP)(n, t);
             return null != e.brandColorPrimary ? e.brandColorPrimary : i;
-        })(t, (0, o.dQu)(s.Z.colors.BG_BASE_TERTIARY).hex()),
+        })(t, (0, s.dQu)(o.Z.colors.BG_BASE_TERTIARY).hex()),
         I = (0, l.e7)([_.default], () => _.default.locale),
         j = (0, g.d)(r, C),
         N = (0, h.M)(x.default.extractTimestamp(t.id), I);
@@ -59,7 +59,7 @@ function C(e) {
             (0, i.jsxs)('div', {
                 className: b.header,
                 children: [
-                    (0, i.jsx)(o.X6q, {
+                    (0, i.jsx)(s.X6q, {
                         variant: 'heading-lg/medium',
                         color: 'header-primary',
                         children: t.name
@@ -71,7 +71,7 @@ function C(e) {
                                 className: b.memberCount,
                                 children: [
                                     (0, i.jsx)('div', { className: b.dot }),
-                                    (0, i.jsx)(o.Text, {
+                                    (0, i.jsx)(s.Text, {
                                         variant: 'text-sm/normal',
                                         color: 'text-secondary',
                                         children: p.intl.format(p.t.zRl6XV, { count: t.memberCount })
@@ -82,7 +82,7 @@ function C(e) {
                                 className: b.memberCount,
                                 children: [
                                     (0, i.jsx)('div', { className: b.dotOnline }),
-                                    (0, i.jsx)(o.Text, {
+                                    (0, i.jsx)(s.Text, {
                                         variant: 'text-sm/normal',
                                         color: 'text-secondary',
                                         children: p.intl.format(p.t['LC+S+v'], { membersOnline: t.onlineCount })
@@ -93,7 +93,7 @@ function C(e) {
                     }),
                     (0, i.jsx)('div', {
                         className: b.established,
-                        children: (0, i.jsx)(o.Text, {
+                        children: (0, i.jsx)(s.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-secondary',
                             children: p.intl.format(p.t['zb2Q5+'], { createdAtDate: N })
@@ -104,7 +104,7 @@ function C(e) {
             (0, i.jsxs)('div', {
                 className: b.body,
                 children: [
-                    (0, i.jsx)(o.Text, {
+                    (0, i.jsx)(s.Text, {
                         variant: 'text-sm/normal',
                         color: 'text-secondary',
                         children: t.description

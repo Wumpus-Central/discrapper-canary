@@ -3,8 +3,8 @@ var i = n(200651),
     r = n(192379),
     a = n(120356),
     l = n.n(a),
-    s = n(990547),
-    o = n(481060),
+    o = n(990547),
+    s = n(481060),
     c = n(479531),
     d = n(388905),
     u = n(585483),
@@ -36,7 +36,7 @@ function x(e) {
                 }),
                 (0, i.jsx)(d.Dx, { children: g.intl.string(g.t['IfBQ5+']) }),
                 null != b && '' !== b
-                    ? (0, i.jsx)(o.Text, {
+                    ? (0, i.jsx)(s.Text, {
                           variant: 'text-sm/normal',
                           color: 'text-danger',
                           children: b
@@ -77,7 +77,7 @@ function x(e) {
                                                 token: E,
                                                 password: T
                                             },
-                                            trackedActionData: { event: s.NetworkActionNames.ACCOUNT_REVERT },
+                                            trackedActionData: { event: o.NetworkActionNames.ACCOUNT_REVERT },
                                             rejectWithError: !1
                                         })
                                             .then((e) => {

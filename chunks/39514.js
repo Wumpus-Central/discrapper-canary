@@ -3,8 +3,8 @@ var i = n(200651),
     r = n(192379),
     a = n(120356),
     l = n.n(a),
-    s = n(442837),
-    o = n(570140),
+    o = n(442837),
+    s = n(570140),
     c = n(893776),
     d = n(533307),
     u = n(978085),
@@ -39,7 +39,7 @@ function j(e, t, n) {
         e
     );
 }
-s.ZP.initialize();
+o.ZP.initialize();
 class O extends r.PureComponent {
     componentDidMount() {
         let { authenticated: e, isResolved: t } = this.props;
@@ -48,7 +48,7 @@ class O extends r.PureComponent {
     componentDidUpdate(e) {
         let { authenticated: t, isResolved: n } = this.props;
         n ||
-            o.Z.wait(() => {
+            s.Z.wait(() => {
                 this.resolveGiftCode();
             }),
             t && !e.authenticated && this.handleAuthenticated(),
@@ -180,7 +180,7 @@ class O extends r.PureComponent {
         });
     }
     render() {
-        let { nativeAppState: e, sku: t, authenticated: n, giftCode: r, isResolved: a, isAccepting: l, transitionTo: s, location: o } = this.props,
+        let { nativeAppState: e, sku: t, authenticated: n, giftCode: r, isResolved: a, isAccepting: l, transitionTo: o, location: s } = this.props,
             { fetchingUser: c, continueOnWeb: d } = this.state;
         if (e === A.kEZ.OPEN && !d) return this.renderAppOpened();
         if (e === A.kEZ.OPENING) return this.renderSpinner(R.intl.string(R.t['Z+hCVV']));
@@ -195,14 +195,14 @@ class O extends r.PureComponent {
                 ? (0, i.jsx)(S.Z, {
                       giftCodeSKU: t,
                       giftCode: r,
-                      transitionTo: s,
-                      location: o
+                      transitionTo: o,
+                      location: s
                   })
                 : (0, i.jsx)(T.Z, {
                       giftCodeSKU: t,
                       giftCode: r,
-                      transitionTo: s,
-                      location: o
+                      transitionTo: o,
+                      location: s
                   });
         }
         return null;
@@ -254,7 +254,7 @@ class O extends r.PureComponent {
             });
     }
 }
-let L = s.ZP.connectStores([x.Z, E.Z, p.default, I.Z, f.Z, m.Z], (e) => {
+let L = o.ZP.connectStores([x.Z, E.Z, p.default, I.Z, f.Z, m.Z], (e) => {
     let t = e.match.params.giftCode,
         n = x.Z.get(t),
         i = null != n ? I.Z.get(n.skuId) : null;

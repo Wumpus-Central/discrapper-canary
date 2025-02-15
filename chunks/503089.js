@@ -10,8 +10,8 @@ s.d(t, {
 var n = s(200651),
     i = s(192379),
     r = s(990547),
-    o = s(692547),
-    l = s(481060),
+    l = s(692547),
+    o = s(481060),
     a = s(213609),
     c = s(252618),
     u = s(243778),
@@ -47,7 +47,7 @@ let S = Object.freeze({
     N = 2;
 function _(e) {
     var t, s;
-    let { section: i, setPreventNavigation: o, scrollerRef: l } = e;
+    let { section: i, setPreventNavigation: l, scrollerRef: o } = e;
     (0, a.Z)({
         type: r.ImpressionTypes.PANE,
         name: null == i ? void 0 : i.impressionName,
@@ -59,8 +59,8 @@ function _(e) {
         section: i.section,
         children: (0, n.jsx)(c, {
             ...u,
-            setPreventNavigation: o,
-            refToScroller: l
+            setPreventNavigation: l,
+            refToScroller: o
         })
     });
 }
@@ -108,13 +108,13 @@ class T extends i.PureComponent {
     renderSidebar(e) {
         let { section: t, title: s, showUserSettingsSearch: i } = this.props,
             r = e.flatMap((e) => e.newIndicatorDismissibleContentTypes).filter((e) => null != e),
-            o = null != t ? t : e[0].section;
+            l = null != t ? t : e[0].section;
         return (0, n.jsx)(u.ZP, {
             contentTypes: r,
             children: (t) => {
                 let { visibleContent: r } = t;
-                return (0, n.jsxs)(l.njP, {
-                    selectedItem: o,
+                return (0, n.jsxs)(o.njP, {
+                    selectedItem: l,
                     onItemSelect: this.handleSetSection,
                     orientation: 'vertical',
                     'aria-label': s,
@@ -124,15 +124,15 @@ class T extends i.PureComponent {
                             if (null != e.tabPredicate && !e.tabPredicate()) return null;
                             switch (e.section) {
                                 case h.ID.HEADER:
-                                    return (0, n.jsx)(l.njP.Header, { children: e.label }, t);
+                                    return (0, n.jsx)(o.njP.Header, { children: e.label }, t);
                                 case h.ID.DIVIDER:
-                                    return (0, n.jsx)(l.njP.Separator, {}, t);
+                                    return (0, n.jsx)(o.njP.Separator, {}, t);
                                 case h.ID.CUSTOM:
                                     var s;
                                     let i = null !== (s = e.element) && void 0 !== s ? s : m.VqG;
                                     return (0, n.jsx)(i, {}, t);
                                 default:
-                                    return this.renderSettingsSectionTabBarItem(e, o === e.section, r);
+                                    return this.renderSettingsSectionTabBarItem(e, l === e.section, r);
                             }
                         })
                     ]
@@ -148,9 +148,9 @@ class T extends i.PureComponent {
     }
     render() {
         var e;
-        let { sidebarTheme: t, section: s, title: i, onClose: r, hideSidebar: o } = this.props,
-            l = this.getPredicateSections(),
-            a = l.find((e) => e.section === s);
+        let { sidebarTheme: t, section: s, title: i, onClose: r, hideSidebar: l } = this.props,
+            o = this.getPredicateSections(),
+            a = o.find((e) => e.section === s);
         if (null == a || null == s) return null;
         let u = null !== (e = 'string' == typeof a.label ? a.label : a.ariaLabel) && void 0 !== e ? e : i;
         return (0, n.jsxs)(n.Fragment, {
@@ -163,14 +163,14 @@ class T extends i.PureComponent {
                     sidebarTheme: t,
                     scrollerRef: this.scrollerRef,
                     section: s,
-                    sidebar: this.renderSidebar(l),
+                    sidebar: this.renderSidebar(o),
                     content: (0, n.jsx)(_, {
                         section: a,
                         setPreventNavigation: this.setPreventNavigation,
                         scrollerRef: this.scrollerRef
                     }),
                     mobileSidebarOpen: this.state.sidebarOpen,
-                    hideSidebar: o,
+                    hideSidebar: l,
                     toggleSidebar: () => this.setState({ sidebarOpen: !0 }),
                     contentType: a.type,
                     notice: this.renderNotice(a),
@@ -234,23 +234,23 @@ class T extends i.PureComponent {
                 let { section: i, label: r = null, ariaLabel: a, onClick: c, color: u, icon: f, className: p, newIndicator: g, newIndicatorDismissibleContentTypes: x, badgeCount: h } = e,
                     C = null;
                 i === m.oAB.ACCOUNT && this.props.isEligibleForPomelo
-                    ? (C = (0, n.jsx)(l.P4T, {
+                    ? (C = (0, n.jsx)(o.P4T, {
                           size: 'custom',
                           width: 20,
                           height: 20,
-                          color: o.Z.colors.STATUS_WARNING.css
+                          color: l.Z.colors.STATUS_WARNING.css
                       }))
                     : null != e.decoration
-                      ? (C = (0, n.jsx)(l.Text, {
+                      ? (C = (0, n.jsx)(o.Text, {
                             variant: 'text-md/normal',
                             color: 'text-muted',
                             children: e.decoration
                         }))
                       : null != s && (null == x ? void 0 : x.includes(s)) && !t
-                        ? (C = null != g ? g : (0, n.jsx)(l.IGR, { text: v.intl.string(v.t.y2b7CA) }))
+                        ? (C = null != g ? g : (0, n.jsx)(o.IGR, { text: v.intl.string(v.t.y2b7CA) }))
                         : null != f
                           ? (C = f)
-                          : null != h && h > 0 && (C = (0, n.jsx)(l.mAB, { count: h }));
+                          : null != h && h > 0 && (C = (0, n.jsx)(o.mAB, { count: h }));
                 let S =
                     i === m.oAB.PREMIUM
                         ? (0, n.jsx)(d.Z, {
@@ -265,7 +265,7 @@ class T extends i.PureComponent {
                                 children: [r, C]
                             });
                 return (0, n.jsx)(
-                    l.njP.Item,
+                    o.njP.Item,
                     {
                         color: u,
                         id: i,

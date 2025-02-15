@@ -1,18 +1,18 @@
 a.d(e, {
-    U: () => _,
+    U: () => o,
     h: () => i
 });
 var r = a(370336),
     n = a(967752);
-function o(t) {
+function _(t) {
     let e = t.protocol ? `${t.protocol}:` : '',
         a = t.port ? `:${t.port}` : '';
     return `${e}//${t.host}${a}${t.path ? `/${t.path}` : ''}/api/`;
 }
-function _(t, e, a) {
+function o(t, e, a) {
     return (
         e ||
-        `${o(t)}${t.projectId}/envelope/?${(0, r._j)({
+        `${_(t)}${t.projectId}/envelope/?${(0, r._j)({
             sentry_key: t.publicKey,
             sentry_version: '7',
             ...(a && { sentry_client: `${a.name}/${a.version}` })
@@ -22,15 +22,15 @@ function _(t, e, a) {
 function i(t, e) {
     let a = (0, n.vK)(t);
     if (!a) return '';
-    let r = `${o(a)}embed/error-page/`,
-        _ = `dsn=${(0, n.RA)(a)}`;
+    let r = `${_(a)}embed/error-page/`,
+        o = `dsn=${(0, n.RA)(a)}`;
     for (let t in e)
         if ('dsn' !== t && 'onClose' !== t) {
             if ('user' === t) {
                 let t = e.user;
                 if (!t) continue;
-                t.name && (_ += `&name=${encodeURIComponent(t.name)}`), t.email && (_ += `&email=${encodeURIComponent(t.email)}`);
-            } else _ += `&${encodeURIComponent(t)}=${encodeURIComponent(e[t])}`;
+                t.name && (o += `&name=${encodeURIComponent(t.name)}`), t.email && (o += `&email=${encodeURIComponent(t.email)}`);
+            } else o += `&${encodeURIComponent(t)}=${encodeURIComponent(e[t])}`;
         }
-    return `${r}?${_}`;
+    return `${r}?${o}`;
 }

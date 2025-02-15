@@ -1,8 +1,8 @@
 a.d(e, { R: () => c });
 var r = a(263449),
     n = a(452896),
-    o = a(163162);
-let _ = {
+    _ = a(163162);
+let o = {
         replayIntegration: 'replay',
         replayCanvasIntegration: 'replay-canvas',
         feedbackIntegration: 'feedback',
@@ -20,9 +20,9 @@ let _ = {
         sessionTimingIntegration: 'sessiontiming',
         browserProfilingIntegration: 'browserprofiling'
     },
-    i = o.m9;
+    i = _.m9;
 async function c(t) {
-    let e = _[t],
+    let e = o[t],
         a = (i.Sentry = i.Sentry || {});
     if (!e) throw Error(`Cannot lazy load integration: ${t}`);
     let c = a[t];
@@ -30,15 +30,15 @@ async function c(t) {
     let s = (function (t) {
             let e = (0, r.s3)(),
                 a = e && e.getOptions(),
-                o = (a && a.cdnBaseUrl) || 'https://browser.sentry-cdn.com';
-            return new URL(`/${n.J}/${t}.min.js`, o).toString();
+                _ = (a && a.cdnBaseUrl) || 'https://browser.sentry-cdn.com';
+            return new URL(`/${n.J}/${t}.min.js`, _).toString();
         })(e),
-        E = o.m9.document.createElement('script');
+        E = _.m9.document.createElement('script');
     (E.src = s), (E.crossOrigin = 'anonymous'), (E.referrerPolicy = 'origin');
     let l = new Promise((t, e) => {
         E.addEventListener('load', () => t()), E.addEventListener('error', e);
     });
-    o.m9.document.body.appendChild(E);
+    _.m9.document.body.appendChild(E);
     try {
         await l;
     } catch (e) {

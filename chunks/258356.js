@@ -7,8 +7,8 @@ n(192379);
 var r = n(481060),
     a = n(565138),
     l = n(372769),
-    s = n(742593),
-    o = n(390072),
+    o = n(742593),
+    s = n(390072),
     c = n(601964),
     d = n(230224),
     u = n(388032),
@@ -19,7 +19,7 @@ function _(e) {
     return (0, i.jsxs)('div', {
         className: h.guildEventCard,
         children: [
-            (0, i.jsx)(s.ZP, {
+            (0, i.jsx)(o.ZP, {
                 name: n.name,
                 description: null !== (t = n.description) && void 0 !== t ? t : void 0,
                 headerVariant: 'heading-md/medium',
@@ -31,7 +31,7 @@ function _(e) {
             null != a &&
                 (0, i.jsx)('div', {
                     className: h.channelInfo,
-                    children: (0, i.jsx)(o.Z, {
+                    children: (0, i.jsx)(s.Z, {
                         guildScheduledEvent: n,
                         channel: a
                     })
@@ -49,9 +49,9 @@ function _(e) {
 function m(e) {
     var t;
     let { invite: n } = e,
-        s = null != n.guild ? new c.ZP(n.guild) : null;
-    if (null == s) return null;
-    let o = null !== (t = s.description) && void 0 !== t ? t : '';
+        o = null != n.guild ? new c.ZP(n.guild) : null;
+    if (null == o) return null;
+    let s = null !== (t = o.description) && void 0 !== t ? t : '';
     return (0, i.jsxs)('div', {
         className: h.guildInfoCard,
         children: [
@@ -64,7 +64,7 @@ function m(e) {
                 className: h.guildContainer,
                 children: [
                     (0, i.jsx)(a.Z, {
-                        guild: s,
+                        guild: o,
                         active: !0,
                         size: a.Z.Sizes.MEDIUM
                     }),
@@ -77,9 +77,9 @@ function m(e) {
                                 variant: 'text-sm/medium',
                                 tag: 'span',
                                 children: [
-                                    s.name,
+                                    o.name,
                                     (0, i.jsx)(l.Z, {
-                                        guild: s,
+                                        guild: o,
                                         className: h.guildBadge,
                                         tooltipPosition: 'left'
                                     })
@@ -94,13 +94,13 @@ function m(e) {
                     })
                 ]
             }),
-            o.length > 0 &&
+            s.length > 0 &&
                 (0, i.jsx)('details', {
                     className: h.guildDescriptionContainer,
                     children: (0, i.jsx)(r.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/normal',
-                        children: o
+                        children: s
                     })
                 })
         ]

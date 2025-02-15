@@ -1,7 +1,7 @@
 var r,
     n = a(24033),
-    o = a(94567),
-    _ = a(202234),
+    _ = a(94567),
+    o = a(202234),
     i = a(624906),
     c = a(620623),
     s = a(722063),
@@ -28,7 +28,7 @@ var r,
             r = new ActiveXObject('htmlfile');
         } catch (t) {}
         p = 'undefined' != typeof document ? (document.domain && r ? A(r) : f()) : A(r);
-        for (var t = _.length; t--; ) delete p[l][_[t]];
+        for (var t = o.length; t--; ) delete p[l][o[t]];
         return p();
     };
 (i[I] = !0),
@@ -36,5 +36,5 @@ var r,
         Object.create ||
         function (t, e) {
             var a;
-            return null !== t ? ((R[l] = n(t)), (a = new R()), (R[l] = null), (a[I] = t)) : (a = p()), void 0 === e ? a : o.f(a, e);
+            return null !== t ? ((R[l] = n(t)), (a = new R()), (R[l] = null), (a[I] = t)) : (a = p()), void 0 === e ? a : _.f(a, e);
         });

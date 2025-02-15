@@ -6,8 +6,8 @@ var i,
     r = n(200651),
     a = n(192379),
     l = n(533126),
-    s = n(120356),
-    o = n.n(s),
+    o = n(120356),
+    s = n.n(o),
     c = n(593473),
     d = n(873546),
     u = n(442837),
@@ -121,8 +121,8 @@ class J extends (i = a.PureComponent) {
         let { authenticated: n, location: i } = this.props,
             { checkingHandoff: r } = this.state;
         if ((!n || e.authenticated || r || (this.state.conditionalMediationAbortController.abort(), this.loginOrSSO(n, i)), t.errors !== this.state.errors)) {
-            var a, l, s;
-            this.hasError('password') ? null === (a = this.passwordRef) || void 0 === a || a.focus() : this.hasError('email') || this.hasError('login') ? null === (l = this.loginRef) || void 0 === l || l.focus() : this.hasError('code') && (null === (s = this.codeRef) || void 0 === s || s.focus());
+            var a, l, o;
+            this.hasError('password') ? null === (a = this.passwordRef) || void 0 === a || a.focus() : this.hasError('email') || this.hasError('login') ? null === (l = this.loginRef) || void 0 === l || l.focus() : this.hasError('code') && (null === (o = this.codeRef) || void 0 === o || o.focus());
         }
     }
     get loginSource() {
@@ -244,7 +244,7 @@ class J extends (i = a.PureComponent) {
                                 children: K.intl.string(K.t.JhDw5u)
                             }),
                             (0, r.jsx)('div', {
-                                className: o()(W.marginTop8, H.needAccount),
+                                className: s()(W.marginTop8, H.needAccount),
                                 children: K.intl.format(K.t.js2rr6, { onClick: this.handleCancelAccountDeletion })
                             })
                         ]
@@ -319,7 +319,7 @@ class J extends (i = a.PureComponent) {
     renderDefaultForm(e) {
         var t;
         let n;
-        let { invite: i, giftCode: a, loginStatus: l, country: s, showMobileWebHandoff: c, disableAutofocusOnDefaultForm: d } = this.props,
+        let { invite: i, giftCode: a, loginStatus: l, country: o, showMobileWebHandoff: c, disableAutofocusOnDefaultForm: d } = this.props,
             u = !this.hasError('email') && this.hasError('password'),
             _ = (null == i ? void 0 : i.stage_instance) != null;
         return (
@@ -384,8 +384,8 @@ class J extends (i = a.PureComponent) {
                                         className: W.marginTop20,
                                         children: [
                                             (0, r.jsx)(j.Z, {
-                                                alpha2: s.alpha2,
-                                                countryCode: s.code.split(' ')[0],
+                                                alpha2: o.alpha2,
+                                                countryCode: o.code.split(' ')[0],
                                                 className: W.marginBottom20,
                                                 label: K.intl.string(K.t.tUjnxs),
                                                 error: null !== (t = this.renderError('login')) && void 0 !== t ? t : this.renderError('email'),
@@ -420,7 +420,7 @@ class J extends (i = a.PureComponent) {
                                                 onClick: this.handleForgotPassword,
                                                 look: E.zx.Looks.LINK,
                                                 color: E.zx.Colors.LINK,
-                                                className: o()(W.marginBottom20, W.marginTop4),
+                                                className: s()(W.marginBottom20, W.marginTop4),
                                                 children: K.intl.string(K.t.wWIufn)
                                             }),
                                             (0, r.jsx)(E.zx, {
@@ -485,7 +485,7 @@ class J extends (i = a.PureComponent) {
         return (0, r.jsx)(G.Z, {
             onSubmit: this.handleLogin,
             tag: 'form',
-            className: o()(this.props.authBoxClassName, H.horizontalAuthBox),
+            className: s()(this.props.authBoxClassName, H.horizontalAuthBox),
             children: () => [(0, r.jsx)(N.Z, { guildTemplate: e }, 'template'), this.renderDefaultForm(!1)]
         });
     }
@@ -548,8 +548,8 @@ class J extends (i = a.PureComponent) {
     }
     render() {
         let { authenticated: e, invite: t, guildTemplate: n, loginStatus: i, handoffAvailable: a } = this.props,
-            { checkingHandoff: l, redirecting: s } = this.state;
-        if (s || l) return (0, r.jsx)(q, {});
+            { checkingHandoff: l, redirecting: o } = this.state;
+        if (o || l) return (0, r.jsx)(q, {});
         if (a) return this.renderHandOffAvailable();
         if (e && l) return this.renderHandOffContinue();
         switch (i) {
@@ -720,9 +720,9 @@ class J extends (i = a.PureComponent) {
             Y(this, 'handleGotoRegister', () => {
                 let e;
                 let { login: t } = this.state,
-                    { invite: n, giftCode: i, guildTemplate: r, location: a, transitionTo: l, redirectTo: s } = this.props,
-                    o = null != a ? (0, c.parse)(a.search) : {};
-                '' !== t && (o.email = t), null != n ? ((o.mode = 'register'), (e = z.Z5c.INVITE(n.code))) : null != i ? ((o.mode = 'register'), (e = z.Z5c.GIFT_CODE(i.code))) : null != r ? (e = z.Z5c.GUILD_TEMPLATE(r.code)) : null != s ? ((e = z.Z5c.REGISTER), (o.redirect_to = s)) : (e = z.Z5c.REGISTER), this.loginReset(), l(e, { search: (0, c.stringify)(o) }), w.S.dispatch(z.CkL.WAVE_EMPHASIZE);
+                    { invite: n, giftCode: i, guildTemplate: r, location: a, transitionTo: l, redirectTo: o } = this.props,
+                    s = null != a ? (0, c.parse)(a.search) : {};
+                '' !== t && (s.email = t), null != n ? ((s.mode = 'register'), (e = z.Z5c.INVITE(n.code))) : null != i ? ((s.mode = 'register'), (e = z.Z5c.GIFT_CODE(i.code))) : null != r ? (e = z.Z5c.GUILD_TEMPLATE(r.code)) : null != o ? ((e = z.Z5c.REGISTER), (s.redirect_to = o)) : (e = z.Z5c.REGISTER), this.loginReset(), l(e, { search: (0, c.stringify)(s) }), w.S.dispatch(z.CkL.WAVE_EMPHASIZE);
             });
         let i = null != e.location ? (0, c.parse)(e.location.search) : {};
         this.state = {

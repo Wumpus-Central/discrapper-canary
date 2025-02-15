@@ -3,8 +3,8 @@ var i = n(200651),
     r = n(192379),
     a = n(593473),
     l = n(990547),
-    s = n(873546),
-    o = n(442837),
+    o = n(873546),
+    s = n(442837),
     c = n(570140),
     d = n(893776),
     u = n(533307),
@@ -52,14 +52,14 @@ var i = n(200651),
     $ = n(981631),
     ee = n(188785),
     et = n(245335);
-n(179645), o.ZP.initialize();
+n(179645), s.ZP.initialize();
 let en = (0, k.Z)(K.Z),
     ei = (0, k.Z)(H.Z),
     er = (0, k.Z)(V.Z),
     ea = (0, k.Z)(G.Z),
     el = (0, k.Z)(F.Z),
-    es = (0, k.Z)(b.Z),
-    eo = (0, k.Z)(Y.Z),
+    eo = (0, k.Z)(b.Z),
+    es = (0, k.Z)(Y.Z),
     ec = (0, k.Z)(w.Z),
     ed = (0, k.Z)(B.Z),
     eu = (0, k.Z)(Q.Z),
@@ -78,24 +78,24 @@ class eC extends r.PureComponent {
         var n;
         let { invite: i, location: r } = e,
             { backgroundId: l } = t,
-            s = null !== (n = (0, a.parse)(r.search).redirect_to) && void 0 !== n ? n : null;
-        (null == s || '' === s || !(0, P.B)(s) || s.startsWith($.Z5c.ME)) && (s = null);
-        let o = null;
-        if (null == i) o = (0, O.gK)(s);
+            o = null !== (n = (0, a.parse)(r.search).redirect_to) && void 0 !== n ? n : null;
+        (null == o || '' === o || !(0, P.B)(o) || o.startsWith($.Z5c.ME)) && (o = null);
+        let s = null;
+        if (null == i) s = (0, O.gK)(o);
         else if ((null == i ? void 0 : i.state) === $.r2o.RESOLVED) {
             let { guild: e, target_application: t } = i;
             null != t
-                ? null != l && (o = (0, j.getAssetImage)(t.id, l, 1024))
+                ? null != l && (s = (0, j.getAssetImage)(t.id, l, 1024))
                 : null != e &&
                   'string' == typeof e.splash &&
-                  (o = L.ZP.getGuildSplashURL({
+                  (s = L.ZP.getGuildSplashURL({
                       id: e.id,
                       splash: e.splash
                   }));
         }
         return {
-            redirectTo: s,
-            splash: o
+            redirectTo: o,
+            splash: s
         };
     }
     componentDidMount() {
@@ -193,7 +193,7 @@ class eC extends r.PureComponent {
                                   redirectTo: t,
                                   inviteKey: n
                               })
-                            : (0, i.jsx)(eo, {
+                            : (0, i.jsx)(es, {
                                   ...e,
                                   redirectTo: t
                               })
@@ -222,9 +222,9 @@ class eC extends r.PureComponent {
                                 transitionTo: a
                             } = e,
                             l = (0, N.mb)(t, r.search);
-                        return s.tq || s.Em
+                        return o.tq || o.Em
                             ? (0, i.jsx)(
-                                  es,
+                                  eo,
                                   {
                                       inviteKey: l,
                                       transitionTo: a
@@ -250,7 +250,7 @@ class eC extends r.PureComponent {
                             location: r,
                             transitionTo: a
                         } = e;
-                        return s.tq || s.Em
+                        return o.tq || o.Em
                             ? (0, i.jsx)(z.Z, { code: t }, t)
                             : (0, i.jsx)(ea, {
                                   code: t,
@@ -353,21 +353,21 @@ class eC extends r.PureComponent {
                 : (this[t] = n);
     }
 }
-let eN = o.ZP.connectStores([T.default, R.Z, A.Z, E.Z, I.Z], (e) => {
+let eN = s.ZP.connectStores([T.default, R.Z, A.Z, E.Z, I.Z], (e) => {
     var t, n, i;
     let { match: r, location: a } = e,
         l = null == r ? void 0 : null === (t = r.params) || void 0 === t ? void 0 : t.inviteCode,
-        s = ee.a ? ee.Y : void 0,
-        o = null != l ? (0, N.mb)(l, a.search) : s,
+        o = ee.a ? ee.Y : void 0,
+        s = null != l ? (0, N.mb)(l, a.search) : o,
         c = null == r ? void 0 : null === (n = r.params) || void 0 === n ? void 0 : n.giftCode,
         d = null == r ? void 0 : null === (i = r.params) || void 0 === i ? void 0 : i.guildTemplateCode;
     return {
-        inviteKey: o,
+        inviteKey: s,
         isAuthenticated: T.default.isAuthenticated(),
         giftCode: c,
         guildTemplateCode: d,
         gift: null != c ? A.Z.get(c) : null,
-        invite: null != o ? R.Z.getInvite(o) : null,
+        invite: null != s ? R.Z.getInvite(s) : null,
         guildTemplate: null != d ? I.Z.getGuildTemplate(d) : null,
         hasLoadedExperiments: E.Z.hasLoadedExperiments
     };

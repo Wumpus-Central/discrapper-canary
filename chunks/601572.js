@@ -10,8 +10,8 @@ var a = n(200651),
     d = n(600164),
     u = n(313201),
     p = n(695346),
-    f = n(932724),
-    b = n(716161),
+    b = n(932724),
+    f = n(716161),
     h = n(672339),
     g = n(898531),
     m = n(131951),
@@ -27,7 +27,7 @@ function S(e) {
         N = (0, u.Dt)(),
         L = (0, g.Z)(),
         k = p.qF.useSetting(),
-        [B, y] = i.useState((0, f.P)(E.default.getCurrentUser())),
+        [B, y] = i.useState((0, b.P)(E.default.getCurrentUser())),
         U = (0, c.O)(),
         { analyticsLocations: w } = (0, _.ZP)(s.Z.CAMERA_PREVIEW),
         D = i.useRef(null);
@@ -50,7 +50,7 @@ function S(e) {
                     }
                 });
             } catch (e) {}
-            await A(), (0, b.Up)(B);
+            await A(), (0, f.Up)(B);
         };
     return (0, a.jsx)(_.Gt, {
         value: w,

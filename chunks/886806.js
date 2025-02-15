@@ -3,8 +3,8 @@ var i = n(200651),
     r = n(192379),
     a = n(120356),
     l = n.n(a),
-    s = n(442837),
-    o = n(893776),
+    o = n(442837),
+    s = n(893776),
     c = n(493773),
     d = n(129293),
     u = n(388905),
@@ -20,7 +20,7 @@ function E(e) {
 }
 function I(e) {
     let { location: t, transitionTo: a = E } = e,
-        [s, I] = r.useState('submitting'),
+        [o, I] = r.useState('submitting'),
         v = r.useRef(void 0);
     (0, c.ZP)(() => {
         (0, _.e)('verify_email');
@@ -31,7 +31,7 @@ function I(e) {
         }
         (async () => {
             try {
-                let t = await o.Z.verify(e);
+                let t = await s.Z.verify(e);
                 I('succeeded'), (v.current = t);
             } catch (e) {
                 I('failed');
@@ -44,7 +44,7 @@ function I(e) {
         N = r.useCallback(() => {
             m.default.track(g.rMx.VERIFY_ACCOUNT_APP_OPENED, { verifying_user_id: v.current }), (0, h.Z)('verify_email');
         }, []);
-    return 'failed' === s
+    return 'failed' === o
         ? (0, i.jsxs)(u.ZP, {
               children: [
                   (0, i.jsx)(u.Ee, {
@@ -65,7 +65,7 @@ function I(e) {
                   })
               ]
           })
-        : 'succeeded' === s
+        : 'succeeded' === o
           ? (0, i.jsxs)(u.ZP, {
                 children: [
                     (0, i.jsx)(u.Ee, {
@@ -103,4 +103,4 @@ function I(e) {
                 ]
             });
 }
-s.ZP.initialize();
+o.ZP.initialize();

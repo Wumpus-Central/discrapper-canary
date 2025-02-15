@@ -52,7 +52,7 @@ let I = {
                         description: a.description,
                         formFields: a.form_fields,
                         guild: a.guild,
-                        profile: null != a.profile ? (0, l.x)(a.profile) : null
+                        profile: null != a.profile ? (0, l.xo)(a.profile) : null
                     }
                 }),
                 a

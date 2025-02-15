@@ -25,8 +25,8 @@ function m(e, t, n) {
     );
 }
 let g = 'migrated',
-    E = 0.04,
-    v = 0.02,
+    E = 0.02,
+    v = 0.01,
     y = {
         [h.Odu.GUILDS]: {
             minSize: {

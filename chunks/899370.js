@@ -3,13 +3,13 @@ var i,
     r,
     a,
     l = n(973361),
-    s = n(442837),
-    o = n(570140),
+    o = n(442837),
+    s = n(570140),
     c = n(358085),
     d = n(723359);
 let u = null,
     h = 'underage';
-class _ extends (a = s.ZP.Store) {
+class _ extends (a = o.ZP.Store) {
     isUnderageAnonymous() {
         return c.isPlatformEmbedded ? !!(null != u && u + d.k0 > Date.now()) : null != l.parse(document.cookie)[h];
     }
@@ -23,7 +23,7 @@ class _ extends (a = s.ZP.Store) {
               writable: !0
           })
         : (_[i] = r);
-let m = new _(o.Z, {
+let m = new _(s.Z, {
     AGE_GATE_PREVENT_UNDERAGE_REGISTRATION: function () {
         (u = Date.now()), (document.cookie = ''.concat(h, '=1;path=/'));
     },

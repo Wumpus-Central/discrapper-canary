@@ -158,10 +158,10 @@ function B(e) {
     let t = L(e, (e) => (null == e ? H : e.role_benefits.benefits.filter(C.lL)));
     return P(e, 'intangibleBenefits', t);
 }
-let k = new Set();
-function V(e, t) {
+let V = new Set();
+function k(e, t) {
     return 0 === e.length
-        ? k
+        ? V
         : new Set(
               e
                   .filter((e) => e.roles.includes(t))
@@ -177,7 +177,7 @@ function z(e, t) {
     return P(
         e,
         'tierEmojiIds',
-        i.useMemo(() => (null == n ? k : V(l, n.id)), [l, n])
+        i.useMemo(() => (null == n ? V : k(l, n.id)), [l, n])
     );
 }
 function Y(e) {
@@ -250,7 +250,7 @@ async function J(e) {
             })),
         void 0 !== C)
     ) {
-        let e = V(f.ZP.getGuildEmoji(t), l),
+        let e = k(f.ZP.getGuildEmoji(t), l),
             n = (0, s.difference)([...C], [...e]),
             i = (0, s.difference)([...e], [...C]),
             r = n

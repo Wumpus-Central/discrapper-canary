@@ -39,7 +39,7 @@ function U(e, t, n) {
 }
 let G = !0,
     B = ['name', 'description', 'icon', 'splash', 'banner', 'homeHeader', 'afkChannelId', 'afkTimeout', 'systemChannelId', 'verificationLevel', 'defaultMessageNotifications', 'explicitContentFilter', 'features', 'systemChannelFlags', 'preferredLocale', 'rulesChannelId', 'safetyAlertsChannelId', 'discoverySplash', 'publicUpdatesChannelId', 'premiumProgressBarEnabled', 'profile'],
-    Z = ['brandColorPrimary', 'description', 'icon', 'name', 'traits', 'visibility'],
+    Z = ['brandColorPrimary', 'description', 'icon', 'name', 'traits', 'visibility', 'gameApplicationIds'],
     F = new Set(['icon', 'splash', 'banner', 'discoverySplash', 'homeHeader']),
     V = !1,
     j = w.QZA.CLOSED,

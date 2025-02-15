@@ -3,8 +3,8 @@ var n = s(200651);
 s(192379);
 var i = s(120356),
     r = s.n(i),
-    o = s(442837),
-    l = s(650032),
+    l = s(442837),
+    o = s(650032),
     a = s(104494),
     c = s(639119),
     u = s(655525),
@@ -21,8 +21,8 @@ function v(e) {
         b = (0, c.N)(),
         C = (0, a.Ng)(),
         S = (0, f.Vi)(),
-        E = (0, o.e7)([g.Z], () => g.Z.isLocalizedPromoEnabled) && null == b && null == s,
-        { enabled: j } = l._.useExperiment({ location: 'UserSettingsPremiumLabel' }, { autoTrackExposure: !1 }),
+        E = (0, l.e7)([g.Z], () => g.Z.isLocalizedPromoEnabled) && null == b && null == s,
+        { enabled: j } = o._.useExperiment({ location: 'UserSettingsPremiumLabel' }, { autoTrackExposure: !1 }),
         N = j && (null == b ? void 0 : b.trial_id) === h.a7;
     return (
         (t = S

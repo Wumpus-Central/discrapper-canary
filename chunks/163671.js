@@ -1,23 +1,23 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => s });
 var i = n(200651);
 n(192379);
 var r = n(120356),
     a = n.n(r),
     l = n(388905),
-    s = n(92035);
-function o(e) {
+    o = n(92035);
+function s(e) {
     let { children: t, className: n, ...r } = e,
-        o = t();
+        s = t();
     return (0, i.jsx)(l.ZP, {
         ...r,
-        className: a()(n, s.container),
-        contentClassName: s.content,
-        children: o.map((e, t) =>
+        className: a()(n, o.container),
+        contentClassName: o.content,
+        children: s.map((e, t) =>
             (0, i.jsx)(
                 'div',
                 {
-                    className: s.column,
-                    style: { flexBasis: ''.concat(100 / o.length, '%') },
+                    className: o.column,
+                    style: { flexBasis: ''.concat(100 / s.length, '%') },
                     children: e
                 },
                 t

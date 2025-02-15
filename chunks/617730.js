@@ -4,8 +4,8 @@ n(192379);
 var r = n(481060),
     a = n(973616),
     l = n(131704),
-    s = n(601964),
-    o = n(598077),
+    o = n(601964),
+    s = n(598077),
     c = n(230224),
     d = n(258356),
     u = n(981631),
@@ -24,10 +24,10 @@ let m = (e) => {
 function g(e) {
     let { invite: t, onAcceptInvite: n, disableUser: g = !1 } = e;
     if (null == t) return null;
-    let p = null != t.guild ? new s.ZP(t.guild) : null,
+    let p = null != t.guild ? new o.ZP(t.guild) : null,
         f = null != t.channel ? (0, l.jD)(t.channel) : null,
         x = null != t.target_application ? new a.ZP(t.target_application) : null,
-        E = g || null == t.inviter ? null : new o.Z(t.inviter),
+        E = g || null == t.inviter ? null : new s.Z(t.inviter),
         I = !((null != t.approximate_member_count && t.approximate_member_count > c.mx) || (null != p && p.hasFeature(u.oNc.COMMUNITY))) && null != E && (0, c.WT)(t),
         v = m(t),
         C = {

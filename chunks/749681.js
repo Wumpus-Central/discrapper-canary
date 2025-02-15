@@ -2,7 +2,7 @@ n.r(t),
     n.d(t, {
         transitionToGlobalDiscovery: () =>
             function e(t) {
-                var n, b, h;
+                var n, f, h;
                 let g = t.tab;
                 switch ((_.Z.setState({ selectedTab: g }), g)) {
                     case d.GlobalDiscoveryTab.SERVERS:
@@ -11,9 +11,9 @@ n.r(t),
                             null != m
                                 ? o.Z.setState({
                                       selectedTab: m,
-                                      entrypoint: null !== (n = t.entrypoint) && void 0 !== n ? n : f.Qq.UNKNOWN
+                                      entrypoint: null !== (n = t.entrypoint) && void 0 !== n ? n : b.Qq.UNKNOWN
                                   })
-                                : o.Z.setState({ entrypoint: null !== (b = t.entrypoint) && void 0 !== b ? b : f.Qq.UNKNOWN }),
+                                : o.Z.setState({ entrypoint: null !== (f = t.entrypoint) && void 0 !== f ? f : b.Qq.UNKNOWN }),
                             (0, l.uL)(u.Z5c.GLOBAL_DISCOVERY_SERVERS, t.extra)
                         );
                     case d.GlobalDiscoveryTab.APPS:
@@ -104,4 +104,4 @@ var a = n(258971),
     d = n(49898),
     u = n(981631),
     p = n(979007),
-    f = n(128449);
+    b = n(128449);

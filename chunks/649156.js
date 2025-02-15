@@ -1,12 +1,12 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => o });
 var i = n(200651);
 n(192379);
 var r = n(3570),
     a = n(685311),
     l = n(186901);
-let s = function (e) {
+let o = function (e) {
     let { match: t, location: n } = e,
-        s = async (e, t) => {
+        o = async (e, t) => {
             await (0, r.s)(l.jE.PICK_GUILD_SETTINGS, {
                 section: e.params.section,
                 subsection: e.params.subsection,
@@ -16,6 +16,6 @@ let s = function (e) {
     return (0, i.jsx)(a.Z, {
         match: t,
         location: n,
-        attemptDeepLink: s
+        attemptDeepLink: o
     });
 };

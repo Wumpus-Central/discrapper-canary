@@ -3,8 +3,8 @@ var i = n(200651),
     r = n(192379),
     a = n(442837),
     l = n(481060),
-    s = n(596454),
-    o = n(727637),
+    o = n(596454),
+    s = n(727637),
     d = n(607070),
     c = n(176354),
     u = n(300694);
@@ -12,7 +12,7 @@ function m(e) {
     let { emoji: t, shouldAnimate: n } = e;
     if (null == t) return null;
     let r = c.ZP.isCustomEmoji(t) ? t.name : t.surrogates;
-    return (0, i.jsx)(s.Z, {
+    return (0, i.jsx)(o.Z, {
         className: u.traitEmoji,
         emojiId: t.id,
         emojiName: r,
@@ -23,7 +23,7 @@ function m(e) {
 function _(e) {
     let { trait: t } = e,
         n = r.useRef(null),
-        s = (0, o.Z)(n),
+        o = (0, s.Z)(n),
         c = (0, a.e7)([d.Z], () => d.Z.useReducedMotion);
     return (null == t ? void 0 : t.label) == null || t.label.length <= 0
         ? null
@@ -33,7 +33,7 @@ function _(e) {
               children: [
                   (0, i.jsx)(m, {
                       emoji: t.emoji,
-                      shouldAnimate: !c && s
+                      shouldAnimate: !c && o
                   }),
                   (0, i.jsx)(l.Text, {
                       tag: 'span',

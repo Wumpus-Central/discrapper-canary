@@ -3,8 +3,8 @@ var i = n(200651),
     r = n(192379),
     a = n(642128),
     l = n(442837),
-    s = n(481060),
-    o = n(447543),
+    o = n(481060),
+    s = n(447543),
     c = n(587444),
     d = n(393238),
     u = n(388905),
@@ -24,7 +24,7 @@ var i = n(200651),
 function S() {
     return (0, i.jsx)('div', {
         className: b.centerFlex,
-        children: (0, i.jsx)(s.$jN, {})
+        children: (0, i.jsx)(o.$jN, {})
     });
 }
 let T = (e) => {
@@ -64,11 +64,11 @@ function A(e) {
           });
 }
 function R(e) {
-    let { children: t, cardChildren: n, startAnimHeightPx: l, innerStyle: o, ...c } = e,
+    let { children: t, cardChildren: n, startAnimHeightPx: l, innerStyle: s, ...c } = e,
         { invite: u } = c,
         [h, _] = r.useState(T(u)),
         { ref: m, height: g } = (0, d.Z)(),
-        p = (0, s.q_F)({
+        p = (0, o.q_F)({
             height: null != g && 0 !== g ? ''.concat(g, 'px') : ''.concat(l, 'px'),
             config: a.config.stiff
         });
@@ -86,7 +86,7 @@ function R(e) {
                     style: p,
                     children: (0, i.jsx)('section', {
                         ref: m,
-                        className: null == o ? void 0 : o(h),
+                        className: null == s ? void 0 : s(h),
                         children: t(h)
                     })
                 }),
@@ -194,10 +194,10 @@ function L(e) {
                             inviter_id: null == n ? void 0 : null === (a = n.inviter) || void 0 === a ? void 0 : a.id
                         });
                     let l = null != n && n.state !== C.r2o.EXPIRED && n.state !== C.r2o.BANNED ? t : void 0,
-                        s = _.default.getFingerprint(),
-                        c = null != s ? s : _.default.getId(),
+                        o = _.default.getFingerprint(),
+                        c = null != o ? o : _.default.getId(),
                         d = null != n && (null == n ? void 0 : n.type) != null ? Number(null == n ? void 0 : n.type) : void 0;
-                    o.Z.openApp(l, void 0, c, void 0, d);
+                    s.Z.openApp(l, void 0, c, void 0, d);
                 })(e, t, a);
             },
             transitionTo: n

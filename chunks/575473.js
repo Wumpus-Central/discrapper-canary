@@ -1,7 +1,7 @@
 var r = a(466293),
     n = a(139069),
-    o = a(703284),
-    _ = a(501979),
+    _ = a(703284),
+    o = a(501979),
     i = a(98368),
     c = a(433005),
     s = r ? r.prototype : void 0,
@@ -17,7 +17,7 @@ t.exports = function (t, e, a, r, s, l, u) {
         case '[object Boolean]':
         case '[object Date]':
         case '[object Number]':
-            return o(+t, +e);
+            return _(+t, +e);
         case '[object Error]':
             return t.name == e.name && t.message == e.message;
         case '[object RegExp]':
@@ -31,7 +31,7 @@ t.exports = function (t, e, a, r, s, l, u) {
             var d = u.get(t);
             if (d) return d == e;
             (r |= 2), u.set(t, e);
-            var A = _(I(t), I(e), r, s, l, u);
+            var A = o(I(t), I(e), r, s, l, u);
             return u.delete(t), A;
         case '[object Symbol]':
             if (E) return E.call(t) == E.call(e);

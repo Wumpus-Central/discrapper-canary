@@ -2,8 +2,8 @@ s.d(t, { Z: () => m }), s(47120);
 var n,
     i,
     r,
-    o = s(442837),
-    l = s(570140);
+    l = s(442837),
+    o = s(570140);
 let a = {},
     c = null,
     u = [],
@@ -14,7 +14,7 @@ let a = {},
 function x() {
     f = !0;
 }
-class h extends (n = o.ZP.Store) {
+class h extends (n = l.ZP.Store) {
     getAppliedGuildBoostsForGuild(e) {
         return null != a[e] ? a[e].subscriptions : null;
     }
@@ -52,7 +52,7 @@ class h extends (n = o.ZP.Store) {
               writable: !0
           })
         : (h[i] = r);
-let m = new h(l.Z, {
+let m = new h(o.Z, {
     GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: function (e) {
         let { guildId: t, appliedBoosts: s } = e;
         a[t] = {

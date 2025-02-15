@@ -3,8 +3,8 @@ var i,
     r,
     a,
     l = n(442837),
-    s = n(570140),
-    o = n(981631);
+    o = n(570140),
+    s = n(981631);
 let c = {};
 class d extends (a = l.ZP.Store) {
     getState(e) {
@@ -20,17 +20,17 @@ class d extends (a = l.ZP.Store) {
               writable: !0
           })
         : (d[i] = r);
-let u = new d(s.Z, {
+let u = new d(o.Z, {
     NATIVE_APP_MODAL_OPENING: function (e) {
         let { code: t } = e;
-        c[t] = o.kEZ.OPENING;
+        c[t] = s.kEZ.OPENING;
     },
     NATIVE_APP_MODAL_OPENED: function (e) {
         let { code: t } = e;
-        c[t] = o.kEZ.OPEN;
+        c[t] = s.kEZ.OPEN;
     },
     NATIVE_APP_MODAL_OPEN_FAILED: function (e) {
         let { code: t } = e;
-        c[t] = o.kEZ.OPEN_FAIL;
+        c[t] = s.kEZ.OPEN_FAIL;
     }
 });

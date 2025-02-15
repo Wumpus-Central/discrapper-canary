@@ -3,32 +3,32 @@ var n = s(200651);
 s(192379);
 var i = s(120356),
     r = s.n(i),
-    o = s(871899),
-    l = s(742795),
+    l = s(871899),
+    o = s(742795),
     a = s(200289);
 function c(e) {
     let { Icon: t, className: s } = e;
     return (0, n.jsx)('div', {
-        className: r()(o.container, s),
+        className: r()(l.container, s),
         children: (0, n.jsxs)('div', {
-            className: o.innerContainer,
+            className: l.innerContainer,
             children: [
                 (0, n.jsx)('img', {
                     src: a,
                     alt: '',
-                    className: o.star
+                    className: l.star
                 }),
                 (0, n.jsx)('div', {
-                    className: o.iconWrapper,
+                    className: l.iconWrapper,
                     children: (0, n.jsx)(t, {
                         width: 40,
                         height: 40
                     })
                 }),
                 (0, n.jsx)('img', {
-                    src: l,
+                    src: o,
                     alt: '',
-                    className: o.sparkle
+                    className: l.sparkle
                 })
             ]
         })

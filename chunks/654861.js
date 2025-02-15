@@ -3,10 +3,10 @@ var r = (function (t) {
     var e = E(9007199254740992),
         a = '0123456789abcdefghijklmnopqrstuvwxyz',
         n = 'function' == typeof BigInt;
-    function o(t, e, a, r) {
-        return void 0 === t ? o[0] : void 0 !== e && (10 != +e || a) ? Y(t, e, a, r) : F(t);
+    function _(t, e, a, r) {
+        return void 0 === t ? _[0] : void 0 !== e && (10 != +e || a) ? Y(t, e, a, r) : F(t);
     }
-    function _(t, e) {
+    function o(t, e) {
         (this.value = t), (this.sign = e), (this.isSmall = !1);
     }
     function i(t) {
@@ -52,12 +52,12 @@ var r = (function (t) {
         var a,
             r,
             n = t.length,
-            o = e.length,
-            _ = Array(n),
+            _ = e.length,
+            o = Array(n),
             i = 0;
-        for (r = 0; r < o; r++) (i = (a = t[r] + e[r] + i) >= 10000000 ? 1 : 0), (_[r] = a - 10000000 * i);
-        for (; r < n; ) (i = 10000000 === (a = t[r] + i) ? 1 : 0), (_[r++] = a - 10000000 * i);
-        return i > 0 && _.push(i), _;
+        for (r = 0; r < _; r++) (i = (a = t[r] + e[r] + i) >= 10000000 ? 1 : 0), (o[r] = a - 10000000 * i);
+        for (; r < n; ) (i = 10000000 === (a = t[r] + i) ? 1 : 0), (o[r++] = a - 10000000 * i);
+        return i > 0 && o.push(i), o;
     }
     function A(t, e) {
         return t.length >= e.length ? d(t, e) : d(e, t);
@@ -66,50 +66,50 @@ var r = (function (t) {
         var a,
             r,
             n = t.length,
-            o = Array(n);
-        for (r = 0; r < n; r++) (e = Math.floor((a = t[r] - 10000000 + e) / 10000000)), (o[r] = a - 10000000 * e), (e += 1);
-        for (; e > 0; ) (o[r++] = e % 10000000), (e = Math.floor(e / 10000000));
-        return o;
+            _ = Array(n);
+        for (r = 0; r < n; r++) (e = Math.floor((a = t[r] - 10000000 + e) / 10000000)), (_[r] = a - 10000000 * e), (e += 1);
+        for (; e > 0; ) (_[r++] = e % 10000000), (e = Math.floor(e / 10000000));
+        return _;
     }
     function p(t, e) {
         var a,
             r,
             n = t.length,
-            o = e.length,
-            _ = Array(n),
+            _ = e.length,
+            o = Array(n),
             i = 0;
-        for (a = 0; a < o; a++) (r = t[a] - i - e[a]) < 0 ? ((r += 10000000), (i = 1)) : (i = 0), (_[a] = r);
-        for (a = o; a < n; a++) {
+        for (a = 0; a < _; a++) (r = t[a] - i - e[a]) < 0 ? ((r += 10000000), (i = 1)) : (i = 0), (o[a] = r);
+        for (a = _; a < n; a++) {
             if ((r = t[a] - i) < 0) r += 10000000;
             else {
-                _[a++] = r;
+                o[a++] = r;
                 break;
             }
-            _[a] = r;
+            o[a] = r;
         }
-        for (; a < n; a++) _[a] = t[a];
-        return u(_), _;
+        for (; a < n; a++) o[a] = t[a];
+        return u(o), o;
     }
     function T(t, e, a) {
         var r,
             n,
-            o = t.length,
-            c = Array(o),
+            _ = t.length,
+            c = Array(_),
             s = -e;
-        for (r = 0; r < o; r++) (s = Math.floor((n = t[r] + s) / 10000000)), (n %= 10000000), (c[r] = n < 0 ? n + 10000000 : n);
-        return 'number' == typeof (c = l(c)) ? (a && (c = -c), new i(c)) : new _(c, a);
+        for (r = 0; r < _; r++) (s = Math.floor((n = t[r] + s) / 10000000)), (n %= 10000000), (c[r] = n < 0 ? n + 10000000 : n);
+        return 'number' == typeof (c = l(c)) ? (a && (c = -c), new i(c)) : new o(c, a);
     }
     function N(t, e) {
         var a,
             r,
             n,
-            o,
-            _ = t.length,
+            _,
+            o = t.length,
             i = e.length,
-            c = I(_ + i);
-        for (n = 0; n < _; ++n) {
-            o = t[n];
-            for (var s = 0; s < i; ++s) (r = Math.floor((a = o * e[s] + c[n + s]) / 10000000)), (c[n + s] = a - 10000000 * r), (c[n + s + 1] += r);
+            c = I(o + i);
+        for (n = 0; n < o; ++n) {
+            _ = t[n];
+            for (var s = 0; s < i; ++s) (r = Math.floor((a = _ * e[s] + c[n + s]) / 10000000)), (c[n + s] = a - 10000000 * r), (c[n + s + 1] += r);
         }
         return u(c), c;
     }
@@ -117,41 +117,41 @@ var r = (function (t) {
         var a,
             r,
             n = t.length,
-            o = Array(n),
-            _ = 0;
-        for (r = 0; r < n; r++) (_ = Math.floor((a = t[r] * e + _) / 10000000)), (o[r] = a - 10000000 * _);
-        for (; _ > 0; ) (o[r++] = _ % 10000000), (_ = Math.floor(_ / 10000000));
-        return o;
+            _ = Array(n),
+            o = 0;
+        for (r = 0; r < n; r++) (o = Math.floor((a = t[r] * e + o) / 10000000)), (_[r] = a - 10000000 * o);
+        for (; o > 0; ) (_[r++] = o % 10000000), (o = Math.floor(o / 10000000));
+        return _;
     }
     function h(t, e) {
         for (var a = []; e-- > 0; ) a.push(0);
         return a.concat(t);
     }
     function O(t, e, a) {
-        return t < 10000000 ? new _(L(e, t), a) : new _(N(e, E(t)), a);
+        return t < 10000000 ? new o(L(e, t), a) : new o(N(e, E(t)), a);
     }
     function D(t) {
         var e,
             a,
             r,
             n,
-            o = t.length,
-            _ = I(o + o);
-        for (r = 0; r < o; r++) {
+            _ = t.length,
+            o = I(_ + _);
+        for (r = 0; r < _; r++) {
             a = 0 - (n = t[r]) * n;
-            for (var i = r; i < o; i++) (a = Math.floor((e = n * t[i] * 2 + _[r + i] + a) / 10000000)), (_[r + i] = e - 10000000 * a);
-            _[r + o] = a;
+            for (var i = r; i < _; i++) (a = Math.floor((e = n * t[i] * 2 + o[r + i] + a) / 10000000)), (o[r + i] = e - 10000000 * a);
+            o[r + _] = a;
         }
-        return u(_), _;
+        return u(o), o;
     }
     function g(t, e) {
         var a,
             r,
             n,
-            o,
-            _ = t.length,
-            i = I(_);
-        for (n = 0, a = _ - 1; a >= 0; --a) (r = R((o = 10000000 * n + t[a]) / e)), (n = o - r * e), (i[a] = 0 | r);
+            _,
+            o = t.length,
+            i = I(o);
+        for (n = 0, a = o - 1; a >= 0; --a) (r = R((_ = 10000000 * n + t[a]) / e)), (n = _ - r * e), (i[a] = 0 | r);
         return [i, 0 | n];
     }
     function m(t, e) {
@@ -162,29 +162,29 @@ var r = (function (t) {
         var d = t.value,
             A = s.value;
         if (0 === A) throw Error('Cannot divide by zero');
-        if (t.isSmall) return s.isSmall ? [new i(R(d / A)), new i(d % A)] : [o[0], t];
+        if (t.isSmall) return s.isSmall ? [new i(R(d / A)), new i(d % A)] : [_[0], t];
         if (s.isSmall) {
-            if (1 === A) return [t, o[0]];
-            if (-1 == A) return [t.negate(), o[0]];
+            if (1 === A) return [t, _[0]];
+            if (-1 == A) return [t.negate(), _[0]];
             var f = Math.abs(A);
             if (f < 10000000) {
                 a = l((r = g(d, f))[0]);
                 var T = r[1];
-                return (t.sign && (T = -T), 'number' == typeof a) ? (t.sign !== s.sign && (a = -a), [new i(a), new i(T)]) : [new _(a, t.sign !== s.sign), new i(T)];
+                return (t.sign && (T = -T), 'number' == typeof a) ? (t.sign !== s.sign && (a = -a), [new i(a), new i(T)]) : [new o(a, t.sign !== s.sign), new i(T)];
             }
             A = E(f);
         }
         var N = y(d, A);
-        if (-1 === N) return [o[0], t];
-        if (0 === N) return [o[t.sign === s.sign ? 1 : -1], o[0]];
+        if (-1 === N) return [_[0], t];
+        if (0 === N) return [_[t.sign === s.sign ? 1 : -1], _[0]];
         a = (r =
             d.length + A.length <= 200
                 ? (function (t, e) {
                       var a,
                           r,
                           n,
-                          o,
                           _,
+                          o,
                           i,
                           c,
                           s = t.length,
@@ -195,34 +195,34 @@ var r = (function (t) {
                           A = L(t, d),
                           f = L(e, d);
                       for (A.length <= s && A.push(0), f.push(0), R = f[E - 1], r = s - E; r >= 0; r--) {
-                          for (a = 10000000 - 1, A[r + E] !== R && (a = Math.floor((10000000 * A[r + E] + A[r + E - 1]) / R)), n = 0, o = 0, i = f.length, _ = 0; _ < i; _++) (n += a * f[_]), (c = Math.floor(n / 10000000)), (o += A[r + _] - (n - 10000000 * c)), (n = c), o < 0 ? ((A[r + _] = o + 10000000), (o = -1)) : ((A[r + _] = o), (o = 0));
-                          for (; 0 !== o; ) {
-                              for (a -= 1, n = 0, _ = 0; _ < i; _++) (n += A[r + _] - 10000000 + f[_]) < 0 ? ((A[r + _] = n + 10000000), (n = 0)) : ((A[r + _] = n), (n = 1));
-                              o += n;
+                          for (a = 10000000 - 1, A[r + E] !== R && (a = Math.floor((10000000 * A[r + E] + A[r + E - 1]) / R)), n = 0, _ = 0, i = f.length, o = 0; o < i; o++) (n += a * f[o]), (c = Math.floor(n / 10000000)), (_ += A[r + o] - (n - 10000000 * c)), (n = c), _ < 0 ? ((A[r + o] = _ + 10000000), (_ = -1)) : ((A[r + o] = _), (_ = 0));
+                          for (; 0 !== _; ) {
+                              for (a -= 1, n = 0, o = 0; o < i; o++) (n += A[r + o] - 10000000 + f[o]) < 0 ? ((A[r + o] = n + 10000000), (n = 0)) : ((A[r + o] = n), (n = 1));
+                              _ += n;
                           }
                           u[r] = a;
                       }
                       return (A = g(A, d)[0]), [l(u), l(A)];
                   })(d, A)
                 : (function (t, e) {
-                      for (var a, r, n, o, _, i = t.length, c = e.length, s = [], E = []; i; ) {
+                      for (var a, r, n, _, o, i = t.length, c = e.length, s = [], E = []; i; ) {
                           if ((E.unshift(t[--i]), u(E), 0 > y(E, e))) {
                               s.push(0);
                               continue;
                           }
-                          (r = E.length), (n = 10000000 * E[r - 1] + E[r - 2]), (o = 10000000 * e[c - 1] + e[c - 2]), r > c && (n = (n + 1) * 10000000), (a = Math.ceil(n / o));
+                          (r = E.length), (n = 10000000 * E[r - 1] + E[r - 2]), (_ = 10000000 * e[c - 1] + e[c - 2]), r > c && (n = (n + 1) * 10000000), (a = Math.ceil(n / _));
                           do {
-                              if (0 >= y((_ = L(e, a)), E)) break;
+                              if (0 >= y((o = L(e, a)), E)) break;
                               a--;
                           } while (a);
-                          s.push(a), (E = p(E, _));
+                          s.push(a), (E = p(E, o));
                       }
                       return s.reverse(), [l(s), l(E)];
                   })(d, A))[0];
         var h = t.sign !== s.sign,
             O = r[1],
             D = t.sign;
-        return 'number' == typeof a ? (h && (a = -a), (a = new i(a))) : (a = new _(a, h)), 'number' == typeof O ? (D && (O = -O), (O = new i(O))) : (O = new _(O, D)), [a, O];
+        return 'number' == typeof a ? (h && (a = -a), (a = new i(a))) : (a = new o(a, h)), 'number' == typeof O ? (D && (O = -O), (O = new i(O))) : (O = new o(O, D)), [a, O];
     }
     function y(t, e) {
         if (t.length !== e.length) return t.length > e.length ? 1 : -1;
@@ -234,25 +234,25 @@ var r = (function (t) {
         return !e.isUnit() && (!!(e.equals(2) || e.equals(3) || e.equals(5)) || (!(e.isEven() || e.isDivisibleBy(3) || e.isDivisibleBy(5)) && (!!e.lesser(49) || void 0)));
     }
     function v(t, e) {
-        for (var a, n, o, _ = t.prev(), i = _, c = 0; i.isEven(); ) (i = i.divide(2)), c++;
+        for (var a, n, _, o = t.prev(), i = o, c = 0; i.isEven(); ) (i = i.divide(2)), c++;
         t: for (n = 0; n < e.length; n++)
-            if (!t.lesser(e[n]) && !((o = r(e[n]).modPow(i, t)).isUnit() || o.equals(_))) {
-                for (a = c - 1; 0 != a && !(o = o.square().mod(t)).isUnit(); a--) if (o.equals(_)) continue t;
+            if (!t.lesser(e[n]) && !((_ = r(e[n]).modPow(i, t)).isUnit() || _.equals(o))) {
+                for (a = c - 1; 0 != a && !(_ = _.square().mod(t)).isUnit(); a--) if (_.equals(o)) continue t;
                 return !1;
             }
         return !0;
     }
-    (_.prototype = Object.create(o.prototype)),
-        (i.prototype = Object.create(o.prototype)),
-        (c.prototype = Object.create(o.prototype)),
-        (_.prototype.add = function (t) {
+    (o.prototype = Object.create(_.prototype)),
+        (i.prototype = Object.create(_.prototype)),
+        (c.prototype = Object.create(_.prototype)),
+        (o.prototype.add = function (t) {
             var e = F(t);
             if (this.sign !== e.sign) return this.subtract(e.negate());
             var a = this.value,
                 r = e.value;
-            return e.isSmall ? new _(f(a, Math.abs(r)), this.sign) : new _(A(a, r), this.sign);
+            return e.isSmall ? new o(f(a, Math.abs(r)), this.sign) : new o(A(a, r), this.sign);
         }),
-        (_.prototype.plus = _.prototype.add),
+        (o.prototype.plus = o.prototype.add),
         (i.prototype.add = function (t) {
             var e = F(t),
                 a = this.value;
@@ -262,23 +262,23 @@ var r = (function (t) {
                 if (s(a + r)) return new i(a + r);
                 r = E(Math.abs(r));
             }
-            return new _(f(r, Math.abs(a)), a < 0);
+            return new o(f(r, Math.abs(a)), a < 0);
         }),
         (i.prototype.plus = i.prototype.add),
         (c.prototype.add = function (t) {
             return new c(this.value + F(t).value);
         }),
         (c.prototype.plus = c.prototype.add),
-        (_.prototype.subtract = function (t) {
+        (o.prototype.subtract = function (t) {
             var e,
                 a,
                 r = F(t);
             if (this.sign !== r.sign) return this.add(r.negate());
             var n = this.value,
-                o = r.value;
-            return r.isSmall ? T(n, Math.abs(o), this.sign) : ((e = this.sign), (y(n, o) >= 0 ? (a = p(n, o)) : ((a = p(o, n)), (e = !e)), 'number' == typeof (a = l(a))) ? (e && (a = -a), new i(a)) : new _(a, e));
+                _ = r.value;
+            return r.isSmall ? T(n, Math.abs(_), this.sign) : ((e = this.sign), (y(n, _) >= 0 ? (a = p(n, _)) : ((a = p(_, n)), (e = !e)), 'number' == typeof (a = l(a))) ? (e && (a = -a), new i(a)) : new o(a, e));
         }),
-        (_.prototype.minus = _.prototype.subtract),
+        (o.prototype.minus = o.prototype.subtract),
         (i.prototype.subtract = function (t) {
             var e = F(t),
                 a = this.value;
@@ -291,8 +291,8 @@ var r = (function (t) {
             return new c(this.value - F(t).value);
         }),
         (c.prototype.minus = c.prototype.subtract),
-        (_.prototype.negate = function () {
-            return new _(this.value, !this.sign);
+        (o.prototype.negate = function () {
+            return new o(this.value, !this.sign);
         }),
         (i.prototype.negate = function () {
             var t = this.sign,
@@ -302,8 +302,8 @@ var r = (function (t) {
         (c.prototype.negate = function () {
             return new c(-this.value);
         }),
-        (_.prototype.abs = function () {
-            return new _(this.value, !1);
+        (o.prototype.abs = function () {
+            return new o(this.value, !1);
         }),
         (i.prototype.abs = function () {
             return new i(Math.abs(this.value));
@@ -311,7 +311,7 @@ var r = (function (t) {
         (c.prototype.abs = function () {
             return new c(this.value >= 0 ? this.value : -this.value);
         }),
-        (_.prototype.multiply = function (t) {
+        (o.prototype.multiply = function (t) {
             var e,
                 a,
                 r,
@@ -320,38 +320,38 @@ var r = (function (t) {
                 c = n.value,
                 s = this.sign !== n.sign;
             if (n.isSmall) {
-                if (0 === c) return o[0];
+                if (0 === c) return _[0];
                 if (1 === c) return this;
                 if (-1 === c) return this.negate();
-                if ((r = Math.abs(c)) < 10000000) return new _(L(i, r), s);
+                if ((r = Math.abs(c)) < 10000000) return new o(L(i, r), s);
                 c = E(r);
             }
             return -0.012 * (e = i.length) - 0.012 * (a = c.length) + 0.000015 * e * a > 0
-                ? new _(
+                ? new o(
                       (function t(e, a) {
                           var r = Math.max(e.length, a.length);
                           if (r <= 30) return N(e, a);
                           r = Math.ceil(r / 2);
                           var n = e.slice(r),
-                              o = e.slice(0, r),
-                              _ = a.slice(r),
+                              _ = e.slice(0, r),
+                              o = a.slice(r),
                               i = a.slice(0, r),
-                              c = t(o, i),
-                              s = t(n, _),
-                              E = t(A(o, n), A(i, _)),
+                              c = t(_, i),
+                              s = t(n, o),
+                              E = t(A(_, n), A(i, o)),
                               l = A(A(c, h(p(p(E, c), s), r)), h(s, 2 * r));
                           return u(l), l;
                       })(i, c),
                       s
                   )
-                : new _(N(i, c), s);
+                : new o(N(i, c), s);
         }),
-        (_.prototype.times = _.prototype.multiply),
+        (o.prototype.times = o.prototype.multiply),
         (i.prototype._multiplyBySmall = function (t) {
             return s(t.value * this.value) ? new i(t.value * this.value) : O(Math.abs(t.value), E(Math.abs(this.value)), this.sign !== t.sign);
         }),
-        (_.prototype._multiplyBySmall = function (t) {
-            return 0 === t.value ? o[0] : 1 === t.value ? this : -1 === t.value ? this.negate() : O(Math.abs(t.value), this.value, this.sign !== t.sign);
+        (o.prototype._multiplyBySmall = function (t) {
+            return 0 === t.value ? _[0] : 1 === t.value ? this : -1 === t.value ? this.negate() : O(Math.abs(t.value), this.value, this.sign !== t.sign);
         }),
         (i.prototype.multiply = function (t) {
             return F(t)._multiplyBySmall(this);
@@ -361,85 +361,85 @@ var r = (function (t) {
             return new c(this.value * F(t).value);
         }),
         (c.prototype.times = c.prototype.multiply),
-        (_.prototype.square = function () {
-            return new _(D(this.value), !1);
+        (o.prototype.square = function () {
+            return new o(D(this.value), !1);
         }),
         (i.prototype.square = function () {
             var t = this.value * this.value;
-            return s(t) ? new i(t) : new _(D(E(Math.abs(this.value))), !1);
+            return s(t) ? new i(t) : new o(D(E(Math.abs(this.value))), !1);
         }),
         (c.prototype.square = function (t) {
             return new c(this.value * this.value);
         }),
-        (_.prototype.divmod = function (t) {
+        (o.prototype.divmod = function (t) {
             var e = m(this, t);
             return {
                 quotient: e[0],
                 remainder: e[1]
             };
         }),
-        (c.prototype.divmod = i.prototype.divmod = _.prototype.divmod),
-        (_.prototype.divide = function (t) {
+        (c.prototype.divmod = i.prototype.divmod = o.prototype.divmod),
+        (o.prototype.divide = function (t) {
             return m(this, t)[0];
         }),
         (c.prototype.over = c.prototype.divide =
             function (t) {
                 return new c(this.value / F(t).value);
             }),
-        (i.prototype.over = i.prototype.divide = _.prototype.over = _.prototype.divide),
-        (_.prototype.mod = function (t) {
+        (i.prototype.over = i.prototype.divide = o.prototype.over = o.prototype.divide),
+        (o.prototype.mod = function (t) {
             return m(this, t)[1];
         }),
         (c.prototype.mod = c.prototype.remainder =
             function (t) {
                 return new c(this.value % F(t).value);
             }),
-        (i.prototype.remainder = i.prototype.mod = _.prototype.remainder = _.prototype.mod),
-        (_.prototype.pow = function (t) {
+        (i.prototype.remainder = i.prototype.mod = o.prototype.remainder = o.prototype.mod),
+        (o.prototype.pow = function (t) {
             var e,
                 a,
                 r,
                 n = F(t),
-                _ = this.value,
+                o = this.value,
                 c = n.value;
-            if (0 === c) return o[1];
-            if (0 === _) return o[0];
-            if (1 === _) return o[1];
-            if (-1 === _) return n.isEven() ? o[1] : o[-1];
-            if (n.sign) return o[0];
+            if (0 === c) return _[1];
+            if (0 === o) return _[0];
+            if (1 === o) return _[1];
+            if (-1 === o) return n.isEven() ? _[1] : _[-1];
+            if (n.sign) return _[0];
             if (!n.isSmall) throw Error('The exponent ' + n.toString() + ' is too large.');
-            if (this.isSmall && s((e = Math.pow(_, c)))) return new i(R(e));
-            for (a = this, r = o[1]; !0 & c && ((r = r.times(a)), --c), 0 !== c; ) (c /= 2), (a = a.square());
+            if (this.isSmall && s((e = Math.pow(o, c)))) return new i(R(e));
+            for (a = this, r = _[1]; !0 & c && ((r = r.times(a)), --c), 0 !== c; ) (c /= 2), (a = a.square());
             return r;
         }),
-        (i.prototype.pow = _.prototype.pow),
+        (i.prototype.pow = o.prototype.pow),
         (c.prototype.pow = function (t) {
             var e = F(t),
                 a = this.value,
                 r = e.value,
                 n = BigInt(0),
-                _ = BigInt(1),
+                o = BigInt(1),
                 i = BigInt(2);
-            if (r === n) return o[1];
-            if (a === n) return o[0];
-            if (a === _) return o[1];
-            if (a === BigInt(-1)) return e.isEven() ? o[1] : o[-1];
+            if (r === n) return _[1];
+            if (a === n) return _[0];
+            if (a === o) return _[1];
+            if (a === BigInt(-1)) return e.isEven() ? _[1] : _[-1];
             if (e.isNegative()) return new c(n);
-            for (var s = this, E = o[1]; (r & _) === _ && ((E = E.times(s)), --r), r !== n; ) (r /= i), (s = s.square());
+            for (var s = this, E = _[1]; (r & o) === o && ((E = E.times(s)), --r), r !== n; ) (r /= i), (s = s.square());
             return E;
         }),
-        (_.prototype.modPow = function (t, e) {
+        (o.prototype.modPow = function (t, e) {
             if (((t = F(t)), (e = F(e)).isZero())) throw Error('Cannot take modPow with modulus 0');
-            var a = o[1],
+            var a = _[1],
                 r = this.mod(e);
-            for (t.isNegative() && ((t = t.multiply(o[-1])), (r = r.modInv(e))); t.isPositive(); ) {
-                if (r.isZero()) return o[0];
+            for (t.isNegative() && ((t = t.multiply(_[-1])), (r = r.modInv(e))); t.isPositive(); ) {
+                if (r.isZero()) return _[0];
                 t.isOdd() && (a = a.multiply(r).mod(e)), (t = t.divide(2)), (r = r.square().mod(e));
             }
             return a;
         }),
-        (c.prototype.modPow = i.prototype.modPow = _.prototype.modPow),
-        (_.prototype.compareAbs = function (t) {
+        (c.prototype.modPow = i.prototype.modPow = o.prototype.modPow),
+        (o.prototype.compareAbs = function (t) {
             var e = F(t),
                 a = this.value,
                 r = e.value;
@@ -456,7 +456,7 @@ var r = (function (t) {
                 a = F(t).value;
             return (e = e >= 0 ? e : -e) === (a = a >= 0 ? a : -a) ? 0 : e > a ? 1 : -1;
         }),
-        (_.prototype.compare = function (t) {
+        (o.prototype.compare = function (t) {
             if (t === 1 / 0) return -1;
             if (t === -1 / 0) return 1;
             var e = F(t),
@@ -464,7 +464,7 @@ var r = (function (t) {
                 r = e.value;
             return this.sign !== e.sign ? (e.sign ? 1 : -1) : e.isSmall ? (this.sign ? -1 : 1) : y(a, r) * (this.sign ? -1 : 1);
         }),
-        (_.prototype.compareTo = _.prototype.compare),
+        (o.prototype.compareTo = o.prototype.compare),
         (i.prototype.compare = function (t) {
             if (t === 1 / 0) return -1;
             if (t === -1 / 0) return 1;
@@ -482,31 +482,31 @@ var r = (function (t) {
             return e === a ? 0 : e > a ? 1 : -1;
         }),
         (c.prototype.compareTo = c.prototype.compare),
-        (_.prototype.equals = function (t) {
+        (o.prototype.equals = function (t) {
             return 0 === this.compare(t);
         }),
-        (c.prototype.eq = c.prototype.equals = i.prototype.eq = i.prototype.equals = _.prototype.eq = _.prototype.equals),
-        (_.prototype.notEquals = function (t) {
+        (c.prototype.eq = c.prototype.equals = i.prototype.eq = i.prototype.equals = o.prototype.eq = o.prototype.equals),
+        (o.prototype.notEquals = function (t) {
             return 0 !== this.compare(t);
         }),
-        (c.prototype.neq = c.prototype.notEquals = i.prototype.neq = i.prototype.notEquals = _.prototype.neq = _.prototype.notEquals),
-        (_.prototype.greater = function (t) {
+        (c.prototype.neq = c.prototype.notEquals = i.prototype.neq = i.prototype.notEquals = o.prototype.neq = o.prototype.notEquals),
+        (o.prototype.greater = function (t) {
             return this.compare(t) > 0;
         }),
-        (c.prototype.gt = c.prototype.greater = i.prototype.gt = i.prototype.greater = _.prototype.gt = _.prototype.greater),
-        (_.prototype.lesser = function (t) {
+        (c.prototype.gt = c.prototype.greater = i.prototype.gt = i.prototype.greater = o.prototype.gt = o.prototype.greater),
+        (o.prototype.lesser = function (t) {
             return 0 > this.compare(t);
         }),
-        (c.prototype.lt = c.prototype.lesser = i.prototype.lt = i.prototype.lesser = _.prototype.lt = _.prototype.lesser),
-        (_.prototype.greaterOrEquals = function (t) {
+        (c.prototype.lt = c.prototype.lesser = i.prototype.lt = i.prototype.lesser = o.prototype.lt = o.prototype.lesser),
+        (o.prototype.greaterOrEquals = function (t) {
             return this.compare(t) >= 0;
         }),
-        (c.prototype.geq = c.prototype.greaterOrEquals = i.prototype.geq = i.prototype.greaterOrEquals = _.prototype.geq = _.prototype.greaterOrEquals),
-        (_.prototype.lesserOrEquals = function (t) {
+        (c.prototype.geq = c.prototype.greaterOrEquals = i.prototype.geq = i.prototype.greaterOrEquals = o.prototype.geq = o.prototype.greaterOrEquals),
+        (o.prototype.lesserOrEquals = function (t) {
             return 0 >= this.compare(t);
         }),
-        (c.prototype.leq = c.prototype.lesserOrEquals = i.prototype.leq = i.prototype.lesserOrEquals = _.prototype.leq = _.prototype.lesserOrEquals),
-        (_.prototype.isEven = function () {
+        (c.prototype.leq = c.prototype.lesserOrEquals = i.prototype.leq = i.prototype.lesserOrEquals = o.prototype.leq = o.prototype.lesserOrEquals),
+        (o.prototype.isEven = function () {
             return (1 & this.value[0]) == 0;
         }),
         (i.prototype.isEven = function () {
@@ -515,7 +515,7 @@ var r = (function (t) {
         (c.prototype.isEven = function () {
             return (this.value & BigInt(1)) === BigInt(0);
         }),
-        (_.prototype.isOdd = function () {
+        (o.prototype.isOdd = function () {
             return (1 & this.value[0]) == 1;
         }),
         (i.prototype.isOdd = function () {
@@ -524,21 +524,21 @@ var r = (function (t) {
         (c.prototype.isOdd = function () {
             return (this.value & BigInt(1)) === BigInt(1);
         }),
-        (_.prototype.isPositive = function () {
+        (o.prototype.isPositive = function () {
             return !this.sign;
         }),
         (i.prototype.isPositive = function () {
             return this.value > 0;
         }),
         (c.prototype.isPositive = i.prototype.isPositive),
-        (_.prototype.isNegative = function () {
+        (o.prototype.isNegative = function () {
             return this.sign;
         }),
         (i.prototype.isNegative = function () {
             return this.value < 0;
         }),
         (c.prototype.isNegative = i.prototype.isNegative),
-        (_.prototype.isUnit = function () {
+        (o.prototype.isUnit = function () {
             return !1;
         }),
         (i.prototype.isUnit = function () {
@@ -547,7 +547,7 @@ var r = (function (t) {
         (c.prototype.isUnit = function () {
             return this.abs().value === BigInt(1);
         }),
-        (_.prototype.isZero = function () {
+        (o.prototype.isZero = function () {
             return !1;
         }),
         (i.prototype.isZero = function () {
@@ -556,52 +556,52 @@ var r = (function (t) {
         (c.prototype.isZero = function () {
             return this.value === BigInt(0);
         }),
-        (_.prototype.isDivisibleBy = function (t) {
+        (o.prototype.isDivisibleBy = function (t) {
             var e = F(t);
             return !e.isZero() && (!!e.isUnit() || (0 === e.compareAbs(2) ? this.isEven() : this.mod(e).isZero()));
         }),
-        (c.prototype.isDivisibleBy = i.prototype.isDivisibleBy = _.prototype.isDivisibleBy),
-        (_.prototype.isPrime = function (t) {
+        (c.prototype.isDivisibleBy = i.prototype.isDivisibleBy = o.prototype.isDivisibleBy),
+        (o.prototype.isPrime = function (t) {
             var e = P(this);
             if (void 0 !== e) return e;
             var a = this.abs(),
                 n = a.bitLength();
             if (n <= 64) return v(a, [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37]);
-            for (var o = Math.log(2) * n.toJSNumber(), _ = Math.ceil(!0 === t ? 2 * Math.pow(o, 2) : o), i = [], c = 0; c < _; c++) i.push(r(c + 2));
+            for (var _ = Math.log(2) * n.toJSNumber(), o = Math.ceil(!0 === t ? 2 * Math.pow(_, 2) : _), i = [], c = 0; c < o; c++) i.push(r(c + 2));
             return v(a, i);
         }),
-        (c.prototype.isPrime = i.prototype.isPrime = _.prototype.isPrime),
-        (_.prototype.isProbablePrime = function (e, a) {
+        (c.prototype.isPrime = i.prototype.isPrime = o.prototype.isPrime),
+        (o.prototype.isProbablePrime = function (e, a) {
             var n = P(this);
             if (void 0 !== n) return n;
-            for (var o = this.abs(), _ = t === e ? 5 : e, i = [], c = 0; c < _; c++) i.push(r.randBetween(2, o.minus(2), a));
-            return v(o, i);
+            for (var _ = this.abs(), o = t === e ? 5 : e, i = [], c = 0; c < o; c++) i.push(r.randBetween(2, _.minus(2), a));
+            return v(_, i);
         }),
-        (c.prototype.isProbablePrime = i.prototype.isProbablePrime = _.prototype.isProbablePrime),
-        (_.prototype.modInv = function (t) {
-            for (var e, a, n, o = r.zero, _ = r.one, i = F(t), c = this.abs(); !c.isZero(); ) (e = i.divide(c)), (a = o), (n = i), (o = _), (i = c), (_ = a.subtract(e.multiply(_))), (c = n.subtract(e.multiply(c)));
+        (c.prototype.isProbablePrime = i.prototype.isProbablePrime = o.prototype.isProbablePrime),
+        (o.prototype.modInv = function (t) {
+            for (var e, a, n, _ = r.zero, o = r.one, i = F(t), c = this.abs(); !c.isZero(); ) (e = i.divide(c)), (a = _), (n = i), (_ = o), (i = c), (o = a.subtract(e.multiply(o))), (c = n.subtract(e.multiply(c)));
             if (!i.isUnit()) throw Error(this.toString() + ' and ' + t.toString() + ' are not co-prime');
-            return (-1 === o.compare(0) && (o = o.add(t)), this.isNegative()) ? o.negate() : o;
+            return (-1 === _.compare(0) && (_ = _.add(t)), this.isNegative()) ? _.negate() : _;
         }),
-        (c.prototype.modInv = i.prototype.modInv = _.prototype.modInv),
-        (_.prototype.next = function () {
+        (c.prototype.modInv = i.prototype.modInv = o.prototype.modInv),
+        (o.prototype.next = function () {
             var t = this.value;
-            return this.sign ? T(t, 1, this.sign) : new _(f(t, 1), this.sign);
+            return this.sign ? T(t, 1, this.sign) : new o(f(t, 1), this.sign);
         }),
         (i.prototype.next = function () {
             var t = this.value;
-            return t + 1 < 9007199254740992 ? new i(t + 1) : new _(e, !1);
+            return t + 1 < 9007199254740992 ? new i(t + 1) : new o(e, !1);
         }),
         (c.prototype.next = function () {
             return new c(this.value + BigInt(1));
         }),
-        (_.prototype.prev = function () {
+        (o.prototype.prev = function () {
             var t = this.value;
-            return this.sign ? new _(f(t, 1), !0) : T(t, 1, this.sign);
+            return this.sign ? new o(f(t, 1), !0) : T(t, 1, this.sign);
         }),
         (i.prototype.prev = function () {
             var t = this.value;
-            return t - 1 > -9007199254740992 ? new i(t - 1) : new _(e, !0);
+            return t - 1 > -9007199254740992 ? new i(t - 1) : new o(e, !0);
         }),
         (c.prototype.prev = function () {
             return new c(this.value - BigInt(1));
@@ -614,11 +614,11 @@ var r = (function (t) {
     }
     function M(t, e, a) {
         e = F(e);
-        for (var n = t.isNegative(), o = e.isNegative(), _ = n ? t.not() : t, i = o ? e.not() : e, c = 0, s = 0, E = null, l = null, u = []; !_.isZero() || !i.isZero(); ) (c = (E = m(_, G))[1].toJSNumber()), n && (c = G - 1 - c), (s = (l = m(i, G))[1].toJSNumber()), o && (s = G - 1 - s), (_ = E[0]), (i = l[0]), u.push(a(c, s));
-        for (var I = 0 !== a(n ? 1 : 0, o ? 1 : 0) ? r(-1) : r(0), R = u.length - 1; R >= 0; R -= 1) I = I.multiply(G).add(r(u[R]));
+        for (var n = t.isNegative(), _ = e.isNegative(), o = n ? t.not() : t, i = _ ? e.not() : e, c = 0, s = 0, E = null, l = null, u = []; !o.isZero() || !i.isZero(); ) (c = (E = m(o, G))[1].toJSNumber()), n && (c = G - 1 - c), (s = (l = m(i, G))[1].toJSNumber()), _ && (s = G - 1 - s), (o = E[0]), (i = l[0]), u.push(a(c, s));
+        for (var I = 0 !== a(n ? 1 : 0, _ ? 1 : 0) ? r(-1) : r(0), R = u.length - 1; R >= 0; R -= 1) I = I.multiply(G).add(r(u[R]));
         return I;
     }
-    (_.prototype.shiftLeft = function (t) {
+    (o.prototype.shiftLeft = function (t) {
         var e = F(t).toJSNumber();
         if (!b(e)) throw Error(String(e) + ' is too large for shifting.');
         if (e < 0) return this.shiftRight(-e);
@@ -627,8 +627,8 @@ var r = (function (t) {
         for (; e >= S; ) (a = a.multiply(G)), (e -= S - 1);
         return a.multiply(C[e]);
     }),
-        (c.prototype.shiftLeft = i.prototype.shiftLeft = _.prototype.shiftLeft),
-        (_.prototype.shiftRight = function (t) {
+        (c.prototype.shiftLeft = i.prototype.shiftLeft = o.prototype.shiftLeft),
+        (o.prototype.shiftRight = function (t) {
             var e,
                 a = F(t).toJSNumber();
             if (!b(a)) throw Error(String(a) + ' is too large for shifting.');
@@ -639,29 +639,29 @@ var r = (function (t) {
             }
             return (e = m(r, C[a]))[1].isNegative() ? e[0].prev() : e[0];
         }),
-        (c.prototype.shiftRight = i.prototype.shiftRight = _.prototype.shiftRight),
-        (_.prototype.not = function () {
+        (c.prototype.shiftRight = i.prototype.shiftRight = o.prototype.shiftRight),
+        (o.prototype.not = function () {
             return this.negate().prev();
         }),
-        (c.prototype.not = i.prototype.not = _.prototype.not),
-        (_.prototype.and = function (t) {
+        (c.prototype.not = i.prototype.not = o.prototype.not),
+        (o.prototype.and = function (t) {
             return M(this, t, function (t, e) {
                 return t & e;
             });
         }),
-        (c.prototype.and = i.prototype.and = _.prototype.and),
-        (_.prototype.or = function (t) {
+        (c.prototype.and = i.prototype.and = o.prototype.and),
+        (o.prototype.or = function (t) {
             return M(this, t, function (t, e) {
                 return t | e;
             });
         }),
-        (c.prototype.or = i.prototype.or = _.prototype.or),
-        (_.prototype.xor = function (t) {
+        (c.prototype.or = i.prototype.or = o.prototype.or),
+        (o.prototype.xor = function (t) {
             return M(this, t, function (t, e) {
                 return t ^ e;
             });
         }),
-        (c.prototype.xor = i.prototype.xor = _.prototype.xor);
+        (c.prototype.xor = i.prototype.xor = o.prototype.xor);
     function U(t) {
         var e = t.value,
             a = 'number' == typeof e ? 1073741824 | e : 'bigint' == typeof e ? e | BigInt(1073741824) : (e[0] + 10000000 * e[1]) | 1073758208;
@@ -677,7 +677,7 @@ var r = (function (t) {
         if (((t = F(t).abs()), (e = F(e).abs()), t.equals(e))) return t;
         if (t.isZero()) return e;
         if (e.isZero()) return t;
-        for (var a, r, n = o[1]; t.isEven() && e.isEven(); ) (a = B(U(t), U(e))), (t = t.divide(a)), (e = e.divide(a)), (n = n.multiply(a));
+        for (var a, r, n = _[1]; t.isEven() && e.isEven(); ) (a = B(U(t), U(e))), (t = t.divide(a)), (e = e.divide(a)), (n = n.multiply(a));
         for (; t.isEven(); ) t = t.divide(U(t));
         do {
             for (; e.isEven(); ) e = e.divide(U(e));
@@ -685,7 +685,7 @@ var r = (function (t) {
         } while (!e.isZero());
         return n.isUnit() ? t : t.multiply(n);
     }
-    (_.prototype.bitLength = function () {
+    (o.prototype.bitLength = function () {
         var t = this;
         return (0 > t.compareTo(r(0)) && (t = t.negate().subtract(r(1))), 0 === t.compareTo(r(0)))
             ? r(0)
@@ -693,17 +693,17 @@ var r = (function (t) {
                   (function t(e, a) {
                       if (0 >= a.compareTo(e)) {
                           var n = t(e, a.square(a)),
-                              o = n.p,
-                              _ = n.e,
-                              i = o.multiply(a);
+                              _ = n.p,
+                              o = n.e,
+                              i = _.multiply(a);
                           return 0 >= i.compareTo(e)
                               ? {
                                     p: i,
-                                    e: 2 * _ + 1
+                                    e: 2 * o + 1
                                 }
                               : {
-                                    p: o,
-                                    e: 2 * _
+                                    p: _,
+                                    e: 2 * o
                                 };
                       }
                       return {
@@ -713,16 +713,16 @@ var r = (function (t) {
                   })(t, r(2)).e
               ).add(r(1));
     }),
-        (c.prototype.bitLength = i.prototype.bitLength = _.prototype.bitLength);
+        (c.prototype.bitLength = i.prototype.bitLength = o.prototype.bitLength);
     var Y = function (t, e, r, n) {
         (r = r || a), (t = String(t)), n || ((t = t.toLowerCase()), (r = r.toLowerCase()));
-        var o,
-            _ = t.length,
+        var _,
+            o = t.length,
             i = Math.abs(e),
             c = {};
-        for (o = 0; o < r.length; o++) c[r[o]] = o;
-        for (o = 0; o < _; o++) {
-            var s = t[o];
+        for (_ = 0; _ < r.length; _++) c[r[_]] = _;
+        for (_ = 0; _ < o; _++) {
+            var s = t[_];
             if ('-' !== s && s in c && c[s] >= i) {
                 if ('1' === s && 1 === i) continue;
                 throw Error(s + ' is not a valid digit in base ' + e + '.');
@@ -731,23 +731,23 @@ var r = (function (t) {
         e = F(e);
         var E = [],
             l = '-' === t[0];
-        for (o = l ? 1 : 0; o < t.length; o++) {
-            var s = t[o];
+        for (_ = l ? 1 : 0; _ < t.length; _++) {
+            var s = t[_];
             if (s in c) E.push(F(c[s]));
             else if ('<' === s) {
-                var u = o;
-                do o++;
-                while ('>' !== t[o] && o < t.length);
-                E.push(F(t.slice(u + 1, o)));
+                var u = _;
+                do _++;
+                while ('>' !== t[_] && _ < t.length);
+                E.push(F(t.slice(u + 1, _)));
             } else throw Error(s + ' is not a valid character');
         }
         return H(E, e, l);
     };
     function H(t, e, a) {
         var r,
-            n = o[0],
-            _ = o[1];
-        for (r = t.length - 1; r >= 0; r--) (n = n.add(t[r].times(_))), (_ = _.times(e));
+            n = _[0],
+            o = _[1];
+        for (r = t.length - 1; r >= 0; r--) (n = n.add(t[r].times(o))), (o = o.times(e));
         return a ? n.negate() : n;
     }
     function K(t, e) {
@@ -790,15 +790,15 @@ var r = (function (t) {
                       value: Array.apply(null, Array(t.toJSNumber())).map(Number.prototype.valueOf, 1),
                       isNegative: n
                   };
-        for (var o, _ = [], i = t; i.isNegative() || i.compareAbs(e) >= 0; ) {
-            i = (o = i.divmod(e)).quotient;
-            var c = o.remainder;
-            c.isNegative() && ((c = e.minus(c).abs()), (i = i.next())), _.push(c.toJSNumber());
+        for (var _, o = [], i = t; i.isNegative() || i.compareAbs(e) >= 0; ) {
+            i = (_ = i.divmod(e)).quotient;
+            var c = _.remainder;
+            c.isNegative() && ((c = e.minus(c).abs()), (i = i.next())), o.push(c.toJSNumber());
         }
         return (
-            _.push(i.toJSNumber()),
+            o.push(i.toJSNumber()),
             {
-                value: _.reverse(),
+                value: o.reverse(),
                 isNegative: n
             }
         );
@@ -826,17 +826,17 @@ var r = (function (t) {
         var r = t.split(/e/i);
         if (r.length > 2) throw Error('Invalid integer: ' + r.join('e'));
         if (2 === r.length) {
-            var o = r[1];
-            if (('+' === o[0] && (o = o.slice(1)), (o = +o) !== R(o) || !s(o))) throw Error('Invalid integer: ' + o + ' is not a valid exponent.');
+            var _ = r[1];
+            if (('+' === _[0] && (_ = _.slice(1)), (_ = +_) !== R(_) || !s(_))) throw Error('Invalid integer: ' + _ + ' is not a valid exponent.');
             var E = r[0],
                 l = E.indexOf('.');
-            if ((l >= 0 && ((o -= E.length - l - 1), (E = E.slice(0, l) + E.slice(l + 1))), o < 0)) throw Error('Cannot include negative exponent part for integers');
-            (E += Array(o + 1).join('0')), (t = E);
+            if ((l >= 0 && ((_ -= E.length - l - 1), (E = E.slice(0, l) + E.slice(l + 1))), _ < 0)) throw Error('Cannot include negative exponent part for integers');
+            (E += Array(_ + 1).join('0')), (t = E);
         }
         if (!/^([0-9][0-9]*)$/.test(t)) throw Error('Invalid integer: ' + t);
         if (n) return new c(BigInt(a ? '-' + t : t));
         for (var I = [], d = t.length, A = d - 7; d > 0; ) I.push(+t.slice(A, d)), (A -= 7) < 0 && (A = 0), (d -= 7);
-        return u(I), new _(I, a);
+        return u(I), new o(I, a);
     }
     function F(t) {
         return 'number' == typeof t
@@ -854,7 +854,7 @@ var r = (function (t) {
                 ? new c(t)
                 : t;
     }
-    (_.prototype.toArray = function (t) {
+    (o.prototype.toArray = function (t) {
         return K(this, t);
     }),
         (i.prototype.toArray = function (t) {
@@ -863,25 +863,25 @@ var r = (function (t) {
         (c.prototype.toArray = function (t) {
             return K(this, t);
         }),
-        (_.prototype.toString = function (e, a) {
+        (o.prototype.toString = function (e, a) {
             if ((t === e && (e = 10), 10 !== e)) return k(this, e, a);
-            for (var r, n = this.value, o = n.length, _ = String(n[--o]); --o >= 0; ) (r = String(n[o])), (_ += '0000000'.slice(r.length) + r);
-            return (this.sign ? '-' : '') + _;
+            for (var r, n = this.value, _ = n.length, o = String(n[--_]); --_ >= 0; ) (r = String(n[_])), (o += '0000000'.slice(r.length) + r);
+            return (this.sign ? '-' : '') + o;
         }),
         (i.prototype.toString = function (e, a) {
             return (t === e && (e = 10), 10 != e) ? k(this, e, a) : String(this.value);
         }),
         (c.prototype.toString = i.prototype.toString),
         (c.prototype.toJSON =
-            _.prototype.toJSON =
+            o.prototype.toJSON =
             i.prototype.toJSON =
                 function () {
                     return this.toString();
                 }),
-        (_.prototype.valueOf = function () {
+        (o.prototype.valueOf = function () {
             return parseInt(this.toString(), 10);
         }),
-        (_.prototype.toJSNumber = _.prototype.valueOf),
+        (o.prototype.toJSNumber = o.prototype.valueOf),
         (i.prototype.valueOf = function () {
             return this.value;
         }),
@@ -890,37 +890,37 @@ var r = (function (t) {
             function () {
                 return parseInt(this.toString(), 10);
             });
-    for (var V = 0; V < 1000; V++) (o[V] = F(V)), V > 0 && (o[-V] = F(-V));
+    for (var V = 0; V < 1000; V++) (_[V] = F(V)), V > 0 && (_[-V] = F(-V));
     return (
-        (o.one = o[1]),
-        (o.zero = o[0]),
-        (o.minusOne = o[-1]),
-        (o.max = w),
-        (o.min = B),
-        (o.gcd = W),
-        (o.lcm = function (t, e) {
+        (_.one = _[1]),
+        (_.zero = _[0]),
+        (_.minusOne = _[-1]),
+        (_.max = w),
+        (_.min = B),
+        (_.gcd = W),
+        (_.lcm = function (t, e) {
             return (t = F(t).abs()), (e = F(e).abs()), t.divide(W(t, e)).multiply(e);
         }),
-        (o.isInstance = function (t) {
-            return t instanceof _ || t instanceof i || t instanceof c;
+        (_.isInstance = function (t) {
+            return t instanceof o || t instanceof i || t instanceof c;
         }),
-        (o.randBetween = function (t, e, a) {
+        (_.randBetween = function (t, e, a) {
             t = F(t);
             var r = a || Math.random,
                 n = B(t, (e = F(e))),
-                _ = w(t, e).subtract(n).add(1);
-            if (_.isSmall) return n.add(Math.floor(r() * _));
-            for (var i = K(_, 10000000).value, c = [], s = !0, E = 0; E < i.length; E++) {
+                o = w(t, e).subtract(n).add(1);
+            if (o.isSmall) return n.add(Math.floor(r() * o));
+            for (var i = K(o, 10000000).value, c = [], s = !0, E = 0; E < i.length; E++) {
                 var l = s ? i[E] : 10000000,
                     u = R(r() * l);
                 c.push(u), u < l && (s = !1);
             }
-            return n.add(o.fromArray(c, 10000000, !1));
+            return n.add(_.fromArray(c, 10000000, !1));
         }),
-        (o.fromArray = function (t, e, a) {
+        (_.fromArray = function (t, e, a) {
             return H(t.map(F), F(e || 10), a);
         }),
-        o
+        _
     );
 })();
 t.hasOwnProperty('exports') && (t.exports = r),

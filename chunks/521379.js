@@ -3,13 +3,13 @@ var i,
     r,
     a,
     l = n(200651),
-    s = n(192379),
-    o = n(442837),
+    o = n(192379),
+    s = n(442837),
     c = n(388905),
     d = n(108427),
     u = n(559786);
-o.ZP.initialize();
-class h extends (i = s.PureComponent) {
+s.ZP.initialize();
+class h extends (i = o.PureComponent) {
     componentDidMount() {
         (0, d.e)('account_revert');
     }

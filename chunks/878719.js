@@ -6,8 +6,8 @@ a.d(e, {
 });
 var r = a(263449),
     n = a(202811),
-    o = a(573736),
-    _ = a(394798),
+    _ = a(573736),
+    o = a(394798),
     i = a(928541),
     c = a(370336);
 function s(t, e) {
@@ -27,31 +27,31 @@ function E(t, e) {
 function l(t, e) {
     var a, r;
     let n = e.stacktrace || e.stack || '',
-        o = (a = e) && u.test(a.message) ? 1 : 0,
-        _ = 'number' == typeof (r = e).framesToPop ? r.framesToPop : 0;
+        _ = (a = e) && u.test(a.message) ? 1 : 0,
+        o = 'number' == typeof (r = e).framesToPop ? r.framesToPop : 0;
     try {
-        return t(n, o, _);
+        return t(n, _, o);
     } catch (t) {}
     return [];
 }
 let u = /Minified React error #\d+;/i;
 function I(t, e, a, r) {
     let n = d(t, e, (a && a.syntheticException) || void 0, r);
-    return (0, _.EG)(n), (n.level = 'error'), a && a.event_id && (n.event_id = a.event_id), (0, i.WD)(n);
+    return (0, o.EG)(n), (n.level = 'error'), a && a.event_id && (n.event_id = a.event_id), (0, i.WD)(n);
 }
 function R(t, e, a = 'info', r, n) {
-    let o = A(t, e, (r && r.syntheticException) || void 0, n);
-    return (o.level = a), r && r.event_id && (o.event_id = r.event_id), (0, i.WD)(o);
+    let _ = A(t, e, (r && r.syntheticException) || void 0, n);
+    return (_.level = a), r && r.event_id && (_.event_id = r.event_id), (0, i.WD)(_);
 }
 function d(t, e, a, i, u) {
     let I;
-    if ((0, o.VW)(e) && e.error) return E(t, e.error);
-    if ((0, o.TX)(e) || (0, o.fm)(e)) {
+    if ((0, _.VW)(e) && e.error) return E(t, e.error);
+    if ((0, _.TX)(e) || (0, _.fm)(e)) {
         if ('stack' in e) I = E(t, e);
         else {
-            let r = e.name || ((0, o.TX)(e) ? 'DOMError' : 'DOMException'),
+            let r = e.name || ((0, _.TX)(e) ? 'DOMError' : 'DOMException'),
                 n = e.message ? `${r}: ${e.message}` : r;
-            (I = A(t, n, a, i)), (0, _.Db)(I, n);
+            (I = A(t, n, a, i)), (0, o.Db)(I, n);
         }
         return (
             'code' in e &&
@@ -62,10 +62,10 @@ function d(t, e, a, i, u) {
             I
         );
     }
-    return (0, o.VZ)(e)
+    return (0, _.VZ)(e)
         ? E(t, e)
-        : ((0, o.PO)(e) || (0, o.cO)(e)
-              ? (I = (function (t, e, a, _) {
+        : ((0, _.PO)(e) || (0, _.cO)(e)
+              ? (I = (function (t, e, a, o) {
                     let i = (0, r.s3)(),
                         E = i && i.getOptions().normalizeDepth,
                         u = (function (t) {
@@ -85,12 +85,12 @@ function d(t, e, a, i, u) {
                         exception: {
                             values: [
                                 {
-                                    type: (0, o.cO)(e) ? e.constructor.name : _ ? 'UnhandledRejection' : 'Error',
+                                    type: (0, _.cO)(e) ? e.constructor.name : o ? 'UnhandledRejection' : 'Error',
                                     value: (function (t, { isUnhandledRejection: e }) {
                                         let a = (0, c.zf)(t),
                                             r = e ? 'promise rejection' : 'exception';
-                                        if ((0, o.VW)(t)) return `Event \`ErrorEvent\` captured as ${r} with message \`${t.message}\``;
-                                        if ((0, o.cO)(t)) {
+                                        if ((0, _.VW)(t)) return `Event \`ErrorEvent\` captured as ${r} with message \`${t.message}\``;
+                                        if ((0, _.cO)(t)) {
                                             let e = (function (t) {
                                                 try {
                                                     let e = Object.getPrototypeOf(t);
@@ -100,7 +100,7 @@ function d(t, e, a, i, u) {
                                             return `Event \`${e}\` (type=${t.type}) captured as ${r}`;
                                         }
                                         return `Object captured as ${r} with keys: ${a}`;
-                                    })(e, { isUnhandledRejection: _ })
+                                    })(e, { isUnhandledRejection: o })
                                 }
                             ]
                         },
@@ -112,8 +112,8 @@ function d(t, e, a, i, u) {
                     }
                     return R;
                 })(t, e, a, u))
-              : ((I = A(t, e, a, i)), (0, _.Db)(I, `${e}`, void 0)),
-          (0, _.EG)(I, { synthetic: !0 }),
+              : ((I = A(t, e, a, i)), (0, o.Db)(I, `${e}`, void 0)),
+          (0, o.EG)(I, { synthetic: !0 }),
           I);
 }
 function A(t, e, a, r) {
@@ -130,7 +130,7 @@ function A(t, e, a, r) {
                 ]
             });
     }
-    if ((0, o.Le)(e)) {
+    if ((0, _.Le)(e)) {
         let { __sentry_template_string__: t, __sentry_template_values__: a } = e;
         return (
             (n.logentry = {

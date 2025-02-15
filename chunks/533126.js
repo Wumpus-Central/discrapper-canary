@@ -18,10 +18,10 @@ n.d(t, {
 });
 var a = 'copy',
     l = 'convert';
-function s(e, t, n) {
+function o(e, t, n) {
     if (t === a) return n;
     if (t === l) return e(n);
-    if (t instanceof Array) return n.map((n) => s(e, t[0], n));
+    if (t instanceof Array) return n.map((n) => o(e, t[0], n));
     if (t instanceof Object) {
         let i = {};
         for (let [r, a] of Object.entries(t)) {
@@ -37,12 +37,12 @@ function s(e, t, n) {
                 i[r] = null;
                 continue;
             }
-            i[r] = s(e, a.schema, n[r]);
+            i[r] = o(e, a.schema, n[r]);
         }
         return i;
     }
 }
-function o(e, t) {
+function s(e, t) {
     return {
         required: !0,
         schema: e,
@@ -99,12 +99,12 @@ c({
     c({
         clientDataJSON: c(l),
         attestationObject: c(l),
-        transports: o(a, (e) => {
+        transports: s(a, (e) => {
             var t;
             return (null == (t = e.getTransports) ? void 0 : t.call(e)) || [];
         })
     }),
-    o(_, (e) => e.getClientExtensionResults());
+    s(_, (e) => e.getClientExtensionResults());
 var m = {
         mediation: d(a),
         publicKey: c({
@@ -128,12 +128,12 @@ var m = {
             signature: c(l),
             userHandle: c(l)
         }),
-        clientExtensionResults: o(_, (e) => e.getClientExtensionResults())
+        clientExtensionResults: s(_, (e) => e.getClientExtensionResults())
     };
 function p(e) {
-    return s(i, m, e);
+    return o(i, m, e);
 }
 async function f(e) {
     let t = await navigator.credentials.get(e);
-    return (t.toJSON = () => s(r, g, t)), t;
+    return (t.toJSON = () => o(r, g, t)), t;
 }

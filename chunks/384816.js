@@ -13,18 +13,18 @@ var l = t(442837),
     f = t(250822),
     p = t(771362),
     x = t(280885),
-    h = t(819602),
-    m = t(78806),
+    m = t(819602),
+    h = t(78806),
     _ = t(900927),
-    Z = t(678738),
-    v = t(652853),
+    v = t(678738),
+    Z = t(652853),
     g = t(179828),
     j = t(228168),
     E = t(388032),
     y = t(869731);
 function N(e) {
     let { user: n, currentUser: t, displayProfile: N, subsection: T, onClose: b } = e,
-        { theme: P } = (0, v.z)(),
+        { theme: P } = (0, Z.z)(),
         { trackUserProfileAction: S } = (0, I.KZ)(),
         L = null == N ? void 0 : N.guildId,
         C = (0, l.e7)([c.Z], () => (null != L ? c.Z.getGuild(L) : null)),
@@ -59,11 +59,11 @@ function N(e) {
                     headingColor: 'header-secondary'
                 }),
             O.length > 0 &&
-                (0, i.jsx)(Z.Z, {
+                (0, i.jsx)(v.Z, {
                     heading: E.intl.string(E.t['Uv/eT0']),
-                    children: (0, i.jsx)(m.Z, { applicationIds: O })
+                    children: (0, i.jsx)(h.Z, { applicationIds: O })
                 }),
-            (0, i.jsx)(Z.Z, {
+            (0, i.jsx)(v.Z, {
                 heading: E.intl.string(E.t.a6XYDw),
                 children: (0, i.jsx)(_.Z, {
                     userId: n.id,
@@ -72,10 +72,10 @@ function N(e) {
                 })
             }),
             M.length > 0 &&
-                (0, i.jsx)(Z.Z, {
+                (0, i.jsx)(v.Z, {
                     heading: E.intl.string(E.t['3fe7U1']),
                     scrollIntoView: T === j.Tb.CONNECTIONS,
-                    children: (0, i.jsx)(h.OA, {
+                    children: (0, i.jsx)(m.OA, {
                         connectedAccounts: M,
                         className: y.connections,
                         userId: n.id,
@@ -84,11 +84,11 @@ function N(e) {
                     })
                 }),
             U.length > 0 &&
-                (0, i.jsx)(Z.Z, {
+                (0, i.jsx)(v.Z, {
                     heading: E.intl.string(E.t.PHjkRE),
                     children: U.map((e) =>
                         (0, i.jsx)(
-                            h.tH,
+                            m.tH,
                             {
                                 className: y.appsConnections,
                                 applicationRoleConnection: e,
@@ -102,7 +102,7 @@ function N(e) {
                         )
                     )
                 }),
-            (0, i.jsx)(Z.Z, {
+            (0, i.jsx)(v.Z, {
                 heading: E.intl.string(E.t.PbMNh4),
                 scrollIntoView: T === j.Tb.NOTE,
                 children: (0, i.jsx)(s.Z, {

@@ -3,8 +3,8 @@ var i = n(200651),
     r = n(192379),
     a = n(442837),
     l = n(481060),
-    s = n(893776),
-    o = n(809206),
+    o = n(893776),
+    s = n(809206),
     d = n(607070),
     c = n(220082),
     u = n(44272),
@@ -22,15 +22,15 @@ var i = n(200651),
     j = n(246364),
     N = n(983736),
     E = n(187565),
-    F = n(990488),
-    y = n(592286),
+    y = n(990488),
+    F = n(592286),
     T = n(981631),
     R = n(388032),
     S = n(912885),
     P = n(419851),
     L = n(246403);
 let k = (e) => {
-        let { headerId: t, email: n, password: r, setEmail: a, setPassword: s, emailError: o, passwordError: d } = e;
+        let { headerId: t, email: n, password: r, setEmail: a, setPassword: o, emailError: s, passwordError: d } = e;
         return (0, i.jsxs)('div', {
             className: S.content,
             children: [
@@ -59,7 +59,7 @@ let k = (e) => {
                     className: S.formItem,
                     children: (0, i.jsx)(l.oil, {
                         value: n,
-                        error: o,
+                        error: s,
                         onChange: a,
                         autoFocus: !0
                     })
@@ -71,7 +71,7 @@ let k = (e) => {
                         type: 'password',
                         value: r,
                         error: d,
-                        onChange: s
+                        onChange: o
                     })
                 })
             ]
@@ -102,7 +102,7 @@ let k = (e) => {
                     className: S.resendButton,
                     size: l.zxk.Sizes.NONE,
                     look: l.zxk.Looks.LINK,
-                    onClick: () => s.Z.verifyResend(),
+                    onClick: () => o.Z.verifyResend(),
                     children: R.intl.string(R.t['MLk/mJ'])
                 })
             ]
@@ -110,20 +110,20 @@ let k = (e) => {
     },
     M = (e) => {
         var t;
-        let { guildId: n, formState: r, updateFormState: l, isPreview: s = !1, disableVerification: o = !1 } = e,
+        let { guildId: n, formState: r, updateFormState: l, isPreview: o = !1, disableVerification: s = !1 } = e,
             d = (0, a.e7)([I.Z], () => I.Z.get(n));
         if (null == d) return null;
         let c = null !== (t = null != r ? r : null == d ? void 0 : d.formFields) && void 0 !== t ? t : [],
-            u = s ? F.W : F.r;
+            u = o ? y.W : y.r;
         return (0, i.jsx)(u, {
             guildId: n,
             formFields: c,
             updateFormFields: l,
-            disableVerification: o
+            disableVerification: s
         });
     },
     A = (e) => {
-        let { guildId: t, headerId: n, formState: r, updateFormState: a, guildName: s, hasManualFormFields: o, disableVerification: d, isPreview: c = !1 } = e;
+        let { guildId: t, headerId: n, formState: r, updateFormState: a, guildName: o, hasManualFormFields: s, disableVerification: d, isPreview: c = !1 } = e;
         return (0, i.jsxs)('div', {
             className: S.content,
             children: [
@@ -131,12 +131,12 @@ let k = (e) => {
                     id: n,
                     variant: 'heading-xxl/normal',
                     className: S.header,
-                    children: o ? R.intl.format(R.t.cgX47e, { guildName: s }) : R.intl.string(R.t.DrEECw)
+                    children: s ? R.intl.format(R.t.cgX47e, { guildName: o }) : R.intl.string(R.t.DrEECw)
                 }),
                 (0, i.jsx)(l.Text, {
                     variant: 'text-sm/normal',
                     color: 'header-secondary',
-                    children: o ? R.intl.string(R.t['3smSPD']) : R.intl.string(R.t['7D3C5u'])
+                    children: s ? R.intl.string(R.t['3smSPD']) : R.intl.string(R.t['7D3C5u'])
                 }),
                 (0, i.jsx)(M, {
                     guildId: t,
@@ -149,38 +149,38 @@ let k = (e) => {
         });
     },
     Z = (e) => {
-        var t, n, s, F;
+        var t, n, o, y;
         let { verificationForm: P, headerId: L, guildId: M, onClose: Z, onComplete: w, isPreview: B = !1 } = e,
             D = (0, E.N0)(M, null == P ? void 0 : P.guild, B),
             { guildProfile: q, fetchGuildProfile: G } = (0, _.u)(M),
             z = (0, m.h)(),
             U = (0, a.e7)([g.ZP, h.default], () => g.ZP.isMember(M, h.default.getId())),
-            [J, K] = r.useState(!1);
+            [W, J] = r.useState(!1);
         r.useEffect(() => {
-            z && U && !J && null == q && G().finally(() => K(!0));
-        }, [G, q, J, U, z]);
-        let W = null == P ? void 0 : P.formFields.some((e) => e.field_type !== j.QJ.TERMS),
-            [H, V] = r.useState(null !== (s = null == P ? void 0 : P.formFields) && void 0 !== s ? s : []),
+            z && U && !W && null == q && G().finally(() => J(!0));
+        }, [G, q, W, U, z]);
+        let K = null == P ? void 0 : P.formFields.some((e) => e.field_type !== j.QJ.TERMS),
+            [H, V] = r.useState(null !== (o = null == P ? void 0 : P.formFields) && void 0 !== o ? o : []),
             [X, Q] = r.useState(!1),
             [Y, $] = r.useState(null),
             [ee, et] = r.useState(''),
             [en, ei] = r.useState(''),
             [er, ea] = r.useState(null),
-            [el, es] = r.useState(null),
-            { storeMemberCount: eo, storeOnlineCount: ed } = (0, a.cj)([v.Z], () => ({
+            [el, eo] = r.useState(null),
+            { storeMemberCount: es, storeOnlineCount: ed } = (0, a.cj)([v.Z], () => ({
                 storeMemberCount: v.Z.getMemberCount(M),
                 storeOnlineCount: v.Z.getOnlineCount(M)
             })),
             ec = null != ed ? ed : null == P ? void 0 : null === (t = P.guild) || void 0 === t ? void 0 : t.approximate_presence_count,
-            eu = null != eo ? eo : null == P ? void 0 : null === (n = P.guild) || void 0 === n ? void 0 : n.approximate_member_count,
-            em = null != W && W;
+            eu = null != es ? es : null == P ? void 0 : null === (n = P.guild) || void 0 === n ? void 0 : n.approximate_member_count,
+            em = null != K && K;
         r.useEffect(() => {
             null != P && V(P.formFields);
         }, [P]),
             r.useEffect(() => {
                 null != M &&
                     b.default.track(T.rMx.OPEN_MODAL, {
-                        type: y.N4,
+                        type: F.N4,
                         guild_id: M
                     });
             }, [M]);
@@ -224,18 +224,18 @@ let k = (e) => {
                             : void 0,
                     n = (0, l.dQu)(l.TVs.colors.BG_BASE_SECONDARY).hex(),
                     i = (0, l.dQu)(l.TVs.colors.BG_BASE_TERTIARY).hex(),
-                    [r, a, s] = (0, c.Cf)(t, n, !1);
-                return 'linear-gradient(-45deg, '.concat(r, ', ').concat(null != s ? s : i, ')');
+                    [r, a, o] = (0, c.Cf)(t, n, !1);
+                return 'linear-gradient(-45deg, '.concat(r, ', ').concat(null != o ? o : i, ')');
             })(D),
             eN = (function (e) {
                 let t = (0, l.dQu)(l.TVs.colors.BACKGROUND_MODIFIER_ACCENT).hex();
                 return 'linear-gradient(-45deg, '.concat(t, ', ').concat(e, ')');
-            })(null !== (F = null == q ? void 0 : q.brandColorPrimary) && void 0 !== F ? F : '');
+            })(null !== (y = null == q ? void 0 : q.brandColorPrimary) && void 0 !== y ? y : '');
         if (null == D) return null;
         let eE = async () => {
-                Q(!0), ea(null), es(null);
+                Q(!0), ea(null), eo(null);
                 try {
-                    await (0, o.S2)({
+                    await (0, s.S2)({
                         email: ee,
                         password: en
                     }),
@@ -243,12 +243,12 @@ let k = (e) => {
                         ex(E.KJ.EMAIL_CONFIRMATION);
                 } catch (n) {
                     var e, t;
-                    ea(null == n ? void 0 : null === (e = n.body) || void 0 === e ? void 0 : e.email), es(null == n ? void 0 : null === (t = n.body) || void 0 === t ? void 0 : t.password);
+                    ea(null == n ? void 0 : null === (e = n.body) || void 0 === e ? void 0 : e.email), eo(null == n ? void 0 : null === (t = n.body) || void 0 === t ? void 0 : t.password);
                 } finally {
                     Q(!1);
                 }
             },
-            eF = async () => {
+            ey = async () => {
                 Q(!0), $(null);
                 let e = null != e_ ? g.ZP.getMember(M, e_.id) : null;
                 if (null != e && !e.isPending) {
@@ -271,7 +271,7 @@ let k = (e) => {
                     Q(!1);
                 }
             },
-            ey = z && null != q;
+            eF = z && null != q;
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)('div', {
@@ -280,10 +280,10 @@ let k = (e) => {
                         className: S.sidebarCard,
                         children: [
                             (0, i.jsx)('div', {
-                                style: { background: ey ? eN : ej },
+                                style: { background: eF ? eN : ej },
                                 className: S.sidebarGradientOverlay
                             }),
-                            ey
+                            eF
                                 ? (0, i.jsx)(f.Z, {
                                       profile: q,
                                       className: S.guildProfile
@@ -338,7 +338,7 @@ let k = (e) => {
                                                     updateFormState: V,
                                                     isPreview: B,
                                                     useReducedMotion: eC,
-                                                    hasManualFormFields: W,
+                                                    hasManualFormFields: K,
                                                     disableVerification: em
                                                 });
                                         }
@@ -374,13 +374,13 @@ let k = (e) => {
                                             children: [
                                                 (0, i.jsx)(l.DY3, {
                                                     color: l.FGA.NESTED,
-                                                    shouldShow: eb && eg && W,
+                                                    shouldShow: eb && eg && K,
                                                     text: ep ? R.intl.string(R.t.PLNbh4) : R.intl.string(R.t.brWmV1),
                                                     children: (0, i.jsx)(l.zxk, {
                                                         className: S.submitButton,
                                                         type: 'submit',
                                                         submitting: X,
-                                                        onClick: eF,
+                                                        onClick: ey,
                                                         color: l.zxk.Colors.GREEN,
                                                         disabled: eb,
                                                         children: R.intl.string(R.t.geKm7u)
@@ -393,7 +393,7 @@ let k = (e) => {
                                                         children: Y
                                                     }),
                                                 null == Y &&
-                                                    W &&
+                                                    K &&
                                                     (0, i.jsxs)('div', {
                                                         className: S.disclaimerFooter,
                                                         children: [

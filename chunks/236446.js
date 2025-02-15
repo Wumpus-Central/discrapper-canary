@@ -3,8 +3,8 @@ var i = n(200651),
     r = n(192379),
     a = n(120356),
     l = n.n(a),
-    s = n(512722),
-    o = n.n(s),
+    o = n(512722),
+    s = n.n(o),
     c = n(442837),
     d = n(388905),
     u = n(362762),
@@ -82,7 +82,7 @@ class P extends r.PureComponent {
     }
     renderAuthenticatedOrDownload() {
         let { guildTemplate: e } = this.props;
-        return (o()(null != e, 'guild template must not be null'), e.state === A.Rj.RESOLVING)
+        return (s()(null != e, 'guild template must not be null'), e.state === A.Rj.RESOLVING)
             ? (0, i.jsx)(d.ZP, {
                   className: L.authBox,
                   children: (0, i.jsx)(p.Z, { guildTemplate: e })

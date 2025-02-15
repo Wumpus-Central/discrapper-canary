@@ -59,7 +59,7 @@ let m = new Map(),
     },
     U = (e) => {
         if (0 === e.categories.length) (I = m), (T = g);
-        else if (!(0, o.isEqual)([...I.values()], e.categories)) {
+        else if (!(0, o.isEqual)([...I.values()], e.categories) && !e.noOp) {
             let t = new Map(e.categories.map((e) => [e.skuId, e])),
                 n = new Date();
             I.forEach((e, i) => {

@@ -3,8 +3,8 @@ var i = n(512722),
     r = n.n(i),
     a = n(525654),
     l = n.n(a),
-    s = n(39612),
-    o = n(271579),
+    o = n(39612),
+    s = n(271579),
     c = n(756647),
     d = n(703656),
     u = n(314897),
@@ -18,10 +18,10 @@ function p(e) {
             let n = null === (t = l().os) || void 0 === t ? void 0 : t.family;
             if ('Android' === n || 'iOS' === n) {
                 let t = u.default.getFingerprint(),
-                    n = (0, o.WS)();
+                    n = (0, s.WS)();
                 return (
                     r()(null != e, 'generateAppPath: guildId cannot be null'),
-                    (0, o.ZP)((0, s.z0)(e), {
+                    (0, s.ZP)((0, o.z0)(e), {
                         utmSource: 'verify_hub_email',
                         fingerprint: t,
                         attemptId: n
@@ -30,7 +30,7 @@ function p(e) {
             }
             return 'discord://';
         })(e),
-        n = (0, o.zS)(t);
+        n = (0, s.zS)(t);
     null != n &&
         _.default.track(g.rMx.DEEP_LINK_CLICKED, {
             fingerprint: (0, c.K)(n.fingerprint),

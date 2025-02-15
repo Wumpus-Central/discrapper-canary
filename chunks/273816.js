@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g }), n(47120);
 var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    o = n.n(l),
+    l = n(192379),
+    r = n(120356),
+    o = n.n(r),
     a = n(442837),
     s = n(481060),
     d = n(493773),
@@ -14,7 +14,7 @@ var i = n(200651),
     f = n(501787),
     m = n(249582);
 function g(e) {
-    let { locked: t, pinned: n, anchorLeft: l } = e,
+    let { locked: t, pinned: n, anchorLeft: r } = e,
         g = (0, a.e7)([c.Z], () => c.Z.getSocket()),
         v = (0, a.e7)([p.ZP], () => p.ZP.isGPUBoosted());
     (0, u.nU)();
@@ -33,18 +33,18 @@ function g(e) {
             }
         )
     );
-    let P = r.useCallback(() => {
+    let P = l.useCallback(() => {
             y(), j(), k();
         }, [y, j, k]),
-        [M, z] = r.useState(!0),
-        [V, W] = r.useState(!0),
-        [U, F] = r.useState(!0),
-        [B, G] = r.useState(!0),
-        [H, Y] = r.useState(!0);
+        [M, z] = l.useState(!0),
+        [V, W] = l.useState(!0),
+        [U, F] = l.useState(!0),
+        [B, G] = l.useState(!0),
+        [H, Y] = l.useState(!0);
     return t && !n
         ? null
         : (0, i.jsxs)('div', {
-              className: o()(m.panelGroup, !l && m.rightAligned),
+              className: o()(m.panelGroup, !r && m.rightAligned),
               children: [
                   (M || !t) &&
                       (0, i.jsxs)('div', {

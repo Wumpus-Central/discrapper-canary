@@ -3,8 +3,8 @@ var i = n(200651),
     r = n(192379),
     a = n(593473),
     l = n(512969),
-    s = n(442837),
-    o = n(893776),
+    o = n(442837),
+    s = n(893776),
     c = n(899742),
     d = n(493773),
     u = n(743142),
@@ -32,7 +32,7 @@ function x(e) {
             },
             [e.transitionTo]
         ),
-        { isAuthenticated: n, loginStatus: x } = (0, s.cj)([m.default], () => ({
+        { isAuthenticated: n, loginStatus: x } = (0, o.cj)([m.default], () => ({
             isAuthenticated: m.default.isAuthenticated(),
             loginStatus: m.default.getLoginStatus()
         })),
@@ -53,7 +53,7 @@ function x(e) {
             if (null != e && null != t) {
                 let n = null != I ? (0, u.L)(I) : void 0;
                 v
-                    ? o.Z.logout(null).finally(() => {
+                    ? s.Z.logout(null).finally(() => {
                           N({
                               handoffKey: e,
                               handoffToken: t,
