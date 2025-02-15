@@ -12895,7 +12895,11 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
 .placeholder__27cc6 {
     cursor: pointer;
     box-sizing: border-box;
-    overflow: hidden;
+    overflow: hidden
+}
+
+.multiplePlaceholderAnimated__27cc6,
+.placeholderAnimated__27cc6 {
     animation: placeholderPulse__27cc6 3s ease-in-out infinite
 }
 
