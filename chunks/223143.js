@@ -61,7 +61,15 @@ function d(e) {
             location: n + ' auto off',
             autoTrackExposure: !1
         });
-    let { isFetching: i, categories: r, fetchCategoriesError: s, refreshCategories: o } = (0, u.Z)({ paymentGateway: t }),
+    let {
+            isFetching: i,
+            categories: r,
+            fetchCategoriesError: s,
+            refreshCategories: o
+        } = (0, u.Z)({
+            paymentGateway: t,
+            noOp: null == e ? void 0 : e.noOp
+        }),
         { isClaiming: l, fetchPurchasesError: d, claimError: f, isFetching: _, purchases: p, hasPreviouslyFetched: h } = c(null == e ? void 0 : e.stalePurchasesOK, null == e ? void 0 : e.location);
     return {
         isFetching: i || _,
