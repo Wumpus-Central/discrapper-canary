@@ -165,6 +165,10 @@ let r = {
         inlineRequire: () => n(1627).Z,
         loadAfterConnectionOpen: !0
     },
+    OverlayLockSideEffectManager: {
+        actions: ['OVERLAY_SET_INPUT_LOCKED'],
+        inlineRequire: () => n(967031).Z
+    },
     OverlayUsageStatsManager: {
         actions: __OVERLAY__ ? ['MESSAGE_ACKED', 'MESSAGE_CREATE'] : ['OVERLAY_FOCUSED', 'OVERLAY_NOTIFICATION_EVENT', 'OVERLAY_SET_INPUT_LOCKED', 'OVERLAY_WIDGET_CHANGED', 'OVERLAY_MESSAGE_EVENT_ACTION', 'RUNNING_GAMES_CHANGE', 'SOUNDBOARD_SET_OVERLAY_ENABLED', 'MESSAGE_ACKED', 'MESSAGE_CREATE', 'WINDOW_FOCUS', 'RTC_CONNECTION_STATE', 'AUDIO_TOGGLE_SELF_MUTE', 'OVERLAY_SUCCESSFULLY_SHOWN', 'OVERLAY_UPDATE_OVERLAY_METHOD'],
         inlineRequire: () => n(645644).Z,
