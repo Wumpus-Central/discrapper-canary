@@ -272,13 +272,17 @@ class E extends l.Z {
         };
     }
     async setRemoteAnswer() {
-        let e = this.pc,
-            { ssrcs: t, answer: n } = this.generateSDPAnswer(),
-            i = e.localDescription;
+        let e = JSON.stringify(this.unassignedStreams),
+            t = JSON.stringify(this.assignedStreams),
+            n = this.pc,
+            { ssrcs: i, answer: r } = this.generateSDPAnswer(),
+            a = n.localDescription;
         try {
-            await e.setRemoteDescription(n);
-        } catch (e) {
-            this.logger.warn('Failed to set remote answer: '.concat(e, ', type: ').concat(n.type, ', sdp: ').concat(n.sdp)), this.emit(o.Sh.SdpError, 'setRemoteDescription', e.message, n.type, n.sdp), null != i && this.emit(o.Sh.SdpError, 'setLocalDescription', e.message, i.type, i.sdp), this.emit(o.Sh.SdpError, 'generateSDPAnswer', e.message, 'ssrcs', JSON.stringify(t));
+            await n.setRemoteDescription(r);
+        } catch (s) {
+            this.logger.warn('Failed to set remote answer: '.concat(s, ', type: ').concat(r.type, ', sdp: ').concat(r.sdp)), this.emit(o.Sh.SdpError, 'setRemoteDescription', s.message, r.type, r.sdp), null != a && this.emit(o.Sh.SdpError, 'setLocalDescription', s.message, a.type, a.sdp);
+            let n = 'unassignedStreams: '.concat(e, ', assignedStreams: ').concat(t, ', ssrcs: ').concat(JSON.stringify(i));
+            this.emit(o.Sh.SdpError, 'generateSDPAnswer', s.message, 'streams', n);
         }
         (this.unassignedStreams.audio.length > 0 || this.unassignedStreams.video.length > 0) && ((this.negotiationNeeded = !0), this.logger.info('Renegotiating: Streams left unassigned after negotiation - renegotiate')), (this.negotiating = !1), this.negotiationNeeded && this.handleNegotiationNeeded();
     }
