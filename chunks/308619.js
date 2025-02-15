@@ -23,9 +23,10 @@ function u() {
                 icon: null !== (n = e.icon) && void 0 !== n ? n : void 0,
                 brandColorPrimary: u.brandColorPrimary,
                 traits: u.traits,
-                visibility: u.visibility
+                visibility: u.visibility,
+                gameApplicationIds: u.gameApplicationIds
             };
-            (0, a.p)(e.id, i);
+            (0, a.pV)(e.id, i);
         }, [e, u]),
         x = r.useCallback(() => {
             null != t && c.Z.init(t);

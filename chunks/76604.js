@@ -18,6 +18,7 @@ n.r(
         contentColumnWide: 'contentColumnWide__23e6b',
         contentColumnDefault: 'contentColumnDefault__23e6b',
         contentColumnMinimal: 'contentColumnMinimal__23e6b',
+        contentColumnScrollable: 'contentColumnScrollable__23e6b',
         customHeader: 'customHeader__23e6b',
         customContainer: 'customContainer__23e6b',
         customScroller: 'customScroller__23e6b',

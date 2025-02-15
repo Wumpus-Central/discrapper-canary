@@ -1,19 +1,20 @@
 n.d(t, {
-    C: () => d,
-    p: () => c
+    CR: () => d,
+    MA: () => u,
+    pV: () => c
 });
 var i = n(544891),
     r = n(570140),
     a = n(881052),
     l = n(406218),
-    s = n(314852),
-    o = n(981631);
+    o = n(314852),
+    s = n(981631);
 function d(e, t) {
     var n;
     if (null == e) return Promise.resolve(null);
-    let d = s.Z.getIsFetching(e),
-        c = s.Z.getLastSyncTimestamp(e),
-        u = s.Z.getProfile(e),
+    let d = o.Z.getIsFetching(e),
+        c = o.Z.getLastSyncTimestamp(e),
+        u = o.Z.getProfile(e),
         m = ((n = c), Date.now() - (null != n ? n : 0) > 60000);
     return d && !t
         ? Promise.resolve(null)
@@ -24,11 +25,11 @@ function d(e, t) {
             }),
             i.tn
                 .get({
-                    url: o.ANM.GUILD_PROFILE(e),
+                    url: s.ANM.GUILD_PROFILE(e),
                     rejectWithError: !1
                 })
                 .then((t) => {
-                    let n = (0, l.x)(t.body);
+                    let n = (0, l.xo)(t.body);
                     return (
                         r.Z.dispatch({
                             type: 'GUILD_PROFILE_FETCH_SUCCESS',
@@ -52,7 +53,7 @@ function d(e, t) {
           : Promise.resolve(u);
 }
 function c(e, t) {
-    return s.Z.getIsUpdating(e)
+    return o.Z.getIsUpdating(e)
         ? Promise.resolve(null)
         : (r.Z.dispatch({
               type: 'GUILD_PROFILE_UPDATE',
@@ -61,12 +62,12 @@ function c(e, t) {
           }),
           i.tn
               .patch({
-                  url: o.ANM.GUILD_PROFILE(e),
-                  body: (0, l.s)(t),
+                  url: s.ANM.GUILD_PROFILE(e),
+                  body: (0, l.sO)(t),
                   rejectWithError: !1
               })
               .then((t) => {
-                  let n = (0, l.x)(t.body);
+                  let n = (0, l.xo)(t.body);
                   return (
                       r.Z.dispatch({
                           type: 'GUILD_PROFILE_UPDATE_SUCCESS',
@@ -87,4 +88,11 @@ function c(e, t) {
                       null
                   );
               }));
+}
+async function u(e) {
+    let t = await i.tn.get({
+        url: s.ANM.GUILD_TOP_GAMES(e),
+        rejectWithError: !1
+    });
+    return (0, l.o_)(t.body.top_games);
 }

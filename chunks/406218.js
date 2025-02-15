@@ -1,8 +1,10 @@
 n.d(t, {
-    s: () => d,
-    x: () => c
+    o_: () => f,
+    sO: () => d,
+    xo: () => c
 }),
-    n(47120);
+    n(47120),
+    n(724458);
 var i = n(345074),
     r = n(339085),
     a = n(633302),
@@ -35,7 +37,7 @@ function u(e, t) {
     return n;
 }
 function c(e) {
-    var t;
+    var t, n;
     return {
         id: e.id,
         name: e.name,
@@ -45,7 +47,8 @@ function c(e) {
         memberCount: e.member_count,
         brandColorPrimary: e.brand_color_primary,
         visibility: e.visibility,
-        traits: u(e.id, null !== (t = e.traits) && void 0 !== t ? t : [])
+        traits: u(e.id, null !== (t = e.traits) && void 0 !== t ? t : []),
+        gameApplicationIds: null !== (n = e.game_application_ids) && void 0 !== n ? n : []
     };
 }
 function d(e) {
@@ -71,6 +74,19 @@ function d(e) {
                           };
                 })
                 .filter(s.lm)),
+        null != e.gameApplicationIds && (t.game_application_ids = e.gameApplicationIds),
         t
+    );
+}
+function f(e) {
+    return e.reduce(
+        (e, t) => (
+            (e[t.game_application_id] = {
+                level: t.activity_level,
+                score: t.activity_score
+            }),
+            e
+        ),
+        {}
     );
 }
