@@ -1,30 +1,31 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => d });
 var l = n(192379),
     a = n(442837),
-    i = n(442552),
-    s = n(314897),
-    r = n(643879),
-    o = n(27367);
-function c(e) {
+    i = n(481060),
+    s = n(442552),
+    r = n(314897),
+    o = n(643879),
+    c = n(27367);
+function d(e) {
     let { avatarId: t, storageHash: n } = e,
-        { onMouseEnter: c, onMouseLeave: d, shouldAnimate: u } = (0, i.Z)(),
-        m = (0, a.e7)([s.default], () => s.default.getId());
+        { onMouseEnter: d, onMouseLeave: u, shouldAnimate: m } = (0, s.Z)(),
+        p = (0, a.e7)([r.default], () => r.default.getId());
     return {
         avatarSrc: l.useMemo(
             () =>
-                (0, r.f)({
-                    userId: m,
+                (0, o.fD)({
+                    userId: p,
                     avatarId: t,
                     storageHash: n,
-                    canAnimate: u,
-                    size: o.m
+                    canAnimate: m,
+                    size: (0, i.pxk)(c.m)
                 }),
-            [m, t, n, u]
+            [p, t, n, m]
         ),
-        isAvatarAnimating: u,
+        isAvatarAnimating: m,
         eventHandlers: {
-            onMouseEnter: c,
-            onMouseLeave: d
+            onMouseEnter: d,
+            onMouseLeave: u
         }
     };
 }
