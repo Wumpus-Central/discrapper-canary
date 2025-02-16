@@ -74,21 +74,24 @@ function O(e, t) {
                     });
                 break;
             case v.nc.CONTENT_INVENTORY:
-                (0, p.Rb)('welcomeNotification').allowActivityWidget &&
-                    ((I.renderFooter = () =>
+                if ((0, p.Rb)('welcomeNotification').allowActivityWidget) {
+                    I.renderFooter = () =>
                         (0, i.jsx)('div', {
                             className: Z.container,
                             children: (0, i.jsx)(f.lX, {
                                 gamingId: null == e ? void 0 : e.id,
                                 maxUserShowCount: 5
                             })
-                        })),
-                    (I.onNotificationShow = () => {
+                        });
+                    let t = I.onNotificationShow;
+                    I.onNotificationShow = (e) => {
                         a.Z.track(E.rMx.OVERLAY_GAME_INVITE_NOTIFICATION_SHOWN, {
                             user_ids: l.entries.map((e) => e.author_id),
                             entry_ids: l.entries.map((e) => e.id)
-                        });
-                    }));
+                        }),
+                            null == t || t(e);
+                    };
+                }
         }
     let O = (0, c.un)(l.z.OVERLAY_OOP_WELCOME_NUX),
         N = null != e ? C.intl.format(C.t.bJ1QAQ, { gameName: e.name }) : C.intl.string(C.t.KWDIrq),
