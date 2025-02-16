@@ -1,7 +1,7 @@
 n.d(t, { Z: () => p }), n(47120);
 var a = n(200651),
     r = n(192379),
-    l = n(852985),
+    l = n(469918),
     i = n(913527),
     o = n.n(i),
     s = n(330711),
@@ -60,6 +60,12 @@ function p() {
                     }),
                     (0, a.jsx)(u.ZP.Title, { children: 'New System Messages' })
                 ]
+            }),
+            (0, a.jsx)(x.E, {
+                children: (0, a.jsx)(x.Z9, {
+                    name: 'Unique Rendered Main Messages',
+                    children: Object.keys(_.t).length
+                })
             }),
             (0, a.jsx)(d.oil, {
                 onChange: function (e) {
