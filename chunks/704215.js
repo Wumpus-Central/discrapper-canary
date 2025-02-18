@@ -375,6 +375,7 @@ var i = (function (e) {
             (e[(e.OVERLAY_OOP_SETTINGS_NUX = 505)] = 'OVERLAY_OOP_SETTINGS_NUX'),
             (e[(e.Q1_2025_REVERSE_TRIAL = 506)] = 'Q1_2025_REVERSE_TRIAL'),
             (e[(e.Q1_2025_FOLLOW_UP_REVERSE_TRIAL_OFFER = 507)] = 'Q1_2025_FOLLOW_UP_REVERSE_TRIAL_OFFER'),
+            (e[(e.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK = 508)] = 'GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK'),
             e
         );
     })({}),
