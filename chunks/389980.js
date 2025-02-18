@@ -5,6 +5,8 @@ var i = {
     topPerksCard: 'topPerksCard__3add8',
     topPerksCardImage: 'topPerksCardImage__3add8',
     topPerksCardHeading: 'topPerksCardHeading__3add8',
-    topPerksCardDescription: 'topPerksCardDescription__3add8'
+    topPerksCardDescription: 'topPerksCardDescription__3add8',
+    topPerksCardNew: 'topPerksCardNew__3add8',
+    topPerksCardLabelContainer: 'topPerksCardLabelContainer__3add8'
 };
 e.exports = i;
