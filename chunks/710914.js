@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u }), n(47120);
+n.d(t, { Z: () => h }), n(47120), n(733860), n(653041);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
@@ -6,8 +6,9 @@ var i = n(200651),
     s = n(481060),
     o = n(497505),
     d = n(415104),
-    c = n(176418);
-function u(e) {
+    c = n(642145),
+    u = n(176418);
+function h(e) {
     let { quests: t, isFetching: n } = e,
         r = null;
     if (window.location.hash.length > 0) {
@@ -30,11 +31,11 @@ function u(e) {
                 break;
             }
     }, [t, r]);
-    let u = null != r,
-        [h, m] = l.useState(window.innerWidth);
+    let h = null != r,
+        [m, p] = l.useState(window.innerWidth);
     l.useEffect(() => {
         let e = () => {
-            m(window.innerWidth);
+            p(window.innerWidth);
         };
         return (
             window.addEventListener('resize', e),
@@ -43,15 +44,23 @@ function u(e) {
             }
         );
     }, []);
-    let p = h >= 1610 ? 3 : h >= 1340 ? 2 : 1;
+    let g = m >= 1610 ? 3 : m >= 1340 ? 2 : 1,
+        _ = l.useMemo(() => {
+            let e = [];
+            for (let i of t) {
+                var n;
+                i.id === c.V && (null === (n = i.userStatus) || void 0 === n ? void 0 : n.claimedAt) == null ? e.unshift(i) : e.push(i);
+            }
+            return e;
+        }, [t]);
     return n && 0 === t.length
-        ? (0, i.jsx)(s.$jN, { className: c.spinner })
+        ? (0, i.jsx)(s.$jN, { className: u.spinner })
         : (0, i.jsx)(
               'div',
               {
-                  className: c.container,
-                  children: t.map((e, t) => {
-                      let n = Math.floor(t / p);
+                  className: u.container,
+                  children: _.map((e, t) => {
+                      let n = Math.floor(t / g);
                       return (0, i.jsx)(
                           d.Z,
                           {
@@ -59,9 +68,9 @@ function u(e) {
                               questContent: o.jn.QUEST_HOME_DESKTOP,
                               contentPosition: t,
                               rowIndex: n,
-                              className: a()(c.questTile, {
-                                  [c.selected]: u && e.id === r,
-                                  [c.unselected]: u && e.id !== r
+                              className: a()(u.questTile, {
+                                  [u.selected]: h && e.id === r,
+                                  [u.unselected]: h && e.id !== r
                               })
                           },
                           e.id
