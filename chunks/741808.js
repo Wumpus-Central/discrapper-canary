@@ -10,8 +10,8 @@ var a = n(200651),
     u = n(120370);
 let h = (e, t) => (void 0 !== t && t > e ? t : e);
 function m(e) {
-    let { children: t, className: n, key: l, ...m } = e,
-        { offsets: x } = (function (e) {
+    let { children: t, style: n, className: l, key: m, ...x } = e,
+        { offsets: _ } = (function (e) {
             let { key: t, backgroundElementRef: n, getOffsetsRelativeToElement: a, fallbackAbsoluteOffsets: l, onGetBoundingRect: i = () => {}, debounceTime: u = 60, minimumOffsets: m } = e,
                 { hasLayers: x } = (0, s.cj)([d.Z], () => ({ hasLayers: d.Z.hasLayers() })),
                 [_, p] = r.useState(null),
@@ -75,18 +75,21 @@ function m(e) {
                     updateElementOffsets: b
                 }
             );
-        })({ ...m }),
-        _ = { ...x };
-    return null === x
+        })({ ...x }),
+        p = {
+            ..._,
+            ...n
+        };
+    return null === _
         ? null
         : (0, a.jsx)(
               'div',
               {
-                  style: _,
-                  className: i()(u.wrapper, n),
+                  style: p,
+                  className: i()(u.wrapper, l),
                   children: t
               },
-              l
+              m
           );
 }
 m.displayName = 'ElementOffsetModalContentWrapper';

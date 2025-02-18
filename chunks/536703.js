@@ -1,7 +1,7 @@
 n.d(t, {
-    QM: () => A,
-    ds: () => p,
-    mG: () => N
+    QM: () => L,
+    ds: () => N,
+    mG: () => v
 }),
     n(47120);
 var l = n(200651),
@@ -10,46 +10,47 @@ var l = n(200651),
     r = n.n(a),
     s = n(442837),
     o = n(481060),
-    u = n(664915),
-    d = n(751648),
-    c = n(479766),
-    E = n(741808),
-    _ = n(981631),
-    h = n(642145),
-    C = n(388032),
-    T = n(194733),
-    I = n(33461);
-let g = () =>
+    u = n(540059),
+    d = n(664915),
+    c = n(751648),
+    E = n(479766),
+    _ = n(741808),
+    h = n(981631),
+    C = n(642145),
+    T = n(388032),
+    I = n(194733),
+    g = n(33461);
+let S = () =>
         (0, l.jsx)('div', {
-            className: I.svgContainer,
+            className: g.svgContainer,
             children: (0, l.jsx)('img', {
                 src: n(39017),
-                className: I.svg,
+                className: g.svg,
                 alt: 'Quests Icon'
             })
         }),
-    S = (e) =>
+    f = (e) =>
         (0, l.jsx)(o.zxk, {
             ...e,
-            'aria-label': C.intl.string(C.t.cpT0Cg),
+            'aria-label': T.intl.string(T.t.cpT0Cg),
             look: o.zxk.Looks.BLANK,
             size: o.zxk.Sizes.NONE,
-            wrapperClassName: I.closeButton,
-            innerClassName: I.closeButtonInner,
+            wrapperClassName: g.closeButton,
+            innerClassName: g.closeButtonInner,
             children: (0, l.jsx)(o.Dio, {
                 size: 'refresh_sm',
                 color: 'currentColor',
-                className: I.closeButtonIcon
+                className: g.closeButtonIcon
             })
         }),
-    f = (e) => {
+    p = (e) => {
         let { invertTail: t } = e;
         return (0, l.jsxs)('div', {
-            className: r()(I.tail, t ? I.tailPositionInverted : I.tailPositionNormal),
+            className: r()(g.tail, t ? g.tailPositionInverted : g.tailPositionNormal),
             children: [
-                (0, l.jsx)('div', { className: I.tailSpine }),
+                (0, l.jsx)('div', { className: g.tailSpine }),
                 (0, l.jsx)('div', {
-                    className: r()(I.tailTargetOuter, t ? I.tailTargetPositionInverted : I.tailTargetPositionNormal),
+                    className: r()(g.tailTargetOuter, t ? g.tailTargetPositionInverted : g.tailTargetPositionNormal),
                     children: (0, l.jsx)('svg', {
                         xmlns: 'http://www.w3.org/2000/svg',
                         width: '8',
@@ -60,34 +61,52 @@ let g = () =>
                             cx: '50%',
                             cy: '50%',
                             r: '3',
-                            className: I.tailTargetInner
+                            className: g.tailTargetInner
                         })
                     })
                 })
             ]
         });
     },
-    p = (e) => {
+    A = function () {
+        let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        return parseInt(document.body.style.getPropertyValue('--custom-app-panels-height'), 10) + (e ? 18 : 8);
+    },
+    N = (e) => {
         let { onClose: t, backgroundElementRef: n, renderTail: a = !1 } = e,
             [r, o] = i.useState(Date.now()),
-            [d, c] = i.useState(!1),
-            _ = i.useCallback(
+            [c, E] = i.useState(!1),
+            [h, C] = i.useState(!0),
+            T = (0, u.Q3)('VirtualCurrencyOnboardingCoachmark'),
+            I = i.useCallback(
                 (e) => {
-                    let t = e.top < window.innerHeight / 2;
-                    t !== d && c(t);
+                    if (T) {
+                        let t = window.innerHeight - A(!0),
+                            n = e.top <= t;
+                        h !== n && C(n);
+                    }
                 },
-                [d]
+                [h, T]
             ),
-            h = (0, s.e7)([u.Z], () => u.Z.getExpandedFolders().size > 0);
+            g = i.useCallback(
+                (e) => {
+                    I(e);
+                    let t = e.top < window.innerHeight / 2;
+                    t !== c && E(t);
+                },
+                [c, I]
+            ),
+            S = (0, s.e7)([d.Z], () => d.Z.getExpandedFolders().size);
         return (
             i.useEffect(() => {
                 o(Date.now());
-            }, [h]),
+            }, [S]),
             (0, l.jsx)(
-                E.X,
+                _.X,
                 {
                     backgroundElementRef: n,
-                    getOffsetsRelativeToElement: d
+                    style: { visibility: h ? 'visible' : 'hidden' },
+                    getOffsetsRelativeToElement: c
                         ? (e) => ({
                               left: 0,
                               top: e.height + 10
@@ -100,66 +119,73 @@ let g = () =>
                         top: 0,
                         left: 0
                     },
-                    onGetBoundingRect: _,
-                    children: (0, l.jsx)(N, {
+                    onGetBoundingRect: g,
+                    children: (0, l.jsx)(v, {
                         onClose: t,
                         renderTail: a,
-                        invertTail: d
+                        invertTail: c
                     })
                 },
                 r
             )
         );
     },
-    A = (e) => {
-        let { isVirtualCurrencyEnabled: t, discoveryButtonRef: n } = e,
-            [l, a] = i.useState(!1),
-            { shouldOpenCoachmark: r, shouldSkipCoachmark: o } = (0, s.cj)([c.Z], () => {
-                let { shouldOpen: e, shouldSkip: t } = c.Z.onboardingCoachmark;
+    L = (e) => {
+        let { isVirtualCurrencyEnabled: t, discoveryButtonRef: n, scrollToBottom: l } = e,
+            a = (0, u.Q3)('VirtualCurrencyOnboardingCoachmark hook'),
+            [r, o] = i.useState(!1),
+            { shouldOpenCoachmark: d, shouldSkipCoachmark: _ } = (0, s.cj)([E.Z], () => {
+                let { shouldOpen: e, shouldSkip: t } = E.Z.onboardingCoachmark;
                 return {
                     shouldOpenCoachmark: e,
                     shouldSkipCoachmark: t
                 };
             }),
-            u = i.useCallback(() => {
-                r && (0, d.l)();
-            }, [r]);
+            T = i.useCallback(() => {
+                d && (0, c.l)();
+            }, [d]),
+            I = i.useCallback(() => {
+                if (a && null !== n.current) {
+                    let e = A();
+                    n.current.getBoundingClientRect().bottom > window.innerHeight - e && l();
+                }
+            }, [a, n, l]);
         return (i.useEffect(() => {
-            null !== n && a(r && !o);
-        }, [n, r, o]),
+            null !== n && (d && !_ ? r || (I(), o(!0)) : r && o(!1));
+        }, [n, d, _, I, r, l]),
         t)
             ? {
-                  shouldShowOnboardingCoachmark: l,
-                  closeOnboardingCoachmarkIfOpen: u,
-                  questId: h.V
+                  shouldShowOnboardingCoachmark: r,
+                  closeOnboardingCoachmarkIfOpen: T,
+                  questId: C.V
               }
             : {
                   shouldShowOnboardingCoachmark: !1,
-                  closeOnboardingCoachmarkIfOpen: _.dG4,
+                  closeOnboardingCoachmarkIfOpen: h.dG4,
                   questId: void 0
               };
     },
-    N = (e) => {
+    v = (e) => {
         let { onClose: t, renderTail: n, invertTail: i = !1 } = e;
         return (0, l.jsxs)('div', {
-            className: r()(T.baseCardOutline, I.container),
+            className: r()(I.baseCardOutline, g.container),
             children: [
-                (0, l.jsx)(S, { onClick: t }),
-                (0, l.jsx)(g, {}),
+                (0, l.jsx)(f, { onClick: t }),
+                (0, l.jsx)(S, {}),
                 (0, l.jsxs)('div', {
-                    className: I.content,
+                    className: g.content,
                     children: [
                         (0, l.jsx)('div', {
-                            className: T.coachmarkTitle,
-                            children: C.intl.string(C.t['3B4+wM'])
+                            className: I.coachmarkTitle,
+                            children: T.intl.string(T.t['3B4+wM'])
                         }),
                         (0, l.jsx)('div', {
-                            className: T.coachmarkDescription,
-                            children: C.intl.format(C.t.V6DQX1, { quantity: 200 })
+                            className: I.coachmarkDescription,
+                            children: T.intl.format(T.t.V6DQX1, { quantity: 200 })
                         })
                     ]
                 }),
-                n && (0, l.jsx)(f, { invertTail: i })
+                n && (0, l.jsx)(p, { invertTail: i })
             ]
         });
     };
