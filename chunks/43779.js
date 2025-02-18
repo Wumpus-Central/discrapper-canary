@@ -9,10 +9,10 @@ var s = n(200651),
     d = n(393238),
     u = n(607070),
     p = n(113434),
-    m = n(918701),
-    x = n(467628),
-    h = n(566078),
-    g = n(472144),
+    m = n(467628),
+    x = n(566078),
+    h = n(472144),
+    g = n(160766),
     f = n(644646),
     v = n(65443),
     _ = n(69439),
@@ -24,14 +24,14 @@ let E = async () => await n.e('67963').then(n.t.bind(n, 145193, 19));
 function S(e) {
     var t, n, a;
     let { quest: S, questContent: N, isHovering: y, contentPosition: w, rowIndex: A, onReceiveErrorHints: B } = e,
-        R = (0, x.j)({ location: C.dr.QUESTS_BAR_MOBILE }),
-        P = r.useMemo(() => h.r.build(S.config), [S.config]),
+        R = (0, m.j)({ location: C.dr.QUESTS_BAR_MOBILE }),
+        P = r.useMemo(() => x.r.build(S.config), [S.config]),
         k = P.defaultReward.messages.name,
         q = P.defaultReward.messages.nameWithArticle,
         I = R ? k : q,
         O = (null === (t = S.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-        { ref: M, scrollHeight: L } = (0, d.Z)(),
-        D = 104 !== L,
+        { ref: M, scrollHeight: D } = (0, d.Z)(),
+        L = 104 !== D,
         { expansionSpring: Z } = (0, c.q_F)({
             expansionSpring: y ? 1 : 0,
             config: {
@@ -43,9 +43,7 @@ function S(e) {
         V = (null === (a = S.userStatus) || void 0 === a ? void 0 : a.claimedAt) != null,
         { completedRatio: Q, completedRatioDisplay: U } = (0, p.I)(S),
         H = (0, p.Bd)(S),
-        z = (0, m.xN)(S.config),
-        F = (0, m.LM)(S.config),
-        X = r.useCallback(
+        z = r.useCallback(
             (e) =>
                 (0, s.jsx)(
                     c.Text,
@@ -60,8 +58,8 @@ function S(e) {
                 ),
             [S.id]
         ),
-        K = r.useMemo(() => (V ? X(k) : b.intl.format(b.t['0IUT4e'], { rewardWithArticleHook: () => X(I) })), [k, V, X, I]),
-        Y = r.useMemo(() => {
+        F = r.useMemo(() => (V ? z(k) : b.intl.format(b.t['0IUT4e'], { rewardWithArticleHook: () => z(I) })), [k, V, z, I]),
+        X = r.useMemo(() => {
             if (null != H)
                 return (0, s.jsx)(c.Text, {
                     variant: 'text-sm/medium',
@@ -70,13 +68,13 @@ function S(e) {
                     children: H
                 });
         }, [H]),
-        G = (0, l.e7)([u.Z], () => u.Z.useReducedMotion);
+        K = (0, l.e7)([u.Z], () => u.Z.useReducedMotion);
     return (0, s.jsxs)('div', {
         className: o()(T.container),
         children: [
             (0, s.jsxs)(i.animated.div, {
                 style: {
-                    maxHeight: Z.to([0, 1], [104, (null != L ? L : 0) + 12])
+                    maxHeight: Z.to([0, 1], [104, (null != D ? D : 0) + 12])
                 },
                 className: o()(T.rewardDescriptionContainer),
                 children: [
@@ -94,9 +92,9 @@ function S(e) {
                                                   className: T.confetti,
                                                   loop: !1,
                                                   autoplay: !1,
-                                                  shouldAnimate: !G
+                                                  shouldAnimate: !K
                                               }),
-                                          (0, s.jsx)(g.Z, {
+                                          (0, s.jsx)(h.Z, {
                                               quest: S,
                                               size: 76,
                                               percentComplete: Q,
@@ -114,31 +112,21 @@ function S(e) {
                                           })
                                       ]
                                   })
-                                : (0, s.jsxs)('div', {
-                                      className: T.questRewardTileContainer,
-                                      children: [
-                                          z &&
-                                              null != F &&
-                                              (0, s.jsxs)(c.Text, {
-                                                  color: 'always-white',
-                                                  variant: 'text-xs/bold',
-                                                  className: T.questOrbQuantity,
-                                                  children: ['+', F]
-                                              }),
-                                          (0, s.jsx)(f.Z, {
-                                              quest: S,
-                                              autoplay: y,
-                                              questContent: N,
-                                              className: T.questRewardTileAsset,
-                                              location: C.dr.QUEST_HOME_DESKTOP
-                                          })
-                                      ]
+                                : (0, s.jsx)(g.Z, {
+                                      quest: S,
+                                      children: (0, s.jsx)(f.Z, {
+                                          quest: S,
+                                          autoplay: y,
+                                          questContent: N,
+                                          className: T.questRewardTileAsset,
+                                          location: C.dr.QUEST_HOME_DESKTOP
+                                      })
                                   })
                         ]
                     }),
                     (0, s.jsxs)('div', {
                         ref: M,
-                        className: o()(T.textContainer, { [T.justifyCenter]: !D }),
+                        className: o()(T.textContainer, { [T.justifyCenter]: !L }),
                         children: [
                             (0, s.jsx)(c.X6q, {
                                 variant: 'eyebrow',
@@ -150,17 +138,17 @@ function S(e) {
                                 variant: 'text-md/semibold',
                                 color: 'header-primary',
                                 className: o()(T.header, { [T.headerWithoutMargin]: R }),
-                                children: K
+                                children: F
                             }),
                             R &&
                                 (0, s.jsx)(v.Z, {
                                     quest: S,
                                     textColor: 'text-muted'
                                 }),
-                            Y
+                            X
                         ]
                     }),
-                    D &&
+                    L &&
                         (0, s.jsx)(i.animated.div, {
                             style: {
                                 opacity: Z.to([0, 1], [1, 0])

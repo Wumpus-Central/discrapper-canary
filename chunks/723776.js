@@ -1,43 +1,43 @@
-n.d(t, { F: () => f });
-var i = n(200651),
-    r = n(192379),
-    a = n(442837),
-    l = n(481060),
-    o = n(596454),
-    s = n(727637),
-    d = n(607070),
-    c = n(176354),
-    u = n(300694);
-function m(e) {
+n.d(t, { F: () => h });
+var a = n(200651),
+    i = n(192379),
+    l = n(442837),
+    r = n(481060),
+    s = n(596454),
+    o = n(727637),
+    c = n(607070),
+    d = n(176354),
+    m = n(300694);
+function u(e) {
     let { emoji: t, shouldAnimate: n } = e;
     if (null == t) return null;
-    let r = c.ZP.isCustomEmoji(t) ? t.name : t.surrogates;
-    return (0, i.jsx)(o.Z, {
-        className: u.traitEmoji,
+    let i = d.ZP.isCustomEmoji(t) ? t.name : t.surrogates;
+    return (0, a.jsx)(s.Z, {
+        className: m.traitEmoji,
         emojiId: t.id,
-        emojiName: r,
+        emojiName: i,
         animated: t.animated,
         shouldAnimate: n
     });
 }
-function _(e) {
+function x(e) {
     let { trait: t } = e,
-        n = r.useRef(null),
-        o = (0, s.Z)(n),
-        c = (0, a.e7)([d.Z], () => d.Z.useReducedMotion);
+        n = i.useRef(null),
+        s = (0, o.Z)(n),
+        d = (0, l.e7)([c.Z], () => c.Z.useReducedMotion);
     return (null == t ? void 0 : t.label) == null || t.label.length <= 0
         ? null
-        : (0, i.jsxs)('div', {
+        : (0, a.jsxs)('div', {
               ref: n,
-              className: u.trait,
+              className: m.trait,
               children: [
-                  (0, i.jsx)(m, {
+                  (0, a.jsx)(u, {
                       emoji: t.emoji,
-                      shouldAnimate: !c && o
+                      shouldAnimate: !d && s
                   }),
-                  (0, i.jsx)(l.Text, {
+                  (0, a.jsx)(r.Text, {
                       tag: 'span',
-                      className: u.traitLabel,
+                      className: m.traitLabel,
                       variant: 'text-sm/normal',
                       color: 'text-normal',
                       children: t.label
@@ -45,9 +45,9 @@ function _(e) {
               ]
           });
 }
-function f(e) {
+function h(e) {
     let { profile: t } = e,
-        n = r.useMemo(
+        n = i.useMemo(
             () =>
                 t.traits
                     .map((e, t) => ({
@@ -57,25 +57,29 @@ function f(e) {
                     .filter((e) => e.label.length > 0),
             [t]
         ),
-        a = r.useCallback(
+        l = i.useCallback(
             (e) =>
                 'string' == typeof e
-                    ? (0, i.jsx)('div', {
-                          className: u.trait,
-                          children: (0, i.jsx)(l.Text, {
-                              tag: 'span',
-                              variant: 'text-sm/normal',
-                              color: 'text-normal',
-                              children: e
-                          })
-                      })
-                    : (0, i.jsx)(_, { trait: e }),
+                    ? (0, a.jsx)(
+                          'div',
+                          {
+                              className: m.trait,
+                              children: (0, a.jsx)(r.Text, {
+                                  tag: 'span',
+                                  variant: 'text-sm/normal',
+                                  color: 'text-normal',
+                                  children: e
+                              })
+                          },
+                          'overflow'
+                      )
+                    : (0, a.jsx)(x, { trait: e }, e.label),
             []
         );
-    return (0, i.jsx)(l.Epb, {
-        className: u.container,
+    return (0, a.jsx)(r.Epb, {
+        className: m.container,
         items: n,
-        renderItem: a,
+        renderItem: l,
         maxLines: 2,
         itemGapPx: 4
     });

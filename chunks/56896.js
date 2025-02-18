@@ -15,6 +15,5 @@ e.exports = {
     marginBottom8: 'marginBottom8_cd0bbe',
     marginTop20: 'marginTop20_cd0bbe',
     marginBottom20: 'marginBottom20_cd0bbe',
-    flexRow: 'flexRow_cd0bbe',
     badgedItem: 'badgedItem_cd0bbe'
 };

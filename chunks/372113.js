@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P });
+n.d(t, { Z: () => w });
 var s = n(200651),
     i = n(192379),
     l = n(120356),
@@ -17,19 +17,20 @@ var s = n(200651),
     j = n(467628),
     T = n(566078),
     v = n(65443),
-    E = n(340100),
-    f = n(644646),
-    N = n(667105),
-    S = n(341907),
-    q = n(128535),
-    A = n(87894),
-    R = n(2660),
-    _ = n(46140),
-    b = n(981631),
-    Z = n(388032),
+    E = n(160766),
+    f = n(340100),
+    N = n(644646),
+    S = n(667105),
+    q = n(341907),
+    A = n(128535),
+    R = n(87894),
+    _ = n(2660),
+    b = n(46140),
+    Z = n(981631),
+    y = n(388032),
     I = n(675163);
-let M = (e, t, n) => ((0, A.uq)(e) && !n && 'lg' === t ? 'text-lg/medium' : 'lg' === t ? 'text-md/medium' : 'sm' === t ? 'text-sm/medium' : 'text-xs/medium');
-function y(e) {
+let M = (e, t, n) => ((0, R.uq)(e) && !n && 'lg' === t ? 'text-lg/medium' : 'lg' === t ? 'text-md/medium' : 'sm' === t ? 'text-sm/medium' : 'text-xs/medium');
+function L(e) {
     let { containerSize: t, onClick: n, children: i, tabIndex: l } = e;
     return 'xs' === t
         ? (0, s.jsx)(o.P3F, {
@@ -51,13 +52,13 @@ function y(e) {
               children: i
           });
 }
-function L(e) {
+function P(e) {
     let { quest: t, progressState: n, isCollectibleQuest: i, location: l, questContentPosition: a, inGiftInventory: u } = e,
         c = n >= h.OH.COMPLETED,
         m = (0, r.e7)([d.Z], () => d.Z.useReducedMotion),
         x = (0, r.e7)([g.Z], () => g.Z.isEnrolling(t.id)),
         C = (0, p.q8)(t),
-        j = (0, N.Ks)({
+        j = (0, S.Ks)({
             progressState: n,
             quest: t,
             location: l,
@@ -91,40 +92,43 @@ function L(e) {
         j.tooltipText
     );
 }
-let P = (e) => {
-    let { quest: t, location: n, size: l, isFocused: d, isQuestExpired: g, isExpanded: N, isAnimating: P, contentPosition: w } = e,
-        D = (0, h._Q)(t),
-        k = D >= h.OH.ACCEPTED,
-        U = D >= h.OH.COMPLETED,
-        O = D >= h.OH.CLAIMED,
+let w = (e) => {
+    let { quest: t, location: n, size: l, isFocused: d, isQuestExpired: g, isExpanded: S, isAnimating: w, contentPosition: D } = e,
+        k = (0, h._Q)(t),
+        U = k >= h.OH.ACCEPTED,
+        O = k >= h.OH.COMPLETED,
+        Q = k >= h.OH.CLAIMED,
         B = (0, p.Xv)(t.config),
-        Q = (0, A.uq)(n),
-        z = n === C.jn.QUESTS_EMBED,
-        W = N || P,
-        F = k && !O && Q,
-        G = (0, h.t5)(t, _.dr.QUESTS_CARD, n),
-        { xboxAndPlaystationAccounts: H } = (0, h.z6)(),
-        V = (0, x.O5)(),
-        X = (0, j.j)({ location: _.dr.QUESTS_BAR_MOBILE }),
-        Y = i.useMemo(() => T.r.build(t.config), [t.config]),
-        K = (0, r.e7)([u.default], () => u.default.locale),
-        J = (0, h.z)(t),
-        $ = Q && B,
-        ee = g && !U,
-        et = H.length > 0 && Q && (0, p.$J)(t) && k && !U && !J,
-        en = (0, s.jsx)(f.Z, {
-            autoplay: d,
-            className: a()(I.gridImg, {
-                [I.questRewardGiftInventory]: Q && 'lg' === l,
-                [I.questRewardEmbed]: z && 'lg' === l,
-                [I.questRewardEmbedSm]: 'sm' === l,
-                [I.questRewardEmbedXs]: 'xs' === l
-            }),
-            learnMoreStyle: Q ? null : 'text',
-            location: _.dr.QUESTS_CARD,
+        z = (0, R.uq)(n),
+        W = n === C.jn.QUESTS_EMBED,
+        F = S || w,
+        G = U && !Q && z,
+        H = (0, h.t5)(t, b.dr.QUESTS_CARD, n),
+        { xboxAndPlaystationAccounts: V } = (0, h.z6)(),
+        X = (0, x.O5)(),
+        Y = (0, j.j)({ location: b.dr.QUESTS_BAR_MOBILE }),
+        K = i.useMemo(() => T.r.build(t.config), [t.config]),
+        J = (0, r.e7)([u.default], () => u.default.locale),
+        $ = (0, h.z)(t),
+        ee = z && B,
+        et = g && !O,
+        en = V.length > 0 && z && (0, p.$J)(t) && U && !O && !$,
+        es = (0, s.jsx)(E.Z, {
             quest: t,
-            questContent: n,
-            questContentPosition: w
+            children: (0, s.jsx)(N.Z, {
+                autoplay: d,
+                className: a()(I.gridImg, {
+                    [I.questRewardGiftInventory]: z && 'lg' === l,
+                    [I.questRewardEmbed]: W && 'lg' === l,
+                    [I.questRewardEmbedSm]: 'sm' === l,
+                    [I.questRewardEmbedXs]: 'xs' === l
+                }),
+                learnMoreStyle: z ? null : 'text',
+                location: b.dr.QUESTS_CARD,
+                quest: t,
+                questContent: n,
+                questContentPosition: D
+            })
         });
     return (0, s.jsxs)('div', {
         className: I.root,
@@ -133,15 +137,15 @@ let P = (e) => {
                 className: a()(I.outerContainer, {
                     [I.outerContainerSm]: 'sm' === l,
                     [I.outerContainerXs]: 'xs' === l,
-                    [I.outerContainerNoProgress]: !F
+                    [I.outerContainerNoProgress]: !G
                 }),
-                style: { visibility: W ? 'inherit' : 'hidden' },
-                'aria-hidden': !W,
+                style: { visibility: F ? 'inherit' : 'hidden' },
+                'aria-hidden': !F,
                 children: [
                     (0, s.jsx)(o.ua7, {
-                        text: ee ? Z.intl.string(Z.t['04MTGR']) : null,
+                        text: et ? y.intl.string(y.t['04MTGR']) : null,
                         tooltipContentClassName: I.rewardTileExpirationTooltip,
-                        shouldShow: ee,
+                        shouldShow: et,
                         children: (e) =>
                             (0, s.jsxs)('div', {
                                 className: I.rewardTileWrapper,
@@ -152,13 +156,13 @@ let P = (e) => {
                                             className: I.rewardTileExpired,
                                             children: (0, s.jsx)(o.P4T, { color: o.TVs.colors.WHITE })
                                         }),
-                                    $
-                                        ? (0, s.jsx)(R.Z, {
+                                    ee
+                                        ? (0, s.jsx)(_.Z, {
                                               questConfig: t.config,
-                                              fallback: en,
+                                              fallback: es,
                                               isFocused: d
                                           })
-                                        : en
+                                        : es
                                 ]
                             })
                     }),
@@ -166,11 +170,11 @@ let P = (e) => {
                         className: a()(I.gridText, I.taskDetails),
                         children: [
                             (0, s.jsx)(o.Text, {
-                                variant: M(n, l, k),
+                                variant: M(n, l, U),
                                 className: I.taskInstructions,
-                                children: g ? Z.intl.formatToPlainString(Z.t['ge+AJi'], { questName: t.config.messages.questName }) : G
+                                children: g ? y.intl.formatToPlainString(y.t['ge+AJi'], { questName: t.config.messages.questName }) : H
                             }),
-                            X
+                            Y
                                 ? (0, s.jsx)(v.Z, {
                                       textColor: 'text-muted',
                                       quest: t,
@@ -204,19 +208,19 @@ let P = (e) => {
                                                       : null,
                                                   t = null !== (l = null == e ? void 0 : e.messages.nameWithArticle) && void 0 !== l ? l : null;
                                               return null != t
-                                                  ? Z.intl.formatToPlainString(Z.t.RrxtPT, {
+                                                  ? y.intl.formatToPlainString(y.t.RrxtPT, {
                                                         reward: t,
                                                         date: j
                                                     })
-                                                  : Z.intl.formatToPlainString(Z.t.zNoqRU, {
+                                                  : y.intl.formatToPlainString(y.t.zNoqRU, {
                                                         reward: f,
                                                         date: j
                                                     });
                                           }
                                           if (g)
                                               return T
-                                                  ? Z.intl.formatToPlainString(Z.t.l1jCMz, { date: j })
-                                                  : Z.intl.formatToPlainString(Z.t.zNoqRU, {
+                                                  ? y.intl.formatToPlainString(y.t.l1jCMz, { date: j })
+                                                  : y.intl.formatToPlainString(y.t.zNoqRU, {
                                                         reward: f,
                                                         date: j
                                                     });
@@ -226,27 +230,27 @@ let P = (e) => {
                                                     idx: 0
                                                 })
                                               : null;
-                                          if (d) return Z.intl.formatToPlainString(Z.t.DT3aub, { reward: null !== (a = null == q ? void 0 : q.messages.nameWithArticle) && void 0 !== a ? a : f });
+                                          if (d) return y.intl.formatToPlainString(y.t.DT3aub, { reward: null !== (a = null == q ? void 0 : q.messages.nameWithArticle) && void 0 !== a ? a : f });
                                           if (null != q && null != q.approximateCount)
-                                              return Z.intl.format(Z.t['4bMK19'], {
+                                              return y.intl.format(y.t['4bMK19'], {
                                                   maxReward: q.messages.nameWithArticle,
                                                   maxRewardCount: (0, m.Bs)(q.approximateCount, o),
-                                                  helpCenterLink: c.Z.getArticleURL(b.BhN.QUESTS_LEARN_MORE)
+                                                  helpCenterLink: c.Z.getArticleURL(Z.BhN.QUESTS_LEARN_MORE)
                                               });
                                           if (null != N) {
-                                              let e = (0, p.f$)(r.config) ? Z.t.YWnLFx : Z.t.Pu5eyM;
-                                              return Z.intl.formatToPlainString(e, {
+                                              let e = (0, p.f$)(r.config) ? y.t.YWnLFx : y.t.Pu5eyM;
+                                              return y.intl.formatToPlainString(e, {
                                                   reward: f,
                                                   duration: N
                                               });
                                           }
-                                          return null != S ? S.description : Z.intl.formatToPlainString(Z.t.ttFsLi, { reward: f });
+                                          return null != S ? S.description : y.intl.formatToPlainString(y.t.ttFsLi, { reward: f });
                                       })({
                                           quest: t,
-                                          locale: K,
+                                          locale: J,
                                           isQuestExpired: g,
-                                          sharedQuestFields: Y,
-                                          withCopySimplification: X
+                                          sharedQuestFields: K,
+                                          withCopySimplification: Y
                                       })
                                   })
                         ]
@@ -254,49 +258,49 @@ let P = (e) => {
                     (0, s.jsxs)('div', {
                         className: a()(I.ctaButtonContainer, I.gridCtaButtons),
                         children: [
-                            !Q &&
-                                (0, s.jsx)(y, {
+                            !z &&
+                                (0, s.jsx)(L, {
                                     containerSize: l,
                                     onClick: () => {
-                                        (0, S.navigateToQuestHome)({
+                                        (0, q.navigateToQuestHome)({
                                             fromContent: n,
                                             questId: t.id
                                         }),
-                                            V({
+                                            X({
                                                 questId: t.id,
                                                 questContent: n,
-                                                questContentPosition: w,
+                                                questContentPosition: D,
                                                 questContentCTA: x.jZ.LEARN_MORE
                                             });
                                     },
-                                    children: Z.intl.string(Z.t.LLLLPD)
+                                    children: y.intl.string(y.t.LLLLPD)
                                 }),
-                            g && !U
+                            g && !O
                                 ? null
-                                : (0, s.jsx)(L, {
+                                : (0, s.jsx)(P, {
                                       quest: t,
-                                      progressState: D,
+                                      progressState: k,
                                       isCollectibleQuest: B,
                                       location: n,
-                                      inGiftInventory: Q
+                                      inGiftInventory: z
                                   })
                         ]
                     }),
-                    F &&
-                        (0, s.jsx)(E.Z, {
+                    G &&
+                        (0, s.jsx)(f.Z, {
                             className: I.gridProgressBar,
-                            color: U ? o.TVs.colors.TEXT_POSITIVE : o.TVs.colors.BG_BRAND,
+                            color: O ? o.TVs.colors.TEXT_POSITIVE : o.TVs.colors.BG_BRAND,
                             quest: t,
-                            isInventory: Q
+                            isInventory: z
                         })
                 ]
             }),
-            et &&
+            en &&
                 (0, s.jsxs)('div', {
                     className: I.microphoneContainer,
                     children: [
                         (0, s.jsx)('div', { className: I.separator }),
-                        (0, s.jsx)(q.Z, {
+                        (0, s.jsx)(A.Z, {
                             quest: t,
                             location: n
                         })
