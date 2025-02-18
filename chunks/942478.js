@@ -10,7 +10,13 @@ function d() {
     let { guild: e, submitting: t, errors: n } = (0, l.cj)([o.Z], () => o.Z.getProps()),
         d = r.useMemo(() => (0, c.LG)(n), [n]),
         u = r.useCallback(() => {
-            null != e && a.Z.saveGuild(e.id, { systemChannelFlags: e.systemChannelFlags });
+            null != e &&
+                a.Z.saveGuild(e.id, {
+                    systemChannelFlags: e.systemChannelFlags,
+                    systemChannelId: e.systemChannelId,
+                    afkChannelId: e.afkChannelId,
+                    afkTimeout: e.afkTimeout
+                });
         }, [e]),
         m = r.useCallback(() => {
             null != e && a.Z.init(e.id);
