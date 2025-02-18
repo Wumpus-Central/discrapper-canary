@@ -15,6 +15,7 @@ e.exports = {
     micButtonParent: 'micButtonParent__37e49',
     buttonChevron: 'buttonChevron__37e49',
     micButtonWithMenu: 'micButtonWithMenu__37e49',
+    nameplated: 'nameplated__37e49',
     buttons: 'buttons__37e49',
     buttonChevronIcon: 'buttonChevronIcon__37e49'
 };

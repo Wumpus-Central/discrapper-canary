@@ -17,5 +17,6 @@ e.exports = {
     xicon: 'xicon_c202a4',
     previews: 'previews_c202a4',
     label: 'label_c202a4',
-    resizer: 'resizer_c202a4'
+    resizer: 'resizer_c202a4',
+    rtcSim: 'rtcSim_c202a4'
 };
