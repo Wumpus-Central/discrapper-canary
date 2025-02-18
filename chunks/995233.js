@@ -1,4 +1,4 @@
-t.exports = {
+e.exports = {
     authedApp: 'authedApp__50a54',
     authedAppV2: 'authedAppV2__50a54',
     header: 'header__50a54',
@@ -9,7 +9,6 @@ t.exports = {
     appDetailsContainer: 'appDetailsContainer__50a54',
     appAvatar: 'appAvatar__50a54',
     appAvatarV2: 'appAvatarV2__50a54',
-    actionMenuButton: 'actionMenuButton__50a54',
     reportButton: 'reportButton__50a54',
     permission: 'permission__50a54',
     permissionCheckmark: 'permissionCheckmark__50a54',
