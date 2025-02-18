@@ -1,2 +1,2 @@
-n.d(t, { SV: () => i });
-let i = 'domainMigrationSuccess';
+n.d(t, { SV: () => r });
+let r = 'domainMigrationSuccess';

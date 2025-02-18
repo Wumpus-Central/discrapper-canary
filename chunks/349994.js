@@ -1,78 +1,66 @@
-n.d(t, { default: () => _ }), n(47120);
-var a = n(200651),
-    s = n(192379),
-    l = n(481060),
-    i = n(313201),
-    o = n(332664),
-    r = n(429506),
-    c = n(981631),
-    d = n(531578),
-    m = n(388032),
-    u = n(119392);
-let x = [
-    {
-        className: u.emojiThumbsUp,
-        rating: d.aZ.GOOD,
-        classNameSelected: u.selected
-    },
-    {
-        className: u.emojiThumbsDown,
-        rating: d.aZ.BAD,
-        classNameSelected: u.selected
-    }
-];
-function _(e) {
-    let [t, d] = s.useState(null),
-        _ = (0, i.Dt)();
-    return (0, a.jsxs)(l.Y0X, {
+a.d(t, { default: () => u }), a(47120);
+var n = a(200651),
+    s = a(192379),
+    o = a(481060),
+    i = a(313201),
+    c = a(764920),
+    r = a(429506),
+    l = a(981631),
+    d = a(531578),
+    _ = a(388032),
+    m = a(119392);
+function u(e) {
+    let [t, u] = s.useState(null),
+        x = (0, i.Dt)();
+    return (0, n.jsxs)(o.Y0X, {
         transitionState: e.transitionState,
-        'aria-labelledby': _,
+        'aria-labelledby': x,
         children: [
-            (0, a.jsxs)(l.xBx, {
+            (0, n.jsxs)(o.xBx, {
                 separator: !1,
-                className: u.headerContainer,
+                className: m.headerContainer,
                 children: [
-                    (0, a.jsx)(l.X6q, {
-                        id: _,
+                    (0, n.jsx)(o.X6q, {
+                        id: x,
                         variant: 'heading-xl/extrabold',
                         color: 'none',
-                        children: m.intl.string(m.t.BIbnR0)
+                        children: _.NW.string(_.t.BIbnR0)
                     }),
-                    (0, a.jsx)(l.Text, {
+                    (0, n.jsx)(o.Text, {
                         variant: 'text-md/normal',
-                        className: u.ratingBody,
-                        children: m.intl.string(m.t.j2kf2t)
+                        className: m.ratingBody,
+                        children: _.NW.string(_.t.j2kf2t)
                     })
                 ]
             }),
-            (0, a.jsx)(l.hzk, {
-                className: u.modalBody,
-                children: (0, a.jsx)(o.L, {
-                    ratingConfigs: x,
-                    className: u.ratingsSelector,
+            (0, n.jsx)(o.hzk, {
+                className: m.modalBody,
+                children: (0, n.jsx)(c.Z, {
+                    ratingOptions: [d.aZ.GOOD, d.aZ.BAD],
+                    emojiKind: 'thumb',
                     selectedRating: t,
                     onChangeRating: function (t) {
                         var s;
-                        d(t),
+                        u(t),
                             null != (s = t) &&
                                 ((0, r.Z)({ rating: s }),
                                 e.onClose(),
-                                (0, l.ZDy)(async () => {
-                                    let { default: e } = await n.e('14466').then(n.bind(n, 729328));
+                                (0, o.ZDy)(async () => {
+                                    let { default: e } = await a.e('14466').then(a.bind(a, 729328));
                                     return (t) =>
-                                        (0, a.jsx)(e, {
-                                            body: m.intl.string(m.t.IuPjpK),
+                                        (0, n.jsx)(e, {
+                                            body: _.NW.string(_.t.IuPjpK),
                                             ...t
                                         });
                                 }));
                     }
                 })
             }),
-            (0, a.jsx)(l.mzw, {
-                className: u.ratingsFooter,
-                children: (0, a.jsx)(l.Text, {
+            (0, n.jsx)(o.mzw, {
+                className: m.ratingsFooter,
+                children: (0, n.jsx)(o.Text, {
                     variant: 'text-md/normal',
-                    children: m.intl.format(m.t.zru1Ky, { safetyCenterUrl: c.EYA.SAFETY_CENTER })
+                    children: _.NW.format(_.t.zru1Ky, { safetyCenterUrl: l.EYA.SAFETY_CENTER })
                 })
             })
         ]

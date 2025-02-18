@@ -1,2 +1,2 @@
-n.d(t, { Z: () => i });
-let i = 'object' == typeof global && global && global.Object === Object && global;
+n.d(t, { Z: () => r });
+let r = 'object' == typeof global && global && global.Object === Object && global;

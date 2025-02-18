@@ -1,2 +1,2 @@
-var i = { paymentNote: 'paymentNote__56a21' };
-e.exports = i;
+var r = { paymentNote: 'paymentNote__56a21' };
+e.exports = r;

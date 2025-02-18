@@ -1,2 +1,2 @@
-var i = { actionBarIcon: 'actionBarIcon_a7e304' };
-e.exports = i;
+var r = { actionBarIcon: 'actionBarIcon_a7e304' };
+e.exports = r;

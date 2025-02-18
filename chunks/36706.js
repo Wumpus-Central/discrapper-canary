@@ -1,2 +1,2 @@
-var i = { tooltip: 'tooltip__5a41d' };
-e.exports = i;
+var r = { tooltip: 'tooltip__5a41d' };
+e.exports = r;

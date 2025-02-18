@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(653041), n(47120);
+n.d(t, { Z: () => v }), n(653041), n(47120);
 var i = n(192379),
     l = n(512722),
     a = n.n(l),
@@ -13,18 +13,18 @@ var i = n(192379),
     x = n(496675),
     g = n(594174),
     p = n(823379),
-    f = n(905753),
-    b = n(399860),
-    v = n(981631);
-function _(e, t, n) {
-    let l = (0, o.e7)([f.Z], () => f.Z.getApplicationPermissions()),
+    N = n(905753),
+    f = n(399860),
+    b = n(981631);
+function v(e, t, n) {
+    let l = (0, o.e7)([N.Z], () => N.Z.getApplicationPermissions()),
         r = i.useMemo(
             () =>
                 (function (e, t) {
                     let n = { ...t },
                         i = (0, u.bD)(e),
-                        l = (0, b.rE)(i, c.Kw.CHANNEL),
-                        a = (0, b.rE)(e, c.Kw.ROLE);
+                        l = (0, f.rE)(i, c.Kw.CHANNEL),
+                        a = (0, f.rE)(e, c.Kw.ROLE);
                     return (
                         a in n ||
                             (n[a] = {
@@ -43,27 +43,27 @@ function _(e, t, n) {
                 })(e, null != l ? l : {}),
             [l, e]
         ),
-        _ = (0, o.e7)(
-            [f.Z],
+        v = (0, o.e7)(
+            [N.Z],
             () => {
                 var e;
                 if (null == n) return;
-                let t = f.Z.getCommand(n);
+                let t = N.Z.getCommand(n);
                 return null !== (e = null == t ? void 0 : t.permissions) && void 0 !== e ? e : {};
             },
             [n]
         ),
-        N = (0, o.e7)(
-            [f.Z],
+        _ = (0, o.e7)(
+            [N.Z],
             () => {
                 var e;
-                return null == n ? f.Z.getEditedApplication() : null === (e = f.Z.getEditedCommand()) || void 0 === e ? void 0 : e.permissions;
+                return null == n ? N.Z.getEditedApplication() : null === (e = N.Z.getEditedCommand()) || void 0 === e ? void 0 : e.permissions;
             },
             [n]
         ),
         j = null != n ? n : t,
-        C = null != n ? _ : r,
-        I = i.useMemo(() => (null != N ? N : { ...(null != C ? C : {}) }), [N, C]),
+        C = null != n ? v : r,
+        I = i.useMemo(() => (null != _ ? _ : { ...(null != C ? C : {}) }), [_, C]),
         Z = i.useMemo(() => Object.keys(I).length, [I]),
         T = i.useMemo(() => (null == C || null == I ? null : !s().isEqual(C, I)), [C, I]);
     return (
@@ -72,7 +72,7 @@ function _(e, t, n) {
         }, [t, T, j]),
         {
             originalApplicationPermissions: r,
-            originalCommandPermissions: _,
+            originalCommandPermissions: v,
             editedTargetPermissions: (function (e, t) {
                 let n = (0, o.e7)([h.Z], () => h.Z.getGuild(e), [e]);
                 a()(null != n, 'guild must be present to be editing its integration settings');
@@ -85,8 +85,8 @@ function _(e, t, n) {
                 let s = r === n.ownerId,
                     {
                         channelIds: d,
-                        roleIds: f,
-                        userIds: b
+                        roleIds: N,
+                        userIds: f
                     } = i.useMemo(() => {
                         let e = [],
                             n = [],
@@ -98,7 +98,7 @@ function _(e, t, n) {
                             userIds: i
                         };
                     }, [t]),
-                    _ = (0, o.cj)(
+                    v = (0, o.cj)(
                         [m.Z],
                         () =>
                             Object.fromEntries(
@@ -109,27 +109,26 @@ function _(e, t, n) {
                             ),
                         [d]
                     ),
-                    N = (0, o.cj)(
+                    _ = (0, o.cj)(
                         [h.Z],
                         () =>
                             Object.fromEntries(
-                                f
-                                    .map((t) => h.Z.getRole(e, t))
+                                N.map((t) => h.Z.getRole(e, t))
                                     .filter(p.lm)
                                     .map((e) => [e.id, e])
                             ),
-                        [f, e]
+                        [N, e]
                     ),
                     j = (0, o.cj)(
                         [g.default],
                         () =>
                             Object.fromEntries(
-                                b
+                                f
                                     .map(g.default.getUser)
                                     .filter(p.lm)
                                     .map((e) => [e.id, e])
                             ),
-                        [b]
+                        [f]
                     );
                 return i.useMemo(() => {
                     let e = n.id,
@@ -140,15 +139,15 @@ function _(e, t, n) {
                             d = !1;
                         if (o.type === c.Kw.CHANNEL) {
                             let e = o.id === i,
-                                n = _[o.id];
-                            (t = e || x.Z.can(v.Plq.VIEW_CHANNEL, n)), (d = !0);
+                                n = v[o.id];
+                            (t = e || x.Z.can(b.Plq.VIEW_CHANNEL, n)), (d = !0);
                         } else if (o.type === c.Kw.ROLE) {
                             let i = o.id === e,
-                                a = N[o.id];
+                                a = _[o.id];
                             (t = i || null != a), (d = s || i || x.Z.isRoleHigher(n, l, a));
                         } else if (o.type === c.Kw.USER) {
                             let e = j[o.id];
-                            (t = null != e), (d = null != e && (s || x.Z.canManageUser(v.Plq.USE_APPLICATION_COMMANDS, e, n)));
+                            (t = null != e), (d = null != e && (s || x.Z.canManageUser(b.Plq.USE_APPLICATION_COMMANDS, e, n)));
                         }
                         a[r] = {
                             ...o,
@@ -157,7 +156,7 @@ function _(e, t, n) {
                         };
                     }
                     return a;
-                }, [_, n, l, s, t, N, j]);
+                }, [v, n, l, s, t, _, j]);
             })(e, I),
             hasChanges: T,
             selectedPermissionCount: Z

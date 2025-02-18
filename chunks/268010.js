@@ -1,6 +1,6 @@
 n.d(t, { Z: () => Z }), n(627494), n(757143);
-var l = n(200651),
-    a = n(192379),
+var a = n(200651),
+    l = n(192379),
     i = n(442837),
     r = n(481060),
     o = n(706454),
@@ -15,24 +15,22 @@ var l = n(200651),
     g = n(206295),
     v = n(335326),
     C = n(297781),
-    j = n(591853),
-    I = n(410441),
-    f = n(981631),
-    P = n(388032);
-let y = (e, t, n) => {
-        let l = P.t.LHF6Dw,
-            a = d.ZP.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, n),
+    N = n(591853),
+    j = n(410441),
+    I = n(981631),
+    f = n(388032);
+let P = (e, t, n) => {
+        let a = f.t.LHF6Dw,
+            l = d.ZP.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, n),
             i = e.extra.media_title;
-        return P.intl
-            .formatToMarkdownString(l, {
-                mediaTitle: i,
-                userName: a,
-                episodeDescription: e.extra.media_subtitle
-            })
-            .replaceAll('*', '');
+        return f.NW.formatToMarkdownString(a, {
+            mediaTitle: i,
+            userName: l,
+            episodeDescription: e.extra.media_subtitle
+        }).replaceAll('*', '');
     },
-    N = (e, t) =>
-        P.intl.formatToPlainString(P.t.kCbfbG, {
+    y = (e, t) =>
+        f.NW.formatToPlainString(f.t.kCbfbG, {
             username: t.username,
             activity: e.extra.media_title
         }),
@@ -42,16 +40,16 @@ let y = (e, t, n) => {
             { largeImage: A } = (0, m.rv)({ entry: n }),
             { primaryColor: E, secondaryColor: _ } = (0, g.Z)(null == A ? void 0 : A.src),
             S = (0, i.e7)([o.default], () => o.default.locale),
-            R = (0, p.Z)(f.ABu.CRUNCHYROLL),
+            R = (0, p.Z)(I.ABu.CRUNCHYROLL),
             k = (0, x.ap)(n.extra.media_assets_large_text),
-            w = a.useCallback(
+            w = l.useCallback(
                 (e) => {
                     if (null != T && (null == A ? void 0 : A.src) != null)
                         return (0, h.B)({
                             entry: n,
                             mediaImageSrc: null == A ? void 0 : A.src,
                             avatarSrc: T.getAvatarURL(null == t ? void 0 : t.guild_id, 128),
-                            description: y(n, t, T),
+                            description: P(n, t, T),
                             timestamp: (0, x.yh)(n, S),
                             episodeDescription: k,
                             colors: [E, _],
@@ -73,34 +71,34 @@ let y = (e, t, n) => {
             };
         return null == T
             ? null
-            : (0, l.jsxs)(j.yR, {
+            : (0, a.jsxs)(N.yR, {
                   children: [
-                      (0, l.jsx)(j.wG, {
+                      (0, a.jsx)(N.wG, {
                           channel: t,
                           entry: n,
-                          userDescription: (0, x.kr)(n) ? P.t['LH+Z39'] : P.t.YuKgmp,
+                          userDescription: (0, x.kr)(n) ? f.t['LH+Z39'] : f.t.YuKgmp,
                           title: n.extra.media_title,
                           subtitle: n.extra.media_subtitle,
-                          headerIcons: (0, l.jsx)(I.Z, {
+                          headerIcons: (0, a.jsx)(j.Z, {
                               onClick: R,
                               Icon: r.omf,
-                              'aria-label': P.intl.string(P.t.jdJYX1)
+                              'aria-label': f.NW.string(f.t.jdJYX1)
                           }),
-                          badges: (0, l.jsx)(C.Gk, {
+                          badges: (0, a.jsx)(C.Gk, {
                               location: C.Gt.POPOUT,
-                              children: v.t.map((e, t) => (0, l.jsx)(e, { entry: n }, t))
+                              children: v.t.map((e, t) => (0, a.jsx)(e, { entry: n }, t))
                           }),
                           onClickTitle: O,
                           onClickThumbnail: O
                       }),
-                      (0, l.jsx)(j.St, {
-                          children: (0, l.jsx)(j.WT, {
+                      (0, a.jsx)(N.St, {
+                          children: (0, a.jsx)(N.WT, {
                               onReaction: d,
                               onVoiceChannelPreview: Z,
                               user: T,
                               channel: t,
                               generateReactionImage: w,
-                              reactionImageAltText: N(n, T),
+                              reactionImageAltText: y(n, T),
                               entry: n
                           })
                       })

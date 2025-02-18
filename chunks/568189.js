@@ -1,2 +1,2 @@
-var i = { roleDot: 'roleDot__57082' };
-e.exports = i;
+var r = { roleDot: 'roleDot__57082' };
+e.exports = r;

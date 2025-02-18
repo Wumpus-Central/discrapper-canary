@@ -1,2 +1,2 @@
-var i = { stack: 'stack_dbd263' };
-e.exports = i;
+var r = { stack: 'stack_dbd263' };
+e.exports = r;

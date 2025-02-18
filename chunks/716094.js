@@ -1,2 +1,2 @@
-var i = { divider: 'divider__46c3b' };
-e.exports = i;
+var r = { divider: 'divider__46c3b' };
+e.exports = r;

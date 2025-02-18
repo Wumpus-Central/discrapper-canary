@@ -1,2 +1,2 @@
-var i = {};
-e.exports = i;
+var r = {};
+e.exports = r;

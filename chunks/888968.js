@@ -1,2 +1,2 @@
-var i = n(325237).Uint8Array;
-e.exports = i;
+var r = n(325237).Uint8Array;
+e.exports = r;

@@ -1,2 +1,2 @@
-var i = t;
-(i.base = n(806981)), (i.short = n(101682)), (i.mont = n(689743)), (i.edwards = n(1406));
+var r = t;
+(r.base = n(806981)), (r.short = n(101682)), (r.mont = n(689743)), (r.edwards = n(1406));

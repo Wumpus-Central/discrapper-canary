@@ -1,2 +1,2 @@
-var i = { defaultColor: 'defaultColor__5345c' };
-e.exports = i;
+var r = { defaultColor: 'defaultColor__5345c' };
+e.exports = r;

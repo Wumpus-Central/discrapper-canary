@@ -1,2 +1,2 @@
-var i = { svg: 'svg__2338f' };
-e.exports = i;
+var r = { svg: 'svg__2338f' };
+e.exports = r;

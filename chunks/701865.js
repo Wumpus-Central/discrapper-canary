@@ -1,2 +1,2 @@
-n.d(t, { U: () => i });
-let i = 'Zoomed Media Modal';
+n.d(t, { U: () => r });
+let r = 'Zoomed Media Modal';

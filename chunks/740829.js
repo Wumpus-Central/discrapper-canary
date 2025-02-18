@@ -1,2 +1,2 @@
-var i = { effects: 'effects__58042' };
-e.exports = i;
+var r = { effects: 'effects__58042' };
+e.exports = r;

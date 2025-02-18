@@ -1,2 +1,2 @@
-var i = { channelAttachmentArea: 'channelAttachmentArea_b77158' };
-e.exports = i;
+var r = { channelAttachmentArea: 'channelAttachmentArea_b77158' };
+e.exports = r;

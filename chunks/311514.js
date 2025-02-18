@@ -1,2 +1,2 @@
-var i = { awaitingAuthenticationStep: 'awaitingAuthenticationStep__4ede8' };
-e.exports = i;
+var r = { awaitingAuthenticationStep: 'awaitingAuthenticationStep__4ede8' };
+e.exports = r;

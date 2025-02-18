@@ -1,2 +1,2 @@
-var i = n(828596);
-e.exports = i && !!Symbol.for && !!Symbol.keyFor;
+var r = n(828596);
+e.exports = r && !!Symbol.for && !!Symbol.keyFor;

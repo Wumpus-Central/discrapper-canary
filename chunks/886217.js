@@ -1,6 +1,6 @@
 n.d(t, { Z: () => T }), n(627494), n(757143);
-var l = n(200651),
-    a = n(192379),
+var a = n(200651),
+    l = n(192379),
     i = n(317261),
     r = n(423875),
     o = n(442837),
@@ -15,26 +15,24 @@ var l = n(200651),
     g = n(206295),
     v = n(278399),
     C = n(297781),
-    j = n(591853),
-    I = n(410441),
-    f = n(981631),
-    P = n(616922),
-    y = n(388032);
-let N = (e, t, n, l) => {
-        let a = (function (e) {
-                if (e === i._.WEEK) return y.t.SjOZfn;
-            })(l),
+    N = n(591853),
+    j = n(410441),
+    I = n(981631),
+    f = n(616922),
+    P = n(388032);
+let y = (e, t, n, a) => {
+        let l = (function (e) {
+                if (e === i._.WEEK) return P.t.SjOZfn;
+            })(a),
             r = m.ZP.getName(t.guild_id, t.id, n),
             o = e.extra.artist.name;
-        return y.intl
-            .formatToMarkdownString(a, {
-                artist: o,
-                userName: r
-            })
-            .replaceAll('*', '');
+        return P.NW.formatToMarkdownString(l, {
+            artist: o,
+            userName: r
+        }).replaceAll('*', '');
     },
     Z = (e, t) =>
-        y.intl.formatToPlainString(y.t.Osmpr6, {
+        P.NW.formatToPlainString(P.t.Osmpr6, {
             username: t.username,
             artist: e.extra.artist.name
         }),
@@ -45,9 +43,9 @@ let N = (e, t, n, l) => {
             S = (0, o.e7)([c.default], () => c.default.getUser(n.author_id)),
             { primaryColor: R, secondaryColor: k } = (0, g.Z)(E),
             w = (0, x.Nq)(n),
-            O = a.useCallback(() => {
+            O = l.useCallback(() => {
                 if (null == t || null == S || !(0, u.Hi)(w, v.y9)) return;
-                let e = N(n, t, S, w);
+                let e = y(n, t, S, w);
                 return (0, h.CR)({
                     user: S,
                     channel: t,
@@ -58,20 +56,20 @@ let N = (e, t, n, l) => {
                     badges: (0, h.UU)(n)
                 });
             }, [E, _, t, n, R, w, k, S]),
-            b = (0, p.Z)(f.ABu.SPOTIFY);
+            b = (0, p.Z)(I.ABu.SPOTIFY);
         if (null == S || !(0, u.Hi)(w, v.y9)) return null;
         let M = () => {
-            let e = P.Hw.ALBUM,
-                t = s.Z.isProtocolRegistered() ? P.C7.PLAYER_OPEN(e, n.extra.media.external_parent_id) : P.C7.WEB_OPEN(e, n.extra.media.external_parent_id);
+            let e = f.Hw.ALBUM,
+                t = s.Z.isProtocolRegistered() ? f.C7.PLAYER_OPEN(e, n.extra.media.external_parent_id) : f.C7.WEB_OPEN(e, n.extra.media.external_parent_id);
             window.open(t);
         };
-        return (0, l.jsxs)(j.yR, {
+        return (0, a.jsxs)(N.yR, {
             children: [
-                (0, l.jsx)(j.wG, {
+                (0, a.jsx)(N.wG, {
                     onClickTitle: M,
                     onClickSubtitle: () => {
-                        let e = P.Hw.ARTIST,
-                            t = s.Z.isProtocolRegistered() ? P.C7.PLAYER_OPEN(e, n.extra.artist.external_id) : P.C7.WEB_OPEN(e, n.extra.artist.external_id);
+                        let e = f.Hw.ARTIST,
+                            t = s.Z.isProtocolRegistered() ? f.C7.PLAYER_OPEN(e, n.extra.artist.external_id) : f.C7.WEB_OPEN(e, n.extra.artist.external_id);
                         window.open(t);
                     },
                     onClickThumbnail: M,
@@ -79,22 +77,22 @@ let N = (e, t, n, l) => {
                     entry: n,
                     headerIcons:
                         A === r.p.SPOTIFY
-                            ? (0, l.jsx)(I.Z, {
+                            ? (0, a.jsx)(j.Z, {
                                   onClick: b,
                                   Icon: d.Z,
-                                  'aria-label': y.intl.string(y.t['0ZB/XF'])
+                                  'aria-label': P.NW.string(P.t['0ZB/XF'])
                               })
                             : null,
-                    userDescription: y.t.CcVI1d,
+                    userDescription: P.t.CcVI1d,
                     title: T,
                     subtitle: _,
-                    badges: (0, l.jsx)(C.Gk, {
+                    badges: (0, a.jsx)(C.Gk, {
                         location: C.Gt.POPOUT,
-                        children: v.Ho.map((e, t) => (0, l.jsx)(e, { entry: n }, t))
+                        children: v.Ho.map((e, t) => (0, a.jsx)(e, { entry: n }, t))
                     })
                 }),
-                (0, l.jsx)(j.St, {
-                    children: (0, l.jsx)(j.WT, {
+                (0, a.jsx)(N.St, {
+                    children: (0, a.jsx)(N.WT, {
                         onReaction: i,
                         onVoiceChannelPreview: m,
                         user: S,

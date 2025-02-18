@@ -1,2 +1,2 @@
-var i = { nowrap: 'nowrap__5db79' };
-e.exports = i;
+var r = { nowrap: 'nowrap__5db79' };
+e.exports = r;

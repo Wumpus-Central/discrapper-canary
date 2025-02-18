@@ -1,2 +1,2 @@
-var i = { badgeUpgrade: 'badgeUpgrade_fbcaba' };
-e.exports = i;
+var r = { badgeUpgrade: 'badgeUpgrade_fbcaba' };
+e.exports = r;

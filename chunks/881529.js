@@ -1,2 +1,2 @@
-var i = { sparkles: 'sparkles__64668' };
-e.exports = i;
+var r = { sparkles: 'sparkles__64668' };
+e.exports = r;

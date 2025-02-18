@@ -1,2 +1,2 @@
-var i = { loading: 'loading__6ef4d' };
-e.exports = i;
+var r = { loading: 'loading__6ef4d' };
+e.exports = r;

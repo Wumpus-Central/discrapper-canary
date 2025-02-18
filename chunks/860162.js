@@ -1,2 +1,2 @@
-var i = { linkIcon: 'linkIcon_ebf183' };
-e.exports = i;
+var r = { linkIcon: 'linkIcon_ebf183' };
+e.exports = r;

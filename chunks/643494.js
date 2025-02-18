@@ -1,2 +1,2 @@
-var i = n(390976);
-e.exports = i.call(Function.call, Object.prototype.hasOwnProperty);
+var r = n(390976);
+e.exports = r.call(Function.call, Object.prototype.hasOwnProperty);

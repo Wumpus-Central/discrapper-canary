@@ -1,2 +1,2 @@
-var i = { wrapper: 'wrapper__0c74f' };
-e.exports = i;
+var r = { wrapper: 'wrapper__0c74f' };
+e.exports = r;

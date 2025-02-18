@@ -1,2 +1,2 @@
-var i = { link: 'link__6a22b' };
-e.exports = i;
+var r = { link: 'link__6a22b' };
+e.exports = r;
