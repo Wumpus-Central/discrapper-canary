@@ -103,6 +103,16 @@ let r = {
                             })
                         )
                 })
+        },
+        [l.Q5.INVITE_USER_EMBEDDED]: {
+            request: (e) =>
+                e
+                    .object({
+                        user_id: e.string().required(),
+                        content: e.string().min(0).max(1024)
+                    })
+                    .required(),
+            response: void 0
         }
     },
     a = (e) =>

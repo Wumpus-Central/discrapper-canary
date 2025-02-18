@@ -1,16 +1,17 @@
-i.d(e, { Z: () => c });
+i.d(n, { Z: () => l });
 var t = i(200651);
 i(192379);
 var a = i(793030),
     r = i(690221),
+    s = i(800869),
     o = i(767218),
-    s = i(155337);
-function c() {
+    c = i(155337);
+function l() {
     return (0, t.jsxs)('div', {
-        className: s.container,
+        className: c.container,
         children: [
             (0, t.jsxs)('div', {
-                className: s.headerContainer,
+                className: c.headerContainer,
                 children: [
                     (0, t.jsx)(a.xv, {
                         variant: 'eyebrow',
@@ -27,7 +28,7 @@ function c() {
                 ]
             }),
             (0, t.jsxs)('div', {
-                className: s.contentContainer,
+                className: c.contentContainer,
                 children: [
                     (0, t.jsx)(o.Z, {
                         count: 3,
@@ -42,7 +43,8 @@ function c() {
                         type: o.b.TOTAL
                     })
                 ]
-            })
+            }),
+            (0, t.jsx)(s.Z, {})
         ]
     });
 }
