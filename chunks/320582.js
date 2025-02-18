@@ -1,6 +1,7 @@
 n.d(t, {
     ML: () => l,
-    p0: () => c,
+    N8: () => d,
+    VQ: () => c,
     vh: () => u
 }),
     n(47120);
@@ -19,6 +20,28 @@ function u(e) {
     return o(e, s.OGo.PENDING_INCOMING);
 }
 function c(e) {
-    let [t] = (0, i.e7)([a.Z], () => [a.Z.getGameRelationshipsForUser(e), a.Z.getGameRelationshipsVersion()], [e], r.Q);
+    let [t] = (0, i.e7)(
+        [a.Z],
+        () => {
+            let t = a.Z.getGameRelationshipsForUser(e),
+                n = a.Z.getGameRelationshipsVersion();
+            return [t.length > 0, n];
+        },
+        [e],
+        r.Q
+    );
     return t;
+}
+function d(e, t) {
+    let [n] = (0, i.e7)(
+        [a.Z],
+        () => {
+            let n = a.Z.getGameRelationshipsForUserByType(e, t),
+                i = a.Z.getGameRelationshipsVersion();
+            return [n.length > 0, i];
+        },
+        [t, e],
+        r.Q
+    );
+    return n;
 }
