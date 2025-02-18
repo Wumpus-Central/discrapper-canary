@@ -1,15 +1,15 @@
 n.d(t, {
-    NE: () => S,
+    NE: () => b,
     QN: () => I,
     Qf: () => A,
     TY: () => N,
     pQ: () => T,
-    z7: () => b
+    z7: () => S
 }),
     n(653041),
     n(47120);
 var i = n(367907),
-    r = n(814443),
+    r = n(752048),
     a = n(199902),
     s = n(271383),
     o = n(158776),
@@ -84,18 +84,19 @@ let g = (e) => {
         };
     },
     I = (e) => {
-        var t, n;
-        let { userId: i } = e;
-        return null == i
-            ? {}
-            : {
-                  related_user_id: i,
-                  relationship_type: l.Z.getRelationshipType(i),
-                  related_since: l.Z.getSince(i),
-                  num_mutual_friends: f.Z.getMutualFriendsCount(i),
-                  num_mutual_guilds: null === (t = f.Z.getMutualGuilds(i)) || void 0 === t ? void 0 : t.length,
-                  affinity: null === (n = r.Z.getUserAffinity(i)) || void 0 === n ? void 0 : n.affinity
-              };
+        var t;
+        let { userId: n } = e;
+        if (null == n) return {};
+        let i = r.Z.getUserAffinity(n);
+        return {
+            related_user_id: n,
+            relationship_type: l.Z.getRelationshipType(n),
+            related_since: l.Z.getSince(n),
+            num_mutual_friends: f.Z.getMutualFriendsCount(n),
+            num_mutual_guilds: null === (t = f.Z.getMutualGuilds(n)) || void 0 === t ? void 0 : t.length,
+            communication_probability: null == i ? void 0 : i.communicationProbability,
+            communication_rank: null == i ? void 0 : i.communicationRank
+        };
     },
     T = (e) => {
         let { guildId: t, channelId: n, messageId: r, roleId: a, analyticsLocations: s, action: o, section: l } = e;
@@ -111,7 +112,7 @@ let g = (e) => {
             source_role_id: a
         });
     },
-    b = (e) => {
+    S = (e) => {
         let { guildId: t, channelId: n, analyticsLocations: r, action: a, display: s, activity: o, stream: l, entry: u, outbox: d, voiceChannelId: f } = e;
         c.default.track(h.rMx.USER_PROFILE_ACTIVITY_ACTION, {
             ...(0, i.hH)(t),
@@ -145,7 +146,7 @@ let g = (e) => {
             voice_channel_id: f
         });
     },
-    S = (e) => {
+    b = (e) => {
         let { guildId: t, channelId: n, analyticsLocations: r, badge: a } = e;
         c.default.track(h.rMx.USER_PROFILE_BADGE_PRESSED, {
             ...(0, i.hH)(t),
