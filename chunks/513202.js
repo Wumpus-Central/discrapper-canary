@@ -56,6 +56,9 @@ class v extends d.Z {
                 })
         );
     }
+    showDevShelfOverrideEnabled() {
+        (0, r.showToast)((0, r.createToast)(m.intl.string(m.t.JfA7IC), r.ToastType.SUCCESS));
+    }
     leaveActivity(e) {
         let { location: t, applicationId: n, showFeedback: i } = e;
         a.Z.wait(() => {
