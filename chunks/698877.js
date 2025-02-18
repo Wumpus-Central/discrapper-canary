@@ -1,38 +1,40 @@
-n.d(t, { O: () => d });
+n.d(t, { O: () => u });
 var i = n(200651),
     l = n(192379),
     a = n(864094),
     r = n(682901),
     s = n(861254),
-    o = n(871499),
-    c = n(388032);
-function d(e) {
+    o = n(82965),
+    c = n(871499),
+    d = n(388032);
+function u(e) {
     let t,
         n,
-        { hasPermission: d, streamActive: u, isSelfStream: h, centerButton: p, onMouseEnter: m, onMouseLeave: f, premiumGlow: g, renderNUXHighlight: _, buttonRef: C, ...x } = e,
-        { mode: v, groupedButtons: E } = (0, s.ZP)({ location: 'StreamButton' }),
-        { enabled: I } = (0, r.Z)({ location: 'StreamButton' }),
-        b = p ? o.d : o.Z;
-    n = u ? (h ? c.intl.string(c.t.S5anIS) : c.intl.string(c.t.q3O3Jy)) : d ? c.intl.string(c.t.fjBNo6) : c.intl.string(c.t.uQn9Bw);
-    let { Component: Z, events: N, play: T } = (0, a.P)(u ? 'disable' : 'enable');
+        { hasPermission: u, streamActive: h, isSelfStream: p, centerButton: m, onMouseEnter: f, onMouseLeave: g, premiumGlow: _, renderNUXHighlight: C, buttonRef: x, ...v } = e,
+        { mode: E } = (0, s.ZP)({ location: 'StreamButton' }),
+        I = (0, o.Z)({ location: 'StreamButton' }),
+        { enabled: b } = (0, r.Z)({ location: 'StreamButton' }),
+        Z = m ? c.d : c.Z;
+    n = h ? (p ? d.intl.string(d.t.S5anIS) : d.intl.string(d.t.q3O3Jy)) : u ? d.intl.string(d.t.fjBNo6) : d.intl.string(d.t.uQn9Bw);
+    let { Component: N, events: T, play: S } = (0, a.P)(h ? 'disable' : 'enable');
     return (
-        l.useEffect(() => () => T(), [u, T]),
-        (0, i.jsx)(b, {
-            buttonRef: C,
+        l.useEffect(() => () => S(), [h, S]),
+        (0, i.jsx)(Z, {
+            buttonRef: x,
             label: n,
-            disabled: !d,
-            iconComponent: Z,
-            isActive: !E && !I && u,
-            color: (_ ? (t = 'premiumGradient') : v === s.BK.GroupedButtonsRedMic && u && (t = 'green'), t),
-            ignoreColorForCaret: v === s.BK.GroupedButtonsRedMic && u,
+            disabled: !u,
+            iconComponent: N,
+            isActive: !I && !b && h,
+            color: (C ? (t = 'premiumGradient') : E === s.BK.GroupedButtonsRedMic && h && (t = 'green'), t),
+            ignoreColorForCaret: E === s.BK.GroupedButtonsRedMic && h,
             onMouseEnter: (e) => {
-                null == m || m(e), N.onMouseEnter();
+                null == f || f(e), T.onMouseEnter();
             },
             onMouseLeave: (e) => {
-                null == f || f(e), N.onMouseLeave();
+                null == g || g(e), T.onMouseLeave();
             },
-            premiumGlow: g,
-            ...x
+            premiumGlow: _,
+            ...v
         })
     );
 }

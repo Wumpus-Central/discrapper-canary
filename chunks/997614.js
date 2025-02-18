@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(47120);
+n.d(t, { Z: () => N }), n(47120);
 var i = n(200651),
     l = n(192379),
     a = n(399606),
@@ -11,102 +11,104 @@ var i = n(200651),
     h = n(792165),
     p = n(603074),
     m = n(861254),
-    f = n(294629),
-    g = n(390322),
-    _ = n(871499),
-    C = n(131951),
-    x = n(459273),
-    v = n(304388),
-    E = n(981631),
-    I = n(127379),
-    b = n(388032);
-function Z(e) {
-    let { channel: t, themeable: Z, whichPopoutIsOpen: N, setWhichPopoutIsOpen: T } = e,
+    f = n(82965),
+    g = n(294629),
+    _ = n(390322),
+    C = n(871499),
+    x = n(131951),
+    v = n(459273),
+    E = n(304388),
+    I = n(981631),
+    b = n(127379),
+    Z = n(388032);
+function N(e) {
+    let { channel: t, themeable: N, whichPopoutIsOpen: T, setWhichPopoutIsOpen: S } = e,
         {
-            Component: S,
-            events: { onMouseEnter: j, onMouseLeave: y }
+            Component: j,
+            events: { onMouseEnter: y, onMouseLeave: A }
         } = (0, s.j)(),
-        A = t.getGuildId(),
-        { mute: P, suppress: R } = (0, f.Z)(t),
-        M = (0, a.e7)([C.Z], () => C.Z.isDeaf()),
-        L = P || R || M,
-        k = (0, u.sR)({ isSoundboardButtonDisabled: L }),
-        [O, D] = (0, d.cv)(k),
-        { groupedButtons: w, mode: U } = (0, m.ZP)({ location: 'ActionBarSoundboardButton' }),
-        B = U === m.BK.GroupedButtonsRedMic ? 'green' : void 0;
-    function F() {
-        return P ? b.intl.string(b.t['Ox4/zc']) : R ? b.intl.string(b.t['+YBKYG']) : M ? b.intl.string(b.t.X1lQlp) : void 0;
+        P = t.getGuildId(),
+        { mute: R, suppress: M } = (0, g.Z)(t),
+        L = (0, a.e7)([x.Z], () => x.Z.isDeaf()),
+        k = R || M || L,
+        O = (0, u.sR)({ isSoundboardButtonDisabled: k }),
+        [D, w] = (0, d.cv)(O),
+        { mode: U } = (0, m.ZP)({ location: 'ActionBarSoundboardButton' }),
+        B = (0, f.Z)({ location: 'ActionBarSoundboardButton' }),
+        F = U === m.BK.GroupedButtonsRedMic ? 'green' : void 0;
+    function H() {
+        return R ? Z.intl.string(Z.t['Ox4/zc']) : M ? Z.intl.string(Z.t['+YBKYG']) : L ? Z.intl.string(Z.t.X1lQlp) : void 0;
     }
-    function H(e) {
-        null != A &&
+    function G(e) {
+        null != P &&
             (0, c.jW)(e, async () => {
                 let { default: e } = await n.e('56049').then(n.bind(n, 338991));
                 return (t) =>
                     (0, i.jsx)(e, {
-                        guildId: A,
+                        guildId: P,
                         ...t
                     });
             });
     }
-    let G = l.useRef(null),
-        V = l.useCallback(() => {
+    let V = l.useRef(null),
+        z = l.useCallback(() => {
             var e;
-            null === (e = G.current) || void 0 === e || e.hidePopout();
+            null === (e = V.current) || void 0 === e || e.hidePopout();
         }, []);
     return (
-        (0, x.yp)({
-            event: E.CkL.TOGGLE_SOUNDBOARD,
-            handler: V
+        (0, v.yp)({
+            event: I.CkL.TOGGLE_SOUNDBOARD,
+            handler: z
         }),
-        (0, i.jsx)(v.Z, {
-            ref: G,
-            isPopoutBlocked: null != N && N !== I.D.SOUNDBOARD,
-            onPopoutClose: () => (null == T ? void 0 : T(void 0)),
-            onPopoutOpen: () => (null == T ? void 0 : T(I.D.SOUNDBOARD)),
-            align: w ? 'center' : 'left',
+        (0, i.jsx)(E.Z, {
+            ref: V,
+            isPopoutBlocked: null != T && T !== b.D.SOUNDBOARD,
+            onPopoutClose: () => (null == S ? void 0 : S(void 0)),
+            onPopoutOpen: () => (null == S ? void 0 : S(b.D.SOUNDBOARD)),
+            align: B ? 'center' : 'left',
             renderPopout: (e) => {
                 let { closePopout: n } = e;
-                return L
+                return k
                     ? null
-                    : (0, i.jsx)(g.Z, {
+                    : (0, i.jsx)(_.Z, {
                           children: (0, i.jsx)(p.Z, {
-                              guildId: A,
+                              guildId: P,
                               channel: t,
                               onClose: n,
                               gridNotice:
-                                  O === r.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
+                                  D === r.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
                                   (0, i.jsx)(h.o, {
                                       onClose: n,
-                                      markAsDismissed: D
+                                      markAsDismissed: w
                                   }),
                               analyticsSource: 'action bar button'
                           })
                       });
             },
             children: (e) =>
-                w
-                    ? (0, i.jsx)(_.d, {
-                          themeable: Z,
-                          label: F(),
-                          iconComponent: S,
-                          disabled: L,
-                          onContextMenu: H,
+                B
+                    ? (0, i.jsx)(C.d, {
+                          themeable: N,
+                          label: H(),
+                          iconComponent: j,
+                          disabled: k,
+                          onContextMenu: G,
                           ...e,
                           onMouseEnter: (t) => {
-                              e.onMouseEnter(t), j();
+                              e.onMouseEnter(t), y();
                           },
                           onMouseLeave: () => {
-                              e.onMouseLeave(), y();
+                              e.onMouseLeave(), A();
                           },
-                          color: e.isActive ? B : void 0,
+                          color: e.isActive ? F : void 0,
                           className: ''
                       })
-                    : (0, i.jsx)(_.Z, {
-                          themeable: Z,
-                          label: F(),
+                    : (0, i.jsx)(C.Z, {
+                          themeable: N,
+                          label: H(),
                           iconComponent: o.KY1,
-                          disabled: L,
-                          onContextMenu: H,
+                          disabled: k,
+                          onContextMenu: G,
                           ...e
                       })
         })
