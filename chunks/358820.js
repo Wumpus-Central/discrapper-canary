@@ -5,8 +5,8 @@ n.d(t, {
     rk: () => y,
     wV: () => I
 });
-var i = n(512722),
-    r = n.n(i),
+var r = n(512722),
+    i = n.n(r),
     a = n(259443),
     s = n(570140),
     o = n(314897),
@@ -22,20 +22,20 @@ let m = new a.Yd('VoiceFilterActionCreators'),
     g = !1,
     E = !1;
 function v(e) {
-    let { url: t, modelId: n, fileName: i } = e,
-        r = p.Z.getModelState(n);
-    (null == r ? void 0 : r.status) !== h.L.DOWNLOADING &&
+    let { url: t, modelId: n, fileName: r } = e,
+        i = p.Z.getModelState(n);
+    (null == i ? void 0 : i.status) !== h.L.DOWNLOADING &&
         (s.Z.dispatch({
             type: 'VOICE_FILTER_DOWNLOAD_STARTED',
             ...e
         }),
-        f.ZP.downloadVoiceFilterFile(t, i, (t) => {
-            let { downloadedBytes: n, totalBytes: i } = t;
+        f.ZP.downloadVoiceFilterFile(t, r, (t) => {
+            let { downloadedBytes: n, totalBytes: r } = t;
             s.Z.dispatch({
                 type: 'VOICE_FILTER_DOWNLOAD_PROGRESS',
                 ...e,
                 downloadedBytes: n,
-                totalBytes: i
+                totalBytes: r
             });
         })
             .then(() => {
@@ -79,17 +79,21 @@ function y(e) {
         );
 }
 async function I() {
+    if (!E) {
+        m.info('Voice Filter catalog refresh ignored, module not loaded.');
+        return;
+    }
     if (g) return;
     let e = o.default.getToken(),
         t = u.default.getSuperPropertiesBase64();
-    r()(null != e, 'Authentication token must be available'), r()(null != t, 'Analytics superProperties must be available');
+    i()(null != e, 'Authentication token must be available'), i()(null != t, 'Analytics superProperties must be available');
     try {
         g = !0;
         let n = f.ZP.getVoiceFilters(),
-            i = await n.fetchCatalog(e, t);
+            r = await n.fetchCatalog(e, t);
         await s.Z.dispatch({
             type: 'VOICE_FILTER_CATALOG_FETCH_SUCCESS',
-            catalog: JSON.parse(i)
+            catalog: JSON.parse(r)
         });
     } catch (e) {
         m.warn('Failed to refresh voice filters catalog: '.concat(e.message)), d.Z.captureException(e);
