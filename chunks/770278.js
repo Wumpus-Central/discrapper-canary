@@ -41,7 +41,7 @@ function f(e) {
 }
 let p = 8;
 var _ = (function (e) {
-    return (e.SUBTLE = 'SUBTLE'), (e.DARK = 'DARK'), (e.BLUR = 'BLUR'), (e.IMMERSIVE = 'IMMERSIVE'), e;
+    return (e.SUBTLE = 'SUBTLE'), (e.DARK = 'DARK'), (e.BLUR = 'BLUR'), (e.IMMERSIVE = 'IMMERSIVE'), (e.LIGHTBOX = 'LIGHTBOX'), e;
 })({});
 function h() {
     let e = (0, l.dQu)(l.TVs.colors.BG_BACKDROP_NO_OPACITY).spring({ opacity: 0.25 }),
@@ -50,7 +50,8 @@ function h() {
         SUBTLE: e,
         DARK: t,
         BLUR: t,
-        IMMERSIVE: (0, l.dQu)(l.TVs.colors.BG_BACKDROP_IMMERSIVE).spring()
+        IMMERSIVE: (0, l.dQu)(l.TVs.colors.BG_BACKDROP_IMMERSIVE).spring(),
+        LIGHTBOX: (0, l.dQu)(l.TVs.colors.OVERLAY_BACKDROP_LIGHTBOX).spring()
     };
 }
 let m = i.forwardRef(function (e, t) {

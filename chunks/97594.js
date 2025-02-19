@@ -1,25 +1,24 @@
-n.r(t), n.d(t, { default: () => S }), n(47120);
+n.r(t), n.d(t, { default: () => h }), n(47120);
 var a = n(200651),
     r = n(192379),
     o = n(120356),
     i = n.n(o),
-    c = n(846519),
+    c = n(466377),
     s = n(481060),
     l = n(376641),
     u = n(714338),
-    d = n(585483),
-    p = n(254109),
-    m = n(212459),
-    g = n(73249),
-    _ = n(730606),
-    y = n(369171),
-    O = n(860153),
-    f = n(981631),
-    b = n(388032),
-    h = n(130430);
-function S(e) {
-    var { onClose: t, items: n, startingIndex: o, shouldRedactExplicitContent: S, shouldHideMediaOptions: C = !1, className: v, transitionState: E } = e,
-        T = (function (e, t) {
+    d = n(540059),
+    p = n(585483),
+    m = n(254109),
+    _ = n(212459),
+    g = n(730606),
+    y = n(860153),
+    O = n(981631),
+    f = n(388032),
+    b = n(130430);
+function h(e) {
+    var { onClose: t, items: n, startingIndex: o, shouldRedactExplicitContent: h, shouldHideMediaOptions: S = !1, className: v, transitionState: C } = e,
+        E = (function (e, t) {
             if (null == e) return {};
             var n,
                 a,
@@ -38,50 +37,42 @@ function S(e) {
             }
             return r;
         })(e, ['onClose', 'items', 'startingIndex', 'shouldRedactExplicitContent', 'shouldHideMediaOptions', 'className', 'transitionState']);
-    let [j, x] = r.useState(null != o ? o : 0),
-        [P, I] = r.useState(!1),
-        [D, M] = r.useState(!0),
-        A = r.useRef(null);
+    let [T, j] = r.useState(null != o ? o : 0),
+        [P, x] = r.useState(!1),
+        M = (0, d.Q3)('MediaViewerModal');
     r.useEffect(() => {
         if (null != t)
             return (
-                d.S.subscribe(f.CkL.MEDIA_MODAL_CLOSE, t),
+                p.S.subscribe(O.CkL.MEDIA_MODAL_CLOSE, t),
                 () => {
-                    d.S.unsubscribe(f.CkL.MEDIA_MODAL_CLOSE, t);
+                    p.S.unsubscribe(O.CkL.MEDIA_MODAL_CLOSE, t);
                 }
             );
     }, [t]),
         r.useEffect(
             () => (
-                E === s.Dvm.ENTERED && (u.Z.disable(), u.Z.enableTemp(l.P)),
-                E === s.Dvm.HIDDEN && (u.Z.disable(), u.Z.enableTemp(l.v)),
+                C === s.Dvm.ENTERED && (u.Z.disable(), u.Z.enableTemp(l.P)),
+                C === s.Dvm.HIDDEN && (u.Z.disable(), u.Z.enableTemp(l.v)),
                 () => {
                     u.Z.disableTemp();
                 }
             ),
-            [E]
+            [C]
         );
-    let w = r.useCallback((e) => {
-            x(e), (0, p.yg)(p.uG.SELECTED_ITEM_CHANGE);
+    let I = r.useCallback((e) => {
+            j(e), (0, m.yg)(m.uG.SELECTED_ITEM_CHANGE);
         }, []),
-        N = r.useMemo(() => {
-            var e, t, n;
-            return {
+        N = r.useMemo(
+            () => ({
                 zoomed: P,
-                setZoomed: I,
-                accessoryVisibility: ((e = null != E ? E : void 0), (t = D), (n = P), (null != e || (e = s.Dvm.HIDDEN), e === s.Dvm.ENTERING || e >= s.Dvm.EXITING) ? y.UE.FORCE_HIDDEN : !n || t ? y.UE.VISIBLE : y.UE.INACTIVE)
-            };
-        }, [P, E, D]),
-        L = r.useCallback(() => {
-            var e;
-            M(!0), (null !== (e = A.current) && void 0 !== e) || (A.current = new c.sW(1000, () => M(!1))), A.current.delay();
-        }, []),
-        R = r.useCallback(() => {
-            L(), null == t || t();
-        }, [L, t]),
-        k = n[j];
+                setZoomed: x,
+                entering: C === s.Dvm.ENTERING || null == C
+            }),
+            [P, C]
+        ),
+        D = n[T];
     return (0, a.jsx)(s.f6W, {
-        theme: f.BRd.DARK,
+        theme: M ? O.BRd.MIDNIGHT : O.BRd.DARK,
         children: (e) => {
             var r, o;
             return (0, a.jsx)(
@@ -113,39 +104,32 @@ function S(e) {
                 })(
                     {
                         hideShadow: !0,
-                        className: i()(h.carouselModal, e),
-                        transitionState: E
+                        className: i()(b.carouselModal, e),
+                        transitionState: C
                     },
-                    T
+                    E
                 )),
                 (o = o =
                     {
                         size: s.CgR.DYNAMIC,
+                        animation: c.fM.SUBTLE,
                         fullscreenOnMobile: !1,
-                        onMouseMove: L,
-                        onMouseDown: R,
-                        'aria-label': b.NW.string(b.t.AMTX3t),
-                        children: (0, a.jsxs)(m.z.Provider, {
+                        onClick: t,
+                        'aria-label': f.NW.string(f.t.AMTX3t),
+                        children: (0, a.jsxs)(_.z.Provider, {
                             value: N,
                             children: [
-                                (0, a.jsx)(O.Z, {
-                                    item: k,
+                                (0, a.jsx)(y.Z, {
+                                    item: D,
+                                    hideMediaOptions: S,
                                     onClose: t
                                 }),
-                                (0, a.jsxs)(y.c7, {
-                                    children: [
-                                        (0, a.jsx)(_.ZP, {
-                                            items: n,
-                                            startIndex: j,
-                                            onIndexChange: w,
-                                            shouldRedactExplicitContent: S,
-                                            shouldHideMediaOptions: C
-                                        }),
-                                        (0, a.jsx)(g.Z, {
-                                            item: k,
-                                            hideMediaOptions: C
-                                        })
-                                    ]
+                                (0, a.jsx)(g.ZP, {
+                                    items: n,
+                                    startIndex: T,
+                                    onIndexChange: I,
+                                    shouldRedactExplicitContent: h,
+                                    shouldHideMediaOptions: S
                                 })
                             ]
                         })

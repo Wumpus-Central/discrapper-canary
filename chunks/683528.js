@@ -1,23 +1,23 @@
-n.d(t, { Z: () => y });
-var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(481060),
+n.d(t, { Z: () => b });
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(481060),
     l = n(607070),
-    u = n(124347),
-    c = n(52824),
+    c = n(124347),
+    u = n(52824),
     d = n(549635),
     f = n(217702),
-    _ = n(388032),
-    p = n(903346);
-let h = 48;
+    p = n(388032),
+    _ = n(383244);
+let h = 40;
 function m(e) {
     return 'media-view-scroll-thumbnail-'.concat(e);
 }
 function g(e) {
     return 'IMAGE' === e.type
-        ? (0, c.q)({
+        ? (0, u.q)({
               proxyURL: e.proxyUrl,
               url: e.url
           })
@@ -27,61 +27,66 @@ function g(e) {
 }
 function E(e) {
     var t, n;
-    let { item: r } = e,
-        a = g(r);
-    return null == a
+    let { item: i } = e,
+        o = g(i);
+    return null == o
         ? null
-        : (0, i.jsx)(u.ZP, {
-              width: null !== (t = r.width) && void 0 !== t ? t : h,
-              height: null !== (n = r.height) && void 0 !== n ? n : h,
+        : (0, r.jsx)(c.ZP, {
+              width: null !== (t = i.width) && void 0 !== t ? t : h,
+              height: null !== (n = i.height) && void 0 !== n ? n : h,
               maxWidth: h,
               maxHeight: h,
               useFullWidth: !0,
-              src: a,
+              src: o,
               shouldAnimate: !1,
-              srcIsAnimated: r.srcIsAnimated,
-              alt: r.alt,
+              shouldRenderAccessory: !1,
+              srcIsAnimated: i.srcIsAnimated,
+              alt: i.alt,
               mediaLayoutType: f.hV.MOSAIC
           });
 }
-let v = r.memo(E);
-function y(e) {
-    let { items: t, currentIndex: n, onGalleryItemClick: a, className: u } = e,
-        c = r.useRef(null);
+let v = i.memo(E);
+function b(e) {
+    let { items: t, currentIndex: n, onGalleryItemClick: o, className: c } = e,
+        u = i.useRef(null);
     return (
-        r.useLayoutEffect(() => {
+        i.useLayoutEffect(() => {
             let e = document.getElementById(m(n));
-            null != c.current &&
+            null != u.current &&
                 null != e &&
-                c.current.scrollIntoViewNode({
+                u.current.scrollIntoViewNode({
                     node: e,
                     animate: !l.Z.useReducedMotion,
                     padding: h / 2
                 });
         }, [n]),
-        (0, i.jsx)('div', {
-            className: s()(p.galleryContainer, u),
-            children: (0, i.jsx)(o.h21, {
+        (0, r.jsx)('div', {
+            className: a()(_.galleryContainer, c),
+            children: (0, r.jsx)(s.h21, {
                 orientation: 'horizontal',
-                className: p.gallery,
-                ref: c,
-                onMouseDown: (e) => e.stopPropagation(),
-                children: t.map((e, r) => {
-                    let l = r === n,
-                        u = l ? _.t['qv/U5e'] : _.t.zviMAA;
-                    return (0, i.jsxs)(
-                        o.P3F,
+                className: a()(_.gallery, c),
+                ref: u,
+                onClick: (e) => e.stopPropagation(),
+                children: t.map((e, i) => {
+                    let l = i === n,
+                        c = l ? p.t['qv/U5e'] : p.t.zviMAA;
+                    return (0, r.jsx)(
+                        s.P3F,
                         {
-                            id: m(r),
-                            className: p.galleryItem,
-                            'aria-label': _.intl.formatToPlainString(u, {
-                                pageNumber: r + 1,
+                            id: m(i),
+                            className: a()(_.galleryItem, {
+                                [_.inactive]: !l,
+                                [_.first]: 0 === i,
+                                [_.last]: i === t.length - 1
+                            }),
+                            'aria-label': p.NW.formatToPlainString(c, {
+                                pageNumber: i + 1,
                                 totalPages: t.length
                             }),
-                            onClick: () => a(r),
-                            children: [(0, i.jsx)('div', { className: s()(p.galleryItemOverlay, { [p.selected]: l }) }), (0, i.jsx)(v, { item: e })]
+                            onClick: () => o(i),
+                            children: (0, r.jsx)(v, { item: e })
                         },
-                        r
+                        i
                     );
                 })
             })

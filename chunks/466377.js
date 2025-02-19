@@ -1,11 +1,12 @@
 n.d(t, {
     Cg: () => P,
-    Y0: () => D,
-    YA: () => U,
-    hz: () => M,
-    mz: () => k,
-    ol: () => j,
-    xB: () => x
+    Y0: () => x,
+    YA: () => G,
+    fM: () => D,
+    hz: () => k,
+    mz: () => j,
+    ol: () => U,
+    xB: () => L
 });
 var r = n(200651),
     i = n(192379),
@@ -109,7 +110,10 @@ let w = Object.freeze({
     large: S.large,
     dynamic: null
 });
-function D(e) {
+var D = (function (e) {
+    return (e.DEFAULT = 'default'), (e.SUBTLE = 'subtle'), e;
+})({});
+function x(e) {
     var t,
         { transitionState: n, children: o, size: f = 'small', role: h = 'dialog', className: m, fullscreenOnMobile: g = !0, hideShadow: E = !1, onAnimationEnd: v = y.dG, returnRef: O, animation: I = 'default' } = e,
         N = C(e, ['transitionState', 'children', 'size', 'role', 'className', 'fullscreenOnMobile', 'hideShadow', 'onAnimationEnd', 'returnRef', 'animation']);
@@ -173,7 +177,7 @@ function D(e) {
         )
     });
 }
-function x(e) {
+function L(e) {
     var t, n, o, s, l;
     let { headerId: c, headerIdIsManaged: u } = i.useContext(b.zM);
     return (0, r.jsx)(v.Z, {
@@ -188,7 +192,7 @@ function x(e) {
         children: e.children
     });
 }
-function L(e) {
+function M(e) {
     switch (null != e ? e : 'thin') {
         case 'auto':
             return g.yW;
@@ -198,10 +202,10 @@ function L(e) {
             return g.h2;
     }
 }
-function M(e) {
+function k(e) {
     let { className: t, children: n, scrollerRef: i, scrollbarType: o } = e,
         s = C(e, ['className', 'children', 'scrollerRef', 'scrollbarType']),
-        l = L(o);
+        l = M(o);
     return (0, r.jsx)(
         l,
         A(
@@ -216,7 +220,7 @@ function M(e) {
         )
     );
 }
-function k(e) {
+function j(e) {
     var t, n, i, o, s;
     return (0, r.jsx)(v.Z, {
         grow: 0,
@@ -229,7 +233,7 @@ function k(e) {
         children: (0, r.jsx)(E.y5t, { children: e.children })
     });
 }
-function j(e) {
+function U(e) {
     return (0, r.jsx)(f.zx, {
         focusProps: e.focusProps,
         'aria-label': O.NW.string(O.t.cpT0Cg),
@@ -248,7 +252,7 @@ function j(e) {
         })
     });
 }
-function U(e) {
+function G(e) {
     var { className: t, scrollerRef: n } = e,
         i = C(e, ['className', 'scrollerRef']);
     return (0, r.jsx)(

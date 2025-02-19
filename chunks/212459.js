@@ -1,14 +1,13 @@
 n.d(t, {
-    Y: () => s,
-    z: () => a
+    Y: () => o,
+    z: () => i
 });
-var i = n(192379),
-    r = n(369171);
-let a = (0, i.createContext)({
+var r = n(192379);
+let i = (0, r.createContext)({
     zoomed: !1,
     setZoomed: () => {},
-    accessoryVisibility: r.UE.FORCE_HIDDEN
+    entering: !0
 });
-function s() {
-    return (0, i.useContext)(a);
+function o() {
+    return (0, r.useContext)(i);
 }

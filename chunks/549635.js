@@ -1,6 +1,6 @@
 n.d(t, {
-    D: () => T,
-    Z: () => A
+    D: () => I,
+    Z: () => N
 });
 var r = n(200651),
     i = n(192379),
@@ -12,13 +12,12 @@ var r = n(200651),
     u = n(480050),
     d = n(524444),
     f = n(52824),
-    p = n(956664),
-    _ = n(589530),
-    h = n(591759),
-    m = n(254109),
-    g = n(212459),
-    E = n(505363);
-function v(e, t, n) {
+    p = n(589530),
+    _ = n(591759),
+    h = n(254109),
+    m = n(212459),
+    g = n(505363);
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +30,7 @@ function v(e, t, n) {
         e
     );
 }
-function b(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,12 +41,12 @@ function b(e) {
                 })
             )),
             r.forEach(function (t) {
-                v(e, t, n[t]);
+                E(e, t, n[t]);
             });
     }
     return e;
 }
-function y(e, t) {
+function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -59,29 +58,29 @@ function y(e, t) {
     }
     return n;
 }
-function O(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : y(Object(t)).forEach(function (n) {
+            : b(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function S(e, t) {
+function O(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = I(e, t);
+        i = S(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function I(e, t) {
+function S(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -90,95 +89,93 @@ function I(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function T(e) {
-    let t = h.Z.toURLSafe(e);
+function I(e) {
+    let t = _.Z.toURLSafe(e);
     return null == t ? null : (t.searchParams.append('format', 'webp'), t.toString());
 }
-function N(e) {
-    var t, n, i, o, s;
-    let f,
-        { media: h, obscured: v = !1, padding: y, onContextMenu: I } = e,
-        { width: N, height: A, url: R, proxyUrl: P, alt: w, type: D, maxWidth: x, maxHeight: L } = h,
-        M = S(h, ['width', 'height', 'url', 'proxyUrl', 'alt', 'type', 'maxWidth', 'maxHeight']),
-        { zoomed: k, setZoomed: j } = (0, g.Y)(),
-        U = C(k, R, P),
-        G = {
-            vertical: (null !== (t = null == y ? void 0 : y.top) && void 0 !== t ? t : 0) + (null !== (n = null == y ? void 0 : y.bottom) && void 0 !== n ? n : 0),
-            horizontal: (null !== (i = null == y ? void 0 : y.left) && void 0 !== i ? i : 0) + (null !== (o = null == y ? void 0 : y.right) && void 0 !== o ? o : 0)
-        },
-        { width: B, height: Z } = (0, p.zp)(null != N ? N : 0, null != A ? A : 0, G),
-        F = null != N && 0 !== N && null != A && 0 !== A;
-    if ('VIDEO' === D && F && null != P) {
-        let e = T(P);
+function T(e) {
+    let t,
+        { media: n, obscured: i = !1, maxWidth: o, maxHeight: s, onContextMenu: f } = e,
+        { width: _, height: E, url: b, proxyUrl: S, alt: T, type: N, maxWidth: C, maxHeight: R } = n,
+        P = O(n, ['width', 'height', 'url', 'proxyUrl', 'alt', 'type', 'maxWidth', 'maxHeight']),
+        { zoomed: w, setZoomed: D } = (0, m.Y)(),
+        x = A(w, b, S),
+        L = null != _ && 0 !== _ && null != E && 0 !== E;
+    if ('VIDEO' === N && L && null != S) {
+        var M;
+        let e = I(S);
         if (null == e) return null;
-        let t = null !== (s = h.renderLinkComponent) && void 0 !== s ? s : d.iT;
+        let t = null !== (M = n.renderLinkComponent) && void 0 !== M ? M : d.iT;
         return (0, r.jsx)(
             c.Z,
-            O(b({}, M), {
-                src: U,
-                width: N,
-                height: A,
-                maxWidth: B,
-                maxHeight: Z,
+            y(v({}, P), {
+                src: x,
+                width: _,
+                height: E,
+                maxWidth: o,
+                maxHeight: s,
                 poster: e,
-                naturalWidth: N,
-                naturalHeight: A,
-                volume: _.FC,
-                autoMute: _.rs,
-                onVolumeChange: _.jA,
-                onMute: _.Zj,
+                naturalWidth: _,
+                naturalHeight: E,
+                volume: p.FC,
+                autoMute: p.rs,
+                onVolumeChange: p.jA,
+                onMute: p.Zj,
                 renderLinkComponent: t,
-                autoPlay: !v,
-                alt: w,
-                onContextMenu: I
+                autoPlay: !i,
+                alt: T,
+                onContextMenu: f
             })
         );
     }
     return (
-        'IMAGE' === D &&
-            (f = F
+        'IMAGE' === N &&
+            (t = L
                 ? (0, r.jsx)(
                       l.ZP,
-                      O(b({}, M), {
-                          src: U,
-                          width: N,
-                          height: A,
-                          shouldLink: !1,
-                          maxWidth: B,
-                          maxHeight: Z,
+                      y(v({}, P), {
+                          src: x,
+                          width: _,
+                          height: E,
+                          maxWidth: o,
+                          maxHeight: s,
                           useFullWidth: !0,
-                          animated: !v && h.animated,
-                          autoPlay: !v,
-                          alt: w,
-                          zoomThumbnailPlaceholder: h.zoomThumbnailPlaceholder,
-                          onContextMenu: I
+                          shouldLink: !1,
+                          className: g.media,
+                          animated: !i && n.animated,
+                          autoPlay: !i,
+                          alt: T,
+                          onContextMenu: f
                       })
                   )
                 : (0, r.jsx)('img', {
-                      src: U,
-                      alt: w,
-                      onContextMenu: I,
-                      className: E.dimensionlessImage
+                      src: x,
+                      alt: T,
+                      onContextMenu: f,
+                      className: g.dimensionlessImage,
+                      style: {
+                          maxWidth: o,
+                          maxHeight: s
+                      }
                   })),
-        null != f
+        null != t
             ? (0, r.jsx)(u.Z, {
-                  width: N,
-                  height: A,
-                  maxWidth: B,
-                  maxHeight: Z,
-                  active: k,
-                  className: a()(E.wrapper, { [E.zoomed]: k }),
-                  panPadding: y,
+                  width: _,
+                  height: E,
+                  maxWidth: o,
+                  maxHeight: s,
+                  active: w,
+                  className: a()(g.wrapper, { [g.zoomed]: w }),
                   onClick: () => {
-                      j(!k), (0, m.yg)(k ? m.uG.ZOOM_OUT_IMAGE_PRESSED : m.uG.ZOOM_IN_IMAGE_PRESSED);
+                      D(!w), (0, h.yg)(w ? h.uG.ZOOM_OUT_IMAGE_PRESSED : h.uG.ZOOM_IN_IMAGE_PRESSED);
                   },
-                  children: f
+                  children: t
               })
             : null
     );
 }
-let A = i.memo(N);
-function C(e, t, n) {
+let N = i.memo(T);
+function A(e, t, n) {
     return e && (0, s.rV)(t)
         ? (0, s.s$)(t)
         : (0, f.q)({

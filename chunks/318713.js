@@ -79,14 +79,14 @@ function p(e) {
     );
 }
 let d = function (e) {
-    let { children: t, className: r, compact: i = !1, timestamp: d, isVisibleOnlyOnHover: f = !1, cozyAlt: b = !1, isInline: y = !0, id: g, isEdited: O = !1, application: j } = e,
-        h = new Date(d),
-        x = (0, o.Hg)(h),
-        v = i ? (0, o.vc)(h, 'LT') : (0, o.Y4)(h),
-        P = i ? (0, s.Z)(v) : null,
-        S = O ? u.NW.formatToPlainString(u.t.CDzOFR, { timeFormatted: x }) : x;
+    let { children: t, className: r, compact: i = !1, timestamp: d, isVisibleOnlyOnHover: f = !1, cozyAlt: b = !1, isInline: y = !0, id: g, isEdited: O = !1, application: j, tooltipPosition: h } = e,
+        x = new Date(d),
+        v = (0, o.Hg)(x),
+        P = i ? (0, o.vc)(x, 'LT') : (0, o.Y4)(x),
+        S = i ? (0, s.Z)(P) : null,
+        w = O ? u.NW.formatToPlainString(u.t.CDzOFR, { timeFormatted: v }) : v;
     return (0, n.jsx)('span', {
-        className: a()(r, P, {
+        className: a()(r, S, {
             [m.timestamp]: !0,
             [m.timestampVisibleOnHover]: f,
             [m.timestampInline]: y,
@@ -95,15 +95,16 @@ let d = function (e) {
         children:
             null == j
                 ? (0, n.jsx)(l.ua7, {
-                      text: (0, o.vc)(h, 'LLLL'),
-                      'aria-label': S,
+                      text: (0, o.vc)(x, 'LLLL'),
+                      'aria-label': w,
                       tooltipClassName: m.timestampTooltip,
+                      position: h,
                       delay: 750,
                       children: (e) =>
                           (0, n.jsx)(p, {
                               tooltipProps: e,
-                              timeFormatted: v,
-                              timestamp: h,
+                              timeFormatted: P,
+                              timestamp: x,
                               id: g,
                               compact: i,
                               children: t
@@ -111,11 +112,11 @@ let d = function (e) {
                   })
                 : (0, n.jsx)(c.Z, {
                       application: j,
-                      timestamp: h,
+                      timestamp: x,
                       compact: i,
                       children: (0, n.jsx)(p, {
-                          timeFormatted: v,
-                          timestamp: h,
+                          timeFormatted: P,
+                          timestamp: x,
                           id: g,
                           compact: i,
                           children: t

@@ -109,8 +109,7 @@ class y extends (r = o.PureComponent) {
                     src: t,
                     width: n,
                     height: r,
-                    options: this.props,
-                    hasMultiple: !1
+                    options: this.props
                 });
             }),
             h(this, 'modalContext', (0, s.VnL)(this.props.appContext)),

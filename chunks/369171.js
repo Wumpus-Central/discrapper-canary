@@ -1,32 +1,26 @@
 n.d(t, {
-    UE: () => u,
-    ZP: () => d,
-    c7: () => f
+    ZP: () => f,
+    lx: () => u
 });
-var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(212459),
-    l = n(572303),
+var r = n(192379),
+    i = n(120356),
+    o = n.n(i),
+    a = n(442837),
+    s = n(607070),
+    l = n(212459),
+    c = n(623371),
     u = (function (e) {
-        return (e.FORCE_HIDDEN = 'FORCE_HIDDEN'), (e.INACTIVE = 'INACTIVE'), (e.VISIBLE = 'VISIBLE'), e;
+        return (e.DEFAULT = 'DEFAULT'), (e.FOCUS_SENSITIVE = 'FOCUS_SENSITIVE'), (e.PINNED = 'PINNED'), e;
     })({});
-function c(e) {
-    let { children: t } = e,
-        { accessoryVisibility: n } = (0, o.Y)();
+function d(e) {
+    let { children: t, mode: n = 'DEFAULT' } = e,
+        { zoomed: r } = (0, l.Y)(),
+        i = (0, a.e7)([s.Z], () => s.Z.keyboardModeEnabled);
     return t(
-        s()(l.base, {
-            [l.forceHidden]: 'FORCE_HIDDEN' === n,
-            [l.hidden]: 'INACTIVE' === n
+        o()(c.base, {
+            [c.hidden]: r && !i && 'PINNED' !== n,
+            [c.focusSensitive]: 'FOCUS_SENSITIVE' === n
         })
     );
 }
-let d = r.memo(c);
-function f(e) {
-    let { children: t } = e;
-    return (0, i.jsx)('div', {
-        className: l.group,
-        children: t
-    });
-}
+let f = r.memo(d);
