@@ -19,8 +19,8 @@ var r = n(200651),
     y = n(321231),
     x = n(758199),
     O = n(429551),
-    E = n(973616),
-    j = n(314897),
+    j = n(973616),
+    E = n(314897),
     N = n(592125),
     C = n(158776),
     I = n(594174),
@@ -61,7 +61,7 @@ let W = i.memo(function (e) {
         F = (0, s.O)(),
         U = (0, a.e7)([N.Z], () => N.Z.getChannel(T), [T]),
         B = (null == U ? void 0 : null === (t = U.isThread) || void 0 === t ? void 0 : t.call(U)) ? (null == U ? void 0 : U.parent_id) : T,
-        G = (0, a.e7)([j.default], () => j.default.getId()),
+        G = (0, a.e7)([E.default], () => E.default.getId()),
         {
             embeddedActivity: H,
             currentEmbeddedActivity: V,
@@ -98,7 +98,7 @@ let W = i.memo(function (e) {
         ),
         q = null == X ? void 0 : X.details,
         Q = i.useMemo(() => {
-            let e = new E.ZP(O);
+            let e = new j.ZP(O);
             return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = R.wT), e;
         }, [O]),
         J = (0, m.s5)({
@@ -202,19 +202,21 @@ let W = i.memo(function (e) {
                                 })
                         }),
                     a > 0 &&
-                        (0, r.jsx)('div', {
-                            children: (0, r.jsx)(f.Z, {
-                                guildId: w,
-                                users: Y,
-                                max: 6,
-                                size: f.u.SIZE_16,
-                                extraDetail: (0, r.jsxs)(l.Text, {
+                        (0, r.jsxs)('div', {
+                            className: D.activePlayingWrapper,
+                            children: [
+                                (0, r.jsx)(f.Z, {
+                                    guildId: w,
+                                    users: Y,
+                                    max: 6,
+                                    size: f.u.SIZE_16
+                                }),
+                                (0, r.jsxs)(l.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'none',
-                                    className: D.activePlayingText,
                                     children: [a, ' ', u.text]
                                 })
-                            })
+                            ]
                         })
                 ]
             }),
