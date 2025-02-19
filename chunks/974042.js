@@ -224,8 +224,6 @@ class A {
                         return t.type === N.OGo.PENDING_INCOMING && t.ignoredUser;
                     case N.pJs.SUGGESTIONS:
                         return 99 === t.type;
-                    case N.pJs.BLOCKED:
-                        return t.type === N.OGo.BLOCKED;
                     case N.pJs.ALL:
                     default:
                         return t.type === N.OGo.FRIEND;

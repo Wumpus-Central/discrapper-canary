@@ -1,21 +1,20 @@
 n.d(t, {
-    Z: () => C,
-    j: () => _
+    Z: () => E,
+    j: () => f
 }),
     n(411104),
     n(47120);
-var i,
-    l = n(200651),
-    r = n(192379),
-    a = n(748780),
-    s = n(442837),
-    o = n(481060),
-    d = n(540059),
-    c = n(922611),
+var r,
+    i = n(200651),
+    l = n(192379),
+    o = n(748780),
+    a = n(442837),
+    s = n(481060),
+    c = n(540059),
     u = n(210887),
-    h = n(981631),
-    m = n(388032),
-    p = n(66116);
+    d = n(981631),
+    p = n(388032),
+    h = n(922792);
 function g(e, t, n) {
     return (
         t in e
@@ -29,21 +28,21 @@ function g(e, t, n) {
         e
     );
 }
-var _ = (((i = {}).SECTION_NO_RESULTS = 'SECTION_NO_RESULTS'), i);
-let f = Object.freeze({
+var f = (((r = {}).SECTION_NO_RESULTS = 'SECTION_NO_RESULTS'), r);
+let m = Object.freeze({
         SECTION_ALL: {
             lightSrc: n(900933),
             darkSrc: n(67764),
             width: 376,
             height: 162,
             renderContent: (e) =>
-                (0, l.jsxs)(r.Fragment, {
+                (0, i.jsxs)(l.Fragment, {
                     children: [
-                        (0, l.jsx)(o.OZU, { note: m.intl.string(m.t.Y4vMY2) }),
-                        (0, l.jsx)(o.zxk, {
-                            className: p.button,
+                        (0, i.jsx)(s.OZU, { note: p.NW.string(p.t.Y4vMY2) }),
+                        (0, i.jsx)(s.zxk, {
+                            className: h.button,
                             onClick: e,
-                            children: m.intl.string(m.t.w5uwoK)
+                            children: p.NW.string(p.t.w5uwoK)
                         })
                     ]
                 })
@@ -53,14 +52,14 @@ let f = Object.freeze({
             darkSrc: n(917847),
             width: 421,
             height: 218,
-            renderContent: () => (0, l.jsx)(o.OZU, { note: m.intl.string(m.t.v7HbiY) })
+            renderContent: () => (0, i.jsx)(s.OZU, { note: p.NW.string(p.t.v7HbiY) })
         },
         SECTION_BLOCKED: {
             lightSrc: n(459505),
             darkSrc: n(356634),
             width: 433,
             height: 232,
-            renderContent: () => (0, l.jsx)(o.OZU, { note: m.intl.string(m.t['9xdyWF']) })
+            renderContent: () => (0, i.jsx)(s.OZU, { note: p.NW.string(p.t['9xdyWF']) })
         },
         SECTION_PENDING: {
             lightSrc: n(979770),
@@ -68,21 +67,21 @@ let f = Object.freeze({
             width: 415,
             height: 200,
             renderContent: (e, t) =>
-                (0, l.jsxs)('div', {
-                    className: p.emptyStateContainer,
+                (0, i.jsxs)('div', {
+                    className: h.emptyStateContainer,
                     children: [
-                        (0, l.jsx)(o.OZU, { note: m.intl.string(m.t['aCYQ+P']) }),
+                        (0, i.jsx)(s.OZU, { note: p.NW.string(p.t['aCYQ+P']) }),
                         null != e &&
-                            (0, l.jsx)(o.zxk, {
-                                color: o.zxk.Colors.PRIMARY,
-                                look: o.zxk.Looks.OUTLINED,
-                                size: o.zxk.Sizes.TINY,
+                            (0, i.jsx)(s.zxk, {
+                                color: s.zxk.Colors.PRIMARY,
+                                look: s.zxk.Looks.OUTLINED,
+                                size: s.zxk.Sizes.TINY,
                                 onClick: e,
-                                className: p.spamButton,
-                                children: (0, l.jsx)(o.Text, {
+                                className: h.spamButton,
+                                children: (0, i.jsx)(s.Text, {
                                     variant: 'text-xs/medium',
                                     color: 'text-muted',
-                                    children: t ? m.intl.string(m.t.R40bU1) : m.intl.string(m.t.rXl8fn)
+                                    children: t ? p.NW.string(p.t.R40bU1) : p.NW.string(p.t.rXl8fn)
                                 })
                             })
                     ]
@@ -93,102 +92,99 @@ let f = Object.freeze({
             darkSrc: n(138715),
             width: 415,
             height: 200,
-            renderContent: () => (0, l.jsx)(o.OZU, { note: m.intl.string(m.t['vgI/EB']) })
+            renderContent: () => (0, i.jsx)(s.OZU, { note: p.NW.string(p.t['vgI/EB']) })
         },
         SECTION_NO_RESULTS: {
             lightSrc: n(55346),
             darkSrc: n(917847),
             width: 421,
             height: 218,
-            renderContent: () => (0, l.jsx)(o.OZU, { note: m.intl.string(m.t['7sW4h4']) })
+            renderContent: () => (0, i.jsx)(s.OZU, { note: p.NW.string(p.t['7sW4h4']) })
         }
     }),
-    E = (e) => {
+    b = (e) => {
         let { theme: t } = e,
-            n = m.intl.string(m.t['oi+B4u']),
-            i = f.SECTION_ALL,
-            a = (0, d.Q3)('AddFriendEmpty');
-        return (0, l.jsx)(r.Fragment, {
-            children: (0, l.jsxs)(o.ubH, {
+            n = p.NW.string(p.t['oi+B4u']),
+            r = m.SECTION_ALL,
+            o = (0, c.Q3)('AddFriendEmpty');
+        return (0, i.jsx)(l.Fragment, {
+            children: (0, i.jsxs)(s.ubH, {
                 theme: t,
                 children: [
-                    !a &&
-                        (0, l.jsx)(o.oxh, {
-                            width: i.width,
-                            height: i.height,
-                            lightSrc: i.lightSrc,
-                            darkSrc: i.darkSrc
+                    !o &&
+                        (0, i.jsx)(s.oxh, {
+                            width: r.width,
+                            height: r.height,
+                            lightSrc: r.lightSrc,
+                            darkSrc: r.darkSrc
                         }),
-                    (0, l.jsx)(o.OZU, { note: n })
+                    (0, i.jsx)(s.OZU, { note: n })
                 ]
             })
         });
     };
-class I extends r.PureComponent {
+class _ extends l.PureComponent {
     render() {
         let { type: e, onClick: t, theme: n } = this.props,
-            i = { opacity: this.state.opacity },
-            r = (function (e) {
+            r = { opacity: this.state.opacity },
+            l = (function (e) {
                 switch (e) {
-                    case h.pJs.ADD_FRIEND:
-                    case h.pJs.ALL:
-                        return f.SECTION_ALL;
-                    case h.pJs.ONLINE:
-                        return f.SECTION_ONLINE;
-                    case h.pJs.PENDING:
-                        return f.SECTION_PENDING;
-                    case h.pJs.SUGGESTIONS:
-                        return f.SECTION_SUGGESTIONS;
-                    case h.pJs.BLOCKED:
-                        return f.SECTION_BLOCKED;
+                    case d.pJs.ADD_FRIEND:
+                    case d.pJs.ALL:
+                        return m.SECTION_ALL;
+                    case d.pJs.ONLINE:
+                        return m.SECTION_ONLINE;
+                    case d.pJs.PENDING:
+                        return m.SECTION_PENDING;
+                    case d.pJs.SUGGESTIONS:
+                        return m.SECTION_SUGGESTIONS;
                     case 'SECTION_NO_RESULTS':
-                        return f.SECTION_NO_RESULTS;
+                        return m.SECTION_NO_RESULTS;
                     default:
                         throw Error('FriendsEmptyState: Invalid empty state');
                 }
             })(e);
-        return e === h.pJs.ADD_FRIEND
-            ? (0, l.jsx)(a.Z.div, {
-                  className: p.friendsEmpty,
-                  style: i,
-                  children: (0, l.jsx)(E, { theme: n })
+        return e === d.pJs.ADD_FRIEND
+            ? (0, i.jsx)(o.Z.div, {
+                  className: h.friendsEmpty,
+                  style: r,
+                  children: (0, i.jsx)(b, { theme: n })
               })
-            : (0, l.jsx)(a.Z.div, {
-                  className: p.friendsEmpty,
-                  style: i,
-                  children: (0, l.jsxs)(o.ubH, {
+            : (0, i.jsx)(o.Z.div, {
+                  className: h.friendsEmpty,
+                  style: r,
+                  children: (0, i.jsxs)(s.ubH, {
                       theme: n,
                       children: [
                           !this.isDesktopVisualRefreshEnabled &&
-                              (0, l.jsx)(o.oxh, {
-                                  width: r.width,
-                                  height: r.height,
-                                  lightSrc: r.lightSrc,
-                                  darkSrc: r.darkSrc
+                              (0, i.jsx)(s.oxh, {
+                                  width: l.width,
+                                  height: l.height,
+                                  lightSrc: l.lightSrc,
+                                  darkSrc: l.darkSrc
                               }),
-                          r.renderContent(t, this.isStealthRemediationEnabled)
+                          l.renderContent(t)
                       ]
                   })
               });
     }
     constructor(...e) {
         super(...e),
-            g(this, 'isStealthRemediationEnabled', (0, c.Do)({ location: 'FriendsEmptyState' })),
-            g(this, 'isDesktopVisualRefreshEnabled', (0, d.i9)('FriendsEmptyState')),
-            g(this, 'state', { opacity: new a.Z.Value(1) }),
+            g(this, 'isDesktopVisualRefreshEnabled', (0, c.i9)('FriendsEmptyState')),
+            g(this, 'state', { opacity: new o.Z.Value(1) }),
             g(this, 'componentWillEnter', (e) => {
                 this.state.opacity.setValue(0),
-                    a.Z.timing(this.state.opacity, {
+                    o.Z.timing(this.state.opacity, {
                         toValue: 1,
                         duration: 250
                     }).start(e);
             }),
             g(this, 'componentWillLeave', (e) => {
-                a.Z.timing(this.state.opacity, {
+                o.Z.timing(this.state.opacity, {
                     toValue: 0,
                     duration: 250
                 }).start(e);
             });
     }
 }
-let C = s.ZP.connectStores([u.Z], () => ({ theme: u.Z.theme }), { forwardRef: !0 })(I);
+let E = a.ZP.connectStores([u.Z], () => ({ theme: u.Z.theme }), { forwardRef: !0 })(_);

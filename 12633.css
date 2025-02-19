@@ -17910,6 +17910,30 @@ span.clanTag__5d473 {
     color: Highlight
 }
 
+.container__83f66 {
+    background-color: #fff;
+    display: flex;
+    padding: var(--spacing-8) var(--spacing-24);
+    padding-right: var(--spacing-12);
+    align-items: center;
+    gap: var(--spacing-12);
+    flex: 1;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: var(--spacing-48)
+}
+
+.button__83f66,
+.container__83f66 {
+    border-radius: var(--radius-round)
+}
+
+.button__83f66 {
+    background: linear-gradient(90deg, var(--guild-boosting-blue), var(--guild-boosting-purple));
+    color: #fff
+}
+
 .wrapper__3add8 {
     text-align: center
 }

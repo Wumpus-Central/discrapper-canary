@@ -1,41 +1,44 @@
-i.d(e, {
-    Z: () => u,
-    b: () => d
+t.d(n, {
+    Z: () => x,
+    b: () => u
 });
-var t,
-    a = i(200651);
-i(192379);
-var r = i(793030),
-    o = i(413335),
-    s = i(306685),
-    c = i(388032),
-    l = i(933192),
-    d = (((t = {})[(t.AVAILABLE = 0)] = 'AVAILABLE'), (t[(t.SPENT = 1)] = 'SPENT'), (t[(t.TOTAL = 2)] = 'TOTAL'), t);
-function u(n) {
-    let { count: e, type: i } = n;
-    return (0, a.jsxs)('div', {
-        className: l.container,
+var i,
+    r = t(200651);
+t(192379);
+var a = t(793030),
+    o = t(692547),
+    s = t(413335),
+    c = t(783684),
+    l = t(388032),
+    d = t(532997),
+    u = (((i = {})[(i.AVAILABLE = 0)] = 'AVAILABLE'), (i[(i.SPENT = 1)] = 'SPENT'), (i[(i.TOTAL = 2)] = 'TOTAL'), i);
+function x(e) {
+    let { count: n, type: t } = e;
+    return (0, r.jsxs)('div', {
+        className: d.container,
         children: [
-            (0, a.jsxs)('div', {
-                className: l.headerContainer,
+            (0, r.jsxs)('div', {
+                className: d.headerContainer,
                 children: [
-                    (0, a.jsx)(o.Z, { fill: 0 !== i ? 'currentColor' : void 0 }),
-                    (0, a.jsx)(r.X6, {
+                    (0, r.jsx)(s.Z, { fill: 0 !== t ? o.Z.colors.HEADER_MUTED.css : void 0 }),
+                    (0, r.jsx)(a.X6, {
+                        color: 0 !== t ? 'header-muted' : 'header-primary',
                         variant: 'heading-lg/semibold',
-                        children: e
+                        children: n
                     })
                 ]
             }),
-            (0, a.jsx)(r.xv, {
+            (0, r.jsx)(a.xv, {
+                color: 'header-muted',
                 variant: 'text-sm/medium',
                 children: (() => {
-                    switch (i) {
+                    switch (t) {
                         case 0:
-                            return c.intl.string(s.Z.BdRXZG);
+                            return l.NW.string(c.Z.BdRXZG);
                         case 1:
-                            return c.intl.string(s.Z.xvgIVF);
+                            return l.NW.string(c.Z.xvgIVF);
                         case 2:
-                            return c.intl.string(s.Z['/F7Z29']);
+                            return l.NW.string(c.Z['/F7Z29']);
                     }
                 })()
             })
