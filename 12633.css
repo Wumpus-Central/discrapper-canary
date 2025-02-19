@@ -55076,6 +55076,7 @@ code {
     --custom-premium-colors-premium-gradient-tier-2-tri-color-vertical: linear-gradient(0deg, var(--premium-tier-2-purple-for-gradients), var(--premium-tier-2-purple-for-gradients-2), var(--premium-tier-2-pink-for-gradients));
     --custom-premium-colors-premium-gradient-tier-2-old: linear-gradient(90deg, var(--premium-tier-2-purple), var(--premium-tier-2-pink));
     --custom-premium-colors-banner-yellow: #ffeaa0;
+    --custom-premium-colors-banner-black: #232428;
     --custom-pending-row-max-width: 1040px;
     --custom-people-page-max-width-with-toolbar: 940px;
     --custom-family-center-page-responsive-width-mobile: 900px;
