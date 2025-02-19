@@ -31,17 +31,17 @@ var r = n(200651),
     E = n(516129),
     S = n(813197),
     T = n(208567),
-    P = n(650774),
-    w = n(496675),
-    R = n(594174),
-    D = n(768581),
-    Z = n(823379),
-    A = n(63063),
-    k = n(434404),
-    W = n(999382),
-    L = n(157176),
-    M = n(760632),
-    U = n(578053),
+    P = n(496675),
+    w = n(594174),
+    R = n(768581),
+    D = n(823379),
+    Z = n(63063),
+    A = n(434404),
+    k = n(999382),
+    W = n(157176),
+    L = n(760632),
+    M = n(578053),
+    U = n(640175),
     G = n(715224),
     B = n(203377),
     F = n(981631),
@@ -82,7 +82,7 @@ function J(e) {
     return e;
 }
 let $ = () => {
-    let { guild: e, originalGuild: t, submitting: n, errors: s } = (0, c.cj)([W.Z], () => W.Z.getProps()),
+    let { guild: e, originalGuild: t, submitting: n, errors: s } = (0, c.cj)([k.Z], () => k.Z.getProps()),
         a = i.useMemo(() => (0, B.LG)(s), [s]),
         l = i.useCallback(() => {
             if (null == e) return;
@@ -105,10 +105,10 @@ let $ = () => {
                 homeHeader: e.homeHeader,
                 profile: e.profile
             };
-            (0, Z.OL)(new Set(e.features), new Set(t.features)) || (n.features = e.features), k.Z.saveGuild(e.id, n);
+            (0, D.OL)(new Set(e.features), new Set(t.features)) || (n.features = e.features), A.Z.saveGuild(e.id, n);
         }, [e, t]),
         o = i.useCallback(() => {
-            null != e && k.Z.init(e.id);
+            null != e && A.Z.init(e.id);
         }, [e]);
     return (0, r.jsx)(p.Z, {
         submitting: n,
@@ -131,20 +131,16 @@ class ee extends i.PureComponent {
         }
     }
     handleNameChange(e) {
-        k.Z.updateGuild({ name: e });
-    }
-    handleDefaultMessageNotificationsChange(e) {
-        let { value: t } = e;
-        k.Z.updateGuild({ defaultMessageNotifications: t });
+        A.Z.updateGuild({ name: e });
     }
     handleSplashChange(e) {
-        k.Z.updateGuild({ splash: e });
+        A.Z.updateGuild({ splash: e });
     }
     handlePremiumProgressBarEnabledChange(e) {
-        k.Z.updateGuild({ premiumProgressBarEnabled: e });
+        A.Z.updateGuild({ premiumProgressBarEnabled: e });
     }
     handleChangeDescription(e) {
-        k.Z.updateGuild({ description: e });
+        A.Z.updateGuild({ description: e });
     }
     renderBaseSettings() {
         let { guild: e, errors: t, canManageGuild: n } = this.props;
@@ -166,7 +162,7 @@ class ee extends i.PureComponent {
                                     disabled: !n,
                                     hint: Y.NW.string(Y.t['6yrpFR']),
                                     makeURL: (t) =>
-                                        D.ZP.getGuildIconURL({
+                                        R.ZP.getGuildIconURL({
                                             id: e.id,
                                             icon: t,
                                             canAnimate: !0,
@@ -244,7 +240,7 @@ class ee extends i.PureComponent {
                             basis: '50%',
                             children: (0, r.jsx)(m.xJW, {
                                 title: Y.NW.string(Y.t.KuYcnZ),
-                                children: (0, r.jsx)(U.g, {
+                                children: (0, r.jsx)(M.g, {
                                     canManageGuild: t,
                                     guildId: e.id,
                                     afkChannelId: e.afkChannelId
@@ -255,7 +251,7 @@ class ee extends i.PureComponent {
                             basis: '50%',
                             children: (0, r.jsx)(m.xJW, {
                                 title: Y.NW.string(Y.t.brhYaW),
-                                children: (0, r.jsx)(M.M, {
+                                children: (0, r.jsx)(L.M, {
                                     canManageGuild: t,
                                     afkTimeout: e.afkTimeout,
                                     afkChannelId: e.afkChannelId
@@ -278,7 +274,7 @@ class ee extends i.PureComponent {
             className: K.divider,
             children: [
                 (0, r.jsx)(m.vwX, { children: Y.NW.string(Y.t.NASFnp) }),
-                (0, r.jsx)(U.u, {
+                (0, r.jsx)(M.u, {
                     canManageGuild: t,
                     guildId: e.id,
                     systemChannelId: e.systemChannelId
@@ -297,18 +293,7 @@ class ee extends i.PureComponent {
         });
     }
     renderNotificationSection() {
-        let { guild: e, canManageGuild: t, guildMemberCount: n } = this.props,
-            i = [
-                {
-                    name: Y.NW.string(Y.t['n/bTaW']),
-                    value: F.bL.ALL_MESSAGES,
-                    desc: null != n && n >= F.qWG ? Y.NW.string(Y.t['L+P4t7']) : null
-                },
-                {
-                    name: Y.NW.format(Y.t.L2hmY2, {}),
-                    value: F.bL.ONLY_MENTIONS
-                }
-            ];
+        let { guild: e, canManageGuild: t } = this.props;
         return (0, r.jsx)('div', {
             ref: this._notificationSectionRef,
             children: (0, r.jsxs)(m.hjN, {
@@ -325,11 +310,10 @@ class ee extends i.PureComponent {
                         className: K.marginBottom20,
                         children: Y.NW.string(Y.t.xdY0pK)
                     }),
-                    (0, r.jsx)(m.FXm, {
-                        options: i,
-                        value: e.defaultMessageNotifications,
-                        disabled: !t,
-                        onChange: this.handleDefaultMessageNotificationsChange
+                    (0, r.jsx)(U.z, {
+                        guildId: e.id,
+                        defaultSettings: e.defaultMessageNotifications,
+                        canManageGuild: t
                     })
                 ]
             })
@@ -369,7 +353,7 @@ class ee extends i.PureComponent {
                           onChange: this.handleConversationSummariesToggle,
                           value: e.hasFeature(F.oNc.SUMMARIES_ENABLED_BY_USER),
                           hideBorder: !0,
-                          note: Y.NW.format(Y.t['c6Cy/v'], { helpdeskArticle: A.Z.getArticleURL(F.BhN.CONVERSATION_SUMMARIES) }),
+                          note: Y.NW.format(Y.t['c6Cy/v'], { helpdeskArticle: Z.Z.getArticleURL(F.BhN.CONVERSATION_SUMMARIES) }),
                           disabled: !t,
                           children: (0, r.jsxs)('div', {
                               className: K.badgedItem,
@@ -395,7 +379,7 @@ class ee extends i.PureComponent {
                 image: e.splash,
                 makeURL: (t) =>
                     null != t
-                        ? D.ZP.getGuildSplashURL({
+                        ? R.ZP.getGuildSplashURL({
                               id: e.id,
                               splash: t
                           })
@@ -439,7 +423,7 @@ class ee extends i.PureComponent {
                                 }),
                                 (0, r.jsx)(m.R94, {
                                     type: m.geA.DESCRIPTION,
-                                    children: Y.NW.format(Y.t.ZYA9PT, { articleURL: A.Z.getArticleURL(F.BhN.GUILD_INVITE_SPLASH) })
+                                    children: Y.NW.format(Y.t.ZYA9PT, { articleURL: Z.Z.getArticleURL(F.BhN.GUILD_INVITE_SPLASH) })
                                 }),
                                 n
                                     ? (0, r.jsxs)(m.zxk, {
@@ -456,7 +440,7 @@ class ee extends i.PureComponent {
                                               })
                                           ]
                                       })
-                                    : (0, r.jsx)(L.e, {
+                                    : (0, r.jsx)(W.e, {
                                           className: K.marginTop16,
                                           onClick: this.handleInviteSplashUpsellButton
                                       })
@@ -489,7 +473,7 @@ class ee extends i.PureComponent {
                 image: e.banner,
                 makeURL: (t) =>
                     null != t
-                        ? D.ZP.getGuildBannerURL(
+                        ? R.ZP.getGuildBannerURL(
                               {
                                   id: e.id,
                                   banner: t
@@ -560,11 +544,11 @@ class ee extends i.PureComponent {
                             }),
                             (0, r.jsx)(m.R94, {
                                 type: m.geA.DESCRIPTION,
-                                children: Y.NW.format(Y.t.vBcWUl, { articleURL: A.Z.getArticleURL(F.BhN.GUILD_BANNER_SPLASH) })
+                                children: Y.NW.format(Y.t.vBcWUl, { articleURL: Z.Z.getArticleURL(F.BhN.GUILD_BANNER_SPLASH) })
                             }),
                             i
                                 ? o
-                                : (0, r.jsx)(L.e, {
+                                : (0, r.jsx)(W.e, {
                                       className: K.marginTop16,
                                       onClick: this.handleBannerUpsellButton
                                   })
@@ -651,7 +635,7 @@ class ee extends i.PureComponent {
             Q(this, '_inviteSectionRef', i.createRef()),
             Q(this, '_notificationSectionRef', i.createRef()),
             Q(this, 'handleIconChange', (e) => {
-                k.Z.updateGuild({ icon: e });
+                A.Z.updateGuild({ icon: e });
             }),
             Q(this, 'handleOpenImageEditingModal', (e, t) => {
                 (0, m.ZDy)(async () => {
@@ -676,7 +660,7 @@ class ee extends i.PureComponent {
             }),
             Q(this, 'handleHomeHeaderChange', (e, t) => {
                 if (null == e || void 0 === t) {
-                    k.Z.updateGuild({ homeHeader: null });
+                    A.Z.updateGuild({ homeHeader: null });
                     return;
                 }
                 (0, m.ZDy)(async () => {
@@ -688,7 +672,7 @@ class ee extends i.PureComponent {
                                 {
                                     imgURI: e,
                                     file: t,
-                                    onCrop: (e) => k.Z.updateGuild({ homeHeader: e }),
+                                    onCrop: (e) => A.Z.updateGuild({ homeHeader: e }),
                                     uploadType: H.pC.HOME_HEADER
                                 },
                                 n
@@ -729,7 +713,7 @@ class ee extends i.PureComponent {
                         return;
                     }
                 }
-                k.Z.updateGuild({ banner: e });
+                A.Z.updateGuild({ banner: e });
             }),
             Q(this, 'handleShowModalUpsell', (e, t, n, r) => {
                 e.preventDefault(), e.stopPropagation();
@@ -774,30 +758,29 @@ class ee extends i.PureComponent {
             Q(this, 'handleConversationSummariesToggle', (e) => {
                 let { guild: t } = this.props,
                     n = new Set(t.features);
-                e ? n.add(F.oNc.SUMMARIES_ENABLED_BY_USER) : n.delete(F.oNc.SUMMARIES_ENABLED_BY_USER), k.Z.updateGuild({ features: n });
+                e ? n.add(F.oNc.SUMMARIES_ENABLED_BY_USER) : n.delete(F.oNc.SUMMARIES_ENABLED_BY_USER), A.Z.updateGuild({ features: n });
             }),
             Q(this, 'handleShowActivityFeedToggle', (e) => {
                 let { guild: t } = this.props,
                     n = new Set(t.features);
-                e ? (n.add(F.oNc.ACTIVITY_FEED_ENABLED_BY_USER), n.delete(F.oNc.ACTIVITY_FEED_DISABLED_BY_USER)) : (n.add(F.oNc.ACTIVITY_FEED_DISABLED_BY_USER), n.delete(F.oNc.ACTIVITY_FEED_ENABLED_BY_USER)), k.Z.updateGuild({ features: n });
+                e ? (n.add(F.oNc.ACTIVITY_FEED_ENABLED_BY_USER), n.delete(F.oNc.ACTIVITY_FEED_DISABLED_BY_USER)) : (n.add(F.oNc.ACTIVITY_FEED_DISABLED_BY_USER), n.delete(F.oNc.ACTIVITY_FEED_ENABLED_BY_USER)), A.Z.updateGuild({ features: n });
             });
     }
 }
 function et() {
-    let { guild: e, errors: t, submitting: n, subsection: s } = (0, c.cj)([W.Z], () => W.Z.getProps()),
+    let { guild: e, errors: t, submitting: n, subsection: s } = (0, c.cj)([k.Z], () => k.Z.getProps()),
         a = (0, h.ZP)(),
         { analyticsLocations: l } = (0, x.ZP)(f.Z.OVERVIEW);
     i.useEffect(() => {
         (0, C.Kw)(y.v6.ANIMATED_GUILD_BANNER_SETTINGS_NEW_PILL);
     }, []);
-    let { canManageGuild: d, isGuildAdmin: u } = (0, c.cj)([w.Z], () => ({
-            canManageGuild: w.Z.can(F.Plq.MANAGE_GUILD, e),
-            isGuildAdmin: w.Z.can(F.Plq.ADMINISTRATOR, e)
+    let { canManageGuild: d, isGuildAdmin: u } = (0, c.cj)([P.Z], () => ({
+            canManageGuild: P.Z.can(F.Plq.MANAGE_GUILD, e),
+            isGuildAdmin: P.Z.can(F.Plq.ADMINISTRATOR, e)
         })),
-        m = (0, c.e7)([P.Z], () => P.Z.getMemberCount(null == e ? void 0 : e.id)),
-        p = (0, j.E)(e),
-        g = (0, c.e7)([R.default], () => R.default.getCurrentUser());
-    return (o()(null != g, 'GuildSettingsOverview: currentUser cannot be undefined'), null == e)
+        m = (0, j.E)(e),
+        p = (0, c.e7)([w.default], () => w.default.getCurrentUser());
+    return (o()(null != p, 'GuildSettingsOverview: currentUser cannot be undefined'), null == e)
         ? null
         : (0, r.jsx)(x.Gt, {
               value: l,
@@ -808,9 +791,8 @@ function et() {
                   guild: e,
                   errors: t,
                   submitting: n,
-                  currentUser: g,
-                  guildMemberCount: m,
-                  isInventoryFeedEnabled: p,
+                  currentUser: p,
+                  isInventoryFeedEnabled: m,
                   theme: a,
                   analyticsLocations: l
               })

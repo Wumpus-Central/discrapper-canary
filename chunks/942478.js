@@ -1,30 +1,33 @@
-n.d(t, { R: () => d });
-var i = n(200651),
-    r = n(192379),
-    l = n(442837),
-    s = n(852860),
-    a = n(434404),
-    o = n(999382),
-    c = n(203377);
-function d() {
-    let { guild: e, submitting: t, errors: n } = (0, l.cj)([o.Z], () => o.Z.getProps()),
-        d = r.useMemo(() => (0, c.LG)(n), [n]),
-        u = r.useCallback(() => {
-            null != e &&
-                a.Z.saveGuild(e.id, {
-                    systemChannelFlags: e.systemChannelFlags,
-                    systemChannelId: e.systemChannelId,
-                    afkChannelId: e.afkChannelId,
-                    afkTimeout: e.afkTimeout
-                });
-        }, [e]),
-        m = r.useCallback(() => {
-            null != e && a.Z.init(e.id);
+n.d(t, { R: () => u }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    s = n(442837),
+    a = n(852860),
+    l = n(823379),
+    o = n(434404),
+    c = n(999382),
+    d = n(203377);
+function u() {
+    let { guild: e, originalGuild: t, submitting: n, errors: u } = (0, s.cj)([c.Z], () => c.Z.getProps()),
+        m = i.useMemo(() => (0, d.LG)(u), [u]),
+        p = i.useCallback(() => {
+            if (null == e) return;
+            let n = {
+                systemChannelFlags: e.systemChannelFlags,
+                systemChannelId: e.systemChannelId,
+                afkChannelId: e.afkChannelId,
+                afkTimeout: e.afkTimeout,
+                defaultMessageNotifications: e.defaultMessageNotifications
+            };
+            (0, l.OL)(new Set(e.features), new Set(t.features)) || (n.features = e.features), o.Z.saveGuild(e.id, n);
+        }, [e, t]),
+        g = i.useCallback(() => {
+            null != e && o.Z.init(e.id);
         }, [e]);
-    return (0, i.jsx)(s.Z, {
-        submitting: t,
-        errorMessage: d,
-        onSave: u,
-        onReset: m
+    return (0, r.jsx)(a.Z, {
+        submitting: n,
+        errorMessage: m,
+        onSave: p,
+        onReset: g
     });
 }

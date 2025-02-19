@@ -1,49 +1,84 @@
-n.d(t, { Z: () => x });
-var i = n(200651);
+n.d(t, { Z: () => N }), n(266796);
+var r = n(200651);
 n(192379);
-var r = n(793030),
-    l = n(442837),
-    s = n(100527),
-    a = n(906732),
-    o = n(496675),
-    c = n(999382),
-    d = n(997698),
-    u = n(335438),
-    m = n(981631),
-    h = n(388032),
-    g = n(3638);
-let x = function () {
-    let { analyticsLocations: e } = (0, a.ZP)(s.Z.GUILD_SETTINGS_ENGAGEMENT_PAGE),
-        t = (0, l.e7)([c.Z], () => c.Z.getProps().guild, []),
-        n = (0, l.e7)([o.Z], () => null != t && o.Z.can(m.Plq.MANAGE_GUILD, t));
+var i = n(793030),
+    s = n(442837),
+    a = n(902840),
+    l = n(100527),
+    o = n(906732),
+    c = n(34586),
+    d = n(496675),
+    u = n(999382),
+    m = n(723914),
+    p = n(30818),
+    g = n(997698),
+    h = n(354031),
+    f = n(335438),
+    b = n(981631),
+    x = n(388032),
+    j = n(877230);
+let N = function () {
+    let { analyticsLocations: e } = (0, o.ZP)(l.Z.GUILD_SETTINGS_ENGAGEMENT_PAGE),
+        t = (0, s.e7)([u.Z], () => u.Z.getProps().guild, []),
+        n = (0, s.e7)([d.Z], () => null != t && d.Z.can(b.Plq.MANAGE_GUILD, t)),
+        N = (0, c.E)(t),
+        v = (0, a.l9)(null != t ? t : void 0);
     return null == t
         ? null
-        : (0, i.jsx)(a.Gt, {
+        : (0, r.jsx)(o.Gt, {
               value: e,
-              children: (0, i.jsxs)('main', {
-                  className: g.container,
+              children: (0, r.jsxs)('main', {
+                  className: j.container,
                   children: [
-                      (0, i.jsxs)('div', {
+                      (0, r.jsxs)('div', {
                           children: [
-                              (0, i.jsx)(r.X6, {
+                              (0, r.jsx)(i.X6, {
                                   variant: 'heading-lg/semibold',
                                   color: 'header-primary',
-                                  children: h.intl.string(h.t['6TAHb2'])
+                                  children: x.NW.string(x.t['6TAHb2'])
                               }),
-                              (0, i.jsx)(r.xv, {
+                              (0, r.jsx)(i.xv, {
                                   variant: 'text-sm/medium',
                                   color: 'header-secondary',
                                   tag: 'p',
-                                  children: h.intl.string(h.t.XCGZFh)
+                                  className: j.description,
+                                  children: x.NW.string(x.t.XCGZFh)
                               })
                           ]
                       }),
-                      (0, i.jsx)(u.l, {
+                      !0 === v &&
+                          (0, r.jsxs)(r.Fragment, {
+                              children: [
+                                  (0, r.jsx)(h.P, {
+                                      canManageGuild: n,
+                                      features: t.features
+                                  }),
+                                  (0, r.jsx)('div', { className: j.divider })
+                              ]
+                          }),
+                      (0, r.jsx)(f.l, {
                           canManageGuild: n,
                           guild: t
                       }),
-                      (0, i.jsx)('div', { className: g.divider }),
-                      (0, i.jsx)(d.L, {
+                      void 0 !== N &&
+                          (0, r.jsxs)(r.Fragment, {
+                              children: [
+                                  (0, r.jsx)('div', { className: j.divider }),
+                                  (0, r.jsx)(m.q, {
+                                      isInventoryFeedEnabled: N,
+                                      canManageGuild: n,
+                                      features: t.features
+                                  })
+                              ]
+                          }),
+                      (0, r.jsx)('div', { className: j.divider }),
+                      (0, r.jsx)(p.z, {
+                          guildId: t.id,
+                          defaultSettings: t.defaultMessageNotifications,
+                          canManageGuild: n
+                      }),
+                      (0, r.jsx)('div', { className: j.divider }),
+                      (0, r.jsx)(g.L, {
                           canManageGuild: n,
                           guild: t
                       })
