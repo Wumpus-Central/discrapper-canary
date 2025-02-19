@@ -1438,6 +1438,7 @@ var T =
     (r.NOTIFY_STREAM_SETTING_UPDATE = 'notify_stream_setting_update'),
     (r.SECURE_FRAMES_TRANSITION = 'secure_frames_transition'),
     (r.MLS_FAILURES = 'mls_failures'),
+    (r.AV_ERROR_REPORTED = 'av_error_reported'),
     (r.VIDEO_SPINNER_SHOWN_V2 = 'video_spinner_shown_v2'),
     (r.VIDEO_TOGGLED = 'video_toggled'),
     (r.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED = 'ios_invalid_token_workaround_triggered'),
