@@ -7,7 +7,7 @@ r(192379);
 var l = r(481060);
 let i = 'collectibles shop product details modal',
     a = (e) => {
-        let { product: t, category: a, analyticsSource: o, analyticsLocations: s, returnRef: c } = e;
+        let { product: t, category: a, analyticsSource: o, analyticsLocations: s, returnRef: c, tab: d } = e;
         (0, l.ZDy)(
             async () => {
                 let { default: e } = await r.e('2026').then(r.bind(r, 702370));
@@ -46,7 +46,8 @@ let i = 'collectibles shop product details modal',
                                 category: a,
                                 analyticsSource: o,
                                 analyticsLocations: s,
-                                returnRef: c
+                                returnRef: c,
+                                tab: d
                             }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))

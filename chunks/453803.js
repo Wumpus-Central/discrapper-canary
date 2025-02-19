@@ -26,6 +26,7 @@ e.exports = {
     titleImage: 'titleImage_c50f62',
     description: 'description_c50f62',
     button: 'button_c50f62',
+    buttonInner: 'buttonInner_c50f62',
     disclaimer: 'disclaimer_c50f62',
     disclaimerLight: 'disclaimerLight_c50f62',
     priceTag: 'priceTag_c50f62',

@@ -1,5 +1,6 @@
 e.exports = {
     shopCard: 'shopCard_c3d04b',
+    cardButtonInner: 'cardButtonInner_c3d04b',
     shopCardDark: 'shopCardDark_c3d04b shopCard_c3d04b',
     shopCardHighlighted: 'shopCardHighlighted_c3d04b',
     shopCardDarkHighlighted: 'shopCardDarkHighlighted_c3d04b',
