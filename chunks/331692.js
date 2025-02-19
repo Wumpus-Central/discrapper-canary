@@ -1,9 +1,11 @@
-n.d(t, { Z: () => r });
+n.d(t, { Z: () => s });
 var i = n(200651);
 n(192379);
 var a = n(481060),
-    l = n(570140);
-let r = {
+    l = n(570140),
+    r = n(103879),
+    o = n(800530);
+let s = {
     open(e) {
         (0, a.ZDy)(
             async () => {
@@ -41,5 +43,14 @@ let r = {
             },
             { onCloseCallback: e }
         );
+    },
+    close() {
+        l.Z.dispatch({ type: 'SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_CLOSE' });
+    },
+    success() {
+        l.Z.dispatch({ type: 'SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_SUBMIT_SUCCESS' });
+    },
+    start_verification_check() {
+        l.Z.dispatch({ type: 'SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_START_POLL' }), setTimeout(() => (0, r._w)(), o.TX);
     }
 };
