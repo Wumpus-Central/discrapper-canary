@@ -11,7 +11,6 @@ e.exports = {
     contentWrapper: 'contentWrapper__98ba8',
     img: 'img__98ba8',
     content: 'content__98ba8',
-    contentInfo: 'contentInfo__98ba8',
     linkIcon: 'linkIcon__98ba8',
     actionWrapper: 'actionWrapper__98ba8',
     alwaysWhiteText: 'alwaysWhiteText__98ba8',

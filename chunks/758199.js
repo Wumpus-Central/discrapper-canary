@@ -61,9 +61,9 @@ function b(e) {
 }
 var v = (((r = {})[(r.BOT = 0)] = 'BOT'), (r[(r.ACTIVITY = 1)] = 'ACTIVITY'), r);
 function y(e) {
-    let { title: t, header: n, info: r, staticBannerSrc: o, videoBannerSrc: v, bannerAspectRatio: y = 0, iconSrc: x, embedUrl: O, actions: E = [] } = e,
-        { primaryColor: j, secondaryColor: N } = (0, u.Z)(null != x ? x : o),
-        C = 'linear-gradient(45deg, '.concat(j, ', ').concat(N, ')'),
+    let { title: t, header: n, info: r, staticBannerSrc: o, videoBannerSrc: v, bannerAspectRatio: y = 0, iconSrc: x, embedUrl: O, actions: j = [] } = e,
+        { primaryColor: E, secondaryColor: N } = (0, u.Z)(null != x ? x : o),
+        C = 'linear-gradient(45deg, '.concat(E, ', ').concat(N, ')'),
         I = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
         S =
             m.wS && null != O
@@ -153,19 +153,16 @@ function y(e) {
                                         lineClamp: 1,
                                         children: t
                                     }),
-                                    (0, i.jsx)('div', {
-                                        className: g.contentInfo,
-                                        children: r
-                                    })
+                                    r
                                 ]
                             }),
                             null == n && S
                         ]
                     }),
-                    E.length > 0 &&
+                    j.length > 0 &&
                         (0, i.jsx)('div', {
                             className: g.actionWrapper,
-                            children: E.map((e, t) => {
+                            children: j.map((e, t) => {
                                 let { label: n, onClick: r, disabledReason: a, submitting: o } = e,
                                     l = null != a,
                                     s = 0 === t,
