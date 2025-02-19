@@ -1,83 +1,84 @@
 n.d(t, {
-    FW: () => N,
-    Kt: () => O,
-    ZC: () => v
+    FW: () => v,
+    Kt: () => N,
+    ZC: () => y
 }),
     n(230036),
     n(47120);
 var r = n(442837),
     i = n(493683),
-    l = n(122613),
-    o = n(983695),
-    a = n(100527),
-    s = n(87005),
-    c = n(895924),
-    u = n(812236),
-    d = n(740492),
-    p = n(973616),
-    h = n(592125),
-    g = n(626135),
-    f = n(823379),
-    m = n(728345),
-    b = n(812206),
-    _ = n(835473),
-    E = n(981631);
-async function O(e, t, n) {
+    l = n(636449),
+    o = n(122613),
+    a = n(983695),
+    s = n(100527),
+    c = n(87005),
+    u = n(895924),
+    d = n(812236),
+    p = n(740492),
+    h = n(973616),
+    g = n(592125),
+    f = n(626135),
+    m = n(823379),
+    b = n(728345),
+    _ = n(812206),
+    E = n(835473),
+    O = n(981631);
+async function N(e, t, n) {
     t(e.id);
     let r = e.bot;
     if (null == r)
         try {
-            var o, s, d;
-            r = null !== (d = null === (o = b.Z.getApplication(e.id)) || void 0 === o ? void 0 : o.bot) && void 0 !== d ? d : null === (s = p.ZP.createFromServer(await (0, m.UM)(e.id))) || void 0 === s ? void 0 : s.bot;
+            var a, c, p;
+            r = null !== (p = null === (a = _.Z.getApplication(e.id)) || void 0 === a ? void 0 : a.bot) && void 0 !== p ? p : null === (c = h.ZP.createFromServer(await (0, b.UM)(e.id))) || void 0 === c ? void 0 : c.bot;
         } catch (e) {
             t(void 0);
             return;
         }
     if (null != r) {
-        let o;
-        let s = null == h.Z.getDMFromUserId(r.id);
+        let a;
+        let c = null == g.Z.getDMFromUserId(r.id);
         try {
-            o = await i.Z.openPrivateChannel([r.id], !1, !1, a.Z.APP_DMS_QUICK_LAUNCHER);
+            a = (0, l.R)() ? await i.Z.getOrEnsurePrivateChannel(r.id) : await i.Z.openPrivateChannel([r.id], !1, !1, s.Z.APP_DMS_QUICK_LAUNCHER);
         } catch (e) {
             t(void 0);
         }
         if (
-            (g.default.track(E.rMx.APP_DMS_QUICK_LAUNCHER_CLICKED, {
+            (f.default.track(O.rMx.APP_DMS_QUICK_LAUNCHER_CLICKED, {
                 application_id: e.id,
-                is_new_dm: s,
-                channel_id: o
+                is_new_dm: c,
+                channel_id: a
             }),
-            null == o)
+            null == a)
         ) {
             t(void 0);
             return;
         }
         try {
-            await (0, u.ZP)(o, e.id);
+            await (0, d.ZP)(a, e.id);
         } catch (e) {
-            if (e.message === u.sV) {
+            if (e.message === d.sV) {
                 t(void 0);
                 return;
             }
         }
-        await (0, l.Z)({
+        await (0, o.Z)({
             targetApplicationId: e.id,
-            channelId: o,
+            channelId: a,
             analyticsLocations: n,
-            commandOrigin: c.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON,
+            commandOrigin: u.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON,
             onExecutedCallback() {
                 t(void 0);
             }
         });
     } else t(void 0);
 }
-function N() {
-    let e = (0, r.e7)([d.ZP], () => d.ZP.showPlayAgain),
-        t = v();
+function v() {
+    let e = (0, r.e7)([p.ZP], () => p.ZP.showPlayAgain),
+        t = y();
     return e && t.length > 0;
 }
-function v() {
-    let e = (0, s.f)({
+function y() {
+    let e = (0, c.f)({
             context: { type: 'contextless' },
             onlyActivityApps: !0,
             allowCommandFetch: !0,
@@ -85,14 +86,14 @@ function v() {
         }).frecentApps,
         t = e.map((e) => e.id).sort(),
         n = new Map(
-            (0, _.Z)(t)
-                .filter(f.lm)
+            (0, E.Z)(t)
+                .filter(m.lm)
                 .map((e) => [e.id, e])
         );
     return e
         .map((e) => n.get(e.id))
         .filter((e) => {
             var t;
-            return (0, o.Z)(null == e ? void 0 : null === (t = e.embeddedActivityConfig) || void 0 === t ? void 0 : t.supported_platforms);
+            return (0, a.Z)(null == e ? void 0 : null === (t = e.embeddedActivityConfig) || void 0 === t ? void 0 : t.supported_platforms);
         });
 }
