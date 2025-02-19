@@ -1,44 +1,47 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => _ });
 var i = n(200651),
     l = n(192379),
-    a = n(331650),
-    r = n(278724),
-    s = n(652844),
-    o = n(747906),
-    c = n(40851),
-    d = n(628581),
-    u = n(861254),
-    h = n(378441),
-    p = n(871499),
-    m = n(981631);
-function f(e) {
-    let { selfMute: t, serverMute: n, suppress: f, centerButton: g = !1, awaitingRemote: _, onMouseEnter: C, onMouseLeave: x, ...v } = e,
-        { mode: E } = (0, u.ZP)({ location: 'MicButton' }),
-        I = t || n || f,
-        b = g ? p.d : p.Z,
-        Z = (0, d.Z)(t, n, f, _, E === u.BK.GroupedButtonsRedMic),
-        N = (0, s.O)(I ? 'unmute' : 'mute'),
-        T = (0, o.P)(I ? 'unmute' : 'mute'),
-        { activeVoice: S } = (0, h.o)(),
-        j = null != S ? T : N,
-        { events: y, play: A } = j;
-    l.useEffect(() => () => A(), [A, I]);
-    let P = j.Component;
-    (0, c.bp)() === m.IlC.POPOUT && (P = I ? r.n : a.S);
-    let R = E === u.BK.GroupedButtonsRedMic && I ? 'red' : void 0,
-        M = E !== u.BK.GroupedButtonsRedMic;
-    return (0, i.jsx)(b, {
-        isActive: !!M && !I,
-        iconComponent: P,
+    a = n(609784),
+    r = n(782877),
+    s = n(331650),
+    o = n(278724),
+    c = n(652844),
+    d = n(747906),
+    u = n(40851),
+    h = n(628581),
+    p = n(861254),
+    m = n(378441),
+    f = n(871499),
+    g = n(981631);
+function _(e) {
+    let { selfMute: t, serverMute: n, suppress: _, centerButton: C = !1, awaitingRemote: x, onMouseEnter: v, onMouseLeave: N, ...E } = e,
+        { mode: I } = (0, p.ZP)({ location: 'MicButton' }),
+        b = t || n || _,
+        Z = C ? f.d : f.Z,
+        T = (0, h.Z)(t, n, _, x, I === p.BK.GroupedButtonsRedMic),
+        S = (0, c.O)(b ? 'unmute' : 'mute'),
+        j = (0, d.P)(b ? 'unmute' : 'mute'),
+        { activeVoice: A } = (0, m.o)(),
+        y = null != A,
+        P = y ? j : S,
+        { events: R, play: M } = P;
+    l.useEffect(() => () => M(), [M, b]);
+    let L = P.Component;
+    (0, u.bp)() === g.IlC.POPOUT && (L = y ? (b ? r.T : a.x) : b ? o.n : s.S);
+    let k = I === p.BK.GroupedButtonsRedMic && b ? 'red' : void 0,
+        O = I !== p.BK.GroupedButtonsRedMic;
+    return (0, i.jsx)(Z, {
+        isActive: !!O && !b,
+        iconComponent: L,
         ignoreColorForCaret: !0,
-        color: R,
-        label: Z,
+        color: k,
+        label: T,
         onMouseEnter: (e) => {
-            null == C || C(e), y.onMouseEnter();
+            null == v || v(e), R.onMouseEnter();
         },
         onMouseLeave: (e) => {
-            null == x || x(e), y.onMouseLeave();
+            null == N || N(e), R.onMouseLeave();
         },
-        ...v
+        ...E
     });
 }
