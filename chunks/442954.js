@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(47120);
+n.d(t, { Z: () => f }), n(230036), n(47120);
 var r = n(200651),
     a = n(192379),
     i = n(120356),
@@ -35,22 +35,32 @@ function x(e) {
     }
     return e;
 }
-function p() {
-    let e = {
-            PremiumSubscriptionAprilMarketingDecoModal: async () => {
-                let { default: e } = await n.e('18327').then(n.bind(n, 731433));
-                return (t) => (0, r.jsx)(e, x({}, t));
-            },
-            CollectiblesExpiryModal: async () => {
-                let { default: e } = await n.e('77370').then(n.bind(n, 83950));
-                return (t) => (0, r.jsx)(e, x({}, t));
-            }
-        },
-        t = Object.keys(e).map((e) => ({
-            label: e,
-            value: e
-        })),
-        [i, p] = a.useState(t[0].value);
+let p = {
+    PremiumSubscriptionAprilMarketingDecoModal: async () => {
+        let { default: e } = await n.e('18327').then(n.bind(n, 731433));
+        return (t) => (0, r.jsx)(e, x({}, t));
+    },
+    PremiumSubscriptionMarketingErrorModal: async () => {
+        let { default: e } = await n.e('76025').then(n.bind(n, 393185));
+        return (t) => (0, r.jsx)(e, x({}, t));
+    },
+    CollectiblesExpiryModal: async () => {
+        let { default: e } = await n.e('77370').then(n.bind(n, 83950));
+        return (t) => (0, r.jsx)(e, x({}, t));
+    }
+};
+function f() {
+    let e = a.useMemo(
+            () =>
+                Object.keys(p)
+                    .map((e) => ({
+                        label: e,
+                        value: e
+                    }))
+                    .sort((e, t) => e.label.localeCompare(t.label)),
+            []
+        ),
+        [t, n] = a.useState(e[0].value);
     return (0, r.jsx)(o.zJl, {
         className: l()(h.panel),
         children: (0, r.jsxs)('div', {
@@ -68,17 +78,14 @@ function p() {
                             children: [
                                 (0, r.jsx)(o.PhF, {
                                     className: m.input,
-                                    options: t,
-                                    isSelected: (e) => i === e,
-                                    placeholder: 'Trial ID',
-                                    serialize: (e) => String(e),
-                                    select: (e) => p(e),
+                                    options: e,
+                                    isSelected: (e) => t === e,
+                                    serialize: (e) => e,
+                                    select: (e) => n(e),
                                     popoutLayerContext: d.O$
                                 }),
                                 (0, r.jsx)(o.zxk, {
-                                    onClick: () => {
-                                        (0, o.ZDy)(e[i]);
-                                    },
+                                    onClick: () => (0, o.ZDy)(p[t]),
                                     children: 'Open'
                                 })
                             ]
