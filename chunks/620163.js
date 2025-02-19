@@ -14,9 +14,9 @@ var i = n(990547),
     p = n(579806),
     h = n(782568),
     f = n(758182),
-    N = n(163379),
-    x = n(703288),
-    b = n(574755),
+    b = n(163379),
+    N = n(703288),
+    x = n(574755),
     _ = n(377171),
     E = n(540059),
     j = n(621628),
@@ -68,9 +68,9 @@ var i = n(990547),
     ep = n(387747),
     eh = n(389650),
     ef = n(649157),
-    eN = n(593648),
-    ex = n(327885),
-    eb = n(595242),
+    eb = n(593648),
+    eN = n(327885),
+    ex = n(595242),
     e_ = n(463153),
     eE = n(36192),
     ej = n(889029),
@@ -485,8 +485,8 @@ let eU = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eB.NW.string(eB.t.z2jK6e)],
                 label: eB.NW.string(eB.t.z2jK6e),
                 ariaLabel: eB.NW.string(eB.t.z2jK6e),
-                icon: eY ? (0, r.jsx)(x.Z, {}) : void 0,
-                element: b.Z,
+                icon: eY ? (0, r.jsx)(N.Z, {}) : void 0,
+                element: x.Z,
                 predicate: () => !eK,
                 url: ek.Z5c.SETTINGS('clips')
             },
@@ -525,7 +525,7 @@ let eU = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: ek.oAB.GUILD_BOOSTING,
                 searchableTitles: [eB.NW.string(eB.t['+CbP2t'])],
                 label: eB.NW.string(eB.t['+CbP2t']),
-                element: eb.Z
+                element: ex.Z
             },
             [ew.s6.SUBSCRIPTIONS]: {
                 section: ek.oAB.SUBSCRIPTIONS,
@@ -1167,7 +1167,7 @@ let eU = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eB.NW.string(eB.t.HcoRu7)],
                 label: eB.NW.string(eB.t.HcoRu7),
                 ariaLabel: eB.NW.string(eB.t.HcoRu7),
-                element: eN.Z,
+                element: eb.Z,
                 url: ek.Z5c.SETTINGS('notifications')
             },
             [ew.s6.NOTIFICATIONS_ENABLE_DESKTOP]: {
@@ -1407,7 +1407,8 @@ let eU = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 label: eB.NW.string(eB.t.Cq98yM),
                 ariaLabel: eB.NW.string(eB.t.Cq98yM),
                 element: et.Z,
-                predicate: () => !eK
+                predicate: () => !eK,
+                url: ek.Z5c.SETTINGS('activity-privacy')
             },
             [ew.s6.ACTIVITY_PRIVACY_STATUS]: {
                 section: eK ? ek.oAB.GAMES : ek.oAB.ACTIVITY_PRIVACY,
@@ -1440,12 +1441,12 @@ let eU = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: ek.oAB.OVERLAY,
                 searchableTitles: [eB.NW.string(eB.t['9cb1U1'])],
                 label: eB.NW.string(eB.t['9cb1U1']),
-                element: ex.Z,
+                element: eN.Z,
                 predicate: () => !eK && ez
             },
             [ew.s6.CHANGELOG]: {
                 section: 'changelog',
-                onClick: () => (0, N.Z)(!0),
+                onClick: () => (0, b.Z)(!0),
                 searchableTitles: [eB.NW.string(eB.t.LRmNAg)],
                 label: eB.NW.string(eB.t.LRmNAg)
             },
