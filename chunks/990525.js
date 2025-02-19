@@ -21,14 +21,14 @@ let b = (e) => {
         y = t.id === a,
         x = !t.available && !t.temporarilyAvailable,
         O = t.temporarilyAvailable && !n && !y,
-        E = !y && t.id === b,
-        [j, N] = i.useState(!1);
+        j = !y && t.id === b,
+        [E, N] = i.useState(!1);
     i.useEffect(() => {
-        let e = E ? setTimeout(() => N(E), 200) : void 0;
+        let e = j ? setTimeout(() => N(j), 200) : void 0;
         return () => {
             clearTimeout(e), N(!1);
         };
-    }, [E]);
+    }, [j]);
     let C = null == v ? void 0 : v.previewSoundURLs,
         [I, S] = i.useState(0),
         { isPlaying: P, playSound: T, stopSound: A, preloadSound: w } = (0, d.Z)(null != C ? C[I] : null, { soundId: t.id }),
@@ -89,16 +89,19 @@ let b = (e) => {
                                 }),
                             O &&
                                 (0, r.jsx)('div', {
-                                    className: o()([_.iconCircle, _.clockCircle]),
-                                    children: (0, r.jsx)(s.T39, {
-                                        size: 'custom',
-                                        height: 16,
-                                        width: 16,
-                                        color: 'currentColor',
-                                        colorClass: _.clockIcon
+                                    className: o()([_.iconCircle, _.iconBorder]),
+                                    children: (0, r.jsx)('div', {
+                                        className: o()([_.clockCircle]),
+                                        children: (0, r.jsx)(s.T39, {
+                                            size: 'custom',
+                                            height: 16,
+                                            width: 16,
+                                            color: 'currentColor',
+                                            colorClass: _.clockIcon
+                                        })
                                     })
                                 }),
-                            j &&
+                            E &&
                                 (0, r.jsx)('div', {
                                     className: _.spinnerWrapper,
                                     children: (0, r.jsx)(s.$jN, {

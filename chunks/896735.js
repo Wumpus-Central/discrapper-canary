@@ -8,6 +8,7 @@ n.r(
         iconCircle: 'iconCircle_ed0705',
         lockedCircle: 'lockedCircle_ed0705',
         clockCircle: 'clockCircle_ed0705',
+        iconBorder: 'iconBorder_ed0705',
         lockedIcon: 'lockedIcon_ed0705',
         clockIcon: 'clockIcon_ed0705',
         hoverButtonCircle: 'hoverButtonCircle_ed0705',
