@@ -1,39 +1,41 @@
-e.d(n, { Z: () => v });
-var i = e(200651),
-    l = e(192379),
-    a = e(481060),
-    o = e(906732),
-    d = e(531301),
-    r = e(171368),
-    s = e(314897),
-    u = e(246946),
-    c = e(626135),
-    g = e(981631),
-    Z = e(228168),
-    f = e(388032);
-function v(t) {
-    let { user: n, guildId: e, channelId: v, context: b } = t,
-        { id: h } = n,
-        { loading: m, note: x } = (0, d.Z)(h),
-        p = !m && null != x && x.length > 0,
-        I = b === g.IlC.POPOUT || b === g.IlC.OVERLAY,
-        _ = l.useContext(c.AnalyticsContext),
-        { analyticsLocations: A } = (0, o.ZP)();
-    return h === s.default.getId() || u.Z.hidePersonalInformation || I
+n.d(t, { Z: () => v });
+var i = n(200651),
+    l = n(192379),
+    r = n(481060),
+    o = n(906732),
+    a = n(748545),
+    u = n(531301),
+    s = n(171368),
+    c = n(314897),
+    d = n(246946),
+    f = n(626135),
+    g = n(981631),
+    b = n(228168),
+    Z = n(388032);
+function v(e) {
+    let { user: t, guildId: n, channelId: v, context: p } = e,
+        { id: N } = t,
+        { loading: O, note: m } = (0, u.Z)(N),
+        y = !O && null != m && m.length > 0,
+        h = p === g.IlC.POPOUT || p === g.IlC.OVERLAY,
+        j = l.useContext(f.AnalyticsContext),
+        { analyticsLocations: P } = (0, o.ZP)(),
+        W = (0, a.kc)({ location: 'useAddNoteItem' });
+    return N === c.default.getId() || d.Z.hidePersonalInformation || h
         ? null
-        : (0, i.jsx)(a.sNh, {
+        : (0, i.jsx)(r.sNh, {
               id: 'note',
-              label: m ? f.intl.string(f.t['WLKx//']) : p ? f.intl.string(f.t.sHHsOD) : f.intl.string(f.t.Dglxra),
+              label: O ? Z.NW.string(Z.t['WLKx//']) : y ? (W ? Z.NW.string(Z.t['gs+qcH']) : Z.NW.string(Z.t.sHHsOD)) : W ? Z.NW.string(Z.t['1ZZttr']) : Z.NW.string(Z.t.Dglxra),
               action: () => {
-                  (0, r.openUserProfileModal)({
-                      userId: n.id,
-                      section: Z.oh.USER_INFO,
-                      subsection: Z.Tb.NOTE,
-                      guildId: e,
+                  (0, s.openUserProfileModal)({
+                      userId: t.id,
+                      section: b.oh.USER_INFO,
+                      subsection: b.Tb.NOTE,
+                      guildId: n,
                       channelId: v,
-                      sourceAnalyticsLocations: A,
-                      analyticsLocation: _.location,
-                      appContext: b
+                      sourceAnalyticsLocations: P,
+                      analyticsLocation: j.location,
+                      appContext: p
                   });
               }
           });
