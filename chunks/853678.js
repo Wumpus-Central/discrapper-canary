@@ -23,9 +23,27 @@ var r = n(45792),
 let I = new Set([v.Fu, v.JT]),
     C = new Set(['www.nytimes.com', 'apps.apple.com', 'play.google.com']),
     S = new Map([
-        [y.Vt, C],
-        [y.fd, C],
-        [y.He, C]
+        [
+            y.Vt,
+            {
+                trustedHosts: C,
+                trustedUntilEpochMs: new Date('2027-01-15T00:00:00').valueOf()
+            }
+        ],
+        [
+            y.fd,
+            {
+                trustedHosts: C,
+                trustedUntilEpochMs: new Date('2027-01-15T00:00:00').valueOf()
+            }
+        ],
+        [
+            y.He,
+            {
+                trustedHosts: C,
+                trustedUntilEpochMs: new Date('2027-01-15T00:00:00').valueOf()
+            }
+        ]
     ]),
     T = {
         [N.Etm.OPEN_EXTERNAL_LINK]: {
@@ -50,7 +68,7 @@ let I = new Set([v.Fu, v.JT]),
                         i = d.Z.getApplication(null == r ? void 0 : r.applicationId),
                         c = (0, u.pY)(null == r ? void 0 : r.location),
                         h = (null == i ? void 0 : i.id) !== void 0 ? S.get(i.id) : void 0;
-                    if (null == h ? void 0 : h.has(e.host)) return (0, l.Z)(t), Promise.resolve({ opened: !0 });
+                    if (void 0 !== h && h.trustedUntilEpochMs >= Date.now() && h.trustedHosts.has(e.host)) return (0, l.Z)(t), Promise.resolve({ opened: !0 });
                     return new Promise((e) =>
                         (0, g.q)(
                             {
