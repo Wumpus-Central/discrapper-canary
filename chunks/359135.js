@@ -1,11 +1,8 @@
-n.d(t, {
-    QY: () => r,
-    vs: () => i
-});
-let i = Object.values({
+n.d(t, { vs: () => r });
+let r = Object.values({
     crimson: {
         darkBackground: '#900007',
-        lightBackground: '#893A99',
+        lightBackground: '#E7040F',
         name: 'crimson'
     },
     berry: {
@@ -49,6 +46,3 @@ let i = Object.values({
         name: 'clover'
     }
 });
-var r = (function (e) {
-    return (e.Memberlist = 'Memberlist'), (e.PrivateChannel = 'PrivateChannel'), e;
-})({});

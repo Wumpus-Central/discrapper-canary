@@ -1,8 +1,8 @@
 a.d(e, { rMx: () => T }), a(47120), a(743606);
 var r,
     n = a(512722),
-    _ = a.n(n),
-    o = a(674746);
+    o = a.n(n),
+    _ = a(674746);
 a(722770), a(106351), a(470167), a(388123);
 var i = a(275726),
     c = a(866442),
@@ -1105,8 +1105,8 @@ let A = Object.freeze({
         IOS: 'https://itunes.apple.com/app/discord/id985746746',
         ANDROID: 'https://play.google.com/store/apps/details?id=com.discord'
     });
-let p = (0, c._i)(o.Z.BRAND_500);
-_()(null != p, 'Brand color could not be parsed'),
+let p = (0, c._i)(_.Z.BRAND_500);
+o()(null != p, 'Brand color could not be parsed'),
     Object.freeze({
         0: 0,
         1: 2,
@@ -1295,6 +1295,7 @@ var T =
     (r.ACTIVITY_SESSION_JOINED = 'activity_session_joined'),
     (r.ACTIVITY_SESSION_JOIN_FAILED = 'activity_session_join_failed'),
     (r.ACTIVITY_SESSION_LEFT = 'activity_session_left'),
+    (r.ACTIVITY_INTERACTION_CALLBACK_ERROR = 'activity_interaction_callback_error'),
     (r.ACTIVITY_VOICE_CONTROLS_TOGGLE_BUTTON_PRESSED = 'activity_voice_controls_toggle_button_pressed'),
     (r.ACTIVITY_VOICE_CONTROLS_TOGGLE_MOVED = 'activity_voice_controls_toggle_moved'),
     (r.ACTIVITY_WEB_VIEW_CONTENT_PROCESS_TERMINATED = 'activity_web_view_content_process_terminated'),

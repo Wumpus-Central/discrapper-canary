@@ -1,51 +1,36 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => u });
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(614185),
-    l = n(359135),
-    u = n(4242),
-    c = n(939314);
-function d(e) {
-    let { children: t, nameplate: n, hover: a, selected: d, placement: f } = e,
-        _ = (0, o.D)('Nameplate'),
-        p = (0, i.useMemo)(() => ((a || d) && (null == n ? void 0 : n.animatedSrc) != null ? (null == n ? void 0 : n.animatedSrc) : null == n ? void 0 : n.src), [a, d, n]),
-        h = (0, u.p)(n, a, d);
-    return null != n && _ && null != p
-        ? (0, r.jsxs)('div', {
-              className: s()(c.container, {
-                  [c.memberslist]: f === l.QY.Memberlist,
-                  [c.privateChannel]: f === l.QY.PrivateChannel,
-                  [c.account]: f === l.QY.Account
-              }),
-              children: [
-                  null != h.borderColor &&
-                      (0, r.jsx)('div', {
-                          style: { borderColor: h.borderColor },
-                          className: c.borderLayer
+    o = n(120356),
+    a = n.n(o),
+    s = n(614185),
+    l = n(4242),
+    c = n(513402);
+function u(e) {
+    let { nameplate: t, hovered: n, selected: o } = e,
+        u = (0, s.D)('Nameplate'),
+        d = i.useMemo(() => ((n || o) && (null == t ? void 0 : t.animatedSrc) != null ? (null == t ? void 0 : t.animatedSrc) : null == t ? void 0 : t.src), [n, o, t]),
+        f = (0, l.p)(t, n, o);
+    return null != t && u && null != d
+        ? (0, r.jsx)('div', {
+              className: c.container,
+              children: (0, r.jsx)('div', {
+                  className: a()(c.nameplateContainer, { [c.border]: null != f.borderColor }),
+                  style: {
+                      borderColor: f.borderColor,
+                      background: f.background
+                  },
+                  children: (0, r.jsx)('img', {
+                      className: a()(c.img, {
+                          [c.hover]: n,
+                          [c.selected]: o
                       }),
-                  null != h.background &&
-                      (0, r.jsx)('div', {
-                          style: { background: h.background },
-                          className: c.gradientLayer
-                      }),
-                  (0, r.jsx)('div', {
-                      className: c.imgLayer,
-                      children: (0, r.jsx)('img', {
-                          className: s()(c.img, {
-                              [c.hover]: a,
-                              [c.selected]: d
-                          }),
-                          src: p,
-                          alt: n.imgAlt
-                      })
-                  }),
-                  (0, r.jsx)('div', {
-                      className: c.content,
-                      children: t
+                      src: d,
+                      alt: t.imgAlt,
+                      height: '100%',
+                      width: 'auto'
                   })
-              ]
+              })
           })
-        : (0, r.jsx)(r.Fragment, { children: t });
+        : null;
 }

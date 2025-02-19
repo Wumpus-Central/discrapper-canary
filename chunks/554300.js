@@ -1,12 +1,13 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => g });
 var r = n(200651),
     i = n(192379),
     o = n(120356),
     a = n.n(o),
     s = n(568611),
     l = n(481060),
-    c = n(993556);
-function u(e, t, n) {
+    c = n(516817),
+    u = n(993556);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +20,7 @@ function u(e, t, n) {
         e
     );
 }
-function d(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -30,12 +31,12 @@ function d(e) {
                 })
             )),
             r.forEach(function (t) {
-                u(e, t, n[t]);
+                d(e, t, n[t]);
             });
     }
     return e;
 }
-function f(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -47,29 +48,29 @@ function f(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function _(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = h(e, t);
+        i = m(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -78,107 +79,117 @@ function h(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let m = i.forwardRef(function (e, t) {
+let g = i.forwardRef(function (e, t) {
     var n,
-        { avatar: i, name: o, children: u, subText: f, decorators: h, onClick: m, selected: g, muted: E, to: v, avatarClassName: b, selectedClassName: y, innerClassName: O, wrapContent: S, highlighted: I, focusProps: T } = e,
-        N = _(e, ['avatar', 'name', 'children', 'subText', 'decorators', 'onClick', 'selected', 'muted', 'to', 'avatarClassName', 'selectedClassName', 'innerClassName', 'wrapContent', 'highlighted', 'focusProps']);
-    (N.className = a()(N.className, c.container, {
-        [c.selected]: g,
-        [c.highlighted]: I,
-        [c.active]: g,
-        [null != y ? y : '']: g,
-        [c.clickable]: !g && (null != v || null != m)
+        { avatar: i, name: o, nameplate: d, children: p, subText: m, decorators: g, onClick: E, hovered: v, selected: b, muted: y, to: O, avatarClassName: S, selectedClassName: I, innerClassName: T, wrapContent: N, highlighted: A, focusProps: C } = e,
+        R = h(e, ['avatar', 'name', 'nameplate', 'children', 'subText', 'decorators', 'onClick', 'hovered', 'selected', 'muted', 'to', 'avatarClassName', 'selectedClassName', 'innerClassName', 'wrapContent', 'highlighted', 'focusProps']);
+    (R.className = a()(R.className, u.container, {
+        [u.selected]: b,
+        [u.highlighted]: A,
+        [u.active]: b,
+        [null != I ? I : '']: b,
+        [u.clickable]: !b && (null != O || null != E)
     })),
-        (N['aria-selected'] = null !== (n = N['aria-selected']) && void 0 !== n ? n : g);
-    let A = (0, r.jsxs)('div', {
-        className: a()(O, c.layout, {
-            [c.muted]: !g && E,
-            [c.wrappedLayout]: S
-        }),
+        (R['aria-selected'] = null !== (n = R['aria-selected']) && void 0 !== n ? n : b);
+    let P = (0, r.jsxs)('div', {
+        className: a()(u.childContainer, { [u.nameplated]: null != d }),
         children: [
-            (0, r.jsx)('div', {
-                className: a()(c.avatar, b),
-                children: i
+            (0, r.jsx)(c.Z, {
+                nameplate: d,
+                hovered: v,
+                selected: b
             }),
             (0, r.jsxs)('div', {
-                className: c.content,
+                className: a()(T, u.layout, {
+                    [u.muted]: !b && y,
+                    [u.wrappedLayout]: N
+                }),
                 children: [
+                    (0, r.jsx)('div', {
+                        className: a()(u.avatar, S),
+                        children: i
+                    }),
                     (0, r.jsxs)('div', {
-                        className: c.nameAndDecorators,
+                        className: u.content,
                         children: [
-                            (0, r.jsx)('div', {
-                                className: a()(c.name, { [c.wrappedName]: S }),
-                                children: o
+                            (0, r.jsxs)('div', {
+                                className: u.nameAndDecorators,
+                                children: [
+                                    (0, r.jsx)('div', {
+                                        className: a()(u.name, { [u.wrappedName]: N }),
+                                        children: o
+                                    }),
+                                    g
+                                ]
                             }),
-                            h
+                            null != m
+                                ? (0, r.jsx)('div', {
+                                      className: u.subText,
+                                      children: m
+                                  })
+                                : null
                         ]
                     }),
-                    null != f
+                    null != p
                         ? (0, r.jsx)('div', {
-                              className: c.subText,
-                              children: f
+                              className: u.children,
+                              children: p
                           })
                         : null
                 ]
-            }),
-            null != u
-                ? (0, r.jsx)('div', {
-                      className: c.children,
-                      children: u
-                  })
-                : null
+            })
         ]
     });
-    return null != v
+    return null != O
         ? (0, r.jsx)(
               l.tEY,
-              p(d({}, T), {
+              _(f({}, C), {
                   children: (0, r.jsx)(
                       s.rU,
-                      p(
-                          d(
+                      _(
+                          f(
                               {
-                                  to: v,
-                                  onClick: m
+                                  to: O,
+                                  onClick: E
                               },
-                              N
+                              R
                           ),
                           {
                               role: 'listitem',
                               ref: t,
-                              children: A
+                              children: P
                           }
                       )
                   )
               })
           )
-        : null != m
+        : null != E
           ? (0, r.jsx)(
                 l.P3F,
-                p(
-                    d(
+                _(
+                    f(
                         {
-                            onClick: m,
-                            focusProps: T
+                            onClick: E,
+                            focusProps: C
                         },
-                        N
+                        R
                     ),
                     {
                         role: 'listitem',
                         innerRef: t,
-                        children: A
+                        children: P
                     }
                 )
             )
           : (0, r.jsx)(
                 l.tEY,
-                p(d({}, T), {
+                _(f({}, C), {
                     children: (0, r.jsx)(
                         'div',
-                        p(d({}, N), {
+                        _(f({}, R), {
                             role: 'listitem',
                             ref: t,
-                            children: A
+                            children: P
                         })
                     )
                 })
