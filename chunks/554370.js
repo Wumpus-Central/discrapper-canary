@@ -20,9 +20,9 @@ var i = n(200651),
     y = n(131951),
     E = n(944486),
     x = n(556296),
-    S = n(808506),
-    C = n(237997),
-    I = n(451478),
+    I = n(808506),
+    S = n(237997),
+    C = n(451478),
     j = n(585483),
     w = n(358085),
     Z = n(13140),
@@ -172,15 +172,15 @@ function el(e) {
             hasZeroSizeDimension: j,
             keybind: w
         } = (0, a.cj)(
-            [z.ZP, C.Z, I.Z, x.ZP],
+            [z.ZP, S.Z, C.Z, x.ZP],
             () => {
-                let e = I.Z.windowSize((0, P.ZY)(n)),
+                let e = C.Z.windowSize((0, P.ZY)(n)),
                     t = x.ZP.getOverlayKeybind(),
                     i = (0, N.QF)();
                 return {
                     locked: z.ZP.isInputLocked(i),
-                    focused: i === N.Js ? C.Z.isFocused(i) : z.ZP.isFocused((0, N.QF)()),
-                    incompatibleApp: C.Z.incompatibleApp,
+                    focused: i === N.Js ? S.Z.isFocused(i) : z.ZP.isFocused((0, N.QF)()),
+                    incompatibleApp: S.Z.incompatibleApp,
                     hasZeroSizeDimension: 0 === e.height || 0 === e.width,
                     keybind: null != t ? (0, Z.BB)(t.shortcut, !0) : '???'
                 };
@@ -235,7 +235,7 @@ function el(e) {
                 var i;
                 if (!x || e.current) return;
                 e.current = !0;
-                let r = null !== (i = S.Z.getFocusedPID()) && void 0 !== i ? i : (0, N.QF)();
+                let r = null !== (i = I.Z.getFocusedPID()) && void 0 !== i ? i : (0, N.QF)();
                 if (M.default.hasChangedRenderMode(r)) return;
                 let l = [{ type: B.nc.WELCOME }];
                 c && u
@@ -303,7 +303,8 @@ function el(e) {
                                                   focused: u
                                               }),
                                           (0, i.jsx)(A.Z, {}),
-                                          (0, i.jsx)(R.Z, { locked: o })
+                                          (0, i.jsx)(R.Z, { locked: o }),
+                                          (0, i.jsx)(c.Ixi, {})
                                       ]
                                   })
                           })
