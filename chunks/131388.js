@@ -1,16 +1,20 @@
 n.d(t, { Z: () => a }), n(47120);
-var i = n(192379),
-    r = n(40851);
+var r = n(192379),
+    i = n(40851);
 function a(e) {
-    let { renderWindow: t } = (0, i.useContext)(r.ZP),
-        [n, a] = (0, i.useState)(() => t.matchMedia(e).matches);
+    let { renderWindow: t } = (0, r.useContext)(i.ZP),
+        [n, a] = (0, r.useState)(() => {
+            var n, r;
+            return null !== (r = null === (n = t.matchMedia(e)) || void 0 === n ? void 0 : n.matches) && void 0 !== r && r;
+        });
     return (
-        (0, i.useEffect)(() => {
+        (0, r.useEffect)(() => {
             let n = t.matchMedia(e),
-                i = (e) => {
-                    a(null == e ? void 0 : e.matches);
+                r = (e) => {
+                    var t;
+                    a(null !== (t = null == e ? void 0 : e.matches) && void 0 !== t && t);
                 };
-            return i(n), n.addListener(i), () => n.removeListener(i);
+            return r(n), null == n || n.addListener(r), () => (null == n ? void 0 : n.removeListener(r));
         }, [e, t]),
         n
     );

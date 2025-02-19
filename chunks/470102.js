@@ -5,8 +5,6 @@ e.exports = {
     overlayActive: 'overlayActive_eb35c5',
     overlayLocked: 'overlayLocked_eb35c5',
     closeContainer: 'closeContainer_eb35c5',
-    invalidContainer: 'invalidContainer_eb35c5',
-    inactiveContainer: 'inactiveContainer_eb35c5',
     layoutLocked: 'layoutLocked_eb35c5',
     layoutUnlocked: 'layoutUnlocked_eb35c5 layoutLocked_eb35c5'
 };
