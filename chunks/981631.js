@@ -2007,6 +2007,7 @@ var T =
     (r.APP_DIRECTORY_PAGE_SCROLLED = 'app_directory_page_scrolled'),
     (r.APP_DIRECTORY_INSTALL_CLICKED = 'app_directory_install_clicked'),
     (r.APP_DIRECTORY_LAUNCH_CLICKED = 'app_directory_launch_clicked'),
+    (r.APP_DIRECTORY_MANAGE_APP_CLICKED = 'app_directory_manage_app_clicked'),
     (r.POPULAR_CHANNEL_CLICKED = 'popular_channel_clicked'),
     (r.URL_CLICKED = 'url_clicked'),
     (r.LINK_CLICKED = 'link_clicked'),

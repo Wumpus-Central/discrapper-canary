@@ -1,4 +1,4 @@
-e.exports = {
+var r = {
     authedApp: 'authedApp__50a54',
     authedAppV2: 'authedAppV2__50a54',
     header: 'header__50a54',
@@ -30,3 +30,4 @@ e.exports = {
     link: 'link__50a54',
     footer: 'footer__50a54'
 };
+e.exports = r;

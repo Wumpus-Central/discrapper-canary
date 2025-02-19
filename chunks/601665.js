@@ -111,7 +111,8 @@ function R(e) {
                             children: (0, r.jsx)(E.Z, {
                                 user: t,
                                 guildId: A,
-                                viewProfileItem: H()
+                                viewProfileItem: H(),
+                                onCloseProfile: D
                             })
                         }),
                         (0, r.jsxs)('header', {

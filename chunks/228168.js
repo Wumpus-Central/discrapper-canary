@@ -1,29 +1,29 @@
 n.d(t, {
     P: () => f,
-    Tb: () => s,
+    Tb: () => a,
     cm: () => l,
-    jC: () => c,
+    jC: () => u,
     n_: () => d,
-    oh: () => a,
-    vB: () => r,
-    y0: () => o,
-    yM: () => u
+    oh: () => o,
+    vB: () => i,
+    y0: () => s,
+    yM: () => c
 });
-var i = n(981631);
-let r = 300;
-var a = (function (e) {
+var r = n(981631);
+let i = 300;
+var o = (function (e) {
         return (e.USER_INFO = 'USER_INFO'), (e.BOT_INFO = 'BOT_INFO'), (e.ACTIVITY = 'ACTIVITY'), (e.MUTUAL_GUILDS = 'MUTUAL_GUILDS'), (e.MUTUAL_FRIENDS = 'MUTUAL_FRIENDS'), (e.BOT_DATA_ACCESS = 'BOT_DATA_ACCESS'), e;
     })({}),
-    s = (function (e) {
+    a = (function (e) {
         return (e.ROLES = 'ROLES'), (e.CONNECTIONS = 'CONNECTIONS'), (e.NOTE = 'NOTE'), (e.RECENT_ACTIVITY = 'RECENT_ACTIVITY'), e;
     })({}),
-    o = (function (e) {
+    s = (function (e) {
         return (e.BITE_SIZE = 'BITE_SIZE'), (e.FULL_SIZE = 'FULL_SIZE'), (e.PANEL = 'PANEL'), e;
     })({}),
     l = (function (e) {
         return (e[(e.NICKNAME = 0)] = 'NICKNAME'), (e[(e.PRONOUNS = 1)] = 'PRONOUNS'), (e[(e.AVATAR = 2)] = 'AVATAR'), (e[(e.ANIMATED_AVATAR = 3)] = 'ANIMATED_AVATAR'), (e[(e.BANNER = 4)] = 'BANNER'), (e[(e.ANIMATED_BANNER = 5)] = 'ANIMATED_BANNER'), (e[(e.BIO = 6)] = 'BIO'), (e[(e.THEME = 7)] = 'THEME'), (e[(e.AVATAR_DECORATION = 8)] = 'AVATAR_DECORATION'), (e[(e.PROFILE_EFFECT = 9)] = 'PROFILE_EFFECT'), e;
     })({}),
-    u = (function (e) {
+    c = (function (e) {
         return (
             (e.VIEW = 'VIEW'),
             (e.SEND_MESSAGE = 'SEND_MESSAGE'),
@@ -118,12 +118,13 @@ var a = (function (e) {
             (e.IGNORE_GAME_FRIEND_REQUEST = 'IGNORE_GAME_FRIEND_REQUEST'),
             (e.RING = 'RING'),
             (e.STOP_RINGING = 'STOP_RINGING'),
+            (e.MANAGE_APP = 'MANAGE_APP'),
             e
         );
     })({});
-function c(e) {
+function u(e) {
     let { API_ENDPOINT: t, CDN_HOST: n } = window.GLOBAL_ENV;
-    return null != n ? ''.concat(location.protocol, '//').concat(n, '/badge-icons/').concat(e, '.png') : ''.concat(location.protocol).concat(t).concat(i.ANM.BADGE_ICON(e));
+    return null != n ? ''.concat(location.protocol, '//').concat(n, '/badge-icons/').concat(e, '.png') : ''.concat(location.protocol).concat(t).concat(r.ANM.BADGE_ICON(e));
 }
 var d = (function (e) {
         return (e.ACTIVITY = 'ACTIVITY'), (e.AVATAR = 'AVATAR'), (e.STATUS = 'STATUS'), e;

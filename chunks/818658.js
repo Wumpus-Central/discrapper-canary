@@ -1,5 +1,1 @@
-var r = {
-    containerTop: 'containerTop__45edc',
-    containerBottom: 'containerBottom__45edc'
-};
-e.exports = r;
+e.exports = '/assets/ffd6580081b1c5da.svg';
