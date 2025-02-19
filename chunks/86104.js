@@ -1,7 +1,7 @@
-let r, n, a, s, o, u, c, h, l;
+let n, r, a, s, o, h, l, u, c;
 i.d(e, {
     Z: () => p,
-    j: () => m
+    j: () => f
 }),
     i(66153),
     i(970173),
@@ -13,29 +13,31 @@ i.d(e, {
     i(744285),
     i(492257),
     i(873817),
+    i(610885),
+    i(126298),
     i(411104);
-var f = i(512722),
-    d = i.n(f);
-let m = (0, i(170830).G)(async () => {
-    let t = await Promise.all([i.e('91789'), i.e('43903')]).then(i.bind(i, 241441)),
+var d = i(512722),
+    m = i.n(d);
+let f = (0, i(170830).G)(async () => {
+    let t = await Promise.all([i.e('49670'), i.e('43903')]).then(i.bind(i, 241441)),
         e = await t.default();
-    (a = e.cwrap('lottie_create', 'number', ['string'])), (s = e._lottie_destroy), (o = e._lottie_draw_into_bgra), (u = e._lottie_draw_into_rgba), (c = e._lottie_frame_count), (h = e._lottie_frame_rate), (l = e._memory_create), (r = e), (n = l(409600));
+    (a = e.cwrap('lottie_create', 'number', ['string'])), (s = e._lottie_destroy), (o = e._lottie_draw_into_bgra), (h = e._lottie_draw_into_rgba), (l = e._lottie_frame_count), (u = e._lottie_frame_rate), (c = e._memory_create), (n = e), (r = c(409600));
 });
 function v(t, e) {
-    return new Uint8ClampedArray(r.HEAPU8.buffer, n, t * e * 4);
+    return new Uint8ClampedArray(n.HEAPU8.buffer, r, t * e * 4);
 }
 class p {
     get fps() {
-        return h(this.native);
+        return u(this.native);
     }
     get frames() {
-        return c(this.native);
+        return l(this.native);
     }
     get_bgra(t, e, i) {
-        return d()(e <= 320, 'width exceeds static allocation.'), d()(i <= 320, 'height exceeds static allocation.'), o(this.native, n, t, e, i), v(e, i);
+        return m()(e <= 320, 'width exceeds static allocation.'), m()(i <= 320, 'height exceeds static allocation.'), o(this.native, r, t, e, i), v(e, i);
     }
     get_rgba(t, e, i) {
-        return d()(e <= 320, 'width exceeds static allocation.'), d()(i <= 320, 'height exceeds static allocation.'), u(this.native, n, t, e, i), v(e, i);
+        return m()(e <= 320, 'width exceeds static allocation.'), m()(i <= 320, 'height exceeds static allocation.'), h(this.native, r, t, e, i), v(e, i);
     }
     drop() {
         s(this.native);

@@ -1,106 +1,156 @@
-n.d(e, {
-    NQ: () => S,
-    U1: () => T,
-    XW: () => o,
-    _J: () => c,
-    aP: () => s,
+n.d(t, {
+    NQ: () => f,
+    U1: () => g,
+    XW: () => d,
+    _J: () => S,
+    aP: () => O,
     e7: () => _,
     h6: () => A,
-    oE: () => a,
+    oE: () => s,
     pB: () => E,
-    y: () => O,
-    yS: () => f
+    y: () => N,
+    yS: () => T
 });
 var i = n(15729),
-    l = n(524437),
-    r = n(695346);
-let u = {
+    r = n(524437),
+    l = n(695346);
+function u(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            i = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (i = i.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            i.forEach(function (t) {
+                var i;
+                (i = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: i,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = i);
+            });
+    }
+    return e;
+}
+function o(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var i = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, i);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let a = {
     nickname: void 0,
-    dmsAllowed: !r.iG.getSetting(),
+    dmsAllowed: !l.iG.getSetting(),
     mutedServer: !1
 };
-function d(t) {
-    let e = r.Wz.getSetting();
-    return e !== l.E5.ON && (e !== l.E5.ON_FOR_LARGE_GUILDS || null == t || !(t > 200));
+function c(e) {
+    let t = l.Wz.getSetting();
+    return t !== r.E5.ON && (t !== r.E5.ON_FOR_LARGE_GUILDS || null == e || !(e > 200));
 }
-let o = (0, i.U)((t) => ({
-        nickname: u.nickname,
-        dmsAllowed: u.dmsAllowed,
+let d = (0, i.U)((e) => ({
+        nickname: a.nickname,
+        dmsAllowed: a.dmsAllowed,
         showActivity: !0,
-        mutedServer: u.mutedServer,
+        mutedServer: a.mutedServer,
         inviteCode: void 0,
         guildId: void 0,
         touched: !1,
-        setNickname: (e) =>
-            t((t) => ({
-                ...t,
-                nickname: e,
-                touched: !0
-            })),
-        setDmsAllowed: (e) =>
-            t((t) => ({
-                ...t,
-                dmsAllowed: e,
-                touched: !0
-            })),
-        setShowActivity: (e) =>
-            t((t) => ({
-                ...t,
-                showActivity: e,
-                touched: !0
-            })),
-        setMutedServer: (e) =>
-            t((t) => ({
-                ...t,
-                mutedServer: e,
-                touched: !0
-            })),
-        setInviteCode: (e) =>
-            t((t) => ({
-                ...t,
-                inviteCode: e,
-                touched: !0
-            })),
-        setGuildId: (e) =>
-            t((t) => ({
-                ...t,
-                guildId: e,
-                touched: !0
-            })),
-        initialize: (e) =>
-            t((t) => ({
-                ...t,
-                guildSize: e,
-                showActivity: d(e),
-                dmsAllowed: !r.iG.getSetting(),
-                touched: !1
-            })),
+        setNickname: (t) =>
+            e((e) =>
+                o(u({}, e), {
+                    nickname: t,
+                    touched: !0
+                })
+            ),
+        setDmsAllowed: (t) =>
+            e((e) =>
+                o(u({}, e), {
+                    dmsAllowed: t,
+                    touched: !0
+                })
+            ),
+        setShowActivity: (t) =>
+            e((e) =>
+                o(u({}, e), {
+                    showActivity: t,
+                    touched: !0
+                })
+            ),
+        setMutedServer: (t) =>
+            e((e) =>
+                o(u({}, e), {
+                    mutedServer: t,
+                    touched: !0
+                })
+            ),
+        setInviteCode: (t) =>
+            e((e) =>
+                o(u({}, e), {
+                    inviteCode: t,
+                    touched: !0
+                })
+            ),
+        setGuildId: (t) =>
+            e((e) =>
+                o(u({}, e), {
+                    guildId: t,
+                    touched: !0
+                })
+            ),
+        initialize: (t) =>
+            e((e) =>
+                o(u({}, e), {
+                    guildSize: t,
+                    showActivity: c(t),
+                    dmsAllowed: !l.iG.getSetting(),
+                    touched: !1
+                })
+            ),
         reset: () =>
-            t((t) => ({
-                nickname: u.nickname,
-                dmsAllowed: u.dmsAllowed,
-                showActivity: d(t.guildSize),
-                mutedServer: u.mutedServer,
+            e((e) => ({
+                nickname: a.nickname,
+                dmsAllowed: a.dmsAllowed,
+                showActivity: c(e.guildSize),
+                mutedServer: a.mutedServer,
                 inviteCode: void 0,
                 guildId: void 0,
-                guildSize: t.guildSize,
+                guildSize: e.guildSize,
                 touched: !1
             }))
     })),
-    E = (t) => {
-        o.getState().initialize(t);
-    },
-    a = () => {
-        o.getState().reset();
+    E = (e) => {
+        d.getState().initialize(e);
     },
     s = () => {
-        let t = o.getState();
-        return t.nickname !== u.nickname || t.dmsAllowed !== u.dmsAllowed || t.showActivity !== d(t.guildSize) || t.mutedServer !== u.mutedServer;
+        d.getState().reset();
     },
-    _ = () => o.getState().inviteCode,
-    c = () => o.getState().guildId,
-    S = () => o.getState().touched,
-    A = () => o.getState().dmsAllowed,
-    O = () => o.getState().nickname,
-    T = () => o.getState().showActivity,
-    f = () => o.getState().mutedServer;
+    O = () => {
+        let e = d.getState();
+        return e.nickname !== a.nickname || e.dmsAllowed !== a.dmsAllowed || e.showActivity !== c(e.guildSize) || e.mutedServer !== a.mutedServer;
+    },
+    _ = () => d.getState().inviteCode,
+    S = () => d.getState().guildId,
+    f = () => d.getState().touched,
+    A = () => d.getState().dmsAllowed,
+    N = () => d.getState().nickname,
+    g = () => d.getState().showActivity,
+    T = () => d.getState().mutedServer;

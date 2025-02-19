@@ -1,93 +1,146 @@
-n.d(t, { Z: () => A }), n(47120);
-var i = n(192379),
-    r = n(836560),
-    a = n(327432),
-    s = n(40851),
-    o = n(213459),
+n.d(t, { Z: () => R }), n(47120);
+var r = n(192379),
+    i = n(836560),
+    o = n(327432),
+    a = n(40851),
+    s = n(213459),
     l = n(998698),
-    u = n(695346),
-    c = n(752305),
+    c = n(695346),
+    u = n(752305),
     d = n(86724),
     f = n(886027),
-    _ = n(515270),
-    p = n(265446),
+    p = n(515270),
+    _ = n(265446),
     h = n(196483),
     m = n(417662),
     g = n(847302),
     E = n(374157);
 n(209073);
 var v = n(814011),
-    y = n(50607),
-    I = n(618136),
-    T = n(247765),
-    b = n(15559),
-    S = n(42530);
-function A(e) {
-    let t = i.useContext(s.ZP),
-        n = u.R$.useSetting(),
-        [r] = i.useState(() => {
-            let i = (0, a.Jh)();
-            return (
-                (i.children = (0, c.JM)('')),
-                (i.selection = {
-                    anchor: S.nO,
-                    focus: S.nO
-                }),
-                N({
-                    ...e,
-                    editor: i,
-                    windowContext: t,
-                    previewMarkdown: n
-                }),
-                i
-            );
-        });
+    b = n(50607),
+    y = n(618136),
+    O = n(247765),
+    S = n(15559),
+    I = n(42530);
+function T(e, t, n) {
     return (
-        i.useEffect(() => {
-            let e = () => r.onChange();
-            return (
-                l.Z.addChangeListener(e),
-                o.ZP.addChangeListener(e),
-                () => {
-                    l.Z.removeChangeListener(e), o.ZP.removeChangeListener(e);
-                }
-            );
-        }, [r]),
-        i.useEffect(() => {
-            r.previewMarkdown !== n && ((r.previewMarkdown = n), r.onChange());
-        }, [r, n]),
-        r
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
     );
 }
 function N(e) {
-    var t, n, i;
-    let { editor: a, chatInputType: s, channel: o, canUseCommands: l, canOnlyUseTextCommands: u, windowContext: c, previewMarkdown: S, forTests: A, onChangeStart: N, onChangeEnd: C, updateState: R } = e,
-        O = a,
-        { onChange: D } = O;
-    (O.chatInputType = s),
-        (O.windowContext = c),
-        (O.previewMarkdown = S),
-        (O.composition = null),
-        (O.events = new r.EventEmitter()),
-        (O.isMac = 'MacIntel' === navigator.platform),
-        (O.onChange = () => {
-            O.events.emit('onChange'), D();
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                T(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function A(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function C(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : A(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function R(e) {
+    let t = r.useContext(a.ZP),
+        n = c.R$.useSetting(),
+        [i] = r.useState(() => {
+            let r = (0, o.Jh)();
+            return (
+                (r.children = (0, u.JM)('')),
+                (r.selection = {
+                    anchor: I.nO,
+                    focus: I.nO
+                }),
+                P(
+                    C(N({}, e), {
+                        editor: r,
+                        windowContext: t,
+                        previewMarkdown: n
+                    })
+                ),
+                r
+            );
+        });
+    return (
+        r.useEffect(() => {
+            let e = () => i.onChange();
+            return (
+                l.Z.addChangeListener(e),
+                s.ZP.addChangeListener(e),
+                () => {
+                    l.Z.removeChangeListener(e), s.ZP.removeChangeListener(e);
+                }
+            );
+        }, [i]),
+        r.useEffect(() => {
+            i.previewMarkdown !== n && ((i.previewMarkdown = n), i.onChange());
+        }, [i, n]),
+        i
+    );
+}
+function P(e) {
+    var t, n, r;
+    let { editor: o, chatInputType: a, channel: s, canUseCommands: l, canOnlyUseTextCommands: c, windowContext: u, previewMarkdown: I, forTests: T, onChangeStart: N, onChangeEnd: A, updateState: C } = e,
+        R = o,
+        { onChange: P } = R;
+    (R.chatInputType = a),
+        (R.windowContext = u),
+        (R.previewMarkdown = I),
+        (R.composition = null),
+        (R.events = new i.EventEmitter()),
+        (R.isMac = 'MacIntel' === navigator.platform),
+        (R.onChange = () => {
+            R.events.emit('onChange'), P();
         }),
-        (O = (0, y.B)(O, !0 === A)),
-        (O = (0, v.Z)(O)),
-        (O = (0, E.Z)(O)),
-        (null === (t = s.commands) || void 0 === t ? void 0 : t.enabled) && (O = (0, d.Z)(O, o, !0 === l, !0 === u)),
-        (O = (0, g.ZP)(O, o.guild_id, o.id)),
-        (null === (n = s.markdown) || void 0 === n ? void 0 : n.disableBlockQuotes) || (O = (0, f.Z)(O)),
-        (null === (i = s.markdown) || void 0 === i ? void 0 : i.disableCodeBlocks) || (O = (0, _.ZP)(O)),
-        A && (O = (0, T.Z)(O)),
-        (O = (0, m.Z)(O)),
-        (O = (0, p.Z)(O)),
-        (O = (0, I.Z)(O)),
-        (O = (0, b.Z)(O, N, C)),
-        (O = (0, h.Z)(O, (e) => {
+        (R = (0, b.B)(R, !0 === T)),
+        (R = (0, v.Z)(R)),
+        (R = (0, E.Z)(R)),
+        (null === (t = a.commands) || void 0 === t ? void 0 : t.enabled) && (R = (0, d.Z)(R, s, !0 === l, !0 === c)),
+        (R = (0, g.ZP)(R, s.guild_id, s.id)),
+        (null === (n = a.markdown) || void 0 === n ? void 0 : n.disableBlockQuotes) || (R = (0, f.Z)(R)),
+        (null === (r = a.markdown) || void 0 === r ? void 0 : r.disableCodeBlocks) || (R = (0, p.ZP)(R)),
+        T && (R = (0, O.Z)(R)),
+        (R = (0, m.Z)(R)),
+        (R = (0, _.Z)(R)),
+        (R = (0, y.Z)(R)),
+        (R = (0, S.Z)(R, N, A)),
+        (R = (0, h.Z)(R, (e) => {
             let { newValue: t, newSelection: n } = e;
-            return R(O, 'undo', {
+            return C(R, 'undo', {
                 value: t,
                 selection: n
             });

@@ -1,33 +1,99 @@
-t.d(n, { Z: () => c });
-var i = t(200651),
-    a = t(192379),
-    o = t(481060),
-    s = t(703656),
-    r = t(981631);
-let c = a.forwardRef(function (e, n) {
-    let { href: t, children: c, onClick: d, onKeyPress: l, focusProps: _, ...g } = e,
-        u = a.useCallback(
+n.d(t, { Z: () => d });
+var i = n(200651),
+    r = n(192379),
+    l = n(481060),
+    o = n(703656),
+    s = n(981631);
+function a(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            i = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (i = i.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            i.forEach(function (t) {
+                var i;
+                (i = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: i,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = i);
+            });
+    }
+    return e;
+}
+function u(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var i = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, i);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let d = r.forwardRef(function (e, t) {
+    var { href: n, children: d, onClick: c, onKeyPress: h, focusProps: f } = e,
+        p = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                i,
+                r = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        i,
+                        r = {},
+                        l = Object.keys(e);
+                    for (i = 0; i < l.length; i++) (n = l[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                    return r;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var l = Object.getOwnPropertySymbols(e);
+                for (i = 0; i < l.length; i++) (n = l[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+            }
+            return r;
+        })(e, ['href', 'children', 'onClick', 'onKeyPress', 'focusProps']);
+    let g = r.useCallback(
             (e) => {
-                !e.repeat && ((e.charCode === r.yXg.SPACE || e.charCode === r.yXg.ENTER) && (e.preventDefault(), null != t && (0, s.uL)(t), null == d || d()), null == l || l(e));
+                !e.repeat && ((e.charCode === s.yXg.SPACE || e.charCode === s.yXg.ENTER) && (e.preventDefault(), null != n && (0, o.uL)(n), null == c || c()), null == h || h(e));
             },
-            [t, l, d]
+            [n, h, c]
         ),
-        h = a.useCallback(
+        v = r.useCallback(
             (e) => {
-                !e.metaKey && !e.shiftKey && 0 === e.button && (e.preventDefault(), e.stopPropagation(), null != t && (0, s.uL)(t), null == d || d());
+                !e.metaKey && !e.shiftKey && 0 === e.button && (e.preventDefault(), e.stopPropagation(), null != n && (0, o.uL)(n), null == c || c());
             },
-            [t, d]
+            [n, c]
         ),
-        S = (0, i.jsx)('a', {
-            ref: n,
-            href: t,
-            onClick: h,
-            onKeyPress: u,
-            ...g,
-            children: c
-        });
-    return (0, i.jsx)(o.tEY, {
-        ..._,
-        children: S
-    });
+        C = (0, i.jsx)(
+            'a',
+            u(
+                a(
+                    {
+                        ref: t,
+                        href: n,
+                        onClick: v,
+                        onKeyPress: g
+                    },
+                    p
+                ),
+                { children: d }
+            )
+        );
+    return (0, i.jsx)(l.tEY, u(a({}, f), { children: C }));
 });

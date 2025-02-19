@@ -1,30 +1,82 @@
 n.d(t, {
-    Ox: () => b,
-    QP: () => v,
-    ob: () => A,
-    q4: () => S
+    Ox: () => A,
+    QP: () => S,
+    ob: () => R,
+    q4: () => C
 }),
     n(47120);
-var i = n(200651),
-    r = n(192379),
-    a = n(97613),
-    s = n.n(a),
-    o = n(858863),
+var r = n(200651),
+    i = n(192379),
+    o = n(97613),
+    a = n.n(o),
+    s = n(858863),
     l = n(5188),
-    u = n(15729),
-    c = n(731965),
+    c = n(15729),
+    u = n(731965),
     d = n(477690),
     f = n(481060),
-    _ = n(714338),
-    p = n(624138),
+    p = n(714338),
+    _ = n(624138),
     h = n(314910),
     m = n(308569),
-    g = n(428613);
-let E = (0, p.Mg)(d.Z.FULL_SCREEN_LAYER_ANIMATION_DURATION),
-    v = (0, u.U)((e) => ({
+    g = n(852915);
+function E(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function v(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                E(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function b(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function y(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : b(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let O = (0, _.Mg)(d.Z.FULL_SCREEN_LAYER_ANIMATION_DURATION),
+    S = (0, c.U)((e) => ({
         fullScreenLayers: [],
         addLayer: (t) =>
-            (0, c.j)(() => {
+            (0, u.j)(() => {
                 e((e) => {
                     let { fullScreenLayers: n } = e;
                     return {
@@ -33,37 +85,37 @@ let E = (0, p.Mg)(d.Z.FULL_SCREEN_LAYER_ANIMATION_DURATION),
                 });
             })
     }));
-function y(e) {
+function I(e) {
     let { item: t } = e,
-        n = r.useRef(null);
+        n = i.useRef(null);
     return (
         (0, f.Tbt)(n),
-        r.useEffect(
+        i.useEffect(
             () => (
-                _.Z.disable(),
-                t.key !== m.CV && _.Z.enableTemp(N(t.key)),
+                p.Z.disable(),
+                t.key !== m.CV && p.Z.enableTemp(P(t.key)),
                 () => {
-                    _.Z.disableTemp();
+                    p.Z.disableTemp();
                 }
             ),
             [t.key]
         ),
-        (0, i.jsx)(t.LayerComponent, {
-            children: (0, i.jsxs)('div', {
+        (0, r.jsx)(t.LayerComponent, {
+            children: (0, r.jsxs)('div', {
                 className: g.root,
                 ref: n,
                 children: [
-                    (0, i.jsx)('div', { className: g.drag }),
+                    (0, r.jsx)('div', { className: g.drag }),
                     t.render({
                         transitionState: null != t ? t.transitionState : 3,
-                        closeLayer: () => A(t.key)
+                        closeLayer: () => R(t.key)
                     })
                 ]
             })
         })
     );
 }
-let I = {
+let T = {
         enter: g.enter,
         enterActive: g.enterActive,
         enterDone: g.enterDone,
@@ -71,7 +123,7 @@ let I = {
         exitActive: g.exitActive,
         exitDone: g.exitDone
     },
-    T = {
+    N = {
         enter: g.enterReducedMotion,
         enterActive: g.enterActiveReducedMotion,
         enterDone: g.enterDoneReducedMotion,
@@ -79,72 +131,63 @@ let I = {
         exitActive: g.exitActiveReducedMotion,
         exitDone: g.exitDoneReducedMotion
     };
-function b() {
-    let { reducedMotion: e } = r.useContext(f.Sfi),
-        t = e.enabled ? T : I,
-        n = v((e) => e.fullScreenLayers);
-    return (0, i.jsx)(o.Z, {
+function A() {
+    let { reducedMotion: e } = i.useContext(f.Sfi),
+        t = e.enabled ? N : T,
+        n = S((e) => e.fullScreenLayers);
+    return (0, r.jsx)(s.Z, {
         children: n.map((e) =>
-            (0, i.jsx)(
+            (0, r.jsx)(
                 l.Z,
                 {
                     classNames: t,
-                    timeout: E,
+                    timeout: O,
                     onEntered: () => {
-                        (0, c.j)(() => {
-                            v.setState({
-                                fullScreenLayers: n.map((t) =>
-                                    t.key === e.key
-                                        ? {
-                                              ...t,
-                                              transitionState: 2
-                                          }
-                                        : t
-                                )
-                            });
+                        (0, u.j)(() => {
+                            S.setState({ fullScreenLayers: n.map((t) => (t.key === e.key ? y(v({}, t), { transitionState: 2 }) : t)) });
                         });
                     },
                     unmountOnExit: !0,
-                    children: (0, i.jsx)(y, { item: e })
+                    children: (0, r.jsx)(I, { item: e })
                 },
                 e.key
             )
         )
     });
 }
-function S(e) {
+function C(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.freeze({}),
-        { layerKey: n, Layer: i } = t,
-        r = null != n ? n : s()();
+        { layerKey: n, Layer: r } = t,
+        i = null != n ? n : a()();
     return (
-        (0, c.j)(() => {
-            v.setState((t) => ({
+        (0, u.j)(() => {
+            S.setState((t) => ({
                 fullScreenLayers: [
                     ...t.fullScreenLayers,
                     {
-                        key: r,
+                        key: i,
                         transitionState: 1,
-                        LayerComponent: null != i ? i : h.ZP,
+                        LayerComponent: null != r ? r : h.ZP,
                         render: e
                     }
                 ]
             }));
         }),
-        r
+        i
     );
 }
-function A(e) {
-    (0, c.j)(() => {
-        v.setState((t) => ({ fullScreenLayers: t.fullScreenLayers.filter((t) => t.key !== e) }));
+function R(e) {
+    (0, u.j)(() => {
+        S.setState((t) => ({ fullScreenLayers: t.fullScreenLayers.filter((t) => t.key !== e) }));
     });
 }
-function N(e) {
+function P(e) {
     return {
         POP_LAYER: {
             binds: ['esc'],
             comboKeysBindGlobal: !0,
             action() {
-                A(e);
+                R(e);
             }
         }
     };

@@ -1,95 +1,103 @@
-n.d(t, { Z: () => E }), n(47120);
-var i,
-    r,
-    l,
-    s = n(392711),
-    a = n.n(s),
-    o = n(906280),
-    c = n.n(o),
-    d = n(442837),
-    u = n(570140),
-    m = n(944163),
-    h = n(77498),
-    g = n(116175),
-    x = n(308083);
-function p(e) {
-    return new Set(Array.from(e).filter((e) => null != h.Z.getDetectableGame(e)));
+n.d(t, { Z: () => y }), n(47120);
+var r,
+    i = n(392711),
+    s = n.n(i),
+    a = n(906280),
+    l = n.n(a),
+    o = n(442837),
+    c = n(570140),
+    d = n(944163),
+    u = n(77498),
+    m = n(116175),
+    p = n(308083);
+function g(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
 }
-let _ = () => ({
+function h(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                g(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function f(e) {
+    return new Set(Array.from(e).filter((e) => null != u.Z.getDetectableGame(e)));
+}
+let b = () => ({
         gameApplicationIds: new Set(),
-        playstyle: x.zv.NONE,
+        playstyle: p.zv.NONE,
         interests: new Set(),
         description: '',
-        wildcardDescriptors: [x.U6, x.U6, x.U6],
+        wildcardDescriptors: [p.U6, p.U6, p.U6],
         tag: '',
-        verificationForm: { ...m.t },
-        badgeKind: g.ZD.SWORD,
-        badgePrimaryColor: g.sg['0'].primary,
-        badgeSecondaryColor: g.sg['0'].secondary,
-        banner: x.qC.NIGHT_SKY,
-        brandPrimaryColor: x.ym['0'].primary,
-        brandSecondaryColor: x.ym['0'].secondary
+        verificationForm: h({}, d.t),
+        badgeKind: m.ZD.SWORD,
+        badgePrimaryColor: m.sg['0'].primary,
+        badgeSecondaryColor: m.sg['0'].secondary,
+        banner: p.qC.NIGHT_SKY,
+        brandPrimaryColor: p.ym['0'].primary,
+        brandSecondaryColor: p.ym['0'].secondary
     }),
-    C = _(),
-    f = c()(C),
-    v = !1,
+    x = b(),
+    j = l()(x),
     N = !1,
-    j = {};
-class I extends (i = d.ZP.Store) {
+    v = !1,
+    _ = {};
+class O extends (r = o.ZP.Store) {
     getState() {
         return {
-            initialSettings: C,
-            settings: f,
-            dirty: v,
-            errors: j,
-            submitting: N
+            initialSettings: x,
+            settings: j,
+            dirty: N,
+            errors: _,
+            submitting: v
         };
     }
 }
-(l = 'ClanSettingsStore'),
-    (r = 'displayName') in I
-        ? Object.defineProperty(I, r, {
-              value: l,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (I[r] = l);
-let E = new I(u.Z, {
+g(O, 'displayName', 'ClanSettingsStore');
+let y = new O(c.Z, {
     CLAN_SETTINGS_FETCH_START: function () {
-        (N = !1), (C = _()), (f = c()(C)), (v = !1), (j = {});
+        (v = !1), (x = b()), (j = l()(x)), (N = !1), (_ = {});
     },
     CLAN_SETTINGS_FETCH_SUCCESS: function (e) {
         let { settings: t } = e;
-        (C = {
-            ..._(),
-            ...t
-        }),
-            ((f = c()(C)).gameApplicationIds = p(f.gameApplicationIds)),
-            (v = !1);
+        (x = h({}, b(), t)), ((j = l()(x)).gameApplicationIds = f(j.gameApplicationIds)), (N = !1);
     },
     CLAN_SETTINGS_UPDATE: function (e) {
         let { updates: t } = e,
             { gameApplicationIds: n } = t;
-        for (let e in (null != n && (t.gameApplicationIds = p(n)),
-        (f = {
-            ...f,
-            ...c()(t)
-        }),
-        t))
-            delete j[e], (j = { ...j });
-        v = !a().isEqual(a().omit(f, 'verificationForm'), a().omit(C, 'verificationForm'));
+        for (let e in (null != n && (t.gameApplicationIds = f(n)), (j = h({}, j, l()(t))), t)) delete _[e], (_ = h({}, _));
+        N = !s().isEqual(s().omit(j, 'verificationForm'), s().omit(x, 'verificationForm'));
     },
     CLAN_SETTINGS_SUBMIT: function () {
-        (N = !0), (j = {});
+        (v = !0), (_ = {});
     },
     CLAN_SETTINGS_SUBMIT_SUCCESS: function () {
-        (N = !1), (C = c()(f)), (v = !1), (j = {});
+        (v = !1), (x = l()(j)), (N = !1), (_ = {});
     },
     CLAN_SETTINGS_SUBMIT_ERROR: function (e) {
         let { error: t } = e;
-        (N = !1),
-            (j = {
+        (v = !1),
+            (_ = {
                 gameApplicationIds: t.getFirstFieldErrorMessage('game_application_ids'),
                 playstyle: t.getFirstFieldErrorMessage('play_style'),
                 description: t.getFirstFieldErrorMessage('description'),
@@ -100,20 +108,25 @@ let E = new I(u.Z, {
             });
     },
     MEMBER_VERIFICATION_FORM_UPDATE: function (e) {
-        let { form: t, isLocalUpdate: n } = e;
-        if (null == f.verificationForm) return !1;
-        if (
-            ((f = {
-                ...f,
-                verificationForm: {
-                    ...f.verificationForm,
-                    ...t
-                }
-            }),
-            n)
-        ) {
-            var i;
-            v = !a().isEqual(f.verificationForm.formFields, null === (i = C.verificationForm) || void 0 === i ? void 0 : i.formFields);
-        } else v = !1;
+        var t, n, r;
+        let { form: i, isLocalUpdate: a } = e;
+        if (null == j.verificationForm) return !1;
+        N =
+            ((t = h({}, j)),
+            (n = n = { verificationForm: h({}, j.verificationForm, i) }),
+            Object.getOwnPropertyDescriptors
+                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                : (function (e, t) {
+                      var n = Object.keys(e);
+                      if (Object.getOwnPropertySymbols) {
+                          var r = Object.getOwnPropertySymbols(e);
+                          n.push.apply(n, r);
+                      }
+                      return n;
+                  })(Object(n)).forEach(function (e) {
+                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                  }),
+            (j = t),
+            !!a && !s().isEqual(j.verificationForm.formFields, null === (r = x.verificationForm) || void 0 === r ? void 0 : r.formFields));
     }
 });

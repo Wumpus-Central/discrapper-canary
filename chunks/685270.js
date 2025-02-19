@@ -1,14 +1,35 @@
-n.d(t, { B: () => d }), n(653041);
-var l = n(55000),
+n.d(t, { B: () => u }), n(653041), n(266796);
+var r = n(55000),
     a = n(693824),
-    i = n(690725),
-    r = n(737583),
+    l = n(690725),
+    i = n(737583),
     o = n(169040);
-let s = (e, t, n) => ({
-        AvatarImage: e,
-        ...(null != t && { MediaImage: t }),
-        ...(null != n && { ApplicationImage: n })
-    }),
+let s = (e, t, n) =>
+        (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    r = Object.keys(n);
+                'function' == typeof Object.getOwnPropertySymbols &&
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        })
+                    )),
+                    r.forEach(function (t) {
+                        var r;
+                        (r = n[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: r,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0
+                                  })
+                                : (e[t] = r);
+                    });
+            }
+            return e;
+        })({ AvatarImage: e }, null != t && { MediaImage: t }, null != n && { ApplicationImage: n }),
     c = (e, t) => {
         let n = [
             {
@@ -25,11 +46,11 @@ let s = (e, t, n) => ({
             n
         );
     },
-    d = async (e) => {
-        let { mediaImageSrc: t, entry: n, avatarSrc: d, description: u, timestamp: m, episodeDescription: x, colors: h, channelId: p } = e,
+    u = async (e) => {
+        let { mediaImageSrc: t, entry: n, avatarSrc: u, description: d, timestamp: m, episodeDescription: p, colors: h, channelId: x } = e,
             g = n.extra.media_title,
-            v = s(d, t);
-        return await (0, i.f)({
+            v = s(u, t);
+        return await (0, l.f)({
             assetsToLoad: v,
             drawImage: (e) => {
                 let t = h.map((e, t) => ({
@@ -90,7 +111,7 @@ let s = (e, t, n) => ({
                     )),
                     n === a.vP.Failure &&
                         e.drawPath(
-                            l.Cv,
+                            r.Cv,
                             {
                                 x: o.sB,
                                 y: o.sB
@@ -117,7 +138,7 @@ let s = (e, t, n) => ({
                         truncate: a.GX.Wrap
                     }),
                     e.drawText(
-                        u,
+                        d,
                         {
                             x: o.Iq,
                             y: 64,
@@ -126,10 +147,10 @@ let s = (e, t, n) => ({
                         },
                         !0
                     );
-                let i = c(m, x);
-                (0, r.J)({
+                let l = c(m, p);
+                (0, i.J)({
                     canvas: e,
-                    badges: i,
+                    badges: l,
                     startPosition: o.Iq,
                     maxWidth: o.kC
                 });
@@ -139,7 +160,7 @@ let s = (e, t, n) => ({
                 quality: 1,
                 fileName: 'user-reacting-to-'.concat(g, '.png').toLowerCase(),
                 fileType: 'png',
-                channelId: p
+                channelId: x
             }
         });
     };

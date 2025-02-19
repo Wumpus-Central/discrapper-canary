@@ -1,173 +1,225 @@
-l.d(t, { Z: () => Q }), l(47120);
-var n = l(200651),
-    a = l(192379),
-    i = l(120356),
-    o = l.n(i),
-    s = l(392711),
-    r = l(498607),
-    c = l.n(r),
-    d = l(399606),
-    C = l(692547),
-    u = l(481060),
-    m = l(700582),
-    h = l(745735),
-    x = l(906732),
-    g = l(979264),
-    p = l(346486),
-    _ = l(715903),
-    b = l(69882),
-    f = l(189357),
-    j = l(493892),
-    H = l(433355),
-    v = l(430824),
-    N = l(496675),
-    Z = l(594174),
-    L = l(203893),
-    R = l(777288),
-    I = l(5192),
-    M = l(709054),
-    V = l(51144),
-    D = l(815790),
-    S = l(588215),
-    T = l(241559),
-    E = l(893966),
-    w = l(685244),
-    k = l(16829),
-    y = l(256003),
-    A = l(472596),
-    B = l(285173),
-    O = l(981631),
-    U = l(388032),
-    F = l(697301);
-let P = a.memo(function (e) {
+n.d(t, { Z: () => ee }), n(47120);
+var r = n(200651),
+    l = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    i = n(392711),
+    s = n(498607),
+    c = n.n(s),
+    u = n(399606),
+    d = n(692547),
+    C = n(481060),
+    m = n(700582),
+    b = n(745735),
+    p = n(906732),
+    f = n(979264),
+    h = n(346486),
+    j = n(715903),
+    g = n(69882),
+    x = n(189357),
+    v = n(493892),
+    y = n(433355),
+    O = n(430824),
+    N = n(496675),
+    _ = n(594174),
+    H = n(203893),
+    w = n(777288),
+    S = n(5192),
+    D = n(709054),
+    Z = n(51144),
+    L = n(815790),
+    I = n(588215),
+    R = n(241559),
+    P = n(893966),
+    M = n(685244),
+    V = n(16829),
+    E = n(256003),
+    T = n(472596),
+    k = n(285173),
+    A = n(981631),
+    B = n(388032),
+    W = n(188360);
+function U(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function F(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let z = l.memo(function (e) {
         let { member: t } = e,
-            l = a.useMemo(() => (0, b.J)(t.communicationDisabledUntil), [t.communicationDisabledUntil]),
-            i = a.useMemo(() => (null == t.communicationDisabledUntil ? new Date() : new Date(t.communicationDisabledUntil)), [t.communicationDisabledUntil]);
-        return (0, n.jsxs)('div', {
-            className: o()(F.flagContainer),
+            n = l.useMemo(() => (0, g.J)(t.communicationDisabledUntil), [t.communicationDisabledUntil]),
+            o = l.useMemo(() => (null == t.communicationDisabledUntil ? new Date() : new Date(t.communicationDisabledUntil)), [t.communicationDisabledUntil]);
+        return (0, r.jsxs)('div', {
+            className: a()(W.flagContainer),
             children: [
                 t.hasUnusualDmActivity &&
-                    (0, n.jsx)(u.ua7, {
-                        text: U.intl.string(U.t.QrfVTk),
+                    (0, r.jsx)(C.ua7, {
+                        text: B.NW.string(B.t.QrfVTk),
                         children: (e) => {
-                            let { onMouseEnter: t, onMouseLeave: l } = e;
-                            return (0, n.jsx)(u.b6m, {
+                            let { onMouseEnter: t, onMouseLeave: n } = e;
+                            return (0, r.jsx)(C.b6m, {
                                 size: 'custom',
                                 width: 20,
                                 height: 20,
                                 onMouseEnter: t,
-                                onMouseLeave: l,
-                                color: C.Z.colors.TEXT_MUTED.css
+                                onMouseLeave: n,
+                                color: d.Z.colors.TEXT_MUTED.css
                             });
                         }
                     }),
-                l &&
-                    (0, n.jsx)(u.ua7, {
-                        'aria-label': U.intl.string(U.t['xfJP+v']),
+                n &&
+                    (0, r.jsx)(C.ua7, {
+                        'aria-label': B.NW.string(B.t['xfJP+v']),
                         allowOverflow: !0,
-                        text: (0, n.jsxs)('div', {
-                            className: F.communicationDisabledTooltip,
+                        text: (0, r.jsxs)('div', {
+                            className: W.communicationDisabledTooltip,
                             children: [
-                                (0, n.jsx)('div', { children: U.intl.string(U.t['xfJP+v']) }),
-                                (0, n.jsx)(p.Z, {
-                                    deadline: i,
+                                (0, r.jsx)('div', { children: B.NW.string(B.t['xfJP+v']) }),
+                                (0, r.jsx)(h.Z, {
+                                    deadline: o,
                                     showUnits: !0,
                                     stopAtOneSec: !0
                                 })
                             ]
                         }),
                         children: (e) => {
-                            let { onMouseEnter: t, onMouseLeave: l } = e;
-                            return (0, n.jsx)(u.YlB, {
+                            let { onMouseEnter: t, onMouseLeave: n } = e;
+                            return (0, r.jsx)(C.YlB, {
                                 size: 'custom',
                                 width: 20,
                                 height: 20,
                                 onMouseEnter: t,
-                                onMouseLeave: l,
-                                color: C.Z.colors.TEXT_DANGER.css
+                                onMouseLeave: n,
+                                color: d.Z.colors.TEXT_DANGER.css
                             });
                         }
                     }),
-                (0, j.He)(t.userId) &&
-                    (0, n.jsx)(u.ua7, {
-                        text: U.intl.string(U.t.PK9FQ0),
+                (0, v.He)(t.userId) &&
+                    (0, r.jsx)(C.ua7, {
+                        text: B.NW.string(B.t.PK9FQ0),
                         children: (e) => {
-                            let { onMouseEnter: t, onMouseLeave: l } = e;
-                            return (0, n.jsx)(L.Z, {
+                            let { onMouseEnter: t, onMouseLeave: n } = e;
+                            return (0, r.jsx)(H.Z, {
                                 width: 20,
                                 height: 20,
                                 onMouseEnter: t,
-                                onMouseLeave: l,
-                                color: C.Z.colors.TEXT_DANGER.css
+                                onMouseLeave: n,
+                                color: d.Z.colors.TEXT_DANGER.css
                             });
                         }
                     }),
-                (0, _.EY)(t) &&
-                    (0, n.jsx)(u.ua7, {
-                        text: U.intl.string(U.t.qOVbaW),
+                (0, j.EY)(t) &&
+                    (0, r.jsx)(C.ua7, {
+                        text: B.NW.string(B.t.qOVbaW),
                         children: (e) => {
-                            let { onMouseEnter: t, onMouseLeave: l } = e;
-                            return (0, n.jsx)(u.ics, {
+                            let { onMouseEnter: t, onMouseLeave: n } = e;
+                            return (0, r.jsx)(C.ics, {
                                 size: 'custom',
                                 width: 20,
                                 height: 20,
                                 onMouseEnter: t,
-                                onMouseLeave: l,
-                                color: C.Z.colors.TEXT_MUTED.css
+                                onMouseLeave: n,
+                                color: d.Z.colors.TEXT_MUTED.css
                             });
                         }
                     })
             ]
         });
     }),
-    z = a.memo(function (e) {
-        let { member: t, highestRole: l } = e,
-            i = (0, d.e7)([v.Z], () => v.Z.getGuild(t.guildId), [t.guildId]),
-            s = t.roles.length - 1,
-            r = a.useMemo(() => new Intl.NumberFormat(U.intl.currentLocale).format(s), [s]),
-            c = (0, A.vN)(t),
-            C = (0, A.vN)(t, !0),
-            m = (0, d.e7)([N.Z], () => N.Z.can(O.Plq.MANAGE_ROLES, i), [i]);
-        return null == i
+    q = l.memo(function (e) {
+        let { member: t, highestRole: n } = e,
+            o = (0, u.e7)([O.Z], () => O.Z.getGuild(t.guildId), [t.guildId]),
+            i = t.roles.length - 1,
+            s = l.useMemo(() => new Intl.NumberFormat(B.NW.currentLocale).format(i), [i]),
+            c = (0, T.vN)(t),
+            d = (0, T.vN)(t, !0),
+            m = (0, u.e7)([N.Z], () => N.Z.can(A.Plq.MANAGE_ROLES, o), [o]);
+        return null == o
             ? null
-            : (0, n.jsxs)('div', {
-                  className: o()(F.roleContainer),
+            : (0, r.jsxs)('div', {
+                  className: a()(W.roleContainer),
                   children: [
-                      null != l &&
-                          (0, n.jsx)(B.Z, {
-                              className: o()(F.roleTooltipItem, F.highestRole),
-                              role: l,
+                      null != n &&
+                          (0, r.jsx)(k.Z, {
+                              className: a()(W.roleTooltipItem, W.highestRole),
+                              role: n,
                               guildId: t.guildId
                           }),
-                      s > 0 &&
-                          (0, n.jsx)(u.P3F, {
-                              className: o()(F.otherRoles),
-                              onClick: (e) => C(e),
-                              children: (0, n.jsx)(u.ua7, {
-                                  text: U.intl.string(U.t.DY6n4u),
+                      i > 0 &&
+                          (0, r.jsx)(C.P3F, {
+                              className: a()(W.otherRoles),
+                              onClick: (e) => d(e),
+                              children: (0, r.jsx)(C.ua7, {
+                                  text: B.NW.string(B.t.DY6n4u),
                                   children: (e) =>
-                                      (0, n.jsxs)(u.Text, {
-                                          variant: 'text-xs/medium',
-                                          color: 'header-primary',
-                                          ...e,
-                                          children: ['+', r]
-                                      })
+                                      (0, r.jsxs)(
+                                          C.Text,
+                                          F(
+                                              U(
+                                                  {
+                                                      variant: 'text-xs/medium',
+                                                      color: 'header-primary'
+                                                  },
+                                                  e
+                                              ),
+                                              {
+                                                  children: ['+', s]
+                                              }
+                                          )
+                                      )
                               })
                           }),
                       m &&
-                          (0, n.jsx)(u.ua7, {
-                              text: U.intl.string(U.t.h3pSLS),
+                          (0, r.jsx)(C.ua7, {
+                              text: B.NW.string(B.t.h3pSLS),
                               children: (e) => {
-                                  let { onMouseEnter: t, onMouseLeave: l } = e;
-                                  return (0, n.jsx)(u.P3F, {
-                                      className: o()(F.otherRoles, F.addRoleContainer),
+                                  let { onMouseEnter: t, onMouseLeave: n } = e;
+                                  return (0, r.jsx)(C.P3F, {
+                                      className: a()(W.otherRoles, W.addRoleContainer),
                                       onClick: c,
                                       onMouseEnter: t,
-                                      onMouseLeave: l,
-                                      children: (0, n.jsx)(u.qJs, {
+                                      onMouseLeave: n,
+                                      children: (0, r.jsx)(C.qJs, {
                                           size: 'custom',
                                           color: 'currentColor',
-                                          className: o()(F.addRoleIcon),
+                                          className: a()(W.addRoleIcon),
                                           width: 16,
                                           height: 16
                                       })
@@ -177,266 +229,272 @@ let P = a.memo(function (e) {
                   ]
               });
     }),
-    q = a.memo(function (e) {
+    G = l.memo(function (e) {
         var t;
-        let { member: l, user: i } = e,
-            { analyticsLocations: s } = (0, x.ZP)(),
-            r = a.useCallback(
+        let { member: n, user: o } = e,
+            { analyticsLocations: i } = (0, p.ZP)(),
+            s = l.useCallback(
                 (e) => {
-                    null != l && (e.stopPropagation(), e.preventDefault(), (0, A.RE)(l, s));
+                    null != n && (e.stopPropagation(), e.preventDefault(), (0, T.RE)(n, i));
                 },
-                [l, s]
+                [n, i]
             );
-        return null == i || null == l
+        return null == o || null == n
             ? null
-            : (0, n.jsxs)('div', {
-                  className: o()(F.memberNameContainer),
+            : (0, r.jsxs)('div', {
+                  className: a()(W.memberNameContainer),
                   children: [
-                      (0, n.jsx)(u.P3F, {
-                          className: o()(F.memberAvatar),
-                          onClick: r,
-                          children: (0, n.jsx)(m.Z, { user: i })
+                      (0, r.jsx)(C.P3F, {
+                          className: a()(W.memberAvatar),
+                          onClick: s,
+                          children: (0, r.jsx)(m.Z, { user: o })
                       }),
-                      (0, n.jsx)('div', {
-                          className: o()(F.memberName),
-                          children: (0, n.jsx)(u.Text, {
+                      (0, r.jsx)('div', {
+                          className: a()(W.memberName),
+                          children: (0, r.jsx)(C.Text, {
                               variant: 'text-sm/medium',
-                              children: (0, n.jsxs)(u.P3F, {
-                                  onClick: r,
-                                  className: F.nameContainer,
+                              children: (0, r.jsxs)(C.P3F, {
+                                  onClick: s,
+                                  className: W.nameContainer,
                                   children: [
-                                      (0, n.jsx)(u.PUh, {
-                                          name: I.ZP.getName(l.guildId, null, i),
-                                          color: null !== (t = l.colorString) && void 0 !== t ? t : void 0,
-                                          className: o()(F.memberNameText)
+                                      (0, r.jsx)(C.PUh, {
+                                          name: S.ZP.getName(n.guildId, null, o),
+                                          color: null !== (t = n.colorString) && void 0 !== t ? t : void 0,
+                                          className: a()(W.memberNameText)
                                       }),
-                                      (0, n.jsx)(g.ZP, {
-                                          primaryGuild: null == i ? void 0 : i.primaryGuild,
-                                          userId: null == i ? void 0 : i.id,
-                                          contextGuildId: l.guildId,
-                                          containerClassName: F.memberClanTag
+                                      (0, r.jsx)(f.ZP, {
+                                          primaryGuild: null == o ? void 0 : o.primaryGuild,
+                                          userId: null == o ? void 0 : o.id,
+                                          contextGuildId: n.guildId,
+                                          containerClassName: W.memberClanTag
                                       })
                                   ]
                               })
                           })
                       }),
-                      (0, n.jsx)('div', {
-                          className: o()(F.memberGlobalName),
-                          children: (0, n.jsx)(u.Text, {
+                      (0, r.jsx)('div', {
+                          className: a()(W.memberGlobalName),
+                          children: (0, r.jsx)(C.Text, {
                               variant: 'text-xs/normal',
                               color: 'header-secondary',
                               tag: 'span',
-                              children: (0, n.jsx)(u.P3F, {
-                                  onClick: r,
+                              children: (0, r.jsx)(C.P3F, {
+                                  onClick: s,
                                   tag: 'span',
-                                  children: V.ZP.getUserTag(i)
+                                  children: Z.ZP.getUserTag(o)
                               })
                           })
                       })
                   ]
               });
     });
-function G(e) {
+function Y(e) {
     return {
-        short: null == e ? null : (0, D.fv)(e, D.jq.JOINED_AT),
-        long: new Date(null != e ? e : 0).toLocaleDateString(U.intl.currentLocale, D.UG)
+        short: null == e ? null : (0, L.fv)(e, L.jq.JOINED_AT),
+        long: new Date(null != e ? e : 0).toLocaleDateString(B.NW.currentLocale, L.UG)
     };
 }
-function Y(e) {
-    let { member: t, showLongDate: l, isSortedBy: i } = e,
-        [s, r] = a.useState(null);
-    a.useEffect(() => {
-        r(G(t.joinedAtTimestamp));
+function K(e) {
+    let { member: t, showLongDate: n, isSortedBy: o } = e,
+        [i, s] = l.useState(null);
+    l.useEffect(() => {
+        s(Y(t.joinedAtTimestamp));
     }, [t.joinedAtTimestamp]),
-        (0, h.Z)(() => {
-            r(G(t.joinedAtTimestamp));
+        (0, b.Z)(() => {
+            s(Y(t.joinedAtTimestamp));
         }, 10000);
-    let c = i ? 'text-brand' : 'text-normal';
-    return (null == s ? void 0 : s.short) == null
+    let c = o ? 'text-brand' : 'text-normal';
+    return (null == i ? void 0 : i.short) == null
         ? null
-        : l
-          ? (0, n.jsx)('div', {
-                className: o()(F.__invalid_joinedAtContainer),
-                children: (0, n.jsx)(u.Text, {
+        : n
+          ? (0, r.jsx)('div', {
+                className: a()(W.__invalid_joinedAtContainer),
+                children: (0, r.jsx)(C.Text, {
                     variant: 'text-sm/medium',
                     color: c,
-                    children: s.long
+                    children: i.long
                 })
             })
-          : (0, n.jsx)('div', {
-                className: o()(F.__invalid_joinedAtContainer),
-                children: (0, n.jsx)(u.ua7, {
+          : (0, r.jsx)('div', {
+                className: a()(W.__invalid_joinedAtContainer),
+                children: (0, r.jsx)(C.ua7, {
                     align: 'left',
-                    text: s.long,
+                    text: i.long,
                     children: (e) =>
-                        (0, n.jsx)(u.Text, {
-                            ...e,
-                            variant: 'text-sm/medium',
-                            color: c,
-                            children: s.short
-                        })
+                        (0, r.jsx)(
+                            C.Text,
+                            F(U({}, e), {
+                                variant: 'text-sm/medium',
+                                color: c,
+                                children: i.short
+                            })
+                        )
                 })
             });
 }
-let K = a.memo(function (e) {
-        let { member: t, showLongDate: l, isSortedBy: i } = e,
-            { accountCreationDateShort: o, accountCreationDateLong: s } = a.useMemo(() => {
-                let e = M.default.extractTimestamp(t.userId);
+let X = l.memo(function (e) {
+        let { member: t, showLongDate: n, isSortedBy: o } = e,
+            { accountCreationDateShort: a, accountCreationDateLong: i } = l.useMemo(() => {
+                let e = D.default.extractTimestamp(t.userId);
                 return {
-                    accountCreationDateShort: (0, D.fv)(e, D.jq.ACCOUNT_AGE),
-                    accountCreationDateLong: new Date(e).toLocaleDateString(U.intl.currentLocale, D.I)
+                    accountCreationDateShort: (0, L.fv)(e, L.jq.ACCOUNT_AGE),
+                    accountCreationDateLong: new Date(e).toLocaleDateString(B.NW.currentLocale, L.I)
                 };
             }, [t.userId]),
-            r = i ? 'text-brand' : 'text-normal';
-        return l
-            ? (0, n.jsx)(u.Text, {
+            s = o ? 'text-brand' : 'text-normal';
+        return n
+            ? (0, r.jsx)(C.Text, {
                   variant: 'text-sm/medium',
-                  color: r,
-                  children: s
+                  color: s,
+                  children: i
               })
-            : (0, n.jsx)(u.ua7, {
+            : (0, r.jsx)(C.ua7, {
                   align: 'left',
-                  text: s,
+                  text: i,
                   children: (e) =>
-                      (0, n.jsx)(u.Text, {
-                          ...e,
-                          variant: 'text-sm/medium',
-                          color: r,
-                          children: o
-                      })
+                      (0, r.jsx)(
+                          C.Text,
+                          F(U({}, e), {
+                              variant: 'text-sm/medium',
+                              color: s,
+                              children: a
+                          })
+                      )
               });
     }),
-    W = a.memo(function (e) {
-        let { member: t, user: l, highestRole: i, isHoldingAdvancedInfoKey: s, onOpenModerationMenu: r, onOpenProfileMenu: C, compact: m } = e,
-            h = (0, d.e7)([N.Z, v.Z], () => N.Z.can(O.Plq.MANAGE_GUILD, v.Z.getGuild(t.guildId)), [t.guildId]),
-            { selectedUserIds: x, addUsers: g, removeUser: p } = (0, y.Z)(t.guildId),
-            _ = (0, T.xC)(t.guildId),
-            b = (0, T.hB)(t.guildId, _, t.userId),
-            j = (0, f.m)(t.guildId),
-            H = (0, d.e7)(
-                [E.Z],
+    J = l.memo(function (e) {
+        let { member: t, user: n, highestRole: o, isHoldingAdvancedInfoKey: i, onOpenModerationMenu: s, onOpenProfileMenu: d, compact: m } = e,
+            b = (0, u.e7)([N.Z, O.Z], () => N.Z.can(A.Plq.MANAGE_GUILD, O.Z.getGuild(t.guildId)), [t.guildId]),
+            { selectedUserIds: p, addUsers: f, removeUser: h } = (0, E.Z)(t.guildId),
+            j = (0, R.xC)(t.guildId),
+            g = (0, R.hB)(t.guildId, j, t.userId),
+            v = (0, x.m)(t.guildId),
+            y = (0, u.e7)(
+                [P.Z],
                 () => {
                     var e;
-                    return null !== (e = E.Z.getSearchStateByGuildId(t.guildId).selectedSort) && void 0 !== e ? e : S.d$.ORDER_BY_UNSPECIFIED;
+                    return null !== (e = P.Z.getSearchStateByGuildId(t.guildId).selectedSort) && void 0 !== e ? e : I.d$.ORDER_BY_UNSPECIFIED;
                 },
                 [t.guildId],
                 c()
             ),
-            Z = a.useCallback(
+            _ = l.useCallback(
                 (e) => {
-                    e.stopPropagation(), e.preventDefault(), null != t && b && (x.has(t.userId) ? p(t.userId) : g([t.userId]));
+                    e.stopPropagation(), e.preventDefault(), null != t && g && (p.has(t.userId) ? h(t.userId) : f([t.userId]));
                 },
-                [g, b, t, p, x]
+                [f, g, t, h, p]
             ),
-            L = H === S.d$.ORDER_BY_GUILD_JOINED_AT_ASC,
-            I = H === S.d$.ORDER_BY_USER_ID_ASC || H === S.d$.ORDER_BY_USER_ID_DESC;
-        return (0, n.jsxs)(n.Fragment, {
+            H = y === I.d$.ORDER_BY_GUILD_JOINED_AT_ASC,
+            S = y === I.d$.ORDER_BY_USER_ID_ASC || y === I.d$.ORDER_BY_USER_ID_DESC;
+        return (0, r.jsxs)(r.Fragment, {
             children: [
-                _ &&
-                    (0, n.jsx)(u.ua7, {
-                        tooltipClassName: F.disabledActionTooltip,
-                        shouldShow: !b,
-                        text: U.intl.string(U.t['Se4c7+']),
+                j &&
+                    (0, r.jsx)(C.ua7, {
+                        tooltipClassName: W.disabledActionTooltip,
+                        shouldShow: !g,
+                        text: B.NW.string(B.t['Se4c7+']),
                         children: (e) =>
-                            (0, n.jsx)('td', {
-                                ...e,
-                                children: (0, n.jsx)('div', {
-                                    className: o()(F.__invalid_checkbox, F.xsmallCol),
-                                    children: (0, n.jsx)(u.P3F, {
-                                        onClick: Z,
-                                        children: (0, n.jsx)(u.XZJ, {
-                                            type: u.XZJ.Types.INVERTED,
-                                            value: x.has(t.userId),
-                                            disabled: !b
+                            (0, r.jsx)(
+                                'td',
+                                F(U({}, e), {
+                                    children: (0, r.jsx)('div', {
+                                        className: a()(W.__invalid_checkbox, W.xsmallCol),
+                                        children: (0, r.jsx)(C.P3F, {
+                                            onClick: _,
+                                            children: (0, r.jsx)(C.XZJ, {
+                                                type: C.XZJ.Types.INVERTED,
+                                                value: p.has(t.userId),
+                                                disabled: !g
+                                            })
                                         })
                                     })
                                 })
-                            })
+                            )
                     }),
-                (0, n.jsx)('td', {
-                    className: o()({ [F.compact]: m }),
-                    children: (0, n.jsx)(q, {
+                (0, r.jsx)('td', {
+                    className: a()({ [W.compact]: m }),
+                    children: (0, r.jsx)(G, {
                         member: t,
-                        user: l
+                        user: n
                     })
                 }),
-                (0, n.jsx)('td', {
-                    className: o()(F.smallCol, { [F.compact]: m }),
-                    children: (0, n.jsx)(Y, {
-                        showLongDate: s,
+                (0, r.jsx)('td', {
+                    className: a()(W.smallCol, { [W.compact]: m }),
+                    children: (0, r.jsx)(K, {
+                        showLongDate: i,
                         member: t,
-                        isSortedBy: L
+                        isSortedBy: H
                     })
                 }),
-                (0, n.jsx)('td', {
-                    className: o()(F.smallCol, { [F.compact]: m }),
-                    children: (0, n.jsx)(K, {
-                        showLongDate: s,
+                (0, r.jsx)('td', {
+                    className: a()(W.smallCol, { [W.compact]: m }),
+                    children: (0, r.jsx)(X, {
+                        showLongDate: i,
                         member: t,
-                        isSortedBy: I
+                        isSortedBy: S
                     })
                 }),
-                h &&
-                    (0, n.jsx)('td', {
-                        className: o()(F.smallCol, { [F.compact]: m }),
-                        children: (0, n.jsx)(k.ZP, {
+                b &&
+                    (0, r.jsx)('td', {
+                        className: a()(W.smallCol, { [W.compact]: m }),
+                        children: (0, r.jsx)(V.ZP, {
                             userId: t.userId,
                             guildId: t.guildId
                         })
                     }),
-                (0, n.jsx)('td', {
-                    className: o()(F.mediumCol, { [F.compact]: m }),
-                    children: (0, n.jsx)(z, {
+                (0, r.jsx)('td', {
+                    className: a()(W.mediumCol, { [W.compact]: m }),
+                    children: (0, r.jsx)(q, {
                         member: t,
-                        highestRole: i
+                        highestRole: o
                     })
                 }),
-                (0, n.jsx)('td', {
-                    className: o()(F.smallCol, { [F.compact]: m }),
-                    children: (0, n.jsx)(P, { member: t })
+                (0, r.jsx)('td', {
+                    className: a()(W.smallCol, { [W.compact]: m }),
+                    children: (0, r.jsx)(z, { member: t })
                 }),
-                (0, n.jsx)('td', {
-                    className: o()(F.smallCol, { [F.compact]: m }),
-                    children: (0, n.jsxs)('div', {
-                        className: o()(F.actionCell),
+                (0, r.jsx)('td', {
+                    className: a()(W.smallCol, { [W.compact]: m }),
+                    children: (0, r.jsxs)('div', {
+                        className: a()(W.actionCell),
                         children: [
-                            (0, n.jsx)(u.ua7, {
-                                text: j ? U.intl.string(U.t.nHfkf3) : U.intl.string(U.t.uTre29),
+                            (0, r.jsx)(C.ua7, {
+                                text: v ? B.NW.string(B.t.nHfkf3) : B.NW.string(B.t.uTre29),
                                 children: (e) => {
-                                    let { onMouseEnter: t, onMouseLeave: l } = e;
-                                    return (0, n.jsx)(u.P3F, {
+                                    let { onMouseEnter: t, onMouseLeave: n } = e;
+                                    return (0, r.jsx)(C.P3F, {
                                         onMouseEnter: t,
-                                        onMouseLeave: l,
-                                        onClick: C,
-                                        className: o()(F.button),
-                                        children: j
-                                            ? (0, n.jsx)(R.Z, {
-                                                  width: X,
-                                                  height: X
+                                        onMouseLeave: n,
+                                        onClick: d,
+                                        className: a()(W.button),
+                                        children: v
+                                            ? (0, r.jsx)(w.Z, {
+                                                  width: Q,
+                                                  height: Q
                                               })
-                                            : (0, n.jsx)(u.tBG, {
+                                            : (0, r.jsx)(C.tBG, {
                                                   size: 'custom',
                                                   color: 'currentColor',
-                                                  width: X,
-                                                  height: X
+                                                  width: Q,
+                                                  height: Q
                                               })
                                     });
                                 }
                             }),
-                            (0, n.jsx)(u.ua7, {
-                                text: U.intl.string(U.t.x8Nn4O),
+                            (0, r.jsx)(C.ua7, {
+                                text: B.NW.string(B.t.x8Nn4O),
                                 children: (e) => {
-                                    let { onMouseEnter: t, onMouseLeave: l } = e;
-                                    return (0, n.jsx)(u.P3F, {
+                                    let { onMouseEnter: t, onMouseLeave: n } = e;
+                                    return (0, r.jsx)(C.P3F, {
                                         onMouseEnter: t,
-                                        onMouseLeave: l,
-                                        onClick: r,
-                                        className: o()(F.button),
-                                        children: (0, n.jsx)(u.Huf, {
+                                        onMouseLeave: n,
+                                        onClick: s,
+                                        className: a()(W.button),
+                                        children: (0, r.jsx)(C.Huf, {
                                             size: 'custom',
                                             color: 'currentColor',
-                                            width: X,
-                                            height: X
+                                            width: Q,
+                                            height: Q
                                         })
                                     });
                                 }
@@ -447,53 +505,53 @@ let K = a.memo(function (e) {
             ]
         });
     }),
-    X = 18,
-    J = ['sourceInviteCode', 'joinSourceType', 'inviterId', 'integrationType', 'joinedAt', 'joinedAtTimestamp'],
-    Q = a.memo(function (e) {
-        let { userId: t, guildId: l, style: i, onSelect: r, rowSelected: C, isLoading: u = !1, isHoldingAdvancedInfoKey: m = !1, compact: h = !1 } = e,
-            x = (0, d.e7)([H.ZP], () => H.ZP.getGuildSidebarState(l), [l]),
-            g = (null == x ? void 0 : x.details.userId) === t,
-            p = (0, d.e7)([E.Z], () => E.Z.getEnhancedMember(l, t), [l, t]),
-            _ = (0, A.zq)(p),
-            b = (0, d.e7)([Z.default], () => Z.default.getUser(t), [t]),
-            f = (0, A.RN)(null != p ? p : void 0),
-            j = a.useCallback(
+    Q = 18,
+    $ = ['sourceInviteCode', 'joinSourceType', 'inviterId', 'integrationType', 'joinedAt', 'joinedAtTimestamp'],
+    ee = l.memo(function (e) {
+        let { userId: t, guildId: n, style: o, onSelect: s, rowSelected: d, isLoading: C = !1, isHoldingAdvancedInfoKey: m = !1, compact: b = !1 } = e,
+            p = (0, u.e7)([y.ZP], () => y.ZP.getGuildSidebarState(n), [n]),
+            f = (null == p ? void 0 : p.details.userId) === t,
+            h = (0, u.e7)([P.Z], () => P.Z.getEnhancedMember(n, t), [n, t]),
+            j = (0, T.zq)(h),
+            g = (0, u.e7)([_.default], () => _.default.getUser(t), [t]),
+            x = (0, T.RN)(null != h ? h : void 0),
+            v = l.useCallback(
                 (e) => {
-                    e.stopPropagation(), e.preventDefault(), f(e);
+                    e.stopPropagation(), e.preventDefault(), x(e);
                 },
-                [f]
+                [x]
             ),
-            v = a.useCallback(
+            O = l.useCallback(
                 (e) => {
-                    e.stopPropagation(), e.preventDefault(), null != p && (null == r || r(p));
+                    e.stopPropagation(), e.preventDefault(), null != h && (null == s || s(h));
                 },
-                [r, p]
+                [s, h]
             ),
-            N = a.useCallback(
+            N = l.useCallback(
                 (e) => {
-                    e.stopPropagation(), e.preventDefault(), null != p && (null == r || r(p));
+                    e.stopPropagation(), e.preventDefault(), null != h && (null == s || s(h));
                 },
-                [p, r]
+                [h, s]
             ),
-            L = a.useCallback((e, t) => c()((0, s.omit)(e, J), (0, s.omit)(t, J)), []);
-        return null == p
+            H = l.useCallback((e, t) => c()((0, i.omit)(e, $), (0, i.omit)(t, $)), []);
+        return null == h
             ? null
-            : (0, n.jsx)(w.Z, {
+            : (0, r.jsx)(M.Z, {
                   role: 'row',
-                  value: p,
-                  style: i,
-                  className: o()(F.roundedRow, F.memberRowContainer, C && F.selected, g && F.memberSelected, u && F.loading),
-                  equalityFn: L,
-                  onClick: v,
-                  onContextMenu: j,
-                  children: (0, n.jsx)(W, {
-                      member: p,
-                      user: b,
-                      highestRole: _,
+                  value: h,
+                  style: o,
+                  className: a()(W.roundedRow, W.memberRowContainer, d && W.selected, f && W.memberSelected, C && W.loading),
+                  equalityFn: H,
+                  onClick: O,
+                  onContextMenu: v,
+                  children: (0, r.jsx)(J, {
+                      member: h,
+                      user: g,
+                      highestRole: j,
                       isHoldingAdvancedInfoKey: m,
-                      onOpenModerationMenu: j,
+                      onOpenModerationMenu: v,
                       onOpenProfileMenu: N,
-                      compact: h
+                      compact: b
                   })
               });
     });

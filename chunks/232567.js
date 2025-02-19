@@ -1,29 +1,58 @@
 n.d(t, {
-    In: () => v,
-    Lr: () => m,
-    PR: () => E,
-    k: () => h,
-    mB: () => g
+    In: () => y,
+    Lr: () => E,
+    PR: () => b,
+    k: () => g,
+    mB: () => v
 }),
     n(789020);
-var i = n(512722),
-    r = n.n(i),
-    a = n(525769),
-    s = n(259443),
-    o = n(544891),
+var r = n(512722),
+    i = n.n(r),
+    o = n(525769),
+    a = n(259443),
+    s = n(544891),
     l = n(570140),
-    u = n(881052),
-    c = n(598077),
+    c = n(881052),
+    u = n(598077),
     d = n(594174),
     f = n(573261),
-    _ = n(981631);
-let p = new s.Yd('UserProfileModalActionCreators');
-function h() {
+    p = n(981631);
+function _(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function h(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                _(e, t, n[t]);
+            });
+    }
+    return e;
+}
+let m = new a.Yd('UserProfileModalActionCreators');
+function g() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         { withAnalyticsToken: t = !1 } = e;
-    return o.tn
+    return s.tn
         .get({
-            url: _.ANM.ME,
+            url: p.ANM.ME,
             query: { with_analytics_token: t },
             oldFormErrors: !0,
             rejectWithError: !1
@@ -35,16 +64,16 @@ function h() {
                     user: e.body,
                     analyticsToken: t ? e.body.analytics_token : void 0
                 }),
-                new c.Z(e.body)
+                new u.Z(e.body)
             )
         );
 }
-function m() {
+function E() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return f.Z.patch({
-        url: _.ANM.USER_AGREEMENTS,
-        trackedActionData: { event: a.a.USER_ACCEPT_AGREEMENTS },
+        url: p.ANM.USER_AGREEMENTS,
+        trackedActionData: { event: o.a.USER_ACCEPT_AGREEMENTS },
         body: {
             terms: e,
             privacy: t
@@ -56,24 +85,24 @@ function m() {
         () => !1
     );
 }
-function g(e, t) {
+function v(e, t) {
     let n = d.default.getCurrentUser();
-    r()(null != n, 'setFlag: user cannot be undefined');
-    let i = t ? n.flags | e : n.flags & ~e;
-    return o.tn.patch({
-        url: _.ANM.ME,
+    i()(null != n, 'setFlag: user cannot be undefined');
+    let r = t ? n.flags | e : n.flags & ~e;
+    return s.tn.patch({
+        url: p.ANM.ME,
         oldFormErrors: !0,
-        body: { flags: i },
+        body: { flags: r },
         rejectWithError: !1
     });
 }
-function E(e) {
+function b(e) {
     let t = d.default.getUser(e);
     return null != t
         ? Promise.resolve(t)
-        : o.tn
+        : s.tn
               .get({
-                  url: _.ANM.USER(e),
+                  url: p.ANM.USER(e),
                   oldFormErrors: !0,
                   rejectWithError: !1
               })
@@ -87,56 +116,53 @@ function E(e) {
                   )
               );
 }
-async function v(e) {
-    let { friendToken: t, withMutualGuilds: n, withMutualFriendsCount: i, withMutualFriends: r, guildId: a, connectionsRoleId: s, joinRequestId: c, abortSignal: d } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+async function y(e) {
+    let { friendToken: t, withMutualGuilds: n, withMutualFriendsCount: r, withMutualFriends: i, guildId: o, connectionsRoleId: a, joinRequestId: u, abortSignal: d } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         f = arguments.length > 2 ? arguments[2] : void 0;
     l.Z.dispatch({
         type: 'USER_PROFILE_FETCH_START',
         userId: e,
-        guildId: a
+        guildId: o
     });
     try {
-        let u = await o.tn.get({
-            url: _.ANM.USER_PROFILE(e),
+        let c = await s.tn.get({
+            url: p.ANM.USER_PROFILE(e),
             query: {
                 friend_token: t,
                 with_mutual_guilds: n,
-                with_mutual_friends: r,
-                with_mutual_friends_count: i && (null == r || !r),
-                guild_id: a,
-                connections_role_id: s,
-                join_request_id: c
+                with_mutual_friends: i,
+                with_mutual_friends_count: r && (null == i || !i),
+                guild_id: o,
+                connections_role_id: a,
+                join_request_id: u
             },
             signal: d,
             rejectWithError: !0
         });
         return (
-            null == f || f(u.body, a),
+            null == f || f(c.body, o),
             l.Z.dispatch({
                 type: 'USER_UPDATE',
-                user: u.body.user
+                user: c.body.user
             }),
-            l.Z.dispatch({
-                type: 'USER_PROFILE_FETCH_SUCCESS',
-                ...u.body
-            }),
-            null != a &&
-                null != u.body.guild_member &&
+            l.Z.dispatch(h({ type: 'USER_PROFILE_FETCH_SUCCESS' }, c.body)),
+            null != o &&
+                null != c.body.guild_member &&
                 l.Z.dispatch({
                     type: 'GUILD_MEMBER_PROFILE_UPDATE',
-                    guildId: a,
-                    guildMember: u.body.guild_member
+                    guildId: o,
+                    guildMember: c.body.guild_member
                 }),
-            u.body
+            c.body
         );
     } catch (t) {
         throw (
-            (null != t && (null == t ? void 0 : t.body) != null && p.warn('fetchProfile error: '.concat(t.body.code, ' - ').concat(t.body.message)),
+            (null != t && (null == t ? void 0 : t.body) != null && m.warn('fetchProfile error: '.concat(t.body.code, ' - ').concat(t.body.message)),
             l.Z.dispatch({
                 type: 'USER_PROFILE_FETCH_FAILURE',
-                apiError: new u.Hx(t),
+                apiError: new c.Hx(t),
                 userId: e,
-                guildId: a
+                guildId: o
             }),
             t)
         );

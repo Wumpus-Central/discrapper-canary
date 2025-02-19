@@ -1,21 +1,21 @@
-let i, l;
-n.d(t, { Z: () => P }), n(47120), n(610138), n(216116), n(78328), n(815648), n(653041), n(411104);
-var r = n(836560),
-    a = n(392711),
-    s = n.n(a),
-    o = n(570140),
-    d = n(710845),
-    c = n(857192),
-    u = n(591759),
-    h = n(998502),
-    m = n(996106),
-    p = n(901077),
-    g = n(76238),
-    _ = n(852926),
-    f = n(186901),
-    E = n(981631),
-    I = n(413135).Buffer;
-function C(e, t, n) {
+let r, i;
+n.d(t, { Z: () => x }), n(26686), n(47120), n(301563), n(610138), n(216116), n(78328), n(815648), n(653041), n(411104);
+var l = n(836560),
+    o = n(392711),
+    a = n.n(o),
+    s = n(570140),
+    c = n(710845),
+    u = n(857192),
+    d = n(591759),
+    p = n(998502),
+    h = n(996106),
+    g = n(901077),
+    f = n(76238),
+    m = n(852926),
+    b = n(186901),
+    _ = n(981631),
+    E = n(413135).Buffer;
+function O(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,181 +29,196 @@ function C(e, t, n) {
     );
 }
 try {
-    i = h.ZP.requireModule('discord_erlpack');
+    r = p.ZP.requireModule('discord_erlpack');
 } catch (e) {
     try {
-        i = h.ZP.requireModule('erlpack');
+        r = p.ZP.requireModule('erlpack');
     } catch (e) {}
 }
-let N = h.ZP.requireModule('discord_rpc').RPCWebSocket,
+let N = p.ZP.requireModule('discord_rpc').RPCWebSocket,
     v = window.GLOBAL_ENV.MARKETING_ENDPOINT,
-    T = new d.Z('RPCServer:WSS'),
-    S = [];
-function A(e) {
+    y = new c.Z('RPCServer:WSS'),
+    I = [];
+function C(e) {
     return 'function' == typeof e ? e() : e;
 }
-function Z() {
+function S() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
         t =
             e > 0
                 ? void 0
                 : () => {
-                      if (!A(l.listening)) return;
-                      let e = l.address().port;
-                      T.info('Starting on '.concat(e)),
-                          o.Z.dispatch({
+                      if (!C(i.listening)) return;
+                      let e = i.address().port;
+                      y.info('Starting on '.concat(e)),
+                          s.Z.dispatch({
                               type: 'RPC_SERVER_READY',
                               port: e
                           });
                   };
-    l.listen(E.V6Z + (e % E.frH), '127.0.0.1', t);
+    i.listen(_.V6Z + (e % _.frH), '127.0.0.1', t);
 }
-function x(e, t, n) {
-    let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 200,
-        l = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
-        r =
-            null != A(e.headers).origin
+function T(e, t, n) {
+    let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 200,
+        i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
+        l =
+            null != C(e.headers).origin
                 ? {
-                      'Access-Control-Allow-Origin': A(e.headers).origin,
+                      'Access-Control-Allow-Origin': C(e.headers).origin,
                       'Access-Control-Allow-Credentials': 'true',
                       'Access-Control-Allow-Methods': 'POST, GET, PUT, PATCH, DELETE',
                       'Access-Control-Allow-Headers': 'Content-Type, Authorization'
                   }
                 : {};
     (n = n ? JSON.stringify(n) : ''),
-        (i = 200 === i && 0 === n.length ? 204 : i),
-        t.setHeader('Content-Length', I.byteLength(n).toString()),
+        (r = 200 === r && 0 === n.length ? 204 : r),
+        t.setHeader('Content-Length', E.byteLength(n).toString()),
         t.setHeader('Content-Type', 'application/json'),
-        t.writeHead(i, {
-            ...l,
-            ...r
-        }),
+        t.writeHead(
+            r,
+            (function (e) {
+                for (var t = 1; t < arguments.length; t++) {
+                    var n = null != arguments[t] ? arguments[t] : {},
+                        r = Object.keys(n);
+                    'function' == typeof Object.getOwnPropertySymbols &&
+                        (r = r.concat(
+                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                            })
+                        )),
+                        r.forEach(function (t) {
+                            O(e, t, n[t]);
+                        });
+                }
+                return e;
+            })({}, i, l)
+        ),
         t.end(n);
 }
-function b(e, t, n, i) {
-    let l = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
-    x(
+function P(e, t, n, r) {
+    let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
+    T(
         e,
         t,
         {
-            code: l,
-            message: i
+            code: i,
+            message: r
         },
         n
     );
 }
-class L extends g.Z {
+class j extends f.Z {
     send(e) {
-        (c.default.isLoggingOverlayEvents || (e.cmd !== E.Etm.OVERLAY && e.evt !== E.zMe.OVERLAY)) && T.info('Socket Emit: '.concat(this.id), (0, p.Z)(e)), null != i && 'etf' === this.encoding ? this._socket.send(i.pack(e), { binary: !0 }) : this._socket.send(JSON.stringify(e));
+        (u.default.isLoggingOverlayEvents || (e.cmd !== _.Etm.OVERLAY && e.evt !== _.zMe.OVERLAY)) && y.info('Socket Emit: '.concat(this.id), (0, g.Z)(e)), null != r && 'etf' === this.encoding ? this._socket.send(r.pack(e), { binary: !0 }) : this._socket.send(JSON.stringify(e));
     }
     close(e, t) {
         this._socket.close(e, t);
     }
     constructor(e, t, n) {
-        if ((super('ws', t, n), C(this, '_socket', void 0), -1 === ['etf', 'json'].indexOf(n))) throw new m.Z({ closeCode: E.$VG.INVALID_ENCODING }, 'Invalid Encoding: '.concat(n));
-        if ('etf' === n && null == i) throw new m.Z({ closeCode: E.$VG.INVALID_ENCODING }, 'Erlpack cannot be used on this client');
+        if ((super('ws', t, n), O(this, '_socket', void 0), -1 === ['etf', 'json'].indexOf(n))) throw new h.Z({ closeCode: _.$VG.INVALID_ENCODING }, 'Invalid Encoding: '.concat(n));
+        if ('etf' === n && null == r) throw new h.Z({ closeCode: _.$VG.INVALID_ENCODING }, 'Erlpack cannot be used on this client');
         this._socket = e;
     }
 }
-class y extends g.Z {
+class A extends f.Z {
     send(e) {
-        (c.default.isLoggingOverlayEvents || e.cmd !== E.Etm.OVERLAY) && T.info('Socket Emit: '.concat(this.id), e), this._sendCallback(e);
+        (u.default.isLoggingOverlayEvents || e.cmd !== _.Etm.OVERLAY) && y.info('Socket Emit: '.concat(this.id), e), this._sendCallback(e);
     }
     close(e, t) {
         this._closeCallback(t, e);
     }
-    constructor(e, t, n, i) {
-        if ((super('http', n, i), C(this, '_sendCallback', void 0), C(this, '_closeCallback', void 0), 'json' !== i)) throw new m.Z({ closeCode: E.$VG.INVALID_ENCODING }, 'Invalid Encoding: '.concat(i));
+    constructor(e, t, n, r) {
+        if ((super('http', n, r), O(this, '_sendCallback', void 0), O(this, '_closeCallback', void 0), 'json' !== r)) throw new h.Z({ closeCode: _.$VG.INVALID_ENCODING }, 'Invalid Encoding: '.concat(r));
         (this._sendCallback = e), (this._closeCallback = t);
     }
 }
-class O extends r.EventEmitter {
+class Z extends l.EventEmitter {
     handleRequest(e, t) {
-        let [n, i] = A(e.url).split('?'),
-            l = A(e.method);
-        if ('/rpc' === n && 'OPTIONS' === l) {
-            x(e, t, { body: '' });
+        let [n, r] = C(e.url).split('?'),
+            i = C(e.method);
+        if ('/rpc' === n && 'OPTIONS' === i) {
+            T(e, t, { body: '' });
             return;
         }
-        let r = 'POST' === l;
-        if ('/rpc' === n && ('GET' === l || r)) {
-            let n = new URLSearchParams(i),
-                l = r ? A(e.headers)['content-type'].split('/')[1] : 'json',
-                s = function () {
-                    var e, i;
-                    let { protocol: l, host: r } = null !== (i = u.Z.toURLSafe(null !== (e = n.get('callback')) && void 0 !== e ? e : '')) && void 0 !== i ? i : {};
-                    l === location.protocol && r === location.host ? t.setHeader('Location', n.get('callback')) : t.setHeader('Location', v), t.writeHead(301), t.end();
+        let l = 'POST' === i;
+        if ('/rpc' === n && ('GET' === i || l)) {
+            let n = new URLSearchParams(r),
+                i = l ? C(e.headers)['content-type'].split('/')[1] : 'json',
+                a = function () {
+                    var e, r;
+                    let { protocol: i, host: l } = null !== (r = d.Z.toURLSafe(null !== (e = n.get('callback')) && void 0 !== e ? e : '')) && void 0 !== r ? r : {};
+                    i === location.protocol && l === location.host ? t.setHeader('Location', n.get('callback')) : t.setHeader('Location', v), t.writeHead(301), t.end();
                 },
-                o = new y(r ? x.bind(null, e, t) : s, r ? b.bind(null, e, t, 400) : s, Number(n.get('v')), l);
-            if (r)
-                (0, _.em)(o, A(e.headers).origin, n.get('client_id'))
+                s = new A(l ? T.bind(null, e, t) : a, l ? P.bind(null, e, t, 400) : a, Number(n.get('v')), i);
+            if (l)
+                (0, m.em)(s, C(e.headers).origin, n.get('client_id'))
                     .then(() => {
                         let n = '';
-                        e.on('data', (e) => (n += e)), e.on('error', () => b(e, t, 500, 'Internal Server Error')), e.on('end', () => this.handleMessage(o, n));
+                        e.on('data', (e) => (n += e)), e.on('error', () => P(e, t, 500, 'Internal Server Error')), e.on('end', () => this.handleMessage(s, n));
                     })
                     .catch((e) => {
                         let { code: t, message: n } = e;
-                        return o.close(t, n);
+                        return s.close(t, n);
                     });
             else {
-                var a;
-                (o.authorization.scopes = [f.CN]), this.handleMessage(o, decodeURIComponent(null !== (a = n.get('payload')) && void 0 !== a ? a : ''));
+                var o;
+                (s.authorization.scopes = [b.CN]), this.handleMessage(s, decodeURIComponent(null !== (o = n.get('payload')) && void 0 !== o ? o : ''));
             }
             return;
         }
-        b(e, t, 404, 'Not Found');
+        P(e, t, 404, 'Not Found');
     }
     handleConnection(e) {
         var t, n;
-        let i;
-        let l = new URLSearchParams(A(e.upgradeReq).url.split('?')[1]),
-            r = null !== (t = A(e.upgradeReq).headers.origin) && void 0 !== t ? t : '';
+        let r;
+        let i = new URLSearchParams(C(e.upgradeReq).url.split('?')[1]),
+            l = null !== (t = C(e.upgradeReq).headers.origin) && void 0 !== t ? t : '';
         try {
-            i = new L(e, Number(l.get('v')), null !== (n = l.get('encoding')) && void 0 !== n ? n : 'json');
+            r = new j(e, Number(i.get('v')), null !== (n = i.get('encoding')) && void 0 !== n ? n : 'json');
         } catch (t) {
             e.close(t.code, t.message);
             return;
         }
-        T.info('Socket Opened: '.concat(i.id)),
-            e.on('error', (e) => T.error('WS Error: '.concat(e.message))),
+        y.info('Socket Opened: '.concat(r.id)),
+            e.on('error', (e) => y.error('WS Error: '.concat(e.message))),
             e.on('close', (e, t) => {
-                T.info('Socket Closed: '.concat(i.id, ', code ').concat(e, ', message ').concat(t)), s().remove(S, (e) => e === i), this.emit('disconnect', i);
+                y.info('Socket Closed: '.concat(r.id, ', code ').concat(e, ', message ').concat(t)), a().remove(I, (e) => e === r), this.emit('disconnect', r);
             }),
-            (0, _.em)(i, r, l.get('client_id'))
+            (0, m.em)(r, l, i.get('client_id'))
                 .then(() => {
-                    S.push(i), e.on('message', (e) => this.handleMessage(i, e)), this.emit('connect', i);
+                    I.push(r), e.on('message', (e) => this.handleMessage(r, e)), this.emit('connect', r);
                 })
                 .catch((e) => {
                     let { code: t, message: n } = e;
-                    return i.close(t, n);
+                    return r.close(t, n);
                 });
     }
     handleMessage(e, t) {
         let n;
         try {
-            if (null != i && 'etf' === e.encoding) n = i.unpack(t);
+            if (null != r && 'etf' === e.encoding) n = r.unpack(t);
             else if ('string' == typeof t) n = JSON.parse(t);
             else throw Error();
         } catch (t) {
-            e.close(E.$VG.CLOSE_UNSUPPORTED, 'Payload not '.concat(e.encoding));
+            e.close(_.$VG.CLOSE_UNSUPPORTED, 'Payload not '.concat(e.encoding));
             return;
         }
-        (c.default.isLoggingOverlayEvents || n.cmd !== E.Etm.OVERLAY) && T.info('Socket Message: '.concat(e.id), (0, p.Z)(n)), this.emit('request', e, n);
+        (u.default.isLoggingOverlayEvents || n.cmd !== _.Etm.OVERLAY) && y.info('Socket Message: '.concat(e.id), (0, g.Z)(n)), this.emit('request', e, n);
     }
     constructor() {
         var e;
         super();
         let t = 0;
-        (l = N.http.createServer()).on('error', (e) => {
-            T.error('Error: '.concat(e.message)), ('EADDRINUSE' === e.code || e.message.includes('EADDRINUSE')) && setTimeout(() => Z(++t), 1000);
+        (i = N.http.createServer()).on('error', (e) => {
+            y.error('Error: '.concat(e.message)), ('EADDRINUSE' === e.code || e.message.includes('EADDRINUSE')) && setTimeout(() => S(++t), 1000);
         }),
-            l.on('request', this.handleRequest.bind(this)),
-            Z(t);
+            i.on('request', this.handleRequest.bind(this)),
+            S(t);
         let n = {
-            instanceId: null !== (e = l.instanceId) && void 0 !== e ? e : 0,
-            server: l
+            instanceId: null !== (e = i.instanceId) && void 0 !== e ? e : 0,
+            server: i
         };
         new N.ws.Server(n).on('connection', (e) => this.handleConnection(e));
     }
 }
-let P = new O();
+let x = new Z();

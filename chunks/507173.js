@@ -1,42 +1,68 @@
-n.d(t, { y: () => d }), n(47120);
-var i = n(200651);
+n.d(t, { y: () => p }), n(47120), n(978209);
+var r = n(200651);
 n(192379);
-var r = n(120356),
-    a = n.n(r),
-    s = n(392711),
-    o = n.n(s),
+var i = n(120356),
+    o = n.n(i),
+    a = n(392711),
+    s = n.n(a),
     l = n(692547),
-    u = n(320527),
-    c = (function (e) {
-        return (e.XSMALL = 'xsmall'), (e.SMALL = 'small'), (e.LARGE = 'large'), e;
-    })(c || {});
+    c = n(320541);
+function u(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
 function d(e) {
-    let { className: t, percents: n, size: r = 'small', foregroundColors: s = [l.Z.unsafe_rawColors.BRAND_500.css], backgroundColor: c = 'var(--background-modifier-active)', animate: d = !0 } = e,
-        f = o()
-            .zip(n, s)
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                u(e, t, n[t]);
+            });
+    }
+    return e;
+}
+var f = (function (e) {
+    return (e.XSMALL = 'xsmall'), (e.SMALL = 'small'), (e.LARGE = 'large'), e;
+})(f || {});
+function p(e) {
+    let { className: t, percents: n, size: i = 'small', foregroundColors: a = [l.Z.unsafe_rawColors.BRAND_500.css], backgroundColor: u = 'var(--background-modifier-active)', animate: f = !0 } = e,
+        p = s()
+            .zip(n, a)
             .map((e, t) => {
                 let n,
-                    [s, o] = e;
+                    [a, s] = e;
                 return (
-                    (n = Array.isArray(o) ? { background: 'linear-gradient(to right, '.concat(o[0], ', ').concat(o[1], ')') } : { backgroundColor: o }),
-                    (0, i.jsx)(
+                    (n = Array.isArray(s) ? { background: 'linear-gradient(to right, '.concat(s[0], ', ').concat(s[1], ')') } : { backgroundColor: s }),
+                    (0, r.jsx)(
                         'div',
                         {
-                            className: a()(u.progressBar, u[r], { [u.animating]: d }),
-                            style: {
-                                transform: 'translate3d('.concat(Math.min(Math.max(0, s), 100) - 100, '%, 0, 0)'),
-                                ...n
-                            }
+                            className: o()(c.progressBar, c[i], { [c.animating]: f }),
+                            style: d({ transform: 'translate3d('.concat(Math.min(Math.max(0, a), 100) - 100, '%, 0, 0)') }, n)
                         },
                         t
                     )
                 );
             })
             .reverse();
-    return (0, i.jsx)('div', {
-        className: a()(t, u.progress, u[r]),
-        style: { backgroundColor: c },
-        children: f
+    return (0, r.jsx)('div', {
+        className: o()(t, c.progress, c[i]),
+        style: { backgroundColor: u },
+        children: p
     });
 }
-d.Sizes = c;
+p.Sizes = f;

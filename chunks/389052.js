@@ -1,32 +1,84 @@
-n.d(t, { Z: () => p }), n(627341);
-var i = n(200651);
+n.d(t, { Z: () => E }), n(627341);
+var r = n(200651);
 n(192379);
-var r = n(278074),
-    a = n(442837),
-    s = n(481060),
-    o = n(194359),
+var i = n(278074),
+    o = n(442837),
+    a = n(481060),
+    s = n(194359),
     l = n(922611),
-    u = n(681678),
-    c = n(699516),
+    c = n(681678),
+    u = n(699516),
     d = n(594174),
     f = n(981631),
-    _ = n(388032);
-function p(e) {
-    let { user: t, color: p, guildId: h, channelId: m, onBlock: g, onIgnore: E, onUnblock: v, location: y = 'ContextMenu', appContext: I = f.IlC.APP } = e,
-        { id: T } = t,
-        b = (0, a.e7)(
+    p = n(388032);
+function _(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function h(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                _(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function m(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function g(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : m(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function E(e) {
+    let { user: t, color: _, guildId: m, channelId: E, onBlock: v, onIgnore: b, onUnblock: y, location: O = 'ContextMenu', appContext: S = f.IlC.APP } = e,
+        { id: I } = t,
+        T = (0, o.e7)(
             [d.default],
             () => {
                 var e;
-                return (null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === T;
+                return (null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === I;
             },
-            [T]
+            [I]
         ),
-        S = (0, a.e7)([c.Z], () => c.Z.isBlocked(T), [T]),
+        N = (0, o.e7)([u.Z], () => u.Z.isBlocked(I), [I]),
         A = (0, l.Do)({ location: 'use-block-user-item-web' }),
-        N = (0, r.EQ)({
+        C = (0, i.EQ)({
             isStealthRemediationEnabled: A,
-            isBlocked: S
+            isBlocked: N
         })
             .with(
                 {
@@ -42,33 +94,35 @@ function p(e) {
                 },
                 () => 'danger'
             )
-            .otherwise(() => p);
-    return b
+            .otherwise(() => _);
+    return T
         ? null
-        : (0, i.jsx)(s.sNh, {
+        : (0, r.jsx)(a.sNh, {
               id: 'block',
-              color: null != N ? N : 'default',
-              label: S ? _.intl.string(_.t.XyHpKC) : _.intl.string(_.t.l4EmaW),
-              action: S
+              color: null != C ? C : 'default',
+              label: N ? p.NW.string(p.t.XyHpKC) : p.NW.string(p.t.l4EmaW),
+              action: N
                   ? () => {
-                        null == v || v(), o.Z.unblockUser(T, { location: y }), u.Z.showUnblockSuccessToast(T, null != m ? m : void 0);
+                        null == y || y(), s.Z.unblockUser(I, { location: O }), c.Z.showUnblockSuccessToast(I, null != E ? E : void 0);
                     }
                   : () => {
-                        (0, s.ZDy)(
+                        (0, a.ZDy)(
                             async () => {
-                                let { default: e } = await n.e('97652').then(n.bind(n, 478923));
+                                let { default: e } = await Promise.all([n.e('97652'), n.e('25726')]).then(n.bind(n, 478923));
                                 return (n) =>
-                                    (0, i.jsx)(e, {
-                                        ...n,
-                                        user: t,
-                                        guildId: h,
-                                        channelId: m,
-                                        onBlock: g,
-                                        onIgnore: E,
-                                        location: y
-                                    });
+                                    (0, r.jsx)(
+                                        e,
+                                        g(h({}, n), {
+                                            user: t,
+                                            guildId: m,
+                                            channelId: E,
+                                            onBlock: v,
+                                            onIgnore: b,
+                                            location: O
+                                        })
+                                    );
                             },
-                            { contextKey: (0, s.VnL)(I) }
+                            { contextKey: (0, a.VnL)(S) }
                         );
                     }
           });

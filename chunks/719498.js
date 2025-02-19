@@ -1,50 +1,93 @@
-a.d(t, { default: () => m });
-var n = a(200651),
-    i = a(192379),
-    s = a(481060),
-    l = a(933557),
-    r = a(540059),
-    d = a(925329),
-    o = a(296023),
-    c = a(388032),
-    x = a(485239);
-let m = (e) => {
-    let { channel: t, application: m, onClose: h, transitionState: k } = e,
-        u = (0, r.Q3)('IntegrationsEditLinkedLobbyModal'),
-        j = (0, o.w)(t),
-        p = i.useCallback(
+r.d(t, { default: () => u });
+var n = r(200651),
+    a = r(192379),
+    o = r(481060),
+    i = r(933557),
+    c = r(540059),
+    s = r(925329),
+    l = r(296023),
+    d = r(388032),
+    x = r(89736);
+let u = (e) => {
+    let { channel: t, application: u, onClose: m, transitionState: b } = e,
+        p = (0, c.Q3)('IntegrationsEditLinkedLobbyModal'),
+        j = (0, l.w)(t),
+        h = a.useCallback(
             () => (
-                h(),
-                (0, s.ZDy)(async () => {
-                    let { default: e } = await Promise.all([a.e('38902'), a.e('31907')]).then(a.bind(a, 366854));
-                    return (a) =>
-                        (0, n.jsx)(e, {
-                            ...a,
-                            channelId: t.id,
-                            application: m
-                        });
+                m(),
+                (0, o.ZDy)(async () => {
+                    let { default: e } = await Promise.all([r.e('38902'), r.e('31907')]).then(r.bind(r, 366854));
+                    return (r) => {
+                        var a, o;
+                        return (0, n.jsx)(
+                            e,
+                            ((a = (function (e) {
+                                for (var t = 1; t < arguments.length; t++) {
+                                    var r = null != arguments[t] ? arguments[t] : {},
+                                        n = Object.keys(r);
+                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                        (n = n.concat(
+                                            Object.getOwnPropertySymbols(r).filter(function (e) {
+                                                return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                            })
+                                        )),
+                                        n.forEach(function (t) {
+                                            var n;
+                                            (n = r[t]),
+                                                t in e
+                                                    ? Object.defineProperty(e, t, {
+                                                          value: n,
+                                                          enumerable: !0,
+                                                          configurable: !0,
+                                                          writable: !0
+                                                      })
+                                                    : (e[t] = n);
+                                        });
+                                }
+                                return e;
+                            })({}, r)),
+                            (o = o =
+                                {
+                                    channelId: t.id,
+                                    application: u
+                                }),
+                            Object.getOwnPropertyDescriptors
+                                ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(o))
+                                : (function (e, t) {
+                                      var r = Object.keys(e);
+                                      if (Object.getOwnPropertySymbols) {
+                                          var n = Object.getOwnPropertySymbols(e);
+                                          r.push.apply(r, n);
+                                      }
+                                      return r;
+                                  })(Object(o)).forEach(function (e) {
+                                      Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(o, e));
+                                  }),
+                            a)
+                        );
+                    };
                 })
             ),
-            [m, t.id, h]
+            [u, t.id, m]
         ),
-        v = (0, l.ZP)(t, !0);
-    return (0, n.jsxs)(s.Y0X, {
-        transitionState: k,
-        'aria-label': c.intl.string(c.t.OJknho),
+        O = (0, i.ZP)(t, !0);
+    return (0, n.jsxs)(o.Y0X, {
+        transitionState: b,
+        'aria-label': d.NW.string(d.t.OJknho),
         children: [
-            (0, n.jsx)(s.xBx, {
+            (0, n.jsx)(o.xBx, {
                 separator: !1,
-                children: (0, n.jsx)(s.X6q, {
+                children: (0, n.jsx)(o.X6q, {
                     variant: 'heading-lg/semibold',
-                    children: c.intl.string(c.t.OJknho)
+                    children: d.NW.string(d.t.OJknho)
                 })
             }),
-            (0, n.jsxs)(s.hzk, {
+            (0, n.jsxs)(o.hzk, {
                 className: x.content,
                 children: [
-                    (0, n.jsx)(d.Z, {
-                        game: m,
-                        size: d.Z.Sizes.LARGE
+                    (0, n.jsx)(s.Z, {
+                        game: u,
+                        size: s.Z.Sizes.LARGE
                     }),
                     (0, n.jsxs)('div', {
                         className: x.metadata,
@@ -52,15 +95,15 @@ let m = (e) => {
                             (0, n.jsxs)('div', {
                                 className: x.metadataHeader,
                                 children: [
-                                    (0, n.jsx)(s.Text, {
+                                    (0, n.jsx)(o.Text, {
                                         variant: 'text-md/semibold',
                                         color: 'header-primary',
-                                        children: m.name
+                                        children: u.name
                                     }),
-                                    (0, n.jsx)(s.Text, {
+                                    (0, n.jsx)(o.Text, {
                                         variant: 'text-sm/normal',
                                         color: 'text-muted',
-                                        children: c.intl.format(c.t['0NJZAQ'], { channelName: v })
+                                        children: d.NW.format(d.t['0NJZAQ'], { channelName: O })
                                     })
                                 ]
                             }),
@@ -68,7 +111,7 @@ let m = (e) => {
                                 (0, n.jsxs)(n.Fragment, {
                                     children: [
                                         (0, n.jsx)('div', { className: x.divider }),
-                                        (0, n.jsx)(s.Text, {
+                                        (0, n.jsx)(o.Text, {
                                             variant: 'text-xs/normal',
                                             color: 'text-muted',
                                             children: j
@@ -79,19 +122,19 @@ let m = (e) => {
                     })
                 ]
             }),
-            (0, n.jsxs)(s.mzw, {
+            (0, n.jsxs)(o.mzw, {
                 children: [
-                    (0, n.jsx)(s.zxk, {
-                        onClick: p,
-                        color: s.zxk.Colors.RED,
-                        children: c.intl.string(c.t.LLWaxc)
-                    }),
-                    (0, n.jsx)(s.zxk, {
+                    (0, n.jsx)(o.zxk, {
                         onClick: h,
-                        look: u ? s.zxk.Looks.FILLED : s.zxk.Looks.LINK,
-                        color: s.zxk.Colors.PRIMARY,
+                        color: o.zxk.Colors.RED,
+                        children: d.NW.string(d.t.LLWaxc)
+                    }),
+                    (0, n.jsx)(o.zxk, {
+                        onClick: m,
+                        look: p ? o.zxk.Looks.FILLED : o.zxk.Looks.LINK,
+                        color: o.zxk.Colors.PRIMARY,
                         className: x.cancelButton,
-                        children: c.intl.string(c.t['ETE/oK'])
+                        children: d.NW.string(d.t['ETE/oK'])
                     })
                 ]
             })

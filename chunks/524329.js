@@ -1,15 +1,16 @@
 n.d(t, {
-    Es: () => c,
-    RM: () => s,
-    VP: () => u,
-    Xb: () => o,
+    Es: () => u,
+    RM: () => i,
+    VP: () => c,
+    Xb: () => s,
     sm: () => E,
-    y0: () => a
-});
+    y0: () => o
+}),
+    n(266796);
 var r = n(544891),
     l = n(570140),
-    i = n(981631);
-let a = function (e) {
+    a = n(981631);
+let o = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         l.Z.dispatch({
             type: 'WELCOME_SCREEN_VIEW',
@@ -17,11 +18,11 @@ let a = function (e) {
             isLurking: t
         });
     },
-    s = async (e) => {
+    i = async (e) => {
         l.Z.dispatch({ type: 'WELCOME_SCREEN_FETCH_START' });
         try {
             let t = await r.tn.get({
-                url: i.ANM.GUILD_WELCOME_SCREEN(e),
+                url: a.ANM.GUILD_WELCOME_SCREEN(e),
                 oldFormErrors: !0,
                 rejectWithError: !0
             });
@@ -37,23 +38,23 @@ let a = function (e) {
             l.Z.dispatch({ type: 'WELCOME_SCREEN_FETCH_FAIL' });
         }
     },
-    o = () => {
+    s = () => {
         l.Z.dispatch({ type: 'WELCOME_SCREEN_SETTINGS_RESET' });
     },
     E = () => {
         l.Z.dispatch({ type: 'WELCOME_SCREEN_SETTINGS_CLEAR' });
     },
-    u = (e) => {
+    c = (e) => {
         l.Z.dispatch({
             type: 'WELCOME_SCREEN_SETTINGS_UPDATE',
             settings: e
         });
     },
-    c = async (e, t) => {
+    u = async (e, t) => {
         l.Z.dispatch({ type: 'WELCOME_SCREEN_SUBMIT' });
         try {
             let n = await r.tn.patch({
-                url: i.ANM.GUILD_WELCOME_SCREEN(e),
+                url: a.ANM.GUILD_WELCOME_SCREEN(e),
                 body: {
                     description: t.description,
                     welcome_channels: t.channels,

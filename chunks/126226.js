@@ -1,91 +1,124 @@
 n.d(t, {
     K: () => A,
-    Z: () => R
-});
-var i = n(200651);
+    Z: () => P
+}),
+    n(474991),
+    n(398202),
+    n(301563),
+    n(566702);
+var r = n(200651);
 n(192379);
-var r = n(693789),
-    a = n(952265),
-    s = n(911969),
-    o = n(555573),
+var i = n(693789),
+    o = n(952265),
+    a = n(911969),
+    s = n(555573),
     l = n(254711),
-    u = n(213459),
-    c = n(10718),
+    c = n(213459),
+    u = n(10718),
     d = n(367790),
     f = n(998698),
-    _ = n(895924),
-    p = n(581364),
+    p = n(895924),
+    _ = n(581364),
     h = n(826298),
     m = n(588468),
     g = n(496675),
     E = n(226951),
     v = n(877565),
-    y = n(590921),
-    I = n(665692),
-    T = n(689079),
-    b = n(388032),
-    S = n(356746);
+    b = n(590921),
+    y = n(665692),
+    O = n(689079),
+    S = n(388032),
+    I = n(373698);
+function T(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function N(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                T(e, t, n[t]);
+            });
+    }
+    return e;
+}
 let A = { results: { entries: [] } };
-function N() {
-    (0, a.ZD)(async () => {
+function C() {
+    (0, o.ZD)(async () => {
         let { default: e } = await n.e('87549').then(n.bind(n, 913962));
-        return (t) => (0, i.jsx)(e, { ...t });
+        return (t) => (0, r.jsx)(e, N({}, t));
     });
 }
-function C(e) {
-    return ''.concat(I.GI).concat(e.displayName);
+function R(e) {
+    return ''.concat(y.GI).concat(e.displayName);
 }
-let R = {
-    sentinel: I.GI,
-    stores: [f.Z, u.ZP, g.Z],
-    matches: (e, t, n, i, r) => r.commands !== y.L8.DISABLED && null == f.Z.getActiveCommand(e.id) && (i || r.commands !== y.L8.OLD_BUILT_INS),
-    queryResults(e, t, n, i, r) {
-        if (0 === n.length && i.commands !== y.L8.OLD_BUILT_INS) return A;
-        if (i.commands === y.L8.OLD_BUILT_INS) {
-            let i = (0, l.Kh)([s.yU.CHAT], !1, !1),
-                r = RegExp('^'.concat(E.Z.escape(n)), 'i'),
-                a = (0, p.Dd)(
-                    i,
+let P = {
+    sentinel: y.GI,
+    stores: [f.Z, c.ZP, g.Z],
+    matches: (e, t, n, r, i) => i.commands !== b.L8.DISABLED && null == f.Z.getActiveCommand(e.id) && (r || i.commands !== b.L8.OLD_BUILT_INS),
+    queryResults(e, t, n, r, i) {
+        if (0 === n.length && r.commands !== b.L8.OLD_BUILT_INS) return A;
+        if (r.commands === b.L8.OLD_BUILT_INS) {
+            let r = (0, l.Kh)([a.yU.CHAT], !1, !1),
+                i = RegExp('^'.concat(E.Z.escape(n)), 'i'),
+                o = (0, _.Dd)(
                     r,
+                    i,
                     {
                         channel: e,
                         guild: t
                     },
-                    y.AQ
+                    b.AQ
                 ),
-                o = l.Tm[T.bi.BUILT_IN];
-            return 0 === a.length
+                s = l.Tm[O.bi.BUILT_IN];
+            return 0 === o.length
                 ? A
                 : {
                       results: {
-                          entries: a.map((e) => ({
+                          entries: o.map((e) => ({
                               command: e,
-                              section: o
+                              section: s
                           }))
                       }
                   };
         }
-        let a = (0, h.hV)(e, n),
-            { commands: o, sections: u } = c.JT(
+        let o = (0, h.hV)(e, n),
+            { commands: s, sections: c } = u.JT(
                 {
                     channel: e,
                     type: 'channel'
                 },
                 {
-                    commandTypes: [s.yU.CHAT],
-                    text: a.text
+                    commandTypes: [a.yU.CHAT],
+                    text: o.text
                 },
                 {
-                    limit: y.AQ,
-                    placeholderCount: y.YP,
+                    limit: b.AQ,
+                    placeholderCount: b.YP,
                     scoreMethod: d.p.COMMAND_OR_APPLICATION,
-                    allowFetch: r
+                    allowFetch: i
                 }
             );
-        if (null == o) return A;
-        let f = o;
-        if (a.hasSpaceTerminator) {
-            let e = a.text.trim(),
+        if (null == s) return A;
+        let f = s;
+        if (o.hasSpaceTerminator) {
+            let e = o.text.trim(),
                 t = e + ' ';
             f = f.filter((n) => n.displayName === e || n.displayName.startsWith(t));
         }
@@ -93,9 +126,9 @@ let R = {
             ? A
             : {
                   results: {
-                      entries: f.slice(0, y.AQ).map((e) => ({
+                      entries: f.slice(0, b.AQ).map((e) => ({
                           command: e,
-                          section: null == u ? void 0 : u.find((t) => t.id === e.applicationId)
+                          section: null == c ? void 0 : c.find((t) => t.id === e.applicationId)
                       }))
                   }
               };
@@ -104,45 +137,45 @@ let R = {
         let {
                 results: { entries: t },
                 selectedIndex: n,
-                channel: a,
-                query: s,
-                options: o,
+                channel: o,
+                query: a,
+                options: s,
                 onHover: l,
-                onClick: u
+                onClick: c
             } = e,
-            c = (0, h.hV)(a, s),
-            d = o.commands === y.L8.OLD_BUILT_INS;
+            u = (0, h.hV)(o, a),
+            d = s.commands === b.L8.OLD_BUILT_INS;
         return (0, v.HI)({
-            query: c.text,
+            query: u.text,
             selectedIndex: n,
             autocompletes: t,
             onHover: l,
-            onClick: u,
-            titleWithQuery: b.t.HFRoZW,
-            titleWithoutQuery: b.intl.string(b.t['0hKkS0']),
-            getQuery: (e) => ''.concat(I.GI).concat(e),
+            onClick: c,
+            titleWithQuery: S.t.HFRoZW,
+            titleWithoutQuery: S.NW.string(S.t['0hKkS0']),
+            getQuery: (e) => ''.concat(y.GI).concat(e),
             Component: d ? m.ZP.Command : m.ZP.NewCommand,
             getProps: (e) => {
                 let { command: t, section: n } = e;
                 return {
                     key: t.id,
                     command: t,
-                    channel: a,
-                    guildId: a.guild_id,
+                    channel: o,
+                    guildId: o.guild_id,
                     showImage: !0,
                     section: n
                 };
             },
             key: 'commands',
-            headerClassName: d ? S.legacyInputCommandHeader : null,
+            headerClassName: d ? I.legacyInputCommandHeader : null,
             headerTrailingContent: d
-                ? (0, i.jsx)(r.zx, {
+                ? (0, r.jsx)(i.zx, {
                       type: 'button',
-                      look: r.zx.Looks.LINK,
-                      color: r.zx.Colors.BRAND,
-                      size: r.zx.Sizes.MIN,
-                      onClick: N,
-                      children: b.intl.string(b.t['8a0P09'])
+                      look: i.zx.Looks.LINK,
+                      color: i.zx.Colors.BRAND,
+                      size: i.zx.Sizes.MIN,
+                      onClick: C,
+                      children: S.NW.string(S.t['8a0P09'])
                   })
                 : null
         });
@@ -151,26 +184,26 @@ let R = {
         let {
                 results: { entries: t },
                 index: n,
-                queryText: i,
-                options: r,
-                channel: a,
-                location: s,
+                queryText: r,
+                options: i,
+                channel: o,
+                location: a,
                 tabOrEnter: l
             } = e,
-            { command: u, section: c } = t[n];
-        if (u.inputType === _.iw.PLACEHOLDER) return null;
-        if (r.commands === y.L8.OLD_BUILT_INS) r.insertText(C(u));
+            { command: c, section: u } = t[n];
+        if (c.inputType === p.iw.PLACEHOLDER) return null;
+        if (i.commands === b.L8.OLD_BUILT_INS) i.insertText(R(c));
         else {
-            let e = s;
-            null == e && (e = l ? _.Vh.QUERY : _.Vh.DISCOVERY),
-                o.Po({
-                    channelId: a.id,
-                    command: u,
-                    section: null != c ? c : null,
+            let e = a;
+            null == e && (e = l ? p.Vh.QUERY : p.Vh.DISCOVERY),
+                s.Po({
+                    channelId: o.id,
+                    command: c,
+                    section: null != u ? u : null,
                     location: e,
-                    queryLength: null == i ? void 0 : i.length
+                    queryLength: null == r ? void 0 : r.length
                 });
         }
-        return { type: y.z2.COMMAND };
+        return { type: b.z2.COMMAND };
     }
 };

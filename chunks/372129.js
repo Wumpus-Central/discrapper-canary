@@ -1,27 +1,52 @@
 n.d(t, {
-    Z: () => h,
-    _: () => u
+    Z: () => g,
+    _: () => m
 }),
     n(411104),
     n(653041),
     n(47120);
-var i = n(200651),
-    r = n(192379),
-    l = n(481060),
-    s = n(53281),
-    a = n(813197),
+var r = n(200651),
+    i = n(192379),
+    s = n(481060),
+    a = n(53281),
+    l = n(813197),
     o = n(426642),
     c = n(869783);
-async function d(e) {
+function d(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+async function u(e) {
     try {
         let t = await new Promise((t, n) => {
                 if (null != e) {
-                    let i = new FileReader();
-                    (i.onload = (e) => {
-                        var i;
-                        'string' == typeof (null === (i = e.target) || void 0 === i ? void 0 : i.result) ? t(e.target.result) : n(Error('Failed to read file'));
+                    let r = new FileReader();
+                    (r.onload = (e) => {
+                        var r;
+                        'string' == typeof (null === (r = e.target) || void 0 === r ? void 0 : r.result) ? t(e.target.result) : n(Error('Failed to read file'));
                     }),
-                        i.readAsDataURL(e);
+                        r.readAsDataURL(e);
                 }
             }),
             n = new Image();
@@ -33,76 +58,68 @@ async function d(e) {
                 dataURI: t
             }
         );
-    } catch {
+    } catch (e) {
         throw o.d.WRONG_TYPE;
     }
 }
-async function u(e, t) {
+async function m(e, t) {
     let n = [];
-    for (let i = 0; i < e.length; i++) {
-        let r = e[i];
+    for (let r = 0; r < e.length; r++) {
+        let i = e[r];
         try {
-            let { image: e, dataURI: i } = await d(r),
-                l = r.type === c.m.MP4 ? await t(i, r) : await t(i, r, e);
-            null != l &&
+            let { image: e, dataURI: r } = await u(i),
+                s = i.type === c.m.MP4 ? await t(r, i) : await t(r, i, e);
+            null != s &&
                 n.push({
-                    type: l,
-                    filename: r.name
+                    type: s,
+                    filename: i.name
                 });
         } catch (e) {
             n.push({
                 type: e,
-                filename: r.name
+                filename: i.name
             });
         }
     }
-    n.length > 0 && m(n);
+    n.length > 0 && p(n);
 }
-let m = (e) => {
-        (0, l.ZDy)(async () => {
+let p = (e) => {
+        (0, s.ZDy)(async () => {
             let { default: t } = await n.e('68720').then(n.bind(n, 70846));
-            return (n) =>
-                (0, i.jsx)(t, {
-                    errors: e,
-                    ...n
-                });
+            return (n) => (0, r.jsx)(t, d({ errors: e }, n));
         });
     },
-    h = (e) => {
-        let { onChange: t, multiple: o = !0, disabled: c, className: d, tabIndex: m = -1, 'aria-label': h, filters: g, setLoading: x } = e,
-            p = r.createRef(),
-            _ = r.useRef(null),
-            [C, f] = r.useState(!1);
-        r.useEffect(() => {
-            C && v();
-        }, [C]);
+    g = (e) => {
+        let { onChange: t, multiple: o = !0, disabled: c, className: u, tabIndex: p = -1, 'aria-label': g, filters: h, setLoading: f } = e,
+            b = i.createRef(),
+            x = i.useRef(null),
+            [j, N] = i.useState(!1);
+        i.useEffect(() => {
+            j && v();
+        }, [j]);
         let v = () => {
-                null !== _.current && ((0, l.Mr3)(_.current), (_.current = null));
+                null !== x.current && ((0, s.Mr3)(x.current), (x.current = null));
             },
-            N = async (e) => {
-                null == x || x(!0), await u(e, t), f(!0), null == x || x(!1);
+            _ = async (e) => {
+                null == f || f(!0), await m(e, t), N(!0), null == f || f(!1);
             },
-            j = async (e) => {
-                var t, r, s;
-                if ((e.stopPropagation(), e.preventDefault(), (null === (t = e.currentTarget) || void 0 === t ? void 0 : t.files) == null || (null === (s = e.currentTarget) || void 0 === s ? void 0 : null === (r = s.files) || void 0 === r ? void 0 : r.length) === 0)) return;
-                let a = e.currentTarget.files;
-                _.current = await (0, l.ZDy)(async () => {
+            O = async (e) => {
+                var t, i, a;
+                if ((e.stopPropagation(), e.preventDefault(), (null === (t = e.currentTarget) || void 0 === t ? void 0 : t.files) == null || (null === (a = e.currentTarget) || void 0 === a ? void 0 : null === (i = a.files) || void 0 === i ? void 0 : i.length) === 0)) return;
+                let l = e.currentTarget.files;
+                x.current = await (0, s.ZDy)(async () => {
                     let { default: e } = await n.e('16169').then(n.bind(n, 935333));
-                    return (t) =>
-                        (0, i.jsx)(e, {
-                            processFiles: () => N(a),
-                            ...t
-                        });
+                    return (t) => (0, r.jsx)(e, d({ processFiles: () => _(l) }, t));
                 });
             };
-        return (0, i.jsx)(s.Z, {
-            onChange: j,
-            filters: null != g ? g : (0, a.Zj)(),
+        return (0, r.jsx)(a.Z, {
+            onChange: O,
+            filters: null != h ? h : (0, l.Zj)(),
             multiple: o,
             disabled: c,
-            className: d,
-            tabIndex: m,
-            'aria-label': h,
-            ref: p
+            className: u,
+            tabIndex: p,
+            'aria-label': g,
+            ref: b
         });
     };

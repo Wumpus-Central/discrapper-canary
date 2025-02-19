@@ -1,9 +1,9 @@
 n.d(t, { Z: () => y }), n(47120);
-var i,
-    r = n(442837),
-    a = n(570140),
-    s = n(699516);
-function o(e, t, n) {
+var r,
+    i = n(442837),
+    o = n(570140),
+    a = n(699516);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,39 +16,55 @@ function o(e, t, n) {
         e
     );
 }
-let l = 86400000,
+function l(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                s(e, t, n[t]);
+            });
+    }
+    return e;
+}
+let c = 86400000,
     u = !1,
-    c = Object.freeze({
+    d = Object.freeze({
         userAffinities: [],
         affinityUserIds: new Set(),
         lastFetched: 0
     }),
-    d = Object.freeze({
+    f = Object.freeze({
         userAffinitiesMap: new Map(),
         affinityUserIds: new Set()
     }),
-    f = { ...c },
-    _ = { ...d };
-function p() {
-    (f = { ...c }), (_ = { ...d });
-}
+    p = l({}, d),
+    _ = l({}, f);
 function h() {
-    u = !1;
+    (p = l({}, d)), (_ = l({}, f));
 }
 function m() {
+    u = !1;
+}
+function g() {
     u = !0;
 }
-function g(e) {
+function E(e) {
     var t;
     let { affinities: n } = e;
-    (f.userAffinities = null !== (t = n.user_affinities) && void 0 !== t ? t : []), (f.lastFetched = Date.now()), E(), (u = !1);
+    (p.userAffinities = null !== (t = n.user_affinities) && void 0 !== t ? t : []), (p.lastFetched = Date.now()), v(), (u = !1);
 }
-function E() {
+function v() {
     let e = new Map(
-            f.userAffinities
+            p.userAffinities
                 .filter((e) => {
                     let { user_id: t } = e;
-                    return !s.Z.isBlockedOrIgnored(t);
+                    return !a.Z.isBlockedOrIgnored(t);
                 })
                 .map((e) => [e.user_id, e])
         ),
@@ -58,21 +74,21 @@ function E() {
         affinityUserIds: t
     };
 }
-class v extends (i = r.ZP.PersistedStore) {
+class b extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(s.Z), null != e && ((f.userAffinities = e.userAffinities), (f.lastFetched = e.lastFetched), E()), this.syncWith([s.Z], E);
+        this.waitFor(a.Z), null != e && ((p.userAffinities = e.userAffinities), (p.lastFetched = e.lastFetched), v()), this.syncWith([a.Z], v);
     }
     needsRefresh() {
-        return !u && Date.now() - f.lastFetched > l;
+        return !u && Date.now() - p.lastFetched > c;
     }
     getFetching() {
         return u;
     }
     getState() {
-        return f;
+        return p;
     }
     getUserAffinities() {
-        return f.userAffinities;
+        return p.userAffinities;
     }
     getUserAffinitiesMap() {
         return _.userAffinitiesMap;
@@ -84,10 +100,10 @@ class v extends (i = r.ZP.PersistedStore) {
         return _.affinityUserIds;
     }
 }
-o(v, 'displayName', 'UserAffinitiesStore'), o(v, 'persistKey', 'UserAffinitiesStore'), o(v, 'migrations', [(e) => null]);
-let y = new v(a.Z, {
-    LOAD_USER_AFFINITIES_SUCCESS: g,
-    LOAD_USER_AFFINITIES: m,
-    LOAD_USER_AFFINITIES_FAILURE: h,
-    LOGOUT: p
+s(b, 'displayName', 'UserAffinitiesStore'), s(b, 'persistKey', 'UserAffinitiesStore'), s(b, 'migrations', [(e) => null]);
+let y = new b(o.Z, {
+    LOAD_USER_AFFINITIES_SUCCESS: E,
+    LOAD_USER_AFFINITIES: g,
+    LOAD_USER_AFFINITIES_FAILURE: m,
+    LOGOUT: h
 });

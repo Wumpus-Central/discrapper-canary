@@ -1,15 +1,16 @@
 n.d(t, {
-    KX: () => _,
-    M$: () => f,
-    ZP: () => h
+    KX: () => m,
+    M$: () => h,
+    ZP: () => E
 }),
     n(653041),
+    n(230036),
     n(47120);
-var i = n(392711),
-    r = n.n(i),
-    a = n(913527),
-    s = n.n(a);
-function o(e, t, n) {
+var r = n(392711),
+    i = n.n(r),
+    o = n(913527),
+    a = n.n(o);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,11 +23,50 @@ function o(e, t, n) {
         e
     );
 }
-let l = 10,
-    u = 1000,
-    c = 32,
-    d = (e, t, n) => Math.ceil(e * (t / n.numOfRecentUses)),
-    f = {
+function l(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                s(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function c(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function u(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : c(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let d = 10,
+    f = 1000,
+    p = 32,
+    _ = (e, t, n) => Math.ceil(e * (t / n.numOfRecentUses)),
+    h = {
         original: (e) => {
             let t = 1;
             return e <= 3 ? (t = 100) : e <= 15 ? (t = 70) : e <= 30 ? (t = 50) : e <= 45 ? (t = 30) : e <= 80 && (t = 10), t;
@@ -40,17 +80,14 @@ let l = 10,
             return e <= 1 ? (t = 100) : e <= 2 ? (t = 70) : e <= 3 ? (t = 50) : e <= 7 ? (t = 20) : e <= 15 ? (t = 15) : e <= 30 ? (t = 10) : e <= 45 ? (t = 5) : e <= 80 && (t = 2), t;
         }
     },
-    _ = {
-        original: d,
-        safe: (e, t, n) => (null == n.maxTotalUse ? 0 : Math.trunc(1000 * ((e / n.maxTotalUse) * 0.2 + (t / u) * 0.8))),
-        day_recency: (e, t, n) => (null == n.maxTotalUse ? 0 : Math.trunc(1000 * ((e / n.maxTotalUse) * 0.05 + (t / u) * 0.95)))
+    m = {
+        original: _,
+        safe: (e, t, n) => (null == n.maxTotalUse ? 0 : Math.trunc(1000 * ((e / n.maxTotalUse) * 0.2 + (t / f) * 0.8))),
+        day_recency: (e, t, n) => (null == n.maxTotalUse ? 0 : Math.trunc(1000 * ((e / n.maxTotalUse) * 0.05 + (t / f) * 0.95)))
     };
-class p {
+class g {
     overwriteHistory(e, t) {
-        (this.usageHistory = r().mapValues(null != e ? e : {}, (e) => ({
-            ...e,
-            frecency: -1
-        }))),
+        (this.usageHistory = i().mapValues(null != e ? e : {}, (e) => u(l({}, e), { frecency: -1 }))),
             null == t ||
                 t.forEach((e) => {
                     let { key: t, timestamp: n } = e;
@@ -89,38 +126,31 @@ class p {
         return null != t ? t.frecency : null;
     }
     replaceEntryComputeFunctions(e, t, n) {
-        (this.computeWeight = e),
-            (this.computeFrecency = t),
-            (this.calculateMaxTotalUse = n),
-            (this.usageHistory = r().mapValues(this.usageHistory, (e) => ({
-                ...e,
-                frecency: -1
-            }))),
-            this.markDirty();
+        (this.computeWeight = e), (this.computeFrecency = t), (this.calculateMaxTotalUse = n), (this.usageHistory = i().mapValues(this.usageHistory, (e) => u(l({}, e), { frecency: -1 }))), this.markDirty();
     }
     compute() {
-        let e = s()(),
-            t = this.calculateMaxTotalUse ? r().maxBy(Object.values(this.usageHistory), (e) => e.totalUses) : null;
-        r().forEach(this.usageHistory, (n, i) => {
-            let { totalUses: a, recentUses: o, frecency: l } = n;
+        let e = a()(),
+            t = this.calculateMaxTotalUse ? i().maxBy(Object.values(this.usageHistory), (e) => e.totalUses) : null;
+        i().forEach(this.usageHistory, (n, r) => {
+            let { totalUses: o, recentUses: s, frecency: l } = n;
             if (-1 !== l) return;
-            let u = this.computeBonus(i) / 100;
+            let c = this.computeBonus(r) / 100;
             (n.score = 0),
-                r().forEach(o, (t, i) => {
-                    if (i >= this.maxSamples) return !1;
-                    let r = this.computeWeight(e.diff(s()(t), 'days'));
-                    n.score += u * r;
+                i().forEach(s, (t, r) => {
+                    if (r >= this.maxSamples) return !1;
+                    let i = this.computeWeight(e.diff(a()(t), 'days'));
+                    n.score += c * i;
                 }),
                 n.score > 0
                     ? (n.recentUses.length > 0 &&
-                          (n.frecency = this.computeFrecency(a, n.score, {
-                              numOfRecentUses: o.length,
+                          (n.frecency = this.computeFrecency(o, n.score, {
+                              numOfRecentUses: s.length,
                               maxTotalUse: null == t ? void 0 : t.totalUses
                           })),
-                      (this.usageHistory[i] = n))
-                    : delete this.usageHistory[i];
+                      (this.usageHistory[r] = n))
+                    : delete this.usageHistory[r];
         }),
-            (this.frequently = r()(this.usageHistory)
+            (this.frequently = i()(this.usageHistory)
                 .map((e, t) => {
                     let n = this.lookupKey(t);
                     return null == n ? null : [n, e.frecency];
@@ -145,8 +175,8 @@ class p {
     set frequently(e) {
         this._frequently = e;
     }
-    constructor({ computeBonus: e, computeWeight: t, computeFrecency: n = d, lookupKey: i, afterCompute: r, numFrequentlyItems: a = c, maxSamples: s = l }) {
-        o(this, 'dirty', void 0), o(this, '_frequently', void 0), o(this, 'numFrequentlyItems', void 0), o(this, 'maxSamples', void 0), o(this, 'computeBonus', void 0), o(this, 'computeWeight', void 0), o(this, 'computeFrecency', void 0), o(this, 'lookupKey', void 0), o(this, 'usageHistory', void 0), o(this, 'afterCompute', void 0), o(this, 'calculateMaxTotalUse', void 0), (this.computeBonus = e), (this.computeWeight = t), (this.computeFrecency = n), (this.afterCompute = r), (this.lookupKey = i), (this.usageHistory = {}), (this.frequently = []), (this.maxSamples = s), (this.numFrequentlyItems = a), (this.calculateMaxTotalUse = !1), (this.dirty = !1);
+    constructor({ computeBonus: e, computeWeight: t, computeFrecency: n = _, lookupKey: r, afterCompute: i, numFrequentlyItems: o = p, maxSamples: a = d }) {
+        s(this, 'dirty', void 0), s(this, '_frequently', void 0), s(this, 'numFrequentlyItems', void 0), s(this, 'maxSamples', void 0), s(this, 'computeBonus', void 0), s(this, 'computeWeight', void 0), s(this, 'computeFrecency', void 0), s(this, 'lookupKey', void 0), s(this, 'usageHistory', void 0), s(this, 'afterCompute', void 0), s(this, 'calculateMaxTotalUse', void 0), (this.computeBonus = e), (this.computeWeight = t), (this.computeFrecency = n), (this.afterCompute = i), (this.lookupKey = r), (this.usageHistory = {}), (this.frequently = []), (this.maxSamples = a), (this.numFrequentlyItems = o), (this.calculateMaxTotalUse = !1), (this.dirty = !1);
     }
 }
-let h = p;
+let E = g;

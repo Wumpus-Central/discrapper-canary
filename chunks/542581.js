@@ -1,8 +1,8 @@
-n.d(t, { Z: () => v }), n(47120);
-var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+n.d(t, { Z: () => b }), n(47120);
+var r = n(200651),
+    a = n(192379),
+    i = n(120356),
+    l = n.n(i),
     s = n(642128),
     o = n(232713),
     c = n(481060),
@@ -11,95 +11,95 @@ var i = n(200651),
     m = n(456269),
     h = n(470623),
     g = n(981631),
-    x = n(388032),
-    f = n(480265),
-    p = n(663362);
-let v = r.memo(function (e) {
-    let { channel: t, onChange: l } = e,
-        v = (0, h.AF)(),
-        { guidelinesOpen: C } = (0, h.xH)((e) => {
+    f = n(388032),
+    p = n(104518),
+    x = n(368365);
+let b = a.memo(function (e) {
+    let { channel: t, onChange: i } = e,
+        b = (0, h.AF)(),
+        { guidelinesOpen: v } = (0, h.xH)((e) => {
             let { guidelinesOpen: t } = e;
             return { guidelinesOpen: t };
         }, o.X),
-        _ = (0, m.r_)(t),
-        [b, j] = r.useState(!1),
-        N = r.useCallback(
+        j = (0, m.r_)(t),
+        [C, _] = a.useState(!1),
+        y = a.useCallback(
             (e) => {
                 if (null == e) return;
                 let t = e.clientHeight >= 220;
-                t !== b && j(t);
+                t !== C && _(t);
             },
-            [b]
+            [C]
         );
-    r.useLayoutEffect(() => {
-        setTimeout(l, 350);
-    }, [C, l]);
-    let [T, I] = r.useState(!C),
-        S = (0, c.q_F)({
-            opacity: C ? 1 : 0,
-            maxHeight: C ? 500 : 0,
+    a.useLayoutEffect(() => {
+        setTimeout(i, 350);
+    }, [v, i]);
+    let [N, O] = a.useState(!v),
+        w = (0, c.q_F)({
+            opacity: +!!v,
+            maxHeight: 500 * !!v,
             config: { duration: 300 },
-            onRest: () => I(!C)
+            onRest: () => O(!v)
         });
     return null != t.topic && t.topic.length > 0
-        ? (0, i.jsx)(s.animated.div, {
-              style: S,
-              className: T ? f.hiddenVisually : void 0,
-              children: (0, i.jsxs)('div', {
-                  className: f.container,
+        ? (0, r.jsx)(s.animated.div, {
+              style: w,
+              className: N ? p.hiddenVisually : void 0,
+              children: (0, r.jsxs)('div', {
+                  className: p.container,
                   children: [
-                      (0, i.jsxs)('div', {
-                          className: f.headerContainer,
+                      (0, r.jsxs)('div', {
+                          className: p.headerContainer,
                           children: [
-                              (0, i.jsxs)(c.X6q, {
+                              (0, r.jsxs)(c.X6q, {
                                   variant: 'heading-lg/semibold',
-                                  className: f.guidelinesHeader,
+                                  className: p.guidelinesHeader,
                                   children: [
-                                      (0, i.jsx)(c.snC, {
+                                      (0, r.jsx)(c.snC, {
                                           size: 'custom',
                                           color: 'currentColor',
                                           width: 20,
                                           height: 20
                                       }),
-                                      x.intl.string(x.t['4d4T4u']),
-                                      _ &&
-                                          (0, i.jsx)(c.P3F, {
+                                      f.NW.string(f.t['4d4T4u']),
+                                      j &&
+                                          (0, r.jsx)(c.P3F, {
                                               onClick: () => {
                                                   d.ZP.open(t.id, void 0, g.ZfP.TOPIC);
                                               },
                                               tag: 'span',
-                                              className: f.clickable,
-                                              children: (0, i.jsx)(c.vdY, {
+                                              className: p.clickable,
+                                              children: (0, r.jsx)(c.vdY, {
                                                   size: 'xs',
                                                   color: 'currentColor'
                                               })
                                           })
                                   ]
                               }),
-                              (0, i.jsx)(c.P3F, {
-                                  'aria-label': x.intl.string(x.t.cpT0Cg),
-                                  className: f.clickable,
+                              (0, r.jsx)(c.P3F, {
+                                  'aria-label': f.NW.string(f.t.cpT0Cg),
+                                  className: p.clickable,
                                   onClick: () => {
-                                      v.getState().setGuidelinesOpen(!1);
+                                      b.getState().setGuidelinesOpen(!1);
                                   },
-                                  children: (0, i.jsx)(c.Dio, {
+                                  children: (0, r.jsx)(c.Dio, {
                                       size: 'xs',
                                       color: 'currentColor'
                                   })
                               })
                           ]
                       }),
-                      (0, i.jsxs)('div', {
-                          className: f.descriptionContainer,
+                      (0, r.jsxs)('div', {
+                          className: p.descriptionContainer,
                           children: [
-                              (0, i.jsx)(c.Text, {
+                              (0, r.jsx)(c.Text, {
                                   selectable: !0,
                                   variant: 'text-sm/normal',
                                   color: 'header-secondary',
                                   style: { maxHeight: 220 },
-                                  className: a()(f.guidelines, p.markup),
-                                  children: (0, i.jsx)('div', {
-                                      ref: N,
+                                  className: l()(p.guidelines, x.markup),
+                                  children: (0, r.jsx)('div', {
+                                      ref: y,
                                       children: u.Z.parseForumPostGuidelines(t.topic, !0, {
                                           channelId: t.id,
                                           allowHeading: !0,
@@ -107,35 +107,75 @@ let v = r.memo(function (e) {
                                       })
                                   })
                               }),
-                              b &&
-                                  (0, i.jsxs)('div', {
-                                      className: f.showMore,
+                              C &&
+                                  (0, r.jsxs)('div', {
+                                      className: p.showMore,
                                       children: [
-                                          (0, i.jsx)('div', { className: f.gradient }),
-                                          (0, i.jsx)('div', {
-                                              className: f.linkContainer,
-                                              children: (0, i.jsx)(c.P3F, {
-                                                  className: f.showMoreLink,
+                                          (0, r.jsx)('div', { className: p.gradient }),
+                                          (0, r.jsx)('div', {
+                                              className: p.linkContainer,
+                                              children: (0, r.jsx)(c.P3F, {
+                                                  className: p.showMoreLink,
                                                   onClick: () => {
                                                       (0, c.ZDy)(async () => {
                                                           let { default: e } = await n.e('78712').then(n.bind(n, 223164));
-                                                          return (n) =>
-                                                              (0, i.jsx)(e, {
-                                                                  ...n,
-                                                                  channel: t
-                                                              });
+                                                          return (n) => {
+                                                              var a, i;
+                                                              return (0, r.jsx)(
+                                                                  e,
+                                                                  ((a = (function (e) {
+                                                                      for (var t = 1; t < arguments.length; t++) {
+                                                                          var n = null != arguments[t] ? arguments[t] : {},
+                                                                              r = Object.keys(n);
+                                                                          'function' == typeof Object.getOwnPropertySymbols &&
+                                                                              (r = r.concat(
+                                                                                  Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                                                      return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                                                  })
+                                                                              )),
+                                                                              r.forEach(function (t) {
+                                                                                  var r;
+                                                                                  (r = n[t]),
+                                                                                      t in e
+                                                                                          ? Object.defineProperty(e, t, {
+                                                                                                value: r,
+                                                                                                enumerable: !0,
+                                                                                                configurable: !0,
+                                                                                                writable: !0
+                                                                                            })
+                                                                                          : (e[t] = r);
+                                                                              });
+                                                                      }
+                                                                      return e;
+                                                                  })({}, n)),
+                                                                  (i = i = { channel: t }),
+                                                                  Object.getOwnPropertyDescriptors
+                                                                      ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(i))
+                                                                      : (function (e, t) {
+                                                                            var n = Object.keys(e);
+                                                                            if (Object.getOwnPropertySymbols) {
+                                                                                var r = Object.getOwnPropertySymbols(e);
+                                                                                n.push.apply(n, r);
+                                                                            }
+                                                                            return n;
+                                                                        })(Object(i)).forEach(function (e) {
+                                                                            Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(i, e));
+                                                                        }),
+                                                                  a)
+                                                              );
+                                                          };
                                                       });
                                                   },
-                                                  children: (0, i.jsxs)(c.Text, {
+                                                  children: (0, r.jsxs)(c.Text, {
                                                       variant: 'text-sm/semibold',
                                                       color: 'text-brand',
-                                                      className: f.showMoreText,
+                                                      className: p.showMoreText,
                                                       children: [
-                                                          x.intl.string(x.t.Vu7odH),
-                                                          (0, i.jsx)(c.bJT, {
+                                                          f.NW.string(f.t.Vu7odH),
+                                                          (0, r.jsx)(c.bJT, {
                                                               size: 'xs',
                                                               color: 'currentColor',
-                                                              className: f.showMoreIcon
+                                                              className: p.showMoreIcon
                                                           })
                                                       ]
                                                   })

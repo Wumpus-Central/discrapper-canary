@@ -1,196 +1,239 @@
-n.d(t, { Z: () => w }), n(47120);
-var a = n(200651),
-    i = n(192379),
-    r = n(442837),
-    l = n(481060),
-    o = n(970606),
+n.d(t, { Z: () => O }), n(266796), n(47120);
+var r = n(200651),
+    a = n(192379),
+    i = n(442837),
+    o = n(481060),
+    l = n(970606),
     s = n(122051),
     c = n(650774),
     d = n(430824),
     u = n(496675),
     m = n(693546),
-    x = n(246364),
-    h = n(98493),
-    _ = n(985159),
-    p = n(328977),
-    f = n(412222),
-    C = n(223312),
-    j = n(571728),
-    v = n(572940),
-    b = n(80487),
-    g = n(146463),
-    T = n(981631),
-    I = n(388032),
-    R = n(362754);
-function N(e) {
+    p = n(246364),
+    f = n(98493),
+    x = n(985159),
+    h = n(328977),
+    b = n(412222),
+    j = n(223312),
+    _ = n(571728),
+    g = n(572940),
+    v = n(80487),
+    C = n(146463),
+    N = n(981631),
+    y = n(388032),
+    I = n(345375);
+function T(e) {
     let { guild: t } = e;
-    return (0, a.jsxs)('div', {
-        className: R.setupHeader,
+    return (0, r.jsxs)('div', {
+        className: I.setupHeader,
         children: [
-            (0, a.jsxs)('div', {
-                className: R.previewContainer,
+            (0, r.jsxs)('div', {
+                className: I.previewContainer,
                 children: [
-                    (0, a.jsx)(l.X6q, {
+                    (0, r.jsx)(o.X6q, {
                         variant: 'heading-lg/bold',
-                        children: I.intl.string(I.t.aOQWKi)
+                        children: y.NW.string(y.t.aOQWKi)
                     }),
-                    (0, a.jsxs)(l.zxk, {
-                        color: l.zxk.Colors.TRANSPARENT,
+                    (0, r.jsxs)(o.zxk, {
+                        color: o.zxk.Colors.TRANSPARENT,
                         onClick: () => {
-                            (0, l.ZDy)(async () => {
+                            (0, o.ZDy)(async () => {
                                 let { default: e } = await Promise.all([n.e('99916'), n.e('81038'), n.e('52657')]).then(n.bind(n, 645264));
-                                return (n) =>
-                                    (0, a.jsx)(e, {
-                                        ...n,
-                                        guildId: t.id,
-                                        isPreview: !0
-                                    });
+                                return (n) => {
+                                    var a, i;
+                                    return (0, r.jsx)(
+                                        e,
+                                        ((a = (function (e) {
+                                            for (var t = 1; t < arguments.length; t++) {
+                                                var n = null != arguments[t] ? arguments[t] : {},
+                                                    r = Object.keys(n);
+                                                'function' == typeof Object.getOwnPropertySymbols &&
+                                                    (r = r.concat(
+                                                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                        })
+                                                    )),
+                                                    r.forEach(function (t) {
+                                                        var r;
+                                                        (r = n[t]),
+                                                            t in e
+                                                                ? Object.defineProperty(e, t, {
+                                                                      value: r,
+                                                                      enumerable: !0,
+                                                                      configurable: !0,
+                                                                      writable: !0
+                                                                  })
+                                                                : (e[t] = r);
+                                                    });
+                                            }
+                                            return e;
+                                        })({}, n)),
+                                        (i = i =
+                                            {
+                                                guildId: t.id,
+                                                isPreview: !0
+                                            }),
+                                        Object.getOwnPropertyDescriptors
+                                            ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(i))
+                                            : (function (e, t) {
+                                                  var n = Object.keys(e);
+                                                  if (Object.getOwnPropertySymbols) {
+                                                      var r = Object.getOwnPropertySymbols(e);
+                                                      n.push.apply(n, r);
+                                                  }
+                                                  return n;
+                                              })(Object(i)).forEach(function (e) {
+                                                  Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(i, e));
+                                              }),
+                                        a)
+                                    );
+                                };
                             });
                         },
-                        size: l.PhG.SMALL,
-                        'aria-label': I.intl.string(I.t.rqfRdX),
-                        innerClassName: R.previewButton,
+                        size: o.PhG.SMALL,
+                        'aria-label': y.NW.string(y.t.rqfRdX),
+                        innerClassName: I.previewButton,
                         children: [
-                            (0, a.jsx)(l.tEF, {
+                            (0, r.jsx)(o.tEF, {
                                 size: 'xs',
                                 color: 'currentColor'
                             }),
-                            I.intl.string(I.t.rqfRdX)
+                            y.NW.string(y.t.rqfRdX)
                         ]
                     })
                 ]
             }),
-            (0, a.jsx)(l.Text, {
-                className: R.description,
+            (0, r.jsx)(o.Text, {
+                className: I.description,
                 variant: 'text-sm/medium',
                 color: 'header-secondary',
-                children: I.intl.format(I.t.xpB4Ym, { guildName: t.name })
+                children: y.NW.format(y.t.xpB4Ym, { guildName: t.name })
             })
         ]
     });
 }
-function E(e) {
+function w(e) {
     var t, n;
-    let { guildId: E, isSidebarOpen: w } = e,
-        B = i.useRef(null),
-        [S, P] = i.useState((0, _.z)({ guildId: E })),
-        F = (0, f.C)({ guildId: E }),
-        y = (0, p.L)({ guildId: E }),
-        q = null !== (t = (0, j.A)({ guildId: E })) && void 0 !== t ? t : 0,
-        { guildJoinRequests: Z } = (0, C.j)({
-            guildId: E,
-            applicationStatus: 'REVIEW_APPLICATION' === S ? x.wB.SUBMITTED : S,
-            sortOrder: F
+    let { guildId: w, isSidebarOpen: O } = e,
+        P = a.useRef(null),
+        [R, E] = a.useState((0, x.z)({ guildId: w })),
+        S = (0, b.C)({ guildId: w }),
+        B = (0, h.L)({ guildId: w }),
+        k = null !== (t = (0, _.A)({ guildId: w })) && void 0 !== t ? t : 0,
+        { guildJoinRequests: F } = (0, j.j)({
+            guildId: w,
+            applicationStatus: 'REVIEW_APPLICATION' === R ? p.wB.SUBMITTED : R,
+            sortOrder: S
         }),
-        k = (0, r.e7)([d.Z], () => d.Z.getGuild(E), [E]),
-        A = (0, r.e7)([c.Z], () => c.Z.getMemberCount(E)),
-        M = null != k && (null != A ? A : 0) >= k.maxMembers,
-        { fetchNextPage: L } = (0, h.m)({
-            guildId: E,
-            guildJoinRequests: Z
+        q = (0, i.e7)([d.Z], () => d.Z.getGuild(w), [w]),
+        Z = (0, i.e7)([c.Z], () => c.Z.getMemberCount(w)),
+        A = null != q && (null != Z ? Z : 0) >= q.maxMembers,
+        { fetchNextPage: W } = (0, f.m)({
+            guildId: w,
+            guildJoinRequests: F
         }),
-        U = (0, r.e7)([u.Z], () => u.Z.can(T.Plq.KICK_MEMBERS, k)),
-        D = i.useRef(!1);
-    D.current || ((D.current = !0), L(F, 'REVIEW_APPLICATION' === S ? x.wB.SUBMITTED : S)),
-        i.useEffect(() => {
-            U || P('REVIEW_APPLICATION');
-        }, [U]);
-    let z = i.useRef(!1);
-    i.useEffect(() => {
-        z.current = !0;
-    }, [F, S]),
-        i.useEffect(() => {
-            if (z.current && 0 !== Z.length && 'REVIEW_APPLICATION' !== S) {
+        D = (0, i.e7)([u.Z], () => u.Z.can(N.Plq.KICK_MEMBERS, q)),
+        M = a.useRef(!1);
+    M.current || ((M.current = !0), W(S, 'REVIEW_APPLICATION' === R ? p.wB.SUBMITTED : R)),
+        a.useEffect(() => {
+            D || E('REVIEW_APPLICATION');
+        }, [D]);
+    let L = a.useRef(!1);
+    a.useEffect(() => {
+        L.current = !0;
+    }, [S, R]),
+        a.useEffect(() => {
+            if (L.current && 0 !== F.length && 'REVIEW_APPLICATION' !== R) {
                 var e;
-                (z.current = !1), m.Z.setSelectedGuildJoinRequest(E, Z[0]), null === (e = B.current) || void 0 === e || e.scrollToTop();
+                (L.current = !1), m.Z.setSelectedGuildJoinRequest(w, F[0]), null === (e = P.current) || void 0 === e || e.scrollToTop();
             }
-        }, [E, Z, y, S]);
-    let J = i.useCallback(
+        }, [w, F, B, R]);
+    let U = a.useCallback(
             async (e) => {
-                'REVIEW_APPLICATION' !== S && F !== e && (m.Z.setSelectedSortOrder(E, e), await L(e, S));
+                'REVIEW_APPLICATION' !== R && S !== e && (m.Z.setSelectedSortOrder(w, e), await W(e, R));
             },
-            [S, F, E, L]
+            [R, S, w, W]
         ),
-        O = i.useCallback(
+        z = a.useCallback(
             async (e) => {
-                S !== e &&
-                    (P(e),
-                    (0, o.Q2)({
-                        guildId: E,
-                        source: T.jXE.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
+                R !== e &&
+                    (E(e),
+                    (0, l.Q2)({
+                        guildId: w,
+                        source: N.jXE.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
                         tab: e
                     }),
-                    m.Z.setSelectedGuildJoinRequest(E, null),
-                    'REVIEW_APPLICATION' !== e && (m.Z.setSelectedApplicationTab(E, e), await L(F, e)));
+                    m.Z.setSelectedGuildJoinRequest(w, null),
+                    'REVIEW_APPLICATION' !== e && (m.Z.setSelectedApplicationTab(w, e), await W(S, e)));
             },
-            [S, F, E, L]
+            [R, S, w, W]
         ),
-        W = i.useCallback(async () => {
+        J = a.useCallback(async () => {
             var e;
-            if ('REVIEW_APPLICATION' === S) return;
-            let t = null === (e = B.current) || void 0 === e ? void 0 : e.getScrollerState();
-            null != t && t.scrollHeight - t.scrollTop - t.offsetHeight < 200 && (await L(F, S));
-        }, [S, F, L]),
-        G = null !== (n = null == k ? void 0 : k.hasFeature(T.oNc.CLAN)) && void 0 !== n && n;
-    return (0, a.jsxs)(a.Fragment, {
+            if ('REVIEW_APPLICATION' === R) return;
+            let t = null === (e = P.current) || void 0 === e ? void 0 : e.getScrollerState();
+            null != t && t.scrollHeight - t.scrollTop - t.offsetHeight < 200 && (await W(S, R));
+        }, [R, S, W]),
+        G = null !== (n = null == q ? void 0 : q.hasFeature(N.oNc.CLAN)) && void 0 !== n && n;
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, a.jsx)(b.Z, {
-                currentTab: S,
-                onTabItemSelect: O,
-                pendingGuildJoinRequestsTotal: q,
+            (0, r.jsx)(v.Z, {
+                currentTab: R,
+                onTabItemSelect: z,
+                pendingGuildJoinRequestsTotal: k,
                 showSetupTab: G,
-                canActionJoinRequests: U,
-                isSidebarOpen: w
+                canActionJoinRequests: D,
+                isSidebarOpen: O
             }),
-            (0, a.jsx)('div', {
-                className: R.content,
+            (0, r.jsx)('div', {
+                className: I.content,
                 children:
-                    'REVIEW_APPLICATION' === S
-                        ? null != k
-                            ? (0, a.jsx)(l.zJl, {
-                                  children: (0, a.jsxs)('div', {
-                                      className: R.scrollerContent,
+                    'REVIEW_APPLICATION' === R
+                        ? null != q
+                            ? (0, r.jsx)(o.zJl, {
+                                  children: (0, r.jsxs)('div', {
+                                      className: I.scrollerContent,
                                       children: [
-                                          (0, a.jsx)(N, { guild: k }),
-                                          (0, a.jsx)(s.Z, {
-                                              guild: k,
+                                          (0, r.jsx)(T, { guild: q }),
+                                          (0, r.jsx)(s.Z, {
+                                              guild: q,
                                               isClanContext: !0
                                           })
                                       ]
                                   })
                               })
                             : null
-                        : (0, a.jsxs)(a.Fragment, {
+                        : (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  U &&
-                                      M &&
-                                      (0, a.jsx)(l.Wn, {
-                                          messageType: l.QYI.WARNING,
+                                  D &&
+                                      A &&
+                                      (0, r.jsx)(o.Wn, {
+                                          messageType: o.QYI.WARNING,
                                           textVariant: 'text-sm/medium',
-                                          className: R.headerWarning,
-                                          children: I.intl.format(I.t.o3mLzM, { count: null == k ? void 0 : k.maxMembers })
+                                          className: I.headerWarning,
+                                          children: y.NW.format(y.t.o3mLzM, { count: null == q ? void 0 : q.maxMembers })
                                       }),
-                                  (0, a.jsx)('div', {
-                                      className: R.listControls,
-                                      children: (0, a.jsx)(v.Z, {
-                                          className: R.sortSelect,
-                                          sortOrder: F,
-                                          onSortChange: J
+                                  (0, r.jsx)('div', {
+                                      className: I.listControls,
+                                      children: (0, r.jsx)(g.Z, {
+                                          className: I.sortSelect,
+                                          sortOrder: S,
+                                          onSortChange: U
                                       })
                                   }),
-                                  (0, a.jsx)(l.Text, {
-                                      className: R.description,
+                                  (0, r.jsx)(o.Text, {
+                                      className: I.description,
                                       variant: 'text-xs/normal',
                                       color: 'header-secondary',
-                                      children: I.intl.string(I.t.OCorGR)
+                                      children: y.NW.string(y.t.OCorGR)
                                   }),
-                                  (0, a.jsx)(g.Z, {
-                                      applicationStatus: S,
-                                      guildJoinRequests: Z,
-                                      guildId: E,
-                                      onScroll: W,
-                                      listRef: B,
-                                      atMaxMemberCapacity: M
+                                  (0, r.jsx)(C.Z, {
+                                      applicationStatus: R,
+                                      guildJoinRequests: F,
+                                      guildId: w,
+                                      onScroll: J,
+                                      listRef: P,
+                                      atMaxMemberCapacity: A
                                   })
                               ]
                           })
@@ -198,9 +241,9 @@ function E(e) {
         ]
     });
 }
-let w = i.memo(function (e) {
+let O = a.memo(function (e) {
     let { guildId: t, isSidebarOpen: n } = e;
-    return (0, a.jsx)(E, {
+    return (0, r.jsx)(w, {
         guildId: t,
         isSidebarOpen: n
     });

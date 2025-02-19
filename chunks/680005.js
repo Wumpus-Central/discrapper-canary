@@ -1,120 +1,182 @@
-e.d(t, {
-    YG: () => g,
-    pV: () => Z,
-    rf: () => S
+n.d(t, {
+    YG: () => h,
+    pV: () => g,
+    rf: () => y
 });
-var l,
-    i = e(200651);
-e(192379);
-var a = e(860911),
-    r = e(481060),
-    s = e(100527),
-    u = e(906732),
-    o = e(887706),
-    d = e(929011),
-    c = e(703656),
-    p = e(626135),
-    f = e(937615),
-    v = e(110742),
-    m = e(981631),
-    I = e(388032),
-    h = e(641875),
-    S = (((l = {})[(l.AVAILABLE = 0)] = 'AVAILABLE'), (l[(l.LOADING = 1)] = 'LOADING'), (l[(l.UPCOMING_PLAN = 2)] = 'UPCOMING_PLAN'), (l[(l.SUBSCRIBED = 3)] = 'SUBSCRIBED'), (l[(l.UNAVAILABLE = 4)] = 'UNAVAILABLE'), l);
-function Z(n) {
-    let { appId: t, className: e, onClick: l, onHasClicked: a, skuId: r, subscriptionPlan: s, icon: u, state: o = 0 } = n,
-        d = null != s ? (0, f.xg)(s) : null,
-        c = 1 === o;
-    return 0 === o || c
-        ? (0, i.jsx)(E, {
+var i,
+    l = n(200651);
+n(192379);
+var r = n(860911),
+    o = n(481060),
+    a = n(100527),
+    u = n(906732),
+    s = n(887706),
+    c = n(929011),
+    d = n(703656),
+    p = n(626135),
+    f = n(937615),
+    b = n(110742),
+    v = n(981631),
+    O = n(388032),
+    m = n(37935),
+    y = (((i = {})[(i.AVAILABLE = 0)] = 'AVAILABLE'), (i[(i.LOADING = 1)] = 'LOADING'), (i[(i.UPCOMING_PLAN = 2)] = 'UPCOMING_PLAN'), (i[(i.SUBSCRIBED = 3)] = 'SUBSCRIBED'), (i[(i.UNAVAILABLE = 4)] = 'UNAVAILABLE'), i);
+function g(e) {
+    let { appId: t, className: n, onClick: i, onHasClicked: r, skuId: o, subscriptionPlan: a, icon: u, state: s = 0 } = e,
+        c = null != a ? (0, f.xg)(a) : null,
+        d = 1 === s;
+    return 0 === s || d
+        ? (0, l.jsx)(S, {
               appId: t,
-              skuId: r,
-              onClick: (n) => {
-                  l(n), null == a || a();
+              skuId: o,
+              onClick: (e) => {
+                  i(e), null == r || r();
               },
-              className: e,
-              submitting: c,
-              children: (0, i.jsxs)('div', {
-                  className: h.btnContent,
-                  children: [u, null != d ? I.intl.formatToPlainString(I.t.i4T8v7, { rate: d }) : I.intl.string(I.t.uuzaAA)]
+              className: n,
+              submitting: d,
+              children: (0, l.jsxs)('div', {
+                  className: m.btnContent,
+                  children: [u, null != c ? O.NW.formatToPlainString(O.t.i4T8v7, { rate: c }) : O.NW.string(O.t.uuzaAA)]
               })
           })
-        : (0, i.jsx)(A, {
-              className: e,
-              children: (function (n, t) {
-                  switch (n) {
+        : (0, l.jsx)(I, {
+              className: n,
+              children: (function (e, t) {
+                  switch (e) {
                       case 2:
-                          return I.intl.formatToPlainString(I.t.k1ew5O, { rate: t });
+                          return O.NW.formatToPlainString(O.t.k1ew5O, { rate: t });
                       case 3:
-                          return I.intl.formatToPlainString(I.t['Hs3Y+P'], { rate: t });
+                          return O.NW.formatToPlainString(O.t['Hs3Y+P'], { rate: t });
                       case 4:
-                          return I.intl.string(I.t.DLAKbm);
+                          return O.NW.string(O.t.DLAKbm);
                   }
-              })(o, null != d ? d : '')
+              })(s, null != c ? c : '')
           });
 }
-function g(n) {
-    let { appId: t, className: e, onClick: l, onHasClicked: a, sku: r, icon: o } = n,
-        { analyticsLocations: c } = (0, u.ZP)(s.Z.APP_STOREFRONT),
+function h(e) {
+    let { appId: t, className: n, onClick: i, onHasClicked: r, sku: o, icon: s } = e,
+        { analyticsLocations: d } = (0, u.ZP)(a.Z.APP_STOREFRONT),
         p = () => {
-            (0, d.r)({
+            (0, c.r)({
                 appId: t,
-                skuId: r.id,
-                analyticsLocations: c
+                skuId: o.id,
+                analyticsLocations: d
             });
         },
-        S = (0, v.M)(r.id),
-        Z = r.type === m.epS.DURABLE && S,
-        { price: g } = r;
-    return null == g
+        y = (0, b.M)(o.id),
+        g = o.type === v.epS.DURABLE && y,
+        { price: h } = o;
+    return null == h
         ? null
-        : Z
-          ? (0, i.jsx)(A, {
-                className: e,
-                children: I.intl.string(I.t['/bUsx8'])
+        : g
+          ? (0, l.jsx)(I, {
+                className: n,
+                children: O.NW.string(O.t['/bUsx8'])
             })
-          : (0, i.jsx)(E, {
+          : (0, l.jsx)(S, {
                 appId: t,
-                skuId: r.id,
-                onClick: (n) => {
-                    (null != l ? l : p)(n), null == a || a();
+                skuId: o.id,
+                onClick: (e) => {
+                    (null != i ? i : p)(e), null == r || r();
                 },
-                className: e,
-                children: (0, i.jsxs)('div', {
-                    className: h.btnContent,
-                    children: [o, I.intl.format(I.t.Xp5WTk, { price: (0, f.T4)(g.amount, g.currency) })]
+                className: n,
+                children: (0, l.jsxs)('div', {
+                    className: m.btnContent,
+                    children: [s, O.NW.format(O.t.Xp5WTk, { price: (0, f.T4)(h.amount, h.currency) })]
                 })
             });
 }
-function E(n) {
-    let { appId: t, skuId: e, onClick: l, ...s } = n,
-        u = (0, o.Z)();
-    return (0, i.jsx)(r.zxk, {
-        ...s,
-        onClick: (n) => {
-            if (
-                (p.default.track(m.rMx.STOREFRONT_PURCHASE_CLICKED, {
-                    application_id: t,
-                    sku_id: e
-                }),
-                !u)
-            ) {
-                n.preventDefault(), n.stopPropagation();
-                let l = m.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(t, e),
-                    i = (0, a.Ui)(l, !1);
-                (0, c.uL)(i);
-                return;
+function S(e) {
+    var t,
+        n,
+        { appId: i, skuId: a, onClick: u } = e,
+        c = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                i,
+                l = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        i,
+                        l = {},
+                        r = Object.keys(e);
+                    for (i = 0; i < r.length; i++) (n = r[i]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                    return l;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var r = Object.getOwnPropertySymbols(e);
+                for (i = 0; i < r.length; i++) (n = r[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
             }
-            null == l || l(n);
-        }
-    });
+            return l;
+        })(e, ['appId', 'skuId', 'onClick']);
+    let f = (0, s.Z)();
+    return (0, l.jsx)(
+        o.zxk,
+        ((t = (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    i = Object.keys(n);
+                'function' == typeof Object.getOwnPropertySymbols &&
+                    (i = i.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        })
+                    )),
+                    i.forEach(function (t) {
+                        var i;
+                        (i = n[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: i,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0
+                                  })
+                                : (e[t] = i);
+                    });
+            }
+            return e;
+        })({}, c)),
+        (n = n =
+            {
+                onClick: (e) => {
+                    if (
+                        (p.default.track(v.rMx.STOREFRONT_PURCHASE_CLICKED, {
+                            application_id: i,
+                            sku_id: a
+                        }),
+                        !f)
+                    ) {
+                        e.preventDefault(), e.stopPropagation();
+                        let t = v.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(i, a),
+                            n = (0, r.Ui)(t, !1);
+                        (0, d.uL)(n);
+                        return;
+                    }
+                    null == u || u(e);
+                }
+            }),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var i = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, i);
+                  }
+                  return n;
+              })(Object(n)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+              }),
+        t)
+    );
 }
-function A(n) {
-    let { className: t, children: e } = n;
-    return (0, i.jsx)(r.zxk, {
+function I(e) {
+    let { className: t, children: n } = e;
+    return (0, l.jsx)(o.zxk, {
         disabled: !0,
         className: t,
-        look: r.zxk.Looks.OUTLINED,
-        color: r.zxk.Colors.PRIMARY,
-        children: e
+        look: o.zxk.Looks.OUTLINED,
+        color: o.zxk.Colors.PRIMARY,
+        children: n
     });
 }

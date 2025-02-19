@@ -1,9 +1,38 @@
 n.d(t, {
-    WT: () => l,
-    yk: () => u
+    WT: () => u,
+    yk: () => d
 });
-var i = n(818083);
-let r = (0, i.B)({
+var r = n(818083);
+function i(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function o(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                i(e, t, n[t]);
+            });
+    }
+    return e;
+}
+let a = (0, r.B)({
         kind: 'user',
         id: '2024-05_message_forwarding',
         label: 'Message forwarding',
@@ -30,7 +59,7 @@ let r = (0, i.B)({
             }
         ]
     }),
-    a = (0, i.B)({
+    s = (0, r.B)({
         kind: 'user',
         id: '2024-07_message_forwarding_iterations',
         label: 'Message forwarding iterations',
@@ -75,7 +104,7 @@ let r = (0, i.B)({
             }
         ]
     }),
-    s = (0, i.B)({
+    l = (0, r.B)({
         kind: 'user',
         id: '2024-08_message_forwarding_icon',
         label: 'Message forwarding icon change',
@@ -99,7 +128,7 @@ let r = (0, i.B)({
             }
         ]
     }),
-    o = (0, i.B)({
+    c = (0, r.B)({
         kind: 'user',
         id: '2024-09_message_forwarding_gtm',
         label: 'Message forwarding GTM',
@@ -119,27 +148,13 @@ let r = (0, i.B)({
             }
         ]
     });
-function l(e, t) {
-    let n = r.getCurrentConfig(e, t),
-        i = a.getCurrentConfig(e, t),
-        l = s.getCurrentConfig(e, t),
-        u = o.getCurrentConfig(e, t);
-    return {
-        ...n,
-        ...i,
-        ...l,
-        ...u
-    };
-}
 function u(e, t) {
-    let n = r.useExperiment(e, t),
-        i = a.useExperiment(e, t),
-        l = s.useExperiment(e, t),
-        u = o.useExperiment(e, t);
-    return {
-        ...n,
-        ...i,
-        ...l,
-        ...u
-    };
+    let n = a.getCurrentConfig(e, t),
+        r = s.getCurrentConfig(e, t);
+    return o({}, n, r, l.getCurrentConfig(e, t), c.getCurrentConfig(e, t));
+}
+function d(e, t) {
+    let n = a.useExperiment(e, t),
+        r = s.useExperiment(e, t);
+    return o({}, n, r, l.useExperiment(e, t), c.useExperiment(e, t));
 }

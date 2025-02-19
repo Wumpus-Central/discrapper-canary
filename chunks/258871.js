@@ -1,124 +1,167 @@
-n.d(t, { Z: () => _ });
-var i = n(200651),
-    l = n(192379),
-    r = n(442837),
-    a = n(481060),
-    o = n(554747),
+n.d(t, { Z: () => y });
+var r = n(200651),
+    i = n(192379),
+    l = n(442837),
+    o = n(481060),
+    a = n(554747),
     s = n(434479),
     c = n(593364),
-    d = n(703656),
-    u = n(944486),
-    h = n(147754),
-    p = n(688438),
-    m = n(981631),
+    u = n(703656),
+    d = n(944486),
+    p = n(147754),
+    h = n(688438),
+    f = n(981631),
     g = n(388032);
-let f = [
+function m(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function b(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let v = [
         {
             key: 'EVENTS',
             renderIcon: (e) =>
-                (0, i.jsx)(a.Que, {
+                (0, r.jsx)(o.Que, {
                     size: 'md',
                     color: 'currentColor',
                     className: e
                 }),
             getName: (e) => {
                 let { numEvents: t } = e;
-                return t > 0 ? g.intl.formatToPlainString(g.t.IBdqSk, { number: t }) : g.intl.string(g.t.tlopTE);
+                return t > 0 ? g.NW.formatToPlainString(g.t.IBdqSk, { number: t }) : g.NW.string(g.t.tlopTE);
             },
             handler: (e) =>
-                (0, a.ZDy)(async () => {
-                    let { default: t } = await Promise.all([n.e('22347'), n.e('56236'), n.e('2695')]).then(n.bind(n, 17671));
-                    return (n) =>
-                        (0, i.jsx)(t, {
-                            ...n,
-                            guildId: e.id
-                        });
+                (0, o.ZDy)(async () => {
+                    let { default: t } = await Promise.all([n.e('22347'), n.e('56236'), n.e('16119')]).then(n.bind(n, 17671));
+                    return (n) => (0, r.jsx)(t, b(m({}, n), { guildId: e.id }));
                 })
         },
         {
             key: 'JOIN_SERVERS',
             renderIcon: (e) =>
-                (0, i.jsx)(a.Jmo, {
+                (0, r.jsx)(o.Jmo, {
                     size: 'md',
                     color: 'currentColor',
                     className: e
                 }),
-            getName: () => g.intl.string(g.t.K50GHR),
-            handler: (e, t) => (0, d.XU)(e.id, t.id)
+            getName: () => g.NW.string(g.t.K50GHR),
+            handler: (e, t) => (0, u.XU)(e.id, t.id)
         },
         {
             key: 'ADD_SERVERS',
             renderIcon: (e) =>
-                (0, i.jsx)(a.qJs, {
+                (0, r.jsx)(o.qJs, {
                     size: 'md',
                     color: 'currentColor',
                     className: e
                 }),
-            getName: () => g.intl.string(g.t.emRpdX),
+            getName: () => g.NW.string(g.t.emRpdX),
             handler: (e, t) =>
-                (0, a.ZDy)(async () => {
-                    let { default: l } = await n.e('79764').then(n.bind(n, 533202));
+                (0, o.ZDy)(async () => {
+                    let { default: i } = await n.e('79764').then(n.bind(n, 533202));
                     return (n) =>
-                        (0, i.jsx)(l, {
-                            ...n,
-                            directoryGuildName: e.name,
-                            directoryGuildId: e.id,
-                            directoryChannelId: t.id
-                        });
+                        (0, r.jsx)(
+                            i,
+                            b(m({}, n), {
+                                directoryGuildName: e.name,
+                                directoryGuildId: e.id,
+                                directoryChannelId: t.id
+                            })
+                        );
                 })
         },
         {
             key: 'INVITE_MEMBERS',
-            renderIcon: (e) => (0, i.jsx)(a.ejJ, { className: e }),
-            getName: () => g.intl.string(g.t.MJQOuL),
+            renderIcon: (e) => (0, r.jsx)(o.ejJ, { className: e }),
+            getName: () => g.NW.string(g.t.MJQOuL),
             handler: (e, t) =>
-                (0, a.ZDy)(async () => {
-                    let { default: l } = await Promise.all([n.e('7654'), n.e('13942')]).then(n.bind(n, 560114));
+                (0, o.ZDy)(async () => {
+                    let { default: i } = await Promise.all([n.e('7654'), n.e('33781')]).then(n.bind(n, 560114));
                     return (n) =>
-                        (0, i.jsx)(l, {
-                            ...n,
-                            guild: e,
-                            channel: t,
-                            source: m.t4x.HUB_SIDEBAR
-                        });
+                        (0, r.jsx)(
+                            i,
+                            b(m({}, n), {
+                                guild: e,
+                                channel: t,
+                                source: f.t4x.HUB_SIDEBAR
+                            })
+                        );
                 })
         }
     ],
-    _ = (e) => {
+    y = (e) => {
         let { guild: t, channel: n } = e,
-            a = (0, o.ZP)(t.id);
-        l.useEffect(() => {
-            h.Z.trackExposure({
+            o = (0, a.ZP)(t.id);
+        i.useEffect(() => {
+            p.Z.trackExposure({
                 guildId: t.id,
                 location: '543af8_1'
             });
         }, [t.id]);
-        let { showHubEventsList: d } = h.Z.useExperiment(
+        let { showHubEventsList: u } = p.Z.useExperiment(
                 {
                     guildId: t.id,
                     location: '543af8_2'
                 },
                 { autoTrackExposure: !1 }
             ),
-            m = (0, r.e7)([u.Z], () => null != n && u.Z.getChannelId() === n.id),
-            g = l.useMemo(() => ({ numEvents: a.length }), [a.length]),
-            _ = (0, p.t)(n);
-        return (0, i.jsx)(i.Fragment, {
-            children: f.map((e) => {
-                let { key: l, getName: r, handler: a, renderIcon: o } = e;
-                if (!d && 'EVENTS' === l) return null;
-                let u = ''.concat(l, '-').concat(t.id);
-                return (0, i.jsx)(
+            f = (0, l.e7)([d.Z], () => null != n && d.Z.getChannelId() === n.id),
+            g = i.useMemo(() => ({ numEvents: o.length }), [o.length]),
+            m = (0, h.t)(n);
+        return (0, r.jsx)(r.Fragment, {
+            children: v.map((e) => {
+                let { key: i, getName: l, handler: o, renderIcon: a } = e;
+                if (!u && 'EVENTS' === i) return null;
+                let d = ''.concat(i, '-').concat(t.id);
+                return (0, r.jsx)(
                     s.m,
                     {
-                        id: u,
-                        renderIcon: o,
-                        text: r(g),
-                        selected: m && 'JOIN_SERVERS' === l,
-                        onClick: null != n ? () => a(t, n) : void 0,
-                        trailing: 'JOIN_SERVERS' === l && _ > 0 ? (0, c.N)(_) : null
+                        id: d,
+                        renderIcon: a,
+                        text: l(g),
+                        selected: f && 'JOIN_SERVERS' === i,
+                        onClick: null != n ? () => o(t, n) : void 0,
+                        trailing: 'JOIN_SERVERS' === i && m > 0 ? (0, c.N)(m) : null
                     },
-                    u
+                    d
                 );
             })
         });

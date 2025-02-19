@@ -1,20 +1,20 @@
 let n;
 a.d(t, { $: () => f });
 var s,
-    l = a(200651),
-    i = a(192379),
-    r = a(557533),
-    o = a.n(r),
+    r = a(200651),
+    l = a(192379),
+    i = a(557533),
+    o = a.n(i),
     c = a(622535),
     d = a(213919),
     u = a(982905),
-    _ = a(794010),
-    N = a(66037),
+    p = a(794010),
+    _ = a(66037),
     h = a(231338),
     m = a(436620),
-    p = a(330711),
-    I = a(334078);
-function k(e, t, a) {
+    N = a(330711),
+    I = a(975018);
+function g(e, t, a) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,159 +27,159 @@ function k(e, t, a) {
         e
     );
 }
-let A = 'Footer Navigation',
-    g = {
+let k = 'Footer Navigation',
+    O = {
         BLURPLE: 'Blurple',
         PRIMARY: 'Primary'
     },
-    O = () => [
+    A = () => [
         {
-            title: p.Z.Messages.NAVIGATION_PRODUCT,
+            title: N.Z.Messages.NAVIGATION_PRODUCT,
             routes: [
                 {
                     link: h.am.DOWNLOAD,
-                    title: p.Z.Messages.NAVIGATION_DOWNLOAD,
+                    title: N.Z.Messages.NAVIGATION_DOWNLOAD,
                     tracking: 'download'
                 },
                 {
                     link: h.am.BRANDING,
-                    title: p.Z.Messages.NAVIGATION_BRANDING,
+                    title: N.Z.Messages.NAVIGATION_BRANDING,
                     tracking: 'branding'
                 },
                 {
                     link: h.am.NITRO,
-                    title: p.Z.Messages.NAVIGATION_NITRO,
+                    title: N.Z.Messages.NAVIGATION_NITRO,
                     tracking: 'nitro',
                     external: !0
                 }
             ]
         },
         {
-            title: p.Z.Messages.NAVIGATION_DEVELOPERS,
+            title: N.Z.Messages.NAVIGATION_DEVELOPERS,
             routes: [
                 {
                     link: h.am.RICH_PRESENCE,
-                    title: p.Z.Messages.NAVIGATION_RICH_PRESENCE,
+                    title: N.Z.Messages.NAVIGATION_RICH_PRESENCE,
                     tracking: 'rich_presence'
                 },
                 {
                     link: h.am.VERIFICATION,
-                    title: p.Z.Messages.NAVIGATION_VERIFICATION,
+                    title: N.Z.Messages.NAVIGATION_VERIFICATION,
                     tracking: 'verification',
                     external: !0
                 },
                 {
                     link: h.yX.DEV_PORTAL_APPLICATIONS,
-                    title: p.Z.Messages.NAVIGATION_APPLICATIONS,
+                    title: N.Z.Messages.NAVIGATION_APPLICATIONS,
                     tracking: 'developers',
                     external: !0
                 },
                 {
                     link: h.yX.DEV_PORTAL_DOCUMENTATION,
-                    title: p.Z.Messages.NAVIGATION_DOCUMENTATION,
+                    title: N.Z.Messages.NAVIGATION_DOCUMENTATION,
                     tracking: 'documentation',
                     external: !0
                 }
             ]
         },
         {
-            title: p.Z.Messages.NAVIGATION_RESOURCES,
+            title: N.Z.Messages.NAVIGATION_RESOURCES,
             routes: [
                 {
                     link: h.yX.HELP_AND_SUPPORT,
-                    title: p.Z.Messages.NAVIGATION_HELP_AND_SUPPORT,
+                    title: N.Z.Messages.NAVIGATION_HELP_AND_SUPPORT,
                     tracking: 'helpandsupport',
                     external: !0
                 },
                 {
                     link: h.am.GUIDELINES,
-                    title: p.Z.Messages.NAVIGATION_GUIDELINES,
+                    title: N.Z.Messages.NAVIGATION_GUIDELINES,
                     tracking: 'guidelines',
                     external: !0
                 },
                 {
                     link: h.yX.FEEDBACK,
-                    title: p.Z.Messages.NAVIGATION_FEEDBACK,
+                    title: N.Z.Messages.NAVIGATION_FEEDBACK,
                     tracking: 'feedback',
                     external: !0
                 },
                 {
                     link: h.am.TERMS,
-                    title: p.Z.Messages.NAVIGATION_TERMS,
+                    title: N.Z.Messages.NAVIGATION_TERMS,
                     tracking: 'terms',
                     external: !0
                 },
                 {
                     link: h.am.PRIVACY,
-                    title: p.Z.Messages.NAVIGATION_PRIVACY,
+                    title: N.Z.Messages.NAVIGATION_PRIVACY,
                     tracking: 'privacy',
                     external: !0
                 },
                 {
                     link: h.am.SECURITY,
-                    title: p.Z.Messages.NAVIGATION_SECURITY,
+                    title: N.Z.Messages.NAVIGATION_SECURITY,
                     tracking: 'security'
                 },
                 {
                     link: h.yX.STATUS,
-                    title: p.Z.Messages.NAVIGATION_STATUS,
+                    title: N.Z.Messages.NAVIGATION_STATUS,
                     tracking: 'status',
                     external: !0
                 },
                 {
                     link: h.am.SAFETY_LANDING,
-                    title: p.Z.Messages.NAVIGATION_SAFETY_CENTER,
+                    title: N.Z.Messages.NAVIGATION_SAFETY_CENTER,
                     tracking: 'safetycenter',
                     external: !0
                 }
             ]
         },
         {
-            title: p.Z.Messages.NAVIGATION_COMPANY,
+            title: N.Z.Messages.NAVIGATION_COMPANY,
             routes: [
                 {
                     link: h.am.COMPANY,
-                    title: p.Z.Messages.NAVIGATION_ABOUT,
+                    title: N.Z.Messages.NAVIGATION_ABOUT,
                     tracking: 'about'
                 },
                 {
                     link: h.am.BLOG,
-                    title: p.Z.Messages.NAVIGATION_BLOG,
+                    title: N.Z.Messages.NAVIGATION_BLOG,
                     tracking: 'blog',
                     external: !0
                 },
                 {
                     link: h.am.JOBS,
-                    title: p.Z.Messages.NAVIGATION_JOBS,
+                    title: N.Z.Messages.NAVIGATION_JOBS,
                     tracking: 'join',
                     external: !0
                 }
             ]
         },
         {
-            title: p.Z.Messages.NAVIGATION_MORE,
+            title: N.Z.Messages.NAVIGATION_MORE,
             routes: [
                 {
                     link: h.am.PARTNERS,
-                    title: p.Z.Messages.NAVIGATION_PARTNERS,
+                    title: N.Z.Messages.NAVIGATION_PARTNERS,
                     tracking: 'partners',
                     external: !0
                 },
                 {
                     link: h.am.HYPESQUAD,
-                    title: p.Z.Messages.NAVIGATION_HYPESQUAD,
+                    title: N.Z.Messages.NAVIGATION_HYPESQUAD,
                     tracking: 'hypesquad',
                     external: !0
                 },
                 {
                     link: h.yX.PRESS_INQUIRIES,
-                    title: p.Z.Messages.NAVIGATION_PRESS_INQUIRIES,
+                    title: N.Z.Messages.NAVIGATION_PRESS_INQUIRIES,
                     tracking: 'pressinquiries',
                     external: !0
                 },
                 {
                     link: h.am.OPEN_SOURCE,
-                    title: p.Z.Messages.NAVIGATION_OPEN_SOURCE,
+                    title: N.Z.Messages.NAVIGATION_OPEN_SOURCE,
                     tracking: 'open_source'
                 }
             ]
@@ -187,14 +187,14 @@ let A = 'Footer Navigation',
     ],
     b = (e) => {
         let { colorVariant: t, animate: a } = e;
-        return (0, l.jsx)('svg', {
+        return (0, r.jsx)('svg', {
             className: (0, u.l)(I, 'footerBackground', t),
             preserveAspectRatio: 'none',
             width: '1920',
             height: '100%',
             viewBox: '0 0 1920 330',
             version: '1.1',
-            children: (0, l.jsx)('path', {
+            children: (0, r.jsx)('path', {
                 className: (0, u.l)(I, 'footerBackground', a ? 'Play' : 'Paused'),
                 fill: '#1a1c1e',
                 fillOpacity: '0.3',
@@ -202,7 +202,7 @@ let A = 'Footer Navigation',
             })
         });
     };
-class f extends (s = i.PureComponent) {
+class f extends (s = l.PureComponent) {
     componentDidMount() {
         this.setState({
             token: (0, d.getToken)(),
@@ -211,80 +211,80 @@ class f extends (s = i.PureComponent) {
     }
     renderAppButton(e) {
         if ('STATIC_RENDERER' === this.props.platform) return null;
-        let { downloadLink: t, isMobile: a, mobileDownloadText: s, platform: i, variant: r, authRedirectTo: o } = this.props,
+        let { downloadLink: t, isMobile: a, mobileDownloadText: s, platform: l, variant: i, authRedirectTo: o } = this.props,
             { isAppCompatible: c } = this.state;
         if (a)
-            return (0, l.jsx)(n, {
+            return (0, r.jsx)(n, {
                 eventName: 'Download App',
                 data: {
-                    Platform: i,
+                    Platform: l,
                     PTB: !1,
                     Released: !0,
                     'Referring Location': 'Footer'
                 },
                 alt: 'Download Discord',
                 target: '_blank',
-                className: (0, u.l)(I, 'button', r),
+                className: (0, u.l)(I, 'button', i),
                 href: t,
                 children: s
             });
         if (!c)
-            return (0, l.jsx)(n, {
+            return (0, r.jsx)(n, {
                 eventName: 'Download App',
                 data: {
-                    Platform: i,
+                    Platform: l,
                     PTB: !1,
                     Released: !0,
                     'Referring Location': 'Footer'
                 },
                 alt: 'Download Discord',
-                className: (0, u.l)(I, 'button', r),
+                className: (0, u.l)(I, 'button', i),
                 href: h.am.DOWNLOAD,
-                children: p.Z.Messages.NAVIGATION_DOWNLOAD
+                children: N.Z.Messages.NAVIGATION_DOWNLOAD
             });
         let d = null != o ? h.$w.REGISTER_WITH_REDIRECT(o) : h.$w.REGISTER,
-            _ = p.Z.Messages.COMMON_SIGN_UP_NOW;
+            p = N.Z.Messages.COMMON_SIGN_UP_NOW;
         return (
-            e && ((d = h.$w.ME), (_ = p.Z.Messages.COMMON_OPEN_DISCORD)),
-            (0, l.jsx)(n, {
-                eventName: A,
+            e && ((d = h.$w.ME), (p = N.Z.Messages.COMMON_OPEN_DISCORD)),
+            (0, r.jsx)(n, {
+                eventName: k,
                 className: (0, u.l)(I, 'button', this.props.variant),
                 data: {
                     linkClicked: e ? 'open' : 'login',
                     googleAnalytics: !0
                 },
                 href: d,
-                children: _
+                children: p
             })
         );
     }
     render() {
-        let { variant: e, style: t, className: s, avoidRouter: i, showWave: r } = this.props,
-            { animateBackground: d, token: _ } = this.state,
-            m = O().map((e) => {
+        let { variant: e, style: t, className: s, avoidRouter: l, showWave: i } = this.props,
+            { animateBackground: d, token: p } = this.state,
+            m = A().map((e) => {
                 let t = e.routes.map((e, t) =>
                     e.external
-                        ? (0, l.jsx)(
+                        ? (0, r.jsx)(
                               n,
                               {
                                   className: I.route,
-                                  eventName: A,
+                                  eventName: k,
                                   data: { linkClicked: e.tracking },
                                   href: e.link,
                                   children: e.title
                               },
                               e.link || t
                           )
-                        : (0, l.jsx)(
-                              N.Z,
+                        : (0, r.jsx)(
+                              _.Z,
                               {
-                                  avoidRouter: i,
+                                  avoidRouter: l,
                                   to: e.link,
                                   from: 'footer_navigation',
                                   className: I.route,
-                                  children: (0, l.jsx)(n, {
+                                  children: (0, r.jsx)(n, {
                                       tag: 'span',
-                                      eventName: A,
+                                      eventName: k,
                                       data: { linkClicked: e.tracking },
                                       children: e.title
                                   })
@@ -292,12 +292,12 @@ class f extends (s = i.PureComponent) {
                               e.link
                           )
                 );
-                return (0, l.jsxs)(
+                return (0, r.jsxs)(
                     'div',
                     {
                         className: I.navigationSection,
                         children: [
-                            (0, l.jsx)('h3', {
+                            (0, r.jsx)('h3', {
                                 className: I.navigationHeader,
                                 children: e.title
                             }),
@@ -307,33 +307,33 @@ class f extends (s = i.PureComponent) {
                     e.title
                 );
             });
-        return (0, l.jsx)(c.$, {
+        return (0, r.jsx)(c.$, {
             onChange: this.handleVisibility,
-            children: (0, l.jsxs)('footer', {
+            children: (0, r.jsxs)('footer', {
                 className: o()((0, u.l)(I, 'footer', e), s),
                 style: t,
                 children: [
-                    r
-                        ? (0, l.jsx)(b, {
+                    i
+                        ? (0, r.jsx)(b, {
                               colorVariant: e,
                               animate: d
                           })
                         : null,
-                    (0, l.jsxs)('div', {
+                    (0, r.jsxs)('div', {
                         className: I.footerContent,
                         children: [
-                            (0, l.jsxs)('div', {
+                            (0, r.jsxs)('div', {
                                 className: I.navigation,
                                 children: [
-                                    (0, l.jsx)('div', {
+                                    (0, r.jsx)('div', {
                                         className: I.logoWrap,
-                                        children: (0, l.jsx)(n, {
+                                        children: (0, r.jsx)(n, {
                                             className: I.logo,
                                             href: h.am.INDEX,
-                                            eventName: A,
+                                            eventName: k,
                                             data: { linkClicked: 'logo' },
-                                            children: (0, l.jsx)('img', {
-                                                alt: p.Z.Messages.NAVIGATION_HOME,
+                                            children: (0, r.jsx)('img', {
+                                                alt: N.Z.Messages.NAVIGATION_HOME,
                                                 src: a(131529)
                                             })
                                         })
@@ -341,24 +341,24 @@ class f extends (s = i.PureComponent) {
                                     m
                                 ]
                             }),
-                            (0, l.jsx)('div', { className: I.separator }),
-                            (0, l.jsxs)('div', {
+                            (0, r.jsx)('div', { className: I.separator }),
+                            (0, r.jsxs)('div', {
                                 className: I.joinDiscord,
                                 children: [
-                                    (0, l.jsxs)('div', {
+                                    (0, r.jsxs)('div', {
                                         className: I.stats,
                                         children: [
-                                            (0, l.jsx)('h2', {
+                                            (0, r.jsx)('h2', {
                                                 className: I.readyToJoin,
-                                                children: p.Z.Messages.FOOTER_READY_TO_TRY_DISCORD
+                                                children: N.Z.Messages.FOOTER_READY_TO_TRY_DISCORD
                                             }),
-                                            (0, l.jsx)('h3', {
+                                            (0, r.jsx)('h3', {
                                                 className: I.joinOtherPlayers,
-                                                children: p.Z.Messages.FOOTER_JOIN_OVER_PLAYERS_TODAY.format({ num: h.vS })
+                                                children: N.Z.Messages.FOOTER_JOIN_OVER_PLAYERS_TODAY.format({ num: h.vS })
                                             })
                                         ]
                                     }),
-                                    this.renderAppButton(_)
+                                    this.renderAppButton(p)
                                 ]
                             })
                         ]
@@ -369,26 +369,46 @@ class f extends (s = i.PureComponent) {
     }
     constructor(e) {
         super(e),
-            k(this, 'state', {
+            g(this, 'state', {
                 animateBackground: !1,
                 isMobile: null,
                 token: null,
                 isAppCompatible: !0
             }),
-            k(this, 'handleVisibility', (e) => {
+            g(this, 'handleVisibility', (e) => {
                 this.setState({ animateBackground: e });
             }),
-            null != e.locale && p.Z.setLocale(e.locale),
+            null != e.locale && N.Z.setLocale(e.locale),
             (n = (t) =>
-                (0, l.jsx)(_.Z, {
-                    track: e.track,
-                    trackOutboundLink: e.trackOutboundLink,
-                    ...t
-                }));
+                (0, r.jsx)(
+                    p.Z,
+                    (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var a = null != arguments[t] ? arguments[t] : {},
+                                n = Object.keys(a);
+                            'function' == typeof Object.getOwnPropertySymbols &&
+                                (n = n.concat(
+                                    Object.getOwnPropertySymbols(a).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(a, e).enumerable;
+                                    })
+                                )),
+                                n.forEach(function (t) {
+                                    g(e, t, a[t]);
+                                });
+                        }
+                        return e;
+                    })(
+                        {
+                            track: e.track,
+                            trackOutboundLink: e.trackOutboundLink
+                        },
+                        t
+                    )
+                ));
     }
 }
-k(f, 'Variants', g),
-    k(f, 'defaultProps', {
-        variant: g.PRIMARY,
+g(f, 'Variants', O),
+    g(f, 'defaultProps', {
+        variant: O.PRIMARY,
         showWave: !0
     });

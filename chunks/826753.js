@@ -88,7 +88,7 @@ var t;
                     (t.validate = function (r) {
                         var n = arguments[arguments.length - 1],
                             o = 'function' == typeof n ? n : null,
-                            i = arguments.length - (o ? 1 : 0);
+                            i = arguments.length - +!!o;
                         if (1 === i) return e.validate(r, o);
                         var s = 3 === i ? arguments[2] : {},
                             a = t.compile(arguments[1]);
@@ -839,7 +839,7 @@ var t;
                 }
                 function v(e, t, r, n, o) {
                     if (0 === e.length) return -1;
-                    if (('string' == typeof r ? ((n = r), (r = 0)) : r > 2147483647 ? (r = 2147483647) : r < -2147483648 && (r = -2147483648), isNaN((r = +r)) && (r = o ? 0 : e.length - 1), r < 0 && (r = e.length + r), r >= e.length)) {
+                    if (('string' == typeof r ? ((n = r), (r = 0)) : r > 2147483647 ? (r = 2147483647) : r < -2147483648 && (r = -2147483648), isNaN((r *= 1)) && (r = o ? 0 : e.length - 1), r < 0 && (r = e.length + r), r >= e.length)) {
                         if (o) return -1;
                         r = e.length - 1;
                     } else if (r < 0) {
@@ -941,7 +941,7 @@ var t;
                                 (r = e[o]), (n = t[o]);
                                 break;
                             }
-                        return r < n ? -1 : n < r ? 1 : 0;
+                        return r < n ? -1 : +(n < r);
                     }),
                     (c.isEncoding = function (e) {
                         switch (String(e).toLowerCase()) {
@@ -1020,7 +1020,7 @@ var t;
                                 (i = u[f]), (s = l[f]);
                                 break;
                             }
-                        return i < s ? -1 : s < i ? 1 : 0;
+                        return i < s ? -1 : +(s < i);
                     }),
                     (c.prototype.includes = function (e, t, r) {
                         return -1 !== this.indexOf(e, t, r);
@@ -1241,7 +1241,7 @@ var t;
                         return t || _(e, 8, this.length), o.read(this, e, !1, 52, 8);
                     }),
                     (c.prototype.writeUIntLE = function (e, t, r, n) {
-                        if (((e = +e), (t |= 0), (r |= 0), !n)) {
+                        if (((e *= 1), (t |= 0), (r |= 0), !n)) {
                             var o = Math.pow(2, 8 * r) - 1;
                             w(this, e, t, r, o, 0);
                         }
@@ -1251,7 +1251,7 @@ var t;
                         return t + r;
                     }),
                     (c.prototype.writeUIntBE = function (e, t, r, n) {
-                        if (((e = +e), (t |= 0), (r |= 0), !n)) {
+                        if (((e *= 1), (t |= 0), (r |= 0), !n)) {
                             var o = Math.pow(2, 8 * r) - 1;
                             w(this, e, t, r, o, 0);
                         }
@@ -1261,22 +1261,22 @@ var t;
                         return t + r;
                     }),
                     (c.prototype.writeUInt8 = function (e, t, r) {
-                        return (e = +e), (t |= 0), r || w(this, e, t, 1, 255, 0), c.TYPED_ARRAY_SUPPORT || (e = Math.floor(e)), (this[t] = 255 & e), t + 1;
+                        return (e *= 1), (t |= 0), r || w(this, e, t, 1, 255, 0), c.TYPED_ARRAY_SUPPORT || (e = Math.floor(e)), (this[t] = 255 & e), t + 1;
                     }),
                     (c.prototype.writeUInt16LE = function (e, t, r) {
-                        return (e = +e), (t |= 0), r || w(this, e, t, 2, 65535, 0), c.TYPED_ARRAY_SUPPORT ? ((this[t] = 255 & e), (this[t + 1] = e >>> 8)) : E(this, e, t, !0), t + 2;
+                        return (e *= 1), (t |= 0), r || w(this, e, t, 2, 65535, 0), c.TYPED_ARRAY_SUPPORT ? ((this[t] = 255 & e), (this[t + 1] = e >>> 8)) : E(this, e, t, !0), t + 2;
                     }),
                     (c.prototype.writeUInt16BE = function (e, t, r) {
-                        return (e = +e), (t |= 0), r || w(this, e, t, 2, 65535, 0), c.TYPED_ARRAY_SUPPORT ? ((this[t] = e >>> 8), (this[t + 1] = 255 & e)) : E(this, e, t, !1), t + 2;
+                        return (e *= 1), (t |= 0), r || w(this, e, t, 2, 65535, 0), c.TYPED_ARRAY_SUPPORT ? ((this[t] = e >>> 8), (this[t + 1] = 255 & e)) : E(this, e, t, !1), t + 2;
                     }),
                     (c.prototype.writeUInt32LE = function (e, t, r) {
-                        return (e = +e), (t |= 0), r || w(this, e, t, 4, 4294967295, 0), c.TYPED_ARRAY_SUPPORT ? ((this[t + 3] = e >>> 24), (this[t + 2] = e >>> 16), (this[t + 1] = e >>> 8), (this[t] = 255 & e)) : x(this, e, t, !0), t + 4;
+                        return (e *= 1), (t |= 0), r || w(this, e, t, 4, 4294967295, 0), c.TYPED_ARRAY_SUPPORT ? ((this[t + 3] = e >>> 24), (this[t + 2] = e >>> 16), (this[t + 1] = e >>> 8), (this[t] = 255 & e)) : x(this, e, t, !0), t + 4;
                     }),
                     (c.prototype.writeUInt32BE = function (e, t, r) {
-                        return (e = +e), (t |= 0), r || w(this, e, t, 4, 4294967295, 0), c.TYPED_ARRAY_SUPPORT ? ((this[t] = e >>> 24), (this[t + 1] = e >>> 16), (this[t + 2] = e >>> 8), (this[t + 3] = 255 & e)) : x(this, e, t, !1), t + 4;
+                        return (e *= 1), (t |= 0), r || w(this, e, t, 4, 4294967295, 0), c.TYPED_ARRAY_SUPPORT ? ((this[t] = e >>> 24), (this[t + 1] = e >>> 16), (this[t + 2] = e >>> 8), (this[t + 3] = 255 & e)) : x(this, e, t, !1), t + 4;
                     }),
                     (c.prototype.writeIntLE = function (e, t, r, n) {
-                        if (((e = +e), (t |= 0), !n)) {
+                        if (((e *= 1), (t |= 0), !n)) {
                             var o = Math.pow(2, 8 * r - 1);
                             w(this, e, t, r, o - 1, -o);
                         }
@@ -1287,7 +1287,7 @@ var t;
                         return t + r;
                     }),
                     (c.prototype.writeIntBE = function (e, t, r, n) {
-                        if (((e = +e), (t |= 0), !n)) {
+                        if (((e *= 1), (t |= 0), !n)) {
                             var o = Math.pow(2, 8 * r - 1);
                             w(this, e, t, r, o - 1, -o);
                         }
@@ -1298,19 +1298,19 @@ var t;
                         return t + r;
                     }),
                     (c.prototype.writeInt8 = function (e, t, r) {
-                        return (e = +e), (t |= 0), r || w(this, e, t, 1, 127, -128), c.TYPED_ARRAY_SUPPORT || (e = Math.floor(e)), e < 0 && (e = 255 + e + 1), (this[t] = 255 & e), t + 1;
+                        return (e *= 1), (t |= 0), r || w(this, e, t, 1, 127, -128), c.TYPED_ARRAY_SUPPORT || (e = Math.floor(e)), e < 0 && (e = 255 + e + 1), (this[t] = 255 & e), t + 1;
                     }),
                     (c.prototype.writeInt16LE = function (e, t, r) {
-                        return (e = +e), (t |= 0), r || w(this, e, t, 2, 32767, -32768), c.TYPED_ARRAY_SUPPORT ? ((this[t] = 255 & e), (this[t + 1] = e >>> 8)) : E(this, e, t, !0), t + 2;
+                        return (e *= 1), (t |= 0), r || w(this, e, t, 2, 32767, -32768), c.TYPED_ARRAY_SUPPORT ? ((this[t] = 255 & e), (this[t + 1] = e >>> 8)) : E(this, e, t, !0), t + 2;
                     }),
                     (c.prototype.writeInt16BE = function (e, t, r) {
-                        return (e = +e), (t |= 0), r || w(this, e, t, 2, 32767, -32768), c.TYPED_ARRAY_SUPPORT ? ((this[t] = e >>> 8), (this[t + 1] = 255 & e)) : E(this, e, t, !1), t + 2;
+                        return (e *= 1), (t |= 0), r || w(this, e, t, 2, 32767, -32768), c.TYPED_ARRAY_SUPPORT ? ((this[t] = e >>> 8), (this[t + 1] = 255 & e)) : E(this, e, t, !1), t + 2;
                     }),
                     (c.prototype.writeInt32LE = function (e, t, r) {
-                        return (e = +e), (t |= 0), r || w(this, e, t, 4, 2147483647, -2147483648), c.TYPED_ARRAY_SUPPORT ? ((this[t] = 255 & e), (this[t + 1] = e >>> 8), (this[t + 2] = e >>> 16), (this[t + 3] = e >>> 24)) : x(this, e, t, !0), t + 4;
+                        return (e *= 1), (t |= 0), r || w(this, e, t, 4, 2147483647, -2147483648), c.TYPED_ARRAY_SUPPORT ? ((this[t] = 255 & e), (this[t + 1] = e >>> 8), (this[t + 2] = e >>> 16), (this[t + 3] = e >>> 24)) : x(this, e, t, !0), t + 4;
                     }),
                     (c.prototype.writeInt32BE = function (e, t, r) {
-                        return (e = +e), (t |= 0), r || w(this, e, t, 4, 2147483647, -2147483648), e < 0 && (e = 4294967295 + e + 1), c.TYPED_ARRAY_SUPPORT ? ((this[t] = e >>> 24), (this[t + 1] = e >>> 16), (this[t + 2] = e >>> 8), (this[t + 3] = 255 & e)) : x(this, e, t, !1), t + 4;
+                        return (e *= 1), (t |= 0), r || w(this, e, t, 4, 2147483647, -2147483648), e < 0 && (e = 4294967295 + e + 1), c.TYPED_ARRAY_SUPPORT ? ((this[t] = e >>> 24), (this[t + 1] = e >>> 16), (this[t + 2] = e >>> 8), (this[t + 3] = 255 & e)) : x(this, e, t, !1), t + 4;
                     }),
                     (c.prototype.writeFloatLE = function (e, t, r) {
                         return O(this, e, t, !0, r);
@@ -1448,7 +1448,7 @@ var t;
             function c(e) {
                 var t = e.length;
                 if (t % 4 > 0) throw Error('Invalid string. Length must be a multiple of 4');
-                return '=' === e[t - 2] ? 2 : '=' === e[t - 1] ? 1 : 0;
+                return '=' === e[t - 2] ? 2 : +('=' === e[t - 1]);
             }
             (n['-'.charCodeAt(0)] = 62), (n['_'.charCodeAt(0)] = 63);
         },
@@ -1479,11 +1479,11 @@ var t;
                         u = 8 * i - o - 1,
                         l = (1 << u) - 1,
                         f = l >> 1,
-                        p = 23 === o ? 5.960464477539062e-8 : 0,
+                        p = 5.960464477539062e-8 * (23 === o),
                         h = n ? 0 : i - 1,
                         d = n ? 1 : -1,
-                        g = t < 0 || (0 === t && 1 / t < 0) ? 1 : 0;
-                    for (isNaN((t = Math.abs(t))) || t === 1 / 0 ? ((a = isNaN(t) ? 1 : 0), (s = l)) : ((s = Math.floor(Math.log(t) / Math.LN2)), t * (c = Math.pow(2, -s)) < 1 && (s--, (c *= 2)), s + f >= 1 ? (t += p / c) : (t += p * Math.pow(2, 1 - f)), t * c >= 2 && (s++, (c /= 2)), s + f >= l ? ((a = 0), (s = l)) : s + f >= 1 ? ((a = (t * c - 1) * Math.pow(2, o)), (s += f)) : ((a = t * Math.pow(2, f - 1) * Math.pow(2, o)), (s = 0))); o >= 8; e[r + h] = 255 & a, h += d, a /= 256, o -= 8);
+                        g = +(t < 0 || (0 === t && 1 / t < 0));
+                    for (isNaN((t = Math.abs(t))) || t === 1 / 0 ? ((a = +!!isNaN(t)), (s = l)) : ((s = Math.floor(Math.log(t) / Math.LN2)), t * (c = Math.pow(2, -s)) < 1 && (s--, (c *= 2)), s + f >= 1 ? (t += p / c) : (t += p * Math.pow(2, 1 - f)), t * c >= 2 && (s++, (c /= 2)), s + f >= l ? ((a = 0), (s = l)) : s + f >= 1 ? ((a = (t * c - 1) * Math.pow(2, o)), (s += f)) : ((a = t * Math.pow(2, f - 1) * Math.pow(2, o)), (s = 0))); o >= 8; e[r + h] = 255 & a, h += d, a /= 256, o -= 8);
                     for (s = (s << o) | a, u += o; u > 0; e[r + h] = 255 & s, h += d, s /= 256, u -= 8);
                     e[r + h - d] |= 128 * g;
                 });
@@ -3812,14 +3812,17 @@ var t;
                     l = '(?:0?0?' + e + '|0?[1-9]' + e + '|1' + e + e + '|2[0-4]' + e + '|25[0-5])';
                 r.rfc3986.IPv4address = '(?:' + l + '\\.){3}' + l;
                 var f = o + '{1,4}',
-                    p = '(?:' + f + ':' + f + '|' + r.rfc3986.IPv4address + ')';
-                (r.rfc3986.IPv6address = '(?:(?:' + f + ':){6}' + p + '|' + ('::(?:' + f) + ':){5}' + p + '|' + ('(?:' + f + ')?::(?:' + f) + ':){4}' + p + '|' + ('(?:(?:' + f + ':){0,1}' + f + ')?::(?:' + f) + ':){3}' + p + '|' + ('(?:(?:' + f + ':){0,2}' + f + ')?::(?:' + f) + ':){2}' + p + '|' + ('(?:(?:' + f + ':){0,3}' + f + ')?::' + f) + ':' + p + '|' + ('(?:(?:' + f + ':){0,4}' + f) + ')?::' + p + '|' + ('(?:(?:' + f + ':){0,5}' + f) + ')?::' + f + '|' + ('(?:(?:' + f + ':){0,6}') + f + ')?::)'), (r.rfc3986.IPvFuture = 'v' + o + '+\\.[' + i + s + ':]+'), (r.rfc3986.scheme = '[' + t + '][' + t + '0-9+-\\.]*');
-                var h = '(?:' + ('\\[(?:' + r.rfc3986.IPv6address + '|' + r.rfc3986.IPvFuture + ')\\]') + '|' + r.rfc3986.IPv4address + '|' + ('[' + i + a) + s + ']{0,255})',
-                    d = '(?:' + ('[' + i + a) + s + ':]*@)?' + h + '(?::' + e + '*)?',
-                    g = u + '+',
-                    y = '(?:\\/' + u + '*)*',
-                    v = '\\/(?:' + g + y + ')?';
-                (r.rfc3986.hierPart = '(?:(?:\\/\\/' + d + y + ')|' + v + '|' + (g + y) + ')'), (r.rfc3986.relativeRef = '(?:(?:\\/\\/' + d + y + ')|' + v + '|' + ('[' + i + a + s) + '@]+' + y + '|)'), (r.rfc3986.query = '[' + c + '\\/\\?]*(?=#|$)'), (r.rfc3986.fragment = '[' + c + '\\/\\?]*');
+                    p = '(?:' + f + ':' + f + '|' + r.rfc3986.IPv4address + ')',
+                    h = '(?:(?:' + f + ':){0,1}' + f + ')?::(?:' + f + ':){3}' + p,
+                    d = '(?:(?:' + f + ':){0,2}' + f + ')?::(?:' + f + ':){2}' + p,
+                    g = '(?:(?:' + f + ':){0,3}' + f + ')?::' + f + ':' + p;
+                (r.rfc3986.IPv6address = '(?:(?:' + f + ':){6}' + p + '|' + ('::(?:' + f) + ':){5}' + p + '|' + ('(?:' + f + ')?::(?:' + f) + ':){4}' + p + '|' + h + '|' + d + '|' + g + '|' + ('(?:(?:' + f + ':){0,4}' + f) + ')?::' + p + '|' + ('(?:(?:' + f + ':){0,5}' + f) + ')?::' + f + '|' + ('(?:(?:' + f + ':){0,6}') + f + ')?::)'), (r.rfc3986.IPvFuture = 'v' + o + '+\\.[' + i + s + ':]+'), (r.rfc3986.scheme = '[' + t + '][' + t + '0-9+-\\.]*');
+                var y = '(?:' + ('\\[(?:' + r.rfc3986.IPv6address + '|' + r.rfc3986.IPvFuture + ')\\]') + '|' + r.rfc3986.IPv4address + '|' + ('[' + i + a) + s + ']{0,255})',
+                    v = '(?:' + ('[' + i + a) + s + ':]*@)?' + y + '(?::' + e + '*)?',
+                    m = u + '+',
+                    b = '(?:\\/' + u + '*)*',
+                    _ = '\\/(?:' + m + b + ')?';
+                (r.rfc3986.hierPart = '(?:(?:\\/\\/' + v + b + ')|' + _ + '|' + (m + b) + ')'), (r.rfc3986.relativeRef = '(?:(?:\\/\\/' + v + b + ')|' + _ + '|' + ('[' + i + a + s) + '@]+' + b + '|)'), (r.rfc3986.query = '[' + c + '\\/\\?]*(?=#|$)'), (r.rfc3986.fragment = '[' + c + '\\/\\?]*');
             }),
                 r.generate(),
                 (e.exports = r.rfc3986);

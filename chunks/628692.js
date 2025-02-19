@@ -1,141 +1,195 @@
 n.d(t, {
-    ZP: () => A,
-    ku: () => b
+    ZP: () => R,
+    ku: () => A
 });
-var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(399606),
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(399606),
     l = n(481060),
-    u = n(596454),
-    c = n(722932),
+    c = n(596454),
+    u = n(722932),
     d = n(125900),
     f = n(801606),
-    _ = n(409700),
-    p = n(321889),
+    p = n(409700),
+    _ = n(321889),
     h = n(763296),
     m = n(697426),
     g = n(409673),
     E = n(695346),
     v = n(592125),
-    y = n(388032),
-    I = n(56392);
-function T(e) {
+    b = n(388032),
+    y = n(55572);
+function O(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function S(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                O(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function I(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function T(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : I(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function N(e) {
     let { playSound: t } = e;
-    return (0, i.jsxs)(l.P3F, {
+    return (0, r.jsxs)(l.P3F, {
         title: 'Risky Click',
         tag: 'span',
         onClick: t,
-        className: I.inlineContainer,
+        className: y.inlineContainer,
         children: [
-            (0, i.jsx)(l.gj8, {
+            (0, r.jsx)(l.gj8, {
                 size: 'md',
                 color: 'currentColor',
-                className: I.unknownSound
+                className: y.unknownSound
             }),
-            (0, i.jsx)('span', { children: 'Unknown' })
+            (0, r.jsx)('span', { children: 'Unknown' })
         ]
     });
 }
-function b(e) {
+function A(e) {
     let { soundId: t } = e,
-        n = (0, o.e7)([h.Z], () => h.Z.getSoundById(t)),
-        r = (0, d.V2)({ location: 'SoundboardMentionInline' }),
-        { isPlaying: a, playSound: s } = (0, p.Z)(n);
-    return r
+        n = (0, s.e7)([h.Z], () => h.Z.getSoundById(t)),
+        i = (0, d.V2)({ location: 'SoundboardMentionInline' }),
+        { isPlaying: o, playSound: a } = (0, _.Z)(n);
+    return i
         ? null == n
-            ? (0, i.jsx)(T, {})
-            : (0, i.jsx)(S, {
-                  className: I.inlineTextArea,
-                  isPlaying: a,
-                  playSound: s,
+            ? (0, r.jsx)(N, {})
+            : (0, r.jsx)(C, {
+                  className: y.inlineTextArea,
+                  isPlaying: o,
+                  playSound: a,
                   sound: n
               })
         : null;
 }
-function S(e) {
-    let { className: t, sound: n, playSound: r, isPlaying: a } = e,
-        o = (null == n ? void 0 : n.emojiId) != null || (null == n ? void 0 : n.emojiName) != null,
-        d = y.intl.formatToPlainString(y.t.tuMUJy, {
+function C(e) {
+    let { className: t, sound: n, playSound: i, isPlaying: o } = e,
+        s = (null == n ? void 0 : n.emojiId) != null || (null == n ? void 0 : n.emojiName) != null,
+        d = b.NW.formatToPlainString(b.t.tuMUJy, {
             emojiName: null == n ? void 0 : n.emojiName,
             soundName: null == n ? void 0 : n.name
         });
-    return (0, c.X0)({ location: 'SoundboardMentionInline' })
-        ? (0, i.jsxs)(l.P3F, {
+    return (0, u.X0)({ location: 'SoundboardMentionInline' })
+        ? (0, r.jsxs)(l.P3F, {
               'aria-label': d,
               tag: 'span',
-              onClick: r,
-              className: s()(I.inlineContainer, I.inlineButton, { [I.playing]: !0 === a }, t),
+              onClick: i,
+              className: a()(y.inlineContainer, y.inlineButton, { [y.playing]: !0 === o }, t),
               children: [
-                  o &&
-                      (0, i.jsx)(u.Z, {
+                  s &&
+                      (0, r.jsx)(c.Z, {
                           emojiId: null == n ? void 0 : n.emojiId,
                           emojiName: null == n ? void 0 : n.emojiName,
-                          className: I.soundmojiEmoji
+                          className: y.soundmojiEmoji
                       }),
-                  (0, i.jsx)('span', { children: ' '.concat(null == n ? void 0 : n.name, ' ') })
+                  (0, r.jsx)('span', { children: ' '.concat(null == n ? void 0 : n.name, ' ') })
               ]
           })
         : null;
 }
-let A = function (e) {
-    let { channelId: t, messageId: n, soundId: a, messageSounds: s, jumbo: u = !1 } = e,
+let R = function (e) {
+    let { channelId: t, messageId: n, soundId: o, messageSounds: a, jumbo: c = !1 } = e,
         d = E.jU.useSetting(),
-        y = (0, o.e7)([h.Z], () => h.Z.getSoundById(a), [a]),
-        b = r.useMemo(() => {
+        b = (0, s.e7)([h.Z], () => h.Z.getSoundById(o), [o]),
+        O = i.useMemo(() => {
             var e;
-            return null !== (e = (0, f.Z)(t, n, a, s)) && void 0 !== e ? e : y;
-        }, [t, n, a, s, y]),
-        A = (0, o.e7)([v.Z], () => v.Z.getChannel(t)),
-        N = (0, c.X0)({ location: 'SoundboardMention' }),
-        C = r.useRef(null),
-        { isPlaying: R, playSound: O } = (0, p.Z)(b, A),
-        D = r.useCallback(() => {
-            if (O()) {
+            return null !== (e = (0, f.Z)(t, n, o, a)) && void 0 !== e ? e : b;
+        }, [t, n, o, a, b]),
+        I = (0, s.e7)([v.Z], () => v.Z.getChannel(t)),
+        A = (0, u.X0)({ location: 'SoundboardMention' }),
+        R = i.useRef(null),
+        { isPlaying: P, playSound: w } = (0, _.Z)(O, I),
+        D = i.useCallback(() => {
+            if (w()) {
                 var e;
-                null === (e = C.current) || void 0 === e || e.addAnimation();
+                null === (e = R.current) || void 0 === e || e.addAnimation();
             }
-        }, [O]);
-    return N
-        ? null == b
-            ? (0, i.jsx)(T, { playSound: D })
-            : u && !d
-              ? (0, i.jsx)(
+        }, [w]);
+    return A
+        ? null == O
+            ? (0, r.jsx)(N, { playSound: D })
+            : c && !d
+              ? (0, r.jsx)(
                     g.ZP,
                     {
-                        containerClassName: I.jumboContainer,
-                        className: I.jumboButton,
-                        sound: b,
-                        channel: A,
+                        containerClassName: y.jumboContainer,
+                        className: y.jumboButton,
+                        sound: O,
+                        channel: I,
                         refreshEnabled: !0,
                         onSelectItem: D,
-                        isPlayingSoundOverride: R,
+                        isPlayingSoundOverride: P,
                         isSoundmoji: !0,
                         buttonOverlay: m.Pb.SOUNDMOJI,
-                        tooltipClassName: I.tooltip,
-                        tooltipContentClassName: I.tooltipContainer,
-                        tooltipOverride: (0, i.jsx)(_.Dp, { sound: b }),
-                        soundmojiVisualEffectRef: C
+                        tooltipClassName: y.tooltip,
+                        tooltipContentClassName: y.tooltipContainer,
+                        tooltipOverride: (0, r.jsx)(p.Dp, { sound: O }),
+                        soundmojiVisualEffectRef: R
                     },
-                    ''.concat(b.soundId)
+                    ''.concat(O.soundId)
                 )
-              : (0, i.jsx)(l.ua7, {
-                    'aria-label': b.name,
-                    text: (0, i.jsx)(_.Dp, { sound: b }),
-                    tooltipClassName: I.tooltip,
-                    tooltipContentClassName: I.tooltipContainer,
+              : (0, r.jsx)(l.ua7, {
+                    'aria-label': O.name,
+                    text: (0, r.jsx)(p.Dp, { sound: O }),
+                    tooltipClassName: y.tooltip,
+                    tooltipContentClassName: y.tooltipContainer,
                     position: 'top',
                     delay: 500,
                     children: (e) =>
-                        (0, i.jsx)('span', {
-                            ...e,
-                            children: (0, i.jsx)(S, {
-                                sound: b,
-                                playSound: D,
-                                isPlaying: R
+                        (0, r.jsx)(
+                            'span',
+                            T(S({}, e), {
+                                children: (0, r.jsx)(C, {
+                                    sound: O,
+                                    playSound: D,
+                                    isPlaying: P
+                                })
                             })
-                        })
+                        )
                 })
         : null;
 };

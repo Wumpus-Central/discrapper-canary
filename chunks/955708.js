@@ -1,118 +1,155 @@
 n.d(e, {
-    default: () => N,
-    x: () => h
+    default: () => b,
+    x: () => x
 }),
     n(47120);
-var s,
-    i = n(200651),
-    r = n(192379),
-    o = n(481060),
-    a = n(378298),
-    c = n(473092),
+var r,
+    s = n(200651),
+    o = n(192379),
+    i = n(481060),
+    c = n(378298),
+    a = n(473092),
     l = n(684471),
-    d = n(745982),
-    u = n(463439),
-    E = n(388032),
-    _ = n(403619),
-    h = (((s = {})[(s.INTRO = 0)] = 'INTRO'), (s[(s.SAFETY_TIPS = 1)] = 'SAFETY_TIPS'), (s[(s.TAKE_ACTION = 2)] = 'TAKE_ACTION'), s);
-let N = (t) => {
-    let { warningId: e, warningType: n, senderId: s, modalProps: h, channelId: N } = t,
-        [x, C] = r.useState(0),
-        I = r.useMemo(
+    u = n(745982),
+    d = n(463439),
+    N = n(388032),
+    E = n(295201);
+function h(t) {
+    for (var e = 1; e < arguments.length; e++) {
+        var n = null != arguments[e] ? arguments[e] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (t) {
+                    return Object.getOwnPropertyDescriptor(n, t).enumerable;
+                })
+            )),
+            r.forEach(function (e) {
+                var r;
+                (r = n[e]),
+                    e in t
+                        ? Object.defineProperty(t, e, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (t[e] = r);
+            });
+    }
+    return t;
+}
+function _(t, e) {
+    return (
+        (e = null != e ? e : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(e))
+            : (function (t, e) {
+                  var n = Object.keys(t);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(t);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(e)).forEach(function (n) {
+                  Object.defineProperty(t, n, Object.getOwnPropertyDescriptor(e, n));
+              }),
+        t
+    );
+}
+var x = (((r = {})[(r.INTRO = 0)] = 'INTRO'), (r[(r.SAFETY_TIPS = 1)] = 'SAFETY_TIPS'), (r[(r.TAKE_ACTION = 2)] = 'TAKE_ACTION'), r);
+let b = (t) => {
+    let { warningId: e, warningType: n, senderId: r, modalProps: x, channelId: b } = t,
+        [p, f] = o.useState(0),
+        g = o.useMemo(
             () => ({
-                channelId: N,
-                senderId: s,
+                channelId: b,
+                senderId: r,
                 warningId: e,
                 warningType: n,
                 isNudgeWarning: !1
             }),
-            [N, s, e, n]
+            [b, r, e, n]
         );
-    r.useEffect(() => {
-        (0, c.KQ)({
-            ...I,
-            viewName: c.pb.SAFETY_TAKEOVER_MODAL
-        });
-    }, [I]);
-    let A = r.useCallback(
+    o.useEffect(() => {
+        (0, a.KQ)(_(h({}, g), { viewName: a.pb.SAFETY_TAKEOVER_MODAL }));
+    }, [g]);
+    let m = o.useCallback(
             (t) => {
-                (0, c.qc)({
-                    ...I,
-                    cta: t
-                });
+                (0, a.qc)(_(h({}, g), { cta: t }));
             },
-            [I]
+            [g]
         ),
-        [T, m] = r.useState(!1);
-    function g(t) {
-        C(t);
+        [C, I] = o.useState(!1);
+    function A(t) {
+        f(t);
     }
-    return (0, i.jsxs)(o.Y0X, {
-        transitionState: h.transitionState,
+    return (0, s.jsxs)(i.Y0X, {
+        transitionState: x.transitionState,
         children: [
-            (0, i.jsx)('div', {
-                className: _.container,
-                children: (0, i.jsxs)(o.MyZ, {
+            (0, s.jsx)('div', {
+                className: E.container,
+                children: (0, s.jsxs)(i.MyZ, {
                     width: 440,
-                    activeSlide: x,
+                    activeSlide: p,
                     centered: !1,
                     overflow: 'visible',
                     contentDisplay: 'flex',
                     children: [
-                        (0, i.jsx)(o.Mi4, {
+                        (0, s.jsx)(i.Mi4, {
                             id: 0,
-                            children: (0, i.jsx)(l.Z, {
+                            children: (0, s.jsx)(l.Z, {
                                 warningId: e,
-                                senderId: s,
-                                trackAnalyticsEvent: A,
-                                onNavigate: g
+                                senderId: r,
+                                trackAnalyticsEvent: m,
+                                onNavigate: A
                             })
                         }),
-                        (0, i.jsx)(o.Mi4, {
+                        (0, s.jsx)(i.Mi4, {
                             id: 1,
-                            children: (0, i.jsx)(d.Z, {
+                            children: (0, s.jsx)(u.Z, {
                                 warningId: e,
-                                senderId: s,
-                                trackAnalyticsEvent: A
+                                senderId: r,
+                                trackAnalyticsEvent: m
                             })
                         }),
-                        (0, i.jsx)(o.Mi4, {
+                        (0, s.jsx)(i.Mi4, {
                             id: 2,
-                            children: (0, i.jsx)(u.Z, {
+                            children: (0, s.jsx)(d.Z, {
                                 warningId: e,
-                                senderId: s,
-                                trackAnalyticsEvent: A,
-                                channelId: N,
-                                hasReported: T,
+                                senderId: r,
+                                trackAnalyticsEvent: m,
+                                channelId: b,
+                                hasReported: C,
                                 onReport: function () {
-                                    m(!0);
+                                    I(!0);
                                 }
                             })
                         })
                     ]
                 })
             }),
-            (0, i.jsxs)(o.mzw, {
-                className: _.footer,
+            (0, s.jsxs)(i.mzw, {
+                className: E.footer,
                 children: [
-                    (0, i.jsx)(o.zxk, {
-                        className: _.footerButton,
-                        look: o.zxk.Looks.LINK,
-                        color: o.zxk.Colors.CUSTOM,
-                        size: o.zxk.Sizes.MIN,
+                    (0, s.jsx)(i.zxk, {
+                        className: E.footerButton,
+                        look: i.zxk.Looks.LINK,
+                        color: i.zxk.Colors.CUSTOM,
+                        size: i.zxk.Sizes.MIN,
                         onClick: function () {
-                            h.onClose(), (0, a.T)(N, [e]), A(c.NM.USER_TAKEOVER_MODAL_DISMISS);
+                            x.onClose(), (0, c.T)(b, [e]), m(a.NM.USER_TAKEOVER_MODAL_DISMISS);
                         },
-                        children: E.intl.string(E.t.cpT0Cg)
+                        children: N.NW.string(N.t.cpT0Cg)
                     }),
-                    0 !== x &&
-                        (0, i.jsx)(o.zxk, {
-                            className: _.footerButton,
-                            look: o.zxk.Looks.LINK,
-                            color: o.zxk.Colors.CUSTOM,
-                            size: o.zxk.Sizes.MIN,
-                            onClick: () => g(0),
-                            children: E.intl.string(E.t['13/7kZ'])
+                    0 !== p &&
+                        (0, s.jsx)(i.zxk, {
+                            className: E.footerButton,
+                            look: i.zxk.Looks.LINK,
+                            color: i.zxk.Colors.CUSTOM,
+                            size: i.zxk.Sizes.MIN,
+                            onClick: () => A(0),
+                            children: N.NW.string(N.t['13/7kZ'])
                         })
                 ]
             })

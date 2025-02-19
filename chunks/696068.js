@@ -1,20 +1,21 @@
 n.d(t, {
     F: () => h,
-    d: () => f
+    d: () => m
 }),
     n(653041),
-    n(47120);
+    n(47120),
+    n(230036);
 var a = n(442837),
     i = n(592125),
     l = n(324067),
     s = n(430824),
-    c = n(496675),
-    o = n(944486),
-    r = n(979651),
+    r = n(496675),
+    c = n(944486),
+    o = n(979651),
     d = n(938475),
     u = n(823379),
     p = n(374065),
-    m = n(981631);
+    f = n(981631);
 function g(e, t, n, a, i) {
     let l = (0, p.e4)({
         channelId: e.id,
@@ -23,19 +24,19 @@ function g(e, t, n, a, i) {
         PermissionStore: a,
         VoiceStateStore: i
     });
-    return e.type === m.d4z.GUILD_VOICE && l === p.jy.CAN_LAUNCH;
+    return e.type === f.d4z.GUILD_VOICE && l === p.jy.CAN_LAUNCH;
 }
-function f(e) {
+function m(e) {
     var t, n, a;
-    let { guildId: p, allowGdmActivityChannelSuggestion: m = !1 } = e;
-    if (null == p && !m) return null;
-    let f = o.Z.getVoiceChannelId(),
-        v = i.Z.getChannel(f);
-    if (null != v && (null != v.guild_id || m)) return v.id;
+    let { guildId: p, allowGdmActivityChannelSuggestion: f = !1 } = e;
+    if (null == p && !f) return null;
+    let m = c.Z.getVoiceChannelId(),
+        v = i.Z.getChannel(m);
+    if (null != v && (null != v.guild_id || f)) return v.id;
     let h = [];
     for (let e of Object.values(l.Z.getCategories(p)))
         for (let t of e)
-            g(t.channel, i.Z, s.Z, c.Z, r.Z) &&
+            g(t.channel, i.Z, s.Z, r.Z, o.Z) &&
                 h.push({
                     channel: t.channel,
                     users: d.ZP.getVoiceStatesForChannel(t.channel).filter(u.lm)
@@ -49,7 +50,7 @@ function v(e, t) {
 }
 function h(e) {
     return (0, a.e7)(
-        [l.Z, i.Z, s.Z, c.Z, r.Z, d.ZP],
+        [l.Z, i.Z, s.Z, r.Z, o.Z, d.ZP],
         () => {
             if (null == e) return [];
             let t = [];
@@ -57,7 +58,7 @@ function h(e) {
                 Object.values(l.Z.getCategories(e)).forEach((e) => {
                     e.forEach((e) => {
                         let { channel: n } = e;
-                        g(n, i.Z, s.Z, c.Z, r.Z) && t.push(n);
+                        g(n, i.Z, s.Z, r.Z, o.Z) && t.push(n);
                     });
                 }),
                 t

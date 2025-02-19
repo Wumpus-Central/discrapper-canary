@@ -1,62 +1,105 @@
-n.d(t, { default: () => o });
-var l = n(200651);
-n(192379);
-var i = n(442837),
-    s = n(481060),
-    a = n(239091),
-    d = n(995532),
-    c = n(388032);
-let o = (e) => {
+r.d(t, { default: () => a });
+var n = r(200651);
+r(192379);
+var o = r(442837),
+    c = r(481060),
+    i = r(239091),
+    l = r(995532),
+    s = r(388032);
+let a = (e) => {
     var t;
-    let { guildId: o, welcomeChannel: r, onEdit: h, onChannelReorder: u, setShowConfirmModal: b, index: g, onSelect: v } = e,
-        x = (0, i.e7)([d.Z], () => d.Z.get(o)),
-        w = (null !== (t = null == x ? void 0 : x.welcome_channels) && void 0 !== t ? t : []).length - 1,
-        j = (e) => {
-            u(r, e, !0);
+    let { guildId: a, welcomeChannel: b, onEdit: d, onChannelReorder: u, setShowConfirmModal: p, index: j, onSelect: O } = e,
+        g = (0, o.e7)([l.Z], () => l.Z.get(a)),
+        h = (null !== (t = null == g ? void 0 : g.welcome_channels) && void 0 !== t ? t : []).length - 1,
+        y = (e) => {
+            u(b, e, !0);
         };
-    return (0, l.jsxs)(s.v2r, {
+    return (0, n.jsxs)(c.v2r, {
         navId: 'welcome-settings-context',
-        'aria-label': c.intl.string(c.t.ogxXGh),
-        onClose: a.Zy,
-        onSelect: v,
+        'aria-label': s.NW.string(s.t.ogxXGh),
+        onClose: i.Zy,
+        onSelect: O,
         children: [
-            (0, l.jsxs)(s.kSQ, {
+            (0, n.jsxs)(c.kSQ, {
                 children: [
-                    (0, l.jsx)(s.sNh, {
+                    (0, n.jsx)(c.sNh, {
                         id: 'move-up',
-                        label: c.intl.string(c.t['4UBqwM']),
-                        disabled: g <= 0,
-                        action: () => j(g - 1)
+                        label: s.NW.string(s.t['4UBqwM']),
+                        disabled: j <= 0,
+                        action: () => y(j - 1)
                     }),
-                    (0, l.jsx)(s.sNh, {
+                    (0, n.jsx)(c.sNh, {
                         id: 'move-down',
-                        label: c.intl.string(c.t.b73Gwc),
-                        disabled: g > w,
-                        action: () => j(g + 1)
+                        label: s.NW.string(s.t.b73Gwc),
+                        disabled: j > h,
+                        action: () => y(j + 1)
                     })
                 ]
             }),
-            (0, l.jsxs)(s.kSQ, {
+            (0, n.jsxs)(c.kSQ, {
                 children: [
-                    (0, l.jsx)(s.sNh, {
+                    (0, n.jsx)(c.sNh, {
                         id: 'edit',
-                        label: c.intl.string(c.t.u5DUrK),
+                        label: s.NW.string(s.t.u5DUrK),
                         action: () =>
-                            (0, s.ZDy)(async () => {
-                                let { default: e } = await n.e('39143').then(n.bind(n, 737868));
-                                return (t) =>
-                                    (0, l.jsx)(e, {
-                                        ...t,
-                                        welcomeChannel: r,
-                                        guildId: o,
-                                        onSave: h
-                                    });
+                            (0, c.ZDy)(async () => {
+                                let { default: e } = await r.e('39143').then(r.bind(r, 737868));
+                                return (t) => {
+                                    var r, o;
+                                    return (0, n.jsx)(
+                                        e,
+                                        ((r = (function (e) {
+                                            for (var t = 1; t < arguments.length; t++) {
+                                                var r = null != arguments[t] ? arguments[t] : {},
+                                                    n = Object.keys(r);
+                                                'function' == typeof Object.getOwnPropertySymbols &&
+                                                    (n = n.concat(
+                                                        Object.getOwnPropertySymbols(r).filter(function (e) {
+                                                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                                        })
+                                                    )),
+                                                    n.forEach(function (t) {
+                                                        var n;
+                                                        (n = r[t]),
+                                                            t in e
+                                                                ? Object.defineProperty(e, t, {
+                                                                      value: n,
+                                                                      enumerable: !0,
+                                                                      configurable: !0,
+                                                                      writable: !0
+                                                                  })
+                                                                : (e[t] = n);
+                                                    });
+                                            }
+                                            return e;
+                                        })({}, t)),
+                                        (o = o =
+                                            {
+                                                welcomeChannel: b,
+                                                guildId: a,
+                                                onSave: d
+                                            }),
+                                        Object.getOwnPropertyDescriptors
+                                            ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(o))
+                                            : (function (e, t) {
+                                                  var r = Object.keys(e);
+                                                  if (Object.getOwnPropertySymbols) {
+                                                      var n = Object.getOwnPropertySymbols(e);
+                                                      r.push.apply(r, n);
+                                                  }
+                                                  return r;
+                                              })(Object(o)).forEach(function (e) {
+                                                  Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(o, e));
+                                              }),
+                                        r)
+                                    );
+                                };
                             })
                     }),
-                    (0, l.jsx)(s.sNh, {
+                    (0, n.jsx)(c.sNh, {
                         id: 'delete',
-                        label: c.intl.string(c.t.JYBc3N),
-                        action: () => b(!0),
+                        label: s.NW.string(s.t.JYBc3N),
+                        action: () => p(!0),
                         color: 'danger'
                     })
                 ]

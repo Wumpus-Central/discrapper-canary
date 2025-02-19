@@ -1,38 +1,81 @@
-n.d(t, { Z: () => y }), n(47120);
-var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    s = n.n(l),
-    a = n(442837),
+n.d(t, { Z: () => R }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(442837),
     o = n(692547),
     c = n(481060),
     d = n(142497),
     u = n(338327),
     m = n(496675),
-    h = n(63063),
+    p = n(63063),
     g = n(981631),
-    x = n(190378),
-    p = n(388032),
-    _ = n(637159),
-    C = n(438825),
-    f = n(236140),
-    v = n(37069),
-    N = n(518513),
-    j = n(168179),
-    I = n(348986),
-    E = n(930065),
-    b = n(345669);
-let T = () => [
+    h = n(190378),
+    f = n(388032),
+    b = n(411975),
+    x = n(438825),
+    j = n(236140),
+    N = n(37069),
+    v = n(518513),
+    _ = n(168179),
+    O = n(348986),
+    y = n(930065),
+    C = n(345669);
+function I(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function E(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let S = () => [
         {
             icon: c.IeX,
             color: o.Z.unsafe_rawColors.GREEN_360.css,
-            header: p.intl.string(p.t.oVQF29),
-            body: p.intl.format(p.t.A6G7am, {
+            header: f.NW.string(f.t.oVQF29),
+            body: f.NW.format(f.t.A6G7am, {
                 featureHook: (e, t) =>
-                    (0, i.jsx)(
+                    (0, r.jsx)(
                         'strong',
                         {
-                            className: _.featuredText,
+                            className: b.featuredText,
                             children: e
                         },
                         t
@@ -42,25 +85,30 @@ let T = () => [
         {
             icon: c.IeX,
             color: o.Z.unsafe_rawColors.PARTNER.css,
-            header: p.intl.string(p.t['0rJl9/']),
-            body: p.intl.format(p.t.XsCNk5, {
+            header: f.NW.string(f.t['0rJl9/']),
+            body: f.NW.format(f.t.XsCNk5, {
                 infoHook: () =>
-                    (0, i.jsx)(c.ua7, {
-                        text: p.intl.string(p.t.kPJlTk),
-                        'aria-label': p.intl.string(p.t.kPJlTk),
+                    (0, r.jsx)(c.ua7, {
+                        text: f.NW.string(f.t.kPJlTk),
+                        'aria-label': f.NW.string(f.t.kPJlTk),
                         children: (e) =>
-                            (0, i.jsx)(c.d3s, {
-                                size: 'xs',
-                                color: 'currentColor',
-                                className: _.infoIcon,
-                                ...e
-                            })
+                            (0, r.jsx)(
+                                c.d3s,
+                                I(
+                                    {
+                                        size: 'xs',
+                                        color: 'currentColor',
+                                        className: b.infoIcon
+                                    },
+                                    e
+                                )
+                            )
                     }),
                 featureHook: (e, t) =>
-                    (0, i.jsx)(
+                    (0, r.jsx)(
                         'strong',
                         {
-                            className: _.featuredText,
+                            className: b.featuredText,
                             children: e
                         },
                         t
@@ -70,185 +118,191 @@ let T = () => [
         {
             icon: c.d3s,
             color: o.Z.unsafe_rawColors.RED_360.css,
-            header: p.intl.string(p.t.W2kLJC),
-            body: p.intl.string(p.t.hyNkHx)
+            header: f.NW.string(f.t.W2kLJC),
+            body: f.NW.string(f.t.hyNkHx)
         }
     ],
-    S = [
+    T = [
         {
-            iconSrc: I,
+            iconSrc: O,
             name: 'Pokemon GO Paris',
             position: [-230, -100]
         },
         {
-            iconSrc: E,
+            iconSrc: y,
             name: 'Python',
             position: [-180, -100],
             faded: !0,
             rightAlign: !0
         },
         {
-            iconSrc: N,
+            iconSrc: v,
             name: 'Learn Latin',
             position: [-280, -30],
             faded: !0
         },
         {
-            iconSrc: j,
+            iconSrc: _,
             name: 'r/leagueoflegends',
             position: [-320, -30],
             rightAlign: !0
         },
         {
-            iconSrc: b,
+            iconSrc: C,
             name: 'Sneaker Fans',
             position: [-250, 40]
         },
         {
-            iconSrc: v,
+            iconSrc: N,
             name: 'Hogwarts School',
             position: [-270, 40],
             faded: !0,
             rightAlign: !0
         }
     ],
-    R = (e) => {
-        let { icon: t, color: n, size: r = 24, header: l, body: s } = e;
-        return (0, i.jsxs)('div', {
-            className: _.featureCard,
+    P = (e) => {
+        let { icon: t, color: n, size: i = 24, header: s, body: a } = e;
+        return (0, r.jsxs)('div', {
+            className: b.featureCard,
             children: [
-                (0, i.jsx)('div', {
-                    className: _.featureIcon,
-                    children: (0, i.jsx)(t, {
+                (0, r.jsx)('div', {
+                    className: b.featureIcon,
+                    children: (0, r.jsx)(t, {
                         color: null != n ? n : 'currentColor',
-                        width: r,
-                        height: r,
+                        width: i,
+                        height: i,
                         size: 'custom'
                     })
                 }),
-                (0, i.jsx)(c.X6q, {
+                (0, r.jsx)(c.X6q, {
                     variant: 'heading-md/semibold',
-                    className: _.featureHeader,
-                    children: l
+                    className: b.featureHeader,
+                    children: s
                 }),
-                (0, i.jsx)(c.Text, {
+                (0, r.jsx)(c.Text, {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',
-                    children: s
+                    children: a
                 })
             ]
         });
     },
-    Z = (e) => {
-        let { iconSrc: t, name: n, position: r, faded: l, rightAlign: a, imageCoordinates: o } = e,
+    w = (e) => {
+        let { iconSrc: t, name: n, position: i, faded: s, rightAlign: l, imageCoordinates: o } = e,
             d = {
-                [a ? 'right' : 'left']: o[0] + r[0],
-                top: o[1] + r[1]
+                [l ? 'right' : 'left']: o[0] + i[0],
+                top: o[1] + i[1]
             };
-        return (0, i.jsxs)('div', {
-            className: s()(_.guildDetails, { [_.faded]: l }),
+        return (0, r.jsxs)('div', {
+            className: a()(b.guildDetails, { [b.faded]: s }),
             style: d,
             children: [
-                (0, i.jsx)('div', {
-                    className: _.guildIcon,
-                    children: (0, i.jsx)('img', {
+                (0, r.jsx)('div', {
+                    className: b.guildIcon,
+                    children: (0, r.jsx)('img', {
                         alt: '',
                         src: t,
                         width: 24,
                         height: 24
                     })
                 }),
-                (0, i.jsx)(c.X6q, {
+                (0, r.jsx)(c.X6q, {
                     variant: 'heading-deprecated-12/semibold',
                     children: n
                 })
             ]
         });
     },
-    y = (e) => {
+    R = (e) => {
         let { guild: t } = e,
-            [n, l] = r.useState(0),
-            [s, o] = r.useState(0),
-            [v, N] = r.useState(),
-            j = (0, a.e7)([m.Z], () => m.Z.can(g.Plq.ADMINISTRATOR, t)),
-            I = null == v ? void 0 : v.offsetWidth,
-            E = null == v ? void 0 : v.offsetHeight;
-        r.useEffect(() => {
-            null != I && l(I / 2), null != E && o(E / 2);
-        }, [I, E, l, o]),
-            r.useEffect(() => {
-                (0, d.Kw)(x.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL);
+            [n, s] = i.useState(0),
+            [a, o] = i.useState(0),
+            [N, v] = i.useState(),
+            _ = (0, l.e7)([m.Z], () => m.Z.can(g.Plq.ADMINISTRATOR, t)),
+            O = null == N ? void 0 : N.offsetWidth,
+            y = null == N ? void 0 : N.offsetHeight;
+        i.useEffect(() => {
+            null != O && s(O / 2), null != y && o(y / 2);
+        }, [O, y, s, o]),
+            i.useEffect(() => {
+                (0, d.Kw)(h.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL);
             }, []);
-        let b = () => {
+        let C = () => {
             u.Z.open();
         };
-        return (0, i.jsxs)('div', {
-            className: _.container,
+        return (0, r.jsxs)('div', {
+            className: b.container,
             children: [
-                (0, i.jsxs)('div', {
-                    className: _.banner,
-                    ref: (e) => N(e),
+                (0, r.jsxs)('div', {
+                    className: b.banner,
+                    ref: (e) => v(e),
                     children: [
-                        S.map((e) =>
-                            (0, i.jsx)(
-                                Z,
-                                {
-                                    ...e,
-                                    imageCoordinates: [n, s]
-                                },
+                        T.map((e) =>
+                            (0, r.jsx)(
+                                w,
+                                E(I({}, e), {
+                                    imageCoordinates: [n, a]
+                                }),
                                 e.name
                             )
                         ),
-                        (0, i.jsx)('img', {
+                        (0, r.jsx)('img', {
                             alt: '',
-                            src: C,
-                            className: _.image,
+                            src: x,
+                            className: b.image,
                             width: 256
                         }),
-                        (0, i.jsx)('img', {
+                        (0, r.jsx)('img', {
                             alt: '',
-                            src: f,
-                            className: _.sparkles
+                            src: j,
+                            className: b.sparkles
                         })
                     ]
                 }),
-                (0, i.jsx)(c.X6q, {
+                (0, r.jsx)(c.X6q, {
                     variant: 'heading-xl/semibold',
-                    children: p.intl.string(p.t['M/gBcH'])
+                    children: f.NW.string(f.t['M/gBcH'])
                 }),
-                (0, i.jsx)(c.Text, {
+                (0, r.jsx)(c.Text, {
                     color: 'header-secondary',
                     variant: 'text-md/normal',
-                    className: _.body,
-                    children: p.intl.format(p.t['52EgsL'], { helpdeskArticle: h.Z.getArticleURL(g.BhN.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES) })
+                    className: b.body,
+                    children: f.NW.format(f.t['52EgsL'], { helpdeskArticle: p.Z.getArticleURL(g.BhN.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES) })
                 }),
-                (0, i.jsx)(c.ua7, {
-                    text: j ? null : p.intl.string(p.t['pjG+T0']),
-                    'aria-label': j ? void 0 : p.intl.string(p.t['pjG+T0']),
+                (0, r.jsx)(c.ua7, {
+                    text: _ ? null : f.NW.string(f.t['pjG+T0']),
+                    'aria-label': _ ? void 0 : f.NW.string(f.t['pjG+T0']),
                     children: (e) =>
-                        (0, i.jsx)(c.zxk, {
-                            onClick: b,
-                            className: _.button,
-                            disabled: !j,
-                            ...e,
-                            children: p.intl.string(p.t.LhlgY2)
-                        })
+                        (0, r.jsx)(
+                            c.zxk,
+                            E(
+                                I(
+                                    {
+                                        onClick: C,
+                                        className: b.button,
+                                        disabled: !_
+                                    },
+                                    e
+                                ),
+                                { children: f.NW.string(f.t.LhlgY2) }
+                            )
+                        )
                 }),
-                (0, i.jsx)('hr', { className: _.separator }),
-                (0, i.jsx)(c.Text, {
+                (0, r.jsx)('hr', { className: b.separator }),
+                (0, r.jsx)(c.Text, {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',
-                    children: p.intl.string(p.t.OzLWLC)
+                    children: f.NW.string(f.t.OzLWLC)
                 }),
-                (0, i.jsx)(c.Text, {
+                (0, r.jsx)(c.Text, {
                     color: 'header-secondary',
-                    className: _.body,
+                    className: b.body,
                     variant: 'text-sm/normal',
-                    children: p.intl.format(p.t.rjhrqK, { helpdeskArticle: h.Z.getArticleURL(g.BhN.GUILD_COMMUNITY_FEATURE) })
+                    children: f.NW.format(f.t.rjhrqK, { helpdeskArticle: p.Z.getArticleURL(g.BhN.GUILD_COMMUNITY_FEATURE) })
                 }),
-                (0, i.jsx)('div', {
-                    className: _.features,
-                    children: T().map((e, t) => (0, i.jsx)(R, { ...e }, t))
+                (0, r.jsx)('div', {
+                    className: b.features,
+                    children: S().map((e, t) => (0, r.jsx)(P, I({}, e), t))
                 })
             ]
         });

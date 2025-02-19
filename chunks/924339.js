@@ -1,85 +1,126 @@
-e.r(r), e.d(r, { default: () => O }), e(411104);
-var o = e(200651);
-e(192379);
-var n = e(512722),
-    a = e.n(n),
-    l = e(593473),
-    i = e(186231),
-    u = e(159277),
-    c = e(478677),
-    d = e(457330),
-    s = e(702493),
-    A = e(77987),
-    h = e(275759),
-    I = e(710845),
-    p = e(807675),
-    T = e(69580),
-    v = e(787025),
-    _ = e(591759),
-    w = e(981631),
-    L = e(602091);
-let P = new I.Z('LinkAuthorize');
-async function N(t, r, e, o) {
-    var n, l, i, u, s;
-    let A = null;
+r.r(t), r.d(t, { default: () => _ }), r(411104), r(301563);
+var n = r(200651);
+r(192379);
+var o = r(512722),
+    a = r.n(o),
+    l = r(593473),
+    i = r(186231),
+    c = r(159277),
+    u = r(478677),
+    s = r(457330),
+    d = r(702493),
+    p = r(77987),
+    O = r(275759),
+    f = r(710845),
+    b = r(807675),
+    y = r(69580),
+    v = r(787025),
+    w = r(591759),
+    h = r(981631),
+    P = r(602091);
+let A = new f.Z('LinkAuthorize');
+async function I(e, t, r, n) {
+    var o, l, i, c, d;
+    let p = null;
     try {
-        let { body: t } = await d.Z.authorize(o, { twoWayLinkType: c.g.WEB });
-        A = t.url;
-    } catch (t) {
-        throw Error('error at authorize with code '.concat(null !== (l = null == t ? void 0 : null === (n = t.body) || void 0 === n ? void 0 : n.code) && void 0 !== l ? l : 0));
+        let { body: e } = await s.Z.authorize(n, { twoWayLinkType: u.g.WEB });
+        p = e.url;
+    } catch (e) {
+        throw Error('error at authorize with code '.concat(null !== (l = null == e ? void 0 : null === (o = e.body) || void 0 === o ? void 0 : o.code) && void 0 !== l ? l : 0));
     }
-    let I = null;
+    let f = null;
     try {
-        a()(null != A, 'No URL in authorize response');
-        let { state: t } = (0, h.xp)(A);
-        a()(null != t, 'Authorize URL state query parameter must be present'), (I = t);
-    } catch (t) {
+        a()(null != p, 'No URL in authorize response');
+        let { state: e } = (0, O.xp)(p);
+        a()(null != e, 'Authorize URL state query parameter must be present'), (f = e);
+    } catch (e) {
         throw Error('error at authorize parsing callback params');
     }
     try {
-        let n = await d.Z.completeTwoWayLink(o, t, r, I, e);
-        return null == n ? void 0 : null === (i = n.body) || void 0 === i ? void 0 : i.redirect;
-    } catch (t) {
-        throw Error('error at callback with code '.concat(null !== (s = null == t ? void 0 : null === (u = t.body) || void 0 === u ? void 0 : u.code) && void 0 !== s ? s : 0));
+        let o = await s.Z.completeTwoWayLink(n, e, t, f, r);
+        return null == o ? void 0 : null === (i = o.body) || void 0 === i ? void 0 : i.redirect;
+    } catch (e) {
+        throw Error('error at callback with code '.concat(null !== (d = null == e ? void 0 : null === (c = e.body) || void 0 === c ? void 0 : c.code) && void 0 !== d ? d : 0));
     }
 }
-function f(t) {
-    let { platformType: r } = t;
-    (0, s.Z)();
-    let e = (0, p.y)(window.location.search),
-        { code: n, token_redirect_uri: a } = l.parse(window.location.search),
-        u = async (t) => {
-            let { location: e } = t;
-            if (null == e) return;
-            let { error: o } = l.parse(e),
-                u = null;
-            if (null == o && null != n)
+function T(e) {
+    var t, r;
+    let { platformType: o } = e;
+    (0, d.Z)();
+    let a = (0, b.y)(window.location.search),
+        { code: c, token_redirect_uri: u } = l.parse(window.location.search),
+        s = async (e) => {
+            let { location: t } = e;
+            if (null == t) return;
+            let { error: r } = l.parse(t),
+                n = null;
+            if (null == r && null != c)
                 try {
-                    u = await N(e, n, a, r);
+                    n = await I(t, c, u, o);
                 } catch (r) {
-                    var c;
-                    P.error('Error Creating Discord link', null == r ? void 0 : r.message);
-                    let t = _.Z.toURLSafe(e);
-                    if (null == t) return;
-                    t.searchParams.delete('code'), t.searchParams.set('error', 'two_way_link_error'), t.searchParams.set('error_description', null !== (c = null == r ? void 0 : r.message) && void 0 !== c ? c : 'unknown_error'), (e = t.toString());
+                    var a;
+                    A.error('Error Creating Discord link', null == r ? void 0 : r.message);
+                    let e = w.Z.toURLSafe(t);
+                    if (null == e) return;
+                    e.searchParams.delete('code'), e.searchParams.set('error', 'two_way_link_error'), e.searchParams.set('error_description', null !== (a = null == r ? void 0 : r.message) && void 0 !== a ? a : 'unknown_error'), (t = e.toString());
                 }
-            window.location = null == u || u === i.b.OAUTH_REDIRECT ? e : u;
+            window.location = null == n || n === i.b.OAUTH_REDIRECT ? t : n;
         };
-    return (0, o.jsx)(v.G, {
+    return (0, n.jsx)(v.G, {
         removeChildWrapper: !0,
-        children: (0, o.jsx)(T.OAuth2AuthorizeModal, {
-            transitionState: L.Dv.ENTERED,
-            ...e,
-            showLogout: !0,
-            callback: u
-        })
+        children: (0, n.jsx)(
+            y.OAuth2AuthorizeModal,
+            ((t = (function (e) {
+                for (var t = 1; t < arguments.length; t++) {
+                    var r = null != arguments[t] ? arguments[t] : {},
+                        n = Object.keys(r);
+                    'function' == typeof Object.getOwnPropertySymbols &&
+                        (n = n.concat(
+                            Object.getOwnPropertySymbols(r).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                            })
+                        )),
+                        n.forEach(function (t) {
+                            var n;
+                            (n = r[t]),
+                                t in e
+                                    ? Object.defineProperty(e, t, {
+                                          value: n,
+                                          enumerable: !0,
+                                          configurable: !0,
+                                          writable: !0
+                                      })
+                                    : (e[t] = n);
+                        });
+                }
+                return e;
+            })({ transitionState: P.Dv.ENTERED }, a)),
+            (r = r =
+                {
+                    showLogout: !0,
+                    callback: s
+                }),
+            Object.getOwnPropertyDescriptors
+                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+                : (function (e, t) {
+                      var r = Object.keys(e);
+                      if (Object.getOwnPropertySymbols) {
+                          var n = Object.getOwnPropertySymbols(e);
+                          r.push.apply(r, n);
+                      }
+                      return r;
+                  })(Object(r)).forEach(function (e) {
+                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+                  }),
+            t)
+        )
     });
 }
-let O = (0, A.e)(function (t) {
-    let { match: r } = t,
-        e = r.params.type,
-        { client_id: n = '' } = l.parse(window.location.search),
-        a = e === w.ABu.PLAYSTATION && n === u.t.PLAYSTATION_APPLICATION_ID,
-        i = e === w.ABu.PLAYSTATION_STAGING && n === u.t.PLAYSTATION_STAGING_APPLICATION_ID;
-    return a || i ? (0, o.jsx)(f, { platformType: e }) : null;
+let _ = (0, p.e)(function (e) {
+    let { match: t } = e,
+        r = t.params.type,
+        { client_id: o = '' } = l.parse(window.location.search),
+        a = r === h.ABu.PLAYSTATION && o === c.t.PLAYSTATION_APPLICATION_ID,
+        i = r === h.ABu.PLAYSTATION_STAGING && o === c.t.PLAYSTATION_STAGING_APPLICATION_ID;
+    return a || i ? (0, n.jsx)(T, { platformType: r }) : null;
 });

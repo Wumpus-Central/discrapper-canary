@@ -1,20 +1,20 @@
 n.d(t, {
-    ZP: () => L,
-    wU: () => C
+    ZP: () => k,
+    wU: () => D
 }),
     n(47120);
-var i,
-    r = n(442837),
-    a = n(759174),
-    s = n(846519),
-    o = n(570140),
+var r,
+    i = n(442837),
+    o = n(759174),
+    a = n(846519),
+    s = n(570140),
     l = n(314897),
-    u = n(944486),
-    c = n(585483),
+    c = n(944486),
+    u = n(585483),
     d = n(351780),
     f = n(641033),
-    _ = n(524484),
-    p = n(981631);
+    p = n(524484),
+    _ = n(981631);
 function h(e, t, n) {
     return (
         t in e
@@ -28,10 +28,69 @@ function h(e, t, n) {
         e
     );
 }
-let m = 7,
-    g = 1000,
-    E = new Set(),
-    v = new a.h(
+function m(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                h(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function g(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function E(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : g(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function v(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = b(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function b(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+let y = 7,
+    O = 1000,
+    S = new Set(),
+    I = new o.h(
         function (e) {
             let { userId: t, channelId: n } = e;
             return [t, n];
@@ -41,104 +100,99 @@ let m = 7,
             return ''.concat(n, '-').concat(t);
         }
     );
-function y(e) {
+function T(e) {
     return null != e && (e.value > 0 || (null == e ? void 0 : e.multiplier) > 1);
 }
-let I = new a.h(
+let N = new o.h(
         function (e) {
             let {
                 messageId: t,
                 channelId: n,
-                combo: { userId: i }
+                combo: { userId: r }
             } = e;
-            return [t, n, i];
+            return [t, n, r];
         },
         function (e) {
             let {
                 messageId: t,
                 channelId: n,
-                combo: { userId: i }
+                combo: { userId: r }
             } = e;
-            return ''.concat(n, '-').concat(i, '-').concat(t);
+            return ''.concat(n, '-').concat(r, '-').concat(t);
         }
     ),
-    T = (e) => {
+    A = (e) => {
         let { userId: t, channelId: n } = e;
         return ''.concat(t, '-').concat(n);
     };
-function b(e) {
-    var t, n, i, r, a, o;
+function C(e) {
+    var t, n, r, i, o, s;
     let l = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        u = v.get(T(e)),
-        c = {
-            ...u,
-            ...e,
-            value: null !== (n = null !== (t = e.value) && void 0 !== t ? t : null == u ? void 0 : u.value) && void 0 !== n ? n : 0,
-            multiplier: Math.min(null !== (r = null !== (i = e.multiplier) && void 0 !== i ? i : null == u ? void 0 : u.multiplier) && void 0 !== r ? r : 1, m),
-            decayInterval: null !== (a = null == u ? void 0 : u.decayInterval) && void 0 !== a ? a : new s.Xp()
-        };
-    v.set(T(e), c),
+        c = I.get(A(e)),
+        u = E(m({}, c, e), {
+            value: null !== (n = null !== (t = e.value) && void 0 !== t ? t : null == c ? void 0 : c.value) && void 0 !== n ? n : 0,
+            multiplier: Math.min(null !== (i = null !== (r = e.multiplier) && void 0 !== r ? r : null == c ? void 0 : c.multiplier) && void 0 !== i ? i : 1, y),
+            decayInterval: null !== (o = null == c ? void 0 : c.decayInterval) && void 0 !== o ? o : new a.Xp()
+        });
+    I.set(A(e), u),
         l &&
-            (null === (o = c.decayInterval) ||
-                void 0 === o ||
-                o.start(g, () => {
-                    let e = v.get(T(c));
+            (null === (s = u.decayInterval) ||
+                void 0 === s ||
+                s.start(O, () => {
+                    let e = I.get(A(u));
                     if (null != e) {
-                        let n = c.multiplier !== e.multiplier && c.value !== e.value;
+                        let n = u.multiplier !== e.multiplier && u.value !== e.value;
                         if (e.value <= 0 || n) {
                             var t;
                             null === (t = e.decayInterval) || void 0 === t || t.stop(),
                                 e.value <= 0 &&
-                                    (b({
-                                        ...e,
-                                        value: 0,
-                                        multiplier: 1
-                                    }),
-                                    D.emitChange());
-                        } else
-                            b({
-                                ...e,
-                                value: e.value - 1
-                            }),
-                                D.emitChange();
+                                    (C(
+                                        E(m({}, e), {
+                                            value: 0,
+                                            multiplier: 1
+                                        })
+                                    ),
+                                    M.emitChange());
+                        } else C(E(m({}, e), { value: e.value - 1 })), M.emitChange();
                     }
                 }));
 }
-function S(e) {
-    I.set(e.messageId, e);
+function R(e) {
+    N.set(e.messageId, e);
 }
-function A(e) {
-    let { type: t, ...n } = e;
+function P(e) {
+    var { type: t } = e,
+        n = v(e, ['type']);
     if (!d.Z.isEnabled()) return !1;
-    b(n);
+    C(n);
 }
-function N(e) {
+function w(e) {
     let { comboMessage: t } = e;
     if (!d.Z.isEnabled()) return !1;
-    S(t);
+    R(t);
 }
-function C(e, t, n, i) {
-    return !(e !== t || null == n || i.has(n)) && (i.add(n), !0);
+function D(e, t, n, r) {
+    return !(e !== t || null == n || r.has(n)) && (r.add(n), !0);
 }
-function R(e) {
+function x(e) {
     var t, n;
     let {
-        channelId: i,
-        message: { mentions: r, author: a, nonce: s }
+        channelId: r,
+        message: { mentions: i, author: o, nonce: a }
     } = e;
     if (!d.Z.isEnabled()) return !1;
-    let o = l.default.getId();
-    if (!C(null == a ? void 0 : a.id, o, s, E)) return !1;
-    let u = v.get(
-        T({
-            userId: null !== (t = null == a ? void 0 : a.id) && void 0 !== t ? t : '???',
-            channelId: i
+    let s = l.default.getId();
+    if (!D(null == o ? void 0 : o.id, s, a, S)) return !1;
+    let c = I.get(
+        A({
+            userId: null !== (t = null == o ? void 0 : o.id) && void 0 !== t ? t : '???',
+            channelId: r
         })
     );
-    if (d.Z.screenshakeEnabled && d.Z.screenshakeEnabledLocations[_.oZ.MENTION] && null != r && null != r.find((e) => e.id === o)) {
-        let e = null != u ? (null !== (n = (0, f.KH)(u, _.qi.LEVEL_4)) && void 0 !== n ? n : 0.001) : 4 * Math.random();
+    if (d.Z.screenshakeEnabled && d.Z.screenshakeEnabledLocations[p.oZ.MENTION] && null != i && null != i.find((e) => e.id === s)) {
+        let e = null != c ? (null !== (n = (0, f.KH)(c, p.qi.LEVEL_4)) && void 0 !== n ? n : 0.001) : 4 * Math.random();
         return (
-            c.S.dispatch(p.CkL.SHAKE_APP, {
+            u.S.dispatch(_.CkL.SHAKE_APP, {
                 duration: 1000,
                 intensity: e
             }),
@@ -147,13 +201,13 @@ function R(e) {
     }
     return !1;
 }
-class O extends (i = r.ZP.Store) {
+class L extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(l.default, u.Z);
+        this.waitFor(l.default, c.Z);
     }
     getComboScore(e, t) {
-        let n = v.get(
-            T({
+        let n = I.get(
+            A({
                 userId: e,
                 channelId: t
             })
@@ -161,8 +215,8 @@ class O extends (i = r.ZP.Store) {
         return null == n ? 0 : (0, f.Eo)(n);
     }
     getUserCombo(e, t) {
-        return v.get(
-            T({
+        return I.get(
+            A({
                 userId: e,
                 channelId: t
             })
@@ -170,26 +224,26 @@ class O extends (i = r.ZP.Store) {
     }
     isComboing(e, t) {
         let n = this.getUserCombo(e, t);
-        return null != n && n.value >= d.Z.combosRequiredCount && y(n);
+        return null != n && n.value >= d.Z.combosRequiredCount && T(n);
     }
     getMessageCombo(e) {
         var t;
-        let n = I.get(e);
+        let n = N.get(e);
         return null !== (t = null == n ? void 0 : n.combo) && void 0 !== t ? t : void 0;
     }
     getMostRecentMessageCombo(e) {
-        let t = I.values(e);
+        let t = N.values(e);
         return t[t.length - 1];
     }
-    getUserComboShakeIntensity(e, t, n, i) {
-        let r = this.getUserCombo(e, t);
-        return null != r ? (0, f.KH)(r, i) * n : 0;
+    getUserComboShakeIntensity(e, t, n, r) {
+        let i = this.getUserCombo(e, t);
+        return null != i ? (0, f.KH)(i, r) * n : 0;
     }
 }
-h(O, 'displayName', 'PoggermodeStore');
-let D = new O(o.Z, {
-        POGGERMODE_UPDATE_COMBO: A,
-        POGGERMODE_UPDATE_MESSAGE_COMBO: N,
-        MESSAGE_CREATE: R
+h(L, 'displayName', 'PoggermodeStore');
+let M = new L(s.Z, {
+        POGGERMODE_UPDATE_COMBO: P,
+        POGGERMODE_UPDATE_MESSAGE_COMBO: w,
+        MESSAGE_CREATE: x
     }),
-    L = D;
+    k = M;

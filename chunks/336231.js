@@ -1,82 +1,115 @@
-l.r(e), l.d(e, { default: () => o }), l(47120);
-var n = l(200651),
-    s = l(192379),
-    u = l(481060),
-    a = l(388032);
-function o(t) {
-    let { defaultColor: e, colors: l, value: o, onChange: i, disabled: r = !1, customPickerPosition: c = 'bottom' } = t,
-        [d, b] = s.useState(() => (0 === o || o === e || l.some((t) => t === o) ? null : o));
-    s.useEffect(() => {
-        b(0 === o || o === e || l.some((t) => t === o) ? null : o);
-    }, [o, l, e]);
-    let h = s.useCallback(
-            (t) => {
-                null == i || i(t), b(null);
+r.r(t), r.d(t, { default: () => i }), r(47120);
+var n = r(200651),
+    o = r(192379),
+    l = r(481060),
+    c = r(388032);
+function u(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var r = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(r);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (n = n.concat(
+                Object.getOwnPropertySymbols(r).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                })
+            )),
+            n.forEach(function (t) {
+                var n;
+                (n = r[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: n,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = n);
+            });
+    }
+    return e;
+}
+function s(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var r = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var n = Object.getOwnPropertySymbols(e);
+                      r.push.apply(r, n);
+                  }
+                  return r;
+              })(Object(t)).forEach(function (r) {
+                  Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
+              }),
+        e
+    );
+}
+function i(e) {
+    let { defaultColor: t, colors: r, value: i, onChange: a, disabled: b = !1, customPickerPosition: p = 'bottom' } = e,
+        [j, f] = o.useState(() => (0 === i || i === t || r.some((e) => e === i) ? null : i));
+    o.useEffect(() => {
+        f(0 === i || i === t || r.some((e) => e === i) ? null : i);
+    }, [i, r, t]);
+    let O = o.useCallback(
+            (e) => {
+                null == a || a(e), f(null);
             },
-            [i, b]
+            [a, f]
         ),
-        p = s.useCallback(
-            (t) => {
-                null == i || i(t), b(t);
+        y = o.useCallback(
+            (e) => {
+                null == a || a(e), f(e);
             },
-            [i, b]
+            [a, f]
         ),
-        x = s.useCallback(
+        d = o.useCallback(
             () =>
-                (0, n.jsx)(u.Z$W, {
-                    onChange: p,
-                    value: d
+                (0, n.jsx)(l.Z$W, {
+                    onChange: y,
+                    value: j
                 }),
-            [p, d]
+            [y, j]
         ),
-        C = s.useCallback(
-            (t) => {
-                let e = (0, n.jsx)(u.jHW, {
-                    ...t,
-                    'aria-label': a.intl.string(a.t['FHBa//'])
-                });
-                return r
-                    ? e
-                    : (0, n.jsx)(u.yRy, {
-                          renderPopout: x,
-                          position: c,
-                          children: (t) =>
-                              (0, n.jsx)(u.ua7, {
-                                  text: a.intl.string(a.t['FHBa//']),
+        h = o.useCallback(
+            (e) => {
+                let t = (0, n.jsx)(l.jHW, s(u({}, e), { 'aria-label': c.NW.string(c.t['FHBa//']) }));
+                return b
+                    ? t
+                    : (0, n.jsx)(l.yRy, {
+                          renderPopout: d,
+                          position: p,
+                          children: (e) =>
+                              (0, n.jsx)(l.ua7, {
+                                  text: c.NW.string(c.t['FHBa//']),
                                   position: 'bottom',
-                                  children: (l) =>
-                                      (0, n.jsx)('div', {
-                                          ...l,
-                                          ...t,
-                                          children: e
-                                      })
+                                  children: (r) => (0, n.jsx)('div', s(u({}, r, e), { children: t }))
                               })
                       });
             },
-            [c, r, x]
+            [p, b, d]
         ),
-        j = s.useCallback(
-            (t) => {
-                let e = (0, n.jsx)(u.AGO, { ...t });
-                return r
-                    ? e
-                    : (0, n.jsx)(u.ua7, {
-                          text: a.intl.string(a.t.bBvAEB),
+        g = o.useCallback(
+            (e) => {
+                let t = (0, n.jsx)(l.AGO, u({}, e));
+                return b
+                    ? t
+                    : (0, n.jsx)(l.ua7, {
+                          text: c.NW.string(c.t.bBvAEB),
                           position: 'bottom',
-                          children: (t) =>
-                              (0, n.jsx)('div', {
-                                  ...t,
-                                  children: e
-                              })
+                          children: (e) => (0, n.jsx)('div', s(u({}, e), { children: t }))
                       });
             },
-            [r]
+            [b]
         );
-    return (0, n.jsx)(u.zH8, {
-        ...t,
-        renderDefaultButton: j,
-        renderCustomButton: C,
-        customColor: d,
-        onChange: h
-    });
+    return (0, n.jsx)(
+        l.zH8,
+        s(u({}, e), {
+            renderDefaultButton: g,
+            renderCustomButton: h,
+            customColor: j,
+            onChange: O
+        })
+    );
 }

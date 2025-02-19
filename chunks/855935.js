@@ -1,59 +1,98 @@
-l.d(t, { Z: () => x });
-var n = l(200651),
-    a = l(192379),
-    i = l(498607),
-    o = l.n(i),
-    s = l(399606),
-    r = l(481060),
-    c = l(588215),
-    d = l(893966),
-    C = l(527379),
-    u = l(981631),
-    m = l(388032);
-let h = [c.d$.ORDER_BY_GUILD_JOINED_AT_DESC, c.d$.ORDER_BY_GUILD_JOINED_AT_ASC, c.d$.ORDER_BY_USER_ID_DESC, c.d$.ORDER_BY_USER_ID_ASC];
-function x(e) {
-    let { guildId: t, onClose: l } = e,
-        i = (0, s.e7)([d.Z], () => d.Z.getSearchStateByGuildId(t), [t], o()),
-        x = a.useCallback(
+n.d(t, { Z: () => p });
+var r = n(200651),
+    l = n(192379),
+    o = n(498607),
+    a = n.n(o),
+    i = n(399606),
+    s = n(481060),
+    c = n(588215),
+    u = n(893966),
+    d = n(527379),
+    C = n(981631),
+    m = n(388032);
+let b = [c.d$.ORDER_BY_GUILD_JOINED_AT_DESC, c.d$.ORDER_BY_GUILD_JOINED_AT_ASC, c.d$.ORDER_BY_USER_ID_DESC, c.d$.ORDER_BY_USER_ID_ASC];
+function p(e) {
+    let { guildId: t, onClose: n } = e,
+        o = (0, i.e7)([u.Z], () => u.Z.getSearchStateByGuildId(t), [t], a()),
+        p = l.useCallback(
             (e) => {
-                (0, C.Dr)(t, {
-                    ...i,
-                    selectedSort: e
-                });
+                var n, r;
+                (0, d.Dr)(
+                    t,
+                    ((n = (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var n = null != arguments[t] ? arguments[t] : {},
+                                r = Object.keys(n);
+                            'function' == typeof Object.getOwnPropertySymbols &&
+                                (r = r.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    })
+                                )),
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = n[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: r,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0
+                                              })
+                                            : (e[t] = r);
+                                });
+                        }
+                        return e;
+                    })({}, o)),
+                    (r = r = { selectedSort: e }),
+                    Object.getOwnPropertyDescriptors
+                        ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
+                        : (function (e, t) {
+                              var n = Object.keys(e);
+                              if (Object.getOwnPropertySymbols) {
+                                  var r = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, r);
+                              }
+                              return n;
+                          })(Object(r)).forEach(function (e) {
+                              Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
+                          }),
+                    n)
+                );
             },
-            [t, i]
+            [t, o]
         );
-    return (0, n.jsx)(r.v2r, {
+    return (0, r.jsx)(s.v2r, {
         navId: 'members-table-sort-menu',
         onClose: () => {
-            null == l || l();
+            null == n || n();
         },
-        'aria-label': m.intl.string(m.t['u/7RdX']),
-        onSelect: u.dG4,
-        children: (0, n.jsx)(r.kSQ, {
-            children: h.map((e) => {
+        'aria-label': m.NW.string(m.t['u/7RdX']),
+        onSelect: C.dG4,
+        children: (0, r.jsx)(s.kSQ, {
+            children: b.map((e) => {
                 var t;
-                return (0, n.jsx)(
-                    r.k5B,
+                return (0, r.jsx)(
+                    s.k5B,
                     {
                         id: 'members-table-sort-'.concat(e),
                         label: (function (e) {
                             switch (e) {
                                 case c.d$.ORDER_BY_GUILD_JOINED_AT_DESC:
-                                    return m.intl.string(m.t.V7zCwM);
+                                    return m.NW.string(m.t.V7zCwM);
                                 case c.d$.ORDER_BY_GUILD_JOINED_AT_ASC:
-                                    return m.intl.string(m.t.l2Zaen);
+                                    return m.NW.string(m.t.l2Zaen);
                                 case c.d$.ORDER_BY_USER_ID_DESC:
-                                    return m.intl.string(m.t.xMA6RE);
+                                    return m.NW.string(m.t.xMA6RE);
                                 case c.d$.ORDER_BY_USER_ID_ASC:
-                                    return m.intl.string(m.t.bUKkZ2);
+                                    return m.NW.string(m.t.bUKkZ2);
                                 default:
                                     return null;
                             }
                         })(e),
-                        checked: (t = i.selectedSort) === c.d$.ORDER_BY_UNSPECIFIED || null == t ? e === c.d$.ORDER_BY_GUILD_JOINED_AT_DESC : e === t,
+                        checked: (t = o.selectedSort) === c.d$.ORDER_BY_UNSPECIFIED || null == t ? e === c.d$.ORDER_BY_GUILD_JOINED_AT_DESC : e === t,
                         disabled: !1,
-                        action: () => x(e),
+                        action: () => p(e),
                         group: 'members-table-sort'
                     },
                     'members-table-sort-'.concat(e)

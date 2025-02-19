@@ -1,40 +1,91 @@
-n.d(t, { A: () => f }), n(47120);
-var i = n(200651),
-    r = n(192379),
-    a = n(442837),
-    s = n(434650),
-    o = n(110924),
+n.d(t, { A: () => m }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    o = n(442837),
+    a = n(434650),
+    s = n(110924),
     l = n(451478),
-    u = n(915750);
-let c = (e) => {
-        let [t, n] = r.useState(!1),
-            i = null != e ? e : t,
-            a = i !== (0, o.Z)(i);
+    c = n(915750);
+function u(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function d(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                u(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function f(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function p(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : f(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let _ = (e) => {
+        let [t, n] = i.useState(!1),
+            r = null != e ? e : t,
+            o = r !== (0, s.Z)(r);
         return {
-            visible: i,
-            visibleChanged: a,
-            reference: (0, s.O)((e) => n(e), u.PI)
+            visible: r,
+            visibleChanged: o,
+            reference: (0, a.O)((e) => n(e), c.PI)
         };
     },
-    d = () => {
-        let e = (0, a.e7)([l.Z], () => l.Z.isFocused()),
-            t = e !== (0, o.Z)(e);
+    h = () => {
+        let e = (0, o.e7)([l.Z], () => l.Z.isFocused()),
+            t = e !== (0, s.Z)(e);
         return {
             focused: e,
             focusedChanged: t
         };
     };
-function f(e) {
-    let { focused: t, focusedChanged: n } = d(),
-        { visible: a, visibleChanged: s, reference: o } = c(e.overrideVisibility),
-        l = {
-            ...e,
+function m(e) {
+    let { focused: t, focusedChanged: n } = h(),
+        { visible: o, visibleChanged: a, reference: s } = _(e.overrideVisibility),
+        l = p(d({}, e), {
             focused: t,
             focusedChanged: n,
-            visible: a,
-            visibleChanged: s,
-            reference: o,
-            impression: r.useRef(null)
-        };
-    return (0, i.jsx)(u.ui, { ...l }, (0, u.B5)(e.questOrQuests, e.questContent));
+            visible: o,
+            visibleChanged: a,
+            reference: s,
+            impression: i.useRef(null)
+        });
+    return (0, r.jsx)(c.ui, d({}, l), (0, c.B5)(e.questOrQuests, e.questContent));
 }

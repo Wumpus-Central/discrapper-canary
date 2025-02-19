@@ -1,11 +1,12 @@
 n.d(t, {
     Dm: () => f,
-    N0: () => a,
+    N0: () => o,
     Q2: () => d,
-    Rt: () => o,
-    eC: () => s,
-    fh: () => u
+    Rt: () => s,
+    eC: () => a,
+    fh: () => c
 }),
+    n(301563),
     n(571269),
     n(298267),
     n(315314),
@@ -15,73 +16,73 @@ n.d(t, {
     n(78328),
     n(815648),
     n(47120);
-var i = n(46140);
-let r = /\.([a-zA-Z0-9]+)$/,
-    a = ['video/mp4', 'video/webm'];
-var s = (function (e) {
+var r = n(46140);
+let i = /\.([a-zA-Z0-9]+)$/,
+    o = ['video/mp4', 'video/webm'];
+var a = (function (e) {
     return (e.HERO = 'hero'), (e.QUEST_BAR_HERO = 'quest_bar_hero'), (e.REWARD = 'reward'), (e.GAME_TILE = 'game_tile'), (e.LOGO_TYPE = 'logo_type'), e;
 })({});
-function o(e, t, n) {
-    let i = d(e, t, n),
-        r = f(t),
-        s = null != r && a.includes(r);
+function s(e, t, n) {
+    let r = d(e, t, n),
+        i = f(t),
+        a = null != i && o.includes(i);
     return {
-        url: i,
-        mimetype: r,
-        isAnimated: s
+        url: r,
+        mimetype: i,
+        isAnimated: a
     };
 }
 function l(e, t) {
     return null != e ? e : t;
 }
-function u(e, t, n) {
-    let r;
+function c(e, t, n) {
+    let i;
     switch (t) {
         case 'hero':
-            r = l(e.config.assets.heroVideo, e.config.assets.hero);
+            i = l(e.config.assets.heroVideo, e.config.assets.hero);
             break;
         case 'quest_bar_hero':
-            r = l(e.config.assets.questBarHeroVideo, e.config.assets.questBarHero);
+            i = l(e.config.assets.questBarHeroVideo, e.config.assets.questBarHero);
             break;
         case 'reward': {
-            var a, s;
-            let t = null !== (s = null === (a = e.userStatus) || void 0 === a ? void 0 : a.claimedTier) && void 0 !== s ? s : 0,
+            var o, a;
+            let t = null !== (a = null === (o = e.userStatus) || void 0 === o ? void 0 : o.claimedTier) && void 0 !== a ? a : 0,
                 n = 'rewardsConfig' in e.config ? e.config.rewardsConfig.rewards[t] : e.config.rewards[t];
-            r = l(n.assetVideo, n.asset);
+            i = l(n.assetVideo, n.asset);
             break;
         }
         case 'game_tile':
-            r = e.config.assets.gameTile;
+            i = e.config.assets.gameTile;
             break;
         case 'logo_type':
-            r = e.config.assets.logotype;
+            i = e.config.assets.logotype;
     }
-    let u = e.config.features.includes(i.S7.QUESTS_CDN);
-    return o(e.id, r, {
+    let c = e.config.features.includes(r.S7.QUESTS_CDN);
+    return s(e.id, i, {
         theme: n,
-        newCdn: u
+        newCdn: c
     });
 }
-function c(e) {
+function u(e) {
     var t;
     return null !== (t = e.split('?', 1).at(0)) && void 0 !== t ? t : e;
 }
 function d(e, t, n) {
-    if (t.startsWith('blob:')) return c(t);
-    let r = (null == n ? void 0 : n.newCdn) ? i.tD : i.Uo;
+    if (t.startsWith('blob:')) return u(t);
+    let i = (null == n ? void 0 : n.newCdn) ? r.tD : r.Uo;
     return ''
-        .concat(r)
+        .concat(i)
         .concat(e)
         .concat((null == n ? void 0 : n.theme) != null ? '/'.concat(n.theme) : '', '/')
         .concat(t);
 }
 function f(e) {
-    var t, n, i;
+    var t, n, r;
     if (e.startsWith('blob:')) {
-        let t = null !== (i = new URL(e).searchParams.get('mimetype')) && void 0 !== i ? i : void 0;
+        let t = null !== (r = new URL(e).searchParams.get('mimetype')) && void 0 !== r ? r : void 0;
         return null != t ? decodeURIComponent(t) : null;
     }
-    switch (null === (n = r.exec(e)) || void 0 === n ? void 0 : null === (t = n[1]) || void 0 === t ? void 0 : t.toLowerCase()) {
+    switch (null === (n = i.exec(e)) || void 0 === n ? void 0 : null === (t = n[1]) || void 0 === t ? void 0 : t.toLowerCase()) {
         case 'webm':
             return 'video/webm';
         case 'mp4':

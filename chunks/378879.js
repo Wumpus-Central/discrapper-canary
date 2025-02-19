@@ -1,92 +1,146 @@
-e.d(n, {
-    default: () => L,
+n.d(t, {
+    default: () => Z,
     s: () => E
 });
-var c = e(200651);
-e(192379);
-var a = e(481060),
-    d = e(921813),
-    s = e(687158),
-    o = e(576635),
-    i = e(594174),
-    f = e(98278),
-    A = e(792254),
-    p = e(790527),
-    r = e(474936),
-    b = e(981631),
-    l = e(486324),
-    u = e(388032),
-    R = e(170274);
-function E(t, n) {
-    let d = i.default.getCurrentUser();
+var c = n(200651);
+n(192379);
+var a = n(481060),
+    d = n(921813),
+    o = n(687158),
+    s = n(576635),
+    r = n(594174),
+    i = n(98278),
+    f = n(792254),
+    p = n(790527),
+    A = n(474936),
+    b = n(981631),
+    l = n(486324),
+    u = n(388032),
+    R = n(162899);
+function L(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            c = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (c = c.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            c.forEach(function (t) {
+                var c;
+                (c = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: c,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = c);
+            });
+    }
+    return e;
+}
+function E(e, t) {
+    let d = r.default.getCurrentUser();
     return (
         null != d &&
         ((0, a.ZDy)(async () => {
-            let { default: s } = await Promise.resolve().then(e.bind(e, 378879));
-            return (e) =>
-                (0, c.jsx)(s, {
-                    user: d,
-                    imageSrc: n,
-                    uploadType: t,
-                    analyticsSource: b.Sbl.PROFILE_PANEL,
-                    analyticsLocation: {
-                        section: b.jXE.USER_PROFILE,
-                        object: b.qAy.BUTTON_CTA
-                    },
-                    onSecondaryClick: a.pTH,
-                    ...e
-                });
+            let { default: o } = await Promise.resolve().then(n.bind(n, 378879));
+            return (n) =>
+                (0, c.jsx)(
+                    o,
+                    L(
+                        {
+                            user: d,
+                            imageSrc: t,
+                            uploadType: e,
+                            analyticsSource: b.Sbl.PROFILE_PANEL,
+                            analyticsLocation: {
+                                section: b.jXE.USER_PROFILE,
+                                object: b.qAy.BUTTON_CTA
+                            },
+                            onSecondaryClick: a.pTH
+                        },
+                        n
+                    )
+                );
         }),
         !0)
     );
 }
-function L(t) {
-    let { user: n, uploadType: e, imageSrc: a, onClose: i, analyticsSource: b, analyticsLocation: E, onSecondaryClick: L, ...C } = t,
-        Z = (0, s.ZP)(n.id),
-        { primaryColor: _, secondaryColor: m } = (0, o.Z)({
-            user: n,
-            displayProfile: Z,
-            pendingAvatar: e === l.pC.AVATAR ? a : void 0,
+function Z(e) {
+    var { user: t, uploadType: n, imageSrc: a, onClose: r, analyticsSource: b, analyticsLocation: E, onSecondaryClick: Z } = e,
+        g = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                c,
+                a = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        c,
+                        a = {},
+                        d = Object.keys(e);
+                    for (c = 0; c < d.length; c++) (n = d[c]), t.indexOf(n) >= 0 || (a[n] = e[n]);
+                    return a;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var d = Object.getOwnPropertySymbols(e);
+                for (c = 0; c < d.length; c++) (n = d[c]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]);
+            }
+            return a;
+        })(e, ['user', 'uploadType', 'imageSrc', 'onClose', 'analyticsSource', 'analyticsLocation', 'onSecondaryClick']);
+    let _ = (0, o.ZP)(t.id),
+        { primaryColor: m, secondaryColor: O } = (0, s.Z)({
+            user: t,
+            displayProfile: _,
+            pendingAvatar: n === l.pC.AVATAR ? a : void 0,
             isPreview: !0
         }),
-        T = e === l.pC.AVATAR || e === l.pC.BANNER,
+        C = n === l.pC.AVATAR || n === l.pC.BANNER,
         N = null != a,
-        g = (0, A.Z)(e === l.pC.AVATAR ? r.cd.ANIMATED_AVATAR_MODAL_UPSELL : r.cd.ANIMATED_BANNER_MODAL_UPSELL);
-    return T
-        ? (0, c.jsx)(p.Z, {
-              artURL: N ? void 0 : g,
-              modalClassName: N ? R.modal : void 0,
-              modalContentClassName: N ? R.modalContent : void 0,
-              type: e === l.pC.AVATAR ? r.cd.ANIMATED_AVATAR_MODAL_UPSELL : r.cd.ANIMATED_BANNER_MODAL_UPSELL,
-              title: e === l.pC.AVATAR ? u.intl.string(u.t['X7tO6+']) : u.intl.string(u.t.zXPa2N),
-              body: e === l.pC.AVATAR ? u.intl.string(u.t.ifCRdH) : u.intl.string(u.t.yQAnf3),
-              glowUp: e === l.pC.AVATAR ? u.intl.string(u.t.ifCRdH) : u.intl.string(u.t.yQAnf3),
-              onSecondaryClick: () => {
-                  null == L || L(), (0, f.$)(i);
-              },
-              secondaryCTA: u.intl.string(u.t.PcTCBw),
-              onClose: i,
-              enableArtBoxShadow: !1,
-              analyticsSource: b,
-              analyticsLocation: E,
-              hideBackButton: !0,
-              showEnhancedUpsell: !0,
-              LeadingComponent: N
-                  ? (0, c.jsx)('div', {
-                        className: R.previewContainerParent,
-                        children: (0, c.jsx)(d.Z, {
-                            containerClassName: R.previewContainer,
-                            user: n,
-                            canUsePremiumCustomization: !0,
-                            disabledInputs: !0,
-                            pendingAvatar: e === l.pC.AVATAR ? a : void 0,
-                            pendingBanner: e === l.pC.BANNER ? a : void 0,
-                            pendingThemeColors: [_, m],
-                            hideExampleButton: !0
-                        })
-                    })
-                  : void 0,
-              ...C
-          })
+        h = (0, f.Z)(n === l.pC.AVATAR ? A.cd.ANIMATED_AVATAR_MODAL_UPSELL : A.cd.ANIMATED_BANNER_MODAL_UPSELL);
+    return C
+        ? (0, c.jsx)(
+              p.Z,
+              L(
+                  {
+                      artURL: N ? void 0 : h,
+                      modalClassName: N ? R.modal : void 0,
+                      modalContentClassName: N ? R.modalContent : void 0,
+                      type: n === l.pC.AVATAR ? A.cd.ANIMATED_AVATAR_MODAL_UPSELL : A.cd.ANIMATED_BANNER_MODAL_UPSELL,
+                      title: n === l.pC.AVATAR ? u.NW.string(u.t['X7tO6+']) : u.NW.string(u.t.zXPa2N),
+                      body: n === l.pC.AVATAR ? u.NW.string(u.t.ifCRdH) : u.NW.string(u.t.yQAnf3),
+                      glowUp: n === l.pC.AVATAR ? u.NW.string(u.t.ifCRdH) : u.NW.string(u.t.yQAnf3),
+                      onSecondaryClick: () => {
+                          null == Z || Z(), (0, i.$)(r);
+                      },
+                      secondaryCTA: u.NW.string(u.t.PcTCBw),
+                      onClose: r,
+                      enableArtBoxShadow: !1,
+                      analyticsSource: b,
+                      analyticsLocation: E,
+                      hideBackButton: !0,
+                      showEnhancedUpsell: !0,
+                      LeadingComponent: N
+                          ? (0, c.jsx)('div', {
+                                className: R.previewContainerParent,
+                                children: (0, c.jsx)(d.Z, {
+                                    containerClassName: R.previewContainer,
+                                    user: t,
+                                    canUsePremiumCustomization: !0,
+                                    disabledInputs: !0,
+                                    pendingAvatar: n === l.pC.AVATAR ? a : void 0,
+                                    pendingBanner: n === l.pC.BANNER ? a : void 0,
+                                    pendingThemeColors: [m, O],
+                                    hideExampleButton: !0
+                                })
+                            })
+                          : void 0
+                  },
+                  g
+              )
+          )
         : null;
 }

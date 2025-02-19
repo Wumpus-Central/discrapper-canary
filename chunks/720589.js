@@ -1,4 +1,4 @@
-n.d(t, { default: () => F }), n(47120), n(724458);
+n.d(t, { default: () => k }), n(47120);
 var l = n(200651),
     r = n(192379),
     s = n(120356),
@@ -11,19 +11,19 @@ var l = n(200651),
     u = n(471445),
     g = n(313201),
     m = n(565138),
-    x = n(592125),
-    p = n(984933),
-    b = n(430824),
-    f = n(496675),
-    C = n(699516),
+    b = n(592125),
+    f = n(984933),
+    p = n(430824),
+    x = n(496675),
+    N = n(699516),
     j = n(944486),
-    M = n(594174),
-    _ = n(626135),
-    N = n(709054),
-    Z = n(981631),
-    v = n(388032),
-    S = n(387399);
-function I(e, t, n) {
+    C = n(594174),
+    M = n(626135),
+    _ = n(709054),
+    v = n(981631),
+    y = n(388032),
+    S = n(498202);
+function Z(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,9 +36,9 @@ function I(e, t, n) {
         e
     );
 }
-class k extends r.PureComponent {
+class O extends r.PureComponent {
     componentDidMount() {
-        _.default.track(Z.rMx.OPEN_MODAL, {
+        M.default.track(v.rMx.OPEN_MODAL, {
             type: 'Follow Channel Modal',
             num_guild_permissions: Object.keys(this.props.guilds).length,
             location: 'Chat Input Blocker - Follow Channel'
@@ -47,7 +47,7 @@ class k extends r.PureComponent {
     getDefaultChannelId(e) {
         let t = e.find((e) => {
                 let { channel: t } = e;
-                return 'general' === (0, h.F6)(t, M.default, C.Z);
+                return 'general' === (0, h.F6)(t, C.default, N.Z);
             }),
             n = null != t ? t : e[0];
         return null != n ? n.channel.id : null;
@@ -61,13 +61,13 @@ class k extends r.PureComponent {
                     submitting: n,
                     onClick: this.handleFollow,
                     disabled: null == e || null == t,
-                    children: v.intl.string(v.t['3aOv+v'])
+                    children: y.NW.string(y.t['3aOv+v'])
                 }),
                 (0, l.jsx)(o.zxk, {
                     look: o.zxk.Looks.LINK,
                     color: o.zxk.Colors.PRIMARY,
                     onClick: s,
-                    children: v.intl.string(v.t['ETE/oK'])
+                    children: y.NW.string(y.t['ETE/oK'])
                 })
             ]
         });
@@ -75,7 +75,7 @@ class k extends r.PureComponent {
     renderForm() {
         let { guilds: e } = this.props,
             { channels: t, selectedGuildId: n, selectedChannelId: s, errorMessage: a } = this.state,
-            i = N.default.keys(e).map((t) => {
+            i = _.default.keys(e).map((t) => {
                 let { guild: n } = e[t];
                 return {
                     value: t,
@@ -87,18 +87,18 @@ class k extends r.PureComponent {
                 let { channel: t, category: n } = e;
                 return {
                     value: t.id,
-                    label: (0, h.F6)(t, M.default, C.Z),
+                    label: (0, h.F6)(t, C.default, N.Z),
                     channel: t,
                     category: n
                 };
             }),
             c = 0 === i.length,
-            g = c ? v.intl.string(v.t['6b6QoK']) : v.intl.string(v.t.Z0quyM);
+            g = c ? y.NW.string(y.t['6b6QoK']) : y.NW.string(y.t.Z0quyM);
         return (0, l.jsxs)(r.Fragment, {
             children: [
                 (0, l.jsx)(o.xJW, {
                     className: S.bottomMargin,
-                    title: v.intl.string(v.t.xFn72t),
+                    title: y.NW.string(y.t.xFn72t),
                     children: (0, l.jsx)(o.VcW, {
                         value: n,
                         options: i,
@@ -117,7 +117,7 @@ class k extends r.PureComponent {
                 }),
                 (0, l.jsx)(o.xJW, {
                     className: S.bottomMargin,
-                    title: v.intl.string(v.t.PDn2fX),
+                    title: y.NW.string(y.t.PDn2fX),
                     children: (0, l.jsx)(o.VcW, {
                         value: s,
                         options: d,
@@ -158,20 +158,20 @@ class k extends r.PureComponent {
                 (0, l.jsx)(o.X6q, {
                     variant: 'heading-lg/semibold',
                     id: this.state.headerId,
-                    children: v.intl.string(v.t.mvPFbG)
+                    children: y.NW.string(y.t.mvPFbG)
                 }),
                 (0, l.jsx)(o.Text, {
                     color: 'text-muted',
                     className: a()(S.topMargin, { [S.formMargin]: !e }),
                     variant: 'text-sm/normal',
-                    children: v.intl.string(v.t.kbpkxM)
+                    children: y.NW.string(y.t.kbpkxM)
                 }),
                 e
                     ? (0, l.jsx)(o.Text, {
                           className: a()(S.formMargin, S.topMargin),
                           color: 'text-danger',
                           variant: 'text-sm/normal',
-                          children: v.intl.string(v.t['DrNm//'])
+                          children: y.NW.string(y.t['DrNm//'])
                       })
                     : null
             ]
@@ -228,7 +228,7 @@ class k extends r.PureComponent {
     }
     constructor(e) {
         super(e),
-            I(this, 'handleGuildSelect', (e) => {
+            Z(this, 'handleGuildSelect', (e) => {
                 let { guilds: t } = this.props,
                     { selectedGuildId: n } = this.state,
                     l = t[e].channels,
@@ -240,10 +240,10 @@ class k extends r.PureComponent {
                         channels: l
                     });
             }),
-            I(this, 'handleChannelSelect', (e) => {
+            Z(this, 'handleChannelSelect', (e) => {
                 this.setState({ selectedChannelId: e });
             }),
-            I(this, 'handleFollow', () => {
+            Z(this, 'handleFollow', () => {
                 let { channel: e, onClose: t } = this.props,
                     { selectedChannelId: r, selectedGuildId: s } = this.state;
                 null != r &&
@@ -258,17 +258,36 @@ class k extends r.PureComponent {
                                 t(),
                                 (0, o.ZDy)(async () => {
                                     let { default: e } = await n.e('14760').then(n.bind(n, 897140));
-                                    return (t) => (0, l.jsx)(e, { ...t });
+                                    return (t) =>
+                                        (0, l.jsx)(
+                                            e,
+                                            (function (e) {
+                                                for (var t = 1; t < arguments.length; t++) {
+                                                    var n = null != arguments[t] ? arguments[t] : {},
+                                                        l = Object.keys(n);
+                                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                                        (l = l.concat(
+                                                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                            })
+                                                        )),
+                                                        l.forEach(function (t) {
+                                                            Z(e, t, n[t]);
+                                                        });
+                                                }
+                                                return e;
+                                            })({}, t)
+                                        );
                                 });
                         })
                         .catch((e) => {
-                            e.body.code === Z.evJ.TOO_MANY_WEBHOOKS
+                            e.body.code === v.evJ.TOO_MANY_WEBHOOKS
                                 ? this.setState({
-                                      errorMessage: v.intl.string(v.t['1eZ4aG']),
+                                      errorMessage: y.NW.string(y.t['1eZ4aG']),
                                       submitting: !1
                                   })
                                 : this.setState({
-                                      errorMessage: v.intl.string(v.t.LgwhuL),
+                                      errorMessage: y.NW.string(y.t.LgwhuL),
                                       submitting: !1
                                   });
                         }));
@@ -285,17 +304,17 @@ class k extends r.PureComponent {
         };
     }
 }
-let F = i.ZP.connectStores(
-    [b.Z, x.Z, p.ZP, f.Z, j.Z],
+let k = i.ZP.connectStores(
+    [p.Z, b.Z, f.ZP, x.Z, j.Z],
     (e) => {
         let { channel: t } = e,
-            n = b.Z.getGuild(t.guild_id),
-            l = Object.values(b.Z.getGuilds()).reduce((e, t) => {
-                let n = p.ZP.getChannels(t.id)
+            n = p.Z.getGuild(t.guild_id),
+            l = Object.values(p.Z.getGuilds()).reduce((e, t) => {
+                let n = f.ZP.getChannels(t.id)
                     .SELECTABLE.map((e) => e.channel)
-                    .filter((e) => e.type === Z.d4z.GUILD_TEXT && f.Z.can(Z.Plq.MANAGE_WEBHOOKS, e))
+                    .filter((e) => e.type === v.d4z.GUILD_TEXT && x.Z.can(v.Plq.MANAGE_WEBHOOKS, e))
                     .map((e) => {
-                        let t = x.Z.getChannel(e.parent_id);
+                        let t = b.Z.getChannel(e.parent_id);
                         return {
                             channel: e,
                             category: null != t ? t.name : null
@@ -319,4 +338,4 @@ let F = i.ZP.connectStores(
         };
     },
     { forwardRef: !0 }
-)(k);
+)(O);

@@ -1,37 +1,80 @@
-l.d(n, { Z: () => v });
-var t = l(200651);
-l(192379);
-var i = l(442837),
-    r = l(768494),
-    a = l(169525),
-    s = l(499376),
-    o = l(611170),
-    u = l(128854),
-    c = l(884182),
-    d = l(94396),
-    m = l(592125),
-    h = l(52824),
-    p = l(970184),
-    x = l(981631);
-function v(e) {
-    let { message: n } = (0, p.CJ)(),
-        l = (0, i.e7)([m.Z], () => m.Z.getChannel(null == n ? void 0 : n.channel_id)),
-        { shouldHideMediaOptions: v, shouldRedactExplicitContent: f, gifAutoPlay: C, getGifFavButton: g, getOnMediaItemContextMenu: j } = (0, u.c)();
-    if (null == n || null == l) return null;
-    let N = e.items
-            .map((e) => ({
-                ...(0, r.y_)(e.media),
-                original: e.media.url,
-                srcIsAnimated: e.media.srcIsAnimated
-            }))
+r.d(t, { Z: () => y });
+var n = r(200651);
+r(192379);
+var l = r(442837),
+    i = r(768494),
+    o = r(169525),
+    a = r(499376),
+    c = r(611170),
+    s = r(128854),
+    u = r(884182),
+    d = r(94396),
+    p = r(592125),
+    b = r(52824),
+    f = r(970184),
+    O = r(981631);
+function y(e) {
+    let { message: t } = (0, f.CJ)(),
+        r = (0, l.e7)([p.Z], () => p.Z.getChannel(null == t ? void 0 : t.channel_id)),
+        { shouldHideMediaOptions: y, shouldRedactExplicitContent: m, gifAutoPlay: j, getGifFavButton: g, getOnMediaItemContextMenu: h } = (0, s.c)();
+    if (null == t || null == r) return null;
+    let v = e.items
+            .map((e) => {
+                var t, r;
+                return (
+                    (t = (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var r = null != arguments[t] ? arguments[t] : {},
+                                n = Object.keys(r);
+                            'function' == typeof Object.getOwnPropertySymbols &&
+                                (n = n.concat(
+                                    Object.getOwnPropertySymbols(r).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                    })
+                                )),
+                                n.forEach(function (t) {
+                                    var n;
+                                    (n = r[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: n,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0
+                                              })
+                                            : (e[t] = n);
+                                });
+                        }
+                        return e;
+                    })({}, (0, i.y_)(e.media))),
+                    (r = r =
+                        {
+                            original: e.media.url,
+                            srcIsAnimated: e.media.srcIsAnimated
+                        }),
+                    Object.getOwnPropertyDescriptors
+                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+                        : (function (e, t) {
+                              var r = Object.keys(e);
+                              if (Object.getOwnPropertySymbols) {
+                                  var n = Object.getOwnPropertySymbols(e);
+                                  r.push.apply(r, n);
+                              }
+                              return r;
+                          })(Object(r)).forEach(function (e) {
+                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+                          }),
+                    t
+                );
+            })
             .filter((e) => 'INVALID' !== e.type),
-        { srcToOnClickOverride: S, srcToHandlePreloadImage: E } =
-            N.length > 1
+        { srcToOnClickOverride: P, srcToHandlePreloadImage: x } =
+            v.length > 1
                 ? (0, d.J)(
-                      N,
+                      v,
                       {
-                          shouldHideMediaOptions: v,
-                          shouldRedactExplicitContent: f
+                          shouldHideMediaOptions: y,
+                          shouldRedactExplicitContent: m
                       },
                       'Media Mosaic'
                   )
@@ -39,51 +82,51 @@ function v(e) {
                       srcToOnClickOverride: {},
                       srcToHandlePreloadImage: {}
                   };
-    function I(e, l) {
-        var t;
-        let i = e.originalItem;
-        return (0, a.lK)(i.media, l, i.spoiler, null !== (t = null == n ? void 0 : n.author.bot) && void 0 !== t && t);
+    function w(e, r) {
+        var n;
+        let l = e.originalItem;
+        return (0, o.lK)(l.media, r, l.spoiler, null !== (n = null == t ? void 0 : t.author.bot) && void 0 !== n && n);
     }
-    let Z = e.items.map((e, l) => {
-        let t = e.media,
-            i = null == j ? void 0 : j(t),
-            r = {
-                message: n,
+    let S = e.items.map((e, r) => {
+        let n = e.media,
+            l = null == h ? void 0 : h(n),
+            i = {
+                message: t,
                 item: {
-                    uniqueId: ''.concat(t.proxyUrl, '--').concat(l),
+                    uniqueId: ''.concat(n.proxyUrl, '--').concat(r),
                     originalItem: e,
-                    type: (0, s.pU)(t),
-                    downloadUrl: t.url,
-                    height: t.height,
-                    width: t.width,
+                    type: (0, a.pU)(n),
+                    downloadUrl: n.url,
+                    height: n.height,
+                    width: n.width,
                     spoiler: e.spoiler,
-                    contentType: t.contentType,
-                    srcIsAnimated: t.srcIsAnimated
+                    contentType: n.contentType,
+                    srcIsAnimated: n.srcIsAnimated
                 },
-                onContextMenu: i,
-                autoPlayGif: C,
-                getObscureReason: I,
-                renderImageComponent: o.aB,
-                renderVideoComponent: o.rJ,
-                renderVisualPlaceholderComponent: o.yF,
-                renderAudioComponent: x.dG4,
-                renderPlaintextFilePreview: x.dG4,
-                renderGenericFileComponent: x.dG4,
-                renderMosaicItemFooter: x.dG4,
-                gifFavoriteButton: g(t),
-                onPlay: (e, n, l) => {},
+                onContextMenu: l,
+                autoPlayGif: j,
+                getObscureReason: w,
+                renderImageComponent: c.aB,
+                renderVideoComponent: c.rJ,
+                renderVisualPlaceholderComponent: c.yF,
+                renderAudioComponent: O.dG4,
+                renderPlaintextFilePreview: O.dG4,
+                renderGenericFileComponent: O.dG4,
+                renderMosaicItemFooter: O.dG4,
+                gifFavoriteButton: g(n),
+                onPlay: (e, t, r) => {},
                 canRemoveItem: !1,
-                onRemoveItem: x.dG4
+                onRemoveItem: O.dG4
             },
-            a = (0, h.q)({
-                proxyURL: t.proxyUrl,
-                url: t.url
+            o = (0, b.q)({
+                proxyURL: n.proxyUrl,
+                url: n.url
             });
-        return a in S && ((r.onClick = S[a]), (r.handlePreloadImage = E[a])), r;
+        return o in P && ((i.onClick = P[o]), (i.handlePreloadImage = x[o])), i;
     });
-    return (0, t.jsx)('div', {
-        children: (0, t.jsx)(c.Z, {
-            items: Z,
+    return (0, n.jsx)('div', {
+        children: (0, n.jsx)(u.Z, {
+            items: S,
             isInAppComponentsV2: !0
         })
     });

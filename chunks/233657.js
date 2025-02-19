@@ -1,70 +1,105 @@
-n.d(t, { Z: () => f });
-var i = n(200651);
+n.d(t, { Z: () => v });
+var r = n(200651);
 n(192379);
-var l = n(442837),
-    r = n(704215),
-    a = n(481060),
-    o = n(239091),
+var i = n(442837),
+    l = n(704215),
+    o = n(481060),
+    a = n(239091),
     s = n(605236),
     c = n(554747),
-    d = n(306680),
-    u = n(9156),
-    h = n(434479),
-    p = n(490897),
-    m = n(388032),
-    g = n(397923);
-function f(e) {
-    let { guild: t, selected: f } = e,
-        { hasUnread: _, mentionCount: v } = (0, l.cj)(
-            [d.ZP],
+    u = n(306680),
+    d = n(9156),
+    p = n(434479),
+    h = n(490897),
+    f = n(388032),
+    g = n(81503);
+function m(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function b(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function v(e) {
+    let { guild: t, selected: v } = e,
+        { hasUnread: y, mentionCount: _ } = (0, i.cj)(
+            [u.ZP],
             () => ({
-                hasUnread: d.ZP.hasUnread(t.id, p.W.GUILD_EVENT),
-                mentionCount: d.ZP.getMentionCount(t.id, p.W.GUILD_EVENT)
+                hasUnread: u.ZP.hasUnread(t.id, h.W.GUILD_EVENT),
+                mentionCount: u.ZP.getMentionCount(t.id, h.W.GUILD_EVENT)
             }),
             [t.id]
         ),
-        C = (0, l.e7)([u.ZP], () => u.ZP.isMuteScheduledEventsEnabled(t.id));
-    async function x() {
-        await (0, a.ZDy)(async () => {
-            let { default: e } = await Promise.all([n.e('22347'), n.e('56236'), n.e('2695')]).then(n.bind(n, 17671));
-            return (n) =>
-                (0, i.jsx)(e, {
-                    ...n,
-                    guildId: t.id
-                });
+        O = (0, i.e7)([d.ZP], () => d.ZP.isMuteScheduledEventsEnabled(t.id));
+    async function j() {
+        await (0, o.ZDy)(async () => {
+            let { default: e } = await Promise.all([n.e('22347'), n.e('56236'), n.e('16119')]).then(n.bind(n, 17671));
+            return (n) => (0, r.jsx)(e, b(m({}, n), { guildId: t.id }));
         }),
-            (0, s.EW)(r.z.GUILD_HEADER_EVENT_UPSELL);
+            (0, s.EW)(l.z.GUILD_HEADER_EVENT_UPSELL);
     }
-    let I = (0, c.ZP)(t.id),
-        Z = I.length > 0 ? m.intl.formatToPlainString(m.t.IBdqSk, { number: I.length }) : m.intl.string(m.t.tlopTE);
-    return (0, i.jsx)(h.m, {
+    let C = (0, c.ZP)(t.id),
+        x = C.length > 0 ? f.NW.formatToPlainString(f.t.IBdqSk, { number: C.length }) : f.NW.string(f.t.tlopTE);
+    return (0, r.jsx)(p.m, {
         id: 'upcoming-events-'.concat(t.id),
         renderIcon: (e) =>
-            (0, i.jsx)(a.Que, {
+            (0, r.jsx)(o.Que, {
                 size: 'md',
                 color: 'currentColor',
                 className: e
             }),
-        text: Z,
-        selected: f,
-        onClick: x,
+        text: x,
+        selected: v,
+        onClick: j,
         onContextMenu: (e) => {
-            (0, o.jW)(e, async () => {
+            (0, a.jW)(e, async () => {
                 let { default: e } = await n.e('95307').then(n.bind(n, 867757));
-                return (n) =>
-                    (0, i.jsx)(e, {
-                        ...n,
-                        guildId: t.id
-                    });
+                return (n) => (0, r.jsx)(e, b(m({}, n), { guildId: t.id }));
             });
         },
-        showUnread: _ && !C,
+        showUnread: y && !O,
         trailing:
-            !C && v > 0
-                ? (0, i.jsx)(a.mAB, {
+            !O && _ > 0
+                ? (0, r.jsx)(o.mAB, {
                       className: g.numberBadge,
                       disableColor: !0,
-                      count: v
+                      count: _
                   })
                 : null
     });

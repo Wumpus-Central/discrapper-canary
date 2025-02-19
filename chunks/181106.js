@@ -1,9 +1,9 @@
-n.d(t, { Z: () => g });
-var i,
-    r = n(442837),
-    a = n(846519),
-    s = n(570140),
-    o = n(981631);
+n.d(t, { Z: () => E });
+var r,
+    i = n(442837),
+    o = n(846519),
+    a = n(570140),
+    s = n(981631);
 function l(e, t, n) {
     return (
         t in e
@@ -17,40 +17,56 @@ function l(e, t, n) {
         e
     );
 }
+function c(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                l(e, t, n[t]);
+            });
+    }
+    return e;
+}
 let u = {},
-    c = {},
-    d = 120000;
-function f(e) {
+    d = {},
+    f = 120000;
+function p(e) {
     let { applicationId: t, activityType: n } = e,
-        i = u[t];
-    if (null == i || i[n] !== o.OcF.FAILED) return !1;
-    delete i[n];
+        r = u[t];
+    if (null == r || r[n] !== s.OcF.FAILED) return !1;
+    delete r[n];
 }
 function _(e, t, n) {
-    var i;
-    let { applicationId: r } = n,
-        l = null !== (i = u[r]) && void 0 !== i ? i : {};
-    if (((l[t] = e), (u[r] = l), !__OVERLAY__ && e === o.OcF.FAILED)) {
-        null != c[r] && c[r].stop();
-        let e = new a.V7();
-        e.start(d, () =>
-            s.Z.dispatch({
+    var r;
+    let { applicationId: i } = n,
+        l = null !== (r = u[i]) && void 0 !== r ? r : {};
+    if (((l[t] = e), (u[i] = l), !__OVERLAY__ && e === s.OcF.FAILED)) {
+        null != d[i] && d[i].stop();
+        let e = new o.V7();
+        e.start(f, () =>
+            a.Z.dispatch({
                 type: 'ACTIVITY_LAUNCH_FAIL',
-                applicationId: r,
+                applicationId: i,
                 activityType: t
             })
         ),
-            (c[r] = e);
+            (d[i] = e);
     }
 }
-function p(e) {
-    let { activityLauncherStates: t } = e;
-    u = { ...t };
-}
 function h(e) {
-    return _(o.OcF.COMPLETE, o.mFx.JOIN, e);
+    let { activityLauncherStates: t } = e;
+    u = c({}, t);
 }
-class m extends (i = r.ZP.Store) {
+function m(e) {
+    return _(s.OcF.COMPLETE, s.mFx.JOIN, e);
+}
+class g extends (r = i.ZP.Store) {
     getState(e, t) {
         let n = u[e];
         return null == n ? void 0 : n[t];
@@ -59,12 +75,12 @@ class m extends (i = r.ZP.Store) {
         return u;
     }
 }
-l(m, 'displayName', 'ActivityLauncherStore');
-let g = new m(s.Z, {
-    OVERLAY_INITIALIZE: p,
-    ACTIVITY_JOIN_LOADING: (e) => _(o.OcF.LOADING, o.mFx.JOIN, e),
-    ACTIVITY_JOIN_FAILED: (e) => _(o.OcF.FAILED, o.mFx.JOIN, e),
-    ACTIVITY_JOIN: h,
-    EMBEDDED_ACTIVITY_CLOSE: h,
-    ACTIVITY_LAUNCH_FAIL: f
+l(g, 'displayName', 'ActivityLauncherStore');
+let E = new g(a.Z, {
+    OVERLAY_INITIALIZE: h,
+    ACTIVITY_JOIN_LOADING: (e) => _(s.OcF.LOADING, s.mFx.JOIN, e),
+    ACTIVITY_JOIN_FAILED: (e) => _(s.OcF.FAILED, s.mFx.JOIN, e),
+    ACTIVITY_JOIN: m,
+    EMBEDDED_ACTIVITY_CLOSE: m,
+    ACTIVITY_LAUNCH_FAIL: p
 });

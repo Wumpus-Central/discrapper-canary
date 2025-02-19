@@ -1,9 +1,9 @@
-n.d(t, { Z: () => h }), n(47120);
-var i,
-    r = n(392711),
-    a = n.n(r),
-    s = n(442837),
-    o = n(570140);
+n.d(t, { Z: () => m }), n(47120);
+var r,
+    i = n(392711),
+    o = n.n(i),
+    a = n(442837),
+    s = n(570140);
 function l(e, t, n) {
     return (
         t in e
@@ -17,8 +17,24 @@ function l(e, t, n) {
         e
     );
 }
-let u = {};
 function c(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                l(e, t, n[t]);
+            });
+    }
+    return e;
+}
+let u = {};
+function d(e) {
     let { application: t } = e;
     if (null == t.id) return !1;
     let n = t.id;
@@ -33,24 +49,24 @@ function c(e) {
         }),
         u[n].count++;
 }
-function d(e) {
+function f(e) {
     let { application: t } = e;
     null != t.id && null != u[t.id] && (u[t.id].authenticated = !0);
 }
-function f(e) {
+function p(e) {
     let { application: t } = e;
     null != t.id && null != u[t.id] && (u[t.id].count--, 0 === u[t.id].count && delete u[t.id]);
 }
 function _(e) {
     let { connectedApps: t } = e;
-    u = { ...t };
+    u = c({}, t);
 }
-class p extends (i = s.ZP.Store) {
+class h extends (r = a.ZP.Store) {
     isConnected(e) {
         return null != u[e];
     }
     get connections() {
-        return a().values(u);
+        return o().values(u);
     }
     getApplication(e) {
         return u[e];
@@ -59,10 +75,10 @@ class p extends (i = s.ZP.Store) {
         return u;
     }
 }
-l(p, 'displayName', 'ConnectedAppsStore');
-let h = new p(o.Z, {
+l(h, 'displayName', 'ConnectedAppsStore');
+let m = new h(s.Z, {
     OVERLAY_INITIALIZE: _,
-    RPC_APP_CONNECTED: c,
-    RPC_APP_AUTHENTICATED: d,
-    RPC_APP_DISCONNECTED: f
+    RPC_APP_CONNECTED: d,
+    RPC_APP_AUTHENTICATED: f,
+    RPC_APP_DISCONNECTED: p
 });

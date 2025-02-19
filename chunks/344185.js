@@ -1,12 +1,12 @@
-n.d(t, { Z: () => O }), n(47120);
-var i,
-    r = n(392711),
-    a = n.n(r),
-    s = n(442837),
-    o = n(570140),
+n.d(t, { Z: () => D }), n(47120);
+var r,
+    i = n(392711),
+    o = n.n(i),
+    a = n(442837),
+    s = n(570140),
     l = n(131704),
-    u = n(592125),
-    c = n(709054);
+    c = n(592125),
+    u = n(709054);
 function d(e, t, n) {
     return (
         t in e
@@ -20,127 +20,155 @@ function d(e, t, n) {
         e
     );
 }
-let f = {},
-    _ = new Set();
-function p(e) {
+function f(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                d(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function p(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function _(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : p(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let h = {},
+    m = new Set();
+function g(e) {
     return {
         id: e.id,
         parentId: e.parent_id
     };
 }
-function h(e) {
-    e in f && delete f[e];
-}
-function m(e) {
-    null != e.threads && e.threads.length > 0 && ((f[e.id] = {}), e.threads.filter((e) => l.AW.has(e.type)).forEach((t) => g(e.id, t))), e.hasThreadsSubscription && _.add(e.id);
-}
-function g(e, t) {
-    let n = f[e],
-        i = t.parent_id;
-    i in n || (n[i] = {}), (f[e][i][t.id] = p(t));
-}
 function E(e) {
-    (f = {}),
-        _.clear(),
-        e.guilds.forEach((e) => {
-            m(e);
-        });
+    e in h && delete h[e];
 }
 function v(e) {
+    null != e.threads && e.threads.length > 0 && ((h[e.id] = {}), e.threads.filter((e) => l.AW.has(e.type)).forEach((t) => b(e.id, t))), e.hasThreadsSubscription && m.add(e.id);
+}
+function b(e, t) {
+    let n = h[e],
+        r = t.parent_id;
+    r in n || (n[r] = {}), (h[e][r][t.id] = g(t));
+}
+function y(e) {
+    (h = {}),
+        m.clear(),
+        e.guilds.forEach((e) => {
+            v(e);
+        });
+}
+function O(e) {
     let { channels: t } = e;
-    (f = {}),
-        a()(t)
+    (h = {}),
+        o()(t)
             .filter((e) => l.Ec.has(e.type))
             .groupBy('guild_id')
             .forEach((e, t) => {
-                (f[t] = {}), e.forEach((e) => g(t, e));
+                (h[t] = {}), e.forEach((e) => b(t, e));
             });
 }
-function y(e) {
+function S(e) {
     let { guild: t } = e;
-    h(t.id), m(t);
+    E(t.id), v(t);
 }
 function I(e) {
     let { guild: t } = e;
-    h(t.id);
+    E(t.id);
 }
 function T(e) {
     var t, n;
-    let { channel: i } = e;
-    if (!l.AW.has(i.type)) return !1;
-    if ((null === (t = i.threadMetadata) || void 0 === t ? void 0 : t.archived) === !0) return S(i);
+    let { channel: r } = e;
+    if (!l.AW.has(r.type)) return !1;
+    if ((null === (t = r.threadMetadata) || void 0 === t ? void 0 : t.archived) === !0) return A(r);
     {
-        let e = null !== (n = f[i.guild_id]) && void 0 !== n ? n : {};
-        f[i.guild_id] = {
-            ...e,
-            [i.parent_id]: {
-                ...e[i.parent_id],
-                [i.id]: p(i)
-            }
-        };
+        let e = null !== (n = h[r.guild_id]) && void 0 !== n ? n : {};
+        h[r.guild_id] = _(f({}, e), { [r.parent_id]: _(f({}, e[r.parent_id]), { [r.id]: g(r) }) });
     }
 }
-function b(e) {
-    let { guildId: t, threads: n, channelIds: i } = e;
-    for (let e in (null == i && _.add(t), (f[t] = { ...f[t] }), f[t])) f[t][e] = { ...f[t][e] };
-    n.forEach((e) => g(t, e));
-}
-function S(e) {
-    let { guild_id: t, parent_id: n, id: i } = e;
-    if (null == t || null == n || !(t in f) || !(n in f[t]) || !(i in f[t][n])) return !1;
-    (f[t] = {
-        ...f[t],
-        [n]: { ...f[t][n] }
-    }),
-        delete f[t][n][i],
-        a().isEmpty(f[t][n]) && delete f[t][n];
+function N(e) {
+    let { guildId: t, threads: n, channelIds: r } = e;
+    for (let e in (null == r && m.add(t), (h[t] = f({}, h[t])), h[t])) h[t][e] = f({}, h[t][e]);
+    n.forEach((e) => b(t, e));
 }
 function A(e) {
-    let { channel: t } = e;
-    return S(t);
+    let { guild_id: t, parent_id: n, id: r } = e;
+    if (null == t || null == n || !(t in h) || !(n in h[t]) || !(r in h[t][n])) return !1;
+    (h[t] = _(f({}, h[t]), { [n]: f({}, h[t][n]) })), delete h[t][n][r], o().isEmpty(h[t][n]) && delete h[t][n];
 }
-function N(e) {
+function C(e) {
     let { channel: t } = e;
-    if (null == t.guild_id || !(t.guild_id in f)) return !1;
-    (f[t.guild_id] = { ...f[t.guild_id] }), delete f[t.guild_id][t.id];
+    return A(t);
 }
-let C = {};
-class R extends (i = s.ZP.Store) {
+function R(e) {
+    let { channel: t } = e;
+    if (null == t.guild_id || !(t.guild_id in h)) return !1;
+    (h[t.guild_id] = f({}, h[t.guild_id])), delete h[t.guild_id][t.id];
+}
+let P = {};
+class w extends (r = a.ZP.Store) {
     initialize() {
-        this.waitFor(u.Z);
+        this.waitFor(c.Z);
     }
     isActive(e, t, n) {
         return null != e && null != this.getThreadsForParent(e, t)[n];
     }
     getThreadsForGuild(e) {
         var t;
-        return null !== (t = f[e]) && void 0 !== t ? t : C;
+        return null !== (t = h[e]) && void 0 !== t ? t : P;
     }
     getThreadsForParent(e, t) {
         var n;
-        return null !== (n = this.getThreadsForGuild(e)[t]) && void 0 !== n ? n : C;
+        return null !== (n = this.getThreadsForGuild(e)[t]) && void 0 !== n ? n : P;
     }
     hasThreadsForChannel(e, t) {
-        return !a().isEmpty(this.getThreadsForParent(e, t));
+        return !o().isEmpty(this.getThreadsForParent(e, t));
     }
     forEachGuild(e) {
-        c.default.keys(f).forEach((t) => {
-            e(t, f[t]);
+        u.default.keys(h).forEach((t) => {
+            e(t, h[t]);
         });
     }
     hasLoaded(e) {
-        return _.has(e);
+        return m.has(e);
     }
 }
-d(R, 'displayName', 'ActiveThreadsStore');
-let O = new R(o.Z, {
-    CONNECTION_OPEN: E,
-    OVERLAY_INITIALIZE: v,
-    GUILD_CREATE: y,
+d(w, 'displayName', 'ActiveThreadsStore');
+let D = new w(s.Z, {
+    CONNECTION_OPEN: y,
+    OVERLAY_INITIALIZE: O,
+    GUILD_CREATE: S,
     GUILD_DELETE: I,
     THREAD_CREATE: T,
     THREAD_UPDATE: T,
-    THREAD_LIST_SYNC: b,
-    THREAD_DELETE: A,
-    CHANNEL_DELETE: N
+    THREAD_LIST_SYNC: N,
+    THREAD_DELETE: C,
+    CHANNEL_DELETE: R
 });

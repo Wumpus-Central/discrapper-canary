@@ -1,120 +1,138 @@
 n.d(t, {
-    II: () => p,
-    Ow: () => v,
-    P2: () => b,
+    II: () => f,
+    Ow: () => y,
+    P2: () => O,
     mw: () => m,
-    z0: () => E
+    z0: () => x
 }),
+    n(26686),
     n(47120);
-var i,
-    l = n(192379),
-    a = n(232713),
-    r = n(65400),
-    s = n(731965),
-    o = n(570140),
+var r,
+    i = n(192379),
+    l = n(232713),
+    o = n(65400),
+    a = n(731965),
+    s = n(570140),
     c = n(110924),
-    d = n(840877),
-    u = n(952537),
-    h = n(981631);
-let p = -1;
-var m = (((i = {}).MESSAGES = 'messages'), (i.LINKS = 'links'), (i.MEDIA = 'media'), (i.ALL_COUNTS = 'all_counts'), i);
-function f(e, t, n) {
-    let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-        l = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-        a = JSON.stringify(i);
-    return l ? 'guild_'.concat(t, '_search_tab_').concat(n, '_for_').concat(e, '_with_additonal_').concat(a) : 'guild_'.concat(t, '_search_').concat(n, '_for_').concat(e, '_with_additonal_').concat(a);
+    u = n(840877),
+    d = n(952537),
+    p = n(981631);
+function h(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
 }
-let g = {
+let f = -1;
+var m = (((r = {}).MESSAGES = 'messages'), (r.LINKS = 'links'), (r.MEDIA = 'media'), (r.ALL_COUNTS = 'all_counts'), r);
+function g(e, t, n) {
+    let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
+        i = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+        l = JSON.stringify(r);
+    return i ? 'guild_'.concat(t, '_search_tab_').concat(n, '_for_').concat(e, '_with_additonal_').concat(l) : 'guild_'.concat(t, '_search_').concat(n, '_for_').concat(e, '_with_additonal_').concat(l);
+}
+let b = {
         searchFetcher: null,
         searchTabFetcher: null,
         result: null,
-        messageCount: p,
+        messageCount: f,
         lastMessage: null
     },
-    _ = (0, r.F)(() => new Map()),
+    _ = (0, o.F)(() => new Map()),
     C = (e, t) => {
-        (0, s.j)(() => {
+        (0, a.j)(() => {
             _.setState((n) => {
-                let i = n.get(e);
-                return (
-                    null == i
-                        ? n.set(e, {
-                              ...g,
-                              ...t
-                          })
-                        : n.set(e, {
-                              ...i,
-                              ...t
-                          }),
-                    n
-                );
+                let r = n.get(e);
+                return null == r ? n.set(e, h({}, b, t)) : n.set(e, h({}, r, t)), n;
             });
         });
     },
-    x = (e) => _((t) => t.get(e), a.X);
-function v(e, t, n) {
-    let i = null != n ? n : {};
+    v = (e) => _((t) => t.get(e), l.X);
+function y(e, t, n) {
+    let r = null != n ? n : {};
     switch (t) {
         case 'links':
-            return {
-                author_id: e,
-                has: ['link'],
-                ...i
-            };
+            return h(
+                {
+                    author_id: e,
+                    has: ['link']
+                },
+                r
+            );
         case 'media':
-            return {
-                author_id: e,
-                attachment_extension: ['png', 'jpg', 'webp', 'mov', 'mp4', 'gif', 'mp3', 'wav', 'flac', 'ogg', 'opus'],
-                ...i
-            };
+            return h(
+                {
+                    author_id: e,
+                    attachment_extension: ['png', 'jpg', 'webp', 'mov', 'mp4', 'gif', 'mp3', 'wav', 'flac', 'ogg', 'opus']
+                },
+                r
+            );
         case 'all_counts':
-            return {
-                author_id: [e],
-                limit: 1,
-                cursor: null,
-                ...i
-            };
+            return h(
+                {
+                    author_id: [e],
+                    limit: 1,
+                    cursor: null
+                },
+                r
+            );
         default:
-            return {
-                author_id: e,
-                ...i
-            };
+            return h({ author_id: e }, r);
     }
 }
-function E(e, t, n) {
-    return (function (e, t, n, i) {
-        let { addtionalQuery: a, shouldDispatch: r = !1 } = i,
-            s = l.useMemo(() => f(e, t, n, a), [e, t, n, a]),
-            m = x(s),
-            _ = (0, c.Z)(s),
-            [E, I] = l.useState({});
+function x(e, t, n) {
+    return (function (e, t, n, r) {
+        let { addtionalQuery: l, shouldDispatch: o = !1 } = r,
+            a = i.useMemo(() => g(e, t, n, l), [e, t, n, l]),
+            h = v(a),
+            m = (0, c.Z)(a),
+            [_, x] = i.useState({});
         return (
-            l.useEffect(() => {
-                if (_ !== s) {
-                    let i = v(e, n, a),
-                        l = new d.ZP(t, h.aib.GUILD, i);
-                    C(s, {
-                        searchFetcher: l,
-                        messageCount: p,
+            i.useEffect(() => {
+                if (m !== a) {
+                    let r = y(e, n, l),
+                        i = new u.ZP(t, p.aib.GUILD, r);
+                    C(a, {
+                        searchFetcher: i,
+                        messageCount: f,
                         lastMessage: null
                     }),
                         setTimeout(() => {
-                            l.fetch(
+                            i.fetch(
                                 (e) => {
                                     let n = e.body,
-                                        i = n.messages[0];
+                                        r = n.messages[0];
                                     if (
-                                        (C(s, {
-                                            searchFetcher: l,
+                                        (C(a, {
+                                            searchFetcher: i,
                                             result: n,
                                             messageCount: n.total_results,
-                                            lastMessage: i
+                                            lastMessage: r
                                         }),
-                                        I({}),
-                                        r)
+                                        x({}),
+                                        o)
                                     ) {
-                                        var a, c;
-                                        o.Z.dispatch({
+                                        var l, c;
+                                        s.Z.dispatch({
                                             type: 'MOD_VIEW_SEARCH_FINISH',
                                             searchId: t,
                                             guildId: t,
@@ -122,8 +140,8 @@ function E(e, t, n) {
                                             totalResults: n.total_results,
                                             channels: n.channels,
                                             messages: n.messages,
-                                            threads: null !== (a = n.threads) && void 0 !== a ? a : [],
-                                            members: (null !== (c = n.members) && void 0 !== c ? c : []).map((e) => (0, u.Z)(e)),
+                                            threads: null !== (l = n.threads) && void 0 !== l ? l : [],
+                                            members: (null !== (c = n.members) && void 0 !== c ? c : []).map((e) => (0, d.Z)(e)),
                                             hasError: !1,
                                             doingHistoricalIndex: n.doing_deep_historical_index,
                                             documentsIndexed: n.documents_indexed
@@ -132,72 +150,72 @@ function E(e, t, n) {
                                 },
                                 (e) => {},
                                 (e) => {
-                                    C(s, {
+                                    C(a, {
                                         messageCount: 0,
                                         lastMessage: null
                                     }),
-                                        I({});
+                                        x({});
                                 }
                             );
                         });
                 }
                 return () => {};
-            }, [e, t, m, s, n, a, _, r]),
-            null != m ? m : g
+            }, [e, t, h, a, n, l, m, o]),
+            null != h ? h : b
         );
     })(e, t, 'messages', n);
 }
-function I(e, t, n, i) {
-    let a = l.useMemo(() => f(e, t, n, i, !0), [e, t, n, i]),
-        r = x(a),
-        s = (0, c.Z)(a);
+function j(e, t, n, r) {
+    let l = i.useMemo(() => g(e, t, n, r, !0), [e, t, n, r]),
+        o = v(l),
+        a = (0, c.Z)(l);
     return {
-        key: a,
-        previousKey: s,
-        state: r
+        key: l,
+        previousKey: a,
+        state: o
     };
 }
-function b(e, t, n) {
-    var i, a, r;
-    let { key: s, state: o } = I(e, t, 'messages', n),
-        { key: c, state: u } = I(e, t, 'links', n),
-        { key: m, state: f } = I(e, t, 'media', n),
-        g = l.useMemo(() => v(e, 'all_counts', n), [e, n]),
-        _ = l.useMemo(
+function O(e, t, n) {
+    var r, l, o;
+    let { key: a, state: s } = j(e, t, 'messages', n),
+        { key: c, state: d } = j(e, t, 'links', n),
+        { key: h, state: m } = j(e, t, 'media', n),
+        g = i.useMemo(() => y(e, 'all_counts', n), [e, n]),
+        b = i.useMemo(
             () => ({
                 tabs: {
-                    messages: v(e, 'messages', g),
-                    links: v(e, 'links', g),
-                    media: v(e, 'media', g)
+                    messages: y(e, 'messages', g),
+                    links: y(e, 'links', g),
+                    media: y(e, 'media', g)
                 },
                 track_exact_total_hits: !0
             }),
             [e, g]
         ),
-        x = l.useCallback(
+        _ = i.useCallback(
             (e) => {
                 let t = e.messages,
                     n = e.links,
-                    i = e.media;
-                C(s, t), C(c, n), C(m, i);
+                    r = e.media;
+                C(a, t), C(c, n), C(h, r);
             },
-            [c, m, s]
+            [c, h, a]
         ),
-        E = l.useCallback(
+        v = i.useCallback(
             (e) => {
-                x({
+                _({
                     messages: e,
                     links: e,
                     media: e
                 });
             },
-            [x]
+            [_]
         );
-    l.useEffect(() => {
-        let e = new d.tJ(t, h.aib.GUILD, g, _);
-        E({
+    i.useEffect(() => {
+        let e = new u.tJ(t, p.aib.GUILD, g, b);
+        v({
             searchTabFetcher: e,
-            messageCount: p,
+            messageCount: f,
             lastMessage: null
         });
         let n = setTimeout(async () => {
@@ -209,40 +227,40 @@ function b(e, t, n) {
                 t = null;
             }
             if (null == t)
-                E({
+                v({
                     messageCount: 0,
                     lastMessage: null
                 });
             else {
-                var n, i, l, a, r, s;
+                var n, r, i, l, o, a;
                 let e = t.tabs.messages,
-                    o = t.tabs.links,
+                    s = t.tabs.links,
                     c = t.tabs.media;
-                x({
+                _({
                     messages: {
                         messageCount: null !== (n = null == e ? void 0 : e.total_results) && void 0 !== n ? n : 0,
-                        lastMessage: null !== (i = null == e ? void 0 : e.messages[0]) && void 0 !== i ? i : null
+                        lastMessage: null !== (r = null == e ? void 0 : e.messages[0]) && void 0 !== r ? r : null
                     },
                     links: {
-                        messageCount: null !== (l = null == o ? void 0 : o.total_results) && void 0 !== l ? l : 0,
-                        lastMessage: null !== (a = null == o ? void 0 : o.messages[0]) && void 0 !== a ? a : null
+                        messageCount: null !== (i = null == s ? void 0 : s.total_results) && void 0 !== i ? i : 0,
+                        lastMessage: null !== (l = null == s ? void 0 : s.messages[0]) && void 0 !== l ? l : null
                     },
                     media: {
-                        messageCount: null !== (r = null == c ? void 0 : c.total_results) && void 0 !== r ? r : 0,
-                        lastMessage: null !== (s = null == c ? void 0 : c.messages[0]) && void 0 !== s ? s : null
+                        messageCount: null !== (o = null == c ? void 0 : c.total_results) && void 0 !== o ? o : 0,
+                        lastMessage: null !== (a = null == c ? void 0 : c.messages[0]) && void 0 !== a ? a : null
                     }
                 });
             }
-            Z({});
+            O({});
         });
         return () => {
             e.cancel(), clearTimeout(n);
         };
-    }, [e, t, g, _, E, x]);
-    let [b, Z] = l.useState({});
+    }, [e, t, g, b, v, _]);
+    let [x, O] = i.useState({});
     return {
-        messagesCount: null !== (i = null == o ? void 0 : o.messageCount) && void 0 !== i ? i : p,
-        linksCount: null !== (a = null == u ? void 0 : u.messageCount) && void 0 !== a ? a : p,
-        mediaCount: null !== (r = null == f ? void 0 : f.messageCount) && void 0 !== r ? r : p
+        messagesCount: null !== (r = null == s ? void 0 : s.messageCount) && void 0 !== r ? r : f,
+        linksCount: null !== (l = null == d ? void 0 : d.messageCount) && void 0 !== l ? l : f,
+        mediaCount: null !== (o = null == m ? void 0 : m.messageCount) && void 0 !== o ? o : f
     };
 }

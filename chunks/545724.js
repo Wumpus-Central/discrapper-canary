@@ -1,68 +1,114 @@
-n.d(t, { Z: () => m }), n(47120);
-var i = n(200651),
-    l = n(192379),
-    r = n(120356),
-    a = n.n(r),
-    s = n(748780),
-    o = n(91192),
-    d = n(481060),
-    c = n(239091),
-    u = n(687683),
-    h = n(599739);
-let m = function (e) {
-    let { index: t, children: r, user: m, channel: p, onClick: g, isFocused: _, isActive: f, onOtherHover: E, className: I } = e,
-        [C, N] = l.useState(!1),
-        [v, T] = l.useState(!1),
+n.d(t, { Z: () => f }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    o = n.n(l),
+    a = n(748780),
+    s = n(91192),
+    c = n(481060),
+    u = n(239091),
+    d = n(687683),
+    p = n(331926);
+function h(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function g(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let f = function (e) {
+    let { index: t, children: l, user: f, channel: m, onClick: b, isFocused: _, isActive: E, onOtherHover: O, className: N } = e,
+        [v, y] = i.useState(!1),
+        [I, C] = i.useState(!1),
         S = () => {
-            N(!0), !_ || f || v || null == E || E();
+            y(!0), !_ || E || I || null == O || O();
         },
-        A = () => {
-            N(!1);
+        T = () => {
+            y(!1);
         },
-        Z = (e, t) => {
+        P = (e, t) => {
             null != t &&
-                (T(!0),
-                (0, c.jW)(
+                (C(!0),
+                (0, u.jW)(
                     e,
                     async () => {
-                        let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('4616')]).then(n.bind(n, 881351));
-                        return (n) =>
-                            (0, i.jsx)(e, {
-                                ...n,
-                                user: t
-                            });
+                        let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('31923')]).then(n.bind(n, 881351));
+                        return (n) => (0, r.jsx)(e, g(h({}, n), { user: t }));
                     },
                     {
                         onClose: () => {
-                            T(!1);
+                            C(!1);
                         }
                     }
                 ));
         };
-    return (0, i.jsx)(o.mh, {
-        id: p.id,
+    return (0, r.jsx)(s.mh, {
+        id: m.id,
         children: (e) =>
-            (0, i.jsx)(d.tEY, {
+            (0, r.jsx)(c.tEY, {
                 offset: {
                     left: -8,
                     right: -8
                 },
-                children: (0, i.jsx)(s.Z.div, {
-                    className: a()(h.messageRequestItem, I, {
-                        [h.active]: f || v,
-                        [h.firstItem]: 0 === t
-                    }),
-                    onContextMenu: (e) => Z(e, m),
-                    onMouseEnter: S,
-                    onMouseLeave: A,
-                    onClick: null != g ? g : void 0,
-                    style: {
-                        LIST_ROW_HEIGHT: u.WN,
-                        opacity: 1
-                    },
-                    ...e,
-                    children: r(C || f || v)
-                })
+                children: (0, r.jsx)(
+                    a.Z.div,
+                    g(
+                        h(
+                            {
+                                className: o()(p.messageRequestItem, N, {
+                                    [p.active]: E || I,
+                                    [p.firstItem]: 0 === t
+                                }),
+                                onContextMenu: (e) => P(e, f),
+                                onMouseEnter: S,
+                                onMouseLeave: T,
+                                onClick: null != b ? b : void 0,
+                                style: {
+                                    LIST_ROW_HEIGHT: d.WN,
+                                    opacity: 1
+                                }
+                            },
+                            e
+                        ),
+                        { children: l(v || E || I) }
+                    )
+                )
             })
     });
 };

@@ -1,88 +1,131 @@
-n.d(t, { Z: () => _ }), n(47120), n(773603);
-var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    s = n.n(l),
-    a = n(481060),
+n.d(t, { Z: () => b }), n(47120), n(773603), n(230036), n(266796);
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(481060),
     o = n(279881),
     c = n(510231),
     d = n(92373),
     u = n(308083),
     m = n(388032),
-    h = n(787236),
-    g = n(165809);
-function x(e) {
-    let { gameApplicationIds: t, preventGameRemoval: n, onUpdateGames: l, minGames: o = 1, error: x } = e,
-        { options: p, matchSorterOptions: _ } = (0, c.h)(),
-        C = r.useMemo(() => Array.from(t), [t]),
-        f = r.useCallback(
+    p = n(79878),
+    g = n(617006);
+function h(e) {
+    let { gameApplicationIds: t, preventGameRemoval: n, onUpdateGames: s, minGames: o = 1, error: h } = e,
+        { options: f, matchSorterOptions: b } = (0, c.h)(),
+        x = i.useMemo(() => Array.from(t), [t]),
+        j = i.useCallback(
             (e) => {
-                !(e.length < o) && l(new Set(e));
+                !(e.length < o) && s(new Set(e));
             },
-            [o, l]
+            [o, s]
         ),
-        v = r.useCallback(
+        N = i.useCallback(
             (e) => {
                 if (n) return;
-                let i = new Set(t);
-                t.has(e) ? i.delete(e) : i.add(e), l(i);
+                let r = new Set(t);
+                t.has(e) ? r.delete(e) : r.add(e), s(r);
             },
-            [n, t, l]
+            [n, t, s]
         ),
-        N = r.useCallback(() => null, []);
-    return (0, i.jsx)('div', {
-        className: h.inputContainer,
-        children: (0, i.jsxs)(a.xJW, {
-            error: x,
+        v = i.useCallback(() => null, []);
+    return (0, r.jsx)('div', {
+        className: p.inputContainer,
+        children: (0, r.jsxs)(l.xJW, {
+            error: h,
             children: [
-                (0, i.jsx)(a.VcW, {
+                (0, r.jsx)(l.VcW, {
                     multi: !0,
                     hidePills: !0,
                     autoFocus: !0,
-                    wrapperClassName: s()(g.input, h.input),
-                    options: p,
-                    value: C,
-                    placeholder: m.intl.string(m.t.acyezc),
-                    onChange: f,
+                    wrapperClassName: a()(g.input, p.input),
+                    options: f,
+                    value: x,
+                    placeholder: m.NW.string(m.t.acyezc),
+                    onChange: j,
                     isDisabled: t.size === u.cm,
-                    matchSorterOptions: _,
+                    matchSorterOptions: b,
                     clearQueryOnSelect: !0,
-                    customPillContainerClassName: h.pills,
-                    renderCustomPill: N
+                    customPillContainerClassName: p.pills,
+                    renderCustomPill: v
                 }),
-                C.length > 0 &&
-                    (0, i.jsxs)('div', {
-                        className: h.gamesContainer,
+                x.length > 0 &&
+                    (0, r.jsxs)('div', {
+                        className: p.gamesContainer,
                         children: [
-                            (0, i.jsx)(a.Text, {
+                            (0, r.jsx)(l.Text, {
                                 variant: 'text-xs/semibold',
                                 color: 'text-muted',
-                                children: m.intl.string(m.t.PgOVsL)
+                                children: m.NW.string(m.t.PgOVsL)
                             }),
-                            (0, i.jsx)('div', {
-                                className: h.gamesList,
-                                children: C.map((e) =>
-                                    (0, i.jsx)(
-                                        a.ua7,
+                            (0, r.jsx)('div', {
+                                className: p.gamesList,
+                                children: x.map((e) =>
+                                    (0, r.jsx)(
+                                        l.ua7,
                                         {
-                                            text: m.intl.string(m.t.C1K2XV),
+                                            text: m.NW.string(m.t.C1K2XV),
                                             shouldShow: n,
-                                            tooltipContentClassName: h.tooltip,
-                                            children: (r) =>
-                                                (0, i.jsx)('div', {
-                                                    ...r,
-                                                    children: (0, i.jsx)(
-                                                        d.Z,
+                                            tooltipContentClassName: p.tooltip,
+                                            children: (i) => {
+                                                var s, a;
+                                                return (0, r.jsx)(
+                                                    'div',
+                                                    ((s = (function (e) {
+                                                        for (var t = 1; t < arguments.length; t++) {
+                                                            var n = null != arguments[t] ? arguments[t] : {},
+                                                                r = Object.keys(n);
+                                                            'function' == typeof Object.getOwnPropertySymbols &&
+                                                                (r = r.concat(
+                                                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                                    })
+                                                                )),
+                                                                r.forEach(function (t) {
+                                                                    var r;
+                                                                    (r = n[t]),
+                                                                        t in e
+                                                                            ? Object.defineProperty(e, t, {
+                                                                                  value: r,
+                                                                                  enumerable: !0,
+                                                                                  configurable: !0,
+                                                                                  writable: !0
+                                                                              })
+                                                                            : (e[t] = r);
+                                                                });
+                                                        }
+                                                        return e;
+                                                    })({}, i)),
+                                                    (a = a =
                                                         {
-                                                            applicationId: e,
-                                                            imageContainerClassName: t.size > o ? h.clickableGame : void 0,
-                                                            selected: !0,
-                                                            locked: n,
-                                                            onClick: v
-                                                        },
-                                                        e
-                                                    )
-                                                })
+                                                            children: (0, r.jsx)(
+                                                                d.Z,
+                                                                {
+                                                                    applicationId: e,
+                                                                    imageContainerClassName: t.size > o ? p.clickableGame : void 0,
+                                                                    selected: !0,
+                                                                    locked: n,
+                                                                    onClick: N
+                                                                },
+                                                                e
+                                                            )
+                                                        }),
+                                                    Object.getOwnPropertyDescriptors
+                                                        ? Object.defineProperties(s, Object.getOwnPropertyDescriptors(a))
+                                                        : (function (e, t) {
+                                                              var n = Object.keys(e);
+                                                              if (Object.getOwnPropertySymbols) {
+                                                                  var r = Object.getOwnPropertySymbols(e);
+                                                                  n.push.apply(n, r);
+                                                              }
+                                                              return n;
+                                                          })(Object(a)).forEach(function (e) {
+                                                              Object.defineProperty(s, e, Object.getOwnPropertyDescriptor(a, e));
+                                                          }),
+                                                    s)
+                                                );
+                                            }
                                         },
                                         e
                                     )
@@ -94,50 +137,50 @@ function x(e) {
         })
     });
 }
-function p(e) {
-    let { guildId: t, selectedGameApplicationIds: n, onUpdateGames: l } = e,
-        { topGames: s, tryFetchTopGames: c } = (0, o.I)(),
-        u = s.get(t),
-        [g, x] = r.useState(!1);
-    r.useEffect(() => {
-        x(!0),
+function f(e) {
+    let { guildId: t, selectedGameApplicationIds: n, onUpdateGames: s } = e,
+        { topGames: a, tryFetchTopGames: c } = (0, o.I)(),
+        u = a.get(t),
+        [g, h] = i.useState(!1);
+    i.useEffect(() => {
+        h(!0),
             c(t).finally(() => {
-                x(!1);
+                h(!1);
             });
     }, [t, c]);
-    let p = r.useMemo(() => (null == u ? [] : Object.keys(u).sort((e, t) => u[t].score - u[e].score)), [u]),
-        _ = r.useCallback(
+    let f = i.useMemo(() => (null == u ? [] : Object.keys(u).sort((e, t) => u[t].score - u[e].score)), [u]),
+        b = i.useCallback(
             (e) => {
                 let t = new Set(n);
-                n.has(e) ? t.delete(e) : t.add(e), l(t);
+                n.has(e) ? t.delete(e) : t.add(e), s(t);
             },
-            [l, n]
+            [s, n]
         );
     return g && null == u
-        ? (0, i.jsx)(a.$jN, { className: h.loadingSpinner })
-        : null == p || 0 === p.length
+        ? (0, r.jsx)(l.$jN, { className: p.loadingSpinner })
+        : null == f || 0 === f.length
           ? null
-          : (0, i.jsxs)(i.Fragment, {
+          : (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, i.jsx)('hr', { className: h.separator }),
-                    (0, i.jsxs)('div', {
-                        className: h.gamesContainer,
+                    (0, r.jsx)('hr', { className: p.separator }),
+                    (0, r.jsxs)('div', {
+                        className: p.gamesContainer,
                         children: [
-                            (0, i.jsx)(a.Text, {
+                            (0, r.jsx)(l.Text, {
                                 variant: 'text-xs/semibold',
                                 color: 'text-muted',
-                                children: m.intl.string(m.t['0wEQQ0'])
+                                children: m.NW.string(m.t['0wEQQ0'])
                             }),
-                            (0, i.jsx)('div', {
-                                className: h.gamesList,
-                                children: p.map((e) =>
-                                    (0, i.jsx)(
+                            (0, r.jsx)('div', {
+                                className: p.gamesList,
+                                children: f.map((e) =>
+                                    (0, r.jsx)(
                                         d.Z,
                                         {
                                             applicationId: e,
-                                            imageContainerClassName: h.clickableGame,
+                                            imageContainerClassName: p.clickableGame,
                                             selected: n.has(e),
-                                            onClick: _
+                                            onClick: b
                                         },
                                         e
                                     )
@@ -148,36 +191,36 @@ function p(e) {
                 ]
             });
 }
-let _ = (e) => {
-    let { title: t, description: n, onUpdateGames: r, gameApplicationIds: l, minGames: o = 1, error: c, guildId: d, includeSuggestedGames: u } = e,
-        m = l.size <= o;
-    return (0, i.jsxs)('div', {
-        className: s()(g.slideContent, h.container),
+let b = (e) => {
+    let { title: t, description: n, onUpdateGames: i, gameApplicationIds: s, minGames: o = 1, error: c, guildId: d, includeSuggestedGames: u } = e,
+        m = s.size <= o;
+    return (0, r.jsxs)('div', {
+        className: a()(g.slideContent, p.container),
         children: [
-            (0, i.jsx)(a.X6q, {
+            (0, r.jsx)(l.X6q, {
                 variant: 'heading-xxl/medium',
                 className: g.title,
                 children: t
             }),
-            (0, i.jsx)(a.Text, {
+            (0, r.jsx)(l.Text, {
                 variant: 'text-md/normal',
                 color: 'header-secondary',
                 className: g.subtitle,
                 children: n
             }),
-            (0, i.jsx)(x, {
+            (0, r.jsx)(h, {
                 minGames: o,
-                gameApplicationIds: l,
+                gameApplicationIds: s,
                 preventGameRemoval: m,
-                onUpdateGames: r,
+                onUpdateGames: i,
                 error: c
             }),
             u &&
                 null != d &&
-                (0, i.jsx)(p, {
+                (0, r.jsx)(f, {
                     guildId: d,
-                    selectedGameApplicationIds: l,
-                    onUpdateGames: r
+                    selectedGameApplicationIds: s,
+                    onUpdateGames: i
                 })
         ]
     });

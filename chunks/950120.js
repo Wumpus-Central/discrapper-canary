@@ -1,77 +1,143 @@
-t.r(n), t.d(n, { default: () => E });
-var a = t(200651),
-    i = t(192379),
-    r = t(120356),
-    l = t.n(r),
-    o = t(873546),
-    s = t(481060),
-    c = t(425493),
-    u = t(376641),
-    d = t(714338),
-    _ = t(585483),
-    h = t(288229),
-    f = t(981631),
-    p = t(388032),
-    C = t(362943);
-function m(e) {
-    let { onClose: n } = e,
-        t = i.useRef(null);
-    return (0, a.jsx)('div', {
-        className: C.mobileCloseWrapper,
-        ref: t,
-        children: (0, a.jsx)(s.JcV, {
-            containerRef: t,
-            children: (0, a.jsx)('div', {
-                children: (0, a.jsx)(c.Z, {
-                    closeAction: n,
+n.r(t), n.d(t, { default: () => m });
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    l = n(873546),
+    s = n(481060),
+    c = n(425493),
+    u = n(376641),
+    d = n(714338),
+    f = n(585483),
+    p = n(288229),
+    _ = n(981631),
+    h = n(388032),
+    O = n(478664);
+function b(e) {
+    let { onClose: t } = e,
+        n = i.useRef(null);
+    return (0, r.jsx)('div', {
+        className: O.mobileCloseWrapper,
+        ref: n,
+        children: (0, r.jsx)(s.JcV, {
+            containerRef: n,
+            children: (0, r.jsx)('div', {
+                children: (0, r.jsx)(c.Z, {
+                    closeAction: t,
                     keybind: 'ESC'
                 })
             })
         })
     });
 }
-function E(e) {
-    let { onClose: n, items: t, startingIndex: r, fit: c, shouldRedactExplicitContent: E, shouldHideMediaOptions: S, shouldAnimateCarousel: g, className: L, transitionState: x, ...O } = e,
-        v = o.tq && null != n;
+function m(e) {
+    var t,
+        n,
+        { onClose: o, items: c, startingIndex: m, fit: g, shouldRedactExplicitContent: y, shouldHideMediaOptions: C, shouldAnimateCarousel: E, className: S, transitionState: v } = e,
+        P = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                i = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        r,
+                        i = {},
+                        o = Object.keys(e);
+                    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var o = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+            }
+            return i;
+        })(e, ['onClose', 'items', 'startingIndex', 'fit', 'shouldRedactExplicitContent', 'shouldHideMediaOptions', 'shouldAnimateCarousel', 'className', 'transitionState']);
+    let x = l.tq && null != o;
     return (
         i.useEffect(() => {
-            if (null != n)
+            if (null != o)
                 return (
-                    _.S.subscribe(f.CkL.MEDIA_MODAL_CLOSE, n),
+                    f.S.subscribe(_.CkL.MEDIA_MODAL_CLOSE, o),
                     () => {
-                        _.S.unsubscribe(f.CkL.MEDIA_MODAL_CLOSE, n);
+                        f.S.unsubscribe(_.CkL.MEDIA_MODAL_CLOSE, o);
                     }
                 );
-        }, [n]),
+        }, [o]),
         i.useEffect(
             () => (
-                x === s.Dvm.ENTERED && (d.Z.disable(), d.Z.enableTemp(u.P)),
-                x === s.Dvm.HIDDEN && (d.Z.disable(), d.Z.enableTemp(u.v)),
+                v === s.Dvm.ENTERED && (d.Z.disable(), d.Z.enableTemp(u.P)),
+                v === s.Dvm.HIDDEN && (d.Z.disable(), d.Z.enableTemp(u.v)),
                 () => {
                     d.Z.disableTemp();
                 }
             ),
-            [x]
+            [v]
         ),
-        (0, a.jsxs)(s.Y0X, {
-            hideShadow: !0,
-            className: l()(C.carouselModal, L),
-            transitionState: x,
-            ...O,
-            size: s.CgR.DYNAMIC,
-            'aria-label': p.intl.string(p.t.AMTX3t),
-            onClick: n,
-            children: [
-                v ? (0, a.jsx)(m, { onClose: n }) : null,
-                (0, a.jsx)(h.Z, {
-                    items: t,
-                    startIndex: r,
-                    fit: c,
-                    shouldRedactExplicitContent: E,
-                    shouldHideMediaOptions: S,
-                    shouldAnimateCarousel: g
-                })
-            ]
-        })
+        (0, r.jsxs)(
+            s.Y0X,
+            ((t = (function (e) {
+                for (var t = 1; t < arguments.length; t++) {
+                    var n = null != arguments[t] ? arguments[t] : {},
+                        r = Object.keys(n);
+                    'function' == typeof Object.getOwnPropertySymbols &&
+                        (r = r.concat(
+                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                            })
+                        )),
+                        r.forEach(function (t) {
+                            var r;
+                            (r = n[t]),
+                                t in e
+                                    ? Object.defineProperty(e, t, {
+                                          value: r,
+                                          enumerable: !0,
+                                          configurable: !0,
+                                          writable: !0
+                                      })
+                                    : (e[t] = r);
+                        });
+                }
+                return e;
+            })(
+                {
+                    hideShadow: !0,
+                    className: a()(O.carouselModal, S),
+                    transitionState: v
+                },
+                P
+            )),
+            (n = n =
+                {
+                    size: s.CgR.DYNAMIC,
+                    'aria-label': h.NW.string(h.t.AMTX3t),
+                    onClick: o,
+                    children: [
+                        x ? (0, r.jsx)(b, { onClose: o }) : null,
+                        (0, r.jsx)(p.Z, {
+                            items: c,
+                            startIndex: m,
+                            fit: g,
+                            shouldRedactExplicitContent: y,
+                            shouldHideMediaOptions: C,
+                            shouldAnimateCarousel: E
+                        })
+                    ]
+                }),
+            Object.getOwnPropertyDescriptors
+                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                : (function (e, t) {
+                      var n = Object.keys(e);
+                      if (Object.getOwnPropertySymbols) {
+                          var r = Object.getOwnPropertySymbols(e);
+                          n.push.apply(n, r);
+                      }
+                      return n;
+                  })(Object(n)).forEach(function (e) {
+                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                  }),
+            t)
+        )
     );
 }

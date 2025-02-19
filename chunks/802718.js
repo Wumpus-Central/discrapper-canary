@@ -1,91 +1,128 @@
-n.d(t, { U: () => v });
-var i = n(200651),
-    l = n(192379),
-    r = n(91192),
-    a = n(481060),
-    o = n(442837),
+n.d(t, { U: () => _ });
+var r = n(200651),
+    i = n(192379),
+    l = n(91192),
+    o = n(481060),
+    a = n(442837),
     s = n(239091),
     c = n(410030),
-    d = n(377171),
-    u = n(682662),
-    h = n(662146),
-    p = n(678513),
-    m = n(981631),
+    u = n(377171),
+    d = n(682662),
+    p = n(662146),
+    h = n(678513),
+    f = n(981631),
     g = n(388032),
-    f = n(276970);
-function _(e) {
+    m = n(554538);
+function b(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function v(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function y(e) {
     let { target: t } = e,
-        o = (0, r.Ie)('fakedoor'),
-        p = l.useCallback(() => {
-            (0, a.ZDy)(async () => {
-                let { default: e } = await Promise.all([n.e('22862'), n.e('85889')]).then(n.bind(n, 646202));
-                return (n) =>
-                    (0, i.jsx)(e, {
-                        ...n,
-                        target: t
-                    });
+        a = (0, l.Ie)('fakedoor'),
+        h = i.useCallback(() => {
+            (0, o.ZDy)(async () => {
+                let { default: e } = await Promise.all([n.e('22862'), n.e('75715')]).then(n.bind(n, 646202));
+                return (n) => (0, r.jsx)(e, v(b({}, n), { target: t }));
             });
         }, [t]),
-        _ = l.useCallback(
+        y = i.useCallback(
             (e) => {
                 (0, s.jW)(e, async () => {
                     let { default: e } = await n.e('39612').then(n.bind(n, 761624));
-                    return (n) =>
-                        (0, i.jsx)(e, {
-                            ...n,
-                            signupTarget: t
-                        });
+                    return (n) => (0, r.jsx)(e, v(b({}, n), { signupTarget: t }));
                 });
             },
             [t]
         ),
-        v = 'url('.concat(t.backgroundAssetUrl, ') black top / cover no-repeat'),
-        C = (0, i.jsxs)('div', {
-            className: f.tooltipContainer,
+        _ = 'url('.concat(t.backgroundAssetUrl, ') black top / cover no-repeat'),
+        O = (0, r.jsxs)('div', {
+            className: m.tooltipContainer,
             children: [
-                (0, i.jsx)('div', {
-                    className: f.tooltipBackground,
-                    style: { background: v }
+                (0, r.jsx)('div', {
+                    className: m.tooltipBackground,
+                    style: { background: _ }
                 }),
-                (0, i.jsx)(a.X6q, {
+                (0, r.jsx)(o.X6q, {
                     variant: 'heading-sm/medium',
                     children: t.tooltipHeader
                 }),
-                (0, i.jsx)(a.Text, {
+                (0, r.jsx)(o.Text, {
                     variant: 'text-xs/normal',
-                    children: g.intl.string(g.t.IIbwAg)
+                    children: g.NW.string(g.t.IIbwAg)
                 })
             ]
         }),
-        x = (0, c.Fg)();
-    return (0, i.jsxs)(u.H, {
+        j = (0, c.Fg)();
+    return (0, r.jsxs)(d.H, {
         children: [
-            (0, i.jsx)(a.ze6, {
-                theme: m.BRd.DARK,
-                children: (0, i.jsx)(h.Z, {
-                    text: C,
-                    tooltipClass: f.tooltip,
-                    tooltipContentClass: f.tooltipContent,
-                    children: (0, i.jsx)(a.ze6, {
-                        theme: x,
-                        children: (0, i.jsx)(a.aRk, {
-                            lowerBadge: (0, i.jsx)(a.mAB, {
+            (0, r.jsx)(o.ze6, {
+                theme: f.BRd.DARK,
+                children: (0, r.jsx)(p.Z, {
+                    text: O,
+                    tooltipClass: m.tooltip,
+                    tooltipContentClass: m.tooltipContent,
+                    children: (0, r.jsx)(o.ze6, {
+                        theme: j,
+                        children: (0, r.jsx)(o.aRk, {
+                            lowerBadge: (0, r.jsx)(o.mAB, {
                                 count: 1,
-                                color: d.Z.BG_BRAND
+                                color: u.Z.BG_BRAND
                             }),
-                            children: (0, i.jsx)(a.LYs, {
-                                ...o,
-                                onClick: p,
-                                onContextMenu: _,
-                                children: (0, i.jsx)(a.Dkj, { color: d.Z.TEXT_NORMAL })
-                            })
+                            children: (0, r.jsx)(
+                                o.LYs,
+                                v(b({}, a), {
+                                    onClick: h,
+                                    onContextMenu: y,
+                                    children: (0, r.jsx)(o.Dkj, { color: u.Z.TEXT_NORMAL })
+                                })
+                            )
                         })
                     })
                 })
             }),
-            (0, i.jsx)('div', {
+            (0, r.jsx)('div', {
                 style: {
-                    background: v,
+                    background: _,
                     width: 0,
                     height: 0
                 }
@@ -93,7 +130,7 @@ function _(e) {
         ]
     });
 }
-function v() {
-    let e = (0, o.e7)([p.Z], () => p.Z.getActiveUserSignUp());
-    return null == e ? null : (0, i.jsx)(_, { target: e });
+function _() {
+    let e = (0, a.e7)([h.Z], () => h.Z.getActiveUserSignUp());
+    return null == e ? null : (0, r.jsx)(y, { target: e });
 }

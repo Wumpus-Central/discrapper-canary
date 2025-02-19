@@ -1,38 +1,72 @@
 n.d(t, {
-    $6: () => R,
-    MP: () => b,
-    Mg: () => v,
-    Nl: () => N,
-    Ns: () => g,
-    Rx: () => S,
-    nX: () => O,
-    sc: () => C
+    $6: () => P,
+    MP: () => T,
+    Mg: () => y,
+    Nl: () => C,
+    Ns: () => v,
+    Rx: () => N,
+    nX: () => w,
+    sc: () => R
 }),
     n(47120),
+    n(86693),
     n(536091),
     n(411104),
     n(653041),
-    n(724458),
-    n(852437);
-var i = n(403644),
-    r = n.n(i),
-    a = n(565925),
-    s = n.n(a),
-    o = n(21690),
-    l = n.n(o),
-    u = n(264344),
-    c = n.n(u),
+    n(26686),
+    n(474991),
+    n(398202),
+    n(301563),
+    n(852437),
+    n(566702);
+var r = n(403644),
+    i = n.n(r),
+    o = n(565925),
+    a = n.n(o),
+    s = n(21690),
+    l = n.n(s),
+    c = n(264344),
+    u = n.n(c),
     d = n(988367),
     f = n(259443),
-    _ = n(65154),
-    p = n(436620);
-let h = 4,
-    m = new f.Yd('SDP');
-var g = (function (e) {
+    p = n(65154),
+    _ = n(436620);
+function h(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function m(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                h(e, t, n[t]);
+            });
+    }
+    return e;
+}
+let g = 4,
+    E = new f.Yd('SDP');
+var v = (function (e) {
     return (e.SENDRECV = 'sendrecv'), (e.SENDONLY = 'sendonly'), (e.RECVONLY = 'recvonly'), (e.INACTIVE = 'inactive'), e;
 })({});
-let E = 'UDP/TLS/RTP/SAVPF';
-function v(e) {
+let b = 'UDP/TLS/RTP/SAVPF';
+function y(e) {
     switch (e) {
         case 'recvonly':
             return 'sendonly';
@@ -44,33 +78,33 @@ function v(e) {
             return 'inactive';
     }
 }
-function y(e, t, n) {
-    let i = ''.concat(e, '-').concat(t),
-        r = ''.concat(n).concat(i);
+function O(e, t, n) {
+    let r = ''.concat(e, '-').concat(t),
+        i = ''.concat(n).concat(r);
     return [
         {
             attribute: 'cname',
             id: t,
-            value: i
+            value: r
         },
         {
             attribute: 'msid',
             id: t,
-            value: ''.concat(i, ' ').concat(r)
+            value: ''.concat(r, ' ').concat(i)
         },
         {
             attribute: 'mslabel',
             id: t,
-            value: i
+            value: r
         },
         {
             attribute: 'label',
             id: t,
-            value: r
+            value: i
         }
     ];
 }
-function I(e) {
+function S(e) {
     return d.write({
         version: 0,
         timing: {
@@ -102,9 +136,9 @@ function I(e) {
         media: e
     });
 }
-function T(e) {
-    let { mid: t, type: n, setup: i, direction: a, baseSDP: s, codec: o, payload: l, bitrate: u, ssrcs: f, extensions: m, rtxPayload: g, sendingVideo: v } = e;
-    if ('inactive' === a && !p.WS)
+function I(e) {
+    let { mid: t, type: n, setup: r, direction: o, baseSDP: a, codec: s, payload: l, bitrate: c, ssrcs: f, extensions: h, rtxPayload: E, sendingVideo: v } = e;
+    if ('inactive' === o && !_.WS)
         return {
             connection: {
                 ip: '0.0.0.0',
@@ -114,7 +148,7 @@ function T(e) {
             fmtp: [],
             payloads: l,
             port: 0,
-            protocol: E,
+            protocol: b,
             rtp: [
                 {
                     codec: 'NULL',
@@ -127,32 +161,32 @@ function T(e) {
         };
     let {
         media: [y]
-    } = d.parse(s);
+    } = d.parse(a);
     if (
         ((y.type = n),
-        (y.protocol = E),
+        (y.protocol = b),
         (y.payloads = l),
-        (y.setup = i),
+        (y.setup = r),
         (y.mid = t),
         (y.rtcpMux = 'rtcp-mux'),
-        (y.direction = a),
+        (y.direction = o),
         (y.ssrcs = f),
         f.length > 0 &&
-            (null != g &&
-                ((y.ssrcGroups = r()(f, h).map((e) => {
+            (null != E &&
+                ((y.ssrcGroups = i()(f, g).map((e) => {
                     let t = e[0].id;
                     return {
                         semantics: 'FID',
                         ssrcs: ''.concat(t, ' ').concat(t + 1)
                     };
                 })),
-                (y.ssrcs = r()(f, h)
+                (y.ssrcs = i()(f, g)
                     .map((e) => {
-                        let t = e.map((e) => ((e = { ...e }), (e.id += 1), e));
+                        let t = e.map((e) => ((e = m({}, e)), (e.id += 1), e));
                         return [...e, ...t];
                     })
                     .flat())),
-            p.WS || 'Firefox' === c().name))
+            _.WS || 'Firefox' === u().name))
     ) {
         let e = f.find((e) => 'msid' === e.attribute);
         if (null == e) throw Error('msid missing');
@@ -160,9 +194,9 @@ function T(e) {
     }
     switch (n) {
         case 'audio':
-            'Firefox' === c().name
-                ? (y.ext = m.filter((e) => 'urn:ietf:params:rtp-hdrext:ssrc-audio-level' === e.uri))
-                : ((y.ext = m.filter((e) => 'urn:ietf:params:rtp-hdrext:ssrc-audio-level' === e.uri || 'http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01' === e.uri)),
+            'Firefox' === u().name
+                ? (y.ext = h.filter((e) => 'urn:ietf:params:rtp-hdrext:ssrc-audio-level' === e.uri))
+                : ((y.ext = h.filter((e) => 'urn:ietf:params:rtp-hdrext:ssrc-audio-level' === e.uri || 'http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01' === e.uri)),
                   (y.rtcpFb = [
                       {
                           type: 'transport-cc',
@@ -170,12 +204,12 @@ function T(e) {
                       }
                   ])),
                 y.rtp.push({
-                    codec: o,
+                    codec: s,
                     encoding: 2,
                     payload: l,
                     rate: 48000
                 }),
-                o === _.ad.OPUS &&
+                s === p.ad.OPUS &&
                     y.fmtp.push({
                         config: 'minptime=10;useinbandfec=1;usedtx='.concat(v ? '0' : '1'),
                         payload: l
@@ -183,16 +217,16 @@ function T(e) {
                 (y.maxptime = 60);
             break;
         case 'video':
-            (y.ext = m.filter((e) => 'urn:ietf:params:rtp-hdrext:toffset' === e.uri || 'http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time' === e.uri || 'urn:3gpp:video-orientation' === e.uri || 'http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01' === e.uri || 'http://www.webrtc.org/experiments/rtp-hdrext/playout-delay' === e.uri)),
+            (y.ext = h.filter((e) => 'urn:ietf:params:rtp-hdrext:toffset' === e.uri || 'http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time' === e.uri || 'urn:3gpp:video-orientation' === e.uri || 'http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01' === e.uri || 'http://www.webrtc.org/experiments/rtp-hdrext/playout-delay' === e.uri)),
                 y.rtp.push({
-                    codec: o,
+                    codec: s,
                     payload: l,
                     rate: 90000
                 });
-            let I = 'x-google-max-bitrate='.concat(u);
-            o === _.ad.H264 && (I += ';level-asymmetry-allowed=1;packetization-mode=1;profile-level-id=42e01f'),
+            let O = 'x-google-max-bitrate='.concat(c);
+            s === p.ad.H264 && (O += ';level-asymmetry-allowed=1;packetization-mode=1;profile-level-id=42e01f'),
                 y.fmtp.push({
-                    config: I,
+                    config: O,
                     payload: l
                 }),
                 (y.rtcpFb = [
@@ -219,33 +253,33 @@ function T(e) {
                         payload: l
                     }
                 ]),
-                null != g &&
+                null != E &&
                     (y.rtp.push({
                         codec: 'rtx',
-                        payload: g,
+                        payload: E,
                         rate: 90000
                     }),
                     y.fmtp.push({
                         config: 'apt='.concat(l),
-                        payload: g
+                        payload: E
                     }),
-                    (y.payloads = ''.concat(y.payloads, ' ').concat(g)));
+                    (y.payloads = ''.concat(y.payloads, ' ').concat(E)));
     }
     return y;
 }
-function b(e) {
-    let { type: t, baseSDP: n, direction: i, audioCodec: r, audioPayloadType: a, audioBitRate: s, videoCodec: o, videoPayloadType: l, videoBitRate: u, rtxPayloadType: d, ssrcs: f, extensions: _ } = e,
-        p = [];
-    if ((m.info('generateSessionDescription: '.concat(JSON.stringify(f))), 'Firefox' === c().name)) {
+function T(e) {
+    let { type: t, baseSDP: n, direction: r, audioCodec: i, audioPayloadType: o, audioBitRate: a, videoCodec: s, videoPayloadType: l, videoBitRate: c, rtxPayloadType: d, ssrcs: f, extensions: p } = e,
+        _ = [];
+    if ((E.info('generateSessionDescription: '.concat(JSON.stringify(f))), 'Firefox' === u().name)) {
         let e = 'answer' === t ? 'passive' : 'active';
         f.forEach((t) => {
-            let [i, c, f, h, m] = t;
+            let [r, u, f, h, m] = t;
             if ('video' === f && (0 === l || 0 === d)) return;
-            let g = 'audio' === f ? r : o,
-                E = 'audio' === f ? a : l,
-                v = 'audio' === f ? s : u;
-            p.push(
-                T({
+            let g = 'audio' === f ? i : s,
+                E = 'audio' === f ? o : l,
+                v = 'audio' === f ? a : c;
+            _.push(
+                I({
                     mid: m,
                     type: f,
                     setup: e,
@@ -254,60 +288,60 @@ function b(e) {
                     codec: g,
                     payload: E,
                     bitrate: v,
-                    ssrcs: y(c, i, 'audio' === f ? 'a' : 'v'),
-                    extensions: _
+                    ssrcs: O(u, r, 'audio' === f ? 'a' : 'v'),
+                    extensions: p
                 })
             );
         });
     } else {
         let e = 'answer' === t ? 'passive' : 'actpass',
-            c = f
+            u = f
                 .filter((e) => {
-                    let [t, n, i, r, a] = e;
-                    return 'inactive' !== r && 'audio' === i;
+                    let [t, n, r, i, o] = e;
+                    return 'inactive' !== i && 'audio' === r;
                 })
                 .map((e) => {
                     let [t, n] = e;
-                    return y(n, t, 'a');
+                    return O(n, t, 'a');
                 });
         if (
-            (p.push(
-                T({
+            (_.push(
+                I({
                     mid: 'audio',
                     type: 'audio',
                     setup: e,
-                    direction: i,
+                    direction: r,
                     baseSDP: n,
-                    codec: r,
-                    payload: a,
-                    bitrate: s,
-                    ssrcs: c.flat(),
-                    extensions: _
+                    codec: i,
+                    payload: o,
+                    bitrate: a,
+                    ssrcs: u.flat(),
+                    extensions: p
                 })
             ),
             l > 0)
         ) {
             let t = f
                 .filter((e) => {
-                    let [t, n, i, r, a] = e;
-                    return 'inactive' !== r && 'video' === i;
+                    let [t, n, r, i, o] = e;
+                    return 'inactive' !== i && 'video' === r;
                 })
                 .map((e) => {
                     let [t, n] = e;
-                    return y(n, t, 'v');
+                    return O(n, t, 'v');
                 });
-            p.push(
-                T({
+            _.push(
+                I({
                     mid: 'video',
                     type: 'video',
                     setup: e,
-                    direction: i,
+                    direction: r,
                     baseSDP: n,
-                    codec: o,
+                    codec: s,
                     payload: l,
-                    bitrate: u,
+                    bitrate: c,
                     ssrcs: t.flat(),
-                    extensions: _,
+                    extensions: p,
                     rtxPayload: d
                 })
             );
@@ -315,88 +349,88 @@ function b(e) {
     }
     return new RTCSessionDescription({
         type: t,
-        sdp: I(p)
+        sdp: S(_)
     });
 }
-function S(e) {
-    let { type: t, baseSDP: n, audioCodec: i, audioPayloadType: r, audioBitRate: a, videoCodec: s, videoPayloadType: o, videoBitRate: l, sendingVideo: u, rtxPayloadType: c, ssrcs: d, extensions: f } = e,
-        _ = [],
-        p = 'answer' === t ? 'passive' : 'actpass';
+function N(e) {
+    let { type: t, baseSDP: n, audioCodec: r, audioPayloadType: i, audioBitRate: o, videoCodec: a, videoPayloadType: s, videoBitRate: l, sendingVideo: c, rtxPayloadType: u, ssrcs: d, extensions: f } = e,
+        p = [],
+        _ = 'answer' === t ? 'passive' : 'actpass';
     return (
         d.forEach((e) => {
             let t,
                 { ssrc: d, cname: h, type: m, direction: g, mid: E } = e;
-            '' !== h ? (t = y(h, d, 'audio' === m ? 'a' : 'v')) : ((t = []), 'sendonly' === g ? (g = 'inactive') : 'sendrecv' === g && (g = 'recvonly'));
-            let v = 'audio' === m ? i : s,
-                I = 'audio' === m ? r : o,
-                b = 'audio' === m ? null : c,
-                S = 'audio' === m ? a : l;
-            _.push(
-                T({
+            '' !== h ? (t = O(h, d, 'audio' === m ? 'a' : 'v')) : ((t = []), 'sendonly' === g ? (g = 'inactive') : 'sendrecv' === g && (g = 'recvonly'));
+            let v = 'audio' === m ? r : a,
+                b = 'audio' === m ? i : s,
+                y = 'audio' === m ? null : u,
+                S = 'audio' === m ? o : l;
+            p.push(
+                I({
                     mid: E,
                     type: m,
-                    setup: p,
+                    setup: _,
                     direction: g,
                     baseSDP: n,
                     codec: v,
-                    payload: I,
+                    payload: b,
                     bitrate: S,
                     ssrcs: t,
                     extensions: f,
-                    rtxPayload: b,
-                    sendingVideo: u
+                    rtxPayload: y,
+                    sendingVideo: c
                 })
             );
         }),
         new RTCSessionDescription({
             type: t,
-            sdp: I(_)
+            sdp: S(p)
         })
     );
 }
-function A(e, t, n, i, r) {
-    let a = e.find((e) => e.codec === i);
-    if (null == a) return null;
-    let s = t.find((e) => RegExp('^apt='.concat(a.payload)).test(e.config)),
-        o = null;
-    if (null != s) {
-        let t = e.find((e) => e.codec === _.ad.RTX && e.payload === s.payload);
-        null != t && (o = t.payload);
+function A(e, t, n, r, i) {
+    let o = e.find((e) => e.codec === r);
+    if (null == o) return null;
+    let a = t.find((e) => RegExp('^apt='.concat(o.payload)).test(e.config)),
+        s = null;
+    if (null != a) {
+        let t = e.find((e) => e.codec === p.ad.RTX && e.payload === a.payload);
+        null != t && (s = t.payload);
     }
     return {
         type: n,
-        name: i,
-        priority: r + 1,
-        payloadType: a.payload,
-        rtxPayloadType: o
+        name: r,
+        priority: i + 1,
+        payloadType: o.payload,
+        rtxPayloadType: s
     };
 }
-function N(e) {
+function C(e) {
     let t = d.parse(e).media.reduce(
         (e, t) => {
             let n,
-                { type: i, rtp: r, ssrcs: a, fmtp: s, direction: o, mid: l } = t;
+                { type: r, rtp: i, ssrcs: o, fmtp: a, direction: s, mid: l } = t;
             switch (
                 (e.outboundStreams.push({
-                    type: i,
-                    direction: o,
+                    type: r,
+                    direction: s,
                     mid: l
                 }),
-                i)
+                r)
             ) {
                 case 'audio':
-                    [_.ad.OPUS].forEach((t, n) => {
-                        let a = A(r, s, i, t, n);
-                        null != a && e.codecs.push(a);
+                    [p.ad.OPUS].forEach((t, n) => {
+                        let o = A(i, a, r, t, n);
+                        null != o && e.codecs.push(o);
                     }),
-                        'sendrecv' === o && null != (n = null == a ? void 0 : a.find((e) => 'cname' === e.attribute)) && (e.audioSSRC = n.id);
+                        'sendrecv' === s && null != (n = null == o ? void 0 : o.find((e) => 'cname' === e.attribute)) && (e.audioSSRC = n.id);
                     break;
                 case 'video':
-                    [_.ad.H264, _.ad.VP8, _.ad.VP9].forEach((t, n) => {
-                        let a = A(r, s, i, t, n);
-                        null != a && e.codecs.push(a);
+                    [p.ad.H264, p.ad.VP8, p.ad.VP9].forEach((t, n) => {
+                        let o = A(i, a, r, t, n);
+                        null != o && e.codecs.push(o);
                     }),
-                        'sendrecv' === o && (null != (n = null == a ? void 0 : a.find((e) => 'cname' === e.attribute)) && (e.videoSSRC = n.id), null != (n = null == a ? void 0 : a.findLast((e) => 'cname' === e.attribute)) && (n.id === e.videoSSRC && m.warn('Unable to find a unique rtx SSRC!'), (e.rtxSSRC = n.id)));
+                        'sendrecv' === s && (null != (n = null == o ? void 0 : o.find((e) => 'cname' === e.attribute)) && (e.videoSSRC = n.id), null != (n = null == o ? void 0 : o.findLast((e) => 'cname' === e.attribute)) && (n.id === e.videoSSRC && E.warn('Unable to find a unique rtx SSRC!'), (e.rtxSSRC = n.id)));
             }
             return e;
         },
@@ -408,32 +442,32 @@ function N(e) {
             rtxSSRC: 0
         }
     );
-    return (t.codecs = l()(t.codecs, s())), t;
+    return (t.codecs = l()(t.codecs, a())), t;
 }
-function C(e) {
+function R(e) {
     var t;
-    let { codecs: n } = N(e),
-        i = n.find((e) => e.name === _.ad.VP8),
-        r = RegExp('^a=ice|a=extmap|a=fingerprint|opus|VP8|'.concat(null !== (t = null == i ? void 0 : i.rtxPayloadType) && void 0 !== t ? t : 0, ' rtx'), 'i');
+    let { codecs: n } = C(e),
+        r = n.find((e) => e.name === p.ad.VP8),
+        i = RegExp('^a=ice|a=extmap|a=fingerprint|opus|VP8|'.concat(null !== (t = null == r ? void 0 : r.rtxPayloadType) && void 0 !== t ? t : 0, ' rtx'), 'i');
     return {
-        sdp: [...new Set(e.split(/\r\n/).filter((e) => r.test(e)))].join('\n'),
+        sdp: [...new Set(e.split(/\r\n/).filter((e) => i.test(e)))].join('\n'),
         codecs: n
     };
 }
-function R(e) {
-    if (!e.includes('a=fingerprint')) return m.error('Remote SDP does not include fingerprint!'), !1;
-    if (!e.includes('a=ice-ufrag')) return m.error('Remote SDP does not include ICE user name!'), !1;
-    if (!e.includes('a=ice-pwd')) return m.error('Remote SDP does not include ICE password!'), !1;
-    if (!e.includes('a=candidate')) return m.error('Remote SDP does not include ICE candidate!'), !1;
-    if (!e.includes('c=')) return m.error('Remote SDP does not include c-line!'), !1;
+function P(e) {
+    if (!e.includes('a=fingerprint')) return E.error('Remote SDP does not include fingerprint!'), !1;
+    if (!e.includes('a=ice-ufrag')) return E.error('Remote SDP does not include ICE user name!'), !1;
+    if (!e.includes('a=ice-pwd')) return E.error('Remote SDP does not include ICE password!'), !1;
+    if (!e.includes('a=candidate')) return E.error('Remote SDP does not include ICE candidate!'), !1;
+    if (!e.includes('c=')) return E.error('Remote SDP does not include c-line!'), !1;
     let t = e
         .split('\n')
         .filter((e) => e.startsWith('c='))
         .join()
         .trim();
-    return !(t.split(' ').length < 3) || (m.error('Incorrect c-line: '.concat(t)), !1);
+    return !(t.split(' ').length < 3) || (E.error('Incorrect c-line: '.concat(t)), !1);
 }
-function O(e) {
+function w(e) {
     return [...new Set(e.split(/\r\n/).filter((e) => e.startsWith('a=extmap:')))].map((e) => {
         let t = e.split(' ');
         return {

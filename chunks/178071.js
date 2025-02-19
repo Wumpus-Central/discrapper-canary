@@ -1,17 +1,17 @@
 n.d(t, {
-    Z: () => p,
-    y: () => h
+    Z: () => g,
+    y: () => p
 }),
     n(47120);
-var i = n(200651),
-    l = n(192379),
-    r = n(442837),
-    a = n(481060),
-    s = n(239091),
-    o = n(585237),
-    d = n(551428),
-    c = n(388032);
-function u(e, t, n) {
+var r = n(200651),
+    i = n(192379),
+    l = n(442837),
+    o = n(481060),
+    a = n(239091),
+    s = n(585237),
+    c = n(551428),
+    u = n(388032);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,58 +24,112 @@ function u(e, t, n) {
         e
     );
 }
-let h = {
-    DropdownSizes: o.Z.DropdownSizes,
-    Sizes: o.Z.Sizes,
-    Colors: o.Z.Colors,
-    Looks: o.Z.Looks
+let p = {
+    DropdownSizes: s.Z.DropdownSizes,
+    Sizes: s.Z.Sizes,
+    Colors: s.Z.Colors,
+    Looks: s.Z.Looks
 };
-class m extends l.PureComponent {
+class h extends i.PureComponent {
     render() {
-        let { storeListings: e, primaryStoreListing: t, skuId: n, onStoreListingSelect: l, currentStoreListingId: r, ...a } = this.props,
-            s = null != t ? 1 : 0;
-        return (s += e.length) < 2
+        var e, t;
+        let n = this.props,
+            { storeListings: i, primaryStoreListing: l, skuId: o, onStoreListingSelect: a, currentStoreListingId: c } = n,
+            p = (function (e, t) {
+                if (null == e) return {};
+                var n,
+                    r,
+                    i = (function (e, t) {
+                        if (null == e) return {};
+                        var n,
+                            r,
+                            i = {},
+                            l = Object.keys(e);
+                        for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        return i;
+                    })(e, t);
+                if (Object.getOwnPropertySymbols) {
+                    var l = Object.getOwnPropertySymbols(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                }
+                return i;
+            })(n, ['storeListings', 'primaryStoreListing', 'skuId', 'onStoreListingSelect', 'currentStoreListingId']),
+            h = +(null != l);
+        return (h += i.length) < 2
             ? null
-            : (0, i.jsx)(o.Z, {
-                  onClick: this.handleContextMenu,
-                  onDropdownClick: this.handleContextMenu,
-                  onContextMenu: this.handleContextMenu,
-                  ...a,
-                  children: c.intl.string(c.t.hElye3)
-              });
+            : (0, r.jsx)(
+                  s.Z,
+                  ((e = (function (e) {
+                      for (var t = 1; t < arguments.length; t++) {
+                          var n = null != arguments[t] ? arguments[t] : {},
+                              r = Object.keys(n);
+                          'function' == typeof Object.getOwnPropertySymbols &&
+                              (r = r.concat(
+                                  Object.getOwnPropertySymbols(n).filter(function (e) {
+                                      return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                  })
+                              )),
+                              r.forEach(function (t) {
+                                  d(e, t, n[t]);
+                              });
+                      }
+                      return e;
+                  })(
+                      {
+                          onClick: this.handleContextMenu,
+                          onDropdownClick: this.handleContextMenu,
+                          onContextMenu: this.handleContextMenu
+                      },
+                      p
+                  )),
+                  (t = t = { children: u.NW.string(u.t.hElye3) }),
+                  Object.getOwnPropertyDescriptors
+                      ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+                      : (function (e, t) {
+                            var n = Object.keys(e);
+                            if (Object.getOwnPropertySymbols) {
+                                var r = Object.getOwnPropertySymbols(e);
+                                n.push.apply(n, r);
+                            }
+                            return n;
+                        })(Object(t)).forEach(function (n) {
+                            Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+                        }),
+                  e)
+              );
     }
     constructor(...e) {
         super(...e),
-            u(this, 'renderContextMenu', () => {
-                let { storeListings: e, onStoreListingSelect: t, currentStoreListingId: n, onMenuSelect: l } = this.props,
-                    r = e.map((e) =>
+            d(this, 'renderContextMenu', () => {
+                let { storeListings: e, onStoreListingSelect: t, currentStoreListingId: n, onMenuSelect: i } = this.props,
+                    l = e.map((e) =>
                         e.id !== n
-                            ? (0, i.jsx)(a.sNh, {
+                            ? (0, r.jsx)(o.sNh, {
                                   id: ''.concat(e.id),
                                   label: e.id,
                                   action: () => {
-                                      s.Zy(), null == t || t(e);
+                                      a.Zy(), null == t || t(e);
                                   }
                               })
                             : null
                     );
-                return (0, i.jsx)(a.v2r, {
-                    onSelect: l,
+                return (0, r.jsx)(o.v2r, {
+                    onSelect: i,
                     navId: 'test-store-listing',
-                    'aria-label': c.intl.string(c.t.ogxXGh),
-                    onClose: s.Zy,
-                    children: r
+                    'aria-label': u.NW.string(u.t.ogxXGh),
+                    onClose: a.Zy,
+                    children: l
                 });
             }),
-            u(this, 'handleContextMenu', (e) => {
-                e.stopPropagation(), s.vq(e, this.renderContextMenu);
+            d(this, 'handleContextMenu', (e) => {
+                e.stopPropagation(), a.vq(e, this.renderContextMenu);
             });
     }
 }
-let p = r.ZP.connectStores([d.Z], (e) => {
+let g = l.ZP.connectStores([c.Z], (e) => {
     let { skuId: t } = e;
     return {
-        storeListings: d.Z.getUnpublishedForSKU(t),
-        primaryStoreListing: d.Z.getForSKU(t)
+        storeListings: c.Z.getUnpublishedForSKU(t),
+        primaryStoreListing: c.Z.getForSKU(t)
     };
-})(m);
+})(h);

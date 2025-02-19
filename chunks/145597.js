@@ -1,16 +1,16 @@
-let i;
+let r;
 n.d(t, {
-    FW: () => o,
-    Gr: () => s,
-    Ht: () => p,
-    Js: () => u,
+    FW: () => s,
+    Gr: () => a,
+    Ht: () => _,
+    Js: () => c,
     QF: () => f,
-    R2: () => c,
+    R2: () => u,
     Te: () => h,
-    Tq: () => a,
+    Tq: () => o,
     VS: () => g,
     qU: () => l,
-    tB: () => _,
+    tB: () => p,
     vR: () => m
 }),
     n(610138),
@@ -18,36 +18,37 @@ n.d(t, {
     n(78328),
     n(815648),
     n(47120),
+    n(301563),
     n(490029);
-var r = n(358085);
+var i = n(358085);
 n(981631);
-let a = 2,
-    s = {
+let o = 2,
+    a = {
         width: 3840,
         height: 2160
     },
-    o = {
+    s = {
         width: 768,
         height: 432
     },
     l = 'overlay_default',
-    u = -2,
-    c = -1,
+    c = -2,
+    u = -1,
     d = !1;
 function f() {
     var e;
-    if (void 0 !== i && i !== c) return i;
+    if (void 0 !== r && r !== u) return r;
     let t = parseInt(null !== (e = new URLSearchParams(window.location.search).get('pid')) && void 0 !== e ? e : '', 10);
-    return isNaN(t) && (t = c), (i = t);
+    return isNaN(t) && (t = u), (r = t);
 }
-function _(e) {
-    i = e;
+function p(e) {
+    r = e;
 }
-function p() {
+function _() {
     return new URLSearchParams(window.location.search).get('rpc_auth_token');
 }
 function h(e) {
-    return !r.isPlatformEmbedded || (e.width >= o.width && e.height >= o.height);
+    return !i.isPlatformEmbedded || (e.width >= s.width && e.height >= s.height);
 }
 function m(e) {
     d = e;

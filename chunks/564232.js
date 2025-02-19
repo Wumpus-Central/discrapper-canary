@@ -1,123 +1,172 @@
-t.d(i, { default: () => w }), t(47120);
-var n = t(200651),
-    r = t(192379),
-    s = t(392711),
-    d = t.n(s),
-    l = t(442837),
-    u = t(481060),
-    a = t(239091),
-    c = t(276264),
-    o = t(600164),
-    m = t(313201),
-    h = t(184301),
-    g = t(347475),
-    f = t(271383),
-    p = t(699516),
-    x = t(594174),
-    j = t(709054),
-    I = t(432496),
-    b = t(981631),
-    k = t(388032),
-    Z = t(76731);
-function w(e) {
-    let { guild: i, transitionState: s, onClose: w } = e,
-        N = (0, m.Dt)(),
-        y = r.useMemo(() => {
-            let e = p.Z.getRelationships();
-            return j.default.keys(e).filter((i) => e[i] === b.OGo.FRIEND);
+r.d(t, { default: () => v }), r(47120);
+var n = r(200651),
+    i = r(192379),
+    s = r(392711),
+    l = r.n(s),
+    d = r(442837),
+    u = r(481060),
+    o = r(239091),
+    c = r(276264),
+    a = r(600164),
+    p = r(313201),
+    b = r(184301),
+    m = r(347475),
+    f = r(271383),
+    g = r(699516),
+    j = r(594174),
+    h = r(709054),
+    y = r(432496),
+    O = r(981631),
+    w = r(388032),
+    x = r(606323);
+function I(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var r = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(r);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (n = n.concat(
+                Object.getOwnPropertySymbols(r).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                })
+            )),
+            n.forEach(function (t) {
+                var n;
+                (n = r[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: n,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = n);
+            });
+    }
+    return e;
+}
+function P(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var r = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var n = Object.getOwnPropertySymbols(e);
+                      r.push.apply(r, n);
+                  }
+                  return r;
+              })(Object(t)).forEach(function (r) {
+                  Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
+              }),
+        e
+    );
+}
+function v(e) {
+    let { guild: t, transitionState: s, onClose: v } = e,
+        k = (0, p.Dt)(),
+        S = i.useMemo(() => {
+            let e = g.Z.getRelationships();
+            return h.default.keys(e).filter((t) => e[t] === O.OGo.FRIEND);
         }, []);
-    r.useEffect(() => {
-        I.Z.fetchFriendMembersIfNotFetched(i.id, y);
-    }, [i.id, y]);
-    let F = (0, l.e7)([f.ZP], () => f.ZP.getMembers(i.id)),
-        M = r.useMemo(
+    i.useEffect(() => {
+        y.Z.fetchFriendMembersIfNotFetched(t.id, S);
+    }, [t.id, S]);
+    let N = (0, d.e7)([f.ZP], () => f.ZP.getMembers(t.id)),
+        Z = i.useMemo(
             () =>
-                d()(F)
-                    .filter((e) => !!y.includes(e.userId) && null != x.default.getUser(e.userId))
+                l()(N)
+                    .filter((e) => !!S.includes(e.userId) && null != j.default.getUser(e.userId))
                     .sortBy((e) => {
-                        var i;
-                        let t = x.default.getUser(e.userId);
-                        return (null != t ? (null !== (i = e.nick) && void 0 !== i ? i : t.username) : '').toLocaleLowerCase();
+                        var t;
+                        let r = j.default.getUser(e.userId);
+                        return (null != r ? (null !== (t = e.nick) && void 0 !== t ? t : r.username) : '').toLocaleLowerCase();
                     })
                     .map((e) => {
-                        let r = x.default.getUser(e.userId);
+                        let i = j.default.getUser(e.userId);
                         return (0, n.jsx)(
                             u.yRy,
                             {
-                                preload: () => (0, h.Z)(r.id, r.getAvatarURL(i.id, 80), { guildId: i.id }),
-                                renderPopout: (t) =>
-                                    (0, n.jsx)(g.Z, {
-                                        ...t,
-                                        userId: e.userId,
-                                        guildId: i.id
-                                    }),
+                                preload: () => (0, b.Z)(i.id, i.getAvatarURL(t.id, 80), { guildId: t.id }),
+                                renderPopout: (r) =>
+                                    (0, n.jsx)(
+                                        m.Z,
+                                        P(I({}, r), {
+                                            userId: e.userId,
+                                            guildId: t.id
+                                        })
+                                    ),
                                 spacing: 14,
-                                children: (s, d) => {
-                                    let { isShown: l } = d;
+                                children: (s, l) => {
+                                    let { isShown: d } = l;
                                     return (0, n.jsx)(
                                         c.Z,
-                                        {
-                                            className: Z.member,
-                                            selected: l,
-                                            colorString: e.colorString,
-                                            user: r,
-                                            isOwner: e.userId === i.ownerId,
-                                            nick: e.nick,
-                                            premiumSince: null == e.premiumSince ? null : new Date(e.premiumSince),
-                                            guildId: i.id,
-                                            onContextMenu: (e) => {
-                                                (0, a.jW)(e, async () => {
-                                                    let { default: e } = await Promise.all([t.e('79695'), t.e('26976'), t.e('97319')]).then(t.bind(t, 415118));
-                                                    return (t) =>
-                                                        (0, n.jsx)(e, {
-                                                            ...t,
-                                                            user: r,
-                                                            guildId: i.id,
-                                                            showMediaItems: !0
-                                                        });
-                                                });
+                                        I(
+                                            {
+                                                className: x.member,
+                                                selected: d,
+                                                colorString: e.colorString,
+                                                user: i,
+                                                isOwner: e.userId === t.ownerId,
+                                                nick: e.nick,
+                                                premiumSince: null == e.premiumSince ? null : new Date(e.premiumSince),
+                                                guildId: t.id,
+                                                onContextMenu: (e) => {
+                                                    (0, o.jW)(e, async () => {
+                                                        let { default: e } = await Promise.all([r.e('79695'), r.e('26976'), r.e('80524')]).then(r.bind(r, 415118));
+                                                        return (r) =>
+                                                            (0, n.jsx)(
+                                                                e,
+                                                                P(I({}, r), {
+                                                                    user: i,
+                                                                    guildId: t.id,
+                                                                    showMediaItems: !0
+                                                                })
+                                                            );
+                                                    });
+                                                }
                                             },
-                                            ...s
-                                        },
+                                            s
+                                        ),
                                         e.userId
                                     );
                                 }
                             },
-                            r.id
+                            i.id
                         );
                     })
                     .value(),
-            [y, i.id, i.ownerId, F]
+            [S, t.id, t.ownerId, N]
         ),
-        _ = I.Z.isFetchingFriendsForGuild(i.id);
+        E = y.Z.isFetchingFriendsForGuild(t.id);
     return (0, n.jsxs)(u.Y0X, {
         transitionState: s,
         size: u.CgR.SMALL,
-        'aria-labelledby': N,
+        'aria-labelledby': k,
         children: [
             (0, n.jsxs)(u.xBx, {
                 separator: !1,
-                justify: o.Z.Justify.BETWEEN,
+                justify: a.Z.Justify.BETWEEN,
                 children: [
                     (0, n.jsxs)('div', {
-                        className: Z.heading,
+                        className: x.heading,
                         children: [
                             (0, n.jsx)('span', { children: (0, n.jsx)(u.iFz, {}) }),
                             (0, n.jsx)(u.X6q, {
                                 variant: 'heading-lg/semibold',
-                                children: k.intl.format(_ ? k.t.EtQnZm : k.t.OgMdNT, {
-                                    guildName: i.name,
-                                    numFriends: M.length
+                                children: w.NW.format(E ? w.t.EtQnZm : w.t.OgMdNT, {
+                                    guildName: t.name,
+                                    numFriends: Z.length
                                 })
                             })
                         ]
                     }),
-                    (0, n.jsx)(u.olH, { onClick: w })
+                    (0, n.jsx)(u.olH, { onClick: v })
                 ]
             }),
             (0, n.jsxs)(u.hzk, {
-                className: Z.content,
-                children: [_ && (0, n.jsx)(u.$jN, {}), (0, n.jsx)(u.Ttm, { children: M })]
+                className: x.content,
+                children: [E && (0, n.jsx)(u.$jN, {}), (0, n.jsx)(u.Ttm, { children: Z })]
             })
         ]
     });

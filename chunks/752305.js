@@ -1,4 +1,4 @@
-function i() {
+function r() {
     return {
         textValue: '',
         richValue: [
@@ -9,34 +9,35 @@ function i() {
         ]
     };
 }
-function r(e) {
+function i(e) {
     return {
         textValue: e,
-        richValue: s(e)
+        richValue: a(e)
     };
 }
 n.d(t, {
-    H2: () => i,
-    JM: () => s,
-    VI: () => o,
-    eK: () => r
+    H2: () => r,
+    JM: () => a,
+    VI: () => s,
+    eK: () => i
 }),
+    n(301563),
     n(411104);
-let a = Object.freeze([
+let o = Object.freeze([
     Object.freeze({
         type: 'line',
         children: Object.freeze([Object.freeze({ text: '' })])
     })
 ]);
-function s(e) {
+function a(e) {
     return '' !== e
         ? e.split('\n').map((e) => ({
               type: 'line',
               children: [{ text: e }]
           }))
-        : a;
+        : o;
 }
-function o(e) {
+function s(e) {
     switch (e.type) {
         case 'userMention':
             return {

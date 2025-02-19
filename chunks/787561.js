@@ -1,60 +1,104 @@
 n.d(t, {
-    X: () => A,
-    Z: () => O
+    X: () => D,
+    Z: () => k
 }),
+    n(266796),
     n(47120),
     n(653041);
-var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    s = n.n(l),
-    a = n(442837),
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(442837),
     o = n(544891),
     c = n(433517),
     d = n(481060),
     u = n(852860),
     m = n(493773),
-    h = n(933557),
+    p = n(933557),
     g = n(63568),
-    x = n(769654),
-    p = n(984933),
-    _ = n(650774),
-    C = n(430824),
-    f = n(496675),
-    v = n(699516),
-    N = n(594174),
-    j = n(434404),
-    I = n(999382),
-    E = n(54842),
-    b = n(929834),
-    T = n(981631),
-    S = n(388032),
-    R = n(842058),
-    Z = n(922905);
-let y = 'dismissedCommunityFeaturesUpsell',
-    A = () => {
+    h = n(769654),
+    f = n(984933),
+    b = n(650774),
+    x = n(430824),
+    j = n(496675),
+    N = n(699516),
+    v = n(594174),
+    _ = n(434404),
+    O = n(999382),
+    y = n(54842),
+    C = n(929834),
+    I = n(981631),
+    E = n(388032),
+    S = n(264393),
+    T = n(922905);
+function P(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function w(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let R = 'dismissedCommunityFeaturesUpsell',
+    D = () => {
         let e;
         let {
                 guild: t,
                 submitting: n,
-                errors: r
-            } = (0, a.cj)([I.Z], () => ({
-                submitting: I.Z.isSubmitting(),
-                guild: I.Z.getGuild(),
-                errors: I.Z.getErrors()
+                errors: i
+            } = (0, l.cj)([O.Z], () => ({
+                submitting: O.Z.isSubmitting(),
+                guild: O.Z.getGuild(),
+                errors: O.Z.getErrors()
             })),
-            l = Object.keys(r),
-            s = l.length > 0 ? l[0] : null;
+            s = Object.keys(i),
+            a = s.length > 0 ? s[0] : null;
         return (
-            (e = 'rules_channel_id' === s ? S.intl.string(S.t['7IrBYm']) : null != s ? r[s] : void 0),
-            (0, i.jsx)(u.Z, {
+            (e = 'rules_channel_id' === a ? E.NW.string(E.t['7IrBYm']) : null != a ? i[a] : void 0),
+            (0, r.jsx)(u.Z, {
                 submitting: n,
                 onReset: () => {
-                    null != t && j.Z.init(t.id);
+                    null != t && _.Z.init(t.id);
                 },
                 onSave: () => {
                     null != t &&
-                        j.Z.saveGuild(t.id, {
+                        _.Z.saveGuild(t.id, {
                             rulesChannelId: t.rulesChannelId,
                             preferredLocale: t.preferredLocale,
                             safetyAlertsChannelId: t.safetyAlertsChannelId,
@@ -67,421 +111,436 @@ let y = 'dismissedCommunityFeaturesUpsell',
             })
         );
     },
-    L = (e) => {
-        let { discoveryEnabled: t, onboardingEnabled: n, guild: l } = e,
-            [s, u] = r.useState(!0 === c.K.get(y)),
-            h = (0, a.e7)([_.Z], () => {
+    Z = (e) => {
+        let { discoveryEnabled: t, onboardingEnabled: n, guild: s } = e,
+            [a, u] = i.useState(!0 === c.K.get(R)),
+            p = (0, l.e7)([b.Z], () => {
                 var e;
-                return null !== (e = _.Z.getMemberCount(l.id)) && void 0 !== e ? e : 0;
+                return null !== (e = b.Z.getMemberCount(s.id)) && void 0 !== e ? e : 0;
             }),
-            [g, p] = r.useState(!1);
+            [g, f] = i.useState(!1);
         (0, m.ZP)(() => {
             o.tn
                 .get({
-                    url: T.ANM.GUILD_ADMIN_SERVER_ELIGIBILITY(l.id),
+                    url: I.ANM.GUILD_ADMIN_SERVER_ELIGIBILITY(s.id),
                     rejectWithError: !0
                 })
                 .then((e) => {
-                    p(e.body.eligible_for_admin_server);
+                    f(e.body.eligible_for_admin_server);
                 })
-                .catch(() => p(!1));
+                .catch(() => f(!1));
         });
-        let f = (0, a.e7)([C.Z], () => C.Z.getGuild('942897714956472401')),
-            v = l.isCommunity() && h >= 1000 && g && !(null != f);
-        if (t && n && !v) return null;
-        let N = async () => {
+        let j = (0, l.e7)([x.Z], () => x.Z.getGuild('942897714956472401')),
+            N = s.isCommunity() && p >= 1000 && g && null == j;
+        if (t && n && !N) return null;
+        let v = async () => {
             try {
                 let e = await o.tn.post({
-                    url: T.ANM.JOIN_ADMIN_SERVER(l.id),
+                    url: I.ANM.JOIN_ADMIN_SERVER(s.id),
                     oldFormErrors: !0,
                     rejectWithError: !0
                 });
-                j.Z.close(), (0, x.X)(e.body.id);
-            } catch {}
+                _.Z.close(), (0, h.X)(e.body.id);
+            } catch (e) {}
         };
-        return s && !v
+        return a && !N
             ? null
-            : (0, i.jsxs)('div', {
-                  className: R.upsellContainer,
+            : (0, r.jsxs)('div', {
+                  className: S.upsellContainer,
                   children: [
-                      (0, i.jsxs)('div', {
-                          className: R.upsellContent,
+                      (0, r.jsxs)('div', {
+                          className: S.upsellContent,
                           children: [
-                              (0, i.jsx)('img', {
-                                  src: Z,
+                              (0, r.jsx)('img', {
+                                  src: T,
                                   alt: '',
                                   width: 60,
-                                  className: R.upsellImage
+                                  className: S.upsellImage
                               }),
-                              (0, i.jsxs)('div', {
+                              (0, r.jsxs)('div', {
                                   children: [
-                                      (0, i.jsx)(d.X6q, {
+                                      (0, r.jsx)(d.X6q, {
                                           variant: 'heading-md/semibold',
-                                          className: R.upsellHeader,
-                                          children: S.intl.string(S.t['pR/BgY'])
+                                          className: S.upsellHeader,
+                                          children: E.NW.string(E.t['pR/BgY'])
                                       }),
-                                      (0, i.jsx)(d.Text, {
+                                      (0, r.jsx)(d.Text, {
                                           variant: 'text-sm/normal',
-                                          children: S.intl.string(S.t['V+Yo1t'])
+                                          children: E.NW.string(E.t['V+Yo1t'])
                                       })
                                   ]
                               })
                           ]
                       }),
-                      (0, i.jsx)(d.zxk, {
-                          'aria-label': S.intl.string(S.t.cpT0Cg),
+                      (0, r.jsx)(d.zxk, {
+                          'aria-label': E.NW.string(E.t.cpT0Cg),
                           look: d.zxk.Looks.BLANK,
                           size: d.zxk.Sizes.NONE,
-                          className: R.upsellClose,
+                          className: S.upsellClose,
                           onClick: () => {
-                              c.K.set(y, !0), u(!0);
+                              c.K.set(R, !0), u(!0);
                           },
-                          children: (0, i.jsx)(d.Dio, {
+                          children: (0, r.jsx)(d.Dio, {
                               size: 'md',
                               color: 'currentColor'
                           })
                       }),
-                      (0, i.jsxs)('div', {
-                          className: R.upsellFooter,
+                      (0, r.jsxs)('div', {
+                          className: S.upsellFooter,
                           children: [
-                              v &&
-                                  (0, i.jsx)(d.zxk, {
+                              N &&
+                                  (0, r.jsx)(d.zxk, {
                                       size: d.zxk.Sizes.SMALL,
-                                      onClick: N,
-                                      className: R.upsellButton,
-                                      children: S.intl.string(S.t.iF1Asr)
+                                      onClick: v,
+                                      className: S.upsellButton,
+                                      children: E.NW.string(E.t.iF1Asr)
                                   }),
                               n
                                   ? null
-                                  : (0, i.jsx)(d.zxk, {
+                                  : (0, r.jsx)(d.zxk, {
                                         size: d.zxk.Sizes.SMALL,
                                         onClick: () => {
-                                            j.Z.setSection(T.pNK.ONBOARDING);
+                                            _.Z.setSection(I.pNK.ONBOARDING);
                                         },
-                                        className: R.upsellButton,
-                                        children: S.intl.string(S.t['S/DfiY'])
+                                        className: S.upsellButton,
+                                        children: E.NW.string(E.t['S/DfiY'])
                                     }),
                               t
                                   ? null
-                                  : (0, i.jsx)(d.zxk, {
+                                  : (0, r.jsx)(d.zxk, {
                                         size: d.zxk.Sizes.SMALL,
                                         onClick: () => {
-                                            j.Z.setSection(T.pNK.DISCOVERY);
+                                            _.Z.setSection(I.pNK.DISCOVERY);
                                         },
-                                        className: R.upsellButton,
+                                        className: S.upsellButton,
                                         color: d.zxk.Colors.PRIMARY,
-                                        children: S.intl.string(S.t['0kmJd3'])
+                                        children: E.NW.string(E.t['0kmJd3'])
                                     }),
-                              (0, i.jsx)(d.zxk, {
+                              (0, r.jsx)(d.zxk, {
                                   size: d.zxk.Sizes.SMALL,
                                   onClick: () => {
-                                      j.Z.setSection(T.pNK.ANALYTICS);
+                                      _.Z.setSection(I.pNK.ANALYTICS);
                                   },
-                                  className: R.upsellButton,
+                                  className: S.upsellButton,
                                   color: d.zxk.Colors.PRIMARY,
-                                  children: S.intl.string(S.t.BQIYTU)
+                                  children: E.NW.string(E.t.BQIYTU)
                               })
                           ]
                       })
                   ]
               });
     },
-    D = () => {
-        let e = (0, a.e7)([I.Z], () => I.Z.getGuild()),
-            { canManageGuild: t, isGuildAdmin: n } = (0, a.cj)([f.Z], () => ({
-                canManageGuild: f.Z.can(T.Plq.MANAGE_GUILD, e),
-                isGuildAdmin: f.Z.can(T.Plq.ADMINISTRATOR, e)
+    A = () => {
+        let e = (0, l.e7)([O.Z], () => O.Z.getGuild()),
+            { canManageGuild: t, isGuildAdmin: n } = (0, l.cj)([j.Z], () => ({
+                canManageGuild: j.Z.can(I.Plq.MANAGE_GUILD, e),
+                isGuildAdmin: j.Z.can(I.Plq.ADMINISTRATOR, e)
             })),
-            l = (0, a.e7)([p.ZP], () => (null != e ? p.ZP.getChannels(e.id) : null)),
-            o = r.useMemo(b.jb, []),
-            u = !0 !== c.K.get(y);
+            s = (0, l.e7)([f.ZP], () => (null != e ? f.ZP.getChannels(e.id) : null)),
+            o = i.useMemo(C.jb, []),
+            u = !0 !== c.K.get(R);
         if (null == e) return null;
         let m = [];
-        null != l &&
-            l[p.sH].forEach((e) => {
+        null != s &&
+            s[f.sH].forEach((e) => {
                 let { channel: t } = e;
-                t.type === T.d4z.GUILD_TEXT &&
+                t.type === I.d4z.GUILD_TEXT &&
                     m.push({
                         value: t.id,
-                        label: (0, h.F6)(t, N.default, v.Z, !0)
+                        label: (0, p.F6)(t, v.default, N.Z, !0)
                     });
             });
-        let x = () => {
-                j.Z.init(e.id), j.Z.open(e.id, T.pNK.MEMBER_VERIFICATION);
+        let h = () => {
+                _.Z.init(e.id), _.Z.open(e.id, I.pNK.MEMBER_VERIFICATION);
             },
-            _ = () => {
+            b = () => {
                 if (null == e) return;
                 let t = new Set(e.features);
-                t.delete(T.oNc.COMMUNITY),
-                    t.delete(T.oNc.DISCOVERABLE),
-                    (0, g.K2)(e.id, 'disableCommunity') || e.hasFeature(T.oNc.CLAN) || t.delete(T.oNc.MEMBER_VERIFICATION_GATE_ENABLED),
-                    t.delete(T.oNc.PREVIEW_ENABLED),
-                    j.Z.updateGuild({
+                t.delete(I.oNc.COMMUNITY),
+                    t.delete(I.oNc.DISCOVERABLE),
+                    (0, g.K2)(e.id, 'disableCommunity') || e.hasFeature(I.oNc.CLAN) || t.delete(I.oNc.MEMBER_VERIFICATION_GATE_ENABLED),
+                    t.delete(I.oNc.PREVIEW_ENABLED),
+                    _.Z.updateGuild({
                         features: t,
                         rulesChannelId: null,
                         publicUpdatesChannelId: null
                     });
             },
-            C = (e) => {
-                j.Z.updateGuild({ description: e });
+            x = (e) => {
+                _.Z.updateGuild({ description: e });
             },
-            E = () => {
+            y = () => {
                 let t = (0, g.K2)(e.id, 'GuildSettingsCommunity');
-                e.features.has(T.oNc.DISCOVERABLE) && e.features.has(T.oNc.PARTNERED)
+                e.features.has(I.oNc.DISCOVERABLE) && e.features.has(I.oNc.PARTNERED)
                     ? (0, d.h7j)((e) =>
-                          (0, i.jsx)(d.ConfirmModal, {
-                              ...e,
-                              header: S.intl.string(S.t.iBnVHR),
-                              confirmText: S.intl.string(S.t['cY+Ooa']),
-                              cancelText: S.intl.string(S.t.oEAioK),
-                              onConfirm: _,
-                              children: (0, i.jsx)(d.Text, {
-                                  variant: 'text-sm/normal',
-                                  children: S.intl.string(S.t['P+Sh8f'])
-                              })
-                          })
-                      )
-                    : e.features.has(T.oNc.DISCOVERABLE)
-                      ? (0, d.h7j)((e) =>
-                            (0, i.jsx)(d.ConfirmModal, {
-                                ...e,
-                                header: S.intl.string(S.t.iBnVHR),
-                                confirmText: S.intl.string(S.t['cY+Ooa']),
-                                cancelText: S.intl.string(S.t.oEAioK),
-                                onConfirm: _,
-                                children: (0, i.jsx)(d.Text, {
-                                    variant: 'text-sm/normal',
-                                    children: S.intl.string(S.t['eMx/ub'])
-                                })
-                            })
-                        )
-                      : e.features.has(T.oNc.PARTNERED)
-                        ? (0, d.h7j)((e) =>
-                              (0, i.jsx)(d.ConfirmModal, {
-                                  ...e,
-                                  header: S.intl.string(S.t.iBnVHR),
-                                  confirmText: S.intl.string(S.t['cY+Ooa']),
-                                  cancelText: S.intl.string(S.t.oEAioK),
-                                  onConfirm: _,
-                                  children: (0, i.jsx)(d.Text, {
+                          (0, r.jsx)(
+                              d.ConfirmModal,
+                              w(P({}, e), {
+                                  header: E.NW.string(E.t.iBnVHR),
+                                  confirmText: E.NW.string(E.t['cY+Ooa']),
+                                  cancelText: E.NW.string(E.t.oEAioK),
+                                  onConfirm: b,
+                                  children: (0, r.jsx)(d.Text, {
                                       variant: 'text-sm/normal',
-                                      children: S.intl.string(S.t.l1wLeX)
+                                      children: E.NW.string(E.t['P+Sh8f'])
                                   })
                               })
                           )
-                        : !e.features.has(T.oNc.MEMBER_VERIFICATION_GATE_ENABLED) || t || e.features.has(T.oNc.CLAN)
-                          ? _()
-                          : (0, d.h7j)((e) =>
-                                (0, i.jsx)(d.ConfirmModal, {
-                                    ...e,
-                                    header: S.intl.string(S.t.iBnVHR),
-                                    confirmButtonColor: d.zxk.Colors.BRAND,
-                                    confirmText: S.intl.string(S.t.izNBMz),
-                                    cancelText: S.intl.string(S.t.oEAioK),
-                                    onConfirm: x,
-                                    children: (0, i.jsx)(d.Text, {
+                      )
+                    : e.features.has(I.oNc.DISCOVERABLE)
+                      ? (0, d.h7j)((e) =>
+                            (0, r.jsx)(
+                                d.ConfirmModal,
+                                w(P({}, e), {
+                                    header: E.NW.string(E.t.iBnVHR),
+                                    confirmText: E.NW.string(E.t['cY+Ooa']),
+                                    cancelText: E.NW.string(E.t.oEAioK),
+                                    onConfirm: b,
+                                    children: (0, r.jsx)(d.Text, {
                                         variant: 'text-sm/normal',
-                                        children: S.intl.string(S.t.kQzUNj)
+                                        children: E.NW.string(E.t['eMx/ub'])
                                     })
                                 })
+                            )
+                        )
+                      : e.features.has(I.oNc.PARTNERED)
+                        ? (0, d.h7j)((e) =>
+                              (0, r.jsx)(
+                                  d.ConfirmModal,
+                                  w(P({}, e), {
+                                      header: E.NW.string(E.t.iBnVHR),
+                                      confirmText: E.NW.string(E.t['cY+Ooa']),
+                                      cancelText: E.NW.string(E.t.oEAioK),
+                                      onConfirm: b,
+                                      children: (0, r.jsx)(d.Text, {
+                                          variant: 'text-sm/normal',
+                                          children: E.NW.string(E.t.l1wLeX)
+                                      })
+                                  })
+                              )
+                          )
+                        : !e.features.has(I.oNc.MEMBER_VERIFICATION_GATE_ENABLED) || t || e.features.has(I.oNc.CLAN)
+                          ? b()
+                          : (0, d.h7j)((e) =>
+                                (0, r.jsx)(
+                                    d.ConfirmModal,
+                                    w(P({}, e), {
+                                        header: E.NW.string(E.t.iBnVHR),
+                                        confirmButtonColor: d.zxk.Colors.BRAND,
+                                        confirmText: E.NW.string(E.t.izNBMz),
+                                        cancelText: E.NW.string(E.t.oEAioK),
+                                        onConfirm: h,
+                                        children: (0, r.jsx)(d.Text, {
+                                            variant: 'text-sm/normal',
+                                            children: E.NW.string(E.t.kQzUNj)
+                                        })
+                                    })
+                                )
                             );
             };
-        return (0, i.jsxs)(d.hjN, {
-            title: S.intl.string(S.t.nRtNqq),
+        return (0, r.jsxs)(d.hjN, {
+            title: E.NW.string(E.t.nRtNqq),
             tag: d.RB0.H1,
             children: [
                 u
-                    ? (0, i.jsx)(L, {
-                          discoveryEnabled: e.features.has(T.oNc.DISCOVERABLE),
-                          onboardingEnabled: e.features.has(T.oNc.GUILD_ONBOARDING),
+                    ? (0, r.jsx)(Z, {
+                          discoveryEnabled: e.features.has(I.oNc.DISCOVERABLE),
+                          onboardingEnabled: e.features.has(I.oNc.GUILD_ONBOARDING),
                           guild: e
                       })
                     : null,
-                (0, i.jsxs)(d.hjN, {
-                    className: s()(R.twoColumnFormSection, R.firstSection),
+                (0, r.jsxs)(d.hjN, {
+                    className: a()(S.twoColumnFormSection, S.firstSection),
                     children: [
-                        (0, i.jsxs)('div', {
-                            className: R.descriptionColumn,
+                        (0, r.jsxs)('div', {
+                            className: S.descriptionColumn,
                             children: [
-                                (0, i.jsx)(d.vwX, {
-                                    className: R.formTitle,
-                                    children: S.intl.string(S.t.otcXPz)
+                                (0, r.jsx)(d.vwX, {
+                                    className: S.formTitle,
+                                    children: E.NW.string(E.t.otcXPz)
                                 }),
-                                (0, i.jsx)(d.R94, {
+                                (0, r.jsx)(d.R94, {
                                     type: d.geA.DESCRIPTION,
-                                    className: R.__invalid_formDescription,
-                                    children: S.intl.string(S.t.BtwmYG)
+                                    className: S.__invalid_formDescription,
+                                    children: E.NW.string(E.t.BtwmYG)
                                 })
                             ]
                         }),
-                        (0, i.jsx)('div', {
-                            className: R.selectColumn,
-                            children: (0, i.jsx)(d.VcW, {
+                        (0, r.jsx)('div', {
+                            className: S.selectColumn,
+                            children: (0, r.jsx)(d.VcW, {
                                 value: e.rulesChannelId,
                                 options: m,
                                 onChange: (e) => {
-                                    j.Z.updateGuild({ rulesChannelId: e });
+                                    _.Z.updateGuild({ rulesChannelId: e });
                                 },
                                 isDisabled: !t
                             })
                         })
                     ]
                 }),
-                (0, i.jsx)(d.$i$, { className: R.divider }),
-                (0, i.jsxs)(d.hjN, {
-                    className: s()(R.twoColumnFormSection, R.firstSection),
+                (0, r.jsx)(d.$i$, { className: S.divider }),
+                (0, r.jsxs)(d.hjN, {
+                    className: a()(S.twoColumnFormSection, S.firstSection),
                     children: [
-                        (0, i.jsxs)('div', {
-                            className: R.descriptionColumn,
+                        (0, r.jsxs)('div', {
+                            className: S.descriptionColumn,
                             children: [
-                                (0, i.jsx)(d.vwX, {
-                                    className: R.formTitle,
-                                    children: S.intl.string(S.t.vAyDGR)
+                                (0, r.jsx)(d.vwX, {
+                                    className: S.formTitle,
+                                    children: E.NW.string(E.t.vAyDGR)
                                 }),
-                                (0, i.jsx)(d.R94, {
+                                (0, r.jsx)(d.R94, {
                                     type: d.geA.DESCRIPTION,
-                                    className: R.__invalid_formDescription,
-                                    children: S.intl.string(S.t.ZFeonp)
+                                    className: S.__invalid_formDescription,
+                                    children: E.NW.string(E.t.ZFeonp)
                                 })
                             ]
                         }),
-                        (0, i.jsx)('div', {
-                            className: R.selectColumn,
-                            children: (0, i.jsx)(d.VcW, {
+                        (0, r.jsx)('div', {
+                            className: S.selectColumn,
+                            children: (0, r.jsx)(d.VcW, {
                                 value: e.publicUpdatesChannelId,
                                 options: m,
                                 onChange: (e) => {
-                                    j.Z.updateGuild({ publicUpdatesChannelId: e });
+                                    _.Z.updateGuild({ publicUpdatesChannelId: e });
                                 },
                                 isDisabled: !n
                             })
                         })
                     ]
                 }),
-                (0, i.jsx)(d.$i$, { className: R.divider }),
-                (0, i.jsxs)(d.hjN, {
-                    className: s()(R.twoColumnFormSection, R.firstSection),
+                (0, r.jsx)(d.$i$, { className: S.divider }),
+                (0, r.jsxs)(d.hjN, {
+                    className: a()(S.twoColumnFormSection, S.firstSection),
                     children: [
-                        (0, i.jsxs)('div', {
-                            className: R.descriptionColumn,
+                        (0, r.jsxs)('div', {
+                            className: S.descriptionColumn,
                             children: [
-                                (0, i.jsx)(d.vwX, {
-                                    className: R.formTitle,
-                                    children: S.intl.string(S.t.sMkYEx)
+                                (0, r.jsx)(d.vwX, {
+                                    className: S.formTitle,
+                                    children: E.NW.string(E.t.sMkYEx)
                                 }),
-                                (0, i.jsx)(d.R94, {
+                                (0, r.jsx)(d.R94, {
                                     type: d.geA.DESCRIPTION,
-                                    className: R.__invalid_formDescription,
-                                    children: S.intl.string(S.t.htioQk)
+                                    className: S.__invalid_formDescription,
+                                    children: E.NW.string(E.t.htioQk)
                                 })
                             ]
                         }),
-                        (0, i.jsx)('div', {
-                            className: R.selectColumn,
-                            children: (0, i.jsx)(d.VcW, {
+                        (0, r.jsx)('div', {
+                            className: S.selectColumn,
+                            children: (0, r.jsx)(d.VcW, {
                                 value: e.safetyAlertsChannelId,
                                 options: m,
                                 onChange: (e) => {
-                                    j.Z.updateGuild({ safetyAlertsChannelId: e });
+                                    _.Z.updateGuild({ safetyAlertsChannelId: e });
                                 },
                                 isDisabled: !t
                             })
                         })
                     ]
                 }),
-                (0, i.jsx)(d.$i$, { className: R.divider }),
-                (0, i.jsxs)(d.hjN, {
-                    className: R.twoColumnFormSection,
+                (0, r.jsx)(d.$i$, { className: S.divider }),
+                (0, r.jsxs)(d.hjN, {
+                    className: S.twoColumnFormSection,
                     children: [
-                        (0, i.jsxs)('div', {
-                            className: R.descriptionColumn,
+                        (0, r.jsxs)('div', {
+                            className: S.descriptionColumn,
                             children: [
-                                (0, i.jsx)(d.vwX, {
-                                    className: R.formTitle,
-                                    children: S.intl.string(S.t.pO60f3)
+                                (0, r.jsx)(d.vwX, {
+                                    className: S.formTitle,
+                                    children: E.NW.string(E.t.pO60f3)
                                 }),
-                                (0, i.jsx)(d.R94, {
+                                (0, r.jsx)(d.R94, {
                                     type: d.geA.DESCRIPTION,
-                                    className: R.__invalid_formDescription,
-                                    children: S.intl.string(S.t.aIR73d)
+                                    className: S.__invalid_formDescription,
+                                    children: E.NW.string(E.t.aIR73d)
                                 })
                             ]
                         }),
-                        (0, i.jsx)('div', {
-                            className: R.selectColumn,
-                            children: (0, i.jsx)(d.VcW, {
+                        (0, r.jsx)('div', {
+                            className: S.selectColumn,
+                            children: (0, r.jsx)(d.VcW, {
                                 value: e.preferredLocale,
                                 options: o,
                                 onChange: (e) => {
-                                    j.Z.updateGuild({ preferredLocale: e });
+                                    _.Z.updateGuild({ preferredLocale: e });
                                 },
                                 isDisabled: !t
                             })
                         })
                     ]
                 }),
-                (0, i.jsx)(d.$i$, { className: R.divider }),
+                (0, r.jsx)(d.$i$, { className: S.divider }),
                 (() => {
                     var n;
                     if (null != e)
-                        return (0, i.jsxs)(d.hjN, {
+                        return (0, r.jsxs)(d.hjN, {
                             children: [
-                                (0, i.jsx)(d.vwX, {
-                                    className: R.formTitle,
-                                    children: S.intl.string(S.t['RSfm+v'])
+                                (0, r.jsx)(d.vwX, {
+                                    className: S.formTitle,
+                                    children: E.NW.string(E.t['RSfm+v'])
                                 }),
-                                (0, i.jsx)(d.R94, {
-                                    className: R.description,
+                                (0, r.jsx)(d.R94, {
+                                    className: S.description,
                                     type: d.geA.DESCRIPTION,
-                                    children: S.intl.string(S.t['/B6PR0'])
+                                    children: E.NW.string(E.t['/B6PR0'])
                                 }),
-                                (0, i.jsx)(d.Kx8, {
+                                (0, r.jsx)(d.Kx8, {
                                     value: null !== (n = e.description) && void 0 !== n ? n : '',
-                                    placeholder: S.intl.string(S.t.Nvfows),
-                                    onChange: C,
+                                    placeholder: E.NW.string(E.t.Nvfows),
+                                    onChange: x,
                                     maxLength: 120,
                                     disabled: !t
                                 })
                             ]
                         });
                 })(),
-                (0, i.jsx)(d.$i$, { className: R.divider }),
-                (0, i.jsxs)(d.hjN, {
-                    className: R.twoColumnFormSection,
+                (0, r.jsx)(d.$i$, { className: S.divider }),
+                (0, r.jsxs)(d.hjN, {
+                    className: S.twoColumnFormSection,
                     children: [
-                        (0, i.jsxs)('div', {
-                            className: R.descriptionColumn,
+                        (0, r.jsxs)('div', {
+                            className: S.descriptionColumn,
                             children: [
-                                (0, i.jsx)(d.vwX, {
-                                    className: R.formTitle,
-                                    children: S.intl.string(S.t.c1BmbG)
+                                (0, r.jsx)(d.vwX, {
+                                    className: S.formTitle,
+                                    children: E.NW.string(E.t.c1BmbG)
                                 }),
-                                (0, i.jsx)(d.R94, {
+                                (0, r.jsx)(d.R94, {
                                     type: d.geA.DESCRIPTION,
-                                    className: R.__invalid_formDescription,
-                                    children: S.intl.string(S.t.aQzVFx)
+                                    className: S.__invalid_formDescription,
+                                    children: E.NW.string(E.t.aQzVFx)
                                 })
                             ]
                         }),
-                        (0, i.jsx)(d.ua7, {
-                            text: n ? null : S.intl.string(S.t['pjG+T0']),
-                            'aria-label': n ? void 0 : S.intl.string(S.t['pjG+T0']),
+                        (0, r.jsx)(d.ua7, {
+                            text: n ? null : E.NW.string(E.t['pjG+T0']),
+                            'aria-label': n ? void 0 : E.NW.string(E.t['pjG+T0']),
                             children: (e) =>
-                                (0, i.jsx)(d.zxk, {
-                                    size: d.zxk.Sizes.SMALL,
-                                    onClick: E,
-                                    color: d.zxk.Colors.RED,
-                                    disabled: !n,
-                                    ...e,
-                                    children: S.intl.string(S.t.c1BmbG)
-                                })
+                                (0, r.jsx)(
+                                    d.zxk,
+                                    w(
+                                        P(
+                                            {
+                                                size: d.zxk.Sizes.SMALL,
+                                                onClick: y,
+                                                color: d.zxk.Colors.RED,
+                                                disabled: !n
+                                            },
+                                            e
+                                        ),
+                                        { children: E.NW.string(E.t.c1BmbG) }
+                                    )
+                                )
                         })
                     ]
                 })
             ]
         });
     },
-    O = () => {
-        let e = (0, a.e7)([I.Z], () => I.Z.getGuild());
-        return null == e ? null : e.features.has(T.oNc.COMMUNITY) ? (0, i.jsx)(D, {}) : (0, i.jsx)(E.Z, { guild: e });
+    k = () => {
+        let e = (0, l.e7)([O.Z], () => O.Z.getGuild());
+        return null == e ? null : e.features.has(I.oNc.COMMUNITY) ? (0, r.jsx)(A, {}) : (0, r.jsx)(y.Z, { guild: e });
     };

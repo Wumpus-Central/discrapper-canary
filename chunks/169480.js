@@ -1,24 +1,58 @@
 n.r(t),
     n.d(t, {
-        showModal: () => o,
-        updateModalProps: () => l
+        showModal: () => c,
+        updateModalProps: () => u
     });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(952265),
-    a = n(712364);
-let s = (e, t, n) =>
-    function (r) {
-        return (0, i.jsx)(a.Z, {
-            handleSubmit: e,
-            handleEarlyClose: t,
-            ...n,
-            ...r
-        });
-    };
-function o(e, t, n) {
-    return (0, r.h7)(s(e, t, n), { onCloseCallback: t });
+var i = n(952265),
+    o = n(712364);
+function a(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
 }
-function l(e, t, n, i) {
-    return (0, r.o)(e, s(t, n, i));
+function s(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                a(e, t, n[t]);
+            });
+    }
+    return e;
+}
+let l = (e, t, n) =>
+    function (i) {
+        return (0, r.jsx)(
+            o.Z,
+            s(
+                {
+                    handleSubmit: e,
+                    handleEarlyClose: t
+                },
+                n,
+                i
+            )
+        );
+    };
+function c(e, t, n) {
+    return (0, i.h7)(l(e, t, n), { onCloseCallback: t });
+}
+function u(e, t, n, r) {
+    return (0, i.o)(e, l(t, n, r));
 }

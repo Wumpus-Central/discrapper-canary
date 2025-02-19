@@ -1,24 +1,47 @@
-n.d(t, { r: () => l });
-var i = n(192379),
-    s = n(442837),
-    r = n(607070);
-let l = (e) => {
-    let { ref: t, shouldScroll: n, scrollOpts: l, onScrollEnd: a, onCleanup: o } = e,
-        c = (0, s.e7)([r.Z], () => r.Z.useReducedMotion),
-        d = i.useRef(!1);
-    i.useEffect(() => {
+n.d(t, { r: () => a });
+var r = n(192379),
+    i = n(442837),
+    s = n(607070);
+let a = (e) => {
+    let { ref: t, shouldScroll: n, scrollOpts: a, onScrollEnd: l, onCleanup: o } = e,
+        c = (0, i.e7)([s.Z], () => s.Z.useReducedMotion),
+        d = r.useRef(!1);
+    r.useEffect(() => {
         let e = t.current;
         if (null == e || !n || d.current) return;
-        let i = requestAnimationFrame(() => {
-            e.scrollIntoView({
-                behavior: c ? 'auto' : 'smooth',
-                ...l
-            }),
+        let r = requestAnimationFrame(() => {
+            e.scrollIntoView(
+                (function (e) {
+                    for (var t = 1; t < arguments.length; t++) {
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            r = Object.keys(n);
+                        'function' == typeof Object.getOwnPropertySymbols &&
+                            (r = r.concat(
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                })
+                            )),
+                            r.forEach(function (t) {
+                                var r;
+                                (r = n[t]),
+                                    t in e
+                                        ? Object.defineProperty(e, t, {
+                                              value: r,
+                                              enumerable: !0,
+                                              configurable: !0,
+                                              writable: !0
+                                          })
+                                        : (e[t] = r);
+                            });
+                    }
+                    return e;
+                })({ behavior: c ? 'auto' : 'smooth' }, a)
+            ),
                 (d.current = !0),
-                null == a || a();
+                null == l || l();
         });
         return () => {
-            cancelAnimationFrame(i), null == o || o(), (d.current = !0);
+            cancelAnimationFrame(r), null == o || o(), (d.current = !0);
         };
-    }, [t, l, n, c, a, o]);
+    }, [t, a, n, c, l, o]);
 };

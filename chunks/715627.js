@@ -1,26 +1,26 @@
-o.d(t, { Z: () => f }), o(47120);
-var i = o(200651),
-    n = o(192379),
-    a = o(119617),
-    l = o(745510),
-    r = o(675654);
-let u = {
+r.d(t, { Z: () => f }), r(47120);
+var n = r(200651),
+    o = r(192379),
+    i = r(119617),
+    a = r(745510),
+    c = r(675654);
+let l = {
         xMin: -40,
         xMax: 40,
         yMin: -40,
         yMax: -70
     },
-    s = (e, t, o) => (null == o ? t : (e * o) / 100),
-    f = n.memo(function (e) {
-        let { confettiTarget: t, colors: o, emojiURL: f, numBursts: c, particlesPerBurst: d, offsetXPercentageMax: _, offsetXPercentageMin: m, offsetYPercentageMax: p, offsetYPercentageMin: h, customConfettiCanvas: x, speedValues: y = u, dragCoefficientValue: v = 1.66, onAnimationEnd: g } = e,
-            [w, b] = n.useState(null),
-            { confettiCanvas: C } = n.useContext(l.h),
-            G = (0, a.uR)(null != x ? x : C, w),
-            [M, k] = n.useState(!1);
-        n.useEffect(() => {
-            M && (null == g || g());
+    u = (e, t, r) => (null == r ? t : (e * r) / 100),
+    f = o.memo(function (e) {
+        let { confettiTarget: t, colors: r, emojiURL: f, numBursts: s, particlesPerBurst: p, offsetXPercentageMax: y, offsetXPercentageMin: b, offsetYPercentageMax: m, offsetYPercentageMin: d, customConfettiCanvas: h, speedValues: O = l, dragCoefficientValue: _ = 1.66, onAnimationEnd: g } = e,
+            [v, w] = o.useState(null),
+            { confettiCanvas: j } = o.useContext(a.h),
+            P = (0, i.uR)(null != h ? h : j, v),
+            [x, S] = o.useState(!1);
+        o.useEffect(() => {
+            x && (null == g || g());
         });
-        let P = n.useMemo(() => {
+        let k = o.useMemo(() => {
             if (null != f)
                 return [
                     {
@@ -30,72 +30,113 @@ let u = {
                 ];
         }, [f]);
         return (
-            n.useEffect(() => {
+            o.useEffect(() => {
                 if (null == t) return;
-                let e = Array(null != c ? c : 4).fill(0);
+                let e = Array(null != s ? s : 4).fill(0);
                 return (
-                    (e = e.map((o, i) =>
+                    (e = e.map((r, n) =>
                         setTimeout(() => {
-                            G.createMultipleConfetti(
-                                (function (e, t, o, i, n) {
-                                    let a = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : u,
-                                        l = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 1.66,
-                                        f = s(e.width, 100, o),
-                                        c = s(e.height, 75, n),
-                                        d = s(e.width, 350, t),
-                                        _ = s(e.height, 75, i),
-                                        { xMin: m, xMax: p, yMin: h, yMax: x } = a;
-                                    return {
-                                        ...r.We,
-                                        position: {
-                                            type: 'static-random',
-                                            minValue: {
-                                                x: e.left + f,
-                                                y: e.top + c
-                                            },
-                                            maxValue: {
-                                                x: e.left + d,
-                                                y: e.top + _
+                            P.createMultipleConfetti(
+                                (function (e, t, r, n, o) {
+                                    var i, a;
+                                    let f = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : l,
+                                        s = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 1.66,
+                                        p = u(e.width, 100, r),
+                                        y = u(e.height, 75, o),
+                                        b = u(e.width, 350, t),
+                                        m = u(e.height, 75, n),
+                                        { xMin: d, xMax: h, yMin: O, yMax: _ } = f;
+                                    return (
+                                        (i = (function (e) {
+                                            for (var t = 1; t < arguments.length; t++) {
+                                                var r = null != arguments[t] ? arguments[t] : {},
+                                                    n = Object.keys(r);
+                                                'function' == typeof Object.getOwnPropertySymbols &&
+                                                    (n = n.concat(
+                                                        Object.getOwnPropertySymbols(r).filter(function (e) {
+                                                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                                        })
+                                                    )),
+                                                    n.forEach(function (t) {
+                                                        var n;
+                                                        (n = r[t]),
+                                                            t in e
+                                                                ? Object.defineProperty(e, t, {
+                                                                      value: n,
+                                                                      enumerable: !0,
+                                                                      configurable: !0,
+                                                                      writable: !0
+                                                                  })
+                                                                : (e[t] = n);
+                                                    });
                                             }
-                                        },
-                                        velocity: {
-                                            type: 'static-random',
-                                            minValue: {
-                                                x: m,
-                                                y: h
-                                            },
-                                            maxValue: {
-                                                x: p,
-                                                y: x
-                                            }
-                                        },
-                                        size: {
-                                            type: 'static-random',
-                                            minValue: r.Ko,
-                                            maxValue: r.Ko
-                                        },
-                                        dragCoefficient: {
-                                            type: 'static',
-                                            value: l
-                                        }
-                                    };
-                                })(t.getBoundingClientRect(), _, m, p, h, y, v),
-                                null != d ? d : 50
+                                            return e;
+                                        })({}, c.We)),
+                                        (a = a =
+                                            {
+                                                position: {
+                                                    type: 'static-random',
+                                                    minValue: {
+                                                        x: e.left + p,
+                                                        y: e.top + y
+                                                    },
+                                                    maxValue: {
+                                                        x: e.left + b,
+                                                        y: e.top + m
+                                                    }
+                                                },
+                                                velocity: {
+                                                    type: 'static-random',
+                                                    minValue: {
+                                                        x: d,
+                                                        y: O
+                                                    },
+                                                    maxValue: {
+                                                        x: h,
+                                                        y: _
+                                                    }
+                                                },
+                                                size: {
+                                                    type: 'static-random',
+                                                    minValue: c.Ko,
+                                                    maxValue: c.Ko
+                                                },
+                                                dragCoefficient: {
+                                                    type: 'static',
+                                                    value: s
+                                                }
+                                            }),
+                                        Object.getOwnPropertyDescriptors
+                                            ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
+                                            : (function (e, t) {
+                                                  var r = Object.keys(e);
+                                                  if (Object.getOwnPropertySymbols) {
+                                                      var n = Object.getOwnPropertySymbols(e);
+                                                      r.push.apply(r, n);
+                                                  }
+                                                  return r;
+                                              })(Object(a)).forEach(function (e) {
+                                                  Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(a, e));
+                                              }),
+                                        i
+                                    );
+                                })(t.getBoundingClientRect(), y, b, m, d, O, _),
+                                null != p ? p : 50
                             ),
-                                i === e.length - 1 && null != g && k(!0);
-                        }, 60 * i)
+                                n === e.length - 1 && null != g && S(!0);
+                        }, 60 * n)
                     )),
                     () => {
                         for (let t of e) clearTimeout(t);
                     }
                 );
-            }, [G, t, c, d, _, m, p, h, y, v, g]),
-            (0, i.jsx)(a.Ji, {
-                ref: b,
-                sprites: null != P ? P : r.CA,
-                colors: null != o ? o : r.Br,
-                spriteWidth: r.Ko,
-                spriteHeight: r.Ko
+            }, [P, t, s, p, y, b, m, d, O, _, g]),
+            (0, n.jsx)(i.Ji, {
+                ref: w,
+                sprites: null != k ? k : c.CA,
+                colors: null != r ? r : c.Br,
+                spriteWidth: c.Ko,
+                spriteHeight: c.Ko
             })
         );
     });

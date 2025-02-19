@@ -1,62 +1,83 @@
-n.d(t, { Z: () => S }), n(47120);
-var i = n(200651),
-    s = n(192379),
-    a = n(642128),
-    l = n(481060),
-    r = n(230711),
-    o = n(687158),
-    u = n(63063),
-    d = n(51144),
-    c = n(544508),
-    m = n(801461),
-    g = n(981631),
-    E = n(388032),
-    h = n(983928);
-function S(e) {
-    let { userRef: t, usernameSuggestionLoading: n = !1, oneClickFlow: S = !1, ...f } = e,
-        { user: x, editState: N, onClose: T } = f,
-        _ = (0, o.ZP)(x.id),
-        I = (function (e, t, n) {
+r.d(t, { Z: () => h }), r(47120);
+var n = r(200651),
+    i = r(192379),
+    o = r(642128),
+    s = r(481060),
+    a = r(230711),
+    l = r(687158),
+    c = r(63063),
+    u = r(51144),
+    d = r(544508),
+    g = r(801461),
+    m = r(981631),
+    f = r(388032),
+    E = r(898215);
+function h(e) {
+    var t,
+        r,
+        { userRef: h, usernameSuggestionLoading: O = !1, oneClickFlow: p = !1 } = e,
+        y = (function (e, t) {
+            if (null == e) return {};
+            var r,
+                n,
+                i = (function (e, t) {
+                    if (null == e) return {};
+                    var r,
+                        n,
+                        i = {},
+                        o = Object.keys(e);
+                    for (n = 0; n < o.length; n++) (r = o[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+                    return i;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var o = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < o.length; n++) (r = o[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
+            }
+            return i;
+        })(e, ['userRef', 'usernameSuggestionLoading', 'oneClickFlow']);
+    let { user: b, editState: S, onClose: N } = y,
+        v = (0, l.ZP)(b.id),
+        x = (function (e, t, r) {
             switch (e) {
-                case m.Wq.EDIT_USERNAME:
+                case g.Wq.EDIT_USERNAME:
                     return {
-                        header: E.intl.string(E.t['a/zCWl']),
-                        subtitle: E.intl.string(E.t.gGz0sb)
+                        header: f.NW.string(f.t['a/zCWl']),
+                        subtitle: f.NW.string(f.t.gGz0sb)
                     };
-                case m.Wq.EDIT_DISPLAY_NAME:
+                case g.Wq.EDIT_DISPLAY_NAME:
                     return {
-                        header: E.intl.string(E.t.SRDNcH),
-                        subtitle: E.intl.string(E.t['940AS0'])
+                        header: f.NW.string(f.t.SRDNcH),
+                        subtitle: f.NW.string(f.t['940AS0'])
                     };
-                case m.Wq.PREVIEW:
+                case g.Wq.PREVIEW:
                     return {
-                        header: E.intl.formatToPlainString(E.t.XDHrcn, { displayName: t }),
-                        subtitle: E.intl.format(E.t.bWE0ZG, {
+                        header: f.NW.formatToPlainString(f.t.XDHrcn, { displayName: t }),
+                        subtitle: f.NW.format(f.t.bWE0ZG, {
                             onClick: () => {
-                                n(), r.Z.open(g.oAB.ACCOUNT);
+                                r(), a.Z.open(m.oAB.ACCOUNT);
                             }
                         })
                     };
-                case m.Wq.SUGGESTION:
+                case g.Wq.SUGGESTION:
                     return {
-                        header: E.intl.string(E.t.F7T4dX),
-                        subtitle: E.intl.formatToPlainString(E.t.Z8F83d, {}),
-                        link: E.intl.format(E.t['i2vB8/'], { helpdeskArticle: u.Z.getArticleURL(g.BhN.POMELO_FAQ) })
+                        header: f.NW.string(f.t.F7T4dX),
+                        subtitle: f.NW.formatToPlainString(f.t.Z8F83d, {}),
+                        link: f.NW.format(f.t['i2vB8/'], { helpdeskArticle: c.Z.getArticleURL(m.BhN.POMELO_FAQ) })
                     };
                 default:
                     return {
-                        header: E.intl.string(E.t['a/zCWl']),
-                        subtitle: E.intl.string(E.t.gGz0sb)
+                        header: f.NW.string(f.t['a/zCWl']),
+                        subtitle: f.NW.string(f.t.gGz0sb)
                     };
             }
-        })(N, d.ZP.getName(x), T),
-        [C, v] = (0, l.q_F)(() => ({
+        })(S, u.ZP.getName(b), N),
+        [j, T] = (0, s.q_F)(() => ({
             opacity: 0,
             y: 10
         }));
     return (
-        s.useEffect(() => {
-            v({
+        i.useEffect(() => {
+            T({
                 y: 0,
                 opacity: 1,
                 from: {
@@ -64,48 +85,89 @@ function S(e) {
                     opacity: 0
                 }
             });
-        }, [v, N]),
-        (0, i.jsxs)('div', {
-            className: h.displayNameContainer,
+        }, [T, S]),
+        (0, n.jsxs)('div', {
+            className: E.displayNameContainer,
             children: [
-                (0, i.jsxs)(a.animated.div, {
+                (0, n.jsxs)(o.animated.div, {
                     style: {
-                        opacity: C.opacity,
-                        y: C.y
+                        opacity: j.opacity,
+                        y: j.y
                     },
                     children: [
-                        (0, i.jsx)(l.X6q, {
-                            className: h.title,
+                        (0, n.jsx)(s.X6q, {
+                            className: E.title,
                             color: 'header-primary',
                             variant: 'heading-xl/extrabold',
-                            children: I.header
+                            children: x.header
                         }),
-                        (0, i.jsxs)('div', {
-                            className: h.subtitle,
+                        (0, n.jsxs)('div', {
+                            className: E.subtitle,
                             children: [
-                                (0, i.jsx)(l.X6q, {
+                                (0, n.jsx)(s.X6q, {
                                     color: 'header-secondary',
                                     variant: 'heading-sm/medium',
-                                    children: I.subtitle
+                                    children: x.subtitle
                                 }),
-                                null != I.link &&
-                                    (0, i.jsx)(l.Text, {
-                                        className: h.link,
+                                null != x.link &&
+                                    (0, n.jsx)(s.Text, {
+                                        className: E.link,
                                         color: 'header-secondary',
                                         variant: 'text-sm/medium',
-                                        children: I.link
+                                        children: x.link
                                     })
                             ]
                         })
                     ]
                 }),
-                (0, i.jsx)(c.Z, {
-                    ...f,
-                    displayProfile: _,
-                    ref: t,
-                    usernameSuggestionLoading: n,
-                    oneClickFlow: S
-                })
+                (0, n.jsx)(
+                    d.Z,
+                    ((t = (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var r = null != arguments[t] ? arguments[t] : {},
+                                n = Object.keys(r);
+                            'function' == typeof Object.getOwnPropertySymbols &&
+                                (n = n.concat(
+                                    Object.getOwnPropertySymbols(r).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                    })
+                                )),
+                                n.forEach(function (t) {
+                                    var n;
+                                    (n = r[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: n,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0
+                                              })
+                                            : (e[t] = n);
+                                });
+                        }
+                        return e;
+                    })({}, y)),
+                    (r = r =
+                        {
+                            displayProfile: v,
+                            ref: h,
+                            usernameSuggestionLoading: O,
+                            oneClickFlow: p
+                        }),
+                    Object.getOwnPropertyDescriptors
+                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+                        : (function (e, t) {
+                              var r = Object.keys(e);
+                              if (Object.getOwnPropertySymbols) {
+                                  var n = Object.getOwnPropertySymbols(e);
+                                  r.push.apply(r, n);
+                              }
+                              return r;
+                          })(Object(r)).forEach(function (e) {
+                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+                          }),
+                    t)
+                )
             ]
         })
     );

@@ -1,37 +1,84 @@
 n.d(t, {
-    Iu: () => s,
-    OS: () => o,
-    g6: () => u,
-    v3: () => l
+    Iu: () => u,
+    OS: () => d,
+    g6: () => p,
+    v3: () => f
 });
-var i = n(15729),
-    r = n(877124);
-let a = (0, i.U)(
-    (0, r.tJ)(
+var r = n(15729),
+    i = n(877124);
+function o(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function a(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                o(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function s(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function l(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : s(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let c = (0, r.U)(
+    (0, i.tJ)(
         (e) => ({
             channelDismissTimestamps: {},
             queuedWarning: !1
         }),
         {
             name: 'shared-spaces-warning-storage',
-            storage: (0, r.FL)(() => localStorage)
+            storage: (0, i.FL)(() => localStorage)
         }
     )
 );
-function s(e) {
-    return a.getState().channelDismissTimestamps[e];
-}
-function o() {
-    return a.getState().queuedWarning;
-}
-function l() {
-    a.setState({ queuedWarning: !1 });
-}
 function u(e) {
-    a.setState((t) => ({
-        channelDismissTimestamps: {
-            ...t.channelDismissTimestamps,
-            [e]: Date.now()
-        }
-    }));
+    return c.getState().channelDismissTimestamps[e];
+}
+function d() {
+    return c.getState().queuedWarning;
+}
+function f() {
+    c.setState({ queuedWarning: !1 });
+}
+function p(e) {
+    c.setState((t) => ({ channelDismissTimestamps: l(a({}, t.channelDismissTimestamps), { [e]: Date.now() }) }));
 }

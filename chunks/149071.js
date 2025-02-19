@@ -1,11 +1,11 @@
-n.d(t, { Z: () => y }), n(47120);
-var i = n(544891),
-    r = n(147913),
-    a = n(680089),
-    s = n(592125),
-    o = n(70956),
+n.d(t, { Z: () => S }), n(47120);
+var r = n(544891),
+    i = n(147913),
+    o = n(680089),
+    a = n(592125),
+    s = n(70956),
     l = n(981631);
-function u(e, t, n) {
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,46 +18,77 @@ function u(e, t, n) {
         e
     );
 }
-let c = {},
-    d = 0,
-    f = 15 * o.Z.Millis.SECOND;
-function _() {
-    c = { ...a.Z.getCollapsedCategories() };
+function u(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                c(e, t, n[t]);
+            });
+    }
+    return e;
 }
-function p() {
-    __OVERLAY__ || (clearTimeout(d), (d = setTimeout(() => m({}), f)));
+function d(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
 }
-async function h(e, t) {
+function f(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : d(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let p = {},
+    _ = 0,
+    h = 15 * s.Z.Millis.SECOND;
+function m() {
+    p = u({}, o.Z.getCollapsedCategories());
+}
+function g() {
+    __OVERLAY__ || (clearTimeout(_), (_ = setTimeout(() => v({}), h)));
+}
+async function E(e, t) {
     null == e || e === l.ME
-        ? await i.tn.patch({
+        ? await r.tn.patch({
               url: l.ANM.USER_GUILD_SETTINGS(l.ME),
               body: t,
               rejectWithError: !1
           })
-        : await m(null != t ? { [null != e ? e : l.ME]: t } : {});
+        : await v(null != t ? { [null != e ? e : l.ME]: t } : {});
 }
-async function m(e) {
-    clearTimeout(d);
+async function v(e) {
+    clearTimeout(_);
     let t = 0 !== Object.keys(e).length,
-        n = a.Z.getCollapsedCategories(),
-        r = g();
-    for (let i in r) {
-        let r = s.Z.getChannel(i);
-        null != r &&
-            null != r.guild_id &&
-            (r.guild_id in e || (e[r.guild_id] = {}),
-            null == e[r.guild_id].channel_overrides && (e[r.guild_id].channel_overrides = {}),
-            (e[r.guild_id].channel_overrides[r.id] = {
-                ...e[r.guild_id].channel_overrides[r.id],
-                collapsed: r.id in n
-            }),
-            (t = !0));
+        n = o.Z.getCollapsedCategories(),
+        i = b();
+    for (let r in i) {
+        let i = a.Z.getChannel(r);
+        null != i && null != i.guild_id && (i.guild_id in e || (e[i.guild_id] = {}), null == e[i.guild_id].channel_overrides && (e[i.guild_id].channel_overrides = {}), (e[i.guild_id].channel_overrides[i.id] = f(u({}, e[i.guild_id].channel_overrides[i.id]), { collapsed: i.id in n })), (t = !0));
     }
     return t
-        ? ((c = { ...n }),
+        ? ((p = u({}, n)),
           delete e[l.I_8],
           (
-              await i.tn.patch({
+              await r.tn.patch({
                   url: l.ANM.USER_GUILD_SETTINGS_BULK,
                   body: { guilds: e },
                   rejectWithError: !1
@@ -65,29 +96,29 @@ async function m(e) {
           ).body)
         : [];
 }
-function g() {
+function b() {
     let e = {},
-        t = a.Z.getCollapsedCategories();
-    for (let n in t) t[n] !== c[n] && (e[n] = !0);
-    for (let n in c) t[n] !== c[n] && (e[n] = !0);
+        t = o.Z.getCollapsedCategories();
+    for (let n in t) t[n] !== p[n] && (e[n] = !0);
+    for (let n in p) t[n] !== p[n] && (e[n] = !0);
     return e;
 }
-function E() {
-    c = { ...a.Z.getCollapsedCategories() };
+function y() {
+    p = u({}, o.Z.getCollapsedCategories());
 }
-class v extends r.Z {
+class O extends i.Z {
     constructor(...e) {
         super(...e),
-            u(this, 'actions', {
-                CATEGORY_COLLAPSE: p,
-                CATEGORY_EXPAND: p,
-                CATEGORY_COLLAPSE_ALL: p,
-                CATEGORY_EXPAND_ALL: p,
-                POST_CONNECTION_OPEN: _,
-                USER_GUILD_SETTINGS_FULL_UPDATE: E
+            c(this, 'actions', {
+                CATEGORY_COLLAPSE: g,
+                CATEGORY_EXPAND: g,
+                CATEGORY_COLLAPSE_ALL: g,
+                CATEGORY_EXPAND_ALL: g,
+                POST_CONNECTION_OPEN: m,
+                USER_GUILD_SETTINGS_FULL_UPDATE: y
             }),
-            u(this, 'saveUserGuildSettings', h),
-            u(this, 'saveUserGuildSettingsBulk', m);
+            c(this, 'saveUserGuildSettings', E),
+            c(this, 'saveUserGuildSettingsBulk', v);
     }
 }
-let y = new v();
+let S = new O();

@@ -1,12 +1,12 @@
-n.d(t, { Z: () => g }), n(47120);
-var i,
-    l = n(200651),
-    s = n(192379),
-    a = n(120356),
-    r = n.n(a),
+n.d(t, { Z: () => m }), n(47120);
+var r,
+    i = n(200651),
+    l = n(192379),
+    s = n(120356),
+    a = n.n(s),
     o = n(153066),
-    d = n(374394);
-function c(e, t, n) {
+    c = n(773673);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,47 +20,87 @@ function c(e, t, n) {
     );
 }
 let u = {
-        XSMALL: d.xsmall,
-        SMALL: d.small,
-        MEDIUM: d.medium,
-        LARGE: d.large
+        XSMALL: c.xsmall,
+        SMALL: c.small,
+        MEDIUM: c.medium,
+        LARGE: c.large
     },
     h = {
         DEFAULT: 'default',
         STATIC: 'static'
     };
-class m extends (i = s.PureComponent) {
+class g extends (r = l.PureComponent) {
     render() {
-        let { size: e, src: t, srcHover: n, className: i, ...s } = this.props,
-            { hovered: a } = this.state,
-            c = this.getMode();
-        return (0, l.jsx)('button', {
-            className: r()((0, o.l)(d, 'iconButton', c), i, e),
-            style: { backgroundImage: "url('".concat(a && null != n ? n : t, "')") },
-            onMouseEnter: this.handleHover,
-            onFocus: this.handleHover,
-            onMouseLeave: this.handleBlur,
-            onBlur: this.handleBlur,
-            ...s
-        });
+        let e = this.props,
+            { size: t, src: n, srcHover: r, className: l } = e,
+            s = (function (e, t) {
+                if (null == e) return {};
+                var n,
+                    r,
+                    i = (function (e, t) {
+                        if (null == e) return {};
+                        var n,
+                            r,
+                            i = {},
+                            l = Object.keys(e);
+                        for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        return i;
+                    })(e, t);
+                if (Object.getOwnPropertySymbols) {
+                    var l = Object.getOwnPropertySymbols(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                }
+                return i;
+            })(e, ['size', 'src', 'srcHover', 'className']),
+            { hovered: u } = this.state,
+            h = this.getMode();
+        return (0, i.jsx)(
+            'button',
+            (function (e) {
+                for (var t = 1; t < arguments.length; t++) {
+                    var n = null != arguments[t] ? arguments[t] : {},
+                        r = Object.keys(n);
+                    'function' == typeof Object.getOwnPropertySymbols &&
+                        (r = r.concat(
+                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                            })
+                        )),
+                        r.forEach(function (t) {
+                            d(e, t, n[t]);
+                        });
+                }
+                return e;
+            })(
+                {
+                    className: a()((0, o.l)(c, 'iconButton', h), l, t),
+                    style: { backgroundImage: "url('".concat(u && null != r ? r : n, "')") },
+                    onMouseEnter: this.handleHover,
+                    onFocus: this.handleHover,
+                    onMouseLeave: this.handleBlur,
+                    onBlur: this.handleBlur
+                },
+                s
+            )
+        );
     }
     constructor(...e) {
         super(...e),
-            c(this, 'state', { hovered: !1 }),
-            c(this, 'getMode', () => (null != this.props.srcHover ? h.STATIC : h.DEFAULT)),
-            c(this, 'handleHover', (e) => {
+            d(this, 'state', { hovered: !1 }),
+            d(this, 'getMode', () => (null != this.props.srcHover ? h.STATIC : h.DEFAULT)),
+            d(this, 'handleHover', (e) => {
                 let { onMouseEnter: t } = this.props;
                 null == t || t(e), this.state.hovered || this.setState({ hovered: !0 });
             }),
-            c(this, 'handleBlur', (e) => {
+            d(this, 'handleBlur', (e) => {
                 let { onMouseLeave: t } = this.props;
                 null == t || t(e), this.state.hovered && this.setState({ hovered: !1 });
             });
     }
 }
-c(m, 'Sizes', u),
-    c(m, 'defaultProps', {
+d(g, 'Sizes', u),
+    d(g, 'defaultProps', {
         size: u.MEDIUM,
         disabled: !1
     });
-let g = m;
+let m = g;

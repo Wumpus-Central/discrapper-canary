@@ -1,87 +1,88 @@
 n.d(t, {
-    p: () => f,
-    s: () => v
-});
-var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    s = n.n(l),
-    a = n(676062),
+    p: () => j,
+    s: () => N
+}),
+    n(266796);
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(676062),
     o = n(481060),
     c = n(313201),
     d = n(817460),
     u = n(723047),
     m = n(528027),
-    h = n(686807),
+    p = n(686807),
     g = n(157018),
-    x = n(828656),
-    p = n(388032),
-    _ = n(31203);
-function C(e) {
-    let { guildId: t, emojiId: n, emojiName: l, title: a, description: c, targetType: d, index: u, dndName: h, onEdit: g, onMove: C, disabled: f = !1 } = e,
-        v = r.useRef(null),
-        N = r.useRef(null),
-        { drag: j, dragPreview: I, drop: E, isDragging: b } = (0, x.Z)(v, d, u, C);
+    h = n(828656),
+    f = n(388032),
+    b = n(89273);
+function x(e) {
+    let { guildId: t, emojiId: n, emojiName: s, title: l, description: c, targetType: d, index: u, dndName: p, onEdit: g, onMove: x, disabled: j = !1 } = e,
+        N = i.useRef(null),
+        v = i.useRef(null),
+        { drag: _, dragPreview: O, drop: y, isDragging: C } = (0, h.Z)(N, d, u, x);
     return (
-        j(N),
-        I(E(v)),
-        (0, i.jsxs)('div', {
-            ref: v,
-            className: s()(_.card, {
-                [_.cardDragging]: b,
-                [_.disabled]: f
+        _(v),
+        O(y(N)),
+        (0, r.jsxs)('div', {
+            ref: N,
+            className: a()(b.card, {
+                [b.cardDragging]: C,
+                [b.disabled]: j
             }),
             children: [
-                (0, i.jsxs)('div', {
-                    className: _.emojiWrapper,
+                (0, r.jsxs)('div', {
+                    className: b.emojiWrapper,
                     children: [
-                        (0, i.jsx)(m.Z, {
+                        (0, r.jsx)(m.Z, {
                             guildId: t,
                             emojiId: n,
-                            emojiName: l,
-                            className: _.emoji
+                            emojiName: s,
+                            className: b.emoji
                         }),
-                        !f &&
-                            (0, i.jsx)('div', {
-                                ref: N,
-                                className: _.dragIconWrapper,
-                                'data-dnd-name': h,
-                                children: (0, i.jsx)(o.Vni, {
+                        !j &&
+                            (0, r.jsx)('div', {
+                                ref: v,
+                                className: b.dragIconWrapper,
+                                'data-dnd-name': p,
+                                children: (0, r.jsx)(o.Vni, {
                                     size: 'xs',
                                     color: 'currentColor',
-                                    className: _.dragIcon
+                                    className: b.dragIcon
                                 })
                             })
                     ]
                 }),
-                (0, i.jsxs)('div', {
-                    className: _.cardText,
+                (0, r.jsxs)('div', {
+                    className: b.cardText,
                     children: [
-                        (0, i.jsx)(o.Text, {
+                        (0, r.jsx)(o.Text, {
                             color: 'header-primary',
                             variant: 'text-md/semibold',
-                            children: a
+                            children: l
                         }),
-                        (0, i.jsx)(o.Text, {
+                        (0, r.jsx)(o.Text, {
                             color: 'interactive-normal',
                             variant: 'text-sm/normal',
                             children: c
                         })
                     ]
                 }),
-                (0, i.jsx)('div', {
-                    className: _.cardActions,
+                (0, r.jsx)('div', {
+                    className: b.cardActions,
                     children:
-                        !f &&
-                        (0, i.jsx)(o.P3F, {
-                            className: _.cardActionButton,
-                            onClick: f ? void 0 : g,
-                            'aria-label': p.intl.string(p.t.Eoo8h4),
-                            'aria-disabled': f,
-                            children: (0, i.jsx)(o.vdY, {
+                        !j &&
+                        (0, r.jsx)(o.P3F, {
+                            className: b.cardActionButton,
+                            onClick: j ? void 0 : g,
+                            'aria-label': f.NW.string(f.t.Eoo8h4),
+                            'aria-disabled': j,
+                            children: (0, r.jsx)(o.vdY, {
                                 size: 'xs',
                                 color: 'currentColor',
-                                className: _.cardActionButtonIcon
+                                className: b.cardActionButtonIcon
                             })
                         })
                 })
@@ -89,33 +90,33 @@ function C(e) {
         })
     );
 }
-function f(e) {
-    let { benefits: t, onEdit: n, onMove: l, guildId: o } = e,
+function j(e) {
+    let { benefits: t, onEdit: n, onMove: s, guildId: o } = e,
         m = (0, c.Dt)(),
-        { isDragging: x } = (0, a.f)((e) => ({ isDragging: e.getItemType() === m })),
-        p = (0, u.mY)();
+        { isDragging: h } = (0, l.f)((e) => ({ isDragging: e.getItemType() === m })),
+        f = (0, u.mY)();
     return 0 === t.length
         ? null
-        : (0, i.jsx)('div', {
-              className: s()(_.container, { [_.isDragging]: x }),
+        : (0, r.jsx)('div', {
+              className: a()(b.container, { [b.isDragging]: h }),
               children: t.map((e, t) =>
-                  (0, i.jsxs)(
-                      r.Fragment,
+                  (0, r.jsxs)(
+                      i.Fragment,
                       {
                           children: [
-                              t > 0 ? (0, i.jsx)('div', { className: _.divider }) : null,
-                              (0, i.jsx)(C, {
+                              t > 0 ? (0, r.jsx)('div', { className: b.divider }) : null,
+                              (0, r.jsx)(x, {
                                   guildId: o,
                                   emojiId: e.emoji_id,
                                   emojiName: e.emoji_name,
-                                  title: (0, h.Z)(e),
+                                  title: (0, p.Z)(e),
                                   description: e.description,
                                   targetType: m,
                                   index: t,
                                   dndName: (0, g.Z)(e),
                                   onEdit: () => n(t),
-                                  onMove: l,
-                                  disabled: p
+                                  onMove: s,
+                                  disabled: f
                               })
                           ]
                       },
@@ -124,26 +125,26 @@ function f(e) {
               )
           });
 }
-function v(e) {
-    let { onClick: t, children: n, disabled: r = !1 } = e;
-    return (0, i.jsx)(o.P3F, {
-        className: _.container,
-        onClick: r ? void 0 : t,
-        'aria-disabled': r,
-        children: (0, i.jsxs)('div', {
-            className: s()(_.card, _.addBenefit, { [_.disabled]: r }),
+function N(e) {
+    let { onClick: t, children: n, disabled: i = !1 } = e;
+    return (0, r.jsx)(o.P3F, {
+        className: b.container,
+        onClick: i ? void 0 : t,
+        'aria-disabled': i,
+        children: (0, r.jsxs)('div', {
+            className: a()(b.card, b.addBenefit, { [b.disabled]: i }),
             children: [
-                (0, i.jsx)('div', {
-                    className: _.emojiWrapper,
-                    children: (0, i.jsx)(o.oFk, {
+                (0, r.jsx)('div', {
+                    className: b.emojiWrapper,
+                    children: (0, r.jsx)(o.oFk, {
                         size: 'xs',
                         color: 'currentColor',
-                        className: _.addBenefitIcon
+                        className: b.addBenefitIcon
                     })
                 }),
-                (0, i.jsx)('div', {
-                    className: _.cardText,
-                    children: (0, i.jsx)(o.Text, {
+                (0, r.jsx)('div', {
+                    className: b.cardText,
+                    children: (0, r.jsx)(o.Text, {
                         color: 'header-primary',
                         variant: 'text-md/normal',
                         children: n

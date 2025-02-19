@@ -1,8 +1,8 @@
-n.d(t, { Z: () => g }), n(47120);
-var i,
-    r = n(442837),
-    a = n(570140);
-function s(e, t, n) {
+n.d(t, { Z: () => b }), n(47120);
+var r,
+    i = n(442837),
+    o = n(570140);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,48 +15,81 @@ function s(e, t, n) {
         e
     );
 }
-let o = {},
-    l = {},
-    u = new Set();
-function c(e) {
-    let { guildId: t, channelId: n } = e;
-    l = {
-        ...l,
-        [t]: {
-            ...l[t],
-            [n]: !0
-        }
-    };
-}
-function d(e) {
-    let { memberActions: t, guildId: n } = e;
-    if (null == t) {
-        l[n] = o;
-        return;
+function s(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                a(e, t, n[t]);
+            });
     }
-    (l[n] = t), u.delete(n);
+    return e;
 }
-function f(e) {
-    let { guildId: t } = e;
-    u.add(t);
+function l(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function c(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : l(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let u = {},
+    d = {},
+    f = new Set();
+function p(e) {
+    let { guildId: t, channelId: n } = e;
+    d = c(s({}, d), { [t]: c(s({}, d[t]), { [n]: !0 }) });
 }
 function _(e) {
-    let { guildId: t } = e;
-    u.delete(t);
-}
-function p(e) {
-    let { guild: t } = e;
-    if (null == l[t.id]) return !1;
-    delete l[t.id];
+    let { memberActions: t, guildId: n } = e;
+    if (null == t) {
+        d[n] = u;
+        return;
+    }
+    (d[n] = t), f.delete(n);
 }
 function h(e) {
     let { guildId: t } = e;
-    if (null == l[t]) return !1;
-    delete l[t];
+    f.add(t);
 }
-class m extends (i = r.ZP.Store) {
+function m(e) {
+    let { guildId: t } = e;
+    f.delete(t);
+}
+function g(e) {
+    let { guild: t } = e;
+    if (null == d[t.id]) return !1;
+    delete d[t.id];
+}
+function E(e) {
+    let { guildId: t } = e;
+    if (null == d[t]) return !1;
+    delete d[t];
+}
+class v extends (r = i.ZP.Store) {
     getCompletedActions(e) {
-        return null == e ? null : l[e];
+        return null == e ? null : d[e];
     }
     hasCompletedActionForChannel(e, t) {
         let n = this.getCompletedActions(e);
@@ -66,17 +99,17 @@ class m extends (i = r.ZP.Store) {
         return null == e
             ? {}
             : {
-                  completedActions: l[e],
-                  loading: u.has(e)
+                  completedActions: d[e],
+                  loading: f.has(e)
               };
     }
 }
-s(m, 'displayName', 'GuildOnboardingMemberActionStore');
-let g = new m(a.Z, {
-    GUILD_NEW_MEMBER_ACTIONS_FETCH_START: f,
-    GUILD_NEW_MEMBER_ACTIONS_FETCH_SUCCESS: d,
-    GUILD_NEW_MEMBER_ACTIONS_FETCH_FAIL: _,
-    GUILD_NEW_MEMBER_ACTIONS_DELETE_SUCCESS: h,
-    COMPLETE_NEW_MEMBER_ACTION: c,
-    GUILD_DELETE: p
+a(v, 'displayName', 'GuildOnboardingMemberActionStore');
+let b = new v(o.Z, {
+    GUILD_NEW_MEMBER_ACTIONS_FETCH_START: h,
+    GUILD_NEW_MEMBER_ACTIONS_FETCH_SUCCESS: _,
+    GUILD_NEW_MEMBER_ACTIONS_FETCH_FAIL: m,
+    GUILD_NEW_MEMBER_ACTIONS_DELETE_SUCCESS: E,
+    COMPLETE_NEW_MEMBER_ACTION: p,
+    GUILD_DELETE: g
 });

@@ -1,72 +1,138 @@
-e.d(n, { default: () => N }), e(47120);
-var i = e(200651),
-    o = e(192379),
-    a = e(481060),
-    s = e(230711),
-    r = e(2052),
-    c = e(906732),
-    l = e(174609),
-    p = e(626135),
-    C = e(790527),
-    d = e(940165),
-    _ = e(474936),
-    u = e(981631),
-    x = e(871465),
-    I = e(388032),
-    S = e(957232);
-function N(t) {
-    let { onClose: n, ...N } = t,
-        T = (0, r.O)(),
-        { analyticsLocations: U } = (0, c.ZP)(),
-        [E, b] = o.useState(!1);
+n.d(e, { default: () => j }), n(47120), n(266796);
+var r = n(200651),
+    o = n(192379),
+    i = n(481060),
+    a = n(230711),
+    c = n(2052),
+    s = n(906732),
+    l = n(174609),
+    p = n(626135),
+    u = n(790527),
+    O = n(940165),
+    b = n(474936),
+    f = n(981631),
+    d = n(871465),
+    y = n(388032),
+    C = n(277710);
+function j(t) {
+    var e,
+        j,
+        { onClose: _ } = t,
+        g = (function (t, e) {
+            if (null == t) return {};
+            var n,
+                r,
+                o = (function (t, e) {
+                    if (null == t) return {};
+                    var n,
+                        r,
+                        o = {},
+                        i = Object.keys(t);
+                    for (r = 0; r < i.length; r++) (n = i[r]), e.indexOf(n) >= 0 || (o[n] = t[n]);
+                    return o;
+                })(t, e);
+            if (Object.getOwnPropertySymbols) {
+                var i = Object.getOwnPropertySymbols(t);
+                for (r = 0; r < i.length; r++) (n = i[r]), !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (o[n] = t[n]);
+            }
+            return o;
+        })(t, ['onClose']);
+    let m = (0, c.O)(),
+        { analyticsLocations: S } = (0, s.ZP)(),
+        [N, v] = o.useState(!1);
     o.useEffect(() => {
-        !E &&
-            (p.default.track(u.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: _.cd.CUSTOM_NOTIFICATION_SOUNDS_UPSELL,
-                location: T.location,
-                location_stack: U
+        !N &&
+            (p.default.track(f.rMx.PREMIUM_UPSELL_VIEWED, {
+                type: b.cd.CUSTOM_NOTIFICATION_SOUNDS_UPSELL,
+                location: m.location,
+                location_stack: S
             }),
-            b(!0));
-    }, [T.location, U, E]);
-    let f = (0, x.LB)(!1);
-    return (0, i.jsx)(C.Z, {
-        type: _.cd.CUSTOM_NOTIFICATION_SOUNDS_UPSELL,
-        artContainerClassName: S.image,
-        artURL: e(98165),
-        title: I.intl.string(I.t.c0X1Cw),
-        glowUp: I.intl.string(I.t.c0X1Cw),
-        body: I.intl.string(I.t.SX63mJ),
-        showEnhancedUpsell: !0,
-        analyticsLocation: { section: u.jXE.PREMIUM_CUSTOM_NOTIFICATION_SOUND_UPSELL_MODAL },
-        enableArtBoxShadow: !1,
-        onSubscribeClick: l.Z,
-        secondaryCTA: I.intl.string(I.t.PcTCBw),
-        onSecondaryClick: () => {
-            n(), s.Z.open(u.oAB.PREMIUM);
-        },
-        onClose: n,
-        ...N,
-        children: (0, i.jsx)(a.xJW, {
-            title: I.intl.string(I.t['K/hjQU']),
-            className: S.optionsContainerWrapper,
-            children: (0, i.jsx)('div', {
-                className: S.optionsContainer,
-                children: f.map((t, n) => {
-                    let e = t.value;
-                    return e === x.YC.CLASSIC
-                        ? null
-                        : (0, i.jsx)(
-                              d.Z,
-                              {
-                                  label: t.label,
-                                  soundpack: e,
-                                  description: t.description,
-                                  location: 'upsellModal'
-                              },
-                              n
-                          );
+            v(!0));
+    }, [m.location, S, N]);
+    let x = (0, d.LB)(!1);
+    return (0, r.jsx)(
+        u.Z,
+        ((e = (function (t) {
+            for (var e = 1; e < arguments.length; e++) {
+                var n = null != arguments[e] ? arguments[e] : {},
+                    r = Object.keys(n);
+                'function' == typeof Object.getOwnPropertySymbols &&
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (t) {
+                            return Object.getOwnPropertyDescriptor(n, t).enumerable;
+                        })
+                    )),
+                    r.forEach(function (e) {
+                        var r;
+                        (r = n[e]),
+                            e in t
+                                ? Object.defineProperty(t, e, {
+                                      value: r,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0
+                                  })
+                                : (t[e] = r);
+                    });
+            }
+            return t;
+        })(
+            {
+                type: b.cd.CUSTOM_NOTIFICATION_SOUNDS_UPSELL,
+                artContainerClassName: C.image,
+                artURL: n(98165),
+                title: y.NW.string(y.t.c0X1Cw),
+                glowUp: y.NW.string(y.t.c0X1Cw),
+                body: y.NW.string(y.t.SX63mJ),
+                showEnhancedUpsell: !0,
+                analyticsLocation: { section: f.jXE.PREMIUM_CUSTOM_NOTIFICATION_SOUND_UPSELL_MODAL },
+                enableArtBoxShadow: !1,
+                onSubscribeClick: l.Z,
+                secondaryCTA: y.NW.string(y.t.PcTCBw),
+                onSecondaryClick: () => {
+                    _(), a.Z.open(f.oAB.PREMIUM);
+                },
+                onClose: _
+            },
+            g
+        )),
+        (j = j =
+            {
+                children: (0, r.jsx)(i.xJW, {
+                    title: y.NW.string(y.t['K/hjQU']),
+                    className: C.optionsContainerWrapper,
+                    children: (0, r.jsx)('div', {
+                        className: C.optionsContainer,
+                        children: x.map((t, e) => {
+                            let n = t.value;
+                            return n === d.YC.CLASSIC
+                                ? null
+                                : (0, r.jsx)(
+                                      O.Z,
+                                      {
+                                          label: t.label,
+                                          soundpack: n,
+                                          description: t.description,
+                                          location: 'upsellModal'
+                                      },
+                                      e
+                                  );
+                        })
+                    })
                 })
-            })
-        })
-    });
+            }),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(j))
+            : (function (t, e) {
+                  var n = Object.keys(t);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(t);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(j)).forEach(function (t) {
+                  Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(j, t));
+              }),
+        e)
+    );
 }

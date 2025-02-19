@@ -1,117 +1,118 @@
-t.d(n, {
-    Z: () => x,
-    k: () => h
-});
-var l,
-    i = t(200651);
-t(192379);
-var a = t(120356),
-    r = t.n(a),
-    s = t(481060),
-    o = t(565138),
-    c = t(372769),
-    d = t(857395),
-    u = t(131154),
-    m = t(38981),
-    _ = t(585898),
-    h = (((l = {})[(l.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (l[(l.TRENDING = 1)] = 'TRENDING'), (l[(l.PERSONALIZED = 2)] = 'PERSONALIZED'), (l[(l.USER_GUILDS = 3)] = 'USER_GUILDS'), (l[(l.FRIENDS_GUILDS = 4)] = 'FRIENDS_GUILDS'), (l[(l.INTRO_CARD = 5)] = 'INTRO_CARD'), (l[(l.FEATURED = 6)] = 'FEATURED'), l);
-function x(e) {
-    let { guild: n, stageInstance: t, showGuildPopout: l, setShowGuildPopout: a, handleGuildNameClick: h, source: x, speakers: g, speakerCount: v, audienceCount: b, channelName: j } = e,
-        N = n.id;
-    return (0, i.jsx)('div', {
-        className: _.contentContainer,
-        children: (0, i.jsxs)('div', {
-            className: _.headerContainer,
+n.d(t, {
+    Z: () => h,
+    k: () => b
+}),
+    n(266796);
+var r,
+    a = n(200651);
+n(192379);
+var i = n(120356),
+    o = n.n(i),
+    l = n(481060),
+    c = n(565138),
+    s = n(372769),
+    d = n(857395),
+    u = n(131154),
+    _ = n(38981),
+    m = n(355738),
+    b = (((r = {})[(r.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (r[(r.TRENDING = 1)] = 'TRENDING'), (r[(r.PERSONALIZED = 2)] = 'PERSONALIZED'), (r[(r.USER_GUILDS = 3)] = 'USER_GUILDS'), (r[(r.FRIENDS_GUILDS = 4)] = 'FRIENDS_GUILDS'), (r[(r.INTRO_CARD = 5)] = 'INTRO_CARD'), (r[(r.FEATURED = 6)] = 'FEATURED'), r);
+function h(e) {
+    let { guild: t, stageInstance: n, showGuildPopout: r, setShowGuildPopout: i, handleGuildNameClick: b, source: h, speakers: g, speakerCount: p, audienceCount: f, channelName: x } = e,
+        v = t.id;
+    return (0, a.jsx)('div', {
+        className: m.contentContainer,
+        children: (0, a.jsxs)('div', {
+            className: m.headerContainer,
             children: [
-                (0, i.jsxs)('div', {
-                    className: _.guildInfoContainer,
+                (0, a.jsxs)('div', {
+                    className: m.guildInfoContainer,
                     children: [
-                        (0, i.jsx)(d.Z, {
-                            guildId: N,
-                            shouldShow: l,
-                            onRequestClose: () => a(!1),
+                        (0, a.jsx)(d.Z, {
+                            guildId: v,
+                            shouldShow: r,
+                            onRequestClose: () => i(!1),
                             children: () =>
-                                (0, i.jsxs)(s.P3F, {
-                                    className: _.flexContainerRow,
-                                    onClick: h,
+                                (0, a.jsxs)(l.P3F, {
+                                    className: m.flexContainerRow,
+                                    onClick: b,
                                     children: [
-                                        (0, i.jsx)(o.Z, {
-                                            guild: n,
-                                            size: o.Z.Sizes.MINI,
-                                            className: _.guildIcon
+                                        (0, a.jsx)(c.Z, {
+                                            guild: t,
+                                            size: c.Z.Sizes.MINI,
+                                            className: m.guildIcon
                                         }),
-                                        (0, i.jsxs)('div', {
-                                            className: _.flexContainerRow,
+                                        (0, a.jsxs)('div', {
+                                            className: m.flexContainerRow,
                                             children: [
-                                                (0, i.jsx)(s.Text, {
+                                                (0, a.jsx)(l.Text, {
                                                     color: 'header-secondary',
                                                     variant: 'text-sm/normal',
-                                                    className: r()(_.guildName, { [_.disabled]: null == h }),
-                                                    children: n.name
+                                                    className: o()(m.guildName, { [m.disabled]: null == b }),
+                                                    children: t.name
                                                 }),
-                                                (0, i.jsx)(c.Z, { guild: n })
+                                                (0, a.jsx)(s.Z, { guild: t })
                                             ]
                                         })
                                     ]
                                 })
                         }),
-                        (0, i.jsxs)('div', {
-                            className: _.rightJustifiedContent,
+                        (0, a.jsxs)('div', {
+                            className: m.rightJustifiedContent,
                             children: [
-                                6 === x &&
-                                    (0, i.jsx)('div', {
-                                        className: _.featuredTag,
-                                        children: (0, i.jsx)(s.Text, {
+                                6 === h &&
+                                    (0, a.jsx)('div', {
+                                        className: m.featuredTag,
+                                        children: (0, a.jsx)(l.Text, {
                                             variant: 'text-sm/normal',
-                                            className: _.featuredTagText,
+                                            className: m.featuredTagText,
                                             children: 'Featured'
                                         })
                                     }),
-                                (0, i.jsx)(m.Z, {
-                                    count: b,
-                                    className: _.__invalid_audienceCount
+                                (0, a.jsx)(_.Z, {
+                                    count: f,
+                                    className: m.__invalid_audienceCount
                                 })
                             ]
                         })
                     ]
                 }),
-                (0, i.jsx)(s.Text, {
+                (0, a.jsx)(l.Text, {
                     color: 'header-primary',
                     variant: 'text-lg/semibold',
-                    className: _.topicText,
-                    children: t.topic
+                    className: m.topicText,
+                    children: n.topic
                 }),
-                (0, i.jsx)(s.Text, {
+                (0, a.jsx)(l.Text, {
                     color: 'header-secondary',
-                    className: _.description,
+                    className: m.description,
                     variant: 'text-sm/normal',
-                    children: t.description
+                    children: n.description
                 }),
-                (0, i.jsx)(u.Z, {
-                    guild: n,
+                (0, a.jsx)(u.Z, {
+                    guild: t,
                     speakers: g,
-                    speakerCount: v,
-                    className: _.speakers
+                    speakerCount: p,
+                    className: m.speakers
                 }),
-                null != j &&
-                    (0, i.jsxs)(i.Fragment, {
+                null != x &&
+                    (0, a.jsxs)(a.Fragment, {
                         children: [
-                            (0, i.jsx)('hr', { className: _.divider }),
-                            (0, i.jsxs)('div', {
-                                className: _.footer,
+                            (0, a.jsx)('hr', { className: m.divider }),
+                            (0, a.jsxs)('div', {
+                                className: m.footer,
                                 children: [
-                                    (0, i.jsx)(s.ewx, {
+                                    (0, a.jsx)(l.ewx, {
                                         size: 'custom',
                                         color: 'currentColor',
                                         width: 20,
                                         height: 20,
-                                        className: _.icon
+                                        className: m.icon
                                     }),
-                                    (0, i.jsx)(s.Text, {
+                                    (0, a.jsx)(l.Text, {
                                         color: 'header-secondary',
-                                        className: _.__invalid_label,
+                                        className: m.__invalid_label,
                                         variant: 'text-sm/normal',
-                                        children: j
+                                        children: x
                                     })
                                 ]
                             })

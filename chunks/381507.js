@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => f });
 var l = n(200651);
 n(192379);
 var i = n(780384),
@@ -8,21 +8,21 @@ var i = n(780384),
     o = n(51144),
     C = n(105759),
     d = n(898969),
-    u = n(703614),
-    c = n(182294),
+    c = n(703614),
+    u = n(182294),
     p = n(388032),
-    x = n(309100);
-let h = () => {
+    x = n(586118);
+let f = () => {
     let e = (0, C.Z)(),
         { avatarSrc: t, eventHandlers: n } = (0, a.Z)({
             user: e,
-            size: c.EF.SIZE_32,
+            size: u.EF.SIZE_32,
             animateOnHover: !0
         }),
-        h = (0, r.Fg)(),
-        _ = (0, i.ap)(h),
-        f = o.ZP.getName(e),
-        j = _ ? d.Z : u.Z;
+        f = (0, r.Fg)(),
+        h = (0, i.ap)(f),
+        _ = o.ZP.getName(e),
+        j = h ? d.Z : c.Z;
     return null == e
         ? null
         : (0, l.jsxs)('div', {
@@ -30,17 +30,46 @@ let h = () => {
               children: [
                   (0, l.jsx)('div', {
                       className: x.avatarContainer,
-                      children: (0, l.jsx)(s.qEK, {
-                          src: t,
-                          'aria-label': e.username,
-                          size: c.EF.SIZE_32,
-                          ...n
-                      })
+                      children: (0, l.jsx)(
+                          s.qEK,
+                          (function (e) {
+                              for (var t = 1; t < arguments.length; t++) {
+                                  var n = null != arguments[t] ? arguments[t] : {},
+                                      l = Object.keys(n);
+                                  'function' == typeof Object.getOwnPropertySymbols &&
+                                      (l = l.concat(
+                                          Object.getOwnPropertySymbols(n).filter(function (e) {
+                                              return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                          })
+                                      )),
+                                      l.forEach(function (t) {
+                                          var l;
+                                          (l = n[t]),
+                                              t in e
+                                                  ? Object.defineProperty(e, t, {
+                                                        value: l,
+                                                        enumerable: !0,
+                                                        configurable: !0,
+                                                        writable: !0
+                                                    })
+                                                  : (e[t] = l);
+                                      });
+                              }
+                              return e;
+                          })(
+                              {
+                                  src: t,
+                                  'aria-label': e.username,
+                                  size: u.EF.SIZE_32
+                              },
+                              n
+                          )
+                      )
                   }),
                   (0, l.jsx)(s.Text, {
                       variant: 'text-xs/bold',
                       className: x.bannerHeader,
-                      children: p.intl.format(p.t.oxhCOj, { userName: f })
+                      children: p.NW.format(p.t.oxhCOj, { userName: _ })
                   }),
                   (0, l.jsx)(j, { className: x.bannerIcon })
               ]

@@ -1,78 +1,118 @@
-n.d(t, { m: () => S });
-var i = n(200651),
-    l = n(192379),
-    r = n(399606),
-    a = n(704215),
-    o = n(692547),
+n.d(t, { m: () => x });
+var r = n(200651),
+    i = n(192379),
+    l = n(399606),
+    o = n(704215),
+    a = n(692547),
     s = n(481060),
     c = n(239091),
-    d = n(605236),
-    u = n(45966),
-    h = n(31445),
-    p = n(22082),
-    m = n(703656),
+    u = n(605236),
+    d = n(45966),
+    p = n(31445),
+    h = n(22082),
+    f = n(703656),
     g = n(306680),
-    f = n(709054),
-    _ = n(540126),
+    m = n(709054),
+    b = n(540126),
     v = n(434479),
-    C = n(981631),
-    x = n(176505),
-    I = n(490897),
-    Z = n(388032),
-    b = n(327262);
-function S(e) {
-    let { guild: t, selected: S } = e,
-        N = (0, h.Z)(t),
-        E = (0, d.wE)(a.z.CHANNEL_BROWSER_NEW_BADGE_NUX),
-        j = (0, r.Wu)([p.Z], () => Array.from(p.Z.getNewChannelIds(t.id)).filter((e) => p.Z.shouldIndicateNewChannel(t.id, e))),
-        y = (0, r.e7)([g.ZP], () => g.ZP.hasUnread(t.id, I.W.GUILD_ONBOARDING_QUESTION)),
-        T = j.length > _.Cb,
-        A = (0, r.e7)([u.Z, g.ZP], () => {
-            let e = u.Z.lastFetchedAt(t.id),
-                n = g.ZP.lastMessageId(t.id, I.W.GUILD_ONBOARDING_QUESTION);
+    y = n(981631),
+    _ = n(176505),
+    O = n(490897),
+    j = n(388032),
+    C = n(160031);
+function x(e) {
+    let { guild: t, selected: x } = e,
+        P = (0, p.Z)(t),
+        S = (0, u.wE)(o.z.CHANNEL_BROWSER_NEW_BADGE_NUX),
+        I = (0, l.Wu)([h.Z], () => Array.from(h.Z.getNewChannelIds(t.id)).filter((e) => h.Z.shouldIndicateNewChannel(t.id, e))),
+        N = (0, l.e7)([g.ZP], () => g.ZP.hasUnread(t.id, O.W.GUILD_ONBOARDING_QUESTION)),
+        Z = I.length > b.Cb,
+        w = (0, l.e7)([d.Z, g.ZP], () => {
+            let e = d.Z.lastFetchedAt(t.id),
+                n = g.ZP.lastMessageId(t.id, O.W.GUILD_ONBOARDING_QUESTION);
             if (null == n) return !1;
-            let i = f.default.extractTimestamp(n);
-            return null != e && e > i;
+            let r = m.default.extractTimestamp(n);
+            return null != e && e > r;
         }),
-        P = l.useCallback(() => {
-            (0, m.uL)(C.Z5c.CHANNEL(t.id, N ? x.oC.CUSTOMIZE_COMMUNITY : x.oC.CHANNEL_BROWSER));
-        }, [t.id, N]),
-        R = l.useCallback(
+        E = i.useCallback(() => {
+            (0, f.uL)(y.Z5c.CHANNEL(t.id, P ? _.oC.CUSTOMIZE_COMMUNITY : _.oC.CHANNEL_BROWSER));
+        }, [t.id, P]),
+        T = i.useCallback(
             (e) => {
                 (0, c.jW)(e, async () => {
                     let { default: e } = await n.e('8926').then(n.bind(n, 156673));
-                    return (n) =>
-                        (0, i.jsx)(e, {
-                            ...n,
-                            guild: t
-                        });
+                    return (n) => {
+                        var i, l;
+                        return (0, r.jsx)(
+                            e,
+                            ((i = (function (e) {
+                                for (var t = 1; t < arguments.length; t++) {
+                                    var n = null != arguments[t] ? arguments[t] : {},
+                                        r = Object.keys(n);
+                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                        (r = r.concat(
+                                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                            })
+                                        )),
+                                        r.forEach(function (t) {
+                                            var r;
+                                            (r = n[t]),
+                                                t in e
+                                                    ? Object.defineProperty(e, t, {
+                                                          value: r,
+                                                          enumerable: !0,
+                                                          configurable: !0,
+                                                          writable: !0
+                                                      })
+                                                    : (e[t] = r);
+                                        });
+                                }
+                                return e;
+                            })({}, n)),
+                            (l = l = { guild: t }),
+                            Object.getOwnPropertyDescriptors
+                                ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
+                                : (function (e, t) {
+                                      var n = Object.keys(e);
+                                      if (Object.getOwnPropertySymbols) {
+                                          var r = Object.getOwnPropertySymbols(e);
+                                          n.push.apply(n, r);
+                                      }
+                                      return n;
+                                  })(Object(l)).forEach(function (e) {
+                                      Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
+                                  }),
+                            i)
+                        );
+                    };
                 });
             },
             [t]
         ),
-        w = null;
+        A = null;
     return (
-        (E && !y && !T) ||
-            S ||
-            A ||
-            (w = (0, i.jsx)(s.IGR, {
-                color: o.Z.colors.BADGE_BRAND_BG.css,
-                text: Z.intl.string(Z.t.y2b7CA),
-                className: b.newChannel
+        (S && !N && !Z) ||
+            x ||
+            w ||
+            (A = (0, r.jsx)(s.IGR, {
+                color: a.Z.colors.BADGE_BRAND_BG.css,
+                text: j.NW.string(j.t.y2b7CA),
+                className: C.newChannel
             })),
-        (0, i.jsx)(v.m, {
+        (0, r.jsx)(v.m, {
             id: 'channels-'.concat(t.id),
             renderIcon: (e) =>
-                (0, i.jsx)(s.H$4, {
+                (0, r.jsx)(s.H$4, {
                     size: 'md',
                     color: 'currentColor',
                     className: e
                 }),
-            text: N ? Z.intl.string(Z.t.h9mGOD) : Z.intl.string(Z.t.et6wam),
-            selected: S,
-            onClick: P,
-            onContextMenu: R,
-            trailing: w
+            text: P ? j.NW.string(j.t.h9mGOD) : j.NW.string(j.t.et6wam),
+            selected: x,
+            onClick: E,
+            onContextMenu: T,
+            trailing: A
         })
     );
 }

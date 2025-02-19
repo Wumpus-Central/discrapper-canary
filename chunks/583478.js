@@ -1,50 +1,75 @@
-n.d(t, { Z: () => f }), n(47120);
-var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    l = n.n(r),
-    a = n(481060),
+n.d(t, { Z: () => E }), n(230036), n(47120);
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(481060),
     o = n(710845),
     c = n(168232),
     d = n(48541),
-    u = n(287153);
-let m = new o.Z('BalanceCounter'),
-    g = (0, c.dU)(void 0) === d.C.PRODUCTION,
+    u = n(522954);
+function m(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+let g = new o.Z('BalanceCounter'),
+    p = (0, c.dU)(void 0) === d.C.PRODUCTION,
     h = {
         jump: 1,
         duration: 1
     },
-    x = {
+    f = {
         POSITIVE: [
             {
                 delta: 200,
                 duration: 1000,
-                tickConfig: { ...h }
+                tickConfig: m({}, h)
             },
             {
                 delta: 500,
                 duration: 2000,
-                tickConfig: { ...h }
+                tickConfig: m({}, h)
             }
         ].sort((e, t) => e.delta - t.delta),
         NEGATIVE: [
             {
                 delta: 1000,
                 duration: 1000,
-                tickConfig: { ...h }
+                tickConfig: m({}, h)
             },
             {
                 delta: 4000,
                 duration: 2000,
-                tickConfig: { ...h }
+                tickConfig: m({}, h)
             }
         ].sort((e, t) => e.delta - t.delta)
     },
-    _ = {
-        POSITIVE: x.POSITIVE[x.POSITIVE.length - 1],
-        NEGATIVE: x.NEGATIVE[x.NEGATIVE.length - 1]
+    N = {
+        POSITIVE: f.POSITIVE[f.POSITIVE.length - 1],
+        NEGATIVE: f.NEGATIVE[f.NEGATIVE.length - 1]
     };
-function p(e, t) {
+function x(e, t) {
     return e > t
         ? {
               jump: Math.ceil((2 * e) / t),
@@ -56,91 +81,91 @@ function p(e, t) {
           };
 }
 !(function () {
-    for (let e of Object.keys(x)) {
+    for (let e of Object.keys(f)) {
         let t = 0,
             n = 0;
-        for (let i of x[e]) {
-            let e = Math.abs(i.delta - n),
-                s = Math.abs(i.duration - t);
-            (i.tickConfig = p(e, s)), (t = i.duration), (n = i.delta);
+        for (let r of f[e]) {
+            let e = Math.abs(r.delta - n),
+                i = Math.abs(r.duration - t);
+            (r.tickConfig = x(e, i)), (t = r.duration), (n = r.delta);
         }
     }
 })(),
-    g ||
-        m.log('Initializing data structures for BalanceCounter speed and tick configurations: ', {
+    p ||
+        g.log('Initializing data structures for BalanceCounter speed and tick configurations: ', {
             MAX_ANIMATION_DURATION_MS: 3000,
-            ANIMATION_THRESHOLDS: x
+            ANIMATION_THRESHOLDS: f
         });
-let E = (e, t, n, i) => {
-        let s = Math.abs(i - n),
-            r = x[t],
-            l = _[t];
-        if (s > l.delta) return p(s, 3000 - l.duration);
-        for (let e of r) if (s <= e.delta) return e.tickConfig;
+let b = (e, t, n, r) => {
+        let i = Math.abs(r - n),
+            s = f[t],
+            a = N[t];
+        if (i > a.delta) return x(i, 3000 - a.duration);
+        for (let e of s) if (i <= e.delta) return e.tickConfig;
         return {
             jump: 1,
             duration: 1
         };
     },
-    C = (e) => (null === e ? 0 : ''.concat(e).length),
-    f = (e) => {
+    _ = (e) => (null === e ? 0 : ''.concat(e).length),
+    E = (e) => {
         let { value: t, className: n } = e,
-            [r, o] = (0, s.useState)(null),
-            c = (0, s.useRef)(null),
-            d = (0, s.useRef)(null),
-            h = (0, s.useRef)(null);
-        (0, s.useEffect)(() => {
+            [s, o] = (0, i.useState)(null),
+            c = (0, i.useRef)(null),
+            d = (0, i.useRef)(null),
+            m = (0, i.useRef)(null);
+        (0, i.useEffect)(() => {
             if (null === t) return;
             let e = null !== d.current ? t - d.current : t;
-            h.current = {
+            m.current = {
                 lastChangedAt: Date.now(),
                 totalDelta: Math.abs(e),
                 changeType: e > 0 ? 'POSITIVE' : 'NEGATIVE'
             };
         }, [t]),
-            (0, s.useEffect)(() => {
+            (0, i.useEffect)(() => {
                 var e;
                 if (null === t) {
-                    null !== r && o(null);
+                    null !== s && o(null);
                     return;
                 }
-                if (null === r || null === d.current) {
+                if (null === s || null === d.current) {
                     o(t), (d.current = t);
                     return;
                 }
-                if (r === t) {
-                    if (!g && null !== h.current) {
+                if (s === t) {
+                    if (!p && null !== m.current) {
                         let e = Date.now();
-                        m.log('Balance Counter finished updating: ', {
-                            time: e - h.current.lastChangedAt,
-                            delta: r - d.current
+                        g.log('Balance Counter finished updating: ', {
+                            time: e - m.current.lastChangedAt,
+                            delta: s - d.current
                         });
                     }
                     d.current = t;
                     return;
                 }
                 if (null !== c.current) return;
-                let { totalDelta: n, changeType: i } =
-                        null !== (e = h.current) && void 0 !== e
+                let { totalDelta: n, changeType: r } =
+                        null !== (e = m.current) && void 0 !== e
                             ? e
                             : {
                                   totalDelta: Math.abs(t - d.current),
                                   changeType: t > d.current ? 'POSITIVE' : 'NEGATIVE'
                               },
-                    { jump: s, duration: l } = E(n, i, t, r);
+                    { jump: i, duration: a } = b(n, r, t, s);
                 c.current = setTimeout(() => {
-                    (c.current = null), r < t ? o(r + s) : r > t && o(r - s);
-                }, l);
-            }, [r, t, o]);
-        let x = null === t,
-            _ = null === r ? C(t) : C(r);
-        return (0, i.jsx)(a.Text, {
+                    (c.current = null), s < t ? o(s + i) : s > t && o(s - i);
+                }, a);
+            }, [s, t, o]);
+        let h = null === t,
+            f = null === s ? _(t) : _(s);
+        return (0, r.jsx)(l.Text, {
             variant: 'text-md/semibold',
-            className: l()([u.balanceCounterText, n]),
+            className: a()([u.balanceCounterText, n]),
             style: {
-                width: 'calc('.concat(x ? 0 : _, 'ch + ').concat(x ? '0px' : '8px', ')'),
-                opacity: x ? 0 : 1
+                width: 'calc('.concat(h ? 0 : f, 'ch + ').concat(h ? '0px' : '8px', ')'),
+                opacity: +!h
             },
-            children: r
+            children: s
         });
     };

@@ -1,177 +1,211 @@
-t.d(n, {
-    $y: () => _,
+n.d(t, {
+    $y: () => O,
     Kk: () => E,
-    NB: () => g,
+    NB: () => p,
     en: () => v,
-    fi: () => x,
-    n_: () => f,
-    rS: () => S,
-    tS: () => T
+    fi: () => S,
+    n_: () => _,
+    rS: () => T,
+    tS: () => x
 }),
-    t(411104),
-    t(47120);
-var l = t(544891),
-    i = t(570140),
-    s = t(668781),
-    r = t(881052),
-    a = t(339085),
-    o = t(107862),
-    d = t(592125),
-    c = t(430824),
-    u = t(823379),
-    m = t(208665),
-    I = t(981631),
-    h = t(290511),
-    N = t(388032);
-function g() {
-    i.Z.dispatch({ type: 'GUILD_SETTINGS_ONBOARDING_PROMPTS_RESET' });
+    n(411104),
+    n(47120);
+var l = n(544891),
+    r = n(570140),
+    i = n(668781),
+    s = n(881052),
+    a = n(339085),
+    o = n(107862),
+    c = n(592125),
+    d = n(430824),
+    u = n(823379),
+    m = n(208665),
+    N = n(981631),
+    h = n(290511),
+    I = n(388032);
+function g(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            l = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (l = l.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            l.forEach(function (t) {
+                var l;
+                (l = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: l,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = l);
+            });
+    }
+    return e;
 }
-function E(e, n, t) {
-    T(
-        e,
-        m.Z.editedOnboardingPrompts.map((e) =>
-            e.id === n
-                ? {
-                      ...e,
-                      ...t
+function f(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var l = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, l);
                   }
-                : e
-        )
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
     );
 }
-function x(e, n) {
-    T(
+function p() {
+    r.Z.dispatch({ type: 'GUILD_SETTINGS_ONBOARDING_PROMPTS_RESET' });
+}
+function E(e, t, n) {
+    x(
         e,
-        m.Z.editedOnboardingPrompts.filter((e) => e.id !== n)
+        m.Z.editedOnboardingPrompts.map((e) => (e.id === t ? g({}, e, n) : e))
     );
 }
-function T(e, n) {
-    let t = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
+function S(e, t) {
+    x(
+        e,
+        m.Z.editedOnboardingPrompts.filter((e) => e.id !== t)
+    );
+}
+function x(e, t) {
+    let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
     if (
-        (i.Z.dispatch({
+        (r.Z.dispatch({
             type: 'GUILD_SETTINGS_ONBOARDING_PROMPTS_EDIT',
-            prompts: n
+            prompts: t
         }),
-        t)
+        n)
     ) {
-        let t = n.map((t) => p(e, n, t));
-        i.Z.dispatch({
+        let n = t.map((n) => j(e, t, n));
+        r.Z.dispatch({
             type: 'GUILD_SETTINGS_ONBOARDING_PROMPTS_ERRORS',
-            errors: t
+            errors: n
         });
     }
 }
-async function S(e, n) {
-    let { dropdownsAllowed: t } = (0, o.RM)(e.id);
+async function T(e, t) {
+    let { dropdownsAllowed: n } = (0, o.RM)(e.id);
     if (!m.Z.hasChanges()) return;
     let l = m.Z.editedOnboardingPrompts;
-    null != n && n.ignoreDefaultPrompt && 1 === l.length && (0, h.RF)(l[0]) && (l = []);
-    let I = l.map((n) => {
-            let l = n.options.map((n) => {
-                let t = null == n.roleIds ? n.roleIds : n.roleIds.filter((n) => null != c.Z.getRole(e.id, n)),
-                    l = null == n.channelIds ? n.channelIds : n.channelIds.filter((e) => null != d.Z.getChannel(e));
-                return {
-                    ...n,
-                    roleIds: t,
+    null != t && t.ignoreDefaultPrompt && 1 === l.length && (0, h.RF)(l[0]) && (l = []);
+    let N = l.map((t) => {
+            let l = t.options.map((t) => {
+                let n = null == t.roleIds ? t.roleIds : t.roleIds.filter((t) => null != d.Z.getRole(e.id, t)),
+                    l = null == t.channelIds ? t.channelIds : t.channelIds.filter((e) => null != c.Z.getChannel(e));
+                return f(g({}, t), {
+                    roleIds: n,
                     channelIds: l,
                     emoji: (function (e) {
-                        var n;
+                        var t;
                         if (null != e) {
-                            if ((null === (n = e.emoji) || void 0 === n ? void 0 : n.id) == null || null != a.ZP.getCustomEmojiById(e.emoji.id)) return e.emoji;
+                            if ((null === (t = e.emoji) || void 0 === t ? void 0 : t.id) == null || null != a.ZP.getCustomEmojiById(e.emoji.id)) return e.emoji;
                         }
-                    })(n)
-                };
+                    })(t)
+                });
             });
-            return {
-                ...n,
+            return f(g({}, t), {
                 options: l,
-                type: l.length >= h.fY && t ? h.FN.DROPDOWN : h.FN.MULTIPLE_CHOICE
-            };
+                type: l.length >= h.fY && n ? h.FN.DROPDOWN : h.FN.MULTIPLE_CHOICE
+            });
         }),
-        g = I.filter((e) => e.inOnboarding),
-        E = I.filter((e) => !0 !== e.inOnboarding),
-        x = I.map((n) => p(e, I, n));
-    if (x.filter(u.lm).length > 0)
+        p = N.filter((e) => e.inOnboarding),
+        E = N.filter((e) => !0 !== e.inOnboarding),
+        S = N.map((t) => j(e, N, t));
+    if (S.filter(u.lm).length > 0)
         throw (
-            (i.Z.dispatch({
+            (r.Z.dispatch({
                 type: 'GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED',
-                errors: x
+                errors: S
             }),
             Error('failed to locally validate prompts'))
         );
-    if (g.length > h.b3)
+    if (p.length > h.b3)
         throw (
-            (s.Z.show({
-                title: N.intl.string(N.t.iLdiqa),
-                body: N.intl.formatToPlainString(N.t['cTb/rq'], { numQuestions: h.b3 })
+            (i.Z.show({
+                title: I.NW.string(I.t.iLdiqa),
+                body: I.NW.formatToPlainString(I.t['cTb/rq'], { numQuestions: h.b3 })
             }),
-            i.Z.dispatch({
+            r.Z.dispatch({
                 type: 'GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED',
-                errors: x
+                errors: S
             }),
             Error('too many prompts in onboarding'))
         );
-    let T = [...g, ...E];
-    i.Z.dispatch({ type: 'GUILD_SETTINGS_ONBOARDING_PROMPTS_SUBMIT' });
+    let x = [...p, ...E];
+    r.Z.dispatch({ type: 'GUILD_SETTINGS_ONBOARDING_PROMPTS_SUBMIT' });
     try {
-        await f(e.id, { prompts: T.map(h.dr) }),
-            i.Z.dispatch({
+        await _(e.id, { prompts: x.map(h.dr) }),
+            r.Z.dispatch({
                 type: 'GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS',
                 guildId: e.id,
-                updates: { prompts: T }
+                updates: { prompts: x }
             });
-    } catch (t) {
-        var S;
-        let { fieldName: e, error: n } = null !== (S = new r.Hx(t).getAnyErrorMessageAndField()) && void 0 !== S ? S : {};
+    } catch (n) {
+        var T;
+        let { fieldName: e, error: t } = null !== (T = new s.Hx(n).getAnyErrorMessageAndField()) && void 0 !== T ? T : {};
         throw (
-            (s.Z.show({
-                title: N.intl.string(N.t.iLdiqa),
-                body: [e, n].filter(u.lm).join(': ')
+            (i.Z.show({
+                title: I.NW.string(I.t.iLdiqa),
+                body: [e, t].filter(u.lm).join(': ')
             }),
-            i.Z.dispatch({ type: 'GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED' }),
+            r.Z.dispatch({ type: 'GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED' }),
             Error('failed to save prompts'))
         );
     }
 }
-async function _(e, n) {
-    i.Z.dispatch({
+async function O(e, t) {
+    r.Z.dispatch({
         type: 'GUILD_ONBOARDING_PROMPTS_LOCAL_UPDATE',
         guildId: e,
-        updates: { enabled: n }
+        updates: { enabled: t }
     });
     try {
-        await f(e, { enabled: n });
+        await _(e, { enabled: t });
     } catch (l) {
-        var t;
-        let { fieldName: e, error: n } = null !== (t = new r.Hx(l).getAnyErrorMessageAndField()) && void 0 !== t ? t : {};
-        s.Z.show({
-            title: N.intl.string(N.t.iLdiqa),
-            body: [e, n].filter(u.lm).join(': ')
+        var n;
+        let { fieldName: e, error: t } = null !== (n = new s.Hx(l).getAnyErrorMessageAndField()) && void 0 !== n ? n : {};
+        i.Z.show({
+            title: I.NW.string(I.t.iLdiqa),
+            body: [e, t].filter(u.lm).join(': ')
         });
     }
 }
-async function f(e, n) {
+async function _(e, t) {
     await l.tn.put({
-        url: I.ANM.GUILD_ONBOARDING(e),
-        body: n,
+        url: N.ANM.GUILD_ONBOARDING(e),
+        body: t,
         rejectWithError: !1
     });
 }
-function p(e, n, t) {
+function j(e, t, n) {
     let l = { optionErrors: [] },
-        i = !1;
-    return t.title.length <= 0 && ((l.title = N.intl.string(N.t.h8Hg1d)), (i = !0)), t.options.length <= 0 && ((l.options = N.intl.string(N.t['64tF+f'])), (i = !0)), t.inOnboarding && n.filter((e) => e.inOnboarding).length > h.b3 && ((l.config = N.intl.formatToPlainString(N.t['cTb/rq'], { numQuestions: h.b3 })), (i = !0)), (l.optionErrors = t.options.map((l) => v(e, n, t, l))), (i = i || l.optionErrors.some((e) => null != e)) ? l : null;
+        r = !1;
+    return n.title.length <= 0 && ((l.title = I.NW.string(I.t.h8Hg1d)), (r = !0)), n.options.length <= 0 && ((l.options = I.NW.string(I.t['64tF+f'])), (r = !0)), n.inOnboarding && t.filter((e) => e.inOnboarding).length > h.b3 && ((l.config = I.NW.formatToPlainString(I.t['cTb/rq'], { numQuestions: h.b3 })), (r = !0)), (l.optionErrors = n.options.map((l) => v(e, t, n, l))), (r = r || l.optionErrors.some((e) => null != e)) ? l : null;
 }
-function v(e, n, t, l) {
-    var i, s, r;
-    if (t.singleSelect) {
-        let e = new Set(null !== (i = l.roleIds) && void 0 !== i ? i : []);
-        for (let l of n)
-            if (l.id !== t.id) {
-                for (let n of l.options) if (null != n.roleIds && n.roleIds.some((n) => e.has(n))) return N.intl.string(N.t.rKxyvb);
+function v(e, t, n, l) {
+    var r, i, s;
+    if (n.singleSelect) {
+        let e = new Set(null !== (r = l.roleIds) && void 0 !== r ? r : []);
+        for (let l of t)
+            if (l.id !== n.id) {
+                for (let t of l.options) if (null != t.roleIds && t.roleIds.some((t) => e.has(t))) return I.NW.string(I.t.rKxyvb);
             }
     }
-    let a = (null !== (s = l.roleIds) && void 0 !== s ? s : []).filter((n) => null != c.Z.getRole(e.id, n)),
-        o = (null !== (r = l.channelIds) && void 0 !== r ? r : []).filter((e) => null != d.Z.getChannel(e));
-    return 0 === a.length && 0 === o.length ? N.intl.string(N.t.F6SUWF) : null;
+    let a = (null !== (i = l.roleIds) && void 0 !== i ? i : []).filter((t) => null != d.Z.getRole(e.id, t)),
+        o = (null !== (s = l.channelIds) && void 0 !== s ? s : []).filter((e) => null != c.Z.getChannel(e));
+    return 0 === a.length && 0 === o.length ? I.NW.string(I.t.F6SUWF) : null;
 }

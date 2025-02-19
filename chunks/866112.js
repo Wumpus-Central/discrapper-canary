@@ -1,14 +1,59 @@
-n.d(t, { Z: () => p }), n(653041);
-var i,
-    l,
-    a,
-    r = n(442837),
-    s = n(570140),
+n.d(t, { Z: () => f }), n(653041);
+var r,
+    i = n(442837),
+    l = n(570140),
     o = n(975984);
-let c = [],
+function a(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function s(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                a(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function c(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let u = [],
     d = {},
-    u = {};
-class h extends (i = r.ZP.Store) {
+    p = {};
+class h extends (r = i.ZP.Store) {
     getSearchState(e) {
         var t;
         return null !== (t = d[e]) && void 0 !== t
@@ -19,25 +64,17 @@ class h extends (i = r.ZP.Store) {
               };
     }
     getSearchResults(e, t) {
-        var n, i, l;
-        return null !== (l = null === (i = u[e]) || void 0 === i ? void 0 : null === (n = i[t]) || void 0 === n ? void 0 : n.results) && void 0 !== l ? l : c;
+        var n, r, i;
+        return null !== (i = null === (r = p[e]) || void 0 === r ? void 0 : null === (n = r[t]) || void 0 === n ? void 0 : n.results) && void 0 !== i ? i : u;
     }
     shouldFetch(e, t) {
-        var n, i;
-        let l = null === (i = u[e]) || void 0 === i ? void 0 : null === (n = i[t]) || void 0 === n ? void 0 : n.lastSearchedAt;
-        return null == l || Date.now() - l > 120000;
+        var n, r;
+        let i = null === (r = p[e]) || void 0 === r ? void 0 : null === (n = r[t]) || void 0 === n ? void 0 : n.lastSearchedAt;
+        return null == i || Date.now() - i > 120000;
     }
 }
-(a = 'GuildDirectorySearchStore'),
-    (l = 'displayName') in h
-        ? Object.defineProperty(h, l, {
-              value: a,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (h[l] = a);
-let p = new h(s.Z, {
+a(h, 'displayName', 'GuildDirectorySearchStore');
+let f = new h(l.Z, {
     GUILD_DIRECTORY_SEARCH_START: function (e) {
         let { channelId: t, query: n } = e;
         d[t] = {
@@ -46,30 +83,23 @@ let p = new h(s.Z, {
         };
     },
     GUILD_DIRECTORY_SEARCH_SUCCESS: function (e) {
-        let { channelId: t, query: n, results: i } = e;
-        d[t] = {
-            ...d[t],
-            fetching: !1
-        };
-        let l = [];
-        i.forEach((e) => {
+        let { channelId: t, query: n, results: r } = e;
+        d[t] = c(s({}, d[t]), { fetching: !1 });
+        let i = [];
+        r.forEach((e) => {
             let t = (0, o.MQ)(e);
-            l.push(t);
+            i.push(t);
         }),
-            (u[t] = {
-                ...u[t],
+            (p[t] = c(s({}, p[t]), {
                 [n]: {
-                    results: (0, o.Th)(l),
+                    results: (0, o.Th)(i),
                     lastSearchedAt: Date.now()
                 }
-            });
+            }));
     },
     GUILD_DIRECTORY_SEARCH_FAILURE: function (e) {
         let { channelId: t } = e;
-        d[t] = {
-            ...d[t],
-            fetching: !1
-        };
+        d[t] = c(s({}, d[t]), { fetching: !1 });
     },
     GUILD_DIRECTORY_SEARCH_CLEAR: function (e) {
         let { channelId: t } = e;
@@ -87,18 +117,12 @@ let p = new h(s.Z, {
     },
     GUILD_DIRECTORY_ENTRY_DELETE: function (e) {
         var t;
-        let { channelId: n, guildId: i } = e,
-            l = null === (t = d[n]) || void 0 === t ? void 0 : t.mostRecentQuery;
+        let { channelId: n, guildId: r } = e,
+            i = null === (t = d[n]) || void 0 === t ? void 0 : t.mostRecentQuery;
+        if (null == i) return;
+        let l = p[n][i];
         if (null == l) return;
-        let a = u[n][l];
-        if (null == a) return;
-        let r = a.results.filter((e) => e.guildId !== i);
-        u[n] = {
-            ...u[n],
-            [d[n].mostRecentQuery]: {
-                ...a,
-                results: r
-            }
-        };
+        let o = l.results.filter((e) => e.guildId !== r);
+        p[n] = c(s({}, p[n]), { [d[n].mostRecentQuery]: c(s({}, l), { results: o }) });
     }
 });

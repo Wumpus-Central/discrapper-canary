@@ -3,115 +3,161 @@ var a = n(200651),
     i = n(192379),
     l = n(120356),
     s = n.n(l),
-    c = n(990547),
-    o = n(442837),
-    r = n(477690),
+    r = n(990547),
+    c = n(442837),
+    o = n(477690),
     d = n(481060),
     u = n(493773),
     p = n(110924),
-    m = n(40851),
+    f = n(40851),
     g = n(367907),
-    f = n(565384),
+    m = n(565384),
     v = n(906732),
     h = n(835473),
-    x = n(600164),
-    _ = n(592125),
-    b = n(451478),
+    b = n(600164),
+    x = n(592125),
+    _ = n(451478),
     C = n(626135),
     I = n(585483),
-    T = n(624138),
-    Z = n(115130),
-    S = n(566620),
-    y = n(421),
-    N = n(895395),
-    j = n(49978),
-    E = n(427996),
-    A = n(701488),
-    M = n(981631),
-    O = n(388032),
-    L = n(679903),
-    k = n(361205),
-    w = n(812320);
-let P = (0, T.Mg)(r.Z.ACTIVITY_SHELF_MODAL_MODAL_PADDING),
-    D = (0, T.Mg)(r.Z.ACTIVITY_SHELF_MODAL_MODAL_WIDTH),
-    R = (0, T.Mg)(r.Z.ACTIVITY_SHELF_MODAL_MODAL_MAX_HEIGHT) + P + (0, T.Mg)(r.Z.ACTIVITY_SHELF_MODAL_MODAL_ART_HEIGHT);
+    y = n(624138),
+    T = n(115130),
+    j = n(566620),
+    N = n(421),
+    Z = n(895395),
+    S = n(49978),
+    O = n(427996),
+    E = n(701488),
+    A = n(981631),
+    M = n(388032),
+    P = n(790331),
+    w = n(361205),
+    L = n(812320);
+function k(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            a = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (a = a.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            a.forEach(function (t) {
+                var a;
+                (a = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: a,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = a);
+            });
+    }
+    return e;
+}
+let D = (0, y.Mg)(o.Z.ACTIVITY_SHELF_MODAL_MODAL_PADDING),
+    W = (0, y.Mg)(o.Z.ACTIVITY_SHELF_MODAL_MODAL_WIDTH),
+    R = (0, y.Mg)(o.Z.ACTIVITY_SHELF_MODAL_MODAL_MAX_HEIGHT) + D + (0, y.Mg)(o.Z.ACTIVITY_SHELF_MODAL_MODAL_ART_HEIGHT);
 function F(e) {
-    let { channel: t, guildId: n, locationObject: l, onClose: r, initialSelectedApplicationId: m, initialSlide: b = A.ag.DIRECTORY, enableSelectedTextChannelInvite: T, analyticsLocations: P, ...R } = e,
-        F = (0, o.e7)([Z.Z], () => Z.Z.getIsEnabled(), []),
-        { analyticsLocations: V } = (0, v.ZP)(P),
-        [H, U] = i.useState(b),
-        Y = (0, p.Z)(H),
-        [G, z] = i.useState(null),
-        [W, q] = i.useState(m),
-        [J, X] = i.useState(void 0),
-        [$] = (0, h.Z)(null == W ? [] : [W]),
-        Q = i.useRef(null),
-        K = i.useMemo(
+    var t,
+        n,
+        { channel: l, guildId: o, locationObject: f, onClose: _, initialSelectedApplicationId: y, initialSlide: D = E.ag.DIRECTORY, enableSelectedTextChannelInvite: R, analyticsLocations: F } = e,
+        V = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                a,
+                i = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        a,
+                        i = {},
+                        l = Object.keys(e);
+                    for (a = 0; a < l.length; a++) (n = l[a]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var l = Object.getOwnPropertySymbols(e);
+                for (a = 0; a < l.length; a++) (n = l[a]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+            }
+            return i;
+        })(e, ['channel', 'guildId', 'locationObject', 'onClose', 'initialSelectedApplicationId', 'initialSlide', 'enableSelectedTextChannelInvite', 'analyticsLocations']);
+    let H = (0, c.e7)([T.Z], () => T.Z.getIsEnabled(), []),
+        { analyticsLocations: U } = (0, v.ZP)(F),
+        [Y, G] = i.useState(D),
+        z = (0, p.Z)(Y),
+        [q, J] = i.useState(null),
+        [X, $] = i.useState(y),
+        [Q, K] = i.useState(void 0),
+        [ee] = (0, h.Z)(null == X ? [] : [X]),
+        et = i.useRef(null),
+        en = i.useMemo(
             () => ({
-                application_id: W,
-                source_section: l.section,
-                impression_group: c.ImpressionGroups.ACTIVITY_SHELF_FLOW
+                application_id: X,
+                source_section: f.section,
+                impression_group: r.ImpressionGroups.ACTIVITY_SHELF_FLOW
             }),
-            [l.section, W]
+            [f.section, X]
         );
     i.useEffect(() => {
-        if (H === A.ag.DIRECTORY && null != Y && Y !== A.ag.DIRECTORY && null != G) {
+        if (Y === E.ag.DIRECTORY && null != z && z !== E.ag.DIRECTORY && null != q) {
             var e;
-            null === (e = Q.current) || void 0 === e || e.scrollTo({ top: G });
+            null === (e = et.current) || void 0 === e || e.scrollTo({ top: q });
         }
-    }, [G, Y, H]);
-    let ee = i.useCallback((e) => {
+    }, [q, z, Y]);
+    let ea = i.useCallback((e) => {
             var t;
             let { applicationId: n } = e,
-                a = null === (t = Q.current) || void 0 === t ? void 0 : t.scrollTop;
-            null != a && z(a), q(n), U(A.ag.SELECT_CHANNEL);
+                a = null === (t = et.current) || void 0 === t ? void 0 : t.scrollTop;
+            null != a && J(a), $(n), G(E.ag.SELECT_CHANNEL);
         }, []),
-        et = i.useCallback((e) => {
+        ei = i.useCallback((e) => {
             let { applicationId: t } = e;
-            q(t), U(A.ag.DETAIL_PAGE);
+            $(t), G(E.ag.DETAIL_PAGE);
         }, []);
     i.useEffect(() => {
-        C.default.track(M.rMx.OPEN_MODAL, {
+        C.default.track(A.rMx.OPEN_MODAL, {
             type: 'Activity Shelf',
-            channel_id: null == t ? void 0 : t.id,
-            guild_id: n
+            channel_id: null == l ? void 0 : l.id,
+            guild_id: o
         });
-    }, [t, n]),
+    }, [l, o]),
         i.useEffect(
             () => (
-                I.S.subscribe(M.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, ee),
+                I.S.subscribe(A.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, ea),
                 () => {
-                    I.S.unsubscribe(M.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, ee);
+                    I.S.unsubscribe(A.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, ea);
                 }
             ),
-            [ee]
+            [ea]
         ),
         i.useEffect(
             () => (
-                I.S.subscribe(M.CkL.SHOW_ACTIVITY_DETAILS, et),
+                I.S.subscribe(A.CkL.SHOW_ACTIVITY_DETAILS, ei),
                 () => {
-                    I.S.unsubscribe(M.CkL.SHOW_ACTIVITY_DETAILS, et);
+                    I.S.unsubscribe(A.CkL.SHOW_ACTIVITY_DETAILS, ei);
                 }
             ),
-            [et]
+            [ei]
         ),
         i.useEffect(() => {
-            S.ux();
+            j.ux();
         }, []);
-    let en = () => {
-            U(A.ag.DIRECTORY);
+    let el = () => {
+            G(E.ag.DIRECTORY);
         },
-        ea = i.useRef(Date.now()),
-        ei = i.useRef(!1),
-        el = i.useRef([]),
-        es = i.useCallback((e) => {
-            null == el.current.find((t) => t === e.applicationId) && el.current.push(e.applicationId);
+        es = i.useRef(Date.now()),
+        er = i.useRef(!1),
+        ec = i.useRef([]),
+        eo = i.useCallback((e) => {
+            null == ec.current.find((t) => t === e.applicationId) && ec.current.push(e.applicationId);
         }, []);
     return (
         i.useEffect(() => {
-            let e = Q.current;
+            let e = et.current;
             if (null != e) {
-                let t = () => (ei.current = !0);
+                let t = () => (er.current = !0);
                 return (
                     null != e && e.addEventListener('scroll', t),
                     () => {
@@ -122,201 +168,224 @@ function F(e) {
         }, []),
         (0, u.ZP)(() => () => {
             let e = {
-                    activity_tiles_viewed: el.current,
-                    duration_ms: Date.now() - ea.current,
-                    scrolled: ei.current
+                    activity_tiles_viewed: ec.current,
+                    duration_ms: Date.now() - es.current,
+                    scrolled: er.current
                 },
-                a = {
-                    channel_id: null == t ? void 0 : t.id,
-                    guild_id: n,
-                    location: (0, f.k$)(),
-                    ...(0, g.hH)(n),
-                    ...(0, g.v_)(_.Z.getChannel(null == t ? void 0 : t.id)),
-                    ...K,
-                    ...e
-                };
-            C.default.track(M.rMx.ACTIVITY_SHELF_CLOSE, a);
+                t = k(
+                    {
+                        channel_id: null == l ? void 0 : l.id,
+                        guild_id: o,
+                        location: (0, m.k$)()
+                    },
+                    (0, g.hH)(o),
+                    (0, g.v_)(x.Z.getChannel(null == l ? void 0 : l.id)),
+                    en,
+                    e
+                );
+            C.default.track(A.rMx.ACTIVITY_SHELF_CLOSE, t);
         }),
         (0, a.jsx)(v.Gt, {
-            value: V,
-            children: (0, a.jsxs)(d.Y0X, {
-                className: s()(L.root),
-                'aria-label': O.intl.string(O.t.shUONj),
-                ...R,
-                children: [
-                    (0, a.jsx)('img', {
-                        alt: O.intl.string(O.t['3Y9xdH']),
-                        src: k,
-                        className: L.shelfTopBackground
-                    }),
-                    (0, a.jsx)('img', {
-                        alt: O.intl.string(O.t['3Y9xdH']),
-                        src: w,
-                        className: L.shelfTopForeground
-                    }),
-                    (0, a.jsxs)(d.xBx, {
-                        separator: !1,
-                        justify: x.Z.Justify.BETWEEN,
-                        className: s()(L.modalHeader),
+            value: U,
+            children: (0, a.jsxs)(
+                d.Y0X,
+                ((t = k(
+                    {
+                        className: s()(P.root),
+                        'aria-label': M.NW.string(M.t.shUONj)
+                    },
+                    V
+                )),
+                (n = n =
+                    {
                         children: [
-                            (0, a.jsxs)('div', {
-                                className: L.headerTextContainer,
+                            (0, a.jsx)('img', {
+                                alt: M.NW.string(M.t['3Y9xdH']),
+                                src: w,
+                                className: P.shelfTopBackground
+                            }),
+                            (0, a.jsx)('img', {
+                                alt: M.NW.string(M.t['3Y9xdH']),
+                                src: L,
+                                className: P.shelfTopForeground
+                            }),
+                            (0, a.jsxs)(d.xBx, {
+                                separator: !1,
+                                justify: b.Z.Justify.BETWEEN,
+                                className: s()(P.modalHeader),
                                 children: [
-                                    H === A.ag.DETAIL_PAGE
-                                        ? null == $
-                                            ? null
-                                            : (0, a.jsxs)('div', {
-                                                  className: L.activityShelfTitle,
-                                                  children: [
-                                                      (0, a.jsx)(d.X6q, {
-                                                          variant: 'heading-xl/extrabold',
-                                                          children: $.name
-                                                      }),
-                                                      (0, a.jsxs)(d.P3F, {
-                                                          className: L.headerBackButton,
-                                                          onClick: en,
+                                    (0, a.jsxs)('div', {
+                                        className: P.headerTextContainer,
+                                        children: [
+                                            Y === E.ag.DETAIL_PAGE
+                                                ? null == ee
+                                                    ? null
+                                                    : (0, a.jsxs)('div', {
+                                                          className: P.activityShelfTitle,
                                                           children: [
-                                                              (0, a.jsx)(d.V7D, {
-                                                                  size: 'md',
-                                                                  color: 'currentColor'
+                                                              (0, a.jsx)(d.X6q, {
+                                                                  variant: 'heading-xl/extrabold',
+                                                                  children: ee.name
                                                               }),
-                                                              (0, a.jsx)(d.Text, {
-                                                                  variant: 'text-sm/semibold',
-                                                                  children: O.intl.string(O.t['13/7kZ'])
+                                                              (0, a.jsxs)(d.P3F, {
+                                                                  className: P.headerBackButton,
+                                                                  onClick: el,
+                                                                  children: [
+                                                                      (0, a.jsx)(d.V7D, {
+                                                                          size: 'md',
+                                                                          color: 'currentColor'
+                                                                      }),
+                                                                      (0, a.jsx)(d.Text, {
+                                                                          variant: 'text-sm/semibold',
+                                                                          children: M.NW.string(M.t['13/7kZ'])
+                                                                      })
+                                                                  ]
                                                               })
                                                           ]
                                                       })
-                                                  ]
-                                              })
-                                        : (0, a.jsx)('div', {
-                                              className: L.activityShelfTitle,
-                                              children: (0, a.jsx)(d.X6q, {
-                                                  variant: 'heading-xl/extrabold',
-                                                  children: O.intl.string(O.t.shUONj)
-                                              })
-                                          }),
-                                    H === A.ag.DIRECTORY
-                                        ? (0, a.jsx)(d.Text, {
-                                              variant: 'text-sm/normal',
-                                              children: F ? O.intl.string(O.t.tZ3FNj) : O.intl.string(O.t.Cye3SU)
-                                          })
-                                        : null
+                                                : (0, a.jsx)('div', {
+                                                      className: P.activityShelfTitle,
+                                                      children: (0, a.jsx)(d.X6q, {
+                                                          variant: 'heading-xl/extrabold',
+                                                          children: M.NW.string(M.t.shUONj)
+                                                      })
+                                                  }),
+                                            Y === E.ag.DIRECTORY
+                                                ? (0, a.jsx)(d.Text, {
+                                                      variant: 'text-sm/normal',
+                                                      children: H ? M.NW.string(M.t.tZ3FNj) : M.NW.string(M.t.Cye3SU)
+                                                  })
+                                                : null
+                                        ]
+                                    }),
+                                    (0, a.jsx)(d.olH, {
+                                        className: P.modalCloseButton,
+                                        onClick: _
+                                    })
                                 ]
                             }),
-                            (0, a.jsx)(d.olH, {
-                                className: L.modalCloseButton,
-                                onClick: r
+                            Y === E.ag.DIRECTORY && H ? (0, a.jsx)(O.W, {}) : null,
+                            (0, a.jsx)('div', { className: P.modalDivider }),
+                            (0, a.jsxs)(d.MyZ, {
+                                activeSlide: Y,
+                                centered: !1,
+                                width: W,
+                                children: [
+                                    (0, a.jsx)(d.Mi4, {
+                                        id: E.ag.DIRECTORY,
+                                        impressionName: r.ImpressionNames.ACTIVITY_SHELF,
+                                        impressionProperties: {
+                                            source_section: f.section,
+                                            impression_group: r.ImpressionGroups.ACTIVITY_SHELF_FLOW
+                                        },
+                                        children: (0, a.jsx)(B, {
+                                            slide: Y,
+                                            children: (0, a.jsx)(Z.Z, {
+                                                scrollerRef: et,
+                                                channel: l,
+                                                guildId: o,
+                                                locationObject: f,
+                                                onActivityItemVisible: eo,
+                                                onClose: _
+                                            })
+                                        })
+                                    }),
+                                    (0, a.jsx)(d.Mi4, {
+                                        id: E.ag.SELECT_CHANNEL,
+                                        impressionName: r.ImpressionNames.ACTIVITY_SHELF_SELECT_CHANNEL,
+                                        impressionProperties: {
+                                            source_section: f.section,
+                                            impression_group: r.ImpressionGroups.ACTIVITY_SHELF_FLOW,
+                                            application_id: X
+                                        },
+                                        children: (0, a.jsx)(B, {
+                                            slide: Y,
+                                            children: (0, a.jsx)(S.Z, {
+                                                applicationId: X,
+                                                selectedChannelId: Q,
+                                                setSelectedChannelId: K,
+                                                guildId: o,
+                                                enableSelectedTextChannelInvite: R
+                                            })
+                                        })
+                                    }),
+                                    (0, a.jsx)(d.Mi4, {
+                                        id: E.ag.DETAIL_PAGE,
+                                        impressionName: r.ImpressionNames.ACTIVITY_DETAILS,
+                                        impressionProperties: en,
+                                        children: (0, a.jsx)(B, {
+                                            slide: Y,
+                                            children:
+                                                null == X
+                                                    ? null
+                                                    : (0, a.jsx)(N.Z, {
+                                                          applicationId: X,
+                                                          channelId: null == l ? void 0 : l.id,
+                                                          guildId: o,
+                                                          onActivityLaunch: _
+                                                      })
+                                        })
+                                    })
+                                ]
+                            }),
+                            (0, a.jsx)('div', { className: P.modalDivider }),
+                            (0, a.jsx)(d.mzw, {
+                                separator: !1,
+                                className: P.footer,
+                                children: (() => {
+                                    switch (Y) {
+                                        case E.ag.DIRECTORY:
+                                            return (0, a.jsx)(Z.d, {});
+                                        case E.ag.SELECT_CHANNEL:
+                                            return (0, a.jsx)(S.q, {
+                                                onBack: el,
+                                                onClose: _,
+                                                guildId: o,
+                                                applicationId: X,
+                                                locationObject: f,
+                                                selectedChannelId: Q,
+                                                enableSelectedTextChannelInvite: R
+                                            });
+                                        case E.ag.DETAIL_PAGE:
+                                        case E.ag.DIRECTORY:
+                                        default:
+                                            return null;
+                                    }
+                                })()
                             })
                         ]
                     }),
-                    H === A.ag.DIRECTORY && F ? (0, a.jsx)(E.W, {}) : null,
-                    (0, a.jsx)('div', { className: L.modalDivider }),
-                    (0, a.jsxs)(d.MyZ, {
-                        activeSlide: H,
-                        centered: !1,
-                        width: D,
-                        children: [
-                            (0, a.jsx)(d.Mi4, {
-                                id: A.ag.DIRECTORY,
-                                impressionName: c.ImpressionNames.ACTIVITY_SHELF,
-                                impressionProperties: {
-                                    source_section: l.section,
-                                    impression_group: c.ImpressionGroups.ACTIVITY_SHELF_FLOW
-                                },
-                                children: (0, a.jsx)(B, {
-                                    slide: H,
-                                    children: (0, a.jsx)(N.Z, {
-                                        scrollerRef: Q,
-                                        channel: t,
-                                        guildId: n,
-                                        locationObject: l,
-                                        onActivityItemVisible: es,
-                                        onClose: r
-                                    })
-                                })
-                            }),
-                            (0, a.jsx)(d.Mi4, {
-                                id: A.ag.SELECT_CHANNEL,
-                                impressionName: c.ImpressionNames.ACTIVITY_SHELF_SELECT_CHANNEL,
-                                impressionProperties: {
-                                    source_section: l.section,
-                                    impression_group: c.ImpressionGroups.ACTIVITY_SHELF_FLOW,
-                                    application_id: W
-                                },
-                                children: (0, a.jsx)(B, {
-                                    slide: H,
-                                    children: (0, a.jsx)(j.Z, {
-                                        applicationId: W,
-                                        selectedChannelId: J,
-                                        setSelectedChannelId: X,
-                                        guildId: n,
-                                        enableSelectedTextChannelInvite: T
-                                    })
-                                })
-                            }),
-                            (0, a.jsx)(d.Mi4, {
-                                id: A.ag.DETAIL_PAGE,
-                                impressionName: c.ImpressionNames.ACTIVITY_DETAILS,
-                                impressionProperties: K,
-                                children: (0, a.jsx)(B, {
-                                    slide: H,
-                                    children:
-                                        null == W
-                                            ? null
-                                            : (0, a.jsx)(y.Z, {
-                                                  applicationId: W,
-                                                  channelId: null == t ? void 0 : t.id,
-                                                  guildId: n,
-                                                  onActivityLaunch: r
-                                              })
-                                })
-                            })
-                        ]
-                    }),
-                    (0, a.jsx)('div', { className: L.modalDivider }),
-                    (0, a.jsx)(d.mzw, {
-                        separator: !1,
-                        className: L.footer,
-                        children: (() => {
-                            switch (H) {
-                                case A.ag.DIRECTORY:
-                                    return (0, a.jsx)(N.d, {});
-                                case A.ag.SELECT_CHANNEL:
-                                    return (0, a.jsx)(j.q, {
-                                        onBack: en,
-                                        onClose: r,
-                                        guildId: n,
-                                        applicationId: W,
-                                        locationObject: l,
-                                        selectedChannelId: J,
-                                        enableSelectedTextChannelInvite: T
-                                    });
-                                case A.ag.DETAIL_PAGE:
-                                case A.ag.DIRECTORY:
-                                default:
-                                    return null;
-                            }
-                        })()
-                    })
-                ]
-            })
+                Object.getOwnPropertyDescriptors
+                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                    : (function (e, t) {
+                          var n = Object.keys(e);
+                          if (Object.getOwnPropertySymbols) {
+                              var a = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, a);
+                          }
+                          return n;
+                      })(Object(n)).forEach(function (e) {
+                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                      }),
+                t)
+            )
         })
     );
 }
 let B = (e) => {
     let { children: t, slide: n } = e,
-        l = (0, o.e7)([Z.Z], () => Z.Z.getIsEnabled(), []),
-        c = i.useContext(m.ZP),
-        r = (0, o.e7)([b.Z], () => b.Z.windowSize(c.windowId).height, [c.windowId]);
+        l = (0, c.e7)([T.Z], () => T.Z.getIsEnabled(), []),
+        r = i.useContext(f.ZP),
+        o = (0, c.e7)([_.Z], () => _.Z.windowSize(r.windowId).height, [r.windowId]);
     return (0, a.jsx)('div', {
-        className: s()(L.slideContentOuterContainerSquished, {
-            [L.slideContentOuterContainerSquishedWithDev]: n === A.ag.DIRECTORY && l,
-            [L.slideContentOuterContainerTall]: n === A.ag.DIRECTORY && r > R,
-            [L.slideContentOuterContainerTallWithDev]: n === A.ag.DIRECTORY && r > R && l,
-            [L.slideContentOuterContainerNoMetaTextSquished]: n === A.ag.SELECT_CHANNEL,
-            [L.slideContentOuterContainerNoMetaTextTall]: n === A.ag.SELECT_CHANNEL && r > R,
-            [L.slideContentOuterContainerNoMetaTextNoFooterSquished]: n === A.ag.DETAIL_PAGE,
-            [L.slideContentOuterContainerNoMetaTextNoFooterTall]: n === A.ag.DETAIL_PAGE && r > R
+        className: s()(P.slideContentOuterContainerSquished, {
+            [P.slideContentOuterContainerSquishedWithDev]: n === E.ag.DIRECTORY && l,
+            [P.slideContentOuterContainerTall]: n === E.ag.DIRECTORY && o > R,
+            [P.slideContentOuterContainerTallWithDev]: n === E.ag.DIRECTORY && o > R && l,
+            [P.slideContentOuterContainerNoMetaTextSquished]: n === E.ag.SELECT_CHANNEL,
+            [P.slideContentOuterContainerNoMetaTextTall]: n === E.ag.SELECT_CHANNEL && o > R,
+            [P.slideContentOuterContainerNoMetaTextNoFooterSquished]: n === E.ag.DETAIL_PAGE,
+            [P.slideContentOuterContainerNoMetaTextNoFooterTall]: n === E.ag.DETAIL_PAGE && o > R
         }),
         children: t
     });

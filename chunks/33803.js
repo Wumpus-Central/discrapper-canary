@@ -1,57 +1,119 @@
-n.d(t, { Z: () => Q });
-var i = n(200651),
-    l = n(192379),
+n.d(t, { Z: () => ee }), n(230036);
+var r = n(200651),
+    i = n(192379),
     a = n(120356),
-    r = n.n(a),
-    s = n(913527),
-    o = n.n(s),
+    o = n.n(a),
+    l = n(913527),
+    s = n.n(l),
     c = n(91192),
     d = n(722770),
     u = n(442837),
-    m = n(481060),
-    _ = n(287734),
-    h = n(607070),
-    p = n(385499),
+    p = n(481060),
+    m = n(287734),
+    f = n(607070),
+    h = n(385499),
     g = n(313889),
-    f = n(825829),
-    x = n(226192),
-    C = n(36459),
-    E = n(336197),
-    v = n(359110),
-    I = n(347475),
-    N = n(496675),
-    S = n(594174),
-    T = n(5192),
-    b = n(51144),
-    A = n(937889),
-    j = n(739566),
-    y = n(779125),
-    Z = n(890410),
-    R = n(464891),
-    L = n(507418),
-    P = n(348238),
+    _ = n(825829),
+    b = n(226192),
+    v = n(36459),
+    y = n(336197),
+    x = n(359110),
+    O = n(347475),
+    E = n(496675),
+    j = n(594174),
+    N = n(5192),
+    C = n(51144),
+    I = n(937889),
+    S = n(739566),
+    P = n(779125),
+    T = n(890410),
+    A = n(464891),
+    w = n(507418),
+    Z = n(348238),
     k = n(38267),
-    M = n(83561),
-    O = n(834129),
+    R = n(83561),
+    L = n(834129),
     D = n(959517),
-    w = n(981631),
-    F = n(674563),
-    U = n(590433),
-    B = n(388032),
-    G = n(523792);
+    M = n(981631),
+    W = n(674563),
+    F = n(590433),
+    U = n(388032),
+    B = n(237166);
+function G(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
 function H(e, t) {
-    let { popouts: n, selected: i, setPopout: a } = (0, k.Z)(e.id, D.d$),
-        { usernameProfile: r, avatarProfile: s } = n,
-        o = (0, P.wq)(e.author.id, t.id),
-        c = (0, P.RN)(e.author.id, t.id, e.id),
-        d = (0, P.XO)(e, t, r, a);
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function V(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                i = {},
+                a = Object.keys(e);
+            for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+            return i;
+        })(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function z(e, t) {
+    let { popouts: n, selected: r, setPopout: a } = (0, k.Z)(e.id, D.d$),
+        { usernameProfile: o, avatarProfile: l } = n,
+        s = (0, Z.wq)(e.author.id, t.id),
+        c = (0, Z.RN)(e.author.id, t.id, e.id),
+        d = (0, Z.XO)(e, t, o, a);
     return {
-        selected: i,
-        onContextMenu: o,
+        selected: r,
+        onContextMenu: s,
         onContextMenuModerateUser: c,
         onClickUsername: d,
-        onClickAvatar: (0, P.R9)(s, a),
-        onPopoutRequestClose: l.useCallback(
+        onClickAvatar: (0, Z.R9)(l, a),
+        onPopoutRequestClose: i.useCallback(
             () =>
                 a({
                     usernameProfile: !1,
@@ -60,116 +122,133 @@ function H(e, t) {
                 }),
             [a]
         ),
-        renderPopout: L.Z,
-        showAvatarPopout: s,
-        showUsernamePopout: r
+        renderPopout: w.Z,
+        showAvatarPopout: l,
+        showUsernamePopout: o
     };
 }
-function V(e, t) {
-    return l.useMemo(() => {
+function K(e, t) {
+    return i.useMemo(() => {
         if (null != t)
             return (n) =>
-                (0, i.jsx)(I.Z, {
-                    ...n,
-                    userId: t.id,
-                    user: t,
-                    channelId: e.id,
-                    guildId: e.guild_id
-                });
+                (0, r.jsx)(
+                    O.Z,
+                    H(G({}, n), {
+                        userId: t.id,
+                        user: t,
+                        channelId: e.id,
+                        guildId: e.guild_id
+                    })
+                );
     }, [e, t]);
 }
-function z(e) {
-    let { children: t, className: n, compact: l } = e;
-    return (0, i.jsx)('div', {
-        className: r()(G.footerContainer, n, { [G.compact]: l }),
+function Y(e) {
+    let { children: t, className: n, compact: i } = e;
+    return (0, r.jsx)('div', {
+        className: o()(B.footerContainer, n, { [B.compact]: i }),
         children: t
     });
 }
-function W(e) {
+function X(e) {
     let { children: t, className: n } = e;
-    return (0, i.jsx)('div', {
-        className: r()(G.annotationRow, n),
+    return (0, r.jsx)('div', {
+        className: o()(B.annotationRow, n),
         children: t
     });
 }
-function K(e, t) {
+function q(e, t) {
     switch (e) {
         case g.d.DELETE_USER_MESSAGE:
-            return (0, i.jsx)(m.XHJ, {
-                size: 'xs',
-                color: 'currentColor',
-                className: G.alertActionIcon,
-                ...t
-            });
+            return (0, r.jsx)(
+                p.XHJ,
+                G(
+                    {
+                        size: 'xs',
+                        color: 'currentColor',
+                        className: B.alertActionIcon
+                    },
+                    t
+                )
+            );
         case g.d.SET_COMPLETED:
-            return (0, i.jsx)(m.dz2, {
-                size: 'xs',
-                color: 'currentColor',
-                className: r()(G.alertActionIcon, G.alertActionSetCompletedIcon),
-                ...t
-            });
+            return (0, r.jsx)(
+                p.dz2,
+                G(
+                    {
+                        size: 'xs',
+                        color: 'currentColor',
+                        className: o()(B.alertActionIcon, B.alertActionSetCompletedIcon)
+                    },
+                    t
+                )
+            );
         case g.d.SUBMIT_FEEDBACK:
-            return (0, i.jsx)(m.U65, {
-                size: 'xs',
-                color: 'currentColor',
-                className: r()(G.alertActionIcon),
-                ...t
-            });
+            return (0, r.jsx)(
+                p.U65,
+                G(
+                    {
+                        size: 'xs',
+                        color: 'currentColor',
+                        className: o()(B.alertActionIcon)
+                    },
+                    t
+                )
+            );
         default:
             return null;
     }
 }
-function Y(e) {
+function Q(e) {
     let { alertAction: t, guildId: n } = e,
-        l = (0, u.e7)([S.default], () => S.default.getUser(t.actor), [t.actor]);
+        i = (0, u.e7)([j.default], () => j.default.getUser(t.actor), [t.actor]);
     try {
         let e = parseInt(t.actionType);
-        if (null == l) return K(e, {});
+        if (null == i) return q(e, {});
         let a = (function (e, t, n) {
-            var i;
-            let l = null !== (i = T.ZP.getNickname(n, null, t)) && void 0 !== i ? i : b.ZP.getUserTag(t),
-                a = o()(e.ts),
-                r = ''.concat(l, ' ').concat(a.fromNow());
+            var r;
+            let i = null !== (r = N.ZP.getNickname(n, null, t)) && void 0 !== r ? r : C.ZP.getUserTag(t),
+                a = s()(e.ts),
+                o = ''.concat(i, ' ').concat(a.fromNow());
             try {
                 switch (parseInt(e.actionType)) {
                     case g.d.DELETE_USER_MESSAGE:
-                        return B.intl.formatToPlainString(B.t.BtKE9v, {
-                            userName: l,
+                        return U.NW.formatToPlainString(U.t.BtKE9v, {
+                            userName: i,
                             timestamp: a.fromNow()
                         });
                     case g.d.SET_COMPLETED:
-                        return B.intl.formatToPlainString(B.t.dyo9UV, {
-                            userName: l,
+                        return U.NW.formatToPlainString(U.t.dyo9UV, {
+                            userName: i,
                             timestamp: a.fromNow()
                         });
                     case g.d.SUBMIT_FEEDBACK:
-                        return B.intl.formatToPlainString(B.t['C9/kIC'], {
-                            userName: l,
+                        return U.NW.formatToPlainString(U.t['C9/kIC'], {
+                            userName: i,
                             timestamp: a.fromNow()
                         });
                     default:
-                        return r;
+                        return o;
                 }
             } catch (e) {
-                return r;
+                return o;
             }
-        })(t, l, n);
-        return (0, i.jsx)(m.ua7, {
+        })(t, i, n);
+        return (0, r.jsx)(p.ua7, {
             text: a,
-            children: (t) => K(e, t)
+            children: (t) => q(e, t)
         });
     } catch (e) {
         return null;
     }
 }
-function X(e) {
+function J(e) {
     let { alertActionsExecution: t, guildId: n } = e,
-        l = Object.values(t.actions).sort((e, t) => (e.actionType < t.actionType ? 1 : -1));
-    return (0, i.jsx)('div', {
-        className: G.alertActionsIconContainer,
-        children: l.map((e) =>
-            (0, i.jsx)(
-                Y,
+        i = Object.values(t.actions).sort((e, t) => (e.actionType < t.actionType ? 1 : -1));
+    return (0, r.jsx)('div', {
+        className: B.alertActionsIconContainer,
+        children: i.map((e) =>
+            (0, r.jsx)(
+                Q,
                 {
                     alertAction: e,
                     guildId: n
@@ -179,55 +258,59 @@ function X(e) {
         )
     });
 }
-let q = l.memo(function (e) {
+let $ = i.memo(function (e) {
     let t,
-        { message: n, channel: l, embedChannel: a, compact: r, interactionUserId: s } = e,
-        o = H(n, l),
-        c = V(l, n.author),
-        d = (0, j.ZP)(n),
-        u = (0, R.CF)(
-            {
-                message: n,
-                channel: l,
-                author: d,
-                guildId: null == l ? void 0 : l.guild_id,
-                compact: r,
-                ...o
-            },
-            c
-        ),
-        _ = S.default.getUser(s),
-        h = H(n, l),
-        p = V(l, _);
-    if (null != _) {
-        let e = (0, j.ij)(_, l),
-            i = (0, R.CF)(
+        { message: n, channel: i, embedChannel: a, compact: o, interactionUserId: l } = e,
+        s = z(n, i),
+        c = K(i, n.author),
+        d = (0, S.ZP)(n),
+        u = (0, A.CF)(
+            G(
                 {
                     message: n,
-                    channel: l,
-                    author: e,
-                    guildId: null == l ? void 0 : l.guild_id,
-                    compact: r,
-                    ...h
+                    channel: i,
+                    author: d,
+                    guildId: null == i ? void 0 : i.guild_id,
+                    compact: o
                 },
-                p
+                s
+            ),
+            c
+        ),
+        m = j.default.getUser(l),
+        f = z(n, i),
+        h = K(i, m);
+    if (null != m) {
+        let e = (0, S.ij)(m, i),
+            r = (0, A.CF)(
+                G(
+                    {
+                        message: n,
+                        channel: i,
+                        author: e,
+                        guildId: null == i ? void 0 : i.guild_id,
+                        compact: o
+                    },
+                    f
+                ),
+                h
             );
-        t = () => i;
+        t = () => r;
     }
-    return (0, i.jsx)(m.Text, {
+    return (0, r.jsx)(p.Text, {
         variant: 'text-md/normal',
         color: 'header-primary',
         tag: 'span',
-        className: G.spanCorrection,
-        children: (0, f.Mq)(
+        className: B.spanCorrection,
+        children: (0, _.Mq)(
             n,
             a,
             () =>
-                (0, i.jsx)('div', {
-                    className: G.channelNameContainer,
-                    children: (0, i.jsx)(y.Z, {
+                (0, r.jsx)('div', {
+                    className: B.channelNameContainer,
+                    children: (0, r.jsx)(P.Z, {
                         channel: a,
-                        className: G.channelName,
+                        className: B.channelName,
                         openChatWithoutConnecting: !0
                     })
                 }),
@@ -236,270 +319,276 @@ let q = l.memo(function (e) {
         )
     });
 });
-function Q(e) {
+function ee(e) {
     var t;
-    let { id: n, compact: a, message: s, channel: o } = e,
+    let { id: n, compact: a, message: l, channel: s } = e,
         {
-            avatarSrc: I,
-            eventHandlers: { onMouseEnter: S, onMouseLeave: T }
-        } = (0, M.m)(!0),
-        { onFocus: b, ...j } = (0, c.JA)(null != n ? n : ''),
-        { isFocused: y, handleFocus: L, handleBlur: k } = (0, P.bb)(b),
-        D = (0, u.e7)([h.Z], () => h.Z.keyboardModeEnabled),
-        V = (0, u.e7)([N.Z], () => N.Z.can(w.Plq.MANAGE_MESSAGES, o), [o]),
-        { ruleName: K, embedChannel: Y, decisionId: Q, keywordMatchedContent: J, keyword: $, content: ee, flaggedMessageId: et, timeoutDuration: en, decisionReason: ei, alertActionsExecution: el, quarantineType: ea, interactionUserId: er } = (0, f.ZP)(s),
-        es = l.useMemo(() => (0, A.k$)(ee, J, o.id), [ee, J, o]),
-        { selected: eo, ...ec } = H(s, o),
-        ed = l.useCallback(() => {
-            (0, x._s)(s.id, ee, Q, o);
-        }, [s.id, ee, Q, o]),
-        eu = l.useCallback(
+            avatarSrc: O,
+            eventHandlers: { onMouseEnter: j, onMouseLeave: N }
+        } = (0, R.m)(!0),
+        C = (0, c.JA)(null != n ? n : ''),
+        { onFocus: S } = C,
+        P = V(C, ['onFocus']),
+        { isFocused: w, handleFocus: k, handleBlur: D } = (0, Z.bb)(S),
+        K = (0, u.e7)([f.Z], () => f.Z.keyboardModeEnabled),
+        q = (0, u.e7)([E.Z], () => E.Z.can(M.Plq.MANAGE_MESSAGES, s), [s]),
+        { ruleName: Q, embedChannel: ee, decisionId: et, keywordMatchedContent: en, keyword: er, content: ei, flaggedMessageId: ea, timeoutDuration: eo, decisionReason: el, alertActionsExecution: es, quarantineType: ec, interactionUserId: ed } = (0, _.ZP)(l),
+        eu = i.useMemo(() => (0, I.k$)(ei, en, s.id), [ei, en, s]),
+        ep = z(l, s),
+        { selected: em } = ep,
+        ef = V(ep, ['selected']),
+        eh = i.useCallback(() => {
+            (0, b._s)(l.id, ei, et, s);
+        }, [l.id, ei, et, s]),
+        eg = i.useCallback(
             (e) => {
-                null != et && null != Y && (e.stopPropagation(), e.preventDefault(), (0, E.Z)(w.Z5c.CHANNEL(null == Y ? void 0 : Y.guild_id, null == Y ? void 0 : Y.id, et)));
+                null != ea && null != ee && (e.stopPropagation(), e.preventDefault(), (0, y.Z)(M.Z5c.CHANNEL(null == ee ? void 0 : ee.guild_id, null == ee ? void 0 : ee.id, ea)));
             },
-            [Y, et]
+            [ee, ea]
         ),
-        em = l.useCallback(
+        e_ = i.useCallback(
             (e) => {
-                null != Y &&
-                    (_.default.selectChannel({
-                        guildId: Y.guild_id,
+                null != ee &&
+                    (m.default.selectChannel({
+                        guildId: ee.guild_id,
                         channelId: e,
-                        messageId: s.id
+                        messageId: l.id
                     }),
-                    (0, v.Kh)(e));
+                    (0, x.Kh)(e));
             },
-            [s, Y]
+            [l, ee]
         ),
-        e_ = l.useCallback(() => {
-            (0, C.Xx)(s.id, o, g.d.DELETE_USER_MESSAGE);
-        }, [o, s.id]),
-        eh = (0, U.L9)(Number(en)),
-        ep = null != ei,
-        eg = V && null != et && (null == el || !el.actions.hasOwnProperty(g.d.DELETE_USER_MESSAGE)),
-        ef = s.embeds.length > 0 ? (null === (t = s.embeds[0].fields.find((e) => 'channel_id' === e.rawName)) || void 0 === t ? void 0 : t.rawValue) : null,
-        ex = null != ef;
-    return (0, i.jsx)('div', {
-        onMouseEnter: S,
-        onMouseLeave: T,
-        children: (0, i.jsx)(O.Z, {
-            className: r()(G.mainContainer, { [G.compact]: a }),
-            iconNode: a ? null : (0, i.jsx)(M.S, { src: I }),
-            iconContainerClassName: G.iconContainer,
+        eb = i.useCallback(() => {
+            (0, v.Xx)(l.id, s, g.d.DELETE_USER_MESSAGE);
+        }, [s, l.id]),
+        ev = (0, F.L9)(Number(eo)),
+        ey = null != el,
+        ex = q && null != ea && (null == es || !es.actions.hasOwnProperty(g.d.DELETE_USER_MESSAGE)),
+        eO = l.embeds.length > 0 ? (null === (t = l.embeds[0].fields.find((e) => 'channel_id' === e.rawName)) || void 0 === t ? void 0 : t.rawValue) : null,
+        eE = null != eO;
+    return (0, r.jsx)('div', {
+        onMouseEnter: j,
+        onMouseLeave: N,
+        children: (0, r.jsx)(L.Z, {
+            className: o()(B.mainContainer, { [B.compact]: a }),
+            iconNode: a ? null : (0, r.jsx)(R.S, { src: O }),
+            iconContainerClassName: B.iconContainer,
             compact: a,
-            children: (0, i.jsxs)('div', {
-                className: r()(G.content, { [G.compact]: a }),
+            children: (0, r.jsxs)('div', {
+                className: o()(B.content, { [B.compact]: a }),
                 children: [
-                    (0, i.jsx)(R.nD, {
-                        message: s,
-                        messageClassname: G.spanCorrection,
-                        className: r()(G.usernameContainer, G.spanCorrection, { [G.compact]: a }),
-                        username: (0, i.jsxs)('div', {
-                            className: G.spanCorrection,
+                    (0, r.jsx)(A.nD, {
+                        message: l,
+                        messageClassname: B.spanCorrection,
+                        className: o()(B.usernameContainer, B.spanCorrection, { [B.compact]: a }),
+                        username: (0, r.jsxs)('div', {
+                            className: B.spanCorrection,
                             children: [
-                                (0, i.jsx)(m.Text, {
+                                (0, r.jsx)(p.Text, {
                                     variant: 'text-md/normal',
                                     color: 'text-brand',
                                     tag: 'span',
-                                    className: G.username,
-                                    children: B.intl.string(B.t.hG1StL)
+                                    className: B.username,
+                                    children: U.NW.string(U.t.hG1StL)
                                 }),
-                                (0, i.jsx)(p.Z, {
-                                    type: F.Hb.SYSTEM_DM,
-                                    className: G.systemTag
+                                (0, r.jsx)(h.Z, {
+                                    type: W.Hb.SYSTEM_DM,
+                                    className: B.systemTag
                                 }),
-                                (0, i.jsx)(q, {
-                                    message: s,
-                                    channel: o,
-                                    embedChannel: Y,
+                                (0, r.jsx)($, {
+                                    message: l,
+                                    channel: s,
+                                    embedChannel: ee,
                                     compact: a,
-                                    interactionUserId: er
+                                    interactionUserId: ed
                                 })
                             ]
                         }),
                         compact: a,
                         showTimestamp: !0
                     }),
-                    (0, i.jsx)('div', {
-                        className: r()(G.messageContent, { [G.compact]: a }),
-                        children: (0, i.jsx)(Z.Z, {
-                            ...j,
-                            message: s,
-                            channel: Y,
-                            content: es,
-                            compact: a,
-                            withFooter: !0,
-                            hideTimestamp: !0,
-                            className: r()(G.embedCard, {
-                                [G.compact]: a,
-                                [G.selected]: eo || (D && y),
-                                [G.isClickable]: null != et && null != Y
-                            }),
-                            childrenAccessories: (0, i.jsxs)(i.Fragment, {
-                                children: [
-                                    (0, i.jsxs)('div', {
-                                        className: G.centeredRowContainer,
-                                        children: [
-                                            null != $ &&
-                                                (0, i.jsxs)(i.Fragment, {
-                                                    children: [
-                                                        (0, i.jsx)(m.Text, {
-                                                            variant: 'text-xs/medium',
-                                                            color: 'text-muted',
-                                                            tag: 'span',
-                                                            children: B.intl.format(B.t.SYIUTU, { keyword: $ })
-                                                        }),
-                                                        (0, i.jsx)('div', { className: r()(G.dot, G.dotMargin) })
-                                                    ]
-                                                }),
-                                            null != K &&
-                                                (0, i.jsx)(m.Text, {
-                                                    variant: 'text-xs/medium',
-                                                    color: 'text-muted',
-                                                    tag: 'span',
-                                                    children: B.intl.format(B.t.ZoOyKC, { ruleName: K })
-                                                }),
-                                            null != eh &&
-                                                (0, i.jsxs)(i.Fragment, {
-                                                    children: [
-                                                        (0, i.jsx)('div', { className: r()(G.dot, G.dotMargin) }),
-                                                        (0, i.jsx)(m.Text, {
-                                                            variant: 'text-xs/medium',
-                                                            color: 'text-muted',
-                                                            tag: 'span',
-                                                            className: G.__invalid_footerText,
-                                                            children: B.intl.format(B.t['3LYql5'], { duration: eh })
-                                                        })
-                                                    ]
-                                                }),
-                                            null != ea &&
-                                                (0, i.jsxs)(i.Fragment, {
-                                                    children: [
-                                                        (0, i.jsx)('div', { className: r()(G.dot, G.dotMargin) }),
-                                                        (0, i.jsx)(m.Text, {
-                                                            variant: 'text-xs/medium',
-                                                            color: 'text-muted',
-                                                            tag: 'span',
-                                                            className: G.titleCase,
-                                                            children: B.intl.format(B.t['26bB2N'], { reason: (0, f.hU)(ea) })
-                                                        })
-                                                    ]
-                                                })
-                                        ]
-                                    }),
-                                    ep
-                                        ? (0, i.jsx)(W, {
-                                              children: (0, i.jsx)(m.Text, {
-                                                  variant: 'text-xs/medium',
-                                                  color: 'text-normal',
-                                                  tag: 'span',
-                                                  children: ei
+                    (0, r.jsx)('div', {
+                        className: o()(B.messageContent, { [B.compact]: a }),
+                        children: (0, r.jsx)(
+                            T.Z,
+                            H(G({}, P), {
+                                message: l,
+                                channel: ee,
+                                content: eu,
+                                compact: a,
+                                withFooter: !0,
+                                hideTimestamp: !0,
+                                className: o()(B.embedCard, {
+                                    [B.compact]: a,
+                                    [B.selected]: em || (K && w),
+                                    [B.isClickable]: null != ea && null != ee
+                                }),
+                                childrenAccessories: (0, r.jsxs)(r.Fragment, {
+                                    children: [
+                                        (0, r.jsxs)('div', {
+                                            className: B.centeredRowContainer,
+                                            children: [
+                                                null != er &&
+                                                    (0, r.jsxs)(r.Fragment, {
+                                                        children: [
+                                                            (0, r.jsx)(p.Text, {
+                                                                variant: 'text-xs/medium',
+                                                                color: 'text-muted',
+                                                                tag: 'span',
+                                                                children: U.NW.format(U.t.SYIUTU, { keyword: er })
+                                                            }),
+                                                            (0, r.jsx)('div', { className: o()(B.dot, B.dotMargin) })
+                                                        ]
+                                                    }),
+                                                null != Q &&
+                                                    (0, r.jsx)(p.Text, {
+                                                        variant: 'text-xs/medium',
+                                                        color: 'text-muted',
+                                                        tag: 'span',
+                                                        children: U.NW.format(U.t.ZoOyKC, { ruleName: Q })
+                                                    }),
+                                                null != ev &&
+                                                    (0, r.jsxs)(r.Fragment, {
+                                                        children: [
+                                                            (0, r.jsx)('div', { className: o()(B.dot, B.dotMargin) }),
+                                                            (0, r.jsx)(p.Text, {
+                                                                variant: 'text-xs/medium',
+                                                                color: 'text-muted',
+                                                                tag: 'span',
+                                                                className: B.__invalid_footerText,
+                                                                children: U.NW.format(U.t['3LYql5'], { duration: ev })
+                                                            })
+                                                        ]
+                                                    }),
+                                                null != ec &&
+                                                    (0, r.jsxs)(r.Fragment, {
+                                                        children: [
+                                                            (0, r.jsx)('div', { className: o()(B.dot, B.dotMargin) }),
+                                                            (0, r.jsx)(p.Text, {
+                                                                variant: 'text-xs/medium',
+                                                                color: 'text-muted',
+                                                                tag: 'span',
+                                                                className: B.titleCase,
+                                                                children: U.NW.format(U.t['26bB2N'], { reason: (0, _.hU)(ec) })
+                                                            })
+                                                        ]
+                                                    })
+                                            ]
+                                        }),
+                                        ey
+                                            ? (0, r.jsx)(X, {
+                                                  children: (0, r.jsx)(p.Text, {
+                                                      variant: 'text-xs/medium',
+                                                      color: 'text-normal',
+                                                      tag: 'span',
+                                                      children: el
+                                                  })
                                               })
-                                          })
-                                        : null
-                                ]
-                            }),
-                            popoutProps: ec,
-                            zalgo: !0,
-                            onFocus: L,
-                            onBlur: k,
-                            onClick: eu
-                        })
+                                            : null
+                                    ]
+                                }),
+                                popoutProps: ef,
+                                zalgo: !0,
+                                onFocus: k,
+                                onBlur: D,
+                                onClick: eg
+                            })
+                        )
                     }),
-                    (0, i.jsx)(z, {
+                    (0, r.jsx)(Y, {
                         compact: a,
-                        children: (0, i.jsxs)('div', {
-                            className: r()(G.centeredRowContainer, G.buttonContainer, { [G.compact]: a }),
+                        children: (0, r.jsxs)('div', {
+                            className: o()(B.centeredRowContainer, B.buttonContainer, { [B.compact]: a }),
                             children: [
-                                (0, i.jsx)(m.zxk, {
+                                (0, r.jsx)(p.zxk, {
                                     onClick: (e) => {
                                         var t;
-                                        null === (t = ec.onContextMenuModerateUser) || void 0 === t || t.call(ec, e);
+                                        null === (t = ef.onContextMenuModerateUser) || void 0 === t || t.call(ef, e);
                                     },
-                                    color: m.zxk.Colors.LINK,
-                                    look: m.zxk.Looks.LINK,
-                                    size: m.zxk.Sizes.SMALL,
-                                    className: G.buttonStyle,
-                                    children: (0, i.jsxs)('div', {
-                                        className: G.footerAction,
+                                    color: p.zxk.Colors.LINK,
+                                    look: p.zxk.Looks.LINK,
+                                    size: p.zxk.Sizes.SMALL,
+                                    className: B.buttonStyle,
+                                    children: (0, r.jsxs)('div', {
+                                        className: B.footerAction,
                                         children: [
-                                            (0, i.jsx)(m.b7C, {
+                                            (0, r.jsx)(p.b7C, {
                                                 size: 'xs',
                                                 color: d.Z.BLUE_345,
-                                                className: G.footerIcon
+                                                className: B.footerIcon
                                             }),
-                                            (0, i.jsx)(m.Text, {
+                                            (0, r.jsx)(p.Text, {
                                                 variant: 'text-xs/normal',
                                                 color: 'text-link',
-                                                children: B.intl.string(B.t.DEoVWV)
+                                                children: U.NW.string(U.t.DEoVWV)
                                             })
                                         ]
                                     })
                                 }),
-                                ex
-                                    ? (0, i.jsxs)(i.Fragment, {
+                                eE
+                                    ? (0, r.jsxs)(r.Fragment, {
                                           children: [
-                                              (0, i.jsx)('div', { className: G.dot }),
-                                              (0, i.jsx)(m.zxk, {
-                                                  onClick: () => em(ef),
-                                                  color: m.zxk.Colors.LINK,
-                                                  look: m.zxk.Looks.LINK,
-                                                  size: m.zxk.Sizes.SMALL,
-                                                  className: G.buttonStyle,
-                                                  children: (0, i.jsx)('div', {
-                                                      className: G.footerAction,
-                                                      children: (0, i.jsx)(m.Text, {
+                                              (0, r.jsx)('div', { className: B.dot }),
+                                              (0, r.jsx)(p.zxk, {
+                                                  onClick: () => e_(eO),
+                                                  color: p.zxk.Colors.LINK,
+                                                  look: p.zxk.Looks.LINK,
+                                                  size: p.zxk.Sizes.SMALL,
+                                                  className: B.buttonStyle,
+                                                  children: (0, r.jsx)('div', {
+                                                      className: B.footerAction,
+                                                      children: (0, r.jsx)(p.Text, {
                                                           variant: 'text-xs/normal',
                                                           color: 'text-link',
-                                                          children: B.intl.string(B.t.jtkj09)
+                                                          children: U.NW.string(U.t.jtkj09)
                                                       })
                                                   })
                                               })
                                           ]
                                       })
                                     : null,
-                                (0, i.jsx)('div', { className: G.dot }),
-                                (0, i.jsx)(m.zxk, {
-                                    onClick: ed,
-                                    color: m.zxk.Colors.LINK,
-                                    look: m.zxk.Looks.LINK,
-                                    size: m.zxk.Sizes.SMALL,
-                                    className: G.buttonStyle,
-                                    children: (0, i.jsx)('div', {
-                                        className: G.footerAction,
-                                        children: (0, i.jsx)(m.Text, {
+                                (0, r.jsx)('div', { className: B.dot }),
+                                (0, r.jsx)(p.zxk, {
+                                    onClick: eh,
+                                    color: p.zxk.Colors.LINK,
+                                    look: p.zxk.Looks.LINK,
+                                    size: p.zxk.Sizes.SMALL,
+                                    className: B.buttonStyle,
+                                    children: (0, r.jsx)('div', {
+                                        className: B.footerAction,
+                                        children: (0, r.jsx)(p.Text, {
                                             variant: 'text-xs/normal',
                                             color: 'text-link',
-                                            children: B.intl.string(B.t['94JbMz'])
+                                            children: U.NW.string(U.t['94JbMz'])
                                         })
                                     })
                                 }),
-                                eg
-                                    ? (0, i.jsxs)(i.Fragment, {
+                                ex
+                                    ? (0, r.jsxs)(r.Fragment, {
                                           children: [
-                                              (0, i.jsx)('div', { className: G.dot }),
-                                              (0, i.jsx)(m.zxk, {
-                                                  onClick: e_,
-                                                  color: m.zxk.Colors.LINK,
-                                                  look: m.zxk.Looks.LINK,
-                                                  size: m.zxk.Sizes.SMALL,
-                                                  className: G.buttonStyle,
-                                                  children: (0, i.jsx)('div', {
-                                                      className: G.footerAction,
-                                                      children: (0, i.jsx)(m.Text, {
+                                              (0, r.jsx)('div', { className: B.dot }),
+                                              (0, r.jsx)(p.zxk, {
+                                                  onClick: eb,
+                                                  color: p.zxk.Colors.LINK,
+                                                  look: p.zxk.Looks.LINK,
+                                                  size: p.zxk.Sizes.SMALL,
+                                                  className: B.buttonStyle,
+                                                  children: (0, r.jsx)('div', {
+                                                      className: B.footerAction,
+                                                      children: (0, r.jsx)(p.Text, {
                                                           variant: 'text-xs/normal',
                                                           color: 'text-link',
-                                                          children: B.intl.string(B.t['3A52tb'])
+                                                          children: U.NW.string(U.t['3A52tb'])
                                                       })
                                                   })
                                               })
                                           ]
                                       })
                                     : null,
-                                null != el
-                                    ? (0, i.jsx)(X, {
-                                          alertActionsExecution: el,
-                                          guildId: o.guild_id
+                                null != es
+                                    ? (0, r.jsx)(J, {
+                                          alertActionsExecution: es,
+                                          guildId: s.guild_id
                                       })
                                     : null
                             ]

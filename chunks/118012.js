@@ -1,47 +1,127 @@
-n.d(t, { Z: () => d });
-var i = n(200651);
+n.d(t, { Z: () => g });
+var r = n(200651);
 n(192379);
-var r = n(120356),
-    a = n.n(r),
-    s = n(418008),
-    o = n(49497);
-let l = Object.freeze({
-        STANDARD: s.colorStandard,
-        MUTED: s.colorMuted,
-        ERROR: s.colorError,
-        BRAND: s.colorBrand,
-        LINK: s.colorLink,
-        HEADER_PRIMARY: s.colorHeaderPrimary,
-        HEADER_SECONDARY: s.colorHeaderSecondary,
-        STATUS_YELLOW: s.colorStatusYellow,
-        STATUS_GREEN: s.colorStatusGreen,
-        STATUS_RED: s.colorStatusRed,
-        INTERACTIVE_ACTIVE: s.colorInteractiveActive,
-        INTERACTIVE_NORMAL: s.colorInteractiveNormal,
-        ALWAYS_WHITE: s.colorWhite,
+var i = n(120356),
+    o = n.n(i),
+    a = n(801554),
+    s = n(33416);
+function l(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function c(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                l(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function u(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function d(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : u(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function f(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = p(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function p(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+let _ = Object.freeze({
+        STANDARD: a.colorStandard,
+        MUTED: a.colorMuted,
+        ERROR: a.colorError,
+        BRAND: a.colorBrand,
+        LINK: a.colorLink,
+        HEADER_PRIMARY: a.colorHeaderPrimary,
+        HEADER_SECONDARY: a.colorHeaderSecondary,
+        STATUS_YELLOW: a.colorStatusYellow,
+        STATUS_GREEN: a.colorStatusGreen,
+        STATUS_RED: a.colorStatusRed,
+        INTERACTIVE_ACTIVE: a.colorInteractiveActive,
+        INTERACTIVE_NORMAL: a.colorInteractiveNormal,
+        ALWAYS_WHITE: a.colorWhite,
         CUSTOM: null
     }),
-    u = Object.freeze({
-        SIZE_10: o.size10,
-        SIZE_12: o.size12,
-        SIZE_14: o.size14,
-        SIZE_16: o.size16,
-        SIZE_20: o.size20,
-        SIZE_24: o.size24,
-        SIZE_32: o.size32
+    h = Object.freeze({
+        SIZE_10: s.size10,
+        SIZE_12: s.size12,
+        SIZE_14: s.size14,
+        SIZE_16: s.size16,
+        SIZE_20: s.size20,
+        SIZE_24: s.size24,
+        SIZE_32: s.size32
     }),
-    c = (e) => {
-        let { className: t, color: n = l.STANDARD, size: r = u.SIZE_14, tag: o = 'div', selectable: c = !1, strong: d = !1, children: f, style: _, 'aria-label': p, ...h } = e;
-        return (0, i.jsx)(o, {
-            'aria-label': p,
-            className: a()(n, r, t, {
-                [s.selectable]: c,
-                [s.strong]: d
-            }),
-            style: _,
-            ...h,
-            children: f
-        });
+    m = (e) => {
+        let { className: t, color: n = _.STANDARD, size: i = h.SIZE_14, tag: s = 'div', selectable: l = !1, strong: u = !1, children: p, style: m, 'aria-label': g } = e,
+            E = f(e, ['className', 'color', 'size', 'tag', 'selectable', 'strong', 'children', 'style', 'aria-label']);
+        return (0, r.jsx)(
+            s,
+            d(
+                c(
+                    {
+                        'aria-label': g,
+                        className: o()(n, i, t, {
+                            [a.selectable]: l,
+                            [a.strong]: u
+                        }),
+                        style: m
+                    },
+                    E
+                ),
+                { children: p }
+            )
+        );
     };
-(c.Colors = l), (c.Sizes = u);
-let d = c;
+(m.Colors = _), (m.Sizes = h);
+let g = m;

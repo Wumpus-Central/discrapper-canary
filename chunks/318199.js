@@ -1,40 +1,68 @@
 n.d(t, {
-    default: () => _,
-    r: () => g
-});
-var i = n(200651);
+    default: () => m,
+    r: () => f
+}),
+    n(566702);
+var r = n(200651);
 n(192379);
-var l = n(581282),
-    r = n(8853),
-    a = n(663002),
-    s = n(2052),
-    o = n(410030),
-    d = n(100527),
-    c = n(906732),
-    u = n(605236),
-    h = n(960048),
-    m = n(276792),
-    p = n(290347);
-function g(e) {
+var i = n(581282),
+    l = n(8853),
+    o = n(663002),
+    a = n(2052),
+    s = n(410030),
+    c = n(100527),
+    u = n(906732),
+    d = n(605236),
+    p = n(960048),
+    h = n(276792),
+    g = n(290347);
+function f(e) {
     let { content: t, isPreview: n } = e,
-        i = r.t.fromBinary((0, l.c)(t));
-    return 'announcementModalVariant1' !== i.properties.oneofKind ? null : !n && (0 === i.properties.announcementModalVariant1.dismissKey.trim().length || (0, u.un)(Number(i.properties.announcementModalVariant1.dismissKey))) ? null : (n && (i.properties.announcementModalVariant1.dismissKey = ''), i);
+        r = l.t.fromBinary((0, i.c)(t));
+    return 'announcementModalVariant1' !== r.properties.oneofKind ? null : !n && (0 === r.properties.announcementModalVariant1.dismissKey.trim().length || (0, d.un)(Number(r.properties.announcementModalVariant1.dismissKey))) ? null : (n && (r.properties.announcementModalVariant1.dismissKey = ''), r);
 }
-function _(e) {
+function m(e) {
     let { renderModalProps: t, properties: n } = e,
-        { location: l } = (0, s.O)(),
-        { analyticsLocations: r } = (0, c.ZP)(d.Z.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL),
-        u = (0, o.ZP)(),
-        g = (0, a.ap)(u);
+        { location: i } = (0, a.O)(),
+        { analyticsLocations: l } = (0, u.ZP)(c.Z.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL),
+        d = (0, s.ZP)(),
+        f = (0, o.ap)(d);
     if ('announcementModalVariant1' === n.properties.oneofKind) {
-        let e = (0, m.N)({
+        let e = (0, h.N)({
             content: n.properties.announcementModalVariant1,
             renderModalProps: t,
-            analyticsLocations: r,
-            analyticsLocation: l,
-            isLightTheme: g
+            analyticsLocations: l,
+            analyticsLocation: i,
+            isLightTheme: f
         });
-        return (0, i.jsx)(p.Z, { ...e });
+        return (0, r.jsx)(
+            g.Z,
+            (function (e) {
+                for (var t = 1; t < arguments.length; t++) {
+                    var n = null != arguments[t] ? arguments[t] : {},
+                        r = Object.keys(n);
+                    'function' == typeof Object.getOwnPropertySymbols &&
+                        (r = r.concat(
+                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                            })
+                        )),
+                        r.forEach(function (t) {
+                            var r;
+                            (r = n[t]),
+                                t in e
+                                    ? Object.defineProperty(e, t, {
+                                          value: r,
+                                          enumerable: !0,
+                                          configurable: !0,
+                                          writable: !0
+                                      })
+                                    : (e[t] = r);
+                        });
+                }
+                return e;
+            })({}, e)
+        );
     }
-    return h.Z.captureMessage('Property type '.concat(n.properties.oneofKind, ' is not supported to render ServerDriveAnnouncementModal')), null;
+    return p.Z.captureMessage('Property type '.concat(n.properties.oneofKind, ' is not supported to render ServerDriveAnnouncementModal')), null;
 }

@@ -1,95 +1,136 @@
-a.d(n, { default: () => N });
-var i = a(200651),
-    t = a(192379),
-    o = a(477690),
-    r = a(481060),
-    l = a(208156),
-    s = a(385499),
-    c = a(264165),
-    d = a(885006),
-    u = a(624138),
-    h = a(293979),
-    _ = a(674563),
-    m = a(388032),
-    x = a(130376);
-let f = (0, u.Mg)(o.Z.INTERACTION_IFRAME_MODAL_MODAL_MIN_WIDTH),
-    v = (0, u.Mg)(o.Z.INTERACTION_IFRAME_MODAL_MODAL_MAX_WIDTH),
-    I = (0, u.Mg)(o.Z.INTERACTION_IFRAME_MODAL_MODAL_MARGIN),
-    M = (0, u.Mg)(o.Z.INTERACTION_IFRAME_MODAL_MODAL_HEADER_HEIGHT);
-function N(e) {
-    var n;
-    let { title: a, onClose: o } = e,
-        { applicationIconURL: u, applicationName: N, queryParams: A, iframeUrl: p } = (0, h.b8)(e),
-        { width: w, height: g } = (0, d.Z)(),
-        E = t.useMemo(() => {
-            let e = Math.min(((g - M - 2 * I) * 16) / 9, v);
-            return Math.max(f, Math.min(w - 2 * I, e));
-        }, [w, g]);
-    return (0, i.jsx)(r.Y0X, {
-        ...e,
-        size: r.CgR.DYNAMIC,
-        className: x.root,
-        children: (0, i.jsxs)('div', {
-            style: { width: E },
-            children: [
-                (0, i.jsxs)(r.xBx, {
-                    separator: !1,
-                    className: x.modalHeader,
+n.d(t, { default: () => w });
+var r = n(200651),
+    o = n(192379),
+    a = n(477690),
+    i = n(481060),
+    c = n(208156),
+    l = n(385499),
+    s = n(264165),
+    u = n(885006),
+    d = n(624138),
+    f = n(293979),
+    b = n(674563),
+    p = n(388032),
+    O = n(177184);
+let h = (0, d.Mg)(a.Z.INTERACTION_IFRAME_MODAL_MODAL_MIN_WIDTH),
+    m = (0, d.Mg)(a.Z.INTERACTION_IFRAME_MODAL_MODAL_MAX_WIDTH),
+    v = (0, d.Mg)(a.Z.INTERACTION_IFRAME_MODAL_MODAL_MARGIN),
+    j = (0, d.Mg)(a.Z.INTERACTION_IFRAME_MODAL_MODAL_HEADER_HEIGHT);
+function w(e) {
+    var t, n, a;
+    let { title: d, onClose: w } = e,
+        { applicationIconURL: g, applicationName: _, queryParams: y, iframeUrl: x } = (0, f.b8)(e),
+        { width: I, height: N } = (0, u.Z)(),
+        M = o.useMemo(() => {
+            let e = Math.min(((N - j - 2 * v) * 16) / 9, m);
+            return Math.max(h, Math.min(I - 2 * v, e));
+        }, [I, N]);
+    return (0, r.jsx)(
+        i.Y0X,
+        ((n = (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    r = Object.keys(n);
+                'function' == typeof Object.getOwnPropertySymbols &&
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        })
+                    )),
+                    r.forEach(function (t) {
+                        var r;
+                        (r = n[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: r,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0
+                                  })
+                                : (e[t] = r);
+                    });
+            }
+            return e;
+        })({}, e)),
+        (a = a =
+            {
+                size: i.CgR.DYNAMIC,
+                className: O.root,
+                children: (0, r.jsxs)('div', {
+                    style: { width: M },
                     children: [
-                        (0, i.jsx)(r.qEK, {
-                            src: u,
-                            size: r.EFr.SIZE_32,
-                            'aria-label': N,
-                            className: x.applicationIcon
-                        }),
-                        (0, i.jsxs)('div', {
-                            className: x.flexRow,
+                        (0, r.jsxs)(i.xBx, {
+                            separator: !1,
+                            className: O.modalHeader,
                             children: [
-                                (0, i.jsxs)('div', {
+                                (0, r.jsx)(i.qEK, {
+                                    src: g,
+                                    size: i.EFr.SIZE_32,
+                                    'aria-label': _,
+                                    className: O.applicationIcon
+                                }),
+                                (0, r.jsxs)('div', {
+                                    className: O.flexRow,
                                     children: [
-                                        (0, i.jsx)(r.X6q, {
-                                            variant: 'heading-sm/bold',
-                                            children: N
+                                        (0, r.jsxs)('div', {
+                                            children: [
+                                                (0, r.jsx)(i.X6q, {
+                                                    variant: 'heading-sm/bold',
+                                                    children: _
+                                                }),
+                                                (0, r.jsx)(i.Text, {
+                                                    variant: 'text-xs/medium',
+                                                    color: 'interactive-normal',
+                                                    children: d
+                                                })
+                                            ]
                                         }),
-                                        (0, i.jsx)(r.Text, {
-                                            variant: 'text-xs/medium',
-                                            color: 'interactive-normal',
-                                            children: a
+                                        (0, r.jsx)(l.Z, {
+                                            type: b.Hb.BOT,
+                                            className: O.botTag,
+                                            verified: null === (t = e.application.bot) || void 0 === t ? void 0 : t.verified
                                         })
                                     ]
                                 }),
-                                (0, i.jsx)(s.Z, {
-                                    type: _.Hb.BOT,
-                                    className: x.botTag,
-                                    verified: null === (n = e.application.bot) || void 0 === n ? void 0 : n.verified
+                                (0, r.jsx)(i.zxk, {
+                                    onClick: w,
+                                    innerClassName: O.closeButton,
+                                    className: O.closeButtonContainer,
+                                    look: i.zxk.Looks.BLANK,
+                                    size: i.zxk.Sizes.NONE,
+                                    'aria-label': p.NW.string(p.t.WAI6xs),
+                                    children: (0, r.jsx)(i.Dio, {
+                                        size: 'md',
+                                        color: 'currentColor',
+                                        className: O.closeIcon
+                                    })
                                 })
                             ]
                         }),
-                        (0, i.jsx)(r.zxk, {
-                            onClick: o,
-                            innerClassName: x.closeButton,
-                            className: x.closeButtonContainer,
-                            look: r.zxk.Looks.BLANK,
-                            size: r.zxk.Sizes.NONE,
-                            'aria-label': m.intl.string(m.t.WAI6xs),
-                            children: (0, i.jsx)(r.Dio, {
-                                size: 'md',
-                                color: 'currentColor',
-                                className: x.closeIcon
+                        (0, r.jsx)(s.Z, {
+                            aspectRatio: 16 / 9,
+                            children: (0, r.jsx)(c.J, {
+                                url: x,
+                                shouldRefocus: !0,
+                                className: O.iframe,
+                                queryParams: y
                             })
                         })
                     ]
-                }),
-                (0, i.jsx)(c.Z, {
-                    aspectRatio: 16 / 9,
-                    children: (0, i.jsx)(l.J, {
-                        url: p,
-                        shouldRefocus: !0,
-                        className: x.iframe,
-                        queryParams: A
-                    })
                 })
-            ]
-        })
-    });
+            }),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(a))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(a)).forEach(function (e) {
+                  Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(a, e));
+              }),
+        n)
+    );
 }

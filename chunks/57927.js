@@ -1,8 +1,8 @@
-s.d(t, { Z: () => N }), s(47120);
-var i = s(200651),
-    n = s(192379),
-    a = s(120356),
-    r = s.n(a),
+s.d(t, { Z: () => C }), s(47120);
+var n = s(200651),
+    i = s(192379),
+    r = s(120356),
+    a = s.n(r),
     l = s(392711),
     c = s.n(l),
     d = s(442837),
@@ -13,84 +13,127 @@ var i = s(200651),
     u = s(771845),
     j = s(9156),
     g = s(626135),
-    _ = s(789662),
-    v = s(981631),
-    b = s(388032),
-    f = s(641408);
-function N(e) {
+    N = s(789662),
+    _ = s(981631),
+    v = s(388032),
+    b = s(3825);
+function f(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var s = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(s);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (n = n.concat(
+                Object.getOwnPropertySymbols(s).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(s, e).enumerable;
+                })
+            )),
+            n.forEach(function (t) {
+                var n;
+                (n = s[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: n,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = n);
+            });
+    }
+    return e;
+}
+function p(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var s = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var n = Object.getOwnPropertySymbols(e);
+                      s.push.apply(s, n);
+                  }
+                  return s;
+              })(Object(t)).forEach(function (s) {
+                  Object.defineProperty(e, s, Object.getOwnPropertyDescriptor(t, s));
+              }),
+        e
+    );
+}
+function C(e) {
     let { guildPlans: t, overrideGuild: s } = e,
-        a = (0, d.e7)([u.ZP], () => u.ZP.getFlattenedGuildIds()),
-        [r, l] = n.useMemo(
+        r = (0, d.e7)([u.ZP], () => u.ZP.getFlattenedGuildIds()),
+        [a, l] = i.useMemo(
             () =>
                 c()(t)
                     .values()
                     .sortBy((e) => {
-                        let t = a.indexOf(e.guildId);
-                        return -1 === t ? a.length : t;
+                        let t = r.indexOf(e.guildId);
+                        return -1 === t ? r.length : t;
                     })
                     .partition((e) => {
                         var t;
-                        return (null !== (t = e.overrideMode) && void 0 !== t ? t : e.mode) === _.AR.UseGreyDot;
+                        return (null !== (t = e.overrideMode) && void 0 !== t ? t : e.mode) === N.AR.UseGreyDot;
                     })
                     .value(),
-            [t, a]
+            [t, r]
         ),
-        o = n.useCallback(
+        o = i.useCallback(
             (e) => {
-                var i;
-                return s(e, (null !== (i = t[e].overrideMode) && void 0 !== i ? i : t[e].mode) === _.AR.UseGreyDot ? _.AR.KeepAsIs : _.AR.UseGreyDot);
+                var n;
+                return s(e, (null !== (n = t[e].overrideMode) && void 0 !== n ? n : t[e].mode) === N.AR.UseGreyDot ? N.AR.KeepAsIs : N.AR.UseGreyDot);
             },
             [s, t]
         );
-    return (0, i.jsxs)('div', {
-        className: f.container,
+    return (0, n.jsxs)('div', {
+        className: b.container,
         children: [
-            (0, i.jsx)(p, {
-                header: b.intl.string(b.t.tGGAdX),
-                subheader: b.intl.string(b.t['e+d/vr']),
+            (0, n.jsx)(W, {
+                header: v.NW.string(v.t.tGGAdX),
+                subheader: v.NW.string(v.t['e+d/vr']),
                 guildPlans: l,
                 onClick: o
             }),
-            (0, i.jsx)(p, {
-                header: b.intl.string(b.t.f6pf39),
-                subheader: b.intl.string(b.t.izeB6e),
-                guildPlans: r,
+            (0, n.jsx)(W, {
+                header: v.NW.string(v.t.f6pf39),
+                subheader: v.NW.string(v.t.izeB6e),
+                guildPlans: a,
                 onClick: o
             })
         ]
     });
 }
-function p(e) {
-    let { header: t, subheader: s, guildPlans: n, onClick: a } = e;
-    return (0, i.jsxs)('div', {
-        className: f.column,
+function W(e) {
+    let { header: t, subheader: s, guildPlans: i, onClick: r } = e;
+    return (0, n.jsxs)('div', {
+        className: b.column,
         children: [
-            (0, i.jsxs)('div', {
-                className: f.header,
+            (0, n.jsxs)('div', {
+                className: b.header,
                 children: [
-                    (0, i.jsxs)(o.Text, {
-                        className: f.__invalid_sectionTitle,
+                    (0, n.jsxs)(o.Text, {
+                        className: b.__invalid_sectionTitle,
                         variant: 'text-md/medium',
                         color: 'header-primary',
-                        children: [t, ' (', n.length, ')']
+                        children: [t, ' (', i.length, ')']
                     }),
-                    (0, i.jsx)(o.Text, {
+                    (0, n.jsx)(o.Text, {
                         variant: 'text-xs/normal',
                         color: 'header-secondary',
                         children: s
                     })
                 ]
             }),
-            (0, i.jsx)(o.Ttm, {
-                className: f.scroller,
-                children: (0, i.jsx)('div', {
-                    className: f.guilds,
-                    children: n.map((e) =>
-                        (0, i.jsx)(
-                            C,
+            (0, n.jsx)(o.Ttm, {
+                className: b.scroller,
+                children: (0, n.jsx)('div', {
+                    className: b.guilds,
+                    children: i.map((e) =>
+                        (0, n.jsx)(
+                            T,
                             {
                                 plan: e,
-                                onClick: a
+                                onClick: r
                             },
                             e.guildId
                         )
@@ -100,96 +143,100 @@ function p(e) {
         ]
     });
 }
-function C(e) {
+function T(e) {
     var t;
-    let { plan: s, onClick: n } = e,
-        a = (0, d.e7)([h.Z], () => h.Z.getGuild(s.guildId));
-    if (null == a) return null;
-    let l = (null !== (t = s.overrideMode) && void 0 !== t ? t : s.mode) === _.AR.UseGreyDot;
+    let { plan: s, onClick: i } = e,
+        r = (0, d.e7)([h.Z], () => h.Z.getGuild(s.guildId));
+    if (null == r) return null;
+    let l = (null !== (t = s.overrideMode) && void 0 !== t ? t : s.mode) === N.AR.UseGreyDot;
     function c() {
-        g.default.track(v.rMx.NOTIFICATION_MIGRATION_GUILD_CHANGED, {
-            ...(0, m.hH)(s.guildId),
-            is_selected: !l,
-            is_muted: j.ZP.isMuted(s.guildId),
-            notification_setting: j.ZP.getMessageNotifications(s.guildId)
-        }),
-            n(s.guildId);
+        g.default.track(
+            _.rMx.NOTIFICATION_MIGRATION_GUILD_CHANGED,
+            p(f({}, (0, m.hH)(s.guildId)), {
+                is_selected: !l,
+                is_muted: j.ZP.isMuted(s.guildId),
+                notification_setting: j.ZP.getMessageNotifications(s.guildId)
+            })
+        ),
+            i(s.guildId);
     }
-    return (0, i.jsx)(o.ua7, {
-        text: (0, i.jsxs)('div', {
+    return (0, n.jsx)(o.ua7, {
+        text: (0, n.jsxs)('div', {
             children: [
-                (0, i.jsx)(o.Text, {
+                (0, n.jsx)(o.Text, {
                     variant: 'text-md/semibold',
                     color: 'header-primary',
-                    children: a.name
+                    children: r.name
                 }),
-                (0, i.jsxs)('div', {
-                    className: f.tooltipRow,
+                (0, n.jsxs)('div', {
+                    className: b.tooltipRow,
                     children: [
-                        (0, i.jsx)(o.kBi, {
+                        (0, n.jsx)(o.kBi, {
                             size: 'xxs',
                             color: 'currentColor'
                         }),
-                        (0, i.jsx)(o.Text, {
+                        (0, n.jsx)(o.Text, {
                             variant: 'text-xs/medium',
                             color: 'text-muted',
-                            children: s.messagePain ? b.intl.string(b.t['3EQSoK']) : b.intl.string(b.t['CaR/Eh'])
+                            children: s.messagePain ? v.NW.string(v.t['3EQSoK']) : v.NW.string(v.t['CaR/Eh'])
                         })
                     ]
                 }),
-                (0, i.jsxs)('div', {
-                    className: f.tooltipRow,
+                (0, n.jsxs)('div', {
+                    className: b.tooltipRow,
                     children: [
-                        (0, i.jsx)(o.iFz, {
+                        (0, n.jsx)(o.iFz, {
                             size: 'xxs',
                             color: 'currentColor'
                         }),
-                        (0, i.jsx)(o.Text, {
+                        (0, n.jsx)(o.Text, {
                             variant: 'text-xs/medium',
                             color: 'text-muted',
-                            children: s.visitsALot ? b.intl.string(b.t['6dgvsb']) : b.intl.string(b.t.fgedbG)
+                            children: s.visitsALot ? v.NW.string(v.t['6dgvsb']) : v.NW.string(v.t.fgedbG)
                         })
                     ]
                 }),
-                (0, i.jsxs)('div', {
-                    className: f.tooltipRow,
+                (0, n.jsxs)('div', {
+                    className: b.tooltipRow,
                     children: [
-                        (0, i.jsx)(o.Dkj, {
+                        (0, n.jsx)(o.Dkj, {
                             size: 'xxs',
                             color: 'currentColor'
                         }),
-                        (0, i.jsx)(o.Text, {
+                        (0, n.jsx)(o.Text, {
                             variant: 'text-xs/medium',
                             color: 'text-muted',
-                            children: s.muted ? b.intl.string(b.t.rdTrHx) : b.intl.string(b.t.sdFUj4)
+                            children: s.muted ? v.NW.string(v.t.rdTrHx) : v.NW.string(v.t.sdFUj4)
                         })
                     ]
                 })
             ]
         }),
         'aria-label': s.debugReason,
-        tooltipClassName: f.tooltip,
+        tooltipClassName: b.tooltip,
         children: (e) =>
-            (0, i.jsxs)(o.P3F, {
-                ...e,
-                className: r()(f.guild, l ? f.selected : void 0),
-                onClick: c,
-                children: [
-                    (0, i.jsx)(o.owK, {
-                        size: 'xs',
-                        color: 'currentColor',
-                        className: f.checkmark,
-                        secondaryColor: 'white'
-                    }),
-                    (0, i.jsx)(x.Z, {
-                        'aria-hidden': !0,
-                        className: f.guildIcon,
-                        guild: a,
-                        size: x.Z.Sizes.MEDIUM,
-                        active: !0,
-                        tabIndex: -1
-                    })
-                ]
-            })
+            (0, n.jsxs)(
+                o.P3F,
+                p(f({}, e), {
+                    className: a()(b.guild, l ? b.selected : void 0),
+                    onClick: c,
+                    children: [
+                        (0, n.jsx)(o.owK, {
+                            size: 'xs',
+                            color: 'currentColor',
+                            className: b.checkmark,
+                            secondaryColor: 'white'
+                        }),
+                        (0, n.jsx)(x.Z, {
+                            'aria-hidden': !0,
+                            className: b.guildIcon,
+                            guild: r,
+                            size: x.Z.Sizes.MEDIUM,
+                            active: !0,
+                            tabIndex: -1
+                        })
+                    ]
+                })
+            )
     });
 }

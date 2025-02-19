@@ -1,55 +1,102 @@
-n.d(t, { Z: () => m }), n(47120);
-var i = n(200651),
-    l = n(192379),
-    a = n(481060),
-    r = n(665149),
-    s = n(585483),
-    o = n(723170),
+n.d(t, { Z: () => g }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    l = n(481060),
+    o = n(665149),
+    a = n(585483),
+    s = n(723170),
     c = n(64247),
-    d = n(124368),
-    u = n(981631),
-    h = n(388032),
-    p = n(482543);
-function m(e) {
+    u = n(124368),
+    d = n(981631),
+    p = n(388032),
+    h = n(520780);
+function f(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function m(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function g(e) {
     let { channel: t } = e,
-        n = (0, o.B)(t),
-        [m, f] = l.useState(!1),
-        g = (0, a.bWb)().enabled;
-    l.useEffect(() => {
-        let e = () => f(!0);
+        n = (0, s.B)(t),
+        [g, b] = i.useState(!1),
+        _ = (0, l.bWb)().enabled;
+    i.useEffect(() => {
+        let e = () => b(!0);
         return (
-            s.S.subscribe(u.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e),
+            a.S.subscribe(d.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e),
             () => {
-                s.S.unsubscribe(u.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e);
+                a.S.unsubscribe(d.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e);
             }
         );
     }, []);
-    let _ = h.intl.string(h.t.h850Sk);
-    return (0, i.jsx)(a.yRy, {
-        shouldShow: m,
-        animation: a.yRy.Animation.NONE,
+    let C = p.NW.string(p.t.h850Sk);
+    return (0, r.jsx)(l.yRy, {
+        shouldShow: g,
+        animation: l.yRy.Animation.NONE,
         position: 'bottom',
         align: 'right',
         autoInvert: !1,
-        onRequestClose: () => f(!1),
+        onRequestClose: () => b(!1),
         renderPopout: (e) =>
-            (0, i.jsx)(c.Z, {
-                ...e,
-                channel: t,
-                navId: 'thread-context',
-                label: h.intl.string(h.t['1NBjqa'])
-            }),
+            (0, r.jsx)(
+                c.Z,
+                m(f({}, e), {
+                    channel: t,
+                    navId: 'thread-context',
+                    label: p.NW.string(p.t['1NBjqa'])
+                })
+            ),
         children: (e, t) => {
-            let { isShown: l } = t;
-            return (0, i.jsx)(r.ZP.Icon, {
-                ...e,
-                onClick: () => f((e) => !e),
-                tooltip: l ? null : _,
-                icon: n === d.iN.NO_MESSAGES ? a.owu : a.Dkj,
-                foreground: n !== d.iN.NO_MESSAGES || g ? null : p.strikethrough,
-                'aria-label': _,
-                selected: l
-            });
+            let { isShown: i } = t;
+            return (0, r.jsx)(
+                o.ZP.Icon,
+                m(f({}, e), {
+                    onClick: () => b((e) => !e),
+                    tooltip: i ? null : C,
+                    icon: n === u.iN.NO_MESSAGES ? l.owu : l.Dkj,
+                    foreground: n !== u.iN.NO_MESSAGES || _ ? null : h.strikethrough,
+                    'aria-label': C,
+                    selected: i
+                })
+            );
         }
     });
 }

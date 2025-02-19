@@ -1,57 +1,91 @@
 n.d(t, {
-    $r: () => f,
-    DP: () => h,
-    Ly: () => p,
-    SG: () => _
+    $r: () => _,
+    DP: () => g,
+    Ly: () => m,
+    SG: () => h
 });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(866442),
-    a = n(481060);
+var i = n(866442),
+    o = n(481060);
 n(531643);
-var s = n(768581);
+var a = n(768581);
 n(403182);
-var o = n(51144),
+var s = n(51144),
     l = n(661543),
-    u = n(200299),
-    c = n(486324),
+    c = n(200299),
+    u = n(486324),
     d = n(388032);
-function f(e, t, r, s) {
-    (0, a.ZDy)(async () => {
-        let { default: a } = await Promise.all([n.e('70687'), n.e('55849'), n.e('72380')]).then(n.bind(n, 192277));
-        return (n) =>
-            (0, i.jsx)(a, {
-                filters: s,
-                maxFileSizeBytes: u.B,
-                imageSpecifications: e === c.pC.BANNER ? d.intl.string(d.t.IhzZlp) : void 0,
-                onComplete: (n, i) =>
-                    (0, l.j)({
-                        imageSrc: n,
-                        file: i,
-                        uploadType: e,
-                        guildId: t,
-                        isTryItOutFlow: r
-                    }),
-                uploadType: e,
-                showUpsellHeader: !0,
-                ...n
-            });
-    });
-}
-function _(e, t, n) {
-    let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-    if (null != e) return e;
-    let { size: r = 80, canAnimate: a = !0 } = i,
-        o = null === e;
-    return o && null == t ? s.ZP.getDefaultAvatarURL(n.id, n.discriminator) : o || (null == t ? void 0 : t.avatar) == null ? n.getAvatarURL(void 0, r, a) : n.getAvatarURL(null == t ? void 0 : t.guildId, r, a);
+function f(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
 }
 function p(e) {
-    var t;
-    let { pendingNickname: n, pendingGlobalName: i, user: r, guildMember: a } = e,
-        s = '' === n ? null : null != n ? n : null == a ? void 0 : a.nick,
-        l = '' === i ? r.username : i;
-    return null !== (t = null != s ? s : l) && void 0 !== t ? t : o.ZP.getName(r);
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                f(e, t, n[t]);
+            });
+    }
+    return e;
 }
-function h(e) {
-    return (null != e ? (0, r.Bd)(e) : 1) > 0.25;
+function _(e, t, i, a) {
+    (0, o.ZDy)(async () => {
+        let { default: o } = await Promise.all([n.e('91689'), n.e('55849'), n.e('6812')]).then(n.bind(n, 192277));
+        return (n) =>
+            (0, r.jsx)(
+                o,
+                p(
+                    {
+                        filters: a,
+                        maxFileSizeBytes: c.B,
+                        imageSpecifications: e === u.pC.BANNER ? d.NW.string(d.t.IhzZlp) : void 0,
+                        onComplete: (n, r) =>
+                            (0, l.j)({
+                                imageSrc: n,
+                                file: r,
+                                uploadType: e,
+                                guildId: t,
+                                isTryItOutFlow: i
+                            }),
+                        uploadType: e,
+                        showUpsellHeader: !0
+                    },
+                    n
+                )
+            );
+    });
+}
+function h(e, t, n) {
+    let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    if (null != e) return e;
+    let { size: i = 80, canAnimate: o = !0 } = r,
+        s = null === e;
+    return s && null == t ? a.ZP.getDefaultAvatarURL(n.id, n.discriminator) : s || (null == t ? void 0 : t.avatar) == null ? n.getAvatarURL(void 0, i, o) : n.getAvatarURL(null == t ? void 0 : t.guildId, i, o);
+}
+function m(e) {
+    var t;
+    let { pendingNickname: n, pendingGlobalName: r, user: i, guildMember: o } = e,
+        a = '' === n ? null : null != n ? n : null == o ? void 0 : o.nick,
+        l = '' === r ? i.username : r;
+    return null !== (t = null != a ? a : l) && void 0 !== t ? t : s.ZP.getName(i);
+}
+function g(e) {
+    return (null != e ? (0, i.Bd)(e) : 1) > 0.25;
 }

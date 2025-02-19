@@ -1,5 +1,6 @@
-var t = TypeError;
-r.exports = function (r) {
-    if (r > 9007199254740991) throw t('Maximum allowed index exceeded');
-    return r;
+var t = TypeError,
+    n = 9007199254740991;
+e.exports = function (e) {
+    if (e > n) throw t('Maximum allowed index exceeded');
+    return e;
 };

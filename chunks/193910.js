@@ -1,92 +1,132 @@
-n.d(t, { Z: () => R }), n(653041), n(47120);
-var i = n(200651),
-    l = n(192379),
-    a = n(831209),
-    r = n(442837),
-    s = n(704215),
-    o = n(481060),
+n.d(t, { Z: () => A }), n(474991), n(398202), n(301563), n(653041), n(47120);
+var r = n(200651),
+    i = n(192379),
+    l = n(831209),
+    o = n(442837),
+    a = n(704215),
+    s = n(481060),
     c = n(278323),
-    d = n(566620),
-    u = n(403404),
-    h = n(906732),
-    p = n(605236),
-    m = n(706140),
-    f = n(243778),
+    u = n(566620),
+    d = n(403404),
+    p = n(906732),
+    h = n(605236),
+    f = n(706140),
+    m = n(243778),
     g = n(618857),
-    _ = n(488131),
-    C = n(375954),
-    x = n(626135),
+    b = n(488131),
+    _ = n(375954),
+    C = n(626135),
     v = n(585483),
-    E = n(403182),
-    I = n(127654),
-    b = n(752305),
-    Z = n(951211),
+    y = n(403182),
+    x = n(127654),
+    j = n(752305),
+    O = n(951211),
     N = n(981631),
-    T = n(921944),
-    S = n(489887),
-    j = n(388032),
-    y = n(382167);
-let A = /(.*)```(\w+)\n(.*)```(.*)/s;
-function P() {
-    let e = (0, r.e7)([C.Z], () => C.Z.hasCurrentUserSentMessageSinceAppStart()),
+    E = n(921944),
+    P = n(489887),
+    I = n(388032),
+    S = n(998685);
+let Z = RegExp('(.*)```(\\w+)\\n(.*)```(.*)', 's');
+function T() {
+    let e = (0, o.e7)([_.Z], () => _.Z.hasCurrentUserSentMessageSinceAppStart()),
         t = [];
-    e && t.push(s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE);
-    let [n] = (0, m.cv)(t);
+    e && t.push(a.z.ACTIVITIES_CHAT_MENU_NEW_BADGE);
+    let [n] = (0, f.cv)(t);
     return (
-        l.useEffect(
+        i.useEffect(
             () => () => {
-                n === s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE && (0, p.EW)(s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: T.L.TAKE_ACTION });
+                n === a.z.ACTIVITIES_CHAT_MENU_NEW_BADGE && (0, h.EW)(a.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: E.L.TAKE_ACTION });
             },
             [n]
         ),
-        (0, i.jsx)(f.ZP, {
+        (0, r.jsx)(m.ZP, {
             contentTypes: t,
             children: (e) => {
                 let { visibleContent: t } = e;
-                return t === s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE
-                    ? (0, i.jsx)(o.IGR, {
-                          text: j.intl.string(j.t.y2b7CA),
-                          color: a.Z.BUTTON_DANGER_BACKGROUND
+                return t === a.z.ACTIVITIES_CHAT_MENU_NEW_BADGE
+                    ? (0, r.jsx)(s.IGR, {
+                          text: I.NW.string(I.t.y2b7CA),
+                          color: l.Z.BUTTON_DANGER_BACKGROUND
                       })
                     : null;
             }
         })
     );
 }
-function R(e) {
-    let { channel: t, options: r, onFileUpload: m, onClose: f, onSelect: C, draftType: R, editorTextContent: M, setValue: L, openClips: k } = e,
-        { analyticsLocations: O } = (0, h.ZP)(),
-        D = (0, g.Dt)({ channel: t });
-    function w() {
-        (0, _.R6)(t, void 0, 'Plus Button');
+function A(e) {
+    let { channel: t, options: o, onFileUpload: f, onClose: m, onSelect: _, draftType: A, editorTextContent: w, setValue: R, openClips: k } = e,
+        { analyticsLocations: M } = (0, p.ZP)(),
+        L = (0, g.Dt)({ channel: t });
+    function D() {
+        (0, b.R6)(t, void 0, 'Plus Button');
+    }
+    function W() {
+        C.default.track(N.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), R('/', (0, j.JM)('/'));
     }
     function U() {
-        x.default.track(N.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), L('/', (0, b.JM)('/'));
-    }
-    function B() {
         k();
     }
-    function F() {
-        (0, p.EW)(s.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: T.L.TAKE_ACTION }),
-            (0, o.ZDy)(
+    function B() {
+        (0, h.EW)(a.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: E.L.TAKE_ACTION }),
+            (0, s.ZDy)(
                 async () => {
                     let { default: e } = await n.e('68784').then(n.bind(n, 611611));
-                    return (n) =>
-                        (0, i.jsx)(e, {
-                            ...n,
-                            channel: t
-                        });
+                    return (n) => {
+                        var i, l;
+                        return (0, r.jsx)(
+                            e,
+                            ((i = (function (e) {
+                                for (var t = 1; t < arguments.length; t++) {
+                                    var n = null != arguments[t] ? arguments[t] : {},
+                                        r = Object.keys(n);
+                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                        (r = r.concat(
+                                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                            })
+                                        )),
+                                        r.forEach(function (t) {
+                                            var r;
+                                            (r = n[t]),
+                                                t in e
+                                                    ? Object.defineProperty(e, t, {
+                                                          value: r,
+                                                          enumerable: !0,
+                                                          configurable: !0,
+                                                          writable: !0
+                                                      })
+                                                    : (e[t] = r);
+                                        });
+                                }
+                                return e;
+                            })({}, n)),
+                            (l = l = { channel: t }),
+                            Object.getOwnPropertyDescriptors
+                                ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
+                                : (function (e, t) {
+                                      var n = Object.keys(e);
+                                      if (Object.getOwnPropertySymbols) {
+                                          var r = Object.getOwnPropertySymbols(e);
+                                          n.push.apply(n, r);
+                                      }
+                                      return n;
+                                  })(Object(l)).forEach(function (e) {
+                                      Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
+                                  }),
+                            i)
+                        );
+                    };
                 },
-                { modalKey: S.$z }
+                { modalKey: P.$z }
             );
     }
-    function H() {
-        x.default.track(N.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
+    function F() {
+        C.default.track(N.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
             channel_type: t.type,
             channel_id: t.id,
             guild_id: t.guild_id
         }),
-            (0, u.Z)({
+            (0, d.Z)({
                 channel: t,
                 guildId: t.guild_id,
                 locationObject: {
@@ -97,101 +137,101 @@ function R(e) {
                 },
                 openInPopout: !1,
                 enableSelectedTextChannelInvite: !0,
-                analyticsLocations: O
+                analyticsLocations: M
             }),
-            (0, d.w1)({ guildId: t.guild_id });
+            (0, u.w1)({ guildId: t.guild_id });
     }
-    function G() {
-        let e = M,
+    function H() {
+        let e = w,
             n = 'txt',
-            i = '',
-            l = M.match(A);
-        null != l && ((i = l[1]), (n = l[2]), (e = l[3]), (i += l[4])), (0, I.d)([(0, E.dp)(new Blob([e], { type: 'text/plain' }), 'message.'.concat(n))], t, R), v.S.dispatchToLastSubscribed(N.CkL.CLEAR_TEXT), '' !== i && v.S.dispatchToLastSubscribed(N.CkL.INSERT_TEXT, { plainText: i });
+            r = '',
+            i = w.match(Z);
+        null != i && ((r = i[1]), (n = i[2]), (e = i[3]), (r += i[4])), (0, x.d)([(0, y.dp)(new Blob([e], { type: 'text/plain' }), 'message.'.concat(n))], t, A), v.S.dispatchToLastSubscribed(N.CkL.CLEAR_TEXT), '' !== r && v.S.dispatchToLastSubscribed(N.CkL.INSERT_TEXT, { plainText: r });
     }
     return (
-        l.useEffect(() => {
-            x.default.track(N.rMx.OPEN_POPOUT, {
+        i.useEffect(() => {
+            C.default.track(N.rMx.OPEN_POPOUT, {
                 type: 'Send Attachment',
                 channel_id: t.id,
                 guild_id: t.guild_id
             });
         }, [t.guild_id, t.id]),
-        (0, i.jsx)(o.v2r, {
-            onSelect: C,
+        (0, r.jsx)(s.v2r, {
+            onSelect: _,
             navId: 'channel-attach',
-            onClose: f,
-            'aria-label': j.intl.string(j.t.Xm41aW),
-            className: y.menu,
-            children: r.map(function (e) {
+            onClose: m,
+            'aria-label': I.NW.string(I.t.Xm41aW),
+            className: S.menu,
+            children: o.map(function (e) {
                 var n;
-                let l = (0, i.jsxs)('div', {
-                    className: y.optionLabel,
+                let i = (0, r.jsxs)('div', {
+                    className: S.optionLabel,
                     children: [
-                        (0, i.jsx)(e.icon, {
-                            className: y.optionIcon,
+                        (0, r.jsx)(e.icon, {
+                            className: S.optionIcon,
                             color: 'currentColor'
                         }),
-                        (0, i.jsx)('div', {
-                            className: y.optionName,
+                        (0, r.jsx)('div', {
+                            className: S.optionName,
                             children: e.display
                         }),
                         null != e.badgeVal &&
                             e.badgeVal > 0 &&
-                            (0, i.jsx)(o.mAB, {
-                                className: y.badge,
-                                color: null !== (n = e.badgeColor) && void 0 !== n ? n : a.Z.STATUS_DANGER,
+                            (0, r.jsx)(s.mAB, {
+                                className: S.badge,
+                                color: null !== (n = e.badgeColor) && void 0 !== n ? n : l.Z.STATUS_DANGER,
                                 count: e.badgeVal
                             })
                     ]
                 });
                 switch (e.type) {
-                    case Z.r.UPLOAD_A_FILE:
-                        return (0, i.jsx)(
-                            o.sNh,
+                    case O.r.UPLOAD_A_FILE:
+                        return (0, r.jsx)(
+                            s.sNh,
                             {
                                 id: 'upload-file',
-                                label: l,
-                                action: m
+                                label: i,
+                                action: f
                             },
                             'upload-file'
                         );
-                    case Z.r.UPLOAD_TEXT_AS_FILE:
-                        if ('' === M) return null;
-                        return (0, i.jsx)(
-                            o.sNh,
+                    case O.r.UPLOAD_TEXT_AS_FILE:
+                        if ('' === w) return null;
+                        return (0, r.jsx)(
+                            s.sNh,
                             {
                                 id: 'upload-text-as-file',
-                                label: l,
-                                action: G
+                                label: i,
+                                action: H
                             },
                             'upload-text-as-file'
                         );
-                    case Z.r.CLIPS:
-                        return (0, i.jsx)(
-                            o.sNh,
+                    case O.r.CLIPS:
+                        return (0, r.jsx)(
+                            s.sNh,
                             {
                                 id: 'clips',
-                                label: l,
-                                action: B
+                                label: i,
+                                action: U
                             },
                             'clips'
                         );
-                    case Z.r.POLL:
-                        return (0, i.jsx)(
-                            o.sNh,
+                    case O.r.POLL:
+                        return (0, r.jsx)(
+                            s.sNh,
                             {
                                 id: 'poll',
-                                label: l,
-                                action: F
+                                label: i,
+                                action: B
                             },
                             'poll'
                         );
-                    case Z.r.INVITE_TO_PLAY_GAME:
-                        return (0, i.jsx)(
-                            o.sNh,
+                    case O.r.INVITE_TO_PLAY_GAME:
+                        return (0, r.jsx)(
+                            s.sNh,
                             {
                                 id: 'play',
-                                label: l,
+                                label: i,
                                 action: () => {
                                     var n;
                                     return (
@@ -200,19 +240,19 @@ function R(e) {
                                             channelId: t.id,
                                             type: N.mFx.JOIN,
                                             activity: n,
-                                            location: O[O.length - 1]
+                                            location: M[M.length - 1]
                                         })
                                     );
                                 }
                             },
                             'play'
                         );
-                    case Z.r.INVITE_TO_LISTEN:
-                        return (0, i.jsx)(
-                            o.sNh,
+                    case O.r.INVITE_TO_LISTEN:
+                        return (0, r.jsx)(
+                            s.sNh,
                             {
                                 id: 'listen',
-                                label: l,
+                                label: i,
                                 action: () => {
                                     var n;
                                     return (
@@ -221,19 +261,19 @@ function R(e) {
                                             channelId: t.id,
                                             type: N.mFx.LISTEN,
                                             activity: n,
-                                            location: O[O.length - 1]
+                                            location: M[M.length - 1]
                                         })
                                     );
                                 }
                             },
                             'listen'
                         );
-                    case Z.r.INVITE_TO_WATCH:
-                        return (0, i.jsx)(
-                            o.sNh,
+                    case O.r.INVITE_TO_WATCH:
+                        return (0, r.jsx)(
+                            s.sNh,
                             {
                                 id: 'watch',
-                                label: l,
+                                label: i,
                                 action: () => {
                                     var n;
                                     return (
@@ -242,52 +282,52 @@ function R(e) {
                                             channelId: t.id,
                                             type: N.mFx.WATCH,
                                             activity: n,
-                                            location: O[O.length - 1]
+                                            location: M[M.length - 1]
                                         })
                                     );
                                 }
                             },
                             'watch'
                         );
-                    case Z.r.CREATE_THREAD:
-                        return (0, i.jsx)(
-                            o.sNh,
+                    case O.r.CREATE_THREAD:
+                        return (0, r.jsx)(
+                            s.sNh,
                             {
                                 id: 'THREAD',
-                                label: l,
-                                action: w
+                                label: i,
+                                action: D
                             },
                             'THREAD'
                         );
-                    case Z.r.SLASH_COMMAND:
-                        return (0, i.jsx)(
-                            o.sNh,
+                    case O.r.SLASH_COMMAND:
+                        return (0, r.jsx)(
+                            s.sNh,
                             {
                                 id: 'SLASH_COMMAND',
-                                label: l,
-                                action: U
+                                label: i,
+                                action: W
                             },
                             'SLASH_COMMAND'
                         );
-                    case Z.r.ACTIVITY:
-                        return (0, i.jsx)(
-                            o.sNh,
+                    case O.r.ACTIVITY:
+                        return (0, r.jsx)(
+                            s.sNh,
                             {
                                 id: 'activity',
-                                label: l,
-                                action: H,
-                                hint: (0, i.jsx)(P, {})
+                                label: i,
+                                action: F,
+                                hint: (0, r.jsx)(T, {})
                             },
                             'activity'
                         );
-                    case Z.r.SCHEDULED_MESSAGE:
-                        return (0, i.jsx)(
-                            o.sNh,
+                    case O.r.SCHEDULED_MESSAGE:
+                        return (0, r.jsx)(
+                            s.sNh,
                             {
                                 id: 'scheduled_message',
-                                label: l,
+                                label: i,
                                 action: () => (0, g.$f)({ channel: t }),
-                                children: D
+                                children: L
                             },
                             'scheduled_message'
                         );

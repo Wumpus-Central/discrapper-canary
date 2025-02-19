@@ -1,32 +1,88 @@
-t.d(n, {
-    Z: () => c,
-    e: () => i
+r.d(t, {
+    Z: () => f,
+    e: () => b
 });
-var r = t(200651);
-t(192379);
-var o = t(468194),
-    l = t(477690),
-    s = t(166081),
-    u = t(841762);
-let a = (0, o.Mg)(l.Z.ASPECT_STABLE_IMAGE_CONTAINER_PADDING);
-function c(e) {
-    let { listing: n, imageSize: t, alt: o, ...l } = e,
-        u = (0, s.U)(n, t);
-    return (0, r.jsx)('img', {
-        src: u,
-        alt: o,
-        ...l
-    });
-}
+var n = r(200651);
+r(192379);
+var o = r(468194),
+    c = r(477690),
+    l = r(166081),
+    u = r(841762);
 function i(e) {
-    let { listing: n, aspectRatio: t = 16 / 9, height: o, ...l } = e,
-        c = (o - 2 * a) * t,
-        i = (0, s.U)(n, c),
-        d = (0, s.U)(n, c, { shouldAnimate: !1 });
-    return (0, r.jsx)(u.Z, {
-        src: i,
-        backgroundSrc: d,
-        aspectRatio: t,
-        ...l
-    });
+    for (var t = 1; t < arguments.length; t++) {
+        var r = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(r);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (n = n.concat(
+                Object.getOwnPropertySymbols(r).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                })
+            )),
+            n.forEach(function (t) {
+                var n;
+                (n = r[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: n,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = n);
+            });
+    }
+    return e;
+}
+function a(e, t) {
+    if (null == e) return {};
+    var r,
+        n,
+        o = (function (e, t) {
+            if (null == e) return {};
+            var r,
+                n,
+                o = {},
+                c = Object.keys(e);
+            for (n = 0; n < c.length; n++) (r = c[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
+            return o;
+        })(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var c = Object.getOwnPropertySymbols(e);
+        for (n = 0; n < c.length; n++) (r = c[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
+    }
+    return o;
+}
+let s = (0, o.Mg)(c.Z.ASPECT_STABLE_IMAGE_CONTAINER_PADDING);
+function f(e) {
+    var { listing: t, imageSize: r, alt: o } = e,
+        c = a(e, ['listing', 'imageSize', 'alt']);
+    let u = (0, l.U)(t, r);
+    return (0, n.jsx)(
+        'img',
+        i(
+            {
+                src: u,
+                alt: o
+            },
+            c
+        )
+    );
+}
+function b(e) {
+    var { listing: t, aspectRatio: r = 16 / 9, height: o } = e,
+        c = a(e, ['listing', 'aspectRatio', 'height']);
+    let f = (o - 2 * s) * r,
+        b = (0, l.U)(t, f),
+        p = (0, l.U)(t, f, { shouldAnimate: !1 });
+    return (0, n.jsx)(
+        u.Z,
+        i(
+            {
+                src: b,
+                backgroundSrc: p,
+                aspectRatio: r
+            },
+            c
+        )
+    );
 }

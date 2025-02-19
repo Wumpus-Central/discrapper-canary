@@ -1,85 +1,121 @@
-i.d(t, {
-    Z: () => g,
-    y: () => p
+n.d(t, {
+    Z: () => b,
+    y: () => g
 });
-var n,
-    a,
-    o = i(200651),
-    s = i(192379),
-    l = i(392711),
-    r = i.n(l),
-    c = i(748780),
-    d = i(451478);
-function u(e, t, i) {
+var i,
+    o,
+    r = n(200651),
+    a = n(192379),
+    s = n(392711),
+    l = n.n(s),
+    c = n(748780),
+    u = n(451478);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: i,
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = i),
+            : (e[t] = n),
         e
     );
 }
-var h = (((n = h || {})[(n.ABOVE = 0)] = 'ABOVE'), (n[(n.VISIBLE = 1)] = 'VISIBLE'), (n[(n.BELOW = 2)] = 'BELOW'), n);
-function m(e, t) {
+function h(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            i = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (i = i.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            i.forEach(function (t) {
+                d(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function p(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var i = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, i);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+var m = (((i = m || {})[(i.ABOVE = 0)] = 'ABOVE'), (i[(i.VISIBLE = 1)] = 'VISIBLE'), (i[(i.BELOW = 2)] = 'BELOW'), i);
+function f(e, t) {
     return {
         toValue: e,
         duration: null != t ? t : 300,
         easing: c.Z.Easing.inOut(c.Z.Easing.back())
     };
 }
-function p(e, t, i) {
+function g(e, t, n) {
     if (null != t) {
-        let n = Math.ceil(Math.log10(e + 1));
-        return null != i && i > 0 ? Math.min(n, i) * t : n * t;
+        let i = Math.ceil(Math.log10(e + 1));
+        return null != n && n > 0 ? Math.min(i, n) * t : i * t;
     }
 }
-class g extends (a = s.PureComponent) {
+class b extends (o = a.PureComponent) {
     static getDerivedStateFromProps(e, t) {
-        let { prevValue: i, currValue: n, nextValue: a } = t;
-        return null == i && n !== e.value
+        let { prevValue: n, currValue: i, nextValue: o } = t;
+        return null == n && i !== e.value
             ? {
-                  prevValue: d.Z.isFocused() ? n : null,
+                  prevValue: u.Z.isFocused() ? i : null,
                   currValue: e.value
               }
-            : null != a && a !== e.value
+            : null != o && o !== e.value
               ? { nextValue: e.value }
               : null;
     }
     componentDidUpdate(e, t) {
-        let { prevValue: i, currValue: n } = this.state;
-        i !== t.prevValue && null != i && this.animateBetween(i, n);
+        let { prevValue: n, currValue: i } = this.state;
+        n !== t.prevValue && null != n && this.animateBetween(n, i);
     }
     animateBetween(e, t) {
-        let i;
-        let { forcePosition: n, animationSpeed: a } = this.props;
-        this.prevAnimate.setValue(1), null != n ? (0 === n ? (this.currAnimate.setValue(0), (i = 2)) : 2 === n && (this.currAnimate.setValue(2), (i = 0))) : e > t ? (this.currAnimate.setValue(0), (i = 2)) : (this.currAnimate.setValue(2), (i = 0)), c.Z.parallel([c.Z.timing(this.prevAnimate, m(i, a)), c.Z.timing(this.currAnimate, m(1, a))]).start(this.animateNext);
+        let n;
+        let { forcePosition: i, animationSpeed: o } = this.props;
+        this.prevAnimate.setValue(1), null != i ? (0 === i ? (this.currAnimate.setValue(0), (n = 2)) : 2 === i && (this.currAnimate.setValue(2), (n = 0))) : e > t ? (this.currAnimate.setValue(0), (n = 2)) : (this.currAnimate.setValue(2), (n = 0)), c.Z.parallel([c.Z.timing(this.prevAnimate, f(n, o)), c.Z.timing(this.currAnimate, f(1, o))]).start(this.animateNext);
     }
     getAnimatedStyle(e) {
         let { animationColor: t } = this.props;
-        return {
-            transform: [
-                {
-                    translateY: e.interpolate({
-                        inputRange: [0, 1, 2],
-                        outputRange: ['-100%', '0%', '100%']
-                    })
-                }
-            ],
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            ...(null != t && { color: t })
-        };
+        return h(
+            {
+                transform: [
+                    {
+                        translateY: e.interpolate({
+                            inputRange: [0, 1, 2],
+                            outputRange: ['-100%', '0%', '100%']
+                        })
+                    }
+                ],
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0
+            },
+            null != t && { color: t }
+        );
     }
     getMinWidth(e) {
-        let { digitWidth: t, padStartLength: i } = this.props;
-        return p(e, t, i);
+        let { digitWidth: t, padStartLength: n } = this.props;
+        return g(e, t, n);
     }
     padValue(e) {
         let { padStartLength: t } = this.props;
@@ -87,59 +123,57 @@ class g extends (a = s.PureComponent) {
     }
     render() {
         let { prevValue: e, currValue: t } = this.state,
-            { color: i, formatString: n } = this.props,
-            a = r().omit(this.props, ['value', 'digitWidth', 'padStartLength', 'forcePosition']);
+            { color: n, formatString: i } = this.props,
+            o = l().omit(this.props, ['value', 'digitWidth', 'padStartLength', 'forcePosition']);
         if (null == e)
-            return (0, o.jsx)('div', {
-                ...a,
-                style: {
-                    color: i,
-                    minWidth: this.getMinWidth(t)
-                },
-                children: null != n ? n(this.padValue(t)) : this.padValue(t)
-            });
-        let s = Math.max(e, t);
-        return (0, o.jsxs)('div', {
-            ...a,
-            style: {
-                color: i,
-                position: 'relative',
-                overflow: 'hidden'
-            },
-            children: [
-                (0, o.jsx)('div', {
+            return (0, r.jsx)(
+                'div',
+                p(h({}, o), {
                     style: {
-                        visibility: 'hidden',
-                        minWidth: this.getMinWidth(s)
+                        color: n,
+                        minWidth: this.getMinWidth(t)
                     },
-                    children: this.padValue(s)
-                }),
-                (0, o.jsx)(c.Z.div, {
-                    style: {
-                        color: i,
-                        ...this.getAnimatedStyle(this.prevAnimate)
-                    },
-                    children: null != n ? n(this.padValue(e)) : this.padValue(e)
-                }),
-                (0, o.jsx)(c.Z.div, {
-                    style: {
-                        color: i,
-                        ...this.getAnimatedStyle(this.currAnimate)
-                    },
-                    children: null != n ? n(this.padValue(t)) : this.padValue(t)
+                    children: null != i ? i(this.padValue(t)) : this.padValue(t)
                 })
-            ]
-        });
+            );
+        let a = Math.max(e, t);
+        return (0, r.jsxs)(
+            'div',
+            p(h({}, o), {
+                style: {
+                    color: n,
+                    position: 'relative',
+                    overflow: 'hidden'
+                },
+                children: [
+                    (0, r.jsx)('div', {
+                        style: {
+                            visibility: 'hidden',
+                            minWidth: this.getMinWidth(a)
+                        },
+                        children: this.padValue(a)
+                    }),
+                    (0, r.jsx)(c.Z.div, {
+                        style: h({ color: n }, this.getAnimatedStyle(this.prevAnimate)),
+                        children: null != i ? i(this.padValue(e)) : this.padValue(e)
+                    }),
+                    (0, r.jsx)(c.Z.div, {
+                        style: h({ color: n }, this.getAnimatedStyle(this.currAnimate)),
+                        children: null != i ? i(this.padValue(t)) : this.padValue(t)
+                    })
+                ]
+            })
+        );
     }
     constructor(e) {
         super(e),
-            u(this, 'prevAnimate', void 0),
-            u(this, 'currAnimate', void 0),
-            u(this, 'animateNext', () => {
+            d(this, 'prevAnimate', void 0),
+            d(this, 'currAnimate', void 0),
+            d(this, 'animateNext', () => {
                 let { currValue: e, nextValue: t } = this.state;
                 null != t
                     ? this.setState({
-                          prevValue: d.Z.isFocused() ? e : null,
+                          prevValue: u.Z.isFocused() ? e : null,
                           currValue: t,
                           nextValue: null
                       })
@@ -154,4 +188,4 @@ class g extends (a = s.PureComponent) {
             (this.currAnimate = new c.Z.Value(1));
     }
 }
-u(g, 'Positions', h);
+d(b, 'Positions', m);

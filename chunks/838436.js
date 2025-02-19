@@ -1,70 +1,96 @@
 n.d(t, {
-    H: () => m,
-    U: () => x
-});
-var i = n(200651);
+    H: () => g,
+    U: () => f
+}),
+    n(266796);
+var r = n(200651);
 n(192379);
-var s = n(120356),
-    r = n.n(s),
-    l = n(481060),
-    a = n(921801),
+var i = n(120356),
+    s = n.n(i),
+    a = n(481060),
+    l = n(921801),
     o = n(3957),
     c = n(279743),
-    d = n(816689),
-    u = n(797347);
+    d = n(291847),
+    u = n(290102);
 function m(e) {
-    let { header: t, description: n, relatedId: s, disabled: a } = e;
-    return (0, i.jsxs)('div', {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function g(e) {
+    let { header: t, description: n, relatedId: i, disabled: l } = e;
+    return (0, r.jsxs)('div', {
         className: u.header,
         children: [
-            (0, i.jsx)(l.X6q, {
+            (0, r.jsx)(a.X6q, {
                 variant: 'text-md/medium',
                 color: 'header-primary',
-                children: (0, i.jsx)('label', {
-                    htmlFor: s,
-                    className: r()(u.title, { [u.disabled]: a }),
+                children: (0, r.jsx)('label', {
+                    htmlFor: i,
+                    className: s()(u.title, { [u.disabled]: l }),
                     children: t
                 })
             }),
-            (0, i.jsx)(l.Text, {
+            (0, r.jsx)(a.Text, {
                 variant: 'text-sm/normal',
                 color: 'header-secondary',
-                className: r()(u.description, { [u.disabled]: a }),
+                className: s()(u.description, { [u.disabled]: l }),
                 children: n
             })
         ]
     });
 }
-function g(e) {
-    let { setting: t, className: n, children: s } = e;
-    return (0, i.jsx)(a.F, {
+function p(e) {
+    let { setting: t, className: n, children: i } = e;
+    return (0, r.jsx)(l.F, {
         setting: t,
-        children: (0, i.jsx)('div', {
-            className: r()(u.container, n),
-            children: s
+        children: (0, r.jsx)('div', {
+            className: s()(u.container, n),
+            children: i
         })
     });
 }
 function h(e) {
-    let { setting: t, className: n, children: s, scrollPosition: l, scrollHighlightDelay: m } = e,
-        g = (0, o.a)(l);
-    return (0, i.jsx)(a.F, {
+    let { setting: t, className: n, children: i, scrollPosition: a, scrollHighlightDelay: m } = e,
+        g = (0, o.a)(a);
+    return (0, r.jsx)(l.F, {
         setting: t,
-        children: (0, i.jsxs)('div', {
-            className: r()(u.container, n, { [d.settingsBackgroundFlashElement]: null != l }),
+        children: (0, r.jsxs)('div', {
+            className: s()(u.container, n, { [d.settingsBackgroundFlashElement]: null != a }),
             ref: g,
             children: [
-                s,
-                null != l
-                    ? (0, i.jsx)(c.Z, {
+                i,
+                null != a
+                    ? (0, r.jsx)(c.Z, {
                           animationDelay: m,
-                          scrollPosition: l
+                          scrollPosition: a
                       })
                     : null
             ]
         })
     });
 }
-function x(e) {
-    return null != e.scrollPosition ? (0, i.jsx)(h, { ...e }) : (0, i.jsx)(g, { ...e });
+function f(e) {
+    return null != e.scrollPosition ? (0, r.jsx)(h, m({}, e)) : (0, r.jsx)(p, m({}, e));
 }

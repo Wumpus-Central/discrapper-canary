@@ -1,54 +1,79 @@
-n.d(t, { Z: () => h });
-var i = n(200651);
+n.d(t, { Z: () => p });
+var r = n(200651);
 n(192379);
-var l = n(481060),
-    a = n(378409),
-    s = n(976853),
-    r = n(626135),
-    o = n(358085),
-    d = n(960048),
-    c = n(998502),
-    u = n(36998),
-    g = n(981631),
-    f = n(388032);
-function m(e, t) {
-    (0, l.showToast)((0, l.createToast)(e, l.ToastType.FAILURE)), d.Z.captureException(t);
+var i = n(481060),
+    l = n(378409),
+    a = n(976853),
+    o = n(626135),
+    s = n(358085),
+    c = n(960048),
+    u = n(998502),
+    d = n(36998),
+    f = n(981631),
+    g = n(388032);
+function m(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
 }
-function h(e, t, n) {
-    if ((0, s.Z)(null == t ? void 0 : t.getChannelId()) || (null == n ? void 0 : n.shouldHideMediaOptions) === !0 || !o.isPlatformEmbedded || null == e || !(0, a.gS)(e)) return null;
-    let d = (0, a.s$)(e),
-        h = async () => {
+function b(e, t) {
+    (0, i.showToast)((0, i.createToast)(e, i.ToastType.FAILURE)), c.Z.captureException(t);
+}
+function p(e, t, n) {
+    if ((0, a.Z)(null == t ? void 0 : t.getChannelId()) || (null == n ? void 0 : n.shouldHideMediaOptions) === !0 || !s.isPlatformEmbedded || null == e || !(0, l.gS)(e)) return null;
+    let c = (0, l.s$)(e),
+        p = async () => {
             try {
-                await c.ZP.saveImage(d), r.default.track(g.rMx.CONTEXT_MENU_IMAGE_SAVED, { ...(0, u.v)() }), (0, l.showToast)((0, l.createToast)(f.intl.string(f.t.cqpdJS), l.ToastType.SUCCESS));
+                await u.ZP.saveImage(c), o.default.track(f.rMx.CONTEXT_MENU_IMAGE_SAVED, m({}, (0, d.v)())), (0, i.showToast)((0, i.createToast)(g.NW.string(g.t.cqpdJS), i.ToastType.SUCCESS));
             } catch (e) {
-                r.default.track(g.rMx.CONTEXT_MENU_IMAGE_SAVE_FAILED, { ...(0, u.v)() }), m(f.intl.string(f.t['8Ve/S0']), e);
+                o.default.track(f.rMx.CONTEXT_MENU_IMAGE_SAVE_FAILED, m({}, (0, d.v)())), b(g.NW.string(g.t['8Ve/S0']), e);
             }
         },
-        E = async () => {
+        h = async () => {
             try {
-                await c.ZP.copyImage(d), r.default.track(g.rMx.CONTEXT_MENU_IMAGE_COPIED, { ...(0, u.v)() }), (0, l.showToast)((0, l.createToast)(f.intl.string(f.t.bhUpvL), l.ToastType.SUCCESS));
+                await u.ZP.copyImage(c), o.default.track(f.rMx.CONTEXT_MENU_IMAGE_COPIED, m({}, (0, d.v)())), (0, i.showToast)((0, i.createToast)(g.NW.string(g.t.bhUpvL), i.ToastType.SUCCESS));
             } catch (e) {
-                m(f.intl.string(f.t.PTPbj4), e), r.default.track(g.rMx.CONTEXT_MENU_IMAGE_COPY_FAILED, { ...(0, u.v)() });
+                b(g.NW.string(g.t.PTPbj4), e), o.default.track(f.rMx.CONTEXT_MENU_IMAGE_COPY_FAILED, m({}, (0, d.v)()));
             }
         };
     return [
-        c.ZP.canCopyImage() && (0, a.Lz)(e)
-            ? (0, i.jsx)(
-                  l.sNh,
+        u.ZP.canCopyImage() && (0, l.Lz)(e)
+            ? (0, r.jsx)(
+                  i.sNh,
                   {
                       id: 'copy-image',
-                      label: f.intl.string(f.t.tvUqWl),
-                      action: E
+                      label: g.NW.string(g.t.tvUqWl),
+                      action: h
                   },
                   'copy-image'
               )
             : null,
-        (0, i.jsx)(
-            l.sNh,
+        (0, r.jsx)(
+            i.sNh,
             {
                 id: 'save-image',
-                label: f.intl.string(f.t.PeXhgI),
-                action: h
+                label: g.NW.string(g.t.PeXhgI),
+                action: p
             },
             'save-image'
         )

@@ -1,56 +1,56 @@
 n.d(t, { Z: () => v });
-var i = n(200651),
-    l = n(192379),
-    a = n(642128),
-    r = n(442837),
-    s = n(186325),
-    o = n(481060),
+var r = n(200651),
+    i = n(192379),
+    l = n(642128),
+    o = n(442837),
+    a = n(186325),
+    s = n(481060),
     c = n(110924),
-    d = n(714338),
-    u = n(237617),
-    h = n(433355),
-    p = n(189432),
-    m = n(727381),
-    f = n(313692),
+    u = n(714338),
+    d = n(237617),
+    p = n(433355),
+    h = n(189432),
+    f = n(727381),
+    m = n(313692),
     g = n(596443),
-    _ = n(50493),
-    C = n(981631);
-function x(e, t) {
+    b = n(50493),
+    _ = n(981631);
+function C(e, t) {
     return (n) => {
         if (0 === n) return 'auto';
-        let i = 'forwards' === t.current,
-            l = n > 0,
-            a = !1;
-        return l && i && 'left' === e && (a = !0), l && !i && 'right' === e && (a = !0), !l && i && 'right' === e && (a = !0), l || i || 'left' !== e || (a = !0), a ? 'calc('.concat(100 * Math.abs(n), '% + ').concat(Math.round(12 * Math.abs(n)), 'px)') : 'auto';
+        let r = 'forwards' === t.current,
+            i = n > 0,
+            l = !1;
+        return i && r && 'left' === e && (l = !0), i && !r && 'right' === e && (l = !0), !i && r && 'right' === e && (l = !0), i || r || 'left' !== e || (l = !0), l ? 'calc('.concat(100 * Math.abs(n), '% + ').concat(Math.round(12 * Math.abs(n)), 'px)') : 'auto';
     };
 }
 function v(e) {
     var t;
-    let { userId: n, guildId: v, onClose: E, analyticsLocation: I, className: b } = e,
-        Z = (0, r.e7)([h.ZP], () => h.ZP.getGuildSidebarState(v), [v]),
-        N = null !== (t = null == Z ? void 0 : Z.details.modViewPanel) && void 0 !== t ? t : _.k.INFO,
-        T = (0, c.Z)(n),
-        S = null == N ? null : N === _.k.INFO ? 'backwards' : 'forwards',
-        j = (0, u.Z)(S),
-        { reducedMotion: y } = l.useContext(s.S),
-        A = l.useCallback(
+    let { userId: n, guildId: v, onClose: y, analyticsLocation: x, className: j } = e,
+        O = (0, o.e7)([p.ZP], () => p.ZP.getGuildSidebarState(v), [v]),
+        N = null !== (t = null == O ? void 0 : O.details.modViewPanel) && void 0 !== t ? t : b.k.INFO,
+        E = (0, c.Z)(n),
+        P = null == N ? null : N === b.k.INFO ? 'backwards' : 'forwards',
+        I = (0, d.Z)(P),
+        { reducedMotion: S } = i.useContext(a.S),
+        Z = i.useCallback(
             (e) => {
-                null != Z && (0, p.r)(v, n, Z.baseChannelId, { modViewPanel: e });
+                null != O && (0, h.r)(v, n, O.baseChannelId, { modViewPanel: e });
             },
-            [Z, v, n]
+            [O, v, n]
         ),
-        P = l.useMemo(
+        T = i.useMemo(
             () => ({
-                [C.EkH.CLOSE_MODAL]: {
+                [_.EkH.CLOSE_MODAL]: {
                     binds: ['esc'],
                     comboKeysBindGlobal: !0,
-                    action: () => (N === _.k.INFO ? E() : A(_.k.INFO))
+                    action: () => (N === b.k.INFO ? y() : Z(b.k.INFO))
                 }
             }),
-            [E, N, A]
+            [y, N, Z]
         );
-    l.useEffect(() => (d.Z.enable(), d.Z.enableTemp(P), () => d.Z.disableTemp()), [P]);
-    let R = (0, o.Yzy)(
+    i.useEffect(() => (u.Z.enable(), u.Z.enableTemp(T), () => u.Z.disableTemp()), [T]);
+    let A = (0, s.Yzy)(
         N,
         {
             value: 0,
@@ -58,57 +58,83 @@ function v(e) {
             enter: { value: 0 },
             leave: { value: -1 }
         },
-        T !== n ? 'animate-never' : 'animate-always'
+        E !== n ? 'animate-never' : 'animate-always'
     );
-    return (0, i.jsx)(a.animated.div, {
+    return (0, r.jsx)(l.animated.div, {
         style: {
             position: 'relative',
             height: '100%',
             flex: 1,
             overflow: 'hidden'
         },
-        children: R((e, t, l) => {
-            var r, s, o;
-            let { key: c } = l;
-            return (0, i.jsx)(
-                a.animated.div,
+        children: A((e, t, i) => {
+            var o, a, s;
+            let { key: c } = i;
+            return (0, r.jsx)(
+                l.animated.div,
                 {
-                    style: {
-                        position: 'absolute',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        backfaceVisibility: 'hidden',
-                        width: '100%',
-                        height: '100%',
-                        ...(y.enabled
-                            ? { opacity: null === (r = e.value) || void 0 === r ? void 0 : r.to((e) => 1 - Math.abs(e)) }
+                    style: (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var n = null != arguments[t] ? arguments[t] : {},
+                                r = Object.keys(n);
+                            'function' == typeof Object.getOwnPropertySymbols &&
+                                (r = r.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    })
+                                )),
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = n[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: r,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0
+                                              })
+                                            : (e[t] = r);
+                                });
+                        }
+                        return e;
+                    })(
+                        {
+                            position: 'absolute',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            backfaceVisibility: 'hidden',
+                            width: '100%',
+                            height: '100%'
+                        },
+                        S.enabled
+                            ? { opacity: null === (o = e.value) || void 0 === o ? void 0 : o.to((e) => 1 - Math.abs(e)) }
                             : {
-                                  left: null === (s = e.value) || void 0 === s ? void 0 : s.to(x('left', j)),
-                                  right: null === (o = e.value) || void 0 === o ? void 0 : o.to(x('right', j))
-                              })
-                    },
+                                  left: null === (a = e.value) || void 0 === a ? void 0 : a.to(C('left', I)),
+                                  right: null === (s = e.value) || void 0 === s ? void 0 : s.to(C('right', I))
+                              }
+                    ),
                     children: (function (e) {
                         switch (e) {
-                            case _.k.INFO:
-                                return (0, i.jsx)(m.Z, {
+                            case b.k.INFO:
+                                return (0, r.jsx)(f.Z, {
                                     userId: n,
                                     guildId: v,
-                                    onNavigate: A,
-                                    className: b
+                                    onNavigate: Z,
+                                    className: j
                                 });
-                            case _.k.MESSAGE_HISTORY:
-                                return (0, i.jsx)(f.Z, {
+                            case b.k.MESSAGE_HISTORY:
+                                return (0, r.jsx)(m.Z, {
                                     userId: n,
                                     guildId: v,
-                                    onNavigate: () => A(_.k.INFO),
-                                    className: b
+                                    onNavigate: () => Z(b.k.INFO),
+                                    className: j
                                 });
-                            case _.k.PERMISSIONS:
-                                return (0, i.jsx)(g.Z, {
+                            case b.k.PERMISSIONS:
+                                return (0, r.jsx)(g.Z, {
                                     userId: n,
                                     guildId: v,
-                                    onNavigate: () => A(_.k.INFO),
-                                    className: b
+                                    onNavigate: () => Z(b.k.INFO),
+                                    className: j
                                 });
                             default:
                                 return null;

@@ -1,58 +1,102 @@
-r.d(t, { Z: () => f });
-var i = r(200651),
-    n = r(192379),
-    s = r(120356),
-    o = r.n(s),
-    a = r(481060),
-    c = r(378233),
+r.d(t, { Z: () => d }), r(266796);
+var n = r(200651),
+    o = r(192379),
+    i = r(120356),
+    s = r.n(i),
+    c = r(481060),
+    a = r(378233),
     l = r(388032),
-    d = r(365004);
-let u = (e) => {
+    u = r(95696);
+let f = (e) => {
         let { stickerPack: t } = e;
-        return (0, i.jsx)('div', {
-            className: d.features,
-            children: (0, c.X_)(t)
-                ? (0, i.jsx)(a.ua7, {
-                      tooltipClassName: d.featuresTooltip,
+        return (0, n.jsx)('div', {
+            className: u.features,
+            children: (0, a.X_)(t)
+                ? (0, n.jsx)(c.ua7, {
+                      tooltipClassName: u.featuresTooltip,
                       position: 'top',
-                      text: l.intl.string(l.t.W11rMT),
-                      children: (e) =>
-                          (0, i.jsx)(a.o1U, {
-                              size: 'xs',
-                              color: 'currentColor',
-                              ...e,
-                              className: d.featureIcon
-                          })
+                      text: l.NW.string(l.t.W11rMT),
+                      children: (e) => {
+                          var t, r;
+                          return (0, n.jsx)(
+                              c.o1U,
+                              ((t = (function (e) {
+                                  for (var t = 1; t < arguments.length; t++) {
+                                      var r = null != arguments[t] ? arguments[t] : {},
+                                          n = Object.keys(r);
+                                      'function' == typeof Object.getOwnPropertySymbols &&
+                                          (n = n.concat(
+                                              Object.getOwnPropertySymbols(r).filter(function (e) {
+                                                  return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                              })
+                                          )),
+                                          n.forEach(function (t) {
+                                              var n;
+                                              (n = r[t]),
+                                                  t in e
+                                                      ? Object.defineProperty(e, t, {
+                                                            value: n,
+                                                            enumerable: !0,
+                                                            configurable: !0,
+                                                            writable: !0
+                                                        })
+                                                      : (e[t] = n);
+                                          });
+                                  }
+                                  return e;
+                              })(
+                                  {
+                                      size: 'xs',
+                                      color: 'currentColor'
+                                  },
+                                  e
+                              )),
+                              (r = r = { className: u.featureIcon }),
+                              Object.getOwnPropertyDescriptors
+                                  ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+                                  : (function (e, t) {
+                                        var r = Object.keys(e);
+                                        if (Object.getOwnPropertySymbols) {
+                                            var n = Object.getOwnPropertySymbols(e);
+                                            r.push.apply(r, n);
+                                        }
+                                        return r;
+                                    })(Object(r)).forEach(function (e) {
+                                        Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+                                    }),
+                              t)
+                          );
+                      }
                   })
                 : null
         });
     },
-    f = n.memo((e) => {
-        let { className: t, stickerPack: r, withDescription: n = !1 } = e;
-        return (0, i.jsxs)('div', {
-            className: o()(d.header, t),
+    d = o.memo((e) => {
+        let { className: t, stickerPack: r, withDescription: o = !1 } = e;
+        return (0, n.jsxs)('div', {
+            className: s()(u.header, t),
             children: [
-                (0, i.jsxs)('div', {
-                    className: d.title,
+                (0, n.jsxs)('div', {
+                    className: u.title,
                     children: [
-                        (0, i.jsx)(a.X6q, {
-                            className: d.heading,
+                        (0, n.jsx)(c.X6q, {
+                            className: u.heading,
                             variant: 'heading-sm/semibold',
                             children: r.name
                         }),
-                        (0, i.jsx)(u, { stickerPack: r })
+                        (0, n.jsx)(f, { stickerPack: r })
                     ]
                 }),
-                n &&
+                o &&
                     null != r.description &&
-                    (0, i.jsx)(a.Text, {
-                        className: d.description,
+                    (0, n.jsx)(c.Text, {
+                        className: u.description,
                         variant: 'text-sm/normal',
                         children: r.description
                     }),
-                (0, i.jsx)('div', {
-                    className: d.count,
-                    children: l.intl.format(l.t['0S3JpK'], { numStickers: r.stickers.length })
+                (0, n.jsx)('div', {
+                    className: u.count,
+                    children: l.NW.format(l.t['0S3JpK'], { numStickers: r.stickers.length })
                 })
             ]
         });

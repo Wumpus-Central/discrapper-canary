@@ -1,38 +1,81 @@
-n.d(t, { Z: () => O }), n(47120);
-var l = n(200651),
+n.d(t, { Z: () => T }), n(47120);
+var r = n(200651),
     a = n(192379),
-    i = n(442837),
-    s = n(481060),
+    l = n(442837),
+    i = n(481060),
     o = n(596454),
-    r = n(100527),
+    s = n(100527),
     u = n(318766),
     c = n(907040),
     d = n(246133),
     m = n(503817),
-    h = n(695346),
-    f = n(594174),
-    p = n(626135),
+    f = n(695346),
+    p = n(594174),
+    h = n(626135),
     S = n(720449),
-    x = n(684269),
-    _ = n(678865),
-    v = n(676035),
-    j = n(926563),
-    g = n(875425),
-    b = n(981631),
+    b = n(684269),
+    j = n(678865),
+    g = n(676035),
+    v = n(926563),
+    x = n(875425),
+    _ = n(981631),
     N = n(185923),
-    C = n(388032),
-    I = n(558969);
-function T(e) {
+    O = n(388032),
+    y = n(111913);
+function C(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function E(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function I(e) {
     let { value: t, label: n } = e;
-    return (0, l.jsxs)(
+    return (0, r.jsxs)(
         'div',
         {
-            className: I.statusOptionItem,
+            className: y.statusOptionItem,
             children: [
-                (0, l.jsx)(s.qbd, {
+                (0, r.jsx)(i.qbd, {
                     status: t,
                     size: 10,
-                    className: I.statusIcon
+                    className: y.statusIcon
                 }),
                 n
             ]
@@ -40,10 +83,10 @@ function T(e) {
         t
     );
 }
-function E(e) {
+function w(e) {
     return e.map((e) =>
-        (0, l.jsx)(
-            T,
+        (0, r.jsx)(
+            I,
             {
                 value: e.value,
                 label: e.label
@@ -52,35 +95,35 @@ function E(e) {
         )
     );
 }
-function O(e) {
+function T(e) {
     var t, n;
-    let { transitionState: O, onClose: k, sourceAnalyticsContext: D, sourceAnalyticsLocations: B } = e,
-        { enabledWithStatusSelection: w } = (0, m.hM)({ location: 'CustomStatusModalWithPreview' }),
-        A = (0, i.e7)([f.default], () => {
+    let { transitionState: T, onClose: k, sourceAnalyticsContext: P, sourceAnalyticsLocations: D } = e,
+        { enabledWithStatusSelection: B } = (0, m.hM)({ location: 'CustomStatusModalWithPreview' }),
+        A = (0, l.e7)([p.default], () => {
             var e;
-            return null !== (e = f.default.getCurrentUser()) && void 0 !== e ? e : null;
+            return null !== (e = p.default.getCurrentUser()) && void 0 !== e ? e : null;
         }),
-        y = (0, v.a)(),
-        [Z, P] = a.useState(null !== (t = null == y ? void 0 : y.state) && void 0 !== t ? t : ''),
-        [z, R] = a.useState(null !== (n = null == y ? void 0 : y.emoji) && void 0 !== n ? n : null),
-        [L, M] = a.useState((0, _.Z)()),
-        [U, Y] = a.useState((0, x.Z)()),
-        H = a.useRef(null);
+        W = (0, g.a)(),
+        [Z, z] = a.useState(null !== (t = null == W ? void 0 : W.state) && void 0 !== t ? t : ''),
+        [R, L] = a.useState(null !== (n = null == W ? void 0 : W.emoji) && void 0 !== n ? n : null),
+        [M, U] = a.useState((0, j.Z)()),
+        [Y, H] = a.useState((0, b.Z)()),
+        F = a.useRef(null);
     a.useEffect(() => {
-        p.default.track(b.rMx.OPEN_MODAL, {
-            type: r.Z.CUSTOM_STATUS_MODAL,
-            location_stack: B
+        h.default.track(_.rMx.OPEN_MODAL, {
+            type: s.Z.CUSTOM_STATUS_MODAL,
+            location_stack: D
         });
-    }, [B]),
+    }, [D]),
         a.useEffect(() => {
-            if (null != H.current) {
-                let e = H.current;
+            if (null != F.current) {
+                let e = F.current;
                 e.focus(), e.setSelection(Z.length, Z.length);
             }
         });
-    let W = (e) => {
+    let q = (e) => {
             null != e &&
-                R(
+                L(
                     null != e.id
                         ? {
                               id: e.id,
@@ -94,109 +137,111 @@ function O(e) {
                           }
                 );
         },
-        F = () => {
-            let e = h.co.getSetting();
-            e !== L && (0, d.Z)(L, e, D), (0, S.Z)(Z, z, U, D), k();
+        G = () => {
+            let e = f.co.getSetting();
+            e !== M && (0, d.Z)(M, e, P), (0, S.Z)(Z, R, Y, P), k();
         },
-        q = () =>
-            null == z
+        V = () =>
+            null == R
                 ? null
                 : () =>
-                      (0, l.jsx)(o.Z, {
-                          className: I.emoji,
-                          emojiId: z.id,
-                          emojiName: z.name,
-                          animated: !!z.animated
+                      (0, r.jsx)(o.Z, {
+                          className: y.emoji,
+                          emojiId: R.id,
+                          emojiName: R.name,
+                          animated: !!R.animated
                       });
-    return (0, l.jsxs)(s.Y0X, {
-        transitionState: O,
+    return (0, r.jsxs)(i.Y0X, {
+        transitionState: T,
         children: [
-            (0, l.jsxs)(s.xBx, {
+            (0, r.jsxs)(i.xBx, {
                 separator: !1,
-                className: I.header,
+                className: y.header,
                 children: [
-                    (0, l.jsx)('div', {
-                        className: I.headerTitle,
-                        children: (0, l.jsx)(s.X6q, {
+                    (0, r.jsx)('div', {
+                        className: y.headerTitle,
+                        children: (0, r.jsx)(i.X6q, {
                             variant: 'heading-xl/semibold',
-                            children: C.intl.string(C.t.Zx4jzM)
+                            children: O.NW.string(O.t.Zx4jzM)
                         })
                     }),
-                    (0, l.jsx)('div', {
-                        className: I.headerCloseButton,
-                        children: (0, l.jsx)(s.olH, { onClick: k })
+                    (0, r.jsx)('div', {
+                        className: y.headerCloseButton,
+                        children: (0, r.jsx)(i.olH, { onClick: k })
                     })
                 ]
             }),
-            (0, l.jsxs)(s.hzk, {
+            (0, r.jsxs)(i.hzk, {
                 children: [
                     null != A &&
-                        (0, l.jsx)('div', {
-                            className: I.profilePreview,
-                            children: (0, l.jsx)(j.Z, {
+                        (0, r.jsx)('div', {
+                            className: y.profilePreview,
+                            children: (0, r.jsx)(v.Z, {
                                 user: A,
                                 previewText: Z,
-                                previewEmoji: z,
-                                placeHolderText: C.intl.string(C.t['xod36+']),
-                                previewStatus: L,
-                                transitionState: O
+                                previewEmoji: R,
+                                placeHolderText: O.NW.string(O.t['xod36+']),
+                                previewStatus: M,
+                                transitionState: T
                             })
                         }),
-                    (0, l.jsx)(s.hjN, {
-                        className: I.formGroup,
-                        title: C.intl.string(C.t.UcdRn5),
-                        children: (0, l.jsxs)('div', {
-                            className: I.inputContainer,
+                    (0, r.jsx)(i.hjN, {
+                        className: y.formGroup,
+                        title: O.NW.string(O.t.UcdRn5),
+                        children: (0, r.jsxs)('div', {
+                            className: y.inputContainer,
                             children: [
-                                (0, l.jsx)('div', {
-                                    className: I.emojiButtonContainer,
-                                    children: (0, l.jsx)(s.yRy, {
+                                (0, r.jsx)('div', {
+                                    className: y.emojiButtonContainer,
+                                    children: (0, r.jsx)(i.yRy, {
                                         renderPopout: (e) => {
                                             let { closePopout: t } = e;
-                                            return (0, l.jsx)(c.Z, {
+                                            return (0, r.jsx)(c.Z, {
                                                 closePopout: t,
                                                 onSelectEmoji: (e, n) => {
-                                                    W(e), n && t();
+                                                    q(e), n && t();
                                                 },
                                                 pickerIntention: N.Hz.STATUS,
                                                 onNavigateAway: k
                                             });
                                         },
                                         position: 'left',
-                                        animation: s.yRy.Animation.NONE,
+                                        animation: i.yRy.Animation.NONE,
                                         align: 'top',
                                         children: (e, t) => {
                                             let { isShown: n } = t;
-                                            return (0, l.jsx)(u.Z, {
-                                                ...e,
-                                                active: n,
-                                                className: I.emojiButton,
-                                                tabIndex: 0,
-                                                renderButtonContents: q()
-                                            });
+                                            return (0, r.jsx)(
+                                                u.Z,
+                                                E(C({}, e), {
+                                                    active: n,
+                                                    className: y.emojiButton,
+                                                    tabIndex: 0,
+                                                    renderButtonContents: V()
+                                                })
+                                            );
                                         }
                                     })
                                 }),
-                                (0, l.jsx)(s.Kx8, {
+                                (0, r.jsx)(i.Kx8, {
                                     autosize: !0,
                                     value: Z,
-                                    maxLength: g.s0,
+                                    maxLength: x.s0,
                                     rows: 1,
                                     showRemainingCharacterCount: !1,
-                                    placeholder: C.intl.string(C.t['xod36+']),
+                                    placeholder: O.NW.string(O.t['xod36+']),
                                     onChange: (e) => {
-                                        P(e);
+                                        z(e);
                                     },
                                     onKeyDown: (e) => {
-                                        'Enter' === e.key && F();
+                                        'Enter' === e.key && G();
                                     },
-                                    className: I.input,
-                                    inputRef: H
+                                    className: y.input,
+                                    inputRef: F
                                 }),
-                                (Z.length > 0 || null != z) &&
-                                    (0, l.jsx)('div', {
-                                        className: I.clearButtonWrapper,
-                                        children: (0, l.jsx)(s.zxk, {
+                                (Z.length > 0 || null != R) &&
+                                    (0, r.jsx)('div', {
+                                        className: y.clearButtonWrapper,
+                                        children: (0, r.jsx)(i.zxk, {
                                             focusProps: {
                                                 offset: {
                                                     top: 8,
@@ -205,86 +250,88 @@ function O(e) {
                                                     right: -2
                                                 }
                                             },
-                                            className: I.clearButton,
+                                            className: y.clearButton,
                                             onClick: () => {
-                                                P(''), R(null);
+                                                z(''), L(null);
                                             },
-                                            look: s.zxk.Looks.BLANK,
-                                            size: s.zxk.Sizes.NONE,
-                                            children: (0, l.jsx)(s.k$p, {
+                                            look: i.zxk.Looks.BLANK,
+                                            size: i.zxk.Sizes.NONE,
+                                            children: (0, r.jsx)(i.k$p, {
                                                 size: 'md',
                                                 color: 'currentColor',
-                                                className: I.clearIcon
+                                                className: y.clearIcon
                                             })
                                         })
                                     })
                             ]
                         })
                     }),
-                    w &&
-                        (0, l.jsxs)(s.hjN, {
-                            className: I.formGroup,
-                            title: C.intl.string(C.t.zOdg0N),
+                    B &&
+                        (0, r.jsxs)(i.hjN, {
+                            className: y.formGroup,
+                            title: O.NW.string(O.t.zOdg0N),
                             children: [
-                                (0, l.jsx)(s.q4e, {
-                                    maxVisibleItems: g.Df.length,
-                                    value: L,
-                                    options: g.Df.map((e) => ({
-                                        ...e,
-                                        key: e.value,
-                                        value: e.value,
-                                        label: e.label()
-                                    })),
-                                    onChange: M,
+                                (0, r.jsx)(i.q4e, {
+                                    maxVisibleItems: x.Df.length,
+                                    value: M,
+                                    options: x.Df.map((e) =>
+                                        E(C({}, e), {
+                                            key: e.value,
+                                            value: e.value,
+                                            label: e.label()
+                                        })
+                                    ),
+                                    onChange: U,
                                     renderOptionLabel: (e) => {
                                         let { value: t, label: n } = e;
-                                        return (0, l.jsx)(T, {
+                                        return (0, r.jsx)(I, {
                                             value: t,
                                             label: n
                                         });
                                     },
-                                    renderOptionValue: E
+                                    renderOptionValue: w
                                 }),
-                                L === s.Skl.INVISIBLE &&
-                                    (0, l.jsx)('div', {
-                                        className: I.invisibleStatusNotice,
-                                        children: (0, l.jsx)(s.Text, {
+                                M === i.Skl.INVISIBLE &&
+                                    (0, r.jsx)('div', {
+                                        className: y.invisibleStatusNotice,
+                                        children: (0, r.jsx)(i.Text, {
                                             variant: 'text-sm/medium',
                                             color: 'text-muted',
-                                            children: C.intl.string(C.t.IUwOOD)
+                                            children: O.NW.string(O.t.IUwOOD)
                                         })
                                     })
                             ]
                         })
                 ]
             }),
-            (0, l.jsx)(s.mzw, {
-                children: (0, l.jsxs)('div', {
-                    className: I.footer,
+            (0, r.jsx)(i.mzw, {
+                children: (0, r.jsxs)('div', {
+                    className: y.footer,
                     children: [
-                        (0, l.jsx)('div', {
-                            className: I.clearAfterSelectContainer,
-                            children: (0, l.jsx)(s.q4e, {
-                                maxVisibleItems: g.Q9.length,
-                                value: U,
-                                options: g.Q9.map((e) => ({
-                                    ...e,
-                                    key: e.value,
-                                    value: e.value,
-                                    label: e.label()
-                                })),
-                                onChange: Y,
-                                look: s.qQH.CUSTOM,
+                        (0, r.jsx)('div', {
+                            className: y.clearAfterSelectContainer,
+                            children: (0, r.jsx)(i.q4e, {
+                                maxVisibleItems: x.Q9.length,
+                                value: Y,
+                                options: x.Q9.map((e) =>
+                                    E(C({}, e), {
+                                        key: e.value,
+                                        value: e.value,
+                                        label: e.label()
+                                    })
+                                ),
+                                onChange: H,
+                                look: i.qQH.CUSTOM,
                                 popoutWidth: 200,
                                 popoutPosition: 'right'
                             })
                         }),
-                        (0, l.jsx)(s.zxk, {
+                        (0, r.jsx)(i.zxk, {
                             type: 'submit',
-                            size: s.zxk.Sizes.MEDIUM,
-                            color: s.zxk.Colors.BRAND,
-                            onClick: F,
-                            children: C.intl.string(C.t.R3BPHx)
+                            size: i.zxk.Sizes.MEDIUM,
+                            color: i.zxk.Colors.BRAND,
+                            onClick: G,
+                            children: O.NW.string(O.t.R3BPHx)
                         })
                     ]
                 })

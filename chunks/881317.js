@@ -1,126 +1,173 @@
-n.d(t, { Z: () => C }), n(47120);
-var i = n(200651),
-    r = n(192379),
-    a = n(990547),
-    l = n(442837),
-    o = n(481060),
+n.d(t, { Z: () => O }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    o = n(990547),
+    a = n(442837),
+    l = n(481060),
     s = n(893776),
     c = n(232567),
-    d = n(388905),
-    u = n(353926),
+    u = n(388905),
+    d = n(353926),
     h = n(82554),
-    _ = n(726521),
-    m = n(185625),
+    p = n(726521),
+    _ = n(185625),
     g = n(314897),
-    p = n(63063),
-    f = n(981631),
-    x = n(388032),
-    E = n(637213),
-    I = n(483938);
-l.ZP.initialize();
-let v = (e) => {
-        let { title: t, menuType: r } = e,
-            l = () => {
-                (0, o.ZDy)(async () => {
+    f = n(63063),
+    m = n(981631),
+    b = n(388032),
+    N = n(45738),
+    x = n(455812);
+function v(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function E(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+a.ZP.initialize();
+let I = (e) => {
+        let { title: t, menuType: i } = e,
+            a = () => {
+                (0, l.ZDy)(async () => {
                     let { default: e } = await n.e('93288').then(n.bind(n, 396410));
                     return (t) =>
-                        (0, i.jsx)(e, {
-                            ...t,
-                            onSuccess: s,
-                            headerText: x.intl.string(x.t.ZLRYGR),
-                            confirmButtonText: x.intl.string(x.t.PDTjLC),
-                            confirmButtonColor: o.zxk.Colors.BRAND,
-                            impressionName: a.ImpressionNames.URF_ENTER_EMAIL
-                        });
+                        (0, r.jsx)(
+                            e,
+                            E(v({}, t), {
+                                onSuccess: s,
+                                headerText: b.NW.string(b.t.ZLRYGR),
+                                confirmButtonText: b.NW.string(b.t.PDTjLC),
+                                confirmButtonColor: l.zxk.Colors.BRAND,
+                                impressionName: o.ImpressionNames.URF_ENTER_EMAIL
+                            })
+                        );
                 });
             },
             s = (e) => {
                 let t = async () => {
-                        await (0, m.yL)(r, e);
+                        await (0, _.yL)(i, e);
                     },
-                    l = async (t) => await (0, m.RV)(r, e, t),
+                    a = async (t) => await (0, _.RV)(i, e, t),
                     s = (e) => {
                         let t = null == e ? void 0 : e.token;
-                        r === h.BM.MESSAGE ? (0, _.eE)(t) : r === h.BM.USER && (0, _.JM)(t);
+                        i === h.BM.MESSAGE ? (0, p.eE)(t) : i === h.BM.USER && (0, p.JM)(t);
                     };
                 t(),
-                    (0, o.ZDy)(async () => {
+                    (0, l.ZDy)(async () => {
                         let { default: e } = await n.e('94566').then(n.bind(n, 965072));
                         return (n) =>
-                            (0, i.jsx)(e, {
-                                ...n,
-                                onFormSubmit: l,
-                                onResend: t,
-                                onSuccess: s,
-                                headerText: x.intl.string(x.t.H3Q7U1),
-                                confirmButtonText: x.intl.string(x.t['13ofGh']),
-                                confirmButtonColor: o.zxk.Colors.BRAND,
-                                impressionName: a.ImpressionNames.URF_CONFIRM_EMAIL_CODE
-                            });
+                            (0, r.jsx)(
+                                e,
+                                E(v({}, n), {
+                                    onFormSubmit: a,
+                                    onResend: t,
+                                    onSuccess: s,
+                                    headerText: b.NW.string(b.t.H3Q7U1),
+                                    confirmButtonText: b.NW.string(b.t['13ofGh']),
+                                    confirmButtonColor: l.zxk.Colors.BRAND,
+                                    impressionName: o.ImpressionNames.URF_CONFIRM_EMAIL_CODE
+                                })
+                            );
                     });
             };
-        return (0, i.jsx)('div', {
-            className: E.buttonColumn,
-            children: (0, i.jsx)(o.zxk, {
-                className: I.__invalid_reportButton,
+        return (0, r.jsx)('div', {
+            className: N.buttonColumn,
+            children: (0, r.jsx)(l.zxk, {
+                className: x.__invalid_reportButton,
                 fullWidth: !0,
-                color: o.zxk.Colors.BRAND,
-                onClick: () => l(),
+                color: l.zxk.Colors.BRAND,
+                onClick: () => a(),
                 children: t
             })
         });
     },
-    C = () => {
-        let [e, t] = r.useState(!0),
-            [n, a] = r.useState(!1),
-            _ = (0, l.e7)([g.default], () => g.default.isAuthenticated()),
-            C = (0, l.e7)([u.Z], () => u.Z.hasLoadedExperiments),
-            N = () => {
-                (0, m.qJ)()
+    O = () => {
+        let [e, t] = i.useState(!0),
+            [n, o] = i.useState(!1),
+            p = (0, a.e7)([g.default], () => g.default.isAuthenticated()),
+            v = (0, a.e7)([d.Z], () => d.Z.hasLoadedExperiments),
+            E = () => {
+                (0, _.qJ)()
                     .then(() => {
-                        t(!1), a(!0);
+                        t(!1), o(!0);
                     })
                     .catch(() => {
-                        t(!1), a(!1);
+                        t(!1), o(!1);
                     });
             };
         return (
-            r.useEffect(() => {
-                _
+            i.useEffect(() => {
+                p
                     ? (t(!0),
                       c
                           .k({ withAnalyticsToken: !0 })
-                          .then(() => N())
+                          .then(() => E())
                           .catch(() => t(!1)))
-                    : N();
-            }, [_]),
-            r.useEffect(() => {
+                    : E();
+            }, [p]),
+            i.useEffect(() => {
                 (async () => {
-                    C || (await s.Z.getLocationMetadata(), s.Z.getExperiments());
+                    v || (await s.Z.getLocationMetadata(), s.Z.getExperiments());
                 })();
-            }, [C]),
-            e || !C
-                ? (0, i.jsx)(d.ZP, { children: (0, i.jsx)(o.$jN, {}) })
+            }, [v]),
+            e || !v
+                ? (0, r.jsx)(u.ZP, { children: (0, r.jsx)(l.$jN, {}) })
                 : n &&
-                  (0, i.jsxs)(d.ZP, {
+                  (0, r.jsxs)(u.ZP, {
                       children: [
-                          (0, i.jsx)(d.Dx, {
-                              className: I.marginBottom8,
-                              children: x.intl.string(x.t.Z11w19)
+                          (0, r.jsx)(u.Dx, {
+                              className: x.marginBottom8,
+                              children: b.NW.string(b.t.Z11w19)
                           }),
-                          (0, i.jsx)(d.DK, {
-                              className: I.marginBottom8,
-                              children: x.intl.format(x.t['532l+v'], { supportURL: p.Z.getArticleURL(f.BhN.COPYRIGHT_AND_IP_POLICY) })
+                          (0, r.jsx)(u.DK, {
+                              className: x.marginBottom8,
+                              children: b.NW.format(b.t['532l+v'], { supportURL: f.Z.getArticleURL(m.BhN.COPYRIGHT_AND_IP_POLICY) })
                           }),
-                          (0, i.jsxs)('div', {
-                              className: E.container,
+                          (0, r.jsxs)('div', {
+                              className: N.container,
                               children: [
-                                  (0, i.jsx)(v, {
-                                      title: x.intl.string(x.t.fuqnBA),
+                                  (0, r.jsx)(I, {
+                                      title: b.NW.string(b.t.fuqnBA),
                                       menuType: h.BM.MESSAGE
                                   }),
-                                  (0, i.jsx)(v, {
-                                      title: x.intl.string(x.t.F4jrRU),
+                                  (0, r.jsx)(I, {
+                                      title: b.NW.string(b.t.F4jrRU),
                                       menuType: h.BM.USER
                                   })
                               ]

@@ -1,33 +1,35 @@
 n.d(t, {
     Q1: () => l,
-    hV: () => u,
-    ky: () => o
-});
-var i = n(895924),
-    r = n(809090),
-    a = n(944877),
-    s = n(689079);
-let o = (e) => (e.type === i.Qi.BUILT_IN ? a.Z : r.Z);
+    hV: () => c,
+    ky: () => s
+}),
+    n(301563),
+    n(878331);
+var r = n(895924),
+    i = n(809090),
+    o = n(944877),
+    a = n(689079);
+let s = (e) => (e.type === r.Qi.BUILT_IN ? o.Z : i.Z);
 function l(e) {
     return ''.concat(e / 16, 'rem');
 }
-function u(e, t) {
+function c(e, t) {
     let n = t,
-        i = !1,
-        r = t.indexOf(':');
-    if (r >= 0) {
-        let e = t.lastIndexOf(' ', r);
-        e >= 0 ? ((t = t.substring(0, e)), (i = !0)) : (t = t.substring(0, r));
+        r = !1,
+        i = t.indexOf(':');
+    if (i >= 0) {
+        let e = t.lastIndexOf(' ', i);
+        e >= 0 ? ((t = t.substring(0, e)), (r = !0)) : (t = t.substring(0, i));
     } else t = t.substring(0, t.length);
-    let a = t.split(' ', s.Vd + 1);
+    let o = t.split(' ', a.Vd + 1);
     return (
-        a.length > s.Vd && ((i = !0), a.pop()),
-        (t = a.join(' ')),
-        (n.length > t.length || t.endsWith(' ')) && ((i = !0), (t = t.trimEnd())),
+        o.length > a.Vd && ((r = !0), o.pop()),
+        (t = o.join(' ')),
+        (n.length > t.length || t.endsWith(' ')) && ((r = !0), (t = t.trimEnd())),
         {
             text: t,
-            parts: a,
-            hasSpaceTerminator: i
+            parts: o,
+            hasSpaceTerminator: r
         }
     );
 }

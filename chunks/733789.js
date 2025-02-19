@@ -1,19 +1,19 @@
-n.d(t, { Z: () => C }), n(47120);
-var i = n(200651),
-    l = n(192379),
-    r = n(120356),
-    a = n.n(r),
-    s = n(481060),
-    o = n(100527),
-    d = n(707409),
-    c = n(184301),
-    u = n(347475),
-    h = n(237583),
-    m = n(51144),
-    p = n(981631),
-    g = n(388032),
-    _ = n(18142);
-function f(e, t, n) {
+n.d(t, { Z: () => v }), n(266796), n(47120);
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    o = n.n(l),
+    a = n(481060),
+    s = n(100527),
+    c = n(707409),
+    u = n(184301),
+    d = n(347475),
+    p = n(237583),
+    h = n(51144),
+    g = n(981631),
+    f = n(388032),
+    m = n(400845);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,91 +26,122 @@ function f(e, t, n) {
         e
     );
 }
-let E = {
-    [p.AzA.NOW_PLAYING]: {
+function _(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                b(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function E(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let O = {
+    [g.AzA.NOW_PLAYING]: {
         single: (e, t) =>
-            g.intl.format(g.t.NEckzc, {
+            f.NW.format(f.t.NEckzc, {
                 user1: e.username,
                 user1Hook: () => t(e)
             }),
         double: (e, t, n) =>
-            g.intl.format(g.t['6uWulZ'], {
+            f.NW.format(f.t['6uWulZ'], {
                 user1: e.username,
                 user1Hook: () => n(e),
                 user2: t.username,
                 user2Hook: () => n(t)
             }),
-        other: (e) => g.intl.format(g.t['8fMgRU'], { count: e })
+        other: (e) => f.NW.format(f.t['8fMgRU'], { count: e })
     },
-    [p.AzA.RECENTLY_PLAYED]: {
+    [g.AzA.RECENTLY_PLAYED]: {
         single: (e, t) =>
-            g.intl.format(g.t['nB/JND'], {
+            f.NW.format(f.t['nB/JND'], {
                 user1: e.username,
                 user1Hook: () => t(e)
             }),
         double: (e, t, n) =>
-            g.intl.format(g.t.AZCcHR, {
+            f.NW.format(f.t.AZCcHR, {
                 user1: e.username,
                 user1Hook: () => n(e),
                 user2: t.username,
                 user2Hook: () => n(t)
             }),
-        other: (e) => g.intl.format(g.t.yNuaTU, { count: e })
+        other: (e) => f.NW.format(f.t.yNuaTU, { count: e })
     },
-    [p.AzA.EVER_PLAYED]: {
+    [g.AzA.EVER_PLAYED]: {
         single: (e, t) =>
-            g.intl.format(g.t.Fecf3N, {
+            f.NW.format(f.t.Fecf3N, {
                 user1: e.username,
                 user1Hook: () => t(e)
             }),
         double: (e, t, n) =>
-            g.intl.format(g.t['0LiGbG'], {
+            f.NW.format(f.t['0LiGbG'], {
                 user1: e.username,
                 user1Hook: () => n(e),
                 user2: t.username,
                 user2Hook: () => n(t)
             }),
-        other: (e) => g.intl.format(g.t.Yx1rjY, { count: e })
+        other: (e) => f.NW.format(f.t.Yx1rjY, { count: e })
     }
 };
-class I extends l.PureComponent {
+class N extends i.PureComponent {
     renderDescription(e, t) {
-        let n = E[e];
+        let n = O[e];
         return 1 === t.length ? n.single(t[0].user, (e) => this.renderActivityDiscordTag(e)) : 2 === t.length ? n.double(t[0].user, t[1].user, (e) => this.renderActivityDiscordTag(e)) : n.other(t.length);
     }
     renderActivityDiscordTag(e) {
-        return (0, i.jsx)(
-            s.yRy,
+        return (0, r.jsx)(
+            a.yRy,
             {
-                preload: () => (0, c.Z)(e),
+                preload: () => (0, u.Z)(e),
                 renderPopout: (t) =>
-                    (0, i.jsx)(u.Z, {
-                        ...t,
-                        userId: e.id,
-                        newAnalyticsLocations: [o.Z.USERNAME]
-                    }),
+                    (0, r.jsx)(
+                        d.Z,
+                        E(_({}, t), {
+                            userId: e.id,
+                            newAnalyticsLocations: [s.Z.USERNAME]
+                        })
+                    ),
                 position: 'right',
-                children: (t) =>
-                    (0, i.jsx)('span', {
-                        className: _.username,
-                        ...t,
-                        children: e.username
-                    })
+                children: (t) => (0, r.jsx)('span', E(_({ className: m.username }, t), { children: e.username }))
             },
             e.id
         );
     }
     render() {
         let { reason: e, className: t } = this.props,
-            { type: n, userInfo: l } = e;
-        return 0 === l.length
+            { type: n, userInfo: i } = e;
+        return 0 === i.length
             ? null
-            : (0, i.jsxs)('div', {
-                  className: a()(_.recommendationActivity, t),
+            : (0, r.jsxs)('div', {
+                  className: o()(m.recommendationActivity, t),
                   children: [
-                      (0, i.jsx)(h.Z, {
-                          className: _.players,
-                          users: l.map((e) => {
+                      (0, r.jsx)(p.Z, {
+                          className: m.players,
+                          users: i.map((e) => {
                               let { user: t } = e;
                               return t;
                           }),
@@ -118,68 +149,75 @@ class I extends l.PureComponent {
                           max: 4,
                           renderMoreUsers: this.renderPlayerOverflow
                       }),
-                      (0, i.jsx)('div', {
-                          className: _.description,
-                          children: this.renderDescription(n, l)
+                      (0, r.jsx)('div', {
+                          className: m.description,
+                          children: this.renderDescription(n, i)
                       })
                   ]
               });
     }
     constructor(...e) {
         super(...e),
-            f(this, 'renderUserTooltip', (e, t, n) =>
-                (0, i.jsxs)('div', {
-                    className: _.tooltip,
+            b(this, 'renderUserTooltip', (e, t, n) =>
+                (0, r.jsxs)('div', {
+                    className: m.tooltip,
                     children: [
-                        (0, i.jsx)('div', { children: m.ZP.getUserTag(e) }),
-                        (0, i.jsx)(d.ZP, {
-                            className: _.tooltipTimestamp,
+                        (0, r.jsx)('div', { children: h.ZP.getUserTag(e) }),
+                        (0, r.jsx)(c.ZP, {
+                            className: m.tooltipTimestamp,
                             start: t,
                             end: n,
-                            location: d.ZP.Locations.ACTIVITY_FEED
+                            location: c.ZP.Locations.ACTIVITY_FEED
                         })
                     ]
                 })
             ),
-            f(this, 'renderPlayer', (e, t, n, l) => {
+            b(this, 'renderPlayer', (e, t, n, i) => {
                 if (null == e) return null;
-                let r = this.props.reason.userInfo.find((t) => t.user === e);
-                return null == r
+                let l = this.props.reason.userInfo.find((t) => t.user === e);
+                return null == l
                     ? null
-                    : (0, i.jsx)(
-                          s.yRy,
+                    : (0, r.jsx)(
+                          a.yRy,
                           {
-                              preload: () => (0, c.Z)(e),
+                              preload: () => (0, u.Z)(e),
                               renderPopout: (t) =>
-                                  (0, i.jsx)(u.Z, {
-                                      ...t,
-                                      userId: e.id,
-                                      newAnalyticsLocations: [o.Z.AVATAR]
-                                  }),
+                                  (0, r.jsx)(
+                                      d.Z,
+                                      E(_({}, t), {
+                                          userId: e.id,
+                                          newAnalyticsLocations: [s.Z.AVATAR]
+                                      })
+                                  ),
                               position: 'right',
                               children: (t) =>
-                                  (0, i.jsx)(s.ua7, {
-                                      text: this.renderUserTooltip(e, r.startTime, r.endTime),
-                                      'aria-label': (0, m.W5)(e, { decoration: 'never' }),
+                                  (0, r.jsx)(a.ua7, {
+                                      text: this.renderUserTooltip(e, l.startTime, l.endTime),
+                                      'aria-label': (0, h.W5)(e, { decoration: 'never' }),
                                       children: (n) =>
-                                          (0, i.jsx)(s.qEK, {
-                                              className: a()(_.playerAvatar, { [_.avatarMasked]: !l }),
-                                              src: e.getAvatarURL(void 0, 32),
-                                              'aria-label': e.username,
-                                              size: s.EFr.SIZE_32,
-                                              ...n,
-                                              ...t
-                                          })
+                                          (0, r.jsx)(
+                                              a.qEK,
+                                              _(
+                                                  {
+                                                      className: o()(m.playerAvatar, { [m.avatarMasked]: !i }),
+                                                      src: e.getAvatarURL(void 0, 32),
+                                                      'aria-label': e.username,
+                                                      size: a.EFr.SIZE_32
+                                                  },
+                                                  n,
+                                                  t
+                                              )
+                                          )
                                   })
                           },
                           e.id
                       );
             }),
-            f(this, 'renderPlayerOverflow', (e, t, n) =>
-                (0, i.jsx)(
+            b(this, 'renderPlayerOverflow', (e, t, n) =>
+                (0, r.jsx)(
                     'div',
                     {
-                        className: _.playerOverflow,
+                        className: m.playerOverflow,
                         children: e
                     },
                     n
@@ -187,4 +225,4 @@ class I extends l.PureComponent {
             );
     }
 }
-let C = I;
+let v = N;

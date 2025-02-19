@@ -1,12 +1,12 @@
 n.d(t, {
-    C: () => g,
-    Z: () => l
+    C: () => b,
+    Z: () => d
 });
-var i,
-    r = n(442837),
-    a = n(570140),
-    s = n(865427);
-function o(e, t, n) {
+var r,
+    i = n(442837),
+    o = n(570140),
+    a = n(865427);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,87 +19,122 @@ function o(e, t, n) {
         e
     );
 }
-var l = (function (e) {
+function l(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                s(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function c(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function u(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : c(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+var d = (function (e) {
     return (e[(e.NotResolved = 0)] = 'NotResolved'), (e[(e.Resolving = 1)] = 'Resolving'), (e[(e.Resolved = 2)] = 'Resolved'), (e[(e.Invalid = 3)] = 'Invalid'), e;
 })({});
-let u = 0,
-    c = null,
-    d = {};
-function f() {
-    0 === u &&
-        ((u = 1),
-        (0, s.Ce)().then((e) => {
-            a.Z.dispatch({
+let f = 0,
+    p = null,
+    _ = {};
+function h() {
+    0 === f &&
+        ((f = 1),
+        (0, a.Ce)().then((e) => {
+            o.Z.dispatch({
                 type: 'CURRENT_BUILD_OVERRIDE_RESOLVED',
                 overrides: e
             });
         }));
 }
-function _(e) {
+function m(e) {
     let { overrides: t } = e;
-    (u = 2), (c = t);
+    (f = 2), (p = t);
 }
-function p(e) {
-    if (e in d) return;
-    let t = (0, s.r4)(e);
+function g(e) {
+    if (e in _) return;
+    let t = (0, a.r4)(e);
     if (null == t) {
-        d = {
-            ...d,
+        _ = u(l({}, _), {
             [e]: {
                 url: e,
                 state: 3
             }
-        };
+        });
         return;
     }
-    (d = {
-        ...d,
+    (_ = u(l({}, _), {
         [e]: {
             url: e,
             validatedURL: t.url,
             payload: String(t.payload),
             state: 1
         }
-    }),
-        (0, s._I)(t.url).then((t) => {
-            a.Z.dispatch({
+    })),
+        (0, a._I)(t.url).then((t) => {
+            o.Z.dispatch({
                 type: 'BUILD_OVERRIDE_RESOLVED',
                 url: e,
                 override: t
             });
         });
 }
-function h(e) {
+function E(e) {
     let { url: t, override: n } = e,
-        i = null == n ? 3 : 2;
-    d = {
-        ...d,
-        [t]: {
-            ...d[t],
-            state: i,
+        r = null == n ? 3 : 2;
+    _ = u(l({}, _), {
+        [t]: u(l({}, _[t]), {
+            state: r,
             override: n
-        }
-    };
+        })
+    });
 }
-class m extends (i = r.ZP.Store) {
+class v extends (r = i.ZP.Store) {
     getCurrentBuildOverride() {
         return (
-            f(),
+            h(),
             {
-                state: u,
-                overrides: c
+                state: f,
+                overrides: p
             }
         );
     }
     getBuildOverride(e) {
-        return p(e), d[e];
+        return g(e), _[e];
     }
     getBuildOverrides() {
-        return d;
+        return _;
     }
 }
-o(m, 'displayName', 'BuildOverrideStore');
-let g = new m(a.Z, {
-    BUILD_OVERRIDE_RESOLVED: h,
-    CURRENT_BUILD_OVERRIDE_RESOLVED: _
+s(v, 'displayName', 'BuildOverrideStore');
+let b = new v(o.Z, {
+    BUILD_OVERRIDE_RESOLVED: E,
+    CURRENT_BUILD_OVERRIDE_RESOLVED: m
 });

@@ -1,40 +1,78 @@
 n.d(t, {
-    KW: () => m,
-    dO: () => h,
-    gQ: () => p
+    KW: () => h,
+    dO: () => p,
+    gQ: () => g
 });
-var i = n(392711),
-    l = n.n(i),
-    r = n(317381),
-    a = n(16609),
-    s = n(594174),
-    o = n(823379),
-    d = n(5192),
-    c = n(863141),
-    u = n(186901);
-function h() {
-    let e = r.ZP.getCurrentEmbeddedActivity();
+var r = n(392711),
+    i = n.n(r),
+    l = n(317381),
+    o = n(16609),
+    a = n(594174),
+    s = n(823379),
+    c = n(5192),
+    u = n(863141),
+    d = n(186901);
+function p() {
+    let e = l.ZP.getCurrentEmbeddedActivity();
     if (null == e) return { participants: [] };
-    let t = (0, a.jS)(e.location),
-        n = (0, a.pY)(e.location);
+    let t = (0, o.jS)(e.location),
+        n = (0, o.pY)(e.location);
     return {
         participants: Array.from(e.userIds, (e) => {
-            let i = s.default.getUser(e);
-            if (null == i) return;
-            let l = (0, d.y)(t, n, i);
-            return {
-                ...(0, c.Z)(i),
-                nickname: null != l ? l : void 0
-            };
-        }).filter(o.lm)
+            var r, i;
+            let l = a.default.getUser(e);
+            if (null == l) return;
+            let o = (0, c.y)(t, n, l);
+            return (
+                (r = (function (e) {
+                    for (var t = 1; t < arguments.length; t++) {
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            r = Object.keys(n);
+                        'function' == typeof Object.getOwnPropertySymbols &&
+                            (r = r.concat(
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                })
+                            )),
+                            r.forEach(function (t) {
+                                var r;
+                                (r = n[t]),
+                                    t in e
+                                        ? Object.defineProperty(e, t, {
+                                              value: r,
+                                              enumerable: !0,
+                                              configurable: !0,
+                                              writable: !0
+                                          })
+                                        : (e[t] = r);
+                            });
+                    }
+                    return e;
+                })({}, (0, u.Z)(l))),
+                (i = i = { nickname: null != o ? o : void 0 }),
+                Object.getOwnPropertyDescriptors
+                    ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
+                    : (function (e, t) {
+                          var n = Object.keys(e);
+                          if (Object.getOwnPropertySymbols) {
+                              var r = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, r);
+                          }
+                          return n;
+                      })(Object(i)).forEach(function (e) {
+                          Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
+                      }),
+                r
+            );
+        }).filter(s.lm)
     };
 }
-let m = { [u.Gp.ANY]: [u.wE] },
-    p = {
-        scope: m,
+let h = { [d.Gp.ANY]: [d.wE] },
+    g = {
+        scope: h,
         handler: () => (e) => {
             let { prevState: t, dispatch: n } = e,
-                i = h();
-            return l().isEqual(i, t) || n(i), i;
+                r = p();
+            return i().isEqual(r, t) || n(r), r;
         }
     };

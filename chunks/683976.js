@@ -1,19 +1,19 @@
 n.d(t, {
-    F: () => p,
-    n: () => g
+    F: () => v,
+    n: () => O
 }),
     n(47120);
-var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(91192),
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(91192),
     l = n(924826),
-    u = n(481060),
-    c = n(600164),
+    c = n(481060),
+    u = n(600164),
     d = n(313201),
-    f = n(254099);
-function _(e, t, n) {
+    f = n(554789);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,141 +26,224 @@ function _(e, t, n) {
         e
     );
 }
-class p extends r.PureComponent {
+function _(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                p(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function h(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function m(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : h(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function g(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = E(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function E(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+class v extends i.PureComponent {
     render() {
-        let { label: e, value: t, renderValue: n, className: r } = this.props;
-        return (0, i.jsxs)(c.Z, {
-            className: s()(f.quickSelect, r),
-            align: c.Z.Align.CENTER,
+        let { label: e, value: t, renderValue: n, className: i } = this.props;
+        return (0, r.jsxs)(u.Z, {
+            className: a()(f.quickSelect, i),
+            align: u.Z.Align.CENTER,
             children: [
-                (0, i.jsx)('div', {
+                (0, r.jsx)('div', {
                     className: f.quickSelectLabel,
                     children: e
                 }),
-                (0, i.jsxs)(c.Z, {
-                    align: c.Z.Align.CENTER,
+                (0, r.jsxs)(u.Z, {
+                    align: u.Z.Align.CENTER,
                     className: f.quickSelectClick,
                     children: [
-                        (0, i.jsx)('div', {
+                        (0, r.jsx)('div', {
                             className: f.quickSelectValue,
                             children: null != n ? n(t) : t.label
                         }),
-                        (0, i.jsx)('div', { className: f.quickSelectArrow })
+                        (0, r.jsx)('div', { className: f.quickSelectArrow })
                     ]
                 })
             ]
         });
     }
 }
-class h extends r.PureComponent {
+class b extends i.PureComponent {
     render() {
         let { selected: e, renderOption: t, option: n } = this.props;
-        return (0, i.jsx)(o.mh, {
+        return (0, r.jsx)(s.mh, {
             id: n.key,
-            children: (r) =>
-                (0, i.jsx)(u.P3F, {
-                    focusProps: { enabled: !1 },
-                    className: s()(f.quickSelectPopoutOption, { selected: e }),
-                    onClick: this.handleClick,
-                    ...r,
-                    role: 'option',
-                    children: t(n, e)
-                })
+            children: (i) =>
+                (0, r.jsx)(
+                    c.P3F,
+                    m(
+                        _(
+                            {
+                                focusProps: { enabled: !1 },
+                                className: a()(f.quickSelectPopoutOption, { selected: e }),
+                                onClick: this.handleClick
+                            },
+                            i
+                        ),
+                        {
+                            role: 'option',
+                            children: t(n, e)
+                        }
+                    )
+                )
         });
     }
     constructor(...e) {
         super(...e),
-            _(this, 'handleClick', () => {
+            p(this, 'handleClick', () => {
                 let { option: e, onChange: t } = this.props;
                 null == t || t(e);
             });
     }
 }
-function m(e) {
-    let { options: t, value: n, scroller: r, renderOption: a, onChange: c, className: _ } = e,
-        p = s()(f.quickSelectPopout, _, { [f.quickSelectPopoutScroll]: r }),
-        m = t.map((e) => {
+function y(e) {
+    let { options: t, value: n, scroller: i, renderOption: o, onChange: u, className: p } = e,
+        h = a()(f.quickSelectPopout, p, { [f.quickSelectPopoutScroll]: i }),
+        E = t.map((e) => {
             let t = null != n && e.value === n.value,
-                r = t ? void 0 : c;
-            return (0, i.jsx)(
-                h,
+                i = t ? void 0 : u;
+            return (0, r.jsx)(
+                b,
                 {
                     className: f.quickSelectPopoutOption,
-                    renderOption: a,
+                    renderOption: o,
                     option: e,
-                    onChange: r,
+                    onChange: i,
                     selected: t
                 },
                 e.key || e.value
             );
         }),
-        g = (0, d.Dt)(),
-        E = (0, l.ZP)({
-            id: g,
+        v = (0, d.Dt)(),
+        y = (0, l.ZP)({
+            id: v,
             isEnabled: !0,
             wrap: !0,
             async scrollToStart() {},
             async scrollToEnd() {}
         }),
-        { ref: v, ...y } = E.containerProps;
+        O = y.containerProps,
+        { ref: S } = O,
+        I = g(O, ['ref']);
     return (
-        (0, u.Tbt)(v),
-        (0, i.jsx)(o.bG, {
-            navigator: E,
-            children: (0, i.jsx)('div', {
-                ref: v,
-                className: p,
-                ...y,
-                role: 'listbox',
-                children: r
-                    ? (0, i.jsx)(u.Ttm, {
-                          className: f.quickSelectScroller,
-                          children: m
-                      })
-                    : m
-            })
+        (0, c.Tbt)(S),
+        (0, r.jsx)(s.bG, {
+            navigator: y,
+            children: (0, r.jsx)(
+                'div',
+                m(
+                    _(
+                        {
+                            ref: S,
+                            className: h
+                        },
+                        I
+                    ),
+                    {
+                        role: 'listbox',
+                        children: i
+                            ? (0, r.jsx)(c.Ttm, {
+                                  className: f.quickSelectScroller,
+                                  children: E
+                              })
+                            : E
+                    }
+                )
+            )
         })
     );
 }
-class g extends r.PureComponent {
+class O extends i.PureComponent {
     render() {
-        let { label: e, value: t, renderValue: n, className: r, popoutProps: a } = this.props;
-        return (0, i.jsx)(u.yRy, {
-            ...a,
-            renderPopout: this.renderPopout,
-            children: (a, s) => {
-                let { isShown: o } = s;
-                return (0, i.jsx)(u.P3F, {
-                    ...a,
-                    className: r,
-                    'aria-haspopup': 'listbox',
-                    'aria-expanded': o,
-                    children: (0, i.jsx)(p, {
-                        label: e,
-                        value: t,
-                        renderValue: n
-                    })
-                });
-            }
-        });
+        let { label: e, value: t, renderValue: n, className: i, popoutProps: o } = this.props;
+        return (0, r.jsx)(
+            c.yRy,
+            m(_({}, o), {
+                renderPopout: this.renderPopout,
+                children: (o, a) => {
+                    let { isShown: s } = a;
+                    return (0, r.jsx)(
+                        c.P3F,
+                        m(_({}, o), {
+                            className: i,
+                            'aria-haspopup': 'listbox',
+                            'aria-expanded': s,
+                            children: (0, r.jsx)(v, {
+                                label: e,
+                                value: t,
+                                renderValue: n
+                            })
+                        })
+                    );
+                }
+            })
+        );
     }
     constructor(...e) {
         super(...e),
-            _(this, 'renderPopout', (e) => {
+            p(this, 'renderPopout', (e) => {
                 let { closePopout: t } = e,
-                    { options: n, value: r, renderOption: a, popoutClassName: s, scroller: o } = this.props;
-                return (0, i.jsx)(m, {
-                    scroller: !!o,
-                    className: s,
+                    { options: n, value: i, renderOption: o, popoutClassName: a, scroller: s } = this.props;
+                return (0, r.jsx)(y, {
+                    scroller: !!s,
+                    className: a,
                     options: n,
-                    value: r,
-                    renderOption: a,
+                    value: i,
+                    renderOption: o,
                     onChange: (e) => {
                         this.handleChange(e), t();
                     }
                 });
             }),
-            _(this, 'handleChange', (e) => {
+            p(this, 'handleChange', (e) => {
                 let { onChange: t } = this.props;
                 null == t || t(e);
             });

@@ -1,98 +1,150 @@
-t.d(e, { Z: () => g }), t(47120);
-var n = t(200651),
-    a = t(192379),
-    l = t(120356),
-    r = t.n(l),
-    i = t(481060),
-    o = t(813197),
-    s = t(388032),
-    d = t(173196);
-let c = 'custom-image',
-    u = a.forwardRef(function (A, e) {
-        let { selectedImageName: t, onChange: a, disabled: l = !1, name: o, alt: s, data: c } = A,
-            u = o === t,
-            g = (0, i.xUy)({
-                isSelected: u,
+r.d(t, { Z: () => p }), r(47120);
+var A = r(200651),
+    n = r(192379),
+    o = r(120356),
+    a = r.n(o),
+    l = r(481060),
+    i = r(813197),
+    s = r(388032),
+    c = r(304447);
+function d(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var r = null != arguments[t] ? arguments[t] : {},
+            A = Object.keys(r);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (A = A.concat(
+                Object.getOwnPropertySymbols(r).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                })
+            )),
+            A.forEach(function (t) {
+                var A;
+                (A = r[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: A,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = A);
+            });
+    }
+    return e;
+}
+function u(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var r = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var A = Object.getOwnPropertySymbols(e);
+                      r.push.apply(r, A);
+                  }
+                  return r;
+              })(Object(t)).forEach(function (r) {
+                  Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
+              }),
+        e
+    );
+}
+let f = 'custom-image',
+    g = n.forwardRef(function (e, t) {
+        let { selectedImageName: r, onChange: n, disabled: o = !1, name: i, alt: s, data: f } = e,
+            g = i === r,
+            p = (0, l.xUy)({
+                isSelected: g,
                 label: s
             }),
-            m = l
+            m = o
                 ? void 0
                 : () => {
-                      a(c, o);
+                      n(f, i);
                   };
-        return (0, n.jsx)(i.P3F, {
-            ref: e,
-            className: r()(d.radioOption, {
-                [d.selected]: u,
-                [d.disabled]: l
-            }),
-            onClick: m,
-            'aria-disabled': l,
-            ...g,
-            children: (0, n.jsx)('img', {
-                src: c,
-                alt: s,
-                className: d.radioOptionImage
-            })
-        });
+        return (0, A.jsx)(
+            l.P3F,
+            u(
+                d(
+                    {
+                        ref: t,
+                        className: a()(c.radioOption, {
+                            [c.selected]: g,
+                            [c.disabled]: o
+                        }),
+                        onClick: m,
+                        'aria-disabled': o
+                    },
+                    p
+                ),
+                {
+                    children: (0, A.jsx)('img', {
+                        src: f,
+                        alt: s,
+                        className: c.radioOptionImage
+                    })
+                }
+            )
+        );
     });
-function g(A) {
-    let { presetImages: e, image: t, imageName: l, savedImageName: g, onChange: m, uploadButtonLabel: h = s.intl.string(s.t['MsUY/f']), radioGroupAriaLabel: f = s.intl.string(s.t['0Q0UJi']), disabled: C = !1 } = A,
-        p = l === c,
-        [q, v] = a.useState(p ? t : null),
-        [x, U] = a.useState(null),
-        b = a.useRef(null),
-        V = a.useRef(null);
-    a.useEffect(() => {
-        g !== c && (v(null), U(null));
-    }, [g]);
-    let j = null != x ? s.intl.formatToPlainString(s.t['Kw+5YW'], { filename: x }) : s.intl.string(s.t.SNPvSk),
-        N = (0, i.arW)({
+function p(e) {
+    let { presetImages: t, image: r, imageName: o, savedImageName: p, onChange: m, uploadButtonLabel: h = s.NW.string(s.t['MsUY/f']), radioGroupAriaLabel: b = s.NW.string(s.t['0Q0UJi']), disabled: v = !1 } = e,
+        C = o === f,
+        [q, x] = n.useState(C ? r : null),
+        [j, N] = n.useState(null),
+        O = n.useRef(null),
+        U = n.useRef(null);
+    n.useEffect(() => {
+        p !== f && (x(null), N(null));
+    }, [p]);
+    let P = null != j ? s.NW.formatToPlainString(s.t['Kw+5YW'], { filename: j }) : s.NW.string(s.t.SNPvSk),
+        V = (0, l.arW)({
             orientation: 'horizontal',
-            isDisabled: C
+            isDisabled: v
         }),
-        I = () => {
-            var A;
-            return null === (A = b.current) || void 0 === A ? void 0 : A.activateUploadDialogue();
+        y = () => {
+            var e;
+            return null === (e = O.current) || void 0 === e ? void 0 : e.activateUploadDialogue();
         },
-        T = () => {
-            l === c && m(e[0].data, e[0].name), v(null), U(null);
+        W = () => {
+            o === f && m(t[0].data, t[0].name), x(null), N(null);
         };
     return (
-        a.useEffect(() => {
-            if (p && null != x) {
-                var A, e;
-                null === (e = V.current) || void 0 === e || null === (A = e.ref) || void 0 === A || A.focus();
+        n.useEffect(() => {
+            if (C && null != j) {
+                var e, t;
+                null === (t = U.current) || void 0 === t || null === (e = t.ref) || void 0 === e || e.focus();
             }
-        }, [p, x]),
-        (0, n.jsxs)('div', {
-            className: d.imageSelectionContainer,
+        }, [C, j]),
+        (0, A.jsxs)('div', {
+            className: c.imageSelectionContainer,
             children: [
-                (0, n.jsx)(i.tEY, {
+                (0, A.jsx)(l.tEY, {
                     within: !0,
-                    children: (0, n.jsxs)('div', {
-                        className: r()(d.uploadButton, {
-                            [d.disabled]: C,
-                            [d.hidden]: null != q
+                    children: (0, A.jsxs)('div', {
+                        className: a()(c.uploadButton, {
+                            [c.disabled]: v,
+                            [c.hidden]: null != q
                         }),
-                        'aria-disabled': C,
+                        'aria-disabled': v,
                         children: [
-                            (0, n.jsx)(i.FmF, {
+                            (0, A.jsx)(l.FmF, {
                                 size: 'xs',
                                 color: 'currentColor',
                                 'aria-hidden': !0
                             }),
-                            (0, n.jsx)(i.Text, {
+                            (0, A.jsx)(l.Text, {
                                 variant: 'text-xxs/normal',
                                 color: 'text-muted',
                                 'aria-hidden': !0,
                                 children: h
                             }),
-                            (0, n.jsx)(o.ZP, {
-                                ref: b,
+                            (0, A.jsx)(i.ZP, {
+                                ref: O,
                                 tabIndex: 0,
-                                onChange: (A, e) => {
-                                    null != e && (U(e.name), v(A), m(A, c));
+                                onChange: (e, t) => {
+                                    null != t && (N(t.name), x(e), m(e, f));
                                 },
                                 'aria-label': h
                             })
@@ -100,72 +152,79 @@ function g(A) {
                     })
                 }),
                 null != q &&
-                    (0, n.jsxs)('div', {
-                        className: d.customImageActionContainer,
+                    (0, A.jsxs)('div', {
+                        className: c.customImageActionContainer,
                         children: [
-                            (0, n.jsx)(i.ua7, {
-                                text: s.intl.string(s.t.AQYXMD),
+                            (0, A.jsx)(l.ua7, {
+                                text: s.NW.string(s.t.AQYXMD),
                                 hideOnClick: !0,
-                                children: (A) =>
-                                    (0, n.jsx)(i.P3F, {
-                                        ...A,
-                                        className: d.customImageAction,
-                                        onClick: I,
-                                        'aria-label': s.intl.formatToPlainString(s.t.Qc9Lg4, { filename: x }),
-                                        children: (0, n.jsx)(i.vdY, {
-                                            size: 'xs',
-                                            color: 'currentColor',
-                                            className: d.editIcon
+                                children: (e) =>
+                                    (0, A.jsx)(
+                                        l.P3F,
+                                        u(d({}, e), {
+                                            className: c.customImageAction,
+                                            onClick: y,
+                                            'aria-label': s.NW.formatToPlainString(s.t.Qc9Lg4, { filename: j }),
+                                            children: (0, A.jsx)(l.vdY, {
+                                                size: 'xs',
+                                                color: 'currentColor',
+                                                className: c.editIcon
+                                            })
                                         })
-                                    })
+                                    )
                             }),
-                            (0, n.jsx)(i.ua7, {
-                                text: s.intl.string(s.t.WxqWU1),
+                            (0, A.jsx)(l.ua7, {
+                                text: s.NW.string(s.t.WxqWU1),
                                 hideOnClick: !0,
-                                children: (A) =>
-                                    (0, n.jsx)(i.P3F, {
-                                        ...A,
-                                        className: d.customImageAction,
-                                        onClick: T,
-                                        'aria-label': s.intl.formatToPlainString(s.t.Z43V9f, { filename: x }),
-                                        children: (0, n.jsx)(i.XHJ, {
-                                            size: 'md',
-                                            color: 'currentColor',
-                                            className: d.deleteIcon
+                                children: (e) =>
+                                    (0, A.jsx)(
+                                        l.P3F,
+                                        u(d({}, e), {
+                                            className: c.customImageAction,
+                                            onClick: W,
+                                            'aria-label': s.NW.formatToPlainString(s.t.Z43V9f, { filename: j }),
+                                            children: (0, A.jsx)(l.XHJ, {
+                                                size: 'md',
+                                                color: 'currentColor',
+                                                className: c.deleteIcon
+                                            })
                                         })
-                                    })
+                                    )
                             })
                         ]
                     }),
-                (0, n.jsxs)('div', {
-                    'aria-label': f,
-                    ...N,
-                    className: d.radioGroup,
-                    children: [
-                        null != q &&
-                            (0, n.jsx)(u, {
-                                ref: V,
-                                selectedImageName: l,
-                                onChange: m,
-                                disabled: C,
-                                name: c,
-                                alt: j,
-                                data: q
-                            }),
-                        e.map((A) =>
-                            (0, n.jsx)(
-                                u,
-                                {
-                                    selectedImageName: l,
+                (0, A.jsxs)(
+                    'div',
+                    u(d({ 'aria-label': b }, V), {
+                        className: c.radioGroup,
+                        children: [
+                            null != q &&
+                                (0, A.jsx)(g, {
+                                    ref: U,
+                                    selectedImageName: o,
                                     onChange: m,
-                                    disabled: C,
-                                    ...A
-                                },
-                                A.name
+                                    disabled: v,
+                                    name: f,
+                                    alt: P,
+                                    data: q
+                                }),
+                            t.map((e) =>
+                                (0, A.jsx)(
+                                    g,
+                                    d(
+                                        {
+                                            selectedImageName: o,
+                                            onChange: m,
+                                            disabled: v
+                                        },
+                                        e
+                                    ),
+                                    e.name
+                                )
                             )
-                        )
-                    ]
-                })
+                        ]
+                    })
+                )
             ]
         })
     );

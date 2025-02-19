@@ -1,104 +1,161 @@
-n.d(t, { Z: () => S });
-var i = n(200651),
-    r = n(192379),
-    a = n(442837),
-    s = n(481060),
-    o = n(580587),
+n.d(t, { Z: () => C });
+var r = n(200651),
+    i = n(192379),
+    o = n(442837),
+    a = n(481060),
+    s = n(580587),
     l = n(499254),
-    u = n(827498),
-    c = n(311819),
+    c = n(827498),
+    u = n(311819),
     d = n(541716),
     f = n(433355),
-    _ = n(592125),
-    p = n(944486),
+    p = n(592125),
+    _ = n(944486),
     h = n(626135),
     m = n(572004),
     g = n(591759),
     E = n(135431),
     v = n(621853),
-    y = n(429974),
-    I = n(475413),
-    T = n(981631),
-    b = n(388032);
-function S(e) {
-    let { user: t, closePopout: n, ...S } = e,
-        A = (0, a.e7)([v.Z], () => {
+    b = n(429974),
+    y = n(475413),
+    O = n(981631),
+    S = n(388032);
+function I(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function T(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                I(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function N(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = A(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function A(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+function C(e) {
+    var { user: t, closePopout: n } = e,
+        I = N(e, ['user', 'closePopout']);
+    let A = (0, o.e7)([v.Z], () => {
             var e;
             return null === (e = v.Z.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application;
         }),
-        N = (0, a.e7)([p.Z], () => p.Z.getChannelId()),
-        C = (0, a.e7)([_.Z], () => _.Z.getChannel(N)),
-        R = (0, a.e7)([_.Z], () => {
+        C = (0, o.e7)([_.Z], () => _.Z.getChannelId()),
+        R = (0, o.e7)([p.Z], () => p.Z.getChannel(C)),
+        P = (0, o.e7)([p.Z], () => {
             var e;
-            return null === (e = _.Z.getChannel(N)) || void 0 === e ? void 0 : e.guild_id;
+            return null === (e = p.Z.getChannel(C)) || void 0 === e ? void 0 : e.guild_id;
         }),
-        O = r.useMemo(
+        w = i.useMemo(
             () =>
-                null != C
+                null != R
                     ? {
-                          channel: C,
+                          channel: R,
                           type: 'channel'
                       }
                     : { type: 'contextless' },
-            [C]
+            [R]
         ),
-        D = (0, o.Z)({ context: O }),
-        L = t.id,
-        x = r.useCallback(() => {
+        D = (0, s.Z)({ context: w }),
+        x = t.id,
+        L = i.useCallback(() => {
             if (null != A) {
                 if (D) {
-                    let e = p.Z.getCurrentlySelectedChannelId(),
-                        t = _.Z.getChannel(e),
-                        i = null != f.ZP.getSidebarState(e) || (null == t ? void 0 : t.isGuildVocal()) ? d.Ie.SIDEBAR : d.Ie.NORMAL;
-                    l.__(u._b.TEXT, i, { applicationId: A.id }), (0, s.Mr3)((0, y.z)(L, R)), null == n || n(), h.default.track(T.rMx.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, { application_id: A.id });
-                } else
-                    (0, E.LO)({
-                        applicationId: A.id,
-                        ...A
-                    });
+                    let e = _.Z.getCurrentlySelectedChannelId(),
+                        t = p.Z.getChannel(e),
+                        r = null != f.ZP.getSidebarState(e) || (null == t ? void 0 : t.isGuildVocal()) ? d.Ie.SIDEBAR : d.Ie.NORMAL;
+                    l.__(c._b.TEXT, r, { applicationId: A.id }), (0, a.Mr3)((0, b.z)(x, P)), null == n || n(), h.default.track(O.rMx.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, { application_id: A.id });
+                } else (0, E.LO)(T({ applicationId: A.id }, A));
             }
-        }, [D, A, L, R, n]),
-        P = D ? b.intl.string(b.t['Cia+Aw']) : b.intl.string(b.t.NgXl3N);
+        }, [D, A, x, P, n]),
+        M = D ? S.NW.string(S.t['Cia+Aw']) : S.NW.string(S.t.NgXl3N);
     if (null == A || !(0, E.Eb)(A)) return null;
-    let { customInstallUrl: w } = A,
-        M = null == w || g.Z.isDiscordUrl(w) ? s.qJs : s.Gr1,
-        k = D ? void 0 : M;
+    let { customInstallUrl: k } = A,
+        j = null == k || g.Z.isDiscordUrl(k) ? a.qJs : a.Gr1,
+        U = D ? void 0 : j;
     return m.wS
-        ? (0, i.jsx)(s.yRy, {
+        ? (0, r.jsx)(a.yRy, {
               renderPopout: (e) => {
                   let { closePopout: t } = e;
-                  return (0, i.jsx)(s.v2r, {
+                  return (0, r.jsx)(a.v2r, {
                       navId: 'user-bot-profile-add-app',
                       onClose: t,
-                      'aria-label': b.intl.string(b.t.dbkxVl),
+                      'aria-label': S.NW.string(S.t.dbkxVl),
                       onSelect: void 0,
-                      children: (0, i.jsx)(s.kSQ, {
-                          children: (0, i.jsx)(s.sNh, {
+                      children: (0, r.jsx)(a.kSQ, {
+                          children: (0, r.jsx)(a.sNh, {
                               id: 'copy',
-                              label: b.intl.string(b.t.XWDiho),
-                              action: () => (0, m.JG)((0, c.J)(A))
+                              label: S.NW.string(S.t.XWDiho),
+                              action: () => (0, m.JG)((0, u.J)(A))
                           })
                       })
                   });
               },
               children: (e) => {
-                  let { onClick: t, ...n } = e;
-                  return (0, i.jsx)(I.tG, {
-                      action: 'PRESS_ADD_APP',
-                      text: P,
-                      icon: k,
-                      onContextMenu: t,
-                      onClick: x,
-                      ...n,
-                      ...S
-                  });
+                  var { onClick: t } = e,
+                      n = N(e, ['onClick']);
+                  return (0, r.jsx)(
+                      y.tG,
+                      T(
+                          {
+                              action: 'PRESS_ADD_APP',
+                              text: M,
+                              icon: U,
+                              onContextMenu: t,
+                              onClick: L
+                          },
+                          n,
+                          I
+                      )
+                  );
               }
           })
-        : (0, i.jsx)(I.tG, {
-              action: 'PRESS_ADD_APP',
-              text: P,
-              icon: k,
-              onClick: x,
-              ...S
-          });
+        : (0, r.jsx)(
+              y.tG,
+              T(
+                  {
+                      action: 'PRESS_ADD_APP',
+                      text: M,
+                      icon: U,
+                      onClick: L
+                  },
+                  I
+              )
+          );
 }

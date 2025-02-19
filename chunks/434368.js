@@ -1,127 +1,154 @@
-l.d(t, { Z: () => g });
-var n = l(200651),
-    a = l(192379),
-    i = l(498607),
-    o = l.n(i),
-    s = l(399606),
-    r = l(481060),
-    c = l(203893),
-    d = l(910693),
-    C = l(893966),
-    u = l(527379),
-    m = l(981631),
-    h = l(388032),
-    x = l(905631);
-function g(e) {
-    let { guildId: t, onClose: l } = e,
-        i = (0, s.e7)([C.Z], () => C.Z.getSearchStateByGuildId(t), [t], o()),
-        g = (0, d.dW)(t),
-        p = a.useCallback(() => {
-            i.requireUnusualDmActivity || g(d.aY.UNUSUAL_DM_ACTIVITY),
-                (0, u.Dr)(t, {
-                    ...i,
-                    requireUnusualDmActivity: !i.requireUnusualDmActivity
-                });
-        }, [t, i, g]),
-        _ = a.useCallback(() => {
-            i.requireCommunicationDisabled || g(d.aY.COMMUNICATION_DISABLED),
-                (0, u.Dr)(t, {
-                    ...i,
-                    requireCommunicationDisabled: !i.requireCommunicationDisabled
-                });
-        }, [t, i, g]),
-        b = a.useCallback(() => {
-            i.requireUnusualAccountActivity || g(d.aY.UNUSUAL_ACCOUNT_ACTIVITY),
-                (0, u.Dr)(t, {
-                    ...i,
-                    requireUnusualAccountActivity: !i.requireUnusualAccountActivity
-                });
-        }, [t, i, g]),
-        f = a.useCallback(() => {
-            i.requireUsernameQuarantined || g(d.aY.USERNAME_QUARANTINED),
-                (0, u.Dr)(t, {
-                    ...i,
-                    requireUsernameQuarantined: !i.requireUsernameQuarantined
-                });
-        }, [t, i, g]);
-    return (0, n.jsx)(r.v2r, {
+n.d(t, { Z: () => j });
+var r = n(200651),
+    l = n(192379),
+    o = n(498607),
+    a = n.n(o),
+    i = n(399606),
+    s = n(481060),
+    c = n(203893),
+    u = n(910693),
+    d = n(893966),
+    C = n(527379),
+    m = n(981631),
+    b = n(388032),
+    p = n(335106);
+function f(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function h(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function j(e) {
+    let { guildId: t, onClose: n } = e,
+        o = (0, i.e7)([d.Z], () => d.Z.getSearchStateByGuildId(t), [t], a()),
+        j = (0, u.dW)(t),
+        g = l.useCallback(() => {
+            o.requireUnusualDmActivity || j(u.aY.UNUSUAL_DM_ACTIVITY), (0, C.Dr)(t, h(f({}, o), { requireUnusualDmActivity: !o.requireUnusualDmActivity }));
+        }, [t, o, j]),
+        x = l.useCallback(() => {
+            o.requireCommunicationDisabled || j(u.aY.COMMUNICATION_DISABLED), (0, C.Dr)(t, h(f({}, o), { requireCommunicationDisabled: !o.requireCommunicationDisabled }));
+        }, [t, o, j]),
+        v = l.useCallback(() => {
+            o.requireUnusualAccountActivity || j(u.aY.UNUSUAL_ACCOUNT_ACTIVITY), (0, C.Dr)(t, h(f({}, o), { requireUnusualAccountActivity: !o.requireUnusualAccountActivity }));
+        }, [t, o, j]),
+        y = l.useCallback(() => {
+            o.requireUsernameQuarantined || j(u.aY.USERNAME_QUARANTINED), (0, C.Dr)(t, h(f({}, o), { requireUsernameQuarantined: !o.requireUsernameQuarantined }));
+        }, [t, o, j]);
+    return (0, r.jsx)(s.v2r, {
         navId: 'member-safety-flags',
-        onClose: l,
-        'aria-label': h.intl.string(h.t.k9m8Rk),
+        onClose: n,
+        'aria-label': b.NW.string(b.t.k9m8Rk),
         onSelect: m.dG4,
-        children: (0, n.jsxs)(r.kSQ, {
+        children: (0, r.jsxs)(s.kSQ, {
             children: [
-                (0, n.jsx)(r.S89, {
+                (0, r.jsx)(s.S89, {
                     id: 'toggle-require-unusual-dm-activity',
-                    label: (0, n.jsxs)('div', {
-                        className: x.checkboxLabel,
+                    label: (0, r.jsxs)('div', {
+                        className: p.checkboxLabel,
                         children: [
-                            (0, n.jsx)(r.b6m, {
+                            (0, r.jsx)(s.b6m, {
                                 size: 'custom',
                                 color: 'currentColor',
                                 width: 16,
                                 height: 16,
-                                className: x.unusualDMLabelIcon
+                                className: p.unusualDMLabelIcon
                             }),
-                            h.intl.string(h.t.ZRnONz)
+                            b.NW.string(b.t.ZRnONz)
                         ]
                     }),
-                    action: p,
-                    checked: i.requireUnusualDmActivity
+                    action: g,
+                    checked: o.requireUnusualDmActivity
                 }),
-                (0, n.jsx)(r.S89, {
+                (0, r.jsx)(s.S89, {
                     id: 'toggle-require-communication-disabled',
-                    label: (0, n.jsxs)('div', {
-                        className: x.checkboxLabel,
+                    label: (0, r.jsxs)('div', {
+                        className: p.checkboxLabel,
                         children: [
-                            (0, n.jsx)(r.YlB, {
+                            (0, r.jsx)(s.YlB, {
                                 size: 'custom',
                                 color: 'currentColor',
                                 width: 16,
                                 height: 16,
-                                className: x.timeoutLabelIcon
+                                className: p.timeoutLabelIcon
                             }),
-                            h.intl.string(h.t.z3wbj4)
+                            b.NW.string(b.t.z3wbj4)
                         ]
                     }),
-                    action: _,
-                    checked: i.requireCommunicationDisabled
+                    action: x,
+                    checked: o.requireCommunicationDisabled
                 }),
-                (0, n.jsxs)(n.Fragment, {
+                (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, n.jsx)(r.S89, {
+                        (0, r.jsx)(s.S89, {
                             id: 'toggle-require-unusual-account-activity',
-                            label: (0, n.jsxs)('div', {
-                                className: x.checkboxLabel,
+                            label: (0, r.jsxs)('div', {
+                                className: p.checkboxLabel,
                                 children: [
-                                    (0, n.jsx)(c.Z, {
+                                    (0, r.jsx)(c.Z, {
                                         width: 16,
                                         height: 16,
-                                        className: x.unusualAccountActivityLabelIcon
+                                        className: p.unusualAccountActivityLabelIcon
                                     }),
-                                    h.intl.string(h.t.DIQsDw)
+                                    b.NW.string(b.t.DIQsDw)
                                 ]
                             }),
-                            action: b,
-                            checked: i.requireUnusualAccountActivity
+                            action: v,
+                            checked: o.requireUnusualAccountActivity
                         }),
-                        (0, n.jsx)(r.S89, {
+                        (0, r.jsx)(s.S89, {
                             id: 'toggle-require-username-quarantined',
-                            label: (0, n.jsxs)('div', {
-                                className: x.checkboxLabel,
+                            label: (0, r.jsxs)('div', {
+                                className: p.checkboxLabel,
                                 children: [
-                                    (0, n.jsx)(r.ics, {
+                                    (0, r.jsx)(s.ics, {
                                         size: 'custom',
                                         color: 'currentColor',
                                         width: 16,
                                         height: 16,
-                                        className: x.quarantinedLabelIcon
+                                        className: p.quarantinedLabelIcon
                                     }),
-                                    h.intl.string(h.t.Jloklp)
+                                    b.NW.string(b.t.Jloklp)
                                 ]
                             }),
-                            action: f,
-                            checked: i.requireUsernameQuarantined
+                            action: y,
+                            checked: o.requireUsernameQuarantined
                         })
                     ]
                 })

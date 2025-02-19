@@ -1,47 +1,95 @@
-e.d(n, { default: () => f });
-var a = e(200651);
-e(192379);
-var i = e(703558),
-    o = e(585483),
-    s = e(403182),
-    c = e(127654),
-    l = e(98278),
-    d = e(790527),
-    r = e(474936),
-    u = e(981631),
-    L = e(388032),
-    p = e(330226);
-function f(t) {
-    let { channel: n, onClose: e, content: f, ...g } = t;
-    function E() {
-        e(), (0, l.z)(!0);
+n.d(t, { default: () => b });
+var r = n(200651);
+n(192379);
+var o = n(703558),
+    a = n(585483),
+    c = n(403182),
+    i = n(127654),
+    l = n(98278),
+    s = n(790527),
+    u = n(474936),
+    f = n(981631),
+    d = n(388032),
+    p = n(330226);
+function b(e) {
+    var { channel: t, onClose: n, content: b } = e,
+        g = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                o = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        r,
+                        o = {},
+                        a = Object.keys(e);
+                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
+                    return o;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var a = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
+            }
+            return o;
+        })(e, ['channel', 'onClose', 'content']);
+    function y() {
+        n(), (0, l.z)(!0);
     }
-    return (0, a.jsx)(d.Z, {
-        artURL: p.Z,
-        type: r.cd.MESSAGE_LENGTH_UPSELL,
-        title: L.intl.string(L.t.TZT3sL),
-        body: L.intl.format(L.t.QhcEAA, {
-            maxLength: u.J6R,
-            onLearnMore: E
-        }),
-        context: L.intl.formatToPlainString(L.t.Fc1uVV, { maxLength: u.J6R }),
-        glowUp: L.intl.format(L.t.Mi8kt7, { onLearnMore: E }),
-        analyticsSource: { page: (null == n ? void 0 : n.getGuildId()) != null ? u.ZY5.GUILD_CHANNEL : (null == n ? void 0 : n.isGroupDM()) || (null == n ? void 0 : n.isPrivate()) ? u.ZY5.DM_CHANNEL : null },
-        analyticsLocation: {
-            section: u.jXE.MESSAGE_LENGTH_UPSELL_MODAL,
-            object: u.qAy.BUTTON_CTA
-        },
-        onClose: e,
-        secondaryCTA: L.intl.string(L.t.Fnsb1t),
-        onSecondaryClick: function () {
-            e();
-            let t = new Blob([f], { type: 'text/plain' });
-            (0, c.d)([(0, s.dp)(t, 'message.txt')], n, i.d.ChannelMessage, {
-                requireConfirm: !0,
-                showLargeMessageDialog: !0
-            }),
-                o.S.dispatchToLastSubscribed(u.CkL.CLEAR_TEXT);
-        },
-        ...g
-    });
+    return (0, r.jsx)(
+        s.Z,
+        (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    r = Object.keys(n);
+                'function' == typeof Object.getOwnPropertySymbols &&
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        })
+                    )),
+                    r.forEach(function (t) {
+                        var r;
+                        (r = n[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: r,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0
+                                  })
+                                : (e[t] = r);
+                    });
+            }
+            return e;
+        })(
+            {
+                artURL: p.Z,
+                type: u.cd.MESSAGE_LENGTH_UPSELL,
+                title: d.NW.string(d.t.TZT3sL),
+                body: d.NW.format(d.t.QhcEAA, {
+                    maxLength: f.J6R,
+                    onLearnMore: y
+                }),
+                context: d.NW.formatToPlainString(d.t.Fc1uVV, { maxLength: f.J6R }),
+                glowUp: d.NW.format(d.t.Mi8kt7, { onLearnMore: y }),
+                analyticsSource: { page: (null == t ? void 0 : t.getGuildId()) != null ? f.ZY5.GUILD_CHANNEL : (null == t ? void 0 : t.isGroupDM()) || (null == t ? void 0 : t.isPrivate()) ? f.ZY5.DM_CHANNEL : null },
+                analyticsLocation: {
+                    section: f.jXE.MESSAGE_LENGTH_UPSELL_MODAL,
+                    object: f.qAy.BUTTON_CTA
+                },
+                onClose: n,
+                secondaryCTA: d.NW.string(d.t.Fnsb1t),
+                onSecondaryClick: function () {
+                    n();
+                    let e = new Blob([b], { type: 'text/plain' });
+                    (0, i.d)([(0, c.dp)(e, 'message.txt')], t, o.d.ChannelMessage, {
+                        requireConfirm: !0,
+                        showLargeMessageDialog: !0
+                    }),
+                        a.S.dispatchToLastSubscribed(f.CkL.CLEAR_TEXT);
+                }
+            },
+            g
+        )
+    );
 }

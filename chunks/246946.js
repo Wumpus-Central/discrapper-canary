@@ -1,11 +1,11 @@
 n.d(t, { Z: () => y });
-var i,
-    r = n(442837),
-    a = n(570140),
-    s = n(626135),
-    o = n(314897),
+var r,
+    i = n(442837),
+    o = n(570140),
+    a = n(626135),
+    s = n(314897),
     l = n(981631);
-function u(e, t, n) {
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,13 +18,29 @@ function u(e, t, n) {
         e
     );
 }
-function c(e, t) {
-    s.default.track(l.rMx.STREAMER_MODE_TOGGLE, {
+function u(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                c(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function d(e, t) {
+    a.default.track(l.rMx.STREAMER_MODE_TOGGLE, {
         enabled: e,
         automatic: t
     });
 }
-let d = {
+let f = {
         enabled: !1,
         autoToggle: !0,
         hideInstantInvites: !0,
@@ -33,25 +49,25 @@ let d = {
         disableNotifications: !0,
         enableContentProtection: !1
     },
-    f = {},
-    _ = { ...d };
-function p(e) {
-    let t = f[e];
-    return null == t && (t = f[e] = { ...d }), t;
-}
+    p = {},
+    _ = u({}, f);
 function h(e) {
-    e.isSwitchingAccount || (f = {});
+    let t = p[e];
+    return null == t && (t = p[e] = u({}, f)), t;
 }
 function m(e) {
-    e.userId in f && delete f[e.userId];
+    e.isSwitchingAccount || (p = {});
 }
 function g(e) {
-    let t = { ..._ };
+    e.userId in p && delete p[e.userId];
+}
+function E(e) {
+    let t = u({}, _);
     return (
         (_[e.key] = e.value),
         'enabled' === e.key
-            ? c(e.value, !1)
-            : s.default.track(l.rMx.UPDATE_STREAMER_MODE_SETTINGS, {
+            ? d(e.value, !1)
+            : a.default.track(l.rMx.UPDATE_STREAMER_MODE_SETTINGS, {
                   enabled: _.enabled,
                   automatic: _.autoToggle,
                   disable_notifications: _.disableNotifications,
@@ -70,23 +86,23 @@ function g(e) {
         !0
     );
 }
-function E(e) {
+function v(e) {
     if (!_.autoToggle) return !1;
     {
         let t = e.count > 0;
-        return (_.enabled = t), c(t, !0), !0;
+        return (_.enabled = t), d(t, !0), !0;
     }
 }
-class v extends (i = r.ZP.PersistedStore) {
+class b extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        Object.assign(f, e),
-            this.syncWith([o.default], () => {
-                let e = o.default.getId();
-                _ = null != e ? p(e) : { ...d };
+        Object.assign(p, e),
+            this.syncWith([s.default], () => {
+                let e = s.default.getId();
+                _ = null != e ? h(e) : u({}, f);
             });
     }
     getState() {
-        return f;
+        return p;
     }
     getSettings() {
         return _;
@@ -113,17 +129,17 @@ class v extends (i = r.ZP.PersistedStore) {
         return this.enabled && _.enableContentProtection;
     }
 }
-u(v, 'displayName', 'StreamerModeStore'),
-    u(v, 'persistKey', 'StreamerModeStore'),
-    u(v, 'migrations', [
+c(b, 'displayName', 'StreamerModeStore'),
+    c(b, 'persistKey', 'StreamerModeStore'),
+    c(b, 'migrations', [
         (e) => {
-            let t = o.default.getId();
-            return null == e || null == t ? {} : { [t]: { ...e } };
+            let t = s.default.getId();
+            return null == e || null == t ? {} : { [t]: u({}, e) };
         }
     ]);
-let y = new v(a.Z, {
-    LOGOUT: h,
-    MULTI_ACCOUNT_REMOVE_ACCOUNT: m,
-    STREAMER_MODE_UPDATE: g,
-    RUNNING_STREAMER_TOOLS_CHANGE: E
+let y = new b(o.Z, {
+    LOGOUT: m,
+    MULTI_ACCOUNT_REMOVE_ACCOUNT: g,
+    STREAMER_MODE_UPDATE: E,
+    RUNNING_STREAMER_TOOLS_CHANGE: v
 });

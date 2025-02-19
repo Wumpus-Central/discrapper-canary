@@ -1,31 +1,52 @@
 n.d(t, {
-    Kh: () => d,
-    ad: () => f
+    Kh: () => p,
+    ad: () => _
 });
-var i = n(512722),
-    r = n.n(i),
-    a = n(493683),
-    s = n(475179),
-    o = n(727429),
+var r = n(512722),
+    i = n.n(r),
+    o = n(493683),
+    a = n(475179),
+    s = n(727429),
     l = n(592125),
-    u = n(703656),
-    c = n(981631);
-function d(e, t) {
+    c = n(703656),
+    u = n(981631);
+function d(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function f(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                d(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function p(e, t) {
     let n = l.Z.getChannel(e);
     if (null == n) return;
-    let i = (0, o.e)(n);
-    a.Z.preload(n.guild_id, n.id),
-        (0, u.uL)(c.Z5c.CHANNEL(i, n.id), {
-            openChannel: !0,
-            ...t
-        }),
-        (null == t ? void 0 : t.openTextInVoiceIfVoiceChannel) && n.isGuildVocal() && s.Z.updateChatOpen(n.id, !0);
+    let r = (0, s.e)(n);
+    o.Z.preload(n.guild_id, n.id), (0, c.uL)(u.Z5c.CHANNEL(r, n.id), f({ openChannel: !0 }, t)), (null == t ? void 0 : t.openTextInVoiceIfVoiceChannel) && n.isGuildVocal() && a.Z.updateChatOpen(n.id, !0);
 }
-function f(e, t) {
-    r()(null != e.parent_id, 'Thread must have a parent ID.');
-    let n = (0, o.e)(e);
-    (0, u.uL)(c.Z5c.CHANNEL(n, e.id), {
-        openChannel: !0,
-        ...t
-    });
+function _(e, t) {
+    i()(null != e.parent_id, 'Thread must have a parent ID.');
+    let n = (0, s.e)(e);
+    (0, c.uL)(u.Z5c.CHANNEL(n, e.id), f({ openChannel: !0 }, t));
 }

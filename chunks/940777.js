@@ -1,141 +1,184 @@
-n.d(t, { Z: () => L }), n(47120), n(724458), n(653041);
-var i = n(200651),
-    l = n(192379),
-    r = n(120356),
-    a = n.n(r),
-    o = n(91192),
+n.d(t, { Z: () => R }), n(47120), n(653041);
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    o = n.n(l),
+    a = n(91192),
     s = n(442837),
     c = n(481060),
-    d = n(493683),
-    u = n(239091),
-    h = n(317381),
-    p = n(16609),
-    m = n(540059),
+    u = n(493683),
+    d = n(239091),
+    p = n(317381),
+    h = n(16609),
+    f = n(540059),
     g = n(276952),
-    f = n(682662),
-    _ = n(674552),
+    m = n(682662),
+    b = n(674552),
     v = n(593364),
-    C = n(905423),
-    x = n(199902),
-    I = n(592125),
-    Z = n(944486),
-    b = n(979651),
-    S = n(709054),
-    N = n(853856),
-    E = n(593214),
-    j = n(919755),
-    y = n(110977),
-    T = n(603274),
-    A = n(981631),
-    P = n(388032),
-    R = n(913050);
-let w = {
+    y = n(905423),
+    _ = n(199902),
+    O = n(592125),
+    j = n(944486),
+    C = n(979651),
+    x = n(709054),
+    P = n(853856),
+    S = n(593214),
+    I = n(919755),
+    N = n(110977),
+    Z = n(603274),
+    w = n(981631),
+    E = n(388032),
+    T = n(588827);
+function A(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+let D = {
     analyticsSource: {
-        page: A.ZY5.GUILD_CHANNEL,
-        section: A.jXE.CHANNEL_LIST,
-        object: A.qAy.CHANNEL
+        page: w.ZY5.GUILD_CHANNEL,
+        section: w.jXE.CHANNEL_LIST,
+        object: w.qAy.CHANNEL
     }
 };
-function L() {
-    let e = (0, o.Ie)('favorites'),
-        { favoriteAdded: t, clearFavoriteAdded: r } = (0, E.up)(),
-        [L, M] = l.useState(!1),
-        { favoriteServerMuted: D, favoriteChannels: G } = (0, s.cj)([N.Z], () => ({
-            favoriteChannels: N.Z.getFavoriteChannels(),
-            favoriteServerMuted: N.Z.favoriteServerMuted
+function R() {
+    var e, t;
+    let l = (0, a.Ie)('favorites'),
+        { favoriteAdded: R, clearFavoriteAdded: L } = (0, S.up)(),
+        [M, k] = i.useState(!1),
+        { favoriteServerMuted: G, favoriteChannels: B } = (0, s.cj)([P.Z], () => ({
+            favoriteChannels: P.Z.getFavoriteChannels(),
+            favoriteServerMuted: P.Z.favoriteServerMuted
         })),
-        k = (0, s.e7)([Z.Z], () => Z.Z.getChannelId(A.I_8)),
-        B = (0, s.e7)([I.Z], () => I.Z.getChannel(k)),
-        O = (0, C.Z)((e) => e.guildId) === A.I_8,
-        { badge: U, unread: V } = (0, j.Z)(G),
-        F = (function (e) {
-            let t = (0, s.e7)([Z.Z], () => Z.Z.getVoiceChannelId()),
+        U = (0, s.e7)([j.Z], () => j.Z.getChannelId(w.I_8)),
+        W = (0, s.e7)([O.Z], () => O.Z.getChannel(U)),
+        V = (0, y.Z)((e) => e.guildId) === w.I_8,
+        { badge: F, unread: H } = (0, I.Z)(B),
+        z = (function (e) {
+            let t = (0, s.e7)([j.Z], () => j.Z.getVoiceChannelId()),
                 n = null != t && null != e[t],
-                i = (0, s.e7)([x.Z], () => {
+                r = (0, s.e7)([_.Z], () => {
                     if (!n) return !1;
-                    let t = x.Z.getCurrentUserActiveStream();
+                    let t = _.Z.getCurrentUserActiveStream();
                     return null != t && null != e[t.channelId];
                 }),
-                l = (0, s.e7)([x.Z], () => x.Z.getAllApplicationStreams().some((t) => null != e[t.channelId])),
-                r = (0, s.e7)([b.Z], () => n && null != t && b.Z.hasVideo(t), [n, t]),
-                a = (0, s.Wu)([h.ZP], () => S.default.keys(e).reduce((e, t) => (e.push(...h.ZP.getEmbeddedActivitiesForChannel(t)), e), [])),
-                o = (0, s.e7)([h.ZP], () =>
-                    Array.from(h.ZP.getSelfEmbeddedActivities().values()).some((t) => {
+                i = (0, s.e7)([_.Z], () => _.Z.getAllApplicationStreams().some((t) => null != e[t.channelId])),
+                l = (0, s.e7)([C.Z], () => n && null != t && C.Z.hasVideo(t), [n, t]),
+                o = (0, s.Wu)([p.ZP], () => x.default.keys(e).reduce((e, t) => (e.push(...p.ZP.getEmbeddedActivitiesForChannel(t)), e), [])),
+                a = (0, s.e7)([p.ZP], () =>
+                    Array.from(p.ZP.getSelfEmbeddedActivities().values()).some((t) => {
                         let { location: n } = t,
-                            i = (0, p.pY)(n);
-                        return null != i && null != e[i];
+                            r = (0, h.pY)(n);
+                        return null != r && null != e[r];
                     })
                 ),
-                c = a.length > 0,
-                d = !1,
+                c = o.length > 0,
                 u = !1,
-                m = !1,
+                d = !1,
+                f = !1,
                 g = !1;
             return (
-                n ? ((d = !r), (u = r), (m = i), (g = o)) : ((m = l), (g = c)),
-                (0, _.Or)({
-                    audio: d,
-                    video: u,
-                    screenshare: m,
+                n ? ((u = !l), (d = l), (f = r), (g = a)) : ((f = i), (g = c)),
+                (0, b.Or)({
+                    audio: u,
+                    video: d,
+                    screenshare: f,
                     liveStage: !1,
                     isCurrentUserConnected: n,
                     activity: g
                 })
             );
-        })(G),
-        H = U > 0 ? (0, v.N)(U) : null,
-        z = (0, m.Q3)('FavoritesButton'),
-        W = l.useCallback(() => {
-            r();
-        }, [r]);
-    return (0, i.jsxs)(f.H, {
+        })(B),
+        q = F > 0 ? (0, v.N)(F) : null,
+        Y = (0, f.Q3)('FavoritesButton'),
+        Q = i.useCallback(() => {
+            L();
+        }, [L]);
+    return (0, r.jsxs)(m.H, {
         children: [
-            (0, i.jsx)(g.Z, {
-                selected: O,
-                hovered: L,
-                unread: V && !D,
-                className: R.pill
+            (0, r.jsx)(g.Z, {
+                selected: V,
+                hovered: M,
+                unread: H && !G,
+                className: T.pill
             }),
-            (0, i.jsx)(T.Z, {
-                onShow: W,
-                children: (0, i.jsx)(y.S, {
-                    children: (0, i.jsx)(c.aRk, {
-                        selected: z || O || L,
-                        upperBadge: F,
-                        lowerBadge: H,
-                        children: (0, i.jsx)(c.LYs, {
-                            ...e,
-                            ariaLabel: P.intl.formatToPlainString(P.t['/uzRsr'], {
-                                guildName: P.intl.string(P.t.wMWycn),
-                                mentions: U
-                            }),
-                            to: {
-                                pathname: A.Z5c.CHANNEL(A.I_8, k),
-                                state: w
-                            },
-                            selected: O || L,
-                            onMouseEnter: () => M(!0),
-                            onMouseLeave: () => M(!1),
-                            onMouseDown: function () {
-                                null != B && d.Z.preload(B.guild_id, B.id);
-                            },
-                            onContextMenu: function (e) {
-                                (0, u.jW)(e, async () => {
-                                    let { default: e } = await n.e('3190').then(n.bind(n, 631981));
-                                    return (t) => (0, i.jsx)(e, { ...t });
-                                });
-                            },
-                            children: (0, i.jsx)('div', {
-                                className: a()(R.ring, { [R.ringActive]: t }),
-                                children: (0, i.jsx)(c.r7p, {
-                                    size: 'custom',
-                                    color: 'currentColor',
-                                    className: R.favoriteIcon,
-                                    width: 20,
-                                    height: 20
-                                })
-                            })
-                        })
+            (0, r.jsx)(Z.Z, {
+                onShow: Q,
+                children: (0, r.jsx)(N.S, {
+                    children: (0, r.jsx)(c.aRk, {
+                        selected: Y || V || M,
+                        upperBadge: z,
+                        lowerBadge: q,
+                        children: (0, r.jsx)(
+                            c.LYs,
+                            ((e = A({}, l)),
+                            (t = t =
+                                {
+                                    ariaLabel: E.NW.formatToPlainString(E.t['/uzRsr'], {
+                                        guildName: E.NW.string(E.t.wMWycn),
+                                        mentions: F
+                                    }),
+                                    to: {
+                                        pathname: w.Z5c.CHANNEL(w.I_8, U),
+                                        state: D
+                                    },
+                                    selected: V || M,
+                                    onMouseEnter: () => k(!0),
+                                    onMouseLeave: () => k(!1),
+                                    onMouseDown: function () {
+                                        null != W && u.Z.preload(W.guild_id, W.id);
+                                    },
+                                    onContextMenu: function (e) {
+                                        (0, d.jW)(e, async () => {
+                                            let { default: e } = await n.e('3190').then(n.bind(n, 631981));
+                                            return (t) => (0, r.jsx)(e, A({}, t));
+                                        });
+                                    },
+                                    children: (0, r.jsx)('div', {
+                                        className: o()(T.ring, { [T.ringActive]: R }),
+                                        children: (0, r.jsx)(c.r7p, {
+                                            size: 'custom',
+                                            color: 'currentColor',
+                                            className: T.favoriteIcon,
+                                            width: 20,
+                                            height: 20
+                                        })
+                                    })
+                                }),
+                            Object.getOwnPropertyDescriptors
+                                ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+                                : (function (e, t) {
+                                      var n = Object.keys(e);
+                                      if (Object.getOwnPropertySymbols) {
+                                          var r = Object.getOwnPropertySymbols(e);
+                                          n.push.apply(n, r);
+                                      }
+                                      return n;
+                                  })(Object(t)).forEach(function (n) {
+                                      Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+                                  }),
+                            e)
+                        )
                     })
                 })
             })

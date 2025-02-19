@@ -1,14 +1,14 @@
-let i, r;
+let r, i;
 n.d(t, {
-    Z: () => F,
-    c: () => c
+    Z: () => H,
+    c: () => p
 }),
     n(47120);
-var a,
-    s = n(442837),
-    o = n(570140),
+var o,
+    a = n(442837),
+    s = n(570140),
     l = n(981631);
-function u(e, t, n) {
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,136 +21,168 @@ function u(e, t, n) {
         e
     );
 }
-let c = 'no_payment_source',
-    d = null,
-    f = null,
+function u(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                c(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function d(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function f(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : d(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let p = 'no_payment_source',
     _ = null,
-    p = null,
     h = null,
-    m = {},
+    m = null,
     g = null,
-    E = !1,
-    v = null,
+    E = null,
+    v = {},
+    b = null,
     y = !1,
+    O = null,
+    S = !1,
     I = !1,
     T = !1,
-    b = !1,
-    S = null,
-    A = new Set();
-function N(e) {
-    null != i && null != g ? i(g) : null != r && r(e), (i = null), (r = null);
-}
-function C(e) {
-    N(), (d = e.skuId), (_ = e.applicationId), (I = e.isIAP), (p = e.analyticsLocation), (S = e.context), (b = e.isGift), (T = !0), (y = !1), (i = e.resolve), (r = e.reject), (v = null), (g = null), (h = e.promotionId);
-}
+    N = !1,
+    A = null,
+    C = new Set();
 function R(e) {
-    let { error: t } = e;
-    (T = !1), (S = null), N(t);
+    null != r && null != b ? r(b) : null != i && i(e), (r = null), (i = null);
 }
-function O(e) {
-    let { skuId: t } = e;
-    A.add(t);
+function P(e) {
+    R(), (_ = e.skuId), (m = e.applicationId), (I = e.isIAP), (g = e.analyticsLocation), (A = e.context), (N = e.isGift), (T = !0), (S = !1), (r = e.resolve), (i = e.reject), (O = null), (b = null), (E = e.promotionId);
+}
+function w(e) {
+    let { error: t } = e;
+    (T = !1), (A = null), R(t);
 }
 function D(e) {
-    let { skuId: t, paymentSourceId: n, price: i } = e;
-    (m = {
-        ...m,
-        [t]: {
-            ...m[t],
-            [null != n ? n : c]: i
-        }
-    }),
-        A.delete(t);
+    let { skuId: t } = e;
+    C.add(t);
+}
+function x(e) {
+    let { skuId: t, paymentSourceId: n, price: r } = e;
+    (v = f(u({}, v), { [t]: f(u({}, v[t]), { [null != n ? n : p]: r }) })), C.delete(t);
 }
 function L(e) {
     let { skuId: t } = e;
-    A.delete(t);
+    C.delete(t);
 }
-function x() {
-    E = !0;
-}
-function P(e) {
-    let { entitlements: t, giftCode: n } = e;
-    (E = !1), (g = t), (f = n);
-}
-function w(e) {
-    let { giftCode: t } = e;
-    if (0 !== t.uses || t.sku_id !== d) return !1;
-    f = t.code;
-}
-function M(e) {
-    let { error: t } = e;
-    (E = !1), (v = t);
-}
-function k() {
+function M() {
     y = !0;
 }
-function U() {
-    v = null;
+function k(e) {
+    let { entitlements: t, giftCode: n } = e;
+    (y = !1), (b = t), (h = n);
 }
-function G(e) {
-    b = e.isGift;
+function j(e) {
+    let { giftCode: t } = e;
+    if (0 !== t.uses || t.sku_id !== _) return !1;
+    h = t.code;
 }
-function B(e) {
+function U(e) {
+    let { error: t } = e;
+    (y = !1), (O = t);
+}
+function G() {
+    S = !0;
+}
+function B() {
+    O = null;
+}
+function Z(e) {
+    N = e.isGift;
+}
+function F(e) {
     let { locked: t } = e;
-    if (!t || null == S) return !1;
-    (T = !1), (S = null), N();
+    if (!t || null == A) return !1;
+    (T = !1), (A = null), R();
 }
-class Z extends (a = s.ZP.Store) {
+class V extends (o = a.ZP.Store) {
     getPricesForSku(e) {
-        return m[e];
+        return v[e];
     }
     isOpen() {
         let e = __OVERLAY__ ? l.IlC.OVERLAY : l.IlC.APP;
-        return S === e && T;
+        return A === e && T;
     }
     get isPurchasingSKU() {
-        return E;
-    }
-    get forceConfirmationStepOnMount() {
         return y;
     }
+    get forceConfirmationStepOnMount() {
+        return S;
+    }
     get error() {
-        return v;
+        return O;
     }
     get skuId() {
-        return d;
-    }
-    get applicationId() {
         return _;
     }
+    get applicationId() {
+        return m;
+    }
     get analyticsLocation() {
-        return p;
+        return g;
     }
     get promotionId() {
-        return h;
+        return E;
     }
     get isIAP() {
         return I;
     }
     get giftCode() {
-        return f;
+        return h;
     }
     get isGift() {
-        return b;
+        return N;
     }
     isFetchingSKU(e) {
-        return A.has(e);
+        return C.has(e);
     }
 }
-u(Z, 'displayName', 'SKUPaymentModalStore');
-let F = new Z(o.Z, {
-    SKU_PURCHASE_MODAL_OPEN: C,
-    SKU_PURCHASE_MODAL_CLOSE: R,
-    SKU_PURCHASE_PREVIEW_FETCH: O,
-    SKU_PURCHASE_PREVIEW_FETCH_SUCCESS: D,
+c(V, 'displayName', 'SKUPaymentModalStore');
+let H = new V(s.Z, {
+    SKU_PURCHASE_MODAL_OPEN: P,
+    SKU_PURCHASE_MODAL_CLOSE: w,
+    SKU_PURCHASE_PREVIEW_FETCH: D,
+    SKU_PURCHASE_PREVIEW_FETCH_SUCCESS: x,
     SKU_PURCHASE_PREVIEW_FETCH_FAILURE: L,
-    SKU_PURCHASE_START: x,
-    SKU_PURCHASE_SUCCESS: P,
-    SKU_PURCHASE_FAIL: M,
-    SKU_PURCHASE_SHOW_CONFIRMATION_STEP: k,
-    SKU_PURCHASE_CLEAR_ERROR: U,
-    SKU_PURCHASE_UPDATE_IS_GIFT: G,
-    OVERLAY_SET_INPUT_LOCKED: B,
-    GIFT_CODE_CREATE: w
+    SKU_PURCHASE_START: M,
+    SKU_PURCHASE_SUCCESS: k,
+    SKU_PURCHASE_FAIL: U,
+    SKU_PURCHASE_SHOW_CONFIRMATION_STEP: G,
+    SKU_PURCHASE_CLEAR_ERROR: B,
+    SKU_PURCHASE_UPDATE_IS_GIFT: Z,
+    OVERLAY_SET_INPUT_LOCKED: F,
+    GIFT_CODE_CREATE: j
 });

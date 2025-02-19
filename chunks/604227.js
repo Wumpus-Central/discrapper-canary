@@ -1,118 +1,161 @@
-n.d(t, { Z: () => g }), n(47120), n(757143), n(653041);
-var i = n(200651);
+n.d(t, { Z: () => g }), n(47120), n(757143), n(301563), n(653041);
+var r = n(200651);
 n(192379);
-var s = n(525654),
-    r = n.n(s),
-    l = n(481060),
-    a = n(579806),
+var i = n(525654),
+    s = n.n(i),
+    a = n(481060),
+    l = n(579806),
     o = n(304761),
     c = n(320161),
     d = n(998502),
     u = n(388032),
-    m = n(357430);
+    m = n(262382);
 function g() {
-    var e, t, n, s, g;
-    let h = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        x = '369170',
-        _ = '93e7acefc712d9b53651dd2783ce5095d75a2fc1'.substring(0, 7),
-        p = null === a.Z || void 0 === a.Z ? void 0 : a.Z.remoteApp.getVersion(),
-        E = null === a.Z || void 0 === a.Z ? void 0 : null === (e = (t = a.Z.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(t),
-        C = null === a.Z || void 0 === a.Z ? void 0 : null === (n = (s = a.Z.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(s),
-        f = null === (g = o.C.getCurrentBuildOverride().overrides) || void 0 === g ? void 0 : g.discord_web,
-        T = (function () {
+    var e, t, n, i, g;
+    let p = window.GLOBAL_ENV.RELEASE_CHANNEL,
+        h = '369630',
+        f = '25a4f8c314369040c8e94d0a860b7fe53461f1a4'.substring(0, 7),
+        N = null === l.Z || void 0 === l.Z ? void 0 : l.Z.remoteApp.getVersion(),
+        x = null === l.Z || void 0 === l.Z ? void 0 : null === (e = (t = l.Z.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(t),
+        b = null === l.Z || void 0 === l.Z ? void 0 : null === (n = (i = l.Z.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(i),
+        _ = null === (g = o.C.getCurrentBuildOverride().overrides) || void 0 === g ? void 0 : g.discord_web,
+        E = (function () {
             var e;
-            let t = null === r() || void 0 === r() ? void 0 : null === (e = r().os) || void 0 === e ? void 0 : e.toString();
-            if (null == t || null == a.Z) return null;
-            let n = a.Z.os.release,
-                [i, s, l] = d.ZP.parsedOSRelease;
-            return t.includes('Windows 10') && void 0 !== l && l >= 22000 && (t = t.replace('Windows 10', 'Windows 11')), t.includes('OS X 10.15.7') && void 0 !== i && i >= 20 && (t = 'macOS '.concat(i - 9)), ''.concat(t, ' (').concat(n, ')');
+            let t = null === s() || void 0 === s() ? void 0 : null === (e = s().os) || void 0 === e ? void 0 : e.toString();
+            if (null == t || null == l.Z) return null;
+            let n = l.Z.os.release,
+                [r, i, a] = d.ZP.parsedOSRelease;
+            return t.includes('Windows 10') && void 0 !== a && a >= 22000 && (t = t.replace('Windows 10', 'Windows 11')), t.includes('OS X 10.15.7') && void 0 !== r && r >= 20 && (t = 'macOS '.concat(r - 9)), ''.concat(t, ' (').concat(n, ')');
         })(),
-        N = [h, x, '('.concat(_, ')')];
+        j = [p, h, '('.concat(f, ')')];
     return (
-        null != p && (N.push('Host '.concat(p)), null != C && N.push(C.toLowerCase()), null != E && N.push('('.concat(E, ')'))),
-        N.push('Build Override: '.concat(null != f ? f.id : 'N/A')),
-        null != T && N.push(T),
-        (0, i.jsx)(c.Z, {
-            copyValue: N.join(' '),
-            text: u.intl.string(u.t['9Al4QU']),
+        null != N && (j.push('Host '.concat(N)), null != b && j.push(b.toLowerCase()), null != x && j.push('('.concat(x, ')'))),
+        j.push('Build Override: '.concat(null != _ ? _.id : 'N/A')),
+        null != E && j.push(E),
+        (0, r.jsx)(c.Z, {
+            copyValue: j.join(' '),
+            text: u.NW.string(u.t['9Al4QU']),
             'aria-label': !1,
-            children: (e) =>
-                (0, i.jsx)(l.P3F, {
-                    ...e,
-                    'aria-label': u.intl.string(u.t['9Al4QU']),
-                    className: m.clickable,
-                    children: (0, i.jsxs)('div', {
-                        className: m.info,
-                        children: [
-                            (0, i.jsxs)(l.Text, {
-                                tag: 'span',
-                                className: m.line,
-                                variant: 'text-xs/normal',
-                                color: 'text-muted',
+            children: (e) => {
+                var t, n;
+                return (0, r.jsx)(
+                    a.P3F,
+                    ((t = (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var n = null != arguments[t] ? arguments[t] : {},
+                                r = Object.keys(n);
+                            'function' == typeof Object.getOwnPropertySymbols &&
+                                (r = r.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    })
+                                )),
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = n[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: r,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0
+                                              })
+                                            : (e[t] = r);
+                                });
+                        }
+                        return e;
+                    })({}, e)),
+                    (n = n =
+                        {
+                            'aria-label': u.NW.string(u.t['9Al4QU']),
+                            className: m.clickable,
+                            children: (0, r.jsxs)('div', {
+                                className: m.info,
                                 children: [
-                                    h,
+                                    (0, r.jsxs)(a.Text, {
+                                        tag: 'span',
+                                        className: m.line,
+                                        variant: 'text-xs/normal',
+                                        color: 'text-muted',
+                                        children: [
+                                            p,
+                                            ' ',
+                                            h,
+                                            ' ',
+                                            (0, r.jsxs)('span', {
+                                                className: m.versionHash,
+                                                children: ['(', f, ')']
+                                            })
+                                        ]
+                                    }),
                                     ' ',
-                                    x,
-                                    ' ',
-                                    (0, i.jsxs)('span', {
-                                        className: m.versionHash,
-                                        children: ['(', _, ')']
-                                    })
-                                ]
-                            }),
-                            ' ',
-                            null != f &&
-                                (0, i.jsx)(l.Text, {
-                                    tag: 'span',
-                                    className: m.line,
-                                    variant: 'text-xs/normal',
-                                    color: 'text-muted',
-                                    children: (0, i.jsxs)('span', {
-                                        className: m.versionHash,
-                                        children: ['Build Override: ', f.id]
-                                    })
-                                }),
-                            null != p
-                                ? (0, i.jsxs)(i.Fragment, {
-                                      children: [
-                                          (0, i.jsxs)(l.Text, {
+                                    null != _ &&
+                                        (0, r.jsx)(a.Text, {
+                                            tag: 'span',
+                                            className: m.line,
+                                            variant: 'text-xs/normal',
+                                            color: 'text-muted',
+                                            children: (0, r.jsxs)('span', {
+                                                className: m.versionHash,
+                                                children: ['Build Override: ', _.id]
+                                            })
+                                        }),
+                                    null != N
+                                        ? (0, r.jsxs)(r.Fragment, {
+                                              children: [
+                                                  (0, r.jsxs)(a.Text, {
+                                                      tag: 'span',
+                                                      className: m.line,
+                                                      variant: 'text-xs/normal',
+                                                      color: 'text-muted',
+                                                      children: [
+                                                          'Host ',
+                                                          N,
+                                                          ' ',
+                                                          null != b
+                                                              ? (0, r.jsxs)('span', {
+                                                                    className: m.appArch,
+                                                                    children: [b.toLowerCase(), ' ']
+                                                                })
+                                                              : null,
+                                                          null != x
+                                                              ? (0, r.jsxs)('span', {
+                                                                    children: ['(', x, ')']
+                                                                })
+                                                              : null
+                                                      ]
+                                                  }),
+                                                  ' '
+                                              ]
+                                          })
+                                        : null,
+                                    null != E
+                                        ? (0, r.jsx)(a.Text, {
                                               tag: 'span',
                                               className: m.line,
                                               variant: 'text-xs/normal',
                                               color: 'text-muted',
-                                              children: [
-                                                  'Host ',
-                                                  p,
-                                                  ' ',
-                                                  null != C
-                                                      ? (0, i.jsxs)('span', {
-                                                            className: m.appArch,
-                                                            children: [C.toLowerCase(), ' ']
-                                                        })
-                                                      : null,
-                                                  null != E
-                                                      ? (0, i.jsxs)('span', {
-                                                            children: ['(', E, ')']
-                                                        })
-                                                      : null
-                                              ]
-                                          }),
-                                          ' '
-                                      ]
-                                  })
-                                : null,
-                            null != T
-                                ? (0, i.jsx)(l.Text, {
-                                      tag: 'span',
-                                      className: m.line,
-                                      variant: 'text-xs/normal',
-                                      color: 'text-muted',
-                                      children: T
-                                  })
-                                : null
-                        ]
-                    })
-                })
+                                              children: E
+                                          })
+                                        : null
+                                ]
+                            })
+                        }),
+                    Object.getOwnPropertyDescriptors
+                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                        : (function (e, t) {
+                              var n = Object.keys(e);
+                              if (Object.getOwnPropertySymbols) {
+                                  var r = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, r);
+                              }
+                              return n;
+                          })(Object(n)).forEach(function (e) {
+                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                          }),
+                    t)
+                );
+            }
         })
     );
 }

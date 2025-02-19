@@ -1,75 +1,75 @@
-n.d(t, { Z: () => S }), n(47120);
-var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    l = n.n(r),
-    a = n(399606),
+n.d(t, { Z: () => C }), n(47120), n(266796);
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(399606),
     o = n(481060),
     c = n(607070),
     d = n(100527),
     u = n(906732),
     m = n(66595),
     g = n(535322),
-    h = n(477734),
-    x = n(626135),
-    _ = n(881100),
-    p = n(981631),
-    E = n(388032),
-    C = n(624427);
-let f = (e) => (e ? E.intl.string(E.t.QX14gI) : E.intl.string(E.t.RGadQU)),
-    T = (e) => {
+    p = n(477734),
+    h = n(626135),
+    f = n(881100),
+    N = n(981631),
+    x = n(388032),
+    b = n(597520);
+let _ = (e) => (e ? x.NW.string(x.t.QX14gI) : x.NW.string(x.t.RGadQU)),
+    E = (e) => {
         let { isShowingAll: t, onClick: n } = e;
-        return (0, i.jsxs)(o.P3F, {
+        return (0, r.jsxs)(o.P3F, {
             onClick: n,
-            className: C.customButton,
+            className: b.customButton,
             children: [
-                t ? E.intl.string(E.t.maZaNz) : E.intl.string(E.t['37C26e']),
+                t ? x.NW.string(x.t.maZaNz) : x.NW.string(x.t['37C26e']),
                 t
-                    ? (0, i.jsx)(o.u04, {
+                    ? (0, r.jsx)(o.u04, {
                           size: 'md',
                           color: 'currentColor',
-                          className: C.arrow
+                          className: b.arrow
                       })
-                    : (0, i.jsx)(o.CJ0, {
+                    : (0, r.jsx)(o.CJ0, {
                           size: 'md',
                           color: 'currentColor',
-                          className: C.arrow
+                          className: b.arrow
                       })
             ]
         });
     },
-    N = (e) => {
-        let { title: t, description: n, className: s, imageSource: r, imageClassName: a, titleBadge: c, isNew: h = !1, isEarlyAccess: x = !1 } = e,
-            { analyticsLocations: _ } = (0, u.ZP)(d.Z.PREMIUM_MARKETING_PERK_CARD);
-        return (0, i.jsx)(u.Gt, {
-            value: _,
-            children: (0, i.jsxs)('div', {
-                className: l()(C.perkCard, s),
+    j = (e) => {
+        let { title: t, description: n, className: i, imageSource: s, imageClassName: l, titleBadge: c, isNew: p = !1, isEarlyAccess: h = !1 } = e,
+            { analyticsLocations: f } = (0, u.ZP)(d.Z.PREMIUM_MARKETING_PERK_CARD);
+        return (0, r.jsx)(u.Gt, {
+            value: f,
+            children: (0, r.jsxs)('div', {
+                className: a()(b.perkCard, i),
                 children: [
-                    h
-                        ? (0, i.jsx)(g.Z, {
-                              className: C.perkCardNewBadge,
+                    p
+                        ? (0, r.jsx)(g.Z, {
+                              className: b.perkCardNewBadge,
                               shouldInheritBackgroundColor: !0,
                               shouldInheritTextColor: !0
                           })
                         : null,
-                    x ? (0, i.jsx)(m.Z, { className: C.perkCardEarlyAccessBadge }) : null,
-                    (0, i.jsx)('img', {
-                        src: r,
+                    h ? (0, r.jsx)(m.Z, { className: b.perkCardEarlyAccessBadge }) : null,
+                    (0, r.jsx)('img', {
+                        src: s,
                         alt: '',
-                        className: l()(a, C.perksCardArt)
+                        className: a()(l, b.perksCardArt)
                     }),
-                    (0, i.jsxs)('div', {
+                    (0, r.jsxs)('div', {
                         children: [
-                            (0, i.jsxs)(o.X6q, {
+                            (0, r.jsxs)(o.X6q, {
                                 variant: 'heading-lg/extrabold',
-                                className: C.perkCardHeading,
+                                className: b.perkCardHeading,
                                 children: [t, ' ', c]
                             }),
-                            (0, i.jsx)(o.Text, {
+                            (0, r.jsx)(o.Text, {
                                 variant: 'text-sm/normal',
-                                className: C.perkCardDescription,
-                                children: 'function' == typeof n ? n(_) : n
+                                className: b.perkCardDescription,
+                                children: 'function' == typeof n ? n(f) : n
                             })
                         ]
                     })
@@ -77,50 +77,82 @@ let f = (e) => (e ? E.intl.string(E.t.QX14gI) : E.intl.string(E.t.RGadQU)),
             })
         });
     },
-    S = (e) => {
+    C = (e) => {
         let { className: t, isSubscriberNitroHome: n = !1 } = e,
-            [r, d] = s.useState(!1),
-            m = (0, _.N)({ styles: C }),
-            g = (0, a.e7)([c.Z], () => c.Z.useReducedMotion),
-            { analyticsLocations: E } = (0, u.ZP)(),
-            S = (0, h._f)(),
-            I = [m.emoji, m.streaming, m.upload, m.customAppIcons, m.soundboard, S ? m.remix : m.videoBackground, m.superReactions, m.stickersPerkDiscoverability, m.badgeAlt];
-        return (0, i.jsxs)('div', {
-            className: l()(C.perksContainer, t, {
-                [C.partiallyHidden]: n && !r,
-                [C.subscriberNitroHome]: n,
-                [C.reducedMotion]: g
+            [s, d] = i.useState(!1),
+            m = (0, f.N)({ styles: b }),
+            g = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
+            { analyticsLocations: x } = (0, u.ZP)(),
+            C = (0, p._f)(),
+            O = [m.emoji, m.streaming, m.upload, m.customAppIcons, m.soundboard, C ? m.remix : m.videoBackground, m.superReactions, m.stickersPerkDiscoverability, m.badgeAlt];
+        return (0, r.jsxs)('div', {
+            className: a()(b.perksContainer, t, {
+                [b.partiallyHidden]: n && !s,
+                [b.subscriberNitroHome]: n,
+                [b.reducedMotion]: g
             }),
             children: [
-                (0, i.jsx)(o.X6q, {
+                (0, r.jsx)(o.X6q, {
                     variant: 'heading-xxl/extrabold',
-                    className: l()(C.perksTitle),
-                    children: f(n)
+                    className: a()(b.perksTitle),
+                    children: _(n)
                 }),
-                (0, i.jsx)('div', {
-                    className: l()(C.perkCardContainer, { [C.perkCardContainerExpanded]: r }),
-                    children: I.map((e) => null != e && (0, i.jsx)(N, { ...e }, e.title))
+                (0, r.jsx)('div', {
+                    className: a()(b.perkCardContainer, { [b.perkCardContainerExpanded]: s }),
+                    children: O.map(
+                        (e) =>
+                            null != e &&
+                            (0, r.jsx)(
+                                j,
+                                (function (e) {
+                                    for (var t = 1; t < arguments.length; t++) {
+                                        var n = null != arguments[t] ? arguments[t] : {},
+                                            r = Object.keys(n);
+                                        'function' == typeof Object.getOwnPropertySymbols &&
+                                            (r = r.concat(
+                                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                })
+                                            )),
+                                            r.forEach(function (t) {
+                                                var r;
+                                                (r = n[t]),
+                                                    t in e
+                                                        ? Object.defineProperty(e, t, {
+                                                              value: r,
+                                                              enumerable: !0,
+                                                              configurable: !0,
+                                                              writable: !0
+                                                          })
+                                                        : (e[t] = r);
+                                            });
+                                    }
+                                    return e;
+                                })({}, e),
+                                e.title
+                            )
+                    )
                 }),
                 n &&
-                    (0, i.jsxs)(i.Fragment, {
+                    (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, i.jsx)('div', {
-                                className: l()({
-                                    [C.sizeGizmo]: !r,
-                                    [C.sizeGizmoExpanded]: r
+                            (0, r.jsx)('div', {
+                                className: a()({
+                                    [b.sizeGizmo]: !s,
+                                    [b.sizeGizmoExpanded]: s
                                 }),
-                                children: (0, i.jsx)(T, {
+                                children: (0, r.jsx)(E, {
                                     onClick: () => {
-                                        x.default.track(p.rMx.PREMIUM_MARKETING_PERKS_SEE_ALL_CLICKED, {
-                                            location_stack: E,
-                                            was_expanded: r
+                                        h.default.track(N.rMx.PREMIUM_MARKETING_PERKS_SEE_ALL_CLICKED, {
+                                            location_stack: x,
+                                            was_expanded: s
                                         }),
-                                            d(!r);
+                                            d(!s);
                                     },
-                                    isShowingAll: r
+                                    isShowingAll: s
                                 })
                             }),
-                            (0, i.jsx)('div', { className: l()(C.cover, { [C.hidden]: r }) })
+                            (0, r.jsx)('div', { className: a()(b.cover, { [b.hidden]: s }) })
                         ]
                     })
             ]

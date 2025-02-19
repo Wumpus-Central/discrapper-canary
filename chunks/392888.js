@@ -1,20 +1,20 @@
 n.d(t, {
-    R: () => h,
-    Z: () => m
+    R: () => E,
+    Z: () => v
 }),
     n(47120);
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(544891),
-    a = n(433517),
-    s = n(481060),
-    o = n(147913),
+var i = n(544891),
+    o = n(433517),
+    a = n(481060),
+    s = n(147913),
     l = n(480294),
-    u = n(9156),
-    c = n(312400),
+    c = n(9156),
+    u = n(312400),
     d = n(115345),
     f = n(981631);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,35 +27,76 @@ function _(e, t, n) {
         e
     );
 }
-class p extends o.Z {
+function _(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                p(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function h(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function m(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : h(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+class g extends s.Z {
     handlePostConnectionOpen() {
-        if (!a.K.get('turnedOffNewNotifications') && l.Z.hasConsented(f.pjP.PERSONALIZATION)) {
-            if (c.xT.getCurrentConfig({ location: 'NotificationMigrationManager' }, { autoTrackExposure: !1 }).enabled && !u.ZP.useNewNotifications) 0 > Date.now() && this.checkOldUserExperiment(), this.checkNewUserExperiment();
+        if (!o.K.get('turnedOffNewNotifications') && l.Z.hasConsented(f.pjP.PERSONALIZATION)) {
+            if (u.xT.getCurrentConfig({ location: 'NotificationMigrationManager' }, { autoTrackExposure: !1 }).enabled && !c.ZP.useNewNotifications) 0 > Date.now() && this.checkOldUserExperiment(), this.checkNewUserExperiment();
         }
     }
     async checkOldUserExperiment() {
-        let { logExposure: e, autoOpen: t } = c.fs.getCurrentConfig({ location: 'NotificationMigrationManager' }, { autoTrackExposure: !1 });
+        let { logExposure: e, autoOpen: t } = u.fs.getCurrentConfig({ location: 'NotificationMigrationManager' }, { autoTrackExposure: !1 });
         if (!e) return;
         let {
-                body: { guild_noise: a, usage: o }
-            } = await r.tn.get({
+                body: { guild_noise: o, usage: s }
+            } = await i.tn.get({
                 url: '/users/@me/notification-migration-data2',
                 rejectWithError: !1
             }),
-            l = (0, d._Y)(o),
-            { default: u } = await n.e('53512').then(n.bind(n, 753521));
-        if (!(0, s.$sL)())
-            c.fs.trackExposure({ location: 'NotificationMigrationManager' }),
+            l = (0, d._Y)(s),
+            { default: c } = await n.e('53512').then(n.bind(n, 753521));
+        if (!(0, a.$sL)())
+            u.fs.trackExposure({ location: 'NotificationMigrationManager' }),
                 t &&
-                    ((0, d.cG)(a, l)
-                        ? (0, s.h7j)(
+                    ((0, d.cG)(o, l)
+                        ? (0, a.h7j)(
                               (e) =>
-                                  (0, i.jsx)(u, {
-                                      ...e,
-                                      dismissable: !1,
-                                      guildPain: a,
-                                      myUsage: l
-                                  }),
+                                  (0, r.jsx)(
+                                      c,
+                                      m(_({}, e), {
+                                          dismissable: !1,
+                                          guildPain: o,
+                                          myUsage: l
+                                      })
+                                  ),
                               {
                                   onCloseRequest: () => {}
                               }
@@ -63,30 +104,32 @@ class p extends o.Z {
                         : (0, d.ly)());
     }
     checkNewUserExperiment() {
-        let { logExposure: e, enabled: t } = c.ad.getCurrentConfig({ location: 'NotificationMigrationManager' }, { autoTrackExposure: !1 });
-        e && (c.ad.trackExposure({ location: 'NotificationMigrationManager' }), t && (0, d.ly)());
+        let { logExposure: e, enabled: t } = u.ad.getCurrentConfig({ location: 'NotificationMigrationManager' }, { autoTrackExposure: !1 });
+        e && (u.ad.trackExposure({ location: 'NotificationMigrationManager' }), t && (0, d.ly)());
     }
     constructor(...e) {
-        super(...e), _(this, 'actions', { POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen() });
+        super(...e), p(this, 'actions', { POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen() });
     }
 }
-async function h(e) {
+async function E(e) {
     let {
-            body: { guild_noise: t, usage: a }
-        } = await r.tn.get({
+            body: { guild_noise: t, usage: o }
+        } = await i.tn.get({
             url: '/users/@me/notification-migration-data2',
             rejectWithError: !1
         }),
-        o = (0, d._Y)(a);
-    (0, s.ZDy)(async () => {
-        let { default: r } = await n.e('53512').then(n.bind(n, 753521));
+        s = (0, d._Y)(o);
+    (0, a.ZDy)(async () => {
+        let { default: i } = await n.e('53512').then(n.bind(n, 753521));
         return (n) =>
-            (0, i.jsx)(r, {
-                ...n,
-                dismissable: e,
-                guildPain: t,
-                myUsage: o
-            });
+            (0, r.jsx)(
+                i,
+                m(_({}, n), {
+                    dismissable: e,
+                    guildPain: t,
+                    myUsage: s
+                })
+            );
     });
 }
-let m = new p();
+let v = new g();

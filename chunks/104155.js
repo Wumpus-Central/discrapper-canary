@@ -1,99 +1,143 @@
 t.d(n, {
-    I: () => I,
-    Z: () => j
+    I: () => b,
+    Z: () => v
 }),
-    t(47120);
-var l = t(200651),
-    i = t(192379),
+    t(47120),
+    t(301563);
+var r = t(200651),
+    l = t(192379),
     a = t(442837),
-    r = t(481060),
+    i = t(481060),
     o = t(325708),
     s = t(213557),
-    d = t(433355),
-    c = t(324067),
+    c = t(433355),
+    d = t(324067),
     u = t(984933),
-    h = t(430824),
-    m = t(496675),
-    x = t(626135),
-    _ = t(216306),
-    p = t(775028),
-    f = t(981631),
-    g = t(176505),
+    m = t(430824),
+    h = t(496675),
+    p = t(626135),
+    f = t(216306),
+    g = t(775028),
+    x = t(981631),
+    _ = t(176505),
     C = t(388032),
-    v = t(716525);
-function I(e) {
+    j = t(509747);
+function b(e) {
     let { channelId: n } = e;
-    return (0, l.jsx)(o.Z, {
+    return (0, r.jsx)(o.Z, {
         sidebarType: o.y.ThreadSidebar,
         maxWidth: 600,
-        children: (0, l.jsx)(s.Z, {
+        children: (0, r.jsx)(s.Z, {
             channelId: n,
-            baseChannelId: g.oC.CHANNEL_BROWSER
+            baseChannelId: _.oC.CHANNEL_BROWSER
         })
     });
 }
-function j(e) {
+function v(e) {
     let { guildId: n } = e,
-        [o, s] = i.useState(''),
-        I = (0, a.e7)([h.Z], () => h.Z.getGuild(n)),
-        j = (0, a.e7)([u.ZP], () => u.ZP.getChannels(n)),
-        N = (0, a.e7)([c.Z], () => c.Z.getCategories(n)),
-        Z = (0, _.Fo)(n, N, j, o),
-        b = (0, a.e7)([m.Z], () => m.Z.canWithPartialContext(f.Plq.MANAGE_CHANNELS, { guildId: n })),
-        E = (0, a.e7)([d.ZP], () => null != d.ZP.getCurrentSidebarChannelId(g.oC.CHANNEL_BROWSER)),
-        w = i.useCallback(() => s(''), [s]),
-        S = i.useCallback(() => {
-            (0, r.ZDy)(async () => {
-                let { default: e } = await Promise.all([t.e('45094'), t.e('20110')]).then(t.bind(t, 218613));
-                return (t) =>
-                    (0, l.jsx)(e, {
-                        ...t,
-                        channelType: null,
-                        guildId: n
-                    });
+        [o, s] = l.useState(''),
+        b = (0, a.e7)([m.Z], () => m.Z.getGuild(n)),
+        v = (0, a.e7)([u.ZP], () => u.ZP.getChannels(n)),
+        N = (0, a.e7)([d.Z], () => d.Z.getCategories(n)),
+        y = (0, f.Fo)(n, N, v, o),
+        O = (0, a.e7)([h.Z], () => h.Z.canWithPartialContext(x.Plq.MANAGE_CHANNELS, { guildId: n })),
+        I = (0, a.e7)([c.ZP], () => null != c.ZP.getCurrentSidebarChannelId(_.oC.CHANNEL_BROWSER)),
+        Z = l.useCallback(() => s(''), [s]),
+        w = l.useCallback(() => {
+            (0, i.ZDy)(async () => {
+                let { default: e } = await Promise.all([t.e('45094'), t.e('1344')]).then(t.bind(t, 218613));
+                return (t) => {
+                    var l, a;
+                    return (0, r.jsx)(
+                        e,
+                        ((l = (function (e) {
+                            for (var n = 1; n < arguments.length; n++) {
+                                var t = null != arguments[n] ? arguments[n] : {},
+                                    r = Object.keys(t);
+                                'function' == typeof Object.getOwnPropertySymbols &&
+                                    (r = r.concat(
+                                        Object.getOwnPropertySymbols(t).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(t, e).enumerable;
+                                        })
+                                    )),
+                                    r.forEach(function (n) {
+                                        var r;
+                                        (r = t[n]),
+                                            n in e
+                                                ? Object.defineProperty(e, n, {
+                                                      value: r,
+                                                      enumerable: !0,
+                                                      configurable: !0,
+                                                      writable: !0
+                                                  })
+                                                : (e[n] = r);
+                                    });
+                            }
+                            return e;
+                        })({}, t)),
+                        (a = a =
+                            {
+                                channelType: null,
+                                guildId: n
+                            }),
+                        Object.getOwnPropertyDescriptors
+                            ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(a))
+                            : (function (e, n) {
+                                  var t = Object.keys(e);
+                                  if (Object.getOwnPropertySymbols) {
+                                      var r = Object.getOwnPropertySymbols(e);
+                                      t.push.apply(t, r);
+                                  }
+                                  return t;
+                              })(Object(a)).forEach(function (e) {
+                                  Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(a, e));
+                              }),
+                        l)
+                    );
+                };
             });
         }, [n]);
-    return null == I
+    return null == b
         ? null
-        : (0, l.jsxs)('div', {
-              className: v.pageBody,
+        : (0, r.jsxs)('div', {
+              className: j.pageBody,
               children: [
-                  (0, l.jsxs)('div', {
-                      className: v.header,
+                  (0, r.jsxs)('div', {
+                      className: j.header,
                       children: [
-                          (0, l.jsx)(r.E1j, {
-                              className: v.search,
-                              size: r.E1j.Sizes.MEDIUM,
+                          (0, r.jsx)(i.E1j, {
+                              className: j.search,
+                              size: i.E1j.Sizes.MEDIUM,
                               query: o,
                               onChange: (e) => {
-                                  '' === o && '' !== e && x.default.track(f.rMx.SEARCH_STARTED, { search_type: 'channel browser' }), s(e.toLowerCase());
+                                  '' === o && '' !== e && p.default.track(x.rMx.SEARCH_STARTED, { search_type: 'channel browser' }), s(e.toLowerCase());
                               },
-                              onClear: w,
-                              placeholder: C.intl.string(C.t.s5MnmJ)
+                              onClear: Z,
+                              placeholder: C.NW.string(C.t.s5MnmJ)
                           }),
-                          b
-                              ? (0, l.jsxs)(r.zxk, {
-                                    className: v.createButton,
-                                    innerClassName: v.createButtonInner,
-                                    onClick: S,
+                          O
+                              ? (0, r.jsxs)(i.zxk, {
+                                    className: j.createButton,
+                                    innerClassName: j.createButtonInner,
+                                    onClick: w,
                                     children: [
-                                        (0, l.jsx)(r.qJs, {
+                                        (0, r.jsx)(i.qJs, {
                                             size: 'sm',
                                             color: 'currentColor',
-                                            className: v.createIcon
+                                            className: j.createIcon
                                         }),
-                                        C.intl.string(C.t.CumH4u)
+                                        C.NW.string(C.t.CumH4u)
                                     ]
                                 })
                               : null
                       ]
                   }),
-                  (0, l.jsx)(p.Z, {
-                      className: v.browser,
-                      channels: j,
-                      categories: Z,
-                      guild: I,
-                      hasSidebar: E
+                  (0, r.jsx)(g.Z, {
+                      className: j.browser,
+                      channels: v,
+                      categories: y,
+                      guild: b,
+                      hasSidebar: I
                   })
               ]
           });

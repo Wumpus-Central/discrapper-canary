@@ -1,119 +1,175 @@
-n.d(t, { Z: () => E }), n(47120);
-var i = n(200651);
+n.d(t, { Z: () => O }), n(47120);
+var r = n(200651);
 n(192379);
-var r = n(120356),
-    a = n.n(r),
-    s = n(979554),
-    o = n(442837),
+var i = n(120356),
+    o = n.n(i),
+    a = n(979554),
+    s = n(442837),
     l = n(481060),
-    u = n(987209),
-    c = n(921813),
+    c = n(987209),
+    u = n(921813),
     d = n(484459),
     f = n(594174),
-    _ = n(583434),
-    p = n(905357),
+    p = n(583434),
+    _ = n(905357),
     h = n(473608),
     m = n(388032),
-    g = n(928605);
-let E = (e) => {
-    let { skuId: t, isSelected: n, price: r, onSelect: E, shouldDisplayHeader: v = !1, className: y } = e,
-        { product: I } = (0, _.T)(t),
-        { giftRecipient: T, giftRecipientError: b } = (0, u.wD)(),
-        S = (0, o.e7)([f.default], () => f.default.getCurrentUser()),
-        A = (0, p.k)(I);
-    if (null == I) return null;
-    let [N] = I.items,
-        C = () => (N.type === s.Z.AVATAR_DECORATION ? m.intl.string(m.t['7v0T9P']) : N.type === s.Z.PROFILE_EFFECT ? m.intl.string(m.t.wR5wOj) : null),
-        R = null != T && T.id !== (null == S ? void 0 : S.id),
-        O = () => {
+    g = n(340871);
+function E(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function v(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                E(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function b(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function y(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : b(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let O = (e) => {
+    let { skuId: t, isSelected: n, price: i, onSelect: E, shouldDisplayHeader: b = !1, className: O } = e,
+        { product: S } = (0, p.T)(t),
+        { giftRecipient: I, giftRecipientError: T } = (0, c.wD)(),
+        N = (0, s.e7)([f.default], () => f.default.getCurrentUser()),
+        A = (0, _.k)(S);
+    if (null == S) return null;
+    let [C] = S.items,
+        R = () => (C.type === a.Z.AVATAR_DECORATION ? m.NW.string(m.t['7v0T9P']) : C.type === a.Z.PROFILE_EFFECT ? m.NW.string(m.t.wR5wOj) : null),
+        P = null != I && I.id !== (null == N ? void 0 : N.id),
+        w = () => {
             null != t && null != E && E(t);
         };
-    return (0, i.jsxs)('div', {
-        className: y,
+    return (0, r.jsxs)('div', {
+        className: O,
         children: [
-            v &&
-                (0, i.jsxs)('div', {
+            b &&
+                (0, r.jsxs)('div', {
                     className: g.previewTitleContainer,
                     children: [
-                        (0, i.jsx)(l.vwX, {
+                        (0, r.jsx)(l.vwX, {
                             className: g.previewTitle,
-                            children: m.intl.string(m.t.PpoJzs)
+                            children: m.NW.string(m.t.PpoJzs)
                         }),
-                        R &&
-                            (0, i.jsx)(
+                        P &&
+                            (0, r.jsx)(
                                 l.yRy,
                                 {
-                                    preload: () => (0, d.Z)(T.id, T.getAvatarURL(null, 80)),
+                                    preload: () => (0, d.Z)(I.id, I.getAvatarURL(null, 80)),
                                     renderPopout: (e) =>
-                                        (0, i.jsx)(c.Z, {
-                                            ...e,
-                                            user: T,
-                                            pendingAvatar: T.getAvatarURL(null, (0, l.pxk)(l.EFr.SIZE_80)),
-                                            pendingAvatarDecoration: N.type === s.Z.AVATAR_DECORATION ? N : null,
-                                            pendingProfileEffectId: N.type === s.Z.PROFILE_EFFECT ? N.id : null,
-                                            canUsePremiumCustomization: !0,
-                                            disabledInputs: !0
-                                        }),
+                                        (0, r.jsx)(
+                                            u.Z,
+                                            y(v({}, e), {
+                                                user: I,
+                                                pendingAvatar: I.getAvatarURL(null, (0, l.pxk)(l.EFr.SIZE_80)),
+                                                pendingAvatarDecoration: C.type === a.Z.AVATAR_DECORATION ? C : null,
+                                                pendingProfileEffectId: C.type === a.Z.PROFILE_EFFECT ? C.id : null,
+                                                canUsePremiumCustomization: !0,
+                                                disabledInputs: !0
+                                            })
+                                        ),
                                     align: 'center',
                                     position: 'right',
                                     children: (e) =>
-                                        (0, i.jsx)(l.P3F, {
-                                            ...e,
-                                            className: g.previewLink,
-                                            children: (0, i.jsx)(l.Text, {
-                                                variant: 'text-xs/medium',
-                                                color: 'text-link',
-                                                children: m.intl.string(m.t['2GnJQE'])
+                                        (0, r.jsx)(
+                                            l.P3F,
+                                            y(v({}, e), {
+                                                className: g.previewLink,
+                                                children: (0, r.jsx)(l.Text, {
+                                                    variant: 'text-xs/medium',
+                                                    color: 'text-link',
+                                                    children: m.NW.string(m.t['2GnJQE'])
+                                                })
                                             })
-                                        })
+                                        )
                                 },
-                                T.id
+                                I.id
                             )
                     ]
                 }),
-            (0, i.jsxs)(l.P3F, {
+            (0, r.jsxs)(l.P3F, {
                 tag: 'div',
-                onClick: O,
-                className: a()(g.previewContainer, {
-                    [g.previewContainerSelected]: n && null == b,
-                    [g.previewContainerError]: n && null != b
+                onClick: w,
+                className: o()(g.previewContainer, {
+                    [g.previewContainerSelected]: n && null == T,
+                    [g.previewContainerError]: n && null != T
                 }),
                 children: [
-                    (0, i.jsxs)('div', {
+                    (0, r.jsxs)('div', {
                         className: g.giftInfoContainer,
                         children: [
-                            (0, i.jsx)(h.O, {
-                                product: I,
+                            (0, r.jsx)(h.O, {
+                                product: S,
                                 fallbackLabel: null
                             }),
-                            (0, i.jsxs)('div', {
+                            (0, r.jsxs)('div', {
                                 className: g.previewTextContainer,
                                 children: [
-                                    (0, i.jsx)(l.Text, {
+                                    (0, r.jsx)(l.Text, {
                                         variant: 'text-md/semibold',
                                         children: A
                                     }),
-                                    (0, i.jsx)(l.X6q, {
+                                    (0, r.jsx)(l.X6q, {
                                         variant: 'heading-sm/medium',
                                         color: 'header-secondary',
-                                        children: C()
+                                        children: R()
                                     })
                                 ]
                             }),
-                            (0, i.jsx)(l.Text, {
+                            (0, r.jsx)(l.Text, {
                                 variant: 'text-md/semibold',
-                                children: r
+                                children: i
                             })
                         ]
                     }),
                     n &&
-                        null != b &&
-                        (0, i.jsx)('div', {
+                        null != T &&
+                        (0, r.jsx)('div', {
                             className: g.recipientError,
-                            children: (0, i.jsx)(l.Text, {
+                            children: (0, r.jsx)(l.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'status-danger-background',
-                                children: b
+                                children: T
                             })
                         })
                 ]

@@ -1,144 +1,171 @@
-s.d(i, { default: () => j }), s(47120);
-var a = s(200651),
-    o = s(192379),
-    n = s(392711),
-    r = s.n(n),
-    l = s(481060),
-    d = s(139387),
-    t = s(479531),
-    c = s(895924),
-    m = s(581364),
-    p = s(768581),
-    u = s(821864),
-    x = s(399860),
-    h = s(995390),
-    b = s(665578),
-    k = s(388032),
-    E = s(803800);
+r.d(i, { default: () => j }), r(47120);
+var s = r(200651),
+    o = r(192379),
+    n = r(392711),
+    t = r.n(n),
+    a = r(481060),
+    l = r(139387),
+    d = r(479531),
+    c = r(895924),
+    m = r(581364),
+    u = r(768581),
+    p = r(821864),
+    b = r(399860),
+    x = r(995390),
+    h = r(665578),
+    y = r(388032),
+    f = r(200670);
 function j(e) {
-    let { applicationIcon: i, applicationId: s, applicationName: n, command: p, guildId: j, onClose: v, transitionState: g } = e,
-        [C, f] = o.useState(null),
-        [z, I] = o.useState(!1),
-        { originalApplicationPermissions: N, originalCommandPermissions: w, editedTargetPermissions: P, hasChanges: R, selectedPermissionCount: _ } = (0, h.Z)(j, s, p.id),
-        A = o.useCallback(async () => {
-            var e, i, a, o, n;
-            if (!R) {
+    let { applicationIcon: i, applicationId: r, applicationName: n, command: u, guildId: j, onClose: v, transitionState: E } = e,
+        [g, N] = o.useState(null),
+        [w, C] = o.useState(!1),
+        { originalApplicationPermissions: P, originalCommandPermissions: z, editedTargetPermissions: O, hasChanges: I, selectedPermissionCount: R } = (0, x.Z)(j, r, u.id),
+        D = o.useCallback(async () => {
+            var e, i, s, o, n;
+            if (!I) {
                 v();
                 return;
             }
-            let l = r().difference(Object.keys(null !== (a = p.permissions) && void 0 !== a ? a : {}), Object.keys(P)),
-                d = r().omit({ ...P }, l),
-                h = (0, m.bD)(j),
-                b = (0, x.rE)(j, c.Kw.ROLE),
-                k = (0, x.rE)(h, c.Kw.CHANNEL),
-                E = null === (o = null === (e = N[b]) || void 0 === e ? void 0 : e.permission) || void 0 === o || o,
-                y = null === (n = null === (i = N[k]) || void 0 === i ? void 0 : i.permission) || void 0 === n || n,
-                g = Object.values(d).map((e) => ({
+            let a = t().difference(Object.keys(null !== (s = u.permissions) && void 0 !== s ? s : {}), Object.keys(O)),
+                l = t().omit(
+                    (function (e) {
+                        for (var i = 1; i < arguments.length; i++) {
+                            var r = null != arguments[i] ? arguments[i] : {},
+                                s = Object.keys(r);
+                            'function' == typeof Object.getOwnPropertySymbols &&
+                                (s = s.concat(
+                                    Object.getOwnPropertySymbols(r).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                    })
+                                )),
+                                s.forEach(function (i) {
+                                    var s;
+                                    (s = r[i]),
+                                        i in e
+                                            ? Object.defineProperty(e, i, {
+                                                  value: s,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0
+                                              })
+                                            : (e[i] = s);
+                                });
+                        }
+                        return e;
+                    })({}, O),
+                    a
+                ),
+                x = (0, m.bD)(j),
+                h = (0, b.rE)(j, c.Kw.ROLE),
+                y = (0, b.rE)(x, c.Kw.CHANNEL),
+                f = null === (o = null === (e = P[h]) || void 0 === e ? void 0 : e.permission) || void 0 === o || o,
+                k = null === (n = null === (i = P[y]) || void 0 === i ? void 0 : i.permission) || void 0 === n || n,
+                E = Object.values(l).map((e) => ({
                     id: e.id,
                     permission: e.permission,
                     type: e.type
                 }));
-            f(null), I(!0);
+            N(null), C(!0);
             try {
-                await u.U3({
-                    defaultEveryoneValue: E,
-                    defaultEverywhereValue: y,
-                    applicationId: s,
-                    commandId: p.id,
+                await p.U3({
+                    defaultEveryoneValue: f,
+                    defaultEverywhereValue: k,
+                    applicationId: r,
+                    commandId: u.id,
                     guildId: j,
-                    permissions: g
+                    permissions: E
                 }),
-                    I(!1),
+                    C(!1),
                     v();
             } catch (e) {
-                f(new t.Z(e));
+                N(new d.Z(e));
             }
-            I(!1);
-        }, [s, N, p.id, p.permissions, j, R, v, P, f, I]);
+            C(!1);
+        }, [r, P, u.id, u.permissions, j, I, v, O, N, C]);
     o.useEffect(
         () => () => {
-            u.Ui(p.id), d.Z.stopEditingCommandPermissions(p.id);
+            p.Ui(u.id), l.Z.stopEditingCommandPermissions(u.id);
         },
-        [p.id]
+        [u.id]
     );
-    let B = (0, x.gw)(p.type, p.displayName);
-    return (0, a.jsxs)(l.Y0X, {
-        'aria-label': k.intl.string(k.t['N+InBQ']),
-        size: l.CgR.MEDIUM,
-        transitionState: g,
+    let _ = (0, b.gw)(u.type, u.displayName);
+    return (0, s.jsxs)(a.Y0X, {
+        'aria-label': y.NW.string(y.t['N+InBQ']),
+        size: a.CgR.MEDIUM,
+        transitionState: E,
         children: [
-            (0, a.jsxs)(l.xBx, {
+            (0, s.jsxs)(a.xBx, {
                 separator: !1,
-                className: E.modalHeader,
+                className: f.modalHeader,
                 children: [
-                    (0, a.jsx)(y, {
+                    (0, s.jsx)(k, {
                         icon: i,
-                        id: s,
+                        id: r,
                         name: n
                     }),
-                    (0, a.jsxs)('div', {
-                        className: E.headerDescription,
+                    (0, s.jsxs)('div', {
+                        className: f.headerDescription,
                         children: [
-                            (0, a.jsx)(l.Text, {
+                            (0, s.jsx)(a.Text, {
                                 variant: 'text-md/semibold',
-                                children: B
+                                children: _
                             }),
-                            (0, a.jsx)(l.Text, {
+                            (0, s.jsx)(a.Text, {
                                 color: 'text-muted',
                                 variant: 'text-sm/normal',
-                                children: p.displayDescription
+                                children: u.displayDescription
                             })
                         ]
                     })
                 ]
             }),
-            (0, a.jsxs)(l.hzk, {
-                className: E.modalBody,
+            (0, s.jsxs)(a.hzk, {
+                className: f.modalBody,
                 children: [
-                    null == C || C.hasFieldErrors() ? null : (0, a.jsx)(l.kzN, { children: C.getAnyErrorMessage() }),
-                    (0, a.jsx)(b.Z, {
-                        applicationId: s,
-                        commandId: p.id,
+                    null == g || g.hasFieldErrors() ? null : (0, s.jsx)(a.kzN, { children: g.getAnyErrorMessage() }),
+                    (0, s.jsx)(h.Z, {
+                        applicationId: r,
+                        commandId: u.id,
                         guildId: j,
                         inModal: !0,
-                        originalApplicationPermissions: N,
-                        originalCommandPermissions: w,
-                        editedTargetPermissions: P,
-                        selectedPermissionCount: _
+                        originalApplicationPermissions: P,
+                        originalCommandPermissions: z,
+                        editedTargetPermissions: O,
+                        selectedPermissionCount: R
                     })
                 ]
             }),
-            (0, a.jsxs)(l.mzw, {
-                className: E.modalFooter,
+            (0, s.jsxs)(a.mzw, {
+                className: f.modalFooter,
                 children: [
-                    (0, a.jsx)(l.zxk, {
+                    (0, s.jsx)(a.zxk, {
                         type: 'submit',
-                        disabled: z,
-                        onClick: A,
-                        color: !0 === R ? l.zxk.Colors.GREEN : l.zxk.Colors.PRIMARY,
-                        children: k.intl.string(k.t.R3BPHx)
+                        disabled: w,
+                        onClick: D,
+                        color: !0 === I ? a.zxk.Colors.GREEN : a.zxk.Colors.PRIMARY,
+                        children: y.NW.string(y.t.R3BPHx)
                     }),
-                    (0, a.jsx)(l.zxk, {
+                    (0, s.jsx)(a.zxk, {
                         onClick: v,
-                        look: l.zxk.Looks.LINK,
-                        color: l.zxk.Colors.PRIMARY,
-                        children: k.intl.string(k.t['ETE/oK'])
+                        look: a.zxk.Looks.LINK,
+                        color: a.zxk.Colors.PRIMARY,
+                        children: y.NW.string(y.t['ETE/oK'])
                     })
                 ]
             })
         ]
     });
 }
-function y(e) {
-    let { icon: i, id: s } = e,
-        o = p.ZP.getApplicationIconURL({
-            id: s,
+function k(e) {
+    let { icon: i, id: r } = e,
+        o = u.ZP.getApplicationIconURL({
+            id: r,
             icon: i,
             size: 40
         });
-    return (0, a.jsx)(l.qEK, {
+    return (0, s.jsx)(a.qEK, {
         src: o,
-        size: l.EFr.SIZE_40,
+        size: a.EFr.SIZE_40,
         'aria-hidden': !0
     });
 }

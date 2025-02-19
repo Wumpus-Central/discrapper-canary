@@ -1,250 +1,313 @@
-n.d(t, {
-    U: () => L,
-    default: () => N,
-    t: () => k
+r.d(t, {
+    U: () => C,
+    default: () => M,
+    t: () => L
 }),
-    n(47120),
-    n(653041);
-var l = n(200651),
-    i = n(192379),
-    s = n(442837),
-    r = n(481060),
-    a = n(741361),
-    o = n(461745),
-    c = n(600164),
-    d = n(313201),
-    u = n(131704),
-    x = n(592125),
-    m = n(271383),
-    h = n(430824),
-    g = n(626135),
-    E = n(934415),
-    b = n(892880),
-    T = n(226951),
-    y = n(605436),
-    j = n(971628),
-    p = n(71080),
-    R = n(981631),
-    S = n(494831),
-    f = n(388032),
-    v = n(929434);
-let w = (0, d.hQ)();
-function C(e, t) {
+    r(266796),
+    r(47120),
+    r(566702),
+    r(474991),
+    r(398202),
+    r(301563),
+    r(653041);
+var n = r(200651),
+    l = r(192379),
+    i = r(442837),
+    a = r(481060),
+    s = r(741361),
+    o = r(461745),
+    c = r(600164),
+    d = r(313201),
+    u = r(131704),
+    m = r(592125),
+    x = r(271383),
+    h = r(430824),
+    b = r(626135),
+    y = r(934415),
+    f = r(892880),
+    p = r(226951),
+    g = r(605436),
+    j = r(971628),
+    v = r(71080),
+    E = r(981631),
+    S = r(494831),
+    T = r(388032),
+    w = r(195126);
+function R(e) {
+    var t = (function (e, t) {
+        if ('object' !== O(e) || null === e) return e;
+        var r = e[Symbol.toPrimitive];
+        if (void 0 !== r) {
+            var n = r.call(e, t || 'default');
+            if ('object' !== O(n)) return n;
+            throw TypeError('@@toPrimitive must return a primitive value.');
+        }
+        return ('string' === t ? String : Number)(e);
+    })(e, 'string');
+    return 'symbol' === O(t) ? t : String(t);
+}
+function O(e) {
+    return e && 'undefined' != typeof Symbol && e.constructor === Symbol ? 'symbol' : typeof e;
+}
+let N = (0, d.hQ)();
+function k(e, t) {
     return t ? e.slice(1) : e;
 }
-function L(e) {
+function C(e) {
     let t,
-        { guild: n, channel: r, permission: a, pendingAdditions: c, setPendingAdditions: d, isStageChannel: u = null != r && r.isGuildStageVoice(), description: x } = e,
-        [g, E] = i.useState(!1),
-        [R, S] = i.useState(''),
-        v = (0, s.e7)([h.Z], () => h.Z.getRoles(n.id));
-    function w(e) {
-        let t = C(R.trim(), g);
-        return RegExp(''.concat(T.Z.escape(t)), 'i').test(e);
+        { guild: r, channel: a, permission: s, pendingAdditions: c, setPendingAdditions: d, isStageChannel: u = null != a && a.isGuildStageVoice(), description: m } = e,
+        [b, y] = l.useState(!1),
+        [E, S] = l.useState(''),
+        w = (0, i.e7)([h.Z], () => h.Z.getRoles(r.id));
+    function O(e) {
+        let t = k(E.trim(), b);
+        return RegExp(''.concat(p.Z.escape(t)), 'i').test(e);
     }
-    let L = (0, s.Wu)([m.ZP], () => m.ZP.getMemberIds(n.id));
-    g ? (t = []) : u ? (t = y.Wx(n, v, r, a, w)) : 0 !== (t = y.ik(n, v, r, a, w)).length || '' !== R.trim() || y.RD(n, v) || (t = y.aq());
-    let N = y.iI(L, r, n, a, w),
+    let N = (0, i.Wu)([x.ZP], () => x.ZP.getMemberIds(r.id));
+    b ? (t = []) : u ? (t = g.Wx(r, w, a, s, O)) : 0 !== (t = g.ik(r, w, a, s, O)).length || '' !== E.trim() || g.RD(r, w) || (t = g.aq());
+    let C = g.iI(N, a, r, s, O),
         {
             placeholderText: M,
-            hintText: Z,
-            renderEmptyText: z
+            hintText: P,
+            renderEmptyText: Z
         } = {
-            placeholderText: f.intl.string(f.t.iezLLi),
-            hintText: f.intl.string(f.t['rwFx8/']),
-            renderEmptyText: (e) => f.intl.format(f.t.ErpIY2, { query: e })
+            placeholderText: T.NW.string(T.t.iezLLi),
+            hintText: T.NW.string(T.t['rwFx8/']),
+            renderEmptyText: (e) => T.NW.format(T.t.ErpIY2, { query: e })
         };
-    return (0, l.jsx)(k, {
+    return (0, n.jsx)(L, {
         pendingAdditions: c,
-        query: R,
+        query: E,
         onQueryChange: function (e) {
             let t = e.trim(),
-                l = '@' === t.charAt(0);
-            b.Z.requestMembers(n.id, C(t, l), p.EQ), S(e), E(l);
+                n = '@' === t.charAt(0);
+            f.Z.requestMembers(r.id, k(t, n), v.EQ), S(e), y(n);
         },
         onClickRow: function (e) {
             let t = (0, j.G)(e);
-            d((n) => {
-                let l = { ...n };
-                if (t in l) delete l[t];
+            d((r) => {
+                let n = (function (e) {
+                    for (var t = 1; t < arguments.length; t++) {
+                        var r = null != arguments[t] ? arguments[t] : {},
+                            n = Object.keys(r);
+                        'function' == typeof Object.getOwnPropertySymbols &&
+                            (n = n.concat(
+                                Object.getOwnPropertySymbols(r).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                })
+                            )),
+                            n.forEach(function (t) {
+                                var n;
+                                (n = r[t]),
+                                    t in e
+                                        ? Object.defineProperty(e, t, {
+                                              value: n,
+                                              enumerable: !0,
+                                              configurable: !0,
+                                              writable: !0
+                                          })
+                                        : (e[t] = n);
+                            });
+                    }
+                    return e;
+                })({}, r);
+                if (t in n) delete n[t];
                 else {
-                    let n;
-                    e.rowType === p.aC.ROLE || e.rowType === p.aC.ADMINISTRATOR
-                        ? (n = {
+                    let r;
+                    e.rowType === v.aC.ROLE || e.rowType === v.aC.ADMINISTRATOR
+                        ? (r = {
                               type: o.Fj.ROLE,
                               label: e.name,
                               color: e.colorString
                           })
-                        : (e.rowType === p.aC.MEMBER || e.rowType === p.aC.OWNER) &&
-                          (n = {
+                        : (e.rowType === v.aC.MEMBER || e.rowType === v.aC.OWNER) &&
+                          (r = {
                               type: o.Fj.MEMBER,
                               label: e.name,
                               avatar: e.avatarURL
                           }),
-                        null != n &&
-                            (l[t] = {
-                                display: n,
+                        null != r &&
+                            (n[t] = {
+                                display: r,
                                 row: e
                             });
                 }
-                return l;
+                return n;
             });
         },
         onRemovePendingAddition: function (e) {
             d((t) => {
-                let { [e]: n, ...l } = t;
-                return l;
+                let { [e]: r } = t;
+                return (function (e, t) {
+                    if (null == e) return {};
+                    var r,
+                        n,
+                        l = (function (e, t) {
+                            if (null == e) return {};
+                            var r,
+                                n,
+                                l = {},
+                                i = Object.keys(e);
+                            for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (l[r] = e[r]);
+                            return l;
+                        })(e, t);
+                    if (Object.getOwnPropertySymbols) {
+                        var i = Object.getOwnPropertySymbols(e);
+                        for (n = 0; n < i.length; n++) (r = i[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
+                    }
+                    return l;
+                })(t, [e].map(R));
             });
         },
         roles: t,
-        members: N,
+        members: C,
         placeholderText: M,
-        hintText: Z,
-        renderEmptyText: z,
+        hintText: P,
+        renderEmptyText: Z,
         isStageChannel: u,
-        description: x
+        description: m
     });
 }
-function k(e) {
+function L(e) {
     let t,
-        { listClassName: n, pendingAdditions: i, query: s, onQueryChange: a, onClickRow: o, onRemovePendingAddition: c, roles: d, members: u, placeholderText: x, hintText: m, renderEmptyText: h, isStageChannel: g, focusSearchAfterReady: E, isReady: b, description: T } = e;
-    return (0, l.jsxs)('div', {
-        className: v.content,
+        { listClassName: r, pendingAdditions: l, query: i, onQueryChange: s, onClickRow: o, onRemovePendingAddition: c, roles: d, members: u, placeholderText: m, hintText: x, renderEmptyText: h, isStageChannel: b, focusSearchAfterReady: y, isReady: f, description: p } = e;
+    return (0, n.jsxs)('div', {
+        className: w.content,
         children: [
-            (null == (t = T) && g && (t = f.intl.string(f.t.f7VbhI)), null == t || '' === t)
+            (null == (t = p) && b && (t = T.NW.string(T.t.f7VbhI)), null == t || '' === t)
                 ? null
-                : (0, l.jsx)(r.Text, {
+                : (0, n.jsx)(a.Text, {
                       color: 'header-secondary',
-                      className: v.description,
+                      className: w.description,
                       variant: 'text-sm/normal',
                       children: t
                   }),
-            (0, l.jsx)(j.Z, {
-                listClassName: n,
-                pendingAdditions: i,
-                query: s,
-                onQueryChange: a,
+            (0, n.jsx)(j.Z, {
+                listClassName: r,
+                pendingAdditions: l,
+                query: i,
+                onQueryChange: s,
                 onClickRow: o,
                 onRemovePendingAddition: c,
                 roles: d,
                 members: u,
-                placeholderText: x,
-                hintText: m,
+                placeholderText: m,
+                hintText: x,
                 renderEmptyText: h,
-                disabledText: g ? f.intl.string(f.t.MVVOCg) : null,
-                focusSearchAfterReady: E,
-                isReady: b,
+                disabledText: b ? T.NW.string(T.t.MVVOCg) : null,
+                focusSearchAfterReady: y,
+                isReady: f,
                 maxCount: S.ey
             })
         ]
     });
 }
-function N(e) {
-    let { transitionState: t, onClose: n, channelId: o, newChannel: d, inSettings: m } = e,
-        [b, T] = i.useState(!1),
-        [y, j] = i.useState({}),
-        S = (0, s.e7)([x.Z], () => x.Z.getChannel(o), [o]),
-        C = (0, s.e7)([h.Z], () => h.Z.getGuild(null == S ? void 0 : S.getGuildId()));
+function M(e) {
+    let { transitionState: t, onClose: r, channelId: o, newChannel: d, inSettings: x } = e,
+        [f, p] = l.useState(!1),
+        [g, j] = l.useState({}),
+        S = (0, i.e7)([m.Z], () => m.Z.getChannel(o), [o]),
+        R = (0, i.e7)([h.Z], () => h.Z.getGuild(null == S ? void 0 : S.getGuildId()));
     if (
-        (i.useEffect(() => {
-            g.default.track(R.rMx.OPEN_MODAL, { type: 'Grant Channel Access' });
+        (l.useEffect(() => {
+            b.default.track(E.rMx.OPEN_MODAL, { type: 'Grant Channel Access' });
         }, []),
-        null == S || null == C)
+        null == S || null == R)
     )
         return null;
-    let k = d && 0 === Object.keys(y).length;
-    async function N() {
-        if (null == S || 0 === Object.keys(y).length) {
-            n();
+    let O = d && 0 === Object.keys(g).length;
+    async function k() {
+        if (null == S || 0 === Object.keys(g).length) {
+            r();
             return;
         }
-        T(!0);
+        p(!0);
         try {
-            await (function (e, t, n) {
-                let l = [];
+            await (function (e, t, r) {
+                let n = [];
                 return (
                     Object.values(t).forEach((t) => {
-                        let { row: n } = t;
-                        null != n.id && '' !== n.id && (n.rowType === p.aC.ROLE ? l.push((0, E.rX)(n.id, e.type)) : n.rowType === p.aC.MEMBER && l.push((0, E.jZ)(n.id, e.type)));
+                        let { row: r } = t;
+                        null != r.id && '' !== r.id && (r.rowType === v.aC.ROLE ? n.push((0, y.rX)(r.id, e.type)) : r.rowType === v.aC.MEMBER && n.push((0, y.jZ)(r.id, e.type)));
                     }),
-                    (0, a.hw)(e.id, l, n)
+                    (0, s.hw)(e.id, n, r)
                 );
-            })(S, y, m),
-                n(),
-                T(!1);
+            })(S, g, x),
+                r(),
+                p(!1);
         } catch (e) {
-            T(!1);
+            p(!1);
         }
     }
-    let M = (0, u.zi)(S.type) ? r.W4G : r.gjC;
-    return (0, l.jsxs)(r.Y0X, {
+    let L = (0, u.zi)(S.type) ? a.W4G : a.gjC;
+    return (0, n.jsxs)(a.Y0X, {
         transitionState: t,
-        size: r.CgR.SMALL,
-        'aria-labelledby': w,
-        className: v.modalRoot,
+        size: a.CgR.SMALL,
+        'aria-labelledby': N,
+        className: w.modalRoot,
         children: [
-            (0, l.jsxs)(r.xBx, {
+            (0, n.jsxs)(a.xBx, {
                 separator: !1,
                 direction: c.Z.Direction.VERTICAL,
                 align: c.Z.Align.CENTER,
-                className: v.header,
+                className: w.header,
                 children: [
-                    (0, l.jsx)(r.X6q, {
-                        id: w,
+                    (0, n.jsx)(a.X6q, {
+                        id: N,
                         variant: 'heading-xl/semibold',
-                        children: f.intl.string(f.t.dMJ3Y2)
+                        children: T.NW.string(T.t.dMJ3Y2)
                     }),
-                    (0, l.jsxs)(r.Text, {
+                    (0, n.jsxs)(a.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        className: v.headerSubtitle,
+                        className: w.headerSubtitle,
                         children: [
-                            (0, l.jsx)(M, {
+                            (0, n.jsx)(L, {
                                 size: 'xs',
                                 color: 'currentColor',
-                                className: v.headerSubtitleIcon
+                                className: w.headerSubtitleIcon
                             }),
                             S.name
                         ]
                     })
                 ]
             }),
-            (0, l.jsx)(L, {
-                guild: C,
+            (0, n.jsx)(C, {
+                guild: R,
                 channel: S,
                 permission: S.accessPermissions,
-                pendingAdditions: y,
+                pendingAdditions: g,
                 setPendingAdditions: j
             }),
-            (0, l.jsxs)(r.mzw, {
+            (0, n.jsxs)(a.mzw, {
                 children: [
-                    !k &&
-                        (0, l.jsxs)(l.Fragment, {
+                    !O &&
+                        (0, n.jsxs)(n.Fragment, {
                             children: [
-                                (0, l.jsx)(r.zxk, {
-                                    onClick: N,
-                                    look: r.zxk.Looks.FILLED,
-                                    size: r.zxk.Sizes.SMALL,
-                                    className: v.button,
-                                    submitting: b,
-                                    children: f.intl.string(f.t.i4jeWV)
+                                (0, n.jsx)(a.zxk, {
+                                    onClick: k,
+                                    look: a.zxk.Looks.FILLED,
+                                    size: a.zxk.Sizes.SMALL,
+                                    className: w.button,
+                                    submitting: f,
+                                    children: T.NW.string(T.t.i4jeWV)
                                 }),
-                                (0, l.jsx)(r.zxk, {
-                                    look: r.zxk.Looks.LINK,
-                                    color: r.zxk.Colors.TRANSPARENT,
-                                    onClick: n,
-                                    size: r.zxk.Sizes.SMALL,
-                                    children: f.intl.string(f.t['ETE/oK'])
+                                (0, n.jsx)(a.zxk, {
+                                    look: a.zxk.Looks.LINK,
+                                    color: a.zxk.Colors.TRANSPARENT,
+                                    onClick: r,
+                                    size: a.zxk.Sizes.SMALL,
+                                    children: T.NW.string(T.t['ETE/oK'])
                                 })
                             ]
                         }),
-                    k &&
-                        (0, l.jsx)(r.zxk, {
-                            look: r.zxk.Looks.FILLED,
-                            color: r.zxk.Colors.PRIMARY,
-                            onClick: n,
-                            size: r.zxk.Sizes.SMALL,
-                            children: f.intl.string(f.t.u46sxc)
+                    O &&
+                        (0, n.jsx)(a.zxk, {
+                            look: a.zxk.Looks.FILLED,
+                            color: a.zxk.Colors.PRIMARY,
+                            onClick: r,
+                            size: a.zxk.Sizes.SMALL,
+                            children: T.NW.string(T.t.u46sxc)
                         })
                 ]
             })

@@ -2,31 +2,30 @@ n.d(t, {
     HV: () => d,
     Tp: () => c,
     Xv: () => o
-}),
-    n(724458);
-var i = n(392711),
-    s = n(605387),
-    r = n.n(s);
-let l = (e) => r().decode(e),
-    a = (e) => Math.round(e.frames.reduce((e, t) => e + t.delay, 0)),
-    o = async (e, t, n, i) => ({
+});
+var r = n(392711),
+    i = n(605387),
+    s = n.n(i);
+let a = (e) => s().decode(e),
+    l = (e) => Math.round(e.frames.reduce((e, t) => e + t.delay, 0)),
+    o = async (e, t, n, r) => ({
         src: e,
         base64: t,
         loop: !1,
         loopDelay: 0,
-        duration: a(l(await n.arrayBuffer())),
+        duration: l(a(await n.arrayBuffer())),
         start: 0,
         position: {
             x: 0,
             y: 0
         },
-        zIndex: 100 + i,
+        zIndex: 100 + r,
         height: 880,
         width: 450,
         name: n.name
     }),
     c = (e) => {
-        let t = (0, i.cloneDeep)(e),
+        let t = (0, r.cloneDeep)(e),
             n = Math.floor(101 * Math.random()) + 150;
         return (
             t.forEach((e) => {

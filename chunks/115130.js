@@ -1,15 +1,15 @@
 n.d(t, {
-    O: () => f,
-    Z: () => b
+    O: () => p,
+    Z: () => I
 }),
     n(789020);
-var i,
-    r = n(442837),
-    a = n(570140),
-    s = n(695346),
-    o = n(630388),
+var r,
+    i = n(442837),
+    o = n(570140),
+    a = n(695346),
+    s = n(630388),
     l = n(981631);
-function u(e, t, n) {
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,23 @@ function u(e, t, n) {
         e
     );
 }
-function c() {
+function u(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                c(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function d() {
     return {
         lastUsedObject: {},
         useActivityUrlOverride: !1,
@@ -30,85 +46,82 @@ function c() {
         filter: ''
     };
 }
-let d = c();
-var f = (function (e) {
+let f = d();
+var p = (function (e) {
     return (e.INITIALIZED = 'INITIALIZED'), (e.LOADING = 'LOADING'), (e.LOADED = 'LOADED'), (e.ERROR = 'ERROR'), e;
 })({});
 let _ = 'INITIALIZED',
-    p = [];
-function h() {
-    (d = c()), (_ = 'INITIALIZED'), (p = []);
-}
+    h = [];
 function m() {
-    d.useActivityUrlOverride = !d.useActivityUrlOverride;
+    (f = d()), (_ = 'INITIALIZED'), (h = []);
 }
-function g(e) {
-    let { activityUrlOverride: t } = e;
-    d.activityUrlOverride = t;
+function g() {
+    f.useActivityUrlOverride = !f.useActivityUrlOverride;
 }
 function E(e) {
-    let { applicationId: t, timestamp: n } = e;
-    if (null == p.find((e) => e.id === t)) return !1;
-    d.lastUsedObject[t] = n;
+    let { activityUrlOverride: t } = e;
+    f.activityUrlOverride = t;
 }
 function v(e) {
+    let { applicationId: t, timestamp: n } = e;
+    if (null == h.find((e) => e.id === t)) return !1;
+    f.lastUsedObject[t] = n;
+}
+function b(e) {
     let { applications: t } = e;
-    (_ = 'LOADED'), (p = t.filter((e) => null != e.flags && (0, o.yE)(e.flags, l.udG.EMBEDDED)));
+    (_ = 'LOADED'), (h = t.filter((e) => null != e.flags && (0, s.yE)(e.flags, l.udG.EMBEDDED)));
 }
 function y(e) {
     let { type: t } = e;
     _ = 'ERROR';
 }
-function I(e) {
+function O(e) {
     let { filter: t } = e;
-    d.filter = t;
+    f.filter = t;
 }
-class T extends (i = r.ZP.PersistedStore) {
+class S extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        d = {
-            ...c(),
-            ...(null != e ? e : {})
-        };
+        f = u({}, d(), null != e ? e : {});
     }
     getState() {
-        return d;
+        return f;
     }
     getIsEnabled() {
-        return s.Sb.getSetting() && p.length > 0;
+        return a.Sb.getSetting() && h.length > 0;
     }
     getLastUsedObject() {
-        return d.lastUsedObject;
+        return f.lastUsedObject;
     }
     getUseActivityUrlOverride() {
-        return this.getIsEnabled() && d.useActivityUrlOverride;
+        return this.getIsEnabled() && f.useActivityUrlOverride;
     }
     getActivityUrlOverride() {
-        return this.getIsEnabled() ? d.activityUrlOverride : null;
+        return this.getIsEnabled() ? f.activityUrlOverride : null;
     }
     getFetchState() {
         return _;
     }
     getFilter() {
-        return this.getIsEnabled() ? d.filter : '';
+        return this.getIsEnabled() ? f.filter : '';
     }
     getDeveloperShelfItems() {
-        return this.getIsEnabled() ? p : [];
+        return this.getIsEnabled() ? h : [];
     }
     inDevModeForApplication(e) {
-        return this.getIsEnabled() && null != p.find((t) => t.id === e);
+        return this.getIsEnabled() && null != h.find((t) => t.id === e);
     }
 }
-u(T, 'displayName', 'DeveloperActivityShelfStore'), u(T, 'persistKey', 'DeveloperActivityShelfStore'), u(T, 'migrations', [(e) => (delete e.isEnabled, { ...e })]);
-let b = new T(a.Z, {
-    LOGOUT: h,
-    DEVELOPER_ACTIVITY_SHELF_TOGGLE_USE_ACTIVITY_URL_OVERRIDE: m,
-    DEVELOPER_ACTIVITY_SHELF_SET_ACTIVITY_URL_OVERRIDE: g,
-    DEVELOPER_ACTIVITY_SHELF_MARK_ACTIVITY_USED: E,
+c(S, 'displayName', 'DeveloperActivityShelfStore'), c(S, 'persistKey', 'DeveloperActivityShelfStore'), c(S, 'migrations', [(e) => (delete e.isEnabled, u({}, e))]);
+let I = new S(o.Z, {
+    LOGOUT: m,
+    DEVELOPER_ACTIVITY_SHELF_TOGGLE_USE_ACTIVITY_URL_OVERRIDE: g,
+    DEVELOPER_ACTIVITY_SHELF_SET_ACTIVITY_URL_OVERRIDE: E,
+    DEVELOPER_ACTIVITY_SHELF_MARK_ACTIVITY_USED: v,
     DEVELOPER_ACTIVITY_SHELF_FETCH_START() {
         _ = 'LOADING';
     },
-    DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS: v,
+    DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS: b,
     DEVELOPER_ACTIVITY_SHELF_FETCH_FAIL: y,
-    DEVELOPER_ACTIVITY_SHELF_UPDATE_FILTER: I,
+    DEVELOPER_ACTIVITY_SHELF_UPDATE_FILTER: O,
     USER_SETTINGS_PROTO_UPDATE() {}
 });

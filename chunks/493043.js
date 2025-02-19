@@ -1,22 +1,82 @@
-n.d(t, { Z: () => o });
-var i = n(200651);
+n.d(t, { Z: () => d });
+var r = n(200651);
 n(192379);
-var r = n(456644),
-    a = n(769140),
-    s = n(382425);
-function o(e) {
-    let { location: t, profileGuildId: n, user: o, currentUser: l, ...u } = e,
-        { recentActivityEnabled: c } = (0, r.i)({ location: t });
-    return o.id !== l.id && c
-        ? (0, i.jsx)(s.Z, {
-              currentUser: l,
-              user: o,
-              profileGuildId: n,
-              ...u
-          })
-        : (0, i.jsx)(a.Z, {
-              currentUser: l,
-              user: o,
-              ...u
-          });
+var i = n(456644),
+    o = n(769140),
+    a = n(382425);
+function s(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function l(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                s(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function c(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = u(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function u(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+function d(e) {
+    var { location: t, profileGuildId: n, user: s, currentUser: u } = e,
+        d = c(e, ['location', 'profileGuildId', 'user', 'currentUser']);
+    let { recentActivityEnabled: f } = (0, i.i)({ location: t });
+    return s.id !== u.id && f
+        ? (0, r.jsx)(
+              a.Z,
+              l(
+                  {
+                      currentUser: u,
+                      user: s,
+                      profileGuildId: n
+                  },
+                  d
+              )
+          )
+        : (0, r.jsx)(
+              o.Z,
+              l(
+                  {
+                      currentUser: u,
+                      user: s
+                  },
+                  d
+              )
+          );
 }

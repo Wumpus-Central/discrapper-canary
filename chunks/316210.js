@@ -1,143 +1,172 @@
-s.d(t, { default: () => g });
-var n = s(200651),
-    a = s(192379),
-    i = s(481060),
-    r = s(600164),
-    o = s(63063),
-    l = s(497505),
-    c = s(918701),
-    d = s(981631),
-    m = s(388032),
-    x = s(176714),
-    u = s(708901);
-let _ = (e) => {
+n.d(t, { default: () => g });
+var r = n(200651),
+    s = n(192379),
+    a = n(481060),
+    o = n(600164),
+    i = n(63063),
+    c = n(497505),
+    l = n(918701),
+    d = n(981631),
+    m = n(388032),
+    u = n(928409),
+    f = n(708901);
+let x = (e) => {
     switch (e) {
-        case l.jn.QUEST_BAR:
-        case l.jn.QUEST_BAR_V2:
+        case c.jn.QUEST_BAR:
+        case c.jn.QUEST_BAR_V2:
             return {
                 location: !0,
                 age: !0,
                 activity: !0
             };
-        case l.jn.ACTIVITY_PANEL:
-        case l.jn.QUESTS_EMBED:
-        case l.jn.QUEST_LIVE_STREAM:
+        case c.jn.ACTIVITY_PANEL:
+        case c.jn.QUESTS_EMBED:
+        case c.jn.QUEST_LIVE_STREAM:
             return { activity: !0 };
         default:
             return;
     }
 };
 function g(e) {
-    let { transitionState: t, onClose: s, questContent: l, quest: g } = e,
-        f = _(l),
-        j = a.useMemo(() => {
+    let { transitionState: t, onClose: n, questContent: c, quest: g } = e,
+        _ = x(c),
+        h = s.useMemo(() => {
             var e;
-            return (0, c.Fs)({
-                isTargetedDisclosure: null != f,
+            return (0, l.Fs)({
+                isTargetedDisclosure: null != _,
                 gamePublisher: g.config.messages.gamePublisher,
                 gameTitle: g.config.messages.gameTitle,
                 cosponsorName: null === (e = g.config.cosponsorMetadata) || void 0 === e ? void 0 : e.name
             });
-        }, [g, f]);
-    return (0, n.jsxs)(i.Y0X, {
+        }, [g, _]);
+    return (0, r.jsxs)(a.Y0X, {
         transitionState: t,
-        size: i.CgR.DYNAMIC,
-        className: x.modalRoot,
+        size: a.CgR.DYNAMIC,
+        className: u.modalRoot,
         children: [
-            (0, n.jsxs)(i.xBx, {
-                direction: r.Z.Direction.VERTICAL,
+            (0, r.jsxs)(a.xBx, {
+                direction: o.Z.Direction.VERTICAL,
                 separator: !1,
-                className: x.modalHeader,
+                className: u.modalHeader,
                 children: [
-                    (0, n.jsxs)('div', {
-                        className: x.modalTop,
+                    (0, r.jsxs)('div', {
+                        className: u.modalTop,
                         children: [
-                            (0, n.jsx)('div', {
-                                className: x.iconFrame,
-                                children: (0, n.jsx)('img', {
-                                    className: x.icon,
+                            (0, r.jsx)('div', {
+                                className: u.iconFrame,
+                                children: (0, r.jsx)('img', {
+                                    className: u.icon,
                                     alt: '',
-                                    src: u
+                                    src: f
                                 })
                             }),
-                            (0, n.jsx)(i.olH, {
-                                className: x.closeBtn,
-                                onClick: s
+                            (0, r.jsx)(a.olH, {
+                                className: u.closeBtn,
+                                onClick: n
                             })
                         ]
                     }),
-                    (0, n.jsx)(i.X6q, {
+                    (0, r.jsx)(a.X6q, {
                         variant: 'heading-xl/bold',
-                        children: m.intl.string(m.t.GcsZKC)
+                        children: m.NW.string(m.t.GcsZKC)
                     })
                 ]
             }),
-            (0, n.jsxs)(i.hzk, {
-                className: x.modalContent,
+            (0, r.jsxs)(a.hzk, {
+                className: u.modalContent,
                 children: [
-                    (0, n.jsx)(i.Text, {
+                    (0, r.jsx)(a.Text, {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
-                        className: x.upperBodyText,
-                        children: j
+                        className: u.upperBodyText,
+                        children: h
                     }),
-                    (0, n.jsx)(h, { targetedTraits: f }),
-                    (0, n.jsx)(i.Text, {
+                    (0, r.jsx)(j, { targetedTraits: _ }),
+                    (0, r.jsx)(a.Text, {
                         variant: 'text-xs/medium',
                         color: 'text-muted',
-                        children: m.intl.format(m.t.tzq9WV, { privacySettingsUrl: o.Z.getArticleURL(d.BhN.QUESTS_PRIVACY_CONTROLS) })
+                        children: m.NW.format(m.t.tzq9WV, { privacySettingsUrl: i.Z.getArticleURL(d.BhN.QUESTS_PRIVACY_CONTROLS) })
                     })
                 ]
             }),
-            (0, n.jsx)(i.mzw, {
-                className: x.footer,
-                children: (0, n.jsx)(i.zxk, {
-                    onClick: s,
-                    children: m.intl.string(m.t.cpT0Cg)
+            (0, r.jsx)(a.mzw, {
+                className: u.footer,
+                children: (0, r.jsx)(a.zxk, {
+                    onClick: n,
+                    children: m.NW.string(m.t.cpT0Cg)
                 })
             })
         ]
     });
 }
-function f(e) {
-    let { location: t, age: s, activity: a } = e;
-    return (0, n.jsxs)('ul', {
-        className: x.targetList,
+function _(e) {
+    let { location: t, age: n, activity: s } = e;
+    return (0, r.jsxs)('ul', {
+        className: u.targetList,
         children: [
             t &&
-                (0, n.jsx)(j, {
-                    icon: i.enf,
-                    children: m.intl.string(m.t.xQSdPj)
+                (0, r.jsx)(h, {
+                    icon: a.enf,
+                    children: m.NW.string(m.t.xQSdPj)
+                }),
+            n &&
+                (0, r.jsx)(h, {
+                    icon: a.tBG,
+                    children: m.NW.string(m.t.mYt7hY)
                 }),
             s &&
-                (0, n.jsx)(j, {
-                    icon: i.tBG,
-                    children: m.intl.string(m.t.mYt7hY)
-                }),
-            a &&
-                (0, n.jsx)(j, {
-                    icon: i.iWm,
-                    children: m.intl.string(m.t.XAsWxc)
+                (0, r.jsx)(h, {
+                    icon: a.iWm,
+                    children: m.NW.string(m.t.XAsWxc)
                 })
         ]
     });
 }
-function h(e) {
-    let { targetedTraits: t } = e;
-    return null != t ? (0, n.jsx)(f, { ...t }) : null;
-}
 function j(e) {
-    let { icon: t, children: s } = e;
-    return (0, n.jsxs)(i.Text, {
+    let { targetedTraits: t } = e;
+    return null != t
+        ? (0, r.jsx)(
+              _,
+              (function (e) {
+                  for (var t = 1; t < arguments.length; t++) {
+                      var n = null != arguments[t] ? arguments[t] : {},
+                          r = Object.keys(n);
+                      'function' == typeof Object.getOwnPropertySymbols &&
+                          (r = r.concat(
+                              Object.getOwnPropertySymbols(n).filter(function (e) {
+                                  return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                              })
+                          )),
+                          r.forEach(function (t) {
+                              var r;
+                              (r = n[t]),
+                                  t in e
+                                      ? Object.defineProperty(e, t, {
+                                            value: r,
+                                            enumerable: !0,
+                                            configurable: !0,
+                                            writable: !0
+                                        })
+                                      : (e[t] = r);
+                          });
+                  }
+                  return e;
+              })({}, t)
+          )
+        : null;
+}
+function h(e) {
+    let { icon: t, children: n } = e;
+    return (0, r.jsxs)(a.Text, {
         variant: 'text-sm/medium',
         tag: 'li',
-        className: x.targetItem,
+        className: u.targetItem,
         children: [
-            (0, n.jsx)(t, {
+            (0, r.jsx)(t, {
                 size: 'xs',
                 color: 'currentColor'
             }),
-            s
+            n
         ]
     });
 }

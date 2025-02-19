@@ -1,189 +1,226 @@
-n.d(l, { default: () => k }), n(47120);
-var t = n(200651),
-    r = n(192379),
-    a = n(658722),
-    s = n.n(a),
-    o = n(399606),
-    i = n(481060),
-    u = n(313201),
-    d = n(734893),
-    c = n(271383),
-    m = n(430824),
-    g = n(594174),
-    h = n(903518),
-    x = n(580357),
-    v = n(388032),
-    p = n(916753);
-function k(e) {
-    var l, n, a, k;
-    let { transitionState: f, onClose: I, guildId: _, welcomeMessage: j, onSave: b } = e;
-    let C = (0, u.Dt)(),
-        [z, L] = r.useState({ ...j }),
-        N = (0, o.e7)([m.Z], () => m.Z.getGuild(_)),
-        B = r.useCallback(
+r.d(t, { default: () => j }), r(47120);
+var n = r(200651),
+    l = r(192379),
+    o = r(658722),
+    a = r.n(o),
+    s = r(399606),
+    i = r(481060),
+    u = r(313201),
+    c = r(734893),
+    d = r(271383),
+    m = r(430824),
+    g = r(594174),
+    p = r(903518),
+    h = r(580357),
+    x = r(388032),
+    v = r(361449);
+function f(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var r = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(r);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (n = n.concat(
+                Object.getOwnPropertySymbols(r).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                })
+            )),
+            n.forEach(function (t) {
+                var n;
+                (n = r[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: n,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = n);
+            });
+    }
+    return e;
+}
+function b(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var r = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var n = Object.getOwnPropertySymbols(e);
+                      r.push.apply(r, n);
+                  }
+                  return r;
+              })(Object(t)).forEach(function (r) {
+                  Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
+              }),
+        e
+    );
+}
+function j(e) {
+    var t, r, o, j;
+    let { transitionState: k, onClose: I, guildId: N, welcomeMessage: _, onSave: y } = e;
+    let O = (0, u.Dt)(),
+        [P, C] = l.useState(f({}, _)),
+        w = (0, s.e7)([m.Z], () => m.Z.getGuild(N)),
+        z = l.useCallback(
             (e) => {
-                let l = {};
+                let t = {};
                 return Promise.resolve(
-                    c.ZP.getMembers(_)
-                        .filter((n) => {
-                            var t;
-                            let r = g.default.getUser(n.userId);
-                            if ((null != r && (l[n.userId] = r), null == N || null == r || !(0, h.Y)(N, r))) return !1;
-                            let a = ''.concat(null !== (t = n.nick) && void 0 !== t ? t : '', ' ').concat(null == r ? void 0 : r.username);
-                            return s()(e.toLowerCase(), a.toLowerCase());
+                    d.ZP.getMembers(N)
+                        .filter((r) => {
+                            var n;
+                            let l = g.default.getUser(r.userId);
+                            if ((null != l && (t[r.userId] = l), null == w || null == l || !(0, p.Y)(w, l))) return !1;
+                            let o = ''.concat(null !== (n = r.nick) && void 0 !== n ? n : '', ' ').concat(null == l ? void 0 : l.username);
+                            return a()(e.toLowerCase(), o.toLowerCase());
                         })
                         .map((e) => {
-                            var n, t, r;
+                            var r, n, l;
                             return {
                                 value: e.userId,
-                                label: null !== (r = null !== (t = e.nick) && void 0 !== t ? t : null === (n = l[e.userId]) || void 0 === n ? void 0 : n.username) && void 0 !== r ? r : ''
+                                label: null !== (l = null !== (n = e.nick) && void 0 !== n ? n : null === (r = t[e.userId]) || void 0 === r ? void 0 : r.username) && void 0 !== l ? l : ''
                             };
                         })
                 );
             },
-            [_, N]
+            [N, w]
         ),
-        Z = r.useCallback(
+        L = l.useCallback(
             (e) => {
-                if (null == _ || null == e) return null;
-                let l = c.ZP.getMember(_, e.value);
-                if (null == l) return null;
-                let n = g.default.getUser(l.userId);
-                if (null == n) return null;
-                let r = n.getAvatarURL(_, 20);
-                return (0, t.jsx)(i.Xo$, {
+                if (null == N || null == e) return null;
+                let t = d.ZP.getMember(N, e.value);
+                if (null == t) return null;
+                let r = g.default.getUser(t.userId);
+                if (null == r) return null;
+                let l = r.getAvatarURL(N, 20);
+                return (0, n.jsx)(i.Xo$, {
                     size: i.EFr.SIZE_20,
-                    src: r,
+                    src: l,
                     'aria-hidden': !0
                 });
             },
-            [_]
+            [N]
         ),
-        M = r.useCallback(
+        W = l.useCallback(
             (e) => {
-                let { value: l } = e;
-                L((e) => ({
-                    ...e,
-                    authorIds: null != l ? [l] : []
-                }));
+                let { value: t } = e;
+                C((e) => b(f({}, e), { authorIds: null != t ? [t] : [] }));
             },
-            [L]
+            [C]
         ),
-        S = r.useCallback(
+        S = l.useCallback(
             (e) => {
-                L((l) => ({
-                    ...l,
-                    message: null != e ? e : ''
-                }));
+                C((t) => b(f({}, t), { message: null != e ? e : '' }));
             },
-            [L]
+            [C]
         ),
-        T = r.useCallback(() => {
-            b(null), I();
-        }, [b, I]),
-        P = null !== (l = z.authorIds[0]) && void 0 !== l ? l : '',
-        w = (0, o.e7)([c.ZP], () => (null != _ ? c.ZP.getMember(_, P) : null)),
-        R = (0, o.e7)([g.default], () => (null != w ? g.default.getUser(w.userId) : null)),
-        y = null !== (a = null !== (n = null == w ? void 0 : w.nick) && void 0 !== n ? n : null == R ? void 0 : R.username) && void 0 !== a ? a : '',
-        G = null == (k = z).message || 0 === k.message.length ? null : null == k.authorIds || 0 === k.authorIds.length ? (k.message.length < d.ZR ? v.intl.formatToPlainString(v.t.Lj831N, { minLength: d.ZR }) : v.intl.string(v.t['4m7gtr'])) : k.message.length < d.ZR ? v.intl.formatToPlainString(v.t.TJGHXl, { minLength: d.ZR }) : null;
-    return (0, t.jsxs)(i.Y0X, {
-        transitionState: f,
-        'aria-labelledby': C,
+        B = l.useCallback(() => {
+            y(null), I();
+        }, [y, I]),
+        Z = null !== (t = P.authorIds[0]) && void 0 !== t ? t : '',
+        M = (0, s.e7)([d.ZP], () => (null != N ? d.ZP.getMember(N, Z) : null)),
+        T = (0, s.e7)([g.default], () => (null != M ? g.default.getUser(M.userId) : null)),
+        R = null !== (o = null !== (r = null == M ? void 0 : M.nick) && void 0 !== r ? r : null == T ? void 0 : T.username) && void 0 !== o ? o : '',
+        E = null == (j = P).message || 0 === j.message.length ? null : null == j.authorIds || 0 === j.authorIds.length ? (j.message.length < c.ZR ? x.NW.formatToPlainString(x.t.Lj831N, { minLength: c.ZR }) : x.NW.string(x.t['4m7gtr'])) : j.message.length < c.ZR ? x.NW.formatToPlainString(x.t.TJGHXl, { minLength: c.ZR }) : null;
+    return (0, n.jsxs)(i.Y0X, {
+        transitionState: k,
+        'aria-labelledby': O,
         children: [
-            (0, t.jsxs)('div', {
-                className: p.container,
+            (0, n.jsxs)('div', {
+                className: v.container,
                 children: [
-                    (0, t.jsx)(i.olH, {
-                        className: p.closeButton,
+                    (0, n.jsx)(i.olH, {
+                        className: v.closeButton,
                         onClick: I
                     }),
-                    (0, t.jsxs)('div', {
-                        className: p.formGroup,
+                    (0, n.jsxs)('div', {
+                        className: v.formGroup,
                         children: [
-                            (0, t.jsxs)(i.X6q, {
+                            (0, n.jsxs)(i.X6q, {
                                 variant: 'heading-md/semibold',
                                 color: 'header-primary',
-                                children: [v.intl.string(v.t.zNQfQ0), (0, t.jsx)(x.Z, {})]
+                                children: [x.NW.string(x.t.zNQfQ0), (0, n.jsx)(h.Z, {})]
                             }),
-                            (0, t.jsx)(i.Text, {
+                            (0, n.jsx)(i.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'header-secondary',
-                                children: v.intl.string(v.t.mQHK2d)
+                                children: x.NW.string(x.t.mQHK2d)
                             }),
-                            (0, t.jsx)(i.VcW, {
+                            (0, n.jsx)(i.VcW, {
                                 value: {
-                                    value: P,
-                                    label: y
+                                    value: Z,
+                                    label: R
                                 },
-                                renderOptionPrefix: Z,
-                                options: B,
-                                onChange: M,
+                                renderOptionPrefix: L,
+                                options: z,
+                                onChange: W,
                                 filter: !1
                             })
                         ]
                     }),
-                    (0, t.jsx)('div', { className: p.separator }),
-                    (0, t.jsxs)('div', {
-                        className: p.formGroup,
+                    (0, n.jsx)('div', { className: v.separator }),
+                    (0, n.jsxs)('div', {
+                        className: v.formGroup,
                         children: [
-                            (0, t.jsx)(i.X6q, {
+                            (0, n.jsx)(i.X6q, {
                                 variant: 'heading-md/semibold',
                                 color: 'header-primary',
-                                children: v.intl.string(v.t.SHQcv7)
+                                children: x.NW.string(x.t.SHQcv7)
                             }),
-                            (0, t.jsx)(i.Text, {
+                            (0, n.jsx)(i.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'header-secondary',
-                                children: v.intl.format(v.t['6biC4e'], {})
+                                children: x.NW.format(x.t['6biC4e'], {})
                             }),
-                            (0, t.jsx)(i.Kx8, {
-                                className: p.welcomeMessageTextInput,
-                                placeholder: v.intl.string(v.t['kX/Sb2']),
-                                value: z.message,
+                            (0, n.jsx)(i.Kx8, {
+                                className: v.welcomeMessageTextInput,
+                                placeholder: x.NW.string(x.t['kX/Sb2']),
+                                value: P.message,
                                 onChange: S,
-                                maxLength: d.W4
+                                maxLength: c.W4
                             }),
-                            null != G
-                                ? (0, t.jsx)(i.Text, {
+                            null != E
+                                ? (0, n.jsx)(i.Text, {
                                       variant: 'text-xs/normal',
                                       color: 'text-danger',
-                                      children: G
+                                      children: E
                                   })
                                 : null
                         ]
                     })
                 ]
             }),
-            (0, t.jsx)(i.mzw, {
-                children: (0, t.jsxs)('div', {
-                    className: p.footerButtons,
+            (0, n.jsx)(i.mzw, {
+                children: (0, n.jsxs)('div', {
+                    className: v.footerButtons,
                     children: [
-                        (0, t.jsx)('div', {
-                            className: p.__invalid_leftButtons,
-                            children: (0, t.jsx)(i.zxk, {
+                        (0, n.jsx)('div', {
+                            className: v.__invalid_leftButtons,
+                            children: (0, n.jsx)(i.zxk, {
                                 size: i.zxk.Sizes.SMALL,
                                 look: i.zxk.Looks.LINK,
                                 color: i.zxk.Colors.RED,
-                                onClick: T,
-                                children: v.intl.string(v.t.N86XcH)
+                                onClick: B,
+                                children: x.NW.string(x.t.N86XcH)
                             })
                         }),
-                        (0, t.jsxs)('div', {
-                            className: p.rightButtons,
+                        (0, n.jsxs)('div', {
+                            className: v.rightButtons,
                             children: [
-                                (0, t.jsx)(i.zxk, {
+                                (0, n.jsx)(i.zxk, {
                                     onClick: I,
                                     size: i.zxk.Sizes.SMALL,
                                     look: i.zxk.Looks.LINK,
                                     color: i.zxk.Colors.PRIMARY,
-                                    children: v.intl.string(v.t['ETE/oK'])
+                                    children: x.NW.string(x.t['ETE/oK'])
                                 }),
-                                (0, t.jsx)(i.zxk, {
-                                    disabled: 0 === z.message.length || null != G,
+                                (0, n.jsx)(i.zxk, {
+                                    disabled: 0 === P.message.length || null != E,
                                     onClick: () => {
-                                        b(z), I();
+                                        y(P), I();
                                     },
-                                    children: v.intl.string(v.t.R3BPHx)
+                                    children: x.NW.string(x.t.R3BPHx)
                                 })
                             ]
                         })

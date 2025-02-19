@@ -1,12 +1,12 @@
-n.d(t, { Z: () => N }), n(47120);
-var i,
-    r = n(442837),
-    a = n(570140),
-    s = n(786761),
-    o = n(797316),
+n.d(t, { Z: () => R }), n(47120);
+var r,
+    i = n(442837),
+    o = n(570140),
+    a = n(786761),
+    s = n(797316),
     l = n(594174),
-    u = n(709054);
-function c(e, t, n) {
+    c = n(709054);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,139 +19,166 @@ function c(e, t, n) {
         e
     );
 }
-let d = {};
-function f() {
-    d = {};
+function d(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                u(e, t, n[t]);
+            });
+    }
+    return e;
 }
-function _(e) {
+function f(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function p(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : f(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let _ = {};
+function h() {
+    _ = {};
+}
+function m(e) {
     let { threads: t } = e;
-    for (let e in t) m(e, t[e].first_message);
+    for (let e in t) v(e, t[e].first_message);
 }
-function p(e) {
+function g(e) {
     let { threads: t, firstMessages: n } = e;
     if (null == n) return !1;
     for (let e of t)
-        d[e.id] = {
+        _[e.id] = {
             loaded: !0,
             firstMessage: null
         };
-    for (let e of n) m(e.channel_id, e);
+    for (let e of n) v(e.channel_id, e);
 }
-function h(e) {
-    if (e.isPushNotification || e.message.id !== u.default.castChannelIdAsMessageId(e.message.channel_id)) return !1;
-    m(e.message.channel_id, e.message);
+function E(e) {
+    if (e.isPushNotification || e.message.id !== c.default.castChannelIdAsMessageId(e.message.channel_id)) return !1;
+    v(e.message.channel_id, e.message);
 }
-function m(e, t) {
-    let n = null == t ? null : (0, s.e5)(t);
-    d[e] = {
+function v(e, t) {
+    let n = null == t ? null : (0, a.e5)(t);
+    _[e] = {
         loaded: !0,
         firstMessage: n
     };
 }
-function g(e) {
+function b(e) {
     if (e.message.id !== e.message.channel_id) return !1;
-    let t = d[u.default.castMessageIdAsChannelId(e.message.id)];
+    let t = _[c.default.castMessageIdAsChannelId(e.message.id)];
     if (null == t || null == t.firstMessage) return !1;
-    d[u.default.castMessageIdAsChannelId(e.message.id)] = {
-        ...t,
-        firstMessage: (0, s.wi)(t.firstMessage, e.message)
-    };
-}
-function E(e) {
-    if (e.id !== u.default.castChannelIdAsMessageId(e.channelId)) return !1;
-    d[e.channelId] = {
-        loaded: !0,
-        firstMessage: null
-    };
-}
-function v(e) {
-    if (null != d[e.channel.id] || !o.Z.isSubscribedToThreads(e.channel.guild_id)) return !1;
-    d[e.channel.id] = {
-        loaded: !0,
-        firstMessage: null
-    };
+    _[c.default.castMessageIdAsChannelId(e.message.id)] = p(d({}, t), { firstMessage: (0, a.wi)(t.firstMessage, e.message) });
 }
 function y(e) {
-    let { type: t, channelId: n, messageId: i, userId: r, emoji: a, optimistic: s, reactionType: o } = e,
-        u = d[n];
-    if (null == u || null == u.firstMessage || i !== u.firstMessage.id) return !1;
-    let c = l.default.getCurrentUser(),
-        f = null != c && c.id === r;
-    if (s && !f) return !1;
-    (d[n] = { ...u }), 'MESSAGE_REACTION_ADD' === t ? (d[n].firstMessage = u.firstMessage.addReaction(a, f, e.colors, o)) : (d[n].firstMessage = u.firstMessage.removeReaction(a, f, o));
-}
-function I(e) {
-    let { channelId: t, messageId: n, reactions: i } = e,
-        r = d[t];
-    if (null == r || null == r.firstMessage || n !== r.firstMessage.id) return !1;
-    let a = l.default.getCurrentUser(),
-        s = r.firstMessage.addReactionBatch(i, null == a ? void 0 : a.id);
-    d[t] = {
-        ...r,
-        firstMessage: s
+    if (e.id !== c.default.castChannelIdAsMessageId(e.channelId)) return !1;
+    _[e.channelId] = {
+        loaded: !0,
+        firstMessage: null
     };
 }
-function T(e) {
-    let { channelId: t, messageId: n } = e,
-        i = d[t];
-    if (null == i || null == i.firstMessage || n !== i.firstMessage.id) return !1;
-    d[t] = {
-        ...i,
-        firstMessage: i.firstMessage.set('reactions', [])
-    };
-}
-function b(e) {
-    let { channelId: t, messageId: n, emoji: i } = e,
-        r = d[t];
-    if (null == r || null == r.firstMessage || n !== r.firstMessage.id) return !1;
-    d[t] = {
-        ...r,
-        firstMessage: r.firstMessage.removeReactionsForEmoji(i)
+function O(e) {
+    if (null != _[e.channel.id] || !s.Z.isSubscribedToThreads(e.channel.guild_id)) return !1;
+    _[e.channel.id] = {
+        loaded: !0,
+        firstMessage: null
     };
 }
 function S(e) {
+    let { type: t, channelId: n, messageId: r, userId: i, emoji: o, optimistic: a, reactionType: s } = e,
+        c = _[n];
+    if (null == c || null == c.firstMessage || r !== c.firstMessage.id) return !1;
+    let u = l.default.getCurrentUser(),
+        f = null != u && u.id === i;
+    if (a && !f) return !1;
+    (_[n] = d({}, c)), 'MESSAGE_REACTION_ADD' === t ? (_[n].firstMessage = c.firstMessage.addReaction(o, f, e.colors, s)) : (_[n].firstMessage = c.firstMessage.removeReaction(o, f, s));
+}
+function I(e) {
+    let { channelId: t, messageId: n, reactions: r } = e,
+        i = _[t];
+    if (null == i || null == i.firstMessage || n !== i.firstMessage.id) return !1;
+    let o = l.default.getCurrentUser(),
+        a = i.firstMessage.addReactionBatch(r, null == o ? void 0 : o.id);
+    _[t] = p(d({}, i), { firstMessage: a });
+}
+function T(e) {
+    let { channelId: t, messageId: n } = e,
+        r = _[t];
+    if (null == r || null == r.firstMessage || n !== r.firstMessage.id) return !1;
+    _[t] = p(d({}, r), { firstMessage: r.firstMessage.set('reactions', []) });
+}
+function N(e) {
+    let { channelId: t, messageId: n, emoji: r } = e,
+        i = _[t];
+    if (null == i || null == i.firstMessage || n !== i.firstMessage.id) return !1;
+    _[t] = p(d({}, i), { firstMessage: i.firstMessage.removeReactionsForEmoji(r) });
+}
+function A(e) {
     let { channelId: t, messages: n } = e,
-        i = n[n.length - 1];
-    null != i &&
-        i.id === u.default.castChannelIdAsMessageId(t) &&
-        (d[t] = {
+        r = n[n.length - 1];
+    null != r &&
+        r.id === c.default.castChannelIdAsMessageId(t) &&
+        (_[t] = {
             loaded: !0,
-            firstMessage: (0, s.e5)(i)
+            firstMessage: (0, a.e5)(r)
         });
 }
-class A extends (i = r.ZP.Store) {
+class C extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(o.Z, l.default);
+        this.waitFor(s.Z, l.default);
     }
     isLoading(e) {
         var t;
-        return (null === (t = d[e]) || void 0 === t ? void 0 : t.loaded) !== !0;
+        return (null === (t = _[e]) || void 0 === t ? void 0 : t.loaded) !== !0;
     }
     getMessage(e) {
         return (
-            e in d ||
-                (d[e] = {
+            e in _ ||
+                (_[e] = {
                     loaded: !1,
                     firstMessage: null
                 }),
-            d[e]
+            _[e]
         );
     }
 }
-c(A, 'displayName', 'ForumPostMessagesStore');
-let N = new A(a.Z, {
-    CONNECTION_OPEN: f,
-    MESSAGE_CREATE: h,
-    MESSAGE_UPDATE: g,
-    MESSAGE_DELETE: E,
-    THREAD_CREATE: v,
-    MESSAGE_REACTION_ADD: y,
-    MESSAGE_REACTION_REMOVE: y,
+u(C, 'displayName', 'ForumPostMessagesStore');
+let R = new C(o.Z, {
+    CONNECTION_OPEN: h,
+    MESSAGE_CREATE: E,
+    MESSAGE_UPDATE: b,
+    MESSAGE_DELETE: y,
+    THREAD_CREATE: O,
+    MESSAGE_REACTION_ADD: S,
+    MESSAGE_REACTION_REMOVE: S,
     MESSAGE_REACTION_REMOVE_ALL: T,
-    MESSAGE_REACTION_REMOVE_EMOJI: b,
+    MESSAGE_REACTION_REMOVE_EMOJI: N,
     MESSAGE_REACTION_ADD_MANY: I,
-    LOAD_FORUM_POSTS: _,
-    LOAD_THREADS_SUCCESS: p,
-    LOAD_ARCHIVED_THREADS_SUCCESS: p,
-    LOAD_MESSAGES_SUCCESS: S
+    LOAD_FORUM_POSTS: m,
+    LOAD_THREADS_SUCCESS: g,
+    LOAD_ARCHIVED_THREADS_SUCCESS: g,
+    LOAD_MESSAGES_SUCCESS: A
 });

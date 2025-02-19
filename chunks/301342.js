@@ -1,150 +1,226 @@
 n.d(t, {
-    P: () => y,
-    Qo: () => T,
-    ZP: () => j,
-    kw: () => P,
-    rj: () => A
+    P: () => w,
+    Qo: () => E,
+    ZP: () => Z,
+    kw: () => A,
+    rj: () => T
 });
-var i = n(200651),
-    l = n(192379),
-    r = n(120356),
-    a = n.n(r),
-    o = n(91192),
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    o = n.n(l),
+    a = n(91192),
     s = n(442837),
     c = n(481060),
-    d = n(211739),
-    u = n(239091),
-    h = n(146773),
-    p = n(82295),
-    m = n(111028),
+    u = n(211739),
+    d = n(239091),
+    p = n(146773),
+    h = n(82295),
+    f = n(111028),
     g = n(540059),
-    f = n(680089),
-    _ = n(430824),
+    m = n(680089),
+    b = n(430824),
     v = n(496675),
-    C = n(9156),
-    x = n(203818),
-    I = n(438144),
-    Z = n(981631),
-    b = n(388032),
-    S = n(894572);
-function N(e) {
+    y = n(9156),
+    _ = n(203818),
+    O = n(438144),
+    j = n(981631),
+    C = n(388032),
+    x = n(449579);
+function P(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function S(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function I(e) {
     e.stopPropagation();
 }
-let E = l.memo(function (e) {
+let N = i.memo(function (e) {
         let t,
-            { channel: r, connectChannelDragSource: h, connectChannelDropTarget: x, disableManageChannels: I, position: E, sortingPosition: j, hideIcon: y, children: T } = e,
-            A = (0, g.Q3)('CategoryChannel'),
-            P = (0, s.e7)([C.ZP], () => C.ZP.isChannelMuted(r.getGuildId(), r.id)),
-            R = (0, s.e7)([f.Z], () => f.Z.isCollapsed(r.id)),
-            w = (0, s.e7)([v.Z], () => v.Z.can(Z.Plq.MANAGE_CHANNELS, r));
-        t = null != j ? (E > j ? S.containerDragAfter : S.containerDragBefore) : S.containerDefault;
-        let L = l.useCallback(() => {
-                R ? (0, d.mJ)(r.id) : (0, d.c4)(r.id);
-            }, [r.id, R]),
-            M = l.useCallback(
+            { channel: l, connectChannelDragSource: p, connectChannelDropTarget: _, disableManageChannels: O, position: N, sortingPosition: Z, hideIcon: w, children: E } = e,
+            T = (0, g.Q3)('CategoryChannel'),
+            A = (0, s.e7)([y.ZP], () => y.ZP.isChannelMuted(l.getGuildId(), l.id)),
+            D = (0, s.e7)([m.Z], () => m.Z.isCollapsed(l.id)),
+            R = (0, s.e7)([v.Z], () => v.Z.can(j.Plq.MANAGE_CHANNELS, l));
+        t = null != Z ? (N > Z ? x.containerDragAfter : x.containerDragBefore) : x.containerDefault;
+        let L = i.useCallback(() => {
+                D ? (0, u.mJ)(l.id) : (0, u.c4)(l.id);
+            }, [l.id, D]),
+            M = i.useCallback(
                 (e) => {
-                    if ('null' !== r.id) {
-                        let t = _.Z.getGuild(r.getGuildId());
+                    if ('null' !== l.id) {
+                        let t = b.Z.getGuild(l.getGuildId());
                         null != t &&
-                            (0, u.jW)(e, async () => {
+                            (0, d.jW)(e, async () => {
                                 let { default: e } = await Promise.all([n.e('8965'), n.e('14280')]).then(n.bind(n, 139035));
                                 return (n) =>
-                                    (0, i.jsx)(e, {
-                                        ...n,
-                                        channel: r,
-                                        guild: t
-                                    });
+                                    (0, r.jsx)(
+                                        e,
+                                        S(P({}, n), {
+                                            channel: l,
+                                            guild: t
+                                        })
+                                    );
                             });
                     }
                 },
-                [r]
+                [l]
             ),
-            D = l.useCallback(() => {
-                let e = r.type === Z.d4z.GUILD_CATEGORY ? null : r.type,
-                    t = r.getGuildId();
+            k = i.useCallback(() => {
+                let e = l.type === j.d4z.GUILD_CATEGORY ? null : l.type,
+                    t = l.getGuildId();
                 null != t &&
                     (0, c.ZDy)(async () => {
-                        let { default: l } = await Promise.all([n.e('45094'), n.e('20110')]).then(n.bind(n, 218613));
+                        let { default: i } = await Promise.all([n.e('45094'), n.e('1344')]).then(n.bind(n, 218613));
                         return (n) =>
-                            (0, i.jsx)(l, {
-                                ...n,
-                                channelType: e,
-                                guildId: t,
-                                categoryId: 'null' !== r.id ? r.id : null
-                            });
+                            (0, r.jsx)(
+                                i,
+                                S(P({}, n), {
+                                    channelType: e,
+                                    guildId: t,
+                                    categoryId: 'null' !== l.id ? l.id : null
+                                })
+                            );
                     });
-            }, [r]),
-            { role: G, tabIndex: k, ...B } = (0, o.JA)(r.id),
-            O = l.useRef(null),
-            U = l.useRef(null),
-            V = (0, i.jsxs)('li', {
+            }, [l]),
+            G = (0, a.JA)(l.id),
+            { role: B, tabIndex: U } = G,
+            W = (function (e, t) {
+                if (null == e) return {};
+                var n,
+                    r,
+                    i = (function (e, t) {
+                        if (null == e) return {};
+                        var n,
+                            r,
+                            i = {},
+                            l = Object.keys(e);
+                        for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        return i;
+                    })(e, t);
+                if (Object.getOwnPropertySymbols) {
+                    var l = Object.getOwnPropertySymbols(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                }
+                return i;
+            })(G, ['role', 'tabIndex']),
+            V = i.useRef(null),
+            F = i.useRef(null),
+            H = (0, r.jsxs)('li', {
                 className: t,
-                'data-dnd-name': r.name,
+                'data-dnd-name': l.name,
                 children: [
-                    (0, i.jsx)(c.tEY, {
-                        focusTarget: O,
-                        ringTarget: U,
+                    (0, r.jsx)(c.tEY, {
+                        focusTarget: V,
+                        ringTarget: F,
                         offset: {
                             left: 4,
                             right: 4
                         },
-                        children: (0, i.jsxs)('div', {
-                            ref: U,
-                            className: a()(S.iconVisibility, S.wrapper, {
-                                [S.collapsed]: R,
-                                [S.muted]: P,
-                                [S.clickable]: !0
+                        children: (0, r.jsxs)('div', {
+                            ref: F,
+                            className: o()(x.iconVisibility, x.wrapper, {
+                                [x.collapsed]: D,
+                                [x.muted]: A,
+                                [x.clickable]: !0
                             }),
                             onContextMenu: M,
                             children: [
-                                (0, i.jsxs)(c.P3F, {
-                                    innerRef: O,
-                                    className: S.mainContent,
-                                    tabIndex: k,
-                                    ...B,
-                                    onClick: L,
-                                    'aria-label': b.intl.formatToPlainString(b.t.y5l3Jy, { categoryName: r.name }),
-                                    'aria-expanded': !R,
-                                    focusProps: { enabled: !1 },
-                                    children: [
-                                        A || y
-                                            ? null
-                                            : (0, i.jsx)(c.CJ0, {
-                                                  size: 'md',
-                                                  color: 'currentColor',
-                                                  className: S.icon
-                                              }),
-                                        (0, i.jsx)(p.Z, {
-                                            className: S.name,
-                                            children: (0, i.jsx)(m.Z, { children: r.name })
-                                        }),
-                                        A && !y
-                                            ? (0, i.jsx)(c.CJ0, {
-                                                  size: 'md',
-                                                  color: 'currentColor',
-                                                  className: S.icon
-                                              })
-                                            : null
-                                    ]
-                                }),
-                                (0, i.jsx)('div', {
-                                    onClick: N,
-                                    className: S.children,
+                                (0, r.jsxs)(
+                                    c.P3F,
+                                    S(
+                                        P(
+                                            {
+                                                innerRef: V,
+                                                className: x.mainContent,
+                                                tabIndex: U
+                                            },
+                                            W
+                                        ),
+                                        {
+                                            onClick: L,
+                                            'aria-label': C.NW.formatToPlainString(C.t.y5l3Jy, { categoryName: l.name }),
+                                            'aria-expanded': !D,
+                                            focusProps: { enabled: !1 },
+                                            children: [
+                                                T || w
+                                                    ? null
+                                                    : (0, r.jsx)(c.CJ0, {
+                                                          size: 'md',
+                                                          color: 'currentColor',
+                                                          className: x.icon
+                                                      }),
+                                                (0, r.jsx)(h.Z, {
+                                                    className: x.name,
+                                                    children: (0, r.jsx)(f.Z, { children: l.name })
+                                                }),
+                                                T && !w
+                                                    ? (0, r.jsx)(c.CJ0, {
+                                                          size: 'md',
+                                                          color: 'currentColor',
+                                                          className: x.icon
+                                                      })
+                                                    : null
+                                            ]
+                                        }
+                                    )
+                                ),
+                                (0, r.jsx)('div', {
+                                    onClick: I,
+                                    className: x.children,
                                     children:
-                                        w && !I
-                                            ? (0, i.jsx)(c.ua7, {
-                                                  text: b.intl.string(b.t['fUYU+v']),
+                                        R && !O
+                                            ? (0, r.jsx)(c.ua7, {
+                                                  text: C.NW.string(C.t['fUYU+v']),
                                                   children: (e) => {
                                                       let { onMouseEnter: t, onMouseLeave: n } = e;
-                                                      return (0, i.jsx)(c.zxk, {
-                                                          'aria-label': b.intl.string(b.t['fUYU+v']),
+                                                      return (0, r.jsx)(c.zxk, {
+                                                          'aria-label': C.NW.string(C.t['fUYU+v']),
                                                           look: c.zxk.Looks.BLANK,
                                                           size: c.zxk.Sizes.NONE,
-                                                          className: a()(S.addButton, S.forceVisible),
-                                                          onClick: D,
+                                                          className: o()(x.addButton, x.forceVisible),
+                                                          onClick: k,
                                                           onMouseEnter: t,
                                                           onMouseLeave: n,
-                                                          tabIndex: k,
+                                                          tabIndex: U,
                                                           focusProps: {
                                                               offset: {
                                                                   top: -3,
@@ -153,16 +229,16 @@ let E = l.memo(function (e) {
                                                                   left: -4
                                                               }
                                                           },
-                                                          children: A
-                                                              ? (0, i.jsx)(c.BRu, {
+                                                          children: T
+                                                              ? (0, r.jsx)(c.BRu, {
                                                                     size: 'xs',
                                                                     color: 'currentColor',
-                                                                    className: S.addButtonIcon
+                                                                    className: x.addButtonIcon
                                                                 })
-                                                              : (0, i.jsx)(c.qJs, {
+                                                              : (0, r.jsx)(c.qJs, {
                                                                     size: 'sm',
                                                                     color: 'currentColor',
-                                                                    className: S.addButtonIcon
+                                                                    className: x.addButtonIcon
                                                                 })
                                                       });
                                                   }
@@ -172,37 +248,37 @@ let E = l.memo(function (e) {
                             ]
                         })
                     }),
-                    T
+                    E
                 ]
             });
-        return null != x && null != h ? x(h(V)) : V;
+        return null != _ && null != p ? _(p(H)) : H;
     }),
-    j = (0, h.B)(E),
-    y = l.memo(function (e) {
-        let { name: t, onDismiss: n, className: l } = e;
-        return (0, i.jsx)('li', {
-            className: a()(l, S.containerDefault),
-            children: (0, i.jsxs)('div', {
-                className: a()(S.iconVisibility, S.wrapperStatic),
+    Z = (0, p.B)(N),
+    w = i.memo(function (e) {
+        let { name: t, onDismiss: n, className: i } = e;
+        return (0, r.jsx)('li', {
+            className: o()(i, x.containerDefault),
+            children: (0, r.jsxs)('div', {
+                className: o()(x.iconVisibility, x.wrapperStatic),
                 children: [
-                    (0, i.jsx)('div', {
-                        className: S.mainContent,
-                        children: (0, i.jsx)(p.Z, {
-                            className: S.name,
-                            children: (0, i.jsx)(m.Z, { children: t })
+                    (0, r.jsx)('div', {
+                        className: x.mainContent,
+                        children: (0, r.jsx)(h.Z, {
+                            className: x.name,
+                            children: (0, r.jsx)(f.Z, { children: t })
                         })
                     }),
                     null != n
-                        ? (0, i.jsx)(c.DY3, {
-                              text: b.intl.string(b.t['5qNmsb']),
-                              className: S.dismissWrapper,
-                              children: (0, i.jsx)(c.P3F, {
-                                  className: S.dismissButton,
+                        ? (0, r.jsx)(c.DY3, {
+                              text: C.NW.string(C.t['5qNmsb']),
+                              className: x.dismissWrapper,
+                              children: (0, r.jsx)(c.P3F, {
+                                  className: x.dismissButton,
                                   onClick: n,
-                                  children: (0, i.jsx)(c.k$p, {
+                                  children: (0, r.jsx)(c.k$p, {
                                       size: 'md',
                                       color: 'currentColor',
-                                      className: S.dismiss
+                                      className: x.dismiss
                                   })
                               })
                           })
@@ -211,75 +287,75 @@ let E = l.memo(function (e) {
             })
         });
     }),
-    T = l.memo(function (e) {
+    E = i.memo(function (e) {
         let { category: t } = e,
-            n = (0, s.e7)([x.Z], () => x.Z.isVoiceCategoryCollapsed(t.guild.id)),
-            r = (0, g.Q3)('VoiceChannelCategoryButton'),
-            a = l.useCallback(() => {
-                n ? (0, I.s)(t.guild.id) : (0, I.M)(t.guild.id);
+            n = (0, s.e7)([_.Z], () => _.Z.isVoiceCategoryCollapsed(t.guild.id)),
+            l = (0, g.Q3)('VoiceChannelCategoryButton'),
+            o = i.useCallback(() => {
+                n ? (0, O.s)(t.guild.id) : (0, O.M)(t.guild.id);
             }, [t.guild.id, n]);
-        return r
-            ? (0, i.jsxs)(c.zxk, {
+        return l
+            ? (0, r.jsxs)(c.zxk, {
                   look: c.zxk.Looks.FILLED,
                   color: c.zxk.Colors.PRIMARY,
-                  className: S.refreshVoiceChannelsButton,
-                  innerClassName: S.refreshVoiceChannelsButtonInner,
-                  onClick: a,
+                  className: x.refreshVoiceChannelsButton,
+                  innerClassName: x.refreshVoiceChannelsButtonInner,
+                  onClick: o,
                   children: [
-                      (0, i.jsx)(c.gj8, {
+                      (0, r.jsx)(c.gj8, {
                           size: 'xs',
                           color: 'currentColor',
-                          className: S.voiceChannelsToggleIcon
+                          className: x.voiceChannelsToggleIcon
                       }),
-                      (0, i.jsx)(c.Text, {
+                      (0, r.jsx)(c.Text, {
                           variant: 'text-sm/medium',
-                          children: n ? b.intl.string(b.t['/eB9Bg']) : b.intl.string(b.t.Q2gPWl)
+                          children: n ? C.NW.string(C.t['/eB9Bg']) : C.NW.string(C.t.Q2gPWl)
                       })
                   ]
               })
-            : (0, i.jsxs)(c.P3F, {
-                  className: S.voiceChannelsButton,
-                  onClick: a,
+            : (0, r.jsxs)(c.P3F, {
+                  className: x.voiceChannelsButton,
+                  onClick: o,
                   children: [
-                      (0, i.jsx)(c.gj8, {
+                      (0, r.jsx)(c.gj8, {
                           size: 'xs',
                           color: 'currentColor',
-                          className: S.voiceChannelsToggleIcon
+                          className: x.voiceChannelsToggleIcon
                       }),
-                      (0, i.jsx)(c.Text, {
+                      (0, r.jsx)(c.Text, {
                           variant: 'text-sm/medium',
-                          children: n ? b.intl.string(b.t['/eB9Bg']) : b.intl.string(b.t.Q2gPWl)
+                          children: n ? C.NW.string(C.t['/eB9Bg']) : C.NW.string(C.t.Q2gPWl)
                       })
                   ]
               });
     }),
-    A = l.memo(function (e) {
+    T = i.memo(function (e) {
         let { category: t, channel: n } = e,
-            l = (0, s.e7)([x.Z], () => x.Z.isVoiceCategoryCollapsed(t.guild.id));
-        return l || null == n || n.record.type === Z.d4z.GUILD_CATEGORY
-            ? l
-                ? (0, i.jsx)('li', {
-                      className: a()(S.containerDefault),
-                      children: (0, i.jsx)('div', {
-                          className: a()(S.iconVisibility, S.wrapperStatic),
-                          children: (0, i.jsx)(p.Z, {
-                              className: S.name,
-                              children: (0, i.jsx)(m.Z, { children: b.intl.string(b.t['V/u9Dw']) })
+            i = (0, s.e7)([_.Z], () => _.Z.isVoiceCategoryCollapsed(t.guild.id));
+        return i || null == n || n.record.type === j.d4z.GUILD_CATEGORY
+            ? i
+                ? (0, r.jsx)('li', {
+                      className: o()(x.containerDefault),
+                      children: (0, r.jsx)('div', {
+                          className: o()(x.iconVisibility, x.wrapperStatic),
+                          children: (0, r.jsx)(h.Z, {
+                              className: x.name,
+                              children: (0, r.jsx)(f.Z, { children: C.NW.string(C.t['V/u9Dw']) })
                           })
                       })
                   })
                 : null
-            : (0, i.jsx)('div', { style: { height: 16 } });
+            : (0, r.jsx)('div', { style: { height: 16 } });
     }),
-    P = l.memo(function (e) {
+    A = i.memo(function (e) {
         let { channel: t } = e;
-        return (0, i.jsx)('li', {
-            className: a()(S.containerDefault),
-            children: (0, i.jsx)('div', {
-                className: a()(S.iconVisibility, S.wrapperStatic),
-                children: (0, i.jsx)(p.Z, {
-                    className: S.name,
-                    children: (0, i.jsx)(m.Z, { children: t.name })
+        return (0, r.jsx)('li', {
+            className: o()(x.containerDefault),
+            children: (0, r.jsx)('div', {
+                className: o()(x.iconVisibility, x.wrapperStatic),
+                children: (0, r.jsx)(h.Z, {
+                    className: x.name,
+                    children: (0, r.jsx)(f.Z, { children: t.name })
                 })
             })
         });

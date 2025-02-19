@@ -1,76 +1,100 @@
-n.d(t, { default: () => N });
+n.d(t, { default: () => p });
 var l = n(200651),
     a = n(192379),
-    s = n(481060),
+    r = n(481060),
     i = n(891802),
-    r = n(332664),
+    s = n(332664),
     o = n(538211),
     c = n(698066),
-    d = n(142497),
-    u = n(626135),
+    u = n(142497),
+    d = n(626135),
     m = n(981631),
-    _ = n(531578),
-    x = n(70722),
-    b = n(190378),
+    b = n(531578),
+    f = n(70722),
+    _ = n(190378),
     h = n(388032);
-let f = [x.kr.OTHER];
-function N(e) {
-    let { isStreamer: t, stream: N, streamApplication: p, onClose: g, transitionState: v, analyticsData: j } = e;
+let x = [f.kr.OTHER];
+function p(e) {
+    let { isStreamer: t, stream: p, streamApplication: N, onClose: g, transitionState: j, analyticsData: v } = e;
     a.useEffect(() => {
-        u.default.track(m.rMx.OPEN_MODAL, {
+        d.default.track(m.rMx.OPEN_MODAL, {
             type: 'Stream Problem Report',
-            other_user_id: N.ownerId,
-            application_id: null != p ? p.id : null,
-            application_name: null != p ? p.name : null,
-            game_id: null != p ? p.id : null,
+            other_user_id: p.ownerId,
+            application_id: null != N ? N.id : null,
+            application_name: null != N ? N.name : null,
+            game_id: null != N ? N.id : null,
             source: 'Stream End'
         });
-    }, [N.ownerId, p]);
-    let { showRefreshedSurvey: k } = (0, i.X)({ location: 'StreamFeedback' }),
-        R = k ? h.NW.string(h.t.OR6KNz) : h.NW.string(h.t['5smP3d']),
-        O = k ? void 0 : h.NW.string(h.t['0uxA2d']),
-        E = k ? void 0 : h.NW.string(h.t.CqjnLC),
-        Z = k ? [_.aZ.BAD, _.aZ.GOOD] : void 0,
-        S = k
+    }, [p.ownerId, N]);
+    let { showRefreshedSurvey: O } = (0, i.X)({ location: 'StreamFeedback' }),
+        k = O ? h.NW.string(h.t.OR6KNz) : h.NW.string(h.t['5smP3d']),
+        R = O ? void 0 : h.NW.string(h.t['0uxA2d']),
+        E = O ? void 0 : h.NW.string(h.t.CqjnLC),
+        y = O ? [b.aZ.BAD, b.aZ.GOOD] : void 0,
+        S = O
             ? {
-                  [_.aZ.BAD]: h.NW.string(h.t.ISINlJ),
-                  [_.aZ.GOOD]: h.NW.string(h.t.IySkjY)
+                  [b.aZ.BAD]: h.NW.string(h.t.ISINlJ),
+                  [b.aZ.GOOD]: h.NW.string(h.t.IySkjY)
               }
             : void 0;
-    return (0, l.jsx)(r.Z, {
+    return (0, l.jsx)(s.Z, {
         modalType: 'stream',
-        header: R,
-        body: t ? O : E,
-        ratingOptions: Z,
+        header: k,
+        body: t ? R : E,
+        ratingOptions: y,
         ratingTextLabels: S,
         problemTitle: h.NW.string(h.t['6Y1t5O']),
         problems: (0, o.Z)(t, !0),
-        freeformNeededProblems: f,
+        freeformNeededProblems: x,
         onSubmit: function (e) {
-            let { rating: t, problem: a, dontShowAgain: i, feedback: r } = e;
-            i && (0, d.Kw)(b.v.REPORT_PROBLEM_POST_STREAM),
+            let { rating: t, problem: a, dontShowAgain: i, feedback: s } = e;
+            i && (0, u.Kw)(_.v.REPORT_PROBLEM_POST_STREAM),
                 null != t &&
                     ((0, c.Z)({
                         problem: a,
-                        stream: N,
-                        feedback: r,
-                        streamApplication: p,
-                        analyticsData: j,
+                        stream: p,
+                        feedback: s,
+                        streamApplication: N,
+                        analyticsData: v,
                         location: 'Stream End',
                         rating: t
                     }),
                     null != a &&
-                        (0, s.ZDy)(async () => {
+                        (0, r.ZDy)(async () => {
                             let { default: e } = await n.e('14466').then(n.bind(n, 729328));
                             return (t) =>
-                                (0, l.jsx)(e, {
-                                    body: h.NW.string(h.t.mMTVnp),
-                                    ...t
-                                });
+                                (0, l.jsx)(
+                                    e,
+                                    (function (e) {
+                                        for (var t = 1; t < arguments.length; t++) {
+                                            var n = null != arguments[t] ? arguments[t] : {},
+                                                l = Object.keys(n);
+                                            'function' == typeof Object.getOwnPropertySymbols &&
+                                                (l = l.concat(
+                                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                    })
+                                                )),
+                                                l.forEach(function (t) {
+                                                    var l;
+                                                    (l = n[t]),
+                                                        t in e
+                                                            ? Object.defineProperty(e, t, {
+                                                                  value: l,
+                                                                  enumerable: !0,
+                                                                  configurable: !0,
+                                                                  writable: !0
+                                                              })
+                                                            : (e[t] = l);
+                                                });
+                                        }
+                                        return e;
+                                    })({ body: h.NW.string(h.t.mMTVnp) }, t)
+                                );
                         }));
         },
         onClose: g,
-        transitionState: v,
-        otherKey: x.kr.OTHER
+        transitionState: j,
+        otherKey: f.kr.OTHER
     });
 }

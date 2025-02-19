@@ -1,107 +1,150 @@
-e.d(s, { AnnouncementModal: () => f });
-var n = e(200651);
-e(192379);
-var i = e(481060),
-    l = e(388032),
-    o = e(458816),
-    a = e(232474);
-let c = e(788661),
-    r = () =>
+s.d(e, { AnnouncementModal: () => g });
+var n = s(200651);
+s(192379);
+var r = s(481060),
+    o = s(388032),
+    i = s(751478),
+    c = s(232474);
+let a = s(788661),
+    l = () =>
         (0, n.jsx)('div', {
-            className: o.gifContainer,
+            className: i.gifContainer,
             children: (0, n.jsx)('img', {
-                src: a.Z,
-                className: o.gif,
+                src: c.Z,
+                className: i.gif,
                 alt: 'Orb GIF'
             })
         }),
-    x = () =>
-        (0, n.jsx)('img', {
-            src: c,
-            alt: 'Orb Icon',
-            className: o.orbIconSVG
-        }),
     b = () =>
-        (0, n.jsx)('div', {
-            className: o.betaBadge,
-            children: l.intl.string(l.t.oW0eUV)
+        (0, n.jsx)('img', {
+            src: a,
+            alt: 'Orb Icon',
+            className: i.orbIconSVG
         }),
-    d = (t) => {
-        let { icon: s, text: e } = t;
+    f = () =>
+        (0, n.jsx)('div', {
+            className: i.betaBadge,
+            children: o.NW.string(o.t.oW0eUV)
+        }),
+    u = (t) => {
+        let { icon: e, text: s } = t;
         return (0, n.jsxs)('div', {
-            className: o.listItem,
+            className: i.listItem,
             children: [
-                'string' == typeof s
+                'string' == typeof e
                     ? (0, n.jsx)('img', {
-                          src: s,
-                          className: o.listItemIcon,
+                          src: e,
+                          className: i.listItemIcon,
                           alt: 'List Icon'
                       })
-                    : s,
+                    : e,
                 (0, n.jsx)('div', {
-                    className: o.listItemText,
-                    children: e
+                    className: i.listItemText,
+                    children: s
                 })
             ]
         });
     },
-    m = (t) =>
-        (0, n.jsx)(i.zxk, {
-            ...t,
-            'aria-label': l.intl.string(l.t.cpT0Cg),
-            look: i.zxk.Looks.BLANK,
-            size: i.zxk.Sizes.NONE,
-            children: (0, n.jsx)(i.P$X, {
-                size: 'md',
-                color: 'currentColor',
-                className: o.closeButtonIcon
-            })
-        }),
-    f = (t) => {
-        let { onClose: s, ctaOnClick: a, transitionState: c } = t;
-        return (0, n.jsxs)(i.Y0X, {
-            size: i.CgR.DYNAMIC,
-            className: o.container,
-            transitionState: c,
+    m = (t) => {
+        var e, s;
+        return (0, n.jsx)(
+            r.zxk,
+            ((e = (function (t) {
+                for (var e = 1; e < arguments.length; e++) {
+                    var s = null != arguments[e] ? arguments[e] : {},
+                        n = Object.keys(s);
+                    'function' == typeof Object.getOwnPropertySymbols &&
+                        (n = n.concat(
+                            Object.getOwnPropertySymbols(s).filter(function (t) {
+                                return Object.getOwnPropertyDescriptor(s, t).enumerable;
+                            })
+                        )),
+                        n.forEach(function (e) {
+                            var n;
+                            (n = s[e]),
+                                e in t
+                                    ? Object.defineProperty(t, e, {
+                                          value: n,
+                                          enumerable: !0,
+                                          configurable: !0,
+                                          writable: !0
+                                      })
+                                    : (t[e] = n);
+                        });
+                }
+                return t;
+            })({}, t)),
+            (s = s =
+                {
+                    'aria-label': o.NW.string(o.t.cpT0Cg),
+                    look: r.zxk.Looks.BLANK,
+                    size: r.zxk.Sizes.NONE,
+                    children: (0, n.jsx)(r.P$X, {
+                        size: 'md',
+                        color: 'currentColor',
+                        className: i.closeButtonIcon
+                    })
+                }),
+            Object.getOwnPropertyDescriptors
+                ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(s))
+                : (function (t, e) {
+                      var s = Object.keys(t);
+                      if (Object.getOwnPropertySymbols) {
+                          var n = Object.getOwnPropertySymbols(t);
+                          s.push.apply(s, n);
+                      }
+                      return s;
+                  })(Object(s)).forEach(function (t) {
+                      Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(s, t));
+                  }),
+            e)
+        );
+    },
+    g = (t) => {
+        let { onClose: e, ctaOnClick: c, transitionState: a } = t;
+        return (0, n.jsxs)(r.Y0X, {
+            size: r.CgR.DYNAMIC,
+            className: i.container,
+            transitionState: a,
             children: [
                 (0, n.jsx)(m, {
-                    className: o.closeButton,
-                    onClick: s
+                    className: i.closeButton,
+                    onClick: e
                 }),
                 (0, n.jsxs)('div', {
-                    className: o.marginContainer,
+                    className: i.marginContainer,
                     children: [
-                        (0, n.jsx)(r, {}),
+                        (0, n.jsx)(l, {}),
                         (0, n.jsx)('div', {
-                            className: o.titleLeadIn,
-                            children: l.intl.string(l.t.C1TOOD)
+                            className: i.titleLeadIn,
+                            children: o.NW.string(o.t.C1TOOD)
                         }),
                         (0, n.jsxs)('div', {
-                            className: o.title,
-                            children: [l.intl.string(l.t.XKlAys), (0, n.jsx)(b, {})]
+                            className: i.title,
+                            children: [o.NW.string(o.t.XKlAys), (0, n.jsx)(f, {})]
                         }),
                         (0, n.jsxs)('div', {
-                            className: o.list,
+                            className: i.list,
                             children: [
-                                (0, n.jsx)(d, {
-                                    icon: e(586248),
-                                    text: l.intl.string(l.t.c7MXqK)
+                                (0, n.jsx)(u, {
+                                    icon: s(586248),
+                                    text: o.NW.string(o.t.c7MXqK)
                                 }),
-                                (0, n.jsx)(d, {
-                                    icon: e(126642),
-                                    text: l.intl.string(l.t.bcmcCg)
+                                (0, n.jsx)(u, {
+                                    icon: s(126642),
+                                    text: o.NW.string(o.t.bcmcCg)
                                 }),
-                                (0, n.jsx)(d, {
-                                    icon: (0, n.jsx)(x, {}),
-                                    text: l.intl.format(l.t.vt7mWl, { quantity: 200 })
+                                (0, n.jsx)(u, {
+                                    icon: (0, n.jsx)(b, {}),
+                                    text: o.NW.format(o.t.vt7mWl, { quantity: 200 })
                                 })
                             ]
                         }),
-                        (0, n.jsx)(i.zxk, {
-                            onClick: a,
-                            color: o.buttonColor,
-                            className: o.button,
-                            children: l.intl.string(l.t.LhlgY2)
+                        (0, n.jsx)(r.zxk, {
+                            onClick: c,
+                            color: i.buttonColor,
+                            className: i.button,
+                            children: o.NW.string(o.t.LhlgY2)
                         })
                     ]
                 })

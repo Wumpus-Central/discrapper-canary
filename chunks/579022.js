@@ -1,58 +1,105 @@
-n.d(t, { Z: () => o });
-var i = n(200651);
+n.d(t, { Z: () => s });
+var r = n(200651);
 n(192379);
-var l = n(481060),
-    r = n(388032),
-    a = n(649969);
-let s = Math.ceil(2 * Math.PI * 20),
-    o = (e) => {
+var i = n(481060),
+    l = n(388032),
+    o = n(397479);
+let a = Math.ceil(2 * Math.PI * 20),
+    s = (e) => {
         let { total: t, used: n } = e,
-            o = Math.max(0, Math.min(1, n / t)),
-            d = ''.concat(Math.floor(100 * o), '%');
-        return (0, i.jsx)(l.ua7, {
-            text: r.intl.formatToPlainString(r.t['2eoRMj'], { used: d }),
-            children: (e) =>
-                (0, i.jsxs)('div', {
-                    className: a.wrapper,
-                    role: 'progressbar',
-                    'aria-label': r.intl.formatToPlainString(r.t['2eoRMj'], { used: d }),
-                    ...e,
-                    children: [
-                        (0, i.jsxs)('svg', {
-                            viewBox: '25 25 50 50',
-                            className: a.svg,
-                            'aria-hidden': !0,
+            s = Math.max(0, Math.min(1, n / t)),
+            c = ''.concat(Math.floor(100 * s), '%');
+        return (0, r.jsx)(i.ua7, {
+            text: l.NW.formatToPlainString(l.t['2eoRMj'], { used: c }),
+            children: (e) => {
+                var t, n;
+                return (0, r.jsxs)(
+                    'div',
+                    ((t = (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var n = null != arguments[t] ? arguments[t] : {},
+                                r = Object.keys(n);
+                            'function' == typeof Object.getOwnPropertySymbols &&
+                                (r = r.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    })
+                                )),
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = n[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: r,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0
+                                              })
+                                            : (e[t] = r);
+                                });
+                        }
+                        return e;
+                    })(
+                        {
+                            className: o.wrapper,
+                            role: 'progressbar',
+                            'aria-label': l.NW.formatToPlainString(l.t['2eoRMj'], { used: c })
+                        },
+                        e
+                    )),
+                    (n = n =
+                        {
                             children: [
-                                (0, i.jsx)('circle', {
-                                    className: a.background,
-                                    cx: '50',
-                                    cy: '50',
-                                    r: 20
+                                (0, r.jsxs)('svg', {
+                                    viewBox: '25 25 50 50',
+                                    className: o.svg,
+                                    'aria-hidden': !0,
+                                    children: [
+                                        (0, r.jsx)('circle', {
+                                            className: o.background,
+                                            cx: '50',
+                                            cy: '50',
+                                            r: 20
+                                        }),
+                                        (0, r.jsx)('circle', {
+                                            className: o.foreground,
+                                            cx: '50',
+                                            cy: '50',
+                                            r: 20,
+                                            stroke: (function (e) {
+                                                let t = Math.round(-85 * e + 199),
+                                                    n = Math.round(-71 * e + 208),
+                                                    r = Math.round(-22 * e + 240);
+                                                return 'rgb('.concat(t, ', ').concat(n, ', ').concat(r, ')');
+                                            })(s),
+                                            strokeDasharray: (function (e) {
+                                                let t = Math.floor(a * e);
+                                                return ''.concat(t, ', ').concat(a);
+                                            })(s)
+                                        })
+                                    ]
                                 }),
-                                (0, i.jsx)('circle', {
-                                    className: a.foreground,
-                                    cx: '50',
-                                    cy: '50',
-                                    r: 20,
-                                    stroke: (function (e) {
-                                        let t = Math.round(-85 * e + 199),
-                                            n = Math.round(-71 * e + 208),
-                                            i = Math.round(-22 * e + 240);
-                                        return 'rgb('.concat(t, ', ').concat(n, ', ').concat(i, ')');
-                                    })(o),
-                                    strokeDasharray: (function (e) {
-                                        let t = Math.floor(s * e);
-                                        return ''.concat(t, ', ').concat(s);
-                                    })(o)
+                                (0, r.jsx)('aside', {
+                                    className: o.usageInfo,
+                                    'aria-hidden': !0,
+                                    children: c
                                 })
                             ]
                         }),
-                        (0, i.jsx)('aside', {
-                            className: a.usageInfo,
-                            'aria-hidden': !0,
-                            children: d
-                        })
-                    ]
-                })
+                    Object.getOwnPropertyDescriptors
+                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                        : (function (e, t) {
+                              var n = Object.keys(e);
+                              if (Object.getOwnPropertySymbols) {
+                                  var r = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, r);
+                              }
+                              return n;
+                          })(Object(n)).forEach(function (e) {
+                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                          }),
+                    t)
+                );
+            }
         });
     };

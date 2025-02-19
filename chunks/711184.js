@@ -1,80 +1,80 @@
-s.d(t, { default: () => R }), s(47120);
-var n = s(200651),
-    r = s(192379),
-    i = s(120356),
-    o = s.n(i),
-    l = s(215569),
-    a = s(481060),
-    u = s(401190),
-    c = s(490529),
-    p = s(57875),
-    d = s(368003),
-    h = s(981631),
-    g = s(388032),
-    m = s(628612),
-    x = s(483938);
-function k(e, t, s) {
+r.d(t, { default: () => S }), r(47120);
+var s = r(200651),
+    n = r(192379),
+    i = r(120356),
+    o = r.n(i),
+    a = r(215569),
+    l = r(481060),
+    u = r(401190),
+    c = r(490529),
+    p = r(57875),
+    d = r(368003),
+    h = r(981631),
+    g = r(388032),
+    m = r(991871),
+    x = r(455812);
+function b(e, t, r) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: s,
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = s),
+            : (e[t] = r),
         e
     );
 }
-let b = (e) =>
-        (0, n.jsx)('div', {
+let j = (e) =>
+        (0, s.jsx)('div', {
             className: m.innerContentWrapper,
             children: e.children
         }),
-    j = {
-        [h.gkr.HOUSE_1]: s(530530),
-        [h.gkr.HOUSE_2]: s(230651),
-        [h.gkr.HOUSE_3]: s(497494)
+    f = {
+        [h.gkr.HOUSE_1]: r(530530),
+        [h.gkr.HOUSE_2]: r(230651),
+        [h.gkr.HOUSE_3]: r(497494)
     },
-    z = {
+    k = {
         [h.gkr.HOUSE_1]: m.quizResultLogoWrapperHouse1,
         [h.gkr.HOUSE_2]: m.quizResultLogoWrapperHouse2,
         [h.gkr.HOUSE_3]: m.quizResultLogoWrapperHouse3
     },
-    C = (e) =>
+    y = (e) =>
         ({
-            [h.gkr.HOUSE_1]: g.intl.string(g.t['hNL/nJ']),
-            [h.gkr.HOUSE_2]: g.intl.string(g.t.jVomur),
-            [h.gkr.HOUSE_3]: g.intl.string(g.t['+kg5zs'])
+            [h.gkr.HOUSE_1]: g.NW.string(g.t['hNL/nJ']),
+            [h.gkr.HOUSE_2]: g.NW.string(g.t.jVomur),
+            [h.gkr.HOUSE_3]: g.NW.string(g.t['+kg5zs'])
         })[e];
-class _ extends r.Component {
+class W extends n.Component {
     getSelectedHouseID() {
         let e;
         let { responses: t } = this.state,
-            s = {},
-            n = 0;
-        return (Object.keys(t).forEach((r) => {
-            let i = t[r];
-            null == s[i] && (s[i] = 0), s[i]++, s[i] > n && ((e = i), (n = s[i]));
+            r = {},
+            s = 0;
+        return (Object.keys(t).forEach((n) => {
+            let i = t[n];
+            null == r[i] && (r[i] = 0), r[i]++, r[i] > s && ((e = i), (s = r[i]));
         }),
         null == e || e === h.jsM)
             ? (0, c.uj)()
             : e;
     }
     renderUnknownErrorMessage() {
-        return (0, n.jsx)(
+        return (0, s.jsx)(
             p.Z,
             {
-                children: (0, n.jsxs)(r.Fragment, {
+                children: (0, s.jsxs)(n.Fragment, {
                     children: [
-                        (0, n.jsx)(a.X6q, {
+                        (0, s.jsx)(l.X6q, {
                             className: m.quizResultHeading,
                             variant: 'heading-xl/semibold',
-                            children: g.intl.string(g.t['8A8ry8'])
+                            children: g.NW.string(g.t['8A8ry8'])
                         }),
-                        (0, n.jsx)(a.Text, {
+                        (0, s.jsx)(l.Text, {
                             variant: 'text-sm/normal',
-                            children: g.intl.format(g.t['4JWDXl'], {
+                            children: g.NW.format(g.t['4JWDXl'], {
                                 emailAddress: 'hypesquad@'.concat(h.U9i),
                                 emailAddressLink: 'mailto:hypesquad@'.concat(h.U9i)
                             })
@@ -88,29 +88,29 @@ class _ extends r.Component {
     renderQuizResult() {
         let { selectedHouse: e } = this.state;
         if (null == e) return null;
-        let t = g.intl.formatToPlainString(g.t.HrcQAA, { house: (0, c.X8)(e) });
-        return (0, n.jsx)(
+        let t = g.NW.formatToPlainString(g.t.HrcQAA, { house: (0, c.X8)(e) });
+        return (0, s.jsx)(
             p.Z,
             {
-                children: (0, n.jsxs)(r.Fragment, {
+                children: (0, s.jsxs)(n.Fragment, {
                     children: [
-                        (0, n.jsx)('div', {
-                            className: o()(m.quizResultLogoWrapper, z[e], x.marginBottom20),
-                            children: (0, n.jsx)('img', {
+                        (0, s.jsx)('div', {
+                            className: o()(m.quizResultLogoWrapper, k[e], x.marginBottom20),
+                            children: (0, s.jsx)('img', {
                                 alt: t,
                                 className: m.quizResultLogo,
-                                src: j[e]
+                                src: f[e]
                             })
                         }),
-                        (0, n.jsx)(a.X6q, {
+                        (0, s.jsx)(l.X6q, {
                             className: m.quizResultHeading,
                             variant: 'heading-xl/semibold',
                             children: t
                         }),
-                        (0, n.jsx)(a.Text, {
+                        (0, s.jsx)(l.Text, {
                             className: m.quizResultBody,
                             variant: 'text-sm/normal',
-                            children: C(e)
+                            children: y(e)
                         })
                     ]
                 })
@@ -119,14 +119,14 @@ class _ extends r.Component {
         );
     }
     renderContent() {
-        let { currentStep: e, hasUnknownError: t, hasSubmittedHouse: s, questions: r } = this.state;
+        let { currentStep: e, hasUnknownError: t, hasSubmittedHouse: r, questions: n } = this.state;
         if (t) return this.renderUnknownErrorMessage();
-        if (s) return this.renderQuizResult();
-        let i = r[e];
-        return (0, n.jsx)(
+        if (r) return this.renderQuizResult();
+        let i = n[e];
+        return (0, s.jsx)(
             p.Z,
             {
-                children: (0, n.jsx)(
+                children: (0, s.jsx)(
                     d.Z,
                     {
                         onSelect: this.handleQuestionSelect,
@@ -140,94 +140,94 @@ class _ extends r.Component {
         );
     }
     renderHeaderCopy() {
-        let { currentStep: e, hasUnknownError: t, hasSubmittedHouse: s, questions: n } = this.state;
+        let { currentStep: e, hasUnknownError: t, hasSubmittedHouse: r, questions: s } = this.state;
         return t
-            ? g.intl.string(g.t.fMgJMz)
-            : s
-              ? g.intl.string(g.t.mW2CNz)
-              : g.intl.formatToPlainString(g.t['4n8Pb2'], {
+            ? g.NW.string(g.t.fMgJMz)
+            : r
+              ? g.NW.string(g.t.mW2CNz)
+              : g.NW.formatToPlainString(g.t['4n8Pb2'], {
                     currentQuestion: e + 1,
-                    questionCount: n.length
+                    questionCount: s.length
                 });
     }
     renderNewsletterWarning() {
-        return (0, n.jsx)(p.Z, {
-            children: (0, n.jsx)(a.Text, {
+        return (0, s.jsx)(p.Z, {
+            children: (0, s.jsx)(l.Text, {
                 className: m.nameFormPreface,
                 variant: 'text-md/normal',
-                children: g.intl.string(g.t['3kUvgo'])
+                children: g.NW.string(g.t['3kUvgo'])
             })
         });
     }
     renderPrimaryAction() {
-        let { currentStep: e, responses: t, hasUnknownError: s, hasSubmittedHouse: r, isRequestPending: i, questions: o } = this.state,
-            l = null == t[e];
-        return s
-            ? (0, n.jsx)(a.zxk, {
+        let { currentStep: e, responses: t, hasUnknownError: r, hasSubmittedHouse: n, isRequestPending: i, questions: o } = this.state,
+            a = null == t[e];
+        return r
+            ? (0, s.jsx)(l.zxk, {
                   type: 'submit',
-                  color: a.zxk.Colors.BRAND,
+                  color: l.zxk.Colors.BRAND,
                   onClick: this.handleSubmitButtonClick,
                   submitting: i,
-                  children: g.intl.string(g.t['5BGOBA'])
+                  children: g.NW.string(g.t['5BGOBA'])
               })
-            : r
-              ? (0, n.jsx)(a.zxk, {
+            : n
+              ? (0, s.jsx)(l.zxk, {
                     type: 'submit',
-                    color: a.zxk.Colors.BRAND,
+                    color: l.zxk.Colors.BRAND,
                     onClick: this.props.onClose,
-                    children: g.intl.string(g.t['Wc/k5O'])
+                    children: g.NW.string(g.t['Wc/k5O'])
                 })
               : e === o.length - 1
-                ? (0, n.jsx)(a.zxk, {
-                      disabled: l,
+                ? (0, s.jsx)(l.zxk, {
+                      disabled: a,
                       type: 'submit',
-                      color: a.zxk.Colors.BRAND,
+                      color: l.zxk.Colors.BRAND,
                       onClick: this.handleSubmitButtonClick,
                       submitting: i,
-                      children: g.intl.string(g.t.j5vHo6)
+                      children: g.NW.string(g.t.j5vHo6)
                   })
-                : (0, n.jsx)(a.zxk, {
-                      disabled: l,
+                : (0, s.jsx)(l.zxk, {
+                      disabled: a,
                       type: 'submit',
-                      color: a.zxk.Colors.BRAND,
+                      color: l.zxk.Colors.BRAND,
                       onClick: this.handleNextQuestionButtonClick,
-                      children: g.intl.string(g.t.cgonQE)
+                      children: g.NW.string(g.t.cgonQE)
                   });
     }
     renderSecondaryAction() {
         let { hasSubmittedHouse: e } = this.state;
         return e
             ? null
-            : (0, n.jsx)(a.zxk, {
+            : (0, s.jsx)(l.zxk, {
                   type: 'button',
-                  look: a.zxk.Looks.LINK,
-                  color: a.zxk.Colors.PRIMARY,
+                  look: l.zxk.Looks.LINK,
+                  color: l.zxk.Colors.PRIMARY,
                   onClick: this.props.onClose,
-                  children: g.intl.string(g.t['5NfNYm'])
+                  children: g.NW.string(g.t['5NfNYm'])
               });
     }
     render() {
         let { selectedHouse: e } = this.state,
             { transitionState: t } = this.props;
-        return (0, n.jsxs)(a.Y0X, {
-            size: null == e ? a.CgR.MEDIUM : a.CgR.SMALL,
+        return (0, s.jsxs)(l.Y0X, {
+            size: null == e ? l.CgR.MEDIUM : l.CgR.SMALL,
             transitionState: t,
             children: [
-                (0, n.jsx)(a.xBx, {
+                (0, s.jsx)(l.xBx, {
                     separator: !1,
-                    children: (0, n.jsx)(a.X6q, {
+                    children: (0, s.jsx)(l.X6q, {
                         variant: 'heading-lg/semibold',
                         children: this.renderHeaderCopy()
                     })
                 }),
-                (0, n.jsx)('div', {
+                (0, s.jsx)('div', {
                     className: m.outerContentWrapper,
-                    children: (0, n.jsx)(l.W, {
-                        component: b,
+                    children: (0, s.jsx)(a.W, {
+                        component: j,
                         children: this.renderContent()
                     })
                 }),
-                (0, n.jsxs)(a.mzw, {
+                (0, s.jsxs)(l.mzw, {
                     children: [this.renderPrimaryAction(), this.renderSecondaryAction()]
                 })
             ]
@@ -235,7 +235,7 @@ class _ extends r.Component {
     }
     constructor(...e) {
         super(...e),
-            k(this, 'state', {
+            b(this, 'state', {
                 currentStep: 0,
                 hasSubmittedHouse: !1,
                 hasUnknownError: !1,
@@ -244,15 +244,45 @@ class _ extends r.Component {
                 responses: {},
                 selectedHouse: null
             }),
-            k(this, 'handleQuestionSelect', (e) => {
-                this.setState((t) => ({
-                    responses: {
-                        ...t.responses,
-                        [t.currentStep]: e
-                    }
-                }));
+            b(this, 'handleQuestionSelect', (e) => {
+                this.setState((t) => {
+                    var r, s;
+                    return {
+                        responses:
+                            ((r = (function (e) {
+                                for (var t = 1; t < arguments.length; t++) {
+                                    var r = null != arguments[t] ? arguments[t] : {},
+                                        s = Object.keys(r);
+                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                        (s = s.concat(
+                                            Object.getOwnPropertySymbols(r).filter(function (e) {
+                                                return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                            })
+                                        )),
+                                        s.forEach(function (t) {
+                                            b(e, t, r[t]);
+                                        });
+                                }
+                                return e;
+                            })({}, t.responses)),
+                            (s = s = { [t.currentStep]: e }),
+                            Object.getOwnPropertyDescriptors
+                                ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(s))
+                                : (function (e, t) {
+                                      var r = Object.keys(e);
+                                      if (Object.getOwnPropertySymbols) {
+                                          var s = Object.getOwnPropertySymbols(e);
+                                          r.push.apply(r, s);
+                                      }
+                                      return r;
+                                  })(Object(s)).forEach(function (e) {
+                                      Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(s, e));
+                                  }),
+                            r)
+                    };
+                });
             }),
-            k(this, 'handleSubmitButtonClick', () => {
+            b(this, 'handleSubmitButtonClick', () => {
                 let e = this.getSelectedHouseID();
                 this.setState({ isRequestPending: !0 }, () => {
                     u.Z.joinHypeSquadOnline({ houseID: e })
@@ -273,12 +303,12 @@ class _ extends r.Component {
                         });
                 });
             }),
-            k(this, 'handleKeyDown', (e) => {
+            b(this, 'handleKeyDown', (e) => {
                 e.keyCode === h.yXg.ENTER && this.handleSubmitButtonClick();
             }),
-            k(this, 'handleNextQuestionButtonClick', () => {
+            b(this, 'handleNextQuestionButtonClick', () => {
                 this.setState((e) => ({ currentStep: e.currentStep + 1 }));
             });
     }
 }
-let R = _;
+let S = W;

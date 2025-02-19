@@ -1,20 +1,20 @@
 n.d(t, { Z: () => N }), n(47120);
-var i = n(200651),
-    l = n(192379),
-    r = n(442837),
-    a = n(481060),
-    s = n(325432),
-    o = n(570928),
-    d = n(600164),
-    c = n(579022),
-    u = n(391690),
-    h = n(424218),
-    m = n(358085),
-    p = n(998502),
-    g = n(388032),
-    _ = n(490899),
-    f = n(483938);
-function E(e, t, n) {
+var r = n(200651),
+    i = n(192379),
+    l = n(442837),
+    o = n(481060),
+    a = n(325432),
+    s = n(570928),
+    c = n(600164),
+    u = n(579022),
+    d = n(391690),
+    p = n(424218),
+    h = n(358085),
+    g = n(998502),
+    f = n(388032),
+    m = n(434164),
+    b = n(455812);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,11 +27,11 @@ function E(e, t, n) {
         e
     );
 }
-class I extends l.PureComponent {
+class E extends i.PureComponent {
     renderDiskUsageCircle() {
         let { metadata: e } = this.props;
         return null != e && null != e.availableKB && null != e.totalKB
-            ? (0, i.jsx)(c.Z, {
+            ? (0, r.jsx)(u.Z, {
                   total: e.totalKB,
                   used: e.totalKB - e.availableKB
               })
@@ -39,56 +39,56 @@ class I extends l.PureComponent {
     }
     renderViewing() {
         let e, t;
-        let { path: n, label: l, editingPath: r, isDefault: s, metadata: c } = this.props;
+        let { path: n, label: i, editingPath: l, isDefault: a, metadata: u } = this.props;
         return (
-            null != c && ((e = null != c.availableKB ? (0, h.BU)(c.availableKB, { useKibibytes: !0 }) : null), (t = null != c.totalKB ? (0, h.BU)(c.totalKB, { useKibibytes: !0 }) : null)),
-            (0, i.jsxs)(d.Z, {
-                className: _.installationPath,
-                align: d.Z.Align.CENTER,
+            null != u && ((e = null != u.availableKB ? (0, p.BU)(u.availableKB, { useKibibytes: !0 }) : null), (t = null != u.totalKB ? (0, p.BU)(u.totalKB, { useKibibytes: !0 }) : null)),
+            (0, r.jsxs)(c.Z, {
+                className: m.installationPath,
+                align: c.Z.Align.CENTER,
                 children: [
                     this.renderDiskUsageCircle(),
-                    (0, i.jsxs)(d.Z, {
-                        direction: d.Z.Direction.VERTICAL,
-                        className: _.__invalid_descriptionWrapper,
+                    (0, r.jsxs)(c.Z, {
+                        direction: c.Z.Direction.VERTICAL,
+                        className: m.__invalid_descriptionWrapper,
                         children: [
-                            (0, i.jsxs)(d.Z, {
-                                align: d.Z.Align.CENTER,
+                            (0, r.jsxs)(c.Z, {
+                                align: c.Z.Align.CENTER,
                                 children: [
-                                    (0, i.jsx)(a.X6q, {
-                                        className: _.rowTitle,
+                                    (0, r.jsx)(o.X6q, {
+                                        className: m.rowTitle,
                                         variant: 'heading-md/semibold',
-                                        children: null != l ? l : u.Z.getLabelFromPath(n)
+                                        children: null != i ? i : d.Z.getLabelFromPath(n)
                                     }),
-                                    s
-                                        ? (0, i.jsx)('span', {
-                                              className: _.defaultIndicator,
-                                              children: g.intl.string(g.t.bBvAEB)
+                                    a
+                                        ? (0, r.jsx)('span', {
+                                              className: m.defaultIndicator,
+                                              children: f.NW.string(f.t.bBvAEB)
                                           })
                                         : null
                                 ]
                             }),
-                            null != c && null != e && null != t
-                                ? (0, i.jsx)(o.Z, {
-                                      className: _.rowBody,
-                                      hoverText: g.intl.formatToPlainString(g.t.Fxo9e3, {
+                            null != u && null != e && null != t
+                                ? (0, r.jsx)(s.Z, {
+                                      className: m.rowBody,
+                                      hoverText: f.NW.formatToPlainString(f.t.Fxo9e3, {
                                           available: e,
                                           total: t
                                       }),
                                       children: n
                                   })
-                                : (0, i.jsx)(a.Text, {
-                                      className: _.rowBody,
+                                : (0, r.jsx)(o.Text, {
+                                      className: m.rowBody,
                                       variant: 'text-xs/normal',
                                       children: n
                                   })
                         ]
                     }),
-                    (0, i.jsx)(a.zxk, {
-                        size: a.zxk.Sizes.SMALL,
-                        disabled: null != r,
-                        color: a.zxk.Colors.PRIMARY,
+                    (0, r.jsx)(o.zxk, {
+                        size: o.zxk.Sizes.SMALL,
+                        disabled: null != l,
+                        color: o.zxk.Colors.PRIMARY,
                         onClick: this.handleStartEditing,
-                        children: g.intl.string(g.t.bt75u7)
+                        children: f.NW.string(f.t.bt75u7)
                     })
                 ]
             })
@@ -96,66 +96,66 @@ class I extends l.PureComponent {
     }
     renderEditing() {
         let { path: e, hasGamesInstalledInPath: t } = this.props,
-            { label: n, isDefault: l } = this.state;
-        return (0, i.jsx)(a.Zbd, {
+            { label: n, isDefault: i } = this.state;
+        return (0, r.jsx)(o.Zbd, {
             editable: !0,
-            className: _.installationPathEditing,
-            children: (0, i.jsxs)(d.Z, {
+            className: m.installationPathEditing,
+            children: (0, r.jsxs)(c.Z, {
                 children: [
                     this.renderDiskUsageCircle(),
-                    (0, i.jsxs)(d.Z.Child, {
+                    (0, r.jsxs)(c.Z.Child, {
                         children: [
-                            (0, i.jsx)(a.xJW, {
-                                title: g.intl.string(g.t.AJkKCA),
-                                children: (0, i.jsx)(a.oil, {
+                            (0, r.jsx)(o.xJW, {
+                                title: f.NW.string(f.t.AJkKCA),
+                                children: (0, r.jsx)(o.oil, {
                                     value: n,
-                                    placeholder: u.Z.getLabelFromPath(e),
+                                    placeholder: d.Z.getLabelFromPath(e),
                                     onChange: this.handleLabelChange
                                 })
                             }),
-                            (0, i.jsx)(a.xJW, {
-                                title: g.intl.string(g.t.lnUCwc),
-                                className: f.marginTop20,
-                                children: (0, i.jsx)(a.oil, {
+                            (0, r.jsx)(o.xJW, {
+                                title: f.NW.string(f.t.lnUCwc),
+                                className: b.marginTop20,
+                                children: (0, r.jsx)(o.oil, {
                                     disabled: !0,
                                     value: e
                                 })
                             }),
-                            (0, i.jsx)(a.XZJ, {
-                                type: a.XZJ.Types.INVERTED,
-                                value: null != l ? l : this.props.isDefault,
+                            (0, r.jsx)(o.XZJ, {
+                                type: o.XZJ.Types.INVERTED,
+                                value: null != i ? i : this.props.isDefault,
                                 disabled: this.props.isDefault,
-                                className: _.defaultLocationCheckbox,
+                                className: m.defaultLocationCheckbox,
                                 onChange: this.handleToggleDefault,
-                                children: g.intl.string(g.t.Z2MWuL)
+                                children: f.NW.string(f.t.Z2MWuL)
                             }),
-                            (0, i.jsx)(a.$i$, { className: _.separator }),
-                            (0, i.jsxs)(d.Z, {
+                            (0, r.jsx)(o.$i$, { className: m.separator }),
+                            (0, r.jsxs)(c.Z, {
                                 children: [
-                                    (0, i.jsx)(a.zxk, {
+                                    (0, r.jsx)(o.zxk, {
                                         disabled: t || this.props.isDefault,
-                                        size: a.zxk.Sizes.SMALL,
-                                        color: a.zxk.Colors.RED,
-                                        look: a.zxk.Looks.OUTLINED,
+                                        size: o.zxk.Sizes.SMALL,
+                                        color: o.zxk.Colors.RED,
+                                        look: o.zxk.Looks.OUTLINED,
                                         onClick: this.handleRemoveLocation,
-                                        children: g.intl.string(g.t.iBUzS0)
+                                        children: f.NW.string(f.t.iBUzS0)
                                     }),
-                                    (0, i.jsxs)(d.Z, {
-                                        justify: d.Z.Justify.END,
+                                    (0, r.jsxs)(c.Z, {
+                                        justify: c.Z.Justify.END,
                                         children: [
-                                            (0, i.jsx)(a.zxk, {
-                                                size: a.zxk.Sizes.SMALL,
-                                                color: a.zxk.Colors.PRIMARY,
-                                                look: a.zxk.Looks.LINK,
+                                            (0, r.jsx)(o.zxk, {
+                                                size: o.zxk.Sizes.SMALL,
+                                                color: o.zxk.Colors.PRIMARY,
+                                                look: o.zxk.Looks.LINK,
                                                 onClick: this.handleStopEditing,
-                                                children: g.intl.string(g.t['ETE/oK'])
+                                                children: f.NW.string(f.t['ETE/oK'])
                                             }),
-                                            (0, i.jsx)(a.zxk, {
-                                                disabled: e === this.props.path && n === this.props.label && l === this.props.isDefault,
-                                                size: a.zxk.Sizes.SMALL,
-                                                color: a.zxk.Colors.GREEN,
+                                            (0, r.jsx)(o.zxk, {
+                                                disabled: e === this.props.path && n === this.props.label && i === this.props.isDefault,
+                                                size: o.zxk.Sizes.SMALL,
+                                                color: o.zxk.Colors.GREEN,
                                                 onClick: this.handleSaveChanges,
-                                                children: g.intl.string(g.t.R3BPHx)
+                                                children: f.NW.string(f.t.R3BPHx)
                                             })
                                         ]
                                     })
@@ -172,19 +172,19 @@ class I extends l.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            E(this, 'state', {
+            _(this, 'state', {
                 label: void 0,
                 isDefault: null
             }),
-            E(this, 'handleStartEditing', () => {
-                let { path: e, label: t, isDefault: n, onToggleEditing: i } = this.props;
-                i(e),
+            _(this, 'handleStartEditing', () => {
+                let { path: e, label: t, isDefault: n, onToggleEditing: r } = this.props;
+                r(e),
                     this.setState({
                         label: t,
                         isDefault: n
                     });
             }),
-            E(this, 'handleStopEditing', () => {
+            _(this, 'handleStopEditing', () => {
                 let { onToggleEditing: e } = this.props;
                 e(null),
                     this.setState({
@@ -192,41 +192,74 @@ class I extends l.PureComponent {
                         isDefault: null
                     });
             }),
-            E(this, 'handleRemoveLocation', () => {
-                (0, a.h7j)((e) =>
-                    (0, i.jsx)(a.ConfirmModal, {
-                        ...e,
-                        header: g.intl.string(g.t.iBUzS0),
-                        confirmText: g.intl.string(g.t.iBUzS0),
-                        cancelText: g.intl.string(g.t['ETE/oK']),
-                        onConfirm: () => {
-                            this.handleStopEditing(), (0, s.iD)(this.props.path);
-                        },
-                        children: (0, i.jsx)(a.Text, {
-                            variant: 'text-md/normal',
-                            children: g.intl.string(g.t['1XqeW1'])
-                        })
-                    })
-                );
+            _(this, 'handleRemoveLocation', () => {
+                (0, o.h7j)((e) => {
+                    var t, n;
+                    return (0, r.jsx)(
+                        o.ConfirmModal,
+                        ((t = (function (e) {
+                            for (var t = 1; t < arguments.length; t++) {
+                                var n = null != arguments[t] ? arguments[t] : {},
+                                    r = Object.keys(n);
+                                'function' == typeof Object.getOwnPropertySymbols &&
+                                    (r = r.concat(
+                                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                        })
+                                    )),
+                                    r.forEach(function (t) {
+                                        _(e, t, n[t]);
+                                    });
+                            }
+                            return e;
+                        })({}, e)),
+                        (n = n =
+                            {
+                                header: f.NW.string(f.t.iBUzS0),
+                                confirmText: f.NW.string(f.t.iBUzS0),
+                                cancelText: f.NW.string(f.t['ETE/oK']),
+                                onConfirm: () => {
+                                    this.handleStopEditing(), (0, a.iD)(this.props.path);
+                                },
+                                children: (0, r.jsx)(o.Text, {
+                                    variant: 'text-md/normal',
+                                    children: f.NW.string(f.t['1XqeW1'])
+                                })
+                            }),
+                        Object.getOwnPropertyDescriptors
+                            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                            : (function (e, t) {
+                                  var n = Object.keys(e);
+                                  if (Object.getOwnPropertySymbols) {
+                                      var r = Object.getOwnPropertySymbols(e);
+                                      n.push.apply(n, r);
+                                  }
+                                  return n;
+                              })(Object(n)).forEach(function (e) {
+                                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                              }),
+                        t)
+                    );
+                });
             }),
-            E(this, 'handleSaveChanges', () => {
-                (0, s.Tb)(this.props.path, {
+            _(this, 'handleSaveChanges', () => {
+                (0, a.Tb)(this.props.path, {
                     label: null != this.state.label ? this.state.label : this.props.label,
                     isDefault: null != this.state.isDefault ? this.state.isDefault : this.props.isDefault
                 }),
                     this.handleStopEditing();
             }),
-            E(this, 'handleLabelChange', (e) => {
+            _(this, 'handleLabelChange', (e) => {
                 this.setState({ label: e });
             }),
-            E(this, 'handleToggleDefault', () => {
+            _(this, 'handleToggleDefault', () => {
                 this.setState({ isDefault: !this.state.isDefault });
             });
     }
 }
-class C extends l.PureComponent {
+class O extends i.PureComponent {
     componentDidMount() {
-        (0, s.ec)(
+        (0, a.ec)(
             this.props.installationPaths.map((e) => {
                 let { path: t } = e;
                 return t;
@@ -235,34 +268,34 @@ class C extends l.PureComponent {
     }
     render() {
         let { installationPaths: e, installationPathsMetadata: t, defaultInstallationPath: n } = this.props,
-            { editingPath: l } = this.state;
-        return (0, i.jsxs)(a.hjN, {
-            className: _.wrapper,
-            title: g.intl.string(g.t.aLszkJ),
+            { editingPath: i } = this.state;
+        return (0, r.jsxs)(o.hjN, {
+            className: m.wrapper,
+            title: f.NW.string(f.t.aLszkJ),
             children: [
                 e.map((e) => {
-                    let { path: r, label: a } = e;
-                    return (0, i.jsx)(
-                        I,
+                    let { path: l, label: o } = e;
+                    return (0, r.jsx)(
+                        E,
                         {
-                            path: r,
-                            label: a,
-                            metadata: t[r],
-                            isDefault: n === r,
-                            editingPath: l,
-                            hasGamesInstalledInPath: u.Z.hasGamesInstalledInPath(r),
+                            path: l,
+                            label: o,
+                            metadata: t[l],
+                            isDefault: n === l,
+                            editingPath: i,
+                            hasGamesInstalledInPath: d.Z.hasGamesInstalledInPath(l),
                             onToggleEditing: this.handleToggleEditing
                         },
-                        r
+                        l
                     );
                 }),
-                (0, i.jsx)('div', {
-                    className: _.buttonRowWrapper,
-                    children: (0, i.jsx)(a.zxk, {
-                        disabled: !m.isPlatformEmbedded,
+                (0, r.jsx)('div', {
+                    className: m.buttonRowWrapper,
+                    children: (0, r.jsx)(o.zxk, {
+                        disabled: !h.isPlatformEmbedded,
                         onClick: this.handleAddInstallationLocation,
-                        size: a.zxk.Sizes.SMALL,
-                        children: g.intl.string(g.t.pnZ2ur)
+                        size: o.zxk.Sizes.SMALL,
+                        children: f.NW.string(f.t.pnZ2ur)
                     })
                 })
             ]
@@ -270,19 +303,19 @@ class C extends l.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            E(this, 'state', { editingPath: null }),
-            E(this, 'handleAddInstallationLocation', () => {
-                p.ZP.showOpenDialog(['openDirectory']).then((e) => {
-                    null != e && 0 !== e.length && null != e[0] && 'undefined' !== e[0] && (0, s.RY)(e[0]);
+            _(this, 'state', { editingPath: null }),
+            _(this, 'handleAddInstallationLocation', () => {
+                g.ZP.showOpenDialog(['openDirectory']).then((e) => {
+                    null != e && 0 !== e.length && null != e[0] && 'undefined' !== e[0] && (0, a.RY)(e[0]);
                 });
             }),
-            E(this, 'handleToggleEditing', (e) => {
+            _(this, 'handleToggleEditing', (e) => {
                 this.setState({ editingPath: e });
             });
     }
 }
-let N = r.ZP.connectStores([u.Z], () => ({
-    installationPaths: u.Z.installationPaths,
-    installationPathsMetadata: u.Z.installationPathsMetadata,
-    defaultInstallationPath: u.Z.defaultInstallationPath
-}))(C);
+let N = l.ZP.connectStores([d.Z], () => ({
+    installationPaths: d.Z.installationPaths,
+    installationPathsMetadata: d.Z.installationPathsMetadata,
+    defaultInstallationPath: d.Z.defaultInstallationPath
+}))(O);

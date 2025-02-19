@@ -1,56 +1,96 @@
-a.d(t, { default: () => w }), a(47120);
-var o = a(200651),
-    r = a(192379),
-    l = a(866442),
-    i = a(442837),
-    n = a(481060),
-    s = a(461745),
-    d = a(185413),
-    c = a(971628),
-    b = a(600164),
-    u = a(892880),
-    _ = a(51144),
-    m = a(480608),
-    x = a(434404),
-    h = a(946724),
-    k = a(130341),
-    R = a(494831),
-    g = a(981631),
-    C = a(71080),
-    p = a(377668),
-    f = a(388032),
-    L = a(265626);
-function v(e) {
+r.d(t, { default: () => S }), r(47120), r(566702);
+var o = r(200651),
+    n = r(192379),
+    a = r(866442),
+    l = r(442837),
+    i = r(481060),
+    s = r(461745),
+    c = r(185413),
+    d = r(971628),
+    u = r(600164),
+    b = r(892880),
+    m = r(51144),
+    _ = r(480608),
+    f = r(434404),
+    x = r(946724),
+    h = r(130341),
+    g = r(494831),
+    p = r(981631),
+    k = r(71080),
+    y = r(377668),
+    v = r(388032),
+    R = r(71930);
+function j(e) {
+    var t = (function (e, t) {
+        if ('object' !== w(e) || null === e) return e;
+        var r = e[Symbol.toPrimitive];
+        if (void 0 !== r) {
+            var o = r.call(e, t || 'default');
+            if ('object' !== w(o)) return o;
+            throw TypeError('@@toPrimitive must return a primitive value.');
+        }
+        return ('string' === t ? String : Number)(e);
+    })(e, 'string');
+    return 'symbol' === w(t) ? t : String(t);
+}
+function w(e) {
+    return e && 'undefined' != typeof Symbol && e.constructor === Symbol ? 'symbol' : typeof e;
+}
+function C(e) {
     var t;
-    let { onClose: a, roleId: v, guildId: w, onBack: M, isCreateRoleFlow: j, focusSearchAfterReady: S, isReady: z } = e,
-        y = (0, i.e7)([h.Z], () => h.Z.getRole(v), [v]),
-        [B, N] = r.useState(''),
-        [T, I] = r.useState({}),
-        [A, E] = r.useState(!1);
-    r.useEffect(() => {
-        u.Z.requestMembers(w, B.trim().toLowerCase(), k._4);
-    }, [w, B]);
-    let Z = r.useCallback((e) => !e.roles.includes(v), [v]),
-        P = (0, k.lJ)(w, Z),
-        Y = r.useMemo(() => P.filter((e) => (0, k.eg)(B, e)), [B, P]);
-    Y = Y.filter((e) => e.id !== p.fL);
-    let O = r.useCallback(async () => {
+    let { onClose: r, roleId: w, guildId: C, onBack: S, isCreateRoleFlow: N, focusSearchAfterReady: L, isReady: O } = e,
+        M = (0, l.e7)([x.Z], () => x.Z.getRole(w), [w]),
+        [z, P] = n.useState(''),
+        [T, B] = n.useState({}),
+        [I, E] = n.useState(!1);
+    n.useEffect(() => {
+        b.Z.requestMembers(C, z.trim().toLowerCase(), h._4);
+    }, [C, z]);
+    let A = n.useCallback((e) => !e.roles.includes(w), [w]),
+        W = (0, h.lJ)(C, A),
+        Z = n.useMemo(() => W.filter((e) => (0, h.eg)(z, e)), [z, W]);
+    Z = Z.filter((e) => e.id !== y.fL);
+    let Y = n.useCallback(async () => {
             let e = Object.values(T).map((e) => e.row.id);
             E(!0);
             try {
-                await x.Z.bulkAddMemberRoles(w, v, e), (0, m.H)(w, v, !1), a();
+                await f.Z.bulkAddMemberRoles(C, w, e), (0, _.H)(C, w, !1), r();
             } catch (e) {
                 E(!1);
             }
-        }, [w, v, T, a]),
-        q = r.useCallback((e) => {
-            I((t) => {
-                let a = { ...t },
-                    o = (0, c.G)(e);
+        }, [C, w, T, r]),
+        q = n.useCallback((e) => {
+            B((t) => {
+                let r = (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var r = null != arguments[t] ? arguments[t] : {},
+                                o = Object.keys(r);
+                            'function' == typeof Object.getOwnPropertySymbols &&
+                                (o = o.concat(
+                                    Object.getOwnPropertySymbols(r).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                    })
+                                )),
+                                o.forEach(function (t) {
+                                    var o;
+                                    (o = r[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: o,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0
+                                              })
+                                            : (e[t] = o);
+                                });
+                        }
+                        return e;
+                    })({}, t),
+                    o = (0, d.G)(e);
                 return (
-                    o in a
-                        ? delete a[o]
-                        : (a[o] = {
+                    o in r
+                        ? delete r[o]
+                        : (r[o] = {
                               display: {
                                   type: s.Fj.MEMBER,
                                   label: e.name,
@@ -58,26 +98,44 @@ function v(e) {
                               },
                               row: e
                           }),
-                    a
+                    r
                 );
             });
         }, []),
-        K = r.useCallback((e) => {
-            I((t) => {
-                let { [e]: a, ...o } = t;
-                return o;
+        K = n.useCallback((e) => {
+            B((t) => {
+                let { [e]: r } = t;
+                return (function (e, t) {
+                    if (null == e) return {};
+                    var r,
+                        o,
+                        n = (function (e, t) {
+                            if (null == e) return {};
+                            var r,
+                                o,
+                                n = {},
+                                a = Object.keys(e);
+                            for (o = 0; o < a.length; o++) (r = a[o]), t.indexOf(r) >= 0 || (n[r] = e[r]);
+                            return n;
+                        })(e, t);
+                    if (Object.getOwnPropertySymbols) {
+                        var a = Object.getOwnPropertySymbols(e);
+                        for (o = 0; o < a.length; o++) (r = a[o]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (n[r] = e[r]);
+                    }
+                    return n;
+                })(t, [e].map(j));
             });
         }, []),
-        U = r.useMemo(
+        U = n.useMemo(
             () =>
-                Y.map((e) => {
+                Z.map((e) => {
                     var t;
-                    let a = _.ZP.getUserTag(e.user);
+                    let r = m.ZP.getUserTag(e.user);
                     return {
-                        rowType: C.aC.MEMBER,
-                        name: null !== (t = e.name) && void 0 !== t ? t : a,
+                        rowType: k.aC.MEMBER,
+                        name: null !== (t = e.name) && void 0 !== t ? t : r,
                         nickname: e.name,
-                        username: a,
+                        username: r,
                         id: e.id,
                         avatarURL: e.avatarURL,
                         bot: e.bot,
@@ -86,110 +144,110 @@ function v(e) {
                         key: e.id
                     };
                 }),
-            [Y]
+            [Z]
         ),
-        H = r.useMemo(() => Object.keys(T).length, [T]);
+        H = n.useMemo(() => Object.keys(T).length, [T]);
     return (0, o.jsxs)(o.Fragment, {
         children: [
-            (0, o.jsxs)(n.xBx, {
-                className: L.header,
+            (0, o.jsxs)(i.xBx, {
+                className: R.header,
                 separator: !1,
-                direction: b.Z.Direction.VERTICAL,
+                direction: u.Z.Direction.VERTICAL,
                 children: [
-                    (0, o.jsx)(n.X6q, {
+                    (0, o.jsx)(i.X6q, {
                         variant: 'heading-xl/semibold',
-                        children: f.intl.string(f.t['ZYOK4+'])
+                        children: v.NW.string(v.t['ZYOK4+'])
                     }),
-                    j
-                        ? (0, o.jsx)(n.Text, {
-                              className: L.subtitle,
+                    N
+                        ? (0, o.jsx)(i.Text, {
+                              className: R.subtitle,
                               color: 'text-normal',
                               variant: 'text-md/normal',
-                              children: f.intl.string(f.t.AMsxa2)
+                              children: v.NW.string(v.t.AMsxa2)
                           })
                         : (0, o.jsxs)('div', {
-                              className: L.roleContainer,
+                              className: R.roleContainer,
                               children: [
-                                  (0, o.jsx)(n.lZ8, {
+                                  (0, o.jsx)(i.lZ8, {
                                       size: 'xs',
-                                      color: null !== (t = null == y ? void 0 : y.colorString) && void 0 !== t ? t : (0, l.Rf)(g.p6O)
+                                      color: null !== (t = null == M ? void 0 : M.colorString) && void 0 !== t ? t : (0, a.Rf)(p.p6O)
                                   }),
-                                  (0, o.jsx)(n.Text, {
-                                      className: L.roleName,
+                                  (0, o.jsx)(i.Text, {
+                                      className: R.roleName,
                                       color: 'text-normal',
                                       variant: 'text-md/normal',
-                                      children: null == y ? void 0 : y.name
+                                      children: null == M ? void 0 : M.name
                                   })
                               ]
                           })
                 ]
             }),
-            (0, o.jsx)(d.t, {
-                listClassName: L.list,
+            (0, o.jsx)(c.t, {
+                listClassName: R.list,
                 pendingAdditions: T,
-                query: B,
-                onQueryChange: N,
+                query: z,
+                onQueryChange: P,
                 onClickRow: q,
                 onRemovePendingAddition: K,
                 roles: [],
                 members: U,
-                placeholderText: f.intl.string(f.t.vMiCaW),
-                renderEmptyText: (e) => f.intl.format(f.t.eq8a8f, { query: e }),
-                focusSearchAfterReady: S,
-                isReady: z,
-                description: f.intl.formatToPlainString(f.t['3OxP4u'], { numMembers: R.ey })
+                placeholderText: v.NW.string(v.t.vMiCaW),
+                renderEmptyText: (e) => v.NW.format(v.t.eq8a8f, { query: e }),
+                focusSearchAfterReady: L,
+                isReady: O,
+                description: v.NW.formatToPlainString(v.t['3OxP4u'], { numMembers: g.ey })
             }),
-            (0, o.jsxs)(n.mzw, {
-                className: L.footer,
+            (0, o.jsxs)(i.mzw, {
+                className: R.footer,
                 children: [
                     (0, o.jsxs)('div', {
-                        className: L.buttonsRight,
+                        className: R.buttonsRight,
                         children: [
-                            j && 0 === H
-                                ? (0, o.jsx)(n.zxk, {
-                                      onClick: a,
-                                      color: n.zxk.Colors.PRIMARY,
-                                      children: f.intl.string(f.t.CJm5V1)
+                            N && 0 === H
+                                ? (0, o.jsx)(i.zxk, {
+                                      onClick: r,
+                                      color: i.zxk.Colors.PRIMARY,
+                                      children: v.NW.string(v.t.CJm5V1)
                                   })
-                                : (0, o.jsx)(n.zxk, {
-                                      onClick: O,
-                                      submitting: A,
-                                      disabled: 0 === H || H > R.ey,
-                                      children: f.intl.string(f.t.OYkgVl)
+                                : (0, o.jsx)(i.zxk, {
+                                      onClick: Y,
+                                      submitting: I,
+                                      disabled: 0 === H || H > g.ey,
+                                      children: v.NW.string(v.t.OYkgVl)
                                   }),
-                            !j &&
-                                (0, o.jsx)(n.zxk, {
-                                    look: n.zxk.Looks.LINK,
-                                    color: n.zxk.Colors.PRIMARY,
-                                    size: n.zxk.Sizes.SMALL,
-                                    onClick: a,
-                                    children: f.intl.string(f.t['ETE/oK'])
+                            !N &&
+                                (0, o.jsx)(i.zxk, {
+                                    look: i.zxk.Looks.LINK,
+                                    color: i.zxk.Colors.PRIMARY,
+                                    size: i.zxk.Sizes.SMALL,
+                                    onClick: r,
+                                    children: v.NW.string(v.t['ETE/oK'])
                                 })
                         ]
                     }),
-                    null != M &&
-                        (0, o.jsx)(n.zxk, {
-                            color: n.zxk.Colors.PRIMARY,
-                            look: n.zxk.Looks.LINK,
-                            size: n.zxk.Sizes.TINY,
-                            onClick: M,
-                            className: L.backButton,
-                            children: f.intl.string(f.t['13/7kZ'])
+                    null != S &&
+                        (0, o.jsx)(i.zxk, {
+                            color: i.zxk.Colors.PRIMARY,
+                            look: i.zxk.Looks.LINK,
+                            size: i.zxk.Sizes.TINY,
+                            onClick: S,
+                            className: R.backButton,
+                            children: v.NW.string(v.t['13/7kZ'])
                         })
                 ]
             })
         ]
     });
 }
-function w(e) {
-    let { transitionState: t, onClose: a, roleId: r, guildId: l } = e;
-    return (0, o.jsx)(n.Y0X, {
+function S(e) {
+    let { transitionState: t, onClose: r, roleId: n, guildId: a } = e;
+    return (0, o.jsx)(i.Y0X, {
         transitionState: t,
-        size: n.CgR.SMALL,
-        children: (0, o.jsx)(v, {
-            onClose: a,
-            roleId: r,
-            guildId: l
+        size: i.CgR.SMALL,
+        children: (0, o.jsx)(C, {
+            onClose: r,
+            roleId: n,
+            guildId: a
         })
     });
 }

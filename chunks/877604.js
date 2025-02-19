@@ -1,30 +1,30 @@
-e.d(i, { Z: () => c }), e(411104);
+i.d(e, { Z: () => u }), i(411104);
 var s,
-    n = e(200651),
-    h = e(192379),
-    a = e(120356),
-    r = e.n(a),
-    l = e(660623);
-function o(t, i, e) {
+    n = i(200651),
+    a = i(192379),
+    h = i(120356),
+    r = i.n(h),
+    o = i(61701);
+function l(t, e, i) {
     return (
-        i in t
-            ? Object.defineProperty(t, i, {
-                  value: e,
+        e in t
+            ? Object.defineProperty(t, e, {
+                  value: i,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (t[i] = e),
+            : (t[e] = i),
         t
     );
 }
 let d = (t) =>
-    new Promise((i, e) => {
-        null == t && e(Error('No image src passed'));
+    new Promise((e, i) => {
+        null == t && i(Error('No image src passed'));
         let s = new Image();
-        (s.src = t), (s.onload = () => i(s)), (s.onerror = (t) => e(t));
+        (s.src = t), (s.onload = () => e(s)), (s.onerror = (t) => i(t));
     });
-class u extends (s = h.PureComponent) {
+class c extends (s = a.PureComponent) {
     componentDidUpdate(t) {
         t.src !== this.props.src && this.setState({ loaded: !1 }, () => this.initialize());
     }
@@ -37,32 +37,63 @@ class u extends (s = h.PureComponent) {
         this.unmounting = !0;
     }
     render() {
-        let { className: t, src: i, alt: e, width: s, height: h, onLoad: a, style: o, imageClassName: d } = this.props,
-            { loaded: u } = this.state;
+        var t, e;
+        let { className: i, src: s, alt: a, width: h, height: d, onLoad: c, style: u, imageClassName: p } = this.props,
+            { loaded: f } = this.state;
         return (0, n.jsx)('div', {
-            className: t,
-            style: {
-                ...o,
-                width: s,
-                height: h
-            },
+            className: i,
+            style:
+                ((t = (function (t) {
+                    for (var e = 1; e < arguments.length; e++) {
+                        var i = null != arguments[e] ? arguments[e] : {},
+                            s = Object.keys(i);
+                        'function' == typeof Object.getOwnPropertySymbols &&
+                            (s = s.concat(
+                                Object.getOwnPropertySymbols(i).filter(function (t) {
+                                    return Object.getOwnPropertyDescriptor(i, t).enumerable;
+                                })
+                            )),
+                            s.forEach(function (e) {
+                                l(t, e, i[e]);
+                            });
+                    }
+                    return t;
+                })({}, u)),
+                (e = e =
+                    {
+                        width: h,
+                        height: d
+                    }),
+                Object.getOwnPropertyDescriptors
+                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(e))
+                    : (function (t, e) {
+                          var i = Object.keys(t);
+                          if (Object.getOwnPropertySymbols) {
+                              var s = Object.getOwnPropertySymbols(t);
+                              i.push.apply(i, s);
+                          }
+                          return i;
+                      })(Object(e)).forEach(function (i) {
+                          Object.defineProperty(t, i, Object.getOwnPropertyDescriptor(e, i));
+                      }),
+                t),
             children: (0, n.jsx)('img', {
-                className: r()(l.image, d, { [l.loaded]: u }),
-                width: s,
-                height: h,
-                src: i,
-                alt: e,
-                onLoad: a
+                className: r()(o.image, p, { [o.loaded]: f }),
+                width: h,
+                height: d,
+                src: s,
+                alt: a,
+                onLoad: c
             })
         });
     }
     constructor(t) {
-        super(t), o(this, 'unmounting', !1), o(this, 'state', { loaded: !1 }), this.initialize();
+        super(t), l(this, 'unmounting', !1), l(this, 'state', { loaded: !1 }), this.initialize();
     }
 }
-o(u, 'defaultProps', {
+l(c, 'defaultProps', {
     width: 0,
     height: 0,
     alt: ''
 });
-let c = u;
+let u = c;

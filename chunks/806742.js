@@ -1,73 +1,120 @@
-n.d(t, { Z: () => _ });
-var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    s = n.n(l),
-    a = n(399606),
+n.d(t, { Z: () => j });
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(399606),
     o = n(481060),
     c = n(734893),
     d = n(150512),
     u = n(314897),
     m = n(8426),
-    h = n(969632),
+    p = n(969632),
     g = n(535907),
-    x = n(388032),
-    p = n(73806);
-let _ = function (e) {
+    h = n(388032),
+    f = n(339945);
+function b(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function x(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let j = function (e) {
     let { guildId: t } = e,
-        l = (0, a.cj)([h.Z], () => {
+        s = (0, l.cj)([p.Z], () => {
             var e;
-            return null !== (e = h.Z.getSettings().welcomeMessage) && void 0 !== e ? e : g.z;
+            return null !== (e = p.Z.getSettings().welcomeMessage) && void 0 !== e ? e : g.z;
         }),
-        _ = r.useCallback(
+        j = i.useCallback(
             () =>
                 (0, o.ZDy)(async () => {
                     let { default: e } = await n.e('36371').then(n.bind(n, 893626));
                     return (n) =>
-                        (0, i.jsx)(e, {
-                            ...n,
-                            guildId: t,
-                            welcomeMessage: l,
-                            onSave: (e) => (0, m._N)(e)
-                        });
+                        (0, r.jsx)(
+                            e,
+                            x(b({}, n), {
+                                guildId: t,
+                                welcomeMessage: s,
+                                onSave: (e) => (0, m._N)(e)
+                            })
+                        );
                 }),
-            [t, l]
+            [t, s]
         ),
-        C = (0, a.e7)([u.default], () => u.default.getId());
-    return (0, c.pw)(l)
-        ? (0, i.jsx)(o.zxk, {
+        N = (0, l.e7)([u.default], () => u.default.getId());
+    return (0, c.pw)(s)
+        ? (0, r.jsx)(o.zxk, {
               size: o.zxk.Sizes.SMALL,
-              onClick: _,
-              children: (0, i.jsx)(o.Text, {
+              onClick: j,
+              children: (0, r.jsx)(o.Text, {
                   variant: 'text-sm/medium',
-                  children: x.intl.string(x.t['9Z+aEB'])
+                  children: h.NW.string(h.t['9Z+aEB'])
               })
           })
-        : (0, i.jsxs)(o.P3F, {
-              className: p.editWelcomeSection,
-              onClick: _,
+        : (0, r.jsxs)(o.P3F, {
+              className: f.editWelcomeSection,
+              onClick: j,
               children: [
-                  (0, i.jsx)(d.Z, {
+                  (0, r.jsx)(d.Z, {
                       guildId: t,
                       welcomeMessage: {
-                          authorIds: l.authorIds.length > 0 ? l.authorIds : [C],
-                          message: l.message
+                          authorIds: s.authorIds.length > 0 ? s.authorIds : [N],
+                          message: s.message
                       }
                   }),
-                  (0, i.jsx)(o.ua7, {
-                      text: x.intl.string(x.t.bt75u7),
+                  (0, r.jsx)(o.ua7, {
+                      text: h.NW.string(h.t.bt75u7),
                       children: (e) =>
-                          (0, i.jsxs)('div', {
-                              ...e,
-                              className: s()(p.actionItemEditButton, p.editWelcomeButton),
-                              children: [
-                                  (0, i.jsx)(o.vdY, {
-                                      size: 'md',
-                                      color: 'currentColor'
-                                  }),
-                                  (0, i.jsx)(o.nn4, { children: x.intl.string(x.t.bt75u7) })
-                              ]
-                          })
+                          (0, r.jsxs)(
+                              'div',
+                              x(b({}, e), {
+                                  className: a()(f.actionItemEditButton, f.editWelcomeButton),
+                                  children: [
+                                      (0, r.jsx)(o.vdY, {
+                                          size: 'md',
+                                          color: 'currentColor'
+                                      }),
+                                      (0, r.jsx)(o.nn4, { children: h.NW.string(h.t.bt75u7) })
+                                  ]
+                              })
+                          )
                   })
               ]
           });

@@ -1,128 +1,157 @@
-n.d(t, { Z: () => b });
-var i = n(200651);
+n.d(t, { Z: () => C });
+var r = n(200651);
 n(192379);
-var l = n(120356),
-    r = n.n(l),
-    a = n(442837),
-    o = n(481060),
+var i = n(120356),
+    l = n.n(i),
+    o = n(442837),
+    a = n(481060),
     s = n(717881),
     c = n(503438),
-    d = n(850827),
-    u = n(540059),
-    h = n(952164),
-    p = n(237583),
-    m = n(131704),
+    u = n(850827),
+    d = n(540059),
+    p = n(952164),
+    h = n(237583),
+    f = n(131704),
     g = n(314897),
-    f = n(594174),
-    _ = n(768581),
+    m = n(594174),
+    b = n(768581),
     v = n(51144),
-    C = n(754231),
-    x = n(398644);
-function I(e) {
-    let { guildId: t, member: n, className: l } = e,
-        a = null != n.member ? (0, _.CA)(n.member) : null;
-    return (0, i.jsx)(o.ua7, {
+    y = n(754231),
+    _ = n(898218);
+function O(e) {
+    let { guildId: t, member: n, className: i } = e,
+        o = null != n.member ? (0, b.CA)(n.member) : null;
+    return (0, r.jsx)(a.ua7, {
         text: n.nick,
         position: 'bottom',
         children: (e) => {
             var s;
-            return (0, i.jsx)(o.qEK, {
-                src: null != a ? a : n.user.getAvatarURL(t, 16),
-                size: o.EFr.SIZE_16,
-                className: r()(l, x.partyAvatar),
-                'aria-label': null !== (s = n.nick) && void 0 !== s ? s : v.ZP.getName(n.user),
-                ...e
-            });
+            return (0, r.jsx)(
+                a.qEK,
+                (function (e) {
+                    for (var t = 1; t < arguments.length; t++) {
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            r = Object.keys(n);
+                        'function' == typeof Object.getOwnPropertySymbols &&
+                            (r = r.concat(
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                })
+                            )),
+                            r.forEach(function (t) {
+                                var r;
+                                (r = n[t]),
+                                    t in e
+                                        ? Object.defineProperty(e, t, {
+                                              value: r,
+                                              enumerable: !0,
+                                              configurable: !0,
+                                              writable: !0
+                                          })
+                                        : (e[t] = r);
+                            });
+                    }
+                    return e;
+                })(
+                    {
+                        src: null != o ? o : n.user.getAvatarURL(t, 16),
+                        size: a.EFr.SIZE_16,
+                        className: l()(i, _.partyAvatar),
+                        'aria-label': null !== (s = n.nick) && void 0 !== s ? s : v.ZP.getName(n.user)
+                    },
+                    e
+                )
+            );
         }
     });
 }
-function Z(e) {
+function j(e) {
     let { members: t, guildId: n } = e;
-    return (0, i.jsx)(p.Z, {
-        className: x.partyMembers,
+    return (0, r.jsx)(h.Z, {
+        className: _.partyMembers,
         guildId: n,
         users: t,
         max: 6,
-        renderUser: (e, t, l) =>
-            (0, i.jsx)(
-                I,
+        renderUser: (e, t, i) =>
+            (0, r.jsx)(
+                O,
                 {
                     guildId: n,
                     member: e,
                     className: t
                 },
-                l
+                i
             ),
         renderMoreUsers: (e, t, n) =>
-            (0, i.jsx)(
+            (0, r.jsx)(
                 'div',
                 {
-                    className: r()(x.morePartyMembers, t),
+                    className: l()(_.morePartyMembers, t),
                     children: e
                 },
                 n
             )
     });
 }
-let b = (e) => {
-    let { channel: t, presenceActivity: n, members: l, embeddedApp: r, onAction: p } = e,
-        _ = (0, u.Q3)('ChannelActivityRow'),
-        v = null != r,
-        I = v ? Array.from(r.embeddedActivity.userIds) : [],
-        b = (0, a.e7)([f.default, g.default], () => {
-            if (v) return f.default.getUser(I[0]);
-            if (null != l) {
+let C = (e) => {
+    let { channel: t, presenceActivity: n, members: i, embeddedApp: l, onAction: h } = e,
+        b = (0, d.Q3)('ChannelActivityRow'),
+        v = null != l,
+        O = v ? Array.from(l.embeddedActivity.userIds) : [],
+        C = (0, o.e7)([m.default, g.default], () => {
+            if (v) return m.default.getUser(O[0]);
+            if (null != i) {
                 var e, t;
-                return l.length <= 0 ? null : null !== (t = null === (e = l.find((e) => e.user.id !== g.default.getId())) || void 0 === e ? void 0 : e.user) && void 0 !== t ? t : l[0].user;
+                return i.length <= 0 ? null : null !== (t = null === (e = i.find((e) => e.user.id !== g.default.getId())) || void 0 === e ? void 0 : e.user) && void 0 !== t ? t : i[0].user;
             }
         });
-    if (null == b) return null;
-    let S = v || (0, c.Z)(n),
-        N = (0, m.vd)(t.type);
-    return (0, i.jsxs)('div', {
-        className: x.activity,
+    if (null == C) return null;
+    let x = v || (0, c.Z)(n),
+        P = (0, f.vd)(t.type);
+    return (0, r.jsxs)('div', {
+        className: _.activity,
         children: [
-            (0, i.jsx)('div', {
-                className: x.channelActivityContainer,
-                children: S
-                    ? (0, i.jsx)(C.Z, {
+            (0, r.jsx)('div', {
+                className: _.channelActivityContainer,
+                children: x
+                    ? (0, r.jsx)(y.Z, {
                           activity: n,
-                          embeddedApp: r,
-                          user: b,
+                          embeddedApp: l,
+                          user: C,
                           channel: t,
-                          sortedVoiceStates: l,
-                          onOpenSpotifyTrack: N ? h.aG : void 0,
-                          onOpenSpotifyArtist: N ? h.d$ : void 0,
-                          onOpenSpotifyAlbum: N ? h.Z5 : void 0
+                          sortedVoiceStates: i,
+                          onOpenSpotifyTrack: P ? p.aG : void 0,
+                          onOpenSpotifyArtist: P ? p.d$ : void 0,
+                          onOpenSpotifyAlbum: P ? p.Z5 : void 0
                       })
-                    : (0, i.jsx)(s.Z, {
+                    : (0, r.jsx)(s.Z, {
                           type: s.P.VOICE_CHANNEL,
                           activity: n,
-                          user: b,
+                          user: C,
                           guildId: t.getGuildId(),
                           channelId: t.id,
                           renderHeaderAccessory:
-                              null != l
+                              null != i
                                   ? () =>
-                                        (0, i.jsx)(Z, {
+                                        (0, r.jsx)(j, {
                                             guildId: t.guild_id,
-                                            members: l
+                                            members: i
                                         })
                                   : void 0
                       })
             }),
-            (0, i.jsx)('div', {
-                className: x.activityActionsContainer,
-                children: (0, i.jsx)(d.Z, {
+            (0, r.jsx)('div', {
+                className: _.activityActionsContainer,
+                children: (0, r.jsx)(u.Z, {
                     type: s.P.VOICE_CHANNEL,
                     activity: n,
-                    embeddedActivity: null == r ? void 0 : r.embeddedActivity,
-                    user: b,
+                    embeddedActivity: null == l ? void 0 : l.embeddedActivity,
+                    user: C,
                     guildId: t.getGuildId(),
                     channelId: t.id,
-                    color: _ ? o.zxk.Colors.PRIMARY : x.button,
-                    look: _ ? o.zxk.Looks.FILLED : void 0,
-                    onAction: p
+                    color: b ? a.zxk.Colors.PRIMARY : _.button,
+                    look: b ? a.zxk.Looks.FILLED : void 0,
+                    onAction: h
                 })
             })
         ]

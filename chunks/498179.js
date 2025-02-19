@@ -1,41 +1,88 @@
-n.d(t, { Z: () => u });
-var i = n(200651);
+n.d(t, { Z: () => m });
+var r = n(200651);
 n(192379);
-var l = n(442837),
+var i = n(442837),
     a = n(481060),
-    r = n(283595),
-    s = n(55563),
-    o = n(780570),
+    o = n(283595),
+    l = n(55563),
+    s = n(780570),
     c = n(701560),
     d = n(785547);
 function u(e) {
-    let { application: t, fullWidth: n = !1, size: u = a.zxk.Sizes.LARGE, color: m, customDisabledColor: _, hideNotLaunchable: h, tooltipPosition: p, onClick: g, className: f, source: x, hover: C, innerClassName: E } = e,
-        v = {
-            fullWidth: n,
-            size: u,
-            color: m,
-            customDisabledColor: _,
-            tooltipPosition: p,
-            onClick: g,
-            className: f,
-            hover: C,
-            innerClassName: E
-        },
-        I = (0, l.e7)([r.Z], () => r.Z.getActiveLibraryApplication(t.id)),
-        N = null != I ? I.sku.id : null,
-        S = null != N ? N : t.primarySkuId,
-        T = (0, l.e7)([s.Z], () => null != S && !s.Z.didFetchingSkuFail(S));
-    return null != I && (0, o.Je)(I)
-        ? (0, i.jsx)(d.Z, {
-              ...v,
-              libraryApplication: I,
-              source: x
-          })
-        : T
-          ? (0, i.jsx)('div', { children: 'deprecated!' })
-          : (0, i.jsx)(c.Z, {
-                ...v,
-                hideNotLaunchable: h,
-                applicationId: t.id
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
             });
+    }
+    return e;
+}
+function p(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function m(e) {
+    let { application: t, fullWidth: n = !1, size: m = a.zxk.Sizes.LARGE, color: f, customDisabledColor: h, hideNotLaunchable: g, tooltipPosition: _, onClick: b, className: v, source: y, hover: x, innerClassName: O } = e,
+        E = {
+            fullWidth: n,
+            size: m,
+            color: f,
+            customDisabledColor: h,
+            tooltipPosition: _,
+            onClick: b,
+            className: v,
+            hover: x,
+            innerClassName: O
+        },
+        j = (0, i.e7)([o.Z], () => o.Z.getActiveLibraryApplication(t.id)),
+        N = null != j ? j.sku.id : null,
+        C = null != N ? N : t.primarySkuId,
+        I = (0, i.e7)([l.Z], () => null != C && !l.Z.didFetchingSkuFail(C));
+    return null != j && (0, s.Je)(j)
+        ? (0, r.jsx)(
+              d.Z,
+              p(u({}, E), {
+                  libraryApplication: j,
+                  source: y
+              })
+          )
+        : I
+          ? (0, r.jsx)('div', { children: 'deprecated!' })
+          : (0, r.jsx)(
+                c.Z,
+                p(u({}, E), {
+                    hideNotLaunchable: g,
+                    applicationId: t.id
+                })
+            );
 }

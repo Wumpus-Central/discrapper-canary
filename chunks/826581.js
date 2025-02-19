@@ -1,16 +1,16 @@
-n.d(t, { Z: () => q }), n(47120), n(653041);
-var i,
-    r = n(913527),
-    a = n.n(r),
-    s = n(442837),
-    o = n(759174),
+n.d(t, { Z: () => J }), n(47120), n(653041);
+var r,
+    i = n(913527),
+    o = n.n(i),
+    a = n(442837),
+    s = n(759174),
     l = n(570140),
-    u = n(430824),
-    c = n(594174),
+    c = n(430824),
+    u = n(594174),
     d = n(70956),
     f = n(881952),
-    _ = n(246364),
-    p = n(937111),
+    p = n(246364),
+    _ = n(937111),
     h = n(981631);
 function m(e, t, n) {
     return (
@@ -25,155 +25,191 @@ function m(e, t, n) {
         e
     );
 }
-let g = 'DELETED',
-    E = new Map(),
-    v = {};
-function y(e) {
-    return v[e];
+function g(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                m(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function E(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function v(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : E(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let b = 'DELETED',
+    y = new Map(),
+    O = {};
+function S(e) {
+    return O[e];
 }
 function I(e, t) {
-    (v[e] = t), E.set(e, a()());
+    (O[e] = t), y.set(e, o()());
 }
 function T(e, t, n) {
     if (t !== n && null != t) {
-        if (t === _.wB.SUBMITTED) {
-            let t = y(e);
+        if (t === p.wB.SUBMITTED) {
+            let t = S(e);
             I(e, t + 1);
         }
-        if (n === _.wB.SUBMITTED) {
-            let t = y(e);
+        if (n === p.wB.SUBMITTED) {
+            let t = S(e);
             I(e, Math.max(0, t - 1));
         }
     }
 }
-function b(e) {
-    let { joinRequest: t } = e;
-    k(t);
-}
-let S = !1;
-function A() {
-    S = !0;
-}
 function N(e) {
-    let { status: t, requests: n, total: i, guildId: r } = e;
-    (S = !1),
-        t === _.wB.SUBMITTED && I(r, i),
+    let { joinRequest: t } = e;
+    G(t);
+}
+let A = !1;
+function C() {
+    A = !0;
+}
+function R(e) {
+    let { status: t, requests: n, total: r, guildId: i } = e;
+    (A = !1),
+        t === p.wB.SUBMITTED && I(i, r),
         n.forEach((e) => {
-            k(e);
+            G(e);
         });
 }
-function C() {
-    S = !1;
+function P() {
+    A = !1;
 }
-let R = (e) => 'guild-join-request='.concat(e),
-    O = (e, t) => 'guild-'.concat(e, '-').concat(t);
-function D(e) {
+let w = (e) => 'guild-join-request='.concat(e),
+    D = (e, t) => 'guild-'.concat(e, '-').concat(t);
+function x(e) {
     let t = [];
-    return t.push(R(e.joinRequestId)), t.push(O(e.guildId, e.applicationStatus)), t;
+    return t.push(w(e.joinRequestId)), t.push(D(e.guildId, e.applicationStatus)), t;
 }
-let L = new o.h(D, (e) => ''.concat(e.joinRequestId)),
-    x = new o.h(D, (e) => ''.concat(e.joinRequestId)),
-    P = new o.h(D, (e) => ''.concat(e.actionedAt));
-function w(e) {
+let L = new s.h(x, (e) => ''.concat(e.joinRequestId)),
+    M = new s.h(x, (e) => ''.concat(e.joinRequestId)),
+    k = new s.h(x, (e) => ''.concat(e.actionedAt));
+function j(e) {
     return L.get(e);
 }
-function M(e) {
-    delete W[e], L.delete(e), x.delete(e), P.delete(e);
-}
-function k(e) {
-    (W[e.joinRequestId] = e), L.set(e.joinRequestId, e), (0, f.Nd)(e.applicationStatus) && (P.delete(e.joinRequestId), x.set(e.joinRequestId, e)), (0, f.bk)(e.applicationStatus) && (x.delete(e.joinRequestId), P.set(e.joinRequestId, e));
-}
 function U(e) {
-    var t;
-    let { guildId: n, request: i } = e,
-        r = (0, p.j)(i),
-        a = c.default.getCurrentUser();
-    if (null == a || r.userId === a.id) return !1;
-    let s = null === (t = w(r.joinRequestId)) || void 0 === t ? void 0 : t.applicationStatus;
-    return T(n, r.applicationStatus, s), k(r), !0;
+    delete q[e], L.delete(e), M.delete(e), k.delete(e);
 }
 function G(e) {
-    let { id: t, guildId: n } = e,
-        i = w(t);
-    null != i && (T(n, g, i.applicationStatus), M(t));
+    (q[e.joinRequestId] = e), L.set(e.joinRequestId, e), (0, f.Nd)(e.applicationStatus) && (k.delete(e.joinRequestId), M.set(e.joinRequestId, e)), (0, f.bk)(e.applicationStatus) && (M.delete(e.joinRequestId), k.set(e.joinRequestId, e));
 }
 function B(e) {
+    var t;
+    let { guildId: n, request: r } = e,
+        i = (0, _.j)(r),
+        o = u.default.getCurrentUser();
+    if (null == o || i.userId === o.id) return !1;
+    let a = null === (t = j(i.joinRequestId)) || void 0 === t ? void 0 : t.applicationStatus;
+    return T(n, i.applicationStatus, a), G(i), !0;
+}
+function Z(e) {
+    let { id: t, guildId: n } = e,
+        r = j(t);
+    null != r && (T(n, b, r.applicationStatus), U(t));
+}
+function F(e) {
     let { guildId: t, action: n } = e;
-    L.values(O(t, _.wB.SUBMITTED)).forEach((e) => {
-        k({
-            ...e,
-            applicationStatus: n
-        });
+    L.values(D(t, p.wB.SUBMITTED)).forEach((e) => {
+        G(v(g({}, e), { applicationStatus: n }));
     }),
         I(t, 0);
 }
-let Z = {};
-function F(e) {
-    let { guildId: t, applicationTab: n } = e;
-    n !== Z[t] && (Z[t] = n);
-}
 let V = {};
-function j(e) {
-    var t;
-    let { guildId: n, sortOrder: i } = e;
-    if (i === V[n]) return;
-    V[n] = i;
-    let r = null !== (t = Z[n]) && void 0 !== t ? t : _.wB.SUBMITTED;
-    'REVIEW_APPLICATION' !== r && ((0, f.bk)(r) && P.clear(), (0, f.Nd)(r) && x.clear());
+function H(e) {
+    let { guildId: t, applicationTab: n } = e;
+    n !== V[t] && (V[t] = n);
 }
-let H = {};
+let W = {};
 function Y(e) {
-    let { guildId: t, request: n } = e;
-    H[t] = n;
+    var t;
+    let { guildId: n, sortOrder: r } = e;
+    if (r === W[n]) return;
+    W[n] = r;
+    let i = null !== (t = V[n]) && void 0 !== t ? t : p.wB.SUBMITTED;
+    'REVIEW_APPLICATION' !== i && ((0, f.bk)(i) && k.clear(), (0, f.Nd)(i) && M.clear());
 }
-let W = {},
-    K = 10 * d.Z.Seconds.MINUTE;
-class z extends (i = s.ZP.Store) {
+let K = {};
+function z(e) {
+    let { guildId: t, request: n } = e;
+    K[t] = n;
+}
+let q = {},
+    Q = 10 * d.Z.Seconds.MINUTE;
+class X extends (r = a.ZP.Store) {
     getRequest(e) {
-        return W[e];
+        return q[e];
     }
     getRequests(e, t) {
-        let n = O(e, t);
-        return (0, f.bk)(t) ? P.values(n) : (0, f.Nd)(t) ? x.values(n) : L.values(n);
+        let n = D(e, t);
+        return (0, f.bk)(t) ? k.values(n) : (0, f.Nd)(t) ? M.values(n) : L.values(n);
     }
     getSubmittedGuildJoinRequestTotal(e) {
-        return v[e];
+        return O[e];
     }
     isFetching() {
-        return S;
+        return A;
     }
     hasFetched(e) {
-        if (!E.has(e)) return !1;
-        let t = E.get(e);
-        return null != t && a()().diff(t, 'seconds') < K;
+        if (!y.has(e)) return !1;
+        let t = y.get(e);
+        return null != t && o()().diff(t, 'seconds') < Q;
     }
     getSelectedApplicationTab(e) {
         var t;
-        let n = u.Z.getGuild(e),
-            i = this.getRequests(e, _.wB.SUBMITTED).length > 0,
-            r = (null == n ? void 0 : n.hasFeature(h.oNc.CLAN)) && !i ? 'REVIEW_APPLICATION' : _.wB.SUBMITTED;
-        return null !== (t = Z[e]) && void 0 !== t ? t : r;
+        let n = c.Z.getGuild(e),
+            r = this.getRequests(e, p.wB.SUBMITTED).length > 0,
+            i = (null == n ? void 0 : n.hasFeature(h.oNc.CLAN)) && !r ? 'REVIEW_APPLICATION' : p.wB.SUBMITTED;
+        return null !== (t = V[e]) && void 0 !== t ? t : i;
     }
     getSelectedSortOrder(e) {
         var t;
-        return null !== (t = V[e]) && void 0 !== t ? t : _.Nw.TIMESTAMP_DESC;
+        return null !== (t = W[e]) && void 0 !== t ? t : p.Nw.TIMESTAMP_DESC;
     }
     getSelectedGuildJoinRequest(e) {
-        let t = H[e];
-        return null != t ? w(t.joinRequestId) : null;
+        let t = K[e];
+        return null != t ? j(t.joinRequestId) : null;
     }
 }
-m(z, 'displayName', 'GuildJoinRequestStoreV2');
-let q = new z(l.Z, {
-    GUILD_JOIN_REQUEST_BY_ID_FETCH_SUCCESS: b,
-    GUILD_JOIN_REQUESTS_FETCH_SUCCESS: N,
-    GUILD_JOIN_REQUESTS_FETCH_START: A,
-    GUILD_JOIN_REQUESTS_FETCH_FAILURE: C,
-    GUILD_JOIN_REQUESTS_BULK_ACTION: B,
-    GUILD_JOIN_REQUEST_CREATE: U,
-    GUILD_JOIN_REQUEST_UPDATE: U,
-    GUILD_JOIN_REQUEST_DELETE: G,
-    GUILD_JOIN_REQUESTS_SET_APPLICATION_TAB: F,
-    GUILD_JOIN_REQUESTS_SET_SORT_ORDER: j,
-    GUILD_JOIN_REQUESTS_SET_SELECTED: Y
+m(X, 'displayName', 'GuildJoinRequestStoreV2');
+let J = new X(l.Z, {
+    GUILD_JOIN_REQUEST_BY_ID_FETCH_SUCCESS: N,
+    GUILD_JOIN_REQUESTS_FETCH_SUCCESS: R,
+    GUILD_JOIN_REQUESTS_FETCH_START: C,
+    GUILD_JOIN_REQUESTS_FETCH_FAILURE: P,
+    GUILD_JOIN_REQUESTS_BULK_ACTION: F,
+    GUILD_JOIN_REQUEST_CREATE: B,
+    GUILD_JOIN_REQUEST_UPDATE: B,
+    GUILD_JOIN_REQUEST_DELETE: Z,
+    GUILD_JOIN_REQUESTS_SET_APPLICATION_TAB: H,
+    GUILD_JOIN_REQUESTS_SET_SORT_ORDER: Y,
+    GUILD_JOIN_REQUESTS_SET_SELECTED: z
 });

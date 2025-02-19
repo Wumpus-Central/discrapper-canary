@@ -1,121 +1,171 @@
 n.d(t, {
-    GA: () => f,
-    Hb: () => c,
-    Hi: () => p,
-    LN: () => _,
-    Ne: () => u,
-    OG: () => T,
-    Qj: () => I,
-    Qy: () => v,
-    Rg: () => d,
-    b7: () => b,
-    q5: () => m,
-    t0: () => y,
-    z8: () => h
+    GA: () => m,
+    Hb: () => _,
+    Hi: () => E,
+    LN: () => g,
+    Ne: () => p,
+    OG: () => N,
+    Qj: () => T,
+    Qy: () => S,
+    Rg: () => h,
+    b7: () => A,
+    q5: () => b,
+    t0: () => I,
+    z8: () => v
 });
-var i = n(15729),
-    r = n(731965),
-    a = n(626135),
-    s = n(981631);
-let o = Object.freeze({
+var r = n(15729),
+    i = n(731965),
+    o = n(626135),
+    a = n(981631);
+function s(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function l(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                s(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function c(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function u(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : c(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let d = Object.freeze({
         messageSendConfetti: {},
         messageReactionConfetti: void 0
     }),
-    l = (0, i.U)(() => o),
-    u = (e, t) => {
-        a.default.track(s.rMx.CONFETTI_POTION_ENTRYPOINT_CLICKED, { location: t }),
-            (0, r.j)(() => {
-                l.setState((t) => {
+    f = (0, r.U)(() => d),
+    p = (e, t) => {
+        o.default.track(a.rMx.CONFETTI_POTION_ENTRYPOINT_CLICKED, { location: t }),
+            (0, i.j)(() => {
+                f.setState((t) => {
                     let { messageSendConfetti: n } = t;
                     return {
-                        messageSendConfetti: {
-                            ...n,
+                        messageSendConfetti: u(l({}, n), {
                             [e]: {
                                 state: 0,
                                 emoji: void 0,
                                 hasAutoPopped: !1
                             }
-                        }
+                        })
                     };
                 });
             });
     },
-    c = (e) => {
-        (0, r.j)(() => {
-            l.setState((t) => {
+    _ = (e) => {
+        (0, i.j)(() => {
+            f.setState((t) => {
                 let { messageSendConfetti: n } = t,
-                    i = { ...n };
-                return delete i[e], { messageSendConfetti: i };
+                    r = l({}, n);
+                return delete r[e], { messageSendConfetti: r };
             });
         });
     },
-    d = (e, t) => {
-        null != l.getState().messageSendConfetti[e] ? c(e) : u(e, t);
+    h = (e, t) => {
+        null != f.getState().messageSendConfetti[e] ? _(e) : p(e, t);
     },
-    f = (e) => {
-        let t = l.getState();
+    m = (e) => {
+        let t = f.getState();
         null != t.messageSendConfetti[e] && 0 === t.messageSendConfetti[e].state && (t.messageSendConfetti[e].hasAutoPopped = !0);
     };
-function _(e) {
-    return l((t) => null != t.messageSendConfetti[e]);
+function g(e) {
+    return f((t) => null != t.messageSendConfetti[e]);
 }
-function p(e, t) {
-    return (0, r.j)(() => {
-        l.setState((n) => {
-            let { messageSendConfetti: i } = n;
+function E(e, t) {
+    return (0, i.j)(() => {
+        f.setState((n) => {
+            let { messageSendConfetti: r } = n;
             return {
-                messageSendConfetti: {
-                    ...i,
+                messageSendConfetti: u(l({}, r), {
                     [t]: {
                         state: 1,
                         emoji: e
                     }
-                }
+                })
             };
         });
     });
 }
-function h(e) {
-    return l((t) => {
+function v(e) {
+    return f((t) => {
         var n;
         return null === (n = t.messageSendConfetti[e]) || void 0 === n ? void 0 : n.emoji;
     });
 }
-function m(e) {
+function b(e) {
     var t;
-    return null === (t = l.getState().messageSendConfetti[e]) || void 0 === t ? void 0 : t.emoji;
+    return null === (t = f.getState().messageSendConfetti[e]) || void 0 === t ? void 0 : t.emoji;
 }
-function g(e) {
-    return null != l.getState().messageSendConfetti[e];
+function y(e) {
+    return null != f.getState().messageSendConfetti[e];
 }
-function E(e) {
-    return (0, r.j)(() => {
-        l.setState(() => ({ messageReactionConfetti: e }));
+function O(e) {
+    return (0, i.j)(() => {
+        f.setState(() => ({ messageReactionConfetti: e }));
     });
 }
-function v() {
-    return (0, r.j)(() => {
-        l.setState(() => ({ messageReactionConfetti: void 0 }));
+function S() {
+    return (0, i.j)(() => {
+        f.setState(() => ({ messageReactionConfetti: void 0 }));
     });
 }
-function y(e, t, n) {
-    n ? E(e) : p(e, t);
+function I(e, t, n) {
+    n ? O(e) : E(e, t);
 }
-function I(e, t) {
-    return l((n) => {
-        var i;
-        return t ? n.messageReactionConfetti : null === (i = n.messageSendConfetti[e]) || void 0 === i ? void 0 : i.emoji;
+function T(e, t) {
+    return f((n) => {
+        var r;
+        return t ? n.messageReactionConfetti : null === (r = n.messageSendConfetti[e]) || void 0 === r ? void 0 : r.emoji;
     });
 }
-function T(e) {
-    return l((t) => {
+function N(e) {
+    return f((t) => {
         let n = t.messageSendConfetti[e];
         if ((null == n ? void 0 : n.state) === 0) return n.hasAutoPopped;
     });
 }
-function b(e, t, n) {
+function A(e, t, n) {
     if (t) return !1;
-    let i = g(e),
-        r = m(e);
-    return i && (0 === n || null == r);
+    let r = y(e),
+        i = b(e);
+    return r && (0 === n || null == i);
 }

@@ -1,82 +1,125 @@
-n.d(t, {
-    B: () => f,
-    b: () => c
+r.d(t, {
+    B: () => d,
+    b: () => f
 }),
-    n(47120);
-var i = n(200651),
-    l = n(192379),
-    r = n(481060),
-    s = n(893776),
-    u = n(489813),
-    o = n(388032),
-    a = n(327549);
-function d() {
-    let [e, t] = l.useState(!1),
-        [n, u] = l.useState(!1),
-        [d, c] = l.useState(!1);
-    l.useEffect(() => {
+    r(47120);
+var n = r(200651),
+    i = r(192379),
+    o = r(481060),
+    l = r(893776),
+    s = r(489813),
+    c = r(388032),
+    u = r(214326);
+function a() {
+    let [e, t] = i.useState(!1),
+        [r, s] = i.useState(!1),
+        [a, f] = i.useState(!1);
+    i.useEffect(() => {
         let e;
         return (
-            n &&
+            r &&
                 (e = setTimeout(() => {
-                    u(!1);
+                    s(!1);
                 }, 2000)),
             () => {
                 null != e && clearTimeout(e);
             }
         );
-    }, [n]);
-    let f = async () => {
+    }, [r]);
+    let d = async () => {
         if (!e) {
             t(!0);
             try {
-                await s.Z.verifyResend(), u(!0), c(!0);
+                await l.Z.verifyResend(), s(!0), f(!0);
             } catch (e) {
             } finally {
                 t(!1);
             }
         }
     };
-    return n
-        ? (0, i.jsx)(r.Text, {
-              className: a.verifyConfirmText,
+    return r
+        ? (0, n.jsx)(o.Text, {
+              className: u.verifyConfirmText,
               variant: 'text-sm/normal',
               color: 'text-positive',
-              children: o.intl.string(o.t.H3Q7U1)
+              children: c.NW.string(c.t.H3Q7U1)
           })
-        : (0, i.jsx)(r.zxk, {
-              size: r.zxk.Sizes.SMALL,
+        : (0, n.jsx)(o.zxk, {
+              size: o.zxk.Sizes.SMALL,
               submitting: e,
-              onClick: f,
-              children: d ? o.intl.string(o.t.WnX4Jy) : o.intl.string(o.t['13ofGh'])
+              onClick: d,
+              children: a ? c.NW.string(c.t.WnX4Jy) : c.NW.string(c.t['13ofGh'])
           });
 }
-function c() {
-    return (0, i.jsx)(u.PU, {
-        icon: r._XJ,
-        text: o.intl.string(o.t.c6EUJC),
-        footnote: o.intl.string(o.t['jMh+TU']),
+function f() {
+    return (0, n.jsx)(s.PU, {
+        icon: o._XJ,
+        text: c.NW.string(c.t.c6EUJC),
+        footnote: c.NW.string(c.t['jMh+TU']),
         meetsRequirement: !1,
-        children: (0, i.jsx)(r.ua7, {
-            text: o.intl.string(o.t.mGlP39),
-            children: (e) =>
-                (0, i.jsx)(r.zxk, {
-                    ...e,
-                    size: r.zxk.Sizes.SMALL,
-                    disabled: !0,
-                    children: o.intl.string(o.t['13ofGh'])
-                })
+        children: (0, n.jsx)(o.ua7, {
+            text: c.NW.string(c.t.mGlP39),
+            children: (e) => {
+                var t, r;
+                return (0, n.jsx)(
+                    o.zxk,
+                    ((t = (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var r = null != arguments[t] ? arguments[t] : {},
+                                n = Object.keys(r);
+                            'function' == typeof Object.getOwnPropertySymbols &&
+                                (n = n.concat(
+                                    Object.getOwnPropertySymbols(r).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                    })
+                                )),
+                                n.forEach(function (t) {
+                                    var n;
+                                    (n = r[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: n,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0
+                                              })
+                                            : (e[t] = n);
+                                });
+                        }
+                        return e;
+                    })({}, e)),
+                    (r = r =
+                        {
+                            size: o.zxk.Sizes.SMALL,
+                            disabled: !0,
+                            children: c.NW.string(c.t['13ofGh'])
+                        }),
+                    Object.getOwnPropertyDescriptors
+                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+                        : (function (e, t) {
+                              var r = Object.keys(e);
+                              if (Object.getOwnPropertySymbols) {
+                                  var n = Object.getOwnPropertySymbols(e);
+                                  r.push.apply(r, n);
+                              }
+                              return r;
+                          })(Object(r)).forEach(function (e) {
+                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+                          }),
+                    t)
+                );
+            }
         })
     });
 }
-function f(e) {
+function d(e) {
     let { isUserVerified: t } = e,
-        n = t ? o.intl.string(o.t.qY1jHB) : o.intl.string(o.t.c6EUJC);
-    return (0, i.jsx)(u.PU, {
-        icon: r._XJ,
-        text: n,
-        footnote: o.intl.string(o.t['jMh+TU']),
+        r = t ? c.NW.string(c.t.qY1jHB) : c.NW.string(c.t.c6EUJC);
+    return (0, n.jsx)(s.PU, {
+        icon: o._XJ,
+        text: r,
+        footnote: c.NW.string(c.t['jMh+TU']),
         meetsRequirement: t,
-        children: (0, i.jsx)(d, {})
+        children: (0, n.jsx)(a, {})
     });
 }

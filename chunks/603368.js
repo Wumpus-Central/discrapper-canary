@@ -1,38 +1,67 @@
 n.d(t, {
-    $0: () => m,
-    j1: () => I,
-    nP: () => T,
-    nj: () => b,
-    pX: () => E
+    $0: () => E,
+    j1: () => S,
+    nP: () => I,
+    nj: () => T,
+    pX: () => b
 }),
     n(47120);
-var i = n(192379),
-    r = n(688619),
-    a = n.n(r),
-    s = n(392711),
-    o = n.n(s),
+var r = n(192379),
+    i = n(688619),
+    o = n.n(i),
+    a = n(392711),
+    s = n.n(a),
     l = n(780384),
-    u = n(481060),
-    c = n(410030),
+    c = n(481060),
+    u = n(410030),
     d = n(564334),
     f = n(302221),
-    _ = n(308083);
-let p = 15;
+    p = n(308083);
+function _(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
 function h(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                _(e, t, n[t]);
+            });
+    }
+    return e;
+}
+let m = 15;
+function g(e) {
     var t;
-    let n = a()(e);
+    let n = o()(e);
     return null ===
-        (t = o()(_.ym)
+        (t = s()(p.ym)
             .map((e) => {
                 let { primary: t } = e;
                 return {
                     primary: t,
-                    distance: a().distance(n, a()(t), 'hsl')
+                    distance: o().distance(n, o()(t), 'hsl')
                 };
             })
             .filter((e) => {
                 let { distance: t } = e;
-                return t < p;
+                return t < m;
             })
             .minBy((e) => {
                 let { distance: t } = e;
@@ -41,86 +70,83 @@ function h(e) {
         ? void 0
         : t.primary;
 }
-function m(e) {
-    let t = a()(e),
+function E(e) {
+    let t = o()(e),
         n = t.get('rgb.r');
     return (299 * n + 587 * t.get('rgb.g') + 114 * t.get('rgb.b')) / 1000 < 128
-        ? u.TVs.colors.HEADER_PRIMARY.resolve({
+        ? c.TVs.colors.HEADER_PRIMARY.resolve({
               theme: 'dark',
               saturation: 1
           })
-        : u.TVs.colors.HEADER_PRIMARY.resolve({
+        : c.TVs.colors.HEADER_PRIMARY.resolve({
               theme: 'light',
               saturation: 1
           });
 }
-function g(e) {
+function v(e) {
     return new d.Z(e.get('rgb.r'), e.get('rgb.g'), e.get('rgb.b'), e.alpha());
 }
-function E(e, t) {
+function b(e, t) {
     var n;
-    let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : l.S3.Text;
+    let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : l.S3.Text;
     if (null == e) return;
-    let r = null !== (n = h(e)) && void 0 !== n ? n : e,
-        s = a()(r),
-        o = a()(t),
-        u = (0, f.k8)({
-            colors: [g(s), g(o)],
-            ratio: i,
+    let i = null !== (n = g(e)) && void 0 !== n ? n : e,
+        a = o()(i),
+        s = o()(t),
+        c = (0, f.k8)({
+            colors: [v(a), v(s)],
+            ratio: r,
             saturationFactor: 1
         });
-    if (null != u) return a()(u.toHexString());
+    if (null != c) return o()(c.toHexString());
 }
-function v(e, t) {
+function y(e, t) {
     if (null == e) return;
-    let n = E(e, t, l.S3.NonText);
+    let n = b(e, t, l.S3.NonText);
     if (null == n) return;
-    let i = 0.2 > n.luminance() ? n.brighten(0.3) : n.darken(0.3),
-        r = 0.2 > n.luminance() ? n.brighten(0.35) : n.darken(0.35);
+    let r = 0.2 > n.luminance() ? n.brighten(0.3) : n.darken(0.3),
+        i = 0.2 > n.luminance() ? n.brighten(0.35) : n.darken(0.35);
     return {
         '--custom-clan-bg': n.css(),
-        '--custom-clan-hover-bg': i.css(),
-        '--custom-clan-active-bg': r.css()
+        '--custom-clan-hover-bg': r.css(),
+        '--custom-clan-active-bg': i.css()
     };
 }
-function y(e) {
-    return { '--custom-clan-text': m(e).hex() };
+function O(e) {
+    return { '--custom-clan-text': E(e).hex() };
+}
+function S(e, t) {
+    let n = y(e, t);
+    if (null == n) return;
+    let r = O(n['--custom-clan-bg']);
+    return h({}, n, r);
 }
 function I(e, t) {
-    let n = v(e, t);
-    if (null == n) return;
-    let i = y(n['--custom-clan-bg']);
-    return {
-        ...n,
-        ...i
-    };
-}
-function T(e, t) {
-    let [n, r = 1] = t,
-        a = (0, c.ZP)();
-    return i.useMemo(
+    let [n, i = 1] = t,
+        o = (0, u.ZP)();
+    return r.useMemo(
         () =>
             null != e
                 ? e
                 : n
                       .resolve({
-                          theme: a,
-                          saturation: r
+                          theme: o,
+                          saturation: i
                       })
                       .hex(),
-        [e, n, r, a]
+        [e, n, i, o]
     );
 }
-function b(e, t) {
+function T(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 'top left',
-        i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0.3,
-        r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : '50%';
+        r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0.3,
+        i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : '50%';
     if (null == e) return;
-    let s = a()(e),
-        o = { background: '\n      radial-gradient(\n        circle at '.concat(n, ',\n        ').concat(s.alpha(i).hex(), ' 0%,\n        transparent ').concat(r, '\n      )\n    ') };
+    let a = o()(e),
+        s = { background: '\n      radial-gradient(\n        circle at '.concat(n, ',\n        ').concat(a.alpha(r).hex(), ' 0%,\n        transparent ').concat(i, '\n      )\n    ') };
     if (null != t) {
-        let e = a()(t);
-        o.background += ', '.concat(e.hex());
+        let e = o()(t);
+        s.background += ', '.concat(e.hex());
     }
-    return o;
+    return s;
 }

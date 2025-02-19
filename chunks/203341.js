@@ -1,85 +1,104 @@
 n.d(t, {
-    S: () => Z,
+    S: () => O,
     Z: () => N
 }),
     n(47120),
     n(653041);
-var i = n(200651),
-    l = n(192379),
-    a = n(442837),
-    r = n(704215),
-    s = n(481060),
-    o = n(358221),
+var r = n(200651),
+    i = n(192379),
+    l = n(442837),
+    o = n(704215),
+    a = n(481060),
+    s = n(358221),
     c = n(243778),
-    d = n(390322),
-    u = n(871499),
-    h = n(819640),
-    p = n(797258),
-    m = n(446226),
-    f = n(937393),
+    u = n(390322),
+    d = n(871499),
+    p = n(819640),
+    h = n(797258),
+    f = n(446226),
+    m = n(937393),
     g = n(43982),
-    _ = n(721351),
-    C = n(420529),
-    x = n(927923),
+    b = n(721351),
+    _ = n(420529),
+    C = n(927923),
     v = n(981631),
-    E = n(921944),
-    I = n(388032);
-function b(e) {
+    y = n(921944),
+    x = n(388032);
+function j(e) {
     let { onClose: t, channel: n } = e,
-        l = (0, C.Z)(n);
-    return (0, i.jsx)(s.v2r, {
+        i = (0, _.Z)(n);
+    return (0, r.jsx)(a.v2r, {
         onClose: t,
         onSelect: () => null,
         navId: 'transfer-menu',
-        'aria-label': I.intl.string(I.t.jqqLb2),
-        children: l
+        'aria-label': x.NW.string(x.t.jqqLb2),
+        children: i
     });
 }
-function Z() {
-    let e = (0, m.Z)(),
-        t = (0, f.Z)();
+function O() {
+    let e = (0, f.Z)(),
+        t = (0, m.Z)();
     return null != e || t.length > 0;
 }
 function N(e) {
-    let { channel: t, ...n } = e,
-        C = (0, m.Z)(),
-        Z = (0, a.e7)([p.Z], () => {
+    var { channel: t } = e,
+        n = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                i = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        r,
+                        i = {},
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+            }
+            return i;
+        })(e, ['channel']);
+    let _ = (0, f.Z)(),
+        O = (0, l.e7)([h.Z], () => {
             var e, t;
-            return null === (e = p.Z.getSessionById(null !== (t = null == C ? void 0 : C.sessionId) && void 0 !== t ? t : '')) || void 0 === e ? void 0 : e.clientInfo.os;
+            return null === (e = h.Z.getSessionById(null !== (t = null == _ ? void 0 : _.sessionId) && void 0 !== t ? t : '')) || void 0 === e ? void 0 : e.clientInfo.os;
         }),
-        N = (0, a.e7)([h.Z], () => h.Z.hasLayers()),
-        [T, S] = (0, a.Wu)([o.Z], () => [o.Z.getMode(t.id), o.Z.getLayout(t.id)]),
-        j = (0, s.s9z)(s.JQI),
-        y = (0, f.Z)().filter((e) => e.twoWayLink),
-        [A, P] = l.useState(!1),
-        R = v.WtW.VOICE !== T && [v.AEg.NO_CHAT, v.AEg.FULL_SCREEN].includes(S) ? 'top' : 'bottom',
-        M = [];
+        N = (0, l.e7)([p.Z], () => p.Z.hasLayers()),
+        [E, P] = (0, l.Wu)([s.Z], () => [s.Z.getMode(t.id), s.Z.getLayout(t.id)]),
+        I = (0, a.s9z)(a.JQI),
+        S = (0, m.Z)().filter((e) => e.twoWayLink),
+        [Z, T] = i.useState(!1),
+        A = v.WtW.VOICE !== E && [v.AEg.NO_CHAT, v.AEg.FULL_SCREEN].includes(P) ? 'top' : 'bottom',
+        w = [];
     return (
-        y.length > 0 && M.push(r.z.DONUT_DESKTOP_NUX),
-        (0, i.jsx)(c.ZP, {
-            contentTypes: M,
+        S.length > 0 && w.push(o.z.DONUT_DESKTOP_NUX),
+        (0, r.jsx)(c.ZP, {
+            contentTypes: w,
             children: (e) => {
-                let { visibleContent: l, markAsDismissed: a } = e,
-                    o = l === r.z.DONUT_DESKTOP_NUX;
-                return (0, i.jsx)(s.yRy, {
-                    position: R,
-                    spacing: o ? 16 : void 0,
-                    positionKey: ''.concat(T, ':').concat(S),
-                    onRequestClose: () => P(!1),
-                    shouldShow: (o || A) && !N && !j,
+                let { visibleContent: i, markAsDismissed: l } = e,
+                    s = i === o.z.DONUT_DESKTOP_NUX;
+                return (0, r.jsx)(a.yRy, {
+                    position: A,
+                    spacing: s ? 16 : void 0,
+                    positionKey: ''.concat(E, ':').concat(P),
+                    onRequestClose: () => T(!1),
+                    shouldShow: (s || Z) && !N && !I,
                     renderPopout: (e) => {
                         let { closePopout: n } = e;
-                        return (0, i.jsx)(d.Z, {
-                            children: o
-                                ? (0, i.jsx)(g.Z, {
-                                      popoutPosition: R,
-                                      onDismiss: () => a(E.L.UNKNOWN),
+                        return (0, r.jsx)(u.Z, {
+                            children: s
+                                ? (0, r.jsx)(g.Z, {
+                                      popoutPosition: A,
+                                      onDismiss: () => l(y.L.UNKNOWN),
                                       onAccept: () => {
-                                          a(E.L.UNKNOWN), P(!0);
+                                          l(y.L.UNKNOWN), T(!0);
                                       },
-                                      gameConsoleAccounts: y
+                                      gameConsoleAccounts: S
                                   })
-                                : (0, i.jsx)(b, {
+                                : (0, r.jsx)(j, {
                                       onClose: () => {
                                           n();
                                       },
@@ -87,14 +106,56 @@ function N(e) {
                                   })
                         });
                     },
-                    children: (e) =>
-                        (0, i.jsx)(u.Z, {
-                            ...e,
-                            ...n,
-                            onClick: () => P(!0),
-                            label: null != Z ? (Z === x.YE.XBOX ? I.intl.string(I.t.T0uYKy) : I.intl.string(I.t.FWAzS0)) : I.intl.string(I.t['mbi/fH']),
-                            iconComponent: (0, _.Z)(Z)
-                        })
+                    children: (e) => {
+                        var t, i;
+                        return (0, r.jsx)(
+                            d.Z,
+                            ((t = (function (e) {
+                                for (var t = 1; t < arguments.length; t++) {
+                                    var n = null != arguments[t] ? arguments[t] : {},
+                                        r = Object.keys(n);
+                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                        (r = r.concat(
+                                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                            })
+                                        )),
+                                        r.forEach(function (t) {
+                                            var r;
+                                            (r = n[t]),
+                                                t in e
+                                                    ? Object.defineProperty(e, t, {
+                                                          value: r,
+                                                          enumerable: !0,
+                                                          configurable: !0,
+                                                          writable: !0
+                                                      })
+                                                    : (e[t] = r);
+                                        });
+                                }
+                                return e;
+                            })({}, e, n)),
+                            (i = i =
+                                {
+                                    onClick: () => T(!0),
+                                    label: null != O ? (O === C.YE.XBOX ? x.NW.string(x.t.T0uYKy) : x.NW.string(x.t.FWAzS0)) : x.NW.string(x.t['mbi/fH']),
+                                    iconComponent: (0, b.Z)(O)
+                                }),
+                            Object.getOwnPropertyDescriptors
+                                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i))
+                                : (function (e, t) {
+                                      var n = Object.keys(e);
+                                      if (Object.getOwnPropertySymbols) {
+                                          var r = Object.getOwnPropertySymbols(e);
+                                          n.push.apply(n, r);
+                                      }
+                                      return n;
+                                  })(Object(i)).forEach(function (e) {
+                                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(i, e));
+                                  }),
+                            t)
+                        );
+                    }
                 });
             }
         })

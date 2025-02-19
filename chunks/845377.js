@@ -1,69 +1,112 @@
-n.d(t, { Z: () => E }), n(47120), n(724458);
-var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    s = n.n(l),
-    a = n(498607),
-    o = n.n(a),
+n.d(t, { Z: () => I }), n(266796), n(47120);
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(498607),
+    o = n.n(l),
     c = n(913527),
     d = n.n(c),
     u = n(442837),
     m = n(692547),
-    h = n(481060),
+    p = n(481060),
     g = n(984933),
-    x = n(63063),
-    p = n(709054),
-    _ = n(434404),
-    C = n(118215),
-    f = n(981631),
-    v = n(388032),
-    N = n(510171);
-let j = (e) => {
-    let { name: t, failingName: n, description: r, checked: l, pending: s, pendingDescription: a, failingDescription: o } = e,
+    h = n(63063),
+    f = n(709054),
+    b = n(434404),
+    x = n(118215),
+    j = n(981631),
+    N = n(388032),
+    v = n(97135);
+function _(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function O(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let y = (e) => {
+    let { name: t, failingName: n, description: i, checked: s, pending: a, pendingDescription: l, failingDescription: o } = e,
         c = t,
         d = null,
         u = null;
     return (
-        s
-            ? ((d = (0, i.jsx)(h.P4T, {
+        a
+            ? ((d = (0, r.jsx)(p.P4T, {
                   size: 'custom',
                   color: m.Z.unsafe_rawColors.YELLOW_300.css,
                   width: 20,
                   height: 20
               })),
-              (u = null != a ? a : r))
-            : l
-              ? ((d = (0, i.jsx)(h.XZJ, {
+              (u = null != l ? l : i))
+            : s
+              ? ((d = (0, r.jsx)(p.XZJ, {
                     readOnly: !0,
-                    shape: h.XZJ.Shapes.ROUND,
+                    shape: p.XZJ.Shapes.ROUND,
                     size: 20,
-                    type: h.XZJ.Types.INVERTED,
+                    type: p.XZJ.Types.INVERTED,
                     value: !0
                 })),
-                (u = r))
-              : ((d = (0, i.jsx)(h.k$p, {
+                (u = i))
+              : ((d = (0, r.jsx)(p.k$p, {
                     size: 'custom',
                     color: m.Z.unsafe_rawColors.RED_400.css,
                     width: 20,
                     height: 20
                 })),
                 (c = null != n ? n : t),
-                (u = null != o ? o : r)),
-        (0, i.jsxs)('div', {
-            className: N.checklistItem,
+                (u = null != o ? o : i)),
+        (0, r.jsxs)('div', {
+            className: v.checklistItem,
             children: [
-                (0, i.jsx)('div', {
-                    className: N.checklistIcon,
+                (0, r.jsx)('div', {
+                    className: v.checklistIcon,
                     children: d
                 }),
-                (0, i.jsxs)('div', {
-                    className: N.checklistText,
+                (0, r.jsxs)('div', {
+                    className: v.checklistText,
                     children: [
-                        (0, i.jsx)(h.X6q, {
+                        (0, r.jsx)(p.X6q, {
                             variant: 'heading-md/semibold',
                             children: c
                         }),
-                        (0, i.jsx)(h.Text, {
+                        (0, r.jsx)(p.Text, {
                             color: 'text-muted',
                             variant: 'text-sm/normal',
                             children: u
@@ -74,7 +117,7 @@ let j = (e) => {
         })
     );
 };
-function I(e, t) {
+function C(e, t) {
     return o()(
         null == e
             ? void 0
@@ -90,168 +133,149 @@ function I(e, t) {
               })
     );
 }
-let E = (e) => {
-    let { guild: t, guildId: l, className: a, headerContent: o, failedItemsOnly: c = !1 } = e,
-        [m, E] = (0, u.Wu)([C.ZP], () => [C.ZP.getDiscoveryChecklist(l), C.ZP.isLoading()], [l]),
-        { nsfwProperties: b } = null != m ? m : {},
-        T = null == t ? void 0 : t.hasFeature(f.oNc.PARTNERED),
-        S = null == b ? void 0 : b.channels_banned_keywords,
-        R = (0, u.e7)(
+let I = (e) => {
+    let { guild: t, guildId: s, className: l, headerContent: o, failedItemsOnly: c = !1 } = e,
+        [m, I] = (0, u.Wu)([x.ZP], () => [x.ZP.getDiscoveryChecklist(s), x.ZP.isLoading()], [s]),
+        { nsfwProperties: E } = null != m ? m : {},
+        S = null == t ? void 0 : t.hasFeature(j.oNc.PARTNERED),
+        T = null == E ? void 0 : E.channels_banned_keywords,
+        P = (0, u.e7)(
             [g.ZP],
             () => {
-                var e, n, i;
-                if (null == S) return [];
-                let r = null !== (n = (null !== (e = g.ZP.getChannels(t.id)) && void 0 !== e ? e : {})[g.sH]) && void 0 !== n ? n : [],
-                    l =
-                        null !==
-                            (i =
-                                null == r
-                                    ? void 0
-                                    : r
-                                          .map((e) => e.channel)
-                                          .reduce(
-                                              (e, t) => ({
-                                                  ...e,
-                                                  [t.id]: t
-                                              }),
-                                              {}
-                                          )) && void 0 !== i
-                            ? i
-                            : {};
-                return null == S
+                var e, n, r;
+                if (null == T) return [];
+                let i = null !== (n = (null !== (e = g.ZP.getChannels(t.id)) && void 0 !== e ? e : {})[g.sH]) && void 0 !== n ? n : [],
+                    s = null !== (r = null == i ? void 0 : i.map((e) => e.channel).reduce((e, t) => O(_({}, e), { [t.id]: t }), {})) && void 0 !== r ? r : {};
+                return null == T
                     ? []
-                    : Object.entries(S).map((e) => {
+                    : Object.entries(T).map((e) => {
                           let [t, n] = e;
-                          return [l[t], n];
+                          return [s[t], n];
                       });
             },
-            [t.id, S],
-            I
+            [t.id, T],
+            C
         );
-    if (E || null == m)
-        return (0, i.jsxs)('div', {
-            className: s()(N.container, N.loaderContainer, a),
+    if (I || null == m)
+        return (0, r.jsxs)('div', {
+            className: a()(v.container, v.loaderContainer, l),
             children: [
-                (0, i.jsx)(h.X6q, {
-                    className: N.loadingText,
+                (0, r.jsx)(p.X6q, {
+                    className: v.loadingText,
                     variant: 'heading-md/semibold',
                     color: 'header-secondary',
-                    children: v.intl.string(v.t.e1gm0d)
+                    children: N.NW.string(N.t.e1gm0d)
                 }),
-                (0, i.jsx)(h.$jN, { className: N.__invalid_spinner })
+                (0, r.jsx)(p.$jN, { className: v.__invalid_spinner })
             ]
         });
-    let Z = T ? v.t['WH+1Y2'] : v.t.a4MYDA,
-        y = [
+    let w = S ? N.t['WH+1Y2'] : N.t.a4MYDA,
+        R = [
             {
-                name: v.intl.string(v.t.yvk9p6),
-                failingName: v.intl.string(v.t['IY/UT0']),
-                description: v.intl.string(v.t.hSLSMz),
-                failingDescription: v.intl.format(v.t.odsGg4, {
-                    termsURL: f.EYA.TERMS,
-                    guidelinesURL: x.Z.getArticleURL(f.BhN.PUBLIC_GUILD_GUILDLINES)
+                name: N.NW.string(N.t.yvk9p6),
+                failingName: N.NW.string(N.t['IY/UT0']),
+                description: N.NW.string(N.t.hSLSMz),
+                failingDescription: N.NW.format(N.t.odsGg4, {
+                    termsURL: j.EYA.TERMS,
+                    guidelinesURL: h.Z.getArticleURL(j.BhN.PUBLIC_GUILD_GUILDLINES)
                 }),
                 checked: null == m ? void 0 : m.safeEnvironment
             },
             {
-                name: v.intl.formatToPlainString(v.t.NYovAw, { minMembers: m.minimumGuildSize }),
-                failingName: v.intl.formatToPlainString(v.t.wvJwYm, { minMembers: m.minimumGuildSize.toLocaleString() }),
+                name: N.NW.formatToPlainString(N.t.NYovAw, { minMembers: m.minimumGuildSize }),
+                failingName: N.NW.formatToPlainString(N.t.wvJwYm, { minMembers: m.minimumGuildSize.toLocaleString() }),
                 description: null,
-                failingDescription: v.intl.format(Z, { minMembers: m.minimumGuildSize.toLocaleString() }),
+                failingDescription: N.NW.format(w, { minMembers: m.minimumGuildSize.toLocaleString() }),
                 checked: null == m ? void 0 : m.size
             },
             {
-                name: v.intl.string(v.t.PtxOCA),
-                failingName: v.intl.string(v.t.JPF5IC),
-                description: v.intl.formatToPlainString(v.t.VT0bQE, { minimumGuildAge: Math.ceil(m.minimumGuildAge / 7) }),
-                failingDescription: v.intl.formatToPlainString(v.t.jYwM1d, {
+                name: N.NW.string(N.t.PtxOCA),
+                failingName: N.NW.string(N.t.JPF5IC),
+                description: N.NW.formatToPlainString(N.t.VT0bQE, { minimumGuildAge: Math.ceil(m.minimumGuildAge / 7) }),
+                failingDescription: N.NW.formatToPlainString(N.t.jYwM1d, {
                     minimumGuildAge: Math.ceil(m.minimumGuildAge / 7),
-                    passDate: d()(p.default.extractTimestamp(l)).add(m.minimumGuildAge, 'days').format('LL')
+                    passDate: d()(f.default.extractTimestamp(s)).add(m.minimumGuildAge, 'days').format('LL')
                 }),
                 checked: null == m ? void 0 : m.age
             },
             {
-                name: (null == m ? void 0 : m.healthScorePending) ? v.intl.string(v.t.G77ud3) : v.intl.string(v.t['95nW0N']),
-                failingName: v.intl.string(v.t['+GHxPz']),
-                description: v.intl.string(v.t.rTWJwc),
-                failingDescription: (0, i.jsxs)(i.Fragment, {
+                name: (null == m ? void 0 : m.healthScorePending) ? N.NW.string(N.t.G77ud3) : N.NW.string(N.t['95nW0N']),
+                failingName: N.NW.string(N.t['+GHxPz']),
+                description: N.NW.string(N.t.rTWJwc),
+                failingDescription: (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, i.jsx)(h.Text, {
+                        (0, r.jsx)(p.Text, {
                             color: 'text-muted',
-                            className: N.healthFailingDescription,
+                            className: v.healthFailingDescription,
                             variant: 'text-sm/normal',
-                            children: v.intl.string(v.t.LjqS0N)
+                            children: N.NW.string(N.t.LjqS0N)
                         }),
                         (null == m ? void 0 : m.engagementHealthy)
                             ? null
-                            : (0, i.jsx)(h.Text, {
+                            : (0, r.jsx)(p.Text, {
                                   color: 'text-danger',
                                   variant: 'text-sm/normal',
-                                  children: v.intl.string(v.t['X8Lt7+'])
+                                  children: N.NW.string(N.t['X8Lt7+'])
                               }),
                         (null == m ? void 0 : m.retentionHealthy)
                             ? null
-                            : (0, i.jsx)(h.Text, {
+                            : (0, r.jsx)(p.Text, {
                                   color: 'text-danger',
                                   variant: 'text-sm/normal',
-                                  children: v.intl.string(v.t['esdy8/'])
+                                  children: N.NW.string(N.t['esdy8/'])
                               }),
                         (() => {
                             if (null == m || null == m.healthScore) return !1;
                             let { retentionHealthy: e, engagementHealthy: t, healthScore: n } = m,
-                                { avg_nonnew_participators: i, avg_nonnew_communicators: r, perc_ret_w1_intentful: l } = n;
-                            return (!e && null != l) || (!t && null != i && null != r);
+                                { avg_nonnew_participators: r, avg_nonnew_communicators: i, perc_ret_w1_intentful: s } = n;
+                            return (!e && null != s) || (!t && null != r && null != i);
                         })() &&
-                            (0, i.jsx)(h.zxk, {
-                                className: N.detailsButton,
-                                look: h.zxk.Looks.LINK,
-                                size: h.zxk.Sizes.NONE,
-                                color: h.zxk.Colors.LINK,
+                            (0, r.jsx)(p.zxk, {
+                                className: v.detailsButton,
+                                look: p.zxk.Looks.LINK,
+                                size: p.zxk.Sizes.NONE,
+                                color: p.zxk.Colors.LINK,
                                 onClick: () =>
-                                    (0, h.ZDy)(async () => {
+                                    (0, p.ZDy)(async () => {
                                         let { default: e } = await n.e('23401').then(n.bind(n, 666599));
-                                        return (t) =>
-                                            (0, i.jsx)(e, {
-                                                ...t,
-                                                guildChecklist: m
-                                            });
+                                        return (t) => (0, r.jsx)(e, O(_({}, t), { guildChecklist: m }));
                                     }),
-                                children: v.intl.string(v.t.qyiTHx)
+                                children: N.NW.string(N.t.qyiTHx)
                             })
                     ]
                 }),
                 pendingDescription: (null == m ? void 0 : m.size)
-                    ? v.intl.format(v.t.ALtXIC, {
+                    ? N.NW.format(N.t.ALtXIC, {
                           checkBackHook: (e, t) =>
-                              (0, i.jsx)(
+                              (0, r.jsx)(
                                   'strong',
                                   {
-                                      className: N.healthPending,
+                                      className: v.healthPending,
                                       children: e
                                   },
                                   t
                               )
                       })
-                    : v.intl.formatToPlainString(v.t['6S/96O'], { minMembers: 200 }),
+                    : N.NW.formatToPlainString(N.t['6S/96O'], { minMembers: 200 }),
                 checked: null == m ? void 0 : m.healthy,
                 pending: null == m ? void 0 : m.healthScorePending
             },
             {
-                name: v.intl.string(v.t['/cghSE']),
-                failingName: v.intl.string(v.t['0HJNa2']),
-                description: v.intl.string(v.t.Pbu9AQ),
-                failingDescription: (0, i.jsxs)(i.Fragment, {
+                name: N.NW.string(N.t['/cghSE']),
+                failingName: N.NW.string(N.t['0HJNa2']),
+                description: N.NW.string(N.t.Pbu9AQ),
+                failingDescription: (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (null == b ? void 0 : b.channels) != null
-                            ? (0, i.jsx)(h.Text, {
+                        (null == E ? void 0 : E.channels) != null
+                            ? (0, r.jsx)(p.Text, {
                                   color: 'text-muted',
                                   variant: 'text-sm/normal',
-                                  children: v.intl.format(v.t['T+DQYW'], {
+                                  children: N.NW.format(N.t['T+DQYW'], {
                                       channelHook: (e, t) =>
-                                          (0, i.jsx)(
+                                          (0, r.jsx)(
                                               'span',
                                               {
-                                                  className: N.doesNot,
+                                                  className: v.doesNot,
                                                   children: e
                                               },
                                               t
@@ -259,14 +283,14 @@ let E = (e) => {
                                   })
                               })
                             : null,
-                        R.length > 0
-                            ? (0, i.jsx)('div', {
-                                  className: N.indent,
-                                  children: R.map((e) => {
+                        P.length > 0
+                            ? (0, r.jsx)('div', {
+                                  className: v.indent,
+                                  children: P.map((e) => {
                                       let [t, n] = e;
                                       return null != t
-                                          ? (0, i.jsxs)(
-                                                h.Text,
+                                          ? (0, r.jsxs)(
+                                                p.Text,
                                                 {
                                                     color: 'text-muted',
                                                     variant: 'text-sm/normal',
@@ -278,16 +302,16 @@ let E = (e) => {
                                   })
                               })
                             : null,
-                        (null == b ? void 0 : b.name) != null
-                            ? (0, i.jsx)(h.Text, {
+                        (null == E ? void 0 : E.name) != null
+                            ? (0, r.jsx)(p.Text, {
                                   color: 'text-muted',
                                   variant: 'text-sm/normal',
-                                  children: v.intl.format(v.t.KVD8Ex, {
+                                  children: N.NW.format(N.t.KVD8Ex, {
                                       nameHook: (e, t) =>
-                                          (0, i.jsx)(
+                                          (0, r.jsx)(
                                               'span',
                                               {
-                                                  className: N.doesNot,
+                                                  className: v.doesNot,
                                                   children: e
                                               },
                                               t
@@ -295,16 +319,16 @@ let E = (e) => {
                                   })
                               })
                             : null,
-                        (null == b ? void 0 : b.description) != null
-                            ? (0, i.jsx)(h.Text, {
+                        (null == E ? void 0 : E.description) != null
+                            ? (0, r.jsx)(p.Text, {
                                   color: 'text-muted',
                                   variant: 'text-sm/normal',
-                                  children: v.intl.format(v.t['/W9Ken'], {
+                                  children: N.NW.format(N.t['/W9Ken'], {
                                       descriptionHook: (e, t) =>
-                                          (0, i.jsx)(
+                                          (0, r.jsx)(
                                               'span',
                                               {
-                                                  className: N.doesNot,
+                                                  className: v.doesNot,
                                                   children: e
                                               },
                                               t
@@ -314,47 +338,45 @@ let E = (e) => {
                             : null
                     ]
                 }),
-                checked: null == b || 0 === Object.keys(b).length
+                checked: null == E || 0 === Object.keys(E).length
             },
             {
-                name: v.intl.string(v.t.lSXnLy),
-                failingName: v.intl.string(v.t.awA3PT),
-                description: v.intl.string(v.t.QbBJ7e),
-                failingDescription: v.intl.format(v.t.kBXInZ, { onClick: () => _.Z.setSection(f.pNK.SAFETY, f.KsC.SAFETY_PERMISSIONS) }),
+                name: N.NW.string(N.t.lSXnLy),
+                failingName: N.NW.string(N.t.awA3PT),
+                description: N.NW.string(N.t.QbBJ7e),
+                failingDescription: N.NW.format(N.t.kBXInZ, { onClick: () => b.Z.setSection(j.pNK.SAFETY, j.KsC.SAFETY_PERMISSIONS) }),
                 checked: null == m ? void 0 : m.protected
             }
         ];
-    return (0, i.jsxs)('div', {
-        className: s()(N.container, a),
+    return (0, r.jsxs)('div', {
+        className: a()(v.container, l),
         children: [
             (() => {
                 let e = (null == m ? void 0 : m.sufficient) ? n(909425) : n(177266);
                 return null == o
                     ? null
-                    : (0, i.jsxs)('div', {
-                          className: N.header,
+                    : (0, r.jsxs)('div', {
+                          className: v.header,
                           children: [
-                              (0, i.jsx)('img', {
+                              (0, r.jsx)('img', {
                                   alt: '',
                                   src: e,
-                                  className: N.headerIcon,
+                                  className: v.headerIcon,
                                   width: 40
                               }),
                               o
                           ]
                       });
             })(),
-            y
-                .filter((e) => !c || null == e.checked || !e.checked)
-                .map((e, t) =>
-                    (0, i.jsxs)(
-                        r.Fragment,
-                        {
-                            children: [(0, i.jsx)(j, { ...e }), t < y.length - 1 ? (0, i.jsx)('hr', { className: N.separator }) : null]
-                        },
-                        ''.concat(e.name)
-                    )
+            R.filter((e) => !c || null == e.checked || !e.checked).map((e, t) =>
+                (0, r.jsxs)(
+                    i.Fragment,
+                    {
+                        children: [(0, r.jsx)(y, _({}, e)), t < R.length - 1 ? (0, r.jsx)('hr', { className: v.separator }) : null]
+                    },
+                    ''.concat(e.name)
                 )
+            )
         ]
     });
 };

@@ -1,15 +1,15 @@
-n.d(t, { Z: () => b }), n(653041);
-var i,
-    r = n(392711),
-    a = n.n(r),
-    s = n(442837),
-    o = n(570140),
+n.d(t, { Z: () => N }), n(653041);
+var r,
+    i = n(392711),
+    o = n.n(i),
+    a = n(442837),
+    s = n(570140),
     l = n(704907),
-    u = n(581883),
-    c = n(70956),
+    c = n(581883),
+    u = n(70956),
     d = n(926491),
     f = n(526761);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,10 +22,49 @@ function _(e, t, n) {
         e
     );
 }
-let p = { pendingUsages: [] };
-c.Z.Millis.DAY;
-let h = 20,
-    m = new l.ZP({
+function _(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                p(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function h(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function m(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : h(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let g = { pendingUsages: [] };
+u.Z.Millis.DAY;
+let E = 20,
+    v = new l.ZP({
         computeBonus: () => 100,
         computeWeight: (e) => {
             let t = 1;
@@ -33,36 +72,33 @@ let h = 20,
         },
         lookupKey: (e) => d.Z.getStickerById(e),
         afterCompute: () => {},
-        numFrequentlyItems: h
+        numFrequentlyItems: E
     }),
-    g = () => {
-        d.Z.isLoaded && m.compute();
+    b = () => {
+        d.Z.isLoaded && v.compute();
     },
-    E = (e) => {
+    y = (e) => {
         let { stickerIds: t } = e;
         null == t ||
             t.forEach((e) => {
-                m.track(e),
-                    p.pendingUsages.push({
+                v.track(e),
+                    g.pendingUsages.push({
                         key: e,
                         timestamp: Date.now()
                     });
             }),
-            g();
+            b();
     },
-    v = () => {
-        g();
+    O = () => {
+        b();
     };
-function y() {
+function S() {
     var e;
-    let t = null === (e = u.Z.frecencyWithoutFetchingLatest.stickerFrecency) || void 0 === e ? void 0 : e.stickers;
+    let t = null === (e = c.Z.frecencyWithoutFetchingLatest.stickerFrecency) || void 0 === e ? void 0 : e.stickers;
     if (null == t) return !1;
-    m.overwriteHistory(
-        a().mapValues(t, (e) => ({
-            ...e,
-            recentUses: e.recentUses.map(Number).filter((e) => e > 0)
-        })),
-        p.pendingUsages
+    v.overwriteHistory(
+        o().mapValues(t, (e) => m(_({}, e), { recentUses: e.recentUses.map(Number).filter((e) => e > 0) })),
+        g.pendingUsages
     );
 }
 function I(e) {
@@ -71,24 +107,24 @@ function I(e) {
         wasSaved: n
     } = e;
     if (t !== f.yP.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
-    p.pendingUsages = [];
+    g.pendingUsages = [];
 }
-class T extends (i = s.ZP.PersistedStore) {
+class T extends (r = a.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(d.Z), null != e && (p = e), this.syncWith([d.Z], v), this.syncWith([u.Z], y);
+        this.waitFor(d.Z), null != e && (g = e), this.syncWith([d.Z], O), this.syncWith([c.Z], S);
     }
     getState() {
-        return p;
+        return g;
     }
     hasPendingUsage() {
-        return p.pendingUsages.length > 0;
+        return g.pendingUsages.length > 0;
     }
     get stickerFrecencyWithoutFetchingLatest() {
-        return m;
+        return v;
     }
 }
-_(T, 'displayName', 'StickersPersistedStore'), _(T, 'persistKey', 'StickersPersistedStoreV2');
-let b = new T(o.Z, {
-    STICKER_TRACK_USAGE: E,
+p(T, 'displayName', 'StickersPersistedStore'), p(T, 'persistKey', 'StickersPersistedStoreV2');
+let N = new T(s.Z, {
+    STICKER_TRACK_USAGE: y,
     USER_SETTINGS_PROTO_UPDATE: I
 });

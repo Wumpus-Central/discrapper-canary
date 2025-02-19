@@ -1,32 +1,33 @@
 n.d(t, {
-    O5: () => V,
-    V6: () => F,
-    ZP: () => eC
+    O5: () => W,
+    V6: () => H,
+    ZP: () => eP
 }),
+    n(301563),
     n(47120),
     n(789020),
     n(653041);
-var i,
-    r = n(392711),
-    a = n.n(r),
-    s = n(866442),
-    o = n(442837),
+var r,
+    i = n(392711),
+    o = n.n(i),
+    a = n(866442),
+    s = n(442837),
     l = n(570140),
-    u = n(2572),
-    c = n(16609),
+    c = n(2572),
+    u = n(16609),
     d = n(864106),
     f = n(710845),
-    _ = n(69882),
-    p = n(134049),
+    p = n(69882),
+    _ = n(134049),
     h = n(160404),
     m = n(630388),
     g = n(823379),
     E = n(709054),
     v = n(314897),
-    y = n(592125),
-    I = n(430824),
-    T = n(372897);
-function b(e, t, n) {
+    b = n(592125),
+    y = n(430824),
+    O = n(372897);
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -39,54 +40,93 @@ function b(e, t, n) {
         e
     );
 }
-let S = new f.Z('GuildMemberStore'),
-    A = {},
-    N = {},
+function I(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                S(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function T(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function N(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : T(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let A = new f.Z('GuildMemberStore'),
     C = {},
     R = {},
-    O = {},
-    D = !1,
-    L = 0,
-    x = 0,
     P = {},
     w = {},
-    M = {
+    D = {},
+    x = !1,
+    L = 0,
+    M = 0,
+    k = {},
+    j = {},
+    U = {
         added: [],
         removed: []
     };
-function k(e, t) {
-    if (null == t.communicationDisabledUntil || !(0, _.b)(t)) return U(e, t.userId);
-    let n = Z(e, t.userId);
-    O[n] !== t.communicationDisabledUntil && (0, _.b)(t) && ((O[n] = t.communicationDisabledUntil), G(n));
+function G(e, t) {
+    if (null == t.communicationDisabledUntil || !(0, p.b)(t)) return B(e, t.userId);
+    let n = V(e, t.userId);
+    D[n] !== t.communicationDisabledUntil && (0, p.b)(t) && ((D[n] = t.communicationDisabledUntil), Z(n));
 }
-function U(e, t) {
+function B(e, t) {
     if (null != t) {
-        let n = Z(e, t);
-        null != O[n] && G(n), B(Z(e, t));
+        let n = V(e, t);
+        null != D[n] && Z(n), F(V(e, t));
     } else
-        for (let t in O) {
+        for (let t in D) {
             let n = t;
-            V(n) === e && (G(t), B(n));
+            W(n) === e && (Z(t), F(n));
         }
 }
-function G(e) {
-    (L += 1), (P[e] = L);
+function Z(e) {
+    (L += 1), (k[e] = L);
 }
-function B(e) {
-    F(e) === v.default.getId() && (0, p.l)(V(e)), delete O[e];
+function F(e) {
+    H(e) === v.default.getId() && (0, _.l)(W(e)), delete D[e];
 }
-function Z(e, t) {
+function V(e, t) {
     let n = [];
     return (n[0] = e), (n[1] = t), n.join('-');
 }
-function F(e) {
+function H(e) {
     return e.split('-')[1];
 }
-function V(e) {
+function W(e) {
     return e.split('-')[0];
 }
-function j(e, t) {
-    let n, i, r, a, o;
+function Y(e, t) {
+    let n, r, i, o, s;
     if (0 === t.length)
         return {
             colorString: void 0,
@@ -97,194 +137,165 @@ function j(e, t) {
         };
     for (let n of t) {
         let t = e[n];
-        null != t && ((null == o || t.position > o.position) && (o = t), t.color > 0 && (null == i || t.position > i.position) && (i = t), t.hoist && (null == r || t.position > r.position) && (r = t), (null != t.icon || null != t.unicodeEmoji) && (null == a || t.position > a.position) && (a = t));
+        null != t && ((null == s || t.position > s.position) && (s = t), t.color > 0 && (null == r || t.position > r.position) && (r = t), t.hoist && (null == i || t.position > i.position) && (i = t), (null != t.icon || null != t.unicodeEmoji) && (null == o || t.position > o.position) && (o = t));
     }
-    if (null != i) {
+    if (null != r) {
         var l;
-        null == i.colorString && i.color > 0 && (i.colorString = (0, s.Rf)(i.color)), (n = null !== (l = i.colorString) && void 0 !== l ? l : void 0);
+        null == r.colorString && r.color > 0 && (r.colorString = (0, a.Rf)(r.color)), (n = null !== (l = r.colorString) && void 0 !== l ? l : void 0);
     }
     return {
         colorString: n,
-        colorRoleId: null == i ? void 0 : i.id,
-        iconRoleId: null == a ? void 0 : a.id,
-        hoistRoleId: null == r ? void 0 : r.id,
-        highestRoleId: null == o ? void 0 : o.id
+        colorRoleId: null == r ? void 0 : r.id,
+        iconRoleId: null == o ? void 0 : o.id,
+        hoistRoleId: null == i ? void 0 : i.id,
+        highestRoleId: null == s ? void 0 : s.id
     };
 }
-function H(e) {
+function K(e) {
     var t, n;
-    let { userId: i, nick: r, guildId: a, avatar: s, avatarDecoration: o, guildRoles: l, roles: u, premiumSince: c, isPending: d, joinedAt: f, communicationDisabledUntil: _, unusualDMActivityUntil: p, fullProfileLoadedTimestamp: g, flags: y } = e,
-        { colorString: I, colorRoleId: b, iconRoleId: S, hoistRoleId: N, highestRoleId: R } = j(l, u),
-        O = {
-            userId: i,
-            nick: r,
-            guildId: a,
-            avatar: s,
-            avatarDecoration: o,
-            roles: u,
-            colorString: I,
-            colorRoleId: b,
-            iconRoleId: S,
-            hoistRoleId: N,
+    let { userId: r, nick: i, guildId: o, avatar: a, avatarDecoration: s, guildRoles: l, roles: c, premiumSince: u, isPending: d, joinedAt: f, communicationDisabledUntil: p, unusualDMActivityUntil: _, fullProfileLoadedTimestamp: g, flags: b } = e,
+        { colorString: y, colorRoleId: S, iconRoleId: T, hoistRoleId: A, highestRoleId: R } = Y(l, c),
+        w = {
+            userId: r,
+            nick: i,
+            guildId: o,
+            avatar: a,
+            avatarDecoration: s,
+            roles: c,
+            colorString: y,
+            colorRoleId: S,
+            iconRoleId: T,
+            hoistRoleId: A,
             highestRoleId: R,
-            premiumSince: c,
+            premiumSince: u,
             isPending: d,
             joinedAt: f,
-            communicationDisabledUntil: _,
-            unusualDMActivityUntil: p,
+            communicationDisabledUntil: p,
+            unusualDMActivityUntil: _,
             fullProfileLoadedTimestamp: g,
-            flags: y
+            flags: b
         };
-    if (((0, m.yE)(null !== (t = O.flags) && void 0 !== t ? t : 0, T.q.IS_GUEST) && (O.flags = (0, m.pj)(null !== (n = O.flags) && void 0 !== n ? n : 0, T.q.BYPASSES_VERIFICATION)), null == A[a])) return O;
-    if (i === v.default.getId()) {
-        if (h.Z.isViewingRoles(a) || h.Z.isFullServerPreview(a)) {
-            let e = h.Z.getViewingRoles(a);
-            C[a] = {
-                ...O,
-                ...h.Z.getMemberOptions(a),
-                roles: null != e ? E.default.keys(e) : []
-            };
-        } else null != C[a] && delete C[a];
+    if (((0, m.yE)(null !== (t = w.flags) && void 0 !== t ? t : 0, O.q.IS_GUEST) && (w.flags = (0, m.pj)(null !== (n = w.flags) && void 0 !== n ? n : 0, O.q.BYPASSES_VERIFICATION)), null == C[o])) return w;
+    if (r === v.default.getId()) {
+        if (h.Z.isViewingRoles(o) || h.Z.isFullServerPreview(o)) {
+            let e = h.Z.getViewingRoles(o);
+            P[o] = N(I({}, w, h.Z.getMemberOptions(o)), { roles: null != e ? E.default.keys(e) : [] });
+        } else null != P[o] && delete P[o];
     }
-    return O;
+    return w;
 }
-function Y(e) {
-    D ? (D = !1) : ((A = {}), (N = {})), (O = {}), K(e);
+function z(e) {
+    x ? (x = !1) : ((C = {}), (R = {})), (D = {}), Q(e);
 }
-function W(e) {
+function q(e) {
     e.guilds.forEach((e) => {
         var t;
         let n = e.id;
-        eh({
+        eE({
             id: n,
             members: e.members
         }),
             null === (t = e.activity_instances) ||
                 void 0 === t ||
                 t.forEach((e) => {
-                    ep(n, e.participants);
+                    eg(n, e.participants);
                 });
     });
-}
-function K(e) {
-    e.guilds.forEach((e) => {
-        eh(e);
-    });
-}
-function z(e) {
-    let { guildMembers: t } = e;
-    (A = { ...t }), (N = {});
-}
-function q(e) {
-    let { guildMembers: t, guilds: n } = e;
-    (D = !0), (A = { ...t }), (N = {}), (R = {}), X(n);
 }
 function Q(e) {
-    let { guilds: t } = e;
-    X(t);
+    e.guilds.forEach((e) => {
+        eE(e);
+    });
 }
 function X(e) {
-    for (let t of e)
-        if (
-            null != t.member &&
-            (null == R[t.id]
-                ? (R[t.id] = t.member)
-                : (R[t.id] = {
-                      ...t.member,
-                      roles: t.member.roles
-                  }),
-            null != A[t.id])
-        ) {
-            let e = A[t.id];
-            null != e[t.member.userId] &&
-                (e[t.member.userId] = {
-                    ...e[t.member.userId],
-                    roles: t.member.roles
-                });
-        }
+    let { guildMembers: t } = e;
+    (C = I({}, t)), (R = {});
 }
 function J(e) {
-    var t, n;
-    if (null == e.guildId || null == I.Z.getGuild(e.guildId)) return !1;
-    (D = !0), (A[e.guildId] = null !== (t = A[e.guildId]) && void 0 !== t ? t : {});
-    let i = !1;
-    for (let t of ((D = !0), (A[e.guildId] = null !== (n = A[e.guildId]) && void 0 !== n ? n : {}), e.members)) null == A[e.guildId][t.userId] && ((i = !0), (A[e.guildId][t.userId] = t));
-    return i;
+    let { guildMembers: t, guilds: n } = e;
+    (x = !0), (C = I({}, t)), (R = {}), (w = {}), ee(n);
 }
 function $(e) {
-    var t;
-    let { guildId: n, user: i, nick: r, avatar: a, avatarDecoration: s, roles: o, premiumSince: l, isPending: u, joinedAt: c, communicationDisabledUntil: f, unusualDMActivityUntil: _, flags: p } = e,
-        h = A[n];
-    if (null == h) return !1;
-    let m = I.Z.getGuild(n);
-    if (null == m) return S.warn('Guild '.concat(n, ' not found during GUILD_MEMBER_UPDATE.')), !1;
-    (h[i.id] = H({
-        userId: i.id,
-        nick: r,
-        guildId: n,
-        avatar: a,
-        avatarDecoration: (0, d.FG)(s),
-        guildRoles: I.Z.getRoles(m.id),
-        roles: o,
-        premiumSince: l,
-        isPending: u,
-        joinedAt: c,
-        communicationDisabledUntil: f,
-        unusualDMActivityUntil: _,
-        fullProfileLoadedTimestamp: null === (t = h[i.id]) || void 0 === t ? void 0 : t.fullProfileLoadedTimestamp,
-        flags: p
-    })),
-        k(n, h[i.id]);
+    let { guilds: t } = e;
+    ee(t);
 }
 function ee(e) {
-    let { guildId: t, userId: n, roleId: i } = e,
-        r = A[t];
-    if (null == r) return !1;
-    let a = I.Z.getGuild(t);
-    if (null == a) return S.warn('Guild '.concat(t, ' not found during GUILD_MEMBER_UPDATE.')), !1;
-    let s = r[n];
-    if (null == s || s.roles.includes(i)) return !1;
-    s.roles = [...s.roles, i];
-    let o = j(I.Z.getRoles(a.id), s.roles);
-    return (
-        (r[n] = {
-            ...s,
-            ...o
-        }),
-        !0
-    );
+    for (let t of e)
+        if (null != t.member && (null == w[t.id] ? (w[t.id] = t.member) : (w[t.id] = N(I({}, t.member), { roles: t.member.roles })), null != C[t.id])) {
+            let e = C[t.id];
+            null != e[t.member.userId] && (e[t.member.userId] = N(I({}, e[t.member.userId]), { roles: t.member.roles }));
+        }
 }
 function et(e) {
-    let { guildId: t, userId: n, roleId: i } = e,
-        r = A[t];
-    if (null == r) return !1;
-    let a = I.Z.getGuild(t);
-    if (null == a) return S.warn('Guild '.concat(t, ' not found during GUILD_MEMBER_UPDATE.')), !1;
-    let s = r[n];
-    if (null == s || !s.roles.includes(i)) return !1;
-    s.roles = s.roles.filter((e) => e !== i);
-    let o = j(I.Z.getRoles(a.id), s.roles);
-    return (
-        (r[n] = {
-            ...s,
-            ...o
-        }),
-        !0
-    );
+    var t, n;
+    if (null == e.guildId || null == y.Z.getGuild(e.guildId)) return !1;
+    (x = !0), (C[e.guildId] = null !== (t = C[e.guildId]) && void 0 !== t ? t : {});
+    let r = !1;
+    for (let t of ((x = !0), (C[e.guildId] = null !== (n = C[e.guildId]) && void 0 !== n ? n : {}), e.members)) null == C[e.guildId][t.userId] && ((r = !0), (C[e.guildId][t.userId] = t));
+    return r;
 }
 function en(e) {
-    let { guildMember: t, guildId: n } = e,
-        i = A[n];
+    var t;
+    let { guildId: n, user: r, nick: i, avatar: o, avatarDecoration: a, roles: s, premiumSince: l, isPending: c, joinedAt: u, communicationDisabledUntil: f, unusualDMActivityUntil: p, flags: _ } = e,
+        h = C[n];
+    if (null == h) return !1;
+    let m = y.Z.getGuild(n);
+    if (null == m) return A.warn('Guild '.concat(n, ' not found during GUILD_MEMBER_UPDATE.')), !1;
+    (h[r.id] = K({
+        userId: r.id,
+        nick: i,
+        guildId: n,
+        avatar: o,
+        avatarDecoration: (0, d.FG)(a),
+        guildRoles: y.Z.getRoles(m.id),
+        roles: s,
+        premiumSince: l,
+        isPending: c,
+        joinedAt: u,
+        communicationDisabledUntil: f,
+        unusualDMActivityUntil: p,
+        fullProfileLoadedTimestamp: null === (t = h[r.id]) || void 0 === t ? void 0 : t.fullProfileLoadedTimestamp,
+        flags: _
+    })),
+        G(n, h[r.id]);
+}
+function er(e) {
+    let { guildId: t, userId: n, roleId: r } = e,
+        i = C[t];
     if (null == i) return !1;
-    let r = I.Z.getGuild(n);
-    if (null == r) return S.warn('Guild '.concat(n, ' not found during GUILD_MEMBER_UPDATE.')), !1;
-    (i[t.user.id] = H({
+    let o = y.Z.getGuild(t);
+    if (null == o) return A.warn('Guild '.concat(t, ' not found during GUILD_MEMBER_UPDATE.')), !1;
+    let a = i[n];
+    if (null == a || a.roles.includes(r)) return !1;
+    a.roles = [...a.roles, r];
+    let s = Y(y.Z.getRoles(o.id), a.roles);
+    return (i[n] = I({}, a, s)), !0;
+}
+function ei(e) {
+    let { guildId: t, userId: n, roleId: r } = e,
+        i = C[t];
+    if (null == i) return !1;
+    let o = y.Z.getGuild(t);
+    if (null == o) return A.warn('Guild '.concat(t, ' not found during GUILD_MEMBER_UPDATE.')), !1;
+    let a = i[n];
+    if (null == a || !a.roles.includes(r)) return !1;
+    a.roles = a.roles.filter((e) => e !== r);
+    let s = Y(y.Z.getRoles(o.id), a.roles);
+    return (i[n] = I({}, a, s)), !0;
+}
+function eo(e) {
+    let { guildMember: t, guildId: n } = e,
+        r = C[n];
+    if (null == r) return !1;
+    let i = y.Z.getGuild(n);
+    if (null == i) return A.warn('Guild '.concat(n, ' not found during GUILD_MEMBER_UPDATE.')), !1;
+    (r[t.user.id] = K({
         userId: t.user.id,
         nick: t.nick,
         guildId: n,
         avatar: t.avatar,
-        avatarDecoration: ec(t),
-        guildRoles: I.Z.getRoles(r.id),
+        avatarDecoration: ep(t),
+        guildRoles: y.Z.getRoles(i.id),
         roles: t.roles,
         premiumSince: t.premium_since,
         isPending: t.pending,
@@ -294,73 +305,73 @@ function en(e) {
         flags: t.flags,
         fullProfileLoadedTimestamp: Date.now()
     })),
-        k(n, i[t.user.id]);
-}
-function ei(e) {
-    let t = !1;
-    for (let n of e.chunks) t = eu(n.guildId, n.members) || t;
-    return t;
-}
-function er(e) {
-    return e.members.length > 0 && eu(e.guildId, e.members);
+        G(n, r[t.user.id]);
 }
 function ea(e) {
-    let { guildId: t, members: n } = e;
-    return eu(t, n.map((e) => e.member).filter(g.lm));
+    let t = !1;
+    for (let n of e.chunks) t = ef(n.guildId, n.members) || t;
+    return t;
 }
 function es(e) {
-    let { guildId: t, owners: n } = e;
-    return eu(t, n);
+    return e.members.length > 0 && ef(e.guildId, e.members);
 }
-function eo(e) {
+function el(e) {
+    let { guildId: t, members: n } = e;
+    return ef(t, n.map((e) => e.member).filter(g.lm));
+}
+function ec(e) {
+    let { guildId: t, owners: n } = e;
+    return ef(t, n);
+}
+function eu(e) {
     let { guildId: t, threads: n } = e;
-    return eu(
+    return ef(
         t,
         Object.values(n)
             .map((e) => e.owner)
             .filter(g.lm)
     );
 }
-function el(e) {
+function ed(e) {
     let { guildId: t, addedMembers: n } = e;
-    return null != n && eu(t, n.map((e) => e.member).filter(g.lm));
+    return null != n && ef(t, n.map((e) => e.member).filter(g.lm));
 }
-function eu(e, t) {
-    let n = A[e];
+function ef(e, t) {
+    let n = C[e];
     if (null == n) return !1;
-    let i = I.Z.getGuild(e);
-    return null == i
-        ? (S.warn('Guild '.concat(e, ' not found during batchUpdateGuildMembers.')), !1)
+    let r = y.Z.getGuild(e);
+    return null == r
+        ? (A.warn('Guild '.concat(e, ' not found during batchUpdateGuildMembers.')), !1)
         : (t.forEach((t) => {
-              var r;
-              let a = n[t.user.id];
-              (n[t.user.id] = H({
+              var i;
+              let o = n[t.user.id];
+              (n[t.user.id] = K({
                   userId: t.user.id,
                   nick: t.nick,
                   guildId: e,
                   avatar: t.avatar,
-                  avatarDecoration: ec(t),
-                  guildRoles: I.Z.getRoles(i.id),
+                  avatarDecoration: ep(t),
+                  guildRoles: y.Z.getRoles(r.id),
                   roles: t.roles,
                   premiumSince: t.premium_since,
                   isPending: t.pending,
                   joinedAt: t.joined_at,
                   communicationDisabledUntil: t.communication_disabled_until,
                   flags: t.flags,
-                  fullProfileLoadedTimestamp: null == a ? void 0 : a.fullProfileLoadedTimestamp,
-                  unusualDMActivityUntil: null !== (r = t.unusual_dm_activity_until) && void 0 !== r ? r : null == a ? void 0 : a.unusualDMActivityUntil
+                  fullProfileLoadedTimestamp: null == o ? void 0 : o.fullProfileLoadedTimestamp,
+                  unusualDMActivityUntil: null !== (i = t.unusual_dm_activity_until) && void 0 !== i ? i : null == o ? void 0 : o.unusualDMActivityUntil
               })),
-                  k(e, n[t.user.id]);
+                  G(e, n[t.user.id]);
           }),
-          x++,
+          M++,
           !0);
 }
-function ec(e) {
+function ep(e) {
     return (0, d.FG)(e.avatar_decoration_data);
 }
-function ed(e) {
+function e_(e) {
     let { guildId: t, members: n } = e;
-    return eu(
+    return ef(
         t,
         n.map((e) => {
             let { member: t } = e;
@@ -368,159 +379,155 @@ function ed(e) {
         })
     );
 }
-function ef(e) {
-    let { guildId: t, user: n } = e,
-        i = A[t];
-    if (null == i || null == i[n.id]) return !1;
-    delete i[n.id], U(t, n.id), x++;
-}
-function e_(e) {
-    let { guild: t } = e;
-    return eh(t);
-}
-function ep(e, t) {
-    return eh({
-        id: e,
-        members: t.filter(u.Z).map((e) => e.member)
-    });
-}
 function eh(e) {
-    let t = e.id;
-    t in A || (A[e.id] = {});
-    let n = I.Z.getGuild(t);
-    if (null == n) return !1;
-    let i = A[t];
-    for (let a of e.members) {
-        var r;
-        let s = a.user.id,
-            o = i[s],
-            l = H({
-                userId: s,
-                nick: a.nick,
-                guildId: e.id,
-                avatar: a.avatar,
-                avatarDecoration: ec(a),
-                guildRoles: I.Z.getRoles(n.id),
-                roles: a.roles,
-                premiumSince: a.premium_since,
-                isPending: a.pending,
-                joinedAt: a.joined_at,
-                communicationDisabledUntil: a.communication_disabled_until,
-                fullProfileLoadedTimestamp: null == o ? void 0 : o.fullProfileLoadedTimestamp,
-                flags: a.flags,
-                unusualDMActivityUntil: null !== (r = a.unusual_dm_activity_until) && void 0 !== r ? r : null == o ? void 0 : o.unusualDMActivityUntil
-            });
-        (i[s] = l), k(t, l);
-    }
-    return !0;
+    let { guildId: t, user: n } = e,
+        r = C[t];
+    if (null == r || null == r[n.id]) return !1;
+    delete r[n.id], B(t, n.id), M++;
 }
 function em(e) {
     let { guild: t } = e;
-    delete A[t.id], delete N[t.id], U(t.id);
+    return eE(t);
 }
-function eg(e) {
-    let t = A[e.guildId];
+function eg(e, t) {
+    return eE({
+        id: e,
+        members: t.filter(c.Z).map((e) => e.member)
+    });
+}
+function eE(e) {
+    let t = e.id;
+    t in C || (C[e.id] = {});
+    let n = y.Z.getGuild(t);
+    if (null == n) return !1;
+    let r = C[t];
+    for (let o of e.members) {
+        var i;
+        let a = o.user.id,
+            s = r[a],
+            l = K({
+                userId: a,
+                nick: o.nick,
+                guildId: e.id,
+                avatar: o.avatar,
+                avatarDecoration: ep(o),
+                guildRoles: y.Z.getRoles(n.id),
+                roles: o.roles,
+                premiumSince: o.premium_since,
+                isPending: o.pending,
+                joinedAt: o.joined_at,
+                communicationDisabledUntil: o.communication_disabled_until,
+                fullProfileLoadedTimestamp: null == s ? void 0 : s.fullProfileLoadedTimestamp,
+                flags: o.flags,
+                unusualDMActivityUntil: null !== (i = o.unusual_dm_activity_until) && void 0 !== i ? i : null == s ? void 0 : s.unusualDMActivityUntil
+            });
+        (r[a] = l), G(t, l);
+    }
+    return !0;
+}
+function ev(e) {
+    let { guild: t } = e;
+    delete C[t.id], delete R[t.id], B(t.id);
+}
+function eb(e) {
+    let t = C[e.guildId];
     if (null == t) return !1;
-    let n = I.Z.getGuild(e.guildId);
-    if (null == n) return S.warn('Guild '.concat(e.guildId, ' not found during ').concat(e.type, '.')), !1;
-    let i = v.default.getId();
-    for (let r of E.default.keys(t)) {
-        let a = t[r];
-        if ((null != a.roles && a.roles.length > 0) || null != a.colorString || null != a.hoistRoleId) {
-            let s = r === i && 'GUILD_ROLE_DELETE' === e.type ? a.roles.filter((t) => t !== e.roleId) : a.roles;
-            (t[r] = H({
-                userId: r,
-                nick: a.nick,
+    let n = y.Z.getGuild(e.guildId);
+    if (null == n) return A.warn('Guild '.concat(e.guildId, ' not found during ').concat(e.type, '.')), !1;
+    let r = v.default.getId();
+    for (let i of E.default.keys(t)) {
+        let o = t[i];
+        if ((null != o.roles && o.roles.length > 0) || null != o.colorString || null != o.hoistRoleId) {
+            let a = i === r && 'GUILD_ROLE_DELETE' === e.type ? o.roles.filter((t) => t !== e.roleId) : o.roles;
+            (t[i] = K({
+                userId: i,
+                nick: o.nick,
                 guildId: e.guildId,
-                avatar: a.avatar,
-                avatarDecoration: a.avatarDecoration,
-                guildRoles: I.Z.getRoles(n.id),
-                roles: s,
-                premiumSince: a.premiumSince,
-                isPending: a.isPending,
-                joinedAt: a.joinedAt,
-                flags: a.flags,
-                fullProfileLoadedTimestamp: null == a ? void 0 : a.fullProfileLoadedTimestamp
+                avatar: o.avatar,
+                avatarDecoration: o.avatarDecoration,
+                guildRoles: y.Z.getRoles(n.id),
+                roles: a,
+                premiumSince: o.premiumSince,
+                isPending: o.isPending,
+                joinedAt: o.joinedAt,
+                flags: o.flags,
+                fullProfileLoadedTimestamp: null == o ? void 0 : o.fullProfileLoadedTimestamp
             })),
-                k(e.guildId, t[r]);
+                G(e.guildId, t[i]);
         }
     }
 }
-function eE(e) {
-    var t, n, i;
-    let { guildId: r, roles: s, addedRoleIds: o, removedRoleIds: l, flags: u } = e,
-        c = v.default.getId(),
-        d = A[r],
-        f = null != d ? d[c] : null;
+function ey(e) {
+    var t, n, r;
+    let { guildId: i, roles: a, addedRoleIds: s, removedRoleIds: l, flags: c } = e,
+        u = v.default.getId(),
+        d = C[i],
+        f = null != d ? d[u] : null;
     if (null == f) return !1;
-    let _ = I.Z.getGuild(r);
-    if (null == _) return !1;
-    let p = null !== (t = w[r]) && void 0 !== t ? t : {};
-    (w[r] = {
-        added: a().difference(a().union(null !== (n = p.added) && void 0 !== n ? n : [], o), null != l ? l : []),
-        removed: a().difference(a().union(null !== (i = p.removed) && void 0 !== i ? i : [], l), null != o ? o : [])
+    let p = y.Z.getGuild(i);
+    if (null == p) return !1;
+    let _ = null !== (t = j[i]) && void 0 !== t ? t : {};
+    (j[i] = {
+        added: o().difference(o().union(null !== (n = _.added) && void 0 !== n ? n : [], s), null != l ? l : []),
+        removed: o().difference(o().union(null !== (r = _.removed) && void 0 !== r ? r : [], l), null != s ? s : [])
     }),
-        (d[c] = H({
-            userId: c,
-            guildId: r,
+        (d[u] = K({
+            userId: u,
+            guildId: i,
             nick: f.nick,
             avatar: f.avatar,
             avatarDecoration: f.avatarDecoration,
-            guildRoles: I.Z.getRoles(_.id),
-            roles: null != s ? s : f.roles,
+            guildRoles: y.Z.getRoles(p.id),
+            roles: null != a ? a : f.roles,
             premiumSince: f.premiumSince,
             isPending: f.isPending,
             joinedAt: f.joinedAt,
-            flags: null != u ? u : f.flags,
+            flags: null != c ? c : f.flags,
             fullProfileLoadedTimestamp: f.fullProfileLoadedTimestamp
         }));
 }
-function ev(e) {
+function eO(e) {
     let { guildId: t } = e;
     if (null == t) return !1;
-    delete w[t];
+    delete j[t];
 }
-function ey(e) {
+function eS(e) {
     let { guildId: t } = e,
-        n = A[t];
+        n = C[t];
     if (null == n) return !1;
-    let i = I.Z.getGuild(t);
-    if (null == i) return S.warn('Guild '.concat(t, ' not found during IMPERSONATE_UPDATE.')), !1;
-    let r = v.default.getId(),
-        a = n[r];
-    n[r] = H({
-        userId: r,
-        nick: a.nick,
+    let r = y.Z.getGuild(t);
+    if (null == r) return A.warn('Guild '.concat(t, ' not found during IMPERSONATE_UPDATE.')), !1;
+    let i = v.default.getId(),
+        o = n[i];
+    n[i] = K({
+        userId: i,
+        nick: o.nick,
         guildId: t,
-        avatar: a.avatar,
-        avatarDecoration: a.avatarDecoration,
-        guildRoles: I.Z.getRoles(i.id),
-        roles: a.roles,
-        premiumSince: a.premiumSince,
-        isPending: a.isPending,
-        joinedAt: a.joinedAt,
-        communicationDisabledUntil: a.communicationDisabledUntil,
-        fullProfileLoadedTimestamp: a.fullProfileLoadedTimestamp,
-        flags: a.flags
+        avatar: o.avatar,
+        avatarDecoration: o.avatarDecoration,
+        guildRoles: y.Z.getRoles(r.id),
+        roles: o.roles,
+        premiumSince: o.premiumSince,
+        isPending: o.isPending,
+        joinedAt: o.joinedAt,
+        communicationDisabledUntil: o.communicationDisabledUntil,
+        fullProfileLoadedTimestamp: o.fullProfileLoadedTimestamp,
+        flags: o.flags
     });
 }
 function eI(e) {
     var t;
-    let { message: n, guildId: i } = e;
+    let { message: n, guildId: r } = e;
     (null === (t = n.resolved) || void 0 === t ? void 0 : t.members) != null &&
-        null != i &&
-        eh({
-            id: i,
+        null != r &&
+        eE({
+            id: r,
             members: Object.entries(n.resolved.members)
                 .map((e) => {
-                    var t, i;
-                    let [r, a] = e,
-                        s = null === (i = n.resolved) || void 0 === i ? void 0 : null === (t = i.users) || void 0 === t ? void 0 : t[r];
-                    if (null != s)
-                        return {
-                            ...a,
-                            user: s
-                        };
+                    var t, r;
+                    let [i, o] = e,
+                        a = null === (r = n.resolved) || void 0 === r ? void 0 : null === (t = r.users) || void 0 === t ? void 0 : t[i];
+                    if (null != a) return N(I({}, o), { user: a });
                 })
                 .filter((e) => null != e)
         });
@@ -528,51 +535,47 @@ function eI(e) {
 function eT(e) {
     var t;
     if ((null === (t = e.resolved) || void 0 === t ? void 0 : t.members) == null) return;
-    let n = y.Z.getChannel(e.channel_id);
+    let n = b.Z.getChannel(e.channel_id);
     null == n ||
         n.isPrivate() ||
-        eh({
+        eE({
             id: n.guild_id,
             members: Object.entries(e.resolved.members)
                 .map((t) => {
-                    var n, i;
-                    let [r, a] = t,
-                        s = null === (i = e.resolved) || void 0 === i ? void 0 : null === (n = i.users) || void 0 === n ? void 0 : n[r];
-                    if (null != s)
-                        return {
-                            ...a,
-                            user: s
-                        };
+                    var n, r;
+                    let [i, o] = t,
+                        a = null === (r = e.resolved) || void 0 === r ? void 0 : null === (n = r.users) || void 0 === n ? void 0 : n[i];
+                    if (null != a) return N(I({}, o), { user: a });
                 })
                 .filter((e) => null != e)
         });
 }
-function eb(e) {
+function eN(e) {
     let { messages: t } = e;
     t.forEach((e) => eT(e));
 }
-function eS(e) {
-    let { messages: t } = e;
-    t.forEach((e) => eb({ messages: e }));
-}
 function eA(e) {
-    let { location: t, participants: n } = e,
-        i = (0, c.jS)(t);
-    return null != i && ep(i, n);
+    let { messages: t } = e;
+    t.forEach((e) => eN({ messages: e }));
 }
-class eN extends (i = o.ZP.Store) {
+function eC(e) {
+    let { location: t, participants: n } = e,
+        r = (0, u.jS)(t);
+    return null != r && eg(r, n);
+}
+class eR extends (r = s.ZP.Store) {
     initialize() {
-        this.waitFor(I.Z, v.default, h.Z);
+        this.waitFor(y.Z, v.default, h.Z);
     }
     getMutableAllGuildsAndMembers() {
-        return A;
+        return C;
     }
     memberOf(e) {
-        return a()(A)
+        return o()(C)
             .toPairs()
             .filter((t) => {
-                let [n, i] = t;
-                return null != i[e];
+                let [n, r] = t;
+                return null != r[e];
             })
             .map((e) => {
                 let [t] = e;
@@ -582,10 +585,10 @@ class eN extends (i = o.ZP.Store) {
     }
     getNicknameGuildsMapping(e) {
         let t = {};
-        for (let i in A) {
+        for (let r in C) {
             var n;
-            let r = null === (n = A[i][e]) || void 0 === n ? void 0 : n.nick;
-            null != r && (Object.prototype.hasOwnProperty.call(t, r) || (t[r] = []), t[r].push(i));
+            let i = null === (n = C[r][e]) || void 0 === n ? void 0 : n.nick;
+            null != i && (Object.prototype.hasOwnProperty.call(t, i) || (t[i] = []), t[i].push(r));
         }
         return t;
     }
@@ -594,42 +597,42 @@ class eN extends (i = o.ZP.Store) {
     }
     isMember(e, t) {
         if (null == e || null == t) return !1;
-        let n = A[e];
+        let n = C[e];
         return null != n && null != n[t];
     }
     isGuestOrLurker(e, t) {
         var n;
         if (null == e || null == t) return !1;
-        let i = A[e];
-        return null != i && (null === (n = i[t]) || void 0 === n ? void 0 : n.joinedAt) == null;
+        let r = C[e];
+        return null != r && (null === (n = r[t]) || void 0 === n ? void 0 : n.joinedAt) == null;
     }
     isCurrentUserGuest(e) {
         if (null == e) return !1;
         let t = v.default.getId(),
-            n = A[e];
+            n = C[e];
         if (null == n || null == n[t]) return !1;
-        let i = n[t].flags;
-        return null != i && (0, m.yE)(i, T.q.IS_GUEST);
+        let r = n[t].flags;
+        return null != r && (0, m.yE)(r, O.q.IS_GUEST);
     }
     getMemberIds(e) {
         if (null == e) return [];
-        let t = A[e];
+        let t = C[e];
         return null == t ? [] : E.default.keys(t);
     }
     getMembers(e) {
         if (null == e) return [];
-        let t = A[e];
+        let t = C[e];
         return null == t ? [] : Object.values(t);
     }
     getTrueMember(e, t) {
-        let n = A[e];
+        let n = C[e];
         return null != n ? n[t] : null;
     }
     getMember(e, t) {
         let n = this.getTrueMember(e, t);
         if (null != n && t === v.default.getId() && (h.Z.isViewingRoles(e) || h.Z.isFullServerPreview(e))) {
-            var i;
-            return null !== (i = C[e]) && void 0 !== i ? i : n;
+            var r;
+            return null !== (r = P[e]) && void 0 !== r ? r : n;
         }
         return n;
     }
@@ -637,16 +640,16 @@ class eN extends (i = o.ZP.Store) {
         return this.getMember(e, v.default.getId());
     }
     getSelfMemberJoinedAt(e) {
-        let t = N[e];
+        let t = R[e];
         if (null != t) return t;
         let n = this.getSelfMember(e);
         if (null == n || null == n.joinedAt) return null;
-        let i = new Date(n.joinedAt);
-        return (N[e] = i), i;
+        let r = new Date(n.joinedAt);
+        return (R[e] = r), r;
     }
     getCachedSelfMember(e) {
         var t;
-        return null !== (t = R[e]) && void 0 !== t ? t : null;
+        return null !== (t = w[e]) && void 0 !== t ? t : null;
     }
     getNick(e, t) {
         if (null == e || null == t) return null;
@@ -654,61 +657,61 @@ class eN extends (i = o.ZP.Store) {
         return null != n ? n.nick : null;
     }
     getCommunicationDisabledUserMap() {
-        return O;
+        return D;
     }
     getCommunicationDisabledVersion() {
         return L;
     }
     getPendingRoleUpdates(e) {
         var t;
-        return null !== (t = w[e]) && void 0 !== t ? t : M;
+        return null !== (t = j[e]) && void 0 !== t ? t : U;
     }
     getMemberRoleWithPendingUpdates(e, t) {
-        var n, i;
-        let r = null !== (i = null === (n = this.getMember(e, t)) || void 0 === n ? void 0 : n.roles) && void 0 !== i ? i : [],
-            s = w[e];
-        return null == s ? r : a().difference(a().union(r, s.added), s.removed);
+        var n, r;
+        let i = null !== (r = null === (n = this.getMember(e, t)) || void 0 === n ? void 0 : n.roles) && void 0 !== r ? r : [],
+            a = j[e];
+        return null == a ? i : o().difference(o().union(i, a.added), a.removed);
     }
     getMemberVersion() {
-        return x;
+        return M;
     }
 }
-b(eN, 'displayName', 'GuildMemberStore');
-let eC = new eN(l.Z, {
-    CONNECTION_OPEN: Y,
-    CONNECTION_OPEN_SUPPLEMENTAL: W,
-    OVERLAY_INITIALIZE: z,
-    CACHE_LOADED: q,
-    CACHE_LOADED_LAZY: Q,
-    GUILD_CREATE: e_,
-    GUILD_DELETE: em,
-    GUILD_MEMBER_ADD: $,
-    GUILD_MEMBER_UPDATE: $,
-    GUILD_MEMBER_UPDATE_LOCAL: eE,
-    GUILD_MEMBERS_CHUNK_BATCH: ei,
-    GUILD_MEMBER_REMOVE: ef,
-    THREAD_MEMBER_LIST_UPDATE: ea,
-    THREAD_MEMBERS_UPDATE: el,
-    LOAD_ARCHIVED_THREADS_SUCCESS: es,
-    LOAD_FORUM_POSTS: eo,
-    GUILD_ROLE_UPDATE: eg,
-    GUILD_ROLE_DELETE: eg,
-    GUILD_ROLE_MEMBER_REMOVE: et,
-    GUILD_ROLE_MEMBER_ADD: ee,
-    GUILD_MEMBER_PROFILE_UPDATE: en,
-    IMPERSONATE_UPDATE: ey,
-    IMPERSONATE_STOP: ey,
-    PASSIVE_UPDATE_V2: er,
-    CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES: ev,
-    LOCAL_MESSAGES_LOADED: J,
+S(eR, 'displayName', 'GuildMemberStore');
+let eP = new eR(l.Z, {
+    CONNECTION_OPEN: z,
+    CONNECTION_OPEN_SUPPLEMENTAL: q,
+    OVERLAY_INITIALIZE: X,
+    CACHE_LOADED: J,
+    CACHE_LOADED_LAZY: $,
+    GUILD_CREATE: em,
+    GUILD_DELETE: ev,
+    GUILD_MEMBER_ADD: en,
+    GUILD_MEMBER_UPDATE: en,
+    GUILD_MEMBER_UPDATE_LOCAL: ey,
+    GUILD_MEMBERS_CHUNK_BATCH: ea,
+    GUILD_MEMBER_REMOVE: eh,
+    THREAD_MEMBER_LIST_UPDATE: el,
+    THREAD_MEMBERS_UPDATE: ed,
+    LOAD_ARCHIVED_THREADS_SUCCESS: ec,
+    LOAD_FORUM_POSTS: eu,
+    GUILD_ROLE_UPDATE: eb,
+    GUILD_ROLE_DELETE: eb,
+    GUILD_ROLE_MEMBER_REMOVE: ei,
+    GUILD_ROLE_MEMBER_ADD: er,
+    GUILD_MEMBER_PROFILE_UPDATE: eo,
+    IMPERSONATE_UPDATE: eS,
+    IMPERSONATE_STOP: eS,
+    PASSIVE_UPDATE_V2: es,
+    CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES: eO,
+    LOCAL_MESSAGES_LOADED: et,
     MESSAGE_CREATE: eI,
     MESSAGE_UPDATE: eI,
-    LOAD_MESSAGES_SUCCESS: eb,
-    LOAD_MESSAGES_AROUND_SUCCESS: eb,
-    LOAD_PINNED_MESSAGES_SUCCESS: eb,
-    LOAD_RECENT_MENTIONS_SUCCESS: eb,
-    SEARCH_FINISH: eS,
-    MOD_VIEW_SEARCH_FINISH: eS,
-    MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: ed,
-    EMBEDDED_ACTIVITY_UPDATE_V2: eA
+    LOAD_MESSAGES_SUCCESS: eN,
+    LOAD_MESSAGES_AROUND_SUCCESS: eN,
+    LOAD_PINNED_MESSAGES_SUCCESS: eN,
+    LOAD_RECENT_MENTIONS_SUCCESS: eN,
+    SEARCH_FINISH: eA,
+    MOD_VIEW_SEARCH_FINISH: eA,
+    MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: e_,
+    EMBEDDED_ACTIVITY_UPDATE_V2: eC
 });

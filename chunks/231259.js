@@ -1,74 +1,116 @@
-e.d(n, { Z: () => E }), e(47120);
-var l = e(200651);
-e(192379);
-var i = e(442837),
-    r = e(481060),
-    u = e(357156),
-    d = e(924301),
-    a = e(482241),
-    s = e(894017),
-    o = e(79874),
-    c = e(388032);
-function E(t) {
-    let { guildEventId: n, recurrenceId: e, guild: E, channel: g } = t,
-        v = null != e,
-        { canManageGuildEvent: h } = (0, u.XJ)(null != g ? g : E),
-        [_, f] = (0, i.Wu)([d.ZP], () => [d.ZP.isActive(n), d.ZP.getGuildScheduledEvent(n)]),
-        Z = (0, s.Z)(e, null == f ? void 0 : f.id),
-        N = null != f && h(f),
-        T = (null == f ? void 0 : f.recurrence_rule) != null && !v,
-        m = (0, o.zI)(n, e);
-    if (!N || (_ && !T && !v) || (v && !v) || null == f || null == m) return null;
-    let { startTime: p } = m;
-    if (_ && v) {
-        var S;
-        if (null == p) return null;
-        let t = new Date(null !== (S = null == Z ? void 0 : Z.scheduled_start_time) && void 0 !== S ? S : p);
-        if (new Date() > t) return null;
+n.d(t, { Z: () => g }), n(47120);
+var r = n(200651);
+n(192379);
+var l = n(442837),
+    i = n(481060),
+    o = n(357156),
+    c = n(924301),
+    a = n(482241),
+    u = n(894017),
+    s = n(79874),
+    d = n(388032);
+function g(e) {
+    let { guildEventId: t, recurrenceId: n, guild: g, channel: f } = e,
+        b = null != n,
+        { canManageGuildEvent: p } = (0, o.XJ)(null != f ? f : g),
+        [v, h] = (0, l.Wu)([c.ZP], () => [c.ZP.isActive(t), c.ZP.getGuildScheduledEvent(t)]),
+        y = (0, u.Z)(n, null == h ? void 0 : h.id),
+        O = null != h && p(h),
+        N = (null == h ? void 0 : h.recurrence_rule) != null && !b,
+        j = (0, s.zI)(t, n);
+    if (!O || (v && !N && !b) || (b && !b) || null == h || null == j) return null;
+    let { startTime: E } = j;
+    if (v && b) {
+        var m;
+        if (null == E) return null;
+        let e = new Date(null !== (m = null == y ? void 0 : y.scheduled_start_time) && void 0 !== m ? m : E);
+        if (new Date() > e) return null;
     }
-    let I = (t) => {
-        (0, r.h7j)((i) =>
-            (0, l.jsxs)(r.ConfirmModal, {
-                ...i,
-                header: c.intl.string(c.t.R5bpio),
-                confirmText: T || t ? c.intl.string(c.t['8ZsNv7']) : c.intl.string(c.t.B9sJLS),
-                cancelText: c.intl.string(c.t.oEAioK),
-                onConfirm: () => (v && !t ? a.Z.deleteRecurrence(E.id, n, e, Z) : a.Z.deleteGuildEvent(n, E.id)),
-                children: [
-                    (0, l.jsx)(r.Text, {
-                        variant: 'text-md/normal',
-                        children: c.intl.string(c.t.v2GWNT)
+    let P = (e) => {
+        (0, i.h7j)((l) => {
+            var o, c;
+            return (0, r.jsxs)(
+                i.ConfirmModal,
+                ((o = (function (e) {
+                    for (var t = 1; t < arguments.length; t++) {
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            r = Object.keys(n);
+                        'function' == typeof Object.getOwnPropertySymbols &&
+                            (r = r.concat(
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                })
+                            )),
+                            r.forEach(function (t) {
+                                var r;
+                                (r = n[t]),
+                                    t in e
+                                        ? Object.defineProperty(e, t, {
+                                              value: r,
+                                              enumerable: !0,
+                                              configurable: !0,
+                                              writable: !0
+                                          })
+                                        : (e[t] = r);
+                            });
+                    }
+                    return e;
+                })({}, l)),
+                (c = c =
+                    {
+                        header: d.NW.string(d.t.R5bpio),
+                        confirmText: N || e ? d.NW.string(d.t['8ZsNv7']) : d.NW.string(d.t.B9sJLS),
+                        cancelText: d.NW.string(d.t.oEAioK),
+                        onConfirm: () => (b && !e ? a.Z.deleteRecurrence(g.id, t, n, y) : a.Z.deleteGuildEvent(t, g.id)),
+                        children: [
+                            (0, r.jsx)(i.Text, {
+                                variant: 'text-md/normal',
+                                children: d.NW.string(d.t.v2GWNT)
+                            }),
+                            (0, r.jsx)('br', {}),
+                            (N || e) &&
+                                (0, r.jsx)(i.Text, {
+                                    variant: 'text-md/normal',
+                                    children: d.NW.format(d.t.ZcpcyM, {})
+                                })
+                        ]
                     }),
-                    (0, l.jsx)('br', {}),
-                    (T || t) &&
-                        (0, l.jsx)(r.Text, {
-                            variant: 'text-md/normal',
-                            children: c.intl.format(c.t.ZcpcyM, {})
-                        })
-                ]
-            })
-        );
+                Object.getOwnPropertyDescriptors
+                    ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(c))
+                    : (function (e, t) {
+                          var n = Object.keys(e);
+                          if (Object.getOwnPropertySymbols) {
+                              var r = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, r);
+                          }
+                          return n;
+                      })(Object(c)).forEach(function (e) {
+                          Object.defineProperty(o, e, Object.getOwnPropertyDescriptor(c, e));
+                      }),
+                o)
+            );
+        });
     };
-    return (0, l.jsx)(r.sNh, {
-        id: c.intl.string(c.t.B9sJLS),
-        label: c.intl.string(c.t.B9sJLS),
-        action: v ? void 0 : () => I(),
+    return (0, r.jsx)(i.sNh, {
+        id: d.NW.string(d.t.B9sJLS),
+        label: d.NW.string(d.t.B9sJLS),
+        action: b ? void 0 : () => P(),
         color: 'danger',
         children:
-            v &&
-            (0, l.jsxs)(l.Fragment, {
+            b &&
+            (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, l.jsx)(r.sNh, {
-                        id: c.intl.string(c.t.tqCll5),
-                        label: c.intl.string(c.t.tqCll5),
-                        action: () => I(),
-                        disabled: null == Z ? void 0 : Z.is_canceled,
+                    (0, r.jsx)(i.sNh, {
+                        id: d.NW.string(d.t.tqCll5),
+                        label: d.NW.string(d.t.tqCll5),
+                        action: () => P(),
+                        disabled: null == y ? void 0 : y.is_canceled,
                         color: 'danger'
                     }),
-                    (0, l.jsx)(r.sNh, {
-                        id: c.intl.string(c.t.wr33ra),
-                        label: c.intl.string(c.t.wr33ra),
-                        action: () => I(!0),
+                    (0, r.jsx)(i.sNh, {
+                        id: d.NW.string(d.t.wr33ra),
+                        label: d.NW.string(d.t.wr33ra),
+                        action: () => P(!0),
                         color: 'danger'
                     })
                 ]

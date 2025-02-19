@@ -1,97 +1,137 @@
-t.d(n, {
-    I9: () => x,
-    ZP: () => h
+n.d(t, {
+    I9: () => f,
+    ZP: () => b
 });
-var i = t(200651),
-    l = t(192379),
-    s = t(692547),
-    a = t(481060),
-    r = t(496675),
-    o = t(484455),
-    c = t(981631),
-    d = t(388032),
-    u = t(42497);
-function x(e) {
+var r = n(200651),
+    i = n(192379),
+    o = n(692547),
+    c = n(481060),
+    s = n(496675),
+    a = n(484455),
+    l = n(981631),
+    u = n(388032),
+    d = n(327237);
+function f(e) {
     switch (e) {
-        case c.sFg.LOW:
-            return d.intl.string(d.t.SsCK8P);
-        case c.sFg.MEDIUM:
-            return d.intl.string(d.t.WwNoR0);
-        case c.sFg.HIGH:
-            return d.intl.string(d.t.I2jMUF);
-        case c.sFg.VERY_HIGH:
-            return d.intl.string(d.t.cJY8w8);
+        case l.sFg.LOW:
+            return u.NW.string(u.t.SsCK8P);
+        case l.sFg.MEDIUM:
+            return u.NW.string(u.t.WwNoR0);
+        case l.sFg.HIGH:
+            return u.NW.string(u.t.I2jMUF);
+        case l.sFg.VERY_HIGH:
+            return u.NW.string(u.t.cJY8w8);
         default:
             return '';
     }
 }
-let m = {
-        [c.sFg.NONE]: '',
-        [c.sFg.LOW]: s.Z.unsafe_rawColors.GREEN_360.css,
-        [c.sFg.MEDIUM]: s.Z.unsafe_rawColors.YELLOW_300.css,
-        [c.sFg.HIGH]: s.Z.unsafe_rawColors.ORANGE_345.css,
-        [c.sFg.VERY_HIGH]: s.Z.unsafe_rawColors.RED_400.css
+let p = {
+        [l.sFg.NONE]: '',
+        [l.sFg.LOW]: o.Z.unsafe_rawColors.GREEN_360.css,
+        [l.sFg.MEDIUM]: o.Z.unsafe_rawColors.YELLOW_300.css,
+        [l.sFg.HIGH]: o.Z.unsafe_rawColors.ORANGE_345.css,
+        [l.sFg.VERY_HIGH]: o.Z.unsafe_rawColors.RED_400.css
     },
-    h = function (e) {
-        let { guild: n } = e,
-            s = r.Z.can(c.Plq.MANAGE_GUILD, n),
-            h = n.verificationLevel,
-            f = h === c.sFg.VERY_HIGH ? a.AtH : a._XJ,
-            v = l.useMemo(() => x(h), [h]),
-            g = m[h],
-            j = (0, i.jsx)('div', {
-                className: u.verificationLevelTitle,
-                children: d.intl.format(d.t.OpV87e, {
+    b = function (e) {
+        let { guild: t } = e,
+            o = s.Z.can(l.Plq.MANAGE_GUILD, t),
+            b = t.verificationLevel,
+            j = b === l.sFg.VERY_HIGH ? c.AtH : c._XJ,
+            y = i.useMemo(() => f(b), [b]),
+            m = p[b],
+            g = (0, r.jsx)('div', {
+                className: d.verificationLevelTitle,
+                children: u.NW.format(u.t.OpV87e, {
                     verificationLevelHook: function () {
-                        return (0, i.jsx)(
-                            a.Text,
+                        return (0, r.jsx)(
+                            c.Text,
                             {
-                                className: u.verificationLevelHook,
-                                style: { color: g },
+                                className: d.verificationLevelHook,
+                                style: { color: m },
                                 variant: 'text-sm/semibold',
-                                children: v
+                                children: y
                             },
                             'hook'
                         );
                     }
                 })
             }),
-            C = h === c.sFg.VERY_HIGH ? d.intl.string(d.t.IlXyd3) : d.intl.string(d.t.JlzMPj);
-        return (0, i.jsx)(o.Z, {
-            title: j,
-            children: (0, i.jsxs)('div', {
-                className: u.verificationContainer,
+            O = b === l.sFg.VERY_HIGH ? u.NW.string(u.t.IlXyd3) : u.NW.string(u.t.JlzMPj);
+        return (0, r.jsx)(a.Z, {
+            title: g,
+            children: (0, r.jsxs)('div', {
+                className: d.verificationContainer,
                 children: [
-                    (0, i.jsx)(f, {
+                    (0, r.jsx)(j, {
                         size: 'custom',
                         color: 'currentColor',
                         width: 20,
                         height: 20,
-                        className: u.icon
+                        className: d.icon
                     }),
-                    (0, i.jsx)(a.Text, {
-                        className: u.guildVerificationText,
+                    (0, r.jsx)(c.Text, {
+                        className: d.guildVerificationText,
                         variant: 'text-sm/normal',
-                        children: C
+                        children: O
                     }),
-                    s &&
-                        (0, i.jsx)(a.P3F, {
-                            className: u.iconInteractiveContainer,
+                    o &&
+                        (0, r.jsx)(c.P3F, {
+                            className: d.iconInteractiveContainer,
                             onClick: () =>
-                                (0, a.ZDy)(async () => {
-                                    let { default: e } = await t.e('72458').then(t.bind(t, 694278));
-                                    return (t) =>
-                                        (0, i.jsx)(e, {
-                                            ...t,
-                                            guild: n
-                                        });
+                                (0, c.ZDy)(async () => {
+                                    let { default: e } = await n.e('72458').then(n.bind(n, 694278));
+                                    return (n) => {
+                                        var i, o;
+                                        return (0, r.jsx)(
+                                            e,
+                                            ((i = (function (e) {
+                                                for (var t = 1; t < arguments.length; t++) {
+                                                    var n = null != arguments[t] ? arguments[t] : {},
+                                                        r = Object.keys(n);
+                                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                                        (r = r.concat(
+                                                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                            })
+                                                        )),
+                                                        r.forEach(function (t) {
+                                                            var r;
+                                                            (r = n[t]),
+                                                                t in e
+                                                                    ? Object.defineProperty(e, t, {
+                                                                          value: r,
+                                                                          enumerable: !0,
+                                                                          configurable: !0,
+                                                                          writable: !0
+                                                                      })
+                                                                    : (e[t] = r);
+                                                        });
+                                                }
+                                                return e;
+                                            })({}, n)),
+                                            (o = o = { guild: t }),
+                                            Object.getOwnPropertyDescriptors
+                                                ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(o))
+                                                : (function (e, t) {
+                                                      var n = Object.keys(e);
+                                                      if (Object.getOwnPropertySymbols) {
+                                                          var r = Object.getOwnPropertySymbols(e);
+                                                          n.push.apply(n, r);
+                                                      }
+                                                      return n;
+                                                  })(Object(o)).forEach(function (e) {
+                                                      Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(o, e));
+                                                  }),
+                                            i)
+                                        );
+                                    };
                                 }),
-                            children: (0, i.jsx)(a.vdY, {
+                            children: (0, r.jsx)(c.vdY, {
                                 size: 'custom',
                                 color: 'currentColor',
                                 width: 20,
                                 height: 20,
-                                className: u.iconInteractive
+                                className: d.iconInteractive
                             })
                         })
                 ]

@@ -1,8 +1,8 @@
-n.d(t, { Z: () => v }), n(47120);
-var s = n(200651),
-    r = n(192379),
-    a = n(120356),
-    o = n.n(a),
+n.d(t, { Z: () => b }), n(47120);
+var r = n(200651),
+    o = n(192379),
+    s = n(120356),
+    a = n.n(s),
     i = n(617136),
     l = n(113434),
     c = n(497505),
@@ -10,70 +10,110 @@ var s = n(200651),
     u = n(602667),
     p = n(341907),
     m = n(439826),
-    x = n(43779),
-    h = n(981631),
-    g = n(672191);
-function f(e) {
-    let { quest: t, className: n, questContent: a, contentPosition: c, rowIndex: u, impressionRef: f } = e,
-        [v, _] = r.useState(!1),
-        [C, j] = r.useState([]),
-        b = (0, l.qb)(t),
-        T = r.useMemo(() => (0, d.q8)(t), [t]),
-        E = (0, i._F)(),
-        S = r.useCallback(() => {
-            _(!0),
-                E({
+    f = n(43779),
+    g = n(981631),
+    x = n(255522);
+function h(e) {
+    let { quest: t, className: n, questContent: s, contentPosition: c, rowIndex: u, impressionRef: h } = e,
+        [b, j] = o.useState(!1),
+        [v, y] = o.useState([]),
+        _ = (0, l.qb)(t),
+        C = o.useMemo(() => (0, d.q8)(t), [t]),
+        O = (0, i._F)(),
+        w = o.useCallback(() => {
+            j(!0),
+                O({
                     questId: t.id,
-                    event: h.rMx.QUEST_HOVER,
-                    properties: (0, i.mH)(a)
+                    event: g.rMx.QUEST_HOVER,
+                    properties: (0, i.mH)(s)
                 }),
-                T && (0, p.loadVideoQuestModal)();
-        }, [E, t.id, a, T]),
-        N = r.useCallback(() => {
-            _(!1),
-                E({
+                C && (0, p.loadVideoQuestModal)();
+        }, [O, t.id, s, C]),
+        S = o.useCallback(() => {
+            j(!1),
+                O({
                     questId: t.id,
-                    event: h.rMx.QUEST_HOVER_OFF,
-                    properties: (0, i.mH)(a)
+                    event: g.rMx.QUEST_HOVER_OFF,
+                    properties: (0, i.mH)(s)
                 });
-        }, [E, t.id, a]);
-    return (0, s.jsxs)('div', {
+        }, [O, t.id, s]);
+    return (0, r.jsxs)('div', {
         id: 'quest-tile-'.concat(t.id),
         ref: (e) => {
-            f.current = e;
+            h.current = e;
         },
-        className: o()(g.container, n),
-        onMouseEnter: S,
-        onMouseLeave: N,
+        className: a()(x.container, n),
+        onMouseEnter: w,
+        onMouseLeave: S,
         children: [
-            (0, s.jsx)(m.Z, {
+            (0, r.jsx)(m.Z, {
                 quest: t,
-                isHovering: v,
-                errorHints: C,
-                warningHints: b
+                isHovering: b,
+                errorHints: v,
+                warningHints: _
             }),
-            (0, s.jsx)(x.Z, {
+            (0, r.jsx)(f.Z, {
                 quest: t,
-                questContent: a,
-                isHovering: v,
+                questContent: s,
+                isHovering: b,
                 contentPosition: c,
                 rowIndex: u,
-                onReceiveErrorHints: j
+                onReceiveErrorHints: y
             })
         ]
     });
 }
-function v(e) {
-    return (0, s.jsx)(u.A, {
+function b(e) {
+    return (0, r.jsx)(u.A, {
         questOrQuests: e.quest,
         questContent: e.questContent,
         questContentPosition: e.contentPosition,
         questContentRowIndex: e.rowIndex,
         trackGuildAndChannelMetadata: e.questContent === c.jn.QUESTS_EMBED,
-        children: (t) =>
-            (0, s.jsx)(f, {
-                ...e,
-                impressionRef: t
-            })
+        children: (t) => {
+            var n, o;
+            return (0, r.jsx)(
+                h,
+                ((n = (function (e) {
+                    for (var t = 1; t < arguments.length; t++) {
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            r = Object.keys(n);
+                        'function' == typeof Object.getOwnPropertySymbols &&
+                            (r = r.concat(
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                })
+                            )),
+                            r.forEach(function (t) {
+                                var r;
+                                (r = n[t]),
+                                    t in e
+                                        ? Object.defineProperty(e, t, {
+                                              value: r,
+                                              enumerable: !0,
+                                              configurable: !0,
+                                              writable: !0
+                                          })
+                                        : (e[t] = r);
+                            });
+                    }
+                    return e;
+                })({}, e)),
+                (o = o = { impressionRef: t }),
+                Object.getOwnPropertyDescriptors
+                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(o))
+                    : (function (e, t) {
+                          var n = Object.keys(e);
+                          if (Object.getOwnPropertySymbols) {
+                              var r = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, r);
+                          }
+                          return n;
+                      })(Object(o)).forEach(function (e) {
+                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(o, e));
+                      }),
+                n)
+            );
+        }
     });
 }

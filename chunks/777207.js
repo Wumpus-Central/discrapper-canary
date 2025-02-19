@@ -1,32 +1,106 @@
-n.d(t, { x: () => _ });
-var i = n(200651),
-    r = n(192379),
-    a = n(803997),
-    s = n.n(a),
-    o = n(696689),
-    l = n.n(o),
-    u = n(692547),
-    c = n(536121),
-    d = n(25869);
-let f = Object.fromEntries(Object.keys(u.Z.colors).map((e) => [l()(e), e])),
-    _ = r.forwardRef(function (e, t) {
-        let n,
-            { variant: r, tag: a = 'div', selectable: o = !1, className: l, lineClamp: _, color: p, tabularNumbers: h = !1, scaleFontToUserSetting: m = !1, ...g } = e,
-            E = a,
-            v = '',
-            y = {};
+n.d(t, { x: () => v }), n(977457);
+var r = n(200651),
+    i = n(192379),
+    o = n(803997),
+    a = n.n(o),
+    s = n(696689),
+    l = n.n(s),
+    c = n(692547),
+    u = n(295919),
+    d = n(143175);
+function f(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function p(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                f(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function _(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function h(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : _(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function m(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = g(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function g(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+let E = Object.fromEntries(Object.keys(c.Z.colors).map((e) => [l()(e), e])),
+    v = i.forwardRef(function (e, t) {
+        let n;
+        var i,
+            { variant: o, tag: s = 'div', selectable: l = !1, className: f, lineClamp: _, color: g, tabularNumbers: v = !1, scaleFontToUserSetting: b = !1 } = e,
+            y = m(e, ['variant', 'tag', 'selectable', 'className', 'lineClamp', 'color', 'tabularNumbers', 'scaleFontToUserSetting']);
+        let O = s,
+            S = '',
+            I = {};
         if (
             (null != _ &&
                 (1 === _
-                    ? (v = c.lineClamp1)
-                    : ((v = c.lineClamp2Plus),
-                      (y = {
+                    ? (S = u.lineClamp1)
+                    : ((S = u.lineClamp2Plus),
+                      (I = {
                           lineClamp: _,
                           WebkitLineClamp: _
                       }))),
-            void 0 !== p)
+            void 0 !== g)
         )
-            switch (p) {
+            switch (g) {
                 case 'currentColor':
                     n = 'currentColor';
                     break;
@@ -37,29 +111,33 @@ let f = Object.fromEntries(Object.keys(u.Z.colors).map((e) => [l()(e), e])),
                     n = 'white';
                     break;
                 default:
-                    var I;
-                    n = null === (I = u.Z.colors[f[p]]) || void 0 === I ? void 0 : I.css;
+                    n = null === (i = c.Z.colors[E[g]]) || void 0 === i ? void 0 : i.css;
             }
-        let T = {
-            color: n,
-            ...y,
-            ...g.style
-        };
-        return (0, i.jsx)(E, {
-            ref: t,
-            className: s()(
+        let T = p({ color: n }, I, y.style);
+        return (0, r.jsx)(
+            O,
+            h(
+                p(
+                    {
+                        ref: t,
+                        className: a()(
+                            {
+                                [u.defaultColor]: void 0 === g,
+                                [u.selectable]: l,
+                                [u.tabularNumbers]: v,
+                                [d.fontScaling]: b
+                            },
+                            S,
+                            d[o],
+                            f
+                        )
+                    },
+                    y
+                ),
                 {
-                    [c.defaultColor]: void 0 === p,
-                    [c.selectable]: o,
-                    [c.tabularNumbers]: h,
-                    [d.fontScaling]: m
-                },
-                v,
-                d[r],
-                l
-            ),
-            ...g,
-            style: Object.values(T).filter(Boolean).length > 0 ? T : void 0,
-            'data-text-variant': r
-        });
+                    style: Object.values(T).filter(Boolean).length > 0 ? T : void 0,
+                    'data-text-variant': o
+                }
+            )
+        );
     });

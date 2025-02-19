@@ -1,72 +1,100 @@
-n.d(t, { Z: () => x });
-var i = n(200651),
-    l = n(192379),
+n.d(t, { Z: () => b });
+var r = n(200651),
+    i = n(192379),
     a = n(442837),
-    r = n(481060),
-    s = n(665149),
-    o = n(618158),
+    o = n(481060),
+    l = n(665149),
+    s = n(618158),
     c = n(819640),
     d = n(131951),
     u = n(924557),
-    m = n(435064),
-    _ = n(779618),
-    h = n(175470),
-    p = n(203259),
+    p = n(435064),
+    m = n(779618),
+    f = n(175470),
+    h = n(203259),
     g = n(356659),
-    f = n(388032);
-function x(e) {
-    let { canShowReminder: t = !1, className: x } = e,
-        C = (0, _.Z)(d.Z),
-        { showClipsHeaderEntrypoint: E } = u.NV.useExperiment({ location: 'ClipsButton' }, { autoTrackExposure: !1 }),
+    _ = n(388032);
+function b(e) {
+    let { canShowReminder: t = !1, className: b } = e,
+        v = (0, m.Z)(d.Z),
+        { showClipsHeaderEntrypoint: y } = u.NV.useExperiment({ location: 'ClipsButton' }, { autoTrackExposure: !1 }),
         {
-            hasClips: v,
-            hasNewClips: I,
-            lastClipsSession: N,
-            remindersEnabled: S,
-            hasAnyClipAnimations: T
-        } = (0, a.cj)([m.Z], () => ({
-            hasClips: m.Z.hasClips(),
-            hasNewClips: m.Z.getNewClipIds().length > 0,
-            lastClipsSession: m.Z.getLastClipsSession(),
-            remindersEnabled: m.Z.getSettings().remindersEnabled,
-            hasAnyClipAnimations: m.Z.hasAnyClipAnimations()
+            hasClips: x,
+            hasNewClips: O,
+            lastClipsSession: E,
+            remindersEnabled: j,
+            hasAnyClipAnimations: N
+        } = (0, a.cj)([p.Z], () => ({
+            hasClips: p.Z.hasClips(),
+            hasNewClips: p.Z.getNewClipIds().length > 0,
+            lastClipsSession: p.Z.getLastClipsSession(),
+            remindersEnabled: p.Z.getSettings().remindersEnabled,
+            hasAnyClipAnimations: p.Z.hasAnyClipAnimations()
         })),
-        b = null != N && N.newClipIds.length > 0,
-        A = (0, h.n)((e) => e.clipsButtonRef),
-        j = (0, h.n)((e) => e.setClipsButtonRef),
-        y = (0, a.e7)([c.Z], () => c.Z.hasLayers()),
-        { preventIdle: Z, allowIdle: R } = (0, o.Y)('animation');
-    function L() {
-        (0, r.ZDy)(
+        C = null != E && E.newClipIds.length > 0,
+        I = (0, f.n)((e) => e.clipsButtonRef),
+        S = (0, f.n)((e) => e.setClipsButtonRef),
+        P = (0, a.e7)([c.Z], () => c.Z.hasLayers()),
+        { preventIdle: T, allowIdle: A } = (0, s.Y)('animation');
+    function w() {
+        (0, o.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([n.e('2668'), n.e('60097')]).then(n.bind(n, 542055));
-                return (t) => (0, i.jsx)(e, { ...t });
+                let { default: e } = await Promise.all([n.e('2668'), n.e('30628')]).then(n.bind(n, 542055));
+                return (t) =>
+                    (0, r.jsx)(
+                        e,
+                        (function (e) {
+                            for (var t = 1; t < arguments.length; t++) {
+                                var n = null != arguments[t] ? arguments[t] : {},
+                                    r = Object.keys(n);
+                                'function' == typeof Object.getOwnPropertySymbols &&
+                                    (r = r.concat(
+                                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                        })
+                                    )),
+                                    r.forEach(function (t) {
+                                        var r;
+                                        (r = n[t]),
+                                            t in e
+                                                ? Object.defineProperty(e, t, {
+                                                      value: r,
+                                                      enumerable: !0,
+                                                      configurable: !0,
+                                                      writable: !0
+                                                  })
+                                                : (e[t] = r);
+                                    });
+                            }
+                            return e;
+                        })({}, t)
+                    );
             },
             { modalKey: g.Qr }
         );
     }
-    return (l.useEffect(() => (T ? Z() : R(), () => R()), [T, Z, R]), E && C && v)
-        ? (0, i.jsxs)(i.Fragment, {
+    return (i.useEffect(() => (N ? T() : A(), () => A()), [N, T, A]), y && v && x)
+        ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  null != A &&
+                  null != I &&
                       t &&
-                      S &&
-                      b &&
-                      !(0, r.$sL)() &&
-                      !y &&
-                      (0, i.jsx)(p.Z, {
-                          clipIconRef: A,
-                          lastClipsSession: N,
-                          onOpenClipsGallery: L
+                      j &&
+                      C &&
+                      !(0, o.$sL)() &&
+                      !P &&
+                      (0, r.jsx)(h.Z, {
+                          clipIconRef: I,
+                          lastClipsSession: E,
+                          onOpenClipsGallery: w
                       }),
-                  (0, i.jsx)('div', {
-                      ref: j,
-                      children: (0, i.jsx)(s.JO, {
-                          className: x,
-                          icon: r.AlX,
-                          showBadge: I,
-                          tooltip: f.intl.string(f.t.MXaLEB),
-                          onClick: L
+                  (0, r.jsx)('div', {
+                      ref: S,
+                      children: (0, r.jsx)(l.JO, {
+                          className: b,
+                          icon: o.AlX,
+                          showBadge: O,
+                          tooltip: _.NW.string(_.t.MXaLEB),
+                          onClick: w
                       })
                   })
               ]

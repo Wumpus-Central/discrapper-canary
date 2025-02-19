@@ -1,114 +1,157 @@
 n.d(t, {
-    $Q: () => g,
-    Ev: () => m,
-    Gy: () => b,
-    R5: () => T,
-    T: () => p,
-    Us: () => y,
-    Zl: () => I,
-    vu: () => v
+    $Q: () => y,
+    Ev: () => b,
+    Gy: () => A,
+    R5: () => N,
+    T: () => E,
+    Us: () => I,
+    Zl: () => T,
+    vu: () => S
 });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(952265),
-    a = n(359110),
-    s = n(314897),
-    o = n(88751),
+var i = n(952265),
+    o = n(359110),
+    a = n(314897),
+    s = n(88751),
     l = n(427679),
-    u = n(513449),
-    c = n(930180),
+    c = n(513449),
+    u = n(930180),
     d = n(981631),
     f = n(602091);
-function _(e) {
-    let t = s.default.getId(),
-        n = o.ZP.isModerator(t, e.id),
-        i = l.Z.isLive(e.id);
-    n && !i ? p(e) : n && i && h(e);
-}
-function p(e, t) {
-    (0, r.ZD)(
-        async () => {
-            let { default: t } = await Promise.all([n.e('68241'), n.e('40060')]).then(n.bind(n, 581355));
-            return (n) =>
-                (0, i.jsx)(t, {
-                    ...n,
-                    channel: e
-                });
-        },
-        { contextKey: t === d.IlC.POPOUT ? f.u1 : f.z1 }
+function p(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
     );
 }
-function h(e) {
-    (0, r.ZD)(async () => {
-        let { default: t } = await n.e('84686').then(n.bind(n, 665111));
-        return (n) =>
-            (0, i.jsx)(t, {
-                ...n,
-                channel: e
+function _(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                p(e, t, n[t]);
             });
-    });
+    }
+    return e;
+}
+function h(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
 }
 function m(e, t) {
-    (0, r.ZD)(
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : h(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function g(e) {
+    let t = a.default.getId(),
+        n = s.ZP.isModerator(t, e.id),
+        r = l.Z.isLive(e.id);
+    n && !r ? E(e) : n && r && v(e);
+}
+function E(e, t) {
+    (0, i.ZD)(
         async () => {
-            let { default: t } = await n.e('2634').then(n.bind(n, 548841));
-            return (n) =>
-                (0, i.jsx)(t, {
-                    ...n,
-                    channel: e
-                });
+            let { default: t } = await Promise.all([n.e('84335'), n.e('68241'), n.e('82758'), n.e('57604')]).then(n.bind(n, 581355));
+            return (n) => (0, r.jsx)(t, m(_({}, n), { channel: e }));
         },
         { contextKey: t === d.IlC.POPOUT ? f.u1 : f.z1 }
     );
 }
-function g(e) {}
-function E(e) {
-    (0, a.Kh)(e.id);
-}
-function v(e, t) {
-    (0, r.ZD)(async () => {
-        let { default: r } = await n.e('1906').then(n.bind(n, 854510));
-        return (n) =>
-            (0, i.jsx)(r, {
-                ...n,
-                channel: e,
-                onAccept: t
-            });
+function v(e) {
+    (0, i.ZD)(async () => {
+        let { default: t } = await n.e('84686').then(n.bind(n, 665111));
+        return (n) => (0, r.jsx)(t, m(_({}, n), { channel: e }));
     });
 }
-function y(e, t) {
-    (0, r.ZD)(
+function b(e, t) {
+    (0, i.ZD)(
         async () => {
-            let { default: t } = await n.e('85885').then(n.bind(n, 124779));
-            return (n) =>
-                (0, i.jsx)(t, {
-                    ...n,
-                    channel: e
-                });
+            let { default: t } = await n.e('2634').then(n.bind(n, 548841));
+            return (n) => (0, r.jsx)(t, m(_({}, n), { channel: e }));
         },
         { contextKey: t === d.IlC.POPOUT ? f.u1 : f.z1 }
     );
 }
-function I(e) {
-    let t = s.default.getId(),
-        n = (0, c.Z7)(e),
-        i = (0, c.wK)(e);
-    return !o.ZP.isModerator(t, e) && (n > 0 || i > 0);
+function y(e) {}
+function O(e) {
+    (0, o.Kh)(e.id);
 }
-function T(e, t) {
-    let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-    t !== e.id && (0, u.Ku)(!0), E(e), t !== e.id && n && _(e);
-}
-function b(e, t) {
-    return (
-        (0, r.ZD)(async () => {
-            let { default: r } = await n.e('65045').then(n.bind(n, 143782));
-            return (n) =>
-                (0, i.jsx)(r, {
+function S(e, t) {
+    (0, i.ZD)(async () => {
+        let { default: i } = await n.e('1906').then(n.bind(n, 854510));
+        return (n) =>
+            (0, r.jsx)(
+                i,
+                m(_({}, n), {
                     channel: e,
-                    onConfirm: t,
-                    ...n
-                });
+                    onAccept: t
+                })
+            );
+    });
+}
+function I(e, t) {
+    (0, i.ZD)(
+        async () => {
+            let { default: t } = await n.e('85885').then(n.bind(n, 124779));
+            return (n) => (0, r.jsx)(t, m(_({}, n), { channel: e }));
+        },
+        { contextKey: t === d.IlC.POPOUT ? f.u1 : f.z1 }
+    );
+}
+function T(e) {
+    let t = a.default.getId(),
+        n = (0, u.Z7)(e),
+        r = (0, u.wK)(e);
+    return !s.ZP.isModerator(t, e) && (n > 0 || r > 0);
+}
+function N(e, t) {
+    let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
+    t !== e.id && (0, c.Ku)(!0), O(e), t !== e.id && n && g(e);
+}
+function A(e, t) {
+    return (
+        (0, i.ZD)(async () => {
+            let { default: i } = await n.e('65045').then(n.bind(n, 143782));
+            return (n) =>
+                (0, r.jsx)(
+                    i,
+                    _(
+                        {
+                            channel: e,
+                            onConfirm: t
+                        },
+                        n
+                    )
+                );
         }),
         !0
     );

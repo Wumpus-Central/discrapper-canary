@@ -1,6 +1,6 @@
 n.d(t, {
-    G: () => o,
-    N: () => a
+    G: () => s,
+    N: () => o
 }),
     n(518263),
     n(970173),
@@ -11,22 +11,24 @@ n.d(t, {
     n(480839),
     n(744285),
     n(492257),
-    n(873817);
-var i = n(998502);
-let r = null;
-function a() {
-    return null == r && (r = s()), r;
+    n(873817),
+    n(610885),
+    n(126298);
+var r = n(998502);
+let i = null;
+function o() {
+    return null == i && (i = a()), i;
 }
-function s() {
+function a() {
     if (null == window.DiscordNative || void 0 === window.Uint8Array || void 0 === window.TextDecoder) return !1;
     try {
-        return i.ZP.requireModule('discord_zstd'), !0;
+        return r.ZP.requireModule('discord_zstd'), !0;
     } catch (e) {
-        if (e.message.includes('Cannot find')) return i.ZP.ensureModule('discord_zstd').catch((e) => {}), !1;
+        if (e.message.includes('Cannot find')) return r.ZP.ensureModule('discord_zstd').catch((e) => {}), !1;
         throw e;
     }
 }
-function o() {
-    let { createContext: e } = i.ZP.requireModule('discord_zstd');
+function s() {
+    let { createContext: e } = r.ZP.requireModule('discord_zstd');
     return e();
 }

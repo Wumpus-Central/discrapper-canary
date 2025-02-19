@@ -1,144 +1,168 @@
-a.d(t, { default: () => j }), a(47120), a(315314), a(309749), a(610138), a(216116), a(78328), a(815648);
-var n = a(200651),
-    l = a(192379),
-    i = a(990547),
-    r = a(481060),
-    o = a(240872),
-    s = a(579806),
-    u = a(100527),
-    d = a(906732),
-    c = a(39604),
-    m = a(212039),
-    p = a(259612),
-    v = a(572720),
-    f = a(362693),
-    h = a(674908),
-    x = a(20437),
-    g = a(388032),
-    _ = a(969318);
+n.d(t, { default: () => j }), n(47120), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648);
+var r = n(200651),
+    a = n(192379),
+    l = n(990547),
+    i = n(481060),
+    o = n(240872),
+    s = n(579806),
+    u = n(100527),
+    c = n(906732),
+    d = n(39604),
+    m = n(212039),
+    p = n(259612),
+    f = n(572720),
+    v = n(362693),
+    h = n(674908),
+    g = n(20437),
+    x = n(388032),
+    b = n(659893);
 function j(e) {
-    var t, a, j, C, b, w, y, k;
-    let { clip: N, channelId: S, transitionState: R, onClose: E } = e,
-        [L, T] = l.useState(!0),
-        [F, P] = l.useState(null),
-        [I, A] = l.useState(null),
-        { analyticsLocations: Z } = (0, d.ZP)(u.Z.CLIPS_EDITOR);
-    l.useEffect(() => {
+    var t, n, j, y, _, w, C, N;
+    let { clip: k, channelId: O, transitionState: P, onClose: S } = e,
+        [E, R] = a.useState(!0),
+        [L, T] = a.useState(null),
+        [F, D] = a.useState(null),
+        { analyticsLocations: I } = (0, c.ZP)(u.Z.CLIPS_EDITOR);
+    a.useEffect(() => {
         (async function () {
             let e;
             try {
-                e = await s.Z.clips.loadClip(N.filepath);
-            } catch {
-                E(),
+                e = await s.Z.clips.loadClip(k.filepath);
+            } catch (e) {
+                S(),
                     o.Z.show({
-                        title: g.intl.string(g.t.yjoSOD),
-                        body: g.intl.string(g.t.JmYczc)
+                        title: x.NW.string(x.t.yjoSOD),
+                        body: x.NW.string(x.t.JmYczc)
                     });
                 return;
             }
             let t = await (0, m.w)(e.data.buffer),
-                a = URL.createObjectURL(new Blob([t], { type: 'audio/mp4' })),
-                n = URL.createObjectURL(new Blob([e.data], { type: 'video/mp4' }));
-            A(a), P(n);
+                n = URL.createObjectURL(new Blob([t], { type: 'audio/mp4' })),
+                r = URL.createObjectURL(new Blob([e.data], { type: 'video/mp4' }));
+            D(n), T(r);
         })();
-    }, [N.filepath, E]),
-        l.useEffect(
+    }, [k.filepath, S]),
+        a.useEffect(
+            () => () => {
+                null != L && URL.revokeObjectURL(L);
+            },
+            [L]
+        ),
+        a.useEffect(
             () => () => {
                 null != F && URL.revokeObjectURL(F);
             },
             [F]
-        ),
-        l.useEffect(
-            () => () => {
-                null != I && URL.revokeObjectURL(I);
-            },
-            [I]
         );
-    let [D, B] = l.useState(null === (b = null === (t = N.editMetadata) || void 0 === t ? void 0 : t.voiceAudio) || void 0 === b || b),
-        [M, z] = l.useState(null === (w = null === (a = N.editMetadata) || void 0 === a ? void 0 : a.applicationAudio) || void 0 === w || w),
-        [H, O] = l.useState({
-            start: null !== (y = null === (j = N.editMetadata) || void 0 === j ? void 0 : j.start) && void 0 !== y ? y : 0,
-            end: null !== (k = null === (C = N.editMetadata) || void 0 === C ? void 0 : C.end) && void 0 !== k ? k : 0
+    let [A, Z] = a.useState(null === (_ = null === (t = k.editMetadata) || void 0 === t ? void 0 : t.voiceAudio) || void 0 === _ || _),
+        [B, M] = a.useState(null === (w = null === (n = k.editMetadata) || void 0 === n ? void 0 : n.applicationAudio) || void 0 === w || w),
+        [W, z] = a.useState({
+            start: null !== (C = null === (j = k.editMetadata) || void 0 === j ? void 0 : j.start) && void 0 !== C ? C : 0,
+            end: null !== (N = null === (y = k.editMetadata) || void 0 === y ? void 0 : y.end) && void 0 !== N ? N : 0
         }),
-        [W, U] = l.useState(N.name),
-        V = l.useRef({
-            name: W,
+        [H, U] = a.useState(k.name),
+        V = a.useRef({
+            name: H,
             editMetadata: {
-                start: H.start,
-                end: H.end,
-                voiceAudio: D,
-                applicationAudio: M
+                start: W.start,
+                end: W.end,
+                voiceAudio: A,
+                applicationAudio: B
             }
         });
     V.current = {
-        name: W,
+        name: H,
         editMetadata: {
-            start: H.start,
-            end: H.end,
-            voiceAudio: D,
-            applicationAudio: M
+            start: W.start,
+            end: W.end,
+            voiceAudio: A,
+            applicationAudio: B
         }
     };
-    let X = (0, v.l)(N);
-    l.useEffect(() => {
+    let X = (0, f.l)(k);
+    a.useEffect(() => {
         async function e() {
             let e = {};
             null != X && (e = { thumbnail: await (0, p.R)(X, V.current.editMetadata.start) }),
-                (0, c.Tm)(N.id, {
-                    ...V.current,
-                    ...e
-                });
+                (0, d.Tm)(
+                    k.id,
+                    (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var n = null != arguments[t] ? arguments[t] : {},
+                                r = Object.keys(n);
+                            'function' == typeof Object.getOwnPropertySymbols &&
+                                (r = r.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    })
+                                )),
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = n[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: r,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0
+                                              })
+                                            : (e[t] = r);
+                                });
+                        }
+                        return e;
+                    })({}, V.current, e)
+                );
         }
         return () => {
             e();
         };
-    }, [N.id, X]);
-    let G = l.useRef(null),
-        K = l.useMemo(
+    }, [k.id, X]);
+    let G = a.useRef(null),
+        K = a.useMemo(
             () => ({
                 videoPlayerRef: G,
-                applicationAudioEnabled: M,
-                setApplicationAudioEnabled: z,
-                voiceAudioEnabled: D,
-                setVoiceAudioEnabled: B,
-                cropData: H,
-                setCropData: O
+                applicationAudioEnabled: B,
+                setApplicationAudioEnabled: M,
+                voiceAudioEnabled: A,
+                setVoiceAudioEnabled: Z,
+                cropData: W,
+                setCropData: z
             }),
-            [M, D, H]
+            [B, A, W]
         );
-    return (0, n.jsx)(r.Y0X, {
-        impression: { impressionName: i.ImpressionNames.CLIP_EDITOR_VIEWED },
-        size: r.CgR.DYNAMIC,
-        className: _.modalRoot,
-        transitionState: R,
-        children: (0, n.jsx)(d.Gt, {
-            value: Z,
-            children: (0, n.jsx)(r.hzk, {
-                className: _.modalContent,
-                children: (0, n.jsx)(x.Q.Provider, {
+    return (0, r.jsx)(i.Y0X, {
+        impression: { impressionName: l.ImpressionNames.CLIP_EDITOR_VIEWED },
+        size: i.CgR.DYNAMIC,
+        className: b.modalRoot,
+        transitionState: P,
+        children: (0, r.jsx)(c.Gt, {
+            value: I,
+            children: (0, r.jsx)(i.hzk, {
+                className: b.modalContent,
+                children: (0, r.jsx)(g.Q.Provider, {
                     value: K,
                     children:
-                        null == F || null == I
-                            ? (0, n.jsx)('div', {
-                                  className: _.spinnerContainer,
-                                  children: (0, n.jsx)(r.$jN, {})
+                        null == L || null == F
+                            ? (0, r.jsx)('div', {
+                                  className: b.spinnerContainer,
+                                  children: (0, r.jsx)(i.$jN, {})
                               })
-                            : (0, n.jsxs)(n.Fragment, {
+                            : (0, r.jsxs)(r.Fragment, {
                                   children: [
-                                      (0, n.jsx)(f.Z, {
-                                          videoURL: F,
-                                          isLoading: L,
-                                          onDoneLoading: () => T(!1),
-                                          audioURL: I,
-                                          transitionState: R
+                                      (0, r.jsx)(v.Z, {
+                                          videoURL: L,
+                                          isLoading: E,
+                                          onDoneLoading: () => R(!1),
+                                          audioURL: F,
+                                          transitionState: P
                                       }),
-                                      !L &&
-                                          (0, n.jsx)(h.Z, {
-                                              channelId: S,
+                                      !E &&
+                                          (0, r.jsx)(h.Z, {
+                                              channelId: O,
                                               onSetClipName: U,
-                                              clipName: W,
-                                              clip: N,
-                                              onClose: E
+                                              clipName: H,
+                                              clip: k,
+                                              onClose: S
                                           })
                                   ]
                               })

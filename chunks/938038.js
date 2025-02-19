@@ -1,7 +1,7 @@
 n.d(t, { c: () => s });
-var i = n(433517),
-    r = n(593472);
-function a(e, t, n) {
+var r = n(433517),
+    i = n(593472);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,16 +14,32 @@ function a(e, t, n) {
         e
     );
 }
+function a(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                o(e, t, n[t]);
+            });
+    }
+    return e;
+}
 class s {
     save() {
         let e = { games: this.games };
-        i.K.set(s.storageKey, e);
+        r.K.set(s.storageKey, e);
     }
     static load() {
         return null == s._loaded && (s._loaded = s.loadInternal()), s._loaded;
     }
     static loadInternal() {
-        let e = i.K.get(s.storageKey);
+        let e = r.K.get(s.storageKey);
         if (null != e) {
             var t;
             return new s(null !== (t = e.games) && void 0 !== t ? t : {});
@@ -38,17 +54,19 @@ class s {
     static updateGameSettings(e, t) {
         if (null == e) return;
         let n = s.load(),
-            i = n.games[e];
-        if (null == i) {
-            (n.games[e] = {
-                screen: r.Jx.UNKNOWN,
-                date: Date.now(),
-                ...t
-            }),
+            r = n.games[e];
+        if (null == r) {
+            (n.games[e] = a(
+                {
+                    screen: i.Jx.UNKNOWN,
+                    date: Date.now()
+                },
+                t
+            )),
                 n.save();
             return;
         }
-        'boolean' == typeof t.disabled && (i.disabled = t.disabled), 'number' == typeof t.screen && (i.screen = t.screen), (i.date = Date.now()), n.save();
+        'boolean' == typeof t.disabled && (r.disabled = t.disabled), 'number' == typeof t.screen && (r.screen = t.screen), (r.date = Date.now()), n.save();
     }
     static isPromptingForGameDisable(e) {
         var t, n;
@@ -82,7 +100,7 @@ class s {
         return !!window.__GAME_DISPLAY_MODE_DEBUG__;
     }
     constructor(e) {
-        a(this, 'games', void 0), (this.games = e);
+        o(this, 'games', void 0), (this.games = e);
     }
 }
-a(s, '_loaded', null), a(s, 'storageKey', 'GameDisplayModeStorage'), setTimeout(() => s.clearOldGameSettings(), 60000);
+o(s, '_loaded', null), o(s, 'storageKey', 'GameDisplayModeStorage'), setTimeout(() => s.clearOldGameSettings(), 60000);

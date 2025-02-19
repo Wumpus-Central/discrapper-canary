@@ -1,99 +1,167 @@
-n.d(t, { Z: () => p }), n(411104);
-var i = n(544891),
-    r = n(433517),
-    a = n(570140),
-    s = n(663389),
-    o = n(626135),
+n.d(t, { Z: () => E }), n(411104);
+var r = n(544891),
+    i = n(433517),
+    o = n(570140),
+    a = n(663389),
+    s = n(626135),
     l = n(768581),
-    u = n(546796),
-    c = n(37234),
+    c = n(546796),
+    u = n(37234),
     d = n(981631),
     f = n(792101),
-    _ = n(388032);
-let p = {
+    p = n(388032);
+function _(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function h(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                _(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function m(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function g(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : m(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let E = {
     open() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
             t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : { openWithoutBackstack: !1 };
-        a.Z.dispatch({
-            type: 'USER_SETTINGS_MODAL_OPEN',
-            section: e,
-            subsection: t,
-            ...n
-        }),
-            (0, c.jN)(d.S9g.USER_SETTINGS);
+        o.Z.dispatch(
+            h(
+                {
+                    type: 'USER_SETTINGS_MODAL_OPEN',
+                    section: e,
+                    subsection: t
+                },
+                n
+            )
+        ),
+            (0, u.jN)(d.S9g.USER_SETTINGS);
     },
     init: function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
             n = arguments.length > 2 ? arguments[2] : void 0;
-        a.Z.dispatch({
-            type: 'USER_SETTINGS_MODAL_INIT',
-            section: e,
-            subsection: t,
-            ...n
-        });
+        o.Z.dispatch(
+            h(
+                {
+                    type: 'USER_SETTINGS_MODAL_INIT',
+                    section: e,
+                    subsection: t
+                },
+                n
+            )
+        );
     },
     close() {
-        let e = s.Z.onClose;
-        a.Z.dispatch({ type: 'USER_SETTINGS_MODAL_CLOSE' }), null != e && e();
+        let e = a.Z.onClose;
+        o.Z.dispatch({ type: 'USER_SETTINGS_MODAL_CLOSE' }), null != e && e();
     },
     setSection(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        a.Z.dispatch({
-            type: 'USER_SETTINGS_MODAL_SET_SECTION',
-            section: e,
-            subsection: t,
-            ...n
-        });
+        o.Z.dispatch(
+            h(
+                {
+                    type: 'USER_SETTINGS_MODAL_SET_SECTION',
+                    section: e,
+                    subsection: t
+                },
+                n
+            )
+        );
     },
     clearSubsection(e) {
-        a.Z.dispatch({
+        o.Z.dispatch({
             type: 'USER_SETTINGS_MODAL_CLEAR_SUBSECTION',
             forSection: e
         });
     },
     clearScrollPosition(e) {
-        a.Z.dispatch({
+        o.Z.dispatch({
             type: 'USER_SETTINGS_MODAL_CLEAR_SCROLL_POSITION',
             forSection: e
         });
     },
     updateAccount(e) {
-        a.Z.dispatch({
+        o.Z.dispatch({
             type: 'USER_SETTINGS_MODAL_UPDATE_ACCOUNT',
             settings: e
         });
     },
     submitComplete() {
-        a.Z.dispatch({ type: 'USER_SETTINGS_MODAL_SUBMIT_COMPLETE' });
+        o.Z.dispatch({ type: 'USER_SETTINGS_MODAL_SUBMIT_COMPLETE' });
     },
     reset() {
-        a.Z.dispatch({ type: 'USER_SETTINGS_MODAL_RESET' });
+        o.Z.dispatch({ type: 'USER_SETTINGS_MODAL_RESET' });
     },
     saveAccountChanges(e, t) {
-        a.Z.dispatch({ type: 'USER_SETTINGS_MODAL_SUBMIT' });
-        let { username: n, email: s, emailToken: c, password: p, avatar: h, newPassword: m, discriminator: g } = e,
-            { close: E } = t;
-        return (0, u.Z)(
+        o.Z.dispatch({ type: 'USER_SETTINGS_MODAL_SUBMIT' });
+        let { username: n, email: a, emailToken: u, password: _, avatar: m, newPassword: E, discriminator: v } = e,
+            { close: b } = t;
+        return (0, c.Z)(
             (e) => {
-                let t = {
-                        username: n,
-                        email: s,
-                        email_token: c,
-                        password: p,
-                        avatar: h,
-                        new_password: m,
-                        ...e,
-                        discriminator: null != g && '' !== g ? g : void 0
-                    },
-                    a = r.K.get(d.JkL),
-                    o = (0, f.xJ)();
-                null != o && null != a && ((t.push_provider = o), (t.push_token = a));
-                let l = r.K.get(d.scU);
+                let t = g(
+                        h(
+                            {
+                                username: n,
+                                email: a,
+                                email_token: u,
+                                password: _,
+                                avatar: m,
+                                new_password: E
+                            },
+                            e
+                        ),
+                        { discriminator: null != v && '' !== v ? v : void 0 }
+                    ),
+                    o = i.K.get(d.JkL),
+                    s = (0, f.xJ)();
+                null != s && null != o && ((t.push_provider = s), (t.push_token = o));
+                let l = i.K.get(d.scU);
                 return (
                     null != f.mv && null != l && ((t.push_voip_provider = f.mv), (t.push_voip_token = l)),
-                    i.tn.patch({
+                    r.tn.patch({
                         url: d.ANM.ME,
                         oldFormErrors: !0,
                         body: t,
@@ -103,10 +171,10 @@ let p = {
             },
             {
                 checkEnabled: !1,
-                modalProps: { title: _.intl.string(_.t.clQc1d) },
+                modalProps: { title: p.NW.string(p.t.clQc1d) },
                 hooks: {
                     onEarlyClose: () =>
-                        a.Z.dispatch({
+                        o.Z.dispatch({
                             type: 'USER_SETTINGS_MODAL_SUBMIT_FAILURE',
                             errors: {}
                         })
@@ -117,35 +185,35 @@ let p = {
                 let t = e.body,
                     n = t.token;
                 return (
-                    o.default.track(d.rMx.USER_AVATAR_UPDATED, { animated: (0, l.xR)(t.avatar) }),
+                    s.default.track(d.rMx.USER_AVATAR_UPDATED, { animated: (0, l.xR)(t.avatar) }),
                     delete t.token,
-                    a.Z.dispatch({
+                    o.Z.dispatch({
                         type: 'UPDATE_TOKEN',
                         token: n,
                         userId: t.id
                     }),
-                    a.Z.dispatch({
+                    o.Z.dispatch({
                         type: 'CURRENT_USER_UPDATE',
                         user: t
                     }),
-                    null != m &&
-                        a.Z.dispatch({
+                    null != E &&
+                        o.Z.dispatch({
                             type: 'USER_PASSWORD_UPDATE',
                             user: t,
-                            newPassword: m
+                            newPassword: E
                         }),
-                    null != p &&
-                        null != m &&
-                        a.Z.dispatch({
+                    null != _ &&
+                        null != E &&
+                        o.Z.dispatch({
                             type: 'PASSWORD_UPDATED',
                             userId: t.id
                         }),
-                    E ? this.close() : this.submitComplete(),
+                    b ? this.close() : this.submitComplete(),
                     e
                 );
             },
             (e) => (
-                a.Z.dispatch({
+                o.Z.dispatch({
                     type: 'USER_SETTINGS_MODAL_SUBMIT_FAILURE',
                     errors: e.body
                 }),

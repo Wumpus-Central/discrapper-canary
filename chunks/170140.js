@@ -1,83 +1,119 @@
-n.d(t, { J: () => x });
-var i = n(192379),
-    l = n(399606),
+n.d(t, { J: () => b });
+var r = n(192379),
+    i = n(399606),
     a = n(430198),
-    r = n(754688),
-    s = n(314897),
-    o = n(592125),
+    o = n(754688),
+    l = n(314897),
+    s = n(592125),
     c = n(271383),
     d = n(430824),
     u = n(914010),
-    m = n(594174),
-    _ = n(158222),
-    h = n(312146),
-    p = n(487554),
+    p = n(594174),
+    m = n(158222),
+    f = n(312146),
+    h = n(487554),
     g = n(874748),
-    f = n(981631);
-function x(e, t) {
-    let n = (0, h.p$)(),
-        x = (0, g.LR)(e),
-        C = (0, l.e7)(
-            [c.ZP, s.default],
+    _ = n(981631);
+function b(e, t) {
+    let n = (0, f.p$)(),
+        b = (0, g.LR)(e),
+        v = (0, i.e7)(
+            [c.ZP, l.default],
             () => {
-                let e = s.default.getId();
-                return c.ZP.isMember(null == x ? void 0 : x.guildId, e);
+                let e = l.default.getId();
+                return c.ZP.isMember(null == b ? void 0 : b.guildId, e);
             },
-            [x]
+            [b]
         ),
-        E = (0, l.e7)([a.Z], () => null != x && (null == x ? void 0 : x.channelId) != null && a.Z.isChannelGated(x.guildId, x.channelId), [x]),
-        v = t.hasFlag(f.iLy.IS_CROSSPOST),
+        y = (0, i.e7)([a.Z], () => null != b && (null == b ? void 0 : b.channelId) != null && a.Z.isChannelGated(b.guildId, b.channelId), [b]),
+        x = t.hasFlag(_.iLy.IS_CROSSPOST),
         {
-            rawMediaPostEmbedData: I,
-            guild: N,
-            parentChannel: S,
-            user: T,
-            selectedGuildId: b,
-            canAccess: A
-        } = (0, l.cj)(
-            [p.Z, d.Z, o.Z, m.default, u.Z],
+            rawMediaPostEmbedData: O,
+            guild: E,
+            parentChannel: j,
+            user: N,
+            selectedGuildId: C,
+            canAccess: I
+        } = (0, i.cj)(
+            [h.Z, d.Z, s.Z, p.default, u.Z],
             () => {
                 var e;
-                let t = null === (e = p.Z.getMediaPostEmbed(null == x ? void 0 : x.threadId)) || void 0 === e ? void 0 : e.media,
-                    n = d.Z.getGuild(null == x ? void 0 : x.guildId),
-                    i = o.Z.getChannel(null == x ? void 0 : x.channelId),
-                    l = m.default.getUser(null == t ? void 0 : t.author_id),
+                let t = null === (e = h.Z.getMediaPostEmbed(null == b ? void 0 : b.threadId)) || void 0 === e ? void 0 : e.media,
+                    n = d.Z.getGuild(null == b ? void 0 : b.guildId),
+                    r = s.Z.getChannel(null == b ? void 0 : b.channelId),
+                    i = p.default.getUser(null == t ? void 0 : t.author_id),
                     a = u.Z.getGuildId(),
-                    s = null != i && (0, r.YO)(i);
+                    l = null != r && (0, o.YO)(r);
                 return {
                     rawMediaPostEmbedData: t,
                     guild: n,
-                    parentChannel: i,
-                    user: l,
+                    parentChannel: r,
+                    user: i,
                     selectedGuildId: a,
-                    canAccess: s
+                    canAccess: l
                 };
             },
-            [x]
+            [b]
         ),
-        j = i.useMemo(() => {
-            let e = (0, g.ku)({
-                mediaPostEmbedData: I,
-                guild: N,
-                parentChannel: S,
-                user: T,
-                selectedGuildId: b,
-                canAccess: A
+        S = r.useMemo(() => {
+            var e, t;
+            let n = (0, g.ku)({
+                mediaPostEmbedData: O,
+                guild: E,
+                parentChannel: j,
+                user: N,
+                selectedGuildId: C,
+                canAccess: I
             });
-            return null == e
+            return null == n
                 ? null
-                : {
-                      ...e,
-                      user: T
-                  };
-        }, [I, N, S, T, b, A]);
+                : ((e = (function (e) {
+                      for (var t = 1; t < arguments.length; t++) {
+                          var n = null != arguments[t] ? arguments[t] : {},
+                              r = Object.keys(n);
+                          'function' == typeof Object.getOwnPropertySymbols &&
+                              (r = r.concat(
+                                  Object.getOwnPropertySymbols(n).filter(function (e) {
+                                      return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                  })
+                              )),
+                              r.forEach(function (t) {
+                                  var r;
+                                  (r = n[t]),
+                                      t in e
+                                          ? Object.defineProperty(e, t, {
+                                                value: r,
+                                                enumerable: !0,
+                                                configurable: !0,
+                                                writable: !0
+                                            })
+                                          : (e[t] = r);
+                              });
+                      }
+                      return e;
+                  })({}, n)),
+                  (t = t = { user: N }),
+                  Object.getOwnPropertyDescriptors
+                      ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+                      : (function (e, t) {
+                            var n = Object.keys(e);
+                            if (Object.getOwnPropertySymbols) {
+                                var r = Object.getOwnPropertySymbols(e);
+                                n.push.apply(n, r);
+                            }
+                            return n;
+                        })(Object(t)).forEach(function (n) {
+                            Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+                        }),
+                  e);
+        }, [O, E, j, N, C, I]);
     return (
-        i.useEffect(() => {
-            if ((null == x ? void 0 : x.threadId) != null) {
-                let e = p.Z.getEmbedFetchState(x.threadId);
-                !0 !== n || e !== p.M.NOT_FETCHED || (C && !1 === E) || (!C && v) || (0, _.xP)(null == x ? void 0 : x.threadId);
+        r.useEffect(() => {
+            if ((null == b ? void 0 : b.threadId) != null) {
+                let e = h.Z.getEmbedFetchState(b.threadId);
+                !0 !== n || e !== h.M.NOT_FETCHED || (v && !1 === y) || (!v && x) || (0, m.xP)(null == b ? void 0 : b.threadId);
             }
-        }, [x, n, C, E, v]),
-        j
+        }, [b, n, v, y, x]),
+        S
     );
 }

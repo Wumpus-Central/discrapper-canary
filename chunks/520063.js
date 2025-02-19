@@ -1,70 +1,117 @@
-l.d(n, { Z: () => x });
-var t = l(200651),
-    i = l(192379),
-    r = l(442837),
-    a = l(481060),
-    d = l(616780),
-    s = l(438536),
-    u = l(946273),
-    o = l(346479),
-    c = l(665906),
-    Z = l(592125),
-    g = l(430824),
-    f = l(496675),
-    h = l(594174),
-    m = l(981631),
-    P = l(388032);
-function x(e, n, x) {
-    let N = i.useMemo(() => ({ [n]: [e.id] }), [n, e.id]);
-    (0, d.$)(N), (0, r.e7)([f.Z], () => f.Z.getGuildVersion(n), [n]);
-    let b = (0, r.e7)([Z.Z], () => Z.Z.getChannel(x)),
-        C = (0, r.e7)([g.Z], () => g.Z.getGuild(n), [n]),
-        v = (0, r.e7)([h.default], () => h.default.getCurrentUser()),
-        E = (0, s.Z)(b, 'Context Menu'),
-        p = (0, c.Xb)(b);
+n.d(t, { Z: () => j });
+var r = n(200651),
+    l = n(192379),
+    i = n(442837),
+    o = n(481060),
+    a = n(616780),
+    u = n(438536),
+    s = n(946273),
+    c = n(346479),
+    d = n(665906),
+    f = n(592125),
+    Z = n(430824),
+    b = n(496675),
+    g = n(594174),
+    O = n(981631),
+    p = n(388032);
+function P(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function h(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function j(e, t, j) {
+    let N = l.useMemo(() => ({ [t]: [e.id] }), [t, e.id]);
+    (0, a.$)(N), (0, i.e7)([b.Z], () => b.Z.getGuildVersion(t), [t]);
+    let m = (0, i.e7)([f.Z], () => f.Z.getChannel(j)),
+        y = (0, i.e7)([Z.Z], () => Z.Z.getGuild(t), [t]),
+        v = (0, i.e7)([g.default], () => g.default.getCurrentUser()),
+        E = (0, u.Z)(m, 'Context Menu'),
+        x = (0, d.Xb)(m);
     if ((null == v ? void 0 : v.id) === e.id) return [E];
-    if (null == C || null == b || null == v) return [];
-    let O = p || (b.ownerId === v.id && b.type === m.d4z.PRIVATE_THREAD);
+    if (null == y || null == m || null == v) return [];
+    let C = x || (m.ownerId === v.id && m.type === O.d4z.PRIVATE_THREAD);
     return [
-        O
-            ? (0, t.jsx)(a.sNh, {
+        C
+            ? (0, r.jsx)(o.sNh, {
                   id: 'remove',
-                  label: b.isForumPost() ? P.intl.formatToPlainString(P.t.v2KNNz, { user: e.username }) : P.intl.formatToPlainString(P.t['27xWaW'], { user: e.username }),
+                  label: m.isForumPost() ? p.NW.formatToPlainString(p.t.v2KNNz, { user: e.username }) : p.NW.formatToPlainString(p.t['27xWaW'], { user: e.username }),
                   color: 'danger',
-                  action: () => o.Z.removeMember(b, e.id, 'Context Menu')
+                  action: () => c.Z.removeMember(m, e.id, 'Context Menu')
               })
             : null,
-        (0, u.BK)(e, C)
-            ? (0, t.jsx)(a.sNh, {
+        (0, s.BK)(e, y)
+            ? (0, r.jsx)(o.sNh, {
                   id: 'kick',
-                  label: O ? P.intl.formatToPlainString(P.t['1Ie87u'], { user: e.username }) : P.intl.formatToPlainString(P.t['9l/iTU'], { user: e.username }),
+                  label: C ? p.NW.formatToPlainString(p.t['1Ie87u'], { user: e.username }) : p.NW.formatToPlainString(p.t['9l/iTU'], { user: e.username }),
                   color: 'danger',
                   action: () =>
-                      (0, a.ZDy)(async () => {
-                          let { default: n } = await l.e('5454').then(l.bind(l, 854360));
-                          return (l) =>
-                              (0, t.jsx)(n, {
-                                  ...l,
-                                  guildId: C.id,
-                                  user: e
-                              });
+                      (0, o.ZDy)(async () => {
+                          let { default: t } = await n.e('5454').then(n.bind(n, 854360));
+                          return (n) =>
+                              (0, r.jsx)(
+                                  t,
+                                  h(P({}, n), {
+                                      guildId: y.id,
+                                      user: e
+                                  })
+                              );
                       })
               })
             : null,
-        (0, u.mm)(e, C)
-            ? (0, t.jsx)(a.sNh, {
+        (0, s.mm)(e, y)
+            ? (0, r.jsx)(o.sNh, {
                   id: 'ban',
-                  label: O ? P.intl.formatToPlainString(P.t.i62APT, { user: e.username }) : P.intl.formatToPlainString(P.t.WnpUBg, { user: e.username }),
+                  label: C ? p.NW.formatToPlainString(p.t.i62APT, { user: e.username }) : p.NW.formatToPlainString(p.t.WnpUBg, { user: e.username }),
                   color: 'danger',
                   action: () =>
-                      (0, a.ZDy)(async () => {
-                          let { default: n } = await l.e('43350').then(l.bind(l, 98746));
-                          return (l) =>
-                              (0, t.jsx)(n, {
-                                  ...l,
-                                  guildId: C.id,
-                                  user: e
-                              });
+                      (0, o.ZDy)(async () => {
+                          let { default: t } = await n.e('43350').then(n.bind(n, 98746));
+                          return (n) =>
+                              (0, r.jsx)(
+                                  t,
+                                  h(P({}, n), {
+                                      guildId: y.id,
+                                      user: e
+                                  })
+                              );
                       })
               })
             : null

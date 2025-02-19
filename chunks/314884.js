@@ -1,9 +1,9 @@
-n.d(t, { Z: () => h }), n(47120);
-var i,
-    r = n(442837),
-    a = n(570140),
-    s = n(78839);
-function o(e, t, n) {
+n.d(t, { Z: () => E }), n(47120);
+var r,
+    i = n(442837),
+    o = n(570140),
+    a = n(78839);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,50 +16,86 @@ function o(e, t, n) {
         e
     );
 }
-let l = !1,
-    u = {};
-function c(e) {
+function l(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                s(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function c(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function u(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : c(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let d = !1,
+    f = {};
+function p(e) {
     let { guildBoostSlots: t } = e;
-    (u = {}),
+    (f = {}),
         t.forEach((e) => {
-            u[e.id] = e;
+            f[e.id] = e;
         }),
-        (l = !0);
+        (d = !0);
 }
-function d(e) {
+function _(e) {
     let { guildBoostSlot: t } = e;
-    u = {
-        ...u,
-        [t.id]: t
-    };
+    f = u(l({}, f), { [t.id]: t });
 }
-function f() {
-    (u = {}), (l = !1);
+function h() {
+    (f = {}), (d = !1);
 }
-function _() {
+function m() {
     let e = {};
-    for (let t of Object.values(u)) (e[t.id] = t), (t.subscription = s.ZP.getSubscriptionById(t.subscriptionId));
-    u = e;
+    for (let t of Object.values(f)) (e[t.id] = t), (t.subscription = a.ZP.getSubscriptionById(t.subscriptionId));
+    f = e;
 }
-class p extends (i = r.ZP.Store) {
+class g extends (r = i.ZP.Store) {
     initialize() {
-        this.syncWith([s.ZP], _);
+        this.syncWith([a.ZP], m);
     }
     get hasFetched() {
-        return l;
+        return d;
     }
     get boostSlots() {
-        return u;
+        return f;
     }
     getGuildBoostSlot(e) {
-        return u[e];
+        return f[e];
     }
 }
-o(p, 'displayName', 'GuildBoostSlotStore');
-let h = new p(a.Z, {
-    GUILD_BOOST_SLOTS_FETCH_SUCCESS: c,
-    GUILD_BOOST_SLOT_UPDATE_SUCCESS: d,
-    GUILD_BOOST_SLOT_CREATE: d,
-    GUILD_BOOST_SLOT_UPDATE: d,
-    LOGOUT: f
+s(g, 'displayName', 'GuildBoostSlotStore');
+let E = new g(o.Z, {
+    GUILD_BOOST_SLOTS_FETCH_SUCCESS: p,
+    GUILD_BOOST_SLOT_UPDATE_SUCCESS: _,
+    GUILD_BOOST_SLOT_CREATE: _,
+    GUILD_BOOST_SLOT_UPDATE: _,
+    LOGOUT: h
 });

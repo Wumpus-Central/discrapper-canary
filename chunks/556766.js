@@ -1,87 +1,134 @@
-n.d(t, { Z: () => S });
-var i = n(200651),
-    r = n(192379),
-    a = n(392711),
-    s = n.n(a),
-    o = n(252759),
+n.d(t, { Z: () => C });
+var r = n(200651),
+    i = n(192379),
+    o = n(392711),
+    a = n.n(o),
+    s = n(252759),
     l = n(442837),
-    u = n(481060),
-    c = n(317381),
+    c = n(481060),
+    u = n(317381),
     d = n(966302),
     f = n(460181),
-    _ = n(474873),
-    p = n(292959),
+    p = n(474873),
+    _ = n(292959),
     h = n(944486),
     m = n(246946),
     g = n(340895),
     E = n(918559),
     v = n(871465);
-let y = {
+function b(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function y(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                b(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function O(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function S(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : O(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let I = {
         transform: 'scale(0.7)',
         opacity: 0
     },
-    I = {
+    T = {
         transform: 'scale(1)',
         opacity: 1
     };
-function T() {
-    return 500 !== s().random(1, 1000) ? 'call_ringing' : s().sample(['call_ringing_beat', 'call_ringing_snow_halation']);
+function N() {
+    return 500 !== a().random(1, 1000) ? 'call_ringing' : a().sample(['call_ringing_beat', 'call_ringing_snow_halation']);
 }
-function b() {
-    let e = (0, l.Wu)([g.Z, h.Z, c.ZP], () =>
+function A() {
+    let e = (0, l.Wu)([g.Z, h.Z, u.ZP], () =>
             g.Z.getIncomingCalls().filter((e) => {
                 let { channel: t } = e,
                     n = h.Z.getChannelId() === t.id,
-                    i = null == t.guild_id && n,
-                    r = c.ZP.getConnectedActivityChannelId() === t.id && h.Z.getVoiceChannelId() !== t.id && c.ZP.getActivityPanelMode() === E.Ez.PANEL;
-                return !i || r;
+                    r = null == t.guild_id && n,
+                    i = u.ZP.getConnectedActivityChannelId() === t.id && h.Z.getVoiceChannelId() !== t.id && u.ZP.getActivityPanelMode() === E.Ez.PANEL;
+                return !r || i;
             })
         ),
         t = (0, l.e7)([g.Z], () => g.Z.hasIncomingCalls()),
-        n = (0, l.e7)([p.Z], () => p.Z.isSoundDisabled('call_ringing')),
-        a = (0, l.e7)([m.Z], () => m.Z.disableSounds),
-        s = (0, l.e7)([_.Z], () => _.Z.getSoundpack()),
-        b = r.useRef(!1),
-        S = (0, o.Z)(() => {
+        n = (0, l.e7)([_.Z], () => _.Z.isSoundDisabled('call_ringing')),
+        o = (0, l.e7)([m.Z], () => m.Z.disableSounds),
+        a = (0, l.e7)([p.Z], () => p.Z.getSoundpack()),
+        b = i.useRef(!1),
+        O = (0, s.Z)(() => {
             let e = 'call_ringing';
-            return s === v.YC.CLASSIC ? (0, f.tu)(T(), e) : (0, f.uk)('call_ringing', s);
-        }, [s]);
+            return a === v.YC.CLASSIC ? (0, f.tu)(N(), e) : (0, f.uk)('call_ringing', a);
+        }, [a]);
     return (
-        r.useEffect(
+        i.useEffect(
             () => () => {
-                S.stop();
+                O.stop();
             },
-            [S]
+            [O]
         ),
-        r.useEffect(() => {
-            if (a || n) {
-                b.current && (S.stop(), (b.current = !1));
+        i.useEffect(() => {
+            if (o || n) {
+                b.current && (O.stop(), (b.current = !1));
                 return;
             }
-            t && !b.current ? (S.loop(), (b.current = !0)) : !t && b.current && (S.stop(), (b.current = !1));
-        }, [n, a, t, S]),
-        (0, u.Yzy)(e, {
+            t && !b.current ? (O.loop(), (b.current = !0)) : !t && b.current && (O.stop(), (b.current = !1));
+        }, [n, o, t, O]),
+        (0, c.Yzy)(e, {
             keys: (e) => {
                 var t;
                 return null === (t = e.channel) || void 0 === t ? void 0 : t.id;
             },
             enter: {
-                from: y,
-                to: I
+                from: I,
+                to: T
             },
-            leave: y,
+            leave: I,
             config: {
                 mass: 1,
                 tension: 500,
                 friction: 18,
                 clamp: !0
             }
-        })((e, t) =>
-            (0, i.jsx)(d.Z, {
-                ...t,
-                animatedStyle: e
-            })
-        )
+        })((e, t) => (0, r.jsx)(d.Z, S(y({}, t), { animatedStyle: e })))
     );
 }
-let S = r.memo(b);
+let C = i.memo(A);

@@ -17,21 +17,33 @@ function f(t, e, c) {
         t
     );
 }
-function i(t, e, c) {
+function p(t, e, c) {
     return ''.concat(t, ',').concat(e, ',').concat(c);
 }
-let p = () => ({
+let i = () => ({
         currentLeaderboardRanks: {},
         prevLeaderboardRanks: {}
     }),
-    r = p();
+    r = i();
 class b extends (d = a.ZP.PersistedStore) {
     initialize(t) {
         return (
-            (r = {
-                ...r,
-                ...(null != t ? t : {})
-            }),
+            (r = (function (t) {
+                for (var e = 1; e < arguments.length; e++) {
+                    var c = null != arguments[e] ? arguments[e] : {},
+                        d = Object.keys(c);
+                    'function' == typeof Object.getOwnPropertySymbols &&
+                        (d = d.concat(
+                            Object.getOwnPropertySymbols(c).filter(function (t) {
+                                return Object.getOwnPropertyDescriptor(c, t).enumerable;
+                            })
+                        )),
+                        d.forEach(function (e) {
+                            f(t, e, c[e]);
+                        });
+                }
+                return t;
+            })({}, r, null != t ? t : {})),
             !(function () {
                 let t = Date.now();
                 for (let [e, c] of Object.entries(r.prevLeaderboardRanks)) (null == c || t > c.ttl) && delete r.prevLeaderboardRanks[e];
@@ -44,15 +56,15 @@ class b extends (d = a.ZP.PersistedStore) {
         return r;
     }
     getPrevLeaderboardRanks(t, e, c) {
-        let d = i(t, e, c);
+        let d = p(t, e, c);
         return r.prevLeaderboardRanks[d];
     }
     getCurrentLeaderboardRanks(t, e, c) {
-        let d = i(t, e, c);
+        let d = p(t, e, c);
         return r.currentLeaderboardRanks[d];
     }
     reset() {
-        r = p();
+        r = i();
     }
 }
 f(b, 'displayName', 'GuildLeaderboardRanksStore'), f(b, 'persistKey', 'GuildLeaderboardRanksStore');
@@ -62,13 +74,13 @@ let u = new b(n.Z, {
         let { leaderboardResponse: c, intervalOffset: d } = t;
         if (0 !== d) return !1;
         let { leaderboard: a } = c,
-            n = i(a.guild_id, a.leaderboard_id, a.interval_start),
+            n = p(a.guild_id, a.leaderboard_id, a.interval_start),
             f = {
                 ranks: a.users.map((t) => t.user_id),
                 ttl: o.default.extractTimestamp(a.interval_end)
             },
-            p = r.currentLeaderboardRanks[n];
-        if ((0, s.E)(f.ranks, null !== (e = null == p ? void 0 : p.ranks) && void 0 !== e ? e : [])) return !1;
-        (r.prevLeaderboardRanks[n] = p), (r.currentLeaderboardRanks[n] = f);
+            i = r.currentLeaderboardRanks[n];
+        if ((0, s.E)(f.ranks, null !== (e = null == i ? void 0 : i.ranks) && void 0 !== e ? e : [])) return !1;
+        (r.prevLeaderboardRanks[n] = i), (r.currentLeaderboardRanks[n] = f);
     }
 });

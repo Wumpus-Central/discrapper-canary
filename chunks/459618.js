@@ -1,15 +1,15 @@
-n.d(t, { Z: () => y }), n(47120);
-var i = n(259443),
-    r = n(442837),
-    a = n(570140),
-    s = n(186102),
-    o = n(873741),
+n.d(t, { Z: () => S }), n(47120);
+var r = n(259443),
+    i = n(442837),
+    o = n(570140),
+    a = n(186102),
+    s = n(873741),
     l = n(592125),
-    u = n(650774),
-    c = n(866960),
+    c = n(650774),
+    u = n(866960),
     d = n(626135),
     f = n(981631);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,38 +22,81 @@ function _(e, t, n) {
         e
     );
 }
-let p = new i.Yd('MessageRoundtripTrackerStore');
-function h(e) {
+function _(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                p(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function h(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function m(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : h(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let g = new r.Yd('MessageRoundtripTrackerStore');
+function E(e) {
     return null != e.apiResponseTimestamp && null != e.gatewaySeenTimestamp;
 }
-function m(e) {
+function v(e) {
     let t = l.Z.getBasicChannel(e.channelId);
     if (null == t) {
-        p.warn('Ignoring a messageData for channel '.concat(e.channelId, " because we can't find that channel."));
+        g.warn('Ignoring a messageData for channel '.concat(e.channelId, " because we can't find that channel."));
         return;
     }
     if (Math.random() > 0.1) return;
     let n = null == e.apiResponseTimestamp ? null : e.apiResponseTimestamp - e.initialSendTimestamp,
-        i = null == e.gatewaySeenTimestamp ? null : e.gatewaySeenTimestamp - e.initialSendTimestamp,
-        r = (0, o.d)();
-    d.default.track(f.rMx.SEND_MESSAGE_ROUNDTRIP, {
-        ...(0, s.Z)(),
-        api_latency_ms: n,
-        gateway_latency_ms: i,
-        channel_id: t.id,
-        channel_type: t.type,
-        guild_id: t.guild_id,
-        guild_size: u.Z.getMemberCount(t.guild_id),
-        mobile_network_type: c.Z.getType(),
-        ...(null != r && { mobile_signal_strength_level: r })
-    });
+        r = null == e.gatewaySeenTimestamp ? null : e.gatewaySeenTimestamp - e.initialSendTimestamp,
+        i = (0, s.d)();
+    d.default.track(
+        f.rMx.SEND_MESSAGE_ROUNDTRIP,
+        _(
+            m(_({}, (0, a.Z)()), {
+                api_latency_ms: n,
+                gateway_latency_ms: r,
+                channel_id: t.id,
+                channel_type: t.type,
+                guild_id: t.guild_id,
+                guild_size: c.Z.getMemberCount(t.guild_id),
+                mobile_network_type: u.Z.getType()
+            }),
+            null != i && { mobile_signal_strength_level: i }
+        )
+    );
 }
-function g(e) {
+function b(e) {
     let { optimistic: t, message: n } = e,
-        i = n.nonce;
-    !t && null != i && v.recordGatewayResponse(i);
+        r = n.nonce;
+    !t && null != r && O.recordGatewayResponse(r);
 }
-class E extends r.ZP.Store {
+class y extends i.ZP.Store {
     recordMessageSendAttempt(e, t) {
         let n = {
             initialSendTimestamp: Date.now(),
@@ -64,32 +107,26 @@ class E extends r.ZP.Store {
         this.pendingMessages.set(t, n),
             setTimeout(() => {
                 let e = this.pendingMessages.get(t);
-                null != e && (m(e), this.pendingMessages.delete(t));
+                null != e && (v(e), this.pendingMessages.delete(t));
             }, 30000);
     }
     recordMessageSendApiResponse(e) {
         let t = this.pendingMessages.get(e);
         if (null != t) {
-            let n = {
-                ...t,
-                apiResponseTimestamp: Date.now()
-            };
-            h(n) ? (m(n), this.pendingMessages.delete(e)) : this.pendingMessages.set(e, n);
+            let n = m(_({}, t), { apiResponseTimestamp: Date.now() });
+            E(n) ? (v(n), this.pendingMessages.delete(e)) : this.pendingMessages.set(e, n);
         }
     }
     recordGatewayResponse(e) {
         let t = this.pendingMessages.get(e);
         if (null != t) {
-            let n = {
-                ...t,
-                gatewaySeenTimestamp: Date.now()
-            };
-            h(n) ? (m(n), this.pendingMessages.delete(e)) : this.pendingMessages.set(e, n);
+            let n = m(_({}, t), { gatewaySeenTimestamp: Date.now() });
+            E(n) ? (v(n), this.pendingMessages.delete(e)) : this.pendingMessages.set(e, n);
         }
     }
     constructor(...e) {
-        super(...e), _(this, 'pendingMessages', new Map());
+        super(...e), p(this, 'pendingMessages', new Map());
     }
 }
-let v = new E(a.Z, { MESSAGE_CREATE: g }),
-    y = v;
+let O = new y(o.Z, { MESSAGE_CREATE: b }),
+    S = O;

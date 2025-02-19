@@ -1,32 +1,32 @@
-n.d(t, { S: () => f });
-var i = n(200651),
-    l = n(192379),
-    r = n(120356),
-    a = n.n(r),
-    o = n(481060),
+n.d(t, { S: () => m });
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    o = n.n(l),
+    a = n(481060),
     s = n(540059),
     c = n(593214),
-    d = n(981631),
-    u = n(388032),
-    h = n(940011),
-    p = n(482559),
-    m = n(777693);
+    u = n(981631),
+    d = n(388032),
+    p = n(50004),
+    h = n(430666),
+    f = n(399491);
 function g() {
-    return (0, i.jsx)('div', {
-        className: a()(p.row, p.rowGuildName),
-        children: (0, i.jsx)('span', {
-            className: a()(p.guildNameText, p.guildNameTextLimitedSize, h.tooltipText),
-            children: u.intl.string(u.t['4tSWQk'])
+    return (0, r.jsx)('div', {
+        className: o()(h.row, h.rowGuildName),
+        children: (0, r.jsx)('span', {
+            className: o()(h.guildNameText, h.guildNameTextLimitedSize, p.tooltipText),
+            children: d.NW.string(d.t['4tSWQk'])
         })
     });
 }
-let f = l.memo(function (e) {
+let m = i.memo(function (e) {
     let { 'aria-label': t = !1, children: n } = e,
-        r = (0, s.Q3)('FavoritesAddedTooltip'),
-        a = (function () {
+        l = (0, s.Q3)('FavoritesAddedTooltip'),
+        o = (function () {
             let { favoriteAdded: e, clearFavoriteAdded: t } = (0, c.up)();
             return (
-                l.useEffect(() => {
+                i.useEffect(() => {
                     if (e) {
                         let e = setTimeout(() => {
                             t();
@@ -39,22 +39,65 @@ let f = l.memo(function (e) {
                 e
             );
         })();
-    return (0, i.jsx)(o.ua7, {
-        forceOpen: a,
-        color: o.FGA.GREEN,
+    return (0, r.jsx)(a.ua7, {
+        forceOpen: o,
+        color: a.FGA.GREEN,
         hideOnClick: !0,
-        spacing: r ? 12 : 20,
+        spacing: l ? 12 : 20,
         position: 'right',
         align: 'center',
-        text: (0, i.jsx)(g, {}),
+        text: (0, r.jsx)(g, {}),
         'aria-label': t,
-        tooltipClassName: m.listItemTooltip,
-        children: (e) =>
-            (0, i.jsx)('div', {
-                ...e,
-                onMouseEnter: d.dG4,
-                onMouseLeave: d.dG4,
-                children: n
-            })
+        tooltipClassName: f.listItemTooltip,
+        children: (e) => {
+            var t, i;
+            return (0, r.jsx)(
+                'div',
+                ((t = (function (e) {
+                    for (var t = 1; t < arguments.length; t++) {
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            r = Object.keys(n);
+                        'function' == typeof Object.getOwnPropertySymbols &&
+                            (r = r.concat(
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                })
+                            )),
+                            r.forEach(function (t) {
+                                var r;
+                                (r = n[t]),
+                                    t in e
+                                        ? Object.defineProperty(e, t, {
+                                              value: r,
+                                              enumerable: !0,
+                                              configurable: !0,
+                                              writable: !0
+                                          })
+                                        : (e[t] = r);
+                            });
+                    }
+                    return e;
+                })({}, e)),
+                (i = i =
+                    {
+                        onMouseEnter: u.dG4,
+                        onMouseLeave: u.dG4,
+                        children: n
+                    }),
+                Object.getOwnPropertyDescriptors
+                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i))
+                    : (function (e, t) {
+                          var n = Object.keys(e);
+                          if (Object.getOwnPropertySymbols) {
+                              var r = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, r);
+                          }
+                          return n;
+                      })(Object(i)).forEach(function (e) {
+                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(i, e));
+                      }),
+                t)
+            );
+        }
     });
 });

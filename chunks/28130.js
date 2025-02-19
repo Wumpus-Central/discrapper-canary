@@ -1,28 +1,53 @@
-n.d(t, { Z: () => R }), n(47120);
-var l = n(200651),
-    a = n(192379),
-    i = n(442837),
-    s = n(481060),
-    r = n(100527),
-    o = n(906732),
+n.d(t, { Z: () => _ }), n(47120);
+var r = n(200651),
+    l = n(192379),
+    a = n(442837),
+    i = n(481060),
+    o = n(100527),
+    s = n(906732),
     c = n(807582),
-    d = n(813197),
-    u = n(222062),
-    m = n(530329),
-    x = n(430824),
-    p = n(914010),
-    f = n(594174),
-    g = n(451478),
+    u = n(813197),
+    d = n(222062),
+    f = n(530329),
+    p = n(430824),
+    m = n(914010),
+    g = n(594174),
+    x = n(451478),
     h = n(626135),
-    C = n(74538),
-    A = n(621961),
-    j = n(884858),
-    v = n(981631),
-    N = n(486324),
-    E = n(869783),
-    T = n(388032),
-    F = n(362659);
-let _ = [
+    b = n(74538),
+    j = n(621961),
+    v = n(884858),
+    y = n(981631),
+    O = n(486324),
+    C = n(869783),
+    N = n(388032),
+    A = n(420270);
+function E(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+let w = [
     {
         gif: n(495682),
         png: n(458060)
@@ -40,18 +65,18 @@ let _ = [
         png: n(690695)
     }
 ];
-function S(e) {
+function P(e) {
     let { shouldAnimate: t = !0 } = e,
-        [n, i] = a.useState(!1);
-    return (0, l.jsx)('div', {
-        className: F.gifGrid,
-        onMouseMove: () => i(!0),
-        onMouseLeave: () => i(!1),
-        children: _.map((e) =>
-            (0, l.jsx)(
+        [n, a] = l.useState(!1);
+    return (0, r.jsx)('div', {
+        className: A.gifGrid,
+        onMouseMove: () => a(!0),
+        onMouseLeave: () => a(!1),
+        children: w.map((e) =>
+            (0, r.jsx)(
                 'div',
                 {
-                    className: F.gif,
+                    className: A.gif,
                     style: { backgroundImage: 'url('.concat(t || n ? e.gif : e.png, ')') }
                 },
                 e.gif
@@ -59,67 +84,67 @@ function S(e) {
         )
     });
 }
-function b(e) {
+function S(e) {
     let { guildFeature: t, guild: n } = e;
     return null == t || null == n
         ? null
-        : (0, l.jsx)('div', {
-              className: F.pillWrapper,
-              children: (0, l.jsx)(c.Z, {
+        : (0, r.jsx)('div', {
+              className: A.pillWrapper,
+              children: (0, r.jsx)(c.Z, {
                   guildFeature: t,
                   guild: n,
                   hideTooltip: !0
               })
           });
 }
-function Z(e) {
+function T(e) {
     let { uploadType: t, guild: n } = e;
-    return (0, l.jsxs)('div', {
-        className: F.optionBoxText,
+    return (0, r.jsxs)('div', {
+        className: A.optionBoxText,
         children: [
-            (0, l.jsx)(b, {
+            (0, r.jsx)(S, {
                 guild: n,
-                guildFeature: (0, A.C6)(t, { isGIF: !0 })
+                guildFeature: (0, j.C6)(t, { isGIF: !0 })
             }),
-            (0, l.jsxs)('div', {
-                className: F.optionBoxDescription,
+            (0, r.jsxs)('div', {
+                className: A.optionBoxDescription,
                 children: [
-                    (0, A.Kq)(t) &&
-                        (0, l.jsx)(s.DY3, {
-                            className: F.nitroWheelFlairContainer,
-                            text: T.intl.string(T.t['5AFxuL']),
-                            children: (0, l.jsx)(s.SrA, {
+                    (0, j.Kq)(t) &&
+                        (0, r.jsx)(i.DY3, {
+                            className: A.nitroWheelFlairContainer,
+                            text: N.NW.string(N.t['5AFxuL']),
+                            children: (0, r.jsx)(i.SrA, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: F.nitroWheelFlair
+                                className: A.nitroWheelFlair
                             })
                         }),
-                    T.intl.string(T.t['xsC+//'])
+                    N.NW.string(N.t['xsC+//'])
                 ]
             })
         ]
     });
 }
-function L(e) {
-    let { title: t, uploadType: n, guild: a } = e;
-    return (0, l.jsxs)('div', {
-        className: F.optionBoxText,
+function F(e) {
+    let { title: t, uploadType: n, guild: l } = e;
+    return (0, r.jsxs)('div', {
+        className: A.optionBoxText,
         children: [
-            (0, l.jsx)(b, {
-                guildFeature: (0, A.C6)(n, { isGIF: !1 }),
-                guild: a
+            (0, r.jsx)(S, {
+                guildFeature: (0, j.C6)(n, { isGIF: !1 }),
+                guild: l
             }),
-            (0, l.jsxs)('div', {
-                className: F.optionBoxDescription,
+            (0, r.jsxs)('div', {
+                className: A.optionBoxDescription,
                 children: [
-                    n === N.pC.BANNER &&
-                        (0, l.jsx)(s.DY3, {
-                            className: F.nitroWheelFlairContainer,
-                            text: T.intl.string(T.t['5AFxuL']),
-                            children: (0, l.jsx)(s.SrA, {
+                    n === O.pC.BANNER &&
+                        (0, r.jsx)(i.DY3, {
+                            className: A.nitroWheelFlairContainer,
+                            text: N.NW.string(N.t['5AFxuL']),
+                            children: (0, r.jsx)(i.SrA, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: F.nitroWheelFlair
+                                className: A.nitroWheelFlair
                             })
                         }),
                     t
@@ -128,179 +153,189 @@ function L(e) {
         ]
     });
 }
-function R(e) {
-    let { transitionState: t, onClose: c, onComplete: A, uploadType: _, maxFileSizeBytes: b, showUpsellHeader: R, filters: y, analyticsLocation: I, analyticsLocations: M = [], modalSubTitle: w, imageSpecifications: P, modalTitle: O = T.intl.string(T.t.DToW4e), uploadOptionTitle: U = T.intl.string(T.t['MsUY/f']) } = e,
-        k = (0, i.e7)([g.Z], () => g.Z.isFocused()),
-        D = (0, i.e7)([f.default], () => f.default.getCurrentUser()),
-        B = (0, i.e7)([p.Z], () => p.Z.getGuildId()),
-        G = (0, i.e7)([x.Z], () => x.Z.getGuild(B)),
-        { reducedMotion: H } = a.useContext(s.Sfi),
-        z = (0, s.vRw)(),
-        V = !C.ZP.canUseAnimatedAvatar(D) && _ === N.pC.AVATAR,
-        { analyticsLocations: W } = (0, o.ZP)(M, r.Z.SELECT_IMAGE_MODAL);
-    function q(e, t) {
+function _(e) {
+    let { transitionState: t, onClose: c, onComplete: j, uploadType: w, maxFileSizeBytes: S, showUpsellHeader: _, filters: R, analyticsLocation: Z, analyticsLocations: I = [], modalSubTitle: L, imageSpecifications: k, modalTitle: D = N.NW.string(N.t.DToW4e), uploadOptionTitle: M = N.NW.string(N.t['MsUY/f']) } = e,
+        U = (0, a.e7)([x.Z], () => x.Z.isFocused()),
+        W = (0, a.e7)([g.default], () => g.default.getCurrentUser()),
+        B = (0, a.e7)([m.Z], () => m.Z.getGuildId()),
+        H = (0, a.e7)([p.Z], () => p.Z.getGuild(B)),
+        { reducedMotion: G } = l.useContext(i.Sfi),
+        z = (0, i.vRw)(),
+        V = !b.ZP.canUseAnimatedAvatar(W) && w === O.pC.AVATAR,
+        { analyticsLocations: q } = (0, s.ZP)(I, o.Z.SELECT_IMAGE_MODAL);
+    function X(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        c(), A(e, t, n);
+        c(), j(e, t, n);
     }
-    a.useEffect(() => {
+    l.useEffect(() => {
         V &&
-            h.default.track(v.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: v.jXE.UPLOAD_FILE_OR_CHOOSE_GIF_MODAL,
-                location_stack: W
+            h.default.track(y.rMx.PREMIUM_UPSELL_VIEWED, {
+                type: y.jXE.UPLOAD_FILE_OR_CHOOSE_GIF_MODAL,
+                location_stack: q
             }),
-            h.default.track(v.rMx.OPEN_MODAL, {
-                type: v.jXE.UPLOAD_FILE_OR_CHOOSE_GIF_MODAL,
-                location: I
+            h.default.track(y.rMx.OPEN_MODAL, {
+                type: y.jXE.UPLOAD_FILE_OR_CHOOSE_GIF_MODAL,
+                location: Z
             });
-    }, [V, I, W]);
-    let Y = _ === N.pC.AVATAR || _ === N.pC.BANNER,
-        X = (0, u.M)(!Y);
-    return (0, l.jsxs)(s.Y0X, {
+    }, [V, Z, q]);
+    let Y = w === O.pC.AVATAR || w === O.pC.BANNER,
+        $ = (0, d.M)(!Y);
+    return (0, r.jsxs)(i.Y0X, {
         transitionState: t,
-        size: s.CgR.SMALL,
+        size: i.CgR.SMALL,
         children: [
-            (0, l.jsxs)(s.xBx, {
-                className: F.modalHeader,
+            (0, r.jsxs)(i.xBx, {
+                className: A.modalHeader,
                 separator: !1,
                 children: [
-                    (0, l.jsxs)('div', {
+                    (0, r.jsxs)('div', {
                         children: [
-                            (0, l.jsx)(s.vwX, {
-                                tag: s.RB0.H1,
-                                className: F.modalTitle,
-                                children: O
+                            (0, r.jsx)(i.vwX, {
+                                tag: i.RB0.H1,
+                                className: A.modalTitle,
+                                children: D
                             }),
-                            null != w
-                                ? (0, l.jsx)(s.Text, {
+                            null != L
+                                ? (0, r.jsx)(i.Text, {
                                       variant: 'text-md/normal',
-                                      children: w
+                                      children: L
                                   })
                                 : null
                         ]
                     }),
-                    (0, l.jsx)(s.olH, {
+                    (0, r.jsx)(i.olH, {
                         onClick: c,
-                        className: F.modalCloseButton
+                        className: A.modalCloseButton
                     })
                 ]
             }),
-            (0, l.jsxs)(s.hzk, {
-                className: F.modalContent,
+            (0, r.jsxs)(i.hzk, {
+                className: A.modalContent,
                 children: [
-                    (0, l.jsxs)('div', {
-                        className: F.imagePickerContainer,
+                    (0, r.jsxs)('div', {
+                        className: A.imagePickerContainer,
                         children: [
-                            (0, l.jsxs)(s.P3F, {
-                                className: F.optionBox,
+                            (0, r.jsxs)(i.P3F, {
+                                className: A.optionBox,
                                 children: [
-                                    (0, l.jsx)('div', {
-                                        className: F.contentCircle,
-                                        children: (0, l.jsx)(s.FmF, {
+                                    (0, r.jsx)('div', {
+                                        className: A.contentCircle,
+                                        children: (0, r.jsx)(i.FmF, {
                                             size: 'md',
                                             color: 'currentColor',
-                                            className: F.uploadIcon
+                                            className: A.uploadIcon
                                         })
                                     }),
-                                    (0, l.jsx)(s.Text, {
+                                    (0, r.jsx)(i.Text, {
                                         variant: 'text-sm/semibold',
                                         color: 'interactive-normal',
-                                        children: (0, l.jsx)(L, {
-                                            title: U,
-                                            uploadType: _,
-                                            guild: G
+                                        children: (0, r.jsx)(F, {
+                                            title: M,
+                                            uploadType: w,
+                                            guild: H
                                         })
                                     }),
-                                    (0, l.jsx)(d.ZP, {
+                                    (0, r.jsx)(u.ZP, {
                                         onChange: function (e, t) {
-                                            if (t.type === E.m.MP4) return q(e, t);
-                                            (0, s.ZDy)(
+                                            if (t.type === C.m.MP4) return X(e, t);
+                                            (0, i.ZDy)(
                                                 async () => {
-                                                    let { default: a } = await n.e('48017').then(n.bind(n, 850085));
+                                                    let { default: l } = await n.e('48017').then(n.bind(n, 850085));
                                                     return (n) =>
-                                                        (0, l.jsx)(a, {
-                                                            imgURI: e,
-                                                            file: t,
-                                                            onCrop: q,
-                                                            uploadType: _,
-                                                            showUpsellHeader: R,
-                                                            allowSkip: !0,
-                                                            analyticsPage: null == I ? void 0 : I.page,
-                                                            ...n
-                                                        });
+                                                        (0, r.jsx)(
+                                                            l,
+                                                            E(
+                                                                {
+                                                                    imgURI: e,
+                                                                    file: t,
+                                                                    onCrop: X,
+                                                                    uploadType: w,
+                                                                    showUpsellHeader: _,
+                                                                    allowSkip: !0,
+                                                                    analyticsPage: null == Z ? void 0 : Z.page
+                                                                },
+                                                                n
+                                                            )
+                                                        );
                                                 },
                                                 { contextKey: z }
                                             );
                                         },
-                                        maxFileSizeBytes: b,
+                                        maxFileSizeBytes: S,
                                         onFileSizeError: function () {
-                                            c(), (0, j.Z)(b);
+                                            c(), (0, v.Z)(S);
                                         },
-                                        filters: y
+                                        filters: R
                                     })
                                 ]
                             }),
-                            (0, l.jsxs)(s.P3F, {
-                                className: F.optionBox,
+                            (0, r.jsxs)(i.P3F, {
+                                className: A.optionBox,
                                 onClick: function () {
-                                    (0, s.ZDy)(
+                                    (0, i.ZDy)(
                                         async () => {
                                             let { default: e } = await n.e('72891').then(n.bind(n, 195297));
                                             return (t) =>
-                                                (0, l.jsx)(e, {
-                                                    uploadType: _,
-                                                    onComplete: (e, t) => q(e, t, !0),
-                                                    showUpsellHeader: R,
-                                                    analyticsPage: null == I ? void 0 : I.page,
-                                                    ...t
-                                                });
+                                                (0, r.jsx)(
+                                                    e,
+                                                    E(
+                                                        {
+                                                            uploadType: w,
+                                                            onComplete: (e, t) => X(e, t, !0),
+                                                            showUpsellHeader: _,
+                                                            analyticsPage: null == Z ? void 0 : Z.page
+                                                        },
+                                                        t
+                                                    )
+                                                );
                                         },
                                         { contextKey: z }
                                     );
                                 },
                                 children: [
-                                    (0, l.jsxs)('div', {
-                                        className: F.contentCircle,
+                                    (0, r.jsxs)('div', {
+                                        className: A.contentCircle,
                                         children: [
-                                            (0, l.jsx)(S, { shouldAnimate: k && !H.enabled }),
-                                            (0, l.jsx)('div', {
-                                                className: F.gifIconContainer,
-                                                children: (0, l.jsx)(s.OUq, {
+                                            (0, r.jsx)(P, { shouldAnimate: U && !G.enabled }),
+                                            (0, r.jsx)('div', {
+                                                className: A.gifIconContainer,
+                                                children: (0, r.jsx)(i.OUq, {
                                                     size: 'custom',
                                                     width: 29,
                                                     height: 29,
                                                     color: 'currentColor',
-                                                    className: F.gifIcon
+                                                    className: A.gifIcon
                                                 })
                                             })
                                         ]
                                     }),
-                                    (0, l.jsx)(s.Text, {
+                                    (0, r.jsx)(i.Text, {
                                         variant: 'text-sm/semibold',
                                         color: 'interactive-normal',
-                                        children: (0, l.jsx)(Z, {
-                                            uploadType: _,
-                                            guild: G
+                                        children: (0, r.jsx)(T, {
+                                            uploadType: w,
+                                            guild: H
                                         })
                                     })
                                 ]
                             })
                         ]
                     }),
-                    null != P
-                        ? (0, l.jsx)(s.Text, {
-                              className: F.imageSpecifications,
+                    null != k
+                        ? (0, r.jsx)(i.Text, {
+                              className: A.imageSpecifications,
                               variant: 'text-sm/normal',
-                              children: P
+                              children: k
                           })
                         : null,
-                    R &&
-                        X &&
-                        (0, l.jsx)(m.Z, {
-                            uploadType: _,
+                    _ &&
+                        $ &&
+                        (0, r.jsx)(f.Z, {
+                            uploadType: w,
                             showUpsell: !0,
                             position: 'inline',
                             showShadow: !1,
-                            className: F.nitroUpsell
+                            className: A.nitroUpsell
                         })
                 ]
             })

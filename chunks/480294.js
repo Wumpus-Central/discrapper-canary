@@ -1,8 +1,8 @@
-n.d(t, { Z: () => g });
-var i,
-    r = n(442837),
-    a = n(570140);
-function s(e, t, n) {
+n.d(t, { Z: () => E });
+var r,
+    i = n(442837),
+    o = n(570140);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,34 +15,45 @@ function s(e, t, n) {
         e
     );
 }
-let o = !1,
-    l = !1,
-    u = {},
-    c = null;
-function d(e) {
-    let { consents: t } = e;
-    null != t &&
-        ((u = {
-            ...u,
-            ...t
-        }),
-        (l = !0));
+function s(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                a(e, t, n[t]);
+            });
+    }
+    return e;
 }
+let l = !1,
+    c = !1,
+    u = {},
+    d = null;
 function f(e) {
     let { consents: t } = e;
-    (u = { ...t }), (o = !0);
+    null != t && ((u = s({}, u, t)), (c = !0));
+}
+function p(e) {
+    let { consents: t } = e;
+    (u = s({}, t)), (l = !0);
 }
 function _(e) {
     let { consents: t } = e;
-    (u = { ...t }), (o = !0);
+    (u = s({}, t)), (l = !0);
 }
-function p(e) {
-    c = e.consentRequired;
+function h(e) {
+    d = e.consentRequired;
 }
-function h() {
-    c = null;
+function m() {
+    d = null;
 }
-class m extends (i = r.ZP.Store) {
+class g extends (r = i.ZP.Store) {
     hasConsented(e) {
         return null != u[e] && u[e].consented;
     }
@@ -50,20 +61,20 @@ class m extends (i = r.ZP.Store) {
         return u;
     }
     get fetchedConsents() {
-        return o;
-    }
-    get receivedConsentsInConnectionOpen() {
         return l;
     }
-    getAuthenticationConsentRequired() {
+    get receivedConsentsInConnectionOpen() {
         return c;
     }
+    getAuthenticationConsentRequired() {
+        return d;
+    }
 }
-s(m, 'displayName', 'ConsentStore');
-let g = new m(a.Z, {
-    CONNECTION_OPEN: d,
-    OVERLAY_INITIALIZE: f,
+a(g, 'displayName', 'ConsentStore');
+let E = new g(o.Z, {
+    CONNECTION_OPEN: f,
+    OVERLAY_INITIALIZE: p,
     UPDATE_CONSENTS: _,
-    SET_CONSENT_REQUIRED: p,
-    LOGOUT: h
+    SET_CONSENT_REQUIRED: h,
+    LOGOUT: m
 });

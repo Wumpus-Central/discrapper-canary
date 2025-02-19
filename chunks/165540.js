@@ -1,107 +1,153 @@
-n.d(t, { Z: () => M });
-var i = n(200651),
-    l = n(192379),
-    a = n(120356),
-    r = n.n(a),
-    s = n(442837),
-    o = n(704215),
+n.d(t, { Z: () => w });
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    o = n.n(l),
+    a = n(442837),
+    s = n(704215),
     c = n(749280),
-    d = n(481060),
-    u = n(367907),
-    h = n(499254),
-    p = n(541099),
-    m = n(827498),
-    f = n(569211),
+    u = n(481060),
+    d = n(367907),
+    p = n(499254),
+    h = n(541099),
+    f = n(827498),
+    m = n(569211),
     g = n(663924),
-    _ = n(533379),
-    C = n(404295),
-    x = n(540059),
+    b = n(533379),
+    _ = n(404295),
+    C = n(540059),
     v = n(605236),
-    E = n(819640),
-    I = n(291407),
-    b = n(685006),
-    Z = n(61356),
+    y = n(819640),
+    x = n(291407),
+    j = n(685006),
+    O = n(61356),
     N = n(981631),
-    T = n(314734),
-    S = n(921944),
-    j = n(388032),
-    y = n(91101),
-    A = n(795361);
-let P = l.forwardRef(function (e, t) {
-    let { type: n, animateRef: a } = e,
-        f = (0, s.e7)([p.Z], () => p.Z.shouldShowPopup() && p.Z.activeViewType() === n),
-        { Component: g, events: _, play: C } = (0, c.w)(),
-        E = (0, x.Q3)('ChannelAppLauncherButton');
-    l.useImperativeHandle(
-        a,
+    E = n(314734),
+    P = n(921944),
+    I = n(388032),
+    S = n(387220),
+    Z = n(795361);
+let T = i.forwardRef(function (e, t) {
+    var n, l;
+    let { type: m, animateRef: g } = e,
+        b = (0, a.e7)([h.Z], () => h.Z.shouldShowPopup() && h.Z.activeViewType() === m),
+        { Component: _, events: y, play: x } = (0, c.w)(),
+        j = (0, C.Q3)('ChannelAppLauncherButton');
+    i.useImperativeHandle(
+        g,
         () => ({
             animate: () => {
-                _.onMouseEnter();
+                y.onMouseEnter();
             }
         }),
-        [_]
+        [y]
     );
-    let I = l.useCallback(() => {
-        (0, u.yw)(N.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), f ? h.yT(m.ti.DISMISSED) : ((0, v.EW)(o.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: S.L.TAKE_ACTION }), h.__(m._b.TEXT, n)), C();
-    }, [f, n, C]);
-    return (0, i.jsx)('div', {
-        className: r()(y.buttonContainer, T.t4),
+    let O = i.useCallback(() => {
+        (0, d.yw)(N.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), b ? p.yT(f.ti.DISMISSED) : ((0, v.EW)(s.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: P.L.TAKE_ACTION }), p.__(f._b.TEXT, m)), x();
+    }, [b, m, x]);
+    return (0, r.jsx)('div', {
+        className: o()(S.buttonContainer, E.t4),
         ref: t,
-        children: (0, i.jsx)(d.zxk, {
-            look: d.zxk.Looks.BLANK,
-            size: d.zxk.Sizes.NONE,
-            tabIndex: 0,
-            className: r()(y.button, { [y.buttonActive]: f }),
-            onClick: I,
-            'aria-label': j.intl.string(j.t.erHFxM),
-            focusProps: {
-                offset: {
-                    top: 4,
-                    bottom: 4,
-                    left: -4,
-                    right: -4
+        children: (0, r.jsx)(
+            u.zxk,
+            ((n = (function (e) {
+                for (var t = 1; t < arguments.length; t++) {
+                    var n = null != arguments[t] ? arguments[t] : {},
+                        r = Object.keys(n);
+                    'function' == typeof Object.getOwnPropertySymbols &&
+                        (r = r.concat(
+                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                            })
+                        )),
+                        r.forEach(function (t) {
+                            var r;
+                            (r = n[t]),
+                                t in e
+                                    ? Object.defineProperty(e, t, {
+                                          value: r,
+                                          enumerable: !0,
+                                          configurable: !0,
+                                          writable: !0
+                                      })
+                                    : (e[t] = r);
+                        });
                 }
-            },
-            innerClassName: y.buttonContents,
-            ..._,
-            children: (0, i.jsx)(g, {
-                size: E ? 'refresh_sm' : void 0,
-                color: 'currentColor'
-            })
-        })
+                return e;
+            })(
+                {
+                    look: u.zxk.Looks.BLANK,
+                    size: u.zxk.Sizes.NONE,
+                    tabIndex: 0,
+                    className: o()(S.button, { [S.buttonActive]: b }),
+                    onClick: O,
+                    'aria-label': I.NW.string(I.t.erHFxM),
+                    focusProps: {
+                        offset: {
+                            top: 4,
+                            bottom: 4,
+                            left: -4,
+                            right: -4
+                        }
+                    },
+                    innerClassName: S.buttonContents
+                },
+                y
+            )),
+            (l = l =
+                {
+                    children: (0, r.jsx)(_, {
+                        size: j ? 'refresh_sm' : void 0,
+                        color: 'currentColor'
+                    })
+                }),
+            Object.getOwnPropertyDescriptors
+                ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
+                : (function (e, t) {
+                      var n = Object.keys(e);
+                      if (Object.getOwnPropertySymbols) {
+                          var r = Object.getOwnPropertySymbols(e);
+                          n.push.apply(n, r);
+                      }
+                      return n;
+                  })(Object(l)).forEach(function (e) {
+                      Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
+                  }),
+            n)
+        )
     });
 });
-function R(e) {
+function A(e) {
     let { showAppLauncherPopup: t, children: n } = e,
-        l = (0, s.e7)([E.Z], () => E.Z.hasLayers()),
+        i = (0, a.e7)([y.Z], () => y.Z.hasLayers()),
         {
-            enabled: a,
-            shouldShow: o,
+            enabled: l,
+            shouldShow: s,
             applicationDetails: c,
-            showsTooltip: u
-        } = (0, f.Z)({
-            obstructedFromView: l,
+            showsTooltip: d
+        } = (0, m.Z)({
+            obstructedFromView: i,
             disabled: t
         });
-    if (!a) return (0, i.jsx)(i.Fragment, { children: n });
-    let h =
-        o && (null == c ? void 0 : c.iconURL) != null
-            ? (0, i.jsxs)('div', {
-                  className: y.channelAppLauncherButtonPopoutIconContainer,
+    if (!l) return (0, r.jsx)(r.Fragment, { children: n });
+    let p =
+        s && (null == c ? void 0 : c.iconURL) != null
+            ? (0, r.jsxs)('div', {
+                  className: S.channelAppLauncherButtonPopoutIconContainer,
                   children: [
-                      (0, i.jsx)('img', {
-                          className: r()(y.buttonContainer, y.button, y.channelAppLauncherButtonPopoutIcon),
-                          alt: j.intl.string(j.t.X4IxWF),
+                      (0, r.jsx)('img', {
+                          className: o()(S.buttonContainer, S.button, S.channelAppLauncherButtonPopoutIcon),
+                          alt: I.NW.string(I.t.X4IxWF),
                           src: null == c ? void 0 : c.iconURL,
                           'aria-hidden': !0,
                           draggable: !1
                       }),
-                      (0, i.jsx)('div', {
-                          className: y.channelAppLauncherButtonPopoutIconShimmerContainer,
-                          children: (0, i.jsx)('img', {
-                              className: r()(y.channelAppLauncherButtonPopoutIconShimmer),
-                              alt: j.intl.string(j.t.X4IxWF),
-                              src: A,
+                      (0, r.jsx)('div', {
+                          className: S.channelAppLauncherButtonPopoutIconShimmerContainer,
+                          children: (0, r.jsx)('img', {
+                              className: o()(S.channelAppLauncherButtonPopoutIconShimmer),
+                              alt: I.NW.string(I.t.X4IxWF),
+                              src: Z,
                               'aria-hidden': !0,
                               draggable: !1
                           })
@@ -109,53 +155,53 @@ function R(e) {
                   ]
               })
             : null;
-    return u
-        ? (0, i.jsx)(d.ua7, {
-              text: j.intl.string(j.t.JDj6Xl),
-              shouldShow: o,
-              forceOpen: o,
+    return d
+        ? (0, r.jsx)(u.ua7, {
+              text: I.NW.string(I.t.JDj6Xl),
+              shouldShow: s,
+              forceOpen: s,
               children: () =>
-                  (0, i.jsxs)(i.Fragment, {
-                      children: [h, n]
+                  (0, r.jsxs)(r.Fragment, {
+                      children: [p, n]
                   })
           })
-        : (0, i.jsxs)(i.Fragment, {
-              children: [h, n]
+        : (0, r.jsxs)(r.Fragment, {
+              children: [p, n]
           });
 }
-let M = l.memo(function (e) {
-    let { channel: t, type: n, animateRef: a, entryPointCommandButtonRef: r } = e,
-        o = l.useRef(null),
-        c = (0, _.R)({
+let w = i.memo(function (e) {
+    let { channel: t, type: n, animateRef: l, entryPointCommandButtonRef: o } = e,
+        s = i.useRef(null),
+        c = (0, b.R)({
             channel: t,
             chatInputType: n,
             location: 'chat_input'
         }),
-        d = (0, Z.Z)({ type: n }),
-        u = (0, C.h9)(t.id),
-        h = (0, s.e7)([p.Z], () => p.Z.appDMChannelsWithFailedLoads().has(t.id)),
-        { visible: m } = (0, b.xL)();
+        u = (0, O.Z)({ type: n }),
+        d = (0, _.h9)(t.id),
+        p = (0, a.e7)([h.Z], () => h.Z.appDMChannelsWithFailedLoads().has(t.id)),
+        { visible: f } = (0, j.xL)();
     return c
-        ? (0, i.jsxs)('div', {
-              className: y.channelAppLauncher,
+        ? (0, r.jsxs)('div', {
+              className: S.channelAppLauncher,
               children: [
-                  (0, i.jsx)(I.Z, {
+                  (0, r.jsx)(x.Z, {
                       channel: t,
-                      animationContainerClassName: y.entrypointAnimation,
-                      glowClassName: y.animationGlow,
-                      trinketsClassName: y.animationTrinkets,
-                      children: (0, i.jsx)(R, {
-                          showAppLauncherPopup: d,
-                          children: (0, i.jsx)(P, {
+                      animationContainerClassName: S.entrypointAnimation,
+                      glowClassName: S.animationGlow,
+                      trinketsClassName: S.animationTrinkets,
+                      children: (0, r.jsx)(A, {
+                          showAppLauncherPopup: u,
+                          children: (0, r.jsx)(T, {
                               type: n,
-                              ref: o,
-                              animateRef: a
+                              ref: s,
+                              animateRef: l
                           })
                       })
                   }),
-                  d
-                      ? (0, i.jsx)(g.Z, {
-                            positionTargetRef: u && !h && m ? r : o,
+                  u
+                      ? (0, r.jsx)(g.Z, {
+                            positionTargetRef: d && !p && f ? o : s,
                             channel: t
                         })
                       : null

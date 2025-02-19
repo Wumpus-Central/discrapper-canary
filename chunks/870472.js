@@ -4,61 +4,103 @@ n.d(t, {
 }),
     n(47120),
     n(653041),
+    n(301563),
+    n(566702),
     n(177593);
-var i = n(192379),
-    r = n(348327),
-    l = n.n(r),
-    s = n(995295),
-    a = n(596390);
+var r = n(192379),
+    i = n(348327),
+    s = n.n(i),
+    a = n(995295),
+    l = n(596390);
 function o(e) {
-    let [t, n] = i.useState([e]),
-        [r, s] = i.useState(0),
-        a = i.useMemo(() => t[r], [t, r]),
-        o = i.useCallback(
+    let [t, n] = r.useState([e]),
+        [i, a] = r.useState(0),
+        l = r.useMemo(() => t[i], [t, i]),
+        o = r.useCallback(
             (e) => {
-                let i = e(a);
-                if (l()(a, i)) return;
-                let o = t.slice(0, r + 1);
-                o.push(i), n(o), s(o.length - 1);
+                let r = e(l);
+                if (s()(l, r)) return;
+                let o = t.slice(0, i + 1);
+                o.push(r), n(o), a(o.length - 1);
             },
-            [r, a, t]
+            [i, l, t]
         );
     return {
-        state: a,
+        state: l,
         setState: o,
-        goBack: i.useCallback(
+        goBack: r.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-                    n = Math.max(0, r - e);
-                return s(n), t[n];
+                    n = Math.max(0, i - e);
+                return a(n), t[n];
             },
-            [r, t]
+            [i, t]
         ),
-        goForward: i.useCallback(
+        goForward: r.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-                    n = Math.min(t.length - 1, r + e);
-                return s(n), t[n];
+                    n = Math.min(t.length - 1, i + e);
+                return a(n), t[n];
             },
-            [r, t]
+            [i, t]
         )
     };
 }
 function c(e, t) {
-    let { scrollerRef: n, mainInputRef: r, mainContainerRef: l } = t,
+    let { scrollerRef: n, mainInputRef: i, mainContainerRef: s } = t,
         {
             state: { value: o, tags: c, selections: d },
             setState: u,
             goBack: m,
-            goForward: h
+            goForward: p
         } = e;
-    i.useLayoutEffect(() => {
+    r.useLayoutEffect(() => {
         let e = (e) => (t) => {
                 ('Meta' === t.key || 'Control' === t.key) &&
-                    u((t) => ({
-                        ...t,
-                        isSelecting: e
-                    }));
+                    u((t) => {
+                        var n, r;
+                        return (
+                            (n = (function (e) {
+                                for (var t = 1; t < arguments.length; t++) {
+                                    var n = null != arguments[t] ? arguments[t] : {},
+                                        r = Object.keys(n);
+                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                        (r = r.concat(
+                                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                            })
+                                        )),
+                                        r.forEach(function (t) {
+                                            var r;
+                                            (r = n[t]),
+                                                t in e
+                                                    ? Object.defineProperty(e, t, {
+                                                          value: r,
+                                                          enumerable: !0,
+                                                          configurable: !0,
+                                                          writable: !0
+                                                      })
+                                                    : (e[t] = r);
+                                        });
+                                }
+                                return e;
+                            })({}, t)),
+                            (r = r = { isSelecting: e }),
+                            Object.getOwnPropertyDescriptors
+                                ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
+                                : (function (e, t) {
+                                      var n = Object.keys(e);
+                                      if (Object.getOwnPropertySymbols) {
+                                          var r = Object.getOwnPropertySymbols(e);
+                                          n.push.apply(n, r);
+                                      }
+                                      return n;
+                                  })(Object(r)).forEach(function (e) {
+                                      Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
+                                  }),
+                            n
+                        );
+                    });
             },
             t = e(!0),
             n = e(!1);
@@ -70,20 +112,20 @@ function c(e, t) {
             }
         );
     }, [u]);
-    let g = i.useCallback(
+    let g = r.useCallback(
             (e) => {
-                var t, i;
-                let r = (null !== (i = e.clipboardData.getData('text')) && void 0 !== i ? i : '')
-                    .split(a.uz)
+                var t, r;
+                let i = (null !== (r = e.clipboardData.getData('text')) && void 0 !== r ? r : '')
+                    .split(l.uz)
                     .map((e) => e.trim())
                     .filter((e) => e.length > 0);
-                !(r.length <= 1) &&
-                    ((0, s.flushSync)(() => {
+                !(i.length <= 1) &&
+                    ((0, a.flushSync)(() => {
                         u((e) => {
                             let { tags: t, value: n } = e;
                             return {
                                 value: n,
-                                tags: [...t, ...r],
+                                tags: [...t, ...i],
                                 selections: [],
                                 isSelecting: !1
                             };
@@ -95,12 +137,12 @@ function c(e, t) {
             },
             [u, n]
         ),
-        x = i.useCallback(
+        h = r.useCallback(
             (e) => {
                 u((t) => {
-                    let { tags: n, value: i } = t;
+                    let { tags: n, value: r } = t;
                     return {
-                        value: i,
+                        value: r,
                         tags: [...n.filter((t, n) => n !== e)],
                         selections: [],
                         isSelecting: !1
@@ -109,16 +151,16 @@ function c(e, t) {
             },
             [u]
         ),
-        p = i.useCallback(
+        f = r.useCallback(
             (e) => (t) => {
                 u((n) => {
-                    let { tags: i, value: r } = n,
-                        l = [...i];
+                    let { tags: r, value: i } = n,
+                        s = [...r];
                     return (
-                        (l[e] = t),
+                        (s[e] = t),
                         {
-                            value: r,
-                            tags: l,
+                            value: i,
+                            tags: s,
                             selections: [],
                             isSelecting: !1
                         }
@@ -127,36 +169,36 @@ function c(e, t) {
             },
             [u]
         ),
-        _ = i.useCallback(
+        b = r.useCallback(
             (e) => {
                 u((t) => {
-                    let { tags: n, value: i, selections: r, isSelecting: l } = t;
-                    return {
-                        value: i,
-                        tags: n,
-                        selections: [...r, n[e]],
-                        isSelecting: l
-                    };
-                });
-            },
-            [u]
-        ),
-        C = i.useCallback(
-            function (e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-                u((n) => {
-                    let { tags: i, value: r, selections: l, isSelecting: s } = n;
+                    let { tags: n, value: r, selections: i, isSelecting: s } = t;
                     return {
                         value: r,
-                        tags: i,
-                        selections: t ? [] : l.filter((t) => t !== i[e]),
+                        tags: n,
+                        selections: [...i, n[e]],
                         isSelecting: s
                     };
                 });
             },
             [u]
         ),
-        f = i.useCallback(
+        x = r.useCallback(
+            function (e) {
+                let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+                u((n) => {
+                    let { tags: r, value: i, selections: s, isSelecting: a } = n;
+                    return {
+                        value: i,
+                        tags: r,
+                        selections: t ? [] : s.filter((t) => t !== r[e]),
+                        isSelecting: a
+                    };
+                });
+            },
+            [u]
+        ),
+        j = r.useCallback(
             (e) => {
                 var t;
                 u((e) => {
@@ -169,11 +211,11 @@ function c(e, t) {
                     };
                 }),
                     null != e && (e.preventDefault(), e.stopPropagation()),
-                    null === (t = r.current) || void 0 === t || t.focus();
+                    null === (t = i.current) || void 0 === t || t.focus();
             },
-            [r, u]
+            [i, u]
         ),
-        v = i.useCallback(
+        N = r.useCallback(
             (e) => {
                 u((t) => {
                     let { tags: n } = t;
@@ -187,12 +229,12 @@ function c(e, t) {
             },
             [u]
         ),
-        N = i.useCallback(
+        v = r.useCallback(
             function (e) {
                 let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-                    i = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
+                    r = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
                 !(o.trim().length <= 0) &&
-                    ((0, s.flushSync)(() => {
+                    ((0, a.flushSync)(() => {
                         u((e) => {
                             let { tags: t } = e;
                             return {
@@ -203,39 +245,39 @@ function c(e, t) {
                             };
                         });
                     }),
-                    i && null != n.current && n.current.scrollToBottom(),
+                    r && null != n.current && n.current.scrollToBottom(),
                     t && (e.preventDefault(), e.stopPropagation()));
             },
             [n, u, o]
         ),
-        j = i.useCallback(
+        _ = r.useCallback(
             (e) => {
                 let t = o.trim().length <= 0;
                 if (d.length > 0) {
                     var n;
-                    (0, s.flushSync)(() => {
+                    (0, a.flushSync)(() => {
                         u((e) => {
-                            let { tags: t, value: n, selections: i } = e;
+                            let { tags: t, value: n, selections: r } = e;
                             return {
                                 value: n,
-                                tags: t.filter((e) => !i.includes(e)),
+                                tags: t.filter((e) => !r.includes(e)),
                                 selections: [],
                                 isSelecting: !1
                             };
                         });
                     }),
-                        null === (n = r.current) || void 0 === n || n.focus(),
+                        null === (n = i.current) || void 0 === n || n.focus(),
                         e.preventDefault(),
                         e.stopPropagation();
                 } else
                     t &&
-                        ((0, s.flushSync)(() => {
+                        ((0, a.flushSync)(() => {
                             u((e) => {
                                 let { tags: t } = e,
                                     n = [...t],
-                                    i = n.pop();
+                                    r = n.pop();
                                 return {
-                                    value: null != i ? i : '',
+                                    value: null != r ? r : '',
                                     tags: [...n],
                                     selections: [],
                                     isSelecting: !1
@@ -245,24 +287,24 @@ function c(e, t) {
                         e.preventDefault(),
                         e.stopPropagation());
             },
-            [r, d.length, u, o]
+            [i, d.length, u, o]
         ),
-        I = i.useCallback(
+        O = r.useCallback(
             (e) => {
-                var t, n, i, l;
-                let s = e.metaKey || e.ctrlKey;
-                'z' === e.key && s ? (m().selections.length > 0 ? null === (t = r.current) || void 0 === t || t.blur() : null === (n = r.current) || void 0 === n || n.focus(), e.preventDefault(), e.stopPropagation()) : 'y' === e.key && s && (h().selections.length > 0 ? null === (i = r.current) || void 0 === i || i.blur() : null === (l = r.current) || void 0 === l || l.focus(), e.preventDefault(), e.stopPropagation());
+                var t, n, r, s;
+                let a = e.metaKey || e.ctrlKey;
+                'z' === e.key && a ? (m().selections.length > 0 ? null === (t = i.current) || void 0 === t || t.blur() : null === (n = i.current) || void 0 === n || n.focus(), e.preventDefault(), e.stopPropagation()) : 'y' === e.key && a && (p().selections.length > 0 ? null === (r = i.current) || void 0 === r || r.blur() : null === (s = i.current) || void 0 === s || s.focus(), e.preventDefault(), e.stopPropagation());
             },
-            [m, h, r]
+            [m, p, i]
         ),
-        E = i.useCallback(
+        y = r.useCallback(
             (e) => {
                 var t;
                 let n = o.trim().length > 0,
-                    { selectionStart: i = 0, selectionEnd: a = 0 } = null !== (t = r.current) && void 0 !== t ? t : {};
+                    { selectionStart: r = 0, selectionEnd: l = 0 } = null !== (t = i.current) && void 0 !== t ? t : {};
                 0 !== c.length &&
-                    (!n || i !== a) &&
-                    ((0, s.flushSync)(() => {
+                    (!n || r !== l) &&
+                    ((0, a.flushSync)(() => {
                         u((e) => {
                             let { tags: t, value: n } = e;
                             return {
@@ -275,46 +317,46 @@ function c(e, t) {
                     }),
                     setImmediate(() => {
                         var e;
-                        null === (e = r.current) || void 0 === e || e.blur(),
+                        null === (e = i.current) || void 0 === e || e.blur(),
                             setTimeout(() => {
                                 var e;
-                                null === (e = l.current) || void 0 === e || e.focus();
+                                null === (e = s.current) || void 0 === e || e.focus();
                             }, 16);
                     }),
                     e.preventDefault(),
                     e.stopPropagation());
             },
-            [l, r, u, c.length, o]
+            [s, i, u, c.length, o]
         ),
-        b = i.useCallback(
+        C = r.useCallback(
             (e) => {
-                e.relatedTarget !== e.currentTarget && N(e, !1, !1);
+                e.relatedTarget !== e.currentTarget && v(e, !1, !1);
             },
-            [N]
+            [v]
         );
     return {
         handlePasteEvent: g,
-        handleInputChange: v,
-        handleKeyDown: i.useCallback(
+        handleInputChange: N,
+        handleKeyDown: r.useCallback(
             (e) => {
                 let t = e.metaKey || e.ctrlKey;
-                'Meta' !== e.key && (a.ye.has(e.key) ? N(e) : 'Backspace' === e.key ? j(e) : 'Escape' === e.key ? f(e) : 'a' === e.key && t ? E(e) : a.Bd.has(e.key) && t && I(e));
+                'Meta' !== e.key && (l.ye.has(e.key) ? v(e) : 'Backspace' === e.key ? _(e) : 'Escape' === e.key ? j(e) : 'a' === e.key && t ? y(e) : l.Bd.has(e.key) && t && O(e));
             },
-            [N, j, f, E, I]
+            [v, _, j, y, O]
         ),
-        handleContainerKeyUp: i.useCallback(
+        handleContainerKeyUp: r.useCallback(
             (e) => {
-                if (document.activeElement !== l.current) return;
+                if (document.activeElement !== s.current) return;
                 let t = e.metaKey || e.ctrlKey;
-                'Backspace' === e.key ? j(e) : 'a' === e.key && t ? E(e) : 'Escape' === e.key ? f(e) : a.Bd.has(e.key) && t ? I(e) : 'Meta' !== e.key && f(e);
+                'Backspace' === e.key ? _(e) : 'a' === e.key && t ? y(e) : 'Escape' === e.key ? j(e) : l.Bd.has(e.key) && t ? O(e) : 'Meta' !== e.key && j(e);
             },
-            [I, j, E, f, l]
+            [O, _, y, j, s]
         ),
-        handleRemoveTag: x,
-        handleTagChangeEvent: p,
-        handleSelectTag: _,
-        handleUnselectTag: C,
-        handleResetTagSelections: f,
-        handleInputBlurEvent: b
+        handleRemoveTag: h,
+        handleTagChangeEvent: f,
+        handleSelectTag: b,
+        handleUnselectTag: x,
+        handleResetTagSelections: j,
+        handleInputBlurEvent: C
     };
 }

@@ -1,13 +1,12 @@
 n.d(t, {
     JV: () => s,
-    aA: () => o,
-    mA: () => f,
+    aA: () => l,
+    mA: () => p,
     ug: () => a
 }),
-    n(47120),
-    n(724458);
-var i = n(392711);
-function r(e, t, n) {
+    n(47120);
+var r = n(392711);
+function i(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,16 +19,32 @@ function r(e, t, n) {
         e
     );
 }
+function o(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                i(e, t, n[t]);
+            });
+    }
+    return e;
+}
 var a = (function (e) {
         return (e.LONGER_DISPATCH = 'longer_dispatch'), (e.EXCEEDED_MAX_CONSECUTIVE_FLUSHES = 'exceeded_max_consecutive_flushes'), (e.FIRED_DUE_TO_MAX_TIMEOUT = 'fired_due_to_max_timeout'), (e.SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED = 'skip_idle_callback_due_to_backgrounded'), e;
     })({}),
     s = (function (e) {
         return (e.TIME_TO_FIRE_IDLE_CALLBACK = 'time_to_fire_idle_callback'), (e.TIME_TO_QUEUE_EMPTY = 'time_to_flush_all_work'), (e.TIME_OVER_DEADLINE = 'time_over_deadline'), (e.DEADLINE_INITIAL_TIME_REMAINING = 'initial_time_of_deadline'), e;
     })({}),
-    o = (function (e) {
+    l = (function (e) {
         return (e.COUNT_DISPATCHES_LEFT_AFTER_YIELD = 'count_dispatches_left_after_yield'), (e.COUNT_FLUSH_BEFORE_QUEUE_EMPTY = 'count_flush_before_queue_empty'), (e.COUNT_INITIAL_DISPATCHS_LENGTH = 'count_initial_dispatches_length'), e;
     })({});
-let l = Object.freeze({
+let c = Object.freeze({
         time_to_fire_idle_callback: null,
         time_to_flush_all_work: null,
         time_over_deadline: null,
@@ -41,27 +56,27 @@ let l = Object.freeze({
         time_over_deadline: [0, 0],
         initial_time_of_deadline: [0, 0]
     }),
-    c = Object.freeze({
+    d = Object.freeze({
         count_flush_before_queue_empty: [0, 0],
         count_dispatches_left_after_yield: [0, 0],
         count_initial_dispatches_length: [0, 0]
     }),
-    d = Object.freeze({
+    f = Object.freeze({
         longer_dispatch: 0,
         exceeded_max_consecutive_flushes: 0,
         fired_due_to_max_timeout: 0,
         skip_idle_callback_due_to_backgrounded: 0
     });
-class f {
+class p {
     reset() {
-        (this._timeTracking = (0, i.cloneDeep)(l)), (this._timingStats = (0, i.cloneDeep)(u)), (this._measurements = (0, i.cloneDeep)(c)), (this._eventCounts = (0, i.cloneDeep)(d));
+        (this._timeTracking = (0, r.cloneDeep)(c)), (this._timingStats = (0, r.cloneDeep)(u)), (this._measurements = (0, r.cloneDeep)(d)), (this._eventCounts = (0, r.cloneDeep)(f));
     }
     clearTime(e) {
         this._timeTracking[e] = null;
     }
     _storeTimeValue(e, t) {
-        let [n, i] = this._timingStats[e];
-        this._timingStats[e] = [(n * i + t) / (i + 1), i + 1];
+        let [n, r] = this._timingStats[e];
+        this._timingStats[e] = [(n * r + t) / (r + 1), r + 1];
     }
     time(e) {
         this._enabled && (this._timeTracking[e] = performance.now());
@@ -78,8 +93,8 @@ class f {
     }
     measure(e, t) {
         if (!this._enabled) return;
-        let [n, i] = this._measurements[e];
-        this._measurements[e] = [(n * i + t) / (i + 1), i + 1];
+        let [n, r] = this._measurements[e];
+        this._measurements[e] = [(n * r + t) / (r + 1), r + 1];
     }
     track(e) {
         this._enabled && (this._eventCounts[e] += 1);
@@ -92,23 +107,24 @@ class f {
     }
     generateTelemetry() {
         let e = Object.entries(this._timingStats).reduce((e, t) => {
-                let [n, [i]] = t;
-                return (e['avg_'.concat(n)] = ''.concat(i.toFixed(2), 'ms')), e;
+                let [n, [r]] = t;
+                return (e['avg_'.concat(n)] = ''.concat(r.toFixed(2), 'ms')), e;
             }, {}),
             t = Object.entries(this._measurements).reduce((e, t) => {
-                let [n, [i]] = t;
-                return (e['avg_'.concat(n)] = ''.concat(i.toFixed(2))), e;
+                let [n, [r]] = t;
+                return (e['avg_'.concat(n)] = ''.concat(r.toFixed(2))), e;
             }, {});
-        return {
-            ...Object.entries(this._eventCounts).reduce((e, t) => {
-                let [n, i] = t;
-                return (e['count_'.concat(n)] = ''.concat(i)), e;
+        return o(
+            {},
+            Object.entries(this._eventCounts).reduce((e, t) => {
+                let [n, r] = t;
+                return (e['count_'.concat(n)] = ''.concat(r)), e;
             }, {}),
-            ...e,
-            ...t
-        };
+            e,
+            t
+        );
     }
     constructor() {
-        r(this, '_timeTracking', (0, i.cloneDeep)(l)), r(this, '_timingStats', (0, i.cloneDeep)(u)), r(this, '_measurements', (0, i.cloneDeep)(c)), r(this, '_eventCounts', (0, i.cloneDeep)(d)), r(this, '_enabled', !1);
+        i(this, '_timeTracking', (0, r.cloneDeep)(c)), i(this, '_timingStats', (0, r.cloneDeep)(u)), i(this, '_measurements', (0, r.cloneDeep)(d)), i(this, '_eventCounts', (0, r.cloneDeep)(f)), i(this, '_enabled', !1);
     }
 }

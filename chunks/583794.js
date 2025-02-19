@@ -1,4 +1,4 @@
-function i(e, t, n) {
+function r(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -11,23 +11,59 @@ function i(e, t, n) {
         e
     );
 }
-n.d(t, { Z: () => r }), n(47120);
-class r {
+function i(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            i = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (i = i.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            i.forEach(function (t) {
+                r(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function o(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function a(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : o(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+n.d(t, { Z: () => s }), n(47120);
+class s {
     traceEvent(e, t) {
         let n;
-        let i = this._report,
-            r = ['detached', 'waiting', 'attached', 'started', 'playing', 'silence'];
-        void 0 !== i[(n = 'soundshare_state_transition' === t.type ? 'soundshare_state_transition_'.concat(r[t.newState], '_count') : ''.concat(t.type, '_count'))] ? i[n] < 32767 && i[n]++ : i.soundshare_unknown_event_count++, 'pid' in t && (0 === i.soundshare_first_pid && (i.soundshare_first_pid = t.pid), (i.soundshare_last_pid = t.pid), this._pids.add(t.pid)), null != e && (null == i.soundshare_first_session && (i.soundshare_first_session = e), (i.soundshare_last_session = e));
+        let r = this._report,
+            i = ['detached', 'waiting', 'attached', 'started', 'playing', 'silence'];
+        void 0 !== r[(n = 'soundshare_state_transition' === t.type ? 'soundshare_state_transition_'.concat(i[t.newState], '_count') : ''.concat(t.type, '_count'))] ? r[n] < 32767 && r[n]++ : r.soundshare_unknown_event_count++, 'pid' in t && (0 === r.soundshare_first_pid && (r.soundshare_first_pid = t.pid), (r.soundshare_last_pid = t.pid), this._pids.add(t.pid)), null != e && (null == r.soundshare_first_session && (r.soundshare_first_session = e), (r.soundshare_last_session = e));
     }
     getStats() {
-        return {
-            ...this._report,
-            soundshare_unique_pids: this._pids.size
-        };
+        return a(i({}, this._report), { soundshare_unique_pids: this._pids.size });
     }
     constructor() {
-        i(this, '_report', void 0),
-            i(this, '_pids', void 0),
+        r(this, '_report', void 0),
+            r(this, '_pids', void 0),
             (this._report = {
                 soundshare_attach_requested_count: 0,
                 soundshare_capturing_count: 0,

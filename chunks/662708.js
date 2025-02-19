@@ -1,83 +1,83 @@
-s.d(t, { default: () => x }), s(47120);
-var i = s(200651),
-    l = s(192379),
-    r = s(481060),
-    n = s(153867),
-    a = s(663993),
-    o = s(771845),
-    h = s(981631),
-    d = s(388032),
-    c = s(220551);
-function m(e, t, s) {
+r.d(t, { default: () => b }), r(47120);
+var s = r(200651),
+    n = r(192379),
+    o = r(481060),
+    i = r(153867),
+    l = r(663993),
+    a = r(771845),
+    c = r(981631),
+    h = r(388032),
+    p = r(961081);
+function d(e, t, r) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: s,
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = s),
+            : (e[t] = r),
         e
     );
 }
-let u = (0, a.Un)({
-    createPromise: () => s.e('4848').then(s.bind(s, 336231)),
+let u = (0, l.Un)({
+    createPromise: () => r.e('4848').then(r.bind(r, 336231)),
     webpackId: 336231
 });
-class p extends l.PureComponent {
+class m extends n.PureComponent {
     render() {
         let { transitionState: e } = this.props,
-            { name: t, color: s } = this.state;
-        return (0, i.jsxs)(r.Y0X, {
+            { name: t, color: r } = this.state;
+        return (0, s.jsxs)(o.Y0X, {
             transitionState: e,
-            'aria-label': d.intl.string(d.t.Dx7im5),
-            size: r.CgR.DYNAMIC,
+            'aria-label': h.NW.string(h.t.Dx7im5),
+            size: o.CgR.DYNAMIC,
             children: [
-                (0, i.jsxs)(r.xBx, {
-                    className: c.header,
+                (0, s.jsxs)(o.xBx, {
+                    className: p.header,
                     separator: !1,
                     children: [
-                        (0, i.jsx)(r.X6q, {
+                        (0, s.jsx)(o.X6q, {
                             variant: 'heading-lg/semibold',
-                            children: d.intl.string(d.t.Dx7im5)
+                            children: h.NW.string(h.t.Dx7im5)
                         }),
-                        (0, i.jsx)(r.olH, { onClick: this.close })
+                        (0, s.jsx)(o.olH, { onClick: this.close })
                     ]
                 }),
-                (0, i.jsx)(r.hzk, {
-                    children: (0, i.jsxs)('form', {
+                (0, s.jsx)(o.hzk, {
+                    children: (0, s.jsxs)('form', {
                         onSubmit: this.handleSubmit,
                         children: [
-                            (0, i.jsx)(r.xJW, {
-                                title: d.intl.string(d.t.tGRbjI),
-                                className: c.formItem,
-                                children: (0, i.jsx)(r.oil, {
-                                    maxLength: h.dYL,
+                            (0, s.jsx)(o.xJW, {
+                                title: h.NW.string(h.t.tGRbjI),
+                                className: p.formItem,
+                                children: (0, s.jsx)(o.oil, {
+                                    maxLength: c.dYL,
                                     value: t,
                                     onChange: this.handleNameChange,
-                                    placeholder: d.intl.string(d.t.xV9hVl),
+                                    placeholder: h.NW.string(h.t.xV9hVl),
                                     autoFocus: !0
                                 })
                             }),
-                            (0, i.jsx)(r.xJW, {
-                                title: d.intl.string(d.t.xpurRE),
-                                className: c.formItem,
-                                children: (0, i.jsx)(u, {
-                                    defaultColor: h.Wyy,
-                                    colors: h.pmI,
-                                    value: null != s ? s : h.Wyy,
+                            (0, s.jsx)(o.xJW, {
+                                title: h.NW.string(h.t.xpurRE),
+                                className: p.formItem,
+                                children: (0, s.jsx)(u, {
+                                    defaultColor: c.Wyy,
+                                    colors: c.pmI,
+                                    value: null != r ? r : c.Wyy,
                                     onChange: this.handleColorChange
                                 })
                             })
                         ]
                     })
                 }),
-                (0, i.jsx)(r.mzw, {
-                    children: (0, i.jsx)(r.zxk, {
+                (0, s.jsx)(o.mzw, {
+                    children: (0, s.jsx)(o.zxk, {
                         type: 'submit',
                         onClick: this.handleSubmit,
-                        children: d.intl.string(d.t.i4jeWV)
+                        children: h.NW.string(h.t.i4jeWV)
                     })
                 })
             ]
@@ -86,34 +86,64 @@ class p extends l.PureComponent {
     constructor(...e) {
         var t;
         super(...e),
-            m(this, 'state', {
+            d(this, 'state', {
                 name: null !== (t = this.props.folderName) && void 0 !== t ? t : '',
                 color: this.props.folderColor
             }),
-            m(this, 'close', () => {
+            d(this, 'close', () => {
                 this.props.onClose();
             }),
-            m(this, 'handleNameChange', (e) => {
+            d(this, 'handleNameChange', (e) => {
                 this.setState({ name: e });
             }),
-            m(this, 'handleColorChange', (e) => {
+            d(this, 'handleColorChange', (e) => {
                 this.setState({ color: e });
             }),
-            m(this, 'handleSubmit', (e) => {
+            d(this, 'handleSubmit', (e) => {
                 e.preventDefault();
                 let { folderId: t } = this.props,
-                    { name: s, color: i } = this.state,
-                    l = o.ZP.getGuildFolders().map((e) =>
-                        e.folderId === t
-                            ? {
-                                  ...e,
-                                  folderName: s,
-                                  folderColor: i
-                              }
-                            : e
-                    );
-                (0, n.V1)(l), this.close();
+                    { name: r, color: s } = this.state,
+                    n = a.ZP.getGuildFolders().map((e) => {
+                        var n, o;
+                        return e.folderId === t
+                            ? ((n = (function (e) {
+                                  for (var t = 1; t < arguments.length; t++) {
+                                      var r = null != arguments[t] ? arguments[t] : {},
+                                          s = Object.keys(r);
+                                      'function' == typeof Object.getOwnPropertySymbols &&
+                                          (s = s.concat(
+                                              Object.getOwnPropertySymbols(r).filter(function (e) {
+                                                  return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                              })
+                                          )),
+                                          s.forEach(function (t) {
+                                              d(e, t, r[t]);
+                                          });
+                                  }
+                                  return e;
+                              })({}, e)),
+                              (o = o =
+                                  {
+                                      folderName: r,
+                                      folderColor: s
+                                  }),
+                              Object.getOwnPropertyDescriptors
+                                  ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(o))
+                                  : (function (e, t) {
+                                        var r = Object.keys(e);
+                                        if (Object.getOwnPropertySymbols) {
+                                            var s = Object.getOwnPropertySymbols(e);
+                                            r.push.apply(r, s);
+                                        }
+                                        return r;
+                                    })(Object(o)).forEach(function (e) {
+                                        Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(o, e));
+                                    }),
+                              n)
+                            : e;
+                    });
+                (0, i.V1)(n), this.close();
             });
     }
 }
-let x = p;
+let b = m;

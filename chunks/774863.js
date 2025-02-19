@@ -1,11 +1,11 @@
-let i;
-n.d(t, { Z: () => y }), n(47120);
-var r,
-    a = n(442837),
-    s = n(570140),
-    o = n(70956),
+let r;
+n.d(t, { Z: () => S }), n(47120);
+var i,
+    o = n(442837),
+    a = n(570140),
+    s = n(70956),
     l = n(709054);
-function u(e, t, n) {
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,69 +18,96 @@ function u(e, t, n) {
         e
     );
 }
-let c = 14 * o.Z.Millis.DAY,
-    d = Object.freeze([]),
-    f = {},
-    _ = {};
-function p(e) {
+function u(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                c(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function d(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function f(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : d(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let p = 14 * s.Z.Millis.DAY,
+    _ = Object.freeze([]),
+    h = {},
+    m = {};
+function g(e) {
     var t;
-    let { messageId: n, channelId: i, attachments: r } = e,
-        a = {
+    let { messageId: n, channelId: r, attachments: i } = e,
+        o = {
             messageId: n,
-            channelId: i,
-            attachments: r,
+            channelId: r,
+            attachments: i,
             reportSubmit: !1
         },
-        s = null !== (t = _[i]) && void 0 !== t ? t : d;
-    (_[i] = [...s, a]), (f[n] = a);
+        a = null !== (t = m[r]) && void 0 !== t ? t : _;
+    (m[r] = [...a, o]), (h[n] = o);
 }
-function h(e) {
+function E(e) {
     let { messageId: t, channelId: n } = e,
-        i = _[n];
-    null != i &&
-        ((_[n] = i.map((e) =>
-            e.messageId === t
-                ? {
-                      ...e,
-                      reportSubmit: !0
-                  }
-                : e
-        )),
-        (f[t] = {
-            ...f[t],
-            reportSubmit: !0
-        }));
+        r = m[n];
+    null != r && ((m[n] = r.map((e) => (e.messageId === t ? f(u({}, e), { reportSubmit: !0 }) : e))), (h[t] = f(u({}, h[t]), { reportSubmit: !0 })));
 }
-function m() {
-    E();
+function v() {
+    y();
 }
-function g(e) {
+function b(e) {
     let { explicitContentScanVersion: t } = e;
-    (i = t), E();
+    (r = t), y();
 }
-function E() {
-    (f = {}), (_ = {});
+function y() {
+    (h = {}), (m = {});
 }
-class v extends (r = a.ZP.Store) {
+class O extends (i = o.ZP.Store) {
     getFpMessageInfo(e) {
-        return f[e];
+        return h[e];
     }
     getChannelFpInfo(e) {
         var t;
-        return null !== (t = _[e]) && void 0 !== t ? t : d;
+        return null !== (t = m[e]) && void 0 !== t ? t : _;
     }
     canSubmitFpReport(e) {
-        let t = f[e];
-        return null != t && !t.reportSubmit && l.default.age(t.messageId) < c;
+        let t = h[e];
+        return null != t && !t.reportSubmit && l.default.age(t.messageId) < p;
     }
     get validContentScanVersion() {
-        return i;
+        return r;
     }
 }
-u(v, 'displayName', 'FalsePositiveStore');
-let y = new v(s.Z, {
-    LOGOUT: m,
-    CONNECTION_OPEN: g,
-    MESSAGE_EXPLICIT_CONTENT_FP_CREATE: p,
-    MESSAGE_EXPLICIT_CONTENT_FP_SUBMIT: h
+c(O, 'displayName', 'FalsePositiveStore');
+let S = new O(a.Z, {
+    LOGOUT: v,
+    CONNECTION_OPEN: b,
+    MESSAGE_EXPLICIT_CONTENT_FP_CREATE: g,
+    MESSAGE_EXPLICIT_CONTENT_FP_SUBMIT: E
 });

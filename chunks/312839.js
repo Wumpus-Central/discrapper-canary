@@ -1,30 +1,73 @@
 n.d(t, {
-    P: () => c,
-    R: () => d
-});
+    P: () => d,
+    R: () => c
+}),
+    n(301563);
 var i = n(13245),
-    s = n(556296),
-    l = n(237997),
-    a = n(13140),
-    o = n(981631),
-    r = n(987650);
-function d(e, t) {
+    r = n(556296),
+    s = n(237997),
+    o = n(13140),
+    l = n(981631),
+    a = n(987650);
+function c(e, t) {
     return {
         trackView() {
-            i.Z.track(o.rMx.NOTIFICATION_VIEWED, t), i.Z.notificationEvent(e, r.bv.Viewed);
+            i.Z.track(l.rMx.NOTIFICATION_VIEWED, t), i.Z.notificationEvent(e, a.bv.Viewed);
         },
         trackClick(n) {
-            let s = l.Z.isInstanceLocked() ? o.Sbl.LOCKED_OVERLAY : o.Sbl.UNLOCKED_OVERLAY;
-            i.Z.track(o.rMx.NOTIFICATION_CLICKED, {
-                ...t,
-                location: s,
-                action_type: n
-            }),
-                i.Z.notificationEvent(e, r.bv.Clicked);
+            var r, o;
+            let c = s.Z.isInstanceLocked() ? l.Sbl.LOCKED_OVERLAY : l.Sbl.UNLOCKED_OVERLAY;
+            i.Z.track(
+                l.rMx.NOTIFICATION_CLICKED,
+                ((r = (function (e) {
+                    for (var t = 1; t < arguments.length; t++) {
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            i = Object.keys(n);
+                        'function' == typeof Object.getOwnPropertySymbols &&
+                            (i = i.concat(
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                })
+                            )),
+                            i.forEach(function (t) {
+                                var i;
+                                (i = n[t]),
+                                    t in e
+                                        ? Object.defineProperty(e, t, {
+                                              value: i,
+                                              enumerable: !0,
+                                              configurable: !0,
+                                              writable: !0
+                                          })
+                                        : (e[t] = i);
+                            });
+                    }
+                    return e;
+                })({}, t)),
+                (o = o =
+                    {
+                        location: c,
+                        action_type: n
+                    }),
+                Object.getOwnPropertyDescriptors
+                    ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(o))
+                    : (function (e, t) {
+                          var n = Object.keys(e);
+                          if (Object.getOwnPropertySymbols) {
+                              var i = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, i);
+                          }
+                          return n;
+                      })(Object(o)).forEach(function (e) {
+                          Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(o, e));
+                      }),
+                r)
+            ),
+                i.Z.notificationEvent(e, a.bv.Clicked);
         }
     };
 }
-function c() {
-    let e = s.ZP.getOverlayKeybind();
-    return null != e ? (0, a.BB)(e.shortcut, !0).split(' + ') : ['???'];
+function d() {
+    let e = r.ZP.getOverlayKeybind();
+    return null != e ? (0, o.BB)(e.shortcut, !0).split(' + ') : ['???'];
 }

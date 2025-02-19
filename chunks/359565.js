@@ -1,95 +1,132 @@
 n.d(t, {
-    q: () => g,
-    s: () => f
+    q: () => _,
+    s: () => b
 });
-var i = n(200651),
-    l = n(192379),
-    a = n(120356),
-    r = n.n(a),
-    s = n(481060),
-    o = n(367907),
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    o = n.n(l),
+    a = n(481060),
+    s = n(367907),
     c = n(626135),
-    d = n(346479),
-    u = n(665906),
-    h = n(981631),
-    p = n(388032),
-    m = n(718181);
-function f(e) {
-    let { channel: t, narrow: n } = e,
-        a = (0, u.tc)(t);
-    return (
-        l.useEffect(() => {
-            c.default.track(h.rMx.CHANNEL_BANNER_VIEWED, {
-                ...(0, o.hH)(t.getGuildId()),
-                ...(0, o.v_)(t),
-                banner_type: 'thread'
+    u = n(346479),
+    d = n(665906),
+    p = n(981631),
+    h = n(388032),
+    f = n(830038);
+function m(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
             });
+    }
+    return e;
+}
+function g(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function b(e) {
+    let { channel: t, narrow: n } = e,
+        l = (0, d.tc)(t);
+    return (
+        i.useEffect(() => {
+            c.default.track(p.rMx.CHANNEL_BANNER_VIEWED, g(m({}, (0, s.hH)(t.getGuildId()), (0, s.v_)(t)), { banner_type: 'thread' }));
         }, [t]),
-        (0, i.jsxs)('div', {
-            className: r()(m.chatHeaderBar, { [m.narrow]: n }),
+        (0, r.jsxs)('div', {
+            className: o()(f.chatHeaderBar, { [f.narrow]: n }),
             children: [
-                (0, i.jsx)(s.Text, {
-                    className: m.chatHeaderBarText,
+                (0, r.jsx)(a.Text, {
+                    className: f.chatHeaderBarText,
                     variant: 'text-sm/normal',
                     color: 'header-secondary',
-                    children: t.isForumPost() ? p.intl.string(p.t['833FDg']) : p.intl.string(p.t.rEeodH)
+                    children: t.isForumPost() ? h.NW.string(h.t['833FDg']) : h.NW.string(h.t.rEeodH)
                 }),
-                a
-                    ? (0, i.jsx)(s.zxk, {
-                          size: n ? s.zxk.Sizes.SMALL : s.zxk.Sizes.TINY,
-                          className: m.chatHeaderBarButton,
-                          color: s.zxk.Colors.PRIMARY,
+                l
+                    ? (0, r.jsx)(a.zxk, {
+                          size: n ? a.zxk.Sizes.SMALL : a.zxk.Sizes.TINY,
+                          className: f.chatHeaderBarButton,
+                          color: a.zxk.Colors.PRIMARY,
                           onClick: () => {
-                              c.default.track(h.rMx.CHANNEL_BANNER_CTA_CLICKED, {
-                                  ...(0, o.hH)(t.getGuildId()),
-                                  ...(0, o.v_)(t),
-                                  banner_type: 'thread',
-                                  cta_type: 'unarchive'
-                              }),
-                                  d.Z.unarchiveThread(t, !1);
+                              c.default.track(
+                                  p.rMx.CHANNEL_BANNER_CTA_CLICKED,
+                                  g(m({}, (0, s.hH)(t.getGuildId()), (0, s.v_)(t)), {
+                                      banner_type: 'thread',
+                                      cta_type: 'unarchive'
+                                  })
+                              ),
+                                  u.Z.unarchiveThread(t, !1);
                           },
-                          children: p.intl.string(p.t['0dvvEh'])
+                          children: h.NW.string(h.t['0dvvEh'])
                       })
                     : null
             ]
         })
     );
 }
-function g(e) {
+function _(e) {
     let { channel: t, narrow: n } = e,
-        a = (0, u.Xb)(t);
+        l = (0, d.Xb)(t);
     return (
-        l.useEffect(() => {
-            c.default.track(h.rMx.CHANNEL_BANNER_VIEWED, {
-                ...(0, o.hH)(t.getGuildId()),
-                ...(0, o.v_)(t),
-                banner_type: 'thread'
-            });
+        i.useEffect(() => {
+            c.default.track(p.rMx.CHANNEL_BANNER_VIEWED, g(m({}, (0, s.hH)(t.getGuildId()), (0, s.v_)(t)), { banner_type: 'thread' }));
         }, [t]),
-        (0, i.jsxs)('div', {
-            className: r()(m.chatHeaderBar, { [m.narrow]: n }),
+        (0, r.jsxs)('div', {
+            className: o()(f.chatHeaderBar, { [f.narrow]: n }),
             children: [
-                (0, i.jsx)(s.Text, {
-                    className: m.chatHeaderBarText,
+                (0, r.jsx)(a.Text, {
+                    className: f.chatHeaderBarText,
                     variant: 'text-sm/normal',
                     color: 'header-secondary',
-                    children: t.isForumPost() ? p.intl.string(p.t.E7oO8v) : p.intl.string(p.t['V/JF2N'])
+                    children: t.isForumPost() ? h.NW.string(h.t.E7oO8v) : h.NW.string(h.t['V/JF2N'])
                 }),
-                a
-                    ? (0, i.jsx)(s.zxk, {
-                          size: n ? s.zxk.Sizes.SMALL : s.zxk.Sizes.TINY,
-                          className: m.chatHeaderBarButton,
-                          color: s.zxk.Colors.PRIMARY,
+                l
+                    ? (0, r.jsx)(a.zxk, {
+                          size: n ? a.zxk.Sizes.SMALL : a.zxk.Sizes.TINY,
+                          className: f.chatHeaderBarButton,
+                          color: a.zxk.Colors.PRIMARY,
                           onClick: () => {
-                              c.default.track(h.rMx.CHANNEL_BANNER_CTA_CLICKED, {
-                                  ...(0, o.hH)(t.getGuildId()),
-                                  ...(0, o.v_)(t),
-                                  banner_type: 'thread',
-                                  cta_type: 'unlock'
-                              }),
-                                  d.Z.unlockThread(t);
+                              c.default.track(
+                                  p.rMx.CHANNEL_BANNER_CTA_CLICKED,
+                                  g(m({}, (0, s.hH)(t.getGuildId()), (0, s.v_)(t)), {
+                                      banner_type: 'thread',
+                                      cta_type: 'unlock'
+                                  })
+                              ),
+                                  u.Z.unlockThread(t);
                           },
-                          children: p.intl.string(p.t.zA9d1N)
+                          children: h.NW.string(h.t.zA9d1N)
                       })
                     : null
             ]

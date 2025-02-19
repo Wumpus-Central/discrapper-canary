@@ -1,11 +1,11 @@
-let i, r;
-n.d(t, { Z: () => A }), n(47120);
-var a,
-    s = n(442837),
-    o = n(570140),
+let r, i;
+n.d(t, { Z: () => C }), n(47120);
+var o,
+    a = n(442837),
+    s = n(570140),
     l = n(981631),
-    u = n(354459);
-function c(e, t, n) {
+    c = n(354459);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,165 +18,195 @@ function c(e, t, n) {
         e
     );
 }
-let d = new Map(),
-    f = {},
-    _ = l.VD2.BOTTOM_RIGHT,
-    p = {
-        [u.cL.VIDEO]: u.l8[u.cL.VIDEO],
-        [u.cL.CAMERA_PREVIEW]: u.l8[u.cL.CAMERA_PREVIEW]
-    };
-function h(e) {
-    var t, n;
-    let { id: a, component: s, props: o } = e;
-    if (null != d.get(a)) return;
-    let u = {
-        id: a,
-        component: s,
-        position: null !== (t = o.position) && void 0 !== t ? t : _,
-        props: o,
-        docked: null !== (n = o.docked) && void 0 !== n && n
-    };
-    d.set(a, u), s === l.NYg.VIDEO ? null == i && (i = a) : s === l.NYg.EMBED_IFRAME && null == r && (r = a);
+function d(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                u(e, t, n[t]);
+            });
+    }
+    return e;
 }
-function m(e) {
+function f(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function p(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : f(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let _ = new Map(),
+    h = {},
+    m = l.VD2.BOTTOM_RIGHT,
+    g = {
+        [c.cL.VIDEO]: c.l8[c.cL.VIDEO],
+        [c.cL.CAMERA_PREVIEW]: c.l8[c.cL.CAMERA_PREVIEW]
+    };
+function E(e) {
+    var t, n;
+    let { id: o, component: a, props: s } = e;
+    if (null != _.get(o)) return;
+    let c = {
+        id: o,
+        component: a,
+        position: null !== (t = s.position) && void 0 !== t ? t : m,
+        props: s,
+        docked: null !== (n = s.docked) && void 0 !== n && n
+    };
+    _.set(o, c), a === l.NYg.VIDEO ? null == r && (r = o) : a === l.NYg.EMBED_IFRAME && null == i && (i = o);
+}
+function v(e) {
     let { id: t } = e;
-    if (!d.has(t)) return !1;
+    if (!_.has(t)) return !1;
     {
-        d.delete(t);
-        let e = Array.from(d.keys());
-        i === t
-            ? (i = e.find((e) => {
-                  let t = d.get(e);
+        _.delete(t);
+        let e = Array.from(_.keys());
+        r === t
+            ? (r = e.find((e) => {
+                  let t = _.get(e);
                   return null != t && t.component === l.NYg.VIDEO;
               }))
-            : r === t &&
-              (r = e.find((e) => {
-                  let t = d.get(e);
+            : i === t &&
+              (i = e.find((e) => {
+                  let t = _.get(e);
                   return null != t && t.component === l.NYg.EMBED_IFRAME;
               }));
     }
 }
-function g(e) {
+function b(e) {
     let { id: t, position: n } = e;
-    if (null == t || (i !== t && r !== t)) return !1;
+    if (null == t || (r !== t && i !== t)) return !1;
     {
         let e = new Map();
-        d.forEach((t, i) => {
-            e.set(i, {
-                ...t,
-                position: n
-            });
+        _.forEach((t, r) => {
+            e.set(r, p(d({}, t), { position: n }));
         }),
-            (d = e),
-            (_ = n);
+            (_ = e),
+            (m = n);
     }
 }
-function E(e) {
-    let { width: t, pipType: n } = e;
-    p[n] = t;
-}
-function v(e) {
-    let { id: t, rect: n } = e;
-    f[t] = n;
-}
 function y(e) {
+    let { width: t, pipType: n } = e;
+    g[n] = t;
+}
+function O(e) {
+    let { id: t, rect: n } = e;
+    h[t] = n;
+}
+function S(e) {
     let { id: t } = e;
-    if (i !== t && r !== t) return !1;
+    if (r !== t && i !== t) return !1;
     {
-        let e = d.get(t);
+        let e = _.get(t);
         if (null == e) return !1;
-        d.set(t, {
-            ...e,
-            hidden: !0
-        });
+        _.set(t, p(d({}, e), { hidden: !0 }));
     }
 }
 function I(e) {
     let { id: t } = e;
-    if (i !== t && r !== t) return !1;
+    if (r !== t && i !== t) return !1;
     {
-        let e = d.get(t);
+        let e = _.get(t);
         if (null == e) return !1;
-        d.set(t, {
-            ...e,
-            hidden: !1
-        });
+        _.set(t, p(d({}, e), { hidden: !1 }));
     }
 }
 function T(e) {
     let { id: t } = e,
-        n = d.get(t);
-    null != n && (n.component === l.NYg.VIDEO ? (i = t) : n.component === l.NYg.EMBED_IFRAME && (r = t));
+        n = _.get(t);
+    null != n && (n.component === l.NYg.VIDEO ? (r = t) : n.component === l.NYg.EMBED_IFRAME && (i = t));
 }
-function b() {
-    (i = null), (r = null), (d = new Map());
+function N() {
+    (r = null), (i = null), (_ = new Map());
 }
-class S extends (a = s.ZP.PersistedStore) {
+class A extends (o = a.ZP.PersistedStore) {
     initialize(e) {
         if (null == e) {
-            (_ = l.VD2.BOTTOM_RIGHT),
-                (p = {
-                    [u.cL.VIDEO]: u.l8[u.cL.VIDEO],
-                    [u.cL.CAMERA_PREVIEW]: u.l8[u.cL.CAMERA_PREVIEW]
+            (m = l.VD2.BOTTOM_RIGHT),
+                (g = {
+                    [c.cL.VIDEO]: c.l8[c.cL.VIDEO],
+                    [c.cL.CAMERA_PREVIEW]: c.l8[c.cL.CAMERA_PREVIEW]
                 });
             return;
         }
-        (_ = e.openPosition), (p = e.pipWidths);
+        (m = e.openPosition), (g = e.pipWidths);
     }
     get pipWindow() {
         var e;
-        return null == i && null == r ? null : d.get(null !== (e = null != i ? i : r) && void 0 !== e ? e : '');
+        return null == r && null == i ? null : _.get(null !== (e = null != r ? r : i) && void 0 !== e ? e : '');
     }
     get pipVideoWindow() {
-        return null == i ? null : d.get(i);
+        return null == r ? null : _.get(r);
     }
     get pipActivityWindow() {
-        return null == r ? null : d.get(r);
+        return null == i ? null : _.get(i);
     }
     get pipWindows() {
-        return d;
+        return _;
     }
     pipWidth(e) {
-        return p[e];
+        return g[e];
     }
     isEmbeddedActivityHidden() {
-        return null == r;
+        return null == i;
     }
     getDockedRect(e) {
-        return f[e];
+        return h[e];
     }
     isOpen(e) {
-        return null != e && d.has(e);
+        return null != e && _.has(e);
     }
     getState() {
         return {
-            openPosition: _,
-            pipWidths: p
+            openPosition: m,
+            pipWidths: g
         };
     }
 }
-c(S, 'displayName', 'PictureInPictureStore'),
-    c(S, 'persistKey', 'PictureInPictureStore'),
-    c(S, 'migrations', [
+u(A, 'displayName', 'PictureInPictureStore'),
+    u(A, 'persistKey', 'PictureInPictureStore'),
+    u(A, 'migrations', [
         (e) => {
             var t, n;
             return {
                 pipWidths: {
-                    [u.cL.VIDEO]: null !== (t = e.pipWidth) && void 0 !== t ? t : u.l8[u.cL.VIDEO],
-                    [u.cL.CAMERA_PREVIEW]: u.l8[u.cL.CAMERA_PREVIEW]
+                    [c.cL.VIDEO]: null !== (t = e.pipWidth) && void 0 !== t ? t : c.l8[c.cL.VIDEO],
+                    [c.cL.CAMERA_PREVIEW]: c.l8[c.cL.CAMERA_PREVIEW]
                 },
                 openPosition: null !== (n = e.openPosition) && void 0 !== n ? n : l.VD2.BOTTOM_RIGHT
             };
         }
     ]);
-let A = new S(o.Z, {
-    PICTURE_IN_PICTURE_OPEN: h,
-    PICTURE_IN_PICTURE_CLOSE: m,
-    PICTURE_IN_PICTURE_MOVE: g,
-    PICTURE_IN_PICTURE_RESIZE: E,
-    PICTURE_IN_PICTURE_HIDE: y,
+let C = new A(s.Z, {
+    PICTURE_IN_PICTURE_OPEN: E,
+    PICTURE_IN_PICTURE_CLOSE: v,
+    PICTURE_IN_PICTURE_MOVE: b,
+    PICTURE_IN_PICTURE_RESIZE: y,
+    PICTURE_IN_PICTURE_HIDE: S,
     PICTURE_IN_PICTURE_SHOW: I,
-    PICTURE_IN_PICTURE_UPDATE_RECT: v,
+    PICTURE_IN_PICTURE_UPDATE_RECT: O,
     PICTURE_IN_PICTURE_UPDATE_SELECTED_WINDOW: T,
-    LOGOUT: b
+    LOGOUT: N
 });

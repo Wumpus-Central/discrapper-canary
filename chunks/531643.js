@@ -1,44 +1,73 @@
 n.d(t, {
-    A: () => p,
-    openUploadError: () => h
+    A: () => m,
+    openUploadError: () => g
 });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(120356),
-    a = n.n(r),
-    s = n(952265),
-    o = n(466377),
+var i = n(120356),
+    o = n.n(i),
+    a = n(952265),
+    s = n(466377),
     l = n(313201),
-    u = n(355314),
-    c = n(310752),
+    c = n(355314),
+    u = n(310752),
     d = n(731994),
-    f = n(255969);
+    f = n(371100);
+function p(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
 function _(e) {
-    let { title: t, help: n, showPremiumUpsell: r, transitionState: s, icons: _, fileSize: p, onClose: h } = e,
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                p(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function h(e) {
+    let { title: t, help: n, showPremiumUpsell: i, transitionState: a, icons: p, fileSize: _, onClose: h } = e,
         m = (0, l.Dt)(),
-        g = null != _ ? _ : d.J6;
-    return r
-        ? (0, i.jsx)(u.Z, {
-              transitionState: s,
+        g = null != p ? p : d.J6;
+    return i
+        ? (0, r.jsx)(c.Z, {
+              transitionState: a,
               onClose: h,
-              fileSize: p
+              fileSize: _
           })
-        : (0, i.jsx)(o.Y0, {
-              size: o.Cg.DYNAMIC,
+        : (0, r.jsx)(s.Y0, {
+              size: s.Cg.DYNAMIC,
               'aria-labelledby': m,
-              transitionState: s,
-              children: (0, i.jsx)('div', {
-                  className: a()(f.uploadDropModal, f.error),
-                  children: (0, i.jsxs)('div', {
+              transitionState: a,
+              children: (0, r.jsx)('div', {
+                  className: o()(f.uploadDropModal, f.error),
+                  children: (0, r.jsxs)('div', {
                       className: f.inner,
                       children: [
-                          (0, i.jsx)(c.Z, { icons: g }),
-                          (0, i.jsx)('div', {
+                          (0, r.jsx)(u.Z, { icons: g }),
+                          (0, r.jsx)('div', {
                               id: m,
                               className: f.title,
                               children: t
                           }),
-                          (0, i.jsx)('div', {
+                          (0, r.jsx)('div', {
                               className: f.instructions,
                               children: n
                           })
@@ -47,14 +76,7 @@ function _(e) {
               })
           });
 }
-let p = 'UPLOAD_ERROR_MODAL_KEY';
-function h(e) {
-    (0, s.h7)(
-        (t) =>
-            (0, i.jsx)(_, {
-                ...t,
-                ...e
-            }),
-        { modalKey: p }
-    );
+let m = 'UPLOAD_ERROR_MODAL_KEY';
+function g(e) {
+    (0, a.h7)((t) => (0, r.jsx)(h, _({}, t, e)), { modalKey: m });
 }

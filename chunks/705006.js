@@ -1,9 +1,9 @@
-n.d(t, { Z: () => f }), n(47120);
-var i = n(186102),
-    r = n(873741),
-    a = n(866960),
-    s = n(626135),
-    o = n(981631);
+n.d(t, { Z: () => h }), n(47120);
+var r = n(186102),
+    i = n(873741),
+    o = n(866960),
+    a = n(626135),
+    s = n(981631);
 function l(e, t, n) {
     return (
         t in e
@@ -17,21 +17,64 @@ function l(e, t, n) {
         e
     );
 }
-let u = 0.1;
 function c(e) {
-    if (Math.random() > u) return;
-    let t = null == e.apiResponseTimestamp ? null : e.apiResponseTimestamp - e.initialSendTimestamp,
-        n = (0, r.d)();
-    s.default.track(o.rMx.QUEST_DECISION_ROUNDTRIP, {
-        ...(0, i.Z)(),
-        endpoint: e.endpoint,
-        was_successful: e.wasSuccessful,
-        api_latency_ms: t,
-        mobile_network_type: a.Z.getType(),
-        ...(null != n && { mobile_signal_strength_level: n })
-    });
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                l(e, t, n[t]);
+            });
+    }
+    return e;
 }
-class d {
+function u(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function d(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : u(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let f = 0.1;
+function p(e) {
+    if (Math.random() > f) return;
+    let t = null == e.apiResponseTimestamp ? null : e.apiResponseTimestamp - e.initialSendTimestamp,
+        n = (0, i.d)();
+    a.default.track(
+        s.rMx.QUEST_DECISION_ROUNDTRIP,
+        c(
+            d(c({}, (0, r.Z)()), {
+                endpoint: e.endpoint,
+                was_successful: e.wasSuccessful,
+                api_latency_ms: t,
+                mobile_network_type: o.Z.getType()
+            }),
+            null != n && { mobile_signal_strength_level: n }
+        )
+    );
+}
+class _ {
     recordQuestRequestAttempt(e) {
         let t = {
             initialSendTimestamp: Date.now(),
@@ -42,22 +85,23 @@ class d {
         this.pendingRequests.set(e, t),
             setTimeout(() => {
                 let t = this.pendingRequests.get(e);
-                null != t && (c(t), this.pendingRequests.delete(e));
+                null != t && (p(t), this.pendingRequests.delete(e));
             }, 30000);
     }
     recordQuestRequestApiResponse(e, t) {
         let { wasSuccessful: n } = t,
-            i = this.pendingRequests.get(e);
-        null != i &&
-            (c({
-                ...i,
-                apiResponseTimestamp: Date.now(),
-                wasSuccessful: n
-            }),
+            r = this.pendingRequests.get(e);
+        null != r &&
+            (p(
+                d(c({}, r), {
+                    apiResponseTimestamp: Date.now(),
+                    wasSuccessful: n
+                })
+            ),
             this.pendingRequests.delete(e));
     }
     constructor() {
         l(this, 'pendingRequests', new Map());
     }
 }
-let f = new d();
+let h = new _();

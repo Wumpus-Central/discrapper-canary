@@ -1,73 +1,105 @@
-n.d(t, { Z: () => b }), n(47120);
-var i = n(392711),
-    r = n.n(i),
-    a = n(25209),
-    s = n(691424),
-    o = n(428595),
+n.d(t, { Z: () => A }), n(47120);
+var r = n(392711),
+    i = n.n(r),
+    o = n(25209),
+    a = n(691424),
+    s = n(428595),
     l = n(364458);
-let u = null;
-function c(e, t) {
-    let n = {};
-    return null != e.mention && null != u && (n = { mention: u }), (0, l.Z)([e, ...t, n]);
+function c(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
 }
-u = n(878611).Z;
-let d = {
+function u(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                c(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function d(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function f(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : d(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let p = null;
+function _(e, t) {
+    let n = {};
+    return null != e.mention && null != p && (n = { mention: p }), (0, l.Z)([e, ...t, n]);
+}
+p = n(878611).Z;
+let h = {
         enableBuildOverrides: !1,
         enableEmojiClick: !0
     },
-    f = c(o.Z.RULES, [(0, s.Z)({ enableBuildOverrides: !0 })]),
-    _ = r().omit(c(o.Z.RULES, [(0, s.Z)(d)]), 'paragraph', 'newline'),
-    p = c(o.Z.CHANNEL_TOPIC_RULES, [
-        (0, s.Z)({
-            ...d,
-            emojiTooltipPosition: 'bottom'
-        }),
-        { codeBlock: { react: o.Z.RULES.text.react } }
-    ]),
-    h = c(o.Z.VOICE_CHANNEL_STATUS_RULES, [
-        (0, s.Z)({
-            ...d,
-            enableEmojiClick: !1
-        })
-    ]),
-    m = c(o.Z.EMBED_TITLE_RULES, [(0, s.Z)(d)]),
-    g = c(o.Z.INLINE_REPLY_RULES, [(0, s.Z)(d)]),
-    E = c(o.Z.GUILD_VERIFICATION_FORM_RULES, [(0, s.Z)(d)]),
-    v = c(o.Z.GUILD_EVENT_RULES, [(0, s.Z)(d)]),
-    y = c(o.Z.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, [(0, s.Z)(d)]),
-    I = r().omit(c(o.Z.RULES, [(0, s.Z)(d)]), 'paragraph', 'newline', 'strong', 'codeBlock', 'inlineCode', 'u', 'link', 'url', 'autolink', 'list', 'heading', 'subtext'),
-    T = { text: o.Z.RULES.text },
-    b = {
-        combineAndInjectMentionRule: c,
-        createReactRules: s.Z,
-        defaultReactRuleOptions: d,
-        defaultRules: f,
-        guildEventRules: v,
-        notifCenterV2MessagePreviewRules: I,
-        lockscreenWidgetMessageRules: T,
-        astParserFor: a._p,
-        reactParserFor: a.w4,
-        parse: a.w4(f),
-        parseTopic: (e, t, n, i) =>
-            a.w4(p)(
-                e,
-                t,
-                {
-                    allowLinks: !0,
-                    ...n
-                },
-                i
-            ),
-        parseVoiceChannelStatus: a.w4(h),
-        parseEmbedTitle: a.w4(m),
-        parseInlineReply: a.w4(g),
-        parseGuildVerificationFormRule: a.w4(E),
-        parseGuildEventDescription: a.w4(v),
-        parseAutoModerationSystemMessage: a.w4(y),
-        parseForumPostGuidelines: a.w4(_),
-        parseToAST: a._p(f),
-        parseTopicToAST: a._p(p),
-        parseEmbedTitleToAST: a._p(m),
-        parseInlineReplyToAST: a._p(g),
-        parseAutoModerationSystemMessageToAST: a._p(y)
+    m = _(s.Z.RULES, [(0, a.Z)({ enableBuildOverrides: !0 })]),
+    g = i().omit(_(s.Z.RULES, [(0, a.Z)(h)]), 'paragraph', 'newline'),
+    E = _(s.Z.CHANNEL_TOPIC_RULES, [(0, a.Z)(f(u({}, h), { emojiTooltipPosition: 'bottom' })), { codeBlock: { react: s.Z.RULES.text.react } }]),
+    v = _(s.Z.VOICE_CHANNEL_STATUS_RULES, [(0, a.Z)(f(u({}, h), { enableEmojiClick: !1 }))]),
+    b = _(s.Z.EMBED_TITLE_RULES, [(0, a.Z)(h)]),
+    y = _(s.Z.INLINE_REPLY_RULES, [(0, a.Z)(h)]),
+    O = _(s.Z.GUILD_VERIFICATION_FORM_RULES, [(0, a.Z)(h)]),
+    S = _(s.Z.GUILD_EVENT_RULES, [(0, a.Z)(h)]),
+    I = _(s.Z.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, [(0, a.Z)(h)]),
+    T = i().omit(_(s.Z.RULES, [(0, a.Z)(h)]), 'paragraph', 'newline', 'strong', 'codeBlock', 'inlineCode', 'u', 'link', 'url', 'autolink', 'list', 'heading', 'subtext'),
+    N = { text: s.Z.RULES.text },
+    A = {
+        combineAndInjectMentionRule: _,
+        createReactRules: a.Z,
+        defaultReactRuleOptions: h,
+        defaultRules: m,
+        guildEventRules: S,
+        notifCenterV2MessagePreviewRules: T,
+        lockscreenWidgetMessageRules: N,
+        astParserFor: o._p,
+        reactParserFor: o.w4,
+        parse: o.w4(m),
+        parseTopic: (e, t, n, r) => o.w4(E)(e, t, u({ allowLinks: !0 }, n), r),
+        parseVoiceChannelStatus: o.w4(v),
+        parseEmbedTitle: o.w4(b),
+        parseInlineReply: o.w4(y),
+        parseGuildVerificationFormRule: o.w4(O),
+        parseGuildEventDescription: o.w4(S),
+        parseAutoModerationSystemMessage: o.w4(I),
+        parseForumPostGuidelines: o.w4(g),
+        parseToAST: o._p(m),
+        parseTopicToAST: o._p(E),
+        parseEmbedTitleToAST: o._p(b),
+        parseInlineReplyToAST: o._p(y),
+        parseAutoModerationSystemMessageToAST: o._p(I)
     };

@@ -1,11 +1,11 @@
-n.d(t, { Z: () => v });
-var i,
-    r = n(913527),
-    a = n.n(r),
-    s = n(442837),
-    o = n(570140),
+n.d(t, { Z: () => O });
+var r,
+    i = n(913527),
+    o = n.n(i),
+    a = n(442837),
+    s = n(570140),
     l = n(709054);
-function u(e, t, n) {
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,74 +18,110 @@ function u(e, t, n) {
         e
     );
 }
-let c = { lastSeenNewlyAddedEmojiIds: {} },
-    d = c,
-    f = {};
-function _() {
-    (d = c), (f = {});
+function u(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                c(e, t, n[t]);
+            });
+    }
+    return e;
 }
-function p(e) {
+function d(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function f(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : d(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let p = { lastSeenNewlyAddedEmojiIds: {} },
+    _ = p,
+    h = {};
+function m() {
+    (_ = p), (h = {});
+}
+function g(e) {
     var t;
-    let { guildId: n, emojiId: i } = e,
-        r = null !== (t = f[n]) && void 0 !== t ? t : d.lastSeenNewlyAddedEmojiIds[n];
-    null == r || 0 > l.default.compare(r.id, i)
-        ? (f[n] = {
-              id: i,
+    let { guildId: n, emojiId: r } = e,
+        i = null !== (t = h[n]) && void 0 !== t ? t : _.lastSeenNewlyAddedEmojiIds[n];
+    null == i || 0 > l.default.compare(i.id, r)
+        ? (h[n] = {
+              id: r,
               lastSeen: Date.now(),
               acknowledged: !0
           })
-        : (f[n] = {
-              ...r,
-              acknowledged: !0
-          });
+        : (h[n] = f(u({}, i), { acknowledged: !0 }));
 }
-function h(e) {
+function E(e) {
     var t;
-    let { guildId: n, emojiId: i } = e,
-        r = null !== (t = f[n]) && void 0 !== t ? t : d.lastSeenNewlyAddedEmojiIds[n];
-    (null == r || 0 > l.default.compare(r.id, i)) &&
-        (f[n] = {
-            id: i,
+    let { guildId: n, emojiId: r } = e,
+        i = null !== (t = h[n]) && void 0 !== t ? t : _.lastSeenNewlyAddedEmojiIds[n];
+    (null == i || 0 > l.default.compare(i.id, r)) &&
+        (h[n] = {
+            id: r,
             lastSeen: Date.now(),
             acknowledged: !1
         });
 }
-function m() {
-    for (let e in f) d.lastSeenNewlyAddedEmojiIds[e] = f[e];
+function v() {
+    for (let e in h) _.lastSeenNewlyAddedEmojiIds[e] = h[e];
 }
-function g() {
-    (d = c), m();
+function b() {
+    (_ = p), v();
 }
-class E extends (i = s.ZP.PersistedStore) {
+class y extends (r = a.ZP.PersistedStore) {
     initialize(e) {
-        d = null != e ? e : c;
+        _ = null != e ? e : p;
     }
     getState() {
-        return d;
+        return _;
     }
     getLastSeenEmojiByGuild(e) {
-        return d.lastSeenNewlyAddedEmojiIds[e];
+        return _.lastSeenNewlyAddedEmojiIds[e];
     }
     isNewerThanLastSeen(e, t) {
         if (null == e || null == t) return !1;
         let n = this.getLastSeenEmojiByGuild(e);
         if (null == n || l.default.compare(t, n.id) > 0) return !0;
         {
-            let e = a()(n.lastSeen);
-            return a()().isBefore(e.add(2, 'weeks')) && !n.acknowledged;
+            let e = o()(n.lastSeen);
+            return o()().isBefore(e.add(2, 'weeks')) && !n.acknowledged;
         }
     }
 }
-u(E, 'displayName', 'NewlyAddedEmojiStore'),
-    u(E, 'persistKey', 'NewlyAddedEmojiStore'),
-    u(E, 'migrations', [
+c(y, 'displayName', 'NewlyAddedEmojiStore'),
+    c(y, 'persistKey', 'NewlyAddedEmojiStore'),
+    c(y, 'migrations', [
         (e) => {
             let t = e.lastSeenNewlyAddedEmojiIds,
                 n = {};
             for (let e in t) {
-                let i = t[e];
+                let r = t[e];
                 n[e] = {
-                    id: i,
+                    id: r,
                     lastSeen: Date.now(),
                     acknowledged: !1
                 };
@@ -93,11 +129,11 @@ u(E, 'displayName', 'NewlyAddedEmojiStore'),
             return { lastSeenNewlyAddedEmojiIds: n };
         }
     ]);
-let v = new E(o.Z, {
-    LOGOUT: _,
-    NEWLY_ADDED_EMOJI_SEEN_ACKNOWLEDGED: p,
-    NEWLY_ADDED_EMOJI_SEEN_PENDING: h,
-    NEWLY_ADDED_EMOJI_SEEN_UPDATED: m,
-    CLEAR_CACHES: g,
-    CONNECTION_CLOSED: m
+let O = new y(s.Z, {
+    LOGOUT: m,
+    NEWLY_ADDED_EMOJI_SEEN_ACKNOWLEDGED: g,
+    NEWLY_ADDED_EMOJI_SEEN_PENDING: E,
+    NEWLY_ADDED_EMOJI_SEEN_UPDATED: v,
+    CLEAR_CACHES: b,
+    CONNECTION_CLOSED: v
 });

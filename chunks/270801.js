@@ -1,11 +1,11 @@
 n.d(t, { Z: () => c });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var l = n(481060),
-    a = n(313201),
-    r = n(388032),
-    s = n(971854);
-let o = () =>
+var i = n(481060),
+    l = n(313201),
+    o = n(388032),
+    a = n(958444);
+let s = () =>
         n
             .e('49812')
             .then(n.t.bind(n, 48603, 19))
@@ -14,48 +14,90 @@ let o = () =>
                 return t;
             }),
     c = (e) => {
-        let t = (0, a.Dt)();
-        return (0, i.jsxs)(l.Y0X, {
-            ...e,
-            size: l.CgR.SMALL,
-            transitionState: e.transitionState,
-            'aria-labelledby': t,
-            className: s.modal,
-            children: [
-                (0, i.jsx)('div', {
-                    className: s.animationContainer,
-                    children: (0, i.jsx)(l.Fmz, {
-                        importData: o,
-                        className: s.animationMiddle
-                    })
-                }),
-                (0, i.jsx)(l.hzk, {
-                    children: (0, i.jsxs)('div', {
-                        className: s.container,
-                        children: [
-                            (0, i.jsx)(l.X6q, {
-                                variant: 'heading-lg/semibold',
-                                className: s.header,
-                                id: t,
-                                children: r.intl.format(r.t.z9qozM, { guildName: e.guildName })
-                            }),
-                            (0, i.jsx)(l.Text, {
-                                variant: 'text-sm/medium',
-                                color: 'header-secondary',
-                                children: r.intl.string(r.t.nwpqyc)
-                            }),
-                            (0, i.jsx)(l.zxk, {
-                                className: s.button,
-                                onClick: () => {
-                                    e.onAccept(), e.onClose();
-                                },
-                                fullWidth: !0,
-                                size: l.PhG.LARGE,
-                                children: r.intl.string(r.t.NuzmOD)
+        var t, n;
+        let c = (0, l.Dt)();
+        return (0, r.jsxs)(
+            i.Y0X,
+            ((t = (function (e) {
+                for (var t = 1; t < arguments.length; t++) {
+                    var n = null != arguments[t] ? arguments[t] : {},
+                        r = Object.keys(n);
+                    'function' == typeof Object.getOwnPropertySymbols &&
+                        (r = r.concat(
+                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
                             })
-                        ]
-                    })
-                })
-            ]
-        });
+                        )),
+                        r.forEach(function (t) {
+                            var r;
+                            (r = n[t]),
+                                t in e
+                                    ? Object.defineProperty(e, t, {
+                                          value: r,
+                                          enumerable: !0,
+                                          configurable: !0,
+                                          writable: !0
+                                      })
+                                    : (e[t] = r);
+                        });
+                }
+                return e;
+            })({}, e)),
+            (n = n =
+                {
+                    size: i.CgR.SMALL,
+                    transitionState: e.transitionState,
+                    'aria-labelledby': c,
+                    className: a.modal,
+                    children: [
+                        (0, r.jsx)('div', {
+                            className: a.animationContainer,
+                            children: (0, r.jsx)(i.Fmz, {
+                                importData: s,
+                                className: a.animationMiddle
+                            })
+                        }),
+                        (0, r.jsx)(i.hzk, {
+                            children: (0, r.jsxs)('div', {
+                                className: a.container,
+                                children: [
+                                    (0, r.jsx)(i.X6q, {
+                                        variant: 'heading-lg/semibold',
+                                        className: a.header,
+                                        id: c,
+                                        children: o.NW.format(o.t.z9qozM, { guildName: e.guildName })
+                                    }),
+                                    (0, r.jsx)(i.Text, {
+                                        variant: 'text-sm/medium',
+                                        color: 'header-secondary',
+                                        children: o.NW.string(o.t.nwpqyc)
+                                    }),
+                                    (0, r.jsx)(i.zxk, {
+                                        className: a.button,
+                                        onClick: () => {
+                                            e.onAccept(), e.onClose();
+                                        },
+                                        fullWidth: !0,
+                                        size: i.PhG.LARGE,
+                                        children: o.NW.string(o.t.NuzmOD)
+                                    })
+                                ]
+                            })
+                        })
+                    ]
+                }),
+            Object.getOwnPropertyDescriptors
+                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                : (function (e, t) {
+                      var n = Object.keys(e);
+                      if (Object.getOwnPropertySymbols) {
+                          var r = Object.getOwnPropertySymbols(e);
+                          n.push.apply(n, r);
+                      }
+                      return n;
+                  })(Object(n)).forEach(function (e) {
+                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                  }),
+            t)
+        );
     };

@@ -1,38 +1,80 @@
 n.d(t, { Z: () => g }), n(47120);
-var i,
-    l,
-    a,
-    r = n(442837),
-    s = n(570140),
+var r,
+    i = n(442837),
+    a = n(570140),
     o = n(823379),
-    c = n(981631);
+    l = n(981631);
+function s(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function c(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                s(e, t, n[t]);
+            });
+    }
+    return e;
+}
 let d = [],
     u = {},
-    m = null,
-    _ = 0;
-function h(e) {
+    p = null,
+    m = 0;
+function f(e) {
     let t = null;
     try {
         t = JSON.parse(e.launch_parameters);
-    } catch {
+    } catch (e) {
         return null;
     }
-    if (e.platform_type === c.ABu.XBOX) {
-        let n = null == t ? void 0 : t.titleId,
-            i = null == t ? void 0 : t.inviteToken;
-        return null == n || null == i
+    if (e.platform_type === l.ABu.XBOX) {
+        var n, r;
+        let i = null == t ? void 0 : t.titleId,
+            a = null == t ? void 0 : t.inviteToken;
+        return null == i || null == a
             ? null
-            : {
-                  ...e,
-                  parsed_launch_parameters: {
-                      titleId: n,
-                      inviteToken: i
-                  }
-              };
+            : ((n = c({}, e)),
+              (r = r =
+                  {
+                      parsed_launch_parameters: {
+                          titleId: i,
+                          inviteToken: a
+                      }
+                  }),
+              Object.getOwnPropertyDescriptors
+                  ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
+                  : (function (e, t) {
+                        var n = Object.keys(e);
+                        if (Object.getOwnPropertySymbols) {
+                            var r = Object.getOwnPropertySymbols(e);
+                            n.push.apply(n, r);
+                        }
+                        return n;
+                    })(Object(r)).forEach(function (e) {
+                        Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
+                    }),
+              n);
     }
     return null;
 }
-class p extends (i = r.ZP.Store) {
+class h extends (r = i.ZP.Store) {
     getInvites() {
         return d;
     }
@@ -48,30 +90,22 @@ class p extends (i = r.ZP.Store) {
         return null === (t = u[e.invite_id]) || void 0 === t ? void 0 : t.joinable;
     }
     getLastUnseenInvite() {
-        return m;
+        return p;
     }
     getUnseenInviteCount() {
-        return _;
+        return m;
     }
 }
-(a = 'GameInviteStore'),
-    (l = 'displayName') in p
-        ? Object.defineProperty(p, l, {
-              value: a,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (p[l] = a);
-let g = new p(s.Z, {
+s(h, 'displayName', 'GameInviteStore');
+let g = new h(a.Z, {
     CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
         let { gameInvites: t } = e;
-        d = t.map(h).filter(o.lm);
+        d = t.map(f).filter(o.lm);
     },
     GAME_INVITE_CREATE: function (e) {
         let { gameInvite: t } = e,
-            n = h(t);
-        null != n && ((d = [n, ...d]), (m = t), (_ += 1));
+            n = f(t);
+        null != n && ((d = [n, ...d]), (p = t), (m += 1));
     },
     GAME_INVITE_DELETE: function (e) {
         let { inviteId: t } = e;
@@ -82,12 +116,12 @@ let g = new p(s.Z, {
         d = d.filter((e) => !t.includes(e.invite_id));
     },
     GAME_INVITE_UPDATE_STATUS: function (e) {
-        (u = { ...u })[e.inviteId] = {
+        (u = c({}, u))[e.inviteId] = {
             installed: e.installed,
             joinable: e.joinable
         };
     },
     GAME_INVITE_CLEAR_UNSEEN: function (e) {
-        (m = null), (_ = 0);
+        (p = null), (m = 0);
     }
 });

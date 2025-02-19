@@ -1,119 +1,153 @@
-n.d(t, { Z: () => E });
-var i = n(200651);
+n.d(t, { Z: () => x });
+var r = n(200651);
 n(192379);
-var s = n(120356),
-    r = n.n(s),
-    l = n(442837),
-    a = n(481060),
+var i = n(120356),
+    s = n.n(i),
+    a = n(442837),
+    l = n(481060),
     o = n(223245),
     c = n(230711),
     d = n(921801),
     u = n(246946),
     m = n(358085),
     g = n(726985),
-    h = n(981631),
-    x = n(388032),
-    _ = n(430387),
-    p = n(483938);
-function E() {
-    let { enabled: e, autoToggle: t, hideInstantInvites: s, hidePersonalInformation: E, disableSounds: C, disableNotifications: f, enableContentProtection: T } = (0, l.cj)([u.Z], () => ({ ...u.Z.getSettings() })),
-        N = (e, t) => {
+    p = n(981631),
+    h = n(388032),
+    f = n(852693),
+    N = n(455812);
+function x() {
+    let {
+            enabled: e,
+            autoToggle: t,
+            hideInstantInvites: i,
+            hidePersonalInformation: x,
+            disableSounds: b,
+            disableNotifications: _,
+            enableContentProtection: E
+        } = (0, a.cj)([u.Z], () =>
+            (function (e) {
+                for (var t = 1; t < arguments.length; t++) {
+                    var n = null != arguments[t] ? arguments[t] : {},
+                        r = Object.keys(n);
+                    'function' == typeof Object.getOwnPropertySymbols &&
+                        (r = r.concat(
+                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                            })
+                        )),
+                        r.forEach(function (t) {
+                            var r;
+                            (r = n[t]),
+                                t in e
+                                    ? Object.defineProperty(e, t, {
+                                          value: r,
+                                          enumerable: !0,
+                                          configurable: !0,
+                                          writable: !0
+                                      })
+                                    : (e[t] = r);
+                        });
+                }
+                return e;
+            })({}, u.Z.getSettings())
+        ),
+        j = (e, t) => {
             o.Z.update({ [e]: t });
         };
-    return (0, i.jsxs)(a.hjN, {
-        className: _.container,
-        tag: a.RB0.H1,
-        title: x.intl.string(x.t.S5GfOT),
+    return (0, r.jsxs)(l.hjN, {
+        className: f.container,
+        tag: l.RB0.H1,
+        title: h.NW.string(h.t.S5GfOT),
         children: [
-            (0, i.jsx)(d.F, {
+            (0, r.jsx)(d.F, {
                 setting: g.s6.STREAMER_MODE_INTEGRATIONS,
-                children: (0, i.jsx)(a.ToO, {
-                    className: p.marginBottom40,
-                    iconClassName: _.noticeIcon,
-                    type: a.Dd5.PRIMARY,
+                children: (0, r.jsx)(l.ToO, {
+                    className: N.marginBottom40,
+                    iconClassName: f.noticeIcon,
+                    type: l.Dd5.PRIMARY,
                     imageData: {
                         src: n(560264),
                         width: 184,
                         height: 110,
-                        position: a.SwA.RIGHT
+                        position: l.SwA.RIGHT
                     },
-                    title: x.intl.string(x.t.bxGbHB),
-                    body: x.intl.format(x.t['4rmZn5'], { streamkitURL: h.EYA.STREAMKIT })
+                    title: h.NW.string(h.t.bxGbHB),
+                    body: h.NW.format(h.t['4rmZn5'], { streamkitURL: p.EYA.STREAMKIT })
                 })
             }),
-            (0, i.jsxs)(d.F, {
+            (0, r.jsxs)(d.F, {
                 setting: g.s6.STREAMER_MODE_ENABLE,
                 children: [
-                    (0, i.jsx)(a.j7V, {
+                    (0, r.jsx)(l.j7V, {
                         value: e,
-                        onChange: (e) => N('enabled', e),
-                        note: x.intl.format(x.t.MLVL2N, {
+                        onChange: (e) => j('enabled', e),
+                        note: h.NW.format(h.t.MLVL2N, {
                             onClick: () => {
-                                c.Z.setSection(h.oAB.KEYBINDS);
+                                c.Z.setSection(p.oAB.KEYBINDS);
                             }
                         }),
-                        children: x.intl.string(x.t.p9ZAJS)
+                        children: h.NW.string(h.t.p9ZAJS)
                     }),
                     (() => {
                         if (m.isPlatformEmbedded)
-                            return (0, i.jsx)(a.j7V, {
+                            return (0, r.jsx)(l.j7V, {
                                 value: t,
-                                onChange: (e) => N('autoToggle', e),
-                                note: x.intl.string(x.t.ZPi4lJ),
-                                children: x.intl.string(x.t.PKDAJy)
+                                onChange: (e) => j('autoToggle', e),
+                                note: h.NW.string(h.t.ZPi4lJ),
+                                children: h.NW.string(h.t.PKDAJy)
                             });
                     })()
                 ]
             }),
-            (0, i.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 children: [
-                    (0, i.jsx)(a.vwX, {
-                        className: r()(p.marginTop40, p.marginBottom8, _.sectionLabel),
-                        children: x.intl.string(x.t['+1H47u'])
+                    (0, r.jsx)(l.vwX, {
+                        className: s()(N.marginTop40, N.marginBottom8, f.sectionLabel),
+                        children: h.NW.string(h.t['+1H47u'])
                     }),
-                    (0, i.jsx)(d.F, {
+                    (0, r.jsx)(d.F, {
                         setting: g.s6.STREAMER_MODE_HIDE_PERSONAL_INFORMATION,
-                        children: (0, i.jsx)(a.j7V, {
-                            value: E,
-                            onChange: (e) => N('hidePersonalInformation', e),
-                            note: x.intl.string(x.t['+9Lra2']),
-                            children: x.intl.string(x.t.UpQziI)
+                        children: (0, r.jsx)(l.j7V, {
+                            value: x,
+                            onChange: (e) => j('hidePersonalInformation', e),
+                            note: h.NW.string(h.t['+9Lra2']),
+                            children: h.NW.string(h.t.UpQziI)
                         })
                     }),
-                    (0, i.jsx)(d.F, {
+                    (0, r.jsx)(d.F, {
                         setting: g.s6.STREAMER_MODE_HIDE_INVITE_LINKS,
-                        children: (0, i.jsx)(a.j7V, {
-                            value: s,
-                            onChange: (e) => N('hideInstantInvites', e),
-                            note: x.intl.string(x.t.m7mS2d),
-                            children: x.intl.string(x.t.q7WNGh)
+                        children: (0, r.jsx)(l.j7V, {
+                            value: i,
+                            onChange: (e) => j('hideInstantInvites', e),
+                            note: h.NW.string(h.t.m7mS2d),
+                            children: h.NW.string(h.t.q7WNGh)
                         })
                     }),
-                    (0, i.jsx)(d.F, {
+                    (0, r.jsx)(d.F, {
                         setting: g.s6.STREAMER_MODE_DISABLE_SOUNDS,
-                        children: (0, i.jsx)(a.j7V, {
-                            value: C,
-                            onChange: (e) => N('disableSounds', e),
-                            note: x.intl.string(x.t.eAkaio),
-                            children: x.intl.string(x.t.o56OZm)
+                        children: (0, r.jsx)(l.j7V, {
+                            value: b,
+                            onChange: (e) => j('disableSounds', e),
+                            note: h.NW.string(h.t.eAkaio),
+                            children: h.NW.string(h.t.o56OZm)
                         })
                     }),
-                    (0, i.jsx)(d.F, {
+                    (0, r.jsx)(d.F, {
                         setting: g.s6.STREAMER_MODE_DISABLE_NOTIFICATIONS,
-                        children: (0, i.jsx)(a.j7V, {
-                            value: f,
-                            onChange: (e) => N('disableNotifications', e),
-                            note: x.intl.string(x.t.ZAmpQ0),
-                            children: x.intl.string(x.t.qmYiYW)
+                        children: (0, r.jsx)(l.j7V, {
+                            value: _,
+                            onChange: (e) => j('disableNotifications', e),
+                            note: h.NW.string(h.t.ZAmpQ0),
+                            children: h.NW.string(h.t.qmYiYW)
                         })
                     }),
-                    (0, i.jsx)(d.F, {
+                    (0, r.jsx)(d.F, {
                         setting: g.s6.STREAMER_MODE_HIDE_DISCORD_WINDOW_FROM_SCREEN_CAPTURE,
-                        children: (0, i.jsx)(a.j7V, {
-                            value: T,
-                            onChange: (e) => N('enableContentProtection', e),
-                            note: x.intl.string(x.t.P4vj0t),
-                            children: x.intl.string(x.t['iA81+f'])
+                        children: (0, r.jsx)(l.j7V, {
+                            value: E,
+                            onChange: (e) => j('enableContentProtection', e),
+                            note: h.NW.string(h.t.P4vj0t),
+                            children: h.NW.string(h.t['iA81+f'])
                         })
                     })
                 ]

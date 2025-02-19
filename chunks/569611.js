@@ -1,40 +1,41 @@
 n.d(t, {
-    Hj: () => o,
-    Pz: () => c,
+    Hj: () => s,
+    Pz: () => u,
     ZH: () => l
 }),
     n(653041),
     n(411104),
+    n(26686),
     n(47120);
-var i = n(427786),
-    r = n.n(i);
-let a = 5000,
-    s = new (r())(a);
-function o(e) {
-    for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) n[i - 1] = arguments[i];
-    let r = u(n);
+var r = n(427786),
+    i = n.n(r);
+let o = 5000,
+    a = new (i())(o);
+function s(e) {
+    for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
+    let i = c(n);
     for (
         'string' == typeof e
-            ? s.push({
+            ? a.push({
                   time: Date.now(),
                   category: e,
-                  message: r
+                  message: i
               })
-            : s.push({
+            : a.push({
                   time: Date.now(),
                   category: e.name,
                   timing: e.timing,
-                  message: r
+                  message: i
               });
-        s.length > a;
+        a.length > o;
 
     )
-        s.shift();
+        a.shift();
 }
 function l() {
-    s.clear();
+    a.clear();
 }
-function u(e) {
+function c(e) {
     let t = '';
     for (let n of e) {
         let e = typeof n;
@@ -42,8 +43,8 @@ function u(e) {
     }
     return t;
 }
-function c(e) {
-    return s
+function u(e) {
+    return a
         .toArray()
         .filter((t) => null == e || e.includes(t.category))
         .map((e) => {

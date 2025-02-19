@@ -1,49 +1,43 @@
-t.d(n, {
-    U3: () => _,
-    XM: () => u,
+n.d(t, {
+    U3: () => p,
+    XM: () => d,
     hd: () => c,
     lI: () => s,
-    py: () => d
+    py: () => u
 });
-var a = t(481060),
-    i = t(819640),
-    r = t(585483),
-    l = t(981631);
-let o = () => i.Z.hasLayers() || (0, a.$sL)(),
-    s =
-        12633 == t.j
-            ? {
-                  binds: ['right'],
-                  comboKeysBindGlobal: !0,
-                  action() {
-                      if (!o()) return r.S.dispatch(l.CkL.CAROUSEL_NEXT), !1;
-                  }
-              }
-            : null,
-    c =
-        12633 == t.j
-            ? {
-                  binds: ['left'],
-                  comboKeysBindGlobal: !0,
-                  action() {
-                      if (!o()) return r.S.dispatch(l.CkL.CAROUSEL_PREV), !1;
-                  }
-              }
-            : null,
-    u = {
-        binds: ['right', 'down', 'space'],
+var r = n(481060),
+    i = n(819640),
+    a = n(585483),
+    l = n(981631);
+let o = () => i.Z.hasLayers() || (0, r.$sL)(),
+    s = {
+        binds: ['right'],
         comboKeysBindGlobal: !0,
-        action: () => (r.S.dispatch(l.CkL.MODAL_CAROUSEL_NEXT), !1)
+        action() {
+            if (!o()) return a.S.dispatch(l.CkL.CAROUSEL_NEXT), !1;
+        }
+    },
+    c = {
+        binds: ['left'],
+        comboKeysBindGlobal: !0,
+        action() {
+            if (!o()) return a.S.dispatch(l.CkL.CAROUSEL_PREV), !1;
+        }
     },
     d = {
+        binds: ['right', 'down', 'space'],
+        comboKeysBindGlobal: !0,
+        action: () => (a.S.dispatch(l.CkL.MODAL_CAROUSEL_NEXT), !1)
+    },
+    u = {
         binds: ['left', 'up'],
         comboKeysBindGlobal: !0,
-        action: () => (r.S.dispatch(l.CkL.MODAL_CAROUSEL_PREV), !1)
+        action: () => (a.S.dispatch(l.CkL.MODAL_CAROUSEL_PREV), !1)
     },
-    _ = {
+    p = {
         binds: ['esc'],
         comboKeysBindGlobal: !0,
         action() {
-            if (r.S.hasSubscribers(l.CkL.MODAL_CLOSE)) return r.S.dispatch(l.CkL.MODAL_CLOSE), !1;
+            if (a.S.hasSubscribers(l.CkL.MODAL_CLOSE)) return a.S.dispatch(l.CkL.MODAL_CLOSE), !1;
         }
     };

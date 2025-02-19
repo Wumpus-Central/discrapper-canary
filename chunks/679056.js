@@ -1,9 +1,9 @@
 n.d(t, { Z: () => c }), n(47120);
-var i,
-    l = n(200651),
+var r,
+    i = n(200651),
     a = n(192379),
-    r = n(846519);
-function s(e, t, n) {
+    o = n(846519);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,7 +16,7 @@ function s(e, t, n) {
         e
     );
 }
-class o extends (i = a.Component) {
+class s extends (r = a.Component) {
     static getDerivedStateFromProps(e) {
         return e.disable ? { hovered: !1 } : null;
     }
@@ -30,10 +30,10 @@ class o extends (i = a.Component) {
     }
     componentDidUpdate(e, t) {
         let n;
-        let { props: i } = this,
-            l = ((n = this.state), !i.disable && !(n.hovered && i.pauseOnHover)),
+        let { props: r } = this,
+            i = ((n = this.state), !r.disable && !(n.hovered && r.pauseOnHover)),
             a = !e.disable && !(t.hovered && e.pauseOnHover);
-        (l && !a) || e.interval !== i.interval ? this.startTimer() : !l && a && this.stopTimer();
+        (i && !a) || e.interval !== r.interval ? this.startTimer() : !i && a && this.stopTimer();
     }
     startTimer() {
         let { interval: e, onInterval: t, disable: n } = this.props;
@@ -46,8 +46,9 @@ class o extends (i = a.Component) {
         this.timer.stop();
     }
     render() {
-        let { children: e, className: t, disable: n } = this.props,
-            i = n
+        var e, t;
+        let { children: n, className: r, disable: a } = this.props,
+            o = a
                 ? null
                 : {
                       onMouseEnter: this.handlePause,
@@ -55,26 +56,58 @@ class o extends (i = a.Component) {
                       onMouseLeave: this.handleResume,
                       onBlur: this.handleResume
                   };
-        return (0, l.jsx)('div', {
-            ...i,
-            className: t,
-            children: e
-        });
+        return (0, i.jsx)(
+            'div',
+            ((e = (function (e) {
+                for (var t = 1; t < arguments.length; t++) {
+                    var n = null != arguments[t] ? arguments[t] : {},
+                        r = Object.keys(n);
+                    'function' == typeof Object.getOwnPropertySymbols &&
+                        (r = r.concat(
+                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                            })
+                        )),
+                        r.forEach(function (t) {
+                            l(e, t, n[t]);
+                        });
+                }
+                return e;
+            })({}, o)),
+            (t = t =
+                {
+                    className: r,
+                    children: n
+                }),
+            Object.getOwnPropertyDescriptors
+                ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+                : (function (e, t) {
+                      var n = Object.keys(e);
+                      if (Object.getOwnPropertySymbols) {
+                          var r = Object.getOwnPropertySymbols(e);
+                          n.push.apply(n, r);
+                      }
+                      return n;
+                  })(Object(t)).forEach(function (n) {
+                      Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+                  }),
+            e)
+        );
     }
     constructor(...e) {
         super(...e),
-            s(this, 'timer', new r.Xp()),
-            s(this, 'state', { hovered: !1 }),
-            s(this, 'handlePause', () => {
+            l(this, 'timer', new o.Xp()),
+            l(this, 'state', { hovered: !1 }),
+            l(this, 'handlePause', () => {
                 this.state.hovered || this.setState({ hovered: !0 });
             }),
-            s(this, 'handleResume', () => {
+            l(this, 'handleResume', () => {
                 this.setState({ hovered: !1 });
             });
     }
 }
-s(o, 'defaultProps', {
+l(s, 'defaultProps', {
     disable: !1,
     pauseOnHover: !1
 });
-let c = o;
+let c = s;

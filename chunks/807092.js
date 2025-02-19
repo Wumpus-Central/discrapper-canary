@@ -1,9 +1,9 @@
 n.d(t, { Z: () => I });
-var i,
-    r = n(442837),
-    a = n(570140),
-    s = n(375954);
-function o(e, t, n) {
+var r,
+    i = n(442837),
+    o = n(570140),
+    a = n(375954);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,99 +16,129 @@ function o(e, t, n) {
         e
     );
 }
-let l = {},
-    u = {},
-    c = {};
-function d(e) {
-    let { channel: t, message: n, shouldMention: i = !0, showMentionToggle: r = !0, source: a } = e;
-    (l[t.id] = {
+function l(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                s(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function c(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function u(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : c(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let d = {},
+    f = {},
+    p = {};
+function _(e) {
+    let { channel: t, message: n, shouldMention: r = !0, showMentionToggle: i = !0, source: o } = e;
+    (d[t.id] = {
         channel: t,
         message: n,
-        shouldMention: i,
-        showMentionToggle: r
+        shouldMention: r,
+        showMentionToggle: i
     }),
-        (c[t.id] = a);
-}
-function f(e) {
-    let { channel: t, messageId: n, shouldMention: i = !0, showMentionToggle: r = !0 } = e;
-    u[t.id] = {
-        channel: t,
-        messageId: n,
-        shouldMention: i,
-        showMentionToggle: r
-    };
-}
-function _(e) {
-    let { channelId: t, shouldMention: n } = e;
-    t in l &&
-        (l[t] = {
-            ...l[t],
-            shouldMention: n
-        }),
-        t in u &&
-            (u[t] = {
-                ...u[t],
-                shouldMention: n
-            });
-}
-function p(e) {
-    let { channelId: t } = e;
-    delete l[t], delete u[t];
+        (p[t.id] = o);
 }
 function h(e) {
-    var t, n, i;
-    let { id: r, channelId: a } = e;
-    if ((null === (n = l[a]) || void 0 === n ? void 0 : null === (t = n.message) || void 0 === t ? void 0 : t.id) === r) delete l[a], delete c[a];
-    else {
-        if ((null === (i = u[a]) || void 0 === i ? void 0 : i.messageId) !== r) return !1;
-        delete u[a], delete c[a];
-    }
+    let { channel: t, messageId: n, shouldMention: r = !0, showMentionToggle: i = !0 } = e;
+    f[t.id] = {
+        channel: t,
+        messageId: n,
+        shouldMention: r,
+        showMentionToggle: i
+    };
 }
 function m(e) {
+    let { channelId: t, shouldMention: n } = e;
+    t in d && (d[t] = u(l({}, d[t]), { shouldMention: n })), t in f && (f[t] = u(l({}, f[t]), { shouldMention: n }));
+}
+function g(e) {
+    let { channelId: t } = e;
+    delete d[t], delete f[t];
+}
+function E(e) {
+    var t, n, r;
+    let { id: i, channelId: o } = e;
+    if ((null === (n = d[o]) || void 0 === n ? void 0 : null === (t = n.message) || void 0 === t ? void 0 : t.id) === i) delete d[o], delete p[o];
+    else {
+        if ((null === (r = f[o]) || void 0 === r ? void 0 : r.messageId) !== i) return !1;
+        delete f[o], delete p[o];
+    }
+}
+function v(e) {
     if (null == e) return !1;
-    let t = u[e];
+    let t = f[e];
     if (null == t) return !1;
-    let n = s.Z.getMessage(e, t.messageId);
+    let n = a.Z.getMessage(e, t.messageId);
     if (null == n) return !1;
-    (l[e] = {
+    (d[e] = {
         channel: t.channel,
         message: n,
         shouldMention: t.shouldMention,
         showMentionToggle: t.showMentionToggle
     }),
-        delete u[e];
+        delete f[e];
 }
-function g(e) {
+function b(e) {
     let { channelId: t } = e;
-    m(t);
+    v(t);
 }
-function E(e) {
+function y(e) {
     let { channelId: t } = e;
-    m(t);
+    v(t);
 }
-function v() {
-    (l = {}), (u = {}), (c = {});
+function O() {
+    (d = {}), (f = {}), (p = {});
 }
-class y extends (i = r.ZP.Store) {
+class S extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(s.Z);
+        this.waitFor(a.Z);
     }
     getPendingReply(e) {
-        return l[e];
+        return d[e];
     }
     getPendingReplyActionSource(e) {
-        return c[e];
+        return p[e];
     }
 }
-o(y, 'displayName', 'PendingReplyStore');
-let I = new y(a.Z, {
-    CREATE_PENDING_REPLY: d,
-    CREATE_SHALLOW_PENDING_REPLY: f,
-    SET_PENDING_REPLY_SHOULD_MENTION: _,
-    DELETE_PENDING_REPLY: p,
-    CONNECTION_OPEN: v,
-    LOGOUT: v,
-    MESSAGE_DELETE: h,
-    CHANNEL_SELECT: g,
-    LOAD_MESSAGES_SUCCESS: E
+s(S, 'displayName', 'PendingReplyStore');
+let I = new S(o.Z, {
+    CREATE_PENDING_REPLY: _,
+    CREATE_SHALLOW_PENDING_REPLY: h,
+    SET_PENDING_REPLY_SHOULD_MENTION: m,
+    DELETE_PENDING_REPLY: g,
+    CONNECTION_OPEN: O,
+    LOGOUT: O,
+    MESSAGE_DELETE: E,
+    CHANNEL_SELECT: b,
+    LOAD_MESSAGES_SUCCESS: y
 });

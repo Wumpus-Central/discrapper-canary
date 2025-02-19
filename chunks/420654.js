@@ -1,59 +1,112 @@
-n.d(t, { Z: () => m }), n(47120);
-var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(481060),
+n.d(t, { Z: () => b }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(481060),
     l = n(906732),
-    u = n(785717),
-    c = n(280885),
+    c = n(785717),
+    u = n(280885),
     d = n(171368),
     f = n(981631),
-    _ = n(388032),
-    p = n(348785);
-let h = 57.75,
-    m = r.memo(function (e) {
-        let { user: t, onClose: n, bio: a, hidePersonalInformation: m, viewFullBioDisabled: g = !1 } = e,
-            { context: E } = (0, u.KZ)(),
-            { analyticsLocations: v } = (0, l.ZP)(),
-            [y, I] = r.useState(!1),
-            [T, b] = r.useState(!1),
-            S = (e) => {
-                null != e && (I(!T && e.scrollHeight - e.clientHeight > 1), e.getBoundingClientRect().height > h && b(!0));
+    p = n(388032),
+    _ = n(285424);
+function h(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function m(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                h(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function g(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function E(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : g(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let v = 57.75,
+    b = i.memo(function (e) {
+        let { user: t, onClose: n, bio: o, hidePersonalInformation: h, viewFullBioDisabled: g = !1 } = e,
+            { context: b } = (0, c.KZ)(),
+            { analyticsLocations: y } = (0, l.ZP)(),
+            [O, S] = i.useState(!1),
+            [I, T] = i.useState(!1),
+            N = (e) => {
+                null != e && (S(!I && e.scrollHeight - e.clientHeight > 1), e.getBoundingClientRect().height > v && T(!0));
             },
             A = () => {
                 null == n || n(),
-                    (0, d.openUserProfileModal)({
-                        ...E,
-                        userId: t.id,
-                        sourceAnalyticsLocations: v,
-                        analyticsLocation: { section: f.jXE.BITE_SIZE_PROFILE_POPOUT }
-                    });
+                    (0, d.openUserProfileModal)(
+                        E(m({}, b), {
+                            userId: t.id,
+                            sourceAnalyticsLocations: y,
+                            analyticsLocation: { section: f.jXE.BITE_SIZE_PROFILE_POPOUT }
+                        })
+                    );
             };
-        return m || null == a || '' === a
+        return h || null == o || '' === o
             ? null
-            : (0, i.jsxs)('div', {
+            : (0, r.jsxs)('div', {
                   children: [
-                      (0, i.jsx)('div', {
-                          ref: S,
-                          className: s()(p.descriptionClamp, T && p.maxBioHeight),
-                          children: (0, i.jsx)(c.Z, {
-                              userBio: a,
+                      (0, r.jsx)('div', {
+                          ref: N,
+                          className: a()(_.descriptionClamp, I && _.maxBioHeight),
+                          children: (0, r.jsx)(u.Z, {
+                              userBio: o,
                               setLineClamp: !1,
                               textColor: 'header-primary'
                           })
                       }),
-                      (y || T) &&
-                          (0, i.jsx)(o.zxk, {
-                              look: o.zxk.Looks.BLANK,
-                              size: o.zxk.Sizes.NONE,
-                              className: p.viewFullBio,
-                              color: s()(p.viewFullBioColor, g && p.viewFullBioDisabled),
+                      (O || I) &&
+                          (0, r.jsx)(s.zxk, {
+                              look: s.zxk.Looks.BLANK,
+                              size: s.zxk.Sizes.NONE,
+                              className: _.viewFullBio,
+                              color: a()(_.viewFullBioColor, g && _.viewFullBioDisabled),
                               onClick: A,
-                              children: (0, i.jsx)(o.Text, {
+                              children: (0, r.jsx)(s.Text, {
                                   variant: 'text-xs/normal',
                                   color: 'none',
-                                  children: _.intl.string(_.t.YDiPq6)
+                                  children: p.NW.string(p.t.YDiPq6)
                               })
                           })
                   ]

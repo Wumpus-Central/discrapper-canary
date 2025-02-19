@@ -1,11 +1,11 @@
-n.d(t, { Z: () => y }), n(47120);
-var i,
-    r = n(442837),
-    a = n(570140),
-    s = n(626135),
-    o = n(261376),
+n.d(t, { Z: () => S }), n(47120);
+var r,
+    i = n(442837),
+    o = n(570140),
+    a = n(626135),
+    s = n(261376),
     l = n(981631);
-function u(e, t, n) {
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,9 +18,48 @@ function u(e, t, n) {
         e
     );
 }
-let c = 'daily_cap',
-    d = 3,
-    f = {
+function u(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                c(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function d(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function f(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : d(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let p = 'daily_cap',
+    _ = 3,
+    h = {
         numberOfDCsShownToday: 0,
         dailyCapPeriodStart: null,
         dismissibleContentSeenDuringSession: new Set(),
@@ -29,80 +68,79 @@ let c = 'daily_cap',
         renderedAtTimestamps: new Map(),
         lastDCDismissed: null
     };
-function _() {
-    f = {
-        ...f,
+function m() {
+    h = f(u({}, h), {
         dismissibleContentSeenDuringSession: new Set(),
         renderedAtTimestamps: new Map()
-    };
+    });
 }
-function p(e) {
+function g(e) {
     let { value: t } = e;
-    f.dailyCapOverridden = t;
+    h.dailyCapOverridden = t;
 }
-function h(e) {
+function E(e) {
     let { value: t } = e;
-    f.newUserMinAgeRequiredOverridden = t;
+    h.newUserMinAgeRequiredOverridden = t;
 }
-function m(e) {
+function v(e) {
     let { dismissibleContent: t } = e,
         n = new Date();
-    if ((f.renderedAtTimestamps.set(t, n.getTime()), !(o.O.has(t) || f.dailyCapOverridden || f.dismissibleContentSeenDuringSession.has(t)))) {
-        if ((f.dismissibleContentSeenDuringSession.add(t), null == f.dailyCapPeriodStart)) {
+    if ((h.renderedAtTimestamps.set(t, n.getTime()), !(s.O.has(t) || h.dailyCapOverridden || h.dismissibleContentSeenDuringSession.has(t)))) {
+        if ((h.dismissibleContentSeenDuringSession.add(t), null == h.dailyCapPeriodStart)) {
             let e = new Date();
-            e.setHours(0, 0, 0, 0), (f.dailyCapPeriodStart = e.getTime());
+            e.setHours(0, 0, 0, 0), (h.dailyCapPeriodStart = e.getTime());
         }
-        (f.numberOfDCsShownToday += 1),
-            f.numberOfDCsShownToday > d &&
-                s.default.track(l.rMx.DCF_CAP_EXCEEDED, {
-                    cap_type: c,
+        (h.numberOfDCsShownToday += 1),
+            h.numberOfDCsShownToday > _ &&
+                a.default.track(l.rMx.DCF_CAP_EXCEEDED, {
+                    cap_type: p,
                     dismissible_content: t,
-                    shown_dcs: f.numberOfDCsShownToday
+                    shown_dcs: h.numberOfDCsShownToday
                 });
     }
 }
-function g(e) {
+function b(e) {
     let { dismissibleContent: t } = e;
-    (f.lastDCDismissed = t), f.renderedAtTimestamps.delete(t);
+    (h.lastDCDismissed = t), h.renderedAtTimestamps.delete(t);
 }
-function E() {
-    (f.dailyCapPeriodStart = null), (f.numberOfDCsShownToday = 0), (f.dismissibleContentSeenDuringSession = new Set()), (f.lastDCDismissed = null);
+function y() {
+    (h.dailyCapPeriodStart = null), (h.numberOfDCsShownToday = 0), (h.dismissibleContentSeenDuringSession = new Set()), (h.lastDCDismissed = null);
 }
-class v extends (i = r.ZP.PersistedStore) {
+class O extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         if (null != e) {
-            var t, n, i;
-            (f.numberOfDCsShownToday = null !== (t = e.numberOfDCsShownToday) && void 0 !== t ? t : 0), (f.dailyCapPeriodStart = e.dailyCapPeriodStart), (f.dailyCapOverridden = null !== (n = e.dailyCapOverridden) && void 0 !== n && n), (f.newUserMinAgeRequiredOverridden = null !== (i = e.newUserMinAgeRequiredOverridden) && void 0 !== i && i);
+            var t, n, r;
+            (h.numberOfDCsShownToday = null !== (t = e.numberOfDCsShownToday) && void 0 !== t ? t : 0), (h.dailyCapPeriodStart = e.dailyCapPeriodStart), (h.dailyCapOverridden = null !== (n = e.dailyCapOverridden) && void 0 !== n && n), (h.newUserMinAgeRequiredOverridden = null !== (r = e.newUserMinAgeRequiredOverridden) && void 0 !== r && r);
         }
-        (f.dismissibleContentSeenDuringSession = new Set()), (f.lastDCDismissed = null);
+        (h.dismissibleContentSeenDuringSession = new Set()), (h.lastDCDismissed = null);
     }
     getState() {
-        return f;
+        return h;
     }
     get dailyCapOverridden() {
-        return f.dailyCapOverridden;
+        return h.dailyCapOverridden;
     }
     get newUserMinAgeRequiredOverridden() {
-        return f.newUserMinAgeRequiredOverridden;
+        return h.newUserMinAgeRequiredOverridden;
     }
     get lastDCDismissed() {
-        return f.lastDCDismissed;
+        return h.lastDCDismissed;
     }
     getRenderedAtTimestamp(e) {
-        return f.renderedAtTimestamps.get(e);
+        return h.renderedAtTimestamps.get(e);
     }
     hasUserHitDCCap(e) {
-        if ((null != e && (o.O.has(e) || f.dailyCapOverridden)) || (null != e && f.dismissibleContentSeenDuringSession.has(e))) return !1;
+        if ((null != e && (s.O.has(e) || h.dailyCapOverridden)) || (null != e && h.dismissibleContentSeenDuringSession.has(e))) return !1;
         let t = new Date();
-        return t.setHours(0, 0, 0, 0), null != f.dailyCapPeriodStart && f.dailyCapPeriodStart < t.getTime() && ((f.numberOfDCsShownToday = 0), (f.dailyCapPeriodStart = null)), f.numberOfDCsShownToday >= d;
+        return t.setHours(0, 0, 0, 0), null != h.dailyCapPeriodStart && h.dailyCapPeriodStart < t.getTime() && ((h.numberOfDCsShownToday = 0), (h.dailyCapPeriodStart = null)), h.numberOfDCsShownToday >= _;
     }
 }
-u(v, 'displayName', 'DismissibleContentFrameworkStore'), u(v, 'persistKey', 'DismissibleContentFrameworkStore'), u(v, 'migrations', [(e) => ({ ...e })]);
-let y = new v(a.Z, {
-    LOGOUT: _,
-    DCF_DAILY_CAP_OVERRIDE: p,
-    DCF_NEW_USER_MIN_AGE_REQUIRED_OVERRIDE: h,
-    DCF_HANDLE_DC_SHOWN: m,
-    DCF_HANDLE_DC_DISMISSED: g,
-    DCF_RESET: E
+c(O, 'displayName', 'DismissibleContentFrameworkStore'), c(O, 'persistKey', 'DismissibleContentFrameworkStore'), c(O, 'migrations', [(e) => u({}, e)]);
+let S = new O(o.Z, {
+    LOGOUT: m,
+    DCF_DAILY_CAP_OVERRIDE: g,
+    DCF_NEW_USER_MIN_AGE_REQUIRED_OVERRIDE: E,
+    DCF_HANDLE_DC_SHOWN: v,
+    DCF_HANDLE_DC_DISMISSED: b,
+    DCF_RESET: y
 });

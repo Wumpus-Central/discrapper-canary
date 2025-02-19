@@ -1,43 +1,95 @@
-n.d(t, { Z: () => E }), n(47120);
-var i = n(200651);
+n.d(t, { Z: () => O }), n(47120);
+var r = n(200651);
 n(192379);
-var r = n(392711),
-    a = n.n(r),
-    s = n(481060),
-    o = n(493683),
+var i = n(392711),
+    o = n.n(i),
+    a = n(481060),
+    s = n(493683),
     l = n(904245),
-    u = n(911969),
-    c = n(933557),
+    c = n(911969),
+    u = n(933557),
     d = n(699516),
     f = n(594174),
-    _ = n(895924),
-    p = n(689079),
+    p = n(895924),
+    _ = n(689079),
     h = n(981631),
     m = n(388032);
-function g(e) {
+function g(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function E(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                g(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function v(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function b(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : v(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function y(e) {
     switch (e) {
         case h.nkL.GIF.title:
         case h.nkL.TENOR.title:
-            return m.intl.string(m.t['0vrCgI']);
+            return m.NW.string(m.t['0vrCgI']);
         default:
             return '';
     }
 }
-let E = [
-    ...a()(h.nkL)
+let O = [
+    ...o()(h.nkL)
         .values()
         .map((e) => ({
             id: e.commandId,
             untranslatedName: e.command,
             displayName: e.command,
-            type: u.yU.CHAT,
-            inputType: _.iw.BUILT_IN_INTEGRATION,
-            applicationId: p.bi.BUILT_IN,
+            type: c.yU.CHAT,
+            inputType: p.iw.BUILT_IN_INTEGRATION,
+            applicationId: _.bi.BUILT_IN,
             get untranslatedDescription() {
-                return g(e.title);
+                return y(e.title);
             },
             get displayDescription() {
-                return g(e.title);
+                return y(e.title);
             },
             options:
                 e.type === h.q9n.GIF
@@ -45,12 +97,12 @@ let E = [
                           {
                               name: 'query',
                               displayName: 'query',
-                              type: u.jw.STRING,
+                              type: c.jw.STRING,
                               get description() {
-                                  return m.intl.string(m.t['+9g3Dg']);
+                                  return m.NW.string(m.t['+9g3Dg']);
                               },
                               get displayDescription() {
-                                  return m.intl.string(m.t['+9g3Dg']);
+                                  return m.NW.string(m.t['+9g3Dg']);
                               },
                               required: !0
                           }
@@ -64,25 +116,25 @@ let E = [
         id: '-15',
         untranslatedName: 'leave',
         displayName: 'leave',
-        type: u.yU.CHAT,
-        inputType: _.iw.BUILT_IN,
-        applicationId: p.bi.BUILT_IN,
+        type: c.yU.CHAT,
+        inputType: p.iw.BUILT_IN,
+        applicationId: _.bi.BUILT_IN,
         get untranslatedDescription() {
-            return m.intl.string(m.t['26C4oq']);
+            return m.NW.string(m.t['26C4oq']);
         },
         get displayDescription() {
-            return m.intl.string(m.t['26C4oq']);
+            return m.NW.string(m.t['26C4oq']);
         },
         options: [
             {
                 name: 'silent',
                 displayName: 'silent',
-                type: u.jw.BOOLEAN,
+                type: c.jw.BOOLEAN,
                 get description() {
-                    return m.intl.string(m.t.YH7PkJ);
+                    return m.NW.string(m.t.YH7PkJ);
                 },
                 get displayDescription() {
-                    return m.intl.string(m.t.bq3JXl);
+                    return m.NW.string(m.t.bq3JXl);
                 },
                 required: !1
             }
@@ -92,34 +144,43 @@ let E = [
             return null != t && t.isGroupDM();
         },
         execute: (e, t) => {
-            var n, r;
-            let { channel: a } = t;
-            if (null == a) return;
-            let u = (0, c.F6)(a, f.default, d.Z),
-                _ = m.intl.formatToPlainString(m.t.hJ5Ap6, { name: u }),
-                p = m.intl.format(m.t.SSIVOj, { name: u }),
-                h = null !== (r = null === (n = e.find((e) => 'silent' === e.name)) || void 0 === n ? void 0 : n.value) && void 0 !== r && r;
+            var n, i;
+            let { channel: o } = t;
+            if (null == o) return;
+            let c = (0, u.F6)(o, f.default, d.Z),
+                p = m.NW.formatToPlainString(m.t.hJ5Ap6, { name: c }),
+                _ = m.NW.format(m.t.SSIVOj, { name: c }),
+                h = null !== (i = null === (n = e.find((e) => 'silent' === e.name)) || void 0 === n ? void 0 : n.value) && void 0 !== i && i;
             async function g() {
-                if (null != a)
+                if (null != o)
                     try {
-                        await o.Z.closePrivateChannel(a.id, void 0, h);
+                        await s.Z.closePrivateChannel(o.id, void 0, h);
                     } catch (e) {
-                        l.Z.sendBotMessage(a.id, m.intl.string(m.t.YOsuT0));
+                        l.Z.sendBotMessage(o.id, m.NW.string(m.t.YOsuT0));
                     }
             }
-            a.isManaged() && ((_ = m.intl.formatToPlainString(m.t.hVGjER, { name: u })), (p = m.intl.format(m.t.IK1Qvr, { name: u }))),
-                (0, s.h7j)((e) =>
-                    (0, i.jsx)(s.ConfirmModal, {
-                        header: _,
-                        confirmText: m.intl.string(m.t['26C4oq']),
-                        cancelText: m.intl.string(m.t['ETE/oK']),
-                        onConfirm: g,
-                        ...e,
-                        children: (0, i.jsx)(s.Text, {
-                            variant: 'text-md/normal',
-                            children: p
-                        })
-                    })
+            o.isManaged() && ((p = m.NW.formatToPlainString(m.t.hVGjER, { name: c })), (_ = m.NW.format(m.t.IK1Qvr, { name: c }))),
+                (0, a.h7j)((e) =>
+                    (0, r.jsx)(
+                        a.ConfirmModal,
+                        b(
+                            E(
+                                {
+                                    header: p,
+                                    confirmText: m.NW.string(m.t['26C4oq']),
+                                    cancelText: m.NW.string(m.t['ETE/oK']),
+                                    onConfirm: g
+                                },
+                                e
+                            ),
+                            {
+                                children: (0, r.jsx)(a.Text, {
+                                    variant: 'text-md/normal',
+                                    children: _
+                                })
+                            }
+                        )
+                    )
                 );
         }
     },
@@ -127,25 +188,25 @@ let E = [
         id: '-17',
         untranslatedName: 'sticker',
         displayName: 'sticker',
-        type: u.yU.CHAT,
-        inputType: _.iw.BUILT_IN_INTEGRATION,
-        applicationId: p.bi.BUILT_IN,
+        type: c.yU.CHAT,
+        inputType: p.iw.BUILT_IN_INTEGRATION,
+        applicationId: _.bi.BUILT_IN,
         get untranslatedDescription() {
-            return m.intl.string(m.t.GUH9IC);
+            return m.NW.string(m.t.GUH9IC);
         },
         get displayDescription() {
-            return m.intl.string(m.t.GUH9IC);
+            return m.NW.string(m.t.GUH9IC);
         },
         options: [
             {
                 name: 'query',
                 displayName: 'query',
-                type: u.jw.STRING,
+                type: c.jw.STRING,
                 get description() {
-                    return m.intl.string(m.t.hIbHm5);
+                    return m.NW.string(m.t.hIbHm5);
                 },
                 get displayDescription() {
-                    return m.intl.string(m.t.hIbHm5);
+                    return m.NW.string(m.t.hIbHm5);
                 },
                 required: !0
             }

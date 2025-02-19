@@ -1,116 +1,185 @@
-n.d(t, { Z: () => v }), n(47120);
-var a = n(200651),
-    r = n(192379),
-    i = n(894582),
-    c = n(29978),
-    o = n(772848),
-    s = n(286379),
-    p = n(343817),
-    d = n(797614),
-    l = n(626135),
-    h = n(353250),
-    u = n(599857),
-    f = n(981631);
+r.d(t, { Z: () => v }), r(47120);
+var n = r(200651),
+    a = r(192379),
+    i = r(894582),
+    o = r(29978),
+    c = r(772848),
+    s = r(286379),
+    p = r(343817),
+    l = r(797614),
+    d = r(626135),
+    u = r(353250),
+    h = r(599857),
+    f = r(981631);
+function y(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var r = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(r);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (n = n.concat(
+                Object.getOwnPropertySymbols(r).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                })
+            )),
+            n.forEach(function (t) {
+                var n;
+                (n = r[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: n,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = n);
+            });
+    }
+    return e;
+}
+function b(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var r = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var n = Object.getOwnPropertySymbols(e);
+                      r.push.apply(r, n);
+                  }
+                  return r;
+              })(Object(t)).forEach(function (r) {
+                  Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
+              }),
+        e
+    );
+}
 let v = (e) => {
-    let { captchaService: t = p.hP.RECAPTCHA, sitekey: n, rqdata: v, onRender: m, onVerify: y, onError: C, onOpen: E, onClose: b, onChalExpired: _, size: R, userflow: g, ...x } = e,
-        w = r.useRef(null),
-        A = (0, o.Z)(),
-        [S, k] = r.useState(!1),
-        j = r.useCallback(
+    var { captchaService: t = p.hP.RECAPTCHA, sitekey: r, rqdata: v, onRender: m, onVerify: O, onError: g, onOpen: C, onClose: E, onChalExpired: j, size: w, userflow: R } = e,
+        _ = (function (e, t) {
+            if (null == e) return {};
+            var r,
+                n,
+                a = (function (e, t) {
+                    if (null == e) return {};
+                    var r,
+                        n,
+                        a = {},
+                        i = Object.keys(e);
+                    for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (a[r] = e[r]);
+                    return a;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var i = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < i.length; n++) (r = i[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
+            }
+            return a;
+        })(e, ['captchaService', 'sitekey', 'rqdata', 'onRender', 'onVerify', 'onError', 'onOpen', 'onClose', 'onChalExpired', 'size', 'userflow']);
+    let x = a.useRef(null),
+        P = (0, c.Z)(),
+        [S, k] = a.useState(!1),
+        A = a.useCallback(
             (e) => {
-                l.default.track(f.rMx.CAPTCHA_EVENT, {
+                d.default.track(f.rMx.CAPTCHA_EVENT, {
                     captcha_event_name: e,
                     captcha_service: t,
-                    sitekey: n,
-                    captcha_flow_key: A
+                    sitekey: r,
+                    captcha_flow_key: P
                 });
             },
-            [A, t, n]
+            [P, t, r]
         ),
-        I = r.useCallback(
+        I = a.useCallback(
             (e) => {
-                d.Z.increment({
+                l.Z.increment({
                     name: s.V.CAPTCHA_EVENT,
                     tags: ['event_name:'.concat(e), 'captcha_service:'.concat(t)]
                 });
             },
             [t]
         ),
-        N = r.useCallback(() => {
+        D = a.useCallback(() => {
             if (t === p.hP.HCAPTCHA) {
-                var e, n;
-                null != v && '' !== v && null != w.current && (null === (e = w.current) || void 0 === e || e.setData({ rqdata: v })), 'invisible' === R && null != w.current && (null === (n = w.current) || void 0 === n || n.execute());
+                var e, r;
+                null != v && '' !== v && null != x.current && (null === (e = x.current) || void 0 === e || e.setData({ rqdata: v })), 'invisible' === w && null != x.current && (null === (r = x.current) || void 0 === r || r.execute());
             }
-        }, [v, w, R, t]),
-        O = r.useCallback(() => {
-            S || (j('initial-load'), I('initial-load'), k(!0)), N();
-        }, [I, S, j, N]);
-    r.useEffect(() => {
-        N();
-    }, [N]),
-        r.useEffect(() => {
-            O();
-        }, [O]);
-    let L = r.useCallback(() => {
-            j('error'), I('error'), N(), null == C || C();
-        }, [j, I, N, C]),
-        P = r.useCallback(
+        }, [v, x, w, t]),
+        N = a.useCallback(() => {
+            S || (A('initial-load'), I('initial-load'), k(!0)), D();
+        }, [I, S, A, D]);
+    a.useEffect(() => {
+        D();
+    }, [D]),
+        a.useEffect(() => {
+            N();
+        }, [N]);
+    let L = a.useCallback(() => {
+            A('error'), I('error'), D(), null == g || g();
+        }, [A, I, D, g]),
+        V = a.useCallback(
             (e) => {
-                j('verify'), I('verify'), y(e);
+                A('verify'), I('verify'), O(e);
             },
-            [I, y, j]
+            [I, O, A]
         ),
-        V = r.useCallback(() => {
-            j('render'), (0, h.emitCaptchaDistributionMetric)(g), null == m || m();
-        }, [m, j, g]),
-        T = r.useCallback(() => {
-            j('open'), I('open'), (0, h.emitCaptchaDistributionMetric)(g), null == E || E();
-        }, [I, E, j, g]),
-        Z = r.useCallback(() => {
-            j('close'), null == b || b(), N();
-        }, [b, j, N]),
-        D = r.useCallback(() => {
-            j('chal-expire'), null == _ || _();
-        }, [_, j]);
-    return ((null == n || '' === n) && (n = f.OL7), t === p.hP.RECAPTCHA)
-        ? (0, a.jsx)(c.Z, {
-              ...x,
-              onLoad: O,
-              onRender: V,
-              onVerify: P,
-              onError: L,
-              sitekey: n
-          })
-        : t === p.hP.RECAPTCHA_ENTERPRISE
-          ? (0, a.jsx)(u._, {
-                ...x,
-                onLoad: O,
-                onRender: V,
-                onVerify: P,
-                onError: L,
-                sitekey: n,
-                action: g
-            })
-          : t === p.hP.HCAPTCHA
-            ? (0, a.jsx)(i.Z, {
-                  ref: w,
-                  ...x,
-                  sitekey: n,
-                  onLoad: O,
+        T = a.useCallback(() => {
+            A('render'), (0, u.emitCaptchaDistributionMetric)(R), null == m || m();
+        }, [m, A, R]),
+        Z = a.useCallback(() => {
+            A('open'), I('open'), (0, u.emitCaptchaDistributionMetric)(R), null == C || C();
+        }, [I, C, A, R]),
+        M = a.useCallback(() => {
+            A('close'), null == E || E(), D();
+        }, [E, A, D]),
+        q = a.useCallback(() => {
+            A('chal-expire'), null == j || j();
+        }, [j, A]);
+    return ((null == r || '' === r) && (r = f.OL7), t === p.hP.RECAPTCHA)
+        ? (0, n.jsx)(
+              o.Z,
+              b(y({}, _), {
+                  onLoad: N,
+                  onRender: T,
+                  onVerify: V,
                   onError: L,
-                  onVerify: P,
-                  onChalExpired: D,
-                  onOpen: T,
-                  onClose: Z,
-                  size: R,
-                  reCaptchaCompat: !1
+                  sitekey: r
               })
-            : (0, a.jsx)(c.Z, {
-                  ...x,
-                  sitekey: n,
-                  onLoad: O,
-                  onRender: V,
-                  onVerify: P,
-                  onError: L
-              });
+          )
+        : t === p.hP.RECAPTCHA_ENTERPRISE
+          ? (0, n.jsx)(
+                h._,
+                b(y({}, _), {
+                    onLoad: N,
+                    onRender: T,
+                    onVerify: V,
+                    onError: L,
+                    sitekey: r,
+                    action: R
+                })
+            )
+          : t === p.hP.HCAPTCHA
+            ? (0, n.jsx)(
+                  i.Z,
+                  b(y({ ref: x }, _), {
+                      sitekey: r,
+                      onLoad: N,
+                      onError: L,
+                      onVerify: V,
+                      onChalExpired: q,
+                      onOpen: Z,
+                      onClose: M,
+                      size: w,
+                      reCaptchaCompat: !1
+                  })
+              )
+            : (0, n.jsx)(
+                  o.Z,
+                  b(y({}, _), {
+                      sitekey: r,
+                      onLoad: N,
+                      onRender: T,
+                      onVerify: V,
+                      onError: L
+                  })
+              );
 };

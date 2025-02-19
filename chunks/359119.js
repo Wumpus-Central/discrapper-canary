@@ -1,115 +1,147 @@
 n.d(t, {
-    ZP: () => S,
-    ny: () => l,
-    pj: () => o
+    ZP: () => C,
+    ny: () => f,
+    pj: () => d
 }),
     n(47120);
-var i = n(442837),
-    r = n(570140),
-    a = n(592125);
-let s = 5 * n(70956).Z.Millis.SECOND;
-var o = (function (e) {
-        return (e[(e.STRANGER_DANGER = 1)] = 'STRANGER_DANGER'), (e[(e.INAPPROPRIATE_CONVERSATION_TIER_1 = 2)] = 'INAPPROPRIATE_CONVERSATION_TIER_1'), (e[(e.INAPPROPRIATE_CONVERSATION_TIER_2 = 3)] = 'INAPPROPRIATE_CONVERSATION_TIER_2'), (e[(e.LIKELY_ATO = 4)] = 'LIKELY_ATO'), e;
-    })({}),
-    l = (function (e) {
-        return (e[(e.UPVOTE = 0)] = 'UPVOTE'), (e[(e.DOWNVOTE = 1)] = 'DOWNVOTE'), e;
-    })({});
-let u = [],
-    c = {},
-    d = new Set();
-function f(e) {
-    return 2 === e.type || 3 === e.type;
-}
-function _(e) {
-    let { safetyWarnings: t } = e;
-    null != t && ((c[e.id] = t), t.some((e) => f(e) && null != e.dismiss_timestamp && !T(e.dismiss_timestamp)) ? d.add(e.id) : d.delete(e.id)), null == t && (null != c[e.id] && delete c[e.id], d.delete(e.id));
-}
-function p(e) {
-    _(e.channel);
-}
-function h(e) {
-    e.channels.forEach((e) => {
-        _(e);
-    });
-}
-function m(e) {
-    let { channel: t } = e;
-    null != c[t.id] && delete c[t.id], d.delete(t.id);
-}
-function g(e) {
-    let { channelId: t, warningId: n, feedbackType: i } = e,
-        r = c[t];
-    null != r &&
-        (c[t] = r.map((e) =>
-            e.id === n
-                ? {
-                      ...e,
-                      feedback_type: i
-                  }
-                : e
-        ));
-}
-function E(e) {
-    let { channelId: t } = e,
-        n = c[t];
-    d.delete(t),
-        null != n &&
-            (c[t] = n.map((e) => ({
-                ...e,
-                dismiss_timestamp: void 0
-            })));
-}
-function v(e) {
-    let { channelId: t, warningIds: n } = e,
-        i = c[t];
-    if (null == i) return;
-    let r = new Date().toISOString();
-    c[t] = i.map((e) =>
-        n.includes(e.id)
-            ? {
-                  ...e,
-                  dismiss_timestamp: r
-              }
-            : e
+var r = n(442837),
+    i = n(570140),
+    o = n(592125);
+function a(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
     );
 }
-function y(e) {
-    let { channelId: t } = e;
-    d.add(t);
+function s(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                a(e, t, n[t]);
+            });
+    }
+    return e;
 }
-function I() {
-    (c = {}),
-        Object.values(a.Z.getMutablePrivateChannels()).forEach((e) => {
-            _(e);
+function l(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function c(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : l(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let u = 5 * n(70956).Z.Millis.SECOND;
+var d = (function (e) {
+        return (e[(e.STRANGER_DANGER = 1)] = 'STRANGER_DANGER'), (e[(e.INAPPROPRIATE_CONVERSATION_TIER_1 = 2)] = 'INAPPROPRIATE_CONVERSATION_TIER_1'), (e[(e.INAPPROPRIATE_CONVERSATION_TIER_2 = 3)] = 'INAPPROPRIATE_CONVERSATION_TIER_2'), (e[(e.LIKELY_ATO = 4)] = 'LIKELY_ATO'), e;
+    })({}),
+    f = (function (e) {
+        return (e[(e.UPVOTE = 0)] = 'UPVOTE'), (e[(e.DOWNVOTE = 1)] = 'DOWNVOTE'), e;
+    })({});
+let p = [],
+    _ = {},
+    h = new Set();
+function m(e) {
+    return 2 === e.type || 3 === e.type;
+}
+function g(e) {
+    let { safetyWarnings: t } = e;
+    null != t && ((_[e.id] = t), t.some((e) => m(e) && null != e.dismiss_timestamp && !N(e.dismiss_timestamp)) ? h.add(e.id) : h.delete(e.id)), null == t && (null != _[e.id] && delete _[e.id], h.delete(e.id));
+}
+function E(e) {
+    g(e.channel);
+}
+function v(e) {
+    e.channels.forEach((e) => {
+        g(e);
+    });
+}
+function b(e) {
+    let { channel: t } = e;
+    null != _[t.id] && delete _[t.id], h.delete(t.id);
+}
+function y(e) {
+    let { channelId: t, warningId: n, feedbackType: r } = e,
+        i = _[t];
+    null != i && (_[t] = i.map((e) => (e.id === n ? c(s({}, e), { feedback_type: r }) : e)));
+}
+function O(e) {
+    let { channelId: t } = e,
+        n = _[t];
+    h.delete(t), null != n && (_[t] = n.map((e) => c(s({}, e), { dismiss_timestamp: void 0 })));
+}
+function S(e) {
+    let { channelId: t, warningIds: n } = e,
+        r = _[t];
+    if (null == r) return;
+    let i = new Date().toISOString();
+    _[t] = r.map((e) => (n.includes(e.id) ? c(s({}, e), { dismiss_timestamp: i }) : e));
+}
+function I(e) {
+    let { channelId: t } = e;
+    h.add(t);
+}
+function T() {
+    (_ = {}),
+        Object.values(o.Z.getMutablePrivateChannels()).forEach((e) => {
+            g(e);
         });
 }
-function T(e) {
-    return new Date(e).getTime() > Date.now() - s;
+function N(e) {
+    return new Date(e).getTime() > Date.now() - u;
 }
-class b extends i.ZP.Store {
+class A extends r.ZP.Store {
     initialize() {
-        this.waitFor(a.Z);
+        this.waitFor(o.Z);
     }
     getChannelSafetyWarning(e, t) {
         var n;
-        return null === (n = c[e]) || void 0 === n ? void 0 : n.find((e) => e.id === t);
+        return null === (n = _[e]) || void 0 === n ? void 0 : n.find((e) => e.id === t);
     }
     getChannelSafetyWarnings(e) {
         var t;
-        return null !== (t = c[e]) && void 0 !== t ? t : u;
+        return null !== (t = _[e]) && void 0 !== t ? t : p;
     }
     hasShownInitialTooltipForChannel(e) {
-        return d.has(e);
+        return h.has(e);
     }
 }
-let S = new b(r.Z, {
-    CHANNEL_CREATE: p,
-    CHANNEL_DELETE: m,
-    CHANNEL_UPDATES: h,
-    CONNECTION_OPEN: I,
-    CONNECTION_OPEN_SUPPLEMENTAL: I,
-    CHANNEL_SAFETY_WARNING_FEEDBACK: g,
-    CLEAR_CHANNEL_SAFETY_WARNINGS: E,
-    DISMISS_CHANNEL_SAFETY_WARNINGS: v,
-    ACKNOWLEDGE_CHANNEL_SAFETY_WARNING_TOOLTIP: y
+let C = new A(i.Z, {
+    CHANNEL_CREATE: E,
+    CHANNEL_DELETE: b,
+    CHANNEL_UPDATES: v,
+    CONNECTION_OPEN: T,
+    CONNECTION_OPEN_SUPPLEMENTAL: T,
+    CHANNEL_SAFETY_WARNING_FEEDBACK: y,
+    CLEAR_CHANNEL_SAFETY_WARNINGS: O,
+    DISMISS_CHANNEL_SAFETY_WARNINGS: S,
+    ACKNOWLEDGE_CHANNEL_SAFETY_WARNING_TOOLTIP: I
 });

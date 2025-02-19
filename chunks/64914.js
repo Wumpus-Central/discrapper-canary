@@ -1,96 +1,143 @@
-n.d(t, { Z: () => E }), n(47120);
-var i = n(200651),
-    s = n(192379),
-    r = n(442837),
-    l = n(481060),
-    a = n(401430),
+n.d(t, { Z: () => b }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    s = n(442837),
+    a = n(481060),
+    l = n(401430),
     o = n(153867),
     c = n(921801),
     d = n(695103),
     u = n(998502),
     m = n(740492),
     g = n(695346),
-    h = n(399970),
-    x = n(726985),
-    _ = n(981631),
-    p = n(388032);
-function E() {
-    let [e] = s.useState(() => u.ZP.getEnableHardwareAcceleration()),
+    p = n(399970),
+    h = n(726985),
+    f = n(981631),
+    N = n(388032);
+function x(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function b() {
+    let [e] = i.useState(() => u.ZP.getEnableHardwareAcceleration()),
         t = g.bm.useSetting(),
         n = g.Sb.useSetting(),
-        E = (0, r.e7)([d.Z], () => d.Z.testModeApplicationId),
-        C = (0, r.e7)([m.ZP], () => m.ZP.showPlayAgain),
-        f = s.useCallback((e) => {
+        b = (0, s.e7)([d.Z], () => d.Z.testModeApplicationId),
+        _ = (0, s.e7)([m.ZP], () => m.ZP.showPlayAgain),
+        E = i.useCallback((e) => {
             g.bm.updateSetting(!e);
         }, []),
-        T = s.useCallback((e) => {
-            e ? (0, l.h7j)((e) => (0, i.jsx)(h.Z, { ...e })) : a.mc();
+        j = i.useCallback((e) => {
+            e ? (0, a.h7j)((e) => (0, r.jsx)(p.Z, x({}, e))) : l.mc();
         }, []),
-        N = s.useCallback((e) => {
+        C = i.useCallback((e) => {
             o.ZP.updatedUnsyncedSettings({ showPlayAgain: e });
         }, []),
-        S = s.useCallback((e) => {
-            (0, l.h7j)((t) =>
-                (0, i.jsx)(l.ConfirmModal, {
-                    header: p.intl.string(p.t.aqpAvr),
-                    confirmText: p.intl.string(p.t.BddRzc),
-                    cancelText: p.intl.string(p.t['ETE/oK']),
-                    onConfirm: () => u.ZP.setEnableHardwareAcceleration(e),
-                    ...t,
-                    children: (0, i.jsx)(l.Text, {
-                        variant: 'text-sm/normal',
-                        children: p.intl.string(p.t.uDP3Ky)
-                    })
-                })
-            );
+        O = i.useCallback((e) => {
+            (0, a.h7j)((t) => {
+                var n, i;
+                return (0, r.jsx)(
+                    a.ConfirmModal,
+                    ((n = x(
+                        {
+                            header: N.NW.string(N.t.aqpAvr),
+                            confirmText: N.NW.string(N.t.BddRzc),
+                            cancelText: N.NW.string(N.t['ETE/oK']),
+                            onConfirm: () => u.ZP.setEnableHardwareAcceleration(e)
+                        },
+                        t
+                    )),
+                    (i = i =
+                        {
+                            children: (0, r.jsx)(a.Text, {
+                                variant: 'text-sm/normal',
+                                children: N.NW.string(N.t.uDP3Ky)
+                            })
+                        }),
+                    Object.getOwnPropertyDescriptors
+                        ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
+                        : (function (e, t) {
+                              var n = Object.keys(e);
+                              if (Object.getOwnPropertySymbols) {
+                                  var r = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, r);
+                              }
+                              return n;
+                          })(Object(i)).forEach(function (e) {
+                              Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
+                          }),
+                    n)
+                );
+            });
         }, []);
-    return (0, i.jsxs)(l.hjN, {
-        tag: l.RB0.H1,
-        title: p.intl.string(p.t['8/udY2']),
+    return (0, r.jsxs)(a.hjN, {
+        tag: a.RB0.H1,
+        title: N.NW.string(N.t['8/udY2']),
         children: [
-            (0, i.jsx)(c.F, {
-                setting: x.s6.SETTINGS_ADVANCED_DEVELOPER_MODE,
-                children: (0, i.jsx)(l.j7V, {
+            (0, r.jsx)(c.F, {
+                setting: h.s6.SETTINGS_ADVANCED_DEVELOPER_MODE,
+                children: (0, r.jsx)(a.j7V, {
                     value: n,
                     onChange: g.Sb.updateSetting,
-                    note: p.intl.format(p.t['CY6q/f'], { apiDocsUrl: _.EYA.API_DOCS }),
-                    children: p.intl.string(p.t.ObIb1d)
+                    note: N.NW.format(N.t['CY6q/f'], { apiDocsUrl: f.EYA.API_DOCS }),
+                    children: N.NW.string(N.t.ObIb1d)
                 })
             }),
-            (0, i.jsx)(c.F, {
-                setting: x.s6.SETTINGS_ADVANCED_HARDWARE_ACCELERATION,
-                children: (0, i.jsx)(l.j7V, {
+            (0, r.jsx)(c.F, {
+                setting: h.s6.SETTINGS_ADVANCED_HARDWARE_ACCELERATION,
+                children: (0, r.jsx)(a.j7V, {
                     value: e,
-                    onChange: S,
-                    note: p.intl.string(p.t.Afc7l5),
-                    children: p.intl.string(p.t['eOC/Fx'])
+                    onChange: O,
+                    note: N.NW.string(N.t.Afc7l5),
+                    children: N.NW.string(N.t['eOC/Fx'])
                 })
             }),
-            (0, i.jsx)(c.F, {
-                setting: x.s6.SETTINGS_ADVANCED_SHOW_GAME_LIBRARY,
-                children: (0, i.jsx)(l.j7V, {
+            (0, r.jsx)(c.F, {
+                setting: h.s6.SETTINGS_ADVANCED_SHOW_GAME_LIBRARY,
+                children: (0, r.jsx)(a.j7V, {
                     value: !t,
-                    onChange: f,
-                    note: p.intl.string(p.t['8mYp39']),
-                    children: p.intl.string(p.t.fi3UQE)
+                    onChange: E,
+                    note: N.NW.string(N.t['8mYp39']),
+                    children: N.NW.string(N.t.fi3UQE)
                 })
             }),
-            (0, i.jsx)(c.F, {
-                setting: x.s6.SETTINGS_ADVANCED_APPLICATION_TEST_MODE,
-                children: (0, i.jsx)(l.j7V, {
-                    value: null != E,
-                    note: p.intl.string(p.t['52hMnJ']),
-                    onChange: T,
-                    children: p.intl.string(p.t.erOqlp)
+            (0, r.jsx)(c.F, {
+                setting: h.s6.SETTINGS_ADVANCED_APPLICATION_TEST_MODE,
+                children: (0, r.jsx)(a.j7V, {
+                    value: null != b,
+                    note: N.NW.string(N.t['52hMnJ']),
+                    onChange: j,
+                    children: N.NW.string(N.t.erOqlp)
                 })
             }),
-            (0, i.jsx)(c.F, {
-                setting: x.s6.SETTINGS_ADVANCED_SHOW_PLAY_AGAIN,
-                children: (0, i.jsx)(l.j7V, {
-                    value: C,
-                    note: p.intl.string(p.t['B/qU4O']),
-                    onChange: N,
-                    children: p.intl.string(p.t.qDZryM)
+            (0, r.jsx)(c.F, {
+                setting: h.s6.SETTINGS_ADVANCED_SHOW_PLAY_AGAIN,
+                children: (0, r.jsx)(a.j7V, {
+                    value: _,
+                    note: N.NW.string(N.t['B/qU4O']),
+                    onChange: C,
+                    children: N.NW.string(N.t.qDZryM)
                 })
             })
         ]

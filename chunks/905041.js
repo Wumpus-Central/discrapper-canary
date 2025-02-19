@@ -1,58 +1,75 @@
-l.d(t, { Z: () => _ });
-var e = l(200651);
-l(192379);
-var i = l(481060),
-    a = l(378409),
-    r = l(976853),
-    o = l(902676),
-    u = l(626135),
-    d = l(49012),
-    s = l(358085),
-    c = l(998502),
-    v = l(36998),
-    h = l(981631),
-    p = l(388032);
-function _(n, t, l, _) {
-    let f = (0, r.Z)(null == l ? void 0 : l.getChannelId());
-    if (!s.isPlatformEmbedded || null == n || '' === n || f || (null == _ ? void 0 : _.shouldHideMediaOptions) === !0 || !(0, a.Jj)(n)) return null;
-    let C = (0, o.F)(n),
-        Z = (l) => {
-            u.default.track(h.rMx.CONTEXT_MENU_LINK_OPENED, {
-                hostname: C,
-                ...(0, v.v)()
-            }),
-                (0, d.q)(
+t.d(e, { Z: () => b });
+var l = t(200651);
+t(192379);
+var r = t(481060),
+    i = t(378409),
+    o = t(976853),
+    a = t(902676),
+    u = t(626135),
+    c = t(49012),
+    d = t(358085),
+    s = t(998502),
+    v = t(36998),
+    f = t(981631),
+    h = t(388032);
+function p(n) {
+    for (var e = 1; e < arguments.length; e++) {
+        var t = null != arguments[e] ? arguments[e] : {},
+            l = Object.keys(t);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (l = l.concat(
+                Object.getOwnPropertySymbols(t).filter(function (n) {
+                    return Object.getOwnPropertyDescriptor(t, n).enumerable;
+                })
+            )),
+            l.forEach(function (e) {
+                var l;
+                (l = t[e]),
+                    e in n
+                        ? Object.defineProperty(n, e, {
+                              value: l,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (n[e] = l);
+            });
+    }
+    return n;
+}
+function b(n, e, t, b) {
+    let O = (0, o.Z)(null == t ? void 0 : t.getChannelId());
+    if (!d.isPlatformEmbedded || null == n || '' === n || O || (null == b ? void 0 : b.shouldHideMediaOptions) === !0 || !(0, i.Jj)(n)) return null;
+    let _ = (0, a.F)(n),
+        g = (t) => {
+            u.default.track(f.rMx.CONTEXT_MENU_LINK_OPENED, p({ hostname: _ }, (0, v.v)())),
+                (0, c.q)(
                     {
                         href: n,
-                        trusted: (0, d.r)(n, t),
+                        trusted: (0, c.r)(n, e),
                         shouldConfirm: !0
                     },
-                    l
+                    t
                 );
         };
     return [
-        (0, e.jsx)(
-            i.sNh,
+        (0, l.jsx)(
+            r.sNh,
             {
                 id: 'copy-native-link',
-                label: p.intl.string(p.t.WqhZsr),
+                label: h.NW.string(h.t.WqhZsr),
                 action: () => {
-                    u.default.track(h.rMx.CONTEXT_MENU_LINK_COPIED, {
-                        hostname: C,
-                        ...(0, v.v)()
-                    }),
-                        c.ZP.copy(n),
-                        (0, i.showToast)((0, i.createToast)(p.intl.string(p.t['L/PwZW']), i.ToastType.SUCCESS));
+                    u.default.track(f.rMx.CONTEXT_MENU_LINK_COPIED, p({ hostname: _ }, (0, v.v)())), s.ZP.copy(n), (0, r.showToast)((0, r.createToast)(h.NW.string(h.t['L/PwZW']), r.ToastType.SUCCESS));
                 }
             },
             'copy-native-link'
         ),
-        (0, e.jsx)(
-            i.sNh,
+        (0, l.jsx)(
+            r.sNh,
             {
                 id: 'open-native-link',
-                label: p.intl.string(p.t.wuRE8P),
-                action: (n) => Z(n)
+                label: h.NW.string(h.t.wuRE8P),
+                action: (n) => g(n)
             },
             'open-native-link'
         )

@@ -1,11 +1,11 @@
-n.d(t, { Z: () => m }), n(47120), n(653041);
-var i = n(404097),
-    r = n(544891),
-    a = n(358085),
-    s = n(747268),
-    o = n(20186),
+n.d(t, { Z: () => v }), n(47120), n(653041);
+var r = n(404097),
+    i = n(544891),
+    o = n(358085),
+    a = n(747268),
+    s = n(20186),
     l = n(981631);
-function u(e, t, n) {
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,79 +18,115 @@ function u(e, t, n) {
         e
     );
 }
-let c = new Set(['darwin', 'linux', 'win32', 'ios', 'android']);
-function d() {
-    if ((0, a.isWeb)()) return 'web';
+function u(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                c(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function d(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function f(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : d(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let p = new Set(['darwin', 'linux', 'win32', 'ios', 'android']);
+function _() {
+    if ((0, o.isWeb)()) return 'web';
     {
-        let e = (0, a.getPlatformName)();
-        return c.has(e) ? e : null;
+        let e = (0, o.getPlatformName)();
+        return p.has(e) ? e : null;
     }
 }
-function f() {
-    let e = s.Z;
-    return null != e && i.e.ALL.has(e) ? e : null;
+function h() {
+    let e = a.Z;
+    return null != e && r.e.ALL.has(e) ? e : null;
 }
-let _ = 120000,
-    p = 100;
-class h {
+let m = 120000,
+    g = 100;
+class E {
     _getMetricWithDefaults(e, t) {
-        let { name: n, tags: i } = e,
-            r = {
+        let { name: n, tags: r } = e,
+            i = {
                 name: n,
                 type: t,
-                tags: (0, o.d)()
+                tags: (0, s.d)()
             };
-        null != i &&
-            i.forEach((e) => {
-                r.tags.push(e);
+        null != r &&
+            r.forEach((e) => {
+                i.tags.push(e);
             });
-        let a = d();
-        null != a && r.tags.push('platform:'.concat(a));
-        let s = f();
-        return null != s && r.tags.push('release_channel:'.concat(s)), r;
+        let o = _();
+        null != o && i.tags.push('platform:'.concat(o));
+        let a = h();
+        return null != a && i.tags.push('release_channel:'.concat(a)), i;
     }
     increment(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = this._getMetricWithDefaults(e, 'count');
-        this._metrics.push(n), (t || this._metrics.length >= p) && this._flush();
+        this._metrics.push(n), (t || this._metrics.length >= g) && this._flush();
     }
     distribution(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            i = {
-                ...this._getMetricWithDefaults(e, 'distribution'),
-                value: t
-            };
-        this._metrics.push(i), (n || this._metrics.length >= p) && this._flush();
+            r = f(u({}, this._getMetricWithDefaults(e, 'distribution')), { value: t });
+        this._metrics.push(r), (n || this._metrics.length >= g) && this._flush();
     }
     _flush() {
         if (this._metrics.length > 0) {
             let e = [...this._metrics];
-            r.tn
+            i.tn
                 .post({
                     url: l.ANM.METRICS_V2,
                     body: {
                         metrics: e,
                         client_info: {
-                            built_at: '1739583468245',
-                            build_number: '369170'
+                            built_at: '1739926259036',
+                            build_number: '369630'
                         }
                     },
                     retries: 1,
                     rejectWithError: !0
                 })
                 .catch((t) => {
-                    this._metrics.length + e.length < p && (this._metrics = [...this._metrics, ...e]);
+                    this._metrics.length + e.length < g && (this._metrics = [...this._metrics, ...e]);
                 });
         }
         this._metrics = [];
     }
     constructor() {
-        u(this, '_metrics', void 0),
-            u(this, '_intervalId', void 0),
+        c(this, '_metrics', void 0),
+            c(this, '_intervalId', void 0),
             (this._metrics = []),
             (this._intervalId = setInterval(() => {
                 this._flush();
-            }, _));
+            }, m));
     }
 }
-let m = new h();
+let v = new E();

@@ -1,104 +1,131 @@
-l.d(n, { Z: () => S });
-var t = l(200651),
-    i = l(192379),
-    r = l(866442),
-    a = l(481060),
-    s = l(129861),
-    o = l(91218),
-    u = l(829883),
-    c = l(518738),
-    d = l(14263),
-    m = l(592125),
-    h = l(430824),
-    p = l(158776),
-    x = l(594174),
-    v = l(970184),
-    f = l(280501),
-    C = l(811654),
-    g = l(344991),
-    j = l(981631),
-    N = l(222343);
-function S(e) {
-    var n;
-    let l = (0, v.CJ)(),
-        S = null == l ? void 0 : null === (n = l.message) || void 0 === n ? void 0 : n.getChannelId(),
-        E = m.Z.getChannel(S),
-        I = h.Z.getGuild(null == E ? void 0 : E.getGuildId()),
-        Z = (0, d.Z)(null == I ? void 0 : I.id, C.HI),
-        T = i.useMemo(() => (0, C.tx)(e.defaultValues, null == I ? void 0 : I.id), [e.defaultValues, I]);
-    return (0, t.jsx)(g.ZP, {
+r.d(t, { Z: () => P });
+var n = r(200651),
+    l = r(192379),
+    i = r(866442),
+    o = r(481060),
+    a = r(129861),
+    c = r(91218),
+    s = r(829883),
+    u = r(518738),
+    d = r(14263),
+    p = r(592125),
+    b = r(430824),
+    f = r(158776),
+    O = r(594174),
+    y = r(970184),
+    m = r(280501),
+    j = r(811654),
+    g = r(344991),
+    h = r(981631),
+    v = r(760696);
+function P(e) {
+    var t;
+    let r = (0, y.CJ)(),
+        P = null == r ? void 0 : null === (t = r.message) || void 0 === t ? void 0 : t.getChannelId(),
+        x = p.Z.getChannel(P),
+        w = b.Z.getGuild(null == x ? void 0 : x.getGuildId()),
+        S = (0, d.Z)(null == w ? void 0 : w.id, j.HI),
+        C = l.useMemo(() => (0, j.tx)(e.defaultValues, null == w ? void 0 : w.id), [e.defaultValues, w]);
+    return (0, n.jsx)(g.ZP, {
         selectActionComponent: e,
-        queryOptions: (n) => (0, C._H)(e.type, n, S),
-        renderIcon: (e, n) => {
-            let l = n === g.tE.PILL_ICON_SIZE;
-            if ((null == e ? void 0 : e.type) === f.tM.USER) {
-                let i = x.default.getUser(e.value);
-                if (null == i) return;
-                return (0, t.jsx)(a.qEK, {
-                    size: l ? a.EFr.SIZE_16 : a.EFr.SIZE_24,
-                    src: i.getAvatarURL(null == I ? void 0 : I.id, n),
-                    status: l ? null : p.Z.getStatus(i.id),
+        queryOptions: (t) => (0, j._H)(e.type, t, P),
+        renderIcon: (e, t) => {
+            let r = t === g.tE.PILL_ICON_SIZE;
+            if ((null == e ? void 0 : e.type) === m.tM.USER) {
+                let l = O.default.getUser(e.value);
+                if (null == l) return;
+                return (0, n.jsx)(o.qEK, {
+                    size: r ? o.EFr.SIZE_16 : o.EFr.SIZE_24,
+                    src: l.getAvatarURL(null == w ? void 0 : w.id, t),
+                    status: r ? null : f.Z.getStatus(l.id),
                     'aria-hidden': !0
                 });
             }
-            if ((null == e ? void 0 : e.type) === f.tM.ROLE) {
-                var i;
-                let l = null != I ? h.Z.getRole(I.id, e.value) : void 0;
-                if (null == l || null == I) return;
-                let s = (0, u._b)(I, l) ? (0, c.Kz)(l, n) : null;
-                return null != s
-                    ? (0, t.jsx)(o.Z, { ...s })
-                    : (0, t.jsx)(a.lZ8, {
+            if ((null == e ? void 0 : e.type) === m.tM.ROLE) {
+                var l;
+                let r = null != w ? b.Z.getRole(w.id, e.value) : void 0;
+                if (null == r || null == w) return;
+                let a = (0, s._b)(w, r) ? (0, u.Kz)(r, t) : null;
+                return null != a
+                    ? (0, n.jsx)(
+                          c.Z,
+                          (function (e) {
+                              for (var t = 1; t < arguments.length; t++) {
+                                  var r = null != arguments[t] ? arguments[t] : {},
+                                      n = Object.keys(r);
+                                  'function' == typeof Object.getOwnPropertySymbols &&
+                                      (n = n.concat(
+                                          Object.getOwnPropertySymbols(r).filter(function (e) {
+                                              return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                          })
+                                      )),
+                                      n.forEach(function (t) {
+                                          var n;
+                                          (n = r[t]),
+                                              t in e
+                                                  ? Object.defineProperty(e, t, {
+                                                        value: n,
+                                                        enumerable: !0,
+                                                        configurable: !0,
+                                                        writable: !0
+                                                    })
+                                                  : (e[t] = n);
+                                      });
+                              }
+                              return e;
+                          })({}, a)
+                      )
+                    : (0, n.jsx)(o.lZ8, {
                           size: 'custom',
-                          color: null !== (i = l.colorString) && void 0 !== i ? i : (0, r.Rf)(j.p6O),
-                          height: n,
-                          width: n
+                          color: null !== (l = r.colorString) && void 0 !== l ? l : (0, i.Rf)(h.p6O),
+                          height: t,
+                          width: t
                       });
             }
         },
         renderOptionLabel: (e) => {
-            let n = null;
-            if (e.type === f.tM.USER) {
-                let l = x.default.getUser(e.value);
-                null != l &&
-                    (n = (0, t.jsx)(s.Z, {
-                        className: N.tag,
-                        usernameClass: N.username,
-                        discriminatorClass: N.discriminator,
-                        botClass: N.bot,
-                        user: l,
+            let t = null;
+            if (e.type === m.tM.USER) {
+                let r = O.default.getUser(e.value);
+                null != r &&
+                    (t = (0, n.jsx)(a.Z, {
+                        className: v.tag,
+                        usernameClass: v.username,
+                        discriminatorClass: v.discriminator,
+                        botClass: v.bot,
+                        user: r,
                         forceUsername: !0
                     }));
-            } else if (e.type === f.tM.ROLE) {
-                let l = null != I ? h.Z.getRole(I.id, e.value) : void 0,
-                    i = null == l ? null : null == Z ? void 0 : Z[l.id];
-                null != i &&
-                    (n = (0, t.jsxs)('div', {
-                        className: N.roleCountContainer,
+            } else if (e.type === m.tM.ROLE) {
+                let r = null != w ? b.Z.getRole(w.id, e.value) : void 0,
+                    l = null == r ? null : null == S ? void 0 : S[r.id];
+                null != l &&
+                    (t = (0, n.jsxs)('div', {
+                        className: v.roleCountContainer,
                         children: [
-                            (0, t.jsx)(a.tBG, {
+                            (0, n.jsx)(o.tBG, {
                                 size: 'sm',
                                 color: 'currentColor',
-                                className: N.roleCountIcon
+                                className: v.roleCountIcon
                             }),
-                            (0, t.jsx)('span', {
-                                className: N.roleCountText,
-                                children: i
+                            (0, n.jsx)('span', {
+                                className: v.roleCountText,
+                                children: l
                             })
                         ]
                     }));
             }
-            return (0, t.jsxs)('span', {
-                className: N.label,
+            return (0, n.jsxs)('span', {
+                className: v.label,
                 children: [
-                    (0, t.jsx)('span', {
-                        className: N.labelText,
+                    (0, n.jsx)('span', {
+                        className: v.labelText,
                         children: e.label
                     }),
-                    n
+                    t
                 ]
             });
         },
-        defaultValues: T
+        defaultValues: C
     });
 }

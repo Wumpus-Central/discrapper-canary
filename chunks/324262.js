@@ -1,97 +1,122 @@
-n.d(t, { Z: () => f });
-var i = n(200651),
-    l = n(192379),
-    r = n(392711),
-    a = n.n(r),
-    s = n(481060),
-    o = n(367907),
-    d = n(626135),
-    c = n(986332),
-    u = n(428695),
-    h = n(981631),
-    m = n(388032),
-    p = n(576590);
-let g = a().debounce(o.ZP.trackWithMetadata, 500),
-    _ = (e) => {
-        let { guild: t, title: n, message: r, image: a, type: c, imageMarginX: u, imageMarginTop: _, trackingSource: f, undismissable: E, onDismissed: I, onClick: C, cta: N, ctaColor: v } = e;
-        l.useEffect(() => {
-            g(h.rMx.CHANNEL_NOTICE_VIEWED, {
-                notice_type: c,
+n.d(t, { Z: () => _ });
+var r = n(200651),
+    i = n(192379),
+    l = n(392711),
+    o = n.n(l),
+    a = n(481060),
+    s = n(367907),
+    c = n(626135),
+    u = n(986332),
+    d = n(428695),
+    p = n(981631),
+    h = n(388032),
+    g = n(907229);
+function f(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+let m = o().debounce(s.ZP.trackWithMetadata, 500),
+    b = (e) => {
+        let { guild: t, title: n, message: l, image: o, type: u, imageMarginX: d, imageMarginTop: f, trackingSource: b, undismissable: _, onDismissed: E, onClick: O, cta: N, ctaColor: v } = e;
+        i.useEffect(() => {
+            m(p.rMx.CHANNEL_NOTICE_VIEWED, {
+                notice_type: u,
                 guild_id: t.id
             });
-        }, [t.id, c]);
-        let T = null;
+        }, [t.id, u]);
+        let y = null;
         'function' == typeof N
-            ? (T = N())
+            ? (y = N())
             : null != N &&
-              (T = (0, i.jsx)(s.zxk, {
-                  className: p.btn,
-                  size: s.zxk.Sizes.SMALL,
+              (y = (0, r.jsx)(a.zxk, {
+                  className: g.btn,
+                  size: a.zxk.Sizes.SMALL,
                   onClick: () => {
-                      null != c &&
-                          d.default.track(h.rMx.CHANNEL_NOTICE_CTA_CLICKED, {
-                              source: f,
+                      null != u &&
+                          c.default.track(p.rMx.CHANNEL_NOTICE_CTA_CLICKED, {
+                              source: b,
                               guild_id: t.id,
-                              notice_type: c
+                              notice_type: u
                           }),
-                          null == C || C();
+                          null == O || O();
                   },
                   fullWidth: !0,
                   color: v,
                   children: N
               }));
-        let S = null != u ? ''.concat(u, 'px') : '16px';
-        return (0, i.jsxs)('div', {
-            className: p.channelNotice,
+        let I = null != d ? ''.concat(d, 'px') : '16px';
+        return (0, r.jsxs)('div', {
+            className: g.channelNotice,
             children: [
-                !0 === E
+                !0 === _
                     ? null
-                    : (0, i.jsx)(s.P3F, {
+                    : (0, r.jsx)(a.P3F, {
                           onClick: () => {
-                              o.ZP.trackWithMetadata(h.rMx.CHANNEL_NOTICE_CLOSED, { notice_type: c }), null == I || I();
+                              s.ZP.trackWithMetadata(p.rMx.CHANNEL_NOTICE_CLOSED, { notice_type: u }), null == E || E();
                           },
-                          className: p.close,
-                          'aria-label': m.intl.string(m.t.WAI6xs),
-                          children: (0, i.jsx)(s.Dio, {
+                          className: g.close,
+                          'aria-label': h.NW.string(h.t.WAI6xs),
+                          children: (0, r.jsx)(a.Dio, {
                               size: 'md',
                               color: 'currentColor',
-                              className: p.closeIcon
+                              className: g.closeIcon
                           })
                       }),
-                (0, i.jsx)('div', {
-                    className: p.imageContainer,
+                (0, r.jsx)('div', {
+                    className: g.imageContainer,
                     style: {
-                        marginTop: ''.concat(_, 'px'),
-                        marginLeft: S,
-                        marginRight: S
+                        marginTop: ''.concat(f, 'px'),
+                        marginLeft: I,
+                        marginRight: I
                     },
-                    children: (0, i.jsx)('img', {
-                        className: p.image,
-                        src: a,
+                    children: (0, r.jsx)('img', {
+                        className: g.image,
+                        src: o,
                         alt: ''
                     })
                 }),
-                (0, i.jsxs)('div', {
-                    className: p.message,
+                (0, r.jsxs)('div', {
+                    className: g.message,
                     children: [
                         null != n
-                            ? (0, i.jsx)(s.X6q, {
+                            ? (0, r.jsx)(a.X6q, {
                                   variant: 'heading-md/semibold',
-                                  className: p.title,
+                                  className: g.title,
                                   children: n
                               })
                             : null,
-                        (0, i.jsx)(s.Text, {
+                        (0, r.jsx)(a.Text, {
                             variant: 'text-sm/normal',
-                            children: r
+                            children: l
                         }),
-                        T
+                        y
                     ]
                 })
             ]
         });
     },
-    f = function (e) {
-        let { showRedesignedChannelNotice: t } = (0, c.o)(!0);
-        return t ? (0, i.jsx)(u.Z, { ...e }) : (0, i.jsx)(_, { ...e });
+    _ = function (e) {
+        let { showRedesignedChannelNotice: t } = (0, u.o)(!0);
+        return t ? (0, r.jsx)(d.Z, f({}, e)) : (0, r.jsx)(b, f({}, e));
     };

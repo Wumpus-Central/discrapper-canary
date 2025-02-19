@@ -1,8 +1,8 @@
-t.d(n, { Z: () => M });
-var l = t(200651),
-    i = t(192379),
-    r = t(120356),
-    o = t.n(r),
+t.d(n, { Z: () => C });
+var r = t(200651),
+    l = t(192379),
+    i = t(120356),
+    o = t.n(i),
     s = t(442837),
     a = t(780384),
     c = t(481060),
@@ -10,135 +10,172 @@ var l = t(200651),
     p = t(906732),
     d = t(600164),
     _ = t(963249),
-    S = t(639119),
-    m = t(165583),
-    E = t(263954),
-    h = t(706454),
-    I = t(709586),
-    x = t(626135),
-    f = t(930153),
-    P = t(74538),
-    g = t(937615),
-    T = t(981631),
-    k = t(474936),
-    N = t(388032),
-    b = t(388525);
-function C(e) {
+    m = t(639119),
+    S = t(165583),
+    f = t(263954),
+    E = t(706454),
+    b = t(709586),
+    h = t(626135),
+    P = t(930153),
+    g = t(74538),
+    I = t(937615),
+    x = t(981631),
+    N = t(474936),
+    y = t(388032),
+    T = t(88619);
+function k(e) {
     let { shouldUpsellFromNoneTier: n } = e,
-        t = (0, s.e7)([h.default], () => h.default.locale);
-    return (0, l.jsxs)('div', {
-        className: b.perksList,
+        t = (0, s.e7)([E.default], () => E.default.locale);
+    return (0, r.jsxs)('div', {
+        className: T.perksList,
         children: [
-            (0, l.jsx)(E.Z, {
-                icon: I.Z,
-                iconClassName: b.perkIconGuild,
-                description: N.intl.formatToPlainString(N.t.sQBgs7, { numFreeGuildSubscriptions: k.cb })
+            (0, r.jsx)(f.Z, {
+                icon: b.Z,
+                iconClassName: T.perkIconGuild,
+                description: y.NW.formatToPlainString(y.t.sQBgs7, { numFreeGuildSubscriptions: N.cb })
             }),
-            (0, l.jsx)(E.Z, {
-                icon: I.Z,
-                iconClassName: b.perkIconGuild,
-                description: N.intl.formatToPlainString(N.t['1A6vXl'], { percent: (0, f.T3)(t, k.Rr / 100) })
+            (0, r.jsx)(f.Z, {
+                icon: b.Z,
+                iconClassName: T.perkIconGuild,
+                description: y.NW.formatToPlainString(y.t['1A6vXl'], { percent: (0, P.T3)(t, N.Rr / 100) })
             }),
             n
-                ? (0, l.jsx)(E.Z, {
+                ? (0, r.jsx)(f.Z, {
                       icon: c.EO4,
-                      iconClassName: b.perkIconChatPerks,
-                      description: N.intl.string(N.t.Z9b2x8)
+                      iconClassName: T.perkIconChatPerks,
+                      description: y.NW.string(y.t.Z9b2x8)
                   })
                 : null,
-            (0, l.jsx)(E.Z, {
+            (0, r.jsx)(f.Z, {
                 icon: c.hGI,
-                iconClassName: b.perkIconStream,
-                description: N.intl.string(N.t['8dqG5O'])
+                iconClassName: T.perkIconStream,
+                description: y.NW.string(y.t['8dqG5O'])
             }),
-            (0, l.jsx)(E.Z, {
+            (0, r.jsx)(f.Z, {
                 icon: c.rG2,
-                iconClassName: b.perkIconUpload,
-                description: N.intl.string(N.t.cBorIy)
+                iconClassName: T.perkIconUpload,
+                description: y.NW.string(y.t.cBorIy)
             })
         ]
     });
 }
-function M(e) {
+function C(e) {
     var n;
-    let { premiumSubscriptionPlan: t, onClose: r, onBack: s, onSkip: E, onSubscriptionConfirmation: h, analyticsLocation: I, analyticsSourceLocation: f, priceOptions: M } = e,
-        { analyticsLocations: y, sourceAnalyticsLocations: L } = (0, p.ZP)(u.Z.GUILD_BOOSTING_PREMIUM_UPSELL),
-        { theme: R } = (0, c.TCT)(),
-        A = (0, a.ap)(R) ? c.zxk.Colors.PRIMARY : c.zxk.Colors.WHITE,
+    let { premiumSubscriptionPlan: t, onClose: i, onBack: s, onSkip: f, onSubscriptionConfirmation: E, analyticsLocation: b, analyticsSourceLocation: P, priceOptions: C } = e,
+        { analyticsLocations: O, sourceAnalyticsLocations: M } = (0, p.ZP)(u.Z.GUILD_BOOSTING_PREMIUM_UPSELL),
+        { theme: L } = (0, c.TCT)(),
+        j = (0, a.ap)(L) ? c.zxk.Colors.PRIMARY : c.zxk.Colors.WHITE,
         v = null == t || null == t.premiumSubscriptionType,
-        Z = P.ZP.getPrice(k.Xh.PREMIUM_MONTH_TIER_2, !1, !1, M),
-        j = (0, g.T4)(Z.amount, Z.currency),
-        D = (0, S.N)(),
-        O = null == D ? void 0 : D.trial_id,
-        U = (null == D ? void 0 : null === (n = D.subscription_trial) || void 0 === n ? void 0 : n.sku_id) === k.Si.TIER_2;
+        R = g.ZP.getPrice(N.Xh.PREMIUM_MONTH_TIER_2, !1, !1, C),
+        A = (0, I.T4)(R.amount, R.currency),
+        D = (0, m.N)(),
+        Z = null == D ? void 0 : D.trial_id,
+        w = (null == D ? void 0 : null === (n = D.subscription_trial) || void 0 === n ? void 0 : n.sku_id) === N.Si.TIER_2;
     return (
-        i.useEffect(() => {
-            x.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: k.cd.GUILD_PREMIUM_UPSELL_MODAL,
-                location_stack: L
+        l.useEffect(() => {
+            h.default.track(x.rMx.PREMIUM_UPSELL_VIEWED, {
+                type: N.cd.GUILD_PREMIUM_UPSELL_MODAL,
+                location_stack: M
             });
-        }, [L]),
-        (0, l.jsxs)(l.Fragment, {
+        }, [M]),
+        (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, l.jsxs)(c.hzk, {
-                    className: b.content,
+                (0, r.jsxs)(c.hzk, {
+                    className: T.content,
                     children: [
-                        (0, l.jsx)(c.olH, {
-                            onClick: r,
-                            className: b.closeButton
+                        (0, r.jsx)(c.olH, {
+                            onClick: i,
+                            className: T.closeButton
                         }),
-                        U && (0, l.jsx)(m.dz, { className: b.premiumTrialBadge }),
-                        (0, l.jsx)('div', { className: o()(b.upsellImage, { [b.upsellImageWithTrialOffer]: U }) }),
-                        (0, l.jsx)('div', {
-                            className: b.bodyText,
-                            children: null != O ? N.intl.string(N.t.AoSzEh) : N.intl.format(N.t['7vePZW'], { monthlyPrice: j })
+                        w && (0, r.jsx)(S.dz, { className: T.premiumTrialBadge }),
+                        (0, r.jsx)('div', { className: o()(T.upsellImage, { [T.upsellImageWithTrialOffer]: w }) }),
+                        (0, r.jsx)('div', {
+                            className: T.bodyText,
+                            children: null != Z ? y.NW.string(y.t.AoSzEh) : y.NW.format(y.t['7vePZW'], { monthlyPrice: A })
                         }),
-                        (0, l.jsx)(C, { shouldUpsellFromNoneTier: v })
+                        (0, r.jsx)(k, { shouldUpsellFromNoneTier: v })
                     ]
                 }),
-                (0, l.jsxs)(c.mzw, {
+                (0, r.jsxs)(c.mzw, {
                     align: d.Z.Align.CENTER,
                     justify: d.Z.Justify.END,
                     children: [
-                        (0, l.jsxs)('div', {
-                            className: b.footerRight,
+                        (0, r.jsxs)('div', {
+                            className: T.footerRight,
                             children: [
-                                (0, l.jsx)(c.zxk, {
+                                (0, r.jsx)(c.zxk, {
                                     look: c.zxk.Looks.LINK,
-                                    color: A,
-                                    onClick: E,
-                                    children: N.intl.string(N.t['SI/adn'])
+                                    color: j,
+                                    onClick: f,
+                                    children: y.NW.string(y.t['SI/adn'])
                                 }),
-                                (0, l.jsx)(c.zxk, {
+                                (0, r.jsx)(c.zxk, {
                                     color: c.zxk.Colors.GREEN,
                                     type: 'submit',
                                     onClick: () => {
-                                        r(),
+                                        var e, n;
+                                        i(),
                                             (0, _.Z)({
                                                 initialPlanId: null,
-                                                subscriptionTier: k.Si.TIER_2,
-                                                analyticsLocations: y,
-                                                analyticsObject: {
-                                                    ...I,
-                                                    section: T.jXE.PREMIUM_GUILD_PURCHASE_MODAL
-                                                },
-                                                analyticsSourceLocation: f,
-                                                onSubscriptionConfirmation: h,
-                                                trialId: O
+                                                subscriptionTier: N.Si.TIER_2,
+                                                analyticsLocations: O,
+                                                analyticsObject:
+                                                    ((e = (function (e) {
+                                                        for (var n = 1; n < arguments.length; n++) {
+                                                            var t = null != arguments[n] ? arguments[n] : {},
+                                                                r = Object.keys(t);
+                                                            'function' == typeof Object.getOwnPropertySymbols &&
+                                                                (r = r.concat(
+                                                                    Object.getOwnPropertySymbols(t).filter(function (e) {
+                                                                        return Object.getOwnPropertyDescriptor(t, e).enumerable;
+                                                                    })
+                                                                )),
+                                                                r.forEach(function (n) {
+                                                                    var r;
+                                                                    (r = t[n]),
+                                                                        n in e
+                                                                            ? Object.defineProperty(e, n, {
+                                                                                  value: r,
+                                                                                  enumerable: !0,
+                                                                                  configurable: !0,
+                                                                                  writable: !0
+                                                                              })
+                                                                            : (e[n] = r);
+                                                                });
+                                                        }
+                                                        return e;
+                                                    })({}, b)),
+                                                    (n = n = { section: x.jXE.PREMIUM_GUILD_PURCHASE_MODAL }),
+                                                    Object.getOwnPropertyDescriptors
+                                                        ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
+                                                        : (function (e, n) {
+                                                              var t = Object.keys(e);
+                                                              if (Object.getOwnPropertySymbols) {
+                                                                  var r = Object.getOwnPropertySymbols(e);
+                                                                  t.push.apply(t, r);
+                                                              }
+                                                              return t;
+                                                          })(Object(n)).forEach(function (t) {
+                                                              Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
+                                                          }),
+                                                    e),
+                                                analyticsSourceLocation: P,
+                                                onSubscriptionConfirmation: E,
+                                                trialId: Z
                                             });
                                     },
-                                    children: null != O ? N.intl.string(N.t['Gd/XHB']) : N.intl.string(N.t.p2moio)
+                                    children: null != Z ? y.NW.string(y.t['Gd/XHB']) : y.NW.string(y.t.p2moio)
                                 })
                             ]
                         }),
-                        (0, l.jsx)('div', {
-                            className: b.backStep,
-                            children: (0, l.jsx)(c.zxk, {
-                                color: A,
+                        (0, r.jsx)('div', {
+                            className: T.backStep,
+                            children: (0, r.jsx)(c.zxk, {
+                                color: j,
                                 look: c.zxk.Looks.LINK,
                                 size: c.zxk.Sizes.NONE,
                                 onClick: () => s(),
-                                children: N.intl.string(N.t['13/7kZ'])
+                                children: y.NW.string(y.t['13/7kZ'])
                             })
                         })
                     ]

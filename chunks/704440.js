@@ -1,26 +1,78 @@
-n.d(t, { Z: () => C }), n(773603), n(47120);
-var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(913527),
-    l = n.n(o),
-    u = n(235874),
-    c = n(481060),
+n.d(t, { Z: () => w }), n(773603), n(47120);
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(913527),
+    l = n.n(s),
+    c = n(235874),
+    u = n(481060),
     d = n(37234),
     f = n(100527),
-    _ = n(906732),
-    p = n(626135),
+    p = n(906732),
+    _ = n(626135),
     h = n(55935),
     m = n(63063),
     g = n(281494),
     E = n(474936),
     v = n(981631),
-    y = n(388032),
-    I = n(843409),
-    T = n(352175),
-    b = n(90351);
-let S = async (e, t, n) => {
+    b = n(388032),
+    y = n(962740),
+    O = n(352175),
+    S = n(90351);
+function I(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function T(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                I(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function N(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function A(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : N(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let C = async (e, t, n) => {
         n(!0),
             await (0, g.Eo)(e)
                 .then(() => {
@@ -30,64 +82,64 @@ let S = async (e, t, n) => {
                     n(!1);
                 });
     },
-    A = (e) => {
-        let { onClose: t, referralsRemaining: n, recipient: a, analyticsLocations: s } = e,
-            [o, l] = r.useState(!1),
-            u = n - 1;
-        return (0, i.jsxs)('div', {
-            className: I.confirmationContainer,
+    R = (e) => {
+        let { onClose: t, referralsRemaining: n, recipient: o, analyticsLocations: a } = e,
+            [s, l] = i.useState(!1),
+            c = n - 1;
+        return (0, r.jsxs)('div', {
+            className: y.confirmationContainer,
             children: [
-                (0, i.jsxs)('div', {
-                    className: I.confirmationBody,
+                (0, r.jsxs)('div', {
+                    className: y.confirmationBody,
                     children: [
-                        (0, i.jsx)(c.olH, {
+                        (0, r.jsx)(u.olH, {
                             onClick: t,
-                            className: I.closeButton
+                            className: y.closeButton
                         }),
-                        (0, i.jsx)('img', {
+                        (0, r.jsx)('img', {
                             alt: '',
-                            src: T,
-                            className: I.confirmationImage
+                            src: O,
+                            className: y.confirmationImage
                         }),
-                        (0, i.jsx)(c.X6q, {
+                        (0, r.jsx)(u.X6q, {
                             variant: 'heading-xl/bold',
                             color: 'interactive-active',
-                            className: I.confirmationHeading,
-                            children: y.intl.string(y.t.dF5azM)
+                            className: y.confirmationHeading,
+                            children: b.NW.string(b.t.dF5azM)
                         }),
-                        (0, i.jsx)(c.Text, {
-                            className: I.confirmationBodyCopy,
+                        (0, r.jsx)(u.Text, {
+                            className: y.confirmationBodyCopy,
                             variant: 'text-md/medium',
                             color: 'header-primary',
-                            children: u > 0 ? y.intl.formatToPlainString(y.t['J/tYnp'], { count: u }) : y.intl.string(y.t.vVnRxc)
+                            children: c > 0 ? b.NW.formatToPlainString(b.t['J/tYnp'], { count: c }) : b.NW.string(b.t.vVnRxc)
                         }),
-                        (0, i.jsx)('hr', { className: I.confirmationBodySeparator })
+                        (0, r.jsx)('hr', { className: y.confirmationBodySeparator })
                     ]
                 }),
-                (0, i.jsxs)('div', {
-                    className: I.confirmationButtonContainer,
+                (0, r.jsxs)('div', {
+                    className: y.confirmationButtonContainer,
                     children: [
-                        (0, i.jsx)(c.zxk, {
-                            className: I.confirmationShareButton,
-                            submitting: o,
+                        (0, r.jsx)(u.zxk, {
+                            className: y.confirmationShareButton,
+                            submitting: s,
                             onClick: () => {
-                                S(a, t, l),
-                                    p.default.track(v.rMx.SHARE_NITRO_FLOW_STEPS, {
-                                        location_stack: s,
+                                C(o, t, l),
+                                    _.default.track(v.rMx.SHARE_NITRO_FLOW_STEPS, {
+                                        location_stack: a,
                                         step: E.fz.FLOW_COMPLETED,
-                                        other_user_id: Number(a)
+                                        other_user_id: Number(o)
                                     });
                             },
-                            children: y.intl.string(y.t['zxlx6+'])
+                            children: b.NW.string(b.t['zxlx6+'])
                         }),
-                        (0, i.jsx)('div', {
-                            className: I.confirmationCancelButtonContainer,
-                            children: (0, i.jsx)(c.P3F, {
+                        (0, r.jsx)('div', {
+                            className: y.confirmationCancelButtonContainer,
+                            children: (0, r.jsx)(u.P3F, {
                                 onClick: t,
-                                children: (0, i.jsx)(c.Text, {
+                                children: (0, r.jsx)(u.Text, {
                                     variant: 'text-sm/medium',
-                                    className: I.confirmationCancelCopy,
-                                    children: y.intl.string(y.t['ETE/oK'])
+                                    className: y.confirmationCancelCopy,
+                                    children: b.NW.string(b.t['ETE/oK'])
                                 })
                             })
                         })
@@ -96,108 +148,110 @@ let S = async (e, t, n) => {
             ]
         });
     };
-function N(e) {
-    let { referralsRemaining: t, channel: n, onClose: a, isResending: o } = e,
-        [u, d] = r.useState(!1),
-        [g, T] = r.useState(!1),
-        N = n.isDM() && void 0 !== n.recipients ? n.recipients[0] : null,
-        { analyticsLocations: C } = (0, _.ZP)(f.Z.REFERRAL_TRIALS_POPOUT),
-        R = new Date('2023-06-15T08:00:00-08:00');
-    return null == N
+function P(e) {
+    let { referralsRemaining: t, channel: n, onClose: o, isResending: s } = e,
+        [c, d] = i.useState(!1),
+        [g, O] = i.useState(!1),
+        I = n.isDM() && void 0 !== n.recipients ? n.recipients[0] : null,
+        { analyticsLocations: T } = (0, p.ZP)(f.Z.REFERRAL_TRIALS_POPOUT),
+        N = new Date('2023-06-15T08:00:00-08:00');
+    return null == I
         ? null
-        : u
-          ? (0, i.jsx)(A, {
-                onClose: a,
+        : c
+          ? (0, r.jsx)(R, {
+                onClose: o,
                 referralsRemaining: t,
-                recipient: N,
-                analyticsLocations: C
+                recipient: I,
+                analyticsLocations: T
             })
-          : (0, i.jsxs)('div', {
-                className: I.generalContainer,
+          : (0, r.jsxs)('div', {
+                className: y.generalContainer,
                 children: [
-                    (0, i.jsxs)('div', {
-                        className: I.generalBodyContainer,
+                    (0, r.jsxs)('div', {
+                        className: y.generalBodyContainer,
                         children: [
-                            (0, i.jsx)('img', {
+                            (0, r.jsx)('img', {
                                 alt: '',
-                                src: b,
-                                className: I.generalBodyImage
+                                src: S,
+                                className: y.generalBodyImage
                             }),
-                            (0, i.jsxs)('div', {
-                                className: I.innerContent,
+                            (0, r.jsxs)('div', {
+                                className: y.innerContent,
                                 children: [
-                                    (0, i.jsx)(c.olH, {
-                                        onClick: a,
-                                        className: I.closeButton
+                                    (0, r.jsx)(u.olH, {
+                                        onClick: o,
+                                        className: y.closeButton
                                     }),
-                                    (0, i.jsx)(c.X6q, {
-                                        className: I.generalHeading,
+                                    (0, r.jsx)(u.X6q, {
+                                        className: y.generalHeading,
                                         variant: 'heading-xl/bold',
-                                        children: o ? y.intl.string(y.t.yCN5Qk) : y.intl.string(y.t.c1wxcX)
+                                        children: s ? b.NW.string(b.t.yCN5Qk) : b.NW.string(b.t.c1wxcX)
                                     }),
-                                    (0, i.jsxs)(c.Text, {
-                                        className: I.generalBodyCopy,
+                                    (0, r.jsxs)(u.Text, {
+                                        className: y.generalBodyCopy,
                                         variant: 'text-md/normal',
                                         children: [
-                                            (0, i.jsx)(c.eee, {
-                                                className: s()(I.learnMore, { [I.learnMoreResendUnderlinedText]: o }),
+                                            (0, r.jsx)(u.eee, {
+                                                className: a()(y.learnMore, { [y.learnMoreResendUnderlinedText]: s }),
                                                 href: m.Z.getArticleURL(v.BhN.SHARE_NITRO_FAQ),
-                                                children: o ? y.intl.string(y.t.yJfqPT) : y.intl.format(y.t['+Z4ey8'], { count: t })
+                                                children: s ? b.NW.string(b.t.yJfqPT) : b.NW.format(b.t['+Z4ey8'], { count: t })
                                             }),
-                                            o
-                                                ? (0, i.jsx)('div', {
-                                                      className: I.shareNitroResendCopySuffix,
-                                                      children: y.intl.string(y.t['b0B69/'])
+                                            s
+                                                ? (0, r.jsx)('div', {
+                                                      className: y.shareNitroResendCopySuffix,
+                                                      children: b.NW.string(b.t['b0B69/'])
                                                   })
-                                                : (0, i.jsx)('div', { children: y.intl.format(y.t['58lPt7'], { date: (0, h.vc)(l()(R), 'LL') }) })
+                                                : (0, r.jsx)('div', { children: b.NW.format(b.t['58lPt7'], { date: (0, h.vc)(l()(N), 'LL') }) })
                                         ]
                                     })
                                 ]
                             })
                         ]
                     }),
-                    (0, i.jsx)('div', {
-                        className: I.generalButtonContainer,
-                        children: (0, i.jsx)(c.zxk, {
-                            className: I.generalShareButton,
+                    (0, r.jsx)('div', {
+                        className: y.generalButtonContainer,
+                        children: (0, r.jsx)(u.zxk, {
+                            className: y.generalShareButton,
                             submitting: g,
                             onClick: () => {
-                                o
-                                    ? S(N, a, T)
+                                s
+                                    ? C(I, o, O)
                                     : (d(!0),
-                                      p.default.track(v.rMx.SHARE_NITRO_FLOW_STEPS, {
-                                          location_stack: C,
+                                      _.default.track(v.rMx.SHARE_NITRO_FLOW_STEPS, {
+                                          location_stack: T,
                                           step: E.fz.FLOW_STARTED,
-                                          other_user_id: Number(N)
+                                          other_user_id: Number(I)
                                       }));
                             },
-                            children: o ? y.intl.string(y.t.awsERE) : y.intl.string(y.t.Ago7Zm)
+                            children: s ? b.NW.string(b.t.awsERE) : b.NW.string(b.t.Ago7Zm)
                         })
                     })
                 ]
             });
 }
-function C(e) {
-    let { shouldShowPopout: t, referralsRemaining: n, channel: r, onClose: a, isResending: s } = e;
+function w(e) {
+    let { shouldShowPopout: t, referralsRemaining: n, channel: i, onClose: o, isResending: a } = e;
     return t
-        ? (0, i.jsx)('div', {
+        ? (0, r.jsx)('div', {
               onMouseDown: (e) => e.stopPropagation(),
-              children: (0, i.jsx)(u.y, {
+              children: (0, r.jsx)(c.y, {
                   shouldShow: !0,
                   position: 'top',
                   align: 'center',
                   renderPopout: (e) =>
-                      (0, i.jsx)(N, {
-                          ...e,
-                          referralsRemaining: n,
-                          channel: r,
-                          onClose: a,
-                          isResending: s
-                      }),
+                      (0, r.jsx)(
+                          P,
+                          A(T({}, e), {
+                              referralsRemaining: n,
+                              channel: i,
+                              onClose: o,
+                              isResending: a
+                          })
+                      ),
                   onRequestClose: () => void 0,
                   closeOnScroll: !1,
                   ignoreModalClicks: !0,
-                  children: () => (0, i.jsx)('div', { className: I.__invalid_popoutTarget })
+                  children: () => (0, r.jsx)('div', { className: y.__invalid_popoutTarget })
               })
           })
         : null;

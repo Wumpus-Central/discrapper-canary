@@ -1,178 +1,247 @@
-n.d(t, { Z: () => D }), n(47120);
+n.d(t, { Z: () => M }), n(47120);
 var i = n(200651),
-    l = n(192379),
-    r = n(120356),
-    o = n.n(r),
+    r = n(192379),
+    o = n(120356),
+    l = n.n(o),
     a = n(399606),
     s = n(46973),
-    d = n(481060),
+    c = n(481060),
     u = n(846027),
-    c = n(239091),
-    h = n(765250),
-    _ = n(872810),
-    p = n(40851),
-    f = n(414910),
-    m = n(194082),
-    g = n(979264),
+    d = n(239091),
+    p = n(765250),
+    f = n(872810),
+    h = n(40851),
+    g = n(414910),
+    _ = n(194082),
+    m = n(979264),
     v = n(871118),
-    E = n(352978),
-    x = n(833519),
-    I = n(839662),
-    C = n(199902),
-    S = n(314897),
-    Z = n(131951),
-    y = n(594174),
-    O = n(5192),
-    N = n(444295),
-    b = n(1226),
-    T = n(981631),
-    w = n(388032),
-    A = n(233654);
-function j(e) {
+    O = n(352978),
+    b = n(833519),
+    y = n(839662),
+    E = n(199902),
+    x = n(314897),
+    S = n(131951),
+    C = n(594174),
+    I = n(5192),
+    j = n(444295),
+    w = n(1226),
+    Z = n(981631),
+    N = n(388032),
+    P = n(549789);
+function T(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            i = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (i = i.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            i.forEach(function (t) {
+                var i;
+                (i = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: i,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = i);
+            });
+    }
+    return e;
+}
+function k(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var i = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, i);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function A(e, t) {
+    if (null == e) return {};
+    var n,
+        i,
+        r = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                i,
+                r = {},
+                o = Object.keys(e);
+            for (i = 0; i < o.length; i++) (n = o[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+            return r;
+        })(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (i = 0; i < o.length; i++) (n = o[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+    }
+    return r;
+}
+function D(e) {
     let { participant: t } = e,
         n = t.user.id,
-        r = (0, a.e7)(
-            [Z.Z],
+        o = (0, a.e7)(
+            [S.Z],
             () => {
-                let e = (0, f.Z)(t.type);
-                return Z.Z.isLocalMute(t.user.id, e);
+                let e = (0, g.Z)(t.type);
+                return S.Z.isLocalMute(t.user.id, e);
             },
             [t]
         ),
-        o = (0, a.e7)([S.default], () => S.default.getId()),
-        { hasVideo: c } = (0, I.Z)(t, o),
-        h = r && c,
-        _ = l.useCallback(() => {
+        l = (0, a.e7)([x.default], () => x.default.getId()),
+        { hasVideo: d } = (0, y.Z)(t, l),
+        p = o && d,
+        f = r.useCallback(() => {
             u.Z.toggleLocalMute(n, s.Yn.STREAM);
         }, [n]);
-    return (0, i.jsx)(d.ua7, {
-        text: h ? w.intl.string(w.t.YqAjX1) : w.intl.string(w.t['w4m94+']),
+    return (0, i.jsx)(c.ua7, {
+        text: p ? N.NW.string(N.t.YqAjX1) : N.NW.string(N.t['w4m94+']),
         children: (e) => {
-            let { onClick: n, ...l } = e;
-            return (0, i.jsx)(d.P3F, {
-                ...l,
-                className: A.controlAction,
-                onClick: (e) => {
-                    e.stopPropagation(),
-                        (0, N.Ws)(T.Odu.GO_LIVE, {
-                            type: N.Qu.AUDIO,
-                            value: h ? N.bk.ENABLED : N.bk.DISABLED,
-                            userId: t.user.id
-                        }),
-                        null == n || n(),
-                        _();
-                },
-                children: h
-                    ? (0, i.jsx)(d.OyP, {
-                          size: 'sm',
-                          color: 'currentColor'
-                      })
-                    : (0, i.jsx)(d.gj8, {
-                          size: 'sm',
-                          color: 'currentColor'
-                      })
-            });
+            var { onClick: n } = e,
+                r = A(e, ['onClick']);
+            return (0, i.jsx)(
+                c.P3F,
+                k(T({}, r), {
+                    className: P.controlAction,
+                    onClick: (e) => {
+                        e.stopPropagation(),
+                            (0, j.Ws)(Z.Odu.GO_LIVE, {
+                                type: j.Qu.AUDIO,
+                                value: p ? j.bk.ENABLED : j.bk.DISABLED,
+                                userId: t.user.id
+                            }),
+                            null == n || n(),
+                            f();
+                    },
+                    children: p
+                        ? (0, i.jsx)(c.OyP, {
+                              size: 'sm',
+                              color: 'currentColor'
+                          })
+                        : (0, i.jsx)(c.gj8, {
+                              size: 'sm',
+                              color: 'currentColor'
+                          })
+                })
+            );
         }
     });
 }
-function k(e, t, l) {
-    return (r) => {
-        (0, N.Ws)(T.Odu.GO_LIVE, {
-            type: N.Qu.GO_LIVE,
-            value: N.bk.SETTINGS_OPENED,
+function R(e, t, r) {
+    return (o) => {
+        (0, j.Ws)(Z.Odu.GO_LIVE, {
+            type: j.Qu.GO_LIVE,
+            value: j.bk.SETTINGS_OPENED,
             userId: e.user.id
         }),
-            r.stopPropagation(),
-            null == l || l(),
-            (0, c.jW)(r, async () => {
-                let { default: l } = await n.e('5704').then(n.bind(n, 782270));
+            o.stopPropagation(),
+            null == r || r(),
+            (0, d.jW)(o, async () => {
+                let { default: r } = await n.e('5704').then(n.bind(n, 360429));
                 return (n) =>
-                    (0, i.jsx)(l, {
-                        ...n,
-                        stream: e.stream,
-                        exitFullscreen: () => {},
-                        appContext: t
-                    });
+                    (0, i.jsx)(
+                        r,
+                        k(T({}, n), {
+                            stream: e.stream,
+                            exitFullscreen: () => {},
+                            appContext: t
+                        })
+                    );
             });
     };
 }
-function R(e) {
-    let { hasActiveStream: t, participant: n, onEnablePin: l } = e,
-        r = (0, p.bp)(),
+function L(e) {
+    let { hasActiveStream: t, participant: n, onEnablePin: r } = e,
+        o = (0, h.bp)(),
         s = n.user,
         u = (0, a.e7)(
-            [y.default],
+            [C.default],
             () => {
                 var e;
-                return null !== (e = y.default.getUser(s.id)) && void 0 !== e ? e : s;
+                return null !== (e = C.default.getUser(s.id)) && void 0 !== e ? e : s;
             },
             [s]
         ),
-        c = t ? w.intl.string(w.t.tLxK4u) : w.intl.string(w.t.E5RDnJ);
+        d = t ? N.NW.string(N.t.tLxK4u) : N.NW.string(N.t.E5RDnJ);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)('div', { className: o()(A.controlBackground, { [A.controlsWithActiveStream]: t }) }),
+            (0, i.jsx)('div', { className: l()(P.controlBackground, { [P.controlsWithActiveStream]: t }) }),
             !t &&
                 (0, i.jsx)('div', {
-                    className: A.watchActionContainer,
-                    children: (0, i.jsx)(d.ua7, {
-                        text: c,
+                    className: P.watchActionContainer,
+                    children: (0, i.jsx)(c.ua7, {
+                        text: d,
                         children: (e) =>
-                            (0, i.jsxs)(d.P3F, {
-                                ...e,
-                                className: A.watchButton,
-                                onClick: () => {
-                                    var t;
-                                    null === (t = e.onClick) || void 0 === t || t.call(e),
-                                        (0, _.rn)(n.stream, {
-                                            forceMultiple: !0,
-                                            noFocus: !0
+                            (0, i.jsxs)(
+                                c.P3F,
+                                k(T({}, e), {
+                                    className: P.watchButton,
+                                    onClick: () => {
+                                        var t;
+                                        null === (t = e.onClick) || void 0 === t || t.call(e),
+                                            (0, f.rn)(n.stream, {
+                                                forceMultiple: !0,
+                                                noFocus: !0
+                                            }),
+                                            r(),
+                                            (0, j.Ws)(Z.Odu.GO_LIVE, {
+                                                type: j.Qu.GO_LIVE,
+                                                value: j.bk.ENABLED,
+                                                userId: n.user.id
+                                            });
+                                    },
+                                    children: [
+                                        (0, i.jsx)(c.Text, {
+                                            variant: 'text-sm/semibold',
+                                            color: 'always-white',
+                                            children: N.NW.string(N.t['I6JG4+'])
                                         }),
-                                        l(),
-                                        (0, N.Ws)(T.Odu.GO_LIVE, {
-                                            type: N.Qu.GO_LIVE,
-                                            value: N.bk.ENABLED,
-                                            userId: n.user.id
-                                        });
-                                },
-                                children: [
-                                    (0, i.jsx)(d.Text, {
-                                        variant: 'text-sm/semibold',
-                                        color: 'always-white',
-                                        children: w.intl.string(w.t['I6JG4+'])
-                                    }),
-                                    (0, i.jsx)(d.OgY, {
-                                        size: 'sm',
-                                        color: 'currentColor'
-                                    })
-                                ]
-                            })
+                                        (0, i.jsx)(c.OgY, {
+                                            size: 'sm',
+                                            color: 'currentColor'
+                                        })
+                                    ]
+                                })
+                            )
                     })
                 }),
             (0, i.jsxs)('div', {
-                className: A.controls,
+                className: P.controls,
                 children: [
                     (0, i.jsx)('div', {
-                        className: A.controlUser,
+                        className: P.controlUser,
                         children: (0, i.jsxs)('div', {
-                            className: A.controlUserContainer,
+                            className: P.controlUserContainer,
                             children: [
-                                (0, i.jsx)(d.pzj, {
+                                (0, i.jsx)(c.pzj, {
                                     size: 'xs',
-                                    color: d.TVs.colors.INTERACTIVE_ACTIVE
+                                    color: c.TVs.colors.INTERACTIVE_ACTIVE
                                 }),
-                                (0, i.jsx)(d.Text, {
+                                (0, i.jsx)(c.Text, {
                                     variant: 'text-md/medium',
                                     color: 'always-white',
-                                    children: O.ZP.getName(n.stream.guildId, n.stream.channelId, s)
+                                    children: I.ZP.getName(n.stream.guildId, n.stream.channelId, s)
                                 }),
-                                (0, i.jsx)(g.ZP, {
+                                (0, i.jsx)(m.ZP, {
                                     primaryGuild: u.primaryGuild,
                                     userId: s.id,
                                     onShowProfile: () => {
-                                        (0, N.Ws)(T.Odu.GO_LIVE, {
-                                            type: N.Qu.GO_LIVE,
-                                            value: N.bk.GUILD_PROFILE_OPENED,
+                                        (0, j.Ws)(Z.Odu.GO_LIVE, {
+                                            type: j.Qu.GO_LIVE,
+                                            value: j.bk.GUILD_PROFILE_OPENED,
                                             userId: n.user.id
                                         });
                                     }
@@ -181,25 +250,28 @@ function R(e) {
                         })
                     }),
                     (0, i.jsx)('div', {
-                        className: A.controlActions,
+                        className: P.controlActions,
                         children:
                             t &&
                             (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    (0, i.jsx)(j, { participant: n }),
-                                    (0, i.jsx)(d.ua7, {
-                                        text: w.intl.string(w.t['3D5yo6']),
+                                    (0, i.jsx)(D, { participant: n }),
+                                    (0, i.jsx)(c.ua7, {
+                                        text: N.NW.string(N.t['3D5yo6']),
                                         children: (e) => {
-                                            let { onClick: t, ...l } = e;
-                                            return (0, i.jsx)(d.P3F, {
-                                                ...l,
-                                                className: A.controlAction,
-                                                onClick: k(n, r, t),
-                                                children: (0, i.jsx)(d.xhG, {
-                                                    size: 'sm',
-                                                    color: 'currentColor'
+                                            var { onClick: t } = e,
+                                                r = A(e, ['onClick']);
+                                            return (0, i.jsx)(
+                                                c.P3F,
+                                                k(T({}, r), {
+                                                    className: P.controlAction,
+                                                    onClick: R(n, o, t),
+                                                    children: (0, i.jsx)(c.xhG, {
+                                                        size: 'sm',
+                                                        color: 'currentColor'
+                                                    })
                                                 })
-                                            });
+                                            );
                                         }
                                     })
                                 ]
@@ -210,63 +282,63 @@ function R(e) {
         ]
     });
 }
-let L = new Set([T.jm8.ENDED, T.jm8.FAILED, T.jm8.PAUSED]),
-    D = l.memo(function (e) {
-        let { participant: t, width: n, locked: l, widgetId: r, pinned: s } = e,
-            u = (0, a.e7)([C.Z], () => C.Z.getActiveStreamForUser(t.user.id, t.stream.guildId), [t.user.id, t.stream.guildId]),
-            c = (0, p.bp)(),
-            _ = null != u && L.has(u.state),
-            f = null != u,
-            g = (0, b.yA)(t.stream),
-            I = (0, b.xN)(t.stream);
-        return (!f && l) || _
+let W = new Set([Z.jm8.ENDED, Z.jm8.FAILED, Z.jm8.PAUSED]),
+    M = r.memo(function (e) {
+        let { participant: t, width: n, locked: r, widgetId: o, pinned: s } = e,
+            u = (0, a.e7)([E.Z], () => E.Z.getActiveStreamForUser(t.user.id, t.stream.guildId), [t.user.id, t.stream.guildId]),
+            d = (0, h.bp)(),
+            f = null != u && W.has(u.state),
+            g = null != u,
+            m = (0, w.yA)(t.stream),
+            y = (0, w.xN)(t.stream);
+        return (!g && r) || f
             ? null
             : (0, i.jsxs)('div', {
-                  className: A.tile,
+                  className: P.tile,
                   children: [
-                      f &&
-                          !l &&
-                          (0, i.jsx)(m.ZP, {
-                              size: m.ZP.Sizes.SMALL,
-                              className: A.liveIndicator
+                      g &&
+                          !r &&
+                          (0, i.jsx)(_.ZP, {
+                              size: _.ZP.Sizes.SMALL,
+                              className: P.liveIndicator
                           }),
-                      f
+                      g
                           ? (0, i.jsx)('div', {
-                                className: A.streamTile,
-                                children: (0, i.jsx)(d.kL8, {
-                                    'aria-label': w.intl.formatToPlainString(w.t.gHPz3d, { streamerName: t.user.username }),
+                                className: P.streamTile,
+                                children: (0, i.jsx)(c.kL8, {
+                                    'aria-label': N.NW.formatToPlainString(N.t.gHPz3d, { streamerName: t.user.username }),
                                     onClick: () => {},
-                                    onContextMenu: k(t, c),
-                                    className: A.streamTile,
-                                    style: { transform: 'scale('.concat(g, ')') },
-                                    children: (0, i.jsx)(x.Z, {
+                                    onContextMenu: R(t, d),
+                                    className: P.streamTile,
+                                    style: { transform: 'scale('.concat(m, ')') },
+                                    children: (0, i.jsx)(b.Z, {
                                         participant: t,
                                         width: n,
-                                        fit: null != I ? I : E.L.CONTAIN,
+                                        fit: null != y ? y : O.L.CONTAIN,
                                         inPopout: !0,
-                                        focused: !l,
+                                        focused: !r,
                                         paused: !1,
                                         selected: !1,
-                                        wrapperClassName: l ? A.streamTileWrapper : void 0,
+                                        wrapperClassName: r ? P.streamTileWrapper : void 0,
                                         inOverlayPopout: !0
                                     })
                                 })
                             })
                           : (0, i.jsx)('div', {
-                                className: A.streamPreview,
+                                className: P.streamPreview,
                                 children: (0, i.jsx)(v.Z, {
                                     noText: !0,
-                                    className: o()(A.absoluteFill),
+                                    className: l()(P.absoluteFill),
                                     stream: t.stream
                                 })
                             }),
-                      l
+                      r
                           ? null
-                          : (0, i.jsx)(R, {
+                          : (0, i.jsx)(L, {
                                 participant: t,
-                                hasActiveStream: f,
+                                hasActiveStream: g,
                                 onEnablePin: () => {
-                                    s || (0, h.xh)(r);
+                                    s || (0, p.xh)(o);
                                 }
                             })
                   ]

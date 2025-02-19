@@ -1,190 +1,219 @@
-n.d(t, { Z: () => f });
-var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    l = n.n(r),
-    a = n(392711),
+n.d(t, { Z: () => E }), n(266796);
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(392711),
     o = n(780384),
     c = n(481060),
     d = n(410030),
     u = n(70097),
     m = n(626135),
     g = n(526167),
-    h = n(831964),
-    x = n(981631),
-    _ = n(869783),
-    p = n(388032),
-    E = n(324119);
-let C = (e) => {
-        let { name: t, title: n, description: r, descriptionCta: p, previewImage: C, videoUrl: f, shouldLoadVideo: T, index: N, isCompact: S, isReducedMotion: I, onClick: b } = e,
-            v = (0, g.rO)(),
-            j = s.useRef(null),
-            A = s.useRef(0),
-            O = (function (e) {
+    p = n(831964),
+    h = n(981631),
+    f = n(869783),
+    N = n(388032),
+    x = n(24891);
+function b(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+let _ = (e) => {
+        let { name: t, title: n, description: s, descriptionCta: N, previewImage: b, videoUrl: _, shouldLoadVideo: E, index: j, isCompact: C, isReducedMotion: O, onClick: v } = e,
+            S = (0, g.rO)(),
+            T = i.useRef(null),
+            I = i.useRef(0),
+            y = (function (e) {
                 let t;
                 switch (e) {
-                    case h.dm.EMOJIS:
-                        t = E.emojisBackground;
+                    case p.dm.EMOJIS:
+                        t = x.emojisBackground;
                         break;
-                    case h.dm.REFERRAL_PROGRAM:
-                        t = E.referralProgramBackground;
+                    case p.dm.REFERRAL_PROGRAM:
+                        t = x.referralProgramBackground;
                         break;
-                    case h.dm.NO_LIMITS:
-                        t = E.noLimitsBackground;
+                    case p.dm.NO_LIMITS:
+                        t = x.noLimitsBackground;
                         break;
-                    case h.dm.NEW_APP_STYLES:
-                        t = E.newStylesBackground;
+                    case p.dm.NEW_APP_STYLES:
+                        t = x.newStylesBackground;
                         break;
-                    case h.dm.YOUR_SPACE:
-                        t = E.yourSpaceBackground;
+                    case p.dm.YOUR_SPACE:
+                        t = x.yourSpaceBackground;
                         break;
-                    case h.dm.SERVER_PROFILES:
-                        t = E.serverProfilesBackground;
+                    case p.dm.SERVER_PROFILES:
+                        t = x.serverProfilesBackground;
                         break;
-                    case h.dm.SHOW_YOUR_STYLE:
-                        t = E.yourStyleBackground;
+                    case p.dm.SHOW_YOUR_STYLE:
+                        t = x.yourStyleBackground;
                 }
                 return t;
             })(t),
-            R = (0, d.ZP)(),
-            P = (0, o.wj)(R),
-            D = P ? c.Ttl.WHITE : c.Ttl.BRAND,
-            y = (0, a.debounce)(() => {
-                m.default.track(x.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, a.snakeCase)(t) });
+            A = (0, d.ZP)(),
+            P = (0, o.wj)(A),
+            R = P ? c.Ttl.WHITE : c.Ttl.BRAND,
+            D = (0, l.debounce)(() => {
+                m.default.track(h.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, l.snakeCase)(t) });
             }, 800),
             Z = () => {
-                null == j.current || I || ((j.current.currentTime = A.current), j.current.play());
+                null == T.current || O || ((T.current.currentTime = I.current), T.current.play());
             },
-            k = () => {
-                null == j.current || I || ((A.current = j.current.currentTime), j.current.pause());
+            w = () => {
+                null == T.current || O || ((I.current = T.current.currentTime), T.current.pause());
             },
-            L = () =>
-                (0, i.jsxs)('div', {
-                    className: l()({
-                        [E.whatsNewTextBoxOuter]: !S,
-                        [E.compactTextBox]: S
+            k = () =>
+                (0, r.jsxs)('div', {
+                    className: a()({
+                        [x.whatsNewTextBoxOuter]: !C,
+                        [x.compactTextBox]: C
                     }),
                     children: [
-                        (0, i.jsx)(c.X6q, {
+                        (0, r.jsx)(c.X6q, {
                             variant: 'heading-xxl/extrabold',
                             color: 'header-primary',
-                            className: l()({
-                                [E.whatsNewBoxHeader]: !S,
-                                [E.compactBoxHeader]: S
+                            className: a()({
+                                [x.whatsNewBoxHeader]: !C,
+                                [x.compactBoxHeader]: C
                             }),
                             children: n
                         }),
-                        (0, i.jsx)(c.Text, {
+                        (0, r.jsx)(c.Text, {
                             variant: 'text-md/medium',
                             color: 'text-muted',
-                            className: E.whatsNewBoxDescription,
-                            children: r
+                            className: x.whatsNewBoxDescription,
+                            children: s
                         }),
-                        null != p &&
-                            null != b &&
-                            (0, i.jsx)(c.zxk, {
+                        null != N &&
+                            null != v &&
+                            (0, r.jsx)(c.zxk, {
                                 look: c.iLD.OUTLINED,
-                                color: D,
-                                className: l()(E.whatsNewBoxButton, P ? E.whatsNewBoxButtonWhite : E.whatsNewBoxButtonBrand),
+                                color: R,
+                                className: a()(x.whatsNewBoxButton, P ? x.whatsNewBoxButtonWhite : x.whatsNewBoxButtonBrand),
                                 onClick: () => {
-                                    y(), b();
+                                    D(), v();
                                 },
-                                children: p
+                                children: N
                             })
                     ]
                 }),
-            B = (e) => {
+            W = (e) => {
                 let { isLeft: t } = e;
-                return (0, i.jsx)('div', {
-                    className: l()({
-                        [E.whatsNewArtContainer]: !S,
-                        [E.compactBoxArtContainer]: S
+                return (0, r.jsx)('div', {
+                    className: a()({
+                        [x.whatsNewArtContainer]: !C,
+                        [x.compactBoxArtContainer]: C
                     }),
-                    children: (0, i.jsx)(
+                    children: (0, r.jsx)(
                         u.Z,
                         {
                             playsInline: !0,
-                            preload: T ? 'auto' : 'none',
+                            preload: E ? 'auto' : 'none',
                             muted: !0,
-                            poster: C,
+                            poster: b,
                             loop: !0,
-                            className: l()({
-                                [E.perkBoxVideo]: !S,
-                                [E.leftSideArt]: t && !S,
-                                [E.compactBoxVideo]: S
+                            className: a()({
+                                [x.perkBoxVideo]: !C,
+                                [x.leftSideArt]: t && !C,
+                                [x.compactBoxVideo]: C
                             }),
-                            ref: j,
-                            children: (0, i.jsx)('source', {
-                                src: f,
-                                type: v ? _.m.MP4 : _.m.WEBM
+                            ref: T,
+                            children: (0, r.jsx)('source', {
+                                src: _,
+                                type: S ? f.m.MP4 : f.m.WEBM
                             })
                         },
-                        f
+                        _
                     )
                 });
             },
-            M = N % 2 == 0;
-        return (0, i.jsx)('div', {
-            className: l()(O, {
-                [E.whatsNewBoxContainer]: !S,
-                [E.compactBoxContainer]: S
+            L = j % 2 == 0;
+        return (0, r.jsx)('div', {
+            className: a()(y, {
+                [x.whatsNewBoxContainer]: !C,
+                [x.compactBoxContainer]: C
             }),
             onMouseEnter: Z,
             onFocus: Z,
-            onBlur: k,
-            onMouseLeave: k,
-            children: M
-                ? (0, i.jsxs)(i.Fragment, {
-                      children: [(0, i.jsx)(L, {}), (0, i.jsx)(B, { isLeft: M })]
+            onBlur: w,
+            onMouseLeave: w,
+            children: L
+                ? (0, r.jsxs)(r.Fragment, {
+                      children: [(0, r.jsx)(k, {}), (0, r.jsx)(W, { isLeft: L })]
                   })
-                : (0, i.jsxs)(i.Fragment, {
-                      children: [(0, i.jsx)(B, { isLeft: M }), (0, i.jsx)(L, {})]
+                : (0, r.jsxs)(r.Fragment, {
+                      children: [(0, r.jsx)(W, { isLeft: L }), (0, r.jsx)(k, {})]
                   })
         });
     },
-    f = s.memo(function (e) {
-        let { className: t, shouldLoadVideo: n, isBestOfNitro: s = !1, isReducedMotion: r } = e,
-            a = Object.values((0, h.ZP)(s)),
-            o = s ? Object.values((0, h.__)()) : null;
-        return (0, i.jsx)(i.Fragment, {
-            children: (0, i.jsxs)('div', {
-                className: l()(E.boxBackdrop, t),
+    E = i.memo(function (e) {
+        let { className: t, shouldLoadVideo: n, isBestOfNitro: i = !1, isReducedMotion: s } = e,
+            l = Object.values((0, p.ZP)(i)),
+            o = i ? Object.values((0, p.__)()) : null;
+        return (0, r.jsx)(r.Fragment, {
+            children: (0, r.jsxs)('div', {
+                className: a()(x.boxBackdrop, t),
                 children: [
-                    (0, i.jsx)(c.X6q, {
-                        className: E.whatsNewHeader,
+                    (0, r.jsx)(c.X6q, {
+                        className: x.whatsNewHeader,
                         variant: 'display-md',
                         color: 'header-primary',
-                        children: s ? p.intl.string(p.t.EnzW2N) : p.intl.string(p.t.LRmNAg)
+                        children: i ? N.NW.string(N.t.EnzW2N) : N.NW.string(N.t.LRmNAg)
                     }),
-                    a.map((e, t) =>
-                        (0, i.jsx)(
-                            C,
-                            {
-                                shouldLoadVideo: n,
-                                isReducedMotion: r,
-                                index: t,
-                                ...e
-                            },
+                    l.map((e, t) =>
+                        (0, r.jsx)(
+                            _,
+                            b(
+                                {
+                                    shouldLoadVideo: n,
+                                    isReducedMotion: s,
+                                    index: t
+                                },
+                                e
+                            ),
                             e.name
                         )
                     ),
                     null != o &&
-                        (0, i.jsxs)('div', {
-                            className: E.compactBoxOuterContainer,
+                        (0, r.jsxs)('div', {
+                            className: x.compactBoxOuterContainer,
                             children: [
                                 o.map((e, t) =>
-                                    (0, i.jsx)(
-                                        C,
-                                        {
-                                            shouldLoadVideo: n,
-                                            isReducedMotion: r,
-                                            index: t,
-                                            ...e
-                                        },
+                                    (0, r.jsx)(
+                                        _,
+                                        b(
+                                            {
+                                                shouldLoadVideo: n,
+                                                isReducedMotion: s,
+                                                index: t
+                                            },
+                                            e
+                                        ),
                                         e.name
                                     )
                                 ),
-                                (0, i.jsx)('div', { className: E.whatsNewSideGradient })
+                                (0, r.jsx)('div', { className: x.whatsNewSideGradient })
                             ]
                         })
                 ]

@@ -1,41 +1,85 @@
 n.d(t, {
-    DI: () => E,
-    x3: () => I
+    DI: () => I,
+    x3: () => C
 }),
-    n(47120);
-var i = n(200651),
-    r = n(192379),
-    l = n(512722),
-    s = n.n(l),
-    a = n(442837),
+    n(47120),
+    n(266796);
+var r = n(200651),
+    i = n(192379),
+    s = n(512722),
+    a = n.n(s),
+    l = n(442837),
     o = n(481060),
     c = n(596454),
     d = n(600164),
     u = n(313201),
     m = n(318766),
-    h = n(907040),
+    p = n(907040),
     g = n(339085),
-    x = n(633302),
-    p = n(984933),
-    _ = n(691886),
-    C = n(185923),
-    f = n(388032),
-    v = n(634340);
-function N(e) {
-    let { guildId: t, emojiData: n, 'aria-labelledby': l, onSelectEmoji: s } = e,
-        d = (0, a.e7)([g.ZP], () => (null != n.id ? g.ZP.getCustomEmojiById(n.id) : void 0)),
-        u = (0, a.e7)([p.ZP], () => p.ZP.getDefaultChannel(t)),
-        _ = r.useCallback(
+    h = n(633302),
+    f = n(984933),
+    b = n(691886),
+    x = n(185923),
+    j = n(388032),
+    N = n(135946);
+function v(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function _(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function O(e) {
+    let { guildId: t, emojiData: n, 'aria-labelledby': s, onSelectEmoji: a } = e,
+        d = (0, l.e7)([g.ZP], () => (null != n.id ? g.ZP.getCustomEmojiById(n.id) : void 0)),
+        u = (0, l.e7)([f.ZP], () => f.ZP.getDefaultChannel(t)),
+        b = i.useCallback(
             (e) => {
                 let { closePopout: t } = e;
-                return (0, i.jsx)(h.Z, {
-                    pickerIntention: C.Hz.GUILD_ROLE_BENEFIT_EMOJI,
+                return (0, r.jsx)(p.Z, {
+                    pickerIntention: x.Hz.GUILD_ROLE_BENEFIT_EMOJI,
                     channel: u,
                     closePopout: t,
                     onNavigateAway: t,
                     onSelectEmoji: (e, n) => {
                         null != e &&
-                            s(
+                            a(
                                 null != e.id
                                     ? {
                                           id: e.id,
@@ -50,15 +94,15 @@ function N(e) {
                     }
                 });
             },
-            [s, u]
+            [a, u]
         ),
-        N = r.useMemo(
+        O = i.useMemo(
             () =>
                 null == d && null == n.name
                     ? null
                     : function () {
-                          return (0, i.jsx)(c.Z, {
-                              className: v.emoji,
+                          return (0, r.jsx)(c.Z, {
+                              className: N.emoji,
                               emojiId: n.id,
                               emojiName: n.name,
                               animated: null == d ? void 0 : d.animated
@@ -66,141 +110,142 @@ function N(e) {
                       },
             [n, d]
         ),
-        j = '';
+        y = '';
     return (
-        null != d ? (j = ':'.concat(d.name, ':')) : null != n.name && (j = x.ZP.convertSurrogateToName(n.name)),
-        (0, i.jsx)(o.yRy, {
+        null != d ? (y = ':'.concat(d.name, ':')) : null != n.name && (y = h.ZP.convertSurrogateToName(n.name)),
+        (0, r.jsx)(o.yRy, {
             animation: o.yRy.Animation.NONE,
             position: 'top',
-            renderPopout: _,
+            renderPopout: b,
             children: (e, t) => {
                 let { isShown: n } = t;
-                return (0, i.jsxs)('div', {
-                    className: v.emojiInputContainer,
-                    ...e,
-                    children: [
-                        (0, i.jsx)(m.Z, {
-                            className: v.emojiButton,
-                            active: n,
-                            tabIndex: 0,
-                            renderButtonContents: N
-                        }),
-                        (0, i.jsx)(o.oil, {
-                            inputClassName: v.emojiText,
-                            placeholder: f.intl.string(f.t.qJPLNT),
-                            value: j,
-                            'aria-labelledby': l,
-                            readOnly: !0
-                        })
-                    ]
-                });
+                return (0, r.jsxs)(
+                    'div',
+                    _(v({ className: N.emojiInputContainer }, e), {
+                        children: [
+                            (0, r.jsx)(m.Z, {
+                                className: N.emojiButton,
+                                active: n,
+                                tabIndex: 0,
+                                renderButtonContents: O
+                            }),
+                            (0, r.jsx)(o.oil, {
+                                inputClassName: N.emojiText,
+                                placeholder: j.NW.string(j.t.qJPLNT),
+                                value: y,
+                                'aria-labelledby': s,
+                                readOnly: !0
+                            })
+                        ]
+                    })
+                );
             }
         })
     );
 }
-function j(e) {
+function y(e) {
     var t;
-    let { guildId: n, initialData: l, benefitTypeInput: s, descriptionPlaceholder: a, canSubmit: c, onSave: m, onDelete: h, transitionState: g, onClose: x } = e,
-        p = (0, u.Dt)(),
-        _ = (0, u.Dt)(),
-        C = (0, u.Dt)(),
-        [j, I] = r.useState(null !== (t = null == l ? void 0 : l.description) && void 0 !== t ? t : ''),
-        [E, b] = r.useState(() => ({
-            id: null == l ? void 0 : l.emoji_id,
-            name: null == l ? void 0 : l.emoji_name
+    let { guildId: n, initialData: s, benefitTypeInput: a, descriptionPlaceholder: l, canSubmit: c, onSave: m, onDelete: p, transitionState: g, onClose: h } = e,
+        f = (0, u.Dt)(),
+        b = (0, u.Dt)(),
+        x = (0, u.Dt)(),
+        [v, _] = i.useState(null !== (t = null == s ? void 0 : s.description) && void 0 !== t ? t : ''),
+        [y, C] = i.useState(() => ({
+            id: null == s ? void 0 : s.emoji_id,
+            name: null == s ? void 0 : s.emoji_name
         })),
-        T = c && '' !== j && (null != E.id || null != E.name);
-    return (0, i.jsx)('form', {
+        I = c && '' !== v && (null != y.id || null != y.name);
+    return (0, r.jsx)('form', {
         onSubmit: function (e) {
             e.preventDefault(),
-                T &&
+                I &&
                     (m({
-                        description: j,
-                        emojiId: E.id,
-                        emojiName: E.name
+                        description: v,
+                        emojiId: y.id,
+                        emojiName: y.name
                     }),
-                    x());
+                    h());
         },
-        children: (0, i.jsxs)(o.Y0X, {
+        children: (0, r.jsxs)(o.Y0X, {
             transitionState: g,
-            'aria-labelledby': p,
+            'aria-labelledby': f,
             children: [
-                (0, i.jsxs)(o.xBx, {
+                (0, r.jsxs)(o.xBx, {
                     children: [
-                        (0, i.jsx)(o.X6q, {
-                            id: p,
+                        (0, r.jsx)(o.X6q, {
+                            id: f,
                             variant: 'heading-md/semibold',
-                            children: f.intl.string(f.t['2qf9EB'])
+                            children: j.NW.string(j.t['2qf9EB'])
                         }),
-                        (0, i.jsx)(o.olH, {
-                            className: v.closeButton,
-                            onClick: x
+                        (0, r.jsx)(o.olH, {
+                            className: N.closeButton,
+                            onClick: h
                         })
                     ]
                 }),
-                (0, i.jsxs)(o.hzk, {
-                    className: v.modalContent,
+                (0, r.jsxs)(o.hzk, {
+                    className: N.modalContent,
                     children: [
-                        s,
-                        (0, i.jsx)(o.LZC, { size: 24 }),
-                        (0, i.jsx)(o.hjN, {
-                            title: f.intl.string(f.t['1Ts7QE']),
-                            titleId: _,
-                            children: (0, i.jsx)(o.Kx8, {
-                                placeholder: a,
-                                value: j,
+                        a,
+                        (0, r.jsx)(o.LZC, { size: 24 }),
+                        (0, r.jsx)(o.hjN, {
+                            title: j.NW.string(j.t['1Ts7QE']),
+                            titleId: b,
+                            children: (0, r.jsx)(o.Kx8, {
+                                placeholder: l,
+                                value: v,
                                 rows: 1,
                                 autosize: !0,
-                                onChange: I,
-                                'aria-labelledby': _
+                                onChange: _,
+                                'aria-labelledby': b
                             })
                         }),
-                        (0, i.jsx)(o.LZC, { size: 24 }),
-                        (0, i.jsx)(o.hjN, {
-                            title: f.intl.string(f.t.sMOuub),
-                            titleId: C,
-                            children: (0, i.jsx)(N, {
+                        (0, r.jsx)(o.LZC, { size: 24 }),
+                        (0, r.jsx)(o.hjN, {
+                            title: j.NW.string(j.t.sMOuub),
+                            titleId: x,
+                            children: (0, r.jsx)(O, {
                                 guildId: n,
-                                emojiData: E,
-                                onSelectEmoji: b,
-                                'aria-labelledby': C
+                                emojiData: y,
+                                onSelectEmoji: C,
+                                'aria-labelledby': x
                             })
                         })
                     ]
                 }),
-                (0, i.jsxs)(o.mzw, {
+                (0, r.jsxs)(o.mzw, {
                     justify: d.Z.Justify.BETWEEN,
                     children: [
-                        (0, i.jsxs)('div', {
-                            className: v.primaryButtons,
+                        (0, r.jsxs)('div', {
+                            className: N.primaryButtons,
                             children: [
-                                (0, i.jsx)(o.zxk, {
+                                (0, r.jsx)(o.zxk, {
                                     type: 'submit',
-                                    disabled: !T,
-                                    children: null == l ? f.intl.string(f.t.OYkgVl) : f.intl.string(f.t.R3BPHx)
+                                    disabled: !I,
+                                    children: null == s ? j.NW.string(j.t.OYkgVl) : j.NW.string(j.t.R3BPHx)
                                 }),
-                                null != h &&
-                                    (0, i.jsx)(o.zxk, {
+                                null != p &&
+                                    (0, r.jsx)(o.zxk, {
                                         look: o.zxk.Looks.BLANK,
                                         size: o.zxk.Sizes.ICON,
-                                        className: v.deleteButton,
+                                        className: N.deleteButton,
                                         onClick: () => {
-                                            h(), x();
+                                            p(), h();
                                         },
-                                        children: (0, i.jsx)(o.XHJ, {
+                                        children: (0, r.jsx)(o.XHJ, {
                                             size: 'md',
                                             color: 'currentColor',
-                                            'aria-label': f.intl.string(f.t.oyYWHB)
+                                            'aria-label': j.NW.string(j.t.oyYWHB)
                                         })
                                     })
                             ]
                         }),
-                        (0, i.jsx)(o.zxk, {
+                        (0, r.jsx)(o.zxk, {
                             look: o.zxk.Looks.LINK,
                             color: o.zxk.Colors.PRIMARY,
-                            className: v.cancelButton,
-                            onClick: x,
-                            children: f.intl.string(f.t['ETE/oK'])
+                            className: N.cancelButton,
+                            onClick: h,
+                            children: j.NW.string(j.t['ETE/oK'])
                         })
                     ]
                 })
@@ -208,83 +253,75 @@ function j(e) {
         })
     });
 }
-function I(e) {
-    let { guildId: t, omitChannelIds: n, initialData: l, onSave: a, onDelete: c, transitionState: d, onClose: m } = e,
-        [h, g] = r.useState(null == l ? void 0 : l.ref_id),
-        x = (0, u.Dt)(),
-        p = (0, i.jsxs)(i.Fragment, {
+function C(e) {
+    let { guildId: t, omitChannelIds: n, initialData: s, onSave: l, onDelete: c, transitionState: d, onClose: m } = e,
+        [p, g] = i.useState(null == s ? void 0 : s.ref_id),
+        h = (0, u.Dt)(),
+        f = (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, i.jsx)(o.Wn, {
+                (0, r.jsx)(o.Wn, {
                     messageType: o.QYI.WARNING,
-                    children: f.intl.string(f.t.xunxCg)
+                    children: j.NW.string(j.t.xunxCg)
                 }),
-                (0, i.jsx)(o.LZC, { size: 24 }),
-                (0, i.jsx)(o.hjN, {
-                    title: f.intl.string(f.t.GK18KC),
-                    titleId: x,
-                    children: (0, i.jsx)(_.Z, {
+                (0, r.jsx)(o.LZC, { size: 24 }),
+                (0, r.jsx)(o.hjN, {
+                    title: j.NW.string(j.t.GK18KC),
+                    titleId: h,
+                    children: (0, r.jsx)(b.Z, {
                         guildId: t,
-                        value: h,
-                        initialChannelId: null == l ? void 0 : l.ref_id,
+                        value: p,
+                        initialChannelId: null == s ? void 0 : s.ref_id,
                         omitChannelIds: n,
                         onChange: function (e) {
                             g(e);
                         },
-                        'aria-labelledby': x
+                        'aria-labelledby': h
                     })
                 })
             ]
         });
-    return (0, i.jsx)(j, {
+    return (0, r.jsx)(y, {
         guildId: t,
-        initialData: l,
-        benefitTypeInput: p,
-        descriptionPlaceholder: f.intl.string(f.t.J8O1Li),
-        canSubmit: null != h,
+        initialData: s,
+        benefitTypeInput: f,
+        descriptionPlaceholder: j.NW.string(j.t.J8O1Li),
+        canSubmit: null != p,
         onSave: function (e) {
-            s()(null != h, 'Cannot submit null channel'),
-                a({
-                    ...e,
-                    channelId: h
-                });
+            a()(null != p, 'Cannot submit null channel'), l(_(v({}, e), { channelId: p }));
         },
         transitionState: d,
         onClose: m,
         onDelete: c
     });
 }
-function E(e) {
+function I(e) {
     var t;
-    let { initialData: n, onSave: l, transitionState: a, onClose: c, onDelete: d, guildId: m } = e,
-        [h, g] = r.useState(null !== (t = null == n ? void 0 : n.name) && void 0 !== t ? t : ''),
-        x = (0, u.Dt)(),
-        p = (0, i.jsx)(o.hjN, {
-            title: f.intl.string(f.t.NPOJra),
-            titleId: x,
-            children: (0, i.jsx)(o.Kx8, {
-                placeholder: f.intl.string(f.t.NPOJra),
-                value: h,
+    let { initialData: n, onSave: s, transitionState: l, onClose: c, onDelete: d, guildId: m } = e,
+        [p, g] = i.useState(null !== (t = null == n ? void 0 : n.name) && void 0 !== t ? t : ''),
+        h = (0, u.Dt)(),
+        f = (0, r.jsx)(o.hjN, {
+            title: j.NW.string(j.t.NPOJra),
+            titleId: h,
+            children: (0, r.jsx)(o.Kx8, {
+                placeholder: j.NW.string(j.t.NPOJra),
+                value: p,
                 rows: 1,
                 onChange: function (e) {
                     g(e);
                 },
-                'aria-labelledby': x
+                'aria-labelledby': h
             })
         });
-    return (0, i.jsx)(j, {
+    return (0, r.jsx)(y, {
         guildId: m,
         initialData: n,
-        benefitTypeInput: p,
-        descriptionPlaceholder: f.intl.string(f.t.ucP4Tk),
-        canSubmit: '' !== h,
+        benefitTypeInput: f,
+        descriptionPlaceholder: j.NW.string(j.t.ucP4Tk),
+        canSubmit: '' !== p,
         onSave: function (e) {
-            s()('' !== h, 'Cannot submit empty name'),
-                l({
-                    ...e,
-                    name: h
-                });
+            a()('' !== p, 'Cannot submit empty name'), s(_(v({}, e), { name: p }));
         },
-        transitionState: a,
+        transitionState: l,
         onClose: c,
         onDelete: d
     });

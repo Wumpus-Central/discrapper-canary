@@ -1,73 +1,108 @@
-n.d(t, { Z: () => g });
-var i = n(200651);
+n.d(t, { Z: () => m });
+var r = n(200651);
 n(192379);
-var r = n(481060),
-    a = n(973616),
-    l = n(131704),
-    o = n(601964),
+var i = n(481060),
+    o = n(973616),
+    a = n(131704),
+    l = n(601964),
     s = n(598077),
     c = n(230224),
-    d = n(258356),
-    u = n(981631),
+    u = n(258356),
+    d = n(981631),
     h = n(388032),
-    _ = n(271902);
-let m = (e) => {
+    p = n(447251);
+function _(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function g(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let f = (e) => {
     let { state: t } = e;
     switch (t) {
-        case u.r2o.ACCEPTING:
-        case u.r2o.APP_OPENING:
+        case d.r2o.ACCEPTING:
+        case d.r2o.APP_OPENING:
             return !0;
         default:
             return !1;
     }
 };
-function g(e) {
-    let { invite: t, onAcceptInvite: n, disableUser: g = !1 } = e;
+function m(e) {
+    let { invite: t, onAcceptInvite: n, disableUser: m = !1 } = e;
     if (null == t) return null;
-    let p = null != t.guild ? new o.ZP(t.guild) : null,
-        f = null != t.channel ? (0, l.jD)(t.channel) : null,
-        x = null != t.target_application ? new a.ZP(t.target_application) : null,
-        E = g || null == t.inviter ? null : new s.Z(t.inviter),
-        I = !((null != t.approximate_member_count && t.approximate_member_count > c.mx) || (null != p && p.hasFeature(u.oNc.COMMUNITY))) && null != E && (0, c.WT)(t),
-        v = m(t),
-        C = {
+    let b = null != t.guild ? new l.ZP(t.guild) : null,
+        N = null != t.channel ? (0, a.jD)(t.channel) : null,
+        x = null != t.target_application ? new o.ZP(t.target_application) : null,
+        v = m || null == t.inviter ? null : new s.Z(t.inviter),
+        E = !((null != t.approximate_member_count && t.approximate_member_count > c.mx) || (null != b && b.hasFeature(d.oNc.COMMUNITY))) && null != v && (0, c.WT)(t),
+        I = f(t),
+        O = {
             invite: t,
-            user: E,
-            guild: p,
-            channel: f,
+            user: v,
+            guild: b,
+            channel: N,
             application: x
         };
     return (0, c.JI)(t)
-        ? (0, i.jsx)(d.Z, {
+        ? (0, r.jsx)(u.Z, {
               invite: t,
-              channel: f,
-              isSubmitting: v,
+              channel: N,
+              isSubmitting: I,
               onAcceptInvite: n
           })
-        : (0, i.jsxs)('div', {
-              className: _.container,
+        : (0, r.jsxs)('div', {
+              className: p.container,
               children: [
-                  (0, i.jsx)(c.GB, {
+                  (0, r.jsx)(c.GB, {
                       application: x,
-                      guild: p,
-                      user: I || (0, c.X7)(t) ? E : null
+                      guild: b,
+                      user: E || (0, c.X7)(t) ? v : null
                   }),
-                  (0, c.X7)(t)
-                      ? null
-                      : (0, i.jsx)(c.jq, {
-                            ...C,
-                            showBigUserIcon: I
-                        }),
-                  (0, i.jsx)(c.UM, {
-                      ...C,
-                      showBigUserIcon: I
-                  }),
-                  (0, i.jsx)(c.V6, { ...C }),
-                  (0, i.jsx)(r.zxk, {
+                  (0, c.X7)(t) ? null : (0, r.jsx)(c.jq, g(_({}, O), { showBigUserIcon: E })),
+                  (0, r.jsx)(c.UM, g(_({}, O), { showBigUserIcon: E })),
+                  (0, r.jsx)(c.V6, _({}, O)),
+                  (0, r.jsx)(i.zxk, {
                       onClick: n,
-                      submitting: v,
-                      className: _.acceptButton,
-                      children: h.intl.string(h.t.ohMvm5)
+                      submitting: I,
+                      className: p.acceptButton,
+                      children: h.NW.string(h.t.ohMvm5)
                   })
               ]
           });

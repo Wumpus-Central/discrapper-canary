@@ -1,84 +1,131 @@
-r.d(t, { Z: () => A }), r(47120);
-var i = r(192379),
-    n = r(399606),
-    a = r(544891),
-    s = r(570140),
-    l = r(367907),
-    o = r(430824),
+r.d(t, { Z: () => T }), r(47120);
+var n = r(192379),
+    i = r(399606),
+    o = r(544891),
+    a = r(570140),
+    s = r(367907),
+    l = r(430824),
     c = r(496675),
     d = r(626135),
-    _ = r(70956),
-    E = r(997787),
-    u = r(981631);
-let p = 1 * _.Z.Millis.DAY,
-    I = new Map(),
-    A = {
-        useShouldShowChannelNotice(e) {
-            let t = (0, n.e7)([o.Z, c.Z], () => {
-                let t = o.Z.getGuild(e);
-                return null != t && c.Z.can(u.Plq.ADMINISTRATOR, t);
+    u = r(70956),
+    _ = r(997787),
+    p = r(981631);
+function E(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var r = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(r);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (n = n.concat(
+                Object.getOwnPropertySymbols(r).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                })
+            )),
+            n.forEach(function (t) {
+                var n;
+                (n = r[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: n,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = n);
             });
-            i.useEffect(() => {
+    }
+    return e;
+}
+function O(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var r = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var n = Object.getOwnPropertySymbols(e);
+                      r.push.apply(r, n);
+                  }
+                  return r;
+              })(Object(t)).forEach(function (r) {
+                  Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
+              }),
+        e
+    );
+}
+let I = +u.Z.Millis.DAY,
+    A = new Map(),
+    T = {
+        useShouldShowChannelNotice(e) {
+            let t = (0, i.e7)([l.Z, c.Z], () => {
+                let t = l.Z.getGuild(e);
+                return null != t && c.Z.can(p.Plq.ADMINISTRATOR, t);
+            });
+            n.useEffect(() => {
                 t &&
                     (function (e) {
                         var t;
                         let r = Date.now(),
-                            i = null !== (t = I.get(e)) && void 0 !== t ? t : 0;
-                        !(r < i + p) &&
-                            (I.set(e, r),
-                            a.tn
+                            n = null !== (t = A.get(e)) && void 0 !== t ? t : 0;
+                        !(r < n + I) &&
+                            (A.set(e, r),
+                            o.tn
                                 .post({
-                                    url: u.ANM.GUILD_MIGRATE_COMMAND_SCOPE(e),
+                                    url: p.ANM.GUILD_MIGRATE_COMMAND_SCOPE(e),
                                     rejectWithError: !0
                                 })
                                 .then(
                                     (t) => {
-                                        var r, i;
-                                        s.Z.dispatch({
+                                        var r, n;
+                                        a.Z.dispatch({
                                             type: 'COMMANDS_MIGRATION_UPDATE_SUCCESS',
                                             guildId: e,
-                                            integrationIdsWithAppCommands: null !== (i = null === (r = t.body) || void 0 === r ? void 0 : r.integration_ids_with_app_commands) && void 0 !== i ? i : []
+                                            integrationIdsWithAppCommands: null !== (n = null === (r = t.body) || void 0 === r ? void 0 : r.integration_ids_with_app_commands) && void 0 !== n ? n : []
                                         });
                                     },
                                     () => {
-                                        I.set(e, i);
+                                        A.set(e, n);
                                     }
                                 ));
                     })(e);
             }, [e, t]);
-            let r = (0, n.e7)([E.Z], () => E.Z.shouldShowChannelNotice(e));
+            let r = (0, i.e7)([_.Z], () => _.Z.shouldShowChannelNotice(e));
             return t && r;
         },
         dismissNotice(e) {
-            s.Z.dispatch({
+            a.Z.dispatch({
                 type: 'COMMANDS_MIGRATION_NOTICE_DISMISSED',
                 guildId: e
             });
         },
         dismissOverviewTooltip(e, t) {
             var r;
-            s.Z.dispatch({
+            a.Z.dispatch({
                 type: 'COMMANDS_MIGRATION_OVERVIEW_TOOLTIP_DISMISSED',
                 guildId: e,
                 integrationId: t.id
             }),
-                d.default.track(u.rMx.COMMANDS_MIGRATION_TOOLTIP_DISMISSED, {
-                    ...(0, l.hH)(e),
-                    application_id: null === (r = t.application) || void 0 === r ? void 0 : r.id,
-                    location: 'overview'
-                });
+                d.default.track(
+                    p.rMx.COMMANDS_MIGRATION_TOOLTIP_DISMISSED,
+                    O(E({}, (0, s.hH)(e)), {
+                        application_id: null === (r = t.application) || void 0 === r ? void 0 : r.id,
+                        location: 'overview'
+                    })
+                );
         },
         dismissToggleTooltip(e, t) {
             var r;
             void 0 !== t &&
-                (s.Z.dispatch({
+                (a.Z.dispatch({
                     type: 'COMMANDS_MIGRATION_TOGGLE_TOOLTIP_DISMISSED',
                     integrationId: t.id
                 }),
-                d.default.track(u.rMx.COMMANDS_MIGRATION_TOOLTIP_DISMISSED, {
-                    ...(0, l.hH)(e),
-                    application_id: null === (r = t.application) || void 0 === r ? void 0 : r.id,
-                    location: 'toggle'
-                }));
+                d.default.track(
+                    p.rMx.COMMANDS_MIGRATION_TOOLTIP_DISMISSED,
+                    O(E({}, (0, s.hH)(e)), {
+                        application_id: null === (r = t.application) || void 0 === r ? void 0 : r.id,
+                        location: 'toggle'
+                    })
+                ));
         }
     };

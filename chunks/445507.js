@@ -1,22 +1,23 @@
 n.d(t, {
-    Q3: () => u,
-    Zl: () => d,
-    mC: () => a,
-    mU: () => o,
+    Q3: () => d,
+    Zl: () => u,
+    mC: () => o,
+    mU: () => a,
     qJ: () => s,
-    u9: () => r,
+    u9: () => l,
     xQ: () => c,
-    z5: () => h
-});
-var i = n(704215),
-    l = n(388032);
-function r(e) {
+    z5: () => p
+}),
+    n(26686);
+var r = n(704215),
+    i = n(388032);
+function l(e) {
     return 'user' === e.type;
 }
-function a(e) {
+function o(e) {
     return 'guild' === e.type;
 }
-function o(e) {
+function a(e) {
     return JSON.stringify({
         playstyle: e.playstyle,
         acknowledgeCap: e.acknowledgeCap,
@@ -32,7 +33,7 @@ let s = {
         question: 'Which feature are you interested in the most?',
         questionMargin: 150,
         backgroundAssetUrl: 'https://cdn.discordapp.com/assets/signups/Valorant_Background.png',
-        dismissibleContent: i.z.GAME_ONE_USER_SIGNUPS,
+        dismissibleContent: r.z.GAME_ONE_USER_SIGNUPS,
         options: [
             {
                 key: 'clan',
@@ -66,7 +67,7 @@ let s = {
         question: 'Interested? Pick one to sign up for updates and early access:',
         questionMargin: 110,
         backgroundAssetUrl: 'https://cdn.discordapp.com/assets/signups/Valorant_Background.png',
-        dismissibleContent: i.z.GAME_ONE_USER_SIGNUPS,
+        dismissibleContent: r.z.GAME_ONE_USER_SIGNUPS,
         options: [
             {
                 key: 'clan',
@@ -91,7 +92,7 @@ let s = {
             }
         ]
     },
-    d = {
+    u = {
         key: 'genshin-user',
         type: 'user',
         title: 'Preview new features for Genshin Impact players on Discord',
@@ -100,7 +101,7 @@ let s = {
         question: 'Which feature are you interested in the most?',
         questionMargin: 150,
         backgroundAssetUrl: 'https://cdn.discordapp.com/assets/signups/Genshin_Background.png',
-        dismissibleContent: i.z.GENSHIN_USER_SIGNUPS,
+        dismissibleContent: r.z.GENSHIN_USER_SIGNUPS,
         options: [
             {
                 key: 'clan',
@@ -125,7 +126,7 @@ let s = {
             }
         ]
     },
-    u = {
+    d = {
         key: 'genshin-admin',
         type: 'guild',
         title: 'Interested in recruiting more Genshin Impact players for your server?',
@@ -134,7 +135,7 @@ let s = {
         question: 'Interested? Pick one to sign up for updates and early access:',
         questionMargin: 80,
         backgroundAssetUrl: 'https://cdn.discordapp.com/assets/signups/Genshin_Background.png',
-        dismissibleContent: i.z.GENSHIN_USER_SIGNUPS,
+        dismissibleContent: r.z.GENSHIN_USER_SIGNUPS,
         options: [
             {
                 key: 'clan',
@@ -159,27 +160,27 @@ let s = {
             }
         ]
     };
-function h() {
+function p() {
     return [
         {
             value: 'very-casual',
-            title: l.intl.string(l.t['4g8/9/']),
-            description: l.intl.string(l.t['0qVVu7'])
+            title: i.NW.string(i.t['4g8/9/']),
+            description: i.NW.string(i.t['0qVVu7'])
         },
         {
             value: 'casual',
-            title: l.intl.string(l.t.gfRcc3),
-            description: l.intl.string(l.t.zbh9nJ)
+            title: i.NW.string(i.t.gfRcc3),
+            description: i.NW.string(i.t.zbh9nJ)
         },
         {
             value: 'hardcore',
-            title: l.intl.string(l.t['lj/ol5']),
-            description: l.intl.string(l.t.U2ICp6)
+            title: i.NW.string(i.t['lj/ol5']),
+            description: i.NW.string(i.t.U2ICp6)
         },
         {
             value: 'very-hardcore',
-            title: l.intl.string(l.t.kQaews),
-            description: l.intl.string(l.t.y4zY3t)
+            title: i.NW.string(i.t.kQaews),
+            description: i.NW.string(i.t.y4zY3t)
         }
     ];
 }

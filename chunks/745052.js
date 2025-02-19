@@ -1,48 +1,48 @@
-n.d(t, { Z: () => es }), n(47120);
-var i = n(200651),
-    l = n(192379),
-    r = n(120356),
-    a = n.n(r),
-    s = n(91192),
-    o = n(286379),
-    d = n(442837),
-    c = n(704215),
-    u = n(481060),
-    h = n(150063),
-    m = n(230711),
-    p = n(112724),
-    g = n(183126),
-    _ = n(493773),
-    f = n(607070),
-    E = n(209613),
-    I = n(325708),
-    C = n(320149),
+n.d(t, { Z: () => ea }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    o = n.n(l),
+    a = n(91192),
+    s = n(286379),
+    c = n(442837),
+    u = n(704215),
+    d = n(481060),
+    p = n(150063),
+    h = n(230711),
+    g = n(112724),
+    f = n(183126),
+    m = n(493773),
+    b = n(607070),
+    _ = n(209613),
+    E = n(325708),
+    O = n(320149),
     N = n(82295),
     v = n(252618),
-    T = n(605236),
-    S = n(243778),
-    A = n(984370),
-    Z = n(797614),
-    x = n(359110),
-    b = n(6025),
-    L = n(897473),
-    y = n(108427),
-    O = n(970731),
-    P = n(210887),
-    R = n(433355),
-    j = n(592125),
-    D = n(819640),
-    w = n(626135),
-    M = n(647090),
-    k = n(385956),
+    y = n(605236),
+    I = n(243778),
+    C = n(984370),
+    S = n(797614),
+    T = n(359110),
+    P = n(6025),
+    j = n(897473),
+    A = n(108427),
+    Z = n(970731),
+    x = n(210887),
+    L = n(433355),
+    w = n(592125),
+    R = n(819640),
+    D = n(626135),
+    k = n(647090),
+    M = n(385956),
     U = n(610697),
     G = n(26373),
-    B = n(486622),
+    W = n(486622),
     V = n(922409),
-    H = n(899740),
-    F = n(177033),
-    z = n(355350),
-    W = n(307947),
+    B = n(899740),
+    H = n(177033),
+    F = n(355350),
+    z = n(307947),
     Y = n(96479),
     K = n(480874),
     q = n(687683),
@@ -50,73 +50,73 @@ var i = n(200651),
     Q = n(921944),
     J = n(526761),
     $ = n(388032),
-    ee = n(80599),
-    et = n(3114);
+    ee = n(645795),
+    et = n(527194);
 function en() {
-    let e = l.useRef(null),
-        t = (0, H.q)(),
-        n = (0, F.Z)(),
-        r = (0, G.K)(),
-        d = (0, g.N)(),
-        c = l.useCallback(() => {
-            (0, u.showToast)((0, u.createToast)($.intl.string($.t.EDYbS0), u.ToastType.FAILURE));
+    let e = i.useRef(null),
+        t = (0, B.q)(),
+        n = (0, H.Z)(),
+        l = (0, G.K)(),
+        c = (0, f.N)(),
+        u = i.useCallback(() => {
+            (0, d.showToast)((0, d.createToast)($.NW.string($.t.EDYbS0), d.ToastType.FAILURE));
         }, []),
-        { rejectAll: h } = (0, B.m)({ onError: c }),
-        m = (0, E.Z)('message-requests-list'),
-        { channelId: p } = (0, V._)(),
-        _ = l.useCallback(() => {
-            h(n.map((e) => e.channel.id));
-        }, [n, h]),
-        f = l.useCallback(
+        { rejectAll: p } = (0, W.m)({ onError: u }),
+        h = (0, _.Z)('message-requests-list'),
+        { channelId: g } = (0, V._)(),
+        m = i.useCallback(() => {
+            p(n.map((e) => e.channel.id));
+        }, [n, p]),
+        b = i.useCallback(
             (e) => {
-                var t, l;
-                let { row: s } = e,
-                    o = n[s],
-                    d = null === (l = n[s + 1]) || void 0 === l ? void 0 : null === (t = l.channel) || void 0 === t ? void 0 : t.id,
-                    c = o.channel.id;
-                return (0, i.jsx)(
+                var t, i;
+                let { row: a } = e,
+                    s = n[a],
+                    c = null === (i = n[a + 1]) || void 0 === i ? void 0 : null === (t = i.channel) || void 0 === t ? void 0 : t.id,
+                    u = s.channel.id;
+                return (0, r.jsx)(
                     Y.Z,
                     {
-                        index: s,
-                        className: a()({
-                            [ee.selected]: null != p && p === c,
-                            [ee.siblingSelected]: null != p && p === d
+                        index: a,
+                        className: o()({
+                            [ee.selected]: null != g && g === u,
+                            [ee.siblingSelected]: null != g && g === c
                         }),
-                        channel: o.channel,
-                        user: o.user,
-                        hasSingleMessageRequest: r
+                        channel: s.channel,
+                        user: s.user,
+                        hasSingleMessageRequest: l
                     },
-                    c
+                    u
                 );
             },
-            [r, n, p]
+            [l, n, g]
         ),
-        I = l.useCallback(
+        E = i.useCallback(
             () =>
-                (0, i.jsxs)(
+                (0, r.jsxs)(
                     N.Z,
                     {
                         className: ee.sectionTitle,
                         children: [
-                            t > 0 ? $.intl.formatToPlainString($.t.rA4iWV, { count: t }) : $.intl.string($.t.flPU6u),
-                            d && t > 0
-                                ? (0, i.jsxs)(i.Fragment, {
+                            t > 0 ? $.NW.formatToPlainString($.t.rA4iWV, { count: t }) : $.NW.string($.t.flPU6u),
+                            c && t > 0
+                                ? (0, r.jsxs)(r.Fragment, {
                                       children: [
-                                          (0, i.jsx)(u.Text, {
+                                          (0, r.jsx)(d.Text, {
                                               className: ee.titleDivider,
                                               variant: 'eyebrow',
                                               color: 'header-secondary',
                                               tag: 'span',
                                               children: '\u2022'
                                           }),
-                                          (0, i.jsx)(u.zxk, {
-                                              onClick: _,
-                                              look: u.iLD.LINK,
-                                              color: u.Ttl.LINK,
-                                              size: u.PhG.NONE,
+                                          (0, r.jsx)(d.zxk, {
+                                              onClick: m,
+                                              look: d.iLD.LINK,
+                                              color: d.Ttl.LINK,
+                                              size: d.PhG.NONE,
                                               className: ee.clearAllButton,
-                                              'aria-label': $.intl.string($.t.p6t7RE),
-                                              children: $.intl.string($.t.p6t7RE)
+                                              'aria-label': $.NW.string($.t.p6t7RE),
+                                              children: $.NW.string($.t.p6t7RE)
                                           })
                                       ]
                                   })
@@ -125,104 +125,149 @@ function en() {
                     },
                     'title'
                 ),
-            [t, _, d]
+            [t, m, c]
         );
-    return (n.length !== t && Z.Z.increment({ name: o.V.MESSAGE_REQUEST_COUNT_DRIFT }), 0 === n.length)
-        ? (0, i.jsx)(W.Z, { section: q.pS.REQUESTS })
-        : (0, i.jsx)(s.bG, {
-              navigator: m,
-              children: (0, i.jsx)(s.SJ, {
+    return (n.length !== t && S.Z.increment({ name: s.V.MESSAGE_REQUEST_COUNT_DRIFT }), 0 === n.length)
+        ? (0, r.jsx)(z.Z, { section: q.pS.REQUESTS })
+        : (0, r.jsx)(a.bG, {
+              navigator: h,
+              children: (0, r.jsx)(a.SJ, {
                   children: (t) => {
-                      let { ref: l, role: r, ...a } = t;
-                      return (0, i.jsx)(
-                          u.aVo,
-                          {
-                              className: ee.list,
-                              innerRole: r,
-                              innerAriaLabel: $.intl.string($.t.e7GWjY),
-                              ref: (t) => {
-                                  var n;
-                                  (e.current = t), (l.current = null !== (n = null == t ? void 0 : t.getScrollerNode()) && void 0 !== n ? n : null);
+                      var { ref: i, role: l } = t,
+                          o = (function (e, t) {
+                              if (null == e) return {};
+                              var n,
+                                  r,
+                                  i = (function (e, t) {
+                                      if (null == e) return {};
+                                      var n,
+                                          r,
+                                          i = {},
+                                          l = Object.keys(e);
+                                      for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                                      return i;
+                                  })(e, t);
+                              if (Object.getOwnPropertySymbols) {
+                                  var l = Object.getOwnPropertySymbols(e);
+                                  for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                              }
+                              return i;
+                          })(t, ['ref', 'role']);
+                      return (0, r.jsx)(
+                          d.aVo,
+                          (function (e) {
+                              for (var t = 1; t < arguments.length; t++) {
+                                  var n = null != arguments[t] ? arguments[t] : {},
+                                      r = Object.keys(n);
+                                  'function' == typeof Object.getOwnPropertySymbols &&
+                                      (r = r.concat(
+                                          Object.getOwnPropertySymbols(n).filter(function (e) {
+                                              return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                          })
+                                      )),
+                                      r.forEach(function (t) {
+                                          var r;
+                                          (r = n[t]),
+                                              t in e
+                                                  ? Object.defineProperty(e, t, {
+                                                        value: r,
+                                                        enumerable: !0,
+                                                        configurable: !0,
+                                                        writable: !0
+                                                    })
+                                                  : (e[t] = r);
+                                      });
+                              }
+                              return e;
+                          })(
+                              {
+                                  className: ee.list,
+                                  innerRole: l,
+                                  innerAriaLabel: $.NW.string($.t.e7GWjY),
+                                  ref: (t) => {
+                                      var n;
+                                      (e.current = t), (i.current = null !== (n = null == t ? void 0 : t.getScrollerNode()) && void 0 !== n ? n : null);
+                                  },
+                                  paddingTop: 24,
+                                  paddingBottom: 24,
+                                  sectionHeight: q.oi,
+                                  rowHeight: q.WN,
+                                  renderSection: E,
+                                  renderRow: b,
+                                  sections: [n.length],
+                                  chunkSize: 30,
+                                  fade: !0
                               },
-                              paddingTop: 24,
-                              paddingBottom: 24,
-                              sectionHeight: q.oi,
-                              rowHeight: q.WN,
-                              renderSection: I,
-                              renderRow: f,
-                              sections: [n.length],
-                              chunkSize: 30,
-                              fade: !0,
-                              ...a
-                          },
+                              o
+                          ),
                           'message-requests-list'
                       );
                   }
               })
           });
 }
-function ei(e) {
+function er(e) {
     let { pageWidth: t, onSidebarResize: n } = e,
-        l = (0, d.e7)([R.ZP], () => R.ZP.getSidebarState(R.uZ)),
-        r = (0, d.e7)([j.Z], () => j.Z.getChannel(null == l ? void 0 : l.channelId));
-    if (null == l || l.type !== L.tI.VIEW_MESSAGE_REQUEST || null == r || !r.isPrivate()) return null;
-    let a = t - X.R7I;
-    return (0, i.jsx)(I.Z, {
-        sidebarType: I.y.MessageRequestSidebar,
-        maxWidth: a,
+        i = (0, c.e7)([L.ZP], () => L.ZP.getSidebarState(L.uZ)),
+        l = (0, c.e7)([w.Z], () => w.Z.getChannel(null == i ? void 0 : i.channelId));
+    if (null == i || i.type !== j.tI.VIEW_MESSAGE_REQUEST || null == l || !l.isPrivate()) return null;
+    let o = t - X.R7I;
+    return (0, r.jsx)(E.Z, {
+        sidebarType: E.y.MessageRequestSidebar,
+        maxWidth: o,
         onWidthChange: n,
-        children: (0, i.jsx)(C.Z, {
-            channel: r,
-            baseChannelId: R.uZ
+        children: (0, r.jsx)(O.Z, {
+            channel: l,
+            baseChannelId: L.uZ
         })
     });
 }
-let el = function (e) {
+let ei = function (e) {
         let { markAsDismissed: t } = e;
-        return (0, i.jsx)(O.ZP, {
-            header: $.intl.string($.t.hRT8tb),
-            content: $.intl.string($.t.apPgJC),
-            buttonCTA: $.intl.string($.t.LNoAQU),
+        return (0, r.jsx)(Z.ZP, {
+            header: $.NW.string($.t.hRT8tb),
+            content: $.NW.string($.t.apPgJC),
+            buttonCTA: $.NW.string($.t.LNoAQU),
             className: ee.messageRequestCoachmark,
             onClick: () => t(Q.L.UNKNOWN),
             markAsDismissed: t,
-            caretPosition: O.DF.TOP_CENTER,
+            caretPosition: Z.DF.TOP_CENTER,
             headerClassName: ee.__invalid_header
         });
     },
-    er = (e) => {
+    el = (e) => {
         let t = (0, U.Z)(),
-            n = () => D.Z.hasLayers() || (0, u.$sL)(),
-            r = (0, d.e7)([f.Z], () => f.Z.useReducedMotion);
+            n = () => R.Z.hasLayers() || (0, d.$sL)(),
+            l = (0, c.e7)([b.Z], () => b.Z.useReducedMotion);
         return (
-            l.useEffect(() => {
-                (0, T.kk)(c.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK);
+            i.useEffect(() => {
+                (0, y.kk)(u.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK);
             }, []),
-            (0, i.jsx)(S.ZP, {
-                contentTypes: [c.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK],
-                children: (l) => {
-                    let { visibleContent: a, markAsDismissed: s } = l;
-                    return a === c.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK
-                        ? (0, i.jsx)(u.yRy, {
+            (0, r.jsx)(I.ZP, {
+                contentTypes: [u.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK],
+                children: (i) => {
+                    let { visibleContent: o, markAsDismissed: a } = i;
+                    return o === u.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK
+                        ? (0, r.jsx)(d.yRy, {
                               renderPopout: () =>
                                   t
-                                      ? (0, i.jsx)(el, { markAsDismissed: s })
-                                      : (0, i.jsx)(O.ZP, {
-                                            header: $.intl.string($.t.hRT8tb),
-                                            content: $.intl.string($.t['8JWodn']),
-                                            buttonCTA: $.intl.string($.t.JN6EOD),
-                                            secondaryButtonCTA: $.intl.string($.t.LNoAQU),
+                                      ? (0, r.jsx)(ei, { markAsDismissed: a })
+                                      : (0, r.jsx)(Z.ZP, {
+                                            header: $.NW.string($.t.hRT8tb),
+                                            content: $.NW.string($.t['8JWodn']),
+                                            buttonCTA: $.NW.string($.t.JN6EOD),
+                                            secondaryButtonCTA: $.NW.string($.t.LNoAQU),
                                             className: ee.messageRequestCoachmark,
                                             onClick: (e) => {
-                                                e.stopPropagation(), m.Z.open(X.oAB.CONTENT_AND_SOCIAL, null, { scrollPosition: J.FY.MESSAGE_REQUESTS_V2 });
+                                                e.stopPropagation(), h.Z.open(X.oAB.CONTENT_AND_SOCIAL, null, { scrollPosition: J.FY.MESSAGE_REQUESTS_V2 });
                                             },
-                                            markAsDismissed: s,
-                                            caretPosition: O.DF.TOP_CENTER,
+                                            markAsDismissed: a,
+                                            caretPosition: Z.DF.TOP_CENTER,
                                             headerClassName: ee.__invalid_header
                                         }),
                               position: 'bottom',
                               align: 'center',
-                              animation: r ? u.yRy.Animation.NONE : u.yRy.Animation.TRANSLATE,
+                              animation: l ? d.yRy.Animation.NONE : d.yRy.Animation.TRANSLATE,
                               shouldShow: !n(),
                               spacing: 16,
                               children: () => e.children
@@ -232,89 +277,89 @@ let el = function (e) {
             })
         );
     };
-function ea(e) {
+function eo(e) {
     let { section: t } = e;
-    return t === q.pS.SPAM ? (0, i.jsx)(K.Z, {}) : (0, i.jsx)(en, {});
+    return t === q.pS.SPAM ? (0, r.jsx)(K.Z, {}) : (0, r.jsx)(en, {});
 }
-let es = (0, p.Z)(function (e) {
+let ea = (0, g.Z)(function (e) {
     let { width: t } = e,
-        n = (0, H.q)();
-    (0, _.ZP)(() => {
-        h.Y(X.Z5c.MESSAGE_REQUESTS), (0, y.e)('message-requests'), w.default.track(X.rMx.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }), Z.Z.increment({ name: o.V.MESSAGE_REQUEST_VIEW });
+        n = (0, B.q)();
+    (0, m.ZP)(() => {
+        p.Y(X.Z5c.MESSAGE_REQUESTS), (0, A.e)('message-requests'), D.default.track(X.rMx.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }), S.Z.increment({ name: s.V.MESSAGE_REQUEST_VIEW });
     });
-    let r = (0, d.e7)([P.Z], () => P.Z.theme),
-        s = (0, z.w)(),
-        [c, m] = l.useState(!1),
-        p = (0, d.e7)([R.ZP], () => {
-            let e = R.ZP.getSidebarState(R.uZ);
-            return null != e && e.type === L.tI.VIEW_MESSAGE_REQUEST ? e : null;
+    let l = (0, c.e7)([x.Z], () => x.Z.theme),
+        a = (0, F.w)(),
+        [u, h] = i.useState(!1),
+        g = (0, c.e7)([L.ZP], () => {
+            let e = L.ZP.getSidebarState(L.uZ);
+            return null != e && e.type === j.tI.VIEW_MESSAGE_REQUEST ? e : null;
         }),
-        g = null == p ? void 0 : p.channelId,
-        f = null != p,
-        E = (0, k.T)(g),
-        I = (0, M.J)(g);
-    l.useEffect(() => {
-        null != g && !E && I && f && ((0, x.Kh)(g), b.Z.closeChannelSidebar(R.uZ));
-    }, [g, I, f, E]);
-    let [C, N] = l.useState(q.pS.REQUESTS),
-        T = (e) => {
+        f = null == g ? void 0 : g.channelId,
+        b = null != g,
+        _ = (0, M.T)(f),
+        E = (0, k.J)(f);
+    i.useEffect(() => {
+        null != f && !_ && E && b && ((0, T.Kh)(f), P.Z.closeChannelSidebar(L.uZ));
+    }, [f, E, b, _]);
+    let [O, N] = i.useState(q.pS.REQUESTS),
+        y = (e) => {
             N(e);
         };
     return (
-        (0, v.Tt)({ location: $.intl.string($.t.e7GWjY) }),
-        (0, i.jsxs)(i.Fragment, {
+        (0, v.Tt)({ location: $.NW.string($.t.e7GWjY) }),
+        (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, i.jsxs)('div', {
-                    className: a()(et.chat, ee.container, {
-                        [et.threadSidebarOpen]: f,
-                        [et.threadSidebarFloating]: f && c
+                (0, r.jsxs)('div', {
+                    className: o()(et.chat, ee.container, {
+                        [et.threadSidebarOpen]: b,
+                        [et.threadSidebarFloating]: b && u
                     }),
                     children: [
-                        (0, i.jsx)(u.f6W, {
-                            theme: r,
+                        (0, r.jsx)(d.f6W, {
+                            theme: l,
                             children: (e) =>
-                                (0, i.jsxs)(A.Z, {
+                                (0, r.jsxs)(C.Z, {
                                     className: e,
                                     toolbar: !0,
                                     children: [
-                                        (0, i.jsx)(A.Z.Icon, {
-                                            icon: u._XJ,
+                                        (0, r.jsx)(C.Z.Icon, {
+                                            icon: d._XJ,
                                             'aria-hidden': !0
                                         }),
-                                        (0, i.jsx)(er, { children: (0, i.jsx)(A.Z.Title, { children: $.intl.string($.t.e7GWjY) }) }),
-                                        (0, i.jsx)(A.Z.Divider, {}),
-                                        (0, i.jsxs)(u.njP, {
-                                            'aria-label': $.intl.string($.t.e7GWjY),
-                                            selectedItem: C,
+                                        (0, r.jsx)(el, { children: (0, r.jsx)(C.Z.Title, { children: $.NW.string($.t.e7GWjY) }) }),
+                                        (0, r.jsx)(C.Z.Divider, {}),
+                                        (0, r.jsxs)(d.njP, {
+                                            'aria-label': $.NW.string($.t.e7GWjY),
+                                            selectedItem: O,
                                             type: 'top-pill',
-                                            onItemSelect: T,
+                                            onItemSelect: y,
                                             children: [
-                                                (0, i.jsx)(u.njP.Item, {
+                                                (0, r.jsx)(d.njP.Item, {
                                                     id: q.pS.REQUESTS,
                                                     className: ee.item,
-                                                    children: $.intl.string($.t['7RFcXV'])
+                                                    children: $.NW.string($.t['7RFcXV'])
                                                 }),
-                                                (0, i.jsx)(u.njP.Item, {
+                                                (0, r.jsx)(d.njP.Item, {
                                                     id: q.pS.SPAM,
                                                     className: ee.item,
-                                                    children: 0 === s ? $.intl.string($.t.ulKXHh) : $.intl.formatToPlainString($.t['5jtrlZ'], { count: s })
+                                                    children: 0 === a ? $.NW.string($.t.ulKXHh) : $.NW.formatToPlainString($.t['5jtrlZ'], { count: a })
                                                 })
                                             ]
                                         })
                                     ]
                                 })
                         }),
-                        (0, i.jsx)('div', {
+                        (0, r.jsx)('div', {
                             className: et.content,
-                            children: (0, i.jsx)(ea, { section: C })
+                            children: (0, r.jsx)(eo, { section: O })
                         })
                     ]
                 }),
-                f &&
-                    (0, i.jsx)(ei, {
+                b &&
+                    (0, r.jsx)(er, {
                         pageWidth: t,
                         onSidebarResize: (e, t) => {
-                            m(t);
+                            h(t);
                         }
                     })
             ]

@@ -1,55 +1,99 @@
-n.d(t, { Z: () => m });
-var i = n(200651);
+n.d(t, { Z: () => g });
+var r = n(200651);
 n(192379);
-var l = n(481060),
-    r = n(367907),
-    a = n(70097),
-    s = n(970731),
-    o = n(626135),
-    d = n(63063),
-    c = n(981631),
-    u = n(388032),
-    h = n(636277);
-function m(e) {
-    let { guildId: t, markAsDismissed: m } = e,
-        p = (0, i.jsxs)(i.Fragment, {
+var i = n(481060),
+    l = n(367907),
+    o = n(70097),
+    a = n(970731),
+    s = n(626135),
+    c = n(63063),
+    u = n(981631),
+    d = n(388032),
+    p = n(25520);
+function h(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function g(e) {
+    let { guildId: t, markAsDismissed: g } = e,
+        f = (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, i.jsx)(l.Text, {
+                (0, r.jsx)(i.Text, {
                     color: 'always-white',
                     variant: 'text-sm/normal',
-                    className: h.upsellBody,
-                    children: u.intl.string(u.t['yQ0X+f'])
+                    className: p.upsellBody,
+                    children: d.NW.string(d.t['yQ0X+f'])
                 }),
-                (0, i.jsx)(l.Text, {
+                (0, r.jsx)(i.Text, {
                     color: 'always-white',
                     variant: 'text-sm/normal',
-                    children: u.intl.format(u.t['2Sapx8'], { hcArticleUrl: d.Z.getCreatorSupportArticleURL(c.BhN.MEDIA_CHANNEL) })
+                    children: d.NW.format(d.t['2Sapx8'], { hcArticleUrl: c.Z.getCreatorSupportArticleURL(u.BhN.MEDIA_CHANNEL) })
                 })
             ]
         });
-    return (0, i.jsx)(s.ZP, {
-        header: u.intl.string(u.t.fW7UqK),
-        content: p,
-        asset: (0, i.jsx)(a.Z, {
-            className: h.video,
+    return (0, r.jsx)(a.ZP, {
+        header: d.NW.string(d.t.fW7UqK),
+        content: f,
+        asset: (0, r.jsx)(o.Z, {
+            className: p.video,
             src: 'https://cdn.discordapp.com/assets/media_channel/media_channel_upsell_demo.mp4',
             autoPlay: !0,
             loop: !0
         }),
-        buttonCTA: u.intl.string(u.t.JzJpg4),
+        buttonCTA: d.NW.string(d.t.JzJpg4),
         onClick: () => {
-            o.default.track(c.rMx.MEDIA_CHANNEL_UPSELL_CLICKED, { ...(0, r.hH)(t) }),
-                (0, l.ZDy)(async () => {
-                    let { default: e } = await Promise.all([n.e('45094'), n.e('20110')]).then(n.bind(n, 218613));
-                    return (n) =>
-                        (0, i.jsx)(e, {
-                            ...n,
-                            channelType: c.d4z.GUILD_MEDIA,
-                            guildId: t
-                        });
+            s.default.track(u.rMx.MEDIA_CHANNEL_UPSELL_CLICKED, h({}, (0, l.hH)(t))),
+                (0, i.ZDy)(async () => {
+                    let { default: e } = await Promise.all([n.e('45094'), n.e('1344')]).then(n.bind(n, 218613));
+                    return (n) => {
+                        var i, l;
+                        return (0, r.jsx)(
+                            e,
+                            ((i = h({}, n)),
+                            (l = l =
+                                {
+                                    channelType: u.d4z.GUILD_MEDIA,
+                                    guildId: t
+                                }),
+                            Object.getOwnPropertyDescriptors
+                                ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
+                                : (function (e, t) {
+                                      var n = Object.keys(e);
+                                      if (Object.getOwnPropertySymbols) {
+                                          var r = Object.getOwnPropertySymbols(e);
+                                          n.push.apply(n, r);
+                                      }
+                                      return n;
+                                  })(Object(l)).forEach(function (e) {
+                                      Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
+                                  }),
+                            i)
+                        );
+                    };
                 });
         },
-        secondaryButtonCTA: u.intl.string(u.t.WAI6xs),
-        markAsDismissed: m
+        secondaryButtonCTA: d.NW.string(d.t.WAI6xs),
+        markAsDismissed: g
     });
 }

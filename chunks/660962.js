@@ -1,83 +1,83 @@
-n.d(t, { ZP: () => G }), n(47120);
-var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    s = n.n(l),
-    a = n(392711),
-    o = n.n(a),
+n.d(t, { ZP: () => U }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(392711),
+    o = n.n(l),
     c = n(442837),
     d = n(780384),
     u = n(481060),
     m = n(605436),
-    h = n(663993),
+    p = n(663993),
     g = n(540059),
-    x = n(518738),
-    p = n(786761),
-    _ = n(3148),
-    C = n(753206),
-    f = n(598077),
-    v = n(496675),
-    N = n(764260),
-    j = n(95242),
-    I = n(541575),
-    E = n(420966),
-    b = n(337344),
-    T = n(275296),
-    S = n(203377),
-    R = n(981631),
-    Z = n(388032),
-    y = n(24655),
-    A = n(990734),
-    L = n(179517),
+    h = n(518738),
+    f = n(786761),
+    b = n(3148),
+    x = n(753206),
+    j = n(598077),
+    N = n(496675),
+    v = n(764260),
+    _ = n(95242),
+    O = n(541575),
+    y = n(420966),
+    C = n(337344),
+    I = n(275296),
+    E = n(203377),
+    S = n(981631),
+    T = n(388032),
+    P = n(866476),
+    w = n(29931),
+    R = n(179517),
     D = n(79829);
-let O = (0, h.Un)({
+let Z = (0, p.Un)({
         createPromise: () => n.e('4848').then(n.bind(n, 336231)),
         webpackId: 336231
     }),
-    k = o().debounce((e, t) => (0, N.Uv)(e, t), 200);
-function P(e) {
+    A = o().debounce((e, t) => (0, v.Uv)(e, t), 200);
+function k(e) {
     let { role: t, disabled: n } = e,
-        [l, s] = r.useState(t.name);
+        [s, a] = i.useState(t.name);
     return (
-        r.useEffect(() => {
-            s(t.name);
+        i.useEffect(() => {
+            a(t.name);
         }, [t.name]),
-        (0, i.jsx)(u.xJW, {
-            title: Z.intl.string(Z.t.dLbkBg),
+        (0, r.jsx)(u.xJW, {
+            title: T.NW.string(T.t.dLbkBg),
             required: !0,
-            children: (0, i.jsx)(u.oil, {
+            children: (0, r.jsx)(u.oil, {
                 type: 'text',
-                value: l,
-                maxLength: R.VKK,
+                value: s,
+                maxLength: S.VKK,
                 onChange: function (e) {
-                    s(e), k(t.id, e);
+                    a(e), A(t.id, e);
                 },
                 disabled: n
             })
         })
     );
 }
-function w(e) {
+function W(e) {
     let { role: t, disabled: n } = e;
-    return (0, i.jsxs)(u.xJW, {
-        className: y.colorPicker,
-        title: Z.intl.string(Z.t['1F6FzM']),
+    return (0, r.jsxs)(u.xJW, {
+        className: P.colorPicker,
+        title: T.NW.string(T.t['1F6FzM']),
         required: !0,
         children: [
-            (0, i.jsx)(u.R94, {
-                className: y.colorDescription,
-                children: Z.intl.string(Z.t['9UCxlZ'])
+            (0, r.jsx)(u.R94, {
+                className: P.colorDescription,
+                children: T.NW.string(T.t['9UCxlZ'])
             }),
-            (0, i.jsx)(
-                O,
+            (0, r.jsx)(
+                Z,
                 {
-                    defaultColor: R.p6O,
-                    colors: R.pmI,
+                    defaultColor: S.p6O,
+                    colors: S.pmI,
                     value: t.color,
                     disabled: n,
                     onChange: (e) => {
-                        var n, i;
-                        return (n = t), (i = e), void (n.color !== i && (i !== R.p6O || 0 !== n.color) && (i === R.p6O && (i = 0), (0, N.OW)(n.id, i)));
+                        var n, r;
+                        return (n = t), (r = e), void (n.color !== r && (r !== S.p6O || 0 !== n.color) && (r === S.p6O && (r = 0), (0, v.OW)(n.id, r)));
                     },
                     customPickerPosition: 'right'
                 },
@@ -86,64 +86,108 @@ function w(e) {
         ]
     });
 }
-function M(e) {
-    var t, l;
-    let { role: s, guildId: a } = e,
+function L(e) {
+    var t, s;
+    let { role: a, guildId: l } = e,
         o =
-            ((l = Z.intl.string(Z.t.Mi9KbW)),
-            r.useMemo(() => {
-                let e = (0, p.e5)({
-                    ...(0, _.ZP)({
-                        channelId: '1337',
-                        content: l
-                    }),
-                    state: R.yb.SENT,
-                    id: '31337'
-                });
+            ((s = T.NW.string(T.t.Mi9KbW)),
+            i.useMemo(() => {
+                var e, t;
+                let r = (0, f.e5)(
+                    ((e = (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var n = null != arguments[t] ? arguments[t] : {},
+                                r = Object.keys(n);
+                            'function' == typeof Object.getOwnPropertySymbols &&
+                                (r = r.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    })
+                                )),
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = n[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: r,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0
+                                              })
+                                            : (e[t] = r);
+                                });
+                        }
+                        return e;
+                    })(
+                        {},
+                        (0, b.ZP)({
+                            channelId: '1337',
+                            content: s
+                        })
+                    )),
+                    (t = t =
+                        {
+                            state: S.yb.SENT,
+                            id: '31337'
+                        }),
+                    Object.getOwnPropertyDescriptors
+                        ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+                        : (function (e, t) {
+                              var n = Object.keys(e);
+                              if (Object.getOwnPropertySymbols) {
+                                  var r = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, r);
+                              }
+                              return n;
+                          })(Object(t)).forEach(function (n) {
+                              Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+                          }),
+                    e)
+                );
                 return (
-                    (e.author = new f.Z({
+                    (r.author = new j.Z({
                         id: '313337',
-                        username: Z.intl.string(Z.t.cqpybG),
+                        username: T.NW.string(T.t.cqpybG),
                         discriminator: '0000',
                         bot: !1
                     })),
-                    (e.author.getAvatarURL = () => n(52008)),
-                    e
+                    (r.author.getAvatarURL = () => n(52008)),
+                    r
                 );
-            }, [l])),
+            }, [s])),
         c = {
             nick: o.author.username,
-            colorString: null !== (t = s.colorString) && void 0 !== t ? t : void 0
+            colorString: null !== (t = a.colorString) && void 0 !== t ? t : void 0
         },
         m = {
-            src: L,
-            name: s.name
+            src: R,
+            name: a.name
         },
-        h = {
+        p = {
             src: D,
-            name: s.name
+            name: a.name
         },
-        v = (0, x.oC)(a, s),
-        N = (0, g.Q3)('RolePreview') ? [R.BRd.LIGHT, R.BRd.DARK, R.BRd.DARKER, R.BRd.MIDNIGHT] : [R.BRd.LIGHT, R.BRd.DARK];
-    return (0, i.jsx)(u.Rny, {
-        children: (0, i.jsx)('div', {
-            className: y.previewContainer,
+        N = (0, h.oC)(l, a),
+        v = (0, g.Q3)('RolePreview') ? [S.BRd.LIGHT, S.BRd.DARK, S.BRd.DARKER, S.BRd.MIDNIGHT] : [S.BRd.LIGHT, S.BRd.DARK];
+    return (0, r.jsx)(u.Rny, {
+        children: (0, r.jsx)('div', {
+            className: P.previewContainer,
             'aria-hidden': !0,
             'data-disable-adaptive-theme': !0,
-            children: N.map((e) =>
-                (0, i.jsx)(
+            children: v.map((e) =>
+                (0, r.jsx)(
                     u.f6W,
                     {
                         theme: e,
                         children: (t) =>
-                            (0, i.jsx)('div', {
+                            (0, r.jsx)('div', {
                                 className: t,
-                                children: (0, i.jsx)('div', {
-                                    className: y.messageContainer,
-                                    children: (0, i.jsx)(C.Z, {
+                                children: (0, r.jsx)('div', {
+                                    className: P.messageContainer,
+                                    children: (0, r.jsx)(x.Z, {
                                         author: c,
                                         message: o,
-                                        roleIcon: null != v ? v : (0, d.ap)(e) ? h : m,
+                                        roleIcon: null != N ? N : (0, d.ap)(e) ? p : m,
                                         isGroupStart: !0
                                     })
                                 })
@@ -155,85 +199,85 @@ function M(e) {
         })
     });
 }
-function U(e) {
+function M(e) {
     let { role: t, disabled: n } = e;
-    return (0, i.jsxs)(i.Fragment, {
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, i.jsx)(u.j7V, {
+            (0, r.jsx)(u.j7V, {
                 disabled: n,
                 value: t.hoist,
-                onChange: (e) => (0, N.we)(t.id, e, t.mentionable),
+                onChange: (e) => (0, v.we)(t.id, e, t.mentionable),
                 hideBorder: !0,
-                children: Z.intl.string(Z.t.vceJPj)
+                children: T.NW.string(T.t.vceJPj)
             }),
-            (0, i.jsx)(u.$i$, { className: y.divider }),
-            (0, i.jsx)(u.j7V, {
+            (0, r.jsx)(u.$i$, { className: P.divider }),
+            (0, r.jsx)(u.j7V, {
                 disabled: n,
                 value: t.mentionable,
-                onChange: (e) => (0, N.we)(t.id, t.hoist, e),
-                note: Z.intl.string(Z.t.kRg5W1),
+                onChange: (e) => (0, v.we)(t.id, t.hoist, e),
+                note: T.NW.string(T.t.kRg5W1),
                 hideBorder: !0,
-                children: Z.intl.format(Z.t.DTXoJS, {})
+                children: T.NW.format(T.t.DTXoJS, {})
             })
         ]
     });
 }
-function G(e) {
-    let { guild: t, role: n, locked: r, setSelectedSection: l } = e,
-        a = (0, m.pM)(null == t ? void 0 : t.id, n.id),
-        o = r || a,
-        d = (0, c.e7)([v.Z], () => v.Z.canImpersonateRole(t, n)),
-        { headerHeight: h, headerRef: g } = (0, j.Z)(0),
-        { scrolledToTop: x, handleScroll: p } = (0, E.V)();
-    return (0, i.jsx)(u.yWw, {
-        className: y.scroller,
-        style: { scrollPaddingTop: h },
-        onScroll: p,
-        children: (0, i.jsxs)('div', {
-            className: A.contentWidth,
+function U(e) {
+    let { guild: t, role: n, locked: i, setSelectedSection: s } = e,
+        l = (0, m.pM)(null == t ? void 0 : t.id, n.id),
+        o = i || l,
+        d = (0, c.e7)([N.Z], () => N.Z.canImpersonateRole(t, n)),
+        { headerHeight: p, headerRef: g } = (0, _.Z)(0),
+        { scrolledToTop: h, handleScroll: f } = (0, y.V)();
+    return (0, r.jsx)(u.yWw, {
+        className: P.scroller,
+        style: { scrollPaddingTop: p },
+        onScroll: f,
+        children: (0, r.jsxs)('div', {
+            className: w.contentWidth,
             children: [
-                (0, i.jsx)('div', {
-                    className: s()(A.header, A.stickyHeader, { [A.stickyHeaderElevated]: !x }),
+                (0, r.jsx)('div', {
+                    className: a()(w.header, w.stickyHeader, { [w.stickyHeaderElevated]: !h }),
                     ref: g,
-                    children: (0, i.jsx)(E.Z, {
+                    children: (0, r.jsx)(y.Z, {
                         guild: t,
                         role: n,
-                        selectedSection: S.ZI.DISPLAY,
-                        setSelectedSection: l
+                        selectedSection: E.ZI.DISPLAY,
+                        setSelectedSection: s
                     })
                 }),
-                (0, i.jsx)(P, {
+                (0, r.jsx)(k, {
                     role: n,
                     disabled: o
                 }),
-                (0, i.jsx)('div', {
-                    className: y.noticeContainer,
-                    children: (0, i.jsx)(T.Z, { role: n })
+                (0, r.jsx)('div', {
+                    className: P.noticeContainer,
+                    children: (0, r.jsx)(I.Z, { role: n })
                 }),
-                (0, i.jsx)(u.$i$, { className: y.divider }),
-                (0, i.jsx)(w, {
+                (0, r.jsx)(u.$i$, { className: P.divider }),
+                (0, r.jsx)(W, {
                     role: n,
                     disabled: o
                 }),
-                (0, i.jsx)(I.Z, {
+                (0, r.jsx)(O.Z, {
                     guild: t,
                     disabled: o,
                     role: n
                 }),
-                (0, i.jsx)(M, {
+                (0, r.jsx)(L, {
                     role: n,
                     guildId: t.id
                 }),
-                (0, i.jsx)(u.$i$, { className: y.divider }),
-                (0, i.jsx)(U, {
+                (0, r.jsx)(u.$i$, { className: P.divider }),
+                (0, r.jsx)(M, {
                     role: n,
                     disabled: o
                 }),
                 d
-                    ? (0, i.jsxs)(i.Fragment, {
+                    ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, i.jsx)(u.$i$, { className: y.divider }),
-                              (0, i.jsx)(b.L, {
+                              (0, r.jsx)(u.$i$, { className: P.divider }),
+                              (0, r.jsx)(C.L, {
                                   guildId: t.id,
                                   role: n
                               })

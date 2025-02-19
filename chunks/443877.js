@@ -1,23 +1,24 @@
-i.d(t, { Z: () => m }), i(47120);
-var n = i(442837),
-    a = i(715903),
-    o = i(71619),
-    s = i(41776),
-    l = i(665906),
-    r = i(271383),
-    c = i(607744),
-    d = i(496675),
-    u = i(432376),
-    h = i(981631);
-function m(e) {
-    let t = null == e ? void 0 : e.guild_id,
-        i = (0, n.e7)([c.Z], () => null == t || c.Z.canChatInGuild(t), [t]),
-        m = (0, n.e7)([s.Z], () => null != t && s.Z.isLurking(t), [t]),
-        p = (0, n.e7)([r.ZP], () => null != t && r.ZP.isCurrentUserGuest(t), [t]),
-        g = (0, n.e7)([d.Z], () => i && d.Z.can(h.Plq.ADD_REACTIONS, e), [i, e]),
-        f = (0, a.ux)(t),
-        [, v] = (0, o.AB)(t),
-        x = (0, l.$R)(e);
+n.d(t, { Z: () => p }), n(47120);
+var i = n(442837),
+    o = n(715903),
+    r = n(71619),
+    a = n(41776),
+    s = n(665906),
+    l = n(271383),
+    c = n(607744),
+    u = n(496675),
+    d = n(432376),
+    h = n(981631);
+function p(e) {
+    var t, n;
+    let p = null == e ? void 0 : e.guild_id,
+        m = (0, i.e7)([c.Z], () => null == p || c.Z.canChatInGuild(p), [p]),
+        f = (0, i.e7)([a.Z], () => null != p && a.Z.isLurking(p), [p]),
+        g = (0, i.e7)([l.ZP], () => null != p && l.ZP.isCurrentUserGuest(p), [p]),
+        b = (0, i.e7)([u.Z], () => m && u.Z.can(h.Plq.ADD_REACTIONS, e), [m, e]),
+        v = (0, o.ux)(p),
+        [, j] = (0, r.AB)(p),
+        O = (0, s.$R)(e);
     return null == e
         ? {
               disableReactionReads: !0,
@@ -27,20 +28,61 @@ function m(e) {
               isGuest: !1,
               isPendingMember: !1
           }
-        : {
-              ...(0, u.Z)({
+        : ((t = (function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                  var n = null != arguments[t] ? arguments[t] : {},
+                      i = Object.keys(n);
+                  'function' == typeof Object.getOwnPropertySymbols &&
+                      (i = i.concat(
+                          Object.getOwnPropertySymbols(n).filter(function (e) {
+                              return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                          })
+                      )),
+                      i.forEach(function (t) {
+                          var i;
+                          (i = n[t]),
+                              t in e
+                                  ? Object.defineProperty(e, t, {
+                                        value: i,
+                                        enumerable: !0,
+                                        configurable: !0,
+                                        writable: !0
+                                    })
+                                  : (e[t] = i);
+                      });
+              }
+              return e;
+          })(
+              {},
+              (0, d.Z)({
                   channel: e,
-                  canChat: i,
+                  canChat: m,
                   renderReactions: !0,
-                  canAddNewReactions: g,
-                  isLurking: m,
-                  isGuest: p,
-                  communicationDisabled: v,
-                  isActiveChannelOrUnarchivableThread: x,
-                  isAutomodQuarantined: f
+                  canAddNewReactions: b,
+                  isLurking: f,
+                  isGuest: g,
+                  communicationDisabled: j,
+                  isActiveChannelOrUnarchivableThread: O,
+                  isAutomodQuarantined: v
+              })
+          )),
+          (n = n =
+              {
+                  isLurking: f,
+                  isGuest: g,
+                  isPendingMember: !1
               }),
-              isLurking: m,
-              isGuest: p,
-              isPendingMember: !1
-          };
+          Object.getOwnPropertyDescriptors
+              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+              : (function (e, t) {
+                    var n = Object.keys(e);
+                    if (Object.getOwnPropertySymbols) {
+                        var i = Object.getOwnPropertySymbols(e);
+                        n.push.apply(n, i);
+                    }
+                    return n;
+                })(Object(n)).forEach(function (e) {
+                    Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                }),
+          t);
 }

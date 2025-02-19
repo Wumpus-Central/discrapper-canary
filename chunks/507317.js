@@ -1,49 +1,78 @@
-n.d(t, { Z: () => v });
-var i = n(200651),
-    r = n(192379),
-    l = n(481060),
-    s = n(367907),
-    a = n(807582),
+n.d(t, { Z: () => N });
+var r = n(200651),
+    i = n(192379),
+    s = n(481060),
+    a = n(367907),
+    l = n(807582),
     o = n(26323),
     c = n(516129),
     d = n(813197),
     u = n(709586),
     m = n(768581),
-    h = n(434404),
+    p = n(434404),
     g = n(981631),
-    x = n(30513),
-    p = n(486324),
-    _ = n(200299),
-    C = n(388032),
-    f = n(73806);
-let v = function (e) {
+    h = n(30513),
+    f = n(486324),
+    b = n(200299),
+    x = n(388032),
+    j = n(339945);
+let N = function (e) {
     let { guild: t } = e,
-        v = t.hasFeature(g.oNc.BANNER),
-        N = r.useCallback(
-            (e, r) => {
-                if (null == e || void 0 === r) {
-                    h.Z.saveGuild(t.id, { homeHeader: null });
+        N = t.hasFeature(g.oNc.BANNER),
+        v = i.useCallback(
+            (e, i) => {
+                if (null == e || void 0 === i) {
+                    p.Z.saveGuild(t.id, { homeHeader: null });
                     return;
                 }
-                (0, l.ZDy)(async () => {
-                    let { default: l } = await Promise.all([n.e('70687'), n.e('59732'), n.e('70112')]).then(n.bind(n, 73620));
+                (0, s.ZDy)(async () => {
+                    let { default: s } = await Promise.all([n.e('91689'), n.e('59732'), n.e('25005'), n.e('57433')]).then(n.bind(n, 73620));
                     return (n) =>
-                        (0, i.jsx)(l, {
-                            imgURI: e,
-                            file: r,
-                            onCrop: (e) => h.Z.saveGuild(t.id, { homeHeader: e }),
-                            uploadType: p.pC.HOME_HEADER,
-                            ...n
-                        });
+                        (0, r.jsx)(
+                            s,
+                            (function (e) {
+                                for (var t = 1; t < arguments.length; t++) {
+                                    var n = null != arguments[t] ? arguments[t] : {},
+                                        r = Object.keys(n);
+                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                        (r = r.concat(
+                                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                            })
+                                        )),
+                                        r.forEach(function (t) {
+                                            var r;
+                                            (r = n[t]),
+                                                t in e
+                                                    ? Object.defineProperty(e, t, {
+                                                          value: r,
+                                                          enumerable: !0,
+                                                          configurable: !0,
+                                                          writable: !0
+                                                      })
+                                                    : (e[t] = r);
+                                        });
+                                }
+                                return e;
+                            })(
+                                {
+                                    imgURI: e,
+                                    file: i,
+                                    onCrop: (e) => p.Z.saveGuild(t.id, { homeHeader: e }),
+                                    uploadType: f.pC.HOME_HEADER
+                                },
+                                n
+                            )
+                        );
                 });
             },
             [t.id]
         ),
-        j = r.useCallback(
+        _ = i.useCallback(
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
-                    (0, s.yw)(g.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
+                    (0, a.yw)(g.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                         location: {
                             section: g.jXE.GUILD_SETTINGS_ONBOARDING,
                             object: g.qAy.LEARN_MORE
@@ -59,12 +88,12 @@ let v = function (e) {
                             page: g.ZY5.GUILD_SETTINGS
                         },
                         guild: t,
-                        perks: (0, x.XO)()
+                        perks: (0, h.XO)()
                     });
             },
             [t]
         ),
-        I = (0, i.jsx)(c.Z, {
+        O = (0, r.jsx)(c.Z, {
             image: t.homeHeader,
             makeURL: (e) =>
                 null != e
@@ -73,114 +102,114 @@ let v = function (e) {
                           homeHeader: e
                       })
                     : null,
-            disabled: !v,
-            onChange: N,
-            hint: C.intl.string(C.t.NyXznp),
-            enabled: v,
-            maxFileSizeBytes: _.B
+            disabled: !N,
+            onChange: v,
+            hint: x.NW.string(x.t.NyXznp),
+            enabled: N,
+            maxFileSizeBytes: b.B
         });
-    return v
-        ? (0, i.jsxs)(i.Fragment, {
+    return N
+        ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, i.jsxs)('div', {
-                      className: f.sectionHeader,
+                  (0, r.jsxs)('div', {
+                      className: j.sectionHeader,
                       children: [
-                          (0, i.jsx)(l.X6q, {
-                              className: f.header,
+                          (0, r.jsx)(s.X6q, {
+                              className: j.header,
                               variant: 'heading-lg/extrabold',
-                              children: C.intl.string(C.t.BBj1nZ)
+                              children: x.NW.string(x.t.BBj1nZ)
                           }),
-                          (0, i.jsx)(a.Z, {
-                              className: f.boostIndicator,
+                          (0, r.jsx)(l.Z, {
+                              className: j.boostIndicator,
                               guild: t,
                               guildFeature: g.oNc.BANNER,
-                              onClick: j
+                              onClick: _
                           })
                       ]
                   }),
-                  (0, i.jsxs)('div', {
-                      className: f.section,
+                  (0, r.jsxs)('div', {
+                      className: j.section,
                       children: [
-                          (0, i.jsxs)('div', {
-                              className: f.homeBannerExplainer,
+                          (0, r.jsxs)('div', {
+                              className: j.homeBannerExplainer,
                               children: [
-                                  (0, i.jsx)(l.Text, {
+                                  (0, r.jsx)(s.Text, {
                                       variant: 'text-sm/normal',
                                       color: 'header-secondary',
-                                      children: C.intl.string(C.t.Vwintr)
+                                      children: x.NW.string(x.t.Vwintr)
                                   }),
-                                  (0, i.jsxs)(l.zxk, {
-                                      color: l.Ttl.BRAND,
-                                      className: f.uploadButton,
+                                  (0, r.jsxs)(s.zxk, {
+                                      color: s.Ttl.BRAND,
+                                      className: j.uploadButton,
                                       children: [
-                                          C.intl.string(C.t.yG2pUl),
-                                          (0, i.jsx)(d.ZP, {
-                                              onChange: N,
-                                              maxFileSizeBytes: _.B
+                                          x.NW.string(x.t.yG2pUl),
+                                          (0, r.jsx)(d.ZP, {
+                                              onChange: v,
+                                              maxFileSizeBytes: b.B
                                           })
                                       ]
                                   })
                               ]
                           }),
-                          (0, i.jsx)('div', { children: I })
+                          (0, r.jsx)('div', { children: O })
                       ]
                   })
               ]
           })
-        : (0, i.jsxs)(i.Fragment, {
+        : (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, i.jsxs)('div', {
-                      className: f.sectionHeader,
+                  (0, r.jsxs)('div', {
+                      className: j.sectionHeader,
                       children: [
-                          (0, i.jsx)(l.X6q, {
-                              className: f.header,
+                          (0, r.jsx)(s.X6q, {
+                              className: j.header,
                               variant: 'heading-lg/extrabold',
-                              children: C.intl.string(C.t.BBj1nZ)
+                              children: x.NW.string(x.t.BBj1nZ)
                           }),
-                          (0, i.jsx)(a.Z, {
-                              className: f.boostIndicator,
+                          (0, r.jsx)(l.Z, {
+                              className: j.boostIndicator,
                               guild: t,
                               guildFeature: g.oNc.BANNER,
-                              onClick: j
+                              onClick: _
                           })
                       ]
                   }),
-                  (0, i.jsxs)('div', {
-                      className: f.section,
+                  (0, r.jsxs)('div', {
+                      className: j.section,
                       children: [
-                          (0, i.jsxs)('div', {
-                              className: f.homeBannerExplainer,
+                          (0, r.jsxs)('div', {
+                              className: j.homeBannerExplainer,
                               children: [
-                                  (0, i.jsx)(l.Text, {
+                                  (0, r.jsx)(s.Text, {
                                       variant: 'text-sm/normal',
                                       color: 'header-secondary',
-                                      children: C.intl.string(C.t.Vwintr)
+                                      children: x.NW.string(x.t.Vwintr)
                                   }),
-                                  (0, i.jsxs)(l.gtL, {
-                                      className: f.upsellButton,
-                                      innerClassName: f.upsellButtonInner,
-                                      color: l.zxk.Colors.GREEN,
-                                      onClick: j,
+                                  (0, r.jsxs)(s.gtL, {
+                                      className: j.upsellButton,
+                                      innerClassName: j.upsellButtonInner,
+                                      color: s.zxk.Colors.GREEN,
+                                      onClick: _,
                                       children: [
-                                          (0, i.jsx)(u.Z, {
+                                          (0, r.jsx)(u.Z, {
                                               height: 16,
                                               width: 16
                                           }),
-                                          (0, i.jsx)(l.Text, {
+                                          (0, r.jsx)(s.Text, {
                                               variant: 'text-sm/medium',
                                               color: 'text-normal',
-                                              children: C.intl.string(C.t['+7XY39'])
+                                              children: x.NW.string(x.t['+7XY39'])
                                           })
                                       ]
                                   })
                               ]
                           }),
-                          (0, i.jsx)('div', {
-                              children: (0, i.jsx)(l.P3F, {
+                          (0, r.jsx)('div', {
+                              children: (0, r.jsx)(s.P3F, {
                                   'aria-hidden': !0,
                                   tabIndex: -1,
-                                  onClick: j,
-                                  children: I
+                                  onClick: _,
+                                  children: O
                               })
                           })
                       ]

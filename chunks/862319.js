@@ -1,70 +1,115 @@
 n.d(t, {
-    Z: () => g,
-    w: () => x
+    Z: () => f,
+    w: () => b
 });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(120356),
-    l = n.n(r),
-    s = n(481060),
-    a = n(259580),
+var i = n(120356),
+    s = n.n(i),
+    a = n(481060),
+    l = n(259580),
     o = n(73346),
     c = n(817460),
     d = n(723047),
     u = n(880229),
     m = n(388032),
-    h = n(267635);
+    p = n(961570);
 function g(e) {
-    let { channelBenefits: t, intangibleBenefits: n, subscriptionListings: r, onImport: a } = e,
-        g = (0, d.mY)();
-    return (0, i.jsx)('div', {
-        className: h.container,
-        children: r.map((e) =>
-            (0, i.jsxs)(
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function h(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function f(e) {
+    let { channelBenefits: t, intangibleBenefits: n, subscriptionListings: i, onImport: l } = e,
+        f = (0, d.mY)();
+    return (0, r.jsx)('div', {
+        className: p.container,
+        children: i.map((e) =>
+            (0, r.jsxs)(
                 'div',
                 {
-                    className: h.row,
+                    className: p.row,
                     children: [
-                        (0, i.jsx)('img', {
+                        (0, r.jsx)('img', {
                             alt: '',
                             src: null == e.image_asset ? void 0 : (0, o._W)(e.application_id, e.image_asset, 512),
-                            className: l()(h.rowIcon, h.listingImage)
+                            className: s()(p.rowIcon, p.listingImage)
                         }),
-                        (0, i.jsxs)('div', {
-                            className: h.rowBody,
+                        (0, r.jsxs)('div', {
+                            className: p.rowBody,
                             children: [
-                                (0, i.jsx)(s.Text, {
+                                (0, r.jsx)(a.Text, {
                                     variant: 'text-md/normal',
                                     color: 'header-primary',
-                                    className: l()(h.rowText, h.listingName),
+                                    className: s()(p.rowText, p.listingName),
                                     children: e.name
                                 }),
-                                (0, i.jsx)(s.Text, {
+                                (0, r.jsx)(a.Text, {
                                     color: 'header-secondary',
                                     variant: 'text-sm/normal',
-                                    children: m.intl.format(m.t['QMj+Ii'], {
+                                    children: m.NW.format(m.t['QMj+Ii'], {
                                         channels: e.role_benefits.benefits.filter(c.rC).length,
                                         benefits: e.role_benefits.benefits.filter(c.lL).length
                                     })
                                 })
                             ]
                         }),
-                        (0, i.jsx)(s.zxk, {
-                            look: s.zxk.Looks.OUTLINED,
-                            color: s.zxk.Colors.PRIMARY,
+                        (0, r.jsx)(a.zxk, {
+                            look: a.zxk.Looks.OUTLINED,
+                            color: a.zxk.Colors.PRIMARY,
                             onClick: () => {
-                                (0, s.h7j)((r) =>
-                                    (0, i.jsx)(u.K, {
-                                        ...r,
-                                        fromSubscriptionListing: e,
-                                        existingChannelBenefits: t,
-                                        existingIntangibleBenefits: n,
-                                        onSubmit: a
-                                    })
+                                (0, a.h7j)((i) =>
+                                    (0, r.jsx)(
+                                        u.K,
+                                        h(g({}, i), {
+                                            fromSubscriptionListing: e,
+                                            existingChannelBenefits: t,
+                                            existingIntangibleBenefits: n,
+                                            onSubmit: l
+                                        })
+                                    )
                                 );
                             },
-                            disabled: g,
-                            children: m.intl.string(m.t['90bIv7'])
+                            disabled: f,
+                            children: m.NW.string(m.t['90bIv7'])
                         })
                     ]
                 },
@@ -73,39 +118,41 @@ function g(e) {
         )
     });
 }
-function x(e) {
-    let { guildId: t, onImport: n, disabled: r = !1 } = e;
-    return (0, i.jsxs)(s.P3F, {
-        className: l()(h.importRoleCard, { [h.disabled]: r }),
-        onClick: r
+function b(e) {
+    let { guildId: t, onImport: n, disabled: i = !1 } = e;
+    return (0, r.jsxs)(a.P3F, {
+        className: s()(p.importRoleCard, { [p.disabled]: i }),
+        onClick: i
             ? void 0
             : function () {
-                  (0, s.h7j)((e) =>
-                      (0, i.jsx)(u.C, {
-                          ...e,
-                          guildId: t,
-                          onImport: n
-                      })
+                  (0, a.h7j)((e) =>
+                      (0, r.jsx)(
+                          u.C,
+                          h(g({}, e), {
+                              guildId: t,
+                              onImport: n
+                          })
+                      )
                   );
               },
-        'aria-disabled': r,
+        'aria-disabled': i,
         children: [
-            (0, i.jsx)(s.lZ8, {
+            (0, r.jsx)(a.lZ8, {
                 size: 'custom',
                 width: 23,
                 height: 23,
                 color: 'currentColor',
-                className: h.rowIcon
+                className: p.rowIcon
             }),
-            (0, i.jsx)(s.Text, {
+            (0, r.jsx)(a.Text, {
                 variant: 'text-md/normal',
                 color: 'header-primary',
-                className: h.rowText,
-                children: m.intl.string(m.t.xK9pBA)
+                className: p.rowText,
+                children: m.NW.string(m.t.xK9pBA)
             }),
-            (0, i.jsx)(a.Z, {
-                direction: a.Z.Directions.RIGHT,
-                className: h.caret
+            (0, r.jsx)(l.Z, {
+                direction: l.Z.Directions.RIGHT,
+                className: p.caret
             })
         ]
     });

@@ -1,100 +1,143 @@
 n.d(t, {
-    Z: () => x,
+    Z: () => C,
     r: () => v
 });
-var i = n(200651),
-    l = n(192379),
-    a = n(232713),
-    r = n(481060),
-    s = n(570140),
-    o = n(668781),
+var r = n(200651),
+    i = n(192379),
+    l = n(232713),
+    o = n(481060),
+    a = n(570140),
+    s = n(668781),
     c = n(966390),
-    d = n(680287),
-    u = n(470623),
-    h = n(957730),
-    p = n(48854),
-    m = n(703558),
-    f = n(403182),
+    u = n(680287),
+    d = n(470623),
+    p = n(957730),
+    h = n(48854),
+    f = n(703558),
+    m = n(403182),
     g = n(928477),
-    _ = n(981631),
-    C = n(388032);
-function x(e) {
-    let { parentChannel: t, parentMessageId: n, threadSettings: i, privateThreadMode: a, location: r, onThreadCreated: s, useDefaultThreadName: o } = e,
-        d = l.useCallback((e, t, n, i) => {
+    b = n(981631),
+    _ = n(388032);
+function C(e) {
+    let { parentChannel: t, parentMessageId: n, threadSettings: r, privateThreadMode: l, location: o, onThreadCreated: a, useDefaultThreadName: s } = e,
+        u = i.useCallback((e, t, n, r) => {
             c.Z.uploadFiles({
                 channelId: e.id,
                 uploads: t,
-                draftType: m.d.FirstThreadMessage,
-                options: { stickerIds: i },
-                parsedMessage: h.ZP.parse(e, n)
+                draftType: f.d.FirstThreadMessage,
+                options: { stickerIds: r },
+                parsedMessage: p.ZP.parse(e, n)
             });
         }, []);
     return (0, g.JA)({
         parentChannel: t,
         parentMessageId: n,
-        threadSettings: i,
-        privateThreadMode: a,
-        location: r,
-        onThreadCreated: s,
-        useDefaultThreadName: o,
-        uploadHandler: d
+        threadSettings: r,
+        privateThreadMode: l,
+        location: o,
+        onThreadCreated: a,
+        useDefaultThreadName: s,
+        uploadHandler: u
     });
 }
 function v(e) {
     let { parentChannel: t } = e,
-        { name: l, appliedTags: c } = (0, u.xH)((e) => {
+        { name: i, appliedTags: c } = (0, d.xH)((e) => {
             let { name: t, appliedTags: n } = e;
             return {
                 name: t,
                 appliedTags: n
             };
-        }, a.X);
+        }, l.X);
     return (0, g.Wj)({
         parentChannel: t,
-        name: l,
+        name: i,
         appliedTags: c,
-        upload: function (e, l, a) {
-            return new Promise((c, u) => {
-                let h = new d.Z(e);
-                h.on('error', (e, l, a) => {
-                    if (l === _.evJ.EXPLICIT_CONTENT) {
-                        let e = (0, p.r)();
-                        null != a &&
-                            null != a.attachments &&
-                            a.attachments.length > 0 &&
-                            (s.Z.dispatch({
+        upload: function (e, i, l) {
+            return new Promise((c, d) => {
+                let p = new u.Z(e);
+                p.on('error', (e, i, l) => {
+                    if (i === b.evJ.EXPLICIT_CONTENT) {
+                        let e = (0, h.r)();
+                        null != l &&
+                            null != l.attachments &&
+                            l.attachments.length > 0 &&
+                            (a.Z.dispatch({
                                 type: 'MESSAGE_EXPLICIT_CONTENT_FP_CREATE',
                                 messageId: e,
                                 channelId: t.id,
-                                attachments: a.attachments
+                                attachments: l.attachments
                             }),
-                            (0, r.ZDy)(async () => {
-                                let { default: l } = await n.e('57539').then(n.bind(n, 924188));
-                                return (n) =>
-                                    (0, i.jsx)(l, {
-                                        ...n,
-                                        channelId: t.id,
-                                        messageId: e
-                                    });
+                            (0, o.ZDy)(async () => {
+                                let { default: i } = await n.e('57539').then(n.bind(n, 924188));
+                                return (n) => {
+                                    var l, o;
+                                    return (0, r.jsx)(
+                                        i,
+                                        ((l = (function (e) {
+                                            for (var t = 1; t < arguments.length; t++) {
+                                                var n = null != arguments[t] ? arguments[t] : {},
+                                                    r = Object.keys(n);
+                                                'function' == typeof Object.getOwnPropertySymbols &&
+                                                    (r = r.concat(
+                                                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                        })
+                                                    )),
+                                                    r.forEach(function (t) {
+                                                        var r;
+                                                        (r = n[t]),
+                                                            t in e
+                                                                ? Object.defineProperty(e, t, {
+                                                                      value: r,
+                                                                      enumerable: !0,
+                                                                      configurable: !0,
+                                                                      writable: !0
+                                                                  })
+                                                                : (e[t] = r);
+                                                    });
+                                            }
+                                            return e;
+                                        })({}, n)),
+                                        (o = o =
+                                            {
+                                                channelId: t.id,
+                                                messageId: e
+                                            }),
+                                        Object.getOwnPropertyDescriptors
+                                            ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))
+                                            : (function (e, t) {
+                                                  var n = Object.keys(e);
+                                                  if (Object.getOwnPropertySymbols) {
+                                                      var r = Object.getOwnPropertySymbols(e);
+                                                      n.push.apply(n, r);
+                                                  }
+                                                  return n;
+                                              })(Object(o)).forEach(function (e) {
+                                                  Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(o, e));
+                                              }),
+                                        l)
+                                    );
+                                };
                             }));
-                    } else if (l === _.evJ.ENTITY_TOO_LARGE) {
-                        let e = (0, f.dg)(t.getGuildId());
-                        o.Z.show({
-                            title: C.intl.string(C.t['/tGlcn']),
-                            body: C.intl.formatToPlainString(C.t.fxEKdX, { maxSize: (0, f.Ng)(e) })
+                    } else if (i === b.evJ.ENTITY_TOO_LARGE) {
+                        let e = (0, m.dg)(t.getGuildId());
+                        s.Z.show({
+                            title: _.NW.string(_.t['/tGlcn']),
+                            body: _.NW.formatToPlainString(_.t.fxEKdX, { maxSize: (0, m.Ng)(e) })
                         });
                     } else
-                        l === _.evJ.TOO_MANY_ATTACHMENTS &&
-                            o.Z.show({
-                                title: C.intl.string(C.t.wOr6hI),
-                                body: C.intl.formatToPlainString(C.t['qqyp/f'], { limit: _.dN1 })
+                        i === b.evJ.TOO_MANY_ATTACHMENTS &&
+                            s.Z.show({
+                                title: _.NW.string(_.t.wOr6hI),
+                                body: _.NW.formatToPlainString(_.t['qqyp/f'], { limit: b.dN1 })
                             });
-                    u({ body: a });
+                    d({ body: l });
                 }),
-                    h.on('complete', (e, t) => {
+                    p.on('complete', (e, t) => {
                         c({ body: t });
                     }),
-                    h.uploadFiles(a, l, { addFilesTo: 'message.attachments' });
+                    p.uploadFiles(l, i, { addFilesTo: 'message.attachments' });
             });
         }
     });

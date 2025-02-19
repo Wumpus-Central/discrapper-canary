@@ -1,242 +1,282 @@
 n.d(t, {
-    default: () => N,
-    k: () => I
+    default: () => j,
+    k: () => E
 }),
     n(47120);
-var i = n(200651),
-    l = n(192379),
+var r = n(200651),
+    i = n(192379),
     a = n(311570),
-    r = n(692547),
-    s = n(481060),
-    o = n(100527),
+    o = n(692547),
+    l = n(481060),
+    s = n(100527),
     c = n(906732),
     d = n(688465),
     u = n(333867),
-    m = n(980463),
-    _ = n(576645),
-    h = n(317951),
-    p = n(63063),
+    p = n(980463),
+    m = n(576645),
+    f = n(317951),
+    h = n(63063),
     g = n(937615),
-    f = n(82950),
-    x = n(981631),
-    C = n(388032),
-    E = n(142621),
-    v = n(99713);
-let I = (e, t) => {
-    (0, _.mx)(t),
-        (0, s.ZDy)(
+    _ = n(82950),
+    b = n(981631),
+    v = n(388032),
+    y = n(30244),
+    x = n(99713);
+function O(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+let E = (e, t) => {
+    (0, m.mx)(t),
+        (0, l.ZDy)(
             async () => {
                 let { default: t } = await Promise.resolve().then(n.bind(n, 447564));
-                return (n) =>
-                    (0, i.jsx)(t, {
-                        channel: e,
-                        ...n
-                    });
+                return (n) => (0, r.jsx)(t, O({ channel: e }, n));
             },
-            { modalKey: S }
+            { modalKey: N }
         );
 };
-function N(e) {
+function j(e) {
     let { transitionState: t, channel: n } = e;
-    return (0, i.jsx)(s.Y0X, {
-        size: s.CgR.DYNAMIC,
+    return (0, r.jsx)(l.Y0X, {
+        size: l.CgR.DYNAMIC,
         transitionState: t,
-        children: (0, i.jsx)(T, { channel: n })
+        children: (0, r.jsx)(C, { channel: n })
     });
 }
-let S = 'HD_STREAMING_POTION_MODAL_KEY';
-function T(e) {
+let N = 'HD_STREAMING_POTION_MODAL_KEY';
+function C(e) {
     let { channel: t } = e,
-        n = (0, _.T$)(t),
-        [r, d] = (0, l.useState)(!1),
-        { price: p, fetchingPrice: g, error: f } = (0, _.R2)(h.FX),
-        { entitlement: C, fetchedEntitlement: E, error: v } = (0, _.t6)(h.FX),
-        I = f || v,
-        { analyticsLocations: N } = (0, c.ZP)([o.Z.HD_STREAMING_POTION_MODAL]),
-        S = null != C && !C.consumed;
-    (0, l.useEffect)(
+        n = (0, m.T$)(t),
+        [o, d] = (0, i.useState)(!1),
+        { price: h, fetchingPrice: g, error: _ } = (0, m.R2)(f.FX),
+        { entitlement: v, fetchedEntitlement: y, error: x } = (0, m.t6)(f.FX),
+        O = _ || x,
+        { analyticsLocations: E } = (0, c.ZP)([s.Z.HD_STREAMING_POTION_MODAL]),
+        j = null != v && !v.consumed;
+    (0, i.useEffect)(
         () => () => {
-            I && (0, m.SN)(h.FX);
+            O && (0, p.SN)(f.FX);
         },
-        [C, t, r, I]
+        [v, t, o, O]
     );
-    let T = (0, l.useCallback)(() => {
-            (0, m.Zu)(t.id), (0, s.pTH)();
+    let N = (0, i.useCallback)(() => {
+            (0, p.Zu)(t.id), (0, l.pTH)();
         }, [t.id]),
-        A = (0, l.useCallback)(() => {
+        C = (0, i.useCallback)(() => {
             (0, u.Z)({
-                skuId: h.FX,
-                analyticsLocations: N,
-                onComplete: T,
+                skuId: f.FX,
+                analyticsLocations: E,
+                onComplete: N,
                 variantsReturnStyle: a.v.INDIVIDUAL_PRODUCTS
             });
-        }, [N, T]),
-        j = (0, l.useMemo)(() => () => (t.isHDStreamSplashed ? 4 : n ? ((null == C ? void 0 : C.type) === x.qc2.DEVELOPER_GIFT ? 1 : S ? 2 : 0) : 3), [t.isHDStreamSplashed, n, null == C ? void 0 : C.type, S]),
-        y = (0, l.useMemo)(() => j(), [j]);
-    return (0, i.jsx)(b, {
+        }, [E, N]),
+        S = (0, i.useMemo)(() => () => (t.isHDStreamSplashed ? 4 : n ? ((null == v ? void 0 : v.type) === b.qc2.DEVELOPER_GIFT ? 1 : 2 * !!j) : 3), [t.isHDStreamSplashed, n, null == v ? void 0 : v.type, j]),
+        P = (0, i.useMemo)(() => S(), [S]);
+    return (0, r.jsx)(I, {
         channel: t,
-        buttonState: y,
-        price: p,
+        buttonState: P,
+        price: h,
         onActionClick: () => {
-            d(!0), (S ? T : A)();
+            d(!0), (j ? N : C)();
         },
-        loading: g || !E
+        loading: g || !y
     });
 }
-let b = (e) => {
-        let { channel: t, buttonState: n, price: l, onActionClick: a, loading: r } = e;
-        return r
-            ? (0, i.jsx)(L, {})
-            : null == l
-              ? (0, i.jsx)(R, {})
-              : (0, i.jsxs)(i.Fragment, {
+let I = (e) => {
+        let { channel: t, buttonState: n, price: i, onActionClick: a, loading: o } = e;
+        return o
+            ? (0, r.jsx)(Z, {})
+            : null == i
+              ? (0, r.jsx)(w, {})
+              : (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, i.jsxs)('div', {
-                            className: E.modal,
-                            children: [(0, i.jsx)(A, {}), (0, i.jsx)(j, { channel: t })]
+                        (0, r.jsxs)('div', {
+                            className: y.modal,
+                            children: [(0, r.jsx)(S, {}), (0, r.jsx)(P, { channel: t })]
                         }),
-                        (0, i.jsx)(y, {
+                        (0, r.jsx)(T, {
                             buttonState: n,
-                            price: l,
+                            price: i,
                             onActionClick: a
                         })
                     ]
                 });
     },
-    A = () =>
-        (0, i.jsx)('img', {
-            className: E.image,
+    S = () =>
+        (0, r.jsx)('img', {
+            className: y.image,
             src: 'https://cdn.discordapp.com/assets/premium/roadblocks/hd_streaming.png',
-            alt: C.intl.string(C.t.DdigcX)
+            alt: v.NW.string(v.t.DdigcX)
         }),
-    j = (e) => {
+    P = (e) => {
         let { channel: t } = e;
-        return (0, i.jsxs)(i.Fragment, {
+        return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, i.jsxs)('div', {
-                    className: E.body,
+                (0, r.jsxs)('div', {
+                    className: y.body,
                     children: [
-                        (0, i.jsxs)('div', {
-                            className: E.heading,
+                        (0, r.jsxs)('div', {
+                            className: y.heading,
                             children: [
-                                (0, i.jsx)(s.X6q, {
+                                (0, r.jsx)(l.X6q, {
                                     variant: 'heading-lg/bold',
-                                    children: C.intl.string(C.t.K04rOD)
+                                    children: v.NW.string(v.t.K04rOD)
                                 }),
-                                (0, i.jsx)(d.Z, {})
+                                (0, r.jsx)(d.Z, {})
                             ]
                         }),
-                        (0, i.jsx)(s.Text, {
+                        (0, r.jsx)(l.Text, {
                             variant: 'text-sm/normal',
-                            children: C.intl.string(C.t.lq40Pz)
+                            children: v.NW.string(v.t.lq40Pz)
                         }),
-                        (0, i.jsx)(s.Text, {
+                        (0, r.jsx)(l.Text, {
                             color: 'text-link',
                             variant: 'text-sm/normal',
-                            children: C.intl.format(C.t['1wV4qq'], { helpCenterLink: p.Z.getArticleURL(x.BhN.HD_STREAMING_POTION) })
+                            children: v.NW.format(v.t['1wV4qq'], { helpCenterLink: h.Z.getArticleURL(b.BhN.HD_STREAMING_POTION) })
                         }),
-                        (0, i.jsx)(s.Text, {
+                        (0, r.jsx)(l.Text, {
                             color: 'text-muted',
                             variant: 'text-xs/medium',
-                            children: C.intl.string(C.t.qk07Mj)
+                            children: v.NW.string(v.t.qk07Mj)
                         })
                     ]
                 }),
-                (0, i.jsx)('div', { className: E.divider }),
-                (0, i.jsxs)('div', {
-                    className: E.applyingTo,
+                (0, r.jsx)('div', { className: y.divider }),
+                (0, r.jsxs)('div', {
+                    className: y.applyingTo,
                     children: [
-                        (0, i.jsx)(s.Text, {
+                        (0, r.jsx)(l.Text, {
                             variant: 'eyebrow',
-                            children: C.intl.string(C.t.tZyXg4)
+                            children: v.NW.string(v.t.tZyXg4)
                         }),
-                        (0, i.jsx)(f.Z, { channel: t })
+                        (0, r.jsx)(_.Z, { channel: t })
                     ]
                 })
             ]
         });
     },
-    y = (e) => {
-        let { buttonState: t, price: n, onActionClick: l } = e;
-        return (0, i.jsxs)('div', {
-            className: E.footer,
+    T = (e) => {
+        let { buttonState: t, price: n, onActionClick: i } = e;
+        return (0, r.jsxs)('div', {
+            className: y.footer,
             children: [
-                (0, i.jsx)(s.zxk, {
+                (0, r.jsx)(l.zxk, {
                     onClick: () => {
-                        (0, s.Mr3)(S);
+                        (0, l.Mr3)(N);
                     },
-                    color: s.zxk.Colors.PRIMARY,
-                    children: C.intl.string(C.t.Avt5KS)
+                    color: l.zxk.Colors.PRIMARY,
+                    children: v.NW.string(v.t.Avt5KS)
                 }),
-                (0, i.jsx)(Z, {
+                (0, r.jsx)(A, {
                     buttonState: t,
                     price: n,
-                    onActionClick: l
+                    onActionClick: i
                 })
             ]
         });
     },
-    Z = (e) => {
-        let { buttonState: t, price: n, onActionClick: l } = e,
-            a = C.intl.formatToPlainString(C.t.S9LAdX, { price: (0, g.T4)(n.amount, n.currency) });
+    A = (e) => {
+        let { buttonState: t, price: n, onActionClick: i } = e,
+            a = v.NW.formatToPlainString(v.t.S9LAdX, { price: (0, g.T4)(n.amount, n.currency) });
         if (3 === t || 4 === t) {
             let e = {
-                3: C.intl.string(C.t.Qrh2BQ),
-                4: C.intl.string(C.t.utRdl5)
+                3: v.NW.string(v.t.Qrh2BQ),
+                4: v.NW.string(v.t.utRdl5)
             }[t];
-            return (0, i.jsx)(s.ua7, {
-                tooltipContentClassName: E.tooltip,
+            return (0, r.jsx)(l.ua7, {
+                tooltipContentClassName: y.tooltip,
                 text: e,
-                children: (e) =>
-                    (0, i.jsx)(s.zxk, {
-                        ...e,
-                        disabled: !0,
-                        children: a
-                    })
+                children: (e) => {
+                    var t, n;
+                    return (0, r.jsx)(
+                        l.zxk,
+                        ((t = O({}, e)),
+                        (n = n =
+                            {
+                                disabled: !0,
+                                children: a
+                            }),
+                        Object.getOwnPropertyDescriptors
+                            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                            : (function (e, t) {
+                                  var n = Object.keys(e);
+                                  if (Object.getOwnPropertySymbols) {
+                                      var r = Object.getOwnPropertySymbols(e);
+                                      n.push.apply(n, r);
+                                  }
+                                  return n;
+                              })(Object(n)).forEach(function (e) {
+                                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                              }),
+                        t)
+                    );
+                }
             });
         }
-        let o = {
+        let s = {
             0: a,
-            1: C.intl.string(C.t.sl6Tcn),
-            2: C.intl.string(C.t.XJ9INj)
+            1: v.NW.string(v.t.sl6Tcn),
+            2: v.NW.string(v.t.XJ9INj)
         }[t];
-        return (0, i.jsx)(s.zxk, {
-            onClick: l,
-            children: (0, i.jsxs)('div', {
-                className: E.buttonCopy,
+        return (0, r.jsx)(l.zxk, {
+            onClick: i,
+            children: (0, r.jsxs)('div', {
+                className: y.buttonCopy,
                 children: [
-                    (0, i.jsx)(s.hh5, {
-                        color: r.Z.colors.WHITE,
+                    (0, r.jsx)(l.hh5, {
+                        color: o.Z.colors.WHITE,
                         size: 'sm'
                     }),
-                    o
+                    s
                 ]
             })
         });
     },
-    R = () =>
-        (0, i.jsx)('div', {
-            className: E.anomaly,
-            children: (0, i.jsxs)('div', {
-                className: E.error,
+    w = () =>
+        (0, r.jsx)('div', {
+            className: y.anomaly,
+            children: (0, r.jsxs)('div', {
+                className: y.error,
                 children: [
-                    (0, i.jsx)(s.Eep, {
-                        src: v,
+                    (0, r.jsx)(l.Eep, {
+                        src: x,
                         width: 178,
                         height: 190
                     }),
-                    (0, i.jsx)(s.Text, {
+                    (0, r.jsx)(l.Text, {
                         variant: 'text-md/normal',
-                        children: C.intl.string(C.t.sIA0OD)
+                        children: v.NW.string(v.t.sIA0OD)
                     })
                 ]
             })
         }),
-    L = () =>
-        (0, i.jsx)('div', {
-            className: E.anomaly,
-            children: (0, i.jsx)('div', {
-                className: E.spinner,
-                children: (0, i.jsx)(s.$jN, {})
+    Z = () =>
+        (0, r.jsx)('div', {
+            className: y.anomaly,
+            children: (0, r.jsx)('div', {
+                className: y.spinner,
+                children: (0, r.jsx)(l.$jN, {})
             })
         });

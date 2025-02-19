@@ -1,132 +1,179 @@
-n.d(t, { Z: () => j }), n(47120);
-var i = n(200651),
-    l = n(192379),
+n.d(t, { Z: () => T }), n(266796), n(47120);
+var r = n(200651),
+    i = n(192379),
     a = n(120356),
-    r = n.n(a),
-    s = n(913527),
-    o = n.n(s),
+    o = n.n(a),
+    l = n(913527),
+    s = n.n(l),
     c = n(873546),
     d = n(442837),
     u = n(481060),
-    m = n(568836),
-    _ = n(100527),
-    h = n(906732),
-    p = n(963249),
+    p = n(568836),
+    m = n(100527),
+    f = n(906732),
+    h = n(963249),
     g = n(594174),
-    f = n(78839),
-    x = n(55935),
-    C = n(63063),
-    E = n(74538),
-    v = n(276444),
-    I = n(786397),
-    N = n(474936),
-    S = n(981631),
-    T = n(388032),
-    b = n(41545);
-class A extends l.Component {
+    _ = n(78839),
+    b = n(55935),
+    v = n(63063),
+    y = n(74538),
+    x = n(276444),
+    O = n(786397),
+    E = n(474936),
+    j = n(981631),
+    N = n(388032),
+    C = n(747426);
+function I(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function S(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                I(e, t, n[t]);
+            });
+    }
+    return e;
+}
+class P extends i.Component {
     renderTitle(e, t, n) {
-        let { trialOffer: i } = this.props,
-            l = g.default.getUser(i.user_id),
-            a = null != l ? l.username : '???',
-            r = g.default.getUser(i.referrer_id),
-            s = null != r ? r.username : '???';
-        return e && void 0 === i.redeemed_at
-            ? T.intl.formatToPlainString(T.t.Mptau7, { username: a })
+        let { trialOffer: r } = this.props,
+            i = g.default.getUser(r.user_id),
+            a = null != i ? i.username : '???',
+            o = g.default.getUser(r.referrer_id),
+            l = null != o ? o.username : '???';
+        return e && void 0 === r.redeemed_at
+            ? N.NW.formatToPlainString(N.t.Mptau7, { username: a })
             : t
               ? n
-                  ? T.intl.string(T.t['9SNdf3'])
-                  : T.intl.formatToPlainString(T.t['H0+MxM'], { userName: s })
-              : T.intl.formatToPlainString(T.t.IiWKws, {
-                    senderUserName: s,
+                  ? N.NW.string(N.t['9SNdf3'])
+                  : N.NW.formatToPlainString(N.t['H0+MxM'], { userName: l })
+              : N.NW.formatToPlainString(N.t.IiWKws, {
+                    senderUserName: l,
                     recipientUserName: a
                 });
     }
     renderBody(e, t, n) {
-        let { trialOffer: i } = this.props;
-        return e && !n && void 0 === i.redeemed_at ? T.intl.format(T.t.LwCwT0, { helpdeskArticle: C.Z.getArticleURL(S.BhN.REFERRAL_PROGRAM) }) : t ? null : T.intl.string(T.t.lQLlOT);
+        let { trialOffer: r } = this.props;
+        return e && !n && void 0 === r.redeemed_at ? N.NW.format(N.t.LwCwT0, { helpdeskArticle: v.Z.getArticleURL(j.BhN.REFERRAL_PROGRAM) }) : t ? null : N.NW.string(N.t.lQLlOT);
     }
     renderActions(e, t, n) {
-        let { trialOffer: l, currentUser: a, analyticsLocations: r } = this.props,
-            s = {
+        var i, a;
+        let { trialOffer: o, currentUser: l, analyticsLocations: s } = this.props,
+            c = {
                 onClick: () => {
-                    this.handleStartTrial(l, r);
+                    this.handleStartTrial(o, s);
                 },
                 color: u.zxk.Colors.BRAND
             },
-            o = a.id !== l.user_id || (0, E.I5)(a) || !a.verified || (0, I.B)(l),
-            c = this.renderExpirationDate(e, t, n);
+            d = l.id !== o.user_id || (0, y.I5)(l) || !l.verified || (0, O.B)(o),
+            p = this.renderExpirationDate(e, t, n);
         return (
-            (s.disabled = o),
-            (0, i.jsxs)('div', {
-                className: b.buttonContainer,
+            (c.disabled = d),
+            (0, r.jsxs)('div', {
+                className: C.buttonContainer,
                 children: [
-                    (0, i.jsx)('div', {
-                        children: (0, i.jsx)(u.zxk, {
-                            ...s,
-                            size: u.zxk.Sizes.SMALL,
-                            onClick: () => {
-                                (0, p.Z)({
-                                    initialPlanId: null,
-                                    subscriptionTier: N.Si.TIER_2,
-                                    analyticsLocations: r,
-                                    trialId: l.trial_id,
-                                    referralTrialOfferId: l.id
-                                });
-                            },
-                            children: T.intl.string(T.t.O0etsL)
-                        })
+                    (0, r.jsx)('div', {
+                        children: (0, r.jsx)(
+                            u.zxk,
+                            ((i = S({}, c)),
+                            (a = a =
+                                {
+                                    size: u.zxk.Sizes.SMALL,
+                                    onClick: () => {
+                                        (0, h.Z)({
+                                            initialPlanId: null,
+                                            subscriptionTier: E.Si.TIER_2,
+                                            analyticsLocations: s,
+                                            trialId: o.trial_id,
+                                            referralTrialOfferId: o.id
+                                        });
+                                    },
+                                    children: N.NW.string(N.t.O0etsL)
+                                }),
+                            Object.getOwnPropertyDescriptors
+                                ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
+                                : (function (e, t) {
+                                      var n = Object.keys(e);
+                                      if (Object.getOwnPropertySymbols) {
+                                          var r = Object.getOwnPropertySymbols(e);
+                                          n.push.apply(n, r);
+                                      }
+                                      return n;
+                                  })(Object(a)).forEach(function (e) {
+                                      Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(a, e));
+                                  }),
+                            i)
+                        )
                     }),
-                    (0, i.jsx)('div', {
-                        className: b.metadata,
-                        children: c
+                    (0, r.jsx)('div', {
+                        className: C.metadata,
+                        children: p
                     })
                 ]
             })
         );
     }
     renderExpirationDate(e, t, n) {
-        let { trialOffer: i, trialEndsAt: l } = this.props;
-        if (void 0 !== i.redeemed_at && !n && null !== l) return T.intl.formatToPlainString(T.t.nP0ivb, { date: (0, x.vc)(o()(l), 'LL') });
-        if (e || void 0 === i.expires_at) return null;
-        let a = o()(i.expires_at);
-        if (t) return T.intl.formatToPlainString(T.t.PuSHfX, { date: (0, x.vc)(o()(a), 'LL') });
-        let r = a.diff(o()(), 'h');
-        if (r > 48) {
-            let e = a.diff(o()(), 'd');
-            return T.intl.formatToPlainString(T.t['g9s+dH'], { numDays: e });
+        let { trialOffer: r, trialEndsAt: i } = this.props;
+        if (void 0 !== r.redeemed_at && !n && null !== i) return N.NW.formatToPlainString(N.t.nP0ivb, { date: (0, b.vc)(s()(i), 'LL') });
+        if (e || void 0 === r.expires_at) return null;
+        let a = s()(r.expires_at);
+        if (t) return N.NW.formatToPlainString(N.t.PuSHfX, { date: (0, b.vc)(s()(a), 'LL') });
+        let o = a.diff(s()(), 'h');
+        if (o > 48) {
+            let e = a.diff(s()(), 'd');
+            return N.NW.formatToPlainString(N.t['g9s+dH'], { numDays: e });
         }
-        if (r > 1) return T.intl.formatToPlainString(T.t.k9v339, { numHours: r });
-        let s = a.diff(o()(), 'minutes');
-        return T.intl.formatToPlainString(T.t['/d0GmZ'], { numMinutes: s });
+        if (o > 1) return N.NW.formatToPlainString(N.t.k9v339, { numHours: o });
+        let l = a.diff(s()(), 'minutes');
+        return N.NW.formatToPlainString(N.t['/d0GmZ'], { numMinutes: l });
     }
     renderMedia() {
-        return (0, i.jsx)('div', { className: b.referral });
+        return (0, r.jsx)('div', { className: C.referral });
     }
     render() {
         let { trialOffer: e, currentUser: t, recipientHasNitro: n } = this.props,
-            l = (0, I.B)(e),
+            i = (0, O.B)(e),
             a = t.id === e.referrer_id;
-        return (0, i.jsxs)('div', {
-            className: r()(b.tile, b.container),
+        return (0, r.jsxs)('div', {
+            className: o()(C.tile, C.container),
             children: [
-                (0, i.jsx)('div', {
-                    className: b.media,
+                (0, r.jsx)('div', {
+                    className: C.media,
                     children: this.renderMedia()
                 }),
-                (0, i.jsxs)('div', {
-                    className: b.description,
+                (0, r.jsxs)('div', {
+                    className: C.description,
                     children: [
-                        (0, i.jsx)(u.H, {
-                            className: b.title,
-                            children: this.renderTitle(n, l, a)
+                        (0, r.jsx)(u.H, {
+                            className: C.title,
+                            children: this.renderTitle(n, i, a)
                         }),
-                        (0, i.jsx)('div', {
-                            className: b.tagline,
-                            children: this.renderBody(n, l, a)
+                        (0, r.jsx)('div', {
+                            className: C.tagline,
+                            children: this.renderBody(n, i, a)
                         }),
-                        (0, i.jsx)('div', {
-                            className: b.actions,
-                            children: this.renderActions(n, l, a)
+                        (0, r.jsx)('div', {
+                            className: C.actions,
+                            children: this.renderActions(n, i, a)
                         })
                     ]
                 })
@@ -134,57 +181,52 @@ class A extends l.Component {
         });
     }
     constructor(...e) {
-        var t, n;
         super(...e),
-            (t = 'handleStartTrial'),
-            (n = (e, t) => {
-                (0, p.Z)({
+            I(this, 'handleStartTrial', (e, t) => {
+                (0, h.Z)({
                     initialPlanId: null,
-                    subscriptionTier: N.Si.TIER_2,
+                    subscriptionTier: E.Si.TIER_2,
                     analyticsLocations: t,
                     trialId: e.trial_id
                 });
-            }),
-            t in this
-                ? Object.defineProperty(this, t, {
-                      value: n,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (this[t] = n);
+            });
     }
 }
-function j(e) {
+function T(e) {
     let { userTrialOfferId: t, canRenderReferralEmbed: n } = e,
-        { trialOffer: l, isResolving: a } = (0, d.cj)(
-            [v.Z],
+        { trialOffer: i, isResolving: a } = (0, d.cj)(
+            [x.Z],
             () => ({
-                trialOffer: n ? v.Z.getRelevantUserTrialOffer(t) : null,
-                isResolving: !!n && v.Z.isResolving(t)
+                trialOffer: n ? x.Z.getRelevantUserTrialOffer(t) : null,
+                isResolving: !!n && x.Z.isResolving(t)
             }),
             [n, t]
         ),
-        r = g.default.getCurrentUser(),
-        s = (0, d.e7)([g.default], () => null != l && (0, E.I5)(void 0 !== r && l.user_id === r.id ? r : g.default.getUser(l.user_id))),
-        o = (0, d.e7)([f.ZP], () => {
+        o = g.default.getCurrentUser(),
+        l = (0, d.e7)([g.default], () => null != i && (0, y.I5)(void 0 !== o && i.user_id === o.id ? o : g.default.getUser(i.user_id))),
+        s = (0, d.e7)([_.ZP], () => {
             var e;
-            return s ? (null === (e = f.ZP.getPremiumTypeSubscription()) || void 0 === e ? void 0 : e.trialEndsAt) : null;
+            return l ? (null === (e = _.ZP.getPremiumTypeSubscription()) || void 0 === e ? void 0 : e.trialEndsAt) : null;
         }),
-        { analyticsLocations: u } = (0, h.ZP)(_.Z.SHARE_NITRO_EMBED);
+        { analyticsLocations: u } = (0, f.ZP)(m.Z.SHARE_NITRO_EMBED);
     return a
-        ? (0, i.jsx)(m.OR, { isHorizontal: !c.tq })
-        : n && null != l && void 0 !== r
-          ? (0, i.jsx)(A, {
-                trialOffer: l,
-                currentUser: r,
-                recipientHasNitro: s,
-                trialEndsAt: o,
-                analyticsLocations: u,
-                ...e
-            })
-          : (0, i.jsx)('div', {
-                className: b.invalidWrapper,
-                children: (0, i.jsx)('div', { className: b.invalid })
+        ? (0, r.jsx)(p.OR, { isHorizontal: !c.tq })
+        : n && null != i && void 0 !== o
+          ? (0, r.jsx)(
+                P,
+                S(
+                    {
+                        trialOffer: i,
+                        currentUser: o,
+                        recipientHasNitro: l,
+                        trialEndsAt: s,
+                        analyticsLocations: u
+                    },
+                    e
+                )
+            )
+          : (0, r.jsx)('div', {
+                className: C.invalidWrapper,
+                children: (0, r.jsx)('div', { className: C.invalid })
             });
 }

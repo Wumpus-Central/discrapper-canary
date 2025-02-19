@@ -1,64 +1,107 @@
-t.d(i, { Z: () => s });
-var n = t(200651);
-t(192379);
-var o = t(120356),
-    a = t.n(o),
-    l = t(481060),
-    r = t(709586),
-    c = t(267642),
-    _ = t(388032),
-    d = t(450277);
-let s = (e) => {
-    let i,
-        t,
-        o,
-        { guildFeature: s, guild: p, className: f, hideTooltip: m = !1, tooltipPosition: u = 'left', onClick: g } = e,
-        x = p.hasFeature(s),
-        h = (0, c._p)(s);
-    return (x
-        ? (null != h && (o = _.intl.string(_.t.hUgjyM)),
-          (i = (0, n.jsxs)(n.Fragment, {
+n.d(t, { Z: () => u }), n(266796);
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    s = n.n(i),
+    a = n(481060),
+    l = n(709586),
+    o = n(267642),
+    c = n(388032),
+    d = n(682915);
+let u = (e) => {
+    let t,
+        n,
+        i,
+        { guildFeature: u, guild: m, className: p, hideTooltip: g = !1, tooltipPosition: h = 'left', onClick: f } = e,
+        b = m.hasFeature(u),
+        x = (0, o._p)(u);
+    return (b
+        ? (null != x && (i = c.NW.string(c.t.hUgjyM)),
+          (t = (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, n.jsx)(r.Z, { className: d.unlockedIcon }),
-                  (0, n.jsx)(l.X6q, {
+                  (0, r.jsx)(l.Z, { className: d.unlockedIcon }),
+                  (0, r.jsx)(a.X6q, {
                       variant: 'eyebrow',
                       className: d.description,
-                      children: _.intl.string(_.t['0O+87u'])
+                      children: c.NW.string(c.t['0O+87u'])
                   })
               ]
           })))
-        : (null != h && (o = _.intl.string(_.t.L2wYYm)),
-          (i = (0, n.jsxs)(n.Fragment, {
+        : (null != x && (i = c.NW.string(c.t.L2wYYm)),
+          (t = (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, n.jsx)(r.Z, { className: d.icon }),
-                  (0, n.jsx)(l.X6q, {
+                  (0, r.jsx)(l.Z, { className: d.icon }),
+                  (0, r.jsx)(a.X6q, {
                       variant: 'eyebrow',
                       className: d.description,
-                      children: null != h && (0, c.e9)(h)
+                      children: null != x && (0, o.e9)(x)
                   })
               ]
           }))),
-    (t =
-        m || null == o
-            ? (0, n.jsx)('div', {
-                  className: a()(d.availabilityIndicator, f),
-                  children: i
+    (n =
+        g || null == i
+            ? (0, r.jsx)('div', {
+                  className: s()(d.availabilityIndicator, p),
+                  children: t
               })
-            : (0, n.jsx)(l.ua7, {
-                  position: u,
-                  text: o,
-                  children: (e) =>
-                      (0, n.jsx)('div', {
-                          ...e,
-                          className: a()(d.availabilityIndicator, f),
-                          children: i
-                      })
+            : (0, r.jsx)(a.ua7, {
+                  position: h,
+                  text: i,
+                  children: (e) => {
+                      var n, i;
+                      return (0, r.jsx)(
+                          'div',
+                          ((n = (function (e) {
+                              for (var t = 1; t < arguments.length; t++) {
+                                  var n = null != arguments[t] ? arguments[t] : {},
+                                      r = Object.keys(n);
+                                  'function' == typeof Object.getOwnPropertySymbols &&
+                                      (r = r.concat(
+                                          Object.getOwnPropertySymbols(n).filter(function (e) {
+                                              return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                          })
+                                      )),
+                                      r.forEach(function (t) {
+                                          var r;
+                                          (r = n[t]),
+                                              t in e
+                                                  ? Object.defineProperty(e, t, {
+                                                        value: r,
+                                                        enumerable: !0,
+                                                        configurable: !0,
+                                                        writable: !0
+                                                    })
+                                                  : (e[t] = r);
+                                      });
+                              }
+                              return e;
+                          })({}, e)),
+                          (i = i =
+                              {
+                                  className: s()(d.availabilityIndicator, p),
+                                  children: t
+                              }),
+                          Object.getOwnPropertyDescriptors
+                              ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
+                              : (function (e, t) {
+                                    var n = Object.keys(e);
+                                    if (Object.getOwnPropertySymbols) {
+                                        var r = Object.getOwnPropertySymbols(e);
+                                        n.push.apply(n, r);
+                                    }
+                                    return n;
+                                })(Object(i)).forEach(function (e) {
+                                    Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
+                                }),
+                          n)
+                      );
+                  }
               })),
-    null == g || x)
-        ? t
-        : (0, n.jsx)(l.P3F, {
-              onClick: g,
+    null == f || b)
+        ? n
+        : (0, r.jsx)(a.P3F, {
+              onClick: f,
               className: d.clickable,
-              children: t
+              children: n
           });
 };

@@ -1,9 +1,9 @@
-let i;
-n.d(t, { Z: () => f }), n(653041);
-var r,
-    a = n(442837),
-    s = n(570140);
-function o(e, t, n) {
+let r;
+n.d(t, { Z: () => h }), n(653041);
+var i,
+    o = n(442837),
+    a = n(570140);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,44 +16,73 @@ function o(e, t, n) {
         e
     );
 }
-let l = {
+function l(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                s(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function c(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function u(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : c(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let d = {
     hasAcceptedStoreTerms: !1,
     hasAcceptedEulaIds: []
 };
-function u() {
-    i.hasAcceptedStoreTerms = !0;
+function f() {
+    r.hasAcceptedStoreTerms = !0;
 }
-function c(e) {
+function p(e) {
     let { eulaId: t } = e;
-    if (i.hasAcceptedEulaIds.includes(t)) return !1;
-    i.hasAcceptedEulaIds.push(t);
+    if (r.hasAcceptedEulaIds.includes(t)) return !1;
+    r.hasAcceptedEulaIds.push(t);
 }
-class d extends (r = a.ZP.PersistedStore) {
+class _ extends (i = o.ZP.PersistedStore) {
     initialize(e) {
-        i = null != e ? e : l;
+        r = null != e ? e : d;
     }
     getState() {
-        return i;
+        return r;
     }
     get hasAcceptedStoreTerms() {
-        return i.hasAcceptedStoreTerms;
+        return r.hasAcceptedStoreTerms;
     }
     hasAcceptedEULA(e) {
-        return i.hasAcceptedEulaIds.includes(e);
+        return r.hasAcceptedEulaIds.includes(e);
     }
 }
-o(d, 'displayName', 'ApplicationStoreUserSettingsStore'),
-    o(d, 'persistKey', 'ApplicationStoreUserSettingsStore'),
-    o(d, 'migrations', [
-        (e) =>
-            null == e.hasAcceptedEulaIds
-                ? {
-                      ...e,
-                      hasAcceptedEulaIds: []
-                  }
-                : e
-    ]);
-let f = new d(s.Z, {
-    APPLICATION_STORE_ACCEPT_STORE_TERMS: u,
-    APPLICATION_STORE_ACCEPT_EULA: c
+s(_, 'displayName', 'ApplicationStoreUserSettingsStore'), s(_, 'persistKey', 'ApplicationStoreUserSettingsStore'), s(_, 'migrations', [(e) => (null == e.hasAcceptedEulaIds ? u(l({}, e), { hasAcceptedEulaIds: [] }) : e)]);
+let h = new _(a.Z, {
+    APPLICATION_STORE_ACCEPT_STORE_TERMS: f,
+    APPLICATION_STORE_ACCEPT_EULA: p
 });

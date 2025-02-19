@@ -1,30 +1,31 @@
 n.d(t, {
-    f: () => p,
-    y: () => _
-});
+    f: () => h,
+    y: () => f
+}),
+    n(301563);
 var i = n(200651);
 n(192379);
-var l = n(481060),
-    r = n(522474),
-    o = n(556296),
+var r = n(481060),
+    o = n(522474),
+    l = n(556296),
     a = n(13140),
     s = n(44359),
-    d = n(620954),
+    c = n(620954),
     u = n(987650),
-    c = n(981631),
-    h = n(388032);
-function _() {
-    if (r.Z.getWindowOpen(c.KJ3.ACTIVITY_POPOUT)) return null;
-    let { trackView: e, trackClick: t } = (0, d.R)(u.n0.ClipsReminderNotification, { notif_type: u.n0.ClipsReminderNotification }),
-        n = o.ZP.getKeybindForAction(c.kg4.SAVE_CLIP);
+    d = n(981631),
+    p = n(388032);
+function f() {
+    if (o.Z.getWindowOpen(d.KJ3.ACTIVITY_POPOUT)) return null;
+    let { trackView: e, trackClick: t } = (0, c.R)(u.n0.ClipsReminderNotification, { notif_type: u.n0.ClipsReminderNotification }),
+        n = l.ZP.getKeybindForAction(d.kg4.SAVE_CLIP);
     if (null == n) return null;
-    let _ = a.BB(n.shortcut, !0);
+    let f = a.BB(n.shortcut, !0);
     return {
-        title: h.intl.format(h.t.S5uhCA, {
-            keybind: _,
-            keybindHook: (e, t) => (0, i.jsx)(s.Z, { keybind: _.split('+') }, t)
+        title: p.NW.format(p.t.S5uhCA, {
+            keybind: f,
+            keybindHook: (e, t) => (0, i.jsx)(s.Z, { keybind: f.split('+') }, t)
         }),
-        icon: (0, i.jsx)(l.AlX, {
+        icon: (0, i.jsx)(r.AlX, {
             size: 'lg',
             color: 'currentColor'
         }),
@@ -36,11 +37,11 @@ function _() {
         }
     };
 }
-function p(e) {
-    let { trackView: t, trackClick: n } = (0, d.R)(u.n0.ClipsNotification, { notif_type: u.n0.ClipsNotification });
+function h(e) {
+    let { trackView: t, trackClick: n } = (0, c.R)(u.n0.ClipsNotification, { notif_type: u.n0.ClipsNotification });
     return {
         title: e,
-        icon: (0, i.jsx)(l.AlX, {
+        icon: (0, i.jsx)(r.AlX, {
             size: 'lg',
             color: 'currentColor'
         }),

@@ -1,75 +1,77 @@
-n.d(t, { Z: () => _ }), n(47120);
-var i = n(200651),
-    l = n(192379),
-    a = n(442837),
-    r = n(481060),
-    s = n(592125),
-    o = n(430824),
+n.d(t, { Z: () => b }), n(47120), n(266796);
+var r = n(200651),
+    i = n(192379),
+    l = n(442837),
+    o = n(481060),
+    a = n(592125),
+    s = n(430824),
     c = n(584825),
-    d = n(406074),
-    u = n(660196),
-    h = n(36246),
-    p = n(305342),
-    m = n(981631),
-    f = n(388032),
-    g = n(988514);
-function _(e) {
+    u = n(406074),
+    d = n(660196),
+    p = n(36246),
+    h = n(305342),
+    f = n(981631),
+    m = n(388032),
+    g = n(601232);
+function b(e) {
     let { guildId: t, channelId: n } = e,
-        _ = (0, d.C)({
+        b = (0, u.C)({
             guildId: t,
             channelId: n
         }),
-        C = (0, c.GG)(t),
-        x = (0, c.YB)(t),
-        v = (0, a.e7)([o.Z], () => o.Z.getGuild(t), [t]),
-        E = null == v ? void 0 : v.name,
-        I = (0, a.e7)([s.Z], () => s.Z.getChannel(n)),
-        b = l.useMemo(() => {
+        _ = (0, c.GG)(t),
+        C = (0, c.YB)(t),
+        v = (0, l.e7)([s.Z], () => s.Z.getGuild(t), [t]),
+        y = null == v ? void 0 : v.name,
+        x = (0, l.e7)([a.Z], () => a.Z.getChannel(n)),
+        j = i.useMemo(() => {
             let e = {};
-            for (let t of C) for (let n of t.subscription_listings_ids) e[n] = t.id;
+            for (let t of _) for (let n of t.subscription_listings_ids) e[n] = t.id;
             return e;
-        }, [C]);
-    return ((0, u.Z)({
+        }, [_]);
+    return ((0, d.Z)({
         guildId: t,
-        location: m.Sbl.ROLE_SUBSCRIPTION_GATED_CHANNEL,
-        relevantSubscriptionListingIds: _.map((e) => e.id)
+        location: f.Sbl.ROLE_SUBSCRIPTION_GATED_CHANNEL,
+        relevantSubscriptionListingIds: b.map((e) => e.id)
     }),
     null == v)
-        ? (0, i.jsx)('div', {
+        ? (0, r.jsx)('div', {
               className: g.__invalid_spinnerContainer,
-              children: (0, i.jsx)(r.$jN, { className: g.__invalid_spinner })
+              children: (0, r.jsx)(o.$jN, { className: g.__invalid_spinner })
           })
-        : (0, i.jsxs)(r.w0Z, {
+        : (0, r.jsxs)(o.w0Z, {
               className: g.pageContainer,
               children: [
-                  (0, i.jsx)(r.X6q, {
+                  (0, r.jsx)(o.X6q, {
                       variant: 'heading-xl/semibold',
                       className: g.joinCtaTitle,
-                      children: f.intl.format(f.t.xHMpys, {
-                          serverName: E,
-                          channelName: null == I ? void 0 : I.name
+                      children: m.NW.format(m.t.xHMpys, {
+                          serverName: y,
+                          channelName: null == x ? void 0 : x.name
                       })
                   }),
-                  (0, i.jsx)(r.Text, {
+                  (0, r.jsx)(o.Text, {
                       className: g.joinCtaSubtitle,
                       variant: 'text-md/normal',
                       color: 'header-secondary',
-                      children: null == x ? void 0 : x.description
+                      children: null == C ? void 0 : C.description
                   }),
-                  (0, i.jsx)(h.Z, {
+                  (0, r.jsx)(p.Z, {
                       guildId: t,
-                      children: _.filter((e) => null != b[e.id]).map((e) =>
-                          (0, i.jsx)(
-                              p.Z,
-                              {
-                                  guildId: t,
-                                  listingId: e.id,
-                                  groupListingId: b[e.id],
-                                  analyticsLocation: m.Sbl.ROLE_SUBSCRIPTION_GATED_CHANNEL
-                              },
-                              e.id
+                      children: b
+                          .filter((e) => null != j[e.id])
+                          .map((e) =>
+                              (0, r.jsx)(
+                                  h.Z,
+                                  {
+                                      guildId: t,
+                                      listingId: e.id,
+                                      groupListingId: j[e.id],
+                                      analyticsLocation: f.Sbl.ROLE_SUBSCRIPTION_GATED_CHANNEL
+                                  },
+                                  e.id
+                              )
                           )
-                      )
                   })
               ]
           });

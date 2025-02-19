@@ -1,39 +1,81 @@
-l.d(n, { Z: () => h });
-var t = l(200651);
-l(192379);
-var i = l(512722),
-    r = l.n(i),
-    a = l(442837),
-    s = l(52396),
-    o = l(592125),
-    u = l(970184),
-    c = l(151200),
-    d = l(96513);
-function m(e) {
-    let { contentInventoryEntry: n, channel: l } = e,
-        { parsedEntry: i } = (0, s.B)();
-    return (0, t.jsx)(c.Z, {
-        ...i,
-        entry: n,
-        channel: l
-    });
+r.d(t, { Z: () => O });
+var n = r(200651);
+r(192379);
+var l = r(512722),
+    i = r.n(l),
+    o = r(442837),
+    a = r(52396),
+    c = r(592125),
+    s = r(970184),
+    u = r(151200),
+    d = r(96513);
+function p(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var r = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(r);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (n = n.concat(
+                Object.getOwnPropertySymbols(r).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                })
+            )),
+            n.forEach(function (t) {
+                var n;
+                (n = r[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: n,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = n);
+            });
+    }
+    return e;
 }
-function h(e) {
-    let n = (0, u.CJ)();
-    r()(null != n, 'Component context is not defined. Did you forget to wrap your component in a ComponentStateContextProvider?');
-    let { channelId: l } = n,
-        i = (0, a.e7)([o.Z], () => o.Z.getChannel(l));
+function b(e, t) {
     return (
-        r()(null != i, 'channel must be defined'),
-        (0, t.jsx)(s.r, {
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var r = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var n = Object.getOwnPropertySymbols(e);
+                      r.push.apply(r, n);
+                  }
+                  return r;
+              })(Object(t)).forEach(function (r) {
+                  Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
+              }),
+        e
+    );
+}
+function f(e) {
+    let { contentInventoryEntry: t, channel: r } = e,
+        { parsedEntry: l } = (0, a.B)();
+    return (0, n.jsx)(
+        u.Z,
+        b(p({}, l), {
+            entry: t,
+            channel: r
+        })
+    );
+}
+function O(e) {
+    let t = (0, s.CJ)();
+    i()(null != t, 'Component context is not defined. Did you forget to wrap your component in a ComponentStateContextProvider?');
+    let { channelId: r } = t,
+        l = (0, o.e7)([c.Z], () => c.Z.getChannel(r));
+    return (
+        i()(null != l, 'channel must be defined'),
+        (0, n.jsx)(a.r, {
             location: d._.EMBED,
             entry: e.contentInventoryEntry,
-            channel: i,
+            channel: l,
             errorFallback: null,
-            children: (0, t.jsx)(m, {
-                ...e,
-                channel: i
-            })
+            children: (0, n.jsx)(f, b(p({}, e), { channel: l }))
         })
     );
 }

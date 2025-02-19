@@ -1,250 +1,294 @@
-s.d(e, { N: () => R }), s(47120);
-var i = s(200651),
-    a = s(192379),
-    n = s(120356),
-    l = s.n(n),
-    r = s(442837),
+s.d(t, { N: () => w }), s(266796), s(47120);
+var a = s(200651),
+    n = s(192379),
+    i = s(120356),
+    r = s.n(i),
+    l = s(442837),
     c = s(481060),
     o = s(259580),
     d = s(499033),
-    m = s(626135),
-    u = s(709054),
-    x = s(531441),
-    h = s(236289),
+    u = s(626135),
+    m = s(709054),
+    h = s(531441),
+    x = s(236289),
     g = s(788080),
     j = s(467432),
-    v = s(451284),
-    N = s(613734),
+    N = s(451284),
+    v = s(613734),
     p = s(800530),
     f = s(981631),
-    T = s(388032),
-    S = s(979565);
-let E = (t) => {
-        let { status: e, onClick: s, opened: a, count: n } = t;
-        return (0, i.jsxs)(c.P3F, {
-            className: S.header,
+    S = s(388032),
+    b = s(667322);
+function T(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var s = null != arguments[t] ? arguments[t] : {},
+            a = Object.keys(s);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (a = a.concat(
+                Object.getOwnPropertySymbols(s).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(s, e).enumerable;
+                })
+            )),
+            a.forEach(function (t) {
+                var a;
+                (a = s[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: a,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = a);
+            });
+    }
+    return e;
+}
+let E = (e) => {
+        let { status: t, onClick: s, opened: n, count: i } = e;
+        return (0, a.jsxs)(c.P3F, {
+            className: b.header,
             onClick: s,
             children: [
-                (0, i.jsx)('div', {
-                    className: S.headerIconWrapper,
-                    children: (0, i.jsx)(c.aNP, {
+                (0, a.jsx)('div', {
+                    className: b.headerIconWrapper,
+                    children: (0, a.jsx)(c.aNP, {
                         size: 'md',
-                        color: 'active' === e ? c.TVs.colors.INTERACTIVE_ACTIVE : c.TVs.colors.INTERACTIVE_MUTED
+                        color: 'active' === t ? c.TVs.colors.INTERACTIVE_ACTIVE : c.TVs.colors.INTERACTIVE_MUTED
                     })
                 }),
-                (0, i.jsxs)('div', {
-                    className: S.title,
+                (0, a.jsxs)('div', {
+                    className: b.title,
                     children: [
-                        (0, i.jsx)(c.X6q, {
+                        (0, a.jsx)(c.X6q, {
                             variant: 'heading-md/semibold',
                             color: 'text-normal',
-                            children: 'active' === e ? T.intl.formatToPlainString(T.t.IeV2oa, { count: n.toString() }) : T.intl.formatToPlainString(T.t.fZAHBQ, { count: n.toString() })
+                            children: 'active' === t ? S.NW.formatToPlainString(S.t.IeV2oa, { count: i.toString() }) : S.NW.formatToPlainString(S.t.fZAHBQ, { count: i.toString() })
                         }),
-                        (0, i.jsx)(c.X6q, {
+                        (0, a.jsx)(c.X6q, {
                             variant: 'text-sm/normal',
                             color: 'text-muted',
-                            children: 'active' === e ? T.intl.string(T.t.XJ2YVV) : T.intl.string(T.t.SzGV0t)
+                            children: 'active' === t ? S.NW.string(S.t.XJ2YVV) : S.NW.string(S.t.SzGV0t)
                         })
                     ]
                 }),
-                (0, i.jsx)('div', {
-                    className: S.caret,
-                    children: (0, i.jsx)(o.Z, {
+                (0, a.jsx)('div', {
+                    className: b.caret,
+                    children: (0, a.jsx)(o.Z, {
                         width: 18,
                         height: 18,
-                        direction: a ? o.Z.Directions.UP : o.Z.Directions.DOWN
+                        direction: n ? o.Z.Directions.UP : o.Z.Directions.DOWN
                     })
                 })
             ]
         });
     },
-    I = () =>
-        (0, i.jsxs)('div', {
-            className: S.emptyState,
+    O = () =>
+        (0, a.jsxs)('div', {
+            className: b.emptyState,
             children: [
-                (0, i.jsxs)('div', {
-                    className: S.iconContainer,
+                (0, a.jsxs)('div', {
+                    className: b.iconContainer,
                     children: [
-                        (0, i.jsx)('div', {
-                            className: S.iconBackground,
-                            children: (0, i.jsx)(c.rm8, {
+                        (0, a.jsx)('div', {
+                            className: b.iconBackground,
+                            children: (0, a.jsx)(c.rm8, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: S.icon
+                                className: b.icon
                             })
                         }),
-                        (0, i.jsx)(d.Z, { className: S.stars })
+                        (0, a.jsx)(d.Z, { className: b.stars })
                     ]
                 }),
-                (0, i.jsx)(c.X6q, {
+                (0, a.jsx)(c.X6q, {
                     variant: 'heading-md/bold',
-                    className: S.emptyStateText,
-                    children: T.intl.string(T.t.reLFaW)
+                    className: b.emptyStateText,
+                    children: S.NW.string(S.t.reLFaW)
                 }),
-                (0, i.jsx)(c.Text, {
+                (0, a.jsx)(c.Text, {
                     variant: 'text-xs/normal',
-                    className: S.emptyStateSubtext,
-                    children: T.intl.string(T.t.ERdH1t)
+                    className: b.emptyStateSubtext,
+                    children: S.NW.string(S.t.ERdH1t)
                 })
             ]
         }),
-    _ = () =>
-        (0, i.jsx)('div', {
-            className: S.emptyState,
-            children: (0, i.jsx)(c.Text, {
+    y = () =>
+        (0, a.jsx)('div', {
+            className: b.emptyState,
+            children: (0, a.jsx)(c.Text, {
                 variant: 'text-xs/normal',
-                className: S.emptyStateSubtext,
-                children: T.intl.string(T.t.RV3AXV)
+                className: b.emptyStateSubtext,
+                children: S.NW.string(S.t.RV3AXV)
             })
         }),
-    b = (t) => {
-        let { timestamp: e } = t;
-        return (0, i.jsx)(c.Text, {
+    I = (e) => {
+        let { timestamp: t } = e;
+        return (0, a.jsx)(c.Text, {
             variant: 'text-xs/normal',
-            className: S.timestamp,
-            children: (0, g.XX)(e)
+            className: b.timestamp,
+            children: (0, g.XX)(t)
         });
     },
-    D = () =>
-        (0, i.jsx)(c.Text, {
+    _ = () =>
+        (0, a.jsx)(c.Text, {
             variant: 'text-xs/bold',
-            className: S.newBadge,
-            children: T.intl.string(T.t.QKMRCw)
+            className: b.newBadge,
+            children: S.NW.string(S.t.QKMRCw)
         }),
-    k = (t) => {
-        let { classification: e } = t,
-            { id: n, description: r } = e,
-            o = u.default.extractTimestamp(n),
-            d = (0, j.e)(e),
-            m = a.useMemo(() => {
-                var t, s, a;
-                let n = {
-                    description: r,
-                    descriptionHook: (t) =>
-                        (0, i.jsx)(c.Text, {
+    D = (e) => {
+        let { classification: t } = e,
+            { id: i, description: l } = t,
+            o = m.default.extractTimestamp(i),
+            d = (0, j.e)(t),
+            u = n.useMemo(() => {
+                var e, s, n, i, r;
+                let o = {
+                    description: l,
+                    descriptionHook: (e) =>
+                        (0, a.jsx)(c.Text, {
                             tag: 'span',
                             variant: 'heading-lg/bold',
-                            children: t
+                            children: e
                         })
                 };
-                return (0, g.FB)(e)
-                    ? (null == e ? void 0 : null === (t = e.guild_metadata) || void 0 === t ? void 0 : t.member_type) === x.wO.OWNER
-                        ? T.intl.format(T.t.Lb0HVl, {
-                              ...n,
-                              guildName: null == e ? void 0 : null === (s = e.guild_metadata) || void 0 === s ? void 0 : s.name
+                return (0, g.FB)(t)
+                    ? (null == t ? void 0 : null === (e = t.guild_metadata) || void 0 === e ? void 0 : e.member_type) !== h.wO.OWNER
+                        ? S.NW.format(S.t.rmpEPD, {
+                              guildName: null == t ? void 0 : null === (n = t.guild_metadata) || void 0 === n ? void 0 : n.name,
+                              classification_type: o.description,
+                              classificationHook: o.descriptionHook
                           })
-                        : T.intl.format(T.t.rmpEPD, {
-                              guildName: null == e ? void 0 : null === (a = e.guild_metadata) || void 0 === a ? void 0 : a.name,
-                              classification_type: n.description,
-                              classificationHook: n.descriptionHook
-                          })
-                    : T.intl.format(T.t.QY4g5u, n);
-            }, [e, r]);
-        return (0, i.jsx)(
+                        : S.NW.format(
+                              S.t.Lb0HVl,
+                              ((i = T({}, o)),
+                              (r = r = { guildName: null == t ? void 0 : null === (s = t.guild_metadata) || void 0 === s ? void 0 : s.name }),
+                              Object.getOwnPropertyDescriptors
+                                  ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(r))
+                                  : (function (e, t) {
+                                        var s = Object.keys(e);
+                                        if (Object.getOwnPropertySymbols) {
+                                            var a = Object.getOwnPropertySymbols(e);
+                                            s.push.apply(s, a);
+                                        }
+                                        return s;
+                                    })(Object(r)).forEach(function (e) {
+                                        Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(r, e));
+                                    }),
+                              i)
+                          )
+                    : S.NW.format(S.t.QY4g5u, o);
+            }, [t, l]);
+        return (0, a.jsx)(
             c.P3F,
             {
                 onClick: () => {
                     (0, c.ZDy)(async () => {
-                        let { default: t } = await Promise.all([s.e('25292'), s.e('22878'), s.e('95477'), s.e('11212'), s.e('40190'), s.e('46097'), s.e('25183'), s.e('18831'), s.e('87896')]).then(s.bind(s, 41164));
-                        return (e) =>
-                            (0, i.jsx)(t, {
-                                classificationId: n,
-                                source: p.s.StandingTab,
-                                ...e
-                            });
+                        let { default: e } = await Promise.all([s.e('25292'), s.e('22878'), s.e('95477'), s.e('11212'), s.e('55186'), s.e('46097'), s.e('25183'), s.e('18831'), s.e('27151')]).then(s.bind(s, 41164));
+                        return (t) =>
+                            (0, a.jsx)(
+                                e,
+                                T(
+                                    {
+                                        classificationId: i,
+                                        source: p.s.StandingTab
+                                    },
+                                    t
+                                )
+                            );
                     });
                 },
-                className: l()(S.itemDetail, { [S.itemDetailNew]: d }),
-                children: (0, i.jsxs)('div', {
-                    className: S.descriptionContainer,
+                className: r()(b.itemDetail, { [b.itemDetailNew]: d }),
+                children: (0, a.jsxs)('div', {
+                    className: b.descriptionContainer,
                     children: [
-                        d ? (0, i.jsx)(D, {}) : (0, i.jsx)(b, { timestamp: o }),
-                        (0, i.jsx)(c.X6q, {
+                        d ? (0, a.jsx)(_, {}) : (0, a.jsx)(I, { timestamp: o }),
+                        (0, a.jsx)(c.X6q, {
                             variant: 'heading-lg/normal',
-                            children: m
+                            children: u
                         })
                     ]
                 })
             },
-            n
+            i
         );
     },
-    Z = (t) => {
-        let { status: e, classifications: s } = t,
-            [n, l] = a.useState(!1),
-            [o, d] = a.useState(3),
-            u = (0, v.P)(),
-            x = (0, r.e7)([h.Z], () => h.Z.getIsDsaEligible()),
-            g = a.useMemo(() => s.slice(0, o), [s, o]);
-        a.useEffect(() => {
-            n &&
-                m.default.track(f.rMx.SAFETY_HUB_ACTION, {
+    P = (e) => {
+        let { status: t, classifications: s } = e,
+            [i, r] = n.useState(!1),
+            [o, d] = n.useState(3),
+            m = (0, N.P)(),
+            h = (0, l.e7)([x.Z], () => x.Z.getIsDsaEligible()),
+            g = n.useMemo(() => s.slice(0, o), [s, o]);
+        n.useEffect(() => {
+            i &&
+                u.default.track(f.rMx.SAFETY_HUB_ACTION, {
                     action: p.n0.ViewViolationsDropdown,
-                    account_standing: u.state,
-                    classification_ids: g.map((t) => Number(t.id)),
+                    account_standing: m.state,
+                    classification_ids: g.map((e) => Number(e.id)),
                     source: p.s.StandingTab,
                     is_violative_content_shown: !1,
-                    is_dsa_eligible: x
+                    is_dsa_eligible: h
                 });
-        }, [n, u.state, g, x]);
+        }, [i, m.state, g, h]);
         let j = s.length - g.length > 3 ? 3 : s.length - g.length;
-        return (0, i.jsxs)('div', {
-            className: S.dropdown,
+        return (0, a.jsxs)('div', {
+            className: b.dropdown,
             children: [
-                (0, i.jsx)(E, {
-                    status: e,
-                    onClick: () => l((t) => !t),
-                    opened: n,
+                (0, a.jsx)(E, {
+                    status: t,
+                    onClick: () => r((e) => !e),
+                    opened: i,
                     count: s.length
                 }),
-                n &&
-                    (0, i.jsxs)('div', {
-                        className: S.items,
+                i &&
+                    (0, a.jsxs)('div', {
+                        className: b.items,
                         children: [
-                            (0, i.jsx)(c.njP.Separator, {
+                            (0, a.jsx)(c.njP.Separator, {
                                 style: {
                                     height: '1px',
                                     width: '100%'
                                 }
                             }),
-                            g.length > 0 && g.map((t) => (0, i.jsx)(k, { classification: t }, t.id)),
+                            g.length > 0 && g.map((e) => (0, a.jsx)(D, { classification: e }, e.id)),
                             g.length < s.length &&
-                                (0, i.jsxs)(i.Fragment, {
+                                (0, a.jsxs)(a.Fragment, {
                                     children: [
-                                        (0, i.jsx)(c.njP.Separator, {
+                                        (0, a.jsx)(c.njP.Separator, {
                                             style: {
                                                 height: '1px',
                                                 width: '100%'
                                             }
                                         }),
-                                        (0, i.jsx)('button', {
-                                            className: S.paginationButton,
-                                            onClick: () => d((t) => t + j),
-                                            children: T.intl.format(T.t['9Ml56O'], { nextPageSize: j })
+                                        (0, a.jsx)('button', {
+                                            className: b.paginationButton,
+                                            onClick: () => d((e) => e + j),
+                                            children: S.NW.format(S.t['9Ml56O'], { nextPageSize: j })
                                         })
                                     ]
                                 }),
-                            0 === g.length && 'active' === e && (0, i.jsx)(I, {}),
-                            0 === g.length && 'expired' === e && (0, i.jsx)(_, {})
+                            0 === g.length && 'active' === t && (0, a.jsx)(O, {}),
+                            0 === g.length && 'expired' === t && (0, a.jsx)(y, {})
                         ]
                     })
             ]
         });
     },
-    R = () => {
-        let t = (0, N.y9)(),
-            e = (0, N.KM)();
-        return 0 === t.length && 0 === e.length
+    w = () => {
+        let e = (0, v.y9)(),
+            t = (0, v.KM)();
+        return 0 === e.length && 0 === t.length
             ? null
-            : (0, i.jsxs)('div', {
+            : (0, a.jsxs)('div', {
                   children: [
-                      (0, i.jsx)(Z, {
+                      (0, a.jsx)(P, {
                           status: 'active',
-                          classifications: t
-                      }),
-                      (0, i.jsx)(Z, {
-                          status: 'expired',
                           classifications: e
+                      }),
+                      (0, a.jsx)(P, {
+                          status: 'expired',
+                          classifications: t
                       })
                   ]
               });

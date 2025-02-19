@@ -1,119 +1,157 @@
-n.d(t, { Z: () => N }), n(47120);
-var i = n(200651),
-    r = n(192379),
+n.d(t, { Z: () => O }), n(47120), n(266796);
+var r,
+    i,
+    s = n(200651),
+    a = n(192379),
     l = n(120356),
-    s = n.n(l),
-    a = n(642128),
-    o = n(481060),
-    c = n(205641),
-    d = n(119331),
-    u = n(902807),
-    m = n(402766),
+    o = n.n(l),
+    c = n(642128),
+    d = n(481060),
+    u = n(205641),
+    m = n(119331),
+    p = n(902807),
+    g = n(402766),
     h = n(267642),
-    g = n(981631),
-    x = n(388032),
-    p = n(1600);
-let _ = {
+    f = n(981631),
+    b = n(388032),
+    x = n(646433);
+let j = {
         tension: 200,
         friction: 20
     },
-    C = {
-        ..._,
-        clamp: !0
-    };
-function f(e) {
-    let [t, n] = r.useState(0),
-        { numUnlocked: l, numRequired: d } = e,
-        u = () => {
+    N =
+        ((r = (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    r = Object.keys(n);
+                'function' == typeof Object.getOwnPropertySymbols &&
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        })
+                    )),
+                    r.forEach(function (t) {
+                        var r;
+                        (r = n[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: r,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0
+                                  })
+                                : (e[t] = r);
+                    });
+            }
+            return e;
+        })({}, j)),
+        (i = i = { clamp: !0 }),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(i)).forEach(function (e) {
+                  Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
+              }),
+        r);
+function v(e) {
+    let [t, n] = a.useState(0),
+        { numUnlocked: r, numRequired: i } = e,
+        l = () => {
             n(1);
         },
         m = () => {
             n(2);
         },
-        h = 2 === t,
+        p = 2 === t,
         g = 1 === t;
-    if (!(!(l >= d) && l / d >= 0.8) || h) return null;
-    let _ = g || h ? p.hidden : null,
-        f = g ? c.Z.Stages.FLYING : c.Z.Stages.HOVERING;
-    return (0, i.jsx)(o.AMe, {
+    if (!(!(r >= i) && r / i >= 0.8) || p) return null;
+    let h = g || p ? x.hidden : null,
+        f = g ? u.Z.Stages.FLYING : u.Z.Stages.HOVERING;
+    return (0, s.jsx)(d.AMe, {
         from: { opacity: 0 },
         to: { opacity: 1 },
-        config: C,
+        config: N,
         shouldAnimate: 'animate-always',
         children: (e) =>
-            (0, i.jsxs)(a.animated.div, {
-                className: p.tierClose,
+            (0, s.jsxs)(c.animated.div, {
+                className: x.tierClose,
                 style: e,
                 children: [
-                    (0, i.jsx)(c.Z, {
-                        className: p.tierCloseMechaWumpus,
+                    (0, s.jsx)(u.Z, {
+                        className: x.tierCloseMechaWumpus,
                         stage: f,
                         onFlyingComplete: m
                     }),
-                    (0, i.jsx)('div', {
-                        className: s()(p.tierCloseHint, _),
-                        children: x.intl.format(x.t.qV3Erq, { numLeft: d - l })
+                    (0, s.jsx)('div', {
+                        className: o()(x.tierCloseHint, h),
+                        children: b.NW.format(b.t.qV3Erq, { numLeft: i - r })
                     }),
-                    (0, i.jsx)(o.P3F, {
-                        onClick: u,
-                        className: s()(p.tierCloseClose, _),
-                        children: (0, i.jsx)(o.k$p, {
+                    (0, s.jsx)(d.P3F, {
+                        onClick: l,
+                        className: o()(x.tierCloseClose, h),
+                        children: (0, s.jsx)(d.k$p, {
                             size: 'md',
                             color: 'currentColor',
-                            className: p.tierCloseCloseIcon
+                            className: x.tierCloseCloseIcon
                         })
                     })
                 ]
             })
     });
 }
-function v(e) {
-    let { withCardBody: t, isAnimatedTo: n, hasAnimatedUnlocked: l, onSetRef: a, tier: c, showHeaderLockStatus: d, headerButton: u = null, subscriptionsRequired: h, subscriptionCount: g, className: x } = e,
-        C = (e) => {
-            null == a || a(e);
+function _(e) {
+    let { withCardBody: t, isAnimatedTo: n, hasAnimatedUnlocked: r, onSetRef: i, tier: l, showHeaderLockStatus: c, headerButton: u = null, subscriptionsRequired: m, subscriptionCount: p, className: h } = e,
+        f = (e) => {
+            null == i || i(e);
         },
-        [v, N] = r.useState(0);
+        [b, N] = a.useState(0);
     return (
-        r.useLayoutEffect(() => {
+        a.useLayoutEffect(() => {
             n && N(1);
         }, [n]),
-        (0, i.jsx)(o.AMe, {
+        (0, s.jsx)(d.AMe, {
             from: { unlockedTranslateY: 50 },
-            to: { unlockedTranslateY: 0 === v ? 50 : 0 },
-            config: _,
+            to: { unlockedTranslateY: 50 * (0 === b) },
+            config: j,
             children: (e) =>
-                (0, i.jsx)('div', {
-                    className: s()(
+                (0, s.jsx)('div', {
+                    className: o()(
                         {
-                            [p.tierHeaderWithoutCardBody]: !t,
-                            [p.tierHeaderUnlocked]: l,
-                            [p.tierHeaderLocked]: !l
+                            [x.tierHeaderWithoutCardBody]: !t,
+                            [x.tierHeaderUnlocked]: r,
+                            [x.tierHeaderLocked]: !r
                         },
-                        x
+                        h
                     ),
-                    ref: C,
-                    children: (0, i.jsxs)('div', {
-                        className: p.tierHeaderContent,
+                    ref: f,
+                    children: (0, s.jsxs)('div', {
+                        className: x.tierHeaderContent,
                         children: [
-                            (0, i.jsx)(m.Z, {
-                                tier: c.tier,
-                                className: s()(p.tierIcon, { [p.tierIconLocked]: !l })
+                            (0, s.jsx)(g.Z, {
+                                tier: l.tier,
+                                className: o()(x.tierIcon, { [x.tierIconLocked]: !r })
                             }),
-                            (0, i.jsx)('div', {
-                                className: s()(p.tierTitle, { [p.tierTitleActive]: l }),
-                                children: c.title
+                            (0, s.jsx)('div', {
+                                className: o()(x.tierTitle, { [x.tierTitleActive]: r }),
+                                children: l.title
                             }),
-                            d
-                                ? (0, i.jsx)(j, {
+                            c
+                                ? (0, s.jsx)(y, {
                                       transform: null == e ? void 0 : e.unlockedTranslateY.to((e) => 'translate3d(0, '.concat(e, 'px, 0)')),
                                       headerButton: u,
-                                      subscriptionsRequired: h,
-                                      hasAnimatedUnlocked: l
+                                      subscriptionsRequired: m,
+                                      hasAnimatedUnlocked: r
                                   })
                                 : null,
-                            (0, i.jsx)(f, {
-                                numUnlocked: g,
-                                numRequired: h
+                            (0, s.jsx)(v, {
+                                numUnlocked: p,
+                                numRequired: m
                             })
                         ]
                     })
@@ -121,42 +159,42 @@ function v(e) {
         })
     );
 }
-function N(e) {
-    let { children: t, subscriptionCount: n, onSetRef: r, tier: l, isAnimatedTo: a, hasBottomMargin: c, headerButton: m = null, withCardBody: _ = !0, guildId: C, showHeaderLockStatus: f = !0 } = e,
-        N = (0, h.vn)(C)[l.tier],
-        j = a && n >= N,
-        I = l.tier !== g.Eu4.NONE && l.tier !== g.Eu4.TIER_1,
-        E = (e, t) => {
+function O(e) {
+    let { children: t, subscriptionCount: n, onSetRef: r, tier: i, isAnimatedTo: a, hasBottomMargin: l, headerButton: c = null, withCardBody: u = !0, guildId: g, showHeaderLockStatus: j = !0 } = e,
+        N = (0, h.vn)(g)[i.tier],
+        v = a && n >= N,
+        O = i.tier !== f.Eu4.NONE && i.tier !== f.Eu4.TIER_1,
+        y = (e, t) => {
             var n;
-            let { icon: r, className: l } = (0, d.t)(e.icon, t);
-            return (0, i.jsxs)(
+            let { icon: r, className: i } = (0, m.t)(e.icon, t);
+            return (0, s.jsxs)(
                 'div',
                 {
-                    className: p.perk,
+                    className: x.perk,
                     children: [
-                        (0, i.jsx)(u.Z, {
+                        (0, s.jsx)(p.Z, {
                             name: String(e.icon),
                             icon: r,
-                            className: p.perkIcon,
-                            iconClassName: l
+                            className: x.perkIcon,
+                            iconClassName: i
                         }),
-                        (0, i.jsxs)('div', {
-                            className: p.perkText,
+                        (0, s.jsxs)('div', {
+                            className: x.perkText,
                             children: [
-                                (0, i.jsxs)('div', {
-                                    className: p.perkTitle,
+                                (0, s.jsxs)('div', {
+                                    className: x.perkTitle,
                                     children: [
                                         e.title,
                                         e.isNew
-                                            ? (0, i.jsx)(o.IGR, {
-                                                  className: p.newBadge,
-                                                  text: x.intl.string(x.t.y2b7CA)
+                                            ? (0, s.jsx)(d.IGR, {
+                                                  className: x.newBadge,
+                                                  text: b.NW.string(b.t.y2b7CA)
                                               })
                                             : null
                                     ]
                                 }),
-                                (0, i.jsx)('div', {
-                                    className: p.perkDescription,
+                                (0, s.jsx)('div', {
+                                    className: x.perkDescription,
                                     children: e.description
                                 })
                             ]
@@ -166,76 +204,76 @@ function N(e) {
                 null === (n = e.title) || void 0 === n ? void 0 : n.toString()
             );
         };
-    return (0, i.jsxs)(
+    return (0, s.jsxs)(
         'div',
         {
-            className: s()(p.tier, { [p.tierBottomMargin]: c }),
+            className: o()(x.tier, { [x.tierBottomMargin]: l }),
             children: [
-                (0, i.jsx)(v, {
+                (0, s.jsx)(_, {
                     subscriptionCount: n,
-                    tier: l,
-                    headerButton: m,
-                    showHeaderLockStatus: f,
+                    tier: i,
+                    headerButton: c,
+                    showHeaderLockStatus: j,
                     onSetRef: (e) => {
-                        null != r && r(e, l);
+                        null != r && r(e, i);
                     },
-                    withCardBody: _,
-                    guildId: C,
-                    hasBottomMargin: c,
+                    withCardBody: u,
+                    guildId: g,
+                    hasBottomMargin: l,
                     subscriptionsRequired: N,
-                    hasAnimatedUnlocked: j,
+                    hasAnimatedUnlocked: v,
                     isAnimatedTo: a
                 }),
-                (0, i.jsx)('div', {
-                    className: s()({ [p.tierBody]: _ }),
+                (0, s.jsx)('div', {
+                    className: o()({ [x.tierBody]: u }),
                     children:
                         null != t
                             ? t
-                            : (0, i.jsxs)(i.Fragment, {
+                            : (0, s.jsxs)(s.Fragment, {
                                   children: [
-                                      I
-                                          ? (0, i.jsx)('div', {
-                                                className: p.previousPerks,
-                                                children: x.intl.string(x.t.oKzyRU)
+                                      O
+                                          ? (0, s.jsx)('div', {
+                                                className: x.previousPerks,
+                                                children: b.NW.string(b.t.oKzyRU)
                                             })
                                           : null,
-                                      null != l.perks &&
-                                          (0, i.jsx)('div', {
-                                              className: p.perks,
-                                              children: l.perks.map((e) => E(e, j))
+                                      null != i.perks &&
+                                          (0, s.jsx)('div', {
+                                              className: x.perks,
+                                              children: i.perks.map((e) => y(e, v))
                                           })
                                   ]
                               })
                 })
             ]
         },
-        l.tier
+        i.tier
     );
 }
-let j = (e) => {
-        let { transform: t, hasAnimatedUnlocked: n, headerButton: r, subscriptionsRequired: l } = e;
-        return null !== r ? r : n ? (0, i.jsx)(I, { transform: t }) : (0, i.jsx)(E, { subscriptionsRequired: l });
+let y = (e) => {
+        let { transform: t, hasAnimatedUnlocked: n, headerButton: r, subscriptionsRequired: i } = e;
+        return null !== r ? r : n ? (0, s.jsx)(C, { transform: t }) : (0, s.jsx)(I, { subscriptionsRequired: i });
     },
-    I = (e) => {
+    C = (e) => {
         let { transform: t } = e;
-        return (0, i.jsx)(a.animated.div, {
+        return (0, s.jsx)(c.animated.div, {
             style: { transform: t },
-            className: p.tierUnlocked,
-            children: x.intl.string(x.t.dNGM0t)
+            className: x.tierUnlocked,
+            children: b.NW.string(b.t.dNGM0t)
         });
     },
-    E = (e) => {
+    I = (e) => {
         let { subscriptionsRequired: t } = e;
-        return (0, i.jsxs)(i.Fragment, {
+        return (0, s.jsxs)(s.Fragment, {
             children: [
-                (0, i.jsx)('div', {
-                    className: p.tierRequirement,
-                    children: x.intl.format(x.t.t2Wbo6, { required: t })
+                (0, s.jsx)('div', {
+                    className: x.tierRequirement,
+                    children: b.NW.format(b.t.t2Wbo6, { required: t })
                 }),
-                (0, i.jsx)(o.mBM, {
+                (0, s.jsx)(d.mBM, {
                     size: 'md',
                     color: 'currentColor',
-                    className: p.tierLock
+                    className: x.tierLock
                 })
             ]
         });

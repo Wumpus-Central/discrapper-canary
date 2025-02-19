@@ -1,31 +1,79 @@
-n.d(c, { default: () => f });
-var e = n(200651);
+n.d(t, { default: () => l });
+var r = n(200651);
 n(192379);
-var a = n(98278),
-    o = n(790527),
-    i = n(474936),
-    s = n(981631),
-    d = n(388032),
-    p = n(102525);
-function f(t) {
-    let { onClose: c, source: n, ...f } = t,
-        r = d.intl.format(d.t.WMO9pq, {
-            onAndMore: function () {
-                c(), (0, a.z)(!0);
+var o = n(98278),
+    c = n(790527),
+    a = n(474936),
+    i = n(981631),
+    f = n(388032),
+    u = n(102525);
+function l(e) {
+    var { onClose: t, source: n } = e,
+        l = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                o = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        r,
+                        o = {},
+                        c = Object.keys(e);
+                    for (r = 0; r < c.length; r++) (n = c[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
+                    return o;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var c = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < c.length; r++) (n = c[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
             }
-        });
-    return (0, e.jsx)(o.Z, {
-        artURL: p.Z,
-        type: i.cd.PREMIUM_GUILD_IDENTITY_MODAL,
-        title: d.intl.string(d.t.kOEBKC),
-        body: r,
-        glowUp: r,
-        analyticsSource: n,
-        analyticsLocation: {
-            section: s.jXE.PREMIUM_GUILD_MEMBER_PROFILE_UPSELL_MODAL,
-            object: s.qAy.BUTTON_CTA
-        },
-        onClose: c,
-        ...f
+            return o;
+        })(e, ['onClose', 'source']);
+    let b = f.NW.format(f.t.WMO9pq, {
+        onAndMore: function () {
+            t(), (0, o.z)(!0);
+        }
     });
+    return (0, r.jsx)(
+        c.Z,
+        (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    r = Object.keys(n);
+                'function' == typeof Object.getOwnPropertySymbols &&
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        })
+                    )),
+                    r.forEach(function (t) {
+                        var r;
+                        (r = n[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: r,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0
+                                  })
+                                : (e[t] = r);
+                    });
+            }
+            return e;
+        })(
+            {
+                artURL: u.Z,
+                type: a.cd.PREMIUM_GUILD_IDENTITY_MODAL,
+                title: f.NW.string(f.t.kOEBKC),
+                body: b,
+                glowUp: b,
+                analyticsSource: n,
+                analyticsLocation: {
+                    section: i.jXE.PREMIUM_GUILD_MEMBER_PROFILE_UPSELL_MODAL,
+                    object: i.qAy.BUTTON_CTA
+                },
+                onClose: t
+            },
+            l
+        )
+    );
 }

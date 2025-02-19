@@ -1,27 +1,27 @@
 n.d(t, {
-    Cy: () => C,
-    DY: () => P,
-    FG: () => y,
-    u: () => x
+    Cy: () => D,
+    DY: () => U,
+    FG: () => T,
+    u: () => j
 }),
     n(411104),
     n(47120);
-var i,
-    r = n(200651),
-    a = n(192379),
-    s = n(120356),
-    o = n.n(s),
+var r,
+    i = n(200651),
+    o = n(192379),
+    a = n(120356),
+    s = n.n(a),
     l = n(995295),
-    u = n(642128),
-    c = n(873546),
+    c = n(642128),
+    u = n(873546),
     d = n(374470),
     f = n(846519),
-    _ = n(377527),
-    p = n(186325),
+    p = n(377527),
+    _ = n(186325),
     h = n(481060),
     m = n(607070),
     g = n(314910),
-    E = n(752257);
+    E = n(231964);
 function v(e, t, n) {
     return (
         t in e
@@ -35,14 +35,73 @@ function v(e, t, n) {
         e
     );
 }
-var y = (function (e) {
+function b(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                v(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function y(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function O(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : y(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function S(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = I(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function I(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+var T = (function (e) {
     return (e.PRIMARY = 'primary'), (e.NESTED = 'nested'), (e.BLACK = 'black'), (e.GREY = 'grey'), (e.BRAND = 'brand'), (e.GREEN = 'green'), (e.YELLOW = 'yellow'), (e.RED = 'red'), (e.PREMIUM = 'premium'), e;
 })({});
-let I = 16,
-    T = 10,
-    b = 8,
-    S = Object.freeze({}),
-    A = Object.freeze({
+let N = 16,
+    A = 10,
+    C = 8,
+    R = Object.freeze({}),
+    P = Object.freeze({
         top: E.tooltipTop,
         bottom: E.tooltipBottom,
         left: E.tooltipLeft,
@@ -59,91 +118,94 @@ let I = 16,
         red: E.tooltipRed,
         premium: E.tooltipPremium
     });
-function N(e, t, n) {
-    let i = 'left' === e || 'right' === e,
-        r = i ? 'top' : 'left',
-        a = i ? 'top' : 'left',
-        s = i ? 'bottom' : 'right',
-        o = '50%',
+function w(e, t, n) {
+    let r = 'left' === e || 'right' === e,
+        i = r ? 'top' : 'left',
+        o = r ? 'top' : 'left',
+        a = r ? 'bottom' : 'right',
+        s = '50%',
         l = n;
-    return t === a ? ((o = '0%'), (l += I)) : t === s && ((o = '100%'), (l -= T + T)), { [r]: 'calc('.concat(o, ' + ').concat(l, 'px)') };
+    return t === o ? ((s = '0%'), (l += N)) : t === a && ((s = '100%'), (l -= A + A)), { [i]: 'calc('.concat(s, ' + ').concat(l, 'px)') };
 }
-let C = (e) => {
-        let { targetElementRef: t, align: n = 'center', position: i, color: a, children: s, onNonAccessibleClick: l, tooltipClassName: c, tooltipStyle: d, tooltipContentClassName: f, spacing: _ = b, animationStyle: p, disableTooltipPointerEvents: h = !1, allowOverflow: m = !1, tooltipPointerClassName: v } = e,
-            y = ''.concat('string' == typeof s ? s : '', ':').concat(i);
-        return (0, r.jsx)(g.W5, {
+let D = (e) => {
+        let { targetElementRef: t, align: n = 'center', position: r, color: o, children: a, onNonAccessibleClick: l, tooltipClassName: u, tooltipStyle: d, tooltipContentClassName: f, spacing: p = C, animationStyle: _, disableTooltipPointerEvents: h = !1, allowOverflow: m = !1, tooltipPointerClassName: v } = e,
+            y = ''.concat('string' == typeof a ? a : '', ':').concat(r);
+        return (0, i.jsx)(g.W5, {
             disablePointerEvents: h,
             targetRef: t,
-            position: i,
+            position: r,
             autoInvert: !0,
             align: n,
             positionKey: y,
-            spacing: _,
+            spacing: p,
             nudgeAlignIntoViewport: !0,
             children: (e) => {
-                let { position: t, nudge: _ } = e;
-                return (0, r.jsxs)(u.animated.div, {
+                let { position: t, nudge: p } = e;
+                return (0, i.jsxs)(c.animated.div, {
                     onClick: l,
-                    className: o()(E.tooltip, A[null != t ? t : i], A[a], { [E.tooltipDisablePointerEvents]: h }, c),
-                    style: {
-                        ...p,
-                        ...d
-                    },
+                    className: s()(E.tooltip, P[null != t ? t : r], P[o], { [E.tooltipDisablePointerEvents]: h }, u),
+                    style: b({}, _, d),
                     children: [
-                        (0, r.jsx)('div', {
-                            className: o()(E.tooltipPointer, E.tooltipPointerBg, v),
-                            style: N(null != t ? t : i, n, _)
+                        (0, i.jsx)('div', {
+                            className: s()(E.tooltipPointer, E.tooltipPointerBg, v),
+                            style: w(null != t ? t : r, n, p)
                         }),
-                        (0, r.jsx)('div', {
-                            className: o()(E.tooltipPointer, v),
-                            style: N(null != t ? t : i, n, _)
+                        (0, i.jsx)('div', {
+                            className: s()(E.tooltipPointer, v),
+                            style: w(null != t ? t : r, n, p)
                         }),
-                        (0, r.jsx)('div', {
-                            className: o()(E.tooltipContent, { [E.tooltipContentAllowOverflow]: m }, f),
-                            children: s
+                        (0, i.jsx)('div', {
+                            className: s()(E.tooltipContent, { [E.tooltipContentAllowOverflow]: m }, f),
+                            children: a
                         })
                     ]
                 });
             }
         });
     },
-    R = {
+    x = {
         scale: 0.95,
         opacity: 0
     },
-    O = {
+    L = {
         scale: 1,
         opacity: 0
     },
-    D = {
+    M = {
         scale: 1,
         opacity: 1
     },
-    L = (e) => {
-        let { isVisible: t, onAnimationRest: n, targetElementRef: i, ...s } = e,
-            { reducedMotion: o } = a.useContext(p.S);
+    k = (e) => {
+        var { isVisible: t, onAnimationRest: n, targetElementRef: r } = e,
+            a = S(e, ['isVisible', 'onAnimationRest', 'targetElementRef']);
+        let { reducedMotion: s } = o.useContext(_.S);
         return (0, h.Yzy)(
             t,
             {
                 keys: (e) => (e ? 'tooltip' : 'empty'),
-                config: _.F,
-                from: o.enabled ? O : R,
-                enter: D,
-                leave: o.enabled ? O : R,
+                config: p.F,
+                from: s.enabled ? L : x,
+                enter: M,
+                leave: s.enabled ? L : x,
                 onRest: n
             },
             'animate-always'
         )((e, t) =>
             t
-                ? (0, r.jsx)(C, {
-                      animationStyle: e,
-                      targetElementRef: i,
-                      ...s
-                  })
+                ? (0, i.jsx)(
+                      D,
+                      b(
+                          {
+                              animationStyle: e,
+                              targetElementRef: r
+                          },
+                          a
+                      )
+                  )
                 : null
         );
     };
-class x extends (i = a.Component) {
+class j extends (r = o.Component) {
     static getDerivedStateFromProps(e, t) {
         return t.shouldShowTooltip && null == e.text ? { shouldShowTooltip: !1 } : null;
     }
@@ -166,10 +228,10 @@ class x extends (i = a.Component) {
     }
     render() {
         let e;
-        let { children: t, text: n, 'aria-label': i } = this.props;
-        if (null == n) return t(S);
-        'string' == typeof i ? (e = i) : 'string' == typeof n && !1 !== i && (e = n);
-        let s = {
+        let { children: t, text: n, 'aria-label': r } = this.props;
+        if (null == n) return t(R);
+        'string' == typeof r ? (e = r) : 'string' == typeof n && !1 !== r && (e = n);
+        let a = {
             onClick: this.handleClick,
             onMouseEnter: this.handleMouseEnter,
             onMouseLeave: this.handleMouseLeave,
@@ -178,9 +240,9 @@ class x extends (i = a.Component) {
             onBlur: this.handleBlur
         };
         return (
-            null != e && (s['aria-label'] = e),
-            (0, r.jsxs)(a.Fragment, {
-                children: [t(s), this.renderTooltip()]
+            null != e && (a['aria-label'] = e),
+            (0, i.jsxs)(o.Fragment, {
+                children: [t(a), this.renderTooltip()]
             })
         );
     }
@@ -189,24 +251,24 @@ class x extends (i = a.Component) {
         return e.shouldShow && (t.shouldShowTooltip || e.forceOpen) && n;
     }
     renderTooltip() {
-        let { text: e, align: t, position: n, color: i, spacing: a, tooltipClassName: s, tooltipStyle: o, tooltipContentClassName: l, disableTooltipPointerEvents: u, onAnimationRest: d, allowOverflow: f, clickableOnMobile: _, hideOnClick: p, tooltipPointerClassName: h } = this.props,
-            m = (c.tq || c.Em) && !0 === _ && p,
-            g = (!1 !== u && !m) || !0 === u,
+        let { text: e, align: t, position: n, color: r, spacing: o, tooltipClassName: a, tooltipStyle: s, tooltipContentClassName: l, disableTooltipPointerEvents: c, onAnimationRest: d, allowOverflow: f, clickableOnMobile: p, hideOnClick: _, tooltipPointerClassName: h } = this.props,
+            m = (u.tq || u.Em) && !0 === p && _,
+            g = (!1 !== c && !m) || !0 === c,
             E = this.shouldShowTooltip(this.props, this.state) && this.hasDomElement,
             v = null;
         return (
             (v = e instanceof Function ? (E ? e() : null) : e),
-            (0, r.jsx)(L, {
+            (0, i.jsx)(k, {
                 disableTooltipPointerEvents: g,
                 targetElementRef: this.domElementRef,
-                tooltipStyle: o,
-                tooltipClassName: s,
+                tooltipStyle: s,
+                tooltipClassName: a,
                 tooltipContentClassName: l,
                 tooltipPointerClassName: h,
                 align: t,
                 position: n,
-                color: i,
-                spacing: a,
+                color: r,
+                spacing: o,
                 isVisible: E,
                 onAnimationRest: d,
                 onNonAccessibleClick: m ? this.handleClick : void 0,
@@ -228,8 +290,8 @@ class x extends (i = a.Component) {
     }
     toggleShow(e) {
         if (this.state.shouldShowTooltip !== e) {
-            var t, n, i, r;
-            e ? null === (t = (n = this.props).onTooltipShow) || void 0 === t || t.call(n) : null === (i = (r = this.props).onTooltipHide) || void 0 === i || i.call(r),
+            var t, n, r, i;
+            e ? null === (t = (n = this.props).onTooltipShow) || void 0 === t || t.call(n) : null === (r = (i = this.props).onTooltipHide) || void 0 === r || r.call(i),
                 l.flushSync(() => {
                     this.setState({ shouldShowTooltip: e });
                 });
@@ -238,14 +300,14 @@ class x extends (i = a.Component) {
     constructor(...e) {
         super(...e),
             v(this, 'showTimeout', new f.V7()),
-            v(this, 'domElementRef', a.createRef()),
+            v(this, 'domElementRef', o.createRef()),
             v(this, 'hasDomElement', !1),
             v(this, 'state', { shouldShowTooltip: !1 }),
             v(this, 'handleMouseEnter', () => {
-                ((c.tq || c.Em) && !0 === this.props.clickableOnMobile) || this.show();
+                ((u.tq || u.Em) && !0 === this.props.clickableOnMobile) || this.show();
             }),
             v(this, 'handleMouseLeave', () => {
-                ((c.tq || c.Em) && !0 === this.props.clickableOnMobile) || this.hide();
+                ((u.tq || u.Em) && !0 === this.props.clickableOnMobile) || this.hide();
             }),
             v(this, 'handleFocus', () => {
                 m.Z.keyboardModeEnabled && this.show();
@@ -255,38 +317,26 @@ class x extends (i = a.Component) {
             }),
             v(this, 'handleClick', () => {
                 let e = this.hasDomElement;
-                e && this.props.hideOnClick ? this.hide() : !e && (c.tq || c.Em) && !0 === this.props.clickableOnMobile && this.show();
+                e && this.props.hideOnClick ? this.hide() : !e && (u.tq || u.Em) && !0 === this.props.clickableOnMobile && this.show();
             }),
             v(this, 'handleContextMenu', () => {
                 this.hide();
             });
     }
 }
-v(x, 'Colors', y),
-    v(x, 'defaultProps', {
+v(j, 'Colors', T),
+    v(j, 'defaultProps', {
         hideOnClick: !0,
         position: 'top',
         color: 'primary',
         forceOpen: !1,
-        spacing: b,
+        spacing: C,
         shouldShow: !0,
         allowOverflow: !1,
         overflowOnly: !1
     });
-let P = (e) => {
-    let { children: t, className: n, element: i = 'div', ...s } = e;
-    return (0, r.jsx)(x, {
-        ...s,
-        children: (e) =>
-            a.createElement(
-                i,
-                null != n
-                    ? {
-                          ...e,
-                          className: n
-                      }
-                    : e,
-                t
-            )
-    });
+let U = (e) => {
+    var { children: t, className: n, element: r = 'div' } = e,
+        a = S(e, ['children', 'className', 'element']);
+    return (0, i.jsx)(j, O(b({}, a), { children: (e) => o.createElement(r, null != n ? O(b({}, e), { className: n }) : e, t) }));
 };

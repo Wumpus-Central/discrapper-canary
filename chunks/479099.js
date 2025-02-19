@@ -1,141 +1,185 @@
 n.d(t, {
-    Z: () => v,
-    f: () => y
+    Z: () => b,
+    f: () => _
 }),
     n(47120);
-var a,
-    i = n(200651),
+var i,
+    r = n(200651),
     l = n(192379),
-    s = n(120356),
-    o = n.n(s),
-    r = n(91192),
-    c = n(442837),
+    o = n(120356),
+    s = n.n(o),
+    a = n(91192),
+    u = n(442837),
     d = n(481060),
-    u = n(239091),
-    m = n(596454),
-    p = n(607070),
-    g = n(339085),
-    _ = n(695346),
-    h = n(572004),
-    f = n(388032),
-    C = n(352271),
-    E = (((a = E || {})[(a.SMALL = 0)] = 'SMALL'), (a[(a.MEDIUM = 1)] = 'MEDIUM'), a);
-function v(e) {
-    let { tag: t, size: a = 1, disabled: s, className: E, onClick: v, onRemove: y, selected: x, ariaLabel: T } = e,
-        { name: I, emojiId: b, emojiName: M } = t,
-        A = null != y,
-        [S, P] = l.useState(!1),
-        D = (0, c.e7)([g.ZP], () => (null != b ? g.ZP.getUsableCustomEmojiById(b) : null)),
-        L = A || null != v,
-        Z = (!A || !S) && (null != b || null != M),
-        U = 0 === a,
-        R = l.useRef(null),
-        w = (0, c.e7)([p.Z], () => p.Z.keyboardModeEnabled),
-        j = (e) => {
-            let a = _.Sb.getSetting();
-            h.wS &&
-                a &&
-                (0, u.jW)(e, async () => {
+    c = n(239091),
+    h = n(596454),
+    f = n(607070),
+    p = n(339085),
+    g = n(695346),
+    v = n(572004),
+    C = n(388032),
+    E = n(250486);
+function m(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            i = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (i = i.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            i.forEach(function (t) {
+                var i;
+                (i = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: i,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = i);
+            });
+    }
+    return e;
+}
+function O(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var i = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, i);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+var S = (((i = S || {})[(i.SMALL = 0)] = 'SMALL'), (i[(i.MEDIUM = 1)] = 'MEDIUM'), i);
+function b(e) {
+    let { tag: t, size: i = 1, disabled: o, className: S, onClick: b, onRemove: _, selected: I, ariaLabel: y } = e,
+        { name: N, emojiId: T, emojiName: P } = t,
+        w = null != _,
+        [A, j] = l.useState(!1),
+        L = (0, u.e7)([p.ZP], () => (null != T ? p.ZP.getUsableCustomEmojiById(T) : null)),
+        D = w || null != b,
+        R = (!w || !A) && (null != T || null != P),
+        Z = 0 === i,
+        M = l.useRef(null),
+        U = (0, u.e7)([f.Z], () => f.Z.keyboardModeEnabled),
+        x = (e) => {
+            let i = g.Sb.getSetting();
+            v.wS &&
+                i &&
+                (0, c.jW)(e, async () => {
                     let { default: e } = await n.e('29646').then(n.bind(n, 955116));
-                    return (n) =>
-                        (0, i.jsx)(e, {
-                            ...n,
-                            tag: t
-                        });
+                    return (n) => (0, r.jsx)(e, O(m({}, n), { tag: t }));
                 });
         },
-        O = (0, i.jsxs)(i.Fragment, {
+        G = (0, r.jsxs)(r.Fragment, {
             children: [
-                Z
-                    ? (0, i.jsx)(m.Z, {
-                          className: o()(C.emoji, { [C.small]: U }),
-                          emojiId: b,
-                          emojiName: M,
-                          animated: !!(null == D ? void 0 : D.animated),
+                R
+                    ? (0, r.jsx)(h.Z, {
+                          className: s()(E.emoji, { [E.small]: Z }),
+                          emojiId: T,
+                          emojiName: P,
+                          animated: !!(null == L ? void 0 : L.animated),
                           size: 'reaction'
                       })
                     : null,
-                S &&
-                    A &&
-                    (0, i.jsx)('div', {
-                        className: C.closeCircle,
-                        children: (0, i.jsx)(d.Dio, {
+                A &&
+                    w &&
+                    (0, r.jsx)('div', {
+                        className: E.closeCircle,
+                        children: (0, r.jsx)(d.Dio, {
                             size: 'md',
                             color: 'currentColor',
-                            className: C.close
+                            className: E.close
                         })
                     }),
-                (0, i.jsx)(d.Text, {
-                    variant: U ? 'text-xs/semibold' : 'text-sm/semibold',
+                (0, r.jsx)(d.Text, {
+                    variant: Z ? 'text-xs/semibold' : 'text-sm/semibold',
                     lineClamp: 1,
                     color: 'currentColor',
-                    children: I
+                    children: N
                 })
             ]
         }),
-        N = {
+        F = {
             key: t.id,
-            className: o()(
-                C.pill,
+            className: s()(
+                E.pill,
                 {
-                    [C.disabled]: s,
-                    [C.clickable]: L,
-                    [C.small]: U,
-                    [C.selected]: x
+                    [E.disabled]: o,
+                    [E.clickable]: D,
+                    [E.small]: Z,
+                    [E.selected]: I
                 },
-                E
+                S
             ),
             onClick: (e) => {
-                null == v || v(e), null == y || y(t), w || null == R.current || R.current.blur();
+                null == b || b(e), null == _ || _(t), U || null == M.current || M.current.blur();
             },
-            onContextMenu: (e) => j(e),
-            onMouseEnter: () => A && P(!0),
-            onMouseLeave: () => A && P(!1)
+            onContextMenu: (e) => x(e),
+            onMouseEnter: () => w && j(!0),
+            onMouseLeave: () => w && j(!1)
         },
-        z = (0, r.JA)('forum-tag-'.concat(t.id));
-    return L
-        ? (0, i.jsx)(d.P3F, {
-              ...z,
-              innerRef: R,
-              focusProps: { ringTarget: R },
-              'aria-label': null != T ? T : f.intl.formatToPlainString(f.t.iyRTLi, { tagName: I }),
-              role: 'button',
-              'aria-pressed': x,
-              ...N,
-              children: O
-          })
-        : (0, i.jsx)('div', {
-              ...N,
-              children: O
-          });
+        H = (0, a.JA)('forum-tag-'.concat(t.id));
+    return D
+        ? (0, r.jsx)(
+              d.P3F,
+              O(
+                  m(
+                      O(m({}, H), {
+                          innerRef: M,
+                          focusProps: { ringTarget: M },
+                          'aria-label': null != y ? y : C.NW.formatToPlainString(C.t.iyRTLi, { tagName: N }),
+                          role: 'button',
+                          'aria-pressed': I
+                      }),
+                      F
+                  ),
+                  { children: G }
+              )
+          )
+        : (0, r.jsx)('div', O(m({}, F), { children: G }));
 }
-function y(e) {
-    let { tags: t, count: n, size: a = 1 } = e,
-        l = 0 === a;
-    return (0, i.jsx)(d.ua7, {
-        'aria-label': f.intl.string(f.t['P/y+sr']),
-        text: (0, i.jsx)(i.Fragment, {
+function _(e) {
+    let { tags: t, count: n, size: i = 1 } = e,
+        l = 0 === i;
+    return (0, r.jsx)(d.ua7, {
+        'aria-label': C.NW.string(C.t['P/y+sr']),
+        text: (0, r.jsx)(r.Fragment, {
             children: t.map((e) =>
-                (0, i.jsx)(
-                    v,
+                (0, r.jsx)(
+                    b,
                     {
                         tag: e,
-                        className: C.tooltipPill,
-                        size: v.Sizes.SMALL
+                        className: E.tooltipPill,
+                        size: b.Sizes.SMALL
                     },
                     e.id
                 )
             )
         }),
         children: (e) =>
-            (0, i.jsx)('div', {
-                ...e,
-                className: o()(C.pill, { [C.small]: l }),
-                children: (0, i.jsxs)(d.Text, {
-                    variant: l ? 'text-xs/semibold' : 'text-sm/semibold',
-                    children: ['+', n]
+            (0, r.jsx)(
+                'div',
+                O(m({}, e), {
+                    className: s()(E.pill, { [E.small]: l }),
+                    children: (0, r.jsxs)(d.Text, {
+                        variant: l ? 'text-xs/semibold' : 'text-sm/semibold',
+                        children: ['+', n]
+                    })
                 })
-            })
+            )
     });
 }
-v.Sizes = E;
+b.Sizes = S;

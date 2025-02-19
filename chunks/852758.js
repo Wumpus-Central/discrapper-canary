@@ -1,143 +1,193 @@
-n.d(t, { Z: () => A }), n(47120);
-var i = n(200651),
-    l = n(192379),
-    r = n(990547),
-    a = n(442837),
-    s = n(544891),
-    o = n(481060),
-    d = n(893776),
-    c = n(37234),
-    u = n(809206),
-    h = n(110924),
-    m = n(714338),
-    p = n(213609),
-    g = n(429142),
-    _ = n(144114),
-    f = n(210887),
-    E = n(23434),
-    I = n(1964),
-    C = n(762756),
+n.d(t, { Z: () => T }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    l = n(990547),
+    o = n(442837),
+    a = n(544891),
+    s = n(481060),
+    c = n(893776),
+    u = n(37234),
+    d = n(809206),
+    p = n(110924),
+    h = n(714338),
+    g = n(213609),
+    f = n(429142),
+    m = n(144114),
+    b = n(210887),
+    _ = n(23434),
+    E = n(1964),
+    O = n(762756),
     N = n(308569),
     v = n(981631),
-    T = n(815660),
-    S = n(388032);
-function A() {
-    let { action: e, theme: t } = (0, a.cj)([E.Z, f.Z], () => ({
-            action: E.Z.getAction(),
-            theme: f.Z.theme
+    y = n(815660),
+    I = n(388032);
+function C(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function S(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function T() {
+    let { action: e, theme: t } = (0, o.cj)([_.Z, b.Z], () => ({
+            action: _.Z.getAction(),
+            theme: b.Z.theme
         })),
-        A = I.Z.getVerificationTypes(e),
-        [Z, x] = l.useState(0),
-        b = (0, h.Z)(A);
-    (0, p.Z)(
+        T = E.Z.getVerificationTypes(e),
+        [P, j] = i.useState(0),
+        A = (0, p.Z)(T);
+    (0, g.Z)(
         {
-            type: r.ImpressionTypes.MODAL,
-            name: r.ImpressionNames.USER_ACTION_REQUIRED,
+            type: l.ImpressionTypes.MODAL,
+            name: l.ImpressionNames.USER_ACTION_REQUIRED,
             properties: {
-                verification_type: A[0],
-                verification_types: A
+                verification_type: T[0],
+                verification_types: T
             }
         },
         {},
-        [A.toString()]
+        [T.toString()]
     );
-    let L = () => {
-            (0, u.FD)(),
-                (0, o.ZDy)(
+    let Z = () => {
+            (0, d.FD)(),
+                (0, s.ZDy)(
                     async () => {
                         let { default: e } = await n.e('35401').then(n.bind(n, 284549));
-                        return (t) => (0, i.jsx)(e, { ...t });
+                        return (t) => (0, r.jsx)(e, C({}, t));
                     },
                     {
                         modalKey: N.F0,
-                        Layer: g.ZP
+                        Layer: f.ZP
                     }
                 );
         },
-        y = () => {
-            (0, o.ZDy)(
+        x = () => {
+            (0, s.ZDy)(
                 async () => {
                     let { default: e } = await Promise.resolve().then(n.bind(n, 607018));
-                    return (t) =>
-                        (0, i.jsx)(e, {
-                            reason: _.L.USER_ACTION_REQUIRED,
-                            ...t
-                        });
+                    return (t) => (0, r.jsx)(e, C({ reason: m.L.USER_ACTION_REQUIRED }, t));
                 },
                 {
-                    modalKey: T.M,
-                    Layer: g.ZP
+                    modalKey: y.M,
+                    Layer: f.ZP
                 }
             );
         };
     return (
-        l.useEffect(
+        i.useEffect(
             () => (
-                m.Z.disable(),
+                h.Z.disable(),
                 () => {
-                    m.Z.enable();
+                    h.Z.enable();
                 }
             ),
             []
         ),
-        l.useEffect(() => {
-            (null == b ? void 0 : b[0]) === v.PUi.PHONE &&
-                (null == A ? void 0 : A[0]) === v.PUi.EMAIL &&
-                (0, o.ZDy)(
+        i.useEffect(() => {
+            (null == A ? void 0 : A[0]) === v.PUi.PHONE &&
+                (null == T ? void 0 : T[0]) === v.PUi.EMAIL &&
+                (0, s.ZDy)(
                     async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 468026));
                         return (t) =>
-                            (0, i.jsx)(e, {
-                                ...t,
-                                title: S.intl.string(S.t.KLnLIC),
-                                body: S.intl.string(S.t.XGbCq6),
-                                confirmText: S.intl.string(S.t['3oK4q6'])
-                            });
+                            (0, r.jsx)(
+                                e,
+                                S(C({}, t), {
+                                    title: I.NW.string(I.t.KLnLIC),
+                                    body: I.NW.string(I.t.XGbCq6),
+                                    confirmText: I.NW.string(I.t['3oK4q6'])
+                                })
+                            );
                     },
                     {
                         modalKey: N.HR,
-                        Layer: g.ZP,
-                        onCloseCallback: L
+                        Layer: f.ZP,
+                        onCloseCallback: Z
                     }
                 );
-        }, [A, b]),
-        (0, i.jsx)(C.Z, {
-            types: A,
-            captchaKey: Z,
+        }, [T, A]),
+        (0, r.jsx)(O.Z, {
+            types: T,
+            captchaKey: P,
             onCaptchaVerify: (e) => {
-                s.tn
+                a.tn
                     .post({
                         url: v.ANM.CAPTCHA,
                         body: { captcha_key: e },
                         oldFormErrors: !0,
                         rejectWithError: !0
                     })
-                    .then(c.xf, () => {
-                        x((e) => e + 1);
+                    .then(u.xf, () => {
+                        j((e) => e + 1);
                     });
             },
             theme: t,
             onClick: (e) => {
-                e === v.PUi.EMAIL_OR_PHONE || e === v.PUi.EMAIL || e === v.PUi.REVERIFY_EMAIL ? L() : y();
+                e === v.PUi.EMAIL_OR_PHONE || e === v.PUi.EMAIL || e === v.PUi.REVERIFY_EMAIL ? Z() : x();
             },
             onLogout: () => {
-                (0, o.ZDy)(
+                (0, s.ZDy)(
                     async () => {
                         let { ConfirmModal: e, Text: t } = await Promise.resolve().then(n.bind(n, 481060));
                         return (n) =>
-                            (0, i.jsx)(e, {
-                                header: S.intl.string(S.t['2jxGen']),
-                                confirmText: S.intl.string(S.t['2jxGen']),
-                                cancelText: S.intl.string(S.t['ETE/oK']),
-                                onConfirm: () => d.Z.logout(),
-                                ...n,
-                                children: (0, i.jsx)(t, {
-                                    variant: 'text-md/normal',
-                                    children: S.intl.string(S.t.SUnWBA)
-                                })
-                            });
+                            (0, r.jsx)(
+                                e,
+                                S(
+                                    C(
+                                        {
+                                            header: I.NW.string(I.t['2jxGen']),
+                                            confirmText: I.NW.string(I.t['2jxGen']),
+                                            cancelText: I.NW.string(I.t['ETE/oK']),
+                                            onConfirm: () => c.Z.logout()
+                                        },
+                                        n
+                                    ),
+                                    {
+                                        children: (0, r.jsx)(t, {
+                                            variant: 'text-md/normal',
+                                            children: I.NW.string(I.t.SUnWBA)
+                                        })
+                                    }
+                                )
+                            );
                     },
-                    { Layer: g.ZP }
+                    { Layer: f.ZP }
                 );
             }
         })

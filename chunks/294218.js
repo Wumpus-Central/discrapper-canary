@@ -1,91 +1,156 @@
-n.d(t, { Z: () => Z });
-var i = n(200651),
-    l = n(192379),
+n.d(t, { Z: () => w });
+var r = n(200651),
+    i = n(192379),
     a = n(120356),
-    r = n.n(a),
-    s = n(91192),
-    o = n(442837),
+    o = n.n(a),
+    l = n(91192),
+    s = n(442837),
     c = n(518738),
     d = n(628238),
     u = n(869765),
-    m = n(592125),
-    _ = n(496675),
-    h = n(709054),
-    p = n(786761),
+    p = n(592125),
+    m = n(496675),
+    f = n(709054),
+    h = n(786761),
     g = n(900164),
-    f = n(739566),
-    x = n(492593),
-    C = n(453687),
-    E = n(25015),
-    v = n(689674),
-    I = n(438075),
-    N = n(963550),
-    S = n(845080),
-    T = n(295790),
-    b = n(145807),
-    A = n(56744),
-    j = n(981631),
-    y = n(71938);
-let Z = l.memo(function (e) {
+    _ = n(739566),
+    b = n(492593),
+    v = n(453687),
+    y = n(25015),
+    x = n(689674),
+    O = n(438075),
+    E = n(963550),
+    j = n(845080),
+    N = n(295790),
+    C = n(145807),
+    I = n(56744),
+    S = n(981631),
+    P = n(656017);
+function T(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function A(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let w = i.memo(function (e) {
     var t, n;
-    let { message: l, compact: a = !1, className: Z, onContextMenu: R, onClick: L, hideSimpleEmbedContent: P = !0, channel: k, isGroupStart: M, animateAvatar: O, subscribeToComponentDispatch: D, renderThreadAccessory: w, trackAnnouncementViews: F = !1, ...U } = e,
-        B = l.type === j.uaV.POLL_RESULT || (null !== (t = e.disableInteraction) && void 0 !== t && t),
-        G = l.isFirstMessageInForumPost(k),
-        H = (0, d.A)((null !== (n = l.editedTimestamp) && void 0 !== n ? n : l.timestamp).valueOf()),
-        { content: V, hasSpoilerEmbeds: z } = (0, E.Z)(l, {
-            hideSimpleEmbedContent: P,
-            allowList: G || H,
-            allowHeading: G || H,
+    let { message: i, compact: a = !1, className: w, onContextMenu: Z, onClick: k, hideSimpleEmbedContent: R = !0, channel: L, isGroupStart: D, animateAvatar: M, subscribeToComponentDispatch: W, renderThreadAccessory: F, trackAnnouncementViews: U = !1 } = e,
+        B = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                i = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        r,
+                        i = {},
+                        a = Object.keys(e);
+                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var a = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+            }
+            return i;
+        })(e, ['message', 'compact', 'className', 'onContextMenu', 'onClick', 'hideSimpleEmbedContent', 'channel', 'isGroupStart', 'animateAvatar', 'subscribeToComponentDispatch', 'renderThreadAccessory', 'trackAnnouncementViews']),
+        G = i.type === S.uaV.POLL_RESULT || (null !== (t = e.disableInteraction) && void 0 !== t && t),
+        H = i.isFirstMessageInForumPost(L),
+        V = (0, d.A)((null !== (n = i.editedTimestamp) && void 0 !== n ? n : i.timestamp).valueOf()),
+        { content: z, hasSpoilerEmbeds: K } = (0, y.Z)(i, {
+            hideSimpleEmbedContent: R,
+            allowList: H || V,
+            allowHeading: H || V,
             allowLinks: !0,
             previewLinkTarget: !0
         }),
-        W = l.type === j.uaV.REPLY ? l.messageReference : void 0,
-        K = (0, o.e7)([u.Z], () => u.Z.getMessageByReference(W)),
-        Y = (0, s.JA)(l.id),
-        X = (0, f.ZP)(l),
-        q = (0, o.e7)([m.Z], () => l.hasFlag(j.iLy.HAS_THREAD) && m.Z.getChannel(h.default.castMessageIdAsChannelId(l.id))),
-        Q = (0, c.p9)({
-            guildId: k.guild_id,
-            roleId: X.iconRoleId
+        Y = i.type === S.uaV.REPLY ? i.messageReference : void 0,
+        X = (0, s.e7)([u.Z], () => u.Z.getMessageByReference(Y)),
+        q = (0, l.JA)(i.id),
+        Q = (0, _.ZP)(i),
+        J = (0, s.e7)([p.Z], () => i.hasFlag(S.iLy.HAS_THREAD) && p.Z.getChannel(f.default.castMessageIdAsChannelId(i.id))),
+        $ = (0, c.p9)({
+            guildId: L.guild_id,
+            roleId: Q.iconRoleId
         }),
-        J = (0, o.e7)([_.Z], () => _.Z.can(j.Plq.CREATE_INSTANT_INVITE, k)),
-        $ = (0, v.Z)({
-            message: l,
-            channel: k,
-            enabled: F
+        ee = (0, s.e7)([m.Z], () => m.Z.can(S.Plq.CREATE_INSTANT_INVITE, L)),
+        et = (0, x.Z)({
+            message: i,
+            channel: L,
+            enabled: U
         });
-    if ((0, g.Z)(l, J)) return null;
-    let ee = (0, C.iG)(l),
-        et = (0, C.Gx)(l);
-    return (0, i.jsx)(x.Z, {
-        compact: a,
-        className: r()(Z, {
-            [y.ephemeral]: (0, p.Pv)(l),
-            [y.disableInteraction]: B
-        }),
-        disableInteraction: B,
-        childrenRepliedMessage: (0, A.Z)(l, k, W, K, a),
-        childrenExecutedCommand: (0, b.Z)(l, k, a),
-        childrenHeader: (0, S.Z)({
-            ...e,
-            guildId: k.guild_id,
-            author: X,
-            roleIcon: Q
-        }),
-        childrenAccessories: e.hideAccessories ? void 0 : (0, I.Q)(e, z),
-        childrenMessageContent: (0, N.Z)(e, V),
-        childrenSystemMessage: (0, T.Z)({
-            ...e,
-            disableInteraction: B
-        }),
-        onContextMenu: R,
-        onClick: L,
-        hasThread: w && null != q && l.hasFlag(j.iLy.HAS_THREAD),
-        hasReply: l.type === j.uaV.REPLY,
-        'aria-labelledby': ee,
-        'aria-describedby': et,
-        messageRef: $,
-        ...Y,
-        ...U
-    });
+    if ((0, g.Z)(i, ee)) return null;
+    let en = (0, v.iG)(i),
+        er = (0, v.Gx)(i);
+    return (0, r.jsx)(
+        b.Z,
+        T(
+            {
+                compact: a,
+                className: o()(w, {
+                    [P.ephemeral]: (0, h.Pv)(i),
+                    [P.disableInteraction]: G
+                }),
+                disableInteraction: G,
+                childrenRepliedMessage: (0, I.Z)(i, L, Y, X, a),
+                childrenExecutedCommand: (0, C.Z)(i, L, a),
+                childrenHeader: (0, j.Z)(
+                    A(T({}, e), {
+                        guildId: L.guild_id,
+                        author: Q,
+                        roleIcon: $
+                    })
+                ),
+                childrenAccessories: e.hideAccessories ? void 0 : (0, O.Q)(e, K),
+                childrenMessageContent: (0, E.Z)(e, z),
+                childrenSystemMessage: (0, N.Z)(A(T({}, e), { disableInteraction: G })),
+                onContextMenu: Z,
+                onClick: k,
+                hasThread: F && null != J && i.hasFlag(S.iLy.HAS_THREAD),
+                hasReply: i.type === S.uaV.REPLY,
+                'aria-labelledby': en,
+                'aria-describedby': er,
+                messageRef: et
+            },
+            q,
+            B
+        )
+    );
 });

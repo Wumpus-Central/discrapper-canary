@@ -1,22 +1,23 @@
 n.d(t, {
-    $j: () => V,
-    M3: () => j,
-    ZP: () => Y
+    $j: () => W,
+    M3: () => Y,
+    ZP: () => z
 }),
     n(47120),
+    n(230036),
     n(411104);
-var i = n(348327),
-    r = n.n(i),
-    a = n(392711),
-    s = n(15729),
-    o = n(259443),
+var r = n(348327),
+    i = n.n(r),
+    o = n(392711),
+    a = n(15729),
+    s = n(259443),
     l = n(731965),
-    u = n(379649),
-    c = n(147913),
+    c = n(379649),
+    u = n(147913),
     d = n(823379),
     f = n(709054),
-    _ = n(823596),
-    p = n(733026),
+    p = n(823596),
+    _ = n(733026),
     h = n(588215),
     m = n(496135),
     g = n(893966);
@@ -33,8 +34,47 @@ function E(e, t, n) {
         e
     );
 }
-let v = -1,
-    y = new o.Yd('MemberSafetySearchManager');
+function v(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                E(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function b(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function y(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : b(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let O = -1,
+    S = new s.Yd('MemberSafetySearchManager');
 function I(e) {
     return 'guild_'.concat(e);
 }
@@ -50,118 +90,111 @@ function T(e) {
         elasticSearchCursor: null
     };
 }
-let b = (0, s.U)((e) => ({}));
-function S(e, t) {
-    let n = b.getState()[e];
+let N = (0, a.U)((e) => ({}));
+function A(e, t) {
+    let n = N.getState()[e];
     return (
         null == n && (n = T(1)),
-        (n = {
-            ...n,
-            ...t
-        }),
+        (n = v({}, n, t)),
         (0, l.j)(() => {
-            b.setState((t) => ({
-                ...t,
-                [e]: n
-            }));
+            N.setState((t) => y(v({}, t), { [e]: n }));
         }),
         n
     );
 }
-function A(e) {
-    return b.getState()[e];
-}
-function N(e) {
-    let t = A(e);
-    return null == t && S(e, (t = T(1))), t;
-}
 function C(e) {
+    return N.getState()[e];
+}
+function R(e) {
+    let t = C(e);
+    return null == t && A(e, (t = T(1))), t;
+}
+function P(e) {
     (0, l.j)(() => {
-        b.setState((t) => {
-            let n = { ...t };
+        N.setState((t) => {
+            let n = v({}, t);
             return delete n[e], n;
         });
     });
 }
-function R(e, t, n, i, r) {
-    let a = A(e);
-    if ((null == a ? void 0 : a.requestState) === 2) {
-        var s;
-        null === (s = a.abortController) || void 0 === s || s.abort();
+function w(e, t, n, r, i) {
+    let o = C(e);
+    if ((null == o ? void 0 : o.requestState) === 2) {
+        var a;
+        null === (a = o.abortController) || void 0 === a || a.abort();
     }
-    return S(e, {
+    return A(e, {
         requestState: 2,
         abortController: new AbortController(),
         lastUpdated: Date.now(),
         query: t,
         cursor: n,
-        previousPagination: i,
-        sort: r
+        previousPagination: r,
+        sort: i
     });
 }
-function O(e) {
-    null != A(e) &&
-        S(e, {
+function D(e) {
+    null != C(e) &&
+        A(e, {
             requestState: 0,
             abortController: null,
             lastUpdated: Date.now()
         });
 }
-async function D(e) {
-    await (0, u._v)(200),
-        null != A(e) &&
-            S(e, {
+async function x(e) {
+    await (0, c._v)(200),
+        null != C(e) &&
+            A(e, {
                 requestState: 3,
                 abortController: null,
                 lastUpdated: Date.now()
             });
 }
 function L(e) {
-    S(e, {
+    A(e, {
         requestState: 4,
         abortController: null,
         lastUpdated: Date.now()
     });
 }
-function x(e) {
-    C(I(e));
+function M(e) {
+    P(I(e));
 }
-function P(e) {
+function k(e) {
     return null != e && e.length > 1;
 }
-function w(e) {
+function j(e) {
     let t = {},
         n = {},
-        { query: i } = e;
-    if (P(i)) {
-        let [e, n] = (0, p.C)(i);
+        { query: r } = e;
+    if (k(r)) {
+        let [e, n] = (0, _.C)(r);
         e.length > 0 && (t.usernames = { or_query: e }), n.length > 0 && (t.user_id = { or_query: n });
     }
-    let { requireUnusualDmActivity: r, requireCommunicationDisabled: a, requireUnusualAccountActivity: s, requireUsernameQuarantined: o } = e,
+    let { requireUnusualDmActivity: i, requireCommunicationDisabled: o, requireUnusualAccountActivity: a, requireUsernameQuarantined: s } = e,
         l = {};
-    r && (l.unusual_dm_activity_until = { range: { gte: Date.now() - h.rL } }), a && (l.communication_disabled_until = { range: { gte: Date.now() } }), s && (l.unusual_account_activity = s), o && (l.automod_quarantined_username = o), Object.keys(l).length > 0 && (n.safety_signals = l);
-    let { selectedRoleIds: u } = e;
-    u.size > 0 && (t.role_ids = { and_query: Array.from(u) });
-    let { selectedJoinDateOption: c } = e;
-    if (null != c.afterDate) {
+    i && (l.unusual_dm_activity_until = { range: { gte: Date.now() - h.rL } }), o && (l.communication_disabled_until = { range: { gte: Date.now() } }), a && (l.unusual_account_activity = a), s && (l.automod_quarantined_username = s), Object.keys(l).length > 0 && (n.safety_signals = l);
+    let { selectedRoleIds: c } = e;
+    c.size > 0 && (t.role_ids = { and_query: Array.from(c) });
+    let { selectedJoinDateOption: u } = e;
+    if (null != u.afterDate) {
         var d;
         t.guild_joined_at = {
             range: {
-                gte: c.afterDate,
-                lte: null !== (d = c.beforeDate) && void 0 !== d ? d : void 0
+                gte: u.afterDate,
+                lte: null !== (d = u.beforeDate) && void 0 !== d ? d : void 0
             }
         };
     }
-    let { selectedAccountAgeOption: _ } = e;
-    if (null != _.afterDate) {
+    let { selectedAccountAgeOption: p } = e;
+    if (null != p.afterDate) {
         let e = t.user_id;
-        t.user_id = {
-            ...e,
+        t.user_id = y(v({}, e), {
             range: {
-                gte: f.default.fromTimestamp(_.afterDate),
-                lte: null != _.beforeDate ? f.default.fromTimestamp(_.beforeDate) : void 0
+                gte: f.default.fromTimestamp(p.afterDate),
+                lte: null != p.beforeDate ? f.default.fromTimestamp(p.beforeDate) : void 0
             }
-        };
+        });
     }
     let { selectedSourceInviteCode: m } = e;
     null != m && (t.source_invite_code = { or_query: [m] });
@@ -171,153 +204,148 @@ function w(e) {
             or_query: n,
             and_query: t
         },
-        { selectedSort: v } = e;
-    return null != v && (E.sort = v), E;
+        { selectedSort: b } = e;
+    return null != b && (E.sort = b), E;
 }
-function M(e, t) {
-    return null == t
-        ? e
-        : {
-              ...e,
-              ...t
-          };
-}
-function k(e, t) {
-    return Math.floor(Math.max(e - 1, 0) / t);
-}
-function U(e) {
-    let t = (0, _.t3)(e),
-        n = e.pageSize * (e.currentPage - 1),
-        i = e.pageSize * e.currentPage,
-        r = e.pageSize * (e.currentPage + 1);
-    return {
-        previousPageChunkNumber: k(n, t),
-        currentPageChunkNumber: k(i, t),
-        nextPageChunkNumber: k(r, t)
-    };
+function U(e, t) {
+    return null == t ? e : v({}, e, t);
 }
 function G(e, t) {
+    return Math.floor(Math.max(e - 1, 0) / t);
+}
+function B(e) {
+    let t = (0, p.t3)(e),
+        n = e.pageSize * (e.currentPage - 1),
+        r = e.pageSize * e.currentPage,
+        i = e.pageSize * (e.currentPage + 1);
+    return {
+        previousPageChunkNumber: G(n, t),
+        currentPageChunkNumber: G(r, t),
+        nextPageChunkNumber: G(i, t)
+    };
+}
+function Z(e, t) {
     var n;
-    let { currentPageChunkNumber: i, previousPageChunkNumber: r, nextPageChunkNumber: a } = U(t),
-        { previousPagination: s } = N(I(e)),
-        o = t.currentPage,
-        l = null !== (n = null == s ? void 0 : s.currentPage) && void 0 !== n ? n : 0,
-        u = g.Z.getElasticSearchPaginationByGuildId(e);
+    let { currentPageChunkNumber: r, previousPageChunkNumber: i, nextPageChunkNumber: o } = B(t),
+        { previousPagination: a } = R(I(e)),
+        s = t.currentPage,
+        l = null !== (n = null == a ? void 0 : a.currentPage) && void 0 !== n ? n : 0,
+        c = g.Z.getElasticSearchPaginationByGuildId(e);
     switch (!0) {
-        case null == u:
-        case i === a && 0 === i:
+        case null == c:
+        case r === o && 0 === r:
             return 0;
-        case i === a && i === r:
+        case r === o && r === i:
             return 1;
-        case l < o && i < a:
+        case l < s && r < o:
             return 2;
-        case l > o && i >= r:
-            if (0 < i) return 3;
+        case l > s && r >= i:
+            if (0 < r) return 3;
             return 0;
         default:
             return 1;
     }
 }
-function B(e, t, n) {
-    var i, r, a, s, o, l;
-    let u = G(e, n),
-        c = g.Z.getElasticSearchPaginationByGuildId(e),
-        f = (0, _.t3)(n);
-    switch (u) {
+function F(e, t, n) {
+    var r, i, o, a, s, l;
+    let c = Z(e, n),
+        u = g.Z.getElasticSearchPaginationByGuildId(e),
+        f = (0, p.t3)(n);
+    switch (c) {
         case 0:
             return [null, { limit: f }];
         case 1:
             return [
-                null !== (i = t.cursor) && void 0 !== i ? i : null,
+                null !== (r = t.cursor) && void 0 !== r ? r : null,
                 {
                     limit: f,
-                    after: null !== (r = t.cursor) && void 0 !== r ? r : void 0
+                    after: null !== (i = t.cursor) && void 0 !== i ? i : void 0
                 }
             ];
         case 2:
             return [
-                null !== (a = null == c ? void 0 : c.after) && void 0 !== a ? a : null,
+                null !== (o = null == u ? void 0 : u.after) && void 0 !== o ? o : null,
                 {
                     limit: f,
-                    after: null !== (s = null == c ? void 0 : c.after) && void 0 !== s ? s : void 0
+                    after: null !== (a = null == u ? void 0 : u.after) && void 0 !== a ? a : void 0
                 }
             ];
         case 3:
             return [
-                null !== (o = null == c ? void 0 : c.before) && void 0 !== o ? o : null,
+                null !== (s = null == u ? void 0 : u.before) && void 0 !== s ? s : null,
                 {
                     limit: f,
-                    before: null !== (l = null == c ? void 0 : c.before) && void 0 !== l ? l : void 0
+                    before: null !== (l = null == u ? void 0 : u.before) && void 0 !== l ? l : void 0
                 }
             ];
         default:
-            (0, d.vE)(u);
+            (0, d.vE)(c);
     }
 }
-function Z(e, t) {
-    let n = N(e);
-    return r()(n.query, t);
+function V(e, t) {
+    let n = R(e);
+    return i()(n.query, t);
 }
-async function F(e) {
-    var t, n, i;
-    let r = g.Z.getSearchStateByGuildId(e),
-        s = g.Z.getPaginationStateByGuildId(e),
-        o = I(e),
-        l = N(o),
-        [u, c] = B(e, l, s),
-        d = M(w(r), c),
-        f = null !== (t = r.selectedSort) && void 0 !== t ? t : h.d$.ORDER_BY_GUILD_JOINED_AT_DESC;
-    if (Z(o, d) && (0, a.isEqual)(u, l.cursor)) return;
-    let _ = R(o, d, u, s, f);
+async function H(e) {
+    var t, n, r;
+    let i = g.Z.getSearchStateByGuildId(e),
+        a = g.Z.getPaginationStateByGuildId(e),
+        s = I(e),
+        l = R(s),
+        [c, u] = F(e, l, a),
+        d = U(j(i), u),
+        f = null !== (t = i.selectedSort) && void 0 !== t ? t : h.d$.ORDER_BY_GUILD_JOINED_AT_DESC;
+    if (V(s, d) && (0, o.isEqual)(c, l.cursor)) return;
+    let p = w(s, d, c, a, f);
     try {
         if (
-            (y.info('Making member search request', {
-                query: _.query,
+            (S.info('Making member search request', {
+                query: p.query,
                 guildId: e
             }),
-            null == _.query)
+            null == p.query)
         )
             throw Error('Query is null');
-        await (0, m.D)(e, _.query, { signal: null !== (i = null === (n = _.abortController) || void 0 === n ? void 0 : n.signal) && void 0 !== i ? i : void 0 });
+        await (0, m.D)(e, p.query, { signal: null !== (r = null === (n = p.abortController) || void 0 === n ? void 0 : n.signal) && void 0 !== r ? r : void 0 });
     } catch (e) {
-        if (v === e.code) return;
-        O(o);
+        if (O === e.code) return;
+        D(s);
         return;
     }
-    await D(o);
+    await x(s);
 }
-function V(e) {
-    return b((t) => {
+function W(e) {
+    return N((t) => {
         var n;
         return (null === (n = t[I(e)]) || void 0 === n ? void 0 : n.requestState) === 2;
     });
 }
-function j(e) {
-    return b((t) => {
+function Y(e) {
+    return N((t) => {
         var n;
         return (null === (n = t[I(e)]) || void 0 === n ? void 0 : n.requestState) === 4;
     });
 }
-class H extends c.Z {
+class K extends u.Z {
     handleInitialize(e) {
         let { guildId: t } = e;
-        return x(t), F(t);
+        return M(t), H(t);
     }
     handleGuildDelete(e) {
         let { guild: t } = e;
-        return x(t.id);
+        return M(t.id);
     }
     handleSearchStateUpdate(e) {
         let { guildId: t } = e;
-        return F(t);
+        return H(t);
     }
     handlePaginationUpdate(e) {
         let { guildId: t } = e;
-        return F(t);
+        return H(t);
     }
     handleGuildMemberSearchSuccess(e) {
         let { guildId: t } = e;
-        return D(I(t));
+        return x(I(t));
     }
     handleGuildMemberSearchStillIndexing(e) {
         let { guildId: t } = e;
@@ -325,7 +353,7 @@ class H extends c.Z {
     }
     handleNewMemberTimestampRefresh(e) {
         let { guildId: t } = e;
-        return F(t);
+        return H(t);
     }
     constructor(...e) {
         super(...e),
@@ -340,4 +368,4 @@ class H extends c.Z {
             });
     }
 }
-let Y = new H();
+let z = new K();

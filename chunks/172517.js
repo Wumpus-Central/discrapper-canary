@@ -1,10 +1,10 @@
 n.d(t, {
-    FW: () => _,
+    FW: () => p,
     Pk: () => s,
     Rq: () => g,
-    W_: () => l,
-    dK: () => o,
-    qd: () => m
+    W_: () => a,
+    dK: () => l,
+    qd: () => _
 }),
     n(518263),
     n(970173),
@@ -16,15 +16,20 @@ n.d(t, {
     n(744285),
     n(492257),
     n(873817),
+    n(610885),
+    n(126298),
+    n(866573),
     n(642549),
+    n(787622),
     n(47120),
     n(757143),
+    n(301563),
     n(863942),
     n(411104);
-var i = n(512722),
-    r = n.n(i),
-    a = n(598077);
-function l() {
+var r = n(512722),
+    i = n.n(r),
+    o = n(598077);
+function a() {
     return window.crypto.subtle.generateKey(
         {
             name: 'RSA-OAEP',
@@ -36,11 +41,11 @@ function l() {
         ['decrypt']
     );
 }
-async function o(e) {
-    return r()(null != e.publicKey, 'public key cannot be null'), btoa(String.fromCharCode(...new Uint8Array(await window.crypto.subtle.exportKey('spki', e.publicKey))));
+async function l(e) {
+    return i()(null != e.publicKey, 'public key cannot be null'), btoa(String.fromCharCode(...new Uint8Array(await window.crypto.subtle.exportKey('spki', e.publicKey))));
 }
 async function s(e) {
-    return r()(null != e.publicKey, 'public key cannot be null'), u(await window.crypto.subtle.exportKey('spki', e.publicKey));
+    return i()(null != e.publicKey, 'public key cannot be null'), d(await window.crypto.subtle.exportKey('spki', e.publicKey));
 }
 function c(e) {
     return btoa(String.fromCharCode(...new Uint8Array(e)))
@@ -48,15 +53,15 @@ function c(e) {
         .replace(/\+/g, '-')
         .replace(/={1,2}$/, '');
 }
-function d(e) {
+function u(e) {
     return Uint8Array.from(atob(e), (e) => e.charCodeAt(0));
 }
-async function u(e) {
+async function d(e) {
     return c(await window.crypto.subtle.digest({ name: 'SHA-256' }, e));
 }
 function h(e, t) {
     return (
-        r()(null != e.privateKey, 'private key cannot be null'),
+        i()(null != e.privateKey, 'private key cannot be null'),
         window.crypto.subtle.decrypt(
             {
                 name: 'RSA-OAEP',
@@ -67,22 +72,22 @@ function h(e, t) {
         )
     );
 }
-async function _(e, t) {
+async function p(e, t) {
     let n = new TextDecoder(),
-        i = await h(e, d(t));
-    return n.decode(i);
+        r = await h(e, u(t));
+    return n.decode(r);
 }
-async function m(e, t) {
-    return c(await h(e, d(t)));
+async function _(e, t) {
+    return c(await h(e, u(t)));
 }
 async function g(e, t) {
-    let n = (t = await _(e, t)).match(/^(\d+):(\d{1,4}):([a-zA-Z0-9_]+):(.*)$/);
+    let n = (t = await p(e, t)).match(/^(\d+):(\d{1,4}):([a-zA-Z0-9_]+):(.*)$/);
     if (null == n) throw Error('Invalid encoded user record.');
-    let [, i, r, l, o] = n;
-    return new a.Z({
-        id: i,
-        discriminator: r,
-        avatar: '0' === l ? null : l,
-        username: o
+    let [, r, i, a, l] = n;
+    return new o.Z({
+        id: r,
+        discriminator: i,
+        avatar: '0' === a ? null : a,
+        username: l
     });
 }

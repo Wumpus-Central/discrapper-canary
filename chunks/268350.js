@@ -1,40 +1,92 @@
 n.d(t, {
-    $p: () => y,
-    FQ: () => v,
-    Il: () => I,
-    Jf: () => A,
-    SA: () => O,
-    Um: () => b,
-    eu: () => N,
-    hW: () => D,
-    lY: () => S,
-    pk: () => T,
-    qB: () => C
+    $p: () => I,
+    FQ: () => S,
+    Il: () => T,
+    Jf: () => R,
+    SA: () => x,
+    Um: () => A,
+    eu: () => P,
+    hW: () => L,
+    lY: () => C,
+    pk: () => N,
+    qB: () => w
 }),
     n(653041);
-var i = n(392711),
-    r = n.n(i),
-    a = n(544891),
-    s = n(570140),
-    o = n(668781),
+var r = n(392711),
+    i = n.n(r),
+    o = n(544891),
+    a = n(570140),
+    s = n(668781),
     l = n(38618),
-    u = n(706454),
-    c = n(675478),
+    c = n(706454),
+    u = n(675478),
     d = n(598077),
     f = n(486472),
-    _ = n(594174),
-    p = n(73346),
+    p = n(594174),
+    _ = n(73346),
     h = n(926491),
     m = n(981631),
     g = n(526761),
     E = n(388032);
-let v = async (e, t) => {
-        let { body: n } = await (0, p.Kb)({
+function v(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function b(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                v(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function y(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function O(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : y(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let S = async (e, t) => {
+        let { body: n } = await (0, _.Kb)({
             url: m.ANM.STICKER_PACK(e),
             rejectWithError: !1
         });
         return (
-            s.Z.dispatch({
+            a.Z.dispatch({
                 type: 'STICKER_PACK_FETCH_SUCCESS',
                 packId: e,
                 pack: n,
@@ -43,121 +95,111 @@ let v = async (e, t) => {
             n
         );
     },
-    y = async function () {
-        let { locale: e = u.default.locale } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+    I = async function () {
+        let { locale: e = c.default.locale } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
         if (h.Z.isFetchingStickerPacks || h.Z.hasLoadedStickerPacks) return;
-        s.Z.wait(() => {
-            s.Z.dispatch({ type: 'STICKER_PACKS_FETCH_START' });
+        a.Z.wait(() => {
+            a.Z.dispatch({ type: 'STICKER_PACKS_FETCH_START' });
         });
         let {
             body: { sticker_packs: t }
-        } = await a.tn.get({
+        } = await o.tn.get({
             url: m.ANM.STICKER_PACKS,
             query: { locale: e },
             rejectWithError: !1
         });
-        s.Z.dispatch({
+        a.Z.dispatch({
             type: 'STICKER_PACKS_FETCH_SUCCESS',
             packs: t
         });
     },
-    I = async (e) => {
-        let { body: t } = await a.tn.get({
+    T = async (e) => {
+        let { body: t } = await o.tn.get({
             url: m.ANM.STICKER(e),
             rejectWithError: !1
         });
-        s.Z.dispatch({
+        a.Z.dispatch({
             type: 'STICKER_FETCH_SUCCESS',
             sticker: t
         });
     },
-    T = async (e) => {
-        let { body: t } = await a.tn.get({
+    N = async (e) => {
+        let { body: t } = await o.tn.get({
             url: m.ANM.GUILD_STICKER_PACKS(e),
             rejectWithError: !1
         });
-        s.Z.dispatch({
+        a.Z.dispatch({
             type: 'GUILD_STICKERS_FETCH_SUCCESS',
             guildId: e,
-            stickers: t.map((e) =>
-                null != e.user
-                    ? {
-                          ...e,
-                          user: new d.Z(e.user)
-                      }
-                    : e
-            )
+            stickers: t.map((e) => (null != e.user ? O(b({}, e), { user: new d.Z(e.user) }) : e))
         });
     },
-    b = async (e) => {
-        await a.tn.del({
+    A = async (e) => {
+        await o.tn.del({
             url: m.ANM.GUILD_STICKER(e.guild_id, e.id),
             rejectWithError: !1
         });
     },
-    S = async (e, t) => {
-        let n = await a.tn.post({
+    C = async (e, t) => {
+        let n = await o.tn.post({
             url: m.ANM.GUILD_STICKER_PACKS(e),
             body: t,
             rejectWithError: !1
         });
         return (
-            s.Z.dispatch({
+            a.Z.dispatch({
                 type: 'GUILD_STICKERS_CREATE_SUCCESS',
                 guildId: e,
-                sticker: {
-                    ...n.body,
-                    user: _.default.getCurrentUser()
-                }
+                sticker: O(b({}, n.body), { user: p.default.getCurrentUser() })
             }),
             n.body
         );
     },
-    A = async (e, t, n) =>
+    R = async (e, t, n) =>
         (
-            await a.tn.patch({
+            await o.tn.patch({
                 url: m.ANM.GUILD_STICKER(e, t),
                 body: n,
                 rejectWithError: !1
             })
         ).body;
-function N(e, t, n) {
-    s.Z.dispatch({
+function P(e, t, n) {
+    a.Z.dispatch({
         type: 'ADD_STICKER_PREVIEW',
         channelId: e,
         sticker: t,
         draftType: n
     });
 }
-function C(e, t) {
-    s.Z.dispatch({
+function w(e, t) {
+    a.Z.dispatch({
         type: 'CLEAR_STICKER_PREVIEW',
         channelId: e,
         draftType: t
     });
 }
-function R(e) {
+function D(e) {
     return f.Z.totalUnavailableGuilds > 0 || !l.Z.isConnected() ? e : e.filter((e) => null != h.Z.getStickerById(e));
 }
-function O(e) {
-    c.DZ.updateAsync(
+function x(e) {
+    u.DZ.updateAsync(
         'favoriteStickers',
         (t) =>
-            ((t.stickerIds = R(t.stickerIds)), r().size(t.stickerIds) >= g.oX)
-                ? (o.Z.show({
-                      title: E.intl.string(E.t['+XYXtb']),
-                      body: E.intl.formatToPlainString(E.t.JaIyFh, { count: g.oX })
+            ((t.stickerIds = D(t.stickerIds)), i().size(t.stickerIds) >= g.oX)
+                ? (s.Z.show({
+                      title: E.NW.string(E.t['+XYXtb']),
+                      body: E.NW.formatToPlainString(E.t.JaIyFh, { count: g.oX })
                   }),
                   !1)
                 : !t.stickerIds.includes(e) && void t.stickerIds.push(e),
         g.fy.INFREQUENT_USER_ACTION
     );
 }
-function D(e) {
-    c.DZ.updateAsync(
+function L(e) {
+    u.DZ.updateAsync(
         'favoriteStickers',
         (t) => {
-            (t.stickerIds = t.stickerIds.filter((t) => t !== e)), (t.stickerIds = R(t.stickerIds));
+            (t.stickerIds = t.stickerIds.filter((t) => t !== e)), (t.stickerIds = D(t.stickerIds));
         },
         g.fy.INFREQUENT_USER_ACTION
     );

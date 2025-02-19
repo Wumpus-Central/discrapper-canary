@@ -1,60 +1,74 @@
-n.d(t, { Z: () => p });
-var i,
-    r,
-    l,
-    s = n(877921),
-    a = n.n(s),
-    o = n(442837),
-    c = n(570140);
-let d = ['pct_retained', 'new_members', 'visitors', 'communicators'],
-    u = {},
-    m = null;
-function h(e) {
+n.d(t, { Z: () => h });
+var r,
+    i = n(877921),
+    s = n.n(i),
+    a = n(442837),
+    l = n(570140);
+function o(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+let c = ['pct_retained', 'new_members', 'visitors', 'communicators'],
+    d = {},
+    u = null;
+function m(e) {
     let { guildId: t, stats: n } = e;
-    m = null;
-    let i = {},
-        r = {},
-        l = n[0],
-        s = n[1];
-    null != l &&
-        d.forEach((e) => {
-            if (null != l[e]) {
-                let t = a()(e);
-                null != s && 0 !== s[e] && (i[''.concat(t, 'Change')] = ((l[e] - s[e]) * 100) / s[e]), (r[t] = l[e]);
+    u = null;
+    let r = {},
+        i = {},
+        a = n[0],
+        l = n[1];
+    null != a &&
+        c.forEach((e) => {
+            if (null != a[e]) {
+                let t = s()(e);
+                null != l && 0 !== l[e] && (r[''.concat(t, 'Change')] = ((a[e] - l[e]) * 100) / l[e]), (i[t] = a[e]);
             }
         }),
-        (u[t] = {
-            ...r,
-            ...i,
-            ...u[t]
-        });
+        (d[t] = (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    r = Object.keys(n);
+                'function' == typeof Object.getOwnPropertySymbols &&
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        })
+                    )),
+                    r.forEach(function (t) {
+                        o(e, t, n[t]);
+                    });
+            }
+            return e;
+        })({}, i, r, d[t]));
 }
-function g(e) {
+function p(e) {
     let { error: t } = e;
-    m = t.code;
+    u = t.code;
 }
-class x extends (l = o.ZP.Store) {
+class g extends (r = a.ZP.Store) {
     getOverviewAnalytics(e) {
-        return u[e];
+        return d[e];
     }
     getError() {
-        return m;
+        return u;
     }
 }
-(r = 'GuildSettingsAnalyticsStore'),
-    (i = 'displayName') in x
-        ? Object.defineProperty(x, i, {
-              value: r,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (x[i] = r);
-let p = new x(c.Z, {
-    GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW_FETCH_SUCCESS: h,
-    GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_SUCCESS: h,
-    GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_SUCCESS: h,
-    GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW_FETCH_FAILURE: g,
-    GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_FAILURE: g,
-    GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_FAILURE: g
+o(g, 'displayName', 'GuildSettingsAnalyticsStore');
+let h = new g(l.Z, {
+    GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW_FETCH_SUCCESS: m,
+    GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_SUCCESS: m,
+    GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_SUCCESS: m,
+    GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW_FETCH_FAILURE: p,
+    GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_FAILURE: p,
+    GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_FAILURE: p
 });

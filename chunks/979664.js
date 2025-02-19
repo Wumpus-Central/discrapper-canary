@@ -1,44 +1,44 @@
-n.d(t, { Z: () => C });
-var i = n(200651),
-    r = n(192379),
-    l = n(489948),
-    s = n(442837),
-    a = n(481060),
+n.d(t, { Z: () => x });
+var r = n(200651),
+    i = n(192379),
+    s = n(489948),
+    a = n(442837),
+    l = n(481060),
     o = n(813197),
     c = n(496675),
     d = n(768581),
     u = n(624138),
     m = n(434404),
-    h = n(999382),
+    p = n(999382),
     g = n(981631),
-    x = n(388032),
-    p = n(71329);
-function _(e) {
+    h = n(388032),
+    f = n(805607);
+function b(e) {
     let { guild: t, handleIconChange: n } = e,
-        r = (0, s.e7)([c.Z], () => c.Z.can(g.Plq.MANAGE_GUILD, t)),
-        { acronym: m, backgroundImage: h } = (function (e) {
+        i = (0, a.e7)([c.Z], () => c.Z.can(g.Plq.MANAGE_GUILD, t)),
+        { acronym: m, backgroundImage: p } = (function (e) {
             let t, n;
             if ((0, d.pU)(e.icon))
                 return {
                     acronym: null,
                     backgroundImage: 'url("'.concat(e.icon, '")')
                 };
-            let r = d.ZP.getGuildIconURL({
+            let i = d.ZP.getGuildIconURL({
                     id: e.id,
                     icon: e.icon,
                     canAnimate: !0,
                     size: 100
                 }),
-                l = e.name;
+                s = e.name;
             return (
-                null != r
-                    ? (t = 'url("'.concat(r, '")'))
-                    : null != l &&
-                      (n = (0, i.jsx)(a.X6q, {
+                null != i
+                    ? (t = 'url("'.concat(i, '")'))
+                    : null != s &&
+                      (n = (0, r.jsx)(l.X6q, {
                           variant: 'heading-xxl/normal',
                           color: 'always-white',
-                          className: p.imageUploaderAcronym,
-                          children: (0, u.Zg)(l)
+                          className: f.imageUploaderAcronym,
+                          children: (0, u.Zg)(s)
                       })),
                 {
                     acronym: n,
@@ -46,86 +46,129 @@ function _(e) {
                 }
             );
         })(t);
-    if (!r)
-        return (0, i.jsx)('div', {
-            className: p.imageUploaderDisabled,
-            children: (0, i.jsx)('div', {
-                className: p.imageUploaderInner,
-                style: { backgroundImage: h },
+    if (!i)
+        return (0, r.jsx)('div', {
+            className: f.imageUploaderDisabled,
+            children: (0, r.jsx)('div', {
+                className: f.imageUploaderInner,
+                style: { backgroundImage: p },
                 children: m
             })
         });
-    let _ = (0, i.jsxs)('div', {
-        className: p.tooltip,
+    let b = (0, r.jsxs)('div', {
+        className: f.tooltip,
         children: [
-            (0, i.jsx)(a.X6q, {
+            (0, r.jsx)(l.X6q, {
                 variant: 'heading-sm/medium',
-                children: x.intl.string(x.t.JD7DIS)
+                children: h.NW.string(h.t.JD7DIS)
             }),
-            (0, i.jsx)(a.Text, {
+            (0, r.jsx)(l.Text, {
                 variant: 'text-xs/normal',
-                children: x.intl.string(x.t.mJxa5O)
+                children: h.NW.string(h.t.mJxa5O)
             })
         ]
     });
-    return (0, i.jsx)(a.ua7, {
-        text: _,
-        'aria-label': x.intl.string(x.t.JD7DIS),
-        children: (e) =>
-            (0, i.jsx)('div', {
-                ...e,
-                className: p.imageUploader,
-                children: (0, i.jsx)(l.tE, {
-                    within: !0,
-                    children: (0, i.jsxs)('div', {
-                        children: [
-                            (0, i.jsxs)('div', {
-                                className: p.imageUploaderInner,
-                                style: { backgroundImage: h },
+    return (0, r.jsx)(l.ua7, {
+        text: b,
+        'aria-label': h.NW.string(h.t.JD7DIS),
+        children: (e) => {
+            var t, i;
+            return (0, r.jsx)(
+                'div',
+                ((t = (function (e) {
+                    for (var t = 1; t < arguments.length; t++) {
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            r = Object.keys(n);
+                        'function' == typeof Object.getOwnPropertySymbols &&
+                            (r = r.concat(
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                })
+                            )),
+                            r.forEach(function (t) {
+                                var r;
+                                (r = n[t]),
+                                    t in e
+                                        ? Object.defineProperty(e, t, {
+                                              value: r,
+                                              enumerable: !0,
+                                              configurable: !0,
+                                              writable: !0
+                                          })
+                                        : (e[t] = r);
+                            });
+                    }
+                    return e;
+                })({}, e)),
+                (i = i =
+                    {
+                        className: f.imageUploader,
+                        children: (0, r.jsx)(s.tE, {
+                            within: !0,
+                            children: (0, r.jsxs)('div', {
                                 children: [
-                                    (0, i.jsx)('span', {
-                                        'aria-hidden': !0,
-                                        children: m
+                                    (0, r.jsxs)('div', {
+                                        className: f.imageUploaderInner,
+                                        style: { backgroundImage: p },
+                                        children: [
+                                            (0, r.jsx)('span', {
+                                                'aria-hidden': !0,
+                                                children: m
+                                            }),
+                                            (0, r.jsx)(o.ZP, {
+                                                onChange: n,
+                                                tabIndex: 0,
+                                                'aria-label': h.NW.string(h.t['Ge+94+'])
+                                            })
+                                        ]
                                     }),
-                                    (0, i.jsx)(o.ZP, {
-                                        onChange: n,
-                                        tabIndex: 0,
-                                        'aria-label': x.intl.string(x.t['Ge+94+'])
+                                    (0, r.jsx)('div', {
+                                        className: f.imageUploaderHint,
+                                        'aria-hidden': !0,
+                                        children: h.NW.string(h.t['Ge+94+'])
                                     })
                                 ]
-                            }),
-                            (0, i.jsx)('div', {
-                                className: p.imageUploaderHint,
-                                'aria-hidden': !0,
-                                children: x.intl.string(x.t['Ge+94+'])
                             })
-                        ]
-                    })
-                })
-            })
+                        })
+                    }),
+                Object.getOwnPropertyDescriptors
+                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i))
+                    : (function (e, t) {
+                          var n = Object.keys(e);
+                          if (Object.getOwnPropertySymbols) {
+                              var r = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, r);
+                          }
+                          return n;
+                      })(Object(i)).forEach(function (e) {
+                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(i, e));
+                      }),
+                t)
+            );
+        }
     });
 }
-function C(e) {
+function x(e) {
     let { guild: t } = e,
         n = t.id,
-        l = (0, s.e7)([h.Z], () => h.Z.getError('icon')),
-        a = r.useCallback(
+        s = (0, a.e7)([p.Z], () => p.Z.getError('icon')),
+        l = i.useCallback(
             (e) => {
                 m.Z.updateGuild({ icon: e }), m.Z.updateGuildProfile(n, { icon: e });
             },
             [n]
         );
-    return (0, i.jsxs)('section', {
-        className: p.container,
+    return (0, r.jsxs)('section', {
+        className: f.container,
         children: [
-            (0, i.jsx)(_, {
+            (0, r.jsx)(b, {
                 guild: t,
-                handleIconChange: a
+                handleIconChange: l
             }),
-            null != l
-                ? (0, i.jsx)('div', {
-                      className: p.iconError,
-                      children: l
+            null != s
+                ? (0, r.jsx)('div', {
+                      className: f.iconError,
+                      children: s
                   })
                 : null
         ]

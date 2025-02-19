@@ -1,63 +1,102 @@
-n.d(t, { Z: () => _ });
-var i = n(200651);
+n.d(t, { Z: () => b });
+var r = n(200651);
 n(192379);
-var l = n(442837),
-    a = n(481060),
-    r = n(194359),
-    s = n(631937),
-    o = n(702321),
+var i = n(442837),
+    l = n(481060),
+    o = n(194359),
+    a = n(631937),
+    s = n(702321),
     c = n(377171),
-    d = n(699516),
-    u = n(626135),
-    h = n(63063),
-    p = n(862679),
-    m = n(981631),
-    f = n(596401),
+    u = n(699516),
+    d = n(626135),
+    p = n(63063),
+    h = n(862679),
+    f = n(981631),
+    m = n(596401),
     g = n(388032);
-function _(e) {
-    let { channel: t, children: _ } = e,
-        C = (0, l.e7)([d.Z], () => d.Z.isBlocked(t.getRecipientId()));
-    (0, s.Z)(t.id);
-    let x = (0, o.Z)(t.id),
-        v = t.isSystemDM(),
-        E = C && !v && !t.isMultiUserDM(),
-        I = {};
-    if (v) {
-        let e = x
-            ? (0, i.jsxs)(i.Fragment, {
+function b(e) {
+    var t, b;
+    let { channel: _, children: C } = e,
+        v = (0, i.e7)([u.Z], () => u.Z.isBlocked(_.getRecipientId()));
+    (0, a.Z)(_.id);
+    let y = (0, s.Z)(_.id),
+        x = _.isSystemDM(),
+        j = v && !x && !_.isMultiUserDM(),
+        O = {};
+    if (x) {
+        let e = y
+            ? (0, r.jsxs)(r.Fragment, {
                   children: [
-                      g.intl.string(g.t['+KSnWV']),
-                      (0, i.jsx)(a.rgF, {
+                      g.NW.string(g.t['+KSnWV']),
+                      (0, r.jsx)(l.rgF, {
                           size: 'xs',
                           color: c.Z.HEADER_PRIMARY
                       })
                   ]
               })
-            : g.intl.string(g.t.hvVgAQ);
-        (I.message = g.intl.string(g.t.Bt2N7O)),
-            (I.subtitle = g.intl.string(g.t['n/Vzk5'])),
-            (I.buttonText = e),
-            (I.onButtonClick = () => {
-                if (x) {
-                    open(f.D2),
-                        u.default.track(m.rMx.CHANGE_LOG_CTA_CLICKED, {
+            : g.NW.string(g.t.hvVgAQ);
+        (O.message = g.NW.string(g.t.Bt2N7O)),
+            (O.subtitle = g.NW.string(g.t['n/Vzk5'])),
+            (O.buttonText = e),
+            (O.onButtonClick = () => {
+                if (y) {
+                    open(m.D2),
+                        d.default.track(f.rMx.CHANGE_LOG_CTA_CLICKED, {
                             cta_type: 'chat_blocker',
-                            target: f.D2
+                            target: m.D2
                         });
                     return;
                 }
-                open(h.Z.getArticleURL(m.BhN.SYSTEM_DMS));
+                open(p.Z.getArticleURL(f.BhN.SYSTEM_DMS));
             }),
-            (I.imageSrc = n(780961));
+            (O.imageSrc = n(780961));
     } else
-        E &&
-            ((I.message = g.intl.string(g.t['9T6N5+'])),
-            (I.buttonText = g.intl.string(g.t.XyHpKC)),
-            (I.onButtonClick = () => {
-                r.Z.unblockUser(t.getRecipientId());
+        j &&
+            ((O.message = g.NW.string(g.t['9T6N5+'])),
+            (O.buttonText = g.NW.string(g.t.XyHpKC)),
+            (O.onButtonClick = () => {
+                o.Z.unblockUser(_.getRecipientId());
             }));
-    return (0, i.jsx)(p.Z, {
-        ...I,
-        children: _
-    });
+    return (0, r.jsx)(
+        h.Z,
+        ((t = (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    r = Object.keys(n);
+                'function' == typeof Object.getOwnPropertySymbols &&
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        })
+                    )),
+                    r.forEach(function (t) {
+                        var r;
+                        (r = n[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: r,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0
+                                  })
+                                : (e[t] = r);
+                    });
+            }
+            return e;
+        })({}, O)),
+        (b = b = { children: C }),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(b))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(b)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(b, e));
+              }),
+        t)
+    );
 }

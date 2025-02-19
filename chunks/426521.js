@@ -1,52 +1,52 @@
-n.d(t, { U: () => U });
-var i = n(200651),
-    l = n(192379),
+n.d(t, { U: () => F }), n(301563);
+var r = n(200651),
+    i = n(192379),
     a = n(442837),
-    r = n(481060),
-    s = n(99690),
-    o = n(906732),
+    o = n(481060),
+    l = n(99690),
+    s = n(906732),
     c = n(812206),
     d = n(327419),
     u = n(336197),
-    m = n(454585),
-    _ = n(833062),
-    h = n(171368),
-    p = n(695346),
+    p = n(454585),
+    m = n(833062),
+    f = n(171368),
+    h = n(695346),
     g = n(598077),
-    f = n(594174),
-    x = n(626135),
-    C = n(709054),
-    E = n(591759),
-    v = n(833592),
-    I = n(497089),
-    N = n(178480),
-    S = n(418316),
-    T = n(382865),
-    b = n(526146),
-    A = n(400565),
-    j = n(148789),
-    y = n(11825),
-    Z = n(981631),
-    R = n(388032),
-    L = n(149681),
-    P = n(756688),
+    _ = n(594174),
+    b = n(626135),
+    v = n(709054),
+    y = n(591759),
+    x = n(833592),
+    O = n(497089),
+    E = n(178480),
+    j = n(418316),
+    N = n(382865),
+    C = n(526146),
+    I = n(400565),
+    S = n(148789),
+    P = n(11825),
+    T = n(981631),
+    A = n(388032),
+    w = n(632852),
+    Z = n(756688),
     k = n(886765);
-function M(e) {
-    var t, n, l;
+function R(e) {
+    var t, n, i;
     let { item: a } = e,
-        o = null === (t = a.message) || void 0 === t ? void 0 : t.content;
-    if (null == o) return (0, i.jsx)('div', {});
-    let c = null !== (l = f.default.getUser(null === (n = a.other_user) || void 0 === n ? void 0 : n.id)) && void 0 !== l ? l : new g.Z(a.other_user),
-        d = m.Z.parse(o);
-    return (0, i.jsxs)('div', {
-        className: L.messagePreviewContainer,
+        s = null === (t = a.message) || void 0 === t ? void 0 : t.content;
+    if (null == s) return (0, r.jsx)('div', {});
+    let c = null !== (i = _.default.getUser(null === (n = a.other_user) || void 0 === n ? void 0 : n.id)) && void 0 !== i ? i : new g.Z(a.other_user),
+        d = p.Z.parse(s);
+    return (0, r.jsxs)('div', {
+        className: w.messagePreviewContainer,
         children: [
-            (0, i.jsx)(s.Z, {
+            (0, r.jsx)(l.Z, {
                 user: c,
-                size: r.EFr.SIZE_24
+                size: o.EFr.SIZE_24
             }),
-            (0, i.jsx)(r.Text, {
-                className: L.messagePreviewText,
+            (0, r.jsx)(o.Text, {
+                className: w.messagePreviewText,
                 variant: 'text-sm/normal',
                 lineClamp: 2,
                 children: d
@@ -54,15 +54,15 @@ function M(e) {
         ]
     });
 }
-function O(e) {
+function L(e) {
     let {
         item: { callout: t }
     } = e;
     if (null == t) return null;
-    let n = m.Z.parse(t);
-    return (0, i.jsx)('div', {
-        className: L.calloutContainer,
-        children: (0, i.jsx)(r.Text, {
+    let n = p.Z.parse(t);
+    return (0, r.jsx)('div', {
+        className: w.calloutContainer,
+        children: (0, r.jsx)(o.Text, {
             variant: 'text-sm/normal',
             lineClamp: 2,
             children: n
@@ -72,136 +72,160 @@ function O(e) {
 function D(e) {
     let { item: t } = e,
         n = k,
-        l = R.intl.string(R.t.SJTHJS);
+        i = A.NW.string(A.t.SJTHJS);
     return (
-        t.completed && ((n = P), (l = R.intl.string(R.t.f6RTAA))),
-        (0, i.jsxs)('div', {
-            className: L.lifecycleContainer,
+        t.completed && ((n = Z), (i = A.NW.string(A.t.f6RTAA))),
+        (0, r.jsxs)('div', {
+            className: w.lifecycleContainer,
             children: [
-                (0, i.jsx)('img', {
-                    className: L.checkbox,
+                (0, r.jsx)('img', {
+                    className: w.checkbox,
                     alt: '',
                     src: n
                 }),
-                (0, i.jsx)(r.Text, {
-                    className: L.lifecycleText,
+                (0, r.jsx)(o.Text, {
+                    className: w.lifecycleText,
                     variant: 'text-xs/bold',
                     color: 'header-secondary',
-                    children: l
+                    children: i
                 })
             ]
         })
     );
 }
-function w(e) {
+function M(e) {
     let { applicationId: t } = e,
         n = (0, a.e7)([c.Z], () => c.Z.getApplication(t));
-    return null == n ? (0, i.jsx)('div', {}) : (0, i.jsx)(_.Z, { application: n }, n.id);
+    return null == n ? (0, r.jsx)('div', {}) : (0, r.jsx)(m.Z, { application: n }, n.id);
 }
-let F = l.memo(function (e) {
+let W = i.memo(function (e) {
         var t;
-        let { item: a, ackedBeforeId: s } = e,
-            { analyticsLocations: c } = (0, o.ZP)(),
-            _ = (0, b.I)(a, s),
-            p = l.useCallback(async () => {
-                if ((_ || (0, v.wt)(a), null != a.item_enum && a.item_enum === I.AM.FIND_FRIENDS)) {
-                    (0, r.ZDy)(async () => {
+        let { item: a, ackedBeforeId: l } = e,
+            { analyticsLocations: c } = (0, s.ZP)(),
+            m = (0, C.I)(a, l),
+            h = i.useCallback(async () => {
+                if ((m || (0, x.wt)(a), null != a.item_enum && a.item_enum === O.AM.FIND_FRIENDS)) {
+                    (0, o.ZDy)(async () => {
                         let { default: e } = await n.e('6074').then(n.bind(n, 443189));
                         return (t) =>
-                            (0, i.jsx)(e, {
-                                source: 'Notification Center',
-                                ...t
-                            });
+                            (0, r.jsx)(
+                                e,
+                                (function (e) {
+                                    for (var t = 1; t < arguments.length; t++) {
+                                        var n = null != arguments[t] ? arguments[t] : {},
+                                            r = Object.keys(n);
+                                        'function' == typeof Object.getOwnPropertySymbols &&
+                                            (r = r.concat(
+                                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                })
+                                            )),
+                                            r.forEach(function (t) {
+                                                var r;
+                                                (r = n[t]),
+                                                    t in e
+                                                        ? Object.defineProperty(e, t, {
+                                                              value: r,
+                                                              enumerable: !0,
+                                                              configurable: !0,
+                                                              writable: !0
+                                                          })
+                                                        : (e[t] = r);
+                                            });
+                                    }
+                                    return e;
+                                })({ source: 'Notification Center' }, t)
+                            );
                     });
                     return;
                 }
                 if (null != a.deeplink) {
-                    let t = E.Z.safeParseWithQuery(a.deeplink);
+                    let t = y.Z.safeParseWithQuery(a.deeplink);
                     if (null == t) return;
                     let n = t.hostname,
-                        i = t.path;
-                    if (null == n || null == i) return;
-                    if (E.Z.isDiscordHostname(n)) {
-                        let t = i.match('^/users/(\\d+)');
+                        r = t.path;
+                    if (null == n || null == r) return;
+                    if (y.Z.isDiscordHostname(n)) {
+                        let t = r.match('^/users/(\\d+)');
                         if (null != t && 2 === t.length) {
                             var e;
-                            (0, h.openUserProfileModal)({
+                            (0, f.openUserProfileModal)({
                                 userId: t[1],
                                 messageId: null === (e = a.message) || void 0 === e ? void 0 : e.id,
                                 sourceAnalyticsLocations: c,
-                                analyticsLocation: { section: Z.jXE.NOTIFICATION_CENTER }
+                                analyticsLocation: { section: T.jXE.NOTIFICATION_CENTER }
                             });
-                        } else await (0, u.Z)(i);
+                        } else await (0, u.Z)(r);
                     }
-                    x.default.track(Z.rMx.NOTIFICATION_CENTER_ACTION, {
-                        action_type: I.ud.CLICKED,
+                    b.default.track(T.rMx.NOTIFICATION_CENTER_ACTION, {
+                        action_type: O.ud.CLICKED,
                         notification_center_id: a.id,
                         item_type: a.type,
-                        acked: _
+                        acked: m
                     });
                 }
-            }, [a, _, c]),
+            }, [a, m, c]),
             g = null;
-        a.type === I.O7.INCOMING_FRIEND_REQUESTS && null != a.other_user
-            ? (g = (0, i.jsx)(j.Z, { userId: a.other_user.id }))
-            : a.type === I.O7.INCOMING_GAME_FRIEND_REQUESTS &&
+        a.type === O.O7.INCOMING_FRIEND_REQUESTS && null != a.other_user
+            ? (g = (0, r.jsx)(S.Z, { userId: a.other_user.id }))
+            : a.type === O.O7.INCOMING_GAME_FRIEND_REQUESTS &&
               null != a.other_user &&
-              (g = (0, i.jsx)(j.Z, {
+              (g = (0, r.jsx)(S.Z, {
                   userId: a.other_user.id,
                   applicationId: a.applicationId
               }));
-        let f = null != a.local_id,
-            T = (0, d.U)({ location: 'ForYouItems' }),
-            R = (0, S.Z)({
+        let _ = null != a.local_id,
+            N = (0, d.U)({ location: 'ForYouItems' }),
+            A = (0, j.Z)({
                 item: a,
-                disambiguateGameRelationships: T,
-                renderApplication: (e) => (0, i.jsx)(w, { applicationId: e })
+                disambiguateGameRelationships: N,
+                renderApplication: (e) => (0, r.jsx)(M, { applicationId: e })
             });
-        return (0, i.jsxs)('div', {
-            className: L.row,
+        return (0, r.jsxs)('div', {
+            className: w.row,
             children: [
-                (0, i.jsxs)(r.kL8, {
-                    className: L.rowContent,
+                (0, r.jsxs)(o.kL8, {
+                    className: w.rowContent,
                     focusProps: { offset: 4 },
-                    'aria-label': R,
-                    onClick: p,
+                    'aria-label': A,
+                    onClick: h,
                     children: [
-                        _ ? null : (0, i.jsx)('div', { className: L.unread }),
-                        (0, i.jsx)(A.U, { item: a }),
-                        (0, i.jsxs)('div', {
-                            className: L.body,
+                        m ? null : (0, r.jsx)('div', { className: w.unread }),
+                        (0, r.jsx)(I.U, { item: a }),
+                        (0, r.jsxs)('div', {
+                            className: w.body,
                             children: [
-                                'lifecycle_item' === a.type && null != a.item_enum && (0, i.jsx)(D, { item: a }),
-                                (0, i.jsx)(r.Text, {
+                                'lifecycle_item' === a.type && null != a.item_enum && (0, r.jsx)(D, { item: a }),
+                                (0, r.jsx)(o.Text, {
                                     variant: 'text-md/normal',
-                                    color: _ ? 'text-muted' : 'text-normal',
-                                    children: 'string' != typeof R ? R : m.Z.parse(R)
+                                    color: m ? 'text-muted' : 'text-normal',
+                                    children: 'string' != typeof A ? A : p.Z.parse(A)
                                 }),
-                                (null === (t = a.message) || void 0 === t ? void 0 : t.content) != null ? (0, i.jsx)(M, { item: a }) : null,
-                                null != a.callout ? (0, i.jsx)(O, { item: a }) : null,
-                                (0, i.jsx)(r.Text, {
+                                (null === (t = a.message) || void 0 === t ? void 0 : t.content) != null ? (0, r.jsx)(R, { item: a }) : null,
+                                null != a.callout ? (0, r.jsx)(L, { item: a }) : null,
+                                (0, r.jsx)(o.Text, {
                                     variant: 'text-xs/medium',
-                                    color: _ ? 'text-muted' : 'header-secondary',
-                                    children: (0, N.a3)(C.default.extractTimestamp(a.id))
+                                    color: m ? 'text-muted' : 'header-secondary',
+                                    children: (0, E.a3)(v.default.extractTimestamp(a.id))
                                 }),
                                 g
                             ]
                         })
                     ]
                 }),
-                f ? null : (0, i.jsx)(y.z, { item: a })
+                _ ? null : (0, r.jsx)(P.z, { item: a })
             ]
         });
     }),
-    U = l.memo(function (e) {
+    F = i.memo(function (e) {
         let { items: t } = e,
-            n = p.d$.useSetting();
+            n = h.d$.useSetting();
         return (
-            (0, T.c)(t),
-            (0, i.jsx)(i.Fragment, {
+            (0, N.c)(t),
+            (0, r.jsx)(r.Fragment, {
                 children: t.map((e) =>
-                    (0, i.jsx)(
-                        F,
+                    (0, r.jsx)(
+                        W,
                         {
                             item: e,
                             ackedBeforeId: n

@@ -1,61 +1,138 @@
-n.d(t, { Z: () => d });
-var i = n(200651);
+n.d(t, { Z: () => g });
+var r = n(200651);
 n(192379);
-var r = n(120356),
-    a = n.n(r),
-    s = n(481060),
-    o = n(129861),
+var i = n(120356),
+    o = n.n(i),
+    a = n(481060),
+    s = n(129861),
     l = n(184301),
-    u = n(347475),
-    c = n(54585);
-function d(e) {
-    let { user: t, guildId: n, channelId: r, nick: d, className: f, textClassName: _, disablePopout: p, ignoreModalClicks: h, onClick: m, onContextMenu: g, onPopoutRequestOpen: E, onPopoutRequestClose: v } = e;
-    return (0, i.jsx)(s.yRy, {
+    c = n(347475),
+    u = n(404334);
+function d(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function f(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                d(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function p(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function _(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : p(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function h(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = m(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function m(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+function g(e) {
+    let { user: t, guildId: n, channelId: i, nick: d, className: p, textClassName: m, disablePopout: g, ignoreModalClicks: E, onClick: v, onContextMenu: b, onPopoutRequestOpen: y, onPopoutRequestClose: O } = e;
+    return (0, r.jsx)(a.yRy, {
         preload: () =>
-            (0, l.Z)(t.id, t.getAvatarURL(n, (0, s.pxk)(s.EFr.SIZE_80)), {
+            (0, l.Z)(t.id, t.getAvatarURL(n, (0, a.pxk)(a.EFr.SIZE_80)), {
                 guildId: n,
-                channelId: r
+                channelId: i
             }),
         renderPopout: (e) =>
-            (0, i.jsx)(u.Z, {
-                ...e,
-                userId: t.id,
-                guildId: n,
-                channelId: r
-            }),
+            (0, r.jsx)(
+                c.Z,
+                _(f({}, e), {
+                    userId: t.id,
+                    guildId: n,
+                    channelId: i
+                })
+            ),
         position: 'left',
-        shouldShow: !p && void 0,
-        onRequestOpen: E,
-        onRequestClose: v,
-        ignoreModalClicks: h,
+        shouldShow: !g && void 0,
+        onRequestOpen: y,
+        onRequestClose: O,
+        ignoreModalClicks: E,
         children: (e) => {
-            let { onClick: r, ...l } = e;
-            return (0, i.jsxs)(s.P3F, {
-                ...l,
-                className: a()(c.userListItem, f, { [c.popoutDisabled]: p }),
-                onContextMenu: g,
-                onClick: (e) => {
-                    r(e), null == m || m(e);
-                },
-                children: [
-                    (0, i.jsx)(s.qEK, {
-                        src: t.getAvatarURL(n, (0, s.pxk)(s.EFr.SIZE_24)),
-                        className: c.avatar,
-                        'aria-label': t.username,
-                        size: s.EFr.SIZE_24
-                    }),
-                    (0, i.jsx)(s.Text, {
-                        className: a()(c.userListItemTag, _),
-                        variant: 'text-sm/normal',
-                        children: (0, i.jsx)(o.Z, {
-                            user: t,
-                            nick: d,
-                            usernameClass: c.username,
-                            hideDiscriminator: !0
+            var { onClick: i } = e,
+                l = h(e, ['onClick']);
+            return (0, r.jsxs)(
+                a.P3F,
+                _(f({}, l), {
+                    className: o()(u.userListItem, p, { [u.popoutDisabled]: g }),
+                    onContextMenu: b,
+                    onClick: (e) => {
+                        i(e), null == v || v(e);
+                    },
+                    children: [
+                        (0, r.jsx)(a.qEK, {
+                            src: t.getAvatarURL(n, (0, a.pxk)(a.EFr.SIZE_24)),
+                            className: u.avatar,
+                            'aria-label': t.username,
+                            size: a.EFr.SIZE_24
+                        }),
+                        (0, r.jsx)(a.Text, {
+                            className: o()(u.userListItemTag, m),
+                            variant: 'text-sm/normal',
+                            children: (0, r.jsx)(s.Z, {
+                                user: t,
+                                nick: d,
+                                usernameClass: u.username,
+                                hideDiscriminator: !0
+                            })
                         })
-                    })
-                ]
-            });
+                    ]
+                })
+            );
         }
     });
 }

@@ -1,85 +1,148 @@
 n.d(t, {
-    R$: () => p,
+    R$: () => f,
     ZP: () => g
 });
-var i = n(913527),
-    r = n.n(i),
-    a = n(990547),
-    l = n(570140),
-    o = n(479531),
+var r = n(913527),
+    i = n.n(r),
+    o = n(990547),
+    a = n(570140),
+    l = n(479531),
     s = n(771308),
     c = n(314897),
-    d = n(626135),
-    u = n(573261),
+    u = n(626135),
+    d = n(573261),
     h = n(959776),
-    _ = n(981631),
-    m = n(723359);
+    p = n(981631),
+    _ = n(723359);
 function g(e) {
-    let { invite: t = null, giftCodeSKUId: n = null, ...i } = e;
-    return p({
-        ...i,
-        invite: t,
-        giftCodeSKUId: n
-    });
+    var t,
+        n,
+        { invite: r = null, giftCodeSKUId: i = null } = e;
+    return f(
+        ((t = (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    r = Object.keys(n);
+                'function' == typeof Object.getOwnPropertySymbols &&
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        })
+                    )),
+                    r.forEach(function (t) {
+                        var r;
+                        (r = n[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: r,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0
+                                  })
+                                : (e[t] = r);
+                    });
+            }
+            return e;
+        })(
+            {},
+            (function (e, t) {
+                if (null == e) return {};
+                var n,
+                    r,
+                    i = (function (e, t) {
+                        if (null == e) return {};
+                        var n,
+                            r,
+                            i = {},
+                            o = Object.keys(e);
+                        for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        return i;
+                    })(e, t);
+                if (Object.getOwnPropertySymbols) {
+                    var o = Object.getOwnPropertySymbols(e);
+                    for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                }
+                return i;
+            })(e, ['invite', 'giftCodeSKUId'])
+        )),
+        (n = n =
+            {
+                invite: r,
+                giftCodeSKUId: i
+            }),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(n)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+              }),
+        t)
+    );
 }
-function p(e) {
-    let { email: t, phoneToken: n, username: i, globalName: g, consent: p, password: f, guildTemplateCode: x, birthday: E, invite: I = null, giftCodeSKUId: v = null, promoEmailConsent: C = null, usedUsernameSuggestion: N = null } = e;
+function f(e) {
+    let { email: t, phoneToken: n, username: r, globalName: g, consent: f, password: m, guildTemplateCode: b, birthday: N, invite: x = null, giftCodeSKUId: v = null, promoEmailConsent: E = null, usedUsernameSuggestion: I = null } = e;
     return (
-        l.Z.dispatch({ type: 'REGISTER' }),
-        null != E &&
-            ((0, h.Z)(E, _.jXE.REGISTER),
-            d.default.track(_.rMx.AGE_GATE_ACTION, {
-                source: m.L0.REGISTER,
-                action: m.Al.AGE_GATE_SUBMITTED
+        a.Z.dispatch({ type: 'REGISTER' }),
+        null != N &&
+            ((0, h.Z)(N, p.jXE.REGISTER),
+            u.default.track(p.rMx.AGE_GATE_ACTION, {
+                source: _.L0.REGISTER,
+                action: _.Al.AGE_GATE_SUBMITTED
             }),
             (function (e) {
                 let t;
-                let n = r()().diff(e, 'years');
-                n < 13 || ((t = n >= 13 && n <= 17 ? '13-17' : n >= 18 && n <= 22 ? '18-22' : '23+'), d.default.track(_.rMx.USER_AGE_SUBMITTED, { age_bucket: t }));
-            })(E)),
-        u.Z.post({
-            url: _.ANM.REGISTER,
+                let n = i()().diff(e, 'years');
+                n < 13 || ((t = n >= 13 && n <= 17 ? '13-17' : n >= 18 && n <= 22 ? '18-22' : '23+'), u.default.track(p.rMx.USER_AGE_SUBMITTED, { age_bucket: t }));
+            })(N)),
+        d.Z.post({
+            url: p.ANM.REGISTER,
             body: {
                 fingerprint: c.default.getFingerprint(),
                 email: t,
-                username: i,
+                username: r,
                 global_name: g,
-                password: f,
-                invite: I,
-                consent: p,
+                password: m,
+                invite: x,
+                consent: f,
                 phone_token: n,
-                date_of_birth: null == E ? void 0 : E.format('YYYY-MM-DD'),
+                date_of_birth: null == N ? void 0 : N.format('YYYY-MM-DD'),
                 gift_code_sku_id: v,
-                guild_template_code: x,
-                promotional_email_opt_in: null == C ? void 0 : C.checked
+                guild_template_code: b,
+                promotional_email_opt_in: null == E ? void 0 : E.checked
             },
             trackedActionData: {
-                event: a.NetworkActionNames.USER_REGISTER,
+                event: o.NetworkActionNames.USER_REGISTER,
                 properties: {
-                    invite_code: I,
-                    used_username_suggestion: N,
-                    promotional_email_opt_in: null == C ? void 0 : C.checked,
-                    promotional_email_pre_checked: null == C ? void 0 : C.preChecked,
+                    invite_code: x,
+                    used_username_suggestion: I,
+                    promotional_email_opt_in: null == E ? void 0 : E.checked,
+                    promotional_email_pre_checked: null == E ? void 0 : E.preChecked,
                     was_unique_username: !0
                 }
             },
             rejectWithError: !1
         }).then(
             (e) => {
-                l.Z.dispatch({
+                a.Z.dispatch({
                     type: 'REGISTER_SUCCESS',
                     token: e.body.token
                 }),
-                    d.default.track(_.rMx.AGE_GATE_ACTION, {
-                        source: m.L0.REGISTER,
-                        action: m.Al.AGE_GATE_SUCCESS
+                    u.default.track(p.rMx.AGE_GATE_ACTION, {
+                        source: _.L0.REGISTER,
+                        action: _.Al.AGE_GATE_SUCCESS
                     });
             },
             (e) => {
-                let t = new o.Z(e);
+                let t = new l.Z(e);
                 throw (
-                    (null != t.getFieldErrors('date_of_birth') && s.wE(m.L0.REGISTER),
-                    d.default.track(_.rMx.REGISTER_SUBMIT_ERRORED, {
+                    (null != t.getFieldErrors('date_of_birth') && s.wE(_.L0.REGISTER),
+                    u.default.track(p.rMx.REGISTER_SUBMIT_ERRORED, {
                         is_unique_username_registration: !0,
                         email_error_reason: t.getFirstFieldErrorMessage('email'),
                         phone_error_reason: t.getFirstFieldErrorMessage('phone'),

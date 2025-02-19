@@ -1,43 +1,84 @@
-t.d(e, { Z: () => d }), t(47120);
-var i = t(200651),
-    l = t(192379),
-    r = t(89057),
-    a = t(509545),
-    o = t(74538),
-    s = t(987209),
-    u = t(563132),
-    c = t(456251);
-function d(n) {
-    let { initialStep: e, initialPlanId: t, guildId: d, setAnalyticsData: m, handleClose: f } = n,
-        { blockedPayments: h, setStep: p, hasFetchedSubscriptions: x, hasFetchedSubscriptionPlans: g, currencyLoading: v, selectedSkuId: b, setSelectedSkuId: C, setSelectedPlanId: j, priceOptions: S, setSubscriptionMetadataRequest: N } = (0, u.JL)(),
-        { isGift: k } = (0, s.wD)(),
-        [_, T] = l.useState(!x || !g || v);
-    return (l.useEffect(() => {
-        T(!x || !g || v);
-    }, [v, g, x]),
-    l.useEffect(() => {
-        null != d && N({ guild_id: d });
-    }, [d, N]),
-    l.useEffect(() => {
-        j(t);
-        let n = null != t ? a.Z.get(t) : null;
-        !_ &&
-            !h &&
-            (m((e) => {
-                let t = null != n ? (0, o.aS)(n.id, !1, k, S) : void 0;
-                return {
-                    ...e,
-                    subscription_plan_id: null == n ? void 0 : n.id,
-                    price: null == t ? void 0 : t.amount,
-                    regular_price: null == n ? void 0 : n.price,
-                    currency: S.currency
-                };
+n.d(t, { Z: () => d }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    l = n(89057),
+    a = n(509545),
+    o = n(74538),
+    s = n(987209),
+    c = n(563132),
+    u = n(456251);
+function d(e) {
+    let { initialStep: t, initialPlanId: n, guildId: d, setAnalyticsData: m, handleClose: f } = e,
+        { blockedPayments: p, setStep: b, hasFetchedSubscriptions: h, hasFetchedSubscriptionPlans: g, currencyLoading: x, selectedSkuId: v, setSelectedSkuId: N, setSelectedPlanId: j, priceOptions: y, setSubscriptionMetadataRequest: C } = (0, c.JL)(),
+        { isGift: O } = (0, s.wD)(),
+        [S, P] = i.useState(!h || !g || x);
+    return (i.useEffect(() => {
+        P(!h || !g || x);
+    }, [x, g, h]),
+    i.useEffect(() => {
+        null != d && C({ guild_id: d });
+    }, [d, C]),
+    i.useEffect(() => {
+        j(n);
+        let e = null != n ? a.Z.get(n) : null;
+        !S &&
+            !p &&
+            (m((t) => {
+                var n, r;
+                let i = null != e ? (0, o.aS)(e.id, !1, O, y) : void 0;
+                return (
+                    (n = (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var n = null != arguments[t] ? arguments[t] : {},
+                                r = Object.keys(n);
+                            'function' == typeof Object.getOwnPropertySymbols &&
+                                (r = r.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    })
+                                )),
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = n[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: r,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0
+                                              })
+                                            : (e[t] = r);
+                                });
+                        }
+                        return e;
+                    })({}, t)),
+                    (r = r =
+                        {
+                            subscription_plan_id: null == e ? void 0 : e.id,
+                            price: null == i ? void 0 : i.amount,
+                            regular_price: null == e ? void 0 : e.price,
+                            currency: y.currency
+                        }),
+                    Object.getOwnPropertyDescriptors
+                        ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
+                        : (function (e, t) {
+                              var n = Object.keys(e);
+                              if (Object.getOwnPropertySymbols) {
+                                  var r = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, r);
+                              }
+                              return n;
+                          })(Object(r)).forEach(function (e) {
+                              Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
+                          }),
+                    n
+                );
             }),
-            null != n && (C(null == n ? void 0 : n.skuId), p(e)));
-    }, [h, t, k, _, S, b, m, j, C, p, e]),
-    _)
-        ? (0, i.jsx)(c.Z, {})
-        : h
-          ? (0, i.jsx)(r.Vq, { onClose: f })
+            null != e && (N(null == e ? void 0 : e.skuId), b(t)));
+    }, [p, n, O, S, y, v, m, j, N, b, t]),
+    S)
+        ? (0, r.jsx)(u.Z, {})
+        : p
+          ? (0, r.jsx)(l.Vq, { onClose: f })
           : null;
 }

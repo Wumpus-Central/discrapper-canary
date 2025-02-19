@@ -1,26 +1,77 @@
-n.d(t, { G: () => a }), n(47120);
-var i = n(200651);
+n.d(t, { G: () => c }), n(47120);
+var r = n(200651);
 n(192379);
-var r = n(390507);
-let a = function (e) {
+var i = n(390507);
+function o(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function a(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                o(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function s(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = l(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function l(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+let c = function (e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     return function (n) {
-        var a, s, o, l, u;
-        let { color: c, ...d } = n,
-            f = 'currentColor';
-        null != c && (f = 'string' != typeof c && 'css' in c ? c.css : c);
-        let _ = null !== (a = d.size) && void 0 !== a ? a : 'md',
-            p = (0, r.m)(_),
-            h = {
-                color: f,
-                width: null !== (o = null !== (s = null == p ? void 0 : p.width) && void 0 !== s ? s : d.width) && void 0 !== o ? o : 24,
-                height: null !== (u = null !== (l = null == p ? void 0 : p.height) && void 0 !== l ? l : d.height) && void 0 !== u ? u : 24,
-                foreground: d.colorClass
+        var o,
+            l,
+            c,
+            u,
+            d,
+            { color: f } = n,
+            p = s(n, ['color']);
+        let _ = 'currentColor';
+        null != f && (_ = 'string' != typeof f && 'css' in f ? f.css : f);
+        let h = null !== (o = p.size) && void 0 !== o ? o : 'md',
+            m = (0, i.m)(h),
+            g = {
+                color: _,
+                width: null !== (c = null !== (l = null == m ? void 0 : m.width) && void 0 !== l ? l : p.width) && void 0 !== c ? c : 24,
+                height: null !== (d = null !== (u = null == m ? void 0 : m.height) && void 0 !== u ? u : p.height) && void 0 !== d ? d : 24,
+                foreground: p.colorClass
             };
-        for (let [e, n] of Object.entries(t)) null != d[e] && (h[n] = d[e]);
-        return (0, i.jsx)(e, {
-            ...d,
-            ...h
-        });
+        for (let [e, n] of Object.entries(t)) null != p[e] && (g[n] = p[e]);
+        return (0, r.jsx)(e, a({}, p, g));
     };
 };

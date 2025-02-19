@@ -1,49 +1,50 @@
 n.d(t, {
     NF: () => d,
-    Zy: () => c
+    Zy: () => u
 }),
+    n(301563),
     n(47120),
     n(512722);
-var i = n(626135),
-    r = n(777754),
-    a = n(981631),
-    s = n(388032);
-let o = /^\d+$/,
+var r = n(626135),
+    i = n(777754),
+    o = n(981631),
+    a = n(388032);
+let s = /^\d+$/,
     l = /^(.+?@.+?\..+?|.+?#\d{4})$/,
-    u = /^[a-zA-Z0-9_\\.]+$/;
-function c(e) {
-    return u.test(e) || (e.includes('#') && l.test(e)) ? null : (f(e), s.intl.string(s.t.paDJBA));
+    c = /^[a-zA-Z0-9_\\.]+$/;
+function u(e) {
+    return c.test(e) || (e.includes('#') && l.test(e)) ? null : (f(e), a.NW.string(a.t.paDJBA));
 }
 function d(e, t) {
     switch (e) {
-        case a.evJ.RELATIONSHIP_INCOMING_DISABLED:
-            return s.intl.format(s.t.Oxe6Ul, { discordTag: t });
-        case a.evJ.TOO_MANY_FRIENDS:
-            return s.intl.string(s.t.tnBalJ);
-        case a.evJ.RELATIONSHIP_ALREADY_FRIENDS:
-            return s.intl.string(s.t.VNLnen);
-        case a.evJ.USER_QUARANTINED:
-        case a.evJ.USER_FRIEND_REQUEST_LIMITED_ACCESS:
-            return s.intl.string(s.t.EouHws);
-        case a.evJ.TOO_MANY_BLOCKED_USERS:
-            return s.intl.string(s.t.sIGo1t);
-        case a.evJ.RELATIONSHIP_INCOMING_BLOCKED:
-        case a.evJ.RELATIONSHIP_INVALID_SELF:
-        case a.evJ.RELATIONSHIP_INVALUD_USER_BOT:
-        case a.evJ.RELATIONSHIP_INVALID_DISCORD_TAG:
+        case o.evJ.RELATIONSHIP_INCOMING_DISABLED:
+            return a.NW.format(a.t.Oxe6Ul, { discordTag: t });
+        case o.evJ.TOO_MANY_FRIENDS:
+            return a.NW.string(a.t.tnBalJ);
+        case o.evJ.RELATIONSHIP_ALREADY_FRIENDS:
+            return a.NW.string(a.t.VNLnen);
+        case o.evJ.USER_QUARANTINED:
+        case o.evJ.USER_FRIEND_REQUEST_LIMITED_ACCESS:
+            return a.NW.string(a.t.EouHws);
+        case o.evJ.TOO_MANY_BLOCKED_USERS:
+            return a.NW.string(a.t.sIGo1t);
+        case o.evJ.RELATIONSHIP_INCOMING_BLOCKED:
+        case o.evJ.RELATIONSHIP_INVALID_SELF:
+        case o.evJ.RELATIONSHIP_INVALUD_USER_BOT:
+        case o.evJ.RELATIONSHIP_INVALID_DISCORD_TAG:
         default:
-            return s.intl.string(s.t.paDJBA);
+            return a.NW.string(a.t.paDJBA);
     }
 }
 function f(e) {
     let [t, n] = e.split('#');
-    i.default.track(a.rMx.FRIEND_REQUEST_FAILED, {
+    r.default.track(o.rMx.FRIEND_REQUEST_FAILED, {
         reason: 'Invalid Username',
         query: e,
         discrim_len: (null != n ? n : '').length,
         username_len: t.length,
-        is_email_like: r.Z.isEmail(e),
-        is_invite_like: r.Z.isInvite(e),
-        is_num_only: o.test(e)
+        is_email_like: i.Z.isEmail(e),
+        is_invite_like: i.Z.isInvite(e),
+        is_num_only: s.test(e)
     });
 }

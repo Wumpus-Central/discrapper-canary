@@ -1,49 +1,78 @@
-n.d(t, { Z: () => g });
-var i = n(200651),
-    l = n(192379),
-    r = n(704215),
-    a = n(481060),
-    s = n(785697),
-    o = n(626135),
-    d = n(700785),
-    c = n(645041),
-    u = n(981631),
-    h = n(921944),
-    m = n(647086),
-    p = n(135899);
-function g(e) {
+n.d(t, { Z: () => f });
+var r = n(200651),
+    i = n(192379),
+    l = n(704215),
+    o = n(481060),
+    a = n(785697),
+    s = n(626135),
+    c = n(700785),
+    u = n(645041),
+    d = n(981631),
+    p = n(921944),
+    h = n(647086),
+    g = n(135899);
+function f(e) {
     var t;
-    let g = (0, s.SE)(e),
-        _ = p.$X.some((t) => (null == e ? void 0 : e.id) !== m._ && d.oz(t, e)),
-        f = (null == e ? void 0 : e.defaultMessageNotifications) === u.bL.ALL_MESSAGES,
-        E = (0, c.FT)(r.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : u.lds),
-        I = g && (_ || f) && !E,
-        C = l.useCallback(() => {
+    let f = (0, a.SE)(e),
+        m = g.$X.some((t) => (null == e ? void 0 : e.id) !== h._ && c.oz(t, e)),
+        b = (null == e ? void 0 : e.defaultMessageNotifications) === d.bL.ALL_MESSAGES,
+        _ = (0, u.FT)(l.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : d.lds),
+        E = f && (m || b) && !_,
+        O = i.useCallback(() => {
             var t;
-            (0, c.Qd)(r.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : u.lds, !0, h.L.DISMISS);
+            (0, u.Qd)(l.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : d.lds, !0, p.L.DISMISS);
         }, [e]),
-        N = l.useRef(!1);
-    l.useEffect(() => {
-        if (I && !N.current) {
+        N = i.useRef(!1);
+    i.useEffect(() => {
+        if (E && !N.current) {
             var t;
-            (0, a.ZDy)(
+            (0, o.ZDy)(
                 async () => {
                     let { default: t } = await n.e('54597').then(n.bind(n, 29022));
                     return (n) =>
-                        (0, i.jsx)(t, {
-                            guild: e,
-                            canEveryoneModerate: _,
-                            isDefaultNotificationsAllMessages: f,
-                            ...n
-                        });
+                        (0, r.jsx)(
+                            t,
+                            (function (e) {
+                                for (var t = 1; t < arguments.length; t++) {
+                                    var n = null != arguments[t] ? arguments[t] : {},
+                                        r = Object.keys(n);
+                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                        (r = r.concat(
+                                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                            })
+                                        )),
+                                        r.forEach(function (t) {
+                                            var r;
+                                            (r = n[t]),
+                                                t in e
+                                                    ? Object.defineProperty(e, t, {
+                                                          value: r,
+                                                          enumerable: !0,
+                                                          configurable: !0,
+                                                          writable: !0
+                                                      })
+                                                    : (e[t] = r);
+                                        });
+                                }
+                                return e;
+                            })(
+                                {
+                                    guild: e,
+                                    canEveryoneModerate: m,
+                                    isDefaultNotificationsAllMessages: b
+                                },
+                                n
+                            )
+                        );
                 },
-                { onCloseCallback: C }
+                { onCloseCallback: O }
             ),
-                o.default.track(u.rMx.DISMISSIBLE_CONTENT_SHOWN, {
-                    type: r.C[r.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE],
-                    guild_id: null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : u.lds
+                s.default.track(d.rMx.DISMISSIBLE_CONTENT_SHOWN, {
+                    type: l.C[l.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE],
+                    guild_id: null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : d.lds
                 }),
                 (N.current = !0);
         }
-    }, [_, e, C, f, I]);
+    }, [m, e, O, b, E]);
 }

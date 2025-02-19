@@ -2,16 +2,15 @@ n.d(t, {
     G0: () => m,
     u$: () => g
 }),
-    n(47120),
-    n(724458);
-var i,
-    r = n(200651),
-    a = n(192379),
-    s = n(392711),
-    o = n.n(s),
+    n(47120);
+var r,
+    i = n(200651),
+    o = n(192379),
+    a = n(392711),
+    s = n.n(a),
     l = n(748780),
-    u = n(692547),
-    c = n(679232);
+    c = n(692547),
+    u = n(754737);
 function d(e, t, n) {
     return (
         t in e
@@ -26,26 +25,26 @@ function d(e, t, n) {
     );
 }
 let f = 12,
-    _ = [u.Z.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, u.Z.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css, '#929AFA'];
-class p extends a.PureComponent {
+    p = [c.Z.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, c.Z.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css, '#929AFA'];
+class _ extends o.PureComponent {
     render() {
         let {
             props: { height: e },
             state: { backgroundColor: t }
         } = this;
-        return (0, r.jsx)('div', {
+        return (0, i.jsx)('div', {
             style: {
                 height: e,
                 backgroundColor: t
             },
-            className: c.gif
+            className: u.gif
         });
     }
     constructor(...e) {
-        super(...e), d(this, 'state', { backgroundColor: o().sample(_) });
+        super(...e), d(this, 'state', { backgroundColor: s().sample(p) });
     }
 }
-class h extends (i = a.Component) {
+class h extends (r = o.Component) {
     componentDidMount() {
         this.animateSlide();
     }
@@ -68,10 +67,10 @@ class h extends (i = a.Component) {
     }
     render() {
         let { blocks: e } = this.state;
-        return (0, r.jsxs)(l.Z.div, {
-            className: c.column,
+        return (0, i.jsxs)(l.Z.div, {
+            className: u.column,
             style: this.getAnimatedStyle(),
-            children: [e.map((e, t) => (0, r.jsx)(p, { height: e }, t)), e.map((e, t) => (0, r.jsx)(p, { height: e }, 'alt'.concat(t)))]
+            children: [e.map((e, t) => (0, i.jsx)(_, { height: e }, t)), e.map((e, t) => (0, i.jsx)(_, { height: e }, 'alt'.concat(t)))]
         });
     }
     constructor(e) {
@@ -81,18 +80,18 @@ class h extends (i = a.Component) {
                         props: { direction: e },
                         state: { translateY: t, height: n }
                     } = this,
-                    i = e > 0 ? 0 : -n / 2 + f,
-                    r = e > 0 ? -n / 2 + f : 0;
-                t.setValue(i),
+                    r = e > 0 ? 0 : -n / 2 + f,
+                    i = e > 0 ? -n / 2 + f : 0;
+                t.setValue(r),
                     l.Z.timing(t, {
-                        toValue: r,
+                        toValue: i,
                         duration: 800,
                         easing: l.Z.Easing.linear
                     }).start(this.animateSlide);
             });
         let t = Array(10)
             .fill(null)
-            .map(() => o().random(40, 150));
+            .map(() => s().random(40, 150));
         this.state = {
             blocks: t,
             height: 2 * t.reduce((e, t) => e + t + f, f),
@@ -103,20 +102,20 @@ class h extends (i = a.Component) {
 d(h, 'defaultProps', { direction: -1 });
 let m = (e) => {
     let { columns: t } = e;
-    return (0, r.jsx)('div', {
-        className: c.column,
+    return (0, i.jsx)('div', {
+        className: u.column,
         style: { width: ''.concat(100 / t, '%') },
-        children: [, , , ,].fill(null).map((e, t) => (0, r.jsx)('div', { className: c.categoryLoader }, t))
+        children: [, , , ,].fill(null).map((e, t) => (0, i.jsx)('div', { className: u.categoryLoader }, t))
     });
 };
-class g extends a.PureComponent {
+class g extends o.PureComponent {
     render() {
         let { columns: e, renderColumn: t } = this.props;
-        return (0, r.jsx)('div', {
-            className: c.container,
+        return (0, i.jsx)('div', {
+            className: u.container,
             children: Array(e)
                 .fill(null)
-                .map((n, i) => t(e, i))
+                .map((n, r) => t(e, r))
         });
     }
 }

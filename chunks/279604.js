@@ -1,35 +1,52 @@
-i.d(n, { Z: () => s });
-var t = i(200651),
-    a = i(192379),
-    r = i(481060);
+t.d(n, { Z: () => s });
+var i = t(200651),
+    r = t(192379),
+    a = t(481060);
+function o(e) {
+    for (var n = 1; n < arguments.length; n++) {
+        var t = null != arguments[n] ? arguments[n] : {},
+            i = Object.keys(t);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (i = i.concat(
+                Object.getOwnPropertySymbols(t).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(t, e).enumerable;
+                })
+            )),
+            i.forEach(function (n) {
+                var i;
+                (i = t[n]),
+                    n in e
+                        ? Object.defineProperty(e, n, {
+                              value: i,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[n] = i);
+            });
+    }
+    return e;
+}
 function s(e) {
-    let n = a.useCallback(
+    let n = r.useCallback(
         (n) => {
             n.stopPropagation(),
-                (0, r.ZDy)(async () => {
-                    let { default: n } = await i.e('13965').then(i.bind(i, 666083));
-                    return (i) =>
-                        (0, t.jsx)(n, {
-                            powerup: e,
-                            ...i
-                        });
+                (0, a.ZDy)(async () => {
+                    let { default: n } = await t.e('13965').then(t.bind(t, 666083));
+                    return (t) => (0, i.jsx)(n, o({ powerup: e }, t));
                 });
         },
         [e]
     );
     return {
         onActivate: n,
-        onDeactivate: a.useCallback((e) => {
+        onDeactivate: r.useCallback((e) => {
             e.stopPropagation();
         }, []),
-        onShowMore: a.useCallback(() => {
-            (0, r.ZDy)(async () => {
-                let { default: n } = await i.e('78718').then(i.bind(i, 640139));
-                return (i) =>
-                    (0, t.jsx)(n, {
-                        powerup: e,
-                        ...i
-                    });
+        onShowMore: r.useCallback(() => {
+            (0, a.ZDy)(async () => {
+                let { default: n } = await t.e('78718').then(t.bind(t, 640139));
+                return (t) => (0, i.jsx)(n, o({ powerup: e }, t));
             });
         }, [e])
     };

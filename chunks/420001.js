@@ -1,65 +1,116 @@
-n.d(t, { Z: () => E }), n(757143);
-var i = n(911969),
-    r = n(10718),
-    a = n(367790),
-    s = n(895924),
-    o = n(826298),
+n.d(t, { Z: () => O }), n(301563), n(566702), n(757143);
+var r = n(911969),
+    i = n(10718),
+    o = n(367790),
+    a = n(895924),
+    s = n(826298),
     l = n(588468),
-    u = n(695346),
-    c = n(594174),
+    c = n(695346),
+    u = n(594174),
     d = n(5192),
     f = n(417574),
-    _ = n(877565),
-    p = n(590921),
+    p = n(877565),
+    _ = n(590921),
     h = n(126226),
     m = n(388032);
-function g(e) {
+function g(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function E(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                g(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function v(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function b(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : v(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function y(e) {
     let t = f.X.exec(e);
     if (null != t) {
         let n = t[1],
-            i = c.default.getUser(n);
-        return null == i || !i.bot || i.isClyde()
+            r = u.default.getUser(n);
+        return null == r || !r.bot || r.isClyde()
             ? null
             : {
                   type: 'mention',
                   cleanedQuery: e.substring(t[0].length).trim(),
-                  user: i
+                  user: r
               };
     }
     return null;
 }
-let E = {
-    ...h.Z,
+let O = b(E({}, h.Z), {
     sentinel: void 0,
-    focusMode: p.QZ.MANUAL,
-    matches(e, t, n, i, r) {
-        if (r.commands === p.L8.DISABLED || r.commands === p.L8.OLD_BUILT_INS || n.length < 2 || !u.Xk.getSetting()) return !1;
-        let a = g(n);
-        return null != a && a.cleanedQuery.length > 0;
+    focusMode: _.QZ.MANUAL,
+    matches(e, t, n, r, i) {
+        if (i.commands === _.L8.DISABLED || i.commands === _.L8.OLD_BUILT_INS || n.length < 2 || !c.Xk.getSetting()) return !1;
+        let o = y(n);
+        return null != o && o.cleanedQuery.length > 0;
     },
-    queryResults(e, t, n, s, l) {
-        if (!u.Xk.getSetting()) return h.K;
-        let c = g(n);
-        if (null == c) return h.K;
-        let d = (0, o.hV)(e, c.cleanedQuery),
-            { commands: f, sections: _ } = r.JT(
+    queryResults(e, t, n, a, l) {
+        if (!c.Xk.getSetting()) return h.K;
+        let u = y(n);
+        if (null == u) return h.K;
+        let d = (0, s.hV)(e, u.cleanedQuery),
+            { commands: f, sections: p } = i.JT(
                 {
                     channel: e,
                     type: 'channel'
                 },
                 {
-                    commandTypes: [i.yU.CHAT],
+                    commandTypes: [r.yU.CHAT],
                     text: d.text
                 },
                 {
-                    limit: p.AQ,
-                    placeholderCount: p.YP,
-                    scoreMethod: a.p.COMMAND_OR_APPLICATION,
+                    limit: _.AQ,
+                    placeholderCount: _.YP,
+                    scoreMethod: o.p.COMMAND_OR_APPLICATION,
                     allowFetch: l
                 }
             );
         if (null == f) return h.K;
-        let m = f.filter((e) => e.section.botId === c.user.id);
+        let m = f.filter((e) => e.section.botId === u.user.id);
         if (d.hasSpaceTerminator) {
             let e = d.text.trim(),
                 t = e + ' ';
@@ -69,9 +120,9 @@ let E = {
             ? h.K
             : {
                   results: {
-                      entries: m.slice(0, p.AQ).map((e) => ({
+                      entries: m.slice(0, _.AQ).map((e) => ({
                           command: e,
-                          section: null == _ ? void 0 : _.find((t) => t.id === e.applicationId)
+                          section: null == p ? void 0 : p.find((t) => t.id === e.applicationId)
                       }))
                   }
               };
@@ -80,58 +131,53 @@ let E = {
         let {
             results: { entries: t },
             selectedIndex: n,
-            guild: i,
-            channel: r,
-            query: a,
-            options: s,
-            onHover: o,
-            onClick: u
+            guild: r,
+            channel: i,
+            query: o,
+            options: a,
+            onHover: s,
+            onClick: c
         } = e;
-        return (0, _.HI)({
-            query: a,
+        return (0, p.HI)({
+            query: o,
             selectedIndex: n,
             autocompletes: t,
-            onHover: o,
-            onClick: u,
+            onHover: s,
+            onClick: c,
             titleWithQuery: m.t.HFRoZW,
-            titleWithoutQuery: m.intl.string(m.t['0hKkS0']),
-            Component: s.commands === p.L8.OLD_BUILT_INS ? l.ZP.Command : l.ZP.NewCommand,
+            titleWithoutQuery: m.NW.string(m.t['0hKkS0']),
+            Component: a.commands === _.L8.OLD_BUILT_INS ? l.ZP.Command : l.ZP.NewCommand,
             getProps: (e) => {
                 let { command: t, section: n } = e;
                 return {
                     key: t.id,
                     command: t,
-                    channel: r,
-                    guildId: r.guild_id,
+                    channel: i,
+                    guildId: i.guild_id,
                     showImage: !0,
                     section: n
                 };
             },
             getQuery: (e) => {
-                let t = g(e);
+                let t = y(e);
                 if ('mention' !== t.type) return e;
-                let n = d.ZP.getName(null == i ? void 0 : i.id, r.id, t.user);
+                let n = d.ZP.getName(null == r ? void 0 : r.id, i.id, t.user);
                 return e.replace(f.X, '@'.concat(n));
             },
             key: 'commands'
         });
     },
     onSelect(e) {
-        let { results: t, index: n, type: i, options: r, channel: a, guild: o } = e,
+        let { results: t, index: n, type: r, options: i, channel: o, guild: s } = e,
             l = h.Z.onSelect({
                 results: t,
                 index: n,
-                type: i,
-                options: r,
-                channel: a,
-                guild: o,
-                location: s.Vh.SUGGESTION
+                type: r,
+                options: i,
+                channel: o,
+                guild: s,
+                location: a.Vh.SUGGESTION
             });
-        return null == l
-            ? null
-            : {
-                  ...l,
-                  type: p.z2.COMMAND_SUGGESTION
-              };
+        return null == l ? null : b(E({}, l), { type: _.z2.COMMAND_SUGGESTION });
     }
-};
+});

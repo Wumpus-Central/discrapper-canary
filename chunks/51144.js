@@ -1,138 +1,161 @@
 n.d(t, {
-    EO: () => T,
-    Fc: () => I,
+    EO: () => I,
+    Fc: () => S,
     Ft: () => A,
-    W5: () => S,
-    ZP: () => N,
-    _T: () => m,
-    oY: () => h,
-    u5: () => v
+    W5: () => N,
+    ZP: () => C,
+    _T: () => E,
+    oY: () => g,
+    u5: () => y
 }),
     n(411104);
-var i = n(442837),
-    r = n(246946),
-    a = n(594174),
-    s = n(981631),
-    o = n(388032);
-let l = 86400000,
-    u = '???',
-    c = (e) => ''.concat(e[0], '...'),
-    d = (e) => '@'.concat(e),
-    f = {
+var r = n(442837),
+    i = n(246946),
+    o = n(594174),
+    a = n(981631),
+    s = n(388032);
+function l(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function c(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                l(e, t, n[t]);
+            });
+    }
+    return e;
+}
+let u = 86400000,
+    d = '???',
+    f = (e) => ''.concat(e[0], '...'),
+    p = (e) => '@'.concat(e),
+    _ = {
         mode: 'full',
         decoration: 'never',
         identifiable: 'auto',
         forcePomelo: !1
     };
-function _(e) {
+function h(e) {
     return !!(null != e && e.length > 0);
 }
-function p(e) {
-    return _(e.global_name) ? e.global_name : _(e.globalName) ? e.globalName : _(e.username) ? e.username : u;
-}
-function h(e) {
-    var t;
-    if (null == e) return;
-    let n = r.Z.hidePersonalInformation,
-        i = p(e);
-    return n && i.toLocaleLowerCase() === (null === (t = e.username) || void 0 === t ? void 0 : t.toLocaleLowerCase()) && '0' === e.discriminator && (i = c(i)), i;
-}
 function m(e) {
-    var t;
-    let n = (0, i.e7)([r.Z], () => r.Z.hidePersonalInformation);
-    if (null == e) return;
-    let a = p(e);
-    return n && a.toLocaleLowerCase() === (null === (t = e.username) || void 0 === t ? void 0 : t.toLocaleLowerCase()) && '0' === e.discriminator && (a = c(a)), a;
+    return h(e.global_name) ? e.global_name : h(e.globalName) ? e.globalName : h(e.username) ? e.username : d;
 }
 function g(e) {
-    if (null != e) return _(e.globalName) ? e.globalName : _(e.global_name) ? e.global_name : void 0;
+    var t;
+    if (null == e) return;
+    let n = i.Z.hidePersonalInformation,
+        r = m(e);
+    return n && r.toLocaleLowerCase() === (null === (t = e.username) || void 0 === t ? void 0 : t.toLocaleLowerCase()) && '0' === e.discriminator && (r = f(r)), r;
 }
 function E(e) {
     var t;
-    let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    if (null == e) return u;
-    let i = g(e),
-        r = n ? S(e) : null !== (t = e.username) && void 0 !== t ? t : u;
-    return i === r ? i : null != i ? ''.concat(i, ' (').concat(r, ')') : r;
+    let n = (0, r.e7)([i.Z], () => i.Z.hidePersonalInformation);
+    if (null == e) return;
+    let o = m(e);
+    return n && o.toLocaleLowerCase() === (null === (t = e.username) || void 0 === t ? void 0 : t.toLocaleLowerCase()) && '0' === e.discriminator && (o = f(o)), o;
 }
 function v(e) {
+    if (null != e) return h(e.globalName) ? e.globalName : h(e.global_name) ? e.global_name : void 0;
+}
+function b(e) {
+    var t;
+    let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+    if (null == e) return d;
+    let r = v(e),
+        i = n ? N(e) : null !== (t = e.username) && void 0 !== t ? t : d;
+    return r === i ? r : null != r ? ''.concat(r, ' (').concat(i, ')') : i;
+}
+function y(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     switch (e) {
-        case s.Skl.ONLINE:
-            return t ? o.intl.string(o.t['9hghLC']) : o.intl.string(o.t.WbGtnJ);
-        case s.Skl.OFFLINE:
-            return o.intl.string(o.t.Vv0abG);
-        case s.Skl.IDLE:
-            return o.intl.string(o.t.qWbtVV);
-        case s.Skl.DND:
-            return o.intl.string(o.t.jaNpQE);
-        case s.Skl.INVISIBLE:
-            return o.intl.string(o.t.bg24HB);
-        case s.Skl.STREAMING:
-            return o.intl.string(o.t.XKYej4);
-        case s.Skl.UNKNOWN:
+        case a.Skl.ONLINE:
+            return t ? s.NW.string(s.t['9hghLC']) : s.NW.string(s.t.WbGtnJ);
+        case a.Skl.OFFLINE:
+            return s.NW.string(s.t.Vv0abG);
+        case a.Skl.IDLE:
+            return s.NW.string(s.t.qWbtVV);
+        case a.Skl.DND:
+            return s.NW.string(s.t.jaNpQE);
+        case a.Skl.INVISIBLE:
+            return s.NW.string(s.t.bg24HB);
+        case a.Skl.STREAMING:
+            return s.NW.string(s.t.XKYej4);
+        case a.Skl.UNKNOWN:
         default:
             return null;
     }
 }
-function y(e, t) {
-    let { maxDaysOld: n, minDaysOld: i = 0 } = t;
+function O(e, t) {
+    let { maxDaysOld: n, minDaysOld: r = 0 } = t;
     if (null == e) return !1;
-    let r = Date.now() - e.createdAt.getTime(),
-        a = null == n || r <= l * n,
-        s = r >= l * i;
-    return !!a && !!s;
+    let i = Date.now() - e.createdAt.getTime(),
+        o = null == n || i <= u * n,
+        a = i >= u * r;
+    return !!o && !!a;
 }
-function I(e) {
-    return !y(e, {
+function S(e) {
+    return !O(e, {
         minDaysOld: 0,
         maxDaysOld: 30
     });
 }
-function T(e) {
-    return y(e, {
+function I(e) {
+    return O(e, {
         minDaysOld: 0,
         maxDaysOld: 7
     });
 }
-function b(e, t, n) {
-    if (null == e) return o.intl.string(o.t.sKdZ6e);
-    if (!_(e.username)) return u;
-    let i = n;
-    if (('always' === t.identifiable ? (i = !1) : 'never' === t.identifiable && (i = !0), '0' !== e.discriminator && e.discriminator !== s.fo$ && !t.forcePomelo)) return 'username' === t.mode ? e.username : i ? e.username : ''.concat(e.username, '#').concat(e.discriminator);
-    let r = i ? c(e.username) : e.username;
-    return 'never' !== t.decoration ? d(r) : r;
+function T(e, t, n) {
+    if (null == e) return s.NW.string(s.t.sKdZ6e);
+    if (!h(e.username)) return d;
+    let r = n;
+    if (('always' === t.identifiable ? (r = !1) : 'never' === t.identifiable && (r = !0), '0' !== e.discriminator && e.discriminator !== a.fo$ && !t.forcePomelo)) return 'username' === t.mode ? e.username : r ? e.username : ''.concat(e.username, '#').concat(e.discriminator);
+    let i = r ? f(e.username) : e.username;
+    return 'never' !== t.decoration ? p(i) : i;
 }
-function S(e, t) {
-    let n = {
-            ...f,
-            ...t
-        },
-        i = 'auto' !== n.identifiable || r.Z.hidePersonalInformation;
-    return b(e, n, i);
+function N(e, t) {
+    let n = c({}, _, t),
+        r = 'auto' !== n.identifiable || i.Z.hidePersonalInformation;
+    return T(e, n, r);
 }
 function A(e) {
-    return (0, i.e7)([a.default], () => {
-        if (null != e) return e.isPrivate() && e.isDM() ? a.default.getUser(e.getRecipientId()) : null;
+    return (0, r.e7)([o.default], () => {
+        if (null != e) return e.isPrivate() && e.isDM() ? o.default.getUser(e.getRecipientId()) : null;
     });
 }
-let N = {
-    getName: h,
-    useName: m,
+let C = {
+    getName: g,
+    useName: E,
     isNameConcealed: (e) => 4 === e.length && e.endsWith('...'),
-    getUserTag: S,
+    getUserTag: N,
     useUserTag: function (e, t) {
-        return b(
+        return T(
             e,
-            {
-                ...f,
-                ...t
-            },
-            (0, i.e7)([r.Z], () => r.Z.hidePersonalInformation)
+            c({}, _, t),
+            (0, r.e7)([i.Z], () => i.Z.hidePersonalInformation)
         );
     },
-    getFormattedName: E,
-    getGlobalName: g,
-    humanizeStatus: v,
+    getFormattedName: b,
+    getGlobalName: v,
+    humanizeStatus: y,
     useDirectMessageRecipient: A
 };

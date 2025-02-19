@@ -1,32 +1,86 @@
 n.d(t, {
-    ps: () => u,
-    y9: () => l
+    ps: () => p,
+    y9: () => f
 });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(481060),
-    a = n(703656);
+var i = n(481060),
+    o = n(703656);
 n(956664);
-var s = n(419061),
-    o = n(981631);
-function l(e) {
-    return 'number' != typeof e ? (0, r.pxk)(e) * s.hs : e * s.hs;
+var a = n(419061),
+    s = n(981631);
+function l(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
 }
-let u = (e) => {
-    let { analyticsLocations: t, initialSelectedDecoration: s, initialSelectedDecorationId: l, isTryItOutFlow: u, guild: c, onClose: d } = e;
-    (0, r.ZDy)(async () => {
-        (0, a.s1)().location.pathname === o.Z5c.COLLECTIBLES_SHOP_FULLSCREEN && (0, a.uL)(o.Z5c.APP);
+function c(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                l(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function u(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function d(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : u(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function f(e) {
+    return 'number' != typeof e ? (0, i.pxk)(e) * a.hs : e * a.hs;
+}
+let p = (e) => {
+    let { analyticsLocations: t, initialSelectedDecoration: a, initialSelectedDecorationId: l, isTryItOutFlow: u, guild: f, onClose: p } = e;
+    (0, i.ZDy)(async () => {
+        (0, o.s1)().location.pathname === s.Z5c.COLLECTIBLES_SHOP_FULLSCREEN && (0, o.uL)(s.Z5c.APP);
         let { default: e } = await Promise.resolve().then(n.bind(n, 235400));
         return (n) =>
-            (0, i.jsx)(e, {
-                ...n,
-                onCloseModal: n.onClose,
-                onClose: d,
-                analyticsLocations: t,
-                initialSelectedDecoration: s,
-                initialSelectedDecorationId: l,
-                isTryItOutFlow: u,
-                guild: c
-            });
+            (0, r.jsx)(
+                e,
+                d(c({}, n), {
+                    onCloseModal: n.onClose,
+                    onClose: p,
+                    analyticsLocations: t,
+                    initialSelectedDecoration: a,
+                    initialSelectedDecorationId: l,
+                    isTryItOutFlow: u,
+                    guild: f
+                })
+            );
     }, {});
 };

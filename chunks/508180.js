@@ -1,33 +1,67 @@
-n.d(t, { Z: () => d });
-var i = n(200651),
-    r = n(192379),
-    a = n(442837),
-    s = n(481060),
-    o = n(846027),
+n.d(t, { Z: () => p });
+var r = n(200651),
+    i = n(192379),
+    o = n(442837),
+    a = n(481060),
+    s = n(846027),
     l = n(468026),
-    u = n(131951),
-    c = n(388032);
-let d = () => {
-    let e = (0, a.e7)([u.Z], () => u.Z.isInteractionRequired(), []),
-        t = r.useRef(null);
+    c = n(131951),
+    u = n(388032);
+function d(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function f(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                d(e, t, n[t]);
+            });
+    }
+    return e;
+}
+let p = () => {
+    let e = (0, o.e7)([c.Z], () => c.Z.isInteractionRequired(), []),
+        t = i.useRef(null);
     function n() {
-        null !== t.current && ((0, s.Mr3)(t.current), (t.current = null));
+        null !== t.current && ((0, a.Mr3)(t.current), (t.current = null));
     }
     function d() {
-        o.Z.interact();
+        s.Z.interact();
     }
     return (
-        r.useEffect(
+        i.useEffect(
             () => (
                 e
-                    ? (t.current = (0, s.h7j)((e) =>
-                          (0, i.jsx)(l.default, {
-                              title: c.intl.string(c.t.dLLxCw),
-                              body: c.intl.string(c.t['64lmt7']),
-                              onConfirm: d,
-                              confirmText: c.intl.string(c.t.BddRzc),
-                              ...e
-                          })
+                    ? (t.current = (0, a.h7j)((e) =>
+                          (0, r.jsx)(
+                              l.default,
+                              f(
+                                  {
+                                      title: u.NW.string(u.t.dLLxCw),
+                                      body: u.NW.string(u.t['64lmt7']),
+                                      onConfirm: d,
+                                      confirmText: u.NW.string(u.t.BddRzc)
+                                  },
+                                  e
+                              )
+                          )
                       ))
                     : n(),
                 () => {

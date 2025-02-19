@@ -2,70 +2,71 @@ n.d(t, {
     K: () => E,
     i: () => g
 }),
-    n(47120);
-var i = n(933557),
-    r = n(927723),
-    a = n(339085),
-    s = n(633302),
-    o = n(601070),
+    n(47120),
+    n(301563);
+var r = n(933557),
+    i = n(927723),
+    o = n(339085),
+    a = n(633302),
+    s = n(601070),
     l = n(592125),
-    u = n(984933),
-    c = n(271383),
+    c = n(984933),
+    u = n(271383),
     d = n(430824),
     f = n(594174),
-    _ = n(483360),
-    p = n(709054),
+    p = n(483360),
+    _ = n(709054),
     h = n(752305),
     m = n(377668);
-function g(e, t, n, i) {
-    let { allowUsers: r = !0, allowRoles: a = !0 } = null != i ? i : {};
+function g(e, t, n, r) {
+    let { allowUsers: i = !0, allowRoles: o = !0 } = null != r ? r : {};
     switch (e[0]) {
         case '@':
-            return v(e, t, n, r, a);
+            return v(e, t, n, i, o);
         case ':':
-            return T(e, t);
+            return O(e, t);
         case '#':
-            return I(e, t);
+            return y(e, t);
     }
     return null;
 }
-function E(e, t, n, i) {
-    let r = g(e, t, n, i);
-    return null == r ? null : (0, h.VI)(r);
+function E(e, t, n, r) {
+    let i = g(e, t, n, r);
+    return null == i ? null : (0, h.VI)(i);
 }
-function v(e, t, n, i, a) {
-    let [s, o] = e.slice(1).split('#', 2),
-        u = null != t ? d.Z.getGuild(t) : null,
-        f = (0, r.M9)(u);
-    if (a && null == o && null != u) {
-        for (let e of Object.values(d.Z.getRoles(u.id)))
-            if (s === e.name)
+function v(e, t, n, r, o) {
+    let [a, s] = e.slice(1).split('#', 2),
+        c = null != t ? d.Z.getGuild(t) : null,
+        f = (0, i.M9)(c);
+    if (o && null == s && null != c) {
+        for (let e of Object.values(d.Z.getRoles(c.id)))
+            if (a === e.name)
                 return {
                     type: 'roleMention',
                     roleId: e.id,
                     children: [{ text: '' }]
                 };
     }
-    if (i) {
+    if (r) {
         let e = null != n ? l.Z.getChannel(n) : null;
         if (null != e) {
             if (e.isPrivate()) {
                 for (let t of e.recipients)
-                    if (y(s, o, t))
+                    if (b(a, s, t))
                         return {
                             type: 'userMention',
                             userId: t,
                             children: [{ text: '' }]
                         };
             } else {
-                for (let { userId: e } of c.ZP.getMembers(t))
-                    if (y(s, o, e))
+                for (let { userId: e } of u.ZP.getMembers(t))
+                    if (b(a, s, e))
                         return {
                             type: 'userMention',
                             userId: e,
                             children: [{ text: '' }]
                         };
-                if (f && y(s, o, m.fL))
+                if (f && b(a, s, m.fL))
                     return {
                         type: 'userMention',
                         userId: m.fL,
@@ -76,52 +77,52 @@ function v(e, t, n, i, a) {
     }
     return null;
 }
-function y(e, t, n) {
-    let i = f.default.getUser(n);
-    return null != i && ((n === m.fL && 'clyde' === e.toLowerCase()) || (i.username === e && i.discriminator === (null != t ? t : '0')));
+function b(e, t, n) {
+    let r = f.default.getUser(n);
+    return null != r && ((n === m.fL && 'clyde' === e.toLowerCase()) || (r.username === e && r.discriminator === (null != t ? t : '0')));
 }
-function I(e, t) {
+function y(e, t) {
     let n;
     if (null == t) return null;
-    n = e.length > 3 && '"' === e[1] && '"' === e[e.length - 1] ? (0, i.mA)(e.slice(2, e.length - 1)) : e.slice(1);
-    let r = u.ZP.getTextChannelNameDisambiguations(t);
-    for (let e of p.default.keys(r))
-        if (r[e].name === n)
+    n = e.length > 3 && '"' === e[1] && '"' === e[e.length - 1] ? (0, r.mA)(e.slice(2, e.length - 1)) : e.slice(1);
+    let i = c.ZP.getTextChannelNameDisambiguations(t);
+    for (let e of _.default.keys(i))
+        if (i[e].name === n)
             return {
                 type: 'channelMention',
                 channelId: e,
                 children: [{ text: '' }]
             };
-    for (let e of _.k1)
-        if (e !== u.sH) {
-            for (let { channel: i } of u.ZP.getChannels(t)[e])
-                if (i.name === n)
+    for (let e of p.k1)
+        if (e !== c.sH) {
+            for (let { channel: r } of c.ZP.getChannels(t)[e])
+                if (r.name === n)
                     return {
                         type: 'channelMention',
-                        channelId: i.id,
+                        channelId: r.id,
                         children: [{ text: '' }]
                     };
         }
-    let a = o.Z.getActiveJoinedThreadsForGuild(t);
-    for (let e of p.default.keys(a))
-        for (let t of p.default.keys(a[e])) {
-            let { channel: i } = a[e][t];
-            if (i.name === n)
+    let o = s.Z.getActiveJoinedThreadsForGuild(t);
+    for (let e of _.default.keys(o))
+        for (let t of _.default.keys(o[e])) {
+            let { channel: r } = o[e][t];
+            if (r.name === n)
                 return {
                     type: 'channelMention',
-                    channelId: i.id,
+                    channelId: r.id,
                     children: [{ text: '' }]
                 };
         }
     return null;
 }
-function T(e, t) {
-    let n = s.ZP.EMOJI_NAME_RE.exec(e);
+function O(e, t) {
+    let n = a.ZP.EMOJI_NAME_RE.exec(e);
     if (null == n) return null;
-    let i = n[1],
-        r = a.ZP.getDisambiguatedEmojiContext(t).getCustomEmoji();
-    if (null != r && i in r) {
-        let e = r[i];
+    let r = n[1],
+        i = o.ZP.getDisambiguatedEmojiContext(t).getCustomEmoji();
+    if (null != i && r in i) {
+        let e = i[r];
         return {
             type: 'customEmoji',
             emoji: {

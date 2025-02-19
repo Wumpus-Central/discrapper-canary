@@ -1,20 +1,21 @@
 n.d(t, {
     Dv: () => c,
-    Gq: () => r,
-    Gx: () => _,
+    Gq: () => s,
+    Gx: () => p,
     XX: () => o,
-    bX: () => u,
-    bY: () => d,
+    bX: () => d,
+    bY: () => u,
     iG: () => m,
-    ut: () => s
-});
+    ut: () => i
+}),
+    n(566702);
 var a = n(446108),
-    l = n(901461),
-    i = n(981631);
-function s(e) {
+    r = n(901461),
+    l = n(981631);
+function i(e) {
     return 'message-content-'.concat(e.id);
 }
-function r(e) {
+function s(e) {
     return 'message-reply-context-'.concat(e.id);
 }
 function o(e, t) {
@@ -24,43 +25,43 @@ function o(e, t) {
 function c(e) {
     return 'message-timestamp-'.concat(e.id);
 }
-function d(e) {
+function u(e) {
     return 'message-reactions-'.concat(e.id);
 }
-function u(e) {
+function d(e) {
     return 'message-accessories-'.concat(e.id);
 }
 function m(e, t, n) {
-    let d = e.type === i.uaV.REPLY && null != e.messageReference,
+    let u = e.type === l.uaV.REPLY && null != e.messageReference,
         m = e.embeds.length > 0,
-        _ = e.attachments.length > 0,
+        p = e.attachments.length > 0,
         h = e.stickerItems.length > 0,
         g = e.codedLinks.length > 0,
-        p = e.hasFlag(i.iLy.HAS_THREAD),
-        f = m || _ || h || g || p || e.type === i.uaV.THREAD_CREATED,
-        E = m && e.content === e.embeds[0].url && e.embeds[0].type === i.hBH.GIFV,
-        I = e.type !== i.uaV.DEFAULT || (!E && '' !== e.content),
-        C = (0, l.Z)(e),
-        x = !C && (null == n ? void 0 : n.hasTimestamp) !== !1,
-        A = o(e, t),
-        S = r(e),
-        T = C ? '' : ''.concat(d ? S : A, ' ').concat(a.Z0);
-    if (I) {
-        let t = s(e);
-        T += ' '.concat(t);
+        _ = e.hasFlag(l.iLy.HAS_THREAD),
+        f = m || p || h || g || _ || e.type === l.uaV.THREAD_CREATED,
+        b = m && e.content === e.embeds[0].url && e.embeds[0].type === l.hBH.GIFV,
+        y = e.type !== l.uaV.DEFAULT || (!b && '' !== e.content),
+        E = (0, r.Z)(e),
+        I = !E && (null == n ? void 0 : n.hasTimestamp) !== !1,
+        v = o(e, t),
+        S = s(e),
+        C = E ? '' : ''.concat(u ? S : v, ' ').concat(a.Z0);
+    if (y) {
+        let t = i(e);
+        C += ' '.concat(t);
     }
     if (f) {
-        let t = u(e);
-        T += ' '.concat(t);
+        let t = d(e);
+        C += ' '.concat(t);
     }
-    if (x) {
+    if (I) {
         let t = c(e);
-        T += ' '.concat(a.fy, ' ').concat(t);
+        C += ' '.concat(a.fy, ' ').concat(t);
     }
-    return T.trim();
+    return C.trim();
 }
-function _(e) {
+function p(e) {
     if (0 === e.reactions.length) return;
-    let t = d(e);
+    let t = u(e);
     return ''.concat(a.Mb, ' ').concat(t);
 }

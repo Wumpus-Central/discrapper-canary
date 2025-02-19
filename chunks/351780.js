@@ -1,9 +1,9 @@
-n.d(t, { Z: () => h });
-var i,
-    r = n(392711),
-    a = n(442837),
-    s = n(570140),
-    o = n(524484);
+n.d(t, { Z: () => m });
+var r,
+    i = n(392711),
+    o = n(442837),
+    a = n(570140),
+    s = n(524484);
 function l(e, t, n) {
     return (
         t in e
@@ -17,8 +17,24 @@ function l(e, t, n) {
         e
     );
 }
+function c(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                l(e, t, n[t]);
+            });
+    }
+    return e;
+}
 let u = !1,
-    c = {
+    d = {
         settingsVisible: !1,
         enabled: !1,
         combosEnabled: !0,
@@ -26,73 +42,67 @@ let u = !1,
         comboSoundsEnabled: !0,
         screenshakeEnabled: !0,
         screenshakeEnabledLocations: {
-            [o.oZ.CHAT_INPUT]: !0,
-            [o.oZ.VOICE_USER]: !1,
-            [o.oZ.MENTION]: !1
+            [s.oZ.CHAT_INPUT]: !0,
+            [s.oZ.VOICE_USER]: !1,
+            [s.oZ.MENTION]: !1
         },
         shakeIntensity: 1,
         confettiEnabled: !0,
         confettiEnabledLocations: {
-            [o.Hn.CHAT_INPUT]: !0,
-            [o.Hn.REACTION]: !0,
-            [o.Hn.MEMBER_USER]: !0,
-            [o.Hn.CALL_TILE]: !0
+            [s.Hn.CHAT_INPUT]: !0,
+            [s.Hn.REACTION]: !0,
+            [s.Hn.MEMBER_USER]: !0,
+            [s.Hn.CALL_TILE]: !0
         },
         confettiSize: 16,
         confettiCount: 5,
         warningSeen: !1
     },
-    d = (0, r.cloneDeep)(c);
-function f(e) {
+    f = (0, i.cloneDeep)(d);
+function p(e) {
     let { settings: t } = e;
-    d = {
-        ...d,
-        ...t
-    };
+    f = c({}, f, t);
 }
 function _() {
     u = !0;
 }
-class p extends (i = a.ZP.DeviceSettingsStore) {
+class h extends (r = o.ZP.DeviceSettingsStore) {
     initialize(e) {
-        d = {
-            ...d,
-            ...e
-        };
+        f = c({}, f, e);
     }
     getUserAgnosticState() {
-        return d;
+        return f;
     }
     get settingsVisible() {
-        return d.settingsVisible;
+        return f.settingsVisible;
     }
     isEnabled() {
         let { confettiLocation: e, shakeLocation: t } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-            n = null == e || (d.confettiEnabled && d.confettiEnabledLocations[e]),
-            i = null == t || (d.screenshakeEnabled && d.screenshakeEnabledLocations[t]);
-        return this.settingsVisible && !u && d.enabled && n && i;
+            n = null == e || (f.confettiEnabled && f.confettiEnabledLocations[e]),
+            r = null == t || (f.screenshakeEnabled && f.screenshakeEnabledLocations[t]);
+        return this.settingsVisible && !u && f.enabled && n && r;
     }
     get shakeIntensity() {
-        return this.isEnabled() ? d.shakeIntensity : 0;
+        return this.isEnabled() ? f.shakeIntensity : 0;
     }
     get combosRequiredCount() {
-        return this.isEnabled() ? d.combosRequiredCount : 0;
+        return this.isEnabled() ? f.combosRequiredCount : 0;
     }
     get screenshakeEnabled() {
-        return d.screenshakeEnabled;
+        return f.screenshakeEnabled;
     }
     get screenshakeEnabledLocations() {
-        return d.screenshakeEnabledLocations;
+        return f.screenshakeEnabledLocations;
     }
     get combosEnabled() {
-        return d.combosEnabled;
+        return f.combosEnabled;
     }
     get comboSoundsEnabled() {
-        return d.comboSoundsEnabled;
+        return f.comboSoundsEnabled;
     }
 }
-l(p, 'displayName', 'PoggermodeSettingsStore'), l(p, 'persistKey', 'PoggermodeSettingsStore');
-let h = new p(s.Z, {
-    POGGERMODE_SETTINGS_UPDATE: f,
+l(h, 'displayName', 'PoggermodeSettingsStore'), l(h, 'persistKey', 'PoggermodeSettingsStore');
+let m = new h(a.Z, {
+    POGGERMODE_SETTINGS_UPDATE: p,
     POGGERMODE_TEMPORARILY_DISABLED: _
 });

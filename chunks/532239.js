@@ -1,40 +1,63 @@
-n.d(t, { Z: () => d });
-var i = n(200651);
+n.d(t, { Z: () => u });
+var r = n(200651);
 n(192379);
-var l = n(481060),
-    a = n(40851),
-    r = n(493754),
-    s = n(496675),
-    o = n(981631),
+var i = n(481060),
+    l = n(40851),
+    o = n(493754),
+    a = n(496675),
+    s = n(981631),
     c = n(388032);
-function d(e, t, n, d) {
-    let u = {
+function u(e, t, n, u) {
+    let d = {
             streamUserId: n,
             channel: e,
-            applicationId: d,
-            appContext: (0, a.bp)()
+            applicationId: u,
+            appContext: (0, l.bp)()
         },
-        h = () => {
+        p = () => {
             null != t &&
-                e.type === o.d4z.GUILD_VOICE &&
-                (0, r.W)({
-                    guild: t,
-                    ...u
-                });
+                e.type === s.d4z.GUILD_VOICE &&
+                (0, o.W)(
+                    (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var n = null != arguments[t] ? arguments[t] : {},
+                                r = Object.keys(n);
+                            'function' == typeof Object.getOwnPropertySymbols &&
+                                (r = r.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    })
+                                )),
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = n[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: r,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0
+                                              })
+                                            : (e[t] = r);
+                                });
+                        }
+                        return e;
+                    })({ guild: t }, d)
+                );
         };
-    return null != d
-        ? (0, i.jsx)(l.sNh, {
+    return null != u
+        ? (0, r.jsx)(i.sNh, {
               id: 'invite-to-stream',
-              label: c.intl.string(c.t['OzOM/v']),
-              action: h,
-              icon: l.gQj
+              label: c.NW.string(c.t['OzOM/v']),
+              action: p,
+              icon: i.gQj
           })
-        : null != t && null != e && s.Z.can(o.Plq.CREATE_INSTANT_INVITE, e)
-          ? (0, i.jsx)(l.sNh, {
+        : null != t && null != e && a.Z.can(s.Plq.CREATE_INSTANT_INVITE, e)
+          ? (0, r.jsx)(i.sNh, {
                 id: 'invite-friends',
-                label: c.intl.string(c.t['6Qgren']),
-                action: h,
-                icon: l.ejJ
+                label: c.NW.string(c.t['6Qgren']),
+                action: p,
+                icon: i.ejJ
             })
           : null;
 }

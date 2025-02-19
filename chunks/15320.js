@@ -1,188 +1,228 @@
-n.d(t, { Z: () => T });
-var l = n(200651),
-    r = n(192379),
-    i = n(399606),
-    o = n(481060),
+n.d(t, { Z: () => w });
+var r = n(200651),
+    l = n(192379),
+    o = n(399606),
+    i = n(481060),
     s = n(367907),
     a = n(863249),
-    d = n(944163),
-    c = n(14263),
+    c = n(944163),
+    d = n(14263),
     u = n(768762),
     m = n(626135),
-    x = n(823379),
-    h = n(806223),
-    p = n(45966),
+    h = n(823379),
+    p = n(806223),
+    x = n(45966),
     f = n(637853),
     g = n(968644),
-    v = n(104265),
-    _ = n(588632),
-    j = n(290511),
-    C = n(981631),
-    N = n(388032),
-    b = n(260294);
-function k(e, t) {
-    return (0, l.jsx)(
+    j = n(104265),
+    v = n(588632),
+    b = n(290511),
+    N = n(981631),
+    _ = n(388032),
+    C = n(557541);
+function k(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function O(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function Z(e, t) {
+    return (0, r.jsx)(
         'span',
         {
-            className: b.helpTextItem,
+            className: C.helpTextItem,
             children: e
         },
         t
     );
 }
-function Z(e) {
-    return null != e && h.Z.getCurrentConfig({ location: 'ba216b_1' }, { autoTrackExposure: !0 }).includeRules;
+function E(e) {
+    return null != e && p.Z.getCurrentConfig({ location: 'ba216b_1' }, { autoTrackExposure: !0 }).includeRules;
 }
 function I(e) {
-    let { headerId: t, guild: n, step: r, lastPrompt: s, questionCount: a, currentPrompt: d, selectOption: m, gotoPrevPrompt: x, gotoNextPrompt: h, completeOnboarding: v } = e,
-        j = (0, i.Wu)([p.Z], () => p.Z.getOnboardingResponsesForPrompt(n.id, d.id)),
-        C = 0 === j.length && (null == d ? void 0 : d.required),
-        Z = null == d ? void 0 : d.options.filter((e) => j.includes(e.id)),
-        I = (0, f.L6)(Z),
-        E = (0, f.dX)(Z),
-        T = 0 === j.length,
-        { helpText: D, helpTextAdditional: w } = (0, g.Z)({
+    let { headerId: t, guild: n, step: l, lastPrompt: s, questionCount: a, currentPrompt: c, selectOption: m, gotoPrevPrompt: h, gotoNextPrompt: p, completeOnboarding: j } = e,
+        b = (0, o.Wu)([x.Z], () => x.Z.getOnboardingResponsesForPrompt(n.id, c.id)),
+        N = 0 === b.length && (null == c ? void 0 : c.required),
+        O = null == c ? void 0 : c.options.filter((e) => b.includes(e.id)),
+        E = (0, f.L6)(O),
+        I = (0, f.dX)(O),
+        y = 0 === b.length,
+        { helpText: w, helpTextAdditional: P } = (0, g.Z)({
             guild: n,
-            prompt: d,
-            selectedRoleIds: I,
-            selectedChannelIds: E,
-            itemHook: k
+            prompt: c,
+            selectedRoleIds: E,
+            selectedChannelIds: I,
+            itemHook: Z
         }),
-        R = (0, c.Z)(n.id, 1000),
-        P = d.options.map((e) => ({
-            value: e.id,
-            ...e
-        })),
-        M = d.options.filter((e) => j.includes(e.id)).map((e) => e.id);
-    return (0, l.jsx)('div', {
-        className: b.prompt,
-        children: (0, l.jsxs)('div', {
-            className: b.promptContent,
+        D = (0, d.Z)(n.id, 1000),
+        T = c.options.map((e) => k({ value: e.id }, e)),
+        R = c.options.filter((e) => b.includes(e.id)).map((e) => e.id);
+    return (0, r.jsx)('div', {
+        className: C.prompt,
+        children: (0, r.jsxs)('div', {
+            className: C.promptContent,
             children: [
-                (0, l.jsxs)(o.zJl, {
-                    className: b.scrollerContent,
+                (0, r.jsxs)(i.zJl, {
+                    className: C.scrollerContent,
                     children: [
-                        (0, l.jsxs)('div', {
-                            className: b.questionHeader,
+                        (0, r.jsxs)('div', {
+                            className: C.questionHeader,
                             children: [
-                                (0, l.jsx)(o.Text, {
+                                (0, r.jsx)(i.Text, {
                                     variant: 'text-sm/medium',
                                     color: 'text-muted',
-                                    children: N.intl.format(N.t.isV0NT, {
-                                        currentQuestion: r + 1,
+                                    children: _.NW.format(_.t.isV0NT, {
+                                        currentQuestion: l + 1,
                                         questionCount: a
                                     })
                                 }),
-                                d.required
-                                    ? (0, l.jsxs)(l.Fragment, {
+                                c.required
+                                    ? (0, r.jsxs)(r.Fragment, {
                                           children: [
-                                              (0, l.jsx)(o.Text, {
+                                              (0, r.jsx)(i.Text, {
                                                   variant: 'text-xs/normal',
-                                                  className: b.headerSeparator,
+                                                  className: C.headerSeparator,
                                                   children: '\xB7'
                                               }),
-                                              (0, l.jsx)(o.Text, {
+                                              (0, r.jsx)(i.Text, {
                                                   variant: 'text-sm/medium',
                                                   color: 'text-brand',
-                                                  children: N.intl.string(N.t.Ur8Vrq)
+                                                  children: _.NW.string(_.t.Ur8Vrq)
                                               })
                                           ]
                                       })
                                     : null
                             ]
                         }),
-                        (0, l.jsx)(o.X6q, {
-                            className: b.title,
+                        (0, r.jsx)(i.X6q, {
+                            className: C.title,
                             variant: 'heading-xl/semibold',
                             color: 'header-primary',
                             id: t,
-                            children: d.title
+                            children: c.title
                         }),
-                        (0, l.jsx)(_.Z, {
-                            options: P,
-                            value: M,
+                        (0, r.jsx)(v.Z, {
+                            options: T,
+                            value: R,
                             onChange: (e) => {
-                                let t = e.find((e) => !j.includes(e.id)),
+                                let t = e.find((e) => !b.includes(e.id)),
                                     n = e.map((e) => e.id);
-                                if (null != t) m(d.id, t.id, !0);
+                                if (null != t) m(c.id, t.id, !0);
                                 else {
-                                    let e = j.filter((e) => !n.includes(e));
-                                    d.options
+                                    let e = b.filter((e) => !n.includes(e));
+                                    c.options
                                         .filter((t) => e.includes(t.id))
                                         .forEach((e) => {
-                                            m(d.id, e.id, !1);
+                                            m(c.id, e.id, !1);
                                         });
                                 }
                             },
-                            memberCounts: R
+                            memberCounts: D
                         })
                     ]
                 }),
-                (0, l.jsxs)('div', {
-                    className: b.navButtons,
+                (0, r.jsxs)('div', {
+                    className: C.navButtons,
                     children: [
-                        (0, l.jsx)('div', {
-                            className: b.leftButtons,
+                        (0, r.jsx)('div', {
+                            className: C.leftButtons,
                             children:
-                                r > 0 &&
-                                (0, l.jsxs)(o.zxk, {
-                                    className: b.button,
-                                    innerClassName: b.buttonInner,
-                                    onClick: () => x(j.length),
-                                    size: o.zxk.Sizes.MEDIUM,
-                                    look: o.zxk.Looks.OUTLINED,
+                                l > 0 &&
+                                (0, r.jsxs)(i.zxk, {
+                                    className: C.button,
+                                    innerClassName: C.buttonInner,
+                                    onClick: () => h(b.length),
+                                    size: i.zxk.Sizes.MEDIUM,
+                                    look: i.zxk.Looks.OUTLINED,
                                     grow: !1,
-                                    color: o.zxk.Colors.PRIMARY,
+                                    color: i.zxk.Colors.PRIMARY,
                                     children: [
-                                        (0, l.jsx)(u.Z, {
-                                            className: b.arrow,
+                                        (0, r.jsx)(u.Z, {
+                                            className: C.arrow,
                                             direction: u.Z.Directions.LEFT
                                         }),
-                                        N.intl.string(N.t['13/7kZ'])
+                                        _.NW.string(_.t['13/7kZ'])
                                     ]
                                 })
                         }),
-                        (0, l.jsxs)('div', {
-                            className: b.rightButtons,
+                        (0, r.jsxs)('div', {
+                            className: C.rightButtons,
                             children: [
-                                (0, l.jsxs)(o.Text, {
-                                    className: b.helpText,
+                                (0, r.jsxs)(i.Text, {
+                                    className: C.helpText,
                                     variant: 'text-xs/normal',
                                     color: 'text-muted',
-                                    children: [D, ' ', w]
+                                    children: [w, ' ', P]
                                 }),
-                                (0, l.jsx)(o.ua7, {
-                                    text: C ? N.intl.string(N.t.dA1dSU) : null,
+                                (0, r.jsx)(i.ua7, {
+                                    text: N ? _.NW.string(_.t.dA1dSU) : null,
                                     children: (e) => {
                                         let { onMouseEnter: t, onMouseLeave: n } = e;
-                                        return (0, l.jsx)(o.zxk, {
-                                            className: b.button,
-                                            innerClassName: b.buttonInner,
+                                        return (0, r.jsx)(i.zxk, {
+                                            className: C.button,
+                                            innerClassName: C.buttonInner,
                                             onMouseEnter: t,
                                             onMouseLeave: n,
-                                            onClick: () => (s ? v() : h(j.length)),
-                                            disabled: C,
-                                            size: o.zxk.Sizes.MEDIUM,
-                                            look: o.zxk.Looks.FILLED,
+                                            onClick: () => (s ? j() : p(b.length)),
+                                            disabled: N,
+                                            size: i.zxk.Sizes.MEDIUM,
+                                            look: i.zxk.Looks.FILLED,
                                             grow: !1,
-                                            color: T ? o.zxk.Colors.PRIMARY : o.zxk.Colors.BRAND,
+                                            color: y ? i.zxk.Colors.PRIMARY : i.zxk.Colors.BRAND,
                                             children: s
-                                                ? (0, l.jsxs)(l.Fragment, {
+                                                ? (0, r.jsxs)(r.Fragment, {
                                                       children: [
-                                                          N.intl.string(N.t['8SuVoK']),
-                                                          (0, l.jsx)('span', {
-                                                              className: b.finishEmoji,
+                                                          _.NW.string(_.t['8SuVoK']),
+                                                          (0, r.jsx)('span', {
+                                                              className: C.finishEmoji,
                                                               role: 'img',
                                                               'aria-hidden': !0,
                                                               children: '\uD83C\uDF89'
                                                           })
                                                       ]
                                                   })
-                                                : (0, l.jsxs)(l.Fragment, {
+                                                : (0, r.jsxs)(r.Fragment, {
                                                       children: [
-                                                          T ? N.intl.string(N.t['5WxrcX']) : N.intl.string(N.t.PDTjLC),
-                                                          (0, l.jsx)(u.Z, {
-                                                              className: b.arrow,
+                                                          y ? _.NW.string(_.t['5WxrcX']) : _.NW.string(_.t.PDTjLC),
+                                                          (0, r.jsx)(u.Z, {
+                                                              className: C.arrow,
                                                               direction: u.Z.Directions.RIGHT
                                                           })
                                                       ]
@@ -198,75 +238,75 @@ function I(e) {
         })
     });
 }
-function E(e) {
-    let { headerId: t, guild: n, step: r, lastPrompt: s, questionCount: a, currentPrompt: d, selectOption: c, gotoPrevPrompt: m, gotoNextPrompt: x, completeOnboarding: h } = e,
-        _ = (0, i.Wu)([p.Z], () => p.Z.getOnboardingResponsesForPrompt(n.id, d.id)),
-        j = 0 === _.length && (null == d ? void 0 : d.required),
-        C = null == d ? void 0 : d.options.filter((e) => _.includes(e.id)),
-        Z = (0, f.L6)(C),
-        I = (0, f.dX)(C),
-        E = 0 === _.length,
-        { helpText: T, helpTextAdditional: D } = (0, g.Z)({
+function y(e) {
+    let { headerId: t, guild: n, step: l, lastPrompt: s, questionCount: a, currentPrompt: c, selectOption: d, gotoPrevPrompt: m, gotoNextPrompt: h, completeOnboarding: p } = e,
+        v = (0, o.Wu)([x.Z], () => x.Z.getOnboardingResponsesForPrompt(n.id, c.id)),
+        b = 0 === v.length && (null == c ? void 0 : c.required),
+        N = null == c ? void 0 : c.options.filter((e) => v.includes(e.id)),
+        k = (0, f.L6)(N),
+        O = (0, f.dX)(N),
+        E = 0 === v.length,
+        { helpText: I, helpTextAdditional: y } = (0, g.Z)({
             guild: n,
-            prompt: d,
-            selectedRoleIds: Z,
-            selectedChannelIds: I,
-            itemHook: k
+            prompt: c,
+            selectedRoleIds: k,
+            selectedChannelIds: O,
+            itemHook: Z
         });
-    return (0, l.jsx)('div', {
-        className: b.prompt,
-        children: (0, l.jsxs)('div', {
-            className: b.promptContent,
+    return (0, r.jsx)('div', {
+        className: C.prompt,
+        children: (0, r.jsxs)('div', {
+            className: C.promptContent,
             children: [
-                (0, l.jsxs)(o.zJl, {
-                    className: b.scrollerContent,
+                (0, r.jsxs)(i.zJl, {
+                    className: C.scrollerContent,
                     children: [
-                        (0, l.jsxs)('div', {
-                            className: b.questionHeader,
+                        (0, r.jsxs)('div', {
+                            className: C.questionHeader,
                             children: [
-                                (0, l.jsx)(o.Text, {
+                                (0, r.jsx)(i.Text, {
                                     variant: 'text-sm/medium',
                                     color: 'text-muted',
-                                    children: N.intl.format(N.t.isV0NT, {
-                                        currentQuestion: r + 1,
+                                    children: _.NW.format(_.t.isV0NT, {
+                                        currentQuestion: l + 1,
                                         questionCount: a
                                     })
                                 }),
-                                d.required
-                                    ? (0, l.jsxs)(l.Fragment, {
+                                c.required
+                                    ? (0, r.jsxs)(r.Fragment, {
                                           children: [
-                                              (0, l.jsx)(o.Text, {
+                                              (0, r.jsx)(i.Text, {
                                                   variant: 'text-xs/normal',
-                                                  className: b.headerSeparator,
+                                                  className: C.headerSeparator,
                                                   children: '\xB7'
                                               }),
-                                              (0, l.jsx)(o.Text, {
+                                              (0, r.jsx)(i.Text, {
                                                   variant: 'text-sm/medium',
                                                   color: 'text-brand',
-                                                  children: N.intl.string(N.t.Ur8Vrq)
+                                                  children: _.NW.string(_.t.Ur8Vrq)
                                               })
                                           ]
                                       })
                                     : null
                             ]
                         }),
-                        (0, l.jsx)(o.X6q, {
-                            className: b.title,
+                        (0, r.jsx)(i.X6q, {
+                            className: C.title,
                             variant: 'heading-xl/semibold',
                             color: 'header-primary',
                             id: t,
-                            children: d.title
+                            children: c.title
                         }),
-                        (0, l.jsx)('div', {
-                            className: b.promptOptions,
-                            children: d.options.map((e) =>
-                                (0, l.jsx)(
-                                    v.Z,
+                        (0, r.jsx)('div', {
+                            className: C.promptOptions,
+                            children: c.options.map((e) =>
+                                (0, r.jsx)(
+                                    j.Z,
                                     {
                                         guildId: n.id,
                                         option: e,
-                                        onSelect: (t) => c(d.id, e.id, null != t && t),
-                                        selected: _.includes(e.id)
+                                        onSelect: (t) => d(c.id, e.id, null != t && t),
+                                        selected: v.includes(e.id)
                                     },
                                     e.id
                                 )
@@ -274,71 +314,71 @@ function E(e) {
                         })
                     ]
                 }),
-                (0, l.jsxs)('div', {
-                    className: b.navButtons,
+                (0, r.jsxs)('div', {
+                    className: C.navButtons,
                     children: [
-                        (0, l.jsx)('div', {
-                            className: b.leftButtons,
+                        (0, r.jsx)('div', {
+                            className: C.leftButtons,
                             children:
-                                r > 0 &&
-                                (0, l.jsxs)(o.zxk, {
-                                    className: b.button,
-                                    innerClassName: b.buttonInner,
-                                    onClick: () => m(_.length),
-                                    size: o.zxk.Sizes.MEDIUM,
-                                    look: o.zxk.Looks.OUTLINED,
+                                l > 0 &&
+                                (0, r.jsxs)(i.zxk, {
+                                    className: C.button,
+                                    innerClassName: C.buttonInner,
+                                    onClick: () => m(v.length),
+                                    size: i.zxk.Sizes.MEDIUM,
+                                    look: i.zxk.Looks.OUTLINED,
                                     grow: !1,
-                                    color: o.zxk.Colors.PRIMARY,
+                                    color: i.zxk.Colors.PRIMARY,
                                     children: [
-                                        (0, l.jsx)(u.Z, {
-                                            className: b.arrow,
+                                        (0, r.jsx)(u.Z, {
+                                            className: C.arrow,
                                             direction: u.Z.Directions.LEFT
                                         }),
-                                        N.intl.string(N.t['13/7kZ'])
+                                        _.NW.string(_.t['13/7kZ'])
                                     ]
                                 })
                         }),
-                        (0, l.jsxs)('div', {
-                            className: b.rightButtons,
+                        (0, r.jsxs)('div', {
+                            className: C.rightButtons,
                             children: [
-                                (0, l.jsxs)(o.Text, {
-                                    className: b.helpText,
+                                (0, r.jsxs)(i.Text, {
+                                    className: C.helpText,
                                     variant: 'text-xs/normal',
                                     color: 'text-muted',
-                                    children: [T, ' ', D]
+                                    children: [I, ' ', y]
                                 }),
-                                (0, l.jsx)(o.ua7, {
-                                    text: j ? N.intl.string(N.t.dA1dSU) : null,
+                                (0, r.jsx)(i.ua7, {
+                                    text: b ? _.NW.string(_.t.dA1dSU) : null,
                                     children: (e) => {
                                         let { onMouseEnter: t, onMouseLeave: n } = e;
-                                        return (0, l.jsx)(o.zxk, {
-                                            className: b.button,
-                                            innerClassName: b.buttonInner,
+                                        return (0, r.jsx)(i.zxk, {
+                                            className: C.button,
+                                            innerClassName: C.buttonInner,
                                             onMouseEnter: t,
                                             onMouseLeave: n,
-                                            onClick: () => (s ? h() : x(_.length)),
-                                            disabled: j,
-                                            size: o.zxk.Sizes.MEDIUM,
-                                            look: o.zxk.Looks.FILLED,
+                                            onClick: () => (s ? p() : h(v.length)),
+                                            disabled: b,
+                                            size: i.zxk.Sizes.MEDIUM,
+                                            look: i.zxk.Looks.FILLED,
                                             grow: !1,
-                                            color: E ? o.zxk.Colors.PRIMARY : o.zxk.Colors.BRAND,
+                                            color: E ? i.zxk.Colors.PRIMARY : i.zxk.Colors.BRAND,
                                             children: s
-                                                ? (0, l.jsxs)(l.Fragment, {
+                                                ? (0, r.jsxs)(r.Fragment, {
                                                       children: [
-                                                          N.intl.string(N.t['8SuVoK']),
-                                                          (0, l.jsx)('span', {
-                                                              className: b.finishEmoji,
+                                                          _.NW.string(_.t['8SuVoK']),
+                                                          (0, r.jsx)('span', {
+                                                              className: C.finishEmoji,
                                                               role: 'img',
                                                               'aria-hidden': !0,
                                                               children: '\uD83C\uDF89'
                                                           })
                                                       ]
                                                   })
-                                                : (0, l.jsxs)(l.Fragment, {
+                                                : (0, r.jsxs)(r.Fragment, {
                                                       children: [
-                                                          E ? N.intl.string(N.t['5WxrcX']) : N.intl.string(N.t.PDTjLC),
-                                                          (0, l.jsx)(u.Z, {
-                                                              className: b.arrow,
+                                                          E ? _.NW.string(_.t['5WxrcX']) : _.NW.string(_.t.PDTjLC),
+                                                          (0, r.jsx)(u.Z, {
+                                                              className: C.arrow,
                                                               direction: u.Z.Directions.RIGHT
                                                           })
                                                       ]
@@ -354,90 +394,100 @@ function E(e) {
         })
     });
 }
-function T(e) {
-    let { guild: t, prompts: n, step: o, selectOption: c, completeOnboarding: u, setCurrentStep: h, headerId: p, disableTracking: f } = e,
-        g = (0, i.e7)([d.Z], () => d.Z.getRulesPrompt(t.id));
-    r.useEffect(() => {
-        t.hasFeature(C.oNc.MEMBER_VERIFICATION_GATE_ENABLED) && a.ZP.fetchVerificationForm(t.id);
+function w(e) {
+    let { guild: t, prompts: n, step: i, selectOption: d, completeOnboarding: u, setCurrentStep: p, headerId: x, disableTracking: f } = e,
+        g = (0, o.e7)([c.Z], () => c.Z.getRulesPrompt(t.id));
+    l.useEffect(() => {
+        t.hasFeature(N.oNc.MEMBER_VERIFICATION_GATE_ENABLED) && a.ZP.fetchVerificationForm(t.id);
     }, [t]);
-    let v = n[o],
-        _ = o + 1 >= n.length && !Z(g),
-        N = n[0].required;
-    r.useEffect(() => {
+    let j = n[i],
+        v = i + 1 >= n.length && !E(g),
+        _ = n[0].required;
+    l.useEffect(() => {
         !f &&
-            m.default.track(C.rMx.GUILD_ONBOARDING_STEP_VIEWED, {
-                ...(0, s.hH)(t.id),
-                step: 0,
-                required: N
-            });
-    }, [t.id, N, f]);
-    let b = (e) => {
+            m.default.track(
+                N.rMx.GUILD_ONBOARDING_STEP_VIEWED,
+                O(k({}, (0, s.hH)(t.id)), {
+                    step: 0,
+                    required: _
+                })
+            );
+    }, [t.id, _, f]);
+    let C = (e) => {
             !f &&
-                (m.default.track(C.rMx.GUILD_ONBOARDING_STEP_COMPLETED, {
-                    ...(0, s.hH)(t.id),
-                    step: o,
-                    options_selected: e,
-                    skipped: 0 === e,
-                    back: !1,
-                    in_onboarding: !0,
-                    is_final_step: !1
-                }),
-                o < n.length - 1 &&
-                    m.default.track(C.rMx.GUILD_ONBOARDING_STEP_VIEWED, {
-                        ...(0, s.hH)(t.id),
-                        step: o,
-                        required: n[o + 1].required
-                    })),
-                o + 1 < n.length ? h(o + 1) : Z(g) && h('rules');
+                (m.default.track(
+                    N.rMx.GUILD_ONBOARDING_STEP_COMPLETED,
+                    O(k({}, (0, s.hH)(t.id)), {
+                        step: i,
+                        options_selected: e,
+                        skipped: 0 === e,
+                        back: !1,
+                        in_onboarding: !0,
+                        is_final_step: !1
+                    })
+                ),
+                i < n.length - 1 &&
+                    m.default.track(
+                        N.rMx.GUILD_ONBOARDING_STEP_VIEWED,
+                        O(k({}, (0, s.hH)(t.id)), {
+                            step: i,
+                            required: n[i + 1].required
+                        })
+                    )),
+                i + 1 < n.length ? p(i + 1) : E(g) && p('rules');
         },
-        k = (e) => {
+        Z = (e) => {
             !f &&
-                (m.default.track(C.rMx.GUILD_ONBOARDING_STEP_COMPLETED, {
-                    ...(0, s.hH)(t.id),
-                    step: o,
-                    skipped: !1,
-                    back: !0,
-                    options_selected: e,
-                    in_onboarding: !0,
-                    is_final_step: !1
-                }),
-                o > 0 &&
-                    m.default.track(C.rMx.GUILD_ONBOARDING_STEP_VIEWED, {
-                        ...(0, s.hH)(t.id),
-                        step: o - 1,
-                        required: n[o - 1].required
-                    })),
-                h(Math.max(0, o - 1));
+                (m.default.track(
+                    N.rMx.GUILD_ONBOARDING_STEP_COMPLETED,
+                    O(k({}, (0, s.hH)(t.id)), {
+                        step: i,
+                        skipped: !1,
+                        back: !0,
+                        options_selected: e,
+                        in_onboarding: !0,
+                        is_final_step: !1
+                    })
+                ),
+                i > 0 &&
+                    m.default.track(
+                        N.rMx.GUILD_ONBOARDING_STEP_VIEWED,
+                        O(k({}, (0, s.hH)(t.id)), {
+                            step: i - 1,
+                            required: n[i - 1].required
+                        })
+                    )),
+                p(Math.max(0, i - 1));
         };
-    if (null == v) return null;
-    switch (v.type) {
-        case j.FN.MULTIPLE_CHOICE:
-            return (0, l.jsx)(E, {
+    if (null == j) return null;
+    switch (j.type) {
+        case b.FN.MULTIPLE_CHOICE:
+            return (0, r.jsx)(y, {
                 guild: t,
-                headerId: p,
-                step: o,
+                headerId: x,
+                step: i,
                 questionCount: n.length,
-                currentPrompt: v,
-                lastPrompt: _,
-                selectOption: c,
-                gotoPrevPrompt: k,
-                gotoNextPrompt: b,
+                currentPrompt: j,
+                lastPrompt: v,
+                selectOption: d,
+                gotoPrevPrompt: Z,
+                gotoNextPrompt: C,
                 completeOnboarding: u
             });
-        case j.FN.DROPDOWN:
-            return (0, l.jsx)(I, {
+        case b.FN.DROPDOWN:
+            return (0, r.jsx)(I, {
                 guild: t,
-                headerId: p,
-                step: o,
+                headerId: x,
+                step: i,
                 questionCount: n.length,
-                currentPrompt: v,
-                lastPrompt: _,
-                selectOption: c,
-                gotoPrevPrompt: k,
-                gotoNextPrompt: b,
+                currentPrompt: j,
+                lastPrompt: v,
+                selectOption: d,
+                gotoPrevPrompt: Z,
+                gotoNextPrompt: C,
                 completeOnboarding: u
             });
         default:
-            (0, x.vE)(v.type);
+            (0, h.vE)(j.type);
     }
 }

@@ -1,144 +1,174 @@
-l.d(n, {
-    ZP: () => C,
-    tE: () => f
+r.d(t, {
+    ZP: () => g,
+    tE: () => j
 }),
-    l(47120);
-var t,
-    i = l(200651),
-    r = l(192379),
-    a = l(120356),
-    s = l.n(a),
-    o = l(481060),
-    u = l(911969),
-    c = l(739754),
-    d = l(970184),
-    m = l(280501),
-    h = l(388032),
-    p = l(201280),
-    x = l(219803);
-function v(e) {
-    let { icon: n, iconSize: l } = e;
-    return (0, i.jsx)('div', {
-        className: p.iconContainer,
+    r(47120);
+var n,
+    l = r(200651),
+    i = r(192379),
+    o = r(120356),
+    a = r.n(o),
+    c = r(481060),
+    s = r(911969),
+    u = r(739754),
+    d = r(970184),
+    p = r(280501),
+    b = r(388032),
+    f = r(294542),
+    O = r(601445);
+function y(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var r = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(r);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (n = n.concat(
+                Object.getOwnPropertySymbols(r).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                })
+            )),
+            n.forEach(function (t) {
+                var n;
+                (n = r[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: n,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = n);
+            });
+    }
+    return e;
+}
+function m(e) {
+    let { icon: t, iconSize: r } = e;
+    return (0, l.jsx)('div', {
+        className: f.iconContainer,
         style: {
-            height: l,
-            width: l
+            height: r,
+            width: r
         },
-        children: n
+        children: t
     });
 }
-var f = (((t = {})[(t.PILL_ICON_SIZE = 16)] = 'PILL_ICON_SIZE'), (t[(t.ROW_ICON_SIZE = 24)] = 'ROW_ICON_SIZE'), t);
-function C(e) {
-    let { selectActionComponent: n, queryOptions: l, renderIcon: t, renderOptionLabel: a, defaultValues: f } = e,
-        { type: C, placeholder: g, maxValues: j, disabled: N } = n,
-        [S, E] = r.useState(!1),
-        [I, Z] = r.useState(!1),
-        [T, b] = r.useState(new Map(null == f ? void 0 : f.map((e) => [e.value, e]))),
-        [y, L] = r.useState(new Set(T.keys())),
-        [k, _] = r.useState(() => (null != f ? f : []).map((e) => e.value)),
-        [R, P] = r.useState(0);
-    r.useEffect(() => {
-        let e = (null != f ? f : []).map((e) => e.value);
-        if (e.every((e) => k.includes(e)) && k.every((n) => e.includes(n))) return;
-        _(e);
-        let n = new Map(null == f ? void 0 : f.map((e) => [e.value, e]));
-        b(n), L(new Set(n.keys())), P((e) => e + 1);
-    }, [f, k]);
+var j = (((n = {})[(n.PILL_ICON_SIZE = 16)] = 'PILL_ICON_SIZE'), (n[(n.ROW_ICON_SIZE = 24)] = 'ROW_ICON_SIZE'), n);
+function g(e) {
+    var t, r;
+    let { selectActionComponent: n, queryOptions: o, renderIcon: j, renderOptionLabel: g, defaultValues: h } = e,
+        { type: v, placeholder: P, maxValues: x, disabled: w } = n,
+        [S, C] = i.useState(!1),
+        [E, N] = i.useState(!1),
+        [I, k] = i.useState(new Map(null == h ? void 0 : h.map((e) => [e.value, e]))),
+        [Z, T] = i.useState(new Set(I.keys())),
+        [D, L] = i.useState(() => (null != h ? h : []).map((e) => e.value)),
+        [_, R] = i.useState(0);
+    i.useEffect(() => {
+        let e = (null != h ? h : []).map((e) => e.value);
+        if (e.every((e) => D.includes(e)) && D.every((t) => e.includes(t))) return;
+        L(e);
+        let t = new Map(null == h ? void 0 : h.map((e) => [e.value, e]));
+        k(t), T(new Set(t.keys())), R((e) => e + 1);
+    }, [h, D]);
     let {
-            state: O,
-            executeStateUpdate: A,
-            visualState: M,
-            isDisabled: w,
-            error: U
+            state: A,
+            executeStateUpdate: M,
+            visualState: U,
+            isDisabled: W,
+            error: F
         } = (0, d.Ee)(n, {
-            type: C,
-            selectedOptions: Array.from(T.values())
+            type: v,
+            selectedOptions: Array.from(I.values())
         }),
-        H = M === m.gH.LOADING;
-    r.useEffect(() => {
-        if ((null == O ? void 0 : O.type) === u.re.USER_SELECT || (null == O ? void 0 : O.type) === u.re.ROLE_SELECT || (null == O ? void 0 : O.type) === u.re.MENTIONABLE_SELECT || (null == O ? void 0 : O.type) === u.re.CHANNEL_SELECT) {
-            let e = new Map(O.selectedOptions.map((e) => [e.value, e]));
-            b(e), L(new Set(e.keys()));
+        H = U === p.gH.LOADING;
+    i.useEffect(() => {
+        if ((null == A ? void 0 : A.type) === s.re.USER_SELECT || (null == A ? void 0 : A.type) === s.re.ROLE_SELECT || (null == A ? void 0 : A.type) === s.re.MENTIONABLE_SELECT || (null == A ? void 0 : A.type) === s.re.CHANNEL_SELECT) {
+            let e = new Map(A.selectedOptions.map((e) => [e.value, e]));
+            k(e), T(new Set(e.keys()));
         }
-    }, [O]);
-    let F = r.useCallback(() => {
-        A({
-            type: C,
-            selectedOptions: Array.from(T.values())
-        }) && L(new Set(T.keys()));
-    }, [A, C, T]);
-    r.useEffect(() => {
-        !(S || I || (T.size === y.size && Array.from(T.keys()).every((e) => y.has(e)))) && F();
-    }, [S, I, y, T, F]);
-    let D = 0 === T.size || S,
-        G = {
-            isDisabled: N || w,
-            wrapperClassName: p.select,
+    }, [A]);
+    let G = i.useCallback(() => {
+        M({
+            type: v,
+            selectedOptions: Array.from(I.values())
+        }) && T(new Set(I.keys()));
+    }, [M, v, I]);
+    i.useEffect(() => {
+        !(S || E || (I.size === Z.size && Array.from(I.keys()).every((e) => Z.has(e)))) && G();
+    }, [S, E, Z, I, G]);
+    let z = 0 === I.size || S,
+        B = {
+            isDisabled: w || W,
+            wrapperClassName: f.select,
             options: (e) =>
-                new Promise((n) => {
-                    n(l(e));
+                new Promise((t) => {
+                    t(o(e));
                 }),
-            placeholder: D ? (null != g ? g : h.intl.string(h.t.Otr6W1)) : void 0,
-            onClose: () => E(!1),
-            onOpen: () => E(!0),
-            onBlur: () => Z(!1),
+            placeholder: z ? (null != P ? P : b.NW.string(b.t.Otr6W1)) : void 0,
+            onClose: () => C(!1),
+            onOpen: () => C(!0),
+            onBlur: () => N(!1),
             maxVisibleItems: 5,
-            optionClassName: p.__invalid_selectOption,
-            renderOptionPrefix: (e, n) => {
-                let { inPill: l } = n,
-                    r = l ? 16 : 24,
-                    a = t(e, r);
-                return null != a
-                    ? (0, i.jsx)(v, {
-                          icon: a,
-                          iconSize: r
+            optionClassName: f.__invalid_selectOption,
+            renderOptionPrefix: (e, t) => {
+                let { inPill: r } = t,
+                    n = r ? 16 : 24,
+                    i = j(e, n);
+                return null != i
+                    ? (0, l.jsx)(m, {
+                          icon: i,
+                          iconSize: n
                       })
                     : null;
             },
-            renderOptionLabel: a
+            renderOptionLabel: g
         };
-    return (0, i.jsxs)(r.Fragment, {
+    return (0, l.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsxs)('div', {
-                className: p.container,
+            (0, l.jsxs)('div', {
+                className: f.container,
                 children: [
-                    j > 1
-                        ? (0, i.jsx)(
-                              o.VcW,
-                              {
-                                  className: p.badges,
-                                  value: Array.from(T.values()),
-                                  onChange: (e) => {
-                                      S || Z(!0), b(new Map(e.map((e) => [e.value, e])));
+                    x > 1
+                        ? (0, l.jsx)(
+                              c.VcW,
+                              y(
+                                  {
+                                      className: f.badges,
+                                      value: Array.from(I.values()),
+                                      onChange: (e) => {
+                                          S || N(!0), k(new Map(e.map((e) => [e.value, e])));
+                                      },
+                                      multi: !0,
+                                      inputClassNames: a()({
+                                          [f.soloInput]: 0 === I.size,
+                                          [f.inlineInput]: I.size > 0,
+                                          [f.hidden]: !z
+                                      }),
+                                      closeOnSelect: !1,
+                                      centerCaret: !0
                                   },
-                                  multi: !0,
-                                  inputClassNames: s()({
-                                      [p.soloInput]: 0 === T.size,
-                                      [p.inlineInput]: T.size > 0,
-                                      [p.hidden]: !D
-                                  }),
-                                  closeOnSelect: !1,
-                                  centerCaret: !0,
-                                  ...G
-                              },
-                              R
+                                  B
+                              ),
+                              _
                           )
-                        : (0, i.jsx)(
-                              o.VcW,
-                              {
-                                  className: (p.badges, p.singleSelect),
-                                  value: [...T.values()][0],
-                                  onChange: (e) => b(null != e ? new Map([[e.value, e]]) : new Map()),
-                                  clearable: !0,
-                                  centerCaret: !0,
-                                  ...G
-                              },
-                              R
+                        : (0, l.jsx)(
+                              c.VcW,
+                              y(
+                                  {
+                                      className: (f.badges, f.singleSelect),
+                                      value: [...I.values()][0],
+                                      onChange: (e) => k(null != e ? new Map([[e.value, e]]) : new Map()),
+                                      clearable: !0,
+                                      centerCaret: !0
+                                  },
+                                  B
+                              ),
+                              _
                           ),
                     H
-                        ? (0, i.jsx)('div', {
-                              className: p.loading,
-                              children: (0, i.jsx)(o.bbz, {
+                        ? (0, l.jsx)('div', {
+                              className: f.loading,
+                              children: (0, l.jsx)(c.bbz, {
                                   dotRadius: 3.5,
                                   themed: !0
                               })
@@ -146,11 +176,25 @@ function C(e) {
                         : null
                 ]
             }),
-            null != U
-                ? (0, i.jsx)(c.st, {
-                      ...(0, c.c4)(U),
-                      className: x.error
-                  })
+            null != F
+                ? (0, l.jsx)(
+                      u.st,
+                      ((t = y({}, (0, u.c4)(F))),
+                      (r = r = { className: O.error }),
+                      Object.getOwnPropertyDescriptors
+                          ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+                          : (function (e, t) {
+                                var r = Object.keys(e);
+                                if (Object.getOwnPropertySymbols) {
+                                    var n = Object.getOwnPropertySymbols(e);
+                                    r.push.apply(r, n);
+                                }
+                                return r;
+                            })(Object(r)).forEach(function (e) {
+                                Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+                            }),
+                      t)
+                  )
                 : null
         ]
     });

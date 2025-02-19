@@ -1,17 +1,17 @@
-n.d(t, { n: () => S }), n(757143), n(411104), n(47120);
-var i,
-    r,
-    a = n(200651),
-    s = n(192379),
-    o = n(120356),
-    l = n.n(o),
-    u = n(372817),
-    c = n(866442),
+n.d(t, { n: () => R }), n(757143), n(301563), n(411104), n(47120);
+var r,
+    i,
+    o = n(200651),
+    a = n(192379),
+    s = n(120356),
+    l = n.n(s),
+    c = n(372817),
+    u = n(866442),
     d = n(692547),
     f = n(1561),
-    _ = n(993365),
-    p = n(981631),
-    h = n(55137);
+    p = n(993365),
+    _ = n(981631),
+    h = n(19864);
 function m(e, t, n) {
     return (
         t in e
@@ -25,79 +25,141 @@ function m(e, t, n) {
         e
     );
 }
-let g = {
+function g(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                m(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function E(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function v(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : E(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function b(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = y(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function y(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+let O = {
     side: h.side,
     top: h.top,
     'top-pill': h.topPill
 };
-function E(e) {
-    let { className: t, onClick: n, children: i, 'aria-expanded': r, 'aria-controls': s } = e;
-    return (0, a.jsx)(f.P, {
+function S(e) {
+    let { className: t, onClick: n, children: r, 'aria-expanded': i, 'aria-controls': a } = e;
+    return (0, o.jsx)(f.P, {
         tabIndex: null == n ? -1 : 0,
         className: l()(h.header, t),
         onClick: n,
-        'aria-expanded': r,
-        'aria-controls': s,
+        'aria-expanded': i,
+        'aria-controls': a,
         focusProps: { offset: { top: -6 } },
-        children: (0, a.jsx)(_.x, {
+        children: (0, o.jsx)(p.x, {
             variant: 'eyebrow',
             color: 'none',
             className: h.headerText,
-            children: i
+            children: r
         })
     });
 }
-function v(e) {
+function I(e) {
     let { style: t } = e;
-    return (0, a.jsx)('div', {
+    return (0, o.jsx)('div', {
         className: h.separator,
         style: t
     });
 }
-let y = s.forwardRef(function (e, t) {
-    let { children: n, id: i, ...r } = e;
-    return (0, a.jsx)('div', {
-        ...r,
-        ref: t,
-        role: 'tabpanel',
-        id: I(i),
-        tabIndex: -1,
-        children: n
-    });
+let T = a.forwardRef(function (e, t) {
+    var { children: n, id: r } = e,
+        i = b(e, ['children', 'id']);
+    return (0, o.jsx)(
+        'div',
+        v(g({}, i), {
+            ref: t,
+            role: 'tabpanel',
+            id: N(r),
+            tabIndex: -1,
+            children: n
+        })
+    );
 });
-function I(e) {
+function N(e) {
     return ''.concat(e.replace(/\s+/g, '-').toLowerCase(), '-tab');
 }
-function T(e, t) {
+function A(e, t) {
     if (null == e) return;
     let n = {};
-    return 'Selected' === t ? ((n.backgroundColor = e), (n.color = d.Z.unsafe_rawColors.WHITE_500.css)) : ('Hover' === t && (n.backgroundColor = (0, c.wK)(e, 0.1)), (n.color = e)), n;
+    return 'Selected' === t ? ((n.backgroundColor = e), (n.color = d.Z.unsafe_rawColors.WHITE_500.css)) : ('Hover' === t && (n.backgroundColor = (0, u.wK)(e, 0.1)), (n.color = e)), n;
 }
-class b extends (i = s.Component) {
+class C extends (r = a.Component) {
     getStyle() {
-        let { color: e, id: t, selectedItem: n, itemType: i } = this.props,
-            { hover: r, active: a } = this.state;
+        let { color: e, id: t, selectedItem: n, itemType: r } = this.props,
+            { hover: i, active: o } = this.state;
         if (null != e) {
-            if ('side' === i) return (null != t && n === t) || a ? T(e, 'Selected') : r ? T(e, 'Hover') : T(e);
-            if ('top' === i)
+            if ('side' === r) return (null != t && n === t) || o ? A(e, 'Selected') : i ? A(e, 'Hover') : A(e);
+            if ('top' === r)
                 return n === t
                     ? {
                           borderColor: e,
                           color: e
                       }
-                    : r
+                    : i
                       ? {
-                            borderColor: (0, c.wK)(e, 0.1),
-                            color: (0, c.wK)(e, 0.6)
+                            borderColor: (0, u.wK)(e, 0.1),
+                            color: (0, u.wK)(e, 0.6)
                         }
                       : {
                             borderColor: 'transparent',
-                            color: (0, c.wK)(e, 0.4)
+                            color: (0, u.wK)(e, 0.4)
                         };
-            if ('top-pill' === i)
+            if ('top-pill' === r)
                 return n === t
                     ? {
-                          backgroundColor: (0, c.wK)(e, 0.2),
+                          backgroundColor: (0, u.wK)(e, 0.2),
                           color: e
                       }
                     : {
@@ -107,31 +169,31 @@ class b extends (i = s.Component) {
         }
     }
     render() {
-        let { children: e, className: t, id: n, selectedItem: i, color: r, disabled: s, onContextMenu: o, clickableRef: u, look: c, disableItemStyles: d } = this.props,
-            _ = this.props['aria-label'],
-            p = i === n;
-        return (0, a.jsx)(f.P, {
+        let { children: e, className: t, id: n, selectedItem: r, color: i, disabled: a, onContextMenu: s, clickableRef: c, look: u, disableItemStyles: d } = this.props,
+            p = this.props['aria-label'],
+            _ = r === n;
+        return (0, o.jsx)(f.P, {
             className: l()(t, {
                 [h.item]: !d,
-                [h.brand]: 'brand' === c,
-                [h.selected]: null == r && p,
-                [h.themed]: 'grey' === c,
-                [h.disabled]: null == r && s
+                [h.brand]: 'brand' === u,
+                [h.selected]: null == i && _,
+                [h.themed]: 'grey' === u,
+                [h.disabled]: null == i && a
             }),
             style: this.getStyle(),
             role: 'tab',
-            'aria-selected': p,
-            'aria-controls': p ? I(''.concat(n)) : void 0,
-            'aria-disabled': s,
-            tabIndex: p ? 0 : -1,
-            onMouseEnter: null != r ? this.handleMouseOver : void 0,
+            'aria-selected': _,
+            'aria-controls': _ ? N(''.concat(n)) : void 0,
+            'aria-disabled': a,
+            tabIndex: _ ? 0 : -1,
+            onMouseEnter: null != i ? this.handleMouseOver : void 0,
             onClick: this.handleClick,
-            onMouseLeave: null != r ? this.handleMouseOut : void 0,
-            onMouseUp: null != r ? this.handleMouseUp : void 0,
+            onMouseLeave: null != i ? this.handleMouseOut : void 0,
+            onMouseUp: null != i ? this.handleMouseUp : void 0,
             onMouseDown: this.handleMouseDown,
-            onContextMenu: o,
-            'aria-label': _,
-            ref: u,
+            onContextMenu: s,
+            'aria-label': p,
+            ref: c,
             children: e
         });
     }
@@ -142,8 +204,8 @@ class b extends (i = s.Component) {
                 active: !1
             }),
             m(this, 'handleClick', (e) => {
-                let { disabled: t, onClick: n, id: i, onItemSelect: r } = this.props;
-                !t && (null != n ? n(e) : null != r && r(i));
+                let { disabled: t, onClick: n, id: r, onItemSelect: i } = this.props;
+                !t && (null != n ? n(e) : null != i && i(r));
             }),
             m(this, 'handleMouseDown', () => {
                 let { color: e } = this.props;
@@ -163,32 +225,32 @@ class b extends (i = s.Component) {
             });
     }
 }
-m(b, 'defaultProps', {
+m(C, 'defaultProps', {
     disabled: !1,
     look: 'grey',
     disableItemStyles: !1
 });
-class S extends (r = s.Component) {
+class R extends (i = a.Component) {
     render() {
-        let { className: e, children: t, type: n = 'side', style: i, 'aria-label': r, orientation: o = 'horizontal' } = this.props;
-        return (0, a.jsx)('div', {
+        let { className: e, children: t, type: n = 'side', style: r, 'aria-label': i, orientation: s = 'horizontal' } = this.props;
+        return (0, o.jsx)('div', {
             ref: this.tabBarRef,
-            className: l()(e, g[n]),
-            style: i,
+            className: l()(e, O[n]),
+            style: r,
             role: 'tablist',
-            'aria-orientation': o,
+            'aria-orientation': s,
             onKeyDown: this.handleKeyDown,
-            'aria-label': r,
-            children: s.Children.map(t, this.renderChildren)
+            'aria-label': i,
+            children: a.Children.map(t, this.renderChildren)
         });
     }
     constructor(...e) {
         super(...e),
-            m(this, 'tabBarRef', s.createRef()),
+            m(this, 'tabBarRef', a.createRef()),
             m(
                 this,
                 'focusManager',
-                (0, u.E)({
+                (0, c.E)({
                     getFocusableElements: () => {
                         let e = this.tabBarRef.current;
                         return null != e ? Array.from(e.querySelectorAll('[role="tab"][aria-disabled="false"]')) : [];
@@ -200,28 +262,28 @@ class S extends (r = s.Component) {
                 })
             ),
             m(this, 'renderChildren', (e) => {
-                let { selectedItem: t, onItemSelect: n, type: i = 'side', look: r = 'grey' } = this.props;
-                return s.isValidElement(e)
-                    ? s.cloneElement(e, {
+                let { selectedItem: t, onItemSelect: n, type: r = 'side', look: i = 'grey' } = this.props;
+                return a.isValidElement(e)
+                    ? a.cloneElement(e, {
                           selectedItem: t,
                           onItemSelect: n,
-                          itemType: i,
-                          look: r
+                          itemType: r,
+                          look: i
                       })
                     : null;
             }),
             m(this, 'getNodeForKeydownEvent', async (e) => {
                 let { orientation: t = 'horizontal' } = this.props,
-                    n = 'vertical' === t ? p.yXg.ARROW_UP : p.yXg.ARROW_LEFT,
-                    i = 'vertical' === t ? p.yXg.ARROW_DOWN : p.yXg.ARROW_RIGHT;
+                    n = 'vertical' === t ? _.yXg.ARROW_UP : _.yXg.ARROW_LEFT,
+                    r = 'vertical' === t ? _.yXg.ARROW_DOWN : _.yXg.ARROW_RIGHT;
                 switch (e.which) {
                     case n:
                         return this.focusManager.getPreviousFocusableElement();
-                    case i:
+                    case r:
                         return this.focusManager.getNextFocusableElement();
-                    case p.yXg.HOME:
+                    case _.yXg.HOME:
                         return this.focusManager.getFirstFocusableElement();
-                    case p.yXg.END:
+                    case _.yXg.END:
                         return this.focusManager.getLastFocusableElement();
                 }
                 return null;
@@ -232,4 +294,4 @@ class S extends (r = s.Component) {
             });
     }
 }
-m(S, 'Header', E), m(S, 'Item', b), m(S, 'Separator', v), m(S, 'Panel', y);
+m(R, 'Header', S), m(R, 'Item', C), m(R, 'Separator', I), m(R, 'Panel', T);

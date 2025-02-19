@@ -1,27 +1,56 @@
 n.d(t, { b: () => E });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var l = n(481060),
-    r = n(846027),
-    a = n(468026),
-    s = n(388032);
-let o = null;
+var i = n(481060),
+    l = n(846027),
+    o = n(468026),
+    a = n(388032);
+let s = null;
 function c() {
-    null !== o && (0, l.Mr3)(o), (o = null);
+    null !== s && (0, i.Mr3)(s), (s = null);
 }
 function u() {
-    r.Z.setSilenceWarning(!1), c();
+    l.Z.setSilenceWarning(!1), c();
 }
 function E() {
-    o = (0, l.h7j)((e) =>
-        (0, i.jsx)(a.default, {
-            title: s.intl.string(s.t['zQ1+Jy']),
-            body: s.intl.string(s.t.K1gWXl),
-            secondaryConfirmText: s.intl.string(s.t.XAiAgI),
-            onConfirmSecondary: u,
-            onConfirm: c,
-            confirmText: s.intl.string(s.t.BddRzc),
-            ...e
-        })
+    s = (0, i.h7j)((e) =>
+        (0, r.jsx)(
+            o.default,
+            (function (e) {
+                for (var t = 1; t < arguments.length; t++) {
+                    var n = null != arguments[t] ? arguments[t] : {},
+                        r = Object.keys(n);
+                    'function' == typeof Object.getOwnPropertySymbols &&
+                        (r = r.concat(
+                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                            })
+                        )),
+                        r.forEach(function (t) {
+                            var r;
+                            (r = n[t]),
+                                t in e
+                                    ? Object.defineProperty(e, t, {
+                                          value: r,
+                                          enumerable: !0,
+                                          configurable: !0,
+                                          writable: !0
+                                      })
+                                    : (e[t] = r);
+                        });
+                }
+                return e;
+            })(
+                {
+                    title: a.NW.string(a.t['zQ1+Jy']),
+                    body: a.NW.string(a.t.K1gWXl),
+                    secondaryConfirmText: a.NW.string(a.t.XAiAgI),
+                    onConfirmSecondary: u,
+                    onConfirm: c,
+                    confirmText: a.NW.string(a.t.BddRzc)
+                },
+                e
+            )
+        )
     );
 }

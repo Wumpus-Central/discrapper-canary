@@ -1,107 +1,149 @@
-n.d(t, { Z: () => N }), n(47120);
-var i = n(200651),
-    l = n(192379),
-    a = n(392711),
-    r = n.n(a),
-    s = n(442837),
-    o = n(481060),
+n.d(t, { Z: () => P }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    l = n(392711),
+    o = n.n(l),
+    a = n(442837),
+    s = n(481060),
     c = n(32750),
-    d = n(109764),
-    u = n(323597),
-    h = n(438536),
-    p = n(251746),
-    m = n(193987),
-    f = n(933793),
+    u = n(109764),
+    d = n(323597),
+    p = n(438536),
+    h = n(251746),
+    f = n(193987),
+    m = n(933793),
     g = n(13736),
-    _ = n(732393),
-    C = n(137591),
-    x = n(299206),
+    b = n(732393),
+    _ = n(137591),
+    C = n(299206),
     v = n(665149),
-    E = n(695346),
-    I = n(979651),
-    b = n(488131),
-    Z = n(388032);
+    y = n(695346),
+    x = n(979651),
+    j = n(488131),
+    O = n(388032);
 function N(e) {
-    let { channel: t } = e,
-        [n, a] = l.useState(!1);
-    function r() {
-        a((e) => !e);
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
     }
-    let s = Z.intl.string(Z.t.UKOtz8);
-    return (0, i.jsx)(o.yRy, {
+    return e;
+}
+function E(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function P(e) {
+    let { channel: t } = e,
+        [n, l] = i.useState(!1);
+    function o() {
+        l((e) => !e);
+    }
+    let a = O.NW.string(O.t.UKOtz8);
+    return (0, r.jsx)(s.yRy, {
         shouldShow: n,
-        animation: o.yRy.Animation.NONE,
+        animation: s.yRy.Animation.NONE,
         position: 'bottom',
         align: 'right',
         autoInvert: !1,
-        onRequestClose: () => a(!1),
+        onRequestClose: () => l(!1),
         renderPopout: function (e) {
-            return (0, i.jsx)(T, {
-                ...e,
-                channel: t
-            });
+            return (0, r.jsx)(I, E(N({}, e), { channel: t }));
         },
         children: (e, t) => {
             let { isShown: n } = t;
-            return (0, i.jsx)(v.ZP.Icon, {
-                ...e,
-                onClick: r,
-                tooltip: n ? null : s,
-                icon: o.xhG,
-                'aria-label': s,
-                selected: n
-            });
+            return (0, r.jsx)(
+                v.ZP.Icon,
+                E(N({}, e), {
+                    onClick: o,
+                    tooltip: n ? null : a,
+                    icon: s.xhG,
+                    'aria-label': a,
+                    selected: n
+                })
+            );
         }
     });
 }
-function T(e) {
-    let { channel: t, closePopout: n, onSelect: l } = e,
-        a = (0, c.Z)(t),
-        v = (0, m.Z)(t),
-        N = (0, _.Z)(t.id),
-        T = (0, g.Z)(t),
-        S = (0, x.Z)({
+function I(e) {
+    let { channel: t, closePopout: n, onSelect: i } = e,
+        l = (0, c.Z)(t),
+        v = (0, f.Z)(t),
+        N = (0, b.Z)(t.id),
+        E = (0, g.Z)(t),
+        P = (0, C.Z)({
             id: t.id,
-            label: Z.intl.string(Z.t.DQ797u)
+            label: O.NW.string(O.t.DQ797u)
         }),
-        j = (0, d.Z)(t),
-        y = (0, u.Z)(t),
-        A = (0, h.Z)(t, 'Toolbar Overflow'),
-        P = (0, f.Z)(t),
-        R = (0, p.Z)(t),
-        M = (0, C.Z)(t),
-        L = E.vF.useSetting(),
-        k = (0, s.e7)([I.Z], () => !r().isEmpty(I.Z.getVoiceStatesForChannel(t.id)));
-    return (0, i.jsxs)(o.v2r, {
+        I = (0, u.Z)(t),
+        S = (0, d.Z)(t),
+        Z = (0, p.Z)(t, 'Toolbar Overflow'),
+        T = (0, m.Z)(t),
+        A = (0, h.Z)(t),
+        w = (0, _.Z)(t),
+        R = y.vF.useSetting(),
+        k = (0, a.e7)([x.Z], () => !o().isEmpty(x.Z.getVoiceStatesForChannel(t.id)));
+    return (0, r.jsxs)(s.v2r, {
         navId: 'thread-context',
         onClose: n,
-        'aria-label': Z.intl.string(Z.t['1NBjqa']),
-        onSelect: l,
+        'aria-label': O.NW.string(O.t['1NBjqa']),
+        onSelect: i,
         children: [
-            (0, i.jsxs)(o.kSQ, {
-                children: [A, R]
+            (0, r.jsxs)(s.kSQ, {
+                children: [Z, A]
             }),
-            (0, i.jsxs)(o.kSQ, {
+            (0, r.jsxs)(s.kSQ, {
                 children: [
+                    E,
                     T,
-                    P,
                     N,
-                    L && !k
-                        ? (0, i.jsx)(o.sNh, {
+                    R && !k
+                        ? (0, r.jsx)(s.sNh, {
                               id: 'open',
-                              label: Z.intl.string(Z.t.bX7EaG),
+                              label: O.NW.string(O.t.bX7EaG),
                               action: function () {
-                                  (0, b.ok)(t);
+                                  (0, j.ok)(t);
                               }
                           })
                         : null
                 ]
             }),
-            (0, i.jsxs)(o.kSQ, {
-                children: [M, a, v, y]
+            (0, r.jsxs)(s.kSQ, {
+                children: [w, l, v, S]
             }),
-            (0, i.jsxs)(o.kSQ, {
-                children: [j, S]
+            (0, r.jsxs)(s.kSQ, {
+                children: [I, P]
             })
         ]
     });

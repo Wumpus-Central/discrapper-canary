@@ -1,73 +1,102 @@
-n.d(t, { L: () => h }), n(47120);
-var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(906280),
-    l = n.n(o),
-    u = n(186325),
-    c = n(390507),
+n.d(t, { L: () => g }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(906280),
+    l = n.n(s),
+    c = n(186325),
+    u = n(390507),
     d = n(679400),
     f = n(580747),
-    _ = n(143973);
-function p(e, t) {
-    let { color: a, src: o, size: p = 'md', width: h, height: m, className: g, initialAnimation: E, markers: v } = e,
-        [y, I] = r.useState(null),
-        T = r.useRef(null),
-        b = r.useRef(null),
-        S = r.useRef(null),
-        A =
-            'custom' === p
-                ? {
-                      width: h,
-                      height: m
-                  }
-                : (0, c.m)(p),
-        N = !(0, f.Z)('lottie_hover_multiple_loop'),
-        C = r.useContext(u.S).reducedMotion.enabled,
-        { enabled: R } = d.Z.useExperiment({ location: 'LottieIcon web entry point' }),
-        O = C || !R,
-        D = r.useRef(E);
+    p = n(650601);
+function _(e, t, n) {
     return (
-        r.useImperativeHandle(
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function h(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                _(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function m(e, t) {
+    let { color: o, src: s, size: _ = 'md', width: m, height: g, className: E, initialAnimation: v, markers: b } = e,
+        [y, O] = i.useState(null),
+        S = i.useRef(null),
+        I = i.useRef(null),
+        T = i.useRef(null),
+        N =
+            'custom' === _
+                ? {
+                      width: m,
+                      height: g
+                  }
+                : (0, u.m)(_),
+        A = !(0, f.Z)('lottie_hover_multiple_loop'),
+        C = i.useContext(c.S).reducedMotion.enabled,
+        { enabled: R } = d.Z.useExperiment({ location: 'LottieIcon web entry point' }),
+        P = C || !R,
+        w = i.useRef(v);
+    return (
+        i.useImperativeHandle(
             t,
             () => ({
                 play: (e) => {
-                    if (null != S.current) {
-                        if (((b.current = e), O)) {
-                            let t = v[e];
-                            S.current.resetSegments(!0), S.current.setSegment(t.start + t.duration, t.start + t.duration), S.current.stop();
-                        } else S.current.setLoop(!N && e.includes('hover')), S.current.resetSegments(!0), S.current.playSegments([v[e].start, v[e].start + v[e].duration], !0);
+                    if (null != T.current) {
+                        if (((I.current = e), P)) {
+                            let t = b[e];
+                            T.current.resetSegments(!0), T.current.setSegment(t.start + t.duration, t.start + t.duration), T.current.stop();
+                        } else T.current.setLoop(!A && e.includes('hover')), T.current.resetSegments(!0), T.current.playSegments([b[e].start, b[e].start + b[e].duration], !0);
                     }
                 },
                 stop: () => {
-                    if (null == S.current || O) return;
+                    if (null == T.current || P) return;
                 },
                 stopIfPlaying: (e) => {
-                    null == S.current || O || b.current !== e || (S.current.resetSegments(!0), S.current.setSegment(v[e].start, v[e].start), S.current.stop());
+                    null == T.current || P || I.current !== e || (T.current.resetSegments(!0), T.current.setSegment(b[e].start, b[e].start), T.current.stop());
                 }
             }),
-            [O, N, v]
+            [P, A, b]
         ),
-        r.useEffect(() => {
-            null == y && o().then((e) => I(e.default));
-        }, [y, o]),
-        r.useEffect(
+        i.useEffect(() => {
+            null == y && s().then((e) => O(e.default));
+        }, [y, s]),
+        i.useEffect(
             () => (
                 Promise.resolve()
                     .then(n.t.bind(n, 500923, 23))
                     .then((e) => {
                         var t;
                         let n,
-                            { default: i } = e,
-                            r = null !== (t = b.current) && void 0 !== t ? t : D.current;
-                        if (null != r && null != v[r]) {
-                            let e = v[r];
+                            { default: r } = e,
+                            i = null !== (t = I.current) && void 0 !== t ? t : w.current;
+                        if (null != i && null != b[i]) {
+                            let e = b[i];
                             n = [e.start, e.start + e.duration];
                         }
-                        null != T.current &&
-                            (S.current = i.loadAnimation({
-                                container: T.current,
+                        null != S.current &&
+                            (T.current = r.loadAnimation({
+                                container: S.current,
                                 renderer: 'svg',
                                 loop: !1,
                                 autoplay: !1,
@@ -77,20 +106,22 @@ function p(e, t) {
                     }),
                 () => {
                     var e;
-                    null === (e = S.current) || void 0 === e || e.destroy();
+                    null === (e = T.current) || void 0 === e || e.destroy();
                 }
             ),
-            [y, v]
+            [y, b]
         ),
-        (0, i.jsx)('div', {
-            style: {
-                '--__lottieIconColor': null != a && 'string' == typeof a ? a : null == a ? void 0 : a.css,
-                display: 'flex',
-                ...A
-            },
-            className: s()(_.lottieIcon, g),
-            ref: T
+        (0, r.jsx)('div', {
+            style: h(
+                {
+                    '--__lottieIconColor': null != o && 'string' == typeof o ? o : null == o ? void 0 : o.css,
+                    display: 'flex'
+                },
+                N
+            ),
+            className: a()(p.lottieIcon, E),
+            ref: S
         })
     );
 }
-let h = r.forwardRef(p);
+let g = i.forwardRef(m);

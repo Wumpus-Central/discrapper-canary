@@ -1,86 +1,121 @@
-n.d(t, { Z: () => T });
-var i = n(200651);
+n.d(t, { Z: () => E });
+var r = n(200651);
 n(192379);
-var l = n(120356),
-    r = n.n(l),
-    a = n(399606),
-    o = n(704215),
+var i = n(120356),
+    l = n.n(i),
+    o = n(399606),
+    a = n(704215),
     s = n(433517),
     c = n(481060),
-    d = n(239091),
-    u = n(607070),
-    h = n(367907),
-    p = n(357352),
-    m = n(652515),
+    u = n(239091),
+    d = n(607070),
+    p = n(367907),
+    h = n(357352),
+    f = n(652515),
     g = n(550951),
-    f = n(886176),
-    _ = n(605236),
+    m = n(886176),
+    b = n(605236),
     v = n(703656),
-    C = n(984933),
-    x = n(430824),
-    I = n(626135),
-    Z = n(434479),
-    b = n(981631),
-    S = n(176505),
-    N = n(629481),
-    E = n(388032),
-    j = n(147467);
-function y(e) {
-    let { guildId: t, selected: n, handleClick: l } = e,
-        d = (0, m.RF)(t, 'guild_shop_channel_row'),
-        g = (0, a.e7)([x.Z], () => x.Z.getGuild(t)),
-        S = (null == g ? void 0 : g.hasFeature(b.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0,
-        y = 'false' === s.K.get(N.tM, 'false'),
-        T = (0, a.e7)([u.Z], () => u.Z.useReducedMotion);
-    return (0, i.jsx)(Z.m, {
+    y = n(984933),
+    _ = n(430824),
+    O = n(626135),
+    j = n(434479),
+    C = n(981631),
+    x = n(176505),
+    P = n(629481),
+    S = n(388032),
+    I = n(40125);
+function N(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function Z(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function w(e) {
+    let { guildId: t, selected: n, handleClick: i } = e,
+        u = (0, f.RF)(t, 'guild_shop_channel_row'),
+        g = (0, o.e7)([_.Z], () => _.Z.getGuild(t)),
+        x = (null == g ? void 0 : g.hasFeature(C.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0,
+        w = 'false' === s.K.get(P.tM, 'false'),
+        E = (0, o.e7)([d.Z], () => d.Z.useReducedMotion);
+    return (0, r.jsx)(j.m, {
         id: 'shop-'.concat(t),
-        className: r()(j.previewChannelRow, {
-            [j.selected]: n,
-            [j.phantomPreview]: y
+        className: l()(I.previewChannelRow, {
+            [I.selected]: n,
+            [I.phantomPreview]: w
         }),
-        innerClassName: j.previewChannelRowContent,
+        innerClassName: I.previewChannelRowContent,
         renderIcon: (e) =>
-            (0, i.jsx)(f.Z, {
+            (0, r.jsx)(m.Z, {
                 width: 20,
                 height: 20,
-                className: r()([e, j.shopIcon])
+                className: l()([e, I.shopIcon])
             }),
-        text: E.intl.string(E.t.al5EXF),
+        text: S.NW.string(S.t.al5EXF),
         selected: n,
-        onClick: l,
-        trailing: (0, i.jsxs)('div', {
-            className: j.gifSection,
+        onClick: i,
+        trailing: (0, r.jsxs)('div', {
+            className: I.gifSection,
             children: [
-                T
-                    ? (0, i.jsx)(c.IGR, {
+                E
+                    ? (0, r.jsx)(c.IGR, {
                           color: c.TVs.unsafe_rawColors.BRAND_260.css,
-                          text: E.intl.string(E.t.y2b7CA),
-                          className: j.newBadge
+                          text: S.NW.string(S.t.y2b7CA),
+                          className: I.newBadge
                       })
-                    : (0, i.jsx)('img', {
-                          src: (0, p.b)('server_products/storefront/money.gif'),
-                          className: j.money,
+                    : (0, r.jsx)('img', {
+                          src: (0, h.b)('server_products/storefront/money.gif'),
+                          className: I.money,
                           alt: ''
                       }),
                 n &&
-                    (0, i.jsx)(c.P3F, {
-                        className: j.closeButton,
+                    (0, r.jsx)(c.P3F, {
+                        className: I.closeButton,
                         onClick: (e) => {
-                            if (
-                                (e.stopPropagation(),
-                                (0, _.EW)(o.z.SERVER_SHOP_PHANTOM_PREVIEW),
-                                I.default.track(b.rMx.GUILD_SHOP_PREVIEW_CLICK, {
-                                    ...(0, h.hH)(t),
-                                    action_taken: N.mz.DISMISS_CHANNEL_ROW
-                                }),
-                                !d || !S)
-                            ) {
+                            if ((e.stopPropagation(), (0, b.EW)(a.z.SERVER_SHOP_PHANTOM_PREVIEW), O.default.track(C.rMx.GUILD_SHOP_PREVIEW_CLICK, Z(N({}, (0, p.hH)(t)), { action_taken: P.mz.DISMISS_CHANNEL_ROW })), !u || !x)) {
                                 var n;
-                                (0, v.dL)(b.Z5c.CHANNEL(t, null === (n = C.ZP.getDefaultChannel(t)) || void 0 === n ? void 0 : n.id));
+                                (0, v.dL)(C.Z5c.CHANNEL(t, null === (n = y.ZP.getDefaultChannel(t)) || void 0 === n ? void 0 : n.id));
                             }
                         },
-                        'aria-label': E.intl.string(E.t.cpT0Cg),
-                        children: (0, i.jsx)(c.k$p, {
+                        'aria-label': S.NW.string(S.t.cpT0Cg),
+                        children: (0, r.jsx)(c.k$p, {
                             size: 'xs',
                             color: 'currentColor'
                         })
@@ -89,38 +124,34 @@ function y(e) {
         })
     });
 }
-function T(e) {
-    let { guild: t, selected: l } = e,
-        r = (0, g.g)(t, 'guild_shop_channel_row'),
-        a = () => {
-            s.K.set(N.tM, 'true'), (0, v.uL)(b.Z5c.CHANNEL(t.id, S.oC.GUILD_SHOP));
+function E(e) {
+    let { guild: t, selected: i } = e,
+        l = (0, g.g)(t, 'guild_shop_channel_row'),
+        o = () => {
+            s.K.set(P.tM, 'true'), (0, v.uL)(C.Z5c.CHANNEL(t.id, x.oC.GUILD_SHOP));
         };
-    return r
-        ? (0, i.jsx)(y, {
+    return l
+        ? (0, r.jsx)(w, {
               guildId: t.id,
-              selected: l,
-              handleClick: a
+              selected: i,
+              handleClick: o
           })
-        : (0, i.jsx)(Z.m, {
+        : (0, r.jsx)(j.m, {
               id: 'shop-'.concat(t.id),
               renderIcon: (e) =>
-                  (0, i.jsx)(f.Z, {
+                  (0, r.jsx)(m.Z, {
                       width: 20,
                       height: 20,
                       className: e
                   }),
-              text: E.intl.string(E.t.al5EXF),
-              selected: l,
-              onClick: a,
+              text: S.NW.string(S.t.al5EXF),
+              selected: i,
+              onClick: o,
               onContextMenu: (e) => {
                   null != t &&
-                      (0, d.jW)(e, async () => {
+                      (0, u.jW)(e, async () => {
                           let { default: e } = await n.e('66050').then(n.bind(n, 376573));
-                          return (n) =>
-                              (0, i.jsx)(e, {
-                                  ...n,
-                                  guild: t
-                              });
+                          return (n) => (0, r.jsx)(e, Z(N({}, n), { guild: t }));
                       });
               }
           });

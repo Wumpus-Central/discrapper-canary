@@ -1,36 +1,97 @@
-n.d(t, { o: () => d });
-var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(1561),
+n.d(t, { o: () => h });
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(1561),
     l = n(743236),
-    u = n(939350),
-    c = n(186928);
-function d(e) {
-    let { children: t, color: n = 'default', isFocused: a = !1, disabled: d = !1, keepItemStyles: f = !1, menuItemProps: _, action: p, dontCloseOnActionIfHoldingShiftKey: h, dontCloseOnAction: m, onClose: g } = e,
-        E = r.useRef(null);
-    r.useEffect(() => {
-        a && (0, l.F)(E);
-    }, [a]);
-    let v = r.useCallback(
+    c = n(939350),
+    u = n(253068);
+function d(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function f(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                d(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function p(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function _(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : p(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function h(e) {
+    let { children: t, color: n = 'default', isFocused: o = !1, disabled: d = !1, keepItemStyles: p = !1, menuItemProps: h, action: m, dontCloseOnActionIfHoldingShiftKey: g, dontCloseOnAction: E, onClose: v } = e,
+        b = i.useRef(null);
+    i.useEffect(() => {
+        o && (0, l.F)(b);
+    }, [o]);
+    let y = i.useCallback(
             (e) => {
-                if (null == p) return !1;
-                (e.shiftKey && h) || m || g(), e.persist(), requestAnimationFrame(() => p(e));
+                if (null == m) return !1;
+                (e.shiftKey && g) || E || v(), e.persist(), requestAnimationFrame(() => m(e));
             },
-            [p, g, h, m]
+            [m, v, g, E]
         ),
-        y = f ? s()(c.item, u._[n], { [c.focused]: a }) : c.customItem;
-    return (0, i.jsx)(o.P, {
-        innerRef: E,
-        className: y,
-        onClick: d ? void 0 : v,
-        'aria-disabled': d,
-        ..._,
-        children: t({
-            color: n,
-            disabled: d,
-            isFocused: a
-        })
-    });
+        O = p ? a()(u.item, c._[n], { [u.focused]: o }) : u.customItem;
+    return (0, r.jsx)(
+        s.P,
+        _(
+            f(
+                {
+                    innerRef: b,
+                    className: O,
+                    onClick: d ? void 0 : y,
+                    'aria-disabled': d
+                },
+                h
+            ),
+            {
+                children: t({
+                    color: n,
+                    disabled: d,
+                    isFocused: o
+                })
+            }
+        )
+    );
 }

@@ -1,19 +1,21 @@
 n.d(t, {
     CR: () => h,
     UU: () => m,
-    jE: () => u
+    jE: () => d
 }),
+    n(266796),
     n(627494),
-    n(757143);
-var l = n(884439),
+    n(757143),
+    n(301563);
+var r = n(884439),
     a = n(55000),
-    i = n(693824),
-    r = n(690725),
+    l = n(693824),
+    i = n(690725),
     o = n(561308),
     s = n(737583),
     c = n(169040),
-    d = n(388032);
-let u = (e) => {
+    u = n(388032);
+let d = (e) => {
         let { timestamp: t } = e;
         return [
             {
@@ -24,34 +26,55 @@ let u = (e) => {
     },
     m = (e) => {
         var t;
-        let n = null === (t = (0, o.PJ)(e, l.N.AGGREGATE_COUNT)) || void 0 === t ? void 0 : t.count;
+        let n = null === (t = (0, o.PJ)(e, r.N.AGGREGATE_COUNT)) || void 0 === t ? void 0 : t.count;
         return null == n
             ? []
             : [
                   {
                       iconPath: c.eF,
-                      text: d.intl.formatToPlainString(d.t.HtifnJ, { count: n })
+                      text: u.NW.formatToPlainString(u.t.HtifnJ, { count: n })
                   }
               ];
     },
-    x = (e) => {
+    p = (e) => {
         let { avatarSrc: t, mediaImageSrc: n } = e;
-        return {
-            AvatarImage: t,
-            ...(null != n && { MediaImage: n })
-        };
+        return (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    r = Object.keys(n);
+                'function' == typeof Object.getOwnPropertySymbols &&
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        })
+                    )),
+                    r.forEach(function (t) {
+                        var r;
+                        (r = n[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: r,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0
+                                  })
+                                : (e[t] = r);
+                    });
+            }
+            return e;
+        })({ AvatarImage: t }, null != n && { MediaImage: n });
     },
     h = async (e) => {
-        let { user: t, channel: n, mediaImageSrc: l, artist: o, description: d, colors: u, badges: m } = e,
-            h = x({
+        let { user: t, channel: n, mediaImageSrc: r, artist: o, description: u, colors: d, badges: m } = e,
+            h = p({
                 avatarSrc: t.getAvatarURL(n.guild_id, 128),
-                mediaImageSrc: l
+                mediaImageSrc: r
             }),
-            p = o.replaceAll(/[^a-zA-Z0-9 ]/g, '').replaceAll(' ', '-');
-        return await (0, r.f)({
+            x = o.replaceAll(/[^a-zA-Z0-9 ]/g, '').replaceAll(' ', '-');
+        return await (0, i.f)({
             assetsToLoad: h,
             drawImage: (e) => {
-                var t, n, l;
+                var t, n, r;
                 (function (e, t) {
                     let n = t.map((e, t) => ({
                         color: e,
@@ -82,7 +105,7 @@ let u = (e) => {
                             },
                             8
                         );
-                })(e, u),
+                })(e, d),
                     (t = e).drawRoundedImage(
                         'MediaImage',
                         {
@@ -94,8 +117,8 @@ let u = (e) => {
                             h: c.Pu
                         },
                         8,
-                        { fillMode: i.JU.Contain }
-                    ) === i.vP.Failure &&
+                        { fillMode: l.JU.Contain }
+                    ) === l.vP.Failure &&
                         t.drawPath(
                             a.Cv,
                             {
@@ -120,16 +143,16 @@ let u = (e) => {
                         );
                     })(e),
                     (n = e),
-                    (l = d),
+                    (r = u),
                     n.setColor('white'),
                     n.setFont({
                         size: 16,
                         family: c.I8,
                         weight: c.Ue,
-                        truncate: i.GX.Wrap
+                        truncate: l.GX.Wrap
                     }),
                     n.drawText(
-                        l,
+                        r,
                         {
                             x: c.Iq,
                             y: 64,
@@ -146,9 +169,9 @@ let u = (e) => {
                     });
             },
             exportConfigs: {
-                format: i.kH.CloudUpload,
+                format: l.kH.CloudUpload,
                 quality: 1,
-                fileName: 'user-reacting-to-'.concat(p, '.png').toLowerCase(),
+                fileName: 'user-reacting-to-'.concat(x, '.png').toLowerCase(),
                 fileType: 'png',
                 channelId: n.id
             }

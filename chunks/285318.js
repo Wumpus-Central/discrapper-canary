@@ -1,24 +1,67 @@
-n.d(t, { Z: () => d }), n(47120);
-var i = n(200651),
-    r = n(192379),
-    l = n(481060),
-    s = n(273504),
-    a = n(388032),
-    o = n(429188);
+n.d(t, { Z: () => m }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    s = n(481060),
+    a = n(273504),
+    l = n(388032),
+    o = n(639794);
 function c(e) {
-    let { preset: t, toggled: n, onToggle: r } = e,
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function d(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function u(e) {
+    let { preset: t, toggled: n, onToggle: i } = e,
         { headerText: c, subtitleText: d } = (function (e) {
             let t = null,
                 n = null;
             switch (e) {
-                case s.Ux.PROFANITY:
-                    (t = a.intl.string(a.t['I+BDrK'])), (n = (0, i.jsx)(i.Fragment, { children: a.intl.string(a.t.hISCmp) }));
+                case a.Ux.PROFANITY:
+                    (t = l.NW.string(l.t['I+BDrK'])), (n = (0, r.jsx)(r.Fragment, { children: l.NW.string(l.t.hISCmp) }));
                     break;
-                case s.Ux.SEXUAL_CONTENT:
-                    (t = a.intl.string(a.t.URSMen)), (n = (0, i.jsx)(i.Fragment, { children: a.intl.string(a.t.oRQDBg) }));
+                case a.Ux.SEXUAL_CONTENT:
+                    (t = l.NW.string(l.t.URSMen)), (n = (0, r.jsx)(r.Fragment, { children: l.NW.string(l.t.oRQDBg) }));
                     break;
-                case s.Ux.SLURS:
-                    (t = a.intl.string(a.t.xjK2Mz)), (n = (0, i.jsx)(i.Fragment, { children: a.intl.string(a.t.oJYXBA) }));
+                case a.Ux.SLURS:
+                    (t = l.NW.string(l.t.xjK2Mz)), (n = (0, r.jsx)(r.Fragment, { children: l.NW.string(l.t.oJYXBA) }));
                     break;
                 default:
                     (t = 'Error'), (n = 'Unrecognized list');
@@ -28,68 +71,62 @@ function c(e) {
                 subtitleText: n
             };
         })(t);
-    return (0, i.jsxs)('div', {
+    return (0, r.jsxs)('div', {
         className: o.keywordListContainer,
         children: [
-            (0, i.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 className: o.keywordListTextContainer,
                 children: [
-                    (0, i.jsx)(l.X6q, {
+                    (0, r.jsx)(s.X6q, {
                         variant: 'heading-sm/semibold',
                         children: c
                     }),
-                    (0, i.jsx)(l.Text, {
+                    (0, r.jsx)(s.Text, {
                         color: 'interactive-normal',
                         variant: 'text-xs/medium',
                         children: d
                     })
                 ]
             }),
-            (0, i.jsx)(l.XZJ, {
+            (0, r.jsx)(s.XZJ, {
                 className: o.toggle,
-                type: l.XZJ.Types.INVERTED,
+                type: s.XZJ.Types.INVERTED,
                 value: n,
-                onChange: () => r(t)
+                onChange: () => i(t)
             })
         ]
     });
 }
-function d(e) {
+function m(e) {
     var t;
-    let { rule: n, onChangeRule: l } = e,
-        [a, o] = r.useState(new Set(null == n ? void 0 : null === (t = n.triggerMetadata) || void 0 === t ? void 0 : t.presets)),
-        d = r.useMemo(
+    let { rule: n, onChangeRule: s } = e,
+        [l, o] = i.useState(new Set(null == n ? void 0 : null === (t = n.triggerMetadata) || void 0 === t ? void 0 : t.presets)),
+        m = i.useMemo(
             () => (e) => {
-                l({
-                    ...n,
-                    triggerMetadata: {
-                        ...n.triggerMetadata,
-                        presets: e
-                    }
-                });
+                s(d(c({}, n), { triggerMetadata: d(c({}, n.triggerMetadata), { presets: e }) }));
             },
-            [l, n]
+            [s, n]
         ),
-        u = (e) => {
-            let t = new Set(a);
-            t.has(e) ? t.delete(e) : t.add(e), o(t), d(Array.from(t));
+        p = (e) => {
+            let t = new Set(l);
+            t.has(e) ? t.delete(e) : t.add(e), o(t), m(Array.from(t));
         };
-    return (0, i.jsxs)('div', {
+    return (0, r.jsxs)('div', {
         children: [
-            (0, i.jsx)(c, {
-                preset: s.Ux.PROFANITY,
-                toggled: a.has(s.Ux.PROFANITY),
-                onToggle: u
+            (0, r.jsx)(u, {
+                preset: a.Ux.PROFANITY,
+                toggled: l.has(a.Ux.PROFANITY),
+                onToggle: p
             }),
-            (0, i.jsx)(c, {
-                preset: s.Ux.SLURS,
-                toggled: a.has(s.Ux.SLURS),
-                onToggle: u
+            (0, r.jsx)(u, {
+                preset: a.Ux.SLURS,
+                toggled: l.has(a.Ux.SLURS),
+                onToggle: p
             }),
-            (0, i.jsx)(c, {
-                preset: s.Ux.SEXUAL_CONTENT,
-                toggled: a.has(s.Ux.SEXUAL_CONTENT),
-                onToggle: u
+            (0, r.jsx)(u, {
+                preset: a.Ux.SEXUAL_CONTENT,
+                toggled: l.has(a.Ux.SEXUAL_CONTENT),
+                onToggle: p
             })
         ]
     });

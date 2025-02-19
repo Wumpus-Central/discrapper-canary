@@ -1,255 +1,297 @@
 n.d(t, {
-    A7: () => x,
-    ZP: () => A,
-    dE: () => y
+    A7: () => E,
+    ZP: () => x,
+    dE: () => S
 }),
     n(47120);
-var l = n(200651),
-    i = n(192379),
-    r = n(120356),
-    a = n.n(r),
-    o = n(481060),
+var r = n(200651),
+    l = n(192379),
+    o = n(120356),
+    i = n.n(o),
+    a = n(481060),
     s = n(410030),
-    d = n(541716),
-    c = n(752305),
-    u = n(893718),
+    c = n(541716),
+    u = n(752305),
+    d = n(893718),
     p = n(318766),
     f = n(931651),
-    m = n(131704),
-    h = n(142550),
-    v = n(981631),
-    g = n(388032),
-    E = n(724372);
-let C = (0, m.kt)({
+    O = n(131704),
+    y = n(142550),
+    b = n(981631),
+    m = n(388032),
+    g = n(884504);
+function v(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function h(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let P = (0, O.kt)({
         id: '1',
-        type: v.d4z.DM
+        type: b.d4z.DM
     }),
-    P = i.forwardRef(function (e, t) {
-        let { placeholder: n, headerText: i, onEnter: r, showPopout: d, children: c, body: u, hide: p } = e,
+    j = l.forwardRef(function (e, t) {
+        let { placeholder: n, headerText: l, onEnter: o, showPopout: c, children: u, body: d, hide: p } = e,
             f = (0, s.ZP)();
-        return (0, l.jsx)(o.yRy, {
+        return (0, r.jsx)(a.yRy, {
             align: 'right',
             position: 'bottom',
-            shouldShow: d,
+            shouldShow: c,
             disablePointerEvents: !1,
             renderPopout: () =>
-                (0, l.jsx)(o.f6W, {
+                (0, r.jsx)(a.f6W, {
                     theme: f,
                     children: (e) =>
-                        (0, l.jsx)('div', {
-                            className: a()([E.reply, e]),
+                        (0, r.jsx)('div', {
+                            className: i()([g.reply, e]),
                             ref: t,
-                            children: (0, l.jsx)(o.EqS, {
+                            children: (0, r.jsx)(a.EqS, {
                                 containerRef: t,
-                                children: (0, l.jsxs)('div', {
+                                children: (0, r.jsxs)('div', {
                                     children: [
-                                        (0, l.jsx)(o.Text, {
+                                        (0, r.jsx)(a.Text, {
                                             variant: 'text-xs/bold',
-                                            className: E.replyHeader,
-                                            children: null != i ? i : g.intl.string(g.t['/VQax8'])
+                                            className: g.replyHeader,
+                                            children: null != l ? l : m.NW.string(m.t['/VQax8'])
                                         }),
-                                        u,
-                                        (0, l.jsx)(x, {
+                                        d,
+                                        (0, r.jsx)(E, {
                                             onEnter: (e) => {
-                                                r(e), p();
+                                                o(e), p();
                                             },
-                                            placeholder: null != n ? n : g.intl.string(g.t['/VQax8'])
+                                            placeholder: null != n ? n : m.NW.string(m.t['/VQax8'])
                                         })
                                     ]
                                 })
                             })
                         })
                 }),
-            children: () => c
+            children: () => u
         });
     });
-function x(e) {
-    let { placeholder: t, onEnter: n, setEditorRef: r, showEmojiButton: o = !1, renderAttachButton: s, autoFocus: p = !0, onFocus: f, channel: m, className: v } = e,
-        [g, P] = i.useState(''),
-        [x, Z] = i.useState((0, c.JM)('')),
-        y = () => {
-            P(''), Z((0, c.JM)(''));
+function E(e) {
+    let { placeholder: t, onEnter: n, setEditorRef: o, showEmojiButton: a = !1, renderAttachButton: s, autoFocus: p = !0, onFocus: f, channel: O, className: b } = e,
+        [m, j] = l.useState(''),
+        [E, w] = l.useState((0, u.JM)('')),
+        S = () => {
+            j(''), w((0, u.JM)(''));
         },
-        A = d.Ie.ATOMIC_REACTOR_REPLY_INPUT,
-        S = i.useRef(null);
-    return (0, l.jsx)(u.Z, {
-        ref: S,
+        x = c.Ie.ATOMIC_REACTOR_REPLY_INPUT,
+        C = l.useRef(null);
+    return (0, r.jsx)(d.Z, {
+        ref: C,
         placeholder: t,
-        editorClassName: v,
-        className: a()(E.replyInput, v),
+        editorClassName: b,
+        className: i()(g.replyInput, b),
         showRemainingCharsAfterCount: -1,
         allowNewLines: !1,
-        maxCharacterCount: h.z,
-        channel: null != m ? m : C,
+        maxCharacterCount: y.z,
+        channel: null != O ? O : P,
         onChange: (e, t, n) => {
-            P(t), Z(n);
+            j(t), w(n);
         },
-        type: o
-            ? {
-                  ...A,
-                  emojis: { button: !0 }
-              }
-            : A,
-        textValue: g,
-        richValue: x,
+        type: a ? h(v({}, x), { emojis: { button: !0 } }) : x,
+        textValue: m,
+        richValue: E,
         onSubmit: (e) => {
             let { value: t } = e;
-            return t.length > h.z
+            return t.length > y.z
                 ? Promise.resolve({
                       shouldClear: !1,
                       shouldRefocus: !0
                   })
                 : (n(t),
-                  y(),
+                  S(),
                   Promise.resolve({
                       shouldClear: !0,
                       shouldRefocus: !1
                   }));
         },
-        setEditorRef: r,
+        setEditorRef: o,
         focused: p,
         onFocus: f,
         disableThemedBackground: !0,
         emojiPickerCloseOnModalOuterClick: !0,
         disabled: !1,
         autoCompletePosition: (() => {
-            if (null == S.current) return 'top';
-            let e = S.current.getBoundingClientRect(),
+            if (null == C.current) return 'top';
+            let e = C.current.getBoundingClientRect(),
                 t = window.innerHeight;
             return e.top < t / 2 ? 'bottom' : 'top';
         })(),
         renderAttachButton: s
     });
 }
-let Z = (e, t) => {
-        i.useEffect(() => {
+let w = (e, t) => {
+        l.useEffect(() => {
             let n = (t) => {
                     'Escape' === t.key && e();
                 },
-                l = (n) => {
-                    var l;
-                    null == n.target || (null == t ? void 0 : null === (l = t.current) || void 0 === l ? void 0 : l.contains(null == n ? void 0 : n.target)) || e();
+                r = (n) => {
+                    var r;
+                    null == n.target || (null == t ? void 0 : null === (r = t.current) || void 0 === r ? void 0 : r.contains(null == n ? void 0 : n.target)) || e();
                 };
             return (
                 document.addEventListener('keydown', n),
-                document.addEventListener('mousedown', l),
+                document.addEventListener('mousedown', r),
                 () => {
-                    document.removeEventListener('keydown', n), document.removeEventListener('mousedown', l);
+                    document.removeEventListener('keydown', n), document.removeEventListener('mousedown', r);
                 }
             );
         }, [e, t]);
     },
-    y = (e) => {
+    S = (e) => {
         let { onSelectEmoji: t, onClick: n } = e,
-            r = (0, s.ZP)(),
-            [a, d] = i.useState(!1),
-            c = i.useRef(null);
+            o = (0, s.ZP)(),
+            [i, c] = l.useState(!1),
+            u = l.useRef(null);
         return (
-            Z(() => d(!1), c),
-            (0, l.jsx)(o.yRy, {
+            w(() => c(!1), u),
+            (0, r.jsx)(a.yRy, {
                 align: 'right',
                 position: 'top',
-                shouldShow: a,
+                shouldShow: i,
                 disablePointerEvents: !1,
                 renderPopout: () =>
-                    (0, l.jsx)(o.f6W, {
-                        theme: r,
+                    (0, r.jsx)(a.f6W, {
+                        theme: o,
                         children: (e) =>
-                            (0, l.jsx)('div', {
+                            (0, r.jsx)('div', {
                                 className: e,
-                                ref: c,
-                                children: (0, l.jsx)(f.$, {
-                                    messageId: v.lds,
-                                    channel: C,
+                                ref: u,
+                                children: (0, r.jsx)(f.$, {
+                                    messageId: b.lds,
+                                    channel: P,
                                     closePopout: () => {
-                                        d(!1);
+                                        c(!1);
                                     },
-                                    onSelectEmoji: (e, n, l) => {
-                                        null != e && (t(e, n, l), d(!1));
+                                    onSelectEmoji: (e, n, r) => {
+                                        null != e && (t(e, n, r), c(!1));
                                     }
                                 })
                             })
                     }),
                 children: () =>
-                    (0, l.jsx)(o.ua7, {
-                        text: g.intl.string(g.t.lfIHs7),
+                    (0, r.jsx)(a.ua7, {
+                        text: m.NW.string(m.t.lfIHs7),
                         children: (e) =>
-                            (0, l.jsx)('div', {
-                                ...e,
-                                className: E.reaction,
-                                children: (0, l.jsx)(p.Z, {
-                                    active: !1,
-                                    tabIndex: 0,
-                                    onClick: () => {
-                                        null == n || n(), d(!0);
-                                    }
+                            (0, r.jsx)(
+                                'div',
+                                h(v({}, e), {
+                                    className: g.reaction,
+                                    children: (0, r.jsx)(p.Z, {
+                                        active: !1,
+                                        tabIndex: 0,
+                                        onClick: () => {
+                                            null == n || n(), c(!0);
+                                        }
+                                    })
                                 })
-                            })
+                            )
                     })
             })
         );
     },
-    A = (e) => {
-        let { onInteraction: t, showReact: n = !0, showReply: r = !0, popoutProps: s = {} } = e,
-            { replyHeaderText: d, replyPlaceholder: c, popoutBody: u } = s,
-            [p, f] = i.useState(!1),
-            m = i.useRef(null);
+    x = (e) => {
+        let { onInteraction: t, showReact: n = !0, showReply: o = !0, popoutProps: s = {} } = e,
+            { replyHeaderText: c, replyPlaceholder: u, popoutBody: d } = s,
+            [p, f] = l.useState(!1),
+            O = l.useRef(null);
         return (
-            Z(() => f(!1), m),
-            (0, l.jsx)(l.Fragment, {
-                children: (0, l.jsxs)('div', {
-                    className: E.reactions,
+            w(() => f(!1), O),
+            (0, r.jsx)(r.Fragment, {
+                children: (0, r.jsxs)('div', {
+                    className: g.reactions,
                     children: [
                         n &&
-                            (0, l.jsx)(y, {
+                            (0, r.jsx)(S, {
                                 onSelectEmoji: (e) => {
                                     null != e &&
                                         t({
-                                            interactionType: h.L.ReactSubmit,
+                                            interactionType: y.L.ReactSubmit,
                                             emoji: e,
                                             reply: null
                                         });
                                 },
                                 onClick: () => {
                                     t({
-                                        interactionType: h.L.ReactBegin,
+                                        interactionType: y.L.ReactBegin,
                                         emoji: null,
                                         reply: null
                                     }),
                                         f(!1);
                                 }
                             }),
-                        r &&
-                            (0, l.jsx)(P, {
+                        o &&
+                            (0, r.jsx)(j, {
                                 hide: () => f(!1),
-                                ref: m,
-                                headerText: d,
-                                placeholder: c,
+                                ref: O,
+                                headerText: c,
+                                placeholder: u,
                                 showPopout: p,
-                                body: u,
+                                body: d,
                                 onEnter: (e) => {
                                     t({
-                                        interactionType: h.L.ReplySubmit,
+                                        interactionType: y.L.ReplySubmit,
                                         emoji: null,
                                         reply: e
                                     });
                                 },
-                                children: (0, l.jsx)(o.ua7, {
-                                    text: g.intl.string(g.t['5IEsGx']),
+                                children: (0, r.jsx)(a.ua7, {
+                                    text: m.NW.string(m.t['5IEsGx']),
                                     children: (e) =>
-                                        (0, l.jsx)('button', {
-                                            ...e,
-                                            className: a()(E.reaction, E.emojiButton),
-                                            onClick: () => {
-                                                t({
-                                                    interactionType: h.L.ReplyBegin,
-                                                    emoji: null,
-                                                    reply: null
-                                                }),
-                                                    f(!0);
-                                            },
-                                            children: (0, l.jsx)(o.n$P, {})
-                                        })
+                                        (0, r.jsx)(
+                                            'button',
+                                            h(v({}, e), {
+                                                className: i()(g.reaction, g.emojiButton),
+                                                onClick: () => {
+                                                    t({
+                                                        interactionType: y.L.ReplyBegin,
+                                                        emoji: null,
+                                                        reply: null
+                                                    }),
+                                                        f(!0);
+                                                },
+                                                children: (0, r.jsx)(a.n$P, {})
+                                            })
+                                        )
                                 })
                             })
                     ]

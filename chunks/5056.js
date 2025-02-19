@@ -1,116 +1,156 @@
-t.d(n, { Z: () => h });
-var i = t(200651),
-    l = t(192379),
-    s = t(120356),
-    a = t.n(s),
-    r = t(481060),
-    o = t(838221),
-    c = t(246364),
-    d = t(700833),
-    u = t(388032),
-    x = t(42497);
-function m(e) {
-    let { onClick: n, text: t, icon: l } = e;
-    return (0, i.jsx)('div', {
-        className: x.addFormFieldContainer,
-        children: (0, i.jsxs)(r.P3F, {
-            className: x.addFormField,
-            onClick: n,
+n.d(t, { Z: () => b });
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    c = n.n(o),
+    s = n(481060),
+    a = n(838221),
+    l = n(246364),
+    u = n(700833),
+    d = n(388032),
+    f = n(327237);
+function p(e) {
+    let { onClick: t, text: n, icon: i } = e;
+    return (0, r.jsx)('div', {
+        className: f.addFormFieldContainer,
+        children: (0, r.jsxs)(s.P3F, {
+            className: f.addFormField,
+            onClick: t,
             children: [
-                (0, i.jsx)(l, {
-                    className: x.icon,
+                (0, r.jsx)(i, {
+                    className: f.icon,
                     size: 'xs',
                     color: 'currentColor'
                 }),
-                (0, i.jsx)(r.R94, {
-                    className: x.addFormFieldText,
-                    children: t
+                (0, r.jsx)(s.R94, {
+                    className: f.addFormFieldText,
+                    children: n
                 })
             ]
         })
     });
 }
-let h = function (e) {
-    let { addFormField: n, showManualApprovalWarning: s, guild: h, showHeader: f } = e,
-        v = l.useCallback(
+let b = function (e) {
+    let { addFormField: t, showManualApprovalWarning: o, guild: b, showHeader: j } = e,
+        y = i.useCallback(
             (e) => {
-                (0, d.Md)(e, n, h);
+                (0, u.Md)(e, t, b);
             },
-            [n, h]
+            [t, b]
         ),
-        g = l.useCallback(
+        m = i.useCallback(
             (e) => {
-                s
-                    ? (0, r.ZDy)(async () => {
-                          let { default: n } = await t.e('54845').then(t.bind(t, 199836));
-                          return (t) =>
-                              (0, i.jsx)(n, {
-                                  ...t,
-                                  onSubmit: () => v(e)
-                              });
+                o
+                    ? (0, s.ZDy)(async () => {
+                          let { default: t } = await n.e('54845').then(n.bind(n, 199836));
+                          return (n) => {
+                              var i, o;
+                              return (0, r.jsx)(
+                                  t,
+                                  ((i = (function (e) {
+                                      for (var t = 1; t < arguments.length; t++) {
+                                          var n = null != arguments[t] ? arguments[t] : {},
+                                              r = Object.keys(n);
+                                          'function' == typeof Object.getOwnPropertySymbols &&
+                                              (r = r.concat(
+                                                  Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                      return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                  })
+                                              )),
+                                              r.forEach(function (t) {
+                                                  var r;
+                                                  (r = n[t]),
+                                                      t in e
+                                                          ? Object.defineProperty(e, t, {
+                                                                value: r,
+                                                                enumerable: !0,
+                                                                configurable: !0,
+                                                                writable: !0
+                                                            })
+                                                          : (e[t] = r);
+                                              });
+                                      }
+                                      return e;
+                                  })({}, n)),
+                                  (o = o = { onSubmit: () => y(e) }),
+                                  Object.getOwnPropertyDescriptors
+                                      ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(o))
+                                      : (function (e, t) {
+                                            var n = Object.keys(e);
+                                            if (Object.getOwnPropertySymbols) {
+                                                var r = Object.getOwnPropertySymbols(e);
+                                                n.push.apply(n, r);
+                                            }
+                                            return n;
+                                        })(Object(o)).forEach(function (e) {
+                                            Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(o, e));
+                                        }),
+                                  i)
+                              );
+                          };
                       })
-                    : v(e);
+                    : y(e);
             },
-            [s, v]
+            [o, y]
         );
-    return (0, i.jsxs)('div', {
-        className: a()(x.spacingContainer, x.backgroundContainer),
+    return (0, r.jsxs)('div', {
+        className: c()(f.spacingContainer, f.backgroundContainer),
         children: [
-            f &&
-                (0, i.jsx)('div', {
-                    className: x.containerTopHat,
-                    children: (0, i.jsx)(r.Text, {
-                        className: x.containerTopHatText,
+            j &&
+                (0, r.jsx)('div', {
+                    className: f.containerTopHat,
+                    children: (0, r.jsx)(s.Text, {
+                        className: f.containerTopHatText,
                         variant: 'text-xs/bold',
                         color: 'header-secondary',
-                        children: u.intl.string(u.t.neG9U1)
+                        children: d.NW.string(d.t.neG9U1)
                     })
                 }),
-            (0, i.jsxs)('div', {
-                className: x.leftRailIconContainer,
+            (0, r.jsxs)('div', {
+                className: f.leftRailIconContainer,
                 children: [
-                    (0, i.jsx)('div', {
-                        className: x.iconContainer,
-                        children: (0, i.jsx)(r.qJs, {
+                    (0, r.jsx)('div', {
+                        className: f.iconContainer,
+                        children: (0, r.jsx)(s.qJs, {
                             size: 'custom',
                             color: 'currentColor',
                             width: 18,
                             height: 20,
-                            className: x.icon
+                            className: f.icon
                         })
                     }),
-                    (0, i.jsxs)(r.hjN, {
+                    (0, r.jsxs)(s.hjN, {
                         children: [
-                            (0, i.jsx)(r.vwX, {
+                            (0, r.jsx)(s.vwX, {
                                 tag: 'h3',
-                                className: x.leftRailIconContainerTitle,
-                                children: u.intl.string(u.t['7v2xvr'])
+                                className: f.leftRailIconContainerTitle,
+                                children: d.NW.string(d.t['7v2xvr'])
                             }),
-                            (0, i.jsx)(r.R94, {
-                                className: x.leftRailIconContainerDescription,
-                                type: r.R94.Types.DESCRIPTION,
-                                children: u.intl.string(u.t.DyARHR)
+                            (0, r.jsx)(s.R94, {
+                                className: f.leftRailIconContainerDescription,
+                                type: s.R94.Types.DESCRIPTION,
+                                children: d.NW.string(d.t.DyARHR)
                             }),
-                            (0, i.jsx)(m, {
-                                formFieldType: c.QJ.TEXT_INPUT,
-                                addFormField: n,
-                                icon: (0, r.GSL)(o.Z),
-                                text: u.intl.string(u.t.w6Q9w8),
-                                onClick: () => g(c.QJ.TEXT_INPUT)
+                            (0, r.jsx)(p, {
+                                formFieldType: l.QJ.TEXT_INPUT,
+                                addFormField: t,
+                                icon: (0, s.GSL)(a.Z),
+                                text: d.NW.string(d.t.w6Q9w8),
+                                onClick: () => m(l.QJ.TEXT_INPUT)
                             }),
-                            (0, i.jsx)(m, {
-                                formFieldType: c.QJ.PARAGRAPH,
-                                addFormField: n,
-                                icon: r.OvV,
-                                text: u.intl.string(u.t.gG0JBA),
-                                onClick: () => g(c.QJ.PARAGRAPH)
+                            (0, r.jsx)(p, {
+                                formFieldType: l.QJ.PARAGRAPH,
+                                addFormField: t,
+                                icon: s.OvV,
+                                text: d.NW.string(d.t.gG0JBA),
+                                onClick: () => m(l.QJ.PARAGRAPH)
                             }),
-                            (0, i.jsx)(m, {
-                                formFieldType: c.QJ.MULTIPLE_CHOICE,
-                                addFormField: n,
-                                icon: r.jE$,
-                                text: u.intl.string(u.t.ooKh3t),
-                                onClick: () => g(c.QJ.MULTIPLE_CHOICE)
+                            (0, r.jsx)(p, {
+                                formFieldType: l.QJ.MULTIPLE_CHOICE,
+                                addFormField: t,
+                                icon: s.jE$,
+                                text: d.NW.string(d.t.ooKh3t),
+                                onClick: () => m(l.QJ.MULTIPLE_CHOICE)
                             })
                         ]
                     })

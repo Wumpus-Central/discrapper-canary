@@ -1,108 +1,109 @@
-n(653041), n(47120), n(724458);
-var i,
+n(653041), n(47120);
+var r,
+    i,
     l,
-    r,
+    o,
     a = n(392711),
     s = n.n(a),
-    o = n(442837),
-    d = n(570140),
-    c = n(592125);
+    c = n(442837),
+    u = n(570140),
+    d = n(592125);
 n(914010);
-var u = n(709054),
+var p = n(709054),
     h = n(176505);
-let m = {},
-    p = {},
-    g = {},
-    _ = {};
-function f(e) {
-    let t = p[e];
+let g = {},
+    f = {},
+    m = {},
+    b = {};
+function _(e) {
+    let t = f[e];
     if (null == t) return;
-    let n = u.default.fromTimestamp(Date.now() - 900000),
-        i = s().findIndex(t, (e) => u.default.compare(e.id, n) > 0);
-    if (-1 === i) p[e] = [];
+    let n = p.default.fromTimestamp(Date.now() - 900000),
+        r = s().findIndex(t, (e) => p.default.compare(e.id, n) > 0);
+    if (-1 === r) f[e] = [];
     else {
-        let n = Math.max(i, t.length - 26);
-        p[e] = s().slice(t, n);
+        let n = Math.max(r, t.length - 26);
+        f[e] = s().slice(t, n);
     }
-    g[e] = Date.now();
+    m[e] = Date.now();
 }
-function E(e, t, n, i) {
-    m[e].add(t);
-    let l = g[t];
-    (null == l || l + 300000 > Date.now()) && f(t),
-        null == p[t] && (p[t] = []),
-        p[t].push({
+function E(e, t, n, r) {
+    g[e].add(t);
+    let i = m[t];
+    (null == i || i + 300000 > Date.now()) && _(t),
+        null == f[t] && (f[t] = []),
+        f[t].push({
             id: n,
-            userId: i
+            userId: r
         });
 }
-function I(e) {
+function O(e) {
     let { channel: t } = e;
-    delete p[t.id], delete g[t.id];
+    delete f[t.id], delete m[t.id];
 }
-class C extends (i = o.ZP.Store) {
+class N extends (o = c.ZP.Store) {
     getActiveChannelsFetchStatus(e) {
-        return _[e];
+        return b[e];
     }
     getActiveChannelIds(e) {
-        return m[e];
+        return g[e];
     }
     getChannelMessageData(e) {
-        return p[e];
+        return f[e];
     }
     shouldFetch(e) {
         var t;
-        return null == m[e] && !(null === (t = _[e]) || void 0 === t ? void 0 : t.loading);
+        return null == g[e] && !(null === (t = b[e]) || void 0 === t ? void 0 : t.loading);
     }
 }
-(r = 'ActiveChannelsStore'),
-    (l = 'displayName') in C
-        ? Object.defineProperty(C, l, {
-              value: r,
+(l = 'ActiveChannelsStore'),
+    (i = 'displayName') in (r = N)
+        ? Object.defineProperty(r, i, {
+              value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (C[l] = r),
-    new C(d.Z, {
+        : (r[i] = l),
+    new N(u.Z, {
         CHANNEL_SELECT: function (e) {
             let { channelId: t, guildId: n } = e;
             if (!(0, h.ME)(t) || null == n) return !1;
-            let i = m[n];
-            if (null == i) return !1;
-            i.forEach((e) => {
+            let r = g[n];
+            if (null == r) return !1;
+            r.forEach((e) => {
                 var t;
-                f(e), (null === (t = p[e]) || void 0 === t ? void 0 : t.length) === 0 && delete p[e];
+                _(e), (null === (t = f[e]) || void 0 === t ? void 0 : t.length) === 0 && delete f[e];
             });
-            let l = s()
-                .chain(Array.from(i))
-                .filter((e) => e in p)
+            let i = s()
+                .chain(Array.from(r))
+                .filter((e) => e in f)
                 .sortBy((e) => {
                     var t, n;
-                    return -(null !== (n = null === (t = p[e]) || void 0 === t ? void 0 : t.length) && void 0 !== n ? n : 0);
+                    return -(null !== (n = null === (t = f[e]) || void 0 === t ? void 0 : t.length) && void 0 !== n ? n : 0);
                 })
                 .value();
-            m[n] = new Set(l);
+            g[n] = new Set(i);
         },
         MESSAGE_CREATE: function (e) {
             var t;
-            let { channelId: n, message: i, optimistic: l, isPushNotification: r } = e;
-            if (l || r) return !1;
-            let a = c.Z.getChannel(n);
-            if (null == a) return !1;
-            let s = a.guild_id;
-            if (null == s || null == m[s]) return !1;
-            E(s, n, i.id, null === (t = i.author) || void 0 === t ? void 0 : t.id);
+            let { channelId: n, message: r, optimistic: i, isPushNotification: l } = e;
+            if (i || l) return !1;
+            let o = d.Z.getChannel(n);
+            if (null == o) return !1;
+            let a = o.guild_id;
+            if (null == a || null == g[a]) return !1;
+            E(a, n, r.id, null === (t = r.author) || void 0 === t ? void 0 : t.id);
         },
         GUILD_DELETE: function (e) {
             let { guild: t } = e;
-            delete m[t.id];
+            delete g[t.id];
         },
-        CHANNEL_DELETE: I,
-        THREAD_DELETE: I,
+        CHANNEL_DELETE: O,
+        THREAD_DELETE: O,
         ACTIVE_CHANNELS_FETCH_START: function (e) {
             let { guildId: t } = e;
-            _[t] = {
+            b[t] = {
                 loading: !0,
                 error: null,
                 fetchedAt: Date.now()
@@ -110,22 +111,22 @@ class C extends (i = o.ZP.Store) {
         },
         ACTIVE_CHANNELS_FETCH_SUCCESS: function (e) {
             let { guildId: t, channels: n } = e;
-            (_[t] = {
+            (b[t] = {
                 loading: !1,
                 error: null,
                 fetchedAt: Date.now()
             }),
-                (m[t] = new Set()),
+                (g[t] = new Set()),
                 n.forEach((e) => {
-                    let { channel_id: n, messages: i } = e;
-                    i.forEach((e) => {
+                    let { channel_id: n, messages: r } = e;
+                    r.forEach((e) => {
                         E(t, n, e.message_id, e.user_id);
                     });
                 });
         },
         ACTIVE_CHANNELS_FETCH_FAILURE: function (e) {
             let { guildId: t, error: n } = e;
-            _[t] = {
+            b[t] = {
                 loading: !1,
                 error: n,
                 fetchedAt: null

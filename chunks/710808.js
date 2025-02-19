@@ -1,179 +1,249 @@
-n.d(t, { Z: () => v }), n(47120);
-var i = n(200651),
-    s = n(192379),
-    r = n(442837),
-    l = n(481060),
-    a = n(846027),
+n.d(t, { Z: () => I }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    s = n(442837),
+    a = n(481060),
+    l = n(846027),
     o = n(179658),
     c = n(304680),
     d = n(579806),
     u = n(600164),
     m = n(729345),
     g = n(921801),
-    h = n(857192),
-    x = n(131951),
-    _ = n(226961),
-    p = n(12647),
-    E = n(569550),
-    C = n(726985),
-    f = n(981631),
-    T = n(65154),
-    N = n(388032),
-    S = n(483938);
-async function I() {
+    p = n(857192),
+    h = n(131951),
+    f = n(226961),
+    N = n(12647),
+    x = n(569550),
+    b = n(726985),
+    _ = n(981631),
+    E = n(65154),
+    j = n(388032),
+    C = n(455812);
+function O(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function v(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+async function S() {
     let e = await d.Z.fileManager.getLogPath();
     d.Z.fileManager.showItemInFolder(e);
 }
-function b(e) {
-    (0, l.h7j)((t) =>
-        (0, i.jsx)(l.ConfirmModal, {
-            header: N.intl.string(N.t['7UXEFx']),
-            confirmText: N.intl.string(N.t.BddRzc),
-            cancelText: N.intl.string(N.t['ETE/oK']),
-            onCancel: t.onClose,
-            onConfirm: () => a.Z.setDebugLogging(e),
-            ...t,
-            children: (0, i.jsx)(l.Text, {
-                variant: 'text-md/normal',
-                children: N.intl.string(N.t.IYPrRk)
-            })
-        })
+function T(e) {
+    (0, a.h7j)((t) =>
+        (0, r.jsx)(
+            a.ConfirmModal,
+            v(
+                O(
+                    {
+                        header: j.NW.string(j.t['7UXEFx']),
+                        confirmText: j.NW.string(j.t.BddRzc),
+                        cancelText: j.NW.string(j.t['ETE/oK']),
+                        onCancel: t.onClose,
+                        onConfirm: () => l.Z.setDebugLogging(e)
+                    },
+                    t
+                ),
+                {
+                    children: (0, r.jsx)(a.Text, {
+                        variant: 'text-md/normal',
+                        children: j.NW.string(j.t.IYPrRk)
+                    })
+                }
+            )
+        )
     );
 }
-function v(e) {
+function I(e) {
     let { refreshStyles: t = !1 } = e,
-        [n, d] = s.useState(!1),
-        { debugLogging: v, aecDumpEnabled: j } = (0, r.cj)([x.Z], () => ({
-            aecDumpSupported: x.Z.isAecDumpSupported(),
-            debugLogging: x.Z.getDebugLogging(),
-            aecDumpEnabled: x.Z.getAecDump(),
-            supportsConnectionReplay: x.Z.supports(T.AN.CONNECTION_REPLAY)
+        [n, d] = i.useState(!1),
+        { debugLogging: I, aecDumpEnabled: y } = (0, s.cj)([h.Z], () => ({
+            aecDumpSupported: h.Z.isAecDumpSupported(),
+            debugLogging: h.Z.getDebugLogging(),
+            aecDumpEnabled: h.Z.getAecDump(),
+            supportsConnectionReplay: h.Z.supports(E.AN.CONNECTION_REPLAY)
         })),
-        A = (0, r.e7)([h.default], () => h.default.isStreamInfoOverlayEnabled),
-        O = (0, r.e7)([_.ZP], () => _.ZP.shouldRecordNextConnection());
+        A = (0, s.e7)([p.default], () => p.default.isStreamInfoOverlayEnabled),
+        P = (0, s.e7)([f.ZP], () => f.ZP.shouldRecordNextConnection());
     async function R() {
         d(!0);
         try {
-            await x.Z.getMediaEngine().writeAudioDebugState(),
-                await p.Z.submitLiveCrashReport({ message: { message: 'User Live Dump' } }),
-                await (0, m.E)(f.GU0.RTC),
+            await h.Z.getMediaEngine().writeAudioDebugState(),
+                await N.Z.submitLiveCrashReport({ message: { message: 'User Live Dump' } }),
+                await (0, m.E)(_.GU0.RTC),
                 (function () {
-                    let e = N.intl.string(N.t['fKBB8/']),
-                        t = N.intl.string(N.t.BvyxEx);
-                    (0, l.h7j)((n) =>
-                        (0, i.jsx)(l.ConfirmModal, {
-                            header: e,
-                            confirmButtonColor: l.zxk.Colors.BRAND,
-                            confirmText: N.intl.string(N.t.BddRzc),
-                            ...n,
-                            children: (0, i.jsx)(l.Text, {
-                                variant: 'text-md/normal',
-                                children: t
-                            })
-                        })
+                    let e = j.NW.string(j.t['fKBB8/']),
+                        t = j.NW.string(j.t.BvyxEx);
+                    (0, a.h7j)((n) =>
+                        (0, r.jsx)(
+                            a.ConfirmModal,
+                            v(
+                                O(
+                                    {
+                                        header: e,
+                                        confirmButtonColor: a.zxk.Colors.BRAND,
+                                        confirmText: j.NW.string(j.t.BddRzc)
+                                    },
+                                    n
+                                ),
+                                {
+                                    children: (0, r.jsx)(a.Text, {
+                                        variant: 'text-md/normal',
+                                        children: t
+                                    })
+                                }
+                            )
+                        )
                     );
                 })();
         } catch (e) {
             !(function (e) {
-                let t = N.intl.string(N.t.QZg0Jy),
-                    n = null != e ? e : N.intl.string(N.t.VzHcSk);
-                (0, l.h7j)((e) =>
-                    (0, i.jsx)(l.ConfirmModal, {
-                        header: t,
-                        confirmButtonColor: l.zxk.Colors.BRAND,
-                        confirmText: N.intl.string(N.t.BddRzc),
-                        ...e,
-                        children: (0, i.jsx)(l.Text, {
-                            variant: 'text-md/normal',
-                            children: n
-                        })
-                    })
+                let t = j.NW.string(j.t.QZg0Jy),
+                    n = null != e ? e : j.NW.string(j.t.VzHcSk);
+                (0, a.h7j)((e) =>
+                    (0, r.jsx)(
+                        a.ConfirmModal,
+                        v(
+                            O(
+                                {
+                                    header: t,
+                                    confirmButtonColor: a.zxk.Colors.BRAND,
+                                    confirmText: j.NW.string(j.t.BddRzc)
+                                },
+                                e
+                            ),
+                            {
+                                children: (0, r.jsx)(a.Text, {
+                                    variant: 'text-md/normal',
+                                    children: n
+                                })
+                            }
+                        )
+                    )
                 );
             })(e.displayMessage);
         }
     }
-    let P = (0, i.jsxs)(i.Fragment, {
+    let D = (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, i.jsx)(g.F, {
-                setting: C.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_STREAM_INFO_OVERLAY,
-                children: (0, i.jsx)(l.j7V, {
+            (0, r.jsx)(g.F, {
+                setting: b.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_STREAM_INFO_OVERLAY,
+                children: (0, r.jsx)(a.j7V, {
                     value: A,
                     onChange: (e) => {
-                        (0, E.Z)('stream_info_overlay_enabled', e, A), (0, o.y)({ isStreamInfoOverlayEnabled: e });
+                        (0, x.Z)('stream_info_overlay_enabled', e, A), (0, o.y)({ isStreamInfoOverlayEnabled: e });
                     },
-                    note: N.intl.string(N.t.kBXuW1),
+                    note: j.NW.string(j.t.kBXuW1),
                     hideBorder: t,
-                    children: N.intl.string(N.t['0CEP6e'])
+                    children: j.NW.string(j.t['0CEP6e'])
                 })
             }),
-            (0, i.jsx)(g.F, {
-                setting: C.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_AEC_DUMP,
-                children: (0, i.jsx)(l.j7V, {
-                    value: j,
-                    onChange: (e) => a.Z.setAecDump(e),
-                    note: N.intl.string(N.t['xl9+Iy']),
+            (0, r.jsx)(g.F, {
+                setting: b.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_AEC_DUMP,
+                children: (0, r.jsx)(a.j7V, {
+                    value: y,
+                    onChange: (e) => l.Z.setAecDump(e),
+                    note: j.NW.string(j.t['xl9+Iy']),
                     hideBorder: t,
-                    children: N.intl.string(N.t['r6K+TE'])
+                    children: j.NW.string(j.t['r6K+TE'])
                 })
             }),
-            (0, i.jsxs)(g.F, {
-                setting: C.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_CONNECTION_REPLAY,
+            (0, r.jsxs)(g.F, {
+                setting: b.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_CONNECTION_REPLAY,
                 children: [
-                    (0, i.jsx)(l.j7V, {
+                    (0, r.jsx)(a.j7V, {
                         hideBorder: !0,
-                        value: O,
+                        value: P,
                         onChange: (e) => c.TC(e),
-                        note: N.intl.string(N.t.Lm72RU),
-                        children: N.intl.string(N.t.U4FgFB)
+                        note: j.NW.string(j.t.Lm72RU),
+                        children: j.NW.string(j.t.U4FgFB)
                     }),
-                    (0, i.jsx)(l.xJW, {
-                        children: (0, i.jsx)(u.Z, {
-                            className: S.marginBottom20,
-                            children: (0, i.jsx)(u.Z.Child, {
+                    (0, r.jsx)(a.xJW, {
+                        children: (0, r.jsx)(u.Z, {
+                            className: C.marginBottom20,
+                            children: (0, r.jsx)(u.Z.Child, {
                                 grow: 0,
                                 shrink: 0,
-                                children: (0, i.jsx)(l.zxk, {
-                                    size: l.zxk.Sizes.SMALL,
+                                children: (0, r.jsx)(a.zxk, {
+                                    size: a.zxk.Sizes.SMALL,
                                     onClick: () => c.z4(),
-                                    children: N.intl.string(N.t.nJnOHB)
+                                    children: j.NW.string(j.t.nJnOHB)
                                 })
                             })
                         })
                     }),
-                    t ? null : (0, i.jsx)(l.$i$, { className: S.marginBottom20 })
+                    t ? null : (0, r.jsx)(a.$i$, { className: C.marginBottom20 })
                 ]
             }),
-            (0, i.jsx)(g.F, {
-                setting: C.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_LOGGING,
-                children: (0, i.jsxs)('div', {
+            (0, r.jsx)(g.F, {
+                setting: b.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_LOGGING,
+                children: (0, r.jsxs)('div', {
                     children: [
-                        (0, i.jsx)(l.j7V, {
+                        (0, r.jsx)(a.j7V, {
                             hideBorder: !0,
-                            value: v,
-                            onChange: b,
-                            note: N.intl.string(N.t['/7ak9f']),
-                            children: N.intl.string(N.t['726JHB'])
+                            value: I,
+                            onChange: T,
+                            note: j.NW.string(j.t['/7ak9f']),
+                            children: j.NW.string(j.t['726JHB'])
                         }),
-                        (0, i.jsx)(l.xJW, {
-                            children: (0, i.jsxs)(u.Z, {
+                        (0, r.jsx)(a.xJW, {
+                            children: (0, r.jsxs)(u.Z, {
                                 children: [
-                                    (0, i.jsx)(u.Z.Child, {
+                                    (0, r.jsx)(u.Z.Child, {
                                         grow: 0,
                                         shrink: 0,
-                                        children: (0, i.jsx)(l.zxk, {
+                                        children: (0, r.jsx)(a.zxk, {
                                             disabled: n,
-                                            size: l.zxk.Sizes.SMALL,
+                                            size: a.zxk.Sizes.SMALL,
                                             onClick: R,
-                                            children: N.intl.string(N.t['3UB9aW'])
+                                            children: j.NW.string(j.t['3UB9aW'])
                                         })
                                     }),
-                                    (0, i.jsx)(u.Z.Child, {
+                                    (0, r.jsx)(u.Z.Child, {
                                         grow: 0,
                                         shrink: 0,
-                                        children: (0, i.jsx)(l.zxk, {
-                                            size: l.zxk.Sizes.SMALL,
-                                            onClick: I,
-                                            children: N.intl.string(N.t.nuPtYm)
+                                        children: (0, r.jsx)(a.zxk, {
+                                            size: a.zxk.Sizes.SMALL,
+                                            onClick: S,
+                                            children: j.NW.string(j.t.nuPtYm)
                                         })
                                     })
                                 ]
@@ -185,10 +255,10 @@ function v(e) {
         ]
     });
     return t
-        ? P
-        : (0, i.jsx)(l.hjN, {
-              className: S.marginBottom40,
-              title: N.intl.string(N.t.OFpL3d),
-              children: P
+        ? D
+        : (0, r.jsx)(a.hjN, {
+              className: C.marginBottom40,
+              title: j.NW.string(j.t.OFpL3d),
+              children: D
           });
 }

@@ -1,20 +1,48 @@
-u.r(e), u.d(e, { openGuildProductLink: () => o });
-var i = u(200651);
-u(192379);
-var l = u(481060),
-    n = u(336197),
-    d = u(430824),
-    r = u(240864),
-    c = u(981631);
-function o(t, e) {
-    var o;
-    let a = d.Z.getGuild(t);
-    r.Z.getGuildProductFetchState(e) === r.M.FETCHED && (null === (o = r.Z.getGuildProduct(e)) || void 0 === o ? void 0 : o.published) !== !0 && null != a
-        ? (0, l.ZDy)(async () => {
-              let { default: t } = await u.e('29396').then(u.bind(u, 513239));
-              return (e) => (0, i.jsx)(t, { ...e });
+n.r(t), n.d(t, { openGuildProductLink: () => d });
+var u = n(200651);
+n(192379);
+var i = n(481060),
+    r = n(336197),
+    l = n(430824),
+    c = n(240864),
+    o = n(981631);
+function d(e, t) {
+    var d;
+    let a = l.Z.getGuild(e);
+    c.Z.getGuildProductFetchState(t) === c.M.FETCHED && (null === (d = c.Z.getGuildProduct(t)) || void 0 === d ? void 0 : d.published) !== !0 && null != a
+        ? (0, i.ZDy)(async () => {
+              let { default: e } = await n.e('29396').then(n.bind(n, 513239));
+              return (t) =>
+                  (0, u.jsx)(
+                      e,
+                      (function (e) {
+                          for (var t = 1; t < arguments.length; t++) {
+                              var n = null != arguments[t] ? arguments[t] : {},
+                                  u = Object.keys(n);
+                              'function' == typeof Object.getOwnPropertySymbols &&
+                                  (u = u.concat(
+                                      Object.getOwnPropertySymbols(n).filter(function (e) {
+                                          return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                      })
+                                  )),
+                                  u.forEach(function (t) {
+                                      var u;
+                                      (u = n[t]),
+                                          t in e
+                                              ? Object.defineProperty(e, t, {
+                                                    value: u,
+                                                    enumerable: !0,
+                                                    configurable: !0,
+                                                    writable: !0
+                                                })
+                                              : (e[t] = u);
+                                  });
+                          }
+                          return e;
+                      })({}, t)
+                  );
           })
-        : (null == a ? void 0 : a.hasFeature(c.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0
-          ? (0, n.Z)(c.Z5c.GUILD_PRODUCT(t, e))
-          : (0, n.Z)(c.Z5c.CHANNEL(t));
+        : (null == a ? void 0 : a.hasFeature(o.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0
+          ? (0, r.Z)(o.Z5c.GUILD_PRODUCT(e, t))
+          : (0, r.Z)(o.Z5c.CHANNEL(e));
 }

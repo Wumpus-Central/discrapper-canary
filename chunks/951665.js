@@ -1,60 +1,97 @@
-n.d(t, { Z: () => d }), n(47120);
-var i = n(200651),
-    r = n(192379),
-    l = n(481060),
-    s = n(457414),
-    a = n(311173),
+n.d(t, { Z: () => m }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    s = n(481060),
+    a = n(457414),
+    l = n(311173),
     o = n(388032),
-    c = n(540123);
+    c = n(56764);
 function d(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function u(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function m(e) {
     var t;
-    let { rule: n, onChangeRule: d, collapsed: u = !1 } = e,
-        [m, h] = r.useState(!u),
-        g = r.useCallback(() => {
-            h(!m);
-        }, [m, h]),
-        x = r.useCallback(
+    let { rule: n, onChangeRule: m, collapsed: p = !1 } = e,
+        [g, h] = i.useState(!p),
+        f = i.useCallback(() => {
+            h(!g);
+        }, [g, h]),
+        b = i.useCallback(
             (e) => {
-                d({
-                    ...n,
-                    triggerMetadata: {
-                        ...n.triggerMetadata,
-                        regexPatterns: e
-                    }
-                });
+                m(u(d({}, n), { triggerMetadata: u(d({}, n.triggerMetadata), { regexPatterns: e }) }));
             },
-            [d, n]
+            [m, n]
         );
-    return (0, s.S)(n.triggerType)
-        ? (0, i.jsx)(l.zF9, {
-              isExpanded: m,
-              collapsibleContent: (0, i.jsx)(a.Z, {
+    return (0, a.S)(n.triggerType)
+        ? (0, r.jsx)(s.zF9, {
+              isExpanded: g,
+              collapsibleContent: (0, r.jsx)(l.Z, {
                   rule: n,
-                  onChangeText: x,
+                  onChangeText: b,
                   className: c.textAreaContainer,
                   initialValue: null === (t = n.triggerMetadata) || void 0 === t ? void 0 : t.regexPatterns
               }),
               className: c.collapseable,
               children: (e) => {
                   let { onClick: t } = e;
-                  return (0, i.jsx)(l.P3F, {
+                  return (0, r.jsx)(s.P3F, {
                       onClick: (e) => {
-                          g(), t(e);
+                          f(), t(e);
                       },
-                      children: (0, i.jsxs)('div', {
+                      children: (0, r.jsxs)('div', {
                           className: c.header,
                           children: [
-                              (0, i.jsx)(l.X6q, {
+                              (0, r.jsx)(s.X6q, {
                                   variant: 'text-sm/medium',
-                                  children: o.intl.string(o.t.dnunm5)
+                                  children: o.NW.string(o.t.dnunm5)
                               }),
-                              m
-                                  ? (0, i.jsx)(l.u04, {
+                              g
+                                  ? (0, r.jsx)(s.u04, {
                                         size: 'md',
                                         color: 'currentColor',
                                         className: c.arrow
                                     })
-                                  : (0, i.jsx)(l.CJ0, {
+                                  : (0, r.jsx)(s.CJ0, {
                                         size: 'md',
                                         color: 'currentColor',
                                         className: c.arrow

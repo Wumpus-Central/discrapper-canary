@@ -1,190 +1,244 @@
 n.d(t, {
-    ZP: () => N,
-    _1: () => b,
-    jd: () => S
+    ZP: () => P,
+    _1: () => A,
+    jd: () => C
 }),
     n(627341),
     n(47120);
-var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(392711),
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(392711),
     l = n(278074),
-    u = n(442837),
-    c = n(704215),
+    c = n(442837),
+    u = n(704215),
     d = n(481060),
     f = n(951394),
-    _ = n(605236),
-    p = n(314897),
+    p = n(605236),
+    _ = n(314897),
     h = n(837411),
     m = n(369566),
     g = n(565640),
     E = n(510659),
     v = n(652853),
-    y = n(228168),
-    I = n(388032),
-    T = n(817852);
-let b = 2700,
-    S = '> -# *',
-    A = (e, t) =>
+    b = n(228168),
+    y = n(388032),
+    O = n(965075);
+function S(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function I(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                S(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function T(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function N(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : T(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let A = 2700,
+    C = '> -# *',
+    R = (e, t) =>
         (0, l.EQ)({
             interactionType: e,
             sourceType: t
         })
             .with(
                 {
-                    interactionType: y.P.REPLY,
-                    sourceType: y.n_.AVATAR
+                    interactionType: b.P.REPLY,
+                    sourceType: b.n_.AVATAR
                 },
-                () => I.intl.string(I.t.xvN0fX)
+                () => y.NW.string(y.t.xvN0fX)
             )
             .with(
                 {
-                    interactionType: y.P.REACT,
-                    sourceType: y.n_.AVATAR
+                    interactionType: b.P.REACT,
+                    sourceType: b.n_.AVATAR
                 },
-                () => I.intl.string(I.t['fEUP/v'])
+                () => y.NW.string(y.t['fEUP/v'])
             )
             .with(
                 {
-                    interactionType: y.P.REPLY,
-                    sourceType: y.n_.STATUS
+                    interactionType: b.P.REPLY,
+                    sourceType: b.n_.STATUS
                 },
-                () => I.intl.string(I.t['C/vzS0'])
+                () => y.NW.string(y.t['C/vzS0'])
             )
             .with(
                 {
-                    interactionType: y.P.REACT,
-                    sourceType: y.n_.STATUS
+                    interactionType: b.P.REACT,
+                    sourceType: b.n_.STATUS
                 },
-                () => I.intl.string(I.t.TKdBCw)
+                () => y.NW.string(y.t.TKdBCw)
             )
             .with(
                 {
-                    interactionType: y.P.REPLY,
-                    sourceType: y.n_.ACTIVITY
+                    interactionType: b.P.REPLY,
+                    sourceType: b.n_.ACTIVITY
                 },
-                () => I.intl.string(I.t.ObfsSk)
+                () => y.NW.string(y.t.ObfsSk)
             )
             .with(
                 {
-                    interactionType: y.P.REACT,
-                    sourceType: y.n_.ACTIVITY
+                    interactionType: b.P.REACT,
+                    sourceType: b.n_.ACTIVITY
                 },
-                () => I.intl.string(I.t.bSe71N)
+                () => y.NW.string(y.t.bSe71N)
             )
             .exhaustive();
-function N(e) {
-    let { user: t, sourceType: n, isVisible: a, isExpandable: b, interactionSourceId: S, onAction: N, renderMoreButtonPopout: C } = e,
-        R = (0, u.e7)([p.default], () => p.default.getId() === t.id),
-        O = (0, h.Z)(t.id),
+function P(e) {
+    let { user: t, sourceType: n, isVisible: o, isExpandable: S, interactionSourceId: T, onAction: A, renderMoreButtonPopout: C } = e,
+        P = (0, c.e7)([_.default], () => _.default.getId() === t.id),
+        w = (0, h.Z)(t.id),
         { profileType: D } = (0, v.z)(),
-        { onInteraction: L } = (0, E.Xo)(),
-        { live: x, stream: P } = (0, m.Z)(t.id),
-        w = (0, g.Z)(n === y.n_.STATUS ? t.id : null, 'UserProfileInteractionToolbar'),
-        M =
-            !a &&
-            D !== y.y0.FULL_SIZE &&
+        { onInteraction: x } = (0, E.Xo)(),
+        { live: L, stream: M } = (0, m.Z)(t.id),
+        k = (0, g.Z)(n === b.n_.STATUS ? t.id : null, 'UserProfileInteractionToolbar'),
+        j =
+            !o &&
+            D !== b.y0.FULL_SIZE &&
             (0, l.EQ)(n)
-                .with(y.n_.STATUS, () => 0 === x.length && null == P && null == w)
-                .with(y.n_.ACTIVITY, () => !0)
-                .with(y.n_.AVATAR, () => !1)
+                .with(b.n_.STATUS, () => 0 === L.length && null == M && null == k)
+                .with(b.n_.ACTIVITY, () => !0)
+                .with(b.n_.AVATAR, () => !1)
                 .exhaustive(),
-        [k, U] = r.useState(M);
+        [U, G] = i.useState(j);
     if (
-        (r.useEffect(() => {
-            k && !M && U(!1);
-        }, [k, M]),
-        t.bot || R || !O)
+        (i.useEffect(() => {
+            U && !j && G(!1);
+        }, [U, j]),
+        t.bot || P || !w)
     )
         return null;
-    let G = () => {
-            n === y.n_.AVATAR ? N({ action: 'PRESS_REACT_AVATAR' }) : n === y.n_.STATUS ? N({ action: 'PRESS_REACT_CUSTOM_STATUS' }) : N({ action: 'PRESS_REACT_ACTIVITY' }),
-                null == L ||
-                    L({
-                        interactionType: y.P.REACT,
+    let B = () => {
+            n === b.n_.AVATAR ? A({ action: 'PRESS_REACT_AVATAR' }) : n === b.n_.STATUS ? A({ action: 'PRESS_REACT_CUSTOM_STATUS' }) : A({ action: 'PRESS_REACT_ACTIVITY' }),
+                null == x ||
+                    x({
+                        interactionType: b.P.REACT,
                         interactionSource: n,
-                        interactionSourceId: S
+                        interactionSourceId: T
                     }),
-                D === y.y0.BITE_SIZE && (0, _.EW)(c.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
+                D === b.y0.BITE_SIZE && (0, p.EW)(u.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
         },
-        B = () => {
-            n === y.n_.AVATAR ? N({ action: 'PRESS_REPLY_AVATAR' }) : n === y.n_.STATUS ? N({ action: 'PRESS_REPLY_CUSTOM_STATUS' }) : N({ action: 'PRESS_REPLY_ACTIVITY' }),
-                null == L ||
-                    L({
-                        interactionType: y.P.REPLY,
+        Z = () => {
+            n === b.n_.AVATAR ? A({ action: 'PRESS_REPLY_AVATAR' }) : n === b.n_.STATUS ? A({ action: 'PRESS_REPLY_CUSTOM_STATUS' }) : A({ action: 'PRESS_REPLY_ACTIVITY' }),
+                null == x ||
+                    x({
+                        interactionType: b.P.REPLY,
                         interactionSource: n,
-                        interactionSourceId: S
+                        interactionSourceId: T
                     }),
-                D === y.y0.BITE_SIZE && (0, _.EW)(c.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
+                D === b.y0.BITE_SIZE && (0, p.EW)(u.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
         },
-        Z = (e) => {
-            e.animationName === (0, o.get)(T, 'fadeInAndOut') && U(!1);
+        F = (e) => {
+            e.animationName === (0, s.get)(O, 'fadeInAndOut') && G(!1);
         };
-    return (0, i.jsxs)(f.ZP, {
-        className: s()(T.popover, {
-            [T.fadeInAndOut]: k,
-            [T.visible]: a,
-            [T.expandable]: b,
-            [T.statusPopover]: n === y.n_.STATUS,
-            [T.avatarPopover]: n === y.n_.AVATAR,
-            [T.activityPopover]: n === y.n_.ACTIVITY
+    return (0, r.jsxs)(f.ZP, {
+        className: a()(O.popover, {
+            [O.fadeInAndOut]: U,
+            [O.visible]: o,
+            [O.expandable]: S,
+            [O.statusPopover]: n === b.n_.STATUS,
+            [O.avatarPopover]: n === b.n_.AVATAR,
+            [O.activityPopover]: n === b.n_.ACTIVITY
         }),
-        onAnimationEnd: k ? Z : void 0,
+        onAnimationEnd: U ? F : void 0,
         children: [
-            (0, i.jsx)(d.DY3, {
-                text: I.intl.string(I.t.nhaI4e),
-                shouldShow: a,
-                className: T.tooltipContainer,
+            (0, r.jsx)(d.DY3, {
+                text: y.NW.string(y.t.nhaI4e),
+                shouldShow: o,
+                className: O.tooltipContainer,
                 delay: 0,
                 'aria-label': !1,
-                children: (0, i.jsx)(f.zx, {
-                    onClick: G,
-                    className: T.button,
-                    'aria-label': A(y.P.REACT, n),
+                children: (0, r.jsx)(f.zx, {
+                    onClick: B,
+                    className: O.button,
+                    'aria-label': R(b.P.REACT, n),
                     'aria-haspopup': 'dialog',
-                    children: (0, i.jsx)(d.EO4, {
+                    children: (0, r.jsx)(d.EO4, {
                         size: 'xs',
-                        className: T.icon
+                        className: O.icon
                     })
                 })
             }),
-            (0, i.jsx)(d.DY3, {
-                text: I.intl.string(I.t.RmDYKC),
-                shouldShow: a,
-                className: T.tooltipContainer,
+            (0, r.jsx)(d.DY3, {
+                text: y.NW.string(y.t.RmDYKC),
+                shouldShow: o,
+                className: O.tooltipContainer,
                 delay: 0,
                 'aria-label': !1,
-                children: (0, i.jsx)(f.zx, {
-                    onClick: B,
-                    className: T.button,
-                    'aria-label': A(y.P.REPLY, n),
+                children: (0, r.jsx)(f.zx, {
+                    onClick: Z,
+                    className: O.button,
+                    'aria-label': R(b.P.REPLY, n),
                     'aria-haspopup': 'dialog',
-                    children: (0, i.jsx)(d.n$P, {
+                    children: (0, r.jsx)(d.n$P, {
                         size: 'xs',
-                        className: T.icon
+                        className: O.icon
                     })
                 })
             }),
             null == C
                 ? void 0
                 : C((e) =>
-                      (0, i.jsx)(d.DY3, {
-                          text: I.intl.string(I.t.UKOtz8),
-                          shouldShow: a,
-                          className: T.tooltipContainer,
+                      (0, r.jsx)(d.DY3, {
+                          text: y.NW.string(y.t.UKOtz8),
+                          shouldShow: o,
+                          className: O.tooltipContainer,
                           delay: 0,
                           'aria-label': !1,
-                          children: (0, i.jsx)(f.zx, {
-                              ...e,
-                              className: T.button,
-                              'aria-label': I.intl.string(I.t.UKOtz8),
-                              children: (0, i.jsx)(d.xhG, {
-                                  size: 'xs',
-                                  className: T.icon
+                          children: (0, r.jsx)(
+                              f.zx,
+                              N(I({}, e), {
+                                  className: O.button,
+                                  'aria-label': y.NW.string(y.t.UKOtz8),
+                                  children: (0, r.jsx)(d.xhG, {
+                                      size: 'xs',
+                                      className: O.icon
+                                  })
                               })
-                          })
+                          )
                       })
                   )
         ]

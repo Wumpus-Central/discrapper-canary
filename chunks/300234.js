@@ -1,8 +1,8 @@
-n.d(t, { Z: () => Z });
-var a = n(200651),
-    l = n(192379),
+n.d(t, { Z: () => j });
+var r = n(200651),
+    a = n(192379),
     s = n(442837),
-    r = n(481060),
+    l = n(481060),
     i = n(239091),
     o = n(493773),
     c = n(884338),
@@ -11,39 +11,79 @@ var a = n(200651),
     h = n(594174),
     m = n(260483),
     g = n(314208),
-    x = n(124368),
-    f = n(466218);
-let Z = l.memo(function (e) {
-    let { threadId: t, goToThread: l, showChannelName: o } = e,
+    f = n(124368),
+    x = n(653985);
+let j = a.memo(function (e) {
+    let { threadId: t, goToThread: a, showChannelName: o } = e,
         c = (0, s.e7)([d.Z], () => d.Z.getChannel(t)),
         u = (0, s.e7)([d.Z], () => d.Z.getChannel(c.parent_id));
-    return (0, a.jsxs)(r.P3F, {
-        className: f.container,
-        onClick: (e) => l(c, e.shiftKey),
+    return (0, r.jsxs)(l.P3F, {
+        className: x.container,
+        onClick: (e) => a(c, e.shiftKey),
         onContextMenu: (e) =>
             (0, i.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e('38902'), n.e('40157')]).then(n.bind(n, 422200));
-                return (t) =>
-                    (0, a.jsx)(e, {
-                        ...t,
-                        channel: c
-                    });
+                let { default: e } = await Promise.all([n.e('38902'), n.e('77564'), n.e('74067')]).then(n.bind(n, 422200));
+                return (t) => {
+                    var n, a;
+                    return (0, r.jsx)(
+                        e,
+                        ((n = (function (e) {
+                            for (var t = 1; t < arguments.length; t++) {
+                                var n = null != arguments[t] ? arguments[t] : {},
+                                    r = Object.keys(n);
+                                'function' == typeof Object.getOwnPropertySymbols &&
+                                    (r = r.concat(
+                                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                        })
+                                    )),
+                                    r.forEach(function (t) {
+                                        var r;
+                                        (r = n[t]),
+                                            t in e
+                                                ? Object.defineProperty(e, t, {
+                                                      value: r,
+                                                      enumerable: !0,
+                                                      configurable: !0,
+                                                      writable: !0
+                                                  })
+                                                : (e[t] = r);
+                                    });
+                            }
+                            return e;
+                        })({}, t)),
+                        (a = a = { channel: c }),
+                        Object.getOwnPropertyDescriptors
+                            ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(a))
+                            : (function (e, t) {
+                                  var n = Object.keys(e);
+                                  if (Object.getOwnPropertySymbols) {
+                                      var r = Object.getOwnPropertySymbols(e);
+                                      n.push.apply(n, r);
+                                  }
+                                  return n;
+                              })(Object(a)).forEach(function (e) {
+                                  Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(a, e));
+                              }),
+                        n)
+                    );
+                };
             }),
         children: [
-            (0, a.jsxs)('div', {
-                className: f.left,
+            (0, r.jsxs)('div', {
+                className: x.left,
                 children: [
-                    (0, a.jsxs)(r.X6q, {
-                        className: f.threadNameLine,
+                    (0, r.jsxs)(l.X6q, {
+                        className: x.threadNameLine,
                         variant: 'heading-md/semibold',
                         children: [
-                            (0, a.jsx)('span', {
-                                className: f.threadName,
+                            (0, r.jsx)('span', {
+                                className: x.threadName,
                                 children: c.name
                             }),
                             o && null != u
-                                ? (0, a.jsx)('span', {
-                                      className: f.parentName,
+                                ? (0, r.jsx)('span', {
+                                      className: x.parentName,
                                       children: '#'.concat(u.name)
                                   })
                                 : null
@@ -52,7 +92,7 @@ let Z = l.memo(function (e) {
                     (0, g.Z)(c)
                 ]
             }),
-            (0, a.jsx)(v, { channel: c })
+            (0, r.jsx)(v, { channel: c })
         ]
     });
 });
@@ -62,24 +102,24 @@ function v(e) {
             var e;
             return null !== (e = m.Z.getMemberIdsPreview(t.id)) && void 0 !== e ? e : [];
         }),
-        l = (0, s.e7)([m.Z], () => {
+        a = (0, s.e7)([m.Z], () => {
             var e;
             return null !== (e = m.Z.getMemberCount(t.id)) && void 0 !== e ? e : 0;
         }),
-        r = (0, s.Wu)([h.default], () => n.map((e) => h.default.getUser(e)));
+        l = (0, s.Wu)([h.default], () => n.map((e) => h.default.getUser(e)));
     return ((0, o.ZP)(() => {
-        n.filter((e, t) => null == r[t]).forEach((e) => {
+        n.filter((e, t) => null == l[t]).forEach((e) => {
             u.Z.requestMember(t.guild_id, e);
         });
     }),
     0 === n.length)
         ? null
-        : (0, a.jsx)(c.Z, {
-              className: f.facepile,
+        : (0, r.jsx)(c.Z, {
+              className: x.facepile,
               showDefaultAvatarsForNullUsers: !0,
               guildId: t.guild_id,
-              users: r,
-              count: l,
-              max: x.yX
+              users: l,
+              count: a,
+              max: f.yX
           });
 }

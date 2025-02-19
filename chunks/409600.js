@@ -1,42 +1,71 @@
-a.d(n, { default: () => h }), a(47120);
-var i = a(200651);
-a(192379);
-var s = a(100527),
-    e = a(906732),
-    l = a(987209),
-    o = a(563132),
-    c = a(791785),
-    d = a(961830),
-    p = a(231338);
-function r(t) {
-    let { onClose: n, onComplete: a, transitionState: s, applicationId: l, analyticsLocationObject: d, skuId: p } = t,
-        {} = (0, o.JL)(),
-        { analyticsLocations: r } = (0, e.ZP)();
-    return (0, i.jsx)(c.PaymentModal, {
-        onClose: n,
-        onComplete: a,
-        applicationId: l,
-        skuId: p,
+n.d(e, { default: () => b }), n(47120);
+var r = n(200651);
+n(192379);
+var a = n(100527),
+    i = n(906732),
+    o = n(987209),
+    c = n(563132),
+    l = n(791785),
+    s = n(961830),
+    u = n(231338);
+function p(t) {
+    let { onClose: e, onComplete: n, transitionState: a, applicationId: o, analyticsLocationObject: s, skuId: u } = t,
+        {} = (0, c.JL)(),
+        { analyticsLocations: p } = (0, i.ZP)();
+    return (0, r.jsx)(l.PaymentModal, {
+        onClose: e,
+        onComplete: n,
+        applicationId: o,
+        skuId: u,
         initialPlanId: null,
-        analyticsObject: d,
-        analyticsLocations: r,
-        transitionState: s
+        analyticsObject: s,
+        analyticsLocations: p,
+        transitionState: a
     });
 }
-let u = [d.WA, d.s2, ...d.yp, d.wo, d.F7];
-function h(t) {
-    let { loadId: n, applicationId: a, skuId: c, analyticsLocations: d } = t,
-        { analyticsLocations: h } = (0, e.ZP)(d, s.Z.PREMIUM_PAYMENT_MODAL);
-    return (0, i.jsx)(e.Gt, {
-        value: h,
-        children: (0, i.jsx)(o.PaymentContextProvider, {
-            loadId: n,
-            stepConfigs: u,
-            applicationId: a,
-            skuIDs: [c],
+let d = [s.WA, s.s2, ...s.yp, s.wo, s.F7];
+function b(t) {
+    let { loadId: e, applicationId: n, skuId: l, analyticsLocations: s } = t,
+        { analyticsLocations: b } = (0, i.ZP)(s, a.Z.PREMIUM_PAYMENT_MODAL);
+    return (0, r.jsx)(i.Gt, {
+        value: b,
+        children: (0, r.jsx)(c.PaymentContextProvider, {
+            loadId: e,
+            stepConfigs: d,
+            applicationId: n,
+            skuIDs: [l],
             activeSubscription: null,
-            purchaseType: p.GZ.ONE_TIME,
-            children: (0, i.jsx)(l.KB, { children: (0, i.jsx)(r, { ...t }) })
+            purchaseType: u.GZ.ONE_TIME,
+            children: (0, r.jsx)(o.KB, {
+                children: (0, r.jsx)(
+                    p,
+                    (function (t) {
+                        for (var e = 1; e < arguments.length; e++) {
+                            var n = null != arguments[e] ? arguments[e] : {},
+                                r = Object.keys(n);
+                            'function' == typeof Object.getOwnPropertySymbols &&
+                                (r = r.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (t) {
+                                        return Object.getOwnPropertyDescriptor(n, t).enumerable;
+                                    })
+                                )),
+                                r.forEach(function (e) {
+                                    var r;
+                                    (r = n[e]),
+                                        e in t
+                                            ? Object.defineProperty(t, e, {
+                                                  value: r,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0
+                                              })
+                                            : (t[e] = r);
+                                });
+                        }
+                        return t;
+                    })({}, t)
+                )
+            })
         })
     });
 }

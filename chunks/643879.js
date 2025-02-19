@@ -1,50 +1,51 @@
 n.d(t, {
-    fD: () => d,
-    mh: () => m,
-    pC: () => u
-});
-var l = n(664751),
-    a = n(134432),
-    i = n(768581),
-    s = n(823379),
-    r = n(981631),
-    o = n(485696);
+    fD: () => u,
+    mh: () => f,
+    pC: () => d
+}),
+    n(301563);
+var r = n(664751),
+    l = n(134432),
+    a = n(768581),
+    i = n(823379),
+    o = n(981631),
+    s = n(485696);
 function c(e) {
-    let { storageHash: t, canAnimate: n = !1, allowWebp: l = !0 } = e;
-    if (n && (0, i.xR)(t)) return 'gif';
-    let { CDN_HOST: a } = window.GLOBAL_ENV;
-    return null == a ? 'jpg' : l && i.$k ? 'webp' : 'png';
-}
-function d(e) {
-    let { userId: t, avatarId: n, storageHash: i, canAnimate: s = !1, allowWebp: o = !0, size: d } = e,
-        { CDN_HOST: u } = window.GLOBAL_ENV,
-        m = null != u ? ''.concat(location.protocol, '//').concat(u) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT,
-        p = c({
-            storageHash: i,
-            canAnimate: s,
-            allowWebp: o
-        }),
-        x = '?'.concat(l.stringify({ size: (0, a.oO)(d * (0, a.x_)()) }));
-    return ''
-        .concat(m)
-        .concat(r.ANM.ARCHIVED_AVATAR(t, n, i, p))
-        .concat(x);
+    let { storageHash: t, canAnimate: n = !1, allowWebp: r = !0 } = e;
+    if (n && (0, a.xR)(t)) return 'gif';
+    let { CDN_HOST: l } = window.GLOBAL_ENV;
+    return null == l ? 'jpg' : r && a.$k ? 'webp' : 'png';
 }
 function u(e) {
-    let t = e ? o.Ul : o.h,
-        n = o.Ul - t;
+    let { userId: t, avatarId: n, storageHash: a, canAnimate: i = !1, allowWebp: s = !0, size: u } = e,
+        { CDN_HOST: d } = window.GLOBAL_ENV,
+        f = null != d ? ''.concat(location.protocol, '//').concat(d) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT,
+        p = c({
+            storageHash: a,
+            canAnimate: i,
+            allowWebp: s
+        }),
+        m = '?'.concat(r.stringify({ size: (0, l.oO)(u * (0, l.x_)()) }));
+    return ''
+        .concat(f)
+        .concat(o.ANM.ARCHIVED_AVATAR(t, n, a, p))
+        .concat(m);
+}
+function d(e) {
+    let t = e ? s.Ul : s.h,
+        n = s.Ul - t;
     return {
         recentAvatarsLimit: t,
         numberOfLockedAvatarSlots: n
     };
 }
-function m(e, t) {
+function f(e, t) {
     let n = c({
             storageHash: e,
             canAnimate: !0,
             allowWebp: !1
         }),
-        l = (function (e, t) {
+        r = (function (e, t) {
             if (null == t) return e;
             let n = t.match(/(.+?)-(\d+)$/);
             if (null != n) {
@@ -55,7 +56,7 @@ function m(e, t) {
             return ''.concat(t, '-1');
         })(e, t);
     return {
-        filename: ''.concat(l, '.').concat(n),
+        filename: ''.concat(r, '.').concat(n),
         type: (function (e) {
             switch (e) {
                 case 'gif':
@@ -65,7 +66,7 @@ function m(e, t) {
                 case 'jpg':
                     return 'image/jpeg';
                 default:
-                    (0, s.vE)(e);
+                    (0, i.vE)(e);
             }
         })(n)
     };

@@ -1,33 +1,62 @@
-n.d(t, { Z: () => s });
-var i = n(200651);
+n.d(t, { Z: () => l });
+var r = n(200651);
 n(192379);
-var l = n(481060),
+var i = n(481060),
     a = n(388032),
-    r = n(288138);
-function s(e) {
+    o = n(600777);
+function l(e) {
     let { message: t } = e;
-    return (0, i.jsxs)(l.P3F, {
+    return (0, r.jsxs)(i.P3F, {
         onClick: () => {
-            (0, l.ZDy)(async () => {
+            (0, i.ZDy)(async () => {
                 let { default: e } = await n.e('14021').then(n.bind(n, 910673));
                 return (n) =>
-                    (0, i.jsx)(e, {
-                        channelId: t.channel_id,
-                        messageId: t.id,
-                        ...n
-                    });
+                    (0, r.jsx)(
+                        e,
+                        (function (e) {
+                            for (var t = 1; t < arguments.length; t++) {
+                                var n = null != arguments[t] ? arguments[t] : {},
+                                    r = Object.keys(n);
+                                'function' == typeof Object.getOwnPropertySymbols &&
+                                    (r = r.concat(
+                                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                        })
+                                    )),
+                                    r.forEach(function (t) {
+                                        var r;
+                                        (r = n[t]),
+                                            t in e
+                                                ? Object.defineProperty(e, t, {
+                                                      value: r,
+                                                      enumerable: !0,
+                                                      configurable: !0,
+                                                      writable: !0
+                                                  })
+                                                : (e[t] = r);
+                                    });
+                            }
+                            return e;
+                        })(
+                            {
+                                channelId: t.channel_id,
+                                messageId: t.id
+                            },
+                            n
+                        )
+                    );
             });
         },
-        className: r.accessory,
+        className: o.accessory,
         children: [
-            (0, i.jsx)(l.d3s, {
+            (0, r.jsx)(i.d3s, {
                 size: 'xs',
                 color: 'currentColor'
             }),
-            (0, i.jsx)(l.Text, {
+            (0, r.jsx)(i.Text, {
                 variant: 'text-xs/normal',
-                className: r.accessoryText,
-                children: a.intl.string(a.t['2aXnfX'])
+                className: o.accessoryText,
+                children: a.NW.string(a.t['2aXnfX'])
             })
         ]
     });

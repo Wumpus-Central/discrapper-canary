@@ -1,41 +1,62 @@
-t.d(i, { K: () => p }), t(47120);
-var n = t(192379),
-    l = t(442837),
-    s = t(172337),
-    d = t(101492),
-    r = t(710091),
-    u = t(496675),
-    a = t(388032);
+i.d(t, { K: () => p }), i(47120), i(266796);
+var n = i(192379),
+    l = i(442837),
+    r = i(172337),
+    s = i(101492),
+    u = i(710091),
+    a = i(496675),
+    d = i(388032);
 let o = {
-        'server-subscriptions-onboarding': r.Z,
-        'server-subscriptions-finish-setting-up': d.Z,
-        'server-subscriptions-create-tier-from-template': s.Z
+        'server-subscriptions-onboarding': u.Z,
+        'server-subscriptions-finish-setting-up': s.Z,
+        'server-subscriptions-create-tier-from-template': r.Z
     },
     c = {
-        title: () => a.intl.string(a.t.V42OaG),
-        description: () => a.intl.string(a.t['7dJ16e']),
-        selectGuildCta: () => a.intl.string(a.t.LhlgY2),
-        createGuildDescription: () => a.intl.string(a.t.anOis7),
-        createGuildCta: () => a.intl.string(a.t.B44MTk),
+        title: () => d.NW.string(d.t.V42OaG),
+        description: () => d.NW.string(d.t['7dJ16e']),
+        selectGuildCta: () => d.NW.string(d.t.LhlgY2),
+        createGuildDescription: () => d.NW.string(d.t.anOis7),
+        createGuildCta: () => d.NW.string(d.t.B44MTk),
         canCreateGuild: !0,
-        useIsGuildSupported: () => (0, l.e7)([u.Z], () => (e) => u.Z.canAccessGuildSettings(e), [], l.pF)
+        useIsGuildSupported: () => (0, l.e7)([a.Z], () => (e) => a.Z.canAccessGuildSettings(e), [], l.pF)
     };
 function p(e) {
-    var i;
-    let [t] = n.useState(null == e ? void 0 : o[e]),
+    var t;
+    let [i] = n.useState(null == e ? void 0 : o[e]),
         l = c.useIsGuildSupported(),
-        s = null == t ? void 0 : null === (i = t.useIsGuildSupported) || void 0 === i ? void 0 : i.call(t),
-        d = {
-            ...c,
-            ...(null != t ? t : {})
-        };
+        r = null == i ? void 0 : null === (t = i.useIsGuildSupported) || void 0 === t ? void 0 : t.call(i),
+        s = (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var i = null != arguments[t] ? arguments[t] : {},
+                    n = Object.keys(i);
+                'function' == typeof Object.getOwnPropertySymbols &&
+                    (n = n.concat(
+                        Object.getOwnPropertySymbols(i).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(i, e).enumerable;
+                        })
+                    )),
+                    n.forEach(function (t) {
+                        var n;
+                        (n = i[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: n,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0
+                                  })
+                                : (e[t] = n);
+                    });
+            }
+            return e;
+        })({}, c, null != i ? i : {});
     return {
-        title: d.title(),
-        description: d.description(),
-        selectGuildCta: d.selectGuildCta(),
-        createGuildDescription: d.createGuildDescription(),
-        createGuildCta: d.createGuildCta(),
-        canCreateGuild: d.canCreateGuild,
-        isGuildSupported: (e, i) => l(e, i) && (null == s ? void 0 : s(e, i)) !== !1
+        title: s.title(),
+        description: s.description(),
+        selectGuildCta: s.selectGuildCta(),
+        createGuildDescription: s.createGuildDescription(),
+        createGuildCta: s.createGuildCta(),
+        canCreateGuild: s.canCreateGuild,
+        isGuildSupported: (e, t) => l(e, t) && (null == r ? void 0 : r(e, t)) !== !1
     };
 }

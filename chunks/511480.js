@@ -1,44 +1,45 @@
 n.d(t, {
-    Z: () => G,
-    s: () => M
+    Z: () => B,
+    s: () => U
 }),
+    n(266796),
     n(47120),
     n(653041);
-var i = n(200651),
-    r = n(192379),
-    l = n(442837),
-    s = n(481060),
-    a = n(852860),
+var r = n(200651),
+    i = n(192379),
+    s = n(442837),
+    a = n(481060),
+    l = n(852860),
     o = n(558324),
     c = n(933557),
     d = n(456268),
     u = n(134432),
     m = n(813197),
-    h = n(208567),
+    p = n(208567),
     g = n(984933),
-    x = n(496675),
-    p = n(699516),
-    _ = n(594174),
-    C = n(768581),
-    f = n(900849),
-    v = n(434404),
-    N = n(999382),
-    j = n(718157),
-    I = n(450474),
-    E = n(209054),
-    b = n(118215),
-    T = n(166184),
-    S = n(96788),
-    R = n(936735),
-    Z = n(654351),
-    y = n(354051),
-    A = n(347604),
-    L = n(203377),
+    h = n(496675),
+    f = n(699516),
+    b = n(594174),
+    x = n(768581),
+    j = n(900849),
+    N = n(434404),
+    v = n(999382),
+    _ = n(718157),
+    O = n(450474),
+    y = n(209054),
+    C = n(118215),
+    I = n(166184),
+    E = n(96788),
+    S = n(936735),
+    T = n(654351),
+    P = n(354051),
+    w = n(347604),
+    R = n(203377),
     D = n(929834),
-    O = n(981631),
-    k = n(388032),
-    P = n(543389);
-function w(e, t, n) {
+    Z = n(981631),
+    A = n(388032),
+    k = n(529988);
+function W(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -51,18 +52,45 @@ function w(e, t, n) {
         e
     );
 }
-let M = l.ZP.connectStores([N.Z], () => {
-    let { guild: e, originalGuild: t, submitting: n, guildMetadata: i } = N.Z.getProps();
+function L() {
+    return (L =
+        Object.assign ||
+        function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
+            }
+            return e;
+        }).apply(this, arguments);
+}
+function M(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                W(e, t, n[t]);
+            });
+    }
+    return e;
+}
+let U = s.ZP.connectStores([v.Z], () => {
+    let { guild: e, originalGuild: t, submitting: n, guildMetadata: r } = v.Z.getProps();
     return {
         guild: e,
         submitting: n,
         onReset() {
-            null != e && v.Z.init(e.id);
+            null != e && N.Z.init(e.id);
         },
         onSave() {
             null != e &&
-                ((0, Z.UA)(e, t),
-                v.Z.saveGuild(e.id, {
+                ((0, T.UA)(e, t),
+                N.Z.saveGuild(e.id, {
                     features: e.features,
                     discoverySplash: e.discoverySplash,
                     description: e.description,
@@ -72,71 +100,91 @@ let M = l.ZP.connectStores([N.Z], () => {
                 }),
                 (0, d.Vv)({
                     guildId: e.id,
-                    primaryCategoryId: i.primaryCategoryId,
-                    keywords: i.keywords,
-                    emojiDiscoverabilityEnabled: i.emojiDiscoverabilityEnabled,
-                    partnerActionedTimestamp: i.partnerActionedTimestamp,
-                    partnerApplicationTimestamp: i.partnerApplicationTimestamp,
-                    isPublished: i.isPublished,
-                    reasonsToJoin: i.reasonsToJoin,
-                    socialLinks: i.socialLinks,
-                    about: i.about
+                    primaryCategoryId: r.primaryCategoryId,
+                    keywords: r.keywords,
+                    emojiDiscoverabilityEnabled: r.emojiDiscoverabilityEnabled,
+                    partnerActionedTimestamp: r.partnerActionedTimestamp,
+                    partnerApplicationTimestamp: r.partnerApplicationTimestamp,
+                    isPublished: r.isPublished,
+                    reasonsToJoin: r.reasonsToJoin,
+                    socialLinks: r.socialLinks,
+                    about: r.about
                 }));
         }
     };
-})(a.Z);
-class U extends r.PureComponent {
+})(l.Z);
+class G extends i.PureComponent {
     async componentDidMount() {
         let { guild: e } = this.props;
         if (null != e) {
-            (0, E.k)(e.id).then(() => {
-                (0, S.V)(e.id);
+            (0, y.k)(e.id).then(() => {
+                (0, E.V)(e.id);
             }),
                 (0, d.le)(),
                 (0, d.aC)(e.id);
-            let t = await (0, f.Eg)(e.id);
+            let t = await (0, j.Eg)(e.id);
             null != t && this.setState({ discoverableGuild: t });
         }
     }
     renderDiscoverableSection() {
         let { guild: e, isGuildAdmin: t } = this.props;
         if (null == e) return;
-        let n = e.hasFeature(O.oNc.DISCOVERABLE);
-        return (0, i.jsxs)(s.hjN, {
-            className: P.twoColumnFormSection,
+        let n = e.hasFeature(Z.oNc.DISCOVERABLE);
+        return (0, r.jsxs)(a.hjN, {
+            className: k.twoColumnFormSection,
             children: [
-                (0, i.jsxs)('div', {
+                (0, r.jsxs)('div', {
                     children: [
-                        (0, i.jsx)(s.vwX, {
-                            className: P.formTitle,
-                            children: k.intl.string(k.t.XU0S6u)
+                        (0, r.jsx)(a.vwX, {
+                            className: k.formTitle,
+                            children: A.NW.string(A.t.XU0S6u)
                         }),
-                        (0, i.jsx)(s.R94, {
-                            type: s.geA.DESCRIPTION,
-                            className: P.formDescription,
-                            children: k.intl.string(k.t['IIiV/P'])
+                        (0, r.jsx)(a.R94, {
+                            type: a.geA.DESCRIPTION,
+                            className: k.formDescription,
+                            children: A.NW.string(A.t['IIiV/P'])
                         }),
-                        (0, i.jsx)(s.R94, {
-                            type: s.geA.DESCRIPTION,
-                            className: P.formDescription,
-                            children: k.intl.string(k.t.rSHA09)
+                        (0, r.jsx)(a.R94, {
+                            type: a.geA.DESCRIPTION,
+                            className: k.formDescription,
+                            children: A.NW.string(A.t.rSHA09)
                         }),
-                        (0, i.jsx)(s.ua7, {
-                            text: t ? null : k.intl.string(k.t['5VbUBw']),
-                            children: (e) =>
-                                (0, i.jsx)(s.zxk, {
-                                    size: s.zxk.Sizes.SMALL,
-                                    onClick: this.handleToggleDiscovery,
-                                    color: n ? s.zxk.Colors.PRIMARY : s.zxk.Colors.GREEN,
-                                    disabled: !t,
-                                    ...e,
-                                    children: n ? k.intl.string(k.t.VHHyFR) : k.intl.string(k.t.XU0S6u)
-                                })
+                        (0, r.jsx)(a.ua7, {
+                            text: t ? null : A.NW.string(A.t['5VbUBw']),
+                            children: (e) => {
+                                var i, s;
+                                return (0, r.jsx)(
+                                    a.zxk,
+                                    ((i = M(
+                                        {
+                                            size: a.zxk.Sizes.SMALL,
+                                            onClick: this.handleToggleDiscovery,
+                                            color: n ? a.zxk.Colors.PRIMARY : a.zxk.Colors.GREEN,
+                                            disabled: !t
+                                        },
+                                        e
+                                    )),
+                                    (s = s = { children: n ? A.NW.string(A.t.VHHyFR) : A.NW.string(A.t.XU0S6u) }),
+                                    Object.getOwnPropertyDescriptors
+                                        ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(s))
+                                        : (function (e, t) {
+                                              var n = Object.keys(e);
+                                              if (Object.getOwnPropertySymbols) {
+                                                  var r = Object.getOwnPropertySymbols(e);
+                                                  n.push.apply(n, r);
+                                              }
+                                              return n;
+                                          })(Object(s)).forEach(function (e) {
+                                              Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(s, e));
+                                          }),
+                                    i)
+                                );
+                            }
                         })
                     ]
                 }),
-                (0, i.jsx)(T.Z, {
-                    className: P.guildCard,
+                (0, r.jsx)(I.Z, {
+                    className: k.guildCard,
                     loading: null == e,
                     guild: e
                 })
@@ -146,28 +194,28 @@ class U extends r.PureComponent {
     renderCoverImageSection() {
         let { guild: e, errors: t, canManageGuild: n } = this.props;
         if (null != e)
-            return (0, i.jsxs)(i.Fragment, {
+            return (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, i.jsxs)(s.hjN, {
-                        className: P.twoColumnFormSection,
+                    (0, r.jsxs)(a.hjN, {
+                        className: k.twoColumnFormSection,
                         children: [
-                            (0, i.jsxs)('div', {
+                            (0, r.jsxs)('div', {
                                 children: [
-                                    (0, i.jsx)(s.vwX, {
-                                        className: P.formTitle,
-                                        children: k.intl.string(k.t['8bT/Cg'])
+                                    (0, r.jsx)(a.vwX, {
+                                        className: k.formTitle,
+                                        children: A.NW.string(A.t['8bT/Cg'])
                                     }),
-                                    (0, i.jsx)(s.R94, {
-                                        type: s.geA.DESCRIPTION,
-                                        className: P.formDescription,
-                                        children: k.intl.string(k.t.Ltsutr)
+                                    (0, r.jsx)(a.R94, {
+                                        type: a.geA.DESCRIPTION,
+                                        className: k.formDescription,
+                                        children: A.NW.string(A.t.Ltsutr)
                                     }),
-                                    (0, i.jsxs)(s.zxk, {
-                                        size: s.zxk.Sizes.SMALL,
-                                        color: s.zxk.Colors.PRIMARY,
+                                    (0, r.jsxs)(a.zxk, {
+                                        size: a.zxk.Sizes.SMALL,
+                                        color: a.zxk.Colors.PRIMARY,
                                         children: [
-                                            k.intl.string(k.t.yG2pUl),
-                                            (0, i.jsx)(m.ZP, {
+                                            A.NW.string(A.t.yG2pUl),
+                                            (0, r.jsx)(m.ZP, {
                                                 disabled: !n,
                                                 onChange: this.handleSplashChange
                                             })
@@ -175,27 +223,27 @@ class U extends r.PureComponent {
                                     })
                                 ]
                             }),
-                            (0, i.jsx)('div', {
-                                className: P.imageUploaderWrapper,
-                                children: (0, i.jsx)(h.Z, {
+                            (0, r.jsx)('div', {
+                                className: k.imageUploaderWrapper,
+                                children: (0, r.jsx)(p.Z, {
                                     image: e.discoverySplash,
                                     makeURL: (t) =>
-                                        C.ZP.getGuildDiscoverySplashURL({
+                                        x.ZP.getGuildDiscoverySplashURL({
                                             id: e.id,
                                             splash: t,
                                             size: 512 * (0, u.x_)()
                                         }),
                                     disabled: !n,
                                     onChange: this.handleSplashChange,
-                                    hint: k.intl.string(k.t.uPvxqK),
-                                    imageClassName: P.imageUploaderInnerSquare,
+                                    hint: A.NW.string(A.t.uPvxqK),
+                                    imageClassName: k.imageUploaderInnerSquare,
                                     hideSize: !0
                                 })
                             })
                         ]
                     }),
                     (null == t ? void 0 : t.discovery_splash) != null
-                        ? (0, i.jsx)(s.Text, {
+                        ? (0, r.jsx)(a.Text, {
                               color: 'text-danger',
                               variant: 'text-sm/normal',
                               children: t.discovery_splash
@@ -206,35 +254,35 @@ class U extends r.PureComponent {
     }
     renderEmojiDiscoverabilitySection() {
         let { canManageGuild: e, guildMetadata: t, guild: n } = this.props,
-            { discoverableGuild: r } = this.state,
-            { emojiDiscoverabilityEnabled: l } = t;
-        return (0, i.jsxs)(s.hjN, {
-            className: P.twoColumnFormSection,
+            { discoverableGuild: i } = this.state,
+            { emojiDiscoverabilityEnabled: s } = t;
+        return (0, r.jsxs)(a.hjN, {
+            className: k.twoColumnFormSection,
             children: [
-                (0, i.jsxs)('div', {
-                    className: P.formColumnLeft,
+                (0, r.jsxs)('div', {
+                    className: k.formColumnLeft,
                     children: [
-                        (0, i.jsx)(s.vwX, {
-                            className: P.formTitle,
-                            children: k.intl.string(k.t.DhJ8ur)
+                        (0, r.jsx)(a.vwX, {
+                            className: k.formTitle,
+                            children: A.NW.string(A.t.DhJ8ur)
                         }),
-                        (0, i.jsx)(s.R94, {
-                            className: P.description,
-                            type: s.geA.DESCRIPTION,
-                            children: k.intl.string(k.t['/RSSlZ'])
+                        (0, r.jsx)(a.R94, {
+                            className: k.description,
+                            type: a.geA.DESCRIPTION,
+                            children: A.NW.string(A.t['/RSSlZ'])
                         }),
-                        (0, i.jsx)(s.zxk, {
-                            size: s.zxk.Sizes.SMALL,
-                            color: l ? s.zxk.Colors.PRIMARY : s.zxk.Colors.GREEN,
+                        (0, r.jsx)(a.zxk, {
+                            size: a.zxk.Sizes.SMALL,
+                            color: s ? a.zxk.Colors.PRIMARY : a.zxk.Colors.GREEN,
                             disabled: !e,
                             onClick: this.handleToggleEmojiDiscoverability,
-                            children: l ? k.intl.string(k.t.XnrNLi) : k.intl.string(k.t.bHbZLC)
+                            children: s ? A.NW.string(A.t.XnrNLi) : A.NW.string(A.t.bHbZLC)
                         })
                     ]
                 }),
-                (0, i.jsx)(R.k, {
+                (0, r.jsx)(S.k, {
                     guild: n,
-                    discoverableGuild: r
+                    discoverableGuild: i
                 })
             ]
         });
@@ -242,25 +290,25 @@ class U extends r.PureComponent {
     renderLocaleSelector() {
         let { guild: e, canManageGuild: t, localeOptions: n } = this.props;
         if (null != e)
-            return (0, i.jsxs)(s.hjN, {
-                className: P.twoColumnFormSection,
+            return (0, r.jsxs)(a.hjN, {
+                className: k.twoColumnFormSection,
                 children: [
-                    (0, i.jsxs)('div', {
+                    (0, r.jsxs)('div', {
                         children: [
-                            (0, i.jsx)(s.vwX, {
-                                className: P.formTitle,
-                                children: k.intl.string(k.t.pO60f3)
+                            (0, r.jsx)(a.vwX, {
+                                className: k.formTitle,
+                                children: A.NW.string(A.t.pO60f3)
                             }),
-                            (0, i.jsx)(s.R94, {
-                                type: s.geA.DESCRIPTION,
-                                className: P.formDescription,
-                                children: k.intl.string(k.t['SF/GRk'])
+                            (0, r.jsx)(a.R94, {
+                                type: a.geA.DESCRIPTION,
+                                className: k.formDescription,
+                                children: A.NW.string(A.t['SF/GRk'])
                             })
                         ]
                     }),
-                    (0, i.jsx)('div', {
-                        className: P.formSelect,
-                        children: (0, i.jsx)(s.q4e, {
+                    (0, r.jsx)('div', {
+                        className: k.formSelect,
+                        children: (0, r.jsx)(a.q4e, {
                             value: e.preferredLocale,
                             options: n,
                             onChange: this.handleLocaleChange,
@@ -271,45 +319,45 @@ class U extends r.PureComponent {
             });
     }
     renderCategoriesSection() {
-        let { canManageGuild: e, guildMetadata: t, errors: n, guild: r } = this.props;
-        if (null != r)
-            return (0, i.jsxs)(i.Fragment, {
+        let { canManageGuild: e, guildMetadata: t, errors: n, guild: i } = this.props;
+        if (null != i)
+            return (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, i.jsxs)(s.hjN, {
+                    (0, r.jsxs)(a.hjN, {
                         children: [
-                            (0, i.jsx)(s.vwX, {
-                                className: P.formTitle,
-                                children: k.intl.string(k.t['5b4VCQ'])
+                            (0, r.jsx)(a.vwX, {
+                                className: k.formTitle,
+                                children: A.NW.string(A.t['5b4VCQ'])
                             }),
-                            (0, i.jsx)(s.R94, {
-                                type: s.geA.DESCRIPTION,
-                                className: P.description,
-                                children: k.intl.string(k.t.MSfJlZ)
+                            (0, r.jsx)(a.R94, {
+                                type: a.geA.DESCRIPTION,
+                                className: k.description,
+                                children: A.NW.string(A.t.MSfJlZ)
                             })
                         ]
                     }),
-                    (0, i.jsx)(j.E, {
-                        guildId: r.id,
+                    (0, r.jsx)(_.E, {
+                        guildId: i.id,
                         guildMetadata: t,
                         isDisabled: !e
                     }),
-                    (0, i.jsxs)(s.hjN, {
-                        className: P.noDividerFormSection,
+                    (0, r.jsxs)(a.hjN, {
+                        className: k.noDividerFormSection,
                         children: [
-                            (0, i.jsx)(s.vwX, {
-                                className: P.formTitle,
-                                children: k.intl.string(k.t.oOPlPD)
+                            (0, r.jsx)(a.vwX, {
+                                className: k.formTitle,
+                                children: A.NW.string(A.t.oOPlPD)
                             }),
-                            (0, i.jsx)(I.Z, {
-                                guild: r,
+                            (0, r.jsx)(O.Z, {
+                                guild: i,
                                 guildMetadata: t
                             })
                         ]
                     }),
                     (null == n ? void 0 : n.category) != null
-                        ? (0, i.jsx)(s.Text, {
+                        ? (0, r.jsx)(a.Text, {
                               color: 'text-danger',
-                              className: P.error,
+                              className: k.error,
                               variant: 'text-sm/normal',
                               children: n.category
                           })
@@ -319,29 +367,29 @@ class U extends r.PureComponent {
     }
     renderKeywordsSection() {
         let { canManageGuild: e, guildMetadata: t, errors: n } = this.props;
-        return (0, i.jsxs)(s.hjN, {
+        return (0, r.jsxs)(a.hjN, {
             children: [
-                (0, i.jsx)(s.vwX, {
-                    className: P.formTitle,
-                    children: k.intl.string(k.t.V5pXNT)
+                (0, r.jsx)(a.vwX, {
+                    className: k.formTitle,
+                    children: A.NW.string(A.t.V5pXNT)
                 }),
-                (0, i.jsx)(s.R94, {
-                    className: P.description,
-                    type: s.geA.DESCRIPTION,
-                    children: k.intl.format(k.t.FLMb5O, {})
+                (0, r.jsx)(a.R94, {
+                    className: k.description,
+                    type: a.geA.DESCRIPTION,
+                    children: A.NW.format(A.t.FLMb5O, {})
                 }),
-                (0, i.jsx)(o.Z, {
+                (0, r.jsx)(o.Z, {
                     tags: t.keywords,
                     onRemoveTag: this.handleRemoveKeyword,
                     onAddTag: this.handleAddKeyword,
-                    maxTags: L.G7,
-                    maxTaxLength: L._0,
+                    maxTags: R.G7,
+                    maxTaxLength: R._0,
                     disabled: !e
                 }),
                 (null == n ? void 0 : n.keywords) != null
-                    ? (0, i.jsx)(s.Text, {
+                    ? (0, r.jsx)(a.Text, {
                           color: 'text-danger',
-                          className: P.error,
+                          className: k.error,
                           variant: 'text-sm/normal',
                           children: n.keywords
                       })
@@ -352,21 +400,21 @@ class U extends r.PureComponent {
     render() {
         let { guild: e, discoveryChecklist: t, isGuildAdmin: n } = this.props;
         if (null == e || null == t) return null;
-        switch ((0, Z.TJ)(e, t)) {
-            case Z.d5.INTRO:
-                return (0, i.jsx)(A.Z, {
+        switch ((0, T.TJ)(e, t)) {
+            case T.d5.INTRO:
+                return (0, r.jsx)(w.Z, {
                     guild: e,
                     onEnableDiscovery: this.handleEnableDiscovery,
                     isGuildAdmin: n
                 });
-            case Z.d5.DISQUALIFIED:
-                return (0, i.jsx)(y.Z, { guild: e });
-            case Z.d5.SETTINGS:
-                return (0, i.jsxs)(s.hjN, {
-                    className: P.__invalid_discoverySettings,
-                    title: k.intl.string(k.t.oGaVGx),
-                    tag: s.RB0.H1,
-                    children: [this.renderDiscoverableSection(), (0, i.jsx)(s.$i$, { className: P.divider }), this.renderCoverImageSection(), (0, i.jsx)(s.$i$, { className: P.divider }), this.renderEmojiDiscoverabilitySection(), (0, i.jsx)(s.$i$, { className: P.divider }), this.renderCategoriesSection(), (0, i.jsx)(s.$i$, { className: P.divider }), this.renderKeywordsSection(), (0, i.jsx)(s.$i$, { className: P.divider }), this.renderLocaleSelector()]
+            case T.d5.DISQUALIFIED:
+                return (0, r.jsx)(P.Z, { guild: e });
+            case T.d5.SETTINGS:
+                return (0, r.jsxs)(a.hjN, {
+                    className: k.__invalid_discoverySettings,
+                    title: A.NW.string(A.t.oGaVGx),
+                    tag: a.RB0.H1,
+                    children: [this.renderDiscoverableSection(), (0, r.jsx)(a.$i$, { className: k.divider }), this.renderCoverImageSection(), (0, r.jsx)(a.$i$, { className: k.divider }), this.renderEmojiDiscoverabilitySection(), (0, r.jsx)(a.$i$, { className: k.divider }), this.renderCategoriesSection(), (0, r.jsx)(a.$i$, { className: k.divider }), this.renderKeywordsSection(), (0, r.jsx)(a.$i$, { className: k.divider }), this.renderLocaleSelector()]
                 });
             default:
                 return null;
@@ -374,80 +422,86 @@ class U extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            w(this, 'state', { discoverableGuild: null }),
-            w(this, 'handleToggleDiscovery', () => {
+            W(this, 'state', { discoverableGuild: null }),
+            W(this, 'handleToggleDiscovery', () => {
                 let { guild: e } = this.props;
                 if (null == e) return;
                 let t = new Set(e.features);
-                e.hasFeature(O.oNc.DISCOVERABLE) ? t.delete(O.oNc.DISCOVERABLE) : t.add(O.oNc.DISCOVERABLE), v.Z.updateGuild({ features: t });
+                e.hasFeature(Z.oNc.DISCOVERABLE) ? t.delete(Z.oNc.DISCOVERABLE) : t.add(Z.oNc.DISCOVERABLE), N.Z.updateGuild({ features: t });
             }),
-            w(this, 'handleEnableDiscovery', async () => {
-                let e = await (0, s.ZDy)(
+            W(this, 'handleEnableDiscovery', async () => {
+                let e = await (0, a.ZDy)(
                     async () => {
                         let { default: e } = await n.e('50721').then(n.bind(n, 210172));
                         return (t) => {
-                            let { ...n } = t;
-                            return (0, i.jsx)(e, { ...n });
+                            var n = L(
+                                {},
+                                (function (e) {
+                                    if (null == e) throw TypeError('Cannot destructure ' + e);
+                                    return e;
+                                })(t)
+                            );
+                            return (0, r.jsx)(e, M({}, n));
                         };
                     },
                     {
                         onCloseRequest: () => {
-                            null != e && (0, s.Mr3)(e);
+                            null != e && (0, a.Mr3)(e);
                         }
                     }
                 );
             }),
-            w(this, 'handleSplashChange', (e) => {
-                v.Z.updateGuild({ discoverySplash: e });
+            W(this, 'handleSplashChange', (e) => {
+                N.Z.updateGuild({ discoverySplash: e });
             }),
-            w(this, 'handleLocaleChange', (e) => {
-                v.Z.updateGuild({ preferredLocale: e });
+            W(this, 'handleLocaleChange', (e) => {
+                N.Z.updateGuild({ preferredLocale: e });
             }),
-            w(this, 'handleRemoveKeyword', (e) => {
+            W(this, 'handleRemoveKeyword', (e) => {
                 let { guild: t, guildMetadata: n } = this.props;
                 if ((null == t ? void 0 : t.id) == null) return;
-                let i = [...n.keywords];
-                i.splice(e, 1), (0, d.zH)(t.id, i);
+                let r = [...n.keywords];
+                r.splice(e, 1), (0, d.zH)(t.id, r);
             }),
-            w(this, 'handleAddKeyword', (e) => {
+            W(this, 'handleAddKeyword', (e) => {
                 let { guild: t, guildMetadata: n } = this.props,
-                    { keywords: i } = n;
-                (null == t ? void 0 : t.id) != null && (i.length >= L.G7 || (0, d.zH)(t.id, [...i, e]));
+                    { keywords: r } = n;
+                (null == t ? void 0 : t.id) != null && (r.length >= R.G7 || (0, d.zH)(t.id, [...r, e]));
             }),
-            w(this, 'handleToggleEmojiDiscoverability', () => {
+            W(this, 'handleToggleEmojiDiscoverability', () => {
                 let { guild: e, guildMetadata: t } = this.props,
                     { emojiDiscoverabilityEnabled: n } = t;
                 (null == e ? void 0 : e.id) != null && (0, d.J9)(e.id, !n);
             });
     }
 }
-let G = l.ZP.connectStores([N.Z, x.Z, b.ZP, g.ZP, _.default, p.Z], () => {
-    let { guild: e, errors: t, submitting: n, guildMetadata: i } = N.Z.getProps(),
-        r = x.Z.can(O.Plq.MANAGE_GUILD, e),
-        l = x.Z.can(O.Plq.ADMINISTRATOR, e),
-        s = null != e ? b.ZP.getDiscoveryChecklist(e.id) : null,
-        a = null != e ? g.ZP.getChannels(e.id) : null,
+let B = s.ZP.connectStores([v.Z, h.Z, C.ZP, g.ZP, b.default, f.Z], () => {
+    let { guild: e, errors: t, submitting: n, guildMetadata: r } = v.Z.getProps(),
+        i = h.Z.can(Z.Plq.MANAGE_GUILD, e),
+        s = h.Z.can(Z.Plq.ADMINISTRATOR, e),
+        a = null != e ? C.ZP.getDiscoveryChecklist(e.id) : null,
+        l = null != e ? g.ZP.getChannels(e.id) : null,
         o = [];
     return (
-        null != a &&
-            a[g.sH].forEach((e) => {
+        null != l &&
+            l[g.sH].forEach((e) => {
                 let { channel: t } = e;
-                t.type === O.d4z.GUILD_TEXT &&
+                t.type === Z.d4z.GUILD_TEXT &&
                     o.push({
                         value: t.id,
-                        label: (0, c.F6)(t, _.default, p.Z, !0)
+                        label: (0, c.F6)(t, b.default, f.Z, !0)
                     });
             }),
         {
             guild: e,
             errors: t,
             submitting: n,
-            discoveryChecklist: s,
+            discoveryChecklist: a,
             selectableChannels: o,
-            canManageGuild: r,
-            isGuildAdmin: l,
-            guildMetadata: i,
+            canManageGuild: i,
+            isGuildAdmin: s,
+            guildMetadata: r,
             localeOptions: (0, D.jb)()
         }
     );
-})(U);
+})(G);

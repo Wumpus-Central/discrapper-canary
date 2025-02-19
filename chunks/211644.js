@@ -1,21 +1,73 @@
 n.d(t, {
-    Aq: () => A,
-    ZP: () => C,
-    bn: () => S,
-    cI: () => b,
-    f0: () => I,
-    gE: () => T,
-    mc: () => N
+    Aq: () => R,
+    ZP: () => w,
+    bn: () => C,
+    cI: () => A,
+    f0: () => T,
+    gE: () => N,
+    mc: () => P
 }),
     n(47120),
     n(733860);
-var i = n(65400),
-    r = n(731965),
-    a = n(261376);
-let s = new (n(499303).I)(),
-    o = 300000,
-    l = 3600000,
-    u = () => ({
+var r = n(65400),
+    i = n(731965),
+    o = n(261376);
+function a(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function s(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                a(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function l(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function c(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : l(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let u = new (n(499303).I)(),
+    d = 300000,
+    f = 3600000,
+    p = () => ({
         candidates: new Map(),
         shownFatigableCandidate: null,
         prevFatigableCandidate: null,
@@ -24,29 +76,29 @@ let s = new (n(499303).I)(),
         currentlyShownGroup: new Set(),
         lastWinnerTime: 0
     }),
-    c = (0, i.F)(u),
-    d = (e) => ({
-        ...e,
-        candidates: new Map(e.candidates),
-        currentlyShown: new Set(e.currentlyShown),
-        currentlyShownGroup: new Set(e.currentlyShownGroup)
-    }),
-    f = (e, t) => {
+    _ = (0, r.F)(p),
+    h = (e) =>
+        c(s({}, e), {
+            candidates: new Map(e.candidates),
+            currentlyShown: new Set(e.currentlyShown),
+            currentlyShownGroup: new Set(e.currentlyShownGroup)
+        }),
+    m = (e, t) => {
         var n;
         return null == t || (null != t.content && e.currentlyShown.delete(t.content), null != t.groupName && e.currentlyShownGroup.delete(t.groupName), (null === (n = e.shownFatigableCandidate) || void 0 === n ? void 0 : n.content) === t.content && (e.shownFatigableCandidate = null)), e;
     },
-    _ = (e, t) => {
-        var n, i;
+    g = (e, t) => {
+        var n, r;
         if (null == t) return e;
         e.currentlyShown.add(t.content);
-        let r = e.recentlyShown.filter((e) => e !== t.content);
-        return r.unshift(t.content), r.splice(5), (e.recentlyShown = r), null != t.groupName && e.currentlyShownGroup.add(t.groupName), a.O.has(t.content) || ((e.shownFatigableCandidate = t), (null === (i = e.prevFatigableCandidate) || void 0 === i ? void 0 : i.content) !== t.content && ((e.prevFatigableCandidate = t), (e.lastWinnerTime = new Date().getTime()))), null === (n = t.onAdded) || void 0 === n || n.call(t), e;
+        let i = e.recentlyShown.filter((e) => e !== t.content);
+        return i.unshift(t.content), i.splice(5), (e.recentlyShown = i), null != t.groupName && e.currentlyShownGroup.add(t.groupName), o.O.has(t.content) || ((e.shownFatigableCandidate = t), (null === (r = e.prevFatigableCandidate) || void 0 === r ? void 0 : r.content) !== t.content && ((e.prevFatigableCandidate = t), (e.lastWinnerTime = new Date().getTime()))), null === (n = t.onAdded) || void 0 === n || n.call(t), e;
     },
-    p = (e, t) => (e.candidates.set(t.content, t), e),
-    h = (e, t) => (e.candidates.delete(t.content), e),
-    m = (e, t) => _(f(e, e.shownFatigableCandidate), t),
-    g = (e) => (null != e.prevFatigableCandidate ? e.candidates.get(e.prevFatigableCandidate.content) : void 0),
-    E = (e) => {
+    E = (e, t) => (e.candidates.set(t.content, t), e),
+    v = (e, t) => (e.candidates.delete(t.content), e),
+    b = (e, t) => g(m(e, e.shownFatigableCandidate), t),
+    y = (e) => (null != e.prevFatigableCandidate ? e.candidates.get(e.prevFatigableCandidate.content) : void 0),
+    O = (e) => {
         let t = [...e.candidates.keys()];
         return (
             null !== e.prevFatigableCandidate &&
@@ -59,52 +111,52 @@ let s = new (n(499303).I)(),
             e.candidates.get(t[Math.floor(Math.random() * t.length)])
         );
     },
-    v = (e) => null != e.prevFatigableCandidate && e.candidates.has(e.prevFatigableCandidate.content) && null == e.shownFatigableCandidate,
-    y = (e) => {
+    S = (e) => null != e.prevFatigableCandidate && e.candidates.has(e.prevFatigableCandidate.content) && null == e.shownFatigableCandidate,
+    I = (e) => {
         if (0 === e.candidates.size) return e;
-        let t = new Date().getTime() - e.lastWinnerTime > o;
-        if (v(e) && !t) return s.unschedule(), m(e, g(e));
-        if ((null != e.shownFatigableCandidate && !t) || s.scheduled()) return e;
+        let t = new Date().getTime() - e.lastWinnerTime > d;
+        if (S(e) && !t) return u.unschedule(), b(e, y(e));
+        if ((null != e.shownFatigableCandidate && !t) || u.scheduled()) return e;
         let n = new Date().getTime();
         return (
-            (null == e.shownFatigableCandidate && n - e.lastWinnerTime < l) ||
-                s.schedule(() => {
-                    (0, r.j)(() => {
-                        c.setState((e) => {
-                            let t = d(e);
-                            return m(t, E(t));
+            (null == e.shownFatigableCandidate && n - e.lastWinnerTime < f) ||
+                u.schedule(() => {
+                    (0, i.j)(() => {
+                        _.setState((e) => {
+                            let t = h(e);
+                            return b(t, O(t));
                         });
                     });
                 }, 250),
             e
         );
     },
-    I = (e) => {
-        let t = a.O.has(e.content);
-        (0, r.j)(() => {
-            c.setState((n) => {
-                let i = d(n);
-                return t ? _(i, e) : y(p(i, e));
+    T = (e) => {
+        let t = o.O.has(e.content);
+        (0, i.j)(() => {
+            _.setState((n) => {
+                let r = h(n);
+                return t ? g(r, e) : I(E(r, e));
             });
         });
     },
-    T = (e, t) => {
-        (0, r.j)(() => {
-            c.setState((n) => {
-                let i = d(n);
-                return t ? y(f(h(i, e), e)) : f(h(i, e), e);
+    N = (e, t) => {
+        (0, i.j)(() => {
+            _.setState((n) => {
+                let r = h(n);
+                return t ? I(m(v(r, e), e)) : m(v(r, e), e);
             });
         });
     },
-    b = (e) => c.getState().currentlyShown.has(e),
-    S = (e) => c((t) => t.currentlyShown.has(e)),
-    A = () => {
-        let e = [...c.getState().currentlyShown].filter((e) => !a.O.has(e)).length;
-        return [c.getState().currentlyShown.size, e];
+    A = (e) => _.getState().currentlyShown.has(e),
+    C = (e) => _((t) => t.currentlyShown.has(e)),
+    R = () => {
+        let e = [..._.getState().currentlyShown].filter((e) => !o.O.has(e)).length;
+        return [_.getState().currentlyShown.size, e];
     },
-    N = () => {
-        (0, r.j)(() => c.setState(u)), s.unschedule();
+    P = () => {
+        (0, i.j)(() => _.setState(p)), u.unschedule();
     };
-function C(e, t) {
-    return c(e, t);
+function w(e, t) {
+    return _(e, t);
 }

@@ -1,5 +1,5 @@
-let i;
-function r(e, t, n) {
+let r;
+function i(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -13,26 +13,27 @@ function r(e, t, n) {
     );
 }
 n.d(t, {
-    R: () => o,
+    R: () => s,
     y: () => l
-});
+}),
+    n(26686);
 try {
-    i = window.localStorage;
+    r = window.localStorage;
 } catch (e) {}
 try {
     delete window.localStorage;
 } catch (e) {}
-function a() {
+function o() {
     let e = 'test';
     try {
-        return i.setItem(e, e), i.removeItem(e), !0;
+        return r.setItem(e, e), r.removeItem(e), !0;
     } catch (e) {
         return !1;
     }
 }
-class s {
+class a {
     get(e, t) {
-        let n = i.getItem(e);
+        let n = r.getItem(e);
         if (null != n)
             try {
                 n = JSON.parse(n);
@@ -43,28 +44,28 @@ class s {
         return n;
     }
     set(e, t) {
-        i.setItem(e, JSON.stringify(t));
+        r.setItem(e, JSON.stringify(t));
     }
     remove(e) {
-        i.removeItem(e);
+        r.removeItem(e);
     }
     clear() {
-        i.clear();
+        r.clear();
     }
     stringify() {
-        return JSON.stringify(i || {});
+        return JSON.stringify(r || {});
     }
     asyncGetRaw(e, t) {
-        return Promise.resolve(i.getItem(e));
+        return Promise.resolve(r.getItem(e));
     }
     setRaw(e, t) {
-        i.setItem(e, t);
+        r.setItem(e, t);
     }
     getAfterRefresh(e) {
         return Promise.resolve(this.get(e));
     }
 }
-class o {
+class s {
     get(e, t) {
         return this.storage.hasOwnProperty(e) ? this.storage[e] : t;
     }
@@ -81,16 +82,16 @@ class o {
         return JSON.stringify(this.storage);
     }
     asyncGetRaw(e, t) {
-        return Promise.resolve(i.getItem(e));
+        return Promise.resolve(r.getItem(e));
     }
     setRaw(e, t) {
-        i.setItem(e, t);
+        r.setItem(e, t);
     }
     getAfterRefresh(e) {
         return Promise.resolve(this.get(e));
     }
     constructor() {
-        r(this, 'storage', void 0), (this.storage = {});
+        i(this, 'storage', void 0), (this.storage = {});
     }
 }
-let l = a() ? new s() : new o();
+let l = o() ? new a() : new s();

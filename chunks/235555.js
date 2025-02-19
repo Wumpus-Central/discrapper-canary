@@ -1,20 +1,20 @@
-n.d(t, { Z: () => C }), n(47120);
-var i = n(200651),
-    l = n(192379),
-    r = n(392711),
-    a = n.n(r),
-    s = n(442837),
-    o = n(239091),
-    d = n(476669),
-    c = n(524331),
-    u = n(768419),
-    h = n(831506),
-    m = n(699516),
-    p = n(594174),
-    g = n(823379),
-    _ = n(824138),
-    f = n(388032);
-function E(e, t, n) {
+n.d(t, { Z: () => O }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    l = n(392711),
+    o = n.n(l),
+    a = n(442837),
+    s = n(239091),
+    c = n(476669),
+    u = n(524331),
+    d = n(768419),
+    p = n(831506),
+    h = n(699516),
+    g = n(594174),
+    f = n(823379),
+    m = n(824138),
+    b = n(388032);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,17 +27,17 @@ function E(e, t, n) {
         e
     );
 }
-class I extends l.PureComponent {
+class E extends i.PureComponent {
     hasParty(e) {
         return e.length > 1;
     }
     handleStopListening() {
-        (0, c.Z)();
+        (0, u.Z)();
     }
     render() {
         let { currentUser: e, host: t, party: n } = this.props;
         return this.hasParty(n) && null != e
-            ? (0, i.jsx)(_.Z, {
+            ? (0, r.jsx)(m.Z, {
                   currentUser: e,
                   host: t,
                   party: n,
@@ -49,42 +49,73 @@ class I extends l.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            E(this, 'handleUserContextMenu', (e, t) => {
-                (0, o.jW)(e, async () => {
-                    let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('4616')]).then(n.bind(n, 881351));
-                    return (n) =>
-                        (0, i.jsx)(e, {
-                            ...n,
-                            user: t
-                        });
+            _(this, 'handleUserContextMenu', (e, t) => {
+                (0, s.jW)(e, async () => {
+                    let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('31923')]).then(n.bind(n, 881351));
+                    return (n) => {
+                        var i, l;
+                        return (0, r.jsx)(
+                            e,
+                            ((i = (function (e) {
+                                for (var t = 1; t < arguments.length; t++) {
+                                    var n = null != arguments[t] ? arguments[t] : {},
+                                        r = Object.keys(n);
+                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                        (r = r.concat(
+                                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                            })
+                                        )),
+                                        r.forEach(function (t) {
+                                            _(e, t, n[t]);
+                                        });
+                                }
+                                return e;
+                            })({}, n)),
+                            (l = l = { user: t }),
+                            Object.getOwnPropertyDescriptors
+                                ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
+                                : (function (e, t) {
+                                      var n = Object.keys(e);
+                                      if (Object.getOwnPropertySymbols) {
+                                          var r = Object.getOwnPropertySymbols(e);
+                                          n.push.apply(n, r);
+                                      }
+                                      return n;
+                                  })(Object(l)).forEach(function (e) {
+                                      Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
+                                  }),
+                            i)
+                        );
+                    };
                 });
             }),
-            E(this, 'renderOverflowPopout', () => {
+            _(this, 'renderOverflowPopout', () => {
                 let { party: e } = this.props;
-                return (0, i.jsx)(d.Z, {
+                return (0, r.jsx)(c.Z, {
                     party: e,
-                    header: f.intl.formatToPlainString(f.t.I9et19, { count: e.length })
+                    header: b.NW.formatToPlainString(b.t.I9et19, { count: e.length })
                 });
             });
     }
 }
-let C = s.ZP.connectStores([u.Z, p.default, m.Z, h.Z], () => {
+let O = a.ZP.connectStores([d.Z, g.default, h.Z, p.Z], () => {
     let e, t;
-    let n = u.Z.getSyncingWith(),
-        i = u.Z.getActivity(),
-        l = p.default.getCurrentUser(),
-        r = [];
-    if ((null != n ? ((e = p.default.getUser(n.userId)), (t = n.partyId)) : null != i && null != i.party && null != i.party.id && ((e = l), (t = i.party.id)), null != t)) {
-        var s;
-        r = a()(Array.from(null !== (s = h.Z.getParty(t)) && void 0 !== s ? s : []))
-            .map((e) => p.default.getUser(e))
-            .filter(g.lm)
-            .orderBy([(t) => null == e || e.id === t.id, (e) => m.Z.isFriend(e.id)], ['desc', 'desc'])
+    let n = d.Z.getSyncingWith(),
+        r = d.Z.getActivity(),
+        i = g.default.getCurrentUser(),
+        l = [];
+    if ((null != n ? ((e = g.default.getUser(n.userId)), (t = n.partyId)) : null != r && null != r.party && null != r.party.id && ((e = i), (t = r.party.id)), null != t)) {
+        var a;
+        l = o()(Array.from(null !== (a = p.Z.getParty(t)) && void 0 !== a ? a : []))
+            .map((e) => g.default.getUser(e))
+            .filter(f.lm)
+            .orderBy([(t) => null == e || e.id === t.id, (e) => h.Z.isFriend(e.id)], ['desc', 'desc'])
             .value();
     }
     return {
-        currentUser: l,
+        currentUser: i,
         host: e,
-        party: r
+        party: l
     };
-})(I);
+})(E);

@@ -1,54 +1,95 @@
-n.d(t, { Z: () => c });
-var r = n(200651);
-n(192379);
-var a = n(481060),
-    i = n(239091),
-    o = n(299206),
-    l = n(858042),
-    s = n(388032);
+r.d(t, { Z: () => c });
+var n = r(200651);
+r(192379);
+var a = r(481060),
+    o = r(239091),
+    i = r(299206),
+    s = r(858042),
+    l = r(388032);
 function c(e) {
-    let { applicationId: t, className: n, viewId: c } = e,
-        d = (0, o.Z)({
+    let { applicationId: t, className: r, viewId: c } = e,
+        u = (0, i.Z)({
             id: t,
-            label: s.intl.string(s.t['FfCL+/'])
+            label: l.NW.string(l.t['FfCL+/'])
         }),
-        u = (0, l.M)({
+        d = (0, s.M)({
             applicationId: t,
             viewId: c
         });
-    return null == d && null == u
+    return null == u && null == d
         ? null
-        : (0, r.jsx)(a.yRy, {
+        : (0, n.jsx)(a.yRy, {
               align: 'top',
               position: 'right',
               disablePointerEvents: !1,
               renderPopout: (e) => {
                   let { closePopout: t } = e;
-                  return (0, r.jsx)(a.v2r, {
+                  return (0, n.jsx)(a.v2r, {
                       navId: 'game-profile-context',
                       onClose: () => {
-                          (0, i.Zy)(), t();
+                          (0, o.Zy)(), t();
                       },
-                      'aria-label': s.intl.string(s.t.PNeFgY),
+                      'aria-label': l.NW.string(l.t.PNeFgY),
                       onSelect: () => {},
-                      children: (0, r.jsxs)(r.Fragment, {
-                          children: [(0, r.jsx)(a.kSQ, { children: d }), (0, r.jsx)(a.kSQ, { children: u })]
+                      children: (0, n.jsxs)(n.Fragment, {
+                          children: [(0, n.jsx)(a.kSQ, { children: u }), (0, n.jsx)(a.kSQ, { children: d })]
                       })
                   });
               },
               children: (e) =>
-                  (0, r.jsx)(a.ua7, {
-                      text: s.intl.string(s.t.UKOtz8),
-                      children: (t) =>
-                          (0, r.jsx)(a.P3F, {
-                              className: n,
-                              ...t,
-                              ...e,
-                              children: (0, r.jsx)(a.xhG, {
-                                  size: 'xs',
-                                  color: a.TVs.colors.WHITE
-                              })
-                          })
+                  (0, n.jsx)(a.ua7, {
+                      text: l.NW.string(l.t.UKOtz8),
+                      children: (t) => {
+                          var o, i;
+                          return (0, n.jsx)(
+                              a.P3F,
+                              ((o = (function (e) {
+                                  for (var t = 1; t < arguments.length; t++) {
+                                      var r = null != arguments[t] ? arguments[t] : {},
+                                          n = Object.keys(r);
+                                      'function' == typeof Object.getOwnPropertySymbols &&
+                                          (n = n.concat(
+                                              Object.getOwnPropertySymbols(r).filter(function (e) {
+                                                  return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                              })
+                                          )),
+                                          n.forEach(function (t) {
+                                              var n;
+                                              (n = r[t]),
+                                                  t in e
+                                                      ? Object.defineProperty(e, t, {
+                                                            value: n,
+                                                            enumerable: !0,
+                                                            configurable: !0,
+                                                            writable: !0
+                                                        })
+                                                      : (e[t] = n);
+                                          });
+                                  }
+                                  return e;
+                              })({ className: r }, t, e)),
+                              (i = i =
+                                  {
+                                      children: (0, n.jsx)(a.xhG, {
+                                          size: 'xs',
+                                          color: a.TVs.colors.WHITE
+                                      })
+                                  }),
+                              Object.getOwnPropertyDescriptors
+                                  ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(i))
+                                  : (function (e, t) {
+                                        var r = Object.keys(e);
+                                        if (Object.getOwnPropertySymbols) {
+                                            var n = Object.getOwnPropertySymbols(e);
+                                            r.push.apply(r, n);
+                                        }
+                                        return r;
+                                    })(Object(i)).forEach(function (e) {
+                                        Object.defineProperty(o, e, Object.getOwnPropertyDescriptor(i, e));
+                                    }),
+                              o)
+                          );
+                      }
                   })
           });
 }

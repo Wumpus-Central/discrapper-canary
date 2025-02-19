@@ -1,16 +1,17 @@
 n.d(t, {
-    Fi: () => d,
-    JO: () => f,
-    w6: () => c
+    Fi: () => _,
+    JO: () => h,
+    w6: () => p
 }),
+    n(266796),
     n(47120);
-var i = n(544891),
-    r = n(81825),
-    a = n(601964),
-    s = n(768581),
-    o = n(624138),
+var r = n(544891),
+    i = n(81825),
+    o = n(601964),
+    a = n(768581),
+    s = n(624138),
     l = n(981631);
-function u(e, t, n) {
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,14 +24,53 @@ function u(e, t, n) {
         e
     );
 }
-var c = (function (e) {
+function u(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                c(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function d(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function f(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : d(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+var p = (function (e) {
     return (e.GUILD = 'GUILD'), (e.APPLICATION = 'APPLICATION'), e;
 })({});
-let d = async (e) => {
+let _ = async (e) => {
     let t = null;
     try {
         let n = (
-            await i.tn.get({
+            await r.tn.get({
                 url: l.ANM.EMOJI_SOURCE_DATA(e),
                 oldFormErrors: !0,
                 timeout: 5000,
@@ -39,21 +79,21 @@ let d = async (e) => {
         ).body;
         (null == n ? void 0 : n.type) === 'GUILD'
             ? (t = {
-                  guild: f.createFromServer(n.guild),
+                  guild: h.createFromServer(n.guild),
                   type: n.type
               })
             : (null == n ? void 0 : n.type) === 'APPLICATION' &&
               (t = {
-                  application: _.createFromServer(n.application),
+                  application: m.createFromServer(n.application),
                   type: n.type
               });
-    } catch {}
+    } catch (e) {}
     return t;
 };
-class f extends r.Z {
+class h extends i.Z {
     getIconURL(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return s.ZP.getGuildIconURL({
+        return a.ZP.getGuildIconURL({
             id: this.id,
             size: e,
             icon: this.icon,
@@ -62,8 +102,8 @@ class f extends r.Z {
     }
     getIconSource(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return s.ZP.getAnimatableSourceWithFallback(t, (t) =>
-            s.ZP.getGuildIconSource({
+        return a.ZP.getAnimatableSourceWithFallback(t, (t) =>
+            a.ZP.getGuildIconSource({
                 id: this.id,
                 size: e,
                 icon: this.icon,
@@ -78,10 +118,10 @@ class f extends r.Z {
         return this.hasFeature(l.oNc.DISCOVERABLE);
     }
     get acronym() {
-        return (0, o.Zg)(this.name);
+        return (0, s.Zg)(this.name);
     }
     static async getGuildFromEmojiId(e) {
-        let t = await d(e);
+        let t = await _(e);
         return null != t && (null == t ? void 0 : t.type) === 'GUILD' ? t.guild : null;
     }
     static _mapCommon(e) {
@@ -95,50 +135,53 @@ class f extends r.Z {
         };
     }
     static createFromGuildRecord(e) {
-        return new f({
-            ...f._mapCommon(e),
-            premiumTier: e.premiumTier,
-            premiumSubscriberCount: e.premiumSubscriberCount,
-            presenceCount: null,
-            memberCount: null,
-            emojis: null
-        });
+        return new h(
+            f(u({}, h._mapCommon(e)), {
+                premiumTier: e.premiumTier,
+                premiumSubscriberCount: e.premiumSubscriberCount,
+                presenceCount: null,
+                memberCount: null,
+                emojis: null
+            })
+        );
     }
     static createFromDiscoverableGuild(e) {
-        return new f({
-            ...f._mapCommon(e),
-            premiumTier: null,
-            premiumSubscriberCount: e.premiumSubscriptionCount,
-            presenceCount: e.presenceCount,
-            memberCount: e.memberCount,
-            emojis: e.emojis
-        });
+        return new h(
+            f(u({}, h._mapCommon(e)), {
+                premiumTier: null,
+                premiumSubscriberCount: e.premiumSubscriptionCount,
+                presenceCount: e.presenceCount,
+                memberCount: e.memberCount,
+                emojis: e.emojis
+            })
+        );
     }
     static createFromServer(e) {
-        return new f({
-            ...f._mapCommon(e),
-            premiumTier: e.premium_tier,
-            premiumSubscriberCount: e.premium_subscription_count,
-            presenceCount: e.approximate_presence_count,
-            memberCount: e.approximate_member_count,
-            emojis: e.emojis
-        });
+        return new h(
+            f(u({}, h._mapCommon(e)), {
+                premiumTier: e.premium_tier,
+                premiumSubscriberCount: e.premium_subscription_count,
+                presenceCount: e.approximate_presence_count,
+                memberCount: e.approximate_member_count,
+                emojis: e.emojis
+            })
+        );
     }
     static createFromGuildType(e) {
-        return e instanceof f ? e : e instanceof a.ZP ? f.createFromGuildRecord(e) : f.createFromDiscoverableGuild(e);
+        return e instanceof h ? e : e instanceof o.ZP ? h.createFromGuildRecord(e) : h.createFromDiscoverableGuild(e);
     }
     constructor(e) {
-        super(), u(this, 'id', void 0), u(this, 'name', void 0), u(this, 'icon', void 0), u(this, 'description', void 0), u(this, 'features', void 0), u(this, 'premiumTier', void 0), u(this, 'premiumSubscriberCount', void 0), u(this, 'presenceCount', void 0), u(this, 'memberCount', void 0), u(this, 'emojis', void 0), (this.id = e.id), (this.name = e.name), (this.icon = e.icon), (this.description = e.description), (this.features = e.features), (this.premiumTier = e.premiumTier), (this.premiumSubscriberCount = e.premiumSubscriberCount), (this.presenceCount = e.presenceCount), (this.memberCount = e.memberCount), (this.emojis = e.emojis);
+        super(), c(this, 'id', void 0), c(this, 'name', void 0), c(this, 'icon', void 0), c(this, 'description', void 0), c(this, 'features', void 0), c(this, 'premiumTier', void 0), c(this, 'premiumSubscriberCount', void 0), c(this, 'presenceCount', void 0), c(this, 'memberCount', void 0), c(this, 'emojis', void 0), (this.id = e.id), (this.name = e.name), (this.icon = e.icon), (this.description = e.description), (this.features = e.features), (this.premiumTier = e.premiumTier), (this.premiumSubscriberCount = e.premiumSubscriberCount), (this.presenceCount = e.presenceCount), (this.memberCount = e.memberCount), (this.emojis = e.emojis);
     }
 }
-class _ extends r.Z {
+class m extends i.Z {
     static createFromServer(e) {
-        return new _({
+        return new m({
             id: e.id,
             name: e.name
         });
     }
     constructor(e) {
-        super(), u(this, 'id', void 0), u(this, 'name', void 0), (this.id = e.id), (this.name = e.name);
+        super(), c(this, 'id', void 0), c(this, 'name', void 0), (this.id = e.id), (this.name = e.name);
     }
 }

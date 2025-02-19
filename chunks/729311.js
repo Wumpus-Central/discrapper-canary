@@ -1,118 +1,161 @@
 n.d(t, {
     Z: () => D,
-    j: () => O
+    j: () => Z
 }),
     n(47120);
-var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    s = n.n(l),
-    a = n(442837),
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(442837),
     o = n(481060),
     c = n(852860),
     d = n(111028),
     u = n(977258),
     m = n(45966),
-    h = n(473403),
+    p = n(473403),
     g = n(454585),
-    x = n(323502),
-    p = n(958832),
-    _ = n(324067),
-    C = n(984933),
-    f = n(259580),
-    v = n(999382),
-    N = n(743475),
-    j = n(889369),
-    I = n(570961),
-    E = n(208665),
-    b = n(868814),
-    T = n(974513),
-    S = n(2348),
-    R = n(353890),
-    Z = n(716130),
-    y = n(388032),
-    A = n(595923);
-function L(e) {
+    h = n(323502),
+    f = n(958832),
+    b = n(324067),
+    x = n(984933),
+    j = n(259580),
+    N = n(999382),
+    v = n(743475),
+    _ = n(889369),
+    O = n(570961),
+    y = n(208665),
+    C = n(868814),
+    I = n(974513),
+    E = n(2348),
+    S = n(353890),
+    T = n(716130),
+    P = n(388032),
+    w = n(419226);
+function R(e) {
     let { guild: t } = e,
-        l = (0, a.e7)([m.Z], () => m.Z.getEnabled(t.id)),
-        s = (0, a.e7)([p.Z], () => p.Z.hasFetched(t.id)),
-        c = (0, b.Z)(t),
-        _ = (0, a.e7)([j.Z], () => j.Z.editedDefaultChannelIds),
-        C = c.filter((e) => !_.has(e.id)),
-        [f, v] = r.useState(!1);
-    r.useEffect(() => {
-        s || l || (0, x.S)(t.id);
-    }, [t.id, s, l]);
-    let I = (e) => {
+        s = (0, l.e7)([m.Z], () => m.Z.getEnabled(t.id)),
+        a = (0, l.e7)([f.Z], () => f.Z.hasFetched(t.id)),
+        c = (0, C.Z)(t),
+        b = (0, l.e7)([_.Z], () => _.Z.editedDefaultChannelIds),
+        x = c.filter((e) => !b.has(e.id)),
+        [j, N] = i.useState(!1);
+    i.useEffect(() => {
+        a || s || (0, h.S)(t.id);
+    }, [t.id, a, s]);
+    let O = (e) => {
         (0, o.ZDy)(async () => {
-            let { default: r } = await n.e('35641').then(n.bind(n, 89216));
-            return (n) =>
-                (0, i.jsx)(r, {
-                    ...n,
-                    guildId: t.id,
-                    startingChannelId: e
-                });
+            let { default: i } = await n.e('35641').then(n.bind(n, 89216));
+            return (n) => {
+                var s, a;
+                return (0, r.jsx)(
+                    i,
+                    ((s = (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var n = null != arguments[t] ? arguments[t] : {},
+                                r = Object.keys(n);
+                            'function' == typeof Object.getOwnPropertySymbols &&
+                                (r = r.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    })
+                                )),
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = n[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: r,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0
+                                              })
+                                            : (e[t] = r);
+                                });
+                        }
+                        return e;
+                    })({}, n)),
+                    (a = a =
+                        {
+                            guildId: t.id,
+                            startingChannelId: e
+                        }),
+                    Object.getOwnPropertyDescriptors
+                        ? Object.defineProperties(s, Object.getOwnPropertyDescriptors(a))
+                        : (function (e, t) {
+                              var n = Object.keys(e);
+                              if (Object.getOwnPropertySymbols) {
+                                  var r = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, r);
+                              }
+                              return n;
+                          })(Object(a)).forEach(function (e) {
+                              Object.defineProperty(s, e, Object.getOwnPropertyDescriptor(a, e));
+                          }),
+                    s)
+                );
+            };
         });
     };
-    return f || 0 === C.length
+    return j || 0 === x.length
         ? null
-        : (0, i.jsxs)('div', {
-              className: A.recommendations,
+        : (0, r.jsxs)('div', {
+              className: w.recommendations,
               children: [
-                  (0, i.jsx)(o.Text, {
+                  (0, r.jsx)(o.Text, {
                       variant: 'text-md/medium',
                       color: 'header-primary',
-                      children: y.intl.string(y.t.NN7rDw)
+                      children: P.NW.string(P.t.NN7rDw)
                   }),
-                  (0, i.jsxs)('div', {
-                      className: A.recsSubheader,
+                  (0, r.jsxs)('div', {
+                      className: w.recsSubheader,
                       children: [
-                          (0, i.jsx)(o.Text, {
+                          (0, r.jsx)(o.Text, {
                               variant: 'text-xs/normal',
                               color: 'text-muted',
-                              children: y.intl.string(y.t['3Uuql5'])
+                              children: P.NW.string(P.t['3Uuql5'])
                           }),
-                          (0, i.jsxs)(o.P3F, {
-                              className: A.dismissAll,
-                              onClick: () => v(!0),
+                          (0, r.jsxs)(o.P3F, {
+                              className: w.dismissAll,
+                              onClick: () => N(!0),
                               children: [
-                                  (0, i.jsx)(o.dz2, {
+                                  (0, r.jsx)(o.dz2, {
                                       size: 'xxs',
                                       color: 'currentColor',
-                                      className: A.checkmark
+                                      className: w.checkmark
                                   }),
-                                  (0, i.jsx)(o.Text, {
-                                      className: A.dismissAllText,
+                                  (0, r.jsx)(o.Text, {
+                                      className: w.dismissAllText,
                                       variant: 'text-xs/medium',
                                       color: 'text-brand',
-                                      children: y.intl.string(y.t.ZC3PJy)
+                                      children: P.NW.string(P.t.ZC3PJy)
                                   })
                               ]
                           })
                       ]
                   }),
-                  (0, i.jsx)('div', {
-                      className: A.recommendedChannels,
-                      children: C.map((e, n) =>
-                          (0, i.jsxs)(i.Fragment, {
+                  (0, r.jsx)('div', {
+                      className: w.recommendedChannels,
+                      children: x.map((e, n) =>
+                          (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  (0, i.jsxs)('div', {
-                                      className: A.channelRow,
+                                  (0, r.jsxs)('div', {
+                                      className: w.channelRow,
                                       children: [
-                                          (0, i.jsxs)('div', {
-                                              className: A.channelInfo,
+                                          (0, r.jsxs)('div', {
+                                              className: w.channelInfo,
                                               children: [
-                                                  (0, i.jsxs)('div', {
-                                                      className: A.channelName,
+                                                  (0, r.jsxs)('div', {
+                                                      className: w.channelName,
                                                       children: [
-                                                          (0, i.jsx)(h._, {
+                                                          (0, r.jsx)(p._, {
                                                               channel: e,
                                                               guild: t
                                                           }),
-                                                          (0, i.jsx)(d.Z, {
-                                                              className: A.__invalid_name,
-                                                              children: (0, i.jsx)(o.Text, {
-                                                                  className: A.__invalid_channelText,
+                                                          (0, r.jsx)(d.Z, {
+                                                              className: w.__invalid_name,
+                                                              children: (0, r.jsx)(o.Text, {
+                                                                  className: w.__invalid_channelText,
                                                                   variant: 'text-md/medium',
                                                                   lineClamp: 1,
                                                                   color: 'text-normal',
@@ -122,11 +165,11 @@ function L(e) {
                                                       ]
                                                   }),
                                                   null != e.topic && e.topic.length > 0
-                                                      ? (0, i.jsx)(
+                                                      ? (0, r.jsx)(
                                                             d.Z,
                                                             {
-                                                                children: (0, i.jsx)(o.Text, {
-                                                                    className: A.topic,
+                                                                children: (0, r.jsx)(o.Text, {
+                                                                    className: w.topic,
                                                                     variant: 'text-xs/normal',
                                                                     children: g.Z.parseTopic(e.topic, !0, { channelId: e.id })
                                                                 })
@@ -137,62 +180,62 @@ function L(e) {
                                               ]
                                           }),
                                           (0, u.s)(t.id, e.id)
-                                              ? (0, i.jsx)(o.zxk, {
+                                              ? (0, r.jsx)(o.zxk, {
                                                     color: o.zxk.Colors.BRAND,
                                                     size: o.zxk.Sizes.SMALL,
-                                                    className: A.addChannelCTA,
-                                                    onClick: () => (0, N.pt)(e.id),
-                                                    children: y.intl.string(y.t.OYkgVl)
+                                                    className: w.addChannelCTA,
+                                                    onClick: () => (0, v.pt)(e.id),
+                                                    children: P.NW.string(P.t.OYkgVl)
                                                 })
-                                              : (0, i.jsxs)(o.zxk, {
+                                              : (0, r.jsxs)(o.zxk, {
                                                     look: o.zxk.Looks.OUTLINED,
                                                     color: o.zxk.Colors.PRIMARY,
-                                                    className: A.lockedPill,
-                                                    innerClassName: A.lockedPillInner,
-                                                    onClick: () => I(e.id),
+                                                    className: w.lockedPill,
+                                                    innerClassName: w.lockedPillInner,
+                                                    onClick: () => O(e.id),
                                                     children: [
-                                                        (0, i.jsx)(o.mBM, {
+                                                        (0, r.jsx)(o.mBM, {
                                                             size: 'xs',
                                                             color: 'currentColor'
                                                         }),
-                                                        (0, i.jsx)(o.Text, {
+                                                        (0, r.jsx)(o.Text, {
                                                             variant: 'text-sm/medium',
-                                                            children: y.intl.string(y.t.zA9d1N)
+                                                            children: P.NW.string(P.t.zA9d1N)
                                                         })
                                                     ]
                                                 })
                                       ]
                                   }),
-                                  n < C.length - 1 ? (0, i.jsx)('div', { className: A.separator }) : null
+                                  n < x.length - 1 ? (0, r.jsx)('div', { className: w.separator }) : null
                               ]
                           })
                       )
                   }),
-                  (0, i.jsx)('div', { className: A.largeSeparator })
+                  (0, r.jsx)('div', { className: w.largeSeparator })
               ]
           });
 }
 function D(e) {
     let { saveOnClose: t = !1 } = e,
-        n = (0, a.e7)([v.Z], () => v.Z.getGuild()),
-        l = (0, a.e7)([m.Z], () => m.Z.isLoading()),
-        c = (0, a.e7)([C.ZP], () => C.ZP.getChannels(null == n ? void 0 : n.id)),
-        d = (0, a.e7)([_.Z], () => _.Z.getCategories(null == n ? void 0 : n.id)),
-        u = (0, a.e7)([E.Z], () => E.Z.advancedMode),
-        h = r.useRef(null),
-        [g, x] = r.useState(!1),
-        p = r.useRef(n);
-    return (r.useEffect(() => {
-        p.current = n;
+        n = (0, l.e7)([N.Z], () => N.Z.getGuild()),
+        s = (0, l.e7)([m.Z], () => m.Z.isLoading()),
+        c = (0, l.e7)([x.ZP], () => x.ZP.getChannels(null == n ? void 0 : n.id)),
+        d = (0, l.e7)([b.Z], () => b.Z.getCategories(null == n ? void 0 : n.id)),
+        u = (0, l.e7)([y.Z], () => y.Z.advancedMode),
+        p = i.useRef(null),
+        [g, h] = i.useState(!1),
+        f = i.useRef(n);
+    return (i.useEffect(() => {
+        f.current = n;
     }),
-    r.useEffect(() => {
+    i.useEffect(() => {
         if (t) {
-            let { current: e } = p;
+            let { current: e } = f;
             return () => {
                 null != e &&
-                    (0, N.DO)(e)
+                    (0, v.DO)(e)
                         .then(() => {
-                            u && (0, I.rS)(e, { ignoreDefaultPrompt: !0 }).catch(() => {});
+                            u && (0, O.rS)(e, { ignoreDefaultPrompt: !0 }).catch(() => {});
                         })
                         .catch(() => {});
             };
@@ -200,44 +243,44 @@ function D(e) {
     }, [t, u]),
     null == n)
         ? null
-        : l
-          ? (0, i.jsx)(o.$jN, {})
-          : (0, i.jsxs)('div', {
-                className: A.columns,
+        : s
+          ? (0, r.jsx)(o.$jN, {})
+          : (0, r.jsxs)('div', {
+                className: w.columns,
                 children: [
-                    (0, i.jsxs)('div', {
-                        className: A.channelBrowser,
+                    (0, r.jsxs)('div', {
+                        className: w.channelBrowser,
                         children: [
-                            (0, i.jsx)(o.P3F, {
-                                className: A.collapseButton,
-                                onClick: () => x((e) => !e),
-                                children: (0, i.jsx)(f.Z, {
-                                    direction: g ? f.Z.Directions.DOWN : f.Z.Directions.UP,
+                            (0, r.jsx)(o.P3F, {
+                                className: w.collapseButton,
+                                onClick: () => h((e) => !e),
+                                children: (0, r.jsx)(j.Z, {
+                                    direction: g ? j.Z.Directions.DOWN : j.Z.Directions.UP,
                                     height: 16,
                                     width: 16
                                 })
                             }),
-                            (0, i.jsx)(o.X6q, {
-                                className: A.header,
+                            (0, r.jsx)(o.X6q, {
+                                className: w.header,
                                 variant: 'heading-lg/extrabold',
-                                children: y.intl.string(y.t['4GSygo'])
+                                children: P.NW.string(P.t['4GSygo'])
                             }),
-                            (0, i.jsx)(o.Text, {
+                            (0, r.jsx)(o.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'header-secondary',
-                                children: y.intl.string(y.t.Kq7FAQ)
+                                children: P.NW.string(P.t.Kq7FAQ)
                             }),
-                            (0, i.jsx)(T.Wu, {
-                                className: A.advancedModeToggle,
+                            (0, r.jsx)(I.Wu, {
+                                className: w.advancedModeToggle,
                                 guildId: n.id
                             }),
                             g
                                 ? null
-                                : (0, i.jsxs)(i.Fragment, {
+                                : (0, r.jsxs)(r.Fragment, {
                                       children: [
-                                          (0, i.jsx)(L, { guild: n }),
-                                          (0, i.jsx)(S.Z, {
-                                              className: s()(A.channelBrowserOuter),
+                                          (0, r.jsx)(R, { guild: n }),
+                                          (0, r.jsx)(E.Z, {
+                                              className: a()(w.channelBrowserOuter),
                                               guild: n,
                                               categories: d,
                                               channels: c,
@@ -246,24 +289,24 @@ function D(e) {
                                       ]
                                   }),
                             u &&
-                                (0, i.jsxs)(i.Fragment, {
+                                (0, r.jsxs)(r.Fragment, {
                                     children: [
-                                        (0, i.jsx)('div', { className: A.largeSeparator }),
-                                        (0, i.jsx)(o.X6q, {
-                                            className: A.prejoinHeader,
+                                        (0, r.jsx)('div', { className: w.largeSeparator }),
+                                        (0, r.jsx)(o.X6q, {
+                                            className: w.prejoinHeader,
                                             variant: 'heading-lg/extrabold',
-                                            children: y.intl.string(y.t.g2Rnpa)
+                                            children: P.NW.string(P.t.g2Rnpa)
                                         }),
-                                        (0, i.jsx)(o.Text, {
-                                            className: A.prejoinSubHeader,
+                                        (0, r.jsx)(o.Text, {
+                                            className: w.prejoinSubHeader,
                                             variant: 'text-sm/normal',
                                             color: 'header-secondary',
-                                            children: y.intl.string(y.t.bLDQ1d)
+                                            children: P.NW.string(P.t.bLDQ1d)
                                         }),
-                                        (0, i.jsx)('div', {
-                                            ref: h,
-                                            className: A.advancedModeQuestions,
-                                            children: (0, i.jsx)(Z.Z, {
+                                        (0, r.jsx)('div', {
+                                            ref: p,
+                                            className: w.advancedModeQuestions,
+                                            children: (0, r.jsx)(T.Z, {
                                                 guildId: n.id,
                                                 prejoinOnly: !0,
                                                 includeCount: !0,
@@ -274,31 +317,31 @@ function D(e) {
                                 })
                         ]
                     }),
-                    (0, i.jsx)(R.Z, {
+                    (0, r.jsx)(S.Z, {
                         guild: n,
                         scrollToQuestions: () => {
-                            null != h.current && h.current.scrollIntoView({ behavior: 'smooth' });
+                            null != p.current && p.current.scrollIntoView({ behavior: 'smooth' });
                         }
                     })
                 ]
             });
 }
-function O() {
-    let e = (0, a.e7)([v.Z], () => v.Z.getProps().guild),
-        t = (0, a.e7)([j.Z], () => j.Z.submitting),
-        n = (0, a.e7)([E.Z], () => E.Z.advancedMode);
+function Z() {
+    let e = (0, l.e7)([N.Z], () => N.Z.getProps().guild),
+        t = (0, l.e7)([_.Z], () => _.Z.submitting),
+        n = (0, l.e7)([y.Z], () => y.Z.advancedMode);
     return null == e
         ? null
-        : (0, i.jsx)(c.Z, {
+        : (0, r.jsx)(c.Z, {
               onSave: () => {
-                  (0, N.DO)(e)
+                  (0, v.DO)(e)
                       .then(() => {
-                          n && (0, I.rS)(e, { ignoreDefaultPrompt: !0 }).catch(() => {});
+                          n && (0, O.rS)(e, { ignoreDefaultPrompt: !0 }).catch(() => {});
                       })
                       .catch(() => {});
               },
-              onReset: N.BG,
+              onReset: v.BG,
               submitting: t,
-              onSaveText: y.intl.string(y.t.R3BPHx)
+              onSaveText: P.NW.string(P.t.R3BPHx)
           });
 }

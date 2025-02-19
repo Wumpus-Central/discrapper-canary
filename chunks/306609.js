@@ -1,166 +1,209 @@
-n.d(t, { l: () => M }), n(47120);
-var i = n(200651),
-    l = n(192379),
+n.d(t, { l: () => Z }), n(47120);
+var r = n(200651),
+    i = n(192379),
     a = n(120356),
-    r = n.n(a),
-    s = n(642128),
-    o = n(442837),
+    o = n.n(a),
+    l = n(642128),
+    s = n(442837),
     c = n(481060),
     d = n(493773),
     u = n(347469),
-    h = n(100527),
-    p = n(906732),
-    m = n(659580),
-    f = n(53691),
+    p = n(100527),
+    m = n(906732),
+    f = n(659580),
+    h = n(53691),
     g = n(166335),
     _ = n(594174),
-    C = n(626135),
-    x = n(111361),
-    v = n(74538),
-    E = n(709706),
-    I = n(378441),
-    b = n(799143),
-    Z = n(358820),
+    b = n(626135),
+    v = n(111361),
+    y = n(74538),
+    x = n(709706),
+    O = n(378441),
+    E = n(799143),
+    j = n(358820),
     N = n(448697),
-    T = n(365831),
-    S = n(639539),
-    j = n(627325),
-    y = n(981631),
-    A = n(474936),
-    P = n(388032),
-    R = n(52419);
-function M(e) {
+    C = n(365831),
+    I = n(639539),
+    S = n(627325),
+    P = n(981631),
+    T = n(474936),
+    A = n(388032),
+    w = n(848980);
+function Z(e) {
     let { onSettingsButtonClick: t, wide: n, showOutputDevices: a = !1 } = e,
-        [M, L] = l.useState(''),
-        { analyticsLocations: k } = (0, p.ZP)(h.Z.VOICE_FILTER_POPOUT),
-        O = l.useRef(null),
+        [Z, k] = i.useState(''),
+        { analyticsLocations: R } = (0, m.ZP)(p.Z.VOICE_FILTER_POPOUT),
+        L = i.useRef(null),
         D = (0, u.Z)({
             minDimension: 400,
             maxDimension: 600,
-            resizableDomNodeRef: O,
+            resizableDomNodeRef: L,
             onElementResize: (e, t) => {},
             onElementResizeEnd: (e) => {},
             orientation: u.y.VERTICAL_TOP
         }),
-        w = (0, o.e7)([_.default], () => (0, x.I5)(_.default.getCurrentUser())),
-        U = (0, o.e7)([E.Z], () => E.Z.getCatalogUpdateTime()),
-        [B, F] = l.useState(!1),
-        [H, G] = l.useState(!1),
-        { activeVoice: V } = (0, I.o)(),
+        M = (0, s.e7)([_.default], () => (0, v.I5)(_.default.getCurrentUser())),
+        W = (0, s.e7)([x.Z], () => x.Z.getCatalogUpdateTime()),
+        [F, U] = i.useState(!1),
+        [B, G] = i.useState(!1),
+        { activeVoice: H } = (0, O.o)(),
+        V = (0, c.q_F)({
+            transform: F ? 'translateY(-'.concat(8, 'px) scale(').concat(0.96, ')') : 'translateY(0px) scale(1)',
+            config: { duration: 200 }
+        }),
         z = (0, c.q_F)({
-            transform: B ? 'translateY(-'.concat(8, 'px) scale(').concat(0.96, ')') : 'translateY(0px) scale(1)',
+            transform: F ? 'translateY(0px)' : 'translateY('.concat(50, 'px)'),
             config: { duration: 200 }
         }),
-        W = (0, c.q_F)({
-            transform: B ? 'translateY(0px)' : 'translateY('.concat(50, 'px)'),
-            config: { duration: 200 }
-        }),
-        Y = l.useRef(null);
+        K = i.useRef(null);
     return (
         (0, d.ZP)(() => {
-            (0, Z.r5)(), C.default.track(y.rMx.VOICE_FILTER_PICKER_OPENED, { active_voice_filter_id: null != V ? V : null });
+            (0, j.r5)(), b.default.track(P.rMx.VOICE_FILTER_PICKER_OPENED, { active_voice_filter_id: null != H ? H : null });
         }),
-        (0, i.jsx)(p.Gt, {
-            value: k,
-            children: (0, i.jsxs)('div', {
-                ref: O,
-                className: r()(R.voiceFiltersPopout, { [R.wide]: n }),
+        (0, r.jsx)(m.Gt, {
+            value: R,
+            children: (0, r.jsxs)('div', {
+                ref: L,
+                className: o()(w.voiceFiltersPopout, { [w.wide]: n }),
                 style: { height: 500 },
                 children: [
-                    (0, i.jsx)('div', {
-                        className: R.resizeHandle,
+                    (0, r.jsx)('div', {
+                        className: w.resizeHandle,
                         onMouseDown: D,
-                        children: (0, i.jsx)('div', { className: R.resizePill })
+                        children: (0, r.jsx)('div', { className: w.resizePill })
                     }),
-                    (0, i.jsx)(c.E1j, {
+                    (0, r.jsx)(c.E1j, {
                         size: c.E1j.Sizes.MEDIUM,
-                        placeholder: P.intl.string(P.t.hHCZJS),
-                        className: R.voiceFiltersHeader,
+                        placeholder: A.NW.string(A.t.hHCZJS),
+                        className: w.voiceFiltersHeader,
                         autoFocus: !0,
-                        onChange: L,
-                        query: M,
-                        onClear: () => L('')
+                        onChange: k,
+                        query: Z,
+                        onClear: () => k('')
                     }),
-                    (0, i.jsx)(j.w, {
-                        query: M,
+                    (0, r.jsx)(S.w, {
+                        query: Z,
                         columns: n ? 5 : 4,
                         handleScroll: (e) => {
-                            let t = Y.current;
-                            if (null == t || (F(e > 0), H)) return;
-                            let { height: n, totalHeight: i } = t.getListDimensions();
-                            e < i - n || (G(!0), C.default.track(y.rMx.VOICE_FILTER_PICKER_SCROLLED));
+                            let t = K.current;
+                            if (null == t || (U(e > 0), B)) return;
+                            let { height: n, totalHeight: r } = t.getListDimensions();
+                            e < r - n || (G(!0), b.default.track(P.rMx.VOICE_FILTER_PICKER_SCROLLED));
                         },
-                        voiceListRef: Y
+                        voiceListRef: K
                     }),
-                    !w &&
-                        (0, i.jsxs)('div', {
-                            className: R.upsellCountdownContainer,
+                    !M &&
+                        (0, r.jsxs)('div', {
+                            className: w.upsellCountdownContainer,
                             children: [
-                                null != U &&
-                                    (0, i.jsx)(s.animated.div, {
-                                        style: z,
-                                        children: (0, i.jsx)(S.J, {
-                                            catalogUpdateTime: U,
-                                            isScrolled: B
+                                null != W &&
+                                    (0, r.jsx)(l.animated.div, {
+                                        style: V,
+                                        children: (0, r.jsx)(I.J, {
+                                            catalogUpdateTime: W,
+                                            isScrolled: F
                                         })
                                     }),
-                                (0, i.jsx)('div', {
-                                    className: R.upsellContainer,
-                                    children: (0, i.jsx)(s.animated.div, {
-                                        style: W,
-                                        children: (0, i.jsx)(f.p, {
+                                (0, r.jsx)('div', {
+                                    className: w.upsellContainer,
+                                    children: (0, r.jsx)(l.animated.div, {
+                                        style: z,
+                                        children: (0, r.jsx)(h.p, {
                                             showUpsell: !0,
-                                            text: P.intl.format(P.t['XMDm8/'], {
-                                                nitroTierName: (0, v.Px)(A.p9.TIER_2),
+                                            text: A.NW.format(A.t['XMDm8/'], {
+                                                nitroTierName: (0, y.Px)(T.p9.TIER_2),
                                                 onClick: () => (0, g.i)()
                                             }),
-                                            button: P.intl.string(P.t.YScQSE),
-                                            buttonAnalyticsObject: { section: y.jXE.VOICE_FILTERS_FLOATING_UPSELL },
+                                            button: A.NW.string(A.t.YScQSE),
+                                            buttonAnalyticsObject: { section: P.jXE.VOICE_FILTERS_FLOATING_UPSELL },
                                             showShadow: !1,
                                             position: 'inline',
-                                            className: R.upsell,
+                                            className: w.upsell,
                                             buttonSize: 'sm',
                                             useLockIcon: !0,
-                                            buttonStyles: R.subscribeButton
+                                            buttonStyles: w.subscribeButton
                                         })
                                     })
                                 })
                             ]
                         }),
-                    (0, i.jsx)(N.R, {}),
-                    (0, i.jsx)(T.y, {}),
-                    (0, i.jsxs)('div', {
-                        className: r()(R.voiceFiltersFooter, { [R.hasActiveVoice]: null != V }),
+                    (0, r.jsx)(N.R, {}),
+                    (0, r.jsx)(C.y, {}),
+                    (0, r.jsxs)('div', {
+                        className: o()(w.voiceFiltersFooter, { [w.hasActiveVoice]: null != H }),
                         children: [
-                            (0, i.jsx)(b.Y, {}),
-                            a && (0, i.jsx)(b.a, {}),
+                            (0, r.jsx)(E.Y, {}),
+                            a && (0, r.jsx)(E.a, {}),
                             null != t &&
-                                (0, i.jsx)(c.yRy, {
+                                (0, r.jsx)(c.yRy, {
                                     position: 'top',
                                     renderPopout: () =>
-                                        (0, i.jsx)(m.default, {
+                                        (0, r.jsx)(f.default, {
                                             renderInputModes: !0,
                                             renderInputVolume: !0,
                                             onClose: t
                                         }),
-                                    children: (e) =>
-                                        (0, i.jsx)(c.zxk, {
-                                            ...e,
-                                            size: c.zxk.Sizes.MIN,
-                                            look: c.zxk.Looks.BLANK,
-                                            grow: !1,
-                                            className: R.voiceFiltersFooterButton,
-                                            innerClassName: R.voiceFiltersFooterButtonInner,
-                                            onClick: (t) => {
-                                                var n;
-                                                C.default.track(y.rMx.VOICE_FILTER_VOICE_SETTINGS_CLICKED, { active_voice_filter_id: null != V ? V : null }), null === (n = e.onClick) || void 0 === n || n.call(e, t);
-                                            },
-                                            children: (0, i.jsx)(c.Huf, {
-                                                size: 'custom',
-                                                width: 20,
-                                                height: 20
-                                            })
-                                        })
+                                    children: (e) => {
+                                        var t, n;
+                                        return (0, r.jsx)(
+                                            c.zxk,
+                                            ((t = (function (e) {
+                                                for (var t = 1; t < arguments.length; t++) {
+                                                    var n = null != arguments[t] ? arguments[t] : {},
+                                                        r = Object.keys(n);
+                                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                                        (r = r.concat(
+                                                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                            })
+                                                        )),
+                                                        r.forEach(function (t) {
+                                                            var r;
+                                                            (r = n[t]),
+                                                                t in e
+                                                                    ? Object.defineProperty(e, t, {
+                                                                          value: r,
+                                                                          enumerable: !0,
+                                                                          configurable: !0,
+                                                                          writable: !0
+                                                                      })
+                                                                    : (e[t] = r);
+                                                        });
+                                                }
+                                                return e;
+                                            })({}, e)),
+                                            (n = n =
+                                                {
+                                                    size: c.zxk.Sizes.MIN,
+                                                    look: c.zxk.Looks.BLANK,
+                                                    grow: !1,
+                                                    className: w.voiceFiltersFooterButton,
+                                                    innerClassName: w.voiceFiltersFooterButtonInner,
+                                                    onClick: (t) => {
+                                                        var n;
+                                                        b.default.track(P.rMx.VOICE_FILTER_VOICE_SETTINGS_CLICKED, { active_voice_filter_id: null != H ? H : null }), null === (n = e.onClick) || void 0 === n || n.call(e, t);
+                                                    },
+                                                    children: (0, r.jsx)(c.Huf, {
+                                                        size: 'custom',
+                                                        width: 20,
+                                                        height: 20
+                                                    })
+                                                }),
+                                            Object.getOwnPropertyDescriptors
+                                                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                                                : (function (e, t) {
+                                                      var n = Object.keys(e);
+                                                      if (Object.getOwnPropertySymbols) {
+                                                          var r = Object.getOwnPropertySymbols(e);
+                                                          n.push.apply(n, r);
+                                                      }
+                                                      return n;
+                                                  })(Object(n)).forEach(function (e) {
+                                                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                                                  }),
+                                            t)
+                                        );
+                                    }
                                 })
                         ]
                     })

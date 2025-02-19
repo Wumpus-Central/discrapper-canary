@@ -1,74 +1,108 @@
-n.d(t, { Z: () => p });
-var i = n(200651);
+n.d(t, { Z: () => m });
+var r = n(200651);
 n(192379);
-var r = n(442837),
-    a = n(481060),
-    s = n(549879),
-    o = n(300284),
+var i = n(442837),
+    o = n(481060),
+    a = n(549879),
+    s = n(300284),
     l = n(314897),
-    u = n(430824),
-    c = n(785717),
+    c = n(430824),
+    u = n(785717),
     d = n(475413),
     f = n(388032),
-    _ = n(553728);
-function p(e) {
-    let { user: t, guildId: n, fullWidth: p, appContext: h, onClose: m } = e,
-        g = (0, r.e7)([l.default], () => l.default.getId() === t.id),
-        E = (0, r.e7)([u.Z], () => (null != n ? u.Z.getGuild(n) : null)),
-        v = (0, o.Z)({ guild: E }),
-        y = (0, o.Z)({}),
-        { trackUserProfileAction: I } = (0, c.KZ)();
-    return g
-        ? null == E
-            ? (0, i.jsx)(d.tG, {
+    p = n(144795);
+function _(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function h(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                _(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function m(e) {
+    let { user: t, guildId: n, fullWidth: _, appContext: m, onClose: g } = e,
+        E = (0, i.e7)([l.default], () => l.default.getId() === t.id),
+        v = (0, i.e7)([c.Z], () => (null != n ? c.Z.getGuild(n) : null)),
+        b = (0, s.Z)({ guild: v }),
+        y = (0, s.Z)({}),
+        { trackUserProfileAction: O } = (0, u.KZ)();
+    return E
+        ? null == v
+            ? (0, r.jsx)(d.tG, {
                   action: 'EDIT_PROFILE',
-                  text: f.intl.string(f.t.s5vZlZ),
-                  icon: a.vdY,
+                  text: f.NW.string(f.t.s5vZlZ),
+                  icon: o.vdY,
                   autoFocus: !0,
-                  fullWidth: p,
+                  fullWidth: _,
                   onClick: () => {
-                      null == m || m(), y(), (0, s.i)(h);
+                      null == g || g(), y(), (0, a.i)(m);
                   }
               })
-            : (0, i.jsx)(a.yRy, {
+            : (0, r.jsx)(o.yRy, {
                   renderPopout: (e) => {
                       let { closePopout: t } = e;
-                      return (0, i.jsxs)(a.v2r, {
-                          className: _.popoutMenu,
+                      return (0, r.jsxs)(o.v2r, {
+                          className: p.popoutMenu,
                           onSelect: void 0,
                           navId: 'edit-profile-popout',
                           onClose: () => {
-                              t(), null == m || m();
+                              t(), null == g || g();
                           },
-                          'aria-label': f.intl.string(f.t.AXIHpa),
+                          'aria-label': f.NW.string(f.t.AXIHpa),
                           children: [
-                              (0, i.jsx)(a.sNh, {
+                              (0, r.jsx)(o.sNh, {
                                   id: 'edit-server-profile',
-                                  label: f.intl.string(f.t['PKQB/P']),
-                                  subtext: f.intl.string(f.t.VYHWKC),
+                                  label: f.NW.string(f.t['PKQB/P']),
+                                  subtext: f.NW.string(f.t.VYHWKC),
                                   action: () => {
-                                      I({ action: 'EDIT_GUILD_PROFILE' }), v(), (0, s.i)(h);
+                                      O({ action: 'EDIT_GUILD_PROFILE' }), b(), (0, a.i)(m);
                                   }
                               }),
-                              (0, i.jsx)(a.sNh, {
+                              (0, r.jsx)(o.sNh, {
                                   id: 'edit-main-profile',
-                                  label: f.intl.string(f.t.HmFaFB),
-                                  subtext: f.intl.string(f.t['+EERMj']),
+                                  label: f.NW.string(f.t.HmFaFB),
+                                  subtext: f.NW.string(f.t['+EERMj']),
                                   action: () => {
-                                      I({ action: 'EDIT_PROFILE' }), y(), (0, s.i)(h);
+                                      O({ action: 'EDIT_PROFILE' }), y(), (0, a.i)(m);
                                   }
                               })
                           ]
                       });
                   },
                   children: (e) =>
-                      (0, i.jsx)(d.tG, {
-                          text: f.intl.string(f.t.s5vZlZ),
-                          icon: a.vdY,
-                          autoFocus: !0,
-                          fullWidth: p,
-                          ...e
-                      })
+                      (0, r.jsx)(
+                          d.tG,
+                          h(
+                              {
+                                  text: f.NW.string(f.t.s5vZlZ),
+                                  icon: o.vdY,
+                                  autoFocus: !0,
+                                  fullWidth: _
+                              },
+                              e
+                          )
+                      )
               })
         : null;
 }

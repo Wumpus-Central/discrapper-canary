@@ -1,9 +1,9 @@
-n.d(t, { Z: () => v }), n(47120);
-var i,
-    r = n(442837),
-    a = n(433517),
-    s = n(570140),
-    o = n(581883);
+n.d(t, { Z: () => b }), n(47120);
+var r,
+    i = n(442837),
+    o = n(433517),
+    a = n(570140),
+    s = n(581883);
 function l(e, t, n) {
     return (
         t in e
@@ -17,49 +17,62 @@ function l(e, t, n) {
         e
     );
 }
+function c(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                l(e, t, n[t]);
+            });
+    }
+    return e;
+}
 let u = {},
-    c = {};
-function d() {
-    var e, t, n, i, r, a;
-    let s = o.Z.settings;
+    d = {};
+function f() {
+    var e, t, n, r, i, o;
+    let a = s.Z.settings;
     return {
-        gifAutoPlay: null === (t = s.textAndImages) || void 0 === t ? void 0 : null === (e = t.gifAutoPlay) || void 0 === e ? void 0 : e.value,
-        animateEmoji: null === (i = s.textAndImages) || void 0 === i ? void 0 : null === (n = i.animateEmoji) || void 0 === n ? void 0 : n.value,
-        animateStickers: null === (a = s.textAndImages) || void 0 === a ? void 0 : null === (r = a.animateStickers) || void 0 === r ? void 0 : r.value
+        gifAutoPlay: null === (t = a.textAndImages) || void 0 === t ? void 0 : null === (e = t.gifAutoPlay) || void 0 === e ? void 0 : e.value,
+        animateEmoji: null === (r = a.textAndImages) || void 0 === r ? void 0 : null === (n = r.animateEmoji) || void 0 === n ? void 0 : n.value,
+        animateStickers: null === (o = a.textAndImages) || void 0 === o ? void 0 : null === (i = o.animateStickers) || void 0 === i ? void 0 : i.value
     };
 }
-function f() {
-    return (c = d()), !1;
+function p() {
+    return (d = f()), !1;
 }
 function _() {
     u = {};
 }
-function p() {
+function h() {
     u = {};
-}
-function h(e) {
-    let { settings: t } = e;
-    u = {
-        ...u,
-        ...t
-    };
 }
 function m(e) {
     let { settings: t } = e;
+    u = c({}, u, t);
+}
+function g(e) {
+    let { settings: t } = e;
     for (let e of t) delete u[e];
 }
-function g() {
-    let e = d(),
+function E() {
+    let e = f(),
         t = !1;
     for (let n in e) {
-        let i = n;
-        e[i] !== c[i] && (delete u[i], (t = !0));
+        let r = n;
+        e[r] !== d[r] && (delete u[r], (t = !0));
     }
     return t;
 }
-class E extends (i = r.ZP.PersistedStore) {
+class v extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        (u = null != e ? e : {}), this.syncWith([o.Z], f);
+        (u = null != e ? e : {}), this.syncWith([s.Z], p);
     }
     getState() {
         return u;
@@ -72,19 +85,19 @@ class E extends (i = r.ZP.PersistedStore) {
         return u[e];
     }
 }
-l(E, 'displayName', 'UserSettingsOverridesStore'),
-    l(E, 'persistKey', 'UserSettingsOverridesStore'),
-    l(E, 'migrations', [
+l(v, 'displayName', 'UserSettingsOverridesStore'),
+    l(v, 'persistKey', 'UserSettingsOverridesStore'),
+    l(v, 'migrations', [
         () => {
             var e;
-            let t = null !== (e = a.K.get('UserSettingsStoreOverrides')) && void 0 !== e ? e : {};
-            return a.K.remove('UserSettingsStoreOverrides'), t;
+            let t = null !== (e = o.K.get('UserSettingsStoreOverrides')) && void 0 !== e ? e : {};
+            return o.K.remove('UserSettingsStoreOverrides'), t;
         }
     ]);
-let v = new E(s.Z, {
-    USER_SETTINGS_PROTO_UPDATE: g,
-    USER_SETTINGS_OVERRIDE_APPLY: h,
-    USER_SETTINGS_OVERRIDE_CLEAR: m,
+let b = new v(a.Z, {
+    USER_SETTINGS_PROTO_UPDATE: E,
+    USER_SETTINGS_OVERRIDE_APPLY: m,
+    USER_SETTINGS_OVERRIDE_CLEAR: g,
     LOGOUT: _,
-    LOGIN_SUCCESS: p
+    LOGIN_SUCCESS: h
 });

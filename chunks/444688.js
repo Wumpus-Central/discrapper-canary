@@ -1,73 +1,101 @@
-i.d(t, { default: () => f });
-var n = i(200651);
-i(192379);
-var s = i(442837),
-    r = i(481060),
-    l = i(600164),
-    o = i(418632),
-    a = i(594174),
-    d = i(388032),
-    c = i(973844);
-function u(e) {
+n.d(t, { default: () => f });
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    o = n(481060),
+    s = n(600164),
+    l = n(418632),
+    c = n(594174),
+    a = n(388032),
+    u = n(225211);
+function d(e) {
     let { onClose: t } = e,
-        l = (0, s.e7)([a.default], () => a.default.getCurrentUser());
-    function c() {
+        s = (0, i.e7)([c.default], () => c.default.getCurrentUser());
+    function u() {
         null == t || t();
     }
-    function u() {
-        c(),
-            (0, r.ZDy)(async () => {
-                let { default: e } = await Promise.all([i.e('9343'), i.e('44992')]).then(i.bind(i, 642298));
-                return (t) => (0, n.jsx)(e, { ...t });
+    function d() {
+        u(),
+            (0, o.ZDy)(async () => {
+                let { default: e } = await Promise.all([n.e('9343'), n.e('87209')]).then(n.bind(n, 642298));
+                return (t) =>
+                    (0, r.jsx)(
+                        e,
+                        (function (e) {
+                            for (var t = 1; t < arguments.length; t++) {
+                                var n = null != arguments[t] ? arguments[t] : {},
+                                    r = Object.keys(n);
+                                'function' == typeof Object.getOwnPropertySymbols &&
+                                    (r = r.concat(
+                                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                        })
+                                    )),
+                                    r.forEach(function (t) {
+                                        var r;
+                                        (r = n[t]),
+                                            t in e
+                                                ? Object.defineProperty(e, t, {
+                                                      value: r,
+                                                      enumerable: !0,
+                                                      configurable: !0,
+                                                      writable: !0
+                                                  })
+                                                : (e[t] = r);
+                                    });
+                            }
+                            return e;
+                        })({}, t)
+                    );
             });
     }
-    return (null == l ? void 0 : l.email) == null
-        ? (0, n.jsx)(r.zxk, {
-              onClick: u,
-              color: r.zxk.Colors.BRAND,
-              look: r.zxk.Looks.FILLED,
-              children: d.intl.string(d.t.ydw5nZ)
+    return (null == s ? void 0 : s.email) == null
+        ? (0, r.jsx)(o.zxk, {
+              onClick: d,
+              color: o.zxk.Colors.BRAND,
+              look: o.zxk.Looks.FILLED,
+              children: a.NW.string(a.t.ydw5nZ)
           })
-        : (0, n.jsxs)(n.Fragment, {
+        : (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, n.jsx)(r.zxk, {
-                      onClick: u,
-                      color: r.zxk.Colors.PRIMARY,
-                      look: r.zxk.Looks.LINK,
-                      children: d.intl.string(d.t.Vm8akJ)
+                  (0, r.jsx)(o.zxk, {
+                      onClick: d,
+                      color: o.zxk.Colors.PRIMARY,
+                      look: o.zxk.Looks.LINK,
+                      children: a.NW.string(a.t.Vm8akJ)
                   }),
-                  (0, n.jsx)(o.Z, {
-                      color: r.zxk.Colors.BRAND,
-                      onClick: c
+                  (0, r.jsx)(l.Z, {
+                      color: o.zxk.Colors.BRAND,
+                      onClick: u
                   })
               ]
           });
 }
 let f = function (e) {
-    let { onClose: t, transitionState: i } = e;
-    return (0, n.jsxs)(r.Y0X, {
-        transitionState: i,
+    let { onClose: t, transitionState: n } = e;
+    return (0, r.jsxs)(o.Y0X, {
+        transitionState: n,
         children: [
-            (0, n.jsx)(r.xBx, {
-                children: (0, n.jsx)(r.vwX, {
-                    tag: r.RB0.H4,
-                    children: d.intl.string(d.t.UZLrY2)
+            (0, r.jsx)(o.xBx, {
+                children: (0, r.jsx)(o.vwX, {
+                    tag: o.RB0.H4,
+                    children: a.NW.string(a.t.UZLrY2)
                 })
             }),
-            (0, n.jsxs)(r.hzk, {
+            (0, r.jsxs)(o.hzk, {
                 children: [
-                    (0, n.jsx)('div', { className: c.imageUnverified }),
-                    (0, n.jsx)(r.Text, {
+                    (0, r.jsx)('div', { className: u.imageUnverified }),
+                    (0, r.jsx)(o.Text, {
                         variant: 'text-md/normal',
-                        className: c.message,
-                        children: d.intl.string(d.t['0LgOKC'])
+                        className: u.message,
+                        children: a.NW.string(a.t['0LgOKC'])
                     })
                 ]
             }),
-            (0, n.jsx)(r.mzw, {
-                children: (0, n.jsx)(l.Z, {
-                    justify: l.Z.Justify.END,
-                    children: (0, n.jsx)(u, { onClose: t })
+            (0, r.jsx)(o.mzw, {
+                children: (0, r.jsx)(s.Z, {
+                    justify: s.Z.Justify.END,
+                    children: (0, r.jsx)(d, { onClose: t })
                 })
             })
         ]

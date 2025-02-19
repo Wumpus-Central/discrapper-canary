@@ -1,10 +1,10 @@
-n.d(t, { Z: () => c }), n(47120);
+n.d(t, { Z: () => d }), n(47120);
 var i = n(200651),
-    s = n(192379),
-    l = n(13245),
-    a = n(593481),
-    o = n(981631);
-function r(e, t, n) {
+    r = n(192379),
+    s = n(13245),
+    o = n(593481),
+    l = n(981631);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,23 +17,23 @@ function r(e, t, n) {
         e
     );
 }
-class d extends s.Component {
+class c extends r.Component {
     getStyle() {
         let e, t, n, i;
         let {
-            props: { position: s, zIndex: l }
+            props: { position: r, zIndex: s }
         } = this;
-        switch (s) {
-            case o._vf.TOP_LEFT:
-            case o._vf.BOTTOM_LEFT:
+        switch (r) {
+            case l._vf.TOP_LEFT:
+            case l._vf.BOTTOM_LEFT:
                 e = 0;
                 break;
             default:
                 t = 0;
         }
-        switch (s) {
-            case o._vf.BOTTOM_LEFT:
-            case o._vf.BOTTOM_RIGHT:
+        switch (r) {
+            case l._vf.BOTTOM_LEFT:
+            case l._vf.BOTTOM_RIGHT:
                 n = 0;
                 break;
             default:
@@ -44,67 +44,119 @@ class d extends s.Component {
             right: t,
             bottom: n,
             top: i,
-            zIndex: l
+            zIndex: s
         };
     }
     render() {
+        var e, t;
         let {
-            props: {
-                locked: e,
-                notification: {
-                    props: { renderFooter: t, onNotificationShow: n, onDismissClick: s, onNotificationClick: l, onConfirmClick: o, onCancelClick: r, ...d }
+                props: {
+                    locked: n,
+                    notification: {
+                        props: { renderFooter: r, onNotificationShow: s, onDismissClick: l, onNotificationClick: c, onConfirmClick: d, onCancelClick: u }
+                    }
                 }
-            }
-        } = this;
-        return (0, i.jsx)(a.ZP, {
-            ...d,
-            onNotificationShow: this.handleNotificationShow,
-            onDismissClick: null != s ? this.handleDismissClick : void 0,
-            onNotificationClick: null != l ? this.handleNotificationClick : null,
-            onConfirmClick: null != o ? this.handleConfirmClick : null,
-            onCancelClick: null != r ? this.handleCancelClick : null,
-            renderFooter: this.renderFooter,
-            expand: !e
-        });
+            } = this,
+            h = (function (e, t) {
+                if (null == e) return {};
+                var n,
+                    i,
+                    r = (function (e, t) {
+                        if (null == e) return {};
+                        var n,
+                            i,
+                            r = {},
+                            s = Object.keys(e);
+                        for (i = 0; i < s.length; i++) (n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                        return r;
+                    })(e, t);
+                if (Object.getOwnPropertySymbols) {
+                    var s = Object.getOwnPropertySymbols(e);
+                    for (i = 0; i < s.length; i++) (n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+                }
+                return r;
+            })(this.props.notification.props, ['renderFooter', 'onNotificationShow', 'onDismissClick', 'onNotificationClick', 'onConfirmClick', 'onCancelClick']);
+        return (0, i.jsx)(
+            o.ZP,
+            ((e = (function (e) {
+                for (var t = 1; t < arguments.length; t++) {
+                    var n = null != arguments[t] ? arguments[t] : {},
+                        i = Object.keys(n);
+                    'function' == typeof Object.getOwnPropertySymbols &&
+                        (i = i.concat(
+                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                            })
+                        )),
+                        i.forEach(function (t) {
+                            a(e, t, n[t]);
+                        });
+                }
+                return e;
+            })({}, h)),
+            (t = t =
+                {
+                    onNotificationShow: this.handleNotificationShow,
+                    onDismissClick: null != l ? this.handleDismissClick : void 0,
+                    onNotificationClick: null != c ? this.handleNotificationClick : null,
+                    onConfirmClick: null != d ? this.handleConfirmClick : null,
+                    onCancelClick: null != u ? this.handleCancelClick : null,
+                    renderFooter: this.renderFooter,
+                    expand: !n
+                }),
+            Object.getOwnPropertyDescriptors
+                ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+                : (function (e, t) {
+                      var n = Object.keys(e);
+                      if (Object.getOwnPropertySymbols) {
+                          var i = Object.getOwnPropertySymbols(e);
+                          n.push.apply(n, i);
+                      }
+                      return n;
+                  })(Object(t)).forEach(function (n) {
+                      Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+                  }),
+            e)
+        );
     }
     constructor(...e) {
         super(...e),
-            r(this, 'handleNotificationShow', () => {
+            a(this, 'handleNotificationShow', () => {
                 let {
                     id: e,
                     props: { onNotificationShow: t }
                 } = this.props.notification;
                 t(e);
             }),
-            r(this, 'handleDismissClick', (e) => {
+            a(this, 'handleDismissClick', (e) => {
                 let {
                     id: t,
                     props: { onDismissClick: n }
                 } = this.props.notification;
-                l.Z.updateNotificationStatus(t), null == n || n(e, t);
+                s.Z.updateNotificationStatus(t), null == n || n(e, t);
             }),
-            r(this, 'handleNotificationClick', (e) => {
+            a(this, 'handleNotificationClick', (e) => {
                 let {
                     id: t,
                     props: { onNotificationClick: n }
                 } = this.props.notification;
                 null != n && n(e, t);
             }),
-            r(this, 'handleConfirmClick', (e) => {
+            a(this, 'handleConfirmClick', (e) => {
                 let {
                     id: t,
                     props: { onConfirmClick: n }
                 } = this.props.notification;
                 null != n && n(e, t);
             }),
-            r(this, 'handleCancelClick', (e) => {
+            a(this, 'handleCancelClick', (e) => {
                 let {
                     id: t,
                     props: { onCancelClick: n }
                 } = this.props.notification;
                 null != n && n(e, t);
             }),
-            r(this, 'renderFooter', (e) => {
+            a(this, 'renderFooter', (e) => {
                 let {
                     id: t,
                     props: { renderFooter: n }
@@ -113,4 +165,4 @@ class d extends s.Component {
             });
     }
 }
-let c = d;
+let d = c;

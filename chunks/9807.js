@@ -1,22 +1,22 @@
-n.d(t, { Z: () => y }), n(47120), n(411104);
-var i,
-    a = n(200651),
-    r = n(192379),
+n.d(t, { Z: () => A }), n(47120), n(411104);
+var r,
+    i = n(200651),
+    a = n(192379),
     l = n(120356),
-    s = n.n(l),
-    o = n(481060),
+    o = n.n(l),
+    s = n(481060),
     c = n(33122),
     d = n(446411),
     u = n(468846),
-    m = n(453499),
-    h = n(124347),
-    p = n(80966),
+    p = n(453499),
+    m = n(124347),
+    h = n(80966),
     g = n(524444),
-    _ = n(843445),
-    x = n(981631),
-    C = n(388032),
-    v = n(164568);
-function f(e, t, n) {
+    f = n(843445),
+    _ = n(981631),
+    v = n(388032),
+    b = n(239169);
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,110 +29,155 @@ function f(e, t, n) {
         e
     );
 }
-let I = (e) => {
-        let { className: t, ...n } = e;
-        return (0, a.jsx)(p.Z, {
-            ...n,
-            className: s()(v.sizedToParent, t),
-            mediaPlayerClassName: v.sizedToParent,
-            renderLinkComponent: g.iT
-        });
+function C(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                x(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function j(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function y(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                i = {},
+                a = Object.keys(e);
+            for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+            return i;
+        })(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+let O = (e) => {
+        var { className: t } = e,
+            n = y(e, ['className']);
+        return (0, i.jsx)(
+            h.Z,
+            j(C({}, n), {
+                className: o()(b.sizedToParent, t),
+                mediaPlayerClassName: b.sizedToParent,
+                renderLinkComponent: g.iT
+            })
+        );
     },
-    b = (e) => {
-        let { containerClassName: t, className: n, ...i } = e;
-        return (0, a.jsx)(h.ZP, {
-            ...i,
-            className: s()(n, t)
-        });
+    I = (e) => {
+        var { containerClassName: t, className: n } = e,
+            r = y(e, ['containerClassName', 'className']);
+        return (0, i.jsx)(m.ZP, j(C({}, r), { className: o()(n, t) }));
     },
-    j = {
+    N = {
         width: 1280,
         height: 720
     },
-    S = {
+    P = {
         width: 640,
         height: 360
     },
-    N = (e) => {
+    S = (e) => {
         let t,
             n,
-            i,
-            { item: r, onPlay: l, volume: s, onVolumeChange: o, onMute: m, isMuted: h, autoPlay: p } = e;
-        if (r.type === x.s9s.YOUTUBE_VIDEO)
-            (t = {
-                url: (0, x.n8r)(r.youtubeVideoId),
-                ...j
-            }),
-                (n = {
-                    url: ''.concat((0, x.ivE)(r.youtubeVideoId), '?').concat('rel=0&iv_load_policy=3&showinfo=0&modestbranding=1'),
-                    ...S
-                }),
-                (i = u.pn.YOUTUBE);
+            r,
+            { item: a, onPlay: l, volume: o, onVolumeChange: s, onMute: p, isMuted: m, autoPlay: h } = e;
+        if (a.type === _.s9s.YOUTUBE_VIDEO) (t = C({ url: (0, _.n8r)(a.youtubeVideoId) }, N)), (n = C({ url: ''.concat((0, _.ivE)(a.youtubeVideoId), '?').concat('rel=0&iv_load_policy=3&showinfo=0&modestbranding=1') }, P)), (r = u.pn.YOUTUBE);
         else {
-            let e = null != r.width ? r.width : 0,
-                i = null != r.height ? r.height : 0;
+            let e = null != a.width ? a.width : 0,
+                r = null != a.height ? a.height : 0;
             (t = {
-                url: r.thumbnailSrc,
+                url: a.thumbnailSrc,
                 width: e,
-                height: i
+                height: r
             }),
                 (n = {
-                    url: r.src,
-                    proxyURL: r.src,
+                    url: a.src,
+                    proxyURL: a.src,
                     width: e,
-                    height: i
+                    height: r
                 });
         }
-        return (0, a.jsx)('div', {
-            className: v.embedContainer,
-            children: (0, a.jsx)(d.BC, {
-                className: v.sizedToParent,
-                iframeWrapperClassName: v.sizedToParent,
+        return (0, i.jsx)('div', {
+            className: b.embedContainer,
+            children: (0, i.jsx)(d.BC, {
+                className: b.sizedToParent,
+                iframeWrapperClassName: b.sizedToParent,
                 href: null,
                 thumbnail: t,
                 video: n,
-                provider: i,
+                provider: r,
                 maxHeight: c.r.SMALL.height,
-                maxWidth: _.b.SMALL,
+                maxWidth: f.b.SMALL,
                 onPlay: l,
                 playable: !0,
-                volume: s,
-                onVolumeChange: o,
-                autoMute: h,
-                onMute: m,
-                autoPlay: p,
-                renderImageComponent: b,
-                renderVideoComponent: I,
+                volume: o,
+                onVolumeChange: s,
+                autoMute: m,
+                onMute: p,
+                autoPlay: h,
+                renderImageComponent: I,
+                renderVideoComponent: O,
                 renderLinkComponent: g.iT
             })
         });
     };
-class E extends (i = r.PureComponent) {
+class E extends (r = a.PureComponent) {
     componentDidMount() {
         let { items: e } = this.props;
-        e.length > 0 && e[0].type === x.s9s.IMG && this.setState({ imageLoadingStartTime: new Map(this.state.imageLoadingStartTime).set(e[0].src, Date.now()) });
+        e.length > 0 && e[0].type === _.s9s.IMG && this.setState({ imageLoadingStartTime: new Map(this.state.imageLoadingStartTime).set(e[0].src, Date.now()) });
     }
     handleCurrentItemClick(e, t) {
         let { onCurrentItemClick: n } = this.props;
         null != n && n(e, t), this.setState({ hasInteracted: !0 });
     }
     render() {
-        let { items: e, autoplayInterval: t, className: n, paused: i, themedPagination: r } = this.props,
+        let { items: e, autoplayInterval: t, className: n, paused: r, themedPagination: a } = this.props,
             { hasInteracted: l } = this.state;
-        return (0, a.jsx)(m.Z, {
+        return (0, i.jsx)(p.Z, {
             items: e.slice(0, 12),
             delay: t,
-            initialPaused: i || l,
+            initialPaused: r || l,
             renderItem: this.renderItem,
-            className: s()(v.smallCarousel, n),
-            themedPagination: r,
+            className: o()(b.smallCarousel, n),
+            themedPagination: a,
             onIntentionalChange: this.handleIntentionalChange,
             onChangeItem: this.handleChangeItem
         });
     }
     constructor(...e) {
         super(...e),
-            f(this, 'state', {
+            x(this, 'state', {
                 hasInteracted: !1,
                 isVideoPlaying: !1,
                 isMuted: !0,
@@ -140,87 +185,87 @@ class E extends (i = r.PureComponent) {
                 status: new Map(),
                 imageLoadingStartTime: new Map()
             }),
-            f(this, 'handlePlay', (e) => {
+            x(this, 'handlePlay', (e) => {
                 this.setState({
                     isVideoPlaying: !0,
                     hasInteracted: !e
                 });
             }),
-            f(this, 'handleVolumeChange', (e) => {
+            x(this, 'handleVolumeChange', (e) => {
                 this.setState({
                     volume: e,
                     hasInteracted: !0
                 });
             }),
-            f(this, 'handleMute', (e) => {
+            x(this, 'handleMute', (e) => {
                 this.setState({
                     isMuted: e,
                     hasInteracted: !0
                 });
             }),
-            f(this, 'handleChangeItem', (e) => {
-                this.setState({ isVideoPlaying: !1 }), e.type === x.s9s.IMG && this.setState({ imageLoadingStartTime: new Map(this.state.imageLoadingStartTime).set(e.src, Date.now()) });
+            x(this, 'handleChangeItem', (e) => {
+                this.setState({ isVideoPlaying: !1 }), e.type === _.s9s.IMG && this.setState({ imageLoadingStartTime: new Map(this.state.imageLoadingStartTime).set(e.src, Date.now()) });
             }),
-            f(this, 'handleIntentionalChange', (e, t, n, i) => {
+            x(this, 'handleIntentionalChange', (e, t, n, r) => {
                 this.setState({ hasInteracted: !0 });
-                let { onIntentionalChange: a } = this.props;
-                null != a && a(e, t, n, i);
+                let { onIntentionalChange: i } = this.props;
+                null != i && i(e, t, n, r);
             }),
-            f(this, 'handleOnErrorImg', (e) => {
+            x(this, 'handleOnErrorImg', (e) => {
                 this.setState({ status: new Map(this.state.status).set(e.target.src, 'errored') });
             }),
-            f(this, 'handleOnLoadImg', (e) => {
+            x(this, 'handleOnLoadImg', (e) => {
                 let { onImageLoad: t } = this.props;
                 this.setState({ status: new Map(this.state.status).set(e.target.src, 'loaded') });
                 let n = this.state.imageLoadingStartTime.get(e.target.src),
-                    i = null != n ? Date.now() - n : void 0;
+                    r = null != n ? Date.now() - n : void 0;
                 null == t ||
                     t({
                         src: e.target.src,
-                        loadTimeMs: i
+                        loadTimeMs: r
                     });
             }),
-            f(this, 'renderItem', (e, t) => {
+            x(this, 'renderItem', (e, t) => {
                 let n;
-                let { isMuted: i, volume: r } = this.state,
+                let { isMuted: r, volume: a } = this.state,
                     { videoAutoPlay: l } = this.props;
                 switch (e.type) {
-                    case x.s9s.YOUTUBE_VIDEO:
-                    case x.s9s.VIDEO:
-                        n = (0, a.jsx)(N, {
+                    case _.s9s.YOUTUBE_VIDEO:
+                    case _.s9s.VIDEO:
+                        n = (0, i.jsx)(S, {
                             item: e,
                             onPlay: this.handlePlay,
-                            isMuted: i,
-                            volume: r,
+                            isMuted: r,
+                            volume: a,
                             onVolumeChange: this.handleVolumeChange,
                             onMute: this.handleMute,
                             autoPlay: l
                         });
                         break;
-                    case x.s9s.IMG:
+                    case _.s9s.IMG:
                         if ('errored' === this.state.status.get(e.src)) {
-                            let e = (0, a.jsx)(o.X6q, {
+                            let e = (0, i.jsx)(s.X6q, {
                                 variant: 'heading-xl/semibold',
-                                children: C.intl.string(C.t.UvDfMz)
+                                children: v.NW.string(v.t.UvDfMz)
                             });
-                            return (0, a.jsx)('div', {
-                                className: v.errorContainer,
+                            return (0, i.jsx)('div', {
+                                className: b.errorContainer,
                                 children: void 0 !== this.props.errorComponent ? this.props.errorComponent : e
                             });
                         }
                         {
                             var c;
-                            let t = null !== (c = e.alt) && void 0 !== c ? c : C.intl.string(C.t.X4IxWF);
-                            n = (0, a.jsxs)(a.Fragment, {
+                            let t = null !== (c = e.alt) && void 0 !== c ? c : v.NW.string(v.t.X4IxWF);
+                            n = (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    (0, a.jsx)(o.$jN, {
-                                        className: s()(v.spinner, { [v.hidden]: void 0 !== this.state.status.get(e.src) }),
-                                        type: o.$jN.Type.SPINNING_CIRCLE
+                                    (0, i.jsx)(s.$jN, {
+                                        className: o()(b.spinner, { [b.hidden]: void 0 !== this.state.status.get(e.src) }),
+                                        type: s.$jN.Type.SPINNING_CIRCLE
                                     }),
-                                    (0, a.jsx)('img', {
+                                    (0, i.jsx)('img', {
                                         onError: this.handleOnErrorImg,
                                         onLoad: this.handleOnLoadImg,
-                                        className: s()(v.smallCarouselImage, { [v.hidden]: 'loaded' !== this.state.status.get(e.src) }),
+                                        className: o()(b.smallCarouselImage, { [b.hidden]: 'loaded' !== this.state.status.get(e.src) }),
                                         src: e.src,
                                         alt: t
                                     })
@@ -231,16 +276,16 @@ class E extends (i = r.PureComponent) {
                     default:
                         throw Error('Unexpected MediaType');
                 }
-                return (0, a.jsx)(o.P3F, {
-                    className: v.smallCarouselItem,
+                return (0, i.jsx)(s.P3F, {
+                    className: b.smallCarouselItem,
                     onClick: () => this.handleCurrentItemClick(e, t),
                     children: n
                 });
             });
     }
 }
-f(E, 'defaultProps', {
+x(E, 'defaultProps', {
     paused: !1,
     videoAutoPlay: !0
 });
-let y = E;
+let A = E;

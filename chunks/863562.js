@@ -1,101 +1,130 @@
-n.d(t, { Z: () => x }), n(47120);
-var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    s = n.n(l),
-    a = n(481060),
+n.d(t, { Z: () => h }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(481060),
     o = n(700582),
     c = n(330726),
     d = n(51144),
     u = n(268350),
     m = n(419922),
-    h = n(388032),
-    g = n(475880);
-let x = (e) => {
-    let { className: t, isDisabled: l, sticker: x, canManageSticker: p } = e,
-        [_, C] = r.useState(!1),
-        [f, v] = (0, c.Z)(null, 4000),
-        N = () => {
-            (0, a.ZDy)(async () => {
-                let { default: e } = await Promise.all([n.e('93626'), n.e('3136')]).then(n.bind(n, 136735));
+    p = n(388032),
+    g = n(948788);
+let h = (e) => {
+    let { className: t, isDisabled: s, sticker: h, canManageSticker: f } = e,
+        [b, x] = i.useState(!1),
+        [j, N] = (0, c.Z)(null, 4000),
+        v = () => {
+            (0, l.ZDy)(async () => {
+                let { default: e } = await Promise.all([n.e('93626'), n.e('13027')]).then(n.bind(n, 136735));
                 return (t) =>
-                    (0, i.jsx)(e, {
-                        sticker: x,
-                        guildId: x.guild_id,
-                        ...t
-                    });
+                    (0, r.jsx)(
+                        e,
+                        (function (e) {
+                            for (var t = 1; t < arguments.length; t++) {
+                                var n = null != arguments[t] ? arguments[t] : {},
+                                    r = Object.keys(n);
+                                'function' == typeof Object.getOwnPropertySymbols &&
+                                    (r = r.concat(
+                                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                        })
+                                    )),
+                                    r.forEach(function (t) {
+                                        var r;
+                                        (r = n[t]),
+                                            t in e
+                                                ? Object.defineProperty(e, t, {
+                                                      value: r,
+                                                      enumerable: !0,
+                                                      configurable: !0,
+                                                      writable: !0
+                                                  })
+                                                : (e[t] = r);
+                                    });
+                            }
+                            return e;
+                        })(
+                            {
+                                sticker: h,
+                                guildId: h.guild_id
+                            },
+                            t
+                        )
+                    );
             });
         },
-        j = async () => {
-            v(null), C(!0);
+        _ = async () => {
+            N(null), x(!0);
             try {
-                await (0, u.Um)(x);
+                await (0, u.Um)(h);
             } catch (e) {
-                v(e.body.message), C(!1);
+                N(e.body.message), x(!1);
             }
         },
-        I = d.ZP.useUserTag(x.user);
-    return (0, i.jsx)(a.ua7, {
-        color: a.ua7.Colors.RED,
-        forceOpen: null != f,
-        text: f,
+        O = d.ZP.useUserTag(h.user);
+    return (0, r.jsx)(l.ua7, {
+        color: l.ua7.Colors.RED,
+        forceOpen: null != j,
+        text: j,
         children: () =>
-            (0, i.jsxs)('div', {
-                className: s()(g.wrapper, t, { [g.wrapperDisabled]: l }),
+            (0, r.jsxs)('div', {
+                className: a()(g.wrapper, t, { [g.wrapperDisabled]: s }),
                 children: [
-                    (0, i.jsxs)('div', {
-                        className: s()(g.content, { [g.contentRemoving]: _ }),
+                    (0, r.jsxs)('div', {
+                        className: a()(g.content, { [g.contentRemoving]: b }),
                         children: [
-                            (0, i.jsx)(m.ZP, {
+                            (0, r.jsx)(m.ZP, {
                                 className: g.sticker,
                                 size: 72,
-                                sticker: x
+                                sticker: h
                             }),
-                            (0, i.jsxs)('div', {
+                            (0, r.jsxs)('div', {
                                 children: [
-                                    (0, i.jsx)(a.Text, {
+                                    (0, r.jsx)(l.Text, {
                                         color: 'header-primary',
                                         variant: 'text-xs/semibold',
                                         className: g.stickerName,
-                                        children: x.name
+                                        children: h.name
                                     }),
-                                    null != x.user &&
-                                        (0, i.jsxs)('div', {
+                                    null != h.user &&
+                                        (0, r.jsxs)('div', {
                                             className: g.user,
                                             children: [
-                                                (0, i.jsx)(o.Z, {
+                                                (0, r.jsx)(o.Z, {
                                                     className: g.userAvatar,
-                                                    size: a.EFr.SIZE_16,
-                                                    user: x.user
+                                                    size: l.EFr.SIZE_16,
+                                                    user: h.user
                                                 }),
-                                                (0, i.jsx)(a.Text, {
+                                                (0, r.jsx)(l.Text, {
                                                     color: 'header-secondary',
                                                     variant: 'text-xs/normal',
-                                                    children: I
+                                                    children: O
                                                 })
                                             ]
                                         })
                                 ]
                             }),
-                            p
-                                ? (0, i.jsxs)('div', {
+                            f
+                                ? (0, r.jsxs)('div', {
                                       className: g.actions,
                                       children: [
-                                          (0, i.jsx)(a.P3F, {
+                                          (0, r.jsx)(l.P3F, {
                                               className: g.action,
-                                              onClick: N,
-                                              'aria-label': h.intl.string(h.t.bt75u7),
-                                              children: (0, i.jsx)(a.vdY, {
+                                              onClick: v,
+                                              'aria-label': p.NW.string(p.t.bt75u7),
+                                              children: (0, r.jsx)(l.vdY, {
                                                   size: 'xs',
                                                   color: 'currentColor',
                                                   className: g.icon
                                               })
                                           }),
-                                          (0, i.jsx)(a.P3F, {
-                                              className: s()(g.action, g.actionRemove),
-                                              onClick: j,
-                                              'aria-label': h.intl.string(h.t.N86XcH),
-                                              children: (0, i.jsx)(a.Dio, {
+                                          (0, r.jsx)(l.P3F, {
+                                              className: a()(g.action, g.actionRemove),
+                                              onClick: _,
+                                              'aria-label': p.NW.string(p.t.N86XcH),
+                                              children: (0, r.jsx)(l.Dio, {
                                                   size: 'md',
                                                   color: 'currentColor',
                                                   className: g.icon
@@ -106,7 +135,7 @@ let x = (e) => {
                                 : null
                         ]
                     }),
-                    _ && (0, i.jsx)(a.$jN, { className: g.spinner })
+                    b && (0, r.jsx)(l.$jN, { className: g.spinner })
                 ]
             })
     });

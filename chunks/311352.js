@@ -1,55 +1,83 @@
-n.d(t, { Z: () => Z });
-var i = n(200651);
+n.d(t, { Z: () => j });
+var r = n(200651);
 n(192379);
-var l = n(399606),
-    r = n(704215),
-    a = n(481060),
-    o = n(239091),
+var i = n(399606),
+    l = n(704215),
+    o = n(481060),
+    a = n(239091),
     s = n(765585),
     c = n(870569),
-    d = n(819640),
-    u = n(556296),
-    h = n(13140),
-    p = n(924557),
-    m = n(435064),
+    u = n(819640),
+    d = n(556296),
+    p = n(13140),
+    h = n(924557),
+    f = n(435064),
     g = n(39604),
-    f = n(981631),
-    _ = n(388032),
-    v = n(804999);
-function C(e) {
-    (0, o.jW)(e, async () => {
+    m = n(981631),
+    b = n(388032),
+    v = n(64960);
+function y(e) {
+    (0, a.jW)(e, async () => {
         let { default: e } = await n.e('21960').then(n.bind(n, 999466));
-        return (t) => (0, i.jsx)(e, { ...t });
+        return (t) =>
+            (0, r.jsx)(
+                e,
+                (function (e) {
+                    for (var t = 1; t < arguments.length; t++) {
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            r = Object.keys(n);
+                        'function' == typeof Object.getOwnPropertySymbols &&
+                            (r = r.concat(
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                })
+                            )),
+                            r.forEach(function (t) {
+                                var r;
+                                (r = n[t]),
+                                    t in e
+                                        ? Object.defineProperty(e, t, {
+                                              value: r,
+                                              enumerable: !0,
+                                              configurable: !0,
+                                              writable: !0
+                                          })
+                                        : (e[t] = r);
+                            });
+                    }
+                    return e;
+                })({}, t)
+            );
     });
 }
-function x() {
+function _() {
     (0, g.C1)();
 }
-let I = (e) => {
+let O = (e) => {
         let { keybindString: t, children: n } = e,
-            l = (e, t) => {
+            i = (e, t) => {
                 e.stopPropagation(), e.preventDefault(), null == t || t();
             };
-        return (0, i.jsx)(a.yRy, {
+        return (0, r.jsx)(o.yRy, {
             shouldShow: !1,
             position: 'top',
             align: 'center',
             renderPopout: (e) => {
                 let { closePopout: n } = e;
-                return (0, i.jsx)(s.Z, {
-                    dismissibleContent: r.z.CLIPS_ONBOARDING_CLIP_BUTTON_COACHMARK,
+                return (0, r.jsx)(s.Z, {
+                    dismissibleContent: l.z.CLIPS_ONBOARDING_CLIP_BUTTON_COACHMARK,
                     shouldUseHorizontalButtons: !0,
                     inlineArt: !0,
                     artClassName: v.clipsEducationArt,
                     position: 'top',
-                    header: (0, i.jsx)('div', {
+                    header: (0, r.jsx)('div', {
                         className: v.header,
-                        children: _.intl.format(_.t['o+srEx'], {
+                        children: b.NW.format(b.t['o+srEx'], {
                             keybind: t,
                             keybindHook: () =>
-                                (0, i.jsx)('span', {
+                                (0, r.jsx)('span', {
                                     className: v.keybindHintKeys,
-                                    children: (0, i.jsx)(a.M2$, {
+                                    children: (0, r.jsx)(o.M2$, {
                                         className: v.keybindShortcut,
                                         shortcut: t
                                     })
@@ -57,14 +85,14 @@ let I = (e) => {
                         })
                     }),
                     headerClassName: v.clipsEducationHeader,
-                    body: (0, i.jsx)(i.Fragment, {
-                        children: (0, i.jsx)(a.Text, {
+                    body: (0, r.jsx)(r.Fragment, {
+                        children: (0, r.jsx)(o.Text, {
                             variant: 'text-sm/normal',
                             color: 'always-white',
                             className: v.bodyText,
-                            children: _.intl.format(_.t.DWeRm5, {
+                            children: b.NW.format(b.t.DWeRm5, {
                                 keybindHook: () =>
-                                    (0, i.jsx)('div', {
+                                    (0, r.jsx)('div', {
                                         className: v.keyCombo,
                                         children: t
                                     }),
@@ -73,31 +101,31 @@ let I = (e) => {
                         })
                     }),
                     onClose: (e) => {
-                        l(e, n);
+                        i(e, n);
                     }
                 });
             },
             children: () => n
         });
     },
-    Z = () => {
-        let e = (0, l.e7)([d.Z], () => d.Z.hasLayers()),
-            t = (0, p.Go)(),
-            { clipsEnabled: n, isAtMaxSavingClipsOperations: r } = (0, l.cj)([m.Z], () => ({
-                clipsEnabled: m.Z.getSettings().clipsEnabled,
-                isAtMaxSavingClipsOperations: m.Z.getIsAtMaxSaveClipOperations()
+    j = () => {
+        let e = (0, i.e7)([u.Z], () => u.Z.hasLayers()),
+            t = (0, h.Go)(),
+            { clipsEnabled: n, isAtMaxSavingClipsOperations: l } = (0, i.cj)([f.Z], () => ({
+                clipsEnabled: f.Z.getSettings().clipsEnabled,
+                isAtMaxSavingClipsOperations: f.Z.getIsAtMaxSaveClipOperations()
             })),
-            o = (0, l.e7)([u.ZP], () => u.ZP.getKeybindForAction(f.kg4.SAVE_CLIP));
-        if (!(t && n) || null == o || e) return null;
-        let s = h.BB(o.shortcut, !0);
-        return (0, i.jsx)(I, {
+            a = (0, i.e7)([d.ZP], () => d.ZP.getKeybindForAction(m.kg4.SAVE_CLIP));
+        if (!(t && n) || null == a || e) return null;
+        let s = p.BB(a.shortcut, !0);
+        return (0, r.jsx)(O, {
             keybindString: s,
-            children: (0, i.jsx)(c.Z, {
-                disabled: r,
-                tooltipText: null != o ? _.intl.formatToPlainString(_.t.HIMcv7, { hotkey: h.BB(null == o ? void 0 : o.shortcut, !0) }) : _.intl.string(_.t.s52pjo),
-                onClick: x,
-                onContextMenu: C,
-                icon: a.AlX
+            children: (0, r.jsx)(c.Z, {
+                disabled: l,
+                tooltipText: null != a ? b.NW.formatToPlainString(b.t.HIMcv7, { hotkey: p.BB(null == a ? void 0 : a.shortcut, !0) }) : b.NW.string(b.t.s52pjo),
+                onClick: _,
+                onContextMenu: y,
+                icon: o.AlX
             })
         });
     };

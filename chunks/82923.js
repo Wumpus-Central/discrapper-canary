@@ -1,6 +1,8 @@
-n.d(t, { Z: () => c }), n(47120);
-var i = n(748780);
-function r(e, t, n) {
+n.d(t, { Z: () => m }), n(47120);
+var r,
+    i,
+    s = n(748780);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -13,7 +15,23 @@ function r(e, t, n) {
         e
     );
 }
-class l {
+function l(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                a(e, t, n[t]);
+            });
+    }
+    return e;
+}
+class o {
     start() {
         return new Promise((e) => {
             this.animation.start(() => {
@@ -25,10 +43,10 @@ class l {
         this.animation.stop();
     }
     constructor(e) {
-        r(this, 'animation', void 0), (this.animation = e);
+        a(this, 'animation', void 0), (this.animation = e);
     }
 }
-class s {
+class c {
     _map(e) {
         return this.animations.map(e);
     }
@@ -39,10 +57,10 @@ class s {
         this._map((e) => e.stop());
     }
     constructor(e) {
-        r(this, 'animations', void 0), (this.animations = e);
+        a(this, 'animations', void 0), (this.animations = e);
     }
 }
-class a {
+class d {
     async start() {
         for (let e of ((this.stopped = !1), this.animations)) {
             if (this.stopped) return;
@@ -53,24 +71,39 @@ class a {
         (this.stopped = !0), this.animations.map((e) => e.stop());
     }
     constructor(e) {
-        r(this, 'animations', void 0), r(this, 'stopped', !1), (this.animations = e);
+        a(this, 'animations', void 0), a(this, 'stopped', !1), (this.animations = e);
     }
 }
-function o(e, t, n) {
-    return new l(n(e, { ...t }));
+function u(e, t, n) {
+    return new o(n(e, l({}, t)));
 }
-let c = {
-    ...i.Z,
-    timing: function (e, t) {
-        return o(e, t, i.Z.timing);
-    },
-    spring: function (e, t) {
-        return o(e, t, i.Z.spring);
-    },
-    parallel: function (e) {
-        return new s(e);
-    },
-    sequence: function (e) {
-        return new a(e);
-    }
-};
+let m =
+    ((r = l({}, s.Z)),
+    (i = i =
+        {
+            timing: function (e, t) {
+                return u(e, t, s.Z.timing);
+            },
+            spring: function (e, t) {
+                return u(e, t, s.Z.spring);
+            },
+            parallel: function (e) {
+                return new c(e);
+            },
+            sequence: function (e) {
+                return new d(e);
+            }
+        }),
+    Object.getOwnPropertyDescriptors
+        ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
+        : (function (e, t) {
+              var n = Object.keys(e);
+              if (Object.getOwnPropertySymbols) {
+                  var r = Object.getOwnPropertySymbols(e);
+                  n.push.apply(n, r);
+              }
+              return n;
+          })(Object(i)).forEach(function (e) {
+              Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
+          }),
+    r);

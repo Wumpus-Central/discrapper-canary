@@ -1,69 +1,70 @@
 n.d(t, {
     FW: () => N,
-    Kt: () => C,
+    Kt: () => O,
     ZC: () => v
 }),
+    n(230036),
     n(47120);
-var i = n(442837),
-    l = n(493683),
-    r = n(122613),
-    a = n(983695),
-    s = n(100527),
-    o = n(87005),
-    d = n(895924),
-    c = n(812236),
-    u = n(740492),
-    h = n(973616),
-    m = n(592125),
-    p = n(626135),
-    g = n(823379),
-    _ = n(728345),
-    f = n(812206),
-    E = n(835473),
-    I = n(981631);
-async function C(e, t, n) {
+var r = n(442837),
+    i = n(493683),
+    l = n(122613),
+    o = n(983695),
+    a = n(100527),
+    s = n(87005),
+    c = n(895924),
+    u = n(812236),
+    d = n(740492),
+    p = n(973616),
+    h = n(592125),
+    g = n(626135),
+    f = n(823379),
+    m = n(728345),
+    b = n(812206),
+    _ = n(835473),
+    E = n(981631);
+async function O(e, t, n) {
     t(e.id);
-    let i = e.bot;
-    if (null == i)
+    let r = e.bot;
+    if (null == r)
         try {
-            var a, o, u;
-            i = null !== (u = null === (a = f.Z.getApplication(e.id)) || void 0 === a ? void 0 : a.bot) && void 0 !== u ? u : null === (o = h.ZP.createFromServer(await (0, _.UM)(e.id))) || void 0 === o ? void 0 : o.bot;
+            var o, s, d;
+            r = null !== (d = null === (o = b.Z.getApplication(e.id)) || void 0 === o ? void 0 : o.bot) && void 0 !== d ? d : null === (s = p.ZP.createFromServer(await (0, m.UM)(e.id))) || void 0 === s ? void 0 : s.bot;
         } catch (e) {
             t(void 0);
             return;
         }
-    if (null != i) {
-        let a;
-        let o = null == m.Z.getDMFromUserId(i.id);
+    if (null != r) {
+        let o;
+        let s = null == h.Z.getDMFromUserId(r.id);
         try {
-            a = await l.Z.openPrivateChannel([i.id], !1, !1, s.Z.APP_DMS_QUICK_LAUNCHER);
+            o = await i.Z.openPrivateChannel([r.id], !1, !1, a.Z.APP_DMS_QUICK_LAUNCHER);
         } catch (e) {
             t(void 0);
         }
         if (
-            (p.default.track(I.rMx.APP_DMS_QUICK_LAUNCHER_CLICKED, {
+            (g.default.track(E.rMx.APP_DMS_QUICK_LAUNCHER_CLICKED, {
                 application_id: e.id,
-                is_new_dm: o,
-                channel_id: a
+                is_new_dm: s,
+                channel_id: o
             }),
-            null == a)
+            null == o)
         ) {
             t(void 0);
             return;
         }
         try {
-            await (0, c.ZP)(a, e.id);
+            await (0, u.ZP)(o, e.id);
         } catch (e) {
-            if (e.message === c.sV) {
+            if (e.message === u.sV) {
                 t(void 0);
                 return;
             }
         }
-        await (0, r.Z)({
+        await (0, l.Z)({
             targetApplicationId: e.id,
-            channelId: a,
+            channelId: o,
             analyticsLocations: n,
-            commandOrigin: d.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON,
+            commandOrigin: c.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON,
             onExecutedCallback() {
                 t(void 0);
             }
@@ -71,12 +72,12 @@ async function C(e, t, n) {
     } else t(void 0);
 }
 function N() {
-    let e = (0, i.e7)([u.ZP], () => u.ZP.showPlayAgain),
+    let e = (0, r.e7)([d.ZP], () => d.ZP.showPlayAgain),
         t = v();
     return e && t.length > 0;
 }
 function v() {
-    let e = (0, o.f)({
+    let e = (0, s.f)({
             context: { type: 'contextless' },
             onlyActivityApps: !0,
             allowCommandFetch: !0,
@@ -84,14 +85,14 @@ function v() {
         }).frecentApps,
         t = e.map((e) => e.id).sort(),
         n = new Map(
-            (0, E.Z)(t)
-                .filter(g.lm)
+            (0, _.Z)(t)
+                .filter(f.lm)
                 .map((e) => [e.id, e])
         );
     return e
         .map((e) => n.get(e.id))
         .filter((e) => {
             var t;
-            return (0, a.Z)(null == e ? void 0 : null === (t = e.embeddedActivityConfig) || void 0 === t ? void 0 : t.supported_platforms);
+            return (0, o.Z)(null == e ? void 0 : null === (t = e.embeddedActivityConfig) || void 0 === t ? void 0 : t.supported_platforms);
         });
 }

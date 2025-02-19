@@ -1,71 +1,100 @@
-n.d(t, { Z: () => T });
-var i = n(200651);
+n.d(t, { Z: () => I });
+var r = n(200651);
 n(192379);
-var r = n(392711),
-    a = n(481060),
-    s = n(570140),
-    o = n(846027),
+var i = n(392711),
+    o = n(481060),
+    a = n(570140),
+    s = n(846027),
     l = n(872810),
-    u = n(695346),
-    c = n(199902),
+    c = n(695346),
+    u = n(199902),
     d = n(314897),
     f = n(650774),
-    _ = n(19780),
-    p = n(594174),
+    p = n(19780),
+    _ = n(594174),
     h = n(449753),
     m = n(569545),
     g = n(960861),
     E = n(803647),
     v = n(70722),
-    y = n(981631);
-let I = (0, r.debounce)(l.xc, 1000),
-    T = {
+    b = n(981631);
+function y(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function O(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                y(e, t, n[t]);
+            });
+    }
+    return e;
+}
+let S = (0, i.debounce)(l.xc, 1000),
+    I = {
         init() {
             h.Z.init(),
                 g.ZP.initializeIfNeeded(),
-                s.Z.subscribe('MEDIA_ENGINE_VIDEO_STATE_CHANGED', (e) => {
+                a.Z.subscribe('MEDIA_ENGINE_VIDEO_STATE_CHANGED', (e) => {
                     let { videoState: t } = e,
-                        n = c.Z.getCurrentUserActiveStream();
+                        n = u.Z.getCurrentUserActiveStream();
                     if (null != n) {
-                        let e = t === y.FQ1.PAUSED;
+                        let e = t === b.FQ1.PAUSED;
                         (0, l.tK)(n, e);
                     }
                 }),
-                s.Z.subscribe('STREAM_DELETE', (e) => {
-                    e.reason === y.si2.STREAM_FULL &&
+                a.Z.subscribe('STREAM_DELETE', (e) => {
+                    e.reason === b.si2.STREAM_FULL &&
                         ((0, l.aP)(e.streamKey, !1),
-                        (0, a.ZDy)(async () => {
+                        (0, o.ZDy)(async () => {
                             let { default: e } = await n.e('63757').then(n.bind(n, 309690));
-                            return (t) => (0, i.jsx)(e, { ...t });
+                            return (t) => (0, r.jsx)(e, O({}, t));
                         }));
                 }),
-                s.Z.subscribe('STREAM_WATCH', (e) => {
+                a.Z.subscribe('STREAM_WATCH', (e) => {
                     let { streamKey: t, allowMultiple: n } = e;
                     if (n) return;
-                    let i = (0, m.my)(t);
-                    c.Z.getAllActiveStreams().forEach((e) => {
-                        e.ownerId !== i.ownerId && e.ownerId !== d.default.getId() && (e.ownerId === d.default.getId() && o.Z.setGoLiveSource(null), (0, l.aP)((0, m.V9)(e), !1));
+                    let r = (0, m.my)(t);
+                    u.Z.getAllActiveStreams().forEach((e) => {
+                        e.ownerId !== r.ownerId && e.ownerId !== d.default.getId() && (e.ownerId === d.default.getId() && s.Z.setGoLiveSource(null), (0, l.aP)((0, m.V9)(e), !1));
                     });
                 }),
-                s.Z.subscribe('VOICE_STATE_UPDATES', (e) => {
+                a.Z.subscribe('VOICE_STATE_UPDATES', (e) => {
                     let { voiceStates: t } = e;
                     t.forEach((e) => {
                         let { userId: t } = e;
                         if (t !== d.default.getId()) return;
-                        let n = c.Z.getAllActiveStreams(),
-                            i = _.Z.getChannelId();
+                        let n = u.Z.getAllActiveStreams(),
+                            r = p.Z.getChannelId();
                         n.forEach((e) => {
-                            e.channelId !== i && (0, E.Z)(e, !1);
+                            e.channelId !== r && (0, E.Z)(e, !1);
                         });
                     });
                 }),
-                s.Z.subscribe('STREAM_CREATE', (e) => {
+                a.Z.subscribe('STREAM_CREATE', (e) => {
                     var t;
                     let { streamKey: n } = e,
-                        { ownerId: i, guildId: r } = (0, m.my)(n);
-                    if (null == r || null == i || i !== (null === (t = p.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) return;
-                    let a = f.Z.getMemberCount(r);
-                    null != a && !(a < 2) && !(a > v.tB) && u.eo.getSetting() && I(n);
+                        { ownerId: r, guildId: i } = (0, m.my)(n);
+                    if (null == i || null == r || r !== (null === (t = _.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) return;
+                    let o = f.Z.getMemberCount(i);
+                    null != o && !(o < 2) && !(o > v.tB) && c.eo.getSetting() && S(n);
                 });
         }
     };

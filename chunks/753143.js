@@ -1,95 +1,146 @@
 n.d(t, {
-    Z: () => l,
-    r: () => u
+    Z: () => f,
+    r: () => p
 }),
     n(411104),
     n(47120);
-var i = n(192379),
-    r = n(134158),
-    a = n(924428),
-    s = n(151973);
-let o = Object.freeze({
+var r = n(192379),
+    i = n(134158),
+    o = n(924428),
+    a = n(151973);
+function s(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function l(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                s(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function c(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function u(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : c(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let d = Object.freeze({
     spacerTop: 0,
     totalHeight: 0,
     items: [],
     isSidebarVisible: !1
 });
-function l(e) {
-    let { sections: t, sectionHeight: n, rowHeight: l, footerHeight: u, sidebarHeight: c, listHeaderHeight: d, chunkSize: f = 256, paddingTop: _ = 0, paddingBottom: p = 0, getScrollerState: h, getAnchorId: m } = e,
-        g = (0, a.Z)(),
-        E = (0, i.useRef)(o),
-        [v] = (0, i.useState)(() => new r.Z()),
+function f(e) {
+    let { sections: t, sectionHeight: n, rowHeight: s, footerHeight: c, sidebarHeight: f, listHeaderHeight: p, chunkSize: _ = 256, paddingTop: h = 0, paddingBottom: m = 0, getScrollerState: g, getAnchorId: E } = e,
+        v = (0, o.Z)(),
+        b = (0, r.useRef)(d),
+        [y] = (0, r.useState)(() => new i.Z()),
         {
-            dirty: y,
-            chunkStart: I,
-            chunkEnd: T,
-            forceUpdateOnChunkChange: b
-        } = (0, s.Z)({
-            chunkSize: f,
-            getScrollerState: h,
-            forceUpdate: g
+            dirty: O,
+            chunkStart: S,
+            chunkEnd: I,
+            forceUpdateOnChunkChange: T
+        } = (0, a.Z)({
+            chunkSize: _,
+            getScrollerState: g,
+            forceUpdate: v
         }),
-        { items: S } = E.current,
+        { items: N } = b.current,
         A = null,
-        { scrollTop: N } = h();
-    for (let e of S) {
-        if (0 === N) break;
+        { scrollTop: C } = g();
+    for (let e of N) {
+        if (0 === C) break;
         if ('footer' === e.type || 'header' === e.type || null == e.anchorId) continue;
         let t = 'row' === e.type ? e.row : void 0;
-        if (e.offsetTop >= N) {
+        if (e.offsetTop >= C) {
             A = {
                 id: e.anchorId,
                 section: e.section,
                 row: t,
-                scrollOffset: e.offsetTop - N
+                scrollOffset: e.offsetTop - C
             };
             break;
         }
     }
-    let C = (0, i.useMemo)(() => {
-            let e = Math.max(0, I * f);
-            return null != c && e < c;
-        }, [f, I, c]),
-        R = (0, i.useMemo)(
+    let R = (0, r.useMemo)(() => {
+            let e = Math.max(0, S * _);
+            return null != f && e < f;
+        }, [_, S, f]),
+        P = (0, r.useMemo)(
             () =>
-                y > 0
-                    ? E.current
-                    : (v.mergeProps({
+                O > 0
+                    ? b.current
+                    : (y.mergeProps({
                           sectionHeight: n,
-                          rowHeight: l,
-                          footerHeight: u,
-                          listHeaderHeight: d,
-                          paddingBottom: p,
-                          paddingTop: _,
+                          rowHeight: s,
+                          footerHeight: c,
+                          listHeaderHeight: p,
+                          paddingBottom: m,
+                          paddingTop: h,
                           sections: t,
-                          getAnchorId: m
+                          getAnchorId: E
                       }),
-                      v.compute(Math.max(0, I * f), T * f)),
-            [y, I, T, n, l, u, d, p, _, t, v, f, m]
+                      y.compute(Math.max(0, S * _), I * _)),
+            [O, S, I, n, s, c, p, m, h, t, y, _, E]
         );
     return (
-        (0, i.useLayoutEffect)(() => void (E.current = R)),
-        {
-            ...R,
-            listComputer: v,
-            forceUpdateOnChunkChange: b,
+        (0, r.useLayoutEffect)(() => void (b.current = P)),
+        u(l({}, P), {
+            listComputer: y,
+            forceUpdateOnChunkChange: T,
             anchor: A,
-            isSidebarVisible: C
-        }
+            isSidebarVisible: R
+        })
     );
 }
-function u(e) {
-    let { scrollerRef: t, anchor: n, getScrollerState: r, listComputer: a, getAnchorId: s, totalHeight: o } = e;
-    (0, i.useLayoutEffect)(() => {
+function p(e) {
+    let { scrollerRef: t, anchor: n, getScrollerState: i, listComputer: o, getAnchorId: a, totalHeight: s } = e;
+    (0, r.useLayoutEffect)(() => {
         let { current: e } = t,
-            { scrollTop: i } = r();
-        if (null == n || null == n.row || null == e || null == s || 0 === i) return;
-        let o = (t) => {
-            if (t < 0 || t >= a.sections[n.section] || s(n.section, n.row) !== n.id) return !1;
-            let [r] = a.computeScrollPosition(n.section, t),
-                o = r - n.scrollOffset;
-            return i !== o && (e.scrollTop = o), !0;
+            { scrollTop: r } = i();
+        if (null == n || null == n.row || null == e || null == a || 0 === r) return;
+        let s = (t) => {
+            if (t < 0 || t >= o.sections[n.section] || a(n.section, n.row) !== n.id) return !1;
+            let [i] = o.computeScrollPosition(n.section, t),
+                s = i - n.scrollOffset;
+            return r !== s && (e.scrollTop = s), !0;
         };
-        !o(n.row) && (o(n.row - 1) || o(n.row + 1));
-    }, [o]);
+        !s(n.row) && (s(n.row - 1) || s(n.row + 1));
+    }, [s]);
 }

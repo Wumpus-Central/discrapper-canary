@@ -1,38 +1,54 @@
-i.d(t, { Z: () => g }), i(47120);
-var n,
-    s = i(200651),
-    r = i(192379),
-    l = i(512722),
-    o = i.n(l),
-    a = i(442837),
-    d = i(481060),
-    c = i(893776),
-    u = i(468026),
-    f = i(594174),
-    x = i(388032);
-function h(e, t, i) {
+n.d(t, { Z: () => g }), n(47120);
+var r,
+    i = n(200651),
+    o = n(192379),
+    s = n(512722),
+    l = n.n(s),
+    c = n(442837),
+    a = n(481060),
+    u = n(893776),
+    d = n(468026),
+    f = n(594174),
+    b = n(388032);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: i,
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = i),
+            : (e[t] = n),
         e
     );
 }
-class m extends (n = r.Component) {
+function m(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                h(e, t, n[t]);
+            });
+    }
+    return e;
+}
+class p extends (r = o.Component) {
     render() {
-        let { color: e, look: t, size: i } = this.props;
-        return (0, s.jsx)(d.zxk, {
+        let { color: e, look: t, size: n } = this.props;
+        return (0, i.jsx)(a.zxk, {
             look: t,
-            size: i,
+            size: n,
             color: e,
             disabled: this.state.isSendingVerificationEmail,
             onClick: this.handleResendVerification,
-            children: x.intl.string(x.t.lm1UKi)
+            children: b.NW.string(b.t.lm1UKi)
         });
     }
     constructor(...e) {
@@ -42,31 +58,58 @@ class m extends (n = r.Component) {
                 let { currentUser: e, onClick: t } = this.props;
                 null == t || t(),
                     this.setState({ isSendingVerificationEmail: !0 }, () => {
-                        c.Z.verifyResend()
+                        u.Z.verifyResend()
                             .then(() =>
-                                (0, d.h7j)((t) =>
-                                    (0, s.jsx)(d.ConfirmModal, {
-                                        header: x.intl.string(x.t.LykQYm),
-                                        confirmText: x.intl.string(x.t.BddRzc),
-                                        confirmButtonColor: d.zxk.Colors.BRAND,
-                                        ...t,
-                                        children: (0, s.jsx)(d.Text, {
-                                            variant: 'text-md/normal',
-                                            children: x.intl.format(x.t.azKEPz, { email: e.email })
-                                        })
-                                    })
-                                )
+                                (0, a.h7j)((t) => {
+                                    var n, r;
+                                    return (0, i.jsx)(
+                                        a.ConfirmModal,
+                                        ((n = m(
+                                            {
+                                                header: b.NW.string(b.t.LykQYm),
+                                                confirmText: b.NW.string(b.t.BddRzc),
+                                                confirmButtonColor: a.zxk.Colors.BRAND
+                                            },
+                                            t
+                                        )),
+                                        (r = r =
+                                            {
+                                                children: (0, i.jsx)(a.Text, {
+                                                    variant: 'text-md/normal',
+                                                    children: b.NW.format(b.t.azKEPz, { email: e.email })
+                                                })
+                                            }),
+                                        Object.getOwnPropertyDescriptors
+                                            ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
+                                            : (function (e, t) {
+                                                  var n = Object.keys(e);
+                                                  if (Object.getOwnPropertySymbols) {
+                                                      var r = Object.getOwnPropertySymbols(e);
+                                                      n.push.apply(n, r);
+                                                  }
+                                                  return n;
+                                              })(Object(r)).forEach(function (e) {
+                                                  Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
+                                              }),
+                                        n)
+                                    );
+                                })
                             )
                             .catch((e) => {
                                 let { body: t } = e,
-                                    i = x.intl.string(x.t.XcrQNz);
-                                null != t && t.email && (i = t.email),
-                                    (0, d.h7j)((e) =>
-                                        (0, s.jsx)(u.default, {
-                                            title: x.intl.string(x.t.VbTh0N),
-                                            body: i,
-                                            ...e
-                                        })
+                                    n = b.NW.string(b.t.XcrQNz);
+                                null != t && t.email && (n = t.email),
+                                    (0, a.h7j)((e) =>
+                                        (0, i.jsx)(
+                                            d.default,
+                                            m(
+                                                {
+                                                    title: b.NW.string(b.t.VbTh0N),
+                                                    body: n
+                                                },
+                                                e
+                                            )
+                                        )
                                     );
                             })
                             .then(() => this.setState({ isSendingVerificationEmail: !1 }));
@@ -74,11 +117,11 @@ class m extends (n = r.Component) {
             });
     }
 }
-h(m, 'defaultProps', {
-    size: d.zxk.Sizes.MEDIUM,
-    color: d.zxk.Colors.BRAND
+h(p, 'defaultProps', {
+    size: a.zxk.Sizes.MEDIUM,
+    color: a.zxk.Colors.BRAND
 });
-let g = a.ZP.connectStores([f.default], () => {
+let g = c.ZP.connectStores([f.default], () => {
     let e = f.default.getCurrentUser();
-    return o()(null != e, 'ResendEmailVerificationButton: currentUser cannot be undefined'), { currentUser: e };
-})(m);
+    return l()(null != e, 'ResendEmailVerificationButton: currentUser cannot be undefined'), { currentUser: e };
+})(p);

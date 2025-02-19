@@ -1,108 +1,149 @@
-n.d(t, { Z: () => y }), n(47120);
-var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    l = n.n(r),
-    a = n(392711),
+n.d(t, { Z: () => w }), n(47120), n(266796);
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(392711),
     o = n(990547),
     c = n(399606),
     d = n(704215),
     u = n(481060),
     m = n(607070),
     g = n(213609),
-    h = n(605236),
-    x = n(706140),
-    _ = n(626135),
-    p = n(314684),
-    E = n(715627),
-    C = n(404615),
-    f = n(238108),
-    T = n(32173),
-    N = n(391110),
-    S = n(484239),
-    I = n(658370),
-    b = n(735825),
-    v = n(981631),
-    j = n(921944),
-    A = n(388032),
-    O = n(510040);
+    p = n(605236),
+    h = n(706140),
+    f = n(626135),
+    N = n(314684),
+    x = n(715627),
+    b = n(404615),
+    _ = n(238108),
+    E = n(32173),
+    j = n(391110),
+    C = n(484239),
+    O = n(658370),
+    v = n(735825),
+    S = n(981631),
+    T = n(921944),
+    I = n(388032),
+    y = n(596470);
+function A(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function P(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
 let R = {
         xMin: -80,
         xMax: 80,
         yMin: -150,
         yMax: -20
     },
-    P = s.memo((e) => {
-        let { name: t, canReveal: n = !0, dismissibleContentType: r, forceShadow: C, cardType: S, confettiCanvas: I } = e,
-            y = null == e ? void 0 : e.onCtaClick,
-            Z = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
-            [k, L] = s.useState(!1),
-            [B, M] = s.useState(!1),
-            w = (0, p.yQ)(),
-            V = (0, p.IB)(),
-            [U, G] = s.useState(!1),
-            [F, H] = s.useState((t === T.u.FREE_BOOST || t === T.u.TENURE_REWARD_COLLECTIBLE) && V && (null == w ? void 0 : w.nitroTenureStatus) === b.EB.REDEEMABLE);
-        s.useEffect(() => {
-            (t === T.u.FREE_BOOST || t === T.u.TENURE_REWARD_COLLECTIBLE) && V && (null == w ? void 0 : w.nitroTenureStatus) === b.EB.REDEEMABLE && H(!0);
-        }, [V, t, w]);
-        let z = s.useCallback(() => {
-                G(!0);
+    D = i.memo((e) => {
+        let { name: t, canReveal: n = !0, dismissibleContentType: s, forceShadow: b, cardType: C, confettiCanvas: O } = e,
+            w = null == e ? void 0 : e.onCtaClick,
+            k = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
+            [W, L] = i.useState(!1),
+            [B, M] = i.useState(!1),
+            U = (0, N.yQ)(),
+            V = (0, N.IB)(),
+            [G, F] = i.useState(!1),
+            [H, z] = i.useState((t === E.u.FREE_BOOST || t === E.u.TENURE_REWARD_COLLECTIBLE) && V && (null == U ? void 0 : U.nitroTenureStatus) === v.EB.REDEEMABLE);
+        i.useEffect(() => {
+            (t === E.u.FREE_BOOST || t === E.u.TENURE_REWARD_COLLECTIBLE) && V && (null == U ? void 0 : U.nitroTenureStatus) === v.EB.REDEEMABLE && z(!0);
+        }, [V, t, U]);
+        let Y = i.useCallback(() => {
+                F(!0);
             }, []),
-            Y = S === N.R0.CARD_CAROUSEL_FIRST_ROW || S === N.R0.CARD_CAROUSEL_SECOND_ROW || S === N.R0.CARD_CAROUSEL_THIRD_ROW,
-            W = (0, T.Z)(),
-            [K, q] = (0, x.cv)((null != r && n) || r === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI ? [r] : []);
-        s.useEffect(
+            K = C === j.R0.CARD_CAROUSEL_FIRST_ROW || C === j.R0.CARD_CAROUSEL_SECOND_ROW || C === j.R0.CARD_CAROUSEL_THIRD_ROW,
+            q = (0, E.Z)(),
+            [X, J] = (0, h.cv)((null != s && n) || s === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI ? [s] : []);
+        i.useEffect(
             () => () => {
-                K === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI && U && (0, h.EW)(K);
+                X === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI && G && (0, p.EW)(X);
             },
-            [K, U]
+            [X, G]
         ),
-            s.useEffect(() => {
-                K === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI && U && (0, h.EW)(K);
-            }, [K, U]);
-        let { easterEggLevel: X, isEasterEggTriggered: J, onHover: Q, onUnhover: $ } = (0, f.Z)(5),
-            ee = (0, a.debounce)(() => {
-                _.default.track(v.rMx.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, {
-                    card_type: (0, a.snakeCase)(t),
-                    is_tenure_reward: t === T.u.FREE_BOOST || t === T.u.TENURE_REWARD_COLLECTIBLE,
-                    reward_status: null == w ? void 0 : w.nitroTenureStatus
+            i.useEffect(() => {
+                X === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI && G && (0, p.EW)(X);
+            }, [X, G]);
+        let { easterEggLevel: Q, isEasterEggTriggered: $, onHover: ee, onUnhover: et } = (0, _.Z)(5),
+            en = (0, l.debounce)(() => {
+                f.default.track(S.rMx.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, {
+                    card_type: (0, l.snakeCase)(t),
+                    is_tenure_reward: t === E.u.FREE_BOOST || t === E.u.TENURE_REWARD_COLLECTIBLE,
+                    reward_status: null == U ? void 0 : U.nitroTenureStatus
                 });
             }, 800),
-            et = (0, a.debounce)(() => {
-                null != y &&
-                    _.default.track(v.rMx.PERK_DISCOVERABILITY_CARD_CTA_CLICKED, {
-                        card_type: (0, a.snakeCase)(t),
-                        function_name: (0, a.snakeCase)(y.name)
+            er = (0, l.debounce)(() => {
+                null != w &&
+                    f.default.track(S.rMx.PERK_DISCOVERABILITY_CARD_CTA_CLICKED, {
+                        card_type: (0, l.snakeCase)(t),
+                        function_name: (0, l.snakeCase)(w.name)
                     });
             }, 800),
-            en = s.useRef(null);
-        e = {
-            onMouseEnter: ee,
-            ...e,
+            ei = i.useRef(null);
+        e = P(A({ onMouseEnter: en }, e), {
             onCtaClick:
-                null != y
+                null != w
                     ? () => {
-                          null == y || y(), et();
+                          null == w || w(), er();
                       }
                     : void 0
-        };
-        let ei = K !== r || null == r || B || r === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI;
-        return (s.useEffect(() => {
-            Z && k && (M(!0), _.default.track(v.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != r && q(j.L.TAKE_ACTION));
-        }, [Z, k, r, t, q]),
+        });
+        let es = X !== s || null == s || B || s === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI;
+        return (i.useEffect(() => {
+            k && W && (M(!0), f.default.track(S.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != s && J(T.L.TAKE_ACTION));
+        }, [k, W, s, t, J]),
         (0, g.Z)(
             {
                 type: o.ImpressionTypes.VIEW,
                 name: o.ImpressionNames.PREMIUM_MARKETING_TENURE_REWARD_CARD,
                 properties: {
-                    user_tenure_reward_id: null == w ? void 0 : w.tenureRewardStatusId,
-                    tenure_reward_id: null == w ? void 0 : w.tenureRewardSkuId,
-                    reward_type: null == w ? void 0 : w.tenureRewardType,
-                    redeemable_at: null == w ? void 0 : w.redeemableAt,
-                    reward_status: null == w ? void 0 : w.nitroTenureStatus
+                    user_tenure_reward_id: null == U ? void 0 : U.tenureRewardStatusId,
+                    tenure_reward_id: null == U ? void 0 : U.tenureRewardSkuId,
+                    reward_type: null == U ? void 0 : U.tenureRewardType,
+                    redeemable_at: null == U ? void 0 : U.redeemableAt,
+                    reward_status: null == U ? void 0 : U.nitroTenureStatus
                 }
             },
-            { disableTrack: (t !== T.u.FREE_BOOST && t !== T.u.TENURE_REWARD_COLLECTIBLE) || null == w }
+            { disableTrack: (t !== E.u.FREE_BOOST && t !== E.u.TENURE_REWARD_COLLECTIBLE) || null == U }
         ),
         (0, g.Z)({
             type: o.ImpressionTypes.VIEW,
@@ -110,170 +151,152 @@ let R = {
             properties: { name: t }
         }),
         n)
-            ? t === T.u.UPCOMING_DROP_UNTIMED
-                ? (0, i.jsx)('div', {
-                      className: l()(O.flipCardContainer, { [O.forceShadow]: C }),
-                      onMouseEnter: Q,
-                      onFocus: Q,
-                      onMouseLeave: $,
-                      onBlur: $,
-                      children: (0, i.jsxs)('div', {
-                          className: l()(O.flipCard, {
-                              [O.partialFlipCard]: !J,
-                              [O.ultraFlipCard]: J,
-                              [O.rotateCard]: J && 3 === X,
-                              [O.reducedMotion]: Z
+            ? t === E.u.UPCOMING_DROP_UNTIMED
+                ? (0, r.jsx)('div', {
+                      className: a()(y.flipCardContainer, { [y.forceShadow]: b }),
+                      onMouseEnter: ee,
+                      onFocus: ee,
+                      onMouseLeave: et,
+                      onBlur: et,
+                      children: (0, r.jsxs)('div', {
+                          className: a()(y.flipCard, {
+                              [y.partialFlipCard]: !$,
+                              [y.ultraFlipCard]: $,
+                              [y.rotateCard]: $ && 3 === Q,
+                              [y.reducedMotion]: k
                           }),
                           children: [
-                              (0, i.jsx)('div', {
-                                  className: O.flipCardFront,
-                                  children: (0, i.jsx)(D, {
-                                      ...e,
-                                      className: O.topCover
-                                  })
+                              (0, r.jsx)('div', {
+                                  className: y.flipCardFront,
+                                  children: (0, r.jsx)(Z, P(A({}, e), { className: y.topCover }))
                               }),
-                              (0, i.jsx)('div', {
-                                  className: O.flipCardBack,
-                                  children: (0, i.jsx)(D, {
-                                      ...e,
-                                      className: O.topCover
-                                  })
+                              (0, r.jsx)('div', {
+                                  className: y.flipCardBack,
+                                  children: (0, r.jsx)(Z, P(A({}, e), { className: y.topCover }))
                               })
                           ]
                       })
                   })
-                : ei
-                  ? (0, i.jsx)(i.Fragment, {
-                        children: (0, i.jsxs)('div', {
-                            className: l()({
-                                [O.noFlipCardContainer]: !Y,
-                                [O.noFlipCardContainerCarousel]: Y,
-                                [O.forceShadow]: C,
-                                [O.reducedMotion]: Z
+                : es
+                  ? (0, r.jsx)(r.Fragment, {
+                        children: (0, r.jsxs)('div', {
+                            className: a()({
+                                [y.noFlipCardContainer]: !K,
+                                [y.noFlipCardContainerCarousel]: K,
+                                [y.forceShadow]: b,
+                                [y.reducedMotion]: k
                             }),
                             children: [
-                                (0, i.jsx)(D, {
-                                    ...e,
-                                    ref: t === T.u.FREE_BOOST || t === T.u.TENURE_REWARD_COLLECTIBLE ? en : void 0
-                                }),
-                                F &&
-                                    (0, i.jsx)(E.Z, {
+                                (0, r.jsx)(Z, P(A({}, e), { ref: t === E.u.FREE_BOOST || t === E.u.TENURE_REWARD_COLLECTIBLE ? ei : void 0 })),
+                                H &&
+                                    (0, r.jsx)(x.Z, {
                                         speedValues: R,
                                         numBursts: 3,
                                         particlesPerBurst: 15,
-                                        confettiTarget: en.current,
+                                        confettiTarget: ei.current,
                                         offsetXPercentageMax: -30,
                                         offsetXPercentageMin: -70,
                                         offsetYPercentageMax: 40,
                                         offsetYPercentageMin: 20,
-                                        customConfettiCanvas: I,
+                                        customConfettiCanvas: O,
                                         dragCoefficientValue: 0.0166,
-                                        onAnimationEnd: z
+                                        onAnimationEnd: Y
                                     })
                             ]
                         })
                     })
-                  : (0, i.jsx)('div', {
-                        className: l()(O.flipCardContainer, { [O.forceShadow]: C }),
-                        children: (0, i.jsxs)(u.P3F, {
+                  : (0, r.jsx)('div', {
+                        className: a()(y.flipCardContainer, { [y.forceShadow]: b }),
+                        children: (0, r.jsxs)(u.P3F, {
                             onClick: () => L(!0),
-                            className: l()(O.flipCard, O.clickable, {
-                                [O.flipped]: k,
-                                [O.partialFlipCard]: !B && !k,
-                                [O.reducedMotion]: Z
+                            className: a()(y.flipCard, y.clickable, {
+                                [y.flipped]: W,
+                                [y.partialFlipCard]: !B && !W,
+                                [y.reducedMotion]: k
                             }),
                             onTransitionEnd: (e) => {
-                                k && 'transform' === e.propertyName && e.target.classList.contains(O.flipCard) && (M(!0), _.default.track(v.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != r && q(j.L.TAKE_ACTION));
+                                W && 'transform' === e.propertyName && e.target.classList.contains(y.flipCard) && (M(!0), f.default.track(S.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != s && J(T.L.TAKE_ACTION));
                             },
                             children: [
-                                (0, i.jsx)('div', {
-                                    className: O.flipCardHidden,
+                                (0, r.jsx)('div', {
+                                    className: y.flipCardHidden,
                                     'aria-hidden': !0,
-                                    children: (0, i.jsx)(D, { ...e })
+                                    children: (0, r.jsx)(Z, A({}, e))
                                 }),
-                                (0, i.jsx)('div', {
-                                    className: O.flipCardFront,
-                                    children: (0, i.jsx)(D, {
-                                        ...W.upcomingDropUntimed,
-                                        pillText: ''
-                                    })
+                                (0, r.jsx)('div', {
+                                    className: y.flipCardFront,
+                                    children: (0, r.jsx)(Z, P(A({}, q.upcomingDropUntimed), { pillText: '' }))
                                 }),
-                                (0, i.jsx)('div', {
-                                    className: O.flipCardBack,
-                                    children: (0, i.jsx)(D, {
-                                        ...e,
-                                        description: ''
-                                    })
+                                (0, r.jsx)('div', {
+                                    className: y.flipCardBack,
+                                    children: (0, r.jsx)(Z, P(A({}, e), { description: '' }))
                                 }),
-                                (0, i.jsx)('div', {
-                                    className: O.flipCardButtonContainer,
-                                    children: (0, i.jsx)(u.zxk, {
+                                (0, r.jsx)('div', {
+                                    className: y.flipCardButtonContainer,
+                                    children: (0, r.jsx)(u.zxk, {
                                         onClick: () => L(!0),
-                                        children: A.intl.string(A.t.dcztdX)
+                                        children: I.NW.string(I.t.dcztdX)
                                     })
                                 })
                             ]
                         })
                     })
-            : (0, i.jsx)(P, {
-                  ...W.upcomingDropUntimed,
-                  forceShadow: C
-              });
+            : (0, r.jsx)(D, P(A({}, q.upcomingDropUntimed), { forceShadow: b }));
     });
-P.displayName = 'PerkDiscoverabilityCard';
-let D = s.forwardRef((e, t) => {
+D.displayName = 'PerkDiscoverabilityCard';
+let Z = i.forwardRef((e, t) => {
     var n;
-    let { title: s, titleClassName: r = '', subtitle: a = '', description: o = '', descriptionCta: c = '', isPremiumGetCta: d, onCtaClick: m, onMouseEnter: g, className: h, perkComponent: x, cardVariant: _, cardType: p, onClick: E, backgroundImage: f, pillText: T, perkImage: b, imageOverlayText: v } = e,
-        j = p === N.R0.CARD_CAROUSEL_FIRST_ROW || p === N.R0.CARD_CAROUSEL_SECOND_ROW || p === N.R0.CARD_CAROUSEL_THIRD_ROW,
-        A = '' !== o || '' !== c || ('' !== a && _ === N.zW.REWARD),
-        R = (0, C._)(_);
-    return (0, i.jsxs)(u.P3F, {
-        className: l()(O.card, h, null === (n = R.cardContainer) || void 0 === n ? void 0 : n.className, {
-            [O.clickable]: null != E,
-            [O.hideOverflow]: j
+    let { title: i, titleClassName: s = '', subtitle: l = '', description: o = '', descriptionCta: c = '', isPremiumGetCta: d, onCtaClick: m, onMouseEnter: g, className: p, perkComponent: h, cardVariant: f, cardType: N, onClick: x, backgroundImage: _, pillText: E, perkImage: v, imageOverlayText: S } = e,
+        T = N === j.R0.CARD_CAROUSEL_FIRST_ROW || N === j.R0.CARD_CAROUSEL_SECOND_ROW || N === j.R0.CARD_CAROUSEL_THIRD_ROW,
+        I = '' !== o || '' !== c || ('' !== l && f === j.zW.REWARD),
+        A = (0, b._)(f);
+    return (0, r.jsxs)(u.P3F, {
+        className: a()(y.card, p, null === (n = A.cardContainer) || void 0 === n ? void 0 : n.className, {
+            [y.clickable]: null != x,
+            [y.hideOverflow]: T
         }),
         onMouseEnter: g,
-        style: { backgroundImage: null != f ? 'url('.concat(f, ')') : void 0 },
-        onClick: E,
+        style: { backgroundImage: null != _ ? 'url('.concat(_, ')') : void 0 },
+        onClick: x,
         children: [
-            null != T &&
-                (0, i.jsx)(u.Text, {
+            null != E &&
+                (0, r.jsx)(u.Text, {
                     variant: 'text-xs/semibold',
-                    className: O.pill,
-                    children: T
+                    className: y.pill,
+                    children: E
                 }),
-            (0, i.jsx)('div', { ref: t }),
-            (0, i.jsx)(S.Z, {
-                title: s,
-                titleClassName: r,
-                subtitle: a,
-                perkImage: b,
-                isCarousel: j,
+            (0, r.jsx)('div', { ref: t }),
+            (0, r.jsx)(C.Z, {
+                title: i,
+                titleClassName: s,
+                subtitle: l,
+                perkImage: v,
+                isCarousel: T,
                 descriptionCta: c,
                 onCtaClick: m,
-                perkComponent: x,
-                subtitleClassName: O.cardSubtitle,
-                cardVariant: _,
-                imageOverlayText: v
+                perkComponent: h,
+                subtitleClassName: y.cardSubtitle,
+                cardVariant: f,
+                imageOverlayText: S
             }),
-            A &&
-                (0, i.jsx)(I.Z, {
-                    title: s,
-                    titleClassName: r,
-                    subtitle: a,
+            I &&
+                (0, r.jsx)(O.Z, {
+                    title: i,
+                    titleClassName: s,
+                    subtitle: l,
                     description: o,
                     descriptionCta: c,
                     isPremiumGetCta: d,
                     onCtaClick: m,
-                    cardVariant: _,
-                    perkComponent: x
+                    cardVariant: f,
+                    perkComponent: h
                 }),
-            (0, i.jsx)('div', {
-                className: l()(O.cover, O.above),
+            (0, r.jsx)('div', {
+                className: a()(y.cover, y.above),
                 ref: t
             })
         ]
     });
 });
-D.displayName = 'PerkCardContent';
-let y = P;
+Z.displayName = 'PerkCardContent';
+let w = D;

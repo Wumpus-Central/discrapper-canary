@@ -1,6 +1,6 @@
 n.d(t, {
-    L: () => _,
-    T: () => h
+    L: () => h,
+    T: () => f
 }),
     n(47120);
 var l = n(200651),
@@ -11,101 +11,145 @@ var l = n(200651),
     o = n(626135),
     C = n(981631),
     d = n(388032),
-    u = n(13950),
-    c = n(196839),
+    c = n(580680),
+    u = n(196839),
     p = n(680674),
     x = n(74316);
-let h = { NITRO_BASIC: u.nitroBasic },
-    _ = i.memo(function (e) {
-        let { message: t, handleClick: n, handleClose: s, buttonText: _, useInitialGlow: f, useGlowOnHover: j, handleImageClick: m, className: L, analyticsLocations: E, upsellType: g, themeOverride: S = h.NITRO_BASIC } = e,
-            [I, N] = i.useState(f),
-            [T, M] = i.useState(p);
+let f = { NITRO_BASIC: c.nitroBasic },
+    h = i.memo(function (e) {
+        var t, n;
+        let { message: s, handleClick: h, handleClose: _, buttonText: j, useInitialGlow: m, useGlowOnHover: L, handleImageClick: g, className: E, analyticsLocations: S, upsellType: N, themeOverride: y = f.NITRO_BASIC } = e,
+            [I, O] = i.useState(m),
+            [v, P] = i.useState(p);
         return (
             i.useEffect(() => {
-                M(c);
-            }, [S]),
+                P(u);
+            }, [y]),
             i.useEffect(() => {
-                setTimeout(() => N(!1), 3000);
+                setTimeout(() => O(!1), 3000);
             }, []),
             i.useEffect(() => {
                 o.default.track(C.rMx.POST_ACTION_UPSELL_SHOWN, {
-                    type: g,
-                    location: E
+                    type: N,
+                    location: S
                 });
-            }, [g, E]),
+            }, [N, S]),
             (0, l.jsx)('div', {
-                className: r()(u.wrapper, S),
+                className: r()(c.wrapper, y),
                 children: (0, l.jsxs)('div', {
-                    className: r()(u.content, I ? u.initialGlowUp : u.initialGlowDown, j ? u.contentGlow : null, L),
+                    className: r()(c.content, I ? c.initialGlowUp : c.initialGlowDown, L ? c.contentGlow : null, E),
                     children: [
                         (0, l.jsxs)('div', {
-                            className: u.innerContent,
+                            className: c.innerContent,
                             children: [
-                                (0, l.jsx)('div', {
-                                    className: r()(u.imageWrapper, void 0 !== m ? u.imageHover : null),
-                                    ...(void 0 !== m
-                                        ? {
-                                              onClick: () => {
-                                                  o.default.track(C.rMx.POST_ACTION_UPSELL_SECONDARY_ACTION_CLICKED, {
-                                                      type: g,
-                                                      location: E
-                                                  }),
-                                                      m();
+                                (0, l.jsx)(
+                                    'div',
+                                    ((t = (function (e) {
+                                        for (var t = 1; t < arguments.length; t++) {
+                                            var n = null != arguments[t] ? arguments[t] : {},
+                                                l = Object.keys(n);
+                                            'function' == typeof Object.getOwnPropertySymbols &&
+                                                (l = l.concat(
+                                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                    })
+                                                )),
+                                                l.forEach(function (t) {
+                                                    var l;
+                                                    (l = n[t]),
+                                                        t in e
+                                                            ? Object.defineProperty(e, t, {
+                                                                  value: l,
+                                                                  enumerable: !0,
+                                                                  configurable: !0,
+                                                                  writable: !0
+                                                              })
+                                                            : (e[t] = l);
+                                                });
+                                        }
+                                        return e;
+                                    })(
+                                        { className: r()(c.imageWrapper, void 0 !== g ? c.imageHover : null) },
+                                        void 0 !== g
+                                            ? {
+                                                  onClick: () => {
+                                                      o.default.track(C.rMx.POST_ACTION_UPSELL_SECONDARY_ACTION_CLICKED, {
+                                                          type: N,
+                                                          location: S
+                                                      }),
+                                                          g();
+                                                  }
                                               }
-                                          }
-                                        : {}),
-                                    children: (0, l.jsx)('img', {
-                                        alt: '',
-                                        className: u.image,
-                                        src: T
-                                    })
-                                }),
+                                            : {}
+                                    )),
+                                    (n = n =
+                                        {
+                                            children: (0, l.jsx)('img', {
+                                                alt: '',
+                                                className: c.image,
+                                                src: v
+                                            })
+                                        }),
+                                    Object.getOwnPropertyDescriptors
+                                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                                        : (function (e, t) {
+                                              var n = Object.keys(e);
+                                              if (Object.getOwnPropertySymbols) {
+                                                  var l = Object.getOwnPropertySymbols(e);
+                                                  n.push.apply(n, l);
+                                              }
+                                              return n;
+                                          })(Object(n)).forEach(function (e) {
+                                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                                          }),
+                                    t)
+                                ),
                                 (0, l.jsx)('div', {
-                                    className: u.heading,
+                                    className: c.heading,
                                     children: (0, l.jsx)(a.X6q, {
                                         variant: 'heading-sm/medium',
-                                        children: t
+                                        children: s
                                     })
                                 })
                             ]
                         }),
                         (0, l.jsx)('div', {
-                            className: u.buttonWrapper,
+                            className: c.buttonWrapper,
                             children: (0, l.jsxs)(a.gtL, {
-                                className: u.button,
-                                innerClassName: u.buttonInner,
+                                className: c.button,
+                                innerClassName: c.buttonInner,
                                 size: a.zxk.Sizes.SMALL,
                                 color: a.Ttl.CUSTOM,
                                 onlyShineOnHover: !0,
                                 onClick: () => {
                                     o.default.track(C.rMx.POST_ACTION_UPSELL_PRIMARY_ACTION_CLICKED, {
-                                        type: g,
-                                        location: E
+                                        type: N,
+                                        location: S
                                     }),
-                                        n();
+                                        h();
                                 },
                                 children: [
                                     (0, l.jsx)('img', {
                                         alt: '',
-                                        className: u.buttonNitroIcon,
+                                        className: c.buttonNitroIcon,
                                         src: x
                                     }),
-                                    _
+                                    j
                                 ]
                             })
                         }),
                         (0, l.jsx)('div', {
-                            className: u.closeButtonWrapper,
+                            className: c.closeButtonWrapper,
                             children: (0, l.jsx)(a.P3F, {
                                 onClick: () => {
                                     o.default.track(C.rMx.POST_ACTION_UPSELL_DISMISSED, {
-                                        type: g,
-                                        location: E
+                                        type: N,
+                                        location: S
                                     }),
-                                        s();
+                                        _();
                                 },
-                                className: u.closeButton,
-                                'aria-label': d.intl.string(d.t.cpT0Cg),
+                                className: c.closeButton,
+                                'aria-label': d.NW.string(d.t.cpT0Cg),
                                 children: (0, l.jsx)(a.Dio, {
                                     size: 'md',
                                     color: 'currentColor'

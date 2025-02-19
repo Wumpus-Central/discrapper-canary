@@ -1,19 +1,43 @@
-n.d(t, { Y: () => o }), n(47120);
-var i = n(192379),
-    r = n(642128),
-    a = n(481060),
-    s = n(717495);
-function o(e, t) {
+n.d(t, { Y: () => c }), n(47120);
+var r = n(192379),
+    i = n(642128),
+    o = n(481060),
+    a = n(717495);
+function s(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function l(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                s(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function c(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 'respect-motion-settings',
-        o = arguments.length > 3 ? arguments[3] : void 0,
-        l = i.useContext(a.Sfi).reducedMotion.enabled,
+        s = arguments.length > 3 ? arguments[3] : void 0,
+        c = r.useContext(o.Sfi).reducedMotion.enabled,
         u = t;
-    'animate-always' === n ||
-        ('respect-motion-settings' === n && !l) ||
-        (u = {
-            ...t,
-            ...s.F
-        });
-    let [c, d, f] = (0, r.useTransition)(e, u, o);
-    return 4 == arguments.length ? [c, d, f] : c;
+    'animate-always' === n || ('respect-motion-settings' === n && !c) || (u = l({}, t, a.F));
+    let [d, f, p] = (0, i.useTransition)(e, u, s);
+    return 4 == arguments.length ? [d, f, p] : d;
 }

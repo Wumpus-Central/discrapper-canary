@@ -1,93 +1,139 @@
-i.d(e, { default: () => M }), i(47120);
-var n = i(200651),
-    l = i(192379),
-    r = i(442837),
-    d = i(481060),
-    a = i(239091),
-    s = i(410575),
-    o = i(881052),
-    u = i(299206),
-    c = i(430824),
-    h = i(236413),
-    g = i(727072),
-    x = i(36459),
-    f = i(65912),
-    m = i(572456),
-    p = i(273504),
-    T = i(981631),
-    j = i(388032);
-function M(t) {
-    let { rule: e, analyticsContext: i, onSelect: M } = t,
-        b = (0, h.Vb)(e),
-        y = (function (t) {
-            let { editingRule: e, setEditingRule: i } = (0, f.V)();
-            return (0, n.jsx)(d.sNh, {
+r.d(t, { default: () => m }), r(47120);
+var n = r(200651),
+    o = r(192379),
+    i = r(442837),
+    l = r(481060),
+    c = r(239091),
+    a = r(410575),
+    s = r(881052),
+    u = r(299206),
+    d = r(430824),
+    b = r(236413),
+    p = r(727072),
+    f = r(36459),
+    g = r(65912),
+    y = r(572456),
+    j = r(273504),
+    O = r(981631),
+    h = r(388032);
+function m(e) {
+    let { rule: t, analyticsContext: r, onSelect: m } = e,
+        N = (0, b.Vb)(t),
+        w = (function (e) {
+            let { editingRule: t, setEditingRule: r } = (0, g.V)();
+            return (0, n.jsx)(l.sNh, {
                 id: 'edit-automod-rule',
-                label: j.intl.string(j.t.uQq6Pz),
+                label: h.NW.string(h.t.uQq6Pz),
                 action: () => {
-                    i(t);
+                    r(e);
                 },
-                disabled: null != e
+                disabled: null != t
             });
-        })(e),
-        C = (function (t) {
-            let { setEditingRule: e } = (0, f.V)(),
-                [i, a] = l.useState(!1),
-                { removeRule: s } = (0, g.pH)(t.guildId),
-                u = (0, r.e7)([c.Z], () => c.Z.getGuild(t.guildId)),
-                h = async () => {
-                    if (!i && (await (0, m.gK)(t.name))) {
-                        a(!0);
+        })(t),
+        x = (function (e) {
+            let { setEditingRule: t } = (0, g.V)(),
+                [r, c] = o.useState(!1),
+                { removeRule: a } = (0, p.pH)(e.guildId),
+                u = (0, i.e7)([d.Z], () => d.Z.getGuild(e.guildId)),
+                b = async () => {
+                    if (!r && (await (0, y.gK)(e.name))) {
+                        c(!0);
                         try {
-                            await (0, x.mm)(t.id, t.guildId), e(null), s(t.id, t.guildId);
-                        } catch (e) {
+                            await (0, f.mm)(e.id, e.guildId), t(null), a(e.id, e.guildId);
+                        } catch (t) {
                             var n;
-                            let t = new o.Hx(e);
-                            (0, d.showToast)((0, d.createToast)(null !== (n = t.getAnyErrorMessage()) && void 0 !== n ? n : j.intl.string(j.t.fEptJC), d.ToastType.FAILURE));
+                            let e = new s.Hx(t);
+                            (0, l.showToast)((0, l.createToast)(null !== (n = e.getAnyErrorMessage()) && void 0 !== n ? n : h.NW.string(h.t.fEptJC), l.ToastType.FAILURE));
                         } finally {
-                            a(!1);
+                            c(!1);
                         }
                     }
                 },
-                M = t.triggerType === p.fX.MENTION_SPAM && (null == u ? void 0 : u.features) != null && u.features.has(T.oNc.COMMUNITY);
-            return (0, n.jsx)(d.sNh, {
+                m = e.triggerType === j.fX.MENTION_SPAM && (null == u ? void 0 : u.features) != null && u.features.has(O.oNc.COMMUNITY);
+            return (0, n.jsx)(l.sNh, {
                 id: 'delete-automod-rule',
-                label: j.intl.string(j.t['92m/09']),
-                action: M
+                label: h.NW.string(h.t['92m/09']),
+                action: m
                     ? () => {
-                          (0, d.h7j)((t) =>
-                              (0, n.jsx)(d.ConfirmModal, {
-                                  header: j.intl.string(j.t.MmpqMD),
-                                  confirmText: j.intl.string(j.t.BddRzc),
-                                  confirmButtonColor: d.zxk.Colors.BRAND,
-                                  ...t,
-                                  children: (0, n.jsx)(d.Text, {
-                                      variant: 'text-md/normal',
-                                      children: j.intl.string(j.t.XMdBLy)
-                                  })
-                              })
-                          );
+                          (0, l.h7j)((e) => {
+                              var t, r;
+                              return (0, n.jsx)(
+                                  l.ConfirmModal,
+                                  ((t = (function (e) {
+                                      for (var t = 1; t < arguments.length; t++) {
+                                          var r = null != arguments[t] ? arguments[t] : {},
+                                              n = Object.keys(r);
+                                          'function' == typeof Object.getOwnPropertySymbols &&
+                                              (n = n.concat(
+                                                  Object.getOwnPropertySymbols(r).filter(function (e) {
+                                                      return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                                  })
+                                              )),
+                                              n.forEach(function (t) {
+                                                  var n;
+                                                  (n = r[t]),
+                                                      t in e
+                                                          ? Object.defineProperty(e, t, {
+                                                                value: n,
+                                                                enumerable: !0,
+                                                                configurable: !0,
+                                                                writable: !0
+                                                            })
+                                                          : (e[t] = n);
+                                              });
+                                      }
+                                      return e;
+                                  })(
+                                      {
+                                          header: h.NW.string(h.t.MmpqMD),
+                                          confirmText: h.NW.string(h.t.BddRzc),
+                                          confirmButtonColor: l.zxk.Colors.BRAND
+                                      },
+                                      e
+                                  )),
+                                  (r = r =
+                                      {
+                                          children: (0, n.jsx)(l.Text, {
+                                              variant: 'text-md/normal',
+                                              children: h.NW.string(h.t.XMdBLy)
+                                          })
+                                      }),
+                                  Object.getOwnPropertyDescriptors
+                                      ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+                                      : (function (e, t) {
+                                            var r = Object.keys(e);
+                                            if (Object.getOwnPropertySymbols) {
+                                                var n = Object.getOwnPropertySymbols(e);
+                                                r.push.apply(r, n);
+                                            }
+                                            return r;
+                                        })(Object(r)).forEach(function (e) {
+                                            Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+                                        }),
+                                  t)
+                              );
+                          });
                       }
-                    : h
+                    : b
             });
-        })(e),
-        N = (0, u.Z)({
-            id: e.id,
-            label: j.intl.string(j.t.F64hjo)
+        })(t),
+        v = (0, u.Z)({
+            id: t.id,
+            label: h.NW.string(h.t.F64hjo)
         });
-    return (0, n.jsx)(s.Z, {
-        context: i,
-        object: T.qAy.CONTEXT_MENU,
-        children: (0, n.jsxs)(d.v2r, {
+    return (0, n.jsx)(a.Z, {
+        context: r,
+        object: O.qAy.CONTEXT_MENU,
+        children: (0, n.jsxs)(l.v2r, {
             navId: 'automod-rule-context',
-            onClose: a.Zy,
-            'aria-label': j.intl.string(j.t.uT36Sk),
-            onSelect: M,
+            onClose: c.Zy,
+            'aria-label': h.NW.string(h.t.uT36Sk),
+            onSelect: m,
             children: [
-                (0, n.jsxs)(d.kSQ, {
-                    children: [y, b && C]
+                (0, n.jsxs)(l.kSQ, {
+                    children: [w, N && x]
                 }),
-                b && (0, n.jsx)(d.kSQ, { children: N })
+                N && (0, n.jsx)(l.kSQ, { children: v })
             ]
         })
     });

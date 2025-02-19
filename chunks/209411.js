@@ -1,66 +1,67 @@
-n.d(t, { Z: () => x }), n(47120), n(773603);
-var i = n(200651),
-    r = n(192379),
-    a = n(593473),
-    l = n(512969),
-    o = n(442837),
+n.d(t, { Z: () => b }), n(47120), n(301563), n(773603);
+var r = n(200651),
+    i = n(192379),
+    o = n(593473),
+    a = n(512969),
+    l = n(442837),
     s = n(893776),
     c = n(899742),
-    d = n(493773),
-    u = n(743142),
+    u = n(493773),
+    d = n(743142),
     h = n(893607),
-    _ = n(703656),
-    m = n(314897),
+    p = n(703656),
+    _ = n(314897),
     g = n(781428),
-    p = n(981631),
-    f = n(176505);
-function x(e) {
-    let t = r.useCallback(
+    f = n(981631),
+    m = n(176505);
+function b(e) {
+    var t, n;
+    let b = i.useCallback(
             (t) => {
                 if (
                     (function (e) {
                         var t;
-                        let n = (0, l.LX)(e, { path: p.Z5c.CHANNEL(h.Hw.guildId(), h.Hw.channelId()) });
-                        return (null == n ? void 0 : null === (t = n.params) || void 0 === t ? void 0 : t.channelId) === f.oC.ROLE_SUBSCRIPTIONS;
+                        let n = (0, a.LX)(e, { path: f.Z5c.CHANNEL(h.Hw.guildId(), h.Hw.channelId()) });
+                        return (null == n ? void 0 : null === (t = n.params) || void 0 === t ? void 0 : t.channelId) === m.oC.ROLE_SUBSCRIPTIONS;
                     })(t)
                 )
-                    _.dL(t);
+                    p.dL(t);
                 else {
                     var n;
-                    (null !== (n = e.transitionTo) && void 0 !== n ? n : _.uL)(t);
+                    (null !== (n = e.transitionTo) && void 0 !== n ? n : p.uL)(t);
                 }
             },
             [e.transitionTo]
         ),
-        { isAuthenticated: n, loginStatus: x } = (0, o.cj)([m.default], () => ({
-            isAuthenticated: m.default.isAuthenticated(),
-            loginStatus: m.default.getLoginStatus()
+        { isAuthenticated: N, loginStatus: x } = (0, l.cj)([_.default], () => ({
+            isAuthenticated: _.default.isAuthenticated(),
+            loginStatus: _.default.getLoginStatus()
         })),
-        { location: E, redirectTo: I } = e,
-        [v, C] = r.useState(n);
-    function N(e) {
-        let { handoffKey: t, handoffToken: n, handoffSource: i } = e;
+        { location: v, redirectTo: E } = e,
+        [I, O] = i.useState(N);
+    function C(e) {
+        let { handoffKey: t, handoffToken: n, handoffSource: r } = e;
         (0, c.Yz)({
             handoffKey: t,
             handoffToken: n,
-            handoffSource: i
+            handoffSource: r
         }),
-            C(!1);
+            O(!1);
     }
-    return ((0, d.ZP)(() => {
-        if (null != E) {
-            let { handoff_key: e, handoff_token: t } = (0, a.parse)(E.search);
+    return ((0, u.ZP)(() => {
+        if (null != v) {
+            let { handoff_key: e, handoff_token: t } = (0, o.parse)(v.search);
             if (null != e && null != t) {
-                let n = null != I ? (0, u.L)(I) : void 0;
-                v
+                let n = null != E ? (0, d.L)(E) : void 0;
+                I
                     ? s.Z.logout(null).finally(() => {
-                          N({
+                          C({
                               handoffKey: e,
                               handoffToken: t,
                               handoffSource: n
                           });
                       })
-                    : N({
+                    : C({
                           handoffKey: e,
                           handoffToken: t,
                           handoffSource: n
@@ -68,10 +69,48 @@ function x(e) {
             }
         }
     }),
-    v || x === p.u34.LOGGING_IN)
-        ? (0, i.jsx)(g.q, {})
-        : (0, i.jsx)(g.Z, {
-              ...e,
-              transitionTo: t
-          });
+    I || x === f.u34.LOGGING_IN)
+        ? (0, r.jsx)(g.q, {})
+        : (0, r.jsx)(
+              g.Z,
+              ((t = (function (e) {
+                  for (var t = 1; t < arguments.length; t++) {
+                      var n = null != arguments[t] ? arguments[t] : {},
+                          r = Object.keys(n);
+                      'function' == typeof Object.getOwnPropertySymbols &&
+                          (r = r.concat(
+                              Object.getOwnPropertySymbols(n).filter(function (e) {
+                                  return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                              })
+                          )),
+                          r.forEach(function (t) {
+                              var r;
+                              (r = n[t]),
+                                  t in e
+                                      ? Object.defineProperty(e, t, {
+                                            value: r,
+                                            enumerable: !0,
+                                            configurable: !0,
+                                            writable: !0
+                                        })
+                                      : (e[t] = r);
+                          });
+                  }
+                  return e;
+              })({}, e)),
+              (n = n = { transitionTo: b }),
+              Object.getOwnPropertyDescriptors
+                  ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                  : (function (e, t) {
+                        var n = Object.keys(e);
+                        if (Object.getOwnPropertySymbols) {
+                            var r = Object.getOwnPropertySymbols(e);
+                            n.push.apply(n, r);
+                        }
+                        return n;
+                    })(Object(n)).forEach(function (e) {
+                        Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                    }),
+              t)
+          );
 }

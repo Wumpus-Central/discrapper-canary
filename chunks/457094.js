@@ -1,48 +1,48 @@
-n.r(t), n.d(t, { default: () => tn }), n(47120);
-var i = n(200651),
-    l = n(192379),
-    r = n(593473),
-    a = n(512969),
-    s = n(442837),
-    o = n(481060),
-    d = n(893776),
-    c = n(943094),
-    u = n(749210),
-    h = n(287734),
-    m = n(401430),
-    p = n(230711),
-    g = n(607070),
-    _ = n(627845),
-    f = n(185666),
-    E = n(503737),
-    I = n(513202),
-    C = n(318891),
+n.r(t), n.d(t, { default: () => tr }), n(301563), n(47120);
+var r = n(200651),
+    i = n(192379),
+    l = n(593473),
+    o = n(512969),
+    a = n(442837),
+    s = n(481060),
+    c = n(893776),
+    u = n(943094),
+    d = n(749210),
+    p = n(287734),
+    h = n(401430),
+    g = n(230711),
+    f = n(607070),
+    m = n(627845),
+    b = n(185666),
+    _ = n(503737),
+    E = n(513202),
+    O = n(318891),
     N = n(687751),
     v = n(912471),
-    T = n(100527),
-    S = n(838134),
-    A = n(77987),
-    Z = n(679891),
-    x = n(491575),
-    b = n(954709),
-    L = n(644679),
-    y = n(314533),
-    O = n(9029),
-    P = n(935347),
-    R = n(560067),
-    j = n(823169),
-    D = n(845767),
-    w = n(620360),
-    M = n(96051),
-    k = n(750995),
+    y = n(100527),
+    I = n(838134),
+    C = n(77987),
+    S = n(679891),
+    T = n(491575),
+    P = n(954709),
+    j = n(644679),
+    A = n(314533),
+    Z = n(9029),
+    x = n(935347),
+    L = n(560067),
+    w = n(823169),
+    R = n(845767),
+    D = n(620360),
+    k = n(96051),
+    M = n(750995),
     U = n(696287),
     G = n(408026),
-    B = n(763916),
+    W = n(763916),
     V = n(306721),
-    H = n(531551),
-    F = n(38618),
-    z = n(972830),
-    W = n(981283),
+    B = n(531551),
+    H = n(38618),
+    F = n(972830),
+    z = n(981283),
     Y = n(584233),
     K = n(15274),
     q = n(434404),
@@ -53,50 +53,50 @@ var i = n(200651),
     ee = n(975533),
     et = n(377400),
     en = n(285865),
-    ei = n(659971),
-    el = n(929809),
-    er = n(122333),
-    ea = n(960275),
-    es = n(818765),
-    eo = n(678492),
-    ed = n(269089),
-    ec = n(380570),
-    eu = n(837689),
-    eh = n(367207),
-    em = n(489977),
-    ep = n(329557),
-    eg = n(304445),
-    e_ = n(893607),
-    ef = n(703656),
-    eE = n(298969),
-    eI = n(719256),
-    eC = n(6025),
+    er = n(659971),
+    ei = n(929809),
+    el = n(122333),
+    eo = n(960275),
+    ea = n(818765),
+    es = n(678492),
+    ec = n(269089),
+    eu = n(380570),
+    ed = n(837689),
+    ep = n(367207),
+    eh = n(489977),
+    eg = n(329557),
+    ef = n(304445),
+    em = n(893607),
+    eb = n(703656),
+    e_ = n(298969),
+    eE = n(719256),
+    eO = n(6025),
     eN = n(897473),
     ev = n(377368),
-    eT = n(262702),
-    eS = n(639033),
-    eA = n(479313),
-    eZ = n(911560),
-    ex = n(703016),
-    eb = n(171368),
-    eL = n(429974),
-    ey = n(332754),
-    eO = n(507468),
-    eP = n(722589),
-    eR = n(282506),
-    ej = n(444961),
-    eD = n(314897),
-    ew = n(433355),
-    eM = n(592125),
-    ek = n(896797),
+    ey = n(262702),
+    eI = n(639033),
+    eC = n(479313),
+    eS = n(911560),
+    eT = n(703016),
+    eP = n(171368),
+    ej = n(429974),
+    eA = n(332754),
+    eZ = n(507468),
+    ex = n(722589),
+    eL = n(282506),
+    ew = n(444961),
+    eR = n(314897),
+    eD = n(433355),
+    ek = n(592125),
+    eM = n(896797),
     eU = n(430824),
     eG = n(819640),
-    eB = n(283595),
+    eW = n(283595),
     eV = n(944486),
-    eH = n(914010),
-    eF = n(695103),
-    ez = n(241890),
-    eW = n(897607),
+    eB = n(914010),
+    eH = n(695103),
+    eF = n(241890),
+    ez = n(897607),
     eY = n(417363),
     eK = n(900974),
     eq = n(358085),
@@ -118,17 +118,33 @@ function e1(e, t, n) {
         e
     );
 }
+function e3(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                e1(e, t, n[t]);
+            });
+    }
+    return e;
+}
 n(117240), n(801077), n(967368), n(272053), n(974180), n(574254), n(551428), n(55563), n(882029), n(959457), n(653255), n(663389), n(25990), n(778825), n(999382), n(388610), n(533947), n(277053), n(371398), n(141233), n(471073);
-let e3 = !1;
+let e2 = !1;
 (0, v.D)(),
-    s.ZP.initialize(),
-    eE.Z.loadServer(),
+    a.ZP.initialize(),
+    e_.Z.loadServer(),
     eq.isPlatformEmbedded &&
         (eX.ZP.on('USER_SETTINGS_OPEN', (e, t) => {
-            eG.Z.getLayers().includes(eJ.S9g.USER_SETTINGS) || p.Z.open(null != t ? t : eJ.oAB.ACCOUNT);
+            eG.Z.getLayers().includes(eJ.S9g.USER_SETTINGS) || g.Z.open(null != t ? t : eJ.oAB.ACCOUNT);
         }),
         eX.ZP.on('LAUNCH_APPLICATION', (e, t) => {
-            let n = eB.Z.getActiveLibraryApplication(t);
+            let n = eW.Z.getActiveLibraryApplication(t);
             eQ.playApplication(t, n, {
                 analyticsParams: {
                     location: {
@@ -138,70 +154,70 @@ let e3 = !1;
                 }
             });
         }));
-let e4 = s.ZP.connectStores([F.Z, ek.Z, eD.default], () => ({
-        isConnected: F.Z.isConnected(),
-        defaultRoute: ek.Z.defaultRoute,
-        defaultRouteFallback: ek.Z.fallbackRoute,
-        token: eD.default.getToken()
+let e4 = a.ZP.connectStores([H.Z, eM.Z, eR.default], () => ({
+        isConnected: H.Z.isConnected(),
+        defaultRoute: eM.Z.defaultRoute,
+        defaultRouteFallback: eM.Z.fallbackRoute,
+        token: eR.default.getToken()
     }))(
-        class extends l.Component {
+        class extends i.Component {
             componentDidMount() {
                 let { match: e } = this.props;
                 null != e && null != e.params.inviteCode && (0, Y.x)({ code: e.params.inviteCode });
             }
             render() {
-                let { isConnected: e, defaultRoute: t, token: n, defaultRouteFallback: l } = this.props;
-                if (null == n) return (0, i.jsx)(a.l_, { to: eJ.Z5c.DEFAULT_LOGGED_OUT });
+                let { isConnected: e, defaultRoute: t, token: n, defaultRouteFallback: i } = this.props;
+                if (null == n) return (0, r.jsx)(o.l_, { to: eJ.Z5c.DEFAULT_LOGGED_OUT });
                 if (e) {
-                    let e = e8(t);
-                    return null == e || ((e.params.guildId === eJ.ME || null != eU.Z.getGuild(e.params.guildId)) && null != eM.Z.getChannel(e.params.channelId)) ? (0, i.jsx)(a.l_, { to: t }) : (0, i.jsx)(a.l_, { to: l });
+                    let e = te(t);
+                    return null == e || ((e.params.guildId === eJ.ME || null != eU.Z.getGuild(e.params.guildId)) && null != ek.Z.getChannel(e.params.channelId)) ? (0, r.jsx)(o.l_, { to: t }) : (0, r.jsx)(o.l_, { to: i });
                 }
                 return null;
             }
         }
     ),
-    e2 = (0, A.e)(x.Z, null, { passProps: !1 }),
-    e7 = (0, A.e)(S.default, null, { passProps: !1 }),
-    e9 = [eJ.Z5c.GUILD_BOOSTING_MARKETING(e_.Hw.guildId()), ...Array.from(e$.Vg).map((e) => eJ.Z5c.CHANNEL(e_.Hw.guildId(), e))];
-function e5(e) {
-    let { guildId: t, channelId: n = null, messageId: i = null, threadId: l = null } = e.params;
+    e9 = (0, C.e)(T.Z, null, { passProps: !1 }),
+    e7 = (0, C.e)(I.default, null, { passProps: !1 }),
+    e5 = [eJ.Z5c.GUILD_BOOSTING_MARKETING(em.Hw.guildId()), ...Array.from(e$.Vg).map((e) => eJ.Z5c.CHANNEL(em.Hw.guildId(), e))];
+function e6(e) {
+    let { guildId: t, channelId: n = null, messageId: r = null, threadId: i = null } = e.params;
     return {
         guildId: null != t ? t : eJ.ME,
         channelId: n,
-        messageId: i,
-        threadId: l
+        messageId: r,
+        threadId: i
     };
 }
-let e6 = [
+let e8 = [
     {
         path: [eJ.Z5c.APP_WITH_INVITE_AND_GUILD_ONBOARDING(':inviteCode')],
         render(e) {
             let { match: t } = e;
-            return (0, i.jsx)(e4, { match: t });
+            return (0, r.jsx)(e4, { match: t });
         },
         isSessionRequired: !0
     },
     {
         path: [eJ.Z5c.APP],
-        render: () => (0, i.jsx)(e4, {}),
+        render: () => (0, r.jsx)(e4, {}),
         isSessionRequired: !0
     },
     {
         path: [eJ.Z5c.USERS(':id')],
         render: function (e) {
             let { match: t, location: n } = e,
-                { friend_token: l } = (0, r.parse)(n.search),
-                { id: s } = t.params;
+                { friend_token: i } = (0, l.parse)(n.search),
+                { id: a } = t.params;
             return (
-                (0, z.h)(() =>
-                    (0, eb.openUserProfileModal)({
-                        userId: s,
-                        friendToken: l,
-                        sourceAnalyticsLocations: [T.Z.URI_SCHEME],
+                (0, F.h)(() =>
+                    (0, eP.openUserProfileModal)({
+                        userId: a,
+                        friendToken: i,
+                        sourceAnalyticsLocations: [y.Z.URI_SCHEME],
                         analyticsLocation: { section: eJ.jXE.DIRECT_ROUTE_ACCESS }
                     })
                 ),
-                (0, i.jsx)(a.l_, { to: ek.Z.defaultRoute })
+                (0, r.jsx)(o.l_, { to: eM.Z.defaultRoute })
             );
         }
     },
@@ -209,13 +225,13 @@ let e6 = [
         path: [eJ.Z5c.APPLICATION_LIBRARY_ACTION(':gameId', ':action')],
         render: function (e) {
             let { match: t } = e,
-                { gameId: n, action: l } = t.params;
+                { gameId: n, action: i } = t.params;
             return (
                 eY.Z.whenInitialized(() => {
-                    eB.Z.whenInitialized(() => {
-                        switch (l) {
+                    eW.Z.whenInitialized(() => {
+                        switch (i) {
                             case 'launch': {
-                                let e = eB.Z.getActiveLibraryApplication(n);
+                                let e = eW.Z.getActiveLibraryApplication(n);
                                 if (null == e) return;
                                 eQ.playApplication(e.id, e, {
                                     analyticsParams: {
@@ -228,41 +244,41 @@ let e6 = [
                                 break;
                             }
                             case 'test-mode':
-                                eF.Z.whenInitialized(() => m.Wt(n));
+                                eH.Z.whenInitialized(() => h.Wt(n));
                                 break;
                             case 'uninstall': {
-                                let e = eB.Z.getActiveLibraryApplication(n);
+                                let e = eW.Z.getActiveLibraryApplication(n);
                                 if (null == e) return;
-                                (0, c.W)(e.id, e.branchId, eJ.Sbl.URI_SCHEME);
+                                (0, u.W)(e.id, e.branchId, eJ.Sbl.URI_SCHEME);
                             }
                         }
                     });
                 }),
-                (0, i.jsx)(a.l_, { to: eJ.Z5c.APPLICATION_LIBRARY })
+                (0, r.jsx)(o.l_, { to: eJ.Z5c.APPLICATION_LIBRARY })
             );
         }
     },
     {
         path: [eJ.Z5c.GUILD_CREATE],
         render: function () {
-            return (0, z.h)(() => R.Z.openCreateGuildModal({ location: 'External link' })), (0, i.jsx)(a.l_, { to: ek.Z.defaultRoute });
+            return (0, F.h)(() => L.Z.openCreateGuildModal({ location: 'External link' })), (0, r.jsx)(o.l_, { to: eM.Z.defaultRoute });
         }
     },
     {
         path: [eJ.Z5c.PICK_GUILD_SETTINGS(':section?', ':subsection?')],
         render: function (e) {
             let { match: t } = e,
-                { section: n, subsection: l } = t.params,
-                s = (0, r.parse)(location.search).feature;
+                { section: n, subsection: i } = t.params,
+                a = (0, l.parse)(location.search).feature;
             return (
-                (0, z.h)(() =>
+                (0, F.h)(() =>
                     Q.v({
                         section: (0, X.Z)(eJ.pNK, n),
-                        subsection: (0, X.Z)(eJ.KsC, l),
-                        feature: s
+                        subsection: (0, X.Z)(eJ.KsC, i),
+                        feature: a
                     })
                 ),
-                (0, i.jsx)(a.l_, { to: ek.Z.defaultRoute })
+                (0, r.jsx)(o.l_, { to: eM.Z.defaultRoute })
             );
         },
         isSessionRequired: !0
@@ -271,37 +287,53 @@ let e6 = [
         path: [eJ.Z5c.SETTINGS(':section', ':subsection?')],
         render: function (e) {
             let { location: t } = e,
-                n = (0, eP.default)(t.pathname);
+                n = (0, ex.default)(t.pathname);
             return (
                 null != n &&
-                    (0, z.h)(() =>
-                        p.Z.open(n.section, n.subsection, {
+                    (0, F.h)(() =>
+                        g.Z.open(n.section, n.subsection, {
                             openWithoutBackstack: !1,
                             impressionSource: n.source
                         })
                     ),
-                (0, i.jsx)(a.l_, { to: ek.Z.defaultRoute })
+                (0, r.jsx)(o.l_, { to: eM.Z.defaultRoute })
             );
         },
         isSessionRequired: !0
     },
     {
-        path: [eJ.Z5c.USER_GUILD_NOTIFICATION_SETTINGS(e_.Hw.guildId())],
+        path: [eJ.Z5c.USER_GUILD_NOTIFICATION_SETTINGS(em.Hw.guildId())],
         render: function (e) {
             let { match: t } = e,
-                { guildId: l } = t.params;
+                { guildId: i } = t.params;
             return (
-                (0, z.h)(() => {
-                    (0, o.ZDy)(async () => {
-                        let { default: e } = await Promise.all([n.e('5863'), n.e('31898')]).then(n.bind(n, 751212));
-                        return (t) =>
-                            (0, i.jsx)(e, {
-                                ...t,
-                                guildId: l
-                            });
+                (0, F.h)(() => {
+                    (0, s.ZDy)(async () => {
+                        let { default: e } = await Promise.all([n.e('5863'), n.e('82049')]).then(n.bind(n, 751212));
+                        return (t) => {
+                            var n, l;
+                            return (0, r.jsx)(
+                                e,
+                                ((n = e3({}, t)),
+                                (l = l = { guildId: i }),
+                                Object.getOwnPropertyDescriptors
+                                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
+                                    : (function (e, t) {
+                                          var n = Object.keys(e);
+                                          if (Object.getOwnPropertySymbols) {
+                                              var r = Object.getOwnPropertySymbols(e);
+                                              n.push.apply(n, r);
+                                          }
+                                          return n;
+                                      })(Object(l)).forEach(function (e) {
+                                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
+                                      }),
+                                n)
+                            );
+                        };
                     });
                 }),
-                (0, i.jsx)(a.l_, { to: eJ.Z5c.CHANNEL(l) })
+                (0, r.jsx)(o.l_, { to: eJ.Z5c.CHANNEL(i) })
             );
         },
         isSessionRequired: !0
@@ -309,53 +341,53 @@ let e6 = [
     {
         path: [eJ.Z5c.APPLICATION_LIBRARY_INVENTORY],
         render: function () {
-            return (0, z.h)(() => p.Z.open(eJ.oAB.INVENTORY)), (0, i.jsx)(a.l_, { to: ek.Z.defaultRoute });
+            return (0, F.h)(() => g.Z.open(eJ.oAB.INVENTORY)), (0, r.jsx)(o.l_, { to: eM.Z.defaultRoute });
         },
         isSessionRequired: !0
     },
     {
-        path: [eJ.Z5c.WELCOME(e_.Hw.guildId({ optional: !0 }), e_.Hw.channelId({ optional: !0 }))],
+        path: [eJ.Z5c.WELCOME(em.Hw.guildId({ optional: !0 }), em.Hw.channelId({ optional: !0 }))],
         render: function (e) {
             let { match: t } = e,
-                { guildId: n, channelId: l } = t.params;
-            (0, el.c)(e0.M5.MARKETING_UNCLAIMED);
-            let r = eJ.Z5c.CHANNEL(n, l);
-            return (0, i.jsx)(a.l_, { to: r });
+                { guildId: n, channelId: i } = t.params;
+            (0, ei.c)(e0.M5.MARKETING_UNCLAIMED);
+            let l = eJ.Z5c.CHANNEL(n, i);
+            return (0, r.jsx)(o.l_, { to: l });
         },
         isSessionRequired: !0
     },
     {
-        path: [eJ.Z5c.GUILD_EVENT_DETAILS(e_.Hw.guildId({ optional: !0 }), ':guildEventId')],
+        path: [eJ.Z5c.GUILD_EVENT_DETAILS(em.Hw.guildId({ optional: !0 }), ':guildEventId')],
         render: function (e) {
             let { match: t } = e,
-                { guildId: n, guildEventId: l } = t.params;
+                { guildId: n, guildEventId: i } = t.params;
             return (
-                (0, z.h)(() => {
-                    (0, K.bO)({ eventId: l });
+                (0, F.h)(() => {
+                    (0, K.bO)({ eventId: i });
                 }),
-                (0, i.jsx)(a.l_, { to: eJ.Z5c.CHANNEL(n) })
+                (0, r.jsx)(o.l_, { to: eJ.Z5c.CHANNEL(n) })
             );
         },
         isSessionRequired: !0
     },
     {
-        path: [eJ.Z5c.GUILD_SETTINGS(e_.Hw.guildId(), ':section?', ':subsection?')],
+        path: [eJ.Z5c.GUILD_SETTINGS(em.Hw.guildId(), ':section?', ':subsection?')],
         render: function (e) {
             let { match: t } = e,
-                { guildId: n, section: l, subsection: r } = t.params;
+                { guildId: n, section: i, subsection: l } = t.params;
             return (
-                (0, z.h)(() => {
-                    q.Z.open(n, (0, X.Z)(eJ.pNK, l), void 0, (0, X.Z)(eJ.KsC, r));
+                (0, F.h)(() => {
+                    q.Z.open(n, (0, X.Z)(eJ.pNK, i), void 0, (0, X.Z)(eJ.KsC, l));
                 }),
-                (0, i.jsx)(a.l_, { to: eJ.Z5c.CHANNEL(n) })
+                (0, r.jsx)(o.l_, { to: eJ.Z5c.CHANNEL(n) })
             );
         },
         isSessionRequired: !0,
         isChatRoute: !0
     },
     {
-        path: [eJ.Z5c.CHANNEL_THREAD_VIEW(e_.Hw.guildId(), e_.Hw.channelId(), ':threadId', ':messageId?'), eJ.Z5c.CHANNEL(e_.Hw.guildId(), e_.Hw.channelId({ optional: !0 }), ':messageId?'), eJ.Z5c.ACTIVITY, eJ.Z5c.ACTIVITIES, eJ.Z5c.ACTIVITIES_HAPPENING_NOW, eJ.Z5c.ACTIVITY_DETAILS(':applicationId'), eJ.Z5c.APPLICATION_LIBRARY, eJ.Z5c.APPLICATION_STORE, eJ.Z5c.MESSAGE_REQUESTS, eJ.Z5c.COLLECTIBLES_SHOP, eJ.Z5c.COLLECTIBLES_SHOP_FULLSCREEN, eJ.Z5c.COLLECTIBLES_SHOP_PRODUCT_DETAIL(':skuId'), eJ.Z5c.GUILD_DISCOVERY, eJ.Z5c.QUEST_HOME, eJ.Z5c.GLOBAL_DISCOVERY, eJ.Z5c.GUILD_MEMBER_VERIFICATION(e_.Hw.guildId()), eJ.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(e_.Hw.guildId(), ':inviteCode?'), eJ.Z5c.GUILD_BOOSTING_MARKETING(e_.Hw.guildId()), eJ.Z5c.FEATURE(':feature'), eJ.Z5c.FAMILY_CENTER],
-        render: e2,
+        path: [eJ.Z5c.CHANNEL_THREAD_VIEW(em.Hw.guildId(), em.Hw.channelId(), ':threadId', ':messageId?'), eJ.Z5c.CHANNEL(em.Hw.guildId(), em.Hw.channelId({ optional: !0 }), ':messageId?'), eJ.Z5c.ACTIVITY, eJ.Z5c.ACTIVITIES, eJ.Z5c.ACTIVITIES_HAPPENING_NOW, eJ.Z5c.ACTIVITY_DETAILS(':applicationId'), eJ.Z5c.APPLICATION_LIBRARY, eJ.Z5c.APPLICATION_STORE, eJ.Z5c.MESSAGE_REQUESTS, eJ.Z5c.COLLECTIBLES_SHOP, eJ.Z5c.COLLECTIBLES_SHOP_FULLSCREEN, eJ.Z5c.COLLECTIBLES_SHOP_PRODUCT_DETAIL(':skuId'), eJ.Z5c.GUILD_DISCOVERY, eJ.Z5c.QUEST_HOME, eJ.Z5c.GLOBAL_DISCOVERY, eJ.Z5c.GUILD_MEMBER_VERIFICATION(em.Hw.guildId()), eJ.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(em.Hw.guildId(), ':inviteCode?'), eJ.Z5c.GUILD_BOOSTING_MARKETING(em.Hw.guildId()), eJ.Z5c.FEATURE(':feature'), eJ.Z5c.FAMILY_CENTER],
+        render: e9,
         isSessionRequired: !0,
         isChatRoute: !0
     },
@@ -365,193 +397,193 @@ let e6 = [
         isSessionRequired: !0
     }
 ];
-function e8(e) {
-    for (let { path: t, isChatRoute: n } of e6) {
+function te(e) {
+    for (let { path: t, isChatRoute: n } of e8) {
         if (!n) continue;
-        let i = (0, a.LX)(e, { path: t });
-        if (null != i) return i;
+        let r = (0, o.LX)(e, { path: t });
+        if (null != r) return r;
     }
     return null;
 }
-function te(e) {
-    let { channelId: t, guildId: n, pathname: i } = e;
-    if (!F.Z.isConnected()) return;
-    let { location: l } = (0, ef.s1)();
-    l.pathname === i && (null == eM.Z.getChannel(t) ? (0, ef.dL)(eJ.Z5c.CHANNEL(n)) : (0, ef.dL)(i));
+function tt(e) {
+    let { channelId: t, guildId: n, pathname: r } = e;
+    if (!H.Z.isConnected()) return;
+    let { location: i } = (0, eb.s1)();
+    i.pathname === r && (null == ek.Z.getChannel(t) ? (0, eb.dL)(eJ.Z5c.CHANNEL(n)) : (0, eb.dL)(r));
 }
-class tt extends l.PureComponent {
+class tn extends i.PureComponent {
     componentDidMount() {
-        eX.ZP.setZoomFactor(g.Z.zoom),
-            eE.Z.init(),
-            Z.Z.initialize(),
-            ec.Z.initialize(),
+        eX.ZP.setZoomFactor(f.Z.zoom),
+            e_.Z.init(),
+            S.Z.initialize(),
+            eu.Z.initialize(),
             G.Z.initialize(),
-            ej.Z.initialize(),
-            B.Z.initialize(),
-            eh.Z.initialize(),
-            D.Z.initialize(),
+            ew.Z.initialize(),
+            W.Z.initialize(),
+            ep.Z.initialize(),
+            R.Z.initialize(),
             ee.Z.initialize(),
-            _.Z.init(),
-            H.Z.init(),
+            m.Z.init(),
+            B.Z.init(),
             V.Z.init(),
-            er.Z.initialize(),
+            el.Z.initialize(),
             N.Z.initialize(),
-            k.Z.initialize(),
-            em.Z.initialize(),
-            C.ZP.initialize(),
-            eR.Z.initialize(),
-            ed.Z.initialize(),
-            I.Z.initialize(),
-            W.Z.init(),
-            J.Z.init(),
-            eW.Z.init(),
-            eK.Z.init(),
-            E.Z.initialize(),
-            ex.Z.init(),
-            ez.Z.init(),
-            ey.Z.init(),
-            eT.Z.initialize(),
-            eS.Z.initialize(),
-            eL.Z.initialize(),
-            eO.Z.init(),
             M.Z.initialize(),
-            f.Z.initialize(),
+            eh.Z.initialize(),
+            O.ZP.initialize(),
+            eL.Z.initialize(),
+            ec.Z.initialize(),
+            E.Z.initialize(),
+            z.Z.init(),
+            J.Z.init(),
+            ez.Z.init(),
+            eK.Z.init(),
+            _.Z.initialize(),
+            eT.Z.init(),
+            eF.Z.init(),
+            eA.Z.init(),
+            ey.Z.initialize(),
             eI.Z.initialize(),
+            ej.Z.initialize(),
+            eZ.Z.init(),
+            k.Z.initialize(),
+            b.Z.initialize(),
+            eE.Z.initialize(),
             ev.Z.initialize(),
-            es.Z.initialize(),
             ea.Z.initialize(),
             eo.Z.initialize(),
-            y.Z.initialize(),
-            O.Z.initialize(),
+            es.Z.initialize(),
+            A.Z.initialize(),
+            Z.Z.initialize(),
             $.Z.init({
-                hasModalOpen: o.$sL,
+                hasModalOpen: s.$sL,
                 openModal: () =>
-                    (0, o.ZDy)(async () => {
+                    (0, s.ZDy)(async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 650233));
-                        return (t) => (0, i.jsx)(e, { ...t });
+                        return (t) => (0, r.jsx)(e, e3({}, t));
                     })
             }),
-            w.Z.init(),
+            D.Z.init(),
             et.Z.initialize(),
-            ep.Z.initialize(),
-            eu.Z.initialize(),
+            eg.Z.initialize(),
+            ed.Z.initialize(),
+            w.Z.initialize(),
+            P.Z.initialize(),
             j.Z.initialize(),
-            b.Z.initialize(),
-            L.Z.initialize(),
-            (this.rewriterUnlisten = eg.Z.addRouteRewriter(this.ensureChannelMatchesGuild)),
-            (this.historyUnlisten = eg.Z.addRouteChangeListener(this.handleHistoryChange));
+            (this.rewriterUnlisten = ef.Z.addRouteRewriter(this.ensureChannelMatchesGuild)),
+            (this.historyUnlisten = ef.Z.addRouteChangeListener(this.handleHistoryChange));
     }
     componentWillUnmount() {
-        eE.Z.terminate(), ej.Z.terminate(), eh.Z.terminate(), ec.Z.terminate(), Z.Z.terminate(), C.ZP.terminate(), eR.Z.terminate(), I.Z.terminate(), em.Z.terminate(), ed.Z.terminate(), eL.Z.terminate(), E.Z.terminate(), M.Z.terminate(), et.Z.terminate(), f.Z.terminate(), ep.Z.terminate(), eI.Z.terminate(), ev.Z.terminate(), es.Z.terminate(), ea.Z.terminate(), eo.Z.terminate(), y.Z.terminate(), O.Z.terminate(), eu.Z.terminate(), j.Z.terminate(), U.Z.terminate(), b.Z.terminate(), L.Z.terminate(), this.historyUnlisten(), this.rewriterUnlisten();
+        e_.Z.terminate(), ew.Z.terminate(), ep.Z.terminate(), eu.Z.terminate(), S.Z.terminate(), O.ZP.terminate(), eL.Z.terminate(), E.Z.terminate(), eh.Z.terminate(), ec.Z.terminate(), ej.Z.terminate(), _.Z.terminate(), k.Z.terminate(), et.Z.terminate(), b.Z.terminate(), eg.Z.terminate(), eE.Z.terminate(), ev.Z.terminate(), ea.Z.terminate(), eo.Z.terminate(), es.Z.terminate(), A.Z.terminate(), Z.Z.terminate(), ed.Z.terminate(), w.Z.terminate(), U.Z.terminate(), P.Z.terminate(), j.Z.terminate(), this.historyUnlisten(), this.rewriterUnlisten();
     }
     handleHistoryChange(e) {
         let { pathname: t, search: n } = e;
         !(function (e) {
-            if (F.Z.isConnected() || F.Z.isTryingToConnect()) return;
-            let t = eD.default.getToken();
+            if (H.Z.isConnected() || H.Z.isTryingToConnect()) return;
+            let t = eR.default.getToken();
             null != t &&
                 null !=
                     (function (e) {
-                        for (let { path: t, isSessionRequired: n } of e6) {
+                        for (let { path: t, isSessionRequired: n } of e8) {
                             if (!n) continue;
-                            let i = (0, a.LX)(e, { path: t });
-                            if (null != i) return i;
+                            let r = (0, o.LX)(e, { path: t });
+                            if (null != r) return r;
                         }
                         return null;
                     })(e) &&
-                d.Z.startSession(t);
+                c.Z.startSession(t);
         })(t),
             (function (e, t) {
-                let n = e8(e);
+                let n = te(e);
                 if (null == n) return;
-                let { guildId: i, channelId: l, messageId: s, threadId: o } = e5(n),
-                    d = (0, e_.Ss)(i),
-                    c = (0, e_.cq)(l),
-                    m = (0, e_.cq)(o),
-                    p = eH.Z.getGuildId(),
-                    g = p !== i;
-                if ((d && g && u.Z.selectGuild(i), d && c)) {
-                    let n = eV.Z.getChannelId(p),
-                        a = n !== l;
-                    if (!e3 || g || a || null != s) {
-                        (e3 = !0),
-                            h.default.selectChannel({
-                                guildId: i,
-                                channelId: l,
-                                messageId: s
+                let { guildId: r, channelId: i, messageId: a, threadId: s } = e6(n),
+                    c = (0, em.Ss)(r),
+                    u = (0, em.cq)(i),
+                    h = (0, em.cq)(s),
+                    g = eB.Z.getGuildId(),
+                    f = g !== r;
+                if ((c && f && d.Z.selectGuild(r), c && u)) {
+                    let n = eV.Z.getChannelId(g),
+                        o = n !== i;
+                    if (!e2 || f || o || null != a) {
+                        (e2 = !0),
+                            p.default.selectChannel({
+                                guildId: r,
+                                channelId: i,
+                                messageId: a
                             });
-                        let { summaryId: e } = (0, r.parse)(t);
-                        null != e && eA.ZP.setSelectedSummary(l, e);
+                        let { summaryId: e } = (0, l.parse)(t);
+                        null != e && eC.ZP.setSelectedSummary(i, e);
                     }
-                    if (null != o && m) {
-                        let e = ew.ZP.getCurrentSidebarChannelId(n) !== o,
-                            t = null != ew.ZP.getGuildSidebarState(i);
-                        if (null != l && null != o && e) {
-                            if (t) (0, ef.dL)(eJ.Z5c.CHANNEL(i, o, s));
+                    if (null != s && h) {
+                        let e = eD.ZP.getCurrentSidebarChannelId(n) !== s,
+                            t = null != eD.ZP.getGuildSidebarState(r);
+                        if (null != i && null != s && e) {
+                            if (t) (0, eb.dL)(eJ.Z5c.CHANNEL(r, s, a));
                             else {
                                 let e = { type: eN.Ff.THREAD };
-                                null != s && (e.initialMessageId = s),
-                                    eC.Z.openThreadAsSidebar({
-                                        guildId: i,
-                                        baseChannelId: l,
-                                        channelId: o,
+                                null != a && (e.initialMessageId = a),
+                                    eO.Z.openThreadAsSidebar({
+                                        guildId: r,
+                                        baseChannelId: i,
+                                        channelId: s,
                                         details: e
                                     });
                             }
                         }
-                    } else null == l || a || eC.Z.closeChannelSidebar(l);
-                    let d = ei.Z.getIsOpen();
-                    if (l === e$.oC.ROLE_SUBSCRIPTIONS) en.Z.closeSidebar();
-                    else if (g && d) {
-                        let t = null == p && i === eJ.ME,
+                    } else null == i || o || eO.Z.closeChannelSidebar(i);
+                    let c = er.Z.getIsOpen();
+                    if (i === e$.oC.ROLE_SUBSCRIPTIONS) en.Z.closeSidebar();
+                    else if (f && c) {
+                        let t = null == g && r === eJ.ME,
                             n = e === eJ.Z5c.GUILD_DISCOVERY;
                         t || n ? en.Z.closeSidebar() : en.Z.openSidebar();
-                    } else ((a && d) || (!g && !a)) && en.Z.closeSidebar();
+                    } else ((o && c) || (!f && !o)) && en.Z.closeSidebar();
                 } else
-                    !e9.some((t) => {
+                    !e5.some((t) => {
                         var n;
-                        return (null === (n = (0, a.LX)(e, t)) || void 0 === n ? void 0 : n.isExact) === !0;
-                    }) && (0, ef.dL)(ek.Z.fallbackRoute);
+                        return (null === (n = (0, o.LX)(e, t)) || void 0 === n ? void 0 : n.isExact) === !0;
+                    }) && (0, eb.dL)(eM.Z.fallbackRoute);
             })(t, n);
     }
     ensureChannelMatchesGuild(e) {
-        if (!F.Z.isConnected()) return null;
+        if (!H.Z.isConnected()) return null;
         let { pathname: t } = e,
-            n = e8(t);
+            n = te(t);
         if (null == n) return null;
-        let { guildId: i, channelId: l, threadId: r } = e5(n),
-            a = (0, e_.Ss)(i) && i !== eJ.ME && i !== eJ.I_8;
-        if (null != l && (0, e_.cq)(l) && !(0, e$.AB)(l) && a) {
-            let n = eM.Z.getChannel(l);
+        let { guildId: r, channelId: i, threadId: l } = e6(n),
+            o = (0, em.Ss)(r) && r !== eJ.ME && r !== eJ.I_8;
+        if (null != i && (0, em.cq)(i) && !(0, e$.AB)(i) && o) {
+            let n = ek.Z.getChannel(i);
             if (null == n)
-                eZ.Z.loadThread(l).then(() =>
-                    te({
-                        channelId: l,
-                        guildId: i,
+                eS.Z.loadThread(i).then(() =>
+                    tt({
+                        channelId: i,
+                        guildId: r,
                         pathname: t
                     })
                 );
-            else if (n.guild_id !== i)
+            else if (n.guild_id !== r)
                 return {
-                    path: eJ.Z5c.CHANNEL(i),
+                    path: eJ.Z5c.CHANNEL(r),
                     state: e.state
                 };
-            if (null != r) {
-                if (!((0, e_.cq)(r) && !(0, e$.AB)(l))) return null;
-                let n = eM.Z.getChannel(r);
+            if (null != l) {
+                if (!((0, em.cq)(l) && !(0, e$.AB)(i))) return null;
+                let n = ek.Z.getChannel(l);
                 if (null == n)
-                    eZ.Z.loadThread(r).then(() =>
-                        te({
-                            channelId: r,
-                            guildId: i,
+                    eS.Z.loadThread(l).then(() =>
+                        tt({
+                            channelId: l,
+                            guildId: r,
                             pathname: t
                         })
                     );
-                else if ((null == n ? void 0 : n.parent_id) !== l)
+                else if ((null == n ? void 0 : n.parent_id) !== i)
                     return (
-                        eC.Z.closeChannelSidebar(l),
+                        eO.Z.closeChannelSidebar(i),
                         {
-                            path: eJ.Z5c.CHANNEL(i, l),
+                            path: eJ.Z5c.CHANNEL(r, i),
                             state: e.state
                         }
                     );
@@ -560,19 +592,19 @@ class tt extends l.PureComponent {
         return null;
     }
     render() {
-        return (0, i.jsxs)(l.Fragment, {
+        return (0, r.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsxs)(a.rs, {
+                (0, r.jsxs)(o.rs, {
                     children: [
-                        (0, i.jsx)(a.l_, {
+                        (0, r.jsx)(o.l_, {
                             exact: !0,
                             from: '/channels',
                             to: '/'
                         }),
-                        e6.map((e) => {
+                        e8.map((e) => {
                             let { path: t, render: n } = e;
-                            return (0, i.jsx)(
-                                a.AW,
+                            return (0, r.jsx)(
+                                o.AW,
                                 {
                                     path: t,
                                     render: n
@@ -580,10 +612,10 @@ class tt extends l.PureComponent {
                                 t[0]
                             );
                         }),
-                        (0, i.jsx)(a.l_, { to: '/' })
+                        (0, r.jsx)(o.l_, { to: '/' })
                     ]
                 }),
-                (0, i.jsx)(P.Z, {})
+                (0, r.jsx)(x.Z, {})
             ]
         });
     }
@@ -591,4 +623,4 @@ class tt extends l.PureComponent {
         super(...e), e1(this, 'historyUnlisten', () => {}), e1(this, 'rewriterUnlisten', () => {});
     }
 }
-let tn = tt;
+let tr = tn;

@@ -1,118 +1,162 @@
-n.d(t, { Z: () => u });
-var i = n(200651);
+n.d(t, { Z: () => u }), n(266796);
+var r = n(200651);
 n(192379);
-var l = n(120356),
-    a = n.n(l),
-    r = n(481060),
-    s = n(600164),
-    o = n(528144),
-    d = n(388032),
-    c = n(272798);
+var i = n(120356),
+    l = n.n(i),
+    o = n(481060),
+    a = n(600164),
+    s = n(528144),
+    c = n(388032),
+    d = n(208037);
 function u(e) {
-    let { name: t, description: n, icon: l, imageSrc: u, iconBackgroundColor: m, iconClassName: h, iconWrapperClassName: x, details: g, detailsClassName: p, isHeader: f, isPremium: b } = e;
-    return (0, i.jsxs)(s.Z, {
-        justify: s.Z.Justify.CENTER,
-        className: c.wrapper,
+    let { name: t, description: n, icon: i, imageSrc: u, iconBackgroundColor: p, iconClassName: m, iconWrapperClassName: b, details: g, detailsClassName: f, isHeader: h, isPremium: x } = e;
+    return (0, r.jsxs)(a.Z, {
+        justify: a.Z.Justify.CENTER,
+        className: d.wrapper,
         children: [
-            null != l || null != u
-                ? (0, i.jsx)(s.Z.Child, {
+            null != i || null != u
+                ? (0, r.jsx)(a.Z.Child, {
                       shrink: 0,
                       grow: 0,
-                      children: (function (e, t, n, l, r) {
+                      children: (function (e, t, n, i, o) {
                           if (null != t)
-                              return (0, i.jsx)('img', {
+                              return (0, r.jsx)('img', {
                                   alt: '',
                                   src: t,
-                                  className: a()(c.iconWrapper, l)
+                                  className: l()(d.iconWrapper, i)
                               });
-                          let o = null;
+                          let s = null;
                           return (
                               null != e &&
-                                  (o =
+                                  (s =
                                       'string' == typeof e
-                                          ? (0, i.jsx)('img', {
+                                          ? (0, r.jsx)('img', {
                                                 alt: '',
                                                 src: e,
-                                                className: a()(c.icon, l)
+                                                className: l()(d.icon, i)
                                             })
-                                          : (0, i.jsx)(e, {
-                                                className: a()(c.icon, l),
+                                          : (0, r.jsx)(e, {
+                                                className: l()(d.icon, i),
                                                 color: 'currentColor'
                                             })),
-                              (0, i.jsx)(s.Z, {
-                                  align: s.Z.Align.CENTER,
-                                  justify: s.Z.Justify.CENTER,
+                              (0, r.jsx)(a.Z, {
+                                  align: a.Z.Align.CENTER,
+                                  justify: a.Z.Justify.CENTER,
                                   style: { backgroundColor: n },
-                                  className: a()(c.iconWrapper, r),
-                                  children: o
+                                  className: l()(d.iconWrapper, o),
+                                  children: s
                               })
                           );
-                      })(l, u, m, h, x)
+                      })(i, u, p, m, b)
                   })
                 : null,
             (function (e) {
-                let { name: t, description: n, details: l, detailsClassName: u, isHeader: m, isPremium: h } = e,
-                    x =
-                        null == l
+                let { name: t, description: n, details: i, detailsClassName: u, isHeader: p, isPremium: m } = e,
+                    b =
+                        null == i
                             ? void 0
-                            : l.map((e, t) => {
-                                  let { icon: n, text: l } = e;
-                                  return (0, i.jsxs)(
+                            : i.map((e, t) => {
+                                  let { icon: n, text: i } = e;
+                                  return (0, r.jsxs)(
                                       'div',
                                       {
-                                          className: a()(c.detailsWrapper, m ? c.headerDetailsWrapper : null),
+                                          className: l()(d.detailsWrapper, p ? d.headerDetailsWrapper : null),
                                           children: [
                                               null != n
-                                                  ? (0, i.jsx)(n, {
+                                                  ? (0, r.jsx)(n, {
                                                         size: 'xs',
                                                         color: 'currentColor',
-                                                        className: c.detailsIcon
+                                                        className: d.detailsIcon
                                                     })
                                                   : null,
-                                              (0, i.jsx)(r.Text, {
+                                              (0, r.jsx)(o.Text, {
                                                   variant: 'text-xs/normal',
                                                   color: 'header-secondary',
                                                   className: u,
-                                                  children: l
+                                                  children: i
                                               })
                                           ]
                                       },
                                       t
                                   );
                               });
-                return (0, i.jsxs)(s.Z, {
-                    direction: s.Z.Direction.VERTICAL,
+                return (0, r.jsxs)(a.Z, {
+                    direction: a.Z.Direction.VERTICAL,
                     children: [
-                        (0, i.jsxs)(o.Z, {
-                            size: m ? o.Z.Sizes.SIZE_24 : o.Z.Sizes.SIZE_16,
-                            className: m ? c.header : c.secondaryHeader,
+                        (0, r.jsxs)(s.Z, {
+                            size: p ? s.Z.Sizes.SIZE_24 : s.Z.Sizes.SIZE_16,
+                            className: p ? d.header : d.secondaryHeader,
                             children: [
                                 t,
-                                h &&
-                                    (0, i.jsx)(r.ua7, {
-                                        text: d.intl.string(d.t.VFuFur),
-                                        children: (e) =>
-                                            (0, i.jsx)(r.Prq, {
-                                                size: 'xs',
-                                                color: 'currentColor',
-                                                ...e,
-                                                className: c.premiumIcon
-                                            })
+                                m &&
+                                    (0, r.jsx)(o.ua7, {
+                                        text: c.NW.string(c.t.VFuFur),
+                                        children: (e) => {
+                                            var t, n;
+                                            return (0, r.jsx)(
+                                                o.Prq,
+                                                ((t = (function (e) {
+                                                    for (var t = 1; t < arguments.length; t++) {
+                                                        var n = null != arguments[t] ? arguments[t] : {},
+                                                            r = Object.keys(n);
+                                                        'function' == typeof Object.getOwnPropertySymbols &&
+                                                            (r = r.concat(
+                                                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                                })
+                                                            )),
+                                                            r.forEach(function (t) {
+                                                                var r;
+                                                                (r = n[t]),
+                                                                    t in e
+                                                                        ? Object.defineProperty(e, t, {
+                                                                              value: r,
+                                                                              enumerable: !0,
+                                                                              configurable: !0,
+                                                                              writable: !0
+                                                                          })
+                                                                        : (e[t] = r);
+                                                            });
+                                                    }
+                                                    return e;
+                                                })(
+                                                    {
+                                                        size: 'xs',
+                                                        color: 'currentColor'
+                                                    },
+                                                    e
+                                                )),
+                                                (n = n = { className: d.premiumIcon }),
+                                                Object.getOwnPropertyDescriptors
+                                                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                                                    : (function (e, t) {
+                                                          var n = Object.keys(e);
+                                                          if (Object.getOwnPropertySymbols) {
+                                                              var r = Object.getOwnPropertySymbols(e);
+                                                              n.push.apply(n, r);
+                                                          }
+                                                          return n;
+                                                      })(Object(n)).forEach(function (e) {
+                                                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                                                      }),
+                                                t)
+                                            );
+                                        }
                                     })
                             ]
                         }),
                         null != n
-                            ? (0, i.jsx)(r.Text, {
+                            ? (0, r.jsx)(o.Text, {
                                   variant: 'text-sm/normal',
                                   color: 'header-secondary',
                                   children: n
                               })
                             : null,
-                        (0, i.jsx)(s.Z, {
-                            direction: s.Z.Direction.HORIZONTAL,
-                            align: s.Z.Align.CENTER,
-                            wrap: s.Z.Wrap.WRAP,
-                            children: x
+                        (0, r.jsx)(a.Z, {
+                            direction: a.Z.Direction.HORIZONTAL,
+                            align: a.Z.Align.CENTER,
+                            wrap: a.Z.Wrap.WRAP,
+                            children: b
                         })
                     ]
                 });
@@ -120,9 +164,9 @@ function u(e) {
                 name: t,
                 description: n,
                 details: g,
-                detailsClassName: p,
-                isHeader: f,
-                isPremium: b
+                detailsClassName: f,
+                isHeader: h,
+                isPremium: x
             })
         ]
     });

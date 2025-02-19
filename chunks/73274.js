@@ -1,15 +1,34 @@
-n.d(t, { Z: () => u });
-var i = n(192379),
-    l = n(924826),
-    a = n(448986),
-    r = n(459273),
-    s = n(585483),
-    o = n(534091),
+n.d(t, { Z: () => d });
+var r = n(192379),
+    i = n(924826),
+    l = n(448986),
+    o = n(459273),
+    a = n(585483),
+    s = n(534091),
     c = n(959517),
-    d = n(981631);
-function u(e) {
-    let { scrollerRef: t, ...n } = e,
-        u = (0, a.Z)(() => {
+    u = n(981631);
+function d(e) {
+    var { scrollerRef: t } = e,
+        n = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                i = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        r,
+                        i = {},
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+            }
+            return i;
+        })(e, ['scrollerRef']);
+    let d = (0, l.Z)(() => {
             let e = t.current;
             return null == e
                 ? Promise.resolve()
@@ -17,7 +36,7 @@ function u(e) {
                       e.scrollToBottom({ callback: () => requestAnimationFrame(t) });
                   });
         }),
-        h = (0, a.Z)(() => {
+        p = (0, l.Z)(() => {
             let e = t.current;
             return null == e
                 ? Promise.resolve()
@@ -25,47 +44,47 @@ function u(e) {
                       e.scrollToTop({ callback: () => requestAnimationFrame(t) });
                   });
         }),
-        p = i.useCallback(
+        h = r.useCallback(
             (e) => {
-                var i, l, a;
+                var r, i, l;
                 if (!n.keyboardModeEnabled) return;
-                let r = null === (l = t.current) || void 0 === l ? void 0 : null === (i = l.getScrollerNode()) || void 0 === i ? void 0 : i.ownerDocument,
-                    s = null == r ? void 0 : r.querySelector(e);
-                null != s &&
-                    (null === (a = t.current) ||
-                        void 0 === a ||
-                        a.scrollIntoViewNode({
-                            node: s,
+                let o = null === (i = t.current) || void 0 === i ? void 0 : null === (r = i.getScrollerNode()) || void 0 === r ? void 0 : r.ownerDocument,
+                    a = null == o ? void 0 : o.querySelector(e);
+                null != a &&
+                    (null === (l = t.current) ||
+                        void 0 === l ||
+                        l.scrollIntoViewNode({
+                            node: a,
                             padding: 4 * c.kQ,
-                            callback: () => (null == s ? void 0 : s.focus())
+                            callback: () => (null == a ? void 0 : a.focus())
                         }));
             },
             [n.keyboardModeEnabled, t]
         ),
-        m = i.useCallback(() => {
-            n.hasMoreAfter || s.S.dispatchToLastSubscribed(d.CkL.TEXTAREA_FOCUS);
+        f = r.useCallback(() => {
+            n.hasMoreAfter || a.S.dispatchToLastSubscribed(u.CkL.TEXTAREA_FOCUS);
         }, [n.hasMoreAfter]),
-        f = (0, l.ZP)({
-            id: o.W,
+        m = (0, i.ZP)({
+            id: s.W,
             preserveFocusPosition: !1,
-            setFocus: p,
+            setFocus: h,
             isEnabled: n.keyboardModeEnabled && !n.isEditing,
-            scrollToStart: h,
-            scrollToEnd: u,
-            onNavigateNextAtEnd: m
+            scrollToStart: p,
+            scrollToEnd: d,
+            onNavigateNextAtEnd: f
         }),
-        g = i.useCallback(
+        g = r.useCallback(
             (e) => {
                 let { atEnd: t = !1 } = e;
-                t ? f.focusLastVisibleItem() : f.focusFirstVisibleItem();
+                t ? m.focusLastVisibleItem() : m.focusFirstVisibleItem();
             },
-            [f]
+            [m]
         );
     return (
-        (0, r.yp)({
-            event: d.CkL.FOCUS_MESSAGES,
+        (0, o.yp)({
+            event: u.CkL.FOCUS_MESSAGES,
             handler: g
         }),
-        f
+        m
     );
 }

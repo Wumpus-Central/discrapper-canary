@@ -1,32 +1,32 @@
-n.d(t, { Z: () => b }), n(47120);
+n.d(t, { Z: () => D }), n(47120);
 var i = n(200651),
-    s = n(192379),
-    l = n(120356),
-    a = n.n(l),
-    o = n(568611),
-    r = n(442837),
-    d = n(481060),
-    c = n(846027),
+    r = n(192379),
+    s = n(120356),
+    o = n.n(s),
+    l = n(568611),
+    a = n(442837),
+    c = n(481060),
+    d = n(846027),
     u = n(925549),
     h = n(287734),
     p = n(933557),
     g = n(600164),
-    m = n(870569),
-    f = n(345243),
-    v = n(873596),
-    Z = n(917405),
-    x = n(430824),
+    f = n(870569),
+    m = n(345243),
+    y = n(873596),
+    O = n(917405),
+    v = n(430824),
     S = n(131951),
-    E = n(699516),
-    C = n(594174),
-    y = n(979651),
-    N = n(362446),
-    I = n(518084),
-    _ = n(981631),
-    O = n(388032),
-    j = n(737290),
-    T = n(74671);
-function k(e, t, n) {
+    b = n(699516),
+    x = n(594174),
+    Z = n(979651),
+    j = n(362446),
+    E = n(518084),
+    N = n(981631),
+    C = n(388032),
+    I = n(204346),
+    P = n(347363);
+function w(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -39,75 +39,111 @@ function k(e, t, n) {
         e
     );
 }
-class M extends s.PureComponent {
+function _(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            i = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (i = i.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            i.forEach(function (t) {
+                w(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function T(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var i = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, i);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+class k extends r.PureComponent {
     handleDisconnect() {
         h.default.selectVoiceChannel(null);
     }
     renderChannelLink(e) {
         let { guild: t } = this.props,
-            n = (0, p.F6)(e, C.default, E.Z),
-            s = null != t ? ''.concat(n, ' / ').concat(t.name) : n,
-            l = null != t ? t.id : _.ME;
-        return (0, i.jsx)(o.rU, {
-            to: _.Z5c.CHANNEL(l),
+            n = (0, p.F6)(e, x.default, b.Z),
+            r = null != t ? ''.concat(n, ' / ').concat(t.name) : n,
+            s = null != t ? t.id : N.ME;
+        return (0, i.jsx)(l.rU, {
+            to: N.Z5c.CHANNEL(s),
             onClick: (t) => {
-                t.stopPropagation(), u.Z.channelListScrollTo(l, e.id);
+                t.stopPropagation(), u.Z.channelListScrollTo(s, e.id);
             },
-            children: (0, i.jsx)(f.Z, {
-                className: T.channel,
-                children: s
+            children: (0, i.jsx)(m.Z, {
+                className: P.channel,
+                children: r
             })
         });
     }
     render() {
-        let { className: e, contentClassName: t, pinned: n, lobbyId: s, channel: l, quality: o, lastPing: r, hasVideo: c, connectionState: u, deaf: h, mute: p } = this.props;
-        return null == l
+        let { className: e, contentClassName: t, pinned: n, lobbyId: r, channel: s, quality: l, lastPing: a, hasVideo: d, connectionState: u, deaf: h, mute: p } = this.props;
+        return null == s
             ? null
-            : (0, i.jsx)(I.ZP.Bar, {
-                  className: a()(e, j.controls, { [j.unpinned]: !n }),
-                  children: (0, i.jsxs)(I.ZP.Content, {
-                      className: a()(t, j.content),
+            : (0, i.jsx)(E.ZP.Bar, {
+                  className: o()(e, I.controls, { [I.unpinned]: !n }),
+                  children: (0, i.jsxs)(E.ZP.Content, {
+                      className: o()(t, I.content),
                       dynamicSize: !0,
                       children: [
                           (0, i.jsx)('div', {
-                              className: T.inner,
-                              children: (0, i.jsx)(d.yRy, {
-                                  renderPopout: () => this.renderPopout(l.id),
+                              className: P.inner,
+                              children: (0, i.jsx)(c.yRy, {
+                                  renderPopout: () => this.renderPopout(s.id),
                                   position: 'top',
                                   children: (e) =>
-                                      (0, i.jsx)(d.P3F, {
-                                          ...e,
-                                          children: (0, i.jsx)(Z.Z, {
-                                              channelId: l.id,
-                                              quality: o,
-                                              lastPing: r,
-                                              hasVideo: c,
-                                              state: u,
-                                              children: this.renderChannelLink(l)
+                                      (0, i.jsx)(
+                                          c.P3F,
+                                          T(_({}, e), {
+                                              children: (0, i.jsx)(O.Z, {
+                                                  channelId: s.id,
+                                                  quality: l,
+                                                  lastPing: a,
+                                                  hasVideo: d,
+                                                  state: u,
+                                                  children: this.renderChannelLink(s)
+                                              })
                                           })
-                                      })
+                                      )
                               })
                           }),
                           (0, i.jsxs)(g.Z, {
                               grow: 0,
                               children: [
-                                  (0, i.jsx)(m.Z, {
-                                      tooltipText: p ? O.intl.string(O.t.YqAjX1) : O.intl.string(O.t['w4m94+']),
-                                      icon: p ? d.nRN : d.S6n,
-                                      iconForeground: p ? j.strikethrough : null,
+                                  (0, i.jsx)(f.Z, {
+                                      tooltipText: p ? C.NW.string(C.t.YqAjX1) : C.NW.string(C.t['w4m94+']),
+                                      icon: p ? c.nRN : c.S6n,
+                                      iconForeground: p ? I.strikethrough : null,
                                       onClick: this.handleToggleSelfMute
                                   }),
-                                  (0, i.jsx)(m.Z, {
-                                      tooltipText: h ? O.intl.string(O.t['2US87+']) : O.intl.string(O.t.wjcRFR),
-                                      icon: h ? d.wE8 : d.VWR,
+                                  (0, i.jsx)(f.Z, {
+                                      tooltipText: h ? C.NW.string(C.t['2US87+']) : C.NW.string(C.t.wjcRFR),
+                                      icon: h ? c.wE8 : c.VWR,
                                       onClick: this.handleToggleSelfDeaf,
-                                      iconForeground: h ? j.strikethrough : null
+                                      iconForeground: h ? I.strikethrough : null
                                   }),
-                                  null == s &&
-                                      (0, i.jsx)(m.Z, {
-                                          tooltipText: O.intl.string(O.t['6vrfgo']),
+                                  null == r &&
+                                      (0, i.jsx)(f.Z, {
+                                          tooltipText: C.NW.string(C.t['6vrfgo']),
                                           onClick: this.handleDisconnect,
-                                          icon: d.gkL
+                                          icon: c.gkL
                                       })
                               ]
                           })
@@ -117,23 +153,23 @@ class M extends s.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            k(this, 'handleToggleSelfMute', () => {
+            w(this, 'handleToggleSelfMute', () => {
                 let { context: e } = this.props;
-                c.Z.toggleSelfMute({
+                d.Z.toggleSelfMute({
                     context: e,
                     location: 'Overlay Controls'
                 });
             }),
-            k(this, 'handleToggleSelfDeaf', () => {
+            w(this, 'handleToggleSelfDeaf', () => {
                 let { context: e } = this.props;
-                c.Z.toggleSelfDeaf({
+                d.Z.toggleSelfDeaf({
                     context: e,
                     location: 'Overlay Controls'
                 });
             }),
-            k(this, 'renderPopout', (e) => {
+            w(this, 'renderPopout', (e) => {
                 let { lobbyId: t } = this.props;
-                return (0, i.jsx)(v.Z, {
+                return (0, i.jsx)(y.Z, {
                     channelId: e,
                     lobbyId: t,
                     isOverlay: !0
@@ -141,23 +177,44 @@ class M extends s.PureComponent {
             });
     }
 }
-function b(e) {
-    let { context: t, lobbyId: n, channel: s, ...l } = e,
-        a = (0, r.e7)([x.Z], () => x.Z.getGuild(null == s ? void 0 : s.getGuildId())),
-        o = (0, r.e7)([y.Z], () => null != s && y.Z.hasVideo(s.id)),
-        [d, c] = (0, r.Wu)([S.Z], () => [S.Z.isSelfMute(t) || S.Z.isSelfMutedTemporarily(t), S.Z.isSelfDeaf(t)]),
-        [u, h, p] = (0, r.Wu)([N.Z], () => [N.Z.getConnectionState(n), N.Z.getLastPing(n), N.Z.getQuality(n)]);
-    return (0, i.jsx)(M, {
-        ...l,
-        context: t,
-        lobbyId: n,
-        channel: s,
-        guild: a,
-        hasVideo: o,
-        mute: d,
-        deaf: c,
-        connectionState: u,
-        lastPing: h,
-        quality: p
-    });
+function D(e) {
+    var { context: t, lobbyId: n, channel: r } = e,
+        s = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                i,
+                r = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        i,
+                        r = {},
+                        s = Object.keys(e);
+                    for (i = 0; i < s.length; i++) (n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                    return r;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var s = Object.getOwnPropertySymbols(e);
+                for (i = 0; i < s.length; i++) (n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+            }
+            return r;
+        })(e, ['context', 'lobbyId', 'channel']);
+    let o = (0, a.e7)([v.Z], () => v.Z.getGuild(null == r ? void 0 : r.getGuildId())),
+        l = (0, a.e7)([Z.Z], () => null != r && Z.Z.hasVideo(r.id)),
+        [c, d] = (0, a.Wu)([S.Z], () => [S.Z.isSelfMute(t) || S.Z.isSelfMutedTemporarily(t), S.Z.isSelfDeaf(t)]),
+        [u, h, p] = (0, a.Wu)([j.Z], () => [j.Z.getConnectionState(n), j.Z.getLastPing(n), j.Z.getQuality(n)]);
+    return (0, i.jsx)(
+        k,
+        T(_({}, s), {
+            context: t,
+            lobbyId: n,
+            channel: r,
+            guild: o,
+            hasVideo: l,
+            mute: c,
+            deaf: d,
+            connectionState: u,
+            lastPing: h,
+            quality: p
+        })
+    );
 }

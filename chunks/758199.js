@@ -1,6 +1,6 @@
 n.d(t, {
-    W: () => x,
-    u: () => f
+    W: () => y,
+    u: () => v
 }),
     n(315314),
     n(309749),
@@ -9,154 +9,193 @@ n.d(t, {
     n(78328),
     n(815648),
     n(47120);
-var i,
-    l = n(200651),
+var r,
+    i = n(200651),
     a = n(192379),
-    r = n(120356),
-    s = n.n(r),
-    o = n(442837),
+    o = n(120356),
+    l = n.n(o),
+    s = n(442837),
     c = n(481060),
     d = n(607070),
     u = n(206295),
-    m = n(70097),
-    _ = n(572004),
-    h = n(217702),
-    p = n(388032),
-    g = n(310764),
-    f = (((i = {})[(i.BOT = 0)] = 'BOT'), (i[(i.ACTIVITY = 1)] = 'ACTIVITY'), i);
-function x(e) {
-    let { title: t, header: n, info: i, staticBannerSrc: r, videoBannerSrc: f, bannerAspectRatio: x = 0, iconSrc: C, embedUrl: E, actions: v = [] } = e,
-        { primaryColor: I, secondaryColor: N } = (0, u.Z)(null != C ? C : r),
-        S = 'linear-gradient(45deg, '.concat(I, ', ').concat(N, ')'),
-        T = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
-        b =
-            _.wS && null != E
-                ? (0, l.jsx)(c.zxk, {
+    p = n(70097),
+    m = n(572004),
+    f = n(217702),
+    h = n(388032),
+    g = n(579092);
+function _() {
+    return (_ =
+        Object.assign ||
+        function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
+            }
+            return e;
+        }).apply(this, arguments);
+}
+function b(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+var v = (((r = {})[(r.BOT = 0)] = 'BOT'), (r[(r.ACTIVITY = 1)] = 'ACTIVITY'), r);
+function y(e) {
+    let { title: t, header: n, info: r, staticBannerSrc: o, videoBannerSrc: v, bannerAspectRatio: y = 0, iconSrc: x, embedUrl: O, actions: E = [] } = e,
+        { primaryColor: j, secondaryColor: N } = (0, u.Z)(null != x ? x : o),
+        C = 'linear-gradient(45deg, '.concat(j, ', ').concat(N, ')'),
+        I = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
+        S =
+            m.wS && null != O
+                ? (0, i.jsx)(c.zxk, {
                       look: c.zxk.Looks.BLANK,
                       size: c.zxk.Sizes.ICON,
-                      'aria-label': p.intl.string(p.t.WqhZsr),
+                      'aria-label': h.NW.string(h.t.WqhZsr),
                       className: g.linkIcon,
                       onClick: () => {
-                          (0, _.JG)(E), (0, c.showToast)((0, c.createToast)(p.intl.string(p.t['L/PwZW']), c.ToastType.SUCCESS));
+                          (0, m.JG)(O), (0, c.showToast)((0, c.createToast)(h.NW.string(h.t['L/PwZW']), c.ToastType.SUCCESS));
                       },
-                      children: (0, l.jsx)(c.xPt, {
+                      children: (0, i.jsx)(c.xPt, {
                           size: 'xs',
                           color: 'currentColor'
                       })
                   })
                 : null,
-        A = null != r,
-        j = null != f && !1 === T,
-        y = A || j,
-        Z = 0 === x ? g.bannerAspectRatioBot : g.bannerAspectRatioActivity,
-        R = a.useRef(null),
-        L = a.useCallback(() => {
-            let e = R.current;
+        P = null != o,
+        T = null != v && !1 === I,
+        A = P || T,
+        w = 0 === y ? g.bannerAspectRatioBot : g.bannerAspectRatioActivity,
+        Z = a.useRef(null),
+        k = a.useCallback(() => {
+            let e = Z.current;
             null != e && ('hidden' === getComputedStyle(e).visibility ? e.pause() : e.play());
         }, []),
-        P = a.useMemo(() => !!j && new URL(f).pathname.endsWith('.gif'), [j, f]);
-    return (0, l.jsxs)('div', {
-        className: s()(g.embed, { [g.showVideoOnFocus]: j }),
+        R = a.useMemo(() => !!T && new URL(v).pathname.endsWith('.gif'), [T, v]);
+    return (0, i.jsxs)('div', {
+        className: l()(g.embed, { [g.showVideoOnFocus]: T }),
         children: [
-            y &&
-                (0, l.jsxs)('div', {
-                    className: s()(g.bannerWrapper, Z),
+            A &&
+                (0, i.jsxs)('div', {
+                    className: l()(g.bannerWrapper, w),
                     children: [
-                        j &&
-                            (P
-                                ? (0, l.jsx)('div', {
+                        T &&
+                            (R
+                                ? (0, i.jsx)('div', {
                                       className: g.videoBanner,
-                                      style: { backgroundImage: 'url('.concat(f, ')') }
+                                      style: { backgroundImage: 'url('.concat(v, ')') }
                                   })
-                                : (0, l.jsx)(m.Z, {
-                                      ref: R,
-                                      src: f,
-                                      mediaLayoutType: h.hV.MOSAIC,
+                                : (0, i.jsx)(p.Z, {
+                                      ref: Z,
+                                      src: v,
+                                      mediaLayoutType: f.hV.MOSAIC,
                                       loop: !0,
                                       muted: !0,
                                       className: g.videoBanner
                                   })),
-                        A &&
-                            (0, l.jsx)('div', {
+                        P &&
+                            (0, i.jsx)('div', {
                                 className: g.staticBanner,
-                                style: { backgroundImage: 'url('.concat(r, ')') },
-                                onTransitionEnd: L
+                                style: { backgroundImage: 'url('.concat(o, ')') },
+                                onTransitionEnd: k
                             })
                     ]
                 }),
-            (0, l.jsxs)('div', {
+            (0, i.jsxs)('div', {
                 className: g.contentContainer,
-                style: { background: S },
+                style: { background: C },
                 children: [
                     null != n &&
-                        (0, l.jsxs)('div', {
+                        (0, i.jsxs)('div', {
                             className: g.header,
                             children: [
-                                (0, l.jsx)(c.Text, {
+                                (0, i.jsx)(c.Text, {
                                     variant: 'eyebrow',
                                     color: 'none',
                                     children: n
                                 }),
-                                b
+                                S
                             ]
                         }),
-                    (0, l.jsxs)('div', {
+                    (0, i.jsxs)('div', {
                         className: g.contentWrapper,
                         children: [
-                            null != C &&
-                                (0, l.jsx)('div', {
+                            null != x &&
+                                (0, i.jsx)('div', {
                                     className: g.img,
-                                    style: { backgroundImage: 'url('.concat(C, ')') }
+                                    style: { backgroundImage: 'url('.concat(x, ')') }
                                 }),
-                            (0, l.jsxs)('div', {
+                            (0, i.jsxs)('div', {
                                 className: g.content,
                                 children: [
-                                    (0, l.jsx)(c.Text, {
+                                    (0, i.jsx)(c.Text, {
                                         variant: 'text-md/semibold',
                                         color: 'none',
                                         lineClamp: 1,
                                         children: t
                                     }),
-                                    (0, l.jsx)('div', {
+                                    (0, i.jsx)('div', {
                                         className: g.contentInfo,
-                                        children: i
+                                        children: r
                                     })
                                 ]
                             }),
-                            null == n && b
+                            null == n && S
                         ]
                     }),
-                    v.length > 0 &&
-                        (0, l.jsx)('div', {
+                    E.length > 0 &&
+                        (0, i.jsx)('div', {
                             className: g.actionWrapper,
-                            children: v.map((e, t) => {
-                                let { label: n, onClick: i, disabledReason: a, submitting: r } = e,
-                                    s = null != a,
-                                    o = 0 === t,
+                            children: E.map((e, t) => {
+                                let { label: n, onClick: r, disabledReason: a, submitting: o } = e,
+                                    l = null != a,
+                                    s = 0 === t,
                                     d = {
-                                        color: o ? c.zxk.Colors.WHITE : c.zxk.Colors.TRANSPARENT,
-                                        className: o ? g.primaryButton : g.alwaysWhiteText,
-                                        onClick: i,
-                                        disabled: s,
-                                        submitting: r,
+                                        color: s ? c.zxk.Colors.WHITE : c.zxk.Colors.TRANSPARENT,
+                                        className: s ? g.primaryButton : g.alwaysWhiteText,
+                                        onClick: r,
+                                        disabled: l,
+                                        submitting: o,
                                         children: n
                                     };
-                                return s
-                                    ? (0, l.jsx)(
+                                return l
+                                    ? (0, i.jsx)(
                                           c.ua7,
                                           {
                                               text: a,
                                               children: (e) => {
-                                                  let { ...t } = e;
-                                                  return (0, l.jsx)(c.zxk, {
-                                                      ...d,
-                                                      ...t
-                                                  });
+                                                  var t = _(
+                                                      {},
+                                                      (function (e) {
+                                                          if (null == e) throw TypeError('Cannot destructure ' + e);
+                                                          return e;
+                                                      })(e)
+                                                  );
+                                                  return (0, i.jsx)(c.zxk, b({}, d, t));
                                               }
                                           },
                                           n
                                       )
-                                    : (0, l.jsx)(c.zxk, { ...d }, n);
+                                    : (0, i.jsx)(c.zxk, b({}, d), n);
                             })
                         })
                 ]

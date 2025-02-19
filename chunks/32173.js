@@ -1,11 +1,12 @@
 n.d(t, {
-    Z: () => ex,
-    u: () => eN
-});
-var i,
-    s = n(200651);
+    Z: () => ef,
+    u: () => eh
+}),
+    n(266796);
+var r,
+    i = n(200651);
 n(192379);
-var r = n(399606),
+var s = n(399606),
     a = n(230711),
     l = n(410030),
     o = n(100527),
@@ -13,34 +14,34 @@ var r = n(399606),
     d = n(975298),
     u = n(779618),
     m = n(832149),
-    h = n(300284),
-    g = n(703656),
-    N = n(547972),
-    x = n(131951),
-    p = n(594174),
-    _ = n(78839),
-    E = n(424218),
-    C = n(63063),
-    f = n(74538),
-    T = n(695349),
-    S = n(860489),
-    I = n(314684),
-    b = n(687362),
-    v = n(943180),
-    j = n(848572),
-    A = n(229555),
-    O = n(768865),
-    R = n(119269),
+    g = n(300284),
+    p = n(703656),
+    h = n(547972),
+    f = n(131951),
+    N = n(594174),
+    x = n(78839),
+    b = n(424218),
+    _ = n(63063),
+    E = n(74538),
+    j = n(695349),
+    C = n(860489),
+    O = n(314684),
+    v = n(687362),
+    S = n(943180),
+    T = n(848572),
+    I = n(229555),
+    y = n(768865),
+    A = n(119269),
     P = n(391110),
-    Z = n(75077),
+    R = n(75077),
     D = n(474936),
-    y = n(735825),
-    W = n(981631),
+    Z = n(735825),
+    w = n(981631),
     k = n(526761),
-    L = n(332325),
-    B = n(388032),
-    M = n(510040),
-    w = n(660372),
+    W = n(332325),
+    L = n(388032),
+    B = n(596470),
+    M = n(660372),
     U = n(926433),
     V = n(302036),
     G = n(994554),
@@ -57,9 +58,9 @@ var r = n(399606),
     ee = n(142416),
     et = n(607762),
     en = n(474106),
-    ei = n(572501),
-    es = n(755590),
-    er = n(909910),
+    er = n(572501),
+    ei = n(755590),
+    es = n(909910),
     ea = n(637810),
     el = n(570423),
     eo = n(912429),
@@ -67,464 +68,464 @@ var r = n(399606),
     ed = n(209672),
     eu = n(698173),
     em = n(926262),
-    eh = n(371435),
-    eg = n(83663),
-    eN = (((i = {}).CLIENT_THEMES = 'clientThemes'), (i.CLIPS = 'clips'), (i.EARLY_ACCESS = 'earlyAccess'), (i.ENTRANCE_SOUNDS = 'entranceSounds'), (i.PROFILES = 'profiles'), (i.REMIXING = 'remixing'), (i.SERVER_BOOSTS = 'serverBoosts'), (i.GREY_SERVER_BOOSTS = 'greyServerBoosts'), (i.SPECIAL_MEMBER_PRICING = 'specialMemberPricing'), (i.SPECIAL_MEMBER_PRICING_SEE_ALL_VARIANT = 'specialMemberPricingSeeAllVariant'), (i.SPECIAL_SHOP_PERKS = 'specialShopPerks'), (i.UNLIMITED_SUPER_REACTIONS = 'unlimitedSuperReactions'), (i.SUPER_REACTIONS = 'superReactions'), (i.UPCOMING_DROP_UNTIMED = 'upcomingDropUntimed'), (i.CUSTOM_APP_ICONS = 'customAppIcons'), (i.MORE_EMOJI_POWER = 'moreEmojiPower'), (i.CUSTOM_SOUNDS_EVERYWHERE = 'customSoundsEverywhere'), (i.SPECIAL_STICKER_ACCESS = 'specialStickerAccess'), (i.LARGE_UPLOADS = 'largeUploads'), (i.HD_VIDEO = 'hdVideo'), (i.BADGE = 'badge'), (i.GREY_BADGE = 'greyBadge'), (i.ENTRANCE_SOUNDS_SEE_ALL_VARIATION = 'entranceSoundsSeeAllVariation'), (i.EARLY_ACCESS_SEE_ALL_VARIATION = 'earlyAccessSeeAllVariant'), (i.FREE_BOOST = 'freeBoost'), (i.TENURE_REWARD_COLLECTIBLE = 'tenureRewardCollectible'), (i.REFERRAL_PROGRAM = 'referralProgram'), (i.NEW_APP_STYLES_UPDATE_JUNE_2024 = 'newAppStylesUpdateJune2024'), (i.SERVER_PROFILES = 'serverProfiles'), (i.SHY_PROJECT = 'shyProject'), (i.TENURE_BADGE = 'tenureBadge'), i);
-let ex = () => {
+    eg = n(371435),
+    ep = n(83663),
+    eh = (((r = {}).CLIENT_THEMES = 'clientThemes'), (r.CLIPS = 'clips'), (r.EARLY_ACCESS = 'earlyAccess'), (r.ENTRANCE_SOUNDS = 'entranceSounds'), (r.PROFILES = 'profiles'), (r.REMIXING = 'remixing'), (r.SERVER_BOOSTS = 'serverBoosts'), (r.GREY_SERVER_BOOSTS = 'greyServerBoosts'), (r.SPECIAL_MEMBER_PRICING = 'specialMemberPricing'), (r.SPECIAL_MEMBER_PRICING_SEE_ALL_VARIANT = 'specialMemberPricingSeeAllVariant'), (r.SPECIAL_SHOP_PERKS = 'specialShopPerks'), (r.UNLIMITED_SUPER_REACTIONS = 'unlimitedSuperReactions'), (r.SUPER_REACTIONS = 'superReactions'), (r.UPCOMING_DROP_UNTIMED = 'upcomingDropUntimed'), (r.CUSTOM_APP_ICONS = 'customAppIcons'), (r.MORE_EMOJI_POWER = 'moreEmojiPower'), (r.CUSTOM_SOUNDS_EVERYWHERE = 'customSoundsEverywhere'), (r.SPECIAL_STICKER_ACCESS = 'specialStickerAccess'), (r.LARGE_UPLOADS = 'largeUploads'), (r.HD_VIDEO = 'hdVideo'), (r.BADGE = 'badge'), (r.GREY_BADGE = 'greyBadge'), (r.ENTRANCE_SOUNDS_SEE_ALL_VARIATION = 'entranceSoundsSeeAllVariation'), (r.EARLY_ACCESS_SEE_ALL_VARIATION = 'earlyAccessSeeAllVariant'), (r.FREE_BOOST = 'freeBoost'), (r.TENURE_REWARD_COLLECTIBLE = 'tenureRewardCollectible'), (r.REFERRAL_PROGRAM = 'referralProgram'), (r.NEW_APP_STYLES_UPDATE_JUNE_2024 = 'newAppStylesUpdateJune2024'), (r.SERVER_PROFILES = 'serverProfiles'), (r.SHY_PROJECT = 'shyProject'), (r.TENURE_BADGE = 'tenureBadge'), r);
+let ef = () => {
     let { analyticsLocations: e } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_PERK_CARD),
         t = (0, l.ZP)(),
-        n = (0, E.BU)(D.Uq / 1024, { useKibibytes: !0 }),
-        i = (0, r.e7)([_.ZP], () => _.ZP.getPremiumTypeSubscription()),
-        eN = null != i ? f.ZP.getPremiumPlanItem(i) : null,
-        ex = (null != eN ? f.ZP.getSkuIdForPlan(eN.planId) : null) === D.Si.TIER_2,
-        ep = p.default.getCurrentUser(),
-        e_ = (0, f.I5)(ep, D.p9.TIER_2),
-        eE = (0, f.I5)(ep, D.p9.TIER_0),
-        eC = (0, I.bq)({ showAnimations: !0 }),
-        ef = null != eC ? eC.initialPercentage : void 0,
-        eT = null != eC ? eC.percentage : void 0,
-        eS = (0, u.Z)(x.Z),
-        eI = (0, b.ZP)(),
-        eb = (0, b.aJ)(),
-        ev = (0, I.Kb)(y.qY),
-        { fractionalState: ej } = (0, d.Z)(),
-        eA = (0, T.W)(),
-        eO = ej === D.a$.FP_ONLY,
-        eR = (0, h.Z)({
+        n = (0, b.BU)(D.Uq / 1024, { useKibibytes: !0 }),
+        r = (0, s.e7)([x.ZP], () => x.ZP.getPremiumTypeSubscription()),
+        eh = null != r ? E.ZP.getPremiumPlanItem(r) : null,
+        ef = (null != eh ? E.ZP.getSkuIdForPlan(eh.planId) : null) === D.Si.TIER_2,
+        eN = N.default.getCurrentUser(),
+        ex = (0, E.I5)(eN, D.p9.TIER_2),
+        eb = (0, E.I5)(eN, D.p9.TIER_0),
+        e_ = (0, O.bq)({ showAnimations: !0 }),
+        eE = null != e_ ? e_.initialPercentage : void 0,
+        ej = null != e_ ? e_.percentage : void 0,
+        eC = (0, u.Z)(f.Z),
+        eO = (0, v.ZP)(),
+        ev = (0, v.aJ)(),
+        eS = (0, O.Kb)(Z.qY),
+        { fractionalState: eT } = (0, d.Z)(),
+        eI = (0, j.W)(),
+        ey = eT === D.a$.FP_ONLY,
+        eA = (0, g.Z)({
             scrollPosition: k.Y_.TRY_IT_OUT,
             analyticsLocations: e
         }),
         eP = () => {
-            a.Z.open(W.oAB.VOICE, k.GA, {
+            a.Z.open(w.oAB.VOICE, k.GA, {
                 openWithoutBackstack: !0,
                 analyticsLocations: e
             });
         },
-        eZ = () => {
-            (0, g.uL)(W.Z5c.COLLECTIBLES_SHOP);
+        eR = () => {
+            (0, p.uL)(w.Z5c.COLLECTIBLES_SHOP);
         },
         eD = () => {
-            a.Z.open(W.oAB.APPEARANCE, null, { scrollPosition: k.h1.CUSTOM_APP_ICONS });
+            a.Z.open(w.oAB.APPEARANCE, null, { scrollPosition: k.h1.CUSTOM_APP_ICONS });
         },
-        ey = {
+        eZ = {
             clientThemes: {
                 name: 'clientThemes',
-                title: B.NW.string(B.t.kWM48P),
-                subtitle: B.NW.string(B.t.CjRASE),
-                description: B.NW.string(B.t.jBTTws),
-                descriptionCta: B.NW.string(B.t.jVcuVV),
+                title: L.NW.string(L.t.kWM48P),
+                subtitle: L.NW.string(L.t.CjRASE),
+                description: L.NW.string(L.t.jBTTws),
+                descriptionCta: L.NW.string(L.t.jVcuVV),
                 onCtaClick: () => {
-                    a.Z.open(W.oAB.APPEARANCE, null, {
+                    a.Z.open(w.oAB.APPEARANCE, null, {
                         openWithoutBackstack: !0,
                         analyticsLocations: e
                     });
                 },
                 perkImage: F
             },
-            clips: e_
+            clips: ex
                 ? {
                       name: 'clips',
-                      title: B.NW.string(B.t.z2jK6e),
-                      subtitle: B.NW.string(B.t['hxy0/f']),
-                      description: B.NW.string(B.t.Z6v86e),
-                      descriptionCta: eS ? B.NW.string(B.t.jVcuVV) : B.NW.string(B.t.hvVgAQ),
-                      pillText: B.NW.string(B.t.EYxi0t),
-                      onCtaClick: eS
+                      title: L.NW.string(L.t.z2jK6e),
+                      subtitle: L.NW.string(L.t['hxy0/f']),
+                      description: L.NW.string(L.t.Z6v86e),
+                      descriptionCta: eC ? L.NW.string(L.t.jVcuVV) : L.NW.string(L.t.hvVgAQ),
+                      pillText: L.NW.string(L.t.EYxi0t),
+                      onCtaClick: eC
                           ? () => {
-                                (0, N.Z)(L.Z.CLIPS, {
+                                (0, h.Z)(W.Z.CLIPS, {
                                     openWithoutBackstack: !0,
                                     analyticsLocations: e
                                 });
                             }
                           : () => {
-                                window.open(C.Z.getArticleURL(W.BhN.CLIPS), '_blank');
+                                window.open(_.Z.getArticleURL(w.BhN.CLIPS), '_blank');
                             },
                       perkImage: K
                   }
                 : {
                       name: 'clips',
-                      title: B.NW.string(B.t.z2jK6e),
-                      subtitle: B.NW.string(B.t['hxy0/f']),
-                      description: B.NW.string(B.t.X9IeNz),
-                      pillText: B.NW.string(B.t.EYxi0t),
+                      title: L.NW.string(L.t.z2jK6e),
+                      subtitle: L.NW.string(L.t['hxy0/f']),
+                      description: L.NW.string(L.t.X9IeNz),
+                      pillText: L.NW.string(L.t.EYxi0t),
                       perkImage: K
                   },
-            earlyAccess: e_
+            earlyAccess: ex
                 ? {
                       name: 'earlyAccess',
-                      title: B.NW.string(B.t.UkLVeH),
-                      subtitle: B.NW.string(B.t.xf9ePj),
-                      description: B.NW.string(B.t['+r4vdn']),
+                      title: L.NW.string(L.t.UkLVeH),
+                      subtitle: L.NW.string(L.t.xf9ePj),
+                      description: L.NW.string(L.t['+r4vdn']),
                       perkImage: X
                   }
                 : {
                       name: 'earlyAccess',
-                      title: B.NW.string(B.t.UkLVeH),
-                      subtitle: B.NW.string(B.t.xf9ePj),
-                      description: B.NW.string(B.t['6+xTcn']),
+                      title: L.NW.string(L.t.UkLVeH),
+                      subtitle: L.NW.string(L.t.xf9ePj),
+                      description: L.NW.string(L.t['6+xTcn']),
                       isPremiumGetCta: !0,
                       perkImage: X
                   },
-            earlyAccessSeeAllVariant: e_
+            earlyAccessSeeAllVariant: ex
                 ? {
                       name: 'earlyAccessSeeAllVariant',
-                      title: B.NW.string(B.t.UkLVeH),
-                      subtitle: B.NW.string(B.t.xf9ePj),
-                      description: B.NW.string(B.t['+r4vdn']),
+                      title: L.NW.string(L.t.UkLVeH),
+                      subtitle: L.NW.string(L.t.xf9ePj),
+                      description: L.NW.string(L.t['+r4vdn']),
                       perkImage: J
                   }
                 : {
                       name: 'earlyAccess',
-                      title: B.NW.string(B.t.UkLVeH),
-                      subtitle: B.NW.string(B.t.xf9ePj),
-                      description: B.NW.string(B.t['6+xTcn']),
+                      title: L.NW.string(L.t.UkLVeH),
+                      subtitle: L.NW.string(L.t.xf9ePj),
+                      description: L.NW.string(L.t['6+xTcn']),
                       isPremiumGetCta: !0,
                       perkImage: J
                   },
-            entranceSounds: e_
+            entranceSounds: ex
                 ? {
                       name: 'entranceSounds',
-                      title: B.NW.string(B.t['f4M+Hx']),
-                      subtitle: B.NW.string(B.t['7ZCYvL']),
-                      description: B.NW.string(B.t.mUT8bG),
-                      descriptionCta: B.NW.string(B.t.jVcuVV),
+                      title: L.NW.string(L.t['f4M+Hx']),
+                      subtitle: L.NW.string(L.t['7ZCYvL']),
+                      description: L.NW.string(L.t.mUT8bG),
+                      descriptionCta: L.NW.string(L.t.jVcuVV),
                       onCtaClick: eP,
                       perkImage: $
                   }
                 : {
                       name: 'entranceSounds',
-                      title: B.NW.string(B.t['f4M+Hx']),
-                      subtitle: B.NW.string(B.t['7ZCYvL']),
-                      description: B.NW.string(B.t['3smf/f']),
+                      title: L.NW.string(L.t['f4M+Hx']),
+                      subtitle: L.NW.string(L.t['7ZCYvL']),
+                      description: L.NW.string(L.t['3smf/f']),
                       perkImage: $
                   },
-            entranceSoundsSeeAllVariation: e_
+            entranceSoundsSeeAllVariation: ex
                 ? {
                       name: 'entranceSoundsSeeAllVariation',
-                      title: B.NW.string(B.t['f4M+Hx']),
-                      subtitle: B.NW.string(B.t['7ZCYvL']),
-                      description: B.NW.string(B.t.mUT8bG),
-                      descriptionCta: B.NW.string(B.t.jVcuVV),
+                      title: L.NW.string(L.t['f4M+Hx']),
+                      subtitle: L.NW.string(L.t['7ZCYvL']),
+                      description: L.NW.string(L.t.mUT8bG),
+                      descriptionCta: L.NW.string(L.t.jVcuVV),
                       onCtaClick: eP,
                       perkImage: ee
                   }
                 : {
                       name: 'entranceSoundsSeeAllVariation',
-                      title: B.NW.string(B.t['f4M+Hx']),
-                      subtitle: B.NW.string(B.t['7ZCYvL']),
-                      description: B.NW.string(B.t['3smf/f']),
+                      title: L.NW.string(L.t['f4M+Hx']),
+                      subtitle: L.NW.string(L.t['7ZCYvL']),
+                      description: L.NW.string(L.t['3smf/f']),
                       perkImage: ee
                   },
             profiles: {
                 name: 'profiles',
-                title: B.NW.string(B.t.KcyDwM),
-                subtitle: B.NW.string(B.t.Mt3U1d),
-                description: B.NW.string(B.t.kWcDKy),
-                descriptionCta: B.NW.string(B.t.jVcuVV),
-                onCtaClick: eR,
+                title: L.NW.string(L.t.KcyDwM),
+                subtitle: L.NW.string(L.t.Mt3U1d),
+                description: L.NW.string(L.t.kWcDKy),
+                descriptionCta: L.NW.string(L.t.jVcuVV),
+                onCtaClick: eA,
                 perkImage: H
             },
-            remixing: e_
+            remixing: ex
                 ? {
                       name: 'remixing',
-                      title: B.NW.string(B.t['H+v6eX']),
-                      subtitle: B.NW.string(B.t.wmbOAg),
-                      description: B.NW.string(B.t.gdA9FB),
-                      perkImage: es,
-                      pillText: B.NW.string(B.t.EYxi0t)
+                      title: L.NW.string(L.t['H+v6eX']),
+                      subtitle: L.NW.string(L.t.wmbOAg),
+                      description: L.NW.string(L.t.gdA9FB),
+                      perkImage: ei,
+                      pillText: L.NW.string(L.t.EYxi0t)
                   }
                 : {
                       name: 'remixing',
-                      title: B.NW.string(B.t['H+v6eX']),
-                      subtitle: B.NW.string(B.t.wmbOAg),
-                      description: B.NW.string(B.t.fiLtJi),
-                      perkImage: es,
-                      pillText: B.NW.string(B.t.EYxi0t)
+                      title: L.NW.string(L.t['H+v6eX']),
+                      subtitle: L.NW.string(L.t.wmbOAg),
+                      description: L.NW.string(L.t.fiLtJi),
+                      perkImage: ei,
+                      pillText: L.NW.string(L.t.EYxi0t)
                   },
             serverBoosts: {
                 name: 'serverBoosts',
-                title: B.NW.string(B.t['NyDu//']),
-                subtitle: B.NW.string(B.t['4pEwXF']),
-                description: eO ? B.NW.format(B.t.uPiIBQ, { link: 'https://discord.com' }) : B.NW.string(B.t.jsyNHh),
-                descriptionCta: B.NW.string(B.t.jVcuVV),
-                onCtaClick: eO
+                title: L.NW.string(L.t['NyDu//']),
+                subtitle: L.NW.string(L.t['4pEwXF']),
+                description: ey ? L.NW.format(L.t.uPiIBQ, { link: 'https://discord.com' }) : L.NW.string(L.t.jsyNHh),
+                descriptionCta: L.NW.string(L.t.jVcuVV),
+                onCtaClick: ey
                     ? void 0
                     : () => {
-                          a.Z.open(W.oAB.GUILD_BOOSTING, null, {
+                          a.Z.open(w.oAB.GUILD_BOOSTING, null, {
                               openWithoutBackstack: !0,
                               analyticsLocations: e
                           });
                       },
                 perkImage: z,
-                hideOnNarrowScreen: !eO,
-                imageOverlayText: eO ? B.NW.string(B.t.lcYttb) : void 0
+                hideOnNarrowScreen: !ey,
+                imageOverlayText: ey ? L.NW.string(L.t.lcYttb) : void 0
             },
             greyServerBoosts: {
                 name: 'greyServerBoosts',
-                title: B.NW.string(B.t['NyDu//']),
-                subtitle: B.NW.string(B.t['4pEwXF']),
-                descriptionCta: B.NW.string(B.t.jVcuVV),
-                perkImage: eh.Z,
-                imageOverlayText: B.NW.string(B.t.lcYttb)
+                title: L.NW.string(L.t['NyDu//']),
+                subtitle: L.NW.string(L.t['4pEwXF']),
+                descriptionCta: L.NW.string(L.t.jVcuVV),
+                perkImage: eg.Z,
+                imageOverlayText: L.NW.string(L.t.lcYttb)
             },
-            specialMemberPricing: e_
+            specialMemberPricing: ex
                 ? {
                       name: 'specialMemberPricing',
-                      title: B.NW.string(B.t['0Mykgo']),
-                      subtitle: B.NW.string(B.t.opgqDQ),
-                      description: B.NW.string(B.t['t+QZSU']),
-                      descriptionCta: B.NW.string(B.t.dBJVnZ),
-                      onCtaClick: eZ,
+                      title: L.NW.string(L.t['0Mykgo']),
+                      subtitle: L.NW.string(L.t.opgqDQ),
+                      description: L.NW.string(L.t['t+QZSU']),
+                      descriptionCta: L.NW.string(L.t.dBJVnZ),
+                      onCtaClick: eR,
                       perkImage: ea
                   }
                 : {
                       name: 'specialMemberPricing',
-                      title: B.NW.string(B.t['0Mykgo']),
-                      subtitle: B.NW.string(B.t.opgqDQ),
-                      description: B.NW.string(B.t['JE/EWV']),
+                      title: L.NW.string(L.t['0Mykgo']),
+                      subtitle: L.NW.string(L.t.opgqDQ),
+                      description: L.NW.string(L.t['JE/EWV']),
                       isPremiumGetCta: !0,
                       perkImage: ea
                   },
-            specialMemberPricingSeeAllVariant: e_
+            specialMemberPricingSeeAllVariant: ex
                 ? {
                       name: 'specialMemberPricingSeeAllVariant',
-                      title: B.NW.string(B.t['0Mykgo']),
-                      subtitle: B.NW.string(B.t.opgqDQ),
-                      description: B.NW.string(B.t['t+QZSU']),
-                      descriptionCta: B.NW.string(B.t.dBJVnZ),
-                      onCtaClick: eZ,
+                      title: L.NW.string(L.t['0Mykgo']),
+                      subtitle: L.NW.string(L.t.opgqDQ),
+                      description: L.NW.string(L.t['t+QZSU']),
+                      descriptionCta: L.NW.string(L.t.dBJVnZ),
+                      onCtaClick: eR,
                       perkImage: el
                   }
                 : {
                       name: 'specialMemberPricingSeeAllVariant',
-                      title: B.NW.string(B.t['0Mykgo']),
-                      subtitle: B.NW.string(B.t.opgqDQ),
-                      description: B.NW.string(B.t['JE/EWV']),
+                      title: L.NW.string(L.t['0Mykgo']),
+                      subtitle: L.NW.string(L.t.opgqDQ),
+                      description: L.NW.string(L.t['JE/EWV']),
                       isPremiumGetCta: !0,
                       perkImage: el
                   },
-            specialShopPerks: e_
+            specialShopPerks: ex
                 ? {
                       name: 'specialShopPerks',
-                      title: B.NW.string(B.t.U68LpK),
-                      subtitle: B.NW.string(B.t.chRZiY),
-                      description: B.NW.string(B.t['t+QZSU']),
-                      descriptionCta: B.NW.string(B.t.dBJVnZ),
-                      onCtaClick: eZ,
+                      title: L.NW.string(L.t.U68LpK),
+                      subtitle: L.NW.string(L.t.chRZiY),
+                      description: L.NW.string(L.t['t+QZSU']),
+                      descriptionCta: L.NW.string(L.t.dBJVnZ),
+                      onCtaClick: eR,
                       perkImage: ea
                   }
                 : {
                       name: 'specialShopPerks',
-                      title: B.NW.string(B.t.U68LpK),
-                      subtitle: B.NW.string(B.t.chRZiY),
-                      description: B.NW.string(B.t['JE/EWV']),
-                      descriptionCta: B.NW.string(B.t.dBJVnZ),
-                      onCtaClick: eZ,
+                      title: L.NW.string(L.t.U68LpK),
+                      subtitle: L.NW.string(L.t.chRZiY),
+                      description: L.NW.string(L.t['JE/EWV']),
+                      descriptionCta: L.NW.string(L.t.dBJVnZ),
+                      onCtaClick: eR,
                       perkImage: ea
                   },
-            unlimitedSuperReactions: e_
+            unlimitedSuperReactions: ex
                 ? {
                       name: 'unlimitedSuperReactions',
-                      title: B.NW.string(B.t.hpgmOz),
-                      subtitle: B.NW.string(B.t.Hxujsr),
-                      description: B.NW.string(B.t['Cn/z6+']),
+                      title: L.NW.string(L.t.hpgmOz),
+                      subtitle: L.NW.string(L.t.Hxujsr),
+                      description: L.NW.string(L.t['Cn/z6+']),
                       perkImage: eu,
                       hideOnNarrowScreen: !0
                   }
                 : {
                       name: 'unlimitedSuperReactions',
-                      title: B.NW.string(B.t.hpgmOz),
-                      subtitle: B.NW.string(B.t.Hxujsr),
-                      description: B.NW.string(B.t.TF7cPT),
+                      title: L.NW.string(L.t.hpgmOz),
+                      subtitle: L.NW.string(L.t.Hxujsr),
+                      description: L.NW.string(L.t.TF7cPT),
                       isPremiumGetCta: !0,
                       perkImage: eu,
                       hideOnNarrowScreen: !0
                   },
             superReactions: {
                 name: 'superReactions',
-                title: B.NW.string(B.t['6S7kOz']),
-                subtitle: B.NW.string(B.t.kN1JRE),
-                description: B.NW.string(B.t.e7FKCg),
+                title: L.NW.string(L.t['6S7kOz']),
+                subtitle: L.NW.string(L.t.kN1JRE),
+                description: L.NW.string(L.t.e7FKCg),
                 perkImage: ed
             },
             upcomingDropUntimed: {
                 name: 'upcomingDropUntimed',
-                title: B.NW.string(B.t.O5R3ho),
-                pillText: B.NW.string(B.t.yhEY5O),
+                title: L.NW.string(L.t.O5R3ho),
+                pillText: L.NW.string(L.t.yhEY5O),
                 backgroundImage: en
             },
             badge: {
                 name: 'badge',
-                title: B.NW.string(B.t.dcFfSE),
-                subtitle: B.NW.string(B.t['37MFFh']),
-                perkImage: w,
-                description: B.NW.string(B.t.T1IS4u)
+                title: L.NW.string(L.t.dcFfSE),
+                subtitle: L.NW.string(L.t['37MFFh']),
+                perkImage: M,
+                description: L.NW.string(L.t.T1IS4u)
             },
             greyBadge: {
                 name: 'greyBadge',
-                title: B.NW.string(B.t.dcFfSE),
-                subtitle: B.NW.string(B.t['37MFFh']),
-                perkImage: eg.Z,
-                description: B.NW.string(B.t.T1IS4u),
-                imageOverlayText: B.NW.string(B.t.lcYttb)
+                title: L.NW.string(L.t.dcFfSE),
+                subtitle: L.NW.string(L.t['37MFFh']),
+                perkImage: ep.Z,
+                description: L.NW.string(L.t.T1IS4u),
+                imageOverlayText: L.NW.string(L.t.lcYttb)
             },
             customAppIcons: {
                 name: 'customAppIcons',
-                title: B.NW.string(B.t.OuItFh),
-                subtitle: B.NW.string(B.t.mPyrEx),
+                title: L.NW.string(L.t.OuItFh),
+                subtitle: L.NW.string(L.t.mPyrEx),
                 perkImage: q,
-                description: B.NW.string(B.t.e7FKCg),
-                descriptionCta: B.NW.string(B.t.jVcuVV),
+                description: L.NW.string(L.t.e7FKCg),
+                descriptionCta: L.NW.string(L.t.jVcuVV),
                 onCtaClick: eD
             },
             moreEmojiPower: {
                 name: 'moreEmojiPower',
-                title: B.NW.string(B.t['R2IV/f']),
-                subtitle: B.NW.string(B.t.R5Xag4),
+                title: L.NW.string(L.t['R2IV/f']),
+                subtitle: L.NW.string(L.t.R5Xag4),
                 perkImage: Q,
-                description: B.NW.string(B.t['8lsjS0'])
+                description: L.NW.string(L.t['8lsjS0'])
             },
             customSoundsEverywhere: {
                 name: 'customSoundsEverywhere',
-                title: B.NW.string(B.t.LWsAra),
-                subtitle: B.NW.string(B.t.bTzbVl),
-                perkImage: (0, Z.gx)(t, U, V),
-                description: B.NW.string(B.t.JLnOMz)
+                title: L.NW.string(L.t.LWsAra),
+                subtitle: L.NW.string(L.t.bTzbVl),
+                perkImage: (0, R.gx)(t, U, V),
+                description: L.NW.string(L.t.JLnOMz)
             },
             specialStickerAccess: {
                 name: 'specialStickerAccess',
-                title: B.NW.string(B.t.tzdIwM),
-                subtitle: B.NW.string(B.t.FXlU29),
-                perkImage: (0, Z.gx)(t, G, eo),
-                description: B.NW.string(B.t.e7FKCg)
+                title: L.NW.string(L.t.tzdIwM),
+                subtitle: L.NW.string(L.t.FXlU29),
+                perkImage: (0, R.gx)(t, G, eo),
+                description: L.NW.string(L.t.e7FKCg)
             },
             largeUploads: {
                 name: 'largeUploads',
-                title: B.NW.formatToPlainString(B.t.jqhAdH, { premiumMaxSize: n }),
-                subtitle: B.NW.formatToPlainString(B.t['HI+cfn'], { premiumMaxSize: n }),
+                title: L.NW.formatToPlainString(L.t.jqhAdH, { premiumMaxSize: n }),
+                subtitle: L.NW.formatToPlainString(L.t['HI+cfn'], { premiumMaxSize: n }),
                 perkImage: em,
-                description: B.NW.string(B.t['R0gx+/'])
+                description: L.NW.string(L.t['R0gx+/'])
             },
             hdVideo: {
                 name: 'hdVideo',
-                title: B.NW.string(B.t.RSXQYG),
-                subtitle: B.NW.string(B.t.ymCPxs),
+                title: L.NW.string(L.t.RSXQYG),
+                subtitle: L.NW.string(L.t.ymCPxs),
                 perkImage: ec,
-                description: B.NW.string(B.t['4WgB//'])
+                description: L.NW.string(L.t['4WgB//'])
             },
             newAppStylesUpdateJune2024: {
                 name: 'newAppStylesUpdateJune2024',
-                title: B.NW.string(B.t.XQCSrq),
-                subtitle: B.NW.string(B.t.HC5wVV),
-                description: B.NW.string(B.t.ee7wQ0),
-                descriptionCta: e_ || eE ? B.NW.string(B.t.y9TxXV) : B.NW.string(B.t.d8o6lZ),
-                isPremiumGetCta: !(e_ || eE),
-                onCtaClick: e_ || eE ? eD : void 0,
+                title: L.NW.string(L.t.XQCSrq),
+                subtitle: L.NW.string(L.t.HC5wVV),
+                description: L.NW.string(L.t.ee7wQ0),
+                descriptionCta: ex || eb ? L.NW.string(L.t.y9TxXV) : L.NW.string(L.t.d8o6lZ),
+                isPremiumGetCta: !(ex || eb),
+                onCtaClick: ex || eb ? eD : void 0,
                 perkImage: et
             },
             referralProgram: {
                 name: 'referralProgram',
-                title: B.NW.string(B.t.tPY4o6),
-                subtitle: B.NW.string(B.t.JY0grK),
-                description: B.NW.format(B.t['2JqTFx'], { helpdeskArticle: C.Z.getArticleURL(W.BhN.REFERRAL_PROGRAM) }),
-                descriptionCta: B.NW.string(B.t.JST6jo),
-                isPremiumGetCta: !ex || void 0,
-                perkImage: ei
+                title: L.NW.string(L.t.tPY4o6),
+                subtitle: L.NW.string(L.t.JY0grK),
+                description: L.NW.format(L.t['2JqTFx'], { helpdeskArticle: _.Z.getArticleURL(w.BhN.REFERRAL_PROGRAM) }),
+                descriptionCta: L.NW.string(L.t.JST6jo),
+                isPremiumGetCta: !ef || void 0,
+                perkImage: er
             },
             serverProfiles: {
                 name: 'serverProfiles',
-                title: B.NW.string(B.t.I9TYMj),
-                subtitle: B.NW.string(B.t.HMSHeH),
-                descriptionCta: e_ ? B.NW.string(B.t.jVcuVV) : B.NW.string(B.t.JST6jo),
-                isPremiumGetCta: !e_,
-                onCtaClick: e_ ? eR : void 0,
-                perkImage: er
+                title: L.NW.string(L.t.I9TYMj),
+                subtitle: L.NW.string(L.t.HMSHeH),
+                descriptionCta: ex ? L.NW.string(L.t.jVcuVV) : L.NW.string(L.t.JST6jo),
+                isPremiumGetCta: !ex,
+                onCtaClick: ex ? eA : void 0,
+                perkImage: es
             }
         };
-    if (null != eb) {
-        let { title: t, subtitle: n, description: i, pillText: r, ctaDescription: a, dismissibleContentType: l } = eb,
-            o = (0, s.jsx)('div', {
-                className: M.cardComponent,
-                children: (0, s.jsx)(R.ZP, {
-                    progressCircleVariation: R.Qo.AVATAR_DECO,
-                    avatarDecoAssetId: y.VA,
-                    avatarDecoAssetDescription: B.NW.string(B.t['9o4F4+']),
+    if (null != ev) {
+        let { title: t, subtitle: n, description: r, pillText: s, ctaDescription: a, dismissibleContentType: l } = ev,
+            o = (0, i.jsx)('div', {
+                className: B.cardComponent,
+                children: (0, i.jsx)(A.ZP, {
+                    progressCircleVariation: A.Qo.AVATAR_DECO,
+                    avatarDecoAssetId: Z.VA,
+                    avatarDecoAssetDescription: L.NW.string(L.t['9o4F4+']),
                     showAnimations: !0,
-                    percentage: eT,
-                    initialPercentage: ef
+                    percentage: ej,
+                    initialPercentage: eE
                 })
             });
-        ey.tenureRewardCollectible = {
+        eZ.tenureRewardCollectible = {
             name: 'tenureRewardCollectible',
             title: t,
             subtitle: n,
-            description: i,
+            description: r,
             perkComponent: o,
             descriptionCta: a,
             onCtaClick: () => {
-                null != ev &&
+                null != eS &&
                     (0, m.Z)({
-                        product: ev,
-                        overrideTitle: B.NW.string(B.t.wRAXra),
-                        overrideDescription: B.NW.string(B.t.sQX6HR),
+                        product: eS,
+                        overrideTitle: L.NW.string(L.t.wRAXra),
+                        overrideDescription: L.NW.string(L.t.sQX6HR),
                         analyticsLocations: e
                     });
             },
             cardVariant: P.zW.REWARD,
-            pillText: r,
+            pillText: s,
             dismissibleContentType: l
         };
     }
-    if (null != eI) {
-        let { title: t, subtitle: n, description: i, pillText: r, ctaDescription: l, dismissibleContentType: o } = eI,
-            c = (0, s.jsx)('div', {
-                className: M.cardComponent,
-                children: (0, s.jsx)(R.ZP, {
+    if (null != eO) {
+        let { title: t, subtitle: n, description: r, pillText: s, ctaDescription: l, dismissibleContentType: o } = eO,
+            c = (0, i.jsx)('div', {
+                className: B.cardComponent,
+                children: (0, i.jsx)(A.ZP, {
                     showAnimations: !0,
-                    percentage: eT,
-                    initialPercentage: ef
+                    percentage: ej,
+                    initialPercentage: eE
                 })
             });
-        ey.freeBoost = {
+        eZ.freeBoost = {
             name: 'freeBoost',
             title: t,
             subtitle: n,
-            description: i,
+            description: r,
             perkComponent: c,
             descriptionCta: l,
             onCtaClick: () => {
-                a.Z.open(W.oAB.GUILD_BOOSTING, null, { analyticsLocations: e });
+                a.Z.open(w.oAB.GUILD_BOOSTING, null, { analyticsLocations: e });
             },
             cardVariant: P.zW.REWARD,
-            pillText: r,
+            pillText: s,
             dismissibleContentType: o
         };
     }
-    let eW = (0, j.Rw)(),
-        { enabled: ek, isBadgeVersion2: eL } = (0, v.D)();
+    let ew = (0, T.Rw)(),
+        { enabled: ek, isBadgeVersion2: eW } = (0, S.D)();
     return (
-        ((!eL && ek && null != eW && eW.status !== j.Vq.UPCOMING) || (eL && ek)) &&
-            !eA &&
-            (ey.tenureBadge = {
+        ((!eW && ek && null != ew && ew.status !== T.Vq.UPCOMING) || (eW && ek)) &&
+            !eI &&
+            (eZ.tenureBadge = {
                 name: 'tenureBadge',
-                title: B.NW.string(B.t.rnsqpa),
-                pillText: B.NW.string(B.t.jyYgZ2).toLocaleUpperCase(),
-                perkComponent: (0, s.jsx)(A.Z, {}),
+                title: L.NW.string(L.t.rnsqpa),
+                pillText: L.NW.string(L.t.jyYgZ2).toLocaleUpperCase(),
+                perkComponent: (0, i.jsx)(I.Z, {}),
                 cardVariant: P.zW.NITRO_GRADIENT_HOVER_BORDER,
-                onClick: () => (0, O.k)({ analyticsLocations: e })
+                onClick: () => (0, y.k)({ analyticsLocations: e })
             }),
-        (0, S.ZP)('usePerksDiscoverabilityCard') === S.P0.SUMMER_2024 &&
-            (ey.shyProject = {
+        (0, C.ZP)('usePerksDiscoverabilityCard') === C.P0.SUMMER_2024 &&
+            (eZ.shyProject = {
                 name: 'shyProject',
-                title: B.NW.string(B.t['0Mykgo']),
-                subtitle: B.NW.string(B.t.opgqDQ),
-                description: e_ ? B.NW.string(B.t['t+QZSU']) : B.NW.string(B.t['JE/EWV']),
-                descriptionCta: B.NW.string(B.t.dBJVnZ),
-                pillText: B.NW.string(B.t.tahjbG).toLocaleUpperCase(),
-                onCtaClick: e_ ? eZ : void 0,
+                title: L.NW.string(L.t['0Mykgo']),
+                subtitle: L.NW.string(L.t.opgqDQ),
+                description: ex ? L.NW.string(L.t['t+QZSU']) : L.NW.string(L.t['JE/EWV']),
+                descriptionCta: L.NW.string(L.t.dBJVnZ),
+                pillText: L.NW.string(L.t.tahjbG).toLocaleUpperCase(),
+                onCtaClick: ex ? eR : void 0,
                 perkImage: Y,
-                isPremiumGetCta: !e_
+                isPremiumGetCta: !ex
             }),
-        ey
+        eZ
     );
 };

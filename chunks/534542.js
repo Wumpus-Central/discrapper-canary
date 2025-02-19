@@ -1,14 +1,86 @@
 n.d(t, {
-    R: () => c,
-    g: () => l
+    R: () => m,
+    g: () => _
 });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(120356),
-    a = n.n(r),
-    s = n(118012),
-    o = n(341005);
-let l = {
+var i = n(120356),
+    o = n.n(i),
+    a = n(118012),
+    s = n(484245);
+function l(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function c(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                l(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function u(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function d(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : u(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function f(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = p(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function p(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+let _ = {
         DEFAULT: 'default',
         INPUT_PLACEHOLDER: 'placeholder',
         DESCRIPTION: 'description',
@@ -18,22 +90,30 @@ let l = {
         ERROR: 'error',
         SUCCESS: 'success'
     },
-    u = {
+    h = {
         DEFAULT: 'modeDefault',
         DISABLED: 'modeDisabled',
         SELECTABLE: 'modeSelectable'
     };
-function c(e) {
-    let { type: t = l.DEFAULT, className: n, disabled: r, selectable: c, children: d, style: f, ..._ } = e,
-        p = u.DEFAULT;
+function m(e) {
+    var { type: t = _.DEFAULT, className: n, disabled: i, selectable: l, children: u, style: p } = e,
+        m = f(e, ['type', 'className', 'disabled', 'selectable', 'children', 'style']);
+    let g = h.DEFAULT;
     return (
-        r ? (p = u.DISABLED) : c && (p = u.SELECTABLE),
-        (0, i.jsx)(s.Z, {
-            className: a()(o[t], n, o[p]),
-            style: f,
-            ..._,
-            children: d
-        })
+        i ? (g = h.DISABLED) : l && (g = h.SELECTABLE),
+        (0, r.jsx)(
+            a.Z,
+            d(
+                c(
+                    {
+                        className: o()(s[t], n, s[g]),
+                        style: p
+                    },
+                    m
+                ),
+                { children: u }
+            )
+        )
     );
 }
-c.Types = l;
+m.Types = _;

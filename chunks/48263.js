@@ -1,32 +1,57 @@
-n(47120), n(653041), n(312677), n(411104);
-var t = n(658722),
-    o = n.n(t),
-    l = n(954955),
-    i = n.n(l),
-    a = n(226951),
-    u = n(624138),
-    c = n(620490);
+t(47120), t(474991), t(398202), t(301563), t(653041), t(230036), t(411104);
+var n = t(658722),
+    o = t.n(n),
+    l = t(954955),
+    i = t.n(l),
+    u = t(226951),
+    c = t(624138),
+    a = t(620490);
+function f(e) {
+    for (var r = 1; r < arguments.length; r++) {
+        var t = null != arguments[r] ? arguments[r] : {},
+            n = Object.keys(t);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (n = n.concat(
+                Object.getOwnPropertySymbols(t).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(t, e).enumerable;
+                })
+            )),
+            n.forEach(function (r) {
+                var n;
+                (n = t[r]),
+                    r in e
+                        ? Object.defineProperty(e, r, {
+                              value: n,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[r] = n);
+            });
+    }
+    return e;
+}
 let s = {
         UPDATE_USERS: 'UPDATE_USERS',
         USER_RESULTS: 'USER_RESULTS',
         QUERY_SET: 'QUERY_SET',
         QUERY_CLEAR: 'QUERY_CLEAR'
     },
-    f = new Map(),
+    p = new Map(),
     d = new Map(),
-    p = new Set(),
-    v = 'username',
-    E = 'friendNickname',
-    h = 'globalName',
-    m = new Set(['isFriend', 'isBot', 'isProvisional', v, E, h]),
-    g = i()(
+    v = new Set(),
+    b = 'username',
+    y = 'friendNickname',
+    O = 'globalName',
+    g = new Set(['isFriend', 'isBot', 'isProvisional', b, y, O]),
+    E = i()(
         () => {
-            0 !== p.size &&
-                (p.forEach((e) => {
+            0 !== v.size &&
+                (v.forEach((e) => {
                     let r = d.get(e);
-                    null != r && b(e, r);
+                    null != r && m(e, r);
                 }),
-                p.clear());
+                v.clear());
         },
         100,
         {
@@ -34,91 +59,108 @@ let s = {
             trailing: !0
         }
     );
-function S(e, r) {
+function h(e, r) {
     return e * (null != r ? r : 1);
 }
-function b(e, r) {
-    var n, t;
-    let { query: l, limit: i, filters: s, blacklist: d, whitelist: p } = r,
-        m = null != s && s.strict && null !== (n = s.guild) && void 0 !== n ? n : null,
-        g = null !== (t = r.boosters) && void 0 !== t ? t : {},
-        b = RegExp('^'.concat(a.Z.escape(l)), 'i'),
-        _ = RegExp(a.Z.escape(l), 'i'),
-        w = [];
-    if ('' === l) return R(l, w, e);
-    let y = l.toLocaleLowerCase(),
-        U = (0, u.Fv)(y);
-    f.forEach((e, r) => {
-        let n;
+function m(e, r) {
+    var t, n;
+    let { query: l, limit: i, filters: s, blacklist: d, whitelist: v } = r,
+        g = null != s && s.strict && null !== (t = s.guild) && void 0 !== t ? t : null,
+        E = null !== (n = r.boosters) && void 0 !== n ? n : {},
+        m = RegExp('^'.concat(u.Z.escape(l)), 'i'),
+        S = RegExp(u.Z.escape(l), 'i'),
+        j = [];
+    if ('' === l) return w(l, j, e);
+    let P = l.toLocaleLowerCase(),
+        R = (0, c.Fv)(P);
+    p.forEach((e, r) => {
+        let t;
         if (
-            !(function (e, r, n, t, o) {
-                if (null != t && t.indexOf(e) >= 0) return !1;
+            !(function (e, r, t, n, o) {
+                if (null != n && n.indexOf(e) >= 0) return !1;
                 if (null != o && o.indexOf(e) >= 0) return !0;
-                if (null != n) {
-                    let { friends: e, guild: t, provisional: o } = n;
-                    return (null == o || r.isProvisional === o) && ((!0 === e && !0 === r.isFriend) || (null != t && (null != r[t] || null === r[t])));
+                if (null != t) {
+                    let { friends: e, guild: n, provisional: o } = t;
+                    return (null == o || r.isProvisional === o) && ((!0 === e && !0 === r.isFriend) || (null != n && (null != r[n] || null === r[n])));
                 }
                 return !0;
-            })(r, e, s, d, p)
+            })(r, e, s, d, v)
         )
             return;
-        let { username: t } = e;
+        let { username: n } = e;
         r === l
-            ? (n = {
+            ? (t = {
                   id: r,
-                  username: t,
+                  username: n,
                   comparator: r,
-                  score: S(10, g[r])
+                  score: h(10, E[r])
               })
             : Object.keys(e).forEach((l) => {
                   let i;
-                  let a = e[l];
-                  if ('boolean' == typeof a || null == a || (null != m && l !== v && l !== E && l !== h && m !== l)) return;
-                  let c = (0, u._I)(a.toLocaleLowerCase());
-                  b.test(a)
-                      ? (i = {
-                            comparator: a,
-                            score: S(10, g[r])
-                        })
-                      : _.test(a)
-                        ? (i = {
-                              comparator: a,
-                              score: S(5, g[r])
-                          })
-                        : o()(y, c)
+                  let u = e[l];
+                  if ('boolean' == typeof u || null == u || (null != g && l !== b && l !== y && l !== O && g !== l)) return;
+                  let a = (0, c._I)(u.toLocaleLowerCase());
+                  if (
+                      (m.test(u)
                           ? (i = {
-                                comparator: a,
-                                score: S(1, g[r])
+                                comparator: u,
+                                score: h(10, E[r])
                             })
-                          : o()(U, (0, u.Fv)(c)) &&
-                            (i = {
-                                comparator: a,
-                                score: S(1, g[r])
-                            }),
-                      null != i &&
-                          (null == n || n.score < i.score) &&
-                          (n = {
-                              ...i,
-                              id: r,
-                              username: t
-                          });
+                          : S.test(u)
+                            ? (i = {
+                                  comparator: u,
+                                  score: h(5, E[r])
+                              })
+                            : o()(P, a)
+                              ? (i = {
+                                    comparator: u,
+                                    score: h(1, E[r])
+                                })
+                              : o()(R, (0, c.Fv)(a)) &&
+                                (i = {
+                                    comparator: u,
+                                    score: h(1, E[r])
+                                }),
+                      null != i && (null == t || t.score < i.score))
+                  ) {
+                      var s, p;
+                      (s = f({}, i)),
+                          (p = p =
+                              {
+                                  id: r,
+                                  username: n
+                              }),
+                          Object.getOwnPropertyDescriptors
+                              ? Object.defineProperties(s, Object.getOwnPropertyDescriptors(p))
+                              : (function (e, r) {
+                                    var t = Object.keys(e);
+                                    if (Object.getOwnPropertySymbols) {
+                                        var n = Object.getOwnPropertySymbols(e);
+                                        t.push.apply(t, n);
+                                    }
+                                    return t;
+                                })(Object(p)).forEach(function (e) {
+                                    Object.defineProperty(s, e, Object.getOwnPropertyDescriptor(p, e));
+                                }),
+                          (t = s);
+                  }
               }),
-            null != n && w.push(n);
+            null != t && j.push(t);
     }),
-        w.sort(c.Z),
-        w.length > i && (w.length = i),
-        R(l, w, e);
+        j.sort(a.Z),
+        j.length > i && (j.length = i),
+        w(l, j, e);
 }
-function R(e, r, n) {
-    let t = {
+function w(e, r, t) {
+    let n = {
         type: s.USER_RESULTS,
-        uuid: n,
+        uuid: t,
         payload: {
             query: e,
             results: r
         }
     };
-    self.postMessage(t);
+    self.postMessage(n);
 }
 self.addEventListener('message', (e) => {
     let { data: r } = e;
@@ -127,38 +169,54 @@ self.addEventListener('message', (e) => {
         case s.UPDATE_USERS:
             return (function (e) {
                 let { payload: r } = e,
-                    n = !1,
-                    t = new Set();
+                    t = !1,
+                    n = new Set();
                 r.forEach((e) => {
-                    var r;
-                    let { id: o, ...l } = e,
-                        i = null !== (r = f.get(o)) && void 0 !== r ? r : null,
-                        a = {
-                            ...i,
-                            ...l
-                        };
-                    f.set(o, a),
+                    var r,
+                        { id: o } = e,
+                        l = (function (e, r) {
+                            if (null == e) return {};
+                            var t,
+                                n,
+                                o = (function (e, r) {
+                                    if (null == e) return {};
+                                    var t,
+                                        n,
+                                        o = {},
+                                        l = Object.keys(e);
+                                    for (n = 0; n < l.length; n++) (t = l[n]), r.indexOf(t) >= 0 || (o[t] = e[t]);
+                                    return o;
+                                })(e, r);
+                            if (Object.getOwnPropertySymbols) {
+                                var l = Object.getOwnPropertySymbols(e);
+                                for (n = 0; n < l.length; n++) (t = l[n]), !(r.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (o[t] = e[t]);
+                            }
+                            return o;
+                        })(e, ['id']);
+                    let i = null !== (r = p.get(o)) && void 0 !== r ? r : null,
+                        u = f({}, i, l);
+                    p.set(o, u),
                         d.size > 0 &&
-                            ((a.isFriend !== (null == i ? void 0 : i.isFriend) || a.friendNickname !== (null == i ? void 0 : i.friendNickname)) && (n = !0),
-                            Object.keys(a).forEach((e) => {
-                                !m.has(e) && t.add(e);
+                            ((u.isFriend !== (null == i ? void 0 : i.isFriend) || u.friendNickname !== (null == i ? void 0 : i.friendNickname)) && (t = !0),
+                            Object.keys(u).forEach((e) => {
+                                !g.has(e) && n.add(e);
                             }));
                 }),
                     d.forEach((e, r) => {
                         let { filters: o } = e;
-                        (null == o || o.friends === n || t.has(o.guild)) && p.add(r);
+                        (null == o || o.friends === t || n.has(o.guild)) && v.add(r);
                     }),
-                    g();
+                    E();
             })(r);
         case s.QUERY_SET:
             return (function (e) {
-                let { uuid: r, payload: n } = e;
-                d.set(r, n), b(r, n);
+                let { uuid: r, payload: t } = e;
+                d.set(r, t), m(r, t);
             })(r);
         case s.QUERY_CLEAR:
             return (function (e) {
                 let { uuid: r } = e;
-                d.delete(r), p.delete(r), 0 === p.size && g.cancel();
+                d.delete(r), v.delete(r), 0 === v.size && E.cancel();
             })(r);
     }
 });

@@ -1,67 +1,86 @@
-t.d(n, { default: () => c });
+t.d(n, { default: () => l });
 var a = t(200651);
 t(192379);
-var i = t(481060),
-    r = t(701488),
-    s = t(388032),
-    o = t(828881),
-    l = t(221886);
-function c(e) {
-    let { application: n, onCancel: t, onClose: c, onConfirm: d, ...x } = e;
-    return (0, a.jsxs)(i.Y0X, {
+var r = t(481060),
+    o = t(701488),
+    i = t(388032),
+    s = t(546920),
+    c = t(221886);
+function l(e) {
+    var { application: n, onCancel: t, onClose: l, onConfirm: d } = e,
+        b = (function (e, n) {
+            if (null == e) return {};
+            var t,
+                a,
+                r = (function (e, n) {
+                    if (null == e) return {};
+                    var t,
+                        a,
+                        r = {},
+                        o = Object.keys(e);
+                    for (a = 0; a < o.length; a++) (t = o[a]), n.indexOf(t) >= 0 || (r[t] = e[t]);
+                    return r;
+                })(e, n);
+            if (Object.getOwnPropertySymbols) {
+                var o = Object.getOwnPropertySymbols(e);
+                for (a = 0; a < o.length; a++) (t = o[a]), !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (r[t] = e[t]);
+            }
+            return r;
+        })(e, ['application', 'onCancel', 'onClose', 'onConfirm']);
+    return (0, a.jsxs)(r.Y0X, {
         role: 'alertdialog',
-        transitionState: x.transitionState,
-        className: o.modalRoot,
+        transitionState: b.transitionState,
+        className: s.modalRoot,
         children: [
             (0, a.jsx)('div', {
-                className: o.birbContainer,
+                className: s.birbContainer,
                 children: (0, a.jsx)('img', {
-                    src: l,
-                    className: o.announcementBirb,
-                    alt: s.intl.string(s.t.ElsOBA)
+                    src: c,
+                    className: s.announcementBirb,
+                    alt: i.NW.string(i.t.ElsOBA)
                 })
             }),
-            (0, a.jsxs)(i.hzk, {
-                className: o.modalContent,
+            (0, a.jsxs)(r.hzk, {
+                className: s.modalContent,
                 children: [
-                    (0, a.jsx)(i.Text, {
+                    (0, a.jsx)(r.Text, {
                         variant: 'eyebrow',
-                        className: o.eyebrow,
-                        children: s.intl.string(s.t['06YebG'])
+                        className: s.eyebrow,
+                        children: i.NW.string(i.t['06YebG'])
                     }),
-                    (0, a.jsx)(i.X6q, {
+                    (0, a.jsx)(r.X6q, {
                         variant: 'heading-lg/bold',
-                        className: o.header,
-                        children: s.intl.format(s.t['Z/eMDQ'], { activityName: n.name })
+                        className: s.header,
+                        children: i.NW.format(i.t['Z/eMDQ'], { activityName: n.name })
                     }),
-                    (0, a.jsx)(i.Text, {
+                    (0, a.jsx)(r.Text, {
                         variant: 'text-sm/normal',
-                        className: o.subHeader,
-                        children: s.intl.string(s.t.z81WwM)
+                        className: s.subHeader,
+                        children: i.NW.string(i.t.z81WwM)
                     }),
                     (0, a.jsxs)('div', {
-                        className: o.buttonContainer,
+                        className: s.buttonContainer,
                         children: [
-                            (0, a.jsx)(i.zxk, {
-                                size: i.zxk.Sizes.LARGE,
+                            (0, a.jsx)(r.zxk, {
+                                size: r.zxk.Sizes.LARGE,
                                 onClick: () => {
-                                    d(), c();
+                                    d(), l();
                                 },
-                                children: s.intl.string(s.t['3PatS0'])
+                                children: i.NW.string(i.t['3PatS0'])
                             }),
-                            (0, a.jsx)(i.zxk, {
-                                size: i.zxk.Sizes.LARGE,
+                            (0, a.jsx)(r.zxk, {
+                                size: r.zxk.Sizes.LARGE,
                                 onClick: () => {
-                                    t(), c();
+                                    t(), l();
                                 },
-                                color: i.zxk.Colors.PRIMARY,
-                                children: s.intl.string(s.t['ETE/oK'])
+                                color: r.zxk.Colors.PRIMARY,
+                                children: i.NW.string(i.t['ETE/oK'])
                             }),
-                            (0, a.jsx)(i.Text, {
+                            (0, a.jsx)(r.Text, {
                                 variant: 'text-xs/normal',
-                                children: (0, a.jsx)(i.eee, {
-                                    href: r.OF,
-                                    children: s.intl.string(s.t.E0gf5u)
+                                children: (0, a.jsx)(r.eee, {
+                                    href: o.OF,
+                                    children: i.NW.string(i.t.E0gf5u)
                                 })
                             })
                         ]

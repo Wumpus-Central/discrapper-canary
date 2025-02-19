@@ -1,45 +1,45 @@
-n.d(t, {
-    Z: () => h,
-    _: () => d
+r.d(t, {
+    Z: () => u,
+    _: () => l
 }),
-    n(47120);
-var a = n(200651),
-    r = n(192379),
-    i = n(29978),
-    c = n(780384),
-    o = n(481060),
-    s = n(756148),
-    p = n(981631);
-function d(e) {
-    let { sitekey: t, action: n, onVerify: i } = e,
-        [c, p] = r.useState(!1),
-        d = r.useCallback(
+    r(47120);
+var n = r(200651),
+    a = r(192379),
+    i = r(29978),
+    o = r(780384),
+    c = r(481060),
+    s = r(756148),
+    p = r(981631);
+function l(e) {
+    let { sitekey: t, action: r, onVerify: i } = e,
+        [o, p] = a.useState(!1),
+        l = a.useCallback(
             (e) => {
                 i(e);
             },
             [i]
         ),
-        l = r.useCallback(() => {
-            var e, a, r;
-            null === (r = window) ||
-                void 0 === r ||
-                null === (a = r.grecaptcha) ||
+        d = a.useCallback(() => {
+            var e, n, a;
+            null === (a = window) ||
                 void 0 === a ||
-                null === (e = a.enterprise) ||
+                null === (n = a.grecaptcha) ||
+                void 0 === n ||
+                null === (e = n.enterprise) ||
                 void 0 === e ||
                 e.ready(async () => {
                     var e;
-                    d(await (null === (e = window) || void 0 === e ? void 0 : e.grecaptcha).enterprise.execute(t, null != n ? { action: n } : void 0)), p(!1);
+                    l(await (null === (e = window) || void 0 === e ? void 0 : e.grecaptcha).enterprise.execute(t, null != r ? { action: r } : void 0)), p(!1);
                 });
-        }, [t, n, d]),
-        h = r.useCallback(() => {
-            p(!0), s.I.loadRecaptchaScript(t, l);
-        }, [t, l]);
+        }, [t, r, l]),
+        u = a.useCallback(() => {
+            p(!0), s.I.loadRecaptchaScript(t, d);
+        }, [t, d]);
     return (
-        r.useEffect(() => {
-            c || h();
-        }, [c, h]),
-        r.useEffect(
+        a.useEffect(() => {
+            o || u();
+        }, [o, u]),
+        a.useEffect(
             () => () => {
                 document.querySelectorAll('script[src*="recaptcha/enterprise.js"],.grecaptcha-badge').forEach((e) => {
                     var t;
@@ -49,25 +49,83 @@ function d(e) {
             },
             []
         ),
-        (0, a.jsx)(o.$jN, {})
+        (0, n.jsx)(c.$jN, {})
     );
 }
-let l = (e) => {
-    let { theme: t, ...n } = e,
-        r = (0, c.wj)(t) ? 'dark' : 'light';
-    return (0, a.jsx)(i.Z, {
-        sitekey: p.OL7,
-        ...n,
-        theme: r
-    });
+let d = (e) => {
+    var t,
+        r,
+        { theme: a } = e,
+        c = (function (e, t) {
+            if (null == e) return {};
+            var r,
+                n,
+                a = (function (e, t) {
+                    if (null == e) return {};
+                    var r,
+                        n,
+                        a = {},
+                        i = Object.keys(e);
+                    for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (a[r] = e[r]);
+                    return a;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var i = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < i.length; n++) (r = i[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
+            }
+            return a;
+        })(e, ['theme']);
+    let s = (0, o.wj)(a) ? 'dark' : 'light';
+    return (0, n.jsx)(
+        i.Z,
+        ((t = (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var r = null != arguments[t] ? arguments[t] : {},
+                    n = Object.keys(r);
+                'function' == typeof Object.getOwnPropertySymbols &&
+                    (n = n.concat(
+                        Object.getOwnPropertySymbols(r).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                        })
+                    )),
+                    n.forEach(function (t) {
+                        var n;
+                        (n = r[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: n,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0
+                                  })
+                                : (e[t] = n);
+                    });
+            }
+            return e;
+        })({ sitekey: p.OL7 }, c)),
+        (r = r = { theme: s }),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+            : (function (e, t) {
+                  var r = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var n = Object.getOwnPropertySymbols(e);
+                      r.push.apply(r, n);
+                  }
+                  return r;
+              })(Object(r)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+              }),
+        t)
+    );
 };
-(l.Themes = {
+(d.Themes = {
     LIGHT: 'light',
     DARK: 'dark'
 }),
-    (l.Sizes = {
+    (d.Sizes = {
         COMPACT: 'compact',
         NORMAL: 'normal',
         INVISIBLE: 'invisible'
     });
-let h = 12633 == n.j ? l : null;
+let u = 12633 == r.j ? d : null;

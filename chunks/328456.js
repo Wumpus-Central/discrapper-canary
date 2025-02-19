@@ -1,13 +1,12 @@
 n.d(t, {
-    R: () => o,
-    b: () => s
+    R: () => s,
+    b: () => a
 }),
-    n(724458),
     n(653041),
     n(47120);
-var i = n(192379),
-    r = n(979554);
-function a(e, t, n) {
+var r = n(192379),
+    i = n(979554);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,12 +19,12 @@ function a(e, t, n) {
         e
     );
 }
-class s {
+class a {
     get firstAvatarDecoration() {
-        return this.getFirstItemByType(r.Z.AVATAR_DECORATION);
+        return this.getFirstItemByType(i.Z.AVATAR_DECORATION);
     }
     get firstProfileEffect() {
-        return this.getFirstItemByType(r.Z.PROFILE_EFFECT);
+        return this.getFirstItemByType(i.Z.PROFILE_EFFECT);
     }
     getFirstItemByType(e) {
         var t;
@@ -39,11 +38,11 @@ class s {
         }, new Map());
     }
     constructor(e) {
-        a(this, 'itemsByTypes', void 0), (this.itemsByTypes = this.sortByTypes(e));
+        o(this, 'itemsByTypes', void 0), (this.itemsByTypes = this.sortByTypes(e));
     }
 }
-let o = (e) => {
-    let { firstProfileEffect: t, firstAvatarDecoration: n } = i.useMemo(() => new s(e.items), [e]);
+let s = (e) => {
+    let { firstProfileEffect: t, firstAvatarDecoration: n } = r.useMemo(() => new a(e.items), [e]);
     return {
         firstProfileEffect: t,
         firstAvatarDecoration: n

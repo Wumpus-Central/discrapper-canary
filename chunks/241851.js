@@ -1,47 +1,101 @@
-t.d(n, { g: () => N });
-var i = t(200651);
-t(192379);
-var l = t(120356),
-    a = t.n(l),
-    r = t(704215),
-    d = t(481060),
-    s = t(605236),
-    o = t(434404),
-    u = t(41776),
-    c = t(703656),
-    g = t(981631),
-    h = t(388032),
-    f = t(562998);
-let N = (e) => {
-    let { guild: n } = e,
-        l = n.id,
-        N = async () => {
-            let e = u.Z.isLurking(l);
-            await o.Z.leaveGuild(l),
+r.d(t, { g: () => g });
+var n = r(200651);
+r(192379);
+var i = r(120356),
+    o = r.n(i),
+    l = r(704215),
+    c = r(481060),
+    a = r(605236),
+    u = r(434404),
+    s = r(41776),
+    b = r(703656),
+    O = r(981631),
+    f = r(388032),
+    p = r(703934);
+function d(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var r = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(r);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (n = n.concat(
+                Object.getOwnPropertySymbols(r).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                })
+            )),
+            n.forEach(function (t) {
+                var n;
+                (n = r[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: n,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = n);
+            });
+    }
+    return e;
+}
+function y(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var r = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var n = Object.getOwnPropertySymbols(e);
+                      r.push.apply(r, n);
+                  }
+                  return r;
+              })(Object(t)).forEach(function (r) {
+                  Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
+              }),
+        e
+    );
+}
+let g = (e) => {
+    let { guild: t } = e,
+        i = t.id,
+        g = async () => {
+            let e = s.Z.isLurking(i);
+            await u.Z.leaveGuild(i),
                 e
-                    ? (0, c.uL)(g.Z5c.GUILD_DISCOVERY)
-                    : (0, s.un)(r.z.GUILD_LEAVE_FEEDBACK) ||
-                      (0, d.ZDy)(async () => {
-                          let { default: e } = await t.e('74920').then(t.bind(t, 131102));
-                          return (t) =>
-                              (0, i.jsx)(e, {
-                                  ...t,
-                                  guildId: l,
-                                  guildName: n.name
-                              });
+                    ? (0, b.uL)(O.Z5c.GUILD_DISCOVERY)
+                    : (0, a.un)(l.z.GUILD_LEAVE_FEEDBACK) ||
+                      (0, c.ZDy)(async () => {
+                          let { default: e } = await r.e('74920').then(r.bind(r, 131102));
+                          return (r) =>
+                              (0, n.jsx)(
+                                  e,
+                                  y(d({}, r), {
+                                      guildId: i,
+                                      guildName: t.name
+                                  })
+                              );
                       });
         };
-    return (0, i.jsx)(d.ConfirmModal, {
-        className: a()(f.__invalid_confirmModal),
-        bodyClassName: a()(f.__invalid_confirmModalBody),
-        header: h.intl.formatToPlainString(h.t['1GX6Pz'], { name: n.name }),
-        confirmText: n.hasFeature(g.oNc.HUB) ? h.intl.string(h.t.Dv8gFR) : h.intl.string(h.t.J2TBi4),
-        cancelText: h.intl.string(h.t['ETE/oK']),
-        onConfirm: N,
-        ...e,
-        children: (0, i.jsx)(d.Text, {
-            variant: 'text-md/normal',
-            children: n.hasFeature(g.oNc.HUB) ? h.intl.format(h.t.ZHTXVF, { name: n.name }) : h.intl.format(h.t.ZEXC0t, { name: n.name })
-        })
-    });
+    return (0, n.jsx)(
+        c.ConfirmModal,
+        y(
+            d(
+                {
+                    className: o()(p.__invalid_confirmModal),
+                    bodyClassName: o()(p.__invalid_confirmModalBody),
+                    header: f.NW.formatToPlainString(f.t['1GX6Pz'], { name: t.name }),
+                    confirmText: t.hasFeature(O.oNc.HUB) ? f.NW.string(f.t.Dv8gFR) : f.NW.string(f.t.J2TBi4),
+                    cancelText: f.NW.string(f.t['ETE/oK']),
+                    onConfirm: g
+                },
+                e
+            ),
+            {
+                children: (0, n.jsx)(c.Text, {
+                    variant: 'text-md/normal',
+                    children: t.hasFeature(O.oNc.HUB) ? f.NW.format(f.t.ZHTXVF, { name: t.name }) : f.NW.format(f.t.ZEXC0t, { name: t.name })
+                })
+            }
+        )
+    );
 };

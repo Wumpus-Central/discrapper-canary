@@ -1,83 +1,126 @@
-n.d(t, { Z: () => C });
-var i = n(200651);
+n.d(t, { Z: () => _ });
+var r = n(200651);
 n(192379);
-var l = n(442837),
-    a = n(481060),
-    r = n(665149),
-    s = n(171368),
-    o = n(650774),
+var i = n(442837),
+    l = n(481060),
+    o = n(665149),
+    a = n(171368),
+    s = n(650774),
     c = n(430824),
-    d = n(496675),
-    u = n(709054),
-    h = n(826581),
-    p = n(246364),
-    m = n(360328),
-    f = n(981631),
+    u = n(496675),
+    d = n(709054),
+    p = n(826581),
+    h = n(246364),
+    f = n(360328),
+    m = n(981631),
     g = n(388032),
-    _ = n(120196);
-function C(e) {
-    let { channelId: t, showProfile: n = !1, showTrailingDivider: C = !1 } = e,
-        x = u.default.cast(t),
+    b = n(86866);
+function _(e) {
+    let { channelId: t, showProfile: n = !1, showTrailingDivider: _ = !1 } = e,
+        C = d.default.cast(t),
         {
             joinRequest: v,
-            isModmin: E,
-            guildId: I,
-            maxMembers: b
-        } = (0, l.cj)([h.Z, c.Z, d.Z], () => {
-            let e = h.Z.getRequest(x),
+            isModmin: y,
+            guildId: x,
+            maxMembers: j
+        } = (0, i.cj)([p.Z, c.Z, u.Z], () => {
+            let e = p.Z.getRequest(C),
                 t = c.Z.getGuild(null == e ? void 0 : e.guildId);
             return {
                 joinRequest: e,
-                isModmin: null != t && d.Z.can(f.Plq.KICK_MEMBERS, t),
+                isModmin: null != t && u.Z.can(m.Plq.KICK_MEMBERS, t),
                 guildId: null == t ? void 0 : t.id,
                 maxMembers: null == t ? void 0 : t.maxMembers
             };
         }),
-        Z = (0, l.e7)([o.Z], () => (null != I ? o.Z.getMemberCount(I) : 0)),
-        N = null != b && (null != Z ? Z : 0) >= b,
-        { approveRequest: T, rejectRequest: S, submitting: j } = (0, m.s)(null == v ? void 0 : v.guildId, null == v ? void 0 : v.userId, null == v ? void 0 : v.joinRequestId);
-    return null != v && v.applicationStatus === p.wB.SUBMITTED && E
-        ? (0, i.jsxs)('div', {
-              className: _.buttons,
+        O = (0, i.e7)([s.Z], () => (null != x ? s.Z.getMemberCount(x) : 0)),
+        N = null != j && (null != O ? O : 0) >= j,
+        { approveRequest: E, rejectRequest: P, submitting: I } = (0, f.s)(null == v ? void 0 : v.guildId, null == v ? void 0 : v.userId, null == v ? void 0 : v.joinRequestId);
+    return null != v && v.applicationStatus === h.wB.SUBMITTED && y
+        ? (0, r.jsxs)('div', {
+              className: b.buttons,
               children: [
-                  (0, i.jsx)(a.ua7, {
-                      text: g.intl.string(g.t.RbIXi4),
+                  (0, r.jsx)(l.ua7, {
+                      text: g.NW.string(g.t.RbIXi4),
                       shouldShow: N,
-                      children: (e) =>
-                          (0, i.jsx)(a.zxk, {
-                              ...e,
-                              color: a.zxk.Colors.GREEN,
-                              submitting: j,
-                              onClick: T,
-                              size: a.PhG.SMALL,
-                              disabled: N,
-                              children: g.intl.string(g.t.BzjDQE)
-                          })
+                      children: (e) => {
+                          var t, n;
+                          return (0, r.jsx)(
+                              l.zxk,
+                              ((t = (function (e) {
+                                  for (var t = 1; t < arguments.length; t++) {
+                                      var n = null != arguments[t] ? arguments[t] : {},
+                                          r = Object.keys(n);
+                                      'function' == typeof Object.getOwnPropertySymbols &&
+                                          (r = r.concat(
+                                              Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                  return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                              })
+                                          )),
+                                          r.forEach(function (t) {
+                                              var r;
+                                              (r = n[t]),
+                                                  t in e
+                                                      ? Object.defineProperty(e, t, {
+                                                            value: r,
+                                                            enumerable: !0,
+                                                            configurable: !0,
+                                                            writable: !0
+                                                        })
+                                                      : (e[t] = r);
+                                          });
+                                  }
+                                  return e;
+                              })({}, e)),
+                              (n = n =
+                                  {
+                                      color: l.zxk.Colors.GREEN,
+                                      submitting: I,
+                                      onClick: E,
+                                      size: l.PhG.SMALL,
+                                      disabled: N,
+                                      children: g.NW.string(g.t.BzjDQE)
+                                  }),
+                              Object.getOwnPropertyDescriptors
+                                  ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                                  : (function (e, t) {
+                                        var n = Object.keys(e);
+                                        if (Object.getOwnPropertySymbols) {
+                                            var r = Object.getOwnPropertySymbols(e);
+                                            n.push.apply(n, r);
+                                        }
+                                        return n;
+                                    })(Object(n)).forEach(function (e) {
+                                        Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                                    }),
+                              t)
+                          );
+                      }
                   }),
-                  (0, i.jsx)(a.zxk, {
-                      color: a.zxk.Colors.RED,
-                      onClick: S,
-                      size: a.PhG.SMALL,
-                      disabled: j || v.applicationStatus !== p.wB.SUBMITTED,
-                      children: g.intl.string(g.t.hDtbs7)
+                  (0, r.jsx)(l.zxk, {
+                      color: l.zxk.Colors.RED,
+                      onClick: P,
+                      size: l.PhG.SMALL,
+                      disabled: I || v.applicationStatus !== h.wB.SUBMITTED,
+                      children: g.NW.string(g.t.hDtbs7)
                   }),
                   n &&
-                      (0, i.jsx)(a.zxk, {
-                          color: a.zxk.Colors.TRANSPARENT,
+                      (0, r.jsx)(l.zxk, {
+                          color: l.zxk.Colors.TRANSPARENT,
                           onClick: () => {
-                              (0, s.openUserProfileModal)({
+                              (0, a.openUserProfileModal)({
                                   userId: v.userId,
                                   guildId: v.guildId,
                                   analyticsLocation: {
-                                      section: f.jXE.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
-                                      object: f.qAy.JOIN_REQUEST
+                                      section: m.jXE.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
+                                      object: m.qAy.JOIN_REQUEST
                                   }
                               });
                           },
-                          size: a.PhG.SMALL,
-                          children: g.intl.string(g.t.iXAna2)
+                          size: l.PhG.SMALL,
+                          children: g.NW.string(g.t.iXAna2)
                       }),
-                  C && (0, i.jsx)(r.ZP.Divider, {})
+                  _ && (0, r.jsx)(o.ZP.Divider, {})
               ]
           })
         : null;

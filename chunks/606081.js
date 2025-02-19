@@ -1,11 +1,11 @@
-n.d(t, { Z: () => I }), n(411104);
-var i,
+n.d(t, { Z: () => O }), n(26686), n(411104);
+var r,
+    i,
     l,
-    r,
-    a,
-    s = n(200651),
-    o = n(192379);
-function d(e, t, n) {
+    o,
+    a = n(200651),
+    s = n(192379);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,10 +18,26 @@ function d(e, t, n) {
         e
     );
 }
-function c(e, t) {
-    return {
-        '@type': e,
-        ...(function e(t) {
+function u(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                c(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function d(e, t) {
+    return u(
+        { '@type': e },
+        (function e(t) {
             return (
                 Object.keys(t).forEach((n) => {
                     null == t[n] ? delete t[n] : 'object' == typeof t[n] && (t[n] = e(t[n]));
@@ -39,67 +55,64 @@ function c(e, t) {
                 return t;
             })(t)
         )
-    };
+    );
 }
-function u(e) {
-    return c('Thing', e);
+function p(e) {
+    return d('Thing', e);
 }
 function h(e) {
-    return c('Product', e);
+    return d('Product', e);
 }
 h.Image = function (e) {
     if (null == e) return null;
     let t = e.filter((e) => null != e && '' !== e);
     return 0 === t.length ? null : 1 === t.length ? t[0] : t;
 };
-var m = (((l = m || {}).DAMAGED = 'http://schema.org/DamagedCondition'), (l.NEW = 'http://schema.org/NewCondition'), (l.REFURBISHED = 'http://schema.org/RefurbishedCondition'), (l.USED = 'http://schema.org/UsedCondition'), l),
-    p = (((r = p || {}).DISCONTINUED = 'http://schema.org/Discontinued'), (r.IN_STOCK = 'http://schema.org/InStock'), (r.IN_STORE_ONLY = 'http://schema.org/InStoreOnly'), (r.LIMITED_AVAILABILITY = 'http://schema.org/LimitedAvailability'), (r.ONLINE_ONLY = 'http://schema.org/OnlineOnly'), (r.OUT_OF_STOCK = 'http://schema.org/OutOfStock'), (r.PREORDER = 'http://schema.org/PreOrder'), (r.PRESALE = 'http://schema.org/PreSale'), (r.SOLD_OUT = 'http://schema.org/SoldOut'), r);
-function g(e) {
-    return c('Offer', e);
+var g = (((i = g || {}).DAMAGED = 'http://schema.org/DamagedCondition'), (i.NEW = 'http://schema.org/NewCondition'), (i.REFURBISHED = 'http://schema.org/RefurbishedCondition'), (i.USED = 'http://schema.org/UsedCondition'), i),
+    f = (((l = f || {}).DISCONTINUED = 'http://schema.org/Discontinued'), (l.IN_STOCK = 'http://schema.org/InStock'), (l.IN_STORE_ONLY = 'http://schema.org/InStoreOnly'), (l.LIMITED_AVAILABILITY = 'http://schema.org/LimitedAvailability'), (l.ONLINE_ONLY = 'http://schema.org/OnlineOnly'), (l.OUT_OF_STOCK = 'http://schema.org/OutOfStock'), (l.PREORDER = 'http://schema.org/PreOrder'), (l.PRESALE = 'http://schema.org/PreSale'), (l.SOLD_OUT = 'http://schema.org/SoldOut'), l);
+function m(e) {
+    return d('Offer', e);
 }
-(g.ItemConditions = m), (g.ItemAvailability = p);
-var _ = (((a = _ || {}).YEARLY = 'ANN'), (a.MONTHLY = 'MON'), a);
-function f(e) {
-    return c('QuantitativeValue', e);
+(m.ItemConditions = g), (m.ItemAvailability = f);
+var b = (((o = b || {}).YEARLY = 'ANN'), (o.MONTHLY = 'MON'), o);
+function _(e) {
+    return d('QuantitativeValue', e);
 }
-f.UnitCodes = _;
-class E extends (i = o.Component) {
+_.UnitCodes = b;
+class E extends (r = s.Component) {
     render() {
         let { debug: e, data: t } = this.props,
-            n = JSON.stringify({
-                '@context': 'http://schema.org',
-                ...t
-            });
-        return (0, s.jsx)('script', {
+            n = JSON.stringify(u({ '@context': 'http://schema.org' }, t));
+        return (0, a.jsx)('script', {
             type: 'application/ld+json',
             children: n
         });
     }
 }
-d(E, 'Thing', u),
-    d(E, 'Brand', u),
-    d(E, 'Person', function (e) {
-        return c('Person', e);
+c(E, 'Thing', p),
+    c(E, 'Brand', p),
+    c(E, 'Person', function (e) {
+        return d('Person', e);
     }),
-    d(E, 'Organization', function (e) {
-        return c('Organization', e);
+    c(E, 'Organization', function (e) {
+        return d('Organization', e);
     }),
-    d(E, 'ItemPage', function (e) {
-        return c('ItemPage', e);
+    c(E, 'ItemPage', function (e) {
+        return d('ItemPage', e);
     }),
-    d(E, 'Product', h),
-    d(E, 'Offer', g),
-    d(E, 'Rating', function (e) {
-        return c('Rating', e);
+    c(E, 'Product', h),
+    c(E, 'Offer', m),
+    c(E, 'Rating', function (e) {
+        return d('Rating', e);
     }),
-    d(E, 'AggregateRating', function (e) {
-        return c('AggregateRating', e);
+    c(E, 'AggregateRating', function (e) {
+        return d('AggregateRating', e);
     }),
-    d(E, 'AggregateOffer', function (e) {
-        return c('AggregateOffer', e);
+    c(E, 'AggregateOffer', function (e) {
+        return d('AggregateOffer', e);
     }),
-    d(E, 'QuantitativeValue', f),
-    d(E, 'UnitPriceSpecification', function (e) {
-        return c('UnitPriceSpecification', e);
+    c(E, 'QuantitativeValue', _),
+    c(E, 'UnitPriceSpecification', function (e) {
+        return d('UnitPriceSpecification', e);
     });
-let I = E;
+let O = E;

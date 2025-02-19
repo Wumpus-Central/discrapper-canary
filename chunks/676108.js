@@ -1,64 +1,118 @@
-n.d(t, { Z: () => f });
-var i = n(200651),
-    r = n(192379),
-    a = n(481060),
-    s = n(318766),
-    o = n(907040),
+n.d(t, { Z: () => m });
+var r = n(200651),
+    i = n(192379),
+    o = n(481060),
+    a = n(318766),
+    s = n(907040),
     l = n(28546),
-    u = n(872635),
-    c = n(185923),
-    d = n(695668);
-function f(e) {
+    c = n(872635),
+    u = n(185923),
+    d = n(217131);
+function f(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function p(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                f(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function _(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function h(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : _(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function m(e) {
     var t;
     let { editorRef: n, options: f, channel: _ } = e,
-        p = null === (t = n.current) || void 0 === t ? void 0 : t.getSlateEditor(),
-        h = r.useCallback(
+        m = null === (t = n.current) || void 0 === t ? void 0 : t.getSlateEditor(),
+        g = i.useCallback(
             (e, t) => {
-                let i = n.current;
-                null != e && null != i && i.insertEmoji(e, t, !1), t && (0, l._Q)();
+                let r = n.current;
+                null != e && null != r && r.insertEmoji(e, t, !1), t && (0, l._Q)();
             },
             [n]
         ),
-        m = (e) => {
+        E = (e) => {
             let { closePopout: t } = e;
-            return (0, i.jsx)(o.Z, {
+            return (0, r.jsx)(s.Z, {
                 persistSearch: !0,
                 channel: _,
                 closePopout: t,
                 onSelectEmoji: (e, n) => {
-                    h(e, n), n && t();
+                    g(e, n), n && t();
                 },
-                pickerIntention: c.Hz.COMMUNITY_CONTENT
+                pickerIntention: u.Hz.COMMUNITY_CONTENT
             });
         };
-    return null == p
+    return null == m
         ? null
-        : (0, i.jsxs)('div', {
+        : (0, r.jsxs)('div', {
               id: 'slate-toolbar',
               className: d.staticToolbar,
               children: [
-                  (0, i.jsx)('div', {
+                  (0, r.jsx)('div', {
                       className: d.staticButtons,
-                      children: (0, i.jsx)(u.I, {
+                      children: (0, r.jsx)(c.I, {
                           editorRef: n,
                           options: f,
                           iconClassName: d.staticIcon,
                           dividerClassName: d.staticDivider
                       })
                   }),
-                  (0, i.jsx)(a.yRy, {
-                      renderPopout: m,
+                  (0, r.jsx)(o.yRy, {
+                      renderPopout: E,
                       position: 'bottom',
-                      animation: a.yRy.Animation.NONE,
+                      animation: o.yRy.Animation.NONE,
                       align: 'left',
                       children: (e, t) => {
                           let { isShown: n } = t;
-                          return (0, i.jsx)(s.Z, {
-                              ...e,
-                              active: n,
-                              className: d.emojiButton,
-                              tabIndex: 0
-                          });
+                          return (0, r.jsx)(
+                              a.Z,
+                              h(p({}, e), {
+                                  active: n,
+                                  className: d.emojiButton,
+                                  tabIndex: 0
+                              })
+                          );
                       }
                   })
               ]

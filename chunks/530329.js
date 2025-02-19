@@ -1,36 +1,84 @@
-e.d(n, { Z: () => b });
-var c = e(200651),
-    a = e(192379),
-    d = e(120356),
-    s = e.n(d),
-    o = e(53691),
-    i = e(378879),
-    f = e(981631),
-    A = e(486324),
-    p = e(388032),
-    r = e(14164);
-function b(t) {
-    let { uploadType: n, className: e, ...d } = t,
-        b = a.useCallback(() => {
-            (0, i.s)(n, void 0);
-        }, [n]),
-        l = a.useMemo(() => {
-            switch (n) {
-                case A.pC.AVATAR:
-                    return p.intl.format(p.t['pvw/HB'], { onClick: b });
-                case A.pC.BANNER:
-                    return p.intl.format(p.t.aCrz1d, { onClick: b });
+n.d(e, { Z: () => f });
+var o = n(200651),
+    i = n(192379),
+    r = n(120356),
+    a = n.n(r),
+    l = n(53691),
+    c = n(378879),
+    s = n(981631),
+    u = n(486324),
+    _ = n(388032),
+    d = n(746364);
+function f(t) {
+    var { uploadType: e, className: n } = t,
+        r = (function (t, e) {
+            if (null == t) return {};
+            var n,
+                o,
+                i = (function (t, e) {
+                    if (null == t) return {};
+                    var n,
+                        o,
+                        i = {},
+                        r = Object.keys(t);
+                    for (o = 0; o < r.length; o++) (n = r[o]), e.indexOf(n) >= 0 || (i[n] = t[n]);
+                    return i;
+                })(t, e);
+            if (Object.getOwnPropertySymbols) {
+                var r = Object.getOwnPropertySymbols(t);
+                for (o = 0; o < r.length; o++) (n = r[o]), !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (i[n] = t[n]);
+            }
+            return i;
+        })(t, ['uploadType', 'className']);
+    let f = i.useCallback(() => {
+            (0, c.s)(e, void 0);
+        }, [e]),
+        m = i.useMemo(() => {
+            switch (e) {
+                case u.pC.AVATAR:
+                    return _.NW.format(_.t['pvw/HB'], { onClick: f });
+                case u.pC.BANNER:
+                    return _.NW.format(_.t.aCrz1d, { onClick: f });
                 default:
                     return '';
             }
-        }, [n, b]);
-    return n === A.pC.AVATAR || n === A.pC.BANNER
-        ? (0, c.jsx)(o.p, {
-              text: l,
-              button: p.intl.string(p.t.BmJkbW),
-              buttonAnalyticsObject: { section: f.jXE.USER_PROFILE },
-              className: s()(r.container, e),
-              ...d
-          })
-        : null;
+        }, [e, f]);
+    return e !== u.pC.AVATAR && e !== u.pC.BANNER
+        ? null
+        : (0, o.jsx)(
+              l.p,
+              (function (t) {
+                  for (var e = 1; e < arguments.length; e++) {
+                      var n = null != arguments[e] ? arguments[e] : {},
+                          o = Object.keys(n);
+                      'function' == typeof Object.getOwnPropertySymbols &&
+                          (o = o.concat(
+                              Object.getOwnPropertySymbols(n).filter(function (t) {
+                                  return Object.getOwnPropertyDescriptor(n, t).enumerable;
+                              })
+                          )),
+                          o.forEach(function (e) {
+                              var o;
+                              (o = n[e]),
+                                  e in t
+                                      ? Object.defineProperty(t, e, {
+                                            value: o,
+                                            enumerable: !0,
+                                            configurable: !0,
+                                            writable: !0
+                                        })
+                                      : (t[e] = o);
+                          });
+                  }
+                  return t;
+              })(
+                  {
+                      text: m,
+                      button: _.NW.string(_.t.BmJkbW),
+                      buttonAnalyticsObject: { section: s.jXE.USER_PROFILE },
+                      className: a()(d.container, n)
+                  },
+                  r
+              )
+          );
 }

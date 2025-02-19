@@ -1,138 +1,172 @@
-n.d(t, { Z: () => h });
-var i = n(200651);
+n.d(t, { Z: () => g });
+var r = n(200651);
 n(192379);
-var r = n(481060),
-    a = n(100527),
-    s = n(906732),
-    o = n(299206),
+var i = n(481060),
+    o = n(100527),
+    a = n(906732),
+    s = n(299206),
     l = n(389052),
-    u = n(158508),
-    c = n(710631),
+    c = n(158508),
+    u = n(710631),
     d = n(622724),
     f = n(785717),
-    _ = n(475413),
-    p = n(388032);
-function h(e) {
-    let { user: t, guildId: n, viewProfileItem: h, appContext: m } = e,
-        { trackUserProfileAction: g } = (0, f.KZ)(),
-        { analyticsLocations: E, newestAnalyticsLocation: v } = (0, s.ZP)(a.Z.USER_PROFILE_OVERFLOW_MENU),
-        y = (0, c.Z)({
+    p = n(475413),
+    _ = n(388032);
+function h(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function m(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                h(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function g(e) {
+    let { user: t, guildId: n, viewProfileItem: h, appContext: g } = e,
+        { trackUserProfileAction: E } = (0, f.KZ)(),
+        { analyticsLocations: v, newestAnalyticsLocation: b } = (0, a.ZP)(o.Z.USER_PROFILE_OVERFLOW_MENU),
+        y = (0, u.Z)({
             user: t,
             guildId: n,
             onAction: () =>
-                g({
+                E({
                     action: 'PRESS_INVITE_TO_SERVER',
-                    analyticsLocations: E
+                    analyticsLocations: v
                 })
         }),
-        I = (0, l.Z)({
+        O = (0, l.Z)({
             user: t,
             guildId: n,
-            location: v,
+            location: b,
             color: 'danger',
-            appContext: m,
+            appContext: g,
             onBlock: () =>
-                g({
+                E({
                     action: 'BLOCK',
-                    analyticsLocations: E
+                    analyticsLocations: v
                 }),
             onIgnore: () =>
-                g({
+                E({
                     action: 'IGNORE',
-                    analyticsLocations: E
+                    analyticsLocations: v
                 }),
             onUnblock: () =>
-                g({
+                E({
                     action: 'UNBLOCK',
-                    analyticsLocations: E
+                    analyticsLocations: v
                 })
         }),
-        T = (0, u.Z)({
+        S = (0, c.Z)({
             user: t,
             guildId: n,
-            location: v,
-            appContext: m,
+            location: b,
+            appContext: g,
             onBlock: () =>
-                g({
+                E({
                     action: 'BLOCK',
-                    analyticsLocations: E
+                    analyticsLocations: v
                 }),
             onIgnore: () =>
-                g({
+                E({
                     action: 'IGNORE',
-                    analyticsLocations: E
+                    analyticsLocations: v
                 }),
             onUnignore: () =>
-                g({
+                E({
                     action: 'UNIGNORE',
-                    analyticsLocations: E
+                    analyticsLocations: v
                 })
         }),
-        b = (0, d.Z)({
+        I = (0, d.Z)({
             user: t,
             guildId: n,
-            location: v,
-            appContext: m,
+            location: b,
+            appContext: g,
             color: 'danger',
             onAction: () =>
-                g({
+                E({
                     action: 'REPORT',
-                    analyticsLocations: E
+                    analyticsLocations: v
                 })
         }),
-        S = [
+        T = [
             [h, y],
             [
-                T,
+                S,
+                O,
                 I,
-                b,
                 (0, d.T)({
                     user: t,
                     guildId: n,
-                    location: v,
-                    appContext: m,
+                    location: b,
+                    appContext: g,
                     color: 'danger',
                     onAction: () =>
-                        g({
+                        E({
                             action: 'REPORT',
-                            analyticsLocations: E
+                            analyticsLocations: v
                         })
                 })
             ],
             [
-                (0, o.Z)({
+                (0, s.Z)({
                     id: t.id,
-                    label: p.intl.string(p.t['/AXYnJ']),
+                    label: _.NW.string(_.t['/AXYnJ']),
                     onSuccess: () =>
-                        g({
+                        E({
                             action: 'COPY_USER_ID',
-                            analyticsLocations: E
+                            analyticsLocations: v
                         })
                 })
             ]
         ];
-    return S.every((e) => e.every((e) => null == e))
+    return T.every((e) => e.every((e) => null == e))
         ? null
-        : (0, i.jsx)(s.Gt, {
-              value: E,
-              children: (0, i.jsx)(r.yRy, {
+        : (0, r.jsx)(a.Gt, {
+              value: v,
+              children: (0, r.jsx)(i.yRy, {
                   renderPopout: (e) => {
                       let { closePopout: t } = e;
-                      return (0, i.jsx)(r.v2r, {
+                      return (0, r.jsx)(i.v2r, {
                           navId: 'user-profile-overflow-menu',
                           onSelect: void 0,
                           onClose: t,
-                          'aria-label': p.intl.string(p.t.AXIHpa),
-                          children: S.map((e, t) => (0, i.jsx)(r.kSQ, { children: e.map((e) => e) }, t))
+                          'aria-label': _.NW.string(_.t.AXIHpa),
+                          children: T.map((e, t) => (0, r.jsx)(i.kSQ, { children: e.map((e) => e) }, t))
                       });
                   },
                   children: (e) =>
-                      (0, i.jsx)(_.oY, {
-                          action: 'PRESS_OPTIONS',
-                          icon: r.xhG,
-                          tooltipText: p.intl.string(p.t.UKOtz8),
-                          ...e
-                      })
+                      (0, r.jsx)(
+                          p.oY,
+                          m(
+                              {
+                                  action: 'PRESS_OPTIONS',
+                                  icon: i.xhG,
+                                  tooltipText: _.NW.string(_.t.UKOtz8)
+                              },
+                              e
+                          )
+                      )
               })
           });
 }

@@ -1,52 +1,103 @@
-n.d(t, { J: () => v }), n(47120), n(610138), n(216116), n(78328), n(815648);
-var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(812028),
+n.d(t, { J: () => S }), n(47120), n(610138), n(216116), n(78328), n(815648);
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(812028),
     l = n(772848),
-    u = n(631467),
-    c = n(210887),
+    c = n(631467),
+    u = n(210887),
     d = n(585483),
     f = n(531826),
-    _ = n(53289),
-    p = n(953101),
+    p = n(53289),
+    _ = n(953101),
     h = n(701488),
     m = n(981631),
-    g = n(501217);
-function E(e) {
-    let { url: t, className: n, style: a, onLoad: s, shouldRefocus: g, queryParams: E, allowPopups: v = !1, referrerPolicy: y = 'origin' } = e,
-        I = (0, f.sU)({}),
-        T = (0, o.useMemoOne)(() => (0, l.Z)(), [t]),
-        b = r.useRef(null),
-        S = (0, _.Z)(b, g, null == I ? window : I),
-        A = {
-            ...E,
-            frame_id: T,
+    g = n(638920);
+function E(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function v(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                E(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function b(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function y(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : b(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function O(e) {
+    let { url: t, className: n, style: o, onLoad: a, shouldRefocus: g, queryParams: E, allowPopups: b = !1, referrerPolicy: O = 'origin' } = e,
+        S = (0, f.sU)({}),
+        I = (0, s.useMemoOne)(() => (0, l.Z)(), [t]),
+        T = i.useRef(null),
+        N = (0, p.Z)(T, g, null == S ? window : S),
+        A = y(v({}, E), {
+            frame_id: I,
             platform: h.S4.DESKTOP
-        },
-        [N, C] = r.useState(!1),
-        R = c.Z.theme,
-        O = { ...a };
+        }),
+        [C, R] = i.useState(!1),
+        P = u.Z.theme,
+        w = v({}, o);
     function D(e) {
         var n;
-        null == s || s(e.target), (b.current = e.target), S(!0), null === (n = e.target.contentWindow) || void 0 === n || n.postMessage([u.Z.HELLO, A], null != t ? t : '');
+        null == a || a(e.target), (T.current = e.target), N(!0), null === (n = e.target.contentWindow) || void 0 === n || n.postMessage([c.Z.HELLO, A], null != t ? t : '');
     }
     return (
-        R === m.BRd.LIGHT ? (O.colorScheme = 'light') : (O.colorScheme = 'dark'),
-        r.useEffect(
+        P === m.BRd.LIGHT ? (w.colorScheme = 'light') : (w.colorScheme = 'dark'),
+        i.useEffect(
             () => (
-                d.S.dispatch(m.CkL.IFRAME_MOUNT, { id: T }),
+                d.S.dispatch(m.CkL.IFRAME_MOUNT, { id: I }),
                 () => {
-                    d.S.dispatch(m.CkL.IFRAME_UNMOUNT, { id: T });
+                    d.S.dispatch(m.CkL.IFRAME_UNMOUNT, { id: I });
                 }
             ),
-            [T]
+            [I]
         ),
-        r.useEffect(() => {
+        i.useEffect(() => {
             let e = (e) => {
                 let { resizing: t } = e;
-                C(t);
+                R(t);
             };
             return (
                 d.S.subscribe(m.CkL.MANUAL_IFRAME_RESIZING, e),
@@ -55,39 +106,36 @@ function E(e) {
                 }
             );
         }, []),
-        N && (O.pointerEvents = 'none'),
+        C && (w.pointerEvents = 'none'),
         null != t
-            ? (0, i.jsx)('iframe', {
-                  style: O,
+            ? (0, r.jsx)('iframe', {
+                  style: w,
                   allow: 'autoplay; encrypted-media',
-                  referrerPolicy: y,
+                  referrerPolicy: O,
                   onLoad: D,
-                  sandbox: (0, p.Z)({ allowPopups: v }),
+                  sandbox: (0, _.Z)({ allowPopups: b }),
                   className: n,
                   src: ''.concat(t, '?').concat(new URLSearchParams(A))
               })
             : null
     );
 }
-function v(e) {
+function S(e) {
     let { onLoad: t } = e,
-        [n, a] = r.useState(!1),
-        o = r.useCallback(
+        [n, o] = i.useState(!1),
+        s = i.useCallback(
             (e) => {
-                a(!0), null == t || t(e);
+                o(!0), null == t || t(e);
             },
             [t]
         );
-    return (0, i.jsxs)('div', {
+    return (0, r.jsxs)('div', {
         className: g.fillParent,
         children: [
-            !n && (0, i.jsx)('div', { className: s()(g.fillParent, g.iframePlaceholder) }),
-            (0, i.jsx)('div', {
-                className: s()(g.fillParent, n ? void 0 : g.hiddenIframeContainer),
-                children: (0, i.jsx)(E, {
-                    ...e,
-                    onLoad: o
-                })
+            !n && (0, r.jsx)('div', { className: a()(g.fillParent, g.iframePlaceholder) }),
+            (0, r.jsx)('div', {
+                className: a()(g.fillParent, n ? void 0 : g.hiddenIframeContainer),
+                children: (0, r.jsx)(O, y(v({}, e), { onLoad: s }))
             })
         ]
     });

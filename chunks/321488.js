@@ -1,34 +1,77 @@
-n.d(t, { Z: () => h });
-var i,
-    l = n(200651);
+n.d(t, { Z: () => p });
+var r,
+    i = n(200651);
 n(192379);
-var r = n(120356),
-    a = n.n(r),
-    s = n(873546),
-    o = n(481060),
-    d = n(74344),
-    c = (((i = c || {})[(i.ACCEPT = 0)] = 'ACCEPT'), (i[(i.DENY = 1)] = 'DENY'), (i[(i.DEFAULT = 2)] = 'DEFAULT'), i);
-function u(e) {
-    let { icon: t, tooltip: n, onClick: i, actionType: r = 2, shouldHighlight: c } = e;
-    return (0, l.jsx)(o.ua7, {
+var l = n(120356),
+    o = n.n(l),
+    a = n(873546),
+    s = n(481060),
+    c = n(581904),
+    u = (((r = u || {})[(r.ACCEPT = 0)] = 'ACCEPT'), (r[(r.DENY = 1)] = 'DENY'), (r[(r.DEFAULT = 2)] = 'DEFAULT'), r);
+function d(e) {
+    let { icon: t, tooltip: n, onClick: r, actionType: l = 2, shouldHighlight: u } = e;
+    return (0, i.jsx)(s.ua7, {
         text: n,
-        children: (e) =>
-            (0, l.jsx)(o.P3F, {
-                ...e,
-                'aria-label': n,
-                onClick: i,
-                className: a()(d.actionButton, {
-                    [d.actionAccept]: 0 === r,
-                    [d.actionDeny]: 1 === r,
-                    [d.highlight]: c,
-                    [d.actionButtonMobile]: s.tq
-                }),
-                children: (0, l.jsx)(t, {
-                    className: d.icon,
-                    color: 'currentColor'
-                })
-            })
+        children: (e) => {
+            var d, p;
+            return (0, i.jsx)(
+                s.P3F,
+                ((d = (function (e) {
+                    for (var t = 1; t < arguments.length; t++) {
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            r = Object.keys(n);
+                        'function' == typeof Object.getOwnPropertySymbols &&
+                            (r = r.concat(
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                })
+                            )),
+                            r.forEach(function (t) {
+                                var r;
+                                (r = n[t]),
+                                    t in e
+                                        ? Object.defineProperty(e, t, {
+                                              value: r,
+                                              enumerable: !0,
+                                              configurable: !0,
+                                              writable: !0
+                                          })
+                                        : (e[t] = r);
+                            });
+                    }
+                    return e;
+                })({}, e)),
+                (p = p =
+                    {
+                        'aria-label': n,
+                        onClick: r,
+                        className: o()(c.actionButton, {
+                            [c.actionAccept]: 0 === l,
+                            [c.actionDeny]: 1 === l,
+                            [c.highlight]: u,
+                            [c.actionButtonMobile]: a.tq
+                        }),
+                        children: (0, i.jsx)(t, {
+                            className: c.icon,
+                            color: 'currentColor'
+                        })
+                    }),
+                Object.getOwnPropertyDescriptors
+                    ? Object.defineProperties(d, Object.getOwnPropertyDescriptors(p))
+                    : (function (e, t) {
+                          var n = Object.keys(e);
+                          if (Object.getOwnPropertySymbols) {
+                              var r = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, r);
+                          }
+                          return n;
+                      })(Object(p)).forEach(function (e) {
+                          Object.defineProperty(d, e, Object.getOwnPropertyDescriptor(p, e));
+                      }),
+                d)
+            );
+        }
     });
 }
-u.ActionTypes = c;
-let h = u;
+d.ActionTypes = u;
+let p = d;

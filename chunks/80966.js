@@ -1,62 +1,145 @@
-n.d(t, { Z: () => c });
-var i = n(200651),
-    r = n(192379),
-    a = n(403182),
-    s = n(124347),
-    o = n(640108),
+n.d(t, { Z: () => m });
+var r = n(200651),
+    i = n(192379),
+    o = n(403182),
+    a = n(124347),
+    s = n(640108),
     l = n(981631),
-    u = n(388032);
-class c extends r.Component {
+    c = n(388032);
+function u(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function d(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                u(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function f(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function p(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : f(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function _(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = h(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function h(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+class m extends i.Component {
     render() {
-        let { src: e, fileSize: t, className: n, mediaPlayerClassName: r, poster: c, fileName: d, naturalWidth: f, naturalHeight: _, playable: p, downloadable: h = !0, volume: m, autoPlay: g, autoMute: E, responsive: v, mediaLayoutType: y, mimeType: I, renderOverlayContent: T, renderLinkComponent: b, onClick: S, onPlay: A, onPause: N, onEnded: C, onControlsShow: R, onControlsHide: O, onVolumeChange: D, onMute: L, alt: x = u.intl.string(u.t.FlNoSU), ...P } = this.props;
-        return (0, i.jsx)(s.ZP, {
-            alt: x,
-            className: n,
-            src: c,
-            ...P,
-            minWidth: o.ZP.minWidth,
-            minHeight: o.ZP.minHeight,
-            shouldLink: !1,
-            shouldAnimate: !1,
-            mediaLayoutType: y,
-            responsive: v,
-            children: (n) => {
-                let {
-                        src: s,
-                        size: { width: u, height: c }
-                    } = n,
-                    x = !((f <= l.N_j && _ <= l.XKF) || (f <= l.XKF && _ <= l.N_j));
-                return (0, i.jsx)(o.ZP, {
-                    className: r,
-                    forceExternal: x,
-                    src: e,
-                    poster: s,
-                    width: u,
-                    height: c,
-                    responsive: v,
-                    volume: m,
-                    autoPlay: null != g && g,
-                    autoMute: null != E && E,
-                    type: o.ZP.Types.VIDEO,
-                    mediaLayoutType: y,
-                    fileName: d,
-                    fileSize: null == t ? void 0 : (0, a.Ng)(t),
-                    fileSizeBytes: null == t ? void 0 : t,
-                    playable: p,
-                    renderLinkComponent: b,
-                    renderOverlayContent: T,
-                    onClick: S,
-                    onPlay: A,
-                    onPause: N,
-                    onEnded: C,
-                    onVolumeChange: D,
-                    onMute: L,
-                    onControlsShow: R,
-                    onControlsHide: O,
-                    mimeType: I,
-                    downloadable: h
-                });
-            }
-        });
+        let e = this.props,
+            { src: t, fileSize: n, className: i, mediaPlayerClassName: u, poster: f, fileName: h, naturalWidth: m, naturalHeight: g, playable: E, downloadable: v = !0, volume: b, autoPlay: y, autoMute: O, responsive: S, mediaLayoutType: I, mimeType: T, renderOverlayContent: N, renderLinkComponent: A, onClick: C, onPlay: R, onPause: P, onEnded: w, onControlsShow: D, onControlsHide: x, onVolumeChange: L, onMute: M, alt: k = c.NW.string(c.t.FlNoSU) } = e,
+            j = _(e, ['src', 'fileSize', 'className', 'mediaPlayerClassName', 'poster', 'fileName', 'naturalWidth', 'naturalHeight', 'playable', 'downloadable', 'volume', 'autoPlay', 'autoMute', 'responsive', 'mediaLayoutType', 'mimeType', 'renderOverlayContent', 'renderLinkComponent', 'onClick', 'onPlay', 'onPause', 'onEnded', 'onControlsShow', 'onControlsHide', 'onVolumeChange', 'onMute', 'alt']);
+        return (0, r.jsx)(
+            a.ZP,
+            p(
+                d(
+                    {
+                        alt: k,
+                        className: i,
+                        src: f
+                    },
+                    j
+                ),
+                {
+                    minWidth: s.ZP.minWidth,
+                    minHeight: s.ZP.minHeight,
+                    shouldLink: !1,
+                    shouldAnimate: !1,
+                    mediaLayoutType: I,
+                    responsive: S,
+                    children: (e) => {
+                        let {
+                                src: i,
+                                size: { width: a, height: c }
+                            } = e,
+                            d = !((m <= l.N_j && g <= l.XKF) || (m <= l.XKF && g <= l.N_j));
+                        return (0, r.jsx)(s.ZP, {
+                            className: u,
+                            forceExternal: d,
+                            src: t,
+                            poster: i,
+                            width: a,
+                            height: c,
+                            responsive: S,
+                            volume: b,
+                            autoPlay: null != y && y,
+                            autoMute: null != O && O,
+                            type: s.ZP.Types.VIDEO,
+                            mediaLayoutType: I,
+                            fileName: h,
+                            fileSize: null == n ? void 0 : (0, o.Ng)(n),
+                            fileSizeBytes: null == n ? void 0 : n,
+                            playable: E,
+                            renderLinkComponent: A,
+                            renderOverlayContent: N,
+                            onClick: C,
+                            onPlay: R,
+                            onPause: P,
+                            onEnded: w,
+                            onVolumeChange: L,
+                            onMute: M,
+                            onControlsShow: D,
+                            onControlsHide: x,
+                            mimeType: T,
+                            downloadable: v
+                        });
+                    }
+                }
+            )
+        );
     }
 }

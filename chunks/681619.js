@@ -1,49 +1,77 @@
 n.d(t, { Z: () => c });
-var a = n(200651),
-    r = n(192379),
-    l = n(120356),
-    i = n.n(l),
+var r = n(200651),
+    a = n(192379),
+    i = n(120356),
+    l = n.n(i),
     o = n(481060),
-    s = n(658951);
+    s = n(841699);
 function c(e) {
-    let { columns: t, data: n, className: l, rowClassName: c, onClickRow: d, selectedRowKey: u, rowHeight: h = 40 } = e,
-        m = r.useMemo(
+    let { columns: t, data: n, className: i, rowClassName: c, onClickRow: d, selectedRowKey: u, rowHeight: h = 40 } = e,
+        m = a.useMemo(
             () =>
-                t.map((e) => ({
-                    renderHeader: () =>
-                        (0, a.jsx)(o.Text, {
-                            variant: 'text-sm/semibold',
-                            children: e.key
-                        }),
-                    ...e
-                })),
+                t.map((e) =>
+                    (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var n = null != arguments[t] ? arguments[t] : {},
+                                r = Object.keys(n);
+                            'function' == typeof Object.getOwnPropertySymbols &&
+                                (r = r.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    })
+                                )),
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = n[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: r,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0
+                                              })
+                                            : (e[t] = r);
+                                });
+                        }
+                        return e;
+                    })(
+                        {
+                            renderHeader: () =>
+                                (0, r.jsx)(o.Text, {
+                                    variant: 'text-sm/semibold',
+                                    children: e.key
+                                })
+                        },
+                        e
+                    )
+                ),
             [t]
         ),
         x = [n.length];
-    return (0, a.jsx)('div', {
+    return (0, r.jsx)('div', {
         className: s.tableContainer,
-        children: (0, a.jsx)(o.Tvr, {
-            className: i()(l),
+        children: (0, r.jsx)(o.Tvr, {
+            className: l()(i),
             innerClassName: s.table,
             sections: x,
             sectionHeight: 40,
             renderSection: (e) => {
                 let { section: t } = e,
-                    r = i()(s.tableHeader);
-                return (0, a.jsx)(
+                    a = l()(s.tableHeader);
+                return (0, r.jsx)(
                     'div',
                     {
-                        className: r,
+                        className: a,
                         children: m.map((e) => {
-                            var r, l;
-                            let o = i()(e.cellClassName),
-                                s = { width: 'calc('.concat(null !== (l = e.cellWidth) && void 0 !== l ? l : '1fr', ' - ').concat(16, 'px)') };
-                            return (0, a.jsx)(
+                            var a, i;
+                            let o = l()(e.cellClassName),
+                                s = { width: 'calc('.concat(null !== (i = e.cellWidth) && void 0 !== i ? i : '1fr', ' - ').concat(16, 'px)') };
+                            return (0, r.jsx)(
                                 'div',
                                 {
                                     className: o,
                                     style: s,
-                                    children: null === (r = e.renderHeader) || void 0 === r ? void 0 : r.call(e, e, n)
+                                    children: null === (a = e.renderHeader) || void 0 === a ? void 0 : a.call(e, e, n)
                                 },
                                 'dev-tools-th-'.concat(t, '-').concat(e.key)
                             );
@@ -55,30 +83,30 @@ function c(e) {
             rowHeight: h,
             renderRow: (e) => {
                 let { rowIndex: t } = e,
-                    r = n[t],
-                    l = r.key,
-                    x = i()(s.tableRow, {
-                        [s.selectedTableRow]: l === u,
+                    a = n[t],
+                    i = a.key,
+                    x = l()(s.tableRow, {
+                        [s.selectedTableRow]: i === u,
                         rowClassName: c
                     });
-                return (0, a.jsx)(
+                return (0, r.jsx)(
                     o.P3F,
                     {
                         className: x,
-                        onClick: () => (null == d ? void 0 : d(r)),
+                        onClick: () => (null == d ? void 0 : d(a)),
                         children: m.map((e) => {
-                            var n, l;
-                            let o = i()(e.cellClassName),
+                            var n, i;
+                            let o = l()(e.cellClassName),
                                 s = {
-                                    width: 'calc('.concat(null !== (l = e.cellWidth) && void 0 !== l ? l : '1fr', ' - ').concat(16, 'px)'),
+                                    width: 'calc('.concat(null !== (i = e.cellWidth) && void 0 !== i ? i : '1fr', ' - ').concat(16, 'px)'),
                                     height: 'calc('.concat(h, 'px - ').concat(16, 'px)')
                                 };
-                            return (0, a.jsx)(
+                            return (0, r.jsx)(
                                 'div',
                                 {
                                     className: o,
                                     style: s,
-                                    children: null === (n = e.render) || void 0 === n ? void 0 : n.call(e, r, void 0, t)
+                                    children: null === (n = e.render) || void 0 === n ? void 0 : n.call(e, a, void 0, t)
                                 },
                                 'dev-tools-td-'.concat(t, '-').concat(e.key)
                             );

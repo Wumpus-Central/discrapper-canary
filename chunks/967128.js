@@ -1,34 +1,35 @@
 n.d(t, {
-    Kq: () => d,
-    Ot: () => u,
-    ZP: () => p,
-    jz: () => h
-});
-var i = n(200651);
+    Kq: () => u,
+    Ot: () => d,
+    ZP: () => h,
+    jz: () => p
+}),
+    n(266796);
+var r = n(200651);
 n(192379);
-var l = n(120356),
-    a = n.n(l),
-    r = n(481060),
-    s = n(534091),
-    o = n(981631),
-    c = n(61378);
-function d(e) {
+var i = n(120356),
+    l = n.n(i),
+    o = n(481060),
+    a = n(534091),
+    s = n(981631),
+    c = n(734209);
+function u(e) {
     let { locked: t = !1, channelType: n } = e,
-        l = (0, r.bWb)().enabled,
-        s = n === o.d4z.GUILD_VOICE || n === o.d4z.GUILD_STAGE_VOICE;
-    if (!l)
-        return (0, i.jsx)('div', {
-            className: a()(c.emptyChannelIcon, c.emptyChannelIconSvg, {
+        i = (0, o.bWb)().enabled,
+        a = n === s.d4z.GUILD_VOICE || n === s.d4z.GUILD_STAGE_VOICE;
+    if (!i)
+        return (0, r.jsx)('div', {
+            className: l()(c.emptyChannelIcon, c.emptyChannelIconSvg, {
                 [c.locked]: t,
-                [c.voiceChat]: s
+                [c.voiceChat]: a
             })
         });
     {
-        let e = s ? r.kBi : t ? r.W4G : r.VL1;
-        return (0, i.jsx)('div', {
-            className: a()(c.emptyChannelIcon, c.emptyChannelIconComponent),
-            children: (0, i.jsx)(e, {
-                color: r.TVs.colors.WHITE,
+        let e = a ? o.kBi : t ? o.W4G : o.VL1;
+        return (0, r.jsx)('div', {
+            className: l()(c.emptyChannelIcon, c.emptyChannelIconComponent),
+            children: (0, r.jsx)(e, {
+                color: o.TVs.colors.WHITE,
                 size: 'custom',
                 width: 42,
                 height: 42
@@ -36,30 +37,93 @@ function d(e) {
         });
     }
 }
-function u(e) {
+function d(e) {
     let { children: t, className: n } = e;
-    return (0, i.jsx)(r.X6q, {
+    return (0, r.jsx)(o.X6q, {
         'aria-hidden': 'true',
-        className: a()(n, c.header),
+        className: l()(n, c.header),
         variant: 'heading-xxl/extrabold',
         children: t
     });
 }
-function h(e) {
+function p(e) {
     let { children: t } = e;
-    return (0, i.jsx)(r.Text, {
+    return (0, r.jsx)(o.Text, {
         variant: 'text-md/normal',
         color: 'none',
         className: c.description,
         children: t
     });
 }
-let p = function (e) {
-    let { className: t, channelId: n, children: l, ...r } = e;
-    return (0, i.jsx)('div', {
-        className: a()(t, c.container),
-        id: (0, s.p)(n, n),
-        ...r,
-        children: l
-    });
+let h = function (e) {
+    var t,
+        n,
+        { className: i, channelId: o, children: s } = e,
+        u = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                i = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        r,
+                        i = {},
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+            }
+            return i;
+        })(e, ['className', 'channelId', 'children']);
+    return (0, r.jsx)(
+        'div',
+        ((t = (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    r = Object.keys(n);
+                'function' == typeof Object.getOwnPropertySymbols &&
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        })
+                    )),
+                    r.forEach(function (t) {
+                        var r;
+                        (r = n[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: r,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0
+                                  })
+                                : (e[t] = r);
+                    });
+            }
+            return e;
+        })(
+            {
+                className: l()(i, c.container),
+                id: (0, a.p)(o, o)
+            },
+            u
+        )),
+        (n = n = { children: s }),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(n)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+              }),
+        t)
+    );
 };

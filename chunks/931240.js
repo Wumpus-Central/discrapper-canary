@@ -1,78 +1,105 @@
 n.d(t, {
-    Ii: () => g,
-    LX: () => _,
-    WJ: () => d,
-    aH: () => m,
-    mf: () => p,
-    nE: () => f,
-    nr: () => E
+    Ii: () => v,
+    LX: () => h,
+    WJ: () => p,
+    aH: () => E,
+    mf: () => m,
+    nE: () => _,
+    nr: () => b
 }),
+    n(266796),
     n(47120);
-var i = n(544891),
-    r = n(570140),
-    a = n(479531),
-    s = n(314897),
-    o = n(594174),
+var r = n(544891),
+    i = n(570140),
+    o = n(479531),
+    a = n(314897),
+    s = n(594174),
     l = n(970606),
-    u = n(308083),
-    c = n(981631);
-async function d(e) {
-    let t = await i.tn.get({
-        url: c.ANM.GUILD_CLAN_DISCOVERY_INFO(e),
+    c = n(308083),
+    u = n(981631);
+function d(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function f(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                d(e, t, n[t]);
+            });
+    }
+    return e;
+}
+async function p(e) {
+    let t = await r.tn.get({
+        url: u.ANM.GUILD_CLAN_DISCOVERY_INFO(e),
         rejectWithError: !1
     });
-    return (0, u.Gh)(t.body);
+    return (0, c.Gh)(t.body);
 }
-async function f(e, t, n) {
+async function _(e, t, n) {
     try {
         null != e &&
             !0 === t &&
             (0, l.hx)({
                 guildId: e,
-                userId: s.default.getId(),
+                userId: a.default.getId(),
                 source: n
             });
-        let a = await i.tn.put({
-            url: c.ANM.USER_SET_CLAN_IDENTITY,
+        let o = await r.tn.put({
+            url: u.ANM.USER_SET_CLAN_IDENTITY,
             body: {
                 identity_guild_id: e,
                 identity_enabled: t
             },
             rejectWithError: !1
         });
-        r.Z.dispatch({
+        i.Z.dispatch({
             type: 'CURRENT_USER_UPDATE',
-            user: {
-                ...o.default.getCurrentUser(),
-                ...a.body
-            }
+            user: f({}, s.default.getCurrentUser(), o.body)
         });
     } catch (e) {
         return;
     }
 }
-function _() {
-    r.Z.dispatch({ type: 'CLAN_SETUP_RESET' });
+function h() {
+    i.Z.dispatch({ type: 'CLAN_SETUP_RESET' });
 }
-function p(e, t) {
-    r.Z.dispatch({
+function m(e, t) {
+    i.Z.dispatch({
         type: 'CLAN_SETTINGS_UPDATE',
         guildId: e,
         updates: t
     });
 }
-let h = (e) => {
-    var t, n, i, r, a, s;
+let g = (e) => {
+    var t, n, r, i, o, a;
     return {
         tag: e.tag,
-        gameApplicationIds: new Set(null !== (i = e.game_application_ids) && void 0 !== i ? i : []),
-        interests: new Set(null !== (r = e.search_terms) && void 0 !== r ? r : []),
+        gameApplicationIds: new Set(null !== (r = e.game_application_ids) && void 0 !== r ? r : []),
+        interests: new Set(null !== (i = e.search_terms) && void 0 !== i ? i : []),
         playstyle: e.play_style,
         description: e.description,
         wildcardDescriptors: e.wildcard_descriptors,
         verificationForm: {
-            description: null !== (a = null === (t = e.verification_form) || void 0 === t ? void 0 : t.description) && void 0 !== a ? a : '',
-            formFields: null !== (s = null === (n = e.verification_form) || void 0 === n ? void 0 : n.form_fields) && void 0 !== s ? s : [],
+            description: null !== (o = null === (t = e.verification_form) || void 0 === t ? void 0 : t.description) && void 0 !== o ? o : '',
+            formFields: null !== (a = null === (n = e.verification_form) || void 0 === n ? void 0 : n.form_fields) && void 0 !== a ? a : [],
             version: ''
         },
         badgeKind: e.badge,
@@ -83,33 +110,33 @@ let h = (e) => {
         brandSecondaryColor: e.brand_color_secondary
     };
 };
-async function m(e) {
-    r.Z.dispatch({ type: 'CLAN_SETTINGS_FETCH_START' });
-    let t = await i.tn.get({
-        url: c.ANM.CLAN_SETTINGS(e),
+async function E(e) {
+    i.Z.dispatch({ type: 'CLAN_SETTINGS_FETCH_START' });
+    let t = await r.tn.get({
+        url: u.ANM.CLAN_SETTINGS(e),
         rejectWithError: !1
     });
-    r.Z.dispatch({
+    i.Z.dispatch({
         type: 'CLAN_SETTINGS_FETCH_SUCCESS',
         guildId: e,
-        settings: h(t.body)
+        settings: g(t.body)
     });
 }
-async function g(e, t) {
-    r.Z.dispatch({
+async function v(e, t) {
+    i.Z.dispatch({
         type: 'CLAN_SETTINGS_SUBMIT',
         guildId: e
     });
     try {
-        var n, s, o, l;
-        let a = await i.tn.patch({
-            url: c.ANM.CLAN_SETTINGS(e),
+        var n, a, s, l;
+        let o = await r.tn.patch({
+            url: u.ANM.CLAN_SETTINGS(e),
             body: {
                 tag: t.tag,
                 description: t.description,
                 play_style: t.playstyle,
-                search_terms: Array.from(null !== (s = t.interests) && void 0 !== s ? s : new Set()),
-                game_application_ids: Array.from(null !== (o = t.gameApplicationIds) && void 0 !== o ? o : new Set()),
+                search_terms: Array.from(null !== (a = t.interests) && void 0 !== a ? a : new Set()),
+                game_application_ids: Array.from(null !== (s = t.gameApplicationIds) && void 0 !== s ? s : new Set()),
                 verification_form: { form_fields: null !== (l = null === (n = t.verificationForm) || void 0 === n ? void 0 : n.formFields) && void 0 !== l ? l : [] },
                 badge: t.badgeKind,
                 badge_color_primary: t.badgePrimaryColor,
@@ -121,21 +148,21 @@ async function g(e, t) {
             },
             rejectWithError: !0
         });
-        return r.Z.dispatch({ type: 'CLAN_SETTINGS_SUBMIT_SUCCESS' }), a.body;
+        return i.Z.dispatch({ type: 'CLAN_SETTINGS_SUBMIT_SUCCESS' }), o.body;
     } catch (e) {
         throw (
-            (r.Z.dispatch({
+            (i.Z.dispatch({
                 type: 'CLAN_SETTINGS_SUBMIT_ERROR',
-                error: new a.Z(e)
+                error: new o.Z(e)
             }),
             e)
         );
     }
 }
-async function E(e) {
+async function b(e) {
     try {
-        await i.tn.post({
-            url: c.ANM.DISABLE_CLAN(e),
+        await r.tn.post({
+            url: u.ANM.DISABLE_CLAN(e),
             rejectWithError: !0
         });
     } catch (e) {

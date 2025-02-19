@@ -1,92 +1,133 @@
-n.d(t, { N: () => f });
-var i = n(200651);
+n.d(t, { N: () => b });
+var r = n(200651);
 n(192379);
-var l = n(704215),
-    r = n(740111),
-    a = n(481060),
-    s = n(963249),
-    o = n(703656),
-    d = n(626135),
-    c = n(63063),
-    u = n(823188),
-    h = n(474936),
-    m = n(981631),
-    p = n(388032),
-    g = n(155852),
-    _ = n(74316);
-function f(e) {
+var i = n(704215),
+    l = n(740111),
+    o = n(481060),
+    a = n(963249),
+    s = n(703656),
+    c = n(626135),
+    u = n(63063),
+    d = n(823188),
+    p = n(474936),
+    h = n(981631),
+    g = n(388032),
+    f = n(14249),
+    m = n(74316);
+function b(e) {
     var t, n;
-    let { content: f, renderModalProps: E, analyticsLocations: I, analyticsLocation: C, isLightTheme: N } = e,
-        v = 'AnnouncementModalVariant1_'.concat(l.z[Number(f.dismissKey)]),
-        { onClose: T } = E,
-        S = null != f.button && '' !== f.button.copy ? f.button.copy : p.intl.string(p.t.YScQSE),
-        A = (null === (t = f.button) || void 0 === t ? void 0 : t.buttonAction) === r.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button',
-        Z =
-            (null === (n = f.button) || void 0 === n ? void 0 : n.buttonAction) === r.Wc.OPEN_MARKETING_PAGE
+    let { content: b, renderModalProps: _, analyticsLocations: E, analyticsLocation: O, isLightTheme: N } = e,
+        v = 'AnnouncementModalVariant1_'.concat(i.z[Number(b.dismissKey)]),
+        { onClose: y } = _,
+        I = null != b.button && '' !== b.button.copy ? b.button.copy : g.NW.string(g.t.YScQSE),
+        C = (null === (t = b.button) || void 0 === t ? void 0 : t.buttonAction) === l.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button',
+        S =
+            (null === (n = b.button) || void 0 === n ? void 0 : n.buttonAction) === l.Wc.OPEN_MARKETING_PAGE
                 ? () => {
-                      (0, o.uL)(m.Z5c.APPLICATION_STORE), T();
+                      (0, s.uL)(h.Z5c.APPLICATION_STORE), y();
                   }
-                : () =>
-                      (0, s.Z)({
-                          subscriptionTier: h.Si.TIER_2,
-                          analyticsLocations: I,
-                          analyticsObject: {
-                              ...C,
-                              object: m.qAy.BUTTON_CTA,
-                              objectType: m.Qqv.TIER_2
-                          },
+                : () => {
+                      var e, t;
+                      return (0, a.Z)({
+                          subscriptionTier: p.Si.TIER_2,
+                          analyticsLocations: E,
+                          analyticsObject:
+                              ((e = (function (e) {
+                                  for (var t = 1; t < arguments.length; t++) {
+                                      var n = null != arguments[t] ? arguments[t] : {},
+                                          r = Object.keys(n);
+                                      'function' == typeof Object.getOwnPropertySymbols &&
+                                          (r = r.concat(
+                                              Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                  return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                              })
+                                          )),
+                                          r.forEach(function (t) {
+                                              var r;
+                                              (r = n[t]),
+                                                  t in e
+                                                      ? Object.defineProperty(e, t, {
+                                                            value: r,
+                                                            enumerable: !0,
+                                                            configurable: !0,
+                                                            writable: !0
+                                                        })
+                                                      : (e[t] = r);
+                                          });
+                                  }
+                                  return e;
+                              })({}, O)),
+                              (t = t =
+                                  {
+                                      object: h.qAy.BUTTON_CTA,
+                                      objectType: h.Qqv.TIER_2
+                                  }),
+                              Object.getOwnPropertyDescriptors
+                                  ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+                                  : (function (e, t) {
+                                        var n = Object.keys(e);
+                                        if (Object.getOwnPropertySymbols) {
+                                            var r = Object.getOwnPropertySymbols(e);
+                                            n.push.apply(n, r);
+                                        }
+                                        return n;
+                                    })(Object(t)).forEach(function (n) {
+                                        Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+                                    }),
+                              e),
                           onClose: (e) => {
-                              e && T();
+                              e && y();
                           }
-                      }),
-        x =
-            '' !== f.helpArticleId
+                      });
+                  },
+        T =
+            '' !== b.helpArticleId
                 ? () =>
-                      (0, i.jsxs)(i.Fragment, {
+                      (0, r.jsxs)(r.Fragment, {
                           children: [
                               '\xA0',
-                              (0, i.jsx)(a.eee, {
-                                  className: g.termsApplyAnchor,
-                                  href: c.Z.getArticleURL(f.helpArticleId),
-                                  children: p.intl.string(p.t['sBp+u7'])
+                              (0, r.jsx)(o.eee, {
+                                  className: f.termsApplyAnchor,
+                                  href: u.Z.getArticleURL(b.helpArticleId),
+                                  children: g.NW.string(g.t['sBp+u7'])
                               })
                           ]
                       })
                 : void 0,
-        b = {
+        P = {
             type: 'video',
-            src: N ? f.heroArtVideoLinkLightTheme : f.videoLink
+            src: N ? b.heroArtVideoLinkLightTheme : b.videoLink
         };
-    null != f.heroArtVideoSubtitles &&
-        (b.subtitles = f.heroArtVideoSubtitles.map((e) => ({
+    null != b.heroArtVideoSubtitles &&
+        (P.subtitles = b.heroArtVideoSubtitles.map((e) => ({
             locale: e.locale,
             src: e.link,
             isDefault: !1
         }))),
-        ('' !== f.heroArtImageLinkDarkTheme || '' !== f.heroArtImageLinkLightTheme) &&
-            (b = {
+        ('' !== b.heroArtImageLinkDarkTheme || '' !== b.heroArtImageLinkLightTheme) &&
+            (P = {
                 type: 'image',
-                src: N ? f.heroArtImageLinkLightTheme : f.heroArtImageLinkDarkTheme
+                src: N ? b.heroArtImageLinkLightTheme : b.heroArtImageLinkDarkTheme
             });
-    let L = N ? u.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL : u.VE.PREMIUM_TIER_2_WHITE_FILL,
-        y =
-            '' !== f.modalTopPill
+    let j = N ? d.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL : d.VE.PREMIUM_TIER_2_WHITE_FILL,
+        A =
+            '' !== b.modalTopPill
                 ? () =>
-                      (0, i.jsx)(u.Cy, {
-                          text: f.modalTopPill,
-                          className: g.modalTopPill,
-                          colorOptions: L
+                      (0, r.jsx)(d.Cy, {
+                          text: b.modalTopPill,
+                          className: f.modalTopPill,
+                          colorOptions: j
                       })
                 : void 0;
     return {
-        renderModalProps: E,
-        header: f.header,
-        modalTopExtra: y,
-        subHeader: f.subheader,
-        subHeaderExtra: x,
-        body: f.body,
-        heroArt: b,
-        featureCards: f.featureCards.map((e) => ({
+        renderModalProps: _,
+        header: b.header,
+        modalTopExtra: A,
+        subHeader: b.subheader,
+        subHeaderExtra: T,
+        body: b.body,
+        heroArt: P,
+        featureCards: b.featureCards.map((e) => ({
             header: e.header,
             subHeader: e.body,
             imageSrc: N ? e.imageLinkLightTheme : e.imageLink,
@@ -95,30 +136,30 @@ function f(e) {
         changeLogId: v,
         button: () => {
             let e = Date.now();
-            return (0, i.jsxs)(a.gtL, {
-                className: g.buttonWide,
-                innerClassName: g.innerButton,
-                wrapperClassName: g.tier2Gradient,
-                size: a.zxk.Sizes.SMALL,
+            return (0, r.jsxs)(o.gtL, {
+                className: f.buttonWide,
+                innerClassName: f.innerButton,
+                wrapperClassName: f.tier2Gradient,
+                size: o.zxk.Sizes.SMALL,
                 onClick: () => {
-                    d.default.track(m.rMx.CHANGE_LOG_CTA_CLICKED, {
+                    c.default.track(h.rMx.CHANGE_LOG_CTA_CLICKED, {
                         change_log_id: v,
-                        cta_type: A,
+                        cta_type: C,
                         seconds_open: Math.round((Date.now() - e) / 1000),
                         target: v
                     }),
-                        Z();
+                        S();
                 },
                 children: [
-                    (0, i.jsx)('img', {
+                    (0, r.jsx)('img', {
                         alt: '',
-                        className: g.nitroIconSubHeader,
-                        src: _
+                        className: f.nitroIconSubHeader,
+                        src: m
                     }),
-                    S
+                    I
                 ]
             });
         },
-        modalDismissibleContent: '' !== f.dismissKey ? Number(f.dismissKey) : void 0
+        modalDismissibleContent: '' !== b.dismissKey ? Number(b.dismissKey) : void 0
     };
 }

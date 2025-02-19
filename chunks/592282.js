@@ -1,69 +1,130 @@
-n.d(t, { S: () => m });
-var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(1561),
+n.d(t, { S: () => b });
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(1561),
     l = n(761224),
-    u = n(743236),
-    c = n(481060),
+    c = n(743236),
+    u = n(481060),
     d = n(540059),
     f = n(448239),
-    _ = n(247442),
-    p = n(939350),
-    h = n(186928);
-function m(e) {
-    let { color: t = 'default', label: n, checked: a, subtext: m, disabled: g, isFocused: E, menuItemProps: v, action: y, className: I, focusedClassName: T } = e,
-        b = r.useRef(null),
-        S = (0, d.Q3)('MenuCheckboxItem');
+    p = n(247442),
+    _ = n(939350),
+    h = n(253068);
+function m(e, t, n) {
     return (
-        r.useEffect(() => {
-            E && (0, u.F)(b);
-        }, [E]),
-        (0, i.jsxs)(o.P, {
-            innerRef: b,
-            className: s()(h.item, h.checkboxContainer, h.labelContainer, p._[t], I, {
-                [h.disabled]: g,
-                [h.focused]: E,
-                [null != T ? T : '']: E
-            }),
-            onClick: g ? void 0 : y,
-            ...v,
-            'aria-checked': a,
-            'aria-disabled': g,
-            children: [
-                (0, i.jsxs)('div', {
-                    className: h.label,
-                    children: [
-                        (0, l.I)(n, e),
-                        null != m &&
-                            (0, i.jsx)('div', {
-                                className: h.subtext,
-                                children: m
-                            })
-                    ]
-                }),
-                (0, i.jsx)('div', {
-                    className: h.iconContainer,
-                    children: S
-                        ? (0, i.jsx)(c.FZ5, {
-                              shape: c.XZJ.Shapes.BOX,
-                              size: 20,
-                              value: a,
-                              disabled: g
-                          })
-                        : a
-                          ? (0, i.jsx)(_.Z, {
-                                className: h.icon,
-                                background: h.checkbox,
-                                foreground: h.check
-                            })
-                          : (0, i.jsx)(f.Z, {
-                                className: h.icon,
-                                foreground: h.__invalid_checkboxEmpty
-                            })
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function g(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
-            ]
-        })
+            )),
+            r.forEach(function (t) {
+                m(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function E(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function v(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : E(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function b(e) {
+    let { color: t = 'default', label: n, checked: o, subtext: m, disabled: E, isFocused: b, menuItemProps: y, action: O, className: S, focusedClassName: I } = e,
+        T = i.useRef(null),
+        N = (0, d.Q3)('MenuCheckboxItem');
+    return (
+        i.useEffect(() => {
+            b && (0, c.F)(T);
+        }, [b]),
+        (0, r.jsxs)(
+            s.P,
+            v(
+                g(
+                    {
+                        innerRef: T,
+                        className: a()(h.item, h.checkboxContainer, h.labelContainer, _._[t], S, {
+                            [h.disabled]: E,
+                            [h.focused]: b,
+                            [null != I ? I : '']: b
+                        }),
+                        onClick: E ? void 0 : O
+                    },
+                    y
+                ),
+                {
+                    'aria-checked': o,
+                    'aria-disabled': E,
+                    children: [
+                        (0, r.jsxs)('div', {
+                            className: h.label,
+                            children: [
+                                (0, l.I)(n, e),
+                                null != m &&
+                                    (0, r.jsx)('div', {
+                                        className: h.subtext,
+                                        children: m
+                                    })
+                            ]
+                        }),
+                        (0, r.jsx)('div', {
+                            className: h.iconContainer,
+                            children: N
+                                ? (0, r.jsx)(u.FZ5, {
+                                      shape: u.XZJ.Shapes.BOX,
+                                      size: 20,
+                                      value: o,
+                                      disabled: E
+                                  })
+                                : o
+                                  ? (0, r.jsx)(p.Z, {
+                                        className: h.icon,
+                                        background: h.checkbox,
+                                        foreground: h.check
+                                    })
+                                  : (0, r.jsx)(f.Z, {
+                                        className: h.icon,
+                                        foreground: h.__invalid_checkboxEmpty
+                                    })
+                        })
+                    ]
+                }
+            )
+        )
     );
 }

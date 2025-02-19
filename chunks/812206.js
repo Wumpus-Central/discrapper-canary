@@ -1,9 +1,9 @@
-n.d(t, { Z: () => H }), n(47120), n(653041);
-var i,
-    r = n(442837),
-    a = n(570140),
-    s = n(973616);
-function o(e, t, n) {
+n.d(t, { Z: () => K }), n(47120), n(230036), n(653041);
+var r,
+    i = n(442837),
+    o = n(570140),
+    a = n(973616);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,34 +16,73 @@ function o(e, t, n) {
         e
     );
 }
-let l = [],
-    u = {},
-    c = {},
-    d = {},
+function l(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                s(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function c(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function u(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : c(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let d = [],
     f = {},
+    p = {},
     _ = {},
-    p = { botUserIdToAppUsage: {} },
-    h = 10;
-function m(e) {
-    let t = u[e.id];
-    f[e.id] = Date.now();
-    let n = e;
-    for (let i of (null != t && (n = t.mergeFromApplicationUpdate(e)), (u[e.id] = n), (d[e.name.toLowerCase()] = n), e.aliases)) d[i.toLowerCase()] = n;
-    delete _[e.id];
-}
-function g() {
-    (u = {}), (c = {}), (d = {}), (f = {}), (_ = {});
-}
-function E(e) {
-    let { applications: t } = e;
-    for (let e of t) m(new s.ZP(e));
-}
+    h = {},
+    m = {},
+    g = { botUserIdToAppUsage: {} },
+    E = 10;
 function v(e) {
-    let { applicationId: t } = e,
-        n = _[t];
-    return (_[t] = !0), !0 !== n;
+    let t = f[e.id];
+    h[e.id] = Date.now();
+    let n = e;
+    for (let r of (null != t && (n = t.mergeFromApplicationUpdate(e)), (f[e.id] = n), (_[e.name.toLowerCase()] = n), e.aliases)) _[r.toLowerCase()] = n;
+    delete m[e.id];
+}
+function b() {
+    (f = {}), (p = {}), (_ = {}), (h = {}), (m = {});
 }
 function y(e) {
+    let { applications: t } = e;
+    for (let e of t) v(new a.ZP(e));
+}
+function O(e) {
+    let { applicationId: t } = e,
+        n = m[t];
+    return (m[t] = !0), !0 !== n;
+}
+function S(e) {
     let { application: t } = e;
     T(t);
 }
@@ -52,243 +91,239 @@ function I(e) {
     T(t);
 }
 function T(e) {
-    m(s.ZP.createFromServer(e));
+    v(a.ZP.createFromServer(e));
 }
-function b(e) {
+function N(e) {
     let { userId: t, applicationId: n } = e,
-        i = p.botUserIdToAppUsage[t];
-    null == i
-        ? (p.botUserIdToAppUsage[t] = {
+        r = g.botUserIdToAppUsage[t];
+    null == r
+        ? (g.botUserIdToAppUsage[t] = {
               applicationId: n,
               lastUsedMs: Date.now()
           })
-        : (p.botUserIdToAppUsage[t] = {
+        : (g.botUserIdToAppUsage[t] = {
               applicationId: n,
-              lastUsedMs: i.lastUsedMs
+              lastUsedMs: r.lastUsedMs
           });
-    let r = new Map();
-    for (let [e, t] of Object.entries(p.botUserIdToAppUsage)) r.set(e, t);
-    let a = Array.from(r.entries()).sort((e, t) => t[1].lastUsedMs - e[1].lastUsedMs);
-    for (let e = 0; e < a.length; e++)
-        if (e >= h) {
-            let t = a[e][0];
-            delete p.botUserIdToAppUsage[t];
+    let i = new Map();
+    for (let [e, t] of Object.entries(g.botUserIdToAppUsage)) i.set(e, t);
+    let o = Array.from(i.entries()).sort((e, t) => t[1].lastUsedMs - e[1].lastUsedMs);
+    for (let e = 0; e < o.length; e++)
+        if (e >= E) {
+            let t = o[e][0];
+            delete g.botUserIdToAppUsage[t];
         }
 }
-function S(e) {
-    let { applicationId: t } = e,
-        n = _[t];
-    return (_[t] = !1), !1 !== n;
-}
 function A(e) {
+    let { applicationId: t } = e,
+        n = m[t];
+    return (m[t] = !1), !1 !== n;
+}
+function C(e) {
     let { applicationIds: t } = e,
         n = !1;
     for (let e of t) {
-        let t = _[e];
-        (_[e] = !0), (n = !0 !== t);
+        let t = m[e];
+        (m[e] = !0), (n = !0 !== t);
     }
     return n;
 }
-function N(e) {
-    let { libraryApplications: t } = e;
-    for (let e of t) m(s.ZP.createFromServer(e.application));
-}
-function C(e) {
-    let { applications: t } = e;
-    for (let e of t) m(s.ZP.createFromServer(e));
-}
 function R(e) {
+    let { libraryApplications: t } = e;
+    for (let e of t) v(a.ZP.createFromServer(e.application));
+}
+function P(e) {
+    let { applications: t } = e;
+    for (let e of t) v(a.ZP.createFromServer(e));
+}
+function w(e) {
     let { recommendations: t } = e;
     t.forEach((e) => {
         e.items.forEach((e) => {
-            m(s.ZP.createFromServer(e.application));
+            v(a.ZP.createFromServer(e.application));
         });
     });
 }
-function O(e) {
+function D(e) {
     let { user: t, application: n } = e;
     t.bot &&
         null != n &&
-        b({
+        N({
             userId: t.id,
             applicationId: n.id
         });
 }
-function D(e) {
+function x(e) {
     let { botUserId: t } = e,
-        n = p.botUserIdToAppUsage[t];
-    null != n &&
-        (p.botUserIdToAppUsage[t] = {
-            ...n,
-            lastUsedMs: Date.now()
-        });
+        n = g.botUserIdToAppUsage[t];
+    null != n && (g.botUserIdToAppUsage[t] = u(l({}, n), { lastUsedMs: Date.now() }));
 }
 function L(e) {
     let { applicationIds: t } = e,
         n = !1;
     for (let e of t) {
-        let t = _[e];
-        (_[e] = !1), (n = !1 !== t);
+        let t = m[e];
+        (m[e] = !1), (n = !1 !== t);
     }
     return n;
 }
-function x(e) {
+function M(e) {
     let { entitlements: t } = e,
         n = !1;
-    for (let { sku: e } of t) (null == e ? void 0 : e.application) != null && (m(s.ZP.createFromServer(e.application)), (n = !0));
+    for (let { sku: e } of t) (null == e ? void 0 : e.application) != null && (v(a.ZP.createFromServer(e.application)), (n = !0));
     return n;
 }
-function P(e) {
+function k(e) {
     let { guildId: t, applications: n } = e,
-        i = [];
-    for (let e of n) i.push(e.id), m(s.ZP.createFromServer(e));
-    c[t] = i;
+        r = [];
+    for (let e of n) r.push(e.id), v(a.ZP.createFromServer(e));
+    p[t] = r;
 }
-function w(e) {
+function j(e) {
     let { payments: t } = e,
         n = new Set();
     for (let e of t) {
-        var i;
-        let t = null === (i = e.sku) || void 0 === i ? void 0 : i.application;
-        null == t || n.has(t.id) || m(s.ZP.createFromServer(t));
+        var r;
+        let t = null === (r = e.sku) || void 0 === r ? void 0 : r.application;
+        null == t || n.has(t.id) || v(a.ZP.createFromServer(t));
     }
     return n.size > 0;
 }
-function M(e) {
+function U(e) {
     var t;
     let { payment: n } = e;
     if ((null === (t = n.sku) || void 0 === t ? void 0 : t.application) == null) return !1;
-    m(s.ZP.createFromServer(n.sku.application));
+    v(a.ZP.createFromServer(n.sku.application));
 }
-function k(e) {
+function G(e) {
     var t;
     let { giftCode: n } = e;
     if ((null === (t = n.store_listing) || void 0 === t ? void 0 : t.sku.application) == null) return !1;
-    m(s.ZP.createFromServer(n.store_listing.sku.application));
-}
-function U(e) {
-    let { invite: t } = e;
-    if (null == t.target_application) return !1;
-    m(s.ZP.createFromServer(t.target_application));
-}
-function G(e) {
-    let { storeListing: t } = e;
-    if (null == t.sku.application) return !1;
-    m(s.ZP.createFromServer(t.sku.application));
+    v(a.ZP.createFromServer(n.store_listing.sku.application));
 }
 function B(e) {
-    let { messages: t } = e;
-    t.forEach((e) => Z(e));
+    let { invite: t } = e;
+    if (null == t.target_application) return !1;
+    v(a.ZP.createFromServer(t.target_application));
 }
 function Z(e) {
+    let { storeListing: t } = e;
+    if (null == t.sku.application) return !1;
+    v(a.ZP.createFromServer(t.sku.application));
+}
+function F(e) {
+    let { messages: t } = e;
+    t.forEach((e) => V(e));
+}
+function V(e) {
     var t;
     null === (t = e.attachments) ||
         void 0 === t ||
         t.forEach((e) => {
-            null != e.application && m(s.ZP.createFromServer(e.application));
+            null != e.application && v(a.ZP.createFromServer(e.application));
         });
 }
-function F(e) {
+function H(e) {
     e.apps.forEach((e) => {
-        m(s.ZP.createFromServer(e.application));
+        v(a.ZP.createFromServer(e.application));
         let t = e.application.bot;
         null != t &&
-            b({
+            N({
                 userId: t.id,
                 applicationId: e.application.id
             });
     });
 }
-function V(e) {
+function W(e) {
     e.items.forEach((e) => {
-        null != e.application && m(s.ZP.createFromServer(e.application));
+        null != e.application && v(a.ZP.createFromServer(e.application));
     });
 }
-class j extends (i = r.ZP.PersistedStore) {
+class Y extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         if (null != e && 'object' == typeof e.botUserIdToAppUsage)
             for (let t in e.botUserIdToAppUsage) {
                 let n = e.botUserIdToAppUsage[t],
-                    i = n.applicationId,
-                    r = n.lastUsedMs;
-                'string' == typeof i &&
-                    i.length > 0 &&
-                    'number' == typeof r &&
-                    r > 0 &&
-                    (p.botUserIdToAppUsage[t] = {
-                        applicationId: i,
-                        lastUsedMs: r
+                    r = n.applicationId,
+                    i = n.lastUsedMs;
+                'string' == typeof r &&
+                    r.length > 0 &&
+                    'number' == typeof i &&
+                    i > 0 &&
+                    (g.botUserIdToAppUsage[t] = {
+                        applicationId: r,
+                        lastUsedMs: i
                     });
             }
     }
     getState() {
-        return p;
+        return g;
     }
     _getAllApplications() {
-        return Object.values(u);
+        return Object.values(f);
     }
     getApplications() {
-        return u;
+        return f;
     }
     getGuildApplication(e, t) {
         if (null != e) {
-            for (let n of Object.values(u)) if (n.guildId === e && n.type === t) return n;
+            for (let n of Object.values(f)) if (n.guildId === e && n.type === t) return n;
         }
     }
     getGuildApplicationIds(e) {
         var t;
-        return null == e ? l : null !== (t = c[e]) && void 0 !== t ? t : l;
+        return null == e ? d : null !== (t = p[e]) && void 0 !== t ? t : d;
     }
     getApplication(e) {
-        if (null != e) return u[e];
+        if (null != e) return f[e];
     }
     getApplicationByName(e) {
         if (null == e) return;
         let t = e.toLowerCase();
-        return Object.prototype.hasOwnProperty.call(d, t) ? d[t] : void 0;
+        return Object.prototype.hasOwnProperty.call(_, t) ? _[t] : void 0;
     }
     getApplicationLastUpdated(e) {
-        return f[e];
+        return h[e];
     }
     isFetchingApplication(e) {
-        return !0 === _[e];
+        return !0 === m[e];
     }
     didFetchingApplicationFail(e) {
-        return !1 === _[e];
+        return !1 === m[e];
     }
     getFetchingOrFailedFetchingIds() {
-        return Object.keys(_);
+        return Object.keys(m);
     }
     getAppIdForBotUserId(e) {
         var t;
-        if (null != e) return null === (t = p.botUserIdToAppUsage[e]) || void 0 === t ? void 0 : t.applicationId;
+        if (null != e) return null === (t = g.botUserIdToAppUsage[e]) || void 0 === t ? void 0 : t.applicationId;
     }
 }
-o(j, 'displayName', 'ApplicationStore'), o(j, 'persistKey', 'ApplicationStore');
-let H = new j(a.Z, {
-    LOGOUT: g,
-    OVERLAY_INITIALIZE: E,
-    APPLICATION_FETCH: v,
+s(Y, 'displayName', 'ApplicationStore'), s(Y, 'persistKey', 'ApplicationStore');
+let K = new Y(o.Z, {
+    LOGOUT: b,
+    OVERLAY_INITIALIZE: y,
+    APPLICATION_FETCH: O,
     APPLICATION_FETCH_SUCCESS: I,
-    APPLICATION_FETCH_FAIL: S,
-    APPLICATIONS_FETCH: A,
-    APPLICATIONS_FETCH_SUCCESS: C,
+    APPLICATION_FETCH_FAIL: A,
+    APPLICATIONS_FETCH: C,
+    APPLICATIONS_FETCH_SUCCESS: P,
     APPLICATIONS_FETCH_FAIL: L,
-    APPLICATION_UPDATE: y,
-    APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: x,
-    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: x,
-    ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: x,
-    GUILD_APPLICATIONS_FETCH_SUCCESS: P,
-    BILLING_PAYMENTS_FETCH_SUCCESS: w,
-    PAYMENT_UPDATE: M,
-    INVITE_RESOLVE_SUCCESS: U,
-    GIFT_CODE_RESOLVE_SUCCESS: k,
-    LIBRARY_FETCH_SUCCESS: N,
-    STORE_LISTING_FETCH_SUCCESS: G,
-    LOAD_MESSAGES_SUCCESS: B,
-    APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS_SUCCESS: R,
-    USER_PROFILE_FETCH_SUCCESS: O,
-    APP_DM_OPEN: D,
-    USER_AUTHORIZED_APPS_UPDATE: F,
-    LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: V
+    APPLICATION_UPDATE: S,
+    APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: M,
+    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: M,
+    ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: M,
+    GUILD_APPLICATIONS_FETCH_SUCCESS: k,
+    BILLING_PAYMENTS_FETCH_SUCCESS: j,
+    PAYMENT_UPDATE: U,
+    INVITE_RESOLVE_SUCCESS: B,
+    GIFT_CODE_RESOLVE_SUCCESS: G,
+    LIBRARY_FETCH_SUCCESS: R,
+    STORE_LISTING_FETCH_SUCCESS: Z,
+    LOAD_MESSAGES_SUCCESS: F,
+    APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS_SUCCESS: w,
+    USER_PROFILE_FETCH_SUCCESS: D,
+    APP_DM_OPEN: x,
+    USER_AUTHORIZED_APPS_UPDATE: H,
+    LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: W
 });

@@ -1,10 +1,10 @@
 n.d(t, { Z: () => g });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(249849),
-    l = n(907561),
-    s = n(388032),
-    a = n(136050);
+var i = n(249849),
+    s = n(907561),
+    a = n(388032),
+    l = n(136050);
 let o = ['#7185f6', '#7799f3', '#7eb2eb', '#85d5e0', '#89e6dd', '#8cefda', '#68eacb'],
     c = ['#ffffff', '#f0f0f0'],
     d = [0.15, 0.23, 0.32, 0.45, 0.57, 0.62, 0.7],
@@ -39,7 +39,7 @@ let o = ['#7185f6', '#7799f3', '#7eb2eb', '#85d5e0', '#89e6dd', '#8cefda', '#68e
         }
     ],
     m = [0.95, 1],
-    h = [
+    p = [
         {
             base: 1,
             tint: 2
@@ -50,58 +50,120 @@ let o = ['#7185f6', '#7799f3', '#7eb2eb', '#85d5e0', '#89e6dd', '#8cefda', '#68e
         }
     ];
 function g(e) {
-    let { width: t, height: n, primaryTintColor: g, secondaryTintColor: x, ...p } = e,
-        { primaryColorsTransformed: _, secondaryColorsTransformed: C } = (0, r.s)({
+    var t,
+        n,
+        { width: g, height: h, primaryTintColor: f, secondaryTintColor: b } = e,
+        x = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                i = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        r,
+                        i = {},
+                        s = Object.keys(e);
+                    for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var s = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < s.length; r++) (n = s[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+            }
+            return i;
+        })(e, ['width', 'height', 'primaryTintColor', 'secondaryTintColor']);
+    let { primaryColorsTransformed: j, secondaryColorsTransformed: N } = (0, i.s)({
             primaryBaseColors: o,
-            primaryTintColor: g,
+            primaryTintColor: f,
             primaryTintLuminances: d,
             primaryLuminanceWeights: u,
             secondaryBaseColors: c,
-            secondaryTintColor: x,
+            secondaryTintColor: b,
             secondaryTintLuminances: m,
-            secondaryLuminanceWeights: h
+            secondaryLuminanceWeights: p
         }),
-        { styleContent: f, containerId: v } = (0, l.bC)(_, C);
-    return (0, i.jsxs)('svg', {
-        ...p,
-        'aria-label': s.intl.string(s.t.nH6S2d),
-        width: t,
-        height: n,
-        viewBox: '0 0 '.concat(l.Km, ' ').concat(l.md),
-        children: [
-            (0, i.jsxs)('defs', {
-                children: [
-                    (0, i.jsx)('defs', {
-                        children: (0, i.jsxs)('radialGradient', {
-                            id: 'foam-gradient',
-                            cx: '0.5',
-                            cy: '0.5',
-                            r: '0.65',
-                            fx: '0.5',
-                            fy: '0.8',
-                            children: [
-                                (0, i.jsx)('stop', {
-                                    stopColor: C[1],
-                                    offset: '60%'
-                                }),
-                                (0, i.jsx)('stop', {
-                                    stopColor: C[0],
-                                    offset: '100%'
-                                })
-                            ]
+        { styleContent: v, containerId: _ } = (0, s.bC)(j, N);
+    return (0, r.jsxs)(
+        'svg',
+        ((t = (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    r = Object.keys(n);
+                'function' == typeof Object.getOwnPropertySymbols &&
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
                         })
+                    )),
+                    r.forEach(function (t) {
+                        var r;
+                        (r = n[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: r,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0
+                                  })
+                                : (e[t] = r);
+                    });
+            }
+            return e;
+        })({}, x)),
+        (n = n =
+            {
+                'aria-label': a.NW.string(a.t.nH6S2d),
+                width: g,
+                height: h,
+                viewBox: '0 0 '.concat(s.Km, ' ').concat(s.md),
+                children: [
+                    (0, r.jsxs)('defs', {
+                        children: [
+                            (0, r.jsx)('defs', {
+                                children: (0, r.jsxs)('radialGradient', {
+                                    id: 'foam-gradient',
+                                    cx: '0.5',
+                                    cy: '0.5',
+                                    r: '0.65',
+                                    fx: '0.5',
+                                    fy: '0.8',
+                                    children: [
+                                        (0, r.jsx)('stop', {
+                                            stopColor: N[1],
+                                            offset: '60%'
+                                        }),
+                                        (0, r.jsx)('stop', {
+                                            stopColor: N[0],
+                                            offset: '100%'
+                                        })
+                                    ]
+                                })
+                            }),
+                            (0, r.jsx)('style', { children: v })
+                        ]
                     }),
-                    (0, i.jsx)('style', { children: f })
+                    (0, r.jsx)('use', {
+                        href: ''.concat(l, '#wrapper-layer'),
+                        id: _
+                    }),
+                    (0, r.jsx)('use', {
+                        href: ''.concat(l, '#foam'),
+                        style: { fill: 'url(#foam-gradient)' }
+                    })
                 ]
             }),
-            (0, i.jsx)('use', {
-                href: ''.concat(a, '#wrapper-layer'),
-                id: v
-            }),
-            (0, i.jsx)('use', {
-                href: ''.concat(a, '#foam'),
-                style: { fill: 'url(#foam-gradient)' }
-            })
-        ]
-    });
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(n)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+              }),
+        t)
+    );
 }

@@ -1,50 +1,93 @@
 n.d(t, { Z: () => u });
 var i = n(200651);
 n(192379);
-var s = n(120356),
-    l = n.n(s),
-    a = n(481060),
-    o = n(518084),
-    r = n(981631),
-    d = n(388032),
-    c = n(764547);
+var r = n(120356),
+    s = n.n(r),
+    o = n(481060),
+    l = n(518084),
+    a = n(981631),
+    c = n(388032),
+    d = n(969855);
 let u = function (e) {
     let t;
-    let { title: n, header: s, children: u, renderSettings: h, onDragStart: p } = e;
+    let { title: n, header: r, children: u, renderSettings: h, onDragStart: p } = e;
     return (
         (t =
             null != n
-                ? (0, i.jsxs)(o.ZP.Bar, {
-                      className: l()(c.header, c.draggableStartArea),
+                ? (0, i.jsxs)(l.ZP.Bar, {
+                      className: s()(d.header, d.draggableStartArea),
                       onMouseDown: p,
                       children: [
-                          (0, i.jsx)(o.ZP.Content, {
-                              className: l()(c.headerTitle, c.draggableStartArea),
+                          (0, i.jsx)(l.ZP.Content, {
+                              className: s()(d.headerTitle, d.draggableStartArea),
                               dynamicSize: !0,
                               children: n
                           }),
-                          (0, i.jsx)(o.ZP.Content, {
-                              children: (0, i.jsx)(a.yRy, {
+                          (0, i.jsx)(l.ZP.Content, {
+                              children: (0, i.jsx)(o.yRy, {
                                   position: 'right',
-                                  renderPopout: null != h ? h : r.dG4,
+                                  renderPopout: null != h ? h : a.dG4,
                                   autoInvert: !1,
-                                  children: (e) =>
-                                      (0, i.jsx)(o.ZP.Icon, {
-                                          ...e,
-                                          icon: a.ewm,
-                                          label: d.intl.string(d.t['3D5yo6'])
-                                      })
+                                  children: (e) => {
+                                      var t, n;
+                                      return (0, i.jsx)(
+                                          l.ZP.Icon,
+                                          ((t = (function (e) {
+                                              for (var t = 1; t < arguments.length; t++) {
+                                                  var n = null != arguments[t] ? arguments[t] : {},
+                                                      i = Object.keys(n);
+                                                  'function' == typeof Object.getOwnPropertySymbols &&
+                                                      (i = i.concat(
+                                                          Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                              return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                          })
+                                                      )),
+                                                      i.forEach(function (t) {
+                                                          var i;
+                                                          (i = n[t]),
+                                                              t in e
+                                                                  ? Object.defineProperty(e, t, {
+                                                                        value: i,
+                                                                        enumerable: !0,
+                                                                        configurable: !0,
+                                                                        writable: !0
+                                                                    })
+                                                                  : (e[t] = i);
+                                                      });
+                                              }
+                                              return e;
+                                          })({}, e)),
+                                          (n = n =
+                                              {
+                                                  icon: o.ewm,
+                                                  label: c.NW.string(c.t['3D5yo6'])
+                                              }),
+                                          Object.getOwnPropertyDescriptors
+                                              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                                              : (function (e, t) {
+                                                    var n = Object.keys(e);
+                                                    if (Object.getOwnPropertySymbols) {
+                                                        var i = Object.getOwnPropertySymbols(e);
+                                                        n.push.apply(n, i);
+                                                    }
+                                                    return n;
+                                                })(Object(n)).forEach(function (e) {
+                                                    Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                                                }),
+                                          t)
+                                      );
+                                  }
                               })
                           })
                       ]
                   })
-                : s),
+                : r),
         (0, i.jsxs)('div', {
-            className: c.sidebar,
+            className: d.sidebar,
             children: [
                 t,
                 (0, i.jsx)('div', {
-                    className: c.children,
+                    className: d.children,
                     children: u
                 })
             ]

@@ -1,5 +1,5 @@
 n.d(t, {
-    G: () => o,
+    G: () => s,
     H: () => l
 }),
     n(309749),
@@ -12,19 +12,21 @@ n.d(t, {
     n(480839),
     n(744285),
     n(492257),
-    n(873817);
-var i = n(392711),
-    r = n.n(i),
-    a = n(149765),
-    s = n(915486);
-function o(e) {
-    return r().cloneDeepWith(e, (e) =>
-        (0, a.Bw)(e)
+    n(873817),
+    n(610885),
+    n(126298);
+var r = n(392711),
+    i = n.n(r),
+    o = n(149765),
+    a = n(915486);
+function s(e) {
+    return i().cloneDeepWith(e, (e) =>
+        (0, o.Bw)(e)
             ? {
                   __tag__: 'bigflag',
                   data: e.toJSON()
               }
-            : (0, s.lq)(e)
+            : (0, a.lq)(e)
               ? {
                     __tag__: 'uint8array',
                     data: Array.from(e)
@@ -33,5 +35,5 @@ function o(e) {
     );
 }
 function l(e) {
-    return r().cloneDeepWith(e, (e) => (null != e && 'object' == typeof e && '__tag__' in e && 'bigflag' === e.__tag__ ? a.vB(e.data) : (0, s.Bx)(e) ? new Uint8Array(e.data) : void 0));
+    return i().cloneDeepWith(e, (e) => (null != e && 'object' == typeof e && '__tag__' in e && 'bigflag' === e.__tag__ ? o.vB(e.data) : (0, a.Bx)(e) ? new Uint8Array(e.data) : void 0));
 }

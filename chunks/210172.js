@@ -1,151 +1,191 @@
-i.d(t, { default: () => S }), i(47120);
-var s = i(200651),
-    a = i(192379),
-    n = i(442837),
-    r = i(481060),
-    l = i(367907),
-    c = i(313201),
-    d = i(456268),
-    o = i(416162),
-    u = i(434404),
-    m = i(999382),
-    g = i(449543),
-    x = i(681518),
-    h = i(627573),
-    p = i(814008),
-    v = i(259674),
-    N = i(981631),
-    j = i(128449),
-    b = i(388032),
-    f = i(184330),
-    I = i(438825);
-let S = (e) => {
-    let { transitionState: t, onClose: S } = e,
-        { guild: C, guildMetadata: E } = (0, n.cj)([m.Z], () => m.Z.getProps()),
-        _ = (0, c.Dt)(),
-        [k, T] = a.useState(!1),
-        [y, R] = a.useState(0),
-        [w, A] = a.useState(!1);
+r.d(t, { default: () => y }), r(47120), r(266796);
+var s = r(200651),
+    a = r(192379),
+    i = r(442837),
+    n = r(481060),
+    c = r(367907),
+    l = r(313201),
+    o = r(456268),
+    d = r(416162),
+    u = r(434404),
+    m = r(999382),
+    g = r(874181),
+    p = r(681518),
+    h = r(627573),
+    x = r(814008),
+    N = r(259674),
+    v = r(981631),
+    b = r(128449),
+    f = r(388032),
+    j = r(414225),
+    S = r(438825);
+let y = (e) => {
+    let { transitionState: t, onClose: y } = e,
+        { guild: I, guildMetadata: C } = (0, i.cj)([m.Z], () => m.Z.getProps()),
+        E = (0, l.Dt)(),
+        [k, _] = a.useState(!1),
+        [O, T] = a.useState(0),
+        [w, W] = a.useState(!1);
     if (
         (a.useEffect(() => {
-            l.ZP.trackWithMetadata(N.rMx.OPEN_MODAL, { type: N.jXE.DISCOVERY_SETUP_SUCCESS_MODAL });
+            c.ZP.trackWithMetadata(v.rMx.OPEN_MODAL, { type: v.jXE.DISCOVERY_SETUP_SUCCESS_MODAL });
         }, []),
-        null == C)
+        null == I)
     )
         return null;
-    let D = (0, s.jsx)(x.Z, {
-            guild: C,
-            headerId: _
+    let R = (0, s.jsx)(p.Z, {
+            guild: I,
+            headerId: E
         }),
-        Z = (0, s.jsx)(g.Z, {
-            guild: C,
-            guildMetadata: E,
-            headerId: _
+        P = (0, s.jsx)(g.Z, {
+            guild: I,
+            guildMetadata: C,
+            headerId: E
         }),
-        L = (0, s.jsx)(p.Z, {
-            guild: C,
-            guildMetadata: E,
-            headerId: _
+        D = (0, s.jsx)(x.Z, {
+            guild: I,
+            guildMetadata: C,
+            headerId: E
         }),
-        P = (0, s.jsx)(h.Z, {
-            guild: C,
-            headerId: _,
-            onAgreedChange: A
+        A = (0, s.jsx)(h.Z, {
+            guild: I,
+            headerId: E,
+            onAgreedChange: W
         }),
-        O = (0, s.jsx)('img', {
+        Z = (0, s.jsx)('img', {
             alt: '',
-            src: I,
-            className: f.footerImage,
+            src: S,
+            className: j.footerImage,
             width: 240
         }),
-        G = async () => {
-            if (0 === y) {
-                T(!0);
+        L = async () => {
+            if (0 === O) {
+                _(!0);
                 try {
                     await u.Z.saveGuild(
-                        C.id,
-                        { description: C.description },
+                        I.id,
+                        { description: I.description },
                         {
                             isForDiscovery: !0,
                             throwErr: !0
                         }
                     ),
-                        R(y + 1),
-                        (0, v.Nx)(v.tK.DESCRIPTION, v.tK.CATEGORIES, C.id);
+                        T(O + 1),
+                        (0, N.Nx)(N.tK.DESCRIPTION, N.tK.CATEGORIES, I.id);
                 } catch (e) {}
-            } else if (1 === y) R(y + 1), (0, v.Nx)(v.tK.CATEGORIES, v.tK.TAGS, C.id);
-            else if (2 === y) {
-                T(!0);
+            } else if (1 === O) T(O + 1), (0, N.Nx)(N.tK.CATEGORIES, N.tK.TAGS, I.id);
+            else if (2 === O) {
+                _(!0);
                 try {
-                    await (0, d.Vv)({
-                        guildId: C.id,
-                        primaryCategoryId: E.primaryCategoryId,
-                        keywords: E.keywords,
-                        emojiDiscoverabilityEnabled: E.emojiDiscoverabilityEnabled,
-                        partnerActionedTimestamp: E.partnerActionedTimestamp,
-                        partnerApplicationTimestamp: E.partnerApplicationTimestamp,
-                        isPublished: E.isPublished,
-                        reasonsToJoin: E.reasonsToJoin,
-                        socialLinks: E.socialLinks,
-                        about: E.about
+                    await (0, o.Vv)({
+                        guildId: I.id,
+                        primaryCategoryId: C.primaryCategoryId,
+                        keywords: C.keywords,
+                        emojiDiscoverabilityEnabled: C.emojiDiscoverabilityEnabled,
+                        partnerActionedTimestamp: C.partnerActionedTimestamp,
+                        partnerApplicationTimestamp: C.partnerApplicationTimestamp,
+                        isPublished: C.isPublished,
+                        reasonsToJoin: C.reasonsToJoin,
+                        socialLinks: C.socialLinks,
+                        about: C.about
                     }),
-                        R(y + 1),
-                        (0, v.Nx)(v.tK.TAGS, v.tK.AGREE_TO_RULES, C.id);
+                        T(O + 1),
+                        (0, N.Nx)(N.tK.TAGS, N.tK.AGREE_TO_RULES, I.id);
                 } catch (e) {}
             }
-            T(!1);
+            _(!1);
         },
-        M = [
+        G = [
             {
-                modalContent: D,
-                disableNextStep: null == C.description,
-                overviewTitle: b.intl.string(b.t.RHP0kJ)
-            },
-            {
-                modalContent: Z,
-                disableNextStep: E.primaryCategoryId === j.o3 || null == E.primaryCategoryId,
-                overviewTitle: b.intl.string(b.t.Rv9An5)
-            },
-            {
-                modalContent: L,
-                disableNextStep: 0 === E.keywords.length,
-                overviewTitle: b.intl.string(b.t['0PJZXl'])
+                modalContent: R,
+                disableNextStep: null == I.description,
+                overviewTitle: f.NW.string(f.t.RHP0kJ)
             },
             {
                 modalContent: P,
+                disableNextStep: C.primaryCategoryId === b.o3 || null == C.primaryCategoryId,
+                overviewTitle: f.NW.string(f.t.Rv9An5)
+            },
+            {
+                modalContent: D,
+                disableNextStep: 0 === C.keywords.length,
+                overviewTitle: f.NW.string(f.t['0PJZXl'])
+            },
+            {
+                modalContent: A,
                 disableNextStep: !w,
-                overviewTitle: b.intl.string(b.t.Q8OFNz)
+                overviewTitle: f.NW.string(f.t.Q8OFNz)
             }
         ];
-    return (0, s.jsx)(o.Z, {
-        stepData: M,
-        title: b.intl.string(b.t.uyuIen),
+    return (0, s.jsx)(d.Z, {
+        stepData: G,
+        title: f.NW.string(f.t.uyuIen),
         transitionState: t,
-        onClose: S,
-        completeButtonText: b.intl.string(b.t.wYi2lJ),
-        onNextPressed: G,
+        onClose: y,
+        completeButtonText: f.NW.string(f.t.wYi2lJ),
+        onNextPressed: L,
         onPrevPressed: () => {
-            R(y - 1);
+            T(O - 1);
         },
-        forceStep: y,
+        forceStep: O,
         onComplete: () => {
-            let e = C.features;
-            C.hasFeature(N.oNc.DISCOVERABLE) || e.add(N.oNc.DISCOVERABLE),
-                u.Z.saveGuild(C.id, {
+            let e = I.features;
+            I.hasFeature(v.oNc.DISCOVERABLE) || e.add(v.oNc.DISCOVERABLE),
+                u.Z.saveGuild(I.id, {
                     features: e,
-                    description: C.description
+                    description: I.description
                 }),
-                (0, r.ZDy)(async () => {
-                    let { default: e } = await i.e('263').then(i.bind(i, 477520));
-                    return (t) =>
-                        (0, s.jsx)(e, {
-                            ...t,
-                            guild: C
-                        });
+                (0, n.ZDy)(async () => {
+                    let { default: e } = await r.e('263').then(r.bind(r, 477520));
+                    return (t) => {
+                        var r, a;
+                        return (0, s.jsx)(
+                            e,
+                            ((r = (function (e) {
+                                for (var t = 1; t < arguments.length; t++) {
+                                    var r = null != arguments[t] ? arguments[t] : {},
+                                        s = Object.keys(r);
+                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                        (s = s.concat(
+                                            Object.getOwnPropertySymbols(r).filter(function (e) {
+                                                return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                            })
+                                        )),
+                                        s.forEach(function (t) {
+                                            var s;
+                                            (s = r[t]),
+                                                t in e
+                                                    ? Object.defineProperty(e, t, {
+                                                          value: s,
+                                                          enumerable: !0,
+                                                          configurable: !0,
+                                                          writable: !0
+                                                      })
+                                                    : (e[t] = s);
+                                        });
+                                }
+                                return e;
+                            })({}, t)),
+                            (a = a = { guild: I }),
+                            Object.getOwnPropertyDescriptors
+                                ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(a))
+                                : (function (e, t) {
+                                      var r = Object.keys(e);
+                                      if (Object.getOwnPropertySymbols) {
+                                          var s = Object.getOwnPropertySymbols(e);
+                                          r.push.apply(r, s);
+                                      }
+                                      return r;
+                                  })(Object(a)).forEach(function (e) {
+                                      Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(a, e));
+                                  }),
+                            r)
+                        );
+                    };
                 });
         },
-        overviewFooter: O,
+        overviewFooter: Z,
         submitting: k,
-        sequencerClassName: f.container
+        sequencerClassName: j.container
     });
 };

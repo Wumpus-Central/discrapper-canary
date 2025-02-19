@@ -1,66 +1,93 @@
-n.d(t, { default: () => _ });
-var i = n(200651);
+n.d(t, { default: () => f });
+var r = n(200651);
 n(192379);
-var s = n(120356),
-    r = n.n(s),
-    l = n(512722),
-    a = n.n(l),
+var i = n(120356),
+    s = n.n(i),
+    a = n(512722),
+    l = n.n(a),
     o = n(481060),
     c = n(563132),
     d = n(409813),
     u = n(3409),
     m = n(388032),
-    g = n(92288),
-    h = n(179683);
-function x(e) {
-    let { transitionState: t, analyticsLocation: n, onClose: s, onAddPaymentSource: l, toastContent: c, initialStep: x = d.h8.PAYMENT_TYPE, overwriteSubscriptionPaymentSource: _ = !1 } = e,
-        p = (0, u.fL)(),
-        E = (0, u.vP)({
-            paymentModalArgs: p,
-            initialStep: x,
+    g = n(322264),
+    p = n(968693);
+function h(e) {
+    let { transitionState: t, analyticsLocation: n, onClose: i, onAddPaymentSource: a, toastContent: c, initialStep: h = d.h8.PAYMENT_TYPE, overwriteSubscriptionPaymentSource: f = !1 } = e,
+        N = (0, u.fL)(),
+        x = (0, u.vP)({
+            paymentModalArgs: N,
+            initialStep: h,
             prependSteps: [],
             appendSteps: [],
             onReturn: () => {
-                s();
+                i();
             },
             onComplete: (e, t) => {
-                a()(null != t, 'paymentSource missing'), null == l || l(t), s();
+                l()(null != t, 'paymentSource missing'), null == a || a(t), i();
             },
             onStepChange: () => {},
-            header: (0, i.jsxs)('div', {
-                className: r()(g.modalTitle, h.flex, h.justifyBetween, h.alignCenter),
+            header: (0, r.jsxs)('div', {
+                className: s()(g.modalTitle, p.flex, p.justifyBetween, p.alignCenter),
                 children: [
-                    (0, i.jsx)(o.vwX, {
+                    (0, r.jsx)(o.vwX, {
                         tag: o.RB0.H4,
-                        children: m.intl.string(m.t.eQ2bLi)
+                        children: m.NW.string(m.t.eQ2bLi)
                     }),
-                    (0, i.jsx)(o.olH, { onClick: s })
+                    (0, r.jsx)(o.olH, { onClick: i })
                 ]
             }),
             analyticsLocation: n,
             hideBreadcrumbs: !0,
             toastContent: c,
-            overwriteSubscriptionPaymentSource: _
+            overwriteSubscriptionPaymentSource: f
         });
-    return (0, i.jsx)(o.Y0X, {
+    return (0, r.jsx)(o.Y0X, {
         transitionState: t,
         size: o.CgR.SMALL,
         className: g.modal,
-        'aria-label': m.intl.string(m.t.eQ2bLi),
-        children: (0, i.jsx)('form', {
+        'aria-label': m.NW.string(m.t.eQ2bLi),
+        children: (0, r.jsx)('form', {
             className: g.form,
             onSubmit: function (e) {
                 e.preventDefault();
             },
-            children: E
+            children: x
         })
     });
 }
-function _(e) {
-    return (0, i.jsx)(c.PaymentContextProvider, {
+function f(e) {
+    return (0, r.jsx)(c.PaymentContextProvider, {
         activeSubscription: null,
         stepConfigs: [],
         skuIDs: [],
-        children: (0, i.jsx)(x, { ...e })
+        children: (0, r.jsx)(
+            h,
+            (function (e) {
+                for (var t = 1; t < arguments.length; t++) {
+                    var n = null != arguments[t] ? arguments[t] : {},
+                        r = Object.keys(n);
+                    'function' == typeof Object.getOwnPropertySymbols &&
+                        (r = r.concat(
+                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                            })
+                        )),
+                        r.forEach(function (t) {
+                            var r;
+                            (r = n[t]),
+                                t in e
+                                    ? Object.defineProperty(e, t, {
+                                          value: r,
+                                          enumerable: !0,
+                                          configurable: !0,
+                                          writable: !0
+                                      })
+                                    : (e[t] = r);
+                        });
+                }
+                return e;
+            })({}, e)
+        )
     });
 }

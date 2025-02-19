@@ -1,35 +1,64 @@
-n.d(t, { Z: () => d });
-var i = n(200651);
+n.d(t, { Z: () => c });
+var r = n(200651);
 n(192379);
-var l = n(481060),
-    r = n(570140),
-    a = n(317770);
-let s = 'CONNECTIONS_GRID_MODAL_KEY';
-class o extends a.Z {
+var i = n(481060),
+    l = n(570140),
+    o = n(317770);
+let a = 'CONNECTIONS_GRID_MODAL_KEY';
+class s extends o.Z {
     _initialize() {
-        r.Z.subscribe('CONNECTIONS_GRID_MODAL_SHOW', this.handleShow), r.Z.subscribe('CONNECTIONS_GRID_MODAL_HIDE', this.handleHide);
+        l.Z.subscribe('CONNECTIONS_GRID_MODAL_SHOW', this.handleShow), l.Z.subscribe('CONNECTIONS_GRID_MODAL_HIDE', this.handleHide);
     }
     _terminate() {
-        r.Z.unsubscribe('CONNECTIONS_GRID_MODAL_SHOW', this.handleShow), r.Z.unsubscribe('CONNECTIONS_GRID_MODAL_HIDE', this.handleHide);
+        l.Z.unsubscribe('CONNECTIONS_GRID_MODAL_SHOW', this.handleShow), l.Z.unsubscribe('CONNECTIONS_GRID_MODAL_HIDE', this.handleHide);
     }
     handleShow(e) {
-        let { onComplete: t, excludedPlatformTypes: r, includedPlatformTypes: a, integrations: o, onCompleteApplication: d } = e;
-        (0, l.nfh)(s) ||
-            (0, l.ZDy)(async () => {
+        let { onComplete: t, excludedPlatformTypes: l, includedPlatformTypes: o, integrations: s, onCompleteApplication: c } = e;
+        (0, i.nfh)(a) ||
+            (0, i.ZDy)(async () => {
                 let { default: e } = await n.e('28538').then(n.bind(n, 51299));
                 return (n) =>
-                    (0, i.jsx)(e, {
-                        onComplete: t,
-                        excludedPlatformTypes: r,
-                        includedPlatformTypes: a,
-                        integrations: o,
-                        onCompleteApplication: d,
-                        ...n
-                    });
+                    (0, r.jsx)(
+                        e,
+                        (function (e) {
+                            for (var t = 1; t < arguments.length; t++) {
+                                var n = null != arguments[t] ? arguments[t] : {},
+                                    r = Object.keys(n);
+                                'function' == typeof Object.getOwnPropertySymbols &&
+                                    (r = r.concat(
+                                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                        })
+                                    )),
+                                    r.forEach(function (t) {
+                                        var r;
+                                        (r = n[t]),
+                                            t in e
+                                                ? Object.defineProperty(e, t, {
+                                                      value: r,
+                                                      enumerable: !0,
+                                                      configurable: !0,
+                                                      writable: !0
+                                                  })
+                                                : (e[t] = r);
+                                    });
+                            }
+                            return e;
+                        })(
+                            {
+                                onComplete: t,
+                                excludedPlatformTypes: l,
+                                includedPlatformTypes: o,
+                                integrations: s,
+                                onCompleteApplication: c
+                            },
+                            n
+                        )
+                    );
             });
     }
     handleHide() {
-        (0, l.Mr3)(s);
+        (0, i.Mr3)(a);
     }
 }
-let d = new o();
+let c = new s();

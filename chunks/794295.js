@@ -1,32 +1,107 @@
-n.d(t, { Z: () => f });
-var i = n(200651),
-    r = n(192379),
-    a = n(477660),
-    s = n.n(a),
-    o = n(481060),
+n.d(t, { Z: () => E });
+var r = n(200651),
+    i = n(192379),
+    o = n(477660),
+    a = n.n(o),
+    s = n(481060),
     l = n(100527),
-    u = n(906732),
-    c = n(49012);
-let d = 1,
-    f = r.memo(function (e) {
-        let { onClick: t, trusted: n, title: a, href: f, children: _, messageId: p, channelId: h, ...m } = e,
-            { analyticsLocations: g } = (0, u.ZP)(l.Z.MASKED_LINK),
-            E = r.useCallback((t) => (0, c.q)(e, t, g), [g, e]),
-            v = r.useCallback(
+    c = n(906732),
+    u = n(49012);
+function d(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function f(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                d(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function p(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function _(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : p(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function h(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = m(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function m(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+let g = 1,
+    E = i.memo(function (e) {
+        let { onClick: t, trusted: n, title: o, href: d, children: p, messageId: m, channelId: E } = e,
+            v = h(e, ['onClick', 'trusted', 'title', 'href', 'children', 'messageId', 'channelId']),
+            { analyticsLocations: b } = (0, c.ZP)(l.Z.MASKED_LINK),
+            y = i.useCallback((t) => (0, u.q)(e, t, b), [b, e]),
+            O = i.useCallback(
                 (e) => {
-                    e.button === d && E(e);
+                    e.button === g && y(e);
                 },
-                [E]
+                [y]
             ),
-            y = s().sanitizeUrl(f);
-        return (0, i.jsx)(o.eee, {
-            ...m,
-            title: a,
-            target: '_blank',
-            rel: 'noreferrer noopener',
-            href: y,
-            onClick: E,
-            onAuxClick: v,
-            children: null != _ ? _ : a
-        });
+            S = a().sanitizeUrl(d);
+        return (0, r.jsx)(
+            s.eee,
+            _(f({}, v), {
+                title: o,
+                target: '_blank',
+                rel: 'noreferrer noopener',
+                href: S,
+                onClick: y,
+                onAuxClick: O,
+                children: null != p ? p : o
+            })
+        );
     });

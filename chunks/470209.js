@@ -1,80 +1,109 @@
-t.d(e, { Z: () => g });
-var n = t(200651);
-t(192379);
-var a = t(512722),
-    l = t.n(a),
-    r = t(866442),
-    i = t(481060),
-    o = t(313201),
-    s = t(981631),
-    d = t(388032),
-    c = t(895587);
-let u = (0, o.hQ)();
-function g(A) {
-    let { newRoleParams: e, setNewRoleParams: t } = A,
-        { name: a, color: o } = e,
-        g = (A) =>
-            t(
-                (e) => (
-                    l()(null != e, 'newRoleParams should be defined'),
-                    {
-                        ...e,
-                        color: A
-                    }
-                )
-            );
-    return (0, n.jsxs)('div', {
-        className: c.roleInputContainer,
+r.d(t, { Z: () => p });
+var A = r(200651);
+r(192379);
+var n = r(512722),
+    o = r.n(n),
+    a = r(866442),
+    l = r(481060),
+    i = r(313201),
+    s = r(981631),
+    c = r(388032),
+    d = r(26785);
+function u(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var r = null != arguments[t] ? arguments[t] : {},
+            A = Object.keys(r);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (A = A.concat(
+                Object.getOwnPropertySymbols(r).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                })
+            )),
+            A.forEach(function (t) {
+                var A;
+                (A = r[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: A,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = A);
+            });
+    }
+    return e;
+}
+function f(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var r = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var A = Object.getOwnPropertySymbols(e);
+                      r.push.apply(r, A);
+                  }
+                  return r;
+              })(Object(t)).forEach(function (r) {
+                  Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
+              }),
+        e
+    );
+}
+let g = (0, i.hQ)();
+function p(e) {
+    let { newRoleParams: t, setNewRoleParams: r } = e,
+        { name: n, color: i } = t,
+        p = (e) => r((t) => (o()(null != t, 'newRoleParams should be defined'), f(u({}, t), { color: e })));
+    return (0, A.jsxs)('div', {
+        className: d.roleInputContainer,
         children: [
-            (0, n.jsx)(i.oil, {
+            (0, A.jsx)(l.oil, {
                 autoFocus: !0,
-                value: a,
-                onChange: (A) =>
-                    t(
-                        (e) => (
-                            l()(null != e, 'newRoleParams should be defined'),
-                            {
-                                ...e,
-                                name: A
-                            }
-                        )
-                    ),
-                id: u,
-                placeholder: d.intl.string(d.t.oNauur),
+                value: n,
+                onChange: (e) => r((t) => (o()(null != t, 'newRoleParams should be defined'), f(u({}, t), { name: e }))),
+                id: g,
+                placeholder: c.NW.string(c.t.oNauur),
                 maxLength: s.VKK,
-                inputClassName: c.input
+                inputClassName: d.input
             }),
-            (0, n.jsxs)('div', {
-                className: c.roleColorContainer,
+            (0, A.jsxs)('div', {
+                className: d.roleColorContainer,
                 children: [
-                    (0, n.jsx)(i.nn4, { children: d.intl.format(d.t['Vlq/pK'], { color: (0, r.Rf)(o) }) }),
-                    (0, n.jsx)('div', {
-                        className: c.roleColorPreview,
-                        style: { backgroundColor: (0, r.Rf)(o) }
+                    (0, A.jsx)(l.nn4, { children: c.NW.format(c.t['Vlq/pK'], { color: (0, a.Rf)(i) }) }),
+                    (0, A.jsx)('div', {
+                        className: d.roleColorPreview,
+                        style: { backgroundColor: (0, a.Rf)(i) }
                     }),
-                    (0, n.jsx)(i.LZC, {
+                    (0, A.jsx)(l.LZC, {
                         size: 8,
                         horizontal: !0
                     }),
-                    (0, n.jsx)(i.yRy, {
-                        renderPopout: (A) =>
-                            (0, n.jsx)(i.Z$W, {
-                                ...A,
-                                value: o,
-                                onChange: g
-                            }),
-                        children: (A) =>
-                            (0, n.jsx)(i.P3F, {
-                                ...A,
-                                tag: 'span',
-                                'aria-label': d.intl.string(d.t.QLgdlZ),
-                                className: c.dropperIconContainer,
-                                children: (0, n.jsx)(i.ilE, {
-                                    size: 'xs',
-                                    color: 'currentColor',
-                                    className: c.dropperIcon
+                    (0, A.jsx)(l.yRy, {
+                        renderPopout: (e) =>
+                            (0, A.jsx)(
+                                l.Z$W,
+                                f(u({}, e), {
+                                    value: i,
+                                    onChange: p
                                 })
-                            })
+                            ),
+                        children: (e) =>
+                            (0, A.jsx)(
+                                l.P3F,
+                                f(u({}, e), {
+                                    tag: 'span',
+                                    'aria-label': c.NW.string(c.t.QLgdlZ),
+                                    className: d.dropperIconContainer,
+                                    children: (0, A.jsx)(l.ilE, {
+                                        size: 'xs',
+                                        color: 'currentColor',
+                                        className: d.dropperIcon
+                                    })
+                                })
+                            )
                     })
                 ]
             })

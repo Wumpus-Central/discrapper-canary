@@ -1,12 +1,12 @@
-n.d(t, { Z: () => h }), n(47120);
-var i = n(846519),
-    r = n(147913),
-    a = n(77498),
-    s = n(19780),
-    o = n(626135),
+n.d(t, { Z: () => m }), n(47120);
+var r = n(846519),
+    i = n(147913),
+    o = n(77498),
+    a = n(19780),
+    s = n(626135),
     l = n(70956),
-    u = n(581567),
-    c = n(594190),
+    c = n(581567),
+    u = n(594190),
     d = n(981631);
 function f(e, t, n) {
     return (
@@ -21,8 +21,24 @@ function f(e, t, n) {
         e
     );
 }
+function p(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                f(e, t, n[t]);
+            });
+    }
+    return e;
+}
 let _ = 5 * l.Z.Millis.MINUTE;
-class p extends r.Z {
+class h extends i.Z {
     _terminate() {
         this.stopHeartbeat();
     }
@@ -33,11 +49,11 @@ class p extends r.Z {
         this.heartbeatInterval.stop(), this.runningGameKeys.clear();
     }
     handlePostConnectionOpen() {
-        c.ZP.getRunningGames().length > 0 && this.maybeStartHeartbeat();
+        u.ZP.getRunningGames().length > 0 && this.maybeStartHeartbeat();
     }
     constructor(...e) {
         super(...e),
-            f(this, 'heartbeatInterval', new i.Xp()),
+            f(this, 'heartbeatInterval', new r.Xp()),
             f(this, 'runningGameKeys', new Set()),
             f(this, 'actions', {
                 RUNNING_GAMES_CHANGE: (e) => this.handleRunningGamesChanged(e),
@@ -54,30 +70,35 @@ class p extends r.Z {
                 this.maybeStartHeartbeat();
             }),
             f(this, 'logRunningGameHeartbeats', () => {
-                let e = c.ZP.getRunningGames(),
+                let e = u.ZP.getRunningGames(),
                     t = {
-                        rtc_connection_id: s.Z.getRTCConnectionId(),
-                        media_session_id: s.Z.getMediaSessionId()
+                        rtc_connection_id: a.Z.getRTCConnectionId(),
+                        media_session_id: a.Z.getMediaSessionId()
                     },
                     n = new Set();
                 e.forEach((e) => {
-                    var i, r;
-                    let s = (0, c.rH)(e),
-                        l = !this.runningGameKeys.has(s),
-                        f = null !== (r = e.id) && void 0 !== r ? r : null === (i = a.Z.getGameByName(e.name)) || void 0 === i ? void 0 : i.id;
-                    o.default.track(d.rMx.RUNNING_GAME_HEARTBEAT, {
-                        game_id: f,
-                        game_name: e.name,
-                        game_distributor: e.distributor,
-                        game_executable: (0, u.N6)(e.exePath),
-                        game_detection_enabled: (0, c.ik)(e),
-                        initial_heartbeat: l,
-                        ...t
-                    }),
-                        n.add((0, c.rH)(e));
+                    var r, i;
+                    let a = (0, u.rH)(e),
+                        l = !this.runningGameKeys.has(a),
+                        f = null !== (i = e.id) && void 0 !== i ? i : null === (r = o.Z.getGameByName(e.name)) || void 0 === r ? void 0 : r.id;
+                    s.default.track(
+                        d.rMx.RUNNING_GAME_HEARTBEAT,
+                        p(
+                            {
+                                game_id: f,
+                                game_name: e.name,
+                                game_distributor: e.distributor,
+                                game_executable: (0, c.N6)(e.exePath),
+                                game_detection_enabled: (0, u.ik)(e),
+                                initial_heartbeat: l
+                            },
+                            t
+                        )
+                    ),
+                        n.add((0, u.rH)(e));
                 }),
                     (this.runningGameKeys = n);
             });
     }
 }
-let h = new p();
+let m = new h();

@@ -1,12 +1,12 @@
-let i;
-n.d(t, { Z: () => N }), n(47120), n(757143);
-var r,
-    a = n(442837),
-    s = n(570140),
-    o = n(579806),
+let r;
+n.d(t, { Z: () => R }), n(47120), n(757143), n(301563);
+var i,
+    o = n(442837),
+    a = n(570140),
+    s = n(579806),
     l = n(358085),
-    u = n(417363),
-    c = n(388032);
+    c = n(417363),
+    u = n(388032);
 function d(e, t, n) {
     return (
         t in e
@@ -20,116 +20,146 @@ function d(e, t, n) {
         e
     );
 }
-let f = {},
-    _ = (0, l.isWindows)() ? ''.concat(o.Z.process.env.LOCALAPPDATA, '\\DiscordGames') : (0, l.isMac)() ? '/Applications/DiscordGames' : '/tmp';
+function f(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                d(e, t, n[t]);
+            });
+    }
+    return e;
+}
 function p(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function _(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : p(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let h = {},
+    m = (0, l.isWindows)() ? ''.concat(s.Z.process.env.LOCALAPPDATA, '\\DiscordGames') : (0, l.isMac)() ? '/Applications/DiscordGames' : '/tmp';
+function g(e, t) {
     var n;
-    f = {
-        ...f,
-        [e]: {
-            ...(null !== (n = f[e]) && void 0 !== n ? n : {}),
-            ...t
-        }
-    };
-}
-function h(e) {
-    (f = { ...f }), delete f[e];
-}
-function m(e, t) {
-    i.pathLabels = {
-        ...i.pathLabels,
-        [e]: t
-    };
-}
-function g(e) {
-    if (null == i.pathLabels[e]) return !1;
-    (i.pathLabels = { ...i.pathLabels }), delete i.pathLabels[e];
+    h = _(f({}, h), { [e]: f({}, null !== (n = h[e]) && void 0 !== n ? n : {}, t) });
 }
 function E(e) {
-    let { applicationId: t, branchId: n, installationPath: r } = e;
-    null == i.installations[t] && (i.installations[t] = {}),
-        (i.installations[t][n] = { installationPath: r }),
-        i.installationPaths.has(r) ||
+    (h = f({}, h)), delete h[e];
+}
+function v(e, t) {
+    r.pathLabels = _(f({}, r.pathLabels), { [e]: t });
+}
+function b(e) {
+    if (null == r.pathLabels[e]) return !1;
+    (r.pathLabels = f({}, r.pathLabels)), delete r.pathLabels[e];
+}
+function y(e) {
+    let { applicationId: t, branchId: n, installationPath: i } = e;
+    null == r.installations[t] && (r.installations[t] = {}),
+        (r.installations[t][n] = { installationPath: i }),
+        r.installationPaths.has(i) ||
             I({
-                path: r,
+                path: i,
                 metadata: {}
             });
 }
-function v(e) {
+function O(e) {
     let { applicationId: t, branchId: n } = e,
-        i = u.Z.getState(t, n);
-    null != i &&
-        null == i.buildId &&
-        null == i.manifestIds &&
-        y({
+        r = c.Z.getState(t, n);
+    null != r &&
+        null == r.buildId &&
+        null == r.manifestIds &&
+        S({
             applicationId: t,
             branchId: n
         });
 }
-function y(e) {
+function S(e) {
     let { applicationId: t, branchId: n } = e;
-    if (null == i.installations[t]) return !1;
-    delete i.installations[t][n], 0 === Object.keys(i.installations[t]).length && delete i.installations[t];
+    if (null == r.installations[t]) return !1;
+    delete r.installations[t][n], 0 === Object.keys(r.installations[t]).length && delete r.installations[t];
 }
 function I(e) {
-    if (i.installationPaths.has(e.path)) return !1;
-    p(e.path, e.metadata);
-    let t = new Set(i.installationPaths);
-    t.add(e.path), (i.installationPaths = t);
+    if (r.installationPaths.has(e.path)) return !1;
+    g(e.path, e.metadata);
+    let t = new Set(r.installationPaths);
+    t.add(e.path), (r.installationPaths = t);
 }
 function T(e) {
     let { path: t } = e;
-    if (!i.installationPaths.has(t) || i.defaultInstallationPath === t) return !1;
-    let n = new Set(i.installationPaths);
-    n.delete(t), (i.installationPaths = n), h(t), g(t);
+    if (!r.installationPaths.has(t) || r.defaultInstallationPath === t) return !1;
+    let n = new Set(r.installationPaths);
+    n.delete(t), (r.installationPaths = n), E(t), b(t);
 }
-function b(e) {
-    let { path: t, label: n, isDefault: r } = e;
-    if (!i.installationPaths.has(t)) return !1;
-    null != n && '' !== n && i.pathLabels[t] !== n && m(t, n), r && i.defaultInstallationPath !== t && (i.defaultInstallationPath = t);
+function N(e) {
+    let { path: t, label: n, isDefault: i } = e;
+    if (!r.installationPaths.has(t)) return !1;
+    null != n && '' !== n && r.pathLabels[t] !== n && v(t, n), i && r.defaultInstallationPath !== t && (r.defaultInstallationPath = t);
 }
-function S(e) {
+function A(e) {
     let { metadataPayload: t } = e;
-    for (let e in t) p(e, t[e]);
+    for (let e in t) g(e, t[e]);
 }
-class A extends (r = a.ZP.PersistedStore) {
+class C extends (i = o.ZP.PersistedStore) {
     initialize(e) {
-        let t = { ...e };
-        null == t.installations && (t.installations = {}), null == t.defaultInstallationPath && (t.defaultInstallationPath = _), null == t.installationPaths ? (t.installationPaths = new Set([t.defaultInstallationPath])) : (t.installationPaths = new Set(Array.from(t.installationPaths))), null == t.pathLabels && (t.pathLabels = {}), (i = t);
+        let t = f({}, e);
+        null == t.installations && (t.installations = {}), null == t.defaultInstallationPath && (t.defaultInstallationPath = m), null == t.installationPaths ? (t.installationPaths = new Set([t.defaultInstallationPath])) : (t.installationPaths = new Set(Array.from(t.installationPaths))), null == t.pathLabels && (t.pathLabels = {}), (r = t);
     }
     getState() {
-        return i;
+        return r;
     }
     get defaultInstallationPath() {
-        return i.defaultInstallationPath;
+        return r.defaultInstallationPath;
     }
     get installationPaths() {
-        return Array.from(i.installationPaths).map((e) => ({
+        return Array.from(r.installationPaths).map((e) => ({
             path: e,
-            label: i.pathLabels[e]
+            label: r.pathLabels[e]
         }));
     }
     get installationPathsMetadata() {
-        return f;
+        return h;
     }
     hasGamesInstalledInPath(e) {
-        let { installations: t } = i;
-        for (let n in t) for (let i in t[n]) if (t[n][i].installationPath === e) return !0;
+        let { installations: t } = r;
+        for (let n in t) for (let r in t[n]) if (t[n][r].installationPath === e) return !0;
         return !1;
     }
     shouldBeInstalled(e, t) {
-        return null != i.installations[e] && null != i.installations[e][t];
+        return null != r.installations[e] && null != r.installations[e][t];
     }
     getInstallationPath(e, t) {
-        return null == i.installations[e] || null == i.installations[e][t] ? null : i.installations[e][t].installationPath;
+        return null == r.installations[e] || null == r.installations[e][t] ? null : r.installations[e][t].installationPath;
     }
     getLabelFromPath(e) {
         var t, n;
-        return e === _
-            ? c.intl.string(c.t.VdDrjo)
+        return e === m
+            ? u.NW.string(u.t.VdDrjo)
             : null !==
                     (n =
-                        null !== (t = o.Z.fileManager.basename(e)) && void 0 !== t
+                        null !== (t = s.Z.fileManager.basename(e)) && void 0 !== t
                             ? t
                             : e
                                   .replace(/[/\\]+$/, '')
@@ -139,14 +169,14 @@ class A extends (r = a.ZP.PersistedStore) {
               : '?';
     }
 }
-d(A, 'displayName', 'InstallationManagerStore'), d(A, 'persistKey', 'InstallationManagerStore');
-let N = new A(s.Z, {
-    DISPATCH_APPLICATION_INSTALL: E,
-    DISPATCH_APPLICATION_UNINSTALL: y,
-    DISPATCH_APPLICATION_CANCEL: v,
+d(C, 'displayName', 'InstallationManagerStore'), d(C, 'persistKey', 'InstallationManagerStore');
+let R = new C(a.Z, {
+    DISPATCH_APPLICATION_INSTALL: y,
+    DISPATCH_APPLICATION_UNINSTALL: S,
+    DISPATCH_APPLICATION_CANCEL: O,
     INSTALLATION_LOCATION_ADD: I,
     INSTALLATION_LOCATION_REMOVE: T,
-    INSTALLATION_LOCATION_UPDATE: b,
-    INSTALLATION_LOCATION_FETCH_METADATA: S,
-    DISPATCH_APPLICATION_ADD_TO_INSTALLATIONS: E
+    INSTALLATION_LOCATION_UPDATE: N,
+    INSTALLATION_LOCATION_FETCH_METADATA: A,
+    DISPATCH_APPLICATION_ADD_TO_INSTALLATIONS: y
 });

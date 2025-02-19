@@ -1,49 +1,90 @@
-l.d(n, { Z: () => x });
-var t = l(876215),
-    i = l(758713),
-    r = l(835473),
-    a = l(810568),
-    s = l(168524),
-    o = l(561308),
-    u = l(206583),
-    c = l(96513),
-    d = l(701488),
-    m = l(388032);
-let h = {
-        [i.z.XBOX]: u.kG.XBOX,
-        [i.z.PLAYSTATION]: u.kG.PLAYSTATION
+r.d(t, { Z: () => O });
+var n = r(876215),
+    l = r(758713),
+    i = r(835473),
+    o = r(810568),
+    a = r(168524),
+    c = r(561308),
+    s = r(206583),
+    u = r(96513),
+    d = r(701488),
+    p = r(388032);
+let b = {
+        [l.z.XBOX]: s.kG.XBOX,
+        [l.z.PLAYSTATION]: s.kG.PLAYSTATION
     },
-    p = { [c._.EMBED]: a.m1.Embed };
-function x(e) {
-    let n,
-        l,
-        { entry: i, location: a, baseEntryData: u } = e,
-        c = (0, r.q)(i.extra.application_id),
-        x = null == c ? void 0 : c.getIconURL(d.Si.LARGE),
-        v = i.extra.game_name;
-    if (null != i.extra.platform) {
-        let e = h[i.extra.platform];
-        null != e && (n = { type: e });
+    f = { [u._.EMBED]: o.m1.Embed };
+function O(e) {
+    var t, r;
+    let l,
+        o,
+        { entry: s, location: u, baseEntryData: O } = e,
+        y = (0, i.q)(s.extra.application_id),
+        m = null == y ? void 0 : y.getIconURL(d.Si.LARGE),
+        j = s.extra.game_name;
+    if (null != s.extra.platform) {
+        let e = b[s.extra.platform];
+        null != e && (l = { type: e });
     }
-    l = i.content_type === t.s.PLAYED_GAME && (0, o.kr)(i) && !(0, o.n2)(i) ? m.t.vPg1JS : m.t.rPqqtr;
-    let f = p[a],
-        C = {
-            onClick: (0, s.Z)({
-                location: f,
-                applicationId: i.extra.application_id,
-                source: f,
+    o = s.content_type === n.s.PLAYED_GAME && (0, c.kr)(s) && !(0, c.n2)(s) ? p.t.vPg1JS : p.t.rPqqtr;
+    let g = f[u],
+        h = {
+            onClick: (0, a.Z)({
+                location: g,
+                applicationId: s.extra.application_id,
+                source: g,
                 trackEntryPointImpression: !0,
-                sourceUserId: i.author_id
+                sourceUserId: s.author_id
             }),
-            ariaDescription: m.intl.formatToPlainString(m.t['9sZWVl'], { gameName: v })
+            ariaDescription: p.NW.formatToPlainString(p.t['9sZWVl'], { gameName: j })
         };
-    return {
-        ...u,
-        thumbnailUrl: x,
-        title: v,
-        titleClickable: C,
-        thumbnailClickable: C,
-        userDescription: l,
-        providerIconProps: n
-    };
+    return (
+        (t = (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var r = null != arguments[t] ? arguments[t] : {},
+                    n = Object.keys(r);
+                'function' == typeof Object.getOwnPropertySymbols &&
+                    (n = n.concat(
+                        Object.getOwnPropertySymbols(r).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                        })
+                    )),
+                    n.forEach(function (t) {
+                        var n;
+                        (n = r[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: n,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0
+                                  })
+                                : (e[t] = n);
+                    });
+            }
+            return e;
+        })({}, O)),
+        (r = r =
+            {
+                thumbnailUrl: m,
+                title: j,
+                titleClickable: h,
+                thumbnailClickable: h,
+                userDescription: o,
+                providerIconProps: l
+            }),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+            : (function (e, t) {
+                  var r = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var n = Object.getOwnPropertySymbols(e);
+                      r.push.apply(r, n);
+                  }
+                  return r;
+              })(Object(r)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+              }),
+        t
+    );
 }

@@ -1,135 +1,178 @@
-n.d(t, { Z: () => M }), n(47120);
-var i = n(200651),
-    l = n(192379),
-    r = n(120356),
-    a = n.n(r),
-    s = n(442837),
-    o = n(692547),
-    d = n(481060),
-    c = n(232567),
-    u = n(100527),
-    h = n(471445),
-    m = n(15274),
-    p = n(924301),
-    g = n(504160),
-    _ = n(151864),
-    f = n(725436),
-    E = n(497656),
-    I = n(554747),
-    C = n(230900),
+n.d(t, { Z: () => U }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    o = n.n(l),
+    a = n(442837),
+    s = n(692547),
+    c = n(481060),
+    u = n(232567),
+    d = n(100527),
+    p = n(471445),
+    h = n(15274),
+    g = n(924301),
+    f = n(504160),
+    m = n(151864),
+    b = n(725436),
+    _ = n(497656),
+    E = n(554747),
+    O = n(230900),
     N = n(854698),
     v = n(703656),
-    T = n(922482),
-    S = n(565799),
-    A = n(501655),
-    Z = n(427679),
-    x = n(448206),
-    b = n(184301),
-    L = n(347475),
-    y = n(496675),
-    O = n(594174),
-    P = n(662868),
-    R = n(981631),
-    j = n(765305),
-    D = n(388032),
-    w = n(809715);
-function M(e) {
+    y = n(922482),
+    I = n(565799),
+    C = n(501655),
+    S = n(427679),
+    T = n(448206),
+    P = n(184301),
+    j = n(347475),
+    A = n(496675),
+    Z = n(594174),
+    x = n(662868),
+    L = n(981631),
+    w = n(765305),
+    R = n(388032),
+    D = n(877662);
+function k(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function M(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function U(e) {
     let { guild: t, isStudyRoomNotice: n = !1 } = e,
-        r = (0, E.y)(t.id),
-        M = (0, I.k5)(t.id),
-        k = (0, s.e7)([Z.Z], () => Z.Z.getStageInstanceByChannel(null == r ? void 0 : r.id), [r]),
-        { isStageNoticeHidden: U, isEventNoticeHidden: G } = (0, s.cj)(
-            [_.Z],
+        l = (0, _.y)(t.id),
+        U = (0, E.k5)(t.id),
+        G = (0, a.e7)([S.Z], () => S.Z.getStageInstanceByChannel(null == l ? void 0 : l.id), [l]),
+        { isStageNoticeHidden: W, isEventNoticeHidden: V } = (0, a.cj)(
+            [m.Z],
             () => ({
-                isStageNoticeHidden: _.Z.isLiveChannelNoticeHidden({ stageId: null == k ? void 0 : k.id }),
-                isEventNoticeHidden: _.Z.isLiveChannelNoticeHidden({ eventId: null == M ? void 0 : M.id })
+                isStageNoticeHidden: m.Z.isLiveChannelNoticeHidden({ stageId: null == G ? void 0 : G.id }),
+                isEventNoticeHidden: m.Z.isLiveChannelNoticeHidden({ eventId: null == U ? void 0 : U.id })
             }),
-            [k, M]
+            [G, U]
         ),
-        B = null == r ? void 0 : r.id,
-        V = (0, s.Wu)([S.Z], () => [...new Set(S.Z.getMutableParticipants(B, A.pV.SPEAKER).map((e) => e.user))], [B]),
-        H = (0, s.e7)([S.Z], () => (null != B ? S.Z.getParticipantCount(B, A.pV.AUDIENCE) : 0), [B]),
-        F = (0, s.e7)([y.Z], () => y.Z.can(R.Plq.CONNECT, r)),
-        z = (0, x.Z)(null == r ? void 0 : r.id),
-        W = null == M ? void 0 : M.creator_id,
-        Y = (0, s.e7)([O.default], () => O.default.getUser(W), [W]);
-    l.useEffect(() => {
-        null != W && (0, c.PR)(W);
-    }, [W]);
+        B = null == l ? void 0 : l.id,
+        H = (0, a.Wu)([I.Z], () => [...new Set(I.Z.getMutableParticipants(B, C.pV.SPEAKER).map((e) => e.user))], [B]),
+        F = (0, a.e7)([I.Z], () => (null != B ? I.Z.getParticipantCount(B, C.pV.AUDIENCE) : 0), [B]),
+        z = (0, a.e7)([A.Z], () => A.Z.can(L.Plq.CONNECT, l)),
+        Y = (0, T.Z)(null == l ? void 0 : l.id),
+        K = null == U ? void 0 : U.creator_id,
+        q = (0, a.e7)([Z.default], () => Z.default.getUser(K), [K]);
+    i.useEffect(() => {
+        null != K && (0, u.PR)(K);
+    }, [K]);
     let {
-        noticeType: K,
-        title: q,
-        location: X,
-        locationIcon: Q,
-        canListenIn: J,
-        buttonText: $,
-        users: ee,
-        overflowUsers: et,
-        onClose: en
-    } = l.useMemo(
+        noticeType: X,
+        title: Q,
+        location: J,
+        locationIcon: $,
+        canListenIn: ee,
+        buttonText: et,
+        users: en,
+        overflowUsers: er,
+        onClose: ei
+    } = i.useMemo(
         () =>
             (function (e) {
-                let { guildEvent: t, stageInstance: n, activeChannel: l, canConnect: r, myRole: a, eventCreator: s, speakers: o, listenerCount: c, isEventNoticeHidden: u, isStageNoticeHidden: m, isStudyRoomNotice: _ } = e,
-                    E = null != n && null != l && !m,
-                    I = null != t ? (0, N.DK)(t) : null;
-                if (_ && null != l) {
-                    let e = (0, h.KS)(l);
+                let { guildEvent: t, stageInstance: n, activeChannel: i, canConnect: l, myRole: o, eventCreator: a, speakers: s, listenerCount: u, isEventNoticeHidden: d, isStageNoticeHidden: h, isStudyRoomNotice: m } = e,
+                    _ = null != n && null != i && !h,
+                    E = null != t ? (0, N.DK)(t) : null;
+                if (m && null != i) {
+                    let e = (0, p.KS)(i);
                     return {
                         noticeType: 3,
-                        title: '\uD83D\uDCDA\u2615 '.concat(l.name),
-                        location: D.intl.string(D.t.LZA6NT),
+                        title: '\uD83D\uDCDA\u2615 '.concat(i.name),
+                        location: R.NW.string(R.t.LZA6NT),
                         locationIcon:
                             null != e
-                                ? (0, i.jsx)(e, {
+                                ? (0, r.jsx)(e, {
                                       size: 'xs',
                                       color: 'currentColor',
-                                      className: w.locationIcon
+                                      className: D.locationIcon
                                   })
                                 : null,
-                        canListenIn: r,
-                        buttonText: D.intl.string(D.t.wBoE6O),
+                        canListenIn: l,
+                        buttonText: R.NW.string(R.t.wBoE6O),
                         users: [],
                         overflowUsers: null
                     };
                 }
-                if (null == t || u) {
-                    if (E) {
-                        let e = D.intl.string(D.t.ZYO5OD);
+                if (null == t || d) {
+                    if (_) {
+                        let e = R.NW.string(R.t.ZYO5OD);
                         return (
-                            (null == a ? void 0 : a.speaker) ? (e = D.intl.string(D.t['/cnSFR'])) : null != a && (e = D.intl.string(D.t.btSGOj)),
+                            (null == o ? void 0 : o.speaker) ? (e = R.NW.string(R.t['/cnSFR'])) : null != o && (e = R.NW.string(R.t.btSGOj)),
                             {
                                 noticeType: 0,
                                 title: n.topic,
-                                location: l.name,
-                                locationIcon: (0, i.jsx)(d.ewx, {
+                                location: i.name,
+                                locationIcon: (0, r.jsx)(c.ewx, {
                                     size: 'custom',
                                     color: 'currentColor',
                                     width: 16,
                                     height: 16,
-                                    className: w.locationIcon
+                                    className: D.locationIcon
                                 }),
-                                canListenIn: r,
+                                canListenIn: l,
                                 buttonText: e,
-                                onClose: () => (0, g.ji)({ stageId: null == n ? void 0 : n.id }),
-                                users: o.length > 5 ? o.slice(0, 5) : o,
+                                onClose: () => (0, f.ji)({ stageId: null == n ? void 0 : n.id }),
+                                users: s.length > 5 ? s.slice(0, 5) : s,
                                 overflowUsers:
-                                    c < 1
+                                    u < 1
                                         ? null
-                                        : (0, i.jsxs)('div', {
-                                              className: w.pill,
+                                        : (0, r.jsxs)('div', {
+                                              className: D.pill,
                                               children: [
-                                                  (0, i.jsx)(d.VWR, {
+                                                  (0, r.jsx)(c.VWR, {
                                                       size: 'custom',
                                                       color: 'currentColor',
                                                       width: 12,
                                                       height: 12,
-                                                      className: w.pillIcon
+                                                      className: D.pillIcon
                                                   }),
-                                                  (0, i.jsx)(d.Text, {
+                                                  (0, r.jsx)(c.Text, {
                                                       variant: 'text-xs/medium',
                                                       color: 'header-secondary',
-                                                      className: w.pillLabel,
-                                                      children: c
+                                                      className: D.pillLabel,
+                                                      children: u
                                                   })
                                               ]
                                           })
@@ -137,127 +180,127 @@ function M(e) {
                         );
                     }
                 } else {
-                    if (t.entity_type === j.WX.STAGE_INSTANCE && E) {
-                        let e = D.intl.string(D.t.ZYO5OD);
+                    if (t.entity_type === w.WX.STAGE_INSTANCE && _) {
+                        let e = R.NW.string(R.t.ZYO5OD);
                         return (
-                            (null == a ? void 0 : a.speaker) ? (e = D.intl.string(D.t['/cnSFR'])) : null != a && (e = D.intl.string(D.t.btSGOj)),
+                            (null == o ? void 0 : o.speaker) ? (e = R.NW.string(R.t['/cnSFR'])) : null != o && (e = R.NW.string(R.t.btSGOj)),
                             {
                                 noticeType: 0,
                                 title: n.topic,
-                                location: l.name,
-                                locationIcon: (0, i.jsx)(d.ewx, {
+                                location: i.name,
+                                locationIcon: (0, r.jsx)(c.ewx, {
                                     size: 'custom',
                                     color: 'currentColor',
                                     width: 16,
                                     height: 16,
-                                    className: w.locationIcon
+                                    className: D.locationIcon
                                 }),
-                                canListenIn: r,
+                                canListenIn: l,
                                 buttonText: e,
-                                onClose: () => (0, g.ji)({ stageId: null == n ? void 0 : n.id }),
-                                users: o.length > 5 ? o.slice(0, 5) : o,
+                                onClose: () => (0, f.ji)({ stageId: null == n ? void 0 : n.id }),
+                                users: s.length > 5 ? s.slice(0, 5) : s,
                                 overflowUsers:
-                                    c < 1
+                                    u < 1
                                         ? null
-                                        : (0, i.jsxs)('div', {
-                                              className: w.pill,
+                                        : (0, r.jsxs)('div', {
+                                              className: D.pill,
                                               children: [
-                                                  (0, i.jsx)(d.VWR, {
+                                                  (0, r.jsx)(c.VWR, {
                                                       size: 'custom',
                                                       color: 'currentColor',
                                                       width: 12,
                                                       height: 12,
-                                                      className: w.pillIcon
+                                                      className: D.pillIcon
                                                   }),
-                                                  (0, i.jsx)(d.Text, {
+                                                  (0, r.jsx)(c.Text, {
                                                       variant: 'text-xs/medium',
                                                       color: 'header-secondary',
-                                                      className: w.pillLabel,
-                                                      children: c
+                                                      className: D.pillLabel,
+                                                      children: u
                                                   })
                                               ]
                                           })
                             }
                         );
                     }
-                    if (t.entity_type === j.WX.EXTERNAL) {
-                        let e = (0, C.cS)(t);
+                    if (t.entity_type === w.WX.EXTERNAL) {
+                        let e = (0, O.cS)(t);
                         if (null == e) return { noticeType: null };
-                        let n = p.ZP.getUserCount(t.id, I);
+                        let n = g.ZP.getUserCount(t.id, E);
                         return {
                             noticeType: 1,
                             title: t.name,
-                            location: (0, f.m)(e, !0),
-                            locationIcon: (0, i.jsx)(d._tJ, {
+                            location: (0, b.m)(e, !0),
+                            locationIcon: (0, r.jsx)(c._tJ, {
                                 size: 'custom',
                                 color: 'currentColor',
                                 width: 16,
                                 height: 16,
-                                className: w.locationIcon
+                                className: D.locationIcon
                             }),
                             canListenIn: !1,
-                            buttonText: D.intl.string(D.t.iW6Xur),
-                            onClose: () => (0, g.ji)({ eventId: null == t ? void 0 : t.id }),
-                            users: null == s ? [] : [s],
+                            buttonText: R.NW.string(R.t.iW6Xur),
+                            onClose: () => (0, f.ji)({ eventId: null == t ? void 0 : t.id }),
+                            users: null == a ? [] : [a],
                             overflowUsers:
                                 n < 1
                                     ? null
-                                    : (0, i.jsxs)('div', {
-                                          className: w.pill,
+                                    : (0, r.jsxs)('div', {
+                                          className: D.pill,
                                           children: [
-                                              (0, i.jsx)(d.r7p, {
+                                              (0, r.jsx)(c.r7p, {
                                                   size: 'custom',
                                                   color: 'currentColor',
                                                   width: 12,
                                                   height: 12,
-                                                  className: w.pillIcon
+                                                  className: D.pillIcon
                                               }),
-                                              (0, i.jsx)(d.Text, {
+                                              (0, r.jsx)(c.Text, {
                                                   variant: 'text-xs/medium',
                                                   color: 'header-secondary',
-                                                  className: w.pillLabel,
+                                                  className: D.pillLabel,
                                                   children: n
                                               })
                                           ]
                                       })
                         };
                     }
-                    if (t.entity_type === j.WX.VOICE && null != l) {
-                        let e = (0, h.KS)(l),
-                            n = p.ZP.getUserCount(t.id, I);
+                    if (t.entity_type === w.WX.VOICE && null != i) {
+                        let e = (0, p.KS)(i),
+                            n = g.ZP.getUserCount(t.id, E);
                         return {
                             noticeType: 2,
                             title: t.name,
-                            location: l.name,
+                            location: i.name,
                             locationIcon:
                                 null != e
-                                    ? (0, i.jsx)(e, {
+                                    ? (0, r.jsx)(e, {
                                           size: 'xs',
                                           color: 'currentColor',
-                                          className: w.locationIcon
+                                          className: D.locationIcon
                                       })
                                     : null,
-                            canListenIn: r,
-                            buttonText: D.intl.string(D.t.nxUtoa),
-                            onClose: () => (0, g.ji)({ eventId: null == t ? void 0 : t.id }),
-                            users: null == s ? [] : [s],
+                            canListenIn: l,
+                            buttonText: R.NW.string(R.t.nxUtoa),
+                            onClose: () => (0, f.ji)({ eventId: null == t ? void 0 : t.id }),
+                            users: null == a ? [] : [a],
                             overflowUsers:
                                 n < 1
                                     ? null
-                                    : (0, i.jsxs)('div', {
-                                          className: w.pill,
+                                    : (0, r.jsxs)('div', {
+                                          className: D.pill,
                                           children: [
-                                              (0, i.jsx)(d.r7p, {
+                                              (0, r.jsx)(c.r7p, {
                                                   size: 'custom',
                                                   color: 'currentColor',
                                                   width: 12,
                                                   height: 12,
-                                                  className: w.pillIcon
+                                                  className: D.pillIcon
                                               }),
-                                              (0, i.jsx)(d.Text, {
+                                              (0, r.jsx)(c.Text, {
                                                   variant: 'text-xs/medium',
                                                   color: 'header-secondary',
-                                                  className: w.pillLabel,
+                                                  className: D.pillLabel,
                                                   children: n
                                               })
                                           ]
@@ -267,116 +310,120 @@ function M(e) {
                 }
                 return { noticeType: null };
             })({
-                guildEvent: M,
-                stageInstance: k,
-                activeChannel: r,
-                canConnect: F,
-                myRole: z,
-                eventCreator: Y,
-                speakers: V,
-                listenerCount: H,
-                isEventNoticeHidden: G,
-                isStageNoticeHidden: U,
+                guildEvent: U,
+                stageInstance: G,
+                activeChannel: l,
+                canConnect: z,
+                myRole: Y,
+                eventCreator: q,
+                speakers: H,
+                listenerCount: F,
+                isEventNoticeHidden: V,
+                isStageNoticeHidden: W,
                 isStudyRoomNotice: n
             }),
-        [M, k, r, F, z, Y, V, H, G, U, n]
+        [U, G, l, z, Y, q, H, F, V, W, n]
     );
-    return null == K
+    return null == X
         ? null
-        : (0, i.jsxs)('div', {
-              className: w.container,
+        : (0, r.jsxs)('div', {
+              className: D.container,
               children: [
-                  null != en
-                      ? (0, i.jsx)(d.P3F, {
-                            onClick: en,
-                            className: w.close,
-                            'aria-label': D.intl.string(D.t.WAI6xs),
-                            children: (0, i.jsx)(d.Dio, {
+                  null != ei
+                      ? (0, r.jsx)(c.P3F, {
+                            onClick: ei,
+                            className: D.close,
+                            'aria-label': R.NW.string(R.t.WAI6xs),
+                            children: (0, r.jsx)(c.Dio, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: w.closeIcon
+                                className: D.closeIcon
                             })
                         })
                       : null,
-                  (0, i.jsxs)('div', {
-                      className: w.header,
+                  (0, r.jsxs)('div', {
+                      className: D.header,
                       children: [
-                          (0, i.jsx)(P.Z, {
-                              color: o.Z.unsafe_rawColors.GREEN_230.css,
+                          (0, r.jsx)(x.Z, {
+                              color: s.Z.unsafe_rawColors.GREEN_230.css,
                               width: 16,
                               height: 16
                           }),
-                          (0, i.jsx)(d.Text, {
+                          (0, r.jsx)(c.Text, {
                               variant: 'text-xs/semibold',
                               color: 'text-positive',
-                              children: D.intl.string(D.t.dI3q4u)
+                              children: R.NW.string(R.t.dI3q4u)
                           })
                       ]
                   }),
-                  (ee.length > 0 || null != et) &&
-                      (0, i.jsxs)('div', {
-                          className: w.participants,
+                  (en.length > 0 || null != er) &&
+                      (0, r.jsxs)('div', {
+                          className: D.participants,
                           children: [
-                              ee.map((e) =>
-                                  (0, i.jsx)(
-                                      d.yRy,
+                              en.map((e) =>
+                                  (0, r.jsx)(
+                                      c.yRy,
                                       {
-                                          preload: () => (0, b.Z)(e, { guildId: t.id }),
+                                          preload: () => (0, P.Z)(e, { guildId: t.id }),
                                           renderPopout: (n) =>
-                                              (0, i.jsx)(L.Z, {
-                                                  ...n,
-                                                  userId: e.id,
-                                                  guildId: t.id,
-                                                  newAnalyticsLocations: [u.Z.AVATAR]
-                                              }),
+                                              (0, r.jsx)(
+                                                  j.Z,
+                                                  M(k({}, n), {
+                                                      userId: e.id,
+                                                      guildId: t.id,
+                                                      newAnalyticsLocations: [d.Z.AVATAR]
+                                                  })
+                                              ),
                                           position: 'right',
                                           children: (n) =>
-                                              (0, i.jsx)(d.qEK, {
-                                                  ...n,
-                                                  src: e.getAvatarURL(t.id, 24),
-                                                  'aria-label': e.username,
-                                                  size: d.EFr.SIZE_24,
-                                                  className: w.avatar
-                                              })
+                                              (0, r.jsx)(
+                                                  c.qEK,
+                                                  M(k({}, n), {
+                                                      src: e.getAvatarURL(t.id, 24),
+                                                      'aria-label': e.username,
+                                                      size: c.EFr.SIZE_24,
+                                                      className: D.avatar
+                                                  })
+                                              )
                                       },
                                       e.id
                                   )
                               ),
-                              et
+                              er
                           ]
                       }),
-                  (0, i.jsx)(d.Text, {
+                  (0, r.jsx)(c.Text, {
                       variant: 'text-md/medium',
                       color: 'header-primary',
-                      className: a()(w.title, w.live),
-                      children: q
+                      className: o()(D.title, D.live),
+                      children: Q
                   }),
-                  (0, i.jsxs)('div', {
-                      className: w.locationContainer,
+                  (0, r.jsxs)('div', {
+                      className: D.locationContainer,
                       children: [
-                          Q,
-                          (0, i.jsx)(d.Text, {
+                          $,
+                          (0, r.jsx)(c.Text, {
                               variant: 'text-xs/normal',
                               color: 'text-muted',
-                              className: w.location,
-                              children: X
+                              className: D.location,
+                              children: J
                           })
                       ]
                   }),
-                  J || 1 === K
-                      ? (0, i.jsx)(d.zxk, {
-                            size: d.zxk.Sizes.SMALL,
-                            color: d.zxk.Colors.GREEN,
+                  ee || 1 === X
+                      ? (0, r.jsx)(c.zxk, {
+                            size: c.zxk.Sizes.SMALL,
+                            color: c.zxk.Colors.GREEN,
                             onClick: () => {
-                                if (J) null != r && null != r.getGuildId() && ((0, T.Cq)(r), (0, v.XU)(r.getGuildId(), r.id));
+                                if (ee) null != l && null != l.getGuildId() && ((0, y.Cq)(l), (0, v.XU)(l.getGuildId(), l.id));
                                 else {
-                                    if (null == M) return;
-                                    (0, m.bO)({ eventId: M.id });
+                                    if (null == U) return;
+                                    (0, h.bO)({ eventId: U.id });
                                 }
                             },
-                            className: w.button,
+                            className: D.button,
                             fullWidth: !0,
-                            children: $
+                            children: et
                         })
                       : null
               ]

@@ -1,84 +1,146 @@
-e.d(n, { default: () => p }), e(47120);
-var i = e(200651),
-    r = e(192379),
-    l = e(512722),
-    a = e.n(l),
-    o = e(399606),
-    s = e(481060),
-    c = e(668781),
-    d = e(430824),
-    u = e(495437),
-    m = e(240864),
-    g = e(981631),
-    x = e(388032),
-    h = e(189022);
-function f(t) {
-    let { guildProductListing: n, guildId: e } = t,
-        r = (0, o.e7)([d.Z], () => {
-            var t;
-            return d.Z.getRole(e, null !== (t = null == n ? void 0 : n.role_id) && void 0 !== t ? t : g.lds);
+r.d(t, { default: () => O }), r(47120);
+var n = r(200651),
+    o = r(192379),
+    i = r(512722),
+    c = r.n(i),
+    a = r(399606),
+    l = r(481060),
+    s = r(668781),
+    u = r(430824),
+    d = r(495437),
+    f = r(240864),
+    g = r(981631),
+    p = r(388032),
+    b = r(700927);
+function m(e) {
+    let { guildProductListing: t, guildId: r } = e,
+        o = (0, a.e7)([u.Z], () => {
+            var e;
+            return u.Z.getRole(r, null !== (e = null == t ? void 0 : t.role_id) && void 0 !== e ? e : g.lds);
         });
-    return null == r
+    return null == o
         ? null
-        : (0, i.jsxs)(i.Fragment, {
+        : (0, n.jsxs)(n.Fragment, {
               children: [
-                  (0, i.jsxs)(s.X6q, {
-                      className: h.warningSectionHeader,
+                  (0, n.jsxs)(l.X6q, {
+                      className: b.warningSectionHeader,
                       variant: 'text-md/medium',
                       color: 'text-normal',
                       children: [
-                          (0, i.jsx)(s.P4T, {
+                          (0, n.jsx)(l.P4T, {
                               size: 'sm',
                               color: 'currentColor'
                           }),
-                          (0, i.jsx)(s.LZC, {
+                          (0, n.jsx)(l.LZC, {
                               horizontal: !0,
                               size: 8
                           }),
-                          x.intl.string(x.t.bi7buL)
+                          p.NW.string(p.t.bi7buL)
                       ]
                   }),
-                  (0, i.jsx)(s.Text, {
+                  (0, n.jsx)(l.Text, {
                       variant: 'text-md/normal',
-                      children: x.intl.format(x.t['4kglOT'], { roleName: r.name })
+                      children: p.NW.format(p.t['4kglOT'], { roleName: o.name })
                   })
               ]
           });
 }
-function p(t) {
-    let { guildId: n, productId: e, ...l } = t,
-        [o] = r.useState(() => m.Z.getGuildProduct(e));
-    a()(null != o, 'guildProductListing cannot be null');
-    let [d, g] = r.useState(!1),
-        p = async () => {
+function O(e) {
+    var t,
+        r,
+        { guildId: i, productId: a } = e,
+        u = (function (e, t) {
+            if (null == e) return {};
+            var r,
+                n,
+                o = (function (e, t) {
+                    if (null == e) return {};
+                    var r,
+                        n,
+                        o = {},
+                        i = Object.keys(e);
+                    for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
+                    return o;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var i = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < i.length; n++) (r = i[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
+            }
+            return o;
+        })(e, ['guildId', 'productId']);
+    let [g] = o.useState(() => f.Z.getGuildProduct(a));
+    c()(null != g, 'guildProductListing cannot be null');
+    let [O, y] = o.useState(!1),
+        j = async () => {
             try {
-                g(!0), await u.mh(n, e);
-            } catch (t) {
-                c.Z.show({
-                    title: x.intl.string(x.t.OzgkxM),
-                    body: t.message
+                y(!0), await d.mh(i, a);
+            } catch (e) {
+                s.Z.show({
+                    title: p.NW.string(p.t.OzgkxM),
+                    body: e.message
                 });
             } finally {
-                g(!1);
+                y(!1);
             }
         };
-    return (0, i.jsxs)(s.ConfirmModal, {
-        ...l,
-        className: h.modalContainer,
-        header: x.intl.string(x.t['/gaTp6']),
-        confirmText: x.intl.string(x.t.E4nVWF),
-        cancelText: x.intl.string(x.t['ETE/oK']),
-        loading: d,
-        onConfirm: p,
-        children: [
-            (0, i.jsx)(s.Text, {
-                variant: 'text-md/normal',
-                children: x.intl.format(x.t.CPQsjo, { productName: o.name })
+    return (0, n.jsxs)(
+        l.ConfirmModal,
+        ((t = (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var r = null != arguments[t] ? arguments[t] : {},
+                    n = Object.keys(r);
+                'function' == typeof Object.getOwnPropertySymbols &&
+                    (n = n.concat(
+                        Object.getOwnPropertySymbols(r).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                        })
+                    )),
+                    n.forEach(function (t) {
+                        var n;
+                        (n = r[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: n,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0
+                                  })
+                                : (e[t] = n);
+                    });
+            }
+            return e;
+        })({}, u)),
+        (r = r =
+            {
+                className: b.modalContainer,
+                header: p.NW.string(p.t['/gaTp6']),
+                confirmText: p.NW.string(p.t.E4nVWF),
+                cancelText: p.NW.string(p.t['ETE/oK']),
+                loading: O,
+                onConfirm: j,
+                children: [
+                    (0, n.jsx)(l.Text, {
+                        variant: 'text-md/normal',
+                        children: p.NW.format(p.t.CPQsjo, { productName: g.name })
+                    }),
+                    (0, n.jsx)(m, {
+                        guildProductListing: g,
+                        guildId: i
+                    })
+                ]
             }),
-            (0, i.jsx)(f, {
-                guildProductListing: o,
-                guildId: n
-            })
-        ]
-    });
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+            : (function (e, t) {
+                  var r = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var n = Object.getOwnPropertySymbols(e);
+                      r.push.apply(r, n);
+                  }
+                  return r;
+              })(Object(r)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+              }),
+        t)
+    );
 }

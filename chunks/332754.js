@@ -1,45 +1,76 @@
-n.d(t, { Z: () => E });
-var i = n(200651);
+n.d(t, { Z: () => _ });
+var r = n(200651);
 n(192379);
-var l = n(481060),
-    r = n(570140),
-    a = n(84615),
-    s = n(429142),
-    o = n(1964),
-    d = n(852758),
-    c = n(314897),
-    u = n(594174),
-    h = n(374023),
-    m = n(886162),
-    p = n(981631),
-    g = n(815660),
-    _ = n(308569),
-    f = n(231338);
-let E = {
+var i = n(481060),
+    l = n(570140),
+    o = n(84615),
+    a = n(429142),
+    s = n(1964),
+    c = n(852758),
+    u = n(314897),
+    d = n(594174),
+    p = n(374023),
+    h = n(886162),
+    g = n(981631),
+    f = n(815660),
+    m = n(308569),
+    b = n(231338);
+let _ = {
     init() {
-        r.Z.subscribe('CONNECTION_OPEN', this.handleRequiredAction), r.Z.subscribe('USER_REQUIRED_ACTION_UPDATE', this.handleRequiredAction), r.Z.subscribe('CURRENT_USER_UPDATE', this.handleCurrentUserUpdate), c.default.addChangeListener(this.handleAuthenticationStoreChanged);
+        l.Z.subscribe('CONNECTION_OPEN', this.handleRequiredAction), l.Z.subscribe('USER_REQUIRED_ACTION_UPDATE', this.handleRequiredAction), l.Z.subscribe('CURRENT_USER_UPDATE', this.handleCurrentUserUpdate), u.default.addChangeListener(this.handleAuthenticationStoreChanged);
     },
     handleRequiredAction(e) {
         let t = e.requiredAction;
-        !h.s.isDisallowPopupsSet() &&
-            null != u.default.getCurrentUser() &&
-            (t === p.c2C.REQUIRE_CAPTCHA || t === p.c2C.REQUIRE_VERIFIED_EMAIL || t === p.c2C.REQUIRE_VERIFIED_PHONE || t === p.c2C.REQUIRE_REVERIFIED_PHONE || t === p.c2C.REQUIRE_VERIFIED_EMAIL_OR_VERIFIED_PHONE || t === p.c2C.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE || t === p.c2C.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE || o.Z.isEmailReverification(t)
-                ? (0, a.q4)(() => (0, i.jsx)(d.Z, {}), {
-                      layerKey: _.CV,
-                      Layer: s.ZP
+        !p.s.isDisallowPopupsSet() &&
+            null != d.default.getCurrentUser() &&
+            (t === g.c2C.REQUIRE_CAPTCHA || t === g.c2C.REQUIRE_VERIFIED_EMAIL || t === g.c2C.REQUIRE_VERIFIED_PHONE || t === g.c2C.REQUIRE_REVERIFIED_PHONE || t === g.c2C.REQUIRE_VERIFIED_EMAIL_OR_VERIFIED_PHONE || t === g.c2C.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE || t === g.c2C.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE || s.Z.isEmailReverification(t)
+                ? (0, o.q4)(() => (0, r.jsx)(c.Z, {}), {
+                      layerKey: m.CV,
+                      Layer: a.ZP
                   })
-                : t === p.c2C.AGREEMENTS
-                  ? (0, l.h7j)((e) => (0, i.jsx)(m.Z, { ...e }), {
-                        modalKey: _.f1,
-                        onCloseRequest: f.Vq
-                    })
-                  : null == t && ((0, a.ob)(_.CV), (0, l.nfh)(_.f1) && (0, l.Mr3)(_.f1)));
+                : t === g.c2C.AGREEMENTS
+                  ? (0, i.h7j)(
+                        (e) =>
+                            (0, r.jsx)(
+                                h.Z,
+                                (function (e) {
+                                    for (var t = 1; t < arguments.length; t++) {
+                                        var n = null != arguments[t] ? arguments[t] : {},
+                                            r = Object.keys(n);
+                                        'function' == typeof Object.getOwnPropertySymbols &&
+                                            (r = r.concat(
+                                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                })
+                                            )),
+                                            r.forEach(function (t) {
+                                                var r;
+                                                (r = n[t]),
+                                                    t in e
+                                                        ? Object.defineProperty(e, t, {
+                                                              value: r,
+                                                              enumerable: !0,
+                                                              configurable: !0,
+                                                              writable: !0
+                                                          })
+                                                        : (e[t] = r);
+                                            });
+                                    }
+                                    return e;
+                                })({}, e)
+                            ),
+                        {
+                            modalKey: m.f1,
+                            onCloseRequest: b.Vq
+                        }
+                    )
+                  : null == t && ((0, o.ob)(m.CV), (0, i.nfh)(m.f1) && (0, i.Mr3)(m.f1)));
     },
     handleAuthenticationStoreChanged() {
-        null == c.default.getId() && ((0, a.ob)(_.CV), (0, l.Mr3)(_.f1), (0, l.Mr3)(_.HR), (0, l.Mr3)(_.F0), (0, l.Mr3)(g.M));
+        null == u.default.getId() && ((0, o.ob)(m.CV), (0, i.Mr3)(m.f1), (0, i.Mr3)(m.HR), (0, i.Mr3)(m.F0), (0, i.Mr3)(f.M));
     },
     handleCurrentUserUpdate(e) {
         let { user: t } = e;
-        t.verified && (0, l.Mr3)(_.F0);
+        t.verified && (0, i.Mr3)(m.F0);
     }
 };

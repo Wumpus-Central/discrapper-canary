@@ -1,11 +1,11 @@
-n.d(t, { Z: () => T });
-var i,
-    r = n(442837),
-    a = n(570140),
-    s = n(626135),
-    o = n(358085),
+n.d(t, { Z: () => S });
+var r,
+    i = n(442837),
+    o = n(570140),
+    a = n(626135),
+    s = n(358085),
     l = n(981631);
-function u(e, t, n) {
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,8 +18,24 @@ function u(e, t, n) {
         e
     );
 }
-let c = {
-        desktopType: o.isPlatformEmbedded ? l.qrD.ALL : l.qrD.NEVER,
+function u(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                c(e, t, n[t]);
+            });
+    }
+    return e;
+}
+let d = {
+        desktopType: s.isPlatformEmbedded ? l.qrD.ALL : l.qrD.NEVER,
         disableAllSounds: !1,
         disabledSounds: [],
         ttsType: l.PrB.NEVER,
@@ -27,95 +43,92 @@ let c = {
         taskbarFlash: !0,
         notifyMessagesInSelectedChannel: !1
     },
-    d = c;
-function f(e, t) {
-    __OVERLAY__ || s.default.track(e, t);
+    f = d;
+function p(e, t) {
+    __OVERLAY__ || a.default.track(e, t);
 }
 function _(e) {
     let { desktopType: t } = e;
-    (d.desktopType = t), f(l.rMx.LOCAL_SETTINGS_UPDATED, { notifications_enabled: t === l.qrD.ALL });
+    (f.desktopType = t), p(l.rMx.LOCAL_SETTINGS_UPDATED, { notifications_enabled: t === l.qrD.ALL });
 }
-function p(e) {
+function h(e) {
     let { sounds: t } = e;
-    d.disabledSounds = t;
+    f.disabledSounds = t;
 }
-function h() {
-    d.disableAllSounds = !d.disableAllSounds;
-}
-function m(e) {
-    let { ttsType: t } = e;
-    d.ttsType = t;
+function m() {
+    f.disableAllSounds = !f.disableAllSounds;
 }
 function g(e) {
-    let { disableUnreadBadge: t } = e;
-    d.disableUnreadBadge = t;
+    let { ttsType: t } = e;
+    f.ttsType = t;
 }
 function E(e) {
-    let { taskbarFlash: t } = e;
-    d.taskbarFlash = t;
+    let { disableUnreadBadge: t } = e;
+    f.disableUnreadBadge = t;
 }
 function v(e) {
+    let { taskbarFlash: t } = e;
+    f.taskbarFlash = t;
+}
+function b(e) {
     let { notify: t } = e;
-    d.notifyMessagesInSelectedChannel = t;
+    f.notifyMessagesInSelectedChannel = t;
 }
 function y(e) {
     let { enabled: t, source: n } = e;
-    f(l.rMx.ENABLE_NOTIFICATIONS, {
+    p(l.rMx.ENABLE_NOTIFICATIONS, {
         enabled: t === l.$Ab.ENABLED,
         source: n
     }),
         t === l.$Ab.BLOCKED ? _({ desktopType: l.qrD.NEVER }) : t === l.$Ab.ENABLED && _({ desktopType: l.qrD.ALL });
 }
-class I extends (i = r.ZP.DeviceSettingsStore) {
+class O extends (r = i.ZP.DeviceSettingsStore) {
     initialize(e) {
-        d = {
-            ...c,
-            ...e
-        };
+        f = u({}, d, e);
     }
     getUserAgnosticState() {
-        return d;
+        return f;
     }
     getDesktopType() {
-        return d.desktopType;
+        return f.desktopType;
     }
     getTTSType() {
-        return d.ttsType;
+        return f.ttsType;
     }
     getDisabledSounds() {
-        return d.disabledSounds;
+        return f.disabledSounds;
     }
     getDisableAllSounds() {
-        return d.disableAllSounds;
+        return f.disableAllSounds;
     }
     getDisableUnreadBadge() {
-        return d.disableUnreadBadge;
+        return f.disableUnreadBadge;
     }
     getNotifyMessagesInSelectedChannel() {
-        return d.notifyMessagesInSelectedChannel;
+        return f.notifyMessagesInSelectedChannel;
     }
     get taskbarFlash() {
-        return d.taskbarFlash;
+        return f.taskbarFlash;
     }
     isSoundDisabled(e) {
-        return d.disableAllSounds || -1 !== d.disabledSounds.indexOf(e);
+        return f.disableAllSounds || -1 !== f.disabledSounds.indexOf(e);
     }
 }
-u(I, 'displayName', 'NotificationSettingsStore'),
-    u(I, 'persistKey', 'notifications'),
-    u(I, 'migrations', [
+c(O, 'displayName', 'NotificationSettingsStore'),
+    c(O, 'persistKey', 'notifications'),
+    c(O, 'migrations', [
         (e) => {
-            let t = { ...e };
-            return (t.disabledSounds = t.disabledSounds || []), (t.disableUnreadBadge = t.disableUnreadBadge || !1), (t.taskbarFlash = null == t.taskbarFlash || t.taskbarFlash), (t.ttsType = t.ttsType || l.PrB.NEVER), null == t.desktopType && (t.desktopType = o.isPlatformEmbedded ? l.qrD.ALL : l.qrD.NEVER), t;
+            let t = u({}, e);
+            return (t.disabledSounds = t.disabledSounds || []), (t.disableUnreadBadge = t.disableUnreadBadge || !1), (t.taskbarFlash = null == t.taskbarFlash || t.taskbarFlash), (t.ttsType = t.ttsType || l.PrB.NEVER), null == t.desktopType && (t.desktopType = s.isPlatformEmbedded ? l.qrD.ALL : l.qrD.NEVER), t;
         }
     ]);
-let T = new I(a.Z, {
+let S = new O(o.Z, {
     NOTIFICATIONS_SET_DESKTOP_TYPE: _,
-    NOTIFICATIONS_SET_TTS_TYPE: m,
-    NOTIFICATIONS_SET_DISABLED_SOUNDS: p,
-    NOTIFICATIONS_TOGGLE_ALL_DISABLED: h,
+    NOTIFICATIONS_SET_TTS_TYPE: g,
+    NOTIFICATIONS_SET_DISABLED_SOUNDS: h,
+    NOTIFICATIONS_TOGGLE_ALL_DISABLED: m,
     NOTIFICATIONS_SET_PERMISSION_STATE: y,
-    NOTIFICATIONS_SET_DISABLE_UNREAD_BADGE: g,
-    NOTIFICATIONS_SET_TASKBAR_FLASH: E,
-    NOTIFICATIONS_SET_NOTIFY_MESSAGES_IN_SELECTED_CHANNEL: v
+    NOTIFICATIONS_SET_DISABLE_UNREAD_BADGE: E,
+    NOTIFICATIONS_SET_TASKBAR_FLASH: v,
+    NOTIFICATIONS_SET_NOTIFY_MESSAGES_IN_SELECTED_CHANNEL: b
 });

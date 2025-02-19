@@ -1,70 +1,113 @@
-n.d(t, { Z: () => E }), n(47120);
-var i = n(200651),
-    s = n(192379),
-    r = n(442837),
-    l = n(481060),
-    a = n(570140),
+n.d(t, { Z: () => x }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    s = n(442837),
+    a = n(481060),
+    l = n(570140),
     o = n(2052),
     c = n(932724),
     d = n(716161),
     u = n(672339),
     m = n(747545),
     g = n(131951),
-    h = n(594174),
-    x = n(981631),
-    _ = n(388032),
-    p = n(130529);
-function E(e) {
-    let { previewEnabled: t, onEnablePreview: n, onCancelPreview: E } = e,
-        C = g.Z.getCameraComponent(),
-        [f, T] = s.useState((0, c.P)(h.default.getCurrentUser())),
-        N = s.useRef(!1),
-        S = s.useRef(f),
-        I = (0, o.O)(),
-        b = (0, r.e7)([g.Z], () => g.Z.isVideoAvailable());
+    p = n(594174),
+    h = n(981631),
+    f = n(388032),
+    N = n(839627);
+function x(e) {
+    let { previewEnabled: t, onEnablePreview: n, onCancelPreview: x } = e,
+        b = g.Z.getCameraComponent(),
+        [_, E] = i.useState((0, c.P)(p.default.getCurrentUser())),
+        j = i.useRef(!1),
+        C = i.useRef(_),
+        O = (0, o.O)(),
+        v = (0, s.e7)([g.Z], () => g.Z.isVideoAvailable());
     return (
-        s.useEffect(
+        i.useEffect(
             () => () => {
-                N.current && a.Z.wait(() => (0, d.Up)(S.current));
+                j.current && l.Z.wait(() => (0, d.Up)(C.current));
             },
             []
         ),
-        (0, i.jsx)(m.Z, {
-            selectedBackgroundOption: f,
+        (0, r.jsx)(m.Z, {
+            selectedBackgroundOption: _,
             onSelectBackgroundOption: (e) => {
-                (N.current = !0), (S.current = e), T(e), (0, u.wG)(e, { location: I.location }).catch(x.dG4);
+                (j.current = !0), (C.current = e), E(e), (0, u.wG)(e, { location: O.location }).catch(h.dG4);
             },
-            onCancelPreview: E,
+            onCancelPreview: x,
             renderCamera: (e) =>
                 t
-                    ? (0, i.jsx)('div', {
-                          className: p.cameraWrapper,
-                          children: (0, i.jsxs)('div', {
-                              className: p.camera,
+                    ? (0, r.jsx)('div', {
+                          className: N.cameraWrapper,
+                          children: (0, r.jsxs)('div', {
+                              className: N.camera,
                               children: [
-                                  (0, i.jsx)(C, {
+                                  (0, r.jsx)(b, {
                                       deviceId: e,
                                       width: 387,
                                       height: 218,
                                       disabled: !t
                                   }),
-                                  (0, i.jsx)(m.S, {})
+                                  (0, r.jsx)(m.S, {})
                               ]
                           })
                       })
-                    : (0, i.jsxs)('div', {
-                          className: p.cameraWrapper,
+                    : (0, r.jsxs)('div', {
+                          className: N.cameraWrapper,
                           children: [
-                              (0, i.jsx)('div', { className: p.previewImage }),
-                              (0, i.jsx)(l.ua7, {
-                                  text: b ? null : _.intl.string(_.t['8jSzSU']),
-                                  children: (e) =>
-                                      (0, i.jsx)(l.zxk, {
-                                          ...e,
-                                          onClick: n,
-                                          disabled: !b,
-                                          children: _.intl.string(_.t.JIf4v7)
-                                      })
+                              (0, r.jsx)('div', { className: N.previewImage }),
+                              (0, r.jsx)(a.ua7, {
+                                  text: v ? null : f.NW.string(f.t['8jSzSU']),
+                                  children: (e) => {
+                                      var t, i;
+                                      return (0, r.jsx)(
+                                          a.zxk,
+                                          ((t = (function (e) {
+                                              for (var t = 1; t < arguments.length; t++) {
+                                                  var n = null != arguments[t] ? arguments[t] : {},
+                                                      r = Object.keys(n);
+                                                  'function' == typeof Object.getOwnPropertySymbols &&
+                                                      (r = r.concat(
+                                                          Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                              return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                          })
+                                                      )),
+                                                      r.forEach(function (t) {
+                                                          var r;
+                                                          (r = n[t]),
+                                                              t in e
+                                                                  ? Object.defineProperty(e, t, {
+                                                                        value: r,
+                                                                        enumerable: !0,
+                                                                        configurable: !0,
+                                                                        writable: !0
+                                                                    })
+                                                                  : (e[t] = r);
+                                                      });
+                                              }
+                                              return e;
+                                          })({}, e)),
+                                          (i = i =
+                                              {
+                                                  onClick: n,
+                                                  disabled: !v,
+                                                  children: f.NW.string(f.t.JIf4v7)
+                                              }),
+                                          Object.getOwnPropertyDescriptors
+                                              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i))
+                                              : (function (e, t) {
+                                                    var n = Object.keys(e);
+                                                    if (Object.getOwnPropertySymbols) {
+                                                        var r = Object.getOwnPropertySymbols(e);
+                                                        n.push.apply(n, r);
+                                                    }
+                                                    return n;
+                                                })(Object(i)).forEach(function (e) {
+                                                    Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(i, e));
+                                                }),
+                                          t)
+                                      );
+                                  }
                               })
                           ]
                       })

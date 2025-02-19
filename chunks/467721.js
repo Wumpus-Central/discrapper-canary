@@ -1,8 +1,8 @@
-n.d(t, { Z: () => d });
-var i,
-    r = n(442837),
+n.d(t, { Z: () => u });
+var r,
+    i = n(442837),
     l = n(570140);
-function s(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,30 +15,42 @@ function s(e, t, n) {
         e
     );
 }
-function a() {
+function s() {
     return { lastTriggered: 0 };
 }
-let o = a();
-class c extends (i = r.ZP.PersistedStore) {
+let a = s();
+class c extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        o = {
-            ...a(),
-            ...(null != e ? e : {})
-        };
+        a = (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    r = Object.keys(n);
+                'function' == typeof Object.getOwnPropertySymbols &&
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        })
+                    )),
+                    r.forEach(function (t) {
+                        o(e, t, n[t]);
+                    });
+            }
+            return e;
+        })({}, s(), null != e ? e : {});
     }
     getState() {
-        return o;
+        return a;
     }
     cooldownIsActive() {
-        return o.lastTriggered >= Date.now() - 172800000;
+        return a.lastTriggered >= Date.now() - 172800000;
     }
 }
-s(c, 'displayName', 'HDStreamingViewerStore'), s(c, 'persistKey', 'HDStreamingViewerStore');
-let d = new c(l.Z, {
+o(c, 'displayName', 'HDStreamingViewerStore'), o(c, 'persistKey', 'HDStreamingViewerStore');
+let u = new c(l.Z, {
     LOGOUT: function () {
-        o = a();
+        a = s();
     },
     HD_STREAMING_VIEWER_UPDATE_LAST_TRIGGERED: function (e) {
-        o.lastTriggered = Date.now();
+        a.lastTriggered = Date.now();
     }
 });

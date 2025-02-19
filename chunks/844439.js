@@ -1,110 +1,135 @@
-t.d(n, {
-    M: () => r,
-    ZP: () => C
+n.d(t, {
+    M: () => u,
+    ZP: () => E
 });
-var l,
+var o,
     i,
-    a,
-    o,
-    d = t(442837),
-    c = t(570140),
-    r = (((l = {})[(l.FETCHING = 0)] = 'FETCHING'), (l[(l.FETCHED = 1)] = 'FETCHED'), (l[(l.ERROR = 2)] = 'ERROR'), l);
-let u = {},
-    s = {},
-    m = {};
-function E(e) {
-    let { location: n, channelId: t, withCommands: l } = e;
-    return 'location:'.concat(n, ' channelId:').concat('0', ' withCommands:').concat(l);
+    r = n(442837),
+    l = n(570140);
+function a(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
 }
-let v = Object.freeze([]);
-class p extends (o = d.ZP.Store) {
+function c(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            o = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (o = o.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            o.forEach(function (t) {
+                a(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function d(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var o = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, o);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+var u = (((o = {})[(o.FETCHING = 0)] = 'FETCHING'), (o[(o.FETCHED = 1)] = 'FETCHED'), (o[(o.ERROR = 2)] = 'ERROR'), o);
+let s = {},
+    m = {},
+    p = {};
+function f(e) {
+    let { location: t, channelId: n, withCommands: o } = e;
+    return 'location:'.concat(t, ' channelId:').concat('0', ' withCommands:').concat(o);
+}
+let O = Object.freeze([]);
+class b extends (i = r.ZP.Store) {
     getLastFetchTimeMs(e) {
-        let { location: n, channelId: t, withCommands: l } = e;
-        return m[
-            E({
-                location: n,
-                channelId: t,
-                withCommands: l
+        let { location: t, channelId: n, withCommands: o } = e;
+        return p[
+            f({
+                location: t,
+                channelId: n,
+                withCommands: o
             })
         ];
     }
     getFetchState(e) {
-        let { location: n, channelId: t, withCommands: l } = e;
-        return s[
-            E({
-                location: n,
-                channelId: t,
-                withCommands: l
+        let { location: t, channelId: n, withCommands: o } = e;
+        return m[
+            f({
+                location: t,
+                channelId: n,
+                withCommands: o
             })
         ];
     }
     getRecommendations(e) {
-        var n;
-        let { location: t, channelId: l, withCommands: i } = e;
+        var t;
+        let { location: n, channelId: o, withCommands: i } = e;
         return null !==
-            (n =
-                u[
-                    E({
-                        location: t,
-                        channelId: l,
+            (t =
+                s[
+                    f({
+                        location: n,
+                        channelId: o,
                         withCommands: i
                     })
-                ]) && void 0 !== n
-            ? n
-            : v;
+                ]) && void 0 !== t
+            ? t
+            : O;
     }
 }
-(a = void 0),
-    (i = 'displayName') in p
-        ? Object.defineProperty(p, i, {
-              value: a,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (p[i] = a);
-let C = new p(c.Z, {
+a(b, 'displayName', void 0);
+let E = new b(l.Z, {
     APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS: function (e) {
-        let { location: n, channelId: t, withCommands: l } = e;
-        s = {
-            ...s,
-            [E({
-                location: n,
-                channelId: t,
-                withCommands: l
+        let { location: t, channelId: n, withCommands: o } = e;
+        m = d(c({}, m), {
+            [f({
+                location: t,
+                channelId: n,
+                withCommands: o
             })]: 0
-        };
+        });
     },
     APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS_SUCCESS: function (e) {
-        let { recommendations: n, location: t, channelId: l, withCommands: i } = e,
-            a = E({
-                location: t,
-                channelId: l,
+        let { recommendations: t, location: n, channelId: o, withCommands: i } = e,
+            r = f({
+                location: n,
+                channelId: o,
                 withCommands: i
             });
-        (u = {
-            ...u,
-            [a]: n
-        }),
-            (s = {
-                ...s,
-                [a]: 1
-            });
-        let o = Date.now();
-        m = {
-            ...m,
-            [a]: o
-        };
+        (s = d(c({}, s), { [r]: t })), (m = d(c({}, m), { [r]: 1 }));
+        let l = Date.now();
+        p = d(c({}, p), { [r]: l });
     },
     APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS_FAILURE: function (e) {
-        let { location: n, channelId: t, withCommands: l } = e;
-        s = {
-            ...s,
-            [E({
-                location: n,
-                channelId: t,
-                withCommands: l
+        let { location: t, channelId: n, withCommands: o } = e;
+        m = d(c({}, m), {
+            [f({
+                location: t,
+                channelId: n,
+                withCommands: o
             })]: 2
-        };
+        });
     }
 });

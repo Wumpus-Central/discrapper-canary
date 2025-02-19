@@ -1,78 +1,132 @@
-n.d(t, { Z: () => g });
-var i = n(200651);
+n.d(t, { Z: () => y });
+var r = n(200651);
 n(192379);
-var r = n(120356),
-    a = n.n(r),
-    s = n(442837),
-    o = n(481060),
+var i = n(120356),
+    o = n.n(i),
+    a = n(442837),
+    s = n(481060),
     l = n(906732),
-    u = n(1585),
-    c = n(158776),
+    c = n(1585),
+    u = n(158776),
     d = n(998502),
     f = n(445924),
-    _ = n(654904),
-    p = n(486324),
-    h = n(695731);
-let m = d.ZP.getEnableHardwareAcceleration() ? o.Xo$ : o.qEK;
+    p = n(654904),
+    _ = n(486324),
+    h = n(552370);
+function m(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
 function g(e) {
-    let { user: t, guild: n, displayProfile: r, canUsePremiumCustomization: d, previewAvatar: g, previewAvatarDecoration: E, previewTheme: v, previewPrimaryColor: y, className: I, disabledInputs: T, isTryItOutFlow: b, onUpsellClick: S } = e,
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                m(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function E(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function v(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : E(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let b = d.ZP.getEnableHardwareAcceleration() ? s.Xo$ : s.qEK;
+function y(e) {
+    let { user: t, guild: n, displayProfile: i, canUsePremiumCustomization: d, previewAvatar: m, previewAvatarDecoration: E, previewTheme: y, previewPrimaryColor: O, className: S, disabledInputs: I, isTryItOutFlow: T, onUpsellClick: N } = e,
         { analyticsLocations: A } = (0, l.ZP)(),
-        N = (0, s.e7)([c.Z], () => c.Z.getStatus(t.id)),
-        C = null == n || (null == r ? void 0 : r.canUsePremiumProfileCustomization) || d,
-        R = (0, i.jsx)(m, {
-            src: g,
+        C = (0, a.e7)([u.Z], () => u.Z.getStatus(t.id)),
+        R = null == n || (null == i ? void 0 : i.canUsePremiumProfileCustomization) || d,
+        P = (0, r.jsx)(b, {
+            src: m,
             avatarDecoration: E,
-            imageClassName: a()(I, { [h.overlay]: !T }),
-            size: o.EFr.SIZE_80,
+            imageClassName: o()(S, { [h.overlay]: !I }),
+            size: s.EFr.SIZE_80,
             'aria-label': t.username,
-            status: N,
+            status: C,
             statusTooltip: !1,
-            statusBackdropColor: null != y ? (0, o.QFD)(v) : void 0
+            statusBackdropColor: null != O ? (0, s.QFD)(y) : void 0
         });
-    return T
-        ? (0, i.jsx)('div', {
+    return I
+        ? (0, r.jsx)('div', {
               className: h.avatar,
-              children: R
+              children: P
           })
-        : C
-          ? (0, i.jsx)(o.yRy, {
+        : R
+          ? (0, r.jsx)(s.yRy, {
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
-                    return (0, i.jsx)(f.Z, {
+                    return (0, r.jsx)(f.Z, {
                         className: h.menu,
                         onClose: t,
-                        onChangeAvatar: () => (0, _.$r)(p.pC.AVATAR, null == n ? void 0 : n.id, b),
+                        onChangeAvatar: () => (0, p.$r)(_.pC.AVATAR, null == n ? void 0 : n.id, T),
                         onChangeAvatarDecoration: () => {
-                            (0, u.ps)({
+                            (0, c.ps)({
                                 guild: null == n ? void 0 : n,
                                 analyticsLocations: A,
-                                isTryItOutFlow: b
+                                isTryItOutFlow: T
                             });
                         }
                     });
                 },
                 children: (e) =>
-                    (0, i.jsxs)(o.P3F, {
-                        ...e,
-                        className: a()(h.avatar, h.clickable),
-                        children: [
-                            R,
-                            (0, i.jsx)(o.vdY, {
-                                size: 'custom',
-                                className: h.overlayIcon,
-                                width: 20,
-                                height: 20,
-                                color: 'white'
-                            })
-                        ]
-                    })
+                    (0, r.jsxs)(
+                        s.P3F,
+                        v(g({}, e), {
+                            className: o()(h.avatar, h.clickable),
+                            children: [
+                                P,
+                                (0, r.jsx)(s.vdY, {
+                                    size: 'custom',
+                                    className: h.overlayIcon,
+                                    width: 20,
+                                    height: 20,
+                                    color: 'white'
+                                })
+                            ]
+                        })
+                    )
             })
-          : (0, i.jsxs)(o.P3F, {
-                onClick: S,
-                className: a()(h.avatar, h.clickable),
+          : (0, r.jsxs)(s.P3F, {
+                onClick: N,
+                className: o()(h.avatar, h.clickable),
                 children: [
-                    R,
-                    (0, i.jsx)(o.SrA, {
+                    P,
+                    (0, r.jsx)(s.SrA, {
                         size: 'custom',
                         className: h.overlayIcon,
                         width: 20,

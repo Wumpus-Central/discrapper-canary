@@ -1,60 +1,60 @@
 n.d(t, {
-    V9: () => I,
-    ek: () => S
+    V9: () => O,
+    ek: () => C
 }),
     n(47120);
-var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    l = n.n(r),
-    a = n(512969),
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(512969),
     o = n(481060),
     c = n(351773),
     d = n(100527),
     u = n(906732),
     m = n(335131),
     g = n(341907),
-    h = n(23547),
-    x = n(790542),
-    _ = n(317257),
-    p = n(120786),
-    E = n(970815),
-    C = n(981631),
-    f = n(215023),
-    T = n(388032),
-    N = n(125709);
-let S = {
-        START: N.alignLeft,
-        END: N.alignRight
+    p = n(23547),
+    h = n(790542),
+    f = n(317257),
+    N = n(120786),
+    x = n(970815),
+    b = n(981631),
+    _ = n(215023),
+    E = n(388032),
+    j = n(192926);
+let C = {
+        START: j.alignLeft,
+        END: j.alignRight
     },
-    I = (e) => {
-        let { showNotificationBadge: t, ctaText: r, ctaOnClick: I, isCoachmarkEnabled: b = !0, linkText: v = T.intl.string(T.t['7f4H7O']), linkTo: j, cardAlignment: A = S.START, className: O } = e,
-            { balance: R } = (0, x.A)(),
-            [P, D] = s.useState(_.b.DEFAULT),
-            [y, Z] = s.useState(!1),
-            [k, L] = s.useState(!1),
-            B = (0, a.TH)(),
-            { analyticsLocations: M } = (0, u.ZP)(d.Z.VIRTUAL_CURRENCY_BALANCE_WIDGET),
-            w = s.useRef(null),
-            { shouldOpen: V } = (0, h.Mm)({
+    O = (e) => {
+        let { showNotificationBadge: t, ctaText: s, ctaOnClick: O, isCoachmarkEnabled: v = !0, linkText: S = E.NW.string(E.t['7f4H7O']), linkTo: T, cardAlignment: I = C.START, className: y } = e,
+            { balance: A } = (0, h.A)(),
+            [P, R] = i.useState(f.b.DEFAULT),
+            [D, Z] = i.useState(!1),
+            [w, k] = i.useState(!1),
+            W = (0, l.TH)(),
+            { analyticsLocations: L } = (0, u.ZP)(d.Z.VIRTUAL_CURRENCY_BALANCE_WIDGET),
+            B = i.useRef(null),
+            { shouldOpen: M } = (0, p.Mm)({
                 renderEarnedOrbsCoachmark: (e) => {
                     var t;
-                    let { earnedOrbsQuantity: s } = e;
+                    let { earnedOrbsQuantity: i } = e;
                     (t = {
-                        earnedOrbsQuantity: s,
-                        backgroundElementRef: w,
-                        isCoachmarkEnabled: b,
-                        onCloseCallback: C.dG4,
-                        onClickPill: C.dG4,
+                        earnedOrbsQuantity: i,
+                        backgroundElementRef: B,
+                        isCoachmarkEnabled: v,
+                        onCloseCallback: b.dG4,
+                        onClickPill: b.dG4,
                         linkOnClick: () => {
                             (0, g.navigateToQuestHome)();
                         },
                         ctaOnClick: () => {
-                            B.pathname !== C.Z5c.COLLECTIBLES_SHOP &&
+                            W.pathname !== b.Z5c.COLLECTIBLES_SHOP &&
                                 (0, m.mK)({
                                     openInLayer: !1,
-                                    tab: f.AW.ORBS,
-                                    analyticsLocations: M,
+                                    tab: _.AW.ORBS,
+                                    analyticsLocations: L,
                                     analyticsSource: d.Z.VIRTUAL_CURRENCY_EARNED_ORBS_COACHMARK
                                 });
                         }
@@ -62,33 +62,57 @@ let S = {
                         (0, o.ZDy)(async () => {
                             let { BalanceWidgetEarnedOrbsCoachmarkModal: e } = await Promise.resolve().then(n.bind(n, 720463));
                             return (n) =>
-                                (0, i.jsx)(e, {
-                                    ...t,
-                                    ...n
-                                });
-                        }, h.cb);
+                                (0, r.jsx)(
+                                    e,
+                                    (function (e) {
+                                        for (var t = 1; t < arguments.length; t++) {
+                                            var n = null != arguments[t] ? arguments[t] : {},
+                                                r = Object.keys(n);
+                                            'function' == typeof Object.getOwnPropertySymbols &&
+                                                (r = r.concat(
+                                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                    })
+                                                )),
+                                                r.forEach(function (t) {
+                                                    var r;
+                                                    (r = n[t]),
+                                                        t in e
+                                                            ? Object.defineProperty(e, t, {
+                                                                  value: r,
+                                                                  enumerable: !0,
+                                                                  configurable: !0,
+                                                                  writable: !0
+                                                              })
+                                                            : (e[t] = r);
+                                                });
+                                        }
+                                        return e;
+                                    })({}, t, n)
+                                );
+                        }, p.cb);
                 }
             }),
-            U = s.useCallback(() => {
-                let e = !y;
-                D(e ? _.b.SELECTED : _.b.DEFAULT), Z(e);
-            }, [y]);
-        s.useEffect(() => {
-            b && ((0, h.wH)() || V ? (L(!0), Z(!1)) : L(!1));
-        }, [b, V]);
-        let G = s.useCallback(() => {
-                y && U();
-            }, [y, U]),
-            F = (0, c.Z)(null, G);
-        return (0, i.jsxs)('div', {
-            className: l()(N.container, O, {
-                [N.hidden]: k,
-                [N.visible]: !k
+            U = i.useCallback(() => {
+                let e = !D;
+                R(e ? f.b.SELECTED : f.b.DEFAULT), Z(e);
+            }, [D]);
+        i.useEffect(() => {
+            v && ((0, p.wH)() || M ? (k(!0), Z(!1)) : k(!1));
+        }, [v, M]);
+        let V = i.useCallback(() => {
+                D && U();
+            }, [D, U]),
+            G = (0, c.Z)(null, V);
+        return (0, r.jsxs)('div', {
+            className: a()(j.container, y, {
+                [j.hidden]: w,
+                [j.visible]: !w
             }),
             children: [
-                (0, i.jsx)(E.A4, {
-                    ref: w,
-                    balance: R,
+                (0, r.jsx)(x.A4, {
+                    ref: B,
+                    balance: A,
                     balanceWidgetMode: P,
                     onMouseDown: (e) => {
                         e.stopPropagation();
@@ -96,20 +120,20 @@ let S = {
                     onClick: U,
                     showNotificationBadge: t
                 }),
-                y &&
-                    (0, i.jsx)('div', {
-                        className: l()(N.cardContainer, A),
-                        ref: F,
-                        children: (0, i.jsx)(p.L, {
-                            ctaText: r,
+                D &&
+                    (0, r.jsx)('div', {
+                        className: a()(j.cardContainer, I),
+                        ref: G,
+                        children: (0, r.jsx)(N.L, {
+                            ctaText: s,
                             ctaOnClick: () => {
-                                U(), I();
+                                U(), O();
                             },
-                            linkText: v,
-                            linkTo: j
+                            linkText: S,
+                            linkTo: T
                         })
                     })
             ]
         });
     };
-I.CardAlignment = S;
+O.CardAlignment = C;

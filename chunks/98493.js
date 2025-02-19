@@ -1,66 +1,94 @@
 n.d(t, {
-    m: () => u,
-    p: () => d
+    m: () => d,
+    p: () => u
 }),
     n(47120);
-var i = n(192379),
-    l = n(913527),
-    r = n.n(l),
-    a = n(881052),
-    o = n(709054),
+var r = n(192379),
+    i = n(913527),
+    l = n.n(i),
+    o = n(881052),
+    a = n(709054),
     s = n(693546),
     c = n(246364);
-let d = c.tB * c.hW;
-function u(e) {
+let u = c.tB * c.hW;
+function d(e) {
     let { guildId: t, guildJoinRequests: n } = e,
-        l = i.useRef(!1),
-        [u, h] = i.useState(null),
-        p = i.useRef(null),
-        m = i.useRef(!1);
+        i = r.useRef(!1),
+        [d, p] = r.useState(null),
+        h = r.useRef(null),
+        f = r.useRef(!1);
     return {
-        fetchNextPage: i.useCallback(
-            async (e, i) => {
-                if (l.current) return;
-                let g = ''.concat(e, '-').concat(i),
-                    f = !1;
-                if ((g !== p.current && ((p.current = g), (m.current = !1), (f = !0)), m.current)) return;
-                null != u && h(null);
-                let _ = (function (e, t, n, i) {
-                    let l = n === c.wB.SUBMITTED;
+        fetchNextPage: r.useCallback(
+            async (e, r) => {
+                if (i.current) return;
+                let g = ''.concat(e, '-').concat(r),
+                    m = !1;
+                if ((g !== h.current && ((h.current = g), (f.current = !1), (m = !0)), f.current)) return;
+                null != d && p(null);
+                let b = (function (e, t, n, r) {
+                    let i = n === c.wB.SUBMITTED;
                     if (t === c.Nw.TIMESTAMP_DESC) {
-                        if (i) return { before: o.default.fromTimestamp(new Date().getTime()) };
+                        if (r) return { before: a.default.fromTimestamp(new Date().getTime()) };
                         {
                             let t = e[e.length - 1];
-                            return { before: l ? t.joinRequestId : t.actionedAt };
+                            return { before: i ? t.joinRequestId : t.actionedAt };
                         }
                     }
-                    if (i) return { after: o.default.fromTimestamp(r()().subtract(180, 'days').valueOf()) };
+                    if (r) return { after: a.default.fromTimestamp(l()().subtract(180, 'days').valueOf()) };
                     {
                         let t = e[e.length - 1];
-                        return { after: l ? t.joinRequestId : t.actionedAt };
+                        return { after: i ? t.joinRequestId : t.actionedAt };
                     }
-                })(n, e, i, f);
+                })(n, e, r, m);
                 try {
-                    l.current = !0;
-                    let e = await s.Z.fetchGuildJoinRequests({
-                        guildId: t,
-                        status: i,
-                        limit: d,
-                        force: !0,
-                        ..._
-                    });
+                    i.current = !0;
+                    let e = await s.Z.fetchGuildJoinRequests(
+                        (function (e) {
+                            for (var t = 1; t < arguments.length; t++) {
+                                var n = null != arguments[t] ? arguments[t] : {},
+                                    r = Object.keys(n);
+                                'function' == typeof Object.getOwnPropertySymbols &&
+                                    (r = r.concat(
+                                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                        })
+                                    )),
+                                    r.forEach(function (t) {
+                                        var r;
+                                        (r = n[t]),
+                                            t in e
+                                                ? Object.defineProperty(e, t, {
+                                                      value: r,
+                                                      enumerable: !0,
+                                                      configurable: !0,
+                                                      writable: !0
+                                                  })
+                                                : (e[t] = r);
+                                    });
+                            }
+                            return e;
+                        })(
+                            {
+                                guildId: t,
+                                status: r,
+                                limit: u,
+                                force: !0
+                            },
+                            b
+                        )
+                    );
                     if (null != e) {
                         let { guild_join_requests: t } = e.body;
-                        t.length < d && (m.current = !0);
+                        t.length < u && (f.current = !0);
                     }
                 } catch (e) {
-                    h(new a.Hx(e).getAnyErrorMessage());
+                    p(new o.Hx(e).getAnyErrorMessage());
                 } finally {
-                    l.current = !1;
+                    i.current = !1;
                 }
             },
-            [u, t, n]
+            [d, t, n]
         ),
-        error: u
+        error: d
     };
 }

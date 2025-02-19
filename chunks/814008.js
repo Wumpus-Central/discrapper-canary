@@ -1,127 +1,156 @@
-i.d(t, { Z: () => S }), i(47120);
-var s = i(200651),
-    a = i(192379),
-    n = i(120356),
-    r = i.n(n),
-    l = i(418435),
-    c = i.n(l),
-    d = i(442837),
-    o = i(481060),
-    u = i(558324),
-    m = i(367907),
-    g = i(456268),
-    x = i(626135),
-    h = i(999382),
-    p = i(654351),
-    v = i(259674),
-    N = i(203377),
-    j = i(981631),
-    b = i(388032),
-    f = i(184330);
-let I = /^[A-Za-z0-9\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF-]+$/u,
-    S = (e) => {
+r.d(t, { Z: () => y }), r(474991), r(398202), r(301563), r(47120), r(266796);
+var s = r(200651),
+    a = r(192379),
+    i = r(120356),
+    n = r.n(i),
+    c = r(418435),
+    l = r.n(c),
+    o = r(442837),
+    d = r(481060),
+    u = r(558324),
+    m = r(367907),
+    g = r(456268),
+    p = r(626135),
+    h = r(999382),
+    x = r(654351),
+    N = r(259674),
+    v = r(203377),
+    b = r(981631),
+    f = r(388032),
+    j = r(414225);
+let S = RegExp('^[A-Za-z0-9\\u00A0-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFEF-]+$', 'u'),
+    y = (e) => {
         var t;
-        let { guild: i, guildMetadata: n, headerId: l } = e,
-            [S, C] = a.useState(!1),
-            E = (0, d.e7)([h.Z], () => 'keywords' in h.Z.getErrors()),
-            _ = (e) => {
-                if (I.test(e)) C(!1);
+        let { guild: r, guildMetadata: i, headerId: c } = e,
+            [y, I] = a.useState(!1),
+            C = (0, o.e7)([h.Z], () => 'keywords' in h.Z.getErrors()),
+            E = (e) => {
+                if (S.test(e)) I(!1);
                 else {
-                    C(!0);
+                    I(!0);
                     return;
                 }
-                if ((null == i ? void 0 : i.id) == null) return;
-                let { keywords: t } = n;
-                t.length >= N.G7 || (0, g.zH)(i.id, c()([...t, e.toLowerCase()]));
+                if ((null == r ? void 0 : r.id) == null) return;
+                let { keywords: t } = i;
+                t.length >= v.G7 || (0, g.zH)(r.id, l()([...t, e.toLowerCase()]));
             },
             k = (e) => {
-                _(e),
-                    x.default.track(j.rMx.DISCOVERY_SETUP_POPULAR_TAG_CLICKED, {
-                        tag: e,
-                        primary_category_id: n.primaryCategoryId,
-                        ...(0, m.hH)(i.id)
-                    });
+                E(e),
+                    p.default.track(
+                        b.rMx.DISCOVERY_SETUP_POPULAR_TAG_CLICKED,
+                        (function (e) {
+                            for (var t = 1; t < arguments.length; t++) {
+                                var r = null != arguments[t] ? arguments[t] : {},
+                                    s = Object.keys(r);
+                                'function' == typeof Object.getOwnPropertySymbols &&
+                                    (s = s.concat(
+                                        Object.getOwnPropertySymbols(r).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                        })
+                                    )),
+                                    s.forEach(function (t) {
+                                        var s;
+                                        (s = r[t]),
+                                            t in e
+                                                ? Object.defineProperty(e, t, {
+                                                      value: s,
+                                                      enumerable: !0,
+                                                      configurable: !0,
+                                                      writable: !0
+                                                  })
+                                                : (e[t] = s);
+                                    });
+                            }
+                            return e;
+                        })(
+                            {
+                                tag: e,
+                                primary_category_id: i.primaryCategoryId
+                            },
+                            (0, m.hH)(r.id)
+                        )
+                    );
             },
-            T = S
-                ? b.intl.string(b.t['t/mtnZ'])
-                : E
-                  ? b.intl.format(b.t.loup7u, {
+            _ = y
+                ? f.NW.string(f.t['t/mtnZ'])
+                : C
+                  ? f.NW.format(f.t.loup7u, {
                         onLearnMoreClick: () => {
-                            (0, v.lW)({
-                                articleId: j.BhN.SERVER_DISCOVERY_GUIDELINES,
-                                guildId: i.id,
-                                modalStep: v.tK.TAGS
+                            (0, N.lW)({
+                                articleId: b.BhN.SERVER_DISCOVERY_GUIDELINES,
+                                guildId: r.id,
+                                modalStep: N.tK.TAGS
                             });
                         }
                     })
                   : null,
-            y = new Set(n.keywords);
+            O = new Set(i.keywords);
         return (0, s.jsxs)('div', {
-            className: f.container,
+            className: j.container,
             children: [
                 (0, s.jsxs)('div', {
-                    className: f.content,
+                    className: j.content,
                     children: [
-                        (0, s.jsx)('div', { className: r()(f.stepImage, f.tagImage) }),
-                        (0, s.jsx)(o.X6q, {
+                        (0, s.jsx)('div', { className: n()(j.stepImage, j.tagImage) }),
+                        (0, s.jsx)(d.X6q, {
                             variant: 'heading-xl/semibold',
-                            className: f.header,
-                            id: l,
-                            children: b.intl.string(b.t['0PJZXl'])
+                            className: j.header,
+                            id: c,
+                            children: f.NW.string(f.t['0PJZXl'])
                         }),
-                        (0, s.jsx)(o.Text, {
+                        (0, s.jsx)(d.Text, {
                             color: 'none',
                             variant: 'text-md/normal',
-                            className: f.headerCaption,
-                            children: b.intl.string(b.t.MMEJFB)
+                            className: j.headerCaption,
+                            children: f.NW.string(f.t.MMEJFB)
                         })
                     ]
                 }),
-                (0, s.jsxs)(o.hjN, {
-                    className: f.form,
+                (0, s.jsxs)(d.hjN, {
+                    className: j.form,
                     children: [
-                        (0, s.jsx)(o.vwX, {
+                        (0, s.jsx)(d.vwX, {
                             required: !0,
-                            children: b.intl.string(b.t['0PJZXl'])
+                            children: f.NW.string(f.t['0PJZXl'])
                         }),
-                        (0, s.jsx)(o.R94, {
-                            type: o.geA.DESCRIPTION,
-                            className: f.description,
-                            children: b.intl.string(b.t.ztiTDA)
+                        (0, s.jsx)(d.R94, {
+                            type: d.geA.DESCRIPTION,
+                            className: j.description,
+                            children: f.NW.string(f.t.ztiTDA)
                         }),
                         (0, s.jsx)(u.Z, {
-                            className: r()(f.tags, { [f.error]: null != T }),
-                            tags: n.keywords,
+                            className: n()(j.tags, { [j.error]: null != _ }),
+                            tags: i.keywords,
                             onRemoveTag: (e) => {
-                                if ((null == i ? void 0 : i.id) == null) return;
-                                let t = [...n.keywords];
-                                t.splice(e, 1), (0, g.zH)(i.id, t);
+                                if ((null == r ? void 0 : r.id) == null) return;
+                                let t = [...i.keywords];
+                                t.splice(e, 1), (0, g.zH)(r.id, t);
                             },
-                            onAddTag: _,
-                            maxTags: N.G7,
-                            maxTaxLength: N._0,
-                            placeholder: (null == n ? void 0 : null === (t = n.keywords) || void 0 === t ? void 0 : t.length) === 0 ? b.intl.string(b.t.EL4Lho) : ''
+                            onAddTag: E,
+                            maxTags: v.G7,
+                            maxTaxLength: v._0,
+                            placeholder: (null == i ? void 0 : null === (t = i.keywords) || void 0 === t ? void 0 : t.length) === 0 ? f.NW.string(f.t.EL4Lho) : ''
                         }),
-                        (0, s.jsx)(o.Text, {
-                            className: f.error,
+                        (0, s.jsx)(d.Text, {
+                            className: j.error,
                             color: 'text-danger',
                             variant: 'text-sm/normal',
-                            children: T
+                            children: _
                         })
                     ]
                 }),
                 (0, s.jsx)('div', {
-                    className: f.form,
-                    children: (0, s.jsx)(o.vwX, { children: b.intl.string(b.t.sF28Oj) })
+                    className: j.form,
+                    children: (0, s.jsx)(d.vwX, { children: f.NW.string(f.t.sF28Oj) })
                 }),
                 (0, s.jsx)('div', {
-                    className: f.tagContainer,
-                    children: (0, p.P5)(n.primaryCategoryId).map((e) =>
+                    className: j.tagContainer,
+                    children: (0, x.P5)(i.primaryCategoryId).map((e) =>
                         (0, s.jsx)(
-                            o.eee,
+                            d.eee,
                             {
                                 onClick: () => k(e),
-                                className: r()(f.tag, { [f.usedTag]: y.has(e) }),
+                                className: n()(j.tag, { [j.usedTag]: O.has(e) }),
                                 children: e
                             },
                             e

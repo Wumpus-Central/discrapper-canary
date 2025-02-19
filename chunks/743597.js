@@ -1,82 +1,122 @@
-n.d(t, { Z: () => m });
-var l = n(192379),
+n.d(t, { Z: () => p });
+var r = n(192379),
     i = n(392711),
-    r = n.n(i),
+    l = n.n(i),
     a = n(772848),
-    s = n(846519),
-    o = n(125268),
-    u = n(984063),
-    c = n(813900);
-let d = r().debounce(o.BR, c.Fq, { maxWait: c.Fq });
-function m(e, t, n) {
-    let i = l.useRef((0, a.Z)()),
-        r = l.useRef(new s.Xp()),
-        m = l.useCallback(
-            (l) => {
-                (l.lastUpdatedAt = Date.now()), (0, o.gr)(l, e, n), (0, o.BR)(t, n, l);
+    o = n(846519),
+    s = n(125268),
+    c = n(984063),
+    u = n(813900);
+function d(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function f(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let m = l().debounce(s.BR, u.Fq, { maxWait: u.Fq });
+function p(e, t, n) {
+    let i = r.useRef((0, a.Z)()),
+        l = r.useRef(new o.Xp()),
+        p = r.useCallback(
+            (r) => {
+                (r.lastUpdatedAt = Date.now()), (0, s.gr)(r, e, n), (0, s.BR)(t, n, r);
             },
             [t, n, e]
         ),
-        f = l.useCallback(
-            (l, s, d) => {
+        h = r.useCallback(
+            (r, o, m) => {
                 i.current = (0, a.Z)();
-                let f = {
-                    ...l,
+                let h = f(d({}, r), {
                     id: i.current,
-                    x: s,
-                    y: d,
+                    x: o,
+                    y: m,
                     userId: e,
-                    state: u.f.START,
+                    state: c.f.START,
                     lastUpdatedAt: Date.now()
-                };
-                (0, o.BR)(t, n, f), (0, o.gr)(f, e, n), r.current.start(c.FO, () => m(f));
+                });
+                (0, s.BR)(t, n, h), (0, s.gr)(h, e, n), l.current.start(u.FO, () => p(h));
             },
-            [e, t, n, m]
+            [e, t, n, p]
         ),
-        h = l.useCallback(
-            (l, a, s) => {
-                let f = {
-                    ...l,
+        v = r.useCallback(
+            (r, a, o) => {
+                let h = f(d({}, r), {
                     id: i.current,
                     x: a,
-                    y: s,
+                    y: o,
                     userId: e,
-                    state: u.f.START,
+                    state: c.f.START,
                     lastUpdatedAt: Date.now()
-                };
-                d(t, n, f), (0, o.gr)(f, e, n), r.current.start(c.FO, () => m(f));
+                });
+                m(t, n, h), (0, s.gr)(h, e, n), l.current.start(u.FO, () => p(h));
             },
-            [e, t, n, m]
+            [e, t, n, p]
         ),
-        p = l.useCallback(
-            (l, a, s) => {
-                d.cancel(),
-                    (0, o.Df)(t, n, i.current),
-                    (0, o.gr)(
-                        {
-                            ...l,
+        g = r.useCallback(
+            (r, a, o) => {
+                m.cancel(),
+                    (0, s.Df)(t, n, i.current),
+                    (0, s.gr)(
+                        f(d({}, r), {
                             id: i.current,
                             x: a,
-                            y: s,
+                            y: o,
                             userId: e,
-                            state: u.f.STOP,
+                            state: c.f.STOP,
                             lastUpdatedAt: Date.now()
-                        },
+                        }),
                         e,
                         n
                     ),
-                    r.current.stop();
+                    l.current.stop();
             },
             [t, n, e]
         ),
-        v = l.useCallback((e, t, n) => h(e, t, n), [h]);
-    return l.useMemo(
+        b = r.useCallback((e, t, n) => v(e, t, n), [v]);
+    return r.useMemo(
         () => ({
-            handleMouseDown: f,
-            handleMouseMove: h,
-            handleMouseUp: p,
-            handleMouseEnter: v
+            handleMouseDown: h,
+            handleMouseMove: v,
+            handleMouseUp: g,
+            handleMouseEnter: b
         }),
-        [f, v, h, p]
+        [h, b, v, g]
     );
 }

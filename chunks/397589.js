@@ -1,42 +1,42 @@
-n.d(t, { Z: () => x });
-var a = n(200651),
+n.d(t, { Z: () => y });
+var r = n(200651),
     o = n(192379),
-    i = n(481060),
-    r = n(782568),
+    a = n(481060),
+    i = n(782568),
     s = n(592125),
-    l = n(594174),
-    c = n(63063),
+    c = n(594174),
+    l = n(63063),
     u = n(5192),
     d = n(992970),
     p = n(111810),
-    m = n(287941),
-    g = n(477931),
-    _ = n(235894),
-    h = n(981631),
-    f = n(388032),
-    C = n(158913);
-let x = (e) => {
+    g = n(287941),
+    m = n(477931),
+    f = n(235894),
+    _ = n(981631),
+    b = n(388032),
+    h = n(309784);
+let y = (e) => {
     var t;
     let { message: n } = e,
-        x = o.useRef(null),
+        y = o.useRef(null),
         v = (0, p.p7)('Message Header') && n.hasPotions(),
-        b = s.Z.getChannel(n.getChannelId()),
-        T = null === (t = n.potions) || void 0 === t ? void 0 : t[0],
-        I = o.useMemo(() => {
+        O = s.Z.getChannel(n.getChannelId()),
+        x = null === (t = n.potions) || void 0 === t ? void 0 : t[0],
+        C = o.useMemo(() => {
             var e;
-            if (null == T) return null;
-            let t = l.default.getUser(T.used_by);
-            return null !== (e = (0, u.y)(null == b ? void 0 : b.getGuildId(), null == b ? void 0 : b.id, t)) && void 0 !== e ? e : null == t ? void 0 : t.globalName;
-        }, [T, b]),
-        y = o.useCallback(() => {
-            if (null != x.current && (0, _.Uw)(n)) {
-                let { x: e, y: t, width: a, height: o } = x.current.getBoundingClientRect();
-                (0, m.Z)(
+            if (null == x) return null;
+            let t = c.default.getUser(x.used_by);
+            return null !== (e = (0, u.y)(null == O ? void 0 : O.getGuildId(), null == O ? void 0 : O.id, t)) && void 0 !== e ? e : null == t ? void 0 : t.globalName;
+        }, [x, O]),
+        j = o.useCallback(() => {
+            if (null != y.current && (0, f.Uw)(n)) {
+                let { x: e, y: t, width: r, height: o } = y.current.getBoundingClientRect();
+                (0, g.Z)(
                     n,
                     {
                         x: e,
                         y: t,
-                        w: a,
+                        w: r,
                         h: o
                     },
                     !0,
@@ -44,35 +44,82 @@ let x = (e) => {
                 );
             }
         }, [n]),
-        N = o.useCallback(() => {
-            (0, r.Z)(c.Z.getArticleURL(h.BhN.CONFETTI_POTION));
+        P = o.useCallback(() => {
+            (0, i.Z)(l.Z.getArticleURL(_.BhN.CONFETTI_POTION));
         }, []);
-    return v && null != I && (null == T ? void 0 : T.type) === g.B.CONFETTI
-        ? (0, a.jsx)(i.P3F, {
-              onFocus: y,
-              onClick: N,
-              'aria-label': f.intl.string(f.t.Mp5k6O),
-              children: (0, a.jsx)(i.ua7, {
-                  text: f.intl.formatToPlainString(f.t['FE++aG'], { user: I }),
-                  children: (e) =>
-                      (0, a.jsxs)('div', {
-                          ref: x,
-                          className: C.potionBadge,
-                          ...e,
-                          children: [
-                              (0, a.jsx)(i.l22, {
-                                  size: 'custom',
-                                  color: 'currentColor',
-                                  width: 12,
-                                  height: 12
+    return v && null != C && (null == x ? void 0 : x.type) === m.B.CONFETTI
+        ? (0, r.jsx)(a.P3F, {
+              onFocus: j,
+              onClick: P,
+              'aria-label': b.NW.string(b.t.Mp5k6O),
+              children: (0, r.jsx)(a.ua7, {
+                  text: b.NW.formatToPlainString(b.t['FE++aG'], { user: C }),
+                  children: (e) => {
+                      var t, n;
+                      return (0, r.jsxs)(
+                          'div',
+                          ((t = (function (e) {
+                              for (var t = 1; t < arguments.length; t++) {
+                                  var n = null != arguments[t] ? arguments[t] : {},
+                                      r = Object.keys(n);
+                                  'function' == typeof Object.getOwnPropertySymbols &&
+                                      (r = r.concat(
+                                          Object.getOwnPropertySymbols(n).filter(function (e) {
+                                              return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                          })
+                                      )),
+                                      r.forEach(function (t) {
+                                          var r;
+                                          (r = n[t]),
+                                              t in e
+                                                  ? Object.defineProperty(e, t, {
+                                                        value: r,
+                                                        enumerable: !0,
+                                                        configurable: !0,
+                                                        writable: !0
+                                                    })
+                                                  : (e[t] = r);
+                                      });
+                              }
+                              return e;
+                          })(
+                              {
+                                  ref: y,
+                                  className: h.potionBadge
+                              },
+                              e
+                          )),
+                          (n = n =
+                              {
+                                  children: [
+                                      (0, r.jsx)(a.l22, {
+                                          size: 'custom',
+                                          color: 'currentColor',
+                                          width: 12,
+                                          height: 12
+                                      }),
+                                      (0, r.jsx)(a.Text, {
+                                          variant: 'text-xs/bold',
+                                          color: 'currentColor',
+                                          children: b.NW.string(b.t['8Rrro6'])
+                                      })
+                                  ]
                               }),
-                              (0, a.jsx)(i.Text, {
-                                  variant: 'text-xs/bold',
-                                  color: 'currentColor',
-                                  children: f.intl.string(f.t['8Rrro6'])
-                              })
-                          ]
-                      })
+                          Object.getOwnPropertyDescriptors
+                              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                              : (function (e, t) {
+                                    var n = Object.keys(e);
+                                    if (Object.getOwnPropertySymbols) {
+                                        var r = Object.getOwnPropertySymbols(e);
+                                        n.push.apply(n, r);
+                                    }
+                                    return n;
+                                })(Object(n)).forEach(function (e) {
+                                    Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                                }),
+                          t)
+                      );
+                  }
               })
           })
         : null;

@@ -1,14 +1,16 @@
 n.d(t, {
     FO: () => N,
-    nA: () => T,
-    qQ: () => C,
-    r7: () => j
+    nA: () => p,
+    qQ: () => b,
+    r7: () => Z
 }),
-    n(47120);
-var a = n(192379),
-    l = n(392711),
-    s = n.n(l),
-    r = n(442837),
+    n(47120),
+    n(230036),
+    n(978209);
+var r = n(192379),
+    a = n(392711),
+    s = n.n(a),
+    l = n(442837),
     i = n(883429),
     o = n(592125),
     c = n(496675),
@@ -17,18 +19,18 @@ var a = n(192379),
     h = n(709054),
     m = n(344185),
     g = n(920303),
-    x = n(569471),
-    f = n(346479),
-    Z = n(91159),
+    f = n(569471),
+    x = n(346479),
+    j = n(91159),
     v = n(231338);
-function j() {
-    a.useEffect(() => {
-        (0, Z.A_)();
+function Z() {
+    r.useEffect(() => {
+        (0, j.A_)();
     }, []);
 }
 function N(e) {
     let t = (function (e) {
-            let t = (0, r.Wu)(
+            let t = (0, l.Wu)(
                 [c.Z, m.Z, o.Z],
                 () =>
                     s()(m.Z.getThreadsForParent(e.guild_id, e.id))
@@ -43,7 +45,7 @@ function N(e) {
                         .value(),
                 [e.guild_id, e.id]
             );
-            return a.useMemo(
+            return r.useMemo(
                 () =>
                     s()(t)
                         .sort((e, t) => h.default.compare(d.ZP.lastMessageId(e), d.ZP.lastMessageId(t)))
@@ -52,14 +54,14 @@ function N(e) {
                 [t]
             );
         })(e),
-        [n, l] = (0, r.e7)([x.Z], () => s().partition(t, (e) => x.Z.hasJoined(e)), [t], r.pF);
+        [n, a] = (0, l.e7)([f.Z], () => s().partition(t, (e) => f.Z.hasJoined(e)), [t], l.pF);
     return {
         joinedThreadIds: n,
-        unjoinedThreadIds: l
+        unjoinedThreadIds: a
     };
 }
-function T(e) {
-    let t = (0, r.Wu)(
+function p(e) {
+    let t = (0, l.Wu)(
         [c.Z, m.Z, o.Z],
         () =>
             s()(m.Z.getThreadsForGuild(e))
@@ -76,7 +78,7 @@ function T(e) {
                 .value(),
         [e]
     );
-    return a.useMemo(
+    return r.useMemo(
         () =>
             s()(t)
                 .sort((e, t) => h.default.compare(d.ZP.lastMessageId(e), d.ZP.lastMessageId(t)))
@@ -85,34 +87,34 @@ function T(e) {
         [t]
     );
 }
-function C(e, t, n) {
+function b(e, t, n) {
     let {
-            canLoadMore: l,
+            canLoadMore: a,
             loading: d,
             nextOffset: u,
             isInitialLoad: h
-        } = (0, r.cj)([g.Z], () => ({
+        } = (0, l.cj)([g.Z], () => ({
             loading: g.Z.isLoading(e.id, t, n),
             isInitialLoad: g.Z.isInitialLoad,
             canLoadMore: g.Z.canLoadMore,
             nextOffset: g.Z.nextOffset
         })),
-        m = a.useCallback(() => {
-            c.Z.can(v.Pl.READ_MESSAGE_HISTORY, e) && f.Z.loadArchivedThreads(e.guild_id, e.id, t, n, u);
+        m = r.useCallback(() => {
+            c.Z.can(v.Pl.READ_MESSAGE_HISTORY, e) && x.Z.loadArchivedThreads(e.guild_id, e.id, t, n, u);
         }, [e, t, n, u]),
-        x = a.useRef(m);
+        f = r.useRef(m);
     return (
-        a.useEffect(() => {
-            x.current = m;
+        r.useEffect(() => {
+            f.current = m;
         }),
-        a.useEffect(() => {
-            h && x.current();
+        r.useEffect(() => {
+            h && f.current();
         }, [e.id, t, n, h]),
-        a.useEffect(() => {
+        r.useEffect(() => {
             i.Z.resort(e.id);
         }, [e.id]),
         {
-            threadIds: (0, r.Wu)([g.Z, o.Z, c.Z], () =>
+            threadIds: (0, l.Wu)([g.Z, o.Z, c.Z], () =>
                 s()(g.Z.getThreads(e.id, t, n))
                     .filter((e) => {
                         let t = o.Z.getChannel(e);
@@ -120,7 +122,7 @@ function C(e, t, n) {
                     })
                     .value()
             ),
-            canLoadMore: l,
+            canLoadMore: a,
             loading: d || h,
             loadMore: m
         }

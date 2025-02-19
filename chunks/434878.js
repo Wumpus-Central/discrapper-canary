@@ -1,8 +1,8 @@
-n.r(t), n.d(t, { default: () => eu }), n(47120);
-var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+n.r(t), n.d(t, { default: () => eg }), n(301563), n(47120), n(566702);
+var r = n(200651),
+    a = n(192379),
+    i = n(120356),
+    l = n.n(i),
     s = n(196434),
     o = n.n(s),
     c = n(232713),
@@ -11,40 +11,40 @@ var i = n(200651),
     m = n(536895),
     h = n(313361),
     g = n(442837),
-    x = n(704215),
-    f = n(481060),
-    p = n(561472),
-    v = n(393238),
-    C = n(607070),
-    _ = n(933557),
-    b = n(243778),
-    j = n(71619),
-    N = n(898188),
-    T = n(41776),
-    I = n(256413),
-    S = n(292853),
-    w = n(359110),
-    y = n(344185),
-    E = n(235449),
-    R = n(665906),
-    P = n(488131),
+    f = n(704215),
+    p = n(481060),
+    x = n(561472),
+    b = n(393238),
+    v = n(607070),
+    j = n(933557),
+    C = n(243778),
+    _ = n(71619),
+    y = n(898188),
+    N = n(41776),
+    O = n(256413),
+    w = n(292853),
+    S = n(359110),
+    P = n(344185),
+    T = n(235449),
+    I = n(665906),
+    E = n(488131),
     k = n(433355),
-    Z = n(592125),
-    M = n(703558),
-    A = n(607744),
-    L = n(117530),
+    R = n(592125),
+    Z = n(703558),
+    M = n(607744),
+    A = n(117530),
     F = n(451478),
-    O = n(459273),
-    z = n(961675),
+    L = n(459273),
+    W = n(961675),
     D = n(883429),
-    B = n(238349),
-    H = n(109434),
-    U = n(456269),
-    V = n(90372),
-    G = n(985518),
-    q = n(228392),
-    X = n(355589),
-    W = n(542581),
+    z = n(238349),
+    B = n(109434),
+    H = n(456269),
+    U = n(90372),
+    V = n(985518),
+    G = n(228392),
+    q = n(355589),
+    X = n(542581),
     K = n(639184),
     J = n(404616),
     Y = n(470623),
@@ -53,198 +53,254 @@ var i = n(200651),
     ee = n(895932),
     et = n(479099),
     en = n(510060),
-    ei = n(276357),
-    er = n(81490),
-    el = n(482062),
-    ea = n(260503),
+    er = n(276357),
+    ea = n(81490),
+    ei = n(482062),
+    el = n(260503),
     es = n(981631),
     eo = n(124368),
     ec = n(388032),
-    ed = n(72895);
+    ed = n(904575);
 function eu(e) {
-    let { channel: t, guild: n, sidebarState: r } = e;
-    return (0, i.jsx)(
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function em(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function eh(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        a = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                a = {},
+                i = Object.keys(e);
+            for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (a[n] = e[n]);
+            return a;
+        })(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var i = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < i.length; r++) (n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]);
+    }
+    return a;
+}
+function eg(e) {
+    let { channel: t, guild: n, sidebarState: a } = e;
+    return (0, r.jsx)(
         Y.oL,
         {
             channel: t,
-            children: (0, i.jsx)(eC, {
+            children: (0, r.jsx)(e_, {
                 channel: t,
                 guild: n,
-                sidebarState: r
+                sidebarState: a
             })
         },
         t.id
     );
 }
-let em = new en.Me({
+let ef = new en.Me({
     minWidth: 320,
     maxWidth: 450,
     gap: 16
 });
-function eh(e) {
+function ep(e) {
     return 'forum-grid-header-section-'.concat(e);
 }
-let eg = (e, t, n) => (0 === e ? 0 : (0, en.KW)(n));
-function ex(e) {
-    let { itemRole: t, coords: n, section: r } = e;
-    return (0, i.jsx)(
+let ex = (e, t, n) => (0 === e ? 0 : (0, en.KW)(n));
+function eb(e) {
+    let { itemRole: t, coords: n, section: a } = e;
+    return (0, r.jsx)(
         'div',
         {
-            className: a()(ed.card, ed.archivedDividerRow, ed.columnsSpan),
+            className: l()(ed.card, ed.archivedDividerRow, ed.columnsSpan),
             style: n,
             'data-item-role': t,
-            children: (0, i.jsx)('div', {
+            children: (0, r.jsx)('div', {
                 className: ed.emptyMainCard,
-                children: (0, i.jsx)(f.X6q, {
+                children: (0, r.jsx)(p.X6q, {
                     variant: 'eyebrow',
                     className: ed.archivedDivider,
-                    id: eh(r),
-                    children: ec.intl.string(ec.t['3+LO19'])
+                    id: ep(a),
+                    children: ec.NW.string(ec.t['3+LO19'])
                 })
             })
         },
         'section-divider'
     );
 }
-function ef(e) {
-    let { section: t, coords: n, key: r, isShowingSearchResult: l, hasActiveThreads: a } = e;
+function ev(e) {
+    let { section: t, coords: n, key: a, isShowingSearchResult: i, hasActiveThreads: l } = e;
     return () =>
-        2 === t && !l && a
-            ? (0, i.jsx)(
-                  ex,
+        2 === t && !i && l
+            ? (0, r.jsx)(
+                  eb,
                   {
                       section: t,
-                      coords:
-                          null == n
-                              ? void 0
-                              : {
-                                    ...n,
-                                    position: 'absolute'
-                                },
+                      coords: null == n ? void 0 : em(eu({}, n), { position: 'absolute' }),
                       itemRole: 'section'
                   },
-                  r
+                  a
               )
             : null;
 }
-function ep(e, t) {
+function ej(e, t) {
     return 'card-'.concat(e, '-').concat(t);
 }
-function ev(e) {
+function eC(e) {
     if ('string' == typeof e) {
         let t = e.match(/card-{\d+}-({\d+})$/);
         return null == t ? null : t[1];
     }
     return null;
 }
-function eC(e) {
+function e_(e) {
     let { channel: t, sidebarState: n } = e,
         {
-            editorHeight: l,
+            editorHeight: i,
             editorAdditionRowHeight: s,
             listViewCardHeights: o,
             formOpen: u
         } = (0, Y.xH)((e) => {
-            let { editorHeight: t, editorAdditionRowHeight: n, listViewCardHeights: i, formOpen: r, cardHeightVersion: l } = e;
+            let { editorHeight: t, editorAdditionRowHeight: n, listViewCardHeights: r, formOpen: a, cardHeightVersion: i } = e;
             return {
                 editorHeight: t,
                 editorAdditionRowHeight: n,
-                listViewCardHeights: i,
-                formOpen: r,
-                cardHeightVersion: l
+                listViewCardHeights: r,
+                formOpen: a,
+                cardHeightVersion: i
             };
         }, c.X),
         {
             activeThreadIds: m,
-            archivedThreadIds: x,
-            searchResults: v,
-            canLoadMore: _,
-            loadMore: b,
-            activeThreadsLoading: j,
-            archivedThreadsLoading: N,
-            loading: R,
-            isSearchLoading: A,
-            layoutType: L
+            archivedThreadIds: f,
+            searchResults: b,
+            canLoadMore: j,
+            loadMore: C,
+            activeThreadsLoading: _,
+            archivedThreadsLoading: y,
+            loading: I,
+            isSearchLoading: M,
+            layoutType: A
         } = (function (e) {
-            let { sortOrder: t, tagFilter: n, layoutType: i } = (0, H.H)(e.id),
-                r = (0, U.vP)({
+            let { sortOrder: t, tagFilter: n, layoutType: r } = (0, B.H)(e.id),
+                a = (0, H.vP)({
                     channel: e,
                     sortOrder: t,
                     tagFilter: n,
                     shouldAutomaticallyAck: !0
                 }),
-                l = (0, g.e7)([y.Z, T.Z], () => {
-                    let t = y.Z.hasLoaded(e.guild_id),
-                        n = T.Z.isLurking(e.guild_id);
+                i = (0, g.e7)([P.Z, N.Z], () => {
+                    let t = P.Z.hasLoaded(e.guild_id),
+                        n = N.Z.isLurking(e.guild_id);
                     return !t && !n;
                 }),
-                { threadIds: a, canLoadMore: s, loadMore: o, loading: c } = (0, E.qQ)(e, t, n),
-                { searchResults: d, isSearchLoading: u } = (0, U.XZ)({ channelId: e.id });
+                { threadIds: l, canLoadMore: s, loadMore: o, loading: c } = (0, T.qQ)(e, t, n),
+                { searchResults: d, isSearchLoading: u } = (0, H.XZ)({ channelId: e.id });
             return (
-                (0, U.ES)(e, t, n),
+                (0, H.ES)(e, t, n),
                 {
-                    activeThreadIds: r,
-                    archivedThreadIds: a,
+                    activeThreadIds: a,
+                    archivedThreadIds: l,
                     searchResults: d,
                     canLoadMore: s,
                     loadMore: o,
-                    loading: l || c || u,
+                    loading: i || c || u,
                     archivedThreadsLoading: c,
-                    activeThreadsLoading: l,
+                    activeThreadsLoading: i,
                     isSearchLoading: u,
-                    layoutType: i
+                    layoutType: r
                 }
             );
         })(t),
         F = m.length > 0,
-        O = F || x.length > 0,
-        B = (0, I.Z)(t),
-        { tagFilter: W } = (0, H.H)(t.id);
-    (0, U.ku)(t, W, u);
-    let K = (0, U.jR)(t),
-        Q = (0, U.eZ)(t),
-        ee = r.useRef(null),
+        L = F || f.length > 0,
+        z = (0, O.Z)(t),
+        { tagFilter: X } = (0, B.H)(t.id);
+    (0, H.ku)(t, X, u);
+    let K = (0, H.jR)(t),
+        Q = (0, H.eZ)(t),
+        ee = a.useRef(null),
         { observePostVisibilityAnalytics: et } = (function (e) {
-            let { guildId: t, channelId: n, scrollerRef: i } = e;
-            V.Z.useForumChannelSeenManager({
+            let { guildId: t, channelId: n, scrollerRef: r } = e;
+            U.Z.useForumChannelSeenManager({
                 guildId: t,
                 channelId: n
             });
-            let l = r.useRef(null),
-                a = r.useCallback((e, t) => {
+            let i = a.useRef(null),
+                l = a.useCallback((e, t) => {
                     for (let n of t) {
                         let t = n.target.dataset.itemId;
                         if (null == t) return;
-                        let i = Date.now();
-                        n.intersectionRatio >= 0.5 ? (0, G.rj)(e, t, i) : (0, G.Ct)(e, t, i);
+                        let r = Date.now();
+                        n.intersectionRatio >= 0.5 ? (0, V.rj)(e, t, r) : (0, V.Ct)(e, t, r);
                     }
                 }, []);
             return (
-                r.useEffect(() => {
+                a.useEffect(() => {
                     var e;
-                    let t = null === (e = i.current) || void 0 === e ? void 0 : e.getScrollerNode();
+                    let t = null === (e = r.current) || void 0 === e ? void 0 : e.getScrollerNode();
                     if (null != t)
                         return (
-                            (l.current = new IntersectionObserver((e) => a(n, e), {
+                            (i.current = new IntersectionObserver((e) => l(n, e), {
                                 root: t,
                                 rootMargin: '0px 100000px 0px 100000px',
                                 threshold: 0.5
                             })),
                             () => {
                                 var e;
-                                null === (e = l.current) || void 0 === e || e.disconnect(), (l.current = null);
+                                null === (e = i.current) || void 0 === e || e.disconnect(), (i.current = null);
                             }
                         );
-                }, [n, a, i]),
+                }, [n, l, r]),
                 {
-                    observePostVisibilityAnalytics: r.useCallback(
+                    observePostVisibilityAnalytics: a.useCallback(
                         (e, t) => {
-                            var i;
+                            var r;
                             if (null == e) {
-                                (0, G.Ct)(n, t, Date.now());
+                                (0, V.Ct)(n, t, Date.now());
                                 return;
                             }
-                            null === (i = l.current) || void 0 === i || i.observe(e);
+                            null === (r = i.current) || void 0 === r || r.observe(e);
                         },
                         [n]
                     )
@@ -255,38 +311,38 @@ function eC(e) {
             channelId: t.id,
             guildId: t.guild_id
         }),
-        ei = L === h.X.GRID,
-        eu = null != v,
-        ex = r.useRef(null),
-        { containerRef: eC, containerWidth: eN } = (0, er.Z)();
-    r.useEffect(
+        er = A === h.X.GRID,
+        eg = null != b,
+        eb = a.useRef(null),
+        { containerRef: e_, containerWidth: ew } = (0, ea.Z)();
+    a.useEffect(
         () => () => {
             null != t.id && D.Z.clearForumSearch(t.id);
         },
         [t.id]
     );
-    let { columns: eI } = r.useMemo(() => (ei ? em.getRenderOptions(eN) : en.eU), [ei, eN]),
-        eS = r.useMemo(() => (R ? Math.round((window.innerHeight - 200) / 118) : 0), [R]),
-        ew = r.useMemo(() => {
-            let e = Math.ceil(window.innerHeight / (0, en.KW)(em.getWidth(eN))) * eI;
-            return j ? e : 0;
-        }, [eN, eI, j]),
-        ey = r.useMemo(() => {
-            let e = Math.ceil(window.innerHeight / (0, en.KW)(em.getWidth(eN))) * eI;
-            return N ? e : 0;
-        }, [eN, eI, N]),
-        eE = r.useMemo(() => {
-            let e = Math.ceil(window.innerHeight / (0, en.KW)(em.getWidth(eN))) * eI;
-            return A && eu ? e : 0;
-        }, [eN, eI, A, eu]),
-        eR = r.useMemo(() => {
-            if (ei) return !K && eu ? [1, 0] : Q ? (eu ? [1, v.length + eE, 0] : [1, m.length + ew, x.length + ey]) : [1, m.length + ew, 0];
-            return !K && eu ? [1, 1] : Q ? (eu ? [1, v.length, 0, eS] : [1, m.length, x.length, eS]) : [1, m.length, 1];
-        }, [ei, eu, m.length, x.length, K, Q, eS, v, ew, ey, eE]),
-        eP = r.useMemo(() => (!K && eu ? [[], []] : Q ? (eu ? [[], v, [], []] : [[], m, x, []]) : [[], m, []]), [eu, K, Q, v, m, x]),
-        ek = r.useCallback(
+    let { columns: eP } = a.useMemo(() => (er ? ef.getRenderOptions(ew) : en.eU), [er, ew]),
+        eT = a.useMemo(() => (I ? Math.round((window.innerHeight - 200) / 118) : 0), [I]),
+        eI = a.useMemo(() => {
+            let e = Math.ceil(window.innerHeight / (0, en.KW)(ef.getWidth(ew))) * eP;
+            return _ ? e : 0;
+        }, [ew, eP, _]),
+        eE = a.useMemo(() => {
+            let e = Math.ceil(window.innerHeight / (0, en.KW)(ef.getWidth(ew))) * eP;
+            return y ? e : 0;
+        }, [ew, eP, y]),
+        ek = a.useMemo(() => {
+            let e = Math.ceil(window.innerHeight / (0, en.KW)(ef.getWidth(ew))) * eP;
+            return M && eg ? e : 0;
+        }, [ew, eP, M, eg]),
+        eR = a.useMemo(() => {
+            if (er) return !K && eg ? [1, 0] : Q ? (eg ? [1, b.length + ek, 0] : [1, m.length + eI, f.length + eE]) : [1, m.length + eI, 0];
+            return !K && eg ? [1, 1] : Q ? (eg ? [1, b.length, 0, eT] : [1, m.length, f.length, eT]) : [1, m.length, 1];
+        }, [er, eg, m.length, f.length, K, Q, eT, b, eI, eE, ek]),
+        eZ = a.useMemo(() => (!K && eg ? [[], []] : Q ? (eg ? [[], b, [], []] : [[], m, f, []]) : [[], m, []]), [eg, K, Q, b, m, f]),
+        eM = a.useCallback(
             (e, n) => {
-                (0, q.B5)({
+                (0, G.B5)({
                     guildId: t.guild_id,
                     channelId: t.id,
                     postId: e.id,
@@ -295,30 +351,30 @@ function eC(e) {
                         section: es.jXE.FORUM_CHANNEL_POST
                     }
                 }),
-                    n ? (0, w.ad)(e, { source: eo.on.BROWSER }) : ((ex.current = e.id), (0, P.ok)(e));
+                    n ? (0, S.ad)(e, { source: eo.on.BROWSER }) : ((eb.current = e.id), (0, E.ok)(e));
             },
-            [t.guild_id, t.id, ex]
+            [t.guild_id, t.id, eb]
         ),
-        [eZ, eM] = r.useState(l + s - 24),
-        eA = r.useCallback(
-            (e, n, r) =>
+        [eA, eF] = a.useState(i + s - 24),
+        eL = a.useCallback(
+            (e, n, a) =>
                 0 === e
-                    ? (0, i.jsx)(
-                          eT,
+                    ? (0, r.jsx)(
+                          eS,
                           {
                               channel: t,
                               isEmpty: !F,
-                              isSearchLoading: A,
-                              numResults: null == v ? void 0 : v.length,
+                              isSearchLoading: M,
+                              numResults: null == b ? void 0 : b.length,
                               coords: n,
-                              onHeightChange: eM,
+                              onHeightChange: eF,
                               children:
-                                  !R &&
-                                  (0, i.jsx)(
-                                      X.Z,
+                                  !I &&
+                                  (0, r.jsx)(
+                                      q.Z,
                                       {
                                           channel: t,
-                                          hasAnyThread: O
+                                          hasAnyThread: L
                                       },
                                       t.id
                                   )
@@ -326,88 +382,88 @@ function eC(e) {
                           'forum-channel-header'
                       )
                     : 2 !== e || Q
-                      ? 1 === e && eu && !K
-                          ? (0, i.jsx)(
-                                eb,
+                      ? 1 === e && eg && !K
+                          ? (0, r.jsx)(
+                                eN,
                                 {
                                     channel: t,
                                     coords: n
                                 },
                                 'archive-or-search-result'
                             )
-                          : r()
-                      : (0, i.jsx)(
-                            e_,
+                          : a()
+                      : (0, r.jsx)(
+                            ey,
                             {
                                 channel: t,
                                 coords: n
                             },
                             'archived-missing-reading-history-perm'
                         ),
-            [eu, Q, v, K, t, F, A, R, O]
+            [eg, Q, b, K, t, F, M, I, L]
         ),
-        eL = (0, g.e7)([z.Z], () => z.Z.hasHidden(t.id)),
-        eF = {
-            editorHeight: l,
-            isGridLayout: ei
+        eW = (0, g.e7)([W.Z], () => W.Z.hasHidden(t.id)),
+        eD = {
+            editorHeight: i,
+            isGridLayout: er
         },
-        eO = r.useRef(eF);
-    r.useEffect(() => {
-        eO.current = eF;
+        ez = a.useRef(eD);
+    a.useEffect(() => {
+        ez.current = eD;
     }),
-        r.useEffect(() => {
+        a.useEffect(() => {
             var e, t;
-            let { editorHeight: n, isGridLayout: i } = eO.current,
-                r = i ? eV : ee,
-                l = null === (e = r.current) || void 0 === e ? void 0 : e.getScrollerState();
-            null != l && !eL && l.scrollTop > n && (null === (t = r.current) || void 0 === t || t.scrollTo({ to: 0 }));
-        }, [eL]);
+            let { editorHeight: n, isGridLayout: r } = ez.current,
+                a = r ? eq : ee,
+                i = null === (e = a.current) || void 0 === e ? void 0 : e.getScrollerState();
+            null != i && !eW && i.scrollTop > n && (null === (t = a.current) || void 0 === t || t.scrollTo({ to: 0 }));
+        }, [eW]);
     let {
-            updateListScrollerRef: ez,
-            renderListSection: eD,
-            renderListItem: eB,
-            getListSectionHeight: eH,
-            getListItemHeight: eU
+            updateListScrollerRef: eB,
+            renderListSection: eH,
+            renderListItem: eU,
+            getListSectionHeight: eV,
+            getListItemHeight: eG
         } = (function (e) {
-            let { listRef: t, hasActiveThreads: n, threadIdsBySection: l, listViewCardHeights: s, editorHeight: o, editorAdditionRowHeight: c, renderSectionOrItem: d, goToThread: u, observePostVisibilityAnalytics: m, isShowingSearchResult: h } = e,
-                g = r.useCallback(
+            let { listRef: t, hasActiveThreads: n, threadIdsBySection: i, listViewCardHeights: s, editorHeight: o, editorAdditionRowHeight: c, renderSectionOrItem: d, goToThread: u, observePostVisibilityAnalytics: m, isShowingSearchResult: h } = e,
+                g = a.useCallback(
                     (e) => (n) => {
-                        var i;
-                        (t.current = n), (e.current = null !== (i = null == n ? void 0 : n.getScrollerNode()) && void 0 !== i ? i : null);
+                        var r;
+                        (t.current = n), (e.current = null !== (r = null == n ? void 0 : n.getScrollerNode()) && void 0 !== r ? r : null);
                     },
                     [t]
                 ),
-                x = r.useCallback(
+                f = a.useCallback(
                     (e) =>
-                        ef({
+                        ev({
                             section: e.section,
                             isShowingSearchResult: h,
                             hasActiveThreads: n
                         })(),
                     [n, h]
                 ),
-                p = r.useCallback(
+                x = a.useCallback(
                     (e) =>
                         d(e.section, void 0, () => {
                             if (3 === e.section)
                                 return __OVERLAY__
                                     ? null
-                                    : (0, i.jsx)(
+                                    : (0, r.jsx)(
                                           'div',
                                           {
                                               'data-item-role': 'item',
-                                              className: a()(ed.loadingCard, ed['loadingCard-'.concat(e.row % 3)])
+                                              className: l()(ed.loadingCard, ed['loadingCard-'.concat(e.row % 3)])
                                           },
                                           'loading-'.concat(e.row)
                                       );
-                            let t = l[e.section][e.row];
-                            return (0, i.jsx)(
+                            let t = i[e.section][e.row];
+                            return (0, r.jsx)(
                                 'li',
                                 {
                                     className: ed.card,
                                     'data-item-role': 'item',
-                                    children: (0, i.jsx)(f.y5t, {
-                                        children: (0, i.jsx)(J.ZP, {
+                                    children: (0, r.jsx)(p.y5t, {
+                                        children: (0, r.jsx)(J.ZP, {
                                             className: ed.mainCard,
                                             threadId: t,
                                             goToThread: u,
@@ -418,64 +474,64 @@ function eC(e) {
                                 ''.concat(e.section, '-').concat(t)
                             );
                         }),
-                    [d, l, u, m]
+                    [d, i, u, m]
                 ),
-                v = r.useCallback(
+                b = a.useCallback(
                     (e, t) => {
                         if (0 === e) return o + c;
-                        let n = s[l[e][t]];
+                        let n = s[i[e][t]];
                         return null == n ? 104 : n + 8;
                     },
-                    [l, s, o, c]
+                    [i, s, o, c]
                 );
             return {
                 updateListScrollerRef: g,
-                renderListSection: x,
-                renderListItem: p,
-                getListSectionHeight: r.useCallback((e) => (2 === e && n ? 40 : 0), [n]),
-                getListItemHeight: v
+                renderListSection: f,
+                renderListItem: x,
+                getListSectionHeight: a.useCallback((e) => (2 === e && n ? 40 : 0), [n]),
+                getListItemHeight: b
             };
         })({
             listRef: ee,
             hasActiveThreads: F,
-            threadIdsBySection: eP,
+            threadIdsBySection: eZ,
             listViewCardHeights: o,
-            editorHeight: l,
+            editorHeight: i,
             editorAdditionRowHeight: s,
-            renderSectionOrItem: eA,
-            goToThread: ek,
+            renderSectionOrItem: eL,
+            goToThread: eM,
             observePostVisibilityAnalytics: et,
-            isShowingSearchResult: eu
+            isShowingSearchResult: eg
         }),
-        eV = r.useRef(null),
+        eq = a.useRef(null),
         {
-            updateMasonryListScrollerRef: eG,
-            getItemKey: eq,
-            renderGridSection: eX,
-            renderGridItem: eW,
-            getGridSectionHeight: eK,
-            getSectionProps: eJ,
-            handleGridFocus: eY
+            updateMasonryListScrollerRef: eX,
+            getItemKey: eK,
+            renderGridSection: eJ,
+            renderGridItem: eY,
+            getGridSectionHeight: eQ,
+            getSectionProps: e$,
+            handleGridFocus: e0
         } = (function (e) {
-            let { masonryListScrollerRef: t, threadIdsBySection: n, goToThread: l, renderSectionOrItem: s, hasActiveThreads: o, isShowingSearchResult: c, canSearchForumPosts: d, canViewArchivedPosts: u, observePostVisibilityAnalytics: m, focusedThreadId: h, headerHeight: g } = e,
-                x = r.useRef(null),
-                f = r.useCallback(
+            let { masonryListScrollerRef: t, threadIdsBySection: n, goToThread: i, renderSectionOrItem: s, hasActiveThreads: o, isShowingSearchResult: c, canSearchForumPosts: d, canViewArchivedPosts: u, observePostVisibilityAnalytics: m, focusedThreadId: h, headerHeight: g } = e,
+                f = a.useRef(null),
+                p = a.useCallback(
                     (e) => {
-                        (t.current = e), (x.current = null == e ? void 0 : e.getScrollerNode());
+                        (t.current = e), (f.current = null == e ? void 0 : e.getScrollerNode());
                     },
                     [t]
                 ),
-                p = r.useCallback(
+                x = a.useCallback(
                     (e, n) => {
-                        let { current: i } = t;
-                        if (null == i) return;
-                        let r = document.querySelector(e);
+                        let { current: r } = t;
                         if (null == r) return;
-                        let l = i.getCoordsMap()[n],
-                            a = null != l ? l.height + 20 : 200;
-                        i.scrollIntoViewNode({
-                            node: r,
-                            padding: a,
+                        let a = document.querySelector(e);
+                        if (null == a) return;
+                        let i = r.getCoordsMap()[n],
+                            l = null != i ? i.height + 20 : 200;
+                        r.scrollIntoViewNode({
+                            node: a,
+                            padding: l,
                             callback() {
                                 requestAnimationFrame(() => {
                                     var t;
@@ -483,36 +539,36 @@ function eC(e) {
                                 });
                             }
                         }),
-                            (h.current = ev(n));
+                            (h.current = eC(n));
                     },
                     [t, h]
                 ),
-                v = r.useCallback(
+                b = a.useCallback(
                     (e) => {
-                        let t = ev(e);
+                        let t = eC(e);
                         if (null == t) return;
-                        let n = Z.Z.getChannel(t);
-                        null != n && l(n, !0);
+                        let n = R.Z.getChannel(t);
+                        null != n && i(n, !0);
                     },
-                    [l]
+                    [i]
                 ),
-                C = r.useCallback(
+                v = a.useCallback(
                     function (e) {
                         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
                         if (0 === n[e].length) return 'section-'.concat(e, '-').concat(t);
                         {
-                            let i = n[e][t];
-                            return null == i ? ep(e, t) : ep(e, i);
+                            let r = n[e][t];
+                            return null == r ? ej(e, t) : ej(e, r);
                         }
                     },
                     [n]
                 ),
-                _ = r.useCallback(
+                j = a.useCallback(
                     (e, t, n) =>
                         s(
                             e,
                             t,
-                            ef({
+                            ev({
                                 section: e,
                                 coords: t,
                                 key: n,
@@ -522,38 +578,38 @@ function eC(e) {
                         ),
                     [s, o, c]
                 ),
-                b = r.useCallback(
+                C = a.useCallback(
                     (e) =>
                         0 === e
                             ? {}
                             : {
                                   role: 'grid',
-                                  'aria-labelledby': '#'.concat(eh(e))
+                                  'aria-labelledby': '#'.concat(ep(e))
                               },
                     []
                 );
             return {
-                updateMasonryListScrollerRef: f,
-                masonryListContainerRef: x,
+                updateMasonryListScrollerRef: p,
+                masonryListContainerRef: f,
                 focusedThreadId: h,
-                handleGridFocus: p,
-                handleGridSelect: v,
-                getItemKey: C,
-                renderGridSection: _,
-                renderGridItem: r.useCallback(
-                    (e, t, r, s, o) => {
+                handleGridFocus: x,
+                handleGridSelect: b,
+                getItemKey: v,
+                renderGridSection: j,
+                renderGridItem: a.useCallback(
+                    (e, t, a, s, o) => {
                         if (0 === e) return null;
                         let c = n[e][t];
                         return null != c
-                            ? (0, i.jsx)(
+                            ? (0, r.jsx)(
                                   $.Z,
                                   {
                                       id: ''.concat(s),
                                       threadId: c,
-                                      className: a()(ed.card, ed.mainCard),
-                                      goToThread: l,
+                                      className: l()(ed.card, ed.mainCard),
+                                      goToThread: i,
                                       observePostVisibilityAnalytics: m,
-                                      coords: r,
+                                      coords: a,
                                       gridCoords: o.coordinates[s],
                                       gridSectionBoundaries: o.boundaries
                                   },
@@ -561,171 +617,180 @@ function eC(e) {
                               )
                             : __OVERLAY__
                               ? null
-                              : (0, i.jsx)(
+                              : (0, r.jsx)(
                                     'div',
                                     {
-                                        style: { ...r },
+                                        style: eu({}, a),
                                         'data-item-role': 'item',
-                                        className: a()(ed.loadingCard, ed['loadingCard-'.concat(t % 3)])
+                                        className: l()(ed.loadingCard, ed['loadingCard-'.concat(t % 3)])
                                     },
                                     s
                                 );
                     },
-                    [n, l, m]
+                    [n, i, m]
                 ),
-                getSectionProps: b,
-                getGridSectionHeight: r.useCallback((e) => (0 === e ? g - 8 - 24 : 2 === e ? (o || !u ? 40 : 0) : 1 === e && c && !d ? 40 : 0), [g, c, d, o, u])
+                getSectionProps: C,
+                getGridSectionHeight: a.useCallback((e) => (0 === e ? g - 8 - 24 : 2 === e ? (o || !u ? 40 : 0) : 1 === e && c && !d ? 40 : 0), [g, c, d, o, u])
             };
         })({
-            masonryListScrollerRef: eV,
-            threadIdsBySection: eP,
-            goToThread: ek,
-            renderSectionOrItem: eA,
+            masonryListScrollerRef: eq,
+            threadIdsBySection: eZ,
+            goToThread: eM,
+            renderSectionOrItem: eL,
             hasActiveThreads: F,
-            isShowingSearchResult: eu,
+            isShowingSearchResult: eg,
             canSearchForumPosts: K,
             canViewArchivedPosts: Q,
             observePostVisibilityAnalytics: et,
-            focusedThreadId: ex,
-            headerHeight: eZ
+            focusedThreadId: eb,
+            headerHeight: eA
         });
     !(function (e) {
-        let { masonryListScrollerRef: t, containerWidth: n, isGridLayout: i, threadIdsBySection: l, focusedThreadId: a, parentId: s } = e;
-        r.useEffect(() => {
-            if (i) {
+        let { masonryListScrollerRef: t, containerWidth: n, isGridLayout: r, threadIdsBySection: i, focusedThreadId: l, parentId: s } = e;
+        a.useEffect(() => {
+            if (r) {
                 let e = setTimeout(() => {
-                    if (null == t.current || null == a.current) return;
-                    let e = a.current;
+                    if (null == t.current || null == l.current) return;
+                    let e = l.current;
                     if ('string' != typeof e) return;
                     if (null == k.ZP.getSidebarState(s)) {
-                        a.current = null;
+                        l.current = null;
                         return;
                     }
-                    let n = l.findIndex((t) => t.find((t) => t === e)),
-                        i = t.current.getCoordsMap(),
-                        r = i['__section__'.concat(n)],
-                        o = i[ep(n, e)];
-                    null != r &&
+                    let n = i.findIndex((t) => t.find((t) => t === e)),
+                        r = t.current.getCoordsMap(),
+                        a = r['__section__'.concat(n)],
+                        o = r[ej(n, e)];
+                    null != a &&
                         null != o &&
                         t.current.scrollIntoViewRect({
-                            start: r.top + o.top - 100,
-                            end: r.top + o.top + o.height + 50
+                            start: a.top + o.top - 100,
+                            end: a.top + o.top + o.height + 50
                         });
                 }, 500);
                 return () => clearTimeout(e);
             }
-        }, [s, n, i, l, a, t]);
+        }, [s, n, r, i, l, t]);
     })({
-        masonryListScrollerRef: eV,
-        containerWidth: eN,
-        isGridLayout: ei,
-        threadIdsBySection: eP,
+        masonryListScrollerRef: eq,
+        containerWidth: ew,
+        isGridLayout: er,
+        threadIdsBySection: eZ,
         parentId: t.id,
-        focusedThreadId: ex
+        focusedThreadId: eb
     });
-    let eQ = r.useCallback(() => {
+    let e3 = a.useCallback(() => {
             var e, n;
-            if (eu) return;
-            let i = ei ? (null === (e = eV.current) || void 0 === e ? void 0 : e.getScrollerState()) : null === (n = ee.current) || void 0 === n ? void 0 : n.getScrollerState();
-            if (null == i) return;
-            (0, q.ab)({
+            if (eg) return;
+            let r = er ? (null === (e = eq.current) || void 0 === e ? void 0 : e.getScrollerState()) : null === (n = ee.current) || void 0 === n ? void 0 : n.getScrollerState();
+            if (null == r) return;
+            (0, G.ab)({
                 guildId: t.guild_id,
                 channelId: t.id
             });
-            let r = i.scrollTop + i.offsetHeight;
-            i.scrollHeight - r < (ei ? Math.max(200, (0, en.KW)(eN)) : 200) && b();
-        }, [eu, ei, t.guild_id, t.id, eN, b]),
-        e$ = (0, g.e7)([C.Z], () => C.Z.keyboardModeEnabled),
-        e0 = (0, el.ZP)({
+            let a = r.scrollTop + r.offsetHeight;
+            r.scrollHeight - a < (er ? Math.max(200, (0, en.KW)(ew)) : 200) && C();
+        }, [eg, er, t.guild_id, t.id, ew, C]),
+        e1 = (0, g.e7)([v.Z], () => v.Z.keyboardModeEnabled),
+        e6 = (0, ei.ZP)({
             id: 'forum-grid-view',
-            isEnabled: ei && e$,
-            setFocus: eY
+            isEnabled: er && e1,
+            setFocus: e0
         }),
-        e3 = (0, ea.Z)({
+        e9 = (0, el.Z)({
             listRef: ee,
             padding: 96,
-            isEnabled: !ei && e$,
+            isEnabled: !er && e1,
             channel: t
         }),
-        { ref: e1, ...e6 } = e0.containerProps,
-        e9 = k.ZP.getSidebarState(t.id),
-        e8 = null != e9 && (0, k.D5)(e9),
-        e2 = (0, g.e7)([k.ZP], () => k.ZP.getSection(t.id)) === es.ULH.MEMBERS;
-    return (0, i.jsx)('div', {
+        e2 = e6.containerProps,
+        { ref: e8 } = e2,
+        e4 = eh(e2, ['ref']),
+        e5 = k.ZP.getSidebarState(t.id),
+        e7 = null != e5 && (0, k.D5)(e5),
+        te = (0, g.e7)([k.ZP], () => k.ZP.getSection(t.id)) === es.ULH.MEMBERS;
+    return (0, r.jsx)('div', {
         className: ed.container,
-        ref: eC,
-        'data-member-list-open': e2,
-        children: (0, i.jsx)(f.Wdt, {
+        ref: e_,
+        'data-member-list-open': te,
+        children: (0, r.jsx)(p.Wdt, {
             children: (e) =>
-                (0, i.jsxs)(i.Fragment, {
+                (0, r.jsxs)(r.Fragment, {
                     children: [
                         u &&
-                            (0, i.jsx)(p.Z, {
+                            (0, r.jsx)(x.Z, {
                                 channel: t,
-                                draftType: M.d.FirstThreadMessage,
+                                draftType: Z.d.FirstThreadMessage,
                                 className: ed.uploadArea,
-                                style: { right: e8 && (null == n ? void 0 : n.isThreadSidebarFloating) ? n.threadSidebarWidth : 0 }
+                                style: { right: e7 && (null == n ? void 0 : n.isThreadSidebarFloating) ? n.threadSidebarWidth : 0 }
                             }),
-                        (0, i.jsx)(ej, { channel: t }),
-                        (0, i.jsx)(f.nn4, { children: (0, i.jsx)(f.H, { children: ec.intl.string(ec.t.B2panJ) }) }),
-                        B
-                            ? (0, i.jsx)('div', {
+                        (0, r.jsx)(eO, { channel: t }),
+                        (0, r.jsx)(p.nn4, { children: (0, r.jsx)(p.H, { children: ec.NW.string(ec.t.B2panJ) }) }),
+                        z
+                            ? (0, r.jsx)('div', {
                                   className: ed.optInNotice,
-                                  children: (0, i.jsx)(S.Z, { channel: t })
+                                  children: (0, r.jsx)(w.Z, { channel: t })
                               })
                             : null,
-                        ei
-                            ? (0, i.jsx)(el.KT, {
-                                  navigator: e0,
-                                  children: (0, i.jsx)(
-                                      f.GMG,
-                                      {
-                                          ref: (e) => {
-                                              var t;
-                                              (e1.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null), eG(e);
+                        er
+                            ? (0, r.jsx)(ei.KT, {
+                                  navigator: e6,
+                                  children: (0, r.jsx)(
+                                      p.GMG,
+                                      eu(
+                                          {
+                                              ref: (e) => {
+                                                  var t;
+                                                  (e8.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null), eX(e);
+                                              },
+                                              itemGutter: 16,
+                                              padding: 24,
+                                              className: ed.grid,
+                                              columns: eP,
+                                              sections: eR,
+                                              getItemKey: eK,
+                                              getSectionHeight: eQ,
+                                              getItemHeight: ex,
+                                              renderSection: eJ,
+                                              renderItem: eY,
+                                              getSectionProps: e$,
+                                              onScroll: j ? e3 : void 0,
+                                              chunkSize: 350
                                           },
-                                          itemGutter: 16,
-                                          padding: 24,
-                                          className: ed.grid,
-                                          columns: eI,
-                                          sections: eR,
-                                          getItemKey: eq,
-                                          getSectionHeight: eK,
-                                          getItemHeight: eg,
-                                          renderSection: eX,
-                                          renderItem: eW,
-                                          getSectionProps: eJ,
-                                          onScroll: _ ? eQ : void 0,
-                                          chunkSize: 350,
-                                          ...e6,
-                                          ...e
-                                      },
-                                      L
+                                          e4,
+                                          e
+                                      ),
+                                      A
                                   )
                               })
-                            : (0, i.jsx)(d.bG, {
-                                  navigator: e3,
-                                  children: (0, i.jsx)(d.SJ, {
+                            : (0, r.jsx)(d.bG, {
+                                  navigator: e9,
+                                  children: (0, r.jsx)(d.SJ, {
                                       children: (t) => {
-                                          let { ref: n, ...r } = t;
-                                          return (0, i.jsx)(
-                                              f._2F,
-                                              {
-                                                  ref: ez(n),
-                                                  className: ed.list,
-                                                  sections: eR,
-                                                  sectionHeight: eH,
-                                                  rowHeight: eU,
-                                                  renderRow: eB,
-                                                  renderSection: eD,
-                                                  chunkSize: 150,
-                                                  onScroll: _ ? eQ : void 0,
-                                                  paddingBottom: 24,
-                                                  ...r,
-                                                  ...e,
-                                                  innerRole: 'list'
-                                              },
-                                              L
+                                          var { ref: n } = t,
+                                              a = eh(t, ['ref']);
+                                          return (0, r.jsx)(
+                                              p._2F,
+                                              em(
+                                                  eu(
+                                                      {
+                                                          ref: eB(n),
+                                                          className: ed.list,
+                                                          sections: eR,
+                                                          sectionHeight: eV,
+                                                          rowHeight: eG,
+                                                          renderRow: eU,
+                                                          renderSection: eH,
+                                                          chunkSize: 150,
+                                                          onScroll: j ? e3 : void 0,
+                                                          paddingBottom: 24
+                                                      },
+                                                      a,
+                                                      e
+                                                  ),
+                                                  { innerRole: 'list' }
+                                              ),
+                                              A
                                           );
                                       }
                                   })
@@ -735,140 +800,140 @@ function eC(e) {
         })
     });
 }
-function e_(e) {
+function ey(e) {
     let { channel: t, coords: n } = e,
-        r = (0, _.ZP)(t);
-    return (0, i.jsx)('div', {
-        className: a()(ed.missingReadHistoryPermission, ed.columnsSpan),
+        a = (0, j.ZP)(t);
+    return (0, r.jsx)('div', {
+        className: l()(ed.missingReadHistoryPermission, ed.columnsSpan),
         style: n,
-        children: (0, i.jsx)(f.Text, {
+        children: (0, r.jsx)(p.Text, {
             color: 'text-muted',
             variant: 'text-md/normal',
-            children: ec.intl.format(ec.t.TycmzM, { channelName: r })
+            children: ec.NW.format(ec.t.TycmzM, { channelName: a })
         })
     });
 }
-function eb(e) {
+function eN(e) {
     let { channel: t, coords: n } = e,
-        r = (0, _.ZP)(t);
-    return (0, i.jsx)('div', {
-        className: a()(ed.missingReadHistoryPermission, ed.columnsSpan),
+        a = (0, j.ZP)(t);
+    return (0, r.jsx)('div', {
+        className: l()(ed.missingReadHistoryPermission, ed.columnsSpan),
         style: n,
-        children: (0, i.jsx)(f.Text, {
+        children: (0, r.jsx)(p.Text, {
             color: 'text-muted',
             variant: 'text-md/normal',
-            children: ec.intl.format(ec.t.OWZJdX, { channelName: r })
+            children: ec.NW.format(ec.t.OWZJdX, { channelName: a })
         })
     });
 }
-function ej(e) {
+function eO(e) {
     let { channel: t } = e,
-        n = r.useCallback(() => {
+        n = a.useCallback(() => {
             D.Z.resort(t.id);
         }, [t]),
-        l = (0, g.e7)([B.Z], () => B.Z.getNewThreadCount());
-    return 0 === l
+        i = (0, g.e7)([z.Z], () => z.Z.getNewThreadCount());
+    return 0 === i
         ? null
-        : (0, i.jsx)(f.P3F, {
+        : (0, r.jsx)(p.P3F, {
               className: ed.newPostsButton,
               onClick: n,
-              children: (0, i.jsx)(f.Text, {
+              children: (0, r.jsx)(p.Text, {
                   color: 'text-brand',
                   variant: 'text-md/medium',
-                  children: ec.intl.format(ec.t.ue1qfH, { count: l })
+                  children: ec.NW.format(ec.t.ue1qfH, { count: i })
               })
           });
 }
-function eN() {
+function ew() {
     return Promise.resolve();
 }
-function eT(e) {
-    var t, n, l;
-    let { channel: s, isEmpty: p, isSearchLoading: _, numResults: T, children: I, coords: S, onHeightChange: w } = e,
+function eS(e) {
+    var t, n, i;
+    let { channel: s, isEmpty: x, isSearchLoading: j, numResults: N, children: O, coords: w, onHeightChange: S } = e,
         {
-            name: y,
-            formOpen: E,
-            titleFocused: P,
+            name: P,
+            formOpen: T,
+            titleFocused: E,
             hasClickedForm: k,
-            textAreaState: Z,
-            onboardingExpanded: z,
-            setEditorAdditionRowHeight: B
+            textAreaState: R,
+            onboardingExpanded: W,
+            setEditorAdditionRowHeight: z
         } = (0, Y.xH)((e) => {
-            let { name: t, formOpen: n, titleFocused: i, hasClickedForm: r, textAreaState: l, onboardingExpanded: a, setEditorAdditionRowHeight: s } = e;
+            let { name: t, formOpen: n, titleFocused: r, hasClickedForm: a, textAreaState: i, onboardingExpanded: l, setEditorAdditionRowHeight: s } = e;
             return {
                 name: t,
                 formOpen: n,
-                titleFocused: i,
-                hasClickedForm: r,
-                textAreaState: l,
-                onboardingExpanded: a,
+                titleFocused: r,
+                hasClickedForm: a,
+                textAreaState: i,
+                onboardingExpanded: l,
                 setEditorAdditionRowHeight: s
             };
         }, c.X),
-        { tagFilter: V, layoutType: G } = (0, H.H)(s.id),
-        X = (0, Y.AF)(),
-        J = (0, H.v)(),
-        $ = (0, g.e7)([A.Z], () => A.Z.canChatInGuild(s.guild_id)),
-        ee = (0, U.r_)(s),
-        en = (0, R.cD)(s),
-        [er, el] = r.useState(en),
-        [, ea] = (0, j.AB)(null !== (l = s.getGuildId()) && void 0 !== l ? l : void 0),
-        eo = $ && (en || (er && ea)),
-        eu = s.isMediaChannel();
-    r.useEffect(() => {
-        en && el(!0);
+        { tagFilter: U, layoutType: V } = (0, B.H)(s.id),
+        q = (0, Y.AF)(),
+        J = (0, B.v)(),
+        $ = (0, g.e7)([M.Z], () => M.Z.canChatInGuild(s.guild_id)),
+        ee = (0, H.r_)(s),
+        en = (0, I.cD)(s),
+        [ea, ei] = a.useState(en),
+        [, el] = (0, _.AB)(null !== (i = s.getGuildId()) && void 0 !== i ? i : void 0),
+        eo = $ && (en || (ea && el)),
+        eg = s.isMediaChannel();
+    a.useEffect(() => {
+        en && ei(!0);
     }, [en]);
-    let { ref: em, height: eh } = (0, v.Z)();
-    r.useEffect(() => {
-        null != eh && w(eh);
-    }, [w, eh]);
-    let eg = r.useCallback(() => {
+    let { ref: ef, height: ep } = (0, b.Z)();
+    a.useEffect(() => {
+        null != ep && S(ep);
+    }, [S, ep]);
+    let ex = a.useCallback(() => {
         o()(() => {
-            null != em.current && X.getState().setEditorHeight(em.current.offsetHeight);
+            null != ef.current && q.getState().setEditorHeight(ef.current.offsetHeight);
         });
-    }, [em, X]);
-    r.useLayoutEffect(eg, [eg, p, eo, z]),
-        (0, O.yp)({
+    }, [ef, q]);
+    a.useLayoutEffect(ex, [ex, x, eo, W]),
+        (0, L.yp)({
             event: es.CkL.REMEASURE_TARGET,
-            handler: eg
+            handler: ex
         });
-    let ex = (0, g.e7)([L.Z], () => L.Z.getUploads(s.id, M.d.FirstThreadMessage)),
-        ef = (0, U.ql)(s),
-        ep = r.useRef(null),
-        ev = r.useRef(null),
-        [eC, e_] = r.useState(0),
-        { width: eb } = (0, g.e7)([F.Z], () => F.Z.windowSize()),
-        ej = null === (n = ep.current) || void 0 === n ? void 0 : null === (t = n.getBoundingClientRect()) || void 0 === t ? void 0 : t.width,
-        eT = r.useRef(null);
-    r.useLayoutEffect(() => {
+    let eb = (0, g.e7)([A.Z], () => A.Z.getUploads(s.id, Z.d.FirstThreadMessage)),
+        ev = (0, H.ql)(s),
+        ej = a.useRef(null),
+        eC = a.useRef(null),
+        [e_, ey] = a.useState(0),
+        { width: eN } = (0, g.e7)([F.Z], () => F.Z.windowSize()),
+        eO = null === (n = ej.current) || void 0 === n ? void 0 : null === (t = n.getBoundingClientRect()) || void 0 === t ? void 0 : t.width,
+        eS = a.useRef(null);
+    a.useLayoutEffect(() => {
         var e;
-        let t = ev.current,
+        let t = eC.current,
             n = null == t ? void 0 : null === (e = t.children) || void 0 === e ? void 0 : e[0];
-        if (null != ep.current && null != n && null != n.children) {
-            let { left: e, top: t } = ep.current.getBoundingClientRect(),
-                i = 0;
-            for (let r of n.children) {
-                let { right: n, top: l, height: a } = r.getBoundingClientRect();
-                if (l - t > a) break;
-                n - e > i && (i = n - e);
+        if (null != ej.current && null != n && null != n.children) {
+            let { left: e, top: t } = ej.current.getBoundingClientRect(),
+                r = 0;
+            for (let a of n.children) {
+                let { right: n, top: i, height: l } = a.getBoundingClientRect();
+                if (i - t > l) break;
+                n - e > r && (r = n - e);
             }
-            e_(i);
+            ey(r);
         }
-    }, [s.availableTags, eb, ej, V]);
-    let eS = y.length > 0 && !E && (_ || null != T),
-        ew = !__OVERLAY__ && !k && !E && P && (0 === Z.textValue.trim().length || Z.textValue.trim() === ef) && 0 === ex.length;
-    r.useLayoutEffect(() => {
-        let e = eS || ew;
-        if (!e) return B(0);
-        null != eT.current && B(e ? eT.current.clientHeight : 0);
-    }, [B, eS, ew, eT]);
-    let ey = (e) => {
-            (0, q.e7)({
+    }, [s.availableTags, eN, eO, U]);
+    let eT = P.length > 0 && !T && (j || null != N),
+        eI = !__OVERLAY__ && !k && !T && E && (0 === R.textValue.trim().length || R.textValue.trim() === ev) && 0 === eb.length;
+    a.useLayoutEffect(() => {
+        let e = eT || eI;
+        if (!e) return z(0);
+        null != eS.current && z(e ? eS.current.clientHeight : 0);
+    }, [z, eT, eI, eS]);
+    let eE = (e) => {
+            (0, G.e7)({
                 guildId: s.guild_id,
                 channelId: s.id,
                 tagId: e,
-                filterTagIds: Array.from(V),
-                added: !V.has(e),
+                filterTagIds: Array.from(U),
+                added: !U.has(e),
                 location: {
                     page: es.ZY5.GUILD_CHANNEL,
                     section: es.jXE.FORUM_CHANNEL_HEADER,
@@ -877,296 +942,315 @@ function eT(e) {
             }),
                 J.getState().toggleTagFilter(s.id, e);
         },
-        eE = (0, u.ZP)({
+        ek = (0, u.ZP)({
             id: ''.concat(s.id, '-tags-navigator'),
             isEnabled: !0,
             wrap: !0,
-            scrollToStart: eN,
-            scrollToEnd: eN,
+            scrollToStart: ew,
+            scrollToEnd: ew,
             orientation: m.hy.HORIZONTAL
         }),
-        { role: eR, onFocus: eP, ...ek } = (0, d.JA)('forum-channel-header'),
-        eZ = r.useRef(null),
-        eM = (function () {
-            let e = r.useRef(!1),
-                t = (0, g.e7)([C.Z], () => C.Z.keyboardModeEnabled),
-                n = r.useCallback(
+        eR = (0, d.JA)('forum-channel-header'),
+        { role: eZ, onFocus: eM } = eR,
+        eA = eh(eR, ['role', 'onFocus']),
+        eF = a.useRef(null),
+        eL = (function () {
+            let e = a.useRef(!1),
+                t = (0, g.e7)([v.Z], () => v.Z.keyboardModeEnabled),
+                n = a.useCallback(
                     (t) => {
                         e.current = t.shiftKey;
                     },
                     [e]
                 );
-            return r.useLayoutEffect(() => (t ? window.addEventListener('keydown', n) : window.removeEventListener('keydown', n), () => window.removeEventListener('keydown', n)), [t, n]), e;
+            return a.useLayoutEffect(() => (t ? window.addEventListener('keydown', n) : window.removeEventListener('keydown', n), () => window.removeEventListener('keydown', n)), [t, n]), e;
         })(),
-        eA = r.useCallback(
+        eW = a.useCallback(
             (e) => {
-                if ((eP(), e.target === em.current && !eM.current)) {
+                if ((eM(), e.target === ef.current && !eL.current)) {
                     var t;
-                    null === (t = eZ.current) || void 0 === t || t.focus();
+                    null === (t = eF.current) || void 0 === t || t.focus();
                 }
             },
-            [eP, em, eM]
+            [eM, ef, eL]
         );
-    return (0, i.jsx)(
+    return (0, r.jsx)(
         'div',
-        {
-            className: a()(ed.card, ed.headerRow, ed.columnsSpan),
-            ref: em,
-            onFocus: eA,
-            ...ek,
-            style: {
-                ...S,
-                position: G === h.X.GRID ? 'absolute' : 'static',
-                height: 'auto'
-            },
-            children: (0, i.jsxs)(O.I3, {
-                children: [
-                    null != s.guild_id
-                        ? (0, i.jsx)(N.Z, {
-                              className: a()(ed.newMemberBanner, { [ed.gridViewBanner]: G === h.X.GRID }),
-                              guildId: s.guild_id,
-                              channel: s
-                          })
-                        : null,
-                    (0, i.jsx)('div', {
-                        className: a()(ed.mainCard, ed.header, { [ed.headerWithMatchingPosts]: eS || ew }),
-                        children: (0, i.jsx)(Q.Z, {
-                            parentChannel: s,
-                            onChange: eg,
-                            isSearchLoading: _,
-                            canCreatePost: eo,
-                            inputRef: eZ
-                        })
-                    }),
-                    (eS || ew) &&
-                        (0, i.jsxs)('div', {
-                            className: ed.matchingPostsRow,
-                            ref: eT,
-                            children: [
-                                eS &&
-                                    (0, i.jsxs)('div', {
-                                        className: ed.matchingPosts,
-                                        children: [
-                                            (0, i.jsx)(f.X6q, {
-                                                variant: 'text-xs/normal',
-                                                color: 'text-normal',
-                                                children: _
-                                                    ? ec.intl.string(ec.t['/9i3qq'])
-                                                    : 0 === T
-                                                      ? ec.intl.string(ec.t.DbgHxs)
-                                                      : ec.intl.formatToPlainString(ec.t['tBz/8f'], {
-                                                            numPosts: T,
-                                                            query: y
+        em(
+            eu(
+                {
+                    className: l()(ed.card, ed.headerRow, ed.columnsSpan),
+                    ref: ef,
+                    onFocus: eW
+                },
+                eA
+            ),
+            {
+                style: em(eu({}, w), {
+                    position: V === h.X.GRID ? 'absolute' : 'static',
+                    height: 'auto'
+                }),
+                children: (0, r.jsxs)(L.I3, {
+                    children: [
+                        null != s.guild_id
+                            ? (0, r.jsx)(y.Z, {
+                                  className: l()(ed.newMemberBanner, { [ed.gridViewBanner]: V === h.X.GRID }),
+                                  guildId: s.guild_id,
+                                  channel: s
+                              })
+                            : null,
+                        (0, r.jsx)('div', {
+                            className: l()(ed.mainCard, ed.header, { [ed.headerWithMatchingPosts]: eT || eI }),
+                            children: (0, r.jsx)(Q.Z, {
+                                parentChannel: s,
+                                onChange: ex,
+                                isSearchLoading: j,
+                                canCreatePost: eo,
+                                inputRef: eF
+                            })
+                        }),
+                        (eT || eI) &&
+                            (0, r.jsxs)('div', {
+                                className: ed.matchingPostsRow,
+                                ref: eS,
+                                children: [
+                                    eT &&
+                                        (0, r.jsxs)('div', {
+                                            className: ed.matchingPosts,
+                                            children: [
+                                                (0, r.jsx)(p.X6q, {
+                                                    variant: 'text-xs/normal',
+                                                    color: 'text-normal',
+                                                    children: j
+                                                        ? ec.NW.string(ec.t['/9i3qq'])
+                                                        : 0 === N
+                                                          ? ec.NW.string(ec.t.DbgHxs)
+                                                          : ec.NW.formatToPlainString(ec.t['tBz/8f'], {
+                                                                numPosts: N,
+                                                                query: P
+                                                            })
+                                                }),
+                                                !j &&
+                                                    (0, r.jsx)(p.P3F, {
+                                                        onClick: () => {
+                                                            (0, G.zI)({
+                                                                guildId: s.guild_id,
+                                                                channelId: s.id
+                                                            }),
+                                                                D.Z.clearForumSearch(s.id),
+                                                                q.getState().setName('');
+                                                        },
+                                                        children: (0, r.jsx)(p.Text, {
+                                                            variant: 'text-xs/semibold',
+                                                            color: 'text-brand',
+                                                            className: ed.clear,
+                                                            children: ec.NW.string(ec.t.VkKicX)
                                                         })
-                                            }),
-                                            !_ &&
-                                                (0, i.jsx)(f.P3F, {
-                                                    onClick: () => {
-                                                        (0, q.zI)({
-                                                            guildId: s.guild_id,
-                                                            channelId: s.id
-                                                        }),
-                                                            D.Z.clearForumSearch(s.id),
-                                                            X.getState().setName('');
-                                                    },
-                                                    children: (0, i.jsx)(f.Text, {
-                                                        variant: 'text-xs/semibold',
-                                                        color: 'text-brand',
-                                                        className: ed.clear,
-                                                        children: ec.intl.string(ec.t.VkKicX)
                                                     })
-                                                })
-                                        ]
-                                    }),
-                                (0, i.jsx)('div', { className: ed.tagsSpacer }),
-                                ew
-                                    ? eo
-                                        ? (0, i.jsxs)('div', {
-                                              className: ed.startPostHelp,
-                                              children: [
-                                                  (0, i.jsx)(f.M2$, {
-                                                      shortcut: 'SHIFT',
-                                                      className: ed.keyboardShortcut
-                                                  }),
-                                                  (0, i.jsx)(f.Text, {
-                                                      variant: 'text-xs/normal',
-                                                      color: 'text-normal',
-                                                      children: '+'
-                                                  }),
-                                                  (0, i.jsx)(f.M2$, {
-                                                      shortcut: 'ENTER',
-                                                      className: ed.keyboardShortcut
-                                                  }),
-                                                  (0, i.jsx)(f.Text, {
-                                                      variant: 'text-xs/normal',
-                                                      color: 'text-normal',
-                                                      children: ec.intl.string(ec.t.ZvJ0ys)
+                                            ]
+                                        }),
+                                    (0, r.jsx)('div', { className: ed.tagsSpacer }),
+                                    eI
+                                        ? eo
+                                            ? (0, r.jsxs)('div', {
+                                                  className: ed.startPostHelp,
+                                                  children: [
+                                                      (0, r.jsx)(p.M2$, {
+                                                          shortcut: 'SHIFT',
+                                                          className: ed.keyboardShortcut
+                                                      }),
+                                                      (0, r.jsx)(p.Text, {
+                                                          variant: 'text-xs/normal',
+                                                          color: 'text-normal',
+                                                          children: '+'
+                                                      }),
+                                                      (0, r.jsx)(p.M2$, {
+                                                          shortcut: 'ENTER',
+                                                          className: ed.keyboardShortcut
+                                                      }),
+                                                      (0, r.jsx)(p.Text, {
+                                                          variant: 'text-xs/normal',
+                                                          color: 'text-normal',
+                                                          children: ec.NW.string(ec.t.ZvJ0ys)
+                                                      })
+                                                  ]
+                                              })
+                                            : (0, r.jsxs)('div', {
+                                                  className: ed.startPostHelp,
+                                                  children: [
+                                                      (0, r.jsx)(p.P4T, {
+                                                          size: 'custom',
+                                                          color: 'currentColor',
+                                                          height: 14,
+                                                          width: 14,
+                                                          className: ed.warnIcon
+                                                      }),
+                                                      (0, r.jsx)(p.Text, {
+                                                          variant: 'text-xs/normal',
+                                                          color: 'text-normal',
+                                                          children: ec.NW.string(ec.t.iyzwnJ)
+                                                      })
+                                                  ]
+                                              })
+                                        : null
+                                ]
+                            }),
+                        (0, r.jsx)(X.Z, {
+                            channel: s,
+                            onChange: ex
+                        }),
+                        (0, r.jsxs)('div', {
+                            className: ed.tagsContainer,
+                            ref: ej,
+                            children: [
+                                (0, r.jsx)(eP, { channel: s }),
+                                s.availableTags.length > 0
+                                    ? (0, r.jsxs)(r.Fragment, {
+                                          children: [
+                                              (0, r.jsx)('div', { className: ed.divider }),
+                                              (0, r.jsx)('div', {
+                                                  className: ed.tagList,
+                                                  ref: eC,
+                                                  children: (0, r.jsx)(d.bG, {
+                                                      navigator: ek,
+                                                      children: (0, r.jsx)(d.SJ, {
+                                                          children: (e) => {
+                                                              var { ref: t } = e,
+                                                                  n = eh(e, ['ref']);
+                                                              return (0, r.jsx)(
+                                                                  'div',
+                                                                  em(
+                                                                      eu(
+                                                                          {
+                                                                              className: ed.tagListInner,
+                                                                              ref: t
+                                                                          },
+                                                                          n
+                                                                      ),
+                                                                      {
+                                                                          children: s.availableTags.map((e) =>
+                                                                              (0, r.jsx)(
+                                                                                  et.Z,
+                                                                                  {
+                                                                                      className: ed.tag,
+                                                                                      tag: e,
+                                                                                      onClick: () => eE(e.id),
+                                                                                      selected: U.has(e.id)
+                                                                                  },
+                                                                                  e.id
+                                                                              )
+                                                                          )
+                                                                      }
+                                                                  )
+                                                              );
+                                                          }
+                                                      })
                                                   })
-                                              ]
-                                          })
-                                        : (0, i.jsxs)('div', {
-                                              className: ed.startPostHelp,
-                                              children: [
-                                                  (0, i.jsx)(f.P4T, {
-                                                      size: 'custom',
-                                                      color: 'currentColor',
-                                                      height: 14,
-                                                      width: 14,
-                                                      className: ed.warnIcon
-                                                  }),
-                                                  (0, i.jsx)(f.Text, {
-                                                      variant: 'text-xs/normal',
-                                                      color: 'text-normal',
-                                                      children: ec.intl.string(ec.t.iyzwnJ)
-                                                  })
-                                              ]
-                                          })
+                                              }),
+                                              (0, r.jsx)(p.yRy, {
+                                                  renderPopout: (e) => {
+                                                      let { closePopout: t, setPopoutRef: n } = e;
+                                                      return (0, r.jsx)(er.Z, {
+                                                          channel: s,
+                                                          closePopout: t,
+                                                          setPopoutRef: n
+                                                      });
+                                                  },
+                                                  position: 'bottom',
+                                                  align: 'right',
+                                                  children: (e, t) => {
+                                                      let { isShown: n } = t;
+                                                      return (0, r.jsxs)(
+                                                          p.zxk,
+                                                          em(eu({}, e), {
+                                                              size: p.zxk.Sizes.MIN,
+                                                              color: p.zxk.Colors.CUSTOM,
+                                                              className: l()(ed.tagsButton, { [ed.tagsButtonWithCount]: U.size > 0 }),
+                                                              style: { left: e_ },
+                                                              innerClassName: ed.tagsButtonInner,
+                                                              'aria-label': U.size > 0 ? ec.NW.string(ec.t.IkpM1d) : ec.NW.string(ec.t['9vKK/P']),
+                                                              children: [
+                                                                  U.size > 0
+                                                                      ? (0, r.jsx)('div', {
+                                                                            className: ed.countContainer,
+                                                                            children: (0, r.jsx)(p.Text, {
+                                                                                className: ed.countText,
+                                                                                color: 'none',
+                                                                                variant: 'text-xs/medium',
+                                                                                children: U.size
+                                                                            })
+                                                                        })
+                                                                      : ec.NW.string(ec.t.fZ8hzs),
+                                                                  n
+                                                                      ? (0, r.jsx)(p.u04, {
+                                                                            size: 'custom',
+                                                                            color: 'currentColor',
+                                                                            width: 20
+                                                                        })
+                                                                      : (0, r.jsx)(p.CJ0, {
+                                                                            size: 'custom',
+                                                                            color: 'currentColor',
+                                                                            width: 20
+                                                                        })
+                                                              ]
+                                                          })
+                                                      );
+                                                  }
+                                              }),
+                                              (0, r.jsxs)(p.zxk, {
+                                                  size: p.zxk.Sizes.MIN,
+                                                  color: p.zxk.Colors.CUSTOM,
+                                                  className: l()(ed.tagsButton, ed.tagsButtonPlaceholder),
+                                                  innerClassName: ed.tagsButtonInner,
+                                                  'aria-label': ec.NW.string(ec.t.IkpM1d),
+                                                  children: [
+                                                      U.size > 0
+                                                          ? (0, r.jsx)('div', {
+                                                                className: ed.countContainer,
+                                                                children: (0, r.jsx)(p.Text, {
+                                                                    className: ed.countText,
+                                                                    color: 'none',
+                                                                    variant: 'text-xs/medium',
+                                                                    children: U.size
+                                                                })
+                                                            })
+                                                          : null,
+                                                      (0, r.jsx)(p.u04, {
+                                                          size: 'custom',
+                                                          color: 'currentColor',
+                                                          width: 24
+                                                      })
+                                                  ]
+                                              })
+                                          ]
+                                      })
                                     : null
                             ]
                         }),
-                    (0, i.jsx)(W.Z, {
-                        channel: s,
-                        onChange: eg
-                    }),
-                    (0, i.jsxs)('div', {
-                        className: ed.tagsContainer,
-                        ref: ep,
-                        children: [
-                            (0, i.jsx)(eI, { channel: s }),
-                            s.availableTags.length > 0
-                                ? (0, i.jsxs)(i.Fragment, {
-                                      children: [
-                                          (0, i.jsx)('div', { className: ed.divider }),
-                                          (0, i.jsx)('div', {
-                                              className: ed.tagList,
-                                              ref: ev,
-                                              children: (0, i.jsx)(d.bG, {
-                                                  navigator: eE,
-                                                  children: (0, i.jsx)(d.SJ, {
-                                                      children: (e) => {
-                                                          let { ref: t, ...n } = e;
-                                                          return (0, i.jsx)('div', {
-                                                              className: ed.tagListInner,
-                                                              ref: t,
-                                                              ...n,
-                                                              children: s.availableTags.map((e) =>
-                                                                  (0, i.jsx)(
-                                                                      et.Z,
-                                                                      {
-                                                                          className: ed.tag,
-                                                                          tag: e,
-                                                                          onClick: () => ey(e.id),
-                                                                          selected: V.has(e.id)
-                                                                      },
-                                                                      e.id
-                                                                  )
-                                                              )
-                                                          });
-                                                      }
-                                                  })
-                                              })
-                                          }),
-                                          (0, i.jsx)(f.yRy, {
-                                              renderPopout: (e) => {
-                                                  let { closePopout: t, setPopoutRef: n } = e;
-                                                  return (0, i.jsx)(ei.Z, {
-                                                      channel: s,
-                                                      closePopout: t,
-                                                      setPopoutRef: n
-                                                  });
-                                              },
-                                              position: 'bottom',
-                                              align: 'right',
-                                              children: (e, t) => {
-                                                  let { isShown: n } = t;
-                                                  return (0, i.jsxs)(f.zxk, {
-                                                      ...e,
-                                                      size: f.zxk.Sizes.MIN,
-                                                      color: f.zxk.Colors.CUSTOM,
-                                                      className: a()(ed.tagsButton, { [ed.tagsButtonWithCount]: V.size > 0 }),
-                                                      style: { left: eC },
-                                                      innerClassName: ed.tagsButtonInner,
-                                                      'aria-label': V.size > 0 ? ec.intl.string(ec.t.IkpM1d) : ec.intl.string(ec.t['9vKK/P']),
-                                                      children: [
-                                                          V.size > 0
-                                                              ? (0, i.jsx)('div', {
-                                                                    className: ed.countContainer,
-                                                                    children: (0, i.jsx)(f.Text, {
-                                                                        className: ed.countText,
-                                                                        color: 'none',
-                                                                        variant: 'text-xs/medium',
-                                                                        children: V.size
-                                                                    })
-                                                                })
-                                                              : ec.intl.string(ec.t.fZ8hzs),
-                                                          n
-                                                              ? (0, i.jsx)(f.u04, {
-                                                                    size: 'custom',
-                                                                    color: 'currentColor',
-                                                                    width: 20
-                                                                })
-                                                              : (0, i.jsx)(f.CJ0, {
-                                                                    size: 'custom',
-                                                                    color: 'currentColor',
-                                                                    width: 20
-                                                                })
-                                                      ]
-                                                  });
-                                              }
-                                          }),
-                                          (0, i.jsxs)(f.zxk, {
-                                              size: f.zxk.Sizes.MIN,
-                                              color: f.zxk.Colors.CUSTOM,
-                                              className: a()(ed.tagsButton, ed.tagsButtonPlaceholder),
-                                              innerClassName: ed.tagsButtonInner,
-                                              'aria-label': ec.intl.string(ec.t.IkpM1d),
-                                              children: [
-                                                  V.size > 0
-                                                      ? (0, i.jsx)('div', {
-                                                            className: ed.countContainer,
-                                                            children: (0, i.jsx)(f.Text, {
-                                                                className: ed.countText,
-                                                                color: 'none',
-                                                                variant: 'text-xs/medium',
-                                                                children: V.size
-                                                            })
-                                                        })
-                                                      : null,
-                                                  (0, i.jsx)(f.u04, {
-                                                      size: 'custom',
-                                                      color: 'currentColor',
-                                                      width: 24
-                                                  })
-                                              ]
-                                          })
-                                      ]
-                                  })
-                                : null
-                        ]
-                    }),
-                    I,
-                    ee &&
-                        !eu &&
-                        (0, i.jsx)(b.ZP, {
-                            contentTypes: [x.z.FORUM_CHANNEL_HELPER_CARD],
-                            children: (e) => {
-                                let { visibleContent: t, markAsDismissed: n } = e;
-                                return t === x.z.FORUM_CHANNEL_HELPER_CARD ? (0, i.jsx)(K.Z, { onDismiss: n }) : null;
-                            }
-                        })
-                ]
-            })
-        },
+                        O,
+                        ee &&
+                            !eg &&
+                            (0, r.jsx)(C.ZP, {
+                                contentTypes: [f.z.FORUM_CHANNEL_HELPER_CARD],
+                                children: (e) => {
+                                    let { visibleContent: t, markAsDismissed: n } = e;
+                                    return t === f.z.FORUM_CHANNEL_HELPER_CARD ? (0, r.jsx)(K.Z, { onDismiss: n }) : null;
+                                }
+                            })
+                    ]
+                })
+            }
+        ),
         'create-form'
     );
 }
-function eI(e) {
+function eP(e) {
     let { channel: t } = e,
         n = t.isMediaChannel();
-    return (0, i.jsx)(f.yRy, {
+    return (0, r.jsx)(p.yRy, {
         renderPopout: (e) => {
             let { closePopout: n } = e;
-            return (0, i.jsx)(ee.Z, {
+            return (0, r.jsx)(ee.Z, {
                 channel: t,
                 closePopout: n
             });
@@ -1174,38 +1258,40 @@ function eI(e) {
         position: 'bottom',
         align: 'left',
         children: (e, t) => {
-            let { isShown: r } = t;
-            return (0, i.jsxs)(f.zxk, {
-                ...e,
-                size: f.zxk.Sizes.MIN,
-                color: f.zxk.Colors.CUSTOM,
-                className: ed.sortDropdown,
-                innerClassName: ed.sortDropdownInner,
-                'aria-label': n ? ec.intl.string(ec.t.JxU0ws) : ec.intl.string(ec.t.xyYt8P),
-                children: [
-                    (0, i.jsx)(f.uVW, {
-                        size: 'xs',
-                        color: 'currentColor'
-                    }),
-                    (0, i.jsx)(f.Text, {
-                        className: ed.sortDropdownText,
-                        variant: 'text-sm/medium',
-                        color: 'interactive-normal',
-                        children: n ? ec.intl.string(ec.t.JxU0ws) : ec.intl.string(ec.t.xyYt8P)
-                    }),
-                    r
-                        ? (0, i.jsx)(f.u04, {
-                              size: 'custom',
-                              color: 'currentColor',
-                              width: 20
-                          })
-                        : (0, i.jsx)(f.CJ0, {
-                              size: 'custom',
-                              color: 'currentColor',
-                              width: 20
-                          })
-                ]
-            });
+            let { isShown: a } = t;
+            return (0, r.jsxs)(
+                p.zxk,
+                em(eu({}, e), {
+                    size: p.zxk.Sizes.MIN,
+                    color: p.zxk.Colors.CUSTOM,
+                    className: ed.sortDropdown,
+                    innerClassName: ed.sortDropdownInner,
+                    'aria-label': n ? ec.NW.string(ec.t.JxU0ws) : ec.NW.string(ec.t.xyYt8P),
+                    children: [
+                        (0, r.jsx)(p.uVW, {
+                            size: 'xs',
+                            color: 'currentColor'
+                        }),
+                        (0, r.jsx)(p.Text, {
+                            className: ed.sortDropdownText,
+                            variant: 'text-sm/medium',
+                            color: 'interactive-normal',
+                            children: n ? ec.NW.string(ec.t.JxU0ws) : ec.NW.string(ec.t.xyYt8P)
+                        }),
+                        a
+                            ? (0, r.jsx)(p.u04, {
+                                  size: 'custom',
+                                  color: 'currentColor',
+                                  width: 20
+                              })
+                            : (0, r.jsx)(p.CJ0, {
+                                  size: 'custom',
+                                  color: 'currentColor',
+                                  width: 20
+                              })
+                    ]
+                })
+            );
         }
     });
 }

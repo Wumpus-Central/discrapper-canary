@@ -1,209 +1,252 @@
-t.d(n, { default: () => Q });
-var l = t(200651);
-t(192379);
-var i = t(442837),
-    r = t(481060),
-    a = t(846027),
-    o = t(239091),
-    s = t(287734),
-    d = t(872810),
-    c = t(410575),
-    u = t(441061),
-    g = t(431368),
-    h = t(418469),
-    f = t(701098),
-    Z = t(607783),
-    m = t(786138),
-    x = t(435064),
-    I = t(779618),
-    S = t(39604),
-    C = t(258609),
-    v = t(111672),
-    b = t(441167),
-    p = t(700994),
-    j = t(76021),
-    w = t(199902),
-    k = t(314897),
-    M = t(592125),
-    V = t(131951),
-    A = t(594174),
-    E = t(358085),
-    N = t(569545),
-    T = t(981631),
-    U = t(65154),
-    F = t(388032);
-function J(e) {
-    return (0, i.e7)([w.Z], () => {
-        let n = w.Z.getActiveStreamForApplicationStream(e);
-        return null != n && (0, N.V9)(n) === (0, N.V9)(e);
+n.d(t, { default: () => T });
+var r = n(200651);
+n(192379);
+var l = n(442837),
+    i = n(481060),
+    o = n(846027),
+    a = n(239091),
+    c = n(287734),
+    s = n(872810),
+    u = n(410575),
+    d = n(441061),
+    f = n(431368),
+    g = n(418469),
+    b = n(701098),
+    p = n(607783),
+    h = n(786138),
+    j = n(435064),
+    m = n(779618),
+    O = n(39604),
+    S = n(258609),
+    v = n(111672),
+    y = n(441167),
+    Z = n(700994),
+    x = n(76021),
+    I = n(199902),
+    w = n(314897),
+    C = n(592125),
+    N = n(131951),
+    P = n(594174),
+    W = n(358085),
+    k = n(569545),
+    E = n(981631),
+    M = n(65154),
+    V = n(388032);
+function A(e) {
+    return (0, l.e7)([I.Z], () => {
+        let t = I.Z.getActiveStreamForApplicationStream(e);
+        return null != t && (0, k.V9)(t) === (0, k.V9)(e);
     });
 }
-function Q(e) {
-    let { stream: n, analyticsContext: t, appContext: w, exitFullscreen: Q, onSelect: R, simplified: _ = !1 } = e,
-        y = (0, i.cj)([A.default], () => {
+function T(e) {
+    let { stream: t, analyticsContext: n, appContext: I, exitFullscreen: T, onSelect: U, simplified: D = !1 } = e,
+        F = (0, l.cj)([P.default], () => {
             var e;
-            return (null == n ? void 0 : n.ownerId) === (null === (e = A.default.getCurrentUser()) || void 0 === e ? void 0 : e.id);
+            return (null == t ? void 0 : t.ownerId) === (null === (e = P.default.getCurrentUser()) || void 0 === e ? void 0 : e.id);
         }),
-        G = (function (e) {
-            let n = J(e),
-                t = (0, I.Z)(V.Z),
-                a = x.Z.getSettings().clipsEnabled,
-                o = e.ownerId === k.default.getId(),
-                { enableViewerClipping: s, ignoreSenderPreference: d } = b.Z.useExperiment({ location: 'StreamContextMenu' }, { autoTrackExposure: !1 }),
-                c = (0, i.e7)([x.Z], () => x.Z.getIsAtMaxSaveClipOperations()),
-                u = (0, i.e7)([x.Z], () => x.Z.isViewerClippingAllowedForUser(e.ownerId)) || d;
-            return t && s && n
-                ? (0, l.jsx)(r.sNh, {
+        J = (function (e) {
+            let t = A(e),
+                n = (0, m.Z)(N.Z),
+                o = j.Z.getSettings().clipsEnabled,
+                a = e.ownerId === w.default.getId(),
+                { enableViewerClipping: c, ignoreSenderPreference: s } = y.Z.useExperiment({ location: 'StreamContextMenu' }, { autoTrackExposure: !1 }),
+                u = (0, l.e7)([j.Z], () => j.Z.getIsAtMaxSaveClipOperations()),
+                d = (0, l.e7)([j.Z], () => j.Z.isViewerClippingAllowedForUser(e.ownerId)) || s;
+            return n && c && t
+                ? (0, r.jsx)(i.sNh, {
                       id: 'clip-stream',
-                      disabled: !a || !(o || u) || c,
-                      label: F.intl.string(F.t.U4URzM),
-                      action: () => (o ? (0, S.C1)() : (0, S.C1)((0, N.V9)(e)))
+                      disabled: !o || !(a || d) || u,
+                      label: V.NW.string(V.t.U4URzM),
+                      action: () => (a ? (0, O.C1)() : (0, O.C1)((0, k.V9)(e)))
                   })
                 : null;
-        })(n),
-        L = J(n),
-        Y = (function (e) {
-            let n = J(e),
-                t = (0, p.Z)(e.ownerId, U.Yn.STREAM);
-            return n ? t : null;
-        })(n),
-        z = (function (e, n) {
-            let t;
-            let a = (0, i.e7)([C.Z], () => null != C.Z.getRemoteSessionId()),
-                o = (0, i.e7)([M.Z], () => M.Z.getChannel(e.channelId), [e.channelId]),
-                c = J(e),
-                u = A.default.getCurrentUser(),
-                g = null != u && e.ownerId === u.id;
-            return ((t = g ? F.intl.string(F.t.S5anIS) : c ? F.intl.string(F.t.q3O3Jy) : F.intl.string(F.t['7Xq/nZ'])), a || (!g && c && (null == o ? void 0 : o.isGuildStageVoice())))
+        })(t),
+        Q = A(t),
+        R = (function (e) {
+            let t = A(e),
+                n = (0, Z.Z)(e.ownerId, M.Yn.STREAM);
+            return t ? n : null;
+        })(t),
+        _ = (function (e, t) {
+            let n;
+            let o = (0, l.e7)([S.Z], () => null != S.Z.getRemoteSessionId()),
+                a = (0, l.e7)([C.Z], () => C.Z.getChannel(e.channelId), [e.channelId]),
+                u = A(e),
+                d = P.default.getCurrentUser(),
+                f = null != d && e.ownerId === d.id;
+            return ((n = f ? V.NW.string(V.t.S5anIS) : u ? V.NW.string(V.t.q3O3Jy) : V.NW.string(V.t['7Xq/nZ'])), o || (!f && u && (null == a ? void 0 : a.isGuildStageVoice())))
                 ? null
-                : (0, l.jsx)(r.sNh, {
+                : (0, r.jsx)(i.sNh, {
                       id: 'watch',
-                      label: t,
-                      action: c
+                      label: n,
+                      action: u
                           ? function () {
-                                (0, d.g)((0, N.V9)(e));
+                                (0, s.g)((0, k.V9)(e));
                             }
                           : function () {
-                                s.default.selectVoiceChannel(e.channelId), (0, d.rn)(e);
+                                c.default.selectVoiceChannel(e.channelId), (0, s.rn)(e);
                             },
-                      icon: n && c && r.g5r
+                      icon: t && u && i.g5r
                   });
-        })(n, _),
-        B = (function (e) {
-            let n = J(e),
-                t = (0, i.e7)([V.Z], () => V.Z.isLocalMute(e.ownerId, U.Yn.STREAM)),
-                o = A.default.getCurrentUser(),
-                s = null != o && e.ownerId === o.id;
-            return !n || s
+        })(t, D),
+        G = (function (e) {
+            let t = A(e),
+                n = (0, l.e7)([N.Z], () => N.Z.isLocalMute(e.ownerId, M.Yn.STREAM)),
+                a = P.default.getCurrentUser(),
+                c = null != a && e.ownerId === a.id;
+            return !t || c
                 ? null
-                : (0, l.jsx)(r.S89, {
+                : (0, r.jsx)(i.S89, {
                       id: 'mute',
-                      label: F.intl.string(F.t.sWmtIy),
+                      label: V.NW.string(V.t.sWmtIy),
                       action: function () {
-                          a.Z.toggleLocalMute(e.ownerId, U.Yn.STREAM);
+                          o.Z.toggleLocalMute(e.ownerId, M.Yn.STREAM);
                       },
-                      checked: t
+                      checked: n
                   });
-        })(n),
-        q = (function (e) {
-            let n = J(e),
-                t = e.ownerId === k.default.getId(),
-                { sidechainAvailable: o } = v.Z.getCurrentConfig({ location: 'StreamContextMenu' }),
-                s = (0, i.e7)([V.Z], () => V.Z.getSidechainCompression()),
-                d = (0, i.e7)([V.Z], () => V.Z.getSidechainCompressionStrength());
-            return t || !n || !o || (0, E.isWeb)()
+        })(t),
+        L = (function (e) {
+            let t = A(e),
+                n = e.ownerId === w.default.getId(),
+                { sidechainAvailable: a } = v.Z.getCurrentConfig({ location: 'StreamContextMenu' }),
+                c = (0, l.e7)([N.Z], () => N.Z.getSidechainCompression()),
+                s = (0, l.e7)([N.Z], () => N.Z.getSidechainCompressionStrength());
+            return n || !t || !a || (0, W.isWeb)()
                 ? null
-                : (0, l.jsxs)(r.kSQ, {
+                : (0, r.jsxs)(i.kSQ, {
                       children: [
-                          (0, l.jsx)(r.S89, {
+                          (0, r.jsx)(i.S89, {
                               id: 'sidechain-compression',
-                              label: F.intl.string(F.t['/jwMtr']),
-                              subtext: F.intl.string(F.t.zlA23N),
-                              action: () => a.Z.setSidechainCompression(!s),
-                              checked: s
+                              label: V.NW.string(V.t['/jwMtr']),
+                              subtext: V.NW.string(V.t.zlA23N),
+                              action: () => o.Z.setSidechainCompression(!c),
+                              checked: c
                           }),
-                          (0, l.jsx)(r.II_, {
+                          (0, r.jsx)(i.II_, {
                               id: 'sidechain-parameters',
-                              label: F.intl.string(F.t.fhEzfn),
-                              control: (e, n) =>
-                                  (0, l.jsx)(r._wy, {
-                                      ...e,
-                                      ref: n,
-                                      value: d,
-                                      maxValue: 100,
-                                      onChange: (e) => a.Z.setSidechainCompressionStrength(e),
-                                      'aria-label': F.intl.string(F.t.fhEzfn)
-                                  })
+                              label: V.NW.string(V.t.fhEzfn),
+                              control: (e, t) => {
+                                  var n, l;
+                                  return (0, r.jsx)(
+                                      i._wy,
+                                      ((n = (function (e) {
+                                          for (var t = 1; t < arguments.length; t++) {
+                                              var n = null != arguments[t] ? arguments[t] : {},
+                                                  r = Object.keys(n);
+                                              'function' == typeof Object.getOwnPropertySymbols &&
+                                                  (r = r.concat(
+                                                      Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                          return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                      })
+                                                  )),
+                                                  r.forEach(function (t) {
+                                                      var r;
+                                                      (r = n[t]),
+                                                          t in e
+                                                              ? Object.defineProperty(e, t, {
+                                                                    value: r,
+                                                                    enumerable: !0,
+                                                                    configurable: !0,
+                                                                    writable: !0
+                                                                })
+                                                              : (e[t] = r);
+                                                  });
+                                          }
+                                          return e;
+                                      })({}, e)),
+                                      (l = l =
+                                          {
+                                              ref: t,
+                                              value: s,
+                                              maxValue: 100,
+                                              onChange: (e) => o.Z.setSidechainCompressionStrength(e),
+                                              'aria-label': V.NW.string(V.t.fhEzfn)
+                                          }),
+                                      Object.getOwnPropertyDescriptors
+                                          ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
+                                          : (function (e, t) {
+                                                var n = Object.keys(e);
+                                                if (Object.getOwnPropertySymbols) {
+                                                    var r = Object.getOwnPropertySymbols(e);
+                                                    n.push.apply(n, r);
+                                                }
+                                                return n;
+                                            })(Object(l)).forEach(function (e) {
+                                                Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
+                                            }),
+                                      n)
+                                  );
+                              }
                           })
                       ]
                   });
-        })(n),
-        O = (0, h.Z)(n, w, Q),
-        P = (0, g.Z)(n.channelId, n.ownerId),
-        W = (0, u.Z)(n.channelId),
-        H = (0, i.e7)([M.Z], () => M.Z.getChannel(n.channelId), [n.channelId]),
-        X = (0, f.G)({
-            stream: n,
-            channelId: n.channelId,
+        })(t),
+        Y = (0, g.Z)(t, I, T),
+        z = (0, f.Z)(t.channelId, t.ownerId),
+        B = (0, d.Z)(t.channelId),
+        q = (0, l.e7)([C.Z], () => C.Z.getChannel(t.channelId), [t.channelId]),
+        H = (0, b.G)({
+            stream: t,
+            channelId: t.channelId,
             location: 'StreamContextMenu'
         }),
-        D = (0, Z.B)({
-            userId: n.ownerId,
-            channelId: n.channelId,
-            guildId: n.guildId,
+        X = (0, p.B)({
+            userId: t.ownerId,
+            channelId: t.channelId,
+            guildId: t.guildId,
             location: 'StreamContextMenu',
-            simplified: _
+            simplified: D
         }),
-        K = (0, m.b)({
-            stream: n,
-            handleGoLive: () => (0, j.Z)(n.guildId, n.channelId, 'StreamContextMenu'),
-            simplified: _,
-            appContext: w
+        K = (0, h.b)({
+            stream: t,
+            handleGoLive: () => (0, x.Z)(t.guildId, t.channelId, 'StreamContextMenu'),
+            simplified: D,
+            appContext: I
         });
-    return _
-        ? (0, l.jsxs)(r.v2r, {
+    return D
+        ? (0, r.jsxs)(i.v2r, {
               navId: 'stream-context',
-              onClose: o.Zy,
-              'aria-label': F.intl.string(F.t.Gl3Q39),
+              onClose: a.Zy,
+              'aria-label': V.NW.string(V.t.Gl3Q39),
               variant: 'fixed',
-              onSelect: R,
+              onSelect: U,
               children: [
-                  (0, l.jsx)(r.kSQ, { children: y ? K : z }),
-                  (0, l.jsx)(r.kSQ, { children: Y }),
-                  q,
-                  L
-                      ? (0, l.jsxs)(l.Fragment, {
+                  (0, r.jsx)(i.kSQ, { children: F ? K : _ }),
+                  (0, r.jsx)(i.kSQ, { children: R }),
+                  L,
+                  Q
+                      ? (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, l.jsx)(r.Clw, {}),
-                                (0, l.jsxs)(r.sNh, {
+                                (0, r.jsx)(i.Clw, {}),
+                                (0, r.jsxs)(i.sNh, {
                                     id: 'more-options',
-                                    label: F.intl.string(F.t.PdRCRk),
-                                    children: [P, D, X, O]
+                                    label: V.NW.string(V.t.PdRCRk),
+                                    children: [z, X, H, Y]
                                 })
                             ]
                         })
                       : null
               ]
           })
-        : (0, l.jsx)(c.Z, {
-              context: t,
-              object: T.qAy.CONTEXT_MENU,
-              children: (0, l.jsxs)(r.v2r, {
+        : (0, r.jsx)(u.Z, {
+              context: n,
+              object: E.qAy.CONTEXT_MENU,
+              children: (0, r.jsxs)(i.v2r, {
                   navId: 'stream-context',
-                  onClose: o.Zy,
-                  'aria-label': F.intl.string(F.t.Gl3Q39),
-                  variant: _ ? 'fixed' : 'flexible',
-                  onSelect: R,
+                  onClose: a.Zy,
+                  'aria-label': V.NW.string(V.t.Gl3Q39),
+                  variant: D ? 'fixed' : 'flexible',
+                  onSelect: U,
                   children: [
-                      (0, l.jsx)(r.kSQ, {
-                          children: (0, l.jsxs)(l.Fragment, {
-                              children: [z, G, B, X, D]
+                      (0, r.jsx)(i.kSQ, {
+                          children: (0, r.jsxs)(r.Fragment, {
+                              children: [_, J, G, H, X]
                           })
                       }),
-                      (0, l.jsx)(r.kSQ, { children: Y }),
-                      q,
-                      (0, l.jsxs)(r.kSQ, {
-                          children: [(null == H ? void 0 : H.isGuildStageVoice()) ? null : W, P, L && O]
+                      (0, r.jsx)(i.kSQ, { children: R }),
+                      L,
+                      (0, r.jsxs)(i.kSQ, {
+                          children: [(null == q ? void 0 : q.isGuildStageVoice()) ? null : B, z, Q && Y]
                       })
                   ]
               })

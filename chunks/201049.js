@@ -1,68 +1,68 @@
-l.d(n, { default: () => p }), l(47120);
-var t = l(200651),
-    i = l(192379),
-    o = l(442837),
-    a = l(481060),
-    r = l(596454),
-    s = l(493773),
-    d = l(313201),
-    u = l(318766),
-    c = l(907040),
-    m = l(339085),
-    j = l(984933),
-    x = l(883429),
-    v = l(981631),
-    h = l(185923),
-    k = l(388032),
-    C = l(707004);
-function p(e) {
+t.d(n, { default: () => g }), t(47120);
+var o = t(200651),
+    l = t(192379),
+    i = t(442837),
+    r = t(481060),
+    a = t(596454),
+    c = t(493773),
+    s = t(313201),
+    u = t(318766),
+    d = t(907040),
+    m = t(339085),
+    j = t(984933),
+    p = t(883429),
+    v = t(981631),
+    x = t(185923),
+    b = t(388032),
+    h = t(44456);
+function g(e) {
     var n;
-    let { transitionState: l, onClose: p, channelId: N, guildId: g, tag: _ } = e,
-        b = (0, d.Dt)(),
-        z = null != _,
-        [I, f] = i.useState(null !== (n = null == _ ? void 0 : _.name) && void 0 !== n ? n : ''),
-        [B, y] = i.useState(
-            null != _
+    let { transitionState: t, onClose: g, channelId: N, guildId: k, tag: f } = e,
+        y = (0, s.Dt)(),
+        C = null != f,
+        [O, _] = l.useState(null !== (n = null == f ? void 0 : f.name) && void 0 !== n ? n : ''),
+        [P, z] = l.useState(
+            null != f
                 ? {
-                      id: _.emojiId,
-                      name: _.emojiName
+                      id: f.emojiId,
+                      name: f.emojiName
                   }
                 : null
         ),
-        [Z, E] = i.useState(null == _ ? void 0 : _.moderated),
-        T = (0, o.e7)([m.ZP], () => ((null == B ? void 0 : B.id) != null ? m.ZP.getUsableCustomEmojiById(B.id) : null)),
-        R = (null == _ ? void 0 : _.name) !== I || (null == _ ? void 0 : _.emojiId) !== (null == B ? void 0 : B.id) || (null == _ ? void 0 : _.emojiName) !== (null == B ? void 0 : B.name) || Z !== (null == _ ? void 0 : _.moderated),
-        P = () => {
-            if (null != I && R) {
-                if (z) {
-                    x.Z.updateForumTag(
+        [I, w] = l.useState(null == f ? void 0 : f.moderated),
+        B = (0, i.e7)([m.ZP], () => ((null == P ? void 0 : P.id) != null ? m.ZP.getUsableCustomEmojiById(P.id) : null)),
+        E = (null == f ? void 0 : f.name) !== O || (null == f ? void 0 : f.emojiId) !== (null == P ? void 0 : P.id) || (null == f ? void 0 : f.emojiName) !== (null == P ? void 0 : P.name) || I !== (null == f ? void 0 : f.moderated),
+        Z = () => {
+            if (null != O && E) {
+                if (C) {
+                    p.Z.updateForumTag(
                         {
-                            id: _.id,
-                            name: I,
-                            emojiId: null == B ? void 0 : B.id,
-                            emojiName: null == B ? void 0 : B.name,
-                            moderated: Z
+                            id: f.id,
+                            name: O,
+                            emojiId: null == P ? void 0 : P.id,
+                            emojiName: null == P ? void 0 : P.name,
+                            moderated: I
                         },
                         N
                     ),
-                        p();
+                        g();
                     return;
                 }
-                x.Z.createForumTag(
+                p.Z.createForumTag(
                     {
-                        name: I,
-                        emojiId: null == B ? void 0 : B.id,
-                        emojiName: null == B ? void 0 : B.name,
-                        moderated: Z
+                        name: O,
+                        emojiId: null == P ? void 0 : P.id,
+                        emojiName: null == P ? void 0 : P.name,
+                        moderated: I
                     },
                     N
                 ),
-                    p();
+                    g();
             }
         },
         S = (e) => {
             null != e &&
-                y(
+                z(
                     null != e.id
                         ? {
                               id: e.id,
@@ -74,103 +74,145 @@ function p(e) {
                           }
                 );
         },
-        D = i.useCallback((e) => f(e), []),
-        w = i.createRef();
+        T = l.useCallback((e) => _(e), []),
+        D = l.createRef();
     return (
-        (0, s.ZP)(() => {
-            null != w.current && w.current.focus();
+        (0, c.ZP)(() => {
+            null != D.current && D.current.focus();
         }),
-        (0, t.jsxs)(a.Y0X, {
-            transitionState: l,
-            'aria-labelledby': b,
+        (0, o.jsxs)(r.Y0X, {
+            transitionState: t,
+            'aria-labelledby': y,
             children: [
-                (0, t.jsx)(a.xBx, {
+                (0, o.jsx)(r.xBx, {
                     separator: !1,
-                    children: (0, t.jsx)(a.X6q, {
+                    children: (0, o.jsx)(r.X6q, {
                         variant: 'heading-md/semibold',
-                        children: z ? k.intl.string(k.t.zeVg5e) : k.intl.string(k.t['/jubeH'])
+                        children: C ? b.NW.string(b.t.zeVg5e) : b.NW.string(b.t['/jubeH'])
                     })
                 }),
-                (0, t.jsxs)('div', {
-                    className: C.content,
+                (0, o.jsxs)('div', {
+                    className: h.content,
                     children: [
-                        (0, t.jsx)(a.Text, {
+                        (0, o.jsx)(r.Text, {
                             variant: 'text-sm/normal',
-                            children: k.intl.string(k.t['3v8kZG'])
+                            children: b.NW.string(b.t['3v8kZG'])
                         }),
-                        (0, t.jsxs)('div', {
-                            className: C.inputContainer,
+                        (0, o.jsxs)('div', {
+                            className: h.inputContainer,
                             children: [
-                                (0, t.jsx)('div', {
-                                    className: C.emojiButtonContainer,
-                                    children: (0, t.jsx)(a.yRy, {
+                                (0, o.jsx)('div', {
+                                    className: h.emojiButtonContainer,
+                                    children: (0, o.jsx)(r.yRy, {
                                         renderPopout: (e) => {
                                             let { closePopout: n } = e,
-                                                l = j.ZP.getDefaultChannel(g);
-                                            return (0, t.jsx)(c.Z, {
-                                                guildId: g,
+                                                t = j.ZP.getDefaultChannel(k);
+                                            return (0, o.jsx)(d.Z, {
+                                                guildId: k,
                                                 closePopout: n,
-                                                onSelectEmoji: (e, l) => {
-                                                    S(e), l && n();
+                                                onSelectEmoji: (e, t) => {
+                                                    S(e), t && n();
                                                 },
-                                                pickerIntention: h.Hz.COMMUNITY_CONTENT,
-                                                onNavigateAway: p,
-                                                channel: l
+                                                pickerIntention: x.Hz.COMMUNITY_CONTENT,
+                                                onNavigateAway: g,
+                                                channel: t
                                             });
                                         },
                                         position: 'left',
-                                        animation: a.yRy.Animation.NONE,
+                                        animation: r.yRy.Animation.NONE,
                                         align: 'bottom',
                                         children: (e, n) => {
-                                            let { isShown: l } = n;
-                                            return (0, t.jsx)(u.Z, {
-                                                ...e,
-                                                onClick: (n) => {
-                                                    var l;
-                                                    null === (l = e.onClick) || void 0 === l || l.call(e, n);
-                                                },
-                                                active: l,
-                                                className: C.emojiButton,
-                                                tabIndex: 0,
-                                                renderButtonContents:
-                                                    null != B && (null != B.id || null != B.name)
-                                                        ? () =>
-                                                              (0, t.jsx)(r.Z, {
-                                                                  className: C.emoji,
-                                                                  emojiId: B.id,
-                                                                  emojiName: B.name,
-                                                                  animated: !!(null == T ? void 0 : T.animated)
-                                                              })
-                                                        : null
-                                            });
+                                            var t, l;
+                                            let { isShown: i } = n;
+                                            return (0, o.jsx)(
+                                                u.Z,
+                                                ((t = (function (e) {
+                                                    for (var n = 1; n < arguments.length; n++) {
+                                                        var t = null != arguments[n] ? arguments[n] : {},
+                                                            o = Object.keys(t);
+                                                        'function' == typeof Object.getOwnPropertySymbols &&
+                                                            (o = o.concat(
+                                                                Object.getOwnPropertySymbols(t).filter(function (e) {
+                                                                    return Object.getOwnPropertyDescriptor(t, e).enumerable;
+                                                                })
+                                                            )),
+                                                            o.forEach(function (n) {
+                                                                var o;
+                                                                (o = t[n]),
+                                                                    n in e
+                                                                        ? Object.defineProperty(e, n, {
+                                                                              value: o,
+                                                                              enumerable: !0,
+                                                                              configurable: !0,
+                                                                              writable: !0
+                                                                          })
+                                                                        : (e[n] = o);
+                                                            });
+                                                    }
+                                                    return e;
+                                                })({}, e)),
+                                                (l = l =
+                                                    {
+                                                        onClick: (n) => {
+                                                            var t;
+                                                            null === (t = e.onClick) || void 0 === t || t.call(e, n);
+                                                        },
+                                                        active: i,
+                                                        className: h.emojiButton,
+                                                        tabIndex: 0,
+                                                        renderButtonContents:
+                                                            null != P && (null != P.id || null != P.name)
+                                                                ? () =>
+                                                                      (0, o.jsx)(a.Z, {
+                                                                          className: h.emoji,
+                                                                          emojiId: P.id,
+                                                                          emojiName: P.name,
+                                                                          animated: !!(null == B ? void 0 : B.animated)
+                                                                      })
+                                                                : null
+                                                    }),
+                                                Object.getOwnPropertyDescriptors
+                                                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(l))
+                                                    : (function (e, n) {
+                                                          var t = Object.keys(e);
+                                                          if (Object.getOwnPropertySymbols) {
+                                                              var o = Object.getOwnPropertySymbols(e);
+                                                              t.push.apply(t, o);
+                                                          }
+                                                          return t;
+                                                      })(Object(l)).forEach(function (e) {
+                                                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(l, e));
+                                                      }),
+                                                t)
+                                            );
                                         }
                                     })
                                 }),
-                                (0, t.jsx)(a.oil, {
-                                    inputRef: w,
+                                (0, o.jsx)(r.oil, {
+                                    inputRef: D,
                                     maxLength: 20,
-                                    value: I,
-                                    inputClassName: C.input,
-                                    placeholder: k.intl.string(k.t['5vpeb2']),
-                                    onChange: D,
+                                    value: O,
+                                    inputClassName: h.input,
+                                    placeholder: b.NW.string(b.t['5vpeb2']),
+                                    onChange: T,
                                     autoFocus: !0,
                                     onKeyDown: (e) => {
-                                        e.keyCode === v.yXg.ENTER && I.length > 0 && (I.length > 0 && P(), e.preventDefault());
+                                        e.keyCode === v.yXg.ENTER && O.length > 0 && (O.length > 0 && Z(), e.preventDefault());
                                     }
                                 }),
-                                I.length > 0 || null != B
-                                    ? (0, t.jsx)(a.zxk, {
-                                          'aria-label': k.intl.string(k.t.o8lsHR),
-                                          className: C.clearButton,
+                                O.length > 0 || null != P
+                                    ? (0, o.jsx)(r.zxk, {
+                                          'aria-label': b.NW.string(b.t.o8lsHR),
+                                          className: h.clearButton,
                                           onClick: () => {
-                                              f(''), y(null);
+                                              _(''), z(null);
                                           },
-                                          look: a.zxk.Looks.BLANK,
-                                          size: a.zxk.Sizes.NONE,
-                                          children: (0, t.jsx)(a.k$p, {
+                                          look: r.zxk.Looks.BLANK,
+                                          size: r.zxk.Sizes.NONE,
+                                          children: (0, o.jsx)(r.k$p, {
                                               size: 'md',
                                               color: 'currentColor',
-                                              className: C.clearIcon
+                                              className: h.clearIcon
                                           })
                                       })
                                     : null
@@ -178,46 +220,46 @@ function p(e) {
                         })
                     ]
                 }),
-                (0, t.jsx)(a.XZJ, {
-                    type: a.XZJ.Types.INVERTED,
+                (0, o.jsx)(r.XZJ, {
+                    type: r.XZJ.Types.INVERTED,
                     size: 18,
-                    value: null != Z && Z,
-                    onChange: (e, n) => E(n || ((null == _ ? void 0 : _.moderated) == null && void 0)),
-                    className: C.moderatedCheckbox,
-                    children: (0, t.jsx)(a.Text, {
+                    value: null != I && I,
+                    onChange: (e, n) => w(n || ((null == f ? void 0 : f.moderated) == null && void 0)),
+                    className: h.moderatedCheckbox,
+                    children: (0, o.jsx)(r.Text, {
                         variant: 'text-sm/normal',
-                        children: k.intl.string(k.t['rMH+rq'])
+                        children: b.NW.string(b.t['rMH+rq'])
                     })
                 }),
-                (0, t.jsxs)(a.mzw, {
-                    className: C.footer,
+                (0, o.jsxs)(r.mzw, {
+                    className: h.footer,
                     children: [
-                        (0, t.jsxs)('div', {
-                            className: C.buttons,
+                        (0, o.jsxs)('div', {
+                            className: h.buttons,
                             children: [
-                                (0, t.jsx)(a.zxk, {
-                                    color: a.zxk.Colors.PRIMARY,
+                                (0, o.jsx)(r.zxk, {
+                                    color: r.zxk.Colors.PRIMARY,
                                     onClick: () => {
-                                        p();
+                                        g();
                                     },
-                                    children: k.intl.string(k.t['ETE/oK'])
+                                    children: b.NW.string(b.t['ETE/oK'])
                                 }),
-                                (0, t.jsx)(a.zxk, {
-                                    onClick: P,
-                                    disabled: 0 === I.length || !R,
+                                (0, o.jsx)(r.zxk, {
+                                    onClick: Z,
+                                    disabled: 0 === O.length || !E,
                                     autoFocus: !0,
-                                    children: k.intl.string(k.t.R3BPHx)
+                                    children: b.NW.string(b.t.R3BPHx)
                                 })
                             ]
                         }),
-                        z &&
-                            (0, t.jsx)(a.zxk, {
-                                color: a.zxk.Colors.RED,
-                                look: a.zxk.Looks.LINK,
+                        C &&
+                            (0, o.jsx)(r.zxk, {
+                                color: r.zxk.Colors.RED,
+                                look: r.zxk.Looks.LINK,
                                 onClick: () => {
-                                    z && (x.Z.deleteForumTag(N, _.id), p());
+                                    C && (p.Z.deleteForumTag(N, f.id), g());
                                 },
-                                children: k.intl.string(k.t.huYSMj)
+                                children: b.NW.string(b.t.huYSMj)
                             })
                     ]
                 })

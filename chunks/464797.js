@@ -1,29 +1,69 @@
-t.d(n, {
-    R: () => d,
-    _: () => i
+r.d(t, {
+    R: () => f,
+    _: () => s
 });
-var r = t(200651),
-    o = t(192379),
-    l = t(512722),
-    s = t.n(l),
-    u = t(442837),
-    a = t(240864);
-let c = o.createContext(void 0);
-function i() {
-    let e = o.useContext(c);
-    return s()(null != e, 'GuildProductPurchaseContext not found'), e;
+var n = r(200651),
+    o = r(192379),
+    c = r(512722),
+    l = r.n(c),
+    u = r(442837),
+    i = r(240864);
+let a = o.createContext(void 0);
+function s() {
+    let e = o.useContext(a);
+    return l()(null != e, 'GuildProductPurchaseContext not found'), e;
 }
-function d(e) {
-    let { children: n, guildProductListingId: t, ...o } = e,
-        l = (0, u.e7)([a.Z], () => a.Z.getGuildProduct(t));
+function f(e) {
+    var { children: t, guildProductListingId: r } = e,
+        o = (function (e, t) {
+            if (null == e) return {};
+            var r,
+                n,
+                o = (function (e, t) {
+                    if (null == e) return {};
+                    var r,
+                        n,
+                        o = {},
+                        c = Object.keys(e);
+                    for (n = 0; n < c.length; n++) (r = c[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
+                    return o;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var c = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < c.length; n++) (r = c[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
+            }
+            return o;
+        })(e, ['children', 'guildProductListingId']);
+    let c = (0, u.e7)([i.Z], () => i.Z.getGuildProduct(r));
     return (
-        s()(null != l, 'guildProductListing cannot be null'),
-        (0, r.jsx)(c.Provider, {
-            value: {
-                guildProductListing: l,
-                ...o
-            },
-            children: n
+        l()(null != c, 'guildProductListing cannot be null'),
+        (0, n.jsx)(a.Provider, {
+            value: (function (e) {
+                for (var t = 1; t < arguments.length; t++) {
+                    var r = null != arguments[t] ? arguments[t] : {},
+                        n = Object.keys(r);
+                    'function' == typeof Object.getOwnPropertySymbols &&
+                        (n = n.concat(
+                            Object.getOwnPropertySymbols(r).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                            })
+                        )),
+                        n.forEach(function (t) {
+                            var n;
+                            (n = r[t]),
+                                t in e
+                                    ? Object.defineProperty(e, t, {
+                                          value: n,
+                                          enumerable: !0,
+                                          configurable: !0,
+                                          writable: !0
+                                      })
+                                    : (e[t] = n);
+                        });
+                }
+                return e;
+            })({ guildProductListing: c }, o),
+            children: t
         })
     );
 }

@@ -1,81 +1,124 @@
-n.d(t, { Z: () => K }), n(47120);
-var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    l = n.n(r),
-    a = n(512722),
-    o = n.n(a),
+n.d(t, { Z: () => X }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(512722),
+    o = n.n(l),
     c = n(442837),
     d = n(692547),
     u = n(481060),
     m = n(230711),
     g = n(129861),
-    h = n(279837),
-    x = n(952306),
-    _ = n(299206),
-    p = n(295474),
-    E = n(144114),
-    C = n(918505),
-    f = n(332473),
-    T = n(921801),
-    N = n(485341),
-    S = n(687158),
-    I = n(518950),
-    b = n(184325),
-    v = n(867176),
-    j = n(25990),
-    A = n(594174),
-    O = n(572004),
-    R = n(51144),
+    p = n(279837),
+    h = n(952306),
+    f = n(299206),
+    N = n(295474),
+    x = n(144114),
+    b = n(918505),
+    _ = n(332473),
+    E = n(921801),
+    j = n(485341),
+    C = n(687158),
+    O = n(518950),
+    v = n(184325),
+    S = n(867176),
+    T = n(25990),
+    I = n(594174),
+    y = n(572004),
+    A = n(51144),
     P = n(998502),
-    D = n(695346),
-    y = n(461877),
+    R = n(695346),
+    D = n(461877),
     Z = n(726985),
-    k = n(981631),
-    L = n(815660),
-    B = n(801461),
-    M = n(388032),
-    w = n(55583);
+    w = n(981631),
+    k = n(815660),
+    W = n(801461),
+    L = n(388032),
+    B = n(803843);
+function M(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function U(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
 let V = P.ZP.getEnableHardwareAcceleration() ? u.Xo$ : u.qEK;
-function U(e) {
-    var t, r;
-    let { className: a, user: o } = e,
-        c = s.useRef(null),
-        m = (0, C.o9)(),
-        g = (0, f.b)(),
-        h = (0, p.gS)(),
-        x = null !== (r = null == h ? void 0 : null === (t = h.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== r ? r : null,
-        [_, E] = s.useState(!1);
-    s.useEffect(() => {
-        E(null != c.current && c.current.scrollWidth > c.current.clientWidth);
+function G(e) {
+    var t, s;
+    let { className: l, user: o } = e,
+        c = i.useRef(null),
+        m = (0, b.o9)(),
+        g = (0, _.b)(),
+        p = (0, N.gS)(),
+        h = null !== (s = null == p ? void 0 : null === (t = p.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== s ? s : null,
+        [f, x] = i.useState(!1);
+    i.useEffect(() => {
+        x(null != c.current && c.current.scrollWidth > c.current.clientWidth);
     }, [o.username]);
-    let T = !o.isClaimed(),
-        N = (m && !o.isPomelo() && !o.hasVerifiedEmailOrPhone()) || T,
-        S = N ? M.intl.string(M.t['7Ngnys']) : void 0;
-    return (0, i.jsxs)('div', {
-        className: l()(w.field, a),
+    let E = !o.isClaimed(),
+        j = (m && !o.isPomelo() && !o.hasVerifiedEmailOrPhone()) || E,
+        C = j ? L.NW.string(L.t['7Ngnys']) : void 0;
+    return (0, r.jsxs)('div', {
+        className: a()(B.field, l),
         children: [
-            (0, i.jsx)('div', {
-                className: w.constrainedRow,
-                children: (0, i.jsxs)('div', {
-                    className: w.usernameRow,
+            (0, r.jsx)('div', {
+                className: B.constrainedRow,
+                children: (0, r.jsxs)('div', {
+                    className: B.usernameRow,
                     children: [
-                        (0, i.jsx)(u.vwX, {
-                            className: w.fieldTitle,
-                            children: M.intl.string(M.t.qqhR3N)
+                        (0, r.jsx)(u.vwX, {
+                            className: B.fieldTitle,
+                            children: L.NW.string(L.t.qqhR3N)
                         }),
-                        (0, i.jsxs)('div', {
-                            className: w.usernameInnerRow,
+                        (0, r.jsxs)('div', {
+                            className: B.usernameInnerRow,
                             ref: c,
                             children: [
-                                (0, i.jsx)(u.Text, {
+                                (0, r.jsx)(u.Text, {
                                     tag: 'span',
                                     color: 'header-primary',
                                     variant: 'text-md/normal',
                                     children: o.username
                                 }),
                                 !o.isPomelo() &&
-                                    (0, i.jsxs)(u.Text, {
+                                    (0, r.jsxs)(u.Text, {
                                         tag: 'span',
                                         color: 'header-secondary',
                                         variant: 'text-md/normal',
@@ -87,206 +130,225 @@ function U(e) {
                 })
             }),
             g &&
-                (0, i.jsx)('div', {
-                    className: w.pomeloWarning,
-                    children: (0, i.jsx)(u.ua7, {
-                        text: M.intl.string(M.t.HHC5Z2),
+                (0, r.jsx)('div', {
+                    className: B.pomeloWarning,
+                    children: (0, r.jsx)(u.ua7, {
+                        text: L.NW.string(L.t.HHC5Z2),
                         children: (e) =>
-                            (0, i.jsx)(u.P4T, {
-                                size: 'custom',
-                                width: 20,
-                                height: 20,
-                                ...e,
-                                color: d.Z.colors.STATUS_WARNING.css
-                            })
+                            (0, r.jsx)(
+                                u.P4T,
+                                U(
+                                    M(
+                                        {
+                                            size: 'custom',
+                                            width: 20,
+                                            height: 20
+                                        },
+                                        e
+                                    ),
+                                    { color: d.Z.colors.STATUS_WARNING.css }
+                                )
+                            )
                     })
                 }),
-            null != x &&
-                (0, i.jsx)('div', {
-                    className: w.pomeloWarning,
-                    children: (0, i.jsx)(u.ua7, {
-                        text: x,
+            null != h &&
+                (0, r.jsx)('div', {
+                    className: B.pomeloWarning,
+                    children: (0, r.jsx)(u.ua7, {
+                        text: h,
                         'aria-label': !1,
                         children: (e) =>
-                            (0, i.jsx)(u.P4T, {
-                                size: 'custom',
-                                width: 20,
-                                height: 20,
-                                ...e,
-                                color: d.Z.colors.STATUS_WARNING.css
-                            })
+                            (0, r.jsx)(
+                                u.P4T,
+                                U(
+                                    M(
+                                        {
+                                            size: 'custom',
+                                            width: 20,
+                                            height: 20
+                                        },
+                                        e
+                                    ),
+                                    { color: d.Z.colors.STATUS_WARNING.css }
+                                )
+                            )
                     })
                 }),
-            (0, i.jsx)(u.ua7, {
-                text: S,
+            (0, r.jsx)(u.ua7, {
+                text: C,
                 children: (e) =>
-                    (0, i.jsx)(u.zxk, {
-                        ...e,
-                        disabled: N,
-                        size: u.zxk.Sizes.SMALL,
-                        className: w.fieldButton,
-                        color: u.zxk.Colors.PRIMARY,
-                        'aria-label': M.intl.string(M.t['JECa9/']),
-                        onClick: () =>
-                            (0, u.ZDy)(async () => {
-                                if (g) {
-                                    let { default: e } = await Promise.all([n.e('85342'), n.e('13494')]).then(n.bind(n, 193049));
-                                    return (t) =>
-                                        (0, i.jsx)(e, {
-                                            source: B.Kq.USER_SETTINGS_EDIT,
-                                            ...t
-                                        });
-                                }
-                                {
-                                    let { default: e } = await Promise.all([n.e('75492'), n.e('84956'), n.e('42758')]).then(n.bind(n, 2702));
-                                    return (t) => (0, i.jsx)(e, { ...t });
-                                }
-                            }),
-                        children: _ ? M.intl.string(M.t['16kTw8']) : M.intl.string(M.t.bt75u7)
-                    })
+                    (0, r.jsx)(
+                        u.zxk,
+                        U(M({}, e), {
+                            disabled: j,
+                            size: u.zxk.Sizes.SMALL,
+                            className: B.fieldButton,
+                            color: u.zxk.Colors.PRIMARY,
+                            'aria-label': L.NW.string(L.t['JECa9/']),
+                            onClick: () =>
+                                (0, u.ZDy)(async () => {
+                                    if (g) {
+                                        let { default: e } = await Promise.all([n.e('85342'), n.e('33612')]).then(n.bind(n, 193049));
+                                        return (t) => (0, r.jsx)(e, M({ source: W.Kq.USER_SETTINGS_EDIT }, t));
+                                    }
+                                    {
+                                        let { default: e } = await Promise.all([n.e('75492'), n.e('84956'), n.e('42758')]).then(n.bind(n, 2702));
+                                        return (t) => (0, r.jsx)(e, M({}, t));
+                                    }
+                                }),
+                            children: f ? L.NW.string(L.t['16kTw8']) : L.NW.string(L.t.bt75u7)
+                        })
+                    )
             })
         ]
     });
 }
-function G(e) {
+function F(e) {
     var t, n;
-    let { user: r, className: a } = e,
-        o = (0, p.gS)(),
+    let { user: s, className: l } = e,
+        o = (0, N.gS)(),
         c = null !== (n = null == o ? void 0 : null === (t = o.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== n ? n : null,
-        m = R.ZP.getGlobalName(r),
-        g = s.useRef(null),
-        [h, x] = s.useState(!1);
+        m = A.ZP.getGlobalName(s),
+        g = i.useRef(null),
+        [p, h] = i.useState(!1);
     return (
-        s.useEffect(() => {
-            x(null != g.current && g.current.scrollWidth > g.current.clientWidth);
+        i.useEffect(() => {
+            h(null != g.current && g.current.scrollWidth > g.current.clientWidth);
         }, [m]),
-        (0, i.jsxs)('div', {
-            className: l()(w.field, a),
+        (0, r.jsxs)('div', {
+            className: a()(B.field, l),
             children: [
-                (0, i.jsx)('div', {
-                    className: w.constrainedRow,
-                    children: (0, i.jsxs)('div', {
-                        className: w.usernameRow,
+                (0, r.jsx)('div', {
+                    className: B.constrainedRow,
+                    children: (0, r.jsxs)('div', {
+                        className: B.usernameRow,
                         children: [
-                            (0, i.jsx)(u.vwX, {
-                                className: w.fieldTitle,
-                                children: M.intl.string(M.t['9AjdkJ'])
+                            (0, r.jsx)(u.vwX, {
+                                className: B.fieldTitle,
+                                children: L.NW.string(L.t['9AjdkJ'])
                             }),
-                            (0, i.jsx)('div', {
-                                className: w.usernameInnerRow,
+                            (0, r.jsx)('div', {
+                                className: B.usernameInnerRow,
                                 ref: g,
-                                children: (0, i.jsx)(u.Text, {
+                                children: (0, r.jsx)(u.Text, {
                                     tag: 'span',
                                     color: 'header-primary',
                                     variant: 'text-md/normal',
-                                    children: null == m ? M.intl.string(M.t.ep5kjI) : m
+                                    children: null == m ? L.NW.string(L.t.ep5kjI) : m
                                 })
                             })
                         ]
                     })
                 }),
                 null != c &&
-                    (0, i.jsx)('div', {
-                        className: w.pomeloWarning,
-                        children: (0, i.jsx)(u.ua7, {
+                    (0, r.jsx)('div', {
+                        className: B.pomeloWarning,
+                        children: (0, r.jsx)(u.ua7, {
                             text: c,
                             'aria-label': !1,
                             children: (e) =>
-                                (0, i.jsx)(u.P4T, {
-                                    size: 'custom',
-                                    width: 20,
-                                    height: 20,
-                                    ...e,
-                                    color: d.Z.colors.STATUS_WARNING.css
-                                })
+                                (0, r.jsx)(
+                                    u.P4T,
+                                    U(
+                                        M(
+                                            {
+                                                size: 'custom',
+                                                width: 20,
+                                                height: 20
+                                            },
+                                            e
+                                        ),
+                                        { color: d.Z.colors.STATUS_WARNING.css }
+                                    )
+                                )
                         })
                     }),
-                (0, i.jsx)(u.zxk, {
-                    className: w.fieldButton,
+                (0, r.jsx)(u.zxk, {
+                    className: B.fieldButton,
                     size: u.zxk.Sizes.SMALL,
                     color: u.zxk.Colors.PRIMARY,
-                    'aria-label': M.intl.string(M.t.YXeWYG),
-                    onClick: W,
-                    children: h ? M.intl.string(M.t['16kTw8']) : M.intl.string(M.t.bt75u7)
+                    'aria-label': L.NW.string(L.t.YXeWYG),
+                    onClick: q,
+                    children: p ? L.NW.string(L.t['16kTw8']) : L.NW.string(L.t.bt75u7)
                 })
             ]
         })
     );
 }
-function F(e) {
-    let { text: t, censor: n, revealLabel: r, hideLabel: l } = e,
-        [a, o] = s.useState(!1),
-        c = a ? t : n(t);
-    return (0, i.jsxs)(i.Fragment, {
+function H(e) {
+    let { text: t, censor: n, revealLabel: s, hideLabel: a } = e,
+        [l, o] = i.useState(!1),
+        c = l ? t : n(t);
+    return (0, r.jsxs)(r.Fragment, {
         children: [
             c,
-            (0, i.jsx)(u.zxk, {
+            (0, r.jsx)(u.zxk, {
                 look: u.zxk.Looks.LINK,
                 size: u.zxk.Sizes.MIN,
                 color: u.zxk.Colors.LINK,
-                'aria-label': a ? l : r,
-                onClick: () => o(!a),
-                children: a ? M.intl.string(M.t.fgq1go) : M.intl.string(M.t.dcztdX)
+                'aria-label': l ? a : s,
+                onClick: () => o(!l),
+                children: l ? L.NW.string(L.t.fgq1go) : L.NW.string(L.t.dcztdX)
             })
         ]
     });
 }
-function H(e) {
+function z(e) {
     let t,
-        { className: s, user: r } = e;
-    if (r.isClaimed()) {
-        if (null == r.email)
+        { className: i, user: s } = e;
+    if (s.isClaimed()) {
+        if (null == s.email)
             t = {
-                buttonText: M.intl.string(M.t.OYkgVl),
-                buttonAriaLabel: M.intl.string(M.t['pvBD+f']),
+                buttonText: L.NW.string(L.t.OYkgVl),
+                buttonAriaLabel: L.NW.string(L.t['pvBD+f']),
                 buttonColor: u.zxk.Colors.PRIMARY,
-                valueMessage: M.intl.string(M.t['8SfTNz']),
+                valueMessage: L.NW.string(L.t['8SfTNz']),
                 handleClick: () =>
                     (0, u.ZDy)(async () => {
-                        let { default: e } = await Promise.all([n.e('9343'), n.e('73669')]).then(n.bind(n, 642298));
-                        return (t) => (0, i.jsx)(e, { ...t });
+                        let { default: e } = await Promise.all([n.e('9343'), n.e('8850')]).then(n.bind(n, 642298));
+                        return (t) => (0, r.jsx)(e, M({}, t));
                     })
             };
         else {
-            let { email: e } = r;
+            let { email: e } = s;
             t = {
-                buttonText: M.intl.string(M.t.bt75u7),
-                buttonAriaLabel: M.intl.string(M.t['8peUT0']),
+                buttonText: L.NW.string(L.t.bt75u7),
+                buttonAriaLabel: L.NW.string(L.t['8peUT0']),
                 buttonColor: u.zxk.Colors.PRIMARY,
-                valueMessage: (0, i.jsx)(F, {
+                valueMessage: (0, r.jsx)(H, {
                     text: e,
-                    censor: y.E,
-                    revealLabel: M.intl.string(M.t['Zvx+yc']),
-                    hideLabel: M.intl.string(M.t.nqTD4e)
+                    censor: D.E,
+                    revealLabel: L.NW.string(L.t['Zvx+yc']),
+                    hideLabel: L.NW.string(L.t.nqTD4e)
                 }),
                 handleClick: () =>
                     (0, u.ZDy)(async () => {
-                        let { default: e } = await Promise.all([n.e('9343'), n.e('73669')]).then(n.bind(n, 642298));
-                        return (t) => (0, i.jsx)(e, { ...t });
+                        let { default: e } = await Promise.all([n.e('9343'), n.e('8850')]).then(n.bind(n, 642298));
+                        return (t) => (0, r.jsx)(e, M({}, t));
                     })
             };
         }
     } else
         t = {
-            buttonText: M.intl.string(M.t.BleMPD),
-            buttonAriaLabel: M.intl.string(M.t.BleMPD),
+            buttonText: L.NW.string(L.t.BleMPD),
+            buttonAriaLabel: L.NW.string(L.t.BleMPD),
             buttonColor: u.zxk.Colors.BRAND,
-            valueMessage: M.intl.string(M.t.qxk9zs),
-            handleClick: () => x.Z.openClaimAccountModal()
+            valueMessage: L.NW.string(L.t.qxk9zs),
+            handleClick: () => h.Z.openClaimAccountModal()
         };
-    return (0, i.jsxs)('div', {
-        className: l()(w.field, s),
+    return (0, r.jsxs)('div', {
+        className: a()(B.field, i),
         children: [
-            (0, i.jsx)('div', {
-                className: w.constrainedRow,
-                children: (0, i.jsxs)('div', {
+            (0, r.jsx)('div', {
+                className: B.constrainedRow,
+                children: (0, r.jsxs)('div', {
                     children: [
-                        (0, i.jsx)(u.vwX, {
-                            className: w.fieldTitle,
-                            children: M.intl.string(M.t.tlZllJ)
+                        (0, r.jsx)(u.vwX, {
+                            className: B.fieldTitle,
+                            children: L.NW.string(L.t.tlZllJ)
                         }),
-                        (0, i.jsx)('div', {
-                            children: (0, i.jsx)(u.Text, {
+                        (0, r.jsx)('div', {
+                            children: (0, r.jsx)(u.Text, {
                                 tag: 'span',
                                 color: 'header-primary',
                                 variant: 'text-md/normal',
@@ -296,8 +358,8 @@ function H(e) {
                     ]
                 })
             }),
-            (0, i.jsx)(u.zxk, {
-                className: w.fieldButton,
+            (0, r.jsx)(u.zxk, {
+                className: B.fieldButton,
                 size: u.zxk.Sizes.SMALL,
                 color: u.zxk.Colors.PRIMARY,
                 'aria-label': t.buttonAriaLabel,
@@ -307,34 +369,34 @@ function H(e) {
         ]
     });
 }
-function z(e) {
+function Y(e) {
     let t,
-        { className: s, user: r } = e;
-    if (!r.isClaimed()) return null;
-    let { phone: a, email: o } = r,
-        c = null != a;
+        { className: i, user: s } = e;
+    if (!s.isClaimed()) return null;
+    let { phone: l, email: o } = s,
+        c = null != l;
     return (
         (t = c
-            ? (0, i.jsx)(F, {
-                  text: a,
-                  censor: y.n,
-                  revealLabel: M.intl.string(M.t.eY3xlZ),
-                  hideLabel: M.intl.string(M.t.jllbv7)
+            ? (0, r.jsx)(H, {
+                  text: l,
+                  censor: D.n,
+                  revealLabel: L.NW.string(L.t.eY3xlZ),
+                  hideLabel: L.NW.string(L.t.jllbv7)
               })
-            : M.intl.string(M.t.I5kDqq)),
-        (0, i.jsxs)('div', {
-            className: l()(w.field, s),
+            : L.NW.string(L.t.I5kDqq)),
+        (0, r.jsxs)('div', {
+            className: a()(B.field, i),
             children: [
-                (0, i.jsx)('div', {
-                    className: w.constrainedRow,
-                    children: (0, i.jsxs)('div', {
+                (0, r.jsx)('div', {
+                    className: B.constrainedRow,
+                    children: (0, r.jsxs)('div', {
                         children: [
-                            (0, i.jsx)(u.vwX, {
-                                className: w.fieldTitle,
-                                children: M.intl.string(M.t.kerONj)
+                            (0, r.jsx)(u.vwX, {
+                                className: B.fieldTitle,
+                                children: L.NW.string(L.t.kerONj)
                             }),
-                            (0, i.jsx)('div', {
-                                children: (0, i.jsx)(u.Text, {
+                            (0, r.jsx)('div', {
+                                children: (0, r.jsx)(u.Text, {
                                     tag: 'span',
                                     color: 'header-primary',
                                     variant: 'text-md/normal',
@@ -344,49 +406,47 @@ function z(e) {
                         ]
                     })
                 }),
-                (0, i.jsxs)('div', {
-                    className: w.fieldButtonList,
+                (0, r.jsxs)('div', {
+                    className: B.fieldButtonList,
                     children: [
                         c && null != o
-                            ? (0, i.jsx)(u.zxk, {
-                                  className: l()(w.fieldButton, w.removeButton),
+                            ? (0, r.jsx)(u.zxk, {
+                                  className: a()(B.fieldButton, B.removeButton),
                                   size: u.zxk.Sizes.SMALL,
                                   look: u.zxk.Looks.LINK,
                                   color: u.zxk.Colors.PRIMARY,
-                                  'aria-label': M.intl.string(M.t.Rpn4Aw),
+                                  'aria-label': L.NW.string(L.t.Rpn4Aw),
                                   onClick: function () {
                                       (0, u.h7j)((e) =>
-                                          (0, i.jsx)(h.default, {
-                                              ...e,
-                                              title: M.intl.string(M.t['3CTiKi']),
-                                              children: r.hasFlag(k.xW$.MFA_SMS) ? M.intl.string(M.t.jrhJys) : void 0,
-                                              actionText: M.intl.string(M.t.N86XcH),
-                                              handleSubmit: (e) => E.Z.removePhone(e, E.L.USER_SETTINGS_UPDATE)
-                                          })
+                                          (0, r.jsx)(
+                                              p.default,
+                                              U(M({}, e), {
+                                                  title: L.NW.string(L.t['3CTiKi']),
+                                                  children: s.hasFlag(w.xW$.MFA_SMS) ? L.NW.string(L.t.jrhJys) : void 0,
+                                                  actionText: L.NW.string(L.t.N86XcH),
+                                                  handleSubmit: (e) => x.Z.removePhone(e, x.L.USER_SETTINGS_UPDATE)
+                                              })
+                                          )
                                       );
                                   },
-                                  children: M.intl.string(M.t.N86XcH)
+                                  children: L.NW.string(L.t.N86XcH)
                               })
                             : null,
-                        (0, i.jsx)(u.zxk, {
-                            className: w.fieldButton,
+                        (0, r.jsx)(u.zxk, {
+                            className: B.fieldButton,
                             size: u.zxk.Sizes.SMALL,
                             color: u.zxk.Colors.PRIMARY,
-                            'aria-label': c ? M.intl.string(M.t.YDabSU) : M.intl.string(M.t.SfUuEx),
+                            'aria-label': c ? L.NW.string(L.t.YDabSU) : L.NW.string(L.t.SfUuEx),
                             onClick: function () {
                                 (0, u.ZDy)(
                                     async () => {
                                         let { default: e } = await Promise.resolve().then(n.bind(n, 607018));
-                                        return (t) =>
-                                            (0, i.jsx)(e, {
-                                                reason: E.L.USER_SETTINGS_UPDATE,
-                                                ...t
-                                            });
+                                        return (t) => (0, r.jsx)(e, M({ reason: x.L.USER_SETTINGS_UPDATE }, t));
                                     },
-                                    { modalKey: L.M }
+                                    { modalKey: k.M }
                                 );
                             },
-                            children: c ? M.intl.string(M.t.bt75u7) : M.intl.string(M.t.OYkgVl)
+                            children: c ? L.NW.string(L.t.bt75u7) : L.NW.string(L.t.OYkgVl)
                         })
                     ]
                 })
@@ -394,60 +454,62 @@ function z(e) {
         })
     );
 }
-function Y(e) {
+function K(e) {
     let { user: t } = e,
-        n = (0, _.Z)({
+        n = (0, f.Z)({
             id: t.id,
-            label: M.intl.string(M.t['/AXYnJ'])
+            label: L.NW.string(L.t['/AXYnJ'])
         });
-    return D.Sb.useSetting() && O.wS
-        ? (0, i.jsx)(u.yRy, {
+    return R.Sb.useSetting() && y.wS
+        ? (0, r.jsx)(u.yRy, {
               renderPopout: (e) => {
                   let { closePopout: t } = e;
-                  return (0, i.jsx)(u.v2r, {
+                  return (0, r.jsx)(u.v2r, {
                       onClose: t,
                       onSelect: void 0,
                       navId: 'copy-id',
-                      'aria-label': M.intl.string(M.t.RANhlJ),
+                      'aria-label': L.NW.string(L.t.RANhlJ),
                       children: n
                   });
               },
               children: (e) =>
-                  (0, i.jsx)(u.P3F, {
-                      ...e,
-                      className: w.overflowMenuButton,
-                      'aria-label': M.intl.string(M.t.DEoVWV),
-                      children: (0, i.jsx)(u.xhG, {
-                          size: 'md',
-                          color: 'currentColor',
-                          className: w.overflowMenuIcon
+                  (0, r.jsx)(
+                      u.P3F,
+                      U(M({}, e), {
+                          className: B.overflowMenuButton,
+                          'aria-label': L.NW.string(L.t.DEoVWV),
+                          children: (0, r.jsx)(u.xhG, {
+                              size: 'md',
+                              color: 'currentColor',
+                              className: B.overflowMenuIcon
+                          })
                       })
-                  })
+                  )
           })
         : null;
 }
-function W() {
-    m.Z.setSection(k.oAB.PROFILE_CUSTOMIZATION);
+function q() {
+    m.Z.setSection(w.oAB.PROFILE_CUSTOMIZATION);
 }
-function K() {
+function X() {
     var e;
-    let t = (0, c.e7)([A.default], () => {
-            let e = A.default.getCurrentUser();
+    let t = (0, c.e7)([I.default], () => {
+            let e = I.default.getCurrentUser();
             return o()(null != e, 'UserSettingsAccountProfileCard: currentUser cannot be undefined'), e;
         }),
-        n = (0, S.ZP)(t.id),
-        s = (0, N.Z)(n),
-        r = D.co.useSetting(),
-        l = (0, c.e7)([j.Z], () => j.Z.getErrors()),
-        a = null == l ? void 0 : null === (e = l.avatar) || void 0 === e ? void 0 : e[0],
-        { avatarSrc: d, avatarDecorationSrc: m } = (0, I.Z)({
+        n = (0, C.ZP)(t.id),
+        i = (0, j.Z)(n),
+        s = R.co.useSetting(),
+        a = (0, c.e7)([T.Z], () => T.Z.getErrors()),
+        l = null == a ? void 0 : null === (e = a.avatar) || void 0 === e ? void 0 : e[0],
+        { avatarSrc: d, avatarDecorationSrc: m } = (0, O.Z)({
             user: t,
             size: u.EFr.SIZE_80
         });
-    return (0, i.jsxs)('div', {
-        className: w.accountProfileCard,
+    return (0, r.jsxs)('div', {
+        className: B.accountProfileCard,
         children: [
-            (0, i.jsx)(v.b, {
+            (0, r.jsx)(S.b, {
                 user: t,
                 displayProfile: n,
                 avatarSize: u.EFr.SIZE_80,
@@ -457,80 +519,80 @@ function K() {
                 bannerHeight: 100,
                 themePadding: 0
             }),
-            (0, i.jsxs)('div', {
-                className: w.userInfo,
+            (0, r.jsxs)('div', {
+                className: B.userInfo,
                 children: [
-                    (0, i.jsx)(V, {
-                        className: w.avatar,
+                    (0, r.jsx)(V, {
+                        className: B.avatar,
                         src: d,
                         avatarDecoration: m,
-                        status: r,
+                        status: s,
                         size: u.EFr.SIZE_80,
                         'aria-label': t.username
                     }),
-                    (0, i.jsxs)('div', {
+                    (0, r.jsxs)('div', {
                         children: [
-                            (0, i.jsxs)('div', {
-                                className: w.profileCardUsernameRow,
+                            (0, r.jsxs)('div', {
+                                className: B.profileCardUsernameRow,
                                 children: [
-                                    (0, i.jsx)(g.Z, {
+                                    (0, r.jsx)(g.Z, {
                                         user: t,
-                                        className: w.userTag,
-                                        discriminatorClass: w.discriminator
+                                        className: B.userTag,
+                                        discriminatorClass: B.discriminator
                                     }),
-                                    (0, i.jsx)(Y, { user: t })
+                                    (0, r.jsx)(K, { user: t })
                                 ]
                             }),
-                            (0, i.jsx)(b.Z, {
-                                badges: s,
-                                className: w.badgeList,
-                                badgeClassName: w.badge
+                            (0, r.jsx)(v.Z, {
+                                badges: i,
+                                className: B.badgeList,
+                                badgeClassName: B.badge
                             })
                         ]
                     }),
-                    (0, i.jsx)(u.zxk, {
-                        onClick: W,
+                    (0, r.jsx)(u.zxk, {
+                        onClick: q,
                         size: u.zxk.Sizes.SMALL,
-                        children: M.intl.string(M.t['2p2aY2'])
+                        children: L.NW.string(L.t['2p2aY2'])
                     })
                 ]
             }),
-            (0, i.jsxs)('div', {
-                className: w.background,
+            (0, r.jsxs)('div', {
+                className: B.background,
                 children: [
-                    null != a
-                        ? (0, i.jsx)(u.Text, {
-                              className: w.avatarError,
+                    null != l
+                        ? (0, r.jsx)(u.Text, {
+                              className: B.avatarError,
                               variant: 'text-xs/normal',
                               color: 'text-danger',
-                              children: a
+                              children: l
                           })
                         : null,
-                    (0, i.jsxs)('div', {
-                        className: w.fieldList,
+                    (0, r.jsxs)('div', {
+                        className: B.fieldList,
                         children: [
-                            (0, i.jsx)(T.F, {
+                            (0, r.jsx)(E.F, {
                                 setting: Z.s6.ACCOUNT_DISPLAY_NAME,
-                                children: (0, i.jsx)(G, {
-                                    className: w.fieldSpacerBottom,
+                                children: (0, r.jsx)(F, {
+                                    className: B.fieldSpacerBottom,
                                     user: t
                                 })
                             }),
-                            (0, i.jsx)(T.F, {
+                            (0, r.jsx)(E.F, {
                                 setting: Z.s6.ACCOUNT_USERNAME,
-                                children: (0, i.jsx)(U, { user: t })
+                                children: (0, r.jsx)(G, { user: t })
                             }),
-                            (0, i.jsx)(T.F, {
+                            (0, r.jsx)(E.F, {
                                 setting: Z.s6.ACCOUNT_EMAIL,
-                                children: (0, i.jsx)(H, {
-                                    className: w.fieldSpacer,
+                                children: (0, r.jsx)(z, {
+                                    className: B.fieldSpacer,
                                     user: t
                                 })
                             }),
-                            (0, i.jsx)(T.F, {
+                            (0, r.jsx)(E.F, {
                                 setting: Z.s6.ACCOUNT_PHONE_NUMBER,
-                                children: (0, i.jsx)(z, {
-                                    className: w.fieldSpacer,
+                                children: (0, r.jsx)(Y, {
+                                    className: B.fieldSpacer,
                                     user: t
                                 })
                             })

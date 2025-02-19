@@ -1,62 +1,96 @@
-n.d(t, { Z: () => p });
-var i = n(200651),
-    r = n(192379),
-    a = n(367907),
-    s = n(10718),
-    o = n(69626),
+n.d(t, { Z: () => m });
+var r = n(200651),
+    i = n(192379),
+    o = n(367907),
+    a = n(10718),
+    s = n(69626),
     l = n(626135),
-    u = n(785717),
-    c = n(678738),
+    c = n(785717),
+    u = n(678738),
     d = n(981631),
     f = n(388032),
-    _ = n(997940);
-function p(e) {
-    let { applicationId: t, commandIds: n, guildId: p, channel: h, onClick: m } = e,
-        { trackUserProfileAction: g } = (0, u.KZ)(),
-        E = r.useMemo(
+    p = n(539469);
+function _(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function h(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                _(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function m(e) {
+    let { applicationId: t, commandIds: n, guildId: _, channel: m, onClick: g } = e,
+        { trackUserProfileAction: E } = (0, c.KZ)(),
+        v = i.useMemo(
             () => ({
-                channel: h,
+                channel: m,
                 type: 'channel'
             }),
-            [h]
+            [m]
         ),
-        { commands: v } = s.Qm(E, t, n),
-        y = r.useMemo(
+        { commands: b } = a.Qm(v, t, n),
+        y = i.useMemo(
             () =>
-                null == v
+                null == b
                     ? void 0
-                    : v.filter((e) => {
+                    : b.filter((e) => {
                           let { nsfw: t } = e;
                           return !0 !== t;
                       }),
-            [v]
+            [b]
         );
     if (null == y || 0 === y.length) return null;
-    let I = (e) => {
-        null == m || m(),
-            g({ action: 'PRESS_APP_COMMAND' }),
-            l.default.track(d.rMx.POPULAR_APPLICATION_COMMAND_CLICKED, {
-                application_id: t,
-                command_id: e,
-                guild_id: p,
-                ...(0, a.JS)(h.id)
-            });
+    let O = (e) => {
+        null == g || g(),
+            E({ action: 'PRESS_APP_COMMAND' }),
+            l.default.track(
+                d.rMx.POPULAR_APPLICATION_COMMAND_CLICKED,
+                h(
+                    {
+                        application_id: t,
+                        command_id: e,
+                        guild_id: _
+                    },
+                    (0, o.JS)(m.id)
+                )
+            );
     };
-    return (0, i.jsx)(c.Z, {
-        heading: f.intl.string(f.t['0hKkS0']),
-        children: (0, i.jsx)('ul', {
-            className: _.list,
+    return (0, r.jsx)(u.Z, {
+        heading: f.NW.string(f.t['0hKkS0']),
+        children: (0, r.jsx)('ul', {
+            className: p.list,
             children: y.map((e) =>
-                (0, i.jsx)(
+                (0, r.jsx)(
                     'li',
                     {
-                        children: (0, i.jsx)(o.wz, {
+                        children: (0, r.jsx)(s.wz, {
                             commandId: e.id,
                             commandName: e.displayName,
                             commandDescription: e.displayDescription,
-                            onClick: I,
-                            guildId: p,
-                            channelId: h.id,
+                            onClick: O,
+                            guildId: _,
+                            channelId: m.id,
                             applicationId: e.applicationId
                         })
                     },

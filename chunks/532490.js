@@ -1,118 +1,146 @@
 l.d(t, {
-    Z: () => Z,
-    p: () => N
+    Z: () => N,
+    p: () => y
 }),
     l(47120);
-var i,
-    n = l(200651),
-    a = l(192379),
-    s = l(120356),
-    r = l.n(s),
+var n,
+    r = l(200651),
+    i = l(192379),
+    a = l(120356),
+    s = l.n(a),
     o = l(642128),
     c = l(442837),
     d = l(481060),
     u = l(393238),
-    x = l(434650),
+    f = l(434650),
     m = l(607070),
     h = l(594174),
-    g = l(5192),
-    f = l(603368),
-    v = l(856682),
-    C = l(284019),
-    p = l(388032),
-    j = l(341283),
-    N = (((i = {}).LEFT = 'left'), (i.RIGHT = 'right'), i);
-let Z = a.memo(function (e) {
-    let { guildId: t, primaryColor: l, children: i, canSignCharter: s = !0, signed: N, onSignCharter: Z, animationDelayMs: T = 1000, signHintButtonText: y, signHintHelperText: H, signHintPosition: b = 'left', className: w, fullHeight: S, showDisclaimer: _ } = e,
-        M = a.useRef(null),
-        B = a.useCallback(
+    x = l(5192),
+    g = l(603368),
+    p = l(856682),
+    j = l(284019),
+    v = l(388032),
+    C = l(346870);
+function b(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var l = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(l);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (n = n.concat(
+                Object.getOwnPropertySymbols(l).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(l, e).enumerable;
+                })
+            )),
+            n.forEach(function (t) {
+                var n;
+                (n = l[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: n,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = n);
+            });
+    }
+    return e;
+}
+var y = (((n = {}).LEFT = 'left'), (n.RIGHT = 'right'), n);
+let N = i.memo(function (e) {
+    let { guildId: t, primaryColor: l, children: n, canSignCharter: a = !0, signed: y, onSignCharter: N, animationDelayMs: O = 1000, signHintButtonText: w, signHintHelperText: P, signHintPosition: S = 'left', className: Z, fullHeight: T, showDisclaimer: H } = e,
+        _ = i.useRef(null),
+        M = i.useCallback(
             (e) => {
-                e.preventDefault(), e.stopPropagation(), null == Z || Z(!N);
+                e.preventDefault(), e.stopPropagation(), null == N || N(!y);
             },
-            [Z, N]
+            [N, y]
         ),
-        [R, A] = a.useState(!1),
-        [E, k] = a.useState(!1),
-        D = a.useRef(null),
-        I = a.useCallback(
+        [D, E] = i.useState(!1),
+        [k, A] = i.useState(!1),
+        B = i.useRef(null),
+        R = i.useCallback(
             (e) => {
                 e &&
-                    (D.current = setTimeout(() => {
-                        k(!0);
-                    }, T));
+                    (B.current = setTimeout(() => {
+                        A(!0);
+                    }, O));
             },
-            [T]
+            [O]
         ),
-        V = (0, x.O)(I),
-        F = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
-        P = (0, c.e7)([h.default], () => h.default.getCurrentUser()),
-        [G, L] = (0, d.q_F)(() =>
-            'left' === b
+        I = (0, f.O)(R),
+        V = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
+        F = (0, c.e7)([h.default], () => h.default.getCurrentUser()),
+        [W, G] = (0, d.q_F)(() =>
+            'left' === S
                 ? {
-                      right: F ? 68 : 0,
+                      right: 68 * !!V,
                       config: o.config.stiff
                   }
                 : {
-                      left: F ? 68 : 0,
+                      left: 68 * !!V,
                       config: o.config.stiff
                   }
         ),
-        [Y, z] = (0, d.q_F)(() => ({
+        [L, Y] = (0, d.q_F)(() => ({
             opacity: 0,
             top: -24,
             onRest: () => {
-                N && A(!0);
+                y && E(!0);
             }
         })),
-        U = {
-            animateFade: z,
-            animateExpand: L
+        z = {
+            animateFade: Y,
+            animateExpand: G
         },
-        q = a.useRef(U);
-    a.useEffect(() => {
-        q.current = U;
+        U = i.useRef(z);
+    i.useEffect(() => {
+        U.current = z;
     }),
-        a.useEffect(() => {
-            let { animateFade: e, animateExpand: t } = q.current;
-            E &&
-                (t({
-                    ...('left' === b
-                        ? {
-                              right: 68,
-                              config: o.config.stiff
-                          }
-                        : {
-                              left: 280,
-                              config: o.config.stiff
-                          })
-                }),
+        i.useEffect(() => {
+            let { animateFade: e, animateExpand: t } = U.current;
+            k &&
+                (t(
+                    b(
+                        {},
+                        'left' === S
+                            ? {
+                                  right: 68,
+                                  config: o.config.stiff
+                              }
+                            : {
+                                  left: 280,
+                                  config: o.config.stiff
+                              }
+                    )
+                ),
                 e({
                     opacity: 1,
                     top: -24
                 })),
-                E &&
-                    N &&
+                k &&
+                    y &&
                     e({
                         opacity: 0,
                         top: 0
                     });
-        }, [E, N, b]),
-        a.useEffect(
+        }, [k, y, S]),
+        i.useEffect(
             () => () => {
-                null != D.current && clearTimeout(D.current);
+                null != B.current && clearTimeout(B.current);
             },
             []
         );
-    let O = r()(j.signHintAnimationContainer, R && j.noDisplay, 'left' === b ? j.signTextLeft : j.signTextRight),
+    let q = s()(C.signHintAnimationContainer, D && C.noDisplay, 'left' === S ? C.signTextLeft : C.signTextRight),
         X = (0, d.dQu)(d.TVs.colors.BG_SURFACE_OVERLAY),
         Q = (0, d.dQu)(d.TVs.colors.BG_BRAND),
-        W = null != l ? l : Q.hex(),
-        K = (0, f.j1)(W, X.hex()),
-        { height: J = 87, ref: $ } = (0, u.Z)(s),
-        ee = (0, d.Yzy)(s, {
+        K = null != l ? l : Q.hex(),
+        J = (0, g.j1)(K, X.hex()),
+        { height: $ = 87, ref: ee } = (0, u.Z)(a),
+        et = (0, d.Yzy)(a, {
             from: {
                 opacity: 0,
-                translateY: J
+                translateY: $
             },
             enter: {
                 opacity: 1,
@@ -120,99 +148,96 @@ let Z = a.memo(function (e) {
             },
             config: o.config.stiff
         });
-    return (0, n.jsx)('div', {
-        className: r()(j.container, w),
-        ref: V,
-        children: (0, n.jsx)(v.Z, {
-            fullHeight: S,
-            children: (0, n.jsxs)('div', {
-                className: r()(j.overviewSidebarWrapper, S && j.fullHeight),
+    return (0, r.jsx)('div', {
+        className: s()(C.container, Z),
+        ref: I,
+        children: (0, r.jsx)(p.Z, {
+            fullHeight: T,
+            children: (0, r.jsxs)('div', {
+                className: s()(C.overviewSidebarWrapper, T && C.fullHeight),
                 children: [
-                    (0, n.jsx)(d.u2D, {
+                    (0, r.jsx)(d.u2D, {
                         fade: !0,
-                        className: j.overviewSidebarContent,
-                        children: (0, n.jsx)('div', {
-                            className: j.scrollContentContainer,
-                            children: i
+                        className: C.overviewSidebarContent,
+                        children: (0, r.jsx)('div', {
+                            className: C.scrollContentContainer,
+                            children: n
                         })
                     }),
-                    ee(
+                    et(
                         (e, l) =>
                             l &&
-                            (0, n.jsx)(o.animated.div, {
-                                className: j.signatureBlockContainer,
+                            (0, r.jsx)(o.animated.div, {
+                                className: C.signatureBlockContainer,
                                 style: e,
-                                children: (0, n.jsx)('div', {
-                                    ref: $,
-                                    children: (0, n.jsxs)('div', {
-                                        className: j.signatureBlock,
+                                children: (0, r.jsx)('div', {
+                                    ref: ee,
+                                    children: (0, r.jsxs)('div', {
+                                        className: C.signatureBlock,
                                         children: [
-                                            (0, n.jsx)('div', {
-                                                ref: M,
-                                                className: j.signHintContainer,
-                                                children: (0, n.jsxs)(o.animated.div, {
-                                                    className: O,
-                                                    style: {
-                                                        ...G,
-                                                        ...Y
-                                                    },
+                                            (0, r.jsx)('div', {
+                                                ref: _,
+                                                className: C.signHintContainer,
+                                                children: (0, r.jsxs)(o.animated.div, {
+                                                    className: q,
+                                                    style: b({}, W, L),
                                                     children: [
-                                                        (0, n.jsx)('div', {
-                                                            className: j.signContainerButton,
-                                                            children: (0, n.jsxs)(C.Z, {
-                                                                themeColor: W,
-                                                                className: j.signButton,
+                                                        (0, r.jsx)('div', {
+                                                            className: C.signContainerButton,
+                                                            children: (0, r.jsxs)(j.Z, {
+                                                                themeColor: K,
+                                                                className: C.signButton,
                                                                 size: d.zxk.Sizes.SMALL,
                                                                 onClick: (e) => {
                                                                     var t;
-                                                                    null === (t = M.current) || void 0 === t || t.scrollIntoView({ behavior: 'smooth' }), B(e);
+                                                                    null === (t = _.current) || void 0 === t || t.scrollIntoView({ behavior: 'smooth' }), M(e);
                                                                 },
                                                                 children: [
-                                                                    (0, n.jsx)('div', {
-                                                                        className: r()(j.signCarot, { [j.signCarotCustomColors]: null != K }),
-                                                                        style: null != K ? K : { borderColor: W }
+                                                                    (0, r.jsx)('div', {
+                                                                        className: s()(C.signCarot, { [C.signCarotCustomColors]: null != J }),
+                                                                        style: null != J ? J : { borderColor: K }
                                                                     }),
-                                                                    null != y ? y : p.intl.string(p.t.ySpZ9P)
+                                                                    null != w ? w : v.NW.string(v.t.ySpZ9P)
                                                                 ]
                                                             })
                                                         }),
-                                                        (0, n.jsx)(d.Text, {
+                                                        (0, r.jsx)(d.Text, {
                                                             variant: 'text-xs/normal',
                                                             color: 'text-muted',
-                                                            className: j.signHintHelperText,
-                                                            children: null != H ? y : p.intl.string(p.t.Pwzyy8)
+                                                            className: C.signHintHelperText,
+                                                            children: null != P ? w : v.NW.string(v.t.Pwzyy8)
                                                         }),
-                                                        _ &&
-                                                            (0, n.jsx)(d.Text, {
+                                                        H &&
+                                                            (0, r.jsx)(d.Text, {
                                                                 variant: 'text-xs/normal',
                                                                 color: 'text-muted',
-                                                                className: j.signHintHelperText,
-                                                                children: p.intl.format(p.t.msDbmZ, {})
+                                                                className: C.signHintHelperText,
+                                                                children: v.NW.format(v.t.msDbmZ, {})
                                                             })
                                                     ]
                                                 })
                                             }),
-                                            (0, n.jsxs)(d.P3F, {
-                                                onClick: B,
-                                                className: r()(j.signatureContainer, { [j.clickable]: null != Z }),
+                                            (0, r.jsxs)(d.P3F, {
+                                                onClick: M,
+                                                className: s()(C.signatureContainer, { [C.clickable]: null != N }),
                                                 children: [
-                                                    (0, n.jsx)(d.Text, {
+                                                    (0, r.jsx)(d.Text, {
                                                         variant: 'text-md/normal',
                                                         color: 'none',
                                                         children: 'x'
                                                     }),
-                                                    N
-                                                        ? (0, n.jsx)(d.Text, {
+                                                    y
+                                                        ? (0, r.jsx)(d.Text, {
                                                               variant: 'text-lg/normal',
                                                               color: 'header-primary',
-                                                              className: j.signatureText,
-                                                              children: g.ZP.getName(t, null, P)
+                                                              className: C.signatureText,
+                                                              children: x.ZP.getName(t, null, F)
                                                           })
-                                                        : (0, n.jsx)(d.Text, {
+                                                        : (0, r.jsx)(d.Text, {
                                                               variant: 'text-lg/normal',
                                                               color: 'none',
-                                                              className: j.signatureText,
-                                                              children: p.intl.string(p.t.RC1D19)
+                                                              className: C.signatureText,
+                                                              children: v.NW.string(v.t.RC1D19)
                                                           })
                                                 ]
                                             })

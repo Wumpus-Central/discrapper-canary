@@ -1,47 +1,62 @@
-n.d(t, { Z: () => m });
-var i,
-    s,
-    r,
-    l = n(442837),
-    a = n(570140);
-let o = {},
-    c = null;
-function d() {
-    (o = {}), (c = null);
+n.d(t, { Z: () => u });
+var r,
+    i = n(442837),
+    s = n(570140);
+function a(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
 }
-class u extends (r = l.ZP.Store) {
+let l = {},
+    o = null;
+function c() {
+    (l = {}), (o = null);
+}
+class d extends (r = i.ZP.Store) {
     getEmailSettings() {
         return {
-            categories: o,
-            initialized: c
+            categories: l,
+            initialized: o
         };
     }
 }
-(s = 'EmailSettingsStore'),
-    (i = 'displayName') in u
-        ? Object.defineProperty(u, i, {
-              value: s,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (u[i] = s);
-let m = new u(a.Z, {
-    CONNECTION_OPEN: d,
-    LOGOUT: d,
+a(d, 'displayName', 'EmailSettingsStore');
+let u = new d(s.Z, {
+    CONNECTION_OPEN: c,
+    LOGOUT: c,
     EMAIL_SETTINGS_FETCH_SUCCESS: function (e) {
         let { settings: t } = e;
-        (o = t.categories), (c = t.initialized);
+        (l = t.categories), (o = t.initialized);
     },
     EMAIL_SETTINGS_UPDATE_SUCCESS: function (e) {
         let { settings: t } = e;
-        o = t.categories;
+        l = t.categories;
     },
     EMAIL_SETTINGS_UPDATE: function (e) {
         let { updates: t } = e;
-        o = {
-            ...o,
-            ...t
-        };
+        l = (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    r = Object.keys(n);
+                'function' == typeof Object.getOwnPropertySymbols &&
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        })
+                    )),
+                    r.forEach(function (t) {
+                        a(e, t, n[t]);
+                    });
+            }
+            return e;
+        })({}, l, t);
     }
 });

@@ -1,47 +1,76 @@
-n.d(t, { Z: () => p });
-var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    s = n.n(l),
-    a = n(477690),
+n.d(t, { Z: () => f });
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(477690),
     o = n(481060),
     c = n(91218),
     d = n(518738),
     u = n(208567),
     m = n(624138),
-    h = n(388032),
-    g = n(172883);
-let x = (0, m.Mg)(a.Z.ROLE_ICON_UPLOADER_ICON_SIZE);
-function p(e) {
-    let { role: t, 'aria-label': n = h.intl.string(h.t['MsUY/f']), className: l, onClick: a, disabled: m = !1 } = e,
-        p = r.useRef(null),
-        _ = r.useMemo(() => (null != t ? (0, d.Kz)(t, x) : null), [t]),
-        C =
-            null != _
-                ? (0, i.jsx)(c.Z, {
-                      enableTooltip: !1,
-                      className: g.icon,
-                      ..._
-                  })
-                : (0, i.jsx)(o.FmF, {
+    p = n(388032),
+    g = n(219045);
+let h = (0, m.Mg)(l.Z.ROLE_ICON_UPLOADER_ICON_SIZE);
+function f(e) {
+    let { role: t, 'aria-label': n = p.NW.string(p.t['MsUY/f']), className: s, onClick: l, disabled: m = !1 } = e,
+        f = i.useRef(null),
+        b = i.useMemo(() => (null != t ? (0, d.Kz)(t, h) : null), [t]),
+        x =
+            null != b
+                ? (0, r.jsx)(
+                      c.Z,
+                      (function (e) {
+                          for (var t = 1; t < arguments.length; t++) {
+                              var n = null != arguments[t] ? arguments[t] : {},
+                                  r = Object.keys(n);
+                              'function' == typeof Object.getOwnPropertySymbols &&
+                                  (r = r.concat(
+                                      Object.getOwnPropertySymbols(n).filter(function (e) {
+                                          return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                      })
+                                  )),
+                                  r.forEach(function (t) {
+                                      var r;
+                                      (r = n[t]),
+                                          t in e
+                                              ? Object.defineProperty(e, t, {
+                                                    value: r,
+                                                    enumerable: !0,
+                                                    configurable: !0,
+                                                    writable: !0
+                                                })
+                                              : (e[t] = r);
+                                  });
+                          }
+                          return e;
+                      })(
+                          {
+                              enableTooltip: !1,
+                              className: g.icon
+                          },
+                          b
+                      )
+                  )
+                : (0, r.jsx)(o.FmF, {
                       size: 'md',
                       color: 'currentColor',
                       className: g.icon
                   });
-    return (0, i.jsx)(o.tEY, {
-        ringTarget: p,
-        children: (0, i.jsxs)(o.P3F, {
+    return (0, r.jsx)(o.tEY, {
+        ringTarget: f,
+        children: (0, r.jsxs)(o.P3F, {
             'aria-label': n,
-            className: s()(g.container, l, { [g.disabled]: m }),
-            onClick: m ? void 0 : a,
+            className: a()(g.container, s, { [g.disabled]: m }),
+            onClick: m ? void 0 : l,
             'aria-disabled': m,
             children: [
-                (0, i.jsx)('div', {
-                    ref: p,
+                (0, r.jsx)('div', {
+                    ref: f,
                     className: g.preview,
-                    children: C
+                    children: x
                 }),
-                null != _ ? (0, i.jsx)(u.S, { className: g.uploaderIcon }) : null
+                null != b ? (0, r.jsx)(u.S, { className: g.uploaderIcon }) : null
             ]
         })
     });

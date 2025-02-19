@@ -1,38 +1,78 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => f });
 var i = n(200651),
-    l = n(192379),
-    r = n(120356),
-    s = n.n(r),
-    a = n(628238),
-    o = n(492593),
-    d = n(25015),
-    u = n(963550),
+    r = n(192379),
+    l = n(120356),
+    o = n.n(l),
+    s = n(628238),
+    a = n(492593),
+    u = n(25015),
+    d = n(963550),
     c = n(845080),
-    h = n(71938);
-let g = l.memo(function (e) {
-    var t;
-    let { message: n, channel: l, compact: r, className: g, isGroupStart: f, hideSimpleEmbedContent: p = !0, disableInteraction: C } = e,
-        v = (0, a.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()),
-        { content: E } = (0, d.Z)(n, {
-            hideSimpleEmbedContent: p,
-            allowList: v,
-            allowHeading: v,
+    h = n(656017);
+let f = r.memo(function (e) {
+    var t, n, r;
+    let { message: l, channel: f, compact: p, className: g, isGroupStart: v, hideSimpleEmbedContent: C = !0, disableInteraction: E } = e,
+        m = (0, s.A)((null !== (t = l.editedTimestamp) && void 0 !== t ? t : l.timestamp).valueOf()),
+        { content: O } = (0, u.Z)(l, {
+            hideSimpleEmbedContent: C,
+            allowList: m,
+            allowHeading: m,
             allowLinks: !0,
             previewLinkTarget: !0
         });
-    return (0, i.jsx)(o.Z, {
-        compact: r,
-        className: s()(g, {
+    return (0, i.jsx)(a.Z, {
+        compact: p,
+        className: o()(g, {
             [h.message]: !0,
-            [h.cozyMessage]: !r,
-            [h.groupStart]: f
+            [h.cozyMessage]: !p,
+            [h.groupStart]: v
         }),
-        childrenHeader: (0, c.Z)({
-            ...e,
-            channel: l,
-            guildId: void 0
-        }),
-        childrenMessageContent: (0, u.Z)(e, E),
-        disableInteraction: C
+        childrenHeader: (0, c.Z)(
+            ((n = (function (e) {
+                for (var t = 1; t < arguments.length; t++) {
+                    var n = null != arguments[t] ? arguments[t] : {},
+                        i = Object.keys(n);
+                    'function' == typeof Object.getOwnPropertySymbols &&
+                        (i = i.concat(
+                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                            })
+                        )),
+                        i.forEach(function (t) {
+                            var i;
+                            (i = n[t]),
+                                t in e
+                                    ? Object.defineProperty(e, t, {
+                                          value: i,
+                                          enumerable: !0,
+                                          configurable: !0,
+                                          writable: !0
+                                      })
+                                    : (e[t] = i);
+                        });
+                }
+                return e;
+            })({}, e)),
+            (r = r =
+                {
+                    channel: f,
+                    guildId: void 0
+                }),
+            Object.getOwnPropertyDescriptors
+                ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
+                : (function (e, t) {
+                      var n = Object.keys(e);
+                      if (Object.getOwnPropertySymbols) {
+                          var i = Object.getOwnPropertySymbols(e);
+                          n.push.apply(n, i);
+                      }
+                      return n;
+                  })(Object(r)).forEach(function (e) {
+                      Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
+                  }),
+            n)
+        ),
+        childrenMessageContent: (0, d.Z)(e, O),
+        disableInteraction: E
     });
 });

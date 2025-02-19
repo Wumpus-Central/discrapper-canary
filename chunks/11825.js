@@ -1,43 +1,83 @@
 n.d(t, { z: () => c });
-var i = n(200651),
-    l = n(192379),
+var r = n(200651),
+    i = n(192379),
     a = n(481060),
-    r = n(833592),
-    s = n(388032);
-let o = (e) => {
+    o = n(833592),
+    l = n(388032);
+let s = (e) => {
         let { item: t, closePopout: n } = e;
-        return (0, i.jsx)(a.v2r, {
+        return (0, r.jsx)(a.v2r, {
             navId: 'notification-actions',
             onClose: n,
             onSelect: n,
-            'aria-label': s.intl.string(s.t.ljs3OT),
-            children: (0, i.jsx)(a.sNh, {
+            'aria-label': l.NW.string(l.t.ljs3OT),
+            children: (0, r.jsx)(a.sNh, {
                 id: 'delete',
-                label: s.intl.string(s.t.oyYWHB),
+                label: l.NW.string(l.t.oyYWHB),
                 icon: a.XHJ,
                 action: async () => {
-                    await (0, r.g3)(t);
+                    await (0, o.g3)(t);
                 }
             })
         });
     },
-    c = l.memo(function (e) {
+    c = i.memo(function (e) {
         let { item: t } = e;
-        return (0, i.jsx)(a.yRy, {
-            renderPopout: (e) =>
-                (0, i.jsx)(o, {
-                    ...e,
-                    item: t
-                }),
+        return (0, r.jsx)(a.yRy, {
+            renderPopout: (e) => {
+                var n, i;
+                return (0, r.jsx)(
+                    s,
+                    ((n = (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var n = null != arguments[t] ? arguments[t] : {},
+                                r = Object.keys(n);
+                            'function' == typeof Object.getOwnPropertySymbols &&
+                                (r = r.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    })
+                                )),
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = n[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: r,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0
+                                              })
+                                            : (e[t] = r);
+                                });
+                        }
+                        return e;
+                    })({}, e)),
+                    (i = i = { item: t }),
+                    Object.getOwnPropertyDescriptors
+                        ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
+                        : (function (e, t) {
+                              var n = Object.keys(e);
+                              if (Object.getOwnPropertySymbols) {
+                                  var r = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, r);
+                              }
+                              return n;
+                          })(Object(i)).forEach(function (e) {
+                              Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
+                          }),
+                    n)
+                );
+            },
             position: 'bottom',
             align: 'right',
             animation: a.yRy.Animation.NONE,
             children: (e) => {
                 let { onClick: t } = e;
-                return (0, i.jsx)(a.M0o, {
-                    tooltip: s.intl.string(s.t.UKOtz8),
+                return (0, r.jsx)(a.M0o, {
+                    tooltip: l.NW.string(l.t.UKOtz8),
                     color: a.YX$.TERTIARY,
-                    icon: (0, i.jsx)(a.xhG, {
+                    icon: (0, r.jsx)(a.xhG, {
                         size: 'xs',
                         color: 'currentColor'
                     }),

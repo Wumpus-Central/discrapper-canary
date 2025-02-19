@@ -1,57 +1,83 @@
 n.d(t, {
-    Zy: () => u,
-    jW: () => d,
-    vq: () => c
+    Zy: () => d,
+    jW: () => p,
+    vq: () => f
 }),
     n(773603);
-var i = n(570140),
-    r = n(40851),
-    a = n(358085),
-    s = n(601993),
-    o = n(981631);
-function l(e) {
-    i.Z.dispatch({
+var r = n(570140),
+    i = n(40851),
+    o = n(358085),
+    a = n(601993),
+    s = n(981631);
+function l(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function c(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                l(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function u(e) {
+    r.Z.dispatch({
         type: 'CONTEXT_MENU_OPEN',
         contextMenu: e
     });
 }
-function u(e) {
+function d(e) {
     {
         let { flushSync: t } = n(995295);
         t(() => {
-            i.Z.wait(() => {
-                i.Z.dispatch({ type: 'CONTEXT_MENU_CLOSE' }).finally(e);
+            r.Z.wait(() => {
+                r.Z.dispatch({ type: 'CONTEXT_MENU_CLOSE' }).finally(e);
             });
         });
     }
 }
-function c(e, t, n, i) {
-    var u, c, d;
+function f(e, t, n, r) {
+    var l, d, f;
     if ((e.stopPropagation(), null != e.currentTarget.contains && !e.currentTarget.contains(e.target))) return;
-    let f = 0,
+    let p = 0,
         _ = 0;
-    if (('pageX' in e && ((f = e.pageX), (_ = e.pageY)), 0 === f && 0 === _)) {
-        let t = null === (u = e.target) || void 0 === u ? void 0 : u.getBoundingClientRect(),
-            { left: n = 0, top: i = 0, width: r = 0, height: a = 0 } = null != t ? t : {};
-        (f = n + r / 2), (_ = i + a / 2);
+    if (('pageX' in e && ((p = e.pageX), (_ = e.pageY)), 0 === p && 0 === _)) {
+        let t = null === (l = e.target) || void 0 === l ? void 0 : l.getBoundingClientRect(),
+            { left: n = 0, top: r = 0, width: i = 0, height: o = 0 } = null != t ? t : {};
+        (p = n + i / 2), (_ = r + o / 2);
     }
-    let p = {
+    let h = {
         render: t,
-        renderLazy: i,
-        target: null !== (c = e.target) && void 0 !== c ? c : e.currentTarget,
-        rect: new DOMRect(f, _, 0, 0),
-        config: {
-            context: __OVERLAY__ ? o.IlC.OVERLAY : null !== (d = (0, r.GB)()) && void 0 !== d ? d : o.IlC.APP,
-            ...n
-        }
+        renderLazy: r,
+        target: null !== (d = e.target) && void 0 !== d ? d : e.currentTarget,
+        rect: new DOMRect(p, _, 0, 0),
+        config: c({ context: __OVERLAY__ ? s.IlC.OVERLAY : null !== (f = (0, i.GB)()) && void 0 !== f ? f : s.IlC.APP }, n)
     };
-    if ((null == n ? void 0 : n.enableSpellCheck) && (0, a.isDesktop)()) {
+    if ((null == n ? void 0 : n.enableSpellCheck) && (0, o.isDesktop)()) {
         let e = () => {
-                t(), l(p);
+                t(), u(h);
             },
-            t = (0, s.RD)(e);
-    } else e.preventDefault(), l(p);
+            t = (0, a.RD)(e);
+    } else e.preventDefault(), u(h);
 }
-function d(e, t, n) {
-    c(e, void 0, n, t);
+function p(e, t, n) {
+    f(e, void 0, n, t);
 }

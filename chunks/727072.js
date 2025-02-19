@@ -1,30 +1,72 @@
 n.d(t, {
-    I2: () => A,
-    RD: () => _,
-    mY: () => S,
-    pH: () => R
+    I2: () => N,
+    RD: () => p,
+    mY: () => j,
+    pH: () => A
 }),
     n(653041),
-    n(47120),
-    n(724458);
+    n(47120);
 var r = n(192379),
-    l = n(232713),
-    i = n(65400),
+    i = n(232713),
+    l = n(65400),
     a = n(731965),
     u = n(881052),
     o = n(36459),
     s = n(866894),
-    E = n(273504),
-    c = n(981631);
-let d = {},
-    f = (e) => {
+    c = n(273504),
+    f = n(981631);
+function E(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function d(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let g = {},
+    S = (e) => {
         let t = {
-            [E.fX.KEYWORD]: [],
-            [E.fX.ML_SPAM]: [],
-            [E.fX.DEFAULT_KEYWORD_LIST]: [],
-            [E.fX.MENTION_SPAM]: [],
-            [E.fX.USER_PROFILE]: [],
-            [E.fX.SERVER_POLICY]: []
+            [c.fX.KEYWORD]: [],
+            [c.fX.ML_SPAM]: [],
+            [c.fX.DEFAULT_KEYWORD_LIST]: [],
+            [c.fX.MENTION_SPAM]: [],
+            [c.fX.USER_PROFILE]: [],
+            [c.fX.SERVER_POLICY]: []
         };
         return (
             e.forEach((e) => {
@@ -35,47 +77,38 @@ let d = {},
             t
         );
     },
-    g = (0, i.F)((e, t) => ({
+    O = (0, l.F)((e, t) => ({
         rules: {},
         fetching: !1,
         error: null,
         updateRule: (n) => {
-            var r, l;
-            let { guildId: i, id: u, triggerType: o } = n,
-                { rules: E } = t(),
-                c = null !== (r = E[i]) && void 0 !== r ? r : {},
-                d = null !== (l = c[o]) && void 0 !== l ? l : [],
-                f = d.some((e) => e.id === u),
-                g = d.filter((e) => !(0, s.U)(e.id) || e.triggerType !== o),
-                S = f ? g.map((e) => (e.id === u ? n : e)) : [...g, n];
+            var r, i;
+            let { guildId: l, id: u, triggerType: o } = n,
+                { rules: c } = t(),
+                f = null !== (r = c[l]) && void 0 !== r ? r : {},
+                g = null !== (i = f[o]) && void 0 !== i ? i : [],
+                S = g.some((e) => e.id === u),
+                O = g.filter((e) => !(0, s.U)(e.id) || e.triggerType !== o),
+                j = S ? O.map((e) => (e.id === u ? n : e)) : [...O, n];
             (0, a.j)(() => {
                 e({
-                    rules: {
-                        ...E,
-                        [i]: {
-                            ...c,
-                            [o]: S
-                        }
-                    },
+                    rules: d(E({}, c), { [l]: d(E({}, f), { [o]: j }) }),
                     error: null
                 });
             });
         },
         removeRule: (n, r) => {
-            let { rules: l } = t(),
-                i = l[r],
-                u = Object.keys(i).reduce((e, t) => {
+            let { rules: i } = t(),
+                l = i[r],
+                u = Object.keys(l).reduce((e, t) => {
                     var r;
-                    let l = Number(t),
-                        a = null !== (r = i[l]) && void 0 !== r ? r : [];
-                    return (e[l] = a.filter((e) => e.id !== n)), e;
-                }, i);
+                    let i = Number(t),
+                        a = null !== (r = l[i]) && void 0 !== r ? r : [];
+                    return (e[i] = a.filter((e) => e.id !== n)), e;
+                }, l);
             (0, a.j)(() => {
                 e({
-                    rules: {
-                        ...l,
-                        [r]: u
-                    },
+                    rules: d(E({}, i), { [r]: u }),
                     error: null
                 });
             });
@@ -85,20 +118,17 @@ let d = {},
                 (function (e) {
                     var t;
                     let n = Date.now();
-                    return n - (null !== (t = d[e]) && void 0 !== t ? t : 0) > 20000;
+                    return n - (null !== (t = g[e]) && void 0 !== t ? t : 0) > 20000;
                 })(n)
             ) {
-                d[n] = Date.now();
+                g[n] = Date.now();
                 try {
                     let r = await (0, o.$Y)(n),
-                        l = f(r),
-                        i = t().rules;
+                        i = S(r),
+                        l = t().rules;
                     (0, a.j)(() => {
                         e({
-                            rules: {
-                                ...i,
-                                [n]: l
-                            },
+                            rules: d(E({}, l), { [n]: i }),
                             error: null
                         });
                     });
@@ -111,27 +141,27 @@ let d = {},
             }
         }
     })),
-    S = (e, t) => {
+    j = (e, t) => {
         var n, r;
-        return (null !== (r = null === (n = g.getState().rules[e]) || void 0 === n ? void 0 : n[t]) && void 0 !== r ? r : []).length;
+        return (null !== (r = null === (n = O.getState().rules[e]) || void 0 === n ? void 0 : n[t]) && void 0 !== r ? r : []).length;
     };
-function A(e) {
+function N(e) {
     let [t, n] = r.useState(!1),
-        [i, a] = g((e) => [e.syncRules, e.fetching], l.X);
+        [l, a] = O((e) => [e.syncRules, e.fetching], i.X);
     return [
         t,
         r.useCallback(async () => {
             if (!a && null != e)
                 try {
-                    n(!0), await i(e);
+                    n(!0), await l(e);
                 } finally {
                     n(!1);
                 }
-        }, [e, a, i])
+        }, [e, a, l])
     ];
 }
-function _(e) {
-    let [t, n] = A(e);
+function p(e) {
+    let [t, n] = N(e);
     return (
         r.useEffect(() => {
             (async () => {
@@ -141,13 +171,13 @@ function _(e) {
         [t, n]
     );
 }
-function R(e) {
-    return g((t) => {
+function A(e) {
+    return O((t) => {
         var n;
         return {
-            rulesByTriggerType: null !== (n = t.rules[null != e ? e : c.lds]) && void 0 !== n ? n : {},
+            rulesByTriggerType: null !== (n = t.rules[null != e ? e : f.lds]) && void 0 !== n ? n : {},
             updateRule: t.updateRule,
             removeRule: t.removeRule
         };
-    }, l.X);
+    }, i.X);
 }

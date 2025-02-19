@@ -1,9 +1,9 @@
-n.d(t, { B: () => o }), n(47120);
-var i = n(786761),
-    l = n(23750),
-    r = n(306680),
-    a = n(709054);
-function s(e, t, n) {
+n.d(t, { B: () => u }), n(47120);
+var r = n(786761),
+    i = n(23750),
+    l = n(306680),
+    o = n(709054);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,31 +16,57 @@ function s(e, t, n) {
         e
     );
 }
-class o {
+function s(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                a(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function c(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+class u {
     isLatest(e, t) {
         return this.messageGeneration(e, t) === t;
     }
     messageGeneration(e, t) {
         let n = this.messages.get(e);
-        return null == n
-            ? -1 / 0
-            : n.generation !== t && null != n.message && n.message.id === r.ZP.lastMessageId(e)
-              ? (this.messages.set(e, {
-                    ...n,
-                    generation: t
-                }),
-                t)
-              : n.generation;
+        return null == n ? -1 / 0 : n.generation !== t && null != n.message && n.message.id === l.ZP.lastMessageId(e) ? (this.messages.set(e, c(s({}, n), { generation: t })), t) : n.generation;
     }
     messageId(e) {
         var t, n;
-        let i = this.messages.get(e);
-        return null !== (n = null == i ? void 0 : null === (t = i.message) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : null;
+        let r = this.messages.get(e);
+        return null !== (n = null == r ? void 0 : null === (t = r.message) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : null;
     }
     messageRecord(e) {
         var t;
         let n = this.messages.get(e);
-        return null == n || null == n.message || n.message instanceof l.ZP || (n.message = (0, i.e5)(n.message)), null !== (t = null == n ? void 0 : n.message) && void 0 !== t ? t : null;
+        return null == n || null == n.message || n.message instanceof i.ZP || (n.message = (0, r.e5)(n.message)), null !== (t = null == n ? void 0 : n.message) && void 0 !== t ? t : null;
     }
     has(e) {
         return this.messages.has(e);
@@ -52,9 +78,9 @@ class o {
         });
     }
     putNew(e, t, n) {
-        var i, l, r;
-        let s = this.messages.get(e);
-        null != t && ((l = t.id), null == (r = null == s ? void 0 : null === (i = s.message) || void 0 === i ? void 0 : i.id) || a.default.compare(l, r) > 0) && this.put(e, t, n);
+        var r, i, l;
+        let a = this.messages.get(e);
+        null != t && ((i = t.id), null == (l = null == a ? void 0 : null === (r = a.message) || void 0 === r ? void 0 : r.id) || o.default.compare(i, l) > 0) && this.put(e, t, n);
     }
     putMany(e, t) {
         for (let n of e) this.put(n.channel_id, n, t);
@@ -63,18 +89,15 @@ class o {
         var t;
         if (null == e.id || null == e.channel_id) return;
         let n = e.channel_id,
-            r = this.messages.get(n);
-        if ((null == r ? void 0 : null === (t = r.message) || void 0 === t ? void 0 : t.id) !== e.id) return;
-        let a = r.message instanceof l.ZP ? (0, i.wi)(r.message, e) : (0, i.gx)(r.message, e);
-        this.messages.set(n, {
-            ...r,
-            message: a
-        });
+            l = this.messages.get(n);
+        if ((null == l ? void 0 : null === (t = l.message) || void 0 === t ? void 0 : t.id) !== e.id) return;
+        let o = l.message instanceof i.ZP ? (0, r.wi)(l.message, e) : (0, r.gx)(l.message, e);
+        this.messages.set(n, c(s({}, l), { message: o }));
     }
     delete(e) {
         this.messages.delete(e);
     }
     constructor() {
-        s(this, 'localNeeded', !0), s(this, 'messages', new Map());
+        a(this, 'localNeeded', !0), a(this, 'messages', new Map());
     }
 }

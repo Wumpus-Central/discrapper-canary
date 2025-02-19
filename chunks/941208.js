@@ -544,8 +544,8 @@ function es(e) {
 function ea(e, t, i) {
     return Uint8Array.prototype.slice ? e.slice(t, i) : new Uint8Array(Array.prototype.slice.call(e, t, i));
 }
-let en = (e, t) => !!(t + 10 <= e.length) && 73 === e[t] && 68 === e[t + 1] && 51 === e[t + 2] && !!(e[t + 3] < 255) && !!(e[t + 4] < 255) && !!(e[t + 6] < 128) && !!(e[t + 7] < 128) && !!(e[t + 8] < 128) && !!(e[t + 9] < 128),
-    el = (e, t) => !!(t + 10 <= e.length) && 51 === e[t] && 68 === e[t + 1] && 73 === e[t + 2] && !!(e[t + 3] < 255) && !!(e[t + 4] < 255) && !!(e[t + 6] < 128) && !!(e[t + 7] < 128) && !!(e[t + 8] < 128) && !!(e[t + 9] < 128),
+let en = (e, t) => (t + 10 <= e.length && 73 === e[t] && 68 === e[t + 1] && 51 === e[t + 2] && e[t + 3] < 255 && e[t + 4] < 255 && e[t + 6] < 128 && e[t + 7] < 128 && e[t + 8] < 128 && e[t + 9] < 128) || !1,
+    el = (e, t) => (t + 10 <= e.length && 51 === e[t] && 68 === e[t + 1] && 73 === e[t + 2] && e[t + 3] < 255 && e[t + 4] < 255 && e[t + 6] < 128 && e[t + 7] < 128 && e[t + 8] < 128 && e[t + 9] < 128) || !1,
     eo = (e, t) => {
         let i = t,
             r = 0;
@@ -2328,7 +2328,7 @@ class tv {
             for (let e = 0; e < m.length; e++) {
                 var h;
                 let i = m[e];
-                if (!('ID' !== i && 'CLASS' !== i && 'START-DATE' !== i && 'DURATION' !== i && 'END-DATE' !== i && 'END-ON-NEXT' !== i)) continue;
+                if ('ID' === i || 'CLASS' === i || 'START-DATE' === i || 'DURATION' === i || 'END-DATE' === i || 'END-ON-NEXT' === i) continue;
                 let s = u[i];
                 if (s) c && !d.durationKnown && (s.endTime = f);
                 else if (o) {
@@ -2381,7 +2381,7 @@ class tS {
             { liveSyncDuration: s, liveSyncDurationCount: a, lowLatencyMode: n } = this.config,
             l = this.hls.userConfig,
             o = (n && i) || t;
-        return (l.liveSyncDuration || l.liveSyncDurationCount || 0 === o) && (o = void 0 !== s ? s : a * r), o + Math.min(1 * this.stallCount, r);
+        return (l.liveSyncDuration || l.liveSyncDurationCount || 0 === o) && (o = void 0 !== s ? s : a * r), o + Math.min(+this.stallCount, r);
     }
     get liveSyncPosition() {
         let e = this.estimateLiveEdge(),
@@ -2820,7 +2820,7 @@ class tW {
                             (function (e, t, i) {
                                 let r = t.skippedSegments,
                                     s = Math.max(e.startSN, t.startSN) - t.startSN,
-                                    a = (e.fragmentHint ? 1 : 0) + (r ? t.endSN : Math.min(e.endSN, t.endSN)) - t.startSN,
+                                    a = +!!e.fragmentHint + (r ? t.endSN : Math.min(e.endSN, t.endSN)) - t.startSN,
                                     n = t.startSN - e.startSN,
                                     l = t.fragmentHint ? t.fragments.concat(t.fragmentHint) : t.fragments,
                                     o = e.fragmentHint ? e.fragments.concat(e.fragmentHint) : e.fragments;
@@ -5303,11 +5303,11 @@ class iV extends iG {
             u = 0;
         for (-1 === n && ((d = 0), (u = 31 & t[0]), (n = 0), (h = 1)); h < a; ) {
             if (((i = t[h++]), !n)) {
-                n = i ? 0 : 1;
+                n = +!i;
                 continue;
             }
             if (1 === n) {
-                n = i ? 0 : 2;
+                n = 2 * !i;
                 continue;
             }
             if (i) {
@@ -6017,7 +6017,7 @@ class iQ {
             h = o.length,
             d = 12 + 16 * h,
             u = new Uint8Array(d);
-        for (t += 8 + d, u.set(['video' === e.type ? 1 : 0, 0, 15, 1, (h >>> 24) & 255, (h >>> 16) & 255, (h >>> 8) & 255, 255 & h, (t >>> 24) & 255, (t >>> 16) & 255, (t >>> 8) & 255, 255 & t], 0), i = 0; i < h; i++) (s = (r = o[i]).duration), (a = r.size), (n = r.flags), (l = r.cts), u.set([(s >>> 24) & 255, (s >>> 16) & 255, (s >>> 8) & 255, 255 & s, (a >>> 24) & 255, (a >>> 16) & 255, (a >>> 8) & 255, 255 & a, (n.isLeading << 2) | n.dependsOn, (n.isDependedOn << 6) | (n.hasRedundancy << 4) | (n.paddingValue << 1) | n.isNonSync, 61440 & n.degradPrio, 15 & n.degradPrio, (l >>> 24) & 255, (l >>> 16) & 255, (l >>> 8) & 255, 255 & l], 12 + 16 * i);
+        for (t += 8 + d, u.set([+('video' === e.type), 0, 15, 1, (h >>> 24) & 255, (h >>> 16) & 255, (h >>> 8) & 255, 255 & h, (t >>> 24) & 255, (t >>> 16) & 255, (t >>> 8) & 255, 255 & t], 0), i = 0; i < h; i++) (s = (r = o[i]).duration), (a = r.size), (n = r.flags), (l = r.cts), u.set([(s >>> 24) & 255, (s >>> 16) & 255, (s >>> 8) & 255, 255 & s, (a >>> 24) & 255, (a >>> 16) & 255, (a >>> 8) & 255, 255 & a, (n.isLeading << 2) | n.dependsOn, (n.isDependedOn << 6) | (n.hasRedundancy << 4) | (n.paddingValue << 1) | n.isNonSync, 61440 & n.degradPrio, 15 & n.degradPrio, (l >>> 24) & 255, (l >>> 16) & 255, (l >>> 8) & 255, 255 & l], 12 + 16 * i);
         return iQ.box(iQ.types.trun, u);
     }
     static initSegment(e) {
@@ -6361,7 +6361,7 @@ class i2 {
             f = [],
             g = void 0 !== s,
             m = e.samples,
-            p = c ? 0 : 8,
+            p = 8 * !c,
             E = this.nextAudioPts || -1,
             T = t * n,
             y = (u.baseTime * n) / u.timescale;
@@ -6526,7 +6526,7 @@ class i8 {
                 hasRedundancy: 0,
                 degradPrio: 0,
                 dependsOn: e ? 2 : 1,
-                isNonSync: e ? 0 : 1
+                isNonSync: +!e
             });
     }
 }
@@ -6997,8 +6997,7 @@ let i9 = [
                 return !1;
             }
             canParse(e, t) {
-                var i, r;
-                return (i = e), (r = t) + 5 < i.length && iA(i, r) && iR(i, r) <= i.length - r;
+                return t + 5 < e.length && iA(e, t) && iR(e, t) <= e.length - t;
             }
             appendFrame(e, t, i) {
                 iI(e, this.observer, t, i, e.manifestCodec);

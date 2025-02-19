@@ -1,125 +1,177 @@
-n.d(t, { Z: () => K }), n(47120);
-var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(642128),
+n.d(t, { Z: () => X }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(642128),
     l = n(442837),
-    u = n(481060),
-    c = n(26151),
+    c = n(481060),
+    u = n(26151),
     d = n(922555),
     f = n(287734),
-    _ = n(249000),
-    p = n(43267),
+    p = n(249000),
+    _ = n(43267),
     h = n(933557),
     m = n(703656),
     g = n(932724),
     E = n(672339),
     v = n(898531),
-    y = n(861254),
-    I = n(923973),
-    T = n(189771),
-    b = n(560688),
-    S = n(88479),
-    A = n(136995),
+    b = n(923973),
+    y = n(82965),
+    O = n(189771),
+    S = n(560688),
+    I = n(88479),
+    T = n(136995),
     N = n(25827),
-    C = n(430824),
-    R = n(131951),
-    O = n(594174),
-    D = n(451478),
-    L = n(768581),
-    x = n(358221),
-    P = n(584511),
-    w = n(793865),
+    A = n(430824),
+    C = n(131951),
+    R = n(594174),
+    P = n(451478),
+    w = n(768581),
+    D = n(358221),
+    x = n(584511),
+    L = n(793865),
     M = n(981631),
     k = n(65154),
-    U = n(388032),
-    G = n(344763),
-    B = n(801919);
-let Z = {
+    j = n(388032),
+    U = n(988700),
+    G = n(459918);
+function B(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function Z(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                B(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function F(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function V(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : F(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let H = {
         width: 232,
         height: 315
     },
-    F = {
+    W = {
         width: 232,
         height: 267
     },
-    V = 475,
-    j = 267,
-    H = 128;
-function Y(e) {
+    Y = 475,
+    K = 267,
+    z = 128;
+function q(e) {
     let { header: t } = e,
-        n = R.Z.getCameraComponent(),
-        a = (0, l.e7)([R.Z], () => R.Z.getVideoDeviceId()),
-        s = (0, v.Z)();
+        n = C.Z.getCameraComponent(),
+        o = (0, l.e7)([C.Z], () => C.Z.getVideoDeviceId()),
+        a = (0, v.Z)();
     return (
-        r.useEffect(() => {
-            let e = O.default.getCurrentUser();
-            if (s && null != e) {
+        i.useEffect(() => {
+            let e = R.default.getCurrentUser();
+            if (a && null != e) {
                 let t = (0, g.P)(e);
-                (0, E.FU)(t, a, { track: !1 }).catch(M.dG4);
+                (0, E.FU)(t, o, { track: !1 }).catch(M.dG4);
             }
-        }, [s, a]),
-        (0, i.jsxs)('div', {
-            className: G.previewRoot,
+        }, [a, o]),
+        (0, r.jsxs)('div', {
+            className: U.previewRoot,
             children: [
-                (0, i.jsx)(u.$jN, {}),
-                (0, i.jsx)('div', {
-                    className: G.preview,
-                    children: (0, i.jsx)(n, {
+                (0, r.jsx)(c.$jN, {}),
+                (0, r.jsx)('div', {
+                    className: U.preview,
+                    children: (0, r.jsx)(n, {
                         disabled: !1,
-                        deviceId: a,
-                        width: V,
-                        height: j
+                        deviceId: o,
+                        width: Y,
+                        height: K
                     })
                 }),
-                (0, i.jsx)('div', {
-                    className: G.previewChannelHeader,
+                (0, r.jsx)('div', {
+                    className: U.previewChannelHeader,
                     children: t
                 })
             ]
         })
     );
 }
-function W(e) {
-    let { canVideo: t, channel: n, numVideoDevices: r } = e,
-        { cameraUnavailable: a, enabled: o } = (0, I.Z)(),
-        l = (0, T.Z)(n),
-        { groupedButtons: d } = (0, y.ZP)({ location: 'CallActionButtons' });
-    return (0, i.jsxs)('div', {
-        className: s()(G.wrapper, d ? G.experimentActions : G.actions),
+function Q(e) {
+    let { canVideo: t, channel: n, numVideoDevices: i } = e,
+        { cameraUnavailable: o, enabled: s } = (0, b.Z)(),
+        l = (0, O.Z)(n),
+        d = (0, y.Z)({ location: 'CallActionButtons' });
+    return (0, r.jsxs)('div', {
+        className: a()(U.wrapper, d ? U.experimentActions : U.actions),
         children: [
-            (0, i.jsx)(S.Z, {
-                iconComponent: u.Dio,
-                label: U.intl.string(U.t.WAI6xs),
-                className: G.actionButton,
+            (0, r.jsx)(I.Z, {
+                iconComponent: c.Dio,
+                label: j.NW.string(j.t.WAI6xs),
+                className: U.actionButton,
                 fullRegionButton: d,
-                onClick: () => c.Z.stopRinging(n.id)
+                onClick: () => u.Z.stopRinging(n.id)
             }),
             t &&
-                (0, i.jsx)(u.yRy, {
+                (0, r.jsx)(c.yRy, {
                     renderPopout: (e) => {
                         let { closePopout: t } = e;
-                        return (0, i.jsx)(w.Z, { onClose: t });
+                        return (0, r.jsx)(L.Z, { onClose: t });
                     },
                     position: 'top',
                     align: 'center',
-                    animation: u.yRy.Animation.FADE,
+                    animation: c.yRy.Animation.FADE,
                     children: (e, t) => {
-                        let { onClick: s } = e,
-                            { isShown: u } = t;
-                        return (0, i.jsx)(N.C, {
+                        let { onClick: a } = e,
+                            { isShown: c } = t;
+                        return (0, r.jsx)(N.C, {
                             join: !0,
-                            enabled: o,
-                            className: G.actionButton,
+                            enabled: s,
+                            className: U.actionButton,
                             color: 'green',
                             centerButton: !0,
                             hasPermission: l,
-                            cameraUnavailable: a,
+                            cameraUnavailable: o,
                             channel: n,
-                            onPopoutClick: r > 1 ? s : null,
-                            popoutOpen: u,
-                            onCameraUnavailable: b.Z,
+                            onPopoutClick: i > 1 ? a : null,
+                            popoutOpen: c,
+                            onCameraUnavailable: S.Z,
                             onChange: () => {
                                 var e;
                                 f.default.selectVoiceChannel(n.id, !0), (0, m.XU)(null !== (e = n.guild_id) && void 0 !== e ? e : M.ME, n.id);
@@ -127,127 +179,123 @@ function W(e) {
                         });
                     }
                 }),
-            (0, i.jsx)(A.Z, {
+            (0, r.jsx)(T.Z, {
                 channel: n,
                 color: 'green',
                 centerButton: !0,
-                className: G.actionButton
+                className: U.actionButton
             })
         ]
     });
 }
-function K(e) {
+function X(e) {
     var t;
-    let { animatedStyle: n, y: a, x: f, channel: m } = e,
-        [g, E] = r.useState(!1),
-        v = (0, l.e7)([C.Z], () => C.Z.getGuild(m.guild_id)),
-        y =
+    let { animatedStyle: n, y: o, x: f, channel: m } = e,
+        [g, E] = i.useState(!1),
+        v = (0, l.e7)([A.Z], () => A.Z.getGuild(m.guild_id)),
+        b =
             null != v
-                ? L.ZP.getGuildIconURL({
+                ? w.ZP.getGuildIconURL({
                       id: v.id,
                       icon: v.icon,
-                      size: H
+                      size: z
                   })
                 : null,
-        I = null !== (t = (0, p.x)(m, H, !0)) && void 0 !== t ? t : y,
-        T = (0, h.ZP)(m),
-        [b, S] = (0, l.Wu)([R.Z], () => [R.Z.supports(k.AN.VIDEO), Object.keys(R.Z.getVideoDevices()).length]),
-        A = null != v ? ''.concat(T, ', ').concat(v.name) : T,
-        N = (0, l.e7)([D.Z], () => D.Z.isFocused()),
-        O = (0, l.e7)([x.Z], () => x.Z.getMode(m.id)),
-        w = r.useCallback((e) => {
+        y = null !== (t = (0, _.x)(m, z, !0)) && void 0 !== t ? t : b,
+        O = (0, h.ZP)(m),
+        [S, I] = (0, l.Wu)([C.Z], () => [C.Z.supports(k.AN.VIDEO), Object.keys(C.Z.getVideoDevices()).length]),
+        T = null != v ? ''.concat(O, ', ').concat(v.name) : O,
+        N = (0, l.e7)([P.Z], () => P.Z.isFocused()),
+        R = (0, l.e7)([D.Z], () => D.Z.getMode(m.id)),
+        L = i.useCallback((e) => {
             null != e.top && null != e.left && d.Z.move(e.left, e.top);
         }, []),
-        K = (0, u.q_F)(
+        B = (0, c.q_F)(
             {
-                value: g ? 1 : 0,
-                config: {
-                    ...o.config.stiff,
-                    clamp: !0
-                }
+                value: +!!g,
+                config: V(Z({}, s.config.stiff), { clamp: !0 })
             },
             'animate-always'
         );
-    r.useEffect(() => {
+    i.useEffect(() => {
         let e = (e) => {
-            e.keyCode === M.yXg.ESCAPE && c.Z.stopRinging(m.id);
+            e.keyCode === M.yXg.ESCAPE && u.Z.stopRinging(m.id);
         };
         return window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e);
     }, [m]);
-    let z = O === M.WtW.VIDEO && b && S > 0,
-        q = (0, i.jsxs)(i.Fragment, {
+    let F = R === M.WtW.VIDEO && S && I > 0,
+        X = (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, i.jsx)(P.Z, {
-                    className: G.icon,
+                (0, r.jsx)(x.Z, {
+                    className: U.icon,
                     ringing: N,
-                    src: null != I ? I : '',
-                    ringingType: P.Z.RingingType.INCOMING,
-                    size: g ? u.EFr.SIZE_40 : u.EFr.SIZE_80
+                    src: null != y ? y : '',
+                    ringingType: x.Z.RingingType.INCOMING,
+                    size: g ? c.EFr.SIZE_40 : c.EFr.SIZE_80
                 }),
-                (0, i.jsxs)('div', {
-                    className: G.titleGroup,
+                (0, r.jsxs)('div', {
+                    className: U.titleGroup,
                     children: [
-                        (0, i.jsx)(u.Text, {
-                            className: G.title,
+                        (0, r.jsx)(c.Text, {
+                            className: U.title,
                             color: 'header-primary',
                             variant: g ? 'text-md/semibold' : 'text-lg/semibold',
-                            children: A
+                            children: T
                         }),
-                        (0, i.jsx)(u.Text, {
+                        (0, r.jsx)(c.Text, {
                             color: 'header-secondary',
-                            className: G.subtitle,
+                            className: U.subtitle,
                             variant: g ? 'text-sm/normal' : 'text-md/normal',
-                            children: O === M.WtW.VOICE ? U.intl.string(U.t.Js8cKy) : U.intl.string(U.t.KcnWCA)
+                            children: R === M.WtW.VOICE ? j.NW.string(j.t.Js8cKy) : j.NW.string(j.t.KcnWCA)
                         })
                     ]
                 })
             ]
         }),
-        Q = z ? Z : F,
-        X = (0, l.e7)([D.Z], () => D.Z.windowSize());
-    return (0, i.jsx)(_.Z, {
-        className: G.wrapper,
-        selector: '.'.concat(G.root),
+        J = F ? H : W,
+        $ = (0, l.e7)([P.Z], () => P.Z.windowSize());
+    return (0, r.jsx)(p.Z, {
+        className: U.wrapper,
+        selector: '.'.concat(U.root),
         initialPosition: {
             left: f,
-            top: a
+            top: o
         },
-        maxX: X.width,
-        maxY: X.height,
-        onDragEnd: w,
+        maxX: $.width,
+        maxY: $.height,
+        onDragEnd: L,
         dragAnywhere: !0,
-        children: (0, i.jsx)(u.f6W, {
+        children: (0, r.jsx)(c.f6W, {
             theme: g ? M.BRd.DARK : void 0,
             children: (e) =>
-                (0, i.jsxs)(o.animated.div, {
-                    className: s()(G.root, B.elevationHigh, { [G.previewCamera]: g }, e),
-                    style: {
-                        ...n,
-                        width: K.value.interpolate([0, 1], [Q.width, V]),
-                        minHeight: K.value.interpolate([0, 1], [Q.height, j]),
-                        translateX: K.value.interpolate([0, 1], [0, (-1 * Math.abs(V - Q.width)) / 2])
-                    },
+                (0, r.jsxs)(s.animated.div, {
+                    className: a()(U.root, G.elevationHigh, { [U.previewCamera]: g }, e),
+                    style: V(Z({}, n), {
+                        width: B.value.interpolate([0, 1], [J.width, Y]),
+                        minHeight: B.value.interpolate([0, 1], [J.height, K]),
+                        translateX: B.value.interpolate([0, 1], [0, (-1 * Math.abs(Y - J.width)) / 2])
+                    }),
                     children: [
                         g
-                            ? (0, i.jsx)(Y, { header: q })
-                            : (0, i.jsx)('div', {
-                                  className: G.mainChannelInfo,
-                                  children: q
+                            ? (0, r.jsx)(q, { header: X })
+                            : (0, r.jsx)('div', {
+                                  className: U.mainChannelInfo,
+                                  children: X
                               }),
-                        (0, i.jsx)(W, {
-                            canVideo: z,
+                        (0, r.jsx)(Q, {
+                            canVideo: F,
                             channel: m,
-                            numVideoDevices: S
+                            numVideoDevices: I
                         }),
-                        z && !g
-                            ? (0, i.jsx)(u.zxk, {
-                                  size: u.zxk.Sizes.SMALL,
+                        F && !g
+                            ? (0, r.jsx)(c.zxk, {
+                                  size: c.zxk.Sizes.SMALL,
                                   fullWidth: !0,
-                                  look: u.zxk.Looks.LINK,
-                                  color: u.zxk.Colors.PRIMARY,
-                                  className: G.previewButton,
+                                  look: c.zxk.Looks.LINK,
+                                  color: c.zxk.Colors.PRIMARY,
+                                  className: U.previewButton,
                                   onClick: () => E(!0),
-                                  children: U.intl.string(U.t['8B0UDg'])
+                                  children: j.NW.string(j.t['8B0UDg'])
                               })
                             : null
                     ]

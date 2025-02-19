@@ -1,2 +1,2 @@
-n.d(t, { J: () => i });
-let i = 'KEYBOARD_SHORTCUT_MODAL_KEY';
+n.d(t, { J: () => l });
+let l = 'KEYBOARD_SHORTCUT_MODAL_KEY';

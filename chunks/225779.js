@@ -1,22 +1,94 @@
 n.d(t, {
-    DM: () => f,
-    Ey: () => _,
-    No: () => m,
-    Ry: () => E,
-    qX: () => v,
-    u3: () => g
+    DM: () => E,
+    Ey: () => v,
+    No: () => O,
+    Ry: () => I,
+    qX: () => T,
+    u3: () => S
 });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(120356),
-    a = n.n(r),
-    s = n(873546),
-    o = n(481060),
+var i = n(120356),
+    o = n.n(i),
+    a = n(873546),
+    s = n(481060),
     l = n(626135),
-    u = n(981631),
-    c = n(388032),
-    d = n(384049);
-let f = Object.freeze({
+    c = n(981631),
+    u = n(388032),
+    d = n(125534);
+function f(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function p(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                f(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function _(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function h(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : _(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function m(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = g(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function g(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+let E = Object.freeze({
     DEFAULT: d.colorDefault,
     NEUTRAL: d.colorNeutral,
     BRAND: d.colorBrand,
@@ -31,66 +103,63 @@ let f = Object.freeze({
     PREMIUM_TIER_1: d.colorPremiumTier1,
     PREMIUM_TIER_2: d.colorPremiumTier2
 });
-function _(e) {
-    let { children: t, className: n, minor: r = !1, ...s } = e;
-    return (0, i.jsx)(o.tEY, {
-        children: (0, i.jsx)('button', {
-            className: a()(d.button, n, { [d.buttonMinor]: r }),
-            ...s,
+function v(e) {
+    var { children: t, className: n, minor: i = !1 } = e,
+        a = m(e, ['children', 'className', 'minor']);
+    return (0, r.jsx)(s.tEY, { children: (0, r.jsx)('button', h(p({ className: o()(d.button, n, { [d.buttonMinor]: i }) }, a), { children: t })) });
+}
+function b(e, t) {
+    null != e && l.default.track(c.rMx.APP_NOTICE_PRIMARY_CTA_OPENED, p({ notice_type: e }, t));
+}
+function y(e) {
+    null != e && l.default.track(c.rMx.APP_NOTICE_CLOSED, { notice_type: e });
+}
+function O(e) {
+    var { children: t, noticeType: n, additionalTrackingProps: i } = e,
+        o = m(e, ['children', 'noticeType', 'additionalTrackingProps']);
+    return (0, r.jsx)(
+        v,
+        h(p({}, o), {
+            onClick: (e) => {
+                null != o.onClick && o.onClick(e), b(n, i);
+            },
             children: t
         })
-    });
+    );
 }
-function p(e, t) {
-    null != e &&
-        l.default.track(u.rMx.APP_NOTICE_PRIMARY_CTA_OPENED, {
-            notice_type: e,
-            ...t
-        });
+function S(e) {
+    var { children: t, href: n } = e,
+        i = m(e, ['children', 'href']);
+    return (0, r.jsx)(
+        s.eee,
+        h(p({}, i), {
+            className: d.button,
+            href: n,
+            children: t
+        })
+    );
 }
-function h(e) {
-    null != e && l.default.track(u.rMx.APP_NOTICE_CLOSED, { notice_type: e });
-}
-function m(e) {
-    let { children: t, noticeType: n, additionalTrackingProps: r, ...a } = e;
-    return (0, i.jsx)(_, {
-        ...a,
-        onClick: (e) => {
-            null != a.onClick && a.onClick(e), p(n, r);
-        },
-        children: t
-    });
-}
-function g(e) {
-    let { children: t, href: n, ...r } = e;
-    return (0, i.jsx)(o.eee, {
-        ...r,
-        className: d.button,
-        href: n,
-        children: t
-    });
-}
-function E(e) {
+function I(e) {
     let { onClick: t, noticeType: n } = e;
-    return (0, i.jsx)(o.P3F, {
+    return (0, r.jsx)(s.P3F, {
         focusProps: { offset: 6 },
         className: d.closeButton,
         onClick: () => {
-            t(), h(n);
+            t(), y(n);
         },
-        'aria-label': c.intl.string(c.t.WAI6xs),
-        children: (0, i.jsx)(o.Dio, {
+        'aria-label': u.NW.string(u.t.WAI6xs),
+        children: (0, r.jsx)(s.Dio, {
             size: 'sm',
             color: 'currentColor',
             className: d.closeIcon
         })
     });
 }
-function v(e) {
-    let { color: t = f.DEFAULT, className: n, style: r, children: o } = e;
-    return (0, i.jsx)('div', {
-        className: a()(d.notice, { [d.isMobile]: s.tq }, n, t),
-        style: null != r ? r : void 0,
-        children: o
+function T(e) {
+    let { color: t = E.DEFAULT, className: n, style: i, children: s } = e;
+    return (0, r.jsx)('div', {
+        className: o()(d.notice, { [d.isMobile]: a.tq }, n, t),
+        style: null != i ? i : void 0,
+        children: s
     });
 }

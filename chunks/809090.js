@@ -1,65 +1,140 @@
-n.d(t, { Z: () => f }), n(47120);
-var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(686546),
+n.d(t, { Z: () => E }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(686546),
     l = n(768581),
-    u = n(895924),
-    c = n(649705),
+    c = n(895924),
+    u = n(467895),
     d = n(970952);
-function f(e) {
-    let { section: t, isSelected: n, width: a, height: f, className: _, selectable: p = !1, isSquircle: h, onFocus: m, onBlur: g, onMouseOver: E, onMouseLeave: v, ...y } = e,
-        [I, T] = r.useState(!1),
-        b = r.useCallback(() => {
-            T(!0), null == m || m();
-        }, [m]),
-        S = r.useCallback(() => {
-            T(!1), null == g || g();
-        }, [g]),
-        A = r.useCallback(() => {
-            T(!0), null == E || E();
-        }, [E]),
-        N = r.useCallback(() => {
-            T(!1), null == v || v();
+function f(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function p(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                f(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function _(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function h(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : _(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function m(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = g(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function g(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+function E(e) {
+    var { section: t, isSelected: n, width: o, height: f, className: _, selectable: g = !1, isSquircle: E, onFocus: v, onBlur: b, onMouseOver: y, onMouseLeave: O } = e,
+        S = m(e, ['section', 'isSelected', 'width', 'height', 'className', 'selectable', 'isSquircle', 'onFocus', 'onBlur', 'onMouseOver', 'onMouseLeave']);
+    let [I, T] = i.useState(!1),
+        N = i.useCallback(() => {
+            T(!0), null == v || v();
         }, [v]),
-        C = r.useMemo(() => {
-            if (t.type === u.Qi.APPLICATION) {
+        A = i.useCallback(() => {
+            T(!1), null == b || b();
+        }, [b]),
+        C = i.useCallback(() => {
+            T(!0), null == y || y();
+        }, [y]),
+        R = i.useCallback(() => {
+            T(!1), null == O || O();
+        }, [O]),
+        P = i.useMemo(() => {
+            if (t.type === c.Qi.APPLICATION) {
                 var e;
                 return l.ZP.getApplicationIconURL({
                     id: t.id,
                     icon: t.icon,
                     bot: null === (e = t.application) || void 0 === e ? void 0 : e.bot,
                     botIconFirst: !0,
-                    size: a
+                    size: o
                 });
             }
             return d;
-        }, [t, a]);
-    return (0, i.jsx)('div', {
-        ...y,
-        className: s()(c.wrapper, _, {
-            [c.selectable]: p,
-            [c.selected]: p && n
-        }),
-        onFocus: b,
-        onBlur: S,
-        onMouseOver: A,
-        onMouseLeave: N,
-        children: (0, i.jsx)(o.ZP, {
-            className: c.mask,
-            mask: h || (p && (n || I)) ? o.QS.SQUIRCLE : o.QS.AVATAR_DEFAULT,
-            width: a,
-            height: f,
-            children: (0, i.jsx)('img', {
-                alt: '',
-                className: c.icon,
-                style: {
-                    width: a,
-                    height: f
-                },
-                src: C
+        }, [t, o]);
+    return (0, r.jsx)(
+        'div',
+        h(p({}, S), {
+            className: a()(u.wrapper, _, {
+                [u.selectable]: g,
+                [u.selected]: g && n
+            }),
+            onFocus: N,
+            onBlur: A,
+            onMouseOver: C,
+            onMouseLeave: R,
+            children: (0, r.jsx)(s.ZP, {
+                className: u.mask,
+                mask: E || (g && (n || I)) ? s.QS.SQUIRCLE : s.QS.AVATAR_DEFAULT,
+                width: o,
+                height: f,
+                children: (0, r.jsx)('img', {
+                    alt: '',
+                    className: u.icon,
+                    style: {
+                        width: o,
+                        height: f
+                    },
+                    src: P
+                })
             })
         })
-    });
+    );
 }

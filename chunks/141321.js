@@ -1,60 +1,103 @@
-n.d(t, { Z: () => C });
-var i = n(200651),
-    l = n(192379),
+n.d(t, { Z: () => v });
+var r = n(200651),
+    i = n(192379),
     a = n(442837),
-    r = n(481060),
-    s = n(540059),
-    o = n(317632),
+    o = n(481060),
+    l = n(540059),
+    s = n(317632),
     c = n(602478),
     d = n(665149),
     u = n(388035),
-    m = n(306680),
-    _ = n(594174),
-    h = n(178088),
-    p = n(222940),
+    p = n(306680),
+    m = n(594174),
+    f = n(178088),
+    h = n(222940),
     g = n(490897),
-    f = n(388032),
-    x = n(206943);
-function C(e) {
-    let { onOpen: t, onClose: n, className: C } = e,
-        E = (0, a.e7)([_.default], () => _.default.getCurrentUser()),
-        v = (0, s.Q3)('RecentsButton'),
-        I = l.useRef(null),
-        N = (0, a.e7)([m.ZP], () => (null == E ? void 0 : E.id) != null && m.ZP.getMentionCount(E.id, g.W.NOTIFICATION_CENTER) > 0),
-        { enabled: S } = c.Z.useExperiment({ location: 'RecentsButton' }, { autoTrackExposure: !1 }),
-        T = (0, a.e7)([o.Z], () => S && o.Z.getUnseenInviteCount() > 0),
-        b = (0, r.dQu)(r.TVs.modules.chat.INPUT_ICON_SIZE);
-    return (0, i.jsx)(h.k, {
+    _ = n(388032),
+    b = n(575219);
+function v(e) {
+    let { onOpen: t, onClose: n, className: v } = e,
+        y = (0, a.e7)([m.default], () => m.default.getCurrentUser()),
+        x = (0, l.Q3)('RecentsButton'),
+        O = i.useRef(null),
+        E = (0, a.e7)([p.ZP], () => (null == y ? void 0 : y.id) != null && p.ZP.getMentionCount(y.id, g.W.NOTIFICATION_CENTER) > 0),
+        { enabled: j } = c.Z.useExperiment({ location: 'RecentsButton' }, { autoTrackExposure: !1 }),
+        N = (0, a.e7)([s.Z], () => j && s.Z.getUnseenInviteCount() > 0),
+        C = (0, o.dQu)(o.TVs.modules.chat.INPUT_ICON_SIZE);
+    return (0, r.jsx)(f.k, {
         onOpen: t,
         onClose: n,
-        badgeState: { badgeForYou: N },
+        badgeState: { badgeForYou: E },
         popoutPosition: 'bottom',
         popoutAlign: 'right',
-        children: (e, t, n, l) =>
-            (0, i.jsxs)('div', {
-                ref: I,
-                className: x.recentsIcon,
+        children: (e, t, n, i) => {
+            var a, l;
+            return (0, r.jsxs)('div', {
+                ref: O,
+                className: b.recentsIcon,
                 children: [
-                    S &&
-                        (0, i.jsx)(p.Z, {
-                            inboxIconRef: I,
+                    j &&
+                        (0, r.jsx)(h.Z, {
+                            inboxIconRef: O,
                             recentsPopoutShown: t
                         }),
-                    (0, i.jsx)(u.U, {
+                    (0, r.jsx)(u.U, {
                         location: 'inbox-button',
-                        children: (0, i.jsx)(d.JO, {
-                            ...n,
-                            className: C,
-                            onClick: e,
-                            icon: r.xx7,
-                            iconSize: v ? b : void 0,
-                            'aria-label': f.intl.string(f.t.GSmTKC),
-                            tooltip: t ? null : f.intl.string(f.t.GSmTKC),
-                            selected: t,
-                            showBadge: N || T || l
-                        })
+                        children: (0, r.jsx)(
+                            d.JO,
+                            ((a = (function (e) {
+                                for (var t = 1; t < arguments.length; t++) {
+                                    var n = null != arguments[t] ? arguments[t] : {},
+                                        r = Object.keys(n);
+                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                        (r = r.concat(
+                                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                            })
+                                        )),
+                                        r.forEach(function (t) {
+                                            var r;
+                                            (r = n[t]),
+                                                t in e
+                                                    ? Object.defineProperty(e, t, {
+                                                          value: r,
+                                                          enumerable: !0,
+                                                          configurable: !0,
+                                                          writable: !0
+                                                      })
+                                                    : (e[t] = r);
+                                        });
+                                }
+                                return e;
+                            })({}, n)),
+                            (l = l =
+                                {
+                                    className: v,
+                                    onClick: e,
+                                    icon: o.xx7,
+                                    iconSize: x ? C : void 0,
+                                    'aria-label': _.NW.string(_.t.GSmTKC),
+                                    tooltip: t ? null : _.NW.string(_.t.GSmTKC),
+                                    selected: t,
+                                    showBadge: E || N || i
+                                }),
+                            Object.getOwnPropertyDescriptors
+                                ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(l))
+                                : (function (e, t) {
+                                      var n = Object.keys(e);
+                                      if (Object.getOwnPropertySymbols) {
+                                          var r = Object.getOwnPropertySymbols(e);
+                                          n.push.apply(n, r);
+                                      }
+                                      return n;
+                                  })(Object(l)).forEach(function (e) {
+                                      Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(l, e));
+                                  }),
+                            a)
+                        )
                     })
                 ]
-            })
+            });
+        }
     });
 }

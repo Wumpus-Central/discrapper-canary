@@ -1,57 +1,57 @@
-t.d(n, { Z: () => T }), t(47120);
-var l = t(200651),
-    i = t(192379),
-    r = t(120356),
-    a = t.n(r),
-    s = t(442837),
-    o = t(21260),
-    c = t(780384),
-    d = t(481060),
-    u = t(410030),
-    m = t(328977),
-    x = t(571728),
-    h = t(984370),
-    j = t(433355),
-    C = t(889711),
-    _ = t(384433),
-    f = t(388032),
-    b = t(557873);
-let v = (e) => [
+n.d(t, { Z: () => g }), n(47120);
+var r = n(200651),
+    l = n(192379),
+    i = n(120356),
+    a = n.n(i),
+    s = n(442837),
+    o = n(21260),
+    c = n(780384),
+    d = n(481060),
+    u = n(410030),
+    m = n(328977),
+    x = n(571728),
+    h = n(984370),
+    j = n(433355),
+    b = n(889711),
+    f = n(384433),
+    N = n(388032),
+    p = n(556926);
+let C = (e) => [
         {
-            id: _.e.ALL_MEMBERS,
-            label: f.intl.string(f.t.NOOm1d)
+            id: f.e.ALL_MEMBERS,
+            label: N.NW.string(N.t.NOOm1d)
         },
         {
-            id: _.e.PENDING,
-            label: e > 0 ? f.intl.formatToPlainString(f.t['Wo+zLy'], { count: e }) : f.intl.string(f.t['4eQVBA'])
+            id: f.e.PENDING,
+            label: e > 0 ? N.NW.formatToPlainString(N.t['Wo+zLy'], { count: e }) : N.NW.string(N.t['4eQVBA'])
         },
         {
-            id: _.e.REJECTED,
-            label: f.intl.string(f.t.bSZklZ)
+            id: f.e.REJECTED,
+            label: N.NW.string(N.t.bSZklZ)
         }
     ],
-    N = (e) => {
-        let { tabs: n, selectedTab: t, onTabSelect: i, onClose: r } = e;
-        return (0, l.jsx)(d.v2r, {
+    v = (e) => {
+        let { tabs: t, selectedTab: n, onTabSelect: l, onClose: i } = e;
+        return (0, r.jsx)(d.v2r, {
             navId: 'members-tabs-overflow-menu',
-            'aria-label': f.intl.string(f.t.riPnr6),
+            'aria-label': N.NW.string(N.t.riPnr6),
             hideScroller: !0,
-            onClose: r,
-            onSelect: r,
-            children: (0, l.jsx)(
+            onClose: i,
+            onSelect: i,
+            children: (0, r.jsx)(
                 d.kSQ,
                 {
-                    children: n.map((e) => {
-                        let { id: n, label: r } = e;
-                        return (0, l.jsx)(
+                    children: t.map((e) => {
+                        let { id: t, label: i } = e;
+                        return (0, r.jsx)(
                             d.sNh,
                             {
-                                id: n,
-                                label: r,
-                                icon: n === t ? d.owK : void 0,
-                                action: () => i(n)
+                                id: t,
+                                label: i,
+                                icon: t === n ? d.owK : void 0,
+                                action: () => l(t)
                             },
-                            n
+                            t
                         );
                     })
                 },
@@ -59,113 +59,155 @@ let v = (e) => [
             )
         });
     };
-function g(e) {
-    let { onTabSelect: n, tabs: t, selectedTab: r } = e,
+function _(e) {
+    let { onTabSelect: t, tabs: n, selectedTab: i } = e,
         s = (0, u.ZP)(),
         o = (0, c.wj)(s),
-        m = i.useMemo(
+        m = l.useMemo(
             () =>
                 null !=
-                t.find((e) => {
-                    let { id: n } = e;
-                    return n === r;
+                n.find((e) => {
+                    let { id: t } = e;
+                    return t === i;
                 }),
-            [r, t]
+            [i, n]
         ),
         x = m ? 'header-primary' : o ? 'text-muted' : 'header-primary',
         h = m ? d.TVs.colors.HEADER_PRIMARY : o ? d.TVs.colors.TEXT_MUTED : d.TVs.colors.HEADER_PRIMARY;
-    return (0, l.jsx)(d.yRy, {
+    return (0, r.jsx)(d.yRy, {
         renderPopout: (e) => {
-            let { closePopout: i } = e;
-            return (0, l.jsx)(N, {
-                selectedTab: r,
-                onClose: i,
-                tabs: t,
-                onTabSelect: n
+            let { closePopout: l } = e;
+            return (0, r.jsx)(v, {
+                selectedTab: i,
+                onClose: l,
+                tabs: n,
+                onTabSelect: t
             });
         },
         position: 'bottom',
         align: 'left',
-        children: (e, n) => {
-            let { isShown: t } = n;
-            return (0, l.jsxs)(d.njP.Item, {
-                ...e,
-                id: 'more',
-                color: 'text-muted',
-                className: a()(b.more, { [b.selected]: m }),
-                'aria-label': f.intl.string(f.t.UKOtz8),
-                children: [
-                    (0, l.jsx)(d.Text, {
-                        variant: 'text-md/medium',
-                        color: x,
-                        children: f.intl.string(f.t.UKOtz8)
+        children: (e, t) => {
+            var n, l;
+            let { isShown: i } = t;
+            return (0, r.jsxs)(
+                d.njP.Item,
+                ((n = (function (e) {
+                    for (var t = 1; t < arguments.length; t++) {
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            r = Object.keys(n);
+                        'function' == typeof Object.getOwnPropertySymbols &&
+                            (r = r.concat(
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                })
+                            )),
+                            r.forEach(function (t) {
+                                var r;
+                                (r = n[t]),
+                                    t in e
+                                        ? Object.defineProperty(e, t, {
+                                              value: r,
+                                              enumerable: !0,
+                                              configurable: !0,
+                                              writable: !0
+                                          })
+                                        : (e[t] = r);
+                            });
+                    }
+                    return e;
+                })({}, e)),
+                (l = l =
+                    {
+                        id: 'more',
+                        color: 'text-muted',
+                        className: a()(p.more, { [p.selected]: m }),
+                        'aria-label': N.NW.string(N.t.UKOtz8),
+                        children: [
+                            (0, r.jsx)(d.Text, {
+                                variant: 'text-md/medium',
+                                color: x,
+                                children: N.NW.string(N.t.UKOtz8)
+                            }),
+                            i
+                                ? (0, r.jsx)(d.u04, {
+                                      size: 'sm',
+                                      color: h
+                                  })
+                                : (0, r.jsx)(d.CJ0, {
+                                      size: 'sm',
+                                      color: h
+                                  })
+                        ]
                     }),
-                    t
-                        ? (0, l.jsx)(d.u04, {
-                              size: 'sm',
-                              color: h
-                          })
-                        : (0, l.jsx)(d.CJ0, {
-                              size: 'sm',
-                              color: h
-                          })
-                ]
-            });
+                Object.getOwnPropertyDescriptors
+                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
+                    : (function (e, t) {
+                          var n = Object.keys(e);
+                          if (Object.getOwnPropertySymbols) {
+                              var r = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, r);
+                          }
+                          return n;
+                      })(Object(l)).forEach(function (e) {
+                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
+                      }),
+                n)
+            );
         }
     });
 }
-function T(e) {
-    let { guildId: n, currentTab: t, onTabSelect: r } = e,
-        [a, c] = i.useState(0),
-        u = i.useRef(null),
-        N = i.useRef(a),
-        T = (0, x.A)({ guildId: n }),
-        p = v(null != T ? T : 0),
+function g(e) {
+    let { guildId: t, currentTab: n, onTabSelect: i } = e,
+        [a, c] = l.useState(0),
+        u = l.useRef(null),
+        v = l.useRef(a),
+        g = (0, x.A)({ guildId: t }),
+        T = C(null != g ? g : 0),
         {
-            lastVisibleIndex: I,
-            onItemLayout: E,
+            lastVisibleIndex: E,
+            onItemLayout: I,
             overflowItemsRef: S
         } = (0, o.zP)({
-            items: p,
+            items: T,
             itemGapPx: 16,
             maxLines: 1,
             containerWidth: a - 200
         }),
-        R = (0, s.e7)([j.ZP], () => null != j.ZP.getGuildSidebarState(n), [n]),
-        M = (0, m.L)({ guildId: n }),
-        A = i.useMemo(() => (t === _.e.ALL_MEMBERS ? R : null != M && null != M.user), [t, R, M]),
-        Z = i.useMemo(() => p.slice(0, I + 1), [I, p]),
-        k = i.useMemo(() => p.slice(I + 1), [I, p]),
-        P = i.useCallback(() => {
+        y = (0, s.e7)([j.ZP], () => null != j.ZP.getGuildSidebarState(t), [t]),
+        R = (0, m.L)({ guildId: t }),
+        P = l.useMemo(() => (n === f.e.ALL_MEMBERS ? y : null != R && null != R.user), [n, y, R]),
+        O = l.useMemo(() => T.slice(0, E + 1), [E, T]),
+        w = l.useMemo(() => T.slice(E + 1), [E, T]),
+        M = l.useCallback(() => {
             var e;
-            let n = null === (e = u.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
-            null != n && N.current !== n.width && (c(n.width), (N.current = n.width));
+            let t = null === (e = u.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
+            null != t && v.current !== t.width && (c(t.width), (v.current = t.width));
         }, []);
     return (
-        i.useEffect(() => {
-            let e = (0, C.pP)(P);
-            return (0, C.YP)(e, document.body), () => (0, C.UC)(e, document.body);
-        }, [P]),
-        i.useEffect(() => {
-            P();
-        }, [P, A]),
-        (0, l.jsxs)(l.Fragment, {
+        l.useEffect(() => {
+            let e = (0, b.pP)(M);
+            return (0, b.YP)(e, document.body), () => (0, b.UC)(e, document.body);
+        }, [M]),
+        l.useEffect(() => {
+            M();
+        }, [M, P]),
+        (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, l.jsx)(h.Z.Divider, { className: b.divider }),
-                (0, l.jsxs)('div', {
-                    className: b.tabsContainer,
+                (0, r.jsx)(h.Z.Divider, { className: p.divider }),
+                (0, r.jsxs)('div', {
+                    className: p.tabsContainer,
                     ref: u,
                     children: [
-                        (0, l.jsxs)('div', {
-                            className: b.measurements,
+                        (0, r.jsxs)('div', {
+                            className: p.measurements,
                             children: [
-                                p.map((e, n) =>
-                                    (0, l.jsx)(
+                                T.map((e, t) =>
+                                    (0, r.jsx)(
                                         o.AJ,
                                         {
-                                            index: n,
-                                            onItemLayout: E,
-                                            children: (0, l.jsx)(d.njP.Item, {
+                                            index: t,
+                                            onItemLayout: I,
+                                            children: (0, r.jsx)(d.njP.Item, {
                                                 id: e.id,
                                                 'aria-label': e.label,
                                                 children: e.label
@@ -174,24 +216,24 @@ function T(e) {
                                         e.id
                                     )
                                 ),
-                                (0, l.jsx)('div', {
+                                (0, r.jsx)('div', {
                                     ref: S,
-                                    children: (0, l.jsx)(g, {
-                                        tabs: k,
-                                        onTabSelect: r,
-                                        selectedTab: t
+                                    children: (0, r.jsx)(_, {
+                                        tabs: w,
+                                        onTabSelect: i,
+                                        selectedTab: n
                                     })
                                 })
                             ]
                         }),
-                        (0, l.jsxs)(d.njP, {
-                            'aria-label': f.intl.string(f.t.tcvVXF),
-                            selectedItem: t,
+                        (0, r.jsxs)(d.njP, {
+                            'aria-label': N.NW.string(N.t.tcvVXF),
+                            selectedItem: n,
                             type: 'top-pill',
-                            onItemSelect: r,
+                            onItemSelect: i,
                             children: [
-                                Z.map((e) =>
-                                    (0, l.jsx)(
+                                O.map((e) =>
+                                    (0, r.jsx)(
                                         d.njP.Item,
                                         {
                                             id: e.id,
@@ -201,11 +243,11 @@ function T(e) {
                                         e.id
                                     )
                                 ),
-                                0 !== k.length
-                                    ? (0, l.jsx)(g, {
-                                          tabs: k,
-                                          onTabSelect: r,
-                                          selectedTab: t
+                                0 !== w.length
+                                    ? (0, r.jsx)(_, {
+                                          tabs: w,
+                                          onTabSelect: i,
+                                          selectedTab: n
                                       })
                                     : null
                             ]

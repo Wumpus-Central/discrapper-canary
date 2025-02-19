@@ -1,15 +1,67 @@
-n.d(t, { Z: () => _ });
-var i = n(200651);
+n.d(t, { Z: () => g });
+var r = n(200651);
 n(192379);
-var r = n(392711),
-    a = n(481060),
-    s = n(111028),
-    o = n(5192),
-    l = n(349602);
-let u = 4,
-    c = 1,
-    d = 3,
-    f = [
+var i = n(392711),
+    o = n(481060),
+    a = n(111028),
+    s = n(5192),
+    l = n(827203);
+function c(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function u(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                c(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function d(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function f(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : d(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let p = 4,
+    _ = 1,
+    h = 3,
+    m = [
         [
             {
                 top: 15,
@@ -79,44 +131,46 @@ let u = 4,
             }
         ]
     ];
-function _(e) {
+function g(e) {
     let { users: t, channel: n } = e,
-        _ = t.length > u,
-        p = t.length - u + 1,
-        h = p >= 10 ? d : c;
-    return (0, i.jsx)('div', {
+        c = t.length > p,
+        d = t.length - p + 1,
+        g = d >= 10 ? h : _;
+    return (0, r.jsx)('div', {
         className: l.container,
-        children: f[(0, r.clamp)(t.length - 1, 0, f.length - 1)].map((e, r) => {
-            let u = t[r];
-            return null == u
+        children: m[(0, i.clamp)(t.length - 1, 0, m.length - 1)].map((e, i) => {
+            let p = t[i];
+            return null == p
                 ? null
-                : (0, i.jsx)(
+                : (0, r.jsx)(
                       'div',
                       {
                           className: l.circle,
                           style: e,
                           children:
-                              _ && r === h
-                                  ? (0, i.jsx)('div', {
+                              c && i === g
+                                  ? (0, r.jsx)('div', {
                                         className: l.overflowCount,
-                                        children: (0, i.jsx)(a.Text, {
+                                        children: (0, r.jsx)(o.Text, {
                                             variant: 'text-xxs/semibold',
                                             lineClamp: 1,
-                                            children: (0, i.jsx)(s.Z, { children: p > 99 ? '>99' : '+'.concat(p) })
+                                            children: (0, r.jsx)(a.Z, { children: d > 99 ? '>99' : '+'.concat(d) })
                                         })
                                     })
-                                  : (0, i.jsx)(a.ua7, {
-                                        text: o.ZP.getName(n.guild_id, n.id, u),
+                                  : (0, r.jsx)(o.ua7, {
+                                        text: s.ZP.getName(n.guild_id, n.id, p),
                                         children: (e) =>
-                                            (0, i.jsx)('img', {
-                                                ...e,
-                                                className: l.avatar,
-                                                src: u.getAvatarURL(n.guild_id, (0, a.pxk)(a.EFr.SIZE_80)),
-                                                alt: ''
-                                            })
+                                            (0, r.jsx)(
+                                                'img',
+                                                f(u({}, e), {
+                                                    className: l.avatar,
+                                                    src: p.getAvatarURL(n.guild_id, (0, o.pxk)(o.EFr.SIZE_80)),
+                                                    alt: ''
+                                                })
+                                            )
                                     })
                       },
-                      u.id
+                      p.id
                   );
         })
     });

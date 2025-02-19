@@ -1,69 +1,85 @@
 n.d(t, { Z: () => E });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var l = n(481060),
-    r = n(570140),
-    a = n(317770),
-    s = n(592125),
-    o = n(944486),
-    d = n(914010),
-    c = n(594174),
-    u = n(758119),
-    h = n(920644),
-    m = n(208381),
-    p = n(723359),
-    g = n(981631);
-function _(e, t) {
+var i = n(481060),
+    l = n(570140),
+    o = n(317770),
+    a = n(592125),
+    s = n(944486),
+    c = n(914010),
+    u = n(594174),
+    d = n(758119),
+    p = n(920644),
+    h = n(208381),
+    g = n(723359),
+    f = n(981631);
+function m(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function b(e, t) {
     var n;
     if (null == e) return;
-    let i = c.default.getCurrentUser();
-    (null === (n = s.Z.getChannel(t)) || void 0 === n ? void 0 : n.isNSFW()) && null != i && null == i.nsfwAllowed && (0, u.mN)(p.L0.NSFW_CHANNEL);
+    let r = u.default.getCurrentUser();
+    (null === (n = a.Z.getChannel(t)) || void 0 === n ? void 0 : n.isNSFW()) && null != r && null == r.nsfwAllowed && (0, d.mN)(g.L0.NSFW_CHANNEL);
 }
-class f extends a.Z {
+class _ extends o.Z {
     _initialize() {
-        r.Z.subscribe('CONNECTION_OPEN', this.handleConnectionOpen), r.Z.subscribe('CHANNEL_SELECT', this.handleChannelSelect), r.Z.subscribe('AGE_GATE_MODAL_OPEN', this.handleAgeGateModalOpen), r.Z.subscribe('AGE_GATE_MODAL_CLOSE', this.handleAgeGateModalClose), r.Z.subscribe('AGE_GATE_SUCCESS_MODAL_OPEN', this.handleAgeGateSuccess), r.Z.subscribe('AGE_GATE_FAILURE_MODAL_OPEN', this.handleAgeGateFailure);
+        l.Z.subscribe('CONNECTION_OPEN', this.handleConnectionOpen), l.Z.subscribe('CHANNEL_SELECT', this.handleChannelSelect), l.Z.subscribe('AGE_GATE_MODAL_OPEN', this.handleAgeGateModalOpen), l.Z.subscribe('AGE_GATE_MODAL_CLOSE', this.handleAgeGateModalClose), l.Z.subscribe('AGE_GATE_SUCCESS_MODAL_OPEN', this.handleAgeGateSuccess), l.Z.subscribe('AGE_GATE_FAILURE_MODAL_OPEN', this.handleAgeGateFailure);
     }
     _terminate() {
-        r.Z.unsubscribe('CONNECTION_OPEN', this.handleConnectionOpen), r.Z.unsubscribe('CHANNEL_SELECT', this.handleChannelSelect), r.Z.unsubscribe('AGE_GATE_MODAL_OPEN', this.handleAgeGateModalOpen), r.Z.unsubscribe('AGE_GATE_MODAL_CLOSE', this.handleAgeGateModalClose), r.Z.unsubscribe('AGE_GATE_SUCCESS_MODAL_OPEN', this.handleAgeGateSuccess), r.Z.unsubscribe('AGE_GATE_FAILURE_MODAL_OPEN', this.handleAgeGateFailure);
+        l.Z.unsubscribe('CONNECTION_OPEN', this.handleConnectionOpen), l.Z.unsubscribe('CHANNEL_SELECT', this.handleChannelSelect), l.Z.unsubscribe('AGE_GATE_MODAL_OPEN', this.handleAgeGateModalOpen), l.Z.unsubscribe('AGE_GATE_MODAL_CLOSE', this.handleAgeGateModalClose), l.Z.unsubscribe('AGE_GATE_SUCCESS_MODAL_OPEN', this.handleAgeGateSuccess), l.Z.unsubscribe('AGE_GATE_FAILURE_MODAL_OPEN', this.handleAgeGateFailure);
     }
     handleChannelSelect(e) {
         let { guildId: t, channelId: n } = e;
-        _(t, n);
+        b(t, n);
     }
     handleConnectionOpen() {
-        _(d.Z.getGuildId(), o.Z.getChannelId());
+        b(c.Z.getGuildId(), s.Z.getChannelId());
     }
     handleAgeGateModalOpen(e) {
         let { source: t } = e;
-        (0, l.ZDy)(
+        (0, i.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([n.e('63288'), n.e('1337'), n.e('73306')]).then(n.bind(n, 746882));
-                return (n) =>
-                    (0, i.jsx)(e, {
-                        source: t,
-                        ...n
-                    });
+                let { default: e } = await Promise.all([n.e('63288'), n.e('1337'), n.e('98536')]).then(n.bind(n, 746882));
+                return (n) => (0, r.jsx)(e, m({ source: t }, n));
             },
             {
-                modalKey: p.dG,
-                onCloseRequest: g.dG4
+                modalKey: g.dG,
+                onCloseRequest: f.dG4
             }
         );
     }
     handleAgeGateSuccess() {
-        (0, l.oav)(p.dG, (e) => (0, i.jsx)(m.Z, { ...e }));
+        (0, i.oav)(g.dG, (e) => (0, r.jsx)(h.Z, m({}, e)));
     }
     handleAgeGateFailure(e) {
         let { underageMessage: t } = e;
-        (0, l.oav)(p.dG, (e) =>
-            (0, i.jsx)(h.Z, {
-                underageMessage: t,
-                ...e
-            })
-        );
+        (0, i.oav)(g.dG, (e) => (0, r.jsx)(p.Z, m({ underageMessage: t }, e)));
     }
     handleAgeGateModalClose() {
-        (0, l.Mr3)(p.dG);
+        (0, i.Mr3)(g.dG);
     }
 }
-let E = new f();
+let E = new _();

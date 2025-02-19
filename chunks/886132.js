@@ -1,37 +1,89 @@
 n.d(t, {
-    $: () => a,
-    a: () => u
+    $: () => c,
+    a: () => p
 });
-var i = n(231053),
-    r = n(388032),
-    a = (function (e) {
-        return (e.GET_PREMIUM = 'GET_PREMIUM'), (e.JOIN_GUILD = 'JOIN_GUILD'), (e.UNAVAILABLE = 'UNAVAILABLE'), e;
-    })({});
-let s = (e) => {
-        let { isPremium: t, hasJoinedEmojiSourceGuild: n, isUnusableRoleSubscriptionEmoji: i, emojiComesFromCurrentGuild: r, isDiscoverable: a } = e,
-            s = 'Custom Emoji Popout';
-        return t && !n && a ? (s = 'Custom Emoji Popout (Cross-Server)') : t || !n || i ? t || n || (s = a ? 'Custom Emoji Popout (Upsell Not-Joined Cross-Server)' : 'Custom Emoji Popout (Soft Upsell)') : (s = r ? 'Custom Emoji Popout (Upsell Joined Current-Server)' : 'Custom Emoji Popout (Upsell Joined Cross-Server)'), s;
+var r = n(231053),
+    i = n(388032);
+function o(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function a(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                o(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function s(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function l(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : s(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+var c = (function (e) {
+    return (e.GET_PREMIUM = 'GET_PREMIUM'), (e.JOIN_GUILD = 'JOIN_GUILD'), (e.UNAVAILABLE = 'UNAVAILABLE'), e;
+})({});
+let u = (e) => {
+        let { isPremium: t, hasJoinedEmojiSourceGuild: n, isUnusableRoleSubscriptionEmoji: r, emojiComesFromCurrentGuild: i, isDiscoverable: o } = e,
+            a = 'Custom Emoji Popout';
+        return t && !n && o ? (a = 'Custom Emoji Popout (Cross-Server)') : t || !n || r ? t || n || (a = o ? 'Custom Emoji Popout (Upsell Not-Joined Cross-Server)' : 'Custom Emoji Popout (Soft Upsell)') : (a = i ? 'Custom Emoji Popout (Upsell Joined Current-Server)' : 'Custom Emoji Popout (Upsell Joined Cross-Server)'), a;
     },
-    o = (e) => {
-        let { sourceType: t, expressionSourceApplication: n, isPremium: a, hasJoinedEmojiSourceGuild: s, isUnusableRoleSubscriptionEmoji: o, isDiscoverable: l, emojiComesFromCurrentGuild: u, userIsRoleSubscriber: c, isRoleSubscriptionEmoji: d, shouldHideRoleSubscriptionCTA: f, onOpenPremiumSettings: _ } = e,
-            p = null;
-        return t === i.w6.APPLICATION && null != n ? r.intl.formatToPlainString(r.t.uERlTU, { appName: n.name }) : a ? (s ? (d ? (f && o ? r.intl.string(r.t.xFb68v) : o ? (c ? r.intl.string(r.t.vLklfH) : r.intl.string(r.t['g8i/bW'])) : r.intl.string(r.t.Eoynp6)) : u ? r.intl.string(r.t.hU4kIS) : r.intl.string(r.t.GM0xaW)) : l ? r.intl.string(r.t.xE9WGh) : r.intl.string(r.t['0LMpW1'])) : s ? (f && o ? r.intl.string(r.t.xFb68v) : o ? (c ? r.intl.string(r.t.vLklfH) : r.intl.string(r.t['g8i/bW'])) : u ? r.intl.string(r.t.ICPhqa) : r.intl.string(r.t.jQy3aG)) : l ? r.intl.string(r.t.FJ6Z09) : r.intl.format(r.t.U6vLcH, { openPremiumSettings: _ });
+    d = (e) => {
+        let { sourceType: t, expressionSourceApplication: n, isPremium: o, hasJoinedEmojiSourceGuild: a, isUnusableRoleSubscriptionEmoji: s, isDiscoverable: l, emojiComesFromCurrentGuild: c, userIsRoleSubscriber: u, isRoleSubscriptionEmoji: d, shouldHideRoleSubscriptionCTA: f, onOpenPremiumSettings: p } = e,
+            _ = null;
+        return t === r.w6.APPLICATION && null != n ? i.NW.formatToPlainString(i.t.uERlTU, { appName: n.name }) : o ? (a ? (d ? (f && s ? i.NW.string(i.t.xFb68v) : s ? (u ? i.NW.string(i.t.vLklfH) : i.NW.string(i.t['g8i/bW'])) : i.NW.string(i.t.Eoynp6)) : c ? i.NW.string(i.t.hU4kIS) : i.NW.string(i.t.GM0xaW)) : l ? i.NW.string(i.t.xE9WGh) : i.NW.string(i.t['0LMpW1'])) : a ? (f && s ? i.NW.string(i.t.xFb68v) : s ? (u ? i.NW.string(i.t.vLklfH) : i.NW.string(i.t['g8i/bW'])) : c ? i.NW.string(i.t.ICPhqa) : i.NW.string(i.t.jQy3aG)) : l ? i.NW.string(i.t.FJ6Z09) : i.NW.format(i.t.U6vLcH, { openPremiumSettings: p });
     },
-    l = (e) => {
-        let { isPremium: t, hasJoinedEmojiSourceGuild: n, isUnusableRoleSubscriptionEmoji: i, isDiscoverable: a } = e,
-            s = n && !i,
-            o = !n && a,
-            l = !t && (s || o);
-        return t && o
+    f = (e) => {
+        let { isPremium: t, hasJoinedEmojiSourceGuild: n, isUnusableRoleSubscriptionEmoji: r, isDiscoverable: o } = e,
+            a = n && !r,
+            s = !n && o,
+            l = !t && (a || s);
+        return t && s
             ? {
                   type: 'JOIN_GUILD',
-                  text: r.intl.string(r.t.riu2R0),
+                  text: i.NW.string(i.t.riu2R0),
                   description: null
               }
             : l
               ? {
                     type: 'GET_PREMIUM',
-                    text: r.intl.string(r.t['gl/XHB']),
+                    text: i.NW.string(i.t['gl/XHB']),
                     description: null
                 }
               : {
@@ -40,12 +92,11 @@ let s = (e) => {
                     description: null
                 };
     },
-    u = (e) => {
-        let t = o(e),
-            n = s(e);
-        return {
-            ...l(e),
+    p = (e) => {
+        let t = d(e),
+            n = u(e);
+        return l(a({}, f(e)), {
             emojiDescription: t,
             analyticsType: n
-        };
+        });
     };

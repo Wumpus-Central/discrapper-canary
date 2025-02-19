@@ -1,26 +1,27 @@
-n.d(t, {
-    D: () => f,
-    Z: () => g
-});
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    s = n.n(i),
-    l = n(481060),
-    a = n(388905),
-    c = n(297700),
-    d = n(875307),
-    u = n(837748),
-    o = n(58346),
-    C = n(388032),
-    m = n(951035),
-    L = n(483938);
-function h() {
-    return (0, r.jsx)(c.Z, {
+r.d(t, {
+    D: () => x,
+    Z: () => f
+}),
+    r(266796);
+var s = r(200651);
+r(192379);
+var n = r(120356),
+    a = r.n(n),
+    i = r(481060),
+    l = r(388905),
+    c = r(297700),
+    d = r(875307),
+    u = r(837748),
+    o = r(58346),
+    C = r(388032),
+    m = r(300757),
+    N = r(455812);
+function L() {
+    return (0, s.jsx)(c.Z, {
         className: m.verifiedIcon,
-        children: (0, r.jsx)('div', {
+        children: (0, s.jsx)('div', {
             className: m.verifiedCheckContainer,
-            children: (0, r.jsx)(l.kmB, {
+            children: (0, s.jsx)(i.kmB, {
                 size: 'xs',
                 color: 'currentColor',
                 className: m.verifiedCheck
@@ -28,91 +29,91 @@ function h() {
         })
     });
 }
-function x(e) {
-    let { verified: t, text: n } = e;
+function h(e) {
+    let { verified: t, text: r } = e;
     return t
-        ? (0, r.jsxs)('div', {
+        ? (0, s.jsxs)('div', {
               className: m.verifiedNameContainer,
-              children: [(0, r.jsx)(h, {}), n]
+              children: [(0, s.jsx)(L, {}), r]
           })
-        : (0, r.jsx)(r.Fragment, { children: n });
+        : (0, s.jsx)(s.Fragment, { children: r });
 }
-function f(e) {
-    let { className: t, count: n, creator: i, verifiedName: l } = e;
-    return (0, r.jsx)('div', {
-        className: s()(m.usagePill, t, m.userText),
+function x(e) {
+    let { className: t, count: r, creator: n, verifiedName: i } = e;
+    return (0, s.jsx)('div', {
+        className: a()(m.usagePill, t, m.userText),
         children:
-            null != i || null != l
-                ? C.intl.format(C.t.TTcKAw, {
-                      usageCount: n,
-                      creator: null != l ? l : i,
+            null != n || null != i
+                ? C.NW.format(C.t.TTcKAw, {
+                      usageCount: r,
+                      creator: null != i ? i : n,
                       creatorHook: (e, t) =>
-                          (0, r.jsx)(
-                              x,
+                          (0, s.jsx)(
+                              h,
                               {
                                   text: e,
-                                  verified: null != l
+                                  verified: null != i
                               },
                               t
                           )
                   })
-                : C.intl.format(C.t.cGXXHB, { usageCount: n })
+                : C.NW.format(C.t.cGXXHB, { usageCount: r })
     });
 }
-function g(e) {
+function f(e) {
     var t;
-    let { guildTemplate: n, error: i, tall: c, pillClassName: h } = e;
-    if (null != i && '' !== i)
-        return (0, r.jsxs)('div', {
+    let { guildTemplate: r, error: n, tall: c, pillClassName: L } = e;
+    if (null != n && '' !== n)
+        return (0, s.jsxs)('div', {
             className: m.container,
-            children: [(0, r.jsx)(a.Dx, { children: C.intl.string(C.t.mDFGFh) }), (0, r.jsx)(a.DK, { children: i })]
+            children: [(0, s.jsx)(l.Dx, { children: C.NW.string(C.t.mDFGFh) }), (0, s.jsx)(l.DK, { children: n })]
         });
-    if (n.state === o.Rj.RESOLVING)
-        return (0, r.jsx)('div', {
+    if (r.state === o.Rj.RESOLVING)
+        return (0, s.jsx)('div', {
             className: m.container,
-            children: (0, r.jsx)(l.$jN, {})
+            children: (0, s.jsx)(i.$jN, {})
         });
-    let x = (0, u.Z)(n.code).header;
+    let h = (0, u.Z)(r.code).header;
     return c
-        ? (0, r.jsxs)('div', {
+        ? (0, s.jsxs)('div', {
               className: m.container,
               children: [
-                  (0, r.jsx)(a.Dx, {
+                  (0, s.jsx)(l.Dx, {
                       className: m.title,
-                      children: x
+                      children: h
                   }),
-                  (0, r.jsx)(a.DK, {
-                      className: s()(m.subtitle, L.__invalid_marginTop2),
-                      children: C.intl.string(C.t['h+vyOz'])
+                  (0, s.jsx)(l.DK, {
+                      className: a()(m.subtitle, N.__invalid_marginTop2),
+                      children: C.NW.string(C.t['h+vyOz'])
                   }),
-                  (0, r.jsx)(a.Dx, {
-                      className: s()(m.title, m.userText),
-                      children: n.name
+                  (0, s.jsx)(l.Dx, {
+                      className: a()(m.title, m.userText),
+                      children: r.name
                   }),
-                  null != n.description &&
-                      '' !== n.description &&
-                      (0, r.jsx)(a.DK, {
-                          className: s()(m.subtitle, m.userText, L.marginTop8),
-                          children: n.description
+                  null != r.description &&
+                      '' !== r.description &&
+                      (0, s.jsx)(l.DK, {
+                          className: a()(m.subtitle, m.userText, N.marginTop8),
+                          children: r.description
                       }),
-                  (0, r.jsx)(f, {
-                      className: h,
-                      count: null !== (t = n.usageCount) && void 0 !== t ? t : 0,
-                      creator: n.creator.username,
-                      verifiedName: (0, d.R)(n.code)
+                  (0, s.jsx)(x, {
+                      className: L,
+                      count: null !== (t = r.usageCount) && void 0 !== t ? t : 0,
+                      creator: r.creator.username,
+                      verifiedName: (0, d.R)(r.code)
                   })
               ]
           })
-        : (0, r.jsxs)('div', {
+        : (0, s.jsxs)('div', {
               className: m.container,
               children: [
-                  (0, r.jsx)(a.Dx, {
+                  (0, s.jsx)(l.Dx, {
                       className: m.title,
-                      children: x
+                      children: h
                   }),
-                  (0, r.jsx)(a.DK, {
-                      className: s()(m.subtitle, m.userText),
-                      children: n.name
+                  (0, s.jsx)(l.DK, {
+                      className: a()(m.subtitle, m.userText),
+                      children: r.name
                   })
               ]
           });

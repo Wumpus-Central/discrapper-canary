@@ -1,104 +1,141 @@
-n.d(e, { Z: () => p }), n(47120);
-var l = n(200651),
-    i = n(192379),
-    c = n(374470),
-    s = n(442837),
-    a = n(481060),
-    r = n(295866),
-    o = n(398327),
+n.d(t, { Z: () => E }), n(47120);
+var r = n(200651),
+    c = n(192379),
+    l = n(374470),
+    i = n(442837),
+    s = n(481060),
+    o = n(295866),
+    a = n(398327),
     u = n(63063),
     d = n(601993),
-    h = n(981631),
-    E = n(388032);
-function p(t) {
-    let { text: e = '', target: n } = t,
-        p = (0, s.e7)([o.Z], () => o.Z.isEnabled()),
-        f = (0, s.e7)([o.Z], () => o.Z.hasLearnedWord(e), [e]),
-        k = i.useRef({
-            ...t,
-            spellcheckEnabled: p
-        });
-    k.current = {
-        ...t,
-        spellcheckEnabled: p
-    };
-    let b = i.useRef(!1),
-        [x, C] = i.useState(!1),
-        [L, S] = i.useState([]),
-        N = i.useCallback(() => {
-            let { spellcheckEnabled: t, text: e, onHeightUpdate: n } = k.current;
-            t &&
+    p = n(981631),
+    b = n(388032);
+function f(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function h(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function E(e) {
+    let { text: t = '', target: n } = e,
+        E = (0, i.e7)([a.Z], () => a.Z.isEnabled()),
+        O = (0, i.e7)([a.Z], () => a.Z.hasLearnedWord(t), [t]),
+        j = c.useRef(h(f({}, e), { spellcheckEnabled: E }));
+    j.current = h(f({}, e), { spellcheckEnabled: E });
+    let y = c.useRef(!1),
+        [k, N] = c.useState(!1),
+        [g, m] = c.useState([]),
+        S = c.useCallback(() => {
+            let { spellcheckEnabled: e, text: t, onHeightUpdate: n } = j.current;
+            e &&
                 (0, d.Gb)() &&
-                Promise.all([(0, d.f5)(e, !0), (0, d.WA)(e, !0)]).then((t) => {
-                    let [e, l] = t;
-                    b.current && (C(e), S(l), n());
+                Promise.all([(0, d.f5)(t, !0), (0, d.WA)(t, !0)]).then((e) => {
+                    let [t, r] = e;
+                    y.current && (N(t), m(r), n());
                 });
         }, []),
-        m = i.useCallback(() => {
-            if ((0, c.k)(n, HTMLInputElement) || (0, c.k)(n, HTMLTextAreaElement)) {
-                let { selectionStart: t, selectionEnd: e, value: l } = n;
-                (n.value = ''), (n.value = l), 'email' !== n.type && ((n.selectionStart = t), (n.selectionEnd = e));
+        x = c.useCallback(() => {
+            if ((0, l.k)(n, HTMLInputElement) || (0, l.k)(n, HTMLTextAreaElement)) {
+                let { selectionStart: e, selectionEnd: t, value: r } = n;
+                (n.value = ''), (n.value = r), 'email' !== n.type && ((n.selectionStart = e), (n.selectionEnd = t));
             }
         }, [n]);
-    return (i.useEffect(() => {
-        let t = (0, d.RD)(N);
+    return (c.useEffect(() => {
+        let e = (0, d.RD)(S);
         return (
-            (b.current = !0),
+            (y.current = !0),
             () => {
-                (b.current = !1), t();
+                (y.current = !1), e();
             }
         );
-    }, [N]),
-    i.useEffect(() => {
-        N();
-    }, [e, p, N]),
+    }, [S]),
+    c.useEffect(() => {
+        S();
+    }, [t, E, S]),
     (0, d.Gb)())
         ? [
-              L.map((t, e) =>
-                  (0, l.jsx)(
-                      a.sNh,
+              g.map((e, t) =>
+                  (0, r.jsx)(
+                      s.sNh,
                       {
-                          id: 'correction-'.concat(e),
-                          label: t,
+                          id: 'correction-'.concat(t),
+                          label: e,
                           action: () => {
-                              (0, d.Rs)(t), n.focus();
+                              (0, d.Rs)(e), n.focus();
                           }
                       },
-                      'correction-'.concat(e)
+                      'correction-'.concat(t)
                   )
               ),
-              (0, l.jsxs)(l.Fragment, {
+              (0, r.jsxs)(r.Fragment, {
                   children: [
-                      x
-                          ? (0, l.jsx)(a.sNh, {
+                      k
+                          ? (0, r.jsx)(s.sNh, {
                                 id: 'add-to-dictionary',
-                                label: E.intl.string(E.t.HJmG1N),
+                                label: b.NW.string(b.t.HJmG1N),
                                 action: () => {
-                                    (0, r.D0)(e), m();
+                                    (0, o.D0)(t), x();
                                 }
                             })
                           : null,
-                      f &&
-                          (0, l.jsx)(a.sNh, {
+                      O &&
+                          (0, r.jsx)(s.sNh, {
                               id: 'remove-from-dictionary',
-                              label: E.intl.string(E.t.xXqIX1),
+                              label: b.NW.string(b.t.xXqIX1),
                               action: () => {
-                                  (0, r.lE)(e), m();
+                                  (0, o.lE)(t), x();
                               }
                           }),
-                      (0, l.jsx)(a.S89, {
+                      (0, r.jsx)(s.S89, {
                           id: 'spellcheck',
-                          label: E.intl.string(E.t.TKkotb),
-                          checked: p,
+                          label: b.NW.string(b.t.TKkotb),
+                          checked: E,
                           action: () => {
-                              (0, r.kY)(), m();
+                              (0, o.kY)(), x();
                           }
                       }),
-                      p
-                          ? (0, l.jsx)(a.sNh, {
+                      E
+                          ? (0, r.jsx)(s.sNh, {
                                 id: 'languages',
-                                label: E.intl.string(E.t.OlOHDA),
-                                action: () => window.open(u.Z.getArticleURL(h.BhN.SPELLCHECK))
+                                label: b.NW.string(b.t.OlOHDA),
+                                action: () => window.open(u.Z.getArticleURL(p.BhN.SPELLCHECK))
                             })
                           : null
                   ]

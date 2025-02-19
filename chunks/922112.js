@@ -1,153 +1,200 @@
-n.d(t, { Z: () => p });
-var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    s = n.n(l),
-    a = n(481060),
+n.d(t, { Z: () => x }), n(266796);
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(481060),
     o = n(603211),
     c = n(734893),
     d = n(592125),
     u = n(768581),
     m = n(8426),
-    h = n(969632),
+    p = n(969632),
     g = n(388032),
-    x = n(73806);
-let p = function (e) {
-    let { guildId: t, resourceChannel: l, index: p, onDragComplete: _, onDragStart: C, onDragReset: f } = e,
-        { title: v, channelId: N, description: j } = l,
-        I = d.Z.getChannel(N),
-        E = null;
-    (null != I && (0, c.k3)(I)) || (E = g.intl.string(g.t.kTdL8f));
-    let b = null == j || 0 === j.length,
-        T = u.ZP.getResourceChannelIconURL({
-            channelId: l.channelId,
-            icon: l.icon
+    h = n(339945);
+function f(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function b(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let x = function (e) {
+    let { guildId: t, resourceChannel: s, index: x, onDragComplete: j, onDragStart: N, onDragReset: v } = e,
+        { title: _, channelId: O, description: y } = s,
+        C = d.Z.getChannel(O),
+        I = null;
+    (null != C && (0, c.k3)(C)) || (I = g.NW.string(g.t.kTdL8f));
+    let E = null == y || 0 === y.length,
+        S = u.ZP.getResourceChannelIconURL({
+            channelId: s.channelId,
+            icon: s.icon
         }),
         {
-            drag: S,
-            dragSourcePosition: R,
-            drop: Z,
-            setIsDraggable: y
+            drag: T,
+            dragSourcePosition: P,
+            drop: w,
+            setIsDraggable: R
         } = (0, o.Z)({
             type: 'RESOURCE_CHANNEL',
-            optionId: l.channelId,
-            index: p,
-            onDragStart: C,
-            onDragComplete: _,
-            onDragReset: f
+            optionId: s.channelId,
+            index: x,
+            onDragStart: N,
+            onDragComplete: j,
+            onDragReset: v
         }),
-        A = r.useCallback(
+        D = i.useCallback(
             (e) => {
-                (0, m.XG)(l.channelId, e);
+                (0, m.XG)(s.channelId, e);
             },
-            [l.channelId]
+            [s.channelId]
         ),
-        L = r.useCallback(
+        Z = i.useCallback(
             (e, n) => {
-                let i = h.Z.getSettings();
-                null != i &&
-                    ((0, m.XG)(l.channelId, e),
-                    (0, m.oo)(t, i).then(() => {
+                let r = p.Z.getSettings();
+                null != r &&
+                    ((0, m.XG)(s.channelId, e),
+                    (0, m.oo)(t, r).then(() => {
                         (0, m.mM)(t, e.channelId, n);
                     }));
             },
-            [t, l]
+            [t, s]
         ),
-        D = r.useCallback(
+        A = i.useCallback(
             () =>
-                (0, a.ZDy)(async () => {
+                (0, l.ZDy)(async () => {
                     let { default: e } = await n.e('84725').then(n.bind(n, 462499));
                     return (n) =>
-                        (0, i.jsx)(e, {
-                            ...n,
-                            guildId: t,
-                            resourceChannel: l,
-                            onSave: A,
-                            onDelete: () => (0, m.Hz)(l.channelId),
-                            onIconUpload: L
-                        });
+                        (0, r.jsx)(
+                            e,
+                            b(f({}, n), {
+                                guildId: t,
+                                resourceChannel: s,
+                                onSave: D,
+                                onDelete: () => (0, m.Hz)(s.channelId),
+                                onIconUpload: Z
+                            })
+                        );
                 }),
-            [t, l, A, L]
+            [t, s, D, Z]
         );
-    return null == I
+    return null == C
         ? null
-        : (0, i.jsxs)('div', {
-              className: s()(x.resourceChannelContainer),
+        : (0, r.jsxs)('div', {
+              className: a()(h.resourceChannelContainer),
               children: [
-                  (0, i.jsxs)('div', {
-                      className: s()(x.resourceChannel, {
-                          [x.dropIndicatorBefore]: null != R && p < R,
-                          [x.dropIndicatorAfter]: null != R && p > R,
-                          [x.resourceChannelError]: null != E
+                  (0, r.jsxs)('div', {
+                      className: a()(h.resourceChannel, {
+                          [h.dropIndicatorBefore]: null != P && x < P,
+                          [h.dropIndicatorAfter]: null != P && x > P,
+                          [h.resourceChannelError]: null != I
                       }),
-                      ref: (e) => S(Z(e)),
+                      ref: (e) => T(w(e)),
                       children: [
-                          (0, i.jsx)('div', {
-                              className: x.dragContainer,
-                              onMouseEnter: () => y(!0),
-                              onMouseLeave: () => y(!1),
-                              children: (0, i.jsx)(a.Vni, {
+                          (0, r.jsx)('div', {
+                              className: h.dragContainer,
+                              onMouseEnter: () => R(!0),
+                              onMouseLeave: () => R(!1),
+                              children: (0, r.jsx)(l.Vni, {
                                   size: 'xs',
                                   color: 'currentColor',
-                                  className: x.dragIcon
+                                  className: h.dragIcon
                               })
                           }),
-                          null != T &&
-                              (0, i.jsx)('div', {
-                                  className: x.iconWrapper,
-                                  children: (0, i.jsx)('img', {
-                                      src: T,
-                                      className: x.icon,
+                          null != S &&
+                              (0, r.jsx)('div', {
+                                  className: h.iconWrapper,
+                                  children: (0, r.jsx)('img', {
+                                      src: S,
+                                      className: h.icon,
                                       width: 32,
                                       height: 32,
                                       alt: '',
                                       'aria-hidden': !0
                                   })
                               }),
-                          (0, i.jsxs)('div', {
-                              className: x.resourceChannelContent,
+                          (0, r.jsxs)('div', {
+                              className: h.resourceChannelContent,
                               children: [
-                                  (0, i.jsx)(a.Text, {
-                                      className: x.resourceChannelTitle,
+                                  (0, r.jsx)(l.Text, {
+                                      className: h.resourceChannelTitle,
                                       variant: 'text-md/semibold',
                                       color: 'header-primary',
-                                      children: v
+                                      children: _
                                   }),
-                                  !b &&
-                                      (0, i.jsx)(a.Text, {
-                                          className: x.resourceChannelDescription,
+                                  !E &&
+                                      (0, r.jsx)(l.Text, {
+                                          className: h.resourceChannelDescription,
                                           variant: 'text-xs/medium',
                                           color: 'text-muted',
                                           lineClamp: 1,
-                                          children: j
+                                          children: y
                                       })
                               ]
                           }),
-                          (0, i.jsx)(a.ua7, {
-                              text: g.intl.string(g.t.bt75u7),
+                          (0, r.jsx)(l.ua7, {
+                              text: g.NW.string(g.t.bt75u7),
                               children: (e) =>
-                                  (0, i.jsxs)(a.zxk, {
-                                      ...e,
-                                      className: x.resourceChannelEditButton,
-                                      innerClassName: x.resourceChannelEditButtonInner,
-                                      size: a.zxk.Sizes.MIN,
-                                      onClick: D,
-                                      children: [
-                                          (0, i.jsx)(a.vdY, {
-                                              size: 'md',
-                                              color: 'currentColor'
-                                          }),
-                                          (0, i.jsx)(a.nn4, { children: g.intl.string(g.t.bt75u7) })
-                                      ]
-                                  })
+                                  (0, r.jsxs)(
+                                      l.zxk,
+                                      b(f({}, e), {
+                                          className: h.resourceChannelEditButton,
+                                          innerClassName: h.resourceChannelEditButtonInner,
+                                          size: l.zxk.Sizes.MIN,
+                                          onClick: A,
+                                          children: [
+                                              (0, r.jsx)(l.vdY, {
+                                                  size: 'md',
+                                                  color: 'currentColor'
+                                              }),
+                                              (0, r.jsx)(l.nn4, { children: g.NW.string(g.t.bt75u7) })
+                                          ]
+                                      })
+                                  )
                           })
                       ]
                   }),
-                  null != E &&
-                      (0, i.jsx)(a.Text, {
+                  null != I &&
+                      (0, r.jsx)(l.Text, {
                           variant: 'text-xs/medium',
                           color: 'text-danger',
-                          children: E
+                          children: I
                       })
               ]
           });

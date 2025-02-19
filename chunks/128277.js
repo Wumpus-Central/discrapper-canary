@@ -1,73 +1,125 @@
-n.d(t, { Z: () => R });
-var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(481060),
+n.d(t, { Z: () => D }), n(301563);
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(481060),
     l = n(503438),
-    u = n(100527),
-    c = n(906732),
+    c = n(100527),
+    u = n(906732),
     d = n(379357),
     f = n(358696),
-    _ = n(649700),
-    p = n(952164),
+    p = n(649700),
+    _ = n(952164),
     h = n(960870),
     m = n(139793),
     g = n(994746),
     E = n(652853),
     v = n(448980),
-    y = n(336383),
-    I = n(194811),
-    T = n(373826),
-    b = n(262210),
-    S = n(666984),
-    A = n(670451),
+    b = n(336383),
+    y = n(194811),
+    O = n(373826),
+    S = n(262210),
+    I = n(666984),
+    T = n(670451),
     N = n(228168),
-    C = n(537208);
+    A = n(481736);
+function C(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
 function R(e) {
-    let { user: t, currentUser: n, activity: a, className: R, onClose: O } = e,
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                C(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function P(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function w(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : P(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function D(e) {
+    let { user: t, currentUser: n, activity: o, className: C, onClose: P } = e,
         { profileType: D } = (0, E.z)(),
-        L = { [C.fullSize]: D === N.y0.FULL_SIZE },
-        x = (0, _.Z)({
-            activity: a,
+        x = { [A.fullSize]: D === N.y0.FULL_SIZE },
+        L = (0, p.Z)({
+            activity: o,
             user: t
         }),
-        P = (0, g.Z)(a),
-        { largeImage: w } = (0, d.FO)(a),
-        { analyticsLocations: M } = (0, c.ZP)(u.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
-        k = (0, h.Z)({
+        M = (0, g.Z)(o),
+        { largeImage: k } = (0, d.FO)(o),
+        { analyticsLocations: j } = (0, u.ZP)(c.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
+        U = (0, h.Z)({
             display: 'live',
             user: t,
-            activity: a,
-            entry: x,
-            analyticsLocations: M
+            activity: o,
+            entry: L,
+            analyticsLocations: j
         }),
-        U = (0, m.Z)({
+        G = (0, m.Z)({
             userId: t.id,
-            onAction: k
+            onAction: U
         });
-    if (!(0, l.Z)(a)) return null;
-    let G = () => {
+    if (!(0, l.Z)(o)) return null;
+    let B = () => {
             var e, n;
-            let l = null !== (n = null === (e = a.state) || void 0 === e ? void 0 : e.split(';')) && void 0 !== n ? n : [];
+            let l = null !== (n = null === (e = o.state) || void 0 === e ? void 0 : e.split(';')) && void 0 !== n ? n : [];
             return 0 === l.length
                 ? null
-                : null == a.sync_id
-                  ? (0, i.jsx)(T.Z, {
+                : null == o.sync_id
+                  ? (0, r.jsx)(O.Z, {
                         variant: 'text-xs/normal',
                         text: l.join(', ')
                     })
-                  : (0, i.jsx)(T.Z, {
+                  : (0, r.jsx)(O.Z, {
                         variant: 'text-xs/normal',
                         text: l.map((e, n) =>
-                            (0, i.jsxs)(
-                                r.Fragment,
+                            (0, r.jsxs)(
+                                i.Fragment,
                                 {
                                     children: [
-                                        (0, i.jsx)(o.P3F, {
-                                            className: s()(C.clickableText, C.inline),
+                                        (0, r.jsx)(s.P3F, {
+                                            className: a()(A.clickableText, A.inline),
                                             onClick: (e) => {
-                                                e.stopPropagation(), k({ action: 'OPEN_SPOTIFY_ARTIST' }), (0, p.d$)(a, t.id, n);
+                                                e.stopPropagation(), U({ action: 'OPEN_SPOTIFY_ARTIST' }), (0, _.d$)(o, t.id, n);
                                             },
                                             children: e
                                         }),
@@ -79,87 +131,89 @@ function R(e) {
                         )
                     });
         },
-        B = () => {
-            let { timestamps: e } = a;
+        Z = () => {
+            let { timestamps: e } = o;
             if (null == e) return null;
             let { start: t, end: n } = e;
             return null == t || null == n
                 ? null
-                : (0, i.jsx)(b.Z, {
+                : (0, r.jsx)(S.Z, {
                       start: t,
                       end: n
                   });
         },
-        Z = () =>
+        F = () =>
             t.id === n.id
                 ? null
-                : (0, i.jsx)('div', {
-                      className: s()(C.actions, L),
-                      children: (0, i.jsx)(S.Z, {
+                : (0, r.jsx)('div', {
+                      className: a()(A.actions, x),
+                      children: (0, r.jsx)(I.Z, {
                           user: t,
-                          activity: a,
-                          onAction: k
+                          activity: o,
+                          onAction: U
                       })
                   });
-    return (0, i.jsx)(c.Gt, {
-        value: M,
-        children: (0, i.jsxs)(y.Z, {
-            ref: U,
-            className: s()(C.card, R),
-            onAction: k,
-            onClose: O,
+    return (0, r.jsx)(u.Gt, {
+        value: j,
+        children: (0, r.jsxs)(b.Z, {
+            ref: G,
+            className: a()(A.card, C),
+            onAction: U,
+            onClose: P,
             children: [
-                (0, i.jsx)(I.Z, {
-                    ...P,
-                    contextMenu: (0, i.jsx)(A.Z, {
-                        display: 'live',
-                        user: t,
-                        activity: a,
-                        entry: x,
-                        onClose: O
+                (0, r.jsx)(
+                    y.Z,
+                    w(R({}, M), {
+                        contextMenu: (0, r.jsx)(T.Z, {
+                            display: 'live',
+                            user: t,
+                            activity: o,
+                            entry: L,
+                            onClose: P
+                        })
                     })
-                }),
-                (0, i.jsx)('div', {
-                    className: C.body,
-                    children: (0, i.jsxs)('div', {
-                        className: s()(C.content, L),
+                ),
+                (0, r.jsx)('div', {
+                    className: A.body,
+                    children: (0, r.jsxs)('div', {
+                        className: a()(A.content, x),
                         children: [
-                            (0, i.jsx)(f.E, {
-                                image: w,
+                            (0, r.jsx)(f.E, {
+                                image: k,
                                 size: f.J.SIZE_60,
-                                className: C.clickableImage,
+                                className: A.clickableImage,
                                 onClick: (e) => {
-                                    e.stopPropagation(), k({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, p.Z5)(a, t.id);
+                                    e.stopPropagation(), U({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, _.Z5)(o, t.id);
                                 }
                             }),
-                            (0, i.jsxs)('div', {
-                                className: C.details,
+                            (0, r.jsxs)('div', {
+                                className: A.details,
                                 children: [
-                                    (0, i.jsxs)('div', {
+                                    (0, r.jsxs)('div', {
                                         children: [
-                                            (0, i.jsx)(T.Z, {
+                                            (0, r.jsx)(O.Z, {
                                                 variant: 'heading-sm/semibold',
-                                                text: a.details,
+                                                text: o.details,
                                                 onClick: () => {
-                                                    k({ action: 'OPEN_SPOTIFY_TRACK' }), (0, p.aG)(a);
+                                                    U({ action: 'OPEN_SPOTIFY_TRACK' }), (0, _.aG)(o);
                                                 }
                                             }),
-                                            G()
+                                            B()
                                         ]
                                     }),
-                                    (0, i.jsx)(v.Z, {
+                                    (0, r.jsx)(v.Z, {
                                         user: t,
-                                        activity: a,
-                                        className: C.badges
+                                        activity: o,
+                                        className: A.badges
                                     }),
-                                    B()
+                                    Z()
                                 ]
                             }),
-                            D === N.y0.FULL_SIZE && Z()
+                            D === N.y0.FULL_SIZE && F()
                         ]
                     })
                 }),
-                D !== N.y0.FULL_SIZE && Z()
+                D !== N.y0.FULL_SIZE && F()
             ]
         })
     });

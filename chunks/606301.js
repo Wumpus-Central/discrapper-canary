@@ -1,23 +1,25 @@
 n.d(t, {
     Tk: () => f,
-    kT: () => c,
+    kT: () => u,
     wN: () => d
 }),
-    n(757143);
-var i = n(299608),
-    r = n.n(i),
-    a = n(626135),
-    s = n(549058),
-    o = n(981631);
+    n(757143),
+    n(301563),
+    n(566702);
+var r = n(299608),
+    i = n.n(r),
+    o = n(626135),
+    a = n(549058),
+    s = n(981631);
 let l = /(!|\.|;|,|-|—|–|\?|"|')/g,
-    u = /(\n|\t|\s)/g,
-    c = (e) => e.replace(l, '').replace(u, ' '),
-    d = (e) => (null == e ? [] : c(e).trim().split(' ')),
-    f = r()(
+    c = /(\n|\t|\s)/g,
+    u = (e) => e.replace(l, '').replace(c, ' '),
+    d = (e) => (null == e ? [] : u(e).trim().split(' ')),
+    f = i()(
         (e) => {
-            a.default.track(o.rMx.AUTO_SUGGEST_DISPLAYED, { suggestion_trigger: e });
+            o.default.track(s.rMx.AUTO_SUGGEST_DISPLAYED, { suggestion_trigger: e });
         },
-        s.xv,
+        a.xv,
         {
             leading: !0,
             trailing: !1

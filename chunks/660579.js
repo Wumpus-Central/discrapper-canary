@@ -1,34 +1,89 @@
-n.d(t, { Z: () => s }), n(47120);
-var i = n(200651),
-    r = n(192379),
-    a = n(810097);
+n.d(t, { Z: () => u }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    o = n(810097);
+function a(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
 function s(e) {
-    let { children: t, className: n, onShowToolbar: s, ...o } = e,
-        l = r.useRef(null),
-        [u, c] = r.useState(!1),
-        d = () => {
-            null == s || s(), c(!0);
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                a(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function l(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = c(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function c(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+function u(e) {
+    var { children: t, className: n, onShowToolbar: a } = e,
+        c = l(e, ['children', 'className', 'onShowToolbar']);
+    let u = i.useRef(null),
+        [d, f] = i.useState(!1),
+        p = () => {
+            null == a || a(), f(!0);
         },
-        f = () => {
-            c(!1);
+        _ = () => {
+            f(!1);
         };
-    return (0, i.jsxs)('div', {
+    return (0, r.jsxs)('div', {
         className: n,
-        onMouseEnter: d,
-        onMouseLeave: f,
-        onFocus: d,
+        onMouseEnter: p,
+        onMouseLeave: _,
+        onFocus: p,
         onBlur: (e) => {
             var t;
-            (null === (t = l.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) || f();
+            (null === (t = u.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) || _();
         },
-        ref: l,
+        ref: u,
         children: [
             t,
-            (0, i.jsx)(a.ZP, {
-                isVisible: u,
-                isExpandable: !1,
-                ...o
-            })
+            (0, r.jsx)(
+                o.ZP,
+                s(
+                    {
+                        isVisible: d,
+                        isExpandable: !1
+                    },
+                    c
+                )
+            )
         ]
     });
 }

@@ -1,30 +1,82 @@
 n.d(t, {
-    Z: () => v,
-    h: () => E
+    Z: () => S,
+    h: () => O
 });
-var i = n(192379),
-    r = n(348327),
-    a = n.n(r),
-    s = n(97613),
-    o = n.n(s),
+var r = n(192379),
+    i = n(348327),
+    o = n.n(i),
+    a = n(97613),
+    s = n.n(a),
     l = n(990547),
-    u = n(570140),
-    c = n(493773),
+    c = n(570140),
+    u = n(493773),
     d = n(592125),
     f = n(944486),
-    _ = n(914010),
-    p = n(626135),
+    p = n(914010),
+    _ = n(626135),
     h = n(367907),
     m = n(565384);
-let g = (0, l.trackMaker)({
-    analyticEventConfigs: p.AnalyticEventConfigs,
-    dispatcher: u.Z,
+function g(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function E(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                g(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function v(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function b(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : v(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let y = (0, l.trackMaker)({
+    analyticEventConfigs: _.AnalyticEventConfigs,
+    dispatcher: c.Z,
     TRACK_ACTION_NAME: 'TRACK'
 });
-function E(e) {
+function O(e) {
     var t, n;
-    let i = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        { name: r, type: a, properties: s } = e;
+    let r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        { name: i, type: o, properties: a } = e;
     if (
         e.type === l.ImpressionTypes.MODAL &&
         null == e.name &&
@@ -35,22 +87,26 @@ function E(e) {
     )
         return;
     (0, m.Ps)(e);
-    let o = null !== (t = null == s ? void 0 : s.guild_id) && void 0 !== t ? t : _.Z.getGuildId(),
-        u = null !== (n = null == s ? void 0 : s.channel_id) && void 0 !== n ? n : f.Z.getChannelId(o),
-        c = (0, p.expandEventProperties)({
-            impression_type: a,
-            location: (0, m.k$)(),
-            ...(0, h.hH)(o),
-            ...(0, h.v_)(d.Z.getChannel(u)),
-            ...s
-        });
-    if (i) {
+    let s = null !== (t = null == a ? void 0 : a.guild_id) && void 0 !== t ? t : p.Z.getGuildId(),
+        c = null !== (n = null == a ? void 0 : a.channel_id) && void 0 !== n ? n : f.Z.getChannelId(s),
+        u = (0, _.expandEventProperties)(
+            E(
+                {
+                    impression_type: o,
+                    location: (0, m.k$)()
+                },
+                (0, h.hH)(s),
+                (0, h.v_)(d.Z.getChannel(c)),
+                a
+            )
+        );
+    if (r) {
         (0, m.dT)(null, null);
         return;
     }
-    null != r && null != a && ((0, p.debugLogEvent)(r, c), g(r, c)), (0, m.dT)(r, c);
+    null != i && null != o && ((0, _.debugLogEvent)(i, u), y(i, u)), (0, m.dT)(i, u);
 }
-function v(e) {
+function S(e) {
     let t =
             arguments.length > 1 && void 0 !== arguments[1]
                 ? arguments[1]
@@ -59,28 +115,25 @@ function v(e) {
                       trackOnInitialLoad: !1
                   },
         n = arguments.length > 2 ? arguments[2] : void 0,
-        r = i.useRef(),
-        s = i.useRef(),
+        i = r.useRef(),
+        a = r.useRef(),
         l = () => {
-            let i = !a()(r.current, e);
-            i && (r.current = e);
-            let l = !a()(s.current, n);
-            if ((l && (s.current = n), !i && !l)) return;
-            let u = {
-                ...e,
-                sequenceId: o()('impression_')
-            };
+            let r = !o()(i.current, e);
+            r && (i.current = e);
+            let l = !o()(a.current, n);
+            if ((l && (a.current = n), !r && !l)) return;
+            let c = b(E({}, e), { sequenceId: s()('impression_') });
             return (
-                E(u, t.disableTrack),
+                O(c, t.disableTrack),
                 () => {
-                    null != u && (0, m.dw)(u);
+                    null != c && (0, m.dw)(c);
                 }
             );
         };
-    (0, c.ZP)(() => {
+    (0, u.ZP)(() => {
         if (t.trackOnInitialLoad) return l();
     }),
-        i.useEffect(() => {
+        r.useEffect(() => {
             if (!t.trackOnInitialLoad) return l();
         });
 }

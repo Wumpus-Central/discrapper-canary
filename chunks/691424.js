@@ -1,166 +1,215 @@
-n.d(t, { Z: () => V }), n(47120);
-var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(477660),
+n.d(t, { Z: () => Y }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(477660),
     l = n(481060),
-    u = n(570140),
-    c = n(794295),
+    c = n(570140),
+    u = n(794295),
     d = n(663993),
     f = n(95398),
-    _ = n(339085),
-    p = n(779699),
+    p = n(339085),
+    _ = n(779699),
     h = n(359875),
     m = n(124072),
     g = n(692629),
     E = n(695503),
     v = n(628692),
-    y = n(590956),
-    I = n(703656),
-    T = n(271383),
-    b = n(430824),
-    S = n(572004),
-    A = n(746878),
+    b = n(590956),
+    y = n(703656),
+    O = n(271383),
+    S = n(430824),
+    I = n(572004),
+    T = n(746878),
     N = n(285063),
-    C = n(943362),
-    R = n(551452),
-    O = n(69626),
-    D = n(142990),
-    L = n(532901),
-    x = n(311739),
-    P = n(981631),
-    w = n(176505),
-    M = n(663362),
-    k = n(175581);
+    A = n(943362),
+    C = n(551452),
+    R = n(69626),
+    P = n(142990),
+    w = n(532901),
+    D = n(311739),
+    x = n(981631),
+    L = n(176505),
+    M = n(368365),
+    k = n(28149);
+function j(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
 function U(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                j(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function G(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function B(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : G(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function Z(e) {
     let { emojiTooltipPosition: t = 'top', enableEmojiClick: n = !0 } = e;
     return {
-        react(e, r, a) {
-            let { key: s, channelId: o, messageId: l } = a;
+        react(e, i, o) {
+            let { key: a, channelId: s, messageId: l } = o;
             return e.src
-                ? (0, i.jsx)(
-                      y.c,
+                ? (0, r.jsx)(
+                      b.c,
                       {
                           node: e,
                           tooltipPosition: t,
                           enableClick: n,
-                          channelId: o,
+                          channelId: s,
                           messageId: l
                       },
-                      s
+                      a
                   )
-                : (0, i.jsx)('span', { children: e.surrogate }, s);
+                : (0, r.jsx)('span', { children: e.surrogate }, a);
         }
     };
 }
-function G(e) {
+function F(e) {
     let { emojiTooltipPosition: t = 'top', enableEmojiClick: n = !0 } = e;
     return {
-        react(e, r, a) {
-            let { key: s, guildId: o, channelId: l, messageId: u, isInteracting: c } = a,
-                d = _.ZP.getDisambiguatedEmojiContext(o).getById(e.emojiId);
+        react(e, i, o) {
+            let { key: a, guildId: s, channelId: l, messageId: c, isInteracting: u } = o,
+                d = p.ZP.getDisambiguatedEmojiContext(s).getById(e.emojiId);
             if (null != d) {
                 let t = d.require_colons;
-                e = {
-                    ...e,
-                    name: t ? ':'.concat(d.name, ':') : d.name
-                };
+                e = B(U({}, e), { name: t ? ':'.concat(d.name, ':') : d.name });
             }
-            return (0, i.jsx)(
-                y.Y,
+            return (0, r.jsx)(
+                b.Y,
                 {
-                    isInteracting: c,
+                    isInteracting: u,
                     node: e,
                     tooltipPosition: t,
                     enableClick: n,
                     channelId: l,
-                    messageId: u
+                    messageId: c
                 },
-                s
+                a
             );
         }
     };
 }
-function B(e, t, n) {
-    let i = b.Z.getGuild(e);
-    if (null == e || null == i) return;
-    let r = (t) => {
-        i.hasFeature(P.oNc.COMMUNITY) && (0, I.uL)(P.Z5c.CHANNEL(e, t));
+function V(e, t, n) {
+    let r = S.Z.getGuild(e);
+    if (null == e || null == r) return;
+    let i = (t) => {
+        r.hasFeature(x.oNc.COMMUNITY) && (0, y.uL)(x.Z5c.CHANNEL(e, t));
     };
     switch (t) {
         case 'home':
         case 'guide':
-            r(w.oC.GUILD_HOME);
+            i(L.oC.GUILD_HOME);
             break;
         case 'browse':
-            r(w.oC.CHANNEL_BROWSER);
+            i(L.oC.CHANNEL_BROWSER);
             break;
         case 'customize':
-            r(w.oC.CUSTOMIZE_COMMUNITY);
+            i(L.oC.CUSTOMIZE_COMMUNITY);
             break;
         case 'linked-roles':
             if (null != n) {
-                let t = T.ZP.getSelfMember(e);
+                let t = O.ZP.getSelfMember(e);
                 if (null == t) return null;
-                let i = b.Z.getRoles(e)[n];
-                null == i || t.roles.includes(i.id)
-                    ? u.Z.dispatch({
+                let r = S.Z.getRoles(e)[n];
+                null == r || t.roles.includes(r.id)
+                    ? c.Z.dispatch({
                           type: 'GUILD_ROLE_CONNECTIONS_MODAL_SHOW',
                           guildId: e
                       })
-                    : u.Z.dispatch({
+                    : c.Z.dispatch({
                           type: 'GUILD_ROLE_CONNECTIONS_MODAL_SHOW',
                           guildId: e,
-                          role: i
+                          role: r
                       });
             } else
-                u.Z.dispatch({
+                c.Z.dispatch({
                     type: 'GUILD_ROLE_CONNECTIONS_MODAL_SHOW',
                     guildId: e
                 });
     }
 }
-function Z(e) {
+function H(e) {
     let { text: t } = e,
-        [n, a] = r.useState(!1),
-        s = () => {
+        [n, o] = i.useState(!1),
+        a = () => {
             try {
-                (0, S.JG)(t), a(!0);
+                (0, I.JG)(t), o(!0);
             } catch (e) {
-                a(!1);
+                o(!1);
             }
         };
-    return (0, i.jsx)(l.P3F, {
-        onClick: s,
+    return (0, r.jsx)(l.P3F, {
+        onClick: a,
         children: n
-            ? (0, i.jsx)(l.dz2, {
+            ? (0, r.jsx)(l.dz2, {
                   size: 'xs',
                   color: 'currentColor'
               })
-            : (0, i.jsx)(l.TIy, {
+            : (0, r.jsx)(l.TIy, {
                   size: 'xs',
                   color: 'currentColor'
               })
     });
 }
-n(730071);
-let F = {
+n(448461);
+let W = {
     blockQuote: {
         react: (e, t, n) =>
-            (0, i.jsxs)(
+            (0, r.jsxs)(
                 'div',
                 {
                     className: M.blockquoteContainer,
-                    children: [(0, i.jsx)('div', { className: M.blockquoteDivider }), (0, i.jsx)('blockquote', { children: t(e.content, n) })]
+                    children: [(0, r.jsx)('div', { className: M.blockquoteDivider }), (0, r.jsx)('blockquote', { children: t(e.content, n) })]
                 },
                 n.key
             )
     },
-    s: { react: (e, t, n) => (0, i.jsx)('s', { children: t(e.content, n) }, n.key) },
+    s: { react: (e, t, n) => (0, r.jsx)('s', { children: t(e.content, n) }, n.key) },
     highlight: {
         react: (e, t, n) =>
-            (0, i.jsx)(
+            (0, r.jsx)(
                 'span',
                 {
                     className: 'highlight',
@@ -169,49 +218,49 @@ let F = {
                 n.key
             )
     },
-    paragraph: { react: (e, t, n) => (0, i.jsx)('p', { children: t(e.content, n) }, n.key) },
+    paragraph: { react: (e, t, n) => (0, r.jsx)('p', { children: t(e.content, n) }, n.key) },
     inlineCode: {
         react: (e, t, n) =>
-            (0, i.jsx)(
+            (0, r.jsx)(
                 'code',
                 {
                     className: 'inline',
-                    children: (0, A.S)(e, t, n)
+                    children: (0, T.S)(e, t, n)
                 },
                 n.key
             )
     },
     codeBlock: {
-        react(e, t, r) {
-            let a = () =>
-                (0, i.jsx)('code', {
-                    className: s()(k.scrollbarGhostHairline, 'hljs'),
-                    children: (0, A.S)(e, t, r)
+        react(e, t, i) {
+            let o = () =>
+                (0, r.jsx)('code', {
+                    className: a()(k.scrollbarGhostHairline, 'hljs'),
+                    children: (0, T.S)(e, t, i)
                 });
-            return (0, i.jsx)(
+            return (0, r.jsx)(
                 'pre',
                 {
-                    children: (0, i.jsxs)('div', {
+                    children: (0, r.jsxs)('div', {
                         className: M.codeContainer,
                         children: [
-                            S.wS
-                                ? (0, i.jsx)('div', {
+                            I.wS
+                                ? (0, r.jsx)('div', {
                                       className: M.codeActions,
-                                      children: (0, i.jsx)(Z, { text: e.content })
+                                      children: (0, r.jsx)(H, { text: e.content })
                                   })
                                 : null,
-                            (0, i.jsx)(d.GI, {
+                            (0, r.jsx)(d.GI, {
                                 createPromise: () => Promise.resolve().then(n.bind(n, 364964)),
                                 webpackId: 364964,
-                                renderFallback: a,
+                                renderFallback: o,
                                 render: (t) => {
-                                    if (!(e.lang && t.hasLanguage(e.lang))) return a();
+                                    if (!(e.lang && t.hasLanguage(e.lang))) return o();
                                     {
                                         let n = t.highlight(e.lang, e.content, !0);
                                         return null == n
-                                            ? a()
-                                            : (0, i.jsx)('code', {
-                                                  className: s()(k.scrollbarGhostHairline, 'hljs', n.language),
+                                            ? o()
+                                            : (0, r.jsx)('code', {
+                                                  className: a()(k.scrollbarGhostHairline, 'hljs', n.language),
                                                   dangerouslySetInnerHTML: { __html: n.value }
                                               });
                                     }
@@ -220,19 +269,19 @@ let F = {
                         ]
                     })
                 },
-                r.key
+                i.key
             );
         }
     },
-    text: { react: (e, t, n) => ('string' == typeof e.content ? (0, i.jsx)('span', { children: e.content }, n.key) : (0, i.jsx)('span', { children: t(e.content, n) }, n.key)) },
+    text: { react: (e, t, n) => ('string' == typeof e.content ? (0, r.jsx)('span', { children: e.content }, n.key) : (0, r.jsx)('span', { children: t(e.content, n) }, n.key)) },
     spoiler: {
         react: (e, t, n) =>
-            (0, i.jsx)(
+            (0, r.jsx)(
                 f.Z,
                 {
                     type: f.Z.Types.TEXT,
                     inline: n.formatInline,
-                    renderTextElement: (e, t) => (null == e || e.type !== c.Z || t ? e : r.cloneElement(e, { tabIndex: -1 })),
+                    renderTextElement: (e, t) => (null == e || e.type !== u.Z || t ? e : i.cloneElement(e, { tabIndex: -1 })),
                     children: () => t(e.content, n)
                 },
                 n.key
@@ -240,7 +289,7 @@ let F = {
     },
     soundboard: {
         react: (e, t, n) =>
-            (0, i.jsx)(v.ZP, {
+            (0, r.jsx)(v.ZP, {
                 channelId: e.channelId,
                 messageId: e.messageId,
                 soundId: e.soundId,
@@ -250,57 +299,57 @@ let F = {
     },
     staticRouteLink: {
         react(e, t, n) {
-            let r = () => {
-                B(e.guildId, e.id, e.itemId);
+            let i = () => {
+                V(e.guildId, e.id, e.itemId);
             };
-            return (0, A.k)(e.id)
-                ? (0, i.jsxs)(
+            return (0, T.k)(e.id)
+                ? (0, r.jsxs)(
                       m.Z,
                       {
                           role: 'link',
-                          onClick: r,
+                          onClick: i,
                           className: 'channelMention',
                           iconType: e.id,
-                          children: [t(e.mainContent, n), null != e.itemContent ? (0, i.jsx)(g.Z, {}) : null, null != e.itemContent ? t(e.itemContent, n) : null]
+                          children: [t(e.mainContent, n), null != e.itemContent ? (0, r.jsx)(g.Z, {}) : null, null != e.itemContent ? t(e.itemContent, n) : null]
                       },
                       n.key
                   )
                 : null;
         }
     },
-    timestamp: { react: (e, t, n) => (0, i.jsx)(N.Z, { node: e }, n.key) },
+    timestamp: { react: (e, t, n) => (0, r.jsx)(N.Z, { node: e }, n.key) },
     list: {
         react: (e, t, n) => {
-            let i = e.ordered ? 'ol' : 'ul',
-                r = null == e.start ? void 0 : (e.start + (e.items.length - 1)).toString().length;
-            return (0, o.reactElement)(i, ''.concat(n.key), {
+            let r = e.ordered ? 'ol' : 'ul',
+                i = null == e.start ? void 0 : (e.start + (e.items.length - 1)).toString().length;
+            return (0, s.reactElement)(r, ''.concat(n.key), {
                 start: e.start,
                 className: n.formatInline ? M.inlineFormat : null,
-                style: { '--totalCharacters': r },
-                children: e.items.map((e, i) => {
-                    let r = (0, o.reactElement)('span', ''.concat(n.key, '-').concat(i, '-innerSpan'), { children: t(e, n) });
-                    return (0, o.reactElement)('li', ''.concat(n.key, '-').concat(i) + i, { children: r });
+                style: { '--totalCharacters': i },
+                children: e.items.map((e, r) => {
+                    let i = (0, s.reactElement)('span', ''.concat(n.key, '-').concat(r, '-innerSpan'), { children: t(e, n) });
+                    return (0, s.reactElement)('li', ''.concat(n.key, '-').concat(r) + r, { children: i });
                 })
             });
         }
     },
     heading: {
         react: (e, t, n) => {
-            let i = (0, o.reactElement)('span', ''.concat(n.key, '-innerSpan'), { children: t(e.content, n) });
-            return (0, o.reactElement)('h' + e.level, (null == n ? void 0 : n.key) != null ? ''.concat(n.key) : null, {
-                children: i,
+            let r = (0, s.reactElement)('span', ''.concat(n.key, '-innerSpan'), { children: t(e.content, n) });
+            return (0, s.reactElement)('h' + e.level, (null == n ? void 0 : n.key) != null ? ''.concat(n.key) : null, {
+                children: r,
                 className: n.formatInline ? M.inlineFormat : null
             });
         }
     },
     guild: {
         react: (e, t, n) => {
-            let r = b.Z.getGuild(e.guildId);
-            return (0, i.jsx)(
+            let i = S.Z.getGuild(e.guildId);
+            return (0, r.jsx)(
                 h.Z,
                 {
-                    guild: r,
-                    children: (0, A.S)(e, t, n)
+                    guild: i,
+                    children: (0, T.S)(e, t, n)
                 },
                 n.key
             );
@@ -308,37 +357,36 @@ let F = {
     },
     channel: {
         react: (e, t, n) =>
-            (0, i.jsx)(
-                p.Z,
+            (0, r.jsx)(
+                _.Z,
                 {
                     iconType: e.iconType,
-                    children: (0, A.S)(e, t, n)
+                    children: (0, T.S)(e, t, n)
                 },
                 n.key
             )
     },
-    message: { react: (e, t, n) => (0, i.jsx)(E.Z, {}, n.key) },
+    message: { react: (e, t, n) => (0, r.jsx)(E.Z, {}, n.key) },
     subtext: {
         react: (e, t, n) => {
-            let i = (0, o.reactElement)('span', ''.concat(n.key, '-innerSpan'), { children: t(e.content, n) });
-            return (0, o.reactElement)('small', (null == n ? void 0 : n.key) != null ? ''.concat(n.key) : null, {
-                children: i,
+            let r = (0, s.reactElement)('span', ''.concat(n.key, '-innerSpan'), { children: t(e.content, n) });
+            return (0, s.reactElement)('small', (null == n ? void 0 : n.key) != null ? ''.concat(n.key) : null, {
+                children: r,
                 className: n.formatInline ? M.inlineFormat : null
             });
         }
     },
-    silentPrefix: { react: (e, t, n) => ('string' == typeof e.content ? (0, i.jsx)('span', { children: e.content }, n.key) : (0, i.jsx)('span', { children: t(e.content, n) }, n.key)) }
+    silentPrefix: { react: (e, t, n) => ('string' == typeof e.content ? (0, r.jsx)('span', { children: e.content }, n.key) : (0, r.jsx)('span', { children: t(e.content, n) }, n.key)) }
 };
-function V(e) {
-    return {
-        ...F,
-        link: (0, L.Z)(e),
-        devLink: (0, D.Z)(e),
-        emoji: U(e),
-        customEmoji: G(e),
-        channelMention: (0, R.Z)(e),
-        commandMention: (0, O.ZP)(e),
-        attachmentLink: (0, C.Z)(e),
-        shopLink: (0, x.Z)(e)
-    };
+function Y(e) {
+    return B(U({}, W), {
+        link: (0, w.Z)(e),
+        devLink: (0, P.Z)(e),
+        emoji: Z(e),
+        customEmoji: F(e),
+        channelMention: (0, C.Z)(e),
+        commandMention: (0, R.ZP)(e),
+        attachmentLink: (0, A.Z)(e),
+        shopLink: (0, D.Z)(e)
+    });
 }

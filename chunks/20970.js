@@ -1,49 +1,100 @@
-n.d(t, { j: () => p });
-var i = n(477660);
-let { newline: r, paragraph: a, url: s, link: o, strong: l, u, br: c, em: d, image: f, text: _ } = i.defaultRules,
-    p = {
-        newline: r,
-        paragraph: a,
-        url: s,
-        link: {
-            ...o,
+n.d(t, { j: () => E });
+var r = n(477660);
+function i(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function o(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                i(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function a(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function s(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : a(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let { newline: l, paragraph: c, url: u, link: d, strong: f, u: p, br: _, em: h, image: m, text: g } = r.defaultRules,
+    E = {
+        newline: l,
+        paragraph: c,
+        url: u,
+        link: s(o({}, d), {
             parse(e, t, n) {
-                let i = o.parse(e, t, n);
-                return (i.context = n.context), i;
+                let r = d.parse(e, t, n);
+                return (r.context = n.context), r;
             }
-        },
-        strong: l,
-        u,
-        br: c,
-        em: d,
-        image: f,
+        }),
+        strong: f,
+        u: p,
+        br: _,
+        em: h,
+        image: m,
         hook: {
-            order: _.order,
-            match: (0, i.inlineRegex)(/^\$\[(.*?)\]\((\w+)\)/),
+            order: g.order,
+            match: (0, r.inlineRegex)(/^\$\[(.*?)\]\((\w+)\)/),
             parse(e, t, n) {
-                let { context: i } = n;
+                let { context: r } = n;
                 return {
-                    render: i[e[2]],
+                    render: r[e[2]],
                     content: t(e[1], n)
                 };
             },
             react: (e, t, n) => e.render(t(e.content, n), n.key)
         },
         noparse: {
-            order: _.order,
-            match: (0, i.inlineRegex)(/^!!(\d+?)!!/),
+            order: g.order,
+            match: (0, r.inlineRegex)(/^!!(\d+?)!!/),
             parse(e, t, n) {
-                let { unsafeContext: i } = n,
-                    r = i[e[1]];
+                let { unsafeContext: r } = n,
+                    i = r[e[1]];
                 return (
-                    'string' != typeof r && (r = null != r ? r.toString() : ''),
+                    'string' != typeof i && (i = null != i ? i.toString() : ''),
                     {
                         type: 'text',
-                        content: r
+                        content: i
                     }
                 );
             },
             react: (e) => e.content
         },
-        text: _
+        text: g
     };

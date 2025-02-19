@@ -1,98 +1,133 @@
-n.d(t, { Z: () => f }), n(47120);
-var l = n(200651),
-    r = n(192379),
-    i = n(399606),
-    o = n(481060),
+n.d(t, { Z: () => j }), n(47120);
+var r = n(200651),
+    l = n(192379),
+    o = n(399606),
+    i = n(481060),
     s = n(367907),
     a = n(863249),
-    d = n(944163),
-    c = n(768762),
+    c = n(944163),
+    d = n(768762),
     u = n(454585),
     m = n(626135),
-    x = n(981631),
-    h = n(388032),
-    p = n(260294);
+    h = n(981631),
+    p = n(388032),
+    x = n(557541);
 function f(e) {
-    var t;
-    let { guild: n, prompts: f, completeOnboarding: g, setCurrentStep: v, disableTracking: _, previousPromptIndex: j } = e,
-        C = r.useRef(null),
-        N = (0, i.e7)([d.Z], () => d.Z.getRulesPrompt(n.id)),
-        [b, k] = r.useState(null !== (t = null == N ? void 0 : N.response) && void 0 !== t && t),
-        Z = (0, i.e7)([d.Z], () => d.Z.get(n.id)),
-        I = r.useRef(null),
-        E = r.useRef(null),
-        T = r.useCallback(async () => {
-            if (null != Z && null != N) {
-                try {
-                    await a.ZP.submitVerificationForm(n.id, {
-                        ...Z,
-                        formFields: [
-                            {
-                                ...N,
-                                response: b
-                            }
-                        ]
-                    });
-                } catch {}
-                g();
-            }
-        }, [n.id, Z, N, b, g]);
-    function D(e) {
-        let [t] = e;
-        t.isIntersecting && k(!0);
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
     }
-    return (r.useEffect(() => {
-        let e = new IntersectionObserver(D, {
+    return e;
+}
+function g(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function j(e) {
+    var t;
+    let { guild: n, prompts: j, completeOnboarding: v, setCurrentStep: b, disableTracking: N, previousPromptIndex: _ } = e,
+        C = l.useRef(null),
+        k = (0, o.e7)([c.Z], () => c.Z.getRulesPrompt(n.id)),
+        [O, Z] = l.useState(null !== (t = null == k ? void 0 : k.response) && void 0 !== t && t),
+        E = (0, o.e7)([c.Z], () => c.Z.get(n.id)),
+        I = l.useRef(null),
+        y = l.useRef(null),
+        w = l.useCallback(async () => {
+            if (null != E && null != k) {
+                try {
+                    await a.ZP.submitVerificationForm(n.id, g(f({}, E), { formFields: [g(f({}, k), { response: O })] }));
+                } catch (e) {}
+                v();
+            }
+        }, [n.id, E, k, O, v]);
+    function P(e) {
+        let [t] = e;
+        t.isIntersecting && Z(!0);
+    }
+    return (l.useEffect(() => {
+        let e = new IntersectionObserver(P, {
                 root: I.current,
                 rootMargin: '0px',
                 threshold: 0
             }),
-            t = E.current;
+            t = y.current;
         return (
             null != t && null != t.lastElementChild && e.observe(t.lastElementChild),
             () => {
                 null != t && null != t.lastElementChild && e.unobserve(t.lastElementChild);
             }
         );
-    }, [E, I]),
-    null == N)
+    }, [y, I]),
+    null == k)
         ? null
-        : (0, l.jsx)('div', {
-              className: p.prompt,
-              children: (0, l.jsxs)('div', {
-                  className: p.promptContent,
+        : (0, r.jsx)('div', {
+              className: x.prompt,
+              children: (0, r.jsxs)('div', {
+                  className: x.promptContent,
                   ref: I,
                   children: [
-                      (0, l.jsxs)(o.h21, {
-                          className: p.scrollerContent,
+                      (0, r.jsxs)(i.h21, {
+                          className: x.scrollerContent,
                           ref: C,
                           children: [
-                              (0, l.jsx)(o.Text, {
+                              (0, r.jsx)(i.Text, {
                                   variant: 'text-sm/medium',
                                   color: 'text-muted',
-                                  children: h.intl.string(h.t['b1JC+v'])
+                                  children: p.NW.string(p.t['b1JC+v'])
                               }),
-                              (0, l.jsx)(o.X6q, {
+                              (0, r.jsx)(i.X6q, {
                                   variant: 'heading-xl/semibold',
-                                  children: h.intl.string(h.t.prJqwc)
+                                  children: p.NW.string(p.t.prJqwc)
                               }),
-                              (0, l.jsx)('div', {
-                                  className: p.termsFieldBody,
-                                  ref: E,
-                                  children: N.values.map((e, t) =>
-                                      (0, l.jsxs)(
+                              (0, r.jsx)('div', {
+                                  className: x.termsFieldBody,
+                                  ref: y,
+                                  children: k.values.map((e, t) =>
+                                      (0, r.jsxs)(
                                           'div',
                                           {
-                                              className: p.termsRow,
+                                              className: x.termsRow,
                                               children: [
-                                                  (0, l.jsx)(o.Text, {
+                                                  (0, r.jsx)(i.Text, {
                                                       variant: 'text-sm/normal',
                                                       color: 'text-muted',
                                                       children: ''.concat(t + 1, '.')
                                                   }),
-                                                  (0, l.jsx)(o.Text, {
+                                                  (0, r.jsx)(i.Text, {
                                                       variant: 'text-sm/normal',
-                                                      className: p.termsRowContent,
+                                                      className: x.termsRowContent,
                                                       children: u.Z.parseGuildVerificationFormRule(e, !0, { channelId: n.rulesChannelId })
                                                   })
                                               ]
@@ -103,69 +138,73 @@ function f(e) {
                               })
                           ]
                       }),
-                      (0, l.jsx)('div', { className: p.overlay }),
-                      (0, l.jsxs)('div', {
-                          className: p.navButtons,
+                      (0, r.jsx)('div', { className: x.overlay }),
+                      (0, r.jsxs)('div', {
+                          className: x.navButtons,
                           children: [
-                              (0, l.jsx)('div', {
-                                  className: p.leftButtons,
+                              (0, r.jsx)('div', {
+                                  className: x.leftButtons,
                                   children:
-                                      -1 !== j &&
-                                      (0, l.jsxs)(o.zxk, {
-                                          innerClassName: p.buttonInner,
+                                      -1 !== _ &&
+                                      (0, r.jsxs)(i.zxk, {
+                                          innerClassName: x.buttonInner,
                                           onClick: () => {
-                                              !_ &&
-                                                  (m.default.track(x.rMx.GUILD_ONBOARDING_STEP_COMPLETED, {
-                                                      ...(0, s.hH)(n.id),
-                                                      step: -1,
-                                                      skipped: !1,
-                                                      back: !0,
-                                                      options_selected: 0,
-                                                      in_onboarding: !0,
-                                                      is_final_step: !1
-                                                  }),
-                                                  j >= 0 &&
-                                                      m.default.track(x.rMx.GUILD_ONBOARDING_STEP_VIEWED, {
-                                                          ...(0, s.hH)(n.id),
-                                                          step: j,
-                                                          required: f[j].required
-                                                      })),
-                                                  v(j);
+                                              !N &&
+                                                  (m.default.track(
+                                                      h.rMx.GUILD_ONBOARDING_STEP_COMPLETED,
+                                                      g(f({}, (0, s.hH)(n.id)), {
+                                                          step: -1,
+                                                          skipped: !1,
+                                                          back: !0,
+                                                          options_selected: 0,
+                                                          in_onboarding: !0,
+                                                          is_final_step: !1
+                                                      })
+                                                  ),
+                                                  _ >= 0 &&
+                                                      m.default.track(
+                                                          h.rMx.GUILD_ONBOARDING_STEP_VIEWED,
+                                                          g(f({}, (0, s.hH)(n.id)), {
+                                                              step: _,
+                                                              required: j[_].required
+                                                          })
+                                                      )),
+                                                  b(_);
                                           },
-                                          size: o.zxk.Sizes.MEDIUM,
-                                          look: o.zxk.Looks.OUTLINED,
+                                          size: i.zxk.Sizes.MEDIUM,
+                                          look: i.zxk.Looks.OUTLINED,
                                           grow: !1,
-                                          color: o.zxk.Colors.PRIMARY,
+                                          color: i.zxk.Colors.PRIMARY,
                                           children: [
-                                              (0, l.jsx)(c.Z, {
-                                                  className: p.arrow,
-                                                  direction: c.Z.Directions.LEFT
+                                              (0, r.jsx)(d.Z, {
+                                                  className: x.arrow,
+                                                  direction: d.Z.Directions.LEFT
                                               }),
-                                              h.intl.string(h.t['13/7kZ'])
+                                              p.NW.string(p.t['13/7kZ'])
                                           ]
                                       })
                               }),
-                              (0, l.jsxs)('div', {
-                                  className: p.rightButtons,
+                              (0, r.jsxs)('div', {
+                                  className: x.rightButtons,
                                   children: [
-                                      (0, l.jsx)(o.Text, {
-                                          className: p.helpText,
+                                      (0, r.jsx)(i.Text, {
+                                          className: x.helpText,
                                           variant: 'text-xs/normal',
                                           color: 'text-muted',
-                                          children: b ? h.intl.string(h.t.arAe3N) : h.intl.string(h.t.D0CVAQ)
+                                          children: O ? p.NW.string(p.t.arAe3N) : p.NW.string(p.t.D0CVAQ)
                                       }),
-                                      (0, l.jsxs)(o.zxk, {
-                                          innerClassName: p.buttonInner,
-                                          onClick: T,
-                                          disabled: !b,
-                                          size: o.zxk.Sizes.MEDIUM,
-                                          look: o.zxk.Looks.FILLED,
+                                      (0, r.jsxs)(i.zxk, {
+                                          innerClassName: x.buttonInner,
+                                          onClick: w,
+                                          disabled: !O,
+                                          size: i.zxk.Sizes.MEDIUM,
+                                          look: i.zxk.Looks.FILLED,
                                           grow: !1,
-                                          color: o.zxk.Colors.BRAND,
+                                          color: i.zxk.Colors.BRAND,
                                           children: [
-                                              h.intl.string(h.t['8SuVoK']),
-                                              (0, l.jsx)('span', {
-                                                  className: p.finishEmoji,
+                                              p.NW.string(p.t['8SuVoK']),
+                                              (0, r.jsx)('span', {
+                                                  className: x.finishEmoji,
                                                   role: 'img',
                                                   'aria-hidden': !0,
                                                   children: '\uD83C\uDF89'

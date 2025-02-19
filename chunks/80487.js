@@ -1,38 +1,38 @@
-n.d(t, { Z: () => v }), n(653041), n(47120);
-var a = n(200651),
-    i = n(192379),
-    r = n(120356),
-    l = n.n(r),
-    o = n(21260),
+n.d(t, { Z: () => g }), n(653041), n(47120);
+var r = n(200651),
+    a = n(192379),
+    i = n(120356),
+    o = n.n(i),
+    l = n(21260),
     s = n(780384),
     c = n(481060),
     d = n(410030),
     u = n(984370),
     m = n(785195),
-    x = n(889711),
-    h = n(246364),
-    _ = n(388032),
-    p = n(625584);
-let f = (e) => {
-        let { tabs: t, selectedTab: n, onTabSelect: i, onClose: r } = e;
-        return (0, a.jsx)(c.v2r, {
+    p = n(889711),
+    f = n(246364),
+    x = n(388032),
+    h = n(180824);
+let b = (e) => {
+        let { tabs: t, selectedTab: n, onTabSelect: a, onClose: i } = e;
+        return (0, r.jsx)(c.v2r, {
             navId: 'member-applications-tabs-overflow-menu',
-            'aria-label': _.intl.string(_.t.riPnr6),
+            'aria-label': x.NW.string(x.t.riPnr6),
             hideScroller: !0,
-            onClose: r,
-            onSelect: r,
-            children: (0, a.jsx)(
+            onClose: i,
+            onSelect: i,
+            children: (0, r.jsx)(
                 c.kSQ,
                 {
                     children: t.map((e) => {
-                        let { id: t, label: r } = e;
-                        return (0, a.jsx)(
+                        let { id: t, label: i } = e;
+                        return (0, r.jsx)(
                             c.sNh,
                             {
                                 id: t,
-                                label: r,
+                                label: i,
                                 icon: t === n ? c.owK : void 0,
-                                action: () => i(t)
+                                action: () => a(t)
                             },
                             t
                         );
@@ -42,51 +42,51 @@ let f = (e) => {
             )
         });
     },
-    C = (e, t, n) => {
-        let a = [];
+    j = (e, t, n) => {
+        let r = [];
         return (
             e &&
-                a.push({
+                r.push({
                     id: 'REVIEW_APPLICATION',
-                    label: _.intl.string(_.t.fSGLR0)
+                    label: x.NW.string(x.t.fSGLR0)
                 }),
             t &&
-                (a.push({
-                    id: h.wB.SUBMITTED,
-                    label: 0 === n ? _.intl.string(_.t['4eQVBA']) : _.intl.formatToPlainString(_.t['Wo+zLy'], { count: n })
+                (r.push({
+                    id: f.wB.SUBMITTED,
+                    label: 0 === n ? x.NW.string(x.t['4eQVBA']) : x.NW.formatToPlainString(x.t['Wo+zLy'], { count: n })
                 }),
-                a.push({
-                    id: h.wB.APPROVED,
-                    label: _.intl.string(_.t.aURgY2)
+                r.push({
+                    id: f.wB.APPROVED,
+                    label: x.NW.string(x.t.aURgY2)
                 }),
-                a.push({
-                    id: h.wB.REJECTED,
-                    label: _.intl.string(_.t.bSZklZ)
+                r.push({
+                    id: f.wB.REJECTED,
+                    label: x.NW.string(x.t.bSZklZ)
                 })),
-            a
+            r
         );
     };
-function j(e) {
-    let { onTabSelect: t, tabs: n, selectedTab: r } = e,
-        o = (0, d.ZP)(),
-        u = (0, s.wj)(o),
-        m = i.useMemo(
+function _(e) {
+    let { onTabSelect: t, tabs: n, selectedTab: i } = e,
+        l = (0, d.ZP)(),
+        u = (0, s.wj)(l),
+        m = a.useMemo(
             () =>
                 null !=
                 n.find((e) => {
                     let { id: t } = e;
-                    return t === r;
+                    return t === i;
                 }),
-            [r, n]
+            [i, n]
         ),
-        x = m ? 'header-primary' : u ? 'text-muted' : 'header-primary',
-        h = m ? c.TVs.colors.HEADER_PRIMARY : u ? c.TVs.colors.TEXT_MUTED : c.TVs.colors.HEADER_PRIMARY;
-    return (0, a.jsx)(c.yRy, {
+        p = m ? 'header-primary' : u ? 'text-muted' : 'header-primary',
+        f = m ? c.TVs.colors.HEADER_PRIMARY : u ? c.TVs.colors.TEXT_MUTED : c.TVs.colors.HEADER_PRIMARY;
+    return (0, r.jsx)(c.yRy, {
         renderPopout: (e) => {
-            let { closePopout: i } = e;
-            return (0, a.jsx)(f, {
-                selectedTab: r,
-                onClose: i,
+            let { closePopout: a } = e;
+            return (0, r.jsx)(b, {
+                selectedTab: i,
+                onClose: a,
                 tabs: n,
                 onTabSelect: t
             });
@@ -94,93 +94,135 @@ function j(e) {
         position: 'bottom',
         align: 'left',
         children: (e, t) => {
-            let { isShown: n } = t;
-            return (0, a.jsxs)(c.njP.Item, {
-                ...e,
-                id: 'more',
-                color: 'text-muted',
-                className: l()(p.more, { [p.selected]: m }),
-                'aria-label': _.intl.string(_.t.UKOtz8),
-                children: [
-                    (0, a.jsx)(c.Text, {
-                        variant: 'text-md/medium',
-                        color: x,
-                        children: _.intl.string(_.t.UKOtz8)
+            var n, a;
+            let { isShown: i } = t;
+            return (0, r.jsxs)(
+                c.njP.Item,
+                ((n = (function (e) {
+                    for (var t = 1; t < arguments.length; t++) {
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            r = Object.keys(n);
+                        'function' == typeof Object.getOwnPropertySymbols &&
+                            (r = r.concat(
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                })
+                            )),
+                            r.forEach(function (t) {
+                                var r;
+                                (r = n[t]),
+                                    t in e
+                                        ? Object.defineProperty(e, t, {
+                                              value: r,
+                                              enumerable: !0,
+                                              configurable: !0,
+                                              writable: !0
+                                          })
+                                        : (e[t] = r);
+                            });
+                    }
+                    return e;
+                })({}, e)),
+                (a = a =
+                    {
+                        id: 'more',
+                        color: 'text-muted',
+                        className: o()(h.more, { [h.selected]: m }),
+                        'aria-label': x.NW.string(x.t.UKOtz8),
+                        children: [
+                            (0, r.jsx)(c.Text, {
+                                variant: 'text-md/medium',
+                                color: p,
+                                children: x.NW.string(x.t.UKOtz8)
+                            }),
+                            i
+                                ? (0, r.jsx)(c.u04, {
+                                      size: 'sm',
+                                      color: f
+                                  })
+                                : (0, r.jsx)(c.CJ0, {
+                                      size: 'sm',
+                                      color: f
+                                  })
+                        ]
                     }),
-                    n
-                        ? (0, a.jsx)(c.u04, {
-                              size: 'sm',
-                              color: h
-                          })
-                        : (0, a.jsx)(c.CJ0, {
-                              size: 'sm',
-                              color: h
-                          })
-                ]
-            });
+                Object.getOwnPropertyDescriptors
+                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(a))
+                    : (function (e, t) {
+                          var n = Object.keys(e);
+                          if (Object.getOwnPropertySymbols) {
+                              var r = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, r);
+                          }
+                          return n;
+                      })(Object(a)).forEach(function (e) {
+                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(a, e));
+                      }),
+                n)
+            );
         }
     });
 }
-let v = function (e) {
-    let { pendingGuildJoinRequestsTotal: t, currentTab: n, onTabItemSelect: r, showSetupTab: l, canActionJoinRequests: s, isSidebarOpen: d } = e,
-        [h, f] = i.useState(0),
-        v = i.useRef(null),
-        b = i.useRef(h),
-        g = C(l, s, t),
+let g = function (e) {
+    let { pendingGuildJoinRequestsTotal: t, currentTab: n, onTabItemSelect: i, showSetupTab: o, canActionJoinRequests: s, isSidebarOpen: d } = e,
+        [f, b] = a.useState(0),
+        g = a.useRef(null),
+        v = a.useRef(f),
+        C = j(o, s, t),
         {
-            lastVisibleIndex: T,
-            onItemLayout: I,
-            overflowItemsRef: R
-        } = (0, o.zP)({
-            items: g,
+            lastVisibleIndex: N,
+            onItemLayout: y,
+            overflowItemsRef: I
+        } = (0, l.zP)({
+            items: C,
             itemGapPx: 16,
             maxLines: 1,
-            containerWidth: h - 400
+            containerWidth: f - 400
         }),
-        N = i.useMemo(() => g.slice(0, T + 1), [T, g]),
-        E = i.useMemo(() => g.slice(T + 1), [T, g]),
-        w = i.useCallback(() => {
+        T = a.useMemo(() => C.slice(0, N + 1), [N, C]),
+        w = a.useMemo(() => C.slice(N + 1), [N, C]),
+        O = a.useCallback(() => {
             var e;
-            let t = null === (e = v.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
-            null != t && b.current !== t.width && (f(t.width), (b.current = t.width));
+            let t = null === (e = g.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
+            null != t && v.current !== t.width && (b(t.width), (v.current = t.width));
         }, []);
     return (
-        i.useEffect(() => {
-            let e = (0, x.pP)(w);
-            return (0, x.YP)(e, document.body), () => (0, x.UC)(e, document.body);
-        }, [w]),
-        i.useEffect(() => {
-            w();
-        }, [w, d]),
-        (0, a.jsx)('div', {
-            ref: v,
-            children: (0, a.jsxs)(u.Z, {
+        a.useEffect(() => {
+            let e = (0, p.pP)(O);
+            return (0, p.YP)(e, document.body), () => (0, p.UC)(e, document.body);
+        }, [O]),
+        a.useEffect(() => {
+            O();
+        }, [O, d]),
+        (0, r.jsx)('div', {
+            ref: g,
+            children: (0, r.jsxs)(u.Z, {
                 hideSearch: !0,
-                toolbar: (0, a.jsx)('div', {}),
+                toolbar: (0, r.jsx)('div', {}),
                 children: [
-                    (0, a.jsx)(u.Z.Icon, {
+                    (0, r.jsx)(u.Z.Icon, {
                         icon: (0, c.GSL)(m.Z),
                         disabled: !0,
-                        'aria-label': _.intl.string(_.t.tcvVXF)
+                        'aria-label': x.NW.string(x.t.tcvVXF)
                     }),
-                    (0, a.jsx)(u.Z.Title, {
-                        className: p.title,
-                        children: _.intl.string(_.t.tcvVXF)
+                    (0, r.jsx)(u.Z.Title, {
+                        className: h.title,
+                        children: x.NW.string(x.t.tcvVXF)
                     }),
-                    (0, a.jsx)(u.Z.Divider, { className: p.divider }),
-                    (0, a.jsxs)('div', {
-                        className: p.container,
+                    (0, r.jsx)(u.Z.Divider, { className: h.divider }),
+                    (0, r.jsxs)('div', {
+                        className: h.container,
                         children: [
-                            (0, a.jsxs)('div', {
-                                className: p.measurements,
+                            (0, r.jsxs)('div', {
+                                className: h.measurements,
                                 children: [
-                                    g.map((e, t) =>
-                                        (0, a.jsx)(
-                                            o.AJ,
+                                    C.map((e, t) =>
+                                        (0, r.jsx)(
+                                            l.AJ,
                                             {
                                                 index: t,
-                                                onItemLayout: I,
-                                                children: (0, a.jsx)(c.njP.Item, {
+                                                onItemLayout: y,
+                                                children: (0, r.jsx)(c.njP.Item, {
                                                     id: e.id,
                                                     'aria-label': e.label,
                                                     children: e.label
@@ -189,24 +231,24 @@ let v = function (e) {
                                             e.id
                                         )
                                     ),
-                                    (0, a.jsx)('div', {
-                                        ref: R,
-                                        children: (0, a.jsx)(j, {
-                                            tabs: E,
-                                            onTabSelect: r,
+                                    (0, r.jsx)('div', {
+                                        ref: I,
+                                        children: (0, r.jsx)(_, {
+                                            tabs: w,
+                                            onTabSelect: i,
                                             selectedTab: n
                                         })
                                     })
                                 ]
                             }),
-                            (0, a.jsxs)(c.njP, {
-                                'aria-label': _.intl.string(_.t.TdEu5e),
+                            (0, r.jsxs)(c.njP, {
+                                'aria-label': x.NW.string(x.t.TdEu5e),
                                 selectedItem: n,
                                 type: 'top-pill',
-                                onItemSelect: r,
+                                onItemSelect: i,
                                 children: [
-                                    N.map((e) =>
-                                        (0, a.jsx)(
+                                    T.map((e) =>
+                                        (0, r.jsx)(
                                             c.njP.Item,
                                             {
                                                 id: e.id,
@@ -216,10 +258,10 @@ let v = function (e) {
                                             e.id
                                         )
                                     ),
-                                    0 !== E.length
-                                        ? (0, a.jsx)(j, {
-                                              tabs: E,
-                                              onTabSelect: r,
+                                    0 !== w.length
+                                        ? (0, r.jsx)(_, {
+                                              tabs: w,
+                                              onTabSelect: i,
                                               selectedTab: n
                                           })
                                         : null

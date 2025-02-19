@@ -1,78 +1,121 @@
-n.d(t, { Z: () => p });
-var i = n(200651),
-    l = n(192379),
-    r = n(120356),
-    a = n.n(r),
-    s = n(481060),
-    o = n(442837),
-    d = n(547280),
-    c = n(678513),
-    u = n(981631),
-    h = n(388032),
-    m = n(940841);
-let p = function (e) {
+n.d(t, { Z: () => g });
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    o = n.n(l),
+    a = n(481060),
+    s = n(442837),
+    c = n(547280),
+    u = n(678513),
+    d = n(981631),
+    p = n(388032),
+    h = n(968284);
+let g = function (e) {
     let { guild: t } = e,
-        r = (0, o.e7)([c.Z], () => c.Z.getActiveGuildSignUp(t.id)),
-        p = l.useCallback(() => {
-            null != r &&
-                (0, s.ZDy)(async () => {
-                    let { default: e } = await Promise.all([n.e('22862'), n.e('79587')]).then(n.bind(n, 646202));
-                    return (n) =>
-                        (0, i.jsx)(e, {
-                            ...n,
-                            target: r,
-                            guildId: t.id
-                        });
+        l = (0, s.e7)([u.Z], () => u.Z.getActiveGuildSignUp(t.id)),
+        g = i.useCallback(() => {
+            null != l &&
+                (0, a.ZDy)(async () => {
+                    let { default: e } = await Promise.all([n.e('22862'), n.e('15012')]).then(n.bind(n, 646202));
+                    return (n) => {
+                        var i, o;
+                        return (0, r.jsx)(
+                            e,
+                            ((i = (function (e) {
+                                for (var t = 1; t < arguments.length; t++) {
+                                    var n = null != arguments[t] ? arguments[t] : {},
+                                        r = Object.keys(n);
+                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                        (r = r.concat(
+                                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                            })
+                                        )),
+                                        r.forEach(function (t) {
+                                            var r;
+                                            (r = n[t]),
+                                                t in e
+                                                    ? Object.defineProperty(e, t, {
+                                                          value: r,
+                                                          enumerable: !0,
+                                                          configurable: !0,
+                                                          writable: !0
+                                                      })
+                                                    : (e[t] = r);
+                                        });
+                                }
+                                return e;
+                            })({}, n)),
+                            (o = o =
+                                {
+                                    target: l,
+                                    guildId: t.id
+                                }),
+                            Object.getOwnPropertyDescriptors
+                                ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(o))
+                                : (function (e, t) {
+                                      var n = Object.keys(e);
+                                      if (Object.getOwnPropertySymbols) {
+                                          var r = Object.getOwnPropertySymbols(e);
+                                          n.push.apply(n, r);
+                                      }
+                                      return n;
+                                  })(Object(o)).forEach(function (e) {
+                                      Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(o, e));
+                                  }),
+                            i)
+                        );
+                    };
                 });
-        }, [r, t.id]),
-        g = l.useCallback(() => {
-            null != r && (0, d.b)(r.key, r.dismissibleContent);
-        }, [r]);
-    if (null == r) return null;
-    let _ = 'url('.concat(r.backgroundAssetUrl, ') black top / cover no-repeat');
-    return (0, i.jsx)(s.f6W, {
-        theme: u.BRd.DARK,
+        }, [l, t.id]),
+        f = i.useCallback(() => {
+            null != l && (0, c.b)(l.key, l.dismissibleContent);
+        }, [l]);
+    if (null == l) return null;
+    let m = 'url('.concat(l.backgroundAssetUrl, ') black top / cover no-repeat');
+    return (0, r.jsx)(a.f6W, {
+        theme: d.BRd.DARK,
         children: (e) =>
-            (0, i.jsx)('div', {
-                className: a()(m.container, e),
-                children: (0, i.jsxs)('div', {
-                    className: m.card,
-                    style: { background: _ },
+            (0, r.jsx)('div', {
+                className: o()(h.container, e),
+                children: (0, r.jsxs)('div', {
+                    className: h.card,
+                    style: { background: m },
                     children: [
-                        (0, i.jsxs)('div', {
-                            className: m.eyebrow,
+                        (0, r.jsxs)('div', {
+                            className: h.eyebrow,
                             children: [
-                                (0, i.jsx)(s._XJ, {
+                                (0, r.jsx)(a._XJ, {
                                     size: 'xxs',
                                     color: 'currentColor'
                                 }),
-                                (0, i.jsx)(s.Text, {
+                                (0, r.jsx)(a.Text, {
                                     variant: 'text-xs/semibold',
                                     color: 'none',
-                                    children: h.intl.string(h.t.hhKpxs)
+                                    children: p.NW.string(p.t.hhKpxs)
                                 })
                             ]
                         }),
-                        (0, i.jsx)(s.X6q, {
+                        (0, r.jsx)(a.X6q, {
                             variant: 'heading-sm/medium',
-                            children: r.noticeHeader
+                            children: l.noticeHeader
                         }),
-                        (0, i.jsx)(s.zxk, {
-                            className: m.button,
+                        (0, r.jsx)(a.zxk, {
+                            className: h.button,
                             color: 'none',
-                            onClick: p,
-                            children: (0, i.jsx)(s.Text, {
+                            onClick: g,
+                            children: (0, r.jsx)(a.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'none',
-                                children: h.intl.string(h.t.vv0Nsb)
+                                children: p.NW.string(p.t.vv0Nsb)
                             })
                         }),
-                        (0, i.jsx)('div', {
-                            className: m.dismiss,
-                            children: (0, i.jsx)(s.P3F, {
-                                onClick: g,
-                                'aria-label': h.intl.string(h.t.cpT0Cg),
-                                children: (0, i.jsx)(s.Dio, {
+                        (0, r.jsx)('div', {
+                            className: h.dismiss,
+                            children: (0, r.jsx)(a.P3F, {
+                                onClick: f,
+                                'aria-label': p.NW.string(p.t.cpT0Cg),
+                                children: (0, r.jsx)(a.Dio, {
                                     size: 'xs',
                                     color: 'currentColor'
                                 })

@@ -1,28 +1,90 @@
-e.d(i, { ActivityAgeGateModal: () => r });
-var n = e(200651);
-e(192379);
-var s = e(481060),
-    a = e(986035),
-    c = e(388032),
-    o = e(113102);
-function r(t) {
-    let { application: i, onAgree: e, onClose: r, onDisagree: l, ...d } = t;
-    return (0, n.jsx)(s.Y0X, {
-        ...d,
-        children: (0, n.jsx)('div', {
-            children: (0, n.jsx)(a.Z, {
-                onAgree: () => {
-                    e(), r();
-                },
-                onDisagree: () => {
-                    l(), r();
-                },
-                title: c.intl.string(c.t.SSDPOD),
-                description: c.intl.formatToPlainString(c.t.OgmIq6, { applicationName: i.name }),
-                agreement: c.intl.string(c.t.wVq7ur),
-                disagreement: c.intl.string(c.t.hg1uxs),
-                imageClassName: o.image
-            })
-        })
-    });
+n.d(t, { ActivityAgeGateModal: () => a });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    o = n(986035),
+    s = n(388032),
+    c = n(593626);
+function a(e) {
+    var t,
+        n,
+        { application: a, onAgree: l, onClose: u, onDisagree: p } = e,
+        g = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                i = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        r,
+                        i = {},
+                        o = Object.keys(e);
+                    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var o = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+            }
+            return i;
+        })(e, ['application', 'onAgree', 'onClose', 'onDisagree']);
+    return (0, r.jsx)(
+        i.Y0X,
+        ((t = (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    r = Object.keys(n);
+                'function' == typeof Object.getOwnPropertySymbols &&
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        })
+                    )),
+                    r.forEach(function (t) {
+                        var r;
+                        (r = n[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: r,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0
+                                  })
+                                : (e[t] = r);
+                    });
+            }
+            return e;
+        })({}, g)),
+        (n = n =
+            {
+                children: (0, r.jsx)('div', {
+                    children: (0, r.jsx)(o.Z, {
+                        onAgree: () => {
+                            l(), u();
+                        },
+                        onDisagree: () => {
+                            p(), u();
+                        },
+                        title: s.NW.string(s.t.SSDPOD),
+                        description: s.NW.formatToPlainString(s.t.OgmIq6, { applicationName: a.name }),
+                        agreement: s.NW.string(s.t.wVq7ur),
+                        disagreement: s.NW.string(s.t.hg1uxs),
+                        imageClassName: c.image
+                    })
+                })
+            }),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(n)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+              }),
+        t)
+    );
 }

@@ -1,165 +1,207 @@
-n.d(t, { Z: () => v }), n(653041), n(47120);
-var i = n(192379),
-    l = n(512722),
-    a = n.n(l),
-    r = n(392711),
-    s = n.n(r),
-    o = n(442837),
-    d = n(139387),
-    c = n(895924),
+n.d(t, { Z: () => N }), n(653041), n(47120), n(977457);
+var r = n(192379),
+    i = n(512722),
+    l = n.n(i),
+    o = n(392711),
+    a = n.n(o),
+    s = n(442837),
+    c = n(139387),
+    d = n(895924),
     u = n(581364),
-    m = n(592125),
-    h = n(430824),
-    x = n(496675),
+    p = n(592125),
+    m = n(430824),
+    b = n(496675),
     g = n(594174),
-    p = n(823379),
-    N = n(905753),
-    f = n(399860),
-    b = n(981631);
-function v(e, t, n) {
-    let l = (0, o.e7)([N.Z], () => N.Z.getApplicationPermissions()),
-        r = i.useMemo(
+    f = n(823379),
+    h = n(905753),
+    x = n(399860),
+    j = n(981631);
+function v(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function N(e, t, n) {
+    let i = (0, s.e7)([h.Z], () => h.Z.getApplicationPermissions()),
+        o = r.useMemo(
             () =>
                 (function (e, t) {
-                    let n = { ...t },
-                        i = (0, u.bD)(e),
-                        l = (0, f.rE)(i, c.Kw.CHANNEL),
-                        a = (0, f.rE)(e, c.Kw.ROLE);
+                    let n = v({}, t),
+                        r = (0, u.bD)(e),
+                        i = (0, x.rE)(r, d.Kw.CHANNEL),
+                        l = (0, x.rE)(e, d.Kw.ROLE);
                     return (
-                        a in n ||
-                            (n[a] = {
-                                id: e,
-                                permission: !0,
-                                type: c.Kw.ROLE
-                            }),
                         l in n ||
                             (n[l] = {
-                                id: i,
+                                id: e,
                                 permission: !0,
-                                type: c.Kw.CHANNEL
+                                type: d.Kw.ROLE
+                            }),
+                        i in n ||
+                            (n[i] = {
+                                id: r,
+                                permission: !0,
+                                type: d.Kw.CHANNEL
                             }),
                         n
                     );
-                })(e, null != l ? l : {}),
-            [l, e]
+                })(e, null != i ? i : {}),
+            [i, e]
         ),
-        v = (0, o.e7)(
-            [N.Z],
+        N = (0, s.e7)(
+            [h.Z],
             () => {
                 var e;
                 if (null == n) return;
-                let t = N.Z.getCommand(n);
+                let t = h.Z.getCommand(n);
                 return null !== (e = null == t ? void 0 : t.permissions) && void 0 !== e ? e : {};
             },
             [n]
         ),
-        _ = (0, o.e7)(
-            [N.Z],
+        O = (0, s.e7)(
+            [h.Z],
             () => {
                 var e;
-                return null == n ? N.Z.getEditedApplication() : null === (e = N.Z.getEditedCommand()) || void 0 === e ? void 0 : e.permissions;
+                return null == n ? h.Z.getEditedApplication() : null === (e = h.Z.getEditedCommand()) || void 0 === e ? void 0 : e.permissions;
             },
             [n]
         ),
-        j = null != n ? n : t,
-        C = null != n ? v : r,
-        I = i.useMemo(() => (null != _ ? _ : { ...(null != C ? C : {}) }), [_, C]),
-        Z = i.useMemo(() => Object.keys(I).length, [I]),
-        T = i.useMemo(() => (null == C || null == I ? null : !s().isEqual(C, I)), [C, I]);
+        y = null != n ? n : t,
+        _ = null != n ? N : o,
+        C = r.useMemo(() => (null != O ? O : v({}, null != _ ? _ : {})), [O, _]),
+        I = r.useMemo(() => Object.keys(C).length, [C]),
+        E = r.useMemo(() => (null == _ || null == C ? null : !a().isEqual(_, C)), [_, C]);
     return (
-        i.useEffect(() => {
-            j === t && (T ? d.Z.startEditingCommandPermissions(j) : d.Z.stopEditingCommandPermissions(j));
-        }, [t, T, j]),
+        r.useEffect(() => {
+            y === t && (E ? c.Z.startEditingCommandPermissions(y) : c.Z.stopEditingCommandPermissions(y));
+        }, [t, E, y]),
         {
-            originalApplicationPermissions: r,
-            originalCommandPermissions: v,
+            originalApplicationPermissions: o,
+            originalCommandPermissions: N,
             editedTargetPermissions: (function (e, t) {
-                let n = (0, o.e7)([h.Z], () => h.Z.getGuild(e), [e]);
-                a()(null != n, 'guild must be present to be editing its integration settings');
-                let l = (0, o.e7)([x.Z], () => x.Z.getHighestRole(n), [n]),
-                    r = (0, o.e7)([g.default], () => {
+                let n = (0, s.e7)([m.Z], () => m.Z.getGuild(e), [e]);
+                l()(null != n, 'guild must be present to be editing its integration settings');
+                let i = (0, s.e7)([b.Z], () => b.Z.getHighestRole(n), [n]),
+                    o = (0, s.e7)([g.default], () => {
                         var e;
                         return null === (e = g.default.getCurrentUser()) || void 0 === e ? void 0 : e.id;
                     });
-                a()(null != r, 'useComputePermissions: currentUserId must not be null');
-                let s = r === n.ownerId,
+                l()(null != o, 'useComputePermissions: currentUserId must not be null');
+                let a = o === n.ownerId,
                     {
-                        channelIds: d,
-                        roleIds: N,
-                        userIds: f
-                    } = i.useMemo(() => {
+                        channelIds: c,
+                        roleIds: h,
+                        userIds: x
+                    } = r.useMemo(() => {
                         let e = [],
                             n = [],
-                            i = [];
-                        for (let l of Object.values(t)) l.type === c.Kw.CHANNEL ? e.push(l.id) : l.type === c.Kw.ROLE ? n.push(l.id) : l.type === c.Kw.USER && i.push(l.id);
+                            r = [];
+                        for (let i of Object.values(t)) i.type === d.Kw.CHANNEL ? e.push(i.id) : i.type === d.Kw.ROLE ? n.push(i.id) : i.type === d.Kw.USER && r.push(i.id);
                         return {
                             channelIds: e,
                             roleIds: n,
-                            userIds: i
+                            userIds: r
                         };
                     }, [t]),
-                    v = (0, o.cj)(
+                    N = (0, s.cj)(
+                        [p.Z],
+                        () =>
+                            Object.fromEntries(
+                                c
+                                    .map(p.Z.getChannel)
+                                    .filter(f.lm)
+                                    .map((e) => [e.id, e])
+                            ),
+                        [c]
+                    ),
+                    O = (0, s.cj)(
                         [m.Z],
                         () =>
                             Object.fromEntries(
-                                d
-                                    .map(m.Z.getChannel)
-                                    .filter(p.lm)
+                                h
+                                    .map((t) => m.Z.getRole(e, t))
+                                    .filter(f.lm)
                                     .map((e) => [e.id, e])
                             ),
-                        [d]
+                        [h, e]
                     ),
-                    _ = (0, o.cj)(
-                        [h.Z],
-                        () =>
-                            Object.fromEntries(
-                                N.map((t) => h.Z.getRole(e, t))
-                                    .filter(p.lm)
-                                    .map((e) => [e.id, e])
-                            ),
-                        [N, e]
-                    ),
-                    j = (0, o.cj)(
+                    y = (0, s.cj)(
                         [g.default],
                         () =>
                             Object.fromEntries(
-                                f
+                                x
                                     .map(g.default.getUser)
-                                    .filter(p.lm)
+                                    .filter(f.lm)
                                     .map((e) => [e.id, e])
                             ),
-                        [f]
+                        [x]
                     );
-                return i.useMemo(() => {
+                return r.useMemo(() => {
                     let e = n.id,
-                        i = (0, u.bD)(n.id),
-                        a = {};
-                    for (let [r, o] of Object.entries(t)) {
+                        r = (0, u.bD)(n.id),
+                        l = {};
+                    for (let [o, s] of Object.entries(t)) {
                         let t = !1,
-                            d = !1;
-                        if (o.type === c.Kw.CHANNEL) {
-                            let e = o.id === i,
-                                n = v[o.id];
-                            (t = e || x.Z.can(b.Plq.VIEW_CHANNEL, n)), (d = !0);
-                        } else if (o.type === c.Kw.ROLE) {
-                            let i = o.id === e,
-                                a = _[o.id];
-                            (t = i || null != a), (d = s || i || x.Z.isRoleHigher(n, l, a));
-                        } else if (o.type === c.Kw.USER) {
-                            let e = j[o.id];
-                            (t = null != e), (d = null != e && (s || x.Z.canManageUser(b.Plq.USE_APPLICATION_COMMANDS, e, n)));
+                            c = !1;
+                        if (s.type === d.Kw.CHANNEL) {
+                            let e = s.id === r,
+                                n = N[s.id];
+                            (t = e || b.Z.can(j.Plq.VIEW_CHANNEL, n)), (c = !0);
+                        } else if (s.type === d.Kw.ROLE) {
+                            let r = s.id === e,
+                                l = O[s.id];
+                            (t = r || null != l), (c = a || r || b.Z.isRoleHigher(n, i, l));
+                        } else if (s.type === d.Kw.USER) {
+                            let e = y[s.id];
+                            (t = null != e), (c = null != e && (a || b.Z.canManageUser(j.Plq.USE_APPLICATION_COMMANDS, e, n)));
                         }
-                        a[r] = {
-                            ...o,
+                        l[o] = (function (e, t) {
+                            return (
+                                (t = null != t ? t : {}),
+                                Object.getOwnPropertyDescriptors
+                                    ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+                                    : (function (e, t) {
+                                          var n = Object.keys(e);
+                                          if (Object.getOwnPropertySymbols) {
+                                              var r = Object.getOwnPropertySymbols(e);
+                                              n.push.apply(n, r);
+                                          }
+                                          return n;
+                                      })(Object(t)).forEach(function (n) {
+                                          Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+                                      }),
+                                e
+                            );
+                        })(v({}, s), {
                             canRead: t,
-                            canWrite: d
-                        };
+                            canWrite: c
+                        });
                     }
-                    return a;
-                }, [v, n, l, s, t, _, j]);
-            })(e, I),
-            hasChanges: T,
-            selectedPermissionCount: Z
+                    return l;
+                }, [N, n, i, a, t, O, y]);
+            })(e, C),
+            hasChanges: E,
+            selectedPermissionCount: I
         }
     );
 }

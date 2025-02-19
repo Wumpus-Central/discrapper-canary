@@ -1,39 +1,40 @@
 n.r(t),
     n.d(t, {
-        PlatformTypes: () => i,
+        PlatformTypes: () => r,
         getNativePlatform: () => v,
-        getOS: () => y,
+        getOS: () => b,
         getPlatform: () => g,
         getPlatformName: () => E,
         isAndroid: () => h,
         isAndroidChrome: () => f,
-        isAndroidWeb: () => _,
-        isDesktop: () => c,
+        isAndroidWeb: () => p,
+        isDesktop: () => u,
         isIOS: () => m,
-        isLinux: () => u,
+        isLinux: () => c,
         isMac: () => l,
-        isMacWeb: () => p,
-        isPlatformEmbedded: () => a,
+        isMacWeb: () => _,
+        isPlatformEmbedded: () => o,
         isWeb: () => d,
-        isWindows: () => o
-    });
-var i = (function (e) {
+        isWindows: () => s
+    }),
+    n(301563);
+var r = (function (e) {
     return (e.WINDOWS = 'WINDOWS'), (e.OSX = 'OSX'), (e.LINUX = 'LINUX'), (e.WEB = 'WEB'), e;
 })({});
-let r = window.DiscordNative,
-    a = null != r,
-    s = null != r ? r.process.platform : '';
-function o() {
-    return /^win/.test(s);
+let i = window.DiscordNative,
+    o = null != i,
+    a = null != i ? i.process.platform : '';
+function s() {
+    return /^win/.test(a);
 }
 function l() {
-    return 'darwin' === s;
-}
-function u() {
-    return 'linux' === s;
+    return 'darwin' === a;
 }
 function c() {
-    return o() || l() || u();
+    return 'linux' === a;
+}
+function u() {
+    return s() || l() || c();
 }
 function d() {
     return 'WEB' === g();
@@ -41,36 +42,36 @@ function d() {
 function f() {
     return null != navigator.userAgent && null != navigator.userAgent.toLowerCase().match('(android ).+chrome/[.0-9]* mobile');
 }
-function _() {
+function p() {
     var e;
     return (null === (e = navigator.userAgent) || void 0 === e ? void 0 : e.match(/android/i)) != null;
 }
-function p() {
+function _() {
     var e;
     return (null === (e = navigator.userAgent) || void 0 === e ? void 0 : e.match(/Macintosh/i)) != null;
 }
 function h() {
-    return 'android' === s;
+    return 'android' === a;
 }
 function m() {
-    return 'ios' === s;
+    return 'ios' === a;
 }
 function g() {
-    return o() ? 'WINDOWS' : l() ? 'OSX' : u() ? 'LINUX' : 'WEB';
+    return s() ? 'WINDOWS' : l() ? 'OSX' : c() ? 'LINUX' : 'WEB';
 }
 function E() {
-    return s;
+    return a;
 }
 function v() {
-    switch (s) {
+    switch (a) {
         case 'ios':
         case 'android':
-            return s;
+            return a;
         default:
             return 'web';
     }
 }
-function y() {
+function b() {
     let { userAgent: e } = window.navigator;
     if (/Windows/i.test(e)) return /Phone/.test(e) ? 'windows mobile' : 'windows';
     if (/(iPhone|iPad|iPod)/.test(e)) return 'ios';

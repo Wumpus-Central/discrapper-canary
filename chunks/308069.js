@@ -1,8 +1,8 @@
-n.d(t, { Z: () => _ });
-var s = n(200651),
-    r = n(192379),
-    a = n(120356),
-    o = n.n(a),
+n.d(t, { Z: () => j });
+var r = n(200651),
+    o = n(192379),
+    s = n(120356),
+    a = n.n(s),
     i = n(642128),
     l = n(481060),
     c = n(617136),
@@ -10,39 +10,39 @@ var s = n(200651),
     u = n(497505),
     p = n(918701),
     m = n(685613),
-    x = n(670638),
-    h = n(341907),
-    g = n(303385),
-    f = n(388032),
-    v = n(145700);
-let _ = (e) => {
-    let { quest: t, expansionSpring: n, onCtxMenuSelect: a, onCtxMenuOpen: _, onCtxMenuClose: C, useReducedMotion: j, isExpanded: b, isExpansionAnimationComplete: T } = e,
-        E = (0, d.aM)(),
-        S = r.useCallback(() => {
-            (0, h.openDisclosureModal)(t, {
+    f = n(670638),
+    g = n(341907),
+    x = n(303385),
+    h = n(388032),
+    b = n(307582);
+let j = (e) => {
+    let { quest: t, expansionSpring: n, onCtxMenuSelect: s, onCtxMenuOpen: j, onCtxMenuClose: v, useReducedMotion: y, isExpanded: _, isExpansionAnimationComplete: C } = e,
+        O = (0, d.aM)(),
+        w = o.useCallback(() => {
+            (0, g.openDisclosureModal)(t, {
                 content: u.jn.QUEST_BAR_V2,
                 ctaContent: c.jZ.OPEN_DISCLOSURE
             });
         }, [t]),
-        N = r.useCallback(() => {
+        S = o.useCallback(() => {
             (0, p.FE)(t, {
                 content: u.jn.QUEST_BAR_V2,
                 ctaContent: c.jZ.OPEN_GAME_LINK,
-                impressionId: E
+                impressionId: O
             });
-        }, [E, t]),
-        y = b && T,
-        w = (0, s.jsx)(l.P3F, {
-            onClick: N,
-            className: o()(v.clickable, { [v.logo]: y }),
-            children: (0, s.jsx)(m.ZP, {
+        }, [O, t]),
+        P = _ && C,
+        N = (0, r.jsx)(l.P3F, {
+            onClick: S,
+            className: a()(b.clickable, { [b.logo]: P }),
+            children: (0, r.jsx)(m.ZP, {
                 quest: t,
-                logotypeClassName: o()(v.rewardHighlightLogotype),
+                logotypeClassName: a()(b.rewardHighlightLogotype),
                 withGameTile: !1
             })
         });
-    return (0, s.jsxs)(i.animated.div, {
-        className: o()(v.wrapper, v.rewardHighlightWrapper, { [v.interactable]: y }),
+    return (0, r.jsxs)(i.animated.div, {
+        className: a()(b.wrapper, b.rewardHighlightWrapper, { [b.interactable]: P }),
         style: {
             transform: (0, i.to)(
                 [
@@ -55,8 +55,8 @@ let _ = (e) => {
             )
         },
         children: [
-            (0, s.jsx)(i.animated.div, {
-                className: v.opaqueExpandedBackground,
+            (0, r.jsx)(i.animated.div, {
+                className: b.opaqueExpandedBackground,
                 style: {
                     opacity: n.to({
                         range: [0, 1],
@@ -65,15 +65,15 @@ let _ = (e) => {
                     backdropFilter: n.to([0, 1], [0, 1]).to((e) => 'blur('.concat(10 * e, 'px) brightness(').concat(1 - e / 4, ')'))
                 }
             }),
-            (0, s.jsx)(g.Z, {
+            (0, r.jsx)(x.Z, {
                 quest: t,
                 expansionSpring: n,
-                isFullyExpanded: y,
-                partnerBranding: w,
-                useReducedMotion: j
+                isFullyExpanded: P,
+                partnerBranding: N,
+                useReducedMotion: y
             }),
-            (0, s.jsxs)(i.animated.div, {
-                className: v.promotedBadgeWrapper,
+            (0, r.jsxs)(i.animated.div, {
+                className: b.promotedBadgeWrapper,
                 style: {
                     opacity: n.to({
                         range: [0, 1],
@@ -81,40 +81,83 @@ let _ = (e) => {
                     })
                 },
                 children: [
-                    (0, s.jsxs)(l.P3F, {
-                        className: v.promotedBadge,
-                        onClick: S,
+                    (0, r.jsxs)(l.P3F, {
+                        className: b.promotedBadge,
+                        onClick: w,
                         children: [
-                            (0, s.jsx)(l.Text, {
+                            (0, r.jsx)(l.Text, {
                                 color: 'always-white',
                                 variant: 'text-xs/normal',
-                                children: f.intl.string(f.t.o6FLcH)
+                                children: h.NW.string(h.t.o6FLcH)
                             }),
-                            (0, s.jsx)(l.idN, {
+                            (0, r.jsx)(l.idN, {
                                 color: l.TVs.colors.WHITE,
-                                className: v.promotedBadgeIcon
+                                className: b.promotedBadgeIcon
                             })
                         ]
                     }),
-                    (0, s.jsx)(x.r, {
-                        onOpen: _,
-                        onClose: C,
-                        onSelect: a,
+                    (0, r.jsx)(f.r, {
+                        onOpen: j,
+                        onClose: v,
+                        onSelect: s,
                         questContent: u.jn.QUEST_BAR_V2,
                         quest: t,
                         shouldShowDisclosure: !0,
                         showShareLink: !0,
-                        children: (e) =>
-                            (0, s.jsx)(l.P3F, {
-                                ...e,
-                                className: v.submenuWrapper,
-                                'aria-label': f.intl.string(f.t.DEoVWV),
-                                children: (0, s.jsx)(l.xhG, {
-                                    size: 'md',
-                                    color: 'currentColor',
-                                    className: o()(v.submenuIcon, v.white)
-                                })
-                            })
+                        children: (e) => {
+                            var t, n;
+                            return (0, r.jsx)(
+                                l.P3F,
+                                ((t = (function (e) {
+                                    for (var t = 1; t < arguments.length; t++) {
+                                        var n = null != arguments[t] ? arguments[t] : {},
+                                            r = Object.keys(n);
+                                        'function' == typeof Object.getOwnPropertySymbols &&
+                                            (r = r.concat(
+                                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                })
+                                            )),
+                                            r.forEach(function (t) {
+                                                var r;
+                                                (r = n[t]),
+                                                    t in e
+                                                        ? Object.defineProperty(e, t, {
+                                                              value: r,
+                                                              enumerable: !0,
+                                                              configurable: !0,
+                                                              writable: !0
+                                                          })
+                                                        : (e[t] = r);
+                                            });
+                                    }
+                                    return e;
+                                })({}, e)),
+                                (n = n =
+                                    {
+                                        className: b.submenuWrapper,
+                                        'aria-label': h.NW.string(h.t.DEoVWV),
+                                        children: (0, r.jsx)(l.xhG, {
+                                            size: 'md',
+                                            color: 'currentColor',
+                                            className: a()(b.submenuIcon, b.white)
+                                        })
+                                    }),
+                                Object.getOwnPropertyDescriptors
+                                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                                    : (function (e, t) {
+                                          var n = Object.keys(e);
+                                          if (Object.getOwnPropertySymbols) {
+                                              var r = Object.getOwnPropertySymbols(e);
+                                              n.push.apply(n, r);
+                                          }
+                                          return n;
+                                      })(Object(n)).forEach(function (e) {
+                                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                                      }),
+                                t)
+                            );
+                        }
                     })
                 ]
             })

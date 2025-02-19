@@ -1,38 +1,73 @@
-n.d(t, { Z: () => f }), n(47120), n(411104);
-var i = n(259443),
-    r = n(911284),
-    a = n(598077),
-    s = n(314897),
-    o = n(456644),
+n.d(t, { Z: () => _ }), n(47120), n(411104);
+var r = n(259443),
+    i = n(911284),
+    o = n(598077),
+    a = n(314897),
+    s = n(456644),
     l = n(484459);
-let u = 300,
-    c = new i.Yd('preloadUserProfileForPopout'),
-    d = async (e) => {
-        let t = s.default.getId() === e,
-            { recentActivityEnabled: n } = (0, o.G)({ location: 'preloadUserProfileForPopout' });
+function c(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function u(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                c(e, t, n[t]);
+            });
+    }
+    return e;
+}
+let d = 300,
+    f = new r.Yd('preloadUserProfileForPopout'),
+    p = async (e) => {
+        let t = a.default.getId() === e,
+            { recentActivityEnabled: n } = (0, s.G)({ location: 'preloadUserProfileForPopout' });
         if (n && t)
             try {
-                await Promise.race([(0, r.Z)(e), new Promise((e) => setTimeout(e, u))]);
+                await Promise.race([(0, i.Z)(e), new Promise((e) => setTimeout(e, d))]);
             } catch (t) {
-                c.log('Failed to fetch content inventory outbox for '.concat(e, ':'), t);
+                f.log('Failed to fetch content inventory outbox for '.concat(e, ':'), t);
             }
     };
-async function f() {
+async function _() {
     let e, t, n;
-    for (var i = arguments.length, r = Array(i), s = 0; s < i; s++) r[s] = arguments[s];
-    let o = r[0],
-        u = r[1];
-    if ('string' == typeof o && ('string' == typeof u || null == u)) (e = o), (t = u), (n = r[2]);
-    else if (o instanceof a.Z && ('object' == typeof u || null == u)) (e = o.id), (t = o.getAvatarURL(void 0, 80)), (n = u);
+    for (var r = arguments.length, i = Array(r), a = 0; a < r; a++) i[a] = arguments[a];
+    let s = i[0],
+        c = i[1];
+    if ('string' == typeof s && ('string' == typeof c || null == c)) (e = s), (t = c), (n = i[2]);
+    else if (s instanceof o.Z && ('object' == typeof c || null == c)) (e = s.id), (t = s.getAvatarURL(void 0, 80)), (n = c);
     else throw Error('Invalid arguments');
     if (null == e) return Promise.resolve();
-    let [c] = await Promise.all([
-        (0, l.Z)(e, t, {
-            withMutualFriends: !0,
-            withMutualGuilds: !0,
-            ...n
-        }),
-        d(e)
+    let [d] = await Promise.all([
+        (0, l.Z)(
+            e,
+            t,
+            u(
+                {
+                    withMutualFriends: !0,
+                    withMutualGuilds: !0
+                },
+                n
+            )
+        ),
+        p(e)
     ]);
-    return c;
+    return d;
 }

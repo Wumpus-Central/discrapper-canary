@@ -1,24 +1,51 @@
-n.d(t, { Z: () => c });
-var l = n(200651),
+n.d(t, { Z: () => u });
+var r = n(200651),
     i = n(192379),
-    r = n(576125),
+    l = n(576125),
     a = n(465858),
-    s = n(112843),
-    o = n(524484);
-function u(e) {
+    o = n(112843),
+    s = n(524484);
+function c(e) {
     let { callTileRef: t, isFiring: n } = e,
-        l = (0, s.Z)(),
-        r = (0, a.Z)(t);
+        r = (0, o.Z)(),
+        l = (0, a.Z)(t);
     return (
         i.useEffect(() => {
-            n && null != r && null != t && l.fire(r.x + t.clientWidth / 2, r.y + t.clientHeight / 2, { countMultiplier: 4 });
-        }, [t, l, n, r]),
+            n && null != l && null != t && r.fire(l.x + t.clientWidth / 2, l.y + t.clientHeight / 2, { countMultiplier: 4 });
+        }, [t, r, n, l]),
         null
     );
 }
-function c(e) {
-    return (0, l.jsx)(r.Z, {
-        confettiLocation: o.Hn.CALL_TILE,
-        children: (0, l.jsx)(u, { ...e })
+function u(e) {
+    return (0, r.jsx)(l.Z, {
+        confettiLocation: s.Hn.CALL_TILE,
+        children: (0, r.jsx)(
+            c,
+            (function (e) {
+                for (var t = 1; t < arguments.length; t++) {
+                    var n = null != arguments[t] ? arguments[t] : {},
+                        r = Object.keys(n);
+                    'function' == typeof Object.getOwnPropertySymbols &&
+                        (r = r.concat(
+                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                            })
+                        )),
+                        r.forEach(function (t) {
+                            var r;
+                            (r = n[t]),
+                                t in e
+                                    ? Object.defineProperty(e, t, {
+                                          value: r,
+                                          enumerable: !0,
+                                          configurable: !0,
+                                          writable: !0
+                                      })
+                                    : (e[t] = r);
+                        });
+                }
+                return e;
+            })({}, e)
+        )
     });
 }

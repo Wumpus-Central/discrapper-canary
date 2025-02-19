@@ -1,33 +1,72 @@
-l.d(n, { Z: () => o });
-var t = l(423875),
-    i = l(740605),
-    r = l(206583),
-    a = l(616922),
-    s = l(388032);
-function o(e) {
-    let n,
-        { entry: l, baseEntryData: o } = e,
-        { provider: u, image_url: c } = l.extra.media,
-        d = l.extra.artist.name,
-        m = {
-            onClick: () => (0, i.o)(a.Hw.ALBUM, l.extra.media.external_parent_id),
-            ariaDescription: s.intl.formatToPlainString(s.t.xTsar6, { itemName: l.extra.media.parent_title })
+r.d(t, { Z: () => c });
+var n = r(423875),
+    l = r(740605),
+    i = r(206583),
+    o = r(616922),
+    a = r(388032);
+function c(e) {
+    var t, r;
+    let c,
+        { entry: s, baseEntryData: u } = e,
+        { provider: d, image_url: p } = s.extra.media,
+        b = s.extra.artist.name,
+        f = {
+            onClick: () => (0, l.o)(o.Hw.ALBUM, s.extra.media.external_parent_id),
+            ariaDescription: a.NW.formatToPlainString(a.t.xTsar6, { itemName: s.extra.media.parent_title })
         },
-        h = {
-            onClick: () => (0, i.o)(a.Hw.ARTIST, l.extra.artist.external_id),
-            ariaDescription: s.intl.formatToPlainString(s.t.xTsar6, { itemName: d })
+        O = {
+            onClick: () => (0, l.o)(o.Hw.ARTIST, s.extra.artist.external_id),
+            ariaDescription: a.NW.formatToPlainString(a.t.xTsar6, { itemName: b })
         };
     return (
-        u === t.p.SPOTIFY && (n = { type: r.kG.SPOTIFY }),
-        {
-            ...o,
-            title: d,
-            thumbnailUrl: c,
-            titleClickable: h,
-            subtitleClickable: m,
-            thumbnailClickable: m,
-            userDescription: s.t.CcVI1d,
-            providerIconProps: n
-        }
+        d === n.p.SPOTIFY && (c = { type: i.kG.SPOTIFY }),
+        (t = (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var r = null != arguments[t] ? arguments[t] : {},
+                    n = Object.keys(r);
+                'function' == typeof Object.getOwnPropertySymbols &&
+                    (n = n.concat(
+                        Object.getOwnPropertySymbols(r).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                        })
+                    )),
+                    n.forEach(function (t) {
+                        var n;
+                        (n = r[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: n,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0
+                                  })
+                                : (e[t] = n);
+                    });
+            }
+            return e;
+        })({}, u)),
+        (r = r =
+            {
+                title: b,
+                thumbnailUrl: p,
+                titleClickable: O,
+                subtitleClickable: f,
+                thumbnailClickable: f,
+                userDescription: a.t.CcVI1d,
+                providerIconProps: c
+            }),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+            : (function (e, t) {
+                  var r = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var n = Object.getOwnPropertySymbols(e);
+                      r.push.apply(r, n);
+                  }
+                  return r;
+              })(Object(r)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+              }),
+        t
     );
 }

@@ -1,46 +1,46 @@
 n.d(t, {
-    J: () => I,
-    y: () => x
+    J: () => O,
+    y: () => _
 });
-var i = n(200651),
-    l = n(192379),
-    r = n(512722),
-    a = n.n(r),
-    o = n(481060),
+var r = n(200651),
+    i = n(192379),
+    l = n(512722),
+    o = n.n(l),
+    a = n(481060),
     s = n(24124),
     c = n(636449),
-    d = n(620662),
-    u = n(513202),
-    h = n(311352),
-    p = n(803647),
-    m = n(131704),
+    u = n(620662),
+    d = n(513202),
+    p = n(311352),
+    h = n(803647),
+    f = n(131704),
     g = n(626135),
-    f = n(870569),
-    _ = n(981631),
+    m = n(870569),
+    b = n(981631),
     v = n(388032),
-    C = n(594102);
-function x(e, t, n) {
-    return null != e && (null != n ? n.applicationId === e.id : null != t && t.application_id === e.id && t.type === _.IIU.PLAYING && (0, d.Z)(t, _.xjy.JOIN));
+    y = n(12990);
+function _(e, t, n) {
+    return null != e && (null != n ? n.applicationId === e.id : null != t && t.application_id === e.id && t.type === b.IIU.PLAYING && (0, u.Z)(t, b.xjy.JOIN));
 }
-let I = l.memo(function (e) {
+let O = i.memo(function (e) {
     let t,
-        r,
-        d,
-        I,
-        { stream: Z, canGoLive: b, guildId: S, isStreaming: N, channel: E, canStream: j, runningGame: y, embeddedActivity: T, activity: A, application: P, analyticsContext: R } = e,
-        w = x(P, A, T),
-        L = l.useCallback(() => {
-            a()(null != A, 'Received null activity'),
-                g.default.track(_.rMx.OPEN_MODAL, {
+        l,
+        u,
+        O,
+        { stream: j, canGoLive: C, guildId: x, isStreaming: P, channel: S, canStream: I, runningGame: N, embeddedActivity: Z, activity: w, application: E, analyticsContext: T } = e,
+        A = _(E, w, Z),
+        D = i.useCallback(() => {
+            o()(null != w, 'Received null activity'),
+                g.default.track(b.rMx.OPEN_MODAL, {
                     type: 'Send Join Invite',
-                    application_id: A.application_id,
-                    location: R.location
+                    application_id: w.application_id,
+                    location: T.location
                 }),
-                (0, s.h7)(A, !1);
-        }, [A, R]),
-        M = l.useCallback(
+                (0, s.h7)(w, !1);
+        }, [w, T]),
+        R = i.useCallback(
             (e, t) => () => {
-                u.Z.leaveActivity({
+                d.Z.leaveActivity({
                     location: t,
                     applicationId: e,
                     showFeedback: !0
@@ -48,57 +48,100 @@ let I = l.memo(function (e) {
             },
             []
         ),
-        D = l.useCallback(() => {
-            (0, p.Z)(Z);
-        }, [Z]),
-        G = l.useCallback(() => {
-            let e = null != E && (0, m.vd)(E.type) ? E : null,
-                t = null != e ? e.getGuildId() : S;
-            (0, o.ZDy)(async () => {
-                let { default: e } = await Promise.all([n.e('93382'), n.e('79477'), n.e('8211')]).then(n.bind(n, 60594));
-                return (n) =>
-                    (0, i.jsx)(e, {
-                        ...n,
-                        selectSource: !1,
-                        guildId: t,
-                        analyticsLocation: _.Sbl.ACTIVITY_PANEL
-                    });
+        L = i.useCallback(() => {
+            (0, h.Z)(j);
+        }, [j]),
+        M = i.useCallback(() => {
+            let e = null != S && (0, f.vd)(S.type) ? S : null,
+                t = null != e ? e.getGuildId() : x;
+            (0, a.ZDy)(async () => {
+                let { default: e } = await Promise.all([n.e('93382'), n.e('79477'), n.e('93290')]).then(n.bind(n, 60594));
+                return (n) => {
+                    var i, l;
+                    return (0, r.jsx)(
+                        e,
+                        ((i = (function (e) {
+                            for (var t = 1; t < arguments.length; t++) {
+                                var n = null != arguments[t] ? arguments[t] : {},
+                                    r = Object.keys(n);
+                                'function' == typeof Object.getOwnPropertySymbols &&
+                                    (r = r.concat(
+                                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                        })
+                                    )),
+                                    r.forEach(function (t) {
+                                        var r;
+                                        (r = n[t]),
+                                            t in e
+                                                ? Object.defineProperty(e, t, {
+                                                      value: r,
+                                                      enumerable: !0,
+                                                      configurable: !0,
+                                                      writable: !0
+                                                  })
+                                                : (e[t] = r);
+                                    });
+                            }
+                            return e;
+                        })({}, n)),
+                        (l = l =
+                            {
+                                selectSource: !1,
+                                guildId: t,
+                                analyticsLocation: b.Sbl.ACTIVITY_PANEL
+                            }),
+                        Object.getOwnPropertyDescriptors
+                            ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
+                            : (function (e, t) {
+                                  var n = Object.keys(e);
+                                  if (Object.getOwnPropertySymbols) {
+                                      var r = Object.getOwnPropertySymbols(e);
+                                      n.push.apply(n, r);
+                                  }
+                                  return n;
+                              })(Object(l)).forEach(function (e) {
+                                  Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
+                              }),
+                        i)
+                    );
+                };
             });
-        }, [E, S]),
+        }, [S, x]),
         k =
-            (null != y || null == T || (0, c.R)()) && (N || b)
-                ? (N ? ((t = !1), (r = D), (d = o.g5r), (I = v.intl.string(v.t.S5anIS))) : j ? ((t = !1), (r = G), (d = o.hGI), (I = null != y ? v.intl.formatToPlainString(v.t.AB5gT0, { game: y.name }) : v.intl.string(v.t.FeUKeH))) : ((t = !0), (r = null), (d = o.hGI), (I = null != E && (0, m.vd)(E.type) ? v.intl.string(v.t.uQn9Bw) : null != S ? v.intl.string(v.t.fBXEoK) : v.intl.string(v.t.n3feND))),
-                  (0, i.jsx)('div', {
-                      className: C.panelButtonContainer,
-                      children: (0, i.jsx)(f.Z, {
-                          tooltipText: I,
+            (null != N || null == Z || (0, c.R)()) && (P || C)
+                ? (P ? ((t = !1), (l = L), (u = a.g5r), (O = v.NW.string(v.t.S5anIS))) : I ? ((t = !1), (l = M), (u = a.hGI), (O = null != N ? v.NW.formatToPlainString(v.t.AB5gT0, { game: N.name }) : v.NW.string(v.t.FeUKeH))) : ((t = !0), (l = null), (u = a.hGI), (O = null != S && (0, f.vd)(S.type) ? v.NW.string(v.t.uQn9Bw) : null != x ? v.NW.string(v.t.fBXEoK) : v.NW.string(v.t.n3feND))),
+                  (0, r.jsx)('div', {
+                      className: y.panelButtonContainer,
+                      children: (0, r.jsx)(m.Z, {
+                          tooltipText: O,
                           disabled: t,
-                          onClick: r,
-                          icon: d
+                          onClick: l,
+                          icon: u
                       })
                   }))
                 : null,
-        B =
-            w && null == T
-                ? (0, i.jsx)(f.Z, {
-                      tooltipText: v.intl.string(v.t['hC/Ze3']),
-                      onClick: L,
-                      icon: o.ejJ
+        G =
+            A && null == Z
+                ? (0, r.jsx)(m.Z, {
+                      tooltipText: v.NW.string(v.t['hC/Ze3']),
+                      onClick: D,
+                      icon: a.ejJ
                   })
                 : null,
-        O =
-            null == T || null == E
+        B =
+            null == Z || null == S
                 ? null
-                : (0, i.jsx)(f.Z, {
-                      tooltipText: v.intl.string(v.t['R/FK4O']),
-                      onClick: M(T.applicationId, T.location),
-                      icon: o.PBZ
+                : (0, r.jsx)(m.Z, {
+                      tooltipText: v.NW.string(v.t['R/FK4O']),
+                      onClick: R(Z.applicationId, Z.location),
+                      icon: a.PBZ
                   }),
-        U = null == Z ? null : (0, i.jsx)(h.Z, {});
-    return null == k && null == B && null == O
+        U = null == j ? null : (0, r.jsx)(p.Z, {});
+    return null == k && null == G && null == B
         ? null
-        : (0, i.jsxs)('div', {
-              className: C.actions,
-              children: [k, B, null != O ? O : U]
+        : (0, r.jsxs)('div', {
+              className: y.actions,
+              children: [k, G, null != B ? B : U]
           });
 });

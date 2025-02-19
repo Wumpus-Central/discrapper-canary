@@ -1,75 +1,104 @@
 n.d(t, {
-    Ne: () => h,
-    Ny: () => p,
-    Or: () => m,
+    Ne: () => p,
+    Ny: () => h,
+    Or: () => f,
     jt: () => g
 }),
     n(47120);
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var l = n(120356),
-    r = n.n(l),
-    a = n(481060),
-    o = n(44315),
+var i = n(120356),
+    l = n.n(i),
+    o = n(481060),
+    a = n(44315),
     s = n(246364),
     c = n(460562),
-    d = n(981631),
-    u = n(557070);
-function h(e, t) {
-    return (0, i.jsx)(a.mAB, {
+    u = n(981631),
+    d = n(626050);
+function p(e, t) {
+    return (0, r.jsx)(o.mAB, {
         count: e,
         color: t
     });
 }
-function p() {
-    return (0, i.jsx)(a.G2e, {
-        icon: (0, a.GSL)(c.Z),
+function h() {
+    return (0, r.jsx)(o.G2e, {
+        icon: (0, o.GSL)(c.Z),
         disableColor: !0,
-        className: u.unavailableBadge
+        className: d.unavailableBadge
     });
 }
-function m(e) {
+function f(e) {
     let t,
-        { audio: n, video: i, screenshare: l, isCurrentUserConnected: r, liveStage: o, activeEvent: s, activity: c } = e;
-    if (s) t = a.Que;
-    else if (o) t = a.ewx;
-    else if (c) t = a.nG3;
-    else if (l) t = a.pzj;
-    else if (i) t = a.Odl;
+        { audio: n, video: r, screenshare: i, isCurrentUserConnected: l, liveStage: a, activeEvent: s, activity: c } = e;
+    if (s) t = o.Que;
+    else if (a) t = o.ewx;
+    else if (c) t = o.nG3;
+    else if (i) t = o.pzj;
+    else if (r) t = o.Odl;
     else {
         if (!n) return null;
-        t = a.gj8;
+        t = o.gj8;
     }
-    return f({
+    return m({
         icon: t,
-        isCurrentUserConnected: r
+        isCurrentUserConnected: l
     });
 }
 function g(e) {
     let { guildJoinRequestStatus: t } = e,
-        [n, i] = (function (e) {
+        [n, r] = (function (e) {
             switch (e) {
                 case s.wB.SUBMITTED:
-                    return [void 0, a.T39];
+                    return [void 0, o.T39];
                 case s.wB.REJECTED:
-                    return [d.Ilk.RED_400, a.Dio];
+                    return [u.Ilk.RED_400, o.Dio];
                 case s.wB.APPROVED:
-                    return [d.Ilk.GREEN_360, a.dz2];
+                    return [u.Ilk.GREEN_360, o.dz2];
                 default:
-                    return [void 0, a.vdY];
+                    return [void 0, o.vdY];
             }
         })(t);
-    return f({
-        icon: i,
+    return m({
+        icon: r,
         color: n
     });
 }
-function f(e) {
-    let { icon: t, color: n, isCurrentUserConnected: l } = e,
-        s = null == n ? { disableColor: !0 } : { color: (0, o.Lq)(n) };
-    return (0, i.jsx)(a.G2e, {
-        icon: t,
-        className: r()(u.iconBadge, { [u.isCurrentUserConnected]: l }),
-        ...s
-    });
+function m(e) {
+    let { icon: t, color: n, isCurrentUserConnected: i } = e,
+        s = null == n ? { disableColor: !0 } : { color: (0, a.Lq)(n) };
+    return (0, r.jsx)(
+        o.G2e,
+        (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    r = Object.keys(n);
+                'function' == typeof Object.getOwnPropertySymbols &&
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        })
+                    )),
+                    r.forEach(function (t) {
+                        var r;
+                        (r = n[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: r,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0
+                                  })
+                                : (e[t] = r);
+                    });
+            }
+            return e;
+        })(
+            {
+                icon: t,
+                className: l()(d.iconBadge, { [d.isCurrentUserConnected]: i })
+            },
+            s
+        )
+    );
 }

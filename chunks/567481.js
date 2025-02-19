@@ -1,27 +1,27 @@
-n.d(t, { Z: () => C }), n(47120);
-var i = n(200651);
+n.d(t, { Z: () => O }), n(47120);
+var r = n(200651);
 n(192379);
-var l = n(481060),
-    r = n(570140),
-    a = n(24124),
-    s = n(447543),
-    o = n(13245),
-    d = n(596223),
-    c = n(710845),
-    u = n(293273),
-    h = n(885110),
-    m = n(996106),
-    p = n(914946),
-    g = n(452426),
-    _ = n(852926),
-    f = n(186901),
-    E = n(981631);
-let I = new c.Z('RPCCommandsOverlay'),
-    C = {
-        [E.Etm.SET_OVERLAY_LOCKED]: {
-            scope: f.lH,
+var i = n(481060),
+    l = n(570140),
+    o = n(24124),
+    a = n(447543),
+    s = n(13245),
+    c = n(596223),
+    u = n(710845),
+    d = n(293273),
+    p = n(885110),
+    h = n(996106),
+    g = n(914946),
+    f = n(452426),
+    m = n(852926),
+    b = n(186901),
+    _ = n(981631);
+let E = new u.Z('RPCCommandsOverlay'),
+    O = {
+        [_.Etm.SET_OVERLAY_LOCKED]: {
+            scope: b.lH,
             validation: (e) =>
-                (0, g.Z)(e)
+                (0, f.Z)(e)
                     .required()
                     .keys({
                         locked: e.boolean().required(),
@@ -30,48 +30,48 @@ let I = new c.Z('RPCCommandsOverlay'),
             handler(e) {
                 let {
                     args: { locked: t, pid: n },
-                    socket: { application: i }
+                    socket: { application: r }
                 } = e;
                 if (
-                    (I.verbose('RPCCommands.SET_OVERLAY_LOCKED', {
+                    (E.verbose('RPCCommands.SET_OVERLAY_LOCKED', {
                         locked: t,
                         pid: n
                     }),
-                    null == i.id)
+                    null == r.id)
                 )
-                    throw new m.Z({ errorCode: E.lTL.INVALID_COMMAND }, 'No application.');
-                o.Z.setInputLocked(t, n);
+                    throw new h.Z({ errorCode: _.lTL.INVALID_COMMAND }, 'No application.');
+                s.Z.setInputLocked(t, n);
             }
         },
-        [E.Etm.OPEN_OVERLAY_ACTIVITY_INVITE]: {
-            scope: f.lH,
+        [_.Etm.OPEN_OVERLAY_ACTIVITY_INVITE]: {
+            scope: b.lH,
             validation: (e) =>
-                (0, g.Z)(e)
+                (0, f.Z)(e)
                     .required()
                     .keys({
-                        type: e.number().required().valid([E.mFx.JOIN]),
+                        type: e.number().required().valid([_.mFx.JOIN]),
                         pid: e.number().min(0).required()
                     }),
             handler(e) {
                 let {
                         socket: t,
-                        args: { type: n, pid: i }
+                        args: { type: n, pid: r }
                     } = e,
-                    l = t.application.id;
-                if (null == l) throw new m.Z({ errorCode: E.lTL.INVALID_COMMAND }, 'No application.');
-                let r = u.Z.getApplicationActivity(l);
-                if (null == r || null == r.secrets || !(0, p.t9)(n, r.party, r.secrets)) throw new m.Z({ errorCode: E.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure an activity includes a party and appropriate secret.');
-                let { lock: s, context: o } = (0, _.jU)(i),
-                    c = (0, d.Z)(r, h.Z);
-                return (0, a.h7)(r, c, o).then(() => {
-                    if ((s(), c)) throw new m.Z({ errorCode: E.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure user does have have privacy enabled.');
+                    i = t.application.id;
+                if (null == i) throw new h.Z({ errorCode: _.lTL.INVALID_COMMAND }, 'No application.');
+                let l = d.Z.getApplicationActivity(i);
+                if (null == l || null == l.secrets || !(0, g.t9)(n, l.party, l.secrets)) throw new h.Z({ errorCode: _.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure an activity includes a party and appropriate secret.');
+                let { lock: a, context: s } = (0, m.jU)(r),
+                    u = (0, c.Z)(l, p.Z);
+                return (0, o.h7)(l, u, s).then(() => {
+                    if ((a(), u)) throw new h.Z({ errorCode: _.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure user does have have privacy enabled.');
                 });
             }
         },
-        [E.Etm.OPEN_OVERLAY_GUILD_INVITE]: {
-            scope: f.lH,
+        [_.Etm.OPEN_OVERLAY_GUILD_INVITE]: {
+            scope: b.lH,
             validation: (e) =>
-                (0, g.Z)(e)
+                (0, f.Z)(e)
                     .required()
                     .keys({
                         code: e.string().required(),
@@ -80,51 +80,94 @@ let I = new c.Z('RPCCommandsOverlay'),
             handler(e) {
                 let {
                     args: { code: t, pid: n },
-                    socket: i
+                    socket: r
                 } = e;
-                if (null == i.application.id) throw new m.Z({ errorCode: E.lTL.INVALID_COMMAND }, 'No application.');
-                return s.Z.resolveInvite(t, 'Game SDK').then((e) => {
-                    let { invite: t, code: i } = e;
-                    if (null == t) throw new m.Z({ errorCode: E.lTL.INVALID_INVITE }, 'Invalid invite id: '.concat(i));
-                    let { context: l, lock: a } = (0, _.jU)(n);
+                if (null == r.application.id) throw new h.Z({ errorCode: _.lTL.INVALID_COMMAND }, 'No application.');
+                return a.Z.resolveInvite(t, 'Game SDK').then((e) => {
+                    let { invite: t, code: r } = e;
+                    if (null == t) throw new h.Z({ errorCode: _.lTL.INVALID_INVITE }, 'Invalid invite id: '.concat(r));
+                    let { context: i, lock: o } = (0, m.jU)(n);
                     return new Promise((e) => {
-                        r.Z.dispatch({
+                        l.Z.dispatch({
                             type: 'INVITE_MODAL_OPEN',
                             invite: t,
-                            code: i,
-                            context: l,
+                            code: r,
+                            context: i,
                             resolve: e
                         });
-                    }).then(a);
+                    }).then(o);
                 });
             }
         },
-        [E.Etm.OPEN_OVERLAY_VOICE_SETTINGS]: {
-            scope: f.lH,
+        [_.Etm.OPEN_OVERLAY_VOICE_SETTINGS]: {
+            scope: b.lH,
             validation: (e) =>
-                (0, g.Z)(e)
+                (0, f.Z)(e)
                     .required()
                     .keys({ pid: e.number().min(0).required() }),
             handler(e) {
                 let {
                         args: { pid: t },
-                        socket: r
+                        socket: l
                     } = e,
-                    a = r.application.id;
-                if (null == a) throw new m.Z({ errorCode: E.lTL.INVALID_COMMAND }, 'No application.');
-                let { lock: s } = (0, _.jU)(t);
+                    o = l.application.id;
+                if (null == o) throw new h.Z({ errorCode: _.lTL.INVALID_COMMAND }, 'No application.');
+                let { lock: a } = (0, m.jU)(t);
                 return new Promise((e) => {
-                    (0, l.ZDy)(async () => {
+                    (0, i.ZDy)(async () => {
                         let { default: t } = await n.e('45406').then(n.bind(n, 344516));
-                        return (n) =>
-                            (0, i.jsx)(t, {
-                                ...n,
-                                mediaEngineContext: a,
-                                title: r.application.name,
-                                onClose: () => {
-                                    n.onClose(), s(), e();
-                                }
-                            });
+                        return (n) => {
+                            var i, s;
+                            return (0, r.jsx)(
+                                t,
+                                ((i = (function (e) {
+                                    for (var t = 1; t < arguments.length; t++) {
+                                        var n = null != arguments[t] ? arguments[t] : {},
+                                            r = Object.keys(n);
+                                        'function' == typeof Object.getOwnPropertySymbols &&
+                                            (r = r.concat(
+                                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                })
+                                            )),
+                                            r.forEach(function (t) {
+                                                var r;
+                                                (r = n[t]),
+                                                    t in e
+                                                        ? Object.defineProperty(e, t, {
+                                                              value: r,
+                                                              enumerable: !0,
+                                                              configurable: !0,
+                                                              writable: !0
+                                                          })
+                                                        : (e[t] = r);
+                                            });
+                                    }
+                                    return e;
+                                })({}, n)),
+                                (s = s =
+                                    {
+                                        mediaEngineContext: o,
+                                        title: l.application.name,
+                                        onClose: () => {
+                                            n.onClose(), a(), e();
+                                        }
+                                    }),
+                                Object.getOwnPropertyDescriptors
+                                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(s))
+                                    : (function (e, t) {
+                                          var n = Object.keys(e);
+                                          if (Object.getOwnPropertySymbols) {
+                                              var r = Object.getOwnPropertySymbols(e);
+                                              n.push.apply(n, r);
+                                          }
+                                          return n;
+                                      })(Object(s)).forEach(function (e) {
+                                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(s, e));
+                                      }),
+                                i)
+                            );
+                        };
                     });
                 });
             }

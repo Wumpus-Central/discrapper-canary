@@ -1,27 +1,52 @@
-n.d(t, { Z: () => x });
-var i = n(200651);
+n.d(t, { Z: () => f });
+var r = n(200651);
 n(192379);
-var s = n(120356),
-    r = n.n(s),
-    l = n(512722),
-    a = n.n(l),
+var i = n(120356),
+    s = n.n(i),
+    a = n(512722),
+    l = n.n(a),
     o = n(442837),
     c = n(481060),
     d = n(600164),
     u = n(594174),
     m = n(418632),
     g = n(388032),
-    h = n(378529);
-function x(e) {
-    let { unclaimedNotice: t, unverifiedNotice: s, className: l } = e,
+    p = n(400820);
+function h(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function f(e) {
+    let { unclaimedNotice: t, unverifiedNotice: i, className: a } = e,
         {
-            isClaimed: x,
-            isVerified: _,
-            hasEmail: p
+            isClaimed: f,
+            isVerified: N,
+            hasEmail: x
         } = (0, o.cj)([u.default], () => {
             let e = u.default.getCurrentUser();
             return (
-                a()(null != e, 'EmailNotice: currentUser cannot be undefined'),
+                l()(null != e, 'EmailNotice: currentUser cannot be undefined'),
                 {
                     isClaimed: e.isClaimed(),
                     isVerified: e.verified,
@@ -29,71 +54,71 @@ function x(e) {
                 }
             );
         });
-    function E() {
+    function b() {
         (0, c.ZDy)(async () => {
-            let { default: e } = await Promise.all([n.e('9343'), n.e('73669')]).then(n.bind(n, 642298));
-            return (t) => (0, i.jsx)(e, { ...t });
+            let { default: e } = await Promise.all([n.e('9343'), n.e('8850')]).then(n.bind(n, 642298));
+            return (t) => (0, r.jsx)(e, h({}, t));
         });
     }
-    return x && _
+    return f && N
         ? null
-        : (0, i.jsx)(c.Zbd, {
-              className: r()(h.wrapper, l),
-              children: (0, i.jsxs)(d.Z, {
+        : (0, r.jsx)(c.Zbd, {
+              className: s()(p.wrapper, a),
+              children: (0, r.jsxs)(d.Z, {
                   align: d.Z.Align.CENTER,
                   children: [
-                      (0, i.jsx)(d.Z.Child, {
-                          className: h.image,
+                      (0, r.jsx)(d.Z.Child, {
+                          className: p.image,
                           grow: 0,
                           shrink: 0
                       }),
-                      (0, i.jsxs)(d.Z.Child, {
+                      (0, r.jsxs)(d.Z.Child, {
                           children: [
-                              (0, i.jsx)(c.Text, {
+                              (0, r.jsx)(c.Text, {
                                   variant: 'text-sm/normal',
-                                  children: x ? (null != s ? s : g.intl.string(g.t.WuyBbG)) : null != t ? t : g.intl.string(g.t['f+Zaoq'])
+                                  children: f ? (null != i ? i : g.NW.string(g.t.WuyBbG)) : null != t ? t : g.NW.string(g.t['f+Zaoq'])
                               }),
-                              (0, i.jsxs)(d.Z, {
+                              (0, r.jsxs)(d.Z, {
                                   justify: d.Z.Justify.CENTER,
-                                  className: h.content,
+                                  className: p.content,
                                   children: [
-                                      x
-                                          ? p
-                                              ? (0, i.jsx)(d.Z.Child, {
+                                      f
+                                          ? x
+                                              ? (0, r.jsx)(d.Z.Child, {
                                                     grow: 0,
                                                     shrink: 0,
-                                                    children: (0, i.jsx)(m.Z, {})
+                                                    children: (0, r.jsx)(m.Z, {})
                                                 })
-                                              : (0, i.jsx)(c.zxk, {
+                                              : (0, r.jsx)(c.zxk, {
                                                     size: c.zxk.Sizes.MEDIUM,
                                                     color: c.zxk.Colors.BRAND,
-                                                    onClick: E,
-                                                    children: g.intl.string(g.t.ydw5nZ)
+                                                    onClick: b,
+                                                    children: g.NW.string(g.t.ydw5nZ)
                                                 })
-                                          : (0, i.jsx)(d.Z.Child, {
+                                          : (0, r.jsx)(d.Z.Child, {
                                                 grow: 0,
                                                 shrink: 0,
-                                                children: (0, i.jsx)(c.zxk, {
+                                                children: (0, r.jsx)(c.zxk, {
                                                     size: c.zxk.Sizes.MEDIUM,
                                                     color: c.zxk.Colors.BRAND,
                                                     onClick: function () {
                                                         (0, c.ZDy)(async () => {
                                                             let { default: e } = await n.e('60827').then(n.bind(n, 324239));
-                                                            return (t) => (0, i.jsx)(e, { ...t });
+                                                            return (t) => (0, r.jsx)(e, h({}, t));
                                                         });
                                                     },
-                                                    children: g.intl.string(g.t.fiNVio)
+                                                    children: g.NW.string(g.t.fiNVio)
                                                 })
                                             }),
-                                      x && p
-                                          ? (0, i.jsx)(d.Z.Child, {
+                                      f && x
+                                          ? (0, r.jsx)(d.Z.Child, {
                                                 grow: 0,
                                                 shrink: 0,
-                                                children: (0, i.jsx)(c.zxk, {
+                                                children: (0, r.jsx)(c.zxk, {
                                                     color: c.zxk.Colors.PRIMARY,
                                                     look: c.zxk.Looks.LINK,
-                                                    onClick: E,
-                                                    children: g.intl.string(g.t.Vm8akJ)
+                                                    onClick: b,
+                                                    children: g.NW.string(g.t.Vm8akJ)
                                                 })
                                             })
                                           : null

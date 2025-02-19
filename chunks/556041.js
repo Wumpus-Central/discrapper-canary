@@ -1,54 +1,94 @@
-n.d(t, { Z: () => c });
-var i = n(200651);
+n.d(t, { Z: () => c }), n(266796);
+var r = n(200651);
 n(192379);
-var l = n(481060),
+var i = n(481060),
     a = n(600164),
-    r = n(245315),
-    s = n(388032),
-    o = n(992894);
+    o = n(245315),
+    l = n(388032),
+    s = n(324105);
 let c = () =>
-    (0, i.jsxs)(a.Z, {
+    (0, r.jsxs)(a.Z, {
         align: a.Z.Align.CENTER,
         justify: a.Z.Justify.CENTER,
         direction: a.Z.Direction.VERTICAL,
-        className: o.popout,
+        className: s.popout,
         children: [
-            (0, i.jsx)('img', {
+            (0, r.jsx)('img', {
                 alt: '',
-                src: (0, r.QA)(),
-                className: o.avatar
+                src: (0, o.QA)(),
+                className: s.avatar
             }),
-            (0, i.jsxs)(a.Z, {
+            (0, r.jsxs)(a.Z, {
                 align: a.Z.Align.CENTER,
                 justify: a.Z.Justify.CENTER,
-                className: o.nameWrapper,
+                className: s.nameWrapper,
                 children: [
-                    (0, i.jsx)(l.ua7, {
-                        text: s.intl.string(s.t.oMx98P),
-                        children: (e) =>
-                            (0, i.jsx)('div', {
-                                ...e,
-                                className: o.staffBadge
-                            })
+                    (0, r.jsx)(i.ua7, {
+                        text: l.NW.string(l.t.oMx98P),
+                        children: (e) => {
+                            var t, n;
+                            return (0, r.jsx)(
+                                'div',
+                                ((t = (function (e) {
+                                    for (var t = 1; t < arguments.length; t++) {
+                                        var n = null != arguments[t] ? arguments[t] : {},
+                                            r = Object.keys(n);
+                                        'function' == typeof Object.getOwnPropertySymbols &&
+                                            (r = r.concat(
+                                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                })
+                                            )),
+                                            r.forEach(function (t) {
+                                                var r;
+                                                (r = n[t]),
+                                                    t in e
+                                                        ? Object.defineProperty(e, t, {
+                                                              value: r,
+                                                              enumerable: !0,
+                                                              configurable: !0,
+                                                              writable: !0
+                                                          })
+                                                        : (e[t] = r);
+                                            });
+                                    }
+                                    return e;
+                                })({}, e)),
+                                (n = n = { className: s.staffBadge }),
+                                Object.getOwnPropertyDescriptors
+                                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                                    : (function (e, t) {
+                                          var n = Object.keys(e);
+                                          if (Object.getOwnPropertySymbols) {
+                                              var r = Object.getOwnPropertySymbols(e);
+                                              n.push.apply(n, r);
+                                          }
+                                          return n;
+                                      })(Object(n)).forEach(function (e) {
+                                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                                      }),
+                                t)
+                            );
+                        }
                     }),
-                    (0, i.jsx)(l.X6q, {
-                        className: o.header,
+                    (0, r.jsx)(i.X6q, {
+                        className: s.header,
                         variant: 'heading-md/semibold',
-                        children: s.intl.string(s.t.xfAlNz)
+                        children: l.NW.string(l.t.xfAlNz)
                     })
                 ]
             }),
-            (0, i.jsx)(l.Text, {
-                className: o.description,
+            (0, r.jsx)(i.Text, {
+                className: s.description,
                 color: 'header-secondary',
                 variant: 'text-sm/normal',
-                children: s.intl.string(s.t.BUZ0sr)
+                children: l.NW.string(l.t.BUZ0sr)
             }),
-            (0, i.jsx)(l.Text, {
-                className: o.description,
+            (0, r.jsx)(i.Text, {
+                className: s.description,
                 color: 'header-secondary',
                 variant: 'text-sm/normal',
-                children: s.intl.string(s.t.w5beJC)
+                children: l.NW.string(l.t.w5beJC)
             })
         ]
     });

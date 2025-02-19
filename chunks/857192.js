@@ -1,16 +1,16 @@
-n.r(t), n.d(t, { default: () => S }), n(789020);
-var i,
-    r = n(261470),
-    a = n(213919),
-    s = n(442837),
-    o = n(544891),
+n.r(t), n.d(t, { default: () => T }), n(789020);
+var r,
+    i = n(261470),
+    o = n(213919),
+    a = n(442837),
+    s = n(544891),
     l = n(433517),
-    u = n(570140),
-    c = n(179658),
+    c = n(570140),
+    u = n(179658),
     d = n(70956),
     f = n(960048),
-    _ = n(981631);
-function p(e, t, n) {
+    p = n(981631);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,24 +23,40 @@ function p(e, t, n) {
         e
     );
 }
-let h = (() => {
+function h(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                _(e, t, n[t]);
+            });
+    }
+    return e;
+}
+let m = (() => {
         let e = ''.concat(location.protocol, '//').concat(location.host, '/__development/source_maps'),
             t = null,
-            n = new r.Z(5 * d.Z.Millis.SECOND, 1 * d.Z.Millis.MINUTE, !0),
-            i = () => {
-                o.tn
+            n = new i.Z(5 * d.Z.Millis.SECOND, +d.Z.Millis.MINUTE, !0),
+            r = () => {
+                s.tn
                     .put({
                         url: e,
-                        headers: { Authorization: a.getToken() },
+                        headers: { Authorization: o.getToken() },
                         oldFormErrors: !0,
                         rejectWithError: !0
                     })
                     .then(
                         (e) => {
-                            401 === e.status || 403 === e.status ? ((t = null), (0, c.y)({ sourceMapsEnabled: !1 })) : 200 !== e.status ? (t = setTimeout(i, n.fail())) : (n.succeed(), (t = setTimeout(i, e.body.sourceMapCookieTTLSeconds * d.Z.Millis.SECOND * 0.75)));
+                            401 === e.status || 403 === e.status ? ((t = null), (0, u.y)({ sourceMapsEnabled: !1 })) : 200 !== e.status ? (t = setTimeout(r, n.fail())) : (n.succeed(), (t = setTimeout(r, e.body.sourceMapCookieTTLSeconds * d.Z.Millis.SECOND * 0.75)));
                         },
                         () => {
-                            t = setTimeout(i, n.fail());
+                            t = setTimeout(r, n.fail());
                         }
                     );
             };
@@ -48,20 +64,20 @@ let h = (() => {
             set: (n) => {
                 n !== (null != t) &&
                     (n
-                        ? (t = setTimeout(i, 0))
+                        ? (t = setTimeout(r, 0))
                         : (clearTimeout(t),
                           (t = null),
-                          o.tn.del({
+                          s.tn.del({
                               url: e,
-                              headers: { Authorization: a.getToken() },
+                              headers: { Authorization: o.getToken() },
                               oldFormErrors: !0,
                               rejectWithError: !0
                           })));
             }
         };
     })(),
-    m = 'DeveloperOptionsStore',
-    g = {
+    g = 'DeveloperOptionsStore',
+    E = {
         trace: !1,
         canary: !1,
         logGatewayEvents: !1,
@@ -79,98 +95,88 @@ let h = (() => {
         isStreamInfoOverlayEnabled: !1,
         preventPopoutClose: !1
     },
-    E = { ...g };
-function v(e) {
-    (E = {
-        ...g,
-        ...E,
-        ...e
-    }),
-        h.set(E.sourceMapsEnabled),
-        l.K.set(m, E);
+    v = h({}, E);
+function b(e) {
+    (v = h({}, E, v, e)), m.set(v.sourceMapsEnabled), l.K.set(g, v);
 }
 function y(e) {
     let { settings: t } = e;
-    v(t);
+    b(t);
 }
-function I(e) {
-    v(g);
+function O(e) {
+    b(E);
 }
-function T(e) {
+function S(e) {
     var t;
-    let n = ((null !== (t = e.user.flags) && void 0 !== t ? t : 0) & _.xW$.STAFF) === _.xW$.STAFF,
-        i = n || null != e.user.personal_connection_id;
-    n && h.set(E.sourceMapsEnabled), f.Z.setTags({ isStaff: i.toString() });
+    let n = ((null !== (t = e.user.flags) && void 0 !== t ? t : 0) & p.xW$.STAFF) === p.xW$.STAFF,
+        r = n || null != e.user.personal_connection_id;
+    n && m.set(v.sourceMapsEnabled), f.Z.setTags({ isStaff: r.toString() });
 }
-class b extends (i = s.ZP.Store) {
+class I extends (r = a.ZP.Store) {
     initialize() {
-        let e = l.K.get(m);
-        null != e &&
-            (E = {
-                ...g,
-                ...e
-            });
+        let e = l.K.get(g);
+        null != e && (v = h({}, E, e));
     }
     get isTracingRequests() {
-        return E.trace;
+        return v.trace;
     }
     get isForcedCanary() {
-        return E.canary;
+        return v.canary;
     }
     get isLoggingGatewayEvents() {
-        return E.logGatewayEvents;
+        return v.logGatewayEvents;
     }
     get isLoggingOverlayEvents() {
-        return E.logOverlayEvents;
+        return v.logOverlayEvents;
     }
     get isLoggingAnalyticsEvents() {
-        return E.logAnalyticsEvents;
+        return v.logAnalyticsEvents;
     }
     get isAxeEnabled() {
-        return E.axeEnabled;
+        return v.axeEnabled;
     }
     get cssDebuggingEnabled() {
-        return E.cssDebuggingEnabled;
+        return v.cssDebuggingEnabled;
     }
     get layoutDebuggingEnabled() {
-        return E.layoutDebuggingEnabled;
+        return v.layoutDebuggingEnabled;
     }
     get sourceMapsEnabled() {
-        return E.sourceMapsEnabled;
+        return v.sourceMapsEnabled;
     }
     get isAnalyticsDebuggerEnabled() {
-        return E.analyticsDebuggerEnabled;
+        return v.analyticsDebuggerEnabled;
     }
     get isBugReporterEnabled() {
-        return E.bugReporterEnabled;
+        return v.bugReporterEnabled;
     }
     get isIdleStatusIndicatorEnabled() {
-        return E.idleStatusIndicatorEnabled;
+        return v.idleStatusIndicatorEnabled;
     }
     get onlyShowPreviewAppCollections() {
-        return E.onlyShowPreviewAppCollections;
+        return v.onlyShowPreviewAppCollections;
     }
     get disableAppCollectionsCache() {
-        return E.disableAppCollectionsCache;
+        return v.disableAppCollectionsCache;
     }
     get isStreamInfoOverlayEnabled() {
-        return E.isStreamInfoOverlayEnabled;
+        return v.isStreamInfoOverlayEnabled;
     }
     get preventPopoutClose() {
-        return E.preventPopoutClose;
+        return v.preventPopoutClose;
     }
     getDebugOptionsHeaderValue() {
         return (
-            Object.keys(E).map((e) => E[e]),
-            Object.keys(E)
-                .filter((e) => E[e])
+            Object.keys(v).map((e) => v[e]),
+            Object.keys(v)
+                .filter((e) => v[e])
                 .join(',')
         );
     }
 }
-p(b, 'displayName', 'DeveloperOptionsStore');
-let S = new b(u.Z, {
-    LOGOUT: I,
-    CONNECTION_OPEN: T,
+_(I, 'displayName', 'DeveloperOptionsStore');
+let T = new I(c.Z, {
+    LOGOUT: O,
+    CONNECTION_OPEN: S,
     DEVELOPER_OPTIONS_UPDATE_SETTINGS: y
 });

@@ -1,57 +1,135 @@
-a.d(l, { Z: () => m });
-var s = a(200651),
-    n = a(192379),
-    i = a(442837),
-    t = a(481060),
-    r = a(249842),
-    d = a(838367),
-    c = a(576306),
-    o = a(83474),
-    u = a(914620);
+n.d(t, { Z: () => j });
+var r = n(200651),
+    l = n(192379),
+    a = n(442837),
+    s = n(481060),
+    i = n(249842),
+    c = n(838367),
+    o = n(576306),
+    d = n(83474),
+    u = n(914620);
 function m(e) {
-    let { guildId: l, channelId: a, messageId: m, name: h, ...x } = e,
-        j = (0, c.h)(),
-        { unavailable: g, guild: v } = (0, i.cj)(
-            [d.Z],
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function h(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function j(e) {
+    var { guildId: t, channelId: n, messageId: j, name: f } = e,
+        x = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                l = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        r,
+                        l = {},
+                        a = Object.keys(e);
+                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                    return l;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var a = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
+            }
+            return l;
+        })(e, ['guildId', 'channelId', 'messageId', 'name']);
+    let g = (0, o.h)(),
+        { unavailable: p, guild: b } = (0, a.cj)(
+            [c.Z],
             () => ({
-                guild: d.Z.getGuild(l),
-                unavailable: d.Z.hasFetchFailed(l)
+                guild: c.Z.getGuild(t),
+                unavailable: c.Z.hasFetchFailed(t)
             }),
-            [l]
+            [t]
         ),
-        N = null != v,
-        f = n.useCallback(async () => {
-            if (!j)
+        v = null != b,
+        P = l.useCallback(async () => {
+            if (!g)
                 try {
-                    N || (await (0, r.P)(l));
-                } catch {}
-        }, [j, N, l]);
-    return g
-        ? (0, s.jsx)(t.yRy, {
-              position: 'right',
-              renderPopout: (e) => (0, s.jsx)(o.SK, {}),
-              ...x,
-              clickTrap: !0
-          })
-        : (0, s.jsx)(t.yRy, {
-              position: 'right',
-              preload: f,
-              clickTrap: !0,
-              renderPopout: (e) =>
-                  j
-                      ? (0, s.jsx)(u.Z, {
-                            ...e,
-                            guildId: l,
-                            name: h
-                        })
-                      : null == v
-                        ? (0, s.jsx)(s.Fragment, {})
-                        : (0, s.jsx)(o.sK, {
-                              ...e,
-                              guild: v,
-                              channelId: a,
-                              messageId: m
-                          }),
-              ...x
-          });
+                    v || (await (0, i.P)(t));
+                } catch (e) {}
+        }, [g, v, t]);
+    return p
+        ? (0, r.jsx)(
+              s.yRy,
+              h(
+                  m(
+                      {
+                          position: 'right',
+                          renderPopout: (e) => (0, r.jsx)(d.SK, {})
+                      },
+                      x
+                  ),
+                  { clickTrap: !0 }
+              )
+          )
+        : (0, r.jsx)(
+              s.yRy,
+              m(
+                  {
+                      position: 'right',
+                      preload: P,
+                      clickTrap: !0,
+                      renderPopout: (e) =>
+                          g
+                              ? (0, r.jsx)(
+                                    u.Z,
+                                    h(m({}, e), {
+                                        guildId: t,
+                                        name: f
+                                    })
+                                )
+                              : null == b
+                                ? (0, r.jsx)(r.Fragment, {})
+                                : (0, r.jsx)(
+                                      d.sK,
+                                      h(m({}, e), {
+                                          guild: b,
+                                          channelId: n,
+                                          messageId: j
+                                      })
+                                  )
+                  },
+                  x
+              )
+          );
 }

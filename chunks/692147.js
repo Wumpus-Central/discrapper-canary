@@ -1,33 +1,60 @@
-i.d(t, { Z: () => m });
-var n = i(200651),
-    a = i(192379),
-    o = i(392711),
-    s = i(399606),
-    l = i(351780),
-    r = i(576125),
-    c = i(465858),
-    d = i(112843),
-    u = i(524484);
+n.d(t, { Z: () => p });
+var i = n(200651),
+    o = n(192379),
+    r = n(392711),
+    a = n(399606),
+    s = n(351780),
+    l = n(576125),
+    c = n(465858),
+    u = n(112843),
+    d = n(524484);
 function h(e) {
-    let { reactionRef: t, count: i } = e,
-        n = a.useRef(i),
-        r = (0, s.e7)([l.Z], () => l.Z.getState()),
-        u = (0, d.Z)(),
+    let { reactionRef: t, count: n } = e,
+        i = o.useRef(n),
+        l = (0, a.e7)([s.Z], () => s.Z.getState()),
+        d = (0, u.Z)(),
         h = (0, c.Z)(t);
     return (
-        a.useEffect(() => {
-            if (i > n.current && null != h) {
-                let e = (0, o.clamp)(i, r.confettiCount / 2, 2 * r.confettiCount);
-                u.fire(h.x, h.y, { count: e });
+        o.useEffect(() => {
+            if (n > i.current && null != h) {
+                let e = (0, r.clamp)(n, l.confettiCount / 2, 2 * l.confettiCount);
+                d.fire(h.x, h.y, { count: e });
             }
-            n.current = i;
-        }, [i, h, u, r.confettiCount]),
+            i.current = n;
+        }, [n, h, d, l.confettiCount]),
         null
     );
 }
-function m(e) {
-    return (0, n.jsx)(r.Z, {
-        confettiLocation: u.Hn.REACTION,
-        children: (0, n.jsx)(h, { ...e })
+function p(e) {
+    return (0, i.jsx)(l.Z, {
+        confettiLocation: d.Hn.REACTION,
+        children: (0, i.jsx)(
+            h,
+            (function (e) {
+                for (var t = 1; t < arguments.length; t++) {
+                    var n = null != arguments[t] ? arguments[t] : {},
+                        i = Object.keys(n);
+                    'function' == typeof Object.getOwnPropertySymbols &&
+                        (i = i.concat(
+                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                            })
+                        )),
+                        i.forEach(function (t) {
+                            var i;
+                            (i = n[t]),
+                                t in e
+                                    ? Object.defineProperty(e, t, {
+                                          value: i,
+                                          enumerable: !0,
+                                          configurable: !0,
+                                          writable: !0
+                                      })
+                                    : (e[t] = i);
+                        });
+                }
+                return e;
+            })({}, e)
+        )
     });
 }

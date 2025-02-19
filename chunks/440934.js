@@ -1,85 +1,85 @@
-t.r(n),
-    t.d(n, {
-        default: () => u,
+n.r(t),
+    n.d(t, {
+        default: () => d,
         openInteractionModal: () => p
     });
-var i = t(200651);
-t(192379);
-var o = t(481060),
-    r = t(118012),
-    a = t(970184),
-    l = t(471073),
-    c = t(293979),
-    s = t(954654),
-    _ = t(388032),
-    d = t(426823);
-function u(e) {
-    let { title: n, onClose: t, transitionState: u } = e,
-        { components: p, applicationIconURL: I, applicationName: f, submissionState: m, error: S, validators: C, onSubmit: T } = (0, c.X9)(e, t);
-    return (0, i.jsx)('form', {
+var o = n(200651);
+n(192379);
+var i = n(481060),
+    r = n(118012),
+    a = n(970184),
+    l = n(471073),
+    c = n(293979),
+    s = n(954654),
+    _ = n(388032),
+    u = n(676373);
+function d(e) {
+    let { title: t, onClose: n, transitionState: d } = e,
+        { components: p, applicationIconURL: f, applicationName: I, submissionState: m, error: S, validators: b, onSubmit: C } = (0, c.X9)(e, n);
+    return (0, o.jsx)('form', {
         onSubmit: (e) => {
-            e.preventDefault(), T();
+            e.preventDefault(), C();
         },
-        children: (0, i.jsxs)(o.Y0X, {
-            transitionState: u,
+        children: (0, o.jsxs)(i.Y0X, {
+            transitionState: d,
             children: [
-                (0, i.jsxs)(o.xBx, {
+                (0, o.jsxs)(i.xBx, {
                     separator: !1,
                     children: [
-                        (0, i.jsx)(o.qEK, {
-                            src: I,
-                            size: o.EFr.SIZE_24,
-                            'aria-label': f,
-                            className: d.applicationIcon
+                        (0, o.jsx)(i.qEK, {
+                            src: f,
+                            size: i.EFr.SIZE_24,
+                            'aria-label': I,
+                            className: u.applicationIcon
                         }),
-                        (0, i.jsx)(r.Z, {
+                        (0, o.jsx)(r.Z, {
                             color: r.Z.Colors.HEADER_PRIMARY,
                             size: r.Z.Sizes.SIZE_24,
-                            children: n
+                            children: t
                         }),
-                        (0, i.jsx)(o.olH, {
-                            onClick: t,
-                            className: d.closeButton
+                        (0, o.jsx)(i.olH, {
+                            onClick: n,
+                            className: u.closeButton
                         })
                     ]
                 }),
-                (0, i.jsxs)(o.hzk, {
+                (0, o.jsxs)(i.hzk, {
                     children: [
                         null != S && '' !== S
-                            ? (0, i.jsx)(o.Wn, {
-                                  messageType: o.QYI.ERROR,
-                                  className: d.submissionWarning,
+                            ? (0, o.jsx)(i.Wn, {
+                                  messageType: i.QYI.ERROR,
+                                  className: u.submissionWarning,
                                   children: S
                               })
                             : null,
-                        (0, i.jsx)(o.Wn, {
-                            messageType: o.QYI.WARNING,
-                            className: d.submissionWarning,
-                            children: _.intl.format(_.t['dSTy//'], { applicationName: f })
+                        (0, o.jsx)(i.Wn, {
+                            messageType: i.QYI.WARNING,
+                            className: u.submissionWarning,
+                            children: _.NW.format(_.t['dSTy//'], { applicationName: I })
                         }),
-                        (0, i.jsx)(o.hjN, {
-                            children: (0, i.jsx)(a.Il, {
+                        (0, o.jsx)(i.hjN, {
+                            children: (0, o.jsx)(a.Il, {
                                 modal: e,
-                                validators: C,
+                                validators: b,
                                 children: (0, s.xX)(p)
                             })
                         })
                     ]
                 }),
-                (0, i.jsxs)(o.mzw, {
+                (0, o.jsxs)(i.mzw, {
                     children: [
-                        (0, i.jsx)(o.zxk, {
+                        (0, o.jsx)(i.zxk, {
                             type: 'submit',
-                            color: o.zxk.Colors.BRAND,
-                            size: o.zxk.Sizes.MEDIUM,
+                            color: i.zxk.Colors.BRAND,
+                            size: i.zxk.Sizes.MEDIUM,
                             submitting: m === l.i.IN_FLIGHT,
-                            children: _.intl.string(_.t.geKm7u)
+                            children: _.NW.string(_.t.geKm7u)
                         }),
-                        (0, i.jsx)(o.zxk, {
-                            look: o.zxk.Looks.LINK,
-                            color: o.zxk.Colors.PRIMARY,
-                            onClick: t,
-                            children: _.intl.string(_.t['ETE/oK'])
+                        (0, o.jsx)(i.zxk, {
+                            look: i.zxk.Looks.LINK,
+                            color: i.zxk.Colors.PRIMARY,
+                            onClick: n,
+                            children: _.NW.string(_.t['ETE/oK'])
                         })
                     ]
                 })
@@ -88,10 +88,34 @@ function u(e) {
     });
 }
 function p(e) {
-    (0, o.h7j)((n) =>
-        (0, i.jsx)(u, {
-            ...n,
-            ...e
-        })
+    (0, i.h7j)((t) =>
+        (0, o.jsx)(
+            d,
+            (function (e) {
+                for (var t = 1; t < arguments.length; t++) {
+                    var n = null != arguments[t] ? arguments[t] : {},
+                        o = Object.keys(n);
+                    'function' == typeof Object.getOwnPropertySymbols &&
+                        (o = o.concat(
+                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                            })
+                        )),
+                        o.forEach(function (t) {
+                            var o;
+                            (o = n[t]),
+                                t in e
+                                    ? Object.defineProperty(e, t, {
+                                          value: o,
+                                          enumerable: !0,
+                                          configurable: !0,
+                                          writable: !0
+                                      })
+                                    : (e[t] = o);
+                        });
+                }
+                return e;
+            })({}, t, e)
+        )
     );
 }

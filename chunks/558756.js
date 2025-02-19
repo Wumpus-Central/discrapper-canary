@@ -1,28 +1,52 @@
-n.d(t, { W: () => o });
-var i = n(200651),
-    l = n(442837),
-    a = n(481060),
-    r = n(9156),
-    s = n(388032);
-let o = (e) => {
-    let { className: t, channel: o, user: c } = e,
-        d = (0, l.e7)([r.ZP], () => r.ZP.isChannelMuted(null, o.id));
+n.d(t, { W: () => s });
+var r = n(200651),
+    i = n(442837),
+    l = n(481060),
+    o = n(9156),
+    a = n(388032);
+let s = (e) => {
+    let { className: t, channel: s, user: c } = e,
+        u = (0, i.e7)([o.ZP], () => o.ZP.isChannelMuted(null, s.id));
     return c.bot
-        ? (0, i.jsx)(a.zxk, {
+        ? (0, r.jsx)(l.zxk, {
               className: t,
-              size: a.PhG.SMALL,
-              color: d ? a.zxk.Colors.PRIMARY : a.zxk.Colors.RED,
+              size: l.PhG.SMALL,
+              color: u ? l.zxk.Colors.PRIMARY : l.zxk.Colors.RED,
               onClick: function () {
-                  (0, a.ZDy)(async () => {
+                  (0, l.ZDy)(async () => {
                       let { default: e } = await n.e('83545').then(n.bind(n, 53149));
                       return (t) =>
-                          (0, i.jsx)(e, {
-                              channelId: o.id,
-                              ...t
-                          });
+                          (0, r.jsx)(
+                              e,
+                              (function (e) {
+                                  for (var t = 1; t < arguments.length; t++) {
+                                      var n = null != arguments[t] ? arguments[t] : {},
+                                          r = Object.keys(n);
+                                      'function' == typeof Object.getOwnPropertySymbols &&
+                                          (r = r.concat(
+                                              Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                  return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                              })
+                                          )),
+                                          r.forEach(function (t) {
+                                              var r;
+                                              (r = n[t]),
+                                                  t in e
+                                                      ? Object.defineProperty(e, t, {
+                                                            value: r,
+                                                            enumerable: !0,
+                                                            configurable: !0,
+                                                            writable: !0
+                                                        })
+                                                      : (e[t] = r);
+                                          });
+                                  }
+                                  return e;
+                              })({ channelId: s.id }, t)
+                          );
                   });
               },
-              children: d ? s.intl.string(s.t.YqAjX1) : s.intl.string(s.t['w4m94+'])
+              children: u ? a.NW.string(a.t.YqAjX1) : a.NW.string(a.t['w4m94+'])
           })
         : null;
 };

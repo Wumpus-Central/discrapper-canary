@@ -1,15 +1,17 @@
 n.d(t, {
     B: () => l,
     Fm: () => d,
-    Lc: () => c,
-    U4: () => u,
+    Lc: () => u,
+    U4: () => c,
     hn: () => f,
-    zz: () => s
+    zz: () => a
 }),
-    n(411104);
-var i = n(830496),
-    r = n(959517);
-let a = [
+    n(266796),
+    n(411104),
+    n(301563);
+var r = n(830496),
+    i = n(959517);
+let o = [
         {
             reName: /\.jpe?g$/i,
             name: (e) => 'image'.concat(e, '.jpg'),
@@ -71,43 +73,43 @@ let a = [
             type: 'image/webm'
         }
     ],
-    s = 524288000;
-function o(e) {
+    a = 524288000;
+function s(e) {
     let { spoiler: t } = e;
-    return t ? r._j : '';
+    return t ? i._j : '';
 }
 function l(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-        r = arguments.length > 2 ? arguments[2] : void 0,
-        a = { id: null !== (t = null == n ? void 0 : n.toString()) && void 0 !== t ? t : e.id };
-    null != e.description && (a.description = e.description);
-    let s = o({ spoiler: e.spoiler });
-    return (a.filename = ''.concat(s).concat(null != r ? r : e.filename)), (a.uploaded_filename = e.uploadedFilename), 'durationSecs' in e && null != e.durationSecs && (a.duration_secs = e.durationSecs), 'waveform' in e && null != e.waveform && (a.waveform = e.waveform), 'isThumbnail' in e && !0 === e.isThumbnail && (a.is_thumbnail = e.isThumbnail), 'isRemix' in e && !0 === e.isRemix && (a.is_remix = e.isRemix), 'clip' in e && null != e.clip && ((a.is_clip = !0), (a.title = e.clip.name), (a.application_id = e.clip.applicationId), (a.clip_created_at = (0, i.U)(e.clip.id)), (a.clip_participant_ids = (0, i.Z)(e.clip.users))), a;
+        i = arguments.length > 2 ? arguments[2] : void 0,
+        o = { id: null !== (t = null == n ? void 0 : n.toString()) && void 0 !== t ? t : e.id };
+    null != e.description && (o.description = e.description);
+    let a = s({ spoiler: e.spoiler });
+    return (o.filename = ''.concat(a).concat(null != i ? i : e.filename)), (o.uploaded_filename = e.uploadedFilename), 'durationSecs' in e && null != e.durationSecs && (o.duration_secs = e.durationSecs), 'waveform' in e && null != e.waveform && (o.waveform = e.waveform), 'isThumbnail' in e && !0 === e.isThumbnail && (o.is_thumbnail = e.isThumbnail), 'isRemix' in e && !0 === e.isRemix && (o.is_remix = e.isRemix), 'clip' in e && null != e.clip && ((o.is_clip = !0), (o.title = e.clip.name), (o.application_id = e.clip.applicationId), (o.clip_created_at = (0, r.U)(e.clip.id)), (o.clip_participant_ids = (0, r.Z)(e.clip.users))), o;
 }
-function u(e, t, n) {
-    let i = new XMLHttpRequest();
-    return new Promise((r, a) => {
-        i.open('GET', e, !0),
-            (i.responseType = 'blob'),
-            i.setRequestHeader('Range', 'bytes='.concat(t, '-').concat(n)),
-            (i.onabort = (e) => a(e)),
-            (i.onerror = (e) => a(e)),
-            (i.ontimeout = (e) => a(e)),
-            (i.onload = () => {
-                206 === i.status ? r(i.response) : a(Error('Range request failed'));
+function c(e, t, n) {
+    let r = new XMLHttpRequest();
+    return new Promise((i, o) => {
+        r.open('GET', e, !0),
+            (r.responseType = 'blob'),
+            r.setRequestHeader('Range', 'bytes='.concat(t, '-').concat(n)),
+            (r.onabort = (e) => o(e)),
+            (r.onerror = (e) => o(e)),
+            (r.ontimeout = (e) => o(e)),
+            (r.onload = () => {
+                206 === r.status ? i(r.response) : o(Error('Range request failed'));
             }),
-            i.send();
+            r.send();
     });
 }
-function c(e) {
+function u(e) {
     let t = new XMLHttpRequest();
-    return new Promise((n, i) => {
+    return new Promise((n, r) => {
         t.open('GET', e, !0),
             (t.responseType = 'blob'),
-            (t.onabort = (e) => i(e)),
-            (t.onerror = (e) => i(e)),
-            (t.ontimeout = (e) => i(e)),
+            (t.onabort = (e) => r(e)),
+            (t.onerror = (e) => r(e)),
+            (t.ontimeout = (e) => r(e)),
             (t.onload = () => {
                 var e;
                 return n(null == t ? void 0 : null === (e = t.response) || void 0 === e ? void 0 : e.data);
@@ -117,38 +119,38 @@ function c(e) {
 }
 function d(e) {
     return new Promise((t, n) => {
-        let i = new XMLHttpRequest();
-        i.open('HEAD', e, !0),
-            (i.onload = () => {
-                if (i.status >= 200 && i.status < 300) {
-                    let e = i.getResponseHeader('Content-Length');
+        let r = new XMLHttpRequest();
+        r.open('HEAD', e, !0),
+            (r.onload = () => {
+                if (r.status >= 200 && r.status < 300) {
+                    let e = r.getResponseHeader('Content-Length');
                     null != e && '' !== e ? t(parseInt(e, 10)) : n(Error('Content-Length header is missing'));
-                } else n(Error('HTTP request failed with status code '.concat(i.status)));
+                } else n(Error('HTTP request failed with status code '.concat(r.status)));
             }),
-            (i.onerror = n),
-            (i.onabort = n),
-            (i.ontimeout = n),
-            i.send();
+            (r.onerror = n),
+            (r.onabort = n),
+            (r.ontimeout = n),
+            r.send();
     });
 }
 function f(e) {
-    var t, n, i, r, s, o;
+    var t, n, r, i, a, s;
     let l,
-        { uri: u, i: c, overrideFilename: d, overrideType: f } = e,
-        _ = u.split('/'),
-        p = _[_.length - 1];
-    p = null !== (i = null === (n = p.split('?')) || void 0 === n ? void 0 : null === (t = n[0]) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== i ? i : '';
-    let h = a.find((e) => e.reName.test(p));
-    if ((null == h && null != d && (h = a.find((e) => e.reName.test(d))), null != h && null != d)) {
-        let e = h.name(c).split('.').pop(),
+        { uri: c, i: u, overrideFilename: d, overrideType: f } = e,
+        p = c.split('/'),
+        _ = p[p.length - 1];
+    _ = null !== (r = null === (n = _.split('?')) || void 0 === n ? void 0 : null === (t = n[0]) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== r ? r : '';
+    let h = o.find((e) => e.reName.test(_));
+    if ((null == h && null != d && (h = o.find((e) => e.reName.test(d))), null != h && null != d)) {
+        let e = h.name(u).split('.').pop(),
             t = d.lastIndexOf('.');
         l = -1 !== t ? ''.concat(d.substr(0, t), '.').concat(e) : ''.concat(d, '.').concat(e);
-    } else l = null != h ? h.name(c) : null != d ? d : 'unknown';
+    } else l = null != h ? h.name(u) : null != d ? d : 'unknown';
     return {
-        uri: u,
+        uri: c,
         filename: l,
-        type: null !== (r = null != f ? f : null == h ? void 0 : h.type) && void 0 !== r ? r : 'unknown',
-        isVideo: -1 !== (null !== (s = null != f ? f : null == h ? void 0 : h.name(c)) && void 0 !== s ? s : '').indexOf('video'),
-        isImage: -1 !== (null !== (o = null != f ? f : null == h ? void 0 : h.name(c)) && void 0 !== o ? o : '').indexOf('image')
+        type: null !== (i = null != f ? f : null == h ? void 0 : h.type) && void 0 !== i ? i : 'unknown',
+        isVideo: -1 !== (null !== (a = null != f ? f : null == h ? void 0 : h.name(u)) && void 0 !== a ? a : '').indexOf('video'),
+        isImage: -1 !== (null !== (s = null != f ? f : null == h ? void 0 : h.name(u)) && void 0 !== s ? s : '').indexOf('image')
     };
 }

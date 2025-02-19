@@ -1,30 +1,76 @@
-e.d(n, { default: () => c }), e(47120);
-var i = e(200651),
-    a = e(192379),
-    s = e(481060),
-    l = e(693546),
-    r = e(246364),
-    u = e(388032);
-let c = (t) => {
-    let { guildId: n, userId: e, guildJoinRequestId: c, onConfirm: d, onError: h, modalProps: o } = t,
-        [p, x] = a.useState(),
-        C = async () => {
+r.d(t, { default: () => u }), r(47120);
+var n = r(200651),
+    c = r(192379),
+    o = r(481060),
+    i = r(693546),
+    a = r(246364),
+    s = r(388032);
+let u = (e) => {
+    var t, r;
+    let { guildId: u, userId: p, guildJoinRequestId: l, onConfirm: b, onError: O, modalProps: f } = e,
+        [y, j] = c.useState(),
+        g = async () => {
             try {
-                await l.Z.updateGuildJoinRequest(n, e, c, r.wB.REJECTED, p), null == d || d();
-            } catch (t) {
-                null == h || h();
+                await i.Z.updateGuildJoinRequest(u, p, l, a.wB.REJECTED, y), null == b || b();
+            } catch (e) {
+                null == O || O();
             }
         };
-    return (0, i.jsx)(s.ConfirmModal, {
-        header: u.intl.string(u.t['mFP/q6']),
-        cancelText: u.intl.string(u.t['ETE/oK']),
-        confirmText: u.intl.string(u.t.hDtbs7),
-        onConfirm: C,
-        ...o,
-        children: (0, i.jsx)(s.Kx8, {
-            value: p,
-            onChange: x,
-            maxLength: 160
-        })
-    });
+    return (0, n.jsx)(
+        o.ConfirmModal,
+        ((t = (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var r = null != arguments[t] ? arguments[t] : {},
+                    n = Object.keys(r);
+                'function' == typeof Object.getOwnPropertySymbols &&
+                    (n = n.concat(
+                        Object.getOwnPropertySymbols(r).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                        })
+                    )),
+                    n.forEach(function (t) {
+                        var n;
+                        (n = r[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: n,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0
+                                  })
+                                : (e[t] = n);
+                    });
+            }
+            return e;
+        })(
+            {
+                header: s.NW.string(s.t['mFP/q6']),
+                cancelText: s.NW.string(s.t['ETE/oK']),
+                confirmText: s.NW.string(s.t.hDtbs7),
+                onConfirm: g
+            },
+            f
+        )),
+        (r = r =
+            {
+                children: (0, n.jsx)(o.Kx8, {
+                    value: y,
+                    onChange: j,
+                    maxLength: 160
+                })
+            }),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+            : (function (e, t) {
+                  var r = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var n = Object.getOwnPropertySymbols(e);
+                      r.push.apply(r, n);
+                  }
+                  return r;
+              })(Object(r)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+              }),
+        t)
+    );
 };

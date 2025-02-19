@@ -1,21 +1,22 @@
 n.d(t, {
-    F: () => y,
+    F: () => S,
     H: () => T
 }),
+    n(266796),
     n(47120),
     n(411104);
-var i,
-    r = n(200651),
-    a = n(192379),
-    s = n(97613),
-    o = n.n(s),
+var r,
+    i = n(200651),
+    o = n(192379),
+    a = n(97613),
+    s = n.n(a),
     l = n(995295),
-    u = n(374470),
-    c = n(846519),
+    c = n(374470),
+    u = n(846519),
     d = n(302901),
     f = n(539907),
-    _ = n(952265),
-    p = n(481060),
+    p = n(952265),
+    _ = n(481060),
     h = n(40851),
     m = n(314910),
     g = n(920676),
@@ -33,9 +34,48 @@ function v(e, t, n) {
         e
     );
 }
-let y = Symbol('POPOUT_PREVENT_CLOSE'),
+function b(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                v(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function y(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function O(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : y(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let S = Symbol('POPOUT_PREVENT_CLOSE'),
     I = new Set(['Spacebar', ' ', 'Enter']);
-class T extends (i = a.Component) {
+class T extends (r = o.Component) {
     shouldShowPopout(e, t) {
         return null != e.shouldShow ? e.shouldShow : t.shouldShowPopout;
     }
@@ -46,25 +86,25 @@ class T extends (i = a.Component) {
         e.shouldShow, this.props.shouldShow;
         let n = this.shouldShowPopout(this.props, this.state);
         if (((this.shouldShowPopout(e, t) !== n || t.isLoading !== this.state.isLoading) && (n ? this.setupShowPopout() : this.unsubscribe()), this.props.closeOnScroll !== e.closeOnScroll)) {
-            var i, r;
+            var r, i;
             let e = this.getDomElement();
-            this.props.closeOnScroll ? null === (i = e.ownerDocument) || void 0 === i || i.addEventListener('scroll', this.handleScroll, !0) : null === (r = e.ownerDocument) || void 0 === r || r.removeEventListener('scroll', this.handleScroll, !0);
+            this.props.closeOnScroll ? null === (r = e.ownerDocument) || void 0 === r || r.addEventListener('scroll', this.handleScroll, !0) : null === (i = e.ownerDocument) || void 0 === i || i.removeEventListener('scroll', this.handleScroll, !0);
         }
     }
     getDomElement() {
         let e = l.findDOMNode(this);
-        if (!(0, u.k)(e)) throw Error('Popout cannot find DOM node');
+        if (!(0, c.k)(e)) throw Error('Popout cannot find DOM node');
         return e;
     }
     setupShowPopout() {
         var e, t, n;
-        let i = this.getDomElement();
-        null === (e = i.ownerDocument) || void 0 === e || e.addEventListener('mousedown', this.handleDocumentMouseDown, !0), null === (t = i.ownerDocument) || void 0 === t || t.addEventListener('mouseup', this.handleDocumentMouseUp, !0), this.props.closeOnScroll && (null === (n = i.ownerDocument) || void 0 === n || n.addEventListener('scroll', this.handleScroll, !0)), this.context.windowDispatch.subscribe(E.CkL.POPOUT_CLOSE, this.close), (this.domElementRef.current = i), (this.isValidClickStart = !1), this.forceUpdate();
+        let r = this.getDomElement();
+        null === (e = r.ownerDocument) || void 0 === e || e.addEventListener('mousedown', this.handleDocumentMouseDown, !0), null === (t = r.ownerDocument) || void 0 === t || t.addEventListener('mouseup', this.handleDocumentMouseUp, !0), this.props.closeOnScroll && (null === (n = r.ownerDocument) || void 0 === n || n.addEventListener('scroll', this.handleScroll, !0)), this.context.windowDispatch.subscribe(E.CkL.POPOUT_CLOSE, this.close), (this.domElementRef.current = r), (this.isValidClickStart = !1), this.forceUpdate();
     }
     unsubscribe() {
-        var e, t, n, i;
-        let r = this.domElementRef.current;
-        null != r && (null === (t = r.ownerDocument) || void 0 === t || t.removeEventListener('mousedown', this.handleDocumentMouseDown, !0), null === (n = r.ownerDocument) || void 0 === n || n.removeEventListener('mouseup', this.handleDocumentMouseUp, !0), null === (i = r.ownerDocument) || void 0 === i || i.removeEventListener('scroll', this.handleScroll, !0)), this.context.windowDispatch.unsubscribe(E.CkL.POPOUT_CLOSE, this.close), null === (e = this.resizeObserver) || void 0 === e || e.disconnect();
+        var e, t, n, r;
+        let i = this.domElementRef.current;
+        null != i && (null === (t = i.ownerDocument) || void 0 === t || t.removeEventListener('mousedown', this.handleDocumentMouseDown, !0), null === (n = i.ownerDocument) || void 0 === n || n.removeEventListener('mouseup', this.handleDocumentMouseUp, !0), null === (r = i.ownerDocument) || void 0 === r || r.removeEventListener('scroll', this.handleScroll, !0)), this.context.windowDispatch.unsubscribe(E.CkL.POPOUT_CLOSE, this.close), null === (e = this.resizeObserver) || void 0 === e || e.disconnect();
     }
     componentWillUnmount() {
         this.unsubscribe(), (this.domElementRef.current = null), this.loadingTimeout.stop(), this.validClickTimeout.stop();
@@ -72,23 +112,21 @@ class T extends (i = a.Component) {
     render() {
         let { children: e, useMouseEnter: t } = this.props,
             n = this.shouldShowPopout(this.props, this.state);
-        return (0, r.jsxs)(a.Fragment, {
+        return (0, i.jsxs)(o.Fragment, {
             children: [
                 e(
-                    {
-                        onMouseDown: this.handlePreload,
-                        ...(t ? { onMouseEnter: this.handleMouseEnter } : {}),
+                    O(b({ onMouseDown: this.handlePreload }, t ? { onMouseEnter: this.handleMouseEnter } : {}), {
                         onKeyDown: this.handleKeyboardPreload,
                         onClick: this.handleClick,
                         'aria-controls': n ? this.popoutId : void 0,
                         'aria-expanded': n
-                    },
+                    }),
                     {
                         isShown: n,
                         position: this.state.renderedPosition
                     }
                 ),
-                (0, r.jsx)(p.y5t, {
+                (0, i.jsx)(_.y5t, {
                     forceLevel: 2,
                     children: this.renderLayer()
                 })
@@ -97,29 +135,29 @@ class T extends (i = a.Component) {
     }
     renderLayer() {
         if (!this.shouldShowPopout(this.props, this.state) || null == this.domElementRef.current) return null;
-        let { position: e, align: t, nudgeAlignIntoViewport: n, useRawTargetDimensions: i, spacing: a, autoInvert: s, fixed: o, positionKey: l, overridePositionRef: u, disablePointerEvents: c, layerContext: _, clickTrap: p = !1 } = this.props,
+        let { position: e, align: t, nudgeAlignIntoViewport: n, useRawTargetDimensions: r, spacing: o, autoInvert: a, fixed: s, positionKey: l, overridePositionRef: c, disablePointerEvents: u, layerContext: p, clickTrap: _ = !1 } = this.props,
             { resizeKey: h, isLoading: g, shouldShowLoadingState: E } = this.state;
         return g && !E
             ? null
-            : (0, r.jsx)(d.mh, {
-                  layerContext: null != _ ? _ : m.nz,
-                  children: (0, r.jsx)(f.j, {
+            : (0, i.jsx)(d.mh, {
+                  layerContext: null != p ? p : m.nz,
+                  children: (0, i.jsx)(f.j, {
                       ref: this.layerRef,
                       onMount: this.handlePopoutShow,
                       onUnmount: this.handlePopoutHide,
                       id: this.popoutId,
-                      targetRef: null != u ? u : this.domElementRef,
+                      targetRef: null != c ? c : this.domElementRef,
                       position: e,
                       align: t,
                       nudgeAlignIntoViewport: n,
-                      useRawTargetDimensions: i,
-                      spacing: a,
-                      autoInvert: s,
-                      fixed: o,
+                      useRawTargetDimensions: r,
+                      spacing: o,
+                      autoInvert: a,
+                      fixed: s,
                       positionKey: null != l ? l : String(h),
-                      disablePointerEvents: c,
+                      disablePointerEvents: u,
                       onPositionChange: this.handlePopoutPositionChange,
-                      clickTrap: p,
+                      clickTrap: _,
                       children: this.renderPopout
                   })
               });
@@ -129,13 +167,13 @@ class T extends (i = a.Component) {
     }
     constructor(...e) {
         super(...e),
-            v(this, 'domElementRef', a.createRef()),
-            v(this, 'layerRef', a.createRef()),
-            v(this, 'popoutRef', a.createRef()),
+            v(this, 'domElementRef', o.createRef()),
+            v(this, 'layerRef', o.createRef()),
+            v(this, 'popoutRef', o.createRef()),
             v(this, 'resizeObserver', void 0),
-            v(this, 'popoutId', 'popout_'.concat(o()())),
-            v(this, 'loadingTimeout', new c.V7()),
-            v(this, 'validClickTimeout', new c.V7()),
+            v(this, 'popoutId', 'popout_'.concat(s()())),
+            v(this, 'loadingTimeout', new u.V7()),
+            v(this, 'validClickTimeout', new u.V7()),
             v(this, 'isValidClickStart', !1),
             v(this, 'state', {
                 renderedPosition: this.props.position,
@@ -168,26 +206,27 @@ class T extends (i = a.Component) {
                 let { renderPopout: n } = this.props;
                 return this.state.isLoading
                     ? this.props.loadingComponent
-                    : n({
-                          ...e,
-                          updatePosition: t,
-                          closePopout: this.close,
-                          setPopoutRef: this.handleSetPopoutRef
-                      });
+                    : n(
+                          O(b({}, e), {
+                              updatePosition: t,
+                              closePopout: this.close,
+                              setPopoutRef: this.handleSetPopoutRef
+                          })
+                      );
             }),
             v(this, 'close', (e) => {
                 let { onRequestClose: t, shouldShow: n } = this.props;
-                (null == t ? void 0 : t(e)) !== y && null == n && this.toggleShow(!1);
+                (null == t ? void 0 : t(e)) !== S && null == n && this.toggleShow(!1);
             }),
             v(this, 'handleClick', (e) => {
-                let { onShiftClick: t, shouldShow: n, onRequestOpen: i, onRequestClose: r } = this.props;
+                let { onShiftClick: t, shouldShow: n, onRequestOpen: r, onRequestClose: i } = this.props;
                 if (e.shiftKey && null != t) {
                     t(e);
                     return;
                 }
-                let a = null != n;
-                (a ? n : this.state.shouldShowPopout) ? null == r || r() : null == i || i(),
-                    a ||
+                let o = null != n;
+                (o ? n : this.state.shouldShowPopout) ? null == i || i() : null == r || r(),
+                    o ||
                         this.setState((e) => {
                             let { shouldShowPopout: t } = e;
                             return { shouldShowPopout: !t };
@@ -214,9 +253,9 @@ class T extends (i = a.Component) {
             v(this, 'handleDocumentMouseDown', (e) => {
                 let { ignoreModalClicks: t } = this.props,
                     n = e.target,
-                    i = this.domElementRef.current;
-                if (null != i) {
-                    if ((0, f.t)(i, n) || (t && (0, _.$s)())) return;
+                    r = this.domElementRef.current;
+                if (null != r) {
+                    if ((0, f.t)(r, n) || (t && (0, p.$s)())) return;
                     this.isValidClickStart = !0;
                 }
             }),
@@ -235,6 +274,6 @@ v(T, 'defaultProps', {
     autoInvert: !1,
     nudgeAlignIntoViewport: !1,
     spacing: 0,
-    loadingComponent: (0, r.jsx)(g.x, {})
+    loadingComponent: (0, i.jsx)(g.x, {})
 }),
     v(T, 'contextType', h.ZP);

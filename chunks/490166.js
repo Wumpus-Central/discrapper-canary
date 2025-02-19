@@ -1,70 +1,98 @@
-t.d(n, { default: () => r });
-var i = t(200651);
-t(192379);
-var s = t(481060),
-    o = t(536442),
-    l = t(13140),
-    c = t(487029),
-    d = t(388032),
-    a = t(882789);
-function r(e) {
-    let { guildId: n, channel: r, keybind: h, transitionState: u, onClose: k } = e;
-    function x() {
-        (0, o.Kw)(o.v6.SOUNDBOARD_WHEEL_EDUCATION_MODAL), k();
+n.d(t, { default: () => d }), n(301563);
+var o = n(200651);
+n(192379);
+var r = n(481060),
+    i = n(536442),
+    s = n(13140),
+    c = n(487029),
+    a = n(388032),
+    l = n(806083);
+function d(e) {
+    let { guildId: t, channel: d, keybind: u, transitionState: h, onClose: k } = e;
+    function b() {
+        (0, i.Kw)(i.v6.SOUNDBOARD_WHEEL_EDUCATION_MODAL), k();
     }
-    function _() {
-        x(),
-            (0, s.ZDy)(async () => {
-                let { default: e } = await t.e('5551').then(t.bind(t, 355453));
-                return (n) => (0, i.jsx)(e, { ...n });
+    function y() {
+        b(),
+            (0, r.ZDy)(async () => {
+                let { default: e } = await n.e('5551').then(n.bind(n, 355453));
+                return (t) =>
+                    (0, o.jsx)(
+                        e,
+                        (function (e) {
+                            for (var t = 1; t < arguments.length; t++) {
+                                var n = null != arguments[t] ? arguments[t] : {},
+                                    o = Object.keys(n);
+                                'function' == typeof Object.getOwnPropertySymbols &&
+                                    (o = o.concat(
+                                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                        })
+                                    )),
+                                    o.forEach(function (t) {
+                                        var o;
+                                        (o = n[t]),
+                                            t in e
+                                                ? Object.defineProperty(e, t, {
+                                                      value: o,
+                                                      enumerable: !0,
+                                                      configurable: !0,
+                                                      writable: !0
+                                                  })
+                                                : (e[t] = o);
+                                    });
+                            }
+                            return e;
+                        })({}, t)
+                    );
             });
     }
-    return (0, i.jsxs)(s.Y0X, {
-        transitionState: u,
-        'aria-label': d.intl.string(d.t['yJeV5+']),
+    return (0, o.jsxs)(r.Y0X, {
+        transitionState: h,
+        'aria-label': a.NW.string(a.t['yJeV5+']),
         children: [
-            (0, i.jsxs)(s.hzk, {
-                className: a.content,
+            (0, o.jsxs)(r.hzk, {
+                className: l.content,
                 children: [
-                    (0, i.jsx)(s.X6q, {
+                    (0, o.jsx)(r.X6q, {
                         variant: 'heading-xl/extrabold',
-                        className: a.header,
-                        children: d.intl.string(d.t['yJeV5+'])
+                        className: l.header,
+                        children: a.NW.string(a.t['yJeV5+'])
                     }),
-                    (0, i.jsx)(s.Text, {
+                    (0, o.jsx)(r.Text, {
                         variant: 'text-md/normal',
-                        children: d.intl.format(d.t.fq3Sw8, {
-                            keybind: (0, l.BB)(h.shortcut, !0).split(' + '),
-                            keybindHook: (e, n) =>
-                                (0, i.jsx)(
+                        children: a.NW.format(a.t.fq3Sw8, {
+                            keybind: (0, s.BB)(u.shortcut, !0).split(' + '),
+                            keybindHook: (e, t) =>
+                                (0, o.jsx)(
                                     'span',
                                     {
-                                        className: a.keybindHintKeys,
-                                        children: (0, i.jsx)(s.M2$, {
-                                            className: a.keybindShortcut,
-                                            shortcut: (0, l.BB)(h.shortcut, !1)
+                                        className: l.keybindHintKeys,
+                                        children: (0, o.jsx)(r.M2$, {
+                                            className: l.keybindShortcut,
+                                            shortcut: (0, s.BB)(u.shortcut, !1)
                                         })
                                     },
-                                    n
+                                    t
                                 ),
-                            openSettingsHook: (e, n) =>
-                                (0, i.jsx)(
-                                    s.eee,
+                            openSettingsHook: (e, t) =>
+                                (0, o.jsx)(
+                                    r.eee,
                                     {
-                                        onClick: _,
+                                        onClick: y,
                                         children: e
                                     },
-                                    n
+                                    t
                                 )
                         })
                     }),
-                    (0, i.jsx)('div', {
-                        className: a.soundWheel,
-                        children: (0, i.jsx)(c.Z, {
+                    (0, o.jsx)('div', {
+                        className: l.soundWheel,
+                        children: (0, o.jsx)(c.Z, {
                             width: 372,
                             height: 316,
-                            guildId: n,
-                            channel: r,
+                            guildId: t,
+                            channel: d,
                             interactive: !1,
                             keepOpen: !0,
                             onClose: () => {},
@@ -73,23 +101,23 @@ function r(e) {
                     })
                 ]
             }),
-            (0, i.jsxs)(s.mzw, {
+            (0, o.jsxs)(r.mzw, {
                 children: [
-                    (0, i.jsx)(s.zxk, {
-                        onClick: x,
-                        children: d.intl.string(d.t.ZwRzIC)
+                    (0, o.jsx)(r.zxk, {
+                        onClick: b,
+                        children: a.NW.string(a.t.ZwRzIC)
                     }),
-                    (0, i.jsx)(s.zxk, {
-                        look: s.zxk.Looks.LINK,
-                        color: s.zxk.Colors.PRIMARY,
-                        onClick: _,
-                        children: d.intl.string(d.t['TJ0N9/'])
+                    (0, o.jsx)(r.zxk, {
+                        look: r.zxk.Looks.LINK,
+                        color: r.zxk.Colors.PRIMARY,
+                        onClick: y,
+                        children: a.NW.string(a.t['TJ0N9/'])
                     })
                 ]
             }),
-            (0, i.jsx)(s.olH, {
-                className: a.closeButton,
-                onClick: x
+            (0, o.jsx)(r.olH, {
+                className: l.closeButton,
+                onClick: b
             })
         ]
     });

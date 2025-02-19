@@ -1,37 +1,110 @@
-n.d(t, { C: () => u });
-var i = n(200651),
-    r = n(192379),
-    a = n(539907),
-    s = n(743236),
-    o = n(218867),
-    l = n(186928);
+n.d(t, { C: () => h });
+var r = n(200651),
+    i = n(192379),
+    o = n(539907),
+    a = n(743236),
+    s = n(218867),
+    l = n(253068);
+function c(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
 function u(e) {
-    let { parentItem: t, isFocused: n, menuSubmenuProps: u, rows: c, rowHeight: d, onScroll: f, listClassName: _ } = e,
-        p = r.useRef(null),
-        h = r.useRef(null),
-        m = r.useRef(null),
-        g = r.useRef(null),
-        { isUsingKeyboardNavigation: E, focusIndex: v, ...y } = u;
-    r.useLayoutEffect(() => {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                c(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function d(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function f(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : d(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function p(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = _(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function _(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+function h(e) {
+    let { parentItem: t, isFocused: n, menuSubmenuProps: c, rows: d, rowHeight: _, onScroll: h, listClassName: m } = e,
+        g = i.useRef(null),
+        E = i.useRef(null),
+        v = i.useRef(null),
+        b = i.useRef(null),
+        { isUsingKeyboardNavigation: y, focusIndex: O } = c,
+        S = p(c, ['isUsingKeyboardNavigation', 'focusIndex']);
+    i.useLayoutEffect(() => {
         var e;
-        n && ((0, s.F)(p), null === (e = m.current) || void 0 === e || e.focus());
+        n && ((0, a.F)(g), null === (e = v.current) || void 0 === e || e.focus());
     }, [n]),
-        r.useEffect(() => {
-            if (n && v >= 0 && E) {
+        i.useEffect(() => {
+            if (n && O >= 0 && y) {
                 var e;
-                null === (e = g.current) || void 0 === e || e.scrollRowIntoView(v);
+                null === (e = b.current) || void 0 === e || e.scrollRowIntoView(O);
             }
-        }, [n, E, v]);
-    let I = r.useCallback((e) => c[e], [c]);
-    return (0, i.jsxs)('div', {
-        ref: p,
+        }, [n, y, O]);
+    let I = i.useCallback((e) => d[e], [d]);
+    return (0, r.jsxs)('div', {
+        ref: g,
         className: l.__invalid_submenuContainer,
         children: [
-            (0, i.jsx)('div', { ref: h }),
+            (0, r.jsx)('div', { ref: E }),
             t,
             n
-                ? (0, i.jsx)(a.j, {
-                      targetRef: h,
+                ? (0, r.jsx)(o.j, {
+                      targetRef: E,
                       autoInvert: !0,
                       nudgeAlignIntoViewport: !0,
                       fixed: !0,
@@ -39,23 +112,24 @@ function u(e) {
                       position: 'right',
                       align: 'top',
                       children: () =>
-                          c.length > 0 &&
-                          (0, i.jsx)('div', {
+                          d.length > 0 &&
+                          (0, r.jsx)('div', {
                               className: l.submenuPaddingContainer,
-                              children: (0, i.jsx)('div', {
-                                  className: l.submenu,
-                                  ...y,
-                                  ref: m,
-                                  children: (0, i.jsx)(o.Z, {
-                                      ref: g,
-                                      className: _,
-                                      listPadding: [6, 0, 6, 8],
-                                      onScroll: f,
-                                      renderRow: I,
-                                      rowCount: c.length,
-                                      rowHeight: d
+                              children: (0, r.jsx)(
+                                  'div',
+                                  f(u({ className: l.submenu }, S), {
+                                      ref: v,
+                                      children: (0, r.jsx)(s.Z, {
+                                          ref: b,
+                                          className: m,
+                                          listPadding: [6, 0, 6, 8],
+                                          onScroll: h,
+                                          renderRow: I,
+                                          rowCount: d.length,
+                                          rowHeight: _
+                                      })
                                   })
-                              })
+                              )
                           })
                   })
                 : null

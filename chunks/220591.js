@@ -16,9 +16,8 @@ t.exports = function (t, e, r) {
             .toOrderedMap()
             .merge(i.OrderedMap([[s, o.get(s)]]))
             .map(function (t, e) {
-                var i = e === a ? u : 0,
-                    o = e === s ? c : t.getLength();
-                return n(t, i, o, r);
+                var i = e === s ? c : t.getLength();
+                return n(t, e === a ? u : 0, i, r);
             });
     return t.merge({
         blockMap: o.merge(l),

@@ -1,59 +1,101 @@
-n.d(e, { default: () => r });
-var l = n(200651);
-n(192379);
-var s = n(481060),
-    a = n(313201),
-    d = n(430824),
-    i = n(614812),
-    o = n(388032),
-    c = n(243011);
-let r = (t) => {
-    let { onClose: e, guildId: n } = t,
-        r = (0, a.Dt)(),
-        m = o.intl.format(o.t.ZqkXsL, { helpdeskArticle: i.z }),
-        u = d.Z.getGuild(n);
+r.d(t, { default: () => d });
+var n = r(200651);
+r(192379);
+var o = r(481060),
+    c = r(313201),
+    s = r(430824),
+    a = r(614812),
+    l = r(388032),
+    i = r(767365);
+let d = (e) => {
+    var t, r;
+    let { onClose: d, guildId: u } = e,
+        p = (0, c.Dt)(),
+        b = l.NW.format(l.t.ZqkXsL, { helpdeskArticle: a.z }),
+        m = s.Z.getGuild(u);
     return (
-        null != u &&
-            (m = o.intl.format(o.t.jn0Xy8, {
-                guildName: u.name,
-                helpdeskArticle: i.z
+        null != m &&
+            (b = l.NW.format(l.t.jn0Xy8, {
+                guildName: m.name,
+                helpdeskArticle: a.z
             })),
-        (0, l.jsxs)(s.Y0X, {
-            ...t,
-            'aria-labelledby': r,
-            children: [
-                (0, l.jsxs)(s.xBx, {
-                    separator: !1,
-                    className: c.modalHeader,
+        (0, n.jsxs)(
+            o.Y0X,
+            ((t = (function (e) {
+                for (var t = 1; t < arguments.length; t++) {
+                    var r = null != arguments[t] ? arguments[t] : {},
+                        n = Object.keys(r);
+                    'function' == typeof Object.getOwnPropertySymbols &&
+                        (n = n.concat(
+                            Object.getOwnPropertySymbols(r).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                            })
+                        )),
+                        n.forEach(function (t) {
+                            var n;
+                            (n = r[t]),
+                                t in e
+                                    ? Object.defineProperty(e, t, {
+                                          value: n,
+                                          enumerable: !0,
+                                          configurable: !0,
+                                          writable: !0
+                                      })
+                                    : (e[t] = n);
+                        });
+                }
+                return e;
+            })({}, e)),
+            (r = r =
+                {
+                    'aria-labelledby': p,
                     children: [
-                        (0, l.jsx)(s.X6q, {
-                            id: r,
-                            variant: 'heading-xl/extrabold',
-                            children: o.intl.string(o.t.kJwpBQ)
+                        (0, n.jsxs)(o.xBx, {
+                            separator: !1,
+                            className: i.modalHeader,
+                            children: [
+                                (0, n.jsx)(o.X6q, {
+                                    id: p,
+                                    variant: 'heading-xl/extrabold',
+                                    children: l.NW.string(l.t.kJwpBQ)
+                                }),
+                                (0, n.jsx)(o.olH, {
+                                    className: i.closeButton,
+                                    onClick: d
+                                })
+                            ]
                         }),
-                        (0, l.jsx)(s.olH, {
-                            className: c.closeButton,
-                            onClick: e
+                        (0, n.jsx)(o.hzk, {
+                            className: i.modalContent,
+                            children: (0, n.jsx)(o.Text, {
+                                variant: 'text-md/normal',
+                                className: i.contentText,
+                                children: b
+                            })
+                        }),
+                        (0, n.jsx)(o.mzw, {
+                            children: (0, n.jsx)(o.zxk, {
+                                className: i.button,
+                                size: o.zxk.Sizes.MIN,
+                                onClick: d,
+                                children: l.NW.string(l.t.BddRzc)
+                            })
                         })
                     ]
                 }),
-                (0, l.jsx)(s.hzk, {
-                    className: c.modalContent,
-                    children: (0, l.jsx)(s.Text, {
-                        variant: 'text-md/normal',
-                        className: c.contentText,
-                        children: m
-                    })
-                }),
-                (0, l.jsx)(s.mzw, {
-                    children: (0, l.jsx)(s.zxk, {
-                        className: c.button,
-                        size: s.zxk.Sizes.MIN,
-                        onClick: e,
-                        children: o.intl.string(o.t.BddRzc)
-                    })
-                })
-            ]
-        })
+            Object.getOwnPropertyDescriptors
+                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+                : (function (e, t) {
+                      var r = Object.keys(e);
+                      if (Object.getOwnPropertySymbols) {
+                          var n = Object.getOwnPropertySymbols(e);
+                          r.push.apply(r, n);
+                      }
+                      return r;
+                  })(Object(r)).forEach(function (e) {
+                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+                  }),
+            t)
+        )
     );
 };

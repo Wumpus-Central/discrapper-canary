@@ -1,56 +1,57 @@
-e.d(t, {
+n.d(t, {
     q: () => c,
     z: () => s
-});
-var i = e(200651);
-e(192379);
-var r = e(120356),
-    o = e.n(r),
-    l = e(481060),
-    a = e(683101);
-function s(n) {
-    let { children: t } = n;
-    return (0, i.jsx)('div', {
+}),
+    n(266796);
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    l = n.n(i),
+    o = n(481060),
+    a = n(249883);
+function s(e) {
+    let { children: t } = e;
+    return (0, r.jsx)('div', {
         className: a.cellGroup,
-        children: (0, i.jsx)('div', {
+        children: (0, r.jsx)('div', {
             className: a.content,
             children: t
         })
     });
 }
-function c(n) {
-    let { icon: t, title: e, description: r, iconClassName: s, color: c, listType: d = 'icon', index: x } = n;
-    return (0, i.jsxs)('div', {
+function c(e) {
+    let { icon: t, title: n, description: i, iconClassName: s, color: c, listType: u = 'icon', index: d } = e;
+    return (0, r.jsxs)('div', {
         className: a.cell,
         children: [
-            'numbered' === d && null != x
-                ? (0, i.jsx)(l.X6q, {
+            'numbered' === u && null != d
+                ? (0, r.jsx)(o.X6q, {
                       variant: 'heading-md/semibold',
                       color: 'text-brand',
                       className: a.number,
-                      children: x + 1
+                      children: d + 1
                   })
                 : null != t &&
-                  (0, i.jsx)('div', {
+                  (0, r.jsx)('div', {
                       className: a.iconContainer,
-                      children: (0, i.jsx)(t, {
+                      children: (0, r.jsx)(t, {
                           color: null != c ? c : 'currentColor',
-                          className: o()(a.icon, s)
+                          className: l()(a.icon, s)
                       })
                   }),
-            (0, i.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 className: a.textContainer,
                 children: [
-                    (0, i.jsx)(l.Text, {
+                    (0, r.jsx)(o.Text, {
                         variant: 'text-md/semibold',
                         color: 'header-primary',
-                        children: e
+                        children: n
                     }),
-                    null != r &&
-                        (0, i.jsx)(l.Text, {
+                    null != i &&
+                        (0, r.jsx)(o.Text, {
                             variant: 'text-xs/medium',
                             color: 'text-secondary',
-                            children: r
+                            children: i
                         })
                 ]
             })

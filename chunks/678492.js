@@ -1,30 +1,72 @@
-n.d(t, { Z: () => d });
-var i = n(200651);
+n.d(t, { Z: () => c });
+var r = n(200651);
 n(192379);
-var l = n(481060),
-    r = n(570140),
-    a = n(317770),
-    s = n(388032);
-class o extends a.Z {
+var i = n(481060),
+    l = n(570140),
+    o = n(317770),
+    a = n(388032);
+class s extends o.Z {
     _initialize() {
-        r.Z.subscribe('POGGERMODE_TEMPORARILY_DISABLED', this.handlePoggermodeTemporarilyDisabled);
+        l.Z.subscribe('POGGERMODE_TEMPORARILY_DISABLED', this.handlePoggermodeTemporarilyDisabled);
     }
     _terminate() {
-        r.Z.unsubscribe('POGGERMODE_TEMPORARILY_DISABLED', this.handlePoggermodeTemporarilyDisabled);
+        l.Z.unsubscribe('POGGERMODE_TEMPORARILY_DISABLED', this.handlePoggermodeTemporarilyDisabled);
     }
     handlePoggermodeTemporarilyDisabled() {
-        (0, l.h7j)((e) =>
-            (0, i.jsx)(l.ConfirmModal, {
-                ...e,
-                header: s.intl.string(s.t.wDQgnZ),
-                confirmText: s.intl.string(s.t['cY+Ooa']),
-                confirmButtonColor: l.zxk.Colors.GREEN,
-                children: (0, i.jsx)(l.Text, {
-                    variant: 'text-md/normal',
-                    children: s.intl.string(s.t.OJklbW)
-                })
-            })
-        );
+        (0, i.h7j)((e) => {
+            var t, n;
+            return (0, r.jsx)(
+                i.ConfirmModal,
+                ((t = (function (e) {
+                    for (var t = 1; t < arguments.length; t++) {
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            r = Object.keys(n);
+                        'function' == typeof Object.getOwnPropertySymbols &&
+                            (r = r.concat(
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                })
+                            )),
+                            r.forEach(function (t) {
+                                var r;
+                                (r = n[t]),
+                                    t in e
+                                        ? Object.defineProperty(e, t, {
+                                              value: r,
+                                              enumerable: !0,
+                                              configurable: !0,
+                                              writable: !0
+                                          })
+                                        : (e[t] = r);
+                            });
+                    }
+                    return e;
+                })({}, e)),
+                (n = n =
+                    {
+                        header: a.NW.string(a.t.wDQgnZ),
+                        confirmText: a.NW.string(a.t['cY+Ooa']),
+                        confirmButtonColor: i.zxk.Colors.GREEN,
+                        children: (0, r.jsx)(i.Text, {
+                            variant: 'text-md/normal',
+                            children: a.NW.string(a.t.OJklbW)
+                        })
+                    }),
+                Object.getOwnPropertyDescriptors
+                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                    : (function (e, t) {
+                          var n = Object.keys(e);
+                          if (Object.getOwnPropertySymbols) {
+                              var r = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, r);
+                          }
+                          return n;
+                      })(Object(n)).forEach(function (e) {
+                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                      }),
+                t)
+            );
+        });
     }
 }
-let d = new o();
+let c = new s();

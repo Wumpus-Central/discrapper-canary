@@ -1,44 +1,44 @@
 n.d(t, { Z: () => N }), n(47120);
-var i = n(200651),
-    l = n(192379),
-    a = n(120356),
-    r = n.n(a),
-    s = n(392711),
-    o = n(399606),
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    o = n.n(l),
+    a = n(392711),
+    s = n(399606),
     c = n(481060),
-    d = n(493773),
-    u = n(963374),
-    h = n(735020),
-    p = n(786761),
-    m = n(937889),
-    f = n(619753),
+    u = n(493773),
+    d = n(963374),
+    p = n(735020),
+    h = n(786761),
+    f = n(937889),
+    m = n(619753),
     g = n(433355),
-    _ = n(271383),
-    C = n(594174),
-    x = n(189432),
+    b = n(271383),
+    _ = n(594174),
+    C = n(189432),
     v = n(356778),
-    E = n(370595),
-    I = n(50493),
-    b = n(859113),
-    Z = n(61335);
+    y = n(370595),
+    x = n(50493),
+    j = n(211971),
+    O = n(776141);
 function N(e) {
     var t, n;
-    let { userId: a, guildId: N, location: T, className: S, onNavigate: j } = e,
-        y = l.useRef(null),
-        A = (0, o.e7)([g.ZP], () => g.ZP.getGuildSidebarState(N), [N]),
-        P = l.useRef(0),
-        [R, M] = l.useState(null !== (t = null == A ? void 0 : A.details.additionalSearchQuery) && void 0 !== t ? t : {}),
-        L = (0, v.z0)(a, N, {
-            addtionalQuery: R,
+    let { userId: l, guildId: N, location: E, className: P, onNavigate: I } = e,
+        S = i.useRef(null),
+        Z = (0, s.e7)([g.ZP], () => g.ZP.getGuildSidebarState(N), [N]),
+        T = i.useRef(0),
+        [A, w] = i.useState(null !== (t = null == Z ? void 0 : Z.details.additionalSearchQuery) && void 0 !== t ? t : {}),
+        R = (0, v.z0)(l, N, {
+            addtionalQuery: A,
             shouldDispatch: !0
         }),
-        k = (0, o.e7)([C.default], () => C.default.getUser(a), [a]),
-        O = (0, o.e7)([_.ZP], () => _.ZP.getMember(N, a), [N, a]);
-    (0, d.Ng)(() => {
-        let e = null == A ? void 0 : A.details.scrollOffset;
+        k = (0, s.e7)([_.default], () => _.default.getUser(l), [l]),
+        M = (0, s.e7)([b.ZP], () => b.ZP.getMember(N, l), [N, l]);
+    (0, u.Ng)(() => {
+        let e = null == Z ? void 0 : Z.details.scrollOffset;
         if (null != e) {
             var t;
-            null === (t = y.current) ||
+            null === (t = S.current) ||
                 void 0 === t ||
                 t.scrollTo({
                     to: e,
@@ -46,118 +46,155 @@ function N(e) {
                 });
         }
     });
-    let D = l.useCallback(
+    let L = i.useCallback(
             (e) => {
-                if (null == A) return;
+                if (null == Z) return;
                 let t = e.target.scrollTop;
-                (P.current = t),
-                    (0, x.r)(N, a, A.baseChannelId, {
-                        modViewPanel: I.k.MESSAGE_HISTORY,
-                        additionalSearchQuery: R,
-                        scrollOffset: P.current
+                (T.current = t),
+                    (0, C.r)(N, l, Z.baseChannelId, {
+                        modViewPanel: x.k.MESSAGE_HISTORY,
+                        additionalSearchQuery: A,
+                        scrollOffset: T.current
                     });
             },
-            [N, a, A, R]
+            [N, l, Z, A]
         ),
-        w = (0, s.throttle)(D, 300),
-        U = l.useCallback(
+        D = (0, a.throttle)(L, 300),
+        W = i.useCallback(
             (e) => {
-                if (null == A) return;
-                let t = {
-                    ...R,
-                    offset: 25 * e
-                };
-                M(t),
-                    (0, x.r)(N, a, A.baseChannelId, {
-                        modViewPanel: I.k.MESSAGE_HISTORY,
-                        additionalSearchQuery: t,
-                        scrollOffset: P.current
+                var t, n;
+                if (null == Z) return;
+                let r =
+                    ((t = (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var n = null != arguments[t] ? arguments[t] : {},
+                                r = Object.keys(n);
+                            'function' == typeof Object.getOwnPropertySymbols &&
+                                (r = r.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    })
+                                )),
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = n[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: r,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0
+                                              })
+                                            : (e[t] = r);
+                                });
+                        }
+                        return e;
+                    })({}, A)),
+                    (n = n = { offset: 25 * e }),
+                    Object.getOwnPropertyDescriptors
+                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                        : (function (e, t) {
+                              var n = Object.keys(e);
+                              if (Object.getOwnPropertySymbols) {
+                                  var r = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, r);
+                              }
+                              return n;
+                          })(Object(n)).forEach(function (e) {
+                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                          }),
+                    t);
+                w(r),
+                    (0, C.r)(N, l, Z.baseChannelId, {
+                        modViewPanel: x.k.MESSAGE_HISTORY,
+                        additionalSearchQuery: r,
+                        scrollOffset: T.current
                     });
             },
-            [N, a, A, R]
+            [N, l, Z, A]
         ),
-        B = null !== (n = null == R ? void 0 : R.offset) && void 0 !== n ? n : 0,
-        F = (0, o.e7)(
-            [h.Z],
+        U = null !== (n = null == A ? void 0 : A.offset) && void 0 !== n ? n : 0,
+        B = (0, s.e7)(
+            [p.Z],
             () => {
-                if (null == L.result) return [];
-                let e = L.result.messages,
-                    t = (0, u.nC)('');
+                if (null == R.result) return [];
+                let e = R.result.messages,
+                    t = (0, d.nC)('');
                 return e.map((e) =>
                     e.map((e) => {
-                        let n = h.Z.getMessage(e.id, e.channel_id),
-                            i = (0, p.e5)(e);
+                        let n = p.Z.getMessage(e.id, e.channel_id),
+                            r = (0, h.e5)(e);
                         return (
                             null != n &&
-                                (i = i.merge({
+                                (r = r.merge({
                                     attachments: n.attachments,
                                     embeds: n.embeds
                                 })),
-                            i.isSearchHit
-                                ? i.set(
+                            r.isSearchHit
+                                ? r.set(
                                       'customRenderedContent',
-                                      (0, m.ZP)(i, {
+                                      (0, f.ZP)(r, {
                                           postProcessor: t,
                                           allowHeading: !0,
                                           allowList: !0
                                       })
                                   )
-                                : i
+                                : r
                         );
                     })
                 );
             },
-            [L.result]
+            [R.result]
         ),
-        H = l.useMemo(() => {
-            var e, t, n, i;
-            return null == L.result
+        F = i.useMemo(() => {
+            var e, t, n, r;
+            return null == R.result
                 ? {
                       documentsIndexed: 0,
                       isSearching: !0,
                       isIndexing: !1,
                       isHistoricalIndexing: !1,
-                      offset: B,
+                      offset: U,
                       totalResults: 0,
                       hasError: !1,
                       showBlockedResults: !1,
                       showNoResultsAlt: !1
                   }
                 : {
-                      documentsIndexed: null !== (e = L.result.documents_indexed) && void 0 !== e ? e : 0,
+                      documentsIndexed: null !== (e = R.result.documents_indexed) && void 0 !== e ? e : 0,
                       isSearching: !1,
-                      isIndexing: null !== (t = L.result.doing_deep_historical_index) && void 0 !== t && t,
-                      isHistoricalIndexing: null !== (n = L.result.doing_deep_historical_index) && void 0 !== n && n,
-                      offset: B,
-                      totalResults: null !== (i = L.result.total_results) && void 0 !== i ? i : 0,
+                      isIndexing: null !== (t = R.result.doing_deep_historical_index) && void 0 !== t && t,
+                      isHistoricalIndexing: null !== (n = R.result.doing_deep_historical_index) && void 0 !== n && n,
+                      offset: U,
+                      totalResults: null !== (r = R.result.total_results) && void 0 !== r ? r : 0,
                       hasError: !1,
                       showBlockedResults: !1,
                       showNoResultsAlt: !1
                   };
-        }, [L.result, B]);
-    return null == k || null == O || null == H
+        }, [R.result, U]);
+    return null == k || null == M || null == F
         ? null
-        : (0, i.jsxs)('div', {
-              className: r()(b.container, S),
+        : (0, r.jsxs)('div', {
+              className: o()(j.container, P),
               children: [
-                  (0, i.jsx)(E.Z, {
+                  (0, r.jsx)(y.Z, {
                       guildId: N,
-                      userId: a,
-                      onNavigate: j
+                      userId: l,
+                      onNavigate: I
                   }),
-                  (0, i.jsx)(c.Den, {
-                      className: Z.innerContainer,
-                      ref: y,
-                      onScroll: w,
-                      children: (0, i.jsx)(f.Z, {
-                          searchResults: F,
-                          search: H,
-                          searchId: a,
+                  (0, r.jsx)(c.Den, {
+                      className: O.innerContainer,
+                      ref: S,
+                      onScroll: D,
+                      children: (0, r.jsx)(m.Z, {
+                          searchResults: B,
+                          search: F,
+                          searchId: l,
                           renderEmbeds: !0,
                           blockCount: 0,
                           ignoreCount: 0,
                           scrollTo: () => {},
-                          onChangePage: U
+                          onChangePage: W
                       })
                   })
               ]

@@ -1,15 +1,15 @@
-let i, r;
+let r, i;
 n.d(t, {
-    Z: () => N,
-    q: () => _
+    Z: () => R,
+    q: () => m
 }),
     n(653041);
-var a,
-    s = n(213919),
-    o = n(442837),
+var o,
+    a = n(213919),
+    s = n(442837),
     l = n(570140),
-    u = n(990492),
-    c = n(988965),
+    c = n(990492),
+    u = n(988965),
     d = n(71509);
 function f(e, t, n) {
     return (
@@ -24,21 +24,60 @@ function f(e, t, n) {
         e
     );
 }
-var _ = (function (e) {
+function p(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                f(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function _(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function h(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : _(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+var m = (function (e) {
     return (e[(e.INVALID = 0)] = 'INVALID'), (e[(e.VALIDATING = 1)] = 'VALIDATING'), (e[(e.VALID = 2)] = 'VALID'), e;
 })({});
-let p = [],
-    h = !1;
-function m(e) {
+let g = [],
+    E = !1;
+function v(e) {
     let { user: t } = e;
-    (i = t.id), (h = !1);
-    let n = p.slice(),
-        r = n.findIndex((e) => {
+    (r = t.id), (E = !1);
+    let n = g.slice(),
+        i = n.findIndex((e) => {
             let { id: n } = e;
             return n === t.id;
         });
-    r > -1
-        ? ((p[r].avatar = t.avatar), (p[r].username = t.username), (p[r].discriminator = t.discriminator), (p[r].tokenStatus = 2))
+    i > -1
+        ? ((g[i].avatar = t.avatar), (g[i].username = t.username), (g[i].discriminator = t.discriminator), (g[i].tokenStatus = 2))
         : n.push({
               id: t.id,
               avatar: t.avatar,
@@ -47,119 +86,105 @@ function m(e) {
               tokenStatus: 2,
               pushSyncToken: null
           }),
-        (p = n).length > d.$H &&
-            p.splice(d.$H).forEach((e) => {
+        (g = n).length > d.$H &&
+            g.splice(d.$H).forEach((e) => {
                 let { id: t } = e;
-                E(t);
+                y(t);
             });
 }
-function g(e) {
-    (h = !!e.isSwitchingAccount),
+function b(e) {
+    (E = !!e.isSwitchingAccount),
         e.isSwitchingAccount ||
-            (p = p.filter((e) => {
+            (g = g.filter((e) => {
                 let { id: t } = e;
-                return t !== i;
+                return t !== r;
             })),
-        (i = null);
+        (r = null);
 }
-function E(e) {
-    (p = p.filter((t) => {
+function y(e) {
+    (g = g.filter((t) => {
         let { id: n } = t;
         return n !== e;
     })),
-        s.removeToken(e);
+        a.removeToken(e);
 }
-function v(e) {
+function O(e) {
     let { user: t } = e,
-        n = p.slice(),
-        i = n.find((e) => {
+        n = g.slice(),
+        r = n.find((e) => {
             let { id: n } = e;
             return n === t.id;
         });
-    null != i && ((i.avatar = t.avatar), (i.username = t.username), (i.discriminator = t.discriminator), (p = n));
+    null != r && ((r.avatar = t.avatar), (r.username = t.username), (r.discriminator = t.discriminator), (g = n));
 }
-function y(e, t) {
-    let n = p.slice(),
-        i = n.find((t) => {
+function S(e, t) {
+    let n = g.slice(),
+        r = n.find((t) => {
             let { id: n } = t;
             return n === e;
         });
-    null != i && ((i.tokenStatus = t), (p = n));
+    null != r && ((r.tokenStatus = t), (g = n));
 }
 function I(e) {
     let { from: t, to: n } = e;
-    p = (0, u.aB)(p, t, n);
+    g = (0, c.aB)(g, t, n);
 }
 function T(e) {
     let { multiAccountMobileExperimentEnabled: t } = e;
-    r = t;
+    i = t;
 }
-function b(e) {
+function N(e) {
     let { userId: t, pushSyncToken: n } = e;
-    p = p.map((e) =>
-        e.id === t
-            ? {
-                  ...e,
-                  pushSyncToken: n
-              }
-            : e
-    );
+    g = g.map((e) => (e.id === t ? h(p({}, e), { pushSyncToken: n }) : e));
 }
-function S(e) {
+function A(e) {
     let { invalidPushSyncTokens: t } = e;
-    p = p.map((e) =>
-        null != e.pushSyncToken && t.includes(e.pushSyncToken)
-            ? {
-                  ...e,
-                  pushSyncToken: null
-              }
-            : e
-    );
+    g = g.map((e) => (null != e.pushSyncToken && t.includes(e.pushSyncToken) ? h(p({}, e), { pushSyncToken: null }) : e));
 }
-class A extends (a = o.ZP.PersistedStore) {
+class C extends (o = s.ZP.PersistedStore) {
     initialize(e) {
         if (null != e) {
             var t;
-            (p = null !== (t = e.users) && void 0 !== t ? t : []), (r = e.canUseMultiAccountMobile);
+            (g = null !== (t = e.users) && void 0 !== t ? t : []), (i = e.canUseMultiAccountMobile);
         }
     }
     getCanUseMultiAccountMobile() {
-        return r;
+        return i;
     }
     getState() {
         return {
-            users: p,
-            canUseMultiAccountMobile: r
+            users: g,
+            canUseMultiAccountMobile: i
         };
     }
     getUsers() {
-        return p;
+        return g;
     }
     getValidUsers() {
-        return p.filter((e) => {
+        return g.filter((e) => {
             let { tokenStatus: t } = e;
             return 0 !== t;
         });
     }
     getHasLoggedInAccounts() {
-        return p.length > 0;
+        return g.length > 0;
     }
     getIsValidatingUsers() {
-        return p.some((e) => {
+        return g.some((e) => {
             let { tokenStatus: t } = e;
             return 1 === t;
         });
     }
     get canUseMultiAccountNotifications() {
-        return this.getCanUseMultiAccountMobile() && c.N.getCurrentConfig({ location: '09e468_1' }, { autoTrackExposure: !1 }).isMultiAccountMobileNotificationsEnabled;
+        return this.getCanUseMultiAccountMobile() && u.N.getCurrentConfig({ location: '09e468_1' }, { autoTrackExposure: !1 }).isMultiAccountMobileNotificationsEnabled;
     }
     get isSwitchingAccount() {
-        return h;
+        return E;
     }
 }
-f(A, 'displayName', 'MultiAccountStore'),
-    f(A, 'persistKey', 'MultiAccountStore'),
-    f(A, 'migrations', [
+f(C, 'displayName', 'MultiAccountStore'),
+    f(C, 'persistKey', 'MultiAccountStore'),
+    f(C, 'migrations', [
         (e) => {
             if (null != e) {
                 var t;
@@ -174,16 +199,16 @@ f(A, 'displayName', 'MultiAccountStore'),
             };
         }
     ]);
-let N = new A(l.Z, {
-    CONNECTION_OPEN: m,
-    LOGOUT: g,
-    MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST: (e) => y(e.userId, 1),
-    MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS: (e) => y(e.userId, 2),
-    MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE: (e) => y(e.userId, 0),
-    MULTI_ACCOUNT_REMOVE_ACCOUNT: (e) => E(e.userId),
+let R = new C(l.Z, {
+    CONNECTION_OPEN: v,
+    LOGOUT: b,
+    MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST: (e) => S(e.userId, 1),
+    MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS: (e) => S(e.userId, 2),
+    MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE: (e) => S(e.userId, 0),
+    MULTI_ACCOUNT_REMOVE_ACCOUNT: (e) => y(e.userId),
     MULTI_ACCOUNT_MOVE_ACCOUNT: I,
-    CURRENT_USER_UPDATE: v,
+    CURRENT_USER_UPDATE: O,
     MULTI_ACCOUNT_MOBILE_EXPERIMENT_UPDATE: T,
-    MULTI_ACCOUNT_UPDATE_PUSH_SYNC_TOKEN: b,
-    MULTI_ACCOUNT_INVALIDATE_PUSH_SYNC_TOKENS: S
+    MULTI_ACCOUNT_UPDATE_PUSH_SYNC_TOKEN: N,
+    MULTI_ACCOUNT_INVALIDATE_PUSH_SYNC_TOKENS: A
 });

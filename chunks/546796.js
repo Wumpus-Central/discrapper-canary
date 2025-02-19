@@ -1,84 +1,161 @@
-let i, r;
-n.d(t, { Z: () => _ }), n(411104);
-var a = n(594174),
-    s = n(195270);
-let o = () => {
+let r, i;
+n.d(t, { Z: () => v }), n(411104);
+var o = n(594174),
+    a = n(195270);
+function s(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function l(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                s(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function c(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function u(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : c(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function d(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = f(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function f(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+let p = () => {
     throw Error('updateModal has not been implemented.');
 };
 {
     let e = n(169480);
-    (i = e.showModal), (o = e.updateModalProps), (r = n(952265).Mr);
+    (r = e.showModal), (p = e.updateModalProps), (i = n(952265).Mr);
 }
-let l = 60008;
-function u() {
+let _ = 60008;
+function h() {
     var e, t;
-    return null !== (t = null === (e = a.default.getCurrentUser()) || void 0 === e ? void 0 : e.mfaEnabled) && void 0 !== t && t;
+    return null !== (t = null === (e = o.default.getCurrentUser()) || void 0 === e ? void 0 : e.mfaEnabled) && void 0 !== t && t;
 }
-function c(e, t) {
-    return (e.body && e.body.code === l) || (t && 429 === e.status);
+function m(e, t) {
+    return (e.body && e.body.code === _) || (t && 429 === e.status);
 }
-function d(e) {
-    let { promiseFn: t, resolve: n, reject: a, modalProps: s = {}, hooks: { onEarlyClose: l } = {} } = e;
-    if (null == i) {
-        null == l || l();
+function g(e) {
+    let { promiseFn: t, resolve: n, reject: o, modalProps: a = {}, hooks: { onEarlyClose: s } = {} } = e;
+    if (null == r) {
+        null == s || s();
         return;
     }
-    let u = i(p, c, s);
-    function c() {
-        null == l || l();
+    let c = r(h, d, a);
+    function d() {
+        null == s || s();
     }
-    function d(e) {
-        r(u), n(e);
+    function f(e) {
+        i(c), n(e);
     }
     function _(e) {
-        r(u), a(e);
+        i(c), o(e);
     }
-    function p(e) {
+    function h(e) {
         return (
-            o(u, p, c, {
-                ...s,
-                isLoading: !0
-            }),
-            f({
+            p(c, h, d, u(l({}, a), { isLoading: !0 })),
+            E({
                 promiseFn: t,
-                resolve: d,
+                resolve: f,
                 reject: _,
                 code: e,
-                mfaCodeHandler: h,
+                mfaCodeHandler: m,
                 isModalOpen: !0
             })
         );
     }
-    function h(e) {
+    function m(e) {
         let { res: t } = e;
-        o(u, p, c, {
-            ...s,
-            error: t.body.message
-        });
+        p(c, h, d, u(l({}, a), { error: t.body.message }));
     }
 }
-function f(e) {
-    let { promiseFn: t, resolve: n, reject: i, code: r, mfaCodeHandler: a = d, isModalOpen: s = !1, ...o } = e;
-    return t(null != r ? { code: r } : {}).then(n, (e) => {
-        if (c(e, s))
-            return a({
-                promiseFn: t,
-                resolve: n,
-                reject: i,
-                res: e,
-                ...o
-            });
-        i(e);
+function E(e) {
+    var { promiseFn: t, resolve: n, reject: r, code: i, mfaCodeHandler: o = g, isModalOpen: a = !1 } = e,
+        s = d(e, ['promiseFn', 'resolve', 'reject', 'code', 'mfaCodeHandler', 'isModalOpen']);
+    return t(null != i ? { code: i } : {}).then(n, (e) => {
+        if (m(e, a))
+            return o(
+                l(
+                    {
+                        promiseFn: t,
+                        resolve: n,
+                        reject: r,
+                        res: e
+                    },
+                    s
+                )
+            );
+        r(e);
     });
 }
-function _(e, t) {
-    let { checkEnabled: n = u(), ...i } = null != t ? t : {};
-    return new Promise((t, r) => {
-        ((0, s.d)(n) ? d : f)({
-            promiseFn: e,
-            resolve: t,
-            reject: r,
-            ...i
-        });
+function v(e, t) {
+    let n = null != t ? t : {},
+        { checkEnabled: r = h() } = n,
+        i = d(n, ['checkEnabled']);
+    return new Promise((t, n) => {
+        ((0, a.d)(r) ? g : E)(
+            l(
+                {
+                    promiseFn: e,
+                    resolve: t,
+                    reject: n
+                },
+                i
+            )
+        );
     });
 }

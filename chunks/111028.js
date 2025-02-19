@@ -1,34 +1,109 @@
-n.d(t, { Z: () => c });
-var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(481060),
-    l = n(410876);
-let u = 500;
-function c(e) {
-    let { children: t, 'aria-label': n, className: a, position: c, ...d } = e,
-        f = r.useRef(null),
-        _ = null != n ? n : 'string' == typeof t && t;
-    return (0, i.jsx)(o.ua7, {
-        ...d,
-        position: null != c ? c : 'top',
-        delay: u,
-        text: t,
-        'aria-label': _,
-        children: (n) => {
-            let { onMouseEnter: r, onMouseLeave: o } = n;
-            return (0, i.jsx)('div', {
-                className: s()(a, l.overflow),
-                ref: f,
-                'aria-hidden': e['aria-hidden'],
-                onMouseEnter: () => {
-                    let { current: e } = f;
-                    null != e && e.offsetWidth < e.scrollWidth && (null == r || r());
-                },
-                onMouseLeave: o,
-                children: t
+n.d(t, { Z: () => m });
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(481060),
+    l = n(995690);
+function c(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function u(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                c(e, t, n[t]);
             });
-        }
-    });
+    }
+    return e;
+}
+function d(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function f(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : d(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function p(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = _(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function _(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+let h = 500;
+function m(e) {
+    let { children: t, 'aria-label': n, className: o, position: c } = e,
+        d = p(e, ['children', 'aria-label', 'className', 'position']),
+        _ = i.useRef(null),
+        m = null != n ? n : 'string' == typeof t && t;
+    return (0, r.jsx)(
+        s.ua7,
+        f(u({}, d), {
+            position: null != c ? c : 'top',
+            delay: h,
+            text: t,
+            'aria-label': m,
+            children: (n) => {
+                let { onMouseEnter: i, onMouseLeave: s } = n;
+                return (0, r.jsx)('div', {
+                    className: a()(o, l.overflow),
+                    ref: _,
+                    'aria-hidden': e['aria-hidden'],
+                    onMouseEnter: () => {
+                        let { current: e } = _;
+                        null != e && e.offsetWidth < e.scrollWidth && (null == i || i());
+                    },
+                    onMouseLeave: s,
+                    children: t
+                });
+            }
+        })
+    );
 }

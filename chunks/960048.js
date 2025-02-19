@@ -1,39 +1,91 @@
-n.d(t, { Z: () => l }), n(47120), n(411104);
-var i = n(464847),
-    r = n(289182),
-    a = n(358085),
-    s = n(998502);
-function o() {
-    var e, t, n, i, r, o;
+n.d(t, { Z: () => f }), n(47120), n(411104);
+var r = n(464847),
+    i = n(289182),
+    o = n(358085),
+    a = n(998502);
+function s(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function l(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                s(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function c(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function u(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : c(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function d() {
+    var e, t, n, r, i, s;
     let l = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    a.isPlatformEmbedded &&
-        s.ZP.updateCrashReporter({
+    o.isPlatformEmbedded &&
+        a.ZP.updateCrashReporter({
             user_id: null !== (e = l.id) && void 0 !== e ? e : '',
             username: null !== (t = l.username) && void 0 !== t ? t : '',
             email: null !== (n = l.email) && void 0 !== n ? n : '',
             sentry: {
                 user: {
-                    id: null !== (i = l.id) && void 0 !== i ? i : '',
-                    username: null !== (r = l.username) && void 0 !== r ? r : '',
-                    email: null !== (o = l.email) && void 0 !== o ? o : ''
+                    id: null !== (r = l.id) && void 0 !== r ? r : '',
+                    username: null !== (i = l.username) && void 0 !== i ? i : '',
+                    email: null !== (s = l.email) && void 0 !== s ? s : ''
                 }
             }
         });
 }
-let l = {
-    setUser(e, t, n, i) {
-        var r;
-        let a = {
+let f = {
+    setUser(e, t, n, r) {
+        var i;
+        let o = {
             id: e,
             username: t,
             email: n,
-            staff: i
+            staff: r
         };
-        null === (r = window.DiscordSentry) || void 0 === r || r.getCurrentScope().setUser(a), o(a);
+        null === (i = window.DiscordSentry) || void 0 === i || i.getCurrentScope().setUser(o), d(o);
     },
     clearUser() {
         var e;
-        null === (e = window.DiscordSentry) || void 0 === e || e.getCurrentScope().setUser(null), o();
+        null === (e = window.DiscordSentry) || void 0 === e || e.getCurrentScope().setUser(null), d();
     },
     setTags(e) {
         var t;
@@ -45,55 +97,48 @@ let l = {
     },
     captureException(e, t) {
         var n;
-        let i = (0, r.v)(t);
+        let r = (0, i.v)(t);
         null === (n = window.DiscordSentry) ||
             void 0 === n ||
             n.withScope((t) => {
                 var n;
-                null != i.tags && t.setTags(i.tags), t.setExtras(i.extra), null === (n = window.DiscordSentry) || void 0 === n || n.captureException(e);
+                null != r.tags && t.setTags(r.tags), t.setExtras(r.extra), null === (n = window.DiscordSentry) || void 0 === n || n.captureException(e);
             });
     },
     captureCrash(e, t) {
         var n;
-        let i;
-        let a = (0, r.v)(t);
+        let r;
+        let o = (0, i.v)(t);
         return (
             null === (n = window.DiscordSentry) ||
                 void 0 === n ||
                 n.withScope((t) => {
                     var n;
-                    t.setExtras(a.extra),
+                    t.setExtras(o.extra),
                         t.setTag('crash', 'true'),
                         t.setLevel('fatal'),
                         t.addEventProcessor((e) => {
                             var t, n;
-                            let i = null === (n = e.exception) || void 0 === n ? void 0 : null === (t = n.values) || void 0 === t ? void 0 : t[0];
-                            return (
-                                null != i &&
-                                    (i.mechanism = {
-                                        ...i.mechanism,
-                                        handled: !1
-                                    }),
-                                e
-                            );
+                            let r = null === (n = e.exception) || void 0 === n ? void 0 : null === (t = n.values) || void 0 === t ? void 0 : t[0];
+                            return null != r && (r.mechanism = u(l({}, r.mechanism), { handled: !1 })), e;
                         }),
-                        (i = null === (n = window.DiscordSentry) || void 0 === n ? void 0 : n.captureException(e));
+                        (r = null === (n = window.DiscordSentry) || void 0 === n ? void 0 : n.captureException(e));
                 }),
-            i
+            r
         );
     },
     captureMessage(e, t) {
         var n;
-        let i = (0, r.v)(t);
+        let r = (0, i.v)(t);
         null === (n = window.DiscordSentry) ||
             void 0 === n ||
             n.withScope((t) => {
                 var n;
-                null != i.tags && t.setTags(i.tags), t.setExtras(i.extra), null === (n = window.DiscordSentry) || void 0 === n || n.captureMessage(e);
+                null != r.tags && t.setTags(r.tags), t.setExtras(r.extra), null === (n = window.DiscordSentry) || void 0 === n || n.captureMessage(e);
             });
     },
     addBreadcrumb(e) {
-        (0, i.Z)(e);
+        (0, r.Z)(e);
     },
     profiledRootComponent: (e) => e,
     crash() {

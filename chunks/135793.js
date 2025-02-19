@@ -1,223 +1,278 @@
 n.d(t, {
-    default: () => k,
-    s: () => M
+    default: () => B,
+    s: () => G
 }),
     n(47120),
-    n(757143);
-var i = n(200651),
-    r = n(192379),
-    a = n(990547),
-    s = n(311570),
-    o = n(704215),
+    n(757143),
+    n(301563);
+var r = n(200651),
+    i = n(192379),
+    o = n(990547),
+    a = n(311570),
+    s = n(704215),
     l = n(481060),
-    u = n(596454),
-    c = n(100527),
+    c = n(596454),
+    u = n(100527),
     d = n(906732),
     f = n(605236),
-    _ = n(688465),
-    p = n(333867),
+    p = n(688465),
+    _ = n(333867),
     h = n(592125),
     m = n(63063),
     g = n(937615),
     E = n(980463),
     v = n(328908),
-    y = n(992970),
-    I = n(317951),
-    T = n(84040),
-    b = n(287941),
-    S = n(235894),
-    A = n(883998),
+    b = n(992970),
+    y = n(317951),
+    O = n(84040),
+    S = n(287941),
+    I = n(235894),
+    T = n(883998),
     N = n(576645),
-    C = n(981631),
-    R = n(921944),
-    O = n(388032),
-    D = n(940814),
-    L = n(99713);
-let x = 190,
-    P = 178,
-    w = 'MESSAGE_CONFETTI_POTION_MODAL_KEY',
-    M = (e) => {
-        let { channelId: t, message: r, onRedeem: a, onClose: s, buttonUseState: u = 'activate', source: c } = e,
+    A = n(981631),
+    C = n(921944),
+    R = n(388032),
+    P = n(959791),
+    w = n(99713);
+function D(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function x(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                D(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function L(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function M(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : L(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let k = 190,
+    j = 178,
+    U = 'MESSAGE_CONFETTI_POTION_MODAL_KEY',
+    G = (e) => {
+        let { channelId: t, message: i, onRedeem: o, onClose: a, buttonUseState: c = 'activate', source: u } = e,
             d = h.Z.getChannel(t);
         null != d &&
-            ((0, f.EW)(o.z.CONFETTI_POTION_UPSELL, { dismissAction: R.L.INDIRECT_ACTION }),
+            ((0, f.EW)(s.z.CONFETTI_POTION_UPSELL, { dismissAction: C.L.INDIRECT_ACTION }),
             (0, l.ZDy)(
                 async () => {
                     let { default: e } = await Promise.resolve().then(n.bind(n, 135793));
                     return (t) =>
-                        (0, i.jsx)(e, {
-                            ...t,
-                            channel: d,
-                            message: r,
-                            onRedeem: a,
-                            onUnmount: s,
-                            source: c,
-                            buttonUseState: u
-                        });
+                        (0, r.jsx)(
+                            e,
+                            M(x({}, t), {
+                                channel: d,
+                                message: i,
+                                onRedeem: o,
+                                onUnmount: a,
+                                source: u,
+                                buttonUseState: c
+                            })
+                        );
                 },
-                { modalKey: w }
+                { modalKey: U }
             ));
     };
-function k(e) {
-    let { transitionState: t, channel: n, message: s, onRedeem: o, onUnmount: u, buttonUseState: c, source: d } = e;
+function B(e) {
+    let { transitionState: t, channel: n, message: a, onRedeem: s, onUnmount: c, buttonUseState: u, source: d } = e;
     return (
-        (0, r.useEffect)(() => u, [u]),
-        (0, i.jsx)(l.Y0X, {
+        (0, i.useEffect)(() => c, [c]),
+        (0, r.jsx)(l.Y0X, {
             size: l.CgR.DYNAMIC,
             transitionState: t,
             impression: {
-                impressionName: a.ImpressionNames.CONFETTI_POTION_MODAL,
+                impressionName: o.ImpressionNames.CONFETTI_POTION_MODAL,
                 impressionProperties: { source: d }
             },
-            children: (0, i.jsx)(U, {
+            children: (0, r.jsx)(Z, {
                 channel: n,
-                message: s,
-                onRedeem: o,
-                buttonUseState: c
+                message: a,
+                onRedeem: s,
+                buttonUseState: u
             })
         })
     );
 }
-function U(e) {
-    let { channel: t, message: n, onRedeem: a, buttonUseState: o } = e,
-        u = (0, T.Z)(t, n),
+function Z(e) {
+    let { channel: t, message: n, onRedeem: o, buttonUseState: s } = e,
+        c = (0, O.Z)(t, n),
         f = null != n,
-        _ = f && (0, S.Uw)(n),
+        p = f && (0, I.Uw)(n),
         h = (0, v.Qj)(t.id, f),
-        { price: m, fetchingPrice: g, error: y } = (0, N.R2)(I.D1),
-        { entitlement: b, fetchedEntitlement: A, error: R } = (0, N.t6)(I.D1),
-        O = y || R,
-        { analyticsLocations: D } = (0, d.ZP)([c.Z.CONFETTI_POTION_MODAL]),
-        L = null != b && !b.consumed,
-        x = g || !A;
-    (0, r.useEffect)(
+        { price: m, fetchingPrice: g, error: b } = (0, N.R2)(y.D1),
+        { entitlement: S, fetchedEntitlement: T, error: C } = (0, N.t6)(y.D1),
+        R = b || C,
+        { analyticsLocations: P } = (0, d.ZP)([u.Z.CONFETTI_POTION_MODAL]),
+        w = null != S && !S.consumed,
+        D = g || !T;
+    (0, i.useEffect)(
         () => () => {
-            O && (0, E.SN)(I.D1);
+            R && (0, E.SN)(y.D1);
         },
-        [O, f]
+        [R, f]
     );
-    let P = (0, r.useCallback)(() => {
-            null != h && ((0, l.pTH)(), a(h));
-        }, [h, a]),
-        w = (0, r.useCallback)(() => {
-            (0, p.Z)({
-                skuId: I.D1,
-                analyticsLocations: D,
+    let x = (0, i.useCallback)(() => {
+            null != h && ((0, l.pTH)(), o(h));
+        }, [h, o]),
+        L = (0, i.useCallback)(() => {
+            (0, _.Z)({
+                skuId: y.D1,
+                analyticsLocations: P,
                 onComplete: () => {
-                    P(), (0, E.gA)(I.D1);
+                    x(), (0, E.gA)(y.D1);
                 },
-                variantsReturnStyle: s.v.INDIVIDUAL_PRODUCTS
+                variantsReturnStyle: a.v.INDIVIDUAL_PRODUCTS
             });
-        }, [P, D]),
-        M = (0, r.useCallback)(() => (L ? P() : w()), [P, w, L]),
-        k = (0, r.useMemo)(() => {
-            if (null != b) {
-                if ('apply' === o) return 3;
-                if (b.type === C.qc2.DEVELOPER_GIFT) return 1;
-                if (L) return 2;
+        }, [x, P]),
+        M = (0, i.useCallback)(() => (w ? x() : L()), [x, L, w]),
+        k = (0, i.useMemo)(() => {
+            if (null != S) {
+                if ('apply' === s) return 3;
+                if (S.type === A.qc2.DEVELOPER_GIFT) return 1;
+                if (w) return 2;
             }
             return 0;
-        }, [b, L, o]),
-        U = (0, r.useMemo)(() => (_ ? 2 : u ? (null == h ? 3 : 0) : 1), [_, u, h]);
-    return (0, i.jsx)(G, {
+        }, [S, w, s]),
+        j = (0, i.useMemo)(() => (p ? 2 : c ? 3 * (null == h) : 1), [p, c, h]);
+    return (0, r.jsx)(F, {
         channel: t,
         buttonPurchaseState: k,
-        buttonDisabledState: U,
+        buttonDisabledState: j,
         price: m,
         onActionClick: M,
-        loading: x,
+        loading: D,
         selectedEmoji: null != h ? h : void 0,
         isReaction: f
     });
 }
-let G = (e) => {
-        let { channel: t, buttonPurchaseState: n, buttonDisabledState: a, price: s, onActionClick: o, loading: l, selectedEmoji: u, isReaction: c } = e,
-            d = (0, r.useRef)(null);
-        return ((0, r.useEffect)(() => {
+let F = (e) => {
+        let { channel: t, buttonPurchaseState: n, buttonDisabledState: o, price: a, onActionClick: s, loading: l, selectedEmoji: c, isReaction: u } = e,
+            d = (0, i.useRef)(null);
+        return ((0, i.useEffect)(() => {
             var e;
-            if (null == u) return;
+            if (null == c) return;
             let t = null === (e = d.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
             if (null == t) return;
-            let n = (0, S.NV)(u),
-                { x: i, y: r, width: a, height: s } = t;
-            (0, b.I)(
+            let n = (0, I.NV)(c),
+                { x: r, y: i, width: o, height: a } = t;
+            (0, S.I)(
                 n,
                 {
-                    x: i,
-                    y: r,
-                    w: a,
-                    h: s
+                    x: r,
+                    y: i,
+                    w: o,
+                    h: a
                 },
                 !0,
-                y.LL.ConfettiPreview
+                b.LL.ConfettiPreview
             );
-        }, [u]),
+        }, [c]),
         l)
-            ? (0, i.jsx)(Y, {})
-            : null == s
-              ? (0, i.jsx)(H, {})
-              : (0, i.jsxs)(i.Fragment, {
+            ? (0, r.jsx)(q, {})
+            : null == a
+              ? (0, r.jsx)(z, {})
+              : (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, i.jsx)('div', {
-                            className: D.modal,
+                        (0, r.jsx)('div', {
+                            className: P.modal,
                             ref: d,
-                            children: (0, i.jsx)(B, {
+                            children: (0, r.jsx)(V, {
                                 channel: t,
-                                selectedEmoji: u,
-                                isReaction: c
+                                selectedEmoji: c,
+                                isReaction: u
                             })
                         }),
-                        (0, i.jsx)(F, {
+                        (0, r.jsx)(W, {
                             buttonPurchaseState: n,
-                            buttonDisabledState: a,
-                            price: s,
-                            onActionClick: o
+                            buttonDisabledState: o,
+                            price: a,
+                            onActionClick: s
                         })
                     ]
                 });
     },
-    B = (e) => {
-        let { channel: t, selectedEmoji: n, isReaction: r } = e;
-        return (0, i.jsx)(i.Fragment, {
-            children: (0, i.jsxs)('div', {
-                className: D.body,
+    V = (e) => {
+        let { channel: t, selectedEmoji: n, isReaction: i } = e;
+        return (0, r.jsx)(r.Fragment, {
+            children: (0, r.jsxs)('div', {
+                className: P.body,
                 children: [
-                    (0, i.jsxs)('div', {
-                        className: D.header,
+                    (0, r.jsxs)('div', {
+                        className: P.header,
                         children: [
-                            (0, i.jsxs)('div', {
-                                className: D.heading,
+                            (0, r.jsxs)('div', {
+                                className: P.heading,
                                 children: [
-                                    (0, i.jsx)(l.X6q, {
+                                    (0, r.jsx)(l.X6q, {
                                         variant: 'heading-lg/bold',
-                                        children: O.intl.string(O.t['5/knv7'])
+                                        children: R.NW.string(R.t['5/knv7'])
                                     }),
-                                    (0, i.jsx)(_.Z, {})
+                                    (0, r.jsx)(p.Z, {})
                                 ]
                             }),
-                            (0, i.jsx)(l.Text, {
+                            (0, r.jsx)(l.Text, {
                                 variant: 'text-sm/normal',
-                                children: O.intl.string(O.t.NFTQoa)
+                                children: R.NW.string(R.t.NFTQoa)
                             }),
-                            (0, i.jsx)(l.Text, {
+                            (0, r.jsx)(l.Text, {
                                 color: 'text-link',
                                 variant: 'text-sm/normal',
-                                children: O.intl.format(O.t['jerM9/'], { helpCenterLink: m.Z.getArticleURL(C.BhN.CONFETTI_POTION) })
+                                children: R.NW.format(R.t['jerM9/'], { helpCenterLink: m.Z.getArticleURL(A.BhN.CONFETTI_POTION) })
                             })
                         ]
                     }),
-                    (0, i.jsx)('div', { className: D.divider }),
-                    (0, i.jsxs)('div', {
-                        className: D.selectContainer,
+                    (0, r.jsx)('div', { className: P.divider }),
+                    (0, r.jsxs)('div', {
+                        className: P.selectContainer,
                         children: [
-                            (0, i.jsx)(l.Text, {
+                            (0, r.jsx)(l.Text, {
                                 variant: 'eyebrow',
-                                children: O.intl.string(O.t.o8XwoK)
+                                children: R.NW.string(R.t.o8XwoK)
                             }),
-                            (0, i.jsx)(Z, {
+                            (0, r.jsx)(H, {
                                 channel: t,
                                 selectedEmoji: n,
-                                isReaction: r
+                                isReaction: i
                             })
                         ]
                     })
@@ -225,19 +280,19 @@ let G = (e) => {
             })
         });
     },
-    Z = (e) => {
-        let { channel: t, selectedEmoji: n, isReaction: a } = e,
-            [s, o] = (0, r.useState)(!1),
-            c = (0, r.useCallback)(() => {
-                o(!1);
+    H = (e) => {
+        let { channel: t, selectedEmoji: n, isReaction: o } = e,
+            [a, s] = (0, i.useState)(!1),
+            u = (0, i.useCallback)(() => {
+                s(!1);
             }, []),
-            d = (0, r.useCallback)((e) => (0, v.t0)(e, t.id, a), [a, t.id]),
-            { emojiName: f, selectionText: _ } = (0, r.useMemo)(
+            d = (0, i.useCallback)((e) => (0, v.t0)(e, t.id, o), [o, t.id]),
+            { emojiName: f, selectionText: p } = (0, i.useMemo)(
                 () =>
                     null == n
                         ? {
                               emojiName: null,
-                              selectionText: O.intl.string(O.t.KgK5qq)
+                              selectionText: R.NW.string(R.t.KgK5qq)
                           }
                         : {
                               emojiName: null == n.id ? n.optionallyDiverseSequence : n.name,
@@ -245,180 +300,182 @@ let G = (e) => {
                           },
                 [n]
             ),
-            p = (0, r.useRef)(null);
-        return (0, i.jsx)(A.Z, {
+            _ = (0, i.useRef)(null);
+        return (0, r.jsx)(T.Z, {
             channel: t,
-            shouldShow: s,
-            onRequestClose: c,
+            shouldShow: a,
+            onRequestClose: u,
             setEmojiConfetti: d,
-            positionRef: p,
+            positionRef: _,
             position: 'left',
             align: 'top',
             children: () =>
-                (0, i.jsx)(l.zxk, {
+                (0, r.jsx)(l.zxk, {
                     look: l.zxk.Looks.BLANK,
                     size: l.zxk.Sizes.NONE,
-                    onClick: () => o(!s),
-                    className: D.emojiSelect,
-                    innerClassName: D.innerEmojiSelect,
-                    children: (0, i.jsxs)('div', {
-                        className: D.emojiContent,
+                    onClick: () => s(!a),
+                    className: P.emojiSelect,
+                    innerClassName: P.innerEmojiSelect,
+                    children: (0, r.jsxs)('div', {
+                        className: P.emojiContent,
                         children: [
-                            (0, i.jsxs)('div', {
-                                className: D.selectedEmoji,
+                            (0, r.jsxs)('div', {
+                                className: P.selectedEmoji,
                                 children: [
-                                    (0, i.jsx)('div', {
-                                        ref: p,
+                                    (0, r.jsx)('div', {
+                                        ref: _,
                                         children:
                                             null == n
-                                                ? (0, i.jsx)(l.EO4, {
+                                                ? (0, r.jsx)(l.EO4, {
                                                       color: 'currentColor',
                                                       size: 'custom',
-                                                      className: D.emojiIcon
+                                                      className: P.emojiIcon
                                                   })
-                                                : (0, i.jsx)(u.Z, {
+                                                : (0, r.jsx)(c.Z, {
                                                       animated: !1,
                                                       emojiId: n.id,
                                                       emojiName: f,
-                                                      className: D.emojiIcon
+                                                      className: P.emojiIcon
                                                   })
                                     }),
-                                    (0, i.jsx)(l.Text, {
+                                    (0, r.jsx)(l.Text, {
                                         color: 'interactive-active',
                                         variant: 'text-sm/normal',
-                                        children: _
+                                        children: p
                                     })
                                 ]
                             }),
-                            s
-                                ? (0, i.jsx)(l.u04, {
+                            a
+                                ? (0, r.jsx)(l.u04, {
                                       color: 'currentColor',
                                       size: 'custom',
-                                      className: D.chevron
+                                      className: P.chevron
                                   })
-                                : (0, i.jsx)(l.CJ0, {
+                                : (0, r.jsx)(l.CJ0, {
                                       color: 'currentColor',
                                       size: 'custom',
-                                      className: D.chevron
+                                      className: P.chevron
                                   })
                         ]
                     })
                 })
         });
     },
-    F = (e) => {
-        let { buttonPurchaseState: t, buttonDisabledState: n, price: r, onActionClick: a } = e;
-        return (0, i.jsxs)('div', {
-            className: D.footer,
+    W = (e) => {
+        let { buttonPurchaseState: t, buttonDisabledState: n, price: i, onActionClick: o } = e;
+        return (0, r.jsxs)('div', {
+            className: P.footer,
             children: [
-                (0, i.jsx)(l.zxk, {
+                (0, r.jsx)(l.zxk, {
                     onClick: () => {
-                        (0, l.Mr3)(w);
+                        (0, l.Mr3)(U);
                     },
                     color: l.zxk.Colors.PRIMARY,
-                    children: O.intl.string(O.t.w2Qbd3)
+                    children: R.NW.string(R.t.w2Qbd3)
                 }),
-                (0, i.jsxs)('div', {
-                    className: D.footerRight,
+                (0, r.jsxs)('div', {
+                    className: P.footerRight,
                     children: [
-                        (0, i.jsx)(V, {}),
-                        (0, i.jsx)(j, {
+                        (0, r.jsx)(Y, {}),
+                        (0, r.jsx)(K, {
                             buttonPurchaseState: t,
                             buttonDisabledState: n,
-                            price: r,
-                            onActionClick: a
+                            price: i,
+                            onActionClick: o
                         })
                     ]
                 })
             ]
         });
     },
-    V = () => {
-        let { entitlement: e, numPotions: t } = (0, N.t6)(I.D1);
+    Y = () => {
+        let { entitlement: e, numPotions: t } = (0, N.t6)(y.D1);
         if (null == t || 0 === t) return null;
-        let n = (null == e ? void 0 : e.type) === C.qc2.DEVELOPER_GIFT ? O.t['b+P6ra'] : O.t.RiQ4cn;
-        return (0, i.jsxs)('div', {
-            className: D.remaining,
+        let n = (null == e ? void 0 : e.type) === A.qc2.DEVELOPER_GIFT ? R.t['b+P6ra'] : R.t.RiQ4cn;
+        return (0, r.jsxs)('div', {
+            className: P.remaining,
             children: [
-                (0, i.jsx)(l.l22, {
+                (0, r.jsx)(l.l22, {
                     color: 'currentColor',
-                    className: D.shootingStar
+                    className: P.shootingStar
                 }),
-                (0, i.jsx)(l.Text, {
+                (0, r.jsx)(l.Text, {
                     color: 'none',
                     variant: 'text-sm/semibold',
-                    children: O.intl.formatToPlainString(n, { numPotions: t })
+                    children: R.NW.formatToPlainString(n, { numPotions: t })
                 })
             ]
         });
     },
-    j = (e) => {
-        let { buttonPurchaseState: t, buttonDisabledState: n, price: a, onActionClick: s } = e,
+    K = (e) => {
+        let { buttonPurchaseState: t, buttonDisabledState: n, price: o, onActionClick: a } = e,
             {
-                isDisabled: o,
-                copy: u,
-                tooltipCopy: c
-            } = (0, r.useMemo)(() => {
+                isDisabled: s,
+                copy: c,
+                tooltipCopy: u
+            } = (0, i.useMemo)(() => {
                 let e = {
-                        0: O.intl.formatToPlainString(O.t.POGRmp, {
-                            amount: I.pe,
-                            price: (0, g.T4)(a.amount, a.currency)
+                        0: R.NW.formatToPlainString(R.t.POGRmp, {
+                            amount: y.pe,
+                            price: (0, g.T4)(o.amount, o.currency)
                         }),
-                        1: O.intl.string(O.t.RrKeDw),
-                        2: O.intl.string(O.t.WOXaWF),
-                        3: O.intl.string(O.t['1Qm829'])
+                        1: R.NW.string(R.t.RrKeDw),
+                        2: R.NW.string(R.t.WOXaWF),
+                        3: R.NW.string(R.t['1Qm829'])
                     },
-                    i = {
-                        1: O.intl.string(O.t['Cb8/7+']),
-                        2: O.intl.string(O.t.fMkB9P),
-                        3: O.intl.string(O.t['59ElNj'])
+                    r = {
+                        1: R.NW.string(R.t['Cb8/7+']),
+                        2: R.NW.string(R.t.fMkB9P),
+                        3: R.NW.string(R.t['59ElNj'])
                     },
-                    r = 0 !== n;
+                    i = 0 !== n;
                 return {
-                    isDisabled: r,
+                    isDisabled: i,
                     copy: e[t],
-                    tooltipCopy: r ? i[n] : ''
+                    tooltipCopy: i ? r[n] : ''
                 };
-            }, [n, t, a.amount, a.currency]);
-        return (0, i.jsx)(l.ua7, {
-            tooltipContentClassName: D.tooltip,
-            text: c,
-            shouldShow: !!o,
+            }, [n, t, o.amount, o.currency]);
+        return (0, r.jsx)(l.ua7, {
+            tooltipContentClassName: P.tooltip,
+            text: u,
+            shouldShow: !!s,
             children: (e) =>
-                (0, i.jsx)(l.zxk, {
-                    ...e,
-                    onClick: s,
-                    disabled: o,
-                    children: (0, i.jsx)('div', {
-                        className: D.buttonCopy,
-                        children: u
+                (0, r.jsx)(
+                    l.zxk,
+                    M(x({}, e), {
+                        onClick: a,
+                        disabled: s,
+                        children: (0, r.jsx)('div', {
+                            className: P.buttonCopy,
+                            children: c
+                        })
                     })
-                })
+                )
         });
     },
-    H = () =>
-        (0, i.jsx)('div', {
-            className: D.anomaly,
-            children: (0, i.jsxs)('div', {
-                className: D.error,
+    z = () =>
+        (0, r.jsx)('div', {
+            className: P.anomaly,
+            children: (0, r.jsxs)('div', {
+                className: P.error,
                 children: [
-                    (0, i.jsx)(l.Eep, {
-                        src: L,
-                        width: P,
-                        height: x
+                    (0, r.jsx)(l.Eep, {
+                        src: w,
+                        width: j,
+                        height: k
                     }),
-                    (0, i.jsx)(l.Text, {
+                    (0, r.jsx)(l.Text, {
                         variant: 'text-md/normal',
-                        children: O.intl.string(O.t.oKJdSk)
+                        children: R.NW.string(R.t.oKJdSk)
                     })
                 ]
             })
         }),
-    Y = () =>
-        (0, i.jsx)('div', {
-            className: D.anomaly,
-            children: (0, i.jsx)('div', {
-                className: D.spinner,
-                children: (0, i.jsx)(l.$jN, {})
+    q = () =>
+        (0, r.jsx)('div', {
+            className: P.anomaly,
+            children: (0, r.jsx)('div', {
+                className: P.spinner,
+                children: (0, r.jsx)(l.$jN, {})
             })
         });

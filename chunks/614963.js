@@ -1,13 +1,13 @@
 n.d(t, { Z: () => d });
-var l = n(251625),
+var r = n(251625),
     i = n(823379),
-    r = n(981631),
+    l = n(981631),
     a = n(388032);
-function s() {
+function o() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 30;
     return e <= 5 ? 3 : e <= 15 ? 10 : 15;
 }
-function o(e, t) {
+function s(e, t) {
     let n = {
             packetsSentOrReceived: 0,
             packetsLost: 0,
@@ -16,19 +16,40 @@ function o(e, t) {
             resolution: 0,
             numDatapoints: 0
         },
-        l = e.slice(-1 * t).filter(i.lm);
-    if (0 === l.length)
-        return {
-            type: 'streamer',
-            ...n
-        };
-    l.forEach((e, t, l) => {
-        (n.packetsSentOrReceived += t > 0 ? l[t].packetsSentOrReceived - l[t - 1].packetsSentOrReceived : 0), (n.packetsLost += t > 0 ? l[t].packetsLost - l[t - 1].packetsLost : 0), (n.frameRate += e.frameRate), (n.resolution += e.resolution);
+        r = e.slice(-1 * t).filter(i.lm);
+    if (0 === r.length)
+        return (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    r = Object.keys(n);
+                'function' == typeof Object.getOwnPropertySymbols &&
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        })
+                    )),
+                    r.forEach(function (t) {
+                        var r;
+                        (r = n[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: r,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0
+                                  })
+                                : (e[t] = r);
+                    });
+            }
+            return e;
+        })({ type: 'streamer' }, n);
+    r.forEach((e, t, r) => {
+        (n.packetsSentOrReceived += t > 0 ? r[t].packetsSentOrReceived - r[t - 1].packetsSentOrReceived : 0), (n.packetsLost += t > 0 ? r[t].packetsLost - r[t - 1].packetsLost : 0), (n.frameRate += e.frameRate), (n.resolution += e.resolution);
     });
-    let r = l[0].type,
-        a = l.length;
+    let l = r[0].type,
+        a = r.length;
     return {
-        type: r,
+        type: l,
         packetsSentOrReceived: n.packetsSentOrReceived,
         packetsLost: n.packetsLost,
         packetLossRate: n.packetsLost / (n.packetsLost + n.packetsSentOrReceived),
@@ -37,29 +58,29 @@ function o(e, t) {
         numDatapoints: a
     };
 }
-let u = (0, l.oH)((e, t) => ({
+let c = (0, r.oH)((e, t) => ({
     message: e,
     errorType: t
 }));
-function c(e, t) {
+function u(e, t) {
     if ('streamer' === e.type) {
-        if (100 * e.packetLossRate > 10) return u(a.intl.string(a.t['1f1LHh']), 'Packet Loss');
-        if (e.frameRate <= s(t)) return u(a.intl.string(a.t['1f1LHh']), 'Frame Rate Encode');
+        if (100 * e.packetLossRate > 10) return c(a.NW.string(a.t['1f1LHh']), 'Packet Loss');
+        if (e.frameRate <= o(t)) return c(a.NW.string(a.t['1f1LHh']), 'Frame Rate Encode');
     } else {
-        if (100 * e.packetLossRate > 10) return u(a.intl.string(a.t.BcOif3), 'Packet Loss');
-        if (e.frameRate <= s(t)) return u(a.intl.string(a.t.BcOif3), 'Frame Rate Decode');
+        if (100 * e.packetLossRate > 10) return c(a.NW.string(a.t.BcOif3), 'Packet Loss');
+        if (e.frameRate <= o(t)) return c(a.NW.string(a.t.BcOif3), 'Frame Rate Decode');
     }
     return null;
 }
-function d(e, t, n, l) {
-    if (n) return u(a.intl.string(a.t['9lcycn']), 'Soundshare Failed');
+function d(e, t, n, r) {
+    if (n) return c(a.NW.string(a.t['9lcycn']), 'Soundshare Failed');
     if (null != t) {
-        let e = o(t, 5),
-            n = o(t, 30);
+        let e = s(t, 5),
+            n = s(t, 30);
         if (n.numDatapoints >= 5) {
             var i;
-            return null !== (i = c(e, null == l ? void 0 : l.maxFrameRate)) && void 0 !== i ? i : c(n, null == l ? void 0 : l.maxFrameRate);
+            return null !== (i = u(e, null == r ? void 0 : r.maxFrameRate)) && void 0 !== i ? i : u(n, null == r ? void 0 : r.maxFrameRate);
         }
     }
-    return e === r.IE4.BAD ? u(a.intl.string(a.t.Ic588P), 'Bad Connection') : null;
+    return e === l.IE4.BAD ? c(a.NW.string(a.t.Ic588P), 'Bad Connection') : null;
 }

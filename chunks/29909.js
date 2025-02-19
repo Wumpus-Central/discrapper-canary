@@ -1,62 +1,116 @@
-n.d(t, { Z: () => p }), n(47120);
-var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(481060),
+n.d(t, { Z: () => E }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(481060),
     l = n(68405),
-    u = n(985375),
-    c = n(585483),
+    c = n(985375),
+    u = n(585483),
     d = n(981631),
     f = n(388032),
-    _ = n(802088);
-let p = r.memo(function (e) {
-    let { width: t, height: n, src: a, url: p, format: h, className: m } = e,
-        [g, E] = r.useState(!1),
-        v = (0, u.hb)((0, l.iy)(p)),
-        y = v ? f.intl.string(f.t['5/NS7+']) : f.intl.string(f.t.nIH0v7),
-        I = v ? o.r7p : o.vxU;
-    r.useEffect(() => {
-        if (!g) return;
+    p = n(948692);
+function _(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function h(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                _(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function m(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function g(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : m(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let E = i.memo(function (e) {
+    let { width: t, height: n, src: o, url: _, format: m, className: E } = e,
+        [v, b] = i.useState(!1),
+        y = (0, c.hb)((0, l.iy)(_)),
+        O = y ? f.NW.string(f.t['5/NS7+']) : f.NW.string(f.t.nIH0v7),
+        S = y ? s.r7p : s.vxU;
+    i.useEffect(() => {
+        if (!v) return;
         let e = setTimeout(() => {
-            E(!1);
+            b(!1);
         }, 500);
         return () => clearTimeout(e);
-    }, [g]);
-    let T = (e) => {
+    }, [v]);
+    let I = (e) => {
         e.preventDefault(),
             e.stopPropagation(),
-            E(!0),
-            v
-                ? (0, l.PF)(p)
+            b(!0),
+            y
+                ? (0, l.PF)(_)
                 : ((0, l.uL)({
-                      url: p,
-                      src: a,
+                      url: _,
+                      src: o,
                       width: t,
                       height: n,
-                      format: h
+                      format: m
                   }),
-                  c.S.dispatch(d.CkL.FAVORITE_GIF));
+                  u.S.dispatch(d.CkL.FAVORITE_GIF));
     };
-    return (0, i.jsx)(o.ua7, {
-        text: y,
+    return (0, r.jsx)(s.ua7, {
+        text: O,
         children: (e) =>
-            (0, i.jsx)(o.P3F, {
-                ...e,
-                className: s()(m, _.gifFavoriteButton, {
-                    [_.selected]: v,
-                    [_.showPulse]: g
-                }),
-                onMouseDown: (e) => e.preventDefault(),
-                onClick: T,
-                onDoubleClick: (e) => e.preventDefault(),
-                children: (0, i.jsx)(I, {
-                    color: 'currentColor',
-                    className: _.icon,
-                    size: 'custom',
-                    width: 20,
-                    height: 20
+            (0, r.jsx)(
+                s.P3F,
+                g(h({}, e), {
+                    className: a()(E, p.gifFavoriteButton, {
+                        [p.selected]: y,
+                        [p.showPulse]: v
+                    }),
+                    onMouseDown: (e) => e.preventDefault(),
+                    onClick: I,
+                    onDoubleClick: (e) => e.preventDefault(),
+                    children: (0, r.jsx)(S, {
+                        color: 'currentColor',
+                        className: p.icon,
+                        size: 'custom',
+                        width: 20,
+                        height: 20
+                    })
                 })
-            })
+            )
     });
 });

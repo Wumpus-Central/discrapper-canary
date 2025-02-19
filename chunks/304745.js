@@ -1,133 +1,176 @@
-n.d(t, { M: () => y }), n(653041);
-var i = n(200651),
-    l = n(192379),
-    a = n(442837),
-    r = n(704215),
-    s = n(481060),
-    o = n(2052),
+n.d(t, { M: () => S }), n(653041);
+var r = n(200651),
+    i = n(192379),
+    l = n(442837),
+    o = n(704215),
+    a = n(481060),
+    s = n(2052),
     c = n(40851),
-    d = n(317381),
-    u = n(683921),
-    h = n(588580),
-    p = n(374065),
-    m = n(451576),
-    f = n(526846),
+    u = n(317381),
+    d = n(683921),
+    p = n(588580),
+    h = n(374065),
+    f = n(451576),
+    m = n(526846),
     g = n(119315),
-    _ = n(403404),
-    C = n(906732),
-    x = n(424602),
+    b = n(403404),
+    _ = n(906732),
+    C = n(424602),
     v = n(243778),
-    E = n(579185),
-    I = n(301076),
-    b = n(861254),
-    Z = n(127379),
+    y = n(579185),
+    x = n(301076),
+    j = n(82965),
+    O = n(127379),
     N = n(981631),
-    T = n(921944),
-    S = n(388032),
-    j = n(131175);
-function y(e) {
-    let { channel: t, idle: n, whichPopoutIsOpen: y, setWhichPopoutIsOpen: A } = e,
-        P = (0, a.e7)([d.ZP], () => d.ZP.isLaunchingActivity()),
-        R = (0, p.KF)(t.id),
-        M = (0, p.g5)(R),
-        L = R !== p.jy.CAN_LAUNCH || P,
-        { isHovered: k, setIsHovered: O, onMouseEnter: D, onMouseLeave: w } = (0, E.Z)(200, 300),
-        { groupedButtons: U } = (0, b.ZP)({ location: 'CenterControlTrayActivityButton' }),
-        B = (0, h.a)(),
-        F = (0, u.Z)({ channelId: t.id }),
-        H = !L,
-        G = l.useCallback(
+    E = n(921944),
+    P = n(388032),
+    I = n(657452);
+function S(e) {
+    let { channel: t, idle: n, whichPopoutIsOpen: S, setWhichPopoutIsOpen: Z } = e,
+        T = (0, l.e7)([u.ZP], () => u.ZP.isLaunchingActivity()),
+        A = (0, h.KF)(t.id),
+        w = (0, h.g5)(A),
+        R = A !== h.jy.CAN_LAUNCH || T,
+        { isHovered: k, setIsHovered: M, onMouseEnter: L, onMouseLeave: D } = (0, y.Z)(200, 300),
+        W = (0, j.Z)({ location: 'CenterControlTrayActivityButton' }),
+        U = (0, p.a)(),
+        B = (0, d.Z)({ channelId: t.id }),
+        F = !R,
+        H = i.useCallback(
             (e) => {
-                'focus' !== e.type && D();
+                'focus' !== e.type && L();
             },
-            [D]
+            [L]
         ),
-        V = (0, o.O)(),
-        z = (0, c.bp)() === N.IlC.POPOUT,
-        { analyticsLocations: W } = (0, C.ZP)(),
-        Y = W.length > 0 ? W[W.length - 1] : 'open-activity-shelf';
-    x.m1.useExperiment({ location: Y }, { autoTrackExposure: !0 });
-    let q = l.useCallback(() => {
-            (0, _.Z)({
+        G = (0, s.O)(),
+        V = (0, c.bp)() === N.IlC.POPOUT,
+        { analyticsLocations: z } = (0, _.ZP)(),
+        q = z.length > 0 ? z[z.length - 1] : 'open-activity-shelf';
+    C.m1.useExperiment({ location: q }, { autoTrackExposure: !0 });
+    let Y = i.useCallback(() => {
+            (0, b.Z)({
                 channel: t,
                 guildId: t.guild_id,
-                locationObject: V.location,
-                openInPopout: z,
-                analyticsLocations: W,
+                locationObject: G.location,
+                openInPopout: V,
+                analyticsLocations: z,
                 opensAppLauncherModal: !0
             });
-        }, [V.location, W, t, z]),
+        }, [G.location, z, t, V]),
         K = [];
-    L || K.push(r.z.ACTIVITIES_MINI_SHELF_SPARKLES), (0, m.Z)(t.id) && !L && K.push(r.z.ACTIVITY_GDM_ROCKET_SPARKLE);
-    let { enabled: X } = x.nS.useExperiment({ location: 'CenterControlTrayActivityButton' });
-    X && !L && K.push(r.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP);
-    let J = l.useRef(!1);
-    return (0, i.jsx)(v.ZP, {
+    R || K.push(o.z.ACTIVITIES_MINI_SHELF_SPARKLES), (0, f.Z)(t.id) && !R && K.push(o.z.ACTIVITY_GDM_ROCKET_SPARKLE);
+    let { enabled: X } = C.nS.useExperiment({ location: 'CenterControlTrayActivityButton' });
+    X && !R && K.push(o.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP);
+    let J = i.useRef(!1);
+    return (0, r.jsx)(v.ZP, {
         contentTypes: K,
         children: (e) => {
-            let { visibleContent: l, markAsDismissed: a } = e,
-                o = l === r.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP && !n && !k;
+            let { visibleContent: i, markAsDismissed: l } = e,
+                s = i === o.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP && !n && !k;
             return (
-                !0 === J.current && !1 === o && a(T.L.AUTO_DISMISS),
-                J.current !== o && (J.current = o),
-                (0, i.jsx)(s.yRy, {
+                !0 === J.current && !1 === s && l(E.L.AUTO_DISMISS),
+                J.current !== s && (J.current = s),
+                (0, r.jsx)(a.yRy, {
                     fixed: !0,
-                    shouldShow: k && (y === Z.D.ACTIVITY || null == y),
-                    animation: U ? s.yRy.Animation.FADE : s.yRy.Animation.TRANSLATE,
-                    animationPosition: U ? 'top' : 'bottom',
+                    shouldShow: k && (S === O.D.ACTIVITY || null == S),
+                    animation: W ? a.yRy.Animation.FADE : a.yRy.Animation.TRANSLATE,
+                    animationPosition: W ? 'top' : 'bottom',
                     position: 'bottom',
                     align: 'center',
                     spacing: 16,
                     onRequestClose: () => {
-                        O(!1), null == A || A(void 0);
+                        M(!1), null == Z || Z(void 0);
                     },
                     renderPopout: (e) => {
-                        let { closePopout: n, setPopoutRef: l } = e;
-                        return H
-                            ? (0, i.jsx)(f.m, {
-                                  ref: l,
+                        let { closePopout: n, setPopoutRef: i } = e;
+                        return F
+                            ? (0, r.jsx)(m.m, {
+                                  ref: i,
                                   channel: t,
                                   closePopout: n,
-                                  onMouseEnter: D,
-                                  onMouseLeave: w,
+                                  onMouseEnter: L,
+                                  onMouseLeave: D,
                                   isHovered: k,
-                                  onClick: () => a(T.L.UNKNOWN)
+                                  onClick: () => l(E.L.UNKNOWN)
                               })
-                            : (0, i.jsx)(i.Fragment, {});
+                            : (0, r.jsx)(r.Fragment, {});
                     },
                     children: () =>
-                        (0, i.jsxs)(i.Fragment, {
+                        (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, i.jsx)(s.ua7, {
-                                    text: S.intl.string(S.t.P8vmUl),
-                                    color: s.FGA.BRAND,
+                                (0, r.jsx)(a.ua7, {
+                                    text: P.NW.string(P.t.P8vmUl),
+                                    color: a.FGA.BRAND,
                                     forceOpen: !0,
-                                    shouldShow: o,
-                                    children: (e) =>
-                                        (0, i.jsx)('div', {
-                                            ...e,
-                                            children: (0, i.jsx)(I.Z, {
-                                                disabled: L,
-                                                'aria-label': M,
-                                                label: H ? void 0 : M,
-                                                isActivityActive: F || (!U && k),
-                                                className: U ? '' : j.controlButton,
-                                                onClick: () => {
-                                                    q(), (l === r.z.ACTIVITIES_MINI_SHELF_SPARKLES || l === r.z.ACTIVITY_GDM_ROCKET_SPARKLE || l === r.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || l === r.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES || l === r.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP) && a(T.L.TAKE_ACTION);
-                                                },
-                                                onMouseEnter: G,
-                                                onMouseLeave: w
-                                            })
-                                        })
+                                    shouldShow: s,
+                                    children: (e) => {
+                                        var t, n;
+                                        return (0, r.jsx)(
+                                            'div',
+                                            ((t = (function (e) {
+                                                for (var t = 1; t < arguments.length; t++) {
+                                                    var n = null != arguments[t] ? arguments[t] : {},
+                                                        r = Object.keys(n);
+                                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                                        (r = r.concat(
+                                                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                            })
+                                                        )),
+                                                        r.forEach(function (t) {
+                                                            var r;
+                                                            (r = n[t]),
+                                                                t in e
+                                                                    ? Object.defineProperty(e, t, {
+                                                                          value: r,
+                                                                          enumerable: !0,
+                                                                          configurable: !0,
+                                                                          writable: !0
+                                                                      })
+                                                                    : (e[t] = r);
+                                                        });
+                                                }
+                                                return e;
+                                            })({}, e)),
+                                            (n = n =
+                                                {
+                                                    children: (0, r.jsx)(x.Z, {
+                                                        disabled: R,
+                                                        'aria-label': w,
+                                                        label: F ? void 0 : w,
+                                                        isActivityActive: B || (!W && k),
+                                                        className: W ? '' : I.controlButton,
+                                                        onClick: () => {
+                                                            Y(), (i === o.z.ACTIVITIES_MINI_SHELF_SPARKLES || i === o.z.ACTIVITY_GDM_ROCKET_SPARKLE || i === o.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || i === o.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES || i === o.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP) && l(E.L.TAKE_ACTION);
+                                                        },
+                                                        onMouseEnter: H,
+                                                        onMouseLeave: D
+                                                    })
+                                                }),
+                                            Object.getOwnPropertyDescriptors
+                                                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                                                : (function (e, t) {
+                                                      var n = Object.keys(e);
+                                                      if (Object.getOwnPropertySymbols) {
+                                                          var r = Object.getOwnPropertySymbols(e);
+                                                          n.push.apply(n, r);
+                                                      }
+                                                      return n;
+                                                  })(Object(n)).forEach(function (e) {
+                                                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                                                  }),
+                                            t)
+                                        );
+                                    }
                                 }),
-                                B
-                                    ? U
-                                        ? (0, i.jsx)(g.r, {
+                                U
+                                    ? W
+                                        ? (0, r.jsx)(g.r, {
                                               top: 2,
                                               right: 2,
                                               size: 6
                                           })
-                                        : (0, i.jsx)(g.r, {
+                                        : (0, r.jsx)(g.r, {
                                               top: 4,
                                               right: 10,
                                               size: 12,

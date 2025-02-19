@@ -1,12 +1,12 @@
-n.d(t, { Z: () => f }), n(47120);
-var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(481060),
+n.d(t, { Z: () => g }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(481060),
     l = n(600164),
-    u = n(555153);
-function c(e, t, n) {
+    c = n(251127);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +19,66 @@ function c(e, t, n) {
         e
     );
 }
-class d extends r.PureComponent {
+function d(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                u(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function f(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function p(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : f(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function _(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = h(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function h(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+class m extends i.PureComponent {
     componentDidUpdate(e) {
         if (this.props.formError !== e.formError) this.setState({ changedSinceError: new Set() });
         else if (null != this.props.formError) {
@@ -39,46 +98,47 @@ class d extends r.PureComponent {
     render() {
         let { form: e, className: t } = this.props,
             n = e.map(this.renderFormRow);
-        return (0, i.jsx)('div', {
+        return (0, r.jsx)('div', {
             className: t,
             children: n
         });
     }
     constructor(...e) {
         super(...e),
-            c(this, 'state', { changedSinceError: new Set() }),
-            c(this, 'renderFormSection', (e) => {
-                let { values: t, onFieldChange: n, onFieldFocus: r, onFieldBlur: a, layout: l, ...u } = this.props,
-                    { getClassNameForLayout: c, renderInput: d, title: f, name: _, id: p, placeholder: h, ...m } = e,
-                    g = {
-                        ...m,
-                        placeholder: null == h ? void 0 : h(),
-                        layout: l,
-                        error: this.getError(_),
-                        value: t[_],
-                        name: _,
-                        'aria-labelledby': p,
-                        onChange: n,
-                        onFocus: r,
-                        onBlur: a
-                    };
-                return (0, i.jsx)(
-                    o.hjN,
+            u(this, 'state', { changedSinceError: new Set() }),
+            u(this, 'renderFormSection', (e) => {
+                let t = this.props,
+                    { values: n, onFieldChange: i, onFieldFocus: o, onFieldBlur: l, layout: c } = t,
+                    u = _(t, ['values', 'onFieldChange', 'onFieldFocus', 'onFieldBlur', 'layout']),
+                    { getClassNameForLayout: f, renderInput: h, title: m, name: g, id: E, placeholder: v } = e,
+                    b = p(d({}, _(e, ['getClassNameForLayout', 'renderInput', 'title', 'name', 'id', 'placeholder'])), {
+                        placeholder: null == v ? void 0 : v(),
+                        layout: c,
+                        error: this.getError(g),
+                        value: n[g],
+                        name: g,
+                        'aria-labelledby': E,
+                        onChange: i,
+                        onFocus: o,
+                        onBlur: l
+                    });
+                return (0, r.jsx)(
+                    s.hjN,
                     {
-                        className: s()(null == c ? void 0 : c(l)),
-                        title: f(),
-                        titleId: p,
-                        children: d(g, u)
+                        className: a()(null == f ? void 0 : f(c)),
+                        title: m(),
+                        titleId: E,
+                        children: h(b, u)
                     },
-                    _
+                    g
                 );
             }),
-            c(this, 'renderFormRow', (e) => {
+            u(this, 'renderFormRow', (e) => {
                 let t = e.fields.map(this.renderFormSection);
-                return (0, i.jsx)(
+                return (0, r.jsx)(
                     l.Z,
                     {
-                        className: s()(u.row, e.className),
+                        className: a()(c.row, e.className),
                         children: t
                     },
                     e.fields.map((e) => e.name).join('')
@@ -86,4 +146,4 @@ class d extends r.PureComponent {
             });
     }
 }
-let f = d;
+let g = m;

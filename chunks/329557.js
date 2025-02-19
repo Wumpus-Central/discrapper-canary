@@ -1,14 +1,14 @@
 n.d(t, { Z: () => _ });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(481060),
+var i = n(481060),
     l = n(570140),
-    s = n(317770),
-    a = n(51596),
-    o = n(823385),
+    o = n(317770),
+    s = n(51596),
+    a = n(823385),
     c = n(900085);
-let d = 'QUICK_SWITCHER_MODAL_KEY';
-class u extends s.Z {
+let u = 'QUICK_SWITCHER_MODAL_KEY';
+class d extends o.Z {
     _initialize() {
         l.Z.subscribe('QUICKSWITCHER_SHOW', this.handleShow), l.Z.subscribe('QUICKSWITCHER_HIDE', this.handleHide);
     }
@@ -16,16 +16,47 @@ class u extends s.Z {
         l.Z.unsubscribe('QUICKSWITCHER_SHOW', this.handleShow), l.Z.unsubscribe('QUICKSWITCHER_HIDE', this.handleHide);
     }
     handleShow() {
-        o.Z.isOpen() &&
-            !(0, r.nfh)(d) &&
-            (0, r.h7j)((e) => (0, i.jsx)(c.Z, { ...e }), {
-                modalKey: d,
-                instant: !0,
-                onCloseCallback: a.Cp
-            });
+        a.Z.isOpen() &&
+            !(0, i.nfh)(u) &&
+            (0, i.h7j)(
+                (e) =>
+                    (0, r.jsx)(
+                        c.Z,
+                        (function (e) {
+                            for (var t = 1; t < arguments.length; t++) {
+                                var n = null != arguments[t] ? arguments[t] : {},
+                                    r = Object.keys(n);
+                                'function' == typeof Object.getOwnPropertySymbols &&
+                                    (r = r.concat(
+                                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                        })
+                                    )),
+                                    r.forEach(function (t) {
+                                        var r;
+                                        (r = n[t]),
+                                            t in e
+                                                ? Object.defineProperty(e, t, {
+                                                      value: r,
+                                                      enumerable: !0,
+                                                      configurable: !0,
+                                                      writable: !0
+                                                  })
+                                                : (e[t] = r);
+                                    });
+                            }
+                            return e;
+                        })({}, e)
+                    ),
+                {
+                    modalKey: u,
+                    instant: !0,
+                    onCloseCallback: s.Cp
+                }
+            );
     }
     handleHide() {
-        (0, r.Mr3)(d);
+        (0, i.Mr3)(u);
     }
 }
-let _ = new u();
+let _ = new d();

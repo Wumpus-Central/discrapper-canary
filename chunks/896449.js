@@ -1,93 +1,136 @@
-n.d(t, { Z: () => p });
-var l = n(200651),
+n.d(t, { Z: () => v });
+var r = n(200651),
     a = n(192379),
-    i = n(481060),
-    r = n(239091),
+    l = n(481060),
+    i = n(239091),
     o = n(299206),
     s = n(810568),
     c = n(168524),
-    d = n(37258),
-    u = n(26033),
+    u = n(37258),
+    d = n(26033),
     m = n(178762),
-    x = n(388032),
-    h = n(818998);
-function p(e) {
+    p = n(388032),
+    h = n(694247);
+function x(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function g(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function v(e) {
     var t;
-    let { user: n, guildId: p, channel: g, entry: v, onSelect: C, disableGameProfileLinks: j } = e,
-        I = a.useContext(m.Ir),
-        f = (0, d.Z)({
+    let { user: n, guildId: v, channel: f, entry: y, onSelect: j, disableGameProfileLinks: P } = e,
+        O = a.useContext(m.Ir),
+        b = (0, u.Z)({
             userId: n.id,
-            guildId: p,
-            channelId: null == g ? void 0 : g.id,
-            onAction: I
+            guildId: v,
+            channelId: null == f ? void 0 : f.id,
+            onAction: O
         }),
-        P = (0, o.Z)({
+        C = (0, o.Z)({
             id: n.id,
-            label: x.intl.string(x.t['/AXYnJ'])
+            label: p.NW.string(p.t['/AXYnJ'])
         }),
-        y = 'application_id' in v.extra ? v.extra.application_id : null,
-        N = (0, o.Z)({
-            id: y,
-            label: x.intl.string(x.t['FfCL+/'])
+        N = 'application_id' in y.extra ? y.extra.application_id : null,
+        I = (0, o.Z)({
+            id: N,
+            label: p.NW.string(p.t['FfCL+/'])
         }),
-        Z = (0, u.dX)(v),
+        w = (0, d.dX)(y),
         T = (0, c.Z)({
             location: 'ContentPopoutContextMenu',
-            applicationId: Z && !0 !== j ? (null === (t = v.extra) || void 0 === t ? void 0 : t.application_id) : void 0,
+            applicationId: w && !0 !== P ? (null === (t = y.extra) || void 0 === t ? void 0 : t.application_id) : void 0,
             source: s.m1.ActivityCardContextMenu,
             trackEntryPointImpression: !0,
-            sourceUserId: v.author_id
+            sourceUserId: y.author_id
         });
-    return (0, l.jsx)(i.yRy, {
+    return (0, r.jsx)(l.yRy, {
         align: 'top',
         position: 'right',
         disablePointerEvents: !1,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, l.jsx)(i.v2r, {
+            return (0, r.jsx)(l.v2r, {
                 navId: 'content-inventory-context',
                 onClose: () => {
-                    (0, r.Zy)(), t();
+                    (0, i.Zy)(), t();
                 },
-                'aria-label': x.intl.string(x.t.liqwPD),
-                onSelect: C,
-                children: (0, l.jsxs)(l.Fragment, {
+                'aria-label': p.NW.string(p.t.liqwPD),
+                onSelect: j,
+                children: (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, l.jsxs)(i.kSQ, {
+                        (0, r.jsxs)(l.kSQ, {
                             children: [
-                                f,
+                                b,
                                 null != T &&
-                                    (0, l.jsx)(i.sNh, {
+                                    (0, r.jsx)(l.sNh, {
                                         id: 'game-profile',
-                                        label: x.intl.string(x.t.f7aVGh),
+                                        label: p.NW.string(p.t.f7aVGh),
                                         action: (e) => {
-                                            T(e), null == I || I();
+                                            T(e), null == O || O();
                                         }
                                     })
                             ]
                         }),
-                        (0, l.jsxs)(i.kSQ, {
-                            children: [P, N]
+                        (0, r.jsxs)(l.kSQ, {
+                            children: [C, I]
                         })
                     ]
                 })
             });
         },
         children: (e) =>
-            (0, l.jsx)(i.ua7, {
-                text: x.intl.string(x.t.UKOtz8),
+            (0, r.jsx)(l.ua7, {
+                text: p.NW.string(p.t.UKOtz8),
                 children: (t) =>
-                    (0, l.jsx)(i.P3F, {
-                        ...t,
-                        className: h.menuIcon,
-                        ...e,
-                        children: (0, l.jsx)(i.xhG, {
-                            color: 'currentColor',
-                            size: 'custom',
-                            width: 16,
-                            height: 16
+                    (0, r.jsx)(
+                        l.P3F,
+                        g(x(g(x({}, t), { className: h.menuIcon }), e), {
+                            children: (0, r.jsx)(l.xhG, {
+                                color: 'currentColor',
+                                size: 'custom',
+                                width: 16,
+                                height: 16
+                            })
                         })
-                    })
+                    )
             })
     });
 }

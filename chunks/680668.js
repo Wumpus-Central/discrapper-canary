@@ -1,152 +1,180 @@
-n.d(t, { Z: () => E }), n(789020), n(47120);
-var i = n(200651),
-    l = n(192379),
+n.d(t, { Z: () => y }), n(789020), n(47120);
+var r = n(200651),
+    i = n(192379),
     a = n(533800),
-    r = n(481060),
-    s = n(576306),
-    o = n(857395),
+    o = n(481060),
+    l = n(576306),
+    s = n(857395),
     c = n(358555),
     d = n(955415),
     u = n(131704),
-    m = n(630388),
-    _ = n(267642),
-    h = n(411198),
-    p = n(277707),
+    p = n(630388),
+    m = n(267642),
+    f = n(411198),
+    h = n(277707),
     g = n(358595),
-    f = n(981631),
-    x = n(388032),
-    C = n(791686);
-function E(e) {
-    var t, E;
-    let v,
-        I,
-        N,
-        { onTransitionToInviteChannel: S, onAcceptInstantInvite: T, guild: b, invite: A, author: j, currentUserId: y } = e,
-        Z = y === j.id,
-        { channel: R, approximate_member_count: L, approximate_presence_count: P } = A,
-        k = A.state === f.r2o.ACCEPTING,
-        M = null != R ? (0, u.jD)(R) : null,
-        O = null != b,
-        D = null != M,
-        w = null != M && M.isGuildVocal(),
-        F = null != M && M.isGuildStageVoice(),
-        U = (0, m.yE)(null !== (t = A.flags) && void 0 !== t ? t : 0, a.$.IS_GUEST_INVITE),
-        B = null !== (E = null == b ? void 0 : b.hasFeature(f.oNc.HUB)) && void 0 !== E && E,
-        G = (0, s.h)(),
-        [H, V] = l.useState(!1),
-        z = l.useCallback(() => V(!0), []),
-        W = l.useCallback(() => V(!1), []);
-    if (null == b) {
-        if (null == A.guild) return (0, i.jsx)(g.Z, {});
-        b = h.Qs(A.guild);
-        let e = (0, _.rF)(A.guild.premium_subscription_count, A.guild.id);
-        b.premiumTier = e;
+    _ = n(981631),
+    b = n(388032),
+    v = n(217480);
+function y(e) {
+    var t, y;
+    let x,
+        O,
+        E,
+        { onTransitionToInviteChannel: j, onAcceptInstantInvite: N, guild: C, invite: I, author: S, currentUserId: P } = e,
+        T = P === S.id,
+        { channel: A, approximate_member_count: w, approximate_presence_count: Z } = I,
+        k = I.state === _.r2o.ACCEPTING,
+        R = null != A ? (0, u.jD)(A) : null,
+        L = null != C,
+        D = null != R,
+        M = null != R && R.isGuildVocal(),
+        W = null != R && R.isGuildStageVoice(),
+        F = (0, p.yE)(null !== (t = I.flags) && void 0 !== t ? t : 0, a.$.IS_GUEST_INVITE),
+        U = null !== (y = null == C ? void 0 : C.hasFeature(_.oNc.HUB)) && void 0 !== y && y,
+        B = (0, l.h)(),
+        [G, H] = i.useState(!1),
+        V = i.useCallback(() => H(!0), []),
+        z = i.useCallback(() => H(!1), []);
+    if (null == C) {
+        if (null == I.guild) return (0, r.jsx)(g.Z, {});
+        C = f.Qs(I.guild);
+        let e = (0, m.rF)(I.guild.premium_subscription_count, I.guild.id);
+        C.premiumTier = e;
     }
-    let K = O ? S : T,
-        Y = (0, p.e)({
-            isVoiceChannel: w,
-            isOwnInvite: Z,
-            isGuest: U,
-            isHubGuild: B,
-            isStage: F,
+    let K = L ? j : N,
+        Y = (0, h.e)({
+            isVoiceChannel: M,
+            isOwnInvite: T,
+            isGuest: F,
+            isHubGuild: U,
+            isStage: W,
             isStream: !1
         });
     return (
-        (I = (0, i.jsxs)('span', {
-            className: C.infoTitle,
+        (O = (0, r.jsxs)('span', {
+            className: v.infoTitle,
             children: [
-                (0, i.jsx)(o.Z, {
-                    guildId: b.id,
-                    name: b.name,
-                    shouldShow: H,
-                    onRequestClose: W,
-                    children: () => (0, i.jsx)(d.Z.GuildName, { guild: b })
+                (0, r.jsx)(s.Z, {
+                    guildId: C.id,
+                    name: C.name,
+                    shouldShow: G,
+                    onRequestClose: z,
+                    children: () => (0, r.jsx)(d.Z.GuildName, { guild: C })
                 }),
-                (0, i.jsx)('span', {
-                    className: C.infoBadge,
-                    children: (0, i.jsx)(c.Z, {
-                        guild: b,
+                (0, r.jsx)('span', {
+                    className: v.infoBadge,
+                    children: (0, r.jsx)(c.Z, {
+                        guild: C,
                         isBannerVisible: !1,
                         disableBoostClick: !0
                     })
                 })
             ]
         })),
-        U &&
-            (N = (0, i.jsx)(r.DY3, {
-                className: C.tooltipContainer,
-                text: x.intl.string(x.t['/FeTKy']),
-                children: (0, i.jsx)(r.d3s, {
+        F &&
+            (E = (0, r.jsx)(o.DY3, {
+                className: v.tooltipContainer,
+                text: b.NW.string(b.t['/FeTKy']),
+                children: (0, r.jsx)(o.d3s, {
                     size: 'md',
                     color: 'currentColor',
-                    className: C.infoIcon
+                    className: v.infoIcon
                 })
             })),
-        w
-            ? ((I = (0, i.jsx)(d.Z.Channel, { channel: M })),
-              (v = (0, i.jsxs)('span', {
-                  className: C.infoTitle,
+        M
+            ? ((O = (0, r.jsx)(d.Z.Channel, { channel: R })),
+              (x = (0, r.jsxs)('span', {
+                  className: v.infoTitle,
                   children: [
-                      x.intl.format(x.t['2wimj4'], { guildName: b.name }),
-                      (0, i.jsx)('span', {
-                          className: C.infoBadge,
-                          children: (0, i.jsx)(c.Z, {
-                              guild: b,
+                      b.NW.format(b.t['2wimj4'], { guildName: C.name }),
+                      (0, r.jsx)('span', {
+                          className: v.infoBadge,
+                          children: (0, r.jsx)(c.Z, {
+                              guild: C,
                               isBannerVisible: !1
                           })
                       })
                   ]
               })))
-            : (null != L && L >= 5) || (null != P && P > 0)
-              ? (v = (0, i.jsx)(d.Z.Data, {
-                    members: L,
-                    membersOnline: P
+            : (null != w && w >= 5) || (null != Z && Z > 0)
+              ? (x = (0, r.jsx)(d.Z.Data, {
+                    members: w,
+                    membersOnline: Z
                 }))
               : D &&
-                (v = (0, i.jsx)(d.Z.Channel, {
-                    channel: M,
-                    guild: b
+                (x = (0, r.jsx)(d.Z.Channel, {
+                    channel: R,
+                    guild: C
                 })),
-        (0, i.jsxs)(d.Z, {
+        (0, r.jsxs)(d.Z, {
             children: [
-                (0, i.jsx)(d.Z.GuildSplash, { guild: b }),
-                (0, i.jsx)(d.Z.Header, {
+                (0, r.jsx)(d.Z.GuildSplash, { guild: C }),
+                (0, r.jsx)(d.Z.Header, {
                     text: Y,
-                    extra: N
+                    extra: E
                 }),
-                (0, i.jsxs)(d.Z.Body, {
+                (0, r.jsxs)(d.Z.Body, {
                     children: [
-                        (0, i.jsxs)('div', {
-                            className: C.headerLine,
+                        (0, r.jsxs)('div', {
+                            className: v.headerLine,
                             children: [
-                                (0, i.jsx)(d.Z.Icon, { guild: b }),
-                                (0, i.jsx)(d.Z.Info, {
-                                    title: I,
-                                    onClick: G ? z : O ? K : null,
-                                    children: v
+                                (0, r.jsx)(d.Z.Icon, { guild: C }),
+                                (0, r.jsx)(d.Z.Info, {
+                                    title: O,
+                                    onClick: B ? V : L ? K : null,
+                                    children: x
                                 })
                             ]
                         }),
-                        (0, i.jsx)(d.Z.Button, {
+                        (0, r.jsx)(d.Z.Button, {
                             onClick: K,
                             submitting: k,
                             color: d.Z.Button.Colors.GREEN,
-                            children: w ? (F ? x.intl.string(x.t['7vb2cX']) : x.intl.string(x.t.gpqgam)) : O ? x.intl.string(x.t.cEnaW1) : x.intl.string(x.t.XpeFYm)
+                            children: M ? (W ? b.NW.string(b.t['7vb2cX']) : b.NW.string(b.t.gpqgam)) : L ? b.NW.string(b.t.cEnaW1) : b.NW.string(b.t.XpeFYm)
                         })
                     ]
                 }),
-                b.hasFeature(f.oNc.HUB) &&
-                    (0, i.jsxs)(i.Fragment, {
+                C.hasFeature(_.oNc.HUB) &&
+                    (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, i.jsx)('div', { className: C.separator }),
-                            (0, i.jsx)(r.Text, {
+                            (0, r.jsx)('div', { className: v.separator }),
+                            (0, r.jsx)(o.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'header-secondary',
-                                children: x.intl.format(x.t['/o1IfH'], {
+                                children: b.NW.format(b.t['/o1IfH'], {
                                     onClick: () =>
-                                        (0, r.ZDy)(async () => {
-                                            let { default: e } = await Promise.all([n.e('95468'), n.e('70506')]).then(n.bind(n, 650233));
-                                            return (t) => (0, i.jsx)(e, { ...t });
+                                        (0, o.ZDy)(async () => {
+                                            let { default: e } = await Promise.all([n.e('95468'), n.e('26812')]).then(n.bind(n, 650233));
+                                            return (t) =>
+                                                (0, r.jsx)(
+                                                    e,
+                                                    (function (e) {
+                                                        for (var t = 1; t < arguments.length; t++) {
+                                                            var n = null != arguments[t] ? arguments[t] : {},
+                                                                r = Object.keys(n);
+                                                            'function' == typeof Object.getOwnPropertySymbols &&
+                                                                (r = r.concat(
+                                                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                                    })
+                                                                )),
+                                                                r.forEach(function (t) {
+                                                                    var r;
+                                                                    (r = n[t]),
+                                                                        t in e
+                                                                            ? Object.defineProperty(e, t, {
+                                                                                  value: r,
+                                                                                  enumerable: !0,
+                                                                                  configurable: !0,
+                                                                                  writable: !0
+                                                                              })
+                                                                            : (e[t] = r);
+                                                                });
+                                                        }
+                                                        return e;
+                                                    })({}, t)
+                                                );
                                         })
                                 })
                             })

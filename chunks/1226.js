@@ -1,57 +1,96 @@
 n.d(t, {
-    BO: () => s,
-    cq: () => u,
-    gI: () => c,
+    BO: () => u,
+    cq: () => p,
+    gI: () => f,
     xN: () => h,
     yA: () => d
 });
 var i = n(348327),
-    l = n.n(i),
-    r = n(972959),
-    o = n(569545);
-let a = (0, r.H)(() => ({ streams: {} }));
-function s(e) {
+    r = n.n(i),
+    o = n(972959),
+    l = n(569545);
+function a(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            i = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (i = i.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            i.forEach(function (t) {
+                var i;
+                (i = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: i,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = i);
+            });
+    }
+    return e;
+}
+function s(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var i = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, i);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let c = (0, o.H)(() => ({ streams: {} }));
+function u(e) {
     var t, n;
-    let i = (0, o.V9)(e);
-    return null !== (n = null === (t = a.useState((e) => e.streams, l())[i]) || void 0 === t ? void 0 : t.zoom) && void 0 !== n ? n : 100;
+    let i = (0, l.V9)(e);
+    return null !== (n = null === (t = c.useState((e) => e.streams, r())[i]) || void 0 === t ? void 0 : t.zoom) && void 0 !== n ? n : 100;
 }
 function d(e) {
-    return s(e) / 100;
+    return u(e) / 100;
 }
-function u(e, t) {
-    let n = (0, o.V9)(e);
-    a.setState((e) => {
+function p(e, t) {
+    let n = (0, l.V9)(e);
+    c.setState((e) => {
         var i;
-        return {
-            ...e,
-            streams: {
-                ...e.streams,
+        return s(a({}, e), {
+            streams: s(a({}, e.streams), {
                 [n]: {
                     zoom: t,
                     fitOverride: null === (i = e.streams[n]) || void 0 === i ? void 0 : i.fitOverride
                 }
-            }
-        };
+            })
+        });
     }, !0);
 }
-function c(e, t) {
-    let n = (0, o.V9)(e);
-    a.setState((e) => {
+function f(e, t) {
+    let n = (0, l.V9)(e);
+    c.setState((e) => {
         var i;
-        return {
-            ...e,
-            streams: {
-                ...e.streams,
+        return s(a({}, e), {
+            streams: s(a({}, e.streams), {
                 [n]: {
                     zoom: null === (i = e.streams[n]) || void 0 === i ? void 0 : i.zoom,
                     fitOverride: t
                 }
-            }
-        };
+            })
+        });
     });
 }
 function h(e) {
     var t;
-    let n = (0, o.V9)(e);
-    return null === (t = a.useState((e) => e.streams, l())[n]) || void 0 === t ? void 0 : t.fitOverride;
+    let n = (0, l.V9)(e);
+    return null === (t = c.useState((e) => e.streams, r())[n]) || void 0 === t ? void 0 : t.fitOverride;
 }

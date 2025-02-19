@@ -1,17 +1,17 @@
 n.d(t, {
-    ZP: () => _,
-    gN: () => p
+    ZP: () => v,
+    gN: () => f
 }),
     n(47120),
     n(411104);
-var i,
-    a = n(200651),
-    r = n(192379),
+var r,
+    i = n(200651),
+    a = n(192379),
     l = n(120356),
-    s = n.n(l),
-    o = n(748780),
+    o = n.n(l),
+    s = n(748780),
     c = n(112724),
-    d = n(295893);
+    d = n(575599);
 function u(e, t, n) {
     return (
         t in e
@@ -25,37 +25,63 @@ function u(e, t, n) {
         e
     );
 }
-let m = {
+function p(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                u(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function m(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let h = {
         tension: 7,
         friction: 5,
         overshootClamping: !0
     },
-    h = 'center';
-function p(e, t) {
+    g = 'center';
+function f(e, t) {
     return ((e % t) + t) % t;
 }
-class g extends (i = r.Component) {
+class _ extends (r = a.Component) {
     componentDidMount() {
         this.animatedIndex.setValue(this.props.currentIndex);
     }
     componentDidUpdate(e) {
-        let { align: t, animate: n, currentIndex: i, items: a, width: r } = this.props,
-            l = p(i, a.length),
-            s = p(e.currentIndex, a.length);
-        (l !== s || a.length !== e.items.length) && this.updateAnimatedIndex(l, s),
-            r !== e.width
-                ? this.animatedAlignmentOffset.setValue(this.getAlignmentOffset(t))
-                : n &&
-                  (t !== e.align || l !== s) &&
-                  o.Z.spring(this.animatedAlignmentOffset, {
-                      ...m,
-                      toValue: this.getAlignmentOffset(t)
-                  }).start();
+        let { align: t, animate: n, currentIndex: r, items: i, width: a } = this.props,
+            l = f(r, i.length),
+            o = f(e.currentIndex, i.length);
+        (l !== o || i.length !== e.items.length) && this.updateAnimatedIndex(l, o), a !== e.width ? this.animatedAlignmentOffset.setValue(this.getAlignmentOffset(t)) : n && (t !== e.align || l !== o) && s.Z.spring(this.animatedAlignmentOffset, m(p({}, h), { toValue: this.getAlignmentOffset(t) })).start();
     }
     getAlignmentOffset(e) {
-        let { width: t, itemSize: n, currentIndex: i, gutter: a, items: r } = this.props,
-            l = a * p(i, r.length) * 2;
-        return e === h ? (t - n.width) / 2 + l : 'right' === e ? t - n.width - a + l : a + l;
+        let { width: t, itemSize: n, currentIndex: r, gutter: i, items: a } = this.props,
+            l = i * f(r, a.length) * 2;
+        return e === g ? (t - n.width) / 2 + l : 'right' === e ? t - n.width - i + l : i + l;
     }
     getCarouselTranslate() {
         let { itemSize: e, edgeItems: t } = this.props;
@@ -63,25 +89,21 @@ class g extends (i = r.Component) {
     }
     animateToIndex(e, t) {
         let { animatedIndex: n } = this,
-            { items: i, edgeItems: a } = this.props;
-        a > 0 && (0 === e && t === i.length - 1 ? n.setValue(-1) : 0 === t && e === i.length - 1 && i.length > 2 && n.setValue(i.length)),
-            o.Z.spring(n, {
-                ...m,
-                toValue: e
-            }).start();
+            { items: r, edgeItems: i } = this.props;
+        i > 0 && (0 === e && t === r.length - 1 ? n.setValue(-1) : 0 === t && e === r.length - 1 && r.length > 2 && n.setValue(r.length)), s.Z.spring(n, m(p({}, h), { toValue: e })).start();
     }
     updateAnimatedIndex(e, t) {
-        let { animatedIndex: n, animatedOpacity: i } = this,
-            { animate: a } = this.props;
-        a
+        let { animatedIndex: n, animatedOpacity: r } = this,
+            { animate: i } = this.props;
+        i
             ? this.animateToIndex(e, t)
-            : o.Z.timing(i, {
+            : s.Z.timing(r, {
                   fromValue: 1,
                   toValue: 0,
                   duration: 100
               }).start(() => {
                   n.setValue(e),
-                      o.Z.timing(i, {
+                      s.Z.timing(r, {
                           fromValue: 0,
                           toValue: 1,
                           duration: 100
@@ -89,10 +111,10 @@ class g extends (i = r.Component) {
               });
     }
     renderSingleItem() {
-        let { renderItem: e, items: t, itemSize: n, className: i } = this.props;
-        return (0, a.jsx)('div', {
-            className: s()(d.singleItemWrapper, d.viewport, i),
-            children: (0, a.jsx)('div', {
+        let { renderItem: e, items: t, itemSize: n, className: r } = this.props;
+        return (0, i.jsx)('div', {
+            className: o()(d.singleItemWrapper, d.viewport, r),
+            children: (0, i.jsx)('div', {
                 className: d.singleItem,
                 style: {
                     width: n.width,
@@ -104,35 +126,35 @@ class g extends (i = r.Component) {
     }
     renderCarouselItems() {
         let e;
-        let { animatedIndex: t, animatedAlignmentOffset: n, animatedOpacity: i } = this,
-            { renderItem: r, items: l, itemSize: s, edgeItems: c, gutter: u } = this.props,
-            { margin: m, width: h } = s,
-            p = this.getCarouselTranslate(),
+        let { animatedIndex: t, animatedAlignmentOffset: n, animatedOpacity: r } = this,
+            { renderItem: a, items: l, itemSize: o, edgeItems: c, gutter: u } = this.props,
+            { margin: p, width: m } = o,
+            h = this.getCarouselTranslate(),
             g = this.getItemStyle(),
-            _ = (c > 0 ? [...l.slice(-c), ...l, ...l.slice(0, c)] : l).map((e, t) =>
-                (0, a.jsx)(
+            f = (c > 0 ? [...l.slice(-c), ...l, ...l.slice(0, c)] : l).map((e, t) =>
+                (0, i.jsx)(
                     'div',
                     {
                         style: g,
                         className: d.item,
-                        children: r(e, t - c, this.interpolateValueForItem(t - c))
+                        children: a(e, t - c, this.interpolateValueForItem(t - c))
                     },
                     t
                 )
             );
-        return (0, a.jsx)(o.Z.div, {
+        return (0, i.jsx)(s.Z.div, {
             className: d.carousel,
             style: {
-                opacity: i,
-                left: o.Z.add(
+                opacity: r,
+                left: s.Z.add(
                     t.interpolate({
                         inputRange: [0, 1],
-                        outputRange: [-p, -m - h - p - u * (l.length - 1)]
+                        outputRange: [-h, -p - m - h - u * (l.length - 1)]
                     }),
                     n
                 )
             },
-            children: _
+            children: f
         });
     }
     render() {
@@ -140,16 +162,16 @@ class g extends (i = r.Component) {
         if (e.length <= 0) throw Error('Carousel has no items');
         return 1 === e.length
             ? this.renderSingleItem()
-            : (0, a.jsx)('div', {
-                  className: s()({ [d.viewport]: n }, t),
+            : (0, i.jsx)('div', {
+                  className: o()({ [d.viewport]: n }, t),
                   children: this.renderCarouselItems()
               });
     }
     constructor(...e) {
         super(...e),
-            u(this, 'animatedIndex', new o.Z.Value(this.props.currentIndex)),
-            u(this, 'animatedAlignmentOffset', new o.Z.Value(this.getAlignmentOffset(this.props.align))),
-            u(this, 'animatedOpacity', new o.Z.Value(1)),
+            u(this, 'animatedIndex', new s.Z.Value(this.props.currentIndex)),
+            u(this, 'animatedAlignmentOffset', new s.Z.Value(this.getAlignmentOffset(this.props.align))),
+            u(this, 'animatedOpacity', new s.Z.Value(1)),
             u(this, 'getItemStyle', () => {
                 let {
                     itemSize: { width: e, margin: t, height: n }
@@ -171,11 +193,11 @@ class g extends (i = r.Component) {
             );
     }
 }
-u(g, 'defaultProps', {
+u(_, 'defaultProps', {
     animate: !0,
     edgeItems: 2,
-    align: h,
+    align: g,
     gutter: 0,
     hideOverflow: !0
 });
-let _ = (0, c.Z)(g);
+let v = (0, c.Z)(_);

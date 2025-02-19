@@ -1,93 +1,159 @@
 n.d(t, {
-    default: () => g,
-    r: () => p
+    default: () => f,
+    r: () => g
 }),
     n(47120);
-var i = n(200651),
-    l = n(192379),
-    r = n(481060),
-    a = n(153867),
-    s = n(835473),
-    o = n(600164),
-    d = n(626135),
-    c = n(998502),
-    u = n(981631),
-    h = n(388032),
-    m = n(251627);
-let p = 'Activity Encourages Hardware Acceleration';
-function g(e) {
-    var t;
-    let { applicationId: n, ...g } = e,
-        [_, f] = l.useState(!1),
-        [E] = (0, s.Z)([n]),
-        I = null !== (t = null == E ? void 0 : E.name) && void 0 !== t ? t : 'This Activity';
-    l.useEffect(() => {
-        d.default.track(u.rMx.OPEN_MODAL, { type: p });
+var r = n(200651),
+    i = n(192379),
+    l = n(481060),
+    o = n(153867),
+    a = n(835473),
+    s = n(600164),
+    c = n(626135),
+    u = n(998502),
+    d = n(981631),
+    p = n(388032),
+    h = n(358373);
+let g = 'Activity Encourages Hardware Acceleration';
+function f(e) {
+    var t,
+        n,
+        f,
+        { applicationId: m } = e,
+        b = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                i = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        r,
+                        i = {},
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+            }
+            return i;
+        })(e, ['applicationId']);
+    let [_, E] = i.useState(!1),
+        [O] = (0, a.Z)([m]),
+        N = null !== (f = null == O ? void 0 : O.name) && void 0 !== f ? f : 'This Activity';
+    i.useEffect(() => {
+        c.default.track(d.rMx.OPEN_MODAL, { type: g });
     }, []);
-    let C = () => {
+    let v = () => {
         let e = 'temporary';
-        _ && ((e = 'permanent'), a.ZP.updatedUnsyncedSettings({ disableActivityHardwareAccelerationPrompt: !0 })),
-            d.default.track(u.rMx.MODAL_DISMISSED, {
-                type: p,
+        _ && ((e = 'permanent'), o.ZP.updatedUnsyncedSettings({ disableActivityHardwareAccelerationPrompt: !0 })),
+            c.default.track(d.rMx.MODAL_DISMISSED, {
+                type: g,
                 dismiss_type: e
             }),
-            g.onClose();
+            b.onClose();
     };
-    return (0, i.jsxs)(r.Y0X, {
-        className: m.root,
-        'aria-label': h.intl.string(h.t.NQkK4u),
-        ...g,
-        children: [
-            (0, i.jsxs)(r.xBx, {
-                separator: !1,
+    return (0, r.jsxs)(
+        l.Y0X,
+        ((t = (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    r = Object.keys(n);
+                'function' == typeof Object.getOwnPropertySymbols &&
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        })
+                    )),
+                    r.forEach(function (t) {
+                        var r;
+                        (r = n[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: r,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0
+                                  })
+                                : (e[t] = r);
+                    });
+            }
+            return e;
+        })(
+            {
+                className: h.root,
+                'aria-label': p.NW.string(p.t.NQkK4u)
+            },
+            b
+        )),
+        (n = n =
+            {
                 children: [
-                    (0, i.jsx)(r.Text, {
-                        className: m.__invalid_header,
-                        variant: 'text-lg/normal',
-                        children: h.intl.string(h.t.NQkK4u)
+                    (0, r.jsxs)(l.xBx, {
+                        separator: !1,
+                        children: [
+                            (0, r.jsx)(l.Text, {
+                                className: h.__invalid_header,
+                                variant: 'text-lg/normal',
+                                children: p.NW.string(p.t.NQkK4u)
+                            }),
+                            (0, r.jsx)(l.olH, {
+                                onClick: v,
+                                className: h.closeButton
+                            })
+                        ]
                     }),
-                    (0, i.jsx)(r.olH, {
-                        onClick: C,
-                        className: m.closeButton
-                    })
-                ]
-            }),
-            (0, i.jsx)(r.hzk, {
-                className: m.content,
-                children: (0, i.jsx)(r.Text, {
-                    variant: 'text-md/normal',
-                    className: m.__invalid_ratingBody,
-                    children: h.intl.format(h.t.B9eiaG, { applicationName: I })
-                })
-            }),
-            (0, i.jsxs)(r.mzw, {
-                className: m.footer,
-                direction: o.Z.Direction.HORIZONTAL,
-                children: [
-                    (0, i.jsx)(r.XZJ, {
-                        type: r.XZJ.Types.INVERTED,
-                        size: 18,
-                        value: _,
-                        onChange: () => f(!_),
-                        children: (0, i.jsx)(r.Text, {
-                            variant: 'text-sm/normal',
-                            children: h.intl.string(h.t['5E9SBw'])
+                    (0, r.jsx)(l.hzk, {
+                        className: h.content,
+                        children: (0, r.jsx)(l.Text, {
+                            variant: 'text-md/normal',
+                            className: h.__invalid_ratingBody,
+                            children: p.NW.format(p.t.B9eiaG, { applicationName: N })
                         })
                     }),
-                    (0, i.jsx)(r.zxk, {
-                        color: r.zxk.Colors.PRIMARY,
-                        onClick: C,
-                        children: h.intl.string(h.t['Ibf5/v'])
-                    }),
-                    (0, i.jsx)(r.zxk, {
-                        color: r.zxk.Colors.BRAND,
-                        onClick: () => {
-                            d.default.track(u.rMx.ACTIVITY_ENABLE_HARDWARE_ACCELERATION, { application_id: n }), c.ZP.setEnableHardwareAcceleration(!0);
-                        },
-                        children: h.intl.string(h.t['/wlDqq'])
+                    (0, r.jsxs)(l.mzw, {
+                        className: h.footer,
+                        direction: s.Z.Direction.HORIZONTAL,
+                        children: [
+                            (0, r.jsx)(l.XZJ, {
+                                type: l.XZJ.Types.INVERTED,
+                                size: 18,
+                                value: _,
+                                onChange: () => E(!_),
+                                children: (0, r.jsx)(l.Text, {
+                                    variant: 'text-sm/normal',
+                                    children: p.NW.string(p.t['5E9SBw'])
+                                })
+                            }),
+                            (0, r.jsx)(l.zxk, {
+                                color: l.zxk.Colors.PRIMARY,
+                                onClick: v,
+                                children: p.NW.string(p.t['Ibf5/v'])
+                            }),
+                            (0, r.jsx)(l.zxk, {
+                                color: l.zxk.Colors.BRAND,
+                                onClick: () => {
+                                    c.default.track(d.rMx.ACTIVITY_ENABLE_HARDWARE_ACCELERATION, { application_id: m }), u.ZP.setEnableHardwareAcceleration(!0);
+                                },
+                                children: p.NW.string(p.t['/wlDqq'])
+                            })
+                        ]
                     })
                 ]
-            })
-        ]
-    });
+            }),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(n)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+              }),
+        t)
+    );
 }

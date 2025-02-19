@@ -1,65 +1,107 @@
-l.d(n, { default: () => p }), l(47120);
-var t = l(200651),
-    a = l(192379),
-    i = l(97613),
-    r = l.n(i),
-    o = l(410575),
-    s = l(881052),
-    u = l(246364),
-    c = l(296991),
-    d = l(915509),
-    x = l(981631),
-    g = l(388032);
-let p = function (e) {
-    let { field: n, onSave: l, onClose: i, guild: p } = e,
-        [m, _] = a.useState(
-            (null == n ? void 0 : n.values) != null
-                ? null == n
+n.d(t, { default: () => g }), n(47120), n(566702);
+var r = n(200651),
+    l = n(192379),
+    a = n(97613),
+    o = n.n(a),
+    i = n(410575),
+    c = n(881052),
+    s = n(246364),
+    u = n(296991),
+    d = n(915509),
+    p = n(981631),
+    b = n(388032);
+let g = function (e) {
+    var t, n;
+    let { field: a, onSave: g, onClose: f, guild: m } = e,
+        [x, j] = l.useState(
+            (null == a ? void 0 : a.values) != null
+                ? null == a
                     ? void 0
-                    : n.values.map((e) => ({
-                          id: r()(),
+                    : a.values.map((e) => ({
+                          id: o()(),
                           value: e
                       }))
                 : [
                       {
-                          id: r()(),
+                          id: o()(),
                           value: ''
                       }
                   ]
         ),
-        [h, C] = a.useState(null),
-        b = async () => {
-            null != h && C(null);
-            let e = m.map((e) => e.value.trim()).filter((e) => '' !== e);
+        [y, h] = l.useState(null),
+        O = async () => {
+            null != y && h(null);
+            let e = x.map((e) => e.value.trim()).filter((e) => '' !== e);
             if (0 === e.length) {
-                C(g.intl.string(g.t.TCHkcX));
+                h(b.NW.string(b.t.TCHkcX));
                 return;
             }
-            let n = {
-                field_type: u.QJ.TERMS,
-                label: g.intl.string(g.t['9suSIC']),
+            let t = {
+                field_type: s.QJ.TERMS,
+                label: b.NW.string(b.t['9suSIC']),
                 values: e,
                 required: !0
             };
             try {
-                await l(n), i();
+                await g(t), f();
             } catch (e) {
-                C(new s.Hx(e).getAnyErrorMessage());
+                h(new c.Hx(e).getAnyErrorMessage());
             }
         };
-    return (0, t.jsx)(o.Z, {
-        page: x.ZY5.GUILD_RULES_CREATE_MODAL,
-        children: (0, t.jsx)(d.Z, {
-            ...e,
-            errorText: h,
-            title: g.intl.string(g.t['3pz9t7']),
-            onCancel: i,
-            onConfirm: b,
-            children: (0, t.jsx)(c.k, {
-                guild: p,
-                rules: m,
-                setRules: _
-            })
-        })
+    return (0, r.jsx)(i.Z, {
+        page: p.ZY5.GUILD_RULES_CREATE_MODAL,
+        children: (0, r.jsx)(
+            d.Z,
+            ((t = (function (e) {
+                for (var t = 1; t < arguments.length; t++) {
+                    var n = null != arguments[t] ? arguments[t] : {},
+                        r = Object.keys(n);
+                    'function' == typeof Object.getOwnPropertySymbols &&
+                        (r = r.concat(
+                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                            })
+                        )),
+                        r.forEach(function (t) {
+                            var r;
+                            (r = n[t]),
+                                t in e
+                                    ? Object.defineProperty(e, t, {
+                                          value: r,
+                                          enumerable: !0,
+                                          configurable: !0,
+                                          writable: !0
+                                      })
+                                    : (e[t] = r);
+                        });
+                }
+                return e;
+            })({}, e)),
+            (n = n =
+                {
+                    errorText: y,
+                    title: b.NW.string(b.t['3pz9t7']),
+                    onCancel: f,
+                    onConfirm: O,
+                    children: (0, r.jsx)(u.k, {
+                        guild: m,
+                        rules: x,
+                        setRules: j
+                    })
+                }),
+            Object.getOwnPropertyDescriptors
+                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                : (function (e, t) {
+                      var n = Object.keys(e);
+                      if (Object.getOwnPropertySymbols) {
+                          var r = Object.getOwnPropertySymbols(e);
+                          n.push.apply(n, r);
+                      }
+                      return n;
+                  })(Object(n)).forEach(function (e) {
+                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                  }),
+            t)
+        )
     });
 };

@@ -1,74 +1,114 @@
-a.d(t, {
-    MessageReminderEditMenu: () => o,
-    r: () => c
+r.d(t, {
+    MessageReminderEditMenu: () => d,
+    r: () => l
 }),
-    a(653041);
-var n = a(200651),
-    r = a(192379),
-    i = a(481060),
-    d = a(239091),
-    s = a(324701),
-    l = a(550727),
-    u = a(388032);
-function c(e) {
+    r(653041);
+var n = r(200651),
+    a = r(192379),
+    c = r(481060),
+    o = r(239091),
+    i = r(324701),
+    s = r(550727),
+    u = r(388032);
+function l(e) {
     let { createReminder: t } = e,
-        d = r.useCallback(() => {
-            (0, i.ZDy)(async () => {
-                let { default: e } = await a.e('43866').then(a.bind(a, 423639));
-                return (a) =>
-                    (0, n.jsx)(e, {
-                        ...a,
-                        createReminder: t
-                    });
+        o = a.useCallback(() => {
+            (0, c.ZDy)(async () => {
+                let { default: e } = await r.e('43866').then(r.bind(r, 423639));
+                return (r) => {
+                    var a, c;
+                    return (0, n.jsx)(
+                        e,
+                        ((a = (function (e) {
+                            for (var t = 1; t < arguments.length; t++) {
+                                var r = null != arguments[t] ? arguments[t] : {},
+                                    n = Object.keys(r);
+                                'function' == typeof Object.getOwnPropertySymbols &&
+                                    (n = n.concat(
+                                        Object.getOwnPropertySymbols(r).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                        })
+                                    )),
+                                    n.forEach(function (t) {
+                                        var n;
+                                        (n = r[t]),
+                                            t in e
+                                                ? Object.defineProperty(e, t, {
+                                                      value: n,
+                                                      enumerable: !0,
+                                                      configurable: !0,
+                                                      writable: !0
+                                                  })
+                                                : (e[t] = n);
+                                    });
+                            }
+                            return e;
+                        })({}, r)),
+                        (c = c = { createReminder: t }),
+                        Object.getOwnPropertyDescriptors
+                            ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(c))
+                            : (function (e, t) {
+                                  var r = Object.keys(e);
+                                  if (Object.getOwnPropertySymbols) {
+                                      var n = Object.getOwnPropertySymbols(e);
+                                      r.push.apply(r, n);
+                                  }
+                                  return r;
+                              })(Object(c)).forEach(function (e) {
+                                  Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(c, e));
+                              }),
+                        a)
+                    );
+                };
             });
         }, [t]);
-    return r.useMemo(() => {
-        let e = l.B.map((e) => {
-            let { getDueAt: a, getLabel: r } = e;
+    return a.useMemo(() => {
+        let e = s.B.map((e) => {
+            let { getDueAt: r, getLabel: a } = e;
             return (0, n.jsx)(
-                i.sNh,
+                c.sNh,
                 {
-                    id: 'create-reminder-'.concat(r()),
-                    label: r(),
-                    action: () => t(a())
+                    id: 'create-reminder-'.concat(a()),
+                    label: a(),
+                    action: () => t(r())
                 },
-                'create-reminder-'.concat(r())
+                'create-reminder-'.concat(a())
             );
         });
         return (
             e.push(
                 (0, n.jsx)(
-                    i.sNh,
+                    c.sNh,
                     {
                         id: 'create-reminder-custom',
-                        label: u.intl.string(u.t.OLA8Zm),
-                        action: d
+                        label: u.NW.string(u.t.OLA8Zm),
+                        action: o
                     },
                     'custom'
                 )
             ),
             e
         );
-    }, [t, d]);
+    }, [t, o]);
 }
-function o(e) {
-    let { message: t, label: a } = e,
-        r = c({
+function d(e) {
+    let { message: t, label: r } = e,
+        a = l({
             createReminder: (e) =>
-                (0, s.z)({
+                (0, i.z)({
                     channelId: t.channel_id,
                     messageId: t.id,
                     dueAt: e
                 })
         });
-    return (0, n.jsx)(i.v2r, {
+    return (0, n.jsx)(c.v2r, {
         navId: 'message-reminder-create',
-        onClose: d.Zy,
-        'aria-label': u.intl.string(u.t.mJ3P0N),
+        onClose: o.Zy,
+        'aria-label': u.NW.string(u.t.mJ3P0N),
         onSelect: () => null,
-        children: (0, n.jsx)(i.kSQ, {
-            label: a,
-            children: r
+        children: (0, n.jsx)(c.kSQ, {
+            label: r,
+            children: a
         })
     });
 }

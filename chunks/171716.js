@@ -1,4 +1,3 @@
-e(312677);
 var n = e(504053);
 self.addEventListener('message', (r) => {
     let {

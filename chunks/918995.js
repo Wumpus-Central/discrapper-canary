@@ -1,42 +1,42 @@
-n.d(s, { default: () => d }), n(47120);
-var t = n(200651),
-    i = n(192379),
-    a = n(481060),
-    l = n(233787),
-    r = n(388032);
-function c(e, s, n) {
+n.d(t, { default: () => u }), n(47120);
+var r = n(200651),
+    s = n(192379),
+    i = n(481060),
+    c = n(233787),
+    o = n(388032);
+function a(e, t, n) {
     return (
-        s in e
-            ? Object.defineProperty(e, s, {
+        t in e
+            ? Object.defineProperty(e, t, {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[s] = n),
+            : (e[t] = n),
         e
     );
 }
-class o extends i.Component {
+class l extends s.Component {
     render() {
         let { transitionState: e } = this.props;
-        return (0, t.jsxs)(l.Z, {
+        return (0, r.jsxs)(c.Z, {
             transitionState: e,
-            'aria-label': r.intl.string(r.t.Nn0Px8),
+            'aria-label': o.NW.string(o.t.Nn0Px8),
             children: [
-                (0, t.jsx)(l.Z.Header, { children: r.intl.string(r.t.Nn0Px8) }),
-                (0, t.jsx)(l.Z.Content, {
-                    type: l.Z.Types.UNCLAIMED,
-                    children: r.intl.string(r.t['7btfmJ'])
+                (0, r.jsx)(c.Z.Header, { children: o.NW.string(o.t.Nn0Px8) }),
+                (0, r.jsx)(c.Z.Content, {
+                    type: c.Z.Types.UNCLAIMED,
+                    children: o.NW.string(o.t['7btfmJ'])
                 }),
-                (0, t.jsx)(l.Z.Footer, {
+                (0, r.jsx)(c.Z.Footer, {
                     secondary: {
                         onClick: this.cancel,
-                        label: r.intl.string(r.t.oEAioK)
+                        label: o.NW.string(o.t.oEAioK)
                     },
                     primary: {
                         onClick: this.claimAccount,
-                        label: r.intl.string(r.t.fiNVio)
+                        label: o.NW.string(o.t.fiNVio)
                     }
                 })
             ]
@@ -44,18 +44,37 @@ class o extends i.Component {
     }
     constructor(...e) {
         super(...e),
-            c(this, 'cancel', () => {
+            a(this, 'cancel', () => {
                 let { onClose: e } = this.props;
                 null == e || e();
             }),
-            c(this, 'claimAccount', () => {
+            a(this, 'claimAccount', () => {
                 let { onClose: e } = this.props;
                 null == e || e(),
-                    (0, a.ZDy)(async () => {
+                    (0, i.ZDy)(async () => {
                         let { default: e } = await n.e('60827').then(n.bind(n, 324239));
-                        return (s) => (0, t.jsx)(e, { ...s });
+                        return (t) =>
+                            (0, r.jsx)(
+                                e,
+                                (function (e) {
+                                    for (var t = 1; t < arguments.length; t++) {
+                                        var n = null != arguments[t] ? arguments[t] : {},
+                                            r = Object.keys(n);
+                                        'function' == typeof Object.getOwnPropertySymbols &&
+                                            (r = r.concat(
+                                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                })
+                                            )),
+                                            r.forEach(function (t) {
+                                                a(e, t, n[t]);
+                                            });
+                                    }
+                                    return e;
+                                })({}, t)
+                            );
                     });
             });
     }
 }
-let d = o;
+let u = l;
