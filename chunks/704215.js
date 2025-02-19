@@ -1,8 +1,8 @@
 n.d(t, {
-    C: () => r,
-    z: () => i
+    C: () => i,
+    z: () => r
 });
-var i = (function (e) {
+var r = (function (e) {
         return (
             (e[(e.HUB_WAITLIST_UPSELL = 0)] = 'HUB_WAITLIST_UPSELL'),
             (e[(e.APPLICATION_COMMAND_TOOLTIP = 1)] = 'APPLICATION_COMMAND_TOOLTIP'),
@@ -376,9 +376,10 @@ var i = (function (e) {
             (e[(e.Q1_2025_REVERSE_TRIAL = 506)] = 'Q1_2025_REVERSE_TRIAL'),
             (e[(e.Q1_2025_FOLLOW_UP_REVERSE_TRIAL_OFFER = 507)] = 'Q1_2025_FOLLOW_UP_REVERSE_TRIAL_OFFER'),
             (e[(e.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK = 508)] = 'GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK'),
+            (e[(e.CONNECTIONS_LINK_CONSOLE_COACHMARK = 509)] = 'CONNECTIONS_LINK_CONSOLE_COACHMARK'),
             e
         );
     })({}),
-    r = (function (e) {
+    i = (function (e) {
         return (e[(e.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE = 0)] = 'DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE'), (e[(e.CLYDE_GUILD_NOTICE_NUX = 1)] = 'CLYDE_GUILD_NOTICE_NUX'), (e[(e.SUMMARIES_NOTICE = 2)] = 'SUMMARIES_NOTICE'), (e[(e.SUMMARIES_ENABLED_NOTICE = 3)] = 'SUMMARIES_ENABLED_NOTICE'), (e[(e.ADOPT_CLAN_IDENTITY_NOTICE = 4)] = 'ADOPT_CLAN_IDENTITY_NOTICE'), e;
     })({});
