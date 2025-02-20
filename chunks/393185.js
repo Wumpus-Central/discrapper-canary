@@ -44,14 +44,16 @@ function i(e) {
                             look: o.zxk.Looks.LINK,
                             color: o.zxk.Colors.PRIMARY,
                             onClick: () => {
-                                t();
+                                (0, o.pTH)();
                             },
                             children: s.NW.string(s.t.cpT0Cg)
                         }),
                         (0, c.jsx)(o.zxk, {
                             look: o.zxk.Looks.FILLED,
                             color: o.zxk.Colors.BRAND,
-                            onClick: () => {},
+                            onClick: () => {
+                                t();
+                            },
                             children: s.NW.string(s.t['7NqTJi'])
                         })
                     ]

@@ -47,6 +47,10 @@ let p = {
     CollectiblesExpiryModal: async () => {
         let { default: e } = await n.e('77370').then(n.bind(n, 83950));
         return (t) => (0, r.jsx)(e, x({}, t));
+    },
+    SelectionModal: async () => {
+        let { default: e } = await n.e('74824').then(n.bind(n, 817357));
+        return (t) => (0, r.jsx)(e, x({}, t));
     }
 };
 function f() {
