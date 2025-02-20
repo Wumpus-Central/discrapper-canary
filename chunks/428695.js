@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => g });
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -10,15 +10,15 @@ var r = n(200651),
     d = n(981631),
     p = n(388032),
     h = n(877662);
-let g = (0, a.debounce)(c.ZP.trackWithMetadata, 500),
-    f = function (e) {
-        let { guild: t, title: n, message: l, image: a, type: f, imageStyles: m, imageMarginX: b, imageMarginTop: _, trackingSource: E, undismissable: O, onDismissed: N, onClick: v, cta: y, ctaColor: I, centerText: C, className: S } = e;
+let f = (0, a.debounce)(c.ZP.trackWithMetadata, 500),
+    g = function (e) {
+        let { guild: t, title: n, message: l, image: a, type: g, imageStyles: m, imageMarginX: b, imageMarginTop: _, trackingSource: E, undismissable: O, onDismissed: N, onClick: v, cta: y, ctaColor: I, centerText: C, className: S } = e;
         i.useEffect(() => {
-            g(d.rMx.CHANNEL_NOTICE_VIEWED, {
-                notice_type: f,
+            f(d.rMx.CHANNEL_NOTICE_VIEWED, {
+                notice_type: g,
                 guild_id: t.id
             });
-        }, [t.id, f]);
+        }, [t.id, g]);
         let T = null;
         'function' == typeof y
             ? (T = y())
@@ -27,11 +27,11 @@ let g = (0, a.debounce)(c.ZP.trackWithMetadata, 500),
                   className: h.button,
                   size: s.zxk.Sizes.SMALL,
                   onClick: () => {
-                      null != f &&
+                      null != g &&
                           u.default.track(d.rMx.CHANNEL_NOTICE_CTA_CLICKED, {
                               source: E,
                               guild_id: t.id,
-                              notice_type: f
+                              notice_type: g
                           }),
                           null == v || v();
                   },
@@ -67,7 +67,7 @@ let g = (0, a.debounce)(c.ZP.trackWithMetadata, 500),
                     ? null
                     : (0, r.jsx)(s.P3F, {
                           onClick: () => {
-                              c.ZP.trackWithMetadata(d.rMx.CHANNEL_NOTICE_CLOSED, { notice_type: f }), null == N || N();
+                              c.ZP.trackWithMetadata(d.rMx.CHANNEL_NOTICE_CLOSED, { notice_type: g }), null == N || N();
                           },
                           className: h.close,
                           'aria-label': p.NW.string(p.t.WAI6xs),

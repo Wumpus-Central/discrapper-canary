@@ -11,8 +11,8 @@ var i = n(512722),
     d = n(707409),
     p = n(51144),
     h = n(761282),
-    g = n(358924),
-    f = n(817915),
+    f = n(358924),
+    g = n(817915),
     m = n(981631),
     b = n(388032);
 function _(e) {
@@ -79,7 +79,7 @@ function _(e) {
                         if ((0, s.Z)(N))
                             return {
                                 subtitle: b.NW.string(b.t.tO8wOz),
-                                icon: (0, r.jsx)(g.Z.Header.Icon, { src: g.Z.Header.Icon.Src.XBOX })
+                                icon: (0, r.jsx)(f.Z.Header.Icon, { src: f.Z.Header.Icon.Src.XBOX })
                             };
                         return {
                             subtitle: (0, r.jsx)(d.ZP, {
@@ -87,17 +87,17 @@ function _(e) {
                                 location: d.ZP.Locations.ACTIVITY_FEED_NEW,
                                 messageProps: y
                             }),
-                            icon: null != e ? (0, r.jsx)(g.Z.Header.Icon, { src: null != e.getIconURL(f.Z) ? e.getIconURL(f.Z) : n(211827) }) : null
+                            icon: null != e ? (0, r.jsx)(f.Z.Header.Icon, { src: null != e.getIconURL(g.Z) ? e.getIconURL(g.Z) : n(211827) }) : null
                         };
                     case m.IIU.STREAMING:
                         return {
                             subtitle: b.NW.string(b.t.HyGHj4),
-                            icon: null != e && null != e.getIconURL(f.Z) ? (0, r.jsx)(g.Z.Header.Icon, { src: e.getIconURL(f.Z) }) : null
+                            icon: null != e && null != e.getIconURL(g.Z) ? (0, r.jsx)(f.Z.Header.Icon, { src: e.getIconURL(g.Z) }) : null
                         };
                     case m.IIU.LISTENING:
                         let i;
                         return (
-                            (i = (0, a.Z)(N) ? (0, r.jsx)(g.Z.Header.Icon, { src: g.Z.Header.Icon.Src.SPOTIFY }) : null != e.getIconURL(f.Z) ? (0, r.jsx)(g.Z.Header.Icon, { src: e.getIconURL(f.Z) }) : (0, r.jsx)(g.Z.Header.Icon, { src: n(211827) })),
+                            (i = (0, a.Z)(N) ? (0, r.jsx)(f.Z.Header.Icon, { src: f.Z.Header.Icon.Src.SPOTIFY }) : null != e.getIconURL(g.Z) ? (0, r.jsx)(f.Z.Header.Icon, { src: e.getIconURL(g.Z) }) : (0, r.jsx)(f.Z.Header.Icon, { src: n(211827) })),
                             {
                                 subtitle: b.NW.formatToPlainString(b.t.NF5xoq, { name: N.name }),
                                 icon: i
@@ -106,7 +106,7 @@ function _(e) {
                     case m.IIU.WATCHING:
                         return {
                             subtitle: b.NW.formatToPlainString(b.t.pW3Ip6, { name: N.name }),
-                            icon: null != e && null != e.getIconURL(f.Z) ? (0, r.jsx)(g.Z.Header.Icon, { src: e.getIconURL(f.Z) }) : null
+                            icon: null != e && null != e.getIconURL(g.Z) ? (0, r.jsx)(f.Z.Header.Icon, { src: e.getIconURL(g.Z) }) : null
                         };
                     default:
                         return {
@@ -131,7 +131,7 @@ function _(e) {
                     if (null != t && t.type === m.IIU.LISTENING)
                         return {
                             subtitle: b.NW.string(b.t.rmnkz8),
-                            icon: (0, r.jsx)(g.Z.Header.Icon, { src: g.Z.Header.Icon.Src.SPOTIFY })
+                            icon: (0, r.jsx)(f.Z.Header.Icon, { src: f.Z.Header.Icon.Src.SPOTIFY })
                         };
                 }
             } else if (1 === p.length) {
@@ -150,13 +150,13 @@ function _(e) {
                             location: d.ZP.Locations.ACTIVITY_FEED_NEW,
                             messageProps: y
                         }),
-                        icon: null != n && null != n.getIconURL(f.Z) ? (0, r.jsx)(g.Z.Header.Icon, { src: n.getIconURL(f.Z) }) : null
+                        icon: null != n && null != n.getIconURL(g.Z) ? (0, r.jsx)(f.Z.Header.Icon, { src: n.getIconURL(g.Z) }) : null
                     }
                 );
             }
             return {
                 subtitle: b.NW.string(b.t.sau5tr),
-                icon: (0, r.jsx)(g.Z.Header.Icon, { src: g.Z.Header.Icon.Src.MULTIPLE })
+                icon: (0, r.jsx)(f.Z.Header.Icon, { src: f.Z.Header.Icon.Src.MULTIPLE })
             };
         })(_),
         S = (0, u.Z)({
@@ -164,7 +164,7 @@ function _(e) {
             location: 'FriendsActivityFeed',
             source: c.m1.FriendsActivityFeed
         });
-    return (0, r.jsx)(g.Z.Header, {
+    return (0, r.jsx)(f.Z.Header, {
         priorityUser: v,
         guildId: null == N ? void 0 : N.id,
         title: y,

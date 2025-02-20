@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => g,
+    Z: () => f,
     y: () => p
 }),
     n(47120);
@@ -126,7 +126,7 @@ class h extends i.PureComponent {
             });
     }
 }
-let g = l.ZP.connectStores([c.Z], (e) => {
+let f = l.ZP.connectStores([c.Z], (e) => {
     let { skuId: t } = e;
     return {
         storeListings: c.Z.getUnpublishedForSKU(t),

@@ -11,8 +11,8 @@ var i = n(481060),
     d = n(247530),
     p = n(260889),
     h = n(981631),
-    g = n(674563),
-    f = n(388032);
+    f = n(674563),
+    g = n(388032);
 function m(e) {
     let { party: t, close: n, onSelect: m } = e,
         b = (0, c.Z)(t),
@@ -26,7 +26,7 @@ function m(e) {
             let e = t.currentActivities
                 .filter((e) => {
                     var t, n;
-                    return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === g.wW.GAME;
+                    return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === f.wW.GAME;
                 })
                 .map((e) => e.game.name);
             o.default.track(h.rMx.OPEN_POPOUT, {
@@ -37,7 +37,7 @@ function m(e) {
         (0, r.jsxs)(i.v2r, {
             navId: 'now-playing-menu',
             onClose: n,
-            'aria-label': f.NW.string(f.t.ogxXGh),
+            'aria-label': g.NW.string(g.t.ogxXGh),
             onSelect: m,
             children: [
                 b,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(47120);
+n.d(t, { Z: () => g }), n(47120);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -34,7 +34,7 @@ function h(e) {
     }
     return e;
 }
-function g(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -52,8 +52,8 @@ function g(e, t) {
         e
     );
 }
-let f = function (e) {
-    let { index: t, children: l, user: f, channel: m, onClick: b, isFocused: _, isActive: E, onOtherHover: O, className: N } = e,
+let g = function (e) {
+    let { index: t, children: l, user: g, channel: m, onClick: b, isFocused: _, isActive: E, onOtherHover: O, className: N } = e,
         [v, y] = i.useState(!1),
         [I, C] = i.useState(!1),
         S = () => {
@@ -69,7 +69,7 @@ let f = function (e) {
                     e,
                     async () => {
                         let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('31923')]).then(n.bind(n, 881351));
-                        return (n) => (0, r.jsx)(e, g(h({}, n), { user: t }));
+                        return (n) => (0, r.jsx)(e, f(h({}, n), { user: t }));
                     },
                     {
                         onClose: () => {
@@ -88,14 +88,14 @@ let f = function (e) {
                 },
                 children: (0, r.jsx)(
                     a.Z.div,
-                    g(
+                    f(
                         h(
                             {
                                 className: o()(p.messageRequestItem, N, {
                                     [p.active]: E || I,
                                     [p.firstItem]: 0 === t
                                 }),
-                                onContextMenu: (e) => P(e, f),
+                                onContextMenu: (e) => P(e, g),
                                 onMouseEnter: S,
                                 onMouseLeave: T,
                                 onClick: null != b ? b : void 0,

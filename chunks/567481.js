@@ -11,8 +11,8 @@ var i = n(481060),
     d = n(293273),
     p = n(885110),
     h = n(996106),
-    g = n(914946),
-    f = n(452426),
+    f = n(914946),
+    g = n(452426),
     m = n(852926),
     b = n(186901),
     _ = n(981631);
@@ -21,7 +21,7 @@ let E = new u.Z('RPCCommandsOverlay'),
         [_.Etm.SET_OVERLAY_LOCKED]: {
             scope: b.lH,
             validation: (e) =>
-                (0, f.Z)(e)
+                (0, g.Z)(e)
                     .required()
                     .keys({
                         locked: e.boolean().required(),
@@ -46,7 +46,7 @@ let E = new u.Z('RPCCommandsOverlay'),
         [_.Etm.OPEN_OVERLAY_ACTIVITY_INVITE]: {
             scope: b.lH,
             validation: (e) =>
-                (0, f.Z)(e)
+                (0, g.Z)(e)
                     .required()
                     .keys({
                         type: e.number().required().valid([_.mFx.JOIN]),
@@ -60,7 +60,7 @@ let E = new u.Z('RPCCommandsOverlay'),
                     i = t.application.id;
                 if (null == i) throw new h.Z({ errorCode: _.lTL.INVALID_COMMAND }, 'No application.');
                 let l = d.Z.getApplicationActivity(i);
-                if (null == l || null == l.secrets || !(0, g.t9)(n, l.party, l.secrets)) throw new h.Z({ errorCode: _.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure an activity includes a party and appropriate secret.');
+                if (null == l || null == l.secrets || !(0, f.t9)(n, l.party, l.secrets)) throw new h.Z({ errorCode: _.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure an activity includes a party and appropriate secret.');
                 let { lock: a, context: s } = (0, m.jU)(r),
                     u = (0, c.Z)(l, p.Z);
                 return (0, o.h7)(l, u, s).then(() => {
@@ -71,7 +71,7 @@ let E = new u.Z('RPCCommandsOverlay'),
         [_.Etm.OPEN_OVERLAY_GUILD_INVITE]: {
             scope: b.lH,
             validation: (e) =>
-                (0, f.Z)(e)
+                (0, g.Z)(e)
                     .required()
                     .keys({
                         code: e.string().required(),
@@ -102,7 +102,7 @@ let E = new u.Z('RPCCommandsOverlay'),
         [_.Etm.OPEN_OVERLAY_VOICE_SETTINGS]: {
             scope: b.lH,
             validation: (e) =>
-                (0, f.Z)(e)
+                (0, g.Z)(e)
                     .required()
                     .keys({ pid: e.number().min(0).required() }),
             handler(e) {

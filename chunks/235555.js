@@ -10,8 +10,8 @@ var r = n(200651),
     d = n(768419),
     p = n(831506),
     h = n(699516),
-    g = n(594174),
-    f = n(823379),
+    f = n(594174),
+    g = n(823379),
     m = n(824138),
     b = n(388032);
 function _(e, t, n) {
@@ -99,17 +99,17 @@ class E extends i.PureComponent {
             });
     }
 }
-let O = a.ZP.connectStores([d.Z, g.default, h.Z, p.Z], () => {
+let O = a.ZP.connectStores([d.Z, f.default, h.Z, p.Z], () => {
     let e, t;
     let n = d.Z.getSyncingWith(),
         r = d.Z.getActivity(),
-        i = g.default.getCurrentUser(),
+        i = f.default.getCurrentUser(),
         l = [];
-    if ((null != n ? ((e = g.default.getUser(n.userId)), (t = n.partyId)) : null != r && null != r.party && null != r.party.id && ((e = i), (t = r.party.id)), null != t)) {
+    if ((null != n ? ((e = f.default.getUser(n.userId)), (t = n.partyId)) : null != r && null != r.party && null != r.party.id && ((e = i), (t = r.party.id)), null != t)) {
         var a;
         l = o()(Array.from(null !== (a = p.Z.getParty(t)) && void 0 !== a ? a : []))
-            .map((e) => g.default.getUser(e))
-            .filter(f.lm)
+            .map((e) => f.default.getUser(e))
+            .filter(g.lm)
             .orderBy([(t) => null == e || e.id === t.id, (e) => h.Z.isFriend(e.id)], ['desc', 'desc'])
             .value();
     }

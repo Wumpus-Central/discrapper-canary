@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => f });
 var r = n(200651),
     i = n(192379),
     l = n(442837),
@@ -10,11 +10,11 @@ var r = n(200651),
     d = n(726115),
     p = n(128449),
     h = n(388032);
-function g(e) {
+function f(e) {
     let { loadId: t } = e,
         n = (0, l.e7)([a.default], () => (0, d.Xp)([a.default])),
-        g = u.Z.useField('languageCode'),
-        f = null != g ? g : n,
+        f = u.Z.useField('languageCode'),
+        g = null != f ? f : n,
         m = i.useCallback(
             (e) => {
                 u.Z.setState({ languageCode: e });
@@ -39,14 +39,14 @@ function g(e) {
         ),
         _ = i.useMemo(() => {
             var e;
-            let t = (0, p.Cf)().find((e) => e.code === f);
+            let t = (0, p.Cf)().find((e) => e.code === g);
             return null !== (e = null == t ? void 0 : t.name) && void 0 !== e ? e : h.NW.string(h.t.LQLMGB);
-        }, [f]);
+        }, [g]);
     return (0, r.jsx)(o.ZP, {
         items: b,
         title: _,
         onSelect: m,
-        selected: f,
+        selected: g,
         'aria-label': h.NW.string(h.t.Ng5cTE)
     });
 }

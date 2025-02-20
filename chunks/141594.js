@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(47120);
+n.d(t, { Z: () => f }), n(47120);
 var r = n(192379),
     i = n(115434),
     l = n(264181),
@@ -10,8 +10,8 @@ var r = n(192379),
     d = n(874703),
     p = n(302800),
     h = n(921944);
-let g = () => {
-    var e, t, n, g, f, m, b;
+let f = () => {
+    var e, t, n, f, g, m, b;
     let _ = (0, o.e7)([c.default], () => c.default.getCurrentUser()),
         E = (0, o.e7)([d.Z], () => d.Z.getMarketingBySurface(i.K.DESKTOP_SHOP_BUTTON)),
         O = (null == E ? void 0 : E.dismissibleContent) === a.z.COLLECTIBLES_SHOP_ENTRY_MARKETING,
@@ -31,8 +31,8 @@ let g = () => {
         let e = null === (n = E.refTargetBackground) || void 0 === n ? void 0 : n.asset;
         null != e &&
             (S.entryPointBackgroundAssets = {
-                srcDark: null === (g = e.resting) || void 0 === g ? void 0 : g.dark,
-                srcLight: null === (f = e.resting) || void 0 === f ? void 0 : f.light,
+                srcDark: null === (f = e.resting) || void 0 === f ? void 0 : f.dark,
+                srcLight: null === (g = e.resting) || void 0 === g ? void 0 : g.light,
                 srcDarkHovered: null === (m = e.hovered) || void 0 === m ? void 0 : m.dark,
                 srcLightHovered: null === (b = e.hovered) || void 0 === b ? void 0 : b.light
             });

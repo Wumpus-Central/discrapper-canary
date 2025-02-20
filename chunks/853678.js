@@ -10,8 +10,8 @@ var r = n(45792),
     d = n(812206),
     p = n(12647),
     h = n(630388),
-    g = n(49012),
-    f = n(358085),
+    f = n(49012),
+    g = n(358085),
     m = n(996106),
     b = n(914946),
     _ = n(452426),
@@ -60,7 +60,7 @@ let I = new Set([v.Fu, v.JT]),
                 try {
                     let e = new URL(n),
                         t = e.toString();
-                    if (f.isPlatformEmbedded) {
+                    if (g.isPlatformEmbedded) {
                         let e = (0, o.R)() ? N.KJ3.ACTIVITY_POPOUT : null;
                         p.Z.focus(e, !0);
                     }
@@ -70,7 +70,7 @@ let I = new Set([v.Fu, v.JT]),
                         h = (null == i ? void 0 : i.id) !== void 0 ? S.get(i.id) : void 0;
                     if (void 0 !== h && h.trustedUntilEpochMs >= Date.now() && h.trustedHosts.has(e.host)) return (0, l.Z)(t), Promise.resolve({ opened: !0 });
                     return new Promise((e) =>
-                        (0, g.q)(
+                        (0, f.q)(
                             {
                                 href: t,
                                 shouldConfirm: !0,

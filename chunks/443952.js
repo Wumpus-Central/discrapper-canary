@@ -11,8 +11,8 @@ var i = n(243814),
     d = n(479531),
     p = n(40851),
     h = n(636449),
-    g = n(566620),
-    f = n(531826),
+    f = n(566620),
+    g = n(531826),
     m = n(596223),
     b = n(838195),
     _ = n(333861),
@@ -149,7 +149,7 @@ let G = {
         handler(e) {
             let { socket: t } = e,
                 { channel: i, guild: l } = (0, w.T)(),
-                a = (0, f.ZP)({
+                a = (0, g.ZP)({
                     application: t.application,
                     channelId: i.id
                 }),
@@ -258,7 +258,7 @@ let G = {
                         i.click();
                 })(
                     async (n) => {
-                        let l = await (0, g.kv)(r, i, n);
+                        let l = await (0, f.kv)(r, i, n);
                         (0, S.lm)(l) && (0, S.lm)(l.url) && !(l instanceof d.Z) ? e({ image_url: l.url }) : t(l);
                     },
                     () => t(Error('Upload canceled'))

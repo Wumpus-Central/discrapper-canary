@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => f });
 var r = n(200651);
 n(192379);
 var i = n(442837),
@@ -11,11 +11,11 @@ var i = n(442837),
     d = n(981631),
     p = n(388032),
     h = n(571472);
-let g = (e) => {
+let f = (e) => {
     let { guild: t } = e,
         n = t.id,
-        g = (0, i.e7)([c.Z], () => c.Z.getAppliedGuildBoostsForGuild(t.id));
-    return null == g || 0 >= (0, u._k)(g, n)
+        f = (0, i.e7)([c.Z], () => c.Z.getAppliedGuildBoostsForGuild(t.id));
+    return null == f || 0 >= (0, u._k)(f, n)
         ? null
         : (0, r.jsx)(a.Z, {
               guild: t,

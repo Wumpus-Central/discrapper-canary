@@ -10,8 +10,8 @@ var r = n(413135),
     d = n(852926),
     p = n(981631);
 let h = s.ZP.requireModule('discord_rpc').RPCIPC,
-    g = new a.Z('RPCServer:IPC'),
-    f = {
+    f = new a.Z('RPCServer:IPC'),
+    g = {
         HANDSHAKE: 0,
         FRAME: 1,
         CLOSE: 2,
@@ -33,7 +33,7 @@ function _(e) {
                     O(e);
                 } catch (t) {
                     e.end(
-                        E(f.CLOSE, {
+                        E(g.CLOSE, {
                             code: 1003,
                             message: t.message
                         })
@@ -62,7 +62,7 @@ function _(e) {
                     throw (r(), e);
                 }
             );
-        return e.write(E(f.PING, o().uniqueId())), i.then(t, n);
+        return e.write(E(g.PING, o().uniqueId())), i.then(t, n);
     });
 }
 function E(e, t) {
@@ -77,36 +77,36 @@ function O(e) {
     let n = r.Buffer.from(t),
         i = n.readInt32LE(0),
         l = n.readInt32LE(4);
-    if (!Object.values(f).includes(i) || l < 0) throw Error('protocol error');
+    if (!Object.values(g).includes(i) || l < 0) throw Error('protocol error');
     if (null == (t = e.read(l))) throw Error('data size does not match what was received');
     let o = JSON.parse((n = r.Buffer.from(t)).toString());
     switch (i) {
-        case f.PING:
-            e.emit('ping', o), e.write(E(f.PONG, o));
+        case g.PING:
+            e.emit('ping', o), e.write(E(g.PONG, o));
             break;
-        case f.PONG:
+        case g.PONG:
             e.emit('pong', o);
             break;
-        case f.HANDSHAKE:
+        case g.HANDSHAKE:
             if (b(e)) throw Error('already did handshake');
             m(e, !0), e.emit('handshake', o);
             break;
-        case f.FRAME:
+        case g.FRAME:
             if (!b(e)) throw Error('did not handshake');
             e.emit('request', o);
             break;
-        case f.CLOSE:
+        case g.CLOSE:
             e.end(), e.destroy();
     }
     O(e);
 }
 class N extends u.Z {
     send(e) {
-        g.info('Socket Emit: '.concat(this.id), (0, c.Z)(e)), this.socket.write(E(f.FRAME, e));
+        f.info('Socket Emit: '.concat(this.id), (0, c.Z)(e)), this.socket.write(E(g.FRAME, e));
     }
     close(e, t) {
         this.socket.end(
-            E(f.CLOSE, {
+            E(g.CLOSE, {
                 code: e,
                 message: t
             })
@@ -137,7 +137,7 @@ class v extends i.EventEmitter {
                     O(e);
                 } catch (t) {
                     e.end(
-                        E(f.CLOSE, {
+                        E(g.CLOSE, {
                             code: p.$VG.CLOSE_UNSUPPORTED,
                             message: t.message
                         })
@@ -153,7 +153,7 @@ class v extends i.EventEmitter {
                     n = new N(e, i, 'json');
                 } catch (t) {
                     e.end(
-                        E(f.CLOSE, {
+                        E(g.CLOSE, {
                             code: t.code,
                             message: t.message
                         })
@@ -161,15 +161,15 @@ class v extends i.EventEmitter {
                         e.destroy();
                     return;
                 }
-                g.info('Socket Opened: '.concat(n.id)),
-                    e.on('error', (e) => g.error('Socket Error: '.concat(e.message))),
+                f.info('Socket Opened: '.concat(n.id)),
+                    e.on('error', (e) => f.error('Socket Error: '.concat(e.message))),
                     e.on('close', () => {
-                        g.info('Socket Close: '.concat(n.id)), this.emit('disconnect', n);
+                        f.info('Socket Close: '.concat(n.id)), this.emit('disconnect', n);
                     }),
                     (0, d.em)(n, null, r)
                         .then(() => {
                             e.on('request', (e) => {
-                                g.info('Socket Message: '.concat(n.id), (0, c.Z)(e)), this.emit('request', n, e);
+                                f.info('Socket Message: '.concat(n.id), (0, c.Z)(e)), this.emit('request', n, e);
                             }),
                                 this.emit('connect', n);
                         })
@@ -182,10 +182,10 @@ class v extends i.EventEmitter {
     constructor() {
         super();
         let e = h.net.createServer((e) => this.handleConnection(e));
-        e.on('error', (e) => g.error('Error: '.concat(e.message))),
+        e.on('error', (e) => f.error('Error: '.concat(e.message))),
             h.getAvailableSocket(_).then((t) => {
                 e.listen(t, () => {
-                    ('function' == typeof e.listening ? e.listening() : e.listening) && g.info('Starting on '.concat(e.address()));
+                    ('function' == typeof e.listening ? e.listening() : e.listening) && f.info('Starting on '.concat(e.address()));
                 });
             });
     }

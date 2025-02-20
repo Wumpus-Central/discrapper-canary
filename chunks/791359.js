@@ -10,8 +10,8 @@ var r = n(200651),
     d = n(570140),
     p = n(569984),
     h = n(918701),
-    g = n(93127),
-    f = n(814443),
+    f = n(93127),
+    g = n(814443),
     m = n(594174),
     b = n(801077),
     _ = n(626135),
@@ -38,11 +38,11 @@ let A = 15 * E.Z.Millis.MINUTE,
                 onChannelContextMenu: l,
                 quest: o
             }),
-            { partiedMembers: d, applicationStreams: p, currentActivities: h, voiceChannels: g } = t,
-            f = d.length,
+            { partiedMembers: d, applicationStreams: p, currentActivities: h, voiceChannels: f } = t,
+            g = d.length,
             m = p.length,
             b = h.length,
-            E = g.length > 0,
+            E = f.length > 0,
             O = i.useCallback(() => {
                 let e = h
                     .filter((e) => {
@@ -51,13 +51,13 @@ let A = 15 * E.Z.Millis.MINUTE,
                     })
                     .map((e) => e.game.name);
                 _.default.track(S.rMx.NOW_PLAYING_CARD_HOVERED, {
-                    num_users: f,
+                    num_users: g,
                     num_streams: m,
                     num_activities: b,
                     in_voice_channel: E,
                     games_detected: e
                 });
-            }, [f, m, b, E, h]),
+            }, [g, m, b, E, h]),
             C = s()(O, A);
         return null != a || null != c
             ? (0, r.jsx)(u.yRy, {
@@ -128,7 +128,7 @@ let A = 15 * E.Z.Millis.MINUTE,
               })
             : null;
     }),
-    x = o().throttle(() => g.W(!1), 300000);
+    x = o().throttle(() => f.W(!1), 300000);
 function L() {
     let {
             nowPlayingCards: e,
@@ -136,11 +136,11 @@ function L() {
             needsRefresh: n,
             fetching: l,
             currentUser: o
-        } = (0, c.cj)([b.Z, f.Z, m.default], () => ({
+        } = (0, c.cj)([b.Z, g.Z, m.default], () => ({
             nowPlayingCards: b.Z.nowPlayingCards,
             loaded: b.Z.loaded,
-            needsRefresh: f.Z.needsRefresh(),
-            fetching: f.Z.getFetching(),
+            needsRefresh: g.Z.needsRefresh(),
+            fetching: g.Z.getFetching(),
             currentUser: m.default.getCurrentUser()
         })),
         a = (0, c.e7)([p.Z], () => p.Z.quests);
@@ -161,9 +161,9 @@ function L() {
                 });
             return t;
         }, [e, a]),
-        g = null;
+        f = null;
     return t
-        ? ((g =
+        ? ((f =
               e.length > 0
                   ? e.map((e) => {
                         let { party: t } = e;
@@ -192,7 +192,7 @@ function L() {
                             })
                         ]
                     })),
-          (0, r.jsx)(r.Fragment, { children: g }))
+          (0, r.jsx)(r.Fragment, { children: f }))
         : (0, r.jsx)('div', {
               className: j.emptyCard,
               children: (0, r.jsx)(u.$jN, {})

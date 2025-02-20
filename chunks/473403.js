@@ -24,8 +24,8 @@ var r = n(200651),
     S = n(981631),
     p = n(490897),
     U = n(436804),
-    D = n(81503);
-function C(e) {
+    C = n(81503);
+function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -69,12 +69,12 @@ function L(e, t) {
     );
 }
 let h = {
-    SELECTED: D.modeSelected,
-    CONNECTED: D.modeConnected,
-    UNREAD_IMPORTANT: D.modeUnreadImportant,
-    UNREAD_LESS_IMPORTANT: D.modeUnreadLessImportant,
-    MUTED: D.modeMuted,
-    LOCKED: D.modeLocked
+    SELECTED: C.modeSelected,
+    CONNECTED: C.modeConnected,
+    UNREAD_IMPORTANT: C.modeUnreadImportant,
+    UNREAD_LESS_IMPORTANT: C.modeUnreadLessImportant,
+    MUTED: C.modeMuted,
+    LOCKED: C.modeLocked
 };
 function m(e) {
     e.preventDefault(), e.stopPropagation();
@@ -121,8 +121,8 @@ let P = (e) => {
     if (o && null != c && !u)
         d = (0, r.jsx)(T.Z, {
             size: T.E.SMALL_32,
-            className: D.iconContainerWithGuildIcon,
-            iconClassName: D.iconWithGuildIcon,
+            className: C.iconContainerWithGuildIcon,
+            iconClassName: C.iconWithGuildIcon,
             channel: n,
             guild: c,
             locked: l,
@@ -149,7 +149,7 @@ let P = (e) => {
         if (null == e) return null;
         d = (0, r.jsx)(e, {
             color: 'currentColor',
-            className: i()(D.icon, t)
+            className: i()(C.icon, t)
         });
     }
     let A = o ? (null == c ? void 0 : c.name) : (0, _.bT)(n, c, l, a),
@@ -160,10 +160,10 @@ let P = (e) => {
         children: (e) =>
             (0, r.jsx)(
                 'div',
-                L(C({}, e), {
+                L(D({}, e), {
                     role: 'img',
                     'aria-label': N,
-                    className: i()(D.iconContainer),
+                    className: i()(C.iconContainer),
                     children: d
                 })
             )
@@ -232,18 +232,18 @@ function x(e) {
         el = (0, u.ZP)(n),
         ea = n.isGuildVocal(),
         ei = (0, r.jsx)('div', {
-            className: i()({ [D.favoritesSuggestion]: Z }),
+            className: i()({ [C.favoritesSuggestion]: Z }),
             ref: et,
             children: (0, r.jsxs)(
                 N.Z,
                 L(
-                    C(
+                    D(
                         {
                             role: ea && !_ ? 'button' : 'link',
                             href: ea ? void 0 : er,
                             target: '_blank',
                             ref: ee,
-                            className: D.link,
+                            className: C.link,
                             onClick: () => (null == g ? void 0 : g(n))
                         },
                         $
@@ -253,7 +253,7 @@ function x(e) {
                         focusProps: { enabled: !1 },
                         children: [
                             (0, r.jsxs)('div', {
-                                className: D.linkTop,
+                                className: C.linkTop,
                                 children: [
                                     (0, r.jsx)(P, {
                                         className: x,
@@ -264,14 +264,14 @@ function x(e) {
                                         withGuildIcon: q
                                     }),
                                     (0, r.jsx)(d.Z, {
-                                        className: i()(D.name, { [D.activeEvent]: Y }),
+                                        className: i()(C.name, { [C.activeEvent]: Y }),
                                         'aria-hidden': !0,
                                         children: null == a ? el : a
                                     }),
                                     l.Children.count(w) > 0
                                         ? (0, r.jsx)('div', {
                                               onClick: m,
-                                              className: D.children,
+                                              className: C.children,
                                               children: w
                                           })
                                         : null
@@ -279,11 +279,11 @@ function x(e) {
                             }),
                             null != y
                                 ? (0, r.jsx)('div', {
-                                      className: i()(D.linkBottom, { [D.withGuildIcon]: q }),
+                                      className: i()(C.linkBottom, { [C.withGuildIcon]: q }),
                                       children: (0, r.jsx)(E.Text, {
                                           color: null != j ? j : 'text-muted',
                                           variant: 'text-xs/medium',
-                                          className: D.subtitle,
+                                          className: C.subtitle,
                                           children: y
                                       })
                                   })
@@ -304,24 +304,24 @@ function x(e) {
         children: (0, r.jsxs)('div', {
             className: i()(
                 b,
-                null != g || null != f || null != R || V ? D.wrapper : D.notInteractive,
+                null != g || null != f || null != R || V ? C.wrapper : C.notInteractive,
                 c ? i()(U.selectedChannel, h.SELECTED) : _ ? i()(U.selectedChannel, h.CONNECTED) : I ? h.LOCKED : s ? h.MUTED : T ? (X ? h.UNREAD_IMPORTANT : h.UNREAD_LESS_IMPORTANT) : null,
                 (function (e) {
                     switch (e) {
                         case S.d4z.GUILD_STAGE_VOICE:
                         case S.d4z.GUILD_VOICE:
-                            return D.typeVoice;
+                            return C.typeVoice;
                         case S.d4z.ANNOUNCEMENT_THREAD:
                         case S.d4z.PUBLIC_THREAD:
                         case S.d4z.PRIVATE_THREAD:
-                            return D.typeThread;
+                            return C.typeThread;
                         case S.d4z.GUILD_ANNOUNCEMENT:
                         case S.d4z.GUILD_TEXT:
                         case S.d4z.GUILD_STORE:
                         case S.d4z.GUILD_FORUM:
                         case S.d4z.GUILD_MEDIA:
                         default:
-                            return D.typeDefault;
+                            return C.typeDefault;
                     }
                 })(null != k ? k : G)
             ),
@@ -330,7 +330,7 @@ function x(e) {
             onContextMenu: (e) => (null == M ? void 0 : M(e, n)),
             onMouseEnter: F,
             onMouseLeave: W,
-            children: [s || !T ? null : (0, r.jsx)('div', { className: i()(D.unread, X ? D.unreadImportant : void 0) }), null !== (t = null == v ? void 0 : v(ei)) && void 0 !== t ? t : ei]
+            children: [s || !T ? null : (0, r.jsx)('div', { className: i()(C.unread, X ? C.unreadImportant : void 0) }), null !== (t = null == v ? void 0 : v(ei)) && void 0 !== t ? t : ei]
         })
     });
 }

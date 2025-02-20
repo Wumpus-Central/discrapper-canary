@@ -1,4 +1,4 @@
-n.d(t, { M: () => g });
+n.d(t, { M: () => f });
 var r = n(355467),
     i = n(594174),
     l = n(78839),
@@ -17,7 +17,7 @@ let p = (e) => {
         let n = null === (t = (0, s.Af)(e)) || void 0 === t ? void 0 : t.planId;
         return void 0 === n || s.ZP.getPremiumType(n) !== d.p9.TIER_2;
     };
-async function g(e) {
+async function f(e) {
     let { location: t } = e;
     if (!1 === u.t.getCurrentConfig({ location: t }).enabled) return !1;
     l.ZP.hasFetchedMostRecentPremiumTypeSubscription() || (await (0, r.ou)()), o.Z.shouldFetchOffer() && (await (0, c.T)('useCollectibleDecoIsEligible'));

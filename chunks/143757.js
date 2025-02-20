@@ -10,8 +10,8 @@ var r = n(200651),
     d = n(774226),
     p = n(317381),
     h = n(16609),
-    g = n(403404),
-    f = n(100527),
+    f = n(403404),
+    g = n(100527),
     m = n(906732),
     b = n(753972),
     _ = n(82295),
@@ -64,7 +64,7 @@ function A(e) {
     let { analyticsLocations: t, analyticsContext: n } = e;
     return (0, r.jsx)(E.Z.Icon, {
         onClick: () => {
-            (0, g.Z)({
+            (0, f.Z)({
                 locationObject: n.location,
                 openInPopout: !1,
                 analyticsLocations: t,
@@ -81,9 +81,9 @@ function A(e) {
 function Z(e) {
     let { application: t, loadingAppId: n, setLoadingAppId: i, botUserId: l, analyticsLocations: c } = e,
         u = (0, a.e7)([O.Z], () => O.Z.getDMFromUserId(l)),
-        g = (0, a.e7)([p.ZP], () => p.ZP.getCurrentEmbeddedActivity()),
-        f = (0, d.GK)(),
-        m = null != g && g.applicationId === t.id && (f || (0, h.pY)(g.location) === u),
+        f = (0, a.e7)([p.ZP], () => p.ZP.getCurrentEmbeddedActivity()),
+        g = (0, d.GK)(),
+        m = null != f && f.applicationId === t.id && (g || (0, h.pY)(f.location) === u),
         _ = n === t.id,
         E = null != n;
     return (0, r.jsx)(s.P3F, {
@@ -175,7 +175,7 @@ function w(e) {
     let { bottomDivider: t } = e,
         n = (0, y.ZC)(),
         [l, a] = i.useState(void 0),
-        { analyticsLocations: s } = (0, m.ZP)(f.Z.APP_DMS_QUICK_LAUNCHER),
+        { analyticsLocations: s } = (0, m.ZP)(g.Z.APP_DMS_QUICK_LAUNCHER),
         c = i.useRef(!1),
         d = (0, u.O)(),
         p = i.useMemo(() => n.filter(v.lm).slice(0, 8), [n]);

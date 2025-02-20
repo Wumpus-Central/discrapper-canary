@@ -10,8 +10,8 @@ var r = n(392711),
     d = n(430824),
     p = n(496675),
     h = n(944486),
-    g = n(979651),
-    f = n(934415),
+    f = n(979651),
+    g = n(934415),
     m = n(996106),
     b = n(914946),
     _ = n(452426),
@@ -109,7 +109,7 @@ let v = {
                 .then((e) => {
                     let [t, n] = e;
                     if (n.guild_id) {
-                        if ((0, f.rY)(t, g.Z, d.Z)) throw new m.Z({ errorCode: N.lTL.INVALID_CHANNEL }, 'Channel is full');
+                        if ((0, g.rY)(t, f.Z, d.Z)) throw new m.Z({ errorCode: N.lTL.INVALID_CHANNEL }, 'Channel is full');
                         if (!p.Z.can(N.Plq.CONNECT, t)) throw new m.Z({ errorCode: N.lTL.INVALID_PERMISSIONS }, 'Connect permission required to join channel');
                     }
                     return a.default.selectVoiceChannel(t.id), o && (0, s.dL)(N.Z5c.CHANNEL(t.guild_id, t.id)), n;

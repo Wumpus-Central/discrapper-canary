@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => g });
 var r = n(200651),
     i = n(192379),
     l = n(481060),
@@ -10,7 +10,7 @@ var r = n(200651),
     d = n(981631),
     p = n(388032),
     h = n(804958);
-function g() {
+function f() {
     let e = (0, a.Q3)('AddFriendHeader');
     return (0, r.jsxs)('header', {
         className: h.header,
@@ -24,11 +24,11 @@ function g() {
         ]
     });
 }
-let f = function () {
+let g = function () {
     let e = (0, a.Q3)('AddFriend');
     return (0, r.jsxs)(i.Fragment, {
         children: [
-            (0, r.jsx)(g, {}),
+            (0, r.jsx)(f, {}),
             (0, s.b)() && (0, r.jsx)(c.Z, {}),
             e
                 ? null

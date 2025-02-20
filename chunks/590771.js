@@ -10,7 +10,7 @@ var r = n(200651),
     d = n(962486),
     p = n(149788),
     h = n(128449);
-function g(e) {
+function f(e) {
     let { onScroll: t, onGuildCardSeen: n, onGuildCardClick: o } = e,
         a = (0, l.e7)([c.Z], () => {
             var e;
@@ -34,14 +34,14 @@ function g(e) {
         })
     );
 }
-function f(e) {
+function g(e) {
     let { tab: t, onScroll: n, onGuildCardSeen: o, onGuildCardClick: a } = e,
         p = (0, u.lg)(t),
-        g = (0, l.e7)([c.Z], () => {
+        f = (0, l.e7)([c.Z], () => {
             var e;
             return null !== (e = c.Z.getGuildIds({ categoryId: p })) && void 0 !== e ? e : h.q5;
         }),
-        f = (0, l.e7)([c.Z], () => {
+        g = (0, l.e7)([c.Z], () => {
             var e;
             return null === (e = c.Z.getIsFetching({ categoryId: p })) || void 0 === e || e;
         });
@@ -51,8 +51,8 @@ function f(e) {
         }, [p]),
         (0, r.jsx)(d.Z, {
             tab: t,
-            guildIds: g,
-            loading: f,
+            guildIds: f,
+            loading: g,
             onScroll: n,
             onGuildCardSeen: o,
             onGuildCardClick: a
@@ -69,7 +69,7 @@ function m(e) {
         t)
     ) {
         case h.vf.FEATURED:
-            return (0, r.jsx)(g, {
+            return (0, r.jsx)(f, {
                 tab: t,
                 onScroll: n,
                 onGuildCardClick: s,
@@ -81,7 +81,7 @@ function m(e) {
         case h.vf.TECH:
         case h.vf.EDUCATION:
             return (0, r.jsx)(
-                f,
+                g,
                 {
                     tab: t,
                     onScroll: n,

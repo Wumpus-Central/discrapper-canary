@@ -11,14 +11,14 @@ var i = n(481060),
     d = n(358085),
     p = n(998502),
     h = n(145597),
-    g = n(996106),
-    f = n(703912),
+    f = n(996106),
+    g = n(703912),
     m = n(852926),
     b = n(981631);
-let _ = (0, f.Z)(
+let _ = (0, g.Z)(
     (e) => {
         var t;
-        let { clientId: n, authorizations: u, scopes: d, parsedPermissions: p, responseType: f, redirectUri: _, codeChallenge: E, codeChallengeMethod: O, state: N, guildId: v, channelId: y, prompt: I, disableGuildSelect: C, disclosures: S, integrationType: T, pid: P } = e,
+        let { clientId: n, authorizations: u, scopes: d, parsedPermissions: p, responseType: g, redirectUri: _, codeChallenge: E, codeChallengeMethod: O, state: N, guildId: v, channelId: y, prompt: I, disableGuildSelect: C, disclosures: S, integrationType: T, pid: P } = e,
             j = 'OAuth2Authorize_'.concat(n, '_').concat(v, '_').concat(y),
             A = null != T ? (null == u ? void 0 : u.get(T)) : void 0,
             Z = null !== (t = null == A ? void 0 : A.application) && void 0 !== t ? t : a.Z.getApplication(n);
@@ -26,7 +26,7 @@ let _ = (0, f.Z)(
             let a = (0, m.jU)(P),
                 A = (r) => {
                     let { clientId: i, location: o } = r;
-                    (null == i || i === n) && (a.lock(), l.Z.unsubscribe('OVERLAY_OAUTH2_AUTHORIZE_MODAL_CLOSE', A), null != location ? e(o) : t(new g.Z({ errorCode: b.lTL.OAUTH2_ERROR }, 'User cancelled authorization')));
+                    (null == i || i === n) && (a.lock(), l.Z.unsubscribe('OVERLAY_OAUTH2_AUTHORIZE_MODAL_CLOSE', A), null != location ? e(o) : t(new f.Z({ errorCode: b.lTL.OAUTH2_ERROR }, 'User cancelled authorization')));
                 },
                 x = c.default.isOverlayOOPEnabledForPid(null != P ? P : (0, h.QF)());
             if (a.context === b.IlC.OVERLAY && !x) {
@@ -39,7 +39,7 @@ let _ = (0, f.Z)(
                             clientId: n,
                             scopes: null != d ? d : [],
                             disclosures: null != S ? S : [],
-                            responseType: f,
+                            responseType: g,
                             redirectUri: _,
                             codeChallenge: E,
                             codeChallengeMethod: O,
@@ -100,7 +100,7 @@ let _ = (0, f.Z)(
                                     scopes: null != d ? d : [],
                                     disclosures: null != S ? S : [],
                                     callback: A,
-                                    responseType: f,
+                                    responseType: g,
                                     redirectUri: _,
                                     codeChallenge: E,
                                     codeChallengeMethod: O,
@@ -130,7 +130,7 @@ let _ = (0, f.Z)(
                     {
                         modalKey: j,
                         onCloseRequest: () => {
-                            (0, i.Mr3)(j), t(new g.Z({ errorCode: b.lTL.OAUTH2_ERROR }, 'User cancelled authorization'));
+                            (0, i.Mr3)(j), t(new f.Z({ errorCode: b.lTL.OAUTH2_ERROR }, 'User cancelled authorization'));
                         }
                     },
                     L

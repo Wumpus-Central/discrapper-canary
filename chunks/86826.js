@@ -11,11 +11,11 @@ var i = n(120356),
     d = n(987790);
 let p = function (e) {
     var t;
-    let { title: n, className: i, color: p, animate: h, gradientStopColor: g, getHistoricalTotalBytes: f } = e,
+    let { title: n, className: i, color: p, animate: h, gradientStopColor: f, getHistoricalTotalBytes: g } = e,
         m = (0, o.Sl)(p).hex,
-        b = null === (t = (0, o.Sl)(g)) || void 0 === t ? void 0 : t.hex;
+        b = null === (t = (0, o.Sl)(f)) || void 0 === t ? void 0 : t.hex;
     return (0, r.jsx)(c.Z, {
-        getHistoricalTotalBytes: f,
+        getHistoricalTotalBytes: g,
         children: (e, t, o) => {
             var c;
             return (0, r.jsx)('div', {

@@ -1,4 +1,4 @@
-n.d(t, { C: () => g });
+n.d(t, { C: () => f });
 var r = n(200651),
     i = n(192379),
     l = n(481060),
@@ -10,9 +10,9 @@ var r = n(200651),
     d = n(376191),
     p = n(388032),
     h = n(310037);
-function g(e) {
-    let { active: t, user: n, channel: g } = e,
-        f = (0, c.K)(),
+function f(e) {
+    let { active: t, user: n, channel: f } = e,
+        g = (0, c.K)(),
         m = i.useCallback(() => {
             (0, l.showToast)((0, l.createToast)(p.NW.string(p.t.EDYbS0), l.ToastType.FAILURE));
         }, []),
@@ -20,8 +20,8 @@ function g(e) {
             a.Z.closeChannelSidebar(s.uZ);
         }, []),
         _ = i.useCallback(() => {
-            a.Z.closeChannelSidebar(s.uZ), f && (0, o.Kh)(g.id);
-        }, [g.id, f]),
+            a.Z.closeChannelSidebar(s.uZ), g && (0, o.Kh)(f.id);
+        }, [f.id, g]),
         {
             acceptMessageRequest: E,
             rejectMessageRequest: O,
@@ -41,7 +41,7 @@ function g(e) {
         className: h.container,
         children: [
             (0, r.jsx)(d.Z, {
-                channel: g,
+                channel: f,
                 otherUser: n,
                 active: t
             }),
@@ -53,7 +53,7 @@ function g(e) {
                         color: l.Ttl.PRIMARY,
                         size: l.zxk.Sizes.SMALL,
                         onClick: (e) => {
-                            e.stopPropagation(), O(g.id);
+                            e.stopPropagation(), O(f.id);
                         },
                         disabled: S,
                         submitting: v || C,
@@ -64,7 +64,7 @@ function g(e) {
                         color: l.Ttl.BRAND,
                         size: l.zxk.Sizes.SMALL,
                         onClick: (e) => {
-                            e.stopPropagation(), E(g.id);
+                            e.stopPropagation(), E(f.id);
                         },
                         disabled: S,
                         submitting: N || y || I,

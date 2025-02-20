@@ -39,8 +39,8 @@ var r,
     d = n(155268),
     p = n(812206),
     h = n(454585),
-    g = n(739566),
-    f = n(695346),
+    f = n(739566),
+    g = n(695346),
     m = n(973616),
     b = n(131704),
     _ = n(598077),
@@ -166,7 +166,7 @@ function F(e) {
     let t = h.Z.parseToAST(e.content, !0, { channelId: e.channel_id }).map(W),
         n = E.Z.getChannel(e.channel_id),
         r = null != e.author ? new _.Z(e.author) : void 0,
-        i = null != e.author ? (0, g.ij)(r, n) : void 0;
+        i = null != e.author ? (0, f.ij)(r, n) : void 0;
     return {
         id: e.id,
         blocked: e.blocked,
@@ -252,8 +252,8 @@ function J(e) {
         { instance: n, secrets: r, party: i } = e,
         l = 0;
     n && (l |= L.xjy.INSTANCE), (null == r ? void 0 : r.join) != null && (l |= L.xjy.JOIN);
-    let o = f.cP.getSetting(),
-        a = f.Ou.getSetting();
+    let o = g.cP.getSetting(),
+        a = g.Ou.getSetting();
     return t ? ((l |= L.xjy.EMBEDDED), o && (l |= L.xjy.PARTY_PRIVACY_FRIENDS), a && (l |= L.xjy.PARTY_PRIVACY_VOICE_CHANNEL)) : ((null == i ? void 0 : i.privacy) === L.RYY.PUBLIC || c.K.get('ACTIVITIES_FORCE_PUBLIC')) && (o && (l |= L.xjy.PARTY_PRIVACY_FRIENDS), a && (l |= L.xjy.PARTY_PRIVACY_VOICE_CHANNEL)), l;
 }
 function $(e, t, n) {

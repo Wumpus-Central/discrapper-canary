@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(47120);
+n.d(t, { Z: () => g }), n(47120);
 var r,
     i,
     l,
@@ -10,7 +10,7 @@ var r,
     d = n(496675),
     p = n(981631);
 let h = { MAX_MEMBER_COUNT: new Set() };
-class g extends (r = o.ZP.Store) {
+class f extends (r = o.ZP.Store) {
     initialize() {
         var e;
         this.waitFor(d.Z, u.Z, c.Z), this.syncWith([d.Z, u.Z, c.Z], p.dG4), a.K.remove(p.vID.MAX_MEMBER_COUNT_100), a.K.remove(p.vID.MAX_MEMBER_COUNT_250), (e = new Set(a.K.get(p.vID.MAX_MEMBER_COUNT))), (h[p.vID.MAX_MEMBER_COUNT] = void 0 !== e ? e : new Set());
@@ -24,15 +24,15 @@ class g extends (r = o.ZP.Store) {
     }
 }
 (l = 'MaxMemberCountChannelNoticeStore'),
-    (i = 'displayName') in g
-        ? Object.defineProperty(g, i, {
+    (i = 'displayName') in f
+        ? Object.defineProperty(f, i, {
               value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (g[i] = l);
-let f = new g(s.Z, {
+        : (f[i] = l);
+let g = new f(s.Z, {
     MAX_MEMBER_COUNT_NOTICE_DISMISS: function (e) {
         let t = e.guildId;
         if (!h[p.vID.MAX_MEMBER_COUNT].has(t)) return h[p.vID.MAX_MEMBER_COUNT].add(t), a.K.set(p.vID.MAX_MEMBER_COUNT, h[p.vID.MAX_MEMBER_COUNT]), !0;

@@ -11,11 +11,11 @@ var i = n(468363),
     d = n(388032),
     p = n(321036);
 let h = function (e) {
-    let { hovered: t, activities: n, applicationStream: h, status: g, user: f, userIgnored: m } = e,
-        b = (0, c.Z)(null == f ? void 0 : f.id, 'StatusText'),
+    let { hovered: t, activities: n, applicationStream: h, status: f, user: g, userIgnored: m } = e,
+        b = (0, c.Z)(null == g ? void 0 : g.id, 'StatusText'),
         { voiceActivityStatusEnabled: _ } = (0, i.U)({ location: 'StatusText' }),
         { voiceChannel: E } = (0, o.Z)({
-            userId: null == f ? void 0 : f.id,
+            userId: null == g ? void 0 : g.id,
             surface: 'status-text'
         }),
         O = _ ? E : void 0;
@@ -26,7 +26,7 @@ let h = function (e) {
           })
         : (0, l.Z)({
                 activities: n,
-                status: g,
+                status: f,
                 applicationStream: h,
                 voiceChannel: O
             })
@@ -38,7 +38,7 @@ let h = function (e) {
                 applicationStream: h,
                 voiceChannel: O,
                 animate: t,
-                user: f,
+                user: g,
                 textSize: 'sm'
             })
           : null != b
@@ -48,6 +48,6 @@ let h = function (e) {
               })
             : (0, r.jsx)('div', {
                   className: p.text,
-                  children: (0, u.u5)(g)
+                  children: (0, u.u5)(f)
               });
 };

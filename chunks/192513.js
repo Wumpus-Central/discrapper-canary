@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => f });
 var r,
     i,
     l,
@@ -30,7 +30,7 @@ class h extends (l = o.ZP.Store) {
               writable: !0
           })
         : (h[r] = i);
-let g = new h(a.Z, {
+let f = new h(a.Z, {
     CONNECTION_OPEN: p,
     GUILD_UPDATE: function () {
         return !0;

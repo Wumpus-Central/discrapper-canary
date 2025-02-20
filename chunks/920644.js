@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => f });
 var r = n(200651);
 n(192379);
 var i = n(990547),
@@ -13,7 +13,7 @@ var i = n(990547),
 function h() {
     (0, c.qV)(), (0, a.uL)(u.Z5c.LOGIN);
 }
-function g(e) {
+function f(e) {
     let { underageMessage: t, transitionState: a } = e,
         c = (0, o.Dt)();
     return (0, r.jsxs)(l.Y0X, {

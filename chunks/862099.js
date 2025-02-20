@@ -16,8 +16,8 @@ var r,
     d = n(471445),
     p = n(986332),
     h = n(662842),
-    g = n(540059),
-    f = n(703656),
+    f = n(540059),
+    g = n(703656),
     m = n(922482),
     b = n(565799),
     _ = n(501655),
@@ -46,7 +46,7 @@ var r,
     W = n(767758);
 let V = l.memo(function (e) {
     let { heading: t, location: n, locationIcon: r, details: l, detailsIcon: o, topic: s, onClickCloseIcon: u, children: d } = e,
-        p = (0, g.Q3)('GuildNoticeBody');
+        p = (0, f.Q3)('GuildNoticeBody');
     return (0, i.jsxs)('div', {
         className: W.channelNotice,
         children: [
@@ -190,13 +190,13 @@ function H(e) {
 function F(e) {
     var t;
     let { guildEvent: n, noticeType: r } = e,
-        o = (0, g.Q3)('GuildUpcomingEventNotice'),
+        o = (0, f.Q3)('GuildUpcomingEventNotice'),
         s = (0, R.cS)(n),
         u = null != s ? (0, Z.m)(s, !0) : null,
         p = (0, R.nE)(n),
         h = (0, d.KS)(p),
-        { startTime: f, endTime: m } = (0, L.ZP)(n),
-        { startDateTimeString: b, upcomingEvent: _, diffMinutes: E } = (0, D.ub)(f.toISOString(), null == m ? void 0 : m.toISOString()),
+        { startTime: g, endTime: m } = (0, L.ZP)(n),
+        { startDateTimeString: b, upcomingEvent: _, diffMinutes: E } = (0, D.ub)(g.toISOString(), null == m ? void 0 : m.toISOString()),
         O = _ ? (E > 0 ? G.NW.formatToPlainString(G.t.PQlCWl, { minutes: E }) : G.NW.string(G.t.WINqKS)) : G.NW.formatToPlainString(G.t.DC6h3N, { date: b });
     return (
         l.useEffect(() => {
@@ -328,7 +328,7 @@ function K(e) {
         fullWidth: !0,
         className: W.joinButton,
         onClick: () => {
-            null != t && null != t.getGuildId() && ((0, m.Cq)(t), (0, f.XU)(t.getGuildId(), t.id));
+            null != t && null != t.getGuildId() && ((0, m.Cq)(t), (0, g.XU)(t.getGuildId(), t.id));
         },
         color: c.zxk.Colors.GREEN,
         size: c.zxk.Sizes.SMALL,
@@ -374,16 +374,16 @@ function Q(e) {
         d = l.useMemo(() => n.slice(0, 3), [n]),
         p = (0, s.e7)([v.Z], () => v.Z.can(U.Plq.CONNECT, t)),
         h = (0, N.Z)(t.id),
-        g = G.NW.string(G.t.VJlc0d);
+        f = G.NW.string(G.t.VJlc0d);
     switch (r) {
         case 1:
-            g = G.NW.string(G.t.VJlc0d);
+            f = G.NW.string(G.t.VJlc0d);
             break;
         case 2:
-            (g = G.NW.string(G.t.ZYO5OD)), (null == h ? void 0 : h.speaker) ? (g = G.NW.string(G.t['/cnSFR'])) : null != h && (g = G.NW.string(G.t.btSGOj));
+            (f = G.NW.string(G.t.ZYO5OD)), (null == h ? void 0 : h.speaker) ? (f = G.NW.string(G.t['/cnSFR'])) : null != h && (f = G.NW.string(G.t.btSGOj));
             break;
         case 3:
-            g = G.NW.string(G.t.wBoE6O);
+            f = G.NW.string(G.t.wBoE6O);
             break;
         default:
             (0, C.vE)(r);
@@ -415,7 +415,7 @@ function Q(e) {
                       null == h &&
                       (0, i.jsx)(K, {
                           channel: t,
-                          label: g
+                          label: f
                       })
               ]
           });
@@ -436,15 +436,15 @@ let J = l.memo(function (e) {
             [a, l]
         ),
         d = null,
-        g = null != a && null != r && !c;
+        f = null != a && null != r && !c;
     if (n) return (0, i.jsx)(h.Z, { guild: t });
     null == l || u
-        ? g &&
+        ? f &&
           (d = (0, i.jsx)(q, {
               stageInstance: a,
               channel: r
           }))
-        : l.entity_type === M.WX.STAGE_INSTANCE && g
+        : l.entity_type === M.WX.STAGE_INSTANCE && f
           ? (d = (0, i.jsx)(q, {
                 stageInstance: a,
                 channel: r
@@ -457,8 +457,8 @@ let J = l.memo(function (e) {
                   guildEvent: l,
                   channel: r
               }));
-    let f = t.hasFeature(U.oNc.COMMUNITY) || t.hasFeature(U.oNc.HUB);
-    if (null == d && null != o && !f) {
+    let g = t.hasFeature(U.oNc.COMMUNITY) || t.hasFeature(U.oNc.HUB);
+    if (null == d && null != o && !g) {
         let { upcomingEvent: e, noticeType: t } = o;
         d = (0, i.jsx)(F, {
             guildEvent: e,

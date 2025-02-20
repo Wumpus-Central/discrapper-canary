@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => E,
-    j: () => f
+    j: () => g
 }),
     n(411104),
     n(47120);
@@ -15,7 +15,7 @@ var r,
     d = n(981631),
     p = n(388032),
     h = n(922792);
-function g(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +28,7 @@ function g(e, t, n) {
         e
     );
 }
-var f = (((r = {}).SECTION_NO_RESULTS = 'SECTION_NO_RESULTS'), r);
+var g = (((r = {}).SECTION_NO_RESULTS = 'SECTION_NO_RESULTS'), r);
 let m = Object.freeze({
         SECTION_ALL: {
             lightSrc: n(900933),
@@ -170,16 +170,16 @@ class _ extends l.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            g(this, 'isDesktopVisualRefreshEnabled', (0, c.i9)('FriendsEmptyState')),
-            g(this, 'state', { opacity: new o.Z.Value(1) }),
-            g(this, 'componentWillEnter', (e) => {
+            f(this, 'isDesktopVisualRefreshEnabled', (0, c.i9)('FriendsEmptyState')),
+            f(this, 'state', { opacity: new o.Z.Value(1) }),
+            f(this, 'componentWillEnter', (e) => {
                 this.state.opacity.setValue(0),
                     o.Z.timing(this.state.opacity, {
                         toValue: 1,
                         duration: 250
                     }).start(e);
             }),
-            g(this, 'componentWillLeave', (e) => {
+            f(this, 'componentWillLeave', (e) => {
                 o.Z.timing(this.state.opacity, {
                     toValue: 0,
                     duration: 250

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => g });
 var r = n(200651),
     i = n(192379),
     l = n(704215),
@@ -10,14 +10,14 @@ var r = n(200651),
     d = n(981631),
     p = n(921944),
     h = n(647086),
-    g = n(135899);
-function f(e) {
+    f = n(135899);
+function g(e) {
     var t;
-    let f = (0, a.SE)(e),
-        m = g.$X.some((t) => (null == e ? void 0 : e.id) !== h._ && c.oz(t, e)),
+    let g = (0, a.SE)(e),
+        m = f.$X.some((t) => (null == e ? void 0 : e.id) !== h._ && c.oz(t, e)),
         b = (null == e ? void 0 : e.defaultMessageNotifications) === d.bL.ALL_MESSAGES,
         _ = (0, u.FT)(l.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : d.lds),
-        E = f && (m || b) && !_,
+        E = g && (m || b) && !_,
         O = i.useCallback(() => {
             var t;
             (0, u.Qd)(l.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : d.lds, !0, p.L.DISMISS);

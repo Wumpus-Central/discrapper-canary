@@ -191,7 +191,7 @@ let D = i.memo(function (e) {
             return i;
         })(z, ['role']),
         Q = i.useRef(null),
-        J =
+        K =
             G > 0
                 ? S.NW.formatToPlainString(S.t['ZL7+Iy'], {
                       channelName: t.name,
@@ -200,15 +200,15 @@ let D = i.memo(function (e) {
                 : k
                   ? S.NW.formatToPlainString(S.t.YlVvmZ, { channelName: t.name })
                   : S.NW.formatToPlainString(S.t['0nZpiI'], { channelName: t.name }),
-        K = (0, h.Q3)('GuildSidebarThreadListEntry') ? T : A;
+        J = (0, h.Q3)('GuildSidebarThreadListEntry') ? T : A;
     return (0, r.jsxs)('li', {
         role: q,
         className: o()(I.containerDefault, { [I.selected]: l }),
         children: [
-            (0, r.jsx)(K, { withGuildIcon: R }),
+            (0, r.jsx)(J, { withGuildIcon: R }),
             D
                 ? null
-                : (0, r.jsx)(K, {
+                : (0, r.jsx)(J, {
                       withGuildIcon: R,
                       inverted: !0,
                       style: { transform: 'rotateX(180deg) translateY(-9px)' }
@@ -238,7 +238,7 @@ let D = i.memo(function (e) {
                                 innerRef: Q,
                                 className: N.link,
                                 onClick: W,
-                                'aria-label': J,
+                                'aria-label': K,
                                 focusProps: { enabled: !1 },
                                 children: (0, r.jsxs)('div', {
                                     className: o()(N.linkTop, N.__invalid_threadMainContent),

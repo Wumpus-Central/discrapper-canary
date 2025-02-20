@@ -11,18 +11,18 @@ var i = n(442837),
     d = n(243778),
     p = n(352455),
     h = n(480294),
-    g = n(791359),
-    f = n(981631),
+    f = n(791359),
+    g = n(981631),
     m = n(388032),
     b = n(135119);
 function _() {
     let { analyticsLocations: e } = (0, c.ZP)(s.Z.ACTIVE_NOW_COLUMN),
-        t = (0, i.e7)([h.Z], () => h.Z.hasConsented(f.pjP.PERSONALIZATION)) ? [] : [l.z.NOW_PLAYING_CONSENT_CARD],
+        t = (0, i.e7)([h.Z], () => h.Z.hasConsented(g.pjP.PERSONALIZATION)) ? [] : [l.z.NOW_PLAYING_CONSENT_CARD],
         n = (0, u.Dt)();
     return (0, r.jsx)(c.Gt, {
         value: e,
         children: (0, r.jsx)(a.Z, {
-            section: f.jXE.ACTIVE_NOW_COLUMN,
+            section: g.jXE.ACTIVE_NOW_COLUMN,
             children: (0, r.jsx)('aside', {
                 className: b.container,
                 'aria-labelledby': n,
@@ -46,7 +46,7 @@ function _() {
                                     });
                             }
                         }),
-                        (0, r.jsx)(g.Z, {})
+                        (0, r.jsx)(f.Z, {})
                     ]
                 })
             })

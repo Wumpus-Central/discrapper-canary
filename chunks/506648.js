@@ -10,7 +10,7 @@ var r = n(200651),
     d = n(981631),
     p = n(388032),
     h = n(594181);
-let g = [
+let f = [
         {
             feature: d.Qa3.SINGLE_PLAYER,
             getText: () => p.NW.string(p.t['V+/FjI']),
@@ -90,7 +90,7 @@ let g = [
             IconComponent: u.Z
         }
     ],
-    f = (e) => {
+    g = (e) => {
         let { IconComponent: t, text: n, tooltip: i } = e;
         return (0, r.jsxs)('div', {
             className: h.row,
@@ -142,7 +142,7 @@ let g = [
 class m extends i.PureComponent {
     render() {
         let { sku: e } = this.props,
-            t = g
+            t = f
                 .filter((t) => {
                     let { feature: n } = t;
                     return e.features.has(n);
@@ -150,7 +150,7 @@ class m extends i.PureComponent {
                 .map((e) => {
                     let { feature: t, IconComponent: n, getText: i, getTooltip: l } = e;
                     return (0, r.jsx)(
-                        f,
+                        g,
                         {
                             IconComponent: n,
                             text: i(),

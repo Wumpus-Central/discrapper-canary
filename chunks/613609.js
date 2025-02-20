@@ -10,11 +10,11 @@ var r = n(200651),
     d = n(449934),
     p = n(650233),
     h = n(981631),
-    g = n(898625),
-    f = n(507103);
+    f = n(898625),
+    g = n(507103);
 let m = (e) => {
     let { guildId: t, inviteCode: n } = e,
-        [m, b] = i.useState(g.hO.INITIAL),
+        [m, b] = i.useState(f.hO.INITIAL),
         [_, E] = i.useState(null != n);
     i.useEffect(() => {
         null != n && o.Z.resolveInvite(n, 'Hub').finally(() => E(!1));
@@ -29,7 +29,7 @@ let m = (e) => {
         }, []),
         y = (0, d.gK)();
     return (0, r.jsx)('div', {
-        className: f.page,
+        className: g.page,
         children: (0, r.jsxs)(a.Z, {
             embedded: !0,
             splash: y,
@@ -37,9 +37,9 @@ let m = (e) => {
             showLogo: !1,
             updateWaveState: v,
             children: [
-                (0, r.jsx)('div', { className: f.dragRegion }),
+                (0, r.jsx)('div', { className: g.dragRegion }),
                 (0, r.jsx)('div', {
-                    className: f.contentWrapper,
+                    className: g.contentWrapper,
                     children: !_ && (0, r.jsx)(p.H, { invite: O })
                 })
             ]

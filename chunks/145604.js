@@ -10,8 +10,8 @@ var r = n(200651),
     d = n(731429),
     p = n(188471),
     h = n(176881),
-    g = n(318885),
-    f = n(358221),
+    f = n(318885),
+    g = n(358221),
     m = n(710845),
     b = n(581567),
     _ = n(594190),
@@ -106,7 +106,7 @@ class Q extends i.PureComponent {
                     },
                     (0, u.kO)(e.voiceChannelGuildId, e.voiceChannelId, e.videoEnabled),
                     D.Z.getVoiceStateStats(),
-                    f.Z.getSelectedParticipantStats(e.voiceChannelId)
+                    g.Z.getSelectedParticipantStats(e.voiceChannelId)
                 )
             );
         }
@@ -155,8 +155,8 @@ class Q extends i.PureComponent {
                     let n = await (0, T.hj)(W.pid),
                         { gameName: r, gameId: i, exe: o, distributor: p } = (0, b.G8)(W),
                         h = (0, C.NW)('ChatAutoAnalytics', !1),
-                        g = u.enabledLegacy || (h && u.enabledOOP),
-                        f = I.v.legacyEnabled || (h && I.v.oopEnabled),
+                        f = u.enabledLegacy || (h && u.enabledOOP),
+                        g = I.v.legacyEnabled || (h && I.v.oopEnabled),
                         m = u.source;
                     F.default.track(K.rMx.LAUNCH_GAME, {
                         game: r,
@@ -167,8 +167,8 @@ class Q extends i.PureComponent {
                         game_platform: K.M7m.DESKTOP,
                         detection_method: c,
                         distributor: p,
-                        is_overlay_enabled: f,
-                        is_overlay_game_enabled: g,
+                        is_overlay_enabled: g,
+                        is_overlay_game_enabled: f,
                         is_overlay_game_source: m,
                         fullscreen_type: null != n ? s.Jx[n] : s.Jx.UNKNOWN.toString(),
                         overlay_method: a.gl[d],
@@ -196,7 +196,7 @@ class Q extends i.PureComponent {
             let e = 'none',
                 t = [k ? 'screen' : null, w ? 'camera' : null].filter(Y.lm),
                 n = null;
-            k ? ((e = 'screen'), (n = (0, g.t)())) : w && (e = 'camera'),
+            k ? ((e = 'screen'), (n = (0, f.t)())) : w && (e = 'camera'),
                 F.default.track(
                     K.rMx.VIDEO_INPUT_TOGGLED,
                     X(
@@ -293,7 +293,7 @@ class Q extends i.PureComponent {
 function J() {
     let [e, t] = (0, l.Wu)([k.Z], () => [k.Z.getVoiceChannelId(), k.Z.getChannelId()], []),
         n = (0, l.e7)([A.Z], () => A.Z.getChannel(t), [t]),
-        i = (0, l.e7)([f.Z], () => (null == n ? void 0 : n.id) != null && f.Z.getChatOpen(n.id), [n]),
+        i = (0, l.e7)([g.Z], () => (null == n ? void 0 : n.id) != null && g.Z.getChatOpen(n.id), [n]),
         o = null == n ? void 0 : n.nsfw,
         a = (0, l.e7)([A.Z], () => A.Z.getChannel(e), [e]),
         s = (0, l.e7)([M.Z], () => M.Z.getGuildId(), []),
@@ -308,7 +308,7 @@ function J() {
             [d, s]
         ),
         h = (0, l.e7)([B.ZP], () => B.ZP.getState().section, []),
-        g = (0, l.e7)([V.Z], () => V.Z.getHomeLink(), []),
+        f = (0, l.e7)([V.Z], () => V.Z.getHomeLink(), []),
         m = (0, l.e7)([E.Z], () => E.Z.isConnected(), []),
         [b, N] = (0, l.Wu)([w.Z], () => [w.Z.isVideoEnabled(), w.Z.isScreenSharing()], []),
         v = (0, l.e7)([U.Z], () => U.Z.getPrimaryActivity(), []),
@@ -320,7 +320,7 @@ function J() {
             isNSFWChannel: o,
             selectedGuildId: s,
             friendsTabSection: h,
-            homeLink: g,
+            homeLink: f,
             connected: m,
             videoEnabled: b,
             isScreenSharing: N,

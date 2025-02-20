@@ -10,8 +10,8 @@ var r = n(913527),
     d = n(706454),
     p = n(695346),
     h = n(314897),
-    g = n(433355),
-    f = n(592125),
+    f = n(433355),
+    g = n(592125),
     m = n(271383),
     b = n(430824),
     _ = n(131951),
@@ -45,7 +45,7 @@ function R(e, t, n, r) {
                 return null != n && null != n.name ? n.name : j.NW.string(j.t.dRcLAw);
             })
             .replace(/<#(\d+)>/g, (e, t) => {
-                let n = f.Z.getChannel(t);
+                let n = g.Z.getChannel(t);
                 return null == n ? e : (0, s.F6)(n, y.default, O.Z);
             })
             .replace(/<a?:(\w+):(\d+)>/g, (e, t) => ''.concat(j.NW.string(j.t.sMOuub), ' ').concat(t))
@@ -107,10 +107,10 @@ function V(e) {
     var t, n, r, i, l, o;
     let { channelId: a, message: s, optimistic: c } = e;
     if (c || _.Z.isSelfDeaf()) return !1;
-    let u = f.Z.getChannel(a);
+    let u = g.Z.getChannel(a);
     if (null == u) return !1;
     let d = N.Z.getChannelId(),
-        b = g.ZP.getCurrentSidebarChannelId(d),
+        b = f.ZP.getCurrentSidebarChannelId(d),
         y = a === d || a === b,
         C = p.OW.getSetting() && s.tts && y,
         S = E.Z.getTTSType(),

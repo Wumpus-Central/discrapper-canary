@@ -10,13 +10,13 @@ var r = n(200651),
     d = n(823379),
     p = n(358085),
     h = n(843445),
-    g = n(981631),
-    f = n(388032),
+    f = n(981631),
+    g = n(388032),
     m = n(862986);
 let b = {
-    [g.TaA.WINDOWS]: p.PlatformTypes.WINDOWS,
-    [g.TaA.MACOS]: p.PlatformTypes.OSX,
-    [g.TaA.LINUX]: p.PlatformTypes.LINUX
+    [f.TaA.WINDOWS]: p.PlatformTypes.WINDOWS,
+    [f.TaA.MACOS]: p.PlatformTypes.OSX,
+    [f.TaA.LINUX]: p.PlatformTypes.LINUX
 };
 class _ extends i.PureComponent {
     render() {
@@ -39,35 +39,35 @@ class _ extends i.PureComponent {
 }
 let E = (e) => [
     {
-        key: f.NW.string(f.t['0TcHzs']),
+        key: g.NW.string(g.t['0TcHzs']),
         value: e.operating_system_version
     },
     {
-        key: f.NW.string(f.t.eOX6Hh),
+        key: g.NW.string(g.t.eOX6Hh),
         value: e.cpu
     },
     {
-        key: f.NW.string(f.t['+WJ5XV']),
-        value: null != e.ram ? f.NW.formatToPlainString(f.t.RNRSl5, { size: (0, u.BU)(1000 * e.ram, { showDecimalForGB: !1 }) }) : null
+        key: g.NW.string(g.t['+WJ5XV']),
+        value: null != e.ram ? g.NW.formatToPlainString(g.t.RNRSl5, { size: (0, u.BU)(1000 * e.ram, { showDecimalForGB: !1 }) }) : null
     },
     {
-        key: f.NW.string(f.t['+3s/V1']),
+        key: g.NW.string(g.t['+3s/V1']),
         value: e.gpu
     },
     {
-        key: f.NW.string(f.t['L+x5wM']),
+        key: g.NW.string(g.t['L+x5wM']),
         value: null != e.disk ? (0, u.BU)(1000 * e.disk, { showDecimalForGB: !1 }) : null
     },
     {
-        key: f.NW.string(f.t['Ghp2/P']),
+        key: g.NW.string(g.t['Ghp2/P']),
         value: e.sound_card
     },
     {
-        key: f.NW.string(f.t['+w6nJi']),
+        key: g.NW.string(g.t['+w6nJi']),
         value: e.network
     },
     {
-        key: f.NW.string(f.t.Au3Vbm),
+        key: g.NW.string(g.t.Au3Vbm),
         value: e.notes
     }
 ];
@@ -97,12 +97,12 @@ class O extends i.PureComponent {
                                   pageSize: e,
                                   children: (function (e) {
                                       switch (e) {
-                                          case g.TaA.WINDOWS:
-                                              return f.NW.string(f.t['0/xHFB']);
-                                          case g.TaA.MACOS:
-                                              return f.NW.string(f.t.E4u4n5);
-                                          case g.TaA.LINUX:
-                                              return f.NW.string(f.t.tcawo6);
+                                          case f.TaA.WINDOWS:
+                                              return g.NW.string(g.t['0/xHFB']);
+                                          case f.TaA.MACOS:
+                                              return g.NW.string(g.t.E4u4n5);
+                                          case f.TaA.LINUX:
+                                              return g.NW.string(g.t.tcawo6);
                                       }
                                   })(t)
                               },
@@ -150,13 +150,13 @@ class O extends i.PureComponent {
         let { minimum: e, recommended: t } = this.props.systemRequirements[this.state.selectedOperatingSystem];
         return (0, r.jsxs)('div', {
             className: m.requirementsContainer,
-            children: [this.renderRequirementsSection(e, f.NW.string(f.t.QCCMXF)), this.renderRequirementsSection(t, f.NW.string(f.t.He39ws))]
+            children: [this.renderRequirementsSection(e, g.NW.string(g.t.QCCMXF)), this.renderRequirementsSection(t, g.NW.string(g.t.He39ws))]
         });
     }
     render() {
         return (0, r.jsxs)('div', {
             className: this.props.className,
-            children: [(0, r.jsx)(s.Z, { children: f.NW.string(f.t.IkOAoq) }), this.renderTabs(), this.renderBody()]
+            children: [(0, r.jsx)(s.Z, { children: g.NW.string(g.t.IkOAoq) }), this.renderTabs(), this.renderBody()]
         });
     }
     constructor(e) {

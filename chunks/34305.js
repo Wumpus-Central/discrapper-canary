@@ -10,8 +10,8 @@ var r = n(200651),
     d = n(391690),
     p = n(424218),
     h = n(358085),
-    g = n(998502),
-    f = n(388032),
+    f = n(998502),
+    g = n(388032),
     m = n(434164),
     b = n(455812);
 function _(e, t, n) {
@@ -62,7 +62,7 @@ class E extends i.PureComponent {
                                     a
                                         ? (0, r.jsx)('span', {
                                               className: m.defaultIndicator,
-                                              children: f.NW.string(f.t.bBvAEB)
+                                              children: g.NW.string(g.t.bBvAEB)
                                           })
                                         : null
                                 ]
@@ -70,7 +70,7 @@ class E extends i.PureComponent {
                             null != u && null != e && null != t
                                 ? (0, r.jsx)(s.Z, {
                                       className: m.rowBody,
-                                      hoverText: f.NW.formatToPlainString(f.t.Fxo9e3, {
+                                      hoverText: g.NW.formatToPlainString(g.t.Fxo9e3, {
                                           available: e,
                                           total: t
                                       }),
@@ -88,7 +88,7 @@ class E extends i.PureComponent {
                         disabled: null != l,
                         color: o.zxk.Colors.PRIMARY,
                         onClick: this.handleStartEditing,
-                        children: f.NW.string(f.t.bt75u7)
+                        children: g.NW.string(g.t.bt75u7)
                     })
                 ]
             })
@@ -106,7 +106,7 @@ class E extends i.PureComponent {
                     (0, r.jsxs)(c.Z.Child, {
                         children: [
                             (0, r.jsx)(o.xJW, {
-                                title: f.NW.string(f.t.AJkKCA),
+                                title: g.NW.string(g.t.AJkKCA),
                                 children: (0, r.jsx)(o.oil, {
                                     value: n,
                                     placeholder: d.Z.getLabelFromPath(e),
@@ -114,7 +114,7 @@ class E extends i.PureComponent {
                                 })
                             }),
                             (0, r.jsx)(o.xJW, {
-                                title: f.NW.string(f.t.lnUCwc),
+                                title: g.NW.string(g.t.lnUCwc),
                                 className: b.marginTop20,
                                 children: (0, r.jsx)(o.oil, {
                                     disabled: !0,
@@ -127,7 +127,7 @@ class E extends i.PureComponent {
                                 disabled: this.props.isDefault,
                                 className: m.defaultLocationCheckbox,
                                 onChange: this.handleToggleDefault,
-                                children: f.NW.string(f.t.Z2MWuL)
+                                children: g.NW.string(g.t.Z2MWuL)
                             }),
                             (0, r.jsx)(o.$i$, { className: m.separator }),
                             (0, r.jsxs)(c.Z, {
@@ -138,7 +138,7 @@ class E extends i.PureComponent {
                                         color: o.zxk.Colors.RED,
                                         look: o.zxk.Looks.OUTLINED,
                                         onClick: this.handleRemoveLocation,
-                                        children: f.NW.string(f.t.iBUzS0)
+                                        children: g.NW.string(g.t.iBUzS0)
                                     }),
                                     (0, r.jsxs)(c.Z, {
                                         justify: c.Z.Justify.END,
@@ -148,14 +148,14 @@ class E extends i.PureComponent {
                                                 color: o.zxk.Colors.PRIMARY,
                                                 look: o.zxk.Looks.LINK,
                                                 onClick: this.handleStopEditing,
-                                                children: f.NW.string(f.t['ETE/oK'])
+                                                children: g.NW.string(g.t['ETE/oK'])
                                             }),
                                             (0, r.jsx)(o.zxk, {
                                                 disabled: e === this.props.path && n === this.props.label && i === this.props.isDefault,
                                                 size: o.zxk.Sizes.SMALL,
                                                 color: o.zxk.Colors.GREEN,
                                                 onClick: this.handleSaveChanges,
-                                                children: f.NW.string(f.t.R3BPHx)
+                                                children: g.NW.string(g.t.R3BPHx)
                                             })
                                         ]
                                     })
@@ -215,15 +215,15 @@ class E extends i.PureComponent {
                         })({}, e)),
                         (n = n =
                             {
-                                header: f.NW.string(f.t.iBUzS0),
-                                confirmText: f.NW.string(f.t.iBUzS0),
-                                cancelText: f.NW.string(f.t['ETE/oK']),
+                                header: g.NW.string(g.t.iBUzS0),
+                                confirmText: g.NW.string(g.t.iBUzS0),
+                                cancelText: g.NW.string(g.t['ETE/oK']),
                                 onConfirm: () => {
                                     this.handleStopEditing(), (0, a.iD)(this.props.path);
                                 },
                                 children: (0, r.jsx)(o.Text, {
                                     variant: 'text-md/normal',
-                                    children: f.NW.string(f.t['1XqeW1'])
+                                    children: g.NW.string(g.t['1XqeW1'])
                                 })
                             }),
                         Object.getOwnPropertyDescriptors
@@ -271,7 +271,7 @@ class O extends i.PureComponent {
             { editingPath: i } = this.state;
         return (0, r.jsxs)(o.hjN, {
             className: m.wrapper,
-            title: f.NW.string(f.t.aLszkJ),
+            title: g.NW.string(g.t.aLszkJ),
             children: [
                 e.map((e) => {
                     let { path: l, label: o } = e;
@@ -295,7 +295,7 @@ class O extends i.PureComponent {
                         disabled: !h.isPlatformEmbedded,
                         onClick: this.handleAddInstallationLocation,
                         size: o.zxk.Sizes.SMALL,
-                        children: f.NW.string(f.t.pnZ2ur)
+                        children: g.NW.string(g.t.pnZ2ur)
                     })
                 })
             ]
@@ -305,7 +305,7 @@ class O extends i.PureComponent {
         super(...e),
             _(this, 'state', { editingPath: null }),
             _(this, 'handleAddInstallationLocation', () => {
-                g.ZP.showOpenDialog(['openDirectory']).then((e) => {
+                f.ZP.showOpenDialog(['openDirectory']).then((e) => {
                     null != e && 0 !== e.length && null != e[0] && 'undefined' !== e[0] && (0, a.RY)(e[0]);
                 });
             }),

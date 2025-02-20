@@ -11,8 +11,8 @@ var i = n(873546),
     d = n(431),
     p = n(74538),
     h = n(374023),
-    g = n(775412),
-    f = n(695349),
+    f = n(775412),
+    g = n(695349),
     m = n(913976),
     b = n(526552),
     _ = n(104494),
@@ -86,7 +86,7 @@ class T extends s.Z {
                     .filter((e) => null != e && !(0, _.kA)(e))
                     .shift();
                 if (null != t) return { userDiscountOffer: t };
-                let n = (0, g.J0)();
+                let n = (0, f.J0)();
                 return null != n ? { userTrialOffer: n } : {};
             }),
             C(this, 'mayShowAnnouncementModal', async () => {
@@ -95,7 +95,7 @@ class T extends s.Z {
                     t = b.Z.getCurrentConfig({ location: 'announcementManager' }, { autoTrackExposure: !1 }).enabled,
                     n = (0, c.un)(l.z.Q1_2025_FOLLOW_UP_REVERSE_TRIAL_OFFER),
                     r = u.default.getCurrentUser();
-                if ((t && !n && !(0, o.$sL)() && !(0, p.I5)(r) && (await (0, f.G)(e.userTrialOffer)) && (0, N.Z)({ upsellType: I.cd.REVERSE_TRIAL_FOLLOWUP_UPSELL }), (null == r || r.verified) && !(0, o.$sL)() && m.Z.getCurrentConfig({ location: 'OfferAnnouncementManager' }).enabled && !i.tq)) {
+                if ((t && !n && !(0, o.$sL)() && !(0, p.I5)(r) && (await (0, g.G)(e.userTrialOffer)) && (0, N.Z)({ upsellType: I.cd.REVERSE_TRIAL_FOLLOWUP_UPSELL }), (null == r || r.verified) && !(0, o.$sL)() && m.Z.getCurrentConfig({ location: 'OfferAnnouncementManager' }).enabled && !i.tq)) {
                     for (let t of await (0, E.He)(e)) if (await this.maybeOpenServerDriveAnnouncementModal(t, !1)) break;
                 }
             });

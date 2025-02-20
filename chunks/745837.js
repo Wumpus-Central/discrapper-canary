@@ -11,8 +11,8 @@ var i = n(120356),
     d = n(13140),
     p = n(435064),
     h = n(39604),
-    g = n(356659),
-    f = n(981631),
+    f = n(356659),
+    g = n(981631),
     m = n(332325),
     b = n(388032),
     _ = n(596259);
@@ -20,7 +20,7 @@ function E(e) {
     (0, s.Z)(m.Z.CLIPS), (0, h.UW)(e);
 }
 function O() {
-    let e = (0, o.e7)([c.ZP], () => c.ZP.getKeybindForAction(f.kg4.SAVE_CLIP));
+    let e = (0, o.e7)([c.ZP], () => c.ZP.getKeybindForAction(g.kg4.SAVE_CLIP));
     if (null == e) return (0, r.jsx)(r.Fragment, { children: b.NW.string(b.t.miecxM) });
     let t = d.BB(e.shortcut, !0);
     return (0, r.jsx)(r.Fragment, {
@@ -35,7 +35,7 @@ function O() {
     });
 }
 let N = {
-    [g.D5.Error]: {
+    [f.D5.Error]: {
         textColor: 'text-primary',
         buttonLook: a.zxk.Looks.FILLED,
         buttonColor: a.zxk.Colors.PRIMARY,
@@ -52,26 +52,26 @@ let N = {
             }),
         buttonCopy: () => b.NW.string(b.t.vDGv9f),
         ctaOnClick: () => {
-            window.open(u.Z.getArticleURL(f.BhN.CLIPS), '_blank');
+            window.open(u.Z.getArticleURL(g.BhN.CLIPS), '_blank');
         },
         containerClass: _.container
     },
-    [g.D5.Disabled]: {
+    [f.D5.Disabled]: {
         textColor: 'text-primary',
         buttonLook: a.zxk.Looks.FILLED,
         buttonColor: a.zxk.Colors.BRAND,
         bodyCopy: () => b.NW.string(b.t.MhrVg4),
         buttonCopy: () => b.NW.string(b.t.GMLBKS),
-        ctaOnClick: () => E(g.D5.Disabled),
+        ctaOnClick: () => E(f.D5.Disabled),
         containerClass: _.container
     },
-    [g.D5.Enabled]: {
+    [f.D5.Enabled]: {
         textColor: 'always-white',
         buttonLook: a.zxk.Looks.FILLED,
         buttonColor: a.zxk.Colors.BRAND_INVERTED,
         bodyCopy: () => (0, r.jsx)(O, {}),
         buttonCopy: () => b.NW.string(b.t.GMLBKS),
-        ctaOnClick: () => E(g.D5.Enabled),
+        ctaOnClick: () => E(f.D5.Enabled),
         containerClass: l()(_.container, _.containerEnabled)
     }
 };
@@ -80,10 +80,10 @@ function v() {
             decoupledClipsEnabled: p.Z.getSettings().decoupledClipsEnabled,
             clipsError: p.Z.getLastClipsError()
         })),
-        n = null != t ? g.D5.Error : e ? g.D5.Enabled : g.D5.Disabled,
-        { bodyCopy: i, buttonCopy: l, ctaOnClick: s, textColor: c, buttonColor: u, buttonLook: d, containerClass: f } = N[n];
+        n = null != t ? f.D5.Error : e ? f.D5.Enabled : f.D5.Disabled,
+        { bodyCopy: i, buttonCopy: l, ctaOnClick: s, textColor: c, buttonColor: u, buttonLook: d, containerClass: g } = N[n];
     return (0, r.jsxs)('div', {
-        className: f,
+        className: g,
         children: [
             (0, r.jsx)(a.Text, {
                 color: c,

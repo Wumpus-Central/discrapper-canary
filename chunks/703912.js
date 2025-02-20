@@ -10,8 +10,8 @@ var r = n(664751),
     d = n(812206),
     p = n(979200),
     h = n(489863),
-    g = n(166148),
-    f = n(307643),
+    f = n(166148),
+    g = n(307643),
     m = n(973616),
     b = n(594174),
     _ = n(630388),
@@ -73,10 +73,10 @@ async function P(e, t, n) {
         a,
         s,
         c,
-        { client_id: u, response_type: d = 'code', redirect_uri: f, code_challenge: m, code_challenge_method: N, state: v, nonce: I, scope: C, permissions: S, guild_id: T, channel_id: P, prompt: j, disable_guild_select: A, integration_type: Z, pid: x, signal: L } = e;
+        { client_id: u, response_type: d = 'code', redirect_uri: g, code_challenge: m, code_challenge_method: N, state: v, nonce: I, scope: C, permissions: S, guild_id: T, channel_id: P, prompt: j, disable_guild_select: A, integration_type: Z, pid: x, signal: L } = e;
     if (null == L ? void 0 : L.aborted) throw new O.Z({ errorCode: y.lTL.UNKNOWN_ERROR }, 'Request aborted');
     if (null == u) throw new O.Z({ errorCode: y.lTL.OAUTH2_ERROR }, 'No Client ID provided');
-    if (null != f) throw new O.Z({ errorCode: y.lTL.OAUTH2_ERROR }, 'Redirect URI cannot be used in the RPC OAuth2 Authorization flow');
+    if (null != g) throw new O.Z({ errorCode: y.lTL.OAUTH2_ERROR }, 'Redirect URI cannot be used in the RPC OAuth2 Authorization flow');
     let w = [];
     if (('string' == typeof C ? (w = C.split(' ').filter((e) => e.length > 0)) : Array.isArray(C) && (w = C), null == b.default.getCurrentUser())) throw new O.Z({ errorCode: y.lTL.OAUTH2_ERROR }, 'Client is not logged in');
     null != Z && (l = Number(Z));
@@ -86,7 +86,7 @@ async function P(e, t, n) {
                 clientId: u,
                 scopes: w,
                 responseType: d,
-                redirectUri: f,
+                redirectUri: g,
                 codeChallenge: m,
                 codeChallengeMethod: N,
                 state: v,
@@ -103,7 +103,7 @@ async function P(e, t, n) {
         var R;
         l = null != a.application.flags && (0, _.yE)(a.application.flags, y.udG.EMBEDDED) && (null === (R = a.application.integration_types_config) || void 0 === R ? void 0 : R[i.Y.USER_INSTALL]) != null ? i.Y.USER_INSTALL : i.Y.GUILD_INSTALL;
     }
-    if (j === g.s.NONE && null != a && a.authorized && c)
+    if (j === f.s.NONE && null != a && a.authorized && c)
         try {
             return (
                 await (0, h.Iq)({
@@ -111,7 +111,7 @@ async function P(e, t, n) {
                     clientId: u,
                     scopes: w,
                     responseType: d,
-                    redirectUri: f,
+                    redirectUri: g,
                     codeChallenge: m,
                     codeChallengeMethod: N,
                     state: v,
@@ -136,7 +136,7 @@ async function P(e, t, n) {
             scopes: w,
             parsedPermissions: D,
             responseType: d,
-            redirectUri: f,
+            redirectUri: g,
             codeChallenge: m,
             codeChallengeMethod: N,
             state: v,
@@ -164,7 +164,7 @@ async function j(e, t, n) {
     let W = [];
     if (('string' == typeof x ? (W = x.split(' ').filter((e) => e.length > 0)) : Array.isArray(x) && (W = x), null == b.default.getCurrentUser())) throw new O.Z({ errorCode: y.lTL.OAUTH2_ERROR }, 'Client is not logged in');
     let V = null !== (l = d.Z.getApplication(C)) && void 0 !== l ? l : null;
-    (null == V || ((a = V.id), (null !== (s = d.Z.getApplicationLastUpdated(a)) && void 0 !== s ? s : 0) < Date.now() - 5000)) && (V = m.ZP.createFromServer(await (0, f.UM)(C, G)));
+    (null == V || ((a = V.id), (null !== (s = d.Z.getApplicationLastUpdated(a)) && void 0 !== s ? s : 0) < Date.now() - 5000)) && (V = m.ZP.createFromServer(await (0, g.UM)(C, G)));
     let B = null != V && (0, _.yE)(V.flags, y.udG.EMBEDDED) && (null === (r = V.integrationTypesConfig) || void 0 === r ? void 0 : r[i.Y.USER_INSTALL]) != null;
     u = null == M ? (B ? i.Y.USER_INSTALL : i.Y.GUILD_INSTALL) : Number(M);
     try {
@@ -189,7 +189,7 @@ async function j(e, t, n) {
         let { body: e } = t;
         throw new O.Z({ errorCode: y.lTL.OAUTH2_ERROR }, 'OAuth2 Authorization Error: '.concat((null == e ? void 0 : e.message) || 'Unknown Error'));
     }
-    if (D === g.s.NONE && null != N && N.authorized && I)
+    if (D === f.s.NONE && null != N && N.authorized && I)
         try {
             return (
                 await (0, h.Iq)({

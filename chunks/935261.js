@@ -11,10 +11,10 @@ var i = n(120356),
     d = n(565473),
     p = n(927923),
     h = n(388032),
-    g = n(543819);
-function f(e) {
+    f = n(543819);
+function g(e) {
     let { platform: t } = e;
-    return t === p.YE.XBOX ? (0, r.jsx)(u.Z, { className: g.icon }) : t === p.YE.PLAYSTATION ? (0, r.jsx)(c.Z, { className: g.icon }) : null;
+    return t === p.YE.XBOX ? (0, r.jsx)(u.Z, { className: f.icon }) : t === p.YE.PLAYSTATION ? (0, r.jsx)(c.Z, { className: f.icon }) : null;
 }
 function m(e) {
     let { voiceState: t, awaitingRemoteSessionInfo: n } = e,
@@ -28,9 +28,9 @@ function m(e) {
     let m = null != n,
         b = m ? (u === p.YE.XBOX ? h.NW.string(h.t.UjA4HR) : h.NW.string(h.t.QCw1oa)) : u === p.YE.XBOX ? h.NW.format(h.t['ynEs/f'], {}) : h.NW.format(h.t.TZ17Bg, {});
     return (0, r.jsxs)('div', {
-        className: l()(g.root, m ? g.connecting : g.connected),
+        className: l()(f.root, m ? f.connecting : f.connected),
         children: [
-            (0, r.jsx)(f, { platform: u }),
+            (0, r.jsx)(g, { platform: u }),
             (0, r.jsx)(a.Text, {
                 color: m ? 'header-primary' : 'always-white',
                 variant: 'text-xs/medium',

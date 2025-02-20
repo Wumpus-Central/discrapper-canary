@@ -302,8 +302,8 @@ class h extends a.C {
         ]);
     }
 }
-let g = new h();
-class f extends a.C {
+let f = new h();
+class g extends a.C {
     create(e) {
         let t = {
             link: '',
@@ -371,7 +371,7 @@ class f extends a.C {
         ]);
     }
 }
-let m = new f();
+let m = new g();
 class b extends a.C {
     create(e) {
         let t = {
@@ -443,7 +443,7 @@ class b extends a.C {
                     l.heroArtVideoSubtitles.push(m.internalBinaryRead(e, e.uint32(), n));
                     break;
                 case 14:
-                    l.storage = g.internalBinaryRead(e, e.uint32(), n, l.storage);
+                    l.storage = f.internalBinaryRead(e, e.uint32(), n, l.storage);
                     break;
                 default:
                     let o = n.readUnknownField;
@@ -459,7 +459,7 @@ class b extends a.C {
         for (let r = 0; r < e.featureCards.length; r++) u.internalBinaryWrite(e.featureCards[r], t.tag(5, i.TD.LengthDelimited).fork(), n).join();
         e.button && p.internalBinaryWrite(e.button, t.tag(6, i.TD.LengthDelimited).fork(), n).join(), '' !== e.dismissKey && t.tag(7, i.TD.LengthDelimited).string(e.dismissKey), '' !== e.heroArtVideoLinkLightTheme && t.tag(8, i.TD.LengthDelimited).string(e.heroArtVideoLinkLightTheme), '' !== e.heroArtImageLinkDarkTheme && t.tag(9, i.TD.LengthDelimited).string(e.heroArtImageLinkDarkTheme), '' !== e.heroArtImageLinkLightTheme && t.tag(10, i.TD.LengthDelimited).string(e.heroArtImageLinkLightTheme), '' !== e.modalTopPill && t.tag(11, i.TD.LengthDelimited).string(e.modalTopPill), '' !== e.body && t.tag(12, i.TD.LengthDelimited).string(e.body);
         for (let r = 0; r < e.heroArtVideoSubtitles.length; r++) m.internalBinaryWrite(e.heroArtVideoSubtitles[r], t.tag(13, i.TD.LengthDelimited).fork(), n).join();
-        e.storage && g.internalBinaryWrite(e.storage, t.tag(14, i.TD.LengthDelimited).fork(), n).join();
+        e.storage && f.internalBinaryWrite(e.storage, t.tag(14, i.TD.LengthDelimited).fork(), n).join();
         let r = n.writeUnknownFields;
         return !1 !== r && (!0 == r ? i.z.onWrite : r)(this.typeName, e, t), t;
     }
@@ -549,7 +549,7 @@ class b extends a.C {
                 no: 14,
                 name: 'storage',
                 kind: 'message',
-                T: () => g
+                T: () => f
             }
         ]);
     }

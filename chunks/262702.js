@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(47120);
+n.d(t, { Z: () => g }), n(47120);
 var r = n(570140),
     i = n(846027),
     l = n(872810),
@@ -22,7 +22,7 @@ function h(e, t, n) {
         e
     );
 }
-class g extends o.Z {
+class f extends o.Z {
     _initialize() {
         r.Z.subscribe('VOICE_STATE_UPDATES', this.handleVoiceStateUpdates);
     }
@@ -48,4 +48,4 @@ class g extends o.Z {
             });
     }
 }
-let f = new g();
+let g = new f();

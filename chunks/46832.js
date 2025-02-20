@@ -10,7 +10,7 @@ var r = n(836560),
     d = n(452426),
     p = n(186901),
     h = n(981631);
-function g(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +23,7 @@ function g(e, t, n) {
         e
     );
 }
-let f = 10 * s.Z.Millis.SECOND,
+let g = 10 * s.Z.Millis.SECOND,
     m = new Map(),
     b = new Set(),
     _ = (e, t, n) => {
@@ -54,12 +54,12 @@ class E extends r.EventEmitter {
         var u;
         super(),
             (u = this),
-            g(this, 'validateSocketClient', void 0),
-            g(this, 'logger', void 0),
-            g(this, 'createPostMessageProxySocket', void 0),
-            g(this, 'onFrameHandled', void 0),
-            g(this, 'handshakeFailureTimeoutId', void 0),
-            g(this, 'disconnectSocket', function (e, t) {
+            f(this, 'validateSocketClient', void 0),
+            f(this, 'logger', void 0),
+            f(this, 'createPostMessageProxySocket', void 0),
+            f(this, 'onFrameHandled', void 0),
+            f(this, 'handshakeFailureTimeoutId', void 0),
+            f(this, 'disconnectSocket', function (e, t) {
                 var n, r;
                 let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
                 u.emit('disconnect', e, i ? void 0 : t), e.close(t.code, null !== (n = t.message) && void 0 !== n ? n : 'Unknown');
@@ -73,7 +73,7 @@ class E extends r.EventEmitter {
                         : [null, null];
                 null != l && m.delete(l);
             }),
-            g(this, 'handleIFrameMount', (e) => {
+            f(this, 'handleIFrameMount', (e) => {
                 let { id: t } = e;
                 b.add(t),
                     (this.handshakeFailureTimeoutId = setTimeout(() => {
@@ -83,12 +83,12 @@ class E extends r.EventEmitter {
                                 application_id: t,
                                 channel_id: (0, l.pY)(n.location),
                                 guild_id: (0, l.jS)(n.location),
-                                timeout_ms: f
+                                timeout_ms: g
                             });
                         });
-                    }, f));
+                    }, g));
             }),
-            g(this, 'handleIFrameUnmount', (e) => {
+            f(this, 'handleIFrameUnmount', (e) => {
                 var t;
                 let { id: n } = e;
                 b.delete(n);
@@ -112,7 +112,7 @@ class E extends r.EventEmitter {
                     ),
                     m.delete(r));
             }),
-            g(this, 'handleMessage', (e, t, n) => {
+            f(this, 'handleMessage', (e, t, n) => {
                 let r = m.get(t);
                 try {
                     this.routeEvent(r, t, e, n);
@@ -137,7 +137,7 @@ class E extends r.EventEmitter {
                           );
                 }
             }),
-            g(this, 'handleFrame', (e, t, n) => {
+            f(this, 'handleFrame', (e, t, n) => {
                 var r;
                 let i;
                 if (e !== t.origin) throw new c.Z({ closeCode: h.$VG.INVALID_ORIGIN }, 'Origin has changed');
@@ -148,7 +148,7 @@ class E extends r.EventEmitter {
                 }
                 null === (r = this.onFrameHandled) || void 0 === r || r.call(this, i, this.logger, t), this.emit('request', t, i);
             }),
-            g(this, 'handleHandshake', async (e, t, r) => {
+            f(this, 'handleHandshake', async (e, t, r) => {
                 let i;
                 null != this.handshakeFailureTimeoutId && clearTimeout(this.handshakeFailureTimeoutId);
                 let l = (await n.e('85441').then(n.t.bind(n, 826753, 23))).default;
@@ -197,7 +197,7 @@ class E extends r.EventEmitter {
                     throw (this.logger.info('Socket Closed: '.concat(i.id, ', ').concat(e.message)), e);
                 }
             }),
-            g(this, 'handleClose', async (e, t) => {
+            f(this, 'handleClose', async (e, t) => {
                 let r = (await n.e('85441').then(n.t.bind(n, 826753, 23))).default;
                 try {
                     r.assert(

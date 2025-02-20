@@ -11,7 +11,7 @@ var l = n(120356),
     d = n(388032),
     p = n(415820),
     h = (((r = h || {})[(r.STAFF_NOTES = 1)] = 'STAFF_NOTES'), r);
-let g = a.ZP.connectStores([u.Z], () => ({ animate: u.Z.isFocused() }))((e) => {
+let f = a.ZP.connectStores([u.Z], () => ({ animate: u.Z.isFocused() }))((e) => {
         let { user: t, className: n, animate: r } = e;
         return (0, i.jsxs)('div', {
             className: o()(p.staffReviewHeader, n),
@@ -37,7 +37,7 @@ let g = a.ZP.connectStores([u.Z], () => ({ animate: u.Z.isFocused() }))((e) => {
             ]
         });
     }),
-    f = (e) => {
+    g = (e) => {
         let { data: t, className: n } = e;
         if (1 === t.type) {
             if (null == t.staffNotes) return null;
@@ -47,7 +47,7 @@ let g = a.ZP.connectStores([u.Z], () => ({ animate: u.Z.isFocused() }))((e) => {
                 : (0, i.jsxs)('div', {
                       className: n,
                       children: [
-                          (0, i.jsx)(g, {
+                          (0, i.jsx)(f, {
                               user: e,
                               className: p.header
                           }),
@@ -60,5 +60,5 @@ let g = a.ZP.connectStores([u.Z], () => ({ animate: u.Z.isFocused() }))((e) => {
         }
         throw Error('Unknown type');
     };
-f.Types = h;
-let m = f;
+g.Types = h;
+let m = g;

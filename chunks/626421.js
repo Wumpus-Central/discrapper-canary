@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(47120);
+n.d(t, { Z: () => f }), n(47120);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -30,7 +30,7 @@ let h = i.memo(function (e) {
               children: c
           });
 });
-function g() {
+function f() {
     let e = (0, a.e7)([c.Z], () => c.Z.getGuildId()),
         t = (0, u.Eg)(e),
         [n, i] = (0, s.US)(

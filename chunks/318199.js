@@ -1,6 +1,6 @@
 n.d(t, {
     default: () => m,
-    r: () => f
+    r: () => g
 }),
     n(566702);
 var r = n(200651);
@@ -15,8 +15,8 @@ var i = n(581282),
     d = n(605236),
     p = n(960048),
     h = n(276792),
-    g = n(290347);
-function f(e) {
+    f = n(290347);
+function g(e) {
     let { content: t, isPreview: n } = e,
         r = l.t.fromBinary((0, i.c)(t));
     return 'announcementModalVariant1' !== r.properties.oneofKind ? null : !n && (0 === r.properties.announcementModalVariant1.dismissKey.trim().length || (0, d.un)(Number(r.properties.announcementModalVariant1.dismissKey))) ? null : (n && (r.properties.announcementModalVariant1.dismissKey = ''), r);
@@ -26,17 +26,17 @@ function m(e) {
         { location: i } = (0, a.O)(),
         { analyticsLocations: l } = (0, u.ZP)(c.Z.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL),
         d = (0, s.ZP)(),
-        f = (0, o.ap)(d);
+        g = (0, o.ap)(d);
     if ('announcementModalVariant1' === n.properties.oneofKind) {
         let e = (0, h.N)({
             content: n.properties.announcementModalVariant1,
             renderModalProps: t,
             analyticsLocations: l,
             analyticsLocation: i,
-            isLightTheme: f
+            isLightTheme: g
         });
         return (0, r.jsx)(
-            g.Z,
+            f.Z,
             (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},

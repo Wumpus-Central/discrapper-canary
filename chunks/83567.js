@@ -10,11 +10,11 @@ var r = n(570140),
     d = n(452426),
     p = n(186901),
     h = n(981631),
-    g = n(701488),
-    f = n(231338);
-let m = new Set([g.Fu, g.JT]),
+    f = n(701488),
+    g = n(231338);
+let m = new Set([f.Fu, f.JT]),
     b = {
-        [f.Et.GET_PROVIDER_ACCESS_TOKEN]: {
+        [g.Et.GET_PROVIDER_ACCESS_TOKEN]: {
             scope: { [p.Gp.ANY]: [p.wE] },
             validation: (e) =>
                 (0, d.Z)(e).required().keys({
@@ -28,22 +28,22 @@ let m = new Set([g.Fu, g.JT]),
                 } = e;
                 (0, u.bu)(t.transport);
                 let p = (0, u._f)(t.application),
-                    g = l.Z.get(n);
-                if (null == g) throw new c.Z({ errorCode: f.lT.INVALID_PROVIDER }, 'Platform not found for provider "'.concat(n, '"'));
+                    f = l.Z.get(n);
+                if (null == f) throw new c.Z({ errorCode: g.lT.INVALID_PROVIDER }, 'Platform not found for provider "'.concat(n, '"'));
                 if (n === h.ABu.AMAZON_MUSIC) {
-                    if (!m.has(p)) throw new c.Z({ errorCode: f.lT.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
-                } else throw new c.Z({ errorCode: f.lT.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
+                    if (!m.has(p)) throw new c.Z({ errorCode: g.lT.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
+                } else throw new c.Z({ errorCode: g.lT.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
                 return new Promise(async (e, t) => {
                     let l = a.Z.getAccount(null, n);
                     if (null == l) {
                         function u(t) {
                             var n;
-                            if (null == g) return;
-                            let r = (null !== (n = t.accounts) && void 0 !== n ? n : []).find((e) => e.type === g.type);
+                            if (null == f) return;
+                            let r = (null !== (n = t.accounts) && void 0 !== n ? n : []).find((e) => e.type === f.type);
                             null != r && (e({ access_token: r.access_token }), m());
                         }
                         function p() {
-                            t(new c.Z({ errorCode: f.lT.OAUTH2_ERROR }, 'OAuth2 setup for "'.concat(n, '" failed'))), m();
+                            t(new c.Z({ errorCode: g.lT.OAUTH2_ERROR }, 'OAuth2 setup for "'.concat(n, '" failed'))), m();
                         }
                         function m() {
                             r.Z.unsubscribe('USER_CONNECTIONS_UPDATE', u), s.S.unsubscribe(h.CkL.CONNECTIONS_CALLBACK_ERROR, p);
@@ -51,14 +51,14 @@ let m = new Set([g.Fu, g.JT]),
                         r.Z.subscribe('USER_CONNECTIONS_UPDATE', u),
                             s.S.subscribe(h.CkL.CONNECTIONS_CALLBACK_ERROR, p),
                             (0, o.Z)({
-                                platformType: g.type,
+                                platformType: f.type,
                                 location: h.Sbl.ACTIVITY_RPC,
                                 successRedirect: d
                             });
                     } else
                         try {
-                            let t = await i.Z.refreshAccessToken(g.type, l.id);
-                            if (null == t) throw new c.Z({ errorCode: f.lT.OAUTH2_ERROR }, 'Refreshing access token did not return a new access token');
+                            let t = await i.Z.refreshAccessToken(f.type, l.id);
+                            if (null == t) throw new c.Z({ errorCode: g.lT.OAUTH2_ERROR }, 'Refreshing access token did not return a new access token');
                             e({ access_token: t });
                         } catch (e) {
                             t(e);
@@ -66,7 +66,7 @@ let m = new Set([g.Fu, g.JT]),
                 });
             }
         },
-        [f.Et.MAYBE_GET_PROVIDER_ACCESS_TOKEN]: {
+        [g.Et.MAYBE_GET_PROVIDER_ACCESS_TOKEN]: {
             scope: { [p.Gp.ANY]: [p.wE] },
             validation: (e) => (0, d.Z)(e).required().keys({ provider: e.string().required() }),
             handler: async (e) => {
@@ -77,14 +77,14 @@ let m = new Set([g.Fu, g.JT]),
                 (0, u.bu)(t.transport);
                 let r = (0, u._f)(t.application),
                     o = l.Z.get(n);
-                if (null == o) throw new c.Z({ errorCode: f.lT.INVALID_PROVIDER }, 'Platform not found for provider "'.concat(n, '"'));
+                if (null == o) throw new c.Z({ errorCode: g.lT.INVALID_PROVIDER }, 'Platform not found for provider "'.concat(n, '"'));
                 if (n === h.ABu.AMAZON_MUSIC) {
-                    if (!m.has(r)) throw new c.Z({ errorCode: f.lT.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
-                } else throw new c.Z({ errorCode: f.lT.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
+                    if (!m.has(r)) throw new c.Z({ errorCode: g.lT.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
+                } else throw new c.Z({ errorCode: g.lT.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
                 let s = a.Z.getAccount(null, n);
-                if (null == s) throw new c.Z({ errorCode: f.lT.NO_CONNECTION_FOUND }, 'No connection found');
+                if (null == s) throw new c.Z({ errorCode: g.lT.NO_CONNECTION_FOUND }, 'No connection found');
                 let d = await i.Z.refreshAccessToken(o.type, s.id);
-                if (null == d) throw new c.Z({ errorCode: f.lT.OAUTH2_ERROR }, 'Refreshing access token did not return a new access token');
+                if (null == d) throw new c.Z({ errorCode: g.lT.OAUTH2_ERROR }, 'Refreshing access token did not return a new access token');
                 return { access_token: d };
             }
         }

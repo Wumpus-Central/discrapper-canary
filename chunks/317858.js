@@ -10,15 +10,15 @@ var r = n(192379),
     d = n(888369),
     p = n(292959),
     h = n(699516),
-    g = n(340895),
-    f = n(358085),
+    f = n(340895),
+    g = n(358085),
     m = n(998502),
     b = n(252618),
     _ = n(981631),
     E = n(388032);
 let O = new Set(['Blink', 'Gecko', 'WebKit']),
     N = _.dG4;
-if (f.isPlatformEmbedded) N = (e) => m.ZP.setBadge(e);
+if (g.isPlatformEmbedded) N = (e) => m.ZP.setBadge(e);
 else if (O.has(a().layout)) {
     let e = new (l())({ animation: 'none' });
     N = (t) => {
@@ -28,7 +28,7 @@ else if (O.has(a().layout)) {
     };
 }
 function v() {
-    let e = (0, s.e7)([g.Z], () => g.Z.hasIncomingCalls()),
+    let e = (0, s.e7)([f.Z], () => f.Z.hasIncomingCalls()),
         t = (0, s.e7)([d.default, h.Z, p.Z, c.Z], () => {
             let e = d.default.getTotalMentionCount(),
                 t = (0, u.m$)([h.Z, c.Z]),

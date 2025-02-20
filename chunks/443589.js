@@ -10,8 +10,8 @@ var r = n(200651),
     d = n(906732),
     p = n(213609),
     h = n(963249),
-    g = n(579185),
-    f = n(814443),
+    f = n(579185),
+    g = n(814443),
     m = n(626135),
     b = n(479446),
     _ = n(522558),
@@ -30,10 +30,10 @@ let T = {
 function P(e) {
     let { recipientUser: t, giftIntentType: n, analyticsPage: l, shouldHighlight: P } = e,
         { analyticsLocations: j } = (0, d.ZP)(),
-        { isHovered: A, setIsHovered: Z, onMouseEnter: x, onMouseLeave: L } = (0, g.Z)(200, 300),
+        { isHovered: A, setIsHovered: Z, onMouseEnter: x, onMouseLeave: L } = (0, f.Z)(200, 300),
         { enableEmojiCTA: w } = _.w.useExperiment({ location: 'GiftIntentActionButton' }, { autoTrackExposure: !1 });
     i.useEffect(() => {
-        let e = f.Z.getUserAffinity(t.id);
+        let e = g.Z.getUserAffinity(t.id);
         (0, p.h)({
             name: s.ImpressionNames.GIFT_INTENT_ACTION_BUTTON,
             type: s.ImpressionTypes.VIEW,
@@ -51,7 +51,7 @@ function P(e) {
         ),
         D = (e) => {
             e.stopPropagation();
-            let r = f.Z.getUserAffinity(t.id);
+            let r = g.Z.getUserAffinity(t.id);
             m.default.track(y.rMx.GIFT_INTENT_ACTION_BUTTON_CLICKED, {
                 gift_intent_type: n,
                 affinity: null == r ? void 0 : r.affinity

@@ -22,17 +22,17 @@ function h(e, t, n) {
         e
     );
 }
-let g = (0, a.GSL)(c.Z),
-    f = (0, a.GSL)(u.Z),
+let f = (0, a.GSL)(c.Z),
+    g = (0, a.GSL)(u.Z),
     m = new Set([d.TzF.PUSHING, d.TzF.PULLING]),
     b = Object.freeze({
-        [d.TzF.DONE]: g,
-        [d.TzF.PLANNING]: g,
-        [d.TzF.PREPARING]: g,
+        [d.TzF.DONE]: f,
+        [d.TzF.PLANNING]: f,
+        [d.TzF.PREPARING]: f,
         [d.TzF.PUSHING]: a.rG2,
         [d.TzF.PULLING]: a._8t,
-        [d.TzF.CONFLICT]: g,
-        [d.TzF.ERROR]: g
+        [d.TzF.CONFLICT]: f,
+        [d.TzF.ERROR]: f
     });
 class _ extends i.PureComponent {
     componentDidMount() {
@@ -95,7 +95,7 @@ class _ extends i.PureComponent {
                 stopColor: 'rgba(114, 137, 218, 1)',
                 stop: this.getStop(i, l)
             });
-        let s = l ? f : b[i.type];
+        let s = l ? g : b[i.type];
         return (0, r.jsx)(a.ua7, {
             text: this.getTooltip(i, l),
             children: (e) =>

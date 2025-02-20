@@ -11,8 +11,8 @@ var i = n(481060),
     d = n(36246),
     p = n(305342),
     h = n(726324),
-    g = n(981631),
-    f = n(388032),
+    f = n(981631),
+    g = n(388032),
     m = n(818488);
 let b = (e) => {
     var t, n;
@@ -21,7 +21,7 @@ let b = (e) => {
     (0, s.Z)({
         guildId: b.id,
         groupListingId: null == _ ? void 0 : _.id,
-        location: g.Sbl.ROLE_SUBSCRIPTIONS_TAB,
+        location: f.Sbl.ROLE_SUBSCRIPTIONS_TAB,
         relevantSubscriptionListingIds: null == _ ? void 0 : _.subscription_listings_ids
     });
     let { activeSubscription: E } = (0, a.Z)(null == _ ? void 0 : _.id),
@@ -31,7 +31,7 @@ let b = (e) => {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)(h.Z, {
-                title: f.NW.format(f.t['rm+ojI'], { serverName: b.toString() }),
+                title: g.NW.format(g.t['rm+ojI'], { serverName: b.toString() }),
                 description: null != N ? N : null,
                 coverImageAsset: null !== (n = null == O ? void 0 : O.cover_image_asset) && void 0 !== n ? n : null,
                 guild: b,
@@ -57,7 +57,7 @@ let b = (e) => {
                                 guildId: b.id,
                                 groupListingId: null !== (t = null == _ ? void 0 : _.id) && void 0 !== t ? t : '',
                                 listingId: e,
-                                analyticsLocation: g.Sbl.ROLE_SUBSCRIPTIONS_TAB
+                                analyticsLocation: f.Sbl.ROLE_SUBSCRIPTIONS_TAB
                             },
                             e
                         );

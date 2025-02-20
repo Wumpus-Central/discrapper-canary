@@ -11,8 +11,8 @@ var i = n(243814),
     d = n(199902),
     p = n(131951),
     h = n(449224),
-    g = n(358085),
-    f = n(452426),
+    f = n(358085),
+    g = n(452426),
     m = n(736045),
     b = n(186901),
     _ = n(981631);
@@ -31,7 +31,7 @@ let E = {
             [b.Gp.ALL]: [i.x.RPC, i.x.RPC_SCREENSHARE_WRITE]
         },
         validation: (e) =>
-            (0, f.Z)(e)
+            (0, g.Z)(e)
                 .optional()
                 .keys({ pid: e.number().optional().min(0) }),
         handler(e) {
@@ -43,11 +43,11 @@ let E = {
                 u = (0, c.Z)(s.ZP, h.Z),
                 p = (0, m.Z)();
             null != p &&
-                (null != t && null != o && o.pid !== t && (0, g.isWindows)()
+                (null != t && null != o && o.pid !== t && (0, f.isWindows)()
                     ? (0, a.WH)(p.guild_id, p.id, { pid: t })
                     : null != i
                       ? (0, a.L6)(!1)
-                      : null != t && (0, g.isWindows)()
+                      : null != t && (0, f.isWindows)()
                         ? (0, a.WH)(p.guild_id, p.id, { pid: t })
                         : null != u
                           ? (0, a.WH)(p.guild_id, p.id, { pid: u.pid })

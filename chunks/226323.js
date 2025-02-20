@@ -10,8 +10,8 @@ var r = n(200651),
     d = n(512384),
     p = n(184301),
     h = n(347475),
-    g = n(314897),
-    f = n(131951),
+    f = n(314897),
+    g = n(131951),
     m = n(51144),
     b = n(524484),
     _ = n(388032),
@@ -89,15 +89,15 @@ let v = { offset: 2 },
     };
 function I(e) {
     var t, i;
-    let { channel: l, user: g, nick: I, mute: C, deaf: S, serverMute: T, serverDeaf: P } = e,
-        j = (0, a.e7)([f.Z], () => f.Z.isLocalMute(g.id)),
+    let { channel: l, user: f, nick: I, mute: C, deaf: S, serverMute: T, serverDeaf: P } = e,
+        j = (0, a.e7)([g.Z], () => g.Z.isLocalMute(f.id)),
         A = (0, u.Z)({
-            userId: g.id,
+            userId: f.id,
             checkSoundSharing: !0
         }),
         Z = null !== (t = l.getGuildId()) && void 0 !== t ? t : void 0,
-        x = g.getAvatarURL(l.guild_id, 24),
-        L = null != I ? I : m.ZP.getName(g),
+        x = f.getAvatarURL(l.guild_id, 24),
+        L = null != I ? I : m.ZP.getName(f),
         {
             icon: w,
             colorize: R,
@@ -134,7 +134,7 @@ function I(e) {
                       (0, r.jsx)(
                           e,
                           N(O({}, t), {
-                              user: g,
+                              user: f,
                               guildId: Z,
                               channel: l,
                               showMediaItems: !0
@@ -147,7 +147,7 @@ function I(e) {
                       (0, r.jsx)(
                           e,
                           N(O({}, t), {
-                              user: g,
+                              user: f,
                               showMediaItems: !0
                           })
                       );
@@ -155,7 +155,7 @@ function I(e) {
     }
     return (0, r.jsx)(s.yRy, {
         preload: () =>
-            (0, p.Z)(g.id, g.getAvatarURL(Z, 80), {
+            (0, p.Z)(f.id, f.getAvatarURL(Z, 80), {
                 guildId: Z,
                 channelId: l.id
             }),
@@ -165,7 +165,7 @@ function I(e) {
                 h.Z,
                 O(
                     {
-                        userId: g.id,
+                        userId: f.id,
                         guildId: Z,
                         channelId: l.id
                     },
@@ -219,8 +219,8 @@ function C(e) {
             }),
             focusProps: v
         }),
-        h = (0, a.e7)([g.default], () => g.default.getId(), []),
-        [f, m] = (function (e, t) {
+        h = (0, a.e7)([f.default], () => f.default.getId(), []),
+        [g, m] = (function (e, t) {
             let n = [];
             for (let r of e)
                 if (!(r.user.id === t || n.some((e) => e.user.id === r.user.id))) {
@@ -229,7 +229,7 @@ function C(e) {
                 }
             return [n, !1];
         })(t, h),
-        b = m && c ? t : f;
+        b = m && c ? t : g;
     return b.length <= 0
         ? null
         : (0, r.jsx)(s.zJl, {

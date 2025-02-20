@@ -11,49 +11,49 @@ var r,
 n(914010);
 var p = n(709054),
     h = n(176505);
-let g = {},
-    f = {},
+let f = {},
+    g = {},
     m = {},
     b = {};
 function _(e) {
-    let t = f[e];
+    let t = g[e];
     if (null == t) return;
     let n = p.default.fromTimestamp(Date.now() - 900000),
         r = s().findIndex(t, (e) => p.default.compare(e.id, n) > 0);
-    if (-1 === r) f[e] = [];
+    if (-1 === r) g[e] = [];
     else {
         let n = Math.max(r, t.length - 26);
-        f[e] = s().slice(t, n);
+        g[e] = s().slice(t, n);
     }
     m[e] = Date.now();
 }
 function E(e, t, n, r) {
-    g[e].add(t);
+    f[e].add(t);
     let i = m[t];
     (null == i || i + 300000 > Date.now()) && _(t),
-        null == f[t] && (f[t] = []),
-        f[t].push({
+        null == g[t] && (g[t] = []),
+        g[t].push({
             id: n,
             userId: r
         });
 }
 function O(e) {
     let { channel: t } = e;
-    delete f[t.id], delete m[t.id];
+    delete g[t.id], delete m[t.id];
 }
 class N extends (o = c.ZP.Store) {
     getActiveChannelsFetchStatus(e) {
         return b[e];
     }
     getActiveChannelIds(e) {
-        return g[e];
+        return f[e];
     }
     getChannelMessageData(e) {
-        return f[e];
+        return g[e];
     }
     shouldFetch(e) {
         var t;
-        return null == g[e] && !(null === (t = b[e]) || void 0 === t ? void 0 : t.loading);
+        return null == f[e] && !(null === (t = b[e]) || void 0 === t ? void 0 : t.loading);
     }
 }
 (l = 'ActiveChannelsStore'),
@@ -69,21 +69,21 @@ class N extends (o = c.ZP.Store) {
         CHANNEL_SELECT: function (e) {
             let { channelId: t, guildId: n } = e;
             if (!(0, h.ME)(t) || null == n) return !1;
-            let r = g[n];
+            let r = f[n];
             if (null == r) return !1;
             r.forEach((e) => {
                 var t;
-                _(e), (null === (t = f[e]) || void 0 === t ? void 0 : t.length) === 0 && delete f[e];
+                _(e), (null === (t = g[e]) || void 0 === t ? void 0 : t.length) === 0 && delete g[e];
             });
             let i = s()
                 .chain(Array.from(r))
-                .filter((e) => e in f)
+                .filter((e) => e in g)
                 .sortBy((e) => {
                     var t, n;
-                    return -(null !== (n = null === (t = f[e]) || void 0 === t ? void 0 : t.length) && void 0 !== n ? n : 0);
+                    return -(null !== (n = null === (t = g[e]) || void 0 === t ? void 0 : t.length) && void 0 !== n ? n : 0);
                 })
                 .value();
-            g[n] = new Set(i);
+            f[n] = new Set(i);
         },
         MESSAGE_CREATE: function (e) {
             var t;
@@ -92,12 +92,12 @@ class N extends (o = c.ZP.Store) {
             let o = d.Z.getChannel(n);
             if (null == o) return !1;
             let a = o.guild_id;
-            if (null == a || null == g[a]) return !1;
+            if (null == a || null == f[a]) return !1;
             E(a, n, r.id, null === (t = r.author) || void 0 === t ? void 0 : t.id);
         },
         GUILD_DELETE: function (e) {
             let { guild: t } = e;
-            delete g[t.id];
+            delete f[t.id];
         },
         CHANNEL_DELETE: O,
         THREAD_DELETE: O,
@@ -116,7 +116,7 @@ class N extends (o = c.ZP.Store) {
                 error: null,
                 fetchedAt: Date.now()
             }),
-                (g[t] = new Set()),
+                (f[t] = new Set()),
                 n.forEach((e) => {
                     let { channel_id: n, messages: r } = e;
                     r.forEach((e) => {

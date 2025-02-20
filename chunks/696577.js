@@ -10,8 +10,8 @@ var r = n(200651),
     d = n(79712),
     p = n(171368),
     h = n(594174),
-    g = n(626135),
-    f = n(51144),
+    f = n(626135),
+    g = n(51144),
     m = n(743056),
     b = n(321488),
     _ = n(417183),
@@ -29,13 +29,13 @@ function y(e) {
             isGameRelationship: s,
             location: 'Friends'
         }),
-        g = i.useCallback(
+        f = i.useCallback(
             (e) => {
                 e.stopPropagation(), d();
             },
             [d]
         ),
-        f = i.useCallback(
+        g = i.useCallback(
             (e) => {
                 e.stopPropagation(), p();
             },
@@ -55,14 +55,14 @@ function y(e) {
                 icon: a.dz2,
                 actionType: b.Z.ActionTypes.ACCEPT,
                 tooltip: N.NW.string(N.t.ZcibdX),
-                onClick: g,
+                onClick: f,
                 shouldHighlight: c
             }),
             (0, r.jsx)(b.Z, {
                 icon: a.Dio,
                 actionType: b.Z.ActionTypes.DENY,
                 tooltip: N.NW.string(N.t.xuio0N),
-                onClick: f,
+                onClick: g,
                 shouldHighlight: c
             })
         ]
@@ -125,7 +125,7 @@ function C(e) {
 }
 function S(e) {
     let { user: t, hovered: n, status: i, disambiguateGameRelationships: l, isGameRelationship: o, applicationId: a } = e,
-        s = f.ZP.useUserTag(t);
+        s = g.ZP.useUserTag(t);
     return (0, r.jsx)(E.Z, {
         user: t,
         hovered: n,
@@ -141,9 +141,9 @@ function S(e) {
 }
 function T(e) {
     let { user: t, type: n, status: l, isFocused: o, applicationId: a, disambiguateGameRelationships: c, isGameRelationship: u } = e,
-        d = i.useContext(g.AnalyticsContext),
+        d = i.useContext(f.AnalyticsContext),
         { analyticsLocations: h } = (0, s.ZP)(),
-        f = l === O.Skl.OFFLINE ? O.Skl.UNKNOWN : l,
+        g = l === O.Skl.OFFLINE ? O.Skl.UNKNOWN : l,
         m = i.useCallback(
             () =>
                 (0, p.openUserProfileModal)({
@@ -164,7 +164,7 @@ function T(e) {
                     (0, r.jsx)(S, {
                         user: t,
                         hovered: e,
-                        status: f,
+                        status: g,
                         disambiguateGameRelationships: c,
                         isGameRelationship: u,
                         applicationId: a

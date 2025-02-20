@@ -22,8 +22,8 @@ function p(e, t, n) {
     );
 }
 let h = {},
-    g = 0,
-    f = !1,
+    f = 0,
+    g = !1,
     m = !1;
 function b(e) {
     var t;
@@ -41,7 +41,7 @@ class _ extends (r = o.ZP.Store) {
         this.waitFor(c.default);
     }
     getSuggestionCount() {
-        return g;
+        return f;
     }
     getSuggestions() {
         return Object.entries(h).map((e) => {
@@ -56,13 +56,13 @@ class _ extends (r = o.ZP.Store) {
 p(_, 'displayName', 'FriendSuggestionStore');
 let E = new _(a.Z, {
     CONNECTION_OPEN: function (e) {
-        (h = {}), (g = e.friendSuggestionCount) > 0 ? ((m = !0), f || !m || ((f = !0), (m = !1), u.Z.fetch())) : (0, d.Z)();
+        (h = {}), (f = e.friendSuggestionCount) > 0 ? ((m = !0), g || !m || ((g = !0), (m = !1), u.Z.fetch())) : (0, d.Z)();
     },
     FRIEND_SUGGESTION_CREATE: function (e) {
         var t, n;
         let r = b(e.suggestion);
         if (null != h[r.key]) return !1;
-        g++,
+        f++,
             (t = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -95,20 +95,20 @@ let E = new _(a.Z, {
             (h = t);
     },
     FRIEND_SUGGESTION_DELETE: function (e) {
-        (g = Math.max(0, --g)), delete h[e.suggestedUserId];
+        (f = Math.max(0, --f)), delete h[e.suggestedUserId];
     },
     LOAD_FRIEND_SUGGESTIONS_SUCCESS: function (e) {
         var t;
-        (f = !1),
+        (g = !1),
             (t = e.suggestions),
             (h = l()
                 .chain(t)
                 .map((e) => b(e))
                 .keyBy((e) => e.key)
                 .value()),
-            (g = l().keys(h).length);
+            (f = l().keys(h).length);
     },
     LOAD_FRIEND_SUGGESTIONS_FAILURE: function () {
-        (f = !1), (h = {});
+        (g = !1), (h = {});
     }
 });

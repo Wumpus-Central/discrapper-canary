@@ -10,8 +10,8 @@ var r = n(200651),
     d = n(377743),
     p = n(834743),
     h = n(862099),
-    g = n(704631),
-    f = n(819792),
+    f = n(704631),
+    g = n(819792),
     m = n(919285),
     b = n(118470),
     _ = n(413307),
@@ -31,7 +31,7 @@ function j(e) {
     var t;
     let { guild: n } = e,
         [u, h] = i.useState(null !== (t = a.K.get(S.Iv)) && void 0 !== t ? t : 0),
-        f = (e) => {
+        g = (e) => {
             a.K.set(S.Iv, e), h(e);
         },
         m = (0, l.Wu)(S.HG, () =>
@@ -46,12 +46,12 @@ function j(e) {
         children: (e) => {
             let { visibleContent: t, markAsDismissed: i } = e,
                 l = () => {
-                    f(Date.now()), i(T.L.UNKNOWN);
+                    g(Date.now()), i(T.L.UNKNOWN);
                 },
                 a = (() => {
                     switch (t) {
                         case o.z.CHANNEL_NOTICE_HUBLINK:
-                            return (0, r.jsx)(g.Z, {
+                            return (0, r.jsx)(f.Z, {
                                 guild: n,
                                 markAsDismissed: l
                             });
@@ -111,7 +111,7 @@ let A = (e) => {
         case C.R.APPLICATION_SUBSCRIPTION_EXPIRATION:
             return (0, r.jsx)(b.Z, { guild: t });
         case C.R.HUB_STUDY_ROOM:
-            return (0, r.jsx)(f.Z, { guild: t });
+            return (0, r.jsx)(g.Z, { guild: t });
         case C.R.SIGNUP:
             return (0, r.jsx)(E.Z, { guild: t });
     }

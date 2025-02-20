@@ -11,8 +11,8 @@ var i = n(544891),
     d = n(580130),
     p = n(695103),
     h = n(70956),
-    g = n(998502),
-    f = n(996106),
+    f = n(998502),
+    g = n(996106),
     m = n(186901),
     b = n(981631);
 function _(e) {
@@ -66,26 +66,26 @@ let O = 10 * h.Z.Millis.SECOND,
                 let { socket: t } = e,
                     i = t.application.id;
                 try {
-                    if (null == i) throw new f.Z({ errorCode: b.lTL.INVALID_COMMAND }, 'No application.');
+                    if (null == i) throw new g.Z({ errorCode: b.lTL.INVALID_COMMAND }, 'No application.');
                     let e = c.Z.getApplication(i);
-                    if (null == e) throw new f.Z({ errorCode: b.lTL.INVALID_ENTITLEMENT }, 'SKU does not exist.');
+                    if (null == e) throw new g.Z({ errorCode: b.lTL.INVALID_ENTITLEMENT }, 'SKU does not exist.');
                     let t = e.primarySkuId;
-                    if (null == t) throw new f.Z({ errorCode: b.lTL.INVALID_ENTITLEMENT }, 'SKU does not exist.');
+                    if (null == t) throw new g.Z({ errorCode: b.lTL.INVALID_ENTITLEMENT }, 'SKU does not exist.');
                     return Promise.race([
                         (function (e, t) {
                             let n = d.Z.isEntitledToSku(u.default.getCurrentUser(), e, t);
                             return null != n ? Promise.resolve(n) : (0, a.yD)(t).then(() => !0 === d.Z.isEntitledToSku(u.default.getCurrentUser(), e, t));
                         })(t, e.id).then((e) => {
-                            if (!e) throw new f.Z({ errorCode: b.lTL.INVALID_ENTITLEMENT }, 'User does not have entitlement.');
+                            if (!e) throw new g.Z({ errorCode: b.lTL.INVALID_ENTITLEMENT }, 'User does not have entitlement.');
                         }),
                         (0, l.GR)(O).then(() => {
-                            throw new f.Z({ errorCode: b.lTL.INVALID_ENTITLEMENT }, 'Timed out fetching entitlement.');
+                            throw new g.Z({ errorCode: b.lTL.INVALID_ENTITLEMENT }, 'Timed out fetching entitlement.');
                         })
                     ]);
                 } catch (e) {
                     throw (
                         (e.code === b.lTL.INVALID_ENTITLEMENT &&
-                            (g.ZP.focus(null, !0),
+                            (f.ZP.focus(null, !0),
                             (0, o.ZDy)(async () => {
                                 let { default: e } = await n.e('48748').then(n.bind(n, 52004));
                                 return (t) => (0, r.jsx)(e, E(_({}, t), { applicationId: i }));
@@ -100,7 +100,7 @@ let O = 10 * h.Z.Millis.SECOND,
             handler(e) {
                 let { socket: t } = e,
                     l = t.application.id;
-                if (null == l) throw new f.Z({ errorCode: b.lTL.INVALID_COMMAND }, 'No application.');
+                if (null == l) throw new g.Z({ errorCode: b.lTL.INVALID_COMMAND }, 'No application.');
                 return i.tn
                     .post({
                         url: b.ANM.ENTITLEMENT_TICKET(l),
@@ -115,7 +115,7 @@ let O = 10 * h.Z.Millis.SECOND,
                     })
                     .catch((e) => {
                         throw (
-                            (g.ZP.focus(null, !0),
+                            (f.ZP.focus(null, !0),
                             (0, o.ZDy)(async () => {
                                 let { default: e } = await n.e('48748').then(n.bind(n, 52004));
                                 return (t) => (0, r.jsx)(e, E(_({}, t), { applicationId: l }));

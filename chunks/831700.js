@@ -47,8 +47,8 @@ var i = n(120356),
     q = n(981631),
     Y = n(647086),
     Q = n(388032),
-    J = n(436804);
-function K(e, t, n) {
+    K = n(436804);
+function J(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -72,7 +72,7 @@ function X(e) {
                 })
             )),
             r.forEach(function (t) {
-                K(e, t, n[t]);
+                J(e, t, n[t]);
             });
     }
     return e;
@@ -110,7 +110,7 @@ class ee extends U.ZP {
     }
     getModeClass() {
         let { position: e, sortingPosition: t, isUserOver: n } = this.props;
-        return n ? J.containerUserOver : null != t ? (e > t ? J.containerDragAfter : J.containerDragBefore) : J.containerDefault;
+        return n ? K.containerUserOver : null != t ? (e > t ? K.containerDragAfter : K.containerDragBefore) : K.containerDefault;
     }
     renderSubtitle() {
         var e;
@@ -142,7 +142,7 @@ class ee extends U.ZP {
         return null == e
             ? null
             : (0, r.jsx)('div', {
-                  className: J.channelInfo,
+                  className: K.channelInfo,
                   children: e
               });
     }
@@ -155,7 +155,7 @@ class ee extends U.ZP {
                   children: (t) => {
                       let { onMouseEnter: n, onMouseLeave: i, onFocus: o, onBlur: a } = t;
                       return (0, r.jsx)(s.P3F, {
-                          className: l()(J.iconItem, J.alwaysShown),
+                          className: l()(K.iconItem, K.alwaysShown),
                           onClick: () => {
                               (0, I.X)('VoiceChannel') ? (0, E.k)(e, 'VoiceChannel') : window.open(B.Z.getArticleURL(q.BhN.HD_STREAMING_POTION), '_blank');
                           },
@@ -167,7 +167,7 @@ class ee extends U.ZP {
                           children: (0, r.jsx)(s.hh5, {
                               size: 'xs',
                               color: 'currentColor',
-                              className: J.actionIcon
+                              className: K.actionIcon
                           })
                       });
                   }
@@ -178,7 +178,7 @@ class ee extends U.ZP {
             { shouldShowActivities: I, shouldShowGuildVerificationPopout: N } = this.state,
             w = this.getVoiceStatesCount(),
             E = (0, r.jsxs)('li', {
-                className: l()(this.getModeClass(), { [J.disabled]: this.isDisabled() }),
+                className: l()(this.getModeClass(), { [K.disabled]: this.isDisabled() }),
                 'data-dnd-name': e.name,
                 children: [
                     (0, r.jsx)('div', {
@@ -221,8 +221,8 @@ class ee extends U.ZP {
                                                 $(
                                                     X(
                                                         {
-                                                            className: J.iconVisibility,
-                                                            iconClassName: l()({ [J.iconLive]: O }),
+                                                            className: K.iconVisibility,
+                                                            iconClassName: l()({ [K.iconLive]: O }),
                                                             hasActiveEvent: O,
                                                             channel: e,
                                                             selected: !x && t,
@@ -284,16 +284,16 @@ class ee extends U.ZP {
     }
     constructor(...e) {
         super(...e),
-            K(this, 'state', {
+            J(this, 'state', {
                 shouldShowActivities: !1,
                 shouldShowGuildVerificationPopout: !1,
                 hovered: !1
             }),
-            K(this, 'activitiesHideTimeout', new a.V7()),
-            K(this, 'closeGuildVerificationPopout', () => {
+            J(this, 'activitiesHideTimeout', new a.V7()),
+            J(this, 'closeGuildVerificationPopout', () => {
                 this.setState({ shouldShowGuildVerificationPopout: !1 });
             }),
-            K(this, 'handleVoiceConnect', () => {
+            J(this, 'handleVoiceConnect', () => {
                 let { locked: e, connected: t, channel: n, unverifiedAccount: r, needSubscriptionToAccess: i } = this.props;
                 r && this.setState({ shouldShowGuildVerificationPopout: !0 }),
                     v.Z.handleVoiceConnect({
@@ -303,7 +303,7 @@ class ee extends U.ZP {
                         locked: e
                     });
             }),
-            K(this, 'handleContextMenu', (e) => {
+            J(this, 'handleContextMenu', (e) => {
                 let { channel: t } = this.props,
                     i = A.Z.getGuild(t.getGuildId());
                 null != i &&
@@ -319,14 +319,14 @@ class ee extends U.ZP {
                             );
                     });
             }),
-            K(this, 'handleMouseEnter', () => {
+            J(this, 'handleMouseEnter', () => {
                 this.activitiesHideTimeout.stop(),
                     this.setState({
                         shouldShowActivities: !0,
                         hovered: !0
                     });
             }),
-            K(this, 'handleMouseLeave', () => {
+            J(this, 'handleMouseLeave', () => {
                 this.activitiesHideTimeout.start(100, () =>
                     this.setState({
                         shouldShowActivities: !1,
@@ -334,15 +334,15 @@ class ee extends U.ZP {
                     })
                 );
             }),
-            K(this, 'closePopout', () => {
+            J(this, 'closePopout', () => {
                 this.activitiesHideTimeout.stop(), this.setState({ shouldShowActivities: !1 });
             }),
-            K(this, 'handleClick', () => {
+            J(this, 'handleClick', () => {
                 let { channel: e } = this.props,
                     t = e.getGuildId();
                 null != t && (0, j.n)(t) && (0, O.hk)(t), this.handleVoiceConnect();
             }),
-            K(this, 'handleVoiceStatusClick', (e) => {
+            J(this, 'handleVoiceStatusClick', (e) => {
                 let { connected: t, channel: i } = this.props;
                 t &&
                     (e.stopPropagation(),
@@ -354,7 +354,7 @@ class ee extends U.ZP {
                         { modalKey: f.a }
                     ));
             }),
-            K(this, 'renderPopout', () => {
+            J(this, 'renderPopout', () => {
                 let { channel: e, voiceStates: t, sorting: n, isUserOver: i, selected: l, guild: o } = this.props,
                     { shouldShowActivities: a, shouldShowGuildVerificationPopout: s } = this.state;
                 if (a && !n && !i && !s) {
@@ -376,7 +376,7 @@ class ee extends U.ZP {
                     });
                 throw Error('VoiceChannel.renderPopout: There must always be something to render');
             }),
-            K(this, 'renderOpenChatButton', () => {
+            J(this, 'renderOpenChatButton', () => {
                 let { channel: e, locked: t, forceShowButtons: n } = this.props;
                 if (!t)
                     return (0, r.jsx)(s.ua7, {
@@ -384,7 +384,7 @@ class ee extends U.ZP {
                         children: (t) => {
                             let { onMouseEnter: i, onMouseLeave: o, onFocus: a, onBlur: u } = t;
                             return (0, r.jsx)(s.P3F, {
-                                className: l()(J.iconItem, n ? J.alwaysShown : null),
+                                className: l()(K.iconItem, n ? K.alwaysShown : null),
                                 onClick: () => {
                                     c.Z.updateChatOpen(e.id, !0), (0, N.Kh)(e.id);
                                 },
@@ -396,13 +396,13 @@ class ee extends U.ZP {
                                 children: (0, r.jsx)(s.kBi, {
                                     size: 'xs',
                                     color: 'currentColor',
-                                    className: J.actionIcon
+                                    className: K.actionIcon
                                 })
                             });
                         }
                     });
             }),
-            K(this, 'getTooltipText', () => {
+            J(this, 'getTooltipText', () => {
                 let { connected: e } = this.props;
                 return this.isFull() && !e ? Q.NW.string(Q.t.rZfiNj) : null;
             });

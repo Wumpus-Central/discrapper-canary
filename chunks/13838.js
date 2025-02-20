@@ -10,8 +10,8 @@ var r = n(392711),
     d = n(271383),
     p = n(430824),
     h = n(131951),
-    g = n(19780),
-    f = n(594174),
+    f = n(19780),
+    g = n(594174),
     m = n(979651),
     b = n(996106),
     _ = n(914946),
@@ -31,7 +31,7 @@ function T(e) {
         } = e,
         i = u.Z.getChannel(n);
     if (null == i || !(0, _.zM)(i, r.application.id, r.authorization.scopes)) throw new b.Z({ errorCode: C.lTL.INVALID_CHANNEL }, 'Invalid channel id: '.concat(n));
-    if (i.isNSFW() && (null === (t = f.default.getCurrentUser()) || void 0 === t ? void 0 : t.nsfwAllowed) !== !0) throw new b.Z({ errorCode: C.lTL.INVALID_CHANNEL }, 'Invalid nsfw channel id: '.concat(i.id));
+    if (i.isNSFW() && (null === (t = g.default.getCurrentUser()) || void 0 === t ? void 0 : t.nsfwAllowed) !== !0) throw new b.Z({ errorCode: C.lTL.INVALID_CHANNEL }, 'Invalid nsfw channel id: '.concat(i.id));
 }
 let P = (e) => (0, O.Z)(e).keys({ channel_id: e.string().allow(null) });
 function j(e) {
@@ -155,11 +155,11 @@ let A = {
         handler: () => (e) => {
             let { prevState: t, dispatch: n } = e,
                 r = {
-                    state: (0, _.zy)(g.Z.getState()),
-                    hostname: g.Z.getHostname(),
-                    pings: g.Z.getPings(),
-                    average_ping: g.Z.getAveragePing(),
-                    last_ping: g.Z.getLastPing()
+                    state: (0, _.zy)(f.Z.getState()),
+                    hostname: f.Z.getHostname(),
+                    pings: f.Z.getPings(),
+                    average_ping: f.Z.getAveragePing(),
+                    last_ping: f.Z.getLastPing()
                 };
             return i().isEqual(r, t) || n(r), r;
         }
@@ -278,7 +278,7 @@ let A = {
         },
         handler: () => (e) => {
             let { prevState: t, dispatch: n } = e,
-                r = { currentUser: f.default.getCurrentUser() };
+                r = { currentUser: g.default.getCurrentUser() };
             return null == r.currentUser || (null != t && (0, o.Z)(r, t)) || n((0, y.Z)(r.currentUser)), r;
         }
     },
@@ -321,12 +321,12 @@ let A = {
                 d = (null == u ? void 0 : u.id) != null ? a.Z.getApplication(u.id) : null,
                 p = null != d ? (0, N.Z)(d) : null,
                 h = null == o ? void 0 : o.sourceName,
-                g = {
+                f = {
                     active: null != o,
                     pid: null !== (t = null == o ? void 0 : o.pid) && void 0 !== t ? t : null,
                     application: (n = null != p) ? { name: h } : null
                 };
-            return i().isEqual(g, r) || l(g), g;
+            return i().isEqual(f, r) || l(f), f;
         }
     },
     [C.zMe.VIDEO_STATE_UPDATE]: {

@@ -10,8 +10,8 @@ var r = n(200651),
     d = n(481060),
     p = n(393238),
     h = n(410030),
-    g = n(204418),
-    f = n(70097),
+    f = n(204418),
+    g = n(70097),
     m = n(594174),
     b = n(626135),
     _ = n(617136),
@@ -116,7 +116,7 @@ let T = (0, i.memo)(function (e) {
                               ref: U,
                               className: S.decoWrapper,
                               style: { top: L },
-                              children: (0, r.jsx)(g.Z, {
+                              children: (0, r.jsx)(f.Z, {
                                   avatarDecorationOverride: X,
                                   user: G,
                                   guildId: null
@@ -126,7 +126,7 @@ let T = (0, i.memo)(function (e) {
                           ? (0, r.jsx)(v.Z, { className: S.image })
                           : $.isAnimated
                             ? (0, r.jsx)(r.Fragment, {
-                                  children: (0, r.jsx)(f.Z, {
+                                  children: (0, r.jsx)(g.Z, {
                                       className: S.assetBlurred,
                                       autoPlay: !1,
                                       children: (0, r.jsx)('source', {

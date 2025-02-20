@@ -10,8 +10,8 @@ var r = n(200651),
     d = n(819640),
     p = n(490983),
     h = n(799777),
-    g = n(5967),
-    f = n(346329),
+    f = n(5967),
+    g = n(346329),
     m = n(981631),
     b = n(388032),
     _ = n(461590);
@@ -86,8 +86,8 @@ class O extends i.Component {
                 let { activeRowKey: n, hasModalOpen: r, applicationViewItems: i } = this.props,
                     { searchBarRef: l } = this;
                 if (r || e.ctrlKey || e.altKey || e.metaKey || null == l) return;
-                let o = null === (t = (0, g.uB)(e)) || void 0 === t ? void 0 : t.activeElement;
-                if (!(o !== l.inputRef.current && (0, g.VG)(o)))
+                let o = null === (t = (0, f.uB)(e)) || void 0 === t ? void 0 : t.activeElement;
+                if (!(o !== l.inputRef.current && (0, f.VG)(o)))
                     switch (e.which) {
                         case m.yXg.ESCAPE:
                             e.target !== l.inputRef.current ? this.reset() : null != l.inputRef.current && l.blur();
@@ -98,7 +98,7 @@ class O extends i.Component {
                                 let t = i.find((e) => e.key === n);
                                 if (null == t) return;
                                 let r = t.libraryApplication;
-                                f.performDefaultLibraryApplicationAction(r, {
+                                g.performDefaultLibraryApplicationAction(r, {
                                     analyticsParams: {
                                         source: m.Sbl.APPLICATION_LIBRARY,
                                         location: {

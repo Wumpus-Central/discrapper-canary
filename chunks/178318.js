@@ -9,8 +9,8 @@ var l = n(836560),
     d = n(591759),
     p = n(998502),
     h = n(996106),
-    g = n(901077),
-    f = n(76238),
+    f = n(901077),
+    g = n(76238),
     m = n(852926),
     b = n(186901),
     _ = n(981631),
@@ -107,9 +107,9 @@ function P(e, t, n, r) {
         n
     );
 }
-class j extends f.Z {
+class j extends g.Z {
     send(e) {
-        (u.default.isLoggingOverlayEvents || (e.cmd !== _.Etm.OVERLAY && e.evt !== _.zMe.OVERLAY)) && y.info('Socket Emit: '.concat(this.id), (0, g.Z)(e)), null != r && 'etf' === this.encoding ? this._socket.send(r.pack(e), { binary: !0 }) : this._socket.send(JSON.stringify(e));
+        (u.default.isLoggingOverlayEvents || (e.cmd !== _.Etm.OVERLAY && e.evt !== _.zMe.OVERLAY)) && y.info('Socket Emit: '.concat(this.id), (0, f.Z)(e)), null != r && 'etf' === this.encoding ? this._socket.send(r.pack(e), { binary: !0 }) : this._socket.send(JSON.stringify(e));
     }
     close(e, t) {
         this._socket.close(e, t);
@@ -120,7 +120,7 @@ class j extends f.Z {
         this._socket = e;
     }
 }
-class A extends f.Z {
+class A extends g.Z {
     send(e) {
         (u.default.isLoggingOverlayEvents || e.cmd !== _.Etm.OVERLAY) && y.info('Socket Emit: '.concat(this.id), e), this._sendCallback(e);
     }
@@ -203,7 +203,7 @@ class Z extends l.EventEmitter {
             e.close(_.$VG.CLOSE_UNSUPPORTED, 'Payload not '.concat(e.encoding));
             return;
         }
-        (u.default.isLoggingOverlayEvents || n.cmd !== _.Etm.OVERLAY) && y.info('Socket Message: '.concat(e.id), (0, g.Z)(n)), this.emit('request', e, n);
+        (u.default.isLoggingOverlayEvents || n.cmd !== _.Etm.OVERLAY) && y.info('Socket Message: '.concat(e.id), (0, f.Z)(n)), this.emit('request', e, n);
     }
     constructor() {
         var e;

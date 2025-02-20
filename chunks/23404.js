@@ -10,8 +10,8 @@ var r = n(200651),
     d = n(617136),
     p = n(272008),
     h = n(113434),
-    g = n(569984),
-    f = n(497505),
+    f = n(569984),
+    g = n(497505),
     m = n(918701),
     b = n(467628),
     _ = n(373370),
@@ -91,7 +91,7 @@ function w(e) {
     var t, n, l, s;
     let { nodeRef: u, quest: E } = e,
         O = (0, d.O5)(),
-        N = (0, a.e7)([g.Z], () => g.Z.isEnrolling(E.id), [E]),
+        N = (0, a.e7)([f.Z], () => f.Z.isEnrolling(E.id), [E]),
         [j, w] = i.useState(!1),
         R = i.useCallback(() => w(!0), []),
         D = i.useCallback(() => w(!1), []),
@@ -100,7 +100,7 @@ function w(e) {
         }, []),
         M = i.useCallback(() => {
             (0, p.AH)(E.id, {
-                questContent: f.jn.ACTIVITY_PANEL,
+                questContent: g.jn.ACTIVITY_PANEL,
                 questContentCTA: d.jZ.ACCEPT_QUEST
             });
         }, [E]),
@@ -108,40 +108,40 @@ function w(e) {
             null != E &&
                 (O({
                     questId: E.id,
-                    questContent: f.jn.ACTIVITY_PANEL,
+                    questContent: g.jn.ACTIVITY_PANEL,
                     questContentCTA: d.jZ.TRACK_PROGRESS
                 }),
                 (0, T.navigateToQuestHome)({
-                    fromContent: f.jn.ACTIVITY_PANEL,
+                    fromContent: g.jn.ACTIVITY_PANEL,
                     questId: E.id
                 }));
         }, [E, O]),
         G = i.useCallback(() => {
             O({
                 questId: E.id,
-                questContent: f.jn.ACTIVITY_PANEL,
+                questContent: g.jn.ACTIVITY_PANEL,
                 questContentCTA: d.jZ.LEARN_MORE
             }),
                 (0, T.navigateToQuestHome)({
-                    fromContent: f.jn.ACTIVITY_PANEL,
+                    fromContent: g.jn.ACTIVITY_PANEL,
                     questId: E.id
                 });
         }, [E.id, O]),
         W = (0, C.hf)({
             quest: E,
-            location: f.jn.ACTIVITY_PANEL
+            location: g.jn.ACTIVITY_PANEL
         }),
         V = (0, h.tP)(E),
         B = (null === (t = E.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
         H = (null === (n = E.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
         F = (null === (l = E.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null,
-        z = (null == E ? void 0 : E.userStatus) != null && (0, m.zE)(E.userStatus, f.jn.ACTIVITY_PANEL),
+        z = (null == E ? void 0 : E.userStatus) != null && (0, m.zE)(E.userStatus, g.jn.ACTIVITY_PANEL),
         Y = (0, h.Rf)(E),
         K = (0, _.DD)({
             quest: E,
             taskDetails: Y,
             location: P.dr.ACTIVITY_PANEL,
-            questContent: f.jn.ACTIVITY_PANEL
+            questContent: g.jn.ACTIVITY_PANEL
         }),
         q = (0, b.j)({ location: P.dr.QUESTS_BAR_MOBILE });
     return z || V || F
@@ -164,7 +164,7 @@ function w(e) {
                           B ? (0, r.jsx)(L, { quest: E }) : (0, r.jsx)(y.Z, {}),
                           (0, r.jsx)(I.r, {
                               quest: E,
-                              questContent: f.jn.ACTIVITY_PANEL,
+                              questContent: g.jn.ACTIVITY_PANEL,
                               shouldShowDisclosure: (null === (s = E.userStatus) || void 0 === s ? void 0 : s.enrolledAt) == null,
                               showShareLink: !0,
                               children: (e) => {
@@ -227,7 +227,7 @@ function w(e) {
                           autoplay: j,
                           className: Z.rewardTileWithInstructions,
                           quest: E,
-                          questContent: f.jn.ACTIVITY_PANEL,
+                          questContent: g.jn.ACTIVITY_PANEL,
                           location: P.dr.ACTIVITY_PANEL,
                           taskDetails: Y
                       }),
@@ -283,7 +283,7 @@ function w(e) {
 let R = function (e) {
     return (0, r.jsx)(N.A, {
         questOrQuests: e.quest,
-        questContent: f.jn.ACTIVITY_PANEL,
+        questContent: g.jn.ACTIVITY_PANEL,
         children: (t) => (0, r.jsx)(w, x({ nodeRef: t }, e))
     });
 };

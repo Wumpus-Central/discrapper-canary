@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => f });
 var r = n(200651);
 n(192379);
 var i = n(120356),
@@ -11,7 +11,7 @@ var i = n(120356),
     d = n(921944),
     p = n(388032),
     h = n(894204);
-function g(e) {
+function f(e) {
     let { className: t, markAsDismissed: n } = e;
     return (0, r.jsxs)(c.Z, {
         className: l()(h.card, t),

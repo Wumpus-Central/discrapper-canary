@@ -1,14 +1,14 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => h });
 var r = n(200651),
-    a = n(192379),
+    l = n(192379),
     i = n(120356),
-    l = n.n(i),
-    s = n(97028),
-    o = n(481060),
-    c = n(686546),
+    a = n.n(i),
+    o = n(97028),
+    c = n(481060),
+    s = n(686546),
     u = n(562558),
-    m = n(894661);
-function d(e) {
+    d = n(894661);
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -52,41 +52,41 @@ function x(e, t) {
     );
 }
 function v(e) {
-    let { game: t, activityLevel: n, hideTooltip: a } = e,
+    let { game: t, activityLevel: n, hideTooltip: l } = e,
         i = t.getIconURL(24);
     if (null == i) return null;
-    let l = (null == n ? void 0 : n.level) === s.m.HIGH,
-        u = (0, r.jsx)(o.Text, {
+    let a = (null == n ? void 0 : n.level) === o.m.HIGH,
+        u = (0, r.jsx)(c.Text, {
             variant: 'text-sm/medium',
             color: 'interactive-active',
             children: t.name
         });
-    return (0, r.jsx)(o.ua7, {
+    return (0, r.jsx)(c.ua7, {
         text: u,
         position: 'bottom',
         'aria-label': t.name,
-        shouldShow: !a,
+        shouldShow: !l,
         children: (e) =>
             (0, r.jsxs)(
                 'div',
-                x(d({}, e), {
-                    className: m.gameIcon,
+                x(m({}, e), {
+                    className: d.gameIcon,
                     children: [
                         (0, r.jsx)('img', {
-                            className: m.gameIconImage,
+                            className: d.gameIconImage,
                             src: i,
                             alt: t.name
                         }),
-                        l &&
-                            (0, r.jsx)(c.ZP, {
-                                mask: c.QS.GAMEPLAY_HIGH_ACTIVITY_ICON,
+                        a &&
+                            (0, r.jsx)(s.ZP, {
+                                mask: s.QS.GAMEPLAY_HIGH_ACTIVITY_ICON,
                                 width: 14,
                                 height: 14,
-                                className: m.gameActivityLevel,
+                                className: d.gameActivityLevel,
                                 children: (0, r.jsx)('div', {
-                                    className: m.gameActivityLevelInner,
-                                    children: (0, r.jsx)(o.YqE, {
-                                        color: o.TVs.unsafe_rawColors.ORANGE_330.css,
+                                    className: d.gameActivityLevelInner,
+                                    children: (0, r.jsx)(c.YqE, {
+                                        color: c.TVs.unsafe_rawColors.ORANGE_330.css,
                                         width: 10,
                                         height: 10,
                                         size: 'custom'
@@ -98,21 +98,21 @@ function v(e) {
             )
     });
 }
-function h(e) {
+function f(e) {
     let { games: t, activity: n } = e;
     return (0, r.jsx)('div', {
-        className: m.extraGamesContainer,
+        className: d.extraGamesContainer,
         children: t.map((e) =>
             (0, r.jsxs)(
                 'div',
                 {
-                    className: m.extraGameRow,
+                    className: d.extraGameRow,
                     children: [
                         (0, r.jsx)(v, {
                             game: e,
                             activityLevel: n[e.id]
                         }),
-                        (0, r.jsx)(o.Text, {
+                        (0, r.jsx)(c.Text, {
                             variant: 'text-xs/medium',
                             color: 'interactive-active',
                             children: e.name
@@ -124,17 +124,17 @@ function h(e) {
         )
     });
 }
-function f(e) {
+function j(e) {
     let { game: t, activityLevel: n } = e;
     return (0, r.jsxs)('div', {
-        className: m.favoriteGameContainer,
+        className: d.favoriteGameContainer,
         children: [
             (0, r.jsx)(v, {
                 game: t,
                 activityLevel: n,
                 hideTooltip: !0
             }),
-            (0, r.jsx)(o.Text, {
+            (0, r.jsx)(c.Text, {
                 variant: 'text-sm/medium',
                 color: 'text-secondary',
                 children: t.name
@@ -142,63 +142,63 @@ function f(e) {
         ]
     });
 }
-function j(e) {
+function h(e) {
     let { profile: t } = e,
         n = t.gameActivity,
-        { gamesToDisplay: i, lastGameToDisplay: s, remainingGames: c } = (0, u.Z)(t),
-        j = a.useMemo(() => {
-            if (null == s) return null;
-            let e = s.getIconURL(24);
+        { gamesToDisplay: i, lastGameToDisplay: o, remainingGames: s } = (0, u.Z)(t),
+        h = l.useMemo(() => {
+            if (null == o) return null;
+            let e = o.getIconURL(24);
             return null == e
                 ? null
-                : 0 === c.length
+                : 0 === s.length
                   ? (0, r.jsx)(v, {
-                        game: s,
-                        activityLevel: n[s.id]
+                        game: o,
+                        activityLevel: n[o.id]
                     })
-                  : (0, r.jsx)(o.ua7, {
+                  : (0, r.jsx)(c.ua7, {
                         'aria-label': '',
                         position: 'bottom',
-                        text: (0, r.jsx)(h, {
-                            games: c,
+                        text: (0, r.jsx)(f, {
+                            games: s,
                             activity: n
                         }),
                         children: (t) =>
                             (0, r.jsxs)(
                                 'div',
-                                x(d({}, t), {
-                                    className: l()(m.gameIcon, m.extraGameItem),
+                                x(m({}, t), {
+                                    className: a()(d.gameIcon, d.extraGameItem),
                                     children: [
                                         (0, r.jsx)('img', {
-                                            className: l()(m.gameIconImage, m.extraGameIconImage),
+                                            className: a()(d.gameIconImage, d.extraGameIconImage),
                                             src: e,
-                                            alt: s.name
+                                            alt: o.name
                                         }),
-                                        (0, r.jsx)('div', { className: m.extraGameOverlay }),
+                                        (0, r.jsx)('div', { className: d.extraGameOverlay }),
                                         (0, r.jsx)('div', {
-                                            className: m.extraGameText,
-                                            children: (0, r.jsx)(o.Text, {
+                                            className: d.extraGameText,
+                                            children: (0, r.jsx)(c.Text, {
                                                 variant: 'text-xs/normal',
-                                                children: '+'.concat(c.length)
+                                                children: '+'.concat(s.length)
                                             })
                                         })
                                     ]
                                 })
                             )
                     });
-        }, [s, c, n]);
+        }, [o, s, n]);
     return null == i || 0 === i.length
         ? null
         : 1 === i.length
           ? (0, r.jsx)('div', {
-                className: m.container,
-                children: (0, r.jsx)(f, {
+                className: d.container,
+                children: (0, r.jsx)(j, {
                     game: i[0],
                     activityLevel: n[i[0].id]
                 })
             })
           : (0, r.jsxs)('div', {
-                className: m.container,
+                className: d.container,
                 children: [
                     i.map((e) =>
                         (0, r.jsx)(
@@ -210,7 +210,7 @@ function j(e) {
                             e.id
                         )
                     ),
-                    j
+                    h
                 ]
             });
 }

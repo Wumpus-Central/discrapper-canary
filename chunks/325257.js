@@ -88,13 +88,13 @@ function M(e, t) {
 }
 let k = i.memo(function (e) {
     var t, n, l, f, k;
-    let { guildNode: G, setRef: B, onDragStart: U, onDragEnd: W, route: V, guild: F, animatable: H, selected: z = !1, unread: q = !1, mediaState: Y, unavailable: Q = !1, badge: J = 0, isMentionLowImportance: K, contextMenu: X = M, draggable: $ = !1, sorting: ee = !1, preloadOnClick: et = !0, guildJoinRequestStatus: en, height: er } = e,
+    let { guildNode: G, setRef: B, onDragStart: U, onDragEnd: W, route: V, guild: F, animatable: H, selected: z = !1, unread: q = !1, mediaState: Y, unavailable: Q = !1, badge: K = 0, isMentionLowImportance: J, contextMenu: X = M, draggable: $ = !1, sorting: ee = !1, preloadOnClick: et = !0, guildJoinRequestStatus: en, height: er } = e,
         { id: ei, parentId: el } = G,
         eo = (0, b.Q3)('GuildItem'),
         ea = null !== (t = e.upperBadge) && void 0 !== t ? t : Q ? (0, w.Ny)() : null != Y ? (0, w.Or)(Y) : void 0,
         es = null !== (n = e.lowerBadge) && void 0 !== n ? n : void 0;
-    null == es && J > 0 ? (es = null !== (l = (0, w.Ne)(J, K ? m.Z.BACKGROUND_ACCENT : m.Z.STATUS_DANGER)) && void 0 !== l ? l : void 0) : null == es && null != en && (es = null !== (f = (0, w.jt)({ guildJoinRequestStatus: en })) && void 0 !== f ? f : void 0);
-    let ec = null !== (k = e.lowerBadgeSize) && void 0 !== k ? k : { width: (0, p.OVM)(J) },
+    null == es && K > 0 ? (es = null !== (l = (0, w.Ne)(K, J ? m.Z.BACKGROUND_ACCENT : m.Z.STATUS_DANGER)) && void 0 !== l ? l : void 0) : null == es && null != en && (es = null !== (f = (0, w.jt)({ guildJoinRequestStatus: en })) && void 0 !== f ? f : void 0);
+    let ec = null !== (k = e.lowerBadgeSize) && void 0 !== k ? k : { width: (0, p.OVM)(K) },
         [{ dragging: eu }, ed] = (0, a.c)({
             type: C.eD.GUILD,
             item: () => (
@@ -184,7 +184,7 @@ let k = i.memo(function (e) {
                               {
                                   ariaLabel: T.NW.formatToPlainString(T.t['/uzRsr'], {
                                       guildName: F.toString(),
-                                      mentions: J
+                                      mentions: K
                                   }),
                                   name: F.toString(),
                                   onClick: eO,

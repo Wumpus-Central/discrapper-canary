@@ -10,16 +10,16 @@ var r = n(903772),
     d = n(70956),
     p = n(848479),
     h = n(960048),
-    g = n(844889),
-    f = n(981631);
+    f = n(844889),
+    g = n(981631);
 let m = 'LATEST_HEARTBEAST_EVENT_TIMESTAMP',
     b = null,
     _ = null,
     E = !1;
 async function O() {
     if (E) return;
-    (E = !0), (0, g.fr)(!0), h.Z.addBreadcrumb({ message: 'Start Analytics Heartbeat' });
-    let e = await i.K.getAfterRefresh(m).then(g.Hg);
+    (E = !0), (0, f.fr)(!0), h.Z.addBreadcrumb({ message: 'Start Analytics Heartbeat' });
+    let e = await i.K.getAfterRefresh(m).then(f.Hg);
     if (!E) return;
     let t = Date.now(),
         n = 15 * d.Z.Millis.MINUTE + e - t;
@@ -43,7 +43,7 @@ function N() {
 async function v() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         t = Date.now(),
-        n = await (0, g.Gg)(),
+        n = await (0, f.Gg)(),
         l = Date.now();
     if (null == n) {
         h.Z.captureException(Error('Null session when tracking session heartbeat. Waited '.concat(l - t, 'ms')));
@@ -69,18 +69,18 @@ async function v() {
         let e = s.ZP.getCurrentGameForAnalytics();
         null != e && ((c.client_heartbeat_current_game_id = e.id), (c.client_heartbeat_current_game_name = e.name), (c.client_heartbeat_current_game_executable = (0, a.N6)(e.exePath)), (c.client_heartbeat_current_game_distributor = e.distributor), (c.uses_client_mods = (0, r.e)()));
     }
-    u.default.track(f.rMx.CLIENT_HEARTBEAT, c), i.K.set(m, Date.now().toString()), (0, o.Z)();
+    u.default.track(g.rMx.CLIENT_HEARTBEAT, c), i.K.set(m, Date.now().toString()), (0, o.Z)();
 }
 let y = null,
     I = !0;
 function C() {
-    if (I || (null != y && y !== f.hes.DISCONNECTED && y !== f.hes.RTC_DISCONNECTED))
+    if (I || (null != y && y !== g.hes.DISCONNECTED && y !== g.hes.RTC_DISCONNECTED))
         try {
             O();
         } catch (e) {
             h.Z.captureException(e);
         }
-    else !E || ((E = !1), h.Z.addBreadcrumb({ message: 'Stopping Analytics Heartbeat' }), (0, g.fr)(!1), N(), (0, o.Z)());
+    else !E || ((E = !1), h.Z.addBreadcrumb({ message: 'Stopping Analytics Heartbeat' }), (0, f.fr)(!1), N(), (0, o.Z)());
 }
 function S() {
     h.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), c.Z.addChangeListener(P), l.Z.subscribe('WINDOW_FOCUS', j), l.Z.subscribe('APP_STATE_UPDATE', A), l.Z.subscribe('LOGIN_SUCCESS', T), C();
@@ -98,5 +98,5 @@ function j(e) {
 }
 function A(e) {
     let { state: t } = e;
-    (I = t === f.$7l.ACTIVE), C();
+    (I = t === g.$7l.ACTIVE), C();
 }

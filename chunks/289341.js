@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(301563), n(47120), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648);
+n.d(t, { Z: () => f }), n(301563), n(47120), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648);
 var r = n(192379),
     i = n(442837),
     l = n(668781),
@@ -10,12 +10,12 @@ var r = n(192379),
     d = n(594174),
     p = n(122613),
     h = n(388032);
-function g(e) {
+function f(e) {
     var t, n;
-    let { match: g } = e,
-        f = null !== (n = (0, u.DR)()) && void 0 !== n ? n : [],
-        { analyticsLocations: m } = (0, s.ZP)([...f, a.Z.ACTIVITY_DETAIL_PAGE]),
-        { applicationId: b } = g.params,
+    let { match: f } = e,
+        g = null !== (n = (0, u.DR)()) && void 0 !== n ? n : [],
+        { analyticsLocations: m } = (0, s.ZP)([...g, a.Z.ACTIVITY_DETAIL_PAGE]),
+        { applicationId: b } = f.params,
         [_] = (0, c.Z)([b]),
         E = null == _ ? void 0 : null === (t = _.bot) || void 0 === t ? void 0 : t.id,
         O = (0, i.e7)([d.default], () => d.default.getCurrentUser());

@@ -10,8 +10,8 @@ var r = n(200651),
     d = n(620662),
     p = n(841784),
     h = n(802856),
-    g = n(594190),
-    f = n(592745),
+    f = n(594190),
+    g = n(592745),
     m = n(553795),
     b = n(757266),
     _ = n(283595),
@@ -87,7 +87,7 @@ function P(e) {
             let { currentActivities: t } = e,
                 n = i.useContext(O.AnalyticsContext);
             return (0, l.Wu)(
-                [g.ZP, _.Z, f.Z, E.Z, b.Z],
+                [f.ZP, _.Z, g.Z, E.Z, b.Z],
                 () =>
                     t
                         .filter((e) => !(0, p.Z)(e.activity))
@@ -99,14 +99,14 @@ function P(e) {
                                 canJoin: null != t && (0, d.Z)(t, y.xjy.JOIN) && t.type === y.IIU.PLAYING,
                                 canPlay: (0, N.t)({
                                     LibraryApplicationStore: _.Z,
-                                    LaunchableGameStore: f.Z,
+                                    LaunchableGameStore: g.Z,
                                     DispatchApplicationStore: E.Z,
                                     ConnectedAppsStore: b.Z,
                                     applicationId: r.id,
                                     branchId: null != i ? i.branchId : null
                                 }),
-                                isLaunching: f.Z.launchingGames.has(r.id),
-                                isRunning: g.ZP.getRunningVerifiedApplicationIds().includes(r.id),
+                                isLaunching: g.Z.launchingGames.has(r.id),
+                                isRunning: f.ZP.getRunningVerifiedApplicationIds().includes(r.id),
                                 location: n.location
                             });
                         }),

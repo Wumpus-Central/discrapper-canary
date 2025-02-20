@@ -17,14 +17,14 @@ function p(e) {
         if (!l.Z.hasConsented(d.pjP.PERSONALIZATION) || null == i.ZP.getVisibleGame()) return !1;
         let {
             clipsEducationState: { dismissedAt: r, numberOfGamesLaunchedSinceDismissal: p, numberOfTimesDismissed: h },
-            hasTakenDecoupledClip: g,
-            clipsSettings: { clipsEnabled: f }
+            hasTakenDecoupledClip: f,
+            clipsSettings: { clipsEnabled: g }
         } = s.Z.getState();
         if (null === r) return !0;
         if (!(null != e && (0, a.xt)(e))) return !1;
         let m = Date.now() - r > u.xx,
             b = p >= u._U,
-            _ = f ? u.xd : u.A5;
-        return m && b && h < _ && !g;
+            _ = g ? u.xd : u.A5;
+        return m && b && h < _ && !f;
     });
 }

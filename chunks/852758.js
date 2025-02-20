@@ -10,8 +10,8 @@ var r = n(200651),
     d = n(809206),
     p = n(110924),
     h = n(714338),
-    g = n(213609),
-    f = n(429142),
+    f = n(213609),
+    g = n(429142),
     m = n(144114),
     b = n(210887),
     _ = n(23434),
@@ -72,7 +72,7 @@ function T() {
         T = E.Z.getVerificationTypes(e),
         [P, j] = i.useState(0),
         A = (0, p.Z)(T);
-    (0, g.Z)(
+    (0, f.Z)(
         {
             type: l.ImpressionTypes.MODAL,
             name: l.ImpressionNames.USER_ACTION_REQUIRED,
@@ -93,7 +93,7 @@ function T() {
                     },
                     {
                         modalKey: N.F0,
-                        Layer: f.ZP
+                        Layer: g.ZP
                     }
                 );
         },
@@ -105,7 +105,7 @@ function T() {
                 },
                 {
                     modalKey: y.M,
-                    Layer: f.ZP
+                    Layer: g.ZP
                 }
             );
         };
@@ -137,7 +137,7 @@ function T() {
                     },
                     {
                         modalKey: N.HR,
-                        Layer: f.ZP,
+                        Layer: g.ZP,
                         onCloseCallback: Z
                     }
                 );
@@ -187,7 +187,7 @@ function T() {
                                 )
                             );
                     },
-                    { Layer: f.ZP }
+                    { Layer: g.ZP }
                 );
             }
         })

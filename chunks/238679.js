@@ -1,7 +1,7 @@
 n.d(t, {
     KW: () => h,
     dO: () => p,
-    gQ: () => g
+    gQ: () => f
 });
 var r = n(392711),
     i = n.n(r),
@@ -68,7 +68,7 @@ function p() {
     };
 }
 let h = { [d.Gp.ANY]: [d.wE] },
-    g = {
+    f = {
         scope: h,
         handler: () => (e) => {
             let { prevState: t, dispatch: n } = e,

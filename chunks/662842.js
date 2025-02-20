@@ -10,8 +10,8 @@ var r = n(200651),
     d = n(100527),
     p = n(471445),
     h = n(15274),
-    g = n(924301),
-    f = n(504160),
+    f = n(924301),
+    g = n(504160),
     m = n(151864),
     b = n(725436),
     _ = n(497656),
@@ -153,7 +153,7 @@ function U(e) {
                                 }),
                                 canListenIn: l,
                                 buttonText: e,
-                                onClose: () => (0, f.ji)({ stageId: null == n ? void 0 : n.id }),
+                                onClose: () => (0, g.ji)({ stageId: null == n ? void 0 : n.id }),
                                 users: s.length > 5 ? s.slice(0, 5) : s,
                                 overflowUsers:
                                     u < 1
@@ -197,7 +197,7 @@ function U(e) {
                                 }),
                                 canListenIn: l,
                                 buttonText: e,
-                                onClose: () => (0, f.ji)({ stageId: null == n ? void 0 : n.id }),
+                                onClose: () => (0, g.ji)({ stageId: null == n ? void 0 : n.id }),
                                 users: s.length > 5 ? s.slice(0, 5) : s,
                                 overflowUsers:
                                     u < 1
@@ -226,7 +226,7 @@ function U(e) {
                     if (t.entity_type === w.WX.EXTERNAL) {
                         let e = (0, O.cS)(t);
                         if (null == e) return { noticeType: null };
-                        let n = g.ZP.getUserCount(t.id, E);
+                        let n = f.ZP.getUserCount(t.id, E);
                         return {
                             noticeType: 1,
                             title: t.name,
@@ -240,7 +240,7 @@ function U(e) {
                             }),
                             canListenIn: !1,
                             buttonText: R.NW.string(R.t.iW6Xur),
-                            onClose: () => (0, f.ji)({ eventId: null == t ? void 0 : t.id }),
+                            onClose: () => (0, g.ji)({ eventId: null == t ? void 0 : t.id }),
                             users: null == a ? [] : [a],
                             overflowUsers:
                                 n < 1
@@ -267,7 +267,7 @@ function U(e) {
                     }
                     if (t.entity_type === w.WX.VOICE && null != i) {
                         let e = (0, p.KS)(i),
-                            n = g.ZP.getUserCount(t.id, E);
+                            n = f.ZP.getUserCount(t.id, E);
                         return {
                             noticeType: 2,
                             title: t.name,
@@ -282,7 +282,7 @@ function U(e) {
                                     : null,
                             canListenIn: l,
                             buttonText: R.NW.string(R.t.nxUtoa),
-                            onClose: () => (0, f.ji)({ eventId: null == t ? void 0 : t.id }),
+                            onClose: () => (0, g.ji)({ eventId: null == t ? void 0 : t.id }),
                             users: null == a ? [] : [a],
                             overflowUsers:
                                 n < 1

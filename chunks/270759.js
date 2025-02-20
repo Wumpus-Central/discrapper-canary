@@ -10,8 +10,8 @@ var r = n(200651),
     d = n(570140),
     p = n(150063),
     h = n(529103),
-    g = n(252618),
-    f = n(313201),
+    f = n(252618),
+    g = n(313201),
     m = n(540059),
     b = n(5254),
     _ = n(984370),
@@ -61,8 +61,8 @@ let x = function (e) {
     let M = (e) => {
             h.Z.setSection(e);
         },
-        U = (0, f.Dt)(),
-        G = (0, f.Dt)(),
+        U = (0, g.Dt)(),
+        G = (0, g.Dt)(),
         W = [
             {
                 id: T.pJs.ONLINE,
@@ -119,7 +119,7 @@ let x = function (e) {
         className: A.container,
         'aria-label': j.NW.string(j.t.TdEu5e),
         children: [
-            (0, r.jsx)(g.yY, { location: j.NW.string(j.t.TdEu5e) }),
+            (0, r.jsx)(f.yY, { location: j.NW.string(j.t.TdEu5e) }),
             (0, r.jsx)(u.f6W, {
                 theme: x,
                 children: (e) =>

@@ -10,8 +10,8 @@ var r = n(200651),
     d = n(780384),
     p = n(481060),
     h = n(570140),
-    g = n(239091),
-    f = n(51025),
+    f = n(239091),
+    g = n(51025),
     m = n(785547),
     b = n(730749),
     _ = n(112724),
@@ -278,7 +278,7 @@ class F extends i.PureComponent {
     renderFinished() {
         let { item: e } = this.props;
         return this.renderBody({
-            message: R.NW.format(R.t.z1oxGB, { remove: () => f.wi(e.applicationId, e.branchId) }),
+            message: R.NW.format(R.t.z1oxGB, { remove: () => g.wi(e.applicationId, e.branchId) }),
             foregroundColor: (0, d.ap)(e.theme) ? w.Ilk.PRIMARY_300 : w.Ilk.PRIMARY_500,
             percent: 100
         });
@@ -412,20 +412,20 @@ let z = () =>
         (0, r.jsx)(G, {
             icon: p.o1U,
             tooltip: R.NW.string(R.t.YGm6SU),
-            onClick: () => f.v4()
+            onClick: () => g.v4()
         }),
     Y = () =>
         (0, r.jsx)(G, {
             icon: p.fpf,
             tooltip: R.NW.string(R.t.TVAd5O),
-            onClick: () => f.wO()
+            onClick: () => g.wO()
         }),
     K = (e) => {
         let { item: t } = e;
         return (0, r.jsx)(G, {
             icon: p.wj7,
             tooltip: R.NW.string(R.t['Eqb+LC']),
-            onClick: () => f.A1(t.applicationId, t.branchId)
+            onClick: () => g.A1(t.applicationId, t.branchId)
         });
     },
     q = (e) => {
@@ -433,7 +433,7 @@ let z = () =>
         return (0, r.jsx)(G, {
             icon: p.Dio,
             tooltip: R.NW.string(R.t['0lFmCw']),
-            onClick: () => f.al(t.applicationId, t.branchId)
+            onClick: () => g.al(t.applicationId, t.branchId)
         });
     },
     X = [
@@ -506,7 +506,7 @@ class Q extends i.PureComponent {
         e.forEach((e) => {
             e.finished &&
                 h.Z.wait(() => {
-                    f.wi(e.applicationId, e.branchId);
+                    g.wi(e.applicationId, e.branchId);
                 });
         }),
             window.removeEventListener('resize', this.throttledUpdateHeight),
@@ -552,7 +552,7 @@ class Q extends i.PureComponent {
                           },
                           rowProps: {
                               onContextMenu: (e, t) => {
-                                  g.jW(e, async () => {
+                                  f.jW(e, async () => {
                                       let { default: e } = await n.e('98335').then(n.bind(n, 485292));
                                       return (n) => {
                                           var i, l;

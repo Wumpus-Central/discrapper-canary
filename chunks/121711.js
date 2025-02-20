@@ -10,8 +10,8 @@ var r = n(200651),
     d = n(252618),
     p = n(979233),
     h = n(175307),
-    g = n(17845),
-    f = n(374939),
+    f = n(17845),
+    g = n(374939),
     m = n(233374),
     b = n(611928),
     _ = n(283293),
@@ -75,7 +75,7 @@ let D = function () {
             (0, r.jsxs)(_.Z, {
                 onScroll: k,
                 children: [
-                    (0, r.jsx)(g.Z, {
+                    (0, r.jsx)(f.Z, {
                         title: z,
                         description: Y,
                         button: (0, r.jsx)(h.u, {
@@ -88,7 +88,7 @@ let D = function () {
                             children: (0, r.jsx)('div', { className: R.bannerGradient })
                         })
                     }),
-                    (0, r.jsxs)(f.Z, {
+                    (0, r.jsxs)(g.Z, {
                         children: [
                             (0, r.jsxs)('div', {
                                 className: R.tabs,

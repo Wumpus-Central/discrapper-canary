@@ -10,8 +10,8 @@ var r = n(200651),
     d = n(626135),
     p = n(630388),
     h = n(804739),
-    g = n(957657),
-    f = n(34305),
+    f = n(957657),
+    g = n(34305),
     m = n(981631),
     b = n(388032),
     _ = n(850784);
@@ -125,7 +125,7 @@ class v extends i.PureComponent {
                                   note: b.NW.string(b.t.cpYp0N),
                                   children: b.NW.string(b.t.vNpUMz)
                               }),
-                              (0, r.jsx)(f.Z, {})
+                              (0, r.jsx)(g.Z, {})
                           ]
                       })
                     : null,
@@ -139,7 +139,7 @@ class v extends i.PureComponent {
     render() {
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(g.Z, { currentRoute: m.Z5c.APPLICATION_LIBRARY_SETTINGS }),
+                (0, r.jsx)(f.Z, { currentRoute: m.Z5c.APPLICATION_LIBRARY_SETTINGS }),
                 (0, r.jsx)(o.w0Z, {
                     className: _.scroller,
                     children: this.renderBody()

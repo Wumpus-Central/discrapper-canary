@@ -14,8 +14,8 @@ var r = n(200651),
     d = n(938736),
     p = n(227140),
     h = n(981631),
-    g = n(921944),
-    f = n(388032),
+    f = n(921944),
+    g = n(388032),
     m = n(904892);
 let b = 'url(#dark-purple-gradient)',
     _ = () =>
@@ -24,11 +24,11 @@ let b = 'url(#dark-purple-gradient)',
             children: [
                 (0, r.jsx)(o.X6q, {
                     variant: 'heading-sm/bold',
-                    children: f.NW.string(f.t.USo4s7)
+                    children: g.NW.string(g.t.USo4s7)
                 }),
                 (0, r.jsx)(o.Text, {
                     variant: 'text-xs/normal',
-                    children: f.NW.format(f.t.AGKQq6, { numReferrals: 3 })
+                    children: g.NW.format(g.t.AGKQq6, { numReferrals: 3 })
                 })
             ]
         }),
@@ -44,7 +44,7 @@ let b = 'url(#dark-purple-gradient)',
                 fill: 'white'
             })
         }),
-    O = () => (0, a.EW)(l.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: g.L.TAKE_ACTION }),
+    O = () => (0, a.EW)(l.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: f.L.TAKE_ACTION }),
     N = (e) => {
         let { children: t } = e;
         return (0, r.jsx)(o.yRy, {
@@ -75,10 +75,10 @@ let b = 'url(#dark-purple-gradient)',
                     }),
                     position: 'right',
                     align: 'top',
-                    tryItText: f.NW.string(f.t.RzWDqa),
-                    header: f.NW.formatToPlainString(f.t.md2GU1, { discountRate: d.Nq }),
+                    tryItText: g.NW.string(g.t.RzWDqa),
+                    header: g.NW.formatToPlainString(g.t.md2GU1, { discountRate: d.Nq }),
                     hideDismissButton: !0,
-                    body: f.NW.formatToPlainString(f.t.mxPPxc, { discountRate: d.Nq }),
+                    body: g.NW.formatToPlainString(g.t.mxPPxc, { discountRate: d.Nq }),
                     dismissibleContent: l.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR,
                     maxWidth: 320
                 }),
@@ -108,7 +108,7 @@ let b = 'url(#dark-purple-gradient)',
         return (0, r.jsx)(o.ua7, {
             text: n,
             position: 'right',
-            'aria-label': f.NW.string(f.t.USo4s7),
+            'aria-label': g.NW.string(g.t.USo4s7),
             tooltipClassName: m.marketingBadgeTooltip,
             allowOverflow: !0,
             tooltipContentClassName: m.tooltipContent,
@@ -165,6 +165,6 @@ let b = 'url(#dark-purple-gradient)',
             i.useEffect(() => {
                 t && n();
             }, [t, n]),
-            (0, r.jsx)(p.Z, { copy: f.NW.string(f.t.y2b7CA) })
+            (0, r.jsx)(p.Z, { copy: g.NW.string(g.t.y2b7CA) })
         );
     };

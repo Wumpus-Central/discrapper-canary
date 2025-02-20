@@ -11,8 +11,8 @@ var i = n(756647),
     d = n(447543),
     p = n(185669),
     h = n(962220),
-    g = n(69580),
-    f = n(703656),
+    f = n(69580),
+    g = n(703656),
     m = n(314897),
     b = n(553795),
     _ = n(594174),
@@ -75,7 +75,7 @@ let P = {
                           code: t,
                           context: C.IlC.APP
                       })
-                    : (0, f.dL)(C.Z5c.INVITE(t)),
+                    : (0, g.dL)(C.Z5c.INVITE(t)),
                 {
                     invite: n,
                     code: t
@@ -160,23 +160,23 @@ let P = {
             } = e;
             switch ((v.ZP.focus(), t)) {
                 case I.jE.USER_SETTINGS:
-                    null != n && ((0, f.dL)(C.Z5c.SETTINGS(n.section, n.subsection)), T(n.fingerprint, 'settings'));
+                    null != n && ((0, g.dL)(C.Z5c.SETTINGS(n.section, n.subsection)), T(n.fingerprint, 'settings'));
                     break;
                 case I.jE.CHANGELOG:
-                    null != n && ((0, f.dL)(N.Z.formatPathWithQuery(C.Z5c.CHANGELOGS(n.date), n.query)), T(n.fingerprint, 'changelog'));
+                    null != n && ((0, g.dL)(N.Z.formatPathWithQuery(C.Z5c.CHANGELOGS(n.date), n.query)), T(n.fingerprint, 'changelog'));
                     break;
                 case I.jE.LIBRARY:
-                    (0, f.dL)(C.Z5c.APPLICATION_LIBRARY), null != n && T(n.fingerprint, 'library');
+                    (0, g.dL)(C.Z5c.APPLICATION_LIBRARY), null != n && T(n.fingerprint, 'library');
                     break;
                 case I.jE.STORE_HOME:
-                    (0, f.dL)(C.Z5c.APPLICATION_STORE), null != n && T(n.fingerprint, 'store');
+                    (0, g.dL)(C.Z5c.APPLICATION_STORE), null != n && T(n.fingerprint, 'store');
                     break;
                 case I.jE.STORE_LISTING:
-                    null != n && ((0, f.dL)(C.Z5c.APPLICATION_STORE_LISTING_SKU(n.skuId, n.slug)), T(n.fingerprint, 'store'));
+                    null != n && ((0, g.dL)(C.Z5c.APPLICATION_STORE_LISTING_SKU(n.skuId, n.slug)), T(n.fingerprint, 'store'));
                     break;
                 case I.jE.PICK_GUILD_SETTINGS:
                     null != n &&
-                        ((0, f.dL)({
+                        ((0, g.dL)({
                             pathname: C.Z5c.PICK_GUILD_SETTINGS(n.section, n.subsection),
                             search: n.search
                         }),
@@ -184,7 +184,7 @@ let P = {
                     break;
                 case I.jE.CHANNEL:
                     null != n &&
-                        ((0, f.dL)({
+                        ((0, g.dL)({
                             pathname: C.Z5c.CHANNEL(n.guildId, n.channelId, n.messageId),
                             search: n.search
                         }),
@@ -192,16 +192,16 @@ let P = {
                     break;
                 case I.jE.QUEST_HOME:
                     null != n
-                        ? ((0, f.dL)({
+                        ? ((0, g.dL)({
                               pathname: C.Z5c.QUEST_HOME,
                               hash: n.questId
                           }),
                           T(n.fingerprint, 'quest_home'))
-                        : (0, f.dL)(C.Z5c.QUEST_HOME);
+                        : (0, g.dL)(C.Z5c.QUEST_HOME);
                     break;
                 case I.jE.DISCOVERY_GAME_RESULTS:
                     null != n &&
-                        ((0, f.dL)({
+                        ((0, g.dL)({
                             pathname: C.Z5c.GLOBAL_DISCOVERY_SERVERS,
                             search: '?game='.concat(n.gameId)
                         }),
@@ -210,8 +210,8 @@ let P = {
                 case I.jE.OAUTH2:
                     let r = new URL(C.Z5c.OAUTH2_AUTHORIZE, window.location.origin);
                     r.search = n.search;
-                    let i = (0, g.getOAuth2AuthorizeProps)(r.toString());
-                    if (null != i) return (0, g.openOAuth2ModalWithCreateGuildModal)(i), !0;
+                    let i = (0, f.getOAuth2AuthorizeProps)(r.toString());
+                    if (null != i) return (0, f.openOAuth2ModalWithCreateGuildModal)(i), !0;
                     return !1;
             }
         }

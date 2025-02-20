@@ -10,8 +10,8 @@ var r,
     d = n(287734),
     p = n(438139),
     h = n(2052),
-    g = n(726542),
-    f = n(638880),
+    f = n(726542),
+    g = n(638880),
     m = n(655922),
     b = n(122810),
     _ = n(833664),
@@ -323,7 +323,7 @@ let er = (e) => {
         var t, n;
         let { guild: r, channel: o, partySize: s, members: c, onChannelContextMenu: p } = e,
             h = l.useRef(null),
-            g = (0, I.ZP)(o, !0);
+            f = (0, I.ZP)(o, !0);
         return (0, i.jsx)(J, {
             children: (0, i.jsxs)('div', {
                 className: z.voiceSection,
@@ -369,7 +369,7 @@ let er = (e) => {
                         focusProps: { ringTarget: h },
                         children: (0, i.jsxs)('div', {
                             className: z.voiceSectionDetails,
-                            children: [q(r.toString(), z.voiceSectionText), X(g, z.voiceSectionText)]
+                            children: [q(r.toString(), z.voiceSectionText), X(f, z.voiceSectionText)]
                         })
                     }),
                     (0, i.jsx)(B.Z, {
@@ -469,7 +469,7 @@ let er = (e) => {
             { activity: r, user: l, getAssetImage: o, guildId: s } = e,
             { name: c, details: d, assets: p, application_id: h } = r;
         if (null != p && (0, O.Z)(r)) {
-            var f;
+            var g;
             t = (0, i.jsx)(S.Z, {
                 className: z.twitchSectionPreviewWrapper,
                 aspectRatio: 16 / 9,
@@ -479,7 +479,7 @@ let er = (e) => {
                     target: '_blank',
                     children: [
                         (0, i.jsx)('img', {
-                            alt: null !== (f = p.large_text) && void 0 !== f ? f : '',
+                            alt: null !== (g = p.large_text) && void 0 !== g ? g : '',
                             src: o(h, p.large_image, [900, 500]),
                             className: z.twitchSectionPreview
                         }),
@@ -502,7 +502,7 @@ let er = (e) => {
                     children: [
                         (0, i.jsx)('img', {
                             alt: '',
-                            src: g.Z.get(H.ABu.TWITCH).icon.lightSVG,
+                            src: f.Z.get(H.ABu.TWITCH).icon.lightSVG,
                             className: z.twitchSectionIcon
                         }),
                         (0, i.jsxs)('div', {
@@ -527,7 +527,7 @@ let er = (e) => {
         let { activity: r, user: l, applicationStream: o, onPreviewClick: a, guildId: c } = e,
             d = (0, s.e7)([D.Z], () => D.Z.getChannel(o.channelId)),
             [p, h] = (0, j.wq)(d),
-            g = (0, i.jsxs)(u.P3F, {
+            f = (0, i.jsxs)(u.P3F, {
                 onClick: p ? a : void 0,
                 className: z.applicationStreamingPreviewWrapper,
                 children: [
@@ -543,7 +543,7 @@ let er = (e) => {
                     })
                 ]
             }),
-            f = null !== (n = null === (t = (0, N.Z)(r, o)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : F.NW.string(F.t.eXan7O);
+            g = null !== (n = null === (t = (0, N.Z)(r, o)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : F.NW.string(F.t.eXan7O);
         return (0, i.jsxs)(J, {
             children: [
                 (0, i.jsxs)('div', {
@@ -556,12 +556,12 @@ let er = (e) => {
                             className: z.applicationStreamingAvatar
                         }),
                         (0, i.jsxs)('div', {
-                            children: [q(V.ZP.getName(l)), X(f)]
+                            children: [q(V.ZP.getName(l)), X(g)]
                         }),
                         (0, i.jsx)(C.ZP, { size: C.ZP.Sizes.SMALL })
                     ]
                 }),
-                g
+                f
             ]
         });
     }),
@@ -581,7 +581,7 @@ let er = (e) => {
                     .map((e) => (R.default.getId() === e ? null : k.default.getUser(e)))
                     .filter(W.lm)
             ),
-            g = (0, h.O)(),
+            f = (0, h.O)(),
             { analyticsLocations: m } = (0, v.ZP)();
         if (null == d) return null;
         let b = y.Z.getApplication(d);
@@ -641,10 +641,10 @@ let er = (e) => {
                                         size: u.zxk.Sizes.SMALL,
                                         onClick: (e) => {
                                             e.stopPropagation(),
-                                                (0, f.Z)({
+                                                (0, g.Z)({
                                                     applicationId: d,
                                                     activityChannelId: n.id,
-                                                    locationObject: g.location,
+                                                    locationObject: f.location,
                                                     analyticsLocations: m
                                                 });
                                         },

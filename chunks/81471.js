@@ -10,8 +10,8 @@ var r = n(200651),
     d = n(255269),
     p = n(937889),
     h = n(267128),
-    g = n(695346),
-    f = n(496675),
+    f = n(695346),
+    g = n(496675),
     m = n(699516),
     b = n(868807),
     _ = n(981631),
@@ -31,8 +31,8 @@ let y = i.memo(function (e) {
             }),
             [y]
         ),
-        T = (0, a.e7)([f.Z], () => f.Z.can(_.Plq.MANAGE_MESSAGES, t)),
-        P = g.cC.useSetting(),
+        T = (0, a.e7)([g.Z], () => g.Z.can(_.Plq.MANAGE_MESSAGES, t)),
+        P = f.cC.useSetting(),
         { content: j } = i.useMemo(
             () =>
                 (null == y ? void 0 : y.content) != null && '' !== y.content

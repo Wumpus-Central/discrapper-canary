@@ -10,8 +10,8 @@ var r = n(392711),
     d = n(430824),
     p = n(131951),
     h = n(158776),
-    g = n(19780),
-    f = n(699516),
+    f = n(19780),
+    g = n(699516),
     m = n(944486),
     b = n(594174),
     _ = n(979651),
@@ -70,7 +70,7 @@ class j {
                     reason: t
                 });
             });
-        let e = [c.Z, u.ZP, h.Z, _.Z, p.Z, g.Z];
+        let e = [c.Z, u.ZP, h.Z, _.Z, p.Z, f.Z];
         new l.Fh(e.concat(this.stores), () => this.rpcServer.updateSubscriptions()).attach('RPCServerManager'), o.Z.subscribe('MESSAGE_CREATE', this.handleMessage), o.Z.subscribe('MESSAGE_UPDATE', this.handleMessage), o.Z.subscribe('MESSAGE_DELETE', this.handleMessage), o.Z.subscribe('SPEAKING', this.handleSpeaking), o.Z.subscribe('OAUTH2_TOKEN_REVOKE', this.handleOAuth2TokenRevoke), o.Z.subscribe('GUILD_CREATE', this.handleGuildCreate), o.Z.subscribe('CHANNEL_CREATE', this.handleChannelCreate), o.Z.subscribe('LOGOUT', this.handleLogout), o.Z.subscribe('VOICE_CHANNEL_SELECT', this.handleVoiceChannelSelect), o.Z.subscribe('RPC_NOTIFICATION_CREATE', this.handleNotificationCreate), o.Z.subscribe('ACTIVITY_JOIN', this.handleActivityJoin), o.Z.subscribe('ACTIVITY_LAYOUT_MODE_UPDATE', this.handleActivityLayoutModeUpdate), o.Z.subscribe('THERMAL_STATE_CHANGE', this.handleThermalStateChange), o.Z.subscribe('ACTIVITY_SCREEN_ORIENTATION_UPDATE', this.handleScreenOrientationUpdate), o.Z.subscribe('EMBEDDED_ACTIVITY_UPDATE', this.handleEmbeddedActivityUpdate), o.Z.subscribe('RELATIONSHIP_ADD', this.handleRelationshipAdd), o.Z.subscribe('RELATIONSHIP_UPDATE', this.handleRelationshipUpdate), o.Z.subscribe('RELATIONSHIP_REMOVE', this.handleRelationshipRemove), o.Z.subscribe('PRESENCE_UPDATES', this.handlePresenceUpdates), o.Z.subscribe('PRESENCES_REPLACE', this.handlePresencesReplace), o.Z.subscribe('USER_UPDATE', this.handleUserUpdate), o.Z.subscribe('ENTITLEMENT_CREATE', this.handleEntitlementCreate), o.Z.subscribe('ENTITLEMENT_DELETE', this.handleEntitlementDelete);
     }
     terminate() {
@@ -294,7 +294,7 @@ class j {
                             return t.id;
                         })
                     ).values()) {
-                        let t = f.Z.getRelationshipType(e);
+                        let t = g.Z.getRelationshipType(e);
                         if (t === C.OGo.NONE) continue;
                         let n = b.default.getUser(e);
                         if (null == n) continue;
@@ -304,7 +304,7 @@ class j {
             }),
             P(this, 'handlePresencesReplace', () => {
                 0 !== this.rpcServer.subscriptions.length &&
-                    i().forEach(f.Z.getRelationships(), (e, t) => {
+                    i().forEach(g.Z.getRelationships(), (e, t) => {
                         if (e === C.OGo.NONE) return;
                         let n = b.default.getUser(t);
                         if (null == n) return;
@@ -317,7 +317,7 @@ class j {
                     user: { id: t }
                 } = e;
                 if (0 === this.rpcServer.subscriptions.length) return;
-                let n = f.Z.getRelationshipType(t);
+                let n = g.Z.getRelationshipType(t);
                 if (n === C.OGo.NONE) return;
                 let r = b.default.getUser(t);
                 if (null == r) return;

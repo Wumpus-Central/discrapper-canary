@@ -35,8 +35,8 @@ function p(e) {
     return e;
 }
 let h = 'premium_tier_gradient',
-    g = 'smaller_sparkle_gradient';
-function f(e) {
+    f = 'smaller_sparkle_gradient';
+function g(e) {
     var t,
         n,
         { width: i = 14, height: l = 15, color: o = 'white', foreground: a } = e,
@@ -95,7 +95,7 @@ function f(e) {
                         })
                     }),
                     (0, r.jsxs)('linearGradient', {
-                        id: g,
+                        id: f,
                         x1: '-4.95474',
                         y1: '5.44067',
                         x2: '11.2384',
@@ -149,11 +149,11 @@ function m(e) {
                 m
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(f, {
+                              (0, r.jsx)(g, {
                                   foreground: d.sparkleStar1,
-                                  color: 'url(#'.concat(g, ')')
+                                  color: 'url(#'.concat(f, ')')
                               }),
-                              (0, r.jsx)(f, {
+                              (0, r.jsx)(g, {
                                   foreground: d.sparkleStar2,
                                   color: 'url(#'.concat(h, ')')
                               })

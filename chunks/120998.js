@@ -64,10 +64,10 @@ class d extends (r = l.PureComponent) {
                 if (i.length < 2) return;
                 let p = Math.max(Math.min((e - this.dataChangedAt) / l, 1), 0),
                     h = r.getContext('2d'),
-                    g = this.maxValue;
+                    f = this.maxValue;
                 (h.strokeStyle = o), (h.lineWidth = c);
-                let f = r.height - h.lineWidth,
-                    m = h.createLinearGradient(0, 0, 0, f);
+                let g = r.height - h.lineWidth,
+                    m = h.createLinearGradient(0, 0, 0, g);
                 if (null != d) m.addColorStop(0, d);
                 else {
                     let { r: e, g: t, b: n } = s.oo(o);
@@ -83,7 +83,7 @@ class d extends (r = l.PureComponent) {
                 i.forEach((e, r) => {
                     (t = {
                         x: O,
-                        y: (f * e) / g
+                        y: (g * e) / f
                     }),
                         0 === r ? h.moveTo(t.x, t.y) : h.bezierCurveTo(n.x + E, n.y, t.x - E, t.y, t.x, t.y),
                         (n = t),

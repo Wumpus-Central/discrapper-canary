@@ -10,8 +10,8 @@ var r = n(237997),
     d = n(266572),
     p = n(177698),
     h = n(121826),
-    g = n(753335),
-    f = n(567481),
+    f = n(753335),
+    g = n(567481),
     m = n(498164),
     b = n(111097),
     _ = n(908711),
@@ -44,7 +44,7 @@ function y(e) {
     }
     return e;
 }
-let I = y({}, l.A, u.Z, d.Z, h.Z, g.Z, f.Z, m.Z, b.Z, E.Z, N.Z, O.Z, p.Z, _.Z),
+let I = y({}, l.A, u.Z, d.Z, h.Z, f.Z, g.Z, m.Z, b.Z, E.Z, N.Z, O.Z, p.Z, _.Z),
     C = y({}, o.Z, s.M, c.n),
     S = {
         server: a.Z,

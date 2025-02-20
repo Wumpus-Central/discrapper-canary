@@ -13,8 +13,8 @@ var r,
     d = n(929507),
     p = n(270144),
     h = n(400271),
-    g = n(678513),
-    f = n(899667),
+    f = n(678513),
+    g = n(899667),
     m = n(496675),
     b = n(541566),
     _ = n(192513),
@@ -26,9 +26,9 @@ var r,
 function I(e) {
     var t;
     let n = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : v.lds,
-        { lastFetchedAt: r } = (0, l.cj)([f.Z], () => ({
-            appliedGuildBoosts: f.Z.getAppliedGuildBoostsForGuild(n),
-            lastFetchedAt: f.Z.getLastFetchedAtForGuild(n)
+        { lastFetchedAt: r } = (0, l.cj)([g.Z], () => ({
+            appliedGuildBoosts: g.Z.getAppliedGuildBoostsForGuild(n),
+            lastFetchedAt: g.Z.getLastFetchedAtForGuild(n)
         })),
         { lastDismissedGracePeriod: y, isGracePeriodVisible: I } = (0, l.cj)([b.Z], () => ({
             lastDismissedGracePeriod: b.Z.getLastDismissedGracePeriodForGuild(n),
@@ -49,7 +49,7 @@ function I(e) {
         k = R.length > 0,
         M = D && !(null == e ? void 0 : e.hasFeature(v.oNc.HUB)),
         U = (0, c.Vm)(n),
-        G = (0, l.e7)([g.Z], () => null != g.Z.getActiveGuildSignUp(n));
+        G = (0, l.e7)([f.Z], () => null != f.Z.getActiveGuildSignUp(n));
     if (
         (i.useEffect(() => {
             a.Z.getGuildEventsForCurrentUser(n);

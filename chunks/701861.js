@@ -10,8 +10,8 @@ var r = n(200651),
     d = n(443589),
     p = n(703656),
     h = n(592125),
-    g = n(131951),
-    f = n(699516),
+    f = n(131951),
+    g = n(699516),
     m = n(51144),
     b = n(298213),
     _ = n(321488),
@@ -84,7 +84,7 @@ function j(e) {
                 location: 'Friends'
             });
         }, [n, l, t.id]),
-        f = i.useCallback(() => {
+        g = i.useCallback(() => {
             let e = l ? I.NW.string(I.t['RLcE6+']) : I.NW.string(I.t.cvSt1N);
             (0, s.h7j)((n) =>
                 (0, r.jsx)(
@@ -109,7 +109,7 @@ function j(e) {
                 )
             );
         }, [h, l, t]),
-        _ = (0, a.e7)([g.Z], () => g.Z.supports(y.AN.VIDEO)),
+        _ = (0, a.e7)([f.Z], () => f.Z.supports(y.AN.VIDEO)),
         E = t.isProvisional,
         O = l ? I.NW.string(I.t['RLcE6+']) : I.NW.string(I.t.cvSt1N);
     return (0, r.jsxs)(s.v2r, {
@@ -134,7 +134,7 @@ function j(e) {
             (0, r.jsx)(s.sNh, {
                 id: 'remove-friend',
                 label: O,
-                action: f,
+                action: g,
                 color: 'danger'
             })
         ]
@@ -171,7 +171,7 @@ class A extends i.PureComponent {
                                 applicationStream: i,
                                 status: l,
                                 user: e,
-                                userIgnored: f.Z.isIgnored(e.id)
+                                userIgnored: g.Z.isIgnored(e.id)
                             }),
                             hovered: t,
                             showAccountIdentifier: !a

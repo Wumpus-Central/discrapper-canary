@@ -10,8 +10,8 @@ var r = n(570140),
     d = n(39604),
     p = n(569545),
     h = n(722835),
-    g = n(703656),
-    f = n(641015),
+    f = n(703656),
+    g = n(641015),
     m = n(183584),
     b = n(199902),
     _ = n(131951),
@@ -145,7 +145,7 @@ let S = {
         }
     },
     [I.kg4.NAVIGATE_BACK]: {
-        onTrigger: () => (0, g.op)(),
+        onTrigger: () => (0, f.op)(),
         keyEvents: {
             keyup: !0,
             keydown: !1,
@@ -154,7 +154,7 @@ let S = {
         }
     },
     [I.kg4.NAVIGATE_FORWARD]: {
-        onTrigger: () => (0, g.eH)(),
+        onTrigger: () => (0, f.eH)(),
         keyEvents: {
             keyup: !0,
             keydown: !1,
@@ -164,7 +164,7 @@ let S = {
     },
     [I.kg4.SOUNDBOARD]: {
         onTrigger: () => {
-            if (!(0, f.D)()) return;
+            if (!(0, g.D)()) return;
             let e = (0, y.Z)();
             null != e && (N.Z.isLocked(e) ? (0, m.IN)(!0, e) : (0, m.oZ)(e));
         },
@@ -175,7 +175,7 @@ let S = {
     },
     [I.kg4.SOUNDBOARD_HOLD]: {
         onTrigger: (e) => {
-            if (!(0, f.D)()) return;
+            if (!(0, g.D)()) return;
             let t = (0, y.Z)();
             if (null != t) {
                 e ? (0, m.IN)(!1, t) : (0, m.oZ)(t);

@@ -22,7 +22,7 @@ function h(e, t, n) {
         e
     );
 }
-function g(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,7 +38,7 @@ function g(e) {
     }
     return e;
 }
-function f(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -96,8 +96,8 @@ class m extends i.PureComponent {
                     },
                     children: (0, r.jsx)(
                         a.Z.div,
-                        f(
-                            g(
+                        g(
+                            f(
                                 {
                                     className: o()(m, p.peopleListItem, null != b ? { [b]: h || i } : null, { [p.active]: h || i }),
                                     onContextMenu: (e) => this.handleContextMenu(e, u),
@@ -139,7 +139,7 @@ class m extends i.PureComponent {
                         e,
                         async () => {
                             let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('31923')]).then(n.bind(n, 881351));
-                            return (n) => (0, r.jsx)(e, f(g({}, n), { user: t }));
+                            return (n) => (0, r.jsx)(e, g(f({}, n), { user: t }));
                         },
                         {
                             onClose: () => {

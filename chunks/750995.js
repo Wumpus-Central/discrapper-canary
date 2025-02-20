@@ -11,8 +11,8 @@ var i = n(704215),
     d = n(496675),
     p = n(228392),
     h = n(981631),
-    g = n(921944);
-let f = (e) => {
+    f = n(921944);
+let g = (e) => {
     var t;
     let n = u.Z.getGuild(e),
         r = !!(null == n ? void 0 : n.hasFeature(h.oNc.COMMUNITY)),
@@ -30,10 +30,10 @@ class m extends a.Z {
     }
     handleChannelSelect(e) {
         let { guildId: t } = e;
-        if (null == t || !f(t)) return;
+        if (null == t || !g(t)) return;
         (0, p.qz)(), (0, s.kk)(i.z.FORUM_CHANNEL_UPSELL_MODAL);
         let o = function () {
-            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : g.L.DISMISS;
+            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : f.L.DISMISS;
             (0, s.EW)(i.z.FORUM_CHANNEL_UPSELL_MODAL, { dismissAction: e });
         };
         (0, l.ZDy)(
@@ -93,7 +93,7 @@ class m extends a.Z {
                 };
             },
             {
-                onCloseCallback: () => (0, s.EW)(i.z.FORUM_CHANNEL_UPSELL_MODAL, { dismissAction: g.L.DISMISS }),
+                onCloseCallback: () => (0, s.EW)(i.z.FORUM_CHANNEL_UPSELL_MODAL, { dismissAction: f.L.DISMISS }),
                 onCloseRequest: h.VqG
             }
         );

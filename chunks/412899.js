@@ -27,8 +27,8 @@ var r = n(200651),
     S = n(600164),
     p = n(91218),
     U = n(313201),
-    D = n(518738),
-    C = n(434404),
+    C = n(518738),
+    D = n(434404),
     L = n(271383),
     h = n(430824),
     m = n(496675),
@@ -145,11 +145,11 @@ function B(e) {
 let w = l.forwardRef(function (e, t) {
     var a, o, s;
     let E;
-    let { canRemove: u, className: I, role: O, onRemove: R, guildId: S, disableBorderColor: U, onMouseDown: C } = e,
+    let { canRemove: u, className: I, role: O, onRemove: R, guildId: S, disableBorderColor: U, onMouseDown: D } = e,
         L = (0, c.JA)(O.id),
         { tabIndex: h } = L,
         m = F(L, ['tabIndex']),
-        M = (0, D.p9)({
+        M = (0, C.p9)({
             roleId: O.id,
             size: 16,
             guildId: S
@@ -207,7 +207,7 @@ let w = l.forwardRef(function (e, t) {
                         className: i()(y.role, I),
                         style: V,
                         onContextMenu: P,
-                        onMouseDown: C,
+                        onMouseDown: D,
                         'aria-label': O.name,
                         tabIndex: h
                     },
@@ -317,21 +317,21 @@ function V(e) {
             (e) => {
                 var t;
                 let r = o.filter((t) => t !== e.id);
-                (null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null ? I.Z.unassignGuildRoleConnection(a.id, e.id) : C.Z.updateMemberRoles(a.id, n.id, r, [], [e.id]);
+                (null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null ? I.Z.unassignGuildRoleConnection(a.id, e.id) : D.Z.updateMemberRoles(a.id, n.id, r, [], [e.id]);
             },
             [o, a.id, n.id]
         ),
         S = l.useCallback(
             (e) => {
                 let t = o;
-                -1 === t.indexOf(e) && (t = t.concat([e])), C.Z.updateMemberRoles(a.id, n.id, t, [e], []);
+                -1 === t.indexOf(e) && (t = t.concat([e])), D.Z.updateMemberRoles(a.id, n.id, t, [e], []);
             },
             [o, a.id, n.id]
         ),
         [p, U] = l.useState(null),
-        D = (0, d.e7)([h.Z], () => h.Z.getRoles(a.id)),
+        C = (0, d.e7)([h.Z], () => h.Z.getRoles(a.id)),
         L = l.useMemo(() => {
-            let e = Object.values(D)
+            let e = Object.values(C)
                 .filter((e) => o.includes(e.id))
                 .sort((e, t) => {
                     var n, r;
@@ -340,7 +340,7 @@ function V(e) {
                     return l && !a ? 1 : !l && a ? -1 : 0;
                 });
             return null != p ? e.slice(0, p) : e;
-        }, [D, p, o]),
+        }, [C, p, o]),
         b = o.length - L.length;
     l.useLayoutEffect(() => {
         if (_) return;

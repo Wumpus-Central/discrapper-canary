@@ -76,7 +76,7 @@ let U = l.memo(function () {
                 )
         });
     }),
-    D = l.memo(function () {
+    C = l.memo(function () {
         return (0, r.jsx)(s.ua7, {
             text: R.NW.string(R.t.OrCp9v),
             children: (e) =>
@@ -91,7 +91,7 @@ let U = l.memo(function () {
                 )
         });
     }),
-    C = {
+    D = {
         [g.gq.UNSPECIFIED]: {
             type: g.gq.UNSPECIFIED,
             getJoinTypeLabel: () => R.NW.string(R.t.DvMBkZ),
@@ -264,7 +264,7 @@ function M(e) {
             }
             return l;
         })(e, ['sourceInviteCode', 'joinSourceType', 'integrationType', 'showInviterAsFooter', 'guildId', 'inviterUser', 'onClickInviter']);
-    let d = null != n ? C[n] : null,
+    let d = null != n ? D[n] : null,
         A = n === g.gq.INTEGRATION && null != a,
         T = l.useCallback(
             (e) => {
@@ -357,10 +357,10 @@ let v = l.memo(function (e) {
     let O = (0, o.e7)([d.Z], () => d.Z.hideInstantInvites, []);
     if (null == _) return (0, r.jsx)(U, {});
     let { sourceInviteCode: R, joinSourceType: f, integrationType: p } = _,
-        L = null != f ? C[f] : null,
+        L = null != f ? D[f] : null,
         m = null !== (n = null == L ? void 0 : L.hasTooltip) && void 0 !== n && n;
     return (f === g.gq.INVITE || f === g.gq.VANITY_URL || (f === g.gq.MANUAL_MEMBER_VERIFICATION && null != R)) && O
-        ? (0, r.jsx)(D, {})
+        ? (0, r.jsx)(C, {})
         : (0, r.jsx)(h, {
               hasTooltip: m && !s,
               inviterUser: null != N ? N : null,

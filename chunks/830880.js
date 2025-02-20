@@ -1,4 +1,4 @@
-n.d(t, { R: () => g }), n(47120);
+n.d(t, { R: () => f }), n(47120);
 var r = n(200651);
 n(192379);
 var i = n(704215),
@@ -11,10 +11,10 @@ var i = n(704215),
     d = n(726985),
     p = n(388032),
     h = n(907661);
-function g() {
+function f() {
     let [e, t] = (0, a.US)([i.z.RESTRICTED_ACCOUNTS_SETTING_NOTICE]),
         n = e === i.z.RESTRICTED_ACCOUNTS_SETTING_NOTICE,
-        g = () => {
+        f = () => {
             o.Z.open(s.oAB.CONTENT_AND_SOCIAL, d.s6.RESTRICTED_USERS, { scrollPosition: u.FY.RESTRICTED_ACCOUNTS });
         };
     return n
@@ -30,7 +30,7 @@ function g() {
                               (0, r.jsx)(
                                   l.eee,
                                   {
-                                      onClick: g,
+                                      onClick: f,
                                       children: e
                                   },
                                   t

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => f });
 var r = n(24917),
     i = n(115911),
     l = n(106351),
@@ -10,7 +10,7 @@ var r = n(24917),
     d = n(600027),
     p = n(186901),
     h = n(231338);
-let g = {
+let f = {
     [h.Et.INVITE_USER_EMBEDDED]: (0, a.S)(h.Et.INVITE_USER_EMBEDDED, {
         scope: { [p.Gp.ANY]: [o.x.RELATIONSHIPS_READ] },
         async handler(e) {
@@ -21,19 +21,19 @@ let g = {
                 } = e,
                 p = n.application.id;
             if (null == p) throw new r.O({ errorCode: h.lT.INVALID_COMMAND }, 'No application.');
-            let g = c.ZP.getConnectedActivityLocation();
-            if (null == g) throw new r.O({ errorCode: h.lT.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure an activity was set using setActivity.');
-            switch (g.kind) {
+            let f = c.ZP.getConnectedActivityLocation();
+            if (null == f) throw new r.O({ errorCode: h.lT.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure an activity was set using setActivity.');
+            switch (f.kind) {
                 case i.X.GUILD_CHANNEL:
                 case i.X.GUILD_CHANNEL_MESSAGE:
                     t = (0, d.T)().channel;
                     break;
                 case i.X.PRIVATE_CHANNEL:
                 case i.X.PRIVATE_CHANNEL_MESSAGE:
-                    let f = u.Z.getChannel(g.channel_id);
-                    if (null == f) throw new r.O({ errorCode: h.lT.INVALID_CHANNEL }, 'Invalid channel');
-                    if (f.type === l.d.DM) throw new r.O({ errorCode: h.lT.INVALID_CHANNEL }, 'Cannot send invite to a DM');
-                    t = f;
+                    let g = u.Z.getChannel(f.channel_id);
+                    if (null == g) throw new r.O({ errorCode: h.lT.INVALID_CHANNEL }, 'Invalid channel');
+                    if (g.type === l.d.DM) throw new r.O({ errorCode: h.lT.INVALID_CHANNEL }, 'Cannot send invite to a DM');
+                    t = g;
                     break;
                 default:
                     throw new r.O({ errorCode: h.lT.NO_ELIGIBLE_ACTIVITY }, 'Unsupported activity location');

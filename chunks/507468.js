@@ -10,7 +10,7 @@ var r = n(392711),
     d = n(526761);
 let p = {
     init() {
-        (s.Z[d.yP.PRELOADED_USER_SETTINGS] = a.Z), (s.Z[d.yP.FRECENCY_AND_FAVORITES_SETTINGS] = o.Z), l.Z.subscribe('CONNECTION_OPEN', h), l.Z.subscribe('USER_SETTINGS_PROTO_ENQUEUE_UPDATE', g), l.Z.subscribe('USER_SETTINGS_PROTO_LOAD_IF_NECESSARY', f), l.Z.subscribe('APP_STATE_UPDATE', m);
+        (s.Z[d.yP.PRELOADED_USER_SETTINGS] = a.Z), (s.Z[d.yP.FRECENCY_AND_FAVORITES_SETTINGS] = o.Z), l.Z.subscribe('CONNECTION_OPEN', h), l.Z.subscribe('USER_SETTINGS_PROTO_ENQUEUE_UPDATE', f), l.Z.subscribe('USER_SETTINGS_PROTO_LOAD_IF_NECESSARY', g), l.Z.subscribe('APP_STATE_UPDATE', m);
     }
 };
 function h() {
@@ -22,7 +22,7 @@ function h() {
             null != r.editInfo.offlineEditDataVersion && null != r.editInfo.protoToSave && t.scheduleSaveFromOfflineEdit();
         });
 }
-function g(e) {
+function f(e) {
     let {
         settings: { proto: t, type: n },
         delaySeconds: r,
@@ -33,7 +33,7 @@ function g(e) {
         jitter: i
     });
 }
-function f(e) {
+function g(e) {
     let { settingsType: t } = e;
     c.aj[t].loadIfNecessary();
 }

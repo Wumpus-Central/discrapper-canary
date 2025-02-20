@@ -34,7 +34,7 @@ function N(e) {
     i.useEffect(() => {
         A && z(!1);
     }, [A]);
-    let [{ dragging: J }, K] = (0, a.c)({
+    let [{ dragging: K }, J] = (0, a.c)({
             type: m.eD.FOLDER,
             item: () => (
                 null == D || D(),
@@ -68,7 +68,7 @@ function N(e) {
             let i = e * (t + ('cozy' === r ? 8 : 4));
             return 'cozy' === r ? i - 4 : i;
         })(V.length),
-        ei = (0, d.Yzy)(!J && s, {
+        ei = (0, d.Yzy)(!K && s, {
             from: { height: 0 },
             enter: { height: 1 },
             leave: { height: 0 },
@@ -78,7 +78,7 @@ function N(e) {
         eo = (0, r.jsxs)(O.H, {
             children: [
                 (0, r.jsx)(b.Z, {
-                    disabled: J || s,
+                    disabled: K || s,
                     hovered: H,
                     selected: l,
                     unread: Z,
@@ -90,10 +90,10 @@ function N(e) {
                     selected: l,
                     disableWrapper: !0,
                     children: (0, r.jsx)('div', {
-                        ref: T ? K : void 0,
-                        className: o()(x.folderIcon, { [P.wobble]: !J && q && !s }),
+                        ref: T ? J : void 0,
+                        className: o()(x.folderIcon, { [P.wobble]: !K && q && !s }),
                         'data-dnd-name': ee,
-                        children: J
+                        children: K
                             ? (0, r.jsx)(_.Z, {})
                             : (0, r.jsx)(v.Z, {
                                   folderNode: t,
@@ -129,7 +129,7 @@ function N(e) {
         className: o()(x.wrapper, s && x.isExpanded),
         'data-drop-hovering': q,
         children: [
-            !J &&
+            !K &&
                 s &&
                 (0, r.jsx)('span', {
                     className: o()(x.expandedFolderBackground, {

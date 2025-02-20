@@ -10,10 +10,10 @@ var i = n(120356),
 n(51144);
 var u = n(966671);
 let d = function (e) {
-    let { user: t, hovered: n, subText: i, showAccountIdentifier: d, status: p, isMobile: h, className: g } = e,
-        f = (0, o.e7)([c.Z], () => c.Z.getNickname(t.id));
+    let { user: t, hovered: n, subText: i, showAccountIdentifier: d, status: p, isMobile: h, className: f } = e,
+        g = (0, o.e7)([c.Z], () => c.Z.getNickname(t.id));
     return (0, r.jsxs)('div', {
-        className: l()(u.userInfo, g, { [u.hovered]: n }),
+        className: l()(u.userInfo, f, { [u.hovered]: n }),
         children: [
             (0, r.jsx)(s.Z, {
                 user: t,
@@ -27,7 +27,7 @@ let d = function (e) {
                 children: [
                     (0, r.jsx)(a.Z, {
                         user: t,
-                        nick: f,
+                        nick: g,
                         botClass: u.botTag,
                         className: l()(u.discordTag, { [u.alignPomelo]: t.isPomelo() }),
                         usernameClass: u.username,

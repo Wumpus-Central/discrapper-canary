@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => g });
 var r = n(200651);
 n(192379);
 var i = n(685072),
@@ -75,7 +75,7 @@ function h(e) {
         }
     });
 }
-function g(e) {
+function f(e) {
     let { channel: t } = e;
     return (0, r.jsx)(p, {
         tooltipText: d.NW.string(d.t['6vrfgo']),
@@ -88,7 +88,7 @@ function g(e) {
         }
     });
 }
-function f(e) {
+function g(e) {
     let { channel: t } = e;
-    return t.isGuildStageVoice() ? (0, r.jsx)(h, { channel: t }) : (0, r.jsx)(g, { channel: t });
+    return t.isGuildStageVoice() ? (0, r.jsx)(h, { channel: t }) : (0, r.jsx)(f, { channel: t });
 }

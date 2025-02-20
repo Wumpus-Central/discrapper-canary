@@ -9,8 +9,8 @@ var l,
     d = n(700785),
     p = n(388610),
     h = n(592125),
-    g = n(981631),
-    f = n(71080);
+    f = n(981631),
+    g = n(71080);
 function m(e, t, n) {
     return (
         t in e
@@ -59,7 +59,7 @@ function _(e, t) {
     );
 }
 let E = new Set(),
-    O = g.QZA.CLOSED,
+    O = f.QZA.CLOSED,
     N = !1,
     v = null,
     y = null,
@@ -67,7 +67,7 @@ let E = new Set(),
     C = null,
     S = null,
     T = null,
-    P = c.K.get(f.kf) || !1;
+    P = c.K.get(g.kf) || !1;
 function j(e) {
     let t = e.getGuildId(),
         n = b({}, e.permissionOverwrites);
@@ -76,7 +76,7 @@ function j(e) {
 function A() {
     if (((I = p.Z.getChannel()), (C = p.Z.getCategory()), null == I)) return !1;
     let e = I.getGuildId();
-    (y = v = j(I)), null == v[S] && (S = e), (i = null != C), (r = d.o4(I, C)), (T = null), (N = !1), (O = g.QZA.CLOSED), E.clear();
+    (y = v = j(I)), null == v[S] && (S = e), (i = null != C), (r = d.o4(I, C)), (T = null), (N = !1), (O = f.QZA.CLOSED), E.clear();
 }
 class Z extends (l = s.ZP.Store) {
     initialize() {
@@ -123,7 +123,7 @@ m(Z, 'displayName', 'ChannelSettingsPermissionsStore');
 let x = new Z(u.Z, {
     CHANNEL_SETTINGS_SET_SECTION: function (e) {
         let { section: t } = e;
-        if (null != I || t !== g.CoT.PERMISSIONS) return !1;
+        if (null != I || t !== f.CoT.PERMISSIONS) return !1;
         A();
     },
     CHANNEL_SETTINGS_PERMISSIONS_INIT: A,
@@ -137,7 +137,7 @@ let x = new Z(u.Z, {
         })),
             (v = _(b({}, v), { [t]: l })),
             E.add(t),
-            (O = g.QZA.OPEN),
+            (O = f.QZA.OPEN),
             (N = !a().isEqual(v, y)),
             (r = d.o4(I, C));
     },
@@ -150,7 +150,7 @@ let x = new Z(u.Z, {
         }
     },
     CHANNEL_SETTINGS_CLOSE: function () {
-        (O = g.QZA.CLOSED), (v = null), (y = null), (I = null), (C = null), (N = !1), E.clear(), (S = null), (T = null);
+        (O = f.QZA.CLOSED), (v = null), (y = null), (I = null), (C = null), (N = !1), E.clear(), (S = null), (T = null);
     },
     CHANNEL_UPDATES: function (e) {
         let { channels: t } = e;
@@ -178,14 +178,14 @@ let x = new Z(u.Z, {
         return n;
     },
     CHANNEL_SETTINGS_PERMISSIONS_SUBMITTING: function () {
-        O = g.QZA.SUBMITTING;
+        O = f.QZA.SUBMITTING;
     },
     CHANNEL_SETTINGS_PERMISSIONS_SAVE_SUCCESS: function (e) {
         let { silent: t } = e;
-        t ? (O = g.QZA.OPEN) : ((O = g.QZA.CLOSED), A());
+        t ? (O = f.QZA.OPEN) : ((O = f.QZA.CLOSED), A());
     },
     CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE: function (e) {
         let { advancedMode: t } = e;
-        (P = t), c.K.set(f.kf, t);
+        (P = t), c.K.set(g.kf, t);
     }
 });

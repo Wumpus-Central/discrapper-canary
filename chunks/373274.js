@@ -52,8 +52,8 @@ var r,
     q = n(61642),
     Y = n(848442),
     Q = n(53425),
-    J = n(424785),
-    K = n(770202),
+    K = n(424785),
+    J = n(770202),
     X = n(79556),
     $ = n(428127),
     ee = n(950969),
@@ -681,7 +681,7 @@ class ef extends (r = l.PureComponent) {
                     case el.d4z.GUILD_STAGE_VOICE:
                         var P, I;
                         return (0, i.jsx)(
-                            J.Z,
+                            K.Z,
                             {
                                 channel: _,
                                 guild: r,
@@ -717,7 +717,7 @@ class ef extends (r = l.PureComponent) {
                         );
                     case el.d4z.GUILD_STORE:
                         return (0, i.jsx)(
-                            K.Z,
+                            J.Z,
                             {
                                 channel: _,
                                 guild: r,

@@ -14,7 +14,7 @@ var r,
     d = n(131951),
     p = n(981631),
     h = n(65154);
-function g(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,8 +27,8 @@ function g(e, t, n) {
         e
     );
 }
-let f = {},
-    m = f,
+let g = {},
+    m = g,
     b = !1,
     _ = {},
     E = {},
@@ -64,7 +64,7 @@ function C(e, t, n) {
 }
 class S extends (r = o.ZP.DeviceSettingsStore) {
     initialize(e) {
-        this.waitFor(d.Z, c.Z), (m = null != e ? e : f);
+        this.waitFor(d.Z, c.Z), (m = null != e ? e : g);
     }
     getUserAgnosticState() {
         return m;
@@ -88,7 +88,7 @@ class S extends (r = o.ZP.DeviceSettingsStore) {
         return v;
     }
 }
-g(S, 'displayName', 'ConnectedDeviceStore'), g(S, 'persistKey', 'ConnectedDeviceStore');
+f(S, 'displayName', 'ConnectedDeviceStore'), f(S, 'persistKey', 'ConnectedDeviceStore');
 let T = new S(a.Z, {
     MEDIA_ENGINE_DEVICES: function (e) {
         let { inputDevices: t, outputDevices: n } = e,

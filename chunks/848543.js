@@ -10,8 +10,8 @@ var r = n(200651),
     d = n(239091),
     p = n(100527),
     h = n(906732),
-    g = n(540059),
-    f = n(706140),
+    f = n(540059),
+    g = n(706140),
     m = n(294629),
     b = n(131951),
     _ = n(459273),
@@ -86,14 +86,14 @@ function P(e) {
             }
             return i;
         })(e, ['channel', 'iconClassName', 'className', 'innerClassName']);
-    let Z = (0, g.Q3)('SoundBoardRTCPanelButton'),
+    let Z = (0, f.Q3)('SoundBoardRTCPanelButton'),
         { mute: x, suppress: L } = (0, m.Z)(t),
         w = (0, a.e7)([b.Z], () => b.Z.isDeaf()),
         R = x || L || w,
         [D, k] = i.useState(!1),
         M = t.getGuildId(),
         U = (0, E.sR)({ isSoundboardButtonDisabled: R }),
-        [G, W] = (0, f.cv)(U),
+        [G, W] = (0, g.cv)(U),
         { analyticsLocations: V } = (0, h.ZP)(p.Z.SOUNDBOARD_BUTTON);
     function B(e) {
         null != M &&

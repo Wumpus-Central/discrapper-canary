@@ -54,8 +54,8 @@ function h(e, t) {
         e
     );
 }
-let g = !1,
-    f = {},
+let f = !1,
+    g = {},
     m = {};
 function b(e) {
     let t = !1;
@@ -70,7 +70,7 @@ function _(e) {
     let t = m[e];
     if (null == t) return !1;
     let n = t.gameId;
-    return null != f[n] && ((f = p({}, f)), delete f[n][e], 0 === Object.values(f[n]).length && delete f[n]), (m = p({}, m)), delete m[e], !0;
+    return null != g[n] && ((g = p({}, g)), delete g[n][e], 0 === Object.values(g[n]).length && delete g[n]), (m = p({}, m)), delete m[e], !0;
 }
 function E(e) {
     let { user: t, activities: n } = e;
@@ -93,7 +93,7 @@ function E(e) {
                         startedPlaying: a
                     };
                 return (
-                    (f = h(p({}, f), { [i]: h(p({}, f[i]), { [s.userId]: s }) })),
+                    (g = h(p({}, g), { [i]: h(p({}, g[i]), { [s.userId]: s }) })),
                     (m = h(p({}, m), {
                         [s.userId]: {
                             gameId: i,
@@ -109,9 +109,9 @@ function E(e) {
 }
 function O() {
     let e = !1;
-    if (!a.Z.needsRefresh() && !g) {
+    if (!a.Z.needsRefresh() && !f) {
         let t;
-        (f = {}),
+        (g = {}),
             (m = {}),
             (t = !1),
             s.Z.getUserIds().forEach((e) => {
@@ -125,23 +125,23 @@ function O() {
             }),
             (e = t);
     }
-    return (g = !a.Z.needsRefresh()), e;
+    return (f = !a.Z.needsRefresh()), e;
 }
 class N extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(a.Z), this.syncWith([a.Z], O);
     }
     get games() {
-        return f;
+        return g;
     }
     get usersPlaying() {
         return m;
     }
     get gameIds() {
-        return Object.keys(f);
+        return Object.keys(g);
     }
     getNowPlaying(e) {
-        return f[e];
+        return g[e];
     }
     getUserGame(e) {
         return m[e];
@@ -150,7 +150,7 @@ class N extends (r = i.ZP.Store) {
 d(N, 'displayName', 'NowPlayingStore');
 let v = new N(l.Z, {
     CONNECTION_OPEN: function () {
-        (f = {}), (m = {});
+        (g = {}), (m = {});
     },
     CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
         let { guilds: t, presences: n } = e,
@@ -164,7 +164,7 @@ let v = new N(l.Z, {
         );
     },
     LOGOUT: function () {
-        (f = {}), (m = {});
+        (g = {}), (m = {});
     },
     PRESENCE_UPDATES: function (e) {
         let { updates: t } = e;

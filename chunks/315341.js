@@ -10,8 +10,8 @@ var r = n(442837),
     d = n(915486),
     p = n(48481),
     h = n(981631),
-    g = n(71509);
-function f(e, t) {
+    f = n(71509);
+function g(e, t) {
     let n = !1;
     return (
         null == e.userContent &&
@@ -26,7 +26,7 @@ function f(e, t) {
     );
 }
 function m(e, t, n) {
-    return !!c.qc.hasHiddenHotspot(t) && f(e, n);
+    return !!c.qc.hasHiddenHotspot(t) && g(e, n);
 }
 let b = [
     {
@@ -69,7 +69,7 @@ let b = [
         version: 4,
         run(e) {
             let t = !1;
-            return (!0 === a.K.get('HAS_SEEN_HUB_UPSELL') || c.qc.hasHiddenHotspot(c.v6.HUB_SECOND_EMAIL_CONNECTION_UPSELL)) && (t = f(e, i.z.HUB_WAITLIST_UPSELL)), t;
+            return (!0 === a.K.get('HAS_SEEN_HUB_UPSELL') || c.qc.hasHiddenHotspot(c.v6.HUB_SECOND_EMAIL_CONNECTION_UPSELL)) && (t = g(e, i.z.HUB_WAITLIST_UPSELL)), t;
         },
         cleanup() {
             a.K.remove('HAS_SEEN_HUB_UPSELL');
@@ -98,7 +98,7 @@ let b = [
     },
     {
         version: 9,
-        run: (e) => (c.qc.hasHiddenHotspot(c.v6.MULTI_ACCOUNT_TOOLTIP) && a.K.set(g.Ip, 'true'), m(e, c.v6.MULTI_ACCOUNT_TOOLTIP, i.z.ACCOUNT_MULTIACCOUNT_TOOLTIP)),
+        run: (e) => (c.qc.hasHiddenHotspot(c.v6.MULTI_ACCOUNT_TOOLTIP) && a.K.set(f.Ip, 'true'), m(e, c.v6.MULTI_ACCOUNT_TOOLTIP, i.z.ACCOUNT_MULTIACCOUNT_TOOLTIP)),
         cleanup() {}
     },
     {
@@ -107,7 +107,7 @@ let b = [
             var t;
             let n = m(e, c.v6.HUB_LINK_CHANNEL_NOTICE, i.z.CHANNEL_NOTICE_HUBLINK),
                 r = null !== (t = a.K.get('channelNotices')) && void 0 !== t ? t : {};
-            return !1 === r[h.vID.INVITE] && f(e, i.z.CHANNEL_NOTICE_INVITE) && (n = !0), !1 === r[h.vID.QUICKSWITCHER] && f(e, i.z.CHANNEL_NOTICE_QUICKSWITCHER) && (n = !0), !1 === r[h.vID.GUILD_BOOSTING] && f(e, i.z.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION) && (n = !0), n;
+            return !1 === r[h.vID.INVITE] && g(e, i.z.CHANNEL_NOTICE_INVITE) && (n = !0), !1 === r[h.vID.QUICKSWITCHER] && g(e, i.z.CHANNEL_NOTICE_QUICKSWITCHER) && (n = !0), !1 === r[h.vID.GUILD_BOOSTING] && g(e, i.z.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION) && (n = !0), n;
         },
         cleanup() {
             a.K.remove('channelNotices');
@@ -125,7 +125,7 @@ let b = [
         version: 12,
         run(e) {
             let t = !1;
-            return a.K.get('hideNag') && f(e, i.z.NAGBAR_NOTICE_DOWNLOAD) && (t = !0), a.K.get('hideConnectSpotify') && f(e, i.z.NAGBAR_NOTICE_CONNECT_SPOTIFY) && (t = !0), a.K.get('hideConnectPlayStation') && f(e, i.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION) && (t = !0), a.K.get('hideMFASMSNotice') && f(e, i.z.NAGBAR_NOTICE_MFA_SMS_BACKUP) && (t = !0), t;
+            return a.K.get('hideNag') && g(e, i.z.NAGBAR_NOTICE_DOWNLOAD) && (t = !0), a.K.get('hideConnectSpotify') && g(e, i.z.NAGBAR_NOTICE_CONNECT_SPOTIFY) && (t = !0), a.K.get('hideConnectPlayStation') && g(e, i.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION) && (t = !0), a.K.get('hideMFASMSNotice') && g(e, i.z.NAGBAR_NOTICE_MFA_SMS_BACKUP) && (t = !0), t;
         },
         cleanup() {
             a.K.remove('hideNag'), a.K.remove('hideConnectSpotify'), a.K.remove('hideConnectPlayStation'), a.K.remove('hideMFASMSNotice');
@@ -135,7 +135,7 @@ let b = [
         version: 13,
         run(e) {
             let t = !1;
-            return a.K.get('hidePremiumPromo') && f(e, i.z.NAGBAR_NOTICE_PREMIUM_PROMO) && (t = !0), a.K.get('hidePremiumTier2TrialEnding') && f(e, i.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING) && (t = !0), a.K.get('hidePremiumReactivateNotice') && f(e, i.z.NAGBAR_NOTICE_PREMIUM_REACTIVATE) && (t = !0), m(e, c.v6.INVITE_SPLASH_GUILD_HEADER_TOOLTIP, i.z.GUILD_HEADER_INVITE_SPLASH) && (t = !0), t;
+            return a.K.get('hidePremiumPromo') && g(e, i.z.NAGBAR_NOTICE_PREMIUM_PROMO) && (t = !0), a.K.get('hidePremiumTier2TrialEnding') && g(e, i.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING) && (t = !0), a.K.get('hidePremiumReactivateNotice') && g(e, i.z.NAGBAR_NOTICE_PREMIUM_REACTIVATE) && (t = !0), m(e, c.v6.INVITE_SPLASH_GUILD_HEADER_TOOLTIP, i.z.GUILD_HEADER_INVITE_SPLASH) && (t = !0), t;
         },
         cleanup() {
             a.K.remove('hidePremiumPromo'), a.K.remove('hidePremiumTier2TrialEnding'), a.K.remove('hidePremiumReactivateNotice');
@@ -186,7 +186,7 @@ let b = [
         run(e) {
             var t;
             let n = !1;
-            return null !== (t = a.K.get('forumHelperCardStorageKey')) && void 0 !== t && t && (n = f(e, i.z.FORUM_CHANNEL_HELPER_CARD)), n;
+            return null !== (t = a.K.get('forumHelperCardStorageKey')) && void 0 !== t && t && (n = g(e, i.z.FORUM_CHANNEL_HELPER_CARD)), n;
         },
         cleanup() {
             a.K.remove('forumHelperCardStorageKey');

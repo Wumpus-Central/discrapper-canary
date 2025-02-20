@@ -16,8 +16,8 @@ var r = n(200651),
     d = n(239091),
     p = n(881052),
     h = n(410030),
-    g = n(686546),
-    f = n(540059),
+    f = n(686546),
+    g = n(540059),
     m = n(66637),
     b = n(782738),
     _ = n(371260),
@@ -35,7 +35,7 @@ var r = n(200651),
     A = n(755386);
 function Z(e) {
     let { guild: t, onClick: l, onView: a } = e,
-        b = (0, f.Q3)('BaseGlobalDiscoveryServersCard'),
+        b = (0, g.Q3)('BaseGlobalDiscoveryServersCard'),
         [_, y] = i.useState(!1),
         [Z, x] = i.useState(!1),
         [L, w] = i.useState(!1),
@@ -181,14 +181,14 @@ function Z(e) {
                                     }),
                                 (0, r.jsx)('div', {
                                     className: T.icon,
-                                    children: (0, r.jsx)(g.ZP, {
-                                        mask: g.ZP.Masks.SQUIRCLE,
+                                    children: (0, r.jsx)(f.ZP, {
+                                        mask: f.ZP.Masks.SQUIRCLE,
                                         width: W + 8,
                                         height: W + 8,
                                         children: (0, r.jsx)('div', {
                                             className: T.iconMask,
-                                            children: (0, r.jsx)(g.ZP, {
-                                                mask: g.ZP.Masks.SQUIRCLE,
+                                            children: (0, r.jsx)(f.ZP, {
+                                                mask: f.ZP.Masks.SQUIRCLE,
                                                 width: W,
                                                 height: W,
                                                 children: (0, r.jsx)('img', {

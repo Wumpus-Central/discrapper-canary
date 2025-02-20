@@ -10,8 +10,8 @@ var r = n(200651),
     d = n(746508),
     p = n(210724),
     h = n(905423),
-    g = n(316173),
-    f = n(410575),
+    f = n(316173),
+    g = n(410575),
     m = n(981631),
     b = n(388032),
     _ = n(972929);
@@ -83,18 +83,18 @@ function O() {
             children: (0, r.jsxs)(l.Jc, {
                 containerRef: t,
                 children: [
-                    e && (0, r.jsx)(g.Z, {}),
+                    e && (0, r.jsx)(f.Z, {}),
                     (0, r.jsx)(p.Z, {}),
                     (0, r.jsx)(u.Z, {}),
-                    (0, r.jsx)(f.Z, {
+                    (0, r.jsx)(g.Z, {
                         section: m.jXE.ACTIVITY_PANEL,
                         children: (0, r.jsx)(E, { className: _.activityPanel })
                     }),
-                    (0, r.jsx)(f.Z, {
+                    (0, r.jsx)(g.Z, {
                         section: m.jXE.RTC_CONNECTION_PANEL,
                         children: (0, r.jsx)(d.Z, {})
                     }),
-                    (0, r.jsx)(f.Z, {
+                    (0, r.jsx)(g.Z, {
                         section: m.jXE.ACCOUNT_PANEL,
                         children: (0, r.jsx)(s.Z, {})
                     })

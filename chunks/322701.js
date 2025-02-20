@@ -10,7 +10,7 @@ var r = n(200651),
     d = n(981631),
     p = n(137184);
 let h = function (e) {
-    let { rows: t, renderRow: n, renderSection: h, hasSearchQuery: g, sectionFilter: f, footer: m } = e,
+    let { rows: t, renderRow: n, renderSection: h, hasSearchQuery: f, sectionFilter: g, footer: m } = e,
         b = (0, a.e7)([u.Z], () => u.Z.keyboardModeEnabled),
         _ = (0, a.e7)([u.Z], () => u.Z.useReducedMotion),
         E = (0, l.ZP)({
@@ -19,8 +19,8 @@ let h = function (e) {
             async scrollToStart() {},
             async scrollToEnd() {}
         }),
-        O = f !== d.pJs.ONLINE && f !== d.pJs.ALL,
-        N = _ || g || O,
+        O = g !== d.pJs.ONLINE && g !== d.pJs.ALL,
+        N = _ || f || O,
         v = i.useMemo(
             () =>
                 t.map((e, t) =>

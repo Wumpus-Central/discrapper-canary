@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(47120);
+n.d(t, { Z: () => g }), n(47120);
 var r = n(200651),
     i = n(192379),
     l = n(481060),
@@ -22,7 +22,7 @@ function h(e, t, n) {
         e
     );
 }
-class g extends i.PureComponent {
+class f extends i.PureComponent {
     render() {
         let e = ''.concat(d.NW.string(d.t.VWqWZW), '\n').concat(d.NW.string(d.t['0Lgb/P']));
         return (0, r.jsx)(s.Z, {
@@ -91,4 +91,4 @@ class g extends i.PureComponent {
             });
     }
 }
-let f = g;
+let g = f;

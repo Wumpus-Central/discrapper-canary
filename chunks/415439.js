@@ -16,8 +16,8 @@ var r = n(442837),
     d = n(812236),
     p = n(740492),
     h = n(973616),
-    g = n(592125),
-    f = n(626135),
+    f = n(592125),
+    g = n(626135),
     m = n(823379),
     b = n(728345),
     _ = n(812206),
@@ -36,14 +36,14 @@ async function N(e, t, n) {
         }
     if (null != r) {
         let a;
-        let c = null == g.Z.getDMFromUserId(r.id);
+        let c = null == f.Z.getDMFromUserId(r.id);
         try {
             a = (0, l.R)() ? await i.Z.getOrEnsurePrivateChannel(r.id) : await i.Z.openPrivateChannel([r.id], !1, !1, s.Z.APP_DMS_QUICK_LAUNCHER);
         } catch (e) {
             t(void 0);
         }
         if (
-            (f.default.track(O.rMx.APP_DMS_QUICK_LAUNCHER_CLICKED, {
+            (g.default.track(O.rMx.APP_DMS_QUICK_LAUNCHER_CLICKED, {
                 application_id: e.id,
                 is_new_dm: c,
                 channel_id: a

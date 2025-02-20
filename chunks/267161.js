@@ -14,8 +14,8 @@ var r = n(200651),
     d = n(320007),
     p = n(540059),
     h = n(916069),
-    g = n(565138),
-    f = n(300986),
+    f = n(565138),
+    g = n(300986),
     m = n(314451),
     b = n(35583),
     _ = n(522474),
@@ -47,9 +47,9 @@ function w() {
         null != c
             ? ((d = u
                   ? (0, r.jsx)(s.r7p, { size: 'xs' })
-                  : (0, r.jsx)(g.Z, {
+                  : (0, r.jsx)(f.Z, {
                         guild: c,
-                        size: g.Z.Sizes.MINI,
+                        size: f.Z.Sizes.MINI,
                         active: !0,
                         className: x.guildIcon
                     })),
@@ -129,7 +129,7 @@ function R() {
                                   className: x.button
                               }),
                               (0, r.jsx)(E.Z, { className: x.button }),
-                              n ? (0, r.jsx)(m.Z, { className: x.button }) : (0, r.jsx)(f.Z, { className: x.button }),
+                              n ? (0, r.jsx)(m.Z, { className: x.button }) : (0, r.jsx)(g.Z, { className: x.button }),
                               (0, r.jsx)(b.Z, { className: x.button })
                           ]
                       })

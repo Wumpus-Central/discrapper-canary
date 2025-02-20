@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(47120);
+n.d(t, { Z: () => f }), n(47120);
 var r = n(570140),
     i = n(317770),
     l = n(314897),
@@ -43,16 +43,16 @@ class h extends i.Z {
                 if (!c.Z.isEnabled()) return !1;
                 let h = l.default.getId();
                 if (((null == d ? void 0 : d.find((e) => e.id === h)) != null ? (0, o.T)(s.hn.PING_ME) : (null !== (t = null == d ? void 0 : d.length) && void 0 !== t ? t : 0) > 0 && (null == r ? void 0 : r.id) === h && (0, o.T)(s.hn.PING_SOMEONE), !(0, u.wU)(null == r ? void 0 : r.id, h, i, p))) return !1;
-                let g = u.ZP.getMostRecentMessageCombo(n),
-                    { combo: f } = null != g ? g : {};
-                if (null == f) return !1;
+                let f = u.ZP.getMostRecentMessageCombo(n),
+                    { combo: g } = null != f ? f : {};
+                if (null == g) return !1;
                 Object.values(s.hn).forEach((e) => {
                     if (null != a.Z.getUnlocked(e)) return;
                     let t = (0, s.oX)(e),
                         n = null == t ? void 0 : t.checkUnlock;
-                    null != n && !1 !== n(f) && (0, o.T)(e);
+                    null != n && !1 !== n(g) && (0, o.T)(e);
                 });
             });
     }
 }
-let g = new h();
+let f = new h();

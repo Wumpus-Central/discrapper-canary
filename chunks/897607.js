@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(47120);
+n.d(t, { Z: () => f }), n(47120);
 var r = n(200651);
 n(192379);
 var i = n(392711),
@@ -17,10 +17,10 @@ function h() {
         i = c.Z.getOutputDeviceId();
     if (s.Z.getState().neverShowModal || l().isEmpty(s.Z.lastDeviceConnected)) return;
     let h = (0, s.X)(c.Z.getInputDevices()[t]),
-        g = (0, s.X)(c.Z.getOutputDevices()[i]);
-    if (l().some(s.Z.lastDeviceConnected, (e) => d.has(e.displayName) || e.displayName === h || e.displayName === g)) return;
-    let f = l().some(s.Z.lastDeviceConnected, (e) => a.Z.isCertified(s.Z.inputDevices[e.displayName]) || a.Z.isCertified(s.Z.outputDevices[e.displayName]));
-    if (((t === u.w5 && s.Z.lastInputSystemDevice.justChanged) || (i === u.w5 && s.Z.lastOutputSystemDevice.justChanged)) && !f) return;
+        f = (0, s.X)(c.Z.getOutputDevices()[i]);
+    if (l().some(s.Z.lastDeviceConnected, (e) => d.has(e.displayName) || e.displayName === h || e.displayName === f)) return;
+    let g = l().some(s.Z.lastDeviceConnected, (e) => a.Z.isCertified(s.Z.inputDevices[e.displayName]) || a.Z.isCertified(s.Z.outputDevices[e.displayName]));
+    if (((t === u.w5 && s.Z.lastInputSystemDevice.justChanged) || (i === u.w5 && s.Z.lastOutputSystemDevice.justChanged)) && !g) return;
     let m = l().first(Object.keys(s.Z.lastDeviceConnected)),
         b = null != m && '' !== m ? s.Z.lastDeviceConnected[m] : null;
     null != b &&
@@ -39,7 +39,7 @@ function h() {
             };
         }));
 }
-let g = {
+let f = {
     init() {
         s.Z.addChangeListener(h);
     }

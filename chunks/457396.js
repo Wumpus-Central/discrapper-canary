@@ -14,8 +14,8 @@ var r = n(200651),
     d = n(975298),
     p = n(605236),
     h = n(243778),
-    g = n(819640),
-    f = n(594174),
+    f = n(819640),
+    g = n(594174),
     m = n(351402),
     b = n(78839),
     _ = n(626135),
@@ -44,7 +44,7 @@ var r = n(200651),
 let W = 'NitroTabButton',
     V = (e) => {
         let { selected: t } = e,
-            n = (0, o.e7)([f.default], () => f.default.getCurrentUser()),
+            n = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
             r = (0, o.e7)([b.ZP], () => b.ZP.getPremiumTypeSubscription()),
             i = (0, C.N)(),
             l = (0, I.Ng)(),
@@ -55,9 +55,9 @@ let W = 'NitroTabButton',
             d = (0, x.V)(),
             p = (0, E.Qo)(n, r),
             h = (0, o.e7)([O.Z], () => O.Z.getCreatedAtOverride()),
-            g = t || null != i || null != l || a || s || c || null != u || null != d || p,
+            f = t || null != i || null != l || a || s || c || null != u || null != d || p,
             m = null != h ? h : null == n ? void 0 : n.createdAt;
-        return g || (null != n && null != m && Date.now() - m.getTime() > 1209600000);
+        return f || (null != n && null != m && Date.now() - m.getTime() > 1209600000);
     },
     B = (e) => {
         let t, n, O, B;
@@ -83,7 +83,7 @@ let W = 'NitroTabButton',
                 }
                 return i;
             })(e, ['selected', 'route', 'locationState']);
-        let X = (0, o.e7)([f.default], () => f.default.getCurrentUser()),
+        let X = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
             Q = (0, o.e7)([b.ZP], () => b.ZP.getPremiumTypeSubscription()),
             J = (0, E.Qo)(X, Q),
             $ = (0, l.JA)('nitro'),
@@ -97,9 +97,9 @@ let W = 'NitroTabButton',
             ea = (0, w.Kn)(W),
             es = (0, w.vx)(W),
             ec = (0, w.wG)(W),
-            eu = (0, o.e7)([g.Z], () => g.Z.hasLayers()),
+            eu = (0, o.e7)([f.Z], () => f.Z.hasLayers()),
             { fractionalState: ed, startsAt: ep, endsAt: eh } = (0, d.Z)({ forceFetch: !0 }),
-            [eg, ef] = (0, h.bf)(ed !== D.a$.NONE ? a.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL : null, {
+            [ef, eg] = (0, h.bf)(ed !== D.a$.NONE ? a.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL : null, {
                 showAfterTimestamp: ep.valueOf(),
                 cooldownDurationMs: 0
             }),
@@ -201,7 +201,7 @@ let W = 'NitroTabButton',
                     text: U.NW.string(U.t.Ipxkoq),
                     locationState: K,
                     onClick: () => {
-                        eg === a.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL && ef(M.L.TAKE_ACTION),
+                        ef === a.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL && eg(M.L.TAKE_ACTION),
                             _.default.track(k.rMx.NITRO_TAB_VISITED, {
                                 badge_decorator: B,
                                 has_premium: J

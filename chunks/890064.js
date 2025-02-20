@@ -30,14 +30,14 @@ function p(e, t) {
 let h = function (e) {
     let { guild: t, className: n } = e,
         [l, h] = i.useState(!1),
-        g = i.useCallback(() => h(!0), [h]),
-        f = i.useCallback(() => h(!0), [h]);
+        f = i.useCallback(() => h(!0), [h]),
+        g = i.useCallback(() => h(!0), [h]);
     return (0, r.jsx)('div', {
         className: o()(d.actionButtonsContainer, n, { [d.forceButtonsShow]: l }),
         children: (0, r.jsx)(s.ZP, {
             children: (0, r.jsx)(c.R, {
-                onRequestOpen: g,
-                onRequestClose: f,
+                onRequestOpen: f,
+                onRequestClose: g,
                 guild: t,
                 children: (e) => {
                     var { onClick: t } = e,

@@ -1,6 +1,6 @@
 n.d(t, {
-    default: () => f,
-    r: () => g
+    default: () => g,
+    r: () => f
 }),
     n(47120);
 var r = n(200651),
@@ -14,11 +14,11 @@ var r = n(200651),
     d = n(981631),
     p = n(388032),
     h = n(358373);
-let g = 'Activity Encourages Hardware Acceleration';
-function f(e) {
+let f = 'Activity Encourages Hardware Acceleration';
+function g(e) {
     var t,
         n,
-        f,
+        g,
         { applicationId: m } = e,
         b = (function (e, t) {
             if (null == e) return {};
@@ -41,15 +41,15 @@ function f(e) {
         })(e, ['applicationId']);
     let [_, E] = i.useState(!1),
         [O] = (0, a.Z)([m]),
-        N = null !== (f = null == O ? void 0 : O.name) && void 0 !== f ? f : 'This Activity';
+        N = null !== (g = null == O ? void 0 : O.name) && void 0 !== g ? g : 'This Activity';
     i.useEffect(() => {
-        c.default.track(d.rMx.OPEN_MODAL, { type: g });
+        c.default.track(d.rMx.OPEN_MODAL, { type: f });
     }, []);
     let v = () => {
         let e = 'temporary';
         _ && ((e = 'permanent'), o.ZP.updatedUnsyncedSettings({ disableActivityHardwareAccelerationPrompt: !0 })),
             c.default.track(d.rMx.MODAL_DISMISSED, {
-                type: g,
+                type: f,
                 dismiss_type: e
             }),
             b.onClose();

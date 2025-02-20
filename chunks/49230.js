@@ -1,6 +1,6 @@
 n.d(t, {
-    $: () => g,
-    h: () => f
+    $: () => f,
+    h: () => g
 }),
     n(47120);
 var r = n(512722),
@@ -23,7 +23,7 @@ async function h(e) {
         r = await (null == d ? void 0 : d.decodeAudioData(n));
     return null != r && p.set(e, r), r;
 }
-function g(e) {
+function f(e) {
     let { soundKey: t, soundURL: n, soundVolume: r, reportSoundStartedPlaying: o } = e;
     return new Promise(async (e) => {
         let a = await h(n);
@@ -38,7 +38,7 @@ function g(e) {
             });
     });
 }
-function f(e, t) {
+function g(e, t) {
     let { soundKey: n, soundURL: r, soundVolume: i, reportSoundStartedPlaying: l } = e,
         a = t.get(n);
     if (null != a) {

@@ -10,8 +10,8 @@ var r = n(200651),
     d = n(496675),
     p = n(205129),
     h = n(626135),
-    g = n(981631),
-    f = n(388032);
+    f = n(981631),
+    g = n(388032);
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -58,7 +58,7 @@ function b(e, t) {
 function _(e) {
     let t = i.useContext(h.AnalyticsContext),
         n = e.voiceChannels[0],
-        _ = (0, l.e7)([d.Z], () => null != n && d.Z.can(g.Plq.CONNECT, n.channel));
+        _ = (0, l.e7)([d.Z], () => null != n && d.Z.can(f.Plq.CONNECT, n.channel));
     return null == n
         ? null
         : [
@@ -70,10 +70,10 @@ function _(e) {
                           (0, c.Kh)(n.channel.id),
                               a.default.selectVoiceChannel(n.channel.id),
                               s.ZP.trackWithMetadata(
-                                  g.rMx.ACTIVITY_FEED_VOICE_CHANNEL_VISITED,
+                                  f.rMx.ACTIVITY_FEED_VOICE_CHANNEL_VISITED,
                                   m(
                                       {
-                                          source: b(m({}, t.location), { object: g.qAy.LIST_ITEM }),
+                                          source: b(m({}, t.location), { object: f.qAy.LIST_ITEM }),
                                           guild_id: n.guild.id,
                                           channel_id: n.channel.id
                                       },
@@ -81,7 +81,7 @@ function _(e) {
                                   )
                               );
                       },
-                      label: f.NW.string(f.t['8yOlh4']),
+                      label: g.NW.string(g.t['8yOlh4']),
                       disabled: !_
                   },
                   'join-voice'
@@ -93,10 +93,10 @@ function _(e) {
                       action: function () {
                           (0, u.X)(n.guild.id),
                               s.ZP.trackWithMetadata(
-                                  g.rMx.ACTIVITY_FEED_GUILD_VISITED,
+                                  f.rMx.ACTIVITY_FEED_GUILD_VISITED,
                                   m(
                                       {
-                                          source: b(m({}, t.location), { object: g.qAy.LIST_ITEM }),
+                                          source: b(m({}, t.location), { object: f.qAy.LIST_ITEM }),
                                           guild_id: n.guild.id,
                                           af_recently_played: !1
                                       },
@@ -104,7 +104,7 @@ function _(e) {
                                   )
                               );
                       },
-                      label: f.NW.string(f.t.RGgqm5)
+                      label: g.NW.string(g.t.RGgqm5)
                   },
                   'goto-server'
               )

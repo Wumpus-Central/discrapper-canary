@@ -10,8 +10,8 @@ var r = n(200651),
     d = n(590415),
     p = n(131704),
     h = n(199902),
-    g = n(314897),
-    f = n(592125),
+    f = n(314897),
+    g = n(592125),
     m = n(430824),
     b = n(131951),
     _ = n(292959),
@@ -62,9 +62,9 @@ function T() {
 function P() {
     return (
         S(
-            [f.Z, E.Z, O.Z, s.Z],
+            [g.Z, E.Z, O.Z, s.Z],
             () => {
-                let e = f.Z.getChannel(O.Z.getVoiceChannelId()),
+                let e = g.Z.getChannel(O.Z.getVoiceChannelId()),
                     t = null == e ? void 0 : e.type,
                     n = null == e ? void 0 : e.getGuildId(),
                     r = E.Z.getWasEverRtcConnected(),
@@ -170,17 +170,17 @@ function L() {
 function w() {
     return (
         S(
-            [O.Z, h.Z, g.default, v.Z, f.Z],
+            [O.Z, h.Z, f.default, v.Z, g.Z],
             () => {
                 let e, t;
                 let n = O.Z.getVoiceChannelId(),
-                    r = g.default.getId(),
+                    r = f.default.getId(),
                     i = [],
                     l = null,
                     o = 0,
                     a = h.Z.getAllActiveStreams();
                 if (null != n) {
-                    let r = f.Z.getChannel(n);
+                    let r = g.Z.getChannel(n);
                     null != r && ((e = r.type), (t = y.ZP.countVoiceStatesForChannel(r.id) - +!!v.Z.isInChannel(r.id)), (i = h.Z.getAllApplicationStreamsForChannel(r.id).map((e) => e.ownerId)));
                 }
                 let s = null;
@@ -205,7 +205,7 @@ function w() {
                     e.voiceChannelId !== r ||
                     null == r ||
                     (function (e) {
-                        let t = f.Z.getChannel(e);
+                        let t = g.Z.getChannel(e);
                         if (null == t) return !1;
                         let n = t.getGuildId();
                         if (null == n) return !1;
@@ -233,13 +233,13 @@ function w() {
 function R() {
     return (
         S(
-            [O.Z, o.ZP, g.default],
+            [O.Z, o.ZP, f.default],
             () => {
                 let e = O.Z.getVoiceChannelId(),
                     t = O.Z.getChannelId(),
                     n = o.ZP.getConnectedActivityLocation(),
                     r = (0, a.pY)(n),
-                    i = g.default.getId(),
+                    i = f.default.getId(),
                     l = (0, I.lm)(t) ? o.ZP.getEmbeddedActivitiesForChannel(t) : o.i6,
                     s = (0, I.lm)(e) ? o.ZP.getEmbeddedActivitiesForChannel(e) : o.i6,
                     c = (0, I.lm)(r) ? o.ZP.getEmbeddedActivitiesForChannel(r) : o.i6,

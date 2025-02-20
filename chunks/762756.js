@@ -10,8 +10,8 @@ var r,
     d = n(600164),
     p = n(63063),
     h = n(1964),
-    g = n(981631),
-    f = n(388032),
+    f = n(981631),
+    g = n(388032),
     m = n(789276),
     b = n(455812);
 function _(e, t, n) {
@@ -27,13 +27,13 @@ function _(e, t, n) {
         e
     );
 }
-let E = p.Z.getArticleURL(g.BhN.VERIFICATION_FAQ);
+let E = p.Z.getArticleURL(f.BhN.VERIFICATION_FAQ);
 class O extends (r = l.PureComponent) {
     renderFields() {
         let { types: e, captchaKey: t, theme: n, onCaptchaVerify: r } = this.props;
         return (0, i.jsx)(i.Fragment, {
             children: e.map((e) =>
-                e === g.PUi.CAPTCHA
+                e === f.PUi.CAPTCHA
                     ? (0, i.jsx)(
                           u.Z,
                           {
@@ -69,11 +69,11 @@ class O extends (r = l.PureComponent) {
                         (0, i.jsx)('div', { className: m.image }),
                         (0, i.jsx)('div', {
                             className: a()(m.title, b.marginTop20),
-                            children: f.NW.string(f.t.Iz0kDg)
+                            children: g.NW.string(g.t.Iz0kDg)
                         }),
                         (0, i.jsx)('div', {
                             className: a()(m.body, b.marginTop4, b.marginBottom20),
-                            children: f.NW.format(f.t['0rqMV1'], { helpCenterURL: E })
+                            children: g.NW.format(g.t['0rqMV1'], { helpCenterURL: E })
                         }),
                         (0, i.jsx)(d.Z, {
                             grow: 0,
@@ -85,7 +85,7 @@ class O extends (r = l.PureComponent) {
                 }),
                 (0, i.jsx)('div', {
                     className: a()(m.footer, b.marginTop20),
-                    children: f.NW.string(f.t.qqYun5)
+                    children: g.NW.string(g.t.qqYun5)
                 }),
                 (0, i.jsxs)(d.Z, {
                     className: a()(b.marginTop4, b.marginBottom20),
@@ -93,7 +93,7 @@ class O extends (r = l.PureComponent) {
                     children: [
                         (0, i.jsx)('div', {
                             className: a()(m.footer, m.footerAction),
-                            children: f.NW.format(f.t.WL51ZW, { supportURL: p.Z.getSubmitRequestURL() })
+                            children: g.NW.format(g.t.WL51ZW, { supportURL: p.Z.getSubmitRequestURL() })
                         }),
                         (0, i.jsx)('div', {
                             className: a()(m.footer, m.footerBullet),
@@ -101,7 +101,7 @@ class O extends (r = l.PureComponent) {
                         }),
                         (0, i.jsx)('div', {
                             className: a()(m.footer, m.footerAction),
-                            children: f.NW.format(f.t.Hv7ztb, { logoutOnClick: this.props.onLogout })
+                            children: g.NW.format(g.t.Hv7ztb, { logoutOnClick: this.props.onLogout })
                         })
                     ]
                 })
@@ -117,8 +117,8 @@ class O extends (r = l.PureComponent) {
     }
 }
 _(O, 'defaultProps', {
-    types: [g.PUi.CAPTCHA],
-    onCaptchaVerify: g.dG4,
-    onLogout: g.dG4
+    types: [f.PUi.CAPTCHA],
+    onCaptchaVerify: f.dG4,
+    onLogout: f.dG4
 });
 let N = O;

@@ -24,12 +24,12 @@ let d = (0, a.Un)({
         webpackId: 945778,
         name: 'PopoutWindowRTCDebug'
     }),
-    g = (0, a.Un)({
+    f = (0, a.Un)({
         createPromise: () => Promise.all([n.e('93382'), n.e('92922'), n.e('37874'), n.e('27278')]).then(n.bind(n, 748623)),
         webpackId: 748623,
         name: 'PopoutWindowActivity'
     });
-class f extends o.Z {
+class g extends o.Z {
     _initialize() {
         i.Z.subscribe('CHANNEL_CALL_POPOUT_WINDOW_OPEN', this.handleOpenChannelCallPopout), i.Z.subscribe('RTC_DEBUG_POPOUT_WINDOW_OPEN', this.handleOpenRTCDebugPopout), i.Z.subscribe('ACTIVITY_POPOUT_WINDOW_OPEN', this.handleOpenActivityPopout), this.initializeStyleSheetObserver();
     }
@@ -82,7 +82,7 @@ class f extends o.Z {
     async handleOpenActivityPopout() {
         let { OVERLAY_V3_LAYOUT_ID: e } = await Promise.resolve().then(n.bind(n, 501787));
         (0, l.te)(e, s.Z.getDefaultLayout(e, 1), 1),
-            c.bA(u.KJ3.ACTIVITY_POPOUT, (e) => (0, r.jsx)(g, { windowKey: e }), {
+            c.bA(u.KJ3.ACTIVITY_POPOUT, (e) => (0, r.jsx)(f, { windowKey: e }), {
                 defaultWidth: 854,
                 defaultHeight: 480
             });
@@ -100,4 +100,4 @@ class f extends o.Z {
                 : (this[t] = null);
     }
 }
-let m = new f();
+let m = new g();

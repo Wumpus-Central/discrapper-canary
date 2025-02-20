@@ -10,8 +10,8 @@ var r = n(894959),
     d = n(853678),
     p = n(378410),
     h = n(468136),
-    g = n(64974),
-    f = n(83567),
+    f = n(64974),
+    g = n(83567),
     m = n(906911),
     b = n(647656),
     _ = n(918940),
@@ -44,4 +44,4 @@ let I = (function (e) {
             });
     }
     return e;
-})({}, i.Z, l.Z, o.Z, a.Z, s.Z, c.Z, u.Z, d.Z, p.Z, h.Z, f.Z, m.Z, b.Z, _.Z, O.Z, N.Z, y.Z, v.Z, g.Z, E.Z, r.Z);
+})({}, i.Z, l.Z, o.Z, a.Z, s.Z, c.Z, u.Z, d.Z, p.Z, h.Z, g.Z, m.Z, b.Z, _.Z, O.Z, N.Z, y.Z, v.Z, f.Z, E.Z, r.Z);

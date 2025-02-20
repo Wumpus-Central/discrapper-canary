@@ -68,12 +68,12 @@ h.Image = function (e) {
     let t = e.filter((e) => null != e && '' !== e);
     return 0 === t.length ? null : 1 === t.length ? t[0] : t;
 };
-var g = (((i = g || {}).DAMAGED = 'http://schema.org/DamagedCondition'), (i.NEW = 'http://schema.org/NewCondition'), (i.REFURBISHED = 'http://schema.org/RefurbishedCondition'), (i.USED = 'http://schema.org/UsedCondition'), i),
-    f = (((l = f || {}).DISCONTINUED = 'http://schema.org/Discontinued'), (l.IN_STOCK = 'http://schema.org/InStock'), (l.IN_STORE_ONLY = 'http://schema.org/InStoreOnly'), (l.LIMITED_AVAILABILITY = 'http://schema.org/LimitedAvailability'), (l.ONLINE_ONLY = 'http://schema.org/OnlineOnly'), (l.OUT_OF_STOCK = 'http://schema.org/OutOfStock'), (l.PREORDER = 'http://schema.org/PreOrder'), (l.PRESALE = 'http://schema.org/PreSale'), (l.SOLD_OUT = 'http://schema.org/SoldOut'), l);
+var f = (((i = f || {}).DAMAGED = 'http://schema.org/DamagedCondition'), (i.NEW = 'http://schema.org/NewCondition'), (i.REFURBISHED = 'http://schema.org/RefurbishedCondition'), (i.USED = 'http://schema.org/UsedCondition'), i),
+    g = (((l = g || {}).DISCONTINUED = 'http://schema.org/Discontinued'), (l.IN_STOCK = 'http://schema.org/InStock'), (l.IN_STORE_ONLY = 'http://schema.org/InStoreOnly'), (l.LIMITED_AVAILABILITY = 'http://schema.org/LimitedAvailability'), (l.ONLINE_ONLY = 'http://schema.org/OnlineOnly'), (l.OUT_OF_STOCK = 'http://schema.org/OutOfStock'), (l.PREORDER = 'http://schema.org/PreOrder'), (l.PRESALE = 'http://schema.org/PreSale'), (l.SOLD_OUT = 'http://schema.org/SoldOut'), l);
 function m(e) {
     return d('Offer', e);
 }
-(m.ItemConditions = g), (m.ItemAvailability = f);
+(m.ItemConditions = f), (m.ItemAvailability = g);
 var b = (((o = b || {}).YEARLY = 'ANN'), (o.MONTHLY = 'MON'), o);
 function _(e) {
     return d('QuantitativeValue', e);
