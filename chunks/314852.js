@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => T,
+    Z: () => N,
     a: () => f
 }),
     n(47120);
@@ -198,7 +198,11 @@ function S(e) {
     let { guildId: t, channelType: n } = e;
     n === s.d4z.GUILD_ANNOUNCEMENT && p.delete(t);
 }
-class I extends (r = i.ZP.Store) {
+function I(e) {
+    let { guildId: t, enabled: n } = e;
+    null != t && n && p.delete(t);
+}
+class T extends (r = i.ZP.Store) {
     getProfile(e) {
         var t, n;
         return null == e ? null : null !== (n = null === (t = p.get(e)) || void 0 === t ? void 0 : t.profile) && void 0 !== n ? n : null;
@@ -220,8 +224,8 @@ class I extends (r = i.ZP.Store) {
         return null == e ? null : null !== (r = null === (n = p.get(e)) || void 0 === n ? void 0 : null === (t = n.error) || void 0 === t ? void 0 : t.code) && void 0 !== r ? r : null;
     }
 }
-l(I, 'displayName', 'GuildProfileStore');
-let T = new I(o.Z, {
+l(T, 'displayName', 'GuildProfileStore');
+let N = new T(o.Z, {
     GUILD_PROFILE_FETCH: h,
     GUILD_PROFILE_FETCH_SUCCESS: m,
     GUILD_PROFILE_FETCH_FAILURE: g,
@@ -230,5 +234,6 @@ let T = new I(o.Z, {
     GUILD_PROFILE_UPDATE_FAILURE: b,
     MEMBER_VERIFICATION_FORM_UPDATE: y,
     INVITE_RESOLVE_SUCCESS: O,
-    CREATE_CHANNEL_MODAL_SUBMIT: S
+    CREATE_CHANNEL_MODAL_SUBMIT: S,
+    GUILD_SETTINGS_SET_WIDGET: I
 });
