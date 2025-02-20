@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z });
+n.d(t, { Z: () => B });
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -82,20 +82,19 @@ function k(e, t) {
     );
 }
 let j = (0, v.B)({
-        kind: 'user',
-        id: '2021-07_role_popout',
-        label: 'Role Popout',
-        defaultConfig: { enabled: !1 },
-        treatments: [
-            {
-                id: 1,
-                label: 'Enable Popout',
-                config: { enabled: !0 }
-            }
-        ]
-    }),
-    U = 100;
-function G(e) {
+    kind: 'user',
+    id: '2021-07_role_popout',
+    label: 'Role Popout',
+    defaultConfig: { enabled: !1 },
+    treatments: [
+        {
+            id: 1,
+            label: 'Enable Popout',
+            config: { enabled: !0 }
+        }
+    ]
+});
+function U(e) {
     let { member: t, guildId: i, channelId: o, role: a } = e,
         s = (0, u.e7)(
             [A.Z],
@@ -145,7 +144,7 @@ function G(e) {
                                   guildId: i,
                                   onContextMenu: (e) => {
                                       (0, f.jW)(e, async () => {
-                                          let { default: e } = await Promise.all([n.e('50506'), n.e('79695'), n.e('51269'), n.e('13351'), n.e('33862'), n.e('98783'), n.e('6915'), n.e('97589'), n.e('7717'), n.e('32692')]).then(n.bind(n, 757387));
+                                          let { default: e } = await Promise.all([n.e('50506'), n.e('79695'), n.e('13351'), n.e('98783'), n.e('97589'), n.e('7717'), n.e('59409')]).then(n.bind(n, 757387));
                                           return (t) =>
                                               (0, r.jsx)(
                                                   e,
@@ -168,7 +167,7 @@ function G(e) {
               t.userId
           );
 }
-function B(e) {
+function G(e) {
     let { popoutProps: t, roleId: n, guildId: o, channelId: a } = e,
         s = i.useRef(null);
     (0, _.ZP)(() => {
@@ -201,7 +200,6 @@ function B(e) {
                         var t;
                         return null !== (t = e.nick) && void 0 !== t ? t : R.ZP.getName(C.default.getUser(e.userId));
                     })
-                    .slice(0, U)
                     .value();
             },
             [o, n, f]
@@ -214,18 +212,13 @@ function B(e) {
             },
             [o, n, f]
         ),
-        m = i.useMemo(() => {
-            let e = null != n ? n : f;
-            if (null == e) return null;
-            let t = null == c ? void 0 : c[e];
-            return null == t || t <= U ? null : t - U;
-        }, [n, f, c]),
+        m = null == n ? null : null == c ? void 0 : c[n],
         g = i.useMemo(
             () =>
                 null != h
                     ? p.map((e) =>
                           (0, r.jsx)(
-                              G,
+                              U,
                               {
                                   member: e,
                                   guildId: o,
@@ -240,11 +233,11 @@ function B(e) {
         );
     if (null == h) return null;
     let v =
-        g.length > U - 1
-            ? P.NW.formatToPlainString(P.t.F3bubW, { title: h.name })
+        null == m
+            ? h.name
             : P.NW.formatToPlainString(P.t.CuAQkJ, {
                   title: h.name,
-                  count: g.length
+                  count: m
               });
     return (0, r.jsx)(
         'div',
@@ -272,11 +265,11 @@ function B(e) {
                             })
                         }),
                         g,
-                        null == m
+                        null == m || m <= g.length
                             ? null
                             : (0, r.jsx)(E.Z, {
                                   className: w.roleHeader,
-                                  children: P.NW.formatToPlainString(P.t['9oMmZG'], { count: m - 100 })
+                                  children: P.NW.formatToPlainString(P.t['9oMmZG'], { count: m - g.length })
                               })
                     ]
                 })
@@ -284,7 +277,7 @@ function B(e) {
         )
     );
 }
-function Z(e) {
+function B(e) {
     let { roleColor: t, roleId: n, channelId: i, roleName: o, guildId: s, children: l, inlinePreview: f = !1 } = e,
         { analyticsLocations: p } = (0, g.ZP)(m.Z.ROLE_MENTION),
         _ = (0, u.e7)([h.Z], () => h.Z.roleStyle),
@@ -328,7 +321,7 @@ function Z(e) {
                       null != n && (await (0, y.H)(s, n));
                   },
                   renderPopout: (e) =>
-                      (0, r.jsx)(B, {
+                      (0, r.jsx)(G, {
                           guildId: s,
                           channelId: i,
                           roleId: n,

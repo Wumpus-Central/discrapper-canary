@@ -33159,19 +33159,24 @@ div.modalOverrideBody__34eac {
     border-bottom: 1px solid var(--background-secondary-alt)
 }
 
+.floatingBars__74017:empty+.stackedBars__74017:nth-child(2),
 .stackedBars__74017:first-child {
     border-top-left-radius: 8px;
     border-top-right-radius: 8px
 }
 
 .visual-refresh .stackedBars__74017 {
-    background: var(--background-surface-higher);
-    border-top-left-radius: var(--radius-sm);
-    border-top-right-radius: var(--radius-sm)
+    background: var(--background-surface-higher)
 }
 
 .visual-refresh .stackedBars__74017:not(:last-child) {
     border-bottom: 1px solid var(--border-subtle)
+}
+
+.floatingBars__74017:empty+.visual-refresh .stackedBars__74017:nth-child(2),
+.visual-refresh .stackedBars__74017:first-child {
+    border-top-left-radius: var(--radius-sm);
+    border-top-right-radius: var(--radius-sm)
 }
 
 .visual-refresh .floatingBars__74017 {
