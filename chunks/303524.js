@@ -1,18 +1,21 @@
-n.d(t, { Z: () => u });
-var i = n(200651),
-    r = n(657707),
-    a = n(44315),
-    s = n(231338);
-let o = 14,
-    l = s.Il.BRAND_345;
-function u(e) {
+n.d(t, { Z: () => f });
+var r = n(200651),
+    i = n(120356),
+    o = n.n(i),
+    a = n(657707),
+    s = n(44315),
+    l = n(231338),
+    c = n(967616);
+let u = 14,
+    d = l.Il.BRAND_345;
+function f(e) {
     let { className: t } = e,
-        n = (0, a.Sl)(l).hex;
-    return (0, i.jsx)(r.qDn, {
-        className: t,
+        n = (0, s.Sl)(d).hex;
+    return (0, r.jsx)(a.qDn, {
+        className: o()(c.questsIcon, t),
         size: 'custom',
-        height: o,
-        width: o,
+        height: u,
+        width: u,
         color: n
     });
 }

@@ -13039,6 +13039,10 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     display: none
 }
 
+.questsIcon__8ac07 {
+    flex-shrink: 0
+}
+
 .container_c9d15c {
     display: flex;
     align-items: center
