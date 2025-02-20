@@ -245,10 +245,6 @@ class V extends i.PureComponent {
         return (
             e &&
                 (i.push({
-                    value: y.kg4.TOGGLE_OVERLAY,
-                    label: P.NW.string(P.t.mseZsL)
-                }),
-                i.push({
                     value: y.kg4.TOGGLE_OVERLAY_INPUT_LOCK,
                     label: P.NW.string(P.t.VsAZcH)
                 }),
@@ -312,7 +308,7 @@ class V extends i.PureComponent {
                 [y.kg4.TOGGLE_VOICE_MODE]: P.NW.string(P.t.snm5YW),
                 [y.kg4.TOGGLE_STREAMER_MODE]: P.NW.string(P.t.YszLLy)
             };
-        return e && ((r[y.kg4.TOGGLE_OVERLAY] = P.NW.string(P.t.LbPesb)), (r[y.kg4.TOGGLE_OVERLAY_INPUT_LOCK] = P.NW.string(P.t.IoP5vb))), t && (0, v.isWindows)() && (r[y.kg4.TOGGLE_GO_LIVE_STREAMING] = P.NW.string(P.t.s4C239)), (0, v.isDesktop)() && ((r[y.kg4.NAVIGATE_BACK] = P.NW.string(P.t.nKDlEh)), (r[y.kg4.NAVIGATE_FORWARD] = P.NW.string(P.t.DK0FFh)), (r[y.kg4.SOUNDBOARD] = (0, v.isWindows)() ? P.NW.string(P.t['5wJefH']) : P.NW.string(P.t.gzjsSE)), (r[y.kg4.SOUNDBOARD_HOLD] = (0, v.isWindows)() ? P.NW.string(P.t.RRkZc3) : P.NW.string(P.t.laNlTk)), n && (r[y.kg4.SAVE_CLIP] = P.NW.string(P.t.z3Wbam))), r;
+        return e && (r[y.kg4.TOGGLE_OVERLAY_INPUT_LOCK] = P.NW.string(P.t.IoP5vb)), t && (0, v.isWindows)() && (r[y.kg4.TOGGLE_GO_LIVE_STREAMING] = P.NW.string(P.t.s4C239)), (0, v.isDesktop)() && ((r[y.kg4.NAVIGATE_BACK] = P.NW.string(P.t.nKDlEh)), (r[y.kg4.NAVIGATE_FORWARD] = P.NW.string(P.t.DK0FFh)), (r[y.kg4.SOUNDBOARD] = (0, v.isWindows)() ? P.NW.string(P.t['5wJefH']) : P.NW.string(P.t.gzjsSE)), (r[y.kg4.SOUNDBOARD_HOLD] = (0, v.isWindows)() ? P.NW.string(P.t.RRkZc3) : P.NW.string(P.t.laNlTk)), n && (r[y.kg4.SAVE_CLIP] = P.NW.string(P.t.z3Wbam))), r;
     }
     renderKeybinds(e) {
         return e.map((e) =>

@@ -62,13 +62,14 @@ function y(e, t) {
 let E = {
     [v.Odu.VIDEO]: {
         renderWidget(e) {
-            let { widget: t, locked: n, size: r, padding: o, borderWidth: l } = e;
+            let { widget: t, locked: n, size: r, padding: o, borderWidth: l, showEmpty: a } = e;
             return (0, i.jsx)(f.Z, {
                 id: t.id,
                 locked: n,
                 widget: t,
                 height: 'auto' === r.height ? 0 : r.height - 2 * o - 2 * l,
-                width: 'auto' === r.width ? 0 : r.width - 2 * o - 2 * l
+                width: 'auto' === r.width ? 0 : r.width - 2 * o - 2 * l,
+                showEmpty: a
             });
         },
         renderTitle: () => (0, i.jsx)(g.PI, { children: O.NW.string(O.t.UPvOiY) }),
@@ -125,14 +126,15 @@ let E = {
     },
     [v.Odu.VOICE_V3]: {
         renderWidget(e) {
-            let { widget: t, anchorLeft: n, locked: r } = e;
+            let { widget: t, anchorLeft: n, locked: r, showEmpty: o } = e;
             return (0, i.jsx)(h.Z, {
                 anchorLeft: n,
                 id: t.id,
                 locked: r,
                 pinned: t.pinned,
                 widget: v.Odu.VOICE,
-                isPreviewingInGame: !1
+                isPreviewingInGame: !1,
+                showEmpty: o
             });
         },
         renderTitle: () => (0, i.jsx)(g.PI, { children: O.NW.string(O.t.nFv3GR) }),
@@ -204,7 +206,7 @@ let E = {
     [v.Odu.GO_LIVE]: {
         renderWidget(e) {
             var t;
-            let { widget: n, locked: r, size: o, dragStart: l, anchorTop: a, anchorLeft: s } = e;
+            let { widget: n, locked: r, size: o, dragStart: l, anchorTop: a, anchorLeft: s, showEmpty: d } = e;
             return (0, u.ZL)(n)
                 ? (0, i.jsx)(c.Z, {
                       id: n.id,
@@ -219,7 +221,8 @@ let E = {
                       dragStart: l,
                       horizontal: null !== (t = n.meta.horizontal) && void 0 !== t && t,
                       padding: 8,
-                      borderWidth: 2
+                      borderWidth: 2,
+                      showEmpty: d
                   })
                 : null;
         },
@@ -301,8 +304,11 @@ let E = {
     },
     [v.Odu.NOTIFICATIONS]: {
         renderWidget(e) {
-            let { locked: t } = e;
-            return (0, i.jsx)(_.Z, { locked: t });
+            let { locked: t, showEmpty: n } = e;
+            return (0, i.jsx)(_.Z, {
+                locked: t,
+                showEmpty: n
+            });
         },
         renderTitle: () => (0, i.jsx)(g.PI, { children: O.NW.string(O.t.gnKWdX) }),
         renderButtons: (e, t) =>
