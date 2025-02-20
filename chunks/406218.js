@@ -51,7 +51,7 @@ function u(e) {
           }, {});
 }
 function d(e) {
-    var t, n;
+    var t, n, r;
     return {
         id: e.id,
         name: e.name,
@@ -63,7 +63,8 @@ function d(e) {
         visibility: e.visibility,
         traits: c(e.id, null !== (t = e.traits) && void 0 !== t ? t : []),
         gameApplicationIds: null !== (n = e.game_application_ids) && void 0 !== n ? n : [],
-        gameActivity: u(e.game_activity)
+        gameActivity: u(e.game_activity),
+        features: null !== (r = e.features) && void 0 !== r ? r : []
     };
 }
 function f(e) {

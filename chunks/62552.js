@@ -4,5 +4,8 @@ e.exports = {
     memberCount: 'memberCount__99f53',
     dot: 'dot__99f53',
     dotOnline: 'dotOnline__99f53',
-    established: 'established__99f53'
+    established: 'established__99f53',
+    nameContainer: 'nameContainer__99f53',
+    guildName: 'guildName__99f53',
+    guildBadge: 'guildBadge__99f53'
 };

@@ -52,7 +52,13 @@ let _ = function () {
                             }),
                             (0, r.jsxs)('div', {
                                 className: v.rightColumn,
-                                children: [(0, r.jsx)(u.Z, { profile: y }), (0, r.jsx)(N.Z, { guild: t })]
+                                children: [
+                                    (0, r.jsx)(u.Z, {
+                                        profile: y,
+                                        disableCTA: !0
+                                    }),
+                                    (0, r.jsx)(N.Z, { guild: t })
+                                ]
                             })
                         ]
                     })

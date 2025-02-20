@@ -5,5 +5,6 @@ e.exports = {
     avatarWrapper: 'avatarWrapper__86ab2',
     body: 'body__86ab2',
     error: 'error__86ab2',
-    header: 'header__86ab2'
+    header: 'header__86ab2',
+    buttonContainer: 'buttonContainer__86ab2'
 };
