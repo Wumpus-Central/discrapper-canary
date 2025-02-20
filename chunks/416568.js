@@ -33,8 +33,8 @@ var r = n(200651),
     D = n(271383),
     R = n(430824),
     L = n(771845),
-    M = n(358085),
-    k = n(709054),
+    k = n(358085),
+    M = n(709054),
     G = n(727258),
     B = n(605951),
     U = n(474109),
@@ -84,7 +84,7 @@ function eo(e) {
     }
     return e;
 }
-let ea = (0, M.isWindows)() ? 4 : 12 * !(0, M.isMac)();
+let ea = (0, k.isWindows)() ? 4 : 12 * !(0, k.isMac)();
 class es {
     setGuildsTree(e) {
         this.guildsTree = e;
@@ -195,7 +195,7 @@ class es {
     }
 }
 function ec(e) {
-    let { disableAppDownload: t = M.isPlatformEmbedded, isOverlay: n = !1, className: l, themeOverride: a } = e,
+    let { disableAppDownload: t = k.isPlatformEmbedded, isOverlay: n = !1, className: l, themeOverride: a } = e,
         s = (0, C.Q3)('GuildsBar'),
         { density: d } = (0, m.TCT)(),
         [h] = (0, p.Wu)([L.ZP], () => {
@@ -204,7 +204,7 @@ function ec(e) {
         }),
         b = (0, p.e7)([S.Z], () => S.Z.lurkingGuildIds()),
         y = i.useMemo(() => (n ? [] : b), [b, n]),
-        el = (0, p.Wu)([R.Z, D.ZP], () => k.default.keys(R.Z.getGuilds()).filter((e) => D.ZP.isCurrentUserGuest(e))),
+        el = (0, p.Wu)([R.Z, D.ZP], () => M.default.keys(R.Z.getGuilds()).filter((e) => D.ZP.isCurrentUserGuest(e))),
         ec = y.concat(el),
         eu = (0, p.e7)([j.Z], () => j.Z.isFullscreenInContext()),
         ed = (0, p.e7)([R.Z], () => R.Z.getGeoRestrictedGuilds()),
@@ -305,43 +305,46 @@ function ec(e) {
             animate: !1
         });
     }, [eZ]);
-    function eR(e) {
-        switch (e.type) {
-            case G.eD.FOLDER:
-                return (0, r.jsx)(
-                    X.Z,
-                    {
-                        folderNode: e,
-                        setNodeRef: eZ.setNodeRef,
-                        draggable: !0,
-                        sorting: ep,
-                        onDragStart: ef,
-                        onDragEnd: eg,
-                        renderChildNode: eR
-                    },
-                    e.id
-                );
-            case G.eD.GUILD:
-                return (0, r.jsx)(
-                    $.Z,
-                    {
-                        guildNode: e,
-                        setRef: eZ.setNodeRef,
-                        draggable: !0,
-                        sorting: ep,
-                        onDragStart: ef,
-                        onDragEnd: eg
-                    },
-                    e.id
-                );
-            default:
-                return null;
-        }
-    }
     (0, B.Z)(eZ.scrollToGuild);
-    let eL = h.getRoots(),
-        eM = (0, x.Z)(),
-        ek = (0, N.U)(),
+    let eR = i.useCallback(
+            function e(t) {
+                switch (t.type) {
+                    case G.eD.FOLDER:
+                        return (0, r.jsx)(
+                            X.Z,
+                            {
+                                folderNode: t,
+                                setNodeRef: eZ.setNodeRef,
+                                draggable: !0,
+                                sorting: ep,
+                                onDragStart: ef,
+                                onDragEnd: eg,
+                                renderChildNode: e
+                            },
+                            t.id
+                        );
+                    case G.eD.GUILD:
+                        return (0, r.jsx)(
+                            $.Z,
+                            {
+                                guildNode: t,
+                                setRef: eZ.setNodeRef,
+                                draggable: !0,
+                                sorting: ep,
+                                onDragStart: ef,
+                                onDragEnd: eg
+                            },
+                            t.id
+                        );
+                    default:
+                        return null;
+                }
+            },
+            [ef, eg, ep, eZ.setNodeRef]
+        ),
+        eL = h.getRoots(),
+        ek = (0, x.Z)(),
+        eM = (0, N.U)(),
         { enabled: eG } = (0, w.W)({ location: 'GuildsBar' });
     (0, T.i)();
     let eB = i.useRef(null),
@@ -412,10 +415,10 @@ function ec(e) {
                                                     onScroll: eZ.handleScroll,
                                                     children: [
                                                         (0, r.jsx)(Y.u, {}),
-                                                        eM ? (0, r.jsx)(P.Z, {}) : null,
+                                                        ek ? (0, r.jsx)(P.Z, {}) : null,
                                                         (0, r.jsx)(Q.Z, { isOnHubVerificationRoute: eA }),
                                                         (0, r.jsx)(W.Z, {}),
-                                                        ek,
+                                                        eM,
                                                         ec.map((e) => (0, r.jsx)(et.Z, { guildId: e }, e)),
                                                         (0, r.jsx)(ee.Z, { onActivate: eD }),
                                                         (0, r.jsx)(K.Z, {}),

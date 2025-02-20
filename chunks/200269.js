@@ -42,24 +42,30 @@ function s(e) {
         u = 1,
         d = 1;
     null != o ? (null != t ? ((u = o), (d = o + 1)) : (d = o)) : null != t ? ((u = a.level), (d = a.level + 1)) : (d = a.level + +!!s);
-    let f = i.useCallback(() => (l(!0), u), [u]),
-        p = i.useCallback(() => (l(!0), d), [d]);
+    let f = i.useMemo(
+            () => ({
+                level: u,
+                getLevelAndMarkUsed: () => (l(!0), u)
+            }),
+            [u]
+        ),
+        p = i.useMemo(
+            () => ({
+                level: d,
+                getLevelAndMarkUsed: () => (l(!0), d)
+            }),
+            [d]
+        );
     return (0, r.jsxs)(r.Fragment, {
         children: [
             null != t
                 ? (0, r.jsx)(c.Provider, {
-                      value: {
-                          level: u,
-                          getLevelAndMarkUsed: f
-                      },
+                      value: f,
                       children: t
                   })
                 : null,
             (0, r.jsx)(c.Provider, {
-                value: {
-                    level: d,
-                    getLevelAndMarkUsed: p
-                },
+                value: p,
                 children: n
             })
         ]
