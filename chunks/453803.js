@@ -26,6 +26,7 @@ e.exports = {
     titleImage: 'titleImage_c50f62',
     description: 'description_c50f62',
     button: 'button_c50f62',
+    enabledButton: 'enabledButton_c50f62',
     buttonInner: 'buttonInner_c50f62',
     disclaimer: 'disclaimer_c50f62',
     disclaimerLight: 'disclaimerLight_c50f62',
@@ -35,5 +36,8 @@ e.exports = {
     buttonsContainer: 'buttonsContainer_c50f62',
     primaryButtons: 'primaryButtons_c50f62',
     variantsSwitch: 'variantsSwitch_c50f62',
-    headerButtonContainer: 'headerButtonContainer_c50f62'
+    headerButtonContainer: 'headerButtonContainer_c50f62',
+    errorMessageLine: 'errorMessageLine_c50f62',
+    payWithFiatLink: 'payWithFiatLink_c50f62',
+    payWithFiatLinkText: 'payWithFiatLinkText_c50f62'
 };
