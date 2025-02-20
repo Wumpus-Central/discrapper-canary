@@ -1,17 +1,17 @@
-n.d(t, { m: () => r }), n(47120);
-var i = n(243814),
-    l = n(103964);
-let r = {
-        [l.Q5.INITIATE_IMAGE_UPLOAD]: {
+n.d(t, { m: () => l }), n(47120), n(266796);
+var r = n(243814),
+    i = n(103964);
+let l = {
+        [i.Q5.INITIATE_IMAGE_UPLOAD]: {
             request: void 0,
             response: (e) => e.object({ image_url: e.string().required() })
         },
-        [l.Q5.OPEN_SHARE_MOMENT_DIALOG]: {
+        [i.Q5.OPEN_SHARE_MOMENT_DIALOG]: {
             response: void 0,
-            request: (e) => (0, l.C5)(e.object({ mediaUrl: e.string().required().max(1024) }))
+            request: (e) => (0, i.C5)(e.object({ mediaUrl: e.string().required().max(1024) }))
         },
-        [l.Q5.AUTHENTICATE]: {
-            request: (e) => (0, l.C5)(e.object({ access_token: e.string().allow(null).optional() })),
+        [i.Q5.AUTHENTICATE]: {
+            request: (e) => (0, i.C5)(e.object({ access_token: e.string().allow(null).optional() })),
             response: (e) =>
                 e.object({
                     access_token: e.string().required(),
@@ -27,7 +27,7 @@ let r = {
                         .required(),
                     scopes: e
                         .array()
-                        .items(e.string().valid(...(0, l.no)(i.x)))
+                        .items(e.string().valid(...(0, i.no)(r.x)))
                         .required(),
                     expires: e.string().required(),
                     application: e
@@ -41,7 +41,7 @@ let r = {
                         .required()
                 })
         },
-        [l.Q5.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS]: {
+        [i.Q5.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS]: {
             request: void 0,
             response: (e) =>
                 e
@@ -49,7 +49,7 @@ let r = {
                         participants: e
                             .array()
                             .items(
-                                s(e)
+                                a(e)
                                     .keys({ nickname: e.string().description('Server nickname. Not unique.') })
                                     .required()
                             )
@@ -57,9 +57,9 @@ let r = {
                     })
                     .required()
         },
-        [l.Q5.SHARE_INTERACTION]: {
+        [i.Q5.SHARE_INTERACTION]: {
             request: (e) =>
-                (0, l.C5)(
+                (0, i.C5)(
                     e.object({
                         command: e.string().required(),
                         content: e.string().max(2000),
@@ -69,14 +69,14 @@ let r = {
                             url: e.string().required(),
                             width: e.number().required()
                         }),
-                        components: e.array().items(o(e))
+                        components: e.array().items(s(e))
                     })
                 ),
             response: (e) => e.object({ success: e.boolean().required() })
         },
-        [l.Q5.SHARE_LINK]: {
+        [i.Q5.SHARE_LINK]: {
             request: (e) =>
-                (0, l.C5)(
+                (0, i.C5)(
                     e.object({
                         referrer_id: e.string().max(64),
                         custom_id: e.string().max(64),
@@ -85,7 +85,7 @@ let r = {
                 ),
             response: (e) => e.object({ success: e.boolean().required() })
         },
-        [l.Q5.GET_RELATIONSHIPS]: {
+        [i.Q5.GET_RELATIONSHIPS]: {
             request: void 0,
             response: (e) =>
                 e.object({
@@ -95,16 +95,16 @@ let r = {
                         .items(
                             e.object({
                                 type: e.number().required(),
-                                user: s(e).allow(null),
+                                user: a(e).required(),
                                 presence: e.object({
                                     status: e.string().required(),
-                                    activity: a(e).allow(null)
+                                    activity: o(e).allow(null)
                                 })
                             })
                         )
                 })
         },
-        [l.Q5.INVITE_USER_EMBEDDED]: {
+        [i.Q5.INVITE_USER_EMBEDDED]: {
             request: (e) =>
                 e
                     .object({
@@ -113,9 +113,13 @@ let r = {
                     })
                     .required(),
             response: void 0
+        },
+        [i.Q5.GET_USER]: {
+            request: (e) => (0, i.C5)(e.object({ id: e.string().max(64).required() })),
+            response: (e) => a(e).allow(null)
         }
     },
-    a = (e) =>
+    o = (e) =>
         e.object({
             session_id: e.string().optional(),
             type: e.number().optional(),
@@ -169,7 +173,7 @@ let r = {
             buttons: e.array().items(e.string()).optional(),
             hangStatus: e.string().optional()
         }),
-    s = (e) =>
+    a = (e) =>
         e
             .object({
                 id: e.string().required().description('User ID'),
@@ -190,12 +194,12 @@ let r = {
                 premium_type: e.number().allow(null).description('Nitro premium type')
             })
             .description('Discord User'),
-    o = (e) =>
+    s = (e) =>
         e.object({
             type: e.number().valid(1).required(),
-            components: e.array().max(5).items(d(e))
+            components: e.array().max(5).items(c(e))
         }),
-    d = (e) =>
+    c = (e) =>
         e.object({
             type: e.number().valid(2).required(),
             style: e.number().min(1).max(5).required(),
