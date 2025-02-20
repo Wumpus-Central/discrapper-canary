@@ -36,7 +36,7 @@ class _ extends i.Z {
             n = a.Z.getActiveVoiceFilter();
         if (!p() || null == n) return;
         let i = a.Z.getVoiceFilterPlaybackEnabled();
-        t === d.hes.RTC_CONNECTED ? r.Z.setLoopback(i) : t === d.hes.RTC_DISCONNECTED && r.Z.setLoopback(!1);
+        t === d.hes.RTC_CONNECTED ? r.Z.setLoopback('voice_filter', i) : t === d.hes.RTC_DISCONNECTED && r.Z.setLoopback('voice_filter', !1);
     }
     handleLoopbackToggle(e) {
         var t;
@@ -45,15 +45,12 @@ class _ extends i.Z {
             active_voice_filter_id: null !== (t = a.Z.getActiveVoiceFilter()) && void 0 !== t ? t : null,
             enabled: n
         }),
-            s.Z.isConnected() && r.Z.setLoopback(n);
+            s.Z.isConnected() && r.Z.setLoopback('voice_filter', n);
     }
     handleVoiceFilterApplied(e) {
         let { voiceFilterId: t } = e,
             n = a.Z.getVoiceFilterPlaybackEnabled();
-        if (null == t) {
-            let e = a.Z.getLoopback();
-            n && e && r.Z.setLoopback(!1);
-        } else n && s.Z.isConnected() && r.Z.setLoopback(!0);
+        null == t ? n && r.Z.setLoopback('voice_filter', !1) : n && s.Z.isConnected() && r.Z.setLoopback('voice_filter', !0);
     }
     constructor(...e) {
         super(...e),

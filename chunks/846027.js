@@ -317,11 +317,12 @@ let O = {
                     strength: e
                 }));
         },
-        setLoopback(e) {
+        setLoopback(e, t) {
             I() ||
                 r.Z.dispatch({
                     type: 'AUDIO_SET_LOOPBACK',
-                    enabled: e
+                    loopbackReason: e,
+                    enabled: t
                 });
         },
         setNoiseSuppression(e, t) {

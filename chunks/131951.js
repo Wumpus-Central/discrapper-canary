@@ -231,7 +231,7 @@ V.Z.hasPermission(ep.Eu.AUDIO, { showAuthorizationError: !1 }), V.Z.hasPermissio
 let tl = !1,
     tc = new Set(),
     tu = tl,
-    td = !1,
+    td = new Set(),
     tf = {},
     tp = null,
     t_ = !0,
@@ -1080,23 +1080,27 @@ function nu(e) {
     ej.setSidechainCompression(t.sidechainCompression);
 }
 function nd(e) {
-    let { enabled: t } = e;
-    return (td = t), nf();
+    let { enabled: t, loopbackReason: n } = e,
+        r = td.size > 0;
+    return t ? td.add(n) : td.delete(n), td.size > 0 !== r && nf();
 }
 function nf() {
     let e = tE(),
-        t = e.inputDeviceId,
-        n = ei.Z.hasEchoCancellation(t) || e.echoCancellation,
-        r = !td,
-        i = ei.Z.hasNoiseSuppression(t) || e.noiseSuppression,
-        o = ei.Z.hasAutomaticGainControl(t) || e.automaticGainControl,
-        a = e.noiseCancellation;
-    ej.setLoopback(td, {
-        echoCancellation: n,
-        echoCancellationPreEcho: r,
-        noiseSuppression: i,
-        automaticGainControl: o,
-        noiseCancellation: a
+        t = td.size > 0,
+        n = e.inputDeviceId,
+        r = ei.Z.hasEchoCancellation(n) || e.echoCancellation,
+        i = !t,
+        o = ei.Z.hasNoiseSuppression(n) || e.noiseSuppression,
+        a = ei.Z.hasAutomaticGainControl(n) || e.automaticGainControl,
+        s = e.noiseCancellation,
+        l = null !== te;
+    ej.setLoopback(t, {
+        echoCancellation: r,
+        echoCancellationPreEcho: i,
+        noiseSuppression: o,
+        automaticGainControl: a,
+        noiseCancellation: s,
+        voiceFilters: l
     });
 }
 function np(e) {
@@ -1684,7 +1688,7 @@ class n8 extends (s = h.ZP.Store) {
         return tE().h265Enabled;
     }
     getLoopback() {
-        return td;
+        return td.size > 0;
     }
     getNoiseSuppression() {
         let e = tE();

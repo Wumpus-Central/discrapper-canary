@@ -1,4 +1,4 @@
-n.d(t, { y: () => C }), n(47120), n(266796);
+n.d(t, { y: () => I }), n(47120), n(266796);
 var r = n(200651),
     i = n(192379),
     a = n(120356),
@@ -6,17 +6,18 @@ var r = n(200651),
     l = n(642128),
     s = n(442837),
     c = n(481060),
-    d = n(110924),
-    u = n(460181),
-    p = n(131951),
-    m = n(19780),
-    f = n(743498),
-    h = n(56848),
-    g = n(378441),
-    _ = n(190676),
-    b = n(388032),
-    v = n(248244);
-function y(e) {
+    d = n(846027),
+    u = n(110924),
+    p = n(460181),
+    m = n(131951),
+    f = n(19780),
+    h = n(743498),
+    g = n(56848),
+    _ = n(378441),
+    b = n(190676),
+    v = n(388032),
+    y = n(248244);
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,7 +42,7 @@ function y(e) {
     }
     return e;
 }
-function x(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -59,74 +60,86 @@ function x(e, t) {
         e
     );
 }
-let O = {
+let E = {
         mass: 2,
         friction: 30,
         tension: 500,
         clamp: !0
     },
-    E = {
+    j = {
         mass: 1,
         friction: 28,
         tension: 700,
         clamp: !0
     },
-    j = {
+    N = {
         mass: 1,
         friction: 28,
         tension: 500
     },
-    N = {
+    C = {
         mass: 1,
         friction: 28,
         tension: 800
     };
-function C(e) {
+function I(e) {
     var t;
     let {} = e,
-        { activeVoice: n } = (0, g.o)(),
-        a = (0, d.Z)(n),
-        C = (0, h.z)(n),
-        { toggleLoopback: I, isLoopbackEnabled: S } = (function () {
-            let e = (0, s.e7)([p.Z], () => p.Z.getVoiceFilterPlaybackEnabled()),
-                t = i.useCallback(() => {
-                    (0, u.GN)(e ? 'voice_filter_loopback_off' : 'voice_filter_loopback_on'), (0, f._j)(!e);
-                }, [e]);
-            return {
-                isLoopbackEnabled: e,
-                toggleLoopback: t
-            };
+        { activeVoice: n } = (0, _.o)(),
+        a = (0, u.Z)(n),
+        I = (0, g.z)(n),
+        { toggleLoopback: S, isLoopbackEnabled: P } = (function () {
+            let { activeVoice: e } = (0, _.o)(),
+                t = (0, s.e7)([m.Z], () => m.Z.getVoiceFilterPlaybackEnabled()),
+                n = i.useCallback(() => {
+                    (0, p.GN)(t ? 'voice_filter_loopback_off' : 'voice_filter_loopback_on'), (0, h._j)(!t);
+                }, [t]);
+            return (
+                i.useEffect(
+                    () => (
+                        d.Z.setLoopback('voice_filter_preview', null != e && t),
+                        () => {
+                            d.Z.setLoopback('voice_filter_preview', !1);
+                        }
+                    ),
+                    [t, e]
+                ),
+                {
+                    isLoopbackEnabled: t,
+                    toggleLoopback: n
+                }
+            );
         })(),
-        P = S ? c.Iy5 : c.X_q,
-        T = i.useCallback(() => (0, f.v6)(null), []),
-        A = (0, c.dQu)(c.TVs.colors.BACKGROUND_SECONDARY).hex(),
-        w = (0, c.dQu)(c.TVs.colors.WHITE).hex(),
-        Z = (0, s.e7)([m.Z], () => m.Z.isConnected()),
-        k = i.useRef(0),
-        R = n !== a ? k.current + 1 : k.current;
+        T = P ? c.Iy5 : c.X_q,
+        A = i.useCallback(() => (0, h.v6)(null), []),
+        w = (0, c.dQu)(c.TVs.colors.BACKGROUND_SECONDARY).hex(),
+        Z = (0, c.dQu)(c.TVs.colors.WHITE).hex(),
+        k = (0, s.e7)([f.Z], () => f.Z.isConnected()),
+        R = i.useRef(0),
+        L = n !== a ? R.current + 1 : R.current;
     i.useEffect(() => {
-        k.current = R;
-    }, [R]);
-    let L = null != n,
-        D = null == n && null != a,
-        M = (0, c.q_F)(
+        R.current = L;
+    }, [L]);
+    let D = null != n,
+        M = null == n && null != a,
+        W = (0, c.q_F)(
             {
-                opacity: +!!L,
-                height: 72 * !!L,
-                pointerEvents: L ? 'auto' : 'none',
-                backgroundColor: null !== (t = null == C ? void 0 : C.baseColor) && void 0 !== t ? t : A,
-                config: O,
-                delay: L && null != a ? 150 : 100 * !!D
+                opacity: +!!D,
+                height: 72 * !!D,
+                pointerEvents: D ? 'auto' : 'none',
+                backgroundColor: null !== (t = null == I ? void 0 : I.baseColor) && void 0 !== t ? t : w,
+                config: E,
+                delay: D && null != a ? 150 : 100 * !!M
             },
             'respect-motion-settings'
         ),
-        W = (0, c.Yzy)(
-            null == C ? void 0 : C.id,
+        F = (0, c.Yzy)(
+            null == I ? void 0 : I.id,
             {
-                key: R,
+                key: L,
                 from: {
                     opacity: 0,
-                    background: null == C ? void 0 : C.splashGradient
+                    background: null == I ? void 0 : I.splashGradient
                 },
                 enter: {
                     opacity: 1,
@@ -136,11 +149,11 @@ function C(e) {
                     opacity: 0,
                     delay: 50
                 },
-                config: O
+                config: E
             },
             'respect-motion-settings'
         ),
-        [F] = (0, c.bYB)(
+        [U] = (0, c.bYB)(
             3,
             (e) => ({
                 from:
@@ -167,23 +180,23 @@ function C(e) {
                           : [
                                 {
                                     translateY: -4,
-                                    config: x(y({}, N), { restVelocity: 0.5 })
+                                    config: O(x({}, C), { restVelocity: 0.5 })
                                 },
                                 {
                                     translateY: 0,
-                                    config: N
+                                    config: C
                                 }
                             ],
-                config: j,
-                delay: D ? 100 - 50 * e : 150 + 50 * e
+                config: N,
+                delay: M ? 100 - 50 * e : 150 + 50 * e
             }),
             'respect-motion-settings',
             [n]
         ),
-        U = (0, c.Yzy)(
-            null == C ? void 0 : C.iconURL,
+        B = (0, c.Yzy)(
+            null == I ? void 0 : I.iconURL,
             {
-                key: R,
+                key: L,
                 from: {
                     opacity: 0,
                     scale: 0.5,
@@ -201,14 +214,14 @@ function C(e) {
                     translateX: 32 * (null != n),
                     delay: 0
                 },
-                config: O
+                config: E
             },
             'respect-motion-settings'
         ),
-        B = (0, c.Yzy)(
-            null == C ? void 0 : C.name,
+        G = (0, c.Yzy)(
+            null == I ? void 0 : I.name,
             {
-                key: R,
+                key: L,
                 from: {
                     opacity: 0,
                     scale: null == a ? 1 : 0.5,
@@ -220,40 +233,40 @@ function C(e) {
                     translateX: 0,
                     translateY: 0,
                     delay: null == a ? 100 : 275,
-                    config: null == a ? j : E
+                    config: null == a ? N : j
                 },
                 leave: {
                     opacity: 0,
                     translateX: 40 * (null != n),
                     translateY: 16 * (null == n),
-                    delay: D ? 200 : 150,
-                    config: null == a ? j : E
+                    delay: M ? 200 : 150,
+                    config: null == a ? N : j
                 },
-                config: j
+                config: N
             },
             'respect-motion-settings'
         ),
-        G = b.NW.string(S ? b.t.esVyo6 : b.t.UQqFCA);
+        H = v.NW.string(P ? v.t.esVyo6 : v.t.UQqFCA);
     return (0, r.jsxs)(l.animated.div, {
-        className: v.voiceFilterHero,
-        style: M,
+        className: y.voiceFilterHero,
+        style: W,
         children: [
             (0, r.jsx)('div', {
-                className: o()([v.bgGradient, v.bgGradientHighlight])
+                className: o()([y.bgGradient, y.bgGradientHighlight])
             }),
-            W((e) =>
+            F((e) =>
                 (0, r.jsx)(l.animated.div, {
-                    className: v.bgGradient,
+                    className: y.bgGradient,
                     style: e
                 })
             ),
             (0, r.jsx)('div', {
-                className: v.iconWrapper,
-                children: U((e, t) =>
+                className: y.iconWrapper,
+                children: B((e, t) =>
                     (0, r.jsx)(
                         l.animated.img,
                         {
-                            className: v.activeVoiceIcon,
+                            className: y.activeVoiceIcon,
                             style: e,
                             alt: '',
                             src: t
@@ -263,17 +276,17 @@ function C(e) {
                 )
             }),
             (0, r.jsx)('div', {
-                className: v.descriptionWrapper,
-                children: B((e, t) =>
+                className: y.descriptionWrapper,
+                children: G((e, t) =>
                     (0, r.jsxs)(l.animated.div, {
-                        className: v.description,
+                        className: y.description,
                         style: e,
                         children: [
                             (0, r.jsx)(c.Text, {
                                 variant: 'text-xs/normal',
                                 color: 'always-white',
-                                className: v.offWhiteText,
-                                children: b.NW.string(b.t.WW5DAA)
+                                className: y.offWhiteText,
+                                children: v.NW.string(v.t.WW5DAA)
                             }),
                             (0, r.jsx)(c.Text, {
                                 variant: 'text-md/medium',
@@ -285,52 +298,52 @@ function C(e) {
                 )
             }),
             (0, r.jsxs)('div', {
-                className: v.buttonWrapper,
+                className: y.buttonWrapper,
                 children: [
-                    (0, r.jsx)(_.b, {
+                    (0, r.jsx)(b.b, {
                         children: (e, t) =>
                             (0, r.jsx)(c.ua7, {
-                                'aria-label': G,
-                                tooltipClassName: v.tooltip,
-                                tooltipContentClassName: v.tooltipContent,
+                                'aria-label': H,
+                                tooltipClassName: y.tooltip,
+                                tooltipContentClassName: y.tooltipContent,
                                 shouldShow: !e,
                                 text: (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)(c.X6q, {
                                             variant: 'heading-sm/normal',
                                             color: 'header-primary',
-                                            className: v.tooltipHeader,
-                                            children: G
+                                            className: y.tooltipHeader,
+                                            children: H
                                         }),
                                         (0, r.jsx)(c.Text, {
                                             variant: 'text-xs/normal',
                                             color: 'header-muted',
-                                            children: b.NW.string(S ? b.t['0NnojY'] : b.t.raWNzM)
+                                            children: v.NW.string(P ? v.t['0NnojY'] : v.t.raWNzM)
                                         }),
-                                        S &&
-                                            !Z &&
+                                        P &&
+                                            !k &&
                                             (0, r.jsx)(c.Text, {
                                                 variant: 'text-xs/normal',
                                                 color: 'header-muted',
-                                                children: b.NW.string(b.t.ZK9aMD)
+                                                children: v.NW.string(v.t.ZK9aMD)
                                             })
                                     ]
                                 }),
                                 children: (e) =>
                                     (0, r.jsx)(l.animated.div, {
-                                        className: v.buttonWrapper,
-                                        style: F[0],
+                                        className: y.buttonWrapper,
+                                        style: U[0],
                                         children: (0, r.jsx)(
                                             c.P3F,
-                                            x(y({ className: v.button }, e), {
+                                            O(x({ className: y.button }, e), {
                                                 onClick: () => {
-                                                    null == t || t(), I();
+                                                    null == t || t(), S();
                                                 },
-                                                children: (0, r.jsx)(P, {
+                                                children: (0, r.jsx)(T, {
                                                     size: 'custom',
                                                     width: 20,
                                                     height: 20,
-                                                    color: w
+                                                    color: Z
                                                 })
                                             })
                                         )
@@ -338,20 +351,20 @@ function C(e) {
                             })
                     }),
                     (0, r.jsx)(c.ua7, {
-                        text: b.NW.string(b.t.UvMx7O),
+                        text: v.NW.string(v.t.UvMx7O),
                         children: (e) =>
                             (0, r.jsx)(l.animated.div, {
-                                className: v.buttonWrapper,
-                                style: F[1],
+                                className: y.buttonWrapper,
+                                style: U[1],
                                 children: (0, r.jsx)(
                                     c.P3F,
-                                    x(y({ className: v.button }, e), {
-                                        onClick: T,
+                                    O(x({ className: y.button }, e), {
+                                        onClick: A,
                                         children: (0, r.jsx)(c.k$p, {
                                             size: 'custom',
                                             width: 20,
                                             height: 20,
-                                            color: w
+                                            color: Z
                                         })
                                     })
                                 )

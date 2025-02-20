@@ -426,7 +426,8 @@ class O extends a.Z {
                 echoCancellation: t.echoCancellation,
                 noiseSuppression: t.noiseSuppression,
                 automaticGainControl: t.automaticGainControl,
-                noiseCancellation: t.noiseCancellation
+                noiseCancellation: t.noiseCancellation,
+                voiceFilters: t.voiceFilters
             }),
             null != (0, d.zS)().setEmitVADLevel2
                 ? (0, d.zS)().setEmitVADLevel2(e || this.listenerCount(s.aB.VoiceActivity) > 0)

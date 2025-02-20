@@ -41304,7 +41304,7 @@ img.thumbnail__0f2e8 {
 }
 
 .option__3f413.focused__3f413,
-.option__3f413:focus,
+.option__3f413:focus-visible,
 .option__3f413:hover {
     background-color: var(--background-modifier-hover);
     color: var(--interactive-hover)
