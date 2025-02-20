@@ -20,8 +20,8 @@ var i = n(200651),
     y = n(444295),
     E = n(906037),
     x = n(804570),
-    S = n(501787),
-    I = n(981631),
+    I = n(501787),
+    S = n(981631),
     C = n(65154),
     j = n(388032),
     w = n(772630);
@@ -75,10 +75,10 @@ function P(e) {
     return (0, a.e7)([v.Z], () => null != n.user && null != o && null != r && v.Z.isLocalVideoDisabled(l, o), [l, n.user, o, r]) ? null : (0, i.jsx)(g.ZP, Z({}, e));
 }
 function T(e) {
-    let { context: t = C.Yn.DEFAULT, participants: o, locked: a, widget: u, channel: d, width: p, height: f, showEmpty: g = !0, containerRef: _ } = e,
-        m = (e, r) => {
+    let { context: t = C.Yn.DEFAULT, participants: o, locked: a, widget: u, channel: d, width: p, height: f, containerRef: g } = e,
+        _ = (e, r) => {
             let o = e.user;
-            (0, y.Ws)(I.Odu.VIDEO, {
+            (0, y.Ws)(S.Odu.VIDEO, {
                 type: y.Qu.CAMERA,
                 value: y.bk.SETTINGS_OPENED,
                 userId: null == o ? void 0 : o.id
@@ -95,7 +95,7 @@ function T(e) {
                         );
                 });
         },
-        v = o.length > 0 && null != t && null != d && (!a || u.pinned);
+        m = o.length > 0 && null != t && null != d && (!a || u.pinned);
     r.useEffect(() => {
         (0, E.m3)(
             {
@@ -104,19 +104,19 @@ function T(e) {
                 widget: u.type,
                 isPreviewingInGame: !1
             },
-            v
+            m
         );
-    }, [a, u, v]);
-    let O = 'boolean' != typeof u.meta.horizontal || u.meta.horizontal;
+    }, [a, u, m]);
+    let v = 'boolean' != typeof u.meta.horizontal || u.meta.horizontal;
     return 0 !== o.length || a
         ? null == d
             ? null
             : (0, i.jsx)('div', {
-                  ref: _,
+                  ref: g,
                   className: l()({
                       [w.videoList]: !0,
-                      [w.vertical]: !O,
-                      [w.hidden]: !v && a
+                      [w.vertical]: !v,
+                      [w.hidden]: !m && a
                   }),
                   style: { opacity: u.opacity },
                   children: o.map((e) =>
@@ -135,9 +135,9 @@ function T(e) {
                               inPopout: !0,
                               inCall: !0,
                               noBorder: !0,
-                              onContextMenu: a ? void 0 : m,
+                              onContextMenu: a ? void 0 : _,
                               forceIdle: a,
-                              paused: !v,
+                              paused: !m,
                               inOverlayPopout: !0,
                               context: t
                           },
@@ -145,18 +145,16 @@ function T(e) {
                       )
                   )
               })
-        : g
-          ? a
-              ? null
-              : (0, i.jsx)('div', {
-                    ref: _,
-                    children: (0, i.jsx)(x.E, {
-                        emptyText: j.NW.string(j.t['aTiM4+']),
-                        icon: s.Odl,
-                        absolute: !0
-                    })
+        : a
+          ? null
+          : (0, i.jsx)('div', {
+                ref: g,
+                children: (0, i.jsx)(x.E, {
+                    emptyText: j.NW.string(j.t['aTiM4+']),
+                    icon: s.Odl,
+                    absolute: !0
                 })
-          : null;
+            });
 }
 function k(e) {
     let t = (0, a.e7)([O.Z, m.Z], () => m.Z.getChannel(O.Z.getVoiceChannelId())),
@@ -178,7 +176,7 @@ function k(e) {
         h = e.widget.pinned || !e.locked;
     r.useEffect(() => {
         h &&
-            (0, y.zi)(I.Odu.VIDEO, {
+            (0, y.zi)(S.Odu.VIDEO, {
                 locked: b.Z.isInstanceLocked(),
                 shownUserIds: c,
                 liveUserIds: c,
@@ -188,9 +186,9 @@ function k(e) {
     let g = 'boolean' != typeof e.widget.meta.horizontal || e.widget.meta.horizontal,
         { width: v, height: E, ref: x } = (0, d.Z)(e.locked, e.widget.pinned),
         { participantTileWidth: C, visibleParticipants: j } = (0, _.ZB)(g ? (null != v ? v : e.width) : null != E ? E : e.height, l, {
-            tileWidth: S.vZ,
-            tileMinWidth: S.mo,
-            tileMargin: S.F$,
+            tileWidth: I.vZ,
+            tileMinWidth: I.mo,
+            tileMargin: I.F$,
             limit: 8,
             cropSelfVideo: !0,
             version: s
