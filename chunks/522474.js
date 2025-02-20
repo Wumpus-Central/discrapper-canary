@@ -244,8 +244,11 @@ class z extends (r = c.ZP.PersistedStore) {
     getState() {
         return S;
     }
+    isWindowFullyInitialized(e) {
+        return null != T[e] && null != N[e] && null != A[e];
+    }
     unmountWindow(e) {
-        return Z(e);
+        return this.isWindowFullyInitialized(e) || O.warn('Attempted to unmount partially initialized window '.concat(e)), Z(e);
     }
 }
 E(z, 'displayName', 'PopoutWindowStore'), E(z, 'persistKey', 'PopoutWindowStore');

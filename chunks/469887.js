@@ -1,100 +1,72 @@
-n.d(t, { B: () => g });
+n.d(t, { B: () => d });
 var r = n(200651);
 n(192379);
-var i = n(442837),
-    s = n(704215),
-    a = n(481060),
-    l = n(243778),
-    o = n(970731),
-    c = n(19780),
-    d = n(921944),
-    u = n(388032),
-    m = n(947916);
-function g(e) {
-    let { children: t, canBeShown: g, onCTA: p } = e,
-        h = (0, i.e7)([c.Z], () => c.Z.isConnected());
-    return (0, r.jsx)(l.ZP, {
+var i = n(704215),
+    s = n(481060),
+    a = n(243778),
+    l = n(921944),
+    o = n(388032),
+    c = n(947916);
+function d(e) {
+    let { children: t, canBeShown: d, onCTA: u } = e;
+    return (0, r.jsx)(a.ZP, {
         bypassAutoDismiss: !0,
-        contentTypes: g ? [h ? s.z.VOICE_FILTER_IN_CALL_COACHMARK : s.z.VOICE_FILTER_LAUNCH_COACHMARK] : [],
+        contentTypes: d ? [i.z.VOICE_FILTER_LAUNCH_COACHMARK] : [],
         children: (e) => {
-            let { visibleContent: i, markAsDismissed: l } = e;
-            return i === s.z.VOICE_FILTER_LAUNCH_COACHMARK
-                ? (0, r.jsx)(a.yRy, {
+            let { visibleContent: a, markAsDismissed: d } = e;
+            return a === i.z.VOICE_FILTER_LAUNCH_COACHMARK
+                ? (0, r.jsx)(s.yRy, {
                       renderPopout: () =>
                           (0, r.jsxs)('div', {
-                              className: m.popup,
+                              className: c.popup,
                               children: [
-                                  (0, r.jsx)(a.P3F, {
-                                      className: m.closeIcon,
-                                      onClick: () => l(d.L.USER_DISMISS),
-                                      children: (0, r.jsx)(a.Dio, {})
+                                  (0, r.jsx)(s.P3F, {
+                                      className: c.closeIcon,
+                                      onClick: () => d(l.L.USER_DISMISS),
+                                      children: (0, r.jsx)(s.Dio, {})
                                   }),
                                   (0, r.jsx)('img', {
                                       src: n(414190),
-                                      className: m.art,
+                                      className: c.art,
                                       alt: ''
                                   }),
                                   (0, r.jsxs)('div', {
                                       children: [
-                                          (0, r.jsx)(a.X6q, {
+                                          (0, r.jsx)(s.X6q, {
                                               variant: 'heading-md/semibold',
                                               color: 'header-primary',
-                                              className: m.heading,
-                                              children: u.NW.string(u.t.MLt8Hx)
+                                              className: c.heading,
+                                              children: o.NW.string(o.t.MLt8Hx)
                                           }),
-                                          (0, r.jsx)(a.Text, {
+                                          (0, r.jsx)(s.Text, {
                                               variant: 'text-sm/normal',
                                               color: 'header-secondary',
-                                              children: u.NW.string(u.t['l+lSLi'])
+                                              children: o.NW.string(o.t['l+lSLi'])
                                           })
                                       ]
                                   }),
-                                  (0, r.jsx)(a.zxk, {
-                                      color: a.zxk.Colors.BRAND,
-                                      look: a.zxk.Looks.FILLED,
+                                  (0, r.jsx)(s.zxk, {
+                                      color: s.zxk.Colors.BRAND,
+                                      look: s.zxk.Looks.FILLED,
                                       fullWidth: !0,
                                       onClick: () => {
-                                          l(d.L.TAKE_ACTION), p();
+                                          d(l.L.TAKE_ACTION), u();
                                       },
-                                      children: u.NW.string(u.t['9WdoBw'])
+                                      children: o.NW.string(o.t['9WdoBw'])
                                   })
                               ]
                           }),
-                      animation: a.yRy.Animation.TRANSLATE,
+                      animation: s.yRy.Animation.TRANSLATE,
                       animationPosition: 'bottom',
                       position: 'top',
                       align: 'center',
                       shouldShow: !0,
                       children: (e, n) => {
                           let { isShown: r } = n;
-                          return t(r, () => l(d.L.INDIRECT_ACTION));
+                          return t(r, () => d(l.L.INDIRECT_ACTION));
                       }
                   })
-                : i === s.z.VOICE_FILTER_IN_CALL_COACHMARK
-                  ? (0, r.jsx)(a.yRy, {
-                        renderPopout: () =>
-                            (0, r.jsx)(o.ZP, {
-                                header: u.NW.string(u.t.bNpaiI),
-                                content: u.NW.string(u.t['1n6QXF']),
-                                buttonCTA: u.NW.string(u.t['NX+WJC']),
-                                buttonProps: { color: a.Ttl.WHITE },
-                                onClick: () => {
-                                    p();
-                                },
-                                markAsDismissed: l,
-                                caretPosition: o.DF.BOTTOM_CENTER
-                            }),
-                        animation: a.yRy.Animation.TRANSLATE,
-                        animationPosition: 'bottom',
-                        position: 'top',
-                        align: 'center',
-                        shouldShow: !0,
-                        children: (e, n) => {
-                            let { isShown: r } = n;
-                            return t(r, () => l(d.L.INDIRECT_ACTION));
-                        }
-                    })
-                  : t(!1);
+                : t(!1);
         }
     });
 }
