@@ -20,7 +20,7 @@ var r = n(200651),
     p = n(857595),
     _ = n(607070),
     h = n(828214),
-    m = n(898560),
+    m = n(670596),
     g = n(788314),
     E = n(253068);
 function v(e, t, n) {
@@ -363,44 +363,51 @@ function N(e, t, n, i) {
 }
 function A(e) {
     var t;
-    let { navId: n, variant: o = 'flexible', hideScroller: s = !1, className: f, children: h, onClose: v, onSelect: y } = e,
-        S = I(h),
-        A = T(S),
-        C = i.useRef([]);
-    l()(C.current, A) || (C.current = A);
-    let P = null === (t = S.find((e) => null != e.key)) || void 0 === t ? void 0 : t.key,
-        w = (0, c.ZP)({
+    let { navId: n, variant: o = 'flexible', hideScroller: s = !1, className: f, children: h, onClose: v, onSelect: y, onInteraction: S } = e,
+        A = I(h),
+        C = T(A),
+        P = i.useRef([]);
+    l()(P.current, C) || (P.current = C);
+    let w = null === (t = A.find((e) => null != e.key)) || void 0 === t ? void 0 : t.key,
+        D = (0, c.ZP)({
             navId: n,
-            items: C.current,
-            initialFocusPath: _.Z.keyboardModeEnabled && null != P ? [P] : [],
+            items: P.current,
+            initialFocusPath: _.Z.keyboardModeEnabled && null != w ? [w] : [],
             closeMenu: v
         });
     i.useEffect(() => {
-        w.isUsingKeyboardNavigation ? _.Z.keyboardModeEnabled || (0, p.Qj)() : _.Z.keyboardModeEnabled && (0, p.rf)();
-    }, [w.isUsingKeyboardNavigation]);
-    let D = i.useRef(null);
-    (0, u.T)(D);
-    let x = s ? d.u2 : d.zJ;
-    return (0, r.jsx)(m.r.Provider, {
-        value: y,
+        D.isUsingKeyboardNavigation ? _.Z.keyboardModeEnabled || (0, p.Qj)() : _.Z.keyboardModeEnabled && (0, p.rf)();
+    }, [D.isUsingKeyboardNavigation]);
+    let x = i.useRef(null);
+    (0, u.T)(x);
+    let L = s ? d.u2 : d.zJ,
+        M = i.useMemo(
+            () => ({
+                onSelect: y,
+                onInteraction: S
+            }),
+            [y, S]
+        );
+    return (0, r.jsx)(m.p.Provider, {
+        value: M,
         children: (0, r.jsx)(
             'div',
-            O(b({ className: a()(E.menu, E[o], f) }, w.getContainerProps()), {
-                ref: D,
+            O(b({ className: a()(E.menu, E[o], f) }, D.getContainerProps()), {
+                ref: x,
                 'aria-label': e['aria-label'],
-                children: (0, r.jsxs)(x, {
+                children: (0, r.jsxs)(L, {
                     className: E.scroller,
                     children: [
-                        0 === S.length &&
+                        0 === A.length &&
                             (0, r.jsx)(g.ck, {
                                 disabled: !0,
                                 label: () => (0, r.jsx)(R, {}),
-                                menuItemProps: w.getItemProps({ path: ['empty'] }),
+                                menuItemProps: D.getItemProps({ path: ['empty'] }),
                                 isFocused: !1,
                                 onFocus: () => {},
                                 onClose: v
                             }),
-                        S.length > 0 && N(S, w, [], v)
+                        A.length > 0 && N(A, D, [], v)
                     ]
                 })
             })

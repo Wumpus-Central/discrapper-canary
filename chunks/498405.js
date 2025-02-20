@@ -187,24 +187,26 @@ function m(e) {
         ),
         k = r.useCallback(
             (e) => {
-                let { path: n, hasSubmenu: r = !1, navigable: i = !0, role: o = 'menuitem' } = e,
-                    s = n.join(d);
+                var n;
+                let { path: r, hasSubmenu: i = !1, navigable: o = !0, role: s = 'menuitem' } = e,
+                    c = r.join(d);
                 return u(
                     l(
                         {},
-                        r
+                        i
                             ? {
-                                  'aria-expanded': x(n),
+                                  'aria-expanded': x(r),
                                   'aria-haspopup': !0
                               }
                             : {}
                     ),
                     {
-                        role: o,
-                        id: (0, a.qR)(t, s),
+                        role: s,
+                        id: (0, a.qR)(t, c),
                         tabIndex: -1,
-                        onFocus: i ? A.get(s) : () => {},
-                        onMouseEnter: i ? C.get(s) : () => {}
+                        onFocus: o ? A.get(c) : () => {},
+                        onMouseEnter: o ? C.get(c) : () => {},
+                        rootItemId: null !== (n = r[0]) && void 0 !== n ? n : c
                     }
                 );
             },

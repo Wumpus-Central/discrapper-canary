@@ -5,7 +5,7 @@ var r = n(200651),
     a = n.n(o),
     s = n(1561),
     l = n(761224),
-    c = n(898560),
+    c = n(670596),
     u = n(743236),
     d = n(525220),
     f = n(481060),
@@ -65,31 +65,40 @@ function E(e, t) {
 }
 function v(e) {
     let { color: t = 'default', label: n, icon: o, iconLeft: h, iconLeftSize: g = 'md', hint: v, subtext: b, subtextLineClamp: y, hasSubmenu: O, disabled: S, isFocused: I, menuItemProps: T, action: N, onClose: A, onFocus: C, className: R, focusedClassName: P, subMenuIconClassName: w, dontCloseOnActionIfHoldingShiftKey: D, dontCloseOnAction: x, iconProps: L, sparkle: M } = e,
-        k = i.useContext(c.r),
-        j = i.useRef(null),
-        U = i.useCallback(
+        { onSelect: k, onInteraction: j } = i.useContext(c.p),
+        U = i.useRef(null),
+        G = i.useCallback(
             (e) => {
-                if (null == N) return !1;
+                if (
+                    (null == j ||
+                        j({
+                            id: T.id,
+                            rootItemId: T.rootItemId,
+                            type: c.U.DEFAULT
+                        }),
+                    null == N)
+                )
+                    return !1;
                 (e.shiftKey && D) || x || A(), e.persist(), null == k || k(), requestAnimationFrame(() => N(e));
             },
-            [N, A, k, D, x]
+            [N, A, k, D, x, T, j]
         );
     return (
         i.useEffect(() => {
-            I && ((0, u.F)(j), null == C || C());
+            I && ((0, u.F)(U), null == C || C());
         }, [I, C]),
         (0, r.jsxs)(
             s.P,
             E(
                 m(
                     {
-                        innerRef: j,
+                        innerRef: U,
                         className: a()(_.item, _.labelContainer, p._[t], R, {
                             [_.disabled]: S,
                             [_.focused]: I,
                             [null != P ? P : '']: I
                         }),
-                        onClick: S ? void 0 : U,
+                        onClick: S ? void 0 : G,
                         'aria-disabled': S
                     },
                     T

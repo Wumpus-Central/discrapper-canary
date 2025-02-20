@@ -1,28 +1,29 @@
-n.d(t, { n: () => h });
+n.d(t, { n: () => m });
 var r = n(200651),
     i = n(192379),
     o = n(120356),
     a = n.n(o),
     s = n(1561),
     l = n(84735),
-    c = n(922770),
-    u = n(481060),
-    d = n(388032),
-    f = n(650710);
-let p = 18;
-function _(e, t, n) {
+    c = n(670596),
+    u = n(922770),
+    d = n(481060),
+    f = n(388032),
+    p = n(650710);
+let _ = 18;
+function h(e, t, n) {
     return t
         ? (0, r.jsx)('div', {
-              className: f.iconContainer,
-              children: (0, r.jsx)(c.$, {
-                  type: c.$.Type.SPINNING_CIRCLE,
-                  className: a()(f.icon)
+              className: p.iconContainer,
+              children: (0, r.jsx)(u.$, {
+                  type: u.$.Type.SPINNING_CIRCLE,
+                  className: a()(p.icon)
               })
           })
         : e.length > 0
           ? (0, r.jsx)(s.P, {
-                'aria-label': d.NW.string(d.t['78fJND']),
-                className: a()(f.iconContainer, f.iconClickable),
+                'aria-label': f.NW.string(f.t['78fJND']),
+                className: a()(p.iconContainer, p.iconClickable),
                 onClick: (e) => {
                     e.stopPropagation(), n('');
                 },
@@ -37,50 +38,53 @@ function _(e, t, n) {
                         left: -3
                     }
                 },
-                children: (0, r.jsx)(u.Dio, {
+                children: (0, r.jsx)(d.Dio, {
                     size: 'custom',
                     color: 'currentColor',
-                    width: p,
-                    height: p,
-                    className: f.icon,
-                    'aria-label': d.NW.string(d.t.cpT0Cg)
+                    width: _,
+                    height: _,
+                    className: p.icon,
+                    'aria-label': f.NW.string(f.t.cpT0Cg)
                 })
             })
           : (0, r.jsx)('div', {
-                className: f.iconContainer,
-                children: (0, r.jsx)(u._Ve, {
+                className: p.iconContainer,
+                children: (0, r.jsx)(d._Ve, {
                     size: 'custom',
                     color: 'currentColor',
-                    width: p,
-                    height: p,
-                    className: f.icon,
-                    'aria-label': d.NW.string(d.t['5h0QOD'])
+                    width: _,
+                    height: _,
+                    className: p.icon,
+                    'aria-label': f.NW.string(f.t['5h0QOD'])
                 })
             });
 }
-let h = i.forwardRef(function (e, t) {
-    let { query: n, onChange: o, loading: a = !1, disabled: s = !1, placeholder: c = d.NW.string(d.t['5h0QOD']), 'aria-label': u } = e,
-        p = i.useRef(null),
-        h = i.useRef(null);
+let m = i.forwardRef(function (e, t) {
+    let { query: n, onChange: o, loading: a = !1, disabled: s = !1, placeholder: u = f.NW.string(f.t['5h0QOD']), 'aria-label': d, onInteraction: _ } = e,
+        m = i.useRef(null),
+        g = i.useRef(null);
     i.useImperativeHandle(
         t,
         () => ({
             focus: () => {
                 var e;
-                return null === (e = h.current) || void 0 === e ? void 0 : e.focus();
+                return null === (e = g.current) || void 0 === e ? void 0 : e.focus();
             },
             blur: () => {
                 var e;
-                return null === (e = h.current) || void 0 === e ? void 0 : e.blur();
+                return null === (e = g.current) || void 0 === e ? void 0 : e.blur();
             },
             activate: () => !1
         }),
         []
     );
-    let m = _(n, a, o);
+    let E = h(n, a, o),
+        v = (e) => {
+            o(e.currentTarget.value), null == _ || _(c.U.SEARCH);
+        };
     return (0, r.jsx)(l.t, {
-        focusTarget: h,
-        ringTarget: p,
+        focusTarget: g,
+        ringTarget: m,
         offset: {
             top: 2,
             bottom: 2,
@@ -88,21 +92,21 @@ let h = i.forwardRef(function (e, t) {
             right: 4
         },
         children: (0, r.jsxs)('div', {
-            className: f.container,
-            ref: p,
+            className: p.container,
+            ref: m,
             children: [
                 (0, r.jsx)('input', {
                     role: 'searchbox',
                     'aria-busy': a,
-                    ref: h,
-                    className: f.input,
+                    ref: g,
+                    className: p.input,
                     value: n,
-                    onChange: (e) => o(e.currentTarget.value),
-                    'aria-label': u,
-                    placeholder: c,
+                    onChange: v,
+                    'aria-label': d,
+                    placeholder: u,
                     disabled: s
                 }),
-                m
+                E
             ]
         })
     });

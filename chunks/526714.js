@@ -1,12 +1,13 @@
-n.d(t, { I: () => _ });
+n.d(t, { I: () => h });
 var r = n(200651),
     i = n(192379),
     o = n(120356),
     a = n.n(o),
-    s = n(743236),
-    l = n(939350),
-    c = n(253068);
-function u(e, t, n) {
+    s = n(670596),
+    l = n(743236),
+    c = n(939350),
+    u = n(253068);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +20,7 @@ function u(e, t, n) {
         e
     );
 }
-function d(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -30,12 +31,12 @@ function d(e) {
                 })
             )),
             r.forEach(function (t) {
-                u(e, t, n[t]);
+                d(e, t, n[t]);
             });
     }
     return e;
 }
-function f(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -47,64 +48,76 @@ function f(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function _(e) {
-    let { color: t = 'default', label: n, control: o, disabled: u, isFocused: f, showDefaultFocus: _ = !1, menuItemProps: h, onClose: m } = e,
-        g = i.useRef(null),
-        E = i.useRef(null);
+function h(e) {
+    let { color: t = 'default', label: n, control: o, disabled: d, isFocused: p, showDefaultFocus: h = !1, menuItemProps: m, onClose: g } = e,
+        { onInteraction: E } = i.useContext(s.p),
+        v = i.useRef(null),
+        b = i.useRef(null);
     i.useLayoutEffect(() => {
         var e, t, n;
-        f ? ((0, s.F)(g), null === (e = E.current) || void 0 === e || e.focus()) : null === (n = E.current) || void 0 === n || null === (t = n.blur) || void 0 === t || t.call(n);
-    }, [f]);
-    let v = i.useCallback(() => {
+        p ? ((0, l.F)(v), null === (e = b.current) || void 0 === e || e.focus()) : null === (n = b.current) || void 0 === n || null === (t = n.blur) || void 0 === t || t.call(n);
+    }, [p]);
+    let y = i.useCallback(() => {
             var e, t;
-            (null === (t = E.current) || void 0 === t ? void 0 : null === (e = t.activate) || void 0 === e ? void 0 : e.call(t)) && m();
-        }, [m]),
-        b = o(
+            (null === (t = b.current) || void 0 === t ? void 0 : null === (e = t.activate) || void 0 === e ? void 0 : e.call(t)) && g();
+        }, [g]),
+        O = o(
             {
-                onClose: m,
-                disabled: u,
-                isFocused: f
+                onClose: g,
+                disabled: d,
+                isFocused: p,
+                onInteraction: i.useCallback(
+                    (e) => {
+                        null == E ||
+                            E({
+                                id: m.id,
+                                rootItemId: m.rootItemId,
+                                type: null != e ? e : s.U.DEFAULT
+                            });
+                    },
+                    [E, m]
+                )
             },
-            E
+            b
         );
     return (0, r.jsxs)(
         'div',
-        p(
-            d(
+        _(
+            f(
                 {
-                    onClick: v,
-                    className: a()(c.item, l._[t], {
-                        [c.disabled]: u,
-                        [c.focused]: _ && f,
-                        [c.hideInteraction]: !_
+                    onClick: y,
+                    className: a()(u.item, c._[t], {
+                        [u.disabled]: d,
+                        [u.focused]: h && p,
+                        [u.hideInteraction]: !h
                     }),
-                    'aria-disabled': u
+                    'aria-disabled': d
                 },
-                h
+                m
             ),
             {
                 children: [
                     null != n
                         ? (0, r.jsx)('div', {
-                              className: c.labelContainer,
+                              className: u.labelContainer,
                               children: (0, r.jsx)('div', {
-                                  className: c.label,
+                                  className: u.label,
                                   children: n
                               })
                           })
                         : null,
-                    b
+                    O
                 ]
             }
         )

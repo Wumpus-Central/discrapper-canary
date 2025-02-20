@@ -327,7 +327,12 @@ class T extends (r = o.PureComponent) {
                     this.setState({ closestMarkerIndex: e }), (t = l[e]);
                 } else {
                     let n = r - i;
-                    (t = i + n * h), this.setState({ value: t }), this.handleMouseDown(e);
+                    (t = i + n * h),
+                        this.setState({
+                            value: t,
+                            dragStartValue: t
+                        }),
+                        this.handleMouseDown(e);
                 }
                 null != a && a(t), null != o && o(t);
             }),
@@ -372,8 +377,11 @@ class T extends (r = o.PureComponent) {
                           newClosestIndex: null,
                           closestMarkerIndex: r
                       }))
-                    : null == t || t(this.state.value),
-                    this.setState({ active: !1 });
+                    : (null == this.state.dragStartValue || this.state.value !== this.state.dragStartValue) && (null == t || t(this.state.value)),
+                    this.setState({
+                        active: !1,
+                        dragStartValue: void 0
+                    });
             }),
             E(this, 'handleMouseMove', (e) => {
                 e.preventDefault(), this.props.stickToMarkers ? this.moveStaggered(e) : this.moveSmoothly(e);
@@ -397,7 +405,8 @@ class T extends (r = o.PureComponent) {
             (this.state = v(
                 {
                     active: !1,
-                    focused: !1
+                    focused: !1,
+                    dragStartValue: void 0
                 },
                 I(e)
             ));
