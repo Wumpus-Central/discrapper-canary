@@ -20,8 +20,8 @@ var i = n(200651),
     y = n(350663),
     E = n(610394),
     x = n(340101),
-    I = n(981631),
-    S = n(388032),
+    S = n(981631),
+    I = n(388032),
     C = n(507731);
 let j = [];
 function w(e, t, n, i) {
@@ -29,15 +29,15 @@ function w(e, t, n, i) {
     return e === x.C5.HORIZONTAL ? Math.min(Math.max((t - r) / i, 256), Math.max((16 * n) / 9, 256)) : Math.min(Math.max(t, 256), Math.max((((n - r) / i) * 16) / 9, 256));
 }
 function Z(e) {
-    let { id: t, size: n, locked: Z, padding: N, borderWidth: P, opacity: T, horizontal: k, pinned: A, anchorTop: D, anchorLeft: R } = e,
-        L = 2 * N + 2 * P,
-        { width: W, height: M } = {
+    let { id: t, size: n, locked: Z, padding: N, borderWidth: P, opacity: T, horizontal: k, pinned: A, anchorTop: D, anchorLeft: R, showEmpty: L = !0 } = e,
+        W = 2 * N + 2 * P,
+        { width: M, height: z } = {
             width: 'number' == typeof n.width ? n.width : 256,
             height: 'number' == typeof n.height ? n.height : 144
         },
-        z = (0, o.e7)([m.Z], () => m.Z.getVoiceChannelId()),
-        { width: V, height: U, ref: F } = (0, c.Z)(),
-        B = (0, o.e7)(
+        V = (0, o.e7)([m.Z], () => m.Z.getVoiceChannelId()),
+        { width: U, height: F, ref: B } = (0, c.Z)(),
+        G = (0, o.e7)(
             [_.Z],
             () => {
                 var e;
@@ -46,33 +46,33 @@ function Z(e) {
             },
             [t]
         ),
-        G = !k,
-        H = (0, o.e7)([g.Z], () => g.Z.getChannel(z)),
-        Y = (0, o.e7)([h.default], () => h.default.getId()),
-        Q = (D && G) || (R && k),
-        K = (!D && G) || (!R && k),
+        H = !k,
+        Y = (0, o.e7)([g.Z], () => g.Z.getChannel(V)),
+        Q = (0, o.e7)([h.default], () => h.default.getId()),
+        K = (D && H) || (R && k),
+        X = (!D && H) || (!R && k),
         {
-            participantsVersion: X,
-            streamParticipants: J,
-            participantIds: q
+            participantsVersion: J,
+            streamParticipants: q,
+            participantIds: $
         } = (0, o.cj)(
             [f.Z, d.Z],
             () => {
-                if (null == z)
+                if (null == V)
                     return {
                         streamParticipants: j,
                         participantsVersion: -1,
                         participantIds: []
                     };
-                let e = new Set(f.Z.getAllActiveStreamsForChannel(z).map((e) => (0, p.V9)(e))),
+                let e = new Set(f.Z.getAllActiveStreamsForChannel(V).map((e) => (0, p.V9)(e))),
                     t = (t) => e.has((0, p.V9)(t.stream)),
-                    n = d.Z.getStreamParticipants(z).filter((e) => e.user.id !== Y && (!!B || t(e)));
+                    n = d.Z.getStreamParticipants(V).filter((e) => e.user.id !== Q && (!!G || t(e)));
                 return (
                     n.sort((e, n) => {
-                        if (Q) {
+                        if (K) {
                             if (t(e) && !t(n)) return -1;
                             if (!t(e) && t(n)) return 1;
-                        } else if (K) {
+                        } else if (X) {
                             if (t(e) && !t(n)) return 1;
                             if (!t(e) && t(n)) return -1;
                         }
@@ -82,16 +82,16 @@ function Z(e) {
                         streamParticipants: n,
                         activeStreams: e,
                         participantIds: n.map((e) => e.user.id),
-                        participantsVersion: d.Z.getParticipantsVersion(z)
+                        participantsVersion: d.Z.getParticipantsVersion(V)
                     }
                 );
             },
-            [z, Y, B, Q, K]
+            [V, Q, G, K, X]
         ),
-        $ = J.length,
-        ee = null == H || 0 === $,
-        et = k ? x.C5.HORIZONTAL : x.C5.VERTICAL,
-        { tileWidth: en, layout: ei } = (function (e, t, n, i, o) {
+        ee = q.length,
+        et = null == Y || 0 === ee,
+        en = k ? x.C5.HORIZONTAL : x.C5.VERTICAL,
+        { tileWidth: ei, layout: er } = (function (e, t, n, i, o) {
             let l = (function (e, t, n, i) {
                     let r = w(x.C5.HORIZONTAL, e, t, n),
                         o = w(x.C5.VERTICAL, e, t, n);
@@ -116,15 +116,15 @@ function Z(e) {
                     tileWidth: c
                 }
             );
-        })(!1, J.length, null != V ? V : W - L, null != U ? U : M - L, et),
-        er = {
+        })(!1, q.length, null != U ? U : M - W, null != F ? F : z - W, en),
+        eo = {
             id: t,
-            width: W,
-            height: M,
-            sizeOffset: L,
-            layout: ei,
+            width: M,
+            height: z,
+            sizeOffset: W,
+            layout: er,
             padding: N,
-            participants: J.length
+            participants: q.length
         };
     !(function (e) {
         let { id: t, streamParticipants: n, layout: i, widgetLayoutSpecs: o } = e,
@@ -209,56 +209,58 @@ function Z(e) {
             );
     })({
         id: t,
-        streamParticipants: J,
-        layout: ei,
-        widgetLayoutSpecs: er
+        streamParticipants: q,
+        layout: er,
+        widgetLayoutSpecs: eo
     }),
         r.useEffect(() => {
-            s.Z.setGpuBoostRequested(E.zS.OVERLAY_VIDEO_STREAM_RENDERING, !ee);
-        }, [ee]),
+            s.Z.setGpuBoostRequested(E.zS.OVERLAY_VIDEO_STREAM_RENDERING, !et);
+        }, [et]),
         (0, u.ZP)(() => () => {
             s.Z.setGpuBoostRequested(E.zS.OVERLAY_VIDEO_STREAM_RENDERING, !1);
         });
-    let [eo, el] = r.useState(new Set());
+    let [el, ea] = r.useState(new Set());
     r.useEffect(() => {
-        -1 !== X &&
-            el((e) => {
-                let t = new Set(q);
+        -1 !== J &&
+            ea((e) => {
+                let t = new Set($);
                 return Array.from(e).filter((e) => !t.has(e)).length > 0 || Array.from(t).filter((t) => !e.has(t)).length > 0 ? t : e;
             });
-    }, [q, X]);
-    let ea = A || !Z;
+    }, [$, J]);
+    let es = A || !Z;
     return (r.useEffect(() => {
-        0 !== eo.size &&
-            ea &&
-            (0, O.zi)(I.Odu.VIDEO, {
+        0 !== el.size &&
+            es &&
+            (0, O.zi)(S.Odu.VIDEO, {
                 locked: v.Z.isInstanceLocked(),
-                shownUserIds: Array.from(eo),
-                liveUserIds: Array.from(eo),
+                shownUserIds: Array.from(el),
+                liveUserIds: Array.from(el),
                 contentInventoryIds: []
             });
-    }, [eo, ea]),
-    ee && Z)
+    }, [el, es]),
+    et && Z)
         ? null
-        : ee && !Z
-          ? Z
-              ? null
-              : (0, i.jsx)(b.E, {
-                    emptyText: S.NW.string(S.t['T6+rX1']),
-                    icon: l.hGI,
-                    absolute: !0
-                })
+        : et && !Z
+          ? L
+              ? Z
+                  ? null
+                  : (0, i.jsx)(b.E, {
+                        emptyText: I.NW.string(I.t['T6+rX1']),
+                        icon: l.hGI,
+                        absolute: !0
+                    })
+              : null
           : (0, i.jsx)('div', {
                 className: C.goLiveGridContainer,
                 style: { opacity: T },
-                ref: F,
+                ref: B,
                 children: (0, i.jsx)(y.Z, {
                     widgetId: t,
-                    tileWidth: en,
+                    tileWidth: ei,
                     locked: Z,
-                    layout: ei,
-                    streamParticipants: J,
-                    participantsVersion: X,
+                    layout: er,
+                    streamParticipants: q,
+                    participantsVersion: J,
                     pinned: A
                 })
             });

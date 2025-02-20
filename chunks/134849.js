@@ -39,8 +39,8 @@ function b(e) {
 }
 let y = (e) => r.useState(() => new p.AS(e))[0],
     E = r.memo(function (e) {
-        let { locked: t } = e,
-            n = (0, o.e7)(
+        let { locked: t, showEmpty: n = !0 } = e,
+            d = (0, o.e7)(
                 [a.Z, f.Z],
                 () => {
                     if (a.Z.getNotificationPositionMode() === h._vf.DISABLED) return m;
@@ -61,22 +61,24 @@ let y = (e) => r.useState(() => new p.AS(e))[0],
                 [t],
                 c.E6
             ),
-            d = y(t);
-        return (r.useLayoutEffect(() => d.updateState(n, t)), r.useLayoutEffect(() => (d.initialize((0, u.i)()), () => d.cleanUp()), [d]), 0 !== n.length || t)
+            _ = y(t);
+        return (r.useLayoutEffect(() => _.updateState(d, t)), r.useLayoutEffect(() => (_.initialize((0, u.i)()), () => _.cleanUp()), [_]), 0 !== d.length || t)
             ? (0, i.jsx)(p.S4.Provider, {
-                  value: d,
+                  value: _,
                   children: (0, i.jsx)(l.W3x, {
-                      items: n,
+                      items: d,
                       renderItem: O,
                       getItemKey: v,
                       wrapChildren: b
                   })
               })
-            : t
-              ? null
-              : (0, i.jsx)(s.E, {
-                    emptyText: g.NW.string(g.t.O1Nbjo),
-                    icon: l.Dkj,
-                    absolute: !0
-                });
+            : n
+              ? t
+                  ? null
+                  : (0, i.jsx)(s.E, {
+                        emptyText: g.NW.string(g.t.O1Nbjo),
+                        icon: l.Dkj,
+                        absolute: !0
+                    })
+              : null;
     });
