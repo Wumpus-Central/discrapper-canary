@@ -30,87 +30,92 @@ let S = {
     },
     I = (e) => {
         let { closePopout: t, setToggleDefaultState: n } = e,
-            { analyticsLocations: i } = (0, p.ZP)(d.Z.SHARING_CONTROLS_COACHMARK),
-            o = (0, u.ZP)(),
-            h = g.G6.useSetting(),
-            { assets: f, count: m } = (0, y.fq)();
-        return (0, r.jsxs)('div', {
-            className: x.wrapper,
-            children: [
-                (0, r.jsx)('div', {
-                    className: x.gradient,
-                    style: { background: 'radial-gradient(75% 75% at 0% 0%, '.concat((0, a.wj)(o) ? S.topLeftDark : S.topLeftLight, ' 0%, transparent 100%),\n    radial-gradient(70% 50% at 100% 0%, ').concat((0, a.wj)(o) ? S.topRightDark : S.topRightLight, ' 0%, transparent 100%)') }
-                }),
-                (0, r.jsxs)('div', {
-                    className: x.content,
-                    children: [
-                        (0, r.jsx)(s.zxk, {
-                            className: x.closeButton,
-                            'aria-label': C.NW.string(C.t.cpT0Cg),
-                            look: s.zxk.Looks.BLANK,
-                            size: s.zxk.Sizes.NONE,
-                            onClick: t,
-                            children: (0, r.jsx)(s.Dio, {
-                                size: 'xs',
-                                color: 'currentColor'
-                            })
-                        }),
-                        (0, r.jsx)('img', {
-                            alt: '',
-                            src: P.Z,
-                            className: x.controllerImage
-                        }),
-                        (0, r.jsx)(l.X6, {
-                            variant: 'heading-md/bold',
-                            className: x.title,
-                            children: C.NW.string(C.t.ObD1w8)
-                        }),
-                        (0, r.jsxs)('div', {
-                            className: x.contentContainer,
-                            children: [
-                                (0, r.jsxs)('div', {
-                                    className: x.toggleContainer,
-                                    children: [
-                                        (0, r.jsx)(s.Text, {
-                                            variant: 'text-sm/medium',
-                                            color: 'header-primary',
-                                            children: C.NW.string(C.t.drIYTU)
-                                        }),
-                                        (0, r.jsx)(s.rsf, {
-                                            onChange: (e) => {
-                                                g.G6.updateSetting(e), e && n(e);
-                                            },
-                                            checked: h
-                                        })
-                                    ]
-                                }),
-                                (0, r.jsx)(s.Text, {
-                                    variant: 'text-xs/normal',
-                                    color: 'text-secondary',
-                                    children: C.NW.string(C.t.GnhKNz)
-                                }),
-                                (0, r.jsx)(v.D, {
-                                    assets: f,
-                                    assetCount: m,
-                                    size: v.F.SMALL
+            { analyticsLocations: o } = (0, p.ZP)(d.Z.SHARING_CONTROLS_COACHMARK),
+            h = (0, u.ZP)(),
+            f = g.G6.useSetting(),
+            { assets: m, count: b } = (0, y.fq)(),
+            O = (0, i.useRef)(null);
+        return (
+            (0, s.Tbt)(O),
+            (0, r.jsxs)('div', {
+                className: x.wrapper,
+                ref: O,
+                children: [
+                    (0, r.jsx)('div', {
+                        className: x.gradient,
+                        style: { background: 'radial-gradient(75% 75% at 0% 0%, '.concat((0, a.wj)(h) ? S.topLeftDark : S.topLeftLight, ' 0%, transparent 100%),\n    radial-gradient(70% 50% at 100% 0%, ').concat((0, a.wj)(h) ? S.topRightDark : S.topRightLight, ' 0%, transparent 100%)') }
+                    }),
+                    (0, r.jsxs)('div', {
+                        className: x.content,
+                        children: [
+                            (0, r.jsx)(s.zxk, {
+                                className: x.closeButton,
+                                'aria-label': C.NW.string(C.t.cpT0Cg),
+                                look: s.zxk.Looks.BLANK,
+                                size: s.zxk.Sizes.NONE,
+                                onClick: t,
+                                children: (0, r.jsx)(s.Dio, {
+                                    size: 'xs',
+                                    color: 'currentColor'
                                 })
-                            ]
-                        }),
-                        (0, r.jsx)(s.zxk, {
-                            className: x.viewSettingsButton,
-                            onClick: () => {
-                                t(), c.Z.open(_.oAB.ACTIVITY_PRIVACY, null, { analyticsLocations: i });
-                            },
-                            look: s.zxk.Looks.LINK,
-                            color: s.zxk.Colors.CUSTOM,
-                            size: s.zxk.Sizes.TINY,
-                            fullWidth: !0,
-                            children: C.NW.string(C.t.g8usuL)
-                        })
-                    ]
-                })
-            ]
-        });
+                            }),
+                            (0, r.jsx)('img', {
+                                alt: '',
+                                src: P.Z,
+                                className: x.controllerImage
+                            }),
+                            (0, r.jsx)(l.X6, {
+                                variant: 'heading-md/bold',
+                                className: x.title,
+                                children: C.NW.string(C.t.PRjSRk)
+                            }),
+                            (0, r.jsxs)('div', {
+                                className: x.contentContainer,
+                                children: [
+                                    (0, r.jsxs)('div', {
+                                        className: x.toggleContainer,
+                                        children: [
+                                            (0, r.jsx)(s.Text, {
+                                                variant: 'text-sm/medium',
+                                                color: 'header-primary',
+                                                children: C.NW.string(C.t.KY0ilp)
+                                            }),
+                                            (0, r.jsx)(s.rsf, {
+                                                onChange: (e) => {
+                                                    g.G6.updateSetting(e), e && n(e);
+                                                },
+                                                checked: f
+                                            })
+                                        ]
+                                    }),
+                                    (0, r.jsx)(s.Text, {
+                                        variant: 'text-xs/normal',
+                                        color: 'text-secondary',
+                                        children: C.NW.string(C.t.JW4KKS)
+                                    }),
+                                    (0, r.jsx)(v.D, {
+                                        assets: m,
+                                        assetCount: b,
+                                        size: v.F.SMALL
+                                    })
+                                ]
+                            }),
+                            (0, r.jsx)(s.zxk, {
+                                className: x.viewSettingsButton,
+                                onClick: () => {
+                                    t(), c.Z.open(_.oAB.ACTIVITY_PRIVACY, null, { analyticsLocations: o });
+                                },
+                                look: s.zxk.Looks.LINK,
+                                color: s.zxk.Colors.CUSTOM,
+                                size: s.zxk.Sizes.TINY,
+                                fullWidth: !0,
+                                children: C.NW.string(C.t.UPLpRU)
+                            })
+                        ]
+                    })
+                ]
+            })
+        );
     },
     N = (e) => {
         let { children: t, isForceShowSharingPopout: n, setIsForceShowSharingPopout: l } = e,
