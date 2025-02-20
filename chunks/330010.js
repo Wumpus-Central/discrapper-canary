@@ -1,4 +1,7 @@
-n.d(t, { i: () => f });
+n.d(t, {
+    R: () => p,
+    i: () => f
+});
 var r = n(544891),
     i = n(570140),
     o = n(973616),
@@ -81,4 +84,19 @@ async function f(e) {
         }),
         t
     );
+}
+function p(e) {
+    return r.tn
+        .get({
+            url: s.ANM.GUILD_WIDGET(e),
+            oldFormErrors: !0,
+            rejectWithError: !0
+        })
+        .then((e) => {
+            i.Z.dispatch({
+                type: 'GUILD_SETTINGS_SET_WIDGET',
+                enabled: e.body.enabled,
+                channelId: e.body.channel_id
+            });
+        });
 }

@@ -104,7 +104,7 @@ let R = new s.Z('GuildSettingsActionCreators'),
         },
         async open(e, t, r, i) {
             var o;
-            await Promise.all([n.e('99151'), n.e('25292'), n.e('90508'), n.e('95477'), n.e('11212'), n.e('55186'), n.e('84335'), n.e('68445'), n.e('7654'), n.e('33862'), n.e('80284'), n.e('67671'), n.e('49049'), n.e('44156'), n.e('71864'), n.e('79783'), n.e('6850'), n.e('16114'), n.e('58227'), n.e('54408'), n.e('71567'), n.e('93375'), n.e('64679'), n.e('7623'), n.e('21881'), n.e('28524')]).then(n.bind(n, 994763)), t === b.pNK.DISCOVERY && (0, l.K2)(e, 'GuildSettignsActionCreators.open') && ((t = b.pNK.ACCESS), (i = b.KsC.ACCESS_DISCOVERABLE)), (null === (o = m.Z.getGuild(e)) || void 0 === o ? void 0 : o.hasFeature(b.oNc.COMMUNITY)) && (t === b.pNK.GUILD_AUTOMOD && ((t = b.pNK.SAFETY), (i = b.KsC.SAFETY_AUTOMOD)), t === b.pNK.MEMBER_VERIFICATION && ((t = b.pNK.SAFETY), (i = b.KsC.SAFETY_DM_AND_SPAM_PROTECTION))), P.init(e, t, r, i), p.Z.closeGuildSidebar(e), (0, a.jN)(b.S9g.GUILD_SETTINGS);
+            await Promise.all([n.e('48835'), n.e('25292'), n.e('90508'), n.e('95477'), n.e('11212'), n.e('55186'), n.e('84335'), n.e('68445'), n.e('7654'), n.e('80284'), n.e('89444'), n.e('49049'), n.e('44156'), n.e('71864'), n.e('79783'), n.e('6850'), n.e('16114'), n.e('58227'), n.e('54408'), n.e('71567'), n.e('93375'), n.e('64679'), n.e('57738'), n.e('21881'), n.e('28524')]).then(n.bind(n, 994763)), t === b.pNK.DISCOVERY && (0, l.K2)(e, 'GuildSettignsActionCreators.open') && ((t = b.pNK.ACCESS), (i = b.KsC.ACCESS_DISCOVERABLE)), (null === (o = m.Z.getGuild(e)) || void 0 === o ? void 0 : o.hasFeature(b.oNc.COMMUNITY)) && (t === b.pNK.GUILD_AUTOMOD && ((t = b.pNK.SAFETY), (i = b.KsC.SAFETY_AUTOMOD)), t === b.pNK.MEMBER_VERIFICATION && ((t = b.pNK.SAFETY), (i = b.KsC.SAFETY_DM_AND_SPAM_PROTECTION))), P.init(e, t, r, i), p.Z.closeGuildSidebar(e), (0, a.jN)(b.S9g.GUILD_SETTINGS);
         },
         close() {
             o.Z.dispatch({ type: 'GUILD_SETTINGS_CLOSE' });
@@ -139,7 +139,7 @@ let R = new s.Z('GuildSettingsActionCreators'),
                 roleId: e,
                 searchQuery: t
             }),
-        updateEmbed(e, t, n) {
+        updateEmbed: (e, t, n) =>
             i.tn
                 .patch({
                     url: b.ANM.GUILD_WIDGET(e),
@@ -157,8 +157,7 @@ let R = new s.Z('GuildSettingsActionCreators'),
                         enabled: t.body.enabled,
                         channelId: t.body.channel_id
                     });
-                });
-        },
+                }),
         updateMFALevel(e) {
             let { guildId: t, level: n, isEnabled: r } = e;
             return (0, g.Z)(
