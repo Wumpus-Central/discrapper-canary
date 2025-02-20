@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => O });
 var r = n(200651),
     i = n(192379),
     l = n(373793),
@@ -8,72 +8,89 @@ var r = n(200651),
     c = n(700582),
     u = n(592180),
     d = n(565138),
-    f = n(598077),
-    g = n(430824),
-    m = n(594174),
-    b = n(388032),
-    p = n(487250);
-function h(e) {
-    var t, n, h, v;
-    let y = null === (t = e.interactionMetadata) || void 0 === t ? void 0 : t.authorizing_integration_owners[l.Y.USER_INSTALL],
-        O = null === (n = e.interactionMetadata) || void 0 === n ? void 0 : n.authorizing_integration_owners[l.Y.GUILD_INSTALL],
-        N = null === (h = e.interactionMetadata) || void 0 === h ? void 0 : h.user.id,
-        E = (0, a.e7)([m.default], () => m.default.getUser(y)),
-        j = (0, a.e7)([g.Z], () => g.Z.getGuild(O)),
-        P = (0, a.e7)([m.default], () => m.default.getUser(N));
+    f = n(171368),
+    g = n(598077),
+    m = n(592125),
+    b = n(430824),
+    p = n(594174),
+    h = n(981631),
+    v = n(388032),
+    y = n(487250);
+function O(e) {
+    var t, n, O, E;
+    let N = null === (t = e.interactionMetadata) || void 0 === t ? void 0 : t.authorizing_integration_owners[l.Y.USER_INSTALL],
+        j = null === (n = e.interactionMetadata) || void 0 === n ? void 0 : n.authorizing_integration_owners[l.Y.GUILD_INSTALL],
+        S = null === (O = e.interactionMetadata) || void 0 === O ? void 0 : O.user.id,
+        P = (0, a.e7)([p.default], () => p.default.getUser(N)),
+        Z = (0, a.e7)([b.Z], () => b.Z.getGuild(j)),
+        x = m.Z.getChannel(e.channel_id),
+        I = null == x ? void 0 : x.getGuildId(),
+        _ = (0, a.e7)([p.default], () => p.default.getUser(S));
     if (
         (i.useEffect(() => {
-            null == E && null != y && (0, s.PR)(y);
-        }, [E, y]),
+            null == P && null != N && (0, s.PR)(N);
+        }, [P, N]),
         !(0, u.a)(e))
     )
         return null;
-    null == P && (P = new f.Z(null === (v = e.interactionMetadata) || void 0 === v ? void 0 : v.user));
-    let S = null;
+    null == _ && (_ = new g.Z(null === (E = e.interactionMetadata) || void 0 === E ? void 0 : E.user));
+    let T = null;
     return (
-        null != j
-            ? (S = (0, r.jsx)(o.sNh, {
-                  className: p.interactionInfoMenuItem,
+        null != Z
+            ? (T = (0, r.jsx)(o.sNh, {
+                  className: y.interactionInfoMenuItem,
                   disabled: !0,
                   iconLeft: () =>
                       (0, r.jsx)(d.Z, {
-                          guild: j,
+                          guild: Z,
                           size: d.Z.Sizes.MINI
                       }),
                   id: 'integration-owner',
-                  label: j.name,
-                  subtext: b.NW.formatToPlainString(b.t.ShLXXF, { application: e.author.username })
+                  label: Z.name,
+                  subtext: v.NW.formatToPlainString(v.t.ShLXXF, { application: e.author.username })
               }))
-            : null != E &&
-              (S = (0, r.jsx)(o.sNh, {
-                  className: p.interactionInfoMenuItem,
-                  disabled: !0,
+            : null != P &&
+              (T = (0, r.jsx)(o.sNh, {
+                  action: () =>
+                      (0, f.openUserProfileModal)({
+                          userId: P.id,
+                          guildId: I,
+                          channelId: e.channel_id,
+                          analyticsLocation: { object: h.qAy.MESSAGE_ACTION_SHEET }
+                      }),
+                  className: y.interactionInfoMenuItem,
                   iconLeft: () =>
                       (0, r.jsx)(c.Z, {
-                          user: E,
+                          user: P,
                           size: o.EFr.SIZE_20
                       }),
                   id: 'integration-owner',
-                  label: E.username,
-                  subtext: b.NW.formatToPlainString(b.t.ShLXXF, { application: e.author.username })
+                  label: P.username,
+                  subtext: v.NW.formatToPlainString(v.t.ShLXXF, { application: e.author.username })
               })),
         (0, r.jsxs)(o.sNh, {
             id: 'view-interaction-info',
-            label: b.NW.string(b.t.Rjezb2),
+            label: v.NW.string(v.t.Rjezb2),
             children: [
-                S,
-                null != P
+                T,
+                null != _
                     ? (0, r.jsx)(o.sNh, {
-                          className: p.interactionInfoMenuItem,
-                          disabled: !0,
+                          action: () =>
+                              (0, f.openUserProfileModal)({
+                                  userId: _.id,
+                                  guildId: I,
+                                  channelId: e.channel_id,
+                                  analyticsLocation: { object: h.qAy.MESSAGE_ACTION_SHEET }
+                              }),
+                          className: y.interactionInfoMenuItem,
                           iconLeft: () =>
                               (0, r.jsx)(c.Z, {
-                                  user: P,
+                                  user: _,
                                   size: o.EFr.SIZE_20
                               }),
                           id: 'interaction-user',
-                          label: P.username,
-                          subtext: b.NW.string(b.t['04gxNj'])
+                          label: _.username,
+                          subtext: v.NW.string(v.t['04gxNj'])
                       })
                     : null
             ]

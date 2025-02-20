@@ -1,6 +1,8 @@
 var r = {
     container: 'container__91a9d',
     muted: 'muted__91a9d',
+    childContainer: 'childContainer__91a9d',
+    nameplated: 'nameplated__91a9d',
     avatar: 'avatar__91a9d',
     clickable: 'clickable__91a9d',
     active: 'active__91a9d',

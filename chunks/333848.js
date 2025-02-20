@@ -11,16 +11,20 @@ var n = l(990547),
     h = l(526761);
 let d = {
     createChannel(e) {
-        let { guildId: t, type: l, name: d, permissionOverwrites: g = [], bitrate: f, userLimit: v, parentId: E, skuId: y, branchId: b } = e;
-        a.Z.dispatch({ type: 'CREATE_CHANNEL_MODAL_SUBMIT' });
+        let { guildId: t, type: l, name: d, permissionOverwrites: g = [], bitrate: f, userLimit: v, parentId: y, skuId: E, branchId: b } = e;
+        a.Z.dispatch({
+            type: 'CREATE_CHANNEL_MODAL_SUBMIT',
+            guildId: t,
+            channelType: l
+        });
         let N = {
             type: l,
             name: d,
             permission_overwrites: g
         };
-        if ((null != f && f !== p.epw && (N.bitrate = f), null != v && v > 0 && (N.user_limit = v), null != E && (N.parent_id = E), l === p.d4z.GUILD_STORE)) {
-            if (null == y) throw Error('Unexpected missing SKU');
-            (N.sku_id = y), (N.branch_id = b);
+        if ((null != f && f !== p.epw && (N.bitrate = f), null != v && v > 0 && (N.user_limit = v), null != y && (N.parent_id = y), l === p.d4z.GUILD_STORE)) {
+            if (null == E) throw Error('Unexpected missing SKU');
+            (N.sku_id = E), (N.branch_id = b);
         }
         return u.Z.post({
             url: p.ANM.GUILD_CHANNELS(t),

@@ -1,6 +1,6 @@
 n.d(t, {
-    default: () => en,
-    p: () => $
+    default: () => es,
+    p: () => ee
 }),
     n(653041),
     n(266796),
@@ -26,35 +26,36 @@ var s = n(200651),
     I = n(911969),
     E = n(367907),
     j = n(812206),
-    O = n(933557),
-    b = n(605436),
-    f = n(185413),
-    v = n(313201),
-    S = n(540059),
-    A = n(688465),
-    T = n(456269),
-    D = n(312146),
-    L = n(703656),
+    b = n(933557),
+    O = n(636816),
+    f = n(605436),
+    v = n(185413),
+    S = n(313201),
+    A = n(540059),
+    T = n(688465),
+    D = n(456269),
+    L = n(312146),
+    _ = n(703656),
     y = n(146085),
-    _ = n(60222),
-    U = n(388131),
+    U = n(60222),
+    W = n(388131),
     z = n(131704),
     G = n(592125),
-    W = n(271383),
-    P = n(430824),
-    R = n(496675),
-    M = n(699516),
-    w = n(594174),
-    Z = n(934415),
-    k = n(823379),
-    B = n(63063),
-    F = n(981631),
-    V = n(71080),
-    H = n(710352),
-    X = n(231338),
-    Y = n(388032),
-    q = n(69945);
-function K(e, t, n) {
+    P = n(271383),
+    R = n(430824),
+    M = n(496675),
+    w = n(699516),
+    Z = n(594174),
+    k = n(934415),
+    B = n(823379),
+    F = n(63063),
+    V = n(981631),
+    H = n(71080),
+    X = n(710352),
+    Y = n(231338),
+    q = n(388032),
+    K = n(69945);
+function J(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -67,7 +68,7 @@ function K(e, t, n) {
         e
     );
 }
-function J(e) {
+function Q(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             s = Object.keys(n);
@@ -78,12 +79,12 @@ function J(e) {
                 })
             )),
             s.forEach(function (t) {
-                K(e, t, n[t]);
+                J(e, t, n[t]);
             });
     }
     return e;
 }
-function Q(e, t) {
+function $(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -101,33 +102,33 @@ function Q(e, t) {
         e
     );
 }
-function $(e) {
+function ee(e) {
     let { isNew: t, isBeta: n } = e,
         r = null;
     return (
         !0 === t
             ? (r = (0, s.jsx)(N.IGR, {
-                  text: Y.NW.string(Y.t.psHMa2),
-                  className: q.newBadge,
+                  text: q.NW.string(q.t.psHMa2),
+                  className: K.newBadge,
                   color: u.Z.BUTTON_OUTLINE_BRAND_BACKGROUND_HOVER
               }))
-            : !0 === n && (r = (0, s.jsx)(A.Z, { className: q.newBadge })),
+            : !0 === n && (r = (0, s.jsx)(T.Z, { className: K.newBadge })),
         r
     );
 }
-function ee(e) {
+function et(e) {
     let { onChange: t, guildId: n, channelType: i, description: l } = e,
         [a, o] = r.useState({}),
-        d = (0, p.e7)([P.Z], () => P.Z.getGuild(n)),
-        c = i === F.d4z.GUILD_STAGE_VOICE;
+        d = (0, p.e7)([R.Z], () => R.Z.getGuild(n)),
+        c = i === V.d4z.GUILD_STAGE_VOICE;
     return (r.useEffect(() => {
         t(a);
     }, [a, t]),
     null == d)
         ? null
         : (0, s.jsx)(N.hzk, {
-              className: q.addMembersContainer,
-              children: (0, s.jsx)(f.U, {
+              className: K.addMembersContainer,
+              children: (0, s.jsx)(v.U, {
                   guild: d,
                   channel: null,
                   permission: c ? y.yP : (0, z.CG)(i),
@@ -138,20 +139,20 @@ function ee(e) {
               })
           });
 }
-class et extends r.PureComponent {
+class en extends r.PureComponent {
     componentDidMount() {
         let { _input: e } = this;
         null != e && e.select();
         let { guildId: t, applications: n, canCreateStoreChannel: s } = this.props;
         s && null == n && g.Z.fetchApplications(t),
-            E.ZP.trackWithMetadata(F.rMx.OPEN_MODAL, { type: 'Create Channel' }),
-            T.O2.trackExposure({
+            E.ZP.trackWithMetadata(V.rMx.OPEN_MODAL, { type: 'Create Channel' }),
+            D.O2.trackExposure({
                 guildId: t,
                 location: '45d324_1'
             });
     }
     componentDidUpdate(e, t) {
-        !t.isPrivate && this.state.isPrivate && this.state.channelType === F.d4z.GUILD_ANNOUNCEMENT && this.setState({ channelType: F.d4z.GUILD_TEXT }), !t.isPrivate && this.state.isPrivate && E.ZP.trackWithMetadata(F.rMx.OPEN_MODAL, { type: 'Create Private Channel' });
+        !t.isPrivate && this.state.isPrivate && this.state.channelType === V.d4z.GUILD_ANNOUNCEMENT && this.setState({ channelType: V.d4z.GUILD_TEXT }), !t.isPrivate && this.state.isPrivate && E.ZP.trackWithMetadata(V.rMx.OPEN_MODAL, { type: 'Create Private Channel' });
     }
     getGuildId() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.props;
@@ -160,27 +161,27 @@ class et extends r.PureComponent {
     canSubmit() {
         let { canViewChannels: e, canConnect: t } = this.props,
             { isPrivate: n, channelType: s, skuId: r, name: i } = this.state;
-        return '' !== i && '' !== i.trim() && (!n || !!(0, b.nT)(s, e, t)) && (s !== F.d4z.GUILD_STORE || null != r);
+        return '' !== i && '' !== i.trim() && (!n || !!(0, f.nT)(s, e, t)) && (s !== V.d4z.GUILD_STORE || null != r);
     }
     getIconComponent() {
         let { isPrivate: e, channelType: t } = this.state;
         switch (t) {
-            case F.d4z.GUILD_TEXT:
+            case V.d4z.GUILD_TEXT:
                 return e ? N.W4G : N.VL1;
-            case F.d4z.GUILD_FORUM:
+            case V.d4z.GUILD_FORUM:
                 return N.Mmi;
-            case F.d4z.GUILD_MEDIA:
+            case V.d4z.GUILD_MEDIA:
                 return N.XBm;
-            case F.d4z.GUILD_VOICE:
+            case V.d4z.GUILD_VOICE:
                 return e ? N.gjC : N.gj8;
-            case F.d4z.GUILD_STORE:
+            case V.d4z.GUILD_STORE:
                 return N.lO_;
-            case F.d4z.GUILD_ANNOUNCEMENT:
+            case V.d4z.GUILD_ANNOUNCEMENT:
                 return N.MqZ;
-            case F.d4z.GUILD_STAGE_VOICE:
+            case V.d4z.GUILD_STAGE_VOICE:
                 return N.ewx;
             default:
-                return (0, z.zi)(t) ? N.VL1 : X.Vq;
+                return (0, z.zi)(t) ? N.VL1 : Y.Vq;
         }
     }
     renderHeader() {
@@ -188,26 +189,26 @@ class et extends r.PureComponent {
         let t;
         let { cloneChannel: n, categoryId: r, onClose: i } = this.props,
             { channelType: l } = this.state,
-            a = null != n ? Y.NW.string(Y.t.dEaPc3) : l === F.d4z.GUILD_CATEGORY ? Y.NW.string(Y.t['ISN+ND']) : Y.NW.string(Y.t['fUYU+v']);
+            a = null != n ? q.NW.string(q.t.dEaPc3) : l === V.d4z.GUILD_CATEGORY ? q.NW.string(q.t['ISN+ND']) : q.NW.string(q.t['fUYU+v']);
         if (null != r) {
             let n = G.Z.getChannel(r);
             t = (0, s.jsx)(N.Text, {
                 variant: 'text-xs/normal',
                 color: 'header-secondary',
-                className: q.subtitle,
-                children: Y.NW.format(Y.t.L1zJgY, { categoryName: null !== (e = null == n ? void 0 : n.name) && void 0 !== e ? e : '' })
+                className: K.subtitle,
+                children: q.NW.format(q.t.L1zJgY, { categoryName: null !== (e = null == n ? void 0 : n.name) && void 0 !== e ? e : '' })
             });
         }
         return (0, s.jsxs)(N.xBx, {
             separator: !1,
             children: [
                 (0, s.jsxs)('div', {
-                    className: q.header,
+                    className: K.header,
                     children: [
                         (0, s.jsx)(N.X6q, {
                             id: this.headerId,
                             variant: 'heading-lg/semibold',
-                            className: q.title,
+                            className: K.title,
                             children: a
                         }),
                         t
@@ -215,7 +216,7 @@ class et extends r.PureComponent {
                 }),
                 (0, s.jsx)(N.olH, {
                     onClick: i,
-                    className: q.closeButton
+                    className: K.closeButton
                 })
             ]
         });
@@ -228,23 +229,23 @@ class et extends r.PureComponent {
             (e = (0, s.jsx)(N.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-danger',
-                className: q.error,
+                className: K.error,
                 children: i.name
             }));
-        let a = l === F.d4z.GUILD_CATEGORY,
-            o = a ? Y.NW.string(Y.t.OCAkGB) : Y.NW.string(Y.t.PVbHDg),
+        let a = l === V.d4z.GUILD_CATEGORY,
+            o = a ? q.NW.string(q.t.OCAkGB) : q.NW.string(q.t.PVbHDg),
             d =
                 null != t
                     ? (0, s.jsx)(N.R94, {
-                          className: q.channelNameNote,
+                          className: K.channelNameNote,
                           type: N.R94.Types.DESCRIPTION,
-                          children: Y.NW.format(Y.t.s2ZzZW, { name: (0, O.F6)(t, w.default, M.Z, !0) })
+                          children: q.NW.format(q.t.s2ZzZW, { name: (0, b.F6)(t, Z.default, w.Z, !0) })
                       })
-                    : l === F.d4z.GUILD_FORUM
+                    : l === V.d4z.GUILD_FORUM
                       ? (0, s.jsx)(N.R94, {
-                            className: q.channelNameNote,
+                            className: K.channelNameNote,
                             type: N.R94.Types.DESCRIPTION,
-                            children: Y.NW.format(Y.t.tbVWyc, {
+                            children: q.NW.format(q.t.tbVWyc, {
                                 forumUpsellHook: (e, t) =>
                                     (0, s.jsx)(
                                         N.eee,
@@ -252,7 +253,7 @@ class et extends r.PureComponent {
                                             onClick: () =>
                                                 (0, N.ZDy)(async () => {
                                                     let { default: e } = await n.e('18417').then(n.bind(n, 740696));
-                                                    return (t) => (0, s.jsx)(e, Q(J({}, t), { guildId: r }));
+                                                    return (t) => (0, s.jsx)(e, $(Q({}, t), { guildId: r }));
                                                 }),
                                             children: e
                                         },
@@ -262,14 +263,14 @@ class et extends r.PureComponent {
                         })
                       : null,
             c = this.getIconComponent();
-        return (0, s.jsx)(v.FG, {
+        return (0, s.jsx)(S.FG, {
             children: (t) =>
                 (0, s.jsxs)(N.xJW, {
                     title: o,
                     tag: 'label',
                     htmlFor: t,
-                    titleClassName: q.sectionTitle,
-                    className: q.name,
+                    titleClassName: K.sectionTitle,
+                    className: K.name,
                     children: [
                         (0, s.jsx)(N.oil, {
                             value: this.state.name,
@@ -279,20 +280,20 @@ class et extends r.PureComponent {
                             maxLength: 100,
                             placeholder: (function (e) {
                                 switch (e) {
-                                    case F.d4z.GUILD_CATEGORY:
-                                        return Y.NW.string(Y.t.eTVbt7);
-                                    case F.d4z.GUILD_FORUM:
-                                        return Y.NW.string(Y.t['5z1Xam']);
+                                    case V.d4z.GUILD_CATEGORY:
+                                        return q.NW.string(q.t.eTVbt7);
+                                    case V.d4z.GUILD_FORUM:
+                                        return q.NW.string(q.t['5z1Xam']);
                                     default:
-                                        return Y.NW.string(Y.t['bw/b8P']);
+                                        return q.NW.string(q.t['bw/b8P']);
                                 }
                             })(l),
-                            className: q.inputWrapper,
-                            inputClassName: a ? void 0 : q.inputInner,
+                            className: K.inputWrapper,
+                            inputClassName: a ? void 0 : K.inputInner,
                             prefixElement: a
                                 ? null
                                 : (0, s.jsx)(c, {
-                                      className: q.inputPrefix,
+                                      className: K.inputPrefix,
                                       size: 'xs',
                                       color: 'currentColor'
                                   }),
@@ -307,44 +308,44 @@ class et extends r.PureComponent {
     renderType() {
         let { cloneChannel: e, applications: t, canCreateStoreChannel: n, canCreateAnnouncementChannel: r, canCreateStageChannel: i, canCreateForumChannel: l, canCreateMediaChannel: a } = this.props,
             { channelType: o, isPrivate: d } = this.state;
-        if (null != e || o === F.d4z.GUILD_CATEGORY) return;
+        if (null != e || o === V.d4z.GUILD_CATEGORY) return;
         let c = null != t && t.length > 0;
         return (0, s.jsx)(N.xJW, {
-            className: q.type,
-            title: Y.NW.string(Y.t['7ZcXGx']),
+            className: K.type,
+            title: q.NW.string(q.t['7ZcXGx']),
             children: (0, s.jsx)(N.FXm, {
                 options: (function (e) {
                     let { isPrivate: t, showStoreChannelOption: n, showAnnouncementChannelOption: r, canCreateStageChannel: i, canCreateForumChannel: l, canCreateMediaChannel: a } = e,
                         o = [
                             {
                                 icon: t ? N.W4G : N.VL1,
-                                label: Y.NW.string(Y.t.pnuRXF),
-                                value: F.d4z.GUILD_TEXT,
-                                description: Y.NW.string(Y.t.Hf5Lb2)
+                                label: q.NW.string(q.t.pnuRXF),
+                                value: V.d4z.GUILD_TEXT,
+                                description: q.NW.string(q.t.Hf5Lb2)
                             }
                         ];
                     return (
                         o.push({
                             icon: t ? N.gjC : N.gj8,
-                            label: Y.NW.string(Y.t.Sx55Oj),
-                            value: F.d4z.GUILD_VOICE,
-                            description: Y.NW.string(Y.t.pqfkoK)
+                            label: q.NW.string(q.t.Sx55Oj),
+                            value: V.d4z.GUILD_VOICE,
+                            description: q.NW.string(q.t.pqfkoK)
                         }),
                         l &&
                             o.push({
                                 icon: t ? N.BUe : N.Mmi,
-                                label: Y.NW.string(Y.t.eAVIDw),
-                                value: F.d4z.GUILD_FORUM,
+                                label: q.NW.string(q.t.eAVIDw),
+                                value: V.d4z.GUILD_FORUM,
                                 description: (0, s.jsxs)(N.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'header-secondary',
-                                    className: q.radioLabelDescription,
+                                    className: K.radioLabelDescription,
                                     children: [
-                                        Y.NW.string(Y.t.iZ5pgo),
+                                        q.NW.string(q.t.iZ5pgo),
                                         (0, s.jsx)('br', {}),
-                                        Y.NW.format(Y.t.fjSvsL, {
+                                        q.NW.format(q.t.fjSvsL, {
                                             onClick: () => {
-                                                open(H.V8);
+                                                open(X.V8);
                                             }
                                         })
                                     ]
@@ -353,18 +354,18 @@ class et extends r.PureComponent {
                         a &&
                             o.push({
                                 icon: t ? N.D7T : N.XBm,
-                                label: Y.NW.string(Y.t['6x6fVl']),
-                                value: F.d4z.GUILD_MEDIA,
+                                label: q.NW.string(q.t['6x6fVl']),
+                                value: V.d4z.GUILD_MEDIA,
                                 description: (0, s.jsxs)(N.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'header-secondary',
-                                    className: q.radioLabelDescription,
+                                    className: K.radioLabelDescription,
                                     children: [
-                                        Y.NW.string(Y.t.JyCrwc),
+                                        q.NW.string(q.t.JyCrwc),
                                         (0, s.jsx)('br', {}),
-                                        Y.NW.format(Y.t.fjSvsL, {
+                                        q.NW.format(q.t.fjSvsL, {
                                             onClick: () => {
-                                                open(B.Z.getCreatorSupportArticleURL(F.BhN.MEDIA_CHANNEL));
+                                                open(F.Z.getCreatorSupportArticleURL(V.BhN.MEDIA_CHANNEL));
                                             }
                                         })
                                     ]
@@ -375,36 +376,36 @@ class et extends r.PureComponent {
                             o.push({
                                 icon: N.MqZ,
                                 iconSize: 24,
-                                label: Y.NW.string(Y.t.qr9dEB),
-                                value: F.d4z.GUILD_ANNOUNCEMENT,
-                                description: Y.NW.string(Y.t.gBkfzs)
+                                label: q.NW.string(q.t.qr9dEB),
+                                value: V.d4z.GUILD_ANNOUNCEMENT,
+                                description: q.NW.string(q.t.gBkfzs)
                             }),
                         n &&
                             o.push({
                                 icon: N.lO_,
                                 iconSize: 24,
-                                label: Y.NW.string(Y.t.SxjkXV),
-                                value: F.d4z.GUILD_STORE,
-                                description: Y.NW.string(Y.t.nmCPMD)
+                                label: q.NW.string(q.t.SxjkXV),
+                                value: V.d4z.GUILD_STORE,
+                                description: q.NW.string(q.t.nmCPMD)
                             }),
                         i &&
                             o.push({
                                 icon: N.ewx,
                                 iconSize: 24,
-                                label: Y.NW.string(Y.t.pNWst7),
-                                value: F.d4z.GUILD_STAGE_VOICE,
-                                description: Y.NW.string(Y.t.VPAwgo)
+                                label: q.NW.string(q.t.pNWst7),
+                                value: V.d4z.GUILD_STAGE_VOICE,
+                                description: q.NW.string(q.t.VPAwgo)
                             }),
                         o.map((e) => {
                             let { icon: t, iconSize: n, label: r, value: i, description: l, isNew: a, isBeta: o } = e;
                             return {
                                 name: (0, s.jsxs)('div', {
-                                    className: q.radioItemName,
+                                    className: K.radioItemName,
                                     children: [
                                         (0, s.jsx)(
                                             t,
-                                            Q(
-                                                J(
+                                            $(
+                                                Q(
                                                     {},
                                                     null != n
                                                         ? {
@@ -416,8 +417,8 @@ class et extends r.PureComponent {
                                                 ),
                                                 {
                                                     color: 'currentColor',
-                                                    className: q.icon,
-                                                    colorClass: q.foreground
+                                                    className: K.icon,
+                                                    colorClass: K.foreground
                                                 }
                                             )
                                         ),
@@ -425,10 +426,10 @@ class et extends r.PureComponent {
                                             children: [
                                                 (0, s.jsxs)(N.Text, {
                                                     variant: 'text-md/medium',
-                                                    className: q.radioLabelName,
+                                                    className: K.radioLabelName,
                                                     children: [
                                                         r,
-                                                        (0, s.jsx)($, {
+                                                        (0, s.jsx)(ee, {
                                                             isNew: a,
                                                             isBeta: o
                                                         })
@@ -438,7 +439,7 @@ class et extends r.PureComponent {
                                                     ? (0, s.jsx)(N.Text, {
                                                           variant: 'text-sm/normal',
                                                           color: 'header-secondary',
-                                                          className: q.radioLabelDescription,
+                                                          className: K.radioLabelDescription,
                                                           children: l
                                                       })
                                                     : l
@@ -447,8 +448,8 @@ class et extends r.PureComponent {
                                     ]
                                 }),
                                 value: i,
-                                radioBarClassName: q.radioBar,
-                                radioItemIconClassName: q.radioBarIcon
+                                radioBarClassName: K.radioBar,
+                                radioItemIconClassName: K.radioBarIcon
                             };
                         })
                     );
@@ -463,19 +464,9 @@ class et extends r.PureComponent {
                 value: o,
                 size: N.FXm.Sizes.NOT_SET,
                 onChange: this.handleTypeChange,
-                itemInfoClassName: q.radioBarLabel
+                itemInfoClassName: K.radioBarLabel
             })
         });
-    }
-    renderChannelTypeDescription(e) {
-        let t;
-        return (e === F.d4z.GUILD_ANNOUNCEMENT && (t = Y.NW.format(Y.t.tI7KNT, { documentationLink: B.Z.getArticleURL(F.BhN.ANNOUNCEMENT_CHANNELS) })), null == t)
-            ? null
-            : (0, s.jsx)(N.R94, {
-                  className: q.channelTypeDescription,
-                  type: N.R94.Types.DESCRIPTION,
-                  children: t
-              });
     }
     renderStoreOptions() {
         let { applications: e } = this.props,
@@ -485,24 +476,24 @@ class et extends r.PureComponent {
             children: [
                 (0, s.jsx)(N.vwX, {
                     tag: 'h5',
-                    children: Y.NW.string(Y.t.vPIW2N)
+                    children: q.NW.string(q.t.vPIW2N)
                 }),
                 (0, s.jsx)(N.q4e, {
                     options: e.map((e) => ({
                         label: e.name,
                         value: e.id
                     })),
-                    placeholder: Y.NW.string(Y.t['3XfCPT']),
+                    placeholder: q.NW.string(q.t['3XfCPT']),
                     value: t,
                     onChange: this.handleApplicationChange,
-                    className: q.storeChannelOptionSelector
+                    className: K.storeChannelOptionSelector
                 }),
                 null != t
                     ? (0, s.jsxs)(r.Fragment, {
                           children: [
                               (0, s.jsx)(N.vwX, {
                                   tag: 'h5',
-                                  children: Y.NW.string(Y.t.XNIWFh)
+                                  children: q.NW.string(q.t.XNIWFh)
                               }),
                               (0, s.jsx)(
                                   x.Z,
@@ -510,7 +501,7 @@ class et extends r.PureComponent {
                                       applicationId: t,
                                       onChange: this.handleSKUChange,
                                       selectedSkuId: n,
-                                      className: q.storeChannelOptionSelector
+                                      className: K.storeChannelOptionSelector
                                   },
                                   t
                               )
@@ -522,14 +513,14 @@ class et extends r.PureComponent {
                           hideBorder: !0,
                           onChange: this.handleShowBranchesToggle,
                           value: l,
-                          note: Y.NW.format(Y.t.UVXL1d, { devPortalUrl: F.EYA.API_DOCS_GAME_AND_SERVER_MANAGEMENT }),
+                          note: q.NW.format(q.t.UVXL1d, { devPortalUrl: V.EYA.API_DOCS_GAME_AND_SERVER_MANAGEMENT }),
                           children: [
                               (0, s.jsx)(N._m8, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: q.switchIcon
+                                  className: K.switchIcon
                               }),
-                              Y.NW.string(Y.t['3e9mHx'])
+                              q.NW.string(q.t['3e9mHx'])
                           ]
                       })
                     : null,
@@ -539,7 +530,7 @@ class et extends r.PureComponent {
                               l
                                   ? (0, s.jsx)(N.vwX, {
                                         tag: 'h5',
-                                        children: Y.NW.string(Y.t.o7DqFx)
+                                        children: q.NW.string(q.t.o7DqFx)
                                     })
                                   : null,
                               (0, s.jsx)(
@@ -550,7 +541,7 @@ class et extends r.PureComponent {
                                       selectedBranchId: i,
                                       hide: !l,
                                       onHasBranchesChange: this.handleHasBranchesChange,
-                                      className: q.storeChannelOptionSelector
+                                      className: K.storeChannelOptionSelector
                                   },
                                   t
                               )
@@ -563,9 +554,9 @@ class et extends r.PureComponent {
     renderPrivacyOptions() {
         let { cloneChannel: e } = this.props,
             { channelType: t, isPrivate: n } = this.state;
-        if (null != e || t === F.d4z.GUILD_ANNOUNCEMENT) return null;
-        let r = t === F.d4z.GUILD_CATEGORY ? Y.NW.string(Y.t.lEPAZ2) : Y.NW.string(Y.t.aUI70t),
-            i = t === F.d4z.GUILD_CATEGORY ? Y.NW.string(Y.t['RQUk6+']) : Y.NW.string(Y.t.YguuKi);
+        if (null != e || t === V.d4z.GUILD_ANNOUNCEMENT) return null;
+        let r = t === V.d4z.GUILD_CATEGORY ? q.NW.string(q.t.lEPAZ2) : q.NW.string(q.t.aUI70t),
+            i = t === V.d4z.GUILD_CATEGORY ? q.NW.string(q.t['RQUk6+']) : q.NW.string(q.t.YguuKi);
         return (0, s.jsx)(
             N.xJW,
             {
@@ -578,7 +569,7 @@ class et extends r.PureComponent {
                         (0, s.jsx)(N.mBM, {
                             size: 'md',
                             color: 'currentColor',
-                            className: q.switchIcon
+                            className: K.switchIcon
                         }),
                         r
                     ]
@@ -597,10 +588,10 @@ class et extends r.PureComponent {
                 let e = Object.values(i)[0];
                 e.length > 0 && (t = e);
             }
-        } else r && !(0, b.nT)(n, o, a) && (t = (0, b.$7)(n));
+        } else r && !(0, f.nT)(n, o, a) && (t = (0, f.$7)(n));
         if (null != t)
             return (0, s.jsx)('div', {
-                className: l()(q.createError, { [q.addMemberError]: e }),
+                className: l()(K.createError, { [K.addMemberError]: e }),
                 children: (0, s.jsx)(N.Wn, {
                     messageType: N.QYI.ERROR,
                     children: t
@@ -612,10 +603,10 @@ class et extends r.PureComponent {
         let { channelType: t, onClose: n } = this.props,
             { channelType: r } = this.state,
             { isPrivate: i } = this.state;
-        e = t === F.d4z.GUILD_CATEGORY ? Y.NW.string(Y.t['ISN+ND']) : Y.NW.string(Y.t['fUYU+v']);
-        let l = i || r === F.d4z.GUILD_STAGE_VOICE;
+        e = t === V.d4z.GUILD_CATEGORY ? q.NW.string(q.t['ISN+ND']) : q.NW.string(q.t['fUYU+v']);
+        let l = i || r === V.d4z.GUILD_STAGE_VOICE;
         return (0, s.jsxs)(N.mzw, {
-            className: q.modalFooter,
+            className: K.modalFooter,
             children: [
                 l
                     ? (0, s.jsx)(N.zxk, {
@@ -627,7 +618,7 @@ class et extends r.PureComponent {
                               });
                           },
                           disabled: !this.canSubmit(),
-                          children: Y.NW.string(Y.t.PDTjLC)
+                          children: q.NW.string(q.t.PDTjLC)
                       })
                     : (0, s.jsx)(N.zxk, {
                           type: 'submit',
@@ -638,7 +629,7 @@ class et extends r.PureComponent {
                     onClick: n,
                     look: N.zxk.Looks.LINK,
                     color: N.zxk.Colors.PRIMARY,
-                    children: Y.NW.string(Y.t['ETE/oK'])
+                    children: q.NW.string(q.t['ETE/oK'])
                 })
             ]
         });
@@ -648,7 +639,7 @@ class et extends r.PureComponent {
         let { channelType: t } = this.props,
             { pendingPermissionOverwrites: n } = this.state;
         return (
-            (e = 0 === Object.keys(n).length ? Y.NW.string(Y.t['5WxrcX']) : t === F.d4z.GUILD_CATEGORY ? Y.NW.string(Y.t['ISN+ND']) : Y.NW.string(Y.t['fUYU+v'])),
+            (e = 0 === Object.keys(n).length ? q.NW.string(q.t['5WxrcX']) : t === V.d4z.GUILD_CATEGORY ? q.NW.string(q.t['ISN+ND']) : q.NW.string(q.t['fUYU+v'])),
             (0, s.jsxs)(N.mzw, {
                 children: [
                     (0, s.jsx)(N.zxk, {
@@ -662,7 +653,7 @@ class et extends r.PureComponent {
                         },
                         look: N.zxk.Looks.LINK,
                         color: N.zxk.Colors.PRIMARY,
-                        children: Y.NW.string(Y.t['13/7kZ'])
+                        children: q.NW.string(q.t['13/7kZ'])
                     })
                 ]
             })
@@ -672,13 +663,24 @@ class et extends r.PureComponent {
         this.setState({ pendingPermissionOverwrites: e });
     }
     renderCreateChannelContent() {
-        let { channelType: e } = this.state;
+        let { channelType: e } = this.state,
+            { guildId: t } = this.props;
         return (0, s.jsxs)(s.Fragment, {
             children: [
                 this.renderHeader(),
                 (0, s.jsxs)(N.hzk, {
-                    className: q.modalContent,
-                    children: [this.renderType(), this.renderName(), e === F.d4z.GUILD_STORE ? this.renderStoreOptions() : null, this.renderChannelTypeDescription(e), e === F.d4z.GUILD_STAGE_VOICE ? null : this.renderPrivacyOptions()]
+                    className: K.modalContent,
+                    children: [
+                        this.renderType(),
+                        this.renderName(),
+                        e === V.d4z.GUILD_STORE ? this.renderStoreOptions() : null,
+                        (0, s.jsx)(O.Z, {
+                            guildId: t,
+                            channelType: e,
+                            className: K.channelTypeDescription
+                        }),
+                        e === V.d4z.GUILD_STAGE_VOICE ? null : this.renderPrivacyOptions()
+                    ]
                 }),
                 this.renderError(),
                 this.renderFooter()
@@ -689,29 +691,29 @@ class et extends r.PureComponent {
         let { name: e, channelType: t } = this.state,
             { guildId: n, onClose: r } = this.props,
             i = this.getIconComponent(),
-            l = t === F.d4z.GUILD_STAGE_VOICE;
+            l = t === V.d4z.GUILD_STAGE_VOICE;
         return (0, s.jsxs)(s.Fragment, {
             children: [
                 (0, s.jsxs)(N.xBx, {
                     separator: !1,
                     children: [
                         (0, s.jsxs)('div', {
-                            className: q.header,
+                            className: K.header,
                             children: [
                                 (0, s.jsx)(N.X6q, {
                                     variant: 'heading-lg/semibold',
-                                    className: q.title,
-                                    children: l ? Y.NW.string(Y.t['S/6zHB']) : Y.NW.string(Y.t.dMJ3Y2)
+                                    className: K.title,
+                                    children: l ? q.NW.string(q.t['S/6zHB']) : q.NW.string(q.t.dMJ3Y2)
                                 }),
                                 (0, s.jsxs)(N.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'header-secondary',
-                                    className: q.subtitle,
+                                    className: K.subtitle,
                                     children: [
                                         (0, s.jsx)(i, {
                                             size: 'xs',
                                             color: 'currentColor',
-                                            className: q.subtitleIcon
+                                            className: K.subtitleIcon
                                         }),
                                         e
                                     ]
@@ -720,12 +722,12 @@ class et extends r.PureComponent {
                         }),
                         (0, s.jsx)(N.olH, {
                             onClick: r,
-                            className: q.closeButton
+                            className: K.closeButton
                         })
                     ]
                 }),
                 this.renderError(!0),
-                (0, s.jsx)(ee, {
+                (0, s.jsx)(et, {
                     onChange: this.handlePermissionOverwriteChange,
                     guildId: n,
                     channelType: t
@@ -763,7 +765,7 @@ class et extends r.PureComponent {
         let { transitionState: e } = this.props;
         return (0, s.jsx)(N.Y0X, {
             transitionState: e,
-            className: q.modal,
+            className: K.modal,
             'aria-labelledby': this.headerId,
             size: N.CgR.DYNAMIC,
             children: (0, s.jsx)('form', {
@@ -774,47 +776,47 @@ class et extends r.PureComponent {
     }
     constructor(e) {
         super(e),
-            K(this, 'headerId', (0, v.hQ)()),
-            K(this, '_input', void 0),
-            K(this, 'setInputRef', (e) => {
+            J(this, 'headerId', (0, S.hQ)()),
+            J(this, '_input', void 0),
+            J(this, 'setInputRef', (e) => {
                 this._input = e;
             }),
-            K(this, 'handleNameChange', (e) => {
+            J(this, 'handleNameChange', (e) => {
                 let { channelType: t } = this.state;
-                z.xL.has(t) && (e = (0, Z.Nj)(e)), this.setState({ name: e });
+                z.xL.has(t) && (e = (0, k.Nj)(e)), this.setState({ name: e });
             }),
-            K(this, 'handleTypeChange', (e) => {
+            J(this, 'handleTypeChange', (e) => {
                 let { value: t } = e,
                     { name: n } = this.state;
-                z.xL.has(t) && (n = (0, Z.Nj)(n)),
-                    t === F.d4z.GUILD_STAGE_VOICE && this.setState({ isPrivate: !1 }),
+                z.xL.has(t) && (n = (0, k.Nj)(n)),
+                    t === V.d4z.GUILD_STAGE_VOICE && this.setState({ isPrivate: !1 }),
                     this.setState({
                         channelType: t,
                         name: n
                     });
             }),
-            K(this, 'handlePrivacyChange', (e) => {
+            J(this, 'handlePrivacyChange', (e) => {
                 this.setState({ isPrivate: e });
             }),
-            K(this, 'handleApplicationChange', (e) => {
+            J(this, 'handleApplicationChange', (e) => {
                 this.setState({ applicationId: e });
             }),
-            K(this, 'handleSKUChange', (e) => {
+            J(this, 'handleSKUChange', (e) => {
                 this.setState({ skuId: e });
             }),
-            K(this, 'handleShowBranchesToggle', (e) => {
+            J(this, 'handleShowBranchesToggle', (e) => {
                 this.setState({
                     showBranches: e,
                     branchId: null
                 });
             }),
-            K(this, 'handleBranchChange', (e) => {
+            J(this, 'handleBranchChange', (e) => {
                 this.setState({ branchId: e });
             }),
-            K(this, 'handleHasBranchesChange', (e) => {
+            J(this, 'handleHasBranchesChange', (e) => {
                 this.setState({ hasBranches: e });
             }),
-            K(this, 'handleSubmit', async (e) => {
+            J(this, 'handleSubmit', async (e) => {
                 let t, n, s;
                 e.preventDefault();
                 let { cloneChannel: r, categoryId: i, user: l, memberRoleIds: a, isAdmin: o, onClose: d, owner: h } = this.props,
@@ -822,20 +824,20 @@ class et extends r.PureComponent {
                     E = this.getGuildId();
                 if (null != E) {
                     if (null != r) (t = c().values(r.permissionOverwrites)), (n = r.bitrate), (s = r.userLimit);
-                    else if (N === F.d4z.GUILD_ANNOUNCEMENT) t = (0, Z.rt)(E);
+                    else if (N === V.d4z.GUILD_ANNOUNCEMENT) t = (0, k.rt)(E);
                     else {
                         if (x) {
-                            t = (0, Z.oQ)(E, N, [], !0);
-                            let e = (0, b.Tj)(p, N);
+                            t = (0, k.oQ)(E, N, [], !0);
+                            let e = (0, f.Tj)(p, N);
                             e.length > 0 && (t = t.concat(e));
                             let n = null != h && l.id === h.id;
-                            t.some((e) => a.has(e.id)) || o || n || t.push((0, Z.jZ)(l.id, N));
+                            t.some((e) => a.has(e.id)) || o || n || t.push((0, k.jZ)(l.id, N));
                         }
-                        N === F.d4z.GUILD_STAGE_VOICE &&
+                        N === V.d4z.GUILD_STAGE_VOICE &&
                             ((t = []),
                             Object.values(p).forEach((e) => {
                                 let { row: n } = e;
-                                null != n.id && '' !== n.id && (n.rowType === V.aC.ROLE ? t.push((0, U.A)(n.id, I.BN.ROLE)) : n.rowType === V.aC.MEMBER && t.push((0, U.A)(n.id, I.BN.MEMBER)));
+                                null != n.id && '' !== n.id && (n.rowType === H.aC.ROLE ? t.push((0, W.A)(n.id, I.BN.ROLE)) : n.rowType === H.aC.MEMBER && t.push((0, W.A)(n.id, I.BN.MEMBER)));
                             }));
                     }
                     this.setState({ errors: {} });
@@ -847,22 +849,22 @@ class et extends r.PureComponent {
                             permissionOverwrites: t,
                             bitrate: n,
                             userLimit: s,
-                            parentId: N !== F.d4z.GUILD_CATEGORY ? i : null,
+                            parentId: N !== V.d4z.GUILD_CATEGORY ? i : null,
                             skuId: g,
                             branchId: C
                         });
                         if (null == e || 201 !== e.status) return;
                         let r = e.body;
-                        z.xL.has(N) && (0, L.XU)(r.guild_id, r.id), d();
+                        z.xL.has(N) && (0, _.XU)(r.guild_id, r.id), d();
                     } catch (e) {
-                        null != e.body && 'object' == typeof e.body ? this.setState({ errors: e.body }) : this.setState({ errors: { message: Y.NW.string(Y.t.fEptJC) } });
+                        null != e.body && 'object' == typeof e.body ? this.setState({ errors: e.body }) : this.setState({ errors: { message: q.NW.string(q.t.fEptJC) } });
                     }
                 }
             });
         let { channelType: t, cloneChannel: n, prefillChannelName: s } = e;
         (this.state = {
-            channelType: null != t ? t : F.d4z.GUILD_TEXT,
-            name: null != n ? (0, O.F6)(n, w.default, M.Z) : null != s ? s : '',
+            channelType: null != t ? t : V.d4z.GUILD_TEXT,
+            name: null != n ? (0, b.F6)(n, Z.default, w.Z) : null != s ? s : '',
             pendingPermissionOverwrites: {},
             isPrivate: !1,
             prevGuildId: e.guildId,
@@ -877,46 +879,46 @@ class et extends r.PureComponent {
             (this.handlePermissionOverwriteChange = this.handlePermissionOverwriteChange.bind(this));
     }
 }
-let en = r.forwardRef(function (e, t) {
+let es = r.forwardRef(function (e, t) {
     let { channelType: n, guildId: r, cloneChannelId: i } = e,
-        l = (0, p.cj)([P.Z, w.default, R.Z, G.Z, W.ZP], () => {
+        l = (0, p.cj)([R.Z, Z.default, M.Z, G.Z, P.ZP], () => {
             var e, t, s;
-            let l = P.Z.getGuild(r),
-                a = w.default.getCurrentUser();
+            let l = R.Z.getGuild(r),
+                a = Z.default.getCurrentUser();
             o()(null != a, 'CreateChannel: user cannot be undefined');
-            let d = null != l && null != l.ownerId ? w.default.getUser(l.ownerId) : null,
-                c = R.Z.can(F.Plq.ADMINISTRATOR, l),
+            let d = null != l && null != l.ownerId ? Z.default.getUser(l.ownerId) : null,
+                c = M.Z.can(V.Plq.ADMINISTRATOR, l),
                 h = G.Z.getChannel(i);
             return {
                 guild: l,
-                canCreateStoreChannel: null != l && l.hasFeature(F.oNc.COMMERCE),
-                canCreateAnnouncementChannel: null != l && l.hasFeature(F.oNc.NEWS),
+                canCreateStoreChannel: null != l && l.hasFeature(V.oNc.COMMERCE),
+                canCreateAnnouncementChannel: null != l && l.hasFeature(V.oNc.NEWS),
                 user: a,
                 owner: d,
-                memberRoles: null !== (t = null === (e = W.ZP.getMember(r, a.id)) || void 0 === e ? void 0 : e.roles) && void 0 !== t ? t : [],
-                canViewChannels: R.Z.can(F.Plq.VIEW_CHANNEL, l),
-                canConnect: R.Z.can(F.Plq.CONNECT, l),
+                memberRoles: null !== (t = null === (e = P.ZP.getMember(r, a.id)) || void 0 === e ? void 0 : e.roles) && void 0 !== t ? t : [],
+                canViewChannels: M.Z.can(V.Plq.VIEW_CHANNEL, l),
+                canConnect: M.Z.can(V.Plq.CONNECT, l),
                 isAdmin: c,
                 cloneChannel: h,
                 channelType: null !== (s = null == h ? void 0 : h.type) && void 0 !== s ? s : n,
-                canManageRoles: R.Z.can(F.Plq.MANAGE_ROLES, l),
-                canManageChannels: R.Z.can(F.Plq.MANAGE_CHANNELS, l)
+                canManageRoles: M.Z.can(V.Plq.MANAGE_ROLES, l),
+                canManageChannels: M.Z.can(V.Plq.MANAGE_CHANNELS, l)
             };
         }),
         a = (0, p.Wu)([j.Z], () =>
             j.Z.getGuildApplicationIds(r)
                 .map((e) => j.Z.getApplication(e))
-                .filter(k.lm)
+                .filter(B.lm)
         ),
         d = new Set(l.memberRoles),
         { canManageRoles: c, canManageChannels: h } = l,
-        u = (0, _.m)(r) && c && h,
-        N = (0, T.W3)(r),
-        m = (0, D.Ui)(null == l ? void 0 : l.guild),
-        g = (0, S.Q3)('CreateChannel');
+        u = (0, U.m)(r) && c && h,
+        N = (0, D.W3)(r),
+        m = (0, L.Ui)(null == l ? void 0 : l.guild),
+        g = (0, A.Q3)('CreateChannel');
     return (0, s.jsx)(
-        et,
-        Q(J({}, e, l), {
+        en,
+        $(Q({}, e, l), {
             memberRoleIds: d,
             applications: a,
             canCreateStageChannel: u,
