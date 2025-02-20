@@ -92,6 +92,7 @@ var r = (function (e) {
             (e.GUILD_SETTINGS_AUDIT_LOG = 'impression_guild_settings_audit_log'),
             (e.GUILD_SETTINGS_AUDIT_LOG_V2 = 'impression_guild_settings_audit_log_v2'),
             (e.GUILD_SETTINGS_BANS = 'impression_guild_settings_bans'),
+            (e.GUILD_SETTINGS_BOOST_PERKS = 'impression_guild_settings_boost_perks'),
             (e.GUILD_SETTINGS_BOOST_STATUS = 'impression_guild_settings_boost_status'),
             (e.GUILD_SETTINGS_CHANNELS = 'impression_guild_settings_channels'),
             (e.GUILD_SETTINGS_CLYDE = 'impression_guild_settings_clyde'),

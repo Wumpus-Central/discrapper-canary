@@ -1,4 +1,8 @@
-n.d(t, { Z: () => O }), n(47120);
+n.d(t, {
+    Z: () => S,
+    a: () => d
+}),
+    n(47120);
 var r,
     i = n(442837),
     o = n(570140),
@@ -55,158 +59,170 @@ function u(e, t) {
         e
     );
 }
-let d = new Map(),
-    f = {
+var d = (function (e) {
+    return (e.NOT_FETCHED = 'NOT_FETCHED'), (e.FETCHING = 'FETCHING'), (e.FETCHED = 'FETCHED'), e;
+})({});
+let f = new Map(),
+    p = {
         profile: null,
         lastSyncTimestamp: null,
-        isFetching: !1,
+        fetchStatus: 'NOT_FETCHED',
         isUpdating: !1,
         error: null
     };
-function p(e) {
-    let { guildId: t } = e,
-        n = d.get(t);
-    null == n ? d.set(t, u(l({}, f), { isFetching: !0 })) : d.set(t, u(l({}, n), { isFetching: !0 }));
-}
 function _(e) {
+    let { guildId: t } = e,
+        n = f.get(t);
+    null == n ? f.set(t, u(l({}, p), { fetchStatus: 'FETCHING' })) : f.set(t, u(l({}, n), { fetchStatus: 'FETCHING' }));
+}
+function h(e) {
     let { guildId: t, profile: n } = e,
-        r = d.get(t);
+        r = f.get(t);
     null == r
-        ? d.set(
+        ? f.set(
               t,
-              u(l({}, f), {
+              u(l({}, p), {
                   profile: n,
-                  lastSyncTimestamp: Date.now()
+                  lastSyncTimestamp: Date.now(),
+                  fetchStatus: 'FETCHED'
               })
           )
-        : d.set(
+        : f.set(
               t,
               u(l({}, r), {
                   profile: n,
                   lastSyncTimestamp: Date.now(),
-                  isFetching: !1
-              })
-          );
-}
-function h(e) {
-    let { guildId: t, error: n } = e,
-        r = d.get(t);
-    null == r
-        ? d.set(t, u(l({}, f), { error: n }))
-        : d.set(
-              t,
-              u(l({}, r), {
-                  error: n,
-                  isFetching: !1
+                  fetchStatus: 'FETCHED'
               })
           );
 }
 function m(e) {
-    let { guildId: t } = e,
-        n = d.get(t);
-    null == n ? d.set(t, u(l({}, f), { isUpdating: !0 })) : d.set(t, u(l({}, n), { isUpdating: !0 }));
-}
-function g(e) {
-    let { guildId: t, profile: n } = e,
-        r = d.get(t);
-    null == r
-        ? d.set(t, u(l({}, f), { profile: n }))
-        : d.set(
-              t,
-              u(l({}, r), {
-                  profile: n,
-                  isUpdating: !1
-              })
-          );
-}
-function E(e) {
     let { guildId: t, error: n } = e,
-        r = d.get(t);
+        r = f.get(t);
     null == r
-        ? d.set(t, u(l({}, f), { error: n }))
-        : d.set(
+        ? f.set(
+              t,
+              u(l({}, p), {
+                  error: n,
+                  fetchStatus: 'FETCHED'
+              })
+          )
+        : f.set(
               t,
               u(l({}, r), {
                   error: n,
+                  fetchStatus: 'FETCHED'
+              })
+          );
+}
+function g(e) {
+    let { guildId: t } = e,
+        n = f.get(t);
+    null == n ? f.set(t, u(l({}, p), { isUpdating: !0 })) : f.set(t, u(l({}, n), { isUpdating: !0 }));
+}
+function E(e) {
+    let { guildId: t, profile: n } = e,
+        r = f.get(t);
+    null == r
+        ? f.set(t, u(l({}, p), { profile: n }))
+        : f.set(
+              t,
+              u(l({}, r), {
+                  profile: n,
                   isUpdating: !1
               })
           );
 }
 function v(e) {
-    let { form: t, guildId: n } = e,
-        r = null == t ? void 0 : t.profile;
-    if (null == r) return;
-    let i = d.get(n);
-    null == i
-        ? d.set(
-              n,
-              u(l({}, f), {
-                  profile: r,
-                  lastSyncTimestamp: Date.now()
-              })
-          )
-        : d.set(
-              n,
-              u(l({}, i), {
-                  profile: r,
-                  lastSyncTimestamp: Date.now(),
-                  isFetching: !1
+    let { guildId: t, error: n } = e,
+        r = f.get(t);
+    null == r
+        ? f.set(t, u(l({}, p), { error: n }))
+        : f.set(
+              t,
+              u(l({}, r), {
+                  error: n,
+                  isUpdating: !1
               })
           );
 }
 function b(e) {
+    let { form: t, guildId: n } = e,
+        r = null == t ? void 0 : t.profile;
+    if (null == r) return;
+    let i = f.get(n);
+    null == i
+        ? f.set(
+              n,
+              u(l({}, p), {
+                  profile: r,
+                  lastSyncTimestamp: Date.now(),
+                  fetchStatus: 'FETCHED'
+              })
+          )
+        : f.set(
+              n,
+              u(l({}, i), {
+                  profile: r,
+                  lastSyncTimestamp: Date.now(),
+                  fetchStatus: 'FETCHED'
+              })
+          );
+}
+function y(e) {
     let { invite: t } = e,
         { profile: n } = t;
     if (null == n) return;
-    let r = d.get(n.id),
+    let r = f.get(n.id),
         i = (0, a.xo)(n);
     null == r
-        ? d.set(
+        ? f.set(
               n.id,
-              u(l({}, f), {
+              u(l({}, p), {
                   profile: i,
-                  lastSyncTimestamp: Date.now()
+                  lastSyncTimestamp: Date.now(),
+                  fetchStatus: 'FETCHED'
               })
           )
-        : d.set(
+        : f.set(
               n.id,
               u(l({}, r), {
                   profile: i,
                   lastSyncTimestamp: Date.now(),
-                  isFetching: !1
+                  fetchStatus: 'FETCHED'
               })
           );
 }
-class y extends (r = i.ZP.Store) {
+class O extends (r = i.ZP.Store) {
     getProfile(e) {
         var t, n;
-        return null == e ? null : null !== (n = null === (t = d.get(e)) || void 0 === t ? void 0 : t.profile) && void 0 !== n ? n : null;
+        return null == e ? null : null !== (n = null === (t = f.get(e)) || void 0 === t ? void 0 : t.profile) && void 0 !== n ? n : null;
     }
-    getIsFetching(e) {
+    getFetchStatus(e) {
         var t, n;
-        return null != e && null !== (n = null === (t = d.get(e)) || void 0 === t ? void 0 : t.isFetching) && void 0 !== n && n;
+        return null == e ? 'NOT_FETCHED' : null !== (n = null === (t = f.get(e)) || void 0 === t ? void 0 : t.fetchStatus) && void 0 !== n ? n : 'NOT_FETCHED';
     }
     getLastSyncTimestamp(e) {
         var t, n;
-        return null == e ? null : null !== (n = null === (t = d.get(e)) || void 0 === t ? void 0 : t.lastSyncTimestamp) && void 0 !== n ? n : null;
+        return null == e ? null : null !== (n = null === (t = f.get(e)) || void 0 === t ? void 0 : t.lastSyncTimestamp) && void 0 !== n ? n : null;
     }
     getIsUpdating(e) {
         var t, n;
-        return null != e && null !== (n = null === (t = d.get(e)) || void 0 === t ? void 0 : t.isUpdating) && void 0 !== n && n;
+        return null != e && null !== (n = null === (t = f.get(e)) || void 0 === t ? void 0 : t.isUpdating) && void 0 !== n && n;
     }
     getErrorCode(e) {
         var t, n, r;
-        return null == e ? null : null !== (r = null === (n = d.get(e)) || void 0 === n ? void 0 : null === (t = n.error) || void 0 === t ? void 0 : t.code) && void 0 !== r ? r : null;
+        return null == e ? null : null !== (r = null === (n = f.get(e)) || void 0 === n ? void 0 : null === (t = n.error) || void 0 === t ? void 0 : t.code) && void 0 !== r ? r : null;
     }
 }
-s(y, 'displayName', 'GuildProfileStore');
-let O = new y(o.Z, {
-    GUILD_PROFILE_FETCH: p,
-    GUILD_PROFILE_FETCH_SUCCESS: _,
-    GUILD_PROFILE_FETCH_FAILURE: h,
-    GUILD_PROFILE_UPDATE: m,
-    GUILD_PROFILE_UPDATE_SUCCESS: g,
-    GUILD_PROFILE_UPDATE_FAILURE: E,
-    MEMBER_VERIFICATION_FORM_UPDATE: v,
-    INVITE_RESOLVE_SUCCESS: b
+s(O, 'displayName', 'GuildProfileStore');
+let S = new O(o.Z, {
+    GUILD_PROFILE_FETCH: _,
+    GUILD_PROFILE_FETCH_SUCCESS: h,
+    GUILD_PROFILE_FETCH_FAILURE: m,
+    GUILD_PROFILE_UPDATE: g,
+    GUILD_PROFILE_UPDATE_SUCCESS: E,
+    GUILD_PROFILE_UPDATE_FAILURE: v,
+    MEMBER_VERIFICATION_FORM_UPDATE: b,
+    INVITE_RESOLVE_SUCCESS: y
 });

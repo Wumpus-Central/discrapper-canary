@@ -76,6 +76,7 @@ function g(e) {
         e.push(m(d.pNK.PROFILE, T)),
             e.push(m(d.pNK.TAG, T)),
             e.push(m(d.pNK.ENGAGEMENT, T)),
+            e.push(m(d.pNK.BOOST_PERKS, T)),
             E &&
                 (e.push({ section: p.DIVIDER }),
                 e.push({
