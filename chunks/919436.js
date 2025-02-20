@@ -165,6 +165,7 @@ class D extends (r = l.PureComponent) {
                         text: null != t ? t : '',
                         selected: n,
                         children: (0, i.jsx)(c.aRk, {
+                            rounded: f,
                             selected: !f && (n || g),
                             lowerBadge: r > 0 ? (0, S.Ne)(r) : null,
                             upperBadge: (0, S.Or)({
